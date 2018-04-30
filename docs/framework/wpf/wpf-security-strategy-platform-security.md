@@ -31,14 +31,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61197255c11745c2c3f6f60db084b96dc812cb00
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8d4606023c1a9f3252e9039da547f384d27b7ecd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Estrategia de seguridad de WPF: Seguridad de plataforma
-[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] proporciona una gran variedad de servicios de seguridad y, a su vez, también aprovecha las características de seguridad de la plataforma subyacente, entre las que se incluyen el sistema operativo, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] e [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Estas capas se combinan para proporcionar a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modelo de seguridad sólido y profundo que intenta evitar todos los puntos flacos, como se muestra en la ilustración siguiente:  
+Aunque Windows Presentation Foundation (WPF) proporciona una variedad de servicios de seguridad, sino que también aprovecha las características de seguridad de la plataforma subyacente, que incluye el sistema operativo, el [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], y [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Estas capas se combinan para proporcionar a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modelo de seguridad sólido y profundo que intenta evitar todos los puntos flacos, como se muestra en la ilustración siguiente:  
   
  ![Ilustración de seguridad de WPF](../../../docs/framework/wpf/media/windowplatformsecurity.PNG "windowplatformsecurity")  
   

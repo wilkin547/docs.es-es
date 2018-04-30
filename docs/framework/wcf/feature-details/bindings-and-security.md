@@ -21,23 +21,23 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5eb1019694f6228edbe3656849b85dfa7611ef18
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="bindings-and-security"></a>Enlaces y seguridad
 Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporcionan una manera rápida de programar aplicaciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Con una excepción, todos los enlaces tienen un esquema de seguridad predeterminado habilitó. Este tema le ayuda a seleccionar el enlace adecuado a sus necesidades de seguridad.  
   
- Para obtener información general de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seguridad, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizando los enlaces, vea [Programming WCF Security](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Para obtener información general de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seguridad, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md). Para obtener más información acerca de la programación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizando los enlaces, vea [Programming WCF Security](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Si ya ha seleccionado un enlace, puede encontrar más información acerca de los comportamientos de tiempo de ejecución que están asociados con la seguridad en [comportamientos de seguridad](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Algunas funciones de seguridad no son programables mediante los enlaces proporcionados por el sistema. Para tener más control mediante un enlace personalizado, vea [capacidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Funciones de seguridad de los enlaces  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye un número de enlaces proporcionados por el sistema que satisfacen la mayoría de las necesidades. Si a un enlace determinado no le basta, también puede crear un enlace personalizado. Para obtener una lista de enlaces proporcionados por el sistema, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] enlaces personalizados, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye un número de enlaces proporcionados por el sistema que satisfacen la mayoría de las necesidades. Si a un enlace determinado no le basta, también puede crear un enlace personalizado. Para obtener una lista de enlaces proporcionados por el sistema, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md). Para obtener más información acerca de los enlaces personalizados, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Cada enlace de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adopta dos formas: la de una API y la de un elemento XML utilizado en un archivo de configuración. Por ejemplo, el `WSHttpBinding` (API) tiene un equivalente el [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   

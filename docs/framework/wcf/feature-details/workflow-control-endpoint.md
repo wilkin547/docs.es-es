@@ -1,24 +1,26 @@
 ---
-title: "punto de conexión de control de flujo de trabajo"
-ms.custom: 
+title: punto de conexión de control de flujo de trabajo
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 676451ac3dce4ff9d328bf4c46809444e0e7cb7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3cd72919acd8e6392d809f22ddd87042d00008f6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-control-endpoint"></a>punto de conexión de control de flujo de trabajo
 El extremo de control de flujo de trabajo permite a los desarrolladores llamar a las operaciones de control para controlar de forma remota instancias de flujo de trabajo hospedadas mediante <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Esta característica se puede utilizar para realizar operaciones de control mediante programación como la suspensión, la reanudación y la finalización.  
@@ -57,10 +59,10 @@ El extremo de control de flujo de trabajo permite a los desarrolladores llamar a
 |TransactedTerminate|Realiza la operación de finalización en una transacción (procedente del cliente o creada localmente). Si el sistema mantiene el estado durable de la instancia de flujo de trabajo, la instancia de flujo de trabajo se debe conservar durante la ejecución de esta operación.|  
 |TransactedUnsuspend|Realiza la operación de cancelación de la suspensión en una transacción (procedente del cliente o creada localmente). Si el sistema mantiene el estado durable de la instancia de flujo de trabajo, la instancia de flujo de trabajo se debe conservar durante la ejecución de esta operación.|  
   
- El contrato de <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> no proporciona un medio para crear una nueva instancia de flujo de trabajo, solo para administrar instancias de flujo de trabajo existentes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]creación de forma remota una nueva instancia de flujo de trabajo, consulte [extensibilidad de Host de servicio de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
+ El contrato de <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> no proporciona un medio para crear una nueva instancia de flujo de trabajo, solo para administrar instancias de flujo de trabajo existentes. Para obtener más información acerca de cómo crear una nueva instancia de flujo de trabajo de forma remota, consulte [extensibilidad de Host de servicio de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="workflowcontrolendpoint"></a>WorkflowControlEndpoint  
- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> es un extremo estándar con un contrato fijo, <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Cuando se agrega a una instancia de <xref:System.ServiceModel.Activities.WorkflowServiceHost>, este extremo se puede usar para enviar operaciones de comando a cualquier instancia de flujo de trabajo hospedada por la instancia del host. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]puntos de conexión estándar, consulte [puntos de conexión estándar](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
+ <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> es un extremo estándar con un contrato fijo, <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Cuando se agrega a una instancia de <xref:System.ServiceModel.Activities.WorkflowServiceHost>, este extremo se puede usar para enviar operaciones de comando a cualquier instancia de flujo de trabajo hospedada por la instancia del host. Para obtener más información acerca de los puntos de conexión estándares, consulte [puntos de conexión estándar](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
   
 ## <a name="workflowcontrolclient"></a>WorkflowControlClient  
  <xref:System.ServiceModel.Activities.WorkflowControlClient> es una clase que le permite enviar mensajes de control a una clase <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> en una clase <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Contiene un método para cada una de las operaciones admitidas por el contrato de <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> excepto para las operaciones con transacciones. <xref:System.ServiceModel.Activities.WorkflowControlClient> usa la transacción ambiente para determinar si se debe usar una operación con transacciones.

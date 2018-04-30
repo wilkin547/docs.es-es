@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb9f542d931f5febc2c04d1b0e093cc20f487c57
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4734407868d9dae2acc422c0f07aad57d42d4566
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="denial-of-service"></a>Denegación de servicio
 La denegación de servicio se produce cuando un sistema está sobrecargado de tal manera que no se pueden procesar los mensajes, o se procesan muy lentamente.  
@@ -57,7 +57,7 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
 ## <a name="auditing-event-log-can-be-filled"></a>Se puede rellenar el registro de eventos de auditoría  
  Si un usuario malintencionado sabe que la auditoría está habilitada, el atacante puede enviar mensajes no válidos y así hacer que se escriban entradas de auditoría. Si el registro de auditoría se rellena de esta manera, el sistema de auditoría falla.  
   
- Para mitigar esto, establezca la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> en `true` y use las propiedades del Visor de eventos para controlar el comportamiento de la auditoría. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] uso del Visor de eventos para ver y administrar registros de eventos, vea [Visor de eventos](http://go.microsoft.com/fwlink/?LinkId=186123). Para obtener más información, consulte [auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Para mitigar esto, establezca la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> en `true` y use las propiedades del Visor de eventos para controlar el comportamiento de la auditoría. Para obtener más información sobre cómo usar el Visor de eventos para ver y administrar registros de eventos, vea [Visor de eventos](http://go.microsoft.com/fwlink/?LinkId=186123). Para obtener más información, consulte [auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Las implementaciones no válidas de IAuthorizationPolicy pueden hacer que el servicio no responda  
  Llamar al método <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> en una implementación defectuosa de la interfaz <xref:System.IdentityModel.Policy.IAuthorizationPolicy> puede hacer que el servicio no responda.  
@@ -74,7 +74,7 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
   
  Para mitigar esto, hacen referencia al certificado exacto para utilizar mediante un criterio de búsqueda más preciso en el [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Por ejemplo, utilice la opción <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> y especifique el certificado por su huella digital única (hash).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la característica de inscripción automática, consulte [inscripción automática de certificados en Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
+ Para obtener más información acerca de la característica de inscripción automática, consulte [inscripción automática de certificados en Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Último de varios nombres de asunto alternativos que se usan en la autorización  
  En el poco probable caso de que un certificado X.509 contenga varios nombres de asunto alternativos, y que usted autorice el uso del nombre de asunto alternativo, puede que se produzca un error en la autorización.  
@@ -88,7 +88,7 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
  Cuando un servicio autentica correctamente un cliente y una sesión segura se establece con el servicio, el servicio sigue en contacto con la sesión hasta que el cliente la cancela o la sesión expira. Cada sesión establecida afecta al límite para el número máximo de sesiones simultáneas activas con un servicio. Cuando se alcanza este límite, se rechazan los clientes que intentan crear una nueva sesión con ese servicio hasta que una o más sesiones activas expiren o sean canceladas por un cliente. Un cliente puede tener varias sesiones con un servicio y cada una de esas sesiones afecta al límite.  
   
 > [!NOTE]
->  Cuando se usan sesiones con estado, el párrafo anterior no se aplica. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] sesiones con estado, consulte [Cómo: crear un Token de contexto de seguridad para una sesión segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Cuando se usan sesiones con estado, el párrafo anterior no se aplica. Para obtener más información acerca de las sesiones con estado, consulte [Cómo: crear un Token de contexto de seguridad para una sesión segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Para mitigar esto, establezca el límite para el número máximo de sesiones activas y la duración máxima para una sesión estableciendo la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   

@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2a9c34f67de6f4f8b4a8d22dac7e8bf1c9555498
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5e477b11893d2b74ebe1674225e05b13cb9f67ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="implementing-service-contracts"></a>Implementación de contratos de servicio
 Un servicio es una clase que expone la funcionalidad disponible a los clientes en uno o más puntos de conexión. Para crear un servicio, escriba una clase que implemente un contrato [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Hay dos maneras de hacerlo. Puede definir el contrato separadamente como una interfaz y, a continuación, crear una clase que implemente esa interfaz. También puede crear la clase y el contrato directamente colocando el atributo <xref:System.ServiceModel.ServiceContractAttribute> en la misma clase y el atributo <xref:System.ServiceModel.OperationContractAttribute> en los métodos disponibles para los clientes del servicio.  
@@ -68,7 +68,7 @@ class MathService
   
  Puede establecer algunas cosas en el servicio y niveles de implementación de operación, como simultaneidad y creación de instancias. Para obtener más información, consulte [diseñar e implementar servicios](../../../docs/framework/wcf/designing-and-implementing-services.md).  
   
- Después de implementar un contrato de servicios, debe crear uno o más puntos de conexión para el servicio. Para obtener más información, consulte [información general de creación de punto de conexión](../../../docs/framework/wcf/endpoint-creation-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] cómo ejecutar un servicio, consulte [servicios de hospedaje](../../../docs/framework/wcf/hosting-services.md).  
+ Después de implementar un contrato de servicios, debe crear uno o más puntos de conexión para el servicio. Para obtener más información, consulte [información general de creación de punto de conexión](../../../docs/framework/wcf/endpoint-creation-overview.md). Para obtener más información acerca de cómo ejecutar un servicio, consulte [servicios de hospedaje](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Diseño e implementación de servicios](../../../docs/framework/wcf/designing-and-implementing-services.md)  

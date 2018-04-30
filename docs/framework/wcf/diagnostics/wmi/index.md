@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2e01418844db4197cea2f9292f72b9089e77a596
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Utilización del instrumental de administración de Windows (WMI) para diagnósticos
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] expone datos de la inspección de un servicio en el tiempo de ejecución a través de un proveedor del Instrumental de administración de Windows (WMI) [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
   
 ## <a name="enabling-wmi"></a>Habilitar WMI  
- WMI es la implementación de Microsoft del estándar Web-Based Enterprise Management (WBEM). [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] el SDK de WMI, consulte [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx). WBEM es un estándar de la industria para saber cómo exponen las aplicaciones la instrumentación de administración a las herramientas de administración externas.  
+ WMI es la implementación de Microsoft del estándar Web-Based Enterprise Management (WBEM). Para obtener más información sobre el SDK de WMI, consulte [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx). WBEM es un estándar de la industria para saber cómo exponen las aplicaciones la instrumentación de administración a las herramientas de administración externas.  
   
  Un proveedor de WMI es un componente que expone la instrumentación en el tiempo de ejecución a través de una interfaz compatible con WBEM. Está compuesto de un conjunto de objetos WMI con pares atributo/valor. Los pares pueden ser de varios tipos simples. Las herramientas de administración pueden conectarse a los servicios a través de la interfaz en tiempo de ejecución. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] expone atributos de servicios como direcciones, enlaces, comportamientos y agentes de escucha.  
   

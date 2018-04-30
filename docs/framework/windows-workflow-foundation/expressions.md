@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 18c64daca1532bb626a59e5f01528e207e6b6b87
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 805a49d45da308744fc528b63e8a74bb69bbd124
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="expressions"></a>Expresiones
 Una expresión de Windows Workflow Foundation (WF) es cualquier actividad que devuelve un resultado. Todas las actividades de expresión derivan indirectamente de <xref:System.Activities.Activity%601>, que contiene una propiedad <xref:System.Activities.OutArgument> denominada <xref:System.Activities.Activity%601.Result%2A> como valor devuelto de la actividad. [!INCLUDE[wf1](../../../includes/wf1-md.md)] incluye una gran variedad de actividades de expresión, desde simples como <xref:System.Activities.Expressions.VariableValue%601> y <xref:System.Activities.Expressions.VariableReference%601>, que proporcionan acceso a la única variable de flujo de trabajo mediante actividades de operador, hasta actividades complejas como <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> y <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>, que proporcionan acceso a todo el lenguaje Visual Basic para generar el resultado. Las actividades de expresión adicionales se pueden crear al derivar de <xref:System.Activities.CodeActivity%601> o <xref:System.Activities.NativeActivity%601>.  
@@ -176,4 +176,4 @@ Sequence w = new Sequence
 };  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] usar expresiones en el código, vea [creación de flujos de trabajo, actividades y expresiones mediante código imperativo](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).
+ Para obtener más información sobre el uso de expresiones en el código, vea [creación de flujos de trabajo, actividades y expresiones mediante código imperativo](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).

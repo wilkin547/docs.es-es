@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10ca88533297e56d48b73b6368c2e8457380f543
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: c7776c9155ef2c2c5c4ea804285cd67e995ef119
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Cómo: Crear y ejecutar un flujo de trabajo de larga ejecución
 Una de las características principales de Windows Workflow Foundation (WF) es la capacidad de tiempo de ejecución para conservar y descargar flujos de trabajo inactivos a una base de datos. Los pasos descritos en [Cómo: ejecutar un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) muestra los conceptos básicos de hospedaje de flujo de trabajo utilizando una aplicación de consola. Se mostraron ejemplos de cómo iniciar flujos de trabajo, de los controladores de ciclo de vida de los flujos de trabajo y de los marcadores de reanudación. Para demostrar la persistencia del flujo de trabajo con efectividad, es necesario un host de flujo de trabajo más complejo que admita el inicio y la reanudación de varias instancias de flujo de trabajo. En este paso del tutorial se muestra cómo crear una aplicación host de Windows Forms que admita iniciar y reanudar varias instancias de flujo de trabajo o la persistencia del flujo de trabajo, y que proporcione una base para características avanzadas como el seguimiento y el control de versiones mostrado en los siguientes pasos del tutorial.  
@@ -703,7 +703,7 @@ Una de las características principales de Windows Workflow Foundation (WF) es l
     ```  
   
 ###  <a name="BKMK_WorkflowVersionMap"></a> Para habilitar el inicio y la reanudación de varios tipos de flujo de trabajo  
- Para reanudar una instancia de flujo de trabajo, el host tiene que proporcionar la definición de flujo de trabajo. En este tutorial hay tres tipos de flujo de trabajo, y los pasos siguientes del tutorial presentan varias versiones de estos tipos. `WorkflowIdentity` proporciona una manera para que una aplicación de host asocie información de identificación con una instancia de flujo de trabajo persistente. Los pasos de esta sección muestran cómo crear una clase de utilidad para contribuir a la asignación de la identidad de flujo de trabajo desde una instancia de flujo de trabajo persistente a la definición de flujo de trabajo correspondiente. [!INCLUDE[crabout](../../../includes/crabout-md.md)] `WorkflowIdentity` y control de versiones, vea [utilizando WorkflowIdentity y control de versiones](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+ Para reanudar una instancia de flujo de trabajo, el host tiene que proporcionar la definición de flujo de trabajo. En este tutorial hay tres tipos de flujo de trabajo, y los pasos siguientes del tutorial presentan varias versiones de estos tipos. `WorkflowIdentity` proporciona una manera para que una aplicación de host asocie información de identificación con una instancia de flujo de trabajo persistente. Los pasos de esta sección muestran cómo crear una clase de utilidad para contribuir a la asignación de la identidad de flujo de trabajo desde una instancia de flujo de trabajo persistente a la definición de flujo de trabajo correspondiente. Para obtener más información acerca de `WorkflowIdentity` y control de versiones, vea [utilizando WorkflowIdentity y control de versiones](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
 1.  Haga clic en **NumberGuessWorkflowHost** en **el Explorador de soluciones** y elija **agregar**, **clase**. Tipo de `WorkflowVersionMap` en el **nombre** y haga clic en **agregar**.  
   

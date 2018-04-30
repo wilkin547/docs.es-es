@@ -1,24 +1,26 @@
 ---
-title: "Cómo crear un punto de conexión de servicio en configuración"
-ms.custom: 
+title: Cómo crear un punto de conexión de servicio en configuración
+ms.custom: ''
 ms.date: 06/16/2016
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b96ccdb7e80faa35748a41947ed97f273cb330e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ecb7345dbbff04388edb39dae9e5c05f2c40fd75
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Cómo crear un punto de conexión de servicio en configuración
 Los extremos proporcionan a los clientes acceso a la funcionalidad que ofrece un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Puede definir uno o más extremos para un servicio usando una combinación de direcciones de extremo relativas y absolutas; si no se define ninguno, el tiempo de ejecución proporciona varios de forma predeterminada. En este tema se muestra cómo agregar extremos mediante un archivo de configuración que contiene tanto direcciones absolutas como relativas.  
@@ -103,7 +105,7 @@ Los extremos proporcionan a los clientes acceso a la funcionalidad que ofrece un
 ```  
   
 ## <a name="example"></a>Ejemplo  
- La segunda definición de extremo también especifica una dirección relativa, como se muestra en el siguiente ejemplo de configuración. La dirección relativa, "test", se anexa a la dirección base. La dirección del extremo real es http://localhost:8000/servicemodelsamples/service/test.  
+ La segunda definición de extremo también especifica una dirección relativa, como se muestra en el siguiente ejemplo de configuración. La dirección relativa, "test", se anexa a la dirección base. La dirección del punto de conexión real es http://localhost:8000/servicemodelsamples/service/test.  
   
 ```xml  
 <endpoint address="/test"  
@@ -112,7 +114,7 @@ Los extremos proporcionan a los clientes acceso a la funcionalidad que ofrece un
 ```  
   
 ## <a name="example"></a>Ejemplo  
- La tercera definición de extremo especifica una dirección absoluta, como se muestra en el siguiente ejemplo de configuración. La dirección base no desempeña ningún papel en la dirección. La dirección del extremo real es http://localhost:8001/hello/servicemodelsamples.  
+ La tercera definición de extremo especifica una dirección absoluta, como se muestra en el siguiente ejemplo de configuración. La dirección base no desempeña ningún papel en la dirección. La dirección del punto de conexión real es http://localhost:8001/hello/servicemodelsamples.  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -130,7 +132,7 @@ Los extremos proporcionan a los clientes acceso a la funcionalidad que ofrece un
 ```  
   
 ## <a name="example"></a>Ejemplo  
- Para usar los puntos de conexión predeterminados proporcionados por el tiempo de ejecución, no especifique ningún punto de conexión de servicio en el código ni en el archivo de configuración. En este ejemplo, el tiempo de ejecución crea los puntos de conexión predeterminados al abrir el servicio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]puntos de conexión predeterminados, enlaces y comportamientos, consulte [configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Para usar los puntos de conexión predeterminados proporcionados por el tiempo de ejecución, no especifique ningún punto de conexión de servicio en el código ni en el archivo de configuración. En este ejemplo, el tiempo de ejecución crea los puntos de conexión predeterminados al abrir el servicio. Para obtener más información acerca de los puntos de conexión de forma predeterminada, los enlaces y los comportamientos, consulte [configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ```xml  
 <configuration>  

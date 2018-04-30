@@ -16,11 +16,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Protección de mensajes mediante la seguridad de mensajes
 Esta sección aborda el modo de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] al utilizar <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -54,7 +54,7 @@ Esta sección aborda el modo de seguridad [!INCLUDE[indigo2](../../../../include
   
  Teniendo en cuenta la naturaleza desconectada de las colas, es posible que el cliente y el servicio no estén en línea al mismo tiempo. Como tales, el cliente y servicio tienen que intercambiar certificados fuera de banda. En particular, el cliente, en virtud de guardar el certificado del servicio (que se puede encadenar a una entidad de certificación) en su almacén de confianza, debe confiar en que se está comunicando con el servicio correcto. Para autenticar el cliente, el servicio utiliza el certificado X.509 adjunto con el mensaje para compararlo con el certificado en su almacén y verificar la autenticidad del cliente. De nuevo, el certificado se debe encadenar a una entidad de certificación.  
   
- En un equipo que ejecuta Windows, los certificados se conservan en varias clases de almacenes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] los almacenes diferentes, consulte [almacenes de certificados](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ En un equipo que ejecuta Windows, los certificados se conservan en varias clases de almacenes. Para obtener más información acerca de los almacenes diferentes, consulte [almacenes de certificados](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
  El tipo de credencial de mensaje de Windows utiliza el protocolo Kerberos.  

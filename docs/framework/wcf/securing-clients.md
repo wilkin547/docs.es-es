@@ -1,37 +1,37 @@
 ---
-title: "Protección de clientes"
-ms.custom: 
+title: Protección de clientes
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7d06df1a9c4ef5a7cb64f71d2f7afc77c41a0e6f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-clients"></a>Protección de clientes
-En [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio dicta los requisitos de seguridad para los clientes. Es decir, el servicio especifica qué modo de seguridad utilizar, y si el cliente debe proporcionar una credencial o no. El proceso de protección de un cliente, por consiguiente, es simple: utilice los metadatos obtenidos del servicio (si se publica) y cree un cliente. Los metadatos especifican cómo configurar el cliente. Si el servicio requiere que el cliente suministre una credencial, debe obtener una credencial que se ajuste al requisito. Este tema explica el proceso con más detalle. [!INCLUDE[crabout](../../../includes/crabout-md.md)]creación de un servicio seguro, consulte [proteger Services](../../../docs/framework/wcf/securing-services.md).  
+En [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio dicta los requisitos de seguridad para los clientes. Es decir, el servicio especifica qué modo de seguridad utilizar, y si el cliente debe proporcionar una credencial o no. El proceso de protección de un cliente, por consiguiente, es simple: utilice los metadatos obtenidos del servicio (si se publica) y cree un cliente. Los metadatos especifican cómo configurar el cliente. Si el servicio requiere que el cliente suministre una credencial, debe obtener una credencial que se ajuste al requisito. Este tema explica el proceso con más detalle. Para obtener más información acerca de cómo crear un servicio seguro, consulte [proteger Services](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>El servicio especifica la seguridad  
  De forma predeterminada, los enlaces [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tienen características de seguridad habilitadas. (La excepción es el <xref:System.ServiceModel.BasicHttpBinding>.) Por tanto, si el servicio se creó mediante [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], hay una mayor probabilidad de que implementará la seguridad para asegurar la autenticación, confidencialidad e integridad. En ese caso, los metadatos que proporciona el servicio indicarán lo que se requiere para establecer un canal de comunicación seguro. Si los metadatos del servicio no incluyen ningún requisito de seguridad, no hay ninguna manera de imponer un esquema de seguridad, como Secure Sockets Layer (SSL) sobre HTTP, en un servicio. Si, sin embargo, el servicio requiere que el cliente proporcione una credencial, el desarrollador, implementador o administrador del cliente, debe proporcionar la credencial real que el cliente utilizará para autenticarse en el servicio.  
   
 ## <a name="obtaining-metadata"></a>Obtención de los metadatos  
- Al crear un cliente, el primer paso es obtener los metadatos para el servicio con el que el cliente se comunicará. Esto se puede llevar a cabo de dos maneras. En primer lugar, si el servicio publica un extremo de intercambio (MEX) de metadatos o pone sus metadatos a disposición sobre HTTP o HTTPS, puede descargar los metadatos mediante la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), lo cual genera ambos archivos de código para un cliente, así como un archivo de configuración. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] con la herramienta, consulte [al tener acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Si el servicio no publica un punto de conexión MEX y tampoco pone sus metadatos a disposición sobre HTTP o HTTPS, debe ponerse en contacto con el creador del servicio para obtener la documentación que describe los requisitos de seguridad y los metadatos.  
+ Al crear un cliente, el primer paso es obtener los metadatos para el servicio con el que el cliente se comunicará. Esto se puede llevar a cabo de dos maneras. En primer lugar, si el servicio publica un extremo de intercambio (MEX) de metadatos o pone sus metadatos a disposición sobre HTTP o HTTPS, puede descargar los metadatos mediante la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), lo cual genera ambos archivos de código para un cliente, así como un archivo de configuración. (Para obtener más información sobre el uso de la herramienta, consulte [al tener acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Si el servicio no publica un punto de conexión MEX y tampoco pone sus metadatos a disposición sobre HTTP o HTTPS, debe ponerse en contacto con el creador del servicio para obtener la documentación que describe los requisitos de seguridad y los metadatos.  
   
 > [!IMPORTANT]
 >  Se recomienda que los metadatos procedan de una fuente de confianza y que no se manipulen. Los metadatos recuperados utilizando el protocolo HTTP se envían en texto no cifrado y se pueden manipular. Si el servicio utiliza <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> y las propiedades <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>, utilice la dirección URL que el creador del servicio proporcionó para descargar los datos mediante el protocolo HTTPS.  
@@ -147,7 +147,7 @@ En [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio dicta los r
 > [!NOTE]
 >  Algunos de los valores de credenciales de cliente no se pueden establecer utilizando los archivos de configuración de la aplicación, por ejemplo, el nombre de usuario y la contraseña, o los valores de usuario y contraseña de Windows. Tales valores de credenciales solo se pueden especificarse mediante código.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]configuración de la credencial del cliente, consulte [Cómo: especificar valores de credencial de cliente](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Para obtener más información acerca de cómo establecer la credencial del cliente, consulte [Cómo: especificar valores de credencial de cliente](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 > [!NOTE]
 >  Se omite `ClientCredentialType` cuando `SecurityMode` está establecido en `"TransportWithMessageCredential",` tal y como se muestra en la configuración del ejemplo siguiente.  
@@ -171,7 +171,7 @@ En [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], el servicio dicta los r
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<enlaces >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
  [Herramienta del editor de configuración (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [Seguridad de servicios](../../../docs/framework/wcf/securing-services.md)  
  [Acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  

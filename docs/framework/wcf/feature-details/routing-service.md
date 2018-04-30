@@ -1,24 +1,26 @@
 ---
 title: Servicio de enrutamiento
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="routing-service"></a>Servicio de enrutamiento
 El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como un enrutador de mensajes. La funcionalidad principal del servicio de enrutamiento es la capacidad de enrutar mensajes según su contenido, lo que permite reenviar un mensaje a un extremo de cliente en función de un valor dentro del propio mensaje, en el encabezado o el cuerpo del mensaje.  
@@ -98,12 +100,12 @@ El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como u
   
  Si el servicio de enrutamiento encuentra una clase <xref:System.ServiceModel.CommunicationException> mientras intenta enviar un mensaje, se activará el control de errores.  Estas excepciones indican normalmente que se encontró un problema al intentar establecer comunicación con el extremo de cliente definido, como <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> o <xref:System.ServiceModel.CommunicationObjectFaultedException>.  El código de control de errores también detectará e intentará volver a realizar el envío cuando un **TimeoutException** se produce, que es otro tipo habitual de excepción que no se deriva de **CommunicationException**.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]control de errores, vea [Introducción enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
+ Para obtener más información sobre el control de errores, vea [Introducción enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="backup-endpoints"></a>puntos de conexión de reserva  
  Además de los extremos de cliente de destino asociados a cada definición de filtro en la tabla de filtros, también puede crear una lista de extremos de reserva a los que se enrutará el mensaje en caso de que se produzca un error de la transmisión. Si se produce un error y se define una lista de reserva para la entrada del filtro, el servicio de enrutamiento intentará enviar el mensaje al primer extremo definido en la lista. Si este intento de transmisión no se realiza correctamente, el servicio probará el punto de conexión siguiente, y continuará con este proceso hasta que el intento de transmisión sea correcto, devuelva un error no relacionado con la transmisión o todos los puntos de conexión de la lista de reserva hayan devuelto un error de la transmisión.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]copia de seguridad de los puntos de conexión, consulte [enrutamiento Introducción](../../../../docs/framework/wcf/feature-details/routing-introduction.md) y [filtros de mensajes](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Para obtener más información acerca de los extremos de copia de seguridad, consulte [enrutamiento Introducción](../../../../docs/framework/wcf/feature-details/routing-introduction.md) y [filtros de mensajes](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
 ## <a name="streaming"></a>Streaming  
  El servicio de enrutamiento puede transmitir los mensajes correctamente si establece el enlace para que admita la transmisión por secuencias.  Sin embargo, hay algunas condiciones en las que es necesario poner en el búfer los mensajes:  

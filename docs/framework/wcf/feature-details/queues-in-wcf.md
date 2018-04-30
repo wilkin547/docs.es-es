@@ -1,28 +1,28 @@
 ---
 title: Colas en Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4dfc78d355db4bd8c9d43541545e6fac35086b39
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 82eb421b86f57cfe7c9a23de3ab24de2d4c470cb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Colas en Windows Communication Foundation
 En los temas de esta sección se describe la compatibilidad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con colas. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite la puesta en cola reutilizando Microsoft Message Queuing (previamente conocido como MSMQ) como un transporte y habilita los siguientes escenarios:  
@@ -35,7 +35,7 @@ En los temas de esta sección se describe la compatibilidad de [!INCLUDE[indigo1
   
 -   Operaciones desconectadas. Las operaciones de envío, recepción y procesamiento se pueden desconectar al comunicar a través de redes de latencia alta o redes de disponibilidad limitada, como es el caso de los dispositivos móviles. Las colas permiten a estas operaciones continuar, incluso cuando los puntos de conexión están desconectados. Cuando se restablece la conexión, la cola reenvía los mensajes a la aplicación receptora.  
   
- Para usar la característica de colas en una aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], puede usar uno de los enlaces estándar o puede crear un enlace personalizado si uno de los enlaces estándar no satisface sus requisitos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]enlaces estándar relevantes y cómo elegir una de ellas, vea [Cómo: intercambian mensajes con extremos de WCF y las aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cómo crear enlaces personalizados, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Para usar la característica de colas en una aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], puede usar uno de los enlaces estándar o puede crear un enlace personalizado si uno de los enlaces estándar no satisface sus requisitos. Para obtener más información acerca de los enlaces estándar relevantes y cómo elegir uno, vea [Cómo: intercambian mensajes con extremos de WCF y las aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Para obtener más información acerca de cómo crear enlaces personalizados, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

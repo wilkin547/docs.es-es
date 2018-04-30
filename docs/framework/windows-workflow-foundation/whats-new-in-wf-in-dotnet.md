@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fa529ddbdfa05ce876c99efd4a717c6136cf6686
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d862865057f9978a0b815f3026f2ba67c87eac7d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>¿Qué&#39;s de Windows Workflow Foundation en .NET Framework 4.5
-Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] presenta muchas características nuevas, como nuevas actividades, funciones de diseñador y modelos de desarrollo de flujo de trabajo. Aunque no todas, muchas de las nuevas características de flujo de trabajo presentadas en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] se admiten en el diseñador de flujo de trabajo que se ha vuelto a hospedar. [!INCLUDE[crabout](../../../includes/crabout-md.md)] las nuevas características que se admiten, consulte [compatibilidad con nuevas características de flujo de trabajo Foundation 4.5 en el Diseñador de flujo de trabajo Rehospedados](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] migración de .NET 3.0 y 3.5 de .NET de aplicaciones de flujo de trabajo para usar la versión más reciente, consulte [Guía de migración](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Este tema proporciona información general de las nuevas características de flujo de trabajo presentadas en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] presenta muchas características nuevas, como nuevas actividades, funciones de diseñador y modelos de desarrollo de flujo de trabajo. Aunque no todas, muchas de las nuevas características de flujo de trabajo presentadas en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] se admiten en el diseñador de flujo de trabajo que se ha vuelto a hospedar. Para obtener más información sobre las nuevas características que se admiten, consulte [compatibilidad con nuevas características de flujo de trabajo Foundation 4.5 en el Diseñador de flujo de trabajo Rehospedados](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). Para obtener más información acerca de cómo migrar aplicaciones de flujo de trabajo de .NET 3.0 y 3.5 de .NET para usar la versión más reciente, consulte [Guía de migración](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Este tema proporciona información general de las nuevas características de flujo de trabajo presentadas en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
   
 > [!WARNING]
 >  Las nuevas características de Windows Workflow Foundation introducidas en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] no están disponibles para los proyectos que tienen como destino versiones anteriores de framework. Si un proyecto destinado a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] se reorienta a una versión anterior del marco de trabajo, puede que haya varios problemas.  
@@ -158,7 +158,7 @@ Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45
   
  Las expresiones de C# se validan en tiempo de diseño. Los errores en las expresiones de C# se marcan con un subrayado ondulado rojo.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Expresiones de C#, vea [expresiones de C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+ Para obtener más información acerca de las expresiones de C#, vea [expresiones de C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
   
 ###  <a name="BKMK_Visibility"></a> Más control de visibilidad de la barra de shell y de encabezado de los elementos  
  En un diseñador rehospedado, algunos de los controles estándar de la interfaz de usuario pueden no tener significado para un flujo de trabajo determinado y se pueden desactivar. En [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], solo la barra de shell de la parte inferior del diseñador admite esta personalización. En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], la visibilidad de los elementos de encabezado de shell en la parte superior del diseñador puede ajustarse si se establece <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> con el valor adecuado de <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility>.  

@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-schema-reference"></a>Referencia de esquema de contrato de datos
 En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.Runtime.Serialization.DataContractSerializer> usa para describir los tipos de Common Language Runtime (CLR) para la serialización XML.  
@@ -245,7 +245,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
   
 -   Las restricciones de tipos simples de `xs:string` que no tienen facetas de restricciones que no sean `xs:enumeration` están asignadas a contratos de datos de enumeración.  
   
--   El resto de restricciones de tipos simples se asignan a los tipos que restringen. Por ejemplo, una restricción de `xs:int` se asigna a un entero, como hace `xs:int` . [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la asignación de tipos primitivos, vea Asignación de tipo/primitivo.  
+-   El resto de restricciones de tipos simples se asignan a los tipos que restringen. Por ejemplo, una restricción de `xs:int` se asigna a un entero, como hace `xs:int` . Para obtener más información sobre la asignación de tipo primitivo, vea asignación de tipo/primitivo.  
   
 ### <a name="xsrestriction-attributes"></a>\<xs: restriction >: atributos  
   
@@ -549,7 +549,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- El atributo opcional `ser:FactoryType` opcional declarado en el esquema de serialización de contrato de datos hace referencia a una clase de generador que puede deserializar el tipo. La clase de generador debe formar parte de la colección de tipos conocidos de la instancia de `DataContractSerializer` que se está usando. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] sobre los tipos conocidos, vea [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ El atributo opcional `ser:FactoryType` opcional declarado en el esquema de serialización de contrato de datos hace referencia a una clase de generador que puede deserializar el tipo. La clase de generador debe formar parte de la colección de tipos conocidos de la instancia de `DataContractSerializer` que se está usando. Para obtener más información sobre los tipos conocidos, consulte [tipos conocidos de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="datacontract-serialization-schema"></a>Esquema de serialización de DataContract  
  Varios esquemas exportados por los tipos de uso, elementos y atributos del `DataContractSerializer` , desde un espacio de nombres de serialización de contrato de datos especial:  

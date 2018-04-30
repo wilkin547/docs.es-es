@@ -1,24 +1,26 @@
 ---
 title: Cliente ASMX con un servicio WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4df9060f173647767a3a070a451e0f2d3e02cf0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26fc56ae465c2792f895f08a8e55577d3b74b97d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Cliente ASMX con un servicio WCF
 Este ejemplo muestra cómo crear un servicio mediante [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y después se tiene acceso al servicio desde un cliente que no sea de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como un cliente ASMX.  
@@ -149,7 +151,7 @@ Press <ENTER> to terminate client.
 3.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]pasar y devolver datos complejos, vea tipos: [enlace de datos en un cliente de Windows Forms](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [enlace de datos en un cliente de Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), y [enlace de datos en ASP.NET Cliente](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  Para obtener más información sobre cómo pasar y devolver datos complejos Vea tipos: [enlace de datos en un cliente de Windows Forms](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [enlace de datos en un cliente de Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), y [datos Enlace en un cliente ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

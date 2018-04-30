@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operaciones sincrónicas y asincrónicas
 Este tema explica cómo implementar y llamar a operaciones de servicio asincrónicas.  
@@ -51,7 +51,7 @@ Este tema explica cómo implementar y llamar a operaciones de servicio asincrón
   
 -   Use un enfoque asincrónico en una aplicación de cliente o que realiza la llamada en los casos siguientes:  
   
--   Si invoca operaciones desde una aplicación de nivel intermedio. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] tales escenarios, consulte [aplicaciones de cliente de nivel intermedio](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
+-   Si invoca operaciones desde una aplicación de nivel intermedio. (Para obtener más información acerca de estos escenarios, vea [aplicaciones de cliente de nivel intermedio](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
   
 -   Si invoca operaciones desde una página ASP.NET, use páginas asincrónicas.  
   

@@ -1,28 +1,29 @@
 ---
 title: Expressions2
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 43a85905-77b5-4893-bb38-1cb9b293d69d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a22cf5ae3434e0f79a4cba1b772b02316ccdb007
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c8470a3bb93385724f50e18d25c148ee609c3a77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="expressions"></a>Expresiones
 En este ejemplo se muestra cómo utilizar expresiones básicas en un flujo de trabajo. Consta de un flujo de trabajo que calcula estadísticas de sueldo básicas para dos empleados de una compañía ficticia. Dos clases, `Employee` y `SalaryStats`, se definen en Employee.cs y SalaryStats.cs. Estas clases se utilizan en un flujo de trabajo que muestra cómo realizar operaciones de aritmética y cadena sencillas en las propiedades de variables de tipos complejos.  
   
- El flujo de trabajo de cálculo de sueldo se define en XAML y en C# para mostrar los dos estilos de creación. La versión de XAML está incluida en SalaryCalculation.xaml y se puede ver y editar en el diseñador de flujo de trabajo. La versión de C# se encuentra en Program.cs. Las expresiones utilizadas en XAML cumplen la sintaxis de Visual Basic y utilizan las actividades de expresión <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> y <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> para ejecutarse. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Ver expresiones de Visual Basic, [expresiones de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=165912). Por otro lado, las expresiones de C# se escriben como expresiones lambda y utilizan las actividades de expresión <xref:System.Activities.Expressions.LambdaValue%601> y <xref:System.Activities.Expressions.LambdaReference%601>. Al escribir las expresiones como expresiones lambda, el compilador de C# puede proporcionar resaltado de sintaxis y comprobación estática. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las expresiones lambda en C#, vea [expresiones Lambda (Guía de programación de C#)](http://go.microsoft.com/fwlink/?LinkId=182082). Si un flujo de trabajo se crea en código usando Visual Basic, se usan expresiones lambda de Visual Basic. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las expresiones lambda en Visual Basic, vea [expresiones Lambda (Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=152437). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]sobre la creación de flujos de trabajo mediante código, vea [creación de flujos de trabajo, actividades y expresiones mediante código imperativo](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
+ El flujo de trabajo de cálculo de sueldo se define en XAML y en C# para mostrar los dos estilos de creación. La versión de XAML está incluida en SalaryCalculation.xaml y se puede ver y editar en el diseñador de flujo de trabajo. La versión de C# se encuentra en Program.cs. Las expresiones utilizadas en XAML cumplen la sintaxis de Visual Basic y utilizan las actividades de expresión <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> y <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> para ejecutarse. Para obtener más información acerca de Visual Basic, vea expresiones [expresiones de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=165912). Por otro lado, las expresiones de C# se escriben como expresiones lambda y utilizan las actividades de expresión <xref:System.Activities.Expressions.LambdaValue%601> y <xref:System.Activities.Expressions.LambdaReference%601>. Al escribir las expresiones como expresiones lambda, el compilador de C# puede proporcionar resaltado de sintaxis y comprobación estática. Para obtener más información sobre las expresiones lambda en C#, vea [expresiones Lambda (Guía de programación de C#)](http://go.microsoft.com/fwlink/?LinkId=182082). Si un flujo de trabajo se crea en código usando Visual Basic, se usan expresiones lambda de Visual Basic. Para obtener más información sobre las expresiones lambda en Visual Basic, consulte [expresiones Lambda (Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=152437). Para obtener más información acerca de sobre la creación de flujos de trabajo mediante código, vea [creación de flujos de trabajo, actividades y expresiones mediante código imperativo](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
   
 #### <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
   

@@ -1,12 +1,13 @@
 ---
 title: Arquitectura de WPF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - properties [WPF], attached
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d688bb460b01c0b3fe4d7571916b887cd485b87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29c8e2d632c37a299389b1bdc7f3f19f7df2f7e7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-architecture"></a>Arquitectura de WPF
-En este tema se proporciona un paseo guiado de la jerarquía de clases de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]. En él se explican la mayoría de los subsistemas principales de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y se describe cómo interactúan. También se detallan algunas de las decisiones tomadas por los arquitectos de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+En este tema se proporciona un paseo guiado de la jerarquía de clases de Windows Presentation Foundation (WPF). En él se explican la mayoría de los subsistemas principales de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y se describe cómo interactúan. También se detallan algunas de las decisiones tomadas por los arquitectos de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
   
 <a name="System_Object"></a>   
@@ -64,7 +66,7 @@ En este tema se proporciona un paseo guiado de la jerarquía de clases de [!INCL
   
  Para conseguir que más partes del sistema estuviesen controladas por propiedades, era necesario un sistema de propiedades más completo que el proporcionado por [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Un ejemplo sencillo de esto son las notificaciones de cambios. Para poder habilitar los enlaces bidireccionales, será necesario que ambos lados del enlace admitan la notificación de cambios. Para poder tener el comportamiento vinculado a los valores de propiedad, deberá recibir una notificación cuando cambie el valor de la propiedad. [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] tiene una interfaz, **INotifyPropertyChange**, que permite a un objeto publicar las notificaciones de cambios, aunque es opcional.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Proporciona un sistema de propiedades más completo, derivado de la <xref:System.Windows.DependencyObject> tipo. El sistema de propiedades puede considerarse un sistema de "dependencias" porque realiza el seguimiento de las dependencias entre las expresiones de las propiedades y vuelve a validar automáticamente los valores de propiedad cuando cambian las dependencias. Por ejemplo, si tiene una propiedad que hereda (como <xref:System.Windows.Controls.Control.FontSize%2A>), el sistema se actualiza automáticamente si cambia la propiedad de un elemento primario de un elemento que hereda el valor.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Proporciona un sistema de propiedades más completo, derivado de la <xref:System.Windows.DependencyObject> tipo. El sistema de propiedades puede considerarse un sistema de "dependencias" porque realiza el seguimiento de las dependencias entre las expresiones de las propiedades y vuelve a validar automáticamente los valores de propiedad cuando cambian las dependencias. Por ejemplo, si tiene una propiedad que hereda (como <xref:System.Windows.Controls.Control.FontSize%2A>), el sistema se actualiza automáticamente si cambia la propiedad de un elemento primario de un elemento que hereda el valor.  
   
  La base del sistema de propiedades de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] es el concepto de una expresión de propiedad. En esta primera versión de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], el sistema de expresión de propiedades es cerrado y todas las expresiones que se proporcionan forman parte del marco de trabajo. Las expresiones son el motivo de que el sistema de propiedades no tenga características de enlace de datos, de estilo o de herencia incluidas en el código, sino que son proporcionadas por capas posteriores dentro del marco de trabajo.  
   
@@ -74,9 +76,9 @@ En este tema se proporciona un paseo guiado de la jerarquía de clases de [!INCL
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- Con un sistema ya definido, el paso siguiente consiste en conseguir que se dibujen los píxeles en la pantalla. La <xref:System.Windows.Media.Visual> clase proporciona para generar un árbol de objetos visuales, cada uno opcionalmente con instrucciones de dibujo y metadatos sobre cómo presentar esas instrucciones (recorte, transformación, etcetera). <xref:System.Windows.Media.Visual>está diseñado para ser sumamente ligero y flexible, por lo que la mayoría de las características no tienen ningún public [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] exposición y dependen en gran medida de las funciones de devolución de llamada protegidas.  
+ Con un sistema ya definido, el paso siguiente consiste en conseguir que se dibujen los píxeles en la pantalla. La <xref:System.Windows.Media.Visual> clase proporciona para generar un árbol de objetos visuales, cada uno opcionalmente con instrucciones de dibujo y metadatos sobre cómo presentar esas instrucciones (recorte, transformación, etcetera). <xref:System.Windows.Media.Visual> está diseñado para ser sumamente ligero y flexible, por lo que la mayoría de las características no tienen ningún public [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] exposición y dependen en gran medida de las funciones de devolución de llamada protegidas.  
   
- <xref:System.Windows.Media.Visual>es realmente el punto de entrada para el [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sistema de composición. <xref:System.Windows.Media.Visual>es el punto de conexión entre estos dos subsistemas, los recursos administrados [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] y el milcore no administrado.  
+ <xref:System.Windows.Media.Visual> es realmente el punto de entrada para el [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sistema de composición. <xref:System.Windows.Media.Visual> es el punto de conexión entre estos dos subsistemas, los recursos administrados [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] y el milcore no administrado.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] muestra los datos recorriendo las estructuras de datos no administradas de cuya administración se encarga Milcore. Estas estructuras, denominadas nodos de composición, representan un árbol de presentación jerárquica con instrucciones de representación en cada nodo. Solo se puede tener acceso a este árbol, mostrado en el lado derecho de la ilustración siguiente, a través de un protocolo de mensajería.  
   
@@ -100,11 +102,11 @@ En este tema se proporciona un paseo guiado de la jerarquía de clases de [!INCL
   
 <a name="System_Windows_UIElement"></a>   
 ## <a name="systemwindowsuielement"></a>System.Windows.UIElement  
- <xref:System.Windows.UIElement>define los subsistemas básicos: diseño, entrada y eventos.  
+ <xref:System.Windows.UIElement> define los subsistemas básicos: diseño, entrada y eventos.  
   
  El diseño es un concepto básico en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Son muchos los sistemas en los que, o existe un conjunto fijo de modelos de diseño (HTML admite tres modelos de diseño; flujo, absoluto y tablas), o no existe ningún modelo de diseño (en realidad, User32 solo admite el posicionamiento absoluto). [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se inició presuponiendo que los desarrolladores y diseñadores querían un modelo de diseño flexible y extensible, que pudiera ser controlado por valores de propiedades en lugar de por lógica imperativa. En el <xref:System.Windows.UIElement> nivel, que se introdujo el contrato para el diseño básico: un dos fase modelo con <xref:System.Windows.UIElement.Measure%2A> y <xref:System.Windows.UIElement.Arrange%2A> pasa.  
   
- <xref:System.Windows.UIElement.Measure%2A>permite a un componente determinar el tamaño le gustaría tener. Se trata de una fase independiente de <xref:System.Windows.UIElement.Arrange%2A> porque hay muchas situaciones donde un elemento primario le pedirá un elemento secundario para medir varias veces para determinar su posición y tamaño óptimos. El hecho de que los elementos primarios pidan a los elementos secundarios que se midan demuestra otra filosofía clave de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], el ajuste al contenido. Todos los controles de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] admiten la capacidad de ajustarse al tamaño natural de su contenido. Esto facilita enormemente la localización y permite un diseño dinámico de los elementos cuando los objetos cambian de tamaño. El <xref:System.Windows.UIElement.Arrange%2A> fase permite que un elemento primario colocar y determinar el tamaño final de cada elemento secundario.  
+ <xref:System.Windows.UIElement.Measure%2A> permite a un componente determinar el tamaño le gustaría tener. Se trata de una fase independiente de <xref:System.Windows.UIElement.Arrange%2A> porque hay muchas situaciones donde un elemento primario le pedirá un elemento secundario para medir varias veces para determinar su posición y tamaño óptimos. El hecho de que los elementos primarios pidan a los elementos secundarios que se midan demuestra otra filosofía clave de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], el ajuste al contenido. Todos los controles de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] admiten la capacidad de ajustarse al tamaño natural de su contenido. Esto facilita enormemente la localización y permite un diseño dinámico de los elementos cuando los objetos cambian de tamaño. El <xref:System.Windows.UIElement.Arrange%2A> fase permite que un elemento primario colocar y determinar el tamaño final de cada elemento secundario.  
   
  Una gran cantidad de tiempo se dedica a menudo hablar sobre la salida de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] : <xref:System.Windows.Media.Visual> y objetos relacionados. En cambio, también hay una gran cantidad de innovaciones en cuanto a la entrada. Probablemente el cambio más importante en el modelo de entrada para [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] es el modelo coherente mediante el cual los eventos de entrada se enrutan a través del sistema.  
   
@@ -120,11 +122,11 @@ En este tema se proporciona un paseo guiado de la jerarquía de clases de [!INCL
   
 <a name="System_Windows_FrameworkElement"></a>   
 ## <a name="systemwindowsframeworkelement"></a>System.Windows.FrameworkElement  
- <xref:System.Windows.FrameworkElement>puede examinar de dos maneras diferentes. Presenta un conjunto de directivas y personalizaciones en los subsistemas incluidos en las capas inferiores de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. También presenta un conjunto de nuevos subsistemas.  
+ <xref:System.Windows.FrameworkElement> puede examinar de dos maneras diferentes. Presenta un conjunto de directivas y personalizaciones en los subsistemas incluidos en las capas inferiores de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. También presenta un conjunto de nuevos subsistemas.  
   
- La directiva primaria introducida por <xref:System.Windows.FrameworkElement> es alrededor de diseño de la aplicación. <xref:System.Windows.FrameworkElement>se basa en el contrato del diseño básico introducido por <xref:System.Windows.UIElement> y agrega la noción de un diseño "ranura", lo que facilita a los autores del diseño tiene un conjunto coherente de propiedad controlada por la semántica del diseño. Propiedades, como <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.MinWidth%2A>, y <xref:System.Windows.FrameworkElement.Margin%2A> (por nombrar algunos) conceder a todos los componentes que se deriva de <xref:System.Windows.FrameworkElement> un comportamiento coherente dentro de contenedores de diseño.  
+ La directiva primaria introducida por <xref:System.Windows.FrameworkElement> es alrededor de diseño de la aplicación. <xref:System.Windows.FrameworkElement> se basa en el contrato del diseño básico introducido por <xref:System.Windows.UIElement> y agrega la noción de un diseño "ranura", lo que facilita a los autores del diseño tiene un conjunto coherente de propiedad controlada por la semántica del diseño. Propiedades, como <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.MinWidth%2A>, y <xref:System.Windows.FrameworkElement.Margin%2A> (por nombrar algunos) conceder a todos los componentes que se deriva de <xref:System.Windows.FrameworkElement> un comportamiento coherente dentro de contenedores de diseño.  
   
- <xref:System.Windows.FrameworkElement>También proporciona más fácilmente [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] exposición a muchas de las características que se encuentra en las capas básicas de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Por ejemplo, <xref:System.Windows.FrameworkElement> proporciona acceso directo a la animación a través de la <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> método. Un <xref:System.Windows.Media.Animation.Storyboard> proporciona una manera para generar un script varias animaciones con un conjunto de propiedades.  
+ <xref:System.Windows.FrameworkElement> También proporciona más fácilmente [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] exposición a muchas de las características que se encuentra en las capas básicas de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Por ejemplo, <xref:System.Windows.FrameworkElement> proporciona acceso directo a la animación a través de la <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> método. Un <xref:System.Windows.Media.Animation.Storyboard> proporciona una manera para generar un script varias animaciones con un conjunto de propiedades.  
   
  Los dos aspectos más importantes que <xref:System.Windows.FrameworkElement> presenta son los enlaces de datos y estilos.  
   
@@ -138,7 +140,7 @@ En este tema se proporciona un paseo guiado de la jerarquía de clases de [!INCL
 ## <a name="systemwindowscontrolscontrol"></a>System.Windows.Controls.Control  
  La característica más significativa del control es la definición de plantillas. Si piensa en el sistema de composición de WPF como en un sistema de representación de modo retenido, la definición de plantillas permite a un control describir su representación de una manera parametrizada y declarativa. A <xref:System.Windows.Controls.ControlTemplate> es realmente nada más que una secuencia de comandos para crear un conjunto de secundarios de elementos, con enlaces a las propiedades proporcionadas por el control.  
   
- <xref:System.Windows.Controls.Control>Proporciona un conjunto de propiedades estándar, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Padding%2A>, por nombrar algunos, que los autores de la plantilla, a continuación, pueden utilizar para personalizar la presentación de un control. La implementación de un control proporciona un modelo de datos y un modelo de interacción. El modelo de interacción define un conjunto de comandos (como Cerrar para una ventana) y enlaces a gestos de entrada (como hacer clic en la X roja situada en la esquina superior de la ventana). El modelo de datos proporciona un conjunto de propiedades para personalizar el modelo de interacción o la presentación (determinado por la plantilla).  
+ <xref:System.Windows.Controls.Control> Proporciona un conjunto de propiedades estándar, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Padding%2A>, por nombrar algunos, que los autores de la plantilla, a continuación, pueden utilizar para personalizar la presentación de un control. La implementación de un control proporciona un modelo de datos y un modelo de interacción. El modelo de interacción define un conjunto de comandos (como Cerrar para una ventana) y enlaces a gestos de entrada (como hacer clic en la X roja situada en la esquina superior de la ventana). El modelo de datos proporciona un conjunto de propiedades para personalizar el modelo de interacción o la presentación (determinado por la plantilla).  
   
  Esta diferencia entre el modelo de datos (propiedades), el modelo de interacción (comandos y eventos) y el modelo de presentación (plantillas) permite una total personalización de la apariencia y el comportamiento de un control.  
   

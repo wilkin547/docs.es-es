@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9626905dbcec6bd40570e4188e9a188fca164144
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fceb0f2ab7caa2bf3ab34ff957e3ed5f300e557c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>Plantillas de Visual Studio para WCF
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Plantillas de Visual Studio son plantillas de proyecto y elemento predefinidas puede usar en Visual Studio para generar rápidamente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicios y aplicaciones que lo rodea.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/27/2018
  Si el proyecto existente es un proyecto web, también se crea un archivo de host de servicio (service1.svc).  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Plantilla de proyectos y elementos WF del servicio WCF.  
- Estas plantillas crean servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que hospedan un servicio de flujo de trabajo, que es un flujo de trabajo al que se puede obtener acceso como a un servicio web. Existen plantillas independientes para XAML o modelos de programación imperativos. Con las plantillas, puede crear un flujo de trabajo de equipo secuencial o de estado. Para obtener más información sobre estos tipos de flujo de trabajo, consulte [tutoriales de Windows Workflow Foundation](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)] crear proyectos de flujo de trabajo, consulte [crear proyectos de flujo de trabajo heredado](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Estas plantillas crean servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que hospedan un servicio de flujo de trabajo, que es un flujo de trabajo al que se puede obtener acceso como a un servicio web. Existen plantillas independientes para XAML o modelos de programación imperativos. Con las plantillas, puede crear un flujo de trabajo de equipo secuencial o de estado. Para obtener más información sobre estos tipos de flujo de trabajo, consulte [tutoriales de Windows Workflow Foundation](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). Para obtener más información sobre cómo crear proyectos de flujo de trabajo, consulte [crear proyectos de flujo de trabajo heredado](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  Diseñador de Visual Studio es más sensible si XOML de tipo se utilizan flujos de trabajo en su lugar de código basados en. El flujo de trabajo de XOML es el tipo de flujo predeterminado que se crea.  
   

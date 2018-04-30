@@ -1,27 +1,29 @@
 ---
-title: "Hospedaje en una aplicación de servicios de Windows"
-ms.custom: 
+title: Hospedaje en una aplicación de servicios de Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1a39162097c21f20c0dd04f3911442602871436
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c1f0d2336c2682bd525a66c6e5b12ce2d17ad219
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hospedaje en una aplicación de servicios de Windows
-Los servicios de Windows (anteriormente conocidos como servicios de Windows NT) proporcionan un modelo de procesamiento particularmente apropiado para las aplicaciones que deben vivir en una aplicación ejecutable de larga duración y que no deben mostrar ninguna forma de interfaz de usuario. La duración de un proceso de una aplicación de servicios de Windows es administrada mediante el Administrador de control de servicios (SCM) que le permite iniciar, detener y pausar aplicaciones de servicios de Windows. Puede configurar un proceso de servicio de Windows se inicie automáticamente cuando el equipo se inicia, convirtiéndolo en un entorno de hospedaje adecuado para aplicaciones "always on". [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Las aplicaciones de servicio de Windows, vea [Windows Service Applications](http://go.microsoft.com/fwlink/?LinkId=89450).  
+Los servicios de Windows (anteriormente conocidos como servicios de Windows NT) proporcionan un modelo de procesamiento particularmente apropiado para las aplicaciones que deben vivir en una aplicación ejecutable de larga duración y que no deben mostrar ninguna forma de interfaz de usuario. La duración de un proceso de una aplicación de servicios de Windows es administrada mediante el Administrador de control de servicios (SCM) que le permite iniciar, detener y pausar aplicaciones de servicios de Windows. Puede configurar un proceso de servicio de Windows se inicie automáticamente cuando el equipo se inicia, convirtiéndolo en un entorno de hospedaje adecuado para aplicaciones "always on". Para obtener más información acerca de las aplicaciones de servicio de Windows, vea [Windows Service Applications](http://go.microsoft.com/fwlink/?LinkId=89450).  
   
  Las aplicaciones que hospedan servicios de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] de ejecución prolongada comparten muchas características con los servicios de Windows. En concreto, los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] son aplicaciones ejecutables de servidor de ejecución prolongada que no interactúan directamente con el usuario y que, por consiguiente, no implementan ninguna forma de interfaz de usuario. Como tal, el hospedaje de servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dentro de una aplicación de servicios de Windows constituye una opción para crear aplicaciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] robustas y de ejecución prolongada.  
   

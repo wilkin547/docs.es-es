@@ -1,24 +1,26 @@
 ---
-title: "Crear un servicio de flujo de trabajo de larga ejecución"
-ms.custom: 
+title: Crear un servicio de flujo de trabajo de larga ejecución
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a62a54fb138e394d8e9fa944e49e6526ae7152
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1cd7cc70c50ac2aa56d8cca55037769aa0b6a64a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Crear un servicio de flujo de trabajo de larga ejecución
 En este tema se describe cómo crear un servicio de flujo de trabajo de larga ejecución. Los servicios de flujo de trabajo de larga ejecución se pueden ejecutar durante períodos de tiempo prolongados. En algún momento, el flujo de trabajo se puede inactivar a la espera de recibir información adicional. En este caso, el flujo de trabajo se conserva en una base de datos SQL y se quita de la memoria. Cuando esté disponible la información adicional, la instancia de flujo de trabajo se vuelve a cargar en la memoria y continua ejecutándose.  En este escenario, el usuario implementa un sistema de pedidos muy simplificado.  El cliente envía un mensaje inicial al servicio de flujo de trabajo para que inicie el pedido. Devuelve un identificador de pedido al cliente. En este momento el servicio de flujo de trabajo espera otro mensaje del cliente y pasa al estado inactivo, y se conserva en una base de datos SQL Server.  Cuando el cliente envía el siguiente mensaje para pedir un elemento, el servicio de flujo de trabajo se vuelve a cargar en memoria y finaliza el procesamiento del pedido. En el ejemplo de código devuelve una cadena que indica que el elemento se ha agregado al pedido. No se pretende que el ejemplo de código sea una aplicación real de la tecnología, sino más bien un ejemplo sencillo que ilustre servicios de flujo de trabajo de ejecución prolongada. En este tema se presupone que sabe cómo crear proyectos y soluciones de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
@@ -82,7 +84,7 @@ En este tema se describe cómo crear un servicio de flujo de trabajo de larga ej
   
          ![Conjunto de propiedades de la actividad de recepción](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")  
   
-         La propiedad DisplayName establece el nombre mostrado para la actividad Receive en el diseñador. Las propiedades ServiceContractName y OperationName especifican el nombre del contrato de servicio y la operación que implementa la actividad Receive. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]¿cómo se usan los contratos en flujo de trabajo de servicios vea [usar contratos en el flujo de trabajo](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
+         La propiedad DisplayName establece el nombre mostrado para la actividad Receive en el diseñador. Las propiedades ServiceContractName y OperationName especifican el nombre del contrato de servicio y la operación que implementa la actividad Receive. Para obtener más información sobre cómo se utilizan los contratos de servicios de flujo de trabajo, consulte [usar contratos en el flujo de trabajo](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
   
     2.  Haga clic en el **definir...**  vincular en el **ReceiveStartOrder** actividad y establezca las propiedades que se muestra en la siguiente ilustración.  Tenga en cuenta que la **parámetros** botón de radio está seleccionado, un parámetro denominado `p_customerName` está enlazado a la `customerName` variable. Esto configura la **recepción** actividad para recibir algunos datos y enlazarlos a variables locales.  
   
@@ -120,13 +122,13 @@ En este tema se describe cómo crear un servicio de flujo de trabajo de larga ej
   
          ![Cómo especificar parámetros para la segunda recepción](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")  
   
-    4.  Haga clic en el **CorrelateOn** puntos suspensivos situado y escriba `orderIdHandle`. En **consultas XPath**, haga clic en la flecha desplegable y seleccione `p_orderId`. De esta forma, se configura la correlación de la segunda actividad de recepción. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]correlación, vea [correlación](../../../../docs/framework/wcf/feature-details/correlation.md).  
+    4.  Haga clic en el **CorrelateOn** puntos suspensivos situado y escriba `orderIdHandle`. En **consultas XPath**, haga clic en la flecha desplegable y seleccione `p_orderId`. De esta forma, se configura la correlación de la segunda actividad de recepción. Para obtener más información acerca de la correlación vea [correlación](../../../../docs/framework/wcf/feature-details/correlation.md).  
   
          ![Establecer la propiedad CorrelatesOn](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")  
   
     5.  Arrastre y coloque una **si** actividad inmediatamente después de la **ReceiveAddItem** actividad. Esta actividad actúa como instrucción If.  
   
-        1.  Establecer el **condición** propiedad`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
+        1.  Establecer el **condición** propiedad `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
   
         2.  Arrastre y coloque una **asignar** actividad en el **, a continuación,** sección y otra en el **Else** sección establece las propiedades de la **asignar** actividades, como se muestra en la siguiente ilustración.  
   

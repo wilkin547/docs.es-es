@@ -1,12 +1,13 @@
 ---
 title: Servicios de confianza
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], reliable messaging
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 408801e28fec71f133c2dddd3f30b2509ab5896c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d9cbaef77f4dce609d36ba4b679d8c569b648fa5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="reliable-services"></a>Servicios de confianza
 Las colas y las sesiones de confianza son las características de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] que implementan la mensajería de confianza. En este tema se explican las características de mensajería confiable de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
@@ -46,14 +48,14 @@ Las colas y las sesiones de confianza son las características de [!INCLUDE[indi
 ## <a name="reliable-sessions"></a>Sesiones de confianza  
  Las sesiones de confianza proporcionan transferencia confiable de un extremo a otro de mensajes entre un origen y un destino mediante el protocolo de mensajería de confianza WS, sin tener en cuenta el número o tipo de intermediarios que separan los extremos de la mensajería (origen y destino). Esto incluye a cualquier intermediario de transporte que no utilice SOAP (por ejemplo, los servidores proxy HTTP) o los intermediarios que utilicen SOAP (por ejemplo, los puentes o enrutadores basados en SOAP) que son necesarios para que los mensajes fluyan entre los extremos. Las sesiones confiables utilizan una ventana de transferencia en memoria para enmascarar errores de nivel de mensaje de SOAP y restablecer las conexiones en el caso de errores de transporte.  
   
- Las sesiones de confianza proporcionan transferencias de mensajes de confianza de latencia baja. Los proporcionan para los mensajes SOAP sobre cualquier proxy o intermediario, el equivalente a lo que TCP proporciona para los paquetes sobre puentes de IP. [!INCLUDE[crabout](../../../includes/crabout-md.md)]las sesiones confiables, consulte [sesiones confiables](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+ Las sesiones de confianza proporcionan transferencias de mensajes de confianza de latencia baja. Los proporcionan para los mensajes SOAP sobre cualquier proxy o intermediario, el equivalente a lo que TCP proporciona para los paquetes sobre puentes de IP. Para obtener más información acerca de las sesiones confiables, vea [sesiones confiables](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
 ### <a name="queues"></a>Colas  
  Las colas de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proporcionan transferencias confiables de mensajes y separación entre los orígenes y los destinos a costa de una latencia alta. La comunicación puesta en cola de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se basa en Message Queuing (MSMQ).  
   
  MSMQ se distribuye como un componente opcional con Windows. El servicio de MSMQ se ejecuta como un servicio de Windows. Captura mensajes para la transmisión en una cola de transmisión en nombre del origen y lo entrega a una cola de destino. La cola de destino acepta los mensajes en nombre del destino para la entrega posterior siempre que el destino solicite mensajes. Los administradores de MSMQ implementan un protocolo de transferencias de mensajes de confianza de manera que los mensajes no se pierdan durante la transmisión. El protocolo puede ser nativo o un protocolo basado en SOAP denominado "Protocolo de mensajería de confianza de SOAP" (SRMP).  
   
- La separación, acoplada con las transferencias de mensaje de confianza entre colas, permite que las aplicaciones que están acopladas se comuniquen de forma fiable. A diferencia de las sesiones de confianza, el origen y el destino no tienen que ejecutarse a la vez. Esto habilita escenarios de forma implícita allí donde se usan las colas como un mecanismo de nivelación de carga cuando la tasa de origen de la producción de mensajes y la tasa de destino de consumo de mensajes no coinciden. [!INCLUDE[crabout](../../../includes/crabout-md.md)]las colas, consulte [colas en WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+ La separación, acoplada con las transferencias de mensaje de confianza entre colas, permite que las aplicaciones que están acopladas se comuniquen de forma fiable. A diferencia de las sesiones de confianza, el origen y el destino no tienen que ejecutarse a la vez. Esto habilita escenarios de forma implícita allí donde se usan las colas como un mecanismo de nivelación de carga cuando la tasa de origen de la producción de mensajes y la tasa de destino de consumo de mensajes no coinciden. Para obtener más información acerca de las colas, consulte [colas en WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de sesiones de confianza](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)  

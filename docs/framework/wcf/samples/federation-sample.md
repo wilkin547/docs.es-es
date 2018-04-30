@@ -1,30 +1,32 @@
 ---
-title: "Ejemplo de federación"
-ms.custom: 
+title: Ejemplo de federación
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c87984b08a073f37dcf155a39fab0f5e580e985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 58a8ab012682d5acb04b201c36d931276426ffe8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="federation-sample"></a>Ejemplo de federación
 Este ejemplo muestra la seguridad aliada.  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona compatibilidad para la implementación de arquitecturas de seguridad federadas a través del `wsFederationHttpBinding`. El `wsFederationHttpBinding` proporciona un enlace seguro, confiable e interoperable que implica el uso de HTTP como mecanismo de transporte subyacente para la comunicación de solicitud-respuesta, y Text/XML, como el formato de conexión para la codificación. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Federación en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [federación](../../../../docs/framework/wcf/feature-details/federation.md).  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona compatibilidad para la implementación de arquitecturas de seguridad federadas a través del `wsFederationHttpBinding`. El `wsFederationHttpBinding` proporciona un enlace seguro, confiable e interoperable que implica el uso de HTTP como mecanismo de transporte subyacente para la comunicación de solicitud-respuesta, y Text/XML, como el formato de conexión para la codificación. Para obtener más información acerca de la federación en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [federación](../../../../docs/framework/wcf/feature-details/federation.md).  
   
  El escenario se compone de 4 partes:  
   

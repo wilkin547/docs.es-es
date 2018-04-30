@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6c8769511f608834c7539779d83977880e1d4093
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 63f5c2c61a374b92b018419c83c9429e6ad796d8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="programming-wcf-security"></a>Programación de la seguridad de WCF
 Este tema describe las tareas de programación fundamentales utilizadas para crear una aplicación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] segura. Este tema trata únicamente la autenticación, confidencialidad e integridad, conocido colectivamente como *transferir seguridad*. Este tema no cubre la autorización (el control de acceso a recursos o servicios;) Para obtener información sobre la autorización, consulte [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -48,7 +48,7 @@ Este tema describe las tareas de programación fundamentales utilizadas para cre
   
     1.  `Transport`  
   
-         La seguridad de transporte depende del mecanismo que use el enlace que ha seleccionado. Por ejemplo, si utiliza `WSHttpBinding`, el mecanismo de seguridad es Secure Sockets Layer (SSL) (también es el mecanismo para el protocolo HTTPS). Generalmente hablando, la principal ventaja de la seguridad de transporte es que proporciona un buen rendimiento independientemente del transporte que esté utilizando. No obstante, tiene dos limitaciones: la primera es que el mecanismo de transporte dicta el tipo de credencial utilizado para autenticar a un usuario. Ésta es una desventaja solo si un servicio necesita interoperar con otros servicios que exigen tipos diferentes de credenciales. La segunda es que, puesto que la seguridad no se aplica en el nivel de mensaje, la seguridad se implementa salto por salto en lugar de de extremo a extremo. Esta última limitación es un problema solo si la ruta de mensajes entre el cliente y el servicio incluye intermediarios. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] el transporte que se va a usar, vea [elegir un transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] mediante la seguridad del transporte, consulte [información general sobre la seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         La seguridad de transporte depende del mecanismo que use el enlace que ha seleccionado. Por ejemplo, si utiliza `WSHttpBinding`, el mecanismo de seguridad es Secure Sockets Layer (SSL) (también es el mecanismo para el protocolo HTTPS). Generalmente hablando, la principal ventaja de la seguridad de transporte es que proporciona un buen rendimiento independientemente del transporte que esté utilizando. No obstante, tiene dos limitaciones: la primera es que el mecanismo de transporte dicta el tipo de credencial utilizado para autenticar a un usuario. Ésta es una desventaja solo si un servicio necesita interoperar con otros servicios que exigen tipos diferentes de credenciales. La segunda es que, puesto que la seguridad no se aplica en el nivel de mensaje, la seguridad se implementa salto por salto en lugar de de extremo a extremo. Esta última limitación es un problema solo si la ruta de mensajes entre el cliente y el servicio incluye intermediarios. Para obtener más información sobre el transporte que se va a usar, vea [elegir un transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Para obtener más información sobre el uso de seguridad de transporte, consulte [información general sobre la seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2.  `Message`  
   

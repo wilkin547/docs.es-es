@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e367c11b48e6f4034afb1f42ded3498d748848a7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="large-data-and-streaming"></a>Datos de gran tamaño y secuencias
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] es una infraestructura de comunicaciones basada en XML. Dado que los datos XML se codifican normalmente en el formato de texto estándar definido en el [especificación XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)conectados los arquitectos y desarrolladores de sistemas normalmente están preocupados por la superficie de conexión (o el tamaño) de los mensajes enviados a través de la red y basadas en texto con codificación de XML puede causar problemas especiales para la transferencia eficaz de datos binarios.  
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  Por consiguiente, restringir el tamaño máximo del mensaje entrante no es suficiente en este caso. Se exige a la propiedad `MaxBufferSize` que restrinja la memoria que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] almacena en búfer. Es importante establecer esto en un valor seguro (o mantenerlo en el valor predeterminado) en la transmisión por secuencias. Por ejemplo, suponga que su servicio debe recibir los archivos hasta 4 GB en tamaño y almacenarlos en el disco local. Suponga además que su memoria se restringe de tal manera que puede almacenar en búfer solo 64 KB de datos a la vez. A continuación, establecería `MaxReceivedMessageSize` en 4 GB y `MaxBufferSize` a 64 KB. Asimismo, en su implementación de servicio debe asegurarse de que solo lee de la secuencia entrante en fragmentos de 64 KB y no leer el fragmento siguiente antes de que el anterior se haya escrito en el disco y haya sido descartado de la memoria.  
   
- También es importante entender que esta cuota solo limita el almacenamiento en búfer realizado por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y no puede protegerle contra ningún almacenamiento en búfer que usted haga en su propio servicio o implementación de cliente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Consideraciones de seguridad adicionales, consulte [consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ También es importante entender que esta cuota solo limita el almacenamiento en búfer realizado por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y no puede protegerle contra ningún almacenamiento en búfer que usted haga en su propio servicio o implementación de cliente. Para obtener más información acerca de las consideraciones de seguridad adicional, vea [consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 >  La decisión de utilizar transferencias almacenadas en búfer o transmitidas es una decisión local del punto de conexión. Para los transportes HTTP, el modo de transferencia no se propaga a través de una conexión o a los servidores proxy y otros intermediarios. Establecer el modo de transferencia no se refleja en la descripción de la interfaz de servicio. Después de generar un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a un servicio, debe editar el archivo de configuración de los servicios pensados para ser utilizado con transferencias transmitidas para establecer el modo. En los transportes con canalizaciones con nombre y TCP, el modo de transferencia se propaga como una aserción de directiva.  

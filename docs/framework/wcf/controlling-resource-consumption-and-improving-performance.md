@@ -1,24 +1,26 @@
 ---
 title: Control del consumo de recursos y mejora del rendimiento
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecb8ae5edfb35ccaffecbfb4e960d3f4a46bad0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Control del consumo de recursos y mejora del rendimiento
 En este tema se describen varias propiedades en diferentes áreas de la arquitectura [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] que trabajan para controlar el consumo de recursos y que afectan a las mediciones del rendimiento.  
@@ -55,7 +57,7 @@ En este tema se describen varias propiedades en diferentes áreas de la arquitec
  El [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) puede mejorar el rendimiento de inicio de estas aplicaciones al generar el código de serialización necesarios desde los ensamblados compilados para la aplicación. Para obtener más información, consulte [Cómo: mejorar el inicio del tiempo de aplicaciones cliente de WCF mediante XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>Problemas de rendimiento al hospedar los servicios WCF bajo ASP.NET  
- Cuando un servicio WCF se hospeda bajo IIS y ASP.NET, la configuración de IIS y ASP.NET puede afectar al rendimiento y al consumo de memoria del servicio WCF.  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Rendimiento de ASP.NET, vea [mejorar el rendimiento de ASP.NET](http://go.microsoft.com/fwlink/?LinkId=186462).  Una configuración que quizá pueda tener consecuencias imprevistas es la propiedad <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, que es una propiedad de la clase <xref:System.Web.Configuration.ProcessModelSection>. Si la aplicación tiene un número fijo o pequeño de clientes, al establecer <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> en 2 se podría observar un aumento del rendimiento en un equipo con varios procesadores que tenga un uso de CPU próximo al 100%. Esta mejora del rendimiento tiene su precio: aumentará también el consumo de memoria, lo que podría disminuir la escalabilidad.  
+ Cuando un servicio WCF se hospeda bajo IIS y ASP.NET, la configuración de IIS y ASP.NET puede afectar al rendimiento y al consumo de memoria del servicio WCF.  Para obtener más información sobre el rendimiento de ASP.NET, vea [mejorar el rendimiento de ASP.NET](http://go.microsoft.com/fwlink/?LinkId=186462).  Una configuración que quizá pueda tener consecuencias imprevistas es la propiedad <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, que es una propiedad de la clase <xref:System.Web.Configuration.ProcessModelSection>. Si la aplicación tiene un número fijo o pequeño de clientes, al establecer <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> en 2 se podría observar un aumento del rendimiento en un equipo con varios procesadores que tenga un uso de CPU próximo al 100%. Esta mejora del rendimiento tiene su precio: aumentará también el consumo de memoria, lo que podría disminuir la escalabilidad.  
   
 ## <a name="see-also"></a>Vea también  
  [Administración y diagnóstico](../../../docs/framework/wcf/diagnostics/index.md)  

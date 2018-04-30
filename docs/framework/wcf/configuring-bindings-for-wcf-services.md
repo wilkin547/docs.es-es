@@ -1,28 +1,28 @@
 ---
-title: "Configuración de enlaces para servicios Windows Communication Foundation"
-ms.custom: 
+title: Configuración de enlaces para servicios Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b11810e0a39c5b6091a63ef33e5abfccb95b7555
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f98d7c7b7d816687487a652f0527886300f0ee86
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configuración de enlaces para servicios Windows Communication Foundation
 Con frecuencia al crear una aplicación desea delegar las decisiones al administrador tras la implementación de la aplicación. Por ejemplo, a menudo no hay manera de conocer de antemano qué será una dirección de servicio o un URI. En lugar de incluir una dirección en el código, es preferible permitir a un administrador hacerlo después de crear un servicio. Esta flexibilidad se logra a través de la configuración.  
@@ -47,13 +47,13 @@ Con frecuencia al crear una aplicación desea delegar las decisiones al administ
 ```  
   
 ### <a name="servicemodel-elements"></a>Elementos ServiceModel  
- Puede usar la sección limitada por la `system.ServiceModel` elemento para definir un tipo de servicio con uno o más extremos, así como los valores para un servicio. Cada punto de conexión se puede configurar a continuación con una dirección, un contrato y un enlace. [!INCLUDE[crabout](../../../includes/crabout-md.md)]puntos de conexión, consulte [información general de creación de punto de conexión](../../../docs/framework/wcf/endpoint-creation-overview.md). Si no se especifica ningún punto de conexión, el tiempo de ejecución agrega puntos de conexión predeterminados. [!INCLUDE[crabout](../../../includes/crabout-md.md)] los puntos de conexión, enlaces y comportamientos predeterminados, consulte [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Puede usar la sección limitada por la `system.ServiceModel` elemento para definir un tipo de servicio con uno o más extremos, así como los valores para un servicio. Cada punto de conexión se puede configurar a continuación con una dirección, un contrato y un enlace. Para obtener más información acerca de los extremos, vea [información general de creación de punto de conexión](../../../docs/framework/wcf/endpoint-creation-overview.md). Si no se especifica ningún punto de conexión, el tiempo de ejecución agrega puntos de conexión predeterminados. Para obtener más información acerca de los puntos de conexión de forma predeterminada, los enlaces y los comportamientos, consulte [configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
  Un enlace especifica transportes (HTTP, TCP, canalizaciones, Message Queuing) y protocolos (seguridad, confiabilidad, flujos de transacción) y está compuesto de elementos de enlace, cada uno de los cuales especifica un aspecto sobre cómo un punto de conexión se comunica con el mundo.  
   
  Por ejemplo, si se especifica la [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento indica que se utiliza HTTP como transporte para un punto de conexión. Se utiliza para conectar el punto de conexión en tiempo de ejecución cuando se abre el servicio utilizando este punto de conexión.  
   
- Hay dos tipos de enlaces: predefinidos y personalizados. Los enlaces predefinidos contienen combinaciones útiles de elementos que se utilizan en escenarios comunes. Para obtener una lista de los enlaces predefinidos tipos que [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proporciona, consulte [enlaces proporcionados](../../../docs/framework/wcf/system-provided-bindings.md). Si ninguna colección de enlace predefinido tiene la combinación correcta de características que una aplicación de servicio necesita, puede construir enlaces personalizados para satisfacer los requisitos de la aplicación. [!INCLUDE[crabout](../../../includes/crabout-md.md)]enlaces personalizados, consulte [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Hay dos tipos de enlaces: predefinidos y personalizados. Los enlaces predefinidos contienen combinaciones útiles de elementos que se utilizan en escenarios comunes. Para obtener una lista de los enlaces predefinidos tipos que [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proporciona, consulte [enlaces proporcionados](../../../docs/framework/wcf/system-provided-bindings.md). Si ninguna colección de enlace predefinido tiene la combinación correcta de características que una aplicación de servicio necesita, puede construir enlaces personalizados para satisfacer los requisitos de la aplicación. Para obtener más información acerca de los enlaces personalizados, consulte [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
  Los cuatro ejemplos siguientes muestran las configuraciones de enlace más comunes utilizadas para preparar un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   

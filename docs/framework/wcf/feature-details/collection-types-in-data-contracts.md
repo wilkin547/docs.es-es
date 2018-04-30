@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de colección en contratos de datos
 Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tales listas se pueden representar utilizando matrices o una variedad de otros tipos (Lista genérica, <xref:System.ComponentModel.BindingList%601>genérica, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Por ejemplo, una colección puede albergar una lista de direcciones para un determinado cliente. Estas colecciones se denominan *colecciones de lista*, con independencia de cual sea su tipo real.  
@@ -42,7 +42,7 @@ Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[
   
  Los tipos contenidos en las colecciones deben ser tipos de contrato de datos o, de lo contrario, se deben poder serializar. Para obtener más información, consulte [tipos admitidos por el serializador de contratos de datos](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] lo que se considera y lo que no se considera una colección válida, así como sobre cómo se serializan las colecciones, vea la información sobre la serialización de colecciones en la sección "Reglas avanzadas de colección" de este tema.  
+ Para obtener más información acerca de qué es y lo que no se considera una colección válida, así como acerca de cómo se serializan las colecciones, vea la información sobre las colecciones de serialización en la sección "Reglas avanzadas de colección" de este tema.  
   
 ## <a name="interchangeable-collections"></a>Colecciones intercambiables  
  Se considera que todas las colecciones de listas del mismo tipo tienen el mismo contrato de datos (a menos que se personalicen utilizando el atributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , como se aborda más adelante en este tema). Así, por ejemplo, los contratos de datos siguientes son equivalentes.  
@@ -91,7 +91,7 @@ Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[
 ## <a name="customizing-collection-types"></a>Personalizar tipos de colección  
  Puede personalizar tipos de colección utilizando el atributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , que tiene varios usos.  
   
- Observe que al personalizar los tipos de colección se pone en peligro la posibilidad de intercambio de colecciones, por lo que normalmente se recomienda evitar aplicar este atributo siempre que sea posible. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] este problema, vea la sección "Reglas avanzadas de colección" más adelante en este mismo tema.  
+ Observe que al personalizar los tipos de colección se pone en peligro la posibilidad de intercambio de colecciones, por lo que normalmente se recomienda evitar aplicar este atributo siempre que sea posible. Para obtener más información acerca de este problema, vea la sección "Reglas avanzadas de colección" más adelante en este tema.  
   
 ### <a name="collection-data-contract-naming"></a>Denominación de contrato de datos de colección  
  Las reglas para denominar los tipos de colección son similares a las existentes para denominar los tipos de contrato de datos normales, como se describe en [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md), aunque existen algunas diferencias importantes:  
@@ -203,7 +203,7 @@ Una *colección* es una lista de elementos de un determinado tipo. En [!INCLUDE[
 </CountriesOrRegionsWithCapitals>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] las colecciones de diccionario, vea la sección "Reglas avanzadas de colección" más adelante en este mismo tema.  
+ Para obtener más información acerca de las colecciones de diccionarios, vea la sección "Reglas avanzadas de colección" más adelante en este tema.  
   
 ## <a name="collections-and-known-types"></a>Colecciones y tipos conocidos  
  No necesita agregar tipos de colección a los tipos conocidos al utilizarlos polimórficamente en lugar de otras colecciones o interfaces de colección. Por ejemplo, si declara un miembro de datos de tipo <xref:System.Collections.IEnumerable> y lo utiliza para enviar una instancia de <xref:System.Collections.ArrayList>, no necesita agregar <xref:System.Collections.ArrayList> a los tipos conocidos.  
@@ -318,7 +318,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   Se permite combinar los tipos de colección (tener colecciones de colecciones). Las matrices escalonadas se tratan como colecciones de colecciones. No se soportan matrices multidimensionales.  
   
--   Las matrices de byte y matrices de <xref:System.Xml.XmlNode> son los tipos de matriz especiales que se tratan como primitivas, no colecciones. Al serializar una matriz de bytes se obtiene un elemento XML único que contiene un bloque de datos con codificación Base64, en lugar de un elemento aparte para cada byte. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo se trata una matriz de <xref:System.Xml.XmlNode> , consulte [XML and ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Evidentemente, estos tipos especiales pueden participar en colecciones: una matriz de matriz de byte resulta en múltiples elementos XML, y cada uno de ellos contiene un bloque de datos codificados por Base64.  
+-   Las matrices de byte y matrices de <xref:System.Xml.XmlNode> son los tipos de matriz especiales que se tratan como primitivas, no colecciones. Al serializar una matriz de bytes se obtiene un elemento XML único que contiene un bloque de datos con codificación Base64, en lugar de un elemento aparte para cada byte. Para obtener más información acerca de cómo una matriz de <xref:System.Xml.XmlNode> es tratan, consulte [tipos XML y ADO.NET en contratos de datos](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Evidentemente, estos tipos especiales pueden participar en colecciones: una matriz de matriz de byte resulta en múltiples elementos XML, y cada uno de ellos contiene un bloque de datos codificados por Base64.  
   
 -   Si el atributo <xref:System.Runtime.Serialization.DataContractAttribute> se aplica a un tipo de colección, el tipo se trata como un tipo de contrato de datos normal, no como una colección.  
   
@@ -361,7 +361,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   El nombre predeterminado para los contratos de datos de colección de listas, a menos que se invalide utilizando Nombre, es la cadena "ArrayOf" combinada con el nombre de contrato de datos del tipo contenido en la colección. Por ejemplo, el nombre de contrato de datos para una lista genérica de enteros es "ArrayOfint." Tenga presente que el nombre de contrato de datos de `Object` es "anyType", de modo que el nombre de contrato de datos de listas no genéricas como <xref:System.Collections.ArrayList> es "ArrayOfanyType."  
   
- El nombre predeterminado para los contratos de datos de colección de diccionarios, a menos que se invalide utilizando `Name`, es la cadena "ArrayOfKeyValueOf" combinada con el nombre de contrato de datos del tipo clave seguido por el nombre de contrato de datos del tipo de valor. Por ejemplo, el nombre de contrato de datos para un diccionario genérico de cadena y entero es "ArrayOfKeyValueOfstringint." Adicionalmente, si los tipos de clave o valor no son tipos primitivos, un hash de espacio de nombres de los espacios de nombres de contrato de datos de los tipos de clave y valor se agrega al nombre. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] los hash de espacio de nombres, consulte [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ El nombre predeterminado para los contratos de datos de colección de diccionarios, a menos que se invalide utilizando `Name`, es la cadena "ArrayOfKeyValueOf" combinada con el nombre de contrato de datos del tipo clave seguido por el nombre de contrato de datos del tipo de valor. Por ejemplo, el nombre de contrato de datos para un diccionario genérico de cadena y entero es "ArrayOfKeyValueOfstringint." Adicionalmente, si los tipos de clave o valor no son tipos primitivos, un hash de espacio de nombres de los espacios de nombres de contrato de datos de los tipos de clave y valor se agrega al nombre. Para obtener más información acerca de valores hash de espacio de nombres, vea [nombres de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Cada contrato de datos de colección de diccionarios tiene un contrato de datos complementario que representa una entrada en el diccionario. Su nombre es igual que para el contrato de datos del diccionario, salvo el prefijo "ArrayOf", y su espacio de nombres es igual que para el contrato de datos del diccionario. Por ejemplo, para el contrato de datos de diccionario de "ArrayOfKeyValueOfstringint", el contrato de datos de "KeyValueofstringint" representa una entrada en el diccionario. Puede personalizar el nombre de este contrato de datos utilizando la propiedad `ItemName` , como se describe en la sección siguiente.  
   

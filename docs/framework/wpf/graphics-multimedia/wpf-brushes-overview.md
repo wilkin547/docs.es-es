@@ -1,13 +1,13 @@
 ---
-title: "Información general sobre pinceles de WPF"
-ms.custom: 
+title: Información general sobre pinceles de WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ef53da1febd6a49af8404e5889a728a1b7c649b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-brushes-overview"></a>Información general sobre pinceles de WPF
 Todos los elementos visibles en la pantalla está visible porque lo ha pintado un pincel. Por ejemplo, un pincel se utiliza para describir el fondo de un botón, el primer plano del texto y el relleno de una forma. Este tema presentan los conceptos de pintar con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pinceles y proporciona ejemplos. Los pinceles permiten pintar objetos [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] con cualquier cosa, desde colores simples y sólidos hasta conjuntos complejos de patrones e imágenes.  
@@ -142,7 +142,7 @@ Rectángulo pintado mediante VisualBrush
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
 ## <a name="paint-using-predefined-and-system-brushes"></a>Pintar usando predefinida y pinceles del sistema  
- Para mayor comodidad, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] proporciona un conjunto de predefinidas y pinceles de sistema que puede utilizar para pintar objetos.  
+ Para mayor comodidad, Windows Presentation Foundation (WPF) proporciona predefinidos de un conjunto de y pinceles de sistema que puede utilizar para pintar objetos.  
   
 -   Para obtener una lista de pinceles predefinidos disponibles, vea la <xref:System.Windows.Media.Brushes> clase. Para obtener un ejemplo que muestra cómo utilizar un pincel predefinido, consulte [pintar un área con un Color sólido](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md).  
   
@@ -150,7 +150,7 @@ Rectángulo pintado mediante VisualBrush
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Características comunes de pincel  
- <xref:System.Windows.Media.Brush>objetos proporcionan una <xref:System.Windows.Media.Brush.Opacity%2A> propiedad que puede usarse para hacer un pincel transparente o parcialmente transparentes. Un <xref:System.Windows.Media.Brush.Opacity%2A> valor de 0 hace que un pincel sea completamente transparente, mientras un <xref:System.Windows.Media.Brush.Opacity%2A> valor de 1 hace que un pincel sea completamente opaco. En el ejemplo siguiente se usa el <xref:System.Windows.Media.Brush.Opacity%2A> propiedad para hacer un <xref:System.Windows.Media.SolidColorBrush> opaco en un 25 por ciento.  
+ <xref:System.Windows.Media.Brush> objetos proporcionan una <xref:System.Windows.Media.Brush.Opacity%2A> propiedad que puede usarse para hacer un pincel transparente o parcialmente transparentes. Un <xref:System.Windows.Media.Brush.Opacity%2A> valor de 0 hace que un pincel sea completamente transparente, mientras un <xref:System.Windows.Media.Brush.Opacity%2A> valor de 1 hace que un pincel sea completamente opaco. En el ejemplo siguiente se usa el <xref:System.Windows.Media.Brush.Opacity%2A> propiedad para hacer un <xref:System.Windows.Media.SolidColorBrush> opaco en un 25 por ciento.  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   

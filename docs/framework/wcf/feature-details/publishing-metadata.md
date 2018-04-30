@@ -1,28 +1,28 @@
 ---
-title: "Publicación de metadatos"
-ms.custom: 
+title: Publicación de metadatos
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - meatadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 86d9eb8e7e7c78f091deea55322cbef6e6d0f3c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 031a80c52c194f300d7785f05e73eabeebb296b7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="publishing-metadata"></a>Publicación de metadatos
 Los servicios de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] publican metadatos mediante la publicación de uno o más extremos de metadatos. La publicación de metadatos de servicio pone los metadatos a disposición mediante protocolos estandarizados, como WS-MetadataExchange (MEX) y solicitudes HTTP/GET. Los extremos de metadatos son similares a otros extremos de servicio en cuanto que tienen una dirección, un enlace y un contrato, y se pueden agregar a un host del servicio a través de configuración o código imperativo.  
@@ -30,7 +30,7 @@ Los servicios de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] publica
 ## <a name="publishing-metadata-endpoints"></a>Publicación de puntos de conexión de metadatos  
  Para publicar extremos de metadatos para un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], debe agregar primero el comportamiento del servicio <xref:System.ServiceModel.Description.ServiceMetadataBehavior> al servicio. Agregar una instancia <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> permite a su servicio exponer los extremos de metadatos. Una vez que agregue el comportamiento del servicio <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, puede exponer extremos de metadatos que admitan el protocolo MEX o que respondan a solicitudes HTTP/GET.  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> usa un <xref:System.ServiceModel.Description.WsdlExporter> para exportar metadatos para todos los extremos de servicio al servicio. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]exportación de metadatos de un servicio, consulte [exportar e importar metadatos](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> usa un <xref:System.ServiceModel.Description.WsdlExporter> para exportar metadatos para todos los extremos de servicio al servicio. Para obtener más información acerca de cómo exportar metadatos desde un servicio, consulte [exportar e importar metadatos](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> agrega una instancia <xref:System.ServiceModel.Description.ServiceMetadataExtension> como una extensión a su host de servicio. <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> proporciona la implementación para los protocolos de publicación de metadatos. También puede utilizar <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> para obtener los metadatos del servicio en tiempo de ejecución mediante la obtención de acceso a la propiedad <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=nameWithType>.  
   

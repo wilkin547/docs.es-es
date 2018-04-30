@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="information-disclosure"></a>Divulgación de información
 La divulgación de información permite a un atacante ganar valiosa información sobre un sistema. Por consiguiente, siempre considere qué información divulga y si un usuario malintencionado puede utilizarla. A continuación se muestra una lista de los posibles ataques de divulgación de información y proporciona métodos paliativos para cada uno de ellos.  
@@ -29,7 +29,7 @@ La divulgación de información permite a un atacante ganar valiosa información
  Si utiliza la seguridad del nivel de mensaje sobre una capa de transporte HTTP, sea consciente de que la seguridad del nivel de mensaje no protege los encabezados HTTP. La única manera de proteger los encabezados HTTP consiste en utilizar transporte HTTPS en lugar de HTTP. El transporte HTTPS hace que se cifre el mensaje completo, incluidos los encabezados HTTP, mediante el protocolo Secure Sockets Layer (SSL).  
   
 ## <a name="policy-information"></a>Información de directiva  
- Es importante proteger la directiva, sobre todo en escenarios de federación donde confidenciales requisitos de tokens emitidos o información sobre el emisor del token se exponen en la directiva. En estos casos, la recomendación es proteger el punto de conexión de la directiva del servicio federado para evitar que los atacantes obtengan información sobre el servicio, como el tipo de demandas que colocar en el token emitido o redirigir a los clientes a emisores de tokens malintencionados. Por ejemplo, un atacante podría detectar pares de nombre de usuario/contraseña reconfigurando la cadena de confianza federada para finalizar en un emisor que ejecutó un ataque de tipo “man-in-the-middle”. También se recomienda que los clientes federados que obtienen sus enlaces a través de la recuperación de directivas comprueben que confían en los emisores en la cadena de confianza federada obtenida. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] escenarios de federación, consulte [federación](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Es importante proteger la directiva, sobre todo en escenarios de federación donde confidenciales requisitos de tokens emitidos o información sobre el emisor del token se exponen en la directiva. En estos casos, la recomendación es proteger el punto de conexión de la directiva del servicio federado para evitar que los atacantes obtengan información sobre el servicio, como el tipo de demandas que colocar en el token emitido o redirigir a los clientes a emisores de tokens malintencionados. Por ejemplo, un atacante podría detectar pares de nombre de usuario/contraseña reconfigurando la cadena de confianza federada para finalizar en un emisor que ejecutó un ataque de tipo “man-in-the-middle”. También se recomienda que los clientes federados que obtienen sus enlaces a través de la recuperación de directivas comprueben que confían en los emisores en la cadena de confianza federada obtenida. Para obtener más información acerca de los escenarios de federación, consulte [federación](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Los volcados de memoria pueden revelar información de la demanda  
  Cuando se produce un error en una aplicación, los archivos de registro, como los generados por Dr. Watson, puede contener información de notificaciones. Esta información no se debería exportar a otras entidades, como equipos de compatibilidad; de lo contrario, se exporta también la información de la demanda que contiene los datos privados. Esto se puede paliar si no se envían los archivos de registro a entidades desconocidas. Para obtener más información, consulte [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
@@ -67,7 +67,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  El código no especifica un nombre de dominio y, por consiguiente, se utilizará NTLM.  
   
- Si se especifica el dominio, pero se especifica un nombre principal de servicio no válido mediante la característica de identidad de punto de conexión, se usará NTLM. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo se especifica la identidad del extremo, vea [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Si se especifica el dominio, pero se especifica un nombre principal de servicio no válido mediante la característica de identidad de punto de conexión, se usará NTLM. Para obtener más información acerca de cómo se especifica la identidad del extremo, vea [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  

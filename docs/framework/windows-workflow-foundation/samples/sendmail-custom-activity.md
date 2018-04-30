@@ -1,24 +1,24 @@
 ---
 title: Actividad personalizada SendMail
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6086ca0ccb31603874feda6df1384b9346adb49d
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 46038466233e7039229890b15b0ad6ca9d1a717f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sendmail-custom-activity"></a>Actividad personalizada SendMail
 En este ejemplo se muestra cómo crear una actividad personalizada que deriva de <xref:System.Activities.AsyncCodeActivity> para enviar correo utilizando SMTP para el uso dentro de una aplicación de flujo de trabajo. La actividad personalizada utiliza las capacidades de <xref:System.Net.Mail.SmtpClient> para enviar correo electrónico de forma asincrónica y para enviar correo electrónico con la autenticación. También proporciona algunas características de usuario final como el modo de prueba, reemplazo del token, plantillas de archivo y ruta de colocación para dejar la prueba.  
@@ -32,9 +32,9 @@ En este ejemplo se muestra cómo crear una actividad personalizada que deriva de
 |EnableSsl|bool|Especifica si el objeto <xref:System.Net.Mail.SmtpClient> utiliza SSL (Secure Sockets Layer) para cifrar la conexión.|  
 |UserName|String|Nombre de usuario para preparar las credenciales para autenticar la propiedad <xref:System.Net.Mail.SmtpClient.Credentials%2A> del remitente.|  
 |Contraseña|String|Contraseña para preparar las credenciales para autenticar la propiedad <xref:System.Net.Mail.SmtpClient.Credentials%2A> del remitente.|  
-|Contenido|<xref:System.Activities.InArgument%601>\<string>|Asunto del mensaje.|  
-|Cuerpo|<xref:System.Activities.InArgument%601>\<string>|Cuerpo del mensaje.|  
-|Datos adjuntos|<xref:System.Activities.InArgument%601>\<string>|Colección de datos adjuntos que se utiliza para almacenar los datos adjuntados a este mensaje de correo electrónico.|  
+|Contenido|<xref:System.Activities.InArgument%601>\<cadena >|Asunto del mensaje.|  
+|Cuerpo|<xref:System.Activities.InArgument%601>\<cadena >|Cuerpo del mensaje.|  
+|Datos adjuntos|<xref:System.Activities.InArgument%601>\<cadena >|Colección de datos adjuntos que se utiliza para almacenar los datos adjuntados a este mensaje de correo electrónico.|  
 |De|<xref:System.Net.Mail.MailAddress>|De dirección para este mensaje de correo electrónico.|  
 |En|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene a los destinatarios de este mensaje de correo electrónico.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Colección de direcciones que contiene a los destinatarios de copia (CC) para este mensaje de correo electrónico.|  
@@ -116,7 +116,7 @@ new SendMail
 ## <a name="set-up-instructions"></a>Instrucciones de instalación  
  En este ejemplo se requiere acceso a un servidor SMTP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] configuración de un servidor SMTP, consulte los vínculos siguientes.  
+ Para obtener más información acerca de cómo configurar un servidor SMTP, vea los vínculos siguientes.  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   

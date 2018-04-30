@@ -1,27 +1,29 @@
 ---
-title: "Cómo: Intercambiar mensajes en cola con puntos de conexión de WCF"
-ms.custom: 
+title: 'Cómo: Intercambiar mensajes en cola con puntos de conexión de WCF'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba057a0b96d393a5efbaf054e75c34f446c7dde6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f44f3a58e0a8283753cb682f25cf2f167450724
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Cómo: Intercambiar mensajes en cola con puntos de conexión de WCF
 Las colas garantizan que la mensajería de confianza puede tener lugar entre un cliente y un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], aun cuando el servicio no esté disponible en el momento de la comunicación. Los procedimientos siguientes muestran cómo garantizar una comunicación duradera entre un cliente y un servicio utilizando el enlace en cola estándar al implementar el servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -52,7 +54,7 @@ Las colas garantizan que la mensajería de confianza puede tener lugar entre un 
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Defina <xref:System.ServiceModel.Description.ServiceEndpoint> en configuración que especifique la dirección de servicio y use el enlace <xref:System.ServiceModel.NetMsmqBinding> estándar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuración, consulte [configuración de Windows Communication Foundation Applications](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+5.  Defina <xref:System.ServiceModel.Description.ServiceEndpoint> en configuración que especifique la dirección de servicio y use el enlace <xref:System.ServiceModel.NetMsmqBinding> estándar. Para obtener más información sobre el uso de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuración, consulte [configuración de Windows Communication Foundation Applications](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
   
   

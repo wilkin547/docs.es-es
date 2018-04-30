@@ -1,26 +1,26 @@
 ---
 title: Control de versiones del servicio
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: fef65a4134f1cf526a7082b08aa4d8d1c6ea7f4d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-versioning"></a>Control de versiones del servicio
 Después de la implementación inicial y de haber transcurrido potencialmente varias horas durante su duración, los servicios (y los extremos que exponen) pueden necesitar ser cambiados debido a diversas razones, como cambios en las necesidades comerciales, requisitos de tecnología de la información o para resolver otros problemas. Cada cambio produce una nueva versión del servicio. En este tema se explica cómo considerar el control de versiones en [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -138,7 +138,7 @@ Después de la implementación inicial y de haber transcurrido potencialmente va
  Los cambios de la dirección del extremo y enlace son cambios con interrupción a menos que los clientes sean capaces de detectar dinámicamente la nueva dirección del extremo o enlace. Un mecanismo para implementar esta función consiste en utilizar un registro de la Descripción e integración de la detección universal (UDDI) y el patrón de invocación UDDI donde un cliente intenta comunicar con un extremo y, en cuando se produce un error, consulta los metadatos del extremo actual en un registro de UDDI conocido. El cliente utiliza a continuación la dirección y el enlace desde estos metadatos para comunicarse con el punto de conexión. Si esta comunicación se realiza con éxito, el cliente almacena en caché la dirección e información de enlace para su uso en el futuro.  
   
 ## <a name="routing-service-and-versioning"></a>Servicio de enrutamiento y control de versiones  
- Si los cambios realizados en un servicio son cambios importantes y es necesario crear dos o más versiones diferentes de un servicio que se ejecuta simultáneamente, puede utilizar el servicio de enrutamiento de WCF para enrutar los mensajes a la instancia del servicio adecuada. El Servicio de enrutamiento de WCF usa enrutamiento basado en el contenido; es decir, usa información contenida en el mensaje para determinar dónde enrutarlo. [!INCLUDE[crabout](../../../includes/crabout-md.md)] los, consulte el servicio de enrutamiento de WCF [servicio de enrutamiento](../../../docs/framework/wcf/feature-details/routing-service.md). Para obtener un ejemplo de cómo usar el servicio de enrutamiento de WCF para las versiones de servicio, consulte [How To: control de versiones del servicio](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Si los cambios realizados en un servicio son cambios importantes y es necesario crear dos o más versiones diferentes de un servicio que se ejecuta simultáneamente, puede utilizar el servicio de enrutamiento de WCF para enrutar los mensajes a la instancia del servicio adecuada. El Servicio de enrutamiento de WCF usa enrutamiento basado en el contenido; es decir, usa información contenida en el mensaje para determinar dónde enrutarlo. Para obtener más información sobre, consulte el servicio de enrutamiento de WCF [servicio de enrutamiento](../../../docs/framework/wcf/feature-details/routing-service.md). Para obtener un ejemplo de cómo usar el servicio de enrutamiento de WCF para las versiones de servicio, consulte [How To: control de versiones del servicio](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ## <a name="appendix"></a>Apéndice  
  La recomendación general para el control de versiones de los contratos de datos es que cuando se necesite un control estricto de las versiones los contratos de datos se traten como inmutables y crear otros nuevos cuando se requieran cambios. Se necesita crear una nueva clase para cada nuevo contrato de datos, por lo que necesita que un mecanismo evite tener que tomar código existente, que se escribió referido a la clase del contrato de datos antiguo y volverlo a escribir, referido a la nueva clase del contrato de datos.  

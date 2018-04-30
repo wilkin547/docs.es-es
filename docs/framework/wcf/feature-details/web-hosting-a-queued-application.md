@@ -1,31 +1,33 @@
 ---
-title: "Alojamiento web de una aplicación en cola"
-ms.custom: 
+title: Alojamiento web de una aplicación en cola
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a12348c3c49c29812530bc568bb5873ec53f7eb5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>Alojamiento web de una aplicación en cola
 El Servicio de Activación de Proceso de Windows (WAS) administra la activación y duración de los procesos de trabajo que contienen las aplicaciones que hospedan los servicios [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. El modelo de procesamiento WAS generaliza el modelo de procesamiento [!INCLUDE[iis601](../../../../includes/iis601-md.md)] para el servidor HTTP quitando la dependencia en HTTP. Esto permite a los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizar HTTP y protocolos distintos de HTTP, como net.msmq y msmq.formatname, en un entorno host que admite la activación basada en mensaje y ofrece la capacidad de hospedar un gran número de aplicaciones en un equipo determinado.  
   
  WAS incluye un servicio de activación de Message Queuing (MSMQ) que activa una aplicación en cola cuando hay uno o más mensajes en una de las colas que la aplicación usa. El servicio de activación MSMQ es un servicio NT que se inicia automáticamente de forma predeterminada.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WAS y sus ventajas, consulte [hospedar en Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ, consulte [información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ Para obtener más información acerca de WAS y sus ventajas, consulte [hospedar en Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). Para obtener más información acerca de MSMQ, vea [información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
   
 ## <a name="queue-addressing-in-was"></a>Direccionamiento de la cola en WAS  
  Las aplicaciones de WAS tienen direcciones de Identificador uniforme de recursos (URI). Las direcciones de la aplicación tienen dos partes: un prefijo base de URI y un específico de la aplicación, dirección relativa (ruta de acceso). Estas dos partes proporcionan la dirección externa de una aplicación cuando se combinan. El prefijo URI base se construye desde el enlace del sitio y se utiliza para todas las aplicaciones en el sitio, por ejemplo, "NET. MSMQ://localhost", "MSMQ. FormatName://localhost" o "NET. TCP://localhost". Direcciones de la aplicación, a continuación, se construyen tomando fragmentos de ruta de acceso específica de la aplicación (como "/ /applicationone") y el identificador URI base prefijo para llegar al completo de la aplicación URI, por ejemplo, "MSMQ://localhost/applicationone".  

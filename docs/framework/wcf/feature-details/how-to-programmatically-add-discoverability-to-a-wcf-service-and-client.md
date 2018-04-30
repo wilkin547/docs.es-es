@@ -1,24 +1,26 @@
 ---
-title: "Cómo: Agregar detectabilidad mediante programación a un cliente y un servicio de WCF"
-ms.custom: 
+title: 'Cómo: Agregar detectabilidad mediante programación a un cliente y un servicio de WCF'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a0a59788544a32b78e75ac25e787dcbae478451e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Cómo: Agregar detectabilidad mediante programación a un cliente y un servicio de WCF
 En este tema, se explica cómo hacer un que un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sea reconocible. Se basa en el [autohospedaje](http://go.microsoft.com/fwlink/?LinkId=145523) ejemplo.  
@@ -231,7 +233,7 @@ En este tema, se explica cómo hacer un que un servicio de [!INCLUDE[indigo1](..
     ```  
   
 ## <a name="example"></a>Ejemplo  
- A continuación, se muestra una lista completa del código de este ejemplo. Dado que este código se basa en el [autohospedaje](http://go.microsoft.com/fwlink/?LinkId=145523) ejemplo, se muestran solo los archivos que se cambian. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]el ejemplo de autohospedaje, consulte [instrucciones de instalación](http://go.microsoft.com/fwlink/?LinkId=145522).  
+ A continuación, se muestra una lista completa del código de este ejemplo. Dado que este código se basa en el [autohospedaje](http://go.microsoft.com/fwlink/?LinkId=145523) ejemplo, se muestran solo los archivos que se cambian. Para obtener más información sobre el ejemplo de autohospedaje, consulte [instrucciones de instalación](http://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1a0a11d613ffb8f71437edd73a8be64fb5f55a4c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4d3c7234c25b0a968ca67b58a560e8c8b55bb73d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="stand-alone-json-serialization"></a>Serialización independiente de JSON
 JSON (JavaScript Object Notation) es un formato de datos diseñado específicamente para usarse por código JavaScript que se ejecute en páginas web dentro del explorador. Es el formato de datos predeterminado usado por servicios de AJAX de ASP.NET creados en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -53,7 +53,7 @@ JSON (JavaScript Object Notation) es un formato de datos diseñado específicame
 |Valor `Null` para cualquier tipo|Null|Los tipos que aceptan valores null también se admiten y asignan a JSON de la misma manera que los tipos que no aceptan valores null.|  
   
 ### <a name="enumerations-and-json"></a>Enumeraciones y JSON  
- Los valores del miembro de enumeración se tratan como números en JSON, que es diferente de cómo se tratan en contratos de datos, donde se incluyen como nombres de miembros. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] el contrato de datos tratamiento, consulte [tipos de enumeración en contratos de datos](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Los valores del miembro de enumeración se tratan como números en JSON, que es diferente de cómo se tratan en contratos de datos, donde se incluyen como nombres de miembros. Para obtener más información sobre el tratamiento de contrato de datos, vea [tipos de enumeración en contratos de datos](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 -   Por ejemplo, si tiene `public enum Color {red, green, blue, yellow, pink}`, al serializar `yellow`, se genera el número 3 y no la cadena "amarillo".  
   

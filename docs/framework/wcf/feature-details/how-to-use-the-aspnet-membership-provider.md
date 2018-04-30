@@ -1,28 +1,30 @@
 ---
-title: "Cómo: Utilizar el proveedor de pertenencia de ASP.NET"
-ms.custom: 
+title: 'Cómo: Utilizar el proveedor de pertenencia de ASP.NET'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c5042e73945c54da2b1ee71fc5ea61727dc73c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 19fb83d21c77f3206c314a2e6c40562fcb75f151
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Cómo: Utilizar el proveedor de pertenencia de ASP.NET
 El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] es una característica que permite a los programadores de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] crear sitios web que permiten a los usuarios crear combinaciones únicas de nombre de usuario y contraseña. Con esta función, cualquier usuario puede establecer una cuenta en el sitio e iniciar sesión para obtener acceso exclusivo al sitio y a sus servicios. Esto contrasta con la seguridad de Windows, que exige a los usuarios que tengan cuentas en un dominio de Windows. En su lugar, cualquier usuario que proporcione sus credenciales (la combinación de nombre de usuario/contraseña) puede utilizar el sitio y sus servicios.  
@@ -71,7 +73,7 @@ El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp
   
 1.  En el archivo de configuración, en la [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, agregue un [ \<enlaces >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
   
-2.  Agregar un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) a la sección de enlaces. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]crear un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enlace elemento, vea [Cómo: especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2.  Agregar un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) a la sección de enlaces. Para obtener más información acerca de cómo crear un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enlace elemento, vea [Cómo: especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 3.  Establezca el atributo `mode` del elemento `<security>` en `Message`:  
   

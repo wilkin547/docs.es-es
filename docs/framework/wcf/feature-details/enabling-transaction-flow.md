@@ -1,28 +1,28 @@
 ---
 title: Habilitar el flujo de transacciones
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 814df9ff4fb11b0aa59270ac251b5dbd9ed7fe96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffc7a1af9c9a021e93c0fca14c0d7d2826f8af6a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="enabling-transaction-flow"></a>Habilitar el flujo de transacciones
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona opciones muy flexibles para controlar el flujo de la transacción. La configuración del flujo de transacción de un servicio se puede expresar utilizando una combinación de atributos y configuración.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
  Si el enlace ha deshabilitado el flujo de la transacción, pero una de las operaciones en un contrato de servicios requiere una transacción entrante, se produce una excepción de validación en el inicio del servicio.  
   
- La mayoría de los enlaces existentes que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona contienen los atributos `transactionFlow` y `transactionProtocol` para permitirle configurar el enlace específico para aceptar las transacciones entrantes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]configuración de los elementos de configuración, consulte [ \<enlace >](../../../../docs/framework/misc/binding.md).  
+ La mayoría de los enlaces existentes que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona contienen los atributos `transactionFlow` y `transactionProtocol` para permitirle configurar el enlace específico para aceptar las transacciones entrantes. Para obtener más información acerca de cómo establecer los elementos de configuración, consulte [ \<enlace >](../../../../docs/framework/misc/binding.md).  
   
  Un administrador o implementador puede utilizar el flujo de la transacción en el nivel del punto de conexión para configurar los requisitos del flujo de transacción o las restricciones en tiempo de implementación utilizando el archivo de configuración.  
   

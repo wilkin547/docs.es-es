@@ -1,12 +1,13 @@
 ---
 title: 'Optimizar el rendimiento: Otras recomendaciones'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e45296befd51af5e4b03f123241efba030fd3754
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: afe0e93706089e1893d46316b33c2568df83ffd3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optimizar el rendimiento: Otras recomendaciones
 <a name="introduction"></a> En este tema se proporcionan recomendaciones de rendimiento, además de las que se incluyen en los temas de la sección [Optimizar WPF: Rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md).  
@@ -81,7 +83,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Configurar el servicio de caché de fuente para reducir el tiempo de inicio  
- El servicio de caché de fuente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] comparte los datos de fuente entre aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. La primera aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que ejecuta inicia este servicio, si este no se está ejecutando. Si está usando [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], puede establecer el servicio "[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Font Cache 3.0.0.0" de "Manual" (predeterminado) a "Automático (inicio retrasado)" para reducir el tiempo de arranque inicial de las aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ El servicio de caché de fuente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] comparte los datos de fuente entre aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. La primera aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que ejecuta inicia este servicio, si este no se está ejecutando. Si utilizas [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], puede establecer el servicio "Windows Presentation Foundation (WPF) Font Cache 3.0.0.0" desde "Manual" (predeterminado) en "Automático (inicio Delayed)" para reducir el tiempo de inicio inicial de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] las aplicaciones.  
   
 ## <a name="see-also"></a>Vea también  
  [Planear para mejorar el rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  

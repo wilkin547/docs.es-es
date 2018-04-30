@@ -16,14 +16,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9506e791cf4da947eaadaff1669e5f2f975431c8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 068615510d7e1d73ae260441ccef6536ee6ff317
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="secure-sessions"></a>Sesiones seguras
-Una característica de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] son las sesiones fiables que garantizan que los mensajes se reciben en el orden que se enviaron. Los temas de esta sección discuten las implicaciones de seguridad a tener en cuenta a la hora de crear una sesión confiable. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] las sesiones confiables, consulte [mediante sesiones](../../../../docs/framework/wcf/using-sessions.md).  
+Una característica de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] son las sesiones fiables que garantizan que los mensajes se reciben en el orden que se enviaron. Los temas de esta sección discuten las implicaciones de seguridad a tener en cuenta a la hora de crear una sesión confiable. Para obtener más información acerca de las sesiones confiables, vea [mediante sesiones](../../../../docs/framework/wcf/using-sessions.md).  
   
 > [!NOTE]
 >  Si se requiere la suplantación en Windows XP, utilice una sesión segura sin un token de contexto de seguridad con estado (SCT). Cuando se utilizan SCT con estado con suplantación, se produce una <xref:System.InvalidOperationException>. Para obtener más información, consulte [escenarios no admitidos](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  

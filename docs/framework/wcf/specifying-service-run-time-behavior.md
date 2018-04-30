@@ -1,35 +1,37 @@
 ---
-title: "Especificación del comportamiento en tiempo de ejecución del servicio"
-ms.custom: 
+title: Especificación del comportamiento en tiempo de ejecución del servicio
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2c1534b161f81fa90dce52c825b0417dc8fd35d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e45c35d0b19833b6fd43c7fd5794ecf8bd3a9769
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>Especificación del comportamiento en tiempo de ejecución del servicio
-Una vez que haya diseñado un contrato de servicios ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) y haya implementado su contrato de servicios ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)), puede configurar el comportamiento de la operación del tiempo de ejecución del servicio. En este tema se tratan los comportamientos de operaciones y servicios proporcionados por el sistema y se describe dónde encontrar más información para crear nuevos comportamientos. Aunque algunos comportamientos se aplican como atributos, muchos se aplican usando un archivo de configuración de la aplicación o mediante programación. [!INCLUDE[crabout](../../../includes/crabout-md.md)] cómo configurar la aplicación de servicio, consulte [Configuring Services](../../../docs/framework/wcf/configuring-services.md).  
+Una vez que haya diseñado un contrato de servicios ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) y haya implementado su contrato de servicios ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)), puede configurar el comportamiento de la operación del tiempo de ejecución del servicio. En este tema se tratan los comportamientos de operaciones y servicios proporcionados por el sistema y se describe dónde encontrar más información para crear nuevos comportamientos. Aunque algunos comportamientos se aplican como atributos, muchos se aplican usando un archivo de configuración de la aplicación o mediante programación. Para obtener más información acerca de cómo configurar la aplicación de servicio, consulte [configurar Services](../../../docs/framework/wcf/configuring-services.md).  
   
 ## <a name="overview"></a>Información general  
  El contrato define las entradas, las salidas, los tipos de datos y las características de un servicio de ese tipo. Al implementar un contrato de servicios, se crea una clase que, cuando se configura con un enlace en una dirección, cumple el contrato que implementa. El cliente conoce la información contractual, de enlace y dirección; sin esa información, el cliente no puede utilizar el servicio.  
   
- Sin embargo, las características de la operación, como los problemas de los subprocesos o la administración de instancias, son opacas para los clientes. Cuando haya implementado su contrato de servicios, puede configurar un gran número de características de operaciones utilizando los *comportamientos*. Los comportamientos son objetos que modifican el tiempo de ejecución de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] estableciendo una propiedad de tiempo de ejecución o insertando un tipo de personalización en el tiempo de ejecución. [!INCLUDE[crabout](../../../includes/crabout-md.md)] cómo modificar el tiempo de ejecución creando comportamientos definidos por el usuario, consulte [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Sin embargo, las características de la operación, como los problemas de los subprocesos o la administración de instancias, son opacas para los clientes. Cuando haya implementado su contrato de servicios, puede configurar un gran número de características de operaciones utilizando los *comportamientos*. Los comportamientos son objetos que modifican el tiempo de ejecución de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] estableciendo una propiedad de tiempo de ejecución o insertando un tipo de personalización en el tiempo de ejecución. Para obtener más información acerca de cómo modificar el tiempo de ejecución mediante la creación de comportamientos definidos por el usuario, consulte [ServiceHost extender y el nivel de modelo de servicio](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
  Los atributos <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> y <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> son los comportamientos más útiles y exponen las funciones de operaciones más solicitadas. Puesto que son atributos, se han de aplicar a la implementación de la operación o el servicio. Otros comportamientos, como <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, se aplican, normalmente, mediante un archivo de configuración de la aplicación, aunque puede utilizarlos mediante programación.  
   

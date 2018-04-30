@@ -1,23 +1,24 @@
 ---
 title: Procesar pedidos con directiva
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86c7890af651ba9f0ee0ec2a1763f9c579bac89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f99db44a636a5255990f734d34266b3b2e4a678b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="order-processing-with-policy"></a>Procesar pedidos con directiva
 El ejemplo de directiva de procesamiento de orden muestra algunas de las características clave introducidas en [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] de Windows Workflow Foundation (WF). La funcionalidad siguiente es nueva para el motor de reglas de WF:  
@@ -34,7 +35,7 @@ El ejemplo de directiva de procesamiento de orden muestra algunas de las caracte
  El ejemplo muestra un proyecto `OrderProcessingPolicy` donde se introduce una orden de cliente, que está compuesta de una lista numerada de elementos disponibles, y un código postal. La orden se procesa correctamente si ambas entradas son correctas; de lo contrario, la directiva crea los objetos de error, utilizando un operador `+` sobrecargado y un método de extensión predefinido para informar al usuario de los errores.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]métodos de extensión, vea [C# versión 3.0 especificación](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  Para obtener más información acerca de los métodos de extensión, vea [C# versión 3.0 especificación](http://go.microsoft.com/fwlink/?LinkId=95402).  
   
  El ejemplo consta de los proyectos siguientes:  
   

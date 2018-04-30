@@ -1,24 +1,26 @@
 ---
-title: "Ejemplo de configuración"
-ms.custom: 
+title: Ejemplo de configuración
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9bb0b2acd2aa51765a50b735f218bd92ef11531
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 48f153a26181fa549973ec83e413b1294d7c8ce5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuration-sample"></a>Ejemplo de configuración
 En este ejemplo se muestra el uso de un archivo de configuración para hacer que un servicio se pueda detectar.  
@@ -98,7 +100,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
         </endpointBehaviors>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]los ámbitos, consulte [buscar de detección y FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).  
+ Para obtener más información sobre los ámbitos, consulte [buscar de detección y FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).  
   
  También puede controlar detalles concretos del punto de conexión de la detección. Esto se hace a través de <xref:System.ServiceModel.Configuration.StandardEndpointsSection>. En este ejemplo, se modifica la versión del protocolo utilizada además de agregar un atributo `maxResponseDelay` en el siguiente ejemplo de código.  
   

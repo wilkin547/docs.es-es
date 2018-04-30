@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d8457182b666570853953830a92c3f2380a0eb85
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 5ff750942a2d05310669361e83a10a5acefbcbd4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="policy-activity-in-net-framework-45"></a>Actividad Policy en .NET Framework 4.5
-La actividad Policy4 permite a Windows Workflow Foundation en [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objetos para su uso en Windows Workflow Foundation en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) directamente mediante el motor de reglas que se distribuye con WF 3.5. Utilizando esta actividad, puede crear y ejecutar un objeto <xref:System.Workflow.Activities.Rules.RuleSet> de WF 3.5. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] el motor de reglas de WF 3.5 que se incluye como parte de Windows Workflow Foundation, lea el apartado Introducción al motor de reglas de Windows Workflow Foundation. Para obtener más información sobre cómo migrar las reglas de WF en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], lea [Guía de migración](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+La actividad Policy4 permite a Windows Workflow Foundation en [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objetos para su uso en Windows Workflow Foundation en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) directamente mediante el motor de reglas que se distribuye con WF 3.5. Utilizando esta actividad, puede crear y ejecutar un objeto <xref:System.Workflow.Activities.Rules.RuleSet> de WF 3.5. Para obtener más información sobre el motor de reglas de WF 3.5 incluido como parte de Windows Workflow Foundation, lea el apartado introducción al motor de reglas de Windows Workflow Foundation. Para obtener más información sobre cómo migrar las reglas de WF en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], lea [Guía de migración](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

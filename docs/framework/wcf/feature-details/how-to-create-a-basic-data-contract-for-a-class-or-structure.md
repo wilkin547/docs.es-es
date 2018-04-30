@@ -23,14 +23,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5f12302fd395197363fe058fe260f717da78145e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 43fa318d2910fcd8b1d9ce75fc02d75bb39d4079
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Cómo: Crear un contrato de datos básicos para una clase o estructura
-En este tema se muestran los pasos básicos para crear un contrato de datos usando una clase o estructura. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] los contratos de datos y cómo se usan, vea [usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+En este tema se muestran los pasos básicos para crear un contrato de datos usando una clase o estructura. Para obtener más información acerca de los contratos de datos y cómo se utilizan, consulte [usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Para obtener un tutorial que le guía a través de los pasos de creación básico [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servicio y cliente, consulte la [Tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md). Para una aplicación de ejemplo de trabajo que consta de un servicio básico y un cliente, consulte [contrato de datos básica](../../../../docs/framework/wcf/samples/basic-data-contract.md).  
   

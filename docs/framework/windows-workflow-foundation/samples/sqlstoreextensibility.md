@@ -1,23 +1,24 @@
 ---
 title: SQLStoreExtensibility
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4d3776c4cc3fb61fc01b84ee90bb714e1acb4fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 722c7cda49b2efc4c146970c69cc5e3c7bbad9b0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 En este ejemplo se muestran el uso y la configuración de propiedades promovidas en el almacén de instancias de flujo de trabajo de SQL. El almacén de instancias de flujo de trabajo de SQL es una implementación basada en SQL de un almacén de instancias. Permite a una instancia guardar y cargar su estado en y desde una base de datos SQL Server o SQL Server Express. La característica de extensibilidad del almacén permite al usuario definir propiedades que se guardan en el almacén de instancias. Estas propiedades se muestran en una vista de propiedades promovidas que permite al usuario consultarlas.  
@@ -62,7 +63,7 @@ En este ejemplo se muestran el uso y la configuración de propiedades promovidas
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>Para comprobar que el ejemplo funciona correctamente  
   
-1.  Usar SQL Server Management Studio para ver el contenido de la tabla de instancias seleccionando **bases de datos**, **InstanceStore**y, a continuación,  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** en el Explorador de objetos, haga clic en **System.ServiceModel.Activities.DurableInstancing.InstanceTable** y seleccione  **Seleccionar las primeras 1000 filas**. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SQL Server Management Studio, consulte [Introducción a SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  Usar SQL Server Management Studio para ver el contenido de la tabla de instancias seleccionando **bases de datos**, **InstanceStore**y, a continuación,  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** en el Explorador de objetos, haga clic en **System.ServiceModel.Activities.DurableInstancing.InstanceTable** y seleccione  **Seleccionar las primeras 1000 filas**. Para obtener más información acerca de SQL Server Management Studio, consulte [Introducción a SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  Observe las instancias de flujo de trabajo enumeradas.  
   

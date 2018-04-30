@@ -1,24 +1,26 @@
 ---
-title: "Envío de formulario"
-ms.custom: 
+title: Envío de formulario
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe1be9177f3e811a3037377360f46f42904d5af3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31d2ebbdb6f899390d7b3af485c1583fb80ae6dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="form-post"></a>Envío de formulario
 Este ejemplo muestra cómo extender el modelo de programación REST de WCF para admitir los nuevos formatos de solicitudes entrantes. El ejemplo también incluye una implementación de un formateador que puede deserializar una solicitud de un envío de formulario HTML en un tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Además, el ejemplo utiliza una plantilla T4 para devolver una página HTML, que proporciona el formulario HTML que los usuarios pueden devolver al servicio REST de WCF.  
@@ -38,7 +40,7 @@ Este ejemplo muestra cómo extender el modelo de programación REST de WCF para 
   
  Este proyecto de aplicación de consola extiende la [servicio de recurso básico](../../../../docs/framework/wcf/samples/basic-resource-service.md) ejemplo. El ejemplo de servicio de recurso básico muestra cómo exponer un recurso de manera que use el modelo de programación REST de WCF. En el ejemplo de servicio de recurso básico, un recurso de colección de cliente se expone de forma que se puedan crear, recuperar, actualizar y eliminar los clientes de la colección. El ejemplo de servicio de recurso básico solo utiliza los dos los formatos de solicitud entrante admitidos: XML y JSON.  
   
- La aplicación de consola de este ejemplo de envío de formulario utiliza el formateador personalizado de la biblioteca de HtmlFormProcessing, que les permite a los usuarios crear clientes enviando un envío de formulario HTML mediante un explorador. También agrega una operación que devuelve una página HTML, que incluye el formulario que se va a devolver al servicio. Esta página HTML se genera utilizando una plantilla T4 preprocesada, que está compuesta de un archivo .tt y de un archivo .cs generado automáticamente. El archivo .tt permite que los desarrolladores de software escriban una respuesta en un formulario de plantilla que contenga variables y estructuras de control. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4, vea [Generar artefactos de plantillas de texto](http://go.microsoft.com/fwlink/?LinkId=178139).  
+ La aplicación de consola de este ejemplo de envío de formulario utiliza el formateador personalizado de la biblioteca de HtmlFormProcessing, que les permite a los usuarios crear clientes enviando un envío de formulario HTML mediante un explorador. También agrega una operación que devuelve una página HTML, que incluye el formulario que se va a devolver al servicio. Esta página HTML se genera utilizando una plantilla T4 preprocesada, que está compuesta de un archivo .tt y de un archivo .cs generado automáticamente. El archivo .tt permite que los desarrolladores de software escriban una respuesta en un formulario de plantilla que contenga variables y estructuras de control. Para obtener más información acerca de T4, vea [Generar artefactos de plantillas de texto](http://go.microsoft.com/fwlink/?LinkId=178139).  
   
 #### <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
   

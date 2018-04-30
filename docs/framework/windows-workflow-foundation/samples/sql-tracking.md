@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2eeb5cf57e6efac77de4a76fe8131189273d5438
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4153ed905fc9c5c67ce1743fa76497f76b7398cc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-tracking"></a>Seguimiento de SQL
-Este ejemplo muestra cómo escribir un participante de seguimiento SQL personalizado, que escribe registros de seguimiento en una base de datos SQL. Windows Workflow Foundation (WF) proporciona seguimiento para ganar visibilidad en la ejecución de una instancia de flujo de trabajo de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] flujo de trabajo de seguimiento, vea [seguimiento y traza del flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+Este ejemplo muestra cómo escribir un participante de seguimiento SQL personalizado, que escribe registros de seguimiento en una base de datos SQL. Windows Workflow Foundation (WF) proporciona seguimiento para ganar visibilidad en la ejecución de una instancia de flujo de trabajo de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. Para obtener más información acerca del seguimiento de flujo de trabajo, consulte [seguimiento y traza del flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
@@ -52,7 +52,7 @@ Este ejemplo muestra cómo escribir un participante de seguimiento SQL personali
   
 10. En el cliente de prueba WCF, haga doble clic en **GetStockPrice**. Se abrirá la `GetStockPrice` operación que toma un parámetro, escriba el valor `Contoso` y haga clic en **Invoke**.  
   
-11. Los registros de seguimiento emitidos se escriben en una base de datos SQL. Para ver los registros de seguimiento, abra la base de datos TrackingSample en SQL Management Studio y navegue hasta las tablas. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SQL Server Management Studio, consulte [Introducción a SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). Puede descargar SQL Server 2008 Management Studio Express [aquí](http://go.microsoft.com/fwlink/?LinkId=180520). La ejecución de una consulta de selección en las tablas muestra los datos dentro de los registros de seguimiento almacenados en las tablas respectivas.  
+11. Los registros de seguimiento emitidos se escriben en una base de datos SQL. Para ver los registros de seguimiento, abra la base de datos TrackingSample en SQL Management Studio y navegue hasta las tablas. Para obtener más información acerca de SQL Server Management Studio, consulte [Introducción a SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). Puede descargar SQL Server 2008 Management Studio Express [aquí](http://go.microsoft.com/fwlink/?LinkId=180520). La ejecución de una consulta de selección en las tablas muestra los datos dentro de los registros de seguimiento almacenados en las tablas respectivas.  
   
 #### <a name="to-uninstall-the-sample"></a>Para desinstalar el ejemplo  
   

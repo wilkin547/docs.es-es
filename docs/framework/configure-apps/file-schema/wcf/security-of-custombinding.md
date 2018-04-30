@@ -1,29 +1,31 @@
 ---
 title: Elemento &lt;security&gt; de &lt;customBinding&gt;
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e35f10071f8931c551645d4d07ca0f2113c52002
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15f2dd3eac33a54e53a609fc706397eef5e7dbe2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>Elemento &lt;security&gt; de &lt;customBinding&gt;
 Especifica las opciones de seguridad de un enlace personalizado.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<enlaces >  
 \<customBinding >  
 \<enlace >  
@@ -115,7 +117,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
 |[\<enlace >](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
 ## <a name="remarks"></a>Comentarios  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]con este elemento, vea [modos de autenticación de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) y [Cómo: crear un personalizado de enlace con SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+ Para obtener más información sobre el uso de este elemento, vea [modos de autenticación de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) y [Cómo: crear un personalizado de enlace con SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra cómo configurar la seguridad mediante un enlace personalizado. Muestra cómo utilizar un enlace personalizado para habilitar la seguridad de nivel de mensaje junto con un transporte seguro. Esto es útil cuando se exige un transporte seguro que transmita los mensajes entre el cliente y servicio y simultáneamente los mensajes deben ser seguros en el nivel de mensaje. Los enlaces proporcionados por el sistema no admiten esta configuración.  

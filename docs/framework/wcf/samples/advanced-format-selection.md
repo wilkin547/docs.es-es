@@ -1,24 +1,26 @@
 ---
-title: "Selección avanzada de formato"
-ms.custom: 
+title: Selección avanzada de formato
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 124bf59f29ff04e643200edf686f79f573937a03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 93d7fe0742e16abd92682094ca20d51488516e6e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="advanced-format-selection"></a>Selección avanzada de formato
 Este ejemplo muestra cómo extender el modelo de programación REST de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para admitir los nuevos formatos de respuestas salientes. Además, el ejemplo utiliza una plantilla T4 para devolver la respuesta como una página XHTML y muestra cómo se puede implementar un modelo de programación del estilo de vista.  
@@ -32,7 +34,7 @@ Este ejemplo muestra cómo extender el modelo de programación REST de [!INCLUDE
   
  Hay que tener en cuenta el tipo de valor devuelto de la operación. El modelo de programación REST de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] solo admite los formatos nativos de respuesta de JSON y XML cuando una operación devuelve un tipo distinto de <xref:System.ServiceModel.Channels.Message>. Sin embargo, al utilizar <xref:System.ServiceModel.Channels.Message> como el tipo de valor devuelto, el desarrollador de software tiene un control completo sobre cómo se debería dar formato al contenido del mensaje.  
   
- En el ejemplo se utilizan los métodos <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> y <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> para serializar la lista de cadenas en los mensajes XML, JSON y ATOM, respectivamente. Para el formato de respuesta jpeg, se usa el método <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> y la imagen se guarda en el flujo. Para la respuesta XHTML, <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> se utiliza junto con una plantilla T4 preprocesada, que está compuesta de un archivo .tt y de un archivo .cs generado automáticamente. El archivo .tt permite que los desarrolladores de software escriban una respuesta en un formulario de plantilla que contenga variables y estructuras de control. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4, vea [Generar artefactos de plantillas de texto](http://go.microsoft.com/fwlink/?LinkId=166023).  
+ En el ejemplo se utilizan los métodos <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> y <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> para serializar la lista de cadenas en los mensajes XML, JSON y ATOM, respectivamente. Para el formato de respuesta jpeg, se usa el método <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> y la imagen se guarda en el flujo. Para la respuesta XHTML, <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> se utiliza junto con una plantilla T4 preprocesada, que está compuesta de un archivo .tt y de un archivo .cs generado automáticamente. El archivo .tt permite que los desarrolladores de software escriban una respuesta en un formulario de plantilla que contenga variables y estructuras de control. Para obtener más información acerca de T4, vea [Generar artefactos de plantillas de texto](http://go.microsoft.com/fwlink/?LinkId=166023).  
   
  El ejemplo consta de un servicio autohospedado y un cliente que se ejecuta dentro de una aplicación de consola. A medida que se ejecuta la aplicación de consola, el cliente realiza solicitudes al servicio y escribe la información pertinente de las respuestas en la ventana de la consola.  
   

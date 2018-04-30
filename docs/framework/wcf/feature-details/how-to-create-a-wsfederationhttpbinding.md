@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Cómo: Crear un WSFederationHttpBinding
 En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> clase ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) en la configuración) proporciona un mecanismo para exponer un servicio federado. Es decir, un servicio que exige a los clientes su autenticación mediante un token de seguridad emitido por un servicio de token de seguridad. Este tema muestra cómo configurar un <xref:System.ServiceModel.WSFederationHttpBinding> tanto en el código y como en la configuración. Una vez creado el enlace, puede configurar un extremo para que utilice dicho enlace.  
@@ -48,7 +48,7 @@ En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.Service
   
      El URI para un token de SAML 1.1 es "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1".  
   
-4.  Opcional. En servicios federados, establezca la propiedad <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> como la dirección URL de los metadatos de un servicio de token de seguridad. Si el servicio está configurado para publicar metadatos, el punto de conexión de los metadatos permite a los clientes del servicio seleccionar un par enlace/punto de conexión adecuado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la publicación de metadatos, vea [la publicación de metadatos](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+4.  Opcional. En servicios federados, establezca la propiedad <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> como la dirección URL de los metadatos de un servicio de token de seguridad. Si el servicio está configurado para publicar metadatos, el punto de conexión de los metadatos permite a los clientes del servicio seleccionar un par enlace/punto de conexión adecuado. Para obtener más información acerca de la publicación de metadatos, vea [la publicación de metadatos](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
  También pueden establecerse otras propiedades, incluidos el tipo de clave utilizado como clave de prueba en el token emitido, el conjunto de algoritmos utilizado entre el cliente y el servicio, si negociar o especificar explícitamente la credencial del servicio, cualquier demanda concreta que el servicio espera que este contenido en el token emitido, y cualquier elemento XML adicional que deba agregarse a la solicitud que el cliente envía al servicio de token de seguridad.  
   
@@ -103,7 +103,7 @@ En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.Service
   
 12. Para obtener más información, consulte [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-13. Obligatorio en el cliente si no se especifica ningún emisor local; no se utiliza en el servicio. Crear un [ \<enlace >](../../../../docs/framework/misc/binding.md) elemento en la sección de enlaces que puede usar para comunicarse con el servicio de token de seguridad. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] creación de un enlace, consulte [Cómo: especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+13. Obligatorio en el cliente si no se especifica ningún emisor local; no se utiliza en el servicio. Crear un [ \<enlace >](../../../../docs/framework/misc/binding.md) elemento en la sección de enlaces que puede usar para comunicarse con el servicio de token de seguridad. Para obtener más información acerca de cómo crear un enlace, consulte [Cómo: especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 14. Especifique el enlace creado en el paso anterior estableciendo los atributos `binding` y `bindingConfiguration` del elemento `<issuer>`.  
   

@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15fa4372f4a110577f055d0e3c22977d0f5417bb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d4cc95041e96f5f4bb2d6b50e150c99a57404208
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tarea 2: Hospedaje del Diseñador de flujo de trabajo
 Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] en una aplicación de Windows Presentation Foundation (WPF).  
@@ -108,7 +108,7 @@ Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[
         }  
         ```  
   
-         [!INCLUDE[crabout](../../../includes/crabout-md.md)] registrar los diseñadores de actividades, vea [Cómo: crear un diseñador de actividades personalizadas](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
+         Para obtener más información sobre el registro de los diseñadores de actividades, vea [Cómo: crear un diseñador de actividades personalizadas](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
   
     5.  En el constructor de clases `MainWindow`, agregue llamadas a los métodos declarados previamente para registrar los metadatos a fin de ser compatibles con el diseñador y crear <xref:System.Activities.Presentation.WorkflowDesigner>.  
   

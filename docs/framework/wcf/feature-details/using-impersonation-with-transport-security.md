@@ -1,27 +1,29 @@
 ---
-title: "Utilización de la suplantación con la seguridad de transporte"
-ms.custom: 
+title: Utilización de la suplantación con la seguridad de transporte
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d5610a107a198a3d8fd0517dca6ca7e2f4d22cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilización de la suplantación con la seguridad de transporte
-*Suplantación* es la capacidad de una aplicación de servidor para asumir la identidad del cliente. Es común que los servicios utilicen la suplantación al validar el acceso a los recursos. La aplicación de servidor se ejecuta utilizando una cuenta de servicio, pero cuando el servidor acepta una conexión de cliente, suplanta al cliente para que se realicen comprobaciones de acceso utilizando las credenciales del cliente. La seguridad de transporte es un mecanismo para pasar credenciales y proteger la comunicación mediante esas credenciales. Este tema describe el uso de la seguridad de transporte en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con la característica de suplantación. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]suplantación con seguridad de mensajes, vea [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+*Suplantación* es la capacidad de una aplicación de servidor para asumir la identidad del cliente. Es común que los servicios utilicen la suplantación al validar el acceso a los recursos. La aplicación de servidor se ejecuta utilizando una cuenta de servicio, pero cuando el servidor acepta una conexión de cliente, suplanta al cliente para que se realicen comprobaciones de acceso utilizando las credenciales del cliente. La seguridad de transporte es un mecanismo para pasar credenciales y proteger la comunicación mediante esas credenciales. Este tema describe el uso de la seguridad de transporte en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con la característica de suplantación. Para obtener más información acerca de la suplantación mediante la seguridad del mensaje, vea [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="five-impersonation-levels"></a>Cinco niveles de suplantación  
  La seguridad de transporte utiliza cinco niveles de suplantación, como se describe en la siguiente tabla.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Las canalizaciones con nombre no se pueden utilizar con `Impersonate` o el nivel de suplantación `Delegate`. La canalización con nombre no puede exigir la garantía en equipo en estos niveles de suplantación.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]canalizaciones con nombre, vea [elegir un transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Para obtener más información acerca de las canalizaciones con nombre, vea [elegir un transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ### <a name="http-transport"></a>Transporte HTTP  
  Los enlaces que utilizan el transporte HTTP (<xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.BasicHttpBinding>) admiten varios esquemas de autenticación, como se explica en [descripción de la autenticación HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md). El nivel de suplantación admitido depende del esquema de autenticación. Los elementos siguientes se utilizan con el transporte HTTP:  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 -   El esquema de autenticación Kerberos, que solo se puede seleccionar mediante negociación, puede utilizarse con cualquier nivel de suplantación admitido.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]el transporte HTTP, consulte [elegir un transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Para obtener más información acerca del transporte HTTP, consulte [elegir un transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  

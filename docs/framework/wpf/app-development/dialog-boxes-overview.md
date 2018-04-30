@@ -1,12 +1,13 @@
 ---
-title: "Información general sobre cuadros de diálogo"
-ms.custom: 
+title: Información general sobre cuadros de diálogo
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 112a9badaf9a64b2c6d3f73d64c27fbc36ec48a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfe22dec0827f0ceb880b9410b64668f219a422f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="dialog-boxes-overview"></a>Información general sobre cuadros de diálogo
 Aplicaciones independientes tienen normalmente una ventana principal que tanto muestra los datos principales en el que la aplicación funciona y expone la funcionalidad necesaria para procesar los datos a través de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mecanismos como barras de menús, barras de herramientas y barras de estado. Una aplicación no trivial también puede mostrar ventanas adicionales para realizar lo siguiente:  
@@ -43,7 +45,7 @@ Aplicaciones independientes tienen normalmente una ventana principal que tanto m
   
  A *no modales* cuadro de diálogo, por otro lado, no impide que un usuario active otras ventanas mientras está abierto. Por ejemplo, si un usuario quiere buscar las repeticiones de una palabra determinada en un documento, a menudo una ventana principal abrirá un cuadro de diálogo para solicitar al usuario la palabra que está buscando. En cambio, como buscar una palabra no impide que un usuario edite el documento, el cuadro de diálogo no necesita ser modal. Un cuadro de diálogo no modal proporciona al menos un **cerrar** botón para cerrar el cuadro de diálogo y puede proporcionar botones adicionales para ejecutar funciones específicas, como un **Buscar siguiente** botón para buscar la siguiente de word que coincide con los criterios de búsqueda de una búsqueda de palabras.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] le permite crear varios tipos de cuadros de diálogo, incluidos cuadros de mensaje, cuadros de diálogo comunes y cuadros de diálogo personalizados. Este tema describe cada uno y el [Dialog Box Sample](http://go.microsoft.com/fwlink/?LinkID=159984) proporciona ejemplos de búsqueda de coincidencias.  
+ Windows Presentation Foundation (WPF) le permite crear varios tipos de cuadros de diálogo, incluidos los cuadros de mensaje, cuadros de diálogo comunes y cuadros de diálogo personalizados. Este tema describe cada uno y el [Dialog Box Sample](http://go.microsoft.com/fwlink/?LinkID=159984) proporciona ejemplos de búsqueda de coincidencias.  
   
  
   
@@ -53,7 +55,7 @@ Aplicaciones independientes tienen normalmente una ventana principal que tanto m
   
  ![Cuadro de diálogo Procesador de textos](../../../../docs/framework/wpf/app-development/media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
   
- Para crear un cuadro de mensaje, utilice la <xref:System.Windows.MessageBox> clase. <xref:System.Windows.MessageBox>le permite configurar el texto de cuadro de mensaje, título, icono y botones, mediante código similar al siguiente.  
+ Para crear un cuadro de mensaje, utilice la <xref:System.Windows.MessageBox> clase. <xref:System.Windows.MessageBox> le permite configurar el texto de cuadro de mensaje, título, icono y botones, mediante código similar al siguiente.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
@@ -72,13 +74,13 @@ Aplicaciones independientes tienen normalmente una ventana principal que tanto m
   
  Aunque <xref:System.Windows.MessageBox> puede ofrecer una experiencia de usuario del cuadro de diálogo simple, la ventaja de usar <xref:System.Windows.MessageBox> que es el único tipo de ventana que se puede mostrar las aplicaciones que se ejecutan en un recinto de seguridad de confianza parcial (vea [seguridad](../../../../docs/framework/wpf/security-wpf.md)), como [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
- La mayoría de los cuadros de diálogo muestran y recopilan datos más complejos que el resultado de un cuadro de mensaje, incluidos texto, selección (casillas), selección mutuamente exclusiva (botón de selección) y selección de listas (cuadros de lista, cuadros combinados, cuadros de lista desplegable). En estos casos, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] proporciona varios cuadros de diálogo comunes y le permite crear sus propios cuadros de diálogo, aunque el uso de uno de ellos se limita a aplicaciones que se ejecutan con plena confianza.  
+ La mayoría de los cuadros de diálogo muestran y recopilan datos más complejos que el resultado de un cuadro de mensaje, incluidos texto, selección (casillas), selección mutuamente exclusiva (botón de selección) y selección de listas (cuadros de lista, cuadros combinados, cuadros de lista desplegable). En estos casos, Windows Presentation Foundation (WPF) proporciona varios cuadros de diálogo comunes y le permite crear sus propios cuadros de diálogo, aunque el uso de uno de ellos se limita a aplicaciones que se ejecutan con plena confianza.  
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Cuadros de diálogo comunes  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementa una variedad de cuadros de diálogo reutilizables que son comunes a todas las aplicaciones, incluidos los cuadros de diálogo para abrir y guardar archivos, e imprimir. Como estos cuadros de diálogo se implementan mediante el sistema operativo, pueden compartirse entre todas las aplicaciones que se ejecutan en el sistema operativo, que ayuda a la coherencia de la experiencia de usuario; cuando los usuarios están familiarizados con el uso de un cuadro de diálogo proporcionado por el sistema operativo en una aplicación, no necesitan obtener información sobre cómo usar ese cuadro de diálogo en otras aplicaciones. Dado que estos cuadros de diálogo están disponibles para todas las aplicaciones y dado que ayudan a proporcionar una experiencia de usuario coherente, se conocen como *cuadros de diálogo comunes*.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] encapsula los cuadros de diálogo comunes de Abrir archivo, Guardar archivo e Imprimir y los expone como clases administradas para su uso en aplicaciones independientes. En este tema se proporciona una breve introducción de cada uno.  
+ Windows Presentation Foundation (WPF) encapsula el archivo abierto, guarde el archivo y cuadros de diálogo comunes de impresión y los expone como clases administradas para su uso en las aplicaciones independientes. En este tema se proporciona una breve introducción de cada uno.  
   
 <a name="Open_File_Dialog"></a>   
 ### <a name="open-file-dialog"></a>Cuadro de diálogo Abrir archivo  
@@ -94,7 +96,7 @@ Aplicaciones independientes tienen normalmente una ventana principal que tanto m
  Para obtener más información sobre el cuadro de diálogo Abrir archivo, consulte <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  <xref:Microsoft.Win32.OpenFileDialog>puede usarse para recuperar de manera segura los nombres de archivo por aplicaciones que se ejecutan con confianza parcial (vea [seguridad](../../../../docs/framework/wpf/security-wpf.md)).  
+>  <xref:Microsoft.Win32.OpenFileDialog> puede usarse para recuperar de manera segura los nombres de archivo por aplicaciones que se ejecutan con confianza parcial (vea [seguridad](../../../../docs/framework/wpf/security-wpf.md)).  
   
 <a name="Save_File_Dialog"></a>   
 ### <a name="save-file-dialog-box"></a>Cuadro de diálogo Guardar archivo  
@@ -124,7 +126,7 @@ Aplicaciones independientes tienen normalmente una ventana principal que tanto m
   
 <a name="Custom_Dialog_Boxes"></a>   
 ## <a name="custom-dialog-boxes"></a>Cuadros de diálogo personalizados  
- Aunque los cuadros de diálogo comunes son útiles, y deben usarse cuando sea posible, no admiten los requisitos de los cuadros de diálogo específicos de dominio. En estos casos, necesita crear sus propios cuadros de diálogo. Como veremos, un cuadro de diálogo es una ventana con comportamientos especiales. <xref:System.Windows.Window>implementa esos comportamientos y, por lo tanto, utilice <xref:System.Windows.Window> para crear cuadros de diálogo modales y no modales personalizados.  
+ Aunque los cuadros de diálogo comunes son útiles, y deben usarse cuando sea posible, no admiten los requisitos de los cuadros de diálogo específicos de dominio. En estos casos, necesita crear sus propios cuadros de diálogo. Como veremos, un cuadro de diálogo es una ventana con comportamientos especiales. <xref:System.Windows.Window> implementa esos comportamientos y, por lo tanto, utilice <xref:System.Windows.Window> para crear cuadros de diálogo modales y no modales personalizados.  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>Crear un cuadro de diálogo modal personalizado  
@@ -307,7 +309,7 @@ Aplicaciones independientes tienen normalmente una ventana principal que tanto m
  A diferencia de <xref:System.Windows.Window.ShowDialog%2A>, <xref:System.Windows.Window.Show%2A> devuelve inmediatamente. Por consiguiente, la ventana de llamada no puede indicar cuándo se cierra el cuadro de diálogo no modal y, por lo tanto, no sabe cuándo comprobar el resultado de un cuadro de diálogo u obtener los datos de este para un procesamiento posterior. En su lugar, el cuadro de diálogo necesita crear una manera alternativa de devolver los datos a la ventana de llamada para su procesamiento.  
   
 #### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>Procesar los datos devueltos de un cuadro de diálogo no modal  
- En este ejemplo, el `FindDialogBox` puede devolver uno o más resultados de búsqueda a la ventana principal, según el texto que se va a buscar sin ninguna frecuencia concreta. Al igual que un cuadro de diálogo modal, un cuadro de diálogo no modal puede devolver resultados mediante propiedades. En cambio, la ventana que tiene el cuadro de diálogo necesita saber cuándo comprobar esas propiedades. Una manera de habilitar esto es que el cuadro de diálogo implemente un evento que se genera cuando se detecta texto. `FindDialogBox`implementa el `TextFoundEvent` para este propósito, que primero requiere un delegado.  
+ En este ejemplo, el `FindDialogBox` puede devolver uno o más resultados de búsqueda a la ventana principal, según el texto que se va a buscar sin ninguna frecuencia concreta. Al igual que un cuadro de diálogo modal, un cuadro de diálogo no modal puede devolver resultados mediante propiedades. En cambio, la ventana que tiene el cuadro de diálogo necesita saber cuándo comprobar esas propiedades. Una manera de habilitar esto es que el cuadro de diálogo implemente un evento que se genera cuando se detecta texto. `FindDialogBox` implementa el `TextFoundEvent` para este propósito, que primero requiere un delegado.  
   
  [!code-csharp[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs#textfoundeventhandlercode)]
  [!code-vb[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb#textfoundeventhandlercode)]  

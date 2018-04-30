@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3f7e12f3a6c5d722b2eda1eaaeb390ee3284a70e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3317bc47c03e0b100d094ba1d929a003dddab055
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="endpoint-creation-overview"></a>Información general acerca de la creación de puntos finales
 Toda la comunicación con un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servicio se produce a través de la *extremos* del servicio. Los extremos proporcionan a los clientes acceso a la funcionalidad que ofrece un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Esta sección describe la estructura de un extremo, y detalla cómo definir un extremo en la configuración y el código.  
@@ -37,7 +37,7 @@ Toda la comunicación con un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)
   
 -   **Enlace**. El enlace especifica cómo comunicarse con el punto de conexión. El enlace especifica cómo se comunica el punto de conexión con el mundo, incluido el protocolo de transporte que utiliza (por ejemplo, TCP o HTTP), la codificación utilizada en los mensajes (por ejemplo, texto o binario) y los requisitos de seguridad necesarios (por ejemplo, capa de sockets seguros [SSL] o seguridad del mensaje SOAP). Para obtener más información, consulte [utilizando enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
--   **Contrato de servicio**. El contrato de servicios describe qué funcionalidad expone el punto de conexión al cliente. Un contrato especifica las operaciones a las que puede llamar un cliente, la forma del mensaje y el tipo de parámetros de entrada o los datos necesarios para llamar a la operación, así como el tipo de mensaje de procesamiento o respuesta que puede esperar el cliente. Existen tres tipos básicos de contratos que se corresponden con los patrones de intercambio de mensajes básicos (MEP): datagrama (unidireccional), solicitud/respuesta y dúplex (bidireccional). El contrato de servicio también puede emplear contratos de datos y mensajes para exigir tipos de datos y formatos de mensaje específicos cuando se obtiene acceso. [!INCLUDE[crabout](../../../includes/crabout-md.md)] cómo definir un contrato de servicio, consulte [diseñar contratos de servicio](../../../docs/framework/wcf/designing-service-contracts.md). Tenga en cuenta que también pueden exigírsele a un cliente que implemente un contrato definido por servicio, denominado un contrato de devolución de llamada, para recibir los mensajes del servicio en un MEP dúplex. Para obtener más información, consulte [servicios dúplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+-   **Contrato de servicio**. El contrato de servicios describe qué funcionalidad expone el punto de conexión al cliente. Un contrato especifica las operaciones a las que puede llamar un cliente, la forma del mensaje y el tipo de parámetros de entrada o los datos necesarios para llamar a la operación, así como el tipo de mensaje de procesamiento o respuesta que puede esperar el cliente. Existen tres tipos básicos de contratos que se corresponden con los patrones de intercambio de mensajes básicos (MEP): datagrama (unidireccional), solicitud/respuesta y dúplex (bidireccional). El contrato de servicio también puede emplear contratos de datos y mensajes para exigir tipos de datos y formatos de mensaje específicos cuando se obtiene acceso. Para obtener más información sobre cómo definir un contrato de servicio, consulte [diseñar contratos de servicio](../../../docs/framework/wcf/designing-service-contracts.md). Tenga en cuenta que también pueden exigírsele a un cliente que implemente un contrato definido por servicio, denominado un contrato de devolución de llamada, para recibir los mensajes del servicio en un MEP dúplex. Para obtener más información, consulte [servicios dúplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
  El punto de conexión de un servicio puede especificarse de manera imperativa, mediante el código, o de manera declarativa a través de la configuración. Si no se especifica ningún extremo, el tiempo de ejecución proporciona extremos predeterminados, agregando uno para cada dirección base de cada contrato de servicio implementado por el servicio. Normalmente, no resulta muy práctico definir los extremos en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio. Generalmente, es más práctico definir extremos de servicio mediante la configuración en lugar del código. Mantener la información del enlace y el direccionamiento fuera del código les permite cambiar sin tener que recompilar e implementar la aplicación.  
   
@@ -209,7 +209,7 @@ Dim echoUri As Uri = New Uri("http://localhost:8000/")
 serviceHost.Open()  
 ```  
   
- Si se proporcionan extremos de forma explícita, es posible agregar extremos predeterminados llamando a <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> en el objeto <xref:System.ServiceModel.ServiceHost> antes de llamar a <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] los extremos predeterminados, consulte [configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Si se proporcionan extremos de forma explícita, es posible agregar extremos predeterminados llamando a <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> en el objeto <xref:System.ServiceModel.ServiceHost> antes de llamar a <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Para obtener más información sobre puntos de conexión predeterminados, consulte [configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Implementación de contratos de servicio](../../../docs/framework/wcf/implementing-service-contracts.md)

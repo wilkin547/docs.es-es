@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d4463a04ac2113778d9ea0d315beeef7d564764
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: aebd21186f7d038dfa5d7c3c65f833d41f4a1f71
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-equivalence"></a>Equivalencia del contrato de datos
 Para que un cliente envíe correctamente datos de un cierto tipo a un servicio, o para que un servicio envíe correctamente datos a un cliente, el tipo enviado no tiene que existir necesariamente en el extremo receptor. El único requisito es que los contratos de datos de ambos tipos sean equivalentes. (A veces, una equivalencia estricta no es necesaria, como se describe en [versiones de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -37,7 +37,7 @@ Para que un cliente envíe correctamente datos de un cierto tipo a un servicio, 
 > [!NOTE]
 >  Tenga en cuenta que los nombres y espacios de nombres de contrato de datos, así como los nombres del miembros de datos, distinguen entre mayúsculas y minúsculas.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] espacios de nombres y nombres de contrato de datos, así como los nombres de miembro de datos, vea [nombres de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Para obtener más información acerca de los espacios de nombres y nombres de contrato de datos, así como los nombres de miembro de datos, vea [nombres de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Si dos tipos existen en el mismo lado (remitente o receptor) y sus contratos de datos no son equivalentes (por ejemplo, tienen diferentes miembros de datos), no debería darles el mismo nombre y espacio de nombres. Si lo hace, pueden iniciarse excepciones.  
   

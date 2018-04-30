@@ -1,24 +1,26 @@
 ---
-title: "Cómo serializar y deserializar datos JSON"
-ms.custom: 
+title: Cómo serializar y deserializar datos JSON
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 994ccb677d1376eff5b889a0a4ddfe072557bdea
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9152e0047102661664f9b158aa26f83fb1d3c25c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>Cómo serializar y deserializar datos JSON
 JSON (notación de objetos JavaScript) es un formato de codificación de datos eficaz que permite intercambios rápidos de cantidades pequeñas de datos entre los exploradores de cliente y servicios web con AJAX (JavaScript asincrónico y XML) habilitado.  
@@ -34,7 +36,7 @@ JSON (notación de objetos JavaScript) es un formato de codificación de datos e
   
 ### <a name="to-define-the-data-contract-for-a-person"></a>Para definir el contrato de datos de una Persona  
   
-1.  Defina el contrato de datos para `Person` adjuntando <xref:System.Runtime.Serialization.DataContractAttribute> a la clase y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> a los miembros que desee serializar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]contratos de datos, vea [diseñar contratos de servicio](../../../../docs/framework/wcf/designing-service-contracts.md).  
+1.  Defina el contrato de datos para `Person` adjuntando <xref:System.Runtime.Serialization.DataContractAttribute> a la clase y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> a los miembros que desee serializar. Para obtener más información acerca de los contratos de datos, vea [diseñar contratos de servicio](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
     ```csharp  
     [DataContract]  

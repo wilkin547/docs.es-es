@@ -23,18 +23,18 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 34c53389694aa48742becfd713796feb8111d888
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bdfd273f7a541cac4f1fd8a03a976d73e997b718
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-set-the-security-mode"></a>Cómo: Establecer el modo de seguridad
 La seguridad de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] tiene tres modos de seguridad comunes que se encuentran en la mayoría de los enlaces predefinidos: transporte, mensaje y “transporte con credencial del mensaje”. Dos modos adicionales son específicos para dos enlaces: el modo “solo credencial de transporte” encontrado en el <xref:System.ServiceModel.BasicHttpBinding>y el modo “Ambos” encontrado en el <xref:System.ServiceModel.NetMsmqBinding>. Sin embargo, este tema se concentra en los tres modos de seguridad comunes: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>y <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
  Tenga en cuenta que no todos los enlaces predefinidos admiten todos estos modos. Este tema establece el modo con las clases <xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.NetTcpBinding> y muestra cómo establecer el modo mediante programación y configuración.  
   
- Para obtener más información, consulte [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] seguridad, consulte [información general sobre seguridad](../../../docs/framework/wcf/feature-details/security-overview.md), [proteger Services](../../../docs/framework/wcf/securing-services.md), y [protección de servicios y clientes](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] mensaje de modo de transporte, consulte [seguridad de transporte](../../../docs/framework/wcf/feature-details/transport-security.md) y [Message Security](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+ Para obtener más información, consulte [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] seguridad, consulte [información general sobre seguridad](../../../docs/framework/wcf/feature-details/security-overview.md), [proteger Services](../../../docs/framework/wcf/securing-services.md), y [protección de servicios y clientes](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Para obtener más información acerca del modo de transporte y mensaje, consulte [seguridad de transporte](../../../docs/framework/wcf/feature-details/transport-security.md) y [Message Security](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
 ### <a name="to-set-the-security-mode-in-code"></a>Para establecer el modo de seguridad en código  
   

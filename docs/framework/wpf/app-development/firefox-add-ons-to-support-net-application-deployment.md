@@ -1,12 +1,13 @@
 ---
-title: "Complementos de Firefox para la implementación de aplicaciones .NET"
-ms.custom: 
+title: Complementos de Firefox para la implementación de aplicaciones .NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Firefox add-ons for .NET application deployment
@@ -14,19 +15,20 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5734d58d0cce15c52da6b7242b28ffc8d574060
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1066332b8c5b98b5cca45e7ffbea83bd8cee8775
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Complementos de Firefox para la implementación de aplicaciones .NET
-El [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] complemento para Firefox y .NET Framework Assistant para habilitar Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], malas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]y las aplicaciones ClickOnce para que funcione con el explorador Mozilla Firefox.  
+Habilitar Windows Presentation Foundation (WPF) complemento para Firefox y .NET Framework Assistant para Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], malas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]y las aplicaciones ClickOnce para que funcione con el explorador Mozilla Firefox.  
   
 ## <a name="wpf-plug-in-for-firefox"></a>Complemento de WPF para Firefox  
  Permite que el complemento WPF para Firefox [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] y malas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivos para navegar y ejecutarse en el nivel superior o en un IFRAME de HTML en el explorador Firefox. Un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] es un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación que se pueden publicar en un servidor Web y han iniciado en exploradores compatibles. Flexible [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] es un archivo de solo XAML que puede navegar y mostrar en exploradores compatibles, igual que un archivo XML.  

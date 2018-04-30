@@ -1,12 +1,13 @@
 ---
-title: "Cómo: Utilizar diferentes certificados X.509 para la firma y el cifrado"
-ms.custom: 
+title: 'Cómo: Utilizar diferentes certificados X.509 para la firma y el cifrado'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 944e9974ac5cb84aa0dd7e732c35752cb4ea749e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f6103dd8f680752581a51cba7ba61c83522decc2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Cómo: Utilizar diferentes certificados X.509 para la firma y el cifrado
 En este tema se muestra cómo configurar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para utilizar certificados diferentes para la firma y el cifrado de mensajes tanto en el cliente como en el servicio.  
@@ -46,7 +48,7 @@ En este tema se muestra cómo configurar [!INCLUDE[indigo1](../../../../includes
   
  ![Gráfico que muestra cómo se utilizan las credenciales del cliente](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las credenciales personalizadas, consulte [Tutorial: creación de cliente personalizada y las credenciales de servicio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+ Para obtener más información acerca de las credenciales personalizadas, consulte [Tutorial: creación de cliente personalizada y las credenciales de servicio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
  Además, debe crear un comprobador de identidad personalizado y vincularlo a un elemento de enlace de seguridad en un enlace personalizado. También debe utilizar las credenciales personalizadas en lugar de las credenciales predeterminadas.  
   
@@ -54,7 +56,7 @@ En este tema se muestra cómo configurar [!INCLUDE[indigo1](../../../../includes
   
  ![Gráfico que muestra un elemento de enlace personalizado](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]crear un comprobador de identidad personalizado, vea Cómo: [Cómo: crear un comprobador de identidad de cliente personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).  
+ Para obtener más información acerca de cómo crear un comprobador de identidad personalizado, vea Cómo: [Cómo: crear un comprobador de identidad de cliente personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).  
   
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>Para utilizar certificados independientes para la firma y el cifrado  
   

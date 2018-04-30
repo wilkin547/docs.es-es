@@ -1,23 +1,24 @@
 ---
-title: "Crear flujos de trabajo, actividades y expresiones mediante código imperativo"
-ms.custom: 
+title: Crear flujos de trabajo, actividades y expresiones mediante código imperativo
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee7c5320caa3b7704813b94d4ddfbf1ce0fecf96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: efbefbffdc0314826a361b4a165c67ab1828e40b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Crear flujos de trabajo, actividades y expresiones mediante código imperativo
 Una definición de flujo de trabajo es un árbol de objetos de actividad configurados. Este árbol de actividades se puede definir de muchas maneras, incluido XAML editado a mano o el uso del Diseñador de flujo de trabajo para generar XAML. El uso de XAML, sin embargo, no es un requisito. También se pueden crear definiciones de flujo de trabajo mediante programación. Este tema proporciona información general sobre cómo crear definiciones de flujo de trabajo, actividades y expresiones mediante código. Para obtener ejemplos del uso de flujos de trabajo XAML mediante código, vea [serializar flujos de trabajo y actividades a y desde XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
@@ -28,7 +29,7 @@ Una definición de flujo de trabajo es un árbol de objetos de actividad configu
  [!code-csharp[CFX_WorkflowApplicationExample#47](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#47)]  
   
 > [!NOTE]
->  En los ejemplos de este tema se usa <xref:System.Activities.WorkflowInvoker> para ejecutar los flujos de trabajo de ejemplo. [!INCLUDE[crabout](../../../includes/crabout-md.md)]invocar los flujos de trabajo, pasar argumentos y las distintas opciones de hospedaje que están disponibles, consulte [usar WorkflowInvoker y WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md).  
+>  En los ejemplos de este tema se usa <xref:System.Activities.WorkflowInvoker> para ejecutar los flujos de trabajo de ejemplo. Para obtener más información sobre cómo invocar los flujos de trabajo, pasar argumentos y las distintas opciones de hospedaje que están disponibles, vea [usar WorkflowInvoker y WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md).  
   
  En este ejemplo se crea un flujo de trabajo que consta de una única actividad <xref:System.Activities.Statements.WriteLine>. Se establece el argumento <xref:System.Activities.Statements.WriteLine> de la actividad <xref:System.Activities.Statements.WriteLine.Text%2A> y se invoca el flujo de trabajo. Si una actividad contiene actividades secundarias, el método de construcción es similar. En el siguiente ejemplo se usa una actividad <xref:System.Activities.Statements.Sequence> que contiene dos actividades <xref:System.Activities.Statements.WriteLine>.  
   
@@ -39,7 +40,7 @@ Una definición de flujo de trabajo es un árbol de objetos de actividad configu
   
  [!code-csharp[CFX_WorkflowApplicationExample#49](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#49)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]inicializadores de objeto, vea [Cómo: inicializar objetos sin llamar a un Constructor (Guía de programación de C#)](http://go.microsoft.com/fwlink/?LinkId=161015) y [Cómo: declarar un objeto usando un inicializador de objeto](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ Para obtener más información sobre los inicializadores de objeto, vea [Cómo: inicializar objetos sin llamar a un Constructor (Guía de programación de C#)](http://go.microsoft.com/fwlink/?LinkId=161015) y [Cómo: declarar un objeto usando un inicializador de objeto](http://go.microsoft.com/fwlink/?LinkId=161016).  
   
 ### <a name="working-with-variables-literal-values-and-expressions"></a>Trabajar con variables, valores literales y expresiones  
  Al crear una definición de flujo de trabajo mediante código, tenga en cuenta qué código se ejecuta como parte de la creación de la definición de flujo de trabajo y qué código se ejecuta como parte de la ejecución de una instancia de ese flujo de trabajo. Por ejemplo, el siguiente flujo de trabajo está pensado para generar un número aleatorio y escribirlo en la consola.  
@@ -71,7 +72,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#52](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]las expresiones lambda, vea [expresiones Lambda (Guía de programación de C#)](http://go.microsoft.com/fwlink/?LinkID=152436) o [expresiones Lambda (Visual Basic)](http://go.microsoft.com/fwlink/?LinkID=152437).  
+ Para obtener más información sobre las expresiones lambda, vea [expresiones Lambda (Guía de programación de C#)](http://go.microsoft.com/fwlink/?LinkID=152436) o [expresiones Lambda (Visual Basic)](http://go.microsoft.com/fwlink/?LinkID=152437).  
   
  Las expresiones lambda no son serializables para el formato XAML. Si se intenta serializar un flujo de trabajo con expresiones lambda, se produce <xref:System.Activities.Expressions.LambdaSerializationException> con el mensaje siguiente: “Este flujo de trabajo contiene expresiones lambda especificadas en código. Estas expresiones no se pueden serializar mediante XAML. Para que el flujo de trabajo se pueda serializar mediante XAML, use VisualBasicValue/VisualBasicReference o ExpressionServices.Convert(lambda). Esto convertirá las expresiones lambda en actividades de expresión”. Para que esta expresión sea compatible con XAML, use <xref:System.Activities.Expressions.ExpressionServices> y <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>, tal y como se muestra en el ejemplo siguiente.  
   
@@ -81,7 +82,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#54](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#54)]  
   
- En tiempo de ejecución, las expresiones de Visual Basic se compilan en expresiones LINQ. Ambos ejemplos anteriores son serializables en XAML, pero si el XAML serializado está diseñado para que se vea y edite en el diseñador de flujo de trabajo, use <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> para las expresiones. Los flujos de trabajo serializados que usan `ExpressionServices.Convert` se pueden abrir en el diseñador, pero el valor de la expresión estará en blanco. [!INCLUDE[crabout](../../../includes/crabout-md.md)]serializar flujos de trabajo en XAML, vea [serializar flujos de trabajo y actividades a y desde XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
+ En tiempo de ejecución, las expresiones de Visual Basic se compilan en expresiones LINQ. Ambos ejemplos anteriores son serializables en XAML, pero si el XAML serializado está diseñado para que se vea y edite en el diseñador de flujo de trabajo, use <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> para las expresiones. Los flujos de trabajo serializados que usan `ExpressionServices.Convert` se pueden abrir en el diseñador, pero el valor de la expresión estará en blanco. Para obtener más información sobre la serialización de los flujos de trabajo en XAML, vea [serializar flujos de trabajo y actividades a y desde XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
   
 #### <a name="literal-expressions-and-reference-types"></a>Expresiones literales y tipos de referencia  
  Las expresiones literales se representan en flujos de trabajo mediante la actividad <xref:System.Activities.Expressions.Literal%601>. Las siguientes actividades <xref:System.Activities.Statements.WriteLine> tienen una funcionalidad equivalente.  
@@ -117,7 +118,7 @@ new Assign
 },  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]las expresiones, vea [expresiones](../../../docs/framework/windows-workflow-foundation/expressions.md).  
+ Para obtener más información acerca de las expresiones, vea [expresiones](../../../docs/framework/windows-workflow-foundation/expressions.md).  
   
 #### <a name="invoking-methods-on-objects-using-expressions-and-the-invokemethod-activity"></a>Invocar métodos en objetos mediante expresiones y la actividad InvokeMethod  
  La actividad <xref:System.Activities.Expressions.InvokeMethod%601> se puede usar para invocar métodos estáticos y de instancia de clases de .NET Framework. En un ejemplo anterior de este tema, se generaba un número aleatorio mediante la clase <xref:System.Random>.  
@@ -147,7 +148,7 @@ new InvokeMethod<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#55](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#55)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]las actividades dinámicas, vea [crear una actividad en tiempo de ejecución](../../../docs/framework/windows-workflow-foundation/creating-an-activity-at-runtime-with-dynamicactivity.md).  
+ Para obtener más información acerca de las actividades dinámicas, vea [crear una actividad en tiempo de ejecución](../../../docs/framework/windows-workflow-foundation/creating-an-activity-at-runtime-with-dynamicactivity.md).  
   
 ## <a name="compiled-activities"></a>Actividades compiladas  
  Las actividades dinámicas son una manera de definir una actividad que contiene argumentos mediante código, pero las actividades también se pueden crear en código y compilar en tipos. Se pueden crear actividades simples que derivan de <xref:System.Activities.CodeActivity> y actividades asincrónicas que derivan de <xref:System.Activities.AsyncCodeActivity>. Estas actividades pueden tener argumentos, valores devueltos y definir la lógica mediante código imperativo. Para obtener ejemplos de creación de estos tipos de actividades, vea [una clase Base CodeActivity](../../../docs/framework/windows-workflow-foundation/workflow-activity-authoring-using-the-codeactivity-class.md) y [crear actividades asincrónicas](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  

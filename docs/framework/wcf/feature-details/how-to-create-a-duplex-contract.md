@@ -1,13 +1,13 @@
 ---
-title: "Creación de un contrato dúplex"
-ms.custom: 
+title: Creación de un contrato dúplex
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-caps.latest.revision: 
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 003b07326612f3b51390d691c7bba0ef1c1b85dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c06bd4f050eda3c3374684b5401b8c85fb9e1df9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Creación de un contrato dúplex
-En este tema se muestran los pasos básicos para crear métodos que utilicen un contrato dúplex (bidireccional). Un contrato dúplex permite a los clientes y servidores comunicarse entre sí independientemente de manera que cada uno puede iniciar llamadas al otro. El contrato dúplex es uno de tres patrones de mensaje disponible para los servicios de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Los otros dos patrones de mensaje son unidireccionales y de solicitud-respuesta. Un contrato dúplex consta de dos contratos unidireccionales entre el cliente y el servidor y no requiere que se pongan en correlación las llamadas al método. Use este tipo de contrato cuando el servicio debe consultar al cliente para obtener más información o provocar explícitamente eventos en el cliente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cómo crear una aplicación cliente para un contrato dúplex, consulte [Cómo: servicios de Access con un contrato dúplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Para obtener un ejemplo funcional, consulte la [dúplex](../../../../docs/framework/wcf/samples/duplex.md) ejemplo.  
+En este tema se muestran los pasos básicos para crear métodos que utilicen un contrato dúplex (bidireccional). Un contrato dúplex permite a los clientes y servidores comunicarse entre sí independientemente de manera que cada uno puede iniciar llamadas al otro. El contrato dúplex es uno de tres patrones de mensaje disponible para los servicios de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Los otros dos patrones de mensaje son unidireccionales y de solicitud-respuesta. Un contrato dúplex consta de dos contratos unidireccionales entre el cliente y el servidor y no requiere que se pongan en correlación las llamadas al método. Use este tipo de contrato cuando el servicio debe consultar al cliente para obtener más información o provocar explícitamente eventos en el cliente. Para obtener más información acerca de cómo crear una aplicación cliente para un contrato dúplex, consulte [Cómo: servicios de Access con un contrato dúplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Para obtener un ejemplo funcional, consulte la [dúplex](../../../../docs/framework/wcf/samples/duplex.md) ejemplo.  
   
 ### <a name="to-create-a-duplex-contract"></a>Creación de un contrato dúplex  
   

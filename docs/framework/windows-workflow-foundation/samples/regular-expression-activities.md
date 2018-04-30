@@ -1,26 +1,27 @@
 ---
-title: "Actividades de expresión normales"
-ms.custom: 
+title: Actividades de expresión normales
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d40d33a5d93ecce07a2e264dcfe9fcde3778437
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 74aef126011789cfd48aa962973cc67a4132c224
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="regular-expression-activities"></a>Actividades de expresión normales
-En este ejemplo se muestra cómo crear un conjunto de actividades que exponen la funcionalidad de expresión regular del espacio de nombres <xref:System.Text.RegularExpressions>. Estas actividades personalizadas se pueden usar en una aplicación de flujo de trabajo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]expresiones regulares, vea [System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
+En este ejemplo se muestra cómo crear un conjunto de actividades que exponen la funcionalidad de expresión regular del espacio de nombres <xref:System.Text.RegularExpressions>. Estas actividades personalizadas se pueden usar en una aplicación de flujo de trabajo. Para obtener más información sobre las expresiones regulares, vea [System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
   
  En la siguiente tabla se detallan las actividades personalizadas de este ejemplo.  
   

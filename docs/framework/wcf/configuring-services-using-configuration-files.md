@@ -18,18 +18,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 46bafbb0063f72b56f647caaa9dd0fa2944f3298
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 62a8774ab2843d0b1f0a19ad04fc0a76abb7cac5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configuración de servicios mediante archivos de configuración
 Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] con un archivo de configuración le da la flexibilidad de proporcionar datos de extremo y comportamiento del servicio en el punto de implementación en lugar de hacerlo en la fase de diseño. En este tema se describen las principales técnicas disponibles.  
   
  Se puede configurar un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mediante la tecnología de configuración [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . Por lo general, los elementos XML se agregan al archivo Web.config para un sitio de Internet Information Services (IIS) que hospeda un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Los elementos le permiten cambiar detalles como las direcciones de extremos (las direcciones reales utilizadas para comunicarse con el servicio) equipo a equipo. Además, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye varios elementos proporcionados por el sistema que le permiten seleccionar rápidamente las características más básicas de un servicio. A partir de [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye un nuevo modelo de configuración predeterminado que simplifica los requisitos de configuración de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Si no se proporciona ninguna configuración de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para un servicio concreto, el tiempo de ejecución lo configurará automáticamente con varios extremos estándar y un enlace/comportamiento predeterminado. En la práctica, escribir la configuración es una parte principal de la programación de aplicaciones de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] .  
   
- Para obtener más información, consulte [configurar enlaces para servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Para una lista de la mayor parte de uso general elementos, vea [enlaces proporcionados](../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] los puntos de conexión, enlaces y comportamientos predeterminados, consulte [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Para obtener más información, consulte [configurar enlaces para servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Para una lista de la mayor parte de uso general elementos, vea [enlaces proporcionados](../../../docs/framework/wcf/system-provided-bindings.md). Para obtener más información acerca de los puntos de conexión de forma predeterminada, los enlaces y los comportamientos, consulte [configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Al implementar escenarios en paralelo con dos versiones diferentes de un servicio, es necesario especificar los nombres parciales de los ensamblados a los que se hace referencia en los archivos de configuración. Esto se debe a que el archivo de configuración se comparte entre todas las versiones de un servicio y se podrían estar ejecutando con versiones diferentes de .NET Framework.  
@@ -41,7 +41,7 @@ Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] c
   
  En Visual Studio, el archivo denominado App.config se utiliza para crear el archivo de configuración final. El nombre final realmente utilizado para la configuración depende del nombre de ensamblado. Por ejemplo, un ensamblado denominado "Cohowinery.exe" tiene un nombre final de archivo de configuración de "Cohowinery.exe.config". Sin embargo, solo necesita modificar el archivo App.config. Los cambios realizados en ese archivo se realizan automáticamente en tiempo de compilación en el archivo final de configuración de la aplicación.  
   
- Al utilizar un archivo App.config, el sistema de configuración combina el archivo App.config con el contenido del archivo Machine.config cuando se inicia la aplicación y se aplica la configuración. Este mecanismo permite definir los valores de equipo en el archivo Machine.config. El archivo App.config se puede utilizar para reemplazar los valores del archivo Machine.config; también puede bloquear los valores en el archivo Machine.config para que se utilicen. En el caso de Web.config, el sistema de configuración combina los archivos Web.config de todos los directorios que conducen al directorio de la aplicación en la configuración que se aplica. [!INCLUDE[crabout](../../../includes/crabout-md.md)] la configuración y las prioridades de los valores, vea temas sobre el espacio de nombres <xref:System.Configuration> .  
+ Al utilizar un archivo App.config, el sistema de configuración combina el archivo App.config con el contenido del archivo Machine.config cuando se inicia la aplicación y se aplica la configuración. Este mecanismo permite definir los valores de equipo en el archivo Machine.config. El archivo App.config se puede utilizar para reemplazar los valores del archivo Machine.config; también puede bloquear los valores en el archivo Machine.config para que se utilicen. En el caso de Web.config, el sistema de configuración combina los archivos Web.config de todos los directorios que conducen al directorio de la aplicación en la configuración que se aplica. Para obtener más información acerca de la configuración y las prioridades de los valores, vea los temas de la <xref:System.Configuration> espacio de nombres.  
   
 ## <a name="major-sections-of-the-configuration-file"></a>Secciones principales del archivo de configuración  
  Las secciones principales del archivo de configuración incluyen los elementos siguientes.  
@@ -114,7 +114,7 @@ Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] c
 ### <a name="the-binding-element"></a>El \<enlace > elemento  
  El elemento `binding` contenidos en el elemento `bindings` pueden ser uno de los enlaces proporcionados por el sistema (consulte [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) o un enlace personalizado (consulte [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md)). El elemento `binding` tiene un atributo `name` que pone en correlación el enlace con el extremo especificado en el atributo `bindingConfiguration` del elemento `endpoint` . Si no se especifica ningún nombre, dicho enlace corresponde al enlace predeterminado de ese tipo de enlace.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] configurar los servicios y clientes, consulte [configuración de Windows Communication Foundation Applications](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ Para obtener más información acerca de cómo configurar servicios y clientes, consulte [configuración de Windows Communication Foundation Applications](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
  [\<enlace >](../../../docs/framework/misc/binding.md)  
   

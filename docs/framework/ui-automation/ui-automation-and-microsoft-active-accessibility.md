@@ -21,11 +21,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2028f312433e3a4cf8c90f2e6809ed29288d7819
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 581fe3272808da84fcf31667f8191f3cc6322033
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI Automation y Microsoft Active Accessibility
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Compatibilidad en Windows Presentation Foundation  
- [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] es el nuevo modelo para crear interfaces de usuario. Los elementos[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] no contienen compatibilidad nativa para [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]; sin embargo, admiten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], que incluye compatibilidad de puente para los clientes de [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] . Solo los clientes creados de manera específica para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pueden aprovechar al máximo las características de accesibilidad de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], como la amplia compatibilidad con texto.  
+ Windows Presentation Foundation (WPF) es el nuevo modelo para crear interfaces de usuario. Los elementos[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] no contienen compatibilidad nativa para [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]; sin embargo, admiten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], que incluye compatibilidad de puente para los clientes de [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] . Solo los clientes creados de manera específica para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pueden aprovechar al máximo las características de accesibilidad de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], como la amplia compatibilidad con texto.  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>Servidores y clientes  

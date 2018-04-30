@@ -38,14 +38,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7c84c5742fcbb0d1554bd6fc379fc44f3b9cb055
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bf7ec6cc18461a906e889a997968677d0c63df20
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="navigation-overview"></a>Información general sobre navegación
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] admite la navegación de estilo de explorador que se puede usar en dos tipos de aplicaciones: aplicaciones independientes y [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Contenido de paquete para la navegación, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proporciona el <xref:System.Windows.Controls.Page> clase. Puede navegar desde una <xref:System.Windows.Controls.Page> a otro mediante declaración, mediante un <xref:System.Windows.Documents.Hyperlink>, o mediante programación, usando la <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usa el diario para recordar las páginas desde las que se navegó o para volver a ellas.  
+Windows Presentation Foundation (WPF) admite la navegación de estilo de explorador que se puede usar en dos tipos de aplicaciones: aplicaciones independientes y [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Contenido de paquete para la navegación, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proporciona el <xref:System.Windows.Controls.Page> clase. Puede navegar desde una <xref:System.Windows.Controls.Page> a otro mediante declaración, mediante un <xref:System.Windows.Documents.Hyperlink>, o mediante programación, usando la <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usa el diario para recordar las páginas desde las que se navegó o para volver a ellas.  
   
  <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Navigation.NavigationService>, y el diario de forman el núcleo de la compatibilidad de navegación que ofrece [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Esta introducción describen estas características en detalle antes de tratar la compatibilidad de navegación avanzada que incluye la navegación a perder [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivos [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] archivos y objetos.  
   

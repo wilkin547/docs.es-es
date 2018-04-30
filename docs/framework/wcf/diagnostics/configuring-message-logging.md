@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6e2d45e7b8769ee525835ad3dc50262a03a5a7b6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-message-logging"></a>Configuración del registro de mensajes
 En este tema se describe cómo puede configurar el registro de mensajes para distintos escenarios.  
@@ -58,7 +58,7 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] configuración de registro de mensajes, vea [configuración recomendada para el seguimiento y registro de mensajes](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ Para obtener más información acerca de la configuración de registro de mensajes, vea [configuración recomendada para el seguimiento y registro de mensajes](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
  Puede utilizar `add` para especificar el nombre y tipo del agente de escucha que desea utilizar. En la configuración de ejemplo, el agente de escucha se denomina "mensajes" y agrega el agente de escucha de seguimiento de .NET Framework estándar (`System.Diagnostics.XmlWriterTraceListener`) como el tipo que se va a utilizar. Si utiliza `System.Diagnostics.XmlWriterTraceListener`, debe especificar la ubicación y el nombre del archivo de resultados en el archivo de configuración. Esto se hace estableciendo `initializeData` en el nombre del archivo de registro. De lo contrario, el sistema produce una excepción. También puede implementar un agente de escucha personalizado que emita registros en un archivo predeterminado.  
   
@@ -73,7 +73,7 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- Si desea deshabilitar el origen de seguimiento, debería utilizar en su lugar los atributos `logMessagesAtServiceLevel`, `logMalformedMessages` y `logMessagesAtTransportLevel` del elemento `messageLogging`. Debería establecer todos estos atributos en `false`. Esta acción puede realizarse utilizando el archivo de configuración en el ejemplo de código anterior, mediante la interfaz del usuario del editor de configuración, o mediante WMI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la herramienta Editor de configuración, consulte [herramienta Editor de configuración (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI, consulte [utilizando Windows Management Instrumentation para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Si desea deshabilitar el origen de seguimiento, debería utilizar en su lugar los atributos `logMessagesAtServiceLevel`, `logMalformedMessages` y `logMessagesAtTransportLevel` del elemento `messageLogging`. Debería establecer todos estos atributos en `false`. Esta acción puede realizarse utilizando el archivo de configuración en el ejemplo de código anterior, mediante la interfaz del usuario del editor de configuración, o mediante WMI. Para obtener más información acerca de la herramienta Editor de configuración, consulte [herramienta Editor de configuración (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Para obtener más información acerca de WMI, consulte [utilizando Windows Management Instrumentation para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
 ## <a name="logging-levels-and-options"></a>Registro de niveles y opciones  
  En el caso de los mensajes entrantes, el registro se produce inmediatamente después de que se haya formado el mensaje, inmediatamente antes de que el mensaje obtenga el código de usuario en el nivel de servicio y cuando se detecten los mensajes incorrectos.  
@@ -91,7 +91,7 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
  Los mensajes registrados en este nivel están listos para ser codificados o descodificados para el transporte o para después de éste en tránsito. Si se han definido los filtros, solo se registrarán los mensajes que coincidan con los filtros. De lo contrario, se registrarán todos los mensajes en el nivel de transporte. Todos los mensajes de la infraestructura se registran en este nivel, incluidos los mensajes de la mensajería de confianza. En los mensajes transmitidos, solo se registran los encabezados. Además, los mensajes seguros se registran como cifrados en este nivel, excepto si se utiliza un transporte seguro como HTTPS.  
   
 ### <a name="malformed-level"></a>Nivel incorrecto  
- Los mensajes incorrectos son mensajes que rechazados por la pila de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en cualquier fase del procesamiento. Los mensajes con formato incorrecto se registran tal cual: cifrados si lo están, con XML inadecuado, etc. `maxSizeOfMessageToLog` definió el tamaño del mensaje que se debía registrar como CDATA. De forma predeterminada, `maxSizeOfMessageToLog` es igual a 256 K. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] este atributo, vea la sección Otras opciones.  
+ Los mensajes incorrectos son mensajes que rechazados por la pila de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en cualquier fase del procesamiento. Los mensajes con formato incorrecto se registran tal cual: cifrados si lo están, con XML inadecuado, etc. `maxSizeOfMessageToLog` definió el tamaño del mensaje que se debía registrar como CDATA. De forma predeterminada, `maxSizeOfMessageToLog` es igual a 256 K. Para obtener más información acerca de este atributo, vea la sección otras opciones.  
   
 ### <a name="other-options"></a>Otras opciones  
  Además de los niveles del registro, el usuario puede especificar las opciones siguientes:  

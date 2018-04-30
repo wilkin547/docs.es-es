@@ -1,37 +1,39 @@
 ---
 title: '&lt;peerAuthentication&gt; (elemento)'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2b0195ec042a0ad342f199f0bf9c2fd3a19821f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9d8809378d8ad8bd5b62d6435919602e4ad0b042
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltpeerauthenticationgt-element"></a>&lt;peerAuthentication&gt; (elemento)
 Especifica las opciones de autenticación de clientes punto a punto.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]Peer-to-peer programación, vea [redes Peer-to-Peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Para obtener más información acerca de la programación de punto a punto, vea [redes Peer-to-Peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
  \<system.ServiceModel>  
-\<behaviors>  
-\<endpointBehaviors>  
-\<behavior>  
-\<clientCredentials>  
+\<comportamientos >  
+\<endpointBehaviors >  
+\<comportamiento >  
+\<clientCredentials >  
 \<punto >  
-\<PeerAuthentication >  
+\<peerAuthentication >  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -87,7 +89,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Especifica una credencial utilizada para autenticar el cliente a un servicio del mismo nivel.|  
+|[\<punto >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Especifica una credencial utilizada para autenticar el cliente a un servicio del mismo nivel.|  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento `<authentication>` corresponde a la clase <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>. Este elemento especifica un validador, que se invoca durante la autenticación entre vecinos en la malla. Cuando un nuevo par intenta establecer una conexión de vecino, pasa su propia credencial al par que responde. El validador del contestador se invoca para comprobar la credencial de la parte remota. Cuando una conexión del mismo nivel se establece en la malla, se autentican ambos pares mutuamente, lo que significa que se invocan los validadores en ambos extremos.  

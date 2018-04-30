@@ -1,27 +1,29 @@
 ---
-title: "Cómo: Hospedar un servicio de flujo de trabajo con Windows Server App Fabric"
-ms.custom: 
+title: 'Cómo: Hospedar un servicio de flujo de trabajo con Windows Server App Fabric'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc7af813f7fff422a2513c58c9e3cba6376de060
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ef60a291af39a39d3427d74b8a6ea7d00382c8d6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Cómo: Hospedar un servicio de flujo de trabajo con Windows Server App Fabric
-Hospedar servicios de flujo de trabajo en App Fabric es parecido al hospedaje en IIS/WAS. Las herramientas que proporciona App Fabric para implementar, supervisar y administrar los servicios de flujo de trabajo son la única diferencia. Este tema usa el servicio de flujo de trabajo creado en el [crear un servicio de flujo de trabajo de larga duración](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). que le guiará por el proceso de creación de un servicio de flujo de trabajo. En este tema se explicará cómo hospedar el servicio de flujo de trabajo usando App Fabric. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric, vea [documentación de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Antes de completar los pasos siguientes asegúrese de que tiene instalado Windows Server App Fabric.  Para ello, abra Internet Information Services (inetmgr.exe), haga clic en el nombre del servidor en el **conexiones** ver, haga clic en sitios y haga clic en **sitio Web predeterminado**. En el lado derecho de la pantalla verá una sección denominada **App Fabric**. Si no ve esta sección (estará en la parte superior del panel derecho), no tiene App Fabric instalado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]instalación de Windows Server App Fabric consulte [instalar Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136).  
+Hospedar servicios de flujo de trabajo en App Fabric es parecido al hospedaje en IIS/WAS. Las herramientas que proporciona App Fabric para implementar, supervisar y administrar los servicios de flujo de trabajo son la única diferencia. Este tema usa el servicio de flujo de trabajo creado en el [crear un servicio de flujo de trabajo de larga duración](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). que le guiará por el proceso de creación de un servicio de flujo de trabajo. En este tema se explicará cómo hospedar el servicio de flujo de trabajo usando App Fabric. Para obtener más información acerca de Windows Server App Fabric, vea [documentación de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Antes de completar los pasos siguientes asegúrese de que tiene instalado Windows Server App Fabric.  Para ello, abra Internet Information Services (inetmgr.exe), haga clic en el nombre del servidor en el **conexiones** ver, haga clic en sitios y haga clic en **sitio Web predeterminado**. En el lado derecho de la pantalla verá una sección denominada **App Fabric**. Si no ve esta sección (estará en la parte superior del panel derecho), no tiene App Fabric instalado. Para obtener más información acerca de cómo instalar Windows Server App Fabric vea [instalar Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136).  
   
 ### <a name="creating-a-simple-workflow-service"></a>Crear un servicio de flujo de trabajo simple  
   
@@ -51,37 +53,37 @@ Hospedar servicios de flujo de trabajo en App Fabric es parecido al hospedaje en
   
      ![Pestaña de supervisión de la configuración de tejido de aplicación](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration supervisión")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]configuración de supervisión de servicios de flujo de trabajo en App Fabric [configurar la supervisión con App Fabric](http://go.microsoft.com/fwlink/?LinkId=193153).  
+     Para obtener más información acerca de cómo configurar el servicio de flujo de trabajo de supervisión en App Fabric vea [configurar la supervisión con App Fabric](http://go.microsoft.com/fwlink/?LinkId=193153).  
   
 6.  Seleccione el **persistencia de flujo de trabajo** ficha. De esta forma, puede configurar la aplicación para usar el proveedor de persistencia predeterminado de App Fabric como se muestra en la siguiente captura de pantalla.  
   
-     ![Configuración de App Fabric &#45; Persistencia](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration persistencia")  
+     ![Configuración de App Fabric &#45; persistencia](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration persistencia")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]configuración de persistencia de flujo de trabajo en Windows Server App Fabric [configurar la persistencia de flujo de trabajo en App Fabric](http://go.microsoft.com/fwlink/?LinkId=193148).  
+     Para obtener más información acerca de cómo configurar la persistencia de flujo de trabajo en Windows Server App Fabric vea [configurar la persistencia de flujo de trabajo en App Fabric](http://go.microsoft.com/fwlink/?LinkId=193148).  
   
 7.  Seleccione el **administración de Host de flujo de trabajo** ficha. De esta forma, puede especificar cuándo se deben descargar y conservar las instancias de servicio de flujo de trabajo inactivas como se muestra en la siguiente captura de pantalla.  
   
      ![Administración de Host de flujo de trabajo de configuración de App Fabric](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-management.gif "AppFabricConfiguration-Management")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]configuración de administración de host de flujo de trabajo, vea [configuración de administración de Host de flujo de trabajo en App Fabric](http://go.microsoft.com/fwlink/?LinkId=193151).  
+     Para obtener más información acerca de la configuración de administración de host de flujo de trabajo, consulte [configuración de administración de Host de flujo de trabajo en App Fabric](http://go.microsoft.com/fwlink/?LinkId=193151).  
   
 8.  Seleccione el **inicio automático** ficha. De esta forma, puede especificar la configuración de inicio automático para los servicios de flujo de trabajo como se muestra en la siguiente captura de pantalla.  
   
-     ![App Fabric Auto &#45; configuración de inicio](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
+     ![Aplicación automática de tejido&#45;iniciar configuración](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]configuración de inicio automático [configuración de inicio automático con App Fabric](http://go.microsoft.com/fwlink/?LinkId=193150).  
+     Para obtener más información acerca de cómo configurar el inicio automático, consulte [configuración de inicio automático con App Fabric](http://go.microsoft.com/fwlink/?LinkId=193150).  
   
 9. Seleccione el **limitación** ficha. De esta forma, puede especificar la configuración de límite para el servicio de flujo de trabajo como se muestra en la siguiente captura de pantalla.  
   
      ![Limitación de la configuración de App Fabric](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Consulte la configuración del límite de [configuración de limitación con App Fabric](http://go.microsoft.com/fwlink/?LinkId=193149).  
+     Para obtener más información acerca de cómo configurar la limitación vea [configuración de limitación con App Fabric](http://go.microsoft.com/fwlink/?LinkId=193149).  
   
 10. Seleccione el **seguridad** ficha. De esta forma, puede especificar la configuración de seguridad para la aplicación como se muestra en la siguiente captura de pantalla.  
   
      ![Configuración de seguridad de App Fabric](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-security.gif "AppFabricConfiguration-Security")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]configuración de seguridad con Windows Server App Fabric [configuración de la seguridad con App Fabric](http://go.microsoft.com/fwlink/?LinkId=193152).  
+     Para obtener más información sobre la configuración de seguridad con Windows Server App Fabric vea [configuración de la seguridad con App Fabric](http://go.microsoft.com/fwlink/?LinkId=193152).  
   
 ### <a name="using-windows-server-app-fabric"></a>Usar Windows Server App Fabric  
   

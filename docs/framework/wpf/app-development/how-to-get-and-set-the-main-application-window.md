@@ -1,12 +1,13 @@
 ---
-title: "Cómo: obtener y establecer la ventana de la aplicación principal"
-ms.custom: 
+title: 'Cómo: obtener y establecer la ventana de la aplicación principal'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,22 +18,23 @@ helpviewer_keywords:
 - windows objects [WPF], getting
 - getting windows objects [WPF]
 ms.assetid: ec902bc4-4a59-46f5-8ec1-963b46789356
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9aa02b0d5ff4456cf5ef86fa0d4f8431fe3d846b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bdc96c509f88650edd93ba4a7f595e2b161db39
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-get-and-set-the-main-application-window"></a>Cómo: obtener y establecer la ventana de la aplicación principal
 En este ejemplo se muestra cómo obtener y establecer la ventana de la aplicación principal.  
   
 ## <a name="example"></a>Ejemplo  
- La primera <xref:System.Windows.Window> que se crea una instancia de un [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplicación se establece automáticamente en <xref:System.Windows.Application> como la ventana de la aplicación principal. La primera <xref:System.Windows.Window> como instancias tendrán más probable es que la ventana que se especifica como el inicio [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] (consulte <xref:System.Windows.Application.StartupUri%2A>).  
+ La primera <xref:System.Windows.Window> que se crea una instancia en un Windows Presentation Foundation (WPF) aplicación se establece automáticamente en <xref:System.Windows.Application> como la ventana de la aplicación principal. La primera <xref:System.Windows.Window> como instancias tendrán más probable es que la ventana que se especifica como el inicio [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] (consulte <xref:System.Windows.Application.StartupUri%2A>).  
   
  La primera <xref:System.Windows.Window> pudo también puede crear una instancia mediante código. Un ejemplo es abrir una ventana durante el inicio de la aplicación, similar al siguiente:  
   

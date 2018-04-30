@@ -1,24 +1,26 @@
 ---
 title: Seguridad de transporte HTTP
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f81a95546d593cd5a0acb6a89edf2f6c763f07df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2787c38603fd0f88878596a809d7e3c5cfdfb350
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="http-transport-security"></a>Seguridad de transporte HTTP
 Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros (SSL) proporciona la seguridad. SSL se utiliza mucho en Internet para autenticar un servicio a un cliente y proporcionar la confidencialidad (cifrado) al canal. En este tema se explica cómo funciona SSL y cómo se implementa en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -61,7 +63,7 @@ Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros
 ### <a name="using-httpcfg-for-ssl"></a>Utilizar HttpCfg para SSL  
  Si está creando un autohospedado [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicación, descargue la herramienta HttpCfg.exe, disponible en la [sitio de herramientas de soporte técnico de Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=29002).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]usar la herramienta HttpCfg.exe para configurar un puerto con un certificado X.509, consulte [Cómo: configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Para obtener más información sobre cómo usar la herramienta HttpCfg.exe para configurar un puerto con un certificado X.509, consulte [Cómo: configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md)  

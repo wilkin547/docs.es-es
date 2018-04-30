@@ -1,27 +1,29 @@
 ---
-title: "Integración en la información general de las aplicaciones COM+"
-ms.custom: 
+title: Integración en la información general de las aplicaciones COM+
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración en la información general de las aplicaciones COM+
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona un entorno rico para crear aplicaciones distribuidas. Si ya está utilizando lógica de aplicación basada en componentes hospedada en COM+, puede utilizar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para extender su lógica existente en lugar de tener que rescribirla. Un escenario común es cuando se quiere exponer una lógica de negocio de Enterprise Services o COM+ mediante servicios web.  
@@ -51,9 +53,9 @@ ms.lasthandoff: 12/22/2017
   
 2.  Seleccione un modo de alojamiento adecuado.  
   
-3.  Use la herramienta de configuración del modelo de servicio COM+ (ComSvcConfig.exe) para agregar un servicio web para la interfaz. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cómo utilizar ComSvcConfig.exe, consulte [Cómo: usar la herramienta COM + Service Model Configuration](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+3.  Use la herramienta de configuración del modelo de servicio COM+ (ComSvcConfig.exe) para agregar un servicio web para la interfaz. Para obtener más información sobre cómo usar ComSvcConfig.exe, consulte [Cómo: usar la herramienta COM + Service Model Configuration](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
   
-4.  Configure las opciones de servicio adicionales en el archivo de configuración de la aplicación. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Cómo configurar un componente, consulte [Cómo: configurar opciones de servicio COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
+4.  Configure las opciones de servicio adicionales en el archivo de configuración de la aplicación. Para obtener más información sobre cómo configurar un componente, consulte [Cómo: configurar opciones de servicio COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
   
 ## <a name="supported-interfaces"></a>Interfaces admitidas  
  Hay algunas restricciones en el tipo de interfaces que se pueden exponer como un servicio web. No se admiten los siguientes tipos de interfaz:  

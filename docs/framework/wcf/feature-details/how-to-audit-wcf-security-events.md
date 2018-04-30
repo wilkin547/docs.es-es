@@ -1,13 +1,13 @@
 ---
-title: "Cómo auditar los eventos de seguridad de Windows Communication Foundation"
-ms.custom: 
+title: Cómo auditar los eventos de seguridad de Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: d3456eb374add7768fa6f2d01bc1b7b610c9577e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72eff4af38636577dc9e3b35af1f1155d5ed892c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Cómo auditar los eventos de seguridad de Windows Communication Foundation
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite registrar los eventos de seguridad en el registro de eventos de Windows, que puede consultarse utilizando el visor de eventos de Windows. Este tema explica cómo configurar una aplicación para que registre los eventos de seguridad. [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auditoría, consulte [auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite registrar los eventos de seguridad en el registro de eventos de Windows, que puede consultarse utilizando el visor de eventos de Windows. Este tema explica cómo configurar una aplicación para que registre los eventos de seguridad. Para obtener más información acerca de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] auditoría, consulte [auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Para auditar los eventos de seguridad en el código  
   

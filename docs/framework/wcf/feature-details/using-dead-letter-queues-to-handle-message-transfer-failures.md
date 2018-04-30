@@ -1,27 +1,29 @@
 ---
-title: "Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes"
-ms.custom: 
+title: Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b51999b1984dedf1baf23e41c1592382849c431b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes
 Los mensajes en cola pueden producir un error en la entrega. Estos mensajes que no se han podido entregar se graban en una cola de mensajes no enviados. Los errores en la entrega pueden deberse a motivos como errores de la red, una cola eliminada, una cola completa, error de autenticación o un error para entregar a tiempo.  
@@ -54,7 +56,7 @@ Los mensajes en cola pueden producir un error en la entrega. Estos mensajes que 
   
 -   Para leer los mensajes de una cola de mensajes no enviados personalizada, el URI debe tener el formato: net.msmq://localhost/private/\<*nombre de dlq personalizado*> donde *personalizado-dlq-name* es el nombre de la opción de instalación cola de mensajes no enviados.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cómo direccionar las colas, consulte [extremos de servicio y direccionamiento de la cola](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+ Para obtener más información acerca de cómo las colas de dirección, consulte [extremos de servicio y direccionamiento de la cola](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
  La pila [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en el receptor compara las direcciones de las que el servicio está realizando escuchas con la dirección del mensaje. Si las direcciones coinciden, se envía el mensaje; si no, no se envía el mensaje. Esto puede producir problemas al leer de la cola de mensajes no enviados, porque los mensajes en la cola de mensajes no enviados normalmente se direccionan al servicio y no al servicio de la cola de mensajes no enviados. Por consiguiente, el servicio que lee de la cola de mensajes no enviados debe instalar un filtro de direcciones `ServiceBehavior` que indique a la pila que haga coincidir todos los mensajes de la cola independientemente del destinatario. Específicamente, debe agregar `ServiceBehavior` con el parámetro <xref:System.ServiceModel.AddressFilterMode.Any> al servicio que lee los mensajes de la cola de mensajes no enviados.  
   

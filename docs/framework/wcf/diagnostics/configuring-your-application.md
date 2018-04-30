@@ -16,22 +16,22 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 922b9c5c53e04719f3ed48d0ff6386f21bf83e99
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 170583239ed357904e723aebdaef9809938b5123
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-your-application"></a>Configuración de su aplicación
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza el sistema de configuración .NET y le permite configurar los servicios en el equipo y ámbito de aplicación.  
   
- Las opciones de configuración definidas por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se encuentran en el grupo de la sección `<system.serviceModel>`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo configurar un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vea los siguientes temas:  
+ Las opciones de configuración definidas por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se encuentran en el grupo de la sección `<system.serviceModel>`. Para obtener más información sobre cómo configurar un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de servicio, vea los temas siguientes:  
   
 -   [Configuración de servicios](../../../../docs/framework/wcf/configuring-services.md)  
   
 -   [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
- Los valores de configuración definidos por la aplicación se definen en el grupo de la sección `<appSettings>`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] configuración de la aplicación en los archivos de configuración. NET, vea [ \<appSettings >](http://go.microsoft.com/fwlink/?LinkId=95159).  
+ Los valores de configuración definidos por la aplicación se definen en el grupo de la sección `<appSettings>`. Para obtener más información acerca de la configuración de la aplicación en los archivos de configuración. NET, vea [ \<appSettings >](http://go.microsoft.com/fwlink/?LinkId=95159).  
   
 ## <a name="using-the-configuration-editor"></a>Utilización del editor de configuración  
  El [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] [herramienta Editor de configuración (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) permite a los administradores y programadores crear y modificar valores de configuración para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] los servicios mediante una interfaz gráfica de usuario. Con esta herramienta se puede administrar la configuración de los enlaces, comportamientos, servicios y diagnósticos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sin editar directamente los archivos de configuración XML.  

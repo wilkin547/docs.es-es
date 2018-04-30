@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94ec5e56862190026b43331488cbc699fe7dfda4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a05e0af94cc84db117c7b8caf389d084cd4c3fd5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Tutorial: Crear un botón mediante el uso de XAML
-El objetivo de este tutorial es aprender a crear un botón animado para su uso en un [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplicación. En este tutorial usa estilos y una plantilla para crear un recurso de botón personalizado que permite la reutilización del código y la separación de la lógica de botón de la declaración del botón. En este tutorial se escribe completamente en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+El objetivo de este tutorial es aprender a crear un botón animado para usarlo en una aplicación de Windows Presentation Foundation (WPF). En este tutorial usa estilos y una plantilla para crear un recurso de botón personalizado que permite la reutilización del código y la separación de la lógica de botón de la declaración del botón. En este tutorial se escribe completamente en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 > [!IMPORTANT]
 >  Este tutorial le guía a través de los pasos para crear la aplicación escribiendo o copiando y pegando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] en Microsoft Visual Studio. Si prefiere obtener información sobre cómo usar una herramienta de diseño (Microsoft Expression Blend) para crear la misma aplicación, consulte [crear un botón mediante Microsoft Expression Blend utilizando](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queuing-in-wcf"></a>Las colas en WCF
 Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -51,7 +51,7 @@ Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indi
   
  Las colas de MSMQ también pueden protegerse utilizando una identidad de Windows registrada con el servicio de directorio Active Directory. Al instalar MSMQ puede instalar la integración de Active Directory, para lo que es necesario que el equipo forme parte de una red de dominios de Windows.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, consulte [instalar Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
+ Para obtener más información acerca de MSMQ, vea [instalar Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  El [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) es el enlace en cola [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona para dos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extremos para comunicarse mediante MSMQ. Por lo tanto, el enlace expone propiedades que son específicas de MSMQ. No obstante, no todas las características y propiedades MSMQ se exponen en `NetMsmqBinding`. El `NetMsmqBinding` compacto está diseñado con un conjunto óptimo de características que la mayoría de los clientes debería encontrar suficiente.  
@@ -79,12 +79,12 @@ Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indi
   
  El enlace tiene dos propiedades interesantes:  
   
--   `DeadLetterQueue`: esta propiedad es una enumeración que indica si se envía una solicitud a una cola de mensajes no enviados. La enumeración también contiene el tipo de cola de mensajes no enviados, en caso de que se solicite uno. Los valores son `None`, `System` y `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la interpretación de estas propiedades, vea [utilizando colas de mensajes fallidos para controlar errores de transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`: esta propiedad es una enumeración que indica si se envía una solicitud a una cola de mensajes no enviados. La enumeración también contiene el tipo de cola de mensajes no enviados, en caso de que se solicite uno. Los valores son `None`, `System` y `Custom`. Para obtener más información acerca de la interpretación de estas propiedades, vea [utilizando colas de mensajes fallidos para controlar errores de transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`: esta propiedad es la dirección del identificador uniforme de recursos (URI) de la cola de mensajes no enviados específica de la aplicación. Esto es necesario si `DeadLetterQueue`.`Custom` se elige.  
   
 #### <a name="poison-message-handling-properties"></a>Propiedades de control de mensajes dudosos  
- Cuando el servicio lee mensajes de la cola de destino en una transacción, puede no procesar el mensaje debido a distintas razones. En este caso, el mensaje se devuelve a la cola para volver a leerse. Para gestionar los mensajes en los que se producen errores repetidamente, se puede configurar un conjunto propiedades de control de mensajes dudosos en el enlace. Hay cuatro propiedades: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` y `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Estas propiedades, consulte [control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Cuando el servicio lee mensajes de la cola de destino en una transacción, puede no procesar el mensaje debido a distintas razones. En este caso, el mensaje se devuelve a la cola para volver a leerse. Para gestionar los mensajes en los que se producen errores repetidamente, se puede configurar un conjunto propiedades de control de mensajes dudosos en el enlace. Hay cuatro propiedades: `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` y `ReceiveErrorHandling`. Para obtener más información acerca de estas propiedades, vea [control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 #### <a name="security-properties"></a>Propiedades de seguridad  
  MSMQ expone su propio modelo de seguridad, como las listas de control de acceso (ACL) en una cola o el envío de mensajes autenticados. `NetMsmqBinding` expone estas propiedades de seguridad como parte de sus valores de seguridad de transporte. Hay dos propiedades en el enlace para la seguridad de transporte: `MsmqAuthenticationMode` y `MsmqProtectionLevel`. Los valores de estas propiedades dependen de la configuración de MSMQ. Para obtener más información, consulte [proteger mensajes utilizando seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  

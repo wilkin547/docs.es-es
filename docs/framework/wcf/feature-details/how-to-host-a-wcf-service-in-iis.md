@@ -1,38 +1,40 @@
 ---
 title: Procedimiento para hospedar un servicio WCF en IIS
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3b23d3f69d52299fcf3ca8b5ff56d0c4673026b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4699475db18ac84c4379c7bc102d93648060ed3d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Procedimiento para hospedar un servicio WCF en IIS
-Este tema describe los pasos básicos necesarios para crear un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que se hospeda en Internet Information Services (IIS). Este tema da por hecho que está familiarizado con IIS y sabe cómo usar la herramienta de administración de IIS para crear y administrar aplicaciones IIS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]IIS vea [Internet Information Services](http://go.microsoft.com/fwlink/?LinkId=132449). Un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se ejecuta en el entorno de IIS se beneficia de las características de IIS, como el reciclaje de procesos, el cierre por inactividad, la supervisión de estado de procesos y la activación basada en mensaje. Esta opción de hospedaje requiere que se configure correctamente IIS, pero no requiere que se escriba ningún código de hospedaje como parte de la aplicación. Sólo puede utilizar el hospedaje de IIS con un transporte HTTP.  
+Este tema describe los pasos básicos necesarios para crear un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que se hospeda en Internet Information Services (IIS). Este tema da por hecho que está familiarizado con IIS y sabe cómo usar la herramienta de administración de IIS para crear y administrar aplicaciones IIS. Para obtener más información acerca de IIS, consulte [Internet Information Services](http://go.microsoft.com/fwlink/?LinkId=132449). Un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se ejecuta en el entorno de IIS se beneficia de las características de IIS, como el reciclaje de procesos, el cierre por inactividad, la supervisión de estado de procesos y la activación basada en mensaje. Esta opción de hospedaje requiere que se configure correctamente IIS, pero no requiere que se escriba ningún código de hospedaje como parte de la aplicación. Sólo puede utilizar el hospedaje de IIS con un transporte HTTP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cómo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] interactuar, consulte [servicios WCF y ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]configuración de la seguridad, consulte [seguridad](../../../../docs/framework/wcf/feature-details/security.md).  
+ Para obtener más información acerca de cómo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] interactuar, consulte [servicios WCF y ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Para obtener más información sobre la configuración de seguridad, consulte [seguridad](../../../../docs/framework/wcf/feature-details/security.md).  
   
  Para la copia de origen de este ejemplo, vea [IIS hospedaje mediante alineado código](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md).  
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>Para crear un servicio hospedado por IIS  
   
-1.  Confirme que IIS está instalado y ejecutándose en su equipo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]instalar y configurar IIS vea [instalar y configurar IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=132128)  
+1.  Confirme que IIS está instalado y ejecutándose en su equipo. Para obtener más información sobre la instalación y configuración de IIS, consulte [instalar y configurar IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=132128)  
   
 2.  Cree una nueva carpeta para los archivos de la aplicación denominada "IISHostedCalcService", asegúrese de que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] tiene acceso al contenido de la carpeta, y use la herramienta de administración de IIS para crear una nueva aplicación IIS que se ubique físicamente en este directorio de la aplicación. Cuando cree un alias para el directorio de la aplicación, use "IISHostedCalc".  
   
@@ -75,7 +77,7 @@ Este tema describe los pasos básicos necesarios para crear un servicio de [!INC
   
      [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]      
   
-     Este ejemplo especifica extremos explícitamente en el archivo de configuración. Si no agrega ningún punto de conexión al servicio, el tiempo de ejecución agregará los puntos de conexión predeterminados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]vea de extremos, enlaces y comportamientos predeterminados [configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Este ejemplo especifica extremos explícitamente en el archivo de configuración. Si no agrega ningún punto de conexión al servicio, el tiempo de ejecución agregará los puntos de conexión predeterminados. Para obtener más información acerca de los puntos de conexión de forma predeterminada, los enlaces y comportamientos vea [configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 11. Para asegurarse de que el servicio está hospedado correctamente, abra una instancia de Internet Explorer y vaya a la dirección URL del servicio: `http://localhost/IISHostedCalc/Service.svc`  
   

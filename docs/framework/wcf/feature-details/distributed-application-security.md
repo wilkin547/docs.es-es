@@ -1,32 +1,34 @@
 ---
 title: Seguridad distribuida de aplicaciones
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="distributed-application-security"></a>Seguridad distribuida de aplicaciones
 La seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] está dividida en tres áreas funcionales principales: seguridad de transferencia, control de acceso y auditoría. La seguridad de transferencia proporciona integridad, confidencialidad y autenticación. La seguridad de transferencia la proporciona uno de los siguientes elementos: seguridad de transporte, seguridad de mensajes o `TransportWithMessageCredential`.  
   
- Para obtener información general de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] la seguridad de mensajes, vea [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]las otras dos partes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seguridad, consulte [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) y [auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Para obtener información general de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] la seguridad de mensajes, vea [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md). Para obtener más información acerca de las otras dos partes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seguridad, consulte [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) y [auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="transfer-security-scenarios"></a>Escenarios de seguridad de transferencia  
  Entre los escenarios comunes que utilizan la seguridad de transferencia de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se incluyen los siguientes:  
@@ -68,7 +70,7 @@ La seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] está di
   
  En la credencial del certificado, el nombre del sujeto, el nombre alternativo del sujeto o los campos concretos dentro del certificado se puede utilizar para representar la identidad y/o funciones reivindicadas. La prueba de posesión de los datos en la credencial se establece mediante el uso de la clave privada asociada para generar una firma.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]programar la seguridad de transferencia y especificar las credenciales, vea [enlaces y seguridad](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) y [comportamientos de seguridad](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ Para obtener más información sobre la programación de seguridad de la transferencia y especificar las credenciales, vea [enlaces y seguridad](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) y [comportamientos de seguridad](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
 ### <a name="transport-client-credential-types"></a>Tipos de credenciales de cliente de transporte  
  La siguiente tabla muestra los posibles valores utilizados al crear una aplicación que utiliza la seguridad de transferencia. Puede utilizar estos valores en código o ajustes de enlaces.  

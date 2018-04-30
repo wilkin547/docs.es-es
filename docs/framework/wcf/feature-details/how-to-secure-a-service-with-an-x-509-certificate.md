@@ -19,16 +19,16 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 89ad47ad898184b99f32743855091c0985722f77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Cómo: Proteger un servicio con un certificado X.509
 La protección de un servicio mediante un certificado X.509 es una técnica básica que la mayoría de los enlaces de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizan. En este tema se describen los pasos necesarios para configurar un servicio autoalojado con un certificado X.509.  
   
- Un requisito previo es un certificado válido que se puede utilizar para autenticar el servidor. Una entidad emisora de certificados de confianza debe emitir el certificado. Si el certificado no es válido, cualquier cliente que intente usar el servicio no confiará en el servicio y, por tanto, no se realizará ninguna conexión. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Un requisito previo es un certificado válido que se puede utilizar para autenticar el servidor. Una entidad emisora de certificados de confianza debe emitir el certificado. Si el certificado no es válido, cualquier cliente que intente usar el servicio no confiará en el servicio y, por tanto, no se realizará ninguna conexión. Para obtener más información sobre el uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>Configuración de un servicio con un certificado mediante código  
   

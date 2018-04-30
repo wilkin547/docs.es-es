@@ -1,33 +1,33 @@
 ---
-title: "Hospedaje en Servicio de activación de procesos de Windows"
-ms.custom: 
+title: Hospedaje en Servicio de activación de procesos de Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 40122670c84f87590a31b79f39695e9626ea9883
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a31d66cd4b4430ec838b34fcd77d712698f9e1dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hospedaje en Servicio de activación de procesos de Windows
 El Servicio de Activación de Proceso de Windows (WAS) administra la activación y duración de los procesos de trabajo que contienen las aplicaciones que hospedan los servicios [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. El modelo de procesamiento WAS generaliza el modelo de procesamiento [!INCLUDE[iis601](../../../../includes/iis601-md.md)] para el servidor HTTP quitando la dependencia en HTTP. Esto permite a los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizar protocolos HTTP y que no sean HTTP, como Net.TCP, un entorno de hospedaje que admita la activación basada en mensaje y ofrece la capacidad de hospedar un gran número de aplicaciones en un equipo determinado.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]creación de un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio que se ejecuta en el servicio WAS hospedaje de entorno, vea [Cómo: hospedar un servicio WCF en WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Para obtener más información acerca de cómo crear un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio que se ejecuta en el servicio WAS hospedaje de entorno, vea [Cómo: hospedar un servicio WCF en WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
  El modelo de procesamiento WAS proporciona varias características que permiten hospedar aplicaciones de una manera más robusta, administrable y que utiliza eficazmente los recursos:  
   
@@ -39,7 +39,7 @@ El Servicio de Activación de Proceso de Windows (WAS) administra la activación
   
 -   Permite a las aplicaciones beneficiarse del modelo de procesamiento de IIS sin necesitar la superficie de implementación de una instalación de IIS completa.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Características WAS, consulte [IIS 7.0 Beta: administración de Web de IIS 7.0](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+ Para obtener más información acerca de las características WAS, consulte [IIS 7.0 Beta: administración de Web de IIS 7.0](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
  [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496) funciona con [!INCLUDE[iisver](../../../../includes/iisver-md.md)] y servicio de activación de procesos de Windows (WAS) para proporcionar un entorno de servicios NET4 WCF y WF de hospedaje de aplicaciones enriquecido. Estas ventajas incluyen la administración del ciclo de vida de los procesos, el reciclaje de procesos, el hospedaje compartido, la protección rápida ante los errores, los procesos huérfanos, la activación a petición y la supervisión del estado de mantenimiento. Para obtener información detallada, vea [características de hospedaje de AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494) y [conceptos de hospedaje de AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495).  
   
@@ -56,7 +56,7 @@ El Servicio de Activación de Proceso de Windows (WAS) administra la activación
 |HTTP y que no sea HTTP|http: *: 80:\*<br /><br /> NET.TCP: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
 |Solo no HTTP|net.pipe: *|/appThree|net.pipe://appThree/|  
   
- Los servicios y recursos dentro de una aplicación también se pueden direccionar. Dentro de una aplicación, los recursos de la aplicación se direccionan en relación a la ruta de acceso base de la aplicación. Por ejemplo, suponga que un sitio con un nombre de equipo contoso.com tiene enlaces del sitio para los protocolos HTTP y Net.TCP. Suponga también que el sitio contiene una aplicación ubicada en /Billing (facturación), que expone un servicio en GetOrders.svc. A continuación, si el servicio GetOrders.svc expuso un extremo con una dirección relativa de SecureEndpoint, el extremo de servicio se expondría en los dos URI siguientes:  
+ Los servicios y recursos dentro de una aplicación también se pueden direccionar. Dentro de una aplicación, los recursos de la aplicación se direccionan en relación a la ruta de acceso base de la aplicación. Por ejemplo, suponga que un sitio con un nombre de equipo contoso.com tiene enlaces del sitio para los protocolos HTTP y Net.TCP. Suponga también que el sitio contiene una aplicación ubicada en /Billing (facturación), que expone un servicio en GetOrders.svc. A continuación, si el servicio GetOrders.svc expuso un punto de conexión con una dirección relativa de SecureEndpoint, el punto de conexión de servicio se expondría en los dos URI siguientes:  
   
  http://contoso.com/Billing/GetOrders.svc/SecureEndpoint  
 net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint  

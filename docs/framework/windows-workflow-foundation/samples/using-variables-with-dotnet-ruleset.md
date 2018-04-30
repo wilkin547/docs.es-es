@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 216136ba084505947b5ab3c985284d704cb5872f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 460f6db9334c2ede7d968e10f9e594c49e806bea
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-variables-with-a-net-framework-35-ruleset"></a>Usar variables con un conjunto de reglas de .NET Framework 3.5
 En este ejemplo se muestra cómo crear un flujo de trabajo que utiliza la actividad <xref:System.Activities.Statements.Interop> para integrar una actividad personalizada escrita en [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] que utiliza directiva y reglas. El flujo de trabajo pasa datos a la actividad personalizada enlazando las variables a las propiedades de dependencia expuestas por la actividad personalizada.  
@@ -39,7 +39,7 @@ En este ejemplo se muestra cómo crear un flujo de trabajo que utiliza la activi
   
 4.  Haga clic con el `DiscountPolicy` y seleccione la **ver código** opción para examinar el código C# lateral de la actividad.  
   
-     Observe el valor de propiedad de dependencia para `DiscountLevel`. Esto equivale a los argumentos en [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] argumentos, vea [Variables y argumentos](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
+     Observe el valor de propiedad de dependencia para `DiscountLevel`. Esto equivale a los argumentos en [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. Para obtener más información acerca de los argumentos, vea [Variables y argumentos](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
   
 ## <a name="interopwith35ruleset"></a>InteropWith35RuleSet  
  Es un proyecto de flujo de trabajo secuencial que utiliza la actividad <xref:System.Activities.Statements.Interop> para integrar con el conjunto de reglas personalizado creado en el proyecto `TravelRuleLibrary`. Las variables se crean en la actividad <xref:System.Activities.Statements.Sequence> de nivel superior. La actividad <xref:System.Activities.Statements.Interop> se utiliza para la integración con la actividad `TravelRuleSet`. Las variables que se declaran en <xref:System.Activities.Statements.Sequence> se utilizan para enlazar con las propiedades de dependencia.  

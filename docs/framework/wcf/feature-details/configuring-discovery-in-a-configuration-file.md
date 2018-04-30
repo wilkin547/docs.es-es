@@ -1,24 +1,26 @@
 ---
-title: "Configurar la detección en un archivo de configuración"
-ms.custom: 
+title: Configurar la detección en un archivo de configuración
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43344fc5411236fbb7420fd4d58526b3e0351d4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4ba224bbf27e5a61168040c944bb940c3e6b0d8c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Configurar la detección en un archivo de configuración
 Hay cuatro grupos principales de configuración usados en la detección. Este tema describirá brevemente cada uno de ellos y mostrará ejemplos de cómo configurarlos. Tras cada sección, se ofrece un vínculo a documentación más detallada sobre cada área.  
@@ -148,7 +150,7 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
 </behavior>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> y <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> vea [información general sobre la detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
+ Para obtener más información acerca de <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> y <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> vea [información general sobre la detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
   
 ## <a name="binding-element-configuration"></a>Configuración del elemento de enlace  
  La configuración del elemento de enlace es más interesante para el cliente. Puede usar la configuración para especificar los criterios de búsqueda usados para detectar servicios de una aplicación cliente de WCF.  El siguiente ejemplo crea un enlace personalizado con el canal <xref:System.ServiceModel.Discovery.DiscoveryClient> y especifica criterios de búsqueda que incluyen un tipo y un ámbito. Además, especifica valores para las propiedades <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> y <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>.  
@@ -188,7 +190,7 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
     </client>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]buscar criterios vea [buscar de detección y FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Ver elementos de enlace y la detección, [información general sobre la detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ Para obtener más información acerca de los criterios de búsqueda, vea [buscar de detección y FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Para obtener más información sobre la detección y vea los elementos de enlace, [información general sobre la detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
   
 ## <a name="standard-endpoint-configuration"></a>Configuración de punto de conexión estándar  
  Los extremos estándar son extremos predefinidos que tienen valores predeterminados para una o varias propiedades (dirección, enlace o contrato) o uno o varios valores de propiedad que no se pueden modificar. .NET 4 se distribuye con 3 extremos estándar relacionados con la detección: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> y <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> es un extremo estándar pre-configurado para las operaciones de detección en un enlace de multidifusión de UDP. La clase <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> es un extremo estándar pre-configurado para enviar mensajes de anuncio en un enlace de UDP. <xref:System.ServiceModel.Discovery.DynamicEndpoint> es un extremo estándar que usa la detección para buscar la dirección de extremo de un servicio detectado dinámicamente durante el tiempo de ejecución.  Los enlaces estándar se especifican con un elemento <`endpoint`> que contiene un atributo de clase que especifica el tipo de extremo estándar que se va a agregar. En el siguiente ejemplo, se muestra cómo agregar <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> y <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
@@ -280,4 +282,4 @@ Hay cuatro grupos principales de configuración usados en la detección. Este te
 </system.ServiceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]puntos de conexión estándar vea [puntos de conexión estándar](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+ Para obtener más información acerca de los puntos de conexión estándares vea [puntos de conexión estándar](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)

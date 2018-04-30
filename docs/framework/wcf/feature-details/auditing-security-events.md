@@ -18,18 +18,18 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="auditing-security-events"></a>Auditoría de eventos de seguridad
 Las aplicaciones creadas con [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pueden registrar eventos de seguridad (éxito, error o ambos) con la característica de auditoría. Los eventos se escriben al registro de eventos del sistema de Windows y se pueden examinar utilizando el Visor de eventos.  
   
  La auditoría proporciona un método para que un administrador detecte un ataque que ya se ha producido o que está en curso. Además, auditar puede ayudar un desarrollador a depurar problemas relacionados con la seguridad. Por ejemplo, si un error en la configuración de la autorización o al comprobar la directiva niega accidentalmente el acceso a un usuario autorizado, un programador puede detectar y aislar rápidamente la causa de este error examinando el registro de eventos.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seguridad, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Para obtener más información acerca de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seguridad, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md). Para obtener más información acerca de la programación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consulte [programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Nivel de auditoría y comportamiento  
  Existen dos niveles de auditorías de seguridad:  

@@ -1,13 +1,13 @@
 ---
 title: Acceso a los servicios mediante un cliente WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f33d64e9ec1881b1ef7b93ba29d233f2f580c29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 69352ba5c12267f5075ae38c5bdcc0665b3fe050
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Acceso a los servicios mediante un cliente WCF
 Después de crear un servicio, el paso siguiente es crear un cliente proxy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Una aplicación de cliente usa el cliente proxy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para comunicarse con el servicio. Las aplicaciones de cliente suelen importar los metadatos de un servicio para generar el código de cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que se puede usar para invocar el servicio.  
@@ -61,7 +61,7 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>  
 ```  
   
- Si se proporciona solo uno nombre de archivo, ése será el nombre del archivo de salida. Si se proporcionan dos nombres de archivo, entonces el primer archivo es un archivo de configuración de entrada cuyo contenido está combinado con la configuración generada y que se escribe en el segundo archivo. [!INCLUDE[crabout](../../../includes/crabout-md.md)]configuración, consulte [configurar enlaces para servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
+ Si se proporciona solo uno nombre de archivo, ése será el nombre del archivo de salida. Si se proporcionan dos nombres de archivo, entonces el primer archivo es un archivo de configuración de entrada cuyo contenido está combinado con la configuración generada y que se escribe en el segundo archivo. Para obtener más información acerca de la configuración, consulte [configurar enlaces para servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Las solicitudes de metadatos que no son seguras plantean ciertos riesgos, al igual que cualquier solicitud de una red no segura: si no está seguro de que el punto de conexión con el que se está comunicando es el que dice ser, es posible que la información que recupere sean metadatos de un servicio malintencionado.  
@@ -194,7 +194,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
   
 -   <xref:System.ServiceModel.CommunicationObjectAbortedException>: se anuló la conexión de socket. La causa puede ser un error en el procesamiento del mensaje, que se superó el tiempo de espera de recepción en el host remoto, o bien un problema de recursos de red subyacente.  
   
- Cuando se producen estos tipos de excepciones, la mejor manera de resolver el problema es activar el seguimiento en el lado del servicio y determinar qué excepción se produjo allí. [!INCLUDE[crabout](../../../includes/crabout-md.md)]seguimiento, consulte [seguimiento](../../../docs/framework/wcf/diagnostics/tracing/index.md) y [utilizando el seguimiento para solucionar problemas de la aplicación](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
+ Cuando se producen estos tipos de excepciones, la mejor manera de resolver el problema es activar el seguimiento en el lado del servicio y determinar qué excepción se produjo allí. Para obtener más información acerca del seguimiento, vea [seguimiento](../../../docs/framework/wcf/diagnostics/tracing/index.md) y [utilizando el seguimiento para solucionar problemas de la aplicación](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Cómo crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  

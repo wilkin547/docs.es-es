@@ -19,14 +19,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5a2ca8d6ce6cf907538c534f97300e418f5e825f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 14059ebc3efe57a38a093faed9cfbd254c372920
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Cómo: Exponer una fuente como Atom y RSS
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le permite crear un servicio que exponga una fuente de distribución. En este tema se explica cómo crear un servicio de distribución que exponga una fuente de distribución mediante Atom 1.0 y RSS 2.0. Este servicio expone un extremo que puede devolver cualquiera de los dos formatos de distribución. Para simplificar, el servicio usado en este ejemplo tiene host propio. En un entorno de producción un servicio de este tipo estaría hospedado en IIS o WAS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] los diferentes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] opciones de hospedaje, vea [hospedaje](../../../../docs/framework/wcf/feature-details/hosting.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le permite crear un servicio que exponga una fuente de distribución. En este tema se explica cómo crear un servicio de distribución que exponga una fuente de distribución mediante Atom 1.0 y RSS 2.0. Este servicio expone un extremo que puede devolver cualquiera de los dos formatos de distribución. Para simplificar, el servicio usado en este ejemplo tiene host propio. En un entorno de producción un servicio de este tipo estaría hospedado en IIS o WAS. Para obtener más información sobre los diferentes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] opciones de hospedaje, vea [hospedaje](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Creación de un servicio de distribución básico  
   

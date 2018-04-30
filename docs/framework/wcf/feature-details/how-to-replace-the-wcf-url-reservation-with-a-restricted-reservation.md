@@ -1,27 +1,29 @@
 ---
-title: "Cómo: Reemplazar la reserva de direcciones URL de WCF por una reserva restringida"
-ms.custom: 
+title: 'Cómo: Reemplazar la reserva de direcciones URL de WCF por una reserva restringida'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e4cfae36dfcb65dfd93dfc4fb1d6b64ba01e1b11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b1f17a5c21888a9fc778d9649f62478d43ba0e86
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Cómo: Reemplazar la reserva de direcciones URL de WCF por una reserva restringida
-Una reserva de direcciones URL le permite restringir quién puede recibir mensajes desde una URL o un conjunto de ellas. Una reserva consta de una plantilla de dirección URL, una lista de control de acceso (ACL) y un conjunto de marcas. La plantilla de dirección URL define a qué direcciones URL afecta la reserva. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cómo se procesan las plantillas de dirección URL, vea [las solicitudes entrantes de enrutamiento](http://go.microsoft.com/fwlink/?LinkId=136764). La ACL determina qué usuario o grupo de usuarios pueden recibir mensajes desde las direcciones URL especificadas. Las marcas indican si la reserva proporciona permiso a un usuario o a un grupo de ellos para realizar escuchas directamente en la dirección URL o delega el permiso de escucha en otro proceso.  
+Una reserva de direcciones URL le permite restringir quién puede recibir mensajes desde una URL o un conjunto de ellas. Una reserva consta de una plantilla de dirección URL, una lista de control de acceso (ACL) y un conjunto de marcas. La plantilla de dirección URL define a qué direcciones URL afecta la reserva. Para obtener más información sobre cómo se procesan las plantillas de dirección URL, vea [las solicitudes entrantes de enrutamiento](http://go.microsoft.com/fwlink/?LinkId=136764). La ACL determina qué usuario o grupo de usuarios pueden recibir mensajes desde las direcciones URL especificadas. Las marcas indican si la reserva proporciona permiso a un usuario o a un grupo de ellos para realizar escuchas directamente en la dirección URL o delega el permiso de escucha en otro proceso.  
   
  Como parte de la configuración predeterminada del sistema operativo, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] crea una reserva accesible globalmente para el puerto 80 que permite a todos los usuarios ejecutar aplicaciones que usan un enlace HTTP doble para la comunicación dúplex. Dado que la ACL en esta reserva es para todos los usuarios, los administradores no pueden conceder o denegar explícitamente el permiso para realizar escuchas en una dirección URL o en un conjunto de ellas. En este tema se explica cómo eliminar esta reserva y cómo volver a crearla con una ACL restringida.  
   
@@ -35,13 +37,13 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
             SDDL: D:(A;;GX;;;WD)  
 ```  
   
- La reserva consta de una plantilla de dirección URL usada cuando una aplicación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] emplea un enlace HTTP doble para la comunicación dúplex. Las direcciones URL con este formato permiten que un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] devuelva mensajes al cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] al comunicarse sobre un enlace HTTP doble. Todos los usuarios tienen permiso para realizar escuchas en la dirección URL, pero no para delegar la escucha en otro proceso. Por último, la ACL se describe en el lenguaje de definición de descriptor de seguridad (SSDL). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SSDL, vea [SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)  
+ La reserva consta de una plantilla de dirección URL usada cuando una aplicación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] emplea un enlace HTTP doble para la comunicación dúplex. Las direcciones URL con este formato permiten que un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] devuelva mensajes al cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] al comunicarse sobre un enlace HTTP doble. Todos los usuarios tienen permiso para realizar escuchas en la dirección URL, pero no para delegar la escucha en otro proceso. Por último, la ACL se describe en el lenguaje de definición de descriptor de seguridad (SSDL). Para obtener más información acerca de SSDL, vea [SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)  
   
 ### <a name="to-delete-the-wcf-url-reservation"></a>Para eliminar la reserva de direcciones URL de WCF  
   
 1.  Haga clic en **iniciar**, seleccione **todos los programas**, haga clic en **Accesorios**, haga clic en **símbolo** y haga clic en **ejecutar como Administrador de** en el menú contextual que aparece. Haga clic en **continuar** en la ventana de Control de cuentas de usuario (UAC) que podría solicitar permiso para continuar.  
   
-2.  Escriba en **netsh http eliminar dirección url de urlacl = http: / / +:80/Temporary_Listen_Addresses/** en la ventana de símbolo del sistema.  
+2.  Escriba en **netsh http eliminar dirección url de urlacl =http://+:80/Temporary_Listen_Addresses/**  en la ventana de símbolo del sistema.  
   
 3.  Si la reserva se elimina correctamente, se muestra el mensaje siguiente: **Reserva de direcciones URL que se eliminó correctamente**  
   
@@ -66,6 +68,6 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1.  Haga clic en **iniciar**, seleccione **todos los programas**, haga clic en **Accesorios**, haga clic en **símbolo** y haga clic en **ejecutar como Administrador de** en el menú contextual que aparece. Haga clic en **continuar** en la ventana de Control de cuentas de usuario (UAC) que podría solicitar permiso para continuar.  
   
-2.  Escriba en **netsh http agregar dirección url urlacl = http: / / +: 80/Temporary_Listen_Addresses/usuario = "\<nombre de equipo >\\< nombre del grupo de seguridad\>**  en el símbolo del sistema. Reemplazar  **\<nombre de equipo >** con el nombre del equipo en el que debe crearse el grupo y  **\<el nombre del grupo de seguridad >** con el nombre del grupo de seguridad que creó anteriormente.  
+2.  Escriba en **netsh http agregar dirección url de urlacl =http://+:80/Temporary_Listen_Addresses/ usuario = "\<nombre de equipo >\\< nombre del grupo de seguridad\>**  en el símbolo del sistema. Reemplazar  **\<nombre de equipo >** con el nombre del equipo en el que debe crearse el grupo y  **\<el nombre del grupo de seguridad >** con el nombre del grupo de seguridad que creó anteriormente.  
   
 3.  Si la reserva se crea correctamente, se muestra el mensaje siguiente: **Reserva de direcciones URL se agregó correctamente**.

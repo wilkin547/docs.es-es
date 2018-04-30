@@ -2,7 +2,8 @@
 title: 'Modelo de objetos de entrada manuscrita: COM y formularios Windows Forms frente a WPF'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +16,21 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38c7692d433fb91584718984ef2ad81e563517db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06a2c2049ec7fe7046bd6dae2711fe8e46592fcf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Modelo de objetos de entrada manuscrita: COM y formularios Windows Forms frente a WPF
 
-Hay esencialmente tres plataformas que admiten la entrada de lápiz digital: la plataforma de Tablet PC Windows Forms, la plataforma de Tablet PC COM y la [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] plataforma.  La cuota de plataformas de Windows Forms y COM un modelo de objetos similares, pero el objeto de modelo para el [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plataforma es sustancialmente diferente.  Este tema describe las diferencias de alto nivel para que los desarrolladores que han trabajado con un modelo de objetos pueden comprender mejor el otro.  
+Hay esencialmente tres plataformas que admiten la entrada de lápiz digital: la plataforma de Tablet PC Windows Forms, la plataforma de Tablet PC COM y la plataforma de Windows Presentation Foundation (WPF).  La cuota de plataformas de Windows Forms y COM un modelo de objetos similares, pero el objeto de modelo para el [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plataforma es sustancialmente diferente.  Este tema describe las diferencias de alto nivel para que los desarrolladores que han trabajado con un modelo de objetos pueden comprender mejor el otro.  
   
 ## <a name="enabling-ink-in-an-application"></a>Habilitación de tinta en una aplicación  
  Las tres plataformas distribuyen objetos y controles que permiten que una aplicación recibir la entrada de un lápiz de tablet PC.  Las plataformas COM y formularios Windows Forms que se suministran con [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx), [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx), [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) y [ Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) clases.  [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx) y [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx) son controles que se pueden agregar a una aplicación para recopilar entradas de lápiz.  El [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) y [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) se pueden adjuntar a una ventana existente a windows tinta-enable y controles personalizados.  
@@ -49,7 +51,7 @@ Hay esencialmente tres plataformas que admiten la entrada de lápiz digital: la 
   
  El siguiente par de ilustraciones compara los modelos de objetos de datos de tinta.  En los formularios Windows Forms y las plataformas de COM, la [Microsoft.Ink.Ink](https://msdn.microsoft.com/library/aa515768.aspx?displayProperty=nameWithType) objeto limita la duración de la [Microsoft.Ink.Stroke](https://msdn.microsoft.com/library/ms827842.aspx?displayProperty=nameWithType) objetos y los paquetes del lápiz óptico pertenecen a los trazos individuales.  Dos o más trazos pueden hacer referencia a la misma [Microsoft.Ink.DrawingAttributes](https://msdn.microsoft.com/library/ms837931.aspx?displayProperty=nameWithType) de objeto, como se muestra en la siguiente ilustración.  
   
- ![Diagrama del modelo de objetos de entrada manuscrita para COM &#47; Formularios Windows Forms. ] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
+ ![Diagrama del modelo de objetos de entrada manuscrita para COM&#47;Winforms. ] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
   
  En el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], cada <xref:System.Windows.Ink.Stroke?displayProperty=nameWithType> es un objeto de common language runtime que existe mientras algo tiene una referencia a él.  Cada <xref:System.Windows.Ink.Stroke> referencias un <xref:System.Windows.Input.StylusPointCollection> y <xref:System.Windows.Ink.DrawingAttributes?displayProperty=nameWithType> objeto, que también son objetos de common language runtime.  
   
@@ -64,7 +66,7 @@ Hay esencialmente tres plataformas que admiten la entrada de lápiz digital: la 
 |Prueba de posicionamiento|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft.Ink.Ink.HitTest](https://msdn.microsoft.com/library/aa515934.aspx)|  
 |Copiar entrada manuscrita|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft.Ink.Ink.ClipboardCopy](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardcopy(v=vs.100).aspx)|  
 |Pegue la tinta|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft.Ink.Ink.ClipboardPaste](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardpaste(v=vs.100).aspx)|  
-|Propiedades personalizadas de acceso en una colección de trazos|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>(las propiedades se almacenan internamente y acceder a través del <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, y <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Use [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
+|Propiedades personalizadas de acceso en una colección de trazos|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A> (las propiedades se almacenan internamente y acceder a través del <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, y <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Use [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
   
 ### <a name="sharing-ink-between-platforms"></a>Uso compartido de tinta entre plataformas  
  Aunque las plataformas tienen modelos de objetos diferentes para los datos de tinta, es muy fácil compartir los datos entre las plataformas. Los ejemplos siguientes guardar tinta de una aplicación de formularios Windows Forms y cargan la tinta en una aplicación de Windows Presentation Foundation.  

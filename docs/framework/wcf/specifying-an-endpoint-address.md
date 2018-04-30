@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 99fdfad6c06e74a92d7fffb7c7a5e14284757e12
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Especificación de una dirección de punto de conexión
 Toda comunicación con un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] se produce a través de sus extremos. Cada <xref:System.ServiceModel.Description.ServiceEndpoint> contiene un <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, un <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>y un <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. El contrato especifica qué operaciones están disponibles. El enlace especifica cómo comunicarse con el servicio y la dirección especifica dónde encontrar el servicio. Cada punto de conexión debe tener una dirección única. La clase <xref:System.ServiceModel.EndpointAddress> representa la dirección de extremo, que contiene un Identificador uniforme de recursos (URI) que representa la dirección del servicio, una <xref:System.ServiceModel.EndpointAddress.Identity%2A>, que representa la identidad de seguridad del servicio, y una colección de <xref:System.ServiceModel.EndpointAddress.Headers%2A>opcional. Los encabezados opcionales proporcionan información más detallada de direccionamiento para identificar o interactuar con el punto de conexión. Por ejemplo, los encabezados pueden indicar cómo procesar un mensaje entrante, dónde debería enviar el extremo un mensaje de respuesta o qué instancia de un servicio se va a usar para procesar un mensaje entrante de un usuario determinado cuando hay varias instancias disponibles.  
@@ -93,7 +93,7 @@ Toda comunicación con un servicio de [!INCLUDE[indigo1](../../../includes/indig
 ## <a name="using-default-endpoints"></a>Usar puntos de conexión predeterminados  
  Si no se especifica ningún extremo en el código ni en la configuración, el tiempo de ejecución proporciona extremos predeterminados, agregando uno en cada dirección base de cada contrato de servicio implementado por el servicio. La dirección base se puede especificar en el código o en la configuración, y los extremos predeterminados se agregan al llamar al método <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> en el objeto <xref:System.ServiceModel.ServiceHost>.  
   
- Si se proporcionan extremos de forma explícita, es posible agregar extremos predeterminados llamando a <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> en el objeto <xref:System.ServiceModel.ServiceHost> antes de llamar a <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] los puntos de conexión, enlaces y comportamientos predeterminados, consulte [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Si se proporcionan extremos de forma explícita, es posible agregar extremos predeterminados llamando a <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> en el objeto <xref:System.ServiceModel.ServiceHost> antes de llamar a <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Para obtener más información acerca de los puntos de conexión de forma predeterminada, los enlaces y los comportamientos, consulte [configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.EndpointAddress>  

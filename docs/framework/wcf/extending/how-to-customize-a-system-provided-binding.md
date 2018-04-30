@@ -1,34 +1,36 @@
 ---
-title: "Personalización de un enlace proporcionado por el sistema"
-ms.custom: 
+title: Personalización de un enlace proporcionado por el sistema
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9b048b5c57d174ac921793ee8677622b88a0595
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1d70a4c4234047e7410ae4f631e48595a0859f37
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Personalización de un enlace proporcionado por el sistema
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] incluye varios enlaces proporcionados por el sistema que le permiten configurar algunas de las propiedades de los elementos de enlace subyacentes, pero no todas las propiedades. En este tema se muestra cómo establecer las propiedades en los elementos de enlace para crear un enlace personalizado.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cómo crear directamente y configurar elementos de enlace sin usar los enlaces proporcionados por el sistema, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Para obtener más información acerca de cómo crear y configurar elementos de enlace sin usar los enlaces proporcionados por el sistema directamente, vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]crear y ampliar los enlaces personalizados, consulte [extender enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Para obtener más información sobre cómo crear y extender enlaces personalizados, consulte [extender enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
  En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] todos los enlaces se componen de *elementos de enlace*. Cada elemento de enlace deriva de la clase <xref:System.ServiceModel.Channels.BindingElement>. Los enlaces proporcionados por el sistema, como <xref:System.ServiceModel.BasicHttpBinding> crean y configuran sus propios elementos de enlace. En este tema se muestra cómo obtener acceso y cambiar las propiedades de estos elementos de enlace, que no se exponen directamente en el enlace; en concreto, la clase <xref:System.ServiceModel.BasicHttpBinding>.  
   

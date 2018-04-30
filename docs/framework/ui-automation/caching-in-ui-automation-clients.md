@@ -19,11 +19,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2db81007b745a1c3ee8434b400ab92a01aeeb6e2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>Almacenar en caché en los clientes de UI Automation
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
   
  En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], almacenamiento en caché implica la captura previa de datos. Así, es posible acceder a los datos sin necesidad de más comunicación entre procesos. Normalmente, el almacenamiento en caché se utiliza en aplicaciones cliente de Automatización de la interfaz de usuario para recuperar los patrones de control y las propiedades de forma masiva. La información se recupera después desde la caché según sea necesario. La aplicación actualiza periódicamente la caché, normalmente en respuesta a eventos que indican que algo en [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] ha cambiado.  
   
- Las ventajas del almacenamiento en caché se aprecian mejor con controles y controles personalizados de [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] que tengan proveedores de Automatización de la interfaz de usuario de lado servidor. Las ventajas son menores si se accede a proveedores de lado cliente, como los proveedores predeterminados de los controles de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] .  
+ Las ventajas del almacenamiento en caché son aprecian mejor con controles de Windows Presentation Foundation (WPF) y los controles personalizados que tienen proveedores de automatización de la interfaz de usuario del lado servidor. Las ventajas son menores si se accede a proveedores de lado cliente, como los proveedores predeterminados de los controles de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] .  
   
  El almacenamiento en caché se produce cuando la aplicación activa un elemento <xref:System.Windows.Automation.CacheRequest> y después utiliza cualquier método o propiedad que devuelva un elemento <xref:System.Windows.Automation.AutomationElement>; por ejemplo, <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Los métodos de la <xref:System.Windows.Automation.TreeWalker> clase son una excepción; el almacenamiento en caché se realiza solo si un <xref:System.Windows.Automation.CacheRequest> se especifica como un parámetro (por ejemplo, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   

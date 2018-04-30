@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Solución de problemas de la mensajería en cola
 Esta sección contiene preguntas comunes y solución de problemas para utilizar las colas en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -125,7 +125,7 @@ Esta sección contiene preguntas comunes y solución de problemas para utilizar 
   
  **P: ¿** ¿dónde puedo encontrar respuestas a preguntas habituales sobre MSMQ?  
   
- **R:** [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, consulte [Microsoft Message Queue Server](http://go.microsoft.com/fwlink/?LinkId=87810).  
+ **R:** para obtener más información acerca de MSMQ, vea [Microsoft Message Queue Server](http://go.microsoft.com/fwlink/?LinkId=87810).  
   
  **P: ¿** ¿por qué produce mi servicio un `ProtocolException` al leer en una cola que contiene mensajes de sesión en cola y mensajes de datagrama en cola?  
   

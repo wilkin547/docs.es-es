@@ -1,24 +1,26 @@
 ---
-title: "Correlación de intercambio de contexto"
-ms.custom: 
+title: Correlación de intercambio de contexto
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee22feab20e2c96f3e708a277f9048f739213520
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bf84dfce2b2164d78bf07f840d66d6089a16ff23
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="context-exchange-correlation"></a>Correlación de intercambio de contexto
 Correlación de contexto se basa en el mecanismo de intercambio de contexto que se describe en el [especificación del protocolo de intercambio de contexto de .NET](http://go.microsoft.com/fwlink/?LinkId=166059). La correlación del contexto utiliza una cookie o un encabezado de contexto conocidos para relacionar los mensajes con la instancia correcta. Para utilizar la correlación del contexto, debe usarse un enlace basado en contexto como <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> o <xref:System.ServiceModel.NetTcpContextBinding> en el extremo de <xref:System.ServiceModel.Activities.WorkflowServiceHost>. En este tema, se explica cómo utilizar la correlación del contexto con actividades de mensajería en un servicio del flujo de trabajo.  
@@ -54,7 +56,7 @@ SendReply ReplyToStartOrder = new SendReply
 ```  
   
 > [!NOTE]
->  En este ejemplo se usan realmente dos tipos de correlación: la de contexto y la de solicitud-respuesta. La correlación de contexto se usa para que las llamadas de los clientes se enruten a la instancia correcta. La correlación de solicitud-respuesta se usa en las actividades de <xref:System.ServiceModel.Activities.Receive> y de <xref:System.ServiceModel.Activities.SendReply> conjuntamente para implementar la operación bidireccional modelada por estas actividades. En este ejemplo, solo la correlación del contexto se configura explícitamente y el <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> par es mediante la correlación de solicitud y respuesta predeterminada proporcionada por la parte implícita <xref:System.ServiceModel.Activities.CorrelationHandle> administración de <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Cuando se usa el **ReceiveAndSendReply** plantilla de actividad en la correlación de solicitud y respuesta de diseñador de flujo de trabajo se configura explícitamente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]correlación de solicitud-respuesta y administración del identificador de correlación implícita, vea [respuesta-solicitud](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md) y [información general de correlación](../../../../docs/framework/wcf/feature-details/correlation-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]el **ReceiveAndSendReply** plantilla de actividad, vea [ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer).  
+>  En este ejemplo se usan realmente dos tipos de correlación: la de contexto y la de solicitud-respuesta. La correlación de contexto se usa para que las llamadas de los clientes se enruten a la instancia correcta. La correlación de solicitud-respuesta se usa en las actividades de <xref:System.ServiceModel.Activities.Receive> y de <xref:System.ServiceModel.Activities.SendReply> conjuntamente para implementar la operación bidireccional modelada por estas actividades. En este ejemplo, solo la correlación del contexto se configura explícitamente y el <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> par es mediante la correlación de solicitud y respuesta predeterminada proporcionada por la parte implícita <xref:System.ServiceModel.Activities.CorrelationHandle> administración de <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Cuando se usa el **ReceiveAndSendReply** plantilla de actividad en la correlación de solicitud y respuesta de diseñador de flujo de trabajo se configura explícitamente. Para obtener más información sobre la correlación de solicitud-respuesta y administración del identificador de correlación implícita, vea [respuesta-solicitud](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md) y [información general de correlación](../../../../docs/framework/wcf/feature-details/correlation-overview.md). Para obtener más información sobre la **ReceiveAndSendReply** plantilla de actividad, vea [ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer).  
   
  Las actividades de <xref:System.ServiceModel.Activities.Receive> subsiguientes en el servicio del flujo de trabajo pueden hacer referencia a la clase <xref:System.ServiceModel.Activities.CorrelationHandle> inicializada por <xref:System.ServiceModel.Activities.SendReply> en el ejemplo anterior.  
   
@@ -109,6 +111,6 @@ Send request2 = new Send
 };  
 ```  
   
- Tenga en cuenta que, en estos ejemplos, la correlación del contexto se ha configurado explícitamente. Si el flujo de trabajo del cliente no se hospeda también en <xref:System.ServiceModel.Activities.WorkflowServiceHost>, se debe configurar la correlación explícitamente, a menos que las actividades se incluyan en una actividad <xref:System.ServiceModel.Activities.CorrelationScope>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]correlación de contexto, vea la [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) ejemplo.  
+ Tenga en cuenta que, en estos ejemplos, la correlación del contexto se ha configurado explícitamente. Si el flujo de trabajo del cliente no se hospeda también en <xref:System.ServiceModel.Activities.WorkflowServiceHost>, se debe configurar la correlación explícitamente, a menos que las actividades se incluyan en una actividad <xref:System.ServiceModel.Activities.CorrelationScope>. Para obtener más información acerca de la correlación del contexto, vea la [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) ejemplo.  
   
  Si el cliente que está realizando las llamadas al servicio del flujo de trabajo no es un flujo de trabajo, seguirá pudiendo realizar las llamadas repetidas, siempre y cuando pase explícitamente el contexto devuelto de la primera llamada al servicio del flujo de trabajo. Los servidores proxy generados mediante la adición de una referencia del servicio en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] almacenan y pasan este contexto de forma predeterminada.

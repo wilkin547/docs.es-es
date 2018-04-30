@@ -1,12 +1,13 @@
 ---
 title: '&lt;declaredTypes&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - dataContractSerializer element
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - KnownTypes
 - <declaredTypes> element
 ms.assetid: f35184e4-9d9e-4d37-8fb4-d5b58220eb3e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3066ee9247e69c746c28251b975bb80425ccbc8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a1cd7d446b0d86e1f38e38afeee03161278afed7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltdeclaredtypesgt"></a>&lt;declaredTypes&gt;
 Contiene los tipos conocidos que <xref:System.Runtime.Serialization.DataContractSerializer> usa al deserializar.  
@@ -72,7 +74,7 @@ Contiene los tipos conocidos que <xref:System.Runtime.Serialization.DataContract
 |[\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|Contiene los datos de configuración para <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="remarks"></a>Comentarios  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]los tipos conocidos, consulte [tipos conocidos de contrato de datos](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) y <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Para obtener más información sobre los tipos conocidos, consulte [tipos conocidos de contrato de datos](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) y <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código XML muestra tipos declarados y tipos conocidos agregados a un `DataContractSerializer` elemento. El ejemplo muestra tres tipos que se va a agregar. El primero es un tipo personalizado denominado "Orders" que usa un tipo conocido denominado "Item". El segundo el tipo declarado es <xref:System.Collections.Generic.List%601> que usa `Item` como un tipo conocido. Finalmente, el tercer tipo declarado es <xref:System.Collections.Generic.Dictionary%602>. El tipo de clase <xref:System.Collections.Generic.Dictionary%602> es un tipo genérico, con dos parámetros de tipo. El primero representa la clave y el segundo representa el valor. El ejemplo siguiente agrega <xref:System.Collections.Generic.List%601> del segundo tipo (el valor) a la lista de tipos conocidos. Debe usar el atributo `index` para especificar qué parámetro de tipo se va a usar en el tipo conocido. En este caso, el atributo de índice indica el tipo de valor establecido en "1" (la colección está basada en cero).  

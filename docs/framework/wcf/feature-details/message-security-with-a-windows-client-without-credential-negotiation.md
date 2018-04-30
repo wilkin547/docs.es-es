@@ -1,27 +1,29 @@
 ---
-title: "Seguridad de los mensajes con un cliente de Windows sin negociación de credenciales"
-ms.custom: 
+title: Seguridad de los mensajes con un cliente de Windows sin negociación de credenciales
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f069ff100a2fba1f6bace1d9a81ed69314261eae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 056e743ff1849457f8a0e8ee509a56475f09435c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Seguridad de los mensajes con un cliente de Windows sin negociación de credenciales
 El escenario siguiente muestra un cliente y un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protegidos por el protocolo Kerberos.  
@@ -61,7 +63,7 @@ El escenario siguiente muestra un cliente y un servicio [!INCLUDE[indigo1](../..
   
 2.  Utilice una cuenta de dominio arbitraria de Active Directory para ejecutar el servicio. En este caso, es necesario establecer un SPN para esa cuenta de dominio. Una manera de hacerlo es utilizar la herramienta de la utilidad Setspn.exe. Una vez creado el SPN para la cuenta del servicio, configure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para publicar ese SPN a los clientes del servicio a través de sus metadatos (WSDL). Esto se consigue estableciendo la identidad del extremo expuesto, mediante un archivo de configuración de la aplicación o el código. El siguiente ejemplo publica la identidad mediante programación.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SPN, el protocolo Kerberos y Active Directory, vea [complemento técnico de Kerberos para Windows](http://go.microsoft.com/fwlink/?LinkId=88330). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]identidades de punto de conexión, consulte [modos de autenticación de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Para obtener más información acerca de los SPN, el protocolo Kerberos y Active Directory, vea [complemento técnico de Kerberos para Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Para obtener más información acerca de las identidades de punto de conexión, vea [modos de autenticación de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
  [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
  [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]  
@@ -117,9 +119,9 @@ El escenario siguiente muestra un cliente y un servicio [!INCLUDE[indigo1](../..
  El siguiente código configura el cliente. El modo de seguridad se establece en mensaje, y el tipo de credencial de cliente se establece en Windows. Tenga en cuenta que las propiedades <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> y <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> se establecen en `false`.  
   
 > [!NOTE]
->  Para utilizar el tipo de credencial de Windows sin negociación, el cliente debe configurarse con el SPN de la cuenta del servicio, antes de iniciar la comunicación con el servicio. El cliente utiliza el SPN para obtener el token de Kerberos para autenticar y proteger la comunicación con el servicio. El ejemplo siguiente muestra cómo configurar el cliente con el SPN del servicio. Si usas el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar el cliente, el SPN del servicio se automáticamente propagará al cliente de los metadatos del servicio (WSDL), si contienen los metadatos del servicio esa información. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo configurar el servicio para incluir su SPN en los metadatos del servicio, vea la sección “Servicio” más adelante en este tema.  
+>  Para utilizar el tipo de credencial de Windows sin negociación, el cliente debe configurarse con el SPN de la cuenta del servicio, antes de iniciar la comunicación con el servicio. El cliente utiliza el SPN para obtener el token de Kerberos para autenticar y proteger la comunicación con el servicio. El ejemplo siguiente muestra cómo configurar el cliente con el SPN del servicio. Si usas el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar el cliente, el SPN del servicio se automáticamente propagará al cliente de los metadatos del servicio (WSDL), si contienen los metadatos del servicio esa información. Para obtener más información acerca de cómo configurar el servicio para incluir su SPN en los metadatos del servicio, vea la sección "Servicio" más adelante en este tema.  
 >   
->  Para obtener más información sobre los SPN, Kerberos y Active Directory, vea [complemento técnico de Kerberos para Windows](http://go.microsoft.com/fwlink/?LinkId=88330). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]identidades de punto de conexión, consulte [modos de autenticación de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) tema.  
+>  Para obtener más información sobre los SPN, Kerberos y Active Directory, vea [complemento técnico de Kerberos para Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Para obtener más información acerca de las identidades de punto de conexión, vea [modos de autenticación de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) tema.  
   
  [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
  [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]  

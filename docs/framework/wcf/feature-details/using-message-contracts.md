@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-message-contracts"></a>Usar contratos de mensaje
 Normalmente al compilar aplicaciones [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], los programadores prestan mucha atención a los problemas de serialización y estructuras de datos y no se preocupan de la estructura de los mensajes en los que se transportan los datos. Para estas aplicaciones, la creación de contratos de datos para los parámetros o valores devueltos es fácil. (Para obtener más información, consulte [especificación de transferencia de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -44,7 +44,7 @@ Normalmente al compilar aplicaciones [!INCLUDE[indigo1](../../../../includes/ind
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Normalmente, un contrato de datos es suficiente para definir el esquema de los mensajes. Por ejemplo, en el ejemplo anterior, es suficiente para la mayoría de las aplicaciones si `BankingTransaction` y `BankingTransactionResponse` tienen contratos de datos para definir el contenido de los mensajes SOAP subyacentes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] contratos de datos, vea [usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Normalmente, un contrato de datos es suficiente para definir el esquema de los mensajes. Por ejemplo, en el ejemplo anterior, es suficiente para la mayoría de las aplicaciones si `BankingTransaction` y `BankingTransactionResponse` tienen contratos de datos para definir el contenido de los mensajes SOAP subyacentes. Para obtener más información acerca de los contratos de datos, vea [usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Sin embargo, de vez en cuando es necesario controlar de manera precisa cómo la estructura del mensaje SOAP se transmite a través de la conexión. El escenario más común para esto es insertar encabezados SOAP personalizados. Otro escenario común es definir propiedades de seguridad para los encabezados y cuerpo del mensaje, es decir, decidir si estos elementos están firmados y cifrados digitalmente. Finalmente, algunas pilas de terceros de SOAP necesitan que los mensajes estén en un formato concreto. Las operaciones del estilo de mensajería proporcionan este control.  
   

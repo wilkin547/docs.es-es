@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 20ef713c67ee21aa8f7a92975bc6e6ce8798a087
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 53459517591c36430b9326d6605c4eb1b28a13e7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-a-data-contract-resolver"></a>Utilizar una resolución del contrato de datos
-Una resolución del contrato de datos le permite configurar los tipos conocidos dinámicamente. Se necesitan tipos conocidos al serializar o deserializar un tipo no esperado por un contrato de datos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] sobre los tipos conocidos, vea [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Los tipos conocidos se suelen especificar de modo estático. Esto significa que tendría que conocer todos los tipos posibles que puede recibir una operación mientras la implementa. Hay escenarios en los que no esto no se cumple y es importante saber especificar los tipos conocidos de forma dinámica.  
+Una resolución del contrato de datos le permite configurar los tipos conocidos dinámicamente. Se necesitan tipos conocidos al serializar o deserializar un tipo no esperado por un contrato de datos. Para obtener más información sobre los tipos conocidos, consulte [tipos conocidos de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Los tipos conocidos se suelen especificar de modo estático. Esto significa que tendría que conocer todos los tipos posibles que puede recibir una operación mientras la implementa. Hay escenarios en los que no esto no se cumple y es importante saber especificar los tipos conocidos de forma dinámica.  
   
 ## <a name="creating-a-data-contract-resolver"></a>Crear una resolución del contrato de datos  
  La creación de una resolución del contrato de datos supone la implementación de dos métodos, <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> y <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>. Estos dos métodos implementan devoluciones de llamada que se utilizan durante la serialización y la deserialización respectivamente. El método <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> se invoca durante la serialización y toma un tipo de contrato de datos para asignarlo a un espacio de nombres y a un nombre `xsi:type`. El método <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> se invoca durante la deserialización y toma un espacio de nombres y un nombre `xsi:type` y lo resuelve como un tipo de contrato de datos. Ambos métodos tienen un parámetro `knownTypeResolver` que se puede emplear para usar la resolución de tipo conocido predeterminada en la implementación.  

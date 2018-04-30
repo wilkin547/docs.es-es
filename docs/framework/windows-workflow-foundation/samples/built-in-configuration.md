@@ -1,23 +1,24 @@
 ---
-title: "Configuración integrada"
-ms.custom: 
+title: Configuración integrada
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ddf9b316074a69a88f08a0d7f519533f2db0002
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0c414f34da0cd4bbf484c0a439f8832f02a5ae58
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="built-in-configuration"></a>Configuración integrada
 En este ejemplo se muestran el uso y la configuración del almacén de instancias de flujo de trabajo de SQL. El almacén de instancias de flujo de trabajo de SQL es una implementación basada en SQL de un almacén de instancias. Permite a una instancia guardar y cargar su estado en y desde una base de datos SQL Server o SQL Server Express.  
@@ -36,7 +37,7 @@ En este ejemplo se muestran el uso y la configuración del almacén de instancia
   
  Un host de servicio de flujo de trabajo autohospeda el flujo de trabajo de contador. El método `Main` del programa crea una instancia del host de servicio de flujo de trabajo que hospeda el flujo de trabajo de contador. Define los extremos bajo los que se puede alcanzar el flujo de trabajo de contador. Después, define el comportamiento del almacén de instancias de flujo de trabajo de SQL, que se utiliza para configurar el almacén de instancias de flujo de trabajo de SQL. A continuación, el programa crea un cliente que llama al método de inicio del flujo de trabajo de contador.  
   
- Una vez iniciado el programa, el contador inicia la cuenta automáticamente. Tenga en cuenta que la carga y configuración del almacén de instancias de flujo de trabajo de SQL puede tardar unos segundos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]el almacén de instancias de flujo de trabajo, consulte [almacén de instancias de flujo de trabajo de SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
+ Una vez iniciado el programa, el contador inicia la cuenta automáticamente. Tenga en cuenta que la carga y configuración del almacén de instancias de flujo de trabajo de SQL puede tardar unos segundos. Para obtener más información sobre el almacén de instancias de flujo de trabajo, consulte [almacén de instancias de flujo de trabajo de SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
   
  El ejemplo consta de dos partes:  
   

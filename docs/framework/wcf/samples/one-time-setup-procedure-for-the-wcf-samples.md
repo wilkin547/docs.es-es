@@ -1,24 +1,26 @@
 ---
-title: "Procedimiento de instalación única para los ejemplos de Windows Communication Foundation"
-ms.custom: 
+title: Procedimiento de instalación única para los ejemplos de Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: acb89c8c1819024ebdb77720654ab7280333e456
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedimiento de instalación única para los ejemplos de Windows Communication Foundation
 La mayoría de los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se hospedan en Internet Information Services (IIS) y se ejecutan desde un directorio virtual común. Este procedimiento de instalación única crea una carpeta en el disco; También agrega un directorio virtual en IIS denominado **ServiceModelSamples**.  
@@ -26,11 +28,11 @@ La mayoría de los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-m
  El **ServiceModelSamples** directorio virtual se utiliza para compilar y ejecutar todos los ejemplos que usan un servicio hospedado en IIS. Éste es el único directorio virtual que se exige para ejecutar los ejemplos. Al compilar un ejemplo, se reemplazará cualquier servicio implementado anteriormente en este directorio virtual; solo se implementará y estará disponible en este directorio virtual el ejemplo creado más recientemente.  
   
 > [!NOTE]
->  Debe ejecutar todos los comandos con una cuenta de administrador local. Si está utilizando Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] o Windows Server 2008 R2, también debe ejecutar el símbolo del sistema con privilegios elevados. Para ello, haga clic en el icono del símbolo del sistema y, a continuación, haga clic en **ejecutar como administrador**. Todos los comandos de este tema se deben ejecutar en un símbolo del sistema que tenga la configuración de ruta de acceso adecuada.  La manera más fácil de asegurarse de esto es usar el símbolo del sistema de Visual Studio. Para abrir este símbolo del sistema, haga clic en **iniciar**, seleccione **todos los programas**, desplácese hacia abajo hasta **Visual Studio 2010**, seleccione **Visual Studio Tools**, Haga clic en **símbolo del sistema de Visual Studio (2010)**y, a continuación, haga clic en **ejecutar como administrador**. Si tiene una de las ediciones de Visual Studio Express instalada, este símbolo del sistema no está disponible, y tendrá que agregar "C:\Windows\Microsoft.Net\Framework\v4.0" a la ruta de acceso del sistema.  
+>  Debe ejecutar todos los comandos con una cuenta de administrador local. Si está utilizando Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] o Windows Server 2008 R2, también debe ejecutar el símbolo del sistema con privilegios elevados. Para ello, haga clic en el icono del símbolo del sistema y, a continuación, haga clic en **ejecutar como administrador**. Todos los comandos de este tema se deben ejecutar en un símbolo del sistema que tenga la configuración de ruta de acceso adecuada.  La manera más fácil de asegurarse de esto es usar el símbolo del sistema de Visual Studio. Para abrir este símbolo del sistema, haga clic en **iniciar**, seleccione **todos los programas**, desplácese hacia abajo hasta **Visual Studio 2010**, seleccione **Visual Studio Tools**, Haga clic en **símbolo del sistema de Visual Studio (2010)** y, a continuación, haga clic en **ejecutar como administrador**. Si tiene una de las ediciones de Visual Studio Express instalada, este símbolo del sistema no está disponible, y tendrá que agregar "C:\Windows\Microsoft.Net\Framework\v4.0" a la ruta de acceso del sistema.  
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Procedimiento de instalación única para los ejemplos de WCF  
   
-1.  Asegúrese de que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] está instalado. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Cómo configurar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], consulte [instrucciones de hospedaje de Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1.  Asegúrese de que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] está instalado. Para obtener más información acerca de cómo configurar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], consulte [instrucciones de hospedaje de Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
 2.  Asegúrese de que [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] está instalado. Buscar el siguiente directorio v4.0 (o posterior): **\Windows\Microsoft.NET\Framework**  
   
@@ -88,7 +90,7 @@ La mayoría de los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-m
     > [!NOTE]
     >  Por motivos de seguridad, no olvide quitar la definición del directorio virtual y los permisos concedidos en los pasos de instalación anteriores cuando termine con los ejemplos; para ello ejecute el archivo por lotes denominado Cleanupvroot.bat.  
   
-13. Los ejemplos autohospedados (no se hospedan en IIS) requieren permiso para registrar las direcciones HTTP en el equipo a fin de realizar escuchas. El permiso para una reserva de espacio de nombres HTTP procede de la cuenta de usuario utilizada para ejecutar el ejemplo. De forma predeterminada, las cuentas de administrador tienen el permiso para registrar cualquier dirección HTTP. Las cuentas de usuario no administrador deben tener concedido permiso para los espacios de nombres HTTP usados por los ejemplos. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Cómo configurar las reservas de espacio de nombres, consulte [configurar HTTP y HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
+13. Los ejemplos autohospedados (no se hospedan en IIS) requieren permiso para registrar las direcciones HTTP en el equipo a fin de realizar escuchas. El permiso para una reserva de espacio de nombres HTTP procede de la cuenta de usuario utilizada para ejecutar el ejemplo. De forma predeterminada, las cuentas de administrador tienen el permiso para registrar cualquier dirección HTTP. Las cuentas de usuario no administrador deben tener concedido permiso para los espacios de nombres HTTP usados por los ejemplos. Para obtener más información acerca de cómo configurar las reservas de espacio de nombres, vea [configurar HTTP y HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
   
 14. Algunos ejemplos requieren Message Queuing. Vea [instalar Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) para obtener instrucciones de instalación.  
   

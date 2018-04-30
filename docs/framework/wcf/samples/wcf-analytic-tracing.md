@@ -1,45 +1,47 @@
 ---
-title: "Traza analítica de WCF"
-ms.custom: 
+title: Traza analítica de WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57e3ee18848031bce8ffbb54d26353fe36ee1def
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-analytic-tracing"></a>Traza analítica de WCF
 Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en el flujo de seguimientos analíticos que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] escribe en ETW en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Los seguimientos analíticos pretenden facilitar la visibilidad en los servicios sin que el rendimiento se vea penalizado. En este ejemplo se muestra cómo utilizar las API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> para escribir eventos que se integran con los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] las API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>, vea <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
+ Para obtener más información sobre la <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API, consulte <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
  Para más información sobre el seguimiento de eventos de Windows, consulte [Improve Debugging and Performance Tuning with ETW](http://go.microsoft.com/fwlink/?LinkId=166488).  
   
 ## <a name="disposing-eventprovider"></a>Eliminar EventProvider  
- En este ejemplo se usa la clase <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, que implementa el objeto <xref:System.IDisposable?displayProperty=nameWithType>. Al implementar el seguimiento de un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], es probable que pueda utilizar los recursos de <xref:System.Diagnostics.Eventing.EventProvider> mientras dura el servicio. Por esta razón y para conservar la legibilidad, este ejemplo nunca elimina el objeto <xref:System.Diagnostics.Eventing.EventProvider> ajustado. Si por alguna razón su servicio tiene requisitos diferentes para el seguimiento y debe desechar este recurso, debe modificar este ejemplo de acuerdo con los procedimientos recomendados para desechar recursos no administrados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]desechar recursos no administrados, vea [implementa un método Dispose](http://go.microsoft.com/fwlink/?LinkId=166436).  
+ En este ejemplo se usa la clase <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, que implementa el objeto <xref:System.IDisposable?displayProperty=nameWithType>. Al implementar el seguimiento de un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], es probable que pueda utilizar los recursos de <xref:System.Diagnostics.Eventing.EventProvider> mientras dura el servicio. Por esta razón y para conservar la legibilidad, este ejemplo nunca elimina el objeto <xref:System.Diagnostics.Eventing.EventProvider> ajustado. Si por alguna razón su servicio tiene requisitos diferentes para el seguimiento y debe desechar este recurso, debe modificar este ejemplo de acuerdo con los procedimientos recomendados para desechar recursos no administrados. Para obtener más información sobre cómo deshacerse de recursos no administrados, vea [implementa un método Dispose](http://go.microsoft.com/fwlink/?LinkId=166436).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Autohospedaje y Hospedaje web  
- Para los servicios hospedados en Web, los seguimientos analíticos de WCF proporcionan un campo, denominado "HostReference", que se utiliza para identificar el servicio que está emitiendo los seguimientos. Los seguimientos extensibles de usuario pueden participar en este modelo; este ejemplo muestra los procedimientos recomendados para ello. El formato de un host Web hacer referencia cuando la canalización ' &#124;' carácter aparece realmente en el cuadro cadena puede ser cualquiera de las siguientes acciones:  
+ Para los servicios hospedados en Web, los seguimientos analíticos de WCF proporcionan un campo, denominado "HostReference", que se utiliza para identificar el servicio que está emitiendo los seguimientos. Los seguimientos extensibles de usuario pueden participar en este modelo; este ejemplo muestra los procedimientos recomendados para ello. El formato de un host Web hacer referencia cuando la canalización '&#124;' carácter aparece realmente en el cuadro cadena puede ser cualquiera de las siguientes acciones:  
   
 -   Si la aplicación no está en la raíz.  
   
-     \<Nombre del sitio >\<ApplicationVirtualPath > &#124;\< ServiceVirtualPath > &#124; \<ServiceName >  
+     \<Nombre del sitio >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
 -   Si la aplicación está en la raíz.  
   
-     \<Nombre del sitio > &#124; \<ServiceVirtualPath > &#124; \<ServiceName >  
+     \<Nombre del sitio >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
  Para los servicios autohospedados, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]de seguimientos analíticos no rellenan el campo "HostReference". La clase `WCFUserEventProvider` de este ejemplo se comporta de forma coherente cuando se utiliza en un servicio autohospedado.  
   

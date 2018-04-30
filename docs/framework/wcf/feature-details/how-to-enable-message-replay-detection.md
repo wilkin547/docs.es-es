@@ -24,16 +24,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55cd4b928c640f506e058f6a441189842bc9b8a3
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cada24098f5800f56d7dd50119c3fe3394ba14cd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Cómo: Habilitar la detección de repetición de mensajes
 Un ataque de reproducción se produce cuando un atacante copia una secuencia de mensajes entre dos partes y reproduce la secuencia a una o más partes. A menos que se mitigue, los equipos sujetos al ataque procesarán el flujo como mensajes legítimos, generando un intervalo de consecuencias erróneas, como las órdenes redundantes de un elemento.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] detección de reproducción de mensajes, vea [detección de reproducción de mensajes](http://go.microsoft.com/fwlink/?LinkId=88536).  
+ Para obtener más información acerca de la detección de reproducción de mensajes, vea [detección de reproducción de mensajes](http://go.microsoft.com/fwlink/?LinkId=88536).  
   
  El procedimiento siguiente muestra varias propiedades que puede usar para controlar la detección de reproducción mediante [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   

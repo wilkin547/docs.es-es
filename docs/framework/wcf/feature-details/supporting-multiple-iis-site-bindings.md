@@ -1,27 +1,29 @@
 ---
-title: "Soportar múltiples enlaces de sitios de IIS"
-ms.custom: 
+title: Soportar múltiples enlaces de sitios de IIS
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8dcd6a5e6204b1a629c1ee1e2ddfb9b263fa8054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a4b586b4d5c3c37355bf7b05a8a0227565a5b5e5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Soportar múltiples enlaces de sitios de IIS
-Al hospedar un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] en Internet Information Services (IIS) 7.0, puede que desee proporcionar varias direcciones base que usen el mismo protocolo en el mismo sitio. Esto permite que el mismo servicio responda a varios URI diferentes. Esto es útil si desea hospedar un servicio que realiza escuchas en http://www.contoso.com y http://contoso.com. También es útil crear un servicio que tenga una dirección base para los usuarios internos y una dirección base independiente para los usuarios externos. Por ejemplo: http://internal.contoso.com y http://www.contoso.com.  
+Al hospedar un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] en Internet Information Services (IIS) 7.0, puede que desee proporcionar varias direcciones base que usen el mismo protocolo en el mismo sitio. Esto permite que el mismo servicio responda a varios URI diferentes. Esto es útil cuando desea hospedar un servicio que escucha en http://www.contoso.com y http://contoso.com. También es útil crear un servicio que tenga una dirección base para los usuarios internos y una dirección base independiente para los usuarios externos. Por ejemplo: http://internal.contoso.com y http://www.contoso.com.  
   
 > [!NOTE]
 >  Esta funcionalidad solo está disponible mediante el protocolo HTTP.  
@@ -33,7 +35,7 @@ Al hospedar un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md
 <serviceHostingEnvironment multipleSiteBindingsEnabled="true"/>  
 ```  
   
- Al hospedar un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en IIS, IIS crea una dirección base para usted según el URI para el directorio virtual que contiene la aplicación. Puede agregar direcciones base adicionales que usen el mismo protocolo mediante el Administrador de Internet Information Services para agregar uno o más enlaces al sitio web. Para cada enlace especifique un protocolo (HTTP o HTTPS), una dirección IP, un puerto y un nombre de host. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]con el Administrador de Internet Information Services, consulte [el Administrador de IIS (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=164057). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Agregar enlaces a un sitio, consulte [crear un sitio Web (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=164060)  
+ Al hospedar un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en IIS, IIS crea una dirección base para usted según el URI para el directorio virtual que contiene la aplicación. Puede agregar direcciones base adicionales que usen el mismo protocolo mediante el Administrador de Internet Information Services para agregar uno o más enlaces al sitio web. Para cada enlace especifique un protocolo (HTTP o HTTPS), una dirección IP, un puerto y un nombre de host. Para obtener más información acerca de cómo utilizar el Administrador de Internet Information Services, vea [el Administrador de IIS (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=164057). Para obtener más información acerca de cómo agregar enlaces a un sitio, consulte [crear un sitio Web (IIS 7)](http://go.microsoft.com/fwlink/?LinkId=164060)  
   
  La especificación de múltiples direcciones base para el mismo sitio afecta al contenido de la página de Ayuda de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], al esquema y a la información de WSDL/MEX generada por el servicio. La página de Ayuda de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] muestra la línea de comandos que se debe usar para generar un cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que pueda comunicarse con el servicio. Esta línea de comandos contiene solo la primera dirección especificada en el enlace de IIS del sitio web. De igual forma, al importar el esquema, se usa solo la primera dirección base especificada en el enlace de IIS. Los datos de WSDL y MEX contienen todas las direcciones base especificadas en los enlaces de IIS.  
   

@@ -1,28 +1,30 @@
 ---
-title: "Configuración de enlaces proporcionados por el sistema"
-ms.custom: 
+title: Configuración de enlaces proporcionados por el sistema
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], system-provided bindings
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e77cf5cc271e86c02e8355dde6f721fe7751416
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bbf04f549c492ddc392b429edf3a703f3c307a0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-system-provided-bindings"></a>Configuración de enlaces proporcionados por el sistema
 Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al hablar con un punto de conexión e indican cómo conectarse a un punto de conexión. Los enlaces están compuestos de elementos que definen cómo se disponen en capa los canales de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para proporcionar las características de comunicación necesarias. Un enlace contiene tres tipos de elementos:  
@@ -33,7 +35,7 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
   
 -   Elementos de enlace de codificación de mensajes, que determinan la codificación de la conexión que se ha de utilizar para los mensajes que se envían al punto de conexión, como, por ejemplo, texto/XML, binaria o Mecanismo de optimización de transmisión de mensajes (MTOM).  
   
- En este tema se presentan todos los enlaces de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporcionados por el sistema. Si ninguno de ellos cumple los requisitos exactos de su aplicación, puede crear un enlace mediante la clase <xref:System.ServiceModel.Channels.CustomBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cómo crear enlaces personalizados, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ En este tema se presentan todos los enlaces de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporcionados por el sistema. Si ninguno de ellos cumple los requisitos exactos de su aplicación, puede crear un enlace mediante la clase <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información acerca de cómo crear enlaces personalizados, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 > [!IMPORTANT]
 >  Seleccione un enlace que tenga habilitada la seguridad. De forma predeterminada, todos los enlaces, salvo <xref:System.ServiceModel.BasicHttpBinding>, tienen habilitada la seguridad. Si no selecciona un enlace seguro, o si deshabilita la seguridad, asegúrese de que sus intercambios de red se protegen de alguna otra manera, como, por ejemplo, estando en un centro de procesamiento de datos seguro o en una red aislada.  
@@ -47,16 +49,16 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
 |Enlaces|Elemento de configuración |Descripción|  
 |-------------|---------------------------|-----------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Un enlace que es útil para la comunicación con servicios web conformes con WS-Basic Profile, como, por ejemplo, servicios basados en servicios web de ASP.NET (ASMX). Este enlace utiliza HTTP como el transporte, y texto/XML como la codificación de mensajes predeterminada.|  
-|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Un enlace seguro e interoperable, adecuado para contratos de servicio que no son dúplex.|  
-|<xref:System.ServiceModel.WS2007HttpBinding>|[\<ws2007HttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|Un enlace seguro e interoperable que proporciona compatibilidad para las versiones correctas de los elementos de enlace <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession> y <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A>.|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Un enlace seguro e interoperable adecuado para contratos de servicios dúplex o para la comunicación a través de intermediarios de SOAP.|  
+|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Un enlace seguro e interoperable, adecuado para contratos de servicio que no son dúplex.|  
+|<xref:System.ServiceModel.WS2007HttpBinding>|[\<ws2007HttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|Un enlace seguro e interoperable que proporciona compatibilidad para las versiones correctas de los elementos de enlace <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession> y <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A>.|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Un enlace seguro e interoperable adecuado para contratos de servicios dúplex o para la comunicación a través de intermediarios de SOAP.|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Un enlace seguro e interoperable que admite el protocolo WS-Federation, que permite a las organizaciones que están en una federación autenticar y autorizar eficazmente a los usuarios.|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Un enlace seguro e interoperable que deriva de <xref:System.ServiceModel.WS2007HttpBinding> y admite la seguridad federada.|  
 |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Un enlace seguro y optimizado adecuado para la comunicación entre equipos entre aplicaciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Un enlace seguro, confiable y optimizado que es adecuado para la comunicación en equipos entre aplicaciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
 |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Un enlace en cola adecuado para la comunicación entre equipos entre aplicaciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Un enlace que permite una comunicación segura entre múltiples equipos.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Un enlace que se utiliza para configurar los extremos de los servicios web de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se exponen mediante solicitudes HTTP en lugar de mensajes SOAP.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Un enlace que se utiliza para configurar los extremos de los servicios web de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se exponen mediante solicitudes HTTP en lugar de mensajes SOAP.|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Un enlace adecuado para la comunicación entre equipos entre una aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y aplicaciones de Message Queuing (también conocido como MSMQ) existentes.|  
   
 ## <a name="binding-features"></a>Características de los enlaces  

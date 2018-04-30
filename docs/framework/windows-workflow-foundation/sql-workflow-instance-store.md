@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 11e61e1d702572af10cf4e46b9d1b284022fa56e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 60eaef2bbbb2ff7653aeac832163276c32bc696b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-workflow-instance-store"></a>Almacén de instancias de flujo de trabajo de SQL
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] se distribuye con el almacén de instancias de flujo de trabajo de SQL, que permite a los flujos de trabajo conservar información de estado sobre las instancias de flujo de trabajo en una base de datos de SQL Server 2005 o SQL Server 2008. Esta característica se implementa principalmente en el formulario de la clase <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, que deriva de la clase <xref:System.Runtime.DurableInstancing.InstanceStore> abstracta del marco de persistencia. La característica Almacén de instancias de flujo de trabajo de SQL constituye un proveedor de persistencia de SQL, que es una implementación concreta de la API de persistencia que un host usa para enviar los comandos de persistencia al almacén.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/28/2018
   
  Los temas en esta sección describen las propiedades y características del almacén de instancias de flujo de trabajo de SQL y le proporcionan los detalles sobre cómo configurar el almacén.  
   
- Windows Server App Fabric proporciona su propio almacén y herramientas de instancia para simplificar la configuración y el uso del almacén de instancias. Para obtener más información, consulte vea [almacén de instancias de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201201). [!INCLUDE[crabout](../../../includes/crabout-md.md)] el Vea base de datos de App Fabric SQL Server persistencia [base de datos de App Fabric SQL Server persistencia](http://go.microsoft.com/fwlink/?LinkId=201202)  
+ Windows Server App Fabric proporciona su propio almacén y herramientas de instancia para simplificar la configuración y el uso del almacén de instancias. Para obtener más información, consulte vea [almacén de instancias de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201201). Para obtener más información sobre, consulte la base de datos de App Fabric SQL Server persistencia [base de datos de App Fabric SQL Server persistencia](http://go.microsoft.com/fwlink/?LinkId=201202)  
   
 ## <a name="in-this-section"></a>En esta sección  
   

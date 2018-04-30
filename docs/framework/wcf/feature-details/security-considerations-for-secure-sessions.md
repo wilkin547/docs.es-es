@@ -1,27 +1,29 @@
 ---
 title: Consideraciones de seguridad para sesiones seguras
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: be460249ed877b2f67f2d153c2aea4a3cc4d2b37
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d1e5082ace452eabddd91a45a20c6d6363e118b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-considerations-for-secure-sessions"></a>Consideraciones de seguridad para sesiones seguras
-Debe tener en cuenta los siguientes elementos que afectan a la seguridad al implementar sesiones seguras. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Consideraciones de seguridad, consulte [consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) y [prácticas recomendadas de seguridad](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
+Debe tener en cuenta los siguientes elementos que afectan a la seguridad al implementar sesiones seguras. Para obtener más información acerca de las consideraciones de seguridad, consulte [consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) y [prácticas recomendadas de seguridad](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
   
 ## <a name="secure-sessions-and-metadata"></a>Sesiones seguras y metadatos  
  Cuando se establece una sesión segura y la propiedad <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> está establecida como `false`, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] envía una aserción `mssp:MustNotSendCancel` como parte de los metadatos en el documento de Lenguaje de descripción de servicios Web (WSDL) para el extremo del servicio. La aserción `mssp:MustNotSendCancel` informa a los clientes de que el servicio no responde a las solicitudes para cancelar la sesión segura. Cuando la propiedad <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> está establecida como `true`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no emite una aserción `mssp:MustNotSendCancel` en el documento WSDL. Se espera que los clientes envíen una solicitud de cancelación al servicio cuando dejen de necesitar la sesión segura. Cuando un cliente se genera mediante el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), el código de cliente responde correctamente a la presencia o ausencia de la `mssp:MustNotSendCancel` aserción.  

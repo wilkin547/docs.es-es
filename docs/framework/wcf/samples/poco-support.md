@@ -1,27 +1,29 @@
 ---
 title: Compatibilidad con POCO
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c471a6726d8f7e621d666e014b2363c088e2b0e0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c67b39c8d3c48281eb0ec9c360de7eaff1cfad6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="poco-support"></a>Compatibilidad con POCO
-En este ejemplo se muestra la compatibilidad para la serialización de los tipos sin marca; es decir, tipos a los que no se han aplicado atributos de serialización, a veces conocidos como tipos de objetos CLR antiguos sin formato (POCO). <xref:System.Runtime.Serialization.DataContractSerializer> deduce un contrato de datos para todos los tipos públicos sin marca que tienen un constructor predeterminado. Los contratos de datos le permiten pasar los datos estructurados hacia y desde los servicios. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]los tipos no marcados, consulte [tipos serializables](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+En este ejemplo se muestra la compatibilidad para la serialización de los tipos sin marca; es decir, tipos a los que no se han aplicado atributos de serialización, a veces conocidos como tipos de objetos CLR antiguos sin formato (POCO). <xref:System.Runtime.Serialization.DataContractSerializer> deduce un contrato de datos para todos los tipos públicos sin marca que tienen un constructor predeterminado. Los contratos de datos le permiten pasar los datos estructurados hacia y desde los servicios. Para obtener más información acerca de los tipos no marcados, consulte [tipos serializables](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   
  En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), pero utiliza números complejos en lugar de los tipos numéricos primitivos. También es similar a la [contrato de datos básica](../../../../docs/framework/wcf/samples/basic-data-contract.md) de ejemplo, salvo que la <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute> no se utilizan los atributos.  
   

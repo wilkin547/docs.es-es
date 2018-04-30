@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: fad7970711435cdabecd883f5e1dc44c64bd2c93
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d30769c854dad04a333509f64169a257fc461ad0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Cómo utilizar seguridad de transporte y credenciales de mensajes
-Proteger un servicio con credenciales de mensajes y transporte emplea lo mejor de los modos de seguridad de mensajes y transporte en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. En suma, la seguridad de la capa de transporte proporciona integridad y confidencialidad, mientras que la seguridad de la capa de mensaje proporciona una variedad de credenciales que no son posibles con mecanismos de seguridad de transporte estrictos. En este tema se muestran los pasos básicos para implementar transporte con credenciales de mensaje usando los enlaces <xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.NetTcpBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] establecer el modo de seguridad, consulte [Cómo: establecer el modo de seguridad](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+Proteger un servicio con credenciales de mensajes y transporte emplea lo mejor de los modos de seguridad de mensajes y transporte en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. En suma, la seguridad de la capa de transporte proporciona integridad y confidencialidad, mientras que la seguridad de la capa de mensaje proporciona una variedad de credenciales que no son posibles con mecanismos de seguridad de transporte estrictos. En este tema se muestran los pasos básicos para implementar transporte con credenciales de mensaje usando los enlaces <xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.NetTcpBinding>. Para obtener más información acerca de cómo establecer el modo de seguridad, consulte [Cómo: establecer el modo de seguridad](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Al establecer el modo de seguridad en `TransportWithMessageCredential`, el transporte determina el mecanismo real que proporciona la seguridad de nivel de transporte. Para HTTP, el mecanismo es Secure Sockets Layer (SSL) sobre HTTP (HTTPS); para TCP, es SSL sobre TCP o Windows.  
   

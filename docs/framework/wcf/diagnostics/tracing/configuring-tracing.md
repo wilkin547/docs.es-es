@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-tracing"></a>Configurar seguimiento
 En este tema se describe cómo se puede habilitar el seguimiento, configurar los orígenes de seguimiento para emitir trazas y establecer niveles de seguimiento, establecer el seguimiento y la propagación de actividades para admitir la correlación de seguimiento de un extremo a otro, y establecer escuchas de seguimiento para tener acceso a las trazas.  
@@ -146,7 +146,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] crear definido por el usuario a orígenes de traza, consulte [extender seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ Para obtener más información acerca de cómo crear orígenes de seguimiento definido por el usuario, consulte [extender seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Configurar las escuchas para consumir trazas  
  En tiempo de ejecución, las fuentes de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hacen un seguimiento de datos hasta los agentes de escucha que procesan los datos. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] proporciona varios agentes de escucha predefinidos para <xref:System.Diagnostics>, que difieren en el formato que usan para el resultado. También puede agregar tipos de escucha personalizados.  
@@ -187,7 +187,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
   
  El atributo `propagateActivity` indica si la actividad se debería propagar a otros extremos que participan en el intercambio de mensajes. Estableciendo este valor en `true`, puede coger archivos de seguimiento generados por dos extremos cualesquiera y observar cómo un conjunto de trazas en un extremo fluyó a un conjunto de rastros de otro extremo.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] seguimiento de la actividad y propagación, vea [propagación](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ Para obtener más información acerca del seguimiento de actividad y propagación, vea [propagación](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
  Ambos `propagateActivity` y `ActivityTracing` valores booleanos se aplican a la System.ServiceModel TraceSource. El `ActivityTracing` valor también se aplica a cualquier origen de seguimiento, incluido [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] o definido por el usuario.  
   

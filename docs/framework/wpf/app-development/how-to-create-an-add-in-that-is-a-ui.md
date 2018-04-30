@@ -1,12 +1,13 @@
 ---
-title: "Cómo: Crear un complemento que sea una interfaz de usuario"
-ms.custom: 
+title: 'Cómo: Crear un complemento que sea una interfaz de usuario'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fea1c718eedb12d49eced9964e4f9045badf07ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cadb992a68f4ee9f06ad37adf71856cdc4f46503
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Cómo: Crear un complemento que sea una interfaz de usuario
-Este ejemplo muestra cómo crear un complemento que sea una [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] que se hospedan en un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación independiente.  
+Este ejemplo muestra cómo crear un complemento es un Windows Presentation Foundation (WPF) que es hospedado por un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación independiente.  
   
  El complemento es un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que es un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] control de usuario. El contenido del control de usuario es un botón único que muestra un cuadro de mensaje cuando se hace clic en él. El [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación independiente que hospeda el complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] como el contenido de la ventana de la aplicación principal.  
   
@@ -64,7 +66,7 @@ Este ejemplo muestra cómo crear un complemento que sea una [!INCLUDE[TLA#tla_wp
   
  [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- En el modelo de complemento donde un complemento devuelve un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (consulte [crear un complemento que devuelve una interfaz de usuario](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), convertir el adaptador de complemento de la <xref:System.Windows.FrameworkElement> a una <xref:System.AddIn.Contract.INativeHandleContract> mediante una llamada a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>También debe llamar en este modelo, pero debe implementar un método desde el que se va a escribir el código para llamarlo. Para ello, reemplazar <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> e implementar el código que llama <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> si el código que llama a <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> está esperando un <xref:System.AddIn.Contract.INativeHandleContract>. En este caso, el autor de la llamada será el adaptador del host, que se aborda en una subsección siguiente.  
+ En el modelo de complemento donde un complemento devuelve un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (consulte [crear un complemento que devuelve una interfaz de usuario](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), convertir el adaptador de complemento de la <xref:System.Windows.FrameworkElement> a una <xref:System.AddIn.Contract.INativeHandleContract> mediante una llamada a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> También debe llamar en este modelo, pero debe implementar un método desde el que se va a escribir el código para llamarlo. Para ello, reemplazar <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> e implementar el código que llama <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> si el código que llama a <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> está esperando un <xref:System.AddIn.Contract.INativeHandleContract>. En este caso, el autor de la llamada será el adaptador del host, que se aborda en una subsección siguiente.  
   
 > [!NOTE]
 >  También necesita invalidar <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> en este modelo para habilitar la tabulación entre la aplicación host [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] y el complemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Para obtener más información, vea "Limitaciones de complemento WPF" en [WPF Add-Ins Overview](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  

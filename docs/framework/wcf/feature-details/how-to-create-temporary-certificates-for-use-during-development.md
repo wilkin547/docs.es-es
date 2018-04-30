@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ccbc8c6fa638c674dea28c312b2dedbc9d41968a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f5a096fd6e052fc744af5cee1ab0d322e1daafe6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Cómo: Crear certificados temporales que puedan utilizarse durante las operaciones de desarrollo
 Cuando se desarrolla un servicio seguro o cliente utilizando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], a menudo es necesario proporcionar un certificado X.509 que se utilizará como una credencial. El certificado forma normalmente parte de una cadena de certificados con una entidad emisora raíz situada en el almacén de las Entidades emisoras de certificados raíz de confianza del equipo. Tener una cadena de certificados le permite establecer un conjunto de certificados donde normalmente la entidad emisora raíz pertenece a su organización o unidad del negocio. Para emularlo en el momento de desarrollo, puede crear dos certificados para satisfacer los requisitos de seguridad. El primero es un certificado con firma automática que se coloca en el almacén de las Entidades emisoras de certificados raíz de confianza y el segundo certificado se crea a partir del primero y se coloca en el almacén personal de la ubicación del equipo local o en el almacén personal de la ubicación del usuario actual. En este tema se describen los pasos para crear estos dos certificados con [Certificate Creation Tool (Herramienta de creación de certificados) (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), proporcionada por el SDK de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
@@ -33,7 +33,7 @@ Cuando se desarrolla un servicio seguro o cliente utilizando [!INCLUDE[indigo1](
 >   
 >  De forma predeterminada, el [Makecert.exe (herramienta de creación de certificados)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) crea certificados cuya entidad emisora raíz se denomina "Agencia raíz **."** Dado que la "Agencia raíz" no está en el almacén Entidades emisoras de certificados raíz de confianza, estos certificados no son seguros. Crear un certificado con firma automática que se coloca en el almacén Entidades emisoras de certificados raíz de confianza le permite crear un entorno de desarrollo que simula su entorno de distribución.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo crear y usar certificados, consulte [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo usar un certificado como credencial, consulte [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Para obtener un tutorial sobre el uso de la tecnología Microsoft Authenticode, consulte [Authenticode Overviews and Tutorials (Información general y tutoriales de Authenticode)](http://go.microsoft.com/fwlink/?LinkId=88919).  
+ Para obtener más información sobre la creación y uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Para obtener más información sobre el uso de un certificado como credencial, vea [protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Para obtener un tutorial sobre el uso de la tecnología Microsoft Authenticode, consulte [Authenticode Overviews and Tutorials (Información general y tutoriales de Authenticode)](http://go.microsoft.com/fwlink/?LinkId=88919).  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Para crear un certificado de la entidad de certificación raíz firmado automáticamente y exportar la clave privada  
   

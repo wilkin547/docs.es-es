@@ -1,12 +1,13 @@
 ---
-title: "Cómo: Comparar notificaciones"
-ms.custom: 
+title: 'Cómo: Comparar notificaciones'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf7a621a7aa457b2993c761caa2ad576d216638b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5188ed17e3a10bfd93b885fcdd93e01391dd8256
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-compare-claims"></a>Cómo: Comparar notificaciones
-La infraestructura del modelo de identidad en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se utiliza para realizar la comprobación de autorización. Como tal, una tarea común es comparar las notificaciones en el contexto de autorización con las notificaciones necesarias para realizar la acción solicitada o tener acceso al recurso solicitado. En este tema se describe cómo comparar las notificaciones, incluidos los tipos de notificación integrados y personalizados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la infraestructura del modelo de identidad, vea [Administrar notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
+La infraestructura del modelo de identidad en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se utiliza para realizar la comprobación de autorización. Como tal, una tarea común es comparar las notificaciones en el contexto de autorización con las notificaciones necesarias para realizar la acción solicitada o tener acceso al recurso solicitado. En este tema se describe cómo comparar las notificaciones, incluidos los tipos de notificación integrados y personalizados. Para obtener más información acerca de la infraestructura del modelo de identidad, vea [Administrar notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
  La comparación de notificaciones implica la comparación de tres partes de una notificación (tipo, derecho y recurso) con las mismas partes en otra notificación para ver si son iguales. Vea el ejemplo siguiente.  
   

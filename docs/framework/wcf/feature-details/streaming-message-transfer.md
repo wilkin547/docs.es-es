@@ -1,24 +1,26 @@
 ---
 title: Transferencia de mensajes por secuencias
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="streaming-message-transfer"></a>Transferencia de mensajes por secuencias
 Los transportes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admiten dos modos para transferir los mensajes:  
@@ -52,7 +54,7 @@ Los transportes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admit
   
  Algunas características de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como la mensajería de confianza, las transacciones y la seguridad del nivel del mensaje SOAP, confían en almacenar en búfer los mensajes para las transmisiones. El uso de estas características puede reducir o eliminar las ventajas de rendimiento ganadas mediante la transmisión por secuencias. Para proteger un transporte por secuencias, utilice la seguridad de nivel de transporte únicamente o utilice la seguridad de nivel de transporte más la seguridad de mensaje de solo autenticación.  
   
- Los encabezados SOAP siempre están almacenados en búfer, incluso cuando el modo de transferencia es por secuencias. Los encabezados de un mensaje no deben superar el tamaño de la cuota de transporte `MaxBufferSize`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Esta configuración, vea [las cuotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
+ Los encabezados SOAP siempre están almacenados en búfer, incluso cuando el modo de transferencia es por secuencias. Los encabezados de un mensaje no deben superar el tamaño de la cuota de transporte `MaxBufferSize`. Para obtener más información sobre esta configuración, consulte [las cuotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>Diferencias entre las transferencias almacenadas en búfer y las transferencias por secuencias  
  Si se cambia el modo de transferencia de almacenado en búfer a por secuencias, también se cambia la forma del canal nativo de transportes de canalización con nombre y TCP. Para transferencias almacenadas en búfer, la forma del canal nativo es <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Para las transferencias por secuencias, los canales nativos son <xref:System.ServiceModel.Channels.IRequestChannel> y <xref:System.ServiceModel.Channels.IReplyChannel>. Al cambiar el modo de transferencia en una aplicación existente que utiliza estos transportes directamente (es decir, no a través de un contrato de servicios), requiere el cambio de la forma del canal esperada para los generadores de canales y agentes de escucha.  

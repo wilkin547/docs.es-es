@@ -1,23 +1,24 @@
 ---
-title: "Información general de Windows Workflow"
-ms.custom: 
+title: Información general de Windows Workflow
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dce6962feb0f425958f89182ee7695332389b567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc1aa65b413b87b27c05e7a12ce607d1cd30b89b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-workflow-overview"></a>Información general de Windows Workflow
 Un flujo de trabajo es un conjunto de unidades elementales llamadas *actividades* que se almacenan como un modelo que describe un proceso real. Los flujos de trabajo proporcionan una manera de describir el orden de ejecución y las relaciones de dependencia entre las partes de trabajo de ejecución corta o prolongada. Este trabajo pasa a través del modelo desde el principio hasta al final y las actividades pueden ser ejecutadas por personas o por funciones de sistema.  
@@ -45,11 +46,11 @@ Componentes de flujo de trabajo del proceso de host
   
  En el diagrama anterior, el método <xref:System.Activities.WorkflowInvoker.Invoke%2A> de la clase <xref:System.Activities.WorkflowInvoker> se usa para invocar varias instancias de flujo de trabajo. <xref:System.Activities.WorkflowInvoker> se usa para los flujos de trabajo ligeros que no necesitan la administración desde el host; los flujos de trabajo que necesitan la administración desde el host (como la reanudación de <xref:System.Activities.Bookmark>) se deben ejecutar mediante <xref:System.Activities.WorkflowApplication.Run%2A> en su lugar. Antes de invocar una nueva instancia de flujo de trabajo no es necesario esperar a que se complete la instancia de flujo de trabajo en ejecución. El motor de tiempo de ejecución permite ejecutar varias instancias de flujo de trabajo simultáneamente.  Los flujos de trabajo invocados son los siguientes:  
   
--   Una actividad <xref:System.Activities.Statements.Sequence> que contiene una actividad secundaria <xref:System.Activities.Statements.WriteLine>. Una <xref:System.Activities.Variable> de la actividad primaria se enlaza a un <xref:System.Activities.InArgument> de la actividad secundaria. [!INCLUDE[crabout](../../../includes/crabout-md.md)]en las variables, argumentos y el enlace, consulte [Variables y argumentos](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
+-   Una actividad <xref:System.Activities.Statements.Sequence> que contiene una actividad secundaria <xref:System.Activities.Statements.WriteLine>. Una <xref:System.Activities.Variable> de la actividad primaria se enlaza a un <xref:System.Activities.InArgument> de la actividad secundaria. Para obtener más información acerca de las variables, argumentos y enlace, consulte [Variables y argumentos](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
   
 -   Una actividad personalizada llamada `ReadLine`. Un argumento <xref:System.Activities.OutArgument> de la actividad `ReadLine` se devuelve al método <xref:System.Activities.WorkflowInvoker.Invoke%2A> de llamada.  
   
--   Una actividad personalizada que se deriva de la clase abstracta <xref:System.Activities.CodeActivity>. <xref:System.Activities.CodeActivity> puede tener acceso a características del tiempo de ejecución (como el seguimiento y las propiedades) usando el <xref:System.Activities.CodeActivityContext> que está disponible como parámetro del método <xref:System.Activities.CodeActivity.Execute%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Estas características de tiempo de ejecución, consulte [seguimiento y traza del flujo de trabajo](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) y [propiedades de ejecución de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).  
+-   Una actividad personalizada que se deriva de la clase abstracta <xref:System.Activities.CodeActivity>. <xref:System.Activities.CodeActivity> puede tener acceso a características del tiempo de ejecución (como el seguimiento y las propiedades) usando el <xref:System.Activities.CodeActivityContext> que está disponible como parámetro del método <xref:System.Activities.CodeActivity.Execute%2A>. Para obtener más información acerca de estas características de tiempo de ejecución, consulte [seguimiento y traza del flujo de trabajo](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) y [propiedades de ejecución de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).  
   
 ## <a name="see-also"></a>Vea también  
  [¿BizTalk Server 2006 o WF? Elegir la herramienta de flujo de trabajo correcto para el proyecto](http://go.microsoft.com/fwlink/?LinkId=154901)

@@ -1,24 +1,26 @@
 ---
-title: "Complemento MMC de configuración de WS-AtomicTransaction"
-ms.custom: 
+title: Complemento MMC de configuración de WS-AtomicTransaction
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73db4b201aba6e07891803aa86c56403f135f863
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e8b127e0d3c241a1e37ac2161d9fadcea990425
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Complemento MMC de configuración de WS-AtomicTransaction
 El complemento MMC de configuración de WS-AtomicTransaction se utiliza para configurar una parte de los valores WS-AtomicTransaction en los equipos local remoto.  
@@ -28,7 +30,7 @@ El complemento MMC de configuración de WS-AtomicTransaction se utiliza para con
   
  Si está ejecutando Windows Vista o [!INCLUDE[lserver](../../../includes/lserver-md.md)], se encuentra en el complemento MMC, haga clic en el **iniciar** botón y escribiendo en `dcomcnfg.exe` en el **búsqueda** cuadro. Cuando se abra MMC, navegue hasta la **mi pc\coordinador de transacciones local DTC** nodo, haga clic en y seleccione **propiedades**. Opciones de configuración disponibles están agrupadas en la **WS-AT** ficha.  
   
- Los pasos anteriores se utilizan para iniciar el complemento para configurar un equipo local. Si desea configurar un equipo remoto, debe buscar el nombre del equipo remoto en **Control Panel/Administrative Tools/servicios de componentes /**y realizar pasos similares si está ejecutando [!INCLUDE[wxp](../../../includes/wxp-md.md)] o [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Si está ejecutando Windows Vista o [!INCLUDE[lserver](../../../includes/lserver-md.md)], siga los pasos anteriores para Vista y [!INCLUDE[lserver](../../../includes/lserver-md.md)], pero usar el **transacciones DISTRIBUIDAS\DTC** nodo bajo el nodo del equipo remoto.  
+ Los pasos anteriores se utilizan para iniciar el complemento para configurar un equipo local. Si desea configurar un equipo remoto, debe buscar el nombre del equipo remoto en **Control Panel/Administrative Tools/servicios de componentes /** y realizar pasos similares si está ejecutando [!INCLUDE[wxp](../../../includes/wxp-md.md)] o [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Si está ejecutando Windows Vista o [!INCLUDE[lserver](../../../includes/lserver-md.md)], siga los pasos anteriores para Vista y [!INCLUDE[lserver](../../../includes/lserver-md.md)], pero usar el **transacciones DISTRIBUIDAS\DTC** nodo bajo el nodo del equipo remoto.  
   
  Para utilizar la interfaz de usuario proporcionada por la herramienta, tiene que registrar el archivo WsatUI.dll, que se encuentra en la ruta de acceso siguiente  
   
@@ -42,9 +44,9 @@ regasm.exe /codebase WsatUI.dll
   
  Puede utilizar esta herramienta para modificar los valores básicos de WS-AtomicTransaction. Por ejemplo, puede habilitar y deshabilitar la compatibilidad de protocolo de WS-AtomicTransaction, configurar los puertos del HTTP para WS-AT, enlazar un Certificado SSL al puerto HTTP, configurar los certificados especificando los nombres de sujeto de certificado, seleccionar el modo de seguimiento y establecer los tiempos de espera predeterminado y máximo.  
   
- Si tiene que configurar la compatibilidad de WS-AtomicTransaction solo en el equipo local, puede usar la versión de línea de comandos de esta herramienta. [!INCLUDE[crabout](../../../includes/crabout-md.md)]la herramienta de línea de comandos, consulte el [utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) tema.  
+ Si tiene que configurar la compatibilidad de WS-AtomicTransaction solo en el equipo local, puede usar la versión de línea de comandos de esta herramienta. Para obtener más información acerca de la herramienta de línea de comandos, consulte el [utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) tema.  
   
- Debe tener en cuenta que tanto el complemento MMC como la herramienta de la línea de comandos no permiten configurar todos los valores WS-AT. Esta configuración sólo se puede editar modificando directamente el registro. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Esta configuración del registro, consulte [configuración de compatibilidad con las transacciones WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
+ Debe tener en cuenta que tanto el complemento MMC como la herramienta de la línea de comandos no permiten configurar todos los valores WS-AT. Esta configuración sólo se puede editar modificando directamente el registro. Para obtener más información acerca de la configuración del registro, consulte [configuración de compatibilidad con las transacciones WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
   
 ### <a name="user-interface-description"></a>Descripción de la interfaz de usuario  
  **Habilitar la compatibilidad de red de WS-AtomicTransaction**:  
@@ -95,7 +97,7 @@ regasm.exe /codebase WsatUI.dll
 > [!NOTE]
 >  Cuando otro consumidor de seguimiento está utilizando el proveedor de seguimiento de WS-AT, no puede crear una nueva sesión del registro para eventos de seguimiento. Cualquier intento de configurar el registro durante ese tiempo producirá el mensaje de error “No se ha podido habilitar el proveedor. Código de error: 1”.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]seguimiento y registro, consulte [administración y diagnóstico](../../../docs/framework/wcf/diagnostics/index.md).  
+ Para obtener más información acerca del seguimiento y registro, consulte [administración y diagnóstico](../../../docs/framework/wcf/diagnostics/index.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Configuración de la compatibilidad con WS-Atomic Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  

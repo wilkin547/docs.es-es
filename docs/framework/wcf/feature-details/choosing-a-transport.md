@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7b051cdeebf83b34b6e503d8d9cb54a38a46a2a6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 989ae3d70bce2a4cb374904ee6b2f30f770ccf8a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-transport"></a>Elección del transporte
 En este tema se analizan los criterios para elegir entre los tres transportes principales que se incluyen en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]: HTTP, TCP y canalizaciones con nombre. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también incluye un transporte de cola de mensajes (también conocido como MSMQ), pero este documento no trata la puesta en cola de mensajes.  
@@ -39,7 +39,7 @@ En este tema se analizan los criterios para elegir entre los tres transportes pr
  En esta sección se describen las razones principales para elegir cualquiera de los tres transportes principales y se muestra un gráfico de decisión detallado para elegir entre ellos.  
   
 ### <a name="when-to-use-http-transport"></a>Cuándo utilizar el transporte HTTP  
- HTTP es un protocolo de solicitud/respuesta entre clientes y servidores. La aplicación más común consiste en clientes de explorador web que se comunican con un servidor web. El cliente envía una solicitud a un servidor, que escucha los mensajes de la solicitud de cliente. Cuando el servidor reciba una solicitud, devuelve una respuesta, que contiene el estado de la solicitud. Si es correcto, se devuelven datos opcionales como una página web, un mensaje de error u otra información. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] el protocolo HTTP, consulte [HTTP - protocolo de transferencia de hipertexto](http://go.microsoft.com/fwlink/?LinkId=94858).  
+ HTTP es un protocolo de solicitud/respuesta entre clientes y servidores. La aplicación más común consiste en clientes de explorador web que se comunican con un servidor web. El cliente envía una solicitud a un servidor, que escucha los mensajes de la solicitud de cliente. Cuando el servidor reciba una solicitud, devuelve una respuesta, que contiene el estado de la solicitud. Si es correcto, se devuelven datos opcionales como una página web, un mensaje de error u otra información. Para obtener más información sobre el protocolo HTTP, consulte [HTTP - protocolo de transferencia de hipertexto](http://go.microsoft.com/fwlink/?LinkId=94858).  
   
  El protocolo HTTP no está basado en una conexión. Una vez enviada la respuesta, no se mantiene ningún estado. Para administrar transacciones de varias páginas, la aplicación debe conservar cualquier estado necesario.  
   

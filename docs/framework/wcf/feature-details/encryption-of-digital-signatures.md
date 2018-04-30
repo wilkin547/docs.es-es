@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: aa6abc39159b14eae41e43de5a8976857b1d4c13
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 630465367eb4cee164a222bb5449070ac0726d5e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="encryption-of-digital-signatures"></a>Cifrado de firmas digitales
 De forma predeterminada, un mensaje se cifra y se firma y la firma se cifra digitalmente. Puede controlar esto creando un enlace personalizado con una instancia de <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> y estableciendo la propiedad `MessageProtectionOrder` de cualquier clase en un valor de enumeración <xref:System.ServiceModel.Security.MessageProtectionOrder>. De manera predeterminada, es <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Este proceso tarda entre un 10 y un 40 por ciento más que la simple firma y cifrado. Deshabilitar el cifrado de la firma, sin embargo, puede permitir a un atacante adivinar el contenido del mensaje. Esto es posible porque el elemento de firma contiene el código hash del texto sin formato de cada parte del mensaje firmada. Por ejemplo, aunque se cifra el cuerpo del mensaje de forma predeterminada, la firma no cifrada contiene el código hash del cuerpo del mensaje. Si el mensaje es pequeño, un atacante podría ser capaz de deducir el contenido. Cifrar la firma reduce o elimina esta posibilidad.  
@@ -39,7 +39,7 @@ De forma predeterminada, un mensaje se cifra y se firma y la firma se cifra digi
   
 3.  Establezca la propiedad <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> o establezca la propiedad <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo crear enlaces personalizados, consulte [crear enlaces](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo crear un enlace personalizado para un modo de autenticación específico, consulte [Cómo: crear un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ Para obtener más información acerca de cómo crear enlaces personalizados, consulte [crear enlaces](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). Para obtener más información acerca de cómo crear un enlace personalizado para un modo de autenticación específico, consulte [Cómo: crear un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Security.MessageProtectionOrder>  

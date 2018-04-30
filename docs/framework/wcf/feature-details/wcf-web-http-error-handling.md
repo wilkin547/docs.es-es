@@ -1,24 +1,26 @@
 ---
 title: Controlar errores de web HTTP de WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c5f397d50a5a97801241afd8e64abf2e56b05dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcd0e6d1e6318404eb47741dc61ccf2ff9358b47
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-web-http-error-handling"></a>Controlar errores de web HTTP de WCF
 El control de errores web HTTP de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite devolver errores de los servicios web HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que especifican un código de estado HTTP, así como devolver detalles de error mediante el mismo formato que la operación (por ejemplo, XML o JSON).  
@@ -56,7 +58,7 @@ Public string Operation2()
   
 -   El valor de propiedad <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> mediante el acceso a <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cómo estos valores pueden afectar a la aplicación de formato de la operación, vea [Web HTTP de WCF formato](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
+ Para obtener más información acerca de cómo afectan a estos valores, el formato de la operación, vea [Web HTTP de WCF formato](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
   
  <xref:System.ServiceModel.Web.WebFaultException> es una clase <xref:System.ServiceModel.FaultException> y, por lo tanto, se puede usar como modelo de programación de excepción de errores para los servicios que exponen extremos de SOAP y extremos web HTTP.  
   

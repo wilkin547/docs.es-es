@@ -23,14 +23,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c20817e791ae95efecd00a41a44c14eedec017d4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 365bab484be17fd7bd1466a39d5af53f116ad06f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Consideraciones sobre LINQ (WCF Data Services)
-En este tema se proporciona información sobre cómo se crean y ejecutan consultas LINQ cuando se usa el cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] y las limitaciones de uso de LINQ para consultar un servicio de datos que implementa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] crear y ejecutar consultas con un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-según el servicio de datos, vea [consultar el servicio de datos](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+En este tema se proporciona información sobre cómo se crean y ejecutan consultas LINQ cuando se usa el cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] y las limitaciones de uso de LINQ para consultar un servicio de datos que implementa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Para obtener más información acerca de cómo crear y ejecutar consultas con un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-según el servicio de datos, vea [consultar el servicio de datos](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Redactar consultas LINQ  
  LINQ permite redactar consultas en una colección de objetos que implemente la interfaz <xref:System.Collections.Generic.IEnumerable%601>. Tanto el **Agregar referencia de servicio** cuadro de diálogo de Visual Studio y la herramienta DataSvcUtil.exe se usan para generar una representación de un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] servicio como una clase de contenedor de entidades que hereda de <xref:System.Data.Services.Client.DataServiceContext>, así como objetos que representan las entidades devueltas en fuentes de distribución. Estas herramientas también generan propiedades en la clase de contenedor de entidades de las colecciones que el servicio exponen como fuentes. Cada una de estas propiedades de la clase que encapsula el servicio de datos devuelve una clase <xref:System.Data.Services.Client.DataServiceQuery%601>. Puesto que la clase <xref:System.Data.Services.Client.DataServiceQuery%601> implementa la interfaz <xref:System.Linq.IQueryable%601> definida por LINQ, puede crear una consulta LINQ en fuentes expuestas por el servicio de datos, que la biblioteca cliente traduce en un URI de solicitud de consulta que se envía al servicio de datos en la ejecución.  

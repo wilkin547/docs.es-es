@@ -1,13 +1,13 @@
 ---
-title: "Cómo: Obtener acceso a los servicios con un contrato dúplex"
-ms.custom: 
+title: 'Cómo: Obtener acceso a los servicios con un contrato dúplex'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 425d17fa34b61985ad3600f992e028e156f6adb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c80980ff5a5b1011c021bcaf0688747178ec5b9b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Cómo: Obtener acceso a los servicios con un contrato dúplex
 Una característica de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] es la capacidad de crear un servicio que utilice un patrón de mensajería dúplex. Este patrón permite a un servicio comunicarse con el cliente mediante una devolución de llamada. En este tema se muestran los pasos para crear un cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en una clase de cliente que implementa la interfaz de devolución de llamada.  
@@ -36,7 +36,7 @@ Una característica de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e
   
 ### <a name="to-access-a-duplex-service"></a>Obtención de acceso a un servicio dúplex  
   
-1.  Cree un servicio que contenga dos interfaces. La primera interfaz es para el servicio, la segunda es para la devolución de llamada. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]creación de un servicio dúplex, consulte [Cómo: crear un contrato dúplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+1.  Cree un servicio que contenga dos interfaces. La primera interfaz es para el servicio, la segunda es para la devolución de llamada. Para obtener más información acerca de cómo crear un servicio dúplex, consulte [Cómo: crear un contrato dúplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
   
 2.  Ejecute el servicio.  
   

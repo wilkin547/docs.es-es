@@ -42,14 +42,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ae454e54abc2c8200f33bdb0bc5537806c824074
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c379a1db6b825a8ede7866661c11bdbf43cd630c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-windows-overview"></a>Información general sobre ventanas de WPF
-Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] por medio de ventanas. El propósito principal de una ventana es hospedar contenido que permita visualizar datos y que permita a los usuarios interactuar con estos. Independiente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones proporcionan sus propias ventanas mediante la <xref:System.Windows.Window> clase. Este tema se presentan <xref:System.Windows.Window> antes de tratar los conceptos básicos de creación y administración de windows en las aplicaciones independientes.  
+Los usuarios interactúan con aplicaciones de Windows Presentation Foundation (WPF) independiente a través de windows. El propósito principal de una ventana es hospedar contenido que permita visualizar datos y que permita a los usuarios interactuar con estos. Independiente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones proporcionan sus propias ventanas mediante la <xref:System.Windows.Window> clase. Este tema se presentan <xref:System.Windows.Window> antes de tratar los conceptos básicos de creación y administración de windows en las aplicaciones independientes.  
   
 > [!NOTE]
 >  Hospedadas en explorador [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones, incluidos [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] y malas [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] páginas, no proporcionan sus propias ventanas. En su lugar, se hospedan en ventanas proporcionadas por [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Vea [información general de las aplicaciones de explorador XAML de WPF](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  

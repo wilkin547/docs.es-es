@@ -1,28 +1,28 @@
 ---
 title: Enlaces proporcionados por el sistema
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-caps.latest.revision: 
+caps.latest.revision: 60
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c5f8df31e31c9617fe7bcd92789671d220382a82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccdab56a90f4114836dd9f0a56cc495657ee9c8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema
 Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al hablar con un punto de conexión e indican cómo conectarse a un punto de conexión. Un enlace contiene los siguientes elementos:  
@@ -33,7 +33,7 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
   
 -   La codificación determina la codificación de la conexión que se ha de utilizar para los mensajes que se envían al extremo, como, por ejemplo, texto/XML, binaria o Mecanismo de optimización de transmisión de mensajes (MTOM).  
   
- En este tema se presentan todos los enlaces de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] proporcionados por el sistema. Si ninguno de estos cumplen los criterios exactos de su aplicación, puede crear un enlace personalizado. [!INCLUDE[crabout](../../../includes/crabout-md.md)]cómo crear enlaces personalizados, consulte [enlaces personalizados](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ En este tema se presentan todos los enlaces de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] proporcionados por el sistema. Si ninguno de estos cumplen los criterios exactos de su aplicación, puede crear un enlace personalizado. Para obtener más información acerca de cómo crear enlaces personalizados, consulte [enlaces personalizados](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Un enlace seguro e interoperable que admite el protocolo WS-Federation permite a las organizaciones que están en una federación autenticar y autorizar eficazmente a los usuarios.  
   
@@ -49,10 +49,10 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
 |Enlaces|Elemento de configuración |Descripción|  
 |-------------|---------------------------|-----------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Un enlace que es útil para la comunicación con servicios web conformes con WS-Basic Profile, como, por ejemplo, servicios basados en servicios web de ASP.NET (ASMX). Este enlace utiliza HTTP como el transporte, y texto/XML como la codificación de mensajes predeterminada.|  
-|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Un enlace seguro e interoperable, adecuado para contratos de servicio que no son dúplex.|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Un enlace seguro e interoperable adecuado para contratos de servicios dúplex o para la comunicación a través de intermediarios de SOAP.|  
+|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Un enlace seguro e interoperable, adecuado para contratos de servicio que no son dúplex.|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Un enlace seguro e interoperable adecuado para contratos de servicios dúplex o para la comunicación a través de intermediarios de SOAP.|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Un enlace seguro e interoperable que admite el protocolo WS-Federation que permite a las organizaciones que están en una federación autenticar y autorizar eficazmente a los usuarios.|  
-|<xref:System.ServiceModel.NetHttpBinding>|\<netHttpBinding >|Enlace diseñado para consumir servicios HTTP o WebSocket que usa la codificación binaria de forma predeterminada.|  
+|<xref:System.ServiceModel.NetHttpBinding>|\<netHttpBinding>|Enlace diseñado para consumir servicios HTTP o WebSocket que usa la codificación binaria de forma predeterminada.|  
 |<xref:System.ServiceModel.NetHttpsBinding>|\<NetHttpBinding >|Enlace protegido diseñado para consumir servicios HTTP o WebSocket que usa la codificación binaria de forma predeterminada.|  
 |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Un enlace seguro y optimizado adecuado para la comunicación entre equipos entre aplicaciones de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Un enlace seguro, confiable y optimizado que es adecuado para la comunicación en equipos entre aplicaciones de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].|  
@@ -61,7 +61,7 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding >](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Un enlace adecuado para la comunicación entre equipos entre una aplicación de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y aplicaciones de Message Queuing existentes.|  
 |<xref:System.ServiceModel.BasicHttpContextBinding>|[\<basicHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpcontextbinding.md)|Un enlace adecuado para la comunicación con los servicios web compatibles con el perfil WS-Basic que permite el uso de cookies HTTP para intercambiar el contexto.|  
 |<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|Un enlace seguro y optimizado adecuado para la comunicación entre aplicaciones [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] en distintos equipos que permite utilizar encabezados SOAP para intercambiar el contexto.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Un enlace que se utiliza para configurar los extremos de los servicios web de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que se exponen mediante solicitudes HTTP en lugar de mensajes SOAP.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Un enlace que se utiliza para configurar los extremos de los servicios web de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que se exponen mediante solicitudes HTTP en lugar de mensajes SOAP.|  
 |<xref:System.ServiceModel.WSHttpContextBinding>|[\<wsHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpcontextbinding.md)|Una ubicación segura y |<xref:System.ServiceModel.UdpBinding>|\<udpBinding >|Enlace que se usará al enviar una ráfaga de mensajes simples a un gran número de clientes simultáneamente.|  
   
  La siguiente tabla muestra las características de cada uno de los enlaces proporcionados por el sistema. Los enlaces se encuentran en las columnas de la tabla; las características se enumeran en las filas y se describen en una segunda tabla. La siguiente tabla proporciona una clave para las abreviaturas de enlaces utilizadas. Para seleccionar un enlace, determine qué columna satisface todas las características de fila que necesite.  

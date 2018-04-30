@@ -1,27 +1,29 @@
 ---
 title: Arquitectura de cliente
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02624403-0d77-41cb-9a86-ab55e98c7966
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6418c3b5c82ac42fb7e6d3ce85913896a3f76442
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12db0d4f5717287439b66810e6354b12a4c68b77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="client-architecture"></a>Arquitectura de cliente
-Las aplicaciones utilizan los objetos de cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para invocar las operaciones de servicio. Este tema trata sobre los objetos de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], los canales de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y sus relaciones con la arquitectura de canal subyacente. Para obtener una descripción básica de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] los objetos de cliente, vea [información general sobre el cliente de WCF](../../../../docs/framework/wcf/wcf-client-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la capa del canal, consulte [extender la capa del canal](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
+Las aplicaciones utilizan los objetos de cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para invocar las operaciones de servicio. Este tema trata sobre los objetos de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], los canales de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y sus relaciones con la arquitectura de canal subyacente. Para obtener una descripción básica de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] los objetos de cliente, vea [información general sobre el cliente de WCF](../../../../docs/framework/wcf/wcf-client-overview.md). Para obtener más información acerca de la capa del canal, consulte [extender la capa del canal](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ## <a name="overview"></a>Información general  
  El tiempo de ejecución del modelo de servicio crea clientes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], que están compuestos de lo siguiente:  
@@ -48,7 +50,7 @@ Las aplicaciones utilizan los objetos de cliente [!INCLUDE[indigo1](../../../../
   
  Lo importante que debe recordar sobre los generadores de canales es que crean nuevas instancias de canales de cliente para la configuración proporcionada para ellos antes de llamar a <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>. Cuando llama a <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A> (o <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.ClientBase%601.CreateChannel%2A?displayProperty=nameWithType>o cualquier operación en un objeto de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]), no puede modificar el generador de canales y esperar obtener canales en instancias del servicio distintas, aun cuando está cambiando solamente la dirección del extremo de destino. Si desea crear un objeto de cliente o un canal de cliente con una configuración diferente, debe crear primero un nuevo generador de canales.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]diversos problemas con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objetos de cliente y [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] los canales de cliente, consulte [al tener acceso a los servicios mediante un cliente WCF](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Para obtener más información acerca de diversos problemas con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] objetos de cliente y [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] los canales de cliente, consulte [al tener acceso a los servicios mediante un cliente WCF](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
  Las dos secciones siguientes describen la creación y uso de objetos de canales de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   

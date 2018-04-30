@@ -1,27 +1,29 @@
 ---
-title: "Crear la aplicación cliente de .NET Framework (Inicio rápido de Data Services de WCF)"
-ms.custom: 
+title: Crear la aplicación cliente de .NET Framework (Inicio rápido de Data Services de WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 563d08a5907c8248a74ba992de17ac3dd0679827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0bdbb88cc3070c68c540a09ab0d6ce41f790d1c3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Crear la aplicación cliente de .NET Framework (Inicio rápido de Data Services de WCF)
 Esta es la tarea final de la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inicio rápido. En esta tarea, agregará una aplicación de consola a la solución, agregue una referencia a la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] incorporar esta nueva aplicación de cliente y el acceso a la [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente de la aplicación cliente mediante el uso de las clases de servicio de datos de cliente generado y cliente bibliotecas.  
@@ -89,7 +91,7 @@ Esta es la tarea final de la [!INCLUDE[ssAstoria](../../../../includes/ssastoria
     >  Esta versión de la aplicación NorthwindClient no admite agregar ni eliminar entidades.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Ha creado correctamente la aplicación cliente que tiene acceso a la fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Northwind de ejemplo. También ha completado el tutorial rápido de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]obtener acceso a un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente de distribución desde un [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicación, consulte [biblioteca de cliente de WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
+ Ha creado correctamente la aplicación cliente que tiene acceso a la fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Northwind de ejemplo. También ha completado el tutorial rápido de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Para obtener más información acerca del acceso a una [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente de distribución desde un [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicación, consulte [biblioteca de cliente de WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Introducción](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  

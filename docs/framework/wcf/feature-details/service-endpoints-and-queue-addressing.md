@@ -1,24 +1,26 @@
 ---
-title: "puntos de conexión de servicio y direccionamiento de la cola"
-ms.custom: 
+title: puntos de conexión de servicio y direccionamiento de la cola
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>puntos de conexión de servicio y direccionamiento de la cola
 En este tema se aborda cómo los clientes direccionan servicios que leen de las colas y cómo los puntos de conexión de servicio se asignan a las colas. A modo de recordatorio, la ilustración siguiente muestra la implementación clásica de aplicaciones puestas en la cola [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -32,7 +34,7 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
  Nombres de ruta de acceso están asignados a "FormatNames" para determinar aspectos adicionales de la dirección, incluido el protocolo de transferencia de administrador de cola y enrutamiento. El Administrador de la cola admite dos protocolos de transferencia: protocolo MSMQ nativo y SOAP Reliable Messaging Protocol (SRMP).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Los nombres de ruta de acceso y el formato MSMQ, vea [acerca de Message Queue Server](http://go.microsoft.com/fwlink/?LinkId=94837).  
+ Para obtener más información acerca de los nombres de ruta de acceso y el formato MSMQ, vea [acerca de Message Queue Server](http://go.microsoft.com/fwlink/?LinkId=94837).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding y direccionamiento del servicio  
  Al direccionar un mensaje a un servicio, el esquema en el URI se selecciona basándose en el transporte utilizado para la comunicación. Cada transporte en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tiene un esquema único. El esquema debe reflejar la naturaleza de transporte utilizada para la comunicación. Por ejemplo, net.tcp, net.pipe, HTTP, etc.  
@@ -41,7 +43,7 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
  El direccionamiento de una cola en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está basado en el patrón siguiente:  
   
- net.msmq: // \<*host-name*> / [private/] \<*queue-name*>  
+ NET.MSMQ: / / \< *nombre de host*> / [privada /] \< *nombre de la cola*>  
   
  donde:  
   
@@ -49,7 +51,7 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
 -   [privado] es opcional. Se utiliza al direccionar una cola de destino que es una cola privada. Para direccionar una cola pública, no debe especificar privado. Tenga en cuenta que, a diferencia de las rutas de acceso de MSMQ, no hay "$" en el formulario URI[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
--   \<*nombre de la cola*> es el nombre de la cola. El nombre de la cola también puede hacer referencia a una subcola. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
+-   \<*nombre de la cola*> es el nombre de la cola. El nombre de la cola también puede hacer referencia a una subcola. Por lo tanto, \< *nombre de la cola*> = \< *nombre de cola*> [; *nombre de subdirectorio queue*].  
   
  Ejemplo1: Para direccional una cola privada PurchaseOrders hospedada en el equipo abc atadatum.com, el URI sería net.msmq://abc.adatum.com/private/PurchaseOrders.  
   
@@ -83,9 +85,9 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
 |Dirección de cola basada en URI WCF|Utilizar la propiedad de Active Directory|Propiedad del protocolo de transferencia de la cola|Nombres de formato de MSMQ resultantes|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net.msmq://\<machine-name>/private/abc|False (valor predeterminado)|Native (valor predeterminado)|DIRECT=OS:machine-name\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
-|Net.msmq://\<machine-name>/private/abc|True|Nativo|PUBLIC=some-guid (el GUID de la cola)|  
+|NET.MSMQ://\<machine-name >/private/abc|False (valor predeterminado)|Native (valor predeterminado)|DIRECT=OS:machine-name\private$\abc|  
+|NET.MSMQ://\<machine-name >/private/abc|False|SRMP|DIRECT =http://machine/msmq/private$/ abc|  
+|NET.MSMQ://\<machine-name >/private/abc|True|Nativo|PUBLIC=some-guid (el GUID de la cola)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Leer los mensajes de la cola de mensajes no enviados o la cola de mensajes dudosos  
  Para leer los mensajes de una cola de mensajes dudosos que es una subcola de la cola de destino, abra `ServiceHost` con la dirección de la subcola.  
@@ -98,20 +100,20 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
  Al utilizar una cola de mensajes no enviados personalizada, observe que la cola de mensajes no enviados debe estar situada en el equipo local. Como tal, el URI para la cola de mensajes no enviados está restringido a la forma:  
   
- net.msmq: //localhost/ [private/]  \<*custom-dead-letter-queue-name*>.  
+ NET.MSMQ: //localhost/ [privada /] \< *personalizado no enviados letra cola nombre*>.  
   
  Un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comprueba que todos los mensajes que recibe se direccionaron a la cola específica en la que está escuchando. Si la cola de destino del mensaje no coincide con la cola donde se encuentra, el servicio no procesa el mensaje. Se trata de una cuestión que los servicios que escuchan a una cola de mensajes no enviados deben abordar porque cualquier mensaje en la cola de mensajes no enviados debía ser entregado a otra parte. Para leer los mensajes de una cola de mensajes no enviados o de una cola de mensajes dudosos, debe utilizarse `ServiceBehavior` con el parámetro <xref:System.ServiceModel.AddressFilterMode.Any>. Para obtener un ejemplo, vea [colas de mensajes no enviados](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding y direccionamiento del servicio  
  `MsmqIntegrationBinding` se utiliza para la comunicación con aplicaciones MSMQ tradicionales. Para facilitar la interoperación con una aplicación MSMQ existente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite solo el direccionamiento del nombre de formato. Por consiguiente, los mensajes enviados utilizando este enlace deben cumplir el esquema del URI:  
   
- msmq.formatname:\<*MSMQ-format-name*>>  
+ MSMQ.FormatName:\<*nombre de formato de MSMQ*>>  
   
  El nombre de formato de MSMQ tiene el formato especificado por MSMQ en [acerca de Message Queue Server](http://go.microsoft.com/fwlink/?LinkId=94837).  
   
  Observe que solo puede utilizar los nombres de formato directos, y los nombres de formato públicos y privados (requiere la integración de Active Directory) al recibir los mensajes de una cola utilizando `MsmqIntegrationBinding`. Sin embargo, se aconseja que utilice los nombres de formato directos. Por ejemplo, en [!INCLUDE[wv](../../../../includes/wv-md.md)], al utilizar cualquier otro nombre de formato se produce un error porque el sistema intenta abrir una subcola que solo se puede abrir con nombres de formato directos.  
   
- Al direccionar SRMP utilizando `MsmqIntegrationBinding`, no hay ningún requisito para agregar /msmq/ en el nombre de formato directo para ayudar a Internet Information Services (IIS) con la distribución. Por ejemplo: Al direccionar una cola abc utilizando el protocolo SRMP, en lugar de DIRECT=http://adatum.com/msmq/private$/abc, debería utilizar DIRECT=http://adatum.com/private$/abc.  
+ Al direccionar SRMP utilizando `MsmqIntegrationBinding`, no hay ningún requisito para agregar /msmq/ en el nombre de formato directo para ayudar a Internet Information Services (IIS) con la distribución. Por ejemplo: al direccionar una cola abc utilizando el SRMP de protocolo, en lugar de DIRECT =http://adatum.com/msmq/private$/ abc, debería utilizar DIRECT =http://adatum.com/private$/ abc.  
   
  Observe que no puede utilizar net.msmq:// direccionando con `MsmqIntegrationBinding`. Dado que `MsmqIntegrationBinding` admite el direccionamiento de nombre de formato MSMQ de forma libre, puede utilizar un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que utilice este enlace para utilizar las características de multidifusión y la lista de distribución en MSMQ. Una excepción es especificar `CustomDeadLetterQueue` al utilizar `MsmqIntegrationBinding`. Debe tener la forma net.msmq://, similar a cómo se especifica utilizando `NetMsmqBinding`.  
   

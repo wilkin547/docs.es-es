@@ -1,28 +1,28 @@
 ---
-title: "Utilización de enlaces para configurar servicios y clientes"
-ms.custom: 
+title: Utilización de enlaces para configurar servicios y clientes
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-caps.latest.revision: 
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e63bb0b44e19ec9186096a819801ea05195b5523
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 68c8c2c93ce29147247c332848025fd931bf7854
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Utilización de enlaces para configurar servicios y clientes
 Los enlaces son los objetos que especifican los datos de comunicación exigidos para conectar a un punto de conexión. Más específicamente, los enlaces contienen información de configuración utilizada para crear el cliente o servicio en tiempo de ejecución mediante la definición de las características de transportes, formatos de la conexión (codificación de mensajes) y protocolos que se utilizarán en el extremo respectivo o canal de cliente. Para crear un servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] en funcionamiento, cada extremo del servicio exige un enlace. Este tema explica qué enlaces son, cómo se definen, y cómo se especifica un enlace determinado para un extremo.  
@@ -53,7 +53,7 @@ Los enlaces son los objetos que especifican los datos de comunicación exigidos 
  Para obtener una lista completa de los enlaces proporcionados por el sistema, con descripciones, consulte [enlaces proporcionados](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="custom-bindings"></a>Enlaces personalizados  
- Si la colección de enlaces proporcionada por el sistema no tiene la combinación correcta de características que necesita una aplicación de servicio, puede crear un enlace <xref:System.ServiceModel.Channels.CustomBinding>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]los elementos de un <xref:System.ServiceModel.Channels.CustomBinding> enlace, consulte [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) y [enlaces personalizados](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Si la colección de enlaces proporcionada por el sistema no tiene la combinación correcta de características que necesita una aplicación de servicio, puede crear un enlace <xref:System.ServiceModel.Channels.CustomBinding>. Para obtener más información acerca de los elementos de un <xref:System.ServiceModel.Channels.CustomBinding> enlace, consulte [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) y [enlaces personalizados](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="using-bindings"></a>Utilizar los enlaces  
  El uso de enlaces conlleva dos pasos básicos:  

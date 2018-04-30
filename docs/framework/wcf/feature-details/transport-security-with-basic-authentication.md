@@ -1,30 +1,32 @@
 ---
-title: "Seguridad de transporte con autenticación básica"
-ms.custom: 
+title: Seguridad de transporte con autenticación básica
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: fe6b996c37e66f41c3946b8ef3437f8fa82c5201
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7430767c80515d14ae23e17ae2b94e0acc97ff30
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transport-security-with-basic-authentication"></a>Seguridad de transporte con autenticación básica
-La ilustración siguiente muestra un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y cliente. El servidor necesita un certificado X.509 válido que se puede utilizar para Capa de sockets seguros (SSL) y los clientes deben confiar en el certificado del servidor. Además, el servicio web ya tiene una implementación SSL que se puede usar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Cómo habilitar la autenticación básica en Internet Information Services (IIS), consulte [http://go.microsoft.com/fwlink/?LinkId=83822](http://go.microsoft.com/fwlink/?LinkId=83822).  
+La ilustración siguiente muestra un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y cliente. El servidor necesita un certificado X.509 válido que se puede utilizar para Capa de sockets seguros (SSL) y los clientes deben confiar en el certificado del servidor. Además, el servicio web ya tiene una implementación SSL que se puede usar. Para obtener más información acerca de cómo habilitar la autenticación básica en Internet Information Services (IIS), consulte [ http://go.microsoft.com/fwlink/?LinkId=83822 ](http://go.microsoft.com/fwlink/?LinkId=83822).  
   
  ![Seguridad de transporte con autenticación básica](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")  
   

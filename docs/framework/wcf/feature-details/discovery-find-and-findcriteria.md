@@ -1,27 +1,29 @@
 ---
-title: "Búsqueda de detección y FindCriteria"
-ms.custom: 
+title: Búsqueda de detección y FindCriteria
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 470fb0788aa3407fff14d1e4df4a89180c5e079d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>Búsqueda de detección y FindCriteria
-La operación de búsqueda de detección la inicia un cliente para detectar uno o más servicios, y es una de las acciones principales en detección. Al realizar una búsqueda, se envía un mensaje de sondeo de WS-Discovery a través de la red. Los servicios que coinciden con los criterios especificados responden con mensajes ProbeMatch de WS-Discovery. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]mensajes de detección, consulte el [especificación de WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
+La operación de búsqueda de detección la inicia un cliente para detectar uno o más servicios, y es una de las acciones principales en detección. Al realizar una búsqueda, se envía un mensaje de sondeo de WS-Discovery a través de la red. Los servicios que coinciden con los criterios especificados responden con mensajes ProbeMatch de WS-Discovery. Para obtener más información acerca de los mensajes de detección, consulte el [especificación de WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
  La clase <xref:System.ServiceModel.Discovery.DiscoveryClient> proporciona el mecanismo para realizar las operaciones de búsqueda y facilita la realización de operaciones del cliente de detección. Contiene un método <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, que realiza una búsqueda sincrónica (con bloqueo), y un método <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A>, que inicia una búsqueda asincrónica sin bloqueo. Ambos métodos toman un parámetro <xref:System.ServiceModel.Discovery.FindCriteria> y proporcionan resultados al usuario a través de un objeto <xref:System.ServiceModel.Discovery.FindResponse>.  
@@ -39,7 +41,7 @@ La operación de búsqueda de detección la inicia un cliente para detectar uno 
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> realiza una comparación básica de cadenas con distinción entre mayúsculas y minúsculas.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>coincide por segmentos separados por "/". Una búsqueda de http://contoso/building1 coincide con un servicio con el ámbito http://contoso/building/floor1. Tenga en cuenta que no coincide con http://contoso/building100 porque los dos últimos segmentos no coinciden.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> coincide por segmentos separados por "/". Una búsqueda de http://contoso/building1 coincide con un servicio con ámbito http://contoso/building/floor1. Tenga en cuenta que no coincide http://contoso/building100 porque los dos últimos segmentos no coinciden.  
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> coincide con ámbitos por segmentos mediante una dirección LDAP URL.  
   

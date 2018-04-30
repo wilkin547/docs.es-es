@@ -1,28 +1,28 @@
 ---
-title: "Seguridad del transporte con autenticación de certificados"
-ms.custom: 
+title: Seguridad del transporte con autenticación de certificados
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-caps.latest.revision: 
+caps.latest.revision: 20
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 632d4cc19c19342363228a1e86b1ba6445d14ac9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 19b54739d82fe7363319211d3f753416e0966aed
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Seguridad del transporte con autenticación de certificados
 En este tema se tratan los certificados X.509 para la autenticación de servidores y clientes cuando se usa la seguridad de transporte. Para obtener más información acerca de X.509 certificados Consulte [certificados de clave pública X.509](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx). Certificados deben emitirse por una entidad de certificación, que a menudo es un emisor de terceros de certificados. En un dominio de servidor de Windows, se pueden usar los Servicios de servidor de certificados de Active Directory para emitir certificados a los equipos cliente del dominio. Para obtener más información, consulte [servicios de Certificate Server de Windows 2008 R2](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). En este escenario, el servicio se hospeda bajo Internet Information Services (IIS) que se configura con capa de sockets seguros (SSL). El servidor se configura con un certificado SSL (X.509) para que los clientes puedan comprobar la identidad del servidor. El cliente también se configura con un certificado X.509 que permite que el servicio compruebe la identidad del cliente. El cliente debe confiar en el certificado del servidor y este, en el certificado del cliente. Los mecanismos reales de comprobación por parte del servicio y del cliente de sus respectivas identidades no se trata en el ámbito de este tema. Para obtener más información, consulte [la firma Digital en Wikipedia](http://go.microsoft.com/fwlink/?LinkId=253157).  
@@ -31,7 +31,7 @@ En este tema se tratan los certificados X.509 para la autenticación de servidor
   
  ![Uso de certificados de transferencia segura](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]uso de un certificado con un servicio, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) y [Cómo: configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). En la tabla siguiente se describen las distintas características del escenario.  
+ Para obtener más información sobre el uso de un certificado con un servicio, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) y [Cómo: configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). En la tabla siguiente se describen las distintas características del escenario.  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  

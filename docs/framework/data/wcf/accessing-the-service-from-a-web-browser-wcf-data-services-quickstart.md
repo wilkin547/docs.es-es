@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c9ae96facd79ae3d268c630ff7bf8adf411eb775
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5550e97d97adf28a84566c5d7936369656c65e43
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Acceder al servicio desde un explorador web (Inicio rápido de Data Services de WCF)
 En esta tarea, iniciará [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] desde Visual Studio y, opcionalmente, deshabilitará la lectura de fuentes en el explorador web. A continuación, se recuperará el documento de definición de servicio así como acceso a los recursos del servicio de datos enviando solicitudes GET de HTTP a través de un explorador Web a los recursos expuestos.  
   
 > [!NOTE]
->  De forma predeterminada, Visual Studio asigna automáticamente un número de puerto al URI `localhost` en el equipo. En esta tarea se usa el número de puerto `12345` en los ejemplos de URI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo establecer un número de puerto específico en su proyecto vea de Visual Studio [crear el servicio de datos](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
+>  De forma predeterminada, Visual Studio asigna automáticamente un número de puerto al URI `localhost` en el equipo. En esta tarea se usa el número de puerto `12345` en los ejemplos de URI. Para obtener más información sobre cómo establecer un número de puerto específico en el proyecto de Visual Studio Vea [crear el servicio de datos](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
   
 ### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Para solicitar el documento de servicio predeterminado utilizando Internet Explorer  
   

@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b0c59c0688fca53a7c7623330f3fdba4f5defd88
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6eb5381438aa082eae8b4252bbd1cf343ba0ebf7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-services-overview"></a>Información general de servicios de flujo de trabajo
-Los servicios de flujo de trabajo son servicios basados en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se implementan mediante flujos de trabajo. Los servicios de flujo de trabajo son flujos de trabajo que usan las actividades de mensajería para enviar y recibir mensajes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. .NET Framework 4.5 presenta varias actividades de mensajería que permiten enviar y recibir mensajes dentro de un flujo de trabajo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] actividades de mensajería y cómo se puede usar para implementar patrones de intercambio de mensajes diferente, consulte [actividades de mensajería](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
+Los servicios de flujo de trabajo son servicios basados en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se implementan mediante flujos de trabajo. Los servicios de flujo de trabajo son flujos de trabajo que usan las actividades de mensajería para enviar y recibir mensajes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. .NET Framework 4.5 presenta varias actividades de mensajería que permiten enviar y recibir mensajes dentro de un flujo de trabajo. Para obtener más información acerca de la mensajería de actividades y cómo se puede usar para implementar patrones de intercambio de mensajes diferente, consulte [actividades de mensajería](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
   
 ## <a name="benefits-of-using-workflow-services"></a>Ventajas de utilizar servicios de flujo de trabajo  
  Cuando las aplicaciones están cada vez más distribuidas, los servicios individuales se convierten en los responsables de llamar a otros servicios para descargar parte del trabajo. La implementación de estas llamadas como operaciones asincrónicas crea cierta complejidad en el código. El control de errores agrega complejidad, ya que hay que administrar excepciones y proporcionar información de seguimiento detallada. Algunos servicios suelen ejecutarse durante mucho tiempo y pueden ocupar valiosos recursos del sistema mientras esperan recibir información. Debido a estos problemas, las aplicaciones distribuidas suelen ser muy complejas y difíciles de escribir y mantener. Los flujos de trabajo son una manera natural de expresar la coordinación del trabajo asincrónico, sobre todo las llamadas a servicios externos. Los flujos de trabajo también son eficaces para representar procesos de negocio de ejecución prolongada. Son estas calidades las que convierten el flujo de trabajo en un gran recurso para compilar servicios en un entorno distribuido.  

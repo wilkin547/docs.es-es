@@ -1,28 +1,28 @@
 ---
 title: Equilibrio de carga
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5874d7237608331e5d8284a4ad1cd94ba6fb3451
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe13c4aee41cd7af188ccaea77b3c0af07603e2c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="load-balancing"></a>Equilibrio de carga
 Una manera de aumentar la capacidad de las aplicaciones de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] es escalarlas horizontalmente implementándolas en una granja de servidores con carga equilibrada. Las aplicaciones de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] pueden tener equilibrio de carga mediante técnicas estándar de equilibrio de carga, incluidos los equilibradores de carga de software como Equilibrio de carga de red de Windows junto con dispositivos de equilibrio de carga basados en hardware.  
@@ -90,7 +90,7 @@ Una manera de aumentar la capacidad de las aplicaciones de [!INCLUDE[indigo1](..
 </configuration>  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] los puntos de conexión, enlaces y comportamientos predeterminados, consulte [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Para obtener más información acerca de los puntos de conexión de forma predeterminada, los enlaces y los comportamientos, consulte [configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>Equilibrio de carga con los enlaces WSHttp y WSDualHttp  
  <xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.WSDualHttpBinding> pueden tener la carga equilibrada gracias a las técnicas de equilibrio de carga de HTTP siempre que se hagan algunas modificaciones a la configuración de enlace predeterminada.  

@@ -1,31 +1,31 @@
 ---
-title: "Información general sobre efectos de imagen"
-ms.custom: 
+title: Información general sobre efectos de imagen
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-caps.latest.revision: 
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0f642c699a0ecf3e3cce328363f90110766002e0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 841c854b7bbe2042d3a7aebd74dfe9421e71be2b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="bitmap-effects-overview"></a>Información general sobre efectos de imagen
-Los efectos de imagen permiten a desarrolladores y diseñadores aplicar efectos visuales al contenido [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] representado. Por ejemplo, los efectos de imagen permiten aplicar con más facilidad un <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> efecto o un efecto de desenfoque a una imagen o un botón.  
+Los efectos de imagen permiten a los diseñadores y desarrolladores para aplicar efectos visuales para representan contenido Windows Presentation Foundation (WPF). Por ejemplo, los efectos de imagen permiten aplicar con más facilidad un <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> efecto o un efecto de desenfoque a una imagen o un botón.  
   
 > [!IMPORTANT]
 >  En el [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] o una versión posterior, la <xref:System.Windows.Media.Effects.BitmapEffect> clase está obsoleta. Si intenta utilizar el <xref:System.Windows.Media.Effects.BitmapEffect> (clase), obtendrá una excepción obsoleta. La alternativa no obsoleta a la <xref:System.Windows.Media.Effects.BitmapEffect> clase es la <xref:System.Windows.Media.Effects.Effect> clase. En la mayoría de los casos, la <xref:System.Windows.Media.Effects.Effect> clase es significativamente más rápida.  
@@ -38,15 +38,15 @@ Los efectos de imagen permiten a desarrolladores y diseñadores aplicar efectos 
   
  Como caso especial, en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], efectos se pueden establecer como propiedades en vivo <xref:System.Windows.Media.Visual> objetos, como un <xref:System.Windows.Controls.Button> o <xref:System.Windows.Controls.TextBox>. El procesamiento de píxeles se aplica y se representa en tiempo de ejecución. En este caso, en el momento de la representación, un <xref:System.Windows.Media.Visual> se convierte automáticamente en su <xref:System.Windows.Media.Imaging.BitmapSource> equivalentes y se introduce como entrada para el <xref:System.Windows.Media.Effects.BitmapEffect>. El resultado reemplaza la <xref:System.Windows.Media.Visual> comportamiento de representación predeterminado del objeto. Se trata de por qué <xref:System.Windows.Media.Effects.BitmapEffect> objetos forzar objetos visuales que no se representarán en software solo es decir, aceleración de hardware en objetos visuales cuando se aplican efectos.  
   
--   <xref:System.Windows.Media.Effects.BlurBitmapEffect>simula un objeto que aparece fuera de foco.  
+-   <xref:System.Windows.Media.Effects.BlurBitmapEffect> simula un objeto que aparece fuera de foco.  
   
--   <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect>crea un halo de color alrededor del perímetro de un objeto.  
+-   <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> crea un halo de color alrededor del perímetro de un objeto.  
   
--   <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>crea una sombra detrás de un objeto.  
+-   <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> crea una sombra detrás de un objeto.  
   
--   <xref:System.Windows.Media.Effects.BevelBitmapEffect>crea un bisel que eleva la superficie de una imagen según una curva especificada.  
+-   <xref:System.Windows.Media.Effects.BevelBitmapEffect> crea un bisel que eleva la superficie de una imagen según una curva especificada.  
   
--   <xref:System.Windows.Media.Effects.EmbossBitmapEffect>crea un mapa de rugosidad de un <xref:System.Windows.Media.Visual> para dar la impresión de profundidad y textura de una fuente de luz artificial.  
+-   <xref:System.Windows.Media.Effects.EmbossBitmapEffect> crea un mapa de rugosidad de un <xref:System.Windows.Media.Visual> para dar la impresión de profundidad y textura de una fuente de luz artificial.  
   
 > [!NOTE]
 >  Los efectos de imagen de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se representan en modo de software. Cualquier objeto que aplique un efecto también se representará en software. El rendimiento disminuye al máximo al usar los efectos de imagen en objetos visuales grandes o al animar las propiedades de un efecto de imagen. Esto no quiere decir que no se deben usar efectos de imagen de esta manera en absoluto, pero hay que tener cuidado y probarlos exhaustivamente para asegurarse de que los usuarios obtengan la experiencia esperada.  
@@ -56,7 +56,7 @@ Los efectos de imagen permiten a desarrolladores y diseñadores aplicar efectos 
   
 <a name="applyeffects"></a>   
 ## <a name="how-to-apply-an-effect"></a>Cómo aplicar un efecto  
- <xref:System.Windows.Media.Effects.BitmapEffect>es una propiedad de <xref:System.Windows.Media.Visual>. Por lo tanto, aplicar efectos a los objetos visuales, como un <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Image>, <xref:System.Windows.Media.DrawingVisual>, o <xref:System.Windows.UIElement>, es tan sencillo como establecer una propiedad. <xref:System.Windows.UIElement.BitmapEffect%2A>se puede establecer en un único <xref:System.Windows.Media.Effects.BitmapEffect> objeto o varios efectos se pueden encadenar mediante el uso de la <xref:System.Windows.Media.Effects.BitmapEffectGroup> objeto.  
+ <xref:System.Windows.Media.Effects.BitmapEffect> es una propiedad de <xref:System.Windows.Media.Visual>. Por lo tanto, aplicar efectos a los objetos visuales, como un <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Image>, <xref:System.Windows.Media.DrawingVisual>, o <xref:System.Windows.UIElement>, es tan sencillo como establecer una propiedad. <xref:System.Windows.UIElement.BitmapEffect%2A> se puede establecer en un único <xref:System.Windows.Media.Effects.BitmapEffect> objeto o varios efectos se pueden encadenar mediante el uso de la <xref:System.Windows.Media.Effects.BitmapEffectGroup> objeto.  
   
  En el ejemplo siguiente se muestra cómo aplicar un <xref:System.Windows.Media.Effects.BitmapEffect> en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   

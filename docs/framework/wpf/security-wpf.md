@@ -27,20 +27,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 134efba11742ab9cc8da2dfab77c233b52f1bcf1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 51b940d4a2463be7aaea9d0ff8e48e2b9f47363a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-wpf"></a>Seguridad (WPF)
-<a name="introduction"></a> Al desarrollar [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] independientes y las aplicaciones hospedadas en explorador, debe tener en cuenta el modelo de seguridad. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicaciones independientes se ejecutan con permisos restringidos ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** conjunto de permisos), si se implementan mediante Windows Installer (.msi), XCopy, o [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. No se admite la implementación de aplicaciones de WPF independientes y de confianza parcial con ClickOnce. Sin embargo, una aplicación host de plena confianza puede crear una relación de confianza parcial <xref:System.AppDomain> utilizando el modelo de complemento de .NET Framework. Para obtener más información, consulte [WPF Add-Ins Overview](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+<a name="introduction"></a> Al desarrollar independiente de Windows Presentation Foundation (WPF) y las aplicaciones hospedadas en explorador, debe tener en cuenta el modelo de seguridad. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicaciones independientes se ejecutan con permisos restringidos ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** conjunto de permisos), si se implementan mediante Windows Installer (.msi), XCopy, o [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. No se admite la implementación de aplicaciones de WPF independientes y de confianza parcial con ClickOnce. Sin embargo, una aplicación host de plena confianza puede crear una relación de confianza parcial <xref:System.AppDomain> utilizando el modelo de complemento de .NET Framework. Para obtener más información, consulte [WPF Add-Ins Overview](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicaciones hospedadas en explorador se hospedan en [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] o Firefox, y puede ser [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] o malas [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] documentos para obtener más información, consulte [WPF XAML Browser Applications Overview](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicaciones hospedadas en explorador que se ejecutan dentro de un espacio aislado la seguridad de confianza parcial, de forma predeterminada, que está limitado en el valor predeterminado [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** conjunto de permisos de la zona. Esto se aislará [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicaciones hospedadas en explorador desde el equipo cliente de la misma manera que se esperaría aislar las aplicaciones Web típicas. XBAP puede elevar los privilegios hasta Plena confianza en función de la zona de seguridad de la dirección URL de implementación y la configuración de seguridad del cliente. Para obtener más información, vea [Seguridad de confianza parcial de WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
- Este tema describe el modelo de seguridad para [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] independiente y las aplicaciones hospedadas en explorador.  
+ En este tema se describe el modelo de seguridad para independiente de Windows Presentation Foundation (WPF) y las aplicaciones hospedadas en explorador.  
   
  Este tema contiene las siguientes secciones:  
   

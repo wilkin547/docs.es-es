@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d20d4c39a6cca744ac981d1a143d2847d9b20e5a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bc962b328f2321d1cfb016b78a53307b43fac30d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Desarrollar e implementar WCF Data Services
 En este tema se proporciona información sobre el desarrollo y la implementación de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Para obtener más información básica sobre [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], consulte [Introducción](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) y [Introducción](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -80,7 +80,7 @@ En este tema se proporciona información sobre el desarrollo y la implementació
   
 3.  **Entorno de desarrollo de Microsoft Azure**  
   
-     Windows Azure Tools para Visual Studio incluye un conjunto integrado de herramientas para desarrollar los servicios de Windows Azure en Visual Studio. Con estas herramientas, puede desarrollar un servicio de datos que se puede implementar en Microsoft Azure y que puede probar en el equipo local antes de su implementación. Use estas herramientas cuando se usa Visual Studio para desarrollar un servicio de datos que se ejecuta en la plataforma Windows Azure. Puede descargar Windows Azure Tools para Visual Studio desde el [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo desarrollar un servicio de datos que se ejecute en Microsoft Azure, consulte la publicación [Deploying an OData Service in Microsoft Azure (Implementación de un servicio de OData en Microsoft Azure)](http://go.microsoft.com/fwlink/?LinkId=201847).  
+     Windows Azure Tools para Visual Studio incluye un conjunto integrado de herramientas para desarrollar los servicios de Windows Azure en Visual Studio. Con estas herramientas, puede desarrollar un servicio de datos que se puede implementar en Microsoft Azure y que puede probar en el equipo local antes de su implementación. Use estas herramientas cuando se usa Visual Studio para desarrollar un servicio de datos que se ejecuta en la plataforma Windows Azure. Puede descargar Windows Azure Tools para Visual Studio desde el [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). Para obtener más información acerca de cómo desarrollar un servicio de datos que se ejecuta en Windows Azure, vea la entrada [Deploying an OData Service implementación en Windows Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="development-tips"></a>Sugerencias de desarrollo  
  Debe plantearse lo siguiente cuando desarrolle un servicio de datos:  
@@ -116,21 +116,21 @@ En este tema se proporciona información sobre el desarrollo y la implementació
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Opciones de la implementación de un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicación, consulte [Web Deployment Overview para Visual Studio y ASP.NET](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
+     Para obtener más información acerca de las opciones de implementación para una [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicación, consulte [Web Deployment Overview para Visual Studio y ASP.NET](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
   
     > [!TIP]
     >  Antes de intentar implementar el servicio de datos en IIS, asegúrese de haber probado la implementación en un servidor web que esté ejecutando IIS. Para obtener más información, consulta [Cómo: Desarrollar un servicio de datos WCF que se ejecuta en IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
 -   **Windows Azure**  
   
-     Puede implementar un servicio de datos en Windows Azure con Windows Azure Tools para Visual Studio. Puede descargar Windows Azure Tools para Visual Studio desde el [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la implementación de un servicio de datos en Microsoft Azure, consulte la publicación [Deploying an OData Service in Microsoft Azure (Implementación de un servicio de OData en Microsoft Azure)](http://go.microsoft.com/fwlink/?LinkId=201847).  
+     Puede implementar un servicio de datos en Windows Azure con Windows Azure Tools para Visual Studio. Puede descargar Windows Azure Tools para Visual Studio desde el [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=201848). Para obtener más información sobre cómo implementar un servicio de datos en Windows Azure, vea la entrada [Deploying an OData Service implementación en Windows Azure](http://go.microsoft.com/fwlink/?LinkId=201847).  
   
 ### <a name="deployment-considerations"></a>Consideraciones de implementación  
  Debe plantearse lo siguiente cuando implemente un servicio de datos:  
   
 -   Al implementar un servicio de datos que usa el proveedor de [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] para tener acceso a una base de datos de SQL Server, también podría tener que propagar estructuras de datos, datos o ambos con su implementación del servicio de datos. Visual Studio puede crear automáticamente scripts (archivos. SQL) para hacer esto en la base de datos de destino y estos scripts se pueden incluir en el paquete de implementación Web de un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicación. Para obtener más información, consulte [NIB: Cómo: implementar una base de datos con un proyecto de aplicación Web](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Para una [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sitio Web, se puede hacer esto con el **Asistente para publicación de base de datos** en Visual Studio. Para obtener más información, consulta [implementar una base de datos mediante el Asistente para publicación de base de datos](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
--   Dado que [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye una implementación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] básica, puede usar Windows Server AppFabric para supervisar un servicio de datos implementado en IIS que se ejecuta en Windows Server. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] el uso de la supervisión de un servicio de datos con Windows Server AppFabric, consulte la publicación [Tracking WCF Data Services with Windows Server AppFabric (Seguimiento de WCF Data Services con Windows Server AppFabric)](http://go.microsoft.com/fwlink/?LinkID=202005).  
+-   Dado que [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye una implementación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] básica, puede usar Windows Server AppFabric para supervisar un servicio de datos implementado en IIS que se ejecuta en Windows Server. Para obtener más información acerca del uso de Windows Server AppFabric para supervisar un servicio de datos, vea la entrada [seguimiento WCF Data Services con Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   
 ## <a name="see-also"></a>Vea también  
  [Hospedaje del servicio de datos](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  

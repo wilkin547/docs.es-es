@@ -1,33 +1,33 @@
 ---
-title: "Integración de AJAX y compatibilidad de JSON"
-ms.custom: 
+title: Integración de AJAX y compatibilidad de JSON
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: cd5c84250349f4adaaac68a302d771280328a4e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0d62da8cf67fb8f996f341018c39146b51e308c3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ajax-integration-and-json-support"></a>Integración de AJAX y compatibilidad de JSON
 La compatibilidad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con JavaScript asincrónico y XML (AJAX) de ASP.NET y el formato de datos de la notación de objetos JavaScript (JSON) permiten a los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exponer las operaciones a los clientes de AJAX. Los clientes de AJAX son páginas web que ejecutan código JavaScript y obtienen acceso a estos servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usando solicitudes HTTP. Los temas de esta sección proporcionan información sobre esta compatibilidad y sobre cómo implementarla.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]AJAX de ASP.NET y su integración con ASP.NET 2.0, vea [información general de AJAX de ASP.NET](http://go.microsoft.com/fwlink/?LinkId=96725).  
+ Para obtener más información acerca de AJAX de ASP.NET y su integración con ASP.NET 2.0, vea [información general de AJAX de ASP.NET](http://go.microsoft.com/fwlink/?LinkId=96725).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Creación de servicios WCF para AJAX de ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  

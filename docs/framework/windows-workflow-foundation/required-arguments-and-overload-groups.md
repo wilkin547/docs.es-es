@@ -1,23 +1,24 @@
 ---
 title: Argumentos necesarios y grupos de sobrecarga
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b6025fb65c5e2d4d0683d302638f8a1d2803662
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e94c65ff722d3b4f98b026d69ecd31bc02b934
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="required-arguments-and-overload-groups"></a>Argumentos necesarios y grupos de sobrecarga
 Se pueden configurar las actividades de manera que sea necesario enlazar algunos argumentos para que la actividad pueda ejecutarse. El atributo `RequiredArgument` se usa para indicar que se necesitan algunos argumentos en una actividad mientras que el atributo `OverloadGroup` se usa para agrupar categorías de argumentos necesarios. Al usar los atributos, los autores de actividades pueden proporcionar configuraciones simples o complejas de validación de actividades.  
@@ -73,7 +74,7 @@ public sealed class Add : CodeActivity<int>
   
  **No se proporcionó el valor para un argumento de actividad necesario 'Operand1'.**  
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]información sobre cómo buscar y controlar errores de validación y advertencias, consulte [invocar validación de actividad](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
+>  Para obtener más información sobre acerca de cómo buscar y controlar errores de validación y advertencias, vea [invocar validación de actividad](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Usar grupos de sobrecargas  
  Los grupos de sobrecargas proporcionan un método para indicar qué combinaciones de argumentos son válidas en una actividad. Los argumentos se agrupan mediante <xref:System.Activities.OverloadGroupAttribute>. A cada grupo se le proporciona un nombre especificado por <xref:System.Activities.OverloadGroupAttribute>. La actividad es válida cuando se enlaza sólo un conjunto de argumentos en un grupo de sobrecargas. En el siguiente ejemplo, tomado de la [OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md) ejemplo, un `CreateLocation` se define la clase.  
