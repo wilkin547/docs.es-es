@@ -1,12 +1,13 @@
 ---
-title: "Información general sobre el control RichTextBox"
-ms.custom: 
+title: Información general sobre el control RichTextBox
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,26 +16,27 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e88afe5f9c35448b3234498af413500bee163abc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ac25413aaf15a18f70eff6114db81fbb6cc5411
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="richtextbox-overview"></a>Información general sobre el control RichTextBox
-El <xref:System.Windows.Controls.RichTextBox> control le permite mostrar o modificar el contenido del flujo como párrafos, imágenes, tablas etc. Este tema se presentan los <xref:System.Windows.Controls.TextBox> clase y proporciona ejemplos de cómo usar tanto en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] y [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
+El <xref:System.Windows.Controls.RichTextBox> control le permite mostrar o modificar el contenido del flujo como párrafos, imágenes, tablas etc. Este tema se presentan los <xref:System.Windows.Controls.TextBox> clase y proporciona ejemplos de cómo usar tanto en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] y C#.  
   
   
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>¿TextBox o RichTextBox?  
  Ambos <xref:System.Windows.Controls.RichTextBox> y <xref:System.Windows.Controls.TextBox> permite a los usuarios editar texto, sin embargo, los dos controles se utilizan en escenarios diferentes. A <xref:System.Windows.Controls.RichTextBox> es una opción mejor cuando es necesario para el usuario editar texto con formato, imágenes, tablas u otro contenido enriquecido. Por ejemplo, editar un documento, artículo o blog que requieran formato, imágenes, etcetera se logra mejor usando un <xref:System.Windows.Controls.RichTextBox>. A <xref:System.Windows.Controls.TextBox> requiere menos recursos del sistema, a continuación, un <xref:System.Windows.Controls.RichTextBox> y resulta ideal cuando solo texto sin formato hay que volver a editar (es decir, el uso de formularios). Vea [información general del cuadro de texto](../../../../docs/framework/wpf/controls/textbox-overview.md) para obtener más información sobre <xref:System.Windows.Controls.TextBox>. En la tabla siguiente se resume las principales características de <xref:System.Windows.Controls.TextBox> y <xref:System.Windows.Controls.RichTextBox>.  
   
-|Control|Revisión ortográfica en tiempo real|Menú contextual|Formato de comandos, como <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr + B)|<xref:System.Windows.Documents.FlowDocument>contenido, como imágenes, párrafos, tablas, etcetera.|  
+|Control|Revisión ortográfica en tiempo real|Menú contextual|Formato de comandos, como <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr + B)|<xref:System.Windows.Documents.FlowDocument> contenido, como imágenes, párrafos, tablas, etcetera.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|Sí|Sí|No|No.|  
 |<xref:System.Windows.Controls.RichTextBox>|Sí|Sí|Sí|Sí|  
