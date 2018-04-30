@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ebaa934ffaed985439ed65b9f5308404171a91bd
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Introducción a Visual Basic
 Esta sección de la documentación sirve como introducción al desarrollo de aplicaciones con Visual Basic.  
@@ -64,7 +64,7 @@ Proporciona una lista de sitios Web y grupos de noticias que le ayudarán a enco
  Explica cómo recibir asistencia y proporcionar información al servicio técnico.  
   
  [Visual Studio](/visualstudio/)  
- Proporciona vínculos a la documentación de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Proporciona vínculos a la documentación de Visual Studio.  
   
  [C#](../../csharp/index.md) Proporciona los vínculos a la documentación sobre desarrollo de aplicaciones con Visual C#.  
   
@@ -72,4 +72,4 @@ Proporciona una lista de sitios Web y grupos de noticias que le ayudarán a enco
  Proporciona vínculos a la documentación de Visual C++.  
   
  [Desarrollo de Office y SharePoint](https://msdn.microsoft.com/library/d2tx7z6d)  
- Proporciona información sobre cómo usar Microsoft Office y [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] como parte de una aplicación empresarial.
+ Proporciona información sobre cómo usar Microsoft Office y Visual Studio como parte de una aplicación empresarial.
