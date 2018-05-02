@@ -1,19 +1,19 @@
 ---
-title: "Arquitectura de las herramientas de la línea de comandos de .NET Core"
-description: "Obtenga información sobre las capas de herramientas de .NET Core y sobre lo que ha cambiado en versiones recientes."
-keywords: .NET Core, MSBuild, arquitectura
+title: Arquitectura de las herramientas de la línea de comandos de .NET Core
+description: Obtenga información sobre las capas de herramientas de .NET Core y sobre lo que ha cambiado en versiones recientes.
 author: blackdwarf
 ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 7fff0f61-ac23-42f0-9661-72a7240a4456
-ms.openlocfilehash: ad34faa0c2577bd5e3a0ba339b19a9ad387e015a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 909e3ba088a3eabededf008fa07a51ac7d677fa2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Introducción de alto nivel de los cambios en las herramientas de .NET Core
 
@@ -34,7 +34,7 @@ Comencemos con un repaso rápido de la disposición en capas de Preview 2, como 
 
 ![Arquitectura de alto nivel de herramientas de Preview 2](media/cli-msbuild-architecture/p2-arch.png)
 
-La disposición en capas de las herramientas es bastante sencilla. En la parte inferior, tenemos como base las herramientas de línea de comandos de .NET Core. Todas las demás herramientas de mayor nivel, como Visual Studio o Visual Studio Code, dependen de la CLI para compilar proyectos, restaurar dependencias, etc. Esto significaba que, por ejemplo, si deseara Visual Studio realizar una operación de restauración, llamaría a en `dotnet restore` ([Véase la nota](#dotnet-restore-note)) en la CLI. 
+La disposición en capas de las herramientas es bastante sencilla. En la parte inferior, tenemos como base las herramientas de línea de comandos de .NET Core. Todas las demás herramientas de mayor nivel, como Visual Studio o Visual Studio Code, dependen de la CLI para compilar proyectos, restaurar dependencias, etc. Esto significa que si, por ejemplo, se quisiera realizar una operación de restauración con Visual Studio, se llamaría al comando `dotnet restore` ([vea la nota](#dotnet-restore-note)) de la CLI. 
 
 Con el paso al nuevo sistema de proyecto, el diagrama anterior cambia: 
 
@@ -45,7 +45,7 @@ La principal diferencia es que la CLI ya no es la base; este papel es ocupado ah
 > [!NOTE]
 > Un "destino" es un término de MSBuild que indica una operación con nombre que puede invocar MSBuild. Normalmente está unido a una o varias tareas que ejecutan alguna lógica que se supone que debe hacer el destino. MSBuild admite michos destinos predefinidos, como `Copy` o `Execute`; también permite a los usuarios escribir sus propias tareas mediante código administrado y definir destinos para ejecutar esas tareas. Para obtener más información, consulte [Tareas de MSBuild](/visualstudio/msbuild/msbuild-tasks). 
 
-Todos los conjuntos de herramientas consumen ahora el componente de SDK compartido y sus destinos, incluida la CLI. Por ejemplo, la próxima versión de Visual Studio no llamará a `dotnet restore` ([Véase la nota](#dotnet-restore-note)) comando para restaurar las dependencias para los proyectos de .NET Core, utilizará el destino de "Restore" directamente. Como son destinos de MSBuild, también puede usar MSBuild sin procesar para ejecutarlos mediante el comando [dotnet msbuild](dotnet-msbuild.md). 
+Todos los conjuntos de herramientas consumen ahora el componente de SDK compartido y sus destinos, incluida la CLI. Por ejemplo, la siguiente versión de Visual Studio no llamará al comando `dotnet restore` ([vea la nota](#dotnet-restore-note)) para restaurar las dependencias para proyectos de .NET Core, sino que usará directamente el destino "Restore". Como son destinos de MSBuild, también puede usar MSBuild sin procesar para ejecutarlos mediante el comando [dotnet msbuild](dotnet-msbuild.md). 
 
 ### <a name="cli-commands"></a>Comandos de la CLI
 El componente de SDK compartido implica que la mayoría de los comandos de la CLI existentes se han vuelto a implementar como tareas y destinos de MSBuild. ¿Qué significa esto para los comandos de la CLI y el uso del conjunto de herramientas? 

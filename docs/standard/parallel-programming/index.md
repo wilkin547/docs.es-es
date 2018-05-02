@@ -1,33 +1,28 @@
 ---
 title: Programación en paralelo en .NET
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parallel programming
-ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1e649bcb37b711d01199bd4e4823a9bb0cac60b4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 679ffe40e525884070ee62662b7a7e5acd7e58ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="parallel-programming-in-net"></a>Programación en paralelo en .NET
-Muchos equipos y estaciones de trabajo tienen dos o cuatro núcleos (es decir, CPU) que permiten ejecutar varios subprocesos simultáneamente. Se espera que los equipos en un futuro cercano tengan significativamente más núcleos. Para aprovecharse del hardware de hoy y del mañana, puede paralelizar el código para distribuir el trabajo entre varios procesadores. En el pasado, la paralelización requería manipulación de bajo nivel de los subprocesos y bloqueos. [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] y [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] mejoran la compatibilidad para la programación paralela proporcionando un nuevo runtime, nuevos tipos de biblioteca de clases y nuevas herramientas de diagnóstico. Estas características simplifican el desarrollo en paralelo, de modo que pueda escribir código paralelo eficaz, específico y escalable de forma natural sin tener que trabajar directamente con subprocesos ni el bloque de subprocesos. La siguiente ilustración proporciona una información general de alto nivel de la arquitectura de programación paralela en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+
+Muchos equipos y estaciones de trabajo tienen varios núcleos de CPU que permiten ejecutar varios subprocesos simultáneamente. Se espera que los equipos en un futuro cercano tengan significativamente más núcleos. Para aprovecharse del hardware de hoy y del mañana, puede paralelizar el código para distribuir el trabajo entre varios procesadores. En el pasado, la paralelización requería manipulación de bajo nivel de los subprocesos y bloqueos. Visual Studio 2010 y .NET Framework 4 mejoran la compatibilidad para la programación paralela proporcionando un nuevo tiempo de ejecución, nuevos tipos de biblioteca de clases y nuevas herramientas de diagnóstico. Estas características simplifican el desarrollo en paralelo, de modo que pueda escribir código paralelo eficaz, específico y escalable de forma natural sin tener que trabajar directamente con subprocesos ni el bloque de subprocesos. La siguiente ilustración proporciona una información general de alto nivel de la arquitectura de programación paralela en .NET Framework 4.
   
- ![Arquitectura de programación en paralelo de .NET](../../../docs/standard/parallel-programming/media/tpl-architecture.png "TPL_Architecture")  
+ ![Arquitectura de programación en paralelo de .NET](./media/tpl-architecture.png "TPL_Architecture")  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
@@ -40,8 +35,8 @@ Muchos equipos y estaciones de trabajo tienen dos o cuatro núcleos (es decir, C
 |[Particionadores personalizados para PLINQ y TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|Describe cómo funcionan los particionadores y cómo configurar particionadores predeterminados o crear nuevos.|  
 |[Programadores de tareas](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|Describe cómo funcionan los programadores y cómo se pueden configurar los programadores predeterminados.|  
 |[Expresiones lambda en PLINQ y TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|Proporciona información general sobre expresiones lambda en C# y Visual Basic, y presenta cómo se utilizan en PLINQ y Task Parallel Library.|  
-|[Información adicional](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|Proporciona vínculos a documentación adicional y recursos de ejemplo sobre programación paralela en .NET Framework.|  
-  
+|[Información adicional](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|Proporciona vínculos a información adicional y recursos de ejemplo para programación paralela en .NET.|  
+
 ## <a name="see-also"></a>Vea también  
- [Patrones para la programación paralela: comprender y aplicar patrones paralelos con .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)  
- [Samples for Parallel Programming with the .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364) (Ejemplos de programación en paralelo con .NET Framework)
+ [Información general de Async](../async.md)  
+ [Subprocesamiento administrado](../threading/index.md)  

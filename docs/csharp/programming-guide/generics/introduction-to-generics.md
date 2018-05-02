@@ -1,5 +1,5 @@
 ---
-title: "Introducción a los genéricos (Guía de programación de C#)"
+title: Introducción a los genéricos (Guía de programación de C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -8,17 +8,17 @@ ms.topic: article
 helpviewer_keywords:
 - generics [C#], about generics
 ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
-caps.latest.revision: 
+caps.latest.revision: 32
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 61baf26c9f942a59e3787ca55a2ac6a824410608
-ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
+ms.openlocfilehash: 30184edbcba47203d8416609b5a28648adf7cbaa
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>Introducción a los genéricos (Guía de programación de C#)
-Las clases y métodos genéricos combinan reusabilidad, seguridad de tipos y eficacia de una manera en que sus homólogos no genéricos no pueden. Los genéricos se usan frecuentemente con colecciones y los métodos que funcionan en ellas. La versión 2.0 de la biblioteca de clases .NET Framework proporciona un nuevo espacio de nombres, <xref:System.Collections.Generic>, que contiene varias clases de colección nuevas basadas en genéricos. Se recomienda que todas las aplicaciones destinadas a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 y versiones posteriores usen las nuevas clases de colección genéricas en lugar de sus homólogas no genéricas anteriores como <xref:System.Collections.ArrayList>. Para obtener más información, vea [Tipos genéricos en la biblioteca de clases de .NET Framework](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md).  
+Las clases y métodos genéricos combinan reusabilidad, seguridad de tipos y eficacia de una manera en que sus homólogos no genéricos no pueden. Los genéricos se usan frecuentemente con colecciones y los métodos que funcionan en ellas. La versión 2.0 de la biblioteca de clases .NET Framework proporciona un nuevo espacio de nombres, <xref:System.Collections.Generic>, que contiene varias clases de colección nuevas basadas en genéricos. Se recomienda que todas las aplicaciones destinadas a .NET Framework 2.0 y versiones posteriores usen las nuevas clases de colección genéricas en lugar de sus homólogas no genéricas anteriores como <xref:System.Collections.ArrayList>. Para más información, vea [Elementos genéricos en .NET](../../../standard/generics/index.md).  
   
  Por supuesto, también se pueden crear tipos y métodos genéricos personalizados para proporcionar soluciones y patrones de diseño generalizados propios con seguridad de tipos y eficaces. En el ejemplo de código siguiente se muestra una clase genérica simple de lista vinculada para fines de demostración. (En la mayoría de los casos, se debe usar la clase <xref:System.Collections.Generic.List%601> proporcionada por la biblioteca de clases .NET Framework en lugar de crear una propia). El parámetro de tipo `T` se usa en diversas ubicaciones donde normalmente se usaría un tipo concreto para indicar el tipo del elemento almacenado en la lista. Se usa de estas formas:  
   

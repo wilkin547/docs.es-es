@@ -1,22 +1,20 @@
 ---
-title: "Telemetría de herramientas de la CLI de .NET Core"
-description: "Descubra las características de telemetría de las herramientas de .NET Core que recopilan información de uso para el análisis, qué datos se recopilan y cómo deshabilitarlas."
-keywords: ".NET,.NET Core,telemetría"
+title: Telemetría de herramientas de la CLI de .NET Core
+description: Descubra las características de telemetría de las herramientas de .NET Core que recopilan información de uso para el análisis, qué datos se recopilan y cómo deshabilitarlas.
 author: richlander
 ms.author: mairaw
 ms.date: 08/04/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 9a78ec370fd53260f26a5d8c15707a5d611e458f
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: b3da69a7fc8de095b3845428af742870e7e737ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-cli-tools-telemetry"></a>Telemetría de herramientas de la CLI de .NET Core
 
@@ -86,7 +84,7 @@ Los datos publicados están disponibles cada trimestre y se muestran en [.NET Co
 
 &#8224;En la columna *Ocurrences* se muestra el número agregado de usos de ese comando para las métricas de esa fila durante ese día. 
 
-&#8225;Normalmente, en la columna *Geography* se muestra el nombre de un país. En algunos casos, el continente de Antártida aparece en esta columna, ya sea debido a los investigadores que usan .NET Core en la Antártida o a datos de ubicación incorrectos.
+& #8225;Normalmente, en la columna *Geography* se muestra el nombre de un país. En algunos casos, el continente de Antártida aparece en esta columna, ya sea debido a los investigadores que usan .NET Core en la Antártida o a datos de ubicación incorrectos.
 
 ### <a name="example"></a>Ejemplo
 

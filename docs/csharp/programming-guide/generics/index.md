@@ -12,11 +12,11 @@ ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
 caps.latest.revision: 23
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0804ca0fcefcc53e06352accf9a2db19edb31037
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 026b8350a75794cf1101bef69d1bf15f474f103d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="generics-c-programming-guide"></a>Genéricos (Guía de programación de C#)
 Los genéricos se han agregado a la versión 2.0 del lenguaje C# y Common Language Runtime (CLR). Los genéricos introducen en .NET Framework el concepto de parámetros de tipo, lo que le permite diseñar clases y métodos que aplazan la especificación de uno o varios tipos hasta que el código de cliente declare y cree una instancia de la clase o el método. Por ejemplo, al usar un parámetro de tipo genérico T puede escribir una clase única que otro código de cliente puede usar sin incurrir en el costo o riesgo de conversiones en tiempo de ejecución u operaciones de conversión boxing, como se muestra aquí:  
@@ -62,8 +62,6 @@ Los genéricos se han agregado a la versión 2.0 del lenguaje C# y Common Langua
   
 -   [Genéricos en el motor en tiempo de ejecución](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
   
--   [Tipos genéricos en la biblioteca de clases de .NET Framework](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md)  
-  
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  Para obtener más información, consulte la [Especificación del lenguaje C#](../../../csharp/language-reference/language-specification/index.md).  
   
@@ -72,4 +70,5 @@ Los genéricos se han agregado a la versión 2.0 del lenguaje C# y Common Langua
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
  [Tipos](../../../csharp/programming-guide/types/index.md)  
  [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)
+ [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
+ [Elementos genéricos en .NET](../../../standard/generics/index.md)  
