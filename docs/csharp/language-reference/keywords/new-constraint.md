@@ -18,7 +18,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="new-constraint-c-reference"></a>Restricción new (Referencia de C#)
-La restricción `new` especifica que ningún tipo de argumento en una declaración de clase genérica debe tener un constructor sin parámetros público. Para usar la restricción new, el tipo no puede ser abstracto.  
+La restricción `new` especifica que cualquier tipo de argumento en una declaración de clase genérica debe tener un constructor sin parámetros público. Para usar la restricción new, el tipo no puede ser abstracto.  
   
 ## <a name="example"></a>Ejemplo  
  Aplique la restricción `new` a un tipo de parámetro cuando la clase genérica cree otras instancias del tipo, tal y como se muestra en el ejemplo siguiente:  
