@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 64829eee5b21a44acb18cbec9b901d77d49cab90
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 7298c87c3e61103577d4262ab2dc2645d7e6265a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework
 
@@ -78,7 +78,7 @@ El resto de este artículo no es pertinente si se toma como destino la versión 
 
 ### <a name="for-tcp-sockets-networking"></a>Para las redes de sockets de TCP
 
-<xref:System.Net.Security.SslStream>, que usa .NET Framework 4.7 y versiones posteriores, elige el sistema operativo predeterminado teniendo en cuenta la mejor opción en cuanto a protocolo de seguridad y versión. Para obtener la mejor opción de sistema operativo predeterminado, si es posible, no use las sobrecargas del método de <xref:System.Net.Security.SslStream> que toman un parámetro <xref:System.Security.Authentication.SslProtocols> explícito. De lo contrario, pase <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>. Se recomienda que no use <xref:System.Security.Authentication.SslProtocols.Default>; el parámetro `SslProtocols.Default` fuerza el uso de SSL 3.0/TLS 1.0 y evita TLS 1.2.
+<xref:System.Net.Security.SslStream>, que usa .NET Framework 4.7 y versiones posteriores, elige el sistema operativo predeterminado teniendo en cuenta la mejor opción en cuanto a protocolo de seguridad y versión. Para obtener la mejor opción de sistema operativo predeterminado, si es posible, no use las sobrecargas del método de <xref:System.Net.Security.SslStream> que toman un parámetro <xref:System.Security.Authentication.SslProtocols> explícito. De lo contrario, pase <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>. Se recomienda no usar <xref:System.Security.Authentication.SslProtocols.Default>; el parámetro `SslProtocols.Default` fuerza el uso de SSL 3.0/TLS 1.0 y evita TLS 1.2.
 
 No establezca un valor para la propiedad <xref:System.Net.ServicePointManager.SecurityProtocol> (para las redes de HTTP).
 
@@ -114,7 +114,7 @@ Si **no** utiliza un enlace personalizado **y** está estableciendo los ajustes 
 
 Siga estas secciones para examinar el código a fin de comprobar que no está configurando una versión específica de TLS o SSL:
 
-### <a name="for-net-framework-46---462-and-not-wfc"></a>Para .NET Framework 4.6 - 4.6.2 y no WFC
+### <a name="for-net-framework-46---462-and-not-wcf"></a>Para .NET Framework 4.6 - 4.6.2 y no WFC
 
 Establezca el conmutador `DontEnableSystemDefaultTlsVersions` `AppContext` en `false`. Vea [Configuring security via AppContext switches](#configuring-security-via-appcontext-switches) (Configuración de la seguridad mediante conmutadores AppContext).
 

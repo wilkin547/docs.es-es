@@ -1,13 +1,6 @@
 ---
-title: "&lt;Borrar&gt; elemento para webRequestModules (configuración de red)"
-ms.custom: 
+title: '&lt;Borrar&gt; elemento para webRequestModules (configuración de red)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
@@ -17,16 +10,14 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 34a814c14cc482bdf5deafceebae253da921736b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4d89fbc757198f25219b8051bf77dbdeea0cef53
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Borrar&gt; elemento para webRequestModules (configuración de red)
 Quita todos los módulos de solicitud Web registrados de la aplicación.  

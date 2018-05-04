@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: cab12426308be258134e0385c5a6eb6cdb5d544b
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Diseño de la capa de persistencia de infraestructura
 
-Los componentes de persistencia de datos proporcionan acceso a los datos que se hospedan dentro de los límites de un microservicio (es decir, la base de datos de un microservicio). Contienen la implementación real de componentes como repositorios y clases de [unidad de trabajo](http://martinfowler.com/eaaCatalog/unitOfWork.html), como los DBContext personalizados de EF.
+Los componentes de persistencia de datos proporcionan acceso a los datos que se hospedan dentro de los límites de un microservicio (es decir, la base de datos de un microservicio). Contienen la implementación real de componentes como repositorios y clases de [unidad de trabajo](https://martinfowler.com/eaaCatalog/unitOfWork.html), como los DBContext personalizados de EF.
 
 ## <a name="the-repository-pattern"></a>El modelo de repositorio
 
@@ -90,7 +90,7 @@ Un objeto de acceso a datos realiza directamente operaciones de acceso y persist
 
 Una unidad de trabajo se conoce como una sola transacción que implica varias operaciones de inserción, actualización o eliminación. En otras palabras, significa que para una acción de usuario específica (por ejemplo, el registro en un sitio web), las transacciones de inserción, actualización o eliminación se administran en una única transacción. Esto es más eficaz que el control de varias transacciones de base de datos de una manera profusa.
 
-Estos operaciones de persistencia múltiples se realizan más adelante en una sola acción cuando el código del nivel de aplicación lo ordena. La decisión sobre cómo aplicar los cambios en memoria al almacenamiento de base de datos real normalmente se basa en el [patrón de unidades de trabajo](http://martinfowler.com/eaaCatalog/unitOfWork.html). En EF, el patrón de unidades de trabajo se implementa como el DBContext.
+Estos operaciones de persistencia múltiples se realizan más adelante en una sola acción cuando el código del nivel de aplicación lo ordena. La decisión sobre cómo aplicar los cambios en memoria al almacenamiento de base de datos real normalmente se basa en el [patrón de unidades de trabajo](https://martinfowler.com/eaaCatalog/unitOfWork.html). En EF, el patrón de unidades de trabajo se implementa como el DBContext.
 
 En muchos casos, este patrón o forma de aplicar operaciones en el almacenamiento puede aumentar el rendimiento de la aplicación y reducir la posibilidad de incoherencias. Además, reduce el bloqueo de transacciones en las tablas de base de datos, ya que todas las operaciones previstas se confirman como parte de una transacción. Esto es más eficaz en comparación con la ejecución de muchas operaciones aisladas en la base de datos. Por tanto, el ORM seleccionado es capaz de optimizar la ejecución en la base de datos mediante la agrupación de varias acciones de actualización en la misma transacción, en lugar de muchas ejecuciones de transacciones pequeñas e independientes.
 
@@ -138,21 +138,21 @@ En las próximas secciones, se explica cómo implementar el patrón de especific
 
 ### <a name="the-repository-pattern"></a>El modelo de repositorio
 
--   **Edward Hieatt y Rob Mee. Modelo de repositorio.**
-    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+-   **Edward Hieatt y Rob Mee. Repository pattern (Patrón de repositorio).**
+    [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
 
--   **El modelo de repositorio**
+-   **The Repository pattern (El patrón de repositorio)**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **Modelo de repositorio: Una persistencia abstracción de datos**
+-   **Repository Pattern: A data persistence abstraction (Patrón de repositorio: una abstracción de persistencia de los datos)**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software** (Diseño guiado por el dominio: abordar la complejidad en el corazón del software). (Libro; incluye una explicación sobre el modelo de repositorio) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software** (Diseño guiado por el dominio: abordar la complejidad en el corazón del software). (Libro; incluye un debate sobre el patrón de repositorio) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Patrón de unidades de trabajo
 
--   **Martin Fowler. Unidad de patrón de trabajo.**
-    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Martin Fowler. Unit of Work pattern (Patrón de unidades de trabajo).**
+    [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
@@ -161,7 +161,7 @@ En las próximas secciones, se explica cómo implementar el patrón de especific
 
 ### <a name="the-specification-pattern"></a>El patrón de especificación
 
--   **El patrón de la especificación.**
+-   **The Specification pattern (Patrón de especificación).**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Evans, Eric (2004). Domain Driven Design (Diseño controlado por dominios). Addison-Wesley. p. 224.**

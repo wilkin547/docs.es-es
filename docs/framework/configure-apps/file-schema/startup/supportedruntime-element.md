@@ -1,9 +1,6 @@
 ---
-title: '&lt;supportedRuntime&gt; Element'
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+title: '&lt;supportedRuntime&gt; elemento'
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime
@@ -15,20 +12,19 @@ ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4b0967790f2bbf8fa9a889c56fa9c5168f7523bd
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 544aaf5a58b743c437b42764bdea3c6b7eea7c74
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; Element
+# <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; elemento
 
 Especifica qué versiones de Common Language Runtime admite la aplicación. Todas las aplicaciones compiladas con la versión 1.1 o posterior de .NET Framework deberían usar este elemento.  
   
 [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
-&nbsp;&nbsp;[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
+&nbsp;&nbsp;[\<Inicio >](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime >**  
   
 ## <a name="syntax"></a>Sintaxis
   
@@ -70,7 +66,7 @@ El `runtime` atributo especifica la versión de Common Language Runtime (CLR) qu
 |2.0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.0-4.7.1|"v4.0"|  
+|4.7.2 4.0|"v4.0"|  
 
 <a name="sku"></a>   
 ## <a name="sku-id-values"></a>Valores de "sku id"
@@ -92,9 +88,10 @@ El `sku` atributo utiliza un moniker de la plataforma de destino (TFM) para indi
 |4.5.2|".NETFramework,Version=v4.5.2"|  
 |4.6|".NETFramework,Version=v4.6"|  
 |4.6.1|".NETFramework,Version=v4.6.1"|  
-|4.6.2|".NETFramework,Version=v4.6.2"|  
-|4.7|".NETFramework,Version=v4.7"|
-|4.7.1|".NETFramework,Version=v4.7.1"|
+|4.6.2|". NETFramework, Version = v4.6.2 "|  
+|4.7|". NETFramework, Version = v4.7 "|
+|4.7.1|". NETFramework, Version = v4.7.1 "|
+|4.7.2|". NETFramework, Version = v4.7.2 "|
 
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo especificar la versión del runtime compatible en un archivo de configuración. El archivo de configuración indica que la aplicación tiene como destino el 4.7 de .NET Framework.  

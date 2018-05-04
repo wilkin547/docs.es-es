@@ -1,6 +1,6 @@
 ---
-title: "Tuplas: Guía de C#"
-description: "Más información sobre tipos de tupla con nombre y sin nombre en C#"
+title: 'Tuplas: Guía de C#'
+description: Más información sobre tipos de tupla con nombre y sin nombre en C#
 keywords: .NET, .NET Core, C#
 author: BillWagner
 ms-author: wiwagn
@@ -10,17 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 58f76332a8f3717fe10788382552598d6693e7e3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 1d1fc450503dc905e6b260a2b984e3ce2315fd45
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla de C# #
 
-Las tuplas de C# son tipos que se definen mediante una sintaxis ligera. Entre otras ventajas, incluyen una sintaxis más sencilla, reglas para conversiones en función de un número (denominadas cardinalidad) y tipos de elementos y reglas coherentes para copias y asignaciones. Como contrapartida, las tuplas no admiten algunas de las expresiones orientadas a objetos que se asocian a la herencia. Puede obtener información general de la sección sobre [tuplas en el tema Novedades de C# 7](whats-new/csharp-7.md#tuples).
+Las tuplas de C# son tipos que se definen mediante una sintaxis ligera. Entre otras ventajas, incluyen una sintaxis más sencilla, reglas para conversiones en función de un número (denominadas cardinalidad) y tipos de elementos y reglas coherentes para copias y asignaciones. Como contrapartida, las tuplas no admiten algunas de las expresiones orientadas a objetos que se asocian a la herencia. Puede obtener información general en la sección sobre [tuplas del tema Novedades de C# 7.0](whats-new/csharp-7.md#tuples).
 
-En este tema, conocerá las reglas del lenguaje que rigen las tuplas en C# 7, distintas formas de usarlas y una guía inicial sobre cómo trabajar con tuplas.
+En este tema conocerá las reglas del lenguaje que rigen las tuplas en C# 7.0 y posterior, distintas formas de usarlas y una guía inicial sobre cómo trabajar con tuplas.
 
 > [!NOTE]
 > Las nuevas características de tupla requieren los tipos <xref:System.ValueTuple>.
@@ -77,7 +77,7 @@ Si no se proporciona un nombre explícito, tiene prioridad sobre cualquier nombr
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Para cualquier campo en el que no se proporcione un nombre explícito, se proyectará un nombre implícito aplicable. Tenga en cuenta que no hay ningún requisito para proporcionar nombres semánticos, ya sea explícita o implícitamente. El inicializador siguiente tendrán nombres de campo `Item1`, cuyo valor es `42` y `StringContent`, cuyo valor es "La respuesta a todos los elementos":
+Para cualquier campo en el que no se proporcione un nombre explícito, se proyectará un nombre implícito aplicable. Tenga en cuenta que no hay ningún requisito para proporcionar nombres semánticos, ya sea explícita o implícitamente. El inicializador siguiente tendrá nombres de campo `Item1`, cuyo valor es `42` y `StringContent`, cuyo valor es "The answer to everything":
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
@@ -143,7 +143,7 @@ Vamos a actualizar este método para que los tres valores calculados durante la 
 
 [!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
 
-Compatibilidad de refactorización de Visual Studio resulta muy sencillo extraer la funcionalidad para las estadísticas principales en un método privado. Le ofrece un método `private static` que devuelve el tipo de tupla con los tres valores de `Sum`, `SumOfSquares` y `Count`:
+La compatibilidad de refactorización de Visual Studio facilita la extracción de la funcionalidad de las estadísticas principales en un método privado. Le ofrece un método `private static` que devuelve el tipo de tupla con los tres valores de `Sum`, `SumOfSquares` y `Count`:
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
@@ -198,7 +198,7 @@ La tupla con nombre puede ser parte de la firma. Permite que el compilador y las
 
 ## <a name="deconstruction"></a>Deconstrucción
 
-Puede desempaquetar todos los elementos de una tupla *deconstruyendo* la tupla devuelta por un método. Hay tres métodos diferentes para Deconstruyendo tuplas.  En primer lugar, se puede declarar explícitamente el tipo de cada campo entre paréntesis para crear variables discretas para cada uno de los elementos de la tupla:
+Puede desempaquetar todos los elementos de una tupla *deconstruyendo* la tupla devuelta por un método. Existen tres enfoques diferentes para deconstruir tuplas.  En primer lugar, se puede declarar explícitamente el tipo de cada campo entre paréntesis para crear variables discretas para cada uno de los elementos de la tupla:
 
 [!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
@@ -214,7 +214,7 @@ También es válido usar la palabra clave `var` con alguna de las declaraciones 
 
 Tenga en cuenta que no se puede usar un tipo específico fuera de los paréntesis, aunque todos los campos de la tupla tengan el mismo tipo.
 
-Puede anular tuplas con declaraciones de existentes:
+También puede deconstruir tuplas con declaraciones existentes:
 
 ```csharp
 public class Point
@@ -227,7 +227,7 @@ public class Point
 ```
 
 > [!WARNING]
->  No se pueden mezclar declaraciones existentes con las declaraciones dentro de los paréntesis. Por ejemplo, no se permite lo siguiente: `(var x, y) = MyMethod();`. Esto produce el error CS8184 porque *x* se declara dentro de los paréntesis y *y* se declaró previamente en otro lugar.
+>  No se pueden mezclar declaraciones existentes con declaraciones incluidas en paréntesis. Por ejemplo, no se permite lo siguiente: `(var x, y) = MyMethod();`. Esto produce el error CS8184 porque *x* se declara dentro de los paréntesis e *y* se ha declarado previamente en otro lugar.
 
 ### <a name="deconstructing-user-defined-types"></a>Deconstruir tipos definidos por el usuario
 

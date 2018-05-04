@@ -1,5 +1,5 @@
 ---
-title: "Convenciones de código de C# (Guía de programación de C#)"
+title: Convenciones de código de C# (Guía de programación de C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-caps.latest.revision: 
+caps.latest.revision: 32
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a8806ddb0a9cc62fe68dc9d558917ee2d532e7f
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 697c3df3d418c57d58c42dc3cfb900de02146c80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenciones de código de C# (Guía de programación de C#)
  Las convenciones de codificación tienen los objetivos siguientes:  
@@ -76,7 +76,7 @@ ms.lasthandoff: 02/24/2018
   
 ### <a name="string-data-type"></a>String (Tipo de datos)  
   
--   Utilice el operador `+` para concatenar cadenas cortas, como se muestra en el código siguiente.  
+-   Use [interpolación de cadenas](../../language-reference/tokens/interpolated.md) para concatenar cadenas cortas, como se muestra en el código siguiente.  
   
      [!code-csharp[csProgGuideCodingConventions#6](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#6)]  
   

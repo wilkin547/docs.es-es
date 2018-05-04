@@ -1,6 +1,6 @@
 ---
 title: Indizadores
-description: "Obtenga información sobre los indexadores de C# y cómo implementan propiedades indexadas, que son propiedades a las que se hace referencia con uno o más argumentos."
+description: Obtenga información sobre los indexadores de C# y cómo implementan propiedades indexadas, que son propiedades a las que se hace referencia con uno o más argumentos.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: f0731061c518a61ce5b81e8282915b1245239864
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="indexers"></a>Indizadores
 
@@ -39,7 +39,7 @@ public int this[string key]
 }
 ```
 
-En este ejemplo inicial puede ver la relación existente entre la sintaxis de las propiedades y los indizadores. Esta analogía lleva a cabo la mayoría de las reglas de sintaxis de los indizadores. Los indizadores pueden tener modificadores de acceso válido (público, protegido interno, protegido, interno, privado o privado protegido). Pueden ser sellados, virtuales o abstractos. Al igual que con las propiedades, puede especificar distintos modificadores de acceso para los descriptores de acceso get y set en un indizador.
+En este ejemplo inicial puede ver la relación existente entre la sintaxis de las propiedades y los indizadores. Esta analogía lleva a cabo la mayoría de las reglas de sintaxis de los indizadores. Los indizadores pueden tener cualquier modificador de acceso válido (público, interno protegido, protegido, interno, privado o privado protegido). Pueden ser sellados, virtuales o abstractos. Al igual que con las propiedades, puede especificar distintos modificadores de acceso para los descriptores de acceso get y set en un indizador.
 También puede especificar indizadores de solo lectura (omitiendo el descriptor de acceso set) o indizadores de solo escritura (omitiendo el descriptor de acceso get).
 
 Puede aplicar a los indizadores casi todo lo que aprenda al trabajar con propiedades. La única excepción a esta regla son las *propiedades implementadas automáticamente*. El compilador no siempre puede generar el almacenamiento correcto para un indizador.
@@ -51,7 +51,7 @@ La presencia de argumentos para hacer referencia a un elemento en un conjunto de
 Tendría que definir *indizadores* en el tipo si su API modela alguna colección en la que se definen los argumentos de esa colección. Los indizadores pueden (o no) asignarse directamente a los tipos de colección que forman parte del marco de trabajo principal de .NET. El tipo puede tener otras responsabilidades, además de tener que modelar una colección.
 Los indizadores le permiten proporcionar la API que coincida con la abstracción de su tipo sin tener que exponer la información interna de cómo se almacenan o se calculan los valores de dicha abstracción.
 
-Veamos algunos de los escenarios habituales en los que se usan los *indizadores*. Puede obtener acceso a la [carpeta de ejemplo para indexadores](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers). Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Veamos algunos de los escenarios habituales en los que se usan los *indizadores*. Puede obtener acceso a la [carpeta de ejemplo para indexadores](https://github.com/dotnet/samples/tree/master/csharp/indexers). Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="arrays-and-vectors"></a>Matrices y vectores
 

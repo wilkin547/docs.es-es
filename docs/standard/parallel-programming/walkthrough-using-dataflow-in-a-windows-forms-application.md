@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8c0d44ca7933626c95603ccc81102889ba4c23cb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f28e103d6241d954dd6ac4f7e9c7fcb20a06ea0b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Tutorial: Usar flujos de datos en aplicaciones de Windows Forms
 Este documento muestra cómo crear una red de bloques de flujo de datos que realizan el procesamiento de imágenes en una aplicación de Windows Forms.  
@@ -48,9 +48,9 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
   
 #### <a name="to-create-the-windows-forms-application"></a>Para crear la aplicación de Windows Forms  
   
-1.  En [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], cree un proyecto **Aplicación de Windows Forms** de [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] o Visual Basic. En este documento, el proyecto se denomina `CompositeImages`.  
+1.  En [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], cree un proyecto **Aplicación de Windows Forms** de Visual C# o Visual Basic. En este documento, el proyecto se denomina `CompositeImages`.  
   
-2.  En el diseñador de formularios del formulario principal, Form1.cs (Form1.vb con [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), agregue un control <xref:System.Windows.Forms.ToolStrip>.  
+2.  En el diseñador de formularios del formulario principal, Form1.cs (Form1.vb para Visual Basic), agregue un control <xref:System.Windows.Forms.ToolStrip>.  
   
 3.  Agregue un control <xref:System.Windows.Forms.ToolStripButton> al control <xref:System.Windows.Forms.ToolStrip>. Establezca la propiedad <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> en <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> y la propiedad <xref:System.Windows.Forms.ToolStripItem.Text%2A> en **Elegir carpeta**.  
   
@@ -66,7 +66,7 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
   
 1.  Agregue a su proyecto una referencia a System.Threading.Tasks.Dataflow.dll.  
   
-2.  Asegúrese de que Form1.cs (Form1.vb para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) contenga las siguientes instrucciones `using` (`Using` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]):  
+2.  Asegúrese de que Form1.cs (Form1.vb para Visual Basic) contenga las siguientes instrucciones `using` (`Using` en Visual Basic):  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
@@ -87,7 +87,7 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  La versión de C# del método `CreateCompositeBitmap` utiliza punteros para permitir un procesamiento eficaz de los objetos <xref:System.Drawing.Bitmap?displayProperty=nameWithType>. Por lo tanto, debe habilitar la opción **Permitir código no seguro** en el proyecto para utilizar la palabra clave [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md). Para más información acerca de cómo habilitar el código no seguro en un proyecto de [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], consulte [Compilar (Página, Diseñador de proyectos) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+    >  La versión de C# del método `CreateCompositeBitmap` utiliza punteros para permitir un procesamiento eficaz de los objetos <xref:System.Drawing.Bitmap?displayProperty=nameWithType>. Por lo tanto, debe habilitar la opción **Permitir código no seguro** en el proyecto para utilizar la palabra clave [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md). Para obtener más información sobre cómo habilitar el código no seguro en un proyecto de Visual C#, vea [Compilar (Página, Diseñador de proyectos) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  En la tabla siguiente se describen los miembros de la red.  
   
@@ -98,7 +98,7 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
 |`displayCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Muestra el mapa de bits compuesto en el formulario.|  
 |`operationCancelled`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Muestra una imagen para indicar que la operación se cancela y permite al usuario seleccionar otra carpeta.|  
   
- Para conectar los bloques de flujo de datos para formar una red, este ejemplo usa el método <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>. El método <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> contiene una versión sobrecargada que adopta un objeto <xref:System.Predicate%601> que determina si el bloque de destino acepta o rechaza un mensaje. Este mecanismo de filtrado permite que los bloques de mensajes reciban solo ciertos valores. En este ejemplo, la red puede dividirse en ramas de una de dos maneras. La rama principal carga las imágenes desde el disco, crea la imagen compuesta y la muestra en el formulario. La rama alternativa cancela la operación actual. Los objetos <xref:System.Predicate%601> permiten que los bloques de flujo de datos en la rama principal cambien a la rama alternativa al rechazar determinados mensajes. Por ejemplo, si el usuario cancela la operación, el bloque de flujo de datos `createCompositeBitmap` produce `null` (`Nothing` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) como salida. El bloque de flujo de datos `displayCompositeBitmap` rechaza valores de entrada `null` y, por lo tanto, el mensaje se ofrece a `operationCancelled`. El bloque de flujo de datos `operationCancelled` acepta todos los mensajes y, por lo tanto, muestra una imagen para indicar que se ha cancelado la operación.  
+ Para conectar los bloques de flujo de datos para formar una red, este ejemplo usa el método <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>. El método <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> contiene una versión sobrecargada que adopta un objeto <xref:System.Predicate%601> que determina si el bloque de destino acepta o rechaza un mensaje. Este mecanismo de filtrado permite que los bloques de mensajes reciban solo ciertos valores. En este ejemplo, la red puede dividirse en ramas de una de dos maneras. La rama principal carga las imágenes desde el disco, crea la imagen compuesta y la muestra en el formulario. La rama alternativa cancela la operación actual. Los objetos <xref:System.Predicate%601> permiten que los bloques de flujo de datos en la rama principal cambien a la rama alternativa al rechazar determinados mensajes. Por ejemplo, si el usuario cancela la operación, el bloque de flujo de datos `createCompositeBitmap` produce `null` (`Nothing` en Visual Basic) como salida. El bloque de flujo de datos `displayCompositeBitmap` rechaza valores de entrada `null` y, por lo tanto, el mensaje se ofrece a `operationCancelled`. El bloque de flujo de datos `operationCancelled` acepta todos los mensajes y, por lo tanto, muestra una imagen para indicar que se ha cancelado la operación.  
   
  En la ilustración siguiente se muestra la red de procesamiento de imágenes.  
   

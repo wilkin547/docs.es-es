@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="composite-formatting"></a>Formatos compuestos
 La característica de formato compuesto de .NET toma una lista de objetos y una cadena de formato compuesto como entrada. Una cadena de formato compuesto está formada por texto fijo combinado con marcadores de posición indizados, que reciben el nombre de elementos de formato, y que se corresponden con los objetos de la lista. La operación de formato genera una cadena de resultado compuesta por el texto fijo original combinado con la representación de cadena de los objetos de la lista.  
@@ -74,12 +74,12 @@ La característica de formato compuesto de .NET toma una lista de objetos y una 
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Los elementos de formato múltiple se pueden referir al mismo elemento de la lista de objetos mediante la especificación del mismo especificador de parámetro. Por ejemplo, para dar al mismo valor numérico un formato hexadecimal, científico y numérico, especifique una cadena de formato compuesto como: "0x{0:X} {0:E} {0:N}", como se muestra en el siguiente ejemplo.  
+ Los elementos de formato múltiple se pueden referir al mismo elemento de la lista de objetos mediante la especificación del mismo especificador de parámetro. Por ejemplo, si quiere aplicar al mismo valor numérico un formato hexadecimal, científico y numérico, puede especificar una cadena de formato compuesto como: "0x{0:X} {0:E} {0:N}", como se muestra en el siguiente ejemplo.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- Cada elemento de formato puede hacer referencia a cualquier objeto de la lista. Por ejemplo, si existen tres objetos, se puede dar formato al segundo, primero y tercer objeto mediante la especificación de una cadena de formato compuesto como ésta: "{1} {0} {2}". Un objeto al que no hace referencia ningún elemento de formato se omite. Se produce una excepción <xref:System.FormatException> en tiempo de ejecución si un especificador de parámetro designa un elemento fuera de los límites de la lista de objetos.  
+ Cada elemento de formato puede hacer referencia a cualquier objeto de la lista. Por ejemplo, si existen tres objetos, se puede dar formato al segundo, primero y tercer objeto mediante la especificación de una cadena de formato compuesto como esta: "{1} {0} {2}". Un objeto al que no hace referencia ningún elemento de formato se omite. Se produce una excepción <xref:System.FormatException> en tiempo de ejecución si un especificador de parámetro designa un elemento fuera de los límites de la lista de objetos.  
   
 ### <a name="alignment-component"></a>Alignment (Componente)  
  El componente opcional *alignment* es un entero con signo que indica el ancho de campo con formato preferido. Si el valor de *alignment* es menor que la longitud de la cadena con formato, se omite *alignment* y se usa la longitud de la cadena con formato como el ancho de campo. Los datos con formato del campo están alineados a la derecha si *alignment* es positivo y a la izquierda si *alignment* es negativo. Si hace falta relleno, se utiliza un espacio en blanco. Si se especifica *alignment*, es necesaria la coma.  
@@ -137,7 +137,7 @@ La característica de formato compuesto de .NET toma una lista de objetos y una 
   
     -   Para un valor de fecha y hora, si se llama a un método de formato compuesto con un argumento <xref:System.IFormatProvider> que no sea nulo, el runtime solicita un objeto <xref:System.Globalization.DateTimeFormatInfo> a su método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. En caso de no poder proporcionar uno, si el valor del argumento es `null`, o si el método de formato compuesto no tiene un parámetro <xref:System.IFormatProvider>, se usa el objeto <xref:System.Globalization.DateTimeFormatInfo> para la referencia cultural del subproceso actual.  
   
-    -   Para objetos de otros tipos, si se llama a un formato compuesto con un argumento <xref:System.IFormatProvider>, su valor (incluido `null`, en caso de no proporcionarse ningún objeto <xref:System.IFormatProvider>) se pasa directamente a la implementación de <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  De lo contrario, se pasa un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural del subproceso actual a la implementación de <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
+    -   Para objetos de otros tipos, si se llama a un formato compuesto con un argumento <xref:System.IFormatProvider>, su valor se pasa directamente a la implementación <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. En caso contrario, `null` se pasa a la implementación <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
   
 4.  Se llama al método sin parámetros `ToString` del tipo, que reemplaza a <xref:System.Object.ToString?displayProperty=nameWithType> o hereda el comportamiento de su clase base. En este caso, se omite la cadena de formato especificada por el componente *formatString* en el elemento de formato, si estuviera presente.  
   

@@ -1,29 +1,17 @@
 ---
-title: '&lt;host&gt;'
-ms.custom: 
+title: '&lt;Host&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: be566d55-9d50-4b2e-985d-52a5cc26cbbb
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7177c62af8501258ad8709bff88cb85488b56727
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c48fff7473449192887bfd8cc201dd87cb4e7f7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="lthostgt"></a>&lt;host&gt;
+# <a name="lthostgt"></a>&lt;Host&gt;
 Especifica los valores para un host de servicio.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<Servicios >  
 \<servicio >  
 \<host >  
@@ -60,7 +48,7 @@ Especifica los valores para un host de servicio.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<servicio >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Especifica la configuración para un servicio [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].|  
+|[\<servicio >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Especifica la configuración para un servicio de Windows Communication Foundation (WCF).|  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Configuration.HostElement>  

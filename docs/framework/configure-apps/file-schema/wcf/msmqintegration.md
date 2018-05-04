@@ -1,29 +1,17 @@
 ---
 title: '&lt;msmqIntegration&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ab677405-1ffe-457a-803f-00c1770e51e2
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efa224477dfdf396af2403f509f252b8e0f2a55f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 36c71546dd481d634210901b20ddeaa86d5c81a4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmsmqintegrationgt"></a>&lt;msmqIntegration&gt;
 Especifica un transporte de MSMQ para enlace personalizado.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<enlaces >  
 \<customBinding >  
 \<enlace >  

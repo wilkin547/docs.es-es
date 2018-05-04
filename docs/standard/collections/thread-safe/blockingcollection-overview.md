@@ -1,12 +1,12 @@
 ---
-title: "Información general sobre BlockingCollection"
-ms.custom: 
+title: Información general sobre BlockingCollection
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5e2235c1a5bbe4a39cf029059290268faa5be154
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 74303f07134401193d07d3b5d584c9498f023d90
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="blockingcollection-overview"></a>Información general sobre BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> es una clase de colección segura para subprocesos que proporciona las siguientes características:  
@@ -85,7 +85,7 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
  Para más información, vea [Cómo agregar la funcionalidad de límite y bloqueo a una colección](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md).  
   
 ## <a name="ienumerable-support"></a>Compatibilidad con IEnumerable  
- <xref:System.Collections.Concurrent.BlockingCollection%601> proporciona un método <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> que permite a los consumidores usar `foreach` (`For Each` en [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) para quitar elementos hasta que la colección esté completa, lo que significa que está vacía y no se agregarán más elementos. Para obtener más información, consulte [Cómo: Utilizar ForEach para quitar elementos de BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).  
+ <xref:System.Collections.Concurrent.BlockingCollection%601> proporciona un método <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> que permite a los consumidores usar `foreach` (`For Each` en Visual Basic) para quitar elementos hasta que la colección está completa, lo que significa que está vacía y no se agregan más elementos. Para obtener más información, consulte [Cómo: Utilizar ForEach para quitar elementos de BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).  
   
 ## <a name="using-many-blockingcollections-as-one"></a>Usar muchas BlockingCollections como una  
  Para escenarios en los que un consumidor necesita tomar elementos de varias colecciones de forma simultánea, se pueden crear matrices de <xref:System.Collections.Concurrent.BlockingCollection%601> y usar los métodos estáticos, como <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> y <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A>, que agregarán a cualquiera de las colecciones de la matriz o tomarán desde ellas. Si se bloquea una colección, el método intenta otra de forma inmediata hasta que encuentra una que pueda realizar la operación. Para obtener más información, consulte [Cómo: Usar matrices de colecciones de bloqueo en una canalización](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  

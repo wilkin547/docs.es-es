@@ -1,6 +1,6 @@
 ---
-title: "Comunicación directa de cliente a microservicio frente al patrón de puerta de enlace de API"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Comunicación directa de cliente a microservicio frente al patrón de puerta de enlace de API"
+title: Comunicación directa de cliente a microservicio frente al patrón de puerta de enlace de API
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Comunicación directa de cliente a microservicio frente al patrón de puerta de enlace de API
 keywords: Docker, microservicios, ASP.NET, contenedor, puerta de enlace de API
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 96a02958ef5750aec7a92ff0dd145edc15a5953a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fa3f4bb97cf942ee7698b1efa1dcd09b3f2ca571
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>Comunicación directa de cliente a microservicio frente al patrón de puerta de enlace de API
 
@@ -57,7 +57,7 @@ El diseño de la API de varios microservicios podría no adaptarse a las necesid
 
 ## <a name="using-an-api-gateway"></a>Uso de una puerta de enlace de API
 
-Al diseñar y crear aplicaciones basadas en microservicios grandes o complejas con varias aplicaciones cliente, un buen planteamiento podría ser una [puerta de enlace de API](http://microservices.io/patterns/apigateway.html). Se trata de un servicio que proporciona un punto de entrada único para determinados grupos de microservicios. Es similar al [patrón de fachada](https://en.wikipedia.org/wiki/Facade_pattern) del diseño orientado a objetos, pero en este caso es parte de un sistema distribuido. En ocasiones, el patrón de puerta de enlace de API también se conoce como "back-end para front-end" [(BFF)](http://samnewman.io/patterns/architectural/bff/) porque en la compilación se tienen en cuenta las necesidades de la aplicación cliente.
+Al diseñar y crear aplicaciones basadas en microservicios grandes o complejas con varias aplicaciones cliente, un buen planteamiento podría ser una [puerta de enlace de API](https://microservices.io/patterns/apigateway.html). Se trata de un servicio que proporciona un punto de entrada único para determinados grupos de microservicios. Es similar al [patrón de fachada](https://en.wikipedia.org/wiki/Facade_pattern) del diseño orientado a objetos, pero en este caso es parte de un sistema distribuido. En ocasiones, el patrón de puerta de enlace de API también se conoce como "back-end para front-end" [(BFF)](https://samnewman.io/patterns/architectural/bff/) porque en la compilación se tienen en cuenta las necesidades de la aplicación cliente.
 
 La figura 4-13 muestra el encaje de una puerta de enlace de API personalizada en una arquitectura basada en microservicios.
 Es importante resaltar que en ese diagrama se utiliza un único servicio de puerta de enlace de API personalizado con conexión a varias aplicaciones de cliente distintas. Ese hecho puede suponer un riesgo importante porque el servicio de puerta de enlace de API irá creciendo y evolucionando en función de los muchos requisitos de las aplicaciones cliente. Finalmente, se verá sobredimensionado debido a las distintas necesidades y en la práctica podría ser bastante similar a una aplicación o un servicio monolíticos. Por eso es muy recomendable dividir la puerta de enlace de API en varios servicios o varias puertas de enlace de API más pequeñas, por ejemplo, uno por cada tipo de factor de forma.
@@ -110,8 +110,8 @@ En esta guía y en la aplicación de ejemplo de referencia (eShopOnContainers), 
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
--   **Charles Richardson. Pattern: API Gateway / Backend for Front-End (Patrón: puerta de enlace de API/back-end para front-end)**
-    [*http://microservices.io/patterns/apigateway.html*](http://microservices.io/patterns/apigateway.html)
+-   **Charles Richardson. Pattern: API Gateway / Backend for Front-End (Patrón: back-end o puerta de enlace de API para front-end)**
+    [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
 
 -   **Azure API Management**
     [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
@@ -119,7 +119,7 @@ En esta guía y en la aplicación de ejemplo de referencia (eShopOnContainers), 
 -   **Udi Dahan. Service Oriented Composition (Composición orientada a servicios)** \
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
--   **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Mensajería y Microservicios en GOTO 2016)**  (vídeo) [ *https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+-   **Clemens Vasters. Messaging and Microservices at GOTO 2016** (Mensajería y microservicios en GOTO 2016; vídeo) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 
 >[!div class="step-by-step"]

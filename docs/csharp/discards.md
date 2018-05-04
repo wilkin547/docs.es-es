@@ -1,6 +1,6 @@
 ---
-title: "Descartes - Guía de C#"
-description: "Describe la compatibilidad de C# con descartes, que son variables sin asignar y descartables, así como las maneras en que pueden usarse."
+title: Descartes - Guía de C#
+description: Describe la compatibilidad de C# con descartes, que son variables sin asignar y descartables, así como las maneras en que pueden usarse.
 keywords: .NET, .NET Core
 author: rpetrusha
 ms.author: ronpet
@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 800a27d2d186c738dceb6838aa669377a0c07b01
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 94badd78485ee4d3928b170d81a80743bf84102f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="discards---c-guide"></a>Descartes - Guía de C#
 
-A partir de C# 7, C# admite descartes, que son variables temporales y ficticias que no se usan deliberadamente en el código de la aplicación. Los descartes son equivalentes a variables sin asignar, ya que no tienen un valor. Puesto que solo hay una variable de descarte única y es posible que a dicha variable no se le haya asignado almacenamiento, los descartes pueden reducir las asignaciones de memoria. Como la intención de estas variables es que el código sea claro, mejoran su legibilidad y facilidad de mantenimiento.
+A partir de C# 7.0, C# admite descartes, que son variables temporales y ficticias que no se usan deliberadamente en el código de la aplicación. Los descartes son equivalentes a variables sin asignar, ya que no tienen un valor. Puesto que solo hay una variable de descarte única y es posible que a dicha variable no se le haya asignado almacenamiento, los descartes pueden reducir las asignaciones de memoria. Como la intención de estas variables es que el código sea claro, mejoran su legibilidad y facilidad de mantenimiento.
 
-Para indicar que una variable es un descarte, se le asigna como nombre el carácter de subrayado (`_`). Por ejemplo, la siguiente llamada de método devuelve una tupla de 3 en el que el primer y segundo valor es descarta y *área* es una variable declarada anteriormente se establezca en el tercer componente correspondiente devuelto por  *GetCityInformation*:
+Para indicar que una variable es un descarte, se le asigna como nombre el carácter de subrayado (`_`). Por ejemplo, la siguiente llamada al método devuelve una tupla de tres donde el primer y el segundo valor se descartan y *area* es una variable declarada previamente para establecerse en el tercer componente correspondiente devuelto por  *GetCityInformation*:
 
 ```csharp
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-En C# 7, se admiten descartes en asignaciones en los contextos siguientes:
+En C# 7.0, se admiten descartes en asignaciones en los contextos siguientes:
 
 - [Deconstrucción](deconstruct.md) de tuplas y objetos.
 - Coincidencia de patrones con [is](language-reference/keywords/is.md) y [switch](language-reference/keywords/switch.md).

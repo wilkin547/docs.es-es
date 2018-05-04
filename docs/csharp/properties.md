@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-ms.openlocfilehash: 2a25919048f94211b1696ac8c8471a14ce6e15c5
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 05e51d527dc3c05301fc85d7717c751dc46bf9fa
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="properties"></a>Propiedades
 
@@ -123,7 +123,7 @@ public class Person
 }
 ```
 
-El ejemplo anterior aplica la regla de que el nombre no debe estar en blanco ni tener espacios en blanco. Si un desarrollador escribe:
+En el ejemplo anterior, se aplica la regla de que el nombre no debe estar en blanco ni tener espacios en blanco. Si un desarrollador escribe:
 
 ```csharp
 hero.FirstName = "";

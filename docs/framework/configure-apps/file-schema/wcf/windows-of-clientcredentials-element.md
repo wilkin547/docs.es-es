@@ -1,29 +1,17 @@
 ---
 title: Elemento &lt;windows&gt; de &lt;clientCredentials&gt;
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6687f93be26dedcb34f08770708c072742fdd4de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9badcfafff4bc09a16b0b9a565a9ea5c01e26bb5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a>Elemento &lt;windows&gt; de &lt;clientCredentials&gt;
 Especifica los valores para una credencial de Windows que se va a utilizar para representar al cliente.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportamientos >  
 \<endpointBehaviors >  
 \<comportamiento >  
@@ -47,7 +35,7 @@ Especifica los valores para una credencial de Windows que se va a utilizar para 
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |`allowedImpersonationLevel`|Establece la preferencia de suplantación que el cliente comunica al servidor. El modo de suplantación que el cliente elige no se exige en el servidor. Los valores válidos son los siguientes:<br /><br /> -Identificación: El servidor puede obtener la identidad y privilegios del cliente, pero no puede suplantar al cliente.<br />-Suplantación: El servidor puede suplantar el contexto de seguridad del cliente en el sistema local.<br />-Delegation: El servidor puede suplantar el contexto de seguridad del cliente en sistemas remotos.<br />-Anónima: El servidor no se puede suplantar o identificar al cliente.<br />-Ninguno: Un nivel de suplantación no está asignado.<br /><br /> El valor predeterminado es Identification. Este atributo es del tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
-|`allowNtlm`|Establecer esta propiedad en `true` permite a la autenticación degradar a NTLM si Kerberos no está disponible.<br /><br /> Establecer esta propiedad en `false` hace que [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] realice un mayor esfuerzo por iniciar una excepción si se utiliza NTLM. Tenga en cuenta que, aunque se establezca esta propiedad en `false`, es posible que se envíen igualmente las credenciales NTLM a través de la conexión.|  
+|`allowNtlm`|Establecer esta propiedad en `true` permite a la autenticación degradar a NTLM si Kerberos no está disponible.<br /><br /> Si se establece esta propiedad en `false` hace que Windows Communication Foundation (WCF) para realizar un mayor esfuerzo por producir una excepción si se utiliza NTLM. Tenga en cuenta que, aunque se establezca esta propiedad en `false`, es posible que se envíen igualmente las credenciales NTLM a través de la conexión.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  

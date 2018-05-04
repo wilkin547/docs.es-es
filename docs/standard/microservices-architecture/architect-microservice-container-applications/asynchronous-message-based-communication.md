@@ -1,6 +1,6 @@
 ---
-title: "Comunicación asincrónica basada en mensajes"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Comunicación asincrónica basada en mensajes"
+title: Comunicación asincrónica basada en mensajes
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Comunicación asincrónica basada en mensajes
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7469c41afa16bf96bc81a36c571e3e005c50d904
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c216dba3b763c310fe17e6294ae5f2b091f71f9
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicación asincrónica basada en mensajes
 
@@ -59,7 +59,7 @@ Si un sistema usa la coherencia final controlada por eventos de integración, se
 
 Como se indicó anteriormente en la sección [Desafíos y soluciones para la administración de datos distribuidos](#challenges-and-solutions-for-distributed-data-management), se pueden usar eventos de integración para implementar tareas de negocio que abarquen varios microservicios. Por tanto, tendrá coherencia final entre dichos servicios. Una transacción con coherencia final se compone de una colección de acciones distribuidas. En cada acción, el microservicio relacionado actualiza una entidad de dominio y publica otro evento de integración que genera la siguiente acción dentro de la misma tarea empresarial descentralizada.
 
-Un punto importante es que es posible que le interese comunicarse con varios microservicios que estén suscritos al mismo evento. Para ello, puede usar la mensajería de publicación y suscripción basada en la comunicación controlada por eventos, como se muestra en la figura 4-19. Este mecanismo de publicación y suscripción no es exclusivo de la arquitectura de microservicios. Es similar a la forma en que deben comunicarse los [contextos delimitados](http://martinfowler.com/bliki/BoundedContext.html) en DDD o a la forma en que se propagan las actualizaciones desde la base de datos de escritura a la de lectura en el modelo de arquitectura [Command and Query Responsibility Segregation (CQRS)](http://martinfowler.com/bliki/CQRS.html) (Segregación de responsabilidades de comandos y consultas). El objetivo es tener coherencia final entre varios orígenes de datos en el sistema distribuido.
+Un punto importante es que es posible que le interese comunicarse con varios microservicios que estén suscritos al mismo evento. Para ello, puede usar la mensajería de publicación y suscripción basada en la comunicación controlada por eventos, como se muestra en la figura 4-19. Este mecanismo de publicación y suscripción no es exclusivo de la arquitectura de microservicios. Es similar a la forma en que deben comunicarse los [contextos delimitados](https://martinfowler.com/bliki/BoundedContext.html) en DDD o a la forma en que se propagan las actualizaciones desde la base de datos de escritura a la de lectura en el modelo de arquitectura [Command and Query Responsibility Segregation (CQRS)](https://martinfowler.com/bliki/CQRS.html) (Segregación de responsabilidades de comandos y consultas). El objetivo es tener coherencia final entre varios orígenes de datos en el sistema distribuido.
 
 ![](./media/image19.png)
 
@@ -81,7 +81,7 @@ Un desafío al implementar una arquitectura controlada por eventos entre varios 
 
 -   Uso de una cola transaccional (basada en DTC) como MSMQ. (Pero es un método heredado).
 
--   Uso de la [minería del registro de transacciones](http://www.scoop.it/t/sql-server-transaction-log-mining).
+-   Uso de la [minería del registro de transacciones](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
 -   Uso del patrón de [orígenes de eventos](https://msdn.microsoft.com/library/dn589792.aspx) completo.
 
@@ -94,10 +94,10 @@ Temas adicionales que se deben tener en cuenta al usar la comunicación asincró
 -   **Event Driven Messaging (Mensajería controlada por eventos)**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Publish-Subscribe Channel (Canal de publicación y suscripción)**
+-   **Publish/Subscribe Channel (Canal de publicación y suscripción)**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Udi Dahan. Clarified CQRS (CQRS clarificado)**
+-   **Udi Dahan. Clarified CQRS (CQRS aclarado)**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 -   **Patrón Command and Query Responsibility Segregation (CQRS)**
@@ -106,10 +106,10 @@ Temas adicionales que se deben tener en cuenta al usar la comunicación asincró
 -   **Communicating Between Bounded Contexts (Comunicación entre contextos delimitados)**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual consistency (Consistencia final)**
+-   **Eventual consistency (Posible coherencia)**
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactorización hacia la resistencia: evaluación del acoplamiento)**
+-   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactorización hacia la resiliencia: evaluar el acoplamiento)**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 

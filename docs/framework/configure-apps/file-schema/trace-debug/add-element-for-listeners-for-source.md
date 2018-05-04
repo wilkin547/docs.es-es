@@ -1,14 +1,6 @@
 ---
 title: '&lt;agregar&gt; (elemento) para &lt;los agentes de escucha&gt; para &lt;origen&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 86177010d8ed70302b51ec9c416a3295009e7394
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba8ff652003a9167ec370643797ac9300b83889a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;agregar&gt; (elemento) para &lt;los agentes de escucha&gt; para &lt;origen&gt;
 Agrega un agente de escucha a la colección `Listeners` para un origen de seguimiento.  
@@ -57,7 +46,7 @@ Agrega un agente de escucha a la colección `Listeners` para un origen de seguim
 |`initializeData`|Atributo opcional.<br /><br /> La cadena pasada al constructor de la clase especificada. Un <xref:System.Configuration.ConfigurationException> se produce si la clase no tiene un constructor que toma una cadena.|  
 |`name`|Atributo opcional.<br /><br /> Especifica el nombre del agente de escucha.|  
 |`traceOutputOptions`|Atributo opcional.<br /><br /> Especifica la <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> valor de propiedad para el agente de escucha de seguimiento.|  
-|[atributos personalizados]|Atributos opcionales.<br /><br /> Especifica el valor para atributos específicos del agente de escucha identificados por el <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> método para ese agente de escucha. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>es un ejemplo de un atributo adicional único para la <xref:System.Diagnostics.DelimitedListTraceListener> clase.|  
+|[atributos personalizados]|Atributos opcionales.<br /><br /> Especifica el valor para atributos específicos del agente de escucha identificados por el <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> método para ese agente de escucha. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> es un ejemplo de un atributo adicional único para la <xref:System.Diagnostics.DelimitedListTraceListener> clase.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   

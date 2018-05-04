@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: d24d190eab5896121231543e6696b6a4861b5bb8
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 0a24e8cf22bb8350777879a3adfd2757b89cd305
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-history-of-c"></a>Historia de C# #
 
@@ -34,7 +34,7 @@ Aquí las cosas empiezan a ponerse interesantes. Echemos un vistazo a algunas de
 - [Genéricos](../programming-guide/generics/index.md)
 - [Tipos parciales](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Métodos anónimos](../programming-guide/statements-expressions-operators/anonymous-methods.md)
-- [Tipos que aceptan valores NULL](../programming-guide/nullable-types/index.md)
+- [Nullable types](../programming-guide/nullable-types/index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])
 - [Iteradores](../programming-guide/concepts/iterators.md)
 - [Covarianza y contravarianza](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -48,10 +48,10 @@ Aun así, C# seguía yendo por detrás de Java. Java ya había publicado version
 
 ## <a name="c-version-30"></a>C# versión 3.0
 
-La versión 3.0 de C# llegó a finales de 2007, junto con Visual Studio 2008, aunque la cartera completa de características de lenguaje no llegaría realmente hasta la versión 3.5 de C#. Esta versión marcó un cambio importante en el crecimiento de C#. Estableció C# como un lenguaje de programación realmente formidable. Echemos un vistazo a algunas de las principales características de esta versión:
+La versión 3.0 de C# llegó a finales de 2007, junto con Visual Studio 2008, aunque la cartera completa de características de lenguaje no llegaría realmente hasta la versión 3.5 de .NET Framework. Esta versión marcó un cambio importante en el crecimiento de C#. Estableció C# como un lenguaje de programación realmente formidable. Echemos un vistazo a algunas de las principales características de esta versión:
 
 - [Propiedades implementadas automáticamente](../programming-guide/classes-and-structs/auto-implemented-properties.md).
-- [Tipos anónimos](../programming-guide/classes-and-structs/anonymous-types.md)
+- [Anonymous Types](../programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#])
 - [Expresiones de consulta](../linq/query-expression-basics.md)
 - [Expresión lambda](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
 - [Árboles de expresión](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)

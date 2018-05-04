@@ -1,25 +1,26 @@
 ---
 title: Trabajar con registros de aplicaciones en Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - logs, application
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ea5f3699ca5a1b6b0859ac266656deb933839d3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 40cad53cd9283a99a93cde79616151e77489e7bb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Trabajar con registros de aplicaciones en Visual Basic
 Los objetos `My.Applicaton.Log` y `My.Log` facilitan la escritura de información de registro y seguimiento en los registros.  
@@ -27,7 +28,7 @@ Los objetos `My.Applicaton.Log` y `My.Log` facilitan la escritura de informació
 ## <a name="how-messages-are-logged"></a>Cómo se registran los mensajes  
  En primer lugar, se comprueba la gravedad del mensaje con la propiedad <xref:System.Diagnostics.TraceSource.Switch%2A> de la propiedad <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> del registro. De forma predeterminada, solo los mensajes de gravedad "Información" y superior se pasan a los agentes de escucha de seguimiento especificados en la colección `TraceListener` del registro. A continuación, cada agente de escucha compara la gravedad del mensaje con la propiedad <xref:System.Diagnostics.TraceSource.Switch%2A> del agente de escucha. Si la gravedad del mensaje es bastante alta, el agente de escucha escribe el mensaje.  
   
- En el siguiente diagrama se muestra cómo un mensaje escrito en el método `WriteEntry` se pasa a los métodos `WriteLine` de lo agentes de escucha de seguimiento del registro:  
+ En el siguiente diagrama se muestra cómo un mensaje escrito en el método `WriteEntry` se pasa a los métodos `WriteLine` de los agentes de escucha de seguimiento del registro:  
   
  ![Llamada My Log](../../../../visual-basic/developing-apps/programming/log-info/media/mylogcall.png "MyLogCall")  
   
@@ -38,7 +39,7 @@ Los objetos `My.Applicaton.Log` y `My.Log` facilitan la escritura de informació
 ## <a name="where-messages-are-logged"></a>Dónde se registran los mensajes  
  Si el ensamblado no tiene ningún archivo de configuración, los objetos `My.Application.Log` y `My.Log` escriben en la salida de depuración de la aplicación (a través de la clase <xref:System.Diagnostics.DefaultTraceListener> ). Además, el objeto `My.Application.Log` escribe en el archivo de registro del ensamblado (a través de la clase <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>), mientras que el objeto `My.Log` escribe en la salida de la página web ASP.NET (a través de la clase <xref:System.Web.WebPageTraceListener>).  
   
- La salida de depuración se puede ver en la ventana [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] **Output** window when running your application in debug mode. Para abrir la ventana **Salida** , haga clic en el elemento de menú **Depurar** , seleccione **Windows**, y, después, haga clic en **Salida**. En la ventana **Salida** , seleccione **Depurar** desde el cuadro **Mostrar resultados desde** .  
+ La salida de depuración se puede ver en la ventana **Salida** de Visual Studio al ejecutar la aplicación en modo de depuración. Para abrir la ventana **Salida** , haga clic en el elemento de menú **Depurar** , seleccione **Windows**, y, después, haga clic en **Salida**. En la ventana **Salida** , seleccione **Depurar** desde el cuadro **Mostrar resultados desde** .  
   
  De forma predeterminada, `My.Application.Log` escribe el archivo de registro en la ruta de acceso de los datos de aplicaciones del usuario. Puede obtener la ruta de acceso de la propiedad <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> del objeto <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> . El formato de la ruta de acceso es el siguiente:  
   

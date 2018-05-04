@@ -1,12 +1,13 @@
 ---
-title: "Tutorial: Emitir código en escenarios que no son de plena confianza"
-ms.custom: 
+title: 'Tutorial: Emitir código en escenarios que no son de plena confianza'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cbdbf8a391235fc03140e032b35eb674a74dc88a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Tutorial: Emitir código en escenarios que no son de plena confianza
 La emisión de reflexión usa el mismo conjunto de API con confianza completa o parcial, pero algunas características requieren permisos especiales en entornos de confianza parcial. Además, la emisión de reflexión tiene una característica, los métodos dinámicos hospedados de forma anónima, diseñada para su uso en entornos de confianza parcial y por ensamblados transparentes en seguridad.  
@@ -144,7 +146,7 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
      El método <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> crea el objeto en el dominio de aplicación de destino y devuelve un proxy que se puede usar para llamar a las propiedades y métodos del objeto.  
   
     > [!NOTE]
-    >  Si usa este código en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], debe cambiar el nombre de la clase para que incluya el espacio de nombres. De forma predeterminada, el espacio de nombres es el nombre del proyecto. Por ejemplo, si el proyecto es "PartialTrust", el nombre de clase debe ser "PartialTrust.Worker".  
+    >  Si usa este código en Visual Studio, debe cambiar el nombre de la clase para que incluya el espacio de nombres. De forma predeterminada, el espacio de nombres es el nombre del proyecto. Por ejemplo, si el proyecto es "PartialTrust", el nombre de clase debe ser "PartialTrust.Worker".  
   
 6.  Agregue código para llamar al método `SimpleEmitDemo`. Se calculan las referencias de la llamada en el límite del dominio de aplicación y el código se ejecuta en el dominio de aplicación en un espacio aislado.  
   
@@ -218,7 +220,7 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
--   Si compila este código de ejemplo en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], debe cambiar el nombre de la clase para que incluya el espacio de nombres al pasarla al método <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. De forma predeterminada, el espacio de nombres es el nombre del proyecto. Por ejemplo, si el proyecto es "PartialTrust", el nombre de clase debe ser "PartialTrust.Worker".  
+-   Si compila este código de ejemplo en Visual Studio, debe cambiar el nombre de la clase para que incluya el espacio de nombres al pasarla al método <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. De forma predeterminada, el espacio de nombres es el nombre del proyecto. Por ejemplo, si el proyecto es "PartialTrust", el nombre de clase debe ser "PartialTrust.Worker".  
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de seguridad en la emisión de la reflexión](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  

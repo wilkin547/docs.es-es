@@ -1,24 +1,12 @@
 ---
-title: "Cómo: Crear un proyecto de LINQ to DataSet en Visual Studio"
-ms.custom: 
+title: 'Cómo: Crear un proyecto de LINQ to DataSet en Visual Studio'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c749cdd56f0c964b84788b05470406234ef3eb0a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 094d766146fe55a865713a4672a2bee6a838ff55
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Cómo: Crear un proyecto de LINQ to DataSet en Visual Studio
 Los distintos tipos de proyecto [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] requieren determinados espacios de nombres importados (Visual Basic) o directivas `using` (C#) y referencias. El requisito mínimo es una referencia a System.Core.dll y una directiva `using` para <xref:System.Linq>. De manera predeterminada, estos requisitos se proporcionan al crear un proyecto [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] también requiere una referencia a System.Data.dll y System.Data.DataSetExtensions.dll y una directiva `Imports` (Visual Basic) o `using` (C#).  
@@ -26,7 +14,7 @@ Los distintos tipos de proyecto [!INCLUDE[vbteclinq](../../../../includes/vbtecl
  Si está actualizando a un proyecto desde una versión anterior de Visual Studio, es posible que tenga que proporcionar estas referencias relacionadas con LINQ de forma manual. También es posible que tenga que configurar de forma manual el proyecto para establecer como destino la versión 3.5 de .NET Framework.  
   
 > [!NOTE]
->  Si está generando desde un símbolo del sistema, deben hacer referencia manualmente las DLL relacionadas con LINQ en `drive` **:**\Program Files\Reference Assemblies\Microsoft\Framework\v3.5.  
+>  Si está generando desde un símbolo del sistema, deben hacer referencia manualmente las DLL relacionadas con LINQ en `drive` **:** \Program Files\Reference Assemblies\Microsoft\Framework\v3.5.  
   
 ### <a name="to-target-the-net-framework-35"></a>Para establecer como destino .NET Framework  
   

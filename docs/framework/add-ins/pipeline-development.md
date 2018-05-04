@@ -1,13 +1,6 @@
 ---
 title: Desarrollo de canalizaciones
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-in pipeline [.NET Framework], segments
 - activation path for add-ins [.NET Framework]
@@ -16,23 +9,20 @@ helpviewer_keywords:
 - add-in pipeline [.NET Framework], about
 - add-ins [.NET Framework], pipeline development
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
-caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2d889b7de4bc766deda9b91877ceefb4aebfc551
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pipeline-development"></a>Desarrollo de canalizaciones
 La canalización de complementos es la ruta de acceso de los segmentos de canalización que la aplicación host y su complemento deben utilizar para comunicarse entre sí.  
   
  En la siguiente ilustración se muestra la canalización de comunicación y sus segmentos.  
   
- ![Agregar &#45; en el modelo de canalización. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Agregar&#45;en el modelo de canalización. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Canalización de complementos  
   
  La aplicación host se encuentra en un extremo de la canalización y el complemento está en el otro extremo. Comenzando desde cada extremo y desplazándose hacia el centro, la aplicación host y el complemento tienen una clase base abstracta que define una vista del modelo de objetos que ambos comparten. Estos tipos (clases) constituyen el segmento de canalización de la vista de complemento y la vista de host del segmento de canalización de complementos. El segmento de canalización del complemento de vista a menudo contiene más de una clase abstracta, pero la clase que hereda de se conoce como la base de complemento.  
@@ -45,14 +35,14 @@ Canalización de complementos
   
  En la siguiente ilustración se muestra los tipos que conforman los segmentos de canalización. Los nombres de los tipos que se muestra en la ilustración son arbitrarios, pero todos los tipos excepto el host y el host de vista de los atributos de complemento requieren para que puedan ser detectados por los métodos que crear un almacén de información.  
   
- ![Agregar &#45; en el modelo con atributos requeridos en tipos. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
+ ![Agregar&#45;en el modelo con atributos requeridos en tipos. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 Canalización de complementos con tipos  
   
  La tabla siguiente describen los segmentos de canalización para activar un complemento. Para obtener más información acerca de estos segmentos, vea [contratos, vistas y adaptadores](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
   
 |Segmento de la canalización|Descripción|  
 |----------------------|-----------------|  
-|Host|El ensamblado de aplicación que crea una instancia de un complemento.|  
+|administrador de flujos de trabajo|El ensamblado de aplicación que crea una instancia de un complemento.|  
 |Vista de host del complemento|Representa la vista de la aplicación host de los tipos de objeto y los métodos que se utilizan para comunicarse con el complemento. La vista de host es una interfaz o clase base abstracta.|  
 |Adaptador de host|Un ensamblado con una o más clases que adapta los métodos al contrato y viceversa.<br /><br /> Este segmento de la canalización se identifica mediante el <xref:System.AddIn.Pipeline.HostAdapterAttribute> atributo.<br /><br /> No se admiten ensamblados de varios módulos.|  
 |Contrato|Una interfaz que se deriva de la <xref:System.AddIn.Contract.IContract> interfaz que define el protocolo para la comunicación entre el host y su complemento.<br /><br /> Este segmento de la canalización se identifica estableciendo la <xref:System.AddIn.Pipeline.AddInContractAttribute> atributo.|  
@@ -63,7 +53,7 @@ Canalización de complementos con tipos
 ## <a name="pipeline-activation-path"></a>Ruta de activación de canalización  
  En la siguiente ilustración muestra la activación de tipos cuando se activa un complemento. También se muestra la transferencia de objetos para el host, como los resultados de un cálculo o una colección de objetos. Este es el escenario más típico.  
   
- ![Agregar &#45; en el modelo con ruta de activación. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
+ ![Agregar&#45;en el modelo con ruta de activación. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
 Ruta de acceso de activación desde el complemento al host  
   
  La ruta de acceso de activación de la canalización se produce como sigue:  

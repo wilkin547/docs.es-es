@@ -1,29 +1,20 @@
 ---
-title: "Cómo: Crear una directiva de publicador"
-ms.custom: 
+title: 'Cómo: Crear una directiva de publicador'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - publisher policy assembly
 - publisher policy files
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4ccd490f6d31ad1d20128497e5115147eddb3df4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 91971e4d41c3a54fa72ae73a3655dab650019676
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Cómo: Crear una directiva de publicador
 Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar una versión más reciente de un ensamblado mediante la inclusión de un archivo de directiva de publicador con el ensamblado actualizado. El archivo de directiva de publicador especifica la redirección de ensamblado y la configuración del código base y usa el mismo formato que un archivo de configuración de aplicación. El archivo de directiva de edición se compila en un ensamblado y se coloca en la caché global de ensamblados.  
@@ -64,7 +55,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
 1.  Escriba el siguiente comando en el símbolo del sistema:  
   
-     **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
+     **al/Link:** *directivas* **/out:** *publisherPolicyAssemblyFile* **/keyfile:**  *keyPairFile* **/Platform:** *processorArchitecture*  
   
      En este comando:  
   
@@ -72,7 +63,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
     -   El *publisherPolicyAssemblyFile* argumento es el nombre del ensamblado de directiva de publicador que da como resultado de este comando. El nombre de archivo de ensamblado debe seguir el formato:  
   
-         **Directiva.** *majorNumber* **.** *número secundario* **.** *nombre de ensamblado principal* **.dll**  
+         **Directiva.** *número principal* **.** *número secundario* **.** *nombre de ensamblado principal* **.dll**  
   
     -   El *keyPairFile* argumento es el nombre del archivo que contiene el par de claves. Debe firmar el ensamblado y el ensamblado de directivas del publicador con el mismo par de claves.  
   
@@ -100,7 +91,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
 1.  Escriba el siguiente comando en el símbolo del sistema:  
   
-     **gacutil /i**  *publisherPolicyAssemblyFile*  
+     **gacutil /i***publisherPolicyAssemblyFile*   
   
      El comando siguiente agrega `policy.1.0.myAssembly.dll` a la caché global de ensamblados.  
   

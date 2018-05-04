@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Usar JoinBlock para leer datos de diferentes orígenes"
+title: 'Cómo: Usar JoinBlock para leer datos de diferentes orígenes'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f7d4e552404f99580bceafe7f900db4607201c3d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: ba353a34306b06e0f1df4696af5545799e7a5b37
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Cómo: Usar JoinBlock para leer datos de diferentes orígenes
 En este documento se explica cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> para realizar una operación cuando los datos están disponibles en varios orígenes. También se demuestra cómo usar el modo no expansivo para habilitar varios bloques de combinación para compartir un origen de datos más eficazmente.
@@ -38,13 +38,13 @@ En este documento se explica cómo utilizar la clase <xref:System.Threading.Task
  Para habilitar el uso eficaz del grupo compartido de objetos `MemoryResource`, este ejemplo especifica un objeto <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> que tiene la propiedad <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> establecida en `False` para crear objetos <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> que actúan de modo no expansivo. Un bloque de combinación no expansivo pospone todos los mensajes entrantes hasta que uno esté disponible de cada origen. Si otro bloque aceptó cualquiera de los mensajes pospuestos, el bloque de combinación reinicia el proceso. El modo no expansivo permite que los bloques de combinación compartan uno o varios bloques de origen para avanzar mientras otros bloques esperan datos. En este ejemplo, si un objeto `MemoryResource` se agrega al grupo `memoryResources`, el primer bloque de combinación que recibe su segundo origen de datos puede progresar. Si en este ejemplo se usara el modo expansivo, que es el predeterminado, un bloque de combinación puede adoptar el objeto `MemoryResource` y esperar a que el segundo recurso esté disponible. Sin embargo, si el otro bloque de combinación tiene su segundo origen de datos disponible, no puede avanzar porque otro bloque de combinación ha adoptado el objeto `MemoryResource`.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o en un archivo denominado `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.  
+ Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o en un archivo denominado `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` para Visual Basic) y, luego, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
   

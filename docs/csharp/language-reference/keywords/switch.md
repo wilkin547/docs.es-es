@@ -2,7 +2,8 @@
 title: Palabra clave switch (Referencia de C#)
 ms.date: 03/07/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - switch_CSharpKeyword
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1c345d0c6c935271600a386752e18c19a25cc389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6506278edb782f61b83cecfccba3126282c0ecf8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="switch-c-reference"></a>switch (Referencia de C#)
 `switch` es una instrucción de selección que elige una sola *sección switch* para ejecutarla desde una lista de candidatos en función de una coincidencia de patrones con la *expresión de coincidencia*. 
@@ -53,7 +54,7 @@ En C# 6, la expresión de coincidencia debe ser una expresión que devuelva un v
 - Un valor entero, como [int](int.md) o [long](long.md).
 - Un valor [enum](enum.md).
 
-A partir de C# 7, la expresión de coincidencia puede ser cualquier expresión que no sea nula.
+A partir de C# 7.0, la expresión de coincidencia puede ser cualquier expresión que no sea nula.
  
 ## <a name="the-switch-section"></a>Sección switch
  
@@ -91,7 +92,7 @@ Este requisito se suele cumplir al salir explícitamente de la sección switch m
 
  Dado que C# 6 solo admite el patrón constante y no permite la repetición de valores constantes, las etiquetas case definen valores mutuamente exclusivos y solo un patrón puede coincidir con la expresión de coincidencia. Por este motivo, el orden en que aparezcan las instrucciones `case` no tiene importancia.
 
- Pero en C# 7, dado que se admiten otros patrones, las etiquetas case no necesitan definir valores mutuamente exclusivos y varios patrones pueden coincidir con la expresión de coincidencia. Puesto que solo se ejecutan las instrucciones de la sección switch que contiene el primer patrón coincidente, el orden en que aparecen las instrucciones `case` sí es importante. Si C# detecta una sección switch cuya instrucción o instrucciones case son equivalentes a o son subconjuntos de instrucciones anteriores, genera un error del compilador, CS8120: "El caso del modificador ya se ha gestionado en un caso anterior". 
+ Pero en C# 7.0, dado que se admiten otros patrones, las etiquetas de caso no necesitan definir valores mutuamente exclusivos y varios patrones pueden coincidir con la expresión de coincidencia. Puesto que solo se ejecutan las instrucciones de la sección switch que contiene el primer patrón coincidente, el orden en que aparecen las instrucciones `case` sí es importante. Si C# detecta una sección switch cuya instrucción o instrucciones case son equivalentes a o son subconjuntos de instrucciones anteriores, genera un error del compilador, CS8120: "El caso del modificador ya se ha gestionado en un caso anterior". 
 
  En el ejemplo siguiente se muestra una instrucción `switch` que usa una variedad de patrones que no son mutuamente excluyentes. Si mueve la sección switch `case 0:` de modo que ya no sea la primera sección de la instrucción `switch`, C# genera un error del compilador debido a que un entero cuyo valor es cero es un subconjunto de todos los enteros, que es el patrón definido por la instrucción `case int val`.
 
@@ -111,7 +112,7 @@ La etiqueta case `default` puede aparecer en cualquier orden en la instrucción 
 
 ## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Coincidencia de patrones con la instrucción `switch`
   
-Cada instrucción `case` define un patrón que, si coincide con la expresión de coincidencia, provoca la ejecución de su sección switch contenedora. Todas las versiones de C# admiten el patrón de constante. Los demás patrones se admiten a partir de C# 7. 
+Cada instrucción `case` define un patrón que, si coincide con la expresión de coincidencia, provoca la ejecución de su sección switch contenedora. Todas las versiones de C# admiten el patrón de constante. Los demás patrones se admiten a partir de C# 7.0. 
   
 ### <a name="constant-pattern"></a>Patrón de constante 
 
@@ -181,7 +182,7 @@ Sin coincidencia de patrones, este código podría escribirse del modo siguiente
 
 ## <a name="the-case-statement-and-the-when-clause"></a>Instrucción `case` y cláusula `when`
 
-A partir de C# 7, dado que las instrucciones case no necesitan ser mutuamente excluyentes, puede agregar una cláusula `when` para especificar una condición adicional que deba cumplirse para que la instrucción case se evalúe como true. La cláusula `when` puede ser cualquier expresión que devuelva un valor booleano. Uno de los usos más comunes de la cláusula `when` es evitar que una sección switch se ejecute cuando el valor de una expresión de coincidencia sea `null`. 
+A partir de C# 7.0, dado que las instrucciones de caso no necesitan ser mutuamente excluyentes, puede agregar una cláusula `when` para especificar una condición adicional que deba cumplirse para que la instrucción de caso se evalúe como true. La cláusula `when` puede ser cualquier expresión que devuelva un valor booleano. Uno de los usos más comunes de la cláusula `when` es evitar que una sección switch se ejecute cuando el valor de una expresión de coincidencia sea `null`. 
 
  En el ejemplo siguiente se define una clase base `Shape`, una clase `Rectangle` que deriva de `Shape` y una clase `Square` que deriva de `Rectangle`. Usa la cláusula `when` para asegurarse de que `ShowShapeInfo` trate a un objeto `Rectangle` al que se han asignado las mismas longitudes y anchos como si fuera `Square` aunque de él no se hayan creado instancias como de un objeto `Square`. El método no intenta mostrar información sobre un objeto que es `null` ni sobre una forma cuya área es cero. 
 

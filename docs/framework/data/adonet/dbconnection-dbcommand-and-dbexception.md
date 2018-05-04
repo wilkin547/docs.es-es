@@ -1,27 +1,15 @@
 ---
 title: DbConnection, DbCommand y DbException
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 58aab611-7e6f-4749-b983-28ab7ae87dbe
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7a79587762ec9b69bcc580af63fc1db19e491dec
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 419f152d45ec254efab9270f67ace6e46a6b96a7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>DbConnection, DbCommand y DbException
 Después de crear un objeto <xref:System.Data.Common.DbProviderFactory> y un objeto <xref:System.Data.Common.DbConnection>, puede trabajar con comandos y lectores de datos para recuperar datos del origen de datos.  

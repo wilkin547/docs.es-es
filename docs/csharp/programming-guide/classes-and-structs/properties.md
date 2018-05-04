@@ -1,5 +1,5 @@
 ---
-title: "Propiedades (Guía de programación de C#)"
+title: Propiedades (Guía de programación de C#)
 ms.date: 03/10/2017
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-caps.latest.revision: 
+caps.latest.revision: 38
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6f40bea2c7d39d88839a70e73e391113bee86f14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 186384c0a251d72b8726b3ae2f8f3faf0e6e008f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="properties-c-programming-guide"></a>Propiedades (Guía de programación de C#)
 
@@ -26,7 +26,7 @@ Una propiedad es un miembro que proporciona un mecanismo flexible para leer, esc
 
 ## <a name="properties-overview"></a>Información general sobre propiedades  
   
-- Las propiedades permiten que una clase exponga una manera pública de obtener y establecer valores, a la vez que se oculta el código de implementación o comprobación.  
+- Las propiedades permiten que una clase exponga una manera pública de obtener y establecer valores, a la vez que se oculta el código de implementación o verificación.  
   
 - Para devolver el valor de la propiedad se usa un descriptor de acceso de propiedad [get](../../../csharp/language-reference/keywords/get.md), mientras que para asignar un nuevo valor se emplea un descriptor de acceso de propiedad [set](../../../csharp/language-reference/keywords/set.md). Estos descriptores de acceso pueden tener diferentes niveles de acceso. Para más información, vea [Restringir la accesibilidad del descriptor de acceso](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
   
@@ -51,7 +51,7 @@ En el ejemplo siguiente se muestra este patrón. En este ejemplo, la clase `Time
 
  [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
- A partir de C# 7, los descriptores de acceso `get` y `set` se pueden implementar como miembros con forma de expresión. En este caso, las palabras clave `get` y `set` deben estar presentes. En el ejemplo siguiente se muestra el uso de definiciones de cuerpos de expresión para ambos descriptores de acceso. Observe que no se usa la palabra clave `return` con el descriptor de acceso `get`.
+ A partir de C# 7.0, los descriptores de acceso `get` y `set` se pueden implementar como miembros con forma de expresión. En este caso, las palabras clave `get` y `set` deben estar presentes. En el ejemplo siguiente se muestra el uso de definiciones de cuerpos de expresión para ambos descriptores de acceso. Observe que no se usa la palabra clave `return` con el descriptor de acceso `get`.
  
   [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 

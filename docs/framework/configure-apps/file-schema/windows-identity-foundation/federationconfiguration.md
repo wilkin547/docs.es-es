@@ -1,24 +1,14 @@
 ---
 title: '&lt;federationConfiguration&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 0014e0224221cd5143709ba0a5b38f10e457b494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 44014d620dcd03e055eb58b50a1428b8e1b41186
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfederationconfigurationgt"></a>&lt;federationConfiguration&gt;
 Configura el <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) y <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) al usar federado autenticación a través del protocolo WS-Federation. Configura el <xref:System.Security.Claims.ClaimsAuthorizationManager> cuando se usa el <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> clase para proporcionar el control de acceso basado en notificaciones.  
@@ -76,7 +66,7 @@ Configura el <xref:System.IdentityModel.Services.WSFederationAuthenticationModul
   
 4.  Si varios denominado `<federationConfiguration>` elementos están presentes y sin nombre no `<federationConfiguration>` elemento está presente, se produce una excepción.  
   
- Por lo general, solo una `<federationConfiguration>` se define la sección. Esta sección es la configuración de federación de forma predeterminada. Puede especificar varios, denominado de forma única `<federationConfiguration>` elementos; sin embargo, en este caso, si desea cargar una configuración de federación que no sea el sin nombre, debe proporcionar un controlador para el. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>eventos y establezca la <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> propiedad dentro del controlador para una <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto inicializado con los valores con la correspondiente `<federationConfiguration>` elemento en el archivo de configuración.  
+ Por lo general, solo una `<federationConfiguration>` se define la sección. Esta sección es la configuración de federación de forma predeterminada. Puede especificar varios, denominado de forma única `<federationConfiguration>` elementos; sin embargo, en este caso, si desea cargar una configuración de federación que no sea el sin nombre, debe proporcionar un controlador para el. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> eventos y establezca la <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> propiedad dentro del controlador para una <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto inicializado con los valores con la correspondiente `<federationConfiguration>` elemento en el archivo de configuración.  
   
  El `<federationConfiguration>` elemento representado por la <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> clase. El propio objeto de configuración se representa mediante la <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> clase. Una sola <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> instancia se establece en el <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> propiedad y proporciona una configuración federada para la aplicación.  
   

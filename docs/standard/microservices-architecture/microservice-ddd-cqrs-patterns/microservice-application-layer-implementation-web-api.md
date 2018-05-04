@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cfca93dca0ec9d05936f4be676e27135c581de94
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: bdb080369c26a3d7ffab97f93ba3419d6bd84754
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Implementación del nivel de aplicación de microservicios mediante la API web
 
@@ -117,8 +117,8 @@ Al usar DI en .NET Core, es posible que le interese poder examinar un ensamblado
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **Matthew King. Registro de los servicios con Scrutor**
-    [*https://mking.io/blog/registering-services-with-scrutor*](https://mking.io/blog/registering-services-with-scrutor)
+-   **Matthew King. Registering services with Scrutor (Registrar servicios con Scrutor)**
+    [*https://mking.net/blog/registering-services-with-scrutor*](https://mking.net/blog/registering-services-with-scrutor)
 
 <!-- -->
 
@@ -172,13 +172,13 @@ El tipo de ámbito de la instancia determina cómo se comparte una instancia ent
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **Introducción a la inyección de dependencia en el núcleo de ASP.NET**
+-   **Introduction to Dependency Injection in ASP.NET Core (Introducción a la inserción de dependencias en ASP.NET Core)**
     [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
 
 -   **Autofac.** Documentación oficial.
     [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
 
--   **Comparar duraciones de servicio de contenedor de ASP.NET Core IoC con ámbitos de instancia del contenedor de Autofac IoC - Cesar de la Torre.**
+-   **Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes (Comparación de las duraciones de servicio del contenedor IoC de ASP-NET Core con ámbitos de instancia de contenedor Autofac IoC) - Cesar de la Torre.**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="implementing-the-command-and-command-handler-patterns"></a>Implementación de los patrones de comando y controlador de comandos
@@ -398,19 +398,19 @@ Estos son los pasos adicionales que debe realizar un controlador de comandos:
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **Mark Seemann. En los límites, las aplicaciones están orientados a objetos no**
-    [*http://blog.ploeh.dk/2011/05/31/AttheBoundariesorientada a ApplicationsareNotObject /*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+-   **Mark Seemann. At the Boundaries, Applications are Not Object-Oriented (En los límites, las aplicaciones no están orientadas a objetos)**
+    [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
--   **Comandos y eventos**
+-   **Commands and events (Comandos y eventos)**
     [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
 
--   **¿Qué hace el controlador de comandos?**
+-   **What does a command handler do? (¿De qué se encarga un controlador de comandos?)**
     [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
 
--   **Jimmy Bogard. Patrones de comando de dominio: controladores**
+-   **Jimmy Bogard. Domain Command Patterns – Handlers (Patrones de comandos de dominio: controladores)**
     [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
 
--   **Jimmy Bogard. Patrones de comando de dominio: validación**
+-   **Jimmy Bogard. Domain Command Patterns – Validation (Patrones de comandos de dominio: validación)**
     [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/)
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>La canalización del proceso de comando: cómo desencadenar un controlador de comandos
@@ -833,38 +833,38 @@ De forma similar, podría implementar otros comportamientos para aspectos adicio
 
 ##### <a name="the-mediator-pattern"></a>El patrón de mediador
 
--   **Patrón de mediador**
-    [*https://en.wikipedia.org/wiki/Mediator\_patrón*](https://en.wikipedia.org/wiki/Mediator_pattern)
+-   **Mediator (patrón de diseño)**
+    [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>El patrón Decorator
 
--   **Patrón de decorador**
-    [*https://en.wikipedia.org/wiki/Decorator\_patrón*](https://en.wikipedia.org/wiki/Decorator_pattern)
+-   **Decorator (patrón de diseño)**
+    [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 
 -   **MediatR.** Repositorio de GitHub.
     [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
 
--   **CQRS con MediatR y AutoMapper**
+-   **CQRS with MediatR and AutoMapper (CQRS con MediatR y AutoMapper)**
     [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
--   **Poner los controladores en una alimentación: entradas y comandos.**
+-   **Put your controllers on a diet: POSTs and commands (Poner los controladores a dieta: POST y comandos).**
     [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
--   **Abordar problemas de corte del cruce con una canalización mediador**
+-   **Tackling cross-cutting concerns with a mediator pipeline (Abordar cuestiones transversales con una canalización de mediador)**
     [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
 
--   **CQRS y REST: la coincidencia exacta**
+-   **CQRS and REST: the perfect match (CQRS y REST: la combinación perfecta)**
     [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
 
--   **Ejemplos de canalización MediatR**
+-   **MediatR Pipeline Examples (Ejemplos de canalización de MediatR)**
     [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
 
--   **Accesorios de prueba de segmento vertical para MediatR y ASP.NET Core**
+-   **Vertical Slice Test Fixtures for MediatR and ASP.NET Core (Accesorios de prueba de segmentos verticales para MediatR y ASP.NET Core)**
     *<https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/> *
 
--   **MediatR extensiones para la inyección de dependencia de Microsoft publicado**
+-   **MediatR Extensions for Microsoft Dependency Injection Released (Extensiones de MediatR para el lanzamiento de inserciones de dependencias de Microsoft)**
     [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
 
 ##### <a name="fluent-validation"></a>Validación fluida

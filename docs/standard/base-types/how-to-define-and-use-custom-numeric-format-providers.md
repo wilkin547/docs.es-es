@@ -1,12 +1,12 @@
 ---
-title: "Cómo: Definir y usar proveedores de formato numérico personalizado"
-ms.custom: 
+title: 'Cómo: Definir y usar proveedores de formato numérico personalizado'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f8f06335d96b3e71f14b3df6b40ef3691c0915f1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eb578b18b3d3ab7ae617873a33745f36e0e8cacb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Cómo: Definir y usar proveedores de formato numérico personalizado
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ofrece un amplio control sobre la representación de cadena de valores numéricos. Admite las siguientes características para personalizar el formato de los valores numéricos:  
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/23/2017
  En el caso de este ejemplo, el método que implementa <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> está diseñado para que actúe como un método de devolución de llamada para el método <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>. Por lo tanto, examina el parámetro `formatProvider` para determinar si contiene una referencia al objeto `TelephoneFormatter` actual. Pero también se puede llamar al método directamente desde el código. En ese caso, puede usar el parámetro `formatProvider` para proporcionar un objeto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.NumberFormatInfo> que aporte información de formato específica de la referencia cultural.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Compile el código de la línea de comandos mediante csc.exe o vb.exe. Para compilar el código de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], póngalo en una plantilla de proyecto de aplicación de consola.  
+ Compile el código de la línea de comandos mediante csc.exe o vb.exe. Para compilar el código en Visual Studio, póngalo en una plantilla de proyecto de aplicación de consola.  
   
 ## <a name="see-also"></a>Vea también  
  [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)

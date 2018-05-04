@@ -1,6 +1,6 @@
 ---
-title: "Tutorial de ramas y bucles: guías de inicio rápido para entornos locales de C#"
-description: "En este inicio rápido sobre ramas y bucles, escribirá código de C# para explorar la sintaxis del lenguaje que admite ramas y bucles condicionales para ejecutar instrucciones de forma repetida."
+title: 'Tutorial de ramas y bucles: guías de inicio rápido para entornos locales de C#'
+description: En este inicio rápido sobre ramas y bucles, escribirá código de C# para explorar la sintaxis del lenguaje que admite ramas y bucles condicionales para ejecutar instrucciones de forma repetida.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ea9fb2322202dfa19344e6119e748827535b0739
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="branches-and-loops"></a>Bifurcaciones y bucles
 
@@ -249,11 +249,11 @@ Ahora que ya ha obtenido la información sobre el bucle `if` y las construccione
 - La instrucción `if` genera la condición para saber si un número debe formar parte de la suma.
 - El bucle `for` puede facilitar la repetición de una serie de pasos para todos los números comprendidos entre el uno y el veinte.
 
-Pruébelo usted mismo. Después, revise cómo lo ha hecho. Debe obtener 63 como respuesta. Puede ver una respuesta posible mediante la [visualización del código completado en GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54).
+Pruébelo usted mismo. Después, revise cómo lo ha hecho. Debe obtener 63 como respuesta. Puede ver una respuesta posible mediante la [visualización del código completado en GitHub](https://github.com/dotnet/samples/tree/master/csharp/branches-quickstart/Program.cs#L46-L54).
 
 Ha completado la guía de inicio rápido sobre "ramas y bucles".
 
-Puede continuar con el inicio rápido [Cadenas interpoladas](interpolated-strings-local.md) en su propio entorno de desarrollo.
+Puede continuar con la guía de inicio rápido [Interpolación de cadenas](interpolated-strings-local.md) en su propio entorno de desarrollo.
 
 Puede obtener más información sobre estos conceptos en los temas siguientes:
 

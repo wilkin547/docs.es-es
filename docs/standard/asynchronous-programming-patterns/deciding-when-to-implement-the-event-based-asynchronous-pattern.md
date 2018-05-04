@@ -1,12 +1,12 @@
 ---
-title: "Decidir cuándo implementar el modelo asincrónico basado en eventos"
-ms.custom: 
+title: Decidir cuándo implementar el modelo asincrónico basado en eventos
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 111aaaa86877368ccbd0c9c11a26dff47b065698
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 330dc5ec76fe33a7f6165857334a367f578840ef
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Decidir cuándo implementar el modelo asincrónico basado en eventos
 El modelo asincrónico basado en eventos proporciona un modelo para exponer el comportamiento asincrónico de una clase. Con la introducción de este modelo, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] define dos modelos para exponer el comportamiento asincrónico: el modelo asincrónico basado en la interfaz <xref:System.IAsyncResult?displayProperty=nameWithType> y el modelo basado en eventos. En este tema se describe cuándo es adecuado permitirle implementar ambos modelos.  
@@ -63,7 +63,7 @@ El modelo asincrónico basado en eventos proporciona un modelo para exponer el c
   
     -   Exponga el modelo basado en eventos y el modelo <xref:System.IAsyncResult> en la misma clase si la complejidad del modelo de objetos resultante supera la ventaja de separar las implementaciones. Es mejor exponer ambos modelos en una sola clase que evitar exponer el modelo basado en eventos.  
   
-    -   Si debe exponer tanto el modelo basado en eventos como el modelo <xref:System.IAsyncResult> en una sola clase, use <xref:System.ComponentModel.EditorBrowsableAttribute> establecido en <xref:System.ComponentModel.EditorBrowsableState.Advanced> para marcar la implementación del modelo <xref:System.IAsyncResult> como una característica avanzada. Esto indica a los entornos de diseño, como [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense, que no muestren las propiedades y los métodos de <xref:System.IAsyncResult>. Estas propiedades y métodos todavía son totalmente utilizables, pero el desarrollador que trabaja con IntelliSense tiene una visión más clara de la API.  
+    -   Si debe exponer tanto el modelo basado en eventos como el modelo <xref:System.IAsyncResult> en una sola clase, use <xref:System.ComponentModel.EditorBrowsableAttribute> establecido en <xref:System.ComponentModel.EditorBrowsableState.Advanced> para marcar la implementación del modelo <xref:System.IAsyncResult> como una característica avanzada. Esto indica a los entornos de diseño, como IntelliSense en Visual Studio, que no muestren las propiedades y los métodos de <xref:System.IAsyncResult>. Estas propiedades y métodos todavía son totalmente utilizables, pero el desarrollador que trabaja con IntelliSense tiene una visión más clara de la API.  
   
 ## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>Criterios para exponer el modelo IAsyncResult además del modelo basado en eventos  
  Aunque el modelo asincrónico basado en eventos tiene muchas ventajas en los escenarios mencionados anteriormente, también tiene algunas desventajas, que debe tener en cuenta si el rendimiento es el requisito más importante.  

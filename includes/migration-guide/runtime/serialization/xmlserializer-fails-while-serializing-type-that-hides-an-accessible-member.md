@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |Detalles|Al serializar un tipo derivado, se puede producir un error en <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> si el tipo contiene un campo o una propiedad inaccesible que oculta (a través de la palabra clave "new") un campo o una propiedad del mismo nombre que previamente era accesible (public, por ejemplo) en el tipo base.|
-|Sugerencia|Este problema se puede resolver si el nuevo miembro que realiza la ocultación se convierte en accesible para <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> (marcándolo como público, por ejemplo). Como alternativa, la opción de configuración siguiente volverá al comportamiento de <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> de 4.0, lo que solucionará el problema:<pre><code class="language-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
+|Sugerencia|Este problema se puede resolver si el nuevo miembro que realiza la ocultación se convierte en accesible para <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> (marcándolo como público, por ejemplo). Como alternativa, la opción de configuración siguiente volverá al comportamiento de <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> de 4.0, lo que solucionará el problema:<pre><code class="lang-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
 |Ámbito|Secundaria|
 |Versión|4.5|
 |Tipo|Tiempo de ejecución|

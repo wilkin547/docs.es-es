@@ -1,6 +1,6 @@
 ---
-title: "Coincidencia de patrones: Guía de C#"
-description: "Información sobre las expresiones de coincidencia de patrones en C#"
+title: 'Coincidencia de patrones: Guía de C#'
+description: Información sobre las expresiones de coincidencia de patrones en C#
 keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
 ms.author: wiwagn
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c77c3c3da9983d20cdd86db18f60f83b86b07ea
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.openlocfilehash: c3fbc617f742e8dd5db4b2ac46b38958cdc30007
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos #
 
@@ -112,27 +112,27 @@ Por último, puede agregar un caso `null` para garantizar que el argumento no se
 
 El comportamiento especial del patrón `null` es interesante porque la constante `null` del patrón no tiene un tipo, pero se puede convertir a cualquier tipo de referencia o tipo que acepte valores NULL. En lugar de convertir `null` en cualquier tipo, el lenguaje define que un valor `null` no coincidirá con ningún patrón de tipo, independientemente del tipo de tiempo de compilación de la variable. Este comportamiento hace que el nuevo patrón de tipo basado en `switch` sea coherente con la instrucción `is`: las instrucciones `is` siempre devuelven `false` cuando el valor que se está comprobando es `null`. También es más sencillo: una vez que haya comprobado el tipo, no necesita una comprobación de NULL adicional. Puede comprobar esto en que no existen comprobaciones de NULL en ninguno de los bloques de casos de los ejemplos anteriores: no son necesarias, ya que la coincidencia del patrón de tipo garantiza un valor distinto de NULL.
 
-## <a name="var-declarations-in-case-expressions"></a>`var`las declaraciones de `case` expresiones
+## <a name="var-declarations-in-case-expressions"></a>Declaraciones `var` en expresiones `case`
 
-La introducción de `var` como una de las expresiones de coincidencia presenta nuevas reglas para la búsqueda de coincidencias de patrón.
+La introducción de `var` como una de las expresiones de coincidencia presenta nuevas reglas para la coincidencias de patrones.
 
-La primera regla es que el `var` declaración sigue las reglas de inferencia de tipo normal: el tipo se deduce que el tipo estático de la expresión switch. De esa regla, el tipo siempre coincide con.
+La primera regla es que la declaración `var` sigue las reglas de inferencia de tipos normales: el tipo se infiere para ser estático de la expresión switch. De esa regla, el tipo siempre coincide.
 
-La segunda regla es que un `var` declaración no tiene la comprobación de valores null que incluyen otras expresiones de patrón de tipo. Esto significa que la variable puede ser null y una comprobación de valores null en ese caso es necesaria.
+La segunda regla es que una declaración `var` no tiene la comprobación de valores NULL que incluyen otras expresiones de patrón de tipo. Esto significa que la variable puede ser NULL y se necesita una comprobación de valores NULL en ese caso.
 
-Esas dos reglas significan que en muchos casos, un `var` declaración en un `case` expresión coincide con las mismas condiciones que un `default` expresión.
-Dado que es preferible a un caso de no predeterminado el `default` caso, el `default` caso nunca se ejecutará.
+Esas dos reglas implican que, en muchos casos, una declaración `var` en una expresión `case` coincide con las mismas condiciones que una expresión `default`.
+Dado que se prefiere cualquier caso que no sea default al caso `default`, el caso `default` nunca se ejecutará.
 
 > [!NOTE]
-> El compilador no emite una advertencia en los casos donde un `default` caso se ha escrito, pero nunca se ejecutará. Esto es coherente con la actual `switch` comportamiento de la instrucción donde se han enumerado todos los casos posibles.
+> El compilador no emite una advertencia en esos casos en que se ha escrito un caso `default` pero nunca se ejecutará. Esto es coherente con el comportamiento actual de la instrucción `switch` donde se han enumerado todos los casos posibles.
 
-La tercera regla presenta utiliza donde un `var` caso puede resultar útil. Imagine que va a realizar a una coincidencia de patrones donde la entrada es una cadena y que está buscando valores de comando conocidos. Podría escribir algo parecido:
+La tercera regla presenta usos donde un caso `var` puede resultar útil. Imagine que va a realizar una coincidencia de patrones donde la entrada es una cadena y busca valores de comando conocidos. Podría escribir algo parecido a esto:
 
 [!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
-El `var` caso coincidencias `null`, la cadena vacía, o cualquier cadena que contiene solo espacios en blanco. Tenga en cuenta que el código anterior usa el `?.` operador para asegurarse de que produce por accidente un <xref:System.NullReferenceException>. El `default` caso controla cualquier otro valor de cadena que no se entiende este analizador de comando.
+El caso `var` coincide con `null`, la cadena vacía, o cualquier cadena que contenga solo espacios en blanco. Tenga en cuenta que el código anterior usa el operador `?.` para asegurarse de que no produce por accidente una <xref:System.NullReferenceException>. El caso `default` controla cualquier otro valor de cadena que no entienda este analizador de comandos.
 
-Este es un ejemplo donde puede que desee tener en cuenta un `var` caso expresión que es distinta de una `default` expresión.
+Este es un ejemplo en que puede que quiera considerar el uso de una expresión de caso `var` que sea distinta de una expresión `default`.
 
 ## <a name="conclusions"></a>Conclusiones
 

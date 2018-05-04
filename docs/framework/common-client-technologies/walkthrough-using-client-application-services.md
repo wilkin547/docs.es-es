@@ -1,13 +1,13 @@
 ---
 title: 'Tutorial: Usar servicios de aplicaciones cliente'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>Tutorial: Usar servicios de aplicaciones cliente
 En este tema se describe cómo crear una aplicación de Windows que usa los servicios de aplicaciones cliente para autenticar usuarios y recuperar la configuración y los roles de usuario.  
@@ -75,7 +75,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
 7.  Asegúrese de que esté seleccionada la opción **Usar autenticación de formularios** y, luego, establezca **Ubicación del servicio de autenticación**, **Ubicación del servicio de roles**y **Ubicación del servicio de configuración web** al valor `http://localhost:55555/AppServices`.  
   
-8.  Para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], en la pestaña **Aplicación** , establezca el **Modo de autenticación** en **Definido por la aplicación**.  
+8.  En Visual Basic, en la pestaña **Aplicación**, establezca **Modo de autenticación** en **Definido por la aplicación**.  
   
  El diseñador almacena los valores especificados en el archivo app.config de la aplicación.  
   
@@ -315,7 +315,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
 ### <a name="creating-a-login-form"></a>Crear un formulario de inicio de sesión  
  Un proveedor de credenciales es una clase que implementa la interfaz <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> . Esta interfaz tiene un método único denominado <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> que devuelve un objeto <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> . Los procedimientos siguientes describen cómo crear un cuadro de diálogo de inicio de sesión que implementa <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> para que aparezca y devuelva las credenciales especificadas por el usuario.  
   
- Se proporcionan procedimientos independientes para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] y C# porque [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] proporciona una plantilla de **formulario de inicio de sesión** . Esto ahorra tiempo y esfuerzo de codificación.  
+ Se proporcionan procedimientos independientes para Visual Basic y C# porque Visual Basic proporciona una plantilla **Formulario de inicio de sesión**. Esto ahorra tiempo y esfuerzo de codificación.  
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic"></a>Para crear un cuadro de diálogo de inicio de sesión como proveedor de credenciales en Visual Basic  
   
@@ -407,7 +407,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
  Ahora puede ejecutar la aplicación e iniciar sesión como empleado para comprobar que el botón no aparece y, a continuación, iniciar sesión como administrador para ver el botón.  
   
 ## <a name="accessing-web-settings"></a>Acceder a la configuración web  
- En el siguiente procedimiento, agregará un cuadro de texto al formulario y lo enlazará a una configuración web. Al igual que el código anterior, que usa autenticación y roles, el código de configuración no accede al proveedor de configuración directamente. En su lugar, usa la clase `Settings` fuertemente tipada (a la que se accede como `Properties.Settings.Default` en C# y como `My.Settings` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) que [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]genera para el proyecto.  
+ En el siguiente procedimiento, agregará un cuadro de texto al formulario y lo enlazará a una configuración web. Al igual que el código anterior, que usa autenticación y roles, el código de configuración no accede al proveedor de configuración directamente. En su lugar, usa la clase `Settings` fuertemente tipada (a la que se accede como `Properties.Settings.Default` en C# y como `My.Settings` en Visual Basic) que [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] genera para el proyecto.  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>Para usar la configuración web en la interfaz de usuario  
   
@@ -527,7 +527,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
     > [!NOTE]
     >  El método <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> es solo para su comodidad. Dado que no tiene un valor devuelto, no puede indicar si hubo un error de validación. La revalidación puede producir un error, por ejemplo, si las credenciales del usuario cambiaron en el servidor. En este caso, quizás desee incluir código que valida explícitamente a los usuarios después de que se produzca un error en una llamada al servicio. Para obtener más información, vea la sección Acceder a la configuración web anteriormente en este tutorial.  
   
-     Después de la revalidación, este código guarda cualquier cambio en la configuración web local llamando al método `SaveSettings` que agregó anteriormente. A continuación, recupera los valores nuevos del servidor llamando al método <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> de la clase `Settings` del proyecto (a la que se accede como `Properties.Settings.Default` en C# y como `My.Settings` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+     Después de la revalidación, este código guarda cualquier cambio en la configuración web local llamando al método `SaveSettings` que agregó anteriormente. Luego recupera los valores nuevos del servidor al llamar al método <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> de la clase `Settings` del proyecto (a la que se accede como `Properties.Settings.Default` en C# y como `My.Settings` en Visual Basic).  
   
      [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]
      [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  

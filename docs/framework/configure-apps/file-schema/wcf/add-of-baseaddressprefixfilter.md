@@ -1,29 +1,17 @@
 ---
 title: '&lt;add&gt; de &lt;baseAddressPrefixFilter&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad6ad6f71ef015ad97a2688a7334e8a0c6e5af44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 549574d0d6585a857f3e0979e814c827139c7536
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;add&gt; de &lt;baseAddressPrefixFilter&gt;
-Representa un elemento de configuración que especifica un filtro del paso a través, que proporciona un mecanismo para seleccionar los enlaces adecuados del servicio de Internet Information Server (IIS) al hospedar una aplicación [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] en IIS.  
+Representa un elemento de configuración que especifica un filtro de paso a través, que proporciona un mecanismo para escoger los enlaces adecuados de Internet Information Services (IIS) al hospedar una aplicación de Windows Communication Foundation (WCF) en IIS.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
 \<baseAddressPrefixFilters >  
 \<add>  
@@ -54,7 +42,7 @@ Representa un elemento de configuración que especifica un filtro del paso a tra
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Una colección de elementos de configuración que especifican filtros del paso a través, que proporcionan un mecanismo para seleccionar los enlaces adecuados de IIS al hospedar una aplicación [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] en IIS.|  
+|[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Una colección de elementos de configuración que especifican filtros del paso a través, que proporcionan un mecanismo para escoger los enlaces de IIS adecuados al hospedar una aplicación de Windows Communication Foundation (WCF) en IIS.|  
   
 ## <a name="remarks"></a>Comentarios  
  Un filtro de prefijo proporciona un método para que los proveedores de host compartido especifiquen qué identificadores URI va a utiliza el servicio. Permite a los host compartidos hospedar varias aplicaciones con direcciones base diferentes para el mismo esquema en el mismo sitio.  

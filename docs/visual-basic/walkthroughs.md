@@ -2,7 +2,8 @@
 title: Tutoriales del lenguaje Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic, walkthroughs
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c57ee0b94e5aafb6b1287707b10977e86ee631f1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b34c513e54ba41bf845abaa59dd630b6877d9bbd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Tutoriales del lenguaje Visual Basic
 Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, lo que hace que un buen lugar para empezar a conocer el producto o una característica en particular.  
@@ -26,13 +27,13 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
  Muestra cómo crear una solución asincrónica mediante el uso de [Async](../visual-basic/language-reference/modifiers/async.md) y [Await](../visual-basic/language-reference/operators/await-operator.md).  
   
  [Declarar y generar eventos](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- Muestra cómo se declaran y generan eventos en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Muestra cómo se declaran y generan eventos en Visual Basic.  
   
  [Controlar eventos](../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)  
  Muestra cómo controlar eventos mediante la palabra clave `WithEvents` estándar o las nuevas palabras clave `AddHandler`/`RemoveHandler`.  
   
  [Crear e implementar interfaces](../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
- Muestra cómo se declaran e implementan interfaces en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Muestra cómo se declaran e implementan interfaces en Visual Basic.  
   
  [Definir clases](../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
  Describe cómo declarar una clase y sus campos, propiedades, métodos y eventos.  
@@ -47,10 +48,10 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
  Explica cómo usar instrucciones `Declare` y llamar a las API de Windows. Incluye información sobre cómo usar atributos para controlar el cálculo de referencias para la llamada API y cómo exponer una llamada API como método de una clase.  
   
  [Crear objetos COM con Visual Basic](../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- Muestra cómo crear objetos COM en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], con y sin la plantilla de clase COM.  
+ Muestra cómo crear objetos COM en Visual Basic, con y sin la plantilla de clase COM.  
   
  [Implementar la herencia mediante objetos COM](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- Muestra cómo usar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 para crear un objeto COM que contenga una clase y luego usarlo como clase base en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Muestra cómo usar Visual Basic 6.0 para crear un objeto COM que contenga una clase y luego usarlo como clase base en Visual Basic.  
   
  [Multithreading](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  Muestra cómo crear una aplicación multiproceso que busque las repeticiones de una palabra en un archivo de texto.  
@@ -77,7 +78,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
  Muestra cómo usar la clase <xref:System.Security.Cryptography.DESCryptoServiceProvider> para cifrar y descifrar cadenas.  
   
  [Manipular archivos y directorios en Visual Basic](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Muestra cómo usar funciones de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] para determinar información sobre un archivo, buscar una cadena en un archivo y escribir en un archivo.  
+ Muestra cómo usar funciones de Visual Basic para determinar información sobre un archivo, buscar una cadena en un archivo y escribir en un archivo.  
   
  [Manipulating Files Using .NET Framework Methods](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md) (Manipular archivos usando métodos de .NET Framework)  
  Muestra cómo usar métodos de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para determinar información sobre un archivo, buscar una cadena en un archivo y escribir en un archivo.  

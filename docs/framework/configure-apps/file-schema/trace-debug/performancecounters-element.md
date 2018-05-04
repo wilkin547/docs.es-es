@@ -1,13 +1,6 @@
 ---
 title: '&lt;performanceCounters&gt; elemento'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/performanceCounters
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - performanceCounters element
 - <perfomanceCounters> element
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 64afd62c6eeca7bce14e331fdc65fccfa3d02bce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb4af08095c14c0c748a79f53104d8454d3dcd47
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt; elemento
 Especifica el tamaño de la memoria global que comparten los contadores de rendimiento.  
@@ -63,7 +54,7 @@ Especifica el tamaño de la memoria global que comparten los contadores de rendi
   
  El tamaño de la memoria compartida global puede establecerse solo con un archivo de configuración.  El tamaño predeterminado es 524.288 bytes, el tamaño máximo es de 33.554.432 bytes y el tamaño mínimo es de 32.768 bytes.  Puesto que todos los procesos y categorías comparten la memoria compartida global, el primer creador especifica el tamaño.  Si el tamaño se define en el archivo de configuración de aplicación, ese tamaño sólo se utiliza si la aplicación es la primera aplicación que hace que los contadores de rendimiento ejecutar.  Por lo tanto, la ubicación correcta para especificar el `filemappingsize` valor es el archivo Machine.config.  No se puede liberar memoria en la memoria compartida global mediante contadores de rendimiento individuales, por lo que finalmente se agota la memoria compartida global si se crea una gran cantidad de instancias de contador de rendimiento con nombres diferentes.  
   
- El tamaño de memoria compartida independiente, el valor de DWORD FileMappingSize en el registro de clave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nombre de categoría >*\Performance se hace referencia en primer lugar, seguido por el valor especificado para la memoria compartida global en el archivo de configuración. Si el valor de FileMappingSize no existe, el tamaño de memoria compartida independiente se establece en una cuarta (1/4) la configuración global en el archivo de configuración.  
+ El tamaño de memoria compartida independiente, el valor de DWORD FileMappingSize en el registro de clave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nombre de categoría >* \Performance se hace referencia en primer lugar, seguido por el valor especificado para la memoria compartida global en el archivo de configuración. Si el valor de FileMappingSize no existe, el tamaño de memoria compartida independiente se establece en una cuarta (1/4) la configuración global en el archivo de configuración.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Diagnostics.PerformanceCounter>  

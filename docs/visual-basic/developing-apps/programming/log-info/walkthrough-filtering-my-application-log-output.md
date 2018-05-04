@@ -1,25 +1,26 @@
 ---
 title: Filtrar el resultado de My.Application.Log (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 90fd445227e0c8290ad63fccf807d6d7bdf43ccd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c048578b320fedd2153aee7b466b1494551abe0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Tutorial: Filtrar el resultado de My.Application.Log (Visual Basic)
 En este tutorial se muestra cómo cambiar el filtrado del registro predeterminado para el objeto `My.Application.Log`, para controlar qué información se pasa desde el objeto `Log` a los agentes de escucha y qué información escriben estos. Puede cambiar el comportamiento del registro incluso después de generar la aplicación, porque la información de configuración se almacena en el archivo de configuración de la aplicación.  
@@ -29,7 +30,7 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
   
 #### <a name="to-build-the-sample-application"></a>Para crear la aplicación de ejemplo  
   
-1.  Abra un proyecto de aplicación Windows de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nuevo.  
+1.  Abra un proyecto Aplicación Windows de Visual Basic nuevo.  
   
 2.  Agregue un botón denominado Button1 a Form1.  
   
@@ -65,7 +66,7 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
 |---|---| 
 |`Critical`|`Critical`|  
 |`Error`|`Critical` o `Error`|  
-|`Warning`|`Critical`, `Error` o `Warning`|  
+|`Warning`|`Critical`, `Error`o `Warning`|  
 |`Information`|`Critical`, `Error`, `Warning` o `Information`|  
 |`Verbose`|`Critical`, `Error`, `Warning`, `Information` o `Verbose`|  
 |`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume` o `Transfer`|  

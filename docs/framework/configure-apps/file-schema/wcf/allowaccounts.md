@@ -1,27 +1,15 @@
 ---
 title: '&lt;allowAccounts&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a1716aa77808b2a9f8f3ca903dabf81b21b8f709
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bbfe0d5d531cf61c01f95d0e82ce0f894031d6f3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
-Contiene una colección de elementos de configuración que especifica las cuentas de usuario para los procesos que hospedan servicios [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] y se concede el acceso de conexión al servicio de uso compartido.  
+Contiene una colección de elementos de configuración especificada por el usuario cuentas para los procesos que hospedan servicios Windows Communication Foundation (WCF) y se concede el acceso de conexión al servicio de uso compartido.  
   
  \<system.serviceModel.activation >  
   

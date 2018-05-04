@@ -15,15 +15,15 @@ ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
 caps.latest.revision: 20
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 44c15eb9d65adf10904f8777847b0653ff1dbc99
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="is-c-reference"></a>is (Referencia de C#) #
 
-Comprueba si un objeto es compatible con un tipo determinado o, a partir de C# 7, comprueba una expresión con un patrón.
+Comprueba si un objeto es compatible con un tipo determinado o, a partir de C# 7.0, prueba una expresión en un patrón.
 
 ## <a name="testing-for-type-compatibility"></a>Probar la compatibilidad de tipos ##
 
@@ -60,11 +60,11 @@ La palabra clave `is` genera una advertencia en tiempo de compilación si se sab
 `expr` puede ser cualquier expresión que devuelva un valor, a excepción de métodos anónimos y expresiones lambda. En el ejemplo siguiente se usa `is` para evaluar el valor devuelto de una llamada de método.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
-A partir de C# 7, puede usar la coincidencia de patrones con el [patrón de tipo](#type) para escribir código más conciso que use la instrucción `is`.
+A partir de C# 7.0, puede usar la coincidencia de patrones con el [patrón de tipo](#type) para escribir código más conciso que use la instrucción `is`.
 
 ## <a name="pattern-matching-with-is"></a>Coincidencia de patrones con `is` ##
 
-A partir de C# 7, las instrucciones `is` y [switch](../../../csharp/language-reference/keywords/switch.md) admiten la coincidencia de patrones. La palabra clave `is` admite los patrones siguientes:
+A partir de C# 7.0, las instrucciones `is` y [switch](../../../csharp/language-reference/keywords/switch.md) admiten la coincidencia de patrones. La palabra clave `is` admite los patrones siguientes:
 
 - [Patrón de tipo](#type), que comprueba si una expresión se puede convertir en un tipo especificado y, en caso afirmativo, la convierte en una variable de ese tipo.
 
@@ -90,7 +90,7 @@ La expresión `is` es `true` si se cumple alguna de las siguientes condiciones:
 
 - *expr* tiene un tipo en tiempo de compilación que es una clase base de *type* y *expr* tiene un tipo en tiempo de ejecución que es *type* o se deriva de *type*. El *tipo en tiempo de compilación* de una variable es el tipo de la variable tal como se define en su declaración. El *tipo en tiempo de ejecución* de una variable es el tipo de la instancia que se asigna a esa variable.
 
-- *expr* es una instancia de un tipo que implementa la interfaz *type*.
+- *type* es una instancia de un tipo que implementa la interfaz *type*.
 
 Si *exp* es `true` e `is` se usa con una instrucción `if`, *varname* se asigna y tiene ámbito local solo dentro de la instrucción `if`.
 
@@ -112,7 +112,7 @@ El código equivalente sin coincidencia de patrones requiere una asignación ind
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Patrón de constante ###
 
-Al realizar la coincidencia de patrones con el patrón constante, `is` comprueba si una expresión es igual a una constante especificada. En C# 6 y versiones anteriores, la instrucción [switch](switch.md) admite el patrón de constante. A partir de C# 7, la instrucción `is` también lo admite. Su sintaxis es:
+Al realizar la coincidencia de patrones con el patrón constante, `is` comprueba si una expresión es igual a una constante especificada. En C# 6 y versiones anteriores, la instrucción [switch](switch.md) admite el patrón de constante. A partir de C# 7.0, la instrucción `is` también lo admite. Su sintaxis es:
 
 ```csharp
    expr is constant

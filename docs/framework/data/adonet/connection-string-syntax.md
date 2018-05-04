@@ -1,26 +1,12 @@
 ---
 title: Sintaxis de cadenas de conexión
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-caps.latest.revision: 11
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3939abaf376100e09d244afdb32662729a990ff7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ac7053d1b1b0865f33ae1bcd955493b4c62c7be6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-string-syntax"></a>Sintaxis de cadenas de conexión
 Cada proveedor de datos .NET Framework tiene un objeto `Connection` que hereda de la clase <xref:System.Data.Common.DbConnection>, así como una propiedad <xref:System.Data.Common.DbConnection.ConnectionString%2A> específica del proveedor. La sintaxis de la cadena de conexión específica de cada proveedor se indica en su propiedad `ConnectionString`. En la tabla siguiente se muestran los cuatro proveedores de datos que se incluyen en .NET Framework.  
@@ -138,9 +124,9 @@ A la hora de crear una cadena de conexión, también puede establecer la propied
  La propiedad <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> de un objeto <xref:System.Data.OleDb.OleDbConnection> permite obtener o establecer una cadena de conexión para un origen de datos OLE DB, como Microsoft Access. Asimismo puede crear una cadena de conexión de `OleDb` en tiempo de ejecución mediante la clase <xref:System.Data.OleDb.OleDbConnectionStringBuilder>.  
   
 ### <a name="oledb-connection-string-syntax"></a>Sintaxis de cadena de conexión OleDb  
- Para una cadena de conexión <xref:System.Data.OleDb.OleDbConnection>, debe proporcionar un nombre de proveedor. La siguiente cadena de conexión conecta a una base de datos Microsoft Access mediante el proveedor Jet. Tenga en cuenta que las palabras clave `UserID` y `Password` son opcionales si la base de datos no está protegida (opción predeterminada).  
+ Para una cadena de conexión <xref:System.Data.OleDb.OleDbConnection>, debe proporcionar un nombre de proveedor. La siguiente cadena de conexión conecta a una base de datos Microsoft Access mediante el proveedor Jet. Tenga en cuenta que las palabras clave `User ID` y `Password` son opcionales si la base de datos no está protegida (opción predeterminada).  
   
-```  
+```   
 Provider=Microsoft.Jet.OLEDB.4.0; Data Source=d:\Northwind.mdb;User ID=Admin;Password=;   
 ```  
   

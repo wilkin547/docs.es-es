@@ -1,29 +1,17 @@
 ---
 title: '&lt;add&gt; de &lt;authorizationPolicies&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72af0529cea2e6810bdb7a518874a313e3ceab40
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 008f465134860141293776130ebd75cd39120f5e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a>&lt;add&gt; de &lt;authorizationPolicies&gt;
 Especifica una directiva de autorización para la transformación de notificaciones.  
   
- \<sistema. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportamientos >  
 \<comportamiento >  
 \<serviceAuthorization >  
@@ -48,7 +36,7 @@ Especifica una directiva de autorización para la transformación de notificacio
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`policyType`|Atributo de cadena requerido.<br /><br /> El modelo de control de acceso de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] admite el aprovisionamiento de un conjunto de directivas de autorización como tipos. Este atributo especifica una directiva de autorización que permite la transformación de un conjunto de notificaciones de entrada en otro conjunto de notificaciones. Se puede permitir o denegar el acceso en base a eso.|  
+|`policyType`|Atributo de cadena requerido.<br /><br /> El modelo de control de acceso de Windows Communication Foundation (WCF) es compatible con un conjunto de directivas de autorización como tipos de aprovisionamiento. Este atributo especifica una directiva de autorización que permite la transformación de un conjunto de notificaciones de entrada en otro conjunto de notificaciones. Se puede permitir o denegar el acceso en base a eso.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  

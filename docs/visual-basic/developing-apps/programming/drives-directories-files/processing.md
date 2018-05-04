@@ -1,11 +1,12 @@
 ---
 title: Procesar unidades, directorios y archivos (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - drives
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - files [Visual Basic], accessing
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 27a5c3c389860cdc29c4263edbff492738ffe565
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: aad7ea3a24bf0f738999c58a7934d1ffcf92b967
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Procesar unidades, directorios y archivos (Visual Basic)
-Se puede usar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] para procesar unidades, carpetas y archivos con el objeto `My.Computer.FileSystem`, que proporciona un mejor rendimiento y es más fácil de usar que los métodos tradicionales como las funciones `FileOpen` y `Write` (aunque siguen estando disponibles). En las secciones siguientes se describen estos métodos con detalle.  
+Se puede usar Visual Basic para procesar unidades, carpetas y archivos con el objeto `My.Computer.FileSystem`, que proporciona un mejor rendimiento y es más fácil de usar que los métodos tradicionales como las funciones `FileOpen` y `Write` (aunque siguen estando disponibles). En las secciones siguientes se describen estos métodos con detalle.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Acceso a archivos con Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)  

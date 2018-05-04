@@ -1,26 +1,17 @@
 ---
-title: "Formularios Windows Forms Agregar elemento de configuración"
-ms.custom: 
+title: Formularios Windows Forms Agregar elemento de configuración
 ms.date: 04/07/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 331b2238ae87776938422484d34bb68b4653a56e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 529dbccd5ddb4dd1f1456fb9a6043f3c5f7b378d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-forms-add-configuration-element"></a>Formularios Windows Forms Agregar elemento de configuración
 
@@ -45,19 +36,19 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 | `key`     | Atributo necesario. Nombre de clave predefinido que se corresponde con una determinada característica personalizable de formularios Windows Forms. |
 | `value`   | Atributo necesario. El valor que se asigna a `key`. |
 
-### <a name="key-attribute-names-and-associated-values"></a>`key`nombres de atributos y valores asociados
+### <a name="key-attribute-names-and-associated-values"></a>`key` nombres de atributos y valores asociados
 
 | Nombre `key` | Valores | Descripción |
 | ---------- | ------ | ----------- |
-| "AnchorLayout.DisableSinglePassControlScaling" | "true" &#124;" False" | Indica si se escalan anclados controles en un solo paso. pasa "true" para deshabilitar el único ajuste de escala; en caso contrario, false. Vea la sección "Solo pasar escalado" en la [comentarios](#Remarks) para obtener más información. |
-| "DpiAwareness" | "PerMonitorV2" &#124;" False" | Indica si una aplicación es compatible con PPP. Establezca la clave para "PerMonitorV2" para admitir el reconocimiento de PPP; de lo contrario, establézcala en "false". Reconocimiento de PPP es una característica opcional; para aprovechar las ventajas de la compatibilidad con PPP alta de formularios Windows Forms, debe establecer su valor en "PerMonitorV2". Consulte la [comentarios](#remarks) sección para obtener más información. |
-| "CheckedListBox.DisableHighDpiImprovements" | "true" &#124;" False" | Indica si el <xref:System.Windows.Forms.CheckedListBox> control aprovecha las ventajas de ajuste de escala y el diseño mejoras introducidas en la 4.7 de .NET Framework. "true" para no participar en las mejoras de diseño y caling; en caso contrario, "false". |
-| "DataGridView.DisableHighDpiImprovements" | "true" &#124;" False" | Indica si la <xref:System.Windows.Forms.DataGridView> controlar el ajuste de escala y el diseño mejoras introducidas en la 4.7 de .NET Framework. "true" para no participar en el reconocimiento de PPP; "false" en caso contrario. |
-| "DisableDpiChangedMessageHandling" | "true" &#124;" False" | "true" para no participar en la recepción de mensajes relacionados con cambios; de ajuste de escala de PPP "false" en caso contrario. Consulte la [comentarios](#remarks) sección para obtener más información. |
-| "EnableWindowsFormsHighDpiAutoResizing" | "true" &#124;" False" | Indica si una aplicación de formularios Windows Forms cambia automáticamente de tamaño debido a cambios de escala de PPP. "true" para habilitar el cambio de tamaño automático; en caso contrario, false. |
-| "Form.DisableSinglePassControlScaling" | "true" &#124;" False" | Indica si el <xref:System.Windows.Forms.Form> se escala en un solo paso. "true" para deshabilitar la fase de único ajuste de escala; en caso contrario, false. Vea la sección "Solo pasar escalado" en la [comentarios](#Remarks) para obtener más información. |
-| "MonthCalendar.DisableSinglePassControlScaling" | "true" &#124;" False" | Indica si el <xref:System.Windows.Forms.MonthCalendar> se escala el control en un solo paso. "true" para deshabilitar la fase de único ajuste de escala; en caso contrario, false. Vea la sección "Solo pasar escalado" en la [comentarios](#Remarks) para obtener más información. |
-| "Toolstrip.DisableHighDpiImprovements" | "true" &#124;" False" | Indica si el <xref:System.Windows.Forms.ToolStrip> control aprovecha las ventajas de ajuste de escala y el diseño mejoras introducidas en la 4.7 de .NET Framework. "true" para no participar en el reconocimiento de PPP; "false" en caso contrario. |
+| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica si se escalan anclados controles en un solo paso. pasa "true" para deshabilitar el único ajuste de escala; en caso contrario, false. Vea la sección "Solo pasar escalado" en la [comentarios](#Remarks) para obtener más información. |
+| "DpiAwareness" | "PerMonitorV2"&#124;"false" | Indica si una aplicación es compatible con PPP. Establezca la clave para "PerMonitorV2" para admitir el reconocimiento de PPP; de lo contrario, establézcala en "false". Reconocimiento de PPP es una característica opcional; para aprovechar las ventajas de la compatibilidad con PPP alta de formularios Windows Forms, debe establecer su valor en "PerMonitorV2". Consulte la [comentarios](#remarks) sección para obtener más información. |
+| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Indica si el <xref:System.Windows.Forms.CheckedListBox> control aprovecha las ventajas de ajuste de escala y el diseño mejoras introducidas en la 4.7 de .NET Framework. "true" para no participar en las mejoras de diseño y caling; en caso contrario, "false". |
+| "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | Indica si la <xref:System.Windows.Forms.DataGridView> controlar el ajuste de escala y el diseño mejoras introducidas en la 4.7 de .NET Framework. "true" para no participar en el reconocimiento de PPP; "false" en caso contrario. |
+| "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true" para no participar en la recepción de mensajes relacionados con cambios; de ajuste de escala de PPP "false" en caso contrario. Consulte la [comentarios](#remarks) sección para obtener más información. |
+| "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Indica si una aplicación de formularios Windows Forms cambia automáticamente de tamaño debido a cambios de escala de PPP. "true" para habilitar el cambio de tamaño automático; en caso contrario, false. |
+| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica si el <xref:System.Windows.Forms.Form> se escala en un solo paso. "true" para deshabilitar la fase de único ajuste de escala; en caso contrario, false. Vea la sección "Solo pasar escalado" en la [comentarios](#Remarks) para obtener más información. |
+| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica si el <xref:System.Windows.Forms.MonthCalendar> se escala el control en un solo paso. "true" para deshabilitar la fase de único ajuste de escala; en caso contrario, false. Vea la sección "Solo pasar escalado" en la [comentarios](#Remarks) para obtener más información. |
+| "Toolstrip.DisableHighDpiImprovements" | "true"&#124;"false" | Indica si el <xref:System.Windows.Forms.ToolStrip> control aprovecha las ventajas de ajuste de escala y el diseño mejoras introducidas en la 4.7 de .NET Framework. "true" para no participar en el reconocimiento de PPP; "false" en caso contrario. |
 
 ### <a name="child-elements"></a>Elementos secundarios
 
@@ -69,7 +60,7 @@ Ninguno.
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | Configura el soporte para las nuevas características de aplicación de Windows Forms. |
 
-## <a name="a-nameremarks--remarks"></a><a name="remarks" />Comentarios
+## <a name="a-nameremarks--remarks"></a><a name="remarks" /> Comentarios
 
 A partir de .NET Framework 4.7, el elemento `<System.Windows.Forms.ApplicationConfigurationSection>` permite configurar las aplicaciones de Windows Forms para aprovechar las características agregadas en versiones recientes de .NET Framework. 
 

@@ -1,6 +1,6 @@
 ---
-title: "Diseño de un microservicio orientado a un DDD"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Diseño de un microservicio orientado a un DDD"
+title: Diseño de un microservicio orientado a un DDD
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Diseño de un microservicio orientado a un DDD
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38b65bc6752dd8b6ed4083c0bc5a5eccabcffbcc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d2d07abe55f30e0b12a7f0cba937abd1b7e32629
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>Diseño de un microservicio orientado a un DDD
 
@@ -57,7 +57,7 @@ Le recomendamos que diseñe el sistema de modo que cada nivel se comunique solam
 
 ### <a name="the-domain-model-layer"></a>El nivel de modelo de dominio
 
-En el fantástico libro de Eric Evans, [Domain Driven Design](http://domainlanguage.com/ddd/) (Diseño guiado por el dominio), se explica lo siguiente sobre el nivel de modelo de dominio y el nivel de aplicación.
+En el fantástico libro de Eric Evans, [Domain Driven Design](https://domainlanguage.com/ddd/) (Diseño guiado por el dominio), se explica lo siguiente sobre el nivel de modelo de dominio y el nivel de aplicación.
 
 **Nivel de modelo de dominio**: responsable de representar conceptos del negocio, información sobre la situación del negocio y reglas de negocios. El estado que refleja la situación empresarial está controlado y se usa aquí, aunque los detalles técnicos de su almacenaje se delegan a la infraestructura. Este nivel es el núcleo del software empresarial.
 
@@ -75,7 +75,7 @@ Además, esto no significa que pueda tomar un modelo diseñado para una base de 
 
 ### <a name="the-application-layer"></a>El nivel de aplicación
 
-Si pasamos al nivel de aplicación, podemos citar de nuevo el libro de Eric Evans [Domain Driven Design](http://domainlanguage.com/ddd/) (Diseño guiado por el dominio):
+Si pasamos al nivel de aplicación, podemos citar de nuevo el libro de Eric Evans [Domain Driven Design](https://domainlanguage.com/ddd/) (Diseño guiado por el dominio):
 
 **Nivel de aplicación**: define los trabajos que se supone que el software debe hacer y dirige los objetos de dominio expresivo para que resuelvan problemas. Las tareas que son responsabilidad de este nivel son significativas para la empresa o necesarias para la interacción con los niveles de aplicación de otros sistemas. Este nivel debe mantenerse estrecho. No contiene reglas de negocios ni conocimientos, sino que solo coordina tareas y delega trabajo a colaboraciones de objetos de dominio en el siguiente nivel. No tiene ningún estado que refleje la situación empresarial, pero puede tener un estado que refleje el progreso de una tarea para el usuario o el programa.
 
@@ -101,13 +101,13 @@ Este diseño de nivel debe ser independiente para cada microservicio. Como se in
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **DevIQ. Persistence Ignorance principle** (Principio de omisión de persistencia)
+-   **DevIQ. Persistence Ignorance principle (Principio de omisión de persistencia)**
     [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
 
--   **Oren Eini. Infrastructure Ignorance** (Omisión de infraestructura)
+-   **Oren Eini. Infrastructure Ignorance (Omisión de infraestructura)**
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez. Layered Architecture In Domain-Driven Design** (Arquitectura por niveles en el diseño guiado por el dominio)
+-   **Angel Lopez. Layered Architecture In Domain-Driven Design (Arquitectura por capas en un diseño guiado por el dominio)**
     [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 

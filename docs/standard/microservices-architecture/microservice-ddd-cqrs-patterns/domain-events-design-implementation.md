@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: af6a6b73c790577cebf301075f2ff7e90960ea62
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: bec1341df85f86d5f2aa15753a11a9c4a2d0173f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de dominio: diseño e implementación
 
@@ -209,7 +209,7 @@ La pregunta de si se debe realizar una única transacción entre agregados en lu
 
 No se espera que las reglas que abarcan agregados estén actualizadas en todo momento. A través del procesamiento de eventos, el procesamiento por lotes u otros mecanismos de actualización, se pueden resolver otras dependencias dentro de un periodo determinado. (página 128)
 
-Vaughn Vernon afirma lo siguiente en [Effective Aggregate Design. Part II: Making Aggregates Work Together](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) (Diseño eficaz de agregados - Parte II: hacer que los agregados funcionen de forma conjunta):
+Vaughn Vernon afirma lo siguiente en [Effective Aggregate Design. Part II: Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) (Diseño eficaz de agregados - Parte II: hacer que los agregados funcionen de forma conjunta):
 
 Por tanto, si la ejecución de un comando en una instancia del agregado requiere que se ejecuten reglas de negocio adicionales en uno o varios agregados, use la coherencia final \[...\] Hay una forma práctica de admitir la coherencia final en un modelo de DDD. Un método de agregado publica un evento de dominio que con el tiempo se entrega a uno o varios suscriptores asincrónicos.
 
@@ -347,13 +347,13 @@ Como se mencionó, los eventos de dominio se usan para implementar explícitamen
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) (Un mejor patrón de eventos de dominio)
 
 -   **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) (Diseño de agregado efectivo, parte II: Conseguir que los agregados funcionen juntos)
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) (Diseño de agregado efectivo, parte II: Conseguir que los agregados funcionen juntos)
 
 -   **Jimmy Bogard. Strengthening your domain: Domain Events**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> * (Reforzar el dominio: eventos de dominio)
 
 -   **Tony Truong. Domain Events Pattern Example**
-    [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/) (Ejemplo de patrón de eventos de dominio)
+    [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/) (Ejemplo de patrón de eventos de dominio)
 
 -   **Udi Dahan. How to create fully encapsulated Domain Models**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/) (Cómo crear modelos de dominio totalmente encapsulados)

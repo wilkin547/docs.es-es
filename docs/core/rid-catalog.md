@@ -1,17 +1,18 @@
 ---
-title: "Catálogo de identificadores de entorno de ejecución (RID) de .NET Core"
-description: "Obtenga información sobre el identificador en tiempo de ejecución (RID) y sobre cómo se usan los RID en .NET Core."
+title: Catálogo de identificadores de entorno de ejecución (RID) de .NET Core
+description: Obtenga información sobre el identificador en tiempo de ejecución (RID) y sobre cómo se usan los RID en .NET Core.
 author: mairaw
 ms.author: mairaw
 ms.date: 09/07/2017
-ms.topic: article
-ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.topic: conceptual
+ms.prod: dotnet-core
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 42707d96744ff765c2ea6ae2298da3e8b27f912f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-rid-catalog"></a>Catálogo de identificadores de entorno de ejecución (RID) de .NET Core
 
@@ -19,7 +20,7 @@ RID es la abreviatura de *identificador de entorno de ejecución*. Los valores d
 Los paquetes de .NET los usan para presentar los recursos específicos de la plataforma en los paquetes de NuGet. Los valores siguientes son ejemplos de RID: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64` o `osx.10.12-x64`.
 En el caso de los paquetes con dependencias nativas, el RID designa las plataformas en las que se puede restauran el paquete.
 
-Los RID se pueden establecer en el elemento `<RuntimeIdentifier>` del archivo del proyecto. También se usan a través de la opción `--runtime` con los [comandos de la CLI de .NET Core](./tools/index.md) siguientes:
+Un único RID se puede establecer en el elemento `<RuntimeIdentifier>` del archivo del proyecto. Se pueden definir varios RID como una lista delimitada por punto y coma en el elemento `<RuntimeIdentifiers>` del archivo del proyecto. También se usan a través de la opción `--runtime` con los [comandos de la CLI de .NET Core](./tools/index.md) siguientes:
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)

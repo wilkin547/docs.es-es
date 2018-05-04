@@ -1,6 +1,6 @@
 ---
-title: "Aplicación de consola"
-description: "Este tutorial le enseña varias características de .NET Core y el lenguaje C#."
+title: Aplicación de consola
+description: Este tutorial le enseña varias características de .NET Core y el lenguaje C#.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,33 +10,40 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 08dab8e7b210ab5159645563cd381d50145d764b
-ms.sourcegitcommit: be7862cac09066bc505586cbf071d0e2c8fb1508
+ms.openlocfilehash: dba6125dd359a47115b0f363a081dc000ce29e6a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="console-application"></a>Aplicación de consola
 
-## <a name="introduction"></a>Introducción
 Este tutorial le enseña varias características de .NET Core y el lenguaje C#. Aprenderá lo siguiente:
-*   Los aspectos básicos de la interfaz de línea de comandos (CLI) de .NET Core
-*   La estructura de una aplicación de consola en C#
-*   E/S de consola
-*   Los aspectos básicos de las API de E/S de archivo en .NET Core
-*   Los aspectos básicos del modelo de programación asincrónica de tareas en .NET Core
 
-Creará una aplicación que lea un archivo de texto y refleje el contenido de ese archivo de texto en la consola. El ritmo de la salida a la consola se ajustará para que coincida con la lectura en voz alta. Para aumentar o reducir el ritmo, presione las teclas "<" o ">".
+- Los aspectos básicos de la interfaz de línea de comandos (CLI) de .NET Core
+- La estructura de una aplicación de consola en C#
+- E/S de consola
+- Aspectos básicos de las API de E/S de archivo en .NET
+- Aspectos básicos de la programación asincrónica basada en tareas en .NET
 
-Hay muchas características en este tutorial. Vamos a compilarlas una a una. 
+Creará una aplicación que lea un archivo de texto y refleje el contenido de ese archivo de texto en la consola. El ritmo de la salida a la consola se ajusta para que coincida con la lectura en voz alta. Para aumentar o reducir el ritmo, presione las teclas "<" o ">".
+
+Hay muchas características en este tutorial. Vamos a compilarlas una a una.
+
 ## <a name="prerequisites"></a>Requisitos previos
-Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página de [.NET Core](https://www.microsoft.com/net/core). Puede ejecutar esta aplicación en Windows, Linux, Mac OS o en un contenedor de Docker. Deberá instalar su editor de código favorito. 
+
+Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página de [.NET Core](https://www.microsoft.com/net/core). Puede ejecutar esta aplicación en Windows, Linux, Mac OS o en un contenedor de Docker.
+Deberá instalar su editor de código favorito.
+
 ## <a name="create-the-application"></a>Crear la aplicación
+
 El primer paso es crear una nueva aplicación. Abra un símbolo del sistema y cree un nuevo directorio para la aplicación. Conviértalo en el directorio actual. Escriba el comando `dotnet new console` en el símbolo del sistema. Esta acción crea los archivos de inicio para una aplicación básica "Hola mundo".
 
-Antes de comenzar a realizar modificaciones, vamos a recorrer los pasos para ejecutar la aplicación Hola a todos sencilla. Después de crear la aplicación, escriba `dotnet restore` ([Véase la nota](#dotnet-restore-note)) en el símbolo del sistema. Este comando ejecuta el proceso de restauración de paquetes de NuGet. NuGet es un administrador de paquetes .NET. Este comando permite descargar cualquiera de las dependencias que faltan para el proyecto. Como se trata de un nuevo proyecto, ninguna de las dependencias está en su lugar, así que con la primera ejecución se descargará .NET Core Framework. Después de este paso inicial, solo necesitará ejecutar `dotnet restore` ([Véase la nota](#dotnet-restore-note)) al agregar nuevos paquetes dependientes, o actualizar las versiones de cualquiera de sus dependencias. Este proceso también crea el archivo de bloqueo de proyecto (project.lock.json) en el directorio del proyecto. Este archivo ayuda a administrar las dependencias del proyecto. Contiene la ubicación local de todas las dependencias del proyecto. No es necesario colocar el archivo de control de código fuente; se generará cuando se ejecuta `dotnet restore` ([Véase la nota](#dotnet-restore-note)). 
+Antes de comenzar a realizar modificaciones, vamos a recorrer los pasos para ejecutar la aplicación Hola a todos sencilla. Después de crear la aplicación, escriba `dotnet restore` en el símbolo del sistema. Este comando ejecuta el proceso de restauración de paquetes de NuGet. NuGet es un administrador de paquetes .NET. Este comando permite descargar cualquiera de las dependencias que faltan para el proyecto. Como se trata de un nuevo proyecto, ninguna de las dependencias está en su lugar, así que con la primera ejecución se descargará .NET Core Framework. Después de este paso inicial, solo deberá ejecutar `dotnet restore` al agregar nuevos paquetes dependientes, o actualizar las versiones de cualquiera de sus dependencias.
 
-Después de restaurar los paquetes, ejecutará `dotnet build`. Esta acción ejecuta el motor de compilación y crea el ejecutable de aplicación. Por último, ejecute `dotnet run` para ejecutar la aplicación.  
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
+Después de restaurar los paquetes, ejecutará `dotnet build`. Esta acción ejecuta el motor de compilación y crea el ejecutable de aplicación. Por último, ejecute `dotnet run` para ejecutar la aplicación.
 
 El código de la aplicación sencilla Hola a todos está todo en Program.cs. Abra ese archivo con el editor de texto de su elección. Nos disponemos a realizar nuestros primeros cambios.
 En la parte superior del archivo, verá una instrucción using:
@@ -45,16 +52,17 @@ En la parte superior del archivo, verá una instrucción using:
 using System;
 ```
 
-Esta instrucción indica al compilador que cualquier tipo del espacio de nombres `System` está en el ámbito. Al igual que otros lenguajes orientados a objetos que pueda haber usado, C# utiliza espacios de nombres para organizar los tipos. Este programa de Hola a todos no es diferente. Puede ver que el programa está incluido en el espacio de nombres `ConsoleApplication`. No es un nombre muy descriptivo, así que cámbielo por `TeleprompterConsole`:
+Esta instrucción indica al compilador que cualquier tipo del espacio de nombres `System` está en el ámbito. Al igual que otros lenguajes orientados a objetos que pueda haber usado, C# utiliza espacios de nombres para organizar los tipos. Este programa Hola mundo no es diferente. Puede ver que el programa se incluye en el espacio de nombres y el nombre se basa en el del directorio actual. Para este tutorial, vamos a cambiar el nombre del espacio de nombres por `TeleprompterConsole`:
 
 ```csharp
 namespace TeleprompterConsole
 ```
 
 ## <a name="reading-and-echoing-the-file"></a>Lectura y reflejo del archivo
-La primera característica que se va a agregar es la capacidad de leer un archivo de texto y visualizar todo ese texto en la consola. En primer lugar, vamos a agregar un archivo de texto. Copie el archivo [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) del repositorio de GitHub de este [ejemplo](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) en su directorio del proyecto. Servirá como script para la aplicación. Si quiere obtener información sobre cómo descargar la aplicación de ejemplo de este tema, vea las instrucciones del tema [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Luego, agregue el siguiente método a la clase Program (justo debajo del método `Main`):
+La primera característica que se va a agregar es la capacidad de leer un archivo de texto y visualizar todo ese texto en la consola. En primer lugar, vamos a agregar un archivo de texto. Copie el archivo [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) del repositorio de GitHub de este [ejemplo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) en su directorio del proyecto. Servirá como script para la aplicación. Si quiere obtener información sobre cómo descargar la aplicación de ejemplo de este tema, vea las instrucciones del tema [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+
+Luego, agregue el siguiente método a la clase `Program` (justo debajo del método `Main`):
 
 ```csharp
 static IEnumerable<string> ReadFrom(string file)
@@ -77,27 +85,28 @@ using System.Collections.Generic;
 using System.IO;
 ```
 
-La interfaz `IEnumerable<T>` se define en el espacio de nombres `System.Collections.Generic`. La clase <xref:System.IO.File> se define en el espacio de nombres `System.IO`.
+La interfaz <xref:System.Collections.Generic.IEnumerable%601> se define en el espacio de nombres <xref:System.Collections.Generic>. La clase <xref:System.IO.File> se define en el espacio de nombres <xref:System.IO>.
 
-Este método es un tipo especial de método de C# llamado*método de enumerador*. Los métodos de enumerador devuelven secuencias que se evalúan de forma diferida. Eso significa que cada elemento de la secuencia se genera como lo solicita el código que consume la secuencia. Los métodos de enumerador son métodos que contienen una o varias instrucciones `yield return`. El objeto que devuelve el método `ReadFrom` contiene el código para generar cada elemento en la secuencia. En este ejemplo, que implica la lectura de la siguiente línea de texto del archivo de origen y la devolución de esa cadena, cada vez que el código de llamada solicita el siguiente elemento de la secuencia, el código lee la siguiente línea de texto del archivo y la devuelve. Cuando el archivo se ha leído completamente, la secuencia indica que no hay más elementos.
+Este método es un tipo especial de método de C# llamado *método de iterador*. Los métodos de enumerador devuelven secuencias que se evalúan de forma diferida. Eso significa que cada elemento de la secuencia se genera como lo solicita el código que consume la secuencia. Los métodos de enumerador son métodos que contienen una o varias instrucciones [`yield return`](../language-reference/keywords/yield.md). El objeto que devuelve el método `ReadFrom` contiene el código para generar cada elemento en la secuencia. En este ejemplo, que implica la lectura de la siguiente línea de texto del archivo de origen y la devolución de esa cadena, cada vez que el código de llamada solicita el siguiente elemento de la secuencia, el código lee la siguiente línea de texto del archivo y la devuelve. Cuando el archivo se ha leído completamente, la secuencia indica que no hay más elementos.
 
-Hay otros dos elementos de la sintaxis de C# con los que podría no estar familiarizado. La instrucción `using` de este método administra la limpieza de recursos. La variable que se inicializa en la instrucción `using` (`reader`, en este ejemplo) debe implementar la interfaz `IDisposable`. La interfaz <xref:System.IDisposable> define un único método, `Dispose`, que se debe llamar cuando sea necesario liberar el recurso. El compilador genera esa llamada cuando la ejecución llega a la llave de cierre de la instrucción `using`. El código generado por el compilador garantiza que el recurso se libera incluso si se produce una excepción desde el código en el bloqueo definido mediante la instrucción using.
+Hay otros dos elementos de la sintaxis de C# con los que podría no estar familiarizado. La instrucción [`using`](../language-reference/keywords/using-statement.md) de este método administra la limpieza de recursos. La variable que se inicializa en la instrucción `using` (`reader`, en este ejemplo) debe implementar la interfaz <xref:System.IDisposable>. Esa interfaz define un único método, `Dispose`, que se debe llamar cuando sea necesario liberar el recurso. El compilador genera esa llamada cuando la ejecución llega a la llave de cierre de la instrucción `using`. El código generado por el compilador garantiza que el recurso se libera incluso si se produce una excepción desde el código en el bloqueo definido mediante la instrucción using.
 
-La variable `reader` se define mediante la palabra clave `var`. `var` define una *variable local con tipo implícito*. Esto significa que el tipo de la variable viene determinado por el tipo de tiempo de compilación del objeto asignado a la variable. Aquí, que es el valor devuelto de la <xref:System.IO.File.OpenText(System.String)> método, que es un <xref:System.IO.StreamReader> objeto.
- 
-Ahora, vamos a rellenar el código para leer el archivo en el método `Main`: 
+La variable `reader` se define mediante la palabra clave `var`. [`var`](../language-reference/keywords/var.md) define una *variable local con tipo implícito*. Esto significa que el tipo de la variable viene determinado por el tipo en tiempo de compilación del objeto asignado a la variable. Aquí, ese es el valor devuelto por el método <xref:System.IO.File.OpenText(System.String)>, que es un objeto <xref:System.IO.StreamReader>.
+
+Ahora, vamos a rellenar el código para leer el archivo en el método `Main`:
 
 ```csharp
 var lines = ReadFrom("sampleQuotes.txt");
 foreach (var line in lines)
 {
-    Console.WriteLine(line); 
+    Console.WriteLine(line);
 }
 ```
 
-Ejecute el programa (mediante `dotnet run` y podrá ver cada línea impresa en la consola).  
+Ejecute el programa (mediante `dotnet run`) y podrá ver cada línea impresa en la consola.
 
 ## <a name="adding-delays-and-formatting-output"></a>Adición de retrasos y formato de salida
+
 Lo que tiene se va a mostrar lejos, demasiado rápido para leerlo en voz alta. Ahora debe agregar los retrasos en la salida. Cuando empiece, estará creando parte del código principal que permite el procesamiento asincrónico. Sin embargo, a estos primeros pasos le seguirán algunos antipatrones. Los antipatrones se señalan en los comentarios cuando se agrega el código y el código se actualizará en los pasos posteriores.
 
 Hay dos pasos hasta esta sección. Primero, actualizará el método Iterator para devolver palabras sueltas en lugar de líneas enteras. Para ello, son necesarias estas modificaciones. Reemplace la instrucción `yield return line;` por el código siguiente:
@@ -125,18 +134,18 @@ if (!string.IsNullOrWhiteSpace(line))
 }
 ```
 
-La clase `Task` está en el espacio de nombres `System.Threading.Tasks`, así que debe agregar esa instrucción `using` en la parte superior del archivo:
+La clase <xref:System.Threading.Tasks.Task> está en el espacio de nombres <xref:System.Threading.Tasks>, así que debe agregar esa instrucción `using` en la parte superior del archivo:
 
 ```csharp
 using System.Threading.Tasks;
 ```
 
-Ejecute el ejemplo y compruebe la salida. Ahora, se imprime cada palabra suelta, seguido de un retraso de 200 ms. Sin embargo, la salida mostrada indica algunos problemas porque el archivo de texto de origen tiene varias líneas con más de 80 caracteres sin un salto de línea. Este texto puede ser difícil de leer al desplazarse por él. Esto es fácil de corregir. Simplemente realizará el seguimiento de la longitud de cada línea y generará una nueva línea cada vez que la longitud de la línea alcance un determinado umbral. Declare una variable local después de la declaración de `words` que contiene la longitud de línea:
+Ejecute el ejemplo y compruebe la salida. Ahora, se imprime cada palabra suelta, seguido de un retraso de 200 ms. Sin embargo, la salida mostrada indica algunos problemas porque el archivo de texto de origen tiene varias líneas con más de 80 caracteres sin un salto de línea. Este texto puede ser difícil de leer al desplazarse por él. Esto es fácil de corregir. Simplemente realizará el seguimiento de la longitud de cada línea y generará una nueva línea cada vez que la longitud de la línea alcance un determinado umbral. Declare una variable local después de la declaración de `words` en el método `ReadFrom` que contiene la longitud de línea:
 
 ```csharp
 var lineLength = 0;
 ```
- 
+
 A continuación, agregue el código siguiente después de la instrucción `yield return word + " ";` (antes de la llave de cierre):
 
 ```csharp
@@ -147,10 +156,11 @@ if (lineLength > 70)
     lineLength = 0;
 }
 ```
- 
+
 Ejecute el ejemplo y podrá leer en alto a su ritmo preconfigurado.
 
 ## <a name="async-tasks"></a>Tareas asincrónicas
+
 En este paso final, agregará el código para escribir la salida de manera asincrónica en una tarea, mientras se ejecuta también otra tarea para leer la entrada del usuario si quiere aumentar o reducir la velocidad de la pantalla de texto. Incluye unos cuantos pasos y, al final, tendrá todas las actualizaciones que necesita.
 El primer paso es crear un método de devolución <xref:System.Threading.Tasks.Task> asincrónico que represente el código que ha creado hasta el momento para leer y visualizar el archivo.
 
@@ -160,10 +170,10 @@ Agregue este método a su clase `Program` (se toma del cuerpo del método `Main`
 private static async Task ShowTeleprompter()
 {
     var words = ReadFrom("sampleQuotes.txt");
-    foreach (var line in words)
+    foreach (var word in words)
     {
-        Console.Write(line);
-        if (!string.IsNullOrWhiteSpace(line))
+        Console.Write(word);
+        if (!string.IsNullOrWhiteSpace(word))
         {
             await Task.Delay(200);
         }
@@ -182,6 +192,9 @@ ShowTeleprompter().Wait();
 ```
 
 Aquí, en `Main`, el código espera de manera sincrónica. Siempre que sea posible, debe usar el operador `await` en lugar de esperar sincrónicamente. Sin embargo, en el método `Main` de una aplicación de consola, no puede usar el operador `await`. Si así fuera, la aplicación se cerraría antes de que todas las tareas se hubieran completado.
+
+> [!NOTE]
+> Si usa C# 7.1 o una versión posterior, puede crear aplicaciones de consola con el [método `async` `Main`](../whats-new/csharp-7-1.md#async-main).
 
 A continuación, debe escribir el segundo método asincrónico para leer de la consola y controlar las teclas "<" y ">". Este es el método que agrega para esa tarea:
 
@@ -210,8 +223,8 @@ private static async Task GetInput()
 Se crea una expresión lambda que representa un delegado de <xref:System.Action> que lee una clave de la consola y modifica una variable local que representa el retraso cuando el usuario presiona las teclas "<" o ">". Este método usa <xref:System.Console.ReadKey> para bloquear y esperar a que el usuario presione una tecla.
 
 Para finalizar esta característica, debe crear un nuevo método de devolución `async Task` que inicie estas dos tareas (`GetInput` y `ShowTeleprompter`) y también administre los datos compartidos entre ellas.
- 
-Es hora de crear una clase que controle los datos compartidos entre estas dos tareas. Esta clase contiene dos propiedades públicas: el retraso y una marca para indicar que el archivo se ha leído completamente:
+
+Es hora de crear una clase que controle los datos compartidos entre estas dos tareas. Esta clase contiene dos propiedades públicas: el retraso y una marca `Done` para indicar que el archivo se ha leído completamente:
 
 ```csharp
 namespace TeleprompterConsole
@@ -230,17 +243,24 @@ namespace TeleprompterConsole
                 DelayInMilliseconds = newDelay;
             }
         }
+
+        public bool Done { get; private set; }
+
+        public void SetDone()
+        {
+            Done = true;
+        }
     }
 }
 ```
 
-Coloque esa clase en un archivo nuevo e inclúyala en el espacio de nombres `TeleprompterConsole`, como se ha mostrado anteriormente. También deberá agregar una instrucción `using static` para que pueda hacer referencia al método `Min` y `Max` sin la clase envolvente o los nombres de espacio de nombres. Una instrucción `using static` importa los métodos de una clase, mientras que las instrucciones `using` usadas hasta el momento han importado todas las clases de un espacio de nombres.
+Coloque esa clase en un archivo nuevo e inclúyala en el espacio de nombres `TeleprompterConsole`, como se ha mostrado anteriormente. También deberá agregar una instrucción `using static` para que pueda hacer referencia a los métodos `Min` y `Max` sin la clase incluida o los nombres de espacio de nombres. Una instrucción [`using static`](../language-reference/keywords/using-static.md) importa los métodos de una clase, mientras que las instrucciones `using` usadas hasta el momento han importado todas las clases de un espacio de nombres.
 
 ```csharp
 using static System.Math;
 ```
 
-La otra característica del lenguaje que es nueva es la instrucción `lock`. Esta instrucción garantiza que solo un subproceso pueda estar en ese código en un momento dado. Si un subproceso está en la sección bloqueada, otros subprocesos deben esperar a que el primer subproceso salga de esa sección. La instrucción `lock` usa un objeto que protege la sección de bloqueo. Esta clase sigue un giro estándar para bloquear un objeto privado en la clase.
+La otra característica del lenguaje que es nueva es la instrucción [`lock`](../language-reference/keywords/lock-statement.md). Esta instrucción garantiza que solo un subproceso pueda estar en ese código en un momento dado. Si un subproceso está en la sección bloqueada, otros subprocesos deben esperar a que el primer subproceso salga de esa sección. La instrucción `lock` usa un objeto que protege la sección de bloqueo. Esta clase sigue un giro estándar para bloquear un objeto privado en la clase.
 
 A continuación, debe actualizar los métodos `ShowTeleprompter` y `GetInput` para usar el nuevo objeto `config`. Escriba un método final `async` de devolución de `Task` para iniciar ambas tareas y salir cuando la primera tarea finalice:
 
@@ -255,7 +275,7 @@ private static async Task RunTeleprompter()
 }
 ```
 
-El método nuevo uno es la <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])> llamar. Dicha llamada crea un valor de `Task` que finaliza en cuanto alguna de las tareas de su lista de argumentos se completa.
+El método nuevo aquí es la llamada a <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])>. Dicha llamada crea un valor de `Task` que finaliza en cuanto alguna de las tareas de su lista de argumentos se completa.
 
 A continuación, debe actualizar los métodos `ShowTeleprompter` y `GetInput` para usar el objeto `config` para el retraso:
 
@@ -276,7 +296,6 @@ private static async Task ShowTeleprompter(TelePrompterConfig config)
 
 private static async Task GetInput(TelePrompterConfig config)
 {
-
     Action work = () =>
     {
         do {
@@ -297,22 +316,9 @@ Esta nueva versión de `ShowTeleprompter` llama a un nuevo método de la clase `
 RunTeleprompter().Wait();
 ```
 
-Para terminar, debe agregar el método `SetDone` y la propiedad `Done` a la clase `TelePrompterConfig`:
-
-```csharp
-public bool Done => done;
-
-private bool done;
-
-public void SetDone()
-{
-    done = true;    
-}
-```
-
 ## <a name="conclusion"></a>Conclusión
+
 En este tutorial se han mostrado varias características en torno al lenguaje C# y las bibliotecas .NET Core, relacionadas con el trabajo en aplicaciones de consola.
-Puede partir de este conocimiento para explorar más sobre el lenguaje y las clases aquí presentadas. Ha visto los conceptos básicos de E/S de archivo y consola, el uso con bloqueo y sin bloqueo del modelo de programación asincrónica basado en tareas, un paseo por el lenguaje C# y cómo los programas en C# están organizados. También ha conocido la interfaz de línea de comandos y las herramientas de .NET Core.
- 
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+Puede partir de este conocimiento para explorar más sobre el lenguaje y las clases aquí presentadas. Ha visto los conceptos básicos de E/S de archivo y consola, el uso con bloqueo y sin bloqueo de la programación asincrónica basada en tareas, un paseo por el lenguaje C# y cómo se organizan los programas en C#. También ha conocido la interfaz de la línea de comandos y las herramientas de .NET Core.
+
+Para obtener más información sobre la E/S de archivo, consulte el tema [E/S de archivos y secuencias](../../standard/io/index.md). Para obtener más información sobre el modelo de programación asincrónica que se ha usado en este tutorial, vea los temas [Programación asincrónica basada en tareas](../..//standard/parallel-programming/task-based-asynchronous-programming.md) y [Programación asincrónica](../async.md).

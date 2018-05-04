@@ -1,6 +1,6 @@
 ---
-title: "Desafíos y soluciones de la administración de datos distribuidos"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Desafíos y soluciones de la administración de datos distribuidos"
+title: Desafíos y soluciones de la administración de datos distribuidos
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Desafíos y soluciones de la administración de datos distribuidos
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b0252586a508c059099885991b87c79346e0d809
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a26f4243acee52e493a10f13ff18899823fd03ba
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafíos y soluciones de la administración de datos distribuidos
 
@@ -90,27 +90,27 @@ El uso de comunicación asincrónica se explica con más detalle más adelante e
 ## <a name="additional-resources"></a>Recursos adicionales
 
 -   **Teorema CAP**
-    [*https://es.wikipedia.org/wiki/Teorema\_CAP*](https://en.wikipedia.org/wiki/CAP_theorem)
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **Eventual consistency** (Coherencia eventual)
+-   **Eventual consistency (Posible coherencia)**
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Data Consistency Primer** (Manual de coherencia de datos)
+-   **Data Consistency Primer (Manual de coherencia de datos)**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Martin Fowler. CQRS (Command and Query Responsibility Segregation)**
-    [*http://martinfowler.com/bliki/CQRS.html*](http://martinfowler.com/bliki/CQRS.html)
+-   **Martin Fowler. CQRS (Command and Query Responsibility Segregation) [CQRS (Segregación de responsabilidades de consultas y comandos)]**
+    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
--   **Materialized View** (Vista materializada)
+-   **Materialized View (Vista materializada)**
     [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
--   **Charles Row. ACID vs. BASE: The Shifting pH of Database Transaction Processing** (ACID frente a Base: El pH cambiante del procesamiento de transacciones de base de datos)
+-   **Charles Row. ACID vs. BASE: The Shifting pH of Database Transaction Processing (BASE: el cambio del pH del procesamiento de transacciones de bases de datos)**
     [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
--   **Compensating Transaction** (Transacción compensatoria)
+-   **Transacción de compensación**
     [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
 
--   **Udi Dahan. Service Oriented Composition** (Composición orientada a servicios)
+-   **Udi Dahan. Service Oriented Composition (Composición orientada a servicios)**
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
 

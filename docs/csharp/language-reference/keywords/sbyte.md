@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - sbyte keyword [C#]
 ms.assetid: 1a9c7b48-73d1-4d33-b485-c4faf0a816bc
-caps.latest.revision: 
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 010ac98f523eca5929100f7c51b8b6ef5d11de30
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c3950e11e1a81cf7263e146705c351e3dd8a6e9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sbyte-c-reference"></a>sbyte (Referencia de C#)
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>Literales  
 
-Puede declarar e inicializar una variable `sbyte` mediante la asignación de un literal decimal, un literal hexadecimal o (a partir de C# 7) un literal binario. 
+Puede declarar e inicializar una variable `sbyte` mediante la asignación de un literal decimal, un literal hexadecimal o (a partir de C# 7.0) un literal binario. 
 
 En el ejemplo siguiente, los enteros que equivalen a -102 que se representan como literales binarios, hexadecimales y decimales se convierten de [int](../../../csharp/language-reference/keywords/int.md) a valores `sbyte`.    
   
@@ -39,9 +39,9 @@ En el ejemplo siguiente, los enteros que equivalen a -102 que se representan com
 > [!NOTE] 
 > Use el prefijo `0x` o `0X` para denotar un literal hexadecimal y el prefijo `0b` o `0B` para denotar un literal binario. Los literales decimales no tienen prefijo.
 
-A partir de C# 7, se han agregado un par de características mejorar la legibilidad. 
- - C# 7.0 permite el uso del carácter de subrayado, `_`, como un separador de dígito.
- - 7.2 C# permite `_` para usarse como un separador de dígitos de un literal binario o hexadecimal, después del prefijo. Un literal decimal no está permitido que tengan un carácter de subrayado inicial.
+A partir de C# 7.0, se han agregado un par de características para mejorar la legibilidad. 
+ - C# 7.0 permite usar el carácter de subrayado, `_`, como separador de dígitos.
+ - C# 7.2 permite usar `_` como separador de dígitos de un literal binario o hexadecimal, después del prefijo. Un literal decimal no puede tener un carácter de subrayado inicial.
 
  A continuación se muestran algunos ejemplos.
 

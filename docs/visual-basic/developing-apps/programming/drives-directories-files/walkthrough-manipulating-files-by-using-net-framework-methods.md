@@ -1,11 +1,12 @@
 ---
-title: "Manipular archivos utilizando métodos de .NET Framework (Visual Basic)"
-ms.custom: 
+title: Manipular archivos utilizando métodos de .NET Framework (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], walkthroughs
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bc42dee640271ef84d35ceeb039d98741d296c5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ed363efeeef008927f2c34b393de66ca4ccbb0bb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Tutorial: Manipular archivos utilizando métodos de .NET Framework (Visual Basic)
 En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xref:System.IO.StreamReader>, comprobar si se ha tenido acceso a un archivo, buscar una cadena dentro de un archivo leído con una instancia de la clase <xref:System.IO.StreamReader> y escribir en un archivo mediante la clase <xref:System.IO.StreamWriter>.  
@@ -36,7 +37,7 @@ En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xre
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-the-application"></a>Crear la aplicación  
- Inicie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] y comience el proyecto mediante la creación de un formulario que el usuario pueda usar para escribir en el archivo designado.  
+ Inicie Visual Studio y comience el proyecto mediante la creación de un formulario que el usuario pueda usar para escribir en el archivo designado.  
   
 #### <a name="to-create-the-project"></a>Para crear el proyecto  
   
@@ -46,15 +47,15 @@ En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xre
   
 3.  En el cuadro **Nombre**, escriba `MyDiary` y haga clic en **Aceptar**.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] agrega el proyecto al **Explorador de soluciones** y se abre el **Diseñador de Windows Forms**.  
+     Visual Studio agrega el proyecto al **Explorador de soluciones** y se abre el **Diseñador de Windows Forms**.  
   
 4.  Agregue los controles de la siguiente tabla al formulario y establezca los valores correspondientes para sus propiedades.  
   
 |**Objeto**|**Propiedades**|**Valor**|  
 |---|---|---|   
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Submit`<br /><br /> **Enviar entrada**|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Clear`<br /><br /> **Borrar entrada**|  
-|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Text**<br /><br /> **Multiline**|`Entry`<br /><br /> **Escriba algo.**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texto**|`Submit`<br /><br /> **Enviar entrada**|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texto**|`Clear`<br /><br /> **Borrar entrada**|  
+|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Texto**<br /><br /> **Multiline**|`Entry`<br /><br /> **Escriba algo.**<br /><br /> `False`|  
   
 ## <a name="writing-to-the-file"></a>Escribir en el archivo  
  Para agregar la capacidad de escribir en un archivo a través de la aplicación, use la clase <xref:System.IO.StreamWriter>. La clase <xref:System.IO.StreamWriter> está diseñada para la salida de caracteres en una codificación determinada, mientras que la clase <xref:System.IO.Stream> está diseñada para la entrada y la salida de bytes. Use la clase <xref:System.IO.StreamWriter> para escribir líneas de información en un archivo de texto estándar. Para más información sobre la clase <xref:System.IO.StreamWriter>, vea <xref:System.IO.StreamWriter>.  
@@ -100,9 +101,9 @@ En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xre
 |Control|Propiedades|Valores|  
 |-------------|----------------|------------|  
 |<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Visible**<br /><br /> **Size**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Display`<br /><br /> **Pantalla**|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texto**|`Display`<br /><br /> **Pantalla**|  
 |<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`GetEntries`<br /><br /> **Obtener entradas**|  
-|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **Seleccione una entrada**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **Texto**<br /><br /> **Habilitado**|`PickEntries`<br /><br /> **Seleccione una entrada**<br /><br /> `False`|  
   
 #### <a name="to-populate-the-combo-box"></a>Para rellenar el cuadro combinado  
   
@@ -127,9 +128,9 @@ En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xre
   
 |Control|Propiedades|Valores|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **Eliminar entrada**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **Editar entrada**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Enviar edición**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texto**<br /><br /> **Habilitado**|`DeleteEntry`<br /><br /> **Eliminar entrada**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texto**<br /><br /> **Habilitado**|`EditEntry`<br /><br /> **Editar entrada**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texto**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Enviar edición**<br /><br /> `False`|  
   
 #### <a name="to-enable-deletion-and-modification-of-entries"></a>Para habilitar la eliminación y la modificación de entradas  
   

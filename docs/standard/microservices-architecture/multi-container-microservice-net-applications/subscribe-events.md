@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 279dd4ea2ffb36e13a22f366ece145174918b759
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="subscribing-to-events"></a>Suscripción a eventos
 
@@ -112,7 +112,7 @@ Como se mencionó anteriormente en la sección sobre arquitectura, puede tener v
 
 -   Uso del [patrón de orígenes de eventos](https://msdn.microsoft.com/library/dn589792.aspx) completo.
 
--   Uso de la [minería del registro de transacciones](http://www.scoop.it/t/sql-server-transaction-log-mining).
+-   Uso de la [minería del registro de transacciones](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
 -   Uso del [patrón de bandeja de salida](http://gistlabs.com/2014/05/the-outbox/). Se trata de una tabla transaccional para almacenar los eventos de integración (extendiendo la transacción local).
 
@@ -302,7 +302,7 @@ Algún procesamiento de mensajes es idempotente de forma inherente. Por ejemplo,
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Respetando mensaje idempotencia** (subtítulo en esta página) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
+-   **Honoring message idempotency** (Respetar la idempotencia de los mensajes; subencabezado de esta página) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>Desduplicación de mensajes de eventos de integración
 
@@ -322,63 +322,63 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **EShopOnContainers bifurcada mediante NServiceBus (Software en Particular)**
+-   **Forked eShopOnContainers using NServiceBus (Particular Software) [Bifurcación de eShopOnContainers mediante NServiceBus (Particular Software)]**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **Evento controlado por mensajería**
-    [*http://soapatterns.org/design\_patrones/evento\_controlada por\_de mensajería*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **Event Driven Messaging (Mensajería controlada por eventos)**
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. Refactorización hacia resistencia: Evaluación de acoplamiento**
+-   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactorización hacia la resiliencia: evaluar el acoplamiento)**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Canal de la publicación y suscripción**
+-   **Publish-Subscribe channel (Canal de publicación y suscripción)**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Comunicación entre contextos enlazados**
+-   **Communicating Between Bounded Contexts (Comunicación entre contextos delimitados)**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Coherencia definitiva**
-    [*https://en.wikipedia.org/wiki/Eventual\_coherencia*](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Eventual Consistency (Posible coherencia)**
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown. Estrategias para integrar limitado contextos**
+-   **Philip Brown. Strategies for Integrating Bounded Contexts (Estrategias para integrar contextos delimitados)**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson. Desarrollar Microservicios transaccional con agregados, orígenes de eventos y CQRS - parte 2**
+-   **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2 (Desarrollar microservicios transaccionales mediante agregados, orígenes de eventos y CQRS: parte 2)**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson. Patrón de origen de eventos**
-    [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
+-   **Chris Richardson. Event Sourcing pattern (Patrón de orígenes de eventos)**
+    [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **Introducción a eventos de origen**
+-   **Introducing Event Sourcing (Introducción a los orígenes de eventos)**
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
 -   **Base de datos Event Store**. Sitio oficial.
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen. Administración de datos orientado a eventos para Microservicios**
+-   **Patrick Nommensen. Event-Driven Data Management for Microservices (Administración de datos orientada a eventos para microservicios)**
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **El teorema CAP**
-    [*https://en.wikipedia.org/wiki/CAP\_teorema*](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **Teorema CAP**
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **¿Qué es teorema de extremo?**
+-   **What is CAP Theorem? (¿Qué es el teorema CAP?)**
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Manual de coherencia de datos**
+-   **Data Consistency Primer (Manual de coherencia de datos)**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Rick Saling. El teorema CAP: Razón "Todo lo que se diferencian" con la nube e Internet**
+-   **Rick Saling. The CAP Theorem: Why “Everything is Different” with the Cloud and Internet (Teorema CAP: por qué “todo es diferente” con la nube e Internet)**
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer. CAP de doce años más tarde: cómo han cambiado las reglas de""**
+-   **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed (CAP doce años después: cómo han cambiado las “reglas”)**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Participar en transacciones externas (DTC)** (MSMQ) [  *https://msdn.microsoft.com/library/ms978430.aspx \#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Participating in External (DTC) Transactions** (MSMQ) [Participar en transacciones externas (DTC) (MSMQ)][*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Azure Service Bus. Mensajería asíncrona: Detección de duplicados**
+-   **Azure Service Bus. Brokered Messaging: Duplicate Detection (Mensajería asincrónica: detección de duplicados)**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Guía de confiabilidad** (documentación de RabbitMQ) [  *https://www.rabbitmq.com/reliability.html \#consumidor*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Reliability Guide** (RabbitMQ documentation) [Guía de confiabilidad (documentación de RabbitMQ)][*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 

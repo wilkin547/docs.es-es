@@ -1,27 +1,15 @@
 ---
 title: Ver datos en un objeto DataTable
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2576c95ad7739d28e2ca822fd13fb6f176900814
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5d39d2a856a40b5ea20832a544ede360313309d3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="viewing-data-in-a-datatable"></a>Ver datos en un objeto DataTable
 Puede acceder al contenido de un <xref:System.Data.DataTable> mediante el uso de la **filas** y **columnas** colecciones de la **DataTable**. También puede usar el <xref:System.Data.DataTable.Select%2A> método para devolver subconjuntos de los datos en un **DataTable** según ciertos criterios como criterios de búsqueda, el criterio de ordenación y estado de la fila. Además, puede usar el <xref:System.Data.DataRowCollection.Find%2A> método de la **DataRowCollection** cuando se busque una fila determinada mediante el valor de clave principal.  
@@ -36,13 +24,13 @@ Puede acceder al contenido de un <xref:System.Data.DataTable> mediante el uso de
 |Valor DataViewRowState|Descripción|  
 |----------------------------|-----------------|  
 |**CurrentRows**|Filas actuales, incluidas las filas sin modificar, agregadas y modificadas.|  
-|**Deleted**|Una fila eliminada.|  
+|**eliminar**|Una fila eliminada.|  
 |**ModifiedCurrent**|Una versión actual, que es una versión modificada de los datos originales. (Consulte **ModifiedOriginal**.)|  
 |**ModifiedOriginal**|Versión original de todas las filas modificadas. La versión actual está disponible con **ModifiedCurrent**.|  
-|**Added**|Una fila nueva.|  
+|**Agregado**|Una fila nueva.|  
 |**Ninguno**|Ninguno.|  
 |**OriginalRows**|Filas originales, incluidas las filas sin modificar y las eliminadas.|  
-|**Unchanged**|Una fila sin modificar.|  
+|**Sin cambios**|Una fila sin modificar.|  
   
  En el ejemplo siguiente, la **conjunto de datos** objeto se filtra para que sólo está trabajando con las filas cuyo **DataViewRowState** está establecido en **CurrentRows**.  
   

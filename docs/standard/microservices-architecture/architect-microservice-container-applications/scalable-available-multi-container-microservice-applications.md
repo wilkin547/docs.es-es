@@ -1,6 +1,6 @@
 ---
-title: "Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad"
+title: Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ff524c6d61c6ce51a1a3e831cd666a3b61ac849e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c484372c0b5626fc20c8991a432e62353baa7a4c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 
@@ -124,20 +124,20 @@ ACS está actualmente disponible para las máquinas virtuales de Linux de las se
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
--   **Introducción a las soluciones de hospedaje de contenedores de Docker con Azure Container Service**
+-   **Introducción a las soluciones de hospedaje del contenedor de Docker con Azure Container Service**
     [*https://docs.microsoft.com/azure/container-service/container-service-intro*](https://docs.microsoft.com/azure/container-service/container-service-intro)
 
--   **Docker Swarm overview** (Información general sobre Docker Swarm)
+-   **Docker Swarm overview (Información general de Docker Swarm)**
     [*https://docs.docker.com/swarm/overview/*](https://docs.docker.com/swarm/overview/)
 
--   **Swarm mode overview** (Información general sobre el modo Swarm)
+-   **Swarm mode overview (Información general del modo Swarm)**
     [*https://docs.docker.com/engine/swarm/*](https://docs.docker.com/engine/swarm/)
 
--   **Mesosphere DC/OS Overview** (Información general sobre Mesosphere DC/OS)
+-   **Mesosphere DC/OS Overview (Información general de Mesosphere DC/OS)**
     [*https://docs.mesosphere.com/1.7/overview/*](https://docs.mesosphere.com/1.7/overview/)
 
 -   **Kubernetes.** Sitio oficial.
-    [*http://kubernetes.io/*](http://kubernetes.io/)
+    [*https://kubernetes.io/*](https://kubernetes.io/)
 
 
 >[!div class="step-by-step"]

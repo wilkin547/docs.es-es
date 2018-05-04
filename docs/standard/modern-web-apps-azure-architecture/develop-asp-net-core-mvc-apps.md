@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c5e2d603062095c02af500ae74a9ea708cf9aefa
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -72,16 +73,16 @@ Si se usa la validación del modelo, siempre se debe comprobar que el modelo es 
 Para las API web, ASP.NET Core MVC admite la [*negociación de contenido*](https://docs.microsoft.com/aspnet/core/mvc/models/formatting), lo que permite a las solicitudes especificar cómo se debe aplicar formato a las respuestas. Según los encabezados proporcionados en la solicitud, las acciones que devuelven datos darán formato a la respuesta en XML, JSON o en otro formato compatible. Esta característica permite usar la misma API en varios clientes con requisitos de formato de datos diferentes.
 
 > ### <a name="references--mapping-requests-to-responses"></a>Referencias: asignación de solicitudes a respuestas
-> - **Enrutamiento a acciones del controlador**
-> <https://docs.microsoft.com/es-es/aspnet/core/mvc/controllers/routing>
-> - **Enlace de modelos** https://docs.microsoft.com/es-es/aspnet/core/mvc/models/model-binding
-> - **Validación de modelos**
-> <https://docs.microsoft.com/es-es/aspnet/core/mvc/models/validation>
-> - **Filtros** https://docs.microsoft.com/es-es/aspnet/core/mvc/controllers/filters
+> - **Routing to Controller Actions (Enrutamiento a acciones del controlador)**
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
+> - **Model Binding** (Enlace de modelos) https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
+> - **Model Validation (Validación de modelos)**
+> <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
+> - **Filters** (Filtros) https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
 
 ## <a name="working-with-dependencies"></a>Trabajar con dependencias
 
-ASP.NET Core tiene compatibilidad integrada con una técnica conocida como [inserción de dependencias](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) y la usa de manera interna. La inserción de dependencias es una técnica que permitía el acoplamiento flexible entre los distintos elementos de una aplicación. El acoplamiento más flexible es deseable porque facilita aislar los elementos de la aplicación, lo que permite realizar pruebas o reemplazos. También hace que sea menos probable que un cambio en un elemento de la aplicación tenga un impacto inesperado en otro lugar de la aplicación. La inserción de dependencias se basa en el principio de inversión de dependencias y suele ser es clave para lograr el principio abierto o cerrado. Al evaluar el funcionamiento de la aplicación con sus dependencias, tenga cuidado del problema de la [estática](http://deviq.com/static-cling/) en el código y recuerde el aforismo "[lo nuevo se pega](http://ardalis.com/new-is-glue)".
+ASP.NET Core tiene compatibilidad integrada con una técnica conocida como [inserción de dependencias](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) y la usa de manera interna. La inserción de dependencias es una técnica que permitía el acoplamiento flexible entre los distintos elementos de una aplicación. El acoplamiento más flexible es deseable porque facilita aislar los elementos de la aplicación, lo que permite realizar pruebas o reemplazos. También hace que sea menos probable que un cambio en un elemento de la aplicación tenga un impacto inesperado en otro lugar de la aplicación. La inserción de dependencias se basa en el principio de inversión de dependencias y suele ser es clave para lograr el principio abierto o cerrado. Al evaluar el funcionamiento de la aplicación con sus dependencias, tenga cuidado del problema de la [estática](http://deviq.com/static-cling/) en el código y recuerde el aforismo "[lo nuevo se pega](https://ardalis.com/new-is-glue)".
 
 La estática se produce cuando las clases realizan llamadas a métodos estáticos, o bien tienen acceso a propiedades estáticas, que tienen efectos secundarios o dependencias en la infraestructura. Por ejemplo, si tiene un método que llama a un método estático, que a su vez escribe en una base de datos, el método está estrechamente acoplado a la base de datos. Todo lo que interrumpa esa llamada a la base de datos interrumpirá el método. Es muy difícil probar este tipo de métodos, ya que esas pruebas requieren bibliotecas de simulación comerciales para simular las llamadas estáticas o solo se pueden probar con una base de datos de prueba. Las llamadas estáticas que no tienen ninguna dependencia de la infraestructura, sobre todo las que son completamente sin estado, se pueden llamar sin problemas y no tienen ningún impacto en el acoplamiento o la capacidad de prueba (más allá del acoplamiento de código a la propia llamada estática).
 
@@ -282,11 +283,11 @@ Puede leer más sobre la implementación de filtros y descargar un ejemplo funci
 
 > ### <a name="references--structuring-applications"></a>Referencias: estructuración de aplicaciones
 > - **Áreas**  
-> <https://docs.microsoft.com/es-es/aspnet/core/mvc/controllers/areas>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN: Sectores de características para ASP.NET Core MVC**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtros**  
-> <https://docs.microsoft.com/es-es/aspnet/core/mvc/controllers/filters>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN: filtros de ASP.NET Core MVC reales**  
 > <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
@@ -388,19 +389,19 @@ La mayoría de las API web deben implementar un sistema de autenticación basado
 
 > ### <a name="references--security"></a>Referencias: seguridad
 > - **Introducción a la seguridad de ASP.NET Core**  
-> https://docs.microsoft.com/es-es/aspnet/core/security/
+> https://docs.microsoft.com/aspnet/core/security/
 > - **Exigir SSL en una aplicación ASP.NET básica**  
-> <https://docs.microsoft.com/es-es/aspnet/core/security/enforcing-ssl>
+> <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Introducción a Identity**  
-> <https://docs.microsoft.com/es-es/aspnet/core/security/authentication/identity?tabs=visual-studio%2Caspnetcore2x>
+> <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Introducción a la autorización**  
-> <https://docs.microsoft.com/es-es/aspnet/core/security/authorization/introduction>
+> <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Autenticación y autorización para aplicaciones de API en Azure App Service**  
-> <https://docs.microsoft.com/es-es/azure/app-service/app-service-authentication-overview>
+> <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 
 ## <a name="client-communication"></a>Comunicación de cliente
 
-Además de servir páginas y responder a las solicitudes de datos a través de las API web, las aplicaciones ASP.NET Core se pueden comunicar directamente con los clientes conectados. En esta comunicación de salida se puede usar una amplia variedad de tecnologías de transporte, siendo WebSockets la más común. ASP.NET Core SignalR es una biblioteca que simplifica la funcionalidad de comunicación de servidor a cliente en tiempo real en las aplicaciones. SignalR admite diversas tecnologías de transporte, incluyendo WebSockets, y abstrae muchos de los detalles de implementación del desarrollador.
+Además de servir páginas y responder a las solicitudes de datos a través de las API web, las aplicaciones ASP.NET Core se pueden comunicar directamente con los clientes conectados. En esta comunicación de salida se puede usar una amplia variedad de tecnologías de transporte, siendo WebSockets la más común. ASP.NET Core SignalR es una biblioteca que simplifica la funcionalidad de agregar comunicación de servidor a cliente en tiempo real en las aplicaciones. SignalR admite diversas tecnologías de transporte, incluyendo WebSockets, y abstrae muchos de los detalles de implementación del desarrollador.
 
 ASP.NET Core SignalR está actualmente en fase de desarrollo y estará disponible en la próxima versión de ASP.NET Core. Pero en la actualidad hay otras [bibliotecas WebSockets de código abierto](https://github.com/radu-matei/websocket-manager) disponibles.
 
@@ -547,13 +548,13 @@ Si la aplicación se va a hospedar en Azure, se puede usar Microsoft Azure Appli
 
 > ### <a name="references--deployment"></a>Referencias: implementación
 > - **Información general sobre implementación y hospedaje**  
-> <https://docs.microsoft.com/es-es/aspnet/core/host-and-deploy/index?tabs=aspnetcore2x>
+> <https://docs.microsoft.com/aspnet/core/publishing/>
 > - **Casos en los que usar Kestrel con un proxy inverso**  
-> <https://docs.microsoft.com/es-es/aspnet/core/fundamentals/servers/kestrel?tabs=aspnetcore2x#when-to-use-kestrel-with-a-reverse-proxy>
+> <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **Hospedar aplicaciones ASP.NET Core en contenedores de Docker**  
-> <https://docs.microsoft.com/es-es/aspnet/core/host-and-deploy/docker/index>
+> <https://docs.microsoft.com/aspnet/core/publishing/docker>
 > - **Introducción a Azure Application Gateway**  
-> <https://docs.microsoft.com/es-es/azure/application-gateway/application-gateway-introduction>
+> <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
 [Anterior] (common-client-side-web-technologies.md) [Siguiente] (work-with-data-in-asp-net-core-apps.md)

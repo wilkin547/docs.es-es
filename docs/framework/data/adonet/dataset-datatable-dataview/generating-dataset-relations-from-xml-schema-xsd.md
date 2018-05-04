@@ -1,24 +1,12 @@
 ---
 title: Generar relaciones de objetos DataSet en un esquema XML (XSD)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4634e54c620fdd206582af94b825210331d11c14
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fdf22c311ef7b4267f4a4da8566e4ea59504b103
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generar relaciones de objetos DataSet en un esquema XML (XSD)
 En un <xref:System.Data.DataSet>, para formar una asociación entre dos o más columnas se debe crear una relación primaria-secundaria. Hay tres formas de representar un **conjunto de datos** relación dentro de un esquema de lenguaje (XSD) de definición de esquema XML:  
@@ -44,7 +32,7 @@ En un <xref:System.Data.DataSet>, para formar una asociación entre dos o más c
 </xs:element>  
 ```  
   
- El proceso de asignación de esquema XML crea tablas en la **conjunto de datos** que corresponden a los tipos complejos anidados en el esquema. También crea columnas adicionales que se usan como primario**-**columnas primaria-secundaria para las tablas generadas. Tenga en cuenta que estos primario**-**columnas primaria-secundaria especifican relaciones, que no es lo mismo que especificar restricciones de clave externa y clave principal.  
+ El proceso de asignación de esquema XML crea tablas en la **conjunto de datos** que corresponden a los tipos complejos anidados en el esquema. También crea columnas adicionales que se usan como primario**-** columnas primaria-secundaria para las tablas generadas. Tenga en cuenta que estos primario**-** columnas primaria-secundaria especifican relaciones, que no es lo mismo que especificar restricciones de clave externa y clave principal.  
   
 ## <a name="msdatarelationship-annotation"></a>Anotación msdata:Relationship  
  El **msdata: Relationship** anotación permite especificar explícitamente relaciones primaria-secundaria entre los elementos del esquema que no están anidados. En el ejemplo siguiente se muestra la estructura de la **relación** elemento.  

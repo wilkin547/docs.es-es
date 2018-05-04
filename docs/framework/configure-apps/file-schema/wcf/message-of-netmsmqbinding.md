@@ -1,32 +1,20 @@
 ---
 title: Elemento &lt;message&gt; de &lt;netMsmqBinding&gt;
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a7fdb8c6df84a76450aabaa983275f563d342fa
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a552b0f22a79b30dcbbe1951906b121d4c5e8cf8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>Elemento &lt;message&gt; de &lt;netMsmqBinding&gt;
 Define la configuración de seguridad del mensaje SOAP en este enlace `netMsmqBinding`.  
   
  \<system.ServiceModel>  
 \<enlaces >  
-\<netMsmqBinding>  
-\<binding>  
+\<netMsmqBinding >  
+\<enlace >  
 \<seguridad >  
 \<mensaje >  
   
@@ -51,7 +39,7 @@ Define la configuración de seguridad del mensaje SOAP en este enlace `netMsmqBi
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |algorithmSuite|Establece el cifrado de mensajes y algoritmos de ajuste de clave que se utilizan para lograr la seguridad basada en mensaje para los mensajes enviados sobre transporte de MSMQ.<br /><br /> El valor predeterminado es `Aes256`. Este atributo es del tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|  
-|clientCredentialType|Especifica el tipo de credencial que se va a utilizar al realizar la autenticación del cliente para los mensajes enviados sobre el transporte de MSMQ. Los valores válidos son los siguientes:<br /><br /> -Ninguno: Esto permite al servicio interactuar con clientes anónimos. Ni el servicio ni el cliente requieren una credencial.<br />-Windows: Esto permite que los intercambios de SOAP estar bajo el contexto autenticado de una credencial de Windows. Esto siempre realiza una autenticación basada en Kerberos.<br />-UserName: Permite al servicio exigir que el cliente se autentique mediante credenciales UserName. La credencial en este caso necesita ser especificada utilizando el `clientCredentials` comportamiento **Precaución:** [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] no admite el envío de una contraseña implícita o derivar claves mediante una contraseña y utilizar tales claves para seguridad de mensajes. Por lo tanto, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] garantiza que el intercambio sea seguro al usar credenciales UserName. Este modo requiere que el certificado del servicio se especifique en el lado del cliente mediante el comportamiento de `clientCredential` y `serviceCertificate`. <br /><br /> -Certificate: Esto permite al servicio exigir que el cliente se autentique con un certificado. Las credenciales del cliente en este caso tienen que especificarse mediante el comportamiento `clientCredentials`. La credencial del servicio en este caso necesita ser especificada utilizando el comportamiento `clientCredentials` especificando `serviceCertificate`.<br />-CardSpace: Esto permite al servicio exigir que el cliente se autentique utilizando un CardSpace. Se debe proporcionar `serviceCertiifcate` en el comportamiento `clientCredential`.<br /><br /> El valor predeterminado es `Windows`. Este atributo es del tipo <xref:System.ServiceModel.MessageCredentialType>.|  
+|clientCredentialType|Especifica el tipo de credencial que se va a utilizar al realizar la autenticación del cliente para los mensajes enviados sobre el transporte de MSMQ. Los valores válidos son los siguientes:<br /><br /> -Ninguno: Esto permite al servicio interactuar con clientes anónimos. Ni el servicio ni el cliente requieren una credencial.<br />-Windows: Esto permite que los intercambios de SOAP estar bajo el contexto autenticado de una credencial de Windows. Esto siempre realiza una autenticación basada en Kerberos.<br />-UserName: Permite al servicio exigir que el cliente se autentique mediante credenciales UserName. La credencial en este caso necesita ser especificada utilizando el `clientCredentials` comportamiento **Precaución:** Windows Communication Foundation (WCF) no admite el envío de una contraseña implícita o derivar claves mediante una contraseña y utilizar tales claves para seguridad de los mensajes. Por lo tanto, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] garantiza que el intercambio sea seguro al usar credenciales UserName. Este modo requiere que el certificado del servicio se especifique en el lado del cliente mediante el comportamiento de `clientCredential` y `serviceCertificate`. <br /><br /> -Certificate: Esto permite al servicio exigir que el cliente se autentique con un certificado. Las credenciales del cliente en este caso tienen que especificarse mediante el comportamiento `clientCredentials`. La credencial del servicio en este caso necesita ser especificada utilizando el comportamiento `clientCredentials` especificando `serviceCertificate`.<br />-CardSpace: Esto permite al servicio exigir que el cliente se autentique utilizando un CardSpace. Se debe proporcionar `serviceCertiifcate` en el comportamiento `clientCredential`.<br /><br /> El valor predeterminado es `Windows`. Este atributo es del tipo <xref:System.ServiceModel.MessageCredentialType>.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  
@@ -60,7 +48,7 @@ Define la configuración de seguridad del mensaje SOAP en este enlace `netMsmqBi
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Define la configuración de seguridad de un enlace.|  
+|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Define la configuración de seguridad de un enlace.|  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>  
@@ -72,4 +60,4 @@ Define la configuración de seguridad del mensaje SOAP en este enlace `netMsmqBi
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<enlace >](../../../../../docs/framework/misc/binding.md)

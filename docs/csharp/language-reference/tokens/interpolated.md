@@ -16,17 +16,17 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6873c3b419323fa9f5523143ad607289b6fd6e2
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: cabb40c9c449780c8c2a504aad3e53938e2ed957
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - Interpolación de cadenas (Referencia de C#)
 
-El carácter especial `$` identifica un literal de cadena como una *cadena interpolada*. Una cadena interpolada es similar a una cadena de plantilla que contiene *expresiones interpoladas*. Cuando se resuelve la cadena interpolada, como por ejemplo en una instrucción de asignación o una llamada de método, las expresiones interpoladas se reemplazan por las representaciones de cadena de sus resultados para generar la cadena de resultado. Esta característica está disponible en C# 6 y versiones posteriores.
+El carácter especial `$` identifica un literal de cadena como una *cadena interpolada*. Una cadena interpolada es similar a una cadena de plantilla que contiene *expresiones interpoladas*. Cuando se resuelve la cadena interpolada a la cadena de resultado, los elementos con expresiones interpoladas se reemplazan por las representaciones de cadena de los resultados de la expresión. Esta característica está disponible en C# 6 y versiones posteriores.
 
-La interpolación de cadenas es una manera más legible y cómoda de crear cadenas con formato que si se usa la característica [formato de compuesto de cadena](../../../standard/base-types/composite-formatting.md). En este ejemplo se usan ambas características para producir el mismo resultado:
+La interpolación de cadenas proporciona una sintaxis más legible y cómoda de crear cadenas con formato que si se usa la característica de [formato compuesto de cadena](../../../standard/base-types/composite-formatting.md). En este ejemplo se usan ambas características para producir el mismo resultado:
 
 [!code-csharp-interactive[compare with composite formatting](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
 
@@ -47,7 +47,7 @@ Los elementos entre corchetes son opcionales. En esta tabla se describe cada ele
 |`alignment`|La expresión constante cuyo valor define el número mínimo de caracteres en la representación de cadena del resultado de la expresión interpolada. Si es positivo, la representación de cadena está alineada a la derecha; si es negativo, está alineada a la izquierda. Para más información, vea [Alignment (Componente)](../../../standard/base-types/composite-formatting.md#alignment-component).|
 |`formatString`|Una cadena de formato estándar o personalizado que sea compatible con el tipo de resultado de la expresión. Para más información, vea [Format String (Componente)](../../../standard/base-types/composite-formatting.md#format-string-component).|
 
-En este ejemplo se usan componentes opcionales de formato que se describen en la tabla anterior:
+En el ejemplo siguiente, se usan componentes opcionales de formato que se han descrito anteriormente:
 
 [!code-csharp-interactive[specify alignment and format string](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
 
@@ -55,7 +55,7 @@ Para incluir una llave ("{" o "}") en el texto producido por una cadena interpol
 
 Como los dos puntos (:) tienen un significado especial en un elemento de expresión interpolada, para poder usar un [operador condicional](../operators/conditional-operator.md) en una expresión interpolada, incluya esa expresión entre paréntesis.
 
-En este ejemplo se muestra cómo incluir una llave en la cadena de resultado y cómo usar un operador condicional en una expresión interpolada:
+En este ejemplo, se muestra cómo incluir una llave en la cadena de resultado y cómo usar un operador condicional en una expresión interpolada:
 
 [!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
@@ -64,27 +64,23 @@ Las cadenas interpoladas textuales usan el carácter `$` seguido del carácter `
 > [!NOTE]
 > El token `$` debe aparecer antes del token `@` en una cadena interpolada textual.
 
-## <a name="implicit-conversions"></a>Conversiones implícitas
-
-Hay tres conversiones de tipo implícito de una cadena interpolada:
+Hay tres conversiones implícitas de una cadena interpolada:
 
 1. Conversión de una cadena interpolada a una instancia de <xref:System.String>, que es el resultado de la resolución de cadenas interpoladas con elementos de expresión interpolada que se reemplazan con las representaciones de cadena con formato correcto de sus resultados. Esta conversión usa la referencia cultural actual.
 
-1. La conversión de una cadena interpolada a una variable <xref:System.FormattableString> que representa una cadena de formato compuesto junto con los resultados de expresión a los que se va a aplicar formato. Esto permite crear varias cadenas de resultado con contenido específico de la referencia cultural de una sola instancia de <xref:System.FormattableString>. Para ello, llame a uno de estos métodos:
+1. Conversión de una cadena interpolada a una instancia <xref:System.FormattableString> que representa una cadena de formato compuesto junto con los resultados de expresión a los que se va a aplicar formato. Esto permite crear varias cadenas de resultado con contenido específico de la referencia cultural de una sola instancia de <xref:System.FormattableString>. Para ello, llame a uno de estos métodos:
 
       - Una sobrecarga de <xref:System.FormattableString.ToString> que genera una cadena de resultado para <xref:System.Globalization.CultureInfo.CurrentCulture>.
       - Un método <xref:System.FormattableString.Invariant%2A> que genera una cadena de resultado para <xref:System.Globalization.CultureInfo.InvariantCulture>.
       - Un método <xref:System.FormattableString.ToString(System.IFormatProvider)> que genera una cadena de resultado para una referencia cultural especificada.
 
-1. Conversión de una cadena interpolada a una variable <xref:System.IFormattable> que también permite crear varias cadenas de resultado con contenido específico de la referencia cultural de una sola instancia <xref:System.IFormattable>.
+1. Conversión de una cadena interpolada a una instancia <xref:System.IFormattable> que también permite crear varias cadenas de resultado con contenido específico de la referencia cultural de una sola instancia <xref:System.IFormattable>.
 
-En este ejemplo se usa la conversión implícita a <xref:System.FormattableString> para crear cadenas de resultado específicas de la referencia cultural:
+En el ejemplo siguiente, se usa la conversión implícita a <xref:System.FormattableString> para crear cadenas de resultado específicas de la referencia cultural:
 
 [!code-csharp-interactive[create culture-specific result strings](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
 
-## <a name="additional-reading"></a>Lecturas adicionales
-
-Si no está familiarizado con la interpolación de cadenas, eche un vistazo al inicio rápido [Cadenas interpoladas en C#](../../quick-starts//interpolated-strings.yml). Para ver más ejemplos, eche un vistazo al tutorial 
+Si no está familiarizado con la interpolación de cadenas, consulte la guía de inicio rápido [Interpolación de cadenas en C#](../../quick-starts/interpolated-strings.yml). Para ver más ejemplos, eche un vistazo al tutorial 
 [Interpolación de cadenas en C#](../../tutorials/string-interpolation.md).
 
 ## <a name="see-also"></a>Vea también  
