@@ -1,13 +1,7 @@
 ---
 title: recolección de elementos no utilizados
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - memory, garbage collection
 - garbage collection, automatic memory management
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c8288473b25b3f3cd75666e1da0611dec37c3127
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0d820783b931195bf62b75ea76d7d0573289bab8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="garbage-collection"></a>recolección de elementos no utilizados
 El recolector de elementos no utilizados de .NET administra la asignación y liberación de la memoria de la aplicación. Cada vez que se crea un objeto nuevo, el Common Language Runtime asigna al objeto memoria del montón administrado. Siempre que haya espacio de direcciones disponible en el montón nativo, el motor en tiempo de ejecución continúa asignando espacio a los objetos nuevos. No obstante, la memoria no es infinita. En ocasiones, el recolector de elementos no utilizados debe realizar una recolección para liberar alguna memoria. El motor de optimización del recolector de elementos no utilizados determina cuál es el mejor momento para realizar una recolección, según las asignaciones que se estén realizando. Cuando el recolector de elementos no utilizados realiza una recolección, comprueba si en el montón administrado hay objetos que la aplicación ya no utiliza y realiza las operaciones necesarias para reclamar su memoria.  

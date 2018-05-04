@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
-caps.latest.revision: 
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7f18bed80550b293195961fd9d42491dd571cbaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4f11c904aadc5cd27482072e9f6f97236c0cdce2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="long-c-reference"></a>long (Referencia de C#)
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>Literales 
 
-Puede declarar e inicializar una variable `long` mediante la asignación de un literal decimal, un literal hexadecimal o (a partir de C# 7) un literal binario. 
+Puede declarar e inicializar una variable `long` mediante la asignación de un literal decimal, un literal hexadecimal o (a partir de C# 7.0) un literal binario. 
 
 En el ejemplo siguiente, los enteros que equivalen a 4 294 967 296 que se representan como literales binarios, hexadecimales y decimales se asignan a valores `long`.  
   
@@ -39,9 +39,9 @@ En el ejemplo siguiente, los enteros que equivalen a 4 294 967 296 que se repres
 > [!NOTE] 
 > Use el prefijo `0x` o `0X` para denotar un literal hexadecimal y el prefijo `0b` o `0B` para denotar un literal binario. Los literales decimales no tienen prefijo. 
 
-A partir de C# 7, se han agregado un par de características mejorar la legibilidad. 
- - C# 7.0 permite el uso del carácter de subrayado, `_`, como un separador de dígito.
- - 7.2 C# permite `_` para usarse como un separador de dígitos de un literal binario o hexadecimal, después del prefijo. Un literal decimal no está permitido que tengan un carácter de subrayado inicial.
+A partir de C# 7.0, se han agregado un par de características para mejorar la legibilidad. 
+ - C# 7.0 permite usar el carácter de subrayado, `_`, como separador de dígitos.
+ - C# 7.2 permite usar `_` como separador de dígitos de un literal binario o hexadecimal, después del prefijo. Un literal decimal no puede tener un carácter de subrayado inicial.
 
 A continuación se muestran algunos ejemplos.
 
@@ -86,7 +86,7 @@ El literal 4294967296 de los ejemplos anteriores es de tipo `long` porque supera
 898L + 88  
 ```  
   
- Para más información sobre expresiones aritméticas con combinaciones de tipos de punto flotante y tipos enteros, vea [float](../../../csharp/language-reference/keywords/float.md) y [double](../../../csharp/language-reference/keywords/double.md).  
+ Para obtener información sobre expresiones aritméticas con combinaciones de tipos de punto flotante y tipos enteros, vea [float](../../../csharp/language-reference/keywords/float.md) y [double](../../../csharp/language-reference/keywords/double.md).  
   
 ## <a name="conversions"></a>Conversiones  
  Existe una conversión implícita predefinida de `long` a [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) o [decimal](../../../csharp/language-reference/keywords/decimal.md). De lo contrario, se debe usar una conversión. Por ejemplo, la instrucción siguiente producirá un error de compilación sin una conversión explícita:  

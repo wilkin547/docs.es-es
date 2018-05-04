@@ -1,6 +1,6 @@
 ---
-title: "Ejecución de aplicaciones de consola en Docker"
-description: "Aprenda a ejecutar una aplicación de consola existente de .NET Framework en un contenedor de Docker de Windows."
+title: Ejecución de aplicaciones de consola en Docker
+description: Aprenda a ejecutar una aplicación de consola existente de .NET Framework en un contenedor de Docker de Windows.
 author: spboyer
 keywords: .NET, contenedor, consola, aplicaciones
 ms.date: 09/28/2016
@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7990ed03028ea9361a8b1760b237b8ed2f9d204d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Ejecución de aplicaciones de consola en contenedores de Windows
 
@@ -25,7 +25,7 @@ La aplicación de consola de ejemplo es un ejemplo sencillo que toma un argument
 
 Además de la respuesta, se ha agregado `Environment.MachineName` a ella para mostrar la diferencia entre la ejecución local de la aplicación y en un contenedor de Windows. Cuando la aplicación se ejecuta localmente, se debería devolver el nombre del equipo local, mientras que cuando se ejecuta en un contenedor de Windows, se devuelve el identificador de sesión del contenedor.
 
-El [ejemplo completo](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) está disponible en el repositorio dotnet/docs de GitHub. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+El [ejemplo completo](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) está disponible en el repositorio dotnet/samples de GitHub. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Antes de empezar a trabajar en la migración de la aplicación a un contenedor, debe estar familiarizado con algunos términos de Docker.
 

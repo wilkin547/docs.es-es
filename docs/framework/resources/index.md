@@ -1,14 +1,6 @@
 ---
 title: Recursos de aplicaciones de escritorio
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
 - application resources
@@ -18,17 +10,13 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8fa1521a5516a4be18352c1bce6abf93e40287f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 023099adeeebf21b7dba631bde75332524eb0cc3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resources-in-desktop-apps"></a>Recursos de aplicaciones de escritorio
 Casi todas las aplicaciones de calidad de producción tienen que utilizar recursos. Un recurso es cualquier dato no ejecutable que se implemente lógicamente con una aplicación. Los recursos pueden mostrarse en una aplicación como mensajes de error o como parte de la interfaz de usuario. Los recursos pueden contener datos con varios formatos, como objetos almacenados, cadenas e imágenes. (Para poder escribir objetos almacenados en un archivo de recursos, los objetos deben ser serializables). Si los datos se almacenan en un archivo de recursos, es posible modificarlos sin volver a compilar toda la aplicación. Esto también permite almacenar los datos en una sola ubicación y elimina la necesidad de confiar en los datos codificados de forma rígida almacenados en varias ubicaciones.  

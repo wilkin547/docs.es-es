@@ -1,27 +1,15 @@
 ---
-title: "Ejemplos de sintaxis de consulta basada en métodos: operadores de conjuntos (LINQ to DataSet)"
-ms.custom: 
+title: 'Ejemplos de sintaxis de consulta basada en métodos: operadores de conjuntos (LINQ to DataSet)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fa93af15-28af-4b5e-846b-897308410edb
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 637e1c2fe66bcfd31b0392076b8b1058d0008482
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2c95125182a352d3cd2b0b4c51ffac3f74fff5a7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>Ejemplos de sintaxis de consulta basada en métodos: operadores de conjuntos (LINQ to DataSet)
 Los ejemplos de este tema muestran cómo usar el <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A>, y <xref:System.Linq.Enumerable.Union%2A> operadores para realizar operaciones de comparación basadas en valores en conjuntos de filas de datos.[ Cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md) vea [comparar objetos DataRow](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md) para obtener más información sobre <xref:System.Data.DataRowComparer>.  

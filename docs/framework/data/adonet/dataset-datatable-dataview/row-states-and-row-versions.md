@@ -1,27 +1,15 @@
 ---
 title: Estados y versiones de filas
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6c37c33f5deda2d16e24fab77f394d97749ae63e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d36556b62a95a7af1097d8fe88597569c81c0111
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-states-and-row-versions"></a>Estados y versiones de filas
 ADO.NET administra las filas de las tablas mediante estados de fila y versiones de fila. Un estado de fila indica el estado de una fila; las versiones de fila mantienen los valores almacenados en una fila en cuanto se modifica, incluyendo los valores actuales, originales y predeterminados. Por ejemplo, después de realizar una modificación en una columna de una fila, ésta adquiere el estado de fila `Modified` y dos versiones de fila:`Current`, que contiene los valores actuales de fila, y `Original`, que contiene los valores de fila antes de la modificación de la columna.  

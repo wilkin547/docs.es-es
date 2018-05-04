@@ -1,6 +1,6 @@
 ---
-title: "Tutorial sobre entornos locales: inicios rápidos para entornos locales de C#"
-description: "Esta guía de inicio rápido proporciona los conceptos básicos para ejecutar las guías de inicio rápido de manera local."
+title: 'Tutorial sobre entornos locales: inicios rápidos para entornos locales de C#'
+description: Esta guía de inicio rápido proporciona los conceptos básicos para ejecutar las guías de inicio rápido de manera local.
 author: billwagner
 ms.topic: article
 ms.date: 12/07/2017
@@ -8,11 +8,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9957f524e04f8ff64d4f640cf085b16cf9a2c0c6
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ec70b6bca55d370d90e912793cfec82a45141c51
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="local-environment"></a>Entorno local
 
@@ -35,19 +35,25 @@ Puede empezar con cualquiera de las siguientes guías de inicio rápido:
 
 En la guía de inicio rápido [Números en C#](numbers-in-csharp-local.md), obtendrá información sobre cómo se almacenan los números en los equipos y cómo realizar cálculos con distintos tipos numéricos. Conocerá los datos básicos sobre cómo realizar redondeos y cálculos matemáticos con C#. 
 
-En esta guía de inicio rápido se presupone que ha completado el tutorial [Hola mundo](hello-world.yml).
+En esta guía de inicio rápido se presupone que ha completado la lección [Hola mundo](hello-world.yml).
 
 ## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[Bifurcaciones y bucles](branches-and-loops-local.md)
 
 En la guía de inicio rápido [Ramas y bucles](branches-and-loops-local.md) se explican los datos básicos sobre la selección de diferentes rutas de acceso de la ejecución del código en función de los valores almacenados en variables. Aprenderá los datos básicos del flujo de control, es decir, cómo los programas toman decisiones y eligen distintas acciones. 
 
-En esta lección para principiantes se supone que ha completado las lecciones [Hola mundo](hello-world.yml) y [Números en C#](numbers-in-csharp-local.md).
+En esta guía de inicio rápido se supone que ha completado las lecciones [Hola mundo](hello-world.yml) y [Números en C#](numbers-in-csharp-local.md).
+
+## <a name="string-interpolationinterpolated-strings-localmd"></a>[Interpolación de cadenas](interpolated-strings-local.md)
+
+En la guía de inicio rápido [Interpolación de cadenas](interpolated-strings-local.md) se muestra cómo insertar valores en una cadena. Aprenderá a crear una cadena interpolada con expresiones C# insertadas y a controlar la apariencia del texto de los resultados de expresión en la cadena de resultado.
+
+En esta guía de inicio rápido se supone que ha completado las lecciones [Hola mundo](hello-world.yml), [Números en C#](numbers-in-csharp-local.md) y [Bifurcaciones y bucles](branches-and-loops-local.md).
 
 ## <a name="list-collectionarrays-and-collectionsmd"></a>[Colección de listas](arrays-and-collections.md)
 
 En la lección [Colección de listas](arrays-and-collections.md) se ofrece información general sobre el tipo de colección de listas que almacena secuencias de datos. Se explica cómo agregar y quitar elementos, buscarlos y ordenar las listas. Explorará los diferentes tipos de listas. 
 
-En esta guía de inicio rápido para principiantes se presupone que ha completado las guías de inicio rápido anteriores.
+En esta guía de inicio rápido se presupone que ha completado las lecciones que se muestran anteriormente.
 
 ## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Introducción a las clases](introduction-to-classes.md)
 

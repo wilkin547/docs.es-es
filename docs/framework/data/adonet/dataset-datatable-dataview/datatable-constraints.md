@@ -1,27 +1,15 @@
 ---
 title: Restricciones de DataTable
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 500dad1699843bae04aea6d5c16a1ccf53bb102a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 95bbba30bc9cd75d1694d7d8062bc9a6e6105084
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datatable-constraints"></a>Restricciones de DataTable
 Se pueden utilizar restricciones para exigir restricciones sobre los datos de un objeto <xref:System.Data.DataTable> con el fin de mantener la integridad de los datos. Una restricción es una regla automática que se aplica a una columna, o a varias columnas relacionadas, que determina cómo proceder cuando se modifica de alguna manera el valor de una fila. Las restricciones se exigen cuando la `System.Data.DataSet.EnforceConstraints` propiedad de la <xref:System.Data.DataSet> es **true**. Para ver un ejemplo de código que muestre cómo establecer la propiedad `EnforceConstraints`, vea el tema de referencia <xref:System.Data.DataSet.EnforceConstraints%2A>.  
@@ -35,8 +23,8 @@ Se pueden utilizar restricciones para exigir restricciones sobre los datos de un
   
 |Establecimiento de reglas|Descripción|  
 |------------------|-----------------|  
-|**Cascade**|Elimina o actualiza las filas relacionadas.|  
-|**SetNull**|Establecer los valores de las filas relacionadas en **DBNull**.|  
+|**En cascada**|Elimina o actualiza las filas relacionadas.|  
+|**setNull**|Establecer los valores de las filas relacionadas en **DBNull**.|  
 |**SetDefault**|Establece los valores de las filas relacionadas en el valor predeterminado.|  
 |**Ninguno**|No realiza ninguna acción en las filas relacionadas. Este es el valor predeterminado.|  
   
@@ -71,7 +59,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
 |Establecimiento de reglas|Descripción|  
 |------------------|-----------------|  
-|**Cascade**|Acepta o rechaza los cambios en filas secundarias.|  
+|**En cascada**|Acepta o rechaza los cambios en filas secundarias.|  
 |**Ninguno**|No realiza ninguna acción en las filas secundarias. Este es el valor predeterminado.|  
   
 ### <a name="example"></a>Ejemplo  

@@ -1,24 +1,12 @@
 ---
 title: '&lt;soapProcessing&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1aeb100e1b8e160d30566cd43d67cbf49c6b5c4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 780c0e9a1d88c9f00883753091b102fbe9d41aa5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
@@ -60,7 +48,7 @@ Ninguna
 
 El procesamiento SOAP es el proceso donde los mensajes se convierten entre las versiones del mensaje.
 
-El servicio de enrutamiento [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] puede convertir los mensajes de un protocolo en otro. Si las versiones del mensaje de entrada y de salida son diferentes, se crea un nuevo mensaje de la versión correcta. Procesamiento de mensajes de una <!--zz <xref:System.ServiceModel.Channel.MessageVersion> --> `MessageVersion` a otra se logra construyendo un nuevo [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] mensaje que contiene la parte del cuerpo y los encabezados pertinentes de la entrada [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] mensaje. Los encabezados específicos del direccionamiento, o que se interpretan en el nivel del enrutador, no se usan durante la construcción del nuevo mensaje WCF porque estos encabezados son de una versión diferente (en el caso de los encabezados de direccionamiento) o se han procesado como parte de la comunicación entre el cliente y el enrutador.
+El servicio de enrutamiento de Windows Communication Foundation (WCF) puede convertir mensajes de un protocolo a otro. Si las versiones del mensaje de entrada y de salida son diferentes, se crea un nuevo mensaje de la versión correcta. Procesamiento de mensajes de una <!--zz <xref:System.ServiceModel.Channel.MessageVersion> --> `MessageVersion` a otra se logra construyendo un nuevo [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] mensaje que contiene la parte del cuerpo y los encabezados pertinentes de la entrada [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] mensaje. Los encabezados específicos del direccionamiento, o que se interpretan en el nivel del enrutador, no se usan durante la construcción del nuevo mensaje WCF porque estos encabezados son de una versión diferente (en el caso de los encabezados de direccionamiento) o se han procesado como parte de la comunicación entre el cliente y el enrutador.
 
 La colocación de un encabezado en el mensaje de salida está determinada por si se marcó o no como comprendido al atravesar la capa del canal de entrada. Los encabezados que no se entienden (como los encabezados personalizados) no se quitan y pasan así por el servicio del enrutamiento copiándose en el mensaje de salida. El cuerpo del mensaje se copia en el mensaje de salida. A continuación, el mensaje se envía al canal de salida en el que se señalan todos los encabezados y se crearán y agregarán otros datos del sobre específicos de dicho protocolo/transporte de comunicaciones.
 

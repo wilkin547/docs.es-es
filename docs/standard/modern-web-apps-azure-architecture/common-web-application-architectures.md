@@ -6,16 +6,17 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dc5580d38ac29a5e923a4b7d84f9d7e077d5cdb2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 911935379fd126ccbafe825a6ce4049c2e9b5cde
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
-#<a name="common-web-application-architectures"></a>Arquitecturas de aplicaciones web comunes
+# <a name="common-web-application-architectures"></a>Arquitecturas de aplicaciones web comunes
 
 > "Si cree que la buena arquitectura es cara, pruebe la mala".  
 > _- Brian Foote y Joseph Yoder_
@@ -226,7 +227,7 @@ Aunque las aplicaciones monolíticas se pueden aprovechar de Docker, separar la 
 > <http://deviq.com/repository-pattern/>
 > - **Clean Architecture Solution Sample** (Ejemplo de solución de arquitectura limpia)  
 > <https://github.com/ardalis/cleanarchitecture>
-> - **Architecting Microservices e-book** (Libro electrónico Arquitectura de microservicios) <http://aka.ms/MicroservicesEbook>
+> - **Architecting Microservices e-book** (Libro electrónico de arquitectura de microservicios) <http://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 [Anterior] (architectural-principles.md) [Siguiente] (common-client-side-web-technologies.md)

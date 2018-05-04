@@ -1,23 +1,16 @@
 ---
 title: Excepciones y control de excepciones (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - exception handling [C#]
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-caps.latest.revision: 33
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3c4ff558f2b850e195138dcc8901d6d860365cfc
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: de396ca4da2e115d221036d3ec49fb7b43d3d21d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Excepciones y control de excepciones (Guía de programación de C#)
 Las características de control de excepciones del lenguaje C# le ayudan a afrontar cualquier situación inesperada o excepcional que se produce cuando se ejecuta un programa. El control de excepciones usa las palabras clave `try`, `catch` y `finally` para intentar realizar acciones que pueden no completarse correctamente, para controlar errores cuando decide que es razonable hacerlo y para limpiar recursos más adelante. Las excepciones las puede generar Common Language Runtime (CLR), .NET Framework, cualquier biblioteca de terceros o el código de aplicación. Las excepciones se crean mediante el uso de la palabra clave `throw`.  

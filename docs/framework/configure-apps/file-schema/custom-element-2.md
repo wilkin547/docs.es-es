@@ -1,10 +1,6 @@
 ---
 title: Elemento personalizado para NameValueSectionHandler y DictionarySectionHandler
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName
 helpviewer_keywords:
@@ -12,21 +8,18 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2154e2a178050e5bafa7d19f37a766141d0a5838
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a16952c5cd3759873faeb0fce45b8aa5170b083
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Elemento personalizado para NameValueSectionHandler y DictionarySectionHandler
 
 Define los valores de las secciones de configuración personalizada que utilizan el <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler> clases.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<sectionName >**
+&nbsp;&nbsp;**\<sectionName>**
 
 ## <a name="attributes"></a>Atributos
 
@@ -42,13 +35,13 @@ Ninguna
 
 |     | Descripción |
 | --- | ----------- |
-| [**\<Agregar >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> y<xref:System.Configuration.DictionarySectionHandler>  | Agrega la configuración de aplicación personalizada. |
-| [**\<Quitar >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> y<xref:System.Configuration.DictionarySectionHandler> |    Quita un valor definido anteriormente. |
-| [**\<Borrar >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> y<xref:System.Configuration.DictionarySectionHandler> | Borra todos los valores definidos anteriormente en una sección. |
+| [**\<Agregar >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler>  | Agrega la configuración de aplicación personalizada. |
+| [**\<Quitar >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler> |    Quita un valor definido anteriormente. |
+| [**\<Borrar >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler> | Borra todos los valores definidos anteriormente en una sección. |
 
 ## <a name="remarks"></a>Comentarios
 
-El  **\<sectionName >** trata de un elemento personalizado definido por una  **\<sección >** etiqueta en el  **\<configSections >**elemento.
+El  **\<sectionName >** trata de un elemento personalizado definido por una  **\<sección >** etiqueta en el  **\<configSections >** elemento.
 
 En la tabla siguiente se muestra que el tipo de objeto al método ConfigurationSettings.GetConfig devuelve para cada controlador de la sección de configuración:
 

@@ -1,27 +1,18 @@
 ---
-title: "Permiso de seguridad para la redirección de enlaces de ensamblados"
-ms.custom: 
+title: Permiso de seguridad para la redirección de enlaces de ensamblados
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d2593df04b93db17f9ca61a98b21aaec1d534d46
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ef9295028aeb7bfcc6df88e9c8bb7f80e2a31368
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Permiso de seguridad para la redirección de enlaces de ensamblados
 Para realizar una redirección de enlaces de ensamblado de forma explícita en un archivo de configuración, se precisa permiso de seguridad. Esto se aplica a la redirección de los ensamblados de .NET Framework y de los ensamblados de otros proveedores. El permiso se otorga estableciendo la <xref:System.Security.Permissions.SecurityPermissionFlag> marca en el <xref:System.Security.Permissions.SecurityPermission>. Los ensamblados administrados no tienen permisos de forma predeterminada.  
@@ -36,8 +27,8 @@ Para realizar una redirección de enlaces de ensamblado de forma explícita en u
 |----------|-----------------------------------|  
 |Zona de confianza (equipo local)|**ON**|  
 |Zona de intranet|**ON**|  
-|Zona de Internet|**OFF**|  
-|Zonas de confianza|**OFF**|  
+|Zona de Internet|**DESACTIVAR**|  
+|Zonas de confianza|**DESACTIVAR**|  
   
  Un administrador puede cambiar esta configuración de seguridad para admitir o rechazar escenarios específicos en un equipo determinado. No hay ninguna herramienta para cambiar la **BindingRedirects** marca predeterminado; un administrador debe editar manualmente el archivo Security.config en el equipo del usuario.  
   

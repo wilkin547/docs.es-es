@@ -1,24 +1,14 @@
 ---
 title: '&lt;security&gt; de &lt;webHttpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: dc7edf528f509c725672036329989f9b7a9bfec2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: dd65b488a2d3f18f2e19191f143243204c4303d4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;security&gt; de &lt;webHttpBinding&gt;
 Especifica los requisitos de seguridad para un extremo configurado con un [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -26,7 +16,7 @@ Especifica los requisitos de seguridad para un extremo configurado con un [ \<ws
  \<system.ServiceModel>  
 \<enlaces >  
 \<webHttpBinding>  
-\<binding>  
+\<enlace >  
 \<seguridad >  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -68,13 +58,13 @@ Especifica los requisitos de seguridad para un extremo configurado con un [ \<ws
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md)|Define la configuración de seguridad para el transporte. Este elemento corresponde al tipo <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>.|  
+|[\<transporte >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md)|Define la configuración de seguridad para el transporte. Este elemento corresponde al tipo <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Un elemento de enlace que se usa para configurar extremos para los servicios Web de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] que responden a las solicitudes HTTP en lugar de a mensajes SOAP.|  
+|[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Un elemento de enlace que se usa para configurar los puntos de conexión para que responden a solicitudes HTTP en lugar de mensajes SOAP de los servicios Web de Windows Communication Foundation (WCF).|  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
@@ -87,5 +77,5 @@ Especifica los requisitos de seguridad para un extremo configurado con un [ \<ws
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [\<enlace >](../../../../../docs/framework/misc/binding.md)  
  [Modelo de programación de web HTTP de WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

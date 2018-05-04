@@ -1,12 +1,7 @@
 ---
 title: Clases y structs (Guía de programación de C#)
 description: Describe el uso de clases y estructuras (struct) en C#.
-keywords: clases (C#), estructuras (C#), estructuras (struct) (C#), tipos de referencia (C#), tipos de valor (C#)
 ms.date: 01/17/2016
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - structs [C#], about structs
 - classes [C#], overview
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-caps.latest.revision: 48
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8c4cbbdd0384c0c0e97d6a7c655e798d0562d9a8
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 801f8e64bf64ee55651521ba53915000cc326303
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Clases y structs (Guía de programación de C#)
 Las clases y estructuras son dos de las construcciones básicas de Common Type System en .NET Framework. Cada una de ellas es básicamente una estructura de datos que encapsula un conjunto de datos y comportamientos que forman un conjunto como una unidad lógica. Los datos y comportamientos son los *miembros* de la clase o estructura, e incluyen sus métodos, propiedades y eventos, entre otros elementos, como se muestra más adelante en este tema.  
@@ -71,7 +63,7 @@ Las clases y estructuras son dos de las construcciones básicas de Common Type S
 -   [Tipos anidados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
 ### <a name="accessibility"></a>Accesibilidad  
- Algunos métodos y propiedades están diseñados para ser invocables y accesibles desde el código fuera de la clase o la estructura, lo que se conoce como *código de cliente*. Otros métodos y propiedades pueden estar indicados exclusivamente para utilizarse en la propia clase o estructura. Es importante limitar la accesibilidad del código, a fin de que solo el código de cliente previsto pueda acceder a él. Puede usar los modificadores de acceso [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md), [private](../../../csharp/language-reference/keywords/private.md) y [private protected](../../../csharp/language-reference/keywords/private-protected.md) para especificar hasta qué punto los tipos y sus miembros son accesibles para el código de cliente. La accesibilidad predeterminada es `private`. Para más información, vea [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Algunos métodos y propiedades están diseñados para ser invocables y accesibles desde el código fuera de la clase o la estructura, lo que se conoce como *código de cliente*. Otros métodos y propiedades pueden estar indicados exclusivamente para utilizarse en la propia clase o estructura. Es importante limitar la accesibilidad del código, a fin de que solo el código de cliente previsto pueda acceder a él. Puede usar los modificadores de acceso [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md), [private](../../../csharp/language-reference/keywords/private.md) y [private protected](../../../csharp/language-reference/keywords/private-protected.md) para especificar hasta qué punto los tipos y sus miembros son accesibles para el código de cliente. La accesibilidad predeterminada es `private`. Para obtener más información, consulte [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
 ### <a name="inheritance"></a>Herencia  
  Las clases (pero no las estructuras) admiten el concepto de herencia. Una clase que deriva de otra clase (la *clase base*) contiene automáticamente todos los miembros públicos, protegidos e internos de la clase base, salvo sus constructores y finalizadores. Para más información, vea [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md) y [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  

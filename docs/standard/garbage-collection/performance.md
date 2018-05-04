@@ -1,29 +1,29 @@
 ---
-title: "Recolección de elementos no utilizados y rendimiento"
-ms.custom: 
+title: Recolección de elementos no utilizados y rendimiento
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: daf70cdb7344f895059d0bc8b986edddbf7d53bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
 <a name="top"></a> En este tema se describen problemas relacionados con la recolección de elementos no utilizados y el uso de memoria. Se tratan problemas relativos al montón administrado y se explica cómo minimizar el efecto de la recolección de elementos no utilizados en las aplicaciones. Cada problema contiene vínculos a procedimientos que puede emplear para investigar los problemas.  
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/09/2018
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>Depurar con SOS  
- Puede usar el [depurador de Windows (WinDbg)](/windows-hardware/drivers/debugger/index) para inspeccionar objetos del montón administrado.  
-  
- Para instalar WinDbg, instale las herramientas de depuración para Windows desde el [sitio web de herramientas de desarrollo y WDK](http://go.microsoft.com/fwlink/?LinkID=103787).  
+ Puede usar el [depurador de Windows (WinDbg)](/windows-hardware/drivers/debugger/index) para inspeccionar objetos del montón administrado.
+ 
+ Para instalar WinDbg, instale las Herramientas de depuración para Windows desde la página [Download Debugging Tools for Windows](/windows-hardware/drivers/debugger/debugger-download-tools) (Descarga de Herramientas de depuración para Windows).
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>Eventos ETW de recolección de elementos no utilizados  

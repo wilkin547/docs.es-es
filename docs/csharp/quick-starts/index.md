@@ -1,20 +1,13 @@
 ---
 title: Tutoriales interactivos de C# - Guías de inicio rápido de C#
 description: Aprenda a usar C# en el explorador y empiece a trabajar con su entorno de desarrollo
-keywords: C#, Introducción, Lecciones, Interactivo
-author: billwagner
-ms.author: wiwagn
 ms.date: 01/30/2018
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 091a9b5cfca1f7d7c303b3961704b8a3bbdf34e2
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 66674b93883211d66883795587e66380a0f43fd7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-quickstarts"></a>Guías de inicio rápido de C# #
 
@@ -50,7 +43,7 @@ En esta guía de inicio rápido se supone que ha completado las lecciones [Hola 
 
 En la lección [Colección de listas](list-collection.yml) se ofrece información general sobre el tipo de colección de listas que almacena secuencias de datos. Se explica cómo agregar y quitar elementos, buscarlos y ordenar las listas. Explorará los diferentes tipos de listas. Esta guía de inicio rápido también está disponible [para ejecutarse localmente en su máquina](arrays-and-collections.md).
 
-En esta guía de inicio rápido se presupone que ha completado el las lecciones que se muestran anteriormente.
+En esta guía de inicio rápido se presupone que ha completado las lecciones que se muestran anteriormente.
 
 ## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Introducción a las clases](introduction-to-classes.md)
 

@@ -1,27 +1,15 @@
 ---
-title: "Cargar información del esquema de un conjunto de datos desde XML"
-ms.custom: 
+title: Cargar información del esquema de un conjunto de datos desde XML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8b814715782710994f18163ccfcd3db342199145
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4b212a7233e6eec93cdce3e521b58e08745e35e0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Cargar información del esquema de un conjunto de datos desde XML
 El esquema de un <xref:System.Data.DataSet> (sus tablas, columnas, relaciones y restricciones) pueden definirse mediante programación, creado por la **rellenar** o **FillSchema** métodos de un <xref:System.Data.Common.DataAdapter>, o la carga desde un Documento XML. Para cargar **conjunto de datos** información del esquema de un documento XML, puede usar el **ReadXmlSchema** o la **InferXmlSchema** método de la **delconjuntodedatos**. **ReadXmlSchema** le permite cargar o deducir **conjunto de datos** información del esquema del documento que contiene el esquema de lenguaje (XSD) de definición de esquemas de XML o un documento XML con un esquema XML alineado. **InferXmlSchema** le permite deducir el esquema del documento XML y pasar por alto ciertos espacios de nombres XML que especifique.  
@@ -65,7 +53,7 @@ xmlStream.Close();
 ```  
   
 ## <a name="inferxmlschema"></a>InferXmlSchema  
- También puede indicar la **conjunto de datos** deduzca su esquema a partir de un documento XML utilizando la **InferXmlSchema** método de la **conjunto de datos**. **InferXmlSchema** funciona del mismo modo que **ReadXml** con una **XmlReadMode** de **InferSchema** (carga los datos, así como deduce el esquema) y  **ReadXmlSchema** si el documento que se está leyendo no contiene ningún esquema en línea. Sin embargo, **InferXmlSchema** ofrece la posibilidad adicional de permitir para especificar determinados espacios de nombres XML que se omita cuando se deduzca el esquema. **InferXmlSchema** toma dos argumentos necesarios: la ubicación del documento XML, especificado por un nombre de archivo, una secuencia o un **XmlReader**; y una matriz de cadenas de espacios de nombres XML que se omitan por la operación.  
+ También puede indicar la **conjunto de datos** deduzca su esquema a partir de un documento XML utilizando la **InferXmlSchema** método de la **conjunto de datos**. **InferXmlSchema** funciona del mismo modo que **ReadXml** con una **XmlReadMode** de **InferSchema** (carga los datos, así como deduce el esquema) y **ReadXmlSchema** si el documento que se está leyendo no contiene ningún esquema en línea. Sin embargo, **InferXmlSchema** ofrece la posibilidad adicional de permitir para especificar determinados espacios de nombres XML que se omita cuando se deduzca el esquema. **InferXmlSchema** toma dos argumentos necesarios: la ubicación del documento XML, especificado por un nombre de archivo, una secuencia o un **XmlReader**; y una matriz de cadenas de espacios de nombres XML que se omitan por la operación.  
   
  Por ejemplo, tomemos el siguiente código XML:  
   

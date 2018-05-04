@@ -1,27 +1,15 @@
 ---
-title: "Cadenas de conexión y archivos de configuración"
-ms.custom: 
+title: Cadenas de conexión y archivos de configuración
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a4876d3b794282852b364f58cc84b58546567d80
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadenas de conexión y archivos de configuración
 La incrustación de cadenas de conexión en el código de la aplicación puede producir vulnerabilidades en la seguridad y problemas de mantenimiento. Las cadenas de conexión sin cifrar compiladas en el código de origen de una aplicación pueden verse mediante la [Ildasm.exe (Desensamblador de IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) herramienta. Además, si la cadena de conexión cambia en algún momento, será necesario compilar de nuevo la aplicación. Por estas razones, se recomienda almacenar las cadenas de conexión en un archivo de configuración de la aplicación.  

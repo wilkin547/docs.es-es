@@ -1,27 +1,15 @@
 ---
 title: Generar comandos con objetos CommandBuilder
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5f250f74303fb3f2835781318e655b435e748153
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 752cccc9e10dd3056817945d1f9f5f3cf7d84227
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Generar comandos con objetos CommandBuilder
 Cuando la propiedad `SelectCommand` se especifica de forma dinámica en tiempo de ejecución, por ejemplo a través de una herramienta de consulta que acepta un comando de texto del usuario, existe la posibilidad de que no se pueda especificar adecuadamente en tiempo de diseño el comando `InsertCommand`, `UpdateCommand` o `DeleteCommand` correspondiente. Si el objeto <xref:System.Data.DataTable> se asigna a una única tabla de base de datos o se genera a partir de ella, puede utilizar el objeto <xref:System.Data.Common.DbCommandBuilder> para generar automáticamente las propiedades `DeleteCommand`, `InsertCommand` y `UpdateCommand` de <xref:System.Data.Common.DbDataAdapter>.  

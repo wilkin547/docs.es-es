@@ -1,11 +1,12 @@
 ---
 title: Manipular archivos y directorios en Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bd1e61503394741e7943d30d383f2e7c5ea35f68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bff2e66b1a196117117370f7620f3f55576ad19b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Tutorial: Manipular archivos y directorios en Visual Basic
-En este tutorial se ofrece una introducción a los conceptos básicos de E/S de archivos en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. En él se describe cómo crear una pequeña aplicación que enumera y examina archivos de texto en un directorio. Para cada archivo de texto seleccionado, la aplicación proporciona atributos de archivo y la primera línea de contenido. Existe una opción para escribir información en un archivo de registro.  
+En este tutorial se ofrece una introducción a los conceptos básicos de E/S de archivos en Visual Basic. En él se describe cómo crear una pequeña aplicación que enumera y examina archivos de texto en un directorio. Para cada archivo de texto seleccionado, la aplicación proporciona atributos de archivo y la primera línea de contenido. Existe una opción para escribir información en un archivo de registro.  
   
- En este tutorial se usan los miembros del objeto `My.Computer.FileSystem Object`, que están disponibles en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Vea <xref:Microsoft.VisualBasic.FileIO.FileSystem> para obtener más información. Al final del tutorial, se incluye un ejemplo equivalente que usa clases del espacio de nombres <xref:System.IO>.  
+ En este tutorial se usan los miembros del elemento `My.Computer.FileSystem Object`, que están disponibles en Visual Basic. Vea <xref:Microsoft.VisualBasic.FileIO.FileSystem> para obtener más información. Al final del tutorial, se incluye un ejemplo equivalente que usa clases del espacio de nombres <xref:System.IO>.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -51,13 +52,13 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
   
 4.  Agregue los controles de la siguiente tabla al formulario y establezca los valores correspondientes para sus propiedades.  
   
-    |Control|Propiedad|Valor|  
+    |Control|Property|Valor|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Nombre**|`filesListBox`|  
-    |**Button**|**Nombre**<br /><br /> **Text**|`browseButton`<br /><br /> **Examinar**|  
-    |**Button**|**Nombre**<br /><br /> **Text**|`examineButton`<br /><br /> **Examine** (Examinar)|  
-    |**CheckBox**|**Nombre**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **Guardar resultados**|  
-    |**FolderBrowserDialog**|**Nombre**|`FolderBrowserDialog1`|  
+    |**ListBox**|**Name**|`filesListBox`|  
+    |**Button**|**Name**<br /><br /> **Texto**|`browseButton`<br /><br /> **Examinar**|  
+    |**Button**|**Name**<br /><br /> **Texto**|`examineButton`<br /><br /> **Examine** (Examinar)|  
+    |**CheckBox**|**Name**<br /><br /> **Texto**|`saveCheckBox`<br /><br /> **Guardar resultados**|  
+    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Para seleccionar una carpeta y enumerar archivos en una carpeta  
   

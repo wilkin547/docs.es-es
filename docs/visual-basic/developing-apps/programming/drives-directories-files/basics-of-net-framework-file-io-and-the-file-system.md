@@ -1,11 +1,12 @@
 ---
 title: Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d6cfdb939bd4bf84fafbffceefccd5cd522018c2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 02eaa98b8a52a2b9efa2b273b2a58158a5848b86
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
 Las clases del espacio de nombres <xref:System.IO> se usan para trabajar con unidades, archivos y directorios.  
@@ -30,7 +31,7 @@ Las clases del espacio de nombres <xref:System.IO> se usan para trabajar con uni
  El espacio de nombres <xref:System.IO> contiene las clases <xref:System.IO.File> y <xref:System.IO.Directory>, que proporcionan la funcionalidad [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para manipular archivos y directorios. Dado que los métodos de estos objetos son miembros estáticos o compartidos, podrá usarlos directamente sin crear primero una instancia de la clase. A estas clases están asociadas las clases <xref:System.IO.FileInfo> y <xref:System.IO.DirectoryInfo>, que les resultarán familiares a los usuarios de la característica `My`. Para usar estas clases, debe usar los nombres completos o importar los espacios de nombres adecuados, incluidas las instrucciones `Imports` , al principio del código afectado. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 > [!NOTE]
->  Otros temas de esta sección usan el objeto `My.Computer.FileSystem` en lugar de las clases `System.IO` para trabajar con unidades, archivos y directorios. El objeto `My.Computer.FileSystem` está diseñado principalmente para su uso en programas de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Las clases `System.IO` están diseñadas para su uso en cualquier lenguaje que admita [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], incluido [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+>  Otros temas de esta sección usan el objeto `My.Computer.FileSystem` en lugar de las clases `System.IO` para trabajar con unidades, archivos y directorios. El objeto `My.Computer.FileSystem` está diseñado principalmente para su uso en programas de Visual Basic. Las clases `System.IO` están diseñadas para su uso en cualquier lenguaje que admita [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], incluido Visual Basic.  
   
 ## <a name="definition-of-a-stream"></a>Definición de una secuencia  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usa secuencias para que sea posible leer archivos y escribir en ellos. Una secuencia se puede considerar un conjunto unidimensional de datos contiguos con un principio y un fin, en el que el cursor indica la posición actual en la secuencia.  

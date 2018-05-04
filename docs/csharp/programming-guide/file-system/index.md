@@ -1,23 +1,16 @@
 ---
 title: Registro y sistema de archivos (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - file system [C#]
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-caps.latest.revision: 20
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3d1b4e3fa9b6c6da89abd242be855e9fb7c16dd6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 20e8b857759253736d11bc31988fadb4843fa87a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>Registro y sistema de archivos (Guía de programación de C#)
 Los temas siguientes tratan cómo usar C# y .NET Framework para realizar diversas operaciones básicas en los archivos, las carpetas y el Registro.  

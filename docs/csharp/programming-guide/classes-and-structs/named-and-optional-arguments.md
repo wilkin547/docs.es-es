@@ -1,8 +1,9 @@
 ---
-title: "Argumentos opcionales y con nombre (Guía de programación de C#)"
+title: Argumentos opcionales y con nombre (Guía de programación de C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e4c57efa4027af5dd6b0476eb65845a39fc0b691
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c3c2c2ec0c982582032c1ae586d23226028ad899
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumentos opcionales y con nombre (Guía de programación de C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] introduce argumentos opcionales y con nombre. Los *argumentos con nombre* permiten especificar un argumento para un parámetro concreto asociando el argumento al nombre del parámetro y no a la posición del parámetro en la lista de parámetros. Los *argumentos opcionales* permiten omitir argumentos para algunos parámetros. Ambas técnicas se pueden usar con métodos, indexadores, constructores y delegados.  

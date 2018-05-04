@@ -1,24 +1,12 @@
 ---
 title: Asignaciones de tipos de datos en ADO.NET
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a75914e032adf5b160724e17966b683a119b69a7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1064f3be7f2548337b5dd6653c76b70a04fad980
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-mappings-in-adonet"></a>Asignaciones de tipos de datos en ADO.NET
 .NET Framework se basa en el sistema de tipos común, que define cómo se declaran, usan y administran los tipos en tiempo de ejecución. Consta de tipos de valor y de tipos de referencia, que derivan todos del tipo base <xref:System.Object>. Al trabajar con un origen de datos, el tipo de datos se deduce del proveedor de datos si no se especifica explícitamente. Por ejemplo, un objeto <xref:System.Data.DataSet> es independiente de cualquier origen de datos específico. Los datos de `DataSet` se recuperan desde un origen de datos y los cambios que se realizan en ellos se reflejan en el origen de datos mediante el uso de `DataAdapter`. Esto significa que cuando `DataAdapter` rellena un objeto <xref:System.Data.DataTable> en `DataSet` con valores obtenidos de un origen de datos, los tipos de datos resultantes de las columnas de `DataTable` son tipos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] en lugar de tipos específicos del proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] que se utiliza para realizar la conexión con el origen de datos.  

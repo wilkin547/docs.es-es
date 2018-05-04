@@ -1,34 +1,22 @@
 ---
 title: Ordenar y filtrar datos
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2411307623c714ae521d00dcffca05d3569a656e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 02a67a490eb8339663aac08c97c665ffee09f0df
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sorting-and-filtering-data"></a>Ordenar y filtrar datos
 La <xref:System.Data.DataView> proporciona varias formas de ordenación y filtrado de datos en una <xref:System.Data.DataTable>:  
   
 -   Mediante la propiedad <xref:System.Data.DataView.Sort%2A> puede especificar criterios simples o múltiples de ordenación de columnas e incluir parámetros ASC (ascendente) y DESC (descendente).  
   
--   Mediante la propiedad <xref:System.Data.DataView.ApplyDefaultSort%2A> puede crear automáticamente un criterio de ordenación, en orden ascendente, basado en la columna o columnas de clave principal de la tabla. <xref:System.Data.DataView.ApplyDefaultSort%2A>solo se aplica cuando la **ordenación** propiedad es una referencia nula o una cadena vacía, y cuando la tabla tiene definida una clave principal.  
+-   Mediante la propiedad <xref:System.Data.DataView.ApplyDefaultSort%2A> puede crear automáticamente un criterio de ordenación, en orden ascendente, basado en la columna o columnas de clave principal de la tabla. <xref:System.Data.DataView.ApplyDefaultSort%2A> solo se aplica cuando la **ordenación** propiedad es una referencia nula o una cadena vacía, y cuando la tabla tiene definida una clave principal.  
   
 -   Mediante la propiedad <xref:System.Data.DataView.RowFilter%2A> puede especificar subconjuntos de filas basándose en sus valores de columna. Para obtener más información sobre las expresiones válidas para la **RowFilter** propiedad, vea la información de referencia para la <xref:System.Data.DataColumn.Expression%2A> propiedad de la <xref:System.Data.DataColumn> clase.  
   
@@ -41,13 +29,13 @@ La <xref:System.Data.DataView> proporciona varias formas de ordenación y filtra
     |Opciones de DataViewRowState|Descripción|  
     |------------------------------|-----------------|  
     |**CurrentRows**|El **actual** versión de fila de todas las **Unchanged**, **Added**, y **Modified** filas. Este es el valor predeterminado.|  
-    |**Added**|El **actual** versión de fila de todas las **Added** filas.|  
-    |**Deleted**|El **Original** versión de fila de todas las **Deleted** filas.|  
+    |**Agregado**|El **actual** versión de fila de todas las **Added** filas.|  
+    |**eliminar**|El **Original** versión de fila de todas las **Deleted** filas.|  
     |**ModifiedCurrent**|El **actual** versión de fila de todas las **Modified** filas.|  
     |**ModifiedOriginal**|El **Original** versión de fila de todas las **Modified** filas.|  
     |**Ninguno**|Ninguna fila.|  
     |**OriginalRows**|El **Original** versión de fila de todas las **Unchanged**, **Modified**, y **Deleted** filas.|  
-    |**Unchanged**|El **actual** versión de fila de todas las **Unchanged** filas.|  
+    |**Sin cambios**|El **actual** versión de fila de todas las **Unchanged** filas.|  
   
  Para obtener más información sobre los Estados de fila y versiones de fila, vea [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   

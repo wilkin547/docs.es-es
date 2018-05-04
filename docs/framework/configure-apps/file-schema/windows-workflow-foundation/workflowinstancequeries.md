@@ -1,30 +1,20 @@
 ---
 title: '&lt;workflowInstanceQueries&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 4fe7ce85-cf9a-4dbf-a8f7-bc9b1fc2fe35
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a65f6b888e210c1786395bbbb9f60050fe8e2c1b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a165d6f55afbbf1489a7355d4207a74ac1f003ef
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltworkflowinstancequeriesgt"></a>&lt;workflowInstanceQueries&gt;
 Representa una colección de elementos de configuración que realizan el seguimiento de los cambios del ciclo de vida de la instancia del flujo de trabajo, como un evento iniciado o completado.  
   
  Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<seguimiento >  
 \<trackingProfile >  
 \<flujo de trabajo >  

@@ -1,26 +1,12 @@
 ---
 title: '&lt;serviceMetadata&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b0b98c637c98c75aab5009f9a2f35b8ce6b90012
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3c59a47f8a45fbccb05eb1f385215fe2aa739836
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
 Especifica la publicación de metadatos e información asociada del servicio.  
@@ -74,7 +60,7 @@ Especifica la publicación de metadatos e información asociada del servicio.
 |[\<comportamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este elemento de configuración permite controlar los metadatos que publican características de un servicio. Para evitar la divulgación involuntaria de metadatos de servicio con información confidencial potencial, la configuración predeterminada para los servicios [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración. Con este elemento de configuración, puede habilitar este comportamiento de publicación para su servicio.  
+ Este elemento de configuración permite controlar los metadatos que publican características de un servicio. Para evitar la divulgación involuntaria de metadatos de servicio potencialmente confidenciales, la configuración predeterminada para los servicios de Windows Communication Foundation (WCF) deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración. Con este elemento de configuración, puede habilitar este comportamiento de publicación para su servicio.  
   
  Para obtener un ejemplo detallado de la configuración de este comportamiento, consulte [comportamiento de publicación de metadatos](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md).  
   

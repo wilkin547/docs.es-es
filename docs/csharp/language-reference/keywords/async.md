@@ -15,11 +15,11 @@ ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
 caps.latest.revision: 52
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2ddbd0f7268dd5dae4095d661cf800b5b481cbbd
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 50b22ea94e8079e29c1e2ba2a595544ce23bd216
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-c-reference"></a>async (Referencia de C#)
 Use el modificador `async` para especificar que un método, una [expresión lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) o un [método anónimo](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) es asincrónico. Si usa este modificador en un método o una expresión, se hace referencia al mismo como un *método asincrónico*. En el ejemplo siguiente se define un método asincrónico denominado `ExampleMethodAsync`: 
@@ -76,7 +76,7 @@ Un método asincrónico puede tener los siguientes tipos de valor devuelto:
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
 - [void](../../../csharp/language-reference/keywords/void.md), que solo se debe usar para controladores de eventos.
-- A partir de C# 7, cualquier tipo que tenga un método `GetAwaiter` accesible. El tipo `System.Threading.Tasks.ValueTask<TResult>` es una implementación de ese tipo. Está disponible agregando el paquete NuGet `System.Threading.Tasks.Extensions`. 
+- A partir de C# 7.0, cualquier tipo que tenga un método `GetAwaiter` accesible. El tipo `System.Threading.Tasks.ValueTask<TResult>` es una implementación de ese tipo. Está disponible agregando el paquete NuGet `System.Threading.Tasks.Extensions`. 
 
 El método asincrónico no puede declarar ningún parámetro [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md), ni puede tener un [valor devuelto de referencia](../../programming-guide/classes-and-structs/ref-returns.md), pero puede llamar a los métodos que tienen estos parámetros.  
   
@@ -84,7 +84,7 @@ Se puede especificar `Task<TResult>` como el tipo de valor devuelto de un métod
   
 El tipo devuelto `void` se utiliza principalmente para definir controladores de eventos, que requieren ese tipo devuelto. El llamador de un método asincrónico que devuelva `void` no puede esperar a que finalice y no puede detectar las excepciones que el método inicia.  
 
-A partir de C# 7, devuelve otro tipo, normalmente un tipo de valor, que tiene un método `GetAwaiter` para minimizar las asignaciones de memoria en secciones críticas de rendimiento del código. 
+A partir de C# 7.0, devuelve otro tipo, normalmente un tipo de valor, que tiene un método `GetAwaiter` para minimizar las asignaciones de memoria en secciones críticas de rendimiento del código. 
 
 Para más información y ejemplos, vea [Tipos de valor devueltos asincrónicos](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   

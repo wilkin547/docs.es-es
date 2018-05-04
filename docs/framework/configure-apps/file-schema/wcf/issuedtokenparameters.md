@@ -1,29 +1,17 @@
 ---
 title: '&lt;issuedTokenParameters&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bac725e0c4fe590623ac82ec45bcf669a2e57179
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 550b3412b193b996b8de800856d6833369fc4bc7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltissuedtokenparametersgt"></a>&lt;issuedTokenParameters&gt;
 Especifica los parámetros para un token de seguridad emitido en un escenario de seguridad aliado.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<enlaces >  
 \<customBinding >  
 \<enlace >  
@@ -73,7 +61,7 @@ Especifica los parámetros para un token de seguridad emitido en un escenario de
 |[\<additionalRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/additionalrequestparameters-element.md)|Una colección de elementos de configuración que especifican los parámetros de solicitud adicionales.|  
 |[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Especifica una colección de tipos de notificación requeridos.<br /><br /> En un escenario aliado, los servicios indican los requisitos de las credenciales de entrada. Por ejemplo, las credenciales de entrada deben poseer un determinado conjunto de tipos de notificación. Cada elemento de la colección especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada.|  
 |[\<emisor >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer-of-issuedtokenparameters.md)|Un elemento de configuración que especifica el punto de conexión que emite el token actual.|  
-|[\<issuerMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata-of-issuedtokenparameters.md)|Un elemento de configuración que especifica la dirección del punto de conexión de los metadatos del emisor del token.|  
+|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata-of-issuedtokenparameters.md)|Un elemento de configuración que especifica la dirección del punto de conexión de los metadatos del emisor del token.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   

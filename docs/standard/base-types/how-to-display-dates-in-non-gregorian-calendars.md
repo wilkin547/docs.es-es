@@ -1,12 +1,12 @@
 ---
-title: "Cómo: Mostrar fechas en calendarios no gregorianos"
-ms.custom: 
+title: 'Cómo: Mostrar fechas en calendarios no gregorianos'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - calendars [.NET Framework], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-caps.latest.revision: 
+caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1a9e45fe43e38be3c618df37a639d63a6a0a5349
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8b0af7aad0efc63518291292b0d0b4ca4872956c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Cómo: Mostrar fechas en calendarios no gregorianos
 Los tipos <xref:System.DateTime> y <xref:System.DateTimeOffset> usan el calendario gregoriano como calendario predeterminado. Esto significa que al llamar al método `ToString` de un valor de fecha y hora se muestra la representación de cadena de esa fecha y hora en el calendario gregoriano, aunque se creara con otro calendario. Esto se muestra en el ejemplo siguiente, que usa dos maneras diferentes de crear un valor de fecha y hora con el calendario persa, pero muestra esos valores de fecha y hora en el calendario gregoriano cuando llama al método <xref:System.DateTime.ToString%2A>. En este ejemplo se reflejan dos técnicas usadas habitualmente, aunque incorrectas, para mostrar la fecha en un calendario determinado.  
@@ -98,7 +98,7 @@ Los tipos <xref:System.DateTime> y <xref:System.DateTimeOffset> usan el calendar
 ## <a name="compiling-the-code"></a>Compilar el código  
  Este ejemplo requiere una referencia a System.Core.dll.  
   
- Compile el código de la línea de comandos mediante csc.exe o vb.exe. Para compilar el código de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], póngalo en una plantilla de proyecto de aplicación de consola.  
+ Compile el código de la línea de comandos mediante csc.exe o vb.exe. Para compilar el código en Visual Studio, póngalo en una plantilla de proyecto de aplicación de consola.  
   
 ## <a name="see-also"></a>Vea también  
  [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)

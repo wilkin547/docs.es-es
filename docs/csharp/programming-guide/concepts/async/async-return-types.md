@@ -1,21 +1,22 @@
 ---
-title: "Tipos de valor devueltos asincrónicos (C#)"
-ms.custom: 
+title: Tipos de valor devueltos asincrónicos (C#)
+ms.custom: ''
 ms.date: 05/29/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7aee1ebdf24a2ac564268e1f36d3aac707dea463
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 4927d6324b6bda5a897ce81928fc13cae303a99a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-return-types-c"></a>Tipos de valor devueltos asincrónicos (C#)
 Los métodos asincrónicos pueden tener los siguientes tipos de valor devuelto:
@@ -26,7 +27,7 @@ Los métodos asincrónicos pueden tener los siguientes tipos de valor devuelto:
 
 - `void`, para un controlador de eventos. 
 
-- A partir de C# 7, cualquier tipo que tenga un método `GetAwaiter` accesible. El objeto devuelto por el método `GetAwaiter` debe implementar la interfaz <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>.
+- A partir de C# 7.0, cualquier tipo que tenga un método `GetAwaiter` accesible. El objeto devuelto por el método `GetAwaiter` debe implementar la interfaz <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>.
   
 Para más información sobre los métodos async, vea [Programación asincrónica con async y await 8C#)](../../../../csharp/programming-guide/concepts/async/index.md).  
   
@@ -76,7 +77,7 @@ El ejemplo siguiente define un controlador de eventos asincrónico.
  
 ## <a name="generalized-async-return-types-and-valuetaskt"></a>Tipos de valor devueltos asincrónicos generalizados y ValueTask<T>
 
-A partir de C# 7, un método asincrónico puede devolver cualquier tipo que tenga un método `GetAwaiter` accesible.
+A partir de C# 7.0, un método asincrónico puede devolver cualquier tipo que tenga un método `GetAwaiter` accesible.
  
 Como <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601> son tipos de referencia, la asignación de memoria en las rutas críticas para el rendimiento, especialmente cuando las asignaciones se producen en ajustados bucles, puede afectar negativamente al rendimiento. La compatibilidad para los tipos de valor devuelto generalizados significa que puede devolver un tipo de valor ligero en lugar de un tipo de referencia para evitar asignaciones de memoria adicionales. 
 

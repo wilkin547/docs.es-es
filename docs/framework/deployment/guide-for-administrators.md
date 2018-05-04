@@ -1,7 +1,7 @@
 ---
 title: Guía de implementación de .NET Framework para administradores
 ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 04/10/2018
 ms.prod: .net-framework
 ms.reviewer: ''
 ms.suite: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f57b5db5c03030d8cb930355586d0253cae13319
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 67efb04fc0d86a20fdf10c0e84bb00ae57383bb1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guía de implementación de .NET Framework para administradores
 Este artículo paso a paso describe cómo un administrador del sistema puede implementar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y sus dependencias del sistema en una red mediante Microsoft System Center Configuration Manager. En este artículo se supone que todos los equipos cliente de destino cumplen los requisitos mínimos para .NET Framework. Para obtener una lista de los requisitos de software y hardware para instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md).  
@@ -165,7 +165,7 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
   
 8.  Complete el asistente.  
   
- Ahora el paquete contiene toda la información necesaria para efectuar una implementación silenciosa de .NET Framework 4.5. Antes de implementar el paquete y el programa, compruebe que se haya instalado en el punto de distribución; vea la sección de supervisión de contenido del tema sobre [operaciones y mantenimiento de administración de contenido en Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) en la biblioteca de documentación de Configuration Manager.  
+ Ahora el paquete contiene toda la información necesaria para realizar una implementación silenciosa de .NET Framework 4.5. Antes de implementar el paquete y el programa, compruebe que se haya instalado en el punto de distribución; vea la sección de supervisión de contenido del tema sobre [operaciones y mantenimiento de administración de contenido en Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) en la biblioteca de documentación de Configuration Manager.  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Implementar el paquete  
@@ -230,11 +230,16 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
 ## <a name="troubleshooting"></a>Solución de problemas  
   
 ### <a name="log-file-locations"></a>Ubicaciones de archivos de registro  
- Los siguientes archivos de registro se generan durante la configuración de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]:  
+ Los siguientes archivos de registro se generan durante la configuración de .NET Framework:  
   
- %temp%\Microsoft .NET Framework 4.5*.txt %temp%\Microsoft .NET Framework 4.5*.html  
+ %temp%\Microsoft .NET Framework *versión*\*.txt  
+ %temp%\Microsoft .NET Framework *versión*\*.html  
   
- Puede usar la [herramienta de recopilación de registros](http://www.microsoft.com/download/details.aspx?id=12493) para recopilar los archivos de registro de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y crear un archivo .cab comprimido que reduzca el tamaño de los archivos.  
+ donde *versión* es la versión de .NET Framework que va a instalar, como 4.5 o 4.7.2.  
+ 
+ También puede especificar el directorio en el que se escriben los archivos de registro mediante la opción de la línea de comandos `/log` en el comando de instalación de .NET Framework. Para obtener más información, consulte la [Guía de implementación de .NET Framework para desarrolladores](deployment-guide-for-developers.md#command-line-options). 
+ 
+ Puede usar la [herramienta de recopilación de registros](https://www.microsoft.com/download/details.aspx?id=12493) para recopilar los archivos de registro de .NET Framework y crear un archivo .cab comprimido que reduzca el tamaño de los archivos.  
   
 <a name="return_codes"></a>   
 ### <a name="return-codes"></a>Códigos de retorno  

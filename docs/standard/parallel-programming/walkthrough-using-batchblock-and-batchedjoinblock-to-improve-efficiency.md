@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 49056607d84b48584660ff62bba13147d6aa43ec
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: c9ea53fb186551a24f678d905d35caaaa0c26494
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Tutorial: Usar BatchBlock y BatchedJoinBlock para mejorar la eficacia
 La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> para poder recibir y almacenar en búfer datos de uno o más orígenes y después propagar esos datos almacenados en búfer como una colección. Este mecanismo por lotes es útil cuando se recopilan datos de uno o más orígenes y después se procesan varios elementos de datos como un lote. Por ejemplo, piense en una aplicación que usa flujo de datos para insertar registros en una base de datos. Esta operación puede ser más eficaz si varios elementos se insertan al mismo tiempo en lugar de insertar de uno en uno de forma secuencial. En este documento se describe cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> para mejorar la eficacia de las operaciones de inserción de la base de datos. También se describe cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> para capturar los resultados y cualquier excepción que se produce cuando el programa lee de una base de datos.
@@ -61,7 +61,7 @@ La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threadi
   
 2.  En el proyecto, agregue una referencia a System.Data.SqlServerCe.dll y una referencia a System.Threading.Tasks.Dataflow.dll.  
   
-3.  Asegúrese de que Form1.cs (Form1.vb para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) contiene las siguientes instrucciones `using` (`Imports` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+3.  Asegúrese de que Form1.cs (Form1.vb para Visual Basic) contenga las siguientes instrucciones `using` (`Imports` en Visual Basic).  
   
      [!code-csharp[TPLDataflow_BatchDatabase#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#1)]
      [!code-vb[TPLDataflow_BatchDatabase#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#1)]  

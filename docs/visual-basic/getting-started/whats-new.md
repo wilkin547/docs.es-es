@@ -15,11 +15,11 @@ ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 34c7e7147ce7ae43926de1796bee433667f08331
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 
@@ -129,7 +129,7 @@ Para obtener más información, vea la sección "Asignaciones literales" de los 
 
 **Compatibilidad con los valores devueltos de referencia de C#**
 
-A partir de C# 7, C# admite los valores devueltos de referencia. Es decir, cuando el método de llamada recibe un valor devuelto mediante referencia, puede cambiar el valor de esta. Visual Basic no le permite crear métodos con valores devueltos de referencia, pero le permite consumirlos y modificarlos.
+A partir de C# 7.0, C# admite los valores devueltos de referencia. Es decir, cuando el método de llamada recibe un valor devuelto mediante referencia, puede cambiar el valor de esta. Visual Basic no le permite crear métodos con valores devueltos de referencia, pero le permite consumirlos y modificarlos.
 
 Por ejemplo, la siguiente clase `Sentence` escrita en C# incluye un método `FindNext` que busca la siguiente palabra de una frase que comienza por una subcadena especificada. La cadena se devuelve como un valor devuelto de referencia, y una variable `Boolean` que se ha pasado mediante referencia al método indica si la búsqueda se ha realizado correctamente. Esto significa que el autor de la llamada no solo puede leer el valor devuelto; él o ella también puede modificarlo, y esa modificación se refleja en la clase `Sentence`.
 

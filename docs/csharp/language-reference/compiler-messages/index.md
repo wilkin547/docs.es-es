@@ -1,23 +1,16 @@
 ---
 title: Errores del compilador de C#
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: error-reference
 helpviewer_keywords:
 - C# language, compiler errors
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-caps.latest.revision: 23
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2253183c0dc99ff56d06698420c9f0f8acf8dfef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e67e568b67400807ba7a1668acb6b3a36b4c7f22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-compiler-errors"></a>Errores del compilador de C#
 Algunos errores del compilador de C# tienen temas correspondientes que explican por qué se genera el error y, en algunos casos, cómo corregirlo. Utilice uno de los siguientes pasos para ver si la Ayuda está disponible para un mensaje de error concreto.  
