@@ -1,1 +1,0 @@
-Es posible que en la conversión se use la forma de normalización C, incluso si un carácter de entrada ya es de ancho completo. Por ejemplo, la cadena "は゛" (que ya es de ancho completo) se normaliza a "ば". Vea [Unicode normalization forms](http://unicode.org/reports/tr15) (Formas de normalización Unicode).

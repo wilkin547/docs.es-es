@@ -1,3 +1,0 @@
-
-> [!IMPORTANT] 
-> En lugar de llamar al método **String.Format** o usar [cadenas de formato compuesto](~/docs/standard/base-types/composite-formatting.md), se pueden usar *cadenas interpoladas* si el lenguaje las admite. Una cadena interpolada es una cadena que contiene *expresiones interpoladas*. Cada expresión interpolada se resuelve con el valor de la expresión y se incluye en la cadena de resultado cuando se asigna la cadena. Para obtener más información, vea [Interpolación de cadenas (Referencia de C#)](~/docs/csharp/language-reference/tokens/interpolated.md) y [Cadenas interpoladas (referencia de Visual Basic)](~/docs/visual-basic/programming-guide/language-features/strings/interpolated-strings.md). 

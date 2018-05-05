@@ -1,1 +1,0 @@
-Tipo de un elemento de la secuencia controlada.

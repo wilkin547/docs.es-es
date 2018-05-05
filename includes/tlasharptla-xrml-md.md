@@ -1,1 +1,0 @@
-Lenguaje de marcado con derechos extensible (XrML)
