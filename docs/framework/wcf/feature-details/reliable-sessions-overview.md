@@ -1,36 +1,24 @@
 ---
-title: "Información general de sesiones confiables"
-ms.custom: 
+title: Información general de sesiones confiables
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d2749188214f3f68ee3ed5df87fc0aa7cac604d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1c5344c2804cf4c17fdc46a7fea5a4a360122b6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-sessions-overview"></a>Información general de sesiones confiables
 
-La mensajería de confianza de SOAP de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona confiabilidad de transferencia de mensajes de un extremo a otro entre los extremos de SOAP. Hace esto en redes que no son confiables superando errores de transporte y errores del nivel de mensajes SOAP. En particular, proporciona una entrega basada en sesión, individual y (opcionalmente) ordenada de mensajes enviados a través de intermediarios de transporte o SOAP. Proporciona entrega basada en sesión para agrupar los mensajes en una sesión con una ordenación opcional de los mensajes.
+Mensajería confiable SOAP de Windows Communication Foundation (WCF) proporciona confiabilidad de transferencia de mensajes de extremo a extremo entre los extremos SOAP. Hace esto en redes que no son confiables superando errores de transporte y errores del nivel de mensajes SOAP. En particular, proporciona una entrega basada en sesión, individual y (opcionalmente) ordenada de mensajes enviados a través de intermediarios de transporte o SOAP. Proporciona entrega basada en sesión para agrupar los mensajes en una sesión con una ordenación opcional de los mensajes.
 
 Este tema describe las sesiones confiables, cómo y cuándo utilizarlos y cómo protegerlos.
 
 ## <a name="wcf-reliable-sessions"></a>Sesiones confiables de WCF
 
-Las sesiones confiables de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] son una implementación de mensajería confiable de SOAP tal y como la define el protocolo WS-ReliableMessaging.
+Las sesiones confiables de WCF es una implementación de mensajería de acuerdo con el protocolo WS-ReliableMessaging confiable de SOAP.
 
-La mensajería confiable SOAP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona una sesión confiable de un extremo a otro entre dos extremos, sin tener en cuenta el número o tipo de intermediarios que separan los extremos de la mensajería. Esto incluye a cualquier intermediario de transporte que no utilice SOAP (por ejemplo, los servidores proxy HTTP) o los intermediarios que utilicen SOAP (por ejemplo, enrutadores basados en SOAP o puentes) que son necesarios para los mensajes fluyan entre los puntos de conexión. Un canal de sesión confiable admite *interactivo* comunicación para que los servicios conectados mediante este tipo de canal se ejecutan simultáneamente y exchange y procesar mensajes bajo condiciones de baja latencia, es decir, en relativamente corto intervalos de tiempo. Este acoplamiento significa que estos componentes progresan o dan error juntas, así que no hay ningún aislamiento proporcionado entre ellos.
+La mensajería confiable SOAP de WCF proporciona una sesión confiable de extremo a extremo entre dos extremos, sin tener en cuenta el número o tipo de intermediarios que separan los extremos de mensajes. Esto incluye a cualquier intermediario de transporte que no utilice SOAP (por ejemplo, los servidores proxy HTTP) o los intermediarios que utilicen SOAP (por ejemplo, enrutadores basados en SOAP o puentes) que son necesarios para los mensajes fluyan entre los puntos de conexión. Un canal de sesión confiable admite *interactivo* comunicación para que los servicios conectados mediante este tipo de canal se ejecutan simultáneamente y exchange y procesar mensajes bajo condiciones de baja latencia, es decir, en relativamente corto intervalos de tiempo. Este acoplamiento significa que estos componentes progresan o dan error juntas, así que no hay ningún aislamiento proporcionado entre ellos.
 
 Una sesión confiable enmascara dos tipos de errores:
 
@@ -52,7 +40,7 @@ Una sesión confiable proporciona para los mensajes SOAP lo que el TCP proporcio
 
 ## <a name="reliable-sessions-and-bindings"></a>Enlaces y sesiones confiables
 
-Como se mencionó anteriormente, una sesión confiable es neutral de transporte. Además, puede establecer una sesión confiable sobre muchos patrones de intercambio de mensajes, como solicitud-respuesta o dúplex. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sesión confiable se expone como una propiedad de un conjunto de enlaces.
+Como se mencionó anteriormente, una sesión confiable es neutral de transporte. Además, puede establecer una sesión confiable sobre muchos patrones de intercambio de mensajes, como solicitud-respuesta o dúplex. Una sesión confiable de WCF se expone como una propiedad de un conjunto de enlaces.
 
 Utilizar una sesión confiable en extremos que usan:
 
@@ -74,23 +62,23 @@ Utilizar una sesión confiable en cualquier otro enlace creando un enlace person
 
 Se puede apilar en una sesión confiable en diferentes tipos de canal subyacentes y la forma de canal de sesión confiable resultante varía. En el cliente y el servidor, el tipo de canal de sesión confiable admitido depende del tipo de canal subyacente que se utiliza. La siguiente tabla enumera los tipos de canales de sesión admitidos en el cliente como una función del tipo de canal subyacente.
 
-| Admite tipos de canal de sesión confiable &#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| Tipos de canal de sesión confiable admitidos&#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
 | `IOutputSessionChannel`                         | Sí               | Sí                      | Sí              | Sí                     |
 | `IRequestSessionChannel`                        | Sí               | Sí                      | No               | No                      |
 | `IDuplexSessionChannel`                         | No                | No                       | Sí              | Sí                     |
 
-&#8224; Los tipos de canal admitidos son los valores disponibles para la interfaz genérica `TChannel` valor de parámetro que se pasa a la <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> método.
+&#8224;Los tipos de canal admitidos son los valores disponibles para la interfaz genérica `TChannel` valor de parámetro que se pasa a la <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> método.
 
 La siguiente tabla enumera los tipos de canales de sesión admitidos en el servidor como una función del tipo de canal subyacente.
 
-| Admite tipos de canal de sesión confiable &#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| Tipos de canal de sesión confiable admitidos&#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
 | `IInputSessionChannel`                          | Sí             | Sí                    | Sí              | Sí                     |
 | `IReplySessionChannel`                          | Sí             | Sí                    | No               | No                      |
 | `IDuplexSessionChannel`                         | No              | No                     | Sí              | Sí                     |
 
-&#8225; Los tipos de canal admitidos son los valores disponibles para la interfaz genérica `TChannel` valor de parámetro que se pasa a la <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> método.
+&#8225;Los tipos de canal admitidos son los valores disponibles para la interfaz genérica `TChannel` valor de parámetro que se pasa a la <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> método.
 
 ## <a name="reliable-sessions-and-security"></a>Seguridad y sesiones confiables
 
@@ -102,7 +90,7 @@ La única excepción se produce al utilizar HTTPS. La sesión de capa de Sockets
 
 ## <a name="using-reliable-sessions"></a>Uso de sesiones confiables
 
-Para utilizar sesiones confiables de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], cree un extremo con un enlace que admita una sesión confiable. Utilice uno de los enlaces proporcionados por el sistema que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona con la sesión confiable habilitada o cree su propio enlace personalizado que lo haga.
+Para utilizar sesiones confiables de WCF, cree un punto de conexión con un enlace que admita una sesión confiable. Use uno de los enlaces proporcionados por el sistema que proporciona WCF con la sesión confiable habilitada o crear su propio enlace personalizado que lo haga.
 
 Los enlaces definidos por el sistema que admiten y permiten de forma predeterminada una sesión confiable incluyen:
 
@@ -118,11 +106,11 @@ Los enlaces proporcionados por el sistema que admiten una sesión confiable como
 
 Para obtener un ejemplo de cómo crear un enlace personalizado, vea [Cómo: crear un enlace personalizado de la sesión confiable con HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
 
-Para obtener una explicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enlaces que admiten las sesiones confiables, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md).
+Para obtener una explicación de los enlaces de WCF que admiten las sesiones confiables, vea [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md).
 
 ## <a name="when-to-use-reliable-sessions"></a>Cuándo utilizar sesiones confiables
 
-Es importante entender cuándo utilizar sesiones confiables en la aplicación. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite sesiones confiables entre los extremos que están activos y en funcionamiento al mismo tiempo. Si la aplicación requiere uno de los extremos no esté disponible para una duración de tiempo, a continuación, usar las colas para lograr la confiabilidad.
+Es importante entender cuándo utilizar sesiones confiables en la aplicación. WCF admite sesiones confiables entre los extremos que estén activos y en funcionamiento al mismo tiempo. Si la aplicación requiere uno de los extremos no esté disponible para una duración de tiempo, a continuación, usar las colas para lograr la confiabilidad.
 
 Si el escenario requiere dos extremos que se conectan a través de TCP, puede que TCP sea suficiente para proporcionar los intercambios de mensajes confiables. Sin embargo, no es necesario utilizar una sesión confiable, puesto que TCP garantiza que los paquetes llegan en orden y solo una vez.
 

@@ -1,13 +1,6 @@
 ---
-title: "Extensión de marcado ComponentResourceKey"
-ms.custom: 
+title: Extensión de marcado ComponentResourceKey
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ComponentResourceKey
 - ComponentResourceKeyExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4bfaee35ba9f8cf60deb01c52a142433d08021c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d11c26add084165eaa9fd0b319a375c4b98c7fb9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="componentresourcekey-markup-extension"></a>Extensión de marcado ComponentResourceKey
 Define y hace referencia a las claves de recursos que se cargan desde ensamblados externos. Esto permite una búsqueda de recursos especificar un tipo de destino en un ensamblado, en lugar de un diccionario de recursos explícito en un ensamblado o en una clase.  
@@ -67,7 +55,7 @@ Define y hace referencia a las claves de recursos que se cargan desde ensamblado
   
 -   Cuando se obtiene acceso a un recurso de temas desde el ensamblado, el control vuelve a crear plantillas pero desea utilizar los valores de propiedad que proceden de los recursos proporcionados por los temas del control.  
   
- Para hacer referencia a los recursos de componente que proceden de los temas, se recomienda generalmente utilizar `{DynamicResource}` en lugar de `{StaticResource}`. Esto se muestra en los usos. `{DynamicResource}`se recomienda porque el usuario puede cambiar el propio tema. Si desea que el recurso de componente que mejor se ajuste la intención del autor de control para admitir un tema, debe habilitar la referencia de recurso de componente al que también sea dinámica.  
+ Para hacer referencia a los recursos de componente que proceden de los temas, se recomienda generalmente utilizar `{DynamicResource}` en lugar de `{StaticResource}`. Esto se muestra en los usos. `{DynamicResource}` se recomienda porque el usuario puede cambiar el propio tema. Si desea que el recurso de componente que mejor se ajuste la intención del autor de control para admitir un tema, debe habilitar la referencia de recurso de componente al que también sea dinámica.  
   
  El <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> identifica un tipo que existe en el ensamblado de destino donde se define realmente el recurso. A `ComponentResourceKey` se puede definir y utilizar independientemente de saber exactamente donde la <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> está definido, pero finalmente debe resolver el tipo en los ensamblados que se hace referencia.  
   
@@ -79,7 +67,7 @@ Define y hace referencia a las claves de recursos que se cargan desde ensamblado
   
  Técnicamente, el valor de `targetID` puede ser cualquier objeto, no tiene que ser una cadena. Sin embargo, el uso más común en WPF es alinear el `targetID` valor con formularios que son cadenas y donde tales cadenas son válidas en el [XamlName (gramática)](../../../../docs/framework/xaml-services/xamlname-grammar.md).  
   
- `ComponentResourceKey`puede usarse en la sintaxis de elemento de objeto. En este caso, especificar el valor de la <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> y <xref:System.Windows.ComponentResourceKey.ResourceId%2A> propiedades debe inicializar correctamente la extensión.  
+ `ComponentResourceKey` puede usarse en la sintaxis de elemento de objeto. En este caso, especificar el valor de la <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> y <xref:System.Windows.ComponentResourceKey.ResourceId%2A> propiedades debe inicializar correctamente la extensión.  
   
  En el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementación del lector, el control para esta extensión de marcado se define por la <xref:System.Windows.ComponentResourceKey> clase.  
   

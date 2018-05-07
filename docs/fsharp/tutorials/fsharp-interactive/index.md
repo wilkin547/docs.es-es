@@ -1,17 +1,12 @@
 ---
 title: Referencia de F# Interactive (fsi.exe)
 description: 'Obtenga información acerca de cómo F # Interactive (fsi.exe) se usa para ejecutar código de F # de manera interactiva en la consola o para ejecutar scripts de F #.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: e745562e4165ce6744fcb6d07268b1a5761194aa
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b16ebcfe361ef50c7c7ba8510f01f6704e62ce3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interactive-programming-with-f"></a>Programación interactiva con F# #
 
@@ -88,7 +83,7 @@ La salida es la siguiente:
 Command line arguments: 
 file1.fsx
 test
-60
+90
 ```
 
 ## <a name="related-topics"></a>Temas relacionados

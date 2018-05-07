@@ -1,27 +1,17 @@
 ---
 title: Seguridad de los mensajes con tokens emitidos
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
-caps.latest.revision: "10"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 5badab7ed0773be30ba72045ebf97974e062629c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 237c56c74afe3c1e9bbdf2002011e76a9eeec5ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-issued-tokens"></a>Seguridad de los mensajes con tokens emitidos
-El cliente del token emitido habilita el escenario de seguridad aliada en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+El cliente del token emitido habilita el escenario de seguridad federada en Windows Communication Foundation (WCF).  
   
  La seguridad aliada permite el establecimiento de confianza entre dominios independientes. Cada dominio centraliza la autenticación y la autorización en un servicio de token de seguridad. Cuando se establece la confianza entre dos de estos servicios, los miembros de cada dominio pueden utilizar los servicios del otro.  
   

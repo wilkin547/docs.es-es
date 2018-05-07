@@ -1,37 +1,23 @@
 ---
 title: 'Procedimientos recomendados: Creación de versiones de contratos de datos'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts
 - service contracts
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ea139f6b854a299760df4c7cb8c315b58701ab8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Procedimientos recomendados: Creación de versiones de contratos de datos
 En este tema se enumeran los procedimientos recomendados para crear contratos de datos que pueden evolucionar con facilidad con el tiempo. Para obtener más información acerca de los contratos de datos, vea los temas de [usar contratos de datos](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Aviso en validación del esquema  
- Para tratar las versiones de contrato de datos, es importante tener en cuenta que el esquema de contrato de datos exportado por [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] no tiene compatibilidad de versión, a excepción del hecho de que los elementos se marcan como opcionales de forma predeterminada.  
+ Tratar las versiones de contratos de datos, es importante tener en cuenta que el esquema de contrato de datos exportado por Windows Communication Foundation (WCF) no tiene ninguna compatibilidad de control de versiones, aparte del hecho de que los elementos se marcan como opcionales de forma predeterminada.  
   
  Esto significa que no se puede implementar ni siquiera el escenario de versión más común, como agregar un nuevo miembro de datos, de un modo uniforme con respecto a un esquema determinado. Las versiones más recientes de un contrato de datos (con un nuevo miembro de datos, por ejemplo) no se validan mediante el esquema anterior.  
   

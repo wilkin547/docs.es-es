@@ -1,38 +1,24 @@
 ---
-title: "Integración con la información general de las aplicaciones COM"
-ms.custom: 
+title: Integración con la información general de las aplicaciones COM
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5b20ae5329f08e9391fd7b93218c44c3c1978a48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c789d4a52da9b2785fb5919a674bf19f23d23509
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración con la información general de las aplicaciones COM
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona un entorno enriquecido al desarrollador del código administrado para crear aplicaciones conectadas. Sin embargo, si tiene una inversión sustancial en código basado en COM no administrado y no desea migrar, aún podrá integrar directamente los servicios web de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en el código existente mediante el moniker del servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. El moniker de servicio se puede utilizar a partir de una gama amplia de entornos de desarrollo basados en COM, como Office VBA, Visual Basic 6.0 o Visual C++ 6.0.  
+Windows Communication Foundation (WCF) proporciona al desarrollador del código administrado con un entorno rico para crear aplicaciones conectadas. Sin embargo, si tiene una inversión sustancial en código basado en COM no administrado y no desea migrar, aún podrá integrar servicios Web de WCF directamente en el código existente mediante el moniker de servicio WCF. El moniker de servicio se puede utilizar a partir de una gama amplia de entornos de desarrollo basados en COM, como Office VBA, Visual Basic 6.0 o Visual C++ 6.0.  
   
 > [!NOTE]
->  El moniker de servicio utiliza un canal de comunicación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para toda la comunicación. Los mecanismos de identidad y seguridad para ese canal difieren de aquéllos utilizados en los proxies COM y DCOM estándar. Además, dado que el moniker de servicio utiliza un canal de comunicación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], el período de tiempo de espera predeterminado es un minuto para todas las llamadas.  
+>  El moniker de servicio utiliza un canal de comunicación de WCF para todas las comunicaciones. Los mecanismos de identidad y seguridad para ese canal difieren de aquéllos utilizados en los proxies COM y DCOM estándar. Además, dado que el moniker de servicio utiliza un canal de comunicación de WCF, el período de tiempo de espera predeterminado es un minuto para todas las llamadas.  
   
- El moniker de servicio se utiliza con la función `GetObject` para proporcionar un enfoque fuertemente tipado, específico de COM al desarrollador no administrado con el fin de llamar a los servicios web de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Esto requiere una definición local, visible a través de COM del contrato de servicio web de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y el enlace que se va a usar. Al igual que otros clientes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], el moniker de servicio debe construir un canal con tipo al servicio, aunque esta construcción del canal se produce de forma transparente en el programador COM en la primera llamada al método.  
+ El moniker de servicio se utiliza con la `GetObject` función para proporcionar a los programadores no administrados con un enfoque fuertemente tipado, específico de COM para llamar a servicios Web de WCF. Esto requiere un local, visible para COM definición del contrato del servicio Web de WCF y el enlace que se va a usar. Al igual que otros clientes WCF, el moniker de servicio debe construir un canal con tipo para el servicio, aunque esta construcción del canal se produce de forma transparente para el programador COM en la primera llamada de método.  
   
- Al igual que otros clientes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], al utilizar el moniker, las aplicaciones especifican la dirección, el enlace y el contrato para comunicarse con un servicio. El contrato se puede especificar de una de las maneras siguientes:  
+ Al igual que otros clientes WCF, al utilizar el moniker, las aplicaciones especificar la dirección, enlace y contrato para comunicarse con un servicio. El contrato se puede especificar de una de las maneras siguientes:  
   
 -   Contrato con tipo: el contrato se registra como un tipo visible COM en el equipo cliente.  
   
@@ -64,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 |`serializer`|Especifique el uso de "xml" o serializador de "datacontract."|  
   
 > [!NOTE]
->  Incluso cuando se utiliza con clientes completamente basados en COM, el moniker de servicio exige que se instale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y .NET Framework 2.0 compatible en el equipo cliente. También es fundamental que las aplicaciones cliente que utilizan el moniker de servicio carguen la versión adecuada del tiempo de ejecución de .NET Framework. Al utilizar el moniker en aplicaciones de Office, es posible que sea necesario un archivo de configuración para asegurarse de que se carga la versión de marco correcta. Por ejemplo, con Excel, el texto siguiente debería colocarse en un archivo denominado Excel.exe.config en el mismo directorio que el archivo Excel.exe:  
+>  Incluso cuando se utiliza con clientes completamente basados en COM, requiere el moniker de servicio WCF y .NET Framework 2.0 compatible esté instalado en el equipo cliente. También es fundamental que las aplicaciones cliente que utilizan el moniker de servicio carguen la versión adecuada del tiempo de ejecución de .NET Framework. Al utilizar el moniker en aplicaciones de Office, es posible que sea necesario un archivo de configuración para asegurarse de que se carga la versión de marco correcta. Por ejemplo, con Excel, el texto siguiente debería colocarse en un archivo denominado Excel.exe.config en el mismo directorio que el archivo Excel.exe:  
 >   
 >  `<?xml version="1.0" encoding="utf-8"?>`  
 >   

@@ -1,11 +1,7 @@
 ---
-title: "Función QualifierSet_GetNames (referencia de API no administrada)"
-description: "La función QualifierSet_GetNames recupera los nombres de calificadores de un objeto o una propiedad."
+title: Función QualifierSet_GetNames (referencia de API no administrada)
+description: La función QualifierSet_GetNames recupera los nombres de calificadores de un objeto o una propiedad.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_GetNames
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6077b448c2644f68d12679cf208ee921c2af119a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7c96439cf50c18e336baa70cf463b9463203290
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames (función)
 Recupera los nombres de todos los calificadores o de ciertos calificadores que están disponibles en el objeto actual o la propiedad. 
@@ -62,7 +55,7 @@ HRESULT QualifierSet_GetNames (
 | `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Devolver solo los nombres de calificadores específicos que el objeto o la propiedad actual. <br/> Para una propiedad: devolver solo los calificadores específicos a la propiedad (incluidas las invalidaciones) y no los calificadores se propagan desde la definición de clase. <br/> Para una instancia: devolver solo los nombres de calificador de específicos de la instancia. <br/> Para una clase: devolver solo calificadores específicos a la beiong de la clase derivada.
 |`WBEM_FLAG_PROPAGATED_ONLY` | 0 x 20 | Devuelve solo los nombres de calificadores propagan de otro objeto. <br/> Para una propiedad: devuelven solo los calificadores se propagan a esta propiedad en la definición de clase y no los de la propiedad en Sí. <br/> Para una instancia: devolución propagan sólo los calificadores de la definición de clase. <br/> Para una clase: devolver sólo los nombres de calificador que se heredaron de las clases principales. |
 
-`pstrNames`[out] Un nuevo `SAFEARRAY` que contiene los nombres solicitados. La matriz puede tener 0 elementos. Si se produce un error, un nuevo `SAFEARRAY` no se devuelve.
+`pstrNames` [out] Un nuevo `SAFEARRAY` que contiene los nombres solicitados. La matriz puede tener 0 elementos. Si se produce un error, un nuevo `SAFEARRAY` no se devuelve.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -87,7 +80,7 @@ No es un error de un determinado objeto de tener cero calificadores, por lo que 
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

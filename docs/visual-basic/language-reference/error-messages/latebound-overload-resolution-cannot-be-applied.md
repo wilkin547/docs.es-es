@@ -1,11 +1,6 @@
 ---
-title: "No se puede aplicar la resolución de sobrecarga enlazada a &#39; &lt;nombreProcedimiento&gt;&#39; porque la instancia de acceso es un tipo de interfaz"
+title: No se puede aplicar la resolución de sobrecarga enlazada a &#39; &lt;nombreProcedimiento&gt; &#39; porque la instancia de acceso es un tipo de interfaz
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30933
 - bc30933
@@ -13,16 +8,13 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb7f8a9f6eadfc9fd856ea57d362b43d25ff81a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e41cbf30f06547ef39553e31542e4e8b6df49a3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>No se puede aplicar la resolución de sobrecarga enlazada a &#39; &lt;nombreProcedimiento&gt;&#39; porque la instancia de acceso es un tipo de interfaz
+# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>No se puede aplicar la resolución de sobrecarga enlazada a &#39; &lt;nombreProcedimiento&gt; &#39; porque la instancia de acceso es un tipo de interfaz
 El compilador está intentando resolver una referencia a una propiedad o procedimiento sobrecargados, pero se produce un error en la referencia porque es un argumento de tipo `Object` y el objeto que hace referencia tiene el tipo de datos de una interfaz. El `Object` argumento hace que el compilador para resolver la referencia como en tiempo de ejecución.  
   
  En estas circunstancias, el compilador resuelve la sobrecarga a través de la clase de implementación en lugar de a través de la interfaz subyacente. Si la clase cambia el nombre de una de las versiones sobrecargadas, el compilador no tiene en cuenta que la versión sea una sobrecarga porque su nombre es distinto. Esto hace al compilador que omita la versión cuyo nombre ha cambiado cuando podría haber sido la opción correcta para resolver la referencia.  

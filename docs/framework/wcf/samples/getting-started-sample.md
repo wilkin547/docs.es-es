@@ -1,34 +1,20 @@
 ---
-title: "Ejemplo de introducción"
-ms.custom: 
+title: Ejemplo de introducción
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f97ad418f3d5ed197e8c35edf9e897eb393ef18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dfba7062d4226f3644aa6c4cc0efcd7c5fb9eab8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-sample"></a>Ejemplo de introducción
-El ejemplo de la Introducción muestra cómo implementar un servicio típico y un cliente típico utilizando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Este ejemplo es la base para obtener todos los otros ejemplos tecnológicos básicos.  
+El ejemplo de introducción muestra cómo implementar un servicio típico y un cliente típico utilizando Windows Communication Foundation (WCF). Este ejemplo es la base para obtener todos los otros ejemplos tecnológicos básicos.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
@@ -38,7 +24,7 @@ El ejemplo de la Introducción muestra cómo implementar un servicio típico y u
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
@@ -154,9 +140,9 @@ public class CalculatorService : ICalculator
   
  El servicio expone el punto de conexión en la dirección base proporcionada por el host IIS o WAS. El enlace se configura con un <xref:System.ServiceModel.WSHttpBinding>estándar, que proporciona comunicación del HTTP y protocolos estándar del servicio Web para direccionar y seguridad. El contrato es el `ICalculator` implementado por el servicio.  
   
- Tal y como se ha configurado, un cliente puede tener acceso al servicio en http://localhost/servicemodelsamples/service.svc en el mismo equipo. Para que los clientes en equipos remotos tengan acceso al servicio, se debe especificar un nombre de dominio completo en lugar del host local.  
+ Conforme a la configuración, puede tener acceso al servicio en http://localhost/servicemodelsamples/service.svc por un cliente en el mismo equipo. Para que los clientes en equipos remotos tengan acceso al servicio, se debe especificar un nombre de dominio completo en lugar del host local.  
   
- El marco no expone ningún metadato de forma predeterminada. Como tal, el servicio se inicia en <xref:System.ServiceModel.Description.ServiceMetadataBehavior> y expone un extremo de intercambio (MEX) de metadatos en http://localhost/servicemodelsamples/service.svc/mex. La siguiente configuración lo muestra.  
+ El marco no expone ningún metadato de forma predeterminada. Por lo tanto, el servicio se inicia en el <xref:System.ServiceModel.Description.ServiceMetadataBehavior> y expone un extremo de intercambio (MEX) de metadatos en http://localhost/servicemodelsamples/service.svc/mex. La siguiente configuración lo muestra.  
   
 ```xaml  
 <system.serviceModel>  

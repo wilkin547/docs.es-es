@@ -1,34 +1,20 @@
 ---
-title: "Cómo implementar un contrato de servicio de Windows Communication Foundation"
-ms.custom: 
+title: Cómo implementar un contrato de servicio de Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4bf590b2f508cc6661b5acb045a7d66b38ed169c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8d1712e6fcc844a3606403efc3c2648ddcc9c65
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>Cómo implementar un contrato de servicio de Windows Communication Foundation
-Ésta es la segunda de las seis tareas que son necesarias para crear un servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] básico y un cliente que llame al servicio. Para obtener información general de las seis tareas, consulte la [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md) tema.  
+Esta es la segunda de las seis tareas necesarias para crear un servicio básico de Windows Communication Foundation (WCF) y un cliente que puede llamar al servicio. Para obtener información general de las seis tareas, consulte la [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md) tema.  
   
  El siguiente paso para crear una aplicación de WCF es implementar la interfaz de servicio. Esto implica la creación de una clase denominada `CalculatorService` que implemente la interfaz `ICalculator` definida por el usuario.  
   

@@ -1,31 +1,17 @@
 ---
 title: Tokens personalizados
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], custom tokens
 ms.assetid: 8b2dbe29-dec2-4652-8e34-fb21bc1437b5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1fdb016cac94f9a77ae05445ea05ed263e3df1f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a5cfe939e1f8448e7ed256bc64403dbb841bc46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-tokens"></a>Tokens personalizados
-Aunque [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admite de forma nativa los certificados X.509, los tokens de contexto de seguridad, los vales de Kerberos y los tokens del nombre de usuario como credenciales, es lo bastante flexible como para permitirle utilizar sus propias credenciales personalizadas.  
+Aunque Windows Communication Foundation (WCF) admite de forma nativa los certificados X.509, Tokens de contexto de seguridad, vales de Kerberos y tokens de nombre de usuario como credenciales, es lo suficientemente flexible como para que pueda utilizar sus propias credenciales personalizadas.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Creación de un token personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  

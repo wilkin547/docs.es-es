@@ -1,32 +1,20 @@
 ---
 title: 'Cómo: Proteger un servicio con un certificado X.509'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-caps.latest.revision: 8
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89ad47ad898184b99f32743855091c0985722f77
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 73fd9919d1403ef592e5b81c11b6eb659baea669
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Cómo: Proteger un servicio con un certificado X.509
-La protección de un servicio mediante un certificado X.509 es una técnica básica que la mayoría de los enlaces de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizan. En este tema se describen los pasos necesarios para configurar un servicio autoalojado con un certificado X.509.  
+Protección de un servicio con un certificado X.509 es una técnica básica que usan la mayoría de los enlaces de Windows Communication Foundation (WCF). En este tema se describen los pasos necesarios para configurar un servicio autoalojado con un certificado X.509.  
   
  Un requisito previo es un certificado válido que se puede utilizar para autenticar el servidor. Una entidad emisora de certificados de confianza debe emitir el certificado. Si el certificado no es válido, cualquier cliente que intente usar el servicio no confiará en el servicio y, por tanto, no se realizará ninguna conexión. Para obtener más información sobre el uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
@@ -44,7 +32,7 @@ La protección de un servicio mediante un certificado X.509 es una técnica bás
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4.  Cree una instancia de la clase <xref:System.Uri> para la dirección base del servicio. Dado que el `WSHttpBinding` utiliza el transporte HTTP, el identificador uniforme de recursos (URI) debe comenzar con ese esquema o [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] producirán una excepción cuando se abra el servicio.  
+4.  Cree una instancia de la clase <xref:System.Uri> para la dirección base del servicio. Dado que la `WSHttpBinding` utiliza el transporte HTTP, el identificador uniforme de recursos (URI) debe comenzar con ese esquema o Windows Communication Foundation (WCF) se iniciará una excepción al abrir el servicio.  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  

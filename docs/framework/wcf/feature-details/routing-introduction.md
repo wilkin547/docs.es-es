@@ -1,26 +1,12 @@
 ---
-title: "Introducción al enrutamiento"
-ms.custom: 
+title: Introducción al enrutamiento
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-introduction"></a>Introducción al enrutamiento
 El servicio de enrutamiento proporciona un intermediario de SOAP conectable genérico que es capaz de enrutar mensajes en función de su contenido. Con el servicio de enrutamiento, puede crear una lógica de enrutamiento compleja que le permita implementar escenarios como la agregación de servicios, el control de versiones del servicio, el enrutamiento de prioridad y el enrutamiento de multidifusión. El servicio de enrutamiento también proporciona un control de errores, que le permite preparar listas de extremos de reserva a los que se envían los mensajes si se produce un error al realizar un envío al extremo de destino principal.  
@@ -111,7 +97,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- Este ejemplo configura el servicio de enrutamiento para exponer un extremo único con la dirección "http://localhost: 8000/routingservice/router", que se utiliza para enrutar mensajes de recepción. Dado que los mensajes se enrutan a extremos solicitud-respuesta, el extremo de servicio utiliza el contrato <xref:System.ServiceModel.Routing.IRequestReplyRouter>. Esta configuración también define un punto de conexión de cliente único de "http://localhost: 8000/servicemodelsample/service" que se enrutan los mensajes. La tabla de filtros (no mostrada) denominada "routingTable1" contiene la lógica de enrutamiento utilizada para enrutar los mensajes y está asociada al extremo de servicio mediante el **RoutingBehavior** (para un archivo de configuración) o  **RoutingConfiguration** (para la configuración mediante programación).  
+ Este ejemplo configura el servicio de enrutamiento para exponer un extremo único con la dirección "http://localhost:8000/routingservice/router", que se usa para enrutar mensajes de recepción. Dado que los mensajes se enrutan a extremos solicitud-respuesta, el extremo de servicio utiliza el contrato <xref:System.ServiceModel.Routing.IRequestReplyRouter>. Esta configuración también define un punto de conexión de cliente único de "http://localhost:8000/servicemodelsample/service" que se enrutan los mensajes. La tabla de filtros (no mostrada) denominada "routingTable1" contiene la lógica de enrutamiento utilizada para enrutar los mensajes y está asociada al extremo de servicio mediante el **RoutingBehavior** (para un archivo de configuración) o  **RoutingConfiguration** (para la configuración mediante programación).  
   
 ### <a name="routing-logic"></a>Lógica de enrutamiento  
  Para definir la lógica de enrutamiento utilizada para enrutar los mensajes, debe determinar sobre qué datos se puede actuar de entre los contenidos dentro de los mensajes entrantes. Por ejemplo, si todos los extremos de destino a los que va a enrutar mensajes comparten las mismas acciones SOAP, el valor de la acción SOAP incluida dentro del mensaje no es un buen indicador de a qué extremo concreto se debe enrutar el mensaje. Si debe enrutar los mensajes únicamente a un punto de conexión concreto, debe filtrar según los datos que identifiquen exclusivamente el punto de conexión de destino al que se enruta el mensaje.  
@@ -173,7 +159,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   Varios filtros deben devolver `true` al evaluar el mensaje.  
   
- Si se cumplen estas condiciones, el mensaje se enruta a todos los extremos de todos los filtros que se evalúan como `true`. En el siguiente ejemplo, se define una configuración de enrutamiento que enruta mensajes a los dos extremos si la dirección del extremo del mensaje es http://localhost:8000/routingservice/router/rounding.  
+ Si se cumplen estas condiciones, el mensaje se enruta a todos los extremos de todos los filtros que se evalúan como `true`. En el ejemplo siguiente se define una configuración de enrutamiento que da como resultado mensajes que se enrutan a ambos puntos de conexión si la dirección del extremo en el mensaje es http://localhost:8000/routingservice/router/rounding.  
   
 ```xml  
 <!--ROUTING SECTION -->  

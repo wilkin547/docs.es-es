@@ -1,28 +1,16 @@
 ---
 title: Controles de Windows Forms y controles equivalentes de WPF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms [WPF], interoperability with
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee3397792b6835919b00566d1385aea310b68104
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0bf1d646b8efc0d350be13dffc6136f6f1d7495a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Controles de Windows Forms y controles equivalentes de WPF
 Muchos [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles tienen equivalentes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controles, pero algunos [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles no tienen equivalente en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Este tema comparan los tipos de controles proporcionados por las dos tecnologías.  
@@ -37,18 +25,18 @@ Muchos [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.
 |<xref:System.Windows.Forms.BindingSource>|<xref:System.Windows.Data.CollectionViewSource>||  
 |<xref:System.Windows.Forms.Button>|<xref:System.Windows.Controls.Button>||  
 |<xref:System.Windows.Forms.CheckBox>|<xref:System.Windows.Controls.CheckBox>||  
-|<xref:System.Windows.Forms.CheckedListBox>|<xref:System.Windows.Controls.ListBox>con la composición.||  
+|<xref:System.Windows.Forms.CheckedListBox>|<xref:System.Windows.Controls.ListBox> con la composición.||  
 |<xref:System.Windows.Forms.ColorDialog>|No hay control equivalente.||  
-|<xref:System.Windows.Forms.ComboBox>|<xref:System.Windows.Controls.ComboBox>|<xref:System.Windows.Controls.ComboBox>no admite Autocompletar.|  
+|<xref:System.Windows.Forms.ComboBox>|<xref:System.Windows.Controls.ComboBox>|<xref:System.Windows.Controls.ComboBox> no admite Autocompletar.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|<xref:System.Windows.Controls.ContextMenu>||  
 |<xref:System.Windows.Forms.DataGridView>|<xref:System.Windows.Controls.DataGrid>||  
 |<xref:System.Windows.Forms.DateTimePicker>|<xref:System.Windows.Controls.DatePicker>||  
-|<xref:System.Windows.Forms.DomainUpDown>|<xref:System.Windows.Controls.TextBox>y dos <xref:System.Windows.Controls.Primitives.RepeatButton> controles.||  
+|<xref:System.Windows.Forms.DomainUpDown>|<xref:System.Windows.Controls.TextBox> y dos <xref:System.Windows.Controls.Primitives.RepeatButton> controles.||  
 |<xref:System.Windows.Forms.ErrorProvider>|No hay control equivalente.||  
 |<xref:System.Windows.Forms.FlowLayoutPanel>|<xref:System.Windows.Controls.WrapPanel> o <xref:System.Windows.Controls.StackPanel>||  
 |<xref:System.Windows.Forms.FolderBrowserDialog>|No hay control equivalente.||  
 |<xref:System.Windows.Forms.FontDialog>|No hay control equivalente.||  
-|<xref:System.Windows.Forms.Form>|<xref:System.Windows.Window>|<xref:System.Windows.Window>no admite ventanas secundarias.|  
+|<xref:System.Windows.Forms.Form>|<xref:System.Windows.Window>|<xref:System.Windows.Window> no admite ventanas secundarias.|  
 |<xref:System.Windows.Forms.GroupBox>|<xref:System.Windows.Controls.GroupBox>||  
 |<xref:System.Windows.Forms.HelpProvider>|No hay control equivalente.|No hay ayuda F1. "¿Qué es esto" Ayuda se reemplaza por información sobre herramientas.|  
 |<xref:System.Windows.Forms.HScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|Desplazamiento está integrado en los controles de contenedor.|  
@@ -58,10 +46,10 @@ Muchos [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.
 |<xref:System.Windows.Forms.ListBox>|<xref:System.Windows.Controls.ListBox>||  
 |<xref:System.Windows.Forms.ListView>|<xref:System.Windows.Controls.ListView>|El <xref:System.Windows.Controls.ListView> control proporciona una vista de detalles de solo lectura.|  
 |<xref:System.Windows.Forms.MaskedTextBox>|No hay control equivalente.||  
-|<xref:System.Windows.Forms.MenuStrip>|<xref:System.Windows.Controls.Menu>|<xref:System.Windows.Controls.Menu>aplicación de estilos al control puede aproximarse al comportamiento y apariencia de la <xref:System.Windows.Forms.ToolStripProfessionalRenderer?displayProperty=nameWithType> clase.|  
+|<xref:System.Windows.Forms.MenuStrip>|<xref:System.Windows.Controls.Menu>|<xref:System.Windows.Controls.Menu> aplicación de estilos al control puede aproximarse al comportamiento y apariencia de la <xref:System.Windows.Forms.ToolStripProfessionalRenderer?displayProperty=nameWithType> clase.|  
 |<xref:System.Windows.Forms.MonthCalendar>|<xref:System.Windows.Controls.Calendar>||  
 |<xref:System.Windows.Forms.NotifyIcon>|No hay control equivalente.||  
-|<xref:System.Windows.Forms.NumericUpDown>|<xref:System.Windows.Controls.TextBox>y dos <xref:System.Windows.Controls.Primitives.RepeatButton> controles.||  
+|<xref:System.Windows.Forms.NumericUpDown>|<xref:System.Windows.Controls.TextBox> y dos <xref:System.Windows.Controls.Primitives.RepeatButton> controles.||  
 |<xref:System.Windows.Forms.OpenFileDialog>|<xref:Microsoft.Win32.OpenFileDialog>|El <xref:Microsoft.Win32.OpenFileDialog> clase es un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] envuelve la [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] control.|  
 |<xref:System.Windows.Forms.PageSetupDialog>|No hay control equivalente.||  
 |<xref:System.Windows.Forms.Panel>|<xref:System.Windows.Controls.Canvas>||  
@@ -84,10 +72,10 @@ Muchos [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.
 |<xref:System.Windows.Forms.TextBox>|<xref:System.Windows.Controls.TextBox>||  
 |<xref:System.Windows.Forms.Timer>|<xref:System.Windows.Threading.DispatcherTimer>||  
 |<xref:System.Windows.Forms.ToolStrip>|<xref:System.Windows.Controls.ToolBar>||  
-|<xref:System.Windows.Forms.ToolStripContainer>|<xref:System.Windows.Controls.ToolBar>con la composición.||  
-|<xref:System.Windows.Forms.ToolStripDropDown>|<xref:System.Windows.Controls.ToolBar>con la composición.||  
-|<xref:System.Windows.Forms.ToolStripDropDownMenu>|<xref:System.Windows.Controls.ToolBar>con la composición.||  
-|<xref:System.Windows.Forms.ToolStripPanel>|<xref:System.Windows.Controls.ToolBar>con la composición.||  
+|<xref:System.Windows.Forms.ToolStripContainer>|<xref:System.Windows.Controls.ToolBar> con la composición.||  
+|<xref:System.Windows.Forms.ToolStripDropDown>|<xref:System.Windows.Controls.ToolBar> con la composición.||  
+|<xref:System.Windows.Forms.ToolStripDropDownMenu>|<xref:System.Windows.Controls.ToolBar> con la composición.||  
+|<xref:System.Windows.Forms.ToolStripPanel>|<xref:System.Windows.Controls.ToolBar> con la composición.||  
 |<xref:System.Windows.Forms.ToolTip>|<xref:System.Windows.Controls.ToolTip>||  
 |<xref:System.Windows.Forms.TrackBar>|<xref:System.Windows.Controls.Slider>||  
 |<xref:System.Windows.Forms.TreeView>|<xref:System.Windows.Controls.TreeView>||  

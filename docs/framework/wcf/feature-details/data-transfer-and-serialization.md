@@ -1,30 +1,18 @@
 ---
-title: "Transferencia y serialización de datos"
-ms.custom: 
+title: Transferencia y serialización de datos
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8daadec1eef20e62747cdbfcafd1fd13cfc16093
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53c1421bf14c598611e116c61353c4ecd465f1aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-transfer-and-serialization"></a>Transferencia y serialización de datos
-En un sistema conectado, los servicios y clientes dependen del intercambio de datos para realizar cualquier tarea. Como programador de un servicio o cliente, también debe entender cómo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] administra los datos y la serialización de los datos para crear aplicaciones eficaces y fáciles de mantener.  
+En un sistema conectado, los servicios y clientes dependen del intercambio de datos para realizar cualquier tarea. Como desarrollador de un servicio o cliente, también debe entender la forma en que Windows Communication Foundation (WCF) controla los datos y serialización de datos para poder crear aplicaciones eficaces y fáciles de mantener.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Definición de transferencias de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
@@ -55,7 +43,7 @@ En un sistema conectado, los servicios y clientes dependen del intercambio de da
  Describe los elementos que se han de tener en cuenta a la hora de programar la transferencia y serialización de datos.  
   
  [Información general sobre la arquitectura de transferencia de datos](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- Describe una vista del diseño general de la transferencia de datos en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Describe una vista del diseño general de transferencia de datos de WCF.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.ServiceModel>  

@@ -1,24 +1,12 @@
 ---
-title: "Cómo: Utilizar Svcutil.exe para descargar los documentos de metadatos"
-ms.custom: 
+title: 'Cómo: Utilizar Svcutil.exe para descargar los documentos de metadatos'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 571465ab483aef3e3e663b9f82974f35e100c73e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8872bbf04e688906fb0229e3d8215fb92cdbc3e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Cómo: Utilizar Svcutil.exe para descargar los documentos de metadatos
 Puede utilizar Svcutil.exe para descargar metadatos de los servicios en ejecución y para guardar los metadatos en archivos locales. Para los esquemas HTTP y la dirección URL de HTTPS, Svcutil.exe intenta recuperar metadatos mediante WS-MetadataExchange y [detección de servicios Web XML](http://go.microsoft.com/fwlink/?LinkId=94950). Para todos los otros esquemas de URL, Svcutil.exe utiliza sólo WS-MetadataExchange.  

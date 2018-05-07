@@ -1,27 +1,15 @@
 ---
 title: Registro de mensajes
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da73af529a20a8d2e3e7df0ebadf2aeee4acbf1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 473ddb3b68f6bb7a13203015a44450a92994a3b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-logging"></a>Registro de mensajes
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona la capacidad de registrar los mensajes de entrada y salida para su uso sin conexión. El registro de mensajes le permite ver el aspecto del mensaje y del cuerpo del mensaje. Este tipo de registros es particularmente útil para ver qué argumentos se pasaron y cómo vio el punto de conexión receptor los argumentos expresados como XML. Además, el registro de mensajes tal y como se reciben le permite diagnosticar mensajes incorrectos, así como ver cómo llegó el mensaje. También puede examinar los tokens de seguridad utilizados, las partes cifradas y firmadas, y las partes que no se han modificado.  
+Windows Communication Foundation (WCF) proporciona la capacidad de registrar los mensajes entrantes y salientes para su uso sin conexión. El registro de mensajes le permite ver el aspecto del mensaje y del cuerpo del mensaje. Este tipo de registros es particularmente útil para ver qué argumentos se pasaron y cómo vio el punto de conexión receptor los argumentos expresados como XML. Además, el registro de mensajes tal y como se reciben le permite diagnosticar mensajes incorrectos, así como ver cómo llegó el mensaje. También puede examinar los tokens de seguridad utilizados, las partes cifradas y firmadas, y las partes que no se han modificado.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general del flujo de mensajes](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  

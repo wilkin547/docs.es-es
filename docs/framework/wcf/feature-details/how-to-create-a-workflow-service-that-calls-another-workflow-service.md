@@ -1,24 +1,12 @@
 ---
 title: Crear un servicio de flujo de trabajo que llame a otro servicio de flujo de trabajo
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c99748e77f1fccd9512c8915d0f4068d0da51a41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fda5a7286c3d20c7cdc2093e58bfe3fbdcf1d1c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Crear un servicio de flujo de trabajo que llame a otro servicio de flujo de trabajo
 A veces es necesario que un servicio de flujo de trabajo obtenga información de otro servicio de flujo de trabajo.  En este tema se muestra cómo llamar a un servicio de flujo de trabajo desde otro. En este tema, crearemos dos servicios de flujo de trabajo; uno que tiene un método que invierte la cadena de entrada y otro que convierte la cadena de entrada en letras mayúsculas después de invertir la cadena que utiliza el primer servicio.  
@@ -113,7 +101,7 @@ A veces es necesario que un servicio de flujo de trabajo obtenga información de
   
     4.  **TargetType**: NestedServices.StringLibrary  
   
-8.  Llamaremos ahora al primer servicio en la cadena modificada. Haga clic en el proyecto y seleccione **Agregar referencia de servicio**. Agregue una referencia de servicio al servicio enhttp://localhost/NestedServices/StringReverserService.xamlx y compile el proyecto para crear una actividad personalizada para tener acceso al primer servicio web.  
+8.  Llamaremos ahora al primer servicio en la cadena modificada. Haga clic en el proyecto y seleccione **Agregar referencia de servicio**. Agregar una referencia de servicio al servicio en http://localhost/NestedServices/StringReverserService.xamlx y compile el proyecto para crear una actividad personalizada para tener acceso al primer servicio Web.  
   
 9. Arrastre una instancia de la nueva actividad en el flujo de trabajo, entre el **InvokeMethod** actividad y el **SendReplyToReceive** actividades. Asigne la variable StringToReverse a la propiedad InputString de la nueva actividad y la variable StringToReturn a la propiedad StringToReturn.  
   

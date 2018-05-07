@@ -1,30 +1,18 @@
 ---
-title: "Configuración de los comportamientos del cliente"
-ms.custom: 
+title: Configuración de los comportamientos del cliente
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee79900b52ae0fa58e8fb9a5cbbf50f5a882c295
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 062e726b6f1d6831303e1cc0ae82a434daab860c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-client-behaviors"></a>Configuración de los comportamientos del cliente
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] configura los comportamientos de dos maneras: haciendo referencia a las configuraciones de comportamiento (que se definen en la sección `<behavior>` de un archivo de configuración de la aplicación cliente) o mediante programación, en la aplicación que realiza la llamada. En este tema se describen ambos métodos.  
+Windows Communication Foundation (WCF) configura los comportamientos de dos formas: haciendo referencia a las configuraciones de comportamientos, que se definen en la `<behavior>` sección de un archivo de configuración de aplicación de cliente, o mediante programación en la llamada a aplicación. En este tema se describen ambos métodos.  
   
  Al usar un archivo de configuración, la configuración del comportamiento es una colección con nombre de valores de configuración. El nombre de cada configuración de comportamiento debe ser único. Esta cadena se usa en el atributo `behaviorConfiguration` de una configuración de extremo para vincular el extremo al comportamiento.  
   
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="using-behaviors-programmatically"></a>Uso de comportamientos mediante programación  
- También puede configurar o insertar los comportamientos mediante programación buscando la propiedad `Behaviors` adecuada en el objeto de cliente [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] o en el objeto de generador de canal de cliente antes de abrir el cliente.  
+ También puede configurar o Insertar comportamientos mediante programación buscando la correspondiente `Behaviors` propiedad en el objeto de cliente de Windows Communication Foundation (WCF) o en el objeto de generador de canal de cliente antes de abrir el cliente.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se muestra cómo insertar un comportamiento mediante programación teniendo acceso a la propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> en el <xref:System.ServiceModel.Description.ServiceEndpoint> devuelto por la propiedad <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> antes de la creación del objeto del canal.  

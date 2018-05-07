@@ -1,11 +1,7 @@
 ---
-title: "Función SpawnInstance (referencia de API no administrada)"
-description: "La función SpawnInstance crea una nueva instancia de una clase."
+title: Función SpawnInstance (referencia de API no administrada)
+description: La función SpawnInstance crea una nueva instancia de una clase.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SpawnInstance
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 68508f3000e7f4ac481f940ef4c715366c37125c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f8189f0adb62aa32cd0b85ca5a653aa466c7032
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spawninstance-function"></a>Función SpawnInstance
 Crea una nueva instancia de una clase.    
@@ -64,7 +57,7 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`no es una definición de clase válido y no se puede generar nuevas instancias. Está incompleto o no se ha registrado con la administración de Windows mediante una llamada a [PutClassWmi](putclasswmi.md). |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` no es una definición de clase válido y no se puede generar nuevas instancias. Está incompleto o no se ha registrado con la administración de Windows mediante una llamada a [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para completar la operación. |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | El valor de `ppNewClass` es `null`. |
 | `WBEM_S_NO_ERROR` | 0 | La llamada de función tuvo éxito.  |
@@ -73,7 +66,7 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 Esta función contiene una llamada a la [IWbemClassObject:: SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) método.
 
-`ptr`debe ser una definición de clase obtenida de la administración de Windows. (Tenga en cuenta que se admite la creación de una instancia de una instancia, pero la instancia devuelta está vacía). A continuación, utilizar esta definición de clase para crear nuevas instancias. Una llamada a la [PutInstanceWmi](putinstancewmi.md) función es necesaria si se va a escribir la instancia a la administración de Windows.
+`ptr` debe ser una definición de clase obtenida de la administración de Windows. (Tenga en cuenta que se admite la creación de una instancia de una instancia, pero la instancia devuelta está vacía). A continuación, utilizar esta definición de clase para crear nuevas instancias. Una llamada a la [PutInstanceWmi](putinstancewmi.md) función es necesaria si se va a escribir la instancia a la administración de Windows.
 
 
 
@@ -85,7 +78,7 @@ El nuevo objeto devuelto en `ppNewClass` se convierte automáticamente en una su
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

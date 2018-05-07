@@ -1,14 +1,6 @@
 ---
 title: ICorDebug (Interfaz)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebug
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0ed0b3a8b42157f6a4fcbc6b4a05a416da736147
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74c5036bdc8a4a75e5711c6dc1d34d8f2c21128f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebug-interface"></a>ICorDebug (Interfaz)
 Proporciona métodos que permiten a los desarrolladores depurar aplicaciones en el entorno de common language runtime (CLR).  
@@ -55,7 +43,7 @@ Proporciona métodos que permiten a los desarrolladores depurar aplicaciones en 
 |[Terminate (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Finaliza el `ICorDebug` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- `ICorDebug`Representa un bucle de procesamiento de eventos para un proceso de depuración. El depurador debe esperar a que el [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) devolución de llamada de todos los procesos que se están depurando antes de liberar esta interfaz.  
+ `ICorDebug` Representa un bucle de procesamiento de eventos para un proceso de depuración. El depurador debe esperar a que el [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) devolución de llamada de todos los procesos que se están depurando antes de liberar esta interfaz.  
   
  La `ICorDebug` objeto es el objeto inicial para controlar la depuración administrada todo posterior. En las versiones 1.0 y 1.1 de .NET Framework, este objeto era un `CoClass` objeto creado a partir de COM. En la versión 2.0 de .NET Framework, este objeto ya no es un `CoClass` objeto. Debe crearse mediante el [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) función, que es más con identificación de versión. Esta nueva función de creación permite a los clientes obtener una implementación específica de `ICorDebug`, que también emula una versión concreta de la API de depuración.  
   
@@ -69,7 +57,7 @@ Proporciona métodos que permiten a los desarrolladores depurar aplicaciones en 
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

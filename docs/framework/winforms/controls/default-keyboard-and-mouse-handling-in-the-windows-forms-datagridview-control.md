@@ -1,10 +1,6 @@
 ---
-title: "Predeterminado de teclado y mouse (ratón) en el control DataGridView de formularios Windows Forms"
+title: Predeterminado de teclado y mouse (ratón) en el control DataGridView de formularios Windows Forms
 ms.date: 02/13/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], mouse handling
 - DataGridView control [Windows Forms], navigation keys
@@ -14,16 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29e8afaefd35951288a4d8f5e5df2e3b5fbc4356
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: b0ed468fe7d38fbeda90d5347338bce14059b730
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Predeterminado de teclado y mouse (ratón) en el control DataGridView de formularios Windows Forms
 
@@ -50,7 +41,7 @@ Las tablas siguientes describen cómo pueden interactuar los usuarios con el <xr
 |MAYÚS+TAB|Si el <xref:System.Windows.Forms.DataGridView.StandardTab%2A> es el valor de la propiedad `false`, mueve el foco a la celda anterior de la fila actual. Si el foco está en la primera celda de la fila, mueve el foco a la última celda de la fila anterior. Si el foco está en la primera celda del control, desplaza el foco al control anterior en el orden de tabulación del contenedor primario.<br /><br /> Si el <xref:System.Windows.Forms.DataGridView.StandardTab%2A> es el valor de la propiedad `true`, mueve el foco al control anterior en el orden de tabulación del contenedor primario.|  
 |CTRL+TAB|Si el <xref:System.Windows.Forms.DataGridView.StandardTab%2A> es el valor de la propiedad `false`, mueve el foco al siguiente control en el orden de tabulación del contenedor primario.<br /><br /> Si el <xref:System.Windows.Forms.DataGridView.StandardTab%2A> es el valor de la propiedad `true`, mueve el foco a la siguiente celda en la fila actual. Si el foco está en la última celda de la fila, mueve el foco a la primera celda de la fila siguiente. Si el foco está en la última celda en el control, mueve el foco al siguiente control en el orden de tabulación del contenedor primario.|  
 |CTRL+MAYÚS+TAB|Si el <xref:System.Windows.Forms.DataGridView.StandardTab%2A> es el valor de la propiedad `false`, mueve el foco al control anterior en el orden de tabulación del contenedor primario.<br /><br /> Si el <xref:System.Windows.Forms.DataGridView.StandardTab%2A> es el valor de la propiedad `true`, mueve el foco a la celda anterior de la fila actual. Si el foco está en la primera celda de la fila, mueve el foco a la última celda de la fila anterior. Si el foco está en la primera celda del control, desplaza el foco al control anterior en el orden de tabulación del contenedor primario.|  
-|CTRL+ARROW|Mueve el foco a la última celda en la dirección de la flecha.|  
+|CTRL + FLECHA|Mueve el foco a la última celda en la dirección de la flecha.|  
 |CTRL + INICIO|Mueve el foco a la primera celda del control.|  
 |CTRL + FIN|Mueve el foco a la última celda en el control.|  
 |CTRL+AV PÁG ARRIBA/ABAJO|Igual que AV PÁG o AV PÁG.|  

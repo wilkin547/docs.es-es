@@ -1,28 +1,16 @@
 ---
 title: Suplantar el cliente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - service behaviors, impersonation sample
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a17a3631b781e6a96eb8aec17b20e8ddca52890d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c5d911bfbfcd33248e15b9fc822abdc9cf4046c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="impersonating-the-client"></a>Suplantar el cliente
 El ejemplo de Suplantación muestra cómo suplantar la aplicación de llamador en el servicio para que el servicio pueda tener acceso a los recursos del sistema en nombre del llamador.  
@@ -113,7 +101,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Al ejecutar el ejemplo, las solicitudes y las respuestas de operación se muestran tanto en la ventanas de la consola del cliente como del servicio. Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente.  
   
 > [!NOTE]
->  El servicio se debe ejecutar o bajo una cuenta administrativa, o a la cuenta bajo la que ejecuta se le debe conceder derechos para registrar el URI del http://localhost:8000/ServiceModelSamples con la capa del HTTP. Se pueden conceder estos derechos mediante la configuración de un [Namespace reservas](http://go.microsoft.com/fwlink/?LinkId=95012) mediante la [herramienta Httpcfg.exe](http://go.microsoft.com/fwlink/?LinkId=95010).  
+>  El servicio debe ejecutar bajo una cuenta administrativa o la cuenta se ejecuta bajo debe tener derechos para registrar el http://localhost:8000/ServiceModelSamples URI con el nivel HTTP. Se pueden conceder estos derechos mediante la configuración de un [Namespace reservas](http://go.microsoft.com/fwlink/?LinkId=95012) mediante la [herramienta Httpcfg.exe](http://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
 >  En los equipos que ejecutan [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], la suplantación se admite sólo si la aplicación Host.exe tiene el privilegio de Suplantación. (De forma predeterminada, sólo los administradores tienen este permiso.) Para agregar este privilegio a una cuenta que el servicio se está ejecutando como, vaya a **herramientas administrativas**, abra **directiva de seguridad Local**, abra **directivas locales**, haga clic en **Asignación de derechos de usuario**y seleccione **suplantar un cliente tras la autenticación** y haga doble clic en **propiedades** para agregar un usuario o grupo.  

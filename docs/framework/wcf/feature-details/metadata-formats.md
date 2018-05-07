@@ -1,38 +1,26 @@
 ---
 title: Formatos de metadatos
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: baad1e68-28fc-4a6a-8a43-75e47e7fa871
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b7812023fbe2159daba205727e20e1b69b84686
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3c6b1f551d1bff8c68a91f33e62df289d2078cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metadata-formats"></a>Formatos de metadatos
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admite los formatos de metadatos que se encuentran en la siguiente tabla.  
+Windows Communication Foundation (WCF) es compatible con los formatos de metadatos en la tabla siguiente.  
   
 ## <a name="metadata-specifications-and-usage"></a>Uso y especificaciones de los metadatos  
   
 |Protocolo|Especificación y uso|  
 |--------------|-----------------------------|  
-|WSDL 1.1|[Lenguaje de descripción de servicios Web (WSDL) 1.1](http://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza el lenguaje de descripción de servicios Web (WSDL) para describir servicios.|  
-|esquema XML|[XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?LinkId=94861) y [esquema XML parte 1: estructuras, segunda edición](http://go.microsoft.com/fwlink/?LinkId=94862)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza el esquema XML para describir los tipos de datos utilizados en los mensajes.|  
-|Directiva WS|[Directiva de servicios Web 1.2 - Framework (WS-Policy)](http://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> [Directiva de servicios Web 1.5 - Framework](http://go.microsoft.com/fwlink/?LinkId=94865)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza la especificación WS-Policy 1.2 ó 1.5 con las aserciones específicas del dominio para describir requisitos y funciones del servicio.|  
-|Datos adjuntos de directivas WS|[Directiva de servicios Web 1.2: datos adjuntos (WS-PolicyAttachment)](http://go.microsoft.com/fwlink/?LinkId=94866)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa Datos adjuntos de directivas WS para adjuntar expresiones de directivas en varios ámbitos de WSDL.|  
-|Intercambio de metadatos WS|[Intercambio de metadatos de servicios Web (WS-MetadataExchange) versión 1.1](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa WS-MetadataExchange para recuperar el esquema XML, WSDL y WS-Policy.|  
-|Enlace de direccionamiento de WS para WSDL|[Web Services Addressing 1.0 - enlace WSDL](http://go.microsoft.com/fwlink/?LinkId=94869)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa WS-Addressing Binding para que WSDL adjunte información del direccionamiento en WSDL.|  
+|WSDL 1.1|[Lenguaje de descripción de servicios Web (WSDL) 1.1](http://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> WCF usa el lenguaje de descripción de servicios Web (WSDL) para describir los servicios.|  
+|esquema XML|[XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?LinkId=94861) y [esquema XML parte 1: estructuras, segunda edición](http://go.microsoft.com/fwlink/?LinkId=94862)<br /><br /> WCF utiliza el esquema XML para describir tipos de datos usados en los mensajes.|  
+|Directiva WS|[Directiva de servicios Web 1.2 - Framework (WS-Policy)](http://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> [Directiva de servicios Web 1.5 - Framework](http://go.microsoft.com/fwlink/?LinkId=94865)<br /><br /> WCF usa la especificación del WS-Policy 1.2 ó 1.5 con las aserciones específicas del dominio para describir funciones y requisitos de servicio.|  
+|Datos adjuntos de directivas WS|[Directiva de servicios Web 1.2: datos adjuntos (WS-PolicyAttachment)](http://go.microsoft.com/fwlink/?LinkId=94866)<br /><br /> WCF implementa datos adjuntos de WS-Policy para adjuntar expresiones de directivas en varios ámbitos de WSDL.|  
+|Intercambio de metadatos WS|[Intercambio de metadatos de servicios Web (WS-MetadataExchange) versión 1.1](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF implementa WS-MetadataExchange para recuperar el esquema XML, WSDL y WS-Policy.|  
+|Enlace de direccionamiento de WS para WSDL|[Web Services Addressing 1.0 - enlace WSDL](http://go.microsoft.com/fwlink/?LinkId=94869)<br /><br /> WCF implementa WS-Addressing Binding para que WSDL Adjunte información del direccionamiento en WSDL.|  
   
 ## <a name="see-also"></a>Vea también  
  [Protocolos de servicios web compatibles con los enlaces de interoperabilidad proporcionados por el sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  

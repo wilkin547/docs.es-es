@@ -1,13 +1,6 @@
 ---
-title: "Introducción a los controles HScrollBar y VScrollBar (formularios Windows Forms)"
-ms.custom: 
+title: Introducción a los controles HScrollBar y VScrollBar (formularios Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - HScrollBar
 - VScrollBar
@@ -18,21 +11,16 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8fbdb3778959d1691200cde49e485d8a63c6e645
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 572ba9f16d1c78e1825d0c9db7530c6c78175d27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Introducción a los controles HScrollBar y VScrollBar (formularios Windows Forms)
 Formularios Windows Forms <xref:System.Windows.Forms.ScrollBar> controles se utilizan para proporcionar navegación fácil por una larga lista de elementos o una gran cantidad de información, ya sea horizontal o verticalmente, dentro de una aplicación o control. Barras de desplazamiento son un elemento común de la interfaz de Windows, por lo que la <xref:System.Windows.Forms.ScrollBar> control suele utilizarse con controles que no se derivan de la <xref:System.Windows.Forms.ScrollableControl> clase. De forma similar, muchos programadores eligen incorporar el <xref:System.Windows.Forms.ScrollBar> controlar al crear sus propios controles de usuario.  
   
- El <xref:System.Windows.Forms.HScrollBar> (horizontal) y <xref:System.Windows.Forms.VScrollBar> controles (verticales) operan independientemente de otros controles y tienen su propio conjunto de eventos, propiedades y métodos. <xref:System.Windows.Forms.ScrollBar>controles no son los mismos que las barras de desplazamiento integradas que se adjuntan a los cuadros de texto, cuadros de lista, cuadros combinados o formularios MDI (el <xref:System.Windows.Forms.TextBox> control tiene un <xref:System.Windows.Forms.TextBox.ScrollBars%2A> propiedad para mostrar u ocultar las barras de desplazamiento que se adjuntan al control).  
+ El <xref:System.Windows.Forms.HScrollBar> (horizontal) y <xref:System.Windows.Forms.VScrollBar> controles (verticales) operan independientemente de otros controles y tienen su propio conjunto de eventos, propiedades y métodos. <xref:System.Windows.Forms.ScrollBar> controles no son los mismos que las barras de desplazamiento integradas que se adjuntan a los cuadros de texto, cuadros de lista, cuadros combinados o formularios MDI (el <xref:System.Windows.Forms.TextBox> control tiene un <xref:System.Windows.Forms.TextBox.ScrollBars%2A> propiedad para mostrar u ocultar las barras de desplazamiento que se adjuntan al control).  
   
  El <xref:System.Windows.Forms.ScrollBar> controla el uso del <xref:System.Windows.Forms.ScrollBar.Scroll> eventos para supervisar el movimiento del cuadro de desplazamiento (denominado a veces como control de posición) a lo largo de la barra de desplazamiento. Mediante el <xref:System.Windows.Forms.ScrollBar.Scroll> evento proporciona acceso para el valor de la barra de desplazamiento tal y como se está arrastrando.  
   

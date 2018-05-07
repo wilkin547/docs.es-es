@@ -1,11 +1,7 @@
 ---
-title: "Función CompareTo (referencia de API no administrada)"
-description: "La función CompareTo compara un objeto con otro objeto WMI."
+title: Función CompareTo (referencia de API no administrada)
+description: La función CompareTo compara un objeto con otro objeto WMI.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CompareTo
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 038074b5bb3adc816caa226d3167395758d2ae57
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db4431da90842f4f96a0f09a2f28dc473d956ee3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compareto-function"></a>CompareTo (función)
 Compara un objeto con otro objeto de administración de Windows.  
@@ -58,7 +51,7 @@ HRESULT CompareTo (
 
 `pCompareTo`  
 
-[in] El objeto para la comparación. `pcompareTo`debe ser un tipo válido [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instancia; no puede ser `null`.
+[in] El objeto para la comparación. `pcompareTo` debe ser un tipo válido [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instancia; no puede ser `null`.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -86,7 +79,7 @@ Las marcas que se pueden pasar como el `lEnumFlags` argumento se definen en el *
 | `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Omitir los valores predeterminados de propiedades. Esta marca solo se aplica a la comparación de las clases. |
 | `WBEM_FLAG_IGNORE_FLAVOR` | 0 x 20 | Omitir los modos del calificador. Aún así, esta marca tiene calificadores en cuenta, pero omite las distinciones como las reglas de propagación y reemplaza las restricciones. |
 | `WBEM_FLAG_IGNORE_CASE` | 0 x 10 | Omitir mayúsculas y minúsculas en la comparación de valores de cadena. Esto se aplica tanto a las cadenas y valores de calificador. La comparación de nombres de propiedad y el calificador de no distingue entre mayúsculas y minúsculas, independientemente de si se establece esta marca. |
-| `WBEM_FLAG_IGNORE_CLASS` | 0 x 8 | Se supone que los objetos que se comparan son instancias de la misma clase. Por lo tanto, esta marca compara sólo información relacionada con la instancia. Utilice este marcas para optimizar el rendimiento. Si los objetos no son de la misma clase, los resultados son indefinidos. |
+| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Se supone que los objetos que se comparan son instancias de la misma clase. Por lo tanto, esta marca compara sólo información relacionada con la instancia. Utilice este marcas para optimizar el rendimiento. Si los objetos no son de la misma clase, los resultados son indefinidos. |
 
 O bien, puede especificar una marca compuesta única como se indica a continuación:
 
@@ -99,7 +92,7 @@ O bien, puede especificar una marca compuesta única como se indica a continuaci
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

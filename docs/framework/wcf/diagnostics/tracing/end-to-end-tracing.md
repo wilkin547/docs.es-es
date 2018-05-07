@@ -1,36 +1,24 @@
 ---
 title: Seguimiento de traza de un extremo a otro
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a2127c8dda26c376d7d722a24d72d2330174027
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 733ea0724fdbaea9c7d28ed2a94aba25f67ef87c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-to-end-tracing"></a>Seguimiento de traza de un extremo a otro
-El seguimiento de un extremo a otro (e2e) permite a los desarrolladores realizar el seguimiento de la ejecución del código en la infraestructura de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] para investigar por qué se ha producido un error en una ruta de acceso al código o proporcionar un seguimiento detallado para el diseño de la capacidad y el análisis del rendimiento. [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] proporciona tres mecanismos de correlación para ayudar a diagnosticar la causa de un error: actividades, transferencias y propagación.  
+Extremo a otro (e2e) seguimiento permite a los desarrolladores deben seguir la ejecución de código en la infraestructura de Windows Communication Foundation (WCF) para investigar por qué ha producido un error de una ruta de acceso del código, o para proporcionar un seguimiento detallado para el análisis de rendimiento y planificación de capacidad. Windows Communication Foundation (WCF) proporciona tres mecanismos de correlación para ayudar a diagnosticar la causa del error: actividades, transferencias y propagación.  
   
  Vea [escenarios de seguimiento de End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md) para obtener una lista de escenarios de seguimiento de extremo a extremo y su respectivo actividad y seguimiento de diseño.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Actividad](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md): describe los seguimientos de actividad en el [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] modelo de seguimiento.  
+ [Actividad](../../../../../docs/framework/wcf/diagnostics/tracing/activity.md): describe los seguimientos de actividad en el modelo de seguimiento de Windows Communication Foundation (WCF).  
   
- [Transferencia](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md): describe la transferencia en el [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] modelo de seguimiento y el uso de transferencia para poner en correlación actividades dentro de los extremos.  
+ [Transferencia](../../../../../docs/framework/wcf/diagnostics/tracing/transfer.md): describe la transferencia en el modelo de seguimiento de Windows Communication Foundation (WCF) y uso de transferencia para poner en correlación actividades dentro de los puntos de conexión.  
   
- [Propagación](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md): describe la propagación de actividad en el [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] traza del modelo y utilización de la propagación para poner en correlación actividades entre los extremos.  
+ [Propagación](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md): describe la propagación de actividad en Windows Communication Foundation (WCF) traza del modelo y utilización de la propagación para poner en correlación actividades entre los extremos.  
   
  [Resumen del tipo de seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/trace-type-summary.md)  
   

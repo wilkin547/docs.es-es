@@ -1,24 +1,12 @@
 ---
 title: Excepciones de IdentityModel
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identitymodel-exceptions"></a>Excepciones de IdentityModel
 En este tema se enumeran todas las excepciones generadas por IdentityModel.  
@@ -91,8 +79,8 @@ En este tema se enumeran todas las excepciones generadas por IdentityModel.
 |SAMLSignatureAlreadyRead|La firma ya se lee en la aserción del SAML.|  
 |AlgorithmAndPrivateKeyMisMatch|El algoritmo especificado y la clave privada no coinciden.|  
 |EmptyTransformChainNotSupported|No se admite la cadena de la transformación vacía.|  
-|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper &#124;' Offset' está fuera del intervalo.|  
-|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper &#124;' tamaño ' está fuera del intervalo. El administrador de tokens de seguridad de SecurityTokenManagerCannotCreateAuthenticatorForRequirement=El administrador de tokens de seguridad no puede crear un autenticador para el requisito concreto.|  
+|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper&#124;'offset' está fuera del intervalo.|  
+|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper&#124;'size' está fuera del intervalo. El administrador de tokens de seguridad de SecurityTokenManagerCannotCreateAuthenticatorForRequirement=El administrador de tokens de seguridad no puede crear un autenticador para el requisito concreto.|  
 |UnableToCreateKeyedHashAlgorithm|No se puede crear KeyedHashAlgorithm a partir del valor concreto para el algoritmo de firma concreto.|  
 |SAMLUnableToLoadAssertion|El \<SAML: Assertion > no se pudo cargar el elemento.|  
 |X509FindValueMismatchMulti|El X509FindType concreto requiere que el tipo del argumento findValue sea uno de los 2 valores. El argumento findValue es de otro tipo.|  

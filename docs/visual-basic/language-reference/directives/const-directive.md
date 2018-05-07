@@ -1,10 +1,6 @@
 ---
-title: '#<a name="const-directive"></a>#Const (directiva)'
+title: '##Const (directiva)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.#Const
 - '#vb.Const'
@@ -19,14 +15,11 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a6e162b01dc5c99fb7708337d259f9e66ddd6b64
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a3b3318f6b44f7d1798e08195be5aeb920b61c0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="const-directive"></a>#Const (Directiva)
 Permite definir constantes condicionales para el compilador de Visual Basic.  
@@ -39,10 +32,10 @@ Permite definir constantes condicionales para el compilador de Visual Basic.
   
 ## <a name="parts"></a>Elementos  
  `constname`  
- Obligatorio. Nombre de la constante que se está definida.  
+ Requerido. Nombre de la constante que se está definida.  
   
  `expression`  
- Obligatorio. Literal, otra constante de compilación condicional o cualquier combinación que incluya operadores aritméticos o lógicos, excepto `Is`.  
+ Requerido. Literal, otra constante de compilación condicional o cualquier combinación que incluya operadores aritméticos o lógicos, excepto `Is`.  
   
 ## <a name="remarks"></a>Comentarios  
  Constantes de compilación condicional siempre son privados para el archivo en que aparecen. No se puede crear constantes de compilación públicas con el `#Const` directiva; puede crear solo en la interfaz de usuario o con el `/define` opción del compilador.  

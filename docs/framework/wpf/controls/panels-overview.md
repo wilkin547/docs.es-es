@@ -1,14 +1,6 @@
 ---
 title: Información general sobre elementos Panel
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-caps.latest.revision: 48
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd04413636c7d6182ff01712eecedbbd4ed02761
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 65f5fa9eeffdeb6e7bc869d159b4b33d75fd7570
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panels-overview"></a>Información general sobre elementos Panel
 <xref:System.Windows.Controls.Panel> los elementos son componentes que controlan la representación de elementos, su tamaño y dimensiones, su posición y la organización de su contenido secundario. El [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una serie de predefinidos <xref:System.Windows.Controls.Panel> elementos, así como la capacidad de construir personalizado <xref:System.Windows.Controls.Panel> elementos.  
@@ -107,7 +93,7 @@ ms.lasthandoff: 04/09/2018
   
 <a name="Panels_overview_Canvas_subsection"></a>   
 ### <a name="canvas"></a>Canvas  
- El <xref:System.Windows.Controls.Canvas> elemento permite la colocación de contenido de acuerdo con absoluto *x -* y *y -*coordenadas. Los elementos se pueden dibujar en una ubicación única o bien, si ocupan las mismas coordenadas, el orden en que aparecen en el marcado determina el orden en que se dibujan.  
+ El <xref:System.Windows.Controls.Canvas> elemento permite la colocación de contenido de acuerdo con absoluto *x -* y *y -* coordenadas. Los elementos se pueden dibujar en una ubicación única o bien, si ocupan las mismas coordenadas, el orden en que aparecen en el marcado determina el orden en que se dibujan.  
   
  <xref:System.Windows.Controls.Canvas> proporciona la compatibilidad de diseño más flexible de cualquier <xref:System.Windows.Controls.Panel>. Propiedades de alto y ancho se usan para definir el área del lienzo y se asignan a los elementos dentro de las coordenadas absolutas en relación con el área del elemento primario <xref:System.Windows.Controls.Canvas>. Cuatro propiedades adjuntas <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> y <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>, permitir que un control exhaustivo de colocación de objeto dentro de un <xref:System.Windows.Controls.Canvas>, lo que permite al desarrollador colocar y organizar los elementos de forma precisa en la pantalla.  
   
@@ -245,7 +231,7 @@ ms.lasthandoff: 04/09/2018
   
  De igual forma, los comportamientos de diseño personalizado en función de sus clases derivadas (como <xref:System.Windows.Controls.Canvas> o <xref:System.Windows.Controls.Grid>) se pueden definir invalidando sus <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> y <xref:System.Windows.FrameworkElement.MeasureOverride%2A> métodos.  
   
- El marcado siguiente muestra cómo crear una personalizada <xref:System.Windows.Controls.Panel> elemento. Esta nueva <xref:System.Windows.Controls.Panel>, definido como `PlotPanel`, admite la posición de los elementos secundarios mediante el uso de codificado de forma rígida *x -* y *y -*coordenadas. En este ejemplo, un <xref:System.Windows.Shapes.Rectangle> (no se muestra) el elemento se coloca en las coordenadas 50 (*x*) y 50 (*y*).  
+ El marcado siguiente muestra cómo crear una personalizada <xref:System.Windows.Controls.Panel> elemento. Esta nueva <xref:System.Windows.Controls.Panel>, definido como `PlotPanel`, admite la posición de los elementos secundarios mediante el uso de codificado de forma rígida *x -* y *y -* coordenadas. En este ejemplo, un <xref:System.Windows.Shapes.Rectangle> (no se muestra) el elemento se coloca en las coordenadas 50 (*x*) y 50 (*y*).  
   
  [!code-cpp[PlotPanel#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]

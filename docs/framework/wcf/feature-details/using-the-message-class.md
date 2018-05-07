@@ -1,34 +1,20 @@
 ---
 title: Uso de la clase de mensajes
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0ff65d9173838a8eb8850253e62d822f06942f26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-message-class"></a>Uso de la clase de mensajes
-La clase <xref:System.ServiceModel.Channels.Message> es fundamental para [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Toda la comunicación entre clientes y servicios, en última instancia, produce como resultado instancias <xref:System.ServiceModel.Channels.Message> que se envían y reciben.  
+La <xref:System.ServiceModel.Channels.Message> clase es fundamental para Windows Communication Foundation (WCF). Toda la comunicación entre clientes y servicios, en última instancia, produce como resultado instancias <xref:System.ServiceModel.Channels.Message> que se envían y reciben.  
   
- Normalmente no interactuaría directamente con la clase <xref:System.ServiceModel.Channels.Message>. En su lugar, construcciones de modelo de servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como contratos de datos, contratos del mensaje y contratos de operación, se utilizan para describir los mensajes de entrada y salida. Sin embargo, en algunos escenarios avanzados puede programar utilizando directamente la clase <xref:System.ServiceModel.Channels.Message>. Por ejemplo, es posible que desee usar la clase <xref:System.ServiceModel.Channels.Message>:  
+ Normalmente no interactuaría directamente con la clase <xref:System.ServiceModel.Channels.Message>. En su lugar, construcciones del modelo de servicio WCF, como contratos de datos, contratos de mensaje y contratos de operación, se utilizan para describir los mensajes entrantes y salientes. Sin embargo, en algunos escenarios avanzados puede programar utilizando directamente la clase <xref:System.ServiceModel.Channels.Message>. Por ejemplo, es posible que desee usar la clase <xref:System.ServiceModel.Channels.Message>:  
   
 -   Cuando necesite una manera alternativa de crear el contenido del mensaje saliente (por ejemplo, crear un mensaje directamente a partir de un archivo en disco) en lugar de serializar los objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
@@ -36,7 +22,7 @@ La clase <xref:System.ServiceModel.Channels.Message> es fundamental para [!INCLU
   
 -   Cuando necesite tratar con mensajes de una manera general sin tener en cuenta el contenido del mensaje (por ejemplo, cuando enrute o reenvíe mensajes al crear un enrutador, equilibrador de carga o un sistema publicación-suscripción  
   
- Antes de usar el <xref:System.ServiceModel.Channels.Message> clase, familiarícese con el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] arquitectura de transferencia de datos [información general de arquitectura de transferencia de datos](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
+ Antes de usar el <xref:System.ServiceModel.Channels.Message> clase, familiarícese con la arquitectura de transferencia de datos WCF en [información general de arquitectura de transferencia de datos](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
   
  <xref:System.ServiceModel.Channels.Message> es un contenedor de uso general para los datos, pero su diseño sigue estrechamente el diseño de un mensaje en el protocolo SOAP. Simplemente como en SOAP, un mensaje tiene un cuerpo de mensaje y encabezados. El cuerpo del mensaje contiene los datos de carga reales, mientras que los encabezados contienen los contenedores de datos con nombre adicionales. Las reglas para leer y escribir el cuerpo y los encabezados son diferentes; Por ejemplo, los encabezados están almacenados siempre en memoria búfer y se puede tener acceso a ellos todas las veces que se quiera, mientras que el cuerpo se puede leer solo una vez y puede ser transmitido. Normalmente, cuando se utiliza SOAP, el cuerpo del mensaje está asignado al cuerpo SOAP y los encabezados del mensaje están asignados a los encabezados SOAP.  
   
@@ -181,7 +167,7 @@ La clase <xref:System.ServiceModel.Channels.Message> es fundamental para [!INCLU
  Para tener acceso a los datos XML en un encabezado, puede llamar <xref:System.ServiceModel.Channels.MessageHeaders.GetReaderAtHeader%2A> y devolver un lector XML para el índice del encabezado concreto. Si quiere deserializar el contenido del encabezado en un objeto, utilice <xref:System.ServiceModel.Channels.MessageHeaders.GetHeader%60%601%28System.Int32%29> o una de las otras sobrecargas. Las sobrecargas más básicas deserializan los encabezados mediante el uso del <xref:System.Runtime.Serialization.DataContractSerializer> configurado de la manera predeterminada. Si desea utilizar un serializador diferente o una configuración diferente de `DataContractSerializer`, utilice una de las sobrecargas que toman `XmlObjectSerializer`. También hay sobrecarga que toma el nombre del encabezado, espacio de nombres y opcionalmente una lista de los valores `Actor` en lugar de un índice; ésta es una combinación de `FindHeader` y `GetHeader`.  
   
 ## <a name="working-with-properties"></a>Trabajar con propiedades  
- Una instancia `Message` puede contener un número arbitrario de objetos con nombre de tipos arbitrarios. Se accede a esta colección a través de la  propiedad`Properties` de tipo `MessageProperties`. La colección implementa la interfaz <xref:System.Collections.Generic.IDictionary%602> y actúa como una asignación de <xref:System.String> a <xref:System.Object>. Normalmente, los valores de propiedad no se asignan directamente a cualquier parte del mensaje de la conexión, sino que proporcionan varias sugerencias de procesamiento de mensajes a los diferentes canales de la pila del canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o al marco del servicio <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29>. Para obtener un ejemplo, vea [datos Introducción a la arquitectura de transferencia](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
+ Una instancia `Message` puede contener un número arbitrario de objetos con nombre de tipos arbitrarios. Se accede a esta colección a través de la  propiedad`Properties` de tipo `MessageProperties`. La colección implementa la interfaz <xref:System.Collections.Generic.IDictionary%602> y actúa como una asignación de <xref:System.String> a <xref:System.Object>. Normalmente, los valores de propiedad no se asignan directamente a cualquier parte del mensaje en la conexión, sino que proporcionan varias sugerencias de procesamiento a los diferentes canales de la pila de canales WCF o del mensaje el <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> marco del servicio. Para obtener un ejemplo, vea [datos Introducción a la arquitectura de transferencia](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
   
 ## <a name="inheriting-from-the-message-class"></a>Herencia de la clase de mensaje  
  Si los tipos de mensaje integrados creados mediante `CreateMessage` no cumplen sus requisitos, cree una clase que derive de la clase `Message`.  

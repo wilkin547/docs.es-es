@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugModule2::ApplyChanges (Método)"
-ms.custom: 
+title: ICorDebugModule2::ApplyChanges (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModule2.ApplyChanges
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4855b7a42d471304d000465a0437f29bdff05494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a406e945a67352bc7f126b40bd56f4a11dd693b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges (Método)
 Aplica los cambios en los metadatos y los cambios en el código de lenguaje intermedio (MSIL) de Microsoft a los procesos en ejecución.  
@@ -65,7 +53,7 @@ HRESULT ApplyChanges (
  [in] Búfer que contiene el código MSIL actualizado.  
   
 ## <a name="remarks"></a>Comentarios  
- El `pbMetadata` parámetro tiene un formato de metadatos delta especial (como salida por [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata`toma los metadatos anteriores como base y describe los cambios individuales que se aplican a esa base.  
+ El `pbMetadata` parámetro tiene un formato de metadatos delta especial (como salida por [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` toma los metadatos anteriores como base y describe los cambios individuales que se aplican a esa base.  
   
  En cambio, la `pbIL[`] parámetro contiene el nuevo MSIL para el método actualizado y está destinada a reemplazar completamente el MSIL del método anterior  
   
@@ -82,4 +70,4 @@ HRESULT ApplyChanges (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -1,28 +1,19 @@
 ---
-title: "Implementación del patrón de control SelectionItem de UI Automation"
-ms.custom: 
+title: Implementación del patrón de control SelectionItem de UI Automation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Selection Item control pattern
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-caps.latest.revision: "22"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4ec9ee61973adacfc44c5fa7d8f1e6812e9950fd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: abf1c1851e10036ecf46b04662d41a4d9f2667e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implementación del patrón de control SelectionItem de UI Automation
 > [!NOTE]
@@ -57,7 +48,7 @@ ms.lasthandoff: 01/19/2018
   
 |Tipo de excepción|Condición|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|Cuando se intenten cualquiera de las siguientes opciones:<br /><br /> -   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A>se llama en un contenedor de selección única donde <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` y ya hay un elemento seleccionado.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> en un contenedor de selección múltiple donde <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` y solo hay un elemento seleccionado.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> en un contenedor de selección única donde <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty> = `false` y ya hay otro elemento seleccionado.|  
+|<xref:System.InvalidOperationException>|Cuando se intenten cualquiera de las siguientes opciones:<br /><br /> -   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> se llama en un contenedor de selección única donde <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` y ya hay un elemento seleccionado.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> en un contenedor de selección múltiple donde <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` y solo hay un elemento seleccionado.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> en un contenedor de selección única donde <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty> = `false` y ya hay otro elemento seleccionado.|  
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  

@@ -1,29 +1,17 @@
 ---
-title: "Conexión de redes punto a punto"
-ms.custom: 
+title: Conexión de redes punto a punto
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a26f10a323b44e7954245ab90a02f62745e84e87
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: fe3fe122e758d8460d98793cb8028ad696cb5302
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-to-peer-networking"></a>Conexión de redes punto a punto
-El canal del mismo nivel es una tecnología de comunicaciones punto a punto (P2P) entre varias partes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Proporciona un canal de comunicación P2P basado en mensajes seguros y escalables para los desarrolladores de aplicaciones. Un ejemplo común de una aplicación con varias partes que se puede beneficiar del canal del mismo nivel es el caso de una aplicación de colaboración, como el chat, donde un grupo de personas conversan entre ellas de igual a igual, sin necesidad de servidores. Peer Channel habilita la colaboración P2P la distribución del contenido, el equilibrio de la carga y el procesamiento distribuido de los escenarios de consumidor y empresa.  
+Canal del mismo nivel es con varios participantes, de punto a punto (P2P) tecnología de comunicaciones en Windows Communication Foundation (WCF). Proporciona un canal de comunicación P2P basado en mensajes seguros y escalables para los desarrolladores de aplicaciones. Un ejemplo común de una aplicación con varias partes que se puede beneficiar del canal del mismo nivel es el caso de una aplicación de colaboración, como el chat, donde un grupo de personas conversan entre ellas de igual a igual, sin necesidad de servidores. Peer Channel habilita la colaboración P2P la distribución del contenido, el equilibrio de la carga y el procesamiento distribuido de los escenarios de consumidor y empresa.  
   
- El canal del mismo nivel está habilitado de forma predeterminada en [!INCLUDE[wv](../../../../includes/wv-md.md)], como lo está también todo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Para tener acceso a las clases del canal del mismo nivel, agregue en su proyecto referencias a System.ServiceModel.dll.  
+ Canal del mismo nivel está habilitado de forma predeterminada en [!INCLUDE[wv](../../../../includes/wv-md.md)], ya que es todo WCF. Para tener acceso a las clases del canal del mismo nivel, agregue en su proyecto referencias a System.ServiceModel.dll.  
   
  En las secciones siguientes se ofrece información sobre la conexión de red punto a punto y el uso de las clases de canal del mismo nivel para crear aplicaciones de red habilitadas para el mismo nivel.  
   
@@ -38,4 +26,4 @@ El canal del mismo nivel es una tecnología de comunicaciones punto a punto (P2P
  [Resolución personalizada del mismo nivel de canal del mismo nivel](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)  
   
 ## <a name="peer-channel-team-blog"></a>Blog del equipo del canal del mismo nivel  
- [Blog del equipo de canal del mismo nivel](http://go.microsoft.com/fwlink/?LinkID=114530) (http://go.microsoft.com/fwlink/?LinkID=114530)
+ [Blog del equipo de canal del mismo nivel](http://go.microsoft.com/fwlink/?LinkID=114530) ()http://go.microsoft.com/fwlink/?LinkID=114530)

@@ -1,13 +1,6 @@
 ---
 title: Acceder a recursos de Data Services (Data Services de WCF)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, querying
 - getting started, WCF Data Services
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dddbd9cf8e11f09cf1c2dc36db49281d00e97aac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1af991d7db9bfeeb0737e65a0517629f359f4a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Acceder a recursos de Data Services (Data Services de WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]admite la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para exponer los datos como una fuente con recursos direccionables mediante URI. Estos recursos se representan según las convenciones de relación de entidades de la [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md). En este modelo, las entidades representan unidades operacionales de datos que son tipos de datos en un dominio de aplicación, como clientes, pedidos, elementos y productos. El acceso a los datos de entidad y la modificación de los mismos se realiza usando la semántica de Representational State Transfer (REST), específicamente los verbos HTTP estándar GET, PUT, POST y DELETE.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] admite la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para exponer los datos como una fuente con recursos direccionables mediante URI. Estos recursos se representan según las convenciones de relación de entidades de la [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md). En este modelo, las entidades representan unidades operacionales de datos que son tipos de datos en un dominio de aplicación, como clientes, pedidos, elementos y productos. El acceso a los datos de entidad y la modificación de los mismos se realiza usando la semántica de Representational State Transfer (REST), específicamente los verbos HTTP estándar GET, PUT, POST y DELETE.  
   
 ## <a name="addressing-resources"></a>Direccionar recursos  
  En [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], podrá direccionar los datos expuestos por el modelo de datos utilizando un URI. Por ejemplo, el siguiente URI devuelve una fuente que representa el conjunto de entidades Customers, que contiene entradas para todas las instancias del tipo de entidad Customer:  
@@ -66,7 +54,7 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders
 http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
 ```  
   
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]También le permite direccionar recursos basándose en los resultados de las expresiones de consulta. Esto permite filtrar conjuntos de recursos en función de una expresión evaluada. Por ejemplo, el siguiente URI filtra los recursos para devolver al Customer especificado solo los Orders (pedidos) que se han distribuido desde el 22 de septiembre de 1997:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] También le permite direccionar recursos basándose en los resultados de las expresiones de consulta. Esto permite filtrar conjuntos de recursos en función de una expresión evaluada. Por ejemplo, el siguiente URI filtra los recursos para devolver al Customer especificado solo los Orders (pedidos) que se han distribuido desde el 22 de septiembre de 1997:  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
@@ -75,7 +63,7 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$fil
  Para obtener más información, consulte [OData: convenciones de URI](http://go.microsoft.com/fwlink/?LinkId=185564).  
   
 ## <a name="system-query-options"></a>Opciones de consulta del sistema  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]define un conjunto de opciones de consulta del sistema que puede usar para realizar operaciones de consulta tradicionales en los recursos, como el filtrado, ordenación y paginación. Por ejemplo, el siguiente URI devuelve el conjunto de todos los `Order` entidades, junto con relacionados `Order_Detail` entidades, cuyo código postal no termina en `100`:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] define un conjunto de opciones de consulta del sistema que puede usar para realizar operaciones de consulta tradicionales en los recursos, como el filtrado, ordenación y paginación. Por ejemplo, el siguiente URI devuelve el conjunto de todos los `Order` entidades, junto con relacionados `Order_Detail` entidades, cuyo código postal no termina en `100`:  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
@@ -83,7 +71,7 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
   
  Las entradas de la fuente devuelta se ordenan también en función del valor de propiedad ShipCity de los pedidos.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]admite las siguientes [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] opciones de consulta del sistema:  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] admite las siguientes [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] opciones de consulta del sistema:  
   
 |Opción de consulta|Descripción|  
 |------------------|-----------------|  
@@ -96,7 +84,7 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 |`$inlinecount`|Solicita que se incluya con la fuente un recuento del número de entidades devuelto en la fuente. Para obtener más información, consulte [OData: opción de consulta de sistema Inlinecount ($inlinecount)](http://go.microsoft.com/fwlink/?LinkId=186975).|  
   
 ## <a name="addressing-relationships"></a>Direccionar relaciones  
- Además de direccionar conjuntos de entidades e instancias de entidades, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] también le permite direccionar las asociaciones que representan las relaciones entre entidades. Esta funcionalidad es necesaria para crear o cambiar una relación entre dos instancias de entidades, como el expedidor relacionado con un pedido determinado de la base de datos de ejemplo Northwind. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]admite un `$link` operador para direccionar específicamente las asociaciones entre entidades. Por ejemplo, el URI siguiente se especifica en un mensaje de solicitud PUT de HTTP para que se use otro expedidor para el pedido especificado  
+ Además de direccionar conjuntos de entidades e instancias de entidades, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] también le permite direccionar las asociaciones que representan las relaciones entre entidades. Esta funcionalidad es necesaria para crear o cambiar una relación entre dos instancias de entidades, como el expedidor relacionado con un pedido determinado de la base de datos de ejemplo Northwind. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] admite un `$link` operador para direccionar específicamente las asociaciones entre entidades. Por ejemplo, el URI siguiente se especifica en un mensaje de solicitud PUT de HTTP para que se use otro expedidor para el pedido especificado  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  

@@ -1,12 +1,6 @@
 ---
-title: "Take (Cláusula, Visual Basic)"
+title: Take (Cláusula, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryTake
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ee289a24c15226126a526af116ed53b4a9055b35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0dddb411af1b4ee269e091c07553a94589d90b2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="take-clause-visual-basic"></a>Take (Cláusula, Visual Basic)
 Devuelve un número especificado de elementos contiguos desde el principio de una colección.  
@@ -34,7 +25,7 @@ Take count
   
 ## <a name="parts"></a>Elementos  
  `count`  
- Obligatorio. Un valor o una expresión que se evalúa como el número de elementos de la secuencia para devolver.  
+ Requerido. Un valor o una expresión que se evalúa como el número de elementos de la secuencia para devolver.  
   
 ## <a name="remarks"></a>Comentarios  
  El `Take` cláusula hace una consulta incluir un número especificado de elementos contiguos desde el principio de una lista de resultados. Se especifica el número de elementos que desee incluir el `count` parámetro.  

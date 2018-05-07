@@ -1,14 +1,6 @@
 ---
 title: Federación
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +8,19 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d69de8c01a23eff5314220a10a51f6487080df41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation"></a>Federación
-En este tema se proporciona una información general breve sobre el concepto de seguridad federada. También describe la compatibilidad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para la implementación de arquitecturas de seguridad federadas. Para una aplicación de ejemplo que muestra la federación, consulte [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
+En este tema se proporciona una información general breve sobre el concepto de seguridad federada. También describe la compatibilidad de Windows Communication Foundation (WCF) para la implementación de arquitecturas de seguridad federada. Para una aplicación de ejemplo que muestra la federación, consulte [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="definition-of-federated-security"></a>Definición de seguridad federada  
  La seguridad federada permite una separación limpia entre el servicio al que un cliente intenta obtener acceso y los procedimientos de autenticación y autorización asociados. La seguridad federada también habilita la colaboración en múltiples sistemas, redes y organizaciones en dominios de confianza diferentes.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona compatibilidad para crear e implementar sistemas distribuidos que emplean la seguridad federada.  
+ WCF proporciona compatibilidad para crear e implementar sistemas distribuidos que emplean la seguridad federada.  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>Elementos de una arquitectura de seguridad federada  
  La arquitectura de seguridad federada tiene tres elementos clave, tal y como se describe en la tabla siguiente.  
@@ -80,7 +66,7 @@ En este tema se proporciona una información general breve sobre el concepto de 
  Una vez que los usuarios obtienen un token de seguridad del STS de A, presentan el token al STS de B. La organización B continúa con la autorización de las solicitudes de los usuarios y emite un token de seguridad a los usuarios desde su propio conjunto de tokens de seguridad. Los usuarios pueden presentar a continuación su token al recurso de la organización B y obtener acceso al servicio.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>Compatibilidad para la seguridad federada en WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona compatibilidad inmediata para la implementación de arquitecturas de seguridad federadas a través de la [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ WCF proporciona compatibilidad inmediata para la implementación de arquitecturas de seguridad federadas a través de la [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  El [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) elemento proporciona para un enlace seguro, confiable y interoperable que implica el uso de HTTP como mecanismo de transporte subyacente para el estilo de comunicación de solicitud y respuesta, uso de texto y XML como el formato de codificación.  
   
@@ -98,10 +84,10 @@ En este tema se proporciona una información general breve sobre el concepto de 
 -   Presente el token al servicio para obtener acceso al servicio.  
   
 ### <a name="phase-2-run-time-phase"></a>Fase 2: fase en tiempo de ejecución  
- Durante la fase en tiempo de ejecución, el cliente crea instancias de un objeto de la clase de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y realiza una llamada mediante el cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. El marco subyacente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] administra los pasos mencionados con anterioridad en el patrón de comunicación de seguridad federada y permite al cliente utilizar el servicio a la perfección.  
+ Durante la fase de tiempo de ejecución, el cliente crea una instancia de un objeto de la clase de cliente WCF y realiza una llamada mediante el cliente de WCF. El marco subyacente de WCF administra los pasos mencionados anteriormente en el patrón de comunicación de seguridad federada y permite al cliente utilizar a la perfección el servicio.  
   
 ## <a name="sample-implementation-using-wcf"></a>Ejemplo de implementación mediante WCF  
- La siguiente ilustración muestra una implementación de ejemplo para una arquitectura de seguridad federada utilizando la compatibilidad nativa de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ En la siguiente ilustración se muestra una implementación de ejemplo para una arquitectura de seguridad federada utilizando la compatibilidad nativa de WCF.  
   
  ![Seguridad de federación en WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
   
@@ -300,7 +286,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  ![Federación](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
   
 ## <a name="summary"></a>Resumen  
- La seguridad federada proporciona una división limpia de responsabilidad y ayuda a crear arquitecturas de servicios seguras y escalables. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como plataforma para crear e implementar aplicaciones distribuidas, proporciona compatibilidad nativa para la implementación de seguridad federada.  
+ La seguridad federada proporciona una división limpia de responsabilidad y ayuda a crear arquitecturas de servicios seguras y escalables. Como una plataforma para compilar e implementar aplicaciones distribuidas, WCF proporciona compatibilidad nativa para implementar la seguridad federada.  
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)

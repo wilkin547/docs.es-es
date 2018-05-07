@@ -1,33 +1,19 @@
 ---
-title: "Extensión de distribuidores"
-ms.custom: 
+title: Extensión de distribuidores
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4240a19401d97cd0636d13a94fd07ad4ef753388
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bc700aefc3b50102dc0a3faabbbcd09c1c8fc4bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-dispatchers"></a>Extensión de distribuidores
 Los distribuidores son los responsables de extraer los mensajes entrantes de los canales subyacentes, de modo que los traducen en código de aplicación en las invocaciones de método y devuelven los resultados al autor de la llamada. Las extensiones de distribuidores le permiten modificar este procesamiento.  Puede implementar inspectores de parámetro o de mensaje que inspeccionen o modifiquen el contenido de los mensajes o los parámetros.  Puede cambiar la manera en la que se enrutan los mensajes a las operaciones o proporcionar otras funcionalidades.  
   
- En este tema se describe cómo utilizar las clases <xref:System.ServiceModel.Dispatcher.DispatchRuntime> y <xref:System.ServiceModel.Dispatcher.DispatchOperation> en una aplicación de servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para modificar el comportamiento de ejecución predeterminado de un distribuidor o para interceptar o modificar mensajes, parámetros o valores devueltos antes o después de enviarlos o recuperarlos desde el nivel del canal. Para obtener más información sobre el procesamiento de mensajes de cliente equivalente en tiempo de ejecución, consulte [clientes extender](../../../../docs/framework/wcf/extending/extending-clients.md). Para comprender el rol que <xref:System.ServiceModel.IExtensibleObject%601> tipos reproducir tengan acceso al estado compartido entre varios objetos de personalización en tiempo de ejecución, consulte [objetos extensibles](../../../../docs/framework/wcf/extending/extensible-objects.md).  
+ Este tema describe cómo utilizar el <xref:System.ServiceModel.Dispatcher.DispatchRuntime> y <xref:System.ServiceModel.Dispatcher.DispatchOperation> aplicación para modificar el comportamiento de ejecución predeterminado de un distribuidor o para interceptar o modificar mensajes, parámetros o devolver de servicio de las clases de Windows Communication Foundation (WCF) valores antes o después de enviar o recuperarlos desde la capa del canal. Para obtener más información sobre el procesamiento de mensajes de cliente equivalente en tiempo de ejecución, consulte [clientes extender](../../../../docs/framework/wcf/extending/extending-clients.md). Para comprender el rol que <xref:System.ServiceModel.IExtensibleObject%601> tipos reproducir tengan acceso al estado compartido entre varios objetos de personalización en tiempo de ejecución, consulte [objetos extensibles](../../../../docs/framework/wcf/extending/extensible-objects.md).  
   
 ## <a name="dispatchers"></a>Distribuidores  
  El nivel del modelo de servicios realiza la conversión entre el modelo de programación del programador y el intercambio de mensajes subyacentes, comúnmente denominado el nivel de canal. En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] los distribuidores de canales y extremos (<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> y <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>, respectivamente) son los componentes de servicio responsables de aceptar nuevos canales, recibir mensajes, distribuir e invocar operaciones y procesar las respuestas. Los objetos de distribuidor son objetos de receptor, pero las implementaciones de contratos de devolución de llamadas en servicios dúplex también exponen sus objetos de distribuidor para la inspección, modificación o extensión.  

@@ -2,10 +2,6 @@
 title: Get (función) (referencia de API no administrada)
 description: La función Get recupera el valor de propiedad especificado.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Get
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69312030689ab1b87e3aadd040395f06e1c94ac8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-function"></a>Get (función)
 Recupera el valor de la propiedad especificada, si existe.
@@ -59,17 +52,17 @@ HRESULT Get (
 `wszName`  
 [in] El nombre de la propiedad.
 
-`lFlags`[in] Reservado. Este parámetro debe ser 0.
+`lFlags` [in] Reservado. Este parámetro debe ser 0.
 
-`pVal`[out] Si la función devuelve correctamente, contiene el valor de la `wszName` propiedad. El `pval` argumento se asigna el tipo correcto y el valor del calificador.
+`pVal` [out] Si la función devuelve correctamente, contiene el valor de la `wszName` propiedad. El `pval` argumento se asigna el tipo correcto y el valor del calificador.
 
-`pvtType`[out] Si la función devuelve correctamente, contiene un [constante de tipo de CIM](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) que indica el tipo de propiedad. Su valor puede ser también `null`. 
+`pvtType` [out] Si la función devuelve correctamente, contiene un [constante de tipo de CIM](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) que indica el tipo de propiedad. Su valor puede ser también `null`. 
 
-`plFlavor`[out] Si la función devuelve correctamente, recibe información sobre el origen de la propiedad. Su valor puede ser `null`, o una de las siguientes constantes WBEM_FLAVOR_TYPE definidas en el *WbemCli.h* archivo de encabezado: 
+`plFlavor` [out] Si la función devuelve correctamente, recibe información sobre el origen de la propiedad. Su valor puede ser `null`, o una de las siguientes constantes WBEM_FLAVOR_TYPE definidas en el *WbemCli.h* archivo de encabezado: 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0 x 40 | La propiedad es una propiedad estándar del sistema. |
+| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | La propiedad es una propiedad estándar del sistema. |
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0 x 20 | Para una clase: la propiedad se hereda de la clase primaria. </br> Para una instancia: la propiedad, mientras que se hereda de la clase primaria, no ha sido modificada por la instancia.  |
 | `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Para una clase: la propiedad pertenece a la clase derivada. </br> Para una instancia: la propiedad se modifica la instancia; es decir, se proporcionó un valor o un calificador se ha agregado o modificado. |
 
@@ -98,7 +91,7 @@ El `pVal` argumento se asigna al tipo correcto y valor para el calificador y el 
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

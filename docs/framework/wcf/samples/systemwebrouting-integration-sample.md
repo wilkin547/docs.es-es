@@ -1,26 +1,12 @@
 ---
-title: "Ejemplo de integración de SystemWebRouting"
-ms.custom: 
+title: Ejemplo de integración de SystemWebRouting
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: de8869956a59cb47623dbc4d84763e19d6f181bf
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
-ms.translationtype: MT
+ms.openlocfilehash: 43785f84cb3852a35f1ed3bd555287842455a89b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemwebrouting-integration-sample"></a>Ejemplo de integración de SystemWebRouting
 Este ejemplo muestra la integración de nivel de hospedaje con las clases en el espacio de nombres <xref:System.Web.Routing>. Las clases en el espacio de nombres <xref:System.Web.Routing> permiten a una aplicación utilizar direcciones URL que no se corresponden directamente con un recurso físico. El uso de enrutamiento web permite al desarrollador de software crear direcciones virtuales para HTTO que se asignan a continuación a los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reales. Esto es útil cuando un servicio WCF se debe hospedar sin requerir un archivo físico ni un recurso, o cuando se debe tener acceso a los servicios con direcciones URL que no contienen archivos como .html o .aspx. En este ejemplo se muestra cómo utilizar la clase <xref:System.Web.Routing.RouteTable> para crear URI virtuales que se asignan a servicios en ejecución definidos en global.asax. 
@@ -39,7 +25,7 @@ Este ejemplo puede que ya estén instalado en el equipo. Compruebe el siguiente 
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
+ Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
@@ -51,11 +37,11 @@ Este ejemplo puede que ya estén instalado en el equipo. Compruebe el siguiente 
   
      Aparece una lista de directorios para el ejemplo. Observe que no hay ningún archivo con la extensión de archivo .svc.  
   
-3.  En la barra de direcciones, agregue `movies` a la dirección URL, de modo que ese TI lea http://localhost: [puerto] /Movies y presione ENTRAR.  
+3.  En la barra de direcciones, agregue `movies` a la dirección URL, de modo que ese TI lea http://localhost:[puerto] /Movies y presione ENTRAR.  
   
      Las fuentes de películas aparecen en el explorador.  
   
-4.  En la barra de direcciones, agregue `channels` a la dirección URL, de modo que se lea http://localhost:[puerto]/channels y presione ENTRAR.  
+4.  En la barra de direcciones, agregue `channels` a la dirección URL, por lo que eso es lecturas http://localhost:[puerto] /Channels y presione ENTRAR.  
   
      La fuente de canales aparece en el explorador.  
   
@@ -81,11 +67,11 @@ Este ejemplo puede que ya estén instalado en el equipo. Compruebe el siguiente 
   
 4.  Iniciar la aplicación, haciendo clic en la aplicación Web y seleccione **administrar la aplicación** y, a continuación, **examinar**.  
   
-5.  En la barra de direcciones, agregue `movies` a la dirección URL, de modo que se lea http://localhost:[puerto]/movies y presione ENTRAR.  
+5.  En la barra de direcciones, agregue `movies` a la dirección URL, por lo que eso es lecturas http://localhost:[puerto] /Movies y presione ENTRAR.  
   
      Las fuentes de películas aparecen en el explorador.  
   
-6.  En la barra de direcciones, agregue `channels` a la dirección URL, de modo que se lea http://localhost:[puerto]/channels y presione ENTRAR.  
+6.  En la barra de direcciones, agregue `channels` a la dirección URL, por lo que eso es lecturas http://localhost:[puerto] /Channels y presione ENTRAR.  
   
      La fuente de canales aparece en el explorador.  
   

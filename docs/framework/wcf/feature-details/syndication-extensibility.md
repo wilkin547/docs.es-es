@@ -1,24 +1,12 @@
 ---
-title: "Extensibilidad de la distribución"
-ms.custom: 
+title: Extensibilidad de la distribución
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5322ff2c79ab5051b3a9aaaeaafe7db6c9c2f683
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8182aee9d8a526d995ab1266e5c654f29f4af3d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syndication-extensibility"></a>Extensibilidad de la distribución
 La API de distribución está diseñada para proporcionar un modelo de programación neutral frente al formato que permita escribir el contenido distribuido en la conexión en una variedad de formatos. El modelo de datos abstracto está compuesto por las siguientes clases:  
@@ -35,7 +23,7 @@ La API de distribución está diseñada para proporcionar un modelo de programac
   
  Estas clases asignan estrechamente a las estructuras definidas en la especificación Atom 1.0, aunque algunos de los nombres son diferentes.  
   
- Una característica clave de los protocolos de distribución es la extensibilidad. Atom 1.0 y RSS 2.0 agregan atributos y elementos a las fuentes de distribución que no están definidas en las especificaciones. El modelo de programación de distribución de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona las siguientes maneras de trabajar con atributos y extensiones personalizados, el acceso escrito de forma imprecisa y derivar una nueva clase.  
+ Una característica clave de los protocolos de distribución es la extensibilidad. Atom 1.0 y RSS 2.0 agregan atributos y elementos a las fuentes de distribución que no están definidas en las especificaciones. El modelo de programación de distribución de Windows Communication Foundation (WCF) proporciona las siguientes maneras de trabajar con atributos y extensiones personalizados, acceso imprecisa y derivar una clase nueva.  
   
 ## <a name="loosely-typed-access"></a>Access escrito de manera imprecisa  
  Para agregar extensiones derivando una nueva clase, es necesario escribir código adicional. Otra opción obtener acceso a extensiones de manera imprecisa. Todos los tipos definidos en el modelo de datos abstracto de distribución contienen propiedades denominadas `AttributeExtensions` y `ElementExtensions` (con una excepción, <xref:System.ServiceModel.Syndication.SyndicationContent> tiene una propiedad `AttributeExtensions` pero ninguna propiedad `ElementExtensions`). Estas propiedades son colecciones de extensiones no procesadas por los métodos `TryParseAttribute` y `TryParseElement`, respectivamente. Puede tener acceso a estas extensiones no procesadas llamando al método <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType> de la propiedad `ElementExtensions` de <xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>, <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationPerson>y <xref:System.ServiceModel.Syndication.SyndicationCategory>. Este conjunto de métodos encuentra todas las extensiones con el nombre y espacio de nombres especificado, las deserializa individualmente en instancias de `TExtension` y las devuelve como una colección de objetos `TExtension`.  

@@ -1,29 +1,15 @@
 ---
 title: Información general sobre la globalización y la localización de WPF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6f2bc9021ca376b7b27f74efed6866a907b480ad
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 957ba16886669acdfa5501ffe02501cbe6e57198
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Información general sobre la globalización y la localización de WPF
 Cuando se limita la disponibilidad de un producto a un solo idioma, se limita la base de clientes potenciales a una fracción de los 6,5 mil millones de habitantes del mundo. Si quiere que las aplicaciones alcancen una audiencia global, la localización rentable del producto es una de las formas mejores y más económicas de llegar a más clientes.  
@@ -208,7 +194,7 @@ Cuando se limita la disponibilidad de un producto a un solo idioma, se limita la
   
  El último paso de localización implica la creación del nuevo ensamblado satélite localizado. Esto se puede hacer con el siguiente comando de LocBaml:  
   
- **LocBaml.exe /generate RunDialog.resources.dll /trans:RunDialog.resources.dll.CSV /out: . /cul:de-DE**  
+ **LocBaml.exe / generar RunDialog.resources.dll /trans:RunDialog.resources.dll.CSV/out:. /cUL:de-Alemania**  
   
  En alemán [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], si este resources.dll se coloca en una carpeta de-DE junto al ensamblado principal, este recurso se cargará automáticamente en lugar de la carpeta en-US. Si no tiene una versión alemana de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] para probar esto, establezca la referencia cultural en la referencia cultural de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] usa (es decir, en-US) y reemplace el resources.dll original.  
   

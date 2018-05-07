@@ -1,23 +1,16 @@
 ---
-title: "Identificador de configuración regional &#39; &lt;nombre&gt;&#39; no se admite en este sistema"
+title: Identificador de configuración regional &#39; &lt;nombre&gt; &#39; no se admite en este sistema
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrArgument_LCIDNotSupported1
 ms.assetid: 62701434-0ac2-45b8-8b40-a9adc09ae6df
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0a9a91a297b62278a09c2fe6ee6e74bf0e827a58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 87fd87dde05ed1bc11d622ffa33140625289a6a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="locale-id-39ltnamegt39-is-not-supported-on-this-system"></a>Identificador de configuración regional &#39; &lt;nombre&gt;&#39; no se admite en este sistema
+# <a name="locale-id-39ltnamegt39-is-not-supported-on-this-system"></a>Identificador de configuración regional &#39; &lt;nombre&gt; &#39; no se admite en este sistema
 Está intentando usar `VbStrConv`, pero el sistema no admite la configuración regional especificada.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  

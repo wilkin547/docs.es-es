@@ -1,34 +1,20 @@
 ---
 title: Guía de interoperabilidad de los protocolos de servicios web
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 1ee8b485d8a46d2599958db2c71f4a6e84875169
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guía de interoperabilidad de los protocolos de servicios web
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementa varios protocolos de servicio web. Muchos de estos protocolos incluyen distintas opciones y puntos de extensibilidad que son decisión del responsable de la implementación. Este tema ofrece una lista de los protocolos de servicios web implementados por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Otros temas incluidos en esta sección proporcionan información detallada acerca de la implementación de cada protocolo admitido.  
+Windows Communication Foundation (WCF) se implementa una serie de protocolos de servicios Web. Muchos de estos protocolos incluyen distintas opciones y puntos de extensibilidad que son decisión del responsable de la implementación. En este tema se proporciona una lista de protocolos de servicios Web que WCF implementa. Otros temas incluidos en esta sección proporcionan información detallada acerca de la implementación de cada protocolo admitido.  
   
 ## <a name="web-services-protocols-implemented-by-wcf"></a>Protocolos de servicios web implementados por WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ofrece compatibilidad con los protocolos de la infraestructura de servicios web (WS) a través de las características de los contratos de canales, y los protocolos de aplicación de los servicio web. La interoperabilidad de los protocolos de aplicación se consigue mediante el lenguaje de descripción Esquema XML 1.0 (XSD) y el Lenguaje de descripción de servicios Web (WSDL) 1.1.  
+ WCF proporciona compatibilidad para protocolos de infraestructura de Web services (WS) a través de canales y protocolos de aplicación a través de las características de los contratos de servicios Web. La interoperabilidad de los protocolos de aplicación se consigue mediante el lenguaje de descripción Esquema XML 1.0 (XSD) y el Lenguaje de descripción de servicios Web (WSDL) 1.1.  
   
- La interoperabilidad de los protocolos de infraestructura la proporcionan las especificaciones de WS-*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] los canales proporcionan compatibilidad para un número de WS -\* protocolos de infraestructura. Los canales de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se configuran mediante elementos de enlace. Las tablas siguientes contienen la lista completa de WS -\* protocolos de infraestructura implementados por distintos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elementos de enlace.  
+ La interoperabilidad de los protocolos de infraestructura la proporcionan las especificaciones de WS-*. Los canales WCF proporcionan compatibilidad para un número de WS -\* protocolos de infraestructura. Canales WCF se configuran mediante elementos de enlace. Las tablas siguientes contienen la lista completa de WS -\* protocolos de infraestructura implementadas por varios elementos de enlace de WCF.  
   
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement> admite las especificaciones de la tabla siguiente.  
   
@@ -105,7 +91,7 @@ ms.lasthandoff: 03/26/2018
   
 -   [WS-Transfer Get para la recuperación de metadatos](http://go.microsoft.com/fwlink/?LinkId=96708)  
   
- Además, en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se implementan los siguientes perfiles de interoperabilidad:  
+ Además, los siguientes perfiles de interoperabilidad se implementan a través de WCF:  
   
 -   [Basic Profile 1.1](http://go.microsoft.com/fwlink/?LinkId=69313)  
   

@@ -1,29 +1,17 @@
 ---
 title: Metadatos de las propiedades de dependencia
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - APIs [WPF], metadata
 - dependency properties [WPF], metadata
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b5c4ee554e8a0148c7d8d8044735f66778e7117
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0aa1d2962b0bccea7a0901877b29550319aaa3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-metadata"></a>Metadatos de las propiedades de dependencia
 El sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] incluye un sistema de informe de metadatos que va más allá de lo que puede notificarse sobre una propiedad mediante la reflexión o las características generales de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Los metadatos de una propiedad de dependencia también los puede asignar de manera exclusiva la clase que define una propiedad de dependencia, se pueden cambiar cuando la propiedad de dependencia se agrega a una clase diferente y los pueden invalidar específicamente todas las clases derivadas que heredan la propiedad de dependencia de la clase base de definición.  
@@ -48,7 +36,7 @@ El sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/t
 ## <a name="metadata-apis"></a>API de metadatos  
  El tipo que informa de la mayor parte de la información de metadatos usada por el sistema de propiedades es el <xref:System.Windows.PropertyMetadata> clase. Las instancias de metadatos se especifican de manera opcional cuando las propiedades de dependencia se registran con el sistema de propiedades y pueden especificarse de nuevo para tipos adicionales que se agreguen a sí mismos como propietarios o invaliden los metadatos que heredan de la definición de propiedad de dependencia de clase base. (En los casos donde un registro de la propiedad no especifica metadatos, el valor predeterminado es <xref:System.Windows.PropertyMetadata> se crea con los valores predeterminados para esa clase.) Los metadatos registrados se devuelven como <xref:System.Windows.PropertyMetadata> cuando se llama a los distintos <xref:System.Windows.DependencyProperty.GetMetadata%2A> sobrecargas que obtienen metadatos de una propiedad de dependencia en un <xref:System.Windows.DependencyObject> instancia.  
   
- La <xref:System.Windows.PropertyMetadata> clase se deriva, a continuación, para proporcionar metadatos más concretos para divisiones arquitectónicas tales como las clases de nivel de marco WPF. <xref:System.Windows.UIPropertyMetadata>agrega animación reporting, y <xref:System.Windows.FrameworkPropertyMetadata> proporciona las propiedades de nivel de marco WPF se ha mencionado en la sección anterior. Cuando se registran las propiedades de dependencia, se puede registrar con estas <xref:System.Windows.PropertyMetadata> las clases derivadas. Cuando se examinan los metadatos, la base de <xref:System.Windows.PropertyMetadata> tipo potencialmente puede convertirse a las clases derivadas para que puedan examinar las propiedades más específicas.  
+ La <xref:System.Windows.PropertyMetadata> clase se deriva, a continuación, para proporcionar metadatos más concretos para divisiones arquitectónicas tales como las clases de nivel de marco WPF. <xref:System.Windows.UIPropertyMetadata> agrega animación reporting, y <xref:System.Windows.FrameworkPropertyMetadata> proporciona las propiedades de nivel de marco WPF se ha mencionado en la sección anterior. Cuando se registran las propiedades de dependencia, se puede registrar con estas <xref:System.Windows.PropertyMetadata> las clases derivadas. Cuando se examinan los metadatos, la base de <xref:System.Windows.PropertyMetadata> tipo potencialmente puede convertirse a las clases derivadas para que puedan examinar las propiedades más específicas.  
   
 > [!NOTE]
 >  Las características de la propiedad que se pueden especificar en <xref:System.Windows.FrameworkPropertyMetadata> se conocen a veces en esta documentación como "flags". Cuando crea nuevas instancias de metadatos para su uso en dependencia registros de propiedad o invalidaciones de metadatos, debe especificar estos valores mediante la enumeración basada en marcadores <xref:System.Windows.FrameworkPropertyMetadataOptions> y, a continuación, proporcione valores posiblemente concatenados de la enumeración para el <xref:System.Windows.FrameworkPropertyMetadata> constructor. Sin embargo, una vez construido, estas características de opción se exponen dentro de un <xref:System.Windows.FrameworkPropertyMetadata> como una serie de propiedades booleanas en lugar de con el valor de enumeración de creación. Las propiedades booleanas permiten comprobar cada condicional, en lugar de exigir que aplique una máscara a un valor de enumeración basada en marcas para obtener la información que le interesa. El constructor utiliza concatenadas <xref:System.Windows.FrameworkPropertyMetadataOptions> para mantener la longitud de la firma del constructor razonable, mientras que los metadatos construidos reales exponen las propiedades discretas para simplificar las consultas de los metadatos más intuitivo.  
@@ -75,13 +63,13 @@ El sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
  Si invalida los metadatos, las distintas características de los metadatos se combinan o se reemplazan.  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>se combina. Si agrega un nuevo <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, esa devolución de llamada se almacena en los metadatos. Si no especifica un <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> en la invalidación, el valor de <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> se promueve como una referencia desde el antecesor más cercano que especifique en los metadatos.  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> se combina. Si agrega un nuevo <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, esa devolución de llamada se almacena en los metadatos. Si no especifica un <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> en la invalidación, el valor de <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> se promueve como una referencia desde el antecesor más cercano que especifique en los metadatos.  
   
 -   El comportamiento del sistema de propiedad real para <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> es que las implementaciones de todos los propietarios de metadatos de la jerarquía se conservan y se agregan a una tabla, con el orden de ejecución en el sistema de propiedades radica en que las devoluciones de llamada de la clase más derivada se invocan en primer lugar.  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>se ha reemplazado. Si no especifica un <xref:System.Windows.PropertyMetadata.DefaultValue%2A> en la invalidación, el valor de <xref:System.Windows.PropertyMetadata.DefaultValue%2A> proceden el antecesor más cercano que especifique en los metadatos.  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> se ha reemplazado. Si no especifica un <xref:System.Windows.PropertyMetadata.DefaultValue%2A> en la invalidación, el valor de <xref:System.Windows.PropertyMetadata.DefaultValue%2A> proceden el antecesor más cercano que especifique en los metadatos.  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>se reemplazan las implementaciones. Si agrega un nuevo <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, esa devolución de llamada se almacena en los metadatos. Si no especifica un <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> en la invalidación, el valor de <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> se promueve como una referencia desde el antecesor más cercano que especifique en los metadatos.  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> se reemplazan las implementaciones. Si agrega un nuevo <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, esa devolución de llamada se almacena en los metadatos. Si no especifica un <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> en la invalidación, el valor de <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> se promueve como una referencia desde el antecesor más cercano que especifique en los metadatos.  
   
 -   El comportamiento del sistema de propiedad es que solo el <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> se invoca en los metadatos inmediato. No hay referencias a otras <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> se retienen las implementaciones en la jerarquía.  
   

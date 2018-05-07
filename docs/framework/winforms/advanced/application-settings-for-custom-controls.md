@@ -1,27 +1,15 @@
 ---
-title: "Configuración de la aplicación para controles personalizados"
-ms.custom: 
+title: Configuración de la aplicación para controles personalizados
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e21a49b26a7493aaec31d5a97e627ce7925f39b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46300f679471874ac5046d0a1077d8abca57f2c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-settings-for-custom-controls"></a>Configuración de la aplicación para controles personalizados
 Debe finalizar determinadas tareas para proporcionar a los controles personalizados la capacidad para conservar la configuración de la aplicación cuando se hospedan los controles en aplicaciones de otros fabricantes.  

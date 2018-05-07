@@ -1,34 +1,20 @@
 ---
 title: Configuración del cliente
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c2c0d17c7274cc9fdaf1b5080950ddb4f69f539a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0fd3d1a15164447275ef488ac91b9a8bd240032d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-configuration"></a>Configuración del cliente
-Puede utilizar la configuración de cliente de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para especificar la dirección, enlace, comportamiento y contrato, las propiedades "ABC" del extremo del cliente, que los clientes utilizan para conectarse a los extremos del servicio. El [ \<cliente >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento tiene un [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento cuyos atributos se utilizan para configurar los ABC del extremo. Estos atributos se discuten en la sección “Configuración de puntos de conexión” de este tema.  
+Puede usar la configuración de cliente de Windows Communication Foundation (WCF) para especificar la dirección, enlace, comportamiento y contrato, las propiedades "ABC" del punto de conexión de cliente, que los clientes utilizan para conectarse a los extremos de servicio. El [ \<cliente >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento tiene un [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento cuyos atributos se utilizan para configurar los ABC del extremo. Estos atributos se discuten en la sección “Configuración de puntos de conexión” de este tema.  
   
  El [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento también contiene un [ \<metadatos >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) elemento que se utiliza para especificar la configuración para la importación y exportación de metadatos, un [ \<encabezados >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) elemento que contiene una colección de encabezados de dirección personalizados y un [ \<identidad >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elemento que habilita la autenticación de un extremo por otros puntos de conexión intercambiar mensajes con él. El [ \<encabezados >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) y [ \<identidad >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elementos forman parte de la <xref:System.ServiceModel.EndpointAddress> y se describen en la [direcciones](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) tema. En la subsección Configuración de metadatos de este tema se proporcionan vínculos a temas que explican el uso de extensiones de metadatos.  
   
 ## <a name="configuring-endpoints"></a>Configuración de puntos de conexión  
- La configuración del cliente está diseñada para permitir que el cliente especificar uno o más extremos, cada uno con su propio nombre, dirección y contrato, con cada referencia a la [ \<enlaces >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) y [ \< comportamientos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementos en la configuración del cliente que se usará para configurar dicho extremo. El archivo de configuración del cliente debería llamarse "App.config", porque se trata del nombre que el tiempo de ejecución de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] espera. El siguiente ejemplo muestra un archivo de configuración de cliente.  
+ La configuración del cliente está diseñada para permitir que el cliente especificar uno o más extremos, cada uno con su propio nombre, dirección y contrato, con cada referencia a la [ \<enlaces >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) y [ \< comportamientos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementos en la configuración del cliente que se usará para configurar dicho extremo. El archivo de configuración de cliente debe denominarse "App.config" porque se trata del nombre que espera el tiempo de ejecución WCF. El siguiente ejemplo muestra un archivo de configuración de cliente.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

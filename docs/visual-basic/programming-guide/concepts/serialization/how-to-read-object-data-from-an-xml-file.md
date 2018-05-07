@@ -1,22 +1,12 @@
 ---
-title: "Cómo: leer objetos de datos desde un archivo XML (Visual Basic)"
-ms.custom: 
+title: 'Cómo: leer objetos de datos desde un archivo XML (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47e5c614f2083ec2c595bba9c9454ecc5f61c786
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fa8623abeebfa413677b4b68d6ab6b7a0547ccd6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Cómo: leer objetos de datos desde un archivo XML (Visual Basic)
 En este ejemplo se leen los datos de objetos que se han escrito anteriormente en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  

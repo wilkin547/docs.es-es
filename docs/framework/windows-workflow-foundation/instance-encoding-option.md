@@ -1,23 +1,12 @@
 ---
-title: "Opción de codificación de instancias"
-ms.custom: 
+title: Opción de codificación de instancias
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 89e4b029-4f68-438c-8117-9b21fe094ef4
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7664eecb68ff9aec0f5e3e31aa08058700f0e92
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfe45428f546b6f47709c321099efdf7fbb25ef4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instance-encoding-option"></a>Opción de codificación de instancias
 El **opción de codificación de la instancia** propiedad del almacén de instancia de flujo de trabajo de SQL le permite especificar si el proveedor de persistencia de SQL debe comprimir la información de estado de instancia de flujo de trabajo utilizando el algoritmo GZip antes de guardar el información en la base de datos de persistencia. Los valores permitidos para esta propiedad son: GZip y Ninguno. El valor predeterminado es None. En la lista siguiente se describen estas opciones.  

@@ -1,11 +1,6 @@
 ---
-title: "Join (Cláusula, Visual Basic)"
+title: Join (Cláusula, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryJoinIn
 - vb.QueryJoin
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2bb25c9dac8994e7f975539c1d036f0f0d9d239e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2186954ab6536988271629c4feba0a40563bfc3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-clause-visual-basic"></a>Join (Cláusula, Visual Basic)
 Combina dos colecciones en una sola colección. La operación de combinación se basa en claves coincidentes y usa el `Equals` operador.  
@@ -38,10 +30,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="parts"></a>Elementos  
  `element`  
- Obligatorio. La variable de control de la colección que se está combinando.  
+ Requerido. La variable de control de la colección que se está combinando.  
   
  `collection`  
- Obligatorio. La colección que se combinará con la colección identificado en el lado izquierdo de la `Join` operador. A `Join` cláusula puede estar anidada en otro `Join` cláusula, o en un `Group Join` cláusula.  
+ Requerido. La colección que se combinará con la colección identificado en el lado izquierdo de la `Join` operador. A `Join` cláusula puede estar anidada en otro `Join` cláusula, o en un `Group Join` cláusula.  
   
  `joinClause`  
  Opcional. Uno o más adicional `Join` cláusulas para seguir refinar la consulta.  
@@ -50,7 +42,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  Opcional. Uno o más adicional `Group Join` cláusulas para seguir refinar la consulta.  
   
  `key1` `Equals` `key2`  
- Requerido. Identifica las claves para las colecciones que se está combina. Debe utilizar el `Equals` operador para comparar las claves de las colecciones que se está combina. Puede combinar condiciones de combinación mediante la `And` operador para identificar varias claves. `key1`debe ser de la colección en el lado izquierdo de la `Join` operador. `key2`debe ser de la colección en el lado derecho de la `Join` operador.  
+ Requerido. Identifica las claves para las colecciones que se está combina. Debe utilizar el `Equals` operador para comparar las claves de las colecciones que se está combina. Puede combinar condiciones de combinación mediante la `And` operador para identificar varias claves. `key1` debe ser de la colección en el lado izquierdo de la `Join` operador. `key2` debe ser de la colección en el lado derecho de la `Join` operador.  
   
  Las claves utilizadas en la condición de combinación pueden ser expresiones que incluyen más de un elemento de la colección. Sin embargo, cada expresión de clave solo puede contener elementos de su colección respectiva.  
   

@@ -1,27 +1,15 @@
 ---
-title: "Cómo: Crear un servicio que acepte datos arbitrarios mediante el modelo de programación REST de WCF"
-ms.custom: 
+title: 'Cómo: Crear un servicio que acepte datos arbitrarios mediante el modelo de programación REST de WCF'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 170149f5a6c495b3f22b9fd30f79ecdda87789b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc2643672743971da14c8bc4c75ac113f691bf4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Cómo: Crear un servicio que acepte datos arbitrarios mediante el modelo de programación REST de WCF
-A veces los programadores deben tener un control absoluto de la forma en que se devuelven los datos desde una operación de un servicio. Así es cuando una operación de un servicio debe devolver los datos en un formato no admitido por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. En este tema se analiza el uso del modelo de programación REST de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para crear un servicio que recibe datos arbitrarios.  
+A veces los programadores deben tener un control absoluto de la forma en que se devuelven los datos desde una operación de un servicio. Esto sucede cuando una operación de servicio debe devolver datos en un formato no admiten byWCF. Este tema describe el uso del modelo de programación de REST de WCF para crear un servicio que recibe datos arbitrarios.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar el contrato de servicios  
   

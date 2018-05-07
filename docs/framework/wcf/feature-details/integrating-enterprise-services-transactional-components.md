@@ -1,27 +1,15 @@
 ---
-title: "Integración de los componentes transaccionales de Enterprise Services"
-ms.custom: 
+title: Integración de los componentes transaccionales de Enterprise Services
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b6ce82d100341fec4415cf9fdb7159706b2accc4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8453b4199f5e6eae263ebc3fc1c457429c868d7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integración de los componentes transaccionales de Enterprise Services
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Proporciona un mecanismo automático para la integración con Enterprise Services (vea [integración con aplicaciones COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Sin embargo, puede querer flexibilidad para desarrollar servicios que utilicen internamente componentes transaccionales hospedados en Enterprise Services. Dado que la [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] característica de transacciones se basa en el <xref:System.Transactions> infraestructura, el proceso de integración de Enterprise Services con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] es idéntico de la especificación de interoperabilidad entre <xref:System.Transactions> y Enterprise Servicios, como se describe en [interoperabilidad con servicios empresariales y las transacciones COM +](http://go.microsoft.com/fwlink/?LinkId=94949).  
+Windows Communication Foundation (WCF) proporciona un mecanismo automático para la integración con Enterprise Services (vea [integración con aplicaciones COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Sin embargo, puede querer flexibilidad para desarrollar servicios que utilicen internamente componentes transaccionales hospedados en Enterprise Services. Dado que la característica de transacciones de WCF se basa el <xref:System.Transactions> infraestructura, el proceso de integración de Enterprise Services con WCF es idéntico a la de la especificación de interoperabilidad entre <xref:System.Transactions> y Enterprise Services, tal como se describe en [Interoperabilidad con servicios empresariales y las transacciones COM +](http://go.microsoft.com/fwlink/?LinkId=94949).  
   
  Para proporcionar el nivel deseado de interoperabilidad entre la transacción fluida entrante y la transacción de contexto de COM+, la implementación del servicio debe crear una instancia <xref:System.Transactions.TransactionScope> y utilizar el valor adecuado de la enumeración <xref:System.Transactions.EnterpriseServicesInteropOption>.  
   

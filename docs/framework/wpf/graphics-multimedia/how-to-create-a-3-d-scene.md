@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Crear una escena 3D"
-ms.custom: 
+title: 'Cómo: Crear una escena 3D'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - scenes [WPF], 3-D
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f52642a1764a7db01d4ca330f3bf25bdca10fa06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e3c2ea803961ca57606f8ea8bec21d50a38dbe1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-3-d-scene"></a>Cómo: Crear una escena 3D
 En este ejemplo se muestra cómo crear un objeto 3D que parece una hoja de papel que se ha girado plana. Un <xref:System.Windows.Controls.Viewport3D> junto con los siguientes componentes se utilizan para crear esta escena 3D sencilla:  

@@ -1,11 +1,7 @@
 ---
-title: "Función BeginMethodEnumeration (referencia de API no administrada)"
-description: "La función BeginMethodEnumeration comienza una enumeración de los métodos del objeto"
+title: Función BeginMethodEnumeration (referencia de API no administrada)
+description: La función BeginMethodEnumeration comienza una enumeración de los métodos del objeto
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BeginMethodEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d843c40a8ab0dd1c48a08126b8c7472505a1732
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d87627b8bb3414860d994273396dbb4e64acdea7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration (función)
 Comienza una enumeración de los métodos disponibles para el objeto.  
@@ -66,7 +59,7 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `lEnnumFlags`es distinto de cero y no es uno de los indicadores especificados. |
+|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `lEnnumFlags` es distinto de cero y no es uno de los indicadores especificados. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función tuvo éxito.  |
   
 ## <a name="remarks"></a>Comentarios
@@ -80,7 +73,7 @@ Llamar a este método solo se admite si el objeto actual es una definición de c
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

@@ -1,13 +1,6 @@
 ---
-title: "Información general sobre el modelo de contenido de TextElement"
-ms.custom: 
+title: Información general sobre el modelo de contenido de TextElement
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95d25ff6819ba913b7e9270bc2d87dd77032c5c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a50e8a10563fdc5e16ee2e2a46389e13b51e447
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="textelement-content-model-overview"></a>Información general sobre el modelo de contenido de TextElement
 Esta información general de modelo de contenido describe el contenido compatible para un <xref:System.Windows.Documents.TextElement>. El <xref:System.Windows.Documents.Paragraph> clase es un tipo de <xref:System.Windows.Documents.TextElement>. Un modelo de contenido describe qué objetos o elementos se pueden contener en otros. Esta información general resume el modelo de contenido que se usa para los objetos derivados de <xref:System.Windows.Documents.TextElement>. Para obtener más información, consulte [Flow Document Overview](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
@@ -69,7 +57,7 @@ Esta información general de modelo de contenido describe el contenido compatibl
 ## <a name="working-with-textelement-content-programmatically"></a>Trabajar con contenido de TextElement mediante programación  
  El contenido de un <xref:System.Windows.Documents.TextElement> está formado por las colecciones de modo que manipular mediante programación el contenido de <xref:System.Windows.Documents.TextElement> objetos se realiza cuando se trabaja con estas colecciones. Hay tres colecciones diferentes utilizadas por <xref:System.Windows.Documents.TextElement> -las clases derivadas:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Representa una colección de <xref:System.Windows.Documents.Inline> elementos. <xref:System.Windows.Documents.InlineCollection>define el contenido secundario permitido de la <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, y <xref:System.Windows.Controls.TextBlock> elementos.  
+-   <xref:System.Windows.Documents.InlineCollection>: Representa una colección de <xref:System.Windows.Documents.Inline> elementos. <xref:System.Windows.Documents.InlineCollection> define el contenido secundario permitido de la <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, y <xref:System.Windows.Controls.TextBlock> elementos.  
   
 -   <xref:System.Windows.Documents.BlockCollection>: Representa una colección de <xref:System.Windows.Documents.Block> elementos. <xref:System.Windows.Documents.BlockCollection> define el contenido secundario permitido de los elementos <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> y <xref:System.Windows.Documents.Figure>.  
   

@@ -1,24 +1,12 @@
 ---
-title: "Correlación"
-ms.custom: 
+title: Correlación
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a0be008eae45ca5bbe6ca77383bde433931b72e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9dbebf6d497a5cc109400d04206d39ad76321ba3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="correlation"></a>Correlación
 Cuando las aplicaciones de servicio de flujo de trabajo se comunican con otros servicios, es importante que los mensajes entre ellos se envíen a la instancia de flujo de trabajo adecuada. La correlación proporciona el mecanismo para ello. Los temas de esta sección proporcionan información general sobre la correlación y sobre cómo utilizarla en diversos casos de servicio de flujo de trabajo.  

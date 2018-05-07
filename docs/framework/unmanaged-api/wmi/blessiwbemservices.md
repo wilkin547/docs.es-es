@@ -1,11 +1,7 @@
 ---
-title: "Función BlessIWbemServices (referencia de API no administrada)"
-description: "La función BlessIWbemServices indica si las credenciales de usuario permiten el acceso a una clase IWbemServices."
+title: Función BlessIWbemServices (referencia de API no administrada)
+description: La función BlessIWbemServices indica si las credenciales de usuario permiten el acceso a una clase IWbemServices.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BlessIWbemServices
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f384e8d045dd7a6f2f864f0991f8caf4a674408b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59cb20f7ccfbd0b8f9d6026c9805468613818130
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices (función)
 Indica si las credenciales de usuario permiten el acceso a la especificada [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) clase.   
@@ -58,11 +51,11 @@ HRESULT BlessIWbemServices (
 `strPassword`  
 [in] La contraseña asociada a `strUser`.
 
-`strAuthority`[in] El nombre de dominio del usuario. Consulte la [ConnectServerWmi](connectserverwmi.md) función para obtener más información.
+`strAuthority` [in] El nombre de dominio del usuario. Consulte la [ConnectServerWmi](connectserverwmi.md) función para obtener más información.
 
-`impLevel`[in] El nivel de suplantación.
+`impLevel` [in] El nivel de suplantación.
 
-`authnLevel`[in] El nivel de autorización.
+`authnLevel` [in] El nivel de autorización.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -81,7 +74,7 @@ Los siguientes valores devueltos por esta función se definen en el *WinError.h*
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

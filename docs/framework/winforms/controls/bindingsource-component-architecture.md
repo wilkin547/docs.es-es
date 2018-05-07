@@ -1,29 +1,17 @@
 ---
 title: Arquitectura del componente BindingSource
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - BindingSource component [Windows Forms], architecture
 - Windows Forms, data binding
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0334bd7a0bc5ff46c43fd7ee549422d98c35efe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindingsource-component-architecture"></a>Arquitectura del componente BindingSource
 Con el <xref:System.Windows.Forms.BindingSource> , componente, puede enlazar universalmente todos los controles de formularios Windows Forms a orígenes de datos.  
@@ -57,13 +45,13 @@ Con el <xref:System.Windows.Forms.BindingSource> , componente, puede enlazar uni
   
 -   Origen de datos como una lista.  
   
--   <xref:System.Windows.Forms.BindingSource>como un <xref:System.ComponentModel.IBindingList>.  
+-   <xref:System.Windows.Forms.BindingSource> como un <xref:System.ComponentModel.IBindingList>.  
   
 -   Creación de elementos personalizadas.  
   
 -   Creación de elemento transaccional.  
   
--   <xref:System.Collections.IEnumerable>soporte técnico.  
+-   <xref:System.Collections.IEnumerable> soporte técnico.  
   
 -   Compatibilidad en tiempo de diseño.  
   
@@ -120,7 +108,7 @@ Con el <xref:System.Windows.Forms.BindingSource> , componente, puede enlazar uni
 |Una referencia nula (`Nothing` en Visual Basic) con <xref:System.Windows.Forms.BindingSource.DataMember%2A> establecido|No se admite; genera <xref:System.ArgumentException>.|  
 |Tipo de lista no o un objeto de tipo "T"|Vacío <xref:System.ComponentModel.IBindingList> de tipo "T".|  
 |Instancia de la matriz|Un <xref:System.ComponentModel.IBindingList> que contiene los elementos de matriz.|  
-|<xref:System.Collections.IEnumerable>instancia|Un <xref:System.ComponentModel.IBindingList> que contiene el <xref:System.Collections.IEnumerable> elementos|  
+|<xref:System.Collections.IEnumerable> Instancia|Un <xref:System.ComponentModel.IBindingList> que contiene el <xref:System.Collections.IEnumerable> elementos|  
 |"T" de la instancia que contiene el tipo de lista|Un <xref:System.ComponentModel.IBindingList> instancia que contiene el tipo "T".|  
   
  Además, <xref:System.Windows.Forms.BindingSource.DataSource%2A> se puede establecer en otros tipos de lista, como <xref:System.ComponentModel.IListSource> y <xref:System.ComponentModel.ITypedList>y el <xref:System.Windows.Forms.BindingSource> controlará adecuadamente. En este caso, el tipo que se encuentra en la lista debería tener un constructor predeterminado.  
@@ -174,7 +162,7 @@ Con el <xref:System.Windows.Forms.BindingSource> , componente, puede enlazar uni
 |Miembro|Descripción|  
 |------------|-----------------|  
 |Propiedad <xref:System.Windows.Forms.BindingSource.Filter%2A>|Si el origen de datos es una <xref:System.ComponentModel.IBindingListView>, obtiene o establece la expresión usada para filtrar qué filas se ven.|  
-|Propiedad <xref:System.Windows.Forms.BindingSource.Sort%2A>|Si el origen de datos es una <xref:System.ComponentModel.IBindingList>, obtiene o establece el nombre de columna usado para ordenar y el criterio de ordenación.<br /><br /> O bien<br /><br /> Si el origen de datos es un <xref:System.ComponentModel.IBindingListView> y admite la ordenación avanzada, obtiene varios nombres de columna utilizados para ordenar y el criterio de ordenación|  
+|Propiedad <xref:System.Windows.Forms.BindingSource.Sort%2A>|Si el origen de datos es una <xref:System.ComponentModel.IBindingList>, obtiene o establece el nombre de columna usado para ordenar y el criterio de ordenación.<br /><br /> -o bien-<br /><br /> Si el origen de datos es un <xref:System.ComponentModel.IBindingListView> y admite la ordenación avanzada, obtiene varios nombres de columna utilizados para ordenar y el criterio de ordenación|  
   
 ### <a name="integration-with-bindingnavigator"></a>Integración con BindingNavigator  
  Puede usar el <xref:System.Windows.Forms.BindingSource> componente para enlazar cualquier control de formularios Windows Forms a un origen de datos, pero la <xref:System.Windows.Forms.BindingNavigator> control está diseñado específicamente para trabajar con el <xref:System.Windows.Forms.BindingSource> componente. El <xref:System.Windows.Forms.BindingNavigator> control proporciona una interfaz de usuario para controlar la <xref:System.Windows.Forms.BindingSource> elemento actual del componente. De forma predeterminada, el <xref:System.Windows.Forms.BindingNavigator> control proporciona botones que corresponden a los métodos de navegación en la <xref:System.Windows.Forms.BindingSource> componente. Para obtener más información, consulte [Cómo: navegar por datos con el BindingNavigator Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md).  

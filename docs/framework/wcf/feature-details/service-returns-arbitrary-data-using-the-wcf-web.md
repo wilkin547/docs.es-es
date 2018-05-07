@@ -1,27 +1,15 @@
 ---
-title: "Como: Crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF"
-ms.custom: 
+title: 'Como: Crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 829e9f2bcf909bee41f53b4b7cabbb0803e77963
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Como: Crear un servicio que devuelva datos arbitrarios mediante el modelo de programación web HTTP de WCF
-A veces los programadores deben tener un control absoluto de la forma en que se devuelven los datos desde una operación de un servicio. Esto sucede cuando una operación de servicio debe devolver datos en un formato no compatible con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. En este tema se analiza el uso del modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para crear este tipo de servicio. Este servicio tiene una operación que devuelve una secuencia.  
+A veces los programadores deben tener un control absoluto de la forma en que se devuelven los datos desde una operación de un servicio. Esto sucede cuando una operación de servicio debe devolver datos en un formato no compatible con WCF. Este tema describe el uso del modelo de programación de WEB HTTP de WCF para crear este tipo de servicio. Este servicio tiene una operación que devuelve una secuencia.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar el contrato de servicios  
   
@@ -36,7 +24,7 @@ A veces los programadores deben tener un control absoluto de la forma en que se 
         }  
     ```  
   
-     Dado que el método devuelve <xref:System.IO.Stream>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] asume que la operación tiene el control completo de los bytes que se devuelven desde la operación del servicio y no aplica ningún formato a los datos devueltos.  
+     Dado que el método devuelve un <xref:System.IO.Stream>, WCF supone que la operación tiene un control completo sobre los bytes que se devuelven desde la operación de servicio y no aplica ningún formato a los datos que se devuelven.  
   
 2.  Implemente el contrato de servicios. El contrato tiene una sola operación (`GetImage`). Este método genera un mapa de bits y, a continuación, lo guarda en <xref:System.IO.MemoryStream> en formato .jpg. A continuación, la operación devuelve esa secuencia al llamador.  
   

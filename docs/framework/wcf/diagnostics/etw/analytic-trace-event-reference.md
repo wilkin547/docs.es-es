@@ -1,28 +1,14 @@
 ---
-title: "Referencia de evento de traza analítica"
-ms.custom: 
+title: Referencia de evento de traza analítica
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9a07aed6ade7d5eb806b666711a49c0b9507d3ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9066f3cde47f95773596fbbf1c6cc36b71d3f3ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="analytic-trace-event-reference"></a>Referencia de evento de traza analítica
 En la siguiente tabla, se definen los niveles de eventos, los identificadores y los mensajes asociados a la traza analítica de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
@@ -276,7 +262,7 @@ En la siguiente tabla, se definen los niveles de eventos, los identificadores y 
 |[3816 - RoutingServiceTransmittingMessage](../../../../../docs/framework/wcf/diagnostics/etw/3816-routingservicetransmittingmessage.md)|Información|El Servicio de enrutamiento está transmitiendo el mensaje con identificador: '%1' [operación %2] a '%3'.|RoutingServices|  
 |[3817 - RoutingServiceCommittingTransaction](../../../../../docs/framework/wcf/diagnostics/etw/3817-routingservicecommittingtransaction.md)|Información|El servicio de enrutamiento está confirmando una transacción con id.: '%1'.|RoutingServices|  
 |[3818 - RoutingServiceDuplexCallbackException](../../../../../docs/framework/wcf/diagnostics/etw/3818-routingserviceduplexcallbackexception.md)|Error|Excepción de devolución de llamada dúplex en el componente %1 del servicio de enrutamiento.|RoutingServices|  
-|[3819 - RoutingServiceMovedToBackup](../../../../../docs/framework/wcf/diagnostics/etw/3819-routingservicemovedtobackup.md)|Información|Mensaje del servicio de enrutamiento con identificador: '%1' [operación %2] movido al extremo auxiliar '%3'.|RoutingServices|  
+|[3819 - RoutingServiceMovedToBackup](../../../../../docs/framework/wcf/diagnostics/etw/3819-routingservicemovedtobackup.md)|Información|Mensaje del servicio de enrutamiento con identificador: '%1' [operación %2] movido al punto de conexión auxiliar '%3'.|RoutingServices|  
 |[3820 - RoutingServiceCreatingTransaction](../../../../../docs/framework/wcf/diagnostics/etw/3820-routingservicecreatingtransaction.md)|Información|El servicio de enrutamiento creó una nueva transacción con id. '%1' para procesar los mensajes.|RoutingServices|  
 |[3821 - RoutingServiceCloseFailed](../../../../../docs/framework/wcf/diagnostics/etw/3821-routingserviceclosefailed.md)|Advertencia|El servicio de enrutamiento no pudo cerrar el cliente de salida '%1'.|RoutingServices|  
 |[3822 - RoutingServiceSendingResponse](../../../../../docs/framework/wcf/diagnostics/etw/3822-routingservicesendingresponse.md)|Información|El servicio de enrutamiento está devolviendo un mensaje de respuesta con la acción '%1'|RoutingServices|  
@@ -319,27 +305,27 @@ En la siguiente tabla, se definen los niveles de eventos, los identificadores y 
 |[4034 - RoutingTableLookupStop](../../../../../docs/framework/wcf/diagnostics/etw/4034-routingtablelookupstop.md)|Detallado|Se completó la búsqueda de la tabla de enrutamiento.|ActivationServices|  
 |[4035 - PendingSessionQueueRatio](../../../../../docs/framework/wcf/diagnostics/etw/4035-pendingsessionqueueratio.md)|Detallado|Proporción de la cola de sesiones pendientes: %1/%2|Cuota|  
 |[4600 - MessageLogEventSizeExceeded](../../../../../docs/framework/wcf/diagnostics/etw/4600-messagelogeventsizeexceeded.md)|Advertencia|No se puede registrar el mensaje porque excede el tamaño de evento de ETW|WCFMessageLogging|  
-|[4801 - DiscoveryClientInClientChannelFailedToClose](../../../../../docs/framework/wcf/diagnostics/etw/4801-discoveryclientinclientchannelfailedtoclose.md)|Advertencia|No se pudo cerrar el DiscoveryClient creado en DiscoveryClientChannel y, por lo tanto, se ha anulado.|Descubrimiento|  
-|[4802 - DiscoveryClientProtocolExceptionSuppressed](../../../../../docs/framework/wcf/diagnostics/etw/4802-discoveryclientprotocolexceptionsuppressed.md)|Información|Se ha suprimido ProtocolException al cerrar DiscoveryClient. Esto se puede deber a que DiscoveryService todavía está intentando enviar una respuesta a DiscoveryClient.|Descubrimiento|  
-|[4803 - DiscoveryClientReceivedMulticastSuppression](../../../../../docs/framework/wcf/diagnostics/etw/4803-discoveryclientreceivedmulticastsuppression.md)|Información|DiscoveryClient recibió un mensaje de supresión multidifusión de DiscoveryProxy.|Descubrimiento|  
-|[4804 - DiscoveryMessageReceivedAfterOperationCompleted](../../../../../docs/framework/wcf/diagnostics/etw/4804-discoverymessagereceivedafteroperationcompleted.md)|Información|DiscoveryClient quitó un mensaje %1 con messageId='%2' porque se completó la operación %3 correspondiente.|Descubrimiento|  
-|[4805 - DiscoveryMessageWithInvalidContent](../../../../../docs/framework/wcf/diagnostics/etw/4805-discoverymessagewithinvalidcontent.md)|Advertencia|Se eliminó un mensaje %1 con messageId='%2' porque incluía contenido no válido.|Descubrimiento|  
-|[4806 - DiscoveryMessageWithInvalidRelatesToOrOperationCompleted](../../../../../docs/framework/wcf/diagnostics/etw/4806-discoverymessagewithinvalidrelatestooroperationcompleted.md)|Advertencia|DiscoveryClient eliminó un mensaje %1 con messageId='%2 y relatesTo='%3 porque se completó la operación %4 correspondiente o el valor de relatesTo no es válido.|Descubrimiento|  
-|[4807 - DiscoveryMessageWithInvalidReplyTo](../../../../../docs/framework/wcf/diagnostics/etw/4807-discoverymessagewithinvalidreplyto.md)|Advertencia|Se quitó un mensaje de solicitud de detección con messageId='%1' porque tenía una dirección ReplyTo no válida.|Descubrimiento|  
-|[4808 - DiscoveryMessageWithNoContent](../../../../../docs/framework/wcf/diagnostics/etw/4808-discoverymessagewithnocontent.md)|Advertencia|Se eliminó un mensaje %1 porque no incluía contenido.|Descubrimiento|  
-|[4809 - DiscoveryMessageWithNullMessageId](../../../../../docs/framework/wcf/diagnostics/etw/4809-discoverymessagewithnullmessageid.md)|Advertencia|Se quitó un mensaje %1 porque el encabezado de mensaje no contenía la propiedad MessageId requerida.|Descubrimiento|  
-|[4810 - DiscoveryMessageWithNullMessageSequence](../../../../../docs/framework/wcf/diagnostics/etw/4810-discoverymessagewithnullmessagesequence.md)|Advertencia|DiscoveryClient quitó un mensaje %1 con messageId='%2' porque no tenía la propiedad DiscoveryMessageSequence.|Descubrimiento|  
-|[4811 - DiscoveryMessageWithNullRelatesTo](../../../../../docs/framework/wcf/diagnostics/etw/4811-discoverymessagewithnullrelatesto.md)|Advertencia|DiscoveryClient quitó un mensaje %1 con messageId='%2' porque el encabezado de mensaje no contenía la propiedad RelatesTo requerida.|Descubrimiento|  
-|[4812 - DiscoveryMessageWithNullReplyTo](../../../../../docs/framework/wcf/diagnostics/etw/4812-discoverymessagewithnullreplyto.md)|Advertencia|Se quitó un mensaje de solicitud de detección con messageId='%1' porque no tenía una dirección ReplyTo.|Descubrimiento|  
-|[4813 - DuplicateDiscoveryMessage](../../../../../docs/framework/wcf/diagnostics/etw/4813-duplicatediscoverymessage.md)|Advertencia|Se quitó un mensaje %1 con messageId='%2' porque era un duplicado.|Descubrimiento|  
-|[4814 - EndpointDiscoverabilityDisabled](../../../../../docs/framework/wcf/diagnostics/etw/4814-endpointdiscoverabilitydisabled.md)|Información|Se ha deshabilitado la detectabilidad de extremo con EndpointAddress='%1' y ListenUri='%2'.|Descubrimiento|  
-|[4814 - EndpointDiscoverabilityDisabled](../../../../../docs/framework/wcf/diagnostics/etw/4814-endpointdiscoverabilitydisabled.md)|Información|Se ha habilitado la detectabilidad de extremo con EndpointAddress='%1' y ListenUri='%2'.|Descubrimiento|  
-|[4816 - FindInitiatedInDiscoveryClientChannel](../../../../../docs/framework/wcf/diagnostics/etw/4816-findinitiatedindiscoveryclientchannel.md)|Detallado|Se inició una operación de búsqueda en el DiscoveryClientChannel para descubrir los extremos.|Descubrimiento|  
-|[4817 - InnerChannelCreationFailed](../../../../../docs/framework/wcf/diagnostics/etw/4817-innerchannelcreationfailed.md)|Advertencia|DiscoveryClientChannel no pudo crear el canal con un extremo detectado con EndpointAddress='%1' y Via='%2'. DiscoveryClientChannel ahora intentará usar el siguiente extremo detectable disponible.|Descubrimiento|  
-|[4818 - InnerChannelOpenFailed](../../../../../docs/framework/wcf/diagnostics/etw/4818-innerchannelopenfailed.md)|Advertencia|DiscoveryClientChannel no pudo abrir el canal con un extremo detectado con EndpointAddress='%1' y Via='%2' DiscoveryClientChannel ahora intentará usar el siguiente extremo detectable disponible.|Descubrimiento|  
-|[4819 - InnerChannelOpenSucceeded](../../../../../docs/framework/wcf/diagnostics/etw/4819-innerchannelopensucceeded.md)|Información|DiscoveryClientChannel detectó correctamente un extremo y abrió el canal con él. El cliente está conectado a un servicio que usa EndpointAddress='%1' y Via='%2'.|Descubrimiento|  
-|[4820 - SynchronizationContextReset](../../../../../docs/framework/wcf/diagnostics/etw/4820-synchronizationcontextreset.md)|Información|SynchronizationContext se ha restablecido a su valor original de %1 mediante DiscoveryClientChannel.|Descubrimiento|  
-|[4821 - SynchronizationContextSetToNull](../../../../../docs/framework/wcf/diagnostics/etw/4821-synchronizationcontextsettonull.md)|Información|SynchronizationContext se ha establecido en NULL mediante DiscoveryClientChannel antes de iniciar la operación Find.|Descubrimiento|  
+|[4801 - DiscoveryClientInClientChannelFailedToClose](../../../../../docs/framework/wcf/diagnostics/etw/4801-discoveryclientinclientchannelfailedtoclose.md)|Advertencia|No se pudo cerrar el DiscoveryClient creado en DiscoveryClientChannel y, por lo tanto, se ha anulado.|de esquema JSON|  
+|[4802 - DiscoveryClientProtocolExceptionSuppressed](../../../../../docs/framework/wcf/diagnostics/etw/4802-discoveryclientprotocolexceptionsuppressed.md)|Información|Se ha suprimido ProtocolException al cerrar DiscoveryClient. Esto se puede deber a que DiscoveryService todavía está intentando enviar una respuesta a DiscoveryClient.|de esquema JSON|  
+|[4803 - DiscoveryClientReceivedMulticastSuppression](../../../../../docs/framework/wcf/diagnostics/etw/4803-discoveryclientreceivedmulticastsuppression.md)|Información|DiscoveryClient recibió un mensaje de supresión multidifusión de DiscoveryProxy.|de esquema JSON|  
+|[4804 - DiscoveryMessageReceivedAfterOperationCompleted](../../../../../docs/framework/wcf/diagnostics/etw/4804-discoverymessagereceivedafteroperationcompleted.md)|Información|DiscoveryClient quitó un mensaje %1 con messageId='%2' porque se completó la operación %3 correspondiente.|de esquema JSON|  
+|[4805 - DiscoveryMessageWithInvalidContent](../../../../../docs/framework/wcf/diagnostics/etw/4805-discoverymessagewithinvalidcontent.md)|Advertencia|Se eliminó un mensaje %1 con messageId='%2' porque incluía contenido no válido.|de esquema JSON|  
+|[4806 - DiscoveryMessageWithInvalidRelatesToOrOperationCompleted](../../../../../docs/framework/wcf/diagnostics/etw/4806-discoverymessagewithinvalidrelatestooroperationcompleted.md)|Advertencia|DiscoveryClient eliminó un mensaje %1 con messageId='%2 y relatesTo='%3 porque se completó la operación %4 correspondiente o el valor de relatesTo no es válido.|de esquema JSON|  
+|[4807 - DiscoveryMessageWithInvalidReplyTo](../../../../../docs/framework/wcf/diagnostics/etw/4807-discoverymessagewithinvalidreplyto.md)|Advertencia|Se quitó un mensaje de solicitud de detección con messageId='%1' porque tenía una dirección ReplyTo no válida.|de esquema JSON|  
+|[4808 - DiscoveryMessageWithNoContent](../../../../../docs/framework/wcf/diagnostics/etw/4808-discoverymessagewithnocontent.md)|Advertencia|Se eliminó un mensaje %1 porque no incluía contenido.|de esquema JSON|  
+|[4809 - DiscoveryMessageWithNullMessageId](../../../../../docs/framework/wcf/diagnostics/etw/4809-discoverymessagewithnullmessageid.md)|Advertencia|Se quitó un mensaje %1 porque el encabezado de mensaje no contenía la propiedad MessageId requerida.|de esquema JSON|  
+|[4810 - DiscoveryMessageWithNullMessageSequence](../../../../../docs/framework/wcf/diagnostics/etw/4810-discoverymessagewithnullmessagesequence.md)|Advertencia|DiscoveryClient quitó un mensaje %1 con messageId='%2' porque no tenía la propiedad DiscoveryMessageSequence.|de esquema JSON|  
+|[4811 - DiscoveryMessageWithNullRelatesTo](../../../../../docs/framework/wcf/diagnostics/etw/4811-discoverymessagewithnullrelatesto.md)|Advertencia|DiscoveryClient quitó un mensaje %1 con messageId='%2' porque el encabezado de mensaje no contenía la propiedad RelatesTo requerida.|de esquema JSON|  
+|[4812 - DiscoveryMessageWithNullReplyTo](../../../../../docs/framework/wcf/diagnostics/etw/4812-discoverymessagewithnullreplyto.md)|Advertencia|Se quitó un mensaje de solicitud de detección con messageId='%1' porque no tenía una dirección ReplyTo.|de esquema JSON|  
+|[4813 - DuplicateDiscoveryMessage](../../../../../docs/framework/wcf/diagnostics/etw/4813-duplicatediscoverymessage.md)|Advertencia|Se quitó un mensaje %1 con messageId='%2' porque era un duplicado.|de esquema JSON|  
+|[4814 - EndpointDiscoverabilityDisabled](../../../../../docs/framework/wcf/diagnostics/etw/4814-endpointdiscoverabilitydisabled.md)|Información|Se ha deshabilitado la detectabilidad de extremo con EndpointAddress='%1' y ListenUri='%2'.|de esquema JSON|  
+|[4814 - EndpointDiscoverabilityDisabled](../../../../../docs/framework/wcf/diagnostics/etw/4814-endpointdiscoverabilitydisabled.md)|Información|Se ha habilitado la detectabilidad de extremo con EndpointAddress='%1' y ListenUri='%2'.|de esquema JSON|  
+|[4816 - FindInitiatedInDiscoveryClientChannel](../../../../../docs/framework/wcf/diagnostics/etw/4816-findinitiatedindiscoveryclientchannel.md)|Detallado|Se inició una operación de búsqueda en el DiscoveryClientChannel para descubrir los extremos.|de esquema JSON|  
+|[4817 - InnerChannelCreationFailed](../../../../../docs/framework/wcf/diagnostics/etw/4817-innerchannelcreationfailed.md)|Advertencia|DiscoveryClientChannel no pudo crear el canal con un extremo detectado con EndpointAddress='%1' y Via='%2'. DiscoveryClientChannel ahora intentará usar el siguiente extremo detectable disponible.|de esquema JSON|  
+|[4818 - InnerChannelOpenFailed](../../../../../docs/framework/wcf/diagnostics/etw/4818-innerchannelopenfailed.md)|Advertencia|DiscoveryClientChannel no pudo abrir el canal con un extremo detectado con EndpointAddress='%1' y Via='%2' DiscoveryClientChannel ahora intentará usar el siguiente extremo detectable disponible.|de esquema JSON|  
+|[4819 - InnerChannelOpenSucceeded](../../../../../docs/framework/wcf/diagnostics/etw/4819-innerchannelopensucceeded.md)|Información|DiscoveryClientChannel detectó correctamente un extremo y abrió el canal con él. El cliente está conectado a un servicio que usa EndpointAddress='%1' y Via='%2'.|de esquema JSON|  
+|[4820 - SynchronizationContextReset](../../../../../docs/framework/wcf/diagnostics/etw/4820-synchronizationcontextreset.md)|Información|SynchronizationContext se ha restablecido a su valor original de %1 mediante DiscoveryClientChannel.|de esquema JSON|  
+|[4821 - SynchronizationContextSetToNull](../../../../../docs/framework/wcf/diagnostics/etw/4821-synchronizationcontextsettonull.md)|Información|SynchronizationContext se ha establecido en NULL mediante DiscoveryClientChannel antes de iniciar la operación Find.|de esquema JSON|  
 |[5001 - DCSerializeWithSurrogateStart](../../../../../docs/framework/wcf/diagnostics/etw/5001-dcserializewithsurrogatestart.md)|Detallado|Inicio de la serialización de DataContract %1 con suplentes.|Serialización|  
 |[5002 - DCSerializeWithSurrogateStop](../../../../../docs/framework/wcf/diagnostics/etw/5002-dcserializewithsurrogatestop.md)|Detallado|Detención de la serialización de DataContract con suplentes.|Serialización|  
 |[5003 - DCDeserializeWithSurrogateStart](../../../../../docs/framework/wcf/diagnostics/etw/5003-dcdeserializewithsurrogatestart.md)|Detallado|Inicio de la deserialización de DataContract %1 con suplentes.|Serialización|  

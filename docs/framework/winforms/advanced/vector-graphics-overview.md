@@ -1,13 +1,6 @@
 ---
-title: "Información general acerca de gráficos vectoriales"
-ms.custom: 
+title: Información general acerca de gráficos vectoriales
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603b76c999933f177a9e48ddb819562b8e4dd8f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31fec6d0d3769251d21783b4657d00b06431e942
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vector-graphics-overview"></a>Información general acerca de gráficos vectoriales
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]dibuja líneas, rectángulos y otras formas en un sistema de coordenadas. Puede elegir entre una variedad de sistemas de coordenadas, pero el sistema de coordenadas predeterminado tiene el origen en la esquina superior izquierda con el eje x apuntando hacia la derecha y el eje y apuntando hacia abajo. La unidad de medida en el sistema de coordenadas predeterminado es el píxel.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dibuja líneas, rectángulos y otras formas en un sistema de coordenadas. Puede elegir entre una variedad de sistemas de coordenadas, pero el sistema de coordenadas predeterminado tiene el origen en la esquina superior izquierda con el eje x apuntando hacia la derecha y el eje y apuntando hacia abajo. La unidad de medida en el sistema de coordenadas predeterminado es el píxel.  
   
 ## <a name="the-building-blocks-of-gdi"></a>Los bloques de creación de GDI +  
  ![Gráfico vectorial](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
  ![Gráfico vectorial](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
- Cuando se usa [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para dibujar una línea, un rectángulo o una curva, se proporciona cierta información clave sobre el elemento que se va a dibujar. Por ejemplo, puede especificar una línea proporcionando dos puntos, y puede especificar un rectángulo proporcionando un punto, un alto y un ancho. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]funciona junto con el software de controlador de vídeo para determinar qué píxeles deben estar activados para mostrar la línea, un rectángulo o una curva. La ilustración siguiente muestra los píxeles que están activados para mostrar una línea desde el punto (4, 2) al punto (12, 8).  
+ Cuando se usa [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para dibujar una línea, un rectángulo o una curva, se proporciona cierta información clave sobre el elemento que se va a dibujar. Por ejemplo, puede especificar una línea proporcionando dos puntos, y puede especificar un rectángulo proporcionando un punto, un alto y un ancho. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funciona junto con el software de controlador de vídeo para determinar qué píxeles deben estar activados para mostrar la línea, un rectángulo o una curva. La ilustración siguiente muestra los píxeles que están activados para mostrar una línea desde el punto (4, 2) al punto (12, 8).  
   
  ![Gráfico vectorial](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   

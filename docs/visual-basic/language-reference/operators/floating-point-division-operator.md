@@ -1,12 +1,6 @@
 ---
 title: / (Operador, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb./
 helpviewer_keywords:
@@ -22,14 +16,11 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2f221e863725b9aeb0b3fa3219b3a881541e2be0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17eb3eddfae3cf7c818514a2fee20f646876a6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>/ (Operador, Visual Basic)
 Divide dos números y devuelve un resultado de punto flotante.  
@@ -42,10 +33,10 @@ expression1 / expression2
   
 ## <a name="parts"></a>Elementos  
  `expression1`  
- Obligatorio. Cualquier expresión numérica.  
+ Requerido. Cualquier expresión numérica.  
   
  `expression2`  
- Obligatorio. Cualquier expresión numérica.  
+ Requerido. Cualquier expresión numérica.  
   
 ## <a name="supported-types"></a>Tipos admitidos  
  Todos los tipos numéricos, incluidos los tipos sin signo y de punto flotante y `Decimal`.  
@@ -75,8 +66,8 @@ expression1 / expression2
 |Tipos de datos de operando|Comportamiento si `expression2` es cero|  
 |------------------------|---------------------------------------|  
 |Punto flotante (`Single` o `Double`)|Devuelve infinito (<xref:System.Double.PositiveInfinity> o <xref:System.Double.NegativeInfinity>), o <xref:System.Double.NaN> (no un número) si `expression1` también es cero|  
-|`Decimal`|Produce<xref:System.DivideByZeroException>|  
-|Entero (con o sin signo)|Intenta realizar la conversión al tipo integral produce <xref:System.OverflowException> porque no pueden aceptar tipos integrales <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, o<xref:System.Double.NaN>|  
+|`Decimal`|Produce <xref:System.DivideByZeroException>|  
+|Entero (con o sin signo)|Intenta realizar la conversión al tipo integral produce <xref:System.OverflowException> porque no pueden aceptar tipos integrales <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, o <xref:System.Double.NaN>|  
   
 > [!NOTE]
 >  El `/` puede ser *sobrecargados*, lo que significa que una clase o estructura puede definir de nuevo su comportamiento cuando un operando tiene el tipo de esa clase o estructura. Si el código usa este operador en una clase o estructura de este tipo, asegúrese de que conocer su comportamiento redefinido. Para obtener más información, consulte [procedimientos de operadores](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

@@ -1,12 +1,6 @@
 ---
 title: Instrucción If...Then...Else (Visual Basic)
 ms.date: 04/16/2018
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: conceptual
 f1_keywords:
 - vb.ElseIf
 - vb.Then
@@ -27,14 +21,11 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1080a17cfcc493175c1e2f3527837030b4254bc2
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 08d51326ee0c9f91eec02467ebcb116354b5033f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>Instrucción If...Then...Else (Visual Basic)
 Ejecuta condicionalmente un grupo de instrucciones en función del valor de una expresión.  

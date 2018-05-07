@@ -1,12 +1,6 @@
 ---
-title: "Sub (Instrucción, Visual Basic)"
+title: Sub (Instrucción, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Sub
 helpviewer_keywords:
@@ -35,14 +29,11 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0a2d0d5ffdca857a3a5ca58cd38b0930f254526f
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 9a806f2ec979699f7ccf4012c6477bee11301b0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-statement-visual-basic"></a>Sub (Instrucción, Visual Basic)
 Declara el nombre, parámetros y código que definen un `Sub` procedimiento.  
@@ -116,7 +107,7 @@ End Sub
   
 -   `name`  
   
-     Obligatorio. Nombre del procedimiento. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Para crear un procedimiento de constructor para una clase, establezca el nombre de un `Sub` procedimiento para la `New` palabra clave. Para obtener más información, consulte [duración de los objetos: cómo los objetos son crean y destruyen](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+     Requerido. Nombre del procedimiento. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Para crear un procedimiento de constructor para una clase, establezca el nombre de un `Sub` procedimiento para la `New` palabra clave. Para obtener más información, consulte [duración de los objetos: cómo los objetos son crean y destruyen](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
 -   `typeparamlist`  
   
@@ -142,8 +133,8 @@ End Sub
   
     |Parte|Descripción|  
     |---|---|  
-    |`interface`|Obligatorio. Nombre de una interfaz implementada por este procedimiento contenedora de clase o estructura.|  
-    |`definedname`|Obligatorio. Nombre por el que se define el procedimiento en `interface`.|  
+    |`interface`|Requerido. Nombre de una interfaz implementada por este procedimiento contenedora de clase o estructura.|  
+    |`definedname`|Requerido. Nombre por el que se define el procedimiento en `interface`.|  
   
 -   `Handles`  
   
@@ -161,8 +152,8 @@ End Sub
   
     |Parte|Descripción|  
     |---|---|  
-    |`eventvariable`|Obligatorio. Variable de objeto declarada con el tipo de datos de la clase o estructura que genera el evento.|  
-    |`event`|Obligatorio. Nombre del evento que controla este procedimiento.|  
+    |`eventvariable`|Requerido. Variable de objeto declarada con el tipo de datos de la clase o estructura que genera el evento.|  
+    |`event`|Requerido. Nombre del evento que controla este procedimiento.|  
   
 -   `statements`  
   
@@ -178,7 +169,7 @@ End Sub
 ## <a name="defining-a-sub-procedure"></a>Definir un procedimiento Sub  
  Puede definir un `Sub` procedimiento sólo en el nivel de módulo. El contexto de la declaración de un procedimiento sub por lo tanto, debe ser una clase, una estructura, un módulo o una interfaz y no puede ser un archivo de código fuente, un espacio de nombres, un procedimiento o un bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
   
- `Sub`procedimientos como valor predeterminado para el acceso público. Puede ajustar los niveles de acceso mediante los modificadores de acceso.  
+ `Sub` procedimientos como valor predeterminado para el acceso público. Puede ajustar los niveles de acceso mediante los modificadores de acceso.  
   
  Si el procedimiento utiliza el `Implements` (palabra clave), la clase o estructura contenedora debe tener un `Implements` instrucción que sigue inmediatamente a su `Class` o `Structure` instrucción. El `Implements` instrucción debe incluir cada interfaz que se especifica en `implementslist`. Sin embargo, el nombre por el que una interfaz que define el `Sub` (en `definedname`) no tiene que coincidir con el nombre de este procedimiento (en `name`).  
   
@@ -214,7 +205,7 @@ End Sub
   
  También puede marcar un [Function (instrucción)](function-statement.md) con el `Async` modificador. Un `Async` función puede tener un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601> o <xref:System.Threading.Tasks.Task>. Un ejemplo más adelante en este tema se muestra un `Async` función que tiene un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>.  
   
- `Async``Sub` procedimientos se utilizan principalmente para controladores de eventos, donde no se puede devolver un valor. Un `Async``Sub` procedimiento no se puede esperar y el llamador de un `Async``Sub` procedimiento no puede detectar las excepciones que el `Sub` procedimiento produce.  
+ `Async` `Sub` los procedimientos se utilizan principalmente para controladores de eventos, donde no se puede devolver un valor. Un `Async``Sub` procedimiento no se puede esperar y el llamador de un `Async``Sub` procedimiento no puede detectar las excepciones que el `Sub` procedimiento produce.  
   
  Un `Async` procedimiento no puede declarar ningún [ByRef](../modifiers/byref.md) parámetros.  
   

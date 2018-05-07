@@ -1,28 +1,16 @@
 ---
 title: x:FactoryMethod (Directiva)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML. x:FactoryMethod directive [XAML Services]
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-caps.latest.revision: "8"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58349c5440d0062c64346933e48b64de6c4c7b60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75225e624abdd3dc0862a04fae409da48b3f0d1e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod (Directiva)
 Especifica un método que no sea un constructor que un procesador XAML debe usar para inicializar un objeto después de resolver su tipo de respaldo.  
@@ -61,11 +49,11 @@ Especifica un método que no sea un constructor que un procesador XAML debe usar
   
  El método de generador debe devolver una instancia que se puede asignar al objeto pertinente. Métodos de generador nunca deberían devolver nulos.  
   
- `x:Arguments`opera en un principio de mejor coincidencia para las firmas de métodos de generador. Búsqueda de coincidencias, el número de parámetros evalúa primero. Si hay más de una coincidencia posible para un recuento de parámetros, tipo de parámetro es, a continuación, evalúa y mejor coincidencia vendrá determinada. Si todavía no hay ambigüedad después de esta fase de evaluación, el comportamiento del procesador XAML es indefinido.  
+ `x:Arguments` opera en un principio de mejor coincidencia para las firmas de métodos de generador. Búsqueda de coincidencias, el número de parámetros evalúa primero. Si hay más de una coincidencia posible para un recuento de parámetros, tipo de parámetro es, a continuación, evalúa y mejor coincidencia vendrá determinada. Si todavía no hay ambigüedad después de esta fase de evaluación, el comportamiento del procesador XAML es indefinido.  
   
- El `x:FactoryMethod` uso de elementos no es el uso de elementos de propiedad en el sentido típico, porque el marcado de la directiva no hace referencia el tipo del elemento de objeto contenedor. Se espera que el uso de elemento es menos común que el uso de atributos. `x:Arguments`(uso de atributo o elemento) que puede utilizarse junto con `x:FactoryMethod` uso de elementos, pero esto no se muestra específicamente en las secciones de uso.  
+ El `x:FactoryMethod` uso de elementos no es el uso de elementos de propiedad en el sentido típico, porque el marcado de la directiva no hace referencia el tipo del elemento de objeto contenedor. Se espera que el uso de elemento es menos común que el uso de atributos. `x:Arguments` (uso de atributo o elemento) que puede utilizarse junto con `x:FactoryMethod` uso de elementos, pero esto no se muestra específicamente en las secciones de uso.  
   
- `x:FactoryMethod`como un elemento debe preceder a cualquier otro elemento de propiedad, debe preceder a cualquier `x:Arguments` también proporcionado como elemento y debe preceder a cualquier texto de inicialización de texto de contenido o interna.  
+ `x:FactoryMethod` como un elemento debe preceder a cualquier otro elemento de propiedad, debe preceder a cualquier `x:Arguments` también proporcionado como elemento y debe preceder a cualquier texto de inicialización de texto de contenido o interna.  
   
 ## <a name="see-also"></a>Vea también  
  [x:Arguments (directiva)](../../../docs/framework/xaml-services/x-arguments-directive.md)

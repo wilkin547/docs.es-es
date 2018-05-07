@@ -1,28 +1,19 @@
 ---
-title: "&#39; &lt;palabra clave&gt;&#39; es válida sólo dentro de un método de instancia"
+title: '&#39;&lt;palabra clave&gt; &#39; es válida sólo dentro de un método de instancia'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30043
 - vbc30043
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a61314c036cec0fd1412a9c844a610fbd1401add
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d9e26aa7dccf1b9c6390a20a59b10a0d248969d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39; &lt;palabra clave&gt;&#39; es válida sólo dentro de un método de instancia
+# <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39;&lt;palabra clave&gt; &#39; es válida sólo dentro de un método de instancia
 El `Me`, `MyClass`, y `MyBase` palabras clave hacen referencia a instancias de clase específica. No se pueden usar dentro de un compartido `Function` o `Sub` procedimiento.  
   
  **Id. de error:** BC30043  

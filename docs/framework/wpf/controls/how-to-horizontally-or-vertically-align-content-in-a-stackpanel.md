@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Alinear horizontal o verticalmente el contenido de un elemento StackPanel"
-ms.custom: 
+title: 'Cómo: Alinear horizontal o verticalmente el contenido de un elemento StackPanel'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - content alignment [WPF]
 - aligning [WPF], content
 ms.assetid: c1e8f962-72c8-4e7a-8670-7a2d7e021791
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad3252b249c716d59b72a6c5af7bd96f2d058126
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a03cb1ed9b3e5bd42b28e37f5bbb3e1d0446a4ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-horizontally-or-vertically-align-content-in-a-stackpanel"></a>Cómo: Alinear horizontal o verticalmente el contenido de un elemento StackPanel
 Este ejemplo muestra cómo ajustar la <xref:System.Windows.Controls.StackPanel.Orientation%2A> de contenido dentro de un <xref:System.Windows.Controls.StackPanel> elemento y también cómo ajustar la <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> y <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> del contenido secundario.  
@@ -35,7 +23,7 @@ Este ejemplo muestra cómo ajustar la <xref:System.Windows.Controls.StackPanel.O
   
  [!code-xaml[StackPanelIntroSamp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanelIntroSamp/CSharp/Window1.xaml#1)]  
   
- El siguiente archivo de código subyacente define los cambios a los eventos que están asociados a la <xref:System.Windows.Controls.ListBox> cambios de selección. <xref:System.Windows.Controls.StackPanel>se identifica mediante el <xref:System.Windows.FrameworkElement.Name%2A> `sp1`.  
+ El siguiente archivo de código subyacente define los cambios a los eventos que están asociados a la <xref:System.Windows.Controls.ListBox> cambios de selección. <xref:System.Windows.Controls.StackPanel> se identifica mediante el <xref:System.Windows.FrameworkElement.Name%2A> `sp1`.  
   
  [!code-csharp[StackPanelIntroSamp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanelIntroSamp/CSharp/Window1.xaml.cs#2)]
  [!code-vb[StackPanelIntroSamp#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelIntroSamp/VisualBasic/Window1.xaml.vb#2)]  

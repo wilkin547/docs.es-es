@@ -1,33 +1,19 @@
 ---
 title: Detalles de las características de WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - features [WCF]
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 91b22cbcabba95d8cc91ffbc0b74b51e61dae393
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c97bd891f0bbb58f8b267296b9b53e00a5486622
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-feature-details"></a>Detalles de las características de WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite un amplio control sobre las funciones de mensajería de una aplicación. Los temas de esta sección incluyen detalles sobre las características disponibles. Para obtener más información acerca de la programación básica, consulte [programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+Windows Communication Foundation (WCF) permite un amplio control sobre las funciones de mensajería de una aplicación. Los temas de esta sección incluyen detalles sobre las características disponibles. Para obtener más información acerca de la programación básica, consulte [programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
@@ -40,7 +26,7 @@ ms.lasthandoff: 04/30/2018
  Describe cómo la serialización de datos se puede personalizar para la interoperación o la compatibilidad futura.  
   
  [Sesiones, creación de instancias y simultaneidad](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
- Describe los modos de sesión y creación de instancias de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y cómo seleccionar el modo correcto para su aplicación.  
+ Describe los modos de creación de instancias y la sesión de WCF y cómo seleccionar el modo correcto para la aplicación.  
   
  [Transportes](../../../../docs/framework/wcf/feature-details/transports.md)  
  Describe cómo configurar el nivel de transporte, el nivel más bajo de la pila del canal.  
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
  Explica cómo crear operaciones de transacción que se puedan revertir de ser necesario.  
   
  [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)  
- Describe cómo la seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] le ayuda a crear aplicaciones que tienen confidencialidad e integridad. La autenticación y autorización también están disponibles, como lo están las características de auditoría.  
+ Describe la seguridad de WCF le ayuda a crear aplicaciones que tienen confidencialidad e integridad. La autenticación y autorización también están disponibles, como lo están las características de auditoría.  
   
  [Conexión de redes punto a punto](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  Detalla cómo crear servicios del mismo nivel y clientes.  
@@ -67,16 +53,16 @@ ms.lasthandoff: 04/30/2018
  Describe el alojamiento. Un servicio puede ser alojado por otra aplicación, o puede estar alojado en sí mismo.  
   
  [Interoperabilidad e integración](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
- Describe cómo utilizar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para extender su lógica existente en lugar de tener que rescribirla si tiene una inversión sustancial en lógica de aplicación basada en componentes alojada en COM+.  
+ Describe cómo usar WCF para extender su lógica existente en lugar de tener que rescribirla si tiene una inversión sustancial en lógica de la aplicación basada en componentes alojada en COM +.  
   
  [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- Describe el modelo de programación web [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que permite a los programadores exponer las operaciones del servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a extremos no SOAP.  
+ Describe el modelo de programación Web WCF que permite a los programadores exponer las operaciones de servicio WCF extremos no SOAP.  
   
  [Redifusión en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
- Describe el soporte para exponer con facilidad los alimentadores de sindicación de un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Describe la compatibilidad para exponer fácilmente las fuentes de distribución de un servicio WCF.  
   
  [Integración de AJAX y compatibilidad de JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- Describe el soporte para ASP.NET Asynchronous JavaScript y XML (AJAX), y el formato de datos JavaScript Object Notation (JSON) para permitir que los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expongan las operaciones a los clientes AJAX.  
+ Describe la compatibilidad con ASP.NET JavaScript asincrónico y XML (AJAX) y el formato de datos JavaScript Object Notation (JSON) permitir que los servicios WCF exponer las operaciones a los clientes de AJAX.  
   
  [Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
  Describe el soporte para habilitar el reconocimiento de los servicios en tiempo de ejecución de forma interoperable mediante el protocolo WS-Discovery.  

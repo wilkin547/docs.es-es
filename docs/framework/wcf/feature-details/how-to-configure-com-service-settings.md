@@ -1,34 +1,20 @@
 ---
-title: "Cómo configurar los parámetros de los servicios COM+"
-ms.custom: 
+title: Cómo configurar los parámetros de los servicios COM+
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bdbdbae857685ddb447843fd704896de018b1c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 43964331f6728db0f094eaceb63e2c306d2dd3ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-com-service-settings"></a>Cómo configurar los parámetros de los servicios COM+
 Cuando se agrega o quita una interfaz de aplicaciones mediante la herramienta de configuración de servicio de COM+, la configuración del servicio web se actualiza en el archivo de configuración de la aplicación. En el modo hospedado de COM +, el archivo Application.config se coloca en el directorio raíz de la aplicación (%PROGRAMFILES%\ComPlus aplicaciones\\{appid} es el valor predeterminado). En cualquiera de los modos hospedados en la web, el archivo Web.config se encuentra en el directorio vroot especificado.  
   
 > [!NOTE]
->  La utilización de la firma de los mensajes protege de la alteración de los mensajes entre el cliente y un servidor. Además, la utilización del cifrado en el nivel del mensaje o del transporte protege contra la divulgación de información de los mensajes entre un cliente y un servidor. Al igual que con los servicios [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], debe utilizarse la limitación de peticiones para restringir el número de llamadas, conexiones, instancias y operaciones pendientes que se producen simultáneamente. Así se contribuye a evitar el consumo excesivo de recursos. El comportamiento del límite de peticiones se especifica mediante los valores del archivo de configuración del servicio.  
+>  La utilización de la firma de los mensajes protege de la alteración de los mensajes entre el cliente y un servidor. Además, la utilización del cifrado en el nivel del mensaje o del transporte protege contra la divulgación de información de los mensajes entre un cliente y un servidor. Al igual que con los servicios de Windows Communication Foundation (WCF), debe usar la limitación para limitar el número de llamadas simultáneas, conexiones, instancias y las operaciones pendientes. Así se contribuye a evitar el consumo excesivo de recursos. El comportamiento del límite de peticiones se especifica mediante los valores del archivo de configuración del servicio.  
   
 ## <a name="example"></a>Ejemplo  
  Considere un componente que implementa la siguiente interfaz:  
@@ -62,15 +48,15 @@ public interface IFinancesContract : IDisposable
   
  Las aplicaciones cliente que utilizan este servicio deberán ser conformes a este contrato, así como utilizar un enlace compatible con el que se especificó en la configuración de la aplicación.  
   
- El siguiente ejemplo de código muestra un archivo de configuración predeterminado. Dado un servicio web [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], esto es conforme al esquema de configuración del modelo de servicio estándar y puede editarse del mismo modo que otros archivos de configuración de servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ El siguiente ejemplo de código muestra un archivo de configuración predeterminado. Que se va a un servicio Web de Windows Communication Foundation (WCF), esto es conforme al esquema de configuración de modelo de servicio estándar y se puede editar en la misma forma que otros archivos de configuración de servicios WCF.  
   
  En las modificaciones típicas se incluye:  
   
--   Cambiar la dirección del extremo del formulario predeterminado ApplicationName/ComponentName/InterfaceName a un formulario más útil.  
+-   Cambiar la dirección del punto de conexión del formulario predeterminado ApplicationName/ComponentName/InterfaceName a un formulario más útil.  
   
--   Modificar el espacio de nombres del servicio del formulario predeterminado "http://tempuri.org/InterfaceID" a un formulario más relevante.  
+-   Modificar el espacio de nombres del servicio desde el valor predeterminado "http://tempuri.org/InterfaceID" formulario a un formulario más relevante.  
   
--   Cambiar el extremo para utilizar un enlace de transporte diferente.  
+-   Cambiar el punto de conexión para utilizar un enlace de transporte diferente.  
   
      En el caso de hospedaje en COM+, se utiliza el transporte de las canalizaciones con nombre de manera predeterminada, aunque en su lugar puede utilizarse un transporte fuera de equipo, tipo TCP.  
   

@@ -1,13 +1,6 @@
 ---
-title: "Información general sobre la generación de perfiles"
-ms.custom: 
+title: Información general sobre la generación de perfiles
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - managed code, profiling API support
 - unmanaged code, combining with managed code in profiling
@@ -34,19 +27,16 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-overview"></a>Información general sobre la generación de perfiles
-<a name="top"></a>Un generador de perfiles es una herramienta que supervisa la ejecución de otra aplicación. Un generador de perfiles de Common Language Runtime (CLR) es una biblioteca de vínculos dinámicos (DLL) compuesta de funciones que intercambian mensajes con el CLR utilizando la API de generación de perfiles. CLR carga en tiempo de ejecución la DLL del generador de perfiles.  
+<a name="top"></a> Un generador de perfiles es una herramienta que supervisa la ejecución de otra aplicación. Un generador de perfiles de Common Language Runtime (CLR) es una biblioteca de vínculos dinámicos (DLL) compuesta de funciones que intercambian mensajes con el CLR utilizando la API de generación de perfiles. CLR carga en tiempo de ejecución la DLL del generador de perfiles.  
   
  Las herramientas tradicionales de generación de perfiles se centran en medir la ejecución de la aplicación. Es decir, miden el tiempo que se emplea en cada función o la utilización de memoria de la aplicación a lo largo del tiempo. La API de generación de perfiles se dirige a una clase más amplia de herramientas de diagnóstico tales como las utilidades de cobertura de código e, incluso, las ayudas de depuración avanzadas. Estos usos son diagnósticos por su naturaleza. La API de generación de perfiles no solamente mide, sino que también supervisa la ejecución de una aplicación. Por este motivo, la API de generación de perfiles nunca debe ser utilizada por la propia aplicación, y la ejecución de la aplicación no debe depender del generador de perfiles ni verse afectada por él.  
   

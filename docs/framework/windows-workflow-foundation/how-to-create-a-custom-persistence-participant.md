@@ -1,23 +1,12 @@
 ---
-title: "Cómo: Crear un participante de persistencia personalizado"
-ms.custom: 
+title: 'Cómo: Crear un participante de persistencia personalizado'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebc83f100b4303b73ba2e6d3dc41d0f82e8f2c22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fcd96e41d8fc7b36f9dff5f10e9bc2d9034d79b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Cómo: Crear un participante de persistencia personalizado
 El siguiente procedimiento describe los pasos para crear un participante de persistencia. Consulte la [participa en la persistencia](http://go.microsoft.com/fwlink/?LinkID=177735) ejemplo y [extensibilidad del almacén](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) tema para las implementaciones de ejemplo de participantes de persistencia.  
@@ -46,13 +35,13 @@ El siguiente procedimiento describe los pasos para crear un participante de pers
     protected virtual void PublishValues (IDictionary<XName,Object> readWriteValues)  
     ```  
   
-5.  Implemente el **BeginOnSave** método si el participante es un participante de E/S de persistencia. A este método se llama durante una operación de almacenamiento. En este método, debería realizar al adjunto de E/S en las instancias de flujo de trabajo de persistencia (almacenamiento).  Si el host está usando una transacción para el comando de persistencia correspondiente, se proporciona la misma transacción en Transaction.Current.  Además, PersistenceIOParticipants puede anunciar un requisito de coherencia transaccional, en cuyo caso el host crea una transacción para el episodio de persistencia si, por el contrario, no se usara uno.  
+5.  Implemente el **BeginOnSave** método si el participante es un participante de E/S de persistencia. A este método se llama durante una operación de almacenamiento. En este método, debería realizar adjunto de E/S para la persistencia (almacenamiento) instancias de flujo de trabajo.  Si el host está usando una transacción para el comando de persistencia correspondiente, se proporciona la misma transacción en Transaction.Current.  Además, PersistenceIOParticipants puede anunciar un requisito de coherencia transaccional, en cuyo caso el host crea una transacción para el episodio de persistencia si, por el contrario, no se usara uno.  
   
     ```  
     protected virtual IAsyncResult BeginOnSave (IDictionary<XName,Object> readWriteValues, IDictionary<XName,Object> writeOnlyValues, TimeSpan timeout, AsyncCallback callback, Object state)  
     ```  
   
-6.  Implemente el **BeginOnLoad** método si el participante es un participante de E/S de persistencia. A este método se llama durante una operación de carga. En este método, debería realizar al adjunto de E/S en la carga de instancias de flujo de trabajo. Si el host está usando una transacción para el comando de persistencia correspondiente, se proporciona la misma transacción en Transaction.Current. Además, los participantes de E/S de persistencia pueden anunciar un requisito de coherencia transaccional, en cuyo caso el host crea una transacción para el episodio de persistencia si, de lo contrario, no se usara uno.  
+6.  Implemente el **BeginOnLoad** método si el participante es un participante de E/S de persistencia. A este método se llama durante una operación de carga. En este método, debería realizar adjunto de E/S para la carga de instancias de flujo de trabajo. Si el host está usando una transacción para el comando de persistencia correspondiente, se proporciona la misma transacción en Transaction.Current. Además, los participantes de E/S de persistencia pueden anunciar un requisito de coherencia transaccional, en cuyo caso el host crea una transacción para el episodio de persistencia si no lo contrario se usara uno.  
   
     ```  
     protected virtual IAsyncResult BeginOnLoad (IDictionary<XName,Object> readWriteValues, TimeSpan timeout, AsyncCallback callback, Object state)  

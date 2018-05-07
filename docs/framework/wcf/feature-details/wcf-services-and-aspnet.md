@@ -1,56 +1,44 @@
 ---
 title: Servicios WCF y ASP.NET
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: be497a1b12164fcca66314921e14d22bb96c20b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6cfd4f8a5dc2a7835cba409a37b09166e49e8df3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-services-and-aspnet"></a>Servicios WCF y ASP.NET
-En este tema se tratan los servicios de hospedaje de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] en paralelo con ASP.NET y el hospedaje de ellos en el modo de compatibilidad de ASP.NET.  
+Este tema describen hospedaje Windows Communication Foundation (WCF) servicios side-by-side con ASP.NET y hospedaje de ellos en modo de compatibilidad ASP.NET.  
   
 ## <a name="hosting-wcf-side-by-side-with-aspnet"></a>Hospedaje de WCF en paralelo con ASP.NET  
- Los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hospedados en Internet Information Services (IIS) se pueden encontrar con páginas .ASPX y servicios Web ASMX dentro de un dominio de aplicación común e individual. ASP.NET proporciona servicios de infraestructura común como administración de AppDomain y compilación dinámica en tiempo de ejecución de HTTP de ASP.NET e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La configuración predeterminada para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] es en paralelo con ASP.NET.  
+ Se pueden encontrar con los servicios WCF hospedados en Internet Information Services (IIS). Las páginas ASPX y los servicios Web ASMX dentro de un dominio de aplicación única y común. ASP.NET proporciona servicios de infraestructura común como administración de AppDomain y compilación dinámica para WCF y el tiempo de ejecución HTTP de ASP.NET. La configuración predeterminada de WCF es en paralelo con ASP.NET.  
   
  ![Servicios WCF y ASP. NET: estado compartido](../../../../docs/framework/wcf/feature-details/media/hostingwcfwithaspnet.gif "HostingWCFwithASPNET")  
   
- El tiempo de ejecución de HTTP de ASP.NET controla las solicitudes de ASP.NET, pero no participa en el procesamiento de solicitudes destinadas a servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], aunque estos servicios se hospeden en el mismo AppDomain que el contenido de ASP.NET. En su lugar, el modelo de servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] intercepta los mensajes direccionados a los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y los enruta a través de la pila de transporte/canal de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ El tiempo de ejecución HTTP de ASP.NET controla las solicitudes de ASP.NET, pero no participa en el procesamiento de solicitudes destinadas a para los servicios WCF, aunque estos servicios se hospedan en el mismo AppDomain que ASP.NET contenido. En su lugar, el modelo de servicio de WCF intercepta los mensajes dirigidos a los servicios de WCF y los enruta a través de la pila de transporte/canal WCF.  
   
  Los resultados del modelo en paralelo son de la siguiente manera:  
   
--   Los servicios de ASP.NET e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pueden compartir el estado del AppDomain. Dado que los dos marcos pueden coexistir en el mismo AppDomain, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también pueden compartir el estado del AppDomain con ASP.NET (incluidas las variables estáticas, los eventos, etc.).  
+-   Servicios ASP.NET y WCF pueden compartir el estado de AppDomain. Dado que los dos marcos pueden coexistir en el mismo AppDomain, WCF también puede compartir el estado del AppDomain con ASP.NET (incluidas las variables estáticas, eventos etc.).  
   
--   Los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se comportan de forma coherente, independientemente del entorno de hospedaje y del transporte. El tiempo de ejecución de HTTP de ASP.NET se acopla de manera intencionada al entorno de hospedaje de IIS/ASP.NET y a la comunicación HTTP. De manera inversa, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está diseñado para comportarse de forma consistente en diferentes entornos de hospedaje ([!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se comporta de forma consistente dentro y fuera de IIS) y transportes (un servicio hospedado en IIS 7.0 y posterior tiene un comportamiento coherente en todos los extremos que expone, incluso aunque algunos de esos extremos usen protocolos distintos de HTTP).  
+-   Servicios WCF comportarán de forma consistente, independientemente del transporte y entorno de hospedaje. El tiempo de ejecución de HTTP de ASP.NET se acopla de manera intencionada al entorno de hospedaje de IIS/ASP.NET y a la comunicación HTTP. Por el contrario, WCF está diseñado para comportarse de forma consistente en diferentes entornos de hospedaje (WCF comporta de forma coherente tanto dentro y fuera de IIS) y transportes (un servicio hospedado en IIS 7.0 y posterior tiene un comportamiento coherente en todos los extremos que expone, incluso si algunos de esos extremos utilizan protocolos distintos de HTTP).  
   
--   Dentro de un AppDomain, las características implementadas por el tiempo de ejecución de HTTP se aplican al contenido de ASP.NET pero no a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Muchas características específicas de HTTP de la plataforma de aplicaciones de ASP.NET no se aplican a los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hospedados dentro de un AppDomain que incluya contenido de ASP.NET. Ejemplos de estas características incluyen lo siguiente:  
+-   Dentro de un AppDomain, las características implementadas por el tiempo de ejecución HTTP se aplican al contenido de ASP.NET pero no a WCF. Muchas características específicas de HTTP de la plataforma de aplicaciones de ASP.NET no se aplican a los servicios WCF hospedados dentro de un AppDomain que incluya contenido de ASP.NET. Ejemplos de estas características incluyen lo siguiente:  
   
-    -   HttpContext: el valor de propiedad <xref:System.Web.HttpContext.Current%2A> siempre es `null` cuando se obtiene acceso a ella desde un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Use <!--zz <xref:System.ServiceModel.OperationContext.Current.RequestContext>--> `RequestContext` en su lugar.  
+    -   HttpContext: <xref:System.Web.HttpContext.Current%2A> siempre es `null` cuando se tiene acceso desde dentro de un servicio WCF. Use <!--zz <xref:System.ServiceModel.OperationContext.Current.RequestContext>--> `RequestContext` en su lugar.  
   
-    -   Autorización basada en archivos: el modelo de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no permite la lista de control de acceso (ACL) aplicada al archivo .svc del servicio a la hora de decidir si se autoriza una solicitud de servicio.  
+    -   Autorización basada en archivos: modelo de seguridad de la WCF no permite la lista de control de acceso (ACL) que se aplica al archivo .svc del servicio de hora de decidir si una solicitud de servicio está autorizada.  
   
-    -   Autorización de dirección URL basada en configuración: de forma similar, el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de seguridad no se adhiere a las reglas de autorización basada en URL especificadas en System.Web \<autorización > elemento de configuración. Estos valores se pasan por alto para solicitudes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si un servicio reside en un espacio de direcciones URL protegido por reglas de autorización de URL de ASP.NET.  
+    -   Autorización de dirección URL basada en configuración: de forma similar, el modelo de seguridad WCF no se adhiere a las reglas de autorización basada en URL especificadas en System.Web \<autorización > elemento de configuración. Estos valores se omiten para las solicitudes WCF si un servicio reside en un espacio de direcciones URL protegido por ASP. Reglas de autorización de dirección URL de NET.  
   
-    -   Extensibilidad de HttpModule: la infraestructura de hospedaje de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] intercepta las solicitudes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cuando se genera el evento <xref:System.Web.HttpApplication.PostAuthenticateRequest> y no devuelve el procesamiento a la canalización HTTP de ASP.NET. Los módulos que están codificados para interceptar las solicitudes en fases posteriores de la canalización no interceptan las solicitudes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+    -   Extensibilidad de HttpModule: infraestructura de hospedaje de WCF la intercepta WCF solicita cuando la <xref:System.Web.HttpApplication.PostAuthenticateRequest> evento se produce y no se devuelve el procesamiento a la canalización HTTP de ASP.NET. Módulos que están codificados para interceptar las solicitudes en fases posteriores de la canalización no interceptan las solicitudes WCF.  
   
-    -   Suplantación de ASP.NET: de forma predeterminada, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] solicita siempre se ejecuta como el proceso IIS identidad, aun cuando ASP.NET se configura para permitir la suplantación mediante System.Web \<identity impersonate = "true" / > opción de configuración.  
+    -   Suplantación de ASP.NET: de forma predeterminada, WCF solicita siempre se ejecuta como el proceso IIS identidad, aun cuando ASP.NET se configura para permitir la suplantación mediante System.Web \<identity impersonate = "true" / > opción de configuración.  
   
- Estas restricciones solo se aplican a los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hospedados en la aplicación de IIS. La presencia de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]no afecta al comportamiento del contenido de ASP.NET.  
+ Estas restricciones se aplican sólo a los servicios WCF hospedados en aplicación de IIS. El comportamiento del contenido de ASP.NET no se ve afectado por la presencia de WCF.  
   
- Las aplicaciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que requieren la funcionalidad que proporciona tradicionalmente la canalización HTTP deberían considerar la posibilidad de usar equivalentes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], que no dependen del host ni del transporte:  
+ Las aplicaciones WCF que requieren la funcionalidad que proporciona tradicionalmente la canalización HTTP convendrá usar los equivalentes WCF, que dependen del host ni del transporte:  
   
 -   <xref:System.ServiceModel.OperationContext> en lugar de <xref:System.Web.HttpContext>.  
   
@@ -58,26 +46,26 @@ En este tema se tratan los servicios de hospedaje de [!INCLUDE[indigo1](../../..
   
 -   <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> o los canales dispuestos en capas personalizados en lugar de los módulos HTTP.  
   
--   Suplantación para cada operación utilizando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en lugar de la suplantación de System.Web.  
+-   Suplantación de cada operación con WCF en lugar de suplantación de System.Web.  
   
- De manera alternativa, puede considerar ejecutar sus servicios en el modo de compatibilidad ASP.NET de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Como alternativa, puede considerar ejecutar sus servicios en modo de compatibilidad ASP.NET de WCF.  
   
 ## <a name="hosting-wcf-services-in-aspnet-compatibility-mode"></a>Hospedaje de servicios de WCF en el modo de compatibilidad de ASP.NET  
- Aunque el modelo de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está diseñado para comportarse de forma coherente en los diferentes entornos de hospedaje y transportes, a menudo hay escenarios en los que una aplicación no requiere este grado de flexibilidad. El modo de compatibilidad de ASP.NET de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] es conveniente para escenarios que no requieren la capacidad de hospedar fuera de IIS ni de comunicarse sobre protocolos que no sean HTTP, pero que usan todas las características de la plataforma de aplicaciones web ASP.NET.  
+ Aunque el modelo de WCF está diseñado para comportarse de forma coherente en entornos de hospedaje y transportes, a menudo existen escenarios donde una aplicación no requiere este grado de flexibilidad. Modo de compatibilidad ASP.NET de WCF es adecuado para escenarios que no requieren la capacidad de hospedar fuera de IIS o para comunicarse a través de protocolos distintos de HTTP, pero que usan todas las características de la plataforma de aplicación Web de ASP.NET.  
   
- A diferencia de la configuración en paralelo predeterminada, donde la infraestructura de hospedaje de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] intercepta los mensajes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y los enruta fuera de la canalización HTTP, los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se ejecutan en modo de compatibilidad de ASP.NET participan totalmente en el ciclo de vida de la solicitud HTTP de ASP.NET. En el modo de compatibilidad, los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizan la canalización HTTP a través de una implementación <xref:System.Web.IHttpHandler>, de manera similar a la forma en que se tratan las solicitudes de páginas ASPX y servicios Web ASMX. Como resultado, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se comporta de manera idéntica a ASMX con respecto a las siguientes características de ASP.NET:  
+ A diferencia de la configuración en paralelo predeterminada, donde la infraestructura de hospedaje de WCF intercepta los mensajes WCF y los enruta fuera de la canalización HTTP, servicios WCF que se ejecutan en modo de compatibilidad de ASP.NET participan totalmente en el ciclo de vida de la solicitud HTTP de ASP.NET. En el modo de compatibilidad, los servicios de WCF utilizan la canalización HTTP a través de un <xref:System.Web.IHttpHandler> implementación, similar a las solicitudes de manera para que se administran las páginas ASPX y servicios Web ASMX. Como resultado, WCF se comporta de forma idéntica a ASMX con respecto a las siguientes características ASP.NET:  
   
--   <xref:System.Web.HttpContext>: los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se ejecutan en modo de compatibilidad de ASP.NET pueden tener acceso a <xref:System.Web.HttpContext.Current%2A> y a su estado asociado.  
+-   <xref:System.Web.HttpContext>: Pueden tener acceso servicios WCF que se ejecutan en modo de compatibilidad de ASP.NET <xref:System.Web.HttpContext.Current%2A> y su estado asociado.  
   
--   Autorización basada en archivo: los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se ejecutan en modo de compatibilidad de ASP.NET pueden ser seguros si se asocian las listas de control de acceso (ACL) del sistema de archivos al archivo .svc del servicio.  
+-   Autorización basada en archivos: servicios WCF que se ejecutan en modo de compatibilidad ASP.NET pueden ser seguros mediante una asociación de listas de control de acceso de sistema de archivos (ACL) para el archivo .svc del servicio.  
   
--   Autorización de URL configurable: las reglas de autorización de URL de ASP.NET se aplican para las solicitudes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cuando el servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se está ejecutando en modo de compatibilidad de ASP.NET.  
+-   Autorización de URL configurable: ASP. Cuando el servicio WCF se ejecuta en modo de compatibilidad de ASP.NET, se aplican las reglas de autorización de dirección URL de NET para las solicitudes WCF.  
   
--   Extensibilidad de<xref:System.Web.HttpModuleCollection>: dado que los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se ejecutan en modo de compatibilidad de ASP.NET participan totalmente en el ciclo de vida de la solicitud HTTP de ASP.NET, cualquier módulo HTTP configurado en la canalización HTTP puede funcionar en solicitudes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] antes de y después de la invocación del servicio.  
+-   <xref:System.Web.HttpModuleCollection> extensibilidad: servicios porque WCF que se ejecutan en modo de compatibilidad de ASP.NET participan totalmente en el ciclo de vida de la solicitud HTTP de ASP.NET, cualquier módulo HTTP configurado en la canalización HTTP puede funcionar en solicitudes de WCF antes y después de la invocación de servicios.  
   
--   Suplantación de ASP.NET: los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se ejecutan utilizando la identidad actual del subproceso ASP.NET suplantado, que puede diferir de la identidad de proceso de IIS si se ha habilitado la suplantación de ASP.NET de la aplicación. Si se habilitan la suplantación de ASP.NET y la de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para una operación de servicio determinada, la implementación del servicio se ejecuta finalmente utilizando la identidad obtenida de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   Suplantación de ASP.NET: Servicios WCF que se ejecutan utilizando la identidad actual de ASP.NET suplantado subproceso, que puede ser diferente de la identidad de proceso IIS si se ha habilitado la suplantación de ASP.NET para la aplicación. Si la suplantación de ASP.NET y la suplantación de WCF están habilitadas para una operación de servicio determinado, la implementación del servicio se ejecuta finalmente utilizando la identidad obtenida de WCF.  
   
- El modo de compatibilidad de ASP.NET de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se habilita en el nivel de la aplicación a través de la siguiente configuración (ubicada en el archivo Web.config de la aplicación):  
+ Modo de compatibilidad ASP.NET de WCF está habilitado en el nivel de aplicación a través de la configuración siguiente (que se encuentra en el archivo Web.config de la aplicación):  
   
 ```xml  
 <system.serviceModel>  
@@ -85,9 +73,9 @@ En este tema se tratan los servicios de hospedaje de [!INCLUDE[indigo1](../../..
 </system.serviceModel>  
 ```  
   
- El valor predeterminado es "`true`" Si no se especifica. Establecer este valor en "`false`" indica que todos los [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicios que se ejecutan en la aplicación no se ejecutarán en modo de compatibilidad de ASP.NET.  
+ El valor predeterminado es "`true`" Si no se especifica. Establecer este valor en "`false`" indica que todos los servicios WCF que se ejecutan en la aplicación no se ejecutarán en modo de compatibilidad de ASP.NET.  
   
- Dado que el modo de compatibilidad de ASP.NET implica una semántica de procesamiento de solicitudes diferente de la predeterminada de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], las implementaciones de servicios individuales tienen la capacidad de controlar si se ejecutan dentro de una aplicación para la que se ha habilitado el modo de compatibilidad de ASP.NET. Los servicios pueden utilizar el <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> para indicar si admiten el modo de compatibilidad de ASP.NET. El valor predeterminado para este atributo es <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>.  
+ Dado que el modo de compatibilidad de ASP.NET implica una semántica de procesamiento de solicitudes que son fundamentalmente diferente del valor predeterminado WCF, implementaciones de servicios individuales tienen la capacidad para controlar si se ejecutan dentro de una aplicación para que ASP.NET Se habilitó el modo de compatibilidad. Los servicios pueden utilizar el <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> para indicar si admiten el modo de compatibilidad de ASP.NET. El valor predeterminado para este atributo es <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>.  
   
  `[AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]`  
   
@@ -107,9 +95,9 @@ En este tema se tratan los servicios de hospedaje de [!INCLUDE[indigo1](../../..
 |aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|El servicio se activa correctamente.|  
   
 > [!NOTE]
->  IIS 7.0 y WAS permite a los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comunicarse a través de protocolos que no sean HTTP. Sin embargo, no se permite a los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se ejecutan en aplicaciones que han habilitado el modo de compatibilidad de ASP.NET exponer extremos que no sean HTTP. Este tipo de configuración genera una excepción de activación cuando el servicio recibe su primer mensaje.  
+>  IIS 7.0 y WAS permite a los servicios WCF para comunicarse a través de protocolos distintos de HTTP. Sin embargo, los servicios WCF que se ejecutan en aplicaciones que se han habilitado el modo de compatibilidad ASP.NET no se permiten para exponer los extremos no HTTP. Este tipo de configuración genera una excepción de activación cuando el servicio recibe su primer mensaje.  
   
- Para obtener más información acerca de cómo habilitar el modo de compatibilidad ASP.NET para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicios, vea <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> y [compatibilidad de ASP.NET](../../../../docs/framework/wcf/samples/aspnet-compatibility.md) ejemplo.  
+ Para obtener más información acerca de cómo habilitar el modo de compatibilidad ASP.NET para los servicios WCF, vea <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> y [compatibilidad de ASP.NET](../../../../docs/framework/wcf/samples/aspnet-compatibility.md) ejemplo.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>  

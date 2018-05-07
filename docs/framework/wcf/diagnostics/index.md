@@ -1,14 +1,6 @@
 ---
 title: Administración y diagnóstico
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, diagnostics
 - Windows Communication Foundation, administration
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fa5256f543a99618e00dc88e085dfee4ac76ebab
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 552ddb842e0a922493feccee1e48e7d5e74291ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="administration-and-diagnostics"></a>Administración y diagnóstico
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona un conjunto enriquecido de funcionalidades que pueden ayudarle a supervisar las diferentes fases de la vida de una aplicación. Por ejemplo, puede usar la configuración para configurar servicios y clientes en la implementación. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye un conjunto grande de contadores de rendimiento para ayudarle a calibrar el rendimiento de su aplicación. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también expone datos de la inspección de un servicio en el tiempo de ejecución a través de un proveedor del Instrumental de administración de Windows (WMI) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Cuando la aplicación experimenta un error o comienza a actuar incorrectamente, puede utilizar el Registro de eventos para ver si algo significativo ha sucedido. También puede utilizar el registro y seguimiento de mensajes para ver qué eventos están pasando de un extremo a otro en su aplicación. Estas características ayudan a los programadores y a profesionales de TI a solucionar problemas de una aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cuando estas no se comportan correctamente.  
+Windows Communication Foundation (WCF) proporciona un amplio conjunto de funcionalidades que pueden ayudarle a supervisar las distintas fases del ciclo de vida de la aplicación. Por ejemplo, puede usar la configuración para configurar servicios y clientes en la implementación. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye un conjunto grande de contadores de rendimiento para ayudarle a calibrar el rendimiento de su aplicación. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también expone datos de la inspección de un servicio en el tiempo de ejecución a través de un proveedor del Instrumental de administración de Windows (WMI) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Cuando la aplicación experimenta un error o comienza a actuar incorrectamente, puede utilizar el Registro de eventos para ver si algo significativo ha sucedido. También puede utilizar el registro y seguimiento de mensajes para ver qué eventos están pasando de un extremo a otro en su aplicación. Estas características ayudan a los programadores y a profesionales de TI a solucionar problemas de una aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cuando estas no se comportan correctamente.  
   
 > [!NOTE]
 >  Si recibe errores sin información de detalle específico, debe habilitar la `includeExceptionDetailInFaults` atributo de la [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) elemento de configuración. De este modo se indica a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que envíe detalles de la excepción a los clientes, lo que permite detectar muchos problemas habituales sin tener que realizar un diagnóstico más avanzado. Para obtener más información, consulte [enviar y recibir errores](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  

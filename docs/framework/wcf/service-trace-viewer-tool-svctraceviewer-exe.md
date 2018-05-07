@@ -1,27 +1,15 @@
 ---
 title: Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-caps.latest.revision: "55"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
-La herramienta del visor de seguimiento de servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] le ayuda a analizar seguimientos del diagnóstico generados por [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. El visor de seguimiento de servicio proporciona una manera fácil de combinar, ver y filtrar los mensajes del registro para que así pueda diagnosticar, reparar y comprobar los problemas del servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Herramienta de Visor de seguimiento de servicio de Windows Communication Foundation (WCF) le ayuda a analizar seguimientos del diagnóstico generados por [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. El visor de seguimiento de servicio proporciona una manera fácil de combinar, ver y filtrar los mensajes del registro para que así pueda diagnosticar, reparar y comprobar los problemas del servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
 ## <a name="configuring-tracing"></a>Configurar seguimiento  
  El seguimiento de diagnóstico le proporciona información que muestra lo que está pasando a lo largo de la operación de su aplicación. Como su propio nombre indica, también puede seguir las operaciones desde el origen hasta el destino y en los puntos intermedios.  
@@ -272,7 +260,7 @@ La herramienta del visor de seguimiento de servicio [!INCLUDE[indigo1](../../../
   
 4.  La vista de árbol a la izquierda muestra la estructura del registro de seguimiento que seleccionó en el paso 1. Vaya al elemento para el que desea crear una condición. En este ejemplo, vaya a ThreadID, que se encuentra en la expresión XPath: /E2ETraceEvent/System/Execution/@ThreadID nodo. Haga doble clic en el atributo ThreadID en la vista de árbol. Esto crea una expresión para el atributo a la derecha del diálogo.  
   
-5.  Cambie el campo de parámetro para la condición ThreadID de Ninguno a “{0}”. Este paso permite configurar el valor de ThreadID cuando se aplica el filtro. (Vea la sección Cómo aplicar un filtro) Puede definir hasta cuatro parámetros. Las condiciones se combinan mediante el operador O.  
+5.  Cambie el campo de parámetro para la condición ThreadID de ninguno a '{0}'. Este paso permite configurar el valor de ThreadID cuando se aplica el filtro. (Vea la sección Cómo aplicar un filtro) Puede definir hasta cuatro parámetros. Las condiciones se combinan mediante el operador O.  
   
 6.  Haga clic en **Aceptar** para crear el filtro.  
   
@@ -297,7 +285,7 @@ La herramienta del visor de seguimiento de servicio [!INCLUDE[indigo1](../../../
   
 2.  Haga clic en **filtrar ahora**y observe el resultado de la operación.  
   
- Si su filtro usa varios parámetros, especifíquelos mediante ';' como separador en la **buscar** campo. Por ejemplo, la cadena siguiente define tres parámetros: ‘1;findValue;text’. El visor aplica ‘1’ al parámetro {0} del filtro. ‘findValue’ y ‘text’ se aplican a {1} y {2} respectivamente.  
+ Si su filtro usa varios parámetros, especifíquelos mediante ';' como separador en la **buscar** campo. Por ejemplo, la cadena siguiente define tres parámetros: ‘1;findValue;text’. El Visor aplica '1' para el {0} parámetro del filtro. 'findValue' y 'text' se aplican a {1} y {2} respectivamente.  
   
 ###### <a name="sharing-custom-filters"></a>Compartir filtros personalizados  
  Los filtros personalizados se pueden compartir entre sesiones diferentes y usuarios diferentes. Puede exportar los filtros a un archivo de definición e importar este archivo en otra ubicación.  
@@ -422,7 +410,7 @@ La herramienta del visor de seguimiento de servicio [!INCLUDE[indigo1](../../../
 |![Seguimiento de suspensión de actividad](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Seguimiento de suspensión de actividad: un seguimiento que marca la hora que se pausa una actividad. No se emite ningún rastro en una actividad suspendida hasta que se reanuda la actividad. Una actividad suspendida denota que no se está efectuando ningún procesamiento en esa actividad en el área del origen de traza. Los seguimientos de suspensión/reanudación son útiles para perfilar. Se emite el seguimiento de suspensión si ActivityTracing está habilitado para el origen de traza.|  
 |![Reanudar la actividad de seguimiento](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Seguimiento de reanudación de actividad: un seguimiento que marca la hora a la que se reanuda una actividad una vez suspendida. Se pueden volver a emitir seguimientos en esa actividad. Los seguimientos de suspensión/reanudación son útiles para perfilar. Se emite el seguimiento de reanudación si ActivityTracing está habilitado para el origen de traza.|  
 |![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transferencia: un seguimiento que se emite cuando el flujo de control lógico se transfiere de una actividad a otra. La actividad en la que se origina la transferencia puede continuar realizando el trabajo en paralelo a la actividad a la que va la transferencia. Se emite la traza de transferencia si ActivityTracing está habilitado para el origen de traza.|  
-|![Transfer From](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Transferir de: un seguimiento que define una transferencia desde otra actividad a la actividad actual.|  
+|![Transferir desde](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Transferir de: un seguimiento que define una transferencia desde otra actividad a la actividad actual.|  
 |![Transferir a](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Transferir a: un seguimiento que define una transferencia de flujo de control lógico desde la actividad actual a otra actividad.|  
   
 ### <a name="wcf-traces"></a>Seguimiento WCF  

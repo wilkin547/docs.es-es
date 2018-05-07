@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Rellenar una forma con un patrón de trama"
-ms.custom: 
+title: 'Cómo: Rellenar una forma con un patrón de trama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with patterns
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f44289b79812f2330639cc333727bd21b6ef4fe6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5b6b5b61b83e5be05999099f2cc6b9e715ca35c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Cómo: Rellenar una forma con un patrón de trama
 Un patrón de trama está formado por dos colores: uno para el fondo y otro para las líneas que constituyen el patrón en segundo plano. Para rellenar una forma cerrada con un patrón de trama, utilice un <xref:System.Drawing.Drawing2D.HatchBrush> objeto. En el ejemplo siguiente se muestra cómo rellenar una elipse con un patrón de trama:  

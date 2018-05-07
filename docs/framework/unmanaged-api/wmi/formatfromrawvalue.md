@@ -1,11 +1,7 @@
 ---
-title: "Función FormatFromRawValue (referencia de API no administrada)"
-description: "La función FormatFromRawValue convierte los datos de rendimiento sin procesar a un formato especificado."
+title: Función FormatFromRawValue (referencia de API no administrada)
+description: La función FormatFromRawValue convierte los datos de rendimiento sin procesar a un formato especificado.
 ms.date: 11/21/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - FormatFromRawValue
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3daa89ec0b40bb9c08898ecd682f05f0f0ce09a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue (función)
 Convierte un valor de datos de rendimiento sin procesar en el formato especificado, o dos valores de datos de rendimiento sin procesar si la conversión de formato se basa en el tiempo.   
@@ -50,7 +43,7 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parámetros
 
 `dwCounterType`  
-[in] El tipo de contador. Para obtener una lista de tipos de contador, vea [WMI Performance Counter Types](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType`puede ser cualquier tipo de contador excepto `PERF_LARGE_RAW_FRACTION` y `PERF_LARGE_RAW_BASE`. 
+[in] El tipo de contador. Para obtener una lista de tipos de contador, vea [WMI Performance Counter Types](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType` puede ser cualquier tipo de contador excepto `PERF_LARGE_RAW_FRACTION` y `PERF_LARGE_RAW_BASE`. 
 
 `dwFormat`  
 [in] El formato que se va a convertir los datos de rendimiento sin procesar. Puede ser uno de los siguientes valores:
@@ -71,11 +64,11 @@ Uno de los valores anteriores puede ser ORed con uno de los siguientes indicador
 `pTimeBase`  
 [in] Un puntero a la base de tiempo, si es necesario para la conversión de formato. Si la información de base de tiempo no es necesario para la conversión de formato, se omite el valor de este parámetro.
 
-`pRawValue1`[in] Un puntero a un [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) estructura que representa un valor de rendimiento sin procesar.
+`pRawValue1` [in] Un puntero a un [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) estructura que representa un valor de rendimiento sin procesar.
 
-`pRawValue2`[in] Un puntero a un [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) estructura que representa un segundo valor de rendimiento sin procesar. Si no es necesario un segundo valor de rendimiento sin procesar, este parámetro debe ser `null`.
+`pRawValue2` [in] Un puntero a un [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) estructura que representa un segundo valor de rendimiento sin procesar. Si no es necesario un segundo valor de rendimiento sin procesar, este parámetro debe ser `null`.
 
-`pFmtValue`[out] Un puntero a un [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) estructura que recibe el valor de rendimiento con formato.
+`pFmtValue` [out] Un puntero a un [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) estructura que recibe el valor de rendimiento con formato.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -96,7 +89,7 @@ Esta función contiene una llamada a la [FormatFromRawValue](https://msdn.micros
   
  **Biblioteca:** PerfCounter.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

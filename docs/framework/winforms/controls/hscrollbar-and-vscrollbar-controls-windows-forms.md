@@ -1,13 +1,6 @@
 ---
 title: Controles HScrollBar y VScrollBar (formularios Windows Forms)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - scroll bars
 - VScrollBar control [Windows Forms]
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - HScrollBar control [Windows Forms]
 - Scroll Bar control [Windows Forms]
 ms.assetid: f5e9cda7-d8f3-406b-b0e6-bdb4375d6eb0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce11db2d01f8938d0f97a3c0526c65a7c9740fba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab2182a92f2fd05d0be69c5e4d2bede5011dde37
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a>Controles HScrollBar y VScrollBar (formularios Windows Forms)
 Los controles de la barra de desplazamiento de Windows Forms se utilizan para facilitar el desplazamiento por una lista de elementos larga o un gran volumen de información, ya sea horizontal o verticalmente, dentro de una aplicación o control. Las barras de desplazamiento son un elemento común de la interfaz de Windows.  

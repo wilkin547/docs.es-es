@@ -1,27 +1,15 @@
 ---
 title: Scenario2
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 816557e0-f676-4731-95c5-b02cbef3d8d7
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94ff7c693824e721b17c79b921f4380dba7d04e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f241bf6d4fb2d5f463b85cadf093ab308015c6a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scenario"></a>Escenario
-Esta sección contiene ejemplos que muestran escenarios de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Esta sección contiene ejemplos que muestran escenarios de Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Escenarios de enlace de datos](../../../../docs/framework/wcf/samples/data-binding-scenarios.md)  
@@ -40,4 +28,4 @@ Esta sección contiene ejemplos que muestran escenarios de [!INCLUDE[indigo1](..
  Muestra cómo hacer fluir la información de identidad del llamador desde un servicio a otro utilizando la infraestructura de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Patrones de diseño: suscripción-publicación basada en la lista](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
- Muestra el patrón suscripción-publicación basada en la lista implementado como un programa de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].
+ Muestra el patrón de lista-suscripción-publicación implementado como un programa de Windows Communication Foundation (WCF).

@@ -1,35 +1,23 @@
 ---
-title: "Asignación entre JSON y XML"
-ms.custom: 
+title: Asignación entre JSON y XML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 770be9ea5327b32286de64207a3cf07bca7449c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db34161ad3e2f7d2c9737e6a456b27bd70c5ebfb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-between-json-and-xml"></a>Asignación entre JSON y XML
-Los sistemas de lectura y escritura generados por el <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> proporcionan una API de XML sobre contenido de notación de objetos JavaScript (JSON) JSON codifica datos mediante un subconjunto de literales de objeto de JavaScript. También se utilizan los sistemas de lectura y escritura producidos por este generador cuando las aplicaciones de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] envían o reciben contenido JSON utilizando el <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> o <xref:System.ServiceModel.WebHttpBinding>.  
+Los sistemas de lectura y escritura generados por el <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> proporcionan una API de XML sobre contenido de notación de objetos JavaScript (JSON) JSON codifica datos mediante un subconjunto de literales de objeto de JavaScript. La lectura y escritura producidos por este generador también se utiliza al contenido JSON enviados o recibidos por las aplicaciones de Windows Communication Foundation (WCF) mediante la <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> o <xref:System.ServiceModel.WebHttpBinding>.  
   
  Cuando se inicializa con contenido de JSON, el lector de JSON se comporta del mismo modo que un lector XML textual sobre una instancia de XML. El sistema de escritura de JSON, cuando se proporciona una secuencia de llamadas que en un lector XML textual genera una cierta instancia XML, escribe contenido JSON. La asignación entre esta instancia de XML y el contenido de JSON se describe en este tema para su uso en escenarios avanzados.  
   
- Internamente, JSON se representa como un conjunto de información XML cuando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lo procesa. Normalmente no tiene que preocuparse por esta representación interna, puesto que la asignación solo es una representación lógica: JSON no se convierte normalmente en XML en memoria ni se convierte a JSON a partir de XML. La asignación significa que API XML se utilizan para obtener acceso al contenido de JSON.  
+ Internamente, JSON se representa como un conjunto de información XML cuando se procesa mediante WCF. Normalmente no tiene que preocuparse por esta representación interna, puesto que la asignación solo es una representación lógica: JSON no se convierte normalmente en XML en memoria ni se convierte a JSON a partir de XML. La asignación significa que API XML se utilizan para obtener acceso al contenido de JSON.  
   
- Cuando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza JSON, el escenario habitual es que el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sea conectado automáticamente mediante el comportamiento <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>, o, cuando sea apropiado, mediante el comportamiento <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> entiende la asignación entre JSON y los conjuntos de información XML y actúa como si tratase directamente con JSON. (Es posible utilizar el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> con cualquier sistema de lectura o escritura XML, siempre que se comprenda que el XML cumple la asignación siguiente).  
+ Cuando WCF usa JSON, el escenario habitual es que el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sea conectado automáticamente por el <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> comportamiento, o por la <xref:System.ServiceModel.Description.WebHttpBehavior> comportamiento cuando corresponda. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> entiende la asignación entre JSON y los conjuntos de información XML y actúa como si tratase directamente con JSON. (Es posible utilizar el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> con cualquier sistema de lectura o escritura XML, siempre que se comprenda que el XML cumple la asignación siguiente).  
   
- En escenarios avanzados, puede volverse necesario tener acceso directamente a la siguiente asignación. Estos escenarios se producen cuando desea serializar y deserializar JSON de maneras personalizadas, sin basarse en el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, o cuando se trata directamente con el tipo <xref:System.ServiceModel.Channels.Message> para mensajes que contienen JSON. La asignación JSON-XML también se utiliza para el registro de mensajes. Al utilizar la característica de registro de mensajes en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], los mensajes de JSON se registran como XML de acuerdo con la asignación descrita en la siguiente sección.  
+ En escenarios avanzados, puede volverse necesario tener acceso directamente a la siguiente asignación. Estos escenarios se producen cuando desea serializar y deserializar JSON de maneras personalizadas, sin basarse en el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, o cuando se trata directamente con el tipo <xref:System.ServiceModel.Channels.Message> para mensajes que contienen JSON. La asignación JSON-XML también se utiliza para el registro de mensajes. Cuando se usa la característica de registro de mensajes en WCF, mensajes JSON se registran como XML según la asignación descrita en la sección siguiente.  
   
  Para aclarar el concepto de asignación, se proporciona el siguiente ejemplo, que procede de un documento JSON.  
   
@@ -46,7 +34,7 @@ Los sistemas de lectura y escritura generados por el <xref:System.Runtime.Serial
 </root>  
 ```  
   
- Es más, si [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] recibe el mensaje de JSON del ejemplo y lo registra, vería el fragmento XML en el registro anterior.  
+ Además, si el mensaje JSON en el ejemplo se recibe por WCF y se registra, vería el fragmento XML en el registro anterior.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Asignación entre JSON y el conjunto de información XML  
  Formalmente, la asignación es entre JSON como se describe en [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (excepto con ciertas restricciones estrictas y algunas otras restricciones que se agregan) y el XML infoset (y no textual XML) como se describe en [información XML Establecer](http://go.microsoft.com/fwlink/?LinkId=98809) . Vea este tema para las definiciones de *elementos de información* y campos entre [corchetes].  
@@ -105,7 +93,7 @@ Los sistemas de lectura y escritura generados por el <xref:System.Runtime.Serial
   
 -   El atributo de nombre del contrato de datos ("__type") tal y como se describe más adelante. Este atributo solo puede estar presente si el atributo de tipo de JSON también está presente y su [normalized value] (valor normalizado) es "object". `DataContractJsonSerializer` utiliza este atributo para conservar información del tipo de contrato de datos; por ejemplo, en casos polimórficos donde se serializa un tipo derivado y donde se espera un tipo base. Si no está trabajando con el `DataContractJsonSerializer`, en la mayoría de los casos, se pasa por alto este atributo.  
   
--   [in-scope namespaces] (espacios de nombres en el ámbito) contiene el enlace de "xml" a "http://www.w3.org/XML/1998/namespace" tal y como requiere la especificación del conjunto de información.  
+-   [espacios de nombres en el ámbito] contiene el enlace de "xml" a "http://www.w3.org/XML/1998/namespace" como exigidos por la especificación de conjunto de información.  
   
 -   [children], [attributes] e [in-scope namespaces] no deben tener elementos distintos de los especificados previamente y [namespace attributes] (atributos del espacio de nombres) no debe tener ningún miembro, pero no se base en estos hechos al leer XML asignado a partir de JSON.  
   
@@ -209,7 +197,7 @@ Ray'|0 o más EII|Una matriz de comienzo (corchete de apertura) como en la secci
  `{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}`  
   
 > [!NOTE]
->  No hay ningún paso de codificación XML en la asignación anterior. Por consiguiente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] solo admite documentos JSON donde todos los caracteres en nombres de claves sean caracteres válidos en nombres de elementos XML. Por ejemplo, el documento JSON {"<":"a"} no se admite, porque < no es un nombre válido para un elemento XML.  
+>  No hay ningún paso de codificación XML en la asignación anterior. Por lo tanto, WCF solo admite documentos JSON donde todos los caracteres en los nombres de clave sean caracteres válidos en nombres de elementos XML. Por ejemplo, el documento JSON {"<":"a"} no se admite, porque < no es un nombre válido para un elemento XML.  
   
  La situación inversa (caracteres válidos en XML, pero no en JSON) no produce ningún problema, puesto que la asignación anterior incluye pasos de escape/sin escape de JSON.  
   

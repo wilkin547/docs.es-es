@@ -1,27 +1,15 @@
 ---
-title: "Información general sobre el uso del diseño automático"
-ms.custom: 
+title: Información general sobre el uso del diseño automático
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 75066b59d0f3a686c66fdbdd187ba4c18e786e6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8693150099559ca09541eb790c134ca3d5277e78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-automatic-layout-overview"></a>Información general sobre el uso del diseño automático
 Este tema presentan las directrices para desarrolladores sobre cómo escribir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones con localizable [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. En el pasado, la localización de un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] era un proceso lento. Cada idioma que el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] se adaptó para un ajuste de píxel por píxel es necesario. Hoy en día con un diseño correcto y derecha normas de codificación, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] puede crearse para que los localizadores tengan menor cambiando el tamaño y posición. El enfoque para escribir aplicaciones que pueden resultar más fácilmente cuyo tamaño ha cambiado y cambia de posición se denomina diseño automático y se consigue mediante el uso de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diseño de la aplicación.  
@@ -63,7 +51,7 @@ Botón ajustable automáticamente
 |----------------------|-----------------|  
 |No use posiciones absolutas.|-No utilice <xref:System.Windows.Controls.Canvas> porque coloca los elementos sin duda.<br />-Use <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, y <xref:System.Windows.Controls.Grid> para colocar los controles.<br />-Para obtener información sobre los distintos tipos de paneles, consulte [paneles de información general sobre](../../../../docs/framework/wpf/controls/panels-overview.md).|  
 |No establezca un tamaño fijo para una ventana.|-Use <xref:System.Windows.Window.SizeToContent%2A>.<br />- Por ejemplo:<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]|  
-|Agregue <xref:System.Windows.FrameworkElement.FlowDirection%2A>.|<ul><li>Agregar un <xref:System.Windows.FrameworkElement.FlowDirection%2A> para el elemento raíz de la aplicación.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona una manera cómoda de admitir diseños horizontales, bidireccionales y verticales. En el marco de presentación, el <xref:System.Windows.FrameworkElement.FlowDirection%2A> propiedad puede utilizarse para definir el diseño. Los patrones de dirección de flujo son:<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight>(LrTb): diseño horizontal para latino, Asia oriental y así sucesivamente.</li><li><xref:System.Windows.FlowDirection.RightToLeft>(RlTb): bidireccional para árabe, hebreo y así sucesivamente.</li></ul></li></ul>|  
+|Agregue <xref:System.Windows.FrameworkElement.FlowDirection%2A>.|<ul><li>Agregar un <xref:System.Windows.FrameworkElement.FlowDirection%2A> para el elemento raíz de la aplicación.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona una manera cómoda de admitir diseños horizontales, bidireccionales y verticales. En el marco de presentación, el <xref:System.Windows.FrameworkElement.FlowDirection%2A> propiedad puede utilizarse para definir el diseño. Los patrones de dirección de flujo son:<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight> (LrTb): diseño horizontal para latino, Asia oriental y así sucesivamente.</li><li><xref:System.Windows.FlowDirection.RightToLeft> (RlTb): bidireccional para árabe, hebreo y así sucesivamente.</li></ul></li></ul>|  
 |Use fuentes compuestas en vez de fuentes físicas.|<ul><li>Con las fuentes compuestas, el <xref:System.Windows.Controls.Control.FontFamily%2A> propiedad no necesita va a localizar.</li><li>Los desarrolladores pueden usar una de las fuentes siguientes o crear sus propias fuentes.<br /><br /> <ul><li>Interfaz de usuario global</li><li>Global San Serif</li><li>Global Serif</li></ul></li></ul>|  
 |Agregue xml:lang.|-Agregar el `xml:lang` atributo en el elemento raíz de su [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], como `xml:lang="en-US"` para una aplicación de inglés.<br />-Dado que las fuentes compuestas utilizan `xml:lang` para determinar qué fuente que se va a utilizar, establezca esta propiedad para admitir escenarios multilingües.|  
   

@@ -1,14 +1,6 @@
 ---
 title: Importación y exportación de esquemas
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe4ef5b17013bf1a9abf5fd1ca0807fe4d335df4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c9bb0d6df362380a37ae3079694ab91e9577741d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="schema-import-and-export"></a>Importación y exportación de esquemas
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] incluye un nuevo motor de serialización, el <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` traduce entre los objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] y XML (en ambas direcciones). Además del propio serializador, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye la importación del esquema asociado y los mecanismos de exportación de esquema. *Esquema* es una descripción formal, exacta y legible por el equipo de la forma del XML que el serializador genera o al que puede tener acceso el deserializador. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa el Lenguaje de definición de esquemas (XSD) XML de World Wide Web Consortium (W3C) como su representación de esquema, que es muy interoperable con numerosas plataformas de terceros.  
+Windows Communication Foundation (WCF) incluye un nuevo motor de serialización, el <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` traduce entre los objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] y XML (en ambas direcciones). Además del propio serializador, WCF incluye la importación del esquema asociado y los mecanismos de exportación de esquema. *Esquema* es una descripción formal, exacta y legible por el equipo de la forma del XML que el serializador genera o al que puede tener acceso el deserializador. WCF usa el lenguaje de definición de esquema XML de World Wide Web Consortium (W3C) (XSD) como su representación de esquema, que es muy interoperable con numerosas plataformas de terceros.  
   
  El componente de importación de esquema, <xref:System.Runtime.Serialization.XsdDataContractImporter>, toma un documento de esquema XSD y genera las clases [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (normalmente las clases de contrato de datos) de manera que los formularios serializados se corresponden con el esquema dado.  
   

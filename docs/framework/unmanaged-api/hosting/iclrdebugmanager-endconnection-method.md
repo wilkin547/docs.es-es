@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugManager::EndConnection (Método)"
-ms.custom: 
+title: ICLRDebugManager::EndConnection (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugManager.EndConnection
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 89dc7363-2f29-4eb2-8f23-fccdda6a76a6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 210226b697eb3dffe574bd842ca31e83948891a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c58ce0389c77b6534cbbf37fe985f89c187065df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebugmanagerendconnection-method"></a>ICLRDebugManager::EndConnection (Método)
 Quita la asociación entre una lista de tareas y un identificador y un nombre descriptivo.  
@@ -54,7 +42,7 @@ HRESULT EndConnection (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`EndConnection`se devolvió correctamente.|  
+|S_OK|`EndConnection` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El CLR no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|La llamada agotó el tiempo de espera.|  
 |HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
@@ -66,7 +54,7 @@ HRESULT EndConnection (
  [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md) proporciona tres métodos, `BeginConnection`, [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md), y `EndConnection`, para asociar listas de tareas con identificadores y nombres descriptivos.  
   
 > [!IMPORTANT]
->  Estos tres métodos deben llamarse en un orden específico para cada conjunto de tareas. `BeginConnection`se llama en primer lugar para establecer una nueva conexión. `SetConnectionTasks`se llama a continuación para proporcionar el conjunto de tareas que se asociará con esa conexión. `EndConnection`se llama última para quitar la asociación entre la lista de tareas y el identificador y el nombre descriptivo. Sin embargo, se pueden anidar las llamadas para conexiones diferentes.  
+>  Estos tres métodos deben llamarse en un orden específico para cada conjunto de tareas. `BeginConnection` se llama en primer lugar para establecer una nueva conexión. `SetConnectionTasks` se llama a continuación para proporcionar el conjunto de tareas que se asociará con esa conexión. `EndConnection` se llama última para quitar la asociación entre la lista de tareas y el identificador y el nombre descriptivo. Sin embargo, se pueden anidar las llamadas para conexiones diferentes.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -75,7 +63,7 @@ HRESULT EndConnection (
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICLRControl (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  

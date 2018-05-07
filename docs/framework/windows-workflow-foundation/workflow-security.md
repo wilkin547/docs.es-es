@@ -1,29 +1,17 @@
 ---
 title: Seguridad del flujo de trabajo
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8acfd0640478cf67309fe53a99707c7d96c5a635
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-security"></a>Seguridad del flujo de trabajo
-Windows Workflow Foundation (WF) se integra con varias tecnologías diferentes, como Microsoft SQL Server y [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Al interactuar con estas tecnologías, se pueden introducir problemas de seguridad en su flujo de trabajo si no se hace de manera correcta.  
+Windows Workflow Foundation (WF) se integra con varias tecnologías diferentes, como Microsoft SQL Server y Windows Communication Foundation (WCF). Al interactuar con estas tecnologías, se pueden introducir problemas de seguridad en su flujo de trabajo si no se hace de manera correcta.  
   
 ## <a name="persistence-security-concerns"></a>Problemas de seguridad de persistencia  
   
@@ -49,7 +37,7 @@ Windows Workflow Foundation (WF) se integra con varias tecnologías diferentes, 
   
 ## <a name="considerations-for-workflowservicehost"></a>Consideraciones para WorkflowServiceHost  
   
--   Se deben proteger los extremos de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usados en flujos de trabajo. Para obtener más información, consulte [información general sobre la seguridad de WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   Se deben proteger los extremos de Windows Communication Foundation (WCF) que se usan en flujos de trabajo. Para obtener más información, consulte [información general sobre la seguridad de WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
   
 -   La autorización en el nivel de host puede implementarse mediante <xref:System.ServiceModel.ServiceAuthorizationManager>. Vea [Cómo: crear un administrador de autorización personalizado para un servicio](http://go.microsoft.com/fwlink/?LinkId=192228) para obtener más información. Esto también se muestra en el ejemplo siguiente: [proteger servicios de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
   

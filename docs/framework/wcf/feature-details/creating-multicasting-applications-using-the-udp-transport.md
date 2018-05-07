@@ -1,24 +1,12 @@
 ---
-title: "Crear aplicaciones de multidifusión mediante el transporte UDP"
-ms.custom: 
+title: Crear aplicaciones de multidifusión mediante el transporte UDP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 57c30c8b6b381be931789f3f64cbd26943bb2b34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84b36029416a66ef03768aed7d0c789a41eed8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Crear aplicaciones de multidifusión mediante el transporte UDP
 Las aplicaciones de multidifusión envían pequeños mensajes a un gran número de destinatarios al mismo tiempo sin necesidad de establecer conexiones punto a punto. El énfasis de esas aplicaciones es la velocidad sobre la conconfiabilidad. Es decir es más importante enviar datos puntualmente que asegurarse de que cualquier mensaje concreto se reciba realmente. WCF admite ahora la escritura de aplicaciones de multidifusión mediante <xref:System.ServiceModel.UdpBinding>. Este transporte es útil en escenarios donde un servicio necesita enviar pequeños mensajes a varios clientes simultáneamente. Una aplicación de cotización bursátil es un ejemplo de este tipo de servicio.  
@@ -102,7 +90,7 @@ while (true)
  Este código genera información bursátil y usa el contrato de servicio IStockTicker para enviar mensajes de multidifusión para llamar a servicios que escuchan en la dirección UDP correcta.  
   
 ### <a name="udp-and-reliable-messaging"></a>Mensajería UDP y de confianza  
- El enlace UDP no admite mensajería de confianza debido a la naturaleza ligera del protocolo UDP. Si necesita confirmar que los mensajes son recibidos por un extremo remoto, use un transporte que admita mensajería de confianza como HTTP o TCP. Para obtener más información sobre la mensajería confiable, vea http://go.microsoft.com/fwlink/?LinkId=231830.  
+ El enlace UDP no admite mensajería de confianza debido a la naturaleza ligera del protocolo UDP. Si necesita confirmar que los mensajes son recibidos por un punto de conexión remoto, use un transporte que admita mensajería de confianza como HTTP o TCP. Para obtener más información sobre, consulte mensajería confiable http://go.microsoft.com/fwlink/?LinkId=231830  
   
 ### <a name="two-way-multicast-messaging"></a>Mensajería bidireccional de multidifusión  
  Mientras que los mensajes de multidifusión suelen ser unidireccionales, el UdpBinding admite intercambio de mensajes de solicitud y respuesta. Los mensajes enviados mediante el transporte UDP contienen direcciones From y To. Se ha de tener cuidado al usar la dirección From porque podría cambiarse malintencionadamente en la ruta.  La dirección se puede comprobar mediante el código siguiente:  

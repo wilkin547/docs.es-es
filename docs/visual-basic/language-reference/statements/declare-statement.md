@@ -1,11 +1,6 @@
 ---
 title: Declare Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Declare
 - vb.Lib
@@ -32,14 +27,11 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc6949c7b52e87b7b39dd2690cac915a5f0d15aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declare-statement"></a>Declare Statement
 Declara una referencia a un procedimiento implementado en un archivo externo.  
@@ -66,11 +58,11 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`charsetmodifier`|Opcional. Especifica el juego de caracteres y el archivo de información de búsqueda. Puede ser uno de los siguientes:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (valor predeterminado)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Automático](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|Opcional, pero cualquiera `Sub` o `Function` deben aparecer. Indica que el procedimiento externo no devuelve ningún valor.|  
 |`Function`|Opcional, pero cualquiera `Sub` o `Function` deben aparecer. Indica que el procedimiento externo devuelve un valor.|  
-|`name`|Obligatorio. Nombre de esta referencia externa. Para obtener más información, consulte [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Lib`|Obligatorio. Presenta un `Lib` cláusula, que identifica el archivo externo (DLL o recurso de código) que contiene un procedimiento externo.|  
-|`libname`|Obligatorio. Nombre del archivo que contiene el procedimiento declarado.|  
+|`name`|Requerido. Nombre de esta referencia externa. Para obtener más información, consulte [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Lib`|Requerido. Presenta un `Lib` cláusula, que identifica el archivo externo (DLL o recurso de código) que contiene un procedimiento externo.|  
+|`libname`|Requerido. Nombre del archivo que contiene el procedimiento declarado.|  
 |`Alias`|Opcional. Indica que no se puede identificar el procedimiento que se declara dentro de su archivo por el nombre especificado en `name`. Especifique su identificación en `aliasname`.|  
-|`aliasname`|Es obligatorio si se utiliza la `Alias` (palabra clave). Cadena que identifica el procedimiento en uno de dos maneras:<br /><br /> El nombre de punto de entrada del procedimiento dentro de su archivo entre comillas (`""`)<br /><br /> O bien<br /><br /> Un signo de número (`#`) seguido de un entero que especifica el número ordinal del punto de entrada del procedimiento dentro de su archivo|  
+|`aliasname`|Es obligatorio si se utiliza la `Alias` (palabra clave). Cadena que identifica el procedimiento en uno de dos maneras:<br /><br /> El nombre de punto de entrada del procedimiento dentro de su archivo entre comillas (`""`)<br /><br /> -o bien-<br /><br /> Un signo de número (`#`) seguido de un entero que especifica el número ordinal del punto de entrada del procedimiento dentro de su archivo|  
 |`parameterlist`|Necesario si el procedimiento toma parámetros. Vea [lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`returntype`|Obligatorio si `Function` se especifica y `Option Strict` es `On`. Tipo de datos del valor devuelto por el procedimiento.|  
   
@@ -125,7 +117,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 -   **Conjuntos de caracteres.** Puede especificar en `charsetmodifier` cómo Visual Basic debe calcular las referencias de cadenas cuando llama al procedimiento externo. El `Ansi` modificador indica a Visual Basic para calcular las referencias de todas las cadenas a valores ANSI y la `Unicode` modificador dirige al calcular las referencias de todas las cadenas a valores Unicode. El `Auto` modificador indica a Visual Basic para calcular referencias de cadenas según .NET Framework reglas en función de la referencia externa `name`, o `aliasname` si se especifica. El valor predeterminado es `Ansi`.  
   
-     `charsetmodifier`También especifica cómo Visual Basic debe buscar el procedimiento externo en su archivo externo. `Ansi`y `Unicode` ambos indican a Visual Basic que se buscará sin modificar su nombre durante la búsqueda. `Auto`indica a Visual Basic para determinar el juego de caracteres base de la plataforma de tiempo de ejecución y posiblemente modificar el nombre del procedimiento externo, como se indica a continuación:  
+     `charsetmodifier` También especifica cómo Visual Basic debe buscar el procedimiento externo en su archivo externo. `Ansi` y `Unicode` ambos indican a Visual Basic que se buscará sin modificar su nombre durante la búsqueda. `Auto` indica a Visual Basic para determinar el juego de caracteres base de la plataforma de tiempo de ejecución y posiblemente modificar el nombre del procedimiento externo, como se indica a continuación:  
   
     -   En una plataforma ANSI, como Windows 95, Windows 98 o Windows Millennium Edition, busque primero el procedimiento externo sin modificar el nombre. Si se produce un error, anexar "A" al final del nombre del procedimiento externo y búsquelo de nuevo.  
   

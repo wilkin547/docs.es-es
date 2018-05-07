@@ -1,13 +1,6 @@
 ---
-title: "Información general sobre formas y dibujo básico en WPF"
-ms.custom: 
+title: Información general sobre formas y dibujo básico en WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2912215cb8fb0090cef58e0201cc355da1f0bf19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: adbf982da25ff445d277b7c1b5911217d9825c02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Información general sobre formas y dibujo básico en WPF
 Este tema proporciona información general sobre cómo dibujar con <xref:System.Windows.Shapes.Shape> objetos. A <xref:System.Windows.Shapes.Shape> es un tipo de <xref:System.Windows.UIElement> que le permite dibujar una forma en la pantalla. Dado que son elementos de interfaz de usuario, <xref:System.Windows.Shapes.Shape> objetos pueden utilizarse dentro de <xref:System.Windows.Controls.Panel> elementos y la mayoría de los controles.  
@@ -38,7 +26,7 @@ Este tema proporciona información general sobre cómo dibujar con <xref:System.
   
 <a name="shapes"></a>   
 ## <a name="shape-objects"></a>Objetos Shape  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Proporciona una serie de listas para usar <xref:System.Windows.Shapes.Shape> objetos.  Todos los objetos de forma que se heredan de la <xref:System.Windows.Shapes.Shape> clase. Los objetos de formas disponibles incluyen <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, y <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape>objetos comparten las siguientes propiedades comunes.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Proporciona una serie de listas para usar <xref:System.Windows.Shapes.Shape> objetos.  Todos los objetos de forma que se heredan de la <xref:System.Windows.Shapes.Shape> clase. Los objetos de formas disponibles incluyen <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, y <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape> objetos comparten las siguientes propiedades comunes.  
   
 -   <xref:System.Windows.Shapes.Shape.Stroke%2A>: Describe cómo se pinta el contorno de la forma.  
   
@@ -83,7 +71,7 @@ Este tema proporciona información general sobre cómo dibujar con <xref:System.
   
 <a name="pathgeometry"></a>   
 ### <a name="pathgeometry-and-pathsegments"></a>PathGeometry y PathSegments  
- <xref:System.Windows.Media.PathGeometry>los objetos se componen de uno o varios <xref:System.Windows.Media.PathFigure> objetos; cada <xref:System.Windows.Media.PathFigure> representa un diferentes "figura" o forma. Cada <xref:System.Windows.Media.PathFigure> propio consta de uno o varios <xref:System.Windows.Media.PathSegment> objetos, cada uno representa una parte conectada de la figura o forma. Tipos de segmentos incluyen lo siguiente: <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.BezierSegment>, y <xref:System.Windows.Media.ArcSegment>.  
+ <xref:System.Windows.Media.PathGeometry> los objetos se componen de uno o varios <xref:System.Windows.Media.PathFigure> objetos; cada <xref:System.Windows.Media.PathFigure> representa un diferentes "figura" o forma. Cada <xref:System.Windows.Media.PathFigure> propio consta de uno o varios <xref:System.Windows.Media.PathSegment> objetos, cada uno representa una parte conectada de la figura o forma. Tipos de segmentos incluyen lo siguiente: <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.BezierSegment>, y <xref:System.Windows.Media.ArcSegment>.  
   
  En el ejemplo siguiente, un <xref:System.Windows.Shapes.Path> se utiliza para dibujar una curva Bézier cuadrática.  
   
@@ -108,7 +96,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  ![Ilustración de trayecto](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path.PNG "shape_ovw_path")  
   
- El <xref:System.Windows.Shapes.Path.Data%2A> cadena de atributo empieza con el comando "moveto", indicado por M, que establece un punto de inicio para la ruta de acceso en el sistema de coordenadas de la <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.Shapes.Path>parámetros de datos distinguen entre mayúsculas y minúsculas. La M mayúscula indica una ubicación absoluta para el nuevo punto actual. Una m minúscula indica coordenadas relativas. El primer segmento es una curva de Bézier cúbica que comienza en (100,200) y termina en (400,175), trazado con los dos puntos de control (100,25) y (400,350). Este segmento se indica mediante el comando C en el <xref:System.Windows.Shapes.Path.Data%2A> cadena de atributo. De nuevo, la C mayúscula indica una ruta de acceso absoluta; la c minúscula indicaría una ruta de acceso relativa.  
+ El <xref:System.Windows.Shapes.Path.Data%2A> cadena de atributo empieza con el comando "moveto", indicado por M, que establece un punto de inicio para la ruta de acceso en el sistema de coordenadas de la <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.Shapes.Path> parámetros de datos distinguen entre mayúsculas y minúsculas. La M mayúscula indica una ubicación absoluta para el nuevo punto actual. Una m minúscula indica coordenadas relativas. El primer segmento es una curva de Bézier cúbica que comienza en (100,200) y termina en (400,175), trazado con los dos puntos de control (100,25) y (400,350). Este segmento se indica mediante el comando C en el <xref:System.Windows.Shapes.Path.Data%2A> cadena de atributo. De nuevo, la C mayúscula indica una ruta de acceso absoluta; la c minúscula indicaría una ruta de acceso relativa.  
   
  El segundo segmento comienza con un comando H "lineto" horizontal absoluto, que especifica una línea trazada desde el punto de conexión del subtrazado anterior (400,175) hasta un nuevo punto de conexión (280,175). Dado que es un comando "lineto" horizontal, el valor especificado es un *x*-coordinar.  
   
@@ -116,7 +104,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
 <a name="fillpaint"></a>   
 ## <a name="painting-shapes"></a>Pintar formas  
- <xref:System.Windows.Media.Brush>los objetos se utilizan para pintar una forma <xref:System.Windows.Shapes.Shape.Stroke%2A> y <xref:System.Windows.Shapes.Shape.Fill%2A>. En el ejemplo siguiente, el trazo y relleno de un <xref:System.Windows.Shapes.Ellipse> se especifican. Tenga en cuenta que una entrada válida para las propiedades del pincel puede ser una palabra clave o el valor de color en formato hexadecimal. Para obtener más información sobre las palabras clave de color disponibles, vea Propiedades de la <xref:System.Windows.Media.Colors> clase en el <xref:System.Windows.Media> espacio de nombres.  
+ <xref:System.Windows.Media.Brush> los objetos se utilizan para pintar una forma <xref:System.Windows.Shapes.Shape.Stroke%2A> y <xref:System.Windows.Shapes.Shape.Fill%2A>. En el ejemplo siguiente, el trazo y relleno de un <xref:System.Windows.Shapes.Ellipse> se especifican. Tenga en cuenta que una entrada válida para las propiedades del pincel puede ser una palabra clave o el valor de color en formato hexadecimal. Para obtener más información sobre las palabras clave de color disponibles, vea Propiedades de la <xref:System.Windows.Media.Colors> clase en el <xref:System.Windows.Media> espacio de nombres.  
   
 ```  
 <Canvas Background="LightGray">   
@@ -213,7 +201,7 @@ myPolygon.StrokeThickness = 2;
 ## <a name="transforming-shapes"></a>Transformar formas  
  La <xref:System.Windows.Media.Transform> clase proporciona los medios para transformar las formas en un plano bidimensional.  Los distintos tipos de transformación incluyen la rotación (<xref:System.Windows.Media.RotateTransform>), escala (<xref:System.Windows.Media.ScaleTransform>), el sesgado (<xref:System.Windows.Media.SkewTransform>) y traducción (<xref:System.Windows.Media.TranslateTransform>).  
   
- Una transformación común para aplicar a una forma es la rotación.  Para girar una forma, crear una <xref:System.Windows.Media.RotateTransform> y especifique su <xref:System.Windows.Media.RotateTransform.Angle%2A>. Un <xref:System.Windows.Media.RotateTransform.Angle%2A> de 45 gira el elemento 45 grados de las agujas del reloj; un ángulo de 90 gira el elemento 90 grados a la derecha; y así sucesivamente. Establecer el <xref:System.Windows.Media.RotateTransform.CenterX%2A> y <xref:System.Windows.Media.RotateTransform.CenterY%2A> propiedades si desea controlar el punto sobre el que se gira el elemento. Estos valores de propiedad se expresan en el espacio de coordenadas del elemento que se va a transformar. <xref:System.Windows.Media.RotateTransform.CenterX%2A>y <xref:System.Windows.Media.RotateTransform.CenterY%2A> tienen valores predeterminados de cero. Por último, aplique el <xref:System.Windows.Media.RotateTransform> al elemento. Si no desea que la transformación afecte al diseño, establezca la forma <xref:System.Windows.UIElement.RenderTransform%2A> propiedad.  
+ Una transformación común para aplicar a una forma es la rotación.  Para girar una forma, crear una <xref:System.Windows.Media.RotateTransform> y especifique su <xref:System.Windows.Media.RotateTransform.Angle%2A>. Un <xref:System.Windows.Media.RotateTransform.Angle%2A> de 45 gira el elemento 45 grados de las agujas del reloj; un ángulo de 90 gira el elemento 90 grados a la derecha; y así sucesivamente. Establecer el <xref:System.Windows.Media.RotateTransform.CenterX%2A> y <xref:System.Windows.Media.RotateTransform.CenterY%2A> propiedades si desea controlar el punto sobre el que se gira el elemento. Estos valores de propiedad se expresan en el espacio de coordenadas del elemento que se va a transformar. <xref:System.Windows.Media.RotateTransform.CenterX%2A> y <xref:System.Windows.Media.RotateTransform.CenterY%2A> tienen valores predeterminados de cero. Por último, aplique el <xref:System.Windows.Media.RotateTransform> al elemento. Si no desea que la transformación afecte al diseño, establezca la forma <xref:System.Windows.UIElement.RenderTransform%2A> propiedad.  
   
  En el ejemplo siguiente, un <xref:System.Windows.Media.RotateTransform> se utiliza para girar una forma 45 grados sobre la esquina de la forma superior izquierda (0,0).  
   

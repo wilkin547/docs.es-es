@@ -1,12 +1,6 @@
 ---
 title: + (Operador) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.+
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb0d66db2d777c046ccec69acc1f2069d21baf6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ccf79c700cf852c0febb9c3f3464cbacdd39296e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>+ (Operador, Visual Basic)
 Suma dos números o devuelve el valor positivo de una expresión numérica. También puede utilizarse para concatenar dos expresiones de cadena.  
@@ -40,7 +31,7 @@ Suma dos números o devuelve el valor positivo de una expresión numérica. Tamb
   
 |Término|Definición|  
 |---|---|  
-|`expression1`|Obligatorio. Cualquier expresión numérica o de cadena.|  
+|`expression1`|Requerido. Cualquier expresión numérica o de cadena.|  
 |`expression2`|Obligatorio a menos que el `+` operador está calculando un valor negativo. Cualquier expresión numérica o de cadena.|  
   
 ## <a name="result"></a>Resultado  
@@ -63,26 +54,26 @@ Suma dos números o devuelve el valor positivo de una expresión numérica. Tamb
 |Tipos de datos de expresiones|Acción del compilador|  
 |---|---|  
 |Ambas expresiones son tipos de datos numéricos (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, o `Double`)|Agregar. El tipo de datos del resultado es un tipo numérico adecuado para los tipos de datos de `expression1` y `expression2`. Vea las tablas "Aritmética de enteros" en [tipos de datos de resultados de operador](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Ambas expresiones son de tipo`String`|Concatenar.|  
+|Ambas expresiones son de tipo `String`|Concatenar.|  
 |Una expresión es un tipo de datos numérico y la otra es una cadena|Si `Option Strict` es `On`, a continuación, generar un error del compilador.<br /><br /> Si `Option Strict` es `Off`, a continuación, convertir implícitamente el `String` a `Double` y agregar.<br /><br /> Si el `String` no se puede convertir a `Double`, a continuación, iniciar una <xref:System.InvalidCastException> excepción.|  
 |Una expresión es un tipo de datos numéricos y el otro es [nada](../../../visual-basic/language-reference/nothing.md)|Agregar, con `Nothing` el valor es cero.|  
-|Una expresión es una cadena y la otra es`Nothing`|Concatenación, con `Nothing` con valores como "".|  
+|Una expresión es una cadena y la otra es `Nothing`|Concatenación, con `Nothing` con valores como "".|  
   
  Si una expresión es un `Object` expresión, Visual Basic realiza las siguientes acciones.  
   
 |Tipos de datos de expresiones|Acción del compilador|  
 |---|---|  
-|`Object`Expresión que contiene un valor numérico y el otro es un tipo de datos numéricos|Si `Option Strict` es `On`, a continuación, generar un error del compilador.<br /><br /> Si `Option Strict` es `Off`, a continuación, agregue.|  
-|`Object`Expresión que contiene un valor numérico y el otro es de tipo`String`|Si `Option Strict` es `On`, a continuación, generar un error del compilador.<br /><br /> Si `Option Strict` es `Off`, a continuación, convertir implícitamente el `String` a `Double` y agregar.<br /><br /> Si el `String` no se puede convertir a `Double`, a continuación, iniciar una <xref:System.InvalidCastException> excepción.|  
-|`Object`Expresión que contiene una cadena y la otra es un tipo de datos numéricos|Si `Option Strict` es `On`, a continuación, generar un error del compilador.<br /><br /> Si `Option Strict` es `Off`, a continuación, convertir implícitamente la cadena `Object` a `Double` y agregar.<br /><br /> Si la cadena `Object` no se puede convertir a `Double`, a continuación, iniciar una <xref:System.InvalidCastException> excepción.|  
-|`Object`Expresión que contiene una cadena y la otra es de tipo`String`|Si `Option Strict` es `On`, a continuación, generar un error del compilador.<br /><br /> Si `Option Strict` es `Off`, a continuación, convertir implícitamente `Object` a `String` y concatenar.|  
+|`Object` Expresión que contiene un valor numérico y el otro es un tipo de datos numéricos|Si `Option Strict` es `On`, a continuación, generar un error del compilador.<br /><br /> Si `Option Strict` es `Off`, a continuación, agregue.|  
+|`Object` Expresión que contiene un valor numérico y el otro es de tipo `String`|Si `Option Strict` es `On`, a continuación, generar un error del compilador.<br /><br /> Si `Option Strict` es `Off`, a continuación, convertir implícitamente el `String` a `Double` y agregar.<br /><br /> Si el `String` no se puede convertir a `Double`, a continuación, iniciar una <xref:System.InvalidCastException> excepción.|  
+|`Object` Expresión que contiene una cadena y la otra es un tipo de datos numéricos|Si `Option Strict` es `On`, a continuación, generar un error del compilador.<br /><br /> Si `Option Strict` es `Off`, a continuación, convertir implícitamente la cadena `Object` a `Double` y agregar.<br /><br /> Si la cadena `Object` no se puede convertir a `Double`, a continuación, iniciar una <xref:System.InvalidCastException> excepción.|  
+|`Object` Expresión que contiene una cadena y la otra es de tipo `String`|Si `Option Strict` es `On`, a continuación, generar un error del compilador.<br /><br /> Si `Option Strict` es `Off`, a continuación, convertir implícitamente `Object` a `String` y concatenar.|  
   
  Si ambas expresiones son `Object` expresiones, Visual Basic realiza las siguientes acciones (`Option Strict Off` solo).  
   
 |Tipos de datos de expresiones|Acción del compilador|  
 |---|---|  
 |Ambos `Object` expresiones contienen valores numéricos|Agregar.|  
-|Ambos `Object` expresiones son de tipo`String`|Concatenar.|  
+|Ambos `Object` expresiones son de tipo `String`|Concatenar.|  
 |Una `Object` expresión que contiene un valor numérico y el otro contiene una cadena|Convertir implícitamente la cadena `Object` a `Double` y agregar.<br /><br /> Si la cadena `Object` no se puede convertir en un valor numérico, a continuación, iniciar una <xref:System.InvalidCastException> excepción.|  
   
  Si el valor `Object` expresión se evalúa como [nada](../../../visual-basic/language-reference/nothing.md) o <xref:System.DBNull>, `+` operador lo trata como un `String` con un valor de "".  

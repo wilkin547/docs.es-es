@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Delimitar controles en formularios Windows Forms"
-ms.custom: 
+title: 'Cómo: Delimitar controles en formularios Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Anchor property [Windows Forms], enabling resizable forms
 - Windows Forms controls, screen resolutions
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - Windows Forms, resizing
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ceaacc250d48e7199d7224f95aa91ed976c097e0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3d0885ac3acde6732a5c059063f992913a98b9c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Cómo: Delimitar controles en formularios Windows Forms
 Si va a diseñar un formulario que el usuario puede cambiar el tamaño en tiempo de ejecución, deben cambiar el tamaño de los controles en el formulario y la posición correctamente. Para cambiar el tamaño de los controles de forma dinámica con el formulario, puede usar el <xref:System.Windows.Forms.Control.Anchor%2A> propiedad de los controles de formularios Windows Forms. El <xref:System.Windows.Forms.Control.Anchor%2A> propiedad define una posición de delimitación para el control. Cuando un control se acopla a un formulario y se cambia el tamaño del formulario, el control mantiene la distancia entre el control y las posiciones de delimitación. Por ejemplo, si tiene un <xref:System.Windows.Forms.TextBox> control que está anclada a la izquierda, derecha y los bordes de la parte inferior del formulario, tal y como se cambia el tamaño del formulario, el <xref:System.Windows.Forms.TextBox> control cambia de tamaño horizontalmente para que mantiene la misma distancia desde los lados derecho e izquierdos del formulario. Además, el control se ubica verticalmente para que su ubicación es siempre la misma distancia desde el borde inferior del formulario. Si un control no se acopla y se cambia el tamaño del formulario, se cambia la posición del control en relación con los bordes del formulario.  

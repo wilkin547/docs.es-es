@@ -1,29 +1,15 @@
 ---
 title: Elevación de privilegios
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6d93a8ae074e4016d7d8ec4b8734f0d14ead938f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c71936d087ef046848c75d1fa0638aaafbe43c9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="elevation-of-privilege"></a>Elevación de privilegios
 *Elevación de privilegios* resultante de dar una autorización atacante permisos más allá de aquéllos concedidos inicialmente. Por ejemplo, un atacante con un conjunto de privilegios de permisos de "solo lectura" eleva de algún modo el conjunto para incluir la "lectura y escritura".  
@@ -36,7 +22,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="switching-identity-without-a-security-context"></a>Intercambio de identidad sin un contexto de seguridad  
  Lo siguiente solo se aplica a [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
   
- Cuando se establece una conexión entre un cliente y servidor, la identidad del cliente no cambia, excepto en una situación: una vez abierto el cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], si se cumplen las condiciones siguientes:  
+ Cuando se establece una conexión entre un cliente y servidor, la identidad del cliente no cambia, excepto en una situación: una vez que se abre el cliente de WCF, si se cumplen todas las condiciones siguientes:  
   
 -   Los procedimientos para establecer un contexto de seguridad (mediante la seguridad de transporte sesión o una sesión de seguridad de mensaje) está desactivada (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> propiedad está establecida en `false` en caso de seguridad de los mensajes o no sean capaces de establecer la seguridad de transporte las sesiones se utiliza en caso de seguridad de transporte. HTTPS es un ejemplo de dicho transporte).  
   
@@ -46,7 +32,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Está llamando al servicio bajo el contexto de seguridad suplantado.  
   
- Si estas condiciones se cumplen, la identidad utilizada para autenticar el cliente en el servicio podría cambiar (podría no ser la identidad suplantada, sino, en su lugar, la identidad del proceso) una vez abierto el cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Esto ocurre porque la credencial de Windows utilizada para autenticar el cliente en el servicio se transmite con cada mensaje, y la credencial utilizada para la autenticación se obtiene a partir de la identidad de Windows del subproceso actual. Si la identidad de Windows del subproceso actual cambia (por ejemplo, suplantando a un llamador diferente), la credencial adjunta al mensaje y utilizada para autenticar el cliente en el servicio también podría cambiar.  
+ Si se cumplen estas condiciones, puede cambiar la identidad utilizada para autenticar al cliente en el servicio (quizás no sea la identidad suplantada, sino la identidad del proceso en su lugar) una vez que se abre el cliente de WCF. Esto ocurre porque la credencial de Windows utilizada para autenticar el cliente en el servicio se transmite con cada mensaje, y la credencial utilizada para la autenticación se obtiene a partir de la identidad de Windows del subproceso actual. Si la identidad de Windows del subproceso actual cambia (por ejemplo, suplantando a un llamador diferente), la credencial adjunta al mensaje y utilizada para autenticar el cliente en el servicio también podría cambiar.  
   
  Si desea tener un comportamiento determinista al utilizar la autenticación de Windows junto con la suplantación, debe establecer explícitamente la credencial de Windows o debe establecer un contexto de seguridad con el servicio. Para ello, utilice una sesión de seguridad de mensajes o una sesión de seguridad de transporte. Por ejemplo, el transporte net.tcp puede proporcionar una sesión de seguridad de transporte. Además, debe utilizar solo una versión sincrónica de operaciones de cliente al llamar al servicio. Si establece un contexto de seguridad de mensajes, no debería mantener abierta la conexión con el servicio más tiempo del periodo de renovación de sesión configurado, puesto que la identidad también puede cambiar durante el proceso de renovación de sesión.  
   
@@ -59,9 +45,9 @@ ms.lasthandoff: 04/28/2018
 >  Al utilizar el método `BeginOpen`, no se puede garantizar que las credenciales capturadas sean las credenciales del proceso que llama al método.  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>Las cachés de tokens permiten la repetición mediante datos obsoletos  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza la función `LogonUser` de autoridad de seguridad local (LSA) para autenticar a los usuarios mediante nombre de usuario y contraseña. Dado que la función de inicio de sesión es una operación costosa, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] le permite almacenar en memoria caché tokens que representan a usuarios autenticados para aumentar el rendimiento. El mecanismo de almacenamiento en caché guarda los resultados de `LogonUser` para los usos posteriores. Este mecanismo está deshabilitada de forma predeterminada. Para habilitarlo, establezca el <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> propiedad `true`, o usar el `cacheLogonTokens` atributo de la [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
+ WCF usa la autoridad de seguridad local (LSA) `LogonUser` función para autenticar a los usuarios por nombre de usuario y contraseña. Dado que la función de inicio de sesión es una operación costosa, WCF permite a los usuarios para aumentar el rendimiento en memoria caché los tokens que representan autenticó. El mecanismo de almacenamiento en caché guarda los resultados de `LogonUser` para los usos posteriores. Este mecanismo está deshabilitada de forma predeterminada. Para habilitarlo, establezca el <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> propiedad `true`, o usar el `cacheLogonTokens` atributo de la [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
   
- Puede establecer un período de vida (TTL) para los tokens almacenados en memoria caché estableciendo la propiedad <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> en <xref:System.TimeSpan> o utilizar el atributo `cachedLogonTokenLifetime` del elemento `userNameAuthentication`; el valor predeterminado es de 15 minutos. Tenga en cuenta que mientras un token esté almacenado en memoria caché, cualquier cliente que presente el mismo nombre de usuario y contraseña podrá utilizar el token, aunque la cuenta de usuario se elimine de Windows o se haya cambiado su contraseña. Hasta que el TTL expire y el token se elimine de la caché, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite al usuario (posiblemente malintencionado) autenticarse.  
+ Puede establecer un período de vida (TTL) para los tokens almacenados en memoria caché estableciendo la propiedad <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> en <xref:System.TimeSpan> o utilizar el atributo `cachedLogonTokenLifetime` del elemento `userNameAuthentication`; el valor predeterminado es de 15 minutos. Tenga en cuenta que mientras un token esté almacenado en memoria caché, cualquier cliente que presente el mismo nombre de usuario y contraseña podrá utilizar el token, aunque la cuenta de usuario se elimine de Windows o se haya cambiado su contraseña. Hasta que expire el período de vida y el token se quita de la memoria caché, WCF permite al usuario (posiblemente malintencionado) autenticarse.  
   
  Para paliar esto: disminuya la ventana de ataque estableciendo el valor de `cachedLogonTokenLifetime` en el intervalo de tiempo más corto que necesiten sus usuarios.  
   
@@ -91,7 +77,7 @@ ms.lasthandoff: 04/28/2018
   
 -   El equipo del servicio contiene dos o más certificados con la misma clave pública, pero contienen información diferente.  
   
--   El servicio recupera un certificado que coincide con el identificador de clave de sujeto (SKI), pero no es el que el cliente pensaba utilizar. Cuando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] recibe el mensaje y comprueba la firma, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] asigna la información del certificado X.509 imprevisto a un conjunto de notificaciones que son diferentes y potencialmente elevadas de lo que el cliente esperaba.  
+-   El servicio recupera un certificado que coincide con el identificador de clave de sujeto (SKI), pero no es el que el cliente pensaba utilizar. Cuando WCF recibe el mensaje y comprueba la firma, WCF asigna la información del certificado X.509 imprevisto a un conjunto de notificaciones que son diferentes y potencialmente elevadas de lo que espera el cliente.  
   
  Para mitigar esto, haga referencia al certificado X.509 de otra manera, como, por ejemplo, mediante <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   

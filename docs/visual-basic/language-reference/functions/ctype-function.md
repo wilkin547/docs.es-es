@@ -1,11 +1,6 @@
 ---
-title: "CType (Función) (Visual Basic)"
+title: CType (Función) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CType
 helpviewer_keywords:
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d804ce75929592675068fdc434a1ba7429fa5373
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7b1c7ae2a0126bf7cd487df4e9a7364c98e1c695
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctype-function-visual-basic"></a>CType (Función) (Visual Basic)
 Devuelve el resultado de convertir explícitamente una expresión a una estructura, clase, tipo de datos especificado, objeto o interfaz.  
@@ -47,7 +39,7 @@ CType(expression, typename)
 >  -   Escriba las funciones de conversión como `CByte`, `CDbl`, y `CInt` que realizar una conversión a un tipo de datos específico. Para obtener más información, consulte [funciones de conversión de tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
 > -   [DirectCast (operador)](../../../visual-basic/language-reference/operators/directcast-operator.md) o [TryCast (operador)](../../../visual-basic/language-reference/operators/trycast-operator.md). Estos operadores requieren que hereda de un tipo ni lo implementa el otro tipo. Puede proporcionar un mejor rendimiento que `CType` al convertir a y desde el `Object` tipo de datos.  
   
- `CType`está compilado en línea, lo que significa que el código de conversión forma parte del código que evalúa la expresión. En algunos casos, el código se ejecuta con mayor rapidez porque no se llama a ningún procedimiento para realizar la conversión.  
+ `CType` está compilado en línea, lo que significa que el código de conversión forma parte del código que evalúa la expresión. En algunos casos, el código se ejecuta con mayor rapidez porque no se llama a ningún procedimiento para realizar la conversión.  
   
  Si no se ha definido ninguna conversión de `expression` a `typename` (por ejemplo, de `Integer` a `Date`), Visual Basic muestra un mensaje de error de tiempo de compilación.  
   

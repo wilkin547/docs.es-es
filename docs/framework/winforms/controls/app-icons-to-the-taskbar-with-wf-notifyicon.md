@@ -1,14 +1,6 @@
 ---
-title: "Cómo: Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios Windows Forms"
-ms.custom: 
+title: 'Cómo: Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,17 +13,11 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d795df8e8b514345632491fd6afdd618c2f18ec2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c7658a3a1c72c3fed4033e644d0dd776b06ee1a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Cómo: Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.NotifyIcon> componente muestra un único icono en el área de notificación de estado de la barra de tareas. Para mostrar múltiples iconos en el área de estado, debe tener varios <xref:System.Windows.Forms.NotifyIcon> componentes en el formulario. Para establecer el icono que se muestra para un control, utilice la <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propiedad. También puede escribir código en el <xref:System.Windows.Forms.NotifyIcon.DoubleClick> controlador de eventos para que algo se produce cuando el usuario hace doble clic en el icono. Por ejemplo, podría realizar un cuadro de diálogo aparece para que el usuario configurar el proceso en segundo plano representado por el icono.  

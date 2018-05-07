@@ -1,33 +1,19 @@
 ---
 title: Diseño e implementación de servicios
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9b954a8ac4f8507b095eb97d0724095cecc7b75b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 02117b95cbf5a2ee16267a7b991ea9f854b813c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-and-implementing-services"></a>Diseño e implementación de servicios
 En esta sección se muestra cómo definir e implementar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] contratos. Un contrato de servicio especifica lo que un extremo comunica al mundo exterior. En un nivel más concreto, es una instrucción sobre un conjunto de mensajes concretos organizada en patrones de intercambio de mensajes básicos (MEP), como solicitud/respuesta, unidireccional y dúplex. Si un contrato de servicio es un conjunto relacionado de forma lógica de intercambios de mensajes, una operación de servicio es un intercambio único de mensajes. Por ejemplo, una operación `Hello` debe aceptar obviamente un mensaje (de manera que el autor de la llamada pueda anunciar el saludo) y puede o no devolver un mensaje (dependiendo de la cortesía de la operación).  
   
- Para obtener más información acerca de los contratos y otros principales [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] conceptos, vea [conceptos fundamentales de Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md). Este tema se centra en describir los contratos de servicio. Para obtener más información acerca de cómo los clientes que utilizan los contratos de servicio para conectarse a los servicios de compilación, consulte [información general sobre el cliente de WCF](../../../docs/framework/wcf/wcf-client-overview.md).  
+ Para obtener más información acerca de los contratos y otros conceptos de Windows Communication Foundation (WCF) básicos, consulte [conceptos fundamentales de Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md). Este tema se centra en describir los contratos de servicio. Para obtener más información acerca de cómo los clientes que utilizan los contratos de servicio para conectarse a los servicios de compilación, consulte [información general sobre el cliente de WCF](../../../docs/framework/wcf/wcf-client-overview.md).  
   
 ## <a name="overview"></a>Información general  
  En este tema se proporciona un nivel alto de orientación conceptual para diseñar e implementar los servicios de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Los subtemas proporcionan más información detallada sobre las características de diseño e implementación. Antes de diseñar e implementar su aplicación [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], se recomienda lo siguiente:  
@@ -77,7 +63,7 @@ En esta sección se muestra cómo definir e implementar [!INCLUDE[indigo2](../..
   
  Observe la manera en que el contrato requiere algunas cosas de la implementación del contrato de servicio y la configuración del tiempo de ejecución para agregar comportamiento. El conjunto de requisitos que se deben cumplir para exponer un servicio para usar compilaciones en el conjunto anterior de requisitos. Si un contrato realiza requisitos de la implementación, una implementación puede requerir todavía más de la configuración y enlaces que permiten al servicio ejecutarse. Finalmente, la aplicación host también debe admitir cualquier requisito que la configuración de servicio y los enlaces agreguen.  
   
- Este proceso de requisito aditivo es importante tenerlo presente mientras diseña, implementa, configura y aloja una aplicación de servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Por ejemplo, el contrato puede especificar que necesita admitir una sesión. En ese caso, deberá configurar el enlace para admitir ese requisito contractual o la implementación del servicio no funcionará. O si su servicio requiere Autenticación integrada de Windows y se hospeda en Internet Information Services (IIS), la aplicación web en la que el servicio reside debe tener Autenticación integrada de Windows activada y la compatibilidad anónima desactivada. Para obtener más información sobre las características y el impacto de los tipos de aplicación de host de servicio diferente, consulte [servicios de hospedaje](../../../docs/framework/wcf/hosting-services.md).  
+ Este proceso de requisito aditivo es importante tener en cuenta al diseñar, implementar, configurar y hospedar una aplicación de servicio de Windows Communication Foundation (WCF). Por ejemplo, el contrato puede especificar que necesita admitir una sesión. En ese caso, deberá configurar el enlace para admitir ese requisito contractual o la implementación del servicio no funcionará. O si su servicio requiere Autenticación integrada de Windows y se hospeda en Internet Information Services (IIS), la aplicación web en la que el servicio reside debe tener Autenticación integrada de Windows activada y la compatibilidad anónima desactivada. Para obtener más información sobre las características y el impacto de los tipos de aplicación de host de servicio diferente, consulte [servicios de hospedaje](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Diseño de contratos de servicio](../../../docs/framework/wcf/designing-service-contracts.md)  

@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Crear teclas de acceso con controles Label de formularios Windows Forms"
-ms.custom: 
+title: 'Cómo: Crear teclas de acceso con controles Label de formularios Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,16 +17,11 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6a856090a76f484c21c1d9982d67e9fdf21e8451
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc9592981f3d926b2b5b85b6869da13dc644e7a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Cómo: Crear teclas de acceso con controles Label de formularios Windows Forms
 Formularios Windows Forms <xref:System.Windows.Forms.Label> controles pueden utilizarse para definir teclas de acceso para otros controles. Al definir una tecla de acceso en un control de etiqueta, el usuario puede presionar la tecla ALT y el carácter designado para mover el foco al control que sigue en el orden de tabulación. Dado que las etiquetas no pueden recibir el foco, el foco automáticamente se desplaza al siguiente control en el orden de tabulación. Utilice esta técnica para asignar teclas de acceso a cuadros de texto, cuadros combinados, cuadros de lista y cuadrículas de datos.  
@@ -42,7 +30,7 @@ Formularios Windows Forms <xref:System.Windows.Forms.Label> controles pueden uti
   
 1.  Dibuje primero la etiqueta y, a continuación, dibuje el otro control.  
   
-     O bien  
+     -o bien-  
   
      Dibuje los controles en cualquier orden y establezca el <xref:System.Windows.Forms.Control.TabIndex%2A> propiedad de la etiqueta hasta uno menos que el otro control.  
   

@@ -1,45 +1,33 @@
 ---
 title: Enlaces y seguridad
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
 - WCF security
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: 42
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 938b04f6c612f38be41d278273aa18d41677f84c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-security"></a>Enlaces y seguridad
-Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporcionan una manera rápida de programar aplicaciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Con una excepción, todos los enlaces tienen un esquema de seguridad predeterminado habilitó. Este tema le ayuda a seleccionar el enlace adecuado a sus necesidades de seguridad.  
+Los enlaces proporcionados por el sistema incluidos con Windows Communication Foundation (WCF) ofrecen una forma rápida de programar aplicaciones de WCF. Con una excepción, todos los enlaces tienen un esquema de seguridad predeterminado habilitó. Este tema le ayuda a seleccionar el enlace adecuado a sus necesidades de seguridad.  
   
- Para obtener información general de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seguridad, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md). Para obtener más información acerca de la programación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizando los enlaces, vea [Programming WCF Security](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Para obtener información general de seguridad WCF, vea [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md). Para obtener más información sobre la programación de WCF mediante el uso de enlaces, vea [Programming WCF Security](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Si ya ha seleccionado un enlace, puede encontrar más información acerca de los comportamientos de tiempo de ejecución que están asociados con la seguridad en [comportamientos de seguridad](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Algunas funciones de seguridad no son programables mediante los enlaces proporcionados por el sistema. Para tener más control mediante un enlace personalizado, vea [capacidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Funciones de seguridad de los enlaces  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye un número de enlaces proporcionados por el sistema que satisfacen la mayoría de las necesidades. Si a un enlace determinado no le basta, también puede crear un enlace personalizado. Para obtener una lista de enlaces proporcionados por el sistema, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md). Para obtener más información acerca de los enlaces personalizados, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ WCF incluye varios enlaces proporcionados por el sistema que satisfacen la mayoría de las necesidades. Si a un enlace determinado no le basta, también puede crear un enlace personalizado. Para obtener una lista de enlaces proporcionados por el sistema, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md). Para obtener más información acerca de los enlaces personalizados, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- Cada enlace de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adopta dos formas: la de una API y la de un elemento XML utilizado en un archivo de configuración. Por ejemplo, el `WSHttpBinding` (API) tiene un equivalente el [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+ Todos los enlaces de WCF tienen dos formas: como una API, como un elemento XML utilizado en un archivo de configuración. Por ejemplo, el `WSHttpBinding` (API) tiene un equivalente el [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  La siguiente sección hace una lista de ambas formas para cada enlace y resume las características de seguridad.  
   
@@ -149,7 +137,7 @@ Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  En el código, utilice la <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> clase; en la configuración, utilice la [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
   
- Este enlace está optimizado para crear clientes y servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que interoperan con extremos de Microsoft Message Queuing (MSMQ) que no son de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Este enlace está optimizado para crear clientes WCF y servicios que interoperan con puntos de conexión no - WCF Microsoft Message Queue Server de MSMQ.  
   
  De forma predeterminada, este enlace utiliza la seguridad de transporte y proporciona las siguientes características de seguridad:  
   
@@ -162,7 +150,7 @@ Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  En el código, utilice la <xref:System.ServiceModel.NetMsmqBinding> clase; en la configuración, utilice la [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
   
- Este enlace está pensado para usarlo al crear servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que requieran compatibilidad de mensajes en cola de MSMQ.  
+ Este enlace está pensado para su uso al crear servicios WCF que requieren MSMQ en cola, compatibilidad con mensajes.  
   
  De forma predeterminada, este enlace utiliza la seguridad de transporte y proporciona las siguientes características de seguridad:  
   
@@ -232,7 +220,7 @@ Los enlaces proporcionados por el sistema incluidos en [!INCLUDE[indigo1](../../
 |----------|-----------------|  
 |Ninguna|Permite al servicio interactuar con clientes anónimos.|  
 |Windows|Permite a los intercambios de mensajes SOAP realizarse bajo el contexto autenticado de una credencial de Windows.|  
-|UserName|Permite que el servicio requiera que el cliente se autentique con una credencial del nombre de usuario. Tenga en cuenta que cuando el modo de seguridad está establecido en `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no permite enviar un resumen de contraseña o derivar claves utilizando la contraseña y utilizar tales claves para la seguridad del modo de mensajes. Como tal, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] garantiza que el transporte se asegure al usar credenciales de nombres de usuario.|  
+|UserName|Permite que el servicio requiera que el cliente se autentique con una credencial del nombre de usuario. Tenga en cuenta que, cuando el modo de seguridad se establece en `TransportWithMessageCredential`, WCF no admite el envío de una contraseña implícita o derivar claves mediante una contraseña y utilizar tales claves para seguridad de modo de mensaje. Por lo tanto, WCF garantiza que el transporte sea seguro al usar credenciales de nombre de usuario.|  
 |Certificado|Permite al servicio exigir la autenticación del cliente mediante un certificado.|  
 |IssuedToken|Permite al servicio utilizar un servicio de token de seguridad para proporcionar un token personalizado.|  
   

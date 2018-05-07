@@ -1,24 +1,12 @@
 ---
-title: "Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)"
-ms.custom: 
+title: Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: adb44bfee98d01594c9babcf19e19fbf11ba3878
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef2f34a6700d72c01977ea449041669a88c35e6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)
 La utilidad de configuración de WS-AtomicTransaction se utiliza para configurar valores básicos de compatibilidad de WS-AtomicTransaction.  
@@ -46,16 +34,16 @@ wsatConfig [Options]
 |Opciones|Descripción|  
 |-------------|-----------------|  
 |-cuentas:\<cuenta >|Especifica una lista separada por comas de cuentas que pueden participar en WS-AtomicTransaction. No se comprueba la validez de estas cuentas.|  
-|-accountsCerts:\<thumb > &#124; " Issuer\SubjectName,">|Especifica una lista separada por comas de certificados que pueden participar en WS-AtomicTransaction. Los certificados se indican por huella digital o por el par de Issuer\SubjectName. Utilice {EMPTY} como nombre de sujeto si está vacío.|  
-|-endpointCert: < máquina &#124; \<thumb > &#124; " Issuer\SubjectName">|Utiliza el certificado de equipo u otro certificado del punto de conexión local especificado por huella digital o par de Issuer\SubjectName. Utiliza {EMPTY} como nombre de sujeto si está vacío.|  
+|-accountsCerts:\<thumb >&#124;"Issuer\SubjectName" >|Especifica una lista separada por comas de certificados que pueden participar en WS-AtomicTransaction. Los certificados se indican por huella digital o por el par de Issuer\SubjectName. Utilice {EMPTY} como nombre de sujeto si está vacío.|  
+|-endpointCert: < máquina&#124;\<thumb >&#124;"Issuer\SubjectName" >|Utiliza el certificado de equipo u otro certificado del punto de conexión local especificado por huella digital o par de Issuer\SubjectName. Utiliza {EMPTY} como nombre de sujeto si está vacío.|  
 |-maxTimeout:\<s >|Especifica el tiempo de espera máximo en segundos. Los valores válidos son de 0 y 3600.|  
-|-red:\<Habilitar &#124; disable >|Habilita o deshabilita la compatibilidad para red de WS-AtomicTransaction.|  
+|-red:\<habilitar&#124;deshabilitar >|Habilita o deshabilita la compatibilidad para red de WS-AtomicTransaction.|  
 |-puerto:\<portNum >|Establece los puertos HTTPS para WS-AtomicTransaction.<br /><br /> Si ya ha habilitado el firewall antes de ejecutar esta herramienta, el puerto se registra automáticamente en la lista de excepciones. Si el firewall está deshabilitado antes de ejecutar esta herramienta, no se configura nada adicional con respecto al firewall.<br /><br /> Si habilita el firewall después de configurar WS-AT, tiene que ejecutar de nuevo esta herramienta y proporcionar el número de puerto mediante este parámetro. Si deshabilita el firewall después de configurar, WS-AT continúa funcionando sin entrada adicional.|  
 |-el tiempo de espera:\<s >|Especifica el tiempo de espera predeterminado en segundos. Los valores válidos están comprendidos entre 1 y 3600.|  
-|-traceActivity:\<Habilitar &#124; disable >|Habilita o deshabilita el seguimiento de eventos de actividad.|  
-|-traceLevel:\<Off &#124; Error &#124; Crítico &#124; Advertencia &#124; información &#124; Verbose &#124; Todos los >}|Especifica el nivel de seguimiento.|  
-|-tracePII:\<Habilitar &#124; disable >|Habilita o deshabilita el seguimiento de información de identificación personal.|  
-|-traceProp:\<Habilitar &#124; disable >|Habilita o deshabilita el seguimiento de eventos de propagación.|  
+|-traceActivity:\<habilitar&#124;deshabilitar >|Habilita o deshabilita el seguimiento de eventos de actividad.|  
+|-traceLevel:\<desactivar&#124;Error&#124;crítico&#124;advertencia&#124;información&#124; detallado&#124;todos >}|Especifica el nivel de seguimiento.|  
+|-tracePII:\<habilitar&#124;deshabilitar >|Habilita o deshabilita el seguimiento de información de identificación personal.|  
+|-traceProp:\<habilitar&#124;deshabilitar >|Habilita o deshabilita el seguimiento de eventos de propagación.|  
 |-restart|Reinicia MSDTC para activar cambios inmediatamente. Si no se especifica esto, los cambios tienen efecto cuando se reinicia MSDTC.|  
 |-show|Muestra los valores de protocolo actuales de WS-AtomicTransaction.|  
 |-virtualServer:\<servidor virtual >|Especifica el nombre del clúster de recursos de DTC.|  

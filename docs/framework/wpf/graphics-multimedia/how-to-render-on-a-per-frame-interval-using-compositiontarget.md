@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Representar un intervalo para cada fotograma mediante CompositionTarget"
-ms.custom: 
+title: 'Cómo: Representar un intervalo para cada fotograma mediante CompositionTarget'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eb7e917c59f11ed78f8d44fa4b674d8d572f3623
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c080c6deca63eacdf0e1123f4ca8bbb495ed9ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Cómo: Representar un intervalo para cada fotograma mediante CompositionTarget
 El motor de animación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona muchas características para crear animaciones basadas en fotogramas. Sin embargo, hay escenarios de aplicación en el los que necesita un control específico sobre la representación según el fotograma. La <xref:System.Windows.Media.CompositionTarget> objeto proporciona la capacidad para crear animaciones personalizadas basándose en una devolución de llamada por fotograma.  
   
- <xref:System.Windows.Media.CompositionTarget>es una clase estática que representa la superficie de presentación en el que se va a dibujar la aplicación. El <xref:System.Windows.Media.CompositionTarget.Rendering> evento se desencadena cada vez que se dibuja la escena de la aplicación. La velocidad de los fotogramas de representación es el número de veces que se dibuja la escena por segundo.  
+ <xref:System.Windows.Media.CompositionTarget> es una clase estática que representa la superficie de presentación en el que se va a dibujar la aplicación. El <xref:System.Windows.Media.CompositionTarget.Rendering> evento se desencadena cada vez que se dibuja la escena de la aplicación. La velocidad de los fotogramas de representación es el número de veces que se dibuja la escena por segundo.  
   
 > [!NOTE]
 >  Para obtener un ejemplo de código completo uso <xref:System.Windows.Media.CompositionTarget>, consulte [Using the CompositionTarget Sample](http://go.microsoft.com/fwlink/?LinkID=160045).  

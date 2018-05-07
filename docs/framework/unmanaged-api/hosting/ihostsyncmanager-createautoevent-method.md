@@ -1,14 +1,6 @@
 ---
-title: "IHostSyncManager::CreateAutoEvent (Método)"
-ms.custom: 
+title: IHostSyncManager::CreateAutoEvent (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateAutoEvent
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3153643e-cf5c-4b44-8e0e-c2b22cb08208
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b7874839d04af89f2fa512f82213862f34408001
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe1b685f50f793f7451187f17adc848ec9d4422f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreateautoevent-method"></a>IHostSyncManager::CreateAutoEvent (Método)
 Crea un objeto de evento de restablecimiento automático.  
@@ -54,7 +42,7 @@ HRESULT CreateAutoEvent (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`CreateAutoEvent`se devolvió correctamente.|  
+|S_OK|`CreateAutoEvent` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|La llamada agotó el tiempo de espera.|  
 |HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
@@ -63,7 +51,7 @@ HRESULT CreateAutoEvent (
 |E_OUTOFMEMORY|No había memoria suficiente disponible para crear el objeto de evento solicitado.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CreateAutoEvent`crea un objeto de evento automático cuyo estado se cambia automáticamente a no señalado después de que se ha liberado el subproceso en espera. Este método refleja el Win32 `CreateEvent` función con un valor de `false` especificado para el `bManualReset` parámetro  
+ `CreateAutoEvent` crea un objeto de evento automático cuyo estado se cambia automáticamente a no señalado después de que se ha liberado el subproceso en espera. Este método refleja el Win32 `CreateEvent` función con un valor de `false` especificado para el `bManualReset` parámetro  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -72,7 +60,7 @@ HRESULT CreateAutoEvent (
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICLRSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

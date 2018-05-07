@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugThread2::GetTaskID (Método)"
-ms.custom: 
+title: ICorDebugThread2::GetTaskID (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugThread2.GetTaskID
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6ba3c6ee-4ba1-4c98-bf1e-8531acd3da09
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1b94478a0dfb8cc4d90dea611620238024634799
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5690856b526bf0f7bc4527d04ae8044cda1f6e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID (Método)
 Obtiene el identificador de la tarea que se ejecuta en este subproceso.  
@@ -51,7 +39,7 @@ HRESULT GetTaskID (
  [out] Un puntero al identificador de la tarea que se ejecuta en el subproceso representado por este objeto ICorDebugThread2.  
   
 ## <a name="remarks"></a>Comentarios  
- Una tarea solo puede ejecutarse en el subproceso si el subproceso está asociado a una conexión. `GetTaskID`Devuelve cero `pTaskId` si el subproceso no está asociado a una conexión.  
+ Una tarea solo puede ejecutarse en el subproceso si el subproceso está asociado a una conexión. `GetTaskID` Devuelve cero `pTaskId` si el subproceso no está asociado a una conexión.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -60,4 +48,4 @@ HRESULT GetTaskID (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

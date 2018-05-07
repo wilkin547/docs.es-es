@@ -1,14 +1,6 @@
 ---
 title: IAppDomainSetup (Interfaz)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAppDomainSetup
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1844da85-c031-40bf-bea4-1a3d12a36c8c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9db1b787015231b3d9053d4ed316cb70c5db96ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbcbc446eabcfcbc28c830f8860bde726c8eb6e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup (Interfaz)
 Proporciona propiedades que permiten al host configurar un <xref:System.AppDomain?displayProperty=nameWithType> tipo antes de llamar a la [ICorRuntimeHost:: CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) método para crearla.  
@@ -55,7 +43,7 @@ Proporciona propiedades que permiten al host configurar un <xref:System.AppDomai
 ## <a name="remarks"></a>Comentarios  
  El `IAppDomainSetup` interfaz corresponde a los recursos administrados <xref:System.IAppDomainSetup> interfaz, es posible que el <xref:System.AppDomainSetup> escriba implementa. Consulte <xref:System.IAppDomainSetup?displayProperty=nameWithType> para obtener descripciones detalladas de sus propiedades.  
   
- `IAppDomainSetup`representa la información de enlace de ensamblado que se puede agregar a un <xref:System.AppDomain> instancia antes de su creación. Por ejemplo, un host puede establecer el <xref:System.AppDomainSetup.ApplicationBase%2A> propiedad para establecer un directorio raíz, que common language runtime (CLR) busca los ensamblados administrados.  
+ `IAppDomainSetup` representa la información de enlace de ensamblado que se puede agregar a un <xref:System.AppDomain> instancia antes de su creación. Por ejemplo, un host puede establecer el <xref:System.AppDomainSetup.ApplicationBase%2A> propiedad para establecer un directorio raíz, que common language runtime (CLR) busca los ensamblados administrados.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -64,7 +52,7 @@ Proporciona propiedades que permiten al host configurar un <xref:System.AppDomai
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.AppDomain>  

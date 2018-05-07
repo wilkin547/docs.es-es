@@ -1,24 +1,16 @@
 ---
-title: "Subexpresión (Visual Basic)"
+title: Subexpresión (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - lambda expressions [Visual Basic], sub expression
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43e35bd0386bc56478603ec36437981785cc8ffb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 602212e664fa3362742fb1ba0dc033610272d3af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-expression-visual-basic"></a>Subexpresión (Visual Basic)
 Declara los parámetros y el código que definen una expresión lambda de subrutina.  
@@ -38,8 +30,8 @@ End Sub
 |Término|Definición|  
 |---|---|  
 |`parameterlist`|Opcional. Una lista de nombres de variables locales que representan los parámetros del procedimiento. Los paréntesis deben estar presentes incluso cuando la lista está vacía. Para obtener más información, consulte [lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`statement`|Obligatorio. Una sola instrucción.|  
-|`statements`|Obligatorio. Una lista de instrucciones.|  
+|`statement`|Requerido. Una sola instrucción.|  
+|`statements`|Requerido. Una lista de instrucciones.|  
   
 ## <a name="remarks"></a>Comentarios  
  A *expresión lambda* es una subrutina que no tiene un nombre y que ejecuta una o varias instrucciones. Puede usar una expresión lambda en cualquier lugar que puede usar un tipo de delegado, salvo como argumento a `RemoveHandler`. Para obtener más información sobre los delegados y el uso de expresiones lambda con delegados, vea [instrucción Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) y [conversión de delegado flexible](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  

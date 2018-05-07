@@ -1,36 +1,22 @@
 ---
 title: Control de mensajes dudosos
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b860e239d001a03da191d73de2f7b53e7073c7a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="poison-message-handling"></a>Control de mensajes dudosos
 A *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos de entrega a la aplicación. Esta situación se puede presentar cuando una aplicación basada en cola no puede procesar un mensaje debido a los errores. Para satisfacer la confiabilidad que exige, una aplicación en cola recibe los mensajes bajo una transacción. Anular la transacción en la que un mensaje en cola se recibió deja el mensaje en la cola para que el mensaje se vuelva a intentar con una nueva transacción. Si no se corrige el problema que produjo la anulación de la transacción, la aplicación receptora se puede atascar en una recepción de bucle y anulando el mismo mensaje hasta que supere el número máximo de intentos de entrega, y se produzca un mensaje dudoso.  
   
  Un mensaje se puede volver un mensaje dudoso por muchas razones. Las razones más comunes son específicas de la aplicación. Por ejemplo, si una aplicación lee un mensaje de una cola y realiza algún procesamiento de base de datos, es posible que la aplicación no pueda obtener un bloqueo en la base de datos, haciendo que se anule la transacción. Dado que la transacción de base de datos se anula, el mensaje permanece en la cola, lo que hace que la aplicación vuelva a leer el mensaje una segunda vez y realice otro intento de adquirir un bloqueo en la base de datos. Los mensajes también se pueden volver dudosos si contienen la información no válida. Por ejemplo, un pedido de compra puede contener un número del cliente no válido. En estos casos, la aplicación puede anular voluntariamente la transacción y forzar al mensaje a convertirse en un mensaje dudoso.  
   
- En raras ocasiones, se puede producir un error en la distribución a la aplicación. En el nivel de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se pueden producir problemas con el mensaje; por ejemplo, si el mensaje tiene el marco incorrecto, si tiene adjuntas credenciales de mensaje no válidas o si hay un encabezado de acción no válido. En estos casos, la aplicación nunca recibe el mensaje; sin embargo, el mensaje todavía se puede convertir en un mensaje dudoso y procesar manualmente.  
+ En raras ocasiones, se puede producir un error en la distribución a la aplicación. La capa de Windows Communication Foundation (WCF) puede producir problemas con el mensaje, como por ejemplo, si el mensaje tiene el marco incorrecto, adjuntas credenciales de mensaje no válido para la base de datos o un encabezado de acción no válido. En estos casos, la aplicación nunca recibe el mensaje; sin embargo, el mensaje todavía se puede convertir en un mensaje dudoso y procesar manualmente.  
   
 ## <a name="handling-poison-messages"></a>Control de mensajes dudosos  
- En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], el control de mensajes dudosos proporciona un mecanismo para que una aplicación receptora trate con mensajes que no se pueden distribuir a la aplicación o mensajes que se distribuyen a la aplicación pero que en los que se produce un error al procesarlos debido a razones específicas de la aplicación. El control de mensajes dudosos se configura mediante las siguientes propiedades en cada uno de los enlaces en cola disponibles:  
+ En WCF, control de mensajes dudosos proporciona un mecanismo para una aplicación receptora trate con mensajes que no se pueden enviar a la aplicación o mensajes que se envían a la aplicación pero que no se puede procesar debido a específica de la aplicación motivos. El control de mensajes dudosos se configura mediante las siguientes propiedades en cada uno de los enlaces en cola disponibles:  
   
 -   `ReceiveRetryCount`. Un valor entero que indica el número máximo de horas para reintentar la entrega de un mensaje de la cola de la aplicación a la aplicación. El valor predeterminado es 5. Esto es suficiente en casos donde un reintento inmediato corrige el problema, como ocurre con un interbloqueo temporal en una base de datos.  
   
@@ -46,7 +32,7 @@ A *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos 
   
 -   Reject. Esta opción solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. Indica a Message Queuing (MSMQ) que devuelva una confirmación de que no se pudo realizar la acción al administrador de la cola emisora para indicar que la aplicación no puede recibir el mensaje. El mensaje se coloca en la cola de mensajes no enviados del administrador de la cola emisora.  
   
--   Move. Esta opción solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. Mueve el mensaje dudoso a una cola de mensajes dudosos para ser procesado posteriormente por una aplicación de control de mensajes dudosos. La cola de mensajes dudosos es una subcola de la cola de la aplicación. Una aplicación de control de mensajes dudosos puede ser un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que expulsa los mensajes de la cola de mensajes dudosos. La cola de mensajes dudosos es una subcola de la cola de la aplicación y pueden tratarse como net.msmq://\<*machine-name*>/*applicationQueue*; poison, donde  *nombre de la máquina* es el nombre del equipo en el que reside la cola y el *applicationQueue* es el nombre de la cola específica de la aplicación.  
+-   Move. Esta opción solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. Mueve el mensaje dudoso a una cola de mensajes dudosos para ser procesado posteriormente por una aplicación de control de mensajes dudosos. La cola de mensajes dudosos es una subcola de la cola de la aplicación. Una aplicación de control de mensajes dudosos puede ser un servicio WCF que lee mensajes de la cola de mensajes dudosos. La cola de mensajes dudosos es una subcola de la cola de la aplicación y pueden tratarse como net.msmq://\<*machine-name*>/*applicationQueue*; poison, donde  *nombre de la máquina* es el nombre del equipo en el que reside la cola y el *applicationQueue* es el nombre de la cola específica de la aplicación.  
   
  A continuación, se muestra el número máximo de intentos de entrega realizados para un mensaje:  
   
@@ -57,20 +43,20 @@ A *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos 
 > [!NOTE]
 >  No se realiza ningún reintento para un mensaje que se entrega correctamente.  
   
- Para realizar un seguimiento del número de veces que se intenta leer un mensaje, [!INCLUDE[wv](../../../../includes/wv-md.md)] mantiene una propiedad de mensaje duradero que cuenta el número de anulaciones y una propiedad de recuento de movimiento que cuenta el número de veces que el mensaje se mueve entre la cola de la aplicación y las subcolas. El canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lo utiliza con frecuencia para calcular los reintentos de recepción y el recuento de los ciclos de reintento. En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)], el recuento de la anulación es mantenido en memoria por el canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y se restablece si se produce un error en la aplicación. Así, el canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puede contener los recuentos de la anulación para hasta 256 mensajes en memoria en cualquier momento. Si se lee el mensaje número 257, se restablece el recuento de la anulación del mensaje más antiguo.  
+ Para realizar un seguimiento del número de veces que se intenta leer un mensaje, [!INCLUDE[wv](../../../../includes/wv-md.md)] mantiene una propiedad de mensaje duradero que cuenta el número de anulaciones y una propiedad de recuento de movimiento que cuenta el número de veces que el mensaje se mueve entre la cola de la aplicación y las subcolas. El canal WCF utiliza para calcular el número de reintentos de recepción y el recuento de ciclos de reintento. En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)], el recuento de anulación es mantenido en memoria por el canal WCF y se restablece si se produce un error en la aplicación. También, el canal WCF puede contener que recuentos de la anulación para hasta 256 mensajes en memoria en cualquier momento. Si se lee el mensaje número 257, se restablece el recuento de la anulación del mensaje más antiguo.  
   
  Las propiedades de recuento de la anulación y recuento de movimiento están disponibles para la operación del servicio a través del contexto de la operación. En el ejemplo de código siguiente se muestra cómo obtener acceso.  
   
  [!code-csharp[S_UE_MSMQ_Poison#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/service.cs#1)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona dos enlaces en cola estándares:  
+ WCF proporciona dos enlaces en cola estándares:  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. Un enlace [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] conveniente para realizar la comunicación basada en cola con otros extremos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   <xref:System.ServiceModel.NetMsmqBinding>. Un [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] enlace adecuado para realizar la comunicación basada en cola con otros extremos WCF.  
   
 -   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Un enlace conveniente para comunicar con aplicaciones Message Queuing existentes.  
   
 > [!NOTE]
->  Puede modificar las propiedades en estos enlaces basándose en los requisitos de su servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Todo el mecanismo de control de mensajes dudosos es local a la aplicación receptora. El proceso es invisible para la aplicación emisora a menos que la aplicación receptora se detenga finalmente y devuelva una confirmación de que no se pudo realizar la acción al remitente. En ese caso, el mensaje se mueve a la cola de mensajes no enviados del remitente.  
+>  Puede modificar las propiedades en estos enlaces basándose en los requisitos de su servicio WCF. Todo el mecanismo de control de mensajes dudosos es local a la aplicación receptora. El proceso es invisible para la aplicación emisora a menos que la aplicación receptora se detenga finalmente y devuelva una confirmación de que no se pudo realizar la acción al remitente. En ese caso, el mensaje se mueve a la cola de mensajes no enviados del remitente.  
   
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Procedimiento recomendado: Controlar MsmqPoisonMessageException  
  Cuando el servicio determina que un mensaje es dudoso, el transporte en cola arroja <xref:System.ServiceModel.MsmqPoisonMessageException> que contiene `LookupId` del mensaje dudoso.  
@@ -116,7 +102,7 @@ A *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos 
   
 -   Message Queuing en [!INCLUDE[wv](../../../../includes/wv-md.md)] admite una confirmación de que no se pudo realizar la acción, mientras que [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)] no. Una confirmación de que no se pudo realizar la acción del administrador de la cola receptora hace que el administrador de la cola emisora coloque el mensaje rechazado en la cola de mensajes no enviados. Como tal, `ReceiveErrorHandling.Reject` no se permite con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Message Queuing en [!INCLUDE[wv](../../../../includes/wv-md.md)] admite una propiedad de mensaje que mantiene un recuento del número de veces que se intenta la entrega del mensaje. Esta propiedad de recuento de anulación no está disponible en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mantiene el recuento de anulación en memoria, por lo que es posible que esta propiedad no contenga un valor preciso cuando el mismo mensaje es leído por más de un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en una granja de servidores.  
+-   Message Queuing en [!INCLUDE[wv](../../../../includes/wv-md.md)] admite una propiedad de mensaje que mantiene un recuento del número de veces que se intenta la entrega del mensaje. Esta propiedad de recuento de anulación no está disponible en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF mantiene el recuento de anulación en memoria, por lo que es posible que esta propiedad no contenga un valor preciso cuando el mismo mensaje es leído por más de un servicio WCF en una granja de servidores.  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

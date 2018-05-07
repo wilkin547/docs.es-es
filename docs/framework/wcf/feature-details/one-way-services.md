@@ -1,30 +1,16 @@
 ---
 title: Servicios unidireccionales
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 03efc27f2ba54ca22f03e3ece84770fe0dcadbb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-way-services"></a>Servicios unidireccionales
 El comportamiento predeterminado de una operación de servicio es el patrón de solicitud-respuesta. En un patrón de este tipo, el cliente espera el mensaje de respuesta, aun cuando la operación de servicio se representa en código como un método `void`. Con una operación unidireccional, sólo se transmite un mensaje. El receptor no envía un mensaje de respuesta, ni el remitente lo espera.  
@@ -57,7 +43,7 @@ public interface IOneWayCalculator
  Para obtener un ejemplo completo, vea el [unidireccional](../../../../docs/framework/wcf/samples/one-way.md) ejemplo.  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>Clientes que se bloquean con operaciones unidireccionales  
- Es importante comprender que mientras algunas aplicaciones unidireccionales devuelven en cuanto los datos salientes se escriben en la conexión de red, en varios escenarios la implementación de un enlace o de un servicio puede hacer que un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se bloquee mediante las operaciones unidireccionales. En las aplicaciones cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], el objeto de cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no devuelve hasta que los datos salientes se hayan escrito en la conexión de red. Esto se cumple para todos los patrones de intercambio de mensajes, incluidas las operaciones unidireccionales, lo que significa que cualquier problema que se produzca al escribir los datos en el transporte impide que se devuelva el cliente. Dependiendo del problema, el resultado podría ser una excepción o un retraso en el envío de mensajes al servicio.  
+ Es importante tener en cuenta que mientras algunas aplicaciones unidireccionales devuelven en cuanto los datos salientes se escriben en la conexión de red, en varios escenarios la implementación de un enlace o de un servicio puede hacer un cliente WCF para bloquear mediante las operaciones unidireccionales. En las aplicaciones de cliente WCF, el objeto de cliente WCF no vuelve hasta que los datos salientes se ha escrito para la conexión de red. Esto se cumple para todos los patrones de intercambio de mensajes, incluidas las operaciones unidireccionales, lo que significa que cualquier problema que se produzca al escribir los datos en el transporte impide que se devuelva el cliente. Dependiendo del problema, el resultado podría ser una excepción o un retraso en el envío de mensajes al servicio.  
   
  Por ejemplo, si el transporte no puede buscar el extremo, se emite una excepción <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> sin mucho retraso. Sin embargo, también es posible que el servicio no pueda leer los datos fuera de la conexión por alguna razón, lo que evita que se devuelva la operación de envío de transporte del cliente. En estos casos, si se supera el período <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> en el enlace de transporte de cliente, se emitirá <xref:System.TimeoutException?displayProperty=nameWithType>, pero no hasta que se haya superado el período de tiempo de espera. También es posible activar tantos mensajes en un servicio que el servicio no pueda procesarlos sobrepasado un cierto punto. En este caso también, el cliente unidireccional se bloquea hasta que el servicio pueda procesar los mensajes o hasta que se produzca una excepción.  
   

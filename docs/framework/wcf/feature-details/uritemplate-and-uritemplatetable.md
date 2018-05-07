@@ -1,29 +1,15 @@
 ---
 title: UriTemplate y UriTemplateTable
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 09726af0a124723de025f29927954a2100aebcb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate y UriTemplateTable
-Los desarrolladores web necesitan poder describir la forma y el diseño de los URI a los que sus servicios responden. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] agregó dos nuevas clases para proporcionar a los desarrolladores el control sobre sus URI. <xref:System.UriTemplate> y <xref:System.UriTemplateTable> forman la base del motor de distribución basado en URI en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Estas clases también se pueden utilizar por sí mismas, permitiendo a los desarrolladores aprovecharse de las plantillas y el mecanismo de asignación de URI sin implementar un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Los desarrolladores web necesitan poder describir la forma y el diseño de los URI a los que sus servicios responden. Windows Communication Foundation (WCF) agrega dos nuevas clases para proporcionar a los programadores control sobre sus URI. <xref:System.UriTemplate> y <xref:System.UriTemplateTable> forman la base del motor de distribución basado en URI en WCF. Estas clases también pueden usarse en su propio, lo que permite a los desarrolladores aprovechar las ventajas de las plantillas y el URI del mecanismo de asignación sin necesidad de implementar un servicio WCF.  
   
 ## <a name="templates"></a>Plantillas  
  Una plantilla es una manera de describir un conjunto de URI relativos. El conjunto de plantillas URI de la tabla siguiente muestra cómo se podría definir un sistema que recupera varios tipos de información meteorológica.  
@@ -35,7 +21,7 @@ Los desarrolladores web necesitan poder describir la forma y el diseño de los U
 |Previsión de la ciudad|tiempo/{estado}/{ciudad}|  
 |Previsión de Actividad|tiempo/{estado}/{ciudad}/{actividad}|  
   
- Esta tabla describe un conjunto de URI estructuralmente similares. Cada entrada es una plantilla URI. Los segmentos entre llaves describen las variables. Los segmentos que no están entre llaves describen cadenas literales. Las clases de plantillas de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permiten a un desarrollador tomar un URI de entrada, como, por ejemplo, "/tiempo/wa/seattle/ciclismo" e igualarlo a una plantilla que lo describe, "/tiempo/{estado}/{ciudad}/{actividad}."  
+ Esta tabla describe un conjunto de URI estructuralmente similares. Cada entrada es una plantilla URI. Los segmentos entre llaves describen las variables. Los segmentos que no están entre llaves describen cadenas literales. Las clases de plantilla WCF permiten a un desarrollador tomar un URI de entrada, por ejemplo, "/ tiempo/wa/seattle/ciclismo", y hacerla coincidir con una plantilla que lo describe, "/ tiempo / {state} / {ciudad} / {actividad}".  
   
 ## <a name="uritemplate"></a>UriTemplate  
  <xref:System.UriTemplate> es una clase que encapsula una plantilla URI. El constructor toma un parámetro de cadena que define la plantilla. Esta cadena contiene la plantilla en el formato descrito en la sección siguiente. La clase <xref:System.UriTemplate> proporciona métodos que le permiten igualar un URI de entrada a una plantilla, generar un URI a partir de una plantilla, recuperar una colección de nombres de variables usadas en la plantilla, determinar si dos plantillas son equivalentes, y devolver la cadena de la plantilla.  

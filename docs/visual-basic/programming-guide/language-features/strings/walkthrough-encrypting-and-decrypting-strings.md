@@ -1,34 +1,24 @@
 ---
 title: Cifrar y descifrar cadenas en Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - encryption [Visual Basic], strings
 - strings [Visual Basic], encrypting
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fd9ec8e7af771db3f042e08c8ab30f6ed5832c2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96e56ab315a739fef9d5499b076a077f5294f39e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Tutorial: Cifrar y descifrar cadenas en Visual Basic
 En este tutorial se muestra cómo utilizar el <xref:System.Security.Cryptography.DESCryptoServiceProvider> clase para cifrar y descifrar cadenas utilizando la versión de servicios criptográficos (CSP) del proveedor de Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algoritmo. El primer paso es crear una clase contenedora simple que encapsula el algoritmo 3DES y almacena los datos cifrados como una cadena codificada en base 64. A continuación, ese contenedor se utiliza para almacenar de forma segura los datos privados del usuario en un archivo de texto públicamente accesible.  
   
  Puede utilizar el cifrado para proteger los secretos del usuario (por ejemplo, contraseñas) y para hacer que las credenciales sean ilegibles por los usuarios no autorizados. Esto puede proteger la identidad de un usuario autorizado pueda ser sustraída, que protege los activos del usuario y proporciona sin repudio. Cifrado también puede proteger los datos de un usuario desde la que se va a obtener acceso a usuarios no autorizados.  
   
- Para obtener más información, consulte [servicios criptográficos](../../../../standard/security/cryptographic-services.md).  
+ Para más información, vea [Servicios criptográficos](../../../../standard/security/cryptographic-services.md).  
   
 > [!IMPORTANT]
 >  Los algoritmos Triple Data Encryption Standard (3DES) y Rijndael (ahora conocido como estándar de cifrado avanzado [AES]) proporcionan una seguridad mayor que DES porque son más intensivo computacionalmente. Para obtener más información, consulte <xref:System.Security.Cryptography.DES> y <xref:System.Security.Cryptography.Rijndael>.  

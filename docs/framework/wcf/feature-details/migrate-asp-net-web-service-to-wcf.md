@@ -1,27 +1,15 @@
 ---
-title: "Cómo migrar el código del servicio web ASP.NET a Windows Communication Foundation"
-ms.custom: 
+title: Cómo migrar el código del servicio web ASP.NET a Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e528c64f-c027-4f2e-ada6-d8f3994cf8d6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56d2481785a9a8486174e611001b9d800c7c869
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 90a6109a56299ec1bcaff4a35141abc194484772
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-aspnet-web-service-code-to-the-windows-communication-foundation"></a>Cómo migrar el código del servicio web ASP.NET a Windows Communication Foundation
-El procedimiento siguiente describe cómo migrar un servicio web ASP.NET a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+El siguiente procedimiento describe cómo migrar un servicio Web ASP.NET para Windows Communication Foundation (WCF).  
   
 ## <a name="procedure"></a>Procedimiento  
   
@@ -85,9 +73,9 @@ El procedimiento siguiente describe cómo migrar un servicio web ASP.NET a [!INC
   
 7.  Pruebe el cambio.  
   
-8.  Agregue las referencias de los ensamblados System.ServiceModel y System.Runtime.Serialization [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] al proyecto de servicio web ASP.NET.  
+8.  Agregue referencias a ensamblados WCF System.ServiceModel y System.Runtime.Serialization al proyecto de servicio Web de ASP.NET.  
   
-9. Ejecutar [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clase de cliente desde el archivo WSDL. Agregue el módulo de clase generado a la solución.  
+9. Ejecutar [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar una clase de cliente WCF desde WSDL. Agregue el módulo de clase generado a la solución.  
   
 10. El módulo de clase generado en el paso anterior contiene la definición de una interfaz.  
   
@@ -145,7 +133,7 @@ El procedimiento siguiente describe cómo migrar un servicio web ASP.NET a [!INC
     }  
     ```  
   
-13. Configure la clase, que ahora es un tipo de servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], para exigir el modo de compatibilidad de ASP.NET [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si el servicio web ASP.NET se basa en alguno de los siguientes:  
+13. Configurar la clase, que ahora es un tipo de servicio WCF, para exigir el modo de compatibilidad ASP.NET de WCF si el servicio Web de ASP.NET dependía de cualquiera de las siguientes acciones:  
   
     -   La clase <xref:System.Web.HttpContext>.  
   
@@ -167,14 +155,14 @@ El procedimiento siguiente describe cómo migrar un servicio web ASP.NET a [!INC
   
 14. Cambie el nombre del archivo .asmx original a .asmx .old.  
   
-15. Cree un archivo de servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con la extensión .asmx y guárdelo en la raíz de la aplicación en IIS.  
+15. Crear un archivo de servicio WCF para el servicio, asígnele la extensión .asmx y guárdelo en la raíz de la aplicación en IIS.  
   
     ```xml  
     <%@Service Class="MyOrganization.Adder" %>  
     <%@Assembly Name="MyServiceAssembly" %>   
     ```  
   
-16. Agregue una configuración [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para el servicio a su archivo Web.config. Configurar el servicio para utilizar la [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), para usar el archivo de servicio con la extensión .asmx creada en los pasos anteriores y no generar WSDL para sí mismo, pero usar el WSDL del paso dos. Configúrelo también para utilizar el modo de compatibilidad de ASP.NET, si fuese necesario.  
+16. Agregar una configuración de WCF para el servicio a su archivo Web.config. Configurar el servicio para utilizar la [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), para usar el archivo de servicio con la extensión .asmx creada en los pasos anteriores y no generar WSDL para sí mismo, pero usar el WSDL del paso dos. Configúrelo también para utilizar el modo de compatibilidad de ASP.NET, si fuese necesario.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  

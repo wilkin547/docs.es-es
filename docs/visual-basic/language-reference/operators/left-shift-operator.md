@@ -1,12 +1,6 @@
 ---
-title: '&lt;&lt;(Operador) (Visual Basic)'
+title: '&lt;&lt; (Operador) (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<<
 helpviewer_keywords:
@@ -14,16 +8,13 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 56cfb227f7e5c68de802c1f2cfb842a770f65ae0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bdec015309526aeac2499bc7b459b6ccab6f1e4d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="ltlt-operator-visual-basic"></a>&lt;&lt;(Operador) (Visual Basic)
+# <a name="ltlt-operator-visual-basic"></a>&lt;&lt; (Operador) (Visual Basic)
 Realiza un desplazamiento aritmético a la izquierda en un patrón de bits.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,25 +25,25 @@ result = pattern << amount
   
 ## <a name="parts"></a>Elementos  
  `result`  
- Obligatorio. Valor numérico integral. El resultado de desplazar el patrón de bits. El tipo de datos es el mismo que el de `pattern`.  
+ Requerido. Valor numérico integral. El resultado de desplazar el patrón de bits. El tipo de datos es el mismo que el de `pattern`.  
   
  `pattern`  
- Obligatorio. Expresión numérica integral. El patrón de bits que se va a desplazar. El tipo de datos debe ser un tipo integral (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, o `ULong`).  
+ Requerido. Expresión numérica integral. El patrón de bits que se va a desplazar. El tipo de datos debe ser un tipo integral (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, o `ULong`).  
   
  `amount`  
- Obligatorio. Expresión numérica. El número de bits para desplazar el patrón de bits. El tipo de datos debe ser `Integer` o amplían `Integer`.  
+ Requerido. Expresión numérica. El número de bits para desplazar el patrón de bits. El tipo de datos debe ser `Integer` o amplían `Integer`.  
   
 ## <a name="remarks"></a>Comentarios  
  Los desplazamientos aritméticos no son circulares, lo que significa que los bits desplazados fuera de un extremo del resultado no se vuelven a introducir en el otro extremo. En un desplazamiento aritmético a la izquierda, los bits desplazados más allá del intervalo del tipo de datos del resultado se descartan y las posiciones de bits vacantes a la derecha se establecen en cero.  
   
  Para evitar que un cambio más bits que puede contener el resultado, Visual Basic enmascara el valor de `amount` con una máscara de tamaño que se corresponde con el tipo de datos de `pattern`. El operador AND binario de estos valores se utiliza para la cantidad de desplazamiento. Las máscaras de tamaño son las siguientes:  
   
-|Tipo de datos de`pattern`|Máscara de tamaño (decimal)|Máscara de tamaño (hexadecimal)|  
+|Tipo de datos de `pattern`|Máscara de tamaño (decimal)|Máscara de tamaño (hexadecimal)|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`, `Byte`|7|& H00000007|  
-|`Short`, `UShort`|15|& H0000000F|  
-|`Integer`, `UInteger`|31|& H0000001F|  
-|`Long`, `ULong`|63|& H0000003F|  
+|`SByte`, `Byte`|7|&AMP; H00000007|  
+|`Short`, `UShort`|15|&AMP; H0000000F|  
+|`Integer`, `UInteger`|31|&AMP; H0000001F|  
+|`Long`, `ULong`|63|&AMP; H0000003F|  
   
  Si `amount` es cero, el valor de `result` es idéntico al valor de `pattern`. Si `amount` es negativo, se toma como un valor sin signo y enmascara con la máscara de tamaño adecuado.  
   
@@ -68,15 +59,15 @@ result = pattern << amount
   
  Los resultados del ejemplo anterior son los siguientes:  
   
--   `result1`es 192 (0000 0000 1100 0000).  
+-   `result1` es 192 (0000 0000 1100 0000).  
   
--   `result2`es 3072 (0000 1100 0000 0000).  
+-   `result2` es 3072 (0000 1100 0000 0000).  
   
--   `result3`es de -32768 (1000 0000 0000 0000).  
+-   `result3` es de -32768 (1000 0000 0000 0000).  
   
--   `result4`es de tipo 384 (0000 0001 1000 0000).  
+-   `result4` es de tipo 384 (0000 0001 1000 0000).  
   
--   `result5`es 0 (se desplaza 15 posiciones a la izquierda).  
+-   `result5` es 0 (se desplaza 15 posiciones a la izquierda).  
   
  La cantidad de desplazamiento para `result4` se calcula como 17 AND 15, lo que es igual a 1.  
   

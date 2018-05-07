@@ -1,12 +1,6 @@
 ---
 title: Using (Instrucción, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.using
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ed9cc0d04c89eac1fe342a0924dd89bb1e258a11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 725eeb42dc5462022ac1a021c537d701929398ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-statement-visual-basic"></a>Using (Instrucción, Visual Basic)
 Declara el principio de un `Using` bloquear y, opcionalmente, adquiere los recursos del sistema que controla el bloque.  
@@ -37,18 +28,18 @@ End Using
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`resourcelist`|Obligatorio si no se proporciona `resourceexpression`. Lista de uno o más recursos del sistema que este `Using` Bloquear controles, separados por comas.|  
 |`resourceexpression`|Obligatorio si no se proporciona `resourcelist`. Variable de referencia o una expresión que hace referencia a un recurso del sistema esté controlada por esto `Using` bloque.|  
 |`statements`|Opcional. Bloque de instrucciones que el `Using` bloquear ejecuciones.|  
-|`End Using`|Obligatorio. Termina la definición de la `Using` bloque y elimina todos los recursos que controla.|  
+|`End Using`|Requerido. Termina la definición de la `Using` bloque y elimina todos los recursos que controla.|  
   
  Cada recurso de la `resourcelist` parte tiene la sintaxis y las partes siguientes:  
   
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`  
   
- O bien  
+ -o bien-  
   
  `resourcename As resourcetype = resourceexpression`  
   
@@ -56,11 +47,11 @@ End Using
   
 |Término|Definición|  
 |---|---|  
-|`resourcename`|Obligatorio. Variable de referencia que hace referencia a un recurso del sistema que la `Using` impedir que los controles.|  
+|`resourcename`|Requerido. Variable de referencia que hace referencia a un recurso del sistema que la `Using` impedir que los controles.|  
 |`New`|Obligatorio si la `Using` instrucción adquiere el recurso. Si ya ha adquirido el recurso, use la segunda alternativa de sintaxis.|  
-|`resourcetype`|Obligatorio. La clase del recurso. La clase debe implementar la <xref:System.IDisposable> interfaz.|  
+|`resourcetype`|Requerido. La clase del recurso. La clase debe implementar la <xref:System.IDisposable> interfaz.|  
 |`arglist`|Opcional. Lista de argumentos que está pasando al constructor para crear una instancia de `resourcetype`. Vea [lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`resourceexpression`|Obligatorio. Variable o expresión que hace referencia a un recurso del sistema que satisface los requisitos de `resourcetype`. Si utiliza la segunda alternativa de la sintaxis, debe adquirir el recurso antes de pasar el control a la `Using` instrucción.|  
+|`resourceexpression`|Requerido. Variable o expresión que hace referencia a un recurso del sistema que satisface los requisitos de `resourcetype`. Si utiliza la segunda alternativa de la sintaxis, debe adquirir el recurso antes de pasar el control a la `Using` instrucción.|  
   
 ## <a name="remarks"></a>Comentarios  
  A veces el código requiere un recurso no administrado, como un identificador de archivos, un contenedor COM o una conexión SQL. Un `Using` bloque garantiza la eliminación de uno o varios de estos recursos cuando el código termine con ellos. Esto hace que estén disponibles para otro código.  

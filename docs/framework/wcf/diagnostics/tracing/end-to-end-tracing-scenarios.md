@@ -1,24 +1,12 @@
 ---
 title: Escenarios de seguimiento de traza de un extremo a otro
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b4980beca761a4c49c39e92c6c73a7bc1a5038b1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee1f3f09ccd642edbde039bafeda6bbf58247744
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-to-end-tracing-scenarios"></a>Escenarios de seguimiento de traza de un extremo a otro
 Esta sección contiene temas que describen los diferentes escenarios de utilización del seguimiento de traza.  

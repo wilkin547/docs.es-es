@@ -1,27 +1,15 @@
 ---
 title: Transferir
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83bb76cc46d72f3d368de20669391c3e7f24a0f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transfer"></a>Transferir
-En este tema se describe la transferencia en el modelo de seguimiento de actividad de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+En este tema se describe la transferencia en el modelo de seguimiento de actividad de Windows Communication Foundation (WCF).  
   
 ## <a name="transfer-definition"></a>Definición de transferencia  
  Las transferencias entre actividades representan relaciones causales entre eventos en las actividades relacionadas dentro de los extremos. Dos actividades se relacionan con transferencias cuando el control fluye entre estas actividades, como por ejemplo, una llamada al método que cruza límites de actividad. En [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], cuando los bytes son de entrada en el servicio, la actividad Realizar escucha de se transfiere a la actividad Recibir bytes, donde se crea el objeto de mensaje. Para obtener una lista de escenarios de seguimiento de extremo a extremo y su respectivo actividad y seguimiento de diseño, vea [escenarios de seguimiento de End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  

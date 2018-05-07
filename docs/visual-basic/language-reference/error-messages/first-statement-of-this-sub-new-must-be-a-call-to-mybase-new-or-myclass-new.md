@@ -1,28 +1,19 @@
 ---
-title: "La primera instrucción de este &#39; Sub New &#39; debe ser una llamada a &#39; MyBase.New &#39; o &#39; MyClass.New &#39; (Ningún Constructor accesible sin parámetros)"
+title: La primera instrucción de este &#39;Sub New&#39; debe ser una llamada a &#39;MyBase.New&#39; o &#39;MyClass.New&#39; (ningún Constructor accesible sin parámetros)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30148
 - vbc30148
 helpviewer_keywords:
 - BC30148
 ms.assetid: 4426e8fc-cb39-4eb8-ba95-503cd32fcc89
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1065643e1f6c868092fbad839af0dbbd33afaf01
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3b24385932700a4843ae295bc82ef9529cc86b9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="first-statement-of-this-39sub-new39-must-be-a-call-to-39mybasenew39-or-39myclassnew39-no-accessible-constructor-without-parameters"></a>La primera instrucción de este &#39; Sub New &#39; debe ser una llamada a &#39; MyBase.New &#39; o &#39; MyClass.New &#39; (Ningún Constructor accesible sin parámetros)
+# <a name="first-statement-of-this-39sub-new39-must-be-a-call-to-39mybasenew39-or-39myclassnew39-no-accessible-constructor-without-parameters"></a>La primera instrucción de este &#39;Sub New&#39; debe ser una llamada a &#39;MyBase.New&#39; o &#39;MyClass.New&#39; (ningún Constructor accesible sin parámetros)
 La primera instrucción de este 'Sub New' debe ser una llamada a 'MyBase.New' o 'MyClass.New' porque clase base\<basename >' de '\<derivedname >' no tiene un 'Sub New' accesible que se pueda llamar sin argumentos.  
   
  En una clase derivada, cada constructor debe llamar a un constructor de clase base (`MyBase.New`). Si la clase base tiene un constructor sin parámetros accesible para las clases derivadas, `MyBase.New` puede llamarse automáticamente. De lo contrario, debe llamar a un constructor de clase base con parámetros y no puede hacerlo automáticamente. En este caso, la primera instrucción de cada constructor de clase derivada debe llamar a un constructor con parámetros en la clase base, o llamar a otro constructor de la clase derivada que realiza un constructor de clase base llamada.  

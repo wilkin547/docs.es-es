@@ -1,12 +1,6 @@
 ---
-title: "Call (Instrucción, Visual Basic)"
+title: Call (Instrucción, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Call
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c72450fd6f931f36f640d3e384a6fd38d57a7a23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2074f44aedf59f1570e73c898a9bf64e57034923
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="call-statement-visual-basic"></a>Call (Instrucción, Visual Basic)
 Transfiere el control a un `Function`, `Sub`, o un procedimiento de biblioteca de vínculos dinámicos (DLL).  
@@ -34,7 +25,7 @@ Transfiere el control a un `Function`, `Sub`, o un procedimiento de biblioteca d
   
 ## <a name="parts"></a>Elementos  
  `procedureName`  
- Obligatorio. Nombre del procedimiento al que llamar.  
+ Requerido. Nombre del procedimiento al que llamar.  
   
  `argumentList`  
  Opcional. Lista de variables o expresiones que representan los argumentos que se pasan al procedimiento cuando se llama. Varios argumentos están separados por comas. Si incluye `argumentList`, debe encerrarlo entre paréntesis.  

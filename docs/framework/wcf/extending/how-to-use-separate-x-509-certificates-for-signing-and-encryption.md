@@ -1,14 +1,6 @@
 ---
 title: 'Cómo: Utilizar diferentes certificados X.509 para la firma y el cifrado'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f6103dd8f680752581a51cba7ba61c83522decc2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: d171af8dbcbbdd51cc015986a2c69e0393fe56dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Cómo: Utilizar diferentes certificados X.509 para la firma y el cifrado
-En este tema se muestra cómo configurar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para utilizar certificados diferentes para la firma y el cifrado de mensajes tanto en el cliente como en el servicio.  
+En este tema se muestra cómo configurar Windows Communication Foundation (WCF) para usar certificados diferentes para la firma de mensajes y el cifrado en el cliente y el servicio.  
   
  Para poder utilizar certificados independientes para la firma y el cifrado, se debe crear un cliente personalizado o las credenciales de servicio (o ambos) porque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no proporciona una API para establecer varios clientes o certificados de servicio. Además, se debe proporcionar un administrador de tokens de seguridad para sacar el máximo partido a la información de varios certificados y crear un proveedor de tokens de seguridad adecuado para el uso de claves especificado y la dirección del mensaje.  
   

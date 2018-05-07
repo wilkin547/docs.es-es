@@ -1,11 +1,6 @@
 ---
 title: Shared (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Shared
 helpviewer_keywords:
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fce13c308a449e63eacc2bc4c94c274c7e25506a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b15dd08d69f372317b9140001e8072eeb66d44ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 Especifica que uno o varios elementos de programación declarados están asociados con una clase o estructura en general y no a una instancia específica de la clase o estructura.  
@@ -51,7 +43,7 @@ Especifica que uno o varios elementos de programación declarados están asociad
   
 ## <a name="behavior"></a>Comportamiento  
   
--   **Almacenamiento de información.** Una variable compartida o un evento se almacena en la memoria sólo una vez, independientemente de cuántas o algunas instancias creado de su clase o estructura. De forma similar, un procedimiento compartido o una propiedad contiene sólo un conjunto de variables locales.  
+-   **almacenamiento de información.** Una variable compartida o un evento se almacena en la memoria sólo una vez, independientemente de cuántas o algunas instancias creado de su clase o estructura. De forma similar, un procedimiento compartido o una propiedad contiene sólo un conjunto de variables locales.  
   
 -   **Acceso a través de una Variable de instancia.** Es posible obtener acceso a un elemento compartido calificando el nombre de una variable que contiene una instancia específica de su clase o estructura. Aunque esto suele funcionar según lo esperado, el compilador genera un mensaje de advertencia y hace que el acceso a través del nombre de clase o estructura en lugar de la variable.  
   

@@ -1,49 +1,35 @@
 ---
 title: Las colas en WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7f0a6700dba8eb844cc471704095b29c2a2c7937
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queuing-in-wcf"></a>Las colas en WCF
-Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+En esta sección se describe cómo usar la comunicación en cola en Windows Communication Foundation (WCF).  
   
 ## <a name="queues-as-a-wcf-transport-binding"></a>Las colas como enlace de transporte de WCF  
- En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], los contratos especifican lo que se intercambia. Los contratos son intercambios de mensajes que dependen de lo comercial, o intercambios específicos de la aplicación. El mecanismo utilizado para intercambiar los mensajes (o el "cómo") se especifica en los enlaces. Los enlaces en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] encapsulan detalles del intercambio de mensajes. Exponen botones de configuración para que el usuario controle distintos aspectos del transporte o el protocolo que representan los enlaces. Las colas en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se tratan como cualquier otro enlace de transporte, lo que supone una gran ventaja para muchas aplicaciones de puesta en cola. Hoy en día, muchas aplicaciones de colas se escriben de manera diferente a otras aplicaciones de estilo distribuido de llamada a procedimiento remoto (RPC), lo que dificulta su seguimiento y mantenimiento. Con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], el estilo de escritura de una aplicación distribuida es mucho más parecido, lo que facilita el seguimiento y mantenimiento. Es más, separando la factorización del mecanismo de intercambio de la lógica comercial, es más sencillo configurar el transporte o cambiarlo sin alterar el código específico de la aplicación. La figura siguiente muestra la estructura de un servicio y un cliente WCF que utilizan MSMQ como transporte.  
+ En WCF, los contratos especifican lo que se intercambia. Los contratos son intercambios de mensajes que dependen de lo comercial, o intercambios específicos de la aplicación. El mecanismo utilizado para intercambiar los mensajes (o el "cómo") se especifica en los enlaces. Los enlaces de WCF encapsulan los detalles del intercambio de mensajes. Exponen botones de configuración para que el usuario controle distintos aspectos del transporte o el protocolo que representan los enlaces. Las colas en WCF se tratan como cualquier otro enlace de transporte, lo que supone una gran ventaja para muchas aplicaciones de colas. Hoy en día, muchas aplicaciones de colas se escriben de manera diferente a otras aplicaciones de estilo distribuido de llamada a procedimiento remoto (RPC), lo que dificulta su seguimiento y mantenimiento. Con WCF, el estilo de escritura de una aplicación distribuida es igual, lo que facilita el seguimiento y mantenimiento. Es más, separando la factorización del mecanismo de intercambio de la lógica comercial, es más sencillo configurar el transporte o cambiarlo sin alterar el código específico de la aplicación. La figura siguiente muestra la estructura de un servicio y un cliente WCF que utilizan MSMQ como transporte.  
   
  ![Diagrama de aplicaciones en la cola](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "figura de cola distribuida")  
   
- Como puede verse en la figura anterior, el cliente y el servicio sólo tienen que definir las semánticas de la aplicación, es decir, el contrato y la implementación. El servicio configura un enlace en cola con los valores preferentes. El cliente utiliza la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente para el servicio y generar un archivo de configuración que describe los enlaces que se usan para enviar mensajes al servicio. De este modo, para enviar un mensaje en cola, el cliente crea instancias de un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e invoca una operación en él. Esto provoca el envío del mensaje a la cola de transmisión y su transferencia a la cola de destino. Toda la complejidad de la comunicación en cola permanece oculta a la aplicación que envía y recibe los mensajes.  
+ Como puede verse en la figura anterior, el cliente y el servicio sólo tienen que definir las semánticas de la aplicación, es decir, el contrato y la implementación. El servicio configura un enlace en cola con los valores preferentes. El cliente utiliza la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar un cliente WCF para el servicio y generar un archivo de configuración que describe los enlaces que se usan para enviar mensajes al servicio. Por lo tanto, para enviar un mensaje en cola, el cliente crea una instancia de un cliente de WCF y llama a una operación en él. Esto provoca el envío del mensaje a la cola de transmisión y su transferencia a la cola de destino. Toda la complejidad de la comunicación en cola permanece oculta a la aplicación que envía y recibe los mensajes.  
   
- Advertencias acerca de los enlaces en cola [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Advertencias sobre el enlace en cola en WCF se incluyen:  
   
--   Todas las operaciones de servicio deben ser unidireccionales ya que el enlace en cola predeterminado en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no admite comunicación dúplex mediante colas. Un ejemplo de comunicación bidireccional ([comunicación bidireccional](../../../../docs/framework/wcf/samples/two-way-communication.md)) se muestra cómo utilizar dos contratos unidireccionales para implementar la comunicación dúplex mediante colas.  
+-   Todas las operaciones deben ser unidireccionales ya que el valor predeterminado en cola en WCF de enlace de servicio no admite comunicación dúplex mediante colas. Un ejemplo de comunicación bidireccional ([comunicación bidireccional](../../../../docs/framework/wcf/samples/two-way-communication.md)) se muestra cómo utilizar dos contratos unidireccionales para implementar la comunicación dúplex mediante colas.  
   
--   Para generar un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mediante el intercambio de metadatos, es necesario un punto final HTTP adicional en el servicio al que poder consultar directamente para generar el cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y obtener información de enlace que permita configurar de manera adecuada la comunicación en cola.  
+-   Para generar un WCF cliente mediante el intercambio de metadatos requiere un extremo HTTP adicional en el servicio para que se puede consultar directamente para generar al cliente de WCF y obtener información de enlace para configurar de manera adecuada la comunicación en cola.  
   
--   Basándose en el enlace en cola, se requiere configuración adicional ajena a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Por ejemplo, la clase <xref:System.ServiceModel.NetMsmqBinding> que se entrega con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] requiere la configuración de enlaces así como una configuración mínima de Message Queuing (MSMQ).  
+-   Según el enlace en cola, no se requiere configuración adicional fuera de WCF. Por ejemplo, el <xref:System.ServiceModel.NetMsmqBinding> clase que se incluye con WCF, tendrá que configurar los enlaces, así como una configuración mínima de Message Queuing (MSMQ).  
   
- Las secciones siguientes describen los enlaces en cola específicos distribuidos con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], basados en MSMQ.  
+ Las secciones siguientes describen los enlaces en cola específicos distribuidos con WCF, que se basan en MSMQ.  
   
 ### <a name="msmq"></a>MSMQ  
- El transporte en cola en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza MSMQ para su comunicación en cola.  
+ El transporte en cola en WCF utiliza MSMQ para la comunicación en cola.  
   
  MSMQ se distribuye como componente opcional de Windows y se ejecuta como un servicio NT. Captura los mensajes para su transmisión en una cola de transmisión, y para la entrega en una cola de destino. Los administradores de cola de MSMQ implementan un protocolo de transferencias de mensajes de confianza para que los mensajes no se pierdan durante la transmisión. El protocolo puede ser nativo o basado en SOAP, como el protocolo de mensajes de confianza (SRMP) de SOAP.  
   
@@ -54,7 +40,7 @@ Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indi
  Para obtener más información acerca de MSMQ, vea [instalar Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- El [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) es el enlace en cola [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona para dos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extremos para comunicarse mediante MSMQ. Por lo tanto, el enlace expone propiedades que son específicas de MSMQ. No obstante, no todas las características y propiedades MSMQ se exponen en `NetMsmqBinding`. El `NetMsmqBinding` compacto está diseñado con un conjunto óptimo de características que la mayoría de los clientes debería encontrar suficiente.  
+ El [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) es el enlace en cola WCF proporciona dos puntos de conexión de WCF para comunicarse mediante MSMQ. Por lo tanto, el enlace expone propiedades que son específicas de MSMQ. No obstante, no todas las características y propiedades MSMQ se exponen en `NetMsmqBinding`. El `NetMsmqBinding` compacto está diseñado con un conjunto óptimo de características que la mayoría de los clientes debería encontrar suficiente.  
   
  `NetMsmqBinding` expone los conceptos fundamentales de las colas explicados hasta ahora como propiedades de los enlaces. Por su parte, estas propiedades comunican a MSMQ cómo transferir y entregar los mensajes. Hay una descripción de las categorías de propiedad en las secciones siguientes. Para obtener más información, vea los temas conceptuales que describen propiedades específicas más completamente.  
   
@@ -75,7 +61,7 @@ Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indi
   
  Muchos sistemas de colas proporcionan una cola de mensajes no enviados para todo el sistema. MSMQ proporciona una cola de mensajes no enviados no transaccional para todo el sistema, para los mensajes con entrega fallida en colas no transaccionales; y una cola de mensajes no enviados transaccional para todo el sistema para los mensajes con entrega fallida en colas transaccionales.  
   
- Si varios clientes que envían mensajes a distintas colas de destino comparten el servicio MSMQ, todos los mensajes enviados por los clientes irán a la misma cola de mensajes no enviados. Esto no siempre es lo mejor. Para un mejor aislamiento, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y MSMQ en [!INCLUDE[wv](../../../../includes/wv-md.md)] proporcionan una cola de mensajes no enviados personalizada (o cola de mensajes no enviados específica de la aplicación) que el usuario puede especificar para almacenar mensajes con una entrega fallida. Por lo tanto, los distintos clientes no comparten la misma cola de mensajes no enviados.  
+ Si varios clientes que envían mensajes a distintas colas de destino comparten el servicio MSMQ, todos los mensajes enviados por los clientes irán a la misma cola de mensajes no enviados. Esto no siempre es lo mejor. Para un mejor aislamiento, WCF y MSMQ en [!INCLUDE[wv](../../../../includes/wv-md.md)] proporcionan una cola de mensajes no enviados personalizada (o cola de mensajes no enviados específica de la aplicación) que el usuario puede especificar para almacenar los mensajes que entrega fallida. Por lo tanto, los distintos clientes no comparten la misma cola de mensajes no enviados.  
   
  El enlace tiene dos propiedades interesantes:  
   
@@ -105,7 +91,7 @@ Esta sección describe cómo utilizar la comunicación en cola en [!INCLUDE[indi
 -   `UseActiveDirectory`: un valor booleano que indica si debe utilizarse Active Directory para la resolución de direcciones de cola. De manera predeterminada, está desactivado. Para obtener más información, consulte [extremos de servicio y direccionamiento de la cola](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- Se utiliza `MsmqIntegrationBinding` cuando se desea que un punto final [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se comunique con una aplicación MSMQ existente escrita en C, C++, COM, o System.Messaging API.  
+ El `MsmqIntegrationBinding` se utiliza cuando se desea un extremo de WCF para comunicarse con una aplicación MSMQ existente escrita en C, C++, COM o System.Messaging APIs.  
   
  Las propiedades de enlace son la mismas que para `NetMsmqBinding`. No obstante, se aplican las siguientes diferencias.  
   

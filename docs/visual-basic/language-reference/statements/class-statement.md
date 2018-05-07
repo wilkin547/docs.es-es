@@ -1,12 +1,6 @@
 ---
-title: "Instrucción Class (Visual Basic)"
+title: Instrucción Class (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Class
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: df86ef0eec67d96f2f997dc5dac7ee2357c6362b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2346823e7b774c21171bd81023cc5b920d34d19a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-statement-visual-basic"></a>Instrucción Class (Visual Basic)
 Declara el nombre de una clase e introduce la definición de las variables, propiedades, eventos y procedimientos que incluye la clase.  
@@ -52,7 +43,7 @@ End Class
 |`MustInherit`|Opcional. Vea [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
 |`NotInheritable`|Opcional. Vea [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
 |`Partial`|Opcional. Indica una definición parcial de la clase. Vea [parcial](../../../visual-basic/language-reference/modifiers/partial.md).|  
-|`name`|Obligatorio. Nombre de esta clase. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`name`|Requerido. Nombre de esta clase. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Of`|Opcional. Especifica que se trata de una clase genérica.|  
 |`typelist`|Es obligatorio si se utiliza la [de](../../../visual-basic/language-reference/statements/of-clause.md) palabra clave. Lista de parámetros de tipo para esta clase. Vea [escriba lista](../../../visual-basic/language-reference/statements/type-list.md).|  
 |`Inherits`|Opcional. Indica que esta clase hereda a los miembros de otra clase. Vea [Inherits (instrucción)](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
@@ -60,7 +51,7 @@ End Class
 |`Implements`|Opcional. Indica que esta clase implementa a los miembros de una o varias interfaces. Vea [implementa instrucción](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Es obligatorio si se utiliza la instrucción `Implements`. Los nombres de las interfaces implementadas por esta clase.|  
 |`statements`|Opcional. Instrucciones que definen a los miembros de esta clase.|  
-|`End Class`|Obligatorio. Termina la definición de `Class`.|  
+|`End Class`|Requerido. Termina la definición de `Class`.|  
   
 ## <a name="remarks"></a>Comentarios  
  Un `Class` instrucción define un nuevo tipo de datos. A *clase* es un bloque de creación fundamental de la programación orientada a objetos (OOP). Para obtener más información, consulte [objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  

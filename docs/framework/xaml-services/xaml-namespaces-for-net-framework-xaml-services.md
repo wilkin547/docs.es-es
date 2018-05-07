@@ -1,24 +1,12 @@
 ---
 title: Espacios de nombres XAML para los servicios XAML de .NET Framework
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-caps.latest.revision: "3"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e4e94f116fa820d80e5e23833c20382591c5d479
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 842cfb31e21c59bb886ccd266d19c40c64557519
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Espacios de nombres XAML para los servicios XAML de .NET Framework
 Un espacio de nombres XAML es un concepto que se expande en la definición de un espacio de nombres XML. Similar a un espacio de nombres XML, puede definir un espacio de nombres XAML mediante un `xmlns` atributo en el marcado. Espacios de nombres XAML también se representan en el flujo de nodo XAML y otras API de servicios XAML. Este tema define el concepto de espacio de nombres XAML y describe cómo los espacios de nombres XAML pueden definirse y usan contextos de esquema XAML y otros aspectos de servicios XAML de .NET Framework.  
@@ -41,9 +29,9 @@ Un espacio de nombres XAML es un concepto que se expande en la definición de un
   
  La forma más básica de un identificador que utiliza la convención de espacio de nombres y ensamblado CLR es como sigue:  
   
- `clr-namespace:`*clrnsName* `; assembly=` *nombreCortoDeEnsamblado*  
+ `clr-namespace:` *clrnsName* `; assembly=` *nombreCortoDeEnsamblado*  
   
- `clr-namespace:`y `; assembly=` son componentes literales de la sintaxis.  
+ `clr-namespace:` y `; assembly=` son componentes literales de la sintaxis.  
   
  *clrnsName* es el nombre de cadena que identifica un espacio de nombres CLR. Este nombre de la cadena incluye cualquier carácter interno de punto (.) que proporcionan sugerencias sobre el espacio de nombres CLR y su relación con otros espacios de nombres CLR.  
   
@@ -51,7 +39,7 @@ Un espacio de nombres XAML es un concepto que se expande en la definición de un
   
  Una definición más completa de la convención de espacio de nombres y ensamblado CLR es como sigue:  
   
- `clr-namespace:`*clrnsName* `; assembly=` *assemblyName*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyName*  
   
  *assemblyName* representa una cadena que sea válida como una <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> entrada. Esta cadena puede incluir la referencia cultural, clave pública o información de versión (definiciones de estos conceptos se definen en el tema de referencia para <xref:System.Reflection.Assembly>). COFF formato y la evidencia (como se hace otras sobrecargas del <xref:System.Reflection.Assembly.Load%2A>) no son relevantes para el ensamblado XAML cargando fines; toda la información de carga se debe presentar como una cadena.  
   
@@ -72,7 +60,7 @@ Un espacio de nombres XAML es un concepto que se expande en la definición de un
   
  Si tiene que rellenar la información de espacio de nombres XAML, en casos donde el espacio de nombres XAML que piensa que el contexto de esquema XAML para usar no está definido en el marcado, es una técnica que se puede utilizar declarar las declaraciones de espacio de nombres XML en el <xref:System.Xml.XmlParserContext> para un <xref:System.Xml.XmlReader>. A continuación, usar ese <xref:System.Xml.XmlReader> como entrada para un constructor de lector XAML, o <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29?displayProperty=nameWithType>.  
   
- Dos otra API que son relevantes para el espacio de nombres XAML de control en los servicios XAML de .NET Framework son los atributos <xref:System.Windows.Markup.XmlnsDefinitionAttribute> y <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Estos atributos se aplican a los ensamblados. <xref:System.Windows.Markup.XmlnsDefinitionAttribute>se usa un contexto de esquema XAML para interpretar una declaración de espacio de nombres XAML que incluye un URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute>se utiliza con herramientas que emiten XAML para que un espacio de nombres XAML determinado se puede serializar con un prefijo de predicción. Para obtener más información, consulte [Related atributos de CLR para tipos personalizados y bibliotecas](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
+ Dos otra API que son relevantes para el espacio de nombres XAML de control en los servicios XAML de .NET Framework son los atributos <xref:System.Windows.Markup.XmlnsDefinitionAttribute> y <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Estos atributos se aplican a los ensamblados. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> se usa un contexto de esquema XAML para interpretar una declaración de espacio de nombres XAML que incluye un URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute> se utiliza con herramientas que emiten XAML para que un espacio de nombres XAML determinado se puede serializar con un prefijo de predicción. Para obtener más información, consulte [Related atributos de CLR para tipos personalizados y bibliotecas](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Introducción a las estructuras y conceptos de secuencias de nodo XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

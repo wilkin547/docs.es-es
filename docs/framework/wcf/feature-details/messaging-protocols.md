@@ -1,31 +1,17 @@
 ---
-title: "Protocolos de mensajería"
-ms.custom: 
+title: Protocolos de mensajería
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 75a39fa1d0301a48cec7ad61c968ee3fc82d189c
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: c900c8fde8b13b4766fb245de2bab46b5601f135
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="messaging-protocols"></a>Protocolos de mensajería
-La pila del canal [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] emplea codificación y canales de transporte para transformar la representación interna de mensajes en su formato de conexión y enviarla utilizando un transporte determinado. El transporte más común utilizado para la interoperabilidad de servicios Web es HTTP y las codificaciones más comunes utilizadas por los servicios Web son las basadas en XML, SOAP 1.1, SOAP 1.2 y el Mecanismo de optimización de transmisión de mensajes (MTOM).  
+La pila del canal de Windows Communication Foundation (WCF) emplea codificación y canales de transporte para transformar la representación interna de mensajes en su formato de conexión y enviarla utilizando un transporte determinado. El transporte más común utilizado para la interoperabilidad de servicios Web es HTTP y las codificaciones más comunes utilizadas por los servicios Web son las basadas en XML, SOAP 1.1, SOAP 1.2 y el Mecanismo de optimización de transmisión de mensajes (MTOM).  
   
- Este tema cubre los detalles de implementación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para los siguientes protocolos empleados por <xref:System.ServiceModel.Channels.HttpTransportBindingElement>.  
+ Este tema cubre los detalles de implementación de WCF para los siguientes protocolos empleados por <xref:System.ServiceModel.Channels.HttpTransportBindingElement>.  
   
 |Especificación/documento|Link|  
 |-----------------------------|----------|  
@@ -33,7 +19,7 @@ La pila del canal [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] emplea
 |Enlace HTTP de SOAP 1.1|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/, Sección 7|  
 |Enlace HTTP de SOAP 1,2|http://www.w3.org/TR/soap12-part2/, Sección 7|  
   
- Este tema cubre los detalles de implementación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para los siguientes protocolos empleados por <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> y <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>.  
+ Este tema cubre los detalles de implementación de WCF de los siguientes protocolos que <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> y <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> emplean.  
   
 |Especificación/documento|Link|  
 |-----------------------------|----------|  
@@ -48,7 +34,7 @@ W3C Web Services Addressing 1.0 - Metadatos|http://www.w3.org/TR/ws-addr-metadat
 |Enlace SOAP 1.1 de WSDL|http://www.w3.org/TR/wsdl/|  
 |Enlace SOAP 1.2 de WSDL|http://www.w3.org/Submission/wsdl11soap12/|  
   
- Este tema cubre los detalles de implementación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para los siguientes protocolos que emplea<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>.  
+ Este tema cubre los detalles de implementación de WCF de los siguientes protocolos <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> emplea.  
   
 |Especificación/documento|Link|  
 |-----------------------------|----------|  
@@ -75,41 +61,41 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 y SOAP 1.2  
   
 ### <a name="envelope-and-processing-model"></a>Modelo de procesado y envoltura  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa el procesado de envoltura SOAP 1.1 siguiendo Perfil básico 1.1 (BP11) y Perfil básico 1.0 (SSBP10). El procesamiento de envoltura SOAP 1.2 se implementa siguiendo SOAP12-Part1.  
+ WCF implementa procesado de envoltura de SOAP 1.1 siguiendo Basic Profile 1.1 (BP11) y Basic Profile 1.0 (SSBP10). El procesamiento de envoltura SOAP 1.2 se implementa siguiendo SOAP12-Part1.  
   
- En esta sección se explican ciertas opciones de implementación tomadas por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con respecto a BP11 y SOAP12-Part1.  
+ En esta sección se explica ciertas opciones de implementación tomadas por WCF con respecto a BP11 y SOAP12-Part1.  
   
 #### <a name="mandatory-header-processing"></a>Procesamiento del encabezado obligatorio  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sigue las reglas para procesar encabezados marcados `mustUnderstand` descritos en las especificaciones SOAP 1.2 y SOAP 1.1, con las siguientes variaciones.  
+ WCF sigue las reglas para procesar encabezados marcados `mustUnderstand` descritos en las especificaciones SOAP 1.1 y SOAP 1.2, con las siguientes variaciones.  
   
- Un mensaje que entra la pila de canales de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] es procesado por canales individuales configurados por elementos de enlace asociados, como, por ejemplo, codificación de mensajes de texto, seguridad, mensajería de confianza y transacciones. Cada canal reconoce los encabezados del espacio de nombres asociado y los marca como comprendidos. Cuando un mensaje escribe el distribuidor, el formateador de operaciones lee encabezados esperados por el contrato de operación/mensaje correspondiente y los marca como comprendidos. A continuación, el distribuidor comprueba si algún encabezado restante no se entiende pero está marcado como `mustUnderstand` y produce una excepción. Los mensajes que contienen encabezados `mustUnderstand` que tienen como destino el destinatario no son procesados por el código de aplicación de destinatario.  
+ Un mensaje que entra la pila de canales WCF es procesado por canales individuales configurados por elementos de enlace asociados, por ejemplo, codificación de mensajes de texto, seguridad, mensajería confiable y transacciones. Cada canal reconoce los encabezados del espacio de nombres asociado y los marca como comprendidos. Cuando un mensaje escribe el distribuidor, el formateador de operaciones lee encabezados esperados por el contrato de operación/mensaje correspondiente y los marca como comprendidos. A continuación, el distribuidor comprueba si algún encabezado restante no se entiende pero está marcado como `mustUnderstand` y produce una excepción. Los mensajes que contienen encabezados `mustUnderstand` que tienen como destino el destinatario no son procesados por el código de aplicación de destinatario.  
   
  Tal procesamiento superpuesto permite la separación entre las capas de la infraestructura y las capas de la aplicación del nodo SOAP:  
   
--   B1111: se detectan encabezados que no se entienden una vez que la pila de canales de la infraestructura de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] procesa el mensaje, pero antes que lo procese la aplicación  
+-   B1111: Se detectan encabezados que no se entienden después de que el mensaje es procesado por la pila de canales de infraestructura WCF, pero antes de que se procese por aplicación  
   
      El valor de encabezado `mustUnderstand` difiere entre SOAP 1.1 y SOAP 1.2. Basic Profile 1.1 requiere que el valor `mustUnderstand` sea 0 o 1 para los mensajes SOAP 1.1. SOAP 1.2 permite 0, 1, `false` y `true` como valores, pero recomienda emitir una representación canónica de valores (`xs:boolean`, `false`) `true`.  
   
--   B1112: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] emite los valores 0 y 1 de `mustUnderstand` para ambas versiones de SOAP 1.1 y SOAP 1.2 del sobre SOAP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] acepta todo el espacio del valor de `xs:boolean` para el encabezado `mustUnderstand` (0, 1, `false`, `true`)  
+-   B1112: WCF emite `mustUnderstand` valores 0 y 1 para las versiones de SOAP 1.1 y SOAP 1.2 de la envoltura SOAP. WCF acepta el espacio del valor completo de `xs:boolean` para el `mustUnderstand` encabezado (0, 1, `false`, `true`)  
   
 #### <a name="soap-faults"></a>Errores SOAP  
- A continuación, se muestra una lista de implementaciones de errores de SOAP específicos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ La siguiente es una lista de implementaciones de errores de SOAP específicas de WCF.  
   
--   B2121: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] devuelve los siguientes códigos de error de SOAP 1.1: `s11:mustUnderstand`, `s11:Client`, y `s11:Server`.  
+-   B2121: WCF devuelve los siguientes códigos de error de SOAP 1.1: `s11:mustUnderstand`, `s11:Client`, y `s11:Server`.  
   
--   B2122: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] devuelve los códigos de error de SOAP 1.2 siguientes: `s12:MustUnderstand`, `s12:Sender` y `s12:Receiver`.  
+-   B2122: WCF devuelve los siguientes códigos de error de SOAP 1.2: `s12:MustUnderstand`, `s12:Sender`, y `s12:Receiver`.  
   
 ### <a name="http-binding"></a>Enlace HTTP  
   
 #### <a name="soap-11-http-binding"></a>Enlace HTTP de SOAP 1.1  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa enlace HTTP de SOAP1.1 siguiendo la sección 3.4 de la especificación del Perfil básico 1.1 con las siguientes aclaraciones:  
+ WCF implementa enlace HTTP de SOAP1.1 siguiendo la sección 3.4 con las siguientes aclaraciones de especificación de Basic Profile 1.1:  
   
--   B2211: el servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no implementa la redirección de solicitudes POST HTTP.  
+-   B2211: El servicio WCF no implementa la redirección de solicitudes HTTP POST.  
   
--   B2212: los clientes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admiten cookies HTTP de acuerdo con 3.4.8.  
+-   B2212: Los clientes de WCF admiten Cookies HTTP de acuerdo con 3.4.8.  
   
 #### <a name="soap-12-http-binding"></a>Enlace HTTP de SOAP 1,2  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa enlace HTTP de SOAP 1.2 tal y como se describe en la especificación SOAP 1.2-parte 2 (SOAP12Part2) siguientes aclaraciones.  
+ WCF implementa enlace HTTP de SOAP 1.2 tal y como se describe en SOAP 1.2-parte 2 (SOAP12Part2) especificación con las siguientes aclaraciones.  
   
  SOAP 1.2 introdujo un parámetro de acción opcional para el tipo de medio `application/soap+xml`. Este parámetro es útil para optimizar la distribución de mensajes sin requerir que se analice el cuerpo del mensaje SOAP cuando no se utiliza WS-Addresing.  
   
@@ -120,7 +106,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  Cuando WS-Addressing está deshabilitado y una solicitud entrante no contiene ningún parámetro de acción, `Action` del mensaje se considera como no especificada.  
   
 ## <a name="ws-addressing"></a>WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa 3 versiones de WS-Addressing:  
+ WCF implementa 3 versiones de WS-Addressing:  
   
 -   WS-Addressing 2004/08  
   
@@ -128,22 +114,22 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
 -   WS-Addressing 1.0 - Metadatos  
   
-### <a name="endpoint-references"></a>Referencias de extremo  
- Todas las versiones de WS-Addressing que implementa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usan referencias de extremo para describir los extremos.  
+### <a name="endpoint-references"></a>Referencias de punto de conexión  
+ Todas las versiones de WS-Addressing que implementa WCF usan referencias de extremo para describir los extremos.  
   
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>Referencias de punto de conexión y WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa varios protocolos de infraestructura que usan ws-Addressing y en particular el elemento `EndpointReference` y la clase `W3C.WsAddressing.EndpointReferenceType` (por ejemplo, WS-ReliableMessaging, WS-SecureConversation y WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite el uso de cualquier versión de WS-Addressing con otros protocolos de infraestructura. Los extremos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admiten una versión de WS-Addressing por extremo.  
+ WCF implementa varios protocolos de infraestructura que usan WS-Addressing y, en particular el `EndpointReference` elemento y `W3C.WsAddressing.EndpointReferenceType` (clase) (por ejemplo, WS-ReliableMessaging, WS-SecureConversation y WS-Trust). WCF admite el uso de cualquiera de las versiones de WS-Addressing con otros protocolos de infraestructura. Los extremos WCF admiten una versión de WS-Addressing por extremo.  
   
- Para R3111, el espacio de nombres para el elemento `EndpointReference` o el tipo utilizado en mensajes intercambiados con un extremo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] debe coincidir con la versión de WS-Addressing implementada por este extremo.  
+ Para R3111, el espacio de nombres para el `EndpointReference` elemento o el tipo utilizado en mensajes intercambiados con un extremo de WCF debe coincidir con la versión de WS-Addressing implementada por este extremo.  
   
- Por ejemplo, si un extremo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa WS-ReliableMessaging, el encabezado `AcksTo` devuelto por este tipo de extremo dentro de `CreateSequenceResponse` utiliza la versión de WS-Addressing que el elemento `EncodingBinding` especifica para este extremo.  
+ Por ejemplo, si un extremo de WCF implementa WS-ReliableMessaging, el `AcksTo` devuelto por este tipo de extremo dentro del encabezado `CreateSequenceResponse` usa la versión de WS-Addressing que el `EncodingBinding` elemento especifica para este extremo.  
   
-#### <a name="endpoint-references-and-metadata"></a>Referencias de extremo y metadatos  
+#### <a name="endpoint-references-and-metadata"></a>Referencias de punto de conexión y metadatos  
  Varios escenarios requieren comunicar metadatos o una referencia a los metadatos para un punto de conexión determinado.  
   
- B3121: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] emplea mecanismos descritos en la especificación de WS-MetadataExchange (MEX), sección 6, para incluir metadatos para referencias de extremos por valor o referencia.  
+ B3121: WCF emplea mecanismos descritos en la sección 6, para incluir metadatos para referencias de punto de conexión por valor o por referencia de la especificación de WS-MetadataExchange (MEX).  
   
- Considere un escenario donde un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio requiere autenticación mediante un token de lenguaje de marcado de aserciones de seguridad (SAML) emitido por el emisor del token en http://sts.fabrikam123.com. El extremo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] describe este requisito de autenticación utilizando la aserción `sp:IssuedToken` con una aserción `sp:Issuer` anidada que señala al emisor del token. Las aplicaciones de cliente que obtienen acceso a la aserción `sp:Issuer` han de saber cómo comunicarse con el extremo del emisor del token. El cliente ha de saber los metadatos sobre el emisor del token. Con las extensiones de metadatos de referencia de extremo definidas en MEX, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona una referencia a los metadatos de emisor de token.  
+ Considere un escenario donde un servicio WCF requiere la autenticación mediante un token de lenguaje de marcado de aserciones de seguridad (SAML) emitido por el emisor del token en http://sts.fabrikam123.com. El extremo WCF describe este requisito de autenticación mediante `sp:IssuedToken` aserción con anidada `sp:Issuer` aserción que señala al emisor del token. Las aplicaciones de cliente que obtienen acceso a la aserción `sp:Issuer` han de saber cómo comunicarse con el extremo del emisor del token. El cliente ha de saber los metadatos sobre el emisor del token. Con las extensiones de metadatos de referencia de punto de conexión definidas en MEX, WCF proporciona una referencia a los metadatos del emisor del token.  
   
 ```xml  
 <sp:IssuedToken>  
@@ -169,26 +155,26 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="message-addressing-headers"></a>Encabezados de direccionamiento de mensajes  
   
 #### <a name="message-headers"></a>Encabezados de mensajes  
- Para ambas versiones de WS-Addressing, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa los siguientes encabezados de mensaje tal y como se describen las especificaciones `wsa:To`, `wsa:ReplyTo`, `wsa:Action`, `wsa:MessageID`, y `wsa:RelatesTo`.  
+ Para ambas versiones de WS-Addressing, WCF usa los siguientes encabezados de mensaje según las especificaciones `wsa:To`, `wsa:ReplyTo`, `wsa:Action`, `wsa:MessageID`, y `wsa:RelatesTo`.  
   
- B3211: para todas las versiones de WS-Addressing, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se ajusta a los encabezados de mensajes WS-Addressing `wsa:FaultTo` y `wsa:From`, pero no los genera inmediatamente.  
+ B3211: Para todas las versiones de WS-Addressing, WCF respeta, pero no los genera el cuadro, encabezados de mensaje de WS-Addressing `wsa:FaultTo` y `wsa:From`.  
   
- Las aplicaciones que interactúan con las aplicaciones [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pueden agregar estos encabezados de mensajes e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] las procesará consecuentemente.  
+ Las aplicaciones que interactúan con aplicaciones WCF que se pueden agregar que estos encabezados del mensaje y WCF procesará consecuentemente.  
   
 #### <a name="reference-parameters-and-properties"></a>Parámetros de referencia y propiedades  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa el procesamiento de parámetros de referencia de extremo y propiedades de  
+ WCF implementa el procesamiento de los parámetros de referencia de extremo y propiedades de  
   
  referencia de acuerdo con las especificaciones respectivas.  
   
- B3221: cuando se configura para utilizar WS-Addressing 2004/08, los extremos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no diferencian entre procesar propiedades de referencia y parámetros de referencia.  
+ B3221: Cuando se configura para utilizar WS-Addressing 2004/08, los extremos WCF no diferencian entre procesar propiedades de referencia y parámetros de referencia.  
   
 ### <a name="message-exchange-patterns"></a>Modelos de intercambio de mensajes  
- La secuencia de mensajes implicadas en la invocación de operación de servicio Web se conoce como el *patrón de intercambio de mensajes*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite patrones de intercambio de mensajes de solicitud-respuesta, unidireccionales y dúplex. En esta sección se aclaran los requisitos de WS-Addressing sobre el procesamiento de mensajes en función del patrón de intercambio de mensajes que se utiliza.  
+ La secuencia de mensajes implicadas en la invocación de operación de servicio Web se conoce como el *patrón de intercambio de mensajes*. WCF admite unidireccional, solicitud-respuesta y dúplex mensaje patrones de intercambio. En esta sección se aclaran los requisitos de WS-Addressing sobre el procesamiento de mensajes en función del patrón de intercambio de mensajes que se utiliza.  
   
  A lo largo de esta sección, el solicitante envía el primer mensaje y el respondedor recibe el primer mensaje.  
   
 #### <a name="one-way-message"></a>Mensaje unidireccional  
- Cuando un extremo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se configura para admitir mensajes con una `Action` determinada para seguir un patrón unidireccional, el extremo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sigue los siguientes comportamientos y requisitos. A menos que se especifique lo contrario, los comportamientos y reglas se aplican a ambas versiones de WS-Addressing admitidas en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Cuando se configura un extremo de WCF para admitir mensajes con un determinado `Action` para seguir un patrón unidireccional, el extremo WCF sigue los siguientes comportamientos y requisitos. A menos que se especifique lo contrario, comportamientos y reglas se aplican en ambas versiones de WS-Addressing compatible con WCF:  
   
 -   R3311: el solicitante debe incluir `wsa:To`, `wsa:Action` y los encabezados para todos los parámetros de referencia especificados por la referencia del extremo. Cuando se utiliza WS-Addressing 2004/08 y la referencia de punto de conexión especifica las [propiedades de referencia], los encabezados correspondientes también deben agregarse al mensaje.  
   
@@ -198,10 +184,10 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
      Si el transporte HTTP está en uso y el contrato de operación declara un mensaje unidireccional, la respuesta HTTP todavía se puede utilizar para enviar mensajes de infraestructura, por ejemplo, la mensajería de confianza puede enviar un mensaje `SequenceAcknowledgement` en una respuesta HTTP.  
   
--   B3314: el respondedor [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no envía un mensaje de error en respuesta a un mensaje unidireccional.  
+-   B3314: El servicio de respuesta WCF no envía un mensaje de error en respuesta a un mensaje unidireccional.  
   
 #### <a name="request-reply"></a>Solicitud-respuesta  
- Cuando un extremo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se configura para un mensaje con una `Action` determinada para seguir el patrón de solicitud-respuesta, el extremo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sigue los comportamientos y requisitos descritos abajo. A menos que se especifique lo contrario, los comportamientos y reglas se aplican a ambas versiones de WS-Addressing admitidas en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Cuando se configura un extremo de WCF para un mensaje con un determinado `Action` para seguir el patrón de solicitud-respuesta, el extremo WCF sigue los comportamientos y requisitos descritos abajo. A menos que especifique lo contrario, comportamientos y reglas se aplican en ambas versiones de WS-Addressing compatible con WCF:  
   
 -   R3321: El solicitante debe incluir en la solicitud `wsa:To`, `wsa:Action`, `wsa:MessageID`y los encabezados para todos los parámetros de referencia o referencia propiedades (o ambos) especificados para la referencia de punto de conexión.  
   
@@ -212,14 +198,14 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 -   R3324: El solicitante debe incluir `wsa:To`, `wsa:Action`, y `wsa:RelatesTo` encabezados en el mensaje de respuesta, así como los encabezados para todos los parámetros de referencia o referencia propiedades (o ambos) especificados por el `ReplyTo` referencia de punto de conexión en el solicitud.  
   
 ### <a name="web-services-addressing-faults"></a>Errores de direccionamiento de servicios Web  
- R3411: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera los siguientes errores definidos por WS-Addressing 2004/08.  
+ R3411: WCF produce los siguientes errores definidos por WS-Addressing 2004/08.  
   
 |Código|Motivo|  
 |----------|-----------|  
 |wsa:DestinationUnreachable|El mensaje llegó con un `ReplyTo` diferente a la dirección de respuesta establecida para este canal; no hay ningún extremo que escuche en la dirección especificada en el encabezado To.|  
 |wsa:ActionNotSupported|los canales de infraestructura o el distribuidor asociados al extremo no reconocen la acción especificada en el encabezado `Action`.|  
   
- R3412: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] produce los siguientes errores definidos por WS-Addressing 1.0.  
+ R3412: WCF produce los siguientes errores definidos por WS-Addressing 1.0.  
   
 |Código|Motivo|  
 |----------|-----------|  
@@ -234,9 +220,9 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>Enlace WSDL 1.1 y aserciones de WS-Policy  
   
 #### <a name="indicating-use-of-ws-addressing"></a>Indicación del uso de WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza las aserciones de directivas para indicar la compatibilidad de extremo para una versión particular de WS-Addressing.  
+ WCF utiliza las aserciones de directiva para indicar la compatibilidad de punto de conexión para una determinada versión de WS-Addressing.  
   
- La siguiente aserción de directiva tiene Asunto de directiva de extremo [WS PA] e indica que los mensajes enviados y recibidos desde el extremo deben utilizar WS-Addressing 2004/08.  
+ La siguiente aserción de directiva tiene Asunto de directiva de punto de conexión [WS PA] e indica que los mensajes enviados y recibidos desde el punto de conexión deben utilizar WS-Addressing 2004/08.  
   
 ```xml  
 <wsap:UsingAddressing />  
@@ -278,7 +264,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  Sin embargo, hay patrones de intercambio de mensajes que se benefician de tener dos conexiones HTTP inversas independientes establecidas entre el solicitante y el respondedor, por ejemplo, los mensajes unidireccionales no solicitados enviados por el respondedor.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona una característica mediante la que dos canales de transporte subyacentes pueden formar un canal dúplex compuesto, donde un canal se usa para los mensajes de entrada y el otro, para los de salida. En el caso del transporte HTTP, el Dúplex Compuesto proporciona dos conexiones HTTP inversas. El solicitante utiliza una conexión para enviar mensajes al respondedor y el respondedor usa la otra para devolver mensajes al solicitante.  
+ WCF ofrece una característica por la que dos canales de transporte subyacentes pueden formar un canal dúplex compuesto, donde un canal se usa para mensajes de entrada y el otro se utiliza para los mensajes de salida. En el caso del transporte HTTP, el Dúplex Compuesto proporciona dos conexiones HTTP inversas. El solicitante utiliza una conexión para enviar mensajes al respondedor y el respondedor usa la otra para devolver mensajes al solicitante.  
   
  Para las respuestas enviadas a través de solicitudes independientes http, la aserción de ws-am es:  
   
@@ -317,14 +303,14 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  La única diferencia entre los dos es la semántica de patrón de Acción predeterminada descrita en la sección 3.3.2 de WS-ADDR y la sección 4.4.4 de WS-ADDR10-WSDL, respectivamente.  
   
- Es razonable tener dos extremos que compartan el mismo `portType` (o contrato, en terminología [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ) pero que usen diferentes versiones de WS-Addressing. Pero suponiendo que esa acción esté definida por `portType` y no debería cambiar a lo largo de los extremos que implementan `portType`, se hace imposible admitir ambos patrones de acción predeterminados.  
+ Es razonable tener dos extremos que comparten el mismo `portType` (o un contrato, en la terminología WCF) pero que usen diferentes versiones de WS-Addressing. Pero suponiendo que esa acción esté definida por `portType` y no debería cambiar a lo largo de los extremos que implementan `portType`, se hace imposible admitir ambos patrones de acción predeterminados.  
   
- Para resolver esta controversia, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite una versión única del atributo `Action`.  
+ Para resolver esta controversia, WCF admite una única versión de la `Action` atributo.  
   
- B3521: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza el atributo `wsaw10:Action` en elementos `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` tal y como se define en WS-ADDR10-WSDL para determinar el URI `Action` para los mensajes correspondientes independientemente de la versión de WS-Addressing utilizada por el extremo.  
+ B3521: WCF usa la `wsaw10:Action` atributo `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` elementos tal como se define en WS-ADDR10-WSDL para determinar el `Action` URI para los mensajes correspondientes independientemente de la versión de WS-Addressing utilizada por el punto de conexión.  
   
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>Uso de la referencia de punto de conexión dentro del puerto WSDL  
- La sección 4.1 de WS-ADDR10-WSDL extiende el elemento `wsdl:port` para incluir el elemento secundario `<wsa10:EndpointReference…/>` para describir el extremo en términos de WS-Addressing. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expande esta utilidad en WS-Addressing 2004/08, permitiendo que `<wsa:EndpointReference…/>` aparezca como un elemento secundario de `wsdl:port`.  
+ La sección 4.1 de WS-ADDR10-WSDL extiende el elemento `wsdl:port` para incluir el elemento secundario `<wsa10:EndpointReference…/>` para describir el extremo en términos de WS-Addressing. WCF expande esta utilidad en WS-Addressing 2004/08, permitiendo `<wsa:EndpointReference…/>` para que aparezca como un elemento secundario de `wsdl:port`.  
   
 -   R3531: si un extremo tiene una directiva alternativa adjunta con una aserción de directiva `<wsaw10:UsingAddressing/>`, el elemento`wsdl:port` correspondiente puede contener un elemento secundario`<wsa10:EndpointReference …/>`.  
   
@@ -389,7 +375,7 @@ Content-Length: 0
 ```  
   
 ## <a name="soap-message-transmission-optimization-mechanism"></a>Mecanismo de optimización de transmisión de mensajes SOAP  
- En esta sección se describen los detalles de implementación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para el MTOM de SOAP HTTP. La tecnología de MTOM es un mecanismo de codificación de mensajes de la misma clase que la codificación de XML/texto tradicional o la codificación binaria de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. MTOM incluye lo siguiente:  
+ Esta sección describen los detalles de implementación de WCF para MTOM de SOAP de HTTP. Tecnología de MTOM es el mecanismo de codificación de mensaje SOAP de la misma clase que la codificación de texto/XML tradicional o codificación binaria de WCF. MTOM incluye lo siguiente:  
   
 -   Una codificación de XML y un mecanismo de empaquetado descritos por [XOP] que optimiza elementos de información XML que contienen datos binarios codificados por base64 en partes binarias independientes.  
   
@@ -399,7 +385,7 @@ Content-Length: 0
   
 -   Un enlace de transporte HTTP.  
   
- Es posible utilizar MTOM con transportes que no sean HTTP mediante [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Sin embargo, en este tema nos centraremos en HTTP.  
+ Es posible utilizar MTOM con transportes que no sean HTTP con WCF. Sin embargo, en este tema nos centraremos en HTTP.  
   
  El formato MTOM reutiliza un largo conjunto de especificaciones que cubren el propio MTOM, XOP y MIME. La modularidad de este conjunto de especificaciones hace algo difícil reconstruir requisitos exactos en la semántica de procesamiento y formato. En esta sección se describe los requisitos de procesamiento y formato para enlace MTOM.  
   
@@ -457,7 +443,7 @@ Content-Length: 0
     3.  Reemplace el elemento de información de elemento `xop:Include` que aparece en la propiedad `children` de cada elemento con los elementos de información de caracteres que representan la codificación de base64 canónica (vea XSD-2, 3.2.16 base64Binary) del cuerpo de la entidad de la parte MIME identificada en el paso 3b (reemplace de manera eficaz el elemento de información de elemento `xop:Include` con los datos reconstruidos a partir de la parte del paquete).  
   
 #### <a name="http-content-type-header"></a>Encabezado de tipo de contenido HTTP  
- La siguiente es una lista de aclaraciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para el formato del encabezado de tipo de contenido HTTP de un mensaje codificado en MTOM SOAP 1.x derivado a partir de los requisitos enunciados en la propia especificación MTOM y se derivan de MTOM y RFC 2387.  
+ La siguiente es una lista de aclaraciones de WCF para el formato del encabezado HTTP Content-Type de un mensaje SOAP 1.x codificado en MTOM derivado los requisitos enunciados en la propia especificación MTOM y se deriva de MTOM y RFC 2387.  
   
 -   R4131: un encabezado de tipo de contenido HTTP debe tener el valor de multiparte/relacionado (sin distinción entre mayúsculas y minúsculas) y sus parámetros. Los nombres de parámetros no distinguen mayúsculas de minúsculas. El orden de los parámetros no importa.  
   
@@ -525,7 +511,7 @@ msg-id    =       [CFWS] "<" id-left "@" id-right ">" [CFWS]
   
  R4143: el valor del encabezado Content-ID para la parte MIME del conjunto de información debe seguir la producción `msg-id` de RFC 2822 con las partes de prefijo y sufijo `[CFWS]` omitidas.  
   
- Varias implementaciones MIME redujeron los requisitos para el valor encerrado entre "\<" y ">" es una dirección de correo electrónico y usar `absoluteURI` entre "\<", ">" Además de la dirección de correo electrónico. Esta versión de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa valores de encabezado MIME del identificador de contenido con el formato:  
+ Varias implementaciones MIME redujeron los requisitos para el valor encerrado entre "\<" y ">" es una dirección de correo electrónico y usar `absoluteURI` entre "\<", ">" Además de la dirección de correo electrónico. Esta versión de WCF usa los valores del encabezado MIME Content-ID del formulario:  
   
 ```  
 Content-ID: <http://tempuri.org/0>   
@@ -571,12 +557,12 @@ mail-address   =     id-left "@" id-right
   
 -   R4151: se puede optimizar cualquier elemento de información de elemento que contenga datos codificados en base64.  
   
--   B4152: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] optimiza los elementos de información de elemento que contienen los datos codificados en base64 y superan los 1.024 bytes de longitud.  
+-   B4152: WCF optimiza elementos de información que contienen datos codificados en base64 y superan los 1.024 bytes de longitud.  
   
- Un extremo de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configurado para utilizar MTOM siempre enviará los mensajes codificados por MTOM. Incluso cuando ninguna parte cumpla los criterios necesarios, el mensaje seguirá estando codificado por MTOM (serializado como un paquete MIME con una parte MIME única que contiene la envoltura SOAP).  
+ Un extremo WCF configurado para utilizar MTOM siempre enviará los mensajes codificados por MTOM. Incluso cuando ninguna parte cumpla los criterios necesarios, el mensaje seguirá estando codificado por MTOM (serializado como un paquete MIME con una parte MIME única que contiene la envoltura SOAP).  
   
 ### <a name="ws-policy-assertion-for-mtom"></a>Aserción de la WS-Policy para MTOM  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza la siguiente aserción de directivas para indicar el uso de MTOM por extremo:  
+ WCF usa la siguiente aserción de directiva para indicar el uso MTOM por extremo:  
   
 ```xml  
 <wsoma:OptimizedMimeSerialization ... />  
@@ -584,10 +570,10 @@ mail-address   =     id-left "@" id-right
   
 -   R4211: la aserción de directiva anterior tiene un asunto de directiva de punto de conexión y especifica que todos los mensajes enviados a y recibidos desde el punto de conexión se deben optimizar utilizando MTOM.  
   
--   B4212: cuando se configura para utilizar la optimización de MTOM, un extremo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] agrega una aserción de directiva MTOM a la directiva adjunta al `wsdl:binding` correspondiente.  
+-   B4212: Cuando se configura para utilizar la optimización de MTOM, un extremo WCF agrega una aserción de directiva MTOM a la directiva asociada al correspondiente `wsdl:binding`.  
   
 ### <a name="composition-with-ws-security"></a>Composición con WS-Security  
- MTOM es un mecanismo de codificación similar a `text/xml` y al XML binario de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. MTOM proporciona una composición natural con WS-Security y otros protocolos WS - *: un mensaje protegido mediante WS-Security puede optimizarse mediante MTOM.  
+ MTOM es un mecanismo de codificación que es similar a `text/xml` y XML binario de WCF. MTOM proporciona una composición natural con WS-Security y otros protocolos WS - *: un mensaje protegido mediante WS-Security puede optimizarse mediante MTOM.  
   
 ### <a name="examples"></a>Ejemplos  
   
@@ -625,7 +611,7 @@ Content-Type: application/octet-stream
 ```  
   
 #### <a name="wcf-secure-soap-12-message-encoded-using-mtom"></a>Mensaje de SOAP 1.2 WCF codificado mediante MTOM  
- En este ejemplo, un mensaje se codifica utilizando MTOM y SOAP 1.2 que está protegido mediante WS-Security. Las partes binarias identificadas para su codificación son el contenido de `BinarySecurityToken`, `CipherValue` de los `EncryptedData` que corresponden a la firma y al cuerpo cifrados. Observe que el `CipherValue` de la `EncryptedKey` no se identificó para la optimización mediante [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], porque su longitud es inferior a 1.024 bytes.  
+ En este ejemplo, un mensaje se codifica utilizando MTOM y SOAP 1.2 que está protegido mediante WS-Security. Las partes binarias identificadas para su codificación son el contenido de `BinarySecurityToken`, `CipherValue` de los `EncryptedData` que corresponden a la firma y al cuerpo cifrados. Tenga en cuenta que la `CipherValue` de la `EncryptedKey` no se ha identificado para la optimización de WCF, porque su longitud es inferior a 1.024 bytes.  
   
 ```  
 POST http://131.107.72.15/Mtom/service.svc/Soap12MtomSecureSignEncrypt HTTP/1.1  

@@ -2,11 +2,11 @@
 title: '&lt;message&gt; de &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: d3449735222d02857ee11ef6d20914c1e9a018a7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 39d5ce66537fd6c94895205ccc855d7fb631284e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;message&gt; de &lt;ws2007HttpBinding&gt;
 Define la configuración de seguridad de nivel de mensaje de la [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elemento.  
@@ -78,7 +78,7 @@ Define la configuración de seguridad de nivel de mensaje de la [ \<ws2007HttpBi
 |`None`|Esto permite al servicio interactuar con clientes anónimos. En el servicio, esto indica que el servicio no requiere ninguna credencial del cliente. En el cliente, esto indica que el cliente no proporciona ninguna credencial del cliente.|  
 |`Certificate`|Permite al servicio exigir la autenticación del cliente mediante un certificado. Si se usa el modo de seguridad de `message` y el atributo `negotiateServiceCredential` está establecido en `false`, se debe proporcionar al cliente el certificado de servicio.|  
 |`IssuedToken`|Especifica un token personalizado, normalmente emitido por un servicio de token de seguridad (STS).|  
-|`UserName`|Permite al servicio exigir la autenticación del cliente mediante una credencial `UserName`. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] no permite enviar un resumen de contraseña ni derivar claves mediante una contraseña, así como tampoco usar dichas claves para seguridad de mensajes. Como tal, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] garantiza que el transporte es seguro al usar credenciales `UserName`. Este modo de credencial produce o bien un intercambio interoperable o bien una negociación no interoperable basada en el atributo `negotiateServiceCredential`.|  
+|`UserName`|Permite al servicio exigir la autenticación del cliente mediante una credencial `UserName`. WCF no admite enviar un resumen de contraseña ni derivar claves mediante una contraseña y utilizar tales claves para seguridad de mensajes. Por lo tanto, WCF exige que el transporte sea seguro al usar `UserName` credenciales. Este modo de credencial produce o bien un intercambio interoperable o bien una negociación no interoperable basada en el atributo `negotiateServiceCredential`.|  
 |`Windows`|Permite a los intercambios de SOAP estar bajo el contexto autenticado de una credencial de `Windows`. Si el atributo `negotiateServiceCredential` está establecido en `true`, esto realiza una negociación de SSPI o Kerberos (una norma interoperable).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  

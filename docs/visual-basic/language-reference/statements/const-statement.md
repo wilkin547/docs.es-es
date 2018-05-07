@@ -1,25 +1,16 @@
 ---
-title: "Instrucción Const (Visual Basic)"
+title: Instrucción Const (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 720a465f1459b663a1fca2a48856f51762328459
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="const-statement-visual-basic"></a>Instrucción Const (Visual Basic)
 Declara y define una o varias constantes.  
@@ -42,19 +33,19 @@ Const constantlist
  Opcional. Utilícelo para volver a declarar y ocultar un elemento de programación en una clase base. Vea [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `constantlist`  
- Obligatorio. Lista de constantes que se declaran en esta instrucción.  
+ Requerido. Lista de constantes que se declaran en esta instrucción.  
   
  `constant` `[ ,` `constant` `... ]`  
   
  Cada `constant` tiene la sintaxis y las partes siguientes:  
   
- `constantname``[ As``datatype``] =``initializer`  
+ `constantname` `[ As` `datatype` `] =` `initializer`  
   
 |Parte|Descripción|  
 |----------|-----------------|  
-|`constantname`|Obligatorio. Nombre de la constante. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`constantname`|Requerido. Nombre de la constante. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`datatype`|Obligatorio si `Option Strict` es `On`. Tipo de datos de la constante.|  
-|`initializer`|Obligatorio. Expresión que se evalúa en tiempo de compilación y se asigna a la constante.|  
+|`initializer`|Requerido. Expresión que se evalúa en tiempo de compilación y se asigna a la constante.|  
   
 ## <a name="remarks"></a>Comentarios  
  Si tiene un valor que nunca cambia en la aplicación, puede definir una constante con nombre y utilizarlo en lugar de un valor literal. Un nombre es más fácil de recordar que un valor. Puede definir la constante sólo una vez y utilizar en muchos lugares en el código. Si en una versión posterior necesita volver a definir el valor, la `Const` instrucción es el único lugar necesita realizar un cambio.  
@@ -85,7 +76,7 @@ Const constantlist
   
 -   **Tipos diferentes.** Puede especificar los tipos de datos diferentes para distintas constantes mediante otro `As` cláusula para cada variable que se declara. Sin embargo, no puede declarar varias constantes para que sea del mismo tipo mediante una común `As` cláusula.  
   
--   **Inicialización.** Debe inicializar el valor de cada constante en `constantlist`. Utiliza `initializer` para proporcionar una expresión que se asignará a la constante. La expresión puede ser cualquier combinación de literales, otras constantes que ya se han definido y miembros de enumeración que ya se han definido. Puede utilizar operadores aritméticos y lógicos para combinar estos elementos.  
+-   **inicialización.** Debe inicializar el valor de cada constante en `constantlist`. Utiliza `initializer` para proporcionar una expresión que se asignará a la constante. La expresión puede ser cualquier combinación de literales, otras constantes que ya se han definido y miembros de enumeración que ya se han definido. Puede utilizar operadores aritméticos y lógicos para combinar estos elementos.  
   
      No se puede utilizar variables o funciones en `initializer`. Sin embargo, puede usar palabras clave de conversión como `CByte` y `CShort`. También puede usar `AscW` si se le llama con una constante `String` o `Char` argumento, puesto que puede evaluarse en tiempo de compilación.  
   

@@ -1,14 +1,6 @@
 ---
-title: "IHostTaskManager::GetCurrentTask (Método)"
-ms.custom: 
+title: IHostTaskManager::GetCurrentTask (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.GetCurrentTask
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f17bca49-90bd-4dee-a5e1-b9a57ea46f85
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b3ba8cbaac28df49a2df70492c1a292ee8cd287e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2420ddb5cf9be2cfb08f89d27d9aa277305e7ffb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagergetcurrenttask-method"></a>IHostTaskManager::GetCurrentTask (Método)
 Obtiene un puntero de interfaz a la tarea que se está ejecutando actualmente en el subproceso de sistema operativo desde el que se realiza esta llamada.  
@@ -54,13 +42,13 @@ HRESULT GetCurrentTask (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`GetCurrentTask`se devolvió correctamente.|  
+|S_OK|`GetCurrentTask` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|La llamada agotó el tiempo de espera.|  
 |HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra esperó en él.|  
 |E_FAIL|Se ha producido un error catastrófico desconocido. Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_INVALIDOPERATION|`GetCurrentTask`se llamó en un subproceso del sistema operativo fuera del control del host.|  
+|HOST_E_INVALIDOPERATION|`GetCurrentTask` se llamó en un subproceso del sistema operativo fuera del control del host.|  
   
 ## <a name="remarks"></a>Comentarios  
  El host también puede establecer el `pTask` parámetro en null para evitar que una tarea que no se ha iniciado entraran en CLR.  
@@ -72,7 +60,7 @@ HRESULT GetCurrentTask (
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICLRTask (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

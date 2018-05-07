@@ -1,27 +1,15 @@
 ---
-title: "Utilizar valores de configuración de aplicación y de usuario"
-ms.custom: 
+title: Utilizar valores de configuración de aplicación y de usuario
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - user settings [Windows Forms]
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 310fcad07ce7cf541312ff83e41d7e5fc2643898
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5231ecc9fb3898d60241ea8a53b509daced8a0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-application-settings-and-user-settings"></a>Utilizar valores de configuración de aplicación y de usuario
 A partir de .NET Framework 2.0, puede crear y obtener acceso a los valores que se conservan entre sesiones de ejecución de la aplicación. Estos valores se denominan *configuración*. Configuración puede representar las preferencias del usuario o información valiosa de la aplicación debe usar. Por ejemplo, podría crear una serie de valores que almacenan las preferencias del usuario para la combinación de colores de una aplicación. O bien, puede almacenar la cadena de conexión que especifica una base de datos que usa su aplicación. La configuración permite que conservar la información que es fundamental para la aplicación fuera del código así como crear perfiles que almacenen las preferencias de usuarios individuales.  

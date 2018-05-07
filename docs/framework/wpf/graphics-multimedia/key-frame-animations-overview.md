@@ -1,28 +1,16 @@
 ---
-title: "Información general sobre animaciones de fotogramas clave"
-ms.custom: 
+title: Información general sobre animaciones de fotogramas clave
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a18e0637b0fea7a1a960b157123da10819b4687
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="key-frame-animations-overview"></a>Información general sobre animaciones de fotogramas clave
 Este tema es una introducción a las animaciones de fotogramas clave. Las animaciones de fotogramas clave le permiten realizar animaciones con más de dos valores de destino y controlan el método de interpolación de una animación.  
@@ -290,7 +278,7 @@ Una curva spline clave con los puntos de control (0.25, 0.5) y (0.75, 1.0)
   
 6.  Resolver el <xref:System.Windows.Media.Animation.KeyTime> valores de fotogramas clave con tiempo clave no especificados mediante el uso de los fotogramas clave declarados más cercanos que se han resuelto <xref:System.Windows.Media.Animation.KeyTime> valores.  
   
-7.  Resolver restantes <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valores. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime> utilizar el <xref:System.Windows.Media.Animation.KeyTime> valores de los vecinos clave fotogramas para determinar su tiempo resuelto.  El objetivo es garantizar que la velocidad de la animación sea constante alrededor del tiempo de resolución de este fotograma clave.  
+7.  Resolver restantes <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valores. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Utilice la <xref:System.Windows.Media.Animation.KeyTime> valores de los vecinos clave fotogramas para determinar su tiempo resuelto.  El objetivo es garantizar que la velocidad de la animación sea constante alrededor del tiempo de resolución de este fotograma clave.  
   
 8.  Ordene los fotogramas clave en orden de tiempo resuelto (clave principal) y orden de declaración (clave secundaria), es decir, utilice una ordenación estable basado en el fotograma clave resuelto <xref:System.Windows.Media.Animation.KeyTime> valores.  
   

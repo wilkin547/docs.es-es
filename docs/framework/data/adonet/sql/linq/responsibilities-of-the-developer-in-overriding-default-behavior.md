@@ -1,33 +1,21 @@
 ---
 title: Responsabilidades del desarrollador al invalidar un comportamiento predeterminado
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7de5dbcad14ebfd253ba99f03a8d77e768f29941
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 90b8eedcc80c330a39efe97b6427beebeca913f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Responsabilidades del desarrollador al invalidar un comportamiento predeterminado
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]no exige los requisitos siguientes, pero el comportamiento es indefinido si no se cumplen estos requisitos.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no exige los requisitos siguientes, pero el comportamiento es indefinido si no se cumplen estos requisitos.  
   
--   El método de invalidación no debe llamar a <xref:System.Data.Linq.DataContext.SubmitChanges%2A> o <xref:System.Data.Linq.Table%601.Attach%2A>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]produce una excepción si se llaman a estos métodos en un método de invalidación.  
+-   El método de invalidación no debe llamar a <xref:System.Data.Linq.DataContext.SubmitChanges%2A> o <xref:System.Data.Linq.Table%601.Attach%2A>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] produce una excepción si se llaman a estos métodos en un método de invalidación.  
   
 -   No se pueden utilizar métodos de invalidación para iniciar, confirmar o detener una transacción. La operación <xref:System.Data.Linq.DataContext.SubmitChanges%2A> se realiza bajo una transacción. Una transacción anidada interna puede interferir con la transacción externa. Los métodos de invalidación de carga solo pueden iniciar una transacción después de determinar que la operación no se realiza en <xref:System.Transactions.Transaction>.  
   
--   Se espera que los métodos de invalidación sigan la asignación de simultaneidad optimista aplicable. Se espera que el método de invalidación inicie <xref:System.Data.Linq.ChangeConflictException> cuando se produzca un conflicto de simultaneidad optimista. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]detecta esta excepción para que se pueda procesar correctamente el <xref:System.Data.Linq.DataContext.SubmitChanges%2A> opción establecida en <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
+-   Se espera que los métodos de invalidación sigan la asignación de simultaneidad optimista aplicable. Se espera que el método de invalidación inicie <xref:System.Data.Linq.ChangeConflictException> cuando se produzca un conflicto de simultaneidad optimista. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] detecta esta excepción para que se pueda procesar correctamente el <xref:System.Data.Linq.DataContext.SubmitChanges%2A> opción establecida en <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
   
 -   Se espera que los métodos de invalidación de creación (`Insert`) y de actualización (`Update`) devuelvan los valores de las columnas generadas por la base de datos a los miembros de objeto correspondientes cuando la operación se complete.  
   

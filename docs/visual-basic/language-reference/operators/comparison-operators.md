@@ -1,11 +1,6 @@
 ---
-title: "Operadores de comparación (Visual Basic)"
+title: Operadores de comparación (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<>
 - vb.>=
@@ -35,29 +30,26 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa450f7978f46196663c7534b31597b04d80482a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e37f55b4c873c3dbea22a8edf0e5e2b58824720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-operators-visual-basic"></a>Operadores de comparación (Visual Basic)
 Éstos son los operadores de comparación definidos en Visual Basic.  
   
- `<`operador  
+ `<` Operador  
   
- `<=`operador  
+ `<=` Operador  
   
- `>`operador  
+ `>` Operador  
   
- `>=`operador  
+ `>=` Operador  
   
- `=`operador  
+ `=` Operador  
   
- `<>`operador  
+ `<>` Operador  
   
  [Is (operador)](../../../visual-basic/language-reference/operators/is-operator.md)  
   
@@ -77,34 +69,34 @@ result = string Like pattern
   
 ## <a name="parts"></a>Elementos  
  `result`  
- Obligatorio. Un `Boolean` valor que representa el resultado de la comparación.  
+ Requerido. Un `Boolean` valor que representa el resultado de la comparación.  
   
  `expression`  
- Obligatorio. Cualquier expresión.  
+ Requerido. Cualquier expresión.  
   
  `comparisonoperator`  
- Obligatorio. Cualquier operador de comparación relacional.  
+ Requerido. Cualquier operador de comparación relacional.  
   
  `object1`, `object2`  
  Requerido. Los nombres de objeto de referencia.  
   
  `string`  
- Obligatorio. Cualquier expresión `String`.  
+ Requerido. Cualquier expresión `String`.  
   
  `pattern`  
- Obligatorio. Cualquier `String` expresión o un intervalo de caracteres.  
+ Requerido. Cualquier `String` expresión o un intervalo de caracteres.  
   
 ## <a name="remarks"></a>Comentarios  
  En la tabla siguiente contiene una lista de los operadores de comparación relacionales y las condiciones que determinan si `result` es `True` o `False`.  
   
-|Operador|`True`If|`False`If|  
+|Operador|`True` If|`False` If|  
 |--------------|---------------|----------------|  
-|`<`(Menor que)|`expression1` < `expression2`|`expression1` >= `expression2`|  
-|`<=`(Menor o igual que)|`expression1` <= `expression2`|`expression1` > `expression2`|  
-|`>`(Mayor que)|`expression1` > `expression2`|`expression1` <= `expression2`|  
-|`>=`(Mayor o igual que)|`expression1` >= `expression2`|`expression1` < `expression2`|  
-|`=`(Igual a)|`expression1` = `expression2`|`expression1` <> `expression2`|  
-|`<>`(No es igual a)|`expression1` <> `expression2`|`expression1` = `expression2`|  
+|`<` (Menor que)|`expression1` < `expression2`|`expression1` >= `expression2`|  
+|`<=` (Menor o igual que)|`expression1` <= `expression2`|`expression1` > `expression2`|  
+|`>` (Mayor que)|`expression1` > `expression2`|`expression1` <= `expression2`|  
+|`>=` (Mayor o igual que)|`expression1` >= `expression2`|`expression1` < `expression2`|  
+|`=` (Igual a)|`expression1` = `expression2`|`expression1` <> `expression2`|  
+|`<>` (No es igual a)|`expression1` <> `expression2`|`expression1` = `expression2`|  
   
 > [!NOTE]
 >  El [= (operador)](../../../visual-basic/language-reference/operators/assignment-operator.md) también se utiliza como un operador de asignación.  
@@ -122,11 +114,11 @@ result = string Like pattern
 ## <a name="comparing-strings"></a>Comparar cadenas  
  Cuando se comparan cadenas, las expresiones de cadena se evalúan según su criterio de ordenación alfabética, que depende de la `Option Compare` configuración.  
   
- `Option Compare Binary`comparaciones en un criterio de ordenación que se deriva de las representaciones binarias internas de los caracteres de cadenas de bases de datos. El criterio de ordenación viene determinado por la página de código. En el ejemplo siguiente se muestra un criterio de ordenación binario típico.  
+ `Option Compare Binary` comparaciones en un criterio de ordenación que se deriva de las representaciones binarias internas de los caracteres de cadenas de bases de datos. El criterio de ordenación viene determinado por la página de código. En el ejemplo siguiente se muestra un criterio de ordenación binario típico.  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- `Option Compare Text`bases de datos de cadena comparaciones en un criterio de ordenación entre mayúsculas y minúsculas, textual determinado por la configuración regional de su aplicación. Al establecer `Option Compare Text` y ordenar los caracteres en el ejemplo anterior, se aplica el criterio de ordenación de texto siguiente:  
+ `Option Compare Text` bases de datos de cadena comparaciones en un criterio de ordenación entre mayúsculas y minúsculas, textual determinado por la configuración regional de su aplicación. Al establecer `Option Compare Text` y ordenar los caracteres en el ejemplo anterior, se aplica el criterio de ordenación de texto siguiente:  
   
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`  
   
@@ -138,10 +130,10 @@ result = string Like pattern
   
 |Si los operandos son|La comparación es|  
 |---------------------|-------------------|  
-|Ambos`String`|Ordenar la comparación según las características de ordenación de las cadenas.|  
+|Ambos `String`|Ordenar la comparación según las características de ordenación de las cadenas.|  
 |Ambas numéricas|Los objetos se convierten a `Double`, comparación numérica.|  
-|Uno numérico y otro`String`|El `String` se convierte en un `Double` y se realiza una comparación numérica. Si el `String` no se puede convertir a `Double`, un <xref:System.InvalidCastException> se produce.|  
-|Uno o ambos son tipos de referencia distintos de`String`|Se inicia una <xref:System.InvalidCastException>.|  
+|Uno numérico y otro `String`|El `String` se convierte en un `Double` y se realiza una comparación numérica. Si el `String` no se puede convertir a `Double`, un <xref:System.InvalidCastException> se produce.|  
+|Uno o ambos son tipos de referencia distintos de `String`|Se inicia una <xref:System.InvalidCastException>.|  
   
  Las comparaciones numéricas tratan `Nothing` como 0. Las comparaciones de cadena tratan `Nothing` como `""` (una cadena vacía).  
   

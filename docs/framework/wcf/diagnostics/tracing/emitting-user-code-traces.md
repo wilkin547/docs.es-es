@@ -1,27 +1,15 @@
 ---
-title: "Emisión de trazas del código de usuario"
-ms.custom: 
+title: Emisión de trazas del código de usuario
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="emitting-user-code-traces"></a>Emisión de trazas del código de usuario
-Además de permitir el seguimiento de traza en la configuración para recopilar los datos de instrumentación generados por [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], también se pueden emitir trazas mediante la programación del código de usuario. De esta manera, puede crear proactivamente datos de instrumentación que examinará más tarde con el fin de realizar un diagnóstico. En este tema se describe cómo hacerlo.  
+Además de habilitar el seguimiento en configuración para recopilar los datos de instrumentación generados por Windows Communication Foundation (WCF), también pueden emitir seguimientos mediante programación en código de usuario. De esta manera, puede crear proactivamente datos de instrumentación que examinará más tarde con el fin de realizar un diagnóstico. En este tema se describe cómo hacerlo.  
   
  Además, el [extender seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md) ejemplo incluye todo el código que se muestra en las secciones siguientes.  
   
@@ -134,17 +122,17 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  En el diagrama siguiente, también se observan las trazas de transferencia desde y hacia la actividad de cálculo, así como dos pares de trazas de inicio y detención por actividad de solicitud, una para el cliente y otra para el servicio (una por cada origen de seguimiento de traza).  
   
- ![Visor de seguimiento: Emisión de usuario &#45; código de seguimientos](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
+ ![Visor de seguimiento: Emisión usuario&#45;código seguimientos](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 Lista de actividades por hora de creación (panel izquierdo) y sus actividades anidadas (panel superior derecho)  
   
  Si el código del servicio inicia una excepción que da lugar a que el cliente también se inicie (por ejemplo, cuando el cliente no obtuvo la respuesta a su solicitud), los mensajes de error del servicio y del cliente se producen en la misma actividad para una correlación directa. En el siguiente diagrama, el servicio inicia una excepción que indica "el servicio rechaza procesar esta solicitud en el código de usuario." El cliente también inicia una excepción que indica "el servidor no pudo procesar la solicitud debido a un error interno."  
   
- ![Uso del Visor de seguimiento para emitir el usuario &#45; realiza un seguimiento de código](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
+ ![Uso del Visor de seguimiento para emitir usuario&#45;código seguimientos](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
 Los errores en los puntos de conexión de una solicitud determinada aparecen en la misma actividad, si se propagó el identificador de actividad de solicitud  
   
  Al hacer doble clic en la actividad de multiplicación, en el panel izquierdo, se muestra el siguiente gráfico con las trazas de la actividad de multiplicación de cada proceso implicado. Podemos ver que primero tuvo lugar una advertencia en el servicio (excepción iniciada), que estuvo seguida de advertencias y errores en el cliente al no poder procesarse la solicitud. Por lo tanto, podemos deducir la relación del error causal entre los puntos de conexión, y derivar la causa principal del error.  
   
- ![Uso del Visor de seguimiento para emitir el usuario &#45; realiza un seguimiento de código](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
+ ![Uso del Visor de seguimiento para emitir usuario&#45;código seguimientos](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Vista del gráfico de la correlación del error  
   
  Para obtener las trazas anteriores, se establece `ActivityTracing` para los orígenes del seguimiento de traza del usuario, y `propagateActivity=true` para el origen de seguimiento de traza `System.ServiceModel`. No se estableció `ActivityTracing` para el origen del seguimiento de traza `System.ServiceModel` para permitir habilitar el código de usuario a la propagación de actividad del código de usuario. (Cuando el seguimiento de traza de la actividad ServiceModel está activo, el Id. de actividad definido en el cliente no se propaga completamente al código de usuario del servicio. No obstante, las transferencias ponen en correlación las actividades del código de usuario del cliente y del servicio con las actividades [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] intermedias.)  

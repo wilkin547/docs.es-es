@@ -1,34 +1,20 @@
 ---
 title: Contratos de datos compatibles con el reenvío
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 554176d2b6ac0c1d5cbe817721c55d06f88457cc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 95a72d5d09538bc6f663f2376c7f8f928909cd57
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="forward-compatible-data-contracts"></a>Contratos de datos compatibles con el reenvío
-Una característica del sistema de contrato de datos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] es que los contratos pueden evolucionar con el tiempo sin causar interrupciones. Es decir, un cliente con una versión anterior de un contrato de datos puede comunicarse con un servicio con una versión más reciente del mismo contrato de datos, o un cliente con una versión más reciente de un contrato de datos puede comunicarse con una versión anterior del mismo contrato de datos. Para obtener más información, consulte [procedimientos recomendados: control de versiones de contrato de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+Una característica de la Windows Communication Foundation (WCF) es el sistema de contrato de datos que los contratos puede evolucionar con el tiempo sin causar interrupciones. Es decir, un cliente con una versión anterior de un contrato de datos puede comunicarse con un servicio con una versión más reciente del mismo contrato de datos, o un cliente con una versión más reciente de un contrato de datos puede comunicarse con una versión anterior del mismo contrato de datos. Para obtener más información, consulte [procedimientos recomendados: control de versiones de contrato de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
  Puede aplicar la mayoría de las características del control de versiones en la medida que se necesite cuando se crean las nuevas versiones de un contrato del dato existente. Sin embargo, una característica de control de versiones, *round-tripping*, debe estar integrada en el tipo de la primera versión para que funcione correctamente.  
   
@@ -48,7 +34,7 @@ Una característica del sistema de contrato de datos de [!INCLUDE[indigo1](../..
  [!code-csharp[C_DataContract#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#8)]
  [!code-vb[C_DataContract#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#8)]  
   
- Cuando la infraestructura de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] encuentra datos que no forman parte del contrato de datos original, los datos se almacenan en la propiedad y se conservan. No se procesa para nada más, salvo para el almacenamiento temporal. Si el objeto se devuelve a donde se originó, se devuelven también los datos originales (desconocidos). Por consiguiente, los datos han realizado un viaje de ida y vuelta (round trip) hasta y desde el punto de conexión de origen sin sufrir pérdidas. Tenga en cuenta, sin embargo, que si el punto de conexión de origen exigiera que se procesasen los datos, la expectativa no se cumple, y el punto de conexión debe detectar y adaptar el cambio de algún modo.  
+ Cuando la infraestructura de WCF encuentra datos que no forma parte del contrato de datos original, los datos se almacena en la propiedad y se conserva. No se procesa para nada más, salvo para el almacenamiento temporal. Si el objeto se devuelve a donde se originó, se devuelven también los datos originales (desconocidos). Por consiguiente, los datos han realizado un viaje de ida y vuelta (round trip) hasta y desde el punto de conexión de origen sin sufrir pérdidas. Tenga en cuenta, sin embargo, que si el punto de conexión de origen exigiera que se procesasen los datos, la expectativa no se cumple, y el punto de conexión debe detectar y adaptar el cambio de algún modo.  
   
  El tipo <xref:System.Runtime.Serialization.ExtensionDataObject> no contiene ningún método público ni propiedades. Por tanto, es imposible obtener acceso directo a los datos almacenados dentro de la propiedad <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>.  
   

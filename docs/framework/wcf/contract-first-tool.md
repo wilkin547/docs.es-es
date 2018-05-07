@@ -1,24 +1,12 @@
 ---
 title: Herramienta de contrato primero
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5079a4b45c7adf0cfd4d9ae1069379184422dc98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contract-first-tool"></a>Herramienta de contrato primero
 Los contratos de servicio deben crearse a menudo desde servicios existentes. En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], las clases de contrato de datos se pueden crear automáticamente a partir de servicios existentes mediante la herramienta de contrato primero. Para usar la herramienta de contrato primero, el archivo de definición de esquema XML (XSD) se debe descargar localmente; la herramienta no puede importar contratos de datos remotos a través de HTTP.  
@@ -72,11 +60,11 @@ Los contratos de servicio deben crearse a menudo desde servicios existentes. En 
 ## <a name="configuring-contract-first-options"></a>Configurar opciones de contrato primero  
  Las opciones de contrato primero se pueden configurar en el menú Propiedades de un proyecto de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Para habilitar el desarrollo de contrato primero, active el **habilitar XSD como lenguaje de definición de tipo** casilla de verificación en la página WCF de la ventana de propiedades del proyecto.  
   
- ![Opciones del proyecto WCF mostrando contrato &#45; primero](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
+ ![Contrato mostrando opciones del proyecto WCF&#45;primer](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   
  Para configurar propiedades avanzadas, haga clic en el botón Avanzadas.  
   
- ![Contrato avanzada &#45; Propiedades de primer](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
+ ![Advanced contrato&#45;propiedades primera](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")  
   
  Se pueden configurar las opciones avanzadas siguientes para la generación de código desde contratos. Los valores solo se pueden configurar para todos los archivos del proyecto; no se pueden configurar para archivos individuales en este momento.  
   

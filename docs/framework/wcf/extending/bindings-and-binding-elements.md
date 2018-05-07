@@ -1,28 +1,14 @@
 ---
 title: Enlaces y elementos de enlace
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 232d2d23ea88c834d2e28bae99cd2e001f6efac6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 32b8b9e1fbb3ae16f4dd81620658569a9408057b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-binding-elements"></a>Enlaces y elementos de enlace
 Los enlaces son colecciones de elementos de configuración especial, denominados *elementos de enlace*, que son evaluados por el runtime del servicio siempre que un cliente o el punto de conexión de servicio se está construyendo. El tipo y orden de los elementos de enlace dentro de un enlace determina la selección y el orden de apilamiento del protocolo y los canales de transporte en la pila de canales de un punto de conexión.  
@@ -32,7 +18,7 @@ Los enlaces son colecciones de elementos de configuración especial, denominados
  Un enlace debe contener exactamente un elemento de enlace del transporte. Cada elemento de enlace de transporte implica un elemento de enlace de codificación de mensajes predeterminado, que se puede invalidar agregando a lo sumo un elemento de enlace de codificación de mensajes al enlace. Además de los elementos de enlace de codificador y transporte, el enlace puede contener cualquier número de elementos de enlace protocolares que juntos implementan la funcionalidad necesaria para el servicio y envío de un mensaje SOAP de un punto de conexión a otro. Para obtener más información, consulte [utilizando enlaces para configurar servicios y clientes](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
 ## <a name="extending-bindings-and-binding-elements"></a>Extender enlaces y elementos de enlace  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] incluye enlaces proporcionados por el sistema que cubren una gama amplia de escenarios. (Para obtener más información, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md).) Puede que haya ocasiones, sin embargo, en las que necesite crear y utilizar un enlace que no esté incluido en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Los siguientes escenarios requieren la creación de un nuevo enlace.  
+ Windows Communication Foundation (WCF) incluye enlaces proporcionados por el sistema que abarcan una gran variedad de escenarios. (Para obtener más información, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md).) Puede que haya ocasiones, sin embargo, en las que necesite crear y utilizar un enlace que no esté incluido en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Los siguientes escenarios requieren la creación de un nuevo enlace.  
   
 -   Para utilizar un nuevo elemento de enlace (como un nuevo transporte, codificación o elemento de enlace protocolar), debe crear un nuevo enlace que incluya ese elemento de enlace. Por ejemplo, si agregase un `UdpTransportBindingElement` personalizado para transporte de UDP, necesitaría crear un nuevo enlace para utilizarlo. Para obtener información acerca de cómo realizar este comportamiento mediante la <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> los tipos, vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

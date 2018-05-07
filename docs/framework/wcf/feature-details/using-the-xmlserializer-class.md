@@ -1,37 +1,23 @@
 ---
 title: Utilización de la clase XmlSerializer
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5a628215848d46ec3fe24030dfb1dd55fc3383bf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 72b08a58b8ed62a5db2bb210e73357cb3b5dab8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-xmlserializer-class"></a>Utilización de la clase XmlSerializer
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] puede utilizar dos tecnologías de serialización diferentes para convertir los datos de su aplicación en XML transmitidos entre los clientes y servicios, un proceso llamado serialización.  
+Windows Communication Foundation (WCF) puede utilizar dos tecnologías de serialización diferentes para convertir los datos de su aplicación en XML transmitidos entre los clientes y servicios, un proceso llamado serialización.  
   
 ## <a name="datacontractserializer-as-the-default"></a>DataContractSerializer como predeterminado  
- De forma predeterminada [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza la clase <xref:System.Runtime.Serialization.DataContractSerializer> para serializar los tipos de datos. Este serializador admite los tipos siguientes:  
+ De forma predeterminada, WCF usa la <xref:System.Runtime.Serialization.DataContractSerializer> clase para serializar los tipos de datos. Este serializador admite los tipos siguientes:  
   
 -   Tipos primitivos (por ejemplo, enteros, cadenas y matrices de bytes), así como algunos tipos especiales, como <xref:System.Xml.XmlElement> y <xref:System.DateTime>, que se tratan como primitivos.  
   
@@ -45,17 +31,17 @@ ms.lasthandoff: 04/30/2018
   
  Muchos tipos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se incluyen en las dos últimas categorías y son, de este modo, serializables. Las matrices de tipos serializables también son serializables. Para obtener una lista completa, consulte [especificación de transferencia de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
- <xref:System.Runtime.Serialization.DataContractSerializer>, utilizado junto con los tipos de contrato de datos, es la manera recomendada de escribir nuevos servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Para obtener más información, consulte [usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ El <xref:System.Runtime.Serialization.DataContractSerializer>, utilizado junto con datos de tipos de contrato, es la forma recomendada de escribir nuevos servicios WCF. Para obtener más información, consulte [usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>Cuándo utilizar la clase XmlSerializer  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también admite la clase <xref:System.Xml.Serialization.XmlSerializer>. La clase <xref:System.Xml.Serialization.XmlSerializer> es no es exclusiva de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Es el mismo motor de serialización que usan los servicios Web de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. La clase <xref:System.Xml.Serialization.XmlSerializer> admite un conjunto mucho más estrecho de tipos que la clase <xref:System.Runtime.Serialization.DataContractSerializer>, pero permite mucho más control sobre el XML resultante y admite mucho más de la norma del lenguaje de definición de esquemas XML (XSD). Tampoco necesita ningún atributo declarativo en los tipos serializables. Para obtener más información, vea el tema serialización XML en el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] documentación. La clase <xref:System.Xml.Serialization.XmlSerializer> no admite tipos de contrato de datos.  
+ WCF también admite la <xref:System.Xml.Serialization.XmlSerializer> clase. La <xref:System.Xml.Serialization.XmlSerializer> clase no es única a WCF. Es el mismo motor de serialización que usan los servicios Web de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. La clase <xref:System.Xml.Serialization.XmlSerializer> admite un conjunto mucho más estrecho de tipos que la clase <xref:System.Runtime.Serialization.DataContractSerializer>, pero permite mucho más control sobre el XML resultante y admite mucho más de la norma del lenguaje de definición de esquemas XML (XSD). Tampoco necesita ningún atributo declarativo en los tipos serializables. Para obtener más información, vea el tema serialización XML en el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] documentación. La clase <xref:System.Xml.Serialization.XmlSerializer> no admite tipos de contrato de datos.  
   
  Cuando se usa Svcutil.exe o la **Agregar referencia de servicio** característica en Visual Studio para generar el código de cliente para un servicio de otro fabricante o para tener acceso a un esquema de otro fabricante, un serializador adecuado se selecciona automáticamente. Si el esquema no es compatible con <xref:System.Runtime.Serialization.DataContractSerializer>, se selecciona el <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="manually-switching-to-the-xmlserializer"></a>Intercambio manual a XmlSerializer  
  En algunas ocasiones, puede ser necesario intercambiar manualmente a <xref:System.Xml.Serialization.XmlSerializer>. Esto sucede, por ejemplo, en los casos siguientes:  
   
--   Al migrar una aplicación desde los servicios Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], usted puede querer reutilizar los tipos compatibles existentes, <xref:System.Xml.Serialization.XmlSerializer>- en lugar de crear nuevos tipos de contrato de datos.  
+-   Al migrar una aplicación de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] servicios Web WCF, puede que desee reutilizar los existentes, <xref:System.Xml.Serialization.XmlSerializer>-tipos de contrato de tipos compatibles en lugar de crear nuevos datos.  
   
 -   Cuando es importante el control preciso sobre el XML que aparece en los mensajes, pero no hay disponible un documento de lenguaje de descripción de servicios Web (WSDL), por ejemplo, al crear un servicio con tipos que tienen que cumplir un cierto esquema normalizado, publicado, no compatible con DataContractSerializer.  
   
@@ -82,7 +68,7 @@ ms.lasthandoff: 04/30/2018
   
  El serializador utilizado para el servicio es una parte integrante del contrato y no se puede cambiar seleccionando un enlace diferente o cambiando otra configuración.  
   
- Otras consideraciones de seguridad importantes se aplican a la clase <xref:System.Xml.Serialization.XmlSerializer>. En primer lugar, se recomienda encarecidamente firmar las aplicaciones [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que utiliza la clase <xref:System.Xml.Serialization.XmlSerializer> con una clave protegida contra la divulgación. Esta recomendación se aplica cuando se realiza un modificador manual a <xref:System.Xml.Serialization.XmlSerializer> y cuando se lleva a cabo un modificador automático (mediante Svcutil.exe, Agregar referencia de servicio o una herramienta similar). Esto es porque el <xref:System.Xml.Serialization.XmlSerializer> motor de serialización es compatible con la carga de *ensamblados de serialización pregenerados* siempre que estén firmadas con la misma clave que la aplicación. Una aplicación sin firma está totalmente desprotegida frente a la posibilidad de que un ensamblado malintencionado que coincida con el nombre esperado del ensamblado de serialización previamente generado se sitúe en la carpeta de aplicaciones o en la caché global de ensamblados. Por supuesto, antes de nada, un atacante debe tener acceso de escritura a una de estas dos ubicaciones para intentar realizar dicha acción.  
+ Otras consideraciones de seguridad importantes se aplican a la clase <xref:System.Xml.Serialization.XmlSerializer>. En primer lugar, se recomienda encarecidamente que cualquier aplicación WCF que usa el <xref:System.Xml.Serialization.XmlSerializer> clase está firmada con una clave protegida contra la divulgación de información. Esta recomendación se aplica cuando se realiza un modificador manual a <xref:System.Xml.Serialization.XmlSerializer> y cuando se lleva a cabo un modificador automático (mediante Svcutil.exe, Agregar referencia de servicio o una herramienta similar). Esto es porque el <xref:System.Xml.Serialization.XmlSerializer> motor de serialización es compatible con la carga de *ensamblados de serialización pregenerados* siempre que estén firmadas con la misma clave que la aplicación. Una aplicación sin firma está totalmente desprotegida frente a la posibilidad de que un ensamblado malintencionado que coincida con el nombre esperado del ensamblado de serialización previamente generado se sitúe en la carpeta de aplicaciones o en la caché global de ensamblados. Por supuesto, antes de nada, un atacante debe tener acceso de escritura a una de estas dos ubicaciones para intentar realizar dicha acción.  
   
  Otra amenaza que existe siempre que usted utiliza <xref:System.Xml.Serialization.XmlSerializer> está relacionada con el acceso de escritura a la carpeta temporal del sistema. El <xref:System.Xml.Serialization.XmlSerializer> motor de serialización crea y utiliza temporal *ensamblados de serialización* en esta carpeta. Debería ser consciente de que cualquier proceso con acceso de escritura a la carpeta temporal puede sobrescribir estos ensamblados de serialización con código malintencionado.  
   
@@ -100,11 +86,11 @@ ms.lasthandoff: 04/30/2018
  No se admite el atributo <xref:System.ServiceModel.MessageHeaderArrayAttribute> al utilizar <xref:System.Xml.Serialization.XmlSerializer>.  
   
 > [!NOTE]
->  En este caso, <xref:System.Xml.Serialization.XmlSerializer> inicia la siguiente excepción, que se libera antes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: "Los elementos declarados en el nivel superior de un esquema no pueden tener `maxOccurs` > 1. Debe proporcionar un elemento contenedor para 'más' usando `XmlArray` o `XmlArrayItem` en lugar de `XmlElementAttribute`, o usando el estilo de parámetro Wrapped".  
+>  En este caso, el <xref:System.Xml.Serialization.XmlSerializer> produce la excepción siguiente, que se libera antes de WCF: "no puede tener un elemento declarado en el nivel superior de un esquema `maxOccurs` > 1. Debe proporcionar un elemento contenedor para 'más' usando `XmlArray` o `XmlArrayItem` en lugar de `XmlElementAttribute`, o usando el estilo de parámetro Wrapped".  
 >   
 >  Si recibe esta excepción, investigue si se aplica esta situación.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no admite <xref:System.Xml.Serialization.SoapIncludeAttribute> ni atributos <xref:System.Xml.Serialization.XmlIncludeAttribute> en contratos de mensaje y contratos de operación; utilice, en su lugar, el atributo <xref:System.Runtime.Serialization.KnownTypeAttribute>.  
+ WCF no admite la <xref:System.Xml.Serialization.SoapIncludeAttribute> y <xref:System.Xml.Serialization.XmlIncludeAttribute> contratos de atributos en contratos de mensaje y la operación; utilice la <xref:System.Runtime.Serialization.KnownTypeAttribute> atributo en su lugar.  
   
 ## <a name="types-that-implement-the-ixmlserializable-interface"></a>Tipos que implementan la interfaz IXmlSerializable  
  `IXmlSerializable`admite totalmente los tipos que implementan la interfaz `DataContractSerializer`. El atributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> siempre se debería aplicar a estos tipos para controlar su esquema.  
@@ -125,7 +111,7 @@ ms.lasthandoff: 04/30/2018
   
  Al deserializar un miembro de datos de un tipo que implementa `IXmlSerializable`, y es un tipo de contenido como el que se ha definido previamente, el deserializador sitúa el lector de XML en el elemento contenedor para el miembro de datos y pasa el control al método <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>. El método debe leer todo el elemento, también las etiquetas de cierre e inicio. Asegúrese de que su código `ReadXml` controla el caso donde el elemento está vacío. Además, su implementación `ReadXml` no debería confiar en el elemento contenedor denominado de una manera determinada. El serializador elige el nombre y este puede variar.  
   
- Se permite asignar polimórficamente tipos de contenido `IXmlSerializable`, por ejemplo, a los miembros de datos de tipo <xref:System.Object>. También se permite que las instancias de tipo sean nulo. Finalmente, es posible utilizar los tipos `IXmlSerializable` con preservación de gráfico de objetos habilitado y con <xref:System.Runtime.Serialization.NetDataContractSerializer>. Todas estas características exigen al serializador [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que adjunte ciertos atributos en el elemento contenedor ("nil "y "type" en el espacio de nombres de instancia del Esquema XML e "Id", "Ref", "Type" y "Assembly" en un espacio de nombres específico de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]).  
+ Se permite asignar polimórficamente tipos de contenido `IXmlSerializable`, por ejemplo, a los miembros de datos de tipo <xref:System.Object>. También se permite que las instancias de tipo sean nulo. Finalmente, es posible utilizar los tipos `IXmlSerializable` con preservación de gráfico de objetos habilitado y con <xref:System.Runtime.Serialization.NetDataContractSerializer>. Todas estas características requieren el serializador WCF que adjunte ciertos atributos en el elemento contenedor ("nil" y "type" en el espacio de nombres de instancia del esquema XML y "Id", "Ref", "Type" y "Assembly" en un espacio de nombres específicas de WCF).  
   
 #### <a name="attributes-to-ignore-when-implementing-readxml"></a>Atributos que hay que omitir al Implementar ReadXml  
  Antes de pasar el control al código `ReadXml`, el deserializador examina el elemento XML, detecta estos atributos XML especiales y actúa sobre ellos. Por ejemplo, si "nil" es `true`, se deserializa un valor null y no se llama a `ReadXml`. Si se detecta polimorfismo, el contenido del elemento se deserializa como si fuera un tipo diferente. Se llama a la implementación del tipo asignado polimórficamente `ReadXml`. En cualquier caso, una implementación de `ReadXml` debería omitir estos atributos especiales ya que están controlados por el deserializador.  

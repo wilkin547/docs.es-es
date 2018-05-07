@@ -1,29 +1,17 @@
 ---
-title: "Utilizar lápiz para dibujar líneas y formas"
-ms.custom: 
+title: Utilizar lápiz para dibujar líneas y formas
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - pens
 - examples [Windows Forms], drawing lines and shapes
 - examples [Windows Forms], pens
 - drawing
 ms.assetid: 8a7542ab-3e9e-443f-8405-2d6053528e20
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 35f43316e2535aae6622ccf7952f649cdb92fc81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 667a5b13c5e8cb5d9a693d6f8512b254f130d606
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>Utilizar lápiz para dibujar líneas y formas
 Use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` objetos que se va a dibujar segmentos de línea, curvas y los contornos de formas. En esta sección, *línea* hace referencia a cualquiera de estos, a menos que indique que se trata únicamente de un segmento de línea. Establecer las propiedades de un lápiz para controlar el color, el ancho, la alineación y el estilo de las líneas dibujadas con ese lápiz.  

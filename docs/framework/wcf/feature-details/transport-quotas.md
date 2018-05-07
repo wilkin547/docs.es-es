@@ -1,36 +1,22 @@
 ---
 title: Cuotas de transporte
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6322bada88c6aef65b609f43fe92dda8dbab206
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-quotas"></a>Cuotas de transporte
 Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una conexión está utilizando recursos excesivos. Una cuota es un límite que evita una vez el uso de recursos adicionales una vez que se supera el valor de cuota. Las cuotas de transporte evitan los ataques de denegación de servicio (DoS) malintencionados o involuntarios.  
   
- Los transportes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] tienen valores de cuota predeterminados basados en una asignación conservadora de recursos. Estos valores predeterminados son convenientes para entornos de desarrollo y pequeños escenarios de instalación. Los administradores del servicio deberían revisar las cuotas de transporte y ajustar los valores de la cuota individual si una instalación se está quedando sin recursos o si se limitan las conexiones a pesar de la disponibilidad de recursos adicionales.  
+ Los transportes de Windows Communication Foundation (WCF) tienen valores de cuota predeterminados que se basan en una asignación conservadora de recursos. Estos valores predeterminados son convenientes para entornos de desarrollo y pequeños escenarios de instalación. Los administradores del servicio deberían revisar las cuotas de transporte y ajustar los valores de la cuota individual si una instalación se está quedando sin recursos o si se limitan las conexiones a pesar de la disponibilidad de recursos adicionales.  
   
 ## <a name="types-of-transport-quotas"></a>Tipos de cuotas de transporte  
- Los transportes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tienen tres tipos de cuotas:  
+ Transportes WCF tienen tres tipos de cuotas:  
   
 -   *Los tiempos de espera* mitigar de denegación de ataques de servicio que se basan en atar recursos durante un largo período de tiempo.  
   
@@ -39,7 +25,7 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
 -   *Límites de tamaño de la colección* delimitan el consumo de recursos que asignan memoria de manera indirecta o están en un suministro limitado.  
   
 ## <a name="transport-quota-descriptions"></a>Descripciones de la cuota de transporte  
- En esta sección, se describen las cuotas de transporte disponibles para los transportes estándar de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: HTTP(S) TCP/IP y canalizaciones con nombre. Los transportes personalizados pueden exponer sus propias cuotas configurables no incluidas en esta lista. Consulte la documentación de un transporte personalizado para averiguar sus cuotas.  
+ Esta sección describen las cuotas de transporte disponibles para el transporte de WCF estándar: HTTP (S), TCP/IP y canalizaciones con nombre. Los transportes personalizados pueden exponer sus propias cuotas configurables no incluidas en esta lista. Consulte la documentación de un transporte personalizado para averiguar sus cuotas.  
   
  Cada valor de cuota tiene un tipo, valor mínimo y valor predeterminado. Su tipo limita el valor máximo de una cuota. Debido a las limitaciones de los equipos, no siempre es posible establecer una cuota en su valor máximo.  
   

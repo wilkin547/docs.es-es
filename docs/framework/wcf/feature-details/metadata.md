@@ -1,31 +1,17 @@
 ---
 title: Metadatos
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8e4b0a724653f5366d6da96f511fac9e62f64816
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ec0ba750a692d6f2c397fd565d855ac97b59073
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metadata"></a>Metadatos
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona una infraestructura enriquecida para exportar, publicar, recuperar e importar metadatos de servicio. Los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usan metadatos para describir cómo interactuar con los extremos del servicio de forma que las herramientas, como Svcutil.exe, puedan generar automáticamente código de cliente para tener acceso al servicio.  
+Windows Communication Foundation (WCF) proporciona una infraestructura para exportar, publicar, recuperar e importar metadatos de servicio. Los servicios de WCF usan metadatos para describir cómo interactuar con los extremos del servicio para que las herramientas, como Svcutil.exe, puedan generar automáticamente código de cliente para tener acceso al servicio.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general de la arquitectura de metadatos](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
@@ -38,7 +24,7 @@ ms.lasthandoff: 12/22/2017
  Describe cómo exportar e importar metadatos.  
   
  [Publicación de metadatos](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- Describe cómo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] publica los metadatos.  
+ Describe cómo WCF publica los metadatos.  
   
  [Recuperación de metadatos](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  Describe las diferentes maneras de recuperar metadatos.  

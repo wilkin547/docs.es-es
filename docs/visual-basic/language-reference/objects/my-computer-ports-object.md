@@ -1,22 +1,15 @@
 ---
 title: My.Computer.Ports (Objeto)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Computer.Ports object
 - Ports object
 ms.assetid: 244ede4e-25b7-445b-9fd6-163550cce193
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 141462d42e7f97463644a03b7465c47019a3b7f2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a3d551c6591b16480bb8a8ae772a1cddbd59cbd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mycomputerports-object"></a>My.Computer.Ports (Objeto)
 Proporciona una propiedad y un método para obtener acceso a los puertos serie del equipo.  
@@ -30,9 +23,9 @@ Proporciona una propiedad y un método para obtener acceso a los puertos serie d
 >  También puede usar propiedades y métodos de la <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> clase acceso a los puertos serie del equipo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**<xref:Microsoft.VisualBasic.Devices>  
+ **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Clase:**<xref:Microsoft.VisualBasic.Devices.Ports>  
+ **Clase:** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
  **Ensamblado:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   

@@ -1,24 +1,12 @@
 ---
-title: "puntos de conexión estándar"
-ms.custom: 
+title: puntos de conexión estándar
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: de5f1c858b9018071489354441cab197bf5db6e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 395d910ddabc553cca47dcdd038f44b1470b3455
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-endpoints"></a>puntos de conexión estándar
 Los puntos de conexión se definen mediante la especificación de una dirección, un enlace y un contrato. Otros parámetros que se pueden establecer en un punto de conexión incluyen la configuración del comportamiento, los encabezados y los URI de escucha.  Para ciertos tipos de extremos, estos valores no cambian. Por ejemplo, los extremos de intercambio de metadatos siempre utilizan el contrato <xref:System.ServiceModel.Description.IMetadataExchange>. Otros extremos, como <xref:System.ServiceModel.Description.WebHttpEndpoint>, siempre requieren un comportamiento de extremo especificado. La utilidad de un punto de conexión se puede mejorar teniendo puntos de conexión con valores predeterminado para las propiedades de punto de conexión utilizadas normalmente. Los puntos de conexión estándar permiten a un desarrollador definir un punto de conexión que tenga los valores predeterminados o en el que una o más propiedades del punto de conexión no cambien.  Estos puntos de conexión le permiten utilizar un punto de conexión de este tipo sin tener que especificar información de tipo estático. Los extremos estándar se pueden usar para extremos de la aplicación y de la infraestructura.  

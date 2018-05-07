@@ -1,29 +1,17 @@
 ---
 title: Procesamiento de espacios en blanco en XAML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - East Asian characters [XAML Services]
 - XAML [XAML Services], whitespace processing
 - whitespace processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-caps.latest.revision: "20"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c382be7dabca90ef201fa24cfb79472955347eef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f7d7ca900955b8899322533f9d69338042d88ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whitespace-processing-in-xaml"></a>Procesamiento de espacios en blanco en XAML
 Las reglas de lenguaje de XAML indican que los espacios en blanco significativos debe ser procesados por una implementación de procesador [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] . En este tema se documentan estas reglas del lenguaje XAML. También se documenta el control adicional del espacio en blanco que está definido por la implementación de [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] del procesador XAML y el sistema de escritura XAML para la serialización.  
@@ -70,7 +58,7 @@ Las reglas de lenguaje de XAML indican que los espacios en blanco significativos
   
 <a name="east_asian_characters"></a>   
 ## <a name="east-asian-characters"></a>Caracteres de Asia oriental  
- Los "caracteres de Asia Oriental" se definen como un conjunto de intervalos de caracteres de [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] : de U+20000 a U+2FFFD y de U+30000 a U+3FFFD. En ocasiones, este subconjunto también se denomina "ideogramas CJK". Para más información, vea [http://www.unicode.org](http://www.unicode.org/).  
+ Los "caracteres de Asia Oriental" se definen como un conjunto de intervalos de caracteres de [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] : de U+20000 a U+2FFFD y de U+30000 a U+3FFFD. En ocasiones, este subconjunto también se denomina "ideogramas CJK". Para obtener más información, vea [http://www.unicode.org](http://www.unicode.org/).  
   
 <a name="whitespace_and_text_content_models"></a>   
 ## <a name="whitespace-and-text-content-models"></a>Modelos de contenido de texto y de espacio en blanco  

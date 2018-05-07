@@ -1,27 +1,15 @@
 ---
-title: "Cómo: Copiar controles entre formularios Windows Forms"
-ms.custom: 
+title: 'Cómo: Copiar controles entre formularios Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms controls, copying
 - controls [Windows Forms], copying
 ms.assetid: 106c1eb2-1fba-4f69-b2ec-9ea3fa182f1e
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47cae789fb816286a9a22b87a2a86638c7876bda
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da8ff1ae5abb65683e4f11bed5de328dc37c57a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a>Cómo: Copiar controles entre formularios Windows Forms
 Un control se puede copiar en la misma forma, en otro formulario dentro del proyecto o en el Portapapeles para su uso en otras soluciones.  

@@ -1,30 +1,18 @@
 ---
-title: "Cómo: Configurar un servicio de Windows Communication Foundation para utilizar puertos compartidos"
-ms.custom: 
+title: 'Cómo: Configurar un servicio de Windows Communication Foundation para utilizar puertos compartidos'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c0086e145ca2aab325764467742a4ff2e6e3c0b5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0a3aca2bac546c9142137afc025133bc1154ff90
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Cómo: Configurar un servicio de Windows Communication Foundation para utilizar puertos compartidos
-La manera más fácil de utilizar la compartición de puertos de net.tcp:// en su aplicación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] es exponer un servicio mediante <xref:System.ServiceModel.NetTcpBinding>.  
+La manera más fácil de usar puertos de net.tcp:// en su aplicación de Windows Communication Foundation (WCF) es exponer un servicio mediante el <xref:System.ServiceModel.NetTcpBinding>.  
   
  Este enlace proporciona una propiedad <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> que controla si la compartición de puertos de net.tcp:// está habilitada para el servicio que se está configurando con este enlace.  
   

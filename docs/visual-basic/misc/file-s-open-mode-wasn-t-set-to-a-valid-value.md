@@ -1,20 +1,14 @@
 ---
-title: "Archivo &#39; ha de modo de apertura de s &#39; t establecida en un valor válido"
+title: Archivo&#39;s abrir modo ha&#39;t establecida en un valor válido
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 969541f6-9ff6-4804-ba61-0d17370060ef
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0c7c20f9b624059fa8161923f754cd2a89485499
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: be5c44def071577a82a648ee36935b69e5f00f2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>Archivo &#39; ha de modo de apertura de s &#39; t establecida en un valor válido
+# <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>Archivo&#39;s abrir modo ha&#39;t establecida en un valor válido
 El valor proporcionado para el modo de apertura del archivo no era válido. En la siguiente tabla se muestran los valores válidos para la enumeración <xref:Microsoft.VisualBasic.OpenMode> .  
   
 |Valor|Modo|  

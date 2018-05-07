@@ -1,10 +1,6 @@
 ---
 title: Tipos que admiten valores null (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Nullable
 helpviewer_keywords:
@@ -14,13 +10,11 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 16df20be89a88aa68e06692594c208cee1ab2dea
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bb44ad85347b494b63dde964b2b407d8f038f2b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nullable-value-types-visual-basic"></a>Tipos que admiten valores null (Visual Basic)
 A veces se trabaja con un tipo de valor que no tiene un valor definido en determinadas circunstancias. Por ejemplo, podría tener un campo en una base de datos distinguir entre tener un valor asignado que es significativo y no tener un valor asignado. Tipos de valor se pueden extender para tomar sus valores normales o un valor null. Este tipo de extensión se llama un *tipo que acepta valores NULL*.  

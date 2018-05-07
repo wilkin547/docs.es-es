@@ -1,26 +1,12 @@
 ---
 title: 'Cómo: Crear un servicio transaccional'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9e39ecd346b5d5fb4113fd17abe9bde715a12aa4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d59c0b96b766f0692c7b84a02deed55e32dc655a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>Cómo: Crear un servicio transaccional
 Este ejemplo muestra varios aspectos sobre la creación de un servicio transaccional y el uso de una transacción iniciada por el cliente para coordinar las operaciones de servicio.  
@@ -104,7 +90,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
   
 ### <a name="supporting-multiple-transaction-protocols"></a>Compatibilidad de varios protocolos de transacción  
   
-1.  Para un rendimiento óptimo, debería utilizar el protocolo OleTransactions para los escenarios que implican un cliente y servicio escritos con [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Sin embargo, el protocolo WS-AtomicTransaction (WS-AT) es útil para los escenarios cuando se requiere la interoperabilidad con pilas de protocolo de otro fabricante. Puede configurar los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para aceptar ambos protocolos al proporcionar varios extremos con los enlaces adecuados específicos del protocolo, tal y como se muestra en la configuración de muestra siguiente.  
+1.  Para obtener un rendimiento óptimo, debe usar el protocolo OleTransactions para los escenarios que implican un cliente y servicio escritos con Windows Communication Foundation (WCF). Sin embargo, el protocolo WS-AtomicTransaction (WS-AT) es útil para los escenarios cuando se requiere la interoperabilidad con pilas de protocolo de otro fabricante. Puede configurar los servicios WCF para aceptar ambos protocolos al proporcionar varios puntos de conexión con los enlaces adecuados específicos del protocolo, tal como se muestra en el siguiente ejemplo de configuración.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -139,7 +125,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
   
 ### <a name="controlling-the-completion-of-a-transaction"></a>Control de la realización de una transacción  
   
-1.  De forma predeterminada, las operaciones [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] completan automáticamente las transacciones si no se produce ninguna excepción no controlada. Puede modificar este comportamiento mediante la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> y el método <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>. Cuando es necesario que se produzca una operación dentro de la misma transacción como otra operación (por ejemplo, una operación de débito y crédito), puede deshabilitar el comportamiento de autocompletar definiendo la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> en `false` tal y como se muestra en el ejemplo de operación `Debit` siguiente. La transacción que la operación `Debit` utiliza no se completa hasta que se llama a un método con la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> definida en `true`, tal y como se muestra en la operación `Credit1` o cuando se llama al método <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> para marcar explícitamente la transacción como completada, tal y como se muestra en la operación `Credit2`. Tenga en cuenta que las dos operaciones de crédito se muestran para fines informativos, y que una operación de crédito única sería más típica.  
+1.  De forma predeterminada, las operaciones de WCF completan automáticamente las transacciones si no se produce ninguna excepción no controlada. Puede modificar este comportamiento mediante la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> y el método <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>. Cuando es necesario que se produzca una operación dentro de la misma transacción como otra operación (por ejemplo, una operación de débito y crédito), puede deshabilitar el comportamiento de autocompletar definiendo la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> en `false` tal y como se muestra en el ejemplo de operación `Debit` siguiente. La transacción que la operación `Debit` utiliza no se completa hasta que se llama a un método con la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> definida en `true`, tal y como se muestra en la operación `Credit1` o cuando se llama al método <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> para marcar explícitamente la transacción como completada, tal y como se muestra en la operación `Credit2`. Tenga en cuenta que las dos operaciones de crédito se muestran para fines informativos, y que una operación de crédito única sería más típica.  
   
     ```  
     [ServiceBehavior]  
@@ -195,7 +181,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>Control de la duración de una instancia de servicio transaccional  
   
-1.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> para especificar si se libera la instancia del servicio subyacente cuando se completa una transacción. Puesto que el valor predeterminado es `true`, a menos que se configure lo contrario, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] muestra un comportamiento de activación "Just-In-Time" eficaz y predecible. Las llamadas a un servicio en una transacción subsiguiente aseguran una nueva instancia del servicio sin restos del estado de la transacción anterior. Aunque esto resulta a menudo útil, a veces puede querer mantener el estado dentro de la instancia del servicio más allá de la realización de la transacción. Algunos ejemplos de ello serían cuándo resulta costoso recuperar o volver a constituir el estado necesario o los controladores a los recursos. Puede hacer esto al definir la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> en `false`. Con ese valor, la instancia y cualquier estado asociado estarán disponibles en llamadas subsiguientes. Al utilizar esto, proporcione la consideración adecuada a cuándo y cómo se borrarán y completarán las transacciones y el estado. El ejemplo siguiente muestra cómo hacer esto manteniendo la instancia con la variable `runningTotal`.  
+1.  WCF usa la <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> propiedad para especificar si se libera la instancia del servicio subyacente cuando se completa una transacción. Puesto que el valor predeterminado es `true`, a menos que configure lo contrario, el comportamiento de activación de WCF tenga un eficaz y predecible "just-in-time". Las llamadas a un servicio en una transacción subsiguiente aseguran una nueva instancia del servicio sin restos del estado de la transacción anterior. Aunque esto resulta a menudo útil, a veces puede querer mantener el estado dentro de la instancia del servicio más allá de la realización de la transacción. Algunos ejemplos de ello serían cuándo resulta costoso recuperar o volver a constituir el estado necesario o los controladores a los recursos. Puede hacer esto al definir la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> en `false`. Con ese valor, la instancia y cualquier estado asociado estarán disponibles en llamadas subsiguientes. Al utilizar esto, proporcione la consideración adecuada a cuándo y cómo se borrarán y completarán las transacciones y el estado. El ejemplo siguiente muestra cómo hacer esto manteniendo la instancia con la variable `runningTotal`.  
   
     ```  
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  

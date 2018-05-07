@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Deshabilitar páginas de ficha"
-ms.custom: 
+title: 'Cómo: Deshabilitar páginas de ficha'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2db19d402f32bd43bb7053403428e8055755d017
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94d8522a71fcd565ae8f994d73ffe4c46fcf7ce3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-disable-tab-pages"></a>Cómo: Deshabilitar páginas de ficha
 En algunas ocasiones, deseará restringir el acceso a datos que están disponibles dentro de la aplicación de formularios Windows Forms. Un ejemplo de esto podría ser cuando tiene datos que se muestran en las fichas de un control de pestaña; los administradores podrían tener información sobre una página de ficha que desee para impedir que invitados o los usuarios de nivel inferior.  

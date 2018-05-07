@@ -1,31 +1,19 @@
 ---
-title: "Información de privacidad de Windows Communication Foundation"
-ms.custom: 
+title: Información de privacidad de Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, privacy information
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: e9c4130cd4680d4cd68ca8c6ba36c38b5d065f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Información de privacidad de Windows Communication Foundation
-Microsoft se compromete a proteger la privacidad de usuarios finales. Al compilar una aplicación usando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], versión 3.0, su aplicación puede afectar a la privacidad de sus usuarios finales. Por ejemplo, su aplicación puede recoger explícitamente información de contacto del usuario o puede solicitar o enviar información a través de Internet a su sitio web. Si incrusta la tecnología de Microsoft en su aplicación, esa tecnología puede tener su propio comportamiento que podría afectar a la privacidad. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] no envía ninguna información a Microsoft de su aplicación a menos que usted o el usuario final elija enviarla.  
+Microsoft se compromete a proteger la privacidad de usuarios finales. Cuando se compila una aplicación con Windows Communication Foundation (WCF), versión 3.0, la aplicación puede afectar la privacidad de sus usuarios finales. Por ejemplo, su aplicación puede recoger explícitamente información de contacto del usuario o puede solicitar o enviar información a través de Internet a su sitio web. Si incrusta la tecnología de Microsoft en su aplicación, esa tecnología puede tener su propio comportamiento que podría afectar a la privacidad. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] no envía ninguna información a Microsoft de su aplicación a menos que usted o el usuario final elija enviarla.  
   
 ## <a name="wcf-in-brief"></a>WCF en breve  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] es un marco de mensajería distribuido mediante el marco de Microsoft .NET que permite a los programadores compilar las aplicaciones distribuidas. Los mensajes comunicados entre dos aplicaciones contienen encabezado e información del cuerpo.  
@@ -138,13 +126,13 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  Claves que se quitan:  
   
- \-Para xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" y xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- Para xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" y xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Para xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" y xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -152,15 +140,15 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  Datos personales posibles que se quitan:  
   
- \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Para xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" y xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
  wsse:BinarySecurityToken  
   
- \-Para xmlns = "urn: oasis: nombres: tc: SAML:1.0:assertion" se quitan los elementos en negrita (abajo):  
+ \- Para xmlns = "urn: oasis: nombres: tc: SAML:1.0:assertion" se quitan los elementos en negrita (abajo):  
   
- \<Aserción  
+ \<aserción  
   
  MajorVersion="1"  
   
@@ -174,13 +162,13 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  >  
   
- \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
+ \<Las condiciones NotBefore = "[fecha y hora]" NotOnOrAfter = "[fecha y hora]" >  
   
- \<AudienceRestrictionCondition>  
+ \<AudienceRestrictionCondition >  
   
- \<Audience>[uri]\</Audience>+  
+ \<Audiencia > [uri]\</Audience > +  
   
- \</AudienceRestrictionCondition>*  
+ \</ AudienceRestrictionCondition > *  
   
  \<DoNotCacheCondition / > *  
   
@@ -192,23 +180,23 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  \<¿/ Condiciones >?  
   
- \<Advice>  
+ \<Consejos >  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>*  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > *  
   
- \<Assertion>[assertion]\</Assertion>*  
+ \<Aserción > [aserción]\</Assertion > *  
   
  [any]*  
   
- \</Advice>?  
+ \<¿/ Notificación de >?  
   
  <\!--Tipos base abstractos  
   
  \<Instrucción / > *  
   
- \<SubjectStatement>  
+ \<SubjectStatement >  
   
- \<Subject>  
+ \<Asunto >  
   
  `<NameIdentifier`  
   
@@ -224,17 +212,17 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  \<SubjectConfirmation >  
   
- \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
+ \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
   
- \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
+ \<¿SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
   
- \<ds:KeyInfo>...\</ds:KeyInfo>?  
+ \<DS:KeyInfo >... ¿\</ds:KeyInfo >?  
   
  \<¿/ SubjectConfirmation >?  
   
  \</ Asunto >  
   
- \</SubjectStatement>*  
+ \</ SubjectStatement > *  
   
  -->  
   
@@ -268,7 +256,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  \</ AuthenticationStatement > *  
   
- \<AttributeStatement>  
+ \<AttributeStatement >  
   
  [Subject]  
   
@@ -282,15 +270,15 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</Attribute>+  
+ \</ Atributo > +  
   
- \</AttributeStatement>*  
+ \</ AttributeStatement > *  
   
  \<AuthorizationDecisionStatement  
   
  Resource =" [uri]"  
   
- Decision="[Permit&#124;Deny&#124;Indeterminate]"  
+ Decisión = "[permitir&#124;denegar&#124;indeterminado]"  
   
  >  
   
@@ -298,15 +286,15 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  \<Acción Namespace = "[uri]" > [cadena] \< /Action > +  
   
- \<Evidence>  
+ \<Evidencia >  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>+  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > +  
   
- \<Assertion>[assertion]\</Assertion>+  
+ \<Aserción > [aserción]\</Assertion > +  
   
- \</Evidence>?  
+ \<¿/ Evidencia >?  
   
- \</AuthorizationDecisionStatement>*  
+ \</ AuthorizationDecisionStatement > *  
   
  \</ Aserción >  
   
@@ -315,7 +303,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  Para los siguientes espacios de nombres:  
   
- xmlns:wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" y xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust (por ejemplo, si no hay ninguna acción disponible)"  
+ xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" y xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust" (por ejemplo, si ninguna acción disponible)  
   
  La información se quita de estos elementos del cuerpo, lo cual implica intercambio de claves:  
   

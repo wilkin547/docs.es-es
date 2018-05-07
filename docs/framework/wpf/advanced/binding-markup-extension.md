@@ -1,31 +1,17 @@
 ---
-title: "Enlazar extensión de marcado"
-ms.custom: 
+title: Enlazar extensión de marcado
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Binding
 helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cc6a0616c6b462ffe6aca0a9adf27ac2ac7b7828
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fc860f52f8fde2aed3cae224c05bbcf08b864d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binding-markup-extension"></a>Enlazar extensión de marcado
 Pasa un valor de propiedad para que sea un valor enlazado a datos, creación de un objeto de expresión intermedio e interpretar el contexto de datos que se aplica al elemento y su enlace en tiempo de ejecución.  
@@ -125,7 +111,7 @@ Pasa un valor de propiedad para que sea un valor enlazado a datos, creación de 
  Descripción del enlace de datos en un nivel básico no se incluye en este tema. Vea [información general de enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Data.MultiBinding>y <xref:System.Windows.Data.PriorityBinding> no admiten un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sintaxis de extensión. En su lugar, use los elementos de propiedad. Consulte los temas de referencia para <xref:System.Windows.Data.MultiBinding> y <xref:System.Windows.Data.PriorityBinding>.  
+>  <xref:System.Windows.Data.MultiBinding> y <xref:System.Windows.Data.PriorityBinding> no admiten un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sintaxis de extensión. En su lugar, use los elementos de propiedad. Consulte los temas de referencia para <xref:System.Windows.Data.MultiBinding> y <xref:System.Windows.Data.PriorityBinding>.  
   
  Valores booleanos para XAML distinguen mayúsculas de minúsculas. Por ejemplo, puede especificar `{Binding NotifyOnValidationError=true}` o `{Binding NotifyOnValidationError=True}`.  
   
@@ -133,7 +119,7 @@ Pasa un valor de propiedad para que sea un valor enlazado a datos, creación de 
   
  `Binding` es una extensión de marcado. Las extensiones de marcado se suelen implementar cuando hay un requisito que los valores de atributo sean valores literales o controlador de nombres de escape y el requisito es de índole más global que los convertidores de tipos con atributos en determinados tipos o propiedades. Todas las extensiones de marcado de XAML utilizan la `{` y `}` caracteres en su sintaxis de atributo, que es la convención que permite que un procesador XAML reconozca que una extensión de marcado debe procesar el contenido de la cadena. Para más información, vea [Extensiones de marcado y XAML de WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
- `Binding`es una extensión de marcado típicos en los que la <xref:System.Windows.Data.Binding> clase que implementa la funcionalidad de extensión para la implementación de XAML de WPF también implementa otros muchos métodos y propiedades que no están relacionadas con XAML. Se pretenden hacer que los demás miembros <xref:System.Windows.Data.Binding> una clase más versátil e independiente que puede tener muchos escenarios de enlace de datos además de actuar como una extensión de marcado XAML.  
+ `Binding` es una extensión de marcado típicos en los que la <xref:System.Windows.Data.Binding> clase que implementa la funcionalidad de extensión para la implementación de XAML de WPF también implementa otros muchos métodos y propiedades que no están relacionadas con XAML. Se pretenden hacer que los demás miembros <xref:System.Windows.Data.Binding> una clase más versátil e independiente que puede tener muchos escenarios de enlace de datos además de actuar como una extensión de marcado XAML.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Data.Binding>  

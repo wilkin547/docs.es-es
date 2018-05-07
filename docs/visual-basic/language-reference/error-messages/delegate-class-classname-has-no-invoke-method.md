@@ -1,28 +1,19 @@
 ---
-title: "Clase de delegado &#39; &lt;classname&gt;&#39; no tiene ningún método Invoke y, por lo que una expresión de este tipo no puede ser el destino de una llamada a método"
+title: Clase delegada &#39; &lt;classname&gt; &#39; no tiene ningún método Invoke y, por lo que una expresión de este tipo no puede ser el destino de una llamada a método
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30220
 - bc30220
 helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 55d0e2442807e25737d90ac4b45a59b9d3e73037
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cc1abba46224772e733780800dd104dfc7ebe9ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="delegate-class-39ltclassnamegt39-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Clase de delegado &#39; &lt;classname&gt;&#39; no tiene ningún método Invoke y, por lo que una expresión de este tipo no puede ser el destino de una llamada a método
+# <a name="delegate-class-39ltclassnamegt39-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Clase delegada &#39; &lt;classname&gt; &#39; no tiene ningún método Invoke y, por lo que una expresión de este tipo no puede ser el destino de una llamada a método
 Una llamada a `Invoke` a través de un delegado error porque `Invoke` no está implementada en la clase de delegado.  
   
  **Id. de error:** BC30220  

@@ -1,31 +1,17 @@
 ---
-title: "Información general sobre el control RichTextBox (formularios Windows Forms)"
-ms.custom: 
+title: Información general sobre el control RichTextBox (formularios Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - RichTextBox
 helpviewer_keywords:
 - RichTextBox control [Windows Forms], about RichTextBox control
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6ed04ab478cc6c20d88ec97934f5e45528558c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53c4cd41cf203886c93291debc7bca4f395f9698
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>Información general sobre el control RichTextBox (formularios Windows Forms)
 Los formularios Windows Forms <xref:System.Windows.Forms.RichTextBox> control se utiliza para mostrar, escribir y manipular texto con formato. El <xref:System.Windows.Forms.RichTextBox> control hace todo lo que el <xref:System.Windows.Forms.TextBox> no de control, pero también puede mostrar las fuentes, colores y vínculos; Cargar texto e imágenes incrustadas desde un archivo; y buscar caracteres especificados. El <xref:System.Windows.Forms.RichTextBox> control se utiliza normalmente para manipular texto y proporcionar funciones de presentación similares a las aplicaciones de procesamiento de textos como Microsoft Word. Como el <xref:System.Windows.Forms.TextBox> (control), el <xref:System.Windows.Forms.RichTextBox> control puede mostrar barras de desplazamiento; pero a diferencia del <xref:System.Windows.Forms.TextBox> (control), su valor predeterminado es mostrar las barras de desplazamiento horizontal y vertical según sea necesario y tiene una configuración adicional de la barra de desplazamiento.  

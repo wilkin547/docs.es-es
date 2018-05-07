@@ -1,27 +1,15 @@
 ---
-title: "Cómo: Importar aserciones de directivas personalizadas"
-ms.custom: 
+title: 'Cómo: Importar aserciones de directivas personalizadas'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 916f5b820ce9e1c30c13a9834548c83e32bc3579
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6155296e264bb3ae90aac2ee6b83797e632962e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Cómo: Importar aserciones de directivas personalizadas
 Las aserciones de directivas describen las funciones y requisitos de un punto de conexión de servicio.  Las aplicaciones cliente pueden utilizar aserciones de directivas en metadatos del servicio para configurar el enlace de cliente o para personalizar el contrato de servicio de un extremo de servicio.  
@@ -51,7 +39,7 @@ Las aserciones de directivas describen las funciones y requisitos de un punto de
   
 3.  Realice la personalización para el enlace o contrato que admite la función o el requisito especificó por la aserción de directiva. Normalmente las aserciones indican que un enlace requiere una configuración determinada o un elemento de enlace concreto. Realice estas modificaciones obteniendo acceso a la propiedad <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType>. Otras aserciones requieren que modifique el contrato.  Puede obtener acceso y modificar el contrato mediante la propiedad <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType>.  Observe que su importador de directivas se puede llamar varias veces para el mismo enlace y contrato, pero para alternativas de directivas diferentes si no se importa correctamente una alternativa de directivas. Su código debería ser resistente a este comportamiento.  
   
-4.  Elimine la aserción de directiva personalizada de la colección de aserciones. Si no elimina la aserción, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supone que la importación de la directiva no se realizó correctamente y no importa el enlace asociado. Si usó el método <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> para ubicar la aserción de directivas personalizadas y eliminarla de la colección en un paso no tiene que realizar este paso.  
+4.  Elimine la aserción de directiva personalizada de la colección de aserciones. Si no quita la aserción de Windows Communication Foundation (WCF) se da por supuesto que la importación de la directiva fue incorrecta y no importó el enlace asociado. Si usó el método <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> para ubicar la aserción de directivas personalizadas y eliminarla de la colección en un paso no tiene que realizar este paso.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Para insertar el importador de directivas personalizadas en el sistema de metadatos utilizando un archivo de configuración  
   

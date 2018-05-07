@@ -1,12 +1,6 @@
 ---
-title: "Error (Instrucción)"
+title: Error (Instrucción)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.error
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3cd3245fd3e9e62b1b6443e9787c97808a0d179d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3ecfe18392de15dc937d90565b49641415dd7e0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="error-statement"></a>Error (Instrucción)
 Simula la aparición de un error.  
@@ -36,14 +27,14 @@ Error errornumber
   
 ## <a name="parts"></a>Elementos  
  `errornumber`  
- Obligatorio. Puede ser cualquier número de error válido.  
+ Requerido. Puede ser cualquier número de error válido.  
   
 ## <a name="remarks"></a>Comentarios  
  El `Error` instrucción se admite por compatibilidad con versiones anteriores. En el nuevo código, especialmente al crear objetos, utilice la `Err` del objeto `Raise` método para generar errores en tiempo de ejecución.  
   
  Si `errornumber` se define, el `Error` instrucción llama al controlador de errores después de las propiedades de la `Err` objeto se asignan los valores predeterminados siguientes:  
   
-|Propiedad|Valor|  
+|Property|Valor|  
 |--------------|-----------|  
 |`Number`|El valor especificado como argumento para `Error` instrucción. Puede ser cualquier número de error válido.|  
 |`Source`|Nombre del proyecto actual de Visual Basic.|  

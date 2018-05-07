@@ -1,23 +1,12 @@
 ---
-title: "Cómo: Crear flujos de trabajo"
-ms.custom: 
+title: 'Cómo: Crear flujos de trabajo'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e619fa7fa6437b60b1d3cd6b50a2a68229899f5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 98235eac9309ecb0229281160f210079e712b755
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow"></a>Cómo: Crear flujos de trabajo
 Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En los temas de este paso de la sección por la creación de un flujo de trabajo que utiliza las actividades integradas, como el <xref:System.Activities.Statements.Flowchart> actividad y las actividades personalizadas desde el anterior [Cómo: crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tema. El flujo de trabajo modela un juego de adivinanzas de números. Solo se necesita uno de los temas de esta sección para completar el tutorial; debe elegir el estilo que le interese y seguir ese paso. Sin embargo, puede completar todos los temas si lo desea.  

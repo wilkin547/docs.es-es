@@ -1,11 +1,6 @@
 ---
 title: If (Operador) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.IfOperator
 - IfOperator
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2c553da5abf5453ba881671806b976125355c1e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 192309a7ca728feb300e867bf2340e669e9da16c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="if-operator-visual-basic"></a>If (Operador) (Visual Basic)
 Usa evaluación de cortocircuito para devolver condicionalmente uno de dos valores. La `If` puede llamar al operador con tres argumentos o con dos argumentos.  
@@ -41,9 +33,9 @@ If( [argument1,] argument2, argument3 )
   
 |Término|Definición|  
 |---|---|  
-|`argument1`|Obligatorio. `Boolean`. Determina cuál de los otros argumentos para evaluar y devolver.|  
-|`argument2`|Obligatorio. `Object`. Evaluada y devuelto si `argument1` se evalúa como `True`.|  
-|`argument3`|Obligatorio. `Object`. Evaluada y devuelto si `argument1` se evalúa como `False` o si `argument1` es un [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variable que se evalúa como [nada](../../../visual-basic/language-reference/nothing.md).|  
+|`argument1`|Requerido. `Boolean`. Determina cuál de los otros argumentos para evaluar y devolver.|  
+|`argument2`|Requerido. `Object`. Evaluada y devuelto si `argument1` se evalúa como `True`.|  
+|`argument3`|Requerido. `Object`. Evaluada y devuelto si `argument1` se evalúa como `False` o si `argument1` es un [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variable que se evalúa como [nada](../../../visual-basic/language-reference/nothing.md).|  
   
  Un `If` operador que se llama con tres argumentos funciona como un `IIf` función salvo que usa la evaluación de cortocircuito. Un `IIf` función siempre evalúa las tres de sus argumentos, mientras que un `If` operando que tiene tres argumentos se evalúa como sólo dos de ellos. La primera `If` argumento se evalúa y se convierte el resultado como un `Boolean` valor, `True` o `False`. Si el valor es `True`, `argument2` es evalúa y se devuelve su valor, pero `argument3` no se evalúa. Si el valor de la `Boolean` expresión es `False`, `argument3` es evalúa y se devuelve su valor, pero `argument2` no se evalúa. Los siguientes ejemplos ilustran el uso de `If` cuando se usan tres argumentos:  
   
@@ -60,8 +52,8 @@ If( [argument1,] argument2, argument3 )
   
 |Término|Definición|  
 |---|---|  
-|`argument2`|Obligatorio. `Object`. Debe ser una referencia o tipo que acepta valores NULL. Evalúa y se devuelve cuando se evalúa en algo distinto de `Nothing`.|  
-|`argument3`|Obligatorio. `Object`. Evaluada y devuelto si `argument2` se evalúa como `Nothing`.|  
+|`argument2`|Requerido. `Object`. Debe ser una referencia o tipo que acepta valores NULL. Evalúa y se devuelve cuando se evalúa en algo distinto de `Nothing`.|  
+|`argument3`|Requerido. `Object`. Evaluada y devuelto si `argument2` se evalúa como `Nothing`.|  
   
  Cuando el `Boolean` argumento se omite, el primer argumento debe ser una referencia o tipo que acepta valores NULL. Si el primer argumento se evalúa como `Nothing`, se devuelve el valor del segundo argumento. En todos los demás casos, se devuelve el valor del primer argumento. En el ejemplo siguiente se muestra cómo funciona esta evaluación.  
   

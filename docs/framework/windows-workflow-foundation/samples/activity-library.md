@@ -1,6 +1,12 @@
- ---
-título: ms.custom "Biblioteca de actividades": "" ms.date: "03/30/2017" ms.prod: "NET" ms.reviewer: "" ms.suite: "" ms.tgt_pltfrm: "" ms.topic: "artículo" ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d caps.latest.revision: autor 7: "dotnet-bot "ms.author:"dotnetcontent"administrador: ms.workload"wpickett": 
-  - "dotnet."
+---
+title: Biblioteca de actividades
+ms.date: 03/30/2017
+ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
+ms.openlocfilehash: 75a7f0203b27e331f9c33fa95be7f6fb95354b7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-library"></a>Biblioteca de actividades
 Esta sección contiene ejemplos que muestran las actividades personalizadas avanzadas en Windows Workflow Foundation (WF).  

@@ -1,26 +1,12 @@
 ---
 title: Marco de servicios
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-framework"></a>Marco de servicios
 En este tema se enumeran las excepciones generadas por Service Framework Data.  
@@ -49,8 +35,8 @@ En este tema se enumeran las excepciones generadas por Service Framework Data.
 |channelDoesNotHaveADuplexSession0|El canal actual no permite cerrar la sesión de salida. Este canal no implementa ISessionChannel\<IDuplexSession >.|  
 |ClientRuntimeRequiresFormatter0|El ClientOperation especificado requiere un formateador, porque SerializeRequest y DeserializeReply no son ambos falsos.|  
 |CommunicationObjectAborted1|El objeto de comunicación especificado no se puede utilizar para la comunicación porque se ha detenido.|  
-|CommunicationObjectAbortedStack2|El objeto de comunicación especificado para la comunicación porque se ha detenido: {1}|  
-|CommunicationObjectBaseClassMethodNotCalled|El objeto de comunicación especificado ha invalidado la función virtual {1} pero no llama a la versión definida en la clase base.|  
+|CommunicationObjectAbortedStack2|El objeto de comunicación especificado no se puede usar para la comunicación porque se ha detenido: {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|El objeto de comunicación especificado ha invalidado la función virtual {1} pero no se llama a la versión definida en la clase base.|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|El contrato especificado tiene una o más operaciones IsTerminating o non-IsInitiating. No tiene la propiedad SessionMode establecida como SessionMode.Required. Los atributos IsInitiating e IsTerminating solo se pueden utilizar en el contexto de una sesión.|  
 |CouldnTCreateChannelForChannelType2|Se solicitó el tipo de canal especificado, pero el enlace especificado no lo admite o no está configurado correctamente para admitirlo.|  
 |DispatchRuntimeRequiresFormatter0|El DispatchOperation especificado requiere un formateador, porque DeserializeRequest y SerializeReply no son ambos falsos.|  

@@ -1,14 +1,6 @@
 ---
-title: "StrongNameCompareAssemblies (Función)"
-ms.custom: 
+title: StrongNameCompareAssemblies (Función)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameCompareAssemblies
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1ed98b1713427a71c73c30ddd64188f61d51045c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4bd1d098f21a3d5ba43b6251c87c36df4347a924
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies (Función)
 Determina si dos ensamblados difieren solo en sus firmas de nombre seguro.  
@@ -59,14 +47,14 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Uno de los siguientes valores:  
   
--   `SN_CMP_DIFFERENT`(0): Especifica que los ensamblados contienen datos distintos.  
+-   `SN_CMP_DIFFERENT` (0): Especifica que los ensamblados contienen datos distintos.  
   
--   `SN_CMP_IDENTICAL`(1): Especifica que los ensamblados son exactamente iguales, incluidas sus firmas y la suma de comprobación.  
+-   `SN_CMP_IDENTICAL` (1): Especifica que los ensamblados son exactamente iguales, incluidas sus firmas y la suma de comprobación.  
   
--   `SN_CMP_SIGONLY`(2): Especifica si los ensamblados difieren solo en la firma y la suma de comprobación.  
+-   `SN_CMP_SIGONLY` (2): Especifica si los ensamblados difieren solo en la firma y la suma de comprobación.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true`Cuando se finaliza correctamente; en caso contrario, `false`.  
+ `true` Cuando se finaliza correctamente; en caso contrario, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -75,7 +63,7 @@ BOOLEAN StrongNameCompareAssemblies (
   
  **Biblioteca:** incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Comentarios  
  La firma de nombre seguro de un ensamblado consta del nombre de texto, versión, referencia cultural y token de clave pública del ensamblado.  

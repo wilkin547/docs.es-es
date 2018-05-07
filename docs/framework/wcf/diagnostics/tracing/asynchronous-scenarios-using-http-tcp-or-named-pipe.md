@@ -1,24 +1,12 @@
 ---
-title: "Escenarios asincrónicos en los que se usa HTTP, TCP o canalizaciones con nombre"
-ms.custom: 
+title: Escenarios asincrónicos en los que se usa HTTP, TCP o canalizaciones con nombre
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76c4c225b333af6d376fa409a05ea5727ede6e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08f70186a59b8717c4441167ee720ba1c20b9dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>Escenarios asincrónicos en los que se usa HTTP, TCP o canalizaciones con nombre
 En este tema se describen las actividades y transferencias para diferentes escenarios asincrónicos de solicitud-respuesta, con solicitudes de varios subprocesos, utilizando HTTP, TCP o canalización con nombre.  
@@ -44,7 +32,7 @@ En este tema se describen las actividades y transferencias para diferentes escen
 #### <a name="propagation-is-disabled-on-either-sides-using-http"></a>La propagación está deshabilitada en cualquier lado, utilizando HTTP  
  Si `propagateActivity` = `false` en cualquier lado, ProcessMessage no indica a qué actividad processaction debe transferirse a. Por consiguiente, se invoca una nueva actividad ProcessAction temporal con un nuevo id. Cuando la respuesta asincrónica coincide con la solicitud en el código ServiceModel, el id. de actividad se puede recuperar del contexto local. La actividad ProcessAction actual se puede transferir a con ese id.  
   
- ![Escenarios asincrónicos mediante HTTP &#47; TCP &#47; Canalización con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
+ ![Escenarios asincrónicos mediante HTTP&#47;TCP&#47;canalización con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
   
  Figura 2. Cliente asincrónico, sin devolución de llamada, `propagateActivity` = `false` a ambos lados, HTTP  
   
@@ -53,7 +41,7 @@ En este tema se describen las actividades y transferencias para diferentes escen
  Se crea una actividad procesar acción en un cliente asincrónico cuando `propagateActivity` = `false` en el llamador o destinatario, y cuando el mensaje de respuesta no incluye un encabezado de acción.  
   
 #### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>La propagación está habilitada en ambos lados, utilizando TCP o canalización con nombre  
- ![Escenarios asincrónicos mediante HTTP &#47; TCP &#47; Canalización con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
+ ![Escenarios asincrónicos mediante HTTP&#47;TCP&#47;canalización con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
   
  Figura 3: Cliente asincrónico, sin devolución de llamada, `propagateActivity` = `true` en ambos lados, canalización con nombre/TCP  
   
@@ -66,7 +54,7 @@ En este tema se describen las actividades y transferencias para diferentes escen
   
  Similar a Fig.2, si `propagateActivity` = `false` en cualquier lado, ProcessMessage no indica a qué actividad processaction debe transferirse a. Por consiguiente, se invoca una nueva actividad ProcessAction temporal con un nuevo id. Cuando la respuesta asincrónica coincide con la solicitud en el código ServiceModel, el id. de actividad se puede recuperar del contexto local. La actividad ProcessAction actual se puede transferir a con ese id.  
   
- ![Escenarios asincrónicos mediante HTTP &#47; TCP &#47; Canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
+ ![Escenarios asincrónicos mediante HTTP&#47;TCP&#47; canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
   
  Figura 4. Cliente asincrónico, sin devolución de llamada, `propagateActivity` = `false` a ambos lados, canalización con nombre/TCP  
   
@@ -86,7 +74,7 @@ En este tema se describen las actividades y transferencias para diferentes escen
  Figura 6. Cliente asincrónico con devolución de llamada, `endCall` fuera de la devolución de llamada  
   
 ### <a name="asynchronous-server-with-callback"></a>Servidor asincrónico con devolución de llamada  
- ![Escenarios asincrónicos mediante HTTP &#47; TCP &#47; Con el nombre &#45; Canalización](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
+ ![Escenarios asincrónicos mediante HTTP&#47;TCP&#47; con nombre&#45;canalización](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
   
  Figura 7. Servidor asincrónico con devolución de llamada  
   

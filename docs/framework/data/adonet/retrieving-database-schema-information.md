@@ -1,24 +1,12 @@
 ---
-title: "Recuperar información del esquema de la base de datos"
-ms.custom: 
+title: Recuperar información del esquema de la base de datos
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 09a0ec444801d1fe2caccf9e25a68e3c6ae8f5c2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1ac39a556fd7539550b12cb71b701c4bd3224a0b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-database-schema-information"></a>Recuperar información del esquema de la base de datos
 La obtención de información de esquema de una base de datos se efectúa con el proceso de detección de esquemas. Detección de esquemas permite que las aplicaciones soliciten a los proveedores administrados buscan y devuelvan información acerca del esquema de base de datos, también conocido como *metadatos*, de una base de datos. Los diferentes elementos del esquema de base de datos, como tablas, columnas y procedimientos almacenados, se exponen a través de colecciones de esquemas. Cada colección de esquemas contiene diversa información de esquema relativa al proveedor que se está utilizando.  

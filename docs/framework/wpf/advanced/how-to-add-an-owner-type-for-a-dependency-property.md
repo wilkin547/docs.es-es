@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Agregar un tipo de propietario para una propiedad de dependencia"
-ms.custom: 
+title: 'Cómo: Agregar un tipo de propietario para una propiedad de dependencia'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - classes [WPF], adding as owners of dependency properties
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b93934c8f84a7257445b530e27896342bdd73aea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bf3f73743d1c76145bf520ed859c27c4d3aaf662
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Cómo: Agregar un tipo de propietario para una propiedad de dependencia
 Este ejemplo muestra cómo agregar una clase como un propietario de una propiedad de dependencia que se registra para un tipo diferente. Al hacerlo, el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lector y el sistema de propiedades son ambos capaz de reconocer la clase como un propietario adicional de la propiedad. Agregar como propietario, opcionalmente, permite la adición de la clase proporcionar metadatos específicos del tipo.  

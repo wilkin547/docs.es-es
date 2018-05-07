@@ -1,34 +1,20 @@
 ---
 title: Trabajar con NAT y firewalls
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe74b4bd86a25a8e6b769be1abe5fd81e5ffe5f9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 72582af358d363038d09b313632c023f3c054dbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabajar con NAT y firewalls
 Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta de acceso directa y abierta para la comunicación. Los paquetes se filtran, enrutan, analizan y transforman tanto en los equipos de extremo como en equipos intermedios de la red. Las traducciones de direcciones de red (NATs) y los firewalls son ejemplos comunes de aplicaciones intermedias que pueden participar en la comunicación de redes.  
   
- Los transportes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y los patrones de intercambio de mensajes (MEP) reaccionan de manera diferente ante la presencia de NAT y firewalls. En este tema se describe cómo las NAT y los firewalls funcionan en topologías de redes comunes. Se proporcionan recomendaciones para combinaciones concretas de MEP y transportes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que ayudan a hacer aplicaciones más robustas frente a NAT y firewalls en la red.  
+ Los transportes de Windows Communication Foundation (WCF) y exchange patrones de mensajes (MEP) reaccionan de manera diferente ante la presencia de NAT y firewalls. En este tema se describe cómo las NAT y los firewalls funcionan en topologías de redes comunes. Se proporcionan recomendaciones para combinaciones concretas de MEP y transportes WCF que ayudan a hacer que las aplicaciones más sólida para NAT y firewalls en la red.  
   
 ## <a name="how-nats-affect-communication"></a>Cómo afectan las NAT a la comunicación  
  NAT se creó para permitir a varios equipos compartir una dirección IP externa única. Una NAT de reasignación de puertos asigna una dirección IP interna y un puerto para una conexión a una dirección IP externa con un nuevo número de puerto. El nuevo número de puerto le permite a la NAT correlacionar el tráfico del retorno con la comunicación original. Muchos usuarios domésticos tienen una dirección IP que solo es enrutable de manera privada y confían en una NAT para que proporcione el enrutamiento global de paquetes.  
@@ -45,7 +31,7 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
  Una configuración común para un firewall del usuario doméstico consiste en prohibir las conexiones entrantes a menos que se haya realizado una conexión de salida previamente a ese equipo. Una configuración común para un firewall de usuario empresarial consiste en prohibir las conexiones entrantes en todos los puertos exceptuando un grupo identificado específicamente. Un ejemplo es un firewall que prohíbe las conexiones en todos los puertos salvo el puerto 80 y 443 para proporcionar servicio HTTP y HTTPS. Los firewalls administrados existen tanto para usuarios domésticos como para usuarios empresariales, y permiten a un usuario o proceso de confianza del equipo cambiar la configuración del firewall. Los firewalls administrados son más comunes para usuarios domésticos donde no hay ninguna directiva corporativa que controle el uso de la red.  
   
 ## <a name="using-teredo"></a>Uso de Teredo  
- Teredo es una tecnología de transición de IPv6 que habilita la direccionabilidad directa de equipos detrás de una NAT. Teredo se basa en el uso de un servidor que se puede enrutar de manera pública y global para anunciar conexiones potenciales. El servidor de Teredo da al servidor y cliente de la aplicación un punto de reunión común en el que pueden intercambiar información de conexión. Los equipos solicitan a continuación una dirección Teredo temporal y los paquetes se pasan mediante túneles a través de la red existente. La compatibilidad con Teredo en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] necesita habilitar la compatibilidad con IPv6 y Teredo en el sistema operativo. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y los sistemas operativos posteriores admiten Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] y los sistemas operativos posteriores admiten IPv6 de forma predeterminada y solo el usuario necesita habilitar Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] necesitan que el usuario habilite IPv6 y Teredo. Para obtener más información, consulte el [información general sobre Teredo](http://go.microsoft.com/fwlink/?LinkId=87571).  
+ Teredo es una tecnología de transición de IPv6 que habilita la direccionabilidad directa de equipos detrás de una NAT. Teredo se basa en el uso de un servidor que se puede enrutar de manera pública y global para anunciar conexiones potenciales. El servidor de Teredo da al servidor y cliente de la aplicación un punto de reunión común en el que pueden intercambiar información de conexión. Los equipos solicitan a continuación una dirección Teredo temporal y los paquetes se pasan mediante túneles a través de la red existente. Compatibilidad con Teredo en WCF requiere habilitar la compatibilidad con IPv6 y Teredo en el sistema operativo. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y los sistemas operativos posteriores admiten Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] y los sistemas operativos posteriores admiten IPv6 de forma predeterminada y solo el usuario necesita habilitar Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] necesitan que el usuario habilite IPv6 y Teredo. Para obtener más información, consulte el [información general sobre Teredo](http://go.microsoft.com/fwlink/?LinkId=87571).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes y transporte  
  La selección de un transporte y MEP es un proceso de tres pasos:  
@@ -64,7 +50,7 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
   
 -   Emplee un servicio alcanzable para registrar puntos de conexión o la retransmisión de tráfico. El uso de un servicio de conexión alcanzable globalmente, como un servidor Teredo, aumenta en gran medida la probabilidad de realizar correctamente una conexión cuando la topología de red es restrictiva o desconocida.  
   
- Las siguientes tablas examinan los transportes MEP unidireccionales, de solicitud-respuesta y dúplex; los transportes estándar TCP y TCP con Teredo; así como los transportes HTTP estándar y duales en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Las siguientes tablas examinan la unidireccional, solicitud y respuesta y MEP dúplex y el estándar TCP, TCP con Teredo, y transportes HTTP estándar y dual en WCF.  
   
 |Direccionabilidad|Servidor directo|Servidor directo con transversal NAT|Servidor NAT|Servidor NAT con transversal NAT|  
 |--------------------|-------------------|--------------------------------------|----------------|-----------------------------------|  

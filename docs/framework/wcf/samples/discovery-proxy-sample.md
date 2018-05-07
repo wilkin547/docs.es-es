@@ -1,29 +1,17 @@
 ---
-title: "Ejemplo de proxy de detección"
-ms.custom: 
+title: Ejemplo de proxy de detección
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b6e24c72002c7eef0e03af18f43992cc93b1d5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9cbfcb717f502a849d4d508d13df6c00b95db58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-proxy-sample"></a>Ejemplo de proxy de detección
 En este ejemplo se muestra cómo crear una implementación de un proxy de detección para almacenar información acerca de los servicios existentes y el modo en que los clientes pueden consultar información en ese proxy. Este ejemplo consta de tres proyectos:  
   
--   **Servicio**: un sencillo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servicio de calculadora que se registra con el proxy de detección.  
+-   **Servicio**: un simple servicio de calculadora de Windows Communication Foundation (WCF) que se registra con el proxy de detección.  
   
 -   **Proxy de detección**: la implementación de un servicio de proxy de detección.  
   
@@ -37,7 +25,7 @@ En este ejemplo se muestra cómo crear una implementación de un proxy de detecc
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryProxy`  
   
@@ -48,7 +36,7 @@ En este ejemplo se muestra cómo crear una implementación de un proxy de detecc
   
  El archivo está dividido en dos regiones, Métodos de caché de proxy e Implementación de proxy de detección. La región Métodos de caché de proxy contiene los métodos utilizados para actualizar <xref:System.Collections.Generic.Dictionary%602>, realizar consultas a <xref:System.Collections.Generic.Dictionary%602> e imprimir datos de los usuarios. La región Implementación de proxy de detección contiene los métodos invalidados requeridos para la funcionalidad de Anuncio y sondeo. Definen las acciones realizadas por un proxy tras recibir un anuncio en línea, un anuncio sin conexión o un mensaje de sondeo.  
   
-## <a name="service"></a>Servicio  
+## <a name="service"></a>web de Office  
  En el archivo Program.cs en el proyecto de servicio, se utiliza el mismo URI para su punto de conexión de anuncio y para el proxy de detección. Esto se debe a que el servicio utiliza el extremo para enviar los anuncios, mientras que el proxy lo utiliza para recibirlos. El servicio utiliza el <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> y le agrega un extremo de anuncio.  
   
 ## <a name="client"></a>Cliente  

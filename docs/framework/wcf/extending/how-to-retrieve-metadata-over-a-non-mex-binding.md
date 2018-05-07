@@ -1,33 +1,19 @@
 ---
 title: 'Cómo: Recuperar metadatos mediante un enlace que no sea MEX'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b469a08ad9759a2d5213f13256ec2def96107acc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 198c343aa6f25d55e518990dc1dbd2667a8c17ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Cómo: Recuperar metadatos mediante un enlace que no sea MEX
 En este tema se describe cómo recuperar metadatos de un punto de conexión MEX mediante un enlace que no sea MEX. El código en este ejemplo se basa en el [personalizado extremo de metadatos seguros](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) ejemplo.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Para recuperar metadatos mediante un enlace que no sea MEX  
   
-1.  Determine el enlace utilizado por el extremo MEX. Para los servicios de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], puede determinar el enlace MEX obteniendo acceso al archivo de configuración del servicio. En este caso, el enlace de MEX se define en la configuración de servicio siguiente.  
+1.  Determine el enlace utilizado por el punto de conexión MEX. Para los servicios de Windows Communication Foundation (WCF), puede determinar el enlace MEX obteniendo acceso al archivo de configuración del servicio. En este caso, el enlace de MEX se define en la configuración de servicio siguiente.  
   
     ```xml  
     <services>  

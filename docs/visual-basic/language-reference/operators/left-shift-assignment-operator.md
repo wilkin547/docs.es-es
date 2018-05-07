@@ -1,12 +1,6 @@
 ---
 title: '&lt;&lt;= (Operador) (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<<=
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - operator<<=
 - compound assignment statements [Visual Basic]
 ms.assetid: 8ad26613-faff-4e2f-89ee-63feee33bfda
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5c5c36e4f91155c09d01b448777483941d018d9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 559624f7097f90d374ee83e3c0a9ac97d9f93444
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltlt-operator-visual-basic"></a>&lt;&lt;= (Operador) (Visual Basic)
 Realiza un desplazamiento aritmético a la izquierda en el valor de una variable o propiedad y asigna el resultado a la variable o propiedad.  
@@ -37,10 +28,10 @@ variableorproperty <<= amount
   
 ## <a name="parts"></a>Elementos  
  `variableorproperty`  
- Obligatorio. Variable o propiedad de un tipo integral (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, o `ULong`).  
+ Requerido. Variable o propiedad de un tipo integral (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, o `ULong`).  
   
  `amount`  
- Obligatorio. Expresión numérica de un tipo de datos que se amplíe a `Integer`.  
+ Requerido. Expresión numérica de un tipo de datos que se amplíe a `Integer`.  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento en el lado izquierdo de la `<<=` puede ser una variable escalar simple, una propiedad o un elemento de una matriz. La variable o propiedad no puede ser [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  

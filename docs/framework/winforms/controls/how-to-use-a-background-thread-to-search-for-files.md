@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Utilizar un subproceso en segundo plano para buscar archivos"
-ms.custom: 
+title: 'Cómo: Utilizar un subproceso en segundo plano para buscar archivos'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,35 +10,30 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea1f2edf4677e3a04e6dd007dcf0fef9137180fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1034868939837fc43cf7595c819a6109331a2684
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Cómo: Utilizar un subproceso en segundo plano para buscar archivos
 El <xref:System.ComponentModel.BackgroundWorker> componente reemplaza y agrega funcionalidad a la <xref:System.Threading> espacio de nombres; sin embargo, la <xref:System.Threading> espacio de nombres se conserva para compatibilidad con versiones anteriores y uso futuro, si elige. Para obtener más información, consulte [general sobre el componente BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
   
  Windows Forms utiliza el modelo de contenedor uniproceso (STA) porque Windows Forms se basa en las ventanas nativas de Win32 que tienen subprocesos de apartamento de forma inherente. El modelo STA implica que se puede crear una ventana en cualquier subproceso, pero no puede cambiar una vez creados los subprocesos, y todas las llamadas de función a la se deben producir en su subproceso de creación. Fuera de Windows Forms, las clases de .NET Framework utilizan el modelo de subprocesamiento libre. Para obtener información acerca del subprocesamiento en .NET Framework, vea [subprocesos](../../../../docs/standard/threading/index.md).  
   
- El modelo STA requiere que los métodos en un control que deba llamarse desde fuera de subproceso de creación del control deben calcularse a (que se ejecutan en) subproceso de creación del control. La clase base <xref:System.Windows.Forms.Control> proporciona varios métodos (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, y <xref:System.Windows.Forms.Control.EndInvoke%2A>) para este propósito. <xref:System.Windows.Forms.Control.Invoke%2A>realiza llamadas de método sincrónico; <xref:System.Windows.Forms.Control.BeginInvoke%2A> realiza llamadas de método asincrónico.  
+ El modelo STA requiere que los métodos en un control que deba llamarse desde fuera de subproceso de creación del control deben calcularse a (que se ejecutan en) subproceso de creación del control. La clase base <xref:System.Windows.Forms.Control> proporciona varios métodos (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, y <xref:System.Windows.Forms.Control.EndInvoke%2A>) para este propósito. <xref:System.Windows.Forms.Control.Invoke%2A> realiza llamadas de método sincrónico; <xref:System.Windows.Forms.Control.BeginInvoke%2A> realiza llamadas de método asincrónico.  
   
  Si utiliza multithreading en su control para las tareas que consumen muchos recursos, la interfaz de usuario puede seguir respondiendo mientras un cálculo que consume muchos recursos se ejecuta en un subproceso en segundo plano.  
   
  El ejemplo siguiente (`DirectorySearcher`) se muestra un control de formularios Windows Forms multiproceso que utiliza un subproceso en segundo plano para buscar de forma recursiva un directorio para archivos que coincidan con una cadena de búsqueda especificado y, a continuación, rellena un cuadro de lista con el resultado de la búsqueda. Los conceptos clave que se muestra en el ejemplo son los siguientes:  
   
--   `DirectorySearcher`inicia un nuevo subproceso para llevar a cabo la búsqueda. El subproceso se ejecuta el `ThreadProcedure` método que a su vez llama a la aplicación auxiliar `RecurseDirectory` método para realizar la búsqueda real y para rellenar el cuadro de lista. Sin embargo, para rellenar el cuadro de lista requiere una llamada entre subprocesos, como se explica en los siguientes dos elementos con viñetas.  
+-   `DirectorySearcher` inicia un nuevo subproceso para llevar a cabo la búsqueda. El subproceso se ejecuta el `ThreadProcedure` método que a su vez llama a la aplicación auxiliar `RecurseDirectory` método para realizar la búsqueda real y para rellenar el cuadro de lista. Sin embargo, para rellenar el cuadro de lista requiere una llamada entre subprocesos, como se explica en los siguientes dos elementos con viñetas.  
   
--   `DirectorySearcher`define la `AddFiles` método para agregar archivos a un cuadro de lista; sin embargo, `RecurseDirectory` no se puede invocar directamente `AddFiles` porque `AddFiles` puede ejecutar solo en el subproceso STA que creó `DirectorySearcher`.  
+-   `DirectorySearcher` define la `AddFiles` método para agregar archivos a un cuadro de lista; sin embargo, `RecurseDirectory` no se puede invocar directamente `AddFiles` porque `AddFiles` puede ejecutar solo en el subproceso STA que creó `DirectorySearcher`.  
   
--   La única manera de `RecurseDirectory` puede llamar a `AddFiles` es a través de una llamada entre subprocesos, es decir, mediante una llamada a <xref:System.Windows.Forms.Control.Invoke%2A> o <xref:System.Windows.Forms.Control.BeginInvoke%2A> para calcular las referencias `AddFiles` al subproceso de creación de `DirectorySearcher`. `RecurseDirectory`utiliza <xref:System.Windows.Forms.Control.BeginInvoke%2A> para que la llamada se puede realizar de forma asincrónica.  
+-   La única manera de `RecurseDirectory` puede llamar a `AddFiles` es a través de una llamada entre subprocesos, es decir, mediante una llamada a <xref:System.Windows.Forms.Control.Invoke%2A> o <xref:System.Windows.Forms.Control.BeginInvoke%2A> para calcular las referencias `AddFiles` al subproceso de creación de `DirectorySearcher`. `RecurseDirectory` utiliza <xref:System.Windows.Forms.Control.BeginInvoke%2A> para que la llamada se puede realizar de forma asincrónica.  
   
--   Un método de cálculo de referencias requiere el equivalente de un puntero a función o devolución de llamada. Esto se logra mediante delegados en .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A>toma a un delegado como argumento. `DirectorySearcher`por lo tanto, define un delegado (`FileListDelegate`), enlaza `AddFiles` a una instancia de `FileListDelegate` en su constructor y pasa la instancia de este delegado a <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher`También define a un delegado de eventos que se calcula cuando se completa la búsqueda.  
+-   Un método de cálculo de referencias requiere el equivalente de un puntero a función o devolución de llamada. Esto se logra mediante delegados en .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> toma a un delegado como argumento. `DirectorySearcher` por lo tanto, define un delegado (`FileListDelegate`), enlaza `AddFiles` a una instancia de `FileListDelegate` en su constructor y pasa la instancia de este delegado a <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` También define a un delegado de eventos que se calcula cuando se completa la búsqueda.  
   
 ```vb  
 Option Strict  

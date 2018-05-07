@@ -1,41 +1,27 @@
 ---
 title: Usar contratos de mensaje
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ea0a107a67753e919439a6be2035ab77001641ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-message-contracts"></a>Usar contratos de mensaje
-Normalmente al compilar aplicaciones [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], los programadores prestan mucha atención a los problemas de serialización y estructuras de datos y no se preocupan de la estructura de los mensajes en los que se transportan los datos. Para estas aplicaciones, la creación de contratos de datos para los parámetros o valores devueltos es fácil. (Para obtener más información, consulte [especificación de transferencia de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
+Normalmente al compilar aplicaciones de Windows Communication Foundation (WCF), los programadores prestan mucha atención a los problemas de serialización y estructuras de datos y no es necesario preocuparse de la estructura de los mensajes en el que se transportan los datos. Para estas aplicaciones, la creación de contratos de datos para los parámetros o valores devueltos es fácil. (Para obtener más información, consulte [especificación de transferencia de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
   
  Sin embargo, a veces el control completo sobre la estructura de un mensaje SOAP es tan importante como el control sobre su contenido. Esto es especialmente cierto cuando la interoperabilidad es importante o para controlar específicamente problemas de seguridad del mensaje o parte del mensaje. En estos casos, puede crear un *contrato de mensaje* que le permite especificar la estructura del mensaje SOAP exacto necesaria.  
   
  En este tema, se analiza la forma de usar los diversos atributos de contrato de mensaje para crear un contrato de mensaje específico para su operación.  
   
 ## <a name="using-message-contracts-in-operations"></a>Uso de contratos de mensaje en operaciones  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite operaciones modeladas en el *estilo de procedimiento remoto (RPC) llamada* o *estilo de mensajería*. En una operación de estilo de RPC, puede usar cualquier tipo serializable y tiene acceso a las características que están disponibles para las llamadas locales, como múltiples parámetros y `ref` y parámetros `out`. En este estilo, la forma de serialización elegida controla la estructura de los datos en los mensajes subyacentes y el tiempo de ejecución de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea los mensajes para admitir la operación. Esto habilita a los desarrolladores que no están familiarizados con SOAP y los mensajes SOAP a crear y utilizar aplicaciones de servicio de manera rápida y sencilla.  
+ WCF admite operaciones modeladas en el *estilo de procedimiento remoto (RPC) llamada* o *estilo de mensajería*. En una operación de estilo de RPC, puede usar cualquier tipo serializable y tiene acceso a las características que están disponibles para las llamadas locales, como múltiples parámetros y `ref` y parámetros `out`. En este estilo, el formato de serialización elegida controla la estructura de los datos de los mensajes subyacentes y el tiempo de ejecución WCF crea los mensajes que admita la operación. Esto habilita a los desarrolladores que no están familiarizados con SOAP y los mensajes SOAP a crear y utilizar aplicaciones de servicio de manera rápida y sencilla.  
   
  El siguiente código de ejemplo muestra una operación de servicio modelada en el estilo RPC.  
   
@@ -263,7 +249,7 @@ public class PatientRecord
   
 -   `Relay`  
   
- El atributo `Actor` o `Role` especifica el Identificador uniforme de recursos (URI) del nodo para el que está dirigido un encabezado determinado. El atributo `MustUnderstand` especifica si el nodo que procesa el encabezado debe entenderlo. El atributo `Relay` especifica si el encabezado se va a retransmitir a los nodos descendentes. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no realiza ningún procesamiento de estos atributos en los mensajes entrantes, salvo el atributo `MustUnderstand`, como se especifica en la sección “Versiones de contratos de mensaje” más adelante en este tema. Sin embargo, le permite leer y escribir estos atributos según sea necesario, como en la siguiente descripción.  
+ El atributo `Actor` o `Role` especifica el Identificador uniforme de recursos (URI) del nodo para el que está dirigido un encabezado determinado. El atributo `MustUnderstand` especifica si el nodo que procesa el encabezado debe entenderlo. El atributo `Relay` especifica si el encabezado se va a retransmitir a los nodos descendentes. WCF no realiza ningún procesamiento de estos atributos en los mensajes entrantes, excepto la `MustUnderstand` atributo, como se especifica en la sección "Versiones de contratos de mensaje" más adelante en este tema. Sin embargo, le permite leer y escribir estos atributos según sea necesario, como en la siguiente descripción.  
   
  Al enviar un mensaje, no se emiten estos atributos de forma predeterminada. Esto se puede cambiar de dos formas: Primero, puede establecer de manera estática los atributos en cualquier valor que desee cambiando las propiedades <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType> y <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType>, tal y como se muestra en el siguiente ejemplo de código. (Observe que no hay propiedad `Role`; establecer la propiedad <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> emite el atributo `Role` si usa SOAP 1.2).  
   
@@ -336,9 +322,9 @@ public class BankingTransaction
   
  Las siguientes reglas se aplican a los encabezados de versiones:  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no se opone a los encabezados que faltan; los miembros correspondientes se dejan con sus valores predeterminados.  
+-   WCF no se opone a los encabezados que faltan, los miembros correspondientes se dejan en sus valores predeterminados.  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también omite los encabezados adicionales inesperados. La única excepción a esta regla es si el encabezado adicional tiene un atributo `MustUnderstand` establecido en `true` en el mensaje SOAP entrante. En este caso, se produce una excepción porque no se puede procesar ningún encabezado que deba entenderse.  
+-   WCF también omite los encabezados adicionales inesperados. La única excepción a esta regla es si el encabezado adicional tiene un atributo `MustUnderstand` establecido en `true` en el mensaje SOAP entrante. En este caso, se produce una excepción porque no se puede procesar ningún encabezado que deba entenderse.  
   
  Los cuerpos de mensajes tienen reglas de versión similares; se omiten las partes de cuerpo de mensaje adicionales y que faltan.  
   
@@ -383,7 +369,7 @@ public class PatientRecord : PersonRecord
 -   Al utilizar el mismo contrato del mensaje en varias operaciones, se generan varios tipos de mensaje en el documento WSDL. Los nombres se hacen únicos sumando los números "2", "3", etc., para los usos subsiguientes. Al importar el WSDL, varios tipos de contrato de mensaje se crean y son idénticos salvo por sus nombres.  
   
 ## <a name="soap-encoding-considerations"></a>Consideraciones sobre la codificación SOAP  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] le permite utilizar el estilo de codificación SOAP heredado de XML; sin embargo, no se recomienda su uso. Al utilizar este estilo (estableciendo la propiedad `Use` como `Encoded` en el <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> aplicado al contrato de servicio), las siguientes consideraciones adicionales se aplican:  
+ WCF permite usar SOAP heredado codificación estilo de XML, sin embargo, su uso no se recomienda. Al utilizar este estilo (estableciendo la propiedad `Use` como `Encoded` en el <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> aplicado al contrato de servicio), las siguientes consideraciones adicionales se aplican:  
   
 -   No se admiten los encabezados del mensaje; esto significa que el atributo <xref:System.ServiceModel.MessageHeaderAttribute> y el atributo de matriz <xref:System.ServiceModel.MessageHeaderArrayAttribute> son incompatibles con la codificación SOAP.  
   

@@ -1,31 +1,17 @@
 ---
 title: Especificación y administración de errores en contratos y servicios
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 00b3687169aa2e5521a3e3348be2a45738e97093
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: fc5fa03b723a35c4748fc16db8946277266e3b0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Especificación y administración de errores en contratos y servicios
-Las aplicaciones de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] administran las situaciones de error asignando objetos de excepción administrados a los objetos de error de SOAP y objetos de error de SOAP a objetos de excepción administrados. Los temas de esta sección describen cómo diseñar contratos para exponer condiciones de error como errores de SOAP personalizados, cómo devolver tales errores como parte de la implementación del servicio y cómo los clientes detectan tales errores.  
+Las aplicaciones de Windows Communication Foundation (WCF) controlan las situaciones de error mediante la asignación de objetos de excepción administrada a los objetos de error SOAP y objetos de error de SOAP a los objetos de excepción administrada. Los temas de esta sección describen cómo diseñar contratos para exponer condiciones de error como errores de SOAP personalizados, cómo devolver tales errores como parte de la implementación del servicio y cómo los clientes detectan tales errores.  
   
 ## <a name="error-handling-overview"></a>Información general sobre control de errores  
  En todas las aplicaciones administradas, los errores de procesamiento están representados mediante objetos <xref:System.Exception>. En aplicaciones basadas en SOAP, como las aplicaciones de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], los métodos de servicio comunican la información de errores de procesamiento mediante mensajes de error de SOAP. Los errores SOAP son tipos de mensaje que se incluyen en los metadatos de una operación de servicio y, por consiguiente, crean un contrato de error que los clientes pueden utilizar para que su operación sea más sólida o interactiva. Además, debido a que los errores de SOAP se expresan a los clientes en un forma de XML, es un sistema de tipo muy interoperable que pueden utilizar los clientes en cualquier plataforma de SOAP, aumentando el alcance de su aplicación [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  

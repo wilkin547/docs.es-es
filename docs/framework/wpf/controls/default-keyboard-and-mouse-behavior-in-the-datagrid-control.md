@@ -1,29 +1,17 @@
 ---
 title: Comportamiento predeterminado de teclado y mouse en el control DataGridView
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGrid [WPF], keyboard behavior
 - DataGrid [WPF], mouse behavior
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28cb1b02e67d076f9190e2d8e36b72c20cc5c4e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 559b84d3e6b5ece6c71f17e6766cac4ec14824cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Comportamiento predeterminado de teclado y mouse en el control DataGridView
 Este tema describe cómo los usuarios pueden interactuar con el <xref:System.Windows.Controls.DataGrid> control mediante el teclado y mouse (ratón).  
@@ -96,7 +84,7 @@ Este tema describe cómo los usuarios pueden interactuar con el <xref:System.Win
 |CTRL + clic en una fila|Si <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> se establece en <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, modifica una selección de varias filas no contiguas.<br /><br /> Si la fila ya está seleccionada, anula la selección de la fila.|  
 |Mayús + clic en una fila|Si <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> se establece en <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, modifica una selección de varias filas contiguas.|  
 |Haga clic en un encabezado de grupo de filas|Se expande o contrae el grupo.|  
-|Haga clic en el botón Seleccionar todo en la esquina superior izquierda de la<xref:System.Windows.Controls.DataGrid>|Si <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> está establecido en <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, selecciona todas las filas en el <xref:System.Windows.Controls.DataGrid>.|  
+|Haga clic en el botón Seleccionar todo en la esquina superior izquierda de la <xref:System.Windows.Controls.DataGrid>|Si <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> está establecido en <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, selecciona todas las filas en el <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="mouse-selection"></a>Selección del mouse  
  Si el <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> propiedad está establecida en <xref:System.Windows.Controls.DataGridSelectionMode.Extended>, haga clic en una fila mientras se presiona la tecla CTRL o MAYÚS modificará una selección de varias filas.  

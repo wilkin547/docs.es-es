@@ -1,21 +1,12 @@
 ---
 title: Iteradores (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f02249f7f30d2cd6b43aa75530ace099286c7d7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ecc48ad5bbddc82457a8d6cc8e60ee419fb593fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iterators-visual-basic"></a>Iteradores (Visual Basic)
 Un *iterador* puede usarse para recorrer colecciones como listas y matrices.  
@@ -221,7 +212,7 @@ Public Class Zoo
 End Class  
 ```  
   
-##  <a name="BKMK_TryBlocks"></a>Bloques try  
+##  <a name="BKMK_TryBlocks"></a> Bloques try  
  Visual Basic permite que un `Yield` instrucción en el `Try` bloquear de un [intente... Catch... Finally (instrucción)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). A `Try` bloque con un `Yield` instrucción puede tener `Catch` bloquea y puede tener un `Finally` bloque.  
   
  En el ejemplo siguiente se incluye `Try`, `Catch`, y `Finally` se bloquea en una función de iterador. El `Finally` bloque en la función de iterador se ejecuta antes de la `For Each` termine de iteración.  
@@ -261,7 +252,7 @@ End Function
   
  Si el `For Each` cuerpo (en lugar del método iterador) produce una excepción, un `Catch` no se ejecuta el bloque de la función del iterador, pero un `Finally` se ejecuta el bloque de la función del iterador. Un `Catch` bloque dentro de una función de iterador captura solo las excepciones que se producen dentro de la función de iterador.  
   
-##  <a name="BKMK_AnonymousMethods"></a>Métodos anónimos  
+##  <a name="BKMK_AnonymousMethods"></a> Métodos anónimos  
  En Visual Basic, una función anónima puede ser una función de iterador. Esto se ilustra en el siguiente ejemplo:  
   
 ```vb  

@@ -1,29 +1,15 @@
 ---
 title: Colas y sesiones de confianza
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dbbaa432f7f1e137fc6cbd47ecd8e24d9eab97c3
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a60f409a0f5c237c372fe3303d67ef979950eab4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-and-reliable-sessions"></a>Colas y sesiones de confianza
-Las colas y las sesiones de confianza son las características de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que implementan la mensajería de confianza. Los temas contenidos en esta sección discuten las características de mensajería de confianza de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Las colas y sesiones confiables son las características de Windows Communication Foundation (WCF) que implementan la mensajería confiable. Los temas incluidos en esta sección describen las características de mensajería confiables de WCF.  
   
  La mensajería de confianza se define como la manera en que un origen de mensajería de confianza (denominado origen) transfiere mensajes de manera fiable a un destino de mensajería de confianza (denominado destino).  
   
@@ -33,7 +19,7 @@ Las colas y las sesiones de confianza son las características de [!INCLUDE[indi
   
 -   Separación del origen y el destino, que proporciona errores y recuperaciones independientes del origen y el destino, así como una transferencia y entrega de mensajes confiable, incluso cuando el origen o el destino no están disponibles.  
   
- La mensajería de confianza a menudo viene acompañada de una alta latencia. La latencia es el tiempo que tarda un mensaje en alcanzar el destino desde el origen. Por consiguiente, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona los tipos siguientes de mensajería de confianza:  
+ La mensajería de confianza a menudo viene acompañada de una alta latencia. La latencia es el tiempo que tarda un mensaje en alcanzar el destino desde el origen. WCF, por lo tanto, proporciona los siguientes tipos de mensajería de confianza:  
   
 -   [Las sesiones confiables](../../../../docs/framework/wcf/feature-details/reliable-sessions.md), que ofrecen una transferencia confiable sin el costo de latencia alta  
   
@@ -45,7 +31,7 @@ Las colas y las sesiones de confianza son las características de [!INCLUDE[indi
  Las sesiones de confianza proporcionan transferencias de mensajes de confianza de latencia baja. Los proporcionan para los mensajes SOAP sobre cualquier proxy o intermediario, el equivalente a lo que TCP proporciona para los paquetes sobre puentes de IP. Para obtener más información acerca de las sesiones confiables, vea [sesiones confiables](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
 ### <a name="queues"></a>Colas  
- Las colas de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporcionan transferencias confiables de mensajes y separación entre los orígenes y los destinos a costa de una latencia alta. La comunicación en cola de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se basa en Message Queuing Server (también conocido como MSMQ).  
+ Las colas en WCF proporcionan a transferencias confiables de mensajes y separación entre los orígenes y destinos a costa de una latencia elevada. WCF en cola la comunicación se basa en Message Queuing (también conocido como MSMQ).  
   
  MSMQ se distribuye como una opción con Windows que se ejecuta como un servicio de NT. Captura mensajes para la transmisión en una cola de transmisión en nombre del origen y lo entrega a una cola de destino. La cola de destino acepta los mensajes en nombre del destino para la entrega posterior siempre que el destino solicite mensajes. Los administradores de cola de MSMQ implementan un protocolo de transferencias de mensajes de confianza para que los mensajes no se pierdan durante la transmisión. El protocolo puede ser nativo o basado en SOAP, como, por ejemplo, Soap Reliable Messaging Protocol (SRMP).  
   

@@ -1,31 +1,17 @@
 ---
 title: Identidad del servicio y autenticación
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5bd550b7408e9db00daf7793cd0a7f1261e21ccf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 21184098f90be3b64cfccd5ab98a1824cee50e48
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-identity-and-authentication"></a>Identidad del servicio y autenticación
 Un servicio *identidad de extremo*es un valor generado desde el servicio de lenguaje de descripción de servicios Web (WSDL). Este valor, propagado a cualquier cliente, se utiliza para autenticar el servicio. Después de que el cliente inicie una comunicación con un punto de conexión y el servicio se autentique a sí mismo ante el cliente, el cliente compara el valor de identidad del punto de conexión con el valor real devuelto por el proceso de autenticación del punto de conexión. Si coinciden, se asegura al cliente que se ha puesto en contacto con el punto de conexión de servicio esperado. Esto funciona como una protección contra *"phishing"* evitando que un cliente sea redirigido a un punto de conexión hospedado por un servicio malintencionado.  
@@ -35,7 +21,7 @@ Un servicio *identidad de extremo*es un valor generado desde el servicio de leng
 > [!NOTE]
 >  Al utilizar NT LanMan (NTLM) para la autenticación, no se comprueba la identidad del servicio porque, bajo NTLM, el cliente no puede autenticar el servidor. Se utiliza NTLM cuando los equipos forman parte de un grupo de trabajo de Windows, o al ejecutar una versión anterior de Windows que no admite la autenticación Kerberos.  
   
- Cuando el cliente inicia un canal seguro para enviar un mensaje a un servicio sobre él, la infraestructura de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] autentica el servicio, y solo envía el mensaje si la identidad del servicio coincide con la identidad especificada en la dirección del extremo que utiliza el cliente.  
+ Cuando el cliente inicia un canal seguro para enviar un mensaje a un servicio sobre él, la infraestructura de Windows Communication Foundation (WCF) autentica el servicio y solo envía el mensaje si la identidad del servicio coincide con la identidad especificada en el punto de conexión dirección que utiliza el cliente.  
   
  El procesamiento de la identidad consta de las siguientes fases:  
   
@@ -45,7 +31,7 @@ Un servicio *identidad de extremo*es un valor generado desde el servicio de leng
   
  El procesamiento de identidad en el cliente es análogo a la autenticación del cliente en el servicio. Un servicio seguro no ejecuta código hasta que se hayan autenticado las credenciales del cliente. Del mismo modo, el cliente no envía mensajes al servicio hasta que las credenciales del servicio se hayan autenticado en función de lo que se conoce de antemano de los metadatos del servicio.  
   
- La propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A> de la clase <xref:System.ServiceModel.EndpointAddress> representa la identidad del servicio llamada por el cliente. El servicio publica la <xref:System.ServiceModel.EndpointAddress.Identity%2A> en sus metadatos. Cuando se ejecuta el programador del cliente la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) respecto al extremo de servicio, la configuración generada contiene el valor del servicio <xref:System.ServiceModel.EndpointAddress.Identity%2A> propiedad. La infraestructura de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (si se configura con seguridad) comprueba que el servicio posea la identidad especificada.  
+ La propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A> de la clase <xref:System.ServiceModel.EndpointAddress> representa la identidad del servicio llamada por el cliente. El servicio publica la <xref:System.ServiceModel.EndpointAddress.Identity%2A> en sus metadatos. Cuando se ejecuta el programador del cliente la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) respecto al extremo de servicio, la configuración generada contiene el valor del servicio <xref:System.ServiceModel.EndpointAddress.Identity%2A> propiedad. La infraestructura de WCF (si se configuró con seguridad) comprueba que el servicio posea la identidad especificada.  
   
 > [!IMPORTANT]
 >  Los metadatos contienen la identidad esperada del servicio, por lo que se recomienda que exponga los metadatos del servicio a través de medios seguros, como, por ejemplo, creando un punto de conexión HTTPS para el servicio. Para obtener más información, consulte [Cómo: proteger los extremos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
@@ -75,7 +61,7 @@ Un servicio *identidad de extremo*es un valor generado desde el servicio de leng
   
   
 ## <a name="setting-identity-programmatically"></a>Establecimiento mediante programación de la identidad  
- Su servicio no tiene que especificar explícitamente una identidad, porque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lo determina automáticamente. Sin embargo, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] le permite especificar una identidad en un extremo, si se requiere. El código siguiente agrega un nuevo punto de conexión de servicio con una identidad de DNS concreta.  
+ El servicio no tiene que especificar explícitamente una identidad, porque WCF determina automáticamente. Sin embargo, WCF permite especificar una identidad en un punto de conexión, si es necesario. El código siguiente agrega un nuevo punto de conexión de servicio con una identidad de DNS concreta.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
@@ -99,13 +85,13 @@ Un servicio *identidad de extremo*es un valor generado desde el servicio de leng
   
  Si el canal se configura para autenticar mediante capa de sockets seguros (SSL) del nivel de transporte o mensaje con certificados X.509 para la autenticación, los siguientes valores de identidad son válidos:  
   
--   DNS. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SSL garantiza que el certificado proporcionado durante el protocolo contiene un enlace DNS o el atributo (CN) `CommonName` igual al valor especificado en la identidad de DNS del cliente. Observe que estas comprobaciones se hacen además de determinar la validez del certificado de servidor. De forma predeterminada, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] valida que una entidad emisora raíz de confianza emite el certificado de servidor.  
+-   DNS. WCF se asegura de que el certificado proporcionado durante el protocolo de enlace SSL contiene un DNS o `CommonName` atributo (CN) igual al valor especificado en la identidad DNS en el cliente. Observe que estas comprobaciones se hacen además de determinar la validez del certificado de servidor. De forma predeterminada, WCF valida que el certificado de servidor es emitido por una entidad emisora raíz de confianza.  
   
--   Certificado. Durante el protocolo de enlace de SSL, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] asegura que el extremo remoto proporciona el valor de certificado exacto especificado en la identidad.  
+-   Certificado. Durante el protocolo de enlace SSL, WCF se asegura de que el extremo remoto proporciona el valor de certificado exacto especificado en la identidad.  
   
 -   Referencia del certificado. Igual que el certificado.  
   
--   RSA. Durante el protocolo de enlace SSL, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] asegura que el extremo remoto proporciona la clave RSA exacta especificada en la identidad.  
+-   RSA. Durante el protocolo de enlace SSL, WCF se asegura de que el extremo remoto proporciona la clave RSA exacta especificada en la identidad.  
   
  Si el servicio autentica utilizando SSL de nivel de transporte o mensaje con una credencial de Windows para la autenticación y negocia la credencial, son válidos los siguientes valores de identidad:  
   

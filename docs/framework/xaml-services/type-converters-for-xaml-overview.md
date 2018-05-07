@@ -1,28 +1,16 @@
 ---
-title: "Información general sobre los convertidores de tipos para XAML"
-ms.custom: 
+title: Información general sobre los convertidores de tipos para XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converters
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-caps.latest.revision: "14"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b59b88c38b6fa7f810bb3a12de09a962eb5679c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: df6b7f212a60d8d51bb684891055de7e285ddf4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-converters-for-xaml-overview"></a>Información general sobre los convertidores de tipos para XAML
 Los convertidores de tipos proporcionan la lógica de un sistema de escritura de objetos que convierte una cadena de marcado XAML en objetos concretos en un gráfico de objetos. En los servicios XAML de .NET Framework, el convertidor de tipos tiene que ser una clase que se deriva de <xref:System.ComponentModel.TypeConverter>. Algunos convertidores también admiten la ruta de acceso de guardado de XAML y se pueden usar para serializar un objeto en forma de cadena en el marcado de serialización. En este tema se describe cómo y cuándo se invocan convertidores de tipos en XAML y se incluyen consejos de implementación para los reemplazos de método de <xref:System.ComponentModel.TypeConverter>.  
@@ -81,7 +69,7 @@ Los convertidores de tipos proporcionan la lógica de un sistema de escritura de
  Cada implementación de <xref:System.ComponentModel.TypeConverter> puede interpretar de manera única qué constituye una cadena válida para una conversión y, también, puede usar o ignorar la descripción del tipo o los contextos de referencia cultural pasados como parámetros. Sin embargo, el procesamiento de XAML de WPF podría no pasar valores al contexto de descripción del tipo en todos los casos y, asimismo, no pasar referencias culturales basadas en `xml:lang`.  
   
 > [!NOTE]
->  No use llaves ({}), más concretamente, la llave de apertura ({}), como un elemento de su formato de cadena. Estos caracteres están reservados como entrada y salida de una secuencia de extensión de marcado.  
+>  No utilice las llaves ({}), específicamente la llave de apertura ({}), como un elemento de su formato de cadena. Estos caracteres están reservados como entrada y salida de una secuencia de extensión de marcado.  
   
  Resulta adecuado generar una excepción cuando el convertidor de tipos ha de tener acceso a un servicio XAML desde el sistema de escritura de objeto de los servicios XAML de .NET Framework, pero la llamada a <xref:System.IServiceProvider.GetService%2A> que se realiza en el contexto no devuelve ese servicio.  
   
@@ -106,7 +94,7 @@ Los convertidores de tipos proporcionan la lógica de un sistema de escritura de
 ## <a name="applying-the-typeconverterattribute"></a>Aplicación de TypeConverterAttribute  
  Para que los servicios XAML de .NET Framework usen su convertidor de tipos personalizado como el convertidor de tipos que actúa para una clase personalizada, es necesario aplicar el [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> en su definición de clase. El <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> que se especifica a través del atributo debe ser el nombre de tipo del convertidor de tipos personalizado. Si aplica este atributo, cuando un procesador XAML controla valores donde el tipo de propiedad usa el tipo de la clase personalizada, puede especificar cadenas y devolver instancias de objeto.  
   
- También puede proporcionar un convertidor de tipos por cada propiedad. En lugar de aplicar un [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> a la definición de clase, aplíquelo a una definición de propiedad (la definición principal, no las implementaciones de `get`/`set` dentro de ella). El tipo de la propiedad tiene que coincidir con el tipo que el convertidor de tipos personalizado procesa. Con este atributo aplicado, cuando un procesador XAML controla valores de esa propiedad, puede procesar cadenas de entrada y devolver instancias de objeto. La técnica de convertidor de tipos por propiedad resulta especialmente útil si decide usar un tipo de propiedad de [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] o de alguna otra biblioteca donde no se puede controlar la definición de clase y no se puede aplicar un <xref:System.ComponentModel.TypeConverterAttribute> .  
+ También puede proporcionar un convertidor de tipos por cada propiedad. En lugar de aplicar un [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> a la definición de clase, aplíquelo a una definición de propiedad (la definición principal, no las implementaciones de `get`/`set` dentro de ella). El tipo de la propiedad tiene que coincidir con el tipo que el convertidor de tipos personalizado procesa. Con este atributo aplicado, cuando un procesador XAML controla valores de esa propiedad, puede procesar cadenas de entrada y devolver instancias de objeto. La técnica de convertidor de tipos por propiedad resulta especialmente útil si decide usar un tipo de propiedad de Microsoft .NET Framework o de alguna otra biblioteca donde no se puede controlar la definición de clase y no se puede aplicar un <xref:System.ComponentModel.TypeConverterAttribute> no existe.  
   
  Para proporcionar un comportamiento de conversión de tipos para un miembro asociado personalizado, aplique <xref:System.ComponentModel.TypeConverterAttribute> al método de descriptor de acceso `Get` del patrón de implementación del miembro asociado.  
   

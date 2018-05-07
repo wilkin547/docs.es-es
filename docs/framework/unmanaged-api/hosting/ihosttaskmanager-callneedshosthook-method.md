@@ -1,14 +1,6 @@
 ---
-title: "IHostTaskManager::CallNeedsHostHook (Método)"
-ms.custom: 
+title: IHostTaskManager::CallNeedsHostHook (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.CallNeedsHostHook
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: b60f1f59-9825-4b57-961f-d2979518e6a7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4774c9f37f73692bf8d9455c51e76aa4c590f925
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 983cad5ed87d0666ed71a805a3b3f7a3c7e7c091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>IHostTaskManager::CallNeedsHostHook (Método)
 Permite al host especificar si common language runtime (CLR) puede procesar en línea la llamada especificada a una función no administrada.  
@@ -58,7 +46,7 @@ HRESULT CallNeedsHostHook (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`CallNeedsHostHook`se devolvió correctamente.|  
+|S_OK|`CallNeedsHostHook` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El CLR no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|La llamada agotó el tiempo de espera.|  
 |HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
@@ -66,7 +54,7 @@ HRESULT CallNeedsHostHook (
 |E_FAIL|Se ha producido un error catastrófico desconocido. Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- Con el fin de optimizar la ejecución de código, el CLR realiza un análisis de cada plataforma de llamada de invocación de durante la compilación para determinar si se puede alinear la llamada. `CallNeedsHostHook`permite al host reemplazar esa decisión exigiendo que se puede enlazar una llamada a una función no administrada. Si el host requiere un enlace, el tiempo de ejecución no alinea la llamada.  
+ Con el fin de optimizar la ejecución de código, el CLR realiza un análisis de cada plataforma de llamada de invocación de durante la compilación para determinar si se puede alinear la llamada. `CallNeedsHostHook` permite al host reemplazar esa decisión exigiendo que se puede enlazar una llamada a una función no administrada. Si el host requiere un enlace, el tiempo de ejecución no alinea la llamada.  
   
  El host normalmente requeriría un enlace donde debe ajustar un estado de punto flotante, o tras recibir la notificación de que una llamada está entrando en un estado donde el host no puede realizar un seguimiento de las solicitudes de tiempo de ejecución para memoria o cualquier bloqueo tomado. Cuando el host requiere que se enlace la llamada, el tiempo de ejecución notifica al host de las transiciones a y desde el código administrado mediante llamadas a [EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md), [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md), [ ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), y [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
   
@@ -77,7 +65,7 @@ HRESULT CallNeedsHostHook (
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICLRTask (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

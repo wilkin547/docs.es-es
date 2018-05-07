@@ -1,22 +1,12 @@
 ---
-title: "Cómo: consultar LINQ to XML utilizando XPath (Visual Basic)"
-ms.custom: 
+title: 'Cómo: consultar LINQ to XML utilizando XPath (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e1f69a20-1efa-452d-9089-c472fa84b3d5
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 97f885a76a79832b06f2f5d4a270d418bf244cb2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d8f23bd8417c3f59377e5e677b08e403ecc1122d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-visual-basic"></a>Cómo: consultar LINQ to XML utilizando XPath (Visual Basic)
 Este tema presenta los métodos de extensión que permiten consultar un árbol XML con XPath. Para obtener información detallada acerca del uso de estos métodos de extensión, vea <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  

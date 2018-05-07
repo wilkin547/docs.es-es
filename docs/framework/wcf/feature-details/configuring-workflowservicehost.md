@@ -1,27 +1,15 @@
 ---
 title: Configurar WorkflowServiceHost
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d8e961cb-0ef5-4f8c-8a25-e76ae6334fed
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 743a2541552e5378403234675c43a2a0224a1cc4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9fed1cc297b0b014d76baf5a870d7f98b421ae48
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-workflowservicehost"></a>Configurar WorkflowServiceHost
-Esta sección contiene un conjunto de corta "how to" temas que describen brevemente cómo configurar diversas características de la <xref:System.ServiceModel.Activities.WorkflowServiceHost> clase en la configuración. Estos temas incluyen la configuración específica del servicio de flujo de trabajo; el resto de la configuración se realiza de la misma manera que un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] normal.  
+Esta sección contiene un conjunto de corta "how to" temas que describen brevemente cómo configurar diversas características de la <xref:System.ServiceModel.Activities.WorkflowServiceHost> clase en la configuración. Estos temas incluyen la configuración específica del servicio de flujo de trabajo; el resto de la configuración se realiza en la misma manera que un servicio WCF normal.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Configuración de la persistencia con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md)  

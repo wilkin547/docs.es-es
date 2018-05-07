@@ -1,31 +1,17 @@
 ---
-title: "Información general sobre el control DateTimePicker (formularios Windows Forms)"
-ms.custom: 
+title: Información general sobre el control DateTimePicker (formularios Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - DateTimePicker
 helpviewer_keywords:
 - DateTimePicker control [Windows Forms], about
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0db5e532a2688d7f213fd42772234b9600192390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf44cdff7da06a27921ce5881199a3a88b1096f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>Información general sobre el control DateTimePicker (formularios Windows Forms)
 Los formularios Windows Forms <xref:System.Windows.Forms.DateTimePicker> control permite al usuario seleccionar un único elemento de una lista de fechas u horas. Cuando se utiliza para representar una fecha, aparece en dos partes: una lista desplegable con una fecha representada como texto y una cuadrícula que aparece al hacer clic en la flecha abajo junto a la lista. La cuadrícula es similar a la <xref:System.Windows.Forms.MonthCalendar> control, que puede utilizarse para seleccionar múltiples fechas. Para obtener más información sobre la <xref:System.Windows.Forms.MonthCalendar> control, vea [información general del Control MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md).  

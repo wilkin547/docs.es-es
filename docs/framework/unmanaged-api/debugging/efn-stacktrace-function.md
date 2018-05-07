@@ -1,14 +1,6 @@
 ---
-title: "_EFN_StackTrace (Función)"
-ms.custom: 
+title: _EFN_StackTrace (Función)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - _EFN_StackTrace
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: caea7754-867c-4360-a65c-5ced4408fd9d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 905a44ee3187bc920d9342b043383a1500c28985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39a249108d10e5dc382775378e2d6b84bba87356
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="efnstacktrace-function"></a>_EFN_StackTrace (Función)
 Proporciona una representación de texto de un seguimiento de pila administrado y una matriz de registros `CONTEXT`, uno por cada transición entre código no administrado y código administrado.  
@@ -86,7 +74,7 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 -   Si `pTransitionContexts` es no es null, la función lo trata como una matriz de estructuras de longitud `puiTransitionContextCount`. El tamaño de la estructura es proporcionado por `uiSizeOfContext`, y debe tener el tamaño de [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) o `CONTEXT` para la arquitectura.  
   
--   `wszTextOut`se escribe en el formato siguiente:  
+-   `wszTextOut` se escribe en el formato siguiente:  
   
     ```  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -110,7 +98,7 @@ HRESULT CALLBACK _EFN_StackTrace(
   
  **Encabezado:** SOS_Stacktrace.h  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones estáticas globales de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

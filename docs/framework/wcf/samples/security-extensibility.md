@@ -1,27 +1,17 @@
 ---
 title: Extensibilidad de la seguridad
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: eb9038ee6e28cdb5fbf213d56542419e7cdf36c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f68d842b305c37a9e23bf23429c0bfb66a8eae4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-extensibility"></a>Extensibilidad de la seguridad
-Esta sección contiene ejemplos que muestran la seguridad personalizada en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Esta sección contiene ejemplos que muestran la seguridad personalizada en Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Proveedor de token emitido duradero](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
@@ -49,7 +39,7 @@ Esta sección contiene ejemplos que muestran la seguridad personalizada en [!INC
  Muestra cómo implementar una directiva de autorización de notificación personalizada y un administrador de autorización de servicio personalizado asociado.  
   
  [Token personalizado](../../../../docs/framework/wcf/samples/custom-token.md)  
- Muestra cómo agregar una implementación de token personalizada en una aplicación [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Muestra cómo agregar una implementación de token personalizada en una aplicación de Windows Communication Foundation (WCF).  
   
  [Validación de cliente](../../../../docs/framework/wcf/samples/client-validation.md)  
  Muestra cómo escribir un comportamiento de punto de conexión de cliente que valida el punto de conexión de servicio para asegurarse de que el punto de conexión de servicio puede utilizarse con seguridad.

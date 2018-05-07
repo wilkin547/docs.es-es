@@ -1,32 +1,18 @@
 ---
-title: "Creación de un cliente de Windows Communication Foundation"
-ms.custom: 
+title: Creación de un cliente de Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2591cad6354ec40f1fb6ead265c84a67adf3eec8
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 962f1255f3c759d623850678005eff138353cc80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Creación de un cliente de Windows Communication Foundation
-Es la cuarta de las seis tareas necesarias para crear una aplicación de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Para obtener información general de las seis de las tareas, consulte la [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md) tema.  
+Se trata de la cuarta de las seis tareas necesarias para crear una aplicación de Windows Communication Foundation (WCF). Para obtener información general de las seis de las tareas, consulte la [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md) tema.  
   
  En este tema se describe cómo se pueden recuperar metadatos desde un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y usarlos para crear un proxy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que pueda obtener acceso al servicio. Esta tarea se completa usando la funcionalidad Agregar referencia de servicio proporcionada por Visual Studio. Esta herramienta obtiene los metadatos del extremo MEX del servicio y genera un archivo de código fuente administrado para un proxy de cliente en el lenguaje elegido (C# de forma predeterminada). Además de crear el proxy de cliente, la herramienta también crea o actualiza el archivo de configuración de cliente que permite que la aplicación cliente se conecte al servicio en uno de sus puntos de conexión.  
   
@@ -48,7 +34,7 @@ Es la cuarta de las seis tareas necesarias para crear una aplicación de [!INCLU
   
 3.  Agregue una referencia a System.ServiceModel al proyecto GettingStartedClient haciendo clic en el **referencia** carpeta bajo el proyecto GettingStartedClient en el Explorador de soluciones y seleccione **agregar** Referencia. En el **Agregar referencia** diálogo seleccione **Framework** en el lado izquierdo del cuadro de diálogo. En el cuadro de texto Ensamblados de búsqueda, escriba `System.ServiceModel`. En la sección central del cuadro de diálogo Seleccionar **System.ServiceModel**, haga clic en el **agregar** y haga clic en el **cerrar** botón. Guarde la solución haciendo clic en el **guardar todo** botón debajo del menú principal.  
   
-4.  Después agregará una referencia de servicio al servicio de Calculadora. Antes de poder hacerlo, debe iniciar la aplicación de consola GettingStartedHost. Una vez que se ejecuta el host puede haga clic en la carpeta referencias bajo el proyecto GettingStartedClient en el Explorador de soluciones y seleccione Agregar referencia de servicio y escriba la dirección URL siguiente en el cuadro Dirección del cuadro de diálogo Agregar referencia de servicio: HYPERLINK "http:/ / localhost:8000/ServiceModelSamples/Service "http://localhost: 8000/ServiceModelSamples/Service y haga clic en el **vaya** botón. CalculatorService se deberá mostrar en el cuadro de lista Servicios; haga doble clic en CalculatorService y se expandirá y mostrará los contratos de servicio implementados por el servicio. Deje el espacio de nombres predeterminado, tal y como está y haga clic en el **Aceptar** botón.  
+4.  Después agregará una referencia de servicio al servicio de Calculadora. Antes de poder hacerlo, debe iniciar la aplicación de consola GettingStartedHost. Una vez que se ejecuta el host puede haga clic en la carpeta referencias bajo el proyecto GettingStartedClient en el Explorador de soluciones y seleccione Agregar referencia de servicio y escriba la dirección URL siguiente en el cuadro Dirección del cuadro de diálogo Agregar referencia de servicio: hipervínculo "http://localhost:8000/ServiceModelSamples/Service" http://localhost:8000/ServiceModelSamples/Service y haga clic en el **vaya** botón. CalculatorService se deberá mostrar en el cuadro de lista Servicios; haga doble clic en CalculatorService y se expandirá y mostrará los contratos de servicio implementados por el servicio. Deje el espacio de nombres predeterminado, tal y como está y haga clic en el **Aceptar** botón.  
   
      Cuando se agrega una referencia a un servicio usando Visual Studio, aparecerá un nuevo elemento en el Explorador de soluciones bajo la carpeta Referencias de servicio bajo el proyecto GettingStartedClient.  Si usas el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta generará un archivo de código fuente y el archivo app.config.  
   

@@ -1,10 +1,6 @@
 ---
-title: "Funciones de conversión de tipos (Visual Basic)"
+title: Funciones de conversión de tipos (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CUShort
 - vb.csng
@@ -85,14 +81,11 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 117cd4ce038a533715bbc86558545f0f223dd149
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c9222bdb31f4fd7c792d5a50c100067e29e9d537
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funciones de conversión de tipos (Visual Basic)
 Estas funciones están compilados de forma alineada, lo que significa que el código de conversión forma parte del código que evalúa la expresión. En ocasiones, no hay ninguna llamada a un procedimiento para realizar la conversión, lo que mejora el rendimiento. Cada función convierte una expresión al tipo de datos específico.  
@@ -120,7 +113,7 @@ CUShort(expression)
   
 ## <a name="part"></a>Parte  
  `expression`  
- Obligatorio. Cualquier expresión del tipo de datos de origen.  
+ Requerido. Cualquier expresión del tipo de datos de origen.  
   
 ## <a name="return-value-data-type"></a>Tipo de datos de valor devuelto  
  El nombre de la función determina el tipo de datos del valor que devuelve, como se muestra en la tabla siguiente.  
@@ -159,9 +152,9 @@ CUShort(expression)
   
      Si la parte fraccionaria es exactamente 0,5, las funciones de conversión de enteros de ida y vuelta para el entero par más próximo. Por ejemplo, 0,5 se redondea a 0 y 1,5 y 2,5 se redondean a 2. Esto se denomina a veces *el redondeo bancario*, y su finalidad es compensar una tendencia que se podría acumular al sumar muchos de estos números.  
   
-     `CInt`y `CLng` diferencian el <xref:Microsoft.VisualBasic.Conversion.Int%2A> y <xref:Microsoft.VisualBasic.Conversion.Fix%2A> funciones, que se truncan en lugar de redondean, la parte fraccionaria de un número. Además, `Fix` y `Int` siempre devuelven un valor del mismo tipo de datos que se pasa.  
+     `CInt` y `CLng` diferencian el <xref:Microsoft.VisualBasic.Conversion.Int%2A> y <xref:Microsoft.VisualBasic.Conversion.Fix%2A> funciones, que se truncan en lugar de redondean, la parte fraccionaria de un número. Además, `Fix` y `Int` siempre devuelven un valor del mismo tipo de datos que se pasa.  
   
--   **Conversiones de fecha y hora.** Use la <xref:Microsoft.VisualBasic.Information.IsDate%2A> función para determinar si se puede convertir un valor a una fecha y hora. `CDate`reconoce literales de fecha y literales de tiempo pero no valores numéricos. Para convertir un Visual Basic 6.0 `Date` valor a un `Date` valor en Visual Basic 2005 o versiones posteriores, puede usar el <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> método.  
+-   **Conversiones de fecha y hora.** Use la <xref:Microsoft.VisualBasic.Information.IsDate%2A> función para determinar si se puede convertir un valor a una fecha y hora. `CDate` reconoce literales de fecha y literales de tiempo pero no valores numéricos. Para convertir un Visual Basic 6.0 `Date` valor a un `Date` valor en Visual Basic 2005 o versiones posteriores, puede usar el <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> método.  
   
 -   **Neutral valores de fecha y hora.** El [tipo de datos Date](../../../visual-basic/language-reference/data-types/date-data-type.md) siempre contiene información de fecha y hora. Para fines de conversión de tipos, Visual Basic considera 1/1/0001 (del 1 de enero del año 1) como un *valor neutral* de fecha y 00:00:00 (medianoche) un valor neutral por vez. Si convierte un `Date` valor en una cadena, `CStr` no incluye valores neutrales en la cadena resultante. Por ejemplo, si convierte `#January 1, 0001 9:30:00#` en una cadena, el resultado es "9:30:00 AM"; se suprime la información de fecha. Sin embargo, la información de fecha aún está presente en la versión original `Date` valor y se pueden recuperar con funciones como <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> (función).  
   
@@ -194,7 +187,7 @@ CUShort(expression)
  [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
 ## <a name="cdate-example"></a>En el ejemplo se CDate  
- En el ejemplo siguiente se usa el `CDate` función para convertir cadenas a `Date` valores. En general, no se recomienda codificar de forma rígida fechas y horas como cadenas (como se muestra en este ejemplo). Usar literales de fecha y hora, por ejemplo #Feb 12, &#1969; y # 4:45:23 P.M. # en su lugar.  
+ En el ejemplo siguiente se usa el `CDate` función para convertir cadenas a `Date` valores. En general, no se recomienda codificar de forma rígida fechas y horas como cadenas (como se muestra en este ejemplo). Usar literales de fecha y hora, por ejemplo #Feb 12, 1969 # y # 4:45:23 P.M. # en su lugar.  
   
  [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
@@ -245,7 +238,7 @@ CUShort(expression)
   
  [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
- `CStr`siempre presenta un `Date` valor en el formato corto estándar de la configuración regional, por ejemplo, "15/6/2003 4:35:47 P.M.". Sin embargo, `CStr` suprime la *valores neutrales* de 1/1/0001 para la fecha y 00:00:00 para la hora.  
+ `CStr` siempre presenta un `Date` valor en el formato corto estándar de la configuración regional, por ejemplo, "15/6/2003 4:35:47 P.M.". Sin embargo, `CStr` suprime la *valores neutrales* de 1/1/0001 para la fecha y 00:00:00 para la hora.  
   
  Para obtener más detalles sobre los valores devueltos por `CStr`, consulte [valores devueltos para la función CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
   

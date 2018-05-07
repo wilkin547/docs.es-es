@@ -1,21 +1,14 @@
 ---
 title: Módulos (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cd92be378894235f4753cfc52e8382a1960bd37b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 33ca7bde852e6c38e0b52d4fcbbf4114861b3be0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modules-visual-basic"></a>Módulos (Visual Basic)
 Visual Basic proporciona varios módulos que permiten simplificar las tareas comunes en el código, incluida la manipulación de cadenas, realizar cálculos matemáticos, obtención de información del sistema, la realización de operaciones de archivos y directorios y así sucesivamente. En la tabla siguiente se enumera los módulos proporcionados por Visual Basic.  

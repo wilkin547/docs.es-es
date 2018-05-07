@@ -1,31 +1,19 @@
 ---
-title: "Validación de cliente"
-ms.custom: 
+title: Validación de cliente
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd9c698962bbca04ac05473265d95fc00517b039
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a5c1c5f907a797bff3dff490cbc953879ab69718
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-validation"></a>Validación de cliente
 Los servicios publican frecuentemente los metadatos para habilitar la generación automática y la configuración de tipos de proxy de cliente. Cuando no se confía en el servicio, las aplicaciones cliente deberían comprobar y validar que los metadatos cumplen con la directiva de la aplicación cliente con respecto a la seguridad, transacciones, el tipo de contrato de servicios etc. El siguiente ejemplo muestra cómo escribir un comportamiento de extremo de cliente que valide el extremo de servicio para asegurarse de que el extremo de servicio puede utilizarse con seguridad.  
   
  El servicio expone cuatro extremos de servicio. El primer extremo utiliza WSDualHttpBinding, el segundo extremo utiliza la autenticación NTLM, el tercer extremo habilita el flujo de la transacción y el cuarto extremo utiliza la autenticación basada en certificados.  
   
- El cliente utiliza la clase <xref:System.ServiceModel.Description.MetadataResolver> para recuperar los metadatos para el servicio. El cliente exige una directiva que prohíba los enlaces dúplex, la autenticación NTLM y el flujo de la transacción mediante un comportamiento que se encargue de validar. Por cada instancia <xref:System.ServiceModel.Description.ServiceEndpoint> importada de los metadatos del servicio, la aplicación cliente agrega una instancia del comportamiento de extremo `InternetClientValidatorBehavior` a <xref:System.ServiceModel.Description.ServiceEndpoint> antes de intentar utilizar un cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para conectarse al extremo. El método `Validate` de comportamiento se ejecuta antes de llamar cualquier operación en el servicio y exige la directiva del cliente iniciando `InvalidOperationExceptions`.  
+ El cliente utiliza la clase <xref:System.ServiceModel.Description.MetadataResolver> para recuperar los metadatos para el servicio. El cliente exige una directiva que prohíba los enlaces dúplex, la autenticación NTLM y el flujo de la transacción mediante un comportamiento que se encargue de validar. Para cada <xref:System.ServiceModel.Description.ServiceEndpoint> instancia importado desde los metadatos del servicio, la aplicación cliente agrega una instancia de la `InternetClientValidatorBehavior` comportamiento de punto de conexión para el <xref:System.ServiceModel.Description.ServiceEndpoint> antes de intentar usar un cliente de Windows Communication Foundation (WCF) para conectarse a el punto de conexión. El método `Validate` de comportamiento se ejecuta antes de llamar cualquier operación en el servicio y exige la directiva del cliente iniciando `InvalidOperationExceptions`.  
   
 ### <a name="to-build-the-sample"></a>Para compilar el ejemplo  
   

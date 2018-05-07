@@ -1,34 +1,20 @@
 ---
 title: Nombres de contratos de datos
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18ba9aa1f7af3733acd60924d0aa24ceb1b5126c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-names"></a>Nombres de contratos de datos
-A veces un cliente y un servicio no comparten los mismos tipos. Todavía pueden pasar datos entre sí porque los contratos de datos son equivalentes en ambos lados. [Equivalencia del contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) se basa en el contrato de datos y nombres de miembro de datos, y, por tanto, se proporciona un mecanismo para asignar los tipos y miembros a esos nombres. En este tema se explican las reglas para nombrar contratos de datos, así como el comportamiento predeterminado de la infraestructura de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] al crear los nombres.  
+A veces un cliente y un servicio no comparten los mismos tipos. Todavía pueden pasar datos entre sí porque los contratos de datos son equivalentes en ambos lados. [Equivalencia del contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) se basa en el contrato de datos y nombres de miembro de datos, y, por tanto, se proporciona un mecanismo para asignar los tipos y miembros a esos nombres. En este tema se explica las reglas para asignar nombres a los contratos de datos, así como el comportamiento predeterminado de la infraestructura de Windows Communication Foundation (WCF) al crear nombres.  
   
 ## <a name="basic-rules"></a>Reglas básicas  
  Entre las reglas básicas con respecto a los nombres de los contratos de datos se incluyen:  
@@ -37,7 +23,7 @@ A veces un cliente y un servicio no comparten los mismos tipos. Todavía pueden 
   
 -   Los miembros de datos solo tienen nombres, pero no espacios de nombres.  
   
--   Al procesar los contratos de datos, la infraestructura de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] distingue entre mayúsculas y minúsculas tanto en los espacios de nombres como en los nombres de contratos de datos y miembros de datos.  
+-   Cuando se procesan los contratos de datos, la infraestructura de WCF distingue mayúsculas de minúsculas para los espacios de nombres y los nombres de contratos de datos y los miembros de datos.  
   
 ## <a name="data-contract-namespaces"></a>Espacios de nombres de contratos de datos  
  Un espacio de nombres de contrato de datos toma la forma de un Identificador uniforme de recursos (URI). El URI puede ser absoluto o relativo. De forma predeterminada, se asigna un espacio de nombres que procede del espacio de nombres de Common Language Runtime (CLR) de ese tipo a los contratos de datos de un tipo determinado.  
@@ -45,7 +31,7 @@ A veces un cliente y un servicio no comparten los mismos tipos. Todavía pueden 
  De forma predeterminada, cualquier espacio de nombres CLR (en el formato *Clr.Namespace*) se asigna al espacio de nombres "http://schemas.datacontract.org/2004/07/Clr.Namespace". Para invalidar este valor predeterminado, aplique el atributo <xref:System.Runtime.Serialization.ContractNamespaceAttribute> al ensamblado o módulo completo. De manera alternativa, para controlar el espacio de nombres del contrato de datos de cada tipo, establezca la propiedad <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> del <xref:System.Runtime.Serialization.DataContractAttribute>.  
   
 > [!NOTE]
->  El espacio de nombres "Http://schemas.microsoft.com/2003/10/Serialization” está reservado y no se puede utilizar como un espacio de nombres de contrato de datos.  
+>  El "http://schemas.microsoft.com/2003/10/Serialization"espacio de nombres está reservado y no se puede usar como un espacio de nombres de contrato de datos.  
   
 > [!NOTE]
 >  No puede invalidar el espacio de nombres predeterminado en tipos de contratos de datos que contengan declaraciones `delegate`.  

@@ -1,13 +1,6 @@
 ---
-title: "Interceptar entradas del lápiz óptico"
-ms.custom: 
+title: Interceptar entradas del lápiz óptico
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5fde62e2e1ab17b26c91051f68b7d4225450c60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 813c5f6060b3a59358b286c93a9077debd41a746
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Interceptar entradas del lápiz óptico
 El <xref:System.Windows.Input.StylusPlugIns> arquitectura proporciona un mecanismo para implementar el control de bajo nivel sobre <xref:System.Windows.Input.Stylus> de entrada y la creación de la entrada de lápiz digital <xref:System.Windows.Ink.Stroke> objetos. La <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> clase proporciona un mecanismo para implementar un comportamiento personalizado y aplicarlo a la secuencia de datos procedente del dispositivo de lápiz para lograr un rendimiento óptimo.  
@@ -45,7 +33,7 @@ El <xref:System.Windows.Input.StylusPlugIns> arquitectura proporciona un mecanis
 ## <a name="architecture"></a>Arquitectura  
  El <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> es la evolución de la [StylusInput](http://go.microsoft.com/fwlink/?LinkId=50753&clcid=0x409) API, descritas en [acceder y manipular entradas manuscritas](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409), en el [Software de Microsoft Windows XP Tablet PC Edition Kit de desarrollo de 1.7](http://go.microsoft.com/fwlink/?linkid=11782&clcid=0x409).  
   
- Cada <xref:System.Windows.UIElement> tiene un <xref:System.Windows.UIElement.StylusPlugIns%2A> propiedad que sea un <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>. Puede agregar un <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> a un elemento <xref:System.Windows.UIElement.StylusPlugIns%2A> propiedad para manipular <xref:System.Windows.Input.StylusPoint> datos a medida que se generan. <xref:System.Windows.Input.StylusPoint>los datos están compuestos de todas las propiedades admitidas por el digitalizador de sistema, incluidos el <xref:System.Windows.Input.StylusPoint.X%2A> y <xref:System.Windows.Input.StylusPoint.Y%2A> punto de datos, así como <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> datos.  
+ Cada <xref:System.Windows.UIElement> tiene un <xref:System.Windows.UIElement.StylusPlugIns%2A> propiedad que sea un <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>. Puede agregar un <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> a un elemento <xref:System.Windows.UIElement.StylusPlugIns%2A> propiedad para manipular <xref:System.Windows.Input.StylusPoint> datos a medida que se generan. <xref:System.Windows.Input.StylusPoint> los datos están compuestos de todas las propiedades admitidas por el digitalizador de sistema, incluidos el <xref:System.Windows.Input.StylusPoint.X%2A> y <xref:System.Windows.Input.StylusPoint.Y%2A> punto de datos, así como <xref:System.Windows.Input.StylusPoint.PressureFactor%2A> datos.  
   
  Su <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objetos se insertan directamente en el flujo de datos procedentes de la <xref:System.Windows.Input.Stylus> dispositivo cuando se agrega el <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> a la <xref:System.Windows.UIElement.StylusPlugIns%2A> propiedad. El orden en que se agregan los complementos a la <xref:System.Windows.UIElement.StylusPlugIns%2A> colección determina el orden en el que recibirán <xref:System.Windows.Input.StylusPoint> datos. Por ejemplo, si agrega un complemento de filtro que restringe la entrada a una región determinada y, a continuación, agregar un complemento que reconoce los movimientos se escriben, el complemento que reconoce los movimientos recibirá filtrados <xref:System.Windows.Input.StylusPoint> datos.  
   

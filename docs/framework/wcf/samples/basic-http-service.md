@@ -1,27 +1,15 @@
 ---
-title: "Servicio HTTP básico"
-ms.custom: 
+title: Servicio HTTP básico
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 687eba2a346b3f554c8a7618bebe2e9c04f4d5b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0d00ee21fa328c32549f89d8d5fc4c767f64582c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-http-service"></a>Servicio HTTP básico
-Este ejemplo muestra cómo implementar un servicio basado en HTTP, basado en RPC suele hacer referencia como "POX" (Plain Old XML) servicio, utilizando el [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] modelo de programación REST. Este ejemplo consta de dos componentes: un servicio HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] autohospedado (Service.cs) y una aplicación de consola (Program.cs) que crea el servicio y le llama.  
+Este ejemplo muestra cómo implementar un servicio basado en HTTP, basado en RPC contemplado habitualmente como servicio "POX" (Plain Old XML) – utilizando el modelo de programación de REST de Windows Communication Foundation (WCF). Este ejemplo consta de dos componentes: un servicio HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] autohospedado (Service.cs) y una aplicación de consola (Program.cs) que crea el servicio y le llama.  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
  El servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expone dos operaciones, `EchoWithGet` y `EchoWithPost`, que devuelven la cadena que se les pasa como entrada.  
@@ -49,7 +37,7 @@ Este ejemplo muestra cómo implementar un servicio basado en HTTP, basado en RPC
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
   

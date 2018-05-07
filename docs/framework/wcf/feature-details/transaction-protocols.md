@@ -1,32 +1,20 @@
 ---
 title: Protocolos de transacciones
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13784a3a5062705abba1b3bbb33a04e66bd22072
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8841a9cf414ae94da7e63bd7312a3c541ab6de1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-protocols"></a>Protocolos de transacciones
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementa los protocolos WS-AtomicTransaction y WS-Coordination.  
+Windows Communication Foundation (WCF) implementa los protocolos WS-AtomicTransaction y WS-Coordination.  
   
 |Especificación/documento|Versión|Vínculo|  
 |-----------------------------|-------------|----------|  
-|WS-Coordination|1.0<br /><br /> 1.1|[http://go.Microsoft.com/fwlink/?LinkId=96104](http://go.microsoft.com/fwlink/?LinkId=96104)<br /><br /> [http://go.Microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
-|Transacción WS-Atomic|1.0<br /><br /> 1.1|[http://go.Microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> http://go.microsoft.com/fwlink/?LinkId=96081|  
+|WS-Coordination|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96104](http://go.microsoft.com/fwlink/?LinkId=96104)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
+|Transacción WS-Atomic|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> http://go.microsoft.com/fwlink/?LinkId=96081|  
   
  La interoperabilidad en estas especificaciones de protocolo se requiere en dos niveles: entre las aplicaciones y entre los administradores de transacciones (véase la siguiente figura). Las especificaciones describen en gran detalle los formatos de mensajes y el intercambio de mensajes para ambos niveles de interoperabilidad. Cierta seguridad, fiabilidad y codificaciones para el intercambio de aplicación a aplicación se aplican tal y como lo hacen para el intercambio normal de aplicaciones. Sin embargo, para una interoperabilidad correcta entre los administradores de transacciones es necesario el acuerdo en el enlace determinado, porque el usuario no lo configura por regla general.  
   
@@ -64,19 +52,19 @@ ms.lasthandoff: 12/22/2017
   
 -   Mensajes de aplicaciones  
   
- Las primeras tres clases de mensajes están consideradas mensajes de Administrador de transacciones y su configuración de enlaces se describe en el "Intercambio de mensajes de aplicaciones" más adelante en este tema. La cuarta clase del mensaje son mensajes de aplicación a aplicación y se describe en la sección “Ejemplos de mensajes” más adelante en este tema. En esta sección se describen los enlaces de protocolos utilizados por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para cada una de estas clases.  
+ Las primeras tres clases de mensajes están consideradas mensajes de Administrador de transacciones y su configuración de enlaces se describe en el "Intercambio de mensajes de aplicaciones" más adelante en este tema. La cuarta clase del mensaje son mensajes de aplicación a aplicación y se describe en la sección “Ejemplos de mensajes” más adelante en este tema. Esta sección describen los enlaces de protocolo utilizados para cada una de estas clases de WCF.  
   
  Los siguientes espacios de nombres XML y prefijos asociados se utilizan a lo largo de este documento.  
   
 |Prefijo|Versión|Espacio de nombres URI|  
 |------------|-------------|-------------------|  
-|s11||[http://go.Microsoft.com/fwlink/?LinkId=96014](http://go.microsoft.com/fwlink/?LinkId=96014)|  
-|wsa|Pre-1.0<br /><br /> 1.0|http://www.w3.org/2004/08/Addressing<br /><br /> [http://go.Microsoft.com/fwlink/?LinkId=96022](http://go.microsoft.com/fwlink/?LinkId=96022)|  
-|wscoor|1.0<br /><br /> 1.1|[http://go.Microsoft.com/fwlink/?LinkId=96078](http://go.microsoft.com/fwlink/?LinkId=96078)<br /><br /> [http://go.Microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
-|wsat|1.0<br /><br /> 1.1|[http://go.Microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> [http://go.Microsoft.com/fwlink/?LinkId=96081](http://go.microsoft.com/fwlink/?LinkId=96081)|  
-|m|Pre-1.3<br /><br /> 1.3|[http://go.Microsoft.com/fwlink/?LinkId=96082](http://go.microsoft.com/fwlink/?LinkId=96082)<br /><br /> [http://go.Microsoft.com/fwlink/?LinkId=96100](http://go.microsoft.com/fwlink/?LinkId=96100)|  
-|o||[http://go.Microsoft.com/fwlink/?LinkId=96101](http://go.microsoft.com/fwlink/?LinkId=96101)|  
-|xsd||[http://go.Microsoft.com/fwlink/?LinkId=96102](http://go.microsoft.com/fwlink/?LinkId=96102)|  
+|s11||[http://go.microsoft.com/fwlink/?LinkId=96014](http://go.microsoft.com/fwlink/?LinkId=96014)|  
+|wsa|Pre-1.0<br /><br /> 1.0|http://www.w3.org/2004/08/addressing<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96022](http://go.microsoft.com/fwlink/?LinkId=96022)|  
+|wscoor|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96078](http://go.microsoft.com/fwlink/?LinkId=96078)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
+|wsat|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96081](http://go.microsoft.com/fwlink/?LinkId=96081)|  
+|m|Pre-1.3<br /><br /> 1.3|[http://go.microsoft.com/fwlink/?LinkId=96082](http://go.microsoft.com/fwlink/?LinkId=96082)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96100](http://go.microsoft.com/fwlink/?LinkId=96100)|  
+|o||[http://go.microsoft.com/fwlink/?LinkId=96101](http://go.microsoft.com/fwlink/?LinkId=96101)|  
+|xsd||[http://go.microsoft.com/fwlink/?LinkId=96102](http://go.microsoft.com/fwlink/?LinkId=96102)|  
   
 ## <a name="transaction-manager-bindings"></a>Enlaces del administrador de transacciones  
  R1001: Los administradores de transacciones que participan en una transacción de WS-AT 1.0 deben utilizar SOAP 1.1 y WS-Addressing 2004/08 para intercambios de mensajes de WS-Coordination y WS-AtomicTransaction.  
@@ -96,12 +84,12 @@ ms.lasthandoff: 12/22/2017
 -   B1112: DNS debe ser funcional entre cada par remitente-receptor del sistema para que las comprobaciones de nombre de sujeto X.509 se realicen correctamente.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Activación y configuración de enlace de registro  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] requiere enlace dúplex de solicitud/respuesta que correlacione sobre HTTPS. (Para obtener más información sobre la correlación y descripciones de los patrones de intercambio de mensajes de solicitud/respuesta, vea Transacción WS-Atomic, sección 8.)  
+ WCF requiere enlace dúplex de solicitud/respuesta que correlacione sobre HTTPS. (Para obtener más información sobre la correlación y descripciones de los patrones de intercambio de mensajes de solicitud/respuesta, vea Transacción WS-Atomic, sección 8.)  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Configuración de enlace de protocolo 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite mensajes unidireccionales (datagrama) sobre HTTPS. La correlación entre los mensajes queda como un detalle de implementación.  
+ WCF admite mensajes unidireccionales (datagrama) sobre HTTPS. La correlación entre los mensajes queda como un detalle de implementación.  
   
- B1131: Las implementaciones deben admitir `wsa:ReferenceParameters` tal y como se describe en WS-Addressing para lograr correlación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]de mensajes 2PC.  
+ B1131: Las implementaciones deben admitir `wsa:ReferenceParameters` tal y como se describe en WS-Addressing para lograr correlación de mensajes de 2PC de WCF.  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>Enlace de seguridad mixta del administrador de transacciones  
  Éste es un enlace alternativo (modo mixto) que utiliza seguridad de transporte combinada con el modelo de token emitido de WS-Coordination para el establecimiento de la identidad. La activación y el registro son los únicos elementos que difieren entre los dos enlaces.  
@@ -112,7 +100,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="activation-message-binding-configuration"></a>Configuración del enlace de mensajes de activación  
  Los mensajes de activación normalmente no participan en la interoperabilidad porque, por lo general, se producen entre una aplicación y su administrador de transacción local.  
   
- B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa el enlace HTTPS dúplex (se describe en [protocolos de mensajería](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) para los mensajes de activación. Los mensajes de solicitud y respuesta se ponen en correlación utilizando WS-Addressing 2004/08 para WS-AT 1.0 y WS-Addressing 2005/08 para WS-AT 1.1.  
+ B1221: Enlace HTTPS del dúplex de WCF usa (se describe en [protocolos de mensajería](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) para los mensajes de activación. Los mensajes de solicitud y respuesta se ponen en correlación utilizando WS-Addressing 2004/08 para WS-AT 1.0 y WS-Addressing 2005/08 para WS-AT 1.1.  
   
  La especificación de transacciones WS-Atomic, sección 8, describe detalles adicionales sobre la correlación y los patrones de intercambio de mensajes.  
   
@@ -123,7 +111,7 @@ ms.lasthandoff: 12/22/2017
  Un nuevo `t:IssuedTokens` encabezado se debe generar para adjuntar a la salida `wscoor:CreateCoordinationContextResponse` mensaje.  
   
 #### <a name="registration-message-binding-configuration"></a>Configuración del enlace de mensajes de registro  
- B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa el enlace HTTPS dúplex (se describe en [protocolos de mensajería](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Los mensajes de solicitud y respuesta se ponen en correlación utilizando WS-Addressing 2004/08 para WS-AT 1.0 y WS-Addressing 2005/08 para WS-AT 1.1.  
+ B1231: Enlace HTTPS del dúplex de WCF usa (se describe en [protocolos de mensajería](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Los mensajes de solicitud y respuesta se ponen en correlación utilizando WS-Addressing 2004/08 para WS-AT 1.0 y WS-Addressing 2005/08 para WS-AT 1.1.  
   
  La transacción WS-Atomic, sección 8, describe detalles adicionales sobre la correlación y las descripciones del patrón de intercambio de mensajes.  
   
@@ -132,9 +120,9 @@ ms.lasthandoff: 12/22/2017
  El `wsse:Timestamp` elemento debe firmarse mediante el `SecurityContextToken``STx` emitido. Esta firma es una prueba de posesión del token asociado a la transacción determinada y se utiliza para autenticar a un participante enumerado en la transacción. El mensaje RegistrationResponse se devuelve sobre HTTPS.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Configuración de enlace de protocolo 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite mensajes unidireccionales (datagrama) sobre HTTPS. La correlación entre los mensajes queda como un detalle de implementación.  
+ WCF admite mensajes unidireccionales (datagrama) sobre HTTPS. La correlación entre los mensajes queda como un detalle de implementación.  
   
- B1241: las implementaciones deben admitir `wsa:ReferenceParameters` tal y como se describe en WS-Addressing para lograr correlación de los mensajes 2PC de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ B1241: Las implementaciones deben admitir `wsa:ReferenceParameters` tal y como se describe en WS-Addressing para lograr correlación de mensajes de 2PC de WCF.  
   
 ## <a name="application-message-exchange"></a>Intercambio de mensajes de aplicaciones  
  Las aplicaciones pueden utilizar cualquier enlace determinado para los mensajes de aplicación a aplicación, con tal de que el enlace cumpla los siguientes requisitos de seguridad:  
@@ -143,9 +131,9 @@ ms.lasthandoff: 12/22/2017
   
 -   R2002: se debe proporcionar la integridad y confidencialidad de `t:IssuedToken`.  
   
- El encabezado `CoordinationContext` contiene `wscoor:Identifier`. Aunque la definición de `xsd:AnyURI` permite el uso de URI absolutos y relativos, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] solo admite `wscoor:Identifiers`, que sean URI absolutos.  
+ El encabezado `CoordinationContext` contiene `wscoor:Identifier`. Aunque la definición de `xsd:AnyURI` permite el uso de identificadores URI absolutos y relativos, WCF admite solo `wscoor:Identifiers`, que son URI absolutos.  
   
- B2003: si `wscoor:Identifier` de `wscoor:CoordinationContext` es un URI relativo, los errores se devolverán desde los servicios transaccionales de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ B2003: Si el `wscoor:Identifier` de la `wscoor:CoordinationContext` es un URI relativo, los errores se devolverán desde servicios WCF transaccionales.  
   
 ## <a name="message-examples"></a>Ejemplos de mensajes  
   

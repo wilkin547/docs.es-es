@@ -1,28 +1,14 @@
 ---
 title: Enlaces proporcionados por el sistema
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-caps.latest.revision: 60
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ccdab56a90f4114836dd9f0a56cc495657ee9c8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema
 Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al hablar con un punto de conexión e indican cómo conectarse a un punto de conexión. Un enlace contiene los siguientes elementos:  
@@ -31,9 +17,9 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
   
 -   El transporte determina el protocolo de transporte subyacente que se ha de utilizar al enviar mensajes al extremo, como, por ejemplo, TCP o HTTP.  
   
--   La codificación determina la codificación de la conexión que se ha de utilizar para los mensajes que se envían al extremo, como, por ejemplo, texto/XML, binaria o Mecanismo de optimización de transmisión de mensajes (MTOM).  
+-   La codificación determina la codificación de la conexión que se ha de utilizar para los mensajes que se envían al punto de conexión, como, por ejemplo, texto/XML, binaria o Mecanismo de optimización de transmisión de mensajes (MTOM).  
   
- En este tema se presentan todos los enlaces de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] proporcionados por el sistema. Si ninguno de estos cumplen los criterios exactos de su aplicación, puede crear un enlace personalizado. Para obtener más información acerca de cómo crear enlaces personalizados, consulte [enlaces personalizados](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Este tema presenta todos los enlaces de Windows Communication Foundation (WCF) proporcionado por el sistema. Si ninguno de estos cumplen los criterios exactos de su aplicación, puede crear un enlace personalizado. Para obtener más información acerca de cómo crear enlaces personalizados, consulte [enlaces personalizados](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Un enlace seguro e interoperable que admite el protocolo WS-Federation permite a las organizaciones que están en una federación autenticar y autorizar eficazmente a los usuarios.  
   

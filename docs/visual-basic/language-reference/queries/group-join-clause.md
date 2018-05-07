@@ -1,11 +1,6 @@
 ---
-title: "Group Join (Cláusula, Visual Basic)"
+title: Group Join (Cláusula, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryGroupJoinIn
 - vb.QueryGroupJoinOn
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c43b41336393b40684aee79f88c1e6999ebda674
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 094281b0afb34451ae8539e4eb967043b21d379c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join (Cláusula, Visual Basic)
 Combina dos colecciones en una sola colección jerárquica. La operación de combinación se basa en claves coincidentes.  
@@ -40,11 +32,11 @@ Group Join element [As type] In collection _
   
 |Término|Definición|  
 |---|---|  
-|`element`|Obligatorio. La variable de control de la colección que se está combinando.|  
+|`element`|Requerido. La variable de control de la colección que se está combinando.|  
 |`type`|Opcional. Tipo de `element`. Si no hay ningún `type` se especifica, el tipo de `element` se deduce de `collection`.|  
-|`collection`|Obligatorio. La colección que combine con la colección que se encuentra en el lado izquierdo de la `Group Join` operador. A `Group Join` cláusula puede estar anidada en una `Join` cláusula o en otro `Group Join` cláusula.|  
+|`collection`|Requerido. La colección que combine con la colección que se encuentra en el lado izquierdo de la `Group Join` operador. A `Group Join` cláusula puede estar anidada en una `Join` cláusula o en otro `Group Join` cláusula.|  
 |`key1` `Equals` `key2`|Requerido. Identifica las claves para las colecciones que se está combina. Debe utilizar el `Equals` operador para comparar las claves de las colecciones que se está combina. Puede combinar condiciones de combinación mediante la `And` operador para identificar varias claves. El `key1` parámetro debe ser de la colección en el lado izquierdo de la `Join` operador. El `key2` parámetro debe ser de la colección en el lado derecho de la `Join` operador.<br /><br /> Las claves utilizadas en la condición de combinación pueden ser expresiones que incluyen más de un elemento de la colección. Sin embargo, cada expresión de clave solo puede contener elementos de su colección respectiva.|  
-|`expressionList`|Obligatorio. Una o varias expresiones que identifican cómo se agregan los grupos de elementos de la colección. Para identificar un nombre de miembro para los resultados agrupados, utilice la `Group` palabra clave (`<alias> = Group`). También puede incluir funciones de agregado para aplicar al grupo.|  
+|`expressionList`|Requerido. Una o varias expresiones que identifican cómo se agregan los grupos de elementos de la colección. Para identificar un nombre de miembro para los resultados agrupados, utilice la `Group` palabra clave (`<alias> = Group`). También puede incluir funciones de agregado para aplicar al grupo.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `Group Join` cláusula combina dos colecciones que coinciden con los valores de clave de las colecciones que se está combinando. La colección resultante puede contener a un miembro que hace referencia a una colección de elementos de la segunda colección que coinciden con el valor de clave de la primera colección. También puede especificar las funciones de agregado para aplicar a los elementos agrupados de la segunda colección. Para obtener información acerca de las funciones de agregado, vea [Aggregate (cláusula)](../../../visual-basic/language-reference/queries/aggregate-clause.md).  

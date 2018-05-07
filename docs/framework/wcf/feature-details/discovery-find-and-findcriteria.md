@@ -1,26 +1,12 @@
 ---
 title: Búsqueda de detección y FindCriteria
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>Búsqueda de detección y FindCriteria
 La operación de búsqueda de detección la inicia un cliente para detectar uno o más servicios, y es una de las acciones principales en detección. Al realizar una búsqueda, se envía un mensaje de sondeo de WS-Discovery a través de la red. Los servicios que coinciden con los criterios especificados responden con mensajes ProbeMatch de WS-Discovery. Para obtener más información acerca de los mensajes de detección, consulte el [especificación de WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -33,7 +19,7 @@ La operación de búsqueda de detección la inicia un cliente para detectar uno 
   
  Los criterios de búsqueda incluyen:  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> (opcional). El nombre del contrato del servicio que se busca y los criterios normalmente utilizados al buscar un servicio. Si se especifica más de un nombre de contrato, solo responderán los puntos de conexión del servicio que coincidan con TODOS los contratos. Observe que, en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], un extremo solo puede admitir un contrato.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> (opcional). El nombre del contrato del servicio que se busca y los criterios normalmente utilizados al buscar un servicio. Si se especifica más de un nombre de contrato, solo responderán los puntos de conexión del servicio que coincidan con TODOS los contratos. Tenga en cuenta que en WCF un punto de conexión sólo puede admitir un contrato.  
   
 -   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> (opcional). Los ámbitos son URI absolutos que se usan para categorizar extremos de servicio individuales. Puede que quiera usar esto en casos en los que varios extremos expongan el mismo contrato y desee averiguar un método para buscar un subconjunto de extremos. Si se especifica más de un ámbito, solo responderán los puntos de conexión de servicio que coincidan con TODOS los ámbitos.  
   

@@ -1,29 +1,18 @@
 ---
-title: "Detalles de las características de Windows Workflow Foundation"
-ms.custom: 
+title: Detalles de las características de Windows Workflow Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6943a7eaeaecf8f11de7c10237979067c83c24d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc3ff5669d23e57685c89937f7c2171053f938ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Detalles de las características de Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] agrega una serie de características a Windows Workflow Foundation. Este documento describe algunas de las nuevas características y proporciona detalles sobre los escenarios en que pueden ser útiles.  
   
 ## <a name="messaging-activities"></a>Actividades de mensajería  
- Las actividades de mensajería (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) se utilizan para enviar y recibir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mensajes del flujo de trabajo.  <xref:System.ServiceModel.Activities.Receive>y <xref:System.ServiceModel.Activities.SendReply> las actividades se usan para formar un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] operación que se expone a través de WSDL como estándar de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicios web.  <xref:System.ServiceModel.Activities.Send>y <xref:System.ServiceModel.Activities.ReceiveReply> se usan para consumir un servicio web similar a WCF <xref:System.ServiceModel.ChannelFactory>; un **Agregar referencia de servicio** experiencia también existe para Workflow Foundation que genera actividades preconfiguradas.  
+ Las actividades de mensajería (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) se utilizan para enviar y recibir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mensajes del flujo de trabajo.  <xref:System.ServiceModel.Activities.Receive> y <xref:System.ServiceModel.Activities.SendReply> actividades se usan para formar una operación de servicio de Windows Communication Foundation (WCF) que se expone a través de WSDL como estándar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicios web.  <xref:System.ServiceModel.Activities.Send> y <xref:System.ServiceModel.Activities.ReceiveReply> se usan para consumir un servicio web similar a WCF <xref:System.ServiceModel.ChannelFactory>; un **Agregar referencia de servicio** experiencia también existe para Workflow Foundation que genera actividades preconfiguradas.  
   
 ### <a name="getting-started-with-messaging-activities"></a>Introducción a las actividades de mensajería  
   
@@ -305,7 +294,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Documentación: [enrutamiento](../../../docs/framework/wcf/feature-details/routing.md)  
   
-2.  Ejemplos: [enrutamiento servicios &#91; Ejemplos de WCF &#93;](../../../docs/framework/wcf/samples/routing-services.md)  
+2.  Ejemplos: [servicios de enrutamiento &#91;ejemplos de WCF&#93;](../../../docs/framework/wcf/samples/routing-services.md)  
   
 3.  Blog: [reglas de enrutamiento.](http://go.microsoft.com/fwlink/?LinkId=204956)  
   

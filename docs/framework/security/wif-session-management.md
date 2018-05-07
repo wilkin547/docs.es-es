@@ -1,24 +1,14 @@
 ---
-title: "Administración de sesiones de WIF"
-ms.custom: 
+title: Administración de sesiones de WIF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7703d9fb612ead13140d010b1670abb209c5acb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f97406ccf826bfa5b7c3ed87bdb58478b272a216
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-session-management"></a>Administración de sesiones de WIF
 Cuando un cliente intenta acceder a un recurso protegido hospedado en un usuario de confianza por primera vez, primero debe autenticarse en un servicio de token de seguridad (STS) que sea de confianza para el usuario de confianza. Luego el STS emite un token de seguridad al cliente. El cliente presenta este token al usuario de confianza, que, entonces, le concede acceso al recurso protegido. Pero no es deseable que el cliente tenga que volver a autenticarse en el STS para cada solicitud, sobre todo porque incluso podría no ser en el mismo equipo o en el mismo dominio que el usuario de confianza. Así, Windows Identity Foundation (WIF) hace que el cliente y el usuario de confianza establezcan una sesión en la que el cliente usa un token de seguridad de sesión para autenticarse en el usuario de confianza para todas las solicitudes después de la primera. El usuario de confianza puede usar este token de seguridad de sesión, que se almacena en una cookie, para reconstruir el elemento <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> del cliente.  
@@ -39,4 +29,4 @@ Cuando un cliente intenta acceder a un recurso protegido hospedado en un usuario
 ## <a name="extensibility"></a>Extensibilidad  
  Puede extender el mecanismo de administración de sesión. Una razón para hacerlo es mejorar el rendimiento. Por ejemplo, puede crear un controlador de cookies personalizado que transforme u optimice el token de seguridad de sesión entre su estado en memoria y lo que se incluye en la cookie. Para ello, puede configurar la propiedad <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType> de <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=nameWithType> para usar un controlador de cookies personalizado que derive de <xref:System.IdentityModel.Services.CookieHandler?displayProperty=nameWithType>. <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=nameWithType> es el controlador de cookies predeterminado porque las cookies superan el tamaño permitido para el protocolo de transferencia de hipertexto (HTTP); si usa un controlador de cookies personalizado, debe implementar la fragmentación.  
   
- Para más información, vea el ejemplo [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408). Este ejemplo muestra una memoria caché de sesión lista para una granja de servidores (en lugar de un elemento tokenreplycache) para que pueda usar sesiones por referencia en lugar de intercambiar cookies grandes; este ejemplo también muestra una manera más sencilla de proteger las cookies de una granja de servidores. La caché de sesión se basa en WCF. Con respecto a la protección de sesión, el ejemplo muestra una nueva capacidad de WIF 4.5: una transformación de cookies basada en MachineKey que puede activarse con solo pegar el fragmento de código adecuado en web.config. El ejemplo en sí mismo no es una "granja", pero muestra lo que se necesita para hacer que la aplicación esté lista para una granja de servidores.
+ Para obtener más información, consulte [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) ejemplo. Este ejemplo muestra una memoria caché de sesión lista para una granja de servidores (en lugar de un elemento tokenreplycache) para que pueda usar sesiones por referencia en lugar de intercambiar cookies grandes; este ejemplo también muestra una manera más sencilla de proteger las cookies de una granja de servidores. La caché de sesión se basa en WCF. Con respecto a la protección de sesión, el ejemplo muestra una nueva capacidad de WIF 4.5: una transformación de cookies basada en MachineKey que puede activarse con solo pegar el fragmento de código adecuado en web.config. El ejemplo en sí mismo no es una "granja", pero muestra lo que se necesita para hacer que la aplicación esté lista para una granja de servidores.

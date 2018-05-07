@@ -1,20 +1,12 @@
 ---
-title: "Herramienta de búsqueda de clave privada (FindPrivateKey.exe)"
+title: Herramienta de búsqueda de clave privada (FindPrivateKey.exe)
 ms.date: 09/11/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 ms.assetid: b8846a95-3fcc-4e8c-b9c0-128d975a6307
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4bdfa1a9e45332e8c2acbbc8cd8a09bd2f927fbc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f156cbb2f4fad8d51e356bd4dee2d72d9397ffb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="find-private-key-tool-findprivatekeyexe"></a>Herramienta de búsqueda de clave privada (FindPrivateKey.exe)
 
@@ -40,8 +32,8 @@ Las tablas siguientes describen los argumentos y las opciones que se pueden util
 
 |Opción|Descripción|
 |------------|-----------------|
-|`/n <`*subjectName*`>`|Especifica el nombre de sujeto del certificado.|
-|`/t <`*huella digital*`>`|Especifica la huella digital del certificado. Utilice Certmgr.exe para recuperar la huella digital del certificado.|
+|`/n <` *subjectName* `>`|Especifica el nombre de sujeto del certificado.|
+|`/t <` *Huella digital* `>`|Especifica la huella digital del certificado. Utilice Certmgr.exe para recuperar la huella digital del certificado.|
 |`/f`|Sólo genera el nombre de archivo.|
 |`/d`|Sólo genera el directorio.|
 |`/a`|Genera el nombre de archivo absoluto.|

@@ -1,28 +1,19 @@
 ---
-title: "Namespace o el tipo especificado en las importaciones de nivel de proyecto &#39; &lt;nombrecompletoelemento&gt;&#39; &#39; t contienen ningún miembro público o no se encuentra"
+title: Namespace o el tipo especificado en las importaciones de nivel de proyecto &#39; &lt;nombrecompletoelemento&gt; &#39; &#39;t contienen ningún miembro público o no se encuentra
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc40057
 - bc40057
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0d0a164562524af239b3b130f681dbc6eff23814
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6d0c931262d892ec3e65888a76f25218b23d868
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace o el tipo especificado en las importaciones de nivel de proyecto &#39; &lt;nombrecompletoelemento&gt;&#39; &#39; t contienen ningún miembro público o no se encuentra
+# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace o el tipo especificado en las importaciones de nivel de proyecto &#39; &lt;nombrecompletoelemento&gt; &#39; &#39;t contienen ningún miembro público o no se encuentra
 Namespace o el tipo especificado en las importaciones de nivel de proyecto\<nombrecompletoelemento >' no contienen ningún miembro público o no se encuentra. Asegúrese de que el espacio de nombres o el tipo se define y contiene a al menos un miembro público. Asegúrese de que el nombre de alias no contiene otros alias.  
   
  Una propiedad de importación de un proyecto especifica un elemento contenedor que no se puede encontrar o no define `Public` miembros.  

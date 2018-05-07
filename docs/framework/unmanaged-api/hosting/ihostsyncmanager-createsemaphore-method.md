@@ -1,14 +1,6 @@
 ---
-title: "IHostSyncManager::CreateSemaphore (Método)"
-ms.custom: 
+title: IHostSyncManager::CreateSemaphore (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateSemaphore
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 37679e94-5ff9-4173-8fa5-457febeb89bf
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8df29b3eeb565aaa4a977762fcc453fb985e40d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 003e385ade6357b76823986d20e8fdf3d4c3757f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreatesemaphore-method"></a>IHostSyncManager::CreateSemaphore (Método)
 Crea un [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) objeto de common language runtime (CLR) que se usará como un semáforo para los eventos de espera.  
@@ -62,7 +50,7 @@ HRESULT CreateSemaphore (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`CreateSemaphore`se devolvió correctamente.|  
+|S_OK|`CreateSemaphore` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El CLR no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|La llamada agotó el tiempo de espera.|  
 |HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
@@ -71,7 +59,7 @@ HRESULT CreateSemaphore (
 |E_OUTOFMEMORY|No había memoria suficiente disponible para crear el objeto de evento solicitado.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CreateSemaphore`refleja la función de Win32 que tiene el mismo nombre. El `dwInitial` y `dwMax` parámetros utilizan la misma semántica para el recuento del semáforo como Win32 `lInitialCount` y `lMaximumCount` parámetros, respectivamente. `dwInitial`debe estar entre cero y `dwMax`, ambos inclusive. `dwMax`debe ser mayor que cero.  
+ `CreateSemaphore` refleja la función de Win32 que tiene el mismo nombre. El `dwInitial` y `dwMax` parámetros utilizan la misma semántica para el recuento del semáforo como Win32 `lInitialCount` y `lMaximumCount` parámetros, respectivamente. `dwInitial` debe estar entre cero y `dwMax`, ambos inclusive. `dwMax` Debe ser mayor que cero.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -80,7 +68,7 @@ HRESULT CreateSemaphore (
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICLRSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

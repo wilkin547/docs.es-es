@@ -1,31 +1,17 @@
 ---
-title: "Información general de colas"
-ms.custom: 
+title: Información general de colas
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb5d0f51fbbb6c8bad9bfbbfd9977368fdbd0666
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-overview"></a>Información general de colas
-En esta sección se presentan los conceptos generales y básicos detrás de la comunicación puesta en la cola. Las secciones subsiguientes no entran en detalles sobre cómo se manifiestan en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] los conceptos de la puesta en cola descritos aquí.  
+En esta sección se presentan los conceptos generales y básicos detrás de la comunicación puesta en la cola. Las secciones siguientes entran en detalles acerca de cómo los conceptos de puesta en cola descritos aquí se manifiestan en Windows Communication Foundation (WCF).  
   
 ## <a name="basic-queuing-concepts"></a>Conceptos de puesta en cola básicos  
  Cuando se diseña una aplicación distribuida, es importante elegir el transporte adecuado para la comunicación entre los servicios y clientes. Varios factores afectan el tipo de transporte que se va a usar. Un factor importante —aislamiento entre el servicio, el cliente y el transporte— determina el uso de un transporte en cola o un transporte directo, como TCP o HTTP. Debido a la naturaleza de los transportes directos como TCP y HTTP, la comunicación se detiene por completo si el servicio o el cliente para de funcionar o si se produce un error en la red. El servicio, el cliente y la red deben estar en ejecución al mismo tiempo para que funcione la aplicación. Los transportes puestos en cola proporcionan aislamiento, lo cual significa que si hay un error en el servicio o cliente o si los vínculos de comunicaciones fallan entre ellos, el cliente y servicio pueden continuar funcionando.  

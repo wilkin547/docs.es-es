@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Establecer la imagen mostrada por un control de formularios Windows Forms mediante el Diseñador"
-ms.custom: 
+title: 'Cómo: Establecer la imagen mostrada por un control de formularios Windows Forms mediante el Diseñador'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Button control [Windows Forms], images
 - Windows Forms controls, images
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a31209968957a6d1890cae66c17b74769bd05dc9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b3625510028d5941173848849ab915f56260577a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Cómo: Establecer la imagen mostrada por un control de formularios Windows Forms mediante el Diseñador
 Varios controles de formularios Windows Forms pueden mostrar imágenes. La imagen puede ser un icono que clarifica el propósito del control, como un icono de disco en un botón que denota el **guardar** comando. Como alternativa, el icono puede ser una imagen de fondo para proporcionar el control de la apariencia que desee.  

@@ -1,11 +1,6 @@
 ---
-title: "Structure (Instrucción)"
+title: Structure (Instrucción)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Structure
 - Structure
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43211bb10793acf3bfe0c1d7a35791114170ee7d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a3626706b226b0be253fd35fa60b33a71b86007
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-statement"></a>Structure (Instrucción)
 Declara el nombre de una estructura e introduce la definición de las variables, propiedades, eventos y procedimientos que la estructura incluye.  
@@ -48,14 +40,14 @@ End Structure
 |`accessmodifier`|Opcional. Puede ser uno de los siguientes:<br /><br /> -   [Público](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privada](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vea [tener acceso a niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Opcional. Vea [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`Partial`|Opcional. Indica una definición parcial de la estructura. Vea [parcial](../../../visual-basic/language-reference/modifiers/partial.md).|  
-|`name`|Obligatorio. Nombre de esta estructura. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`name`|Requerido. Nombre de esta estructura. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Of`|Opcional. Especifica que se trata de una estructura genérica.|  
 |`typelist`|Es obligatorio si se utiliza la [de](../../../visual-basic/language-reference/statements/of-clause.md) palabra clave. Lista de parámetros de tipo de esta estructura. Vea [escriba lista](../../../visual-basic/language-reference/statements/type-list.md).|  
 |`Implements`|Opcional. Indica que esta estructura implementa los miembros de una o más interfaces. Vea [implementa instrucción](../../../visual-basic/language-reference/statements/implements-statement.md).|  
 |`interfacenames`|Es obligatorio si se utiliza la instrucción `Implements`. Nombres de las interfaces implementadas por esta estructura.|  
-|`datamemberdeclarations`|Obligatorio. Cero o más `Const`, `Dim`, `Enum`, o `Event` instrucciones declarar *miembros de datos* de la estructura.|  
+|`datamemberdeclarations`|Requerido. Cero o más `Const`, `Dim`, `Enum`, o `Event` instrucciones declarar *miembros de datos* de la estructura.|  
 |`methodmemberdeclarations`|Opcional. Cero o más declaraciones de `Function`, `Operator`, `Property`, o `Sub` procedimientos, que sirven como *miembros del método* de la estructura.|  
-|`End Structure`|Obligatorio. Termina la definición de `Structure`.|  
+|`End Structure`|Requerido. Termina la definición de `Structure`.|  
   
 ## <a name="remarks"></a>Comentarios  
  La instrucción `Structure` define un tipo de valor compuesto que se puede personalizar. A *estructura* es una generalización del tipo definido por el usuario (UDT) de las versiones anteriores de Visual Basic. Para obtener más información, consulte [estructuras](../../../visual-basic/programming-guide/language-features/data-types/structures.md).  
@@ -74,7 +66,7 @@ End Structure
   
      En una estructura se pueden declarar cero o más variables no compartidas o eventos no compartidos y no personalizados. No pueden utilizarse únicamente constantes, propiedades y procedimientos, aunque algunos sean no compartidos.  
   
--   **Inicialización.** No se puede inicializar el valor de ningún miembro de datos de una estructura no compartido como parte de su declaración. Dicho miembro de datos se debe inicializar mediante un constructor con parámetros en la estructura o bien mediante la asignación de un valor al miembro después de crear una instancia de la estructura.  
+-   **inicialización.** No se puede inicializar el valor de ningún miembro de datos de una estructura no compartido como parte de su declaración. Dicho miembro de datos se debe inicializar mediante un constructor con parámetros en la estructura o bien mediante la asignación de un valor al miembro después de crear una instancia de la estructura.  
   
 -   **Herencia.** Una estructura no puede heredar de ningún tipo distinto de <xref:System.ValueType>, del que todas las estructuras heredan. En particular, una estructura no puede heredar de otra.  
   

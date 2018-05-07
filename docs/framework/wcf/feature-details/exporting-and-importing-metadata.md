@@ -1,34 +1,20 @@
 ---
-title: "Exportación e importación de metadatos"
-ms.custom: 
+title: Exportación e importación de metadatos
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a2785f74d9a07b267d836a9f6e6749d259a1ab21
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 497feb80d5930a784022877cfaa6e6c76a3047a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exporting-and-importing-metadata"></a>Exportación e importación de metadatos
-En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], la exportación de metadatos es el proceso de describir extremos de servicio y proyectarlos en una representación paralela y estandarizada que pueden usar los clientes para entender cómo utilizar el servicio. Importar los metadatos de servicio es el proceso de generar instancias de <xref:System.ServiceModel.Description.ServiceEndpoint> o partes de los metadatos de servicio.  
+En Windows Communication Foundation (WCF), exportación de metadatos es el proceso de describir extremos de servicio y proyectarlos en una representación paralela y estandarizada que los clientes pueden utilizar para aprender a usar el servicio. Importar los metadatos de servicio es el proceso de generar instancias de <xref:System.ServiceModel.Description.ServiceEndpoint> o partes de los metadatos de servicio.  
   
 ## <a name="exporting-metadata"></a>Exportación de metadatos  
- Para exportar metadatos desde instancias de <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType>, utilice una implementación de la clase abstracta <xref:System.ServiceModel.Description.MetadataExporter>. El tipo <xref:System.ServiceModel.Description.WsdlExporter> es la implementación de la clase abstracta <xref:System.ServiceModel.Description.MetadataExporter> incluida en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Para exportar metadatos desde instancias de <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType>, utilice una implementación de la clase abstracta <xref:System.ServiceModel.Description.MetadataExporter>. El <xref:System.ServiceModel.Description.WsdlExporter> tipo es la implementación de la <xref:System.ServiceModel.Description.MetadataExporter> incluido con WCF de clase abstracta.  
   
  El tipo <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> genera los metadatos del Lenguaje de descripción de servicios Web (WSDL) con expresiones de directiva adjuntas encapsuladas en una instancia de <xref:System.ServiceModel.Description.MetadataSet>. Puede utilizar una instancia <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> para exportar de manera iterativa metadatos para los objetos <xref:System.ServiceModel.Description.ContractDescription> y  <xref:System.ServiceModel.Description.ServiceEndpoint>. Puede exportar también una colección de objetos <xref:System.ServiceModel.Description.ServiceEndpoint> y asociarlos a un nombre de servicios concreto.  
   
@@ -38,7 +24,7 @@ En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], la exportación de m
 ## <a name="importing-metadata"></a>Importación de metadatos  
   
 ### <a name="importing-wsdl-documents"></a>Importación de documentos WSDL  
- Para importar los metadatos del servicio en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], utilice una implementación de la clase abstracta <xref:System.ServiceModel.Description.MetadataImporter>. El tipo <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> es la implementación de la clase abstracta <xref:System.ServiceModel.Description.MetadataImporter> incluida en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. El tipo <xref:System.ServiceModel.Description.WsdlImporter> importa metadatos de WSDL con directivas adjuntas empaquetadas en un objeto <xref:System.ServiceModel.Description.MetadataSet>.  
+ Para importar metadatos del servicio de WCF, utilice una implementación de la <xref:System.ServiceModel.Description.MetadataImporter> clase abstracta. El <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> tipo es la implementación de la <xref:System.ServiceModel.Description.MetadataImporter> incluido con WCF de clase abstracta. El tipo <xref:System.ServiceModel.Description.WsdlImporter> importa metadatos de WSDL con directivas adjuntas empaquetadas en un objeto <xref:System.ServiceModel.Description.MetadataSet>.  
   
  El tipo <xref:System.ServiceModel.Description.WsdlImporter> le da control sobre cómo importar los metadatos. Puede importar todos los puntos de conexión, todos los enlaces o todos los contratos. Puede importar todos los puntos de conexión asociados a un servicio específico de WSDL, enlace o tipo de puerto. También puede importar el extremo de un puerto WSDL concreto, el enlace para un enlace de WSDL concreto o el contrato para un tipo de puerto de WSDL concreto.  
   

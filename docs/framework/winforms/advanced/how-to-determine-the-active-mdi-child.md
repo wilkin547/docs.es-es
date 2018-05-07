@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Determinar el formulario secundario MDI activo"
-ms.custom: 
+title: 'Cómo: Determinar el formulario secundario MDI activo'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c026df631c2ac033594ea86887bb8440a6aa240a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b084d204361764af1b36b154acfc5b360fc977e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Cómo: Determinar el formulario secundario MDI activo
 En algunas ocasiones, deseará proporcionar un comando que funciona en el control que tiene el foco en el formulario secundario actualmente activo. Por ejemplo, suponga que desea copiar el texto seleccionado en el cuadro de texto del formulario secundario en el Portapapeles. Debe crear un procedimiento que copie el texto seleccionado en el Portapapeles usando el <xref:System.Windows.Forms.Control.Click> evento del elemento de menú Copiar en el menú de edición estándar.  

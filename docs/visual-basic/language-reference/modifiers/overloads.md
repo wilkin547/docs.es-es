@@ -1,10 +1,6 @@
 ---
 title: Overloads (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Overloads
 - Overloads
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a23a6b91681cbd814ac96464e1c340be99a0ecf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b68c13d192845fc4bedf1b34a40165ccc1a5ff75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 Especifica que una propiedad o procedimiento vuelve a declarar una o varias propiedades o procedimientos existentes con el mismo nombre.  
@@ -65,7 +58,7 @@ Especifica que una propiedad o procedimiento vuelve a declarar una o varias prop
   
 -   **Modificador opcional.** No es necesario usar el modificador `Overloads` al definir varias propiedades o procedimientos sobrecargados en la misma clase. Sin embargo, si utiliza `Overloads` en una de las declaraciones, debe utilizarlo en todas ellas.  
   
--   **Sombreado y sobrecarga.** `Overloads`También puede utilizarse para sombrear un miembro existente o un conjunto de miembros sobrecargados, en una clase base. Al utilizar `Overloads` de esta forma, declara la propiedad o el método con el mismo nombre y la misma lista de parámetros que el miembro de clase base y no proporciona la palabra clave `Shadows`.  
+-   **Sombreado y sobrecarga.** `Overloads` También puede utilizarse para sombrear un miembro existente o un conjunto de miembros sobrecargados, en una clase base. Al utilizar `Overloads` de esta forma, declara la propiedad o el método con el mismo nombre y la misma lista de parámetros que el miembro de clase base y no proporciona la palabra clave `Shadows`.  
   
  Si usa `Overrides`, el compilador agrega de forma implícita `Overloads` para que las API de la biblioteca trabajen más fácilmente con C#.  
   

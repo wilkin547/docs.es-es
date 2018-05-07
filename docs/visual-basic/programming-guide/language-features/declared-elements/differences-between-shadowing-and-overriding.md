@@ -1,24 +1,15 @@
 ---
 title: Diferencias entre sombrear y reemplazar (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2d67486d9c6af96d314abad7142ba86779d74f5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 94ce3e7fe25b7942730e6e89a53654b03d91c42b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Diferencias entre sombrear y reemplazar (Visual Basic)
 Cuando se define una clase que hereda de una clase base, a veces desea volver a definir uno o varios de los elementos de la clase base en la clase derivada. Sombrear y reemplazar están disponibles para este propósito.  
@@ -31,13 +22,13 @@ Cuando se define una clase que hereda de una clase base, a veces desea volver a 
 ||||  
 |---|---|---|  
 |Punto de comparación|Sombrear|Reemplazar|  
-|Finalidad|Protege frente a una modificación posterior de clase base que introduce a un miembro que ya se ha definido en la clase derivada|Logra polimorfismo mediante la definición de una implementación diferente de un procedimiento o propiedad con la misma secuencia que realiza la llamada<sup>1</sup>|  
+|Propósito|Protege frente a una modificación posterior de clase base que introduce a un miembro que ya se ha definido en la clase derivada|Logra polimorfismo mediante la definición de una implementación diferente de un procedimiento o propiedad con la misma secuencia que realiza la llamada<sup>1</sup>|  
 |Elemento redefinido|Cualquier tipo de elemento declarado|Sólo un procedimiento (`Function`, `Sub`, o `Operator`) o una propiedad|  
 |Elemento de redefinición|Cualquier tipo de elemento declarado|Sólo un procedimiento o propiedad con la secuencia de llamada idéntica<sup>1</sup>|  
 |Nivel de acceso de elemento de redefinición|Cualquier nivel de acceso|No se puede cambiar el nivel de acceso de elemento invalidado|  
 |Lectura y escritura de elemento de redefinición|Cualquier combinación|No se puede cambiar de lectura o escritura de la propiedad reemplazada|  
-|Control sobre redefinición|Elemento de la clase base no puede cumplir o prohibir el sombreado|Puede especificar el elemento de la clase base `MustOverride`, `NotOverridable`, o`Overridable`|  
-|Uso de la palabra clave|`Shadows`se recomienda en una clase derivada; `Shadows` supone si ninguna de ellas `Shadows` ni `Overrides` especificada<sup>2</sup>|`Overridable`o `MustOverride` necesarios en la clase base; `Overrides` necesarios en una clase derivada|  
+|Control sobre redefinición|Elemento de la clase base no puede cumplir o prohibir el sombreado|Puede especificar el elemento de la clase base `MustOverride`, `NotOverridable`, o `Overridable`|  
+|Uso de la palabra clave|`Shadows` se recomienda en una clase derivada; `Shadows` supone si ninguna de ellas `Shadows` ni `Overrides` especificada<sup>2</sup>|`Overridable` o `MustOverride` necesarios en la clase base; `Overrides` necesarios en una clase derivada|  
 |Herencia de elemento de redefinición mediante clases derivadas de la clase derivada|Sombrear elemento heredada por clases derivadas posteriores, elemento sombreado permanecen oculto<sup>3</sup>|Reemplace el elemento heredado por clases derivadas posteriores, elemento invalidado que todavía se reemplaza|  
   
  <sup>1</sup> el *secuencia de llamada* está formada por el tipo de elemento (`Function`, `Sub`, `Operator`, o `Property`), nombre, lista de parámetros y tipo de valor devuelto. No se puede reemplazar un procedimiento con una propiedad o al revés. No se puede reemplazar un tipo de procedimiento (`Function`, `Sub`, o `Operator`) con otro tipo.  

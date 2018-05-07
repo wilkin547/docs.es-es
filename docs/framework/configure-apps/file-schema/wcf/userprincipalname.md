@@ -1,26 +1,12 @@
 ---
 title: '&lt;userPrincipalName&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 23e2599920c0ef0ea35569ec9b0b16b0f8735f1a
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1bb0c8ac4cbe11cdfa31beb16b00b3863acabf92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
 Especifica el Nombre principal de usuario (UPN) de un servicio que va a autenticar el cliente.  
@@ -28,7 +14,7 @@ Especifica el Nombre principal de usuario (UPN) de un servicio que va a autentic
  Para obtener más información acerca de cómo establecer el UPN, consulte [autenticación e identidad de servicio](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 \<identidad >  
-\<userPrincipalName>  
+\<userPrincipalName >  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,10 +38,10 @@ Especifica el Nombre principal de usuario (UPN) de un servicio que va a autentic
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica la identidad del servicio que va a autenticar el cliente.|  
+|[\<identidad >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica la identidad del servicio que va a autenticar el cliente.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un cliente [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] seguro que se conecta a un extremo con esta identidad utiliza UPN al realizar la autenticación de SSPI con el extremo.  
+ Un cliente seguro de Windows Communication Foundation (WCF) que se conecta a un extremo con esta identidad utiliza UPN al realizar la autenticación de SSPI con el punto de conexión.  
   
 ## <a name="example"></a>Ejemplo  
  El código de configuración siguiente especifica el UPN del servicio que va a autenticar el cliente.  
@@ -72,4 +58,4 @@ Especifica el Nombre principal de usuario (UPN) de un servicio que va a autentic
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
  <xref:System.ServiceModel.UpnEndpointIdentity>  
  [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+ [\<identidad >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

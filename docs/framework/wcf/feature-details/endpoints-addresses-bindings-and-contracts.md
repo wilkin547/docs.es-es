@@ -1,33 +1,19 @@
 ---
 title: 'puntos de conexión: direcciones, enlaces y contratos'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 477c23facd846580bac698ce6e61d02e11afe430
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0909d1d10ab8932f27f7ca6cba6207d57fa4f4cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>puntos de conexión: direcciones, enlaces y contratos
-Toda la comunicación con un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] servicio se produce a través de la *extremos* del servicio. Los extremos proporcionan acceso a los clientes a la funcionalidad que ofrece un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Toda la comunicación con un servicio de Windows Communication Foundation (WCF) se produce a través de la *extremos* del servicio. Los extremos proporcionan a los clientes acceso a la funcionalidad proporcionada por un servicio WCF.  
   
  Cada punto de conexión está compuesto de cuatro propiedades:  
   
@@ -39,12 +25,12 @@ Toda la comunicación con un [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
 -   Un conjunto de comportamientos que especifican detalles de implementación local del punto de conexión.  
   
- En este tema se describe esta estructura de extremo y se explica cómo se representa en el modelo de objetos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ En este tema se describe esta estructura de punto de conexión y se explica cómo se representa en el modelo de objetos WCF.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Estructura de un punto de conexión  
  Cada punto de conexión está compuesto de lo siguiente:  
   
--   Dirección: la dirección identifica únicamente el punto de conexión e indica a los consumidores potenciales del servicio dónde se ubica éste. Está representado en el modelo de objetos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] por la clase <xref:System.ServiceModel.EndpointAddress>. Una clase <xref:System.ServiceModel.EndpointAddress> contiene:  
+-   Dirección: la dirección identifica únicamente el punto de conexión e indica a los consumidores potenciales del servicio dónde se ubica éste. Se representa en el modelo de objetos WCF mediante el <xref:System.ServiceModel.EndpointAddress> clase. Una clase <xref:System.ServiceModel.EndpointAddress> contiene:  
   
     -   Una propiedad <xref:System.ServiceModel.EndpointAddress.Uri%2A>, que representa la dirección del servicio.  
   
@@ -60,7 +46,7 @@ Toda la comunicación con un [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
     -   Los requisitos de seguridad necesarios (por ejemplo, SSL o seguridad de mensaje SOAP).  
   
-     Para obtener más información, consulte [información general de enlaces de WCF](../../../../docs/framework/wcf/bindings-overview.md). Un enlace se representa en el modelo de objetos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mediante la clase base abstracta <xref:System.ServiceModel.Channels.Binding>. Para la mayoría de los escenarios, los usuarios pueden utilizar uno de los enlaces proporcionados por el sistema. Para obtener más información, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     Para obtener más información, consulte [información general de enlaces de WCF](../../../../docs/framework/wcf/bindings-overview.md). Un enlace se representa en el modelo de objetos WCF mediante la clase base abstracta <xref:System.ServiceModel.Channels.Binding>. Para la mayoría de los escenarios, los usuarios pueden utilizar uno de los enlaces proporcionados por el sistema. Para obtener más información, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
 -   Contratos: el contrato describe qué funcionalidad expone el punto de conexión al cliente. Un contrato especifica:  
   
@@ -74,7 +60,7 @@ Toda la comunicación con un [!INCLUDE[indigo1](../../../../includes/indigo1-md.
   
      Para obtener más información acerca de cómo definir un contrato, vea [diseñar contratos de servicio](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
--   Comportamientos: puede utilizar los comportamientos de punto de conexión para personalizar el comportamiento local del punto de conexión de servicio. Comportamientos de extremo logran esto participando en el proceso de creación una [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]en tiempo de ejecución. Un ejemplo de un comportamiento de extremo es la propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, que permite especificar una dirección de escucha diferente que la dirección SOAP o la dirección del Lenguaje de descripción de servicios Web (WSDL). Para obtener más información, consulte [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+-   Comportamientos: puede utilizar los comportamientos de punto de conexión para personalizar el comportamiento local del punto de conexión de servicio. Comportamientos de extremo logran esto participando en el proceso de creación de un WCFruntime. Un ejemplo de un comportamiento de extremo es la propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, que permite especificar una dirección de escucha diferente que la dirección SOAP o la dirección del Lenguaje de descripción de servicios Web (WSDL). Para obtener más información, consulte [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Definición de puntos de conexión  
  Puede especificar el punto de conexión de un servicio de manera imperativa mediante código o de manera declarativa mediante configuración. Para obtener más información, consulte [Cómo: crear un extremo de servicio en configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) y [Cómo: crear un extremo de servicio en el código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
@@ -83,7 +69,7 @@ Toda la comunicación con un [!INCLUDE[indigo1](../../../../includes/indigo1-md.
  En esta sección se explica el propósito de los enlaces, extremos y direcciones; se muestra cómo configurar un enlace y un extremo; y cómo utilizar el comportamiento `ClientVia` y la propiedad `ListenUri`.  
   
  [Direcciones](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
- Describe cómo se direccionan los extremos en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Describe cómo se direccionan los extremos de WCF.  
   
  [Enlaces](../../../../docs/framework/wcf/feature-details/bindings.md)  
  Describe cómo se utilizan los enlaces para especificar el transporte, codificación y detalles protocolares requeridos para que los clientes y servicios se comuniquen entre sí.  

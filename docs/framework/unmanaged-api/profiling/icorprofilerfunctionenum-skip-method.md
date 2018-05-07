@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerFunctionEnum::Skip (Método)"
-ms.custom: 
+title: ICorProfilerFunctionEnum::Skip (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerFunctionEnum.Skip Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 051465b9-e479-494a-804b-c880323b4cbe
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ddde6069072092cfc0441686ce4d53aa0a4bd534
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 95301c4a99253261721c7f524b99f79a6207feb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>ICorProfilerFunctionEnum::Skip (Método)
 Desplaza el cursor del enumerador desde su posición actual de manera que se omita el número especificado de elementos.  
@@ -53,7 +41,7 @@ HRESULT Skip([in] ULONG celt);
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`celt`elementos omitidos.|  
+|S_OK|`celt` elementos omitidos.|  
 |S_FALSE|Menos de `celt` elementos omitidos, lo que indica que no hay ningún elemento más.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -66,7 +54,7 @@ HRESULT Skip([in] ULONG celt);
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICorProfilerFunctionEnum (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  

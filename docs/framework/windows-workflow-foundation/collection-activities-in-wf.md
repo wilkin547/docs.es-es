@@ -1,26 +1,15 @@
 ---
-title: "Actividades de colección en WF"
-ms.custom: 
+title: Actividades de colección en WF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 52713566419eedbb5a39153541402920479eb500
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 442da07e78ee08b49ad0e023362cace23dcd5b8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-activities-in-wf"></a>Actividades de colección en WF
-Las actividades de colección se usan para trabajar con objetos de colección en un flujo de trabajo. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tiene actividades proporcionadas por el sistema para agregar y quitar elementos de una colección, probar la existencia de un elemento en una colección y borrar una colección. `ExistsInCollection`y `RemoveFromCollection` tiene un <xref:System.Activities.OutArgument%601> de tipo <xref:System.Boolean>, lo que indica el resultado.  
+Las actividades de colección se usan para trabajar con objetos de colección en un flujo de trabajo. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tiene actividades proporcionadas por el sistema para agregar y quitar elementos de una colección, probar la existencia de un elemento en una colección y borrar una colección. `ExistsInCollection` y `RemoveFromCollection` tiene un <xref:System.Activities.OutArgument%601> de tipo <xref:System.Boolean>, lo que indica el resultado.  
   
 > [!IMPORTANT]
 >  Si se ejecuta una actividad de colección antes de establecer el objeto de colección subyacente, se inicia una excepción <xref:System.InvalidOperationException> y se produce un error en la actividad.  

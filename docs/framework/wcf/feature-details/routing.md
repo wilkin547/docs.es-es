@@ -1,28 +1,16 @@
 ---
 title: Enrutamiento
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - routing [WCF]
 - WCF [WCF], routing
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-caps.latest.revision: "7"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 638c768e4abd199aa52bc85582305ffaf405fe87
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 108e65f733100cd07e23e6436285463e9138dbcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing"></a>Enrutamiento
 Los temas de esta sección explican el servicio de enrutamiento. El servicio de enrutamiento es un intermediario de SOAP configurable genérico que permite configurar el enrutamiento basado en contenido, preparar puentes protocolares, administrar errores de comunicaciones, así como actualizar dinámicamente la lógica de enrutamiento durante el tiempo de ejecución.  

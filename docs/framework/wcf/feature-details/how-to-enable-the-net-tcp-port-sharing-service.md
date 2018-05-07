@@ -1,30 +1,18 @@
 ---
-title: "Cómo habilitar el servicio de uso compartido de puertos Net.TCP"
-ms.custom: 
+title: Cómo habilitar el servicio de uso compartido de puertos Net.TCP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b9f1c57f067fa7c8bece3acaf0d51303b31d13bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5a18e11d9fc15f23b5353883a63d838face58a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Cómo habilitar el servicio de uso compartido de puertos Net.TCP
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza un servicio de Windows llamado Servicio de uso compartido de puertos de Net.TCP para facilitar el uso compartido de puertos TCP por varios procesos. Este servicio se instala como parte de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], pero el servicio no está habilitado de forma predeterminada como precaución de seguridad, por lo que debe habilitarse manualmente antes de su primer uso. En este tema se describe cómo configurar el Servicio de uso compartido de puertos Net.TCP mediante el complemento de Microsoft Management Console (MMC).  
+Windows Communication Foundation (WCF) utiliza un servicio de Windows denominado el servicio de uso compartido de puertos Net.TCP para facilitar el uso compartido de puertos TCP entre varios procesos. Este servicio se instala como parte de WCF, pero el servicio no está habilitado de forma predeterminada como precaución de seguridad y por lo que debe habilitarse manualmente antes de utilizarlo por primera vez. En este tema se describe cómo configurar el Servicio de uso compartido de puertos Net.TCP mediante el complemento de Microsoft Management Console (MMC).  
   
  Después de habilitar el servicio de uso compartido de puertos Net.TCP e iniciarla manualmente, consulte [Cómo: configurar un servicio de WCF para utilizar el uso compartido de puertos](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md) para obtener información acerca de cómo configurar el servicio para utilizar este servicio.  
   

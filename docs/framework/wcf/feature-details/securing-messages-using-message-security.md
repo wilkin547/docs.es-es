@@ -1,44 +1,32 @@
 ---
 title: Protección de mensajes mediante la seguridad de mensajes
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: 16
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ebe2526e564ef24d20f1602fd5824b44e2e2bbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Protección de mensajes mediante la seguridad de mensajes
-Esta sección aborda el modo de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] al utilizar <xref:System.ServiceModel.NetMsmqBinding>.  
+En esta sección analiza la seguridad de mensaje WCF cuando se usa <xref:System.ServiceModel.NetMsmqBinding>.  
   
 > [!NOTE]
 >  Antes de leer este tema, se recomienda que lea [conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
- La ilustración siguiente proporciona un modelo conceptual de comunicación en cola utilizando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Esta ilustración y la terminología se utilizan para explicar  
+ La ilustración siguiente proporciona un modelo conceptual de comunicación en cola con WCF. Esta ilustración y la terminología se utilizan para explicar  
   
  los conceptos de seguridad de transporte.  
   
  ![Diagrama de aplicaciones en la cola](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "figura de cola distribuida")  
   
- Al enviar mensajes en cola utilizando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], el mensaje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se adjunta como cuerpo del mensaje de Message Queuing (MSMQ). Aunque la seguridad de transporte protege el mensaje de MSMQ completo, la seguridad de mensajes (o SOAP) solo protege el cuerpo del mensaje de MSMQ.  
+ Al enviar mensajes en cola utilizando WCF, el mensaje de WCF se adjunta como un cuerpo del mensaje de Message Queuing (MSMQ). Aunque la seguridad de transporte protege el mensaje de MSMQ completo, la seguridad de mensajes (o SOAP) solo protege el cuerpo del mensaje de MSMQ.  
   
- El concepto clave de la seguridad de mensajes es que el cliente protege el mensaje para la aplicación receptora (servicio), a diferencia de la seguridad de transporte donde el cliente protege el mensaje para la cola de destino. Como tal, MSMQ no representa ningún papel al proteger el mensaje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizando la seguridad de mensajes.  
+ El concepto clave de la seguridad de mensajes es que el cliente protege el mensaje para la aplicación receptora (servicio), a diferencia de la seguridad de transporte donde el cliente protege el mensaje para la cola de destino. Como tal, MSMQ no representa ningún papel al proteger el mensaje WCF mediante la seguridad del mensaje.  
   
- La seguridad de mensajes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] agrega los encabezados de seguridad al mensaje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se integran con las infraestructuras de seguridad existentes, como un certificado o el protocolo Kerberos.  
+ Seguridad de mensajes WCF agrega encabezados de seguridad para el mensaje WCF que se integran con las infraestructuras de seguridad existentes, como un certificado o el protocolo Kerberos.  
   
 ## <a name="message-credential-type"></a>Tipo de credencial de mensaje  
  Utilizando la seguridad de mensajes, el servicio y cliente pueden presentar las credenciales para autenticarse entre sí. Puede seleccionar la seguridad de mensajes estableciendo el modo <xref:System.ServiceModel.NetMsmqBinding.Security%2A> en `Message` o `Both` (es decir, utilizar la seguridad de transporte y la seguridad de mensajes).  

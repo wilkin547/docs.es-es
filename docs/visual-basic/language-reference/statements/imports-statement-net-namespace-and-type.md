@@ -1,11 +1,6 @@
 ---
-title: "Instrucción Imports (Tipo y espacio de nombres de .NET)"
+title: Instrucción Imports (Tipo y espacio de nombres de .NET)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Imports
 - imports
@@ -21,14 +16,11 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-caps.latest.revision: "40"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 46cc78c2fd039fb56fd4d1b797f2d09cbe95d317
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef569b0ed6428d24d019e00c500e4d4b91c83d49
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Instrucción Imports (Tipo y espacio de nombres de .NET)
 Permite nombres que hace referencia sin calificación de espacio de nombres de tipo.  
@@ -46,7 +38,7 @@ Imports [ aliasname = ] namespace.element
 |Término|Definición|  
 |---|---|  
 |`aliasname`|Opcional. Un *alias de importación* o el nombre por el que el código puede hacer referencia a `namespace` en lugar de la cadena de calificación completa. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`namespace`|Obligatorio. El nombre completo del espacio de nombres que se va a importar. Puede ser una cadena de espacios de nombres anidada a cualquier nivel.|  
+|`namespace`|Requerido. El nombre completo del espacio de nombres que se va a importar. Puede ser una cadena de espacios de nombres anidada a cualquier nivel.|  
 |`element`|Opcional. El nombre de un elemento de programación declarado en el espacio de nombres. Puede ser cualquier elemento contenedor.|  
   
 ## <a name="remarks"></a>Comentarios  

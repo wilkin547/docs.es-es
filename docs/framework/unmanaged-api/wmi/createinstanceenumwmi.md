@@ -1,11 +1,7 @@
 ---
-title: "Función CreateInstanceEnumWmi (referencia de API no administrada)"
-description: "La función CreateInstanceEnumWmi devuelve un enumerador que contiene instancias de una clase especificada que cumplen los criterios de selección."
+title: Función CreateInstanceEnumWmi (referencia de API no administrada)
+description: La función CreateInstanceEnumWmi devuelve un enumerador que contiene instancias de una clase especificada que cumplen los criterios de selección.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CreateInstanceEnumWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b796771b07dee28470d37ca3e4292c0a244e056b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f9297d34b01c03075db67bd904a81e589bfcc10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi (función)
 Devuelve un enumerador que devuelve las instancias de una clase especificada que cumplen los criterios de selección especificados. 
@@ -79,7 +72,7 @@ Las marcas recomendadas son `WBEM_FLAG_RETURN_IMMEDIATELY` y `WBEM_FLAG_FORWARD_
 `authLevel`  
 [in] El nivel de autorización.
 
-`impLevel`[in] El nivel de suplantación.
+`impLevel` [in] El nivel de suplantación.
 
 `pCurrentNamespace`   
 [in] Un puntero a un [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) objeto que representa el espacio de nombres actual.
@@ -121,7 +114,7 @@ Si se produce un error en la llamada de función, puede obtener información de 
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

@@ -1,17 +1,12 @@
 ---
 title: 'Empezar a trabajar con F # en Visual Studio para Mac'
 description: 'Obtenga información acerca de cómo usar F # con Visual Studio para Mac.'
-author: cartermp
-ms.author: phcart
 ms.date: 02/13/2017
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 232235952ec43f682dc21de4ef7dde9c1b553364
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 58e65e703b092f2ee5d74386051b158c932013b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Empezar a trabajar con F # en Visual Studio para Mac
 

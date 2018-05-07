@@ -1,14 +1,6 @@
 ---
-title: "Introducción a las aplicaciones de servicios de Windows"
-ms.custom: 
+title: Introducción a las aplicaciones de servicios de Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ServiceController
 helpviewer_keywords:
@@ -29,17 +21,13 @@ helpviewer_keywords:
 - Win32ShareProcess service type
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-caps.latest.revision: 
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload:
-- dotnet
-ms.openlocfilehash: 613107a13820ad71b854dcba93f21c41f2a5fa5f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0720b90d89e5117cbac15ce7e38a41071f1c13e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-windows-service-applications"></a>Introducción a las aplicaciones de servicios de Windows
 Servicios de Microsoft Windows, antes conocidos como servicios NT, permiten crear aplicaciones ejecutables de larga duración que se ejecutan en sus propias sesiones de Windows. Estos servicios pueden iniciarse automáticamente cuando el equipo arranca, se pueden pausar y reiniciar y no muestran ninguna interfaz de usuario. Estas características dificultan servicios ideal para su uso en un servidor o siempre que tenga funcionalidad de ejecución prolongada que no interfiere con otros usuarios que trabajan en el mismo equipo. También puede ejecutar servicios en el contexto de seguridad de una cuenta de usuario que sea diferente del usuario que ha iniciado sesión o la cuenta de equipo predeterminada. Para obtener más información sobre los servicios y sesiones de Windows, consulte la documentación del SDK de Windows.  

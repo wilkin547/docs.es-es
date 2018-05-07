@@ -1,14 +1,6 @@
 ---
-title: "ICLRGCManager::Collect (Método)"
-ms.custom: 
+title: ICLRGCManager::Collect (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRGCManager.Collect
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0c6cbbea-c27c-4695-bda3-17c1910d8ddb
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2fdb66008a6bbe315f39a0d3fae293219d6b6c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b9c3899c4319c623bc991d0775945f0a4dc09e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect (Método)
 Fuerza una recolección de elementos no utilizados para la generación especificada.  
@@ -54,7 +42,7 @@ HRESULT Collect (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`Collect`se devolvió correctamente.|  
+|S_OK|`Collect` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|La llamada agotó el tiempo de espera.|  
 |HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
@@ -71,7 +59,7 @@ HRESULT Collect (
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Administración automática de la memoria](../../../../docs/standard/automatic-memory-management.md)  

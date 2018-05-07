@@ -1,30 +1,18 @@
 ---
-title: "Cómo: inspeccionar o modificar parámetros"
-ms.custom: 
+title: 'Cómo: inspeccionar o modificar parámetros'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5f1a0ef31ba074082e4c3aa8a26e6a59502a7566
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ddf6ad667eb131ec6fa4f12ed112c57368c43d9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Cómo: inspeccionar o modificar parámetros
-Puede inspeccionar o modificar los mensajes entrantes o salientes de una sola operación en un objeto de cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] o un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementando la interfaz <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> e insertándola en el cliente o servicio en tiempo de ejecución. Normalmente se utiliza un comportamiento de operación para agregar inspectores de parámetro en una sola operación; se pueden utilizar otros comportamientos para proporcionar acceso fácil al tiempo de ejecución en un ámbito mayor. Para obtener más información, consulte [clientes extender](../../../../docs/framework/wcf/extending/extending-clients.md) y [extender distribuidores](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
+Puede inspeccionar o modificar los mensajes entrantes o salientes para una única operación en un objeto de cliente de Windows Communication Foundation (WCF) o un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio implementando la <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> interfaz e insertarlos en el cliente o servicio en tiempo de ejecución. Normalmente se utiliza un comportamiento de operación para agregar inspectores de parámetro en una sola operación; se pueden utilizar otros comportamientos para proporcionar acceso fácil al tiempo de ejecución en un ámbito mayor. Para obtener más información, consulte [clientes extender](../../../../docs/framework/wcf/extending/extending-clients.md) y [extender distribuidores](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
   
 ### <a name="inspecting-or-modifying-parameters"></a>Inspeccionando o modificando parámetros  
   

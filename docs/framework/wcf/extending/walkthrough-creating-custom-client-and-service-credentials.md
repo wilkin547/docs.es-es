@@ -1,35 +1,21 @@
 ---
 title: 'Tutorial: Crear credenciales de cliente y servicio personalizadas'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cf9f6c1ad5be3a2d63140f03f74713809624e277
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 8c5608276de935f07dca88e343143112b8fdcc20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Tutorial: Crear credenciales de cliente y servicio personalizadas
 En este tema se muestra cómo implementar credenciales de cliente y servicio personalizadas y cómo utilizar las credenciales personalizadas desde el código de la aplicación.  
   
 ## <a name="credentials-extensibility-classes"></a>Clases de extensibilidad de credenciales  
- Las clases <xref:System.ServiceModel.Description.ClientCredentials> y <xref:System.ServiceModel.Description.ServiceCredentials> son los puntos de entrada principales a la extensibilidad de seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Estas clases de credenciales proporcionan las API que permiten al código de la aplicación establecer información de las credenciales y convertir los tipos de credenciales en tokens de seguridad. (*Tokens de seguridad* son la forma que se utiliza para transmitir información de credenciales dentro de los mensajes SOAP.) Las responsabilidades de estas clases de credenciales pueden dividirse en dos áreas:  
+ El <xref:System.ServiceModel.Description.ClientCredentials> y <xref:System.ServiceModel.Description.ServiceCredentials> clases son los puntos de entrada principal para la extensibilidad de seguridad de Windows Communication Foundation (WCF). Estas clases de credenciales proporcionan las API que permiten al código de la aplicación establecer información de las credenciales y convertir los tipos de credenciales en tokens de seguridad. (*Tokens de seguridad* son la forma que se utiliza para transmitir información de credenciales dentro de los mensajes SOAP.) Las responsabilidades de estas clases de credenciales pueden dividirse en dos áreas:  
   
 -   Proporcione las API para que las aplicaciones establezcan la información de las credenciales.  
   

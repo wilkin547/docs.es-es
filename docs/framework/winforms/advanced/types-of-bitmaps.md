@@ -1,13 +1,6 @@
 ---
 title: Tipos de mapas de bits
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - jpeg files
 - TIFF files
@@ -27,16 +20,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6af28e7b50cb7e4a2a90153a053a83931c738214
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a79f34daac4238093693947f5fb5e73bb56213d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-bitmaps"></a>Tipos de mapas de bits
 Un mapa de bits es una matriz de bits que especifica el color de cada píxel en una matriz rectangular de píxeles. El número de bits destinados a un píxel individual determina el número de colores que se pueden asignar a dicho píxel. Por ejemplo, si cada píxel se representa con 4 bits, a continuación, un píxel determinado puede asignarse uno de los 16 colores distintos (2 ^ 4 = 16). La tabla siguiente muestran algunos ejemplos del número de colores que se pueden asignar a un píxel representado por un número determinado de bits.  
@@ -64,7 +52,7 @@ Un mapa de bits es una matriz de bits que especifica el color de cada píxel en 
  ![Ejemplo de mapa de bits](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Formatos de archivo de gráficos  
- Hay muchos formatos estándar para guardar mapas de bits en archivos de disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]es compatible con el archivo de gráficos formatos que se describen en los párrafos siguientes.  
+ Hay muchos formatos estándar para guardar mapas de bits en archivos de disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] es compatible con el archivo de gráficos formatos que se describen en los párrafos siguientes.  
   
 ### <a name="bmp"></a>BMP  
  BMP es un formato estándar que Windows usa para almacenar imágenes independientes del dispositivo e independiente de la aplicación. El número de bits por píxel (1, 4, 8, 15, 24, 32 o 64) de un archivo BMP determinado se especifica en un encabezado de archivo. Archivos BMP con 24 bits por píxel son comunes. Los archivos BMP no suelen comprimirse y, por lo tanto, no resultan adecuados para la transferencia a través de Internet.  

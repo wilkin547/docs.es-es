@@ -1,29 +1,17 @@
 ---
 title: PrintPreviewControl (Control, formularios Windows Forms)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - printing [Windows Forms], print preview
 - PrintPreviewControl control (using designer)
 - PrintPreview control (using designer)
 - print preview [Windows Forms], custom interface (using designer)
 ms.assetid: 3fdb2e46-92a3-4e26-bb8d-63a89087b337
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6be7ff61dad214c9e4caa90682a45922f2c9c69b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7f4b6f71427a750799d102a8602d3a2c1d43d034
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printpreviewcontrol-control-windows-forms"></a>PrintPreviewControl (Control, formularios Windows Forms)
 Los Windows Forms `PrintPreviewControl` se utiliza para mostrar un documento tal como aparecerá cuando se imprima. Este control no tiene botones ni otros elementos de la interfaz de usuario, por lo que normalmente utiliza `PrintPreviewControl` solo si desea volver a escribir su propia interfaz de usuario de vista previa de impresión. Si quiere la interfaz de usuario estándar, utilice un control <xref:System.Windows.Forms.PrintPreviewDialog>.  

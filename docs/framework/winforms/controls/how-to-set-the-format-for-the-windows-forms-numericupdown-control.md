@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Establecer el formato del control NumericUpDown de formularios Windows Forms"
-ms.custom: 
+title: 'Cómo: Establecer el formato del control NumericUpDown de formularios Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], formatting values
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b4ff6d8e584e65482285012af351ebd1a669b806
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1cb8f8b7d2f86125736c08cd9eadf4eee30063bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>Cómo: Establecer el formato del control NumericUpDown de formularios Windows Forms
 Puede configurar cómo se muestran los valores en los formularios Windows Forms <xref:System.Windows.Forms.NumericUpDown> control. El <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> propiedad determina cuántos números aparecen después del separador decimal; el valor predeterminado es 0. El <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> propiedad determina si se insertará un separador entre cada tres dígitos decimales; el valor predeterminado es `false`. El control puede mostrar valores en formato hexadecimal en lugar de formato decimal, si la <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> propiedad está establecida en `true`; el valor predeterminado es `false`.  
@@ -49,7 +37,7 @@ Puede configurar cómo se muestran los valores en los formularios Windows Forms 
     numericUpDown1->ThousandsSeparator = true;  
     ```  
   
-     O bien  
+     -o bien-  
   
 -   Para mostrar un valor hexadecimal estableciendo la <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> propiedad `true`.  
   

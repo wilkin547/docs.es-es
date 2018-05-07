@@ -1,11 +1,7 @@
 ---
-title: "Función InheritsFrom (referencia de API no administrada)"
-description: "La función InheritsFrom determina si una clase o instancia se deriva de una clase principal concreta."
+title: Función InheritsFrom (referencia de API no administrada)
+description: La función InheritsFrom determina si una clase o instancia se deriva de una clase principal concreta.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - InheritsFrom
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0dce964829399e6761152a8ff424671b47cc6eb3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 87a1c1ee44d3b192747bd785f538c0332300ff50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom (función)
 Determina si la instancia o clase actual se deriva de una clase principal especificada.
@@ -53,7 +46,7 @@ HRESULT InheritsFrom (
 [in] Un puntero a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instancia.
 
 `wszAncestor`  
-[in] El nombre de la clase. `wszAncestor`debe apuntar a válido `LPCWSTR`.
+[in] El nombre de la clase. `wszAncestor` debe apuntar a válido `LPCWSTR`.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -74,7 +67,7 @@ Esta función contiene una llamada a la [IWbemClassObject::InheritsFrom](https:/
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

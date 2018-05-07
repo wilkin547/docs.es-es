@@ -1,24 +1,12 @@
 ---
 title: Nodos del mismo nivel
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0732b314-6006-4ec6-999d-ec9476c9e5bb
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a79503b8f0d56402b2e32b4f54e7f7b143a1f92
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: df83a7c5f2eae8faaae99978b6d60f415ca0611b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-nodes"></a>Nodos del mismo nivel
 PeerNode es un punto de conexión único en una malla de canal del mismo nivel. Una aplicación puede tener varios nodos del mismo nivel que participan en mallas diferentes. Por ejemplo, una aplicación de conversación punto a punto puede formar parte de dos mallas independientes: una para charlar con amigos de la universidad y otra para charlar con compañeros de trabajo.  

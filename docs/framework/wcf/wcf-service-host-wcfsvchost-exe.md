@@ -1,29 +1,15 @@
 ---
 title: Host de servicio WCF (WcfSvcHost.exe)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1da8d7a08e7887e8ba3fd50a8f809e2ff551a7fd
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: c000ad3ba53f103cb1a24a9a7fbc71049ba707c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host de servicio WCF (WcfSvcHost.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Host de servicio (WcfSvcHost.exe) permite iniciar al depurador de Visual Studio (F5) para hospedar y probar un servicio implementado automáticamente. Puede probar el servicio mediante el cliente de prueba [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (WcfTestClient.exe) o su propio cliente, para buscar y corregir cualquier error potencial.  
+Host de servicio de Windows Communication Foundation (WCF) (WcfSvcHost.exe) permite iniciar al depurador de Visual Studio (F5) para hospedar y probar un servicio implementado automáticamente. Puede probar el servicio mediante el cliente de prueba [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (WcfTestClient.exe) o su propio cliente, para buscar y corregir cualquier error potencial.  
   
 ## <a name="wcf-service-host"></a>Host de servicio de WCF  
  El host de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] enumera los servicios de un proyecto de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], carga la configuración del proyecto y crea una instancia de host por cada servicio que busca. La herramienta está integrada en Visual Studio mediante el [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] plantilla de servicio y se invoca cuando empiece a depurar el proyecto.  

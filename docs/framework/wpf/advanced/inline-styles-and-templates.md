@@ -1,45 +1,33 @@
 ---
 title: Estilos y plantillas insertados
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - inline templates [WPF]
 - styles [WPF], inline
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5dccf0b274121ff4fe88c9270119a2f631ffcf29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c06f61bce1e17770fa0a9b9ed7a0e20625a79ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inline-styles-and-templates"></a>Estilos y plantillas insertados
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]proporciona <xref:System.Windows.Style> objetos y objetos de plantilla (<xref:System.Windows.FrameworkTemplate> subclases) como una manera de definir la apariencia visual de un elemento en recursos, por lo que se pueden usar varias veces. Por esta razón, los atributos en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que tenga los tipos <xref:System.Windows.Style> y <xref:System.Windows.FrameworkTemplate> casi siempre realizan referencias de recursos existentes estilos y plantillas, en lugar de definir otros nuevos insertados.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona <xref:System.Windows.Style> objetos y objetos de plantilla (<xref:System.Windows.FrameworkTemplate> subclases) como una manera de definir la apariencia visual de un elemento en recursos, por lo que se pueden usar varias veces. Por esta razón, los atributos en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que tenga los tipos <xref:System.Windows.Style> y <xref:System.Windows.FrameworkTemplate> casi siempre realizan referencias de recursos existentes estilos y plantillas, en lugar de definir otros nuevos insertados.  
   
 ## <a name="limitations-of-inline-styles-and-templates"></a>Limitaciones de plantillas y estilos en línea  
  En [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], propiedades de estilo y plantilla técnicamente pueden establecerse en uno de dos maneras. Puede usar la sintaxis de atributo para hacer referencia a un estilo que se ha definido dentro de un recurso, por ejemplo `<` *objeto*`Style="{StaticResource`*myResourceKey*`}" .../>`. O bien, puede usar sintaxis de elemento de propiedad para definir un estilo en línea, por ejemplo:  
   
- `<`*object*`>`  
+ `<` *Objeto* `>`  
   
- `<`*object*`.Style>`  
+ `<` *Objeto* `.Style>`  
   
  `<` `Style`  `.../>`  
   
- `</`*object*`.Style>`  
+ `</` *Objeto* `.Style>`  
   
- `</`*object*`>`  
+ `</` *Objeto* `>`  
   
  El uso de atributos es mucho más común. Un estilo que se define en línea y recursos no está definidos en necesariamente ámbito es solo el elemento que lo contiene y no se puede volver a usar fácilmente porque no tiene ninguna clave de recurso. Por lo general un estilo definido por el recurso es más versátil y útil y es más en consonancia con la ficha general [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] principio de modelo de separar la lógica del programa en el código de diseño en el marcado de programación.  
   

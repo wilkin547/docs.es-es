@@ -1,35 +1,23 @@
 ---
 title: Terminología de seguridad en WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-security-terminology"></a>Terminología de seguridad en WCF
 Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco familiar. Este tema proporciona breves explicaciones sobre algunos términos de seguridad, pero no está diseñado para proporcionar una documentación completa sobre cada elemento.  
   
- Para obtener más información sobre los términos usados en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] documentación, vea [conceptos fundamentales de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Para obtener más información sobre los términos usados en la documentación de Windows Communication Foundation (WCF), consulte [conceptos fundamentales de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  lista de control de acceso (ACL)  
  Lista de protecciones de seguridad que se aplica a un objeto. (Un objeto puede ser un archivo, un proceso, un evento, o cualquier elemento que tenga un descriptor de seguridad.) Una entrada en ACL es una entrada de control de acceso (ACE). Hay dos tipos de ACL: discrecional y de sistema.  
@@ -189,7 +177,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  Un nombre de cuenta de usuario (a veces se denomina la *nombre de inicio de sesión de usuario*) y un nombre de dominio identifica el dominio donde se encuentra la cuenta de usuario. Éste es el uso estándar para iniciar sesión en un dominio de Windows. El formato es: someone@example.com (para una dirección de correo electrónico).  
   
 > [!NOTE]
->  Además del formulario UPN estándar, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] acepta UPN en forma de nivel inferior, como, por ejemplo, cohowinery.com\someone.  
+>  Además de formulario UPN estándar, WCF acepta UPN en forma de nivel inferior, por ejemplo, com\someone.  
   
  X.509  
  Un estándar reconocido internacionalmente para los certificados que define sus partes necesarias.  

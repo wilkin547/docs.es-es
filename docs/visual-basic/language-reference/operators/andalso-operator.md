@@ -1,11 +1,6 @@
 ---
 title: AndAlso (Operador, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AndAlso
 - AndAlso
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f92f4ed226c2923c3d95a7b80db3872b7ac33dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 549d14cc35d285ac2e4a02a37dd201cc669c5627
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso (Operador, Visual Basic)
 Realiza la evaluación "cortocircuitada" conjunción lógica en dos expresiones.  
@@ -38,9 +30,9 @@ result = expression1 AndAlso expression2
   
 |Término|Definición|  
 |---|---|  
-|`result`|Obligatorio. Cualquier expresión `Boolean`. El resultado es el `Boolean` resultado de comparación de las dos expresiones.|  
-|`expression1`|Obligatorio. Cualquier expresión `Boolean`.|  
-|`expression2`|Obligatorio. Cualquier expresión `Boolean`.|  
+|`result`|Requerido. Cualquier expresión `Boolean`. El resultado es el `Boolean` resultado de comparación de las dos expresiones.|  
+|`expression1`|Requerido. Cualquier expresión `Boolean`.|  
+|`expression2`|Requerido. Cualquier expresión `Boolean`.|  
   
 ## <a name="remarks"></a>Comentarios  
  Se dice que una operación lógica *evaluación "cortocircuitada"* si el código compilado puede omitir la evaluación de una expresión en función del resultado de otra expresión. Si el resultado de la primera expresión evaluada determina el resultado final de la operación, no hay ninguna necesidad de evaluar la segunda expresión, ya que no puede cambiar el resultado final. Evaluación "cortocircuitada" puede mejorar el rendimiento si la expresión omitida es compleja o si implica llamadas de procedimiento.  

@@ -1,24 +1,12 @@
 ---
 title: Resoluciones del mismo nivel
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79c26ca9e167455dfbd664ea96e574c130cdc3d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 760011dda4a3059a217dcfbfc3fddaa67edc9995
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-resolvers"></a>Resoluciones del mismo nivel
 Para conectar a una malla, un nodo del mismo nivel necesita las direcciones IP de otros nodos. Las direcciones IP se obtienen al establecer contacto con un servicio de resolución, que toma el identificador de la malla y devuelve una lista de direcciones que corresponden a los nodos registrados con ese identificador de malla concreto. La resolución mantiene una lista de direcciones registradas, que crea mediante el registro de cada nodo de la malla en el servicio.  
@@ -28,7 +16,7 @@ Para conectar a una malla, un nodo del mismo nivel necesita las direcciones IP d
 ## <a name="supported-peer-resolvers"></a>Resoluciones del mismo nivel compatibles  
  El canal del mismo nivel admite dos tipos de resoluciones: protocolo de resolución de nombres del mismo nivel (PNRP) y servicios de resolución personalizados.  
   
- De forma predeterminada, el canal del mismo nivel usa el servicio de resolución del mismo nivel PNRP para la detección de iguales y vecinos en la malla. En situaciones/plataformas en las que PNRP no está disponible o no es viable, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona un servicio de detección alternativo basado en servidor: <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. También puede definir explícitamente un servicio de resolución personalizado escribiendo una clase que implemente la interfaz <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>.  
+ De forma predeterminada, el canal del mismo nivel usa el servicio de resolución del mismo nivel PNRP para la detección de iguales y vecinos en la malla. En situaciones/plataformas donde PNRP no está disponible o es factible, Windows Communication Foundation (WCF) proporciona un servicio de detección alternativo basado en el servidor, - la <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. También puede definir explícitamente un servicio de resolución personalizado escribiendo una clase que implemente la interfaz <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>.  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>Protocolo de resolución de nombres del mismo nivel (PNRP)  
  PNRP, la resolución predeterminada para [!INCLUDE[wv](../../../../includes/wv-md.md)], es un servicio distribuido de resolución de nombres sin servidor. PNRP también se puede utilizar en [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] instalando el paquete de conexión de red avanzada. Cualquiera de los dos clientes que ejecuten la misma versión de PNRP pueden localizarse mediante este protocolo, siempre y cuando cumplan ciertas condiciones (como la falta de un firewall corporativo intermedio). Observe que la versión de PNRP que se distribuye con [!INCLUDE[wv](../../../../includes/wv-md.md)] es más nueva que la versión incluida en el paquete de conexión de red avanzada. Compruebe en el Centro de descarga de Microsoft si hay actualizaciones de PNRP para [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)].  

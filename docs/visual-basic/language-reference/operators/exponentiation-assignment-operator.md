@@ -1,12 +1,6 @@
 ---
 title: ^= (Operador, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.^=
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fa9d87d2f090a8c18aaab742e73878c7b80f55c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 571ef26eb188d9044ec8f6c8e6e4b490780f17a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>^= (Operador, Visual Basic)
 Genera el valor de una variable o propiedad a la potencia de una expresión y asigna el resultado a la variable o propiedad.  
@@ -35,10 +26,10 @@ variableorproperty ^= expression
   
 ## <a name="parts"></a>Elementos  
  `variableorproperty`  
- Obligatorio. Cualquier propiedad o variable numérica.  
+ Requerido. Cualquier propiedad o variable numérica.  
   
  `expression`  
- Obligatorio. Cualquier expresión numérica.  
+ Requerido. Cualquier expresión numérica.  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento en el lado izquierdo de la `^=` puede ser una variable escalar simple, una propiedad o un elemento de una matriz. La variable o propiedad no puede ser [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  

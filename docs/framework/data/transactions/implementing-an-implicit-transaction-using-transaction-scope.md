@@ -1,26 +1,15 @@
 ---
-title: "Implementar una transacción implícita mediante el ámbito de la transacción"
-ms.custom: 
+title: Implementar una transacción implícita mediante el ámbito de la transacción
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b75091739b0ea97b63b35830f4946a78e49ff8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementar una transacción implícita mediante el ámbito de la transacción
 La clase <xref:System.Transactions.TransactionScope> proporciona una manera simple de marcar un bloque de código como participar en una transacción, sin exigirle que interactuara con la propia transacción. Un ámbito de la transacción puede seleccionar y administrar automáticamente la transacción ambiente. Debido a su facilidad de uso y eficacia, se recomienda que utilice la clase <xref:System.Transactions.TransactionScope> al desarrollar una aplicación de transacción.  
@@ -51,7 +40,7 @@ La clase <xref:System.Transactions.TransactionScope> proporciona una manera simp
 ## <a name="rolling-back-a-transaction"></a>Deshacer una transacción  
  Si desea revertir una transacción, no debería llamar al método <xref:System.Transactions.TransactionScope.Complete%2A> dentro del ámbito de la transacción. Por ejemplo, puede producir una excepción dentro del ámbito. Se deshará la transacción en la que participa.  
   
-##  <a name="ManageTxFlow"></a>Administrar el flujo de transacciones mediante TransactionScopeOption  
+##  <a name="ManageTxFlow"></a> Administrar el flujo de transacciones mediante TransactionScopeOption  
  El ámbito de la transacción puede estar anidado al llamar a un método que utiliza desde dentro <xref:System.Transactions.TransactionScope> un método que utiliza su propio ámbito, como es el caso con el método `RootMethod` en el ejemplo siguiente,  
   
 ```csharp  

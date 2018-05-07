@@ -1,31 +1,17 @@
 ---
 title: Servicio de enrutamiento
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e3170108ae190c08a42cc7d80d66576a7b4f8a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-service"></a>Servicio de enrutamiento
-El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como un enrutador de mensajes. La funcionalidad principal del servicio de enrutamiento es la capacidad de enrutar mensajes según su contenido, lo que permite reenviar un mensaje a un extremo de cliente en función de un valor dentro del propio mensaje, en el encabezado o el cuerpo del mensaje.  
+El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como un enrutador de mensajes. La funcionalidad principal del servicio de enrutamiento es la capacidad de enrutar mensajes según su contenido, lo que permite reenviar un mensaje a un punto de conexión de cliente en función de un valor dentro del propio mensaje, en el encabezado o el cuerpo del mensaje.  
   
- El objeto <xref:System.ServiceModel.Routing.RoutingService> se implementa como un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] en el espacio de nombres <xref:System.ServiceModel.Routing>. El servicio de enrutamiento expone uno o más extremos de servicio que reciben mensajes y, a continuación, enruta cada mensaje a uno o más extremos de cliente en función del contenido del mensaje. El servicio proporciona las siguientes características:  
+ El <xref:System.ServiceModel.Routing.RoutingService> se implementa como un servicio de Windows Communication Foundation (WCF) en el <xref:System.ServiceModel.Routing> espacio de nombres. El servicio de enrutamiento expone uno o más puntos de conexión de servicio que reciben mensajes y, a continuación, enruta cada mensaje a uno o más puntos de conexión de cliente en función del contenido del mensaje. El servicio proporciona las siguientes características:  
   
 -   Enrutamiento basado en contenido  
   
@@ -47,10 +33,10 @@ El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como u
   
  Aunque es posible crear un servicio intermedio que logre uno o más de estos objetivos, a menudo este tipo de implementación está vinculado a una solución o un escenario concretos y no se puede aplicar directamente a las nuevas aplicaciones.  
   
- El servicio de enrutamiento proporciona un intermediario de SOAP genérico, dinámicamente configurable y conectable que es compatible con los modelos del canal y de servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y le permite realizar enrutamiento basado en contenido de mensajes basados en SOAP.  
+ El servicio de enrutamiento proporciona a un intermediario SOAP genérico, dinámicamente configurable y conectable que es compatible con los modelos de servicio WCF y el canal y le permite realizar el enrutamiento por contenidos de mensajes basados en SOAP.  
   
 > [!NOTE]
->  Actualmente, el servicio de enrutamiento no permite enrutar servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST.  Para enrutar las llamadas REST, considere el uso de <xref:System.Web.Routing> o [enrutamiento de solicitud de aplicación](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
+>  Actualmente, el servicio de enrutamiento no permite enrutar servicios de WCF REST.  Para enrutar las llamadas REST, considere el uso de <xref:System.Web.Routing> o [enrutamiento de solicitud de aplicación](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
   
 ## <a name="content-based-routing"></a>Enrutamiento basado en contenido  
  El enrutamiento basado en contenido es la capacidad de enrutar un mensaje en función de uno o más valores contenidos dentro del mensaje. El servicio de enrutamiento inspecciona cada mensaje y lo enruta al extremo de destino en función del contenido del mensaje y de la lógica de enrutamiento creada. El enrutamiento basado en contenido proporciona una base para la agregación de servicios, el control de versiones del servicio y el enrutamiento de prioridad.  

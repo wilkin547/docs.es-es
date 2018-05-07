@@ -1,31 +1,17 @@
 ---
-title: "Importancia del orden de transformación"
-ms.custom: 
+title: Importancia del orden de transformación
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd3363a1afb8658ed3bb27359259cb752464507d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 943bfa73b54a1ac5d68d21d2bb6e271133db595a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="why-transformation-order-is-significant"></a>Importancia del orden de transformación
 Una sola <xref:System.Drawing.Drawing2D.Matrix> objeto puede almacenar una transformación o una secuencia de transformaciones. Se llama a este último una transformación compuesta. La matriz de una transformación compuesta se obtiene multiplicando las matrices de las transformaciones individuales.  
@@ -35,7 +21,7 @@ Una sola <xref:System.Drawing.Drawing2D.Matrix> objeto puede almacenar una trans
   
  Una razón orden es importante es que las transformaciones como el giro y ajuste de escala se hacen en relación con el origen del sistema de coordenadas. Ajuste de escala en un objeto que está centrado en el origen, genera un resultado diferente a cambiar el tamaño de un objeto que se ha movido fuera del origen. De forma similar, girar un objeto que está centrado en el origen, genera un resultado diferente a girar un objeto que se ha movido fuera del origen.  
   
- En el ejemplo siguiente se combina el ajuste de escala, rotación y traducción (en ese orden) para formar una transformación compuesta. El argumento <xref:System.Drawing.Drawing2D.MatrixOrder.Append> pasa a la <xref:System.Drawing.Graphics.RotateTransform%2A> método indica que el giro seguirá el escalado. Del mismo modo, el argumento <xref:System.Drawing.Drawing2D.MatrixOrder.Append> pasa a la <xref:System.Drawing.Graphics.TranslateTransform%2A> método indica que la traducción seguirá la rotación. <xref:System.Drawing.Drawing2D.MatrixOrder.Append>y <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> son miembros de la <xref:System.Drawing.Drawing2D.MatrixOrder> enumeración.  
+ En el ejemplo siguiente se combina el ajuste de escala, rotación y traducción (en ese orden) para formar una transformación compuesta. El argumento <xref:System.Drawing.Drawing2D.MatrixOrder.Append> pasa a la <xref:System.Drawing.Graphics.RotateTransform%2A> método indica que el giro seguirá el escalado. Del mismo modo, el argumento <xref:System.Drawing.Drawing2D.MatrixOrder.Append> pasa a la <xref:System.Drawing.Graphics.TranslateTransform%2A> método indica que la traducción seguirá la rotación. <xref:System.Drawing.Drawing2D.MatrixOrder.Append> y <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> son miembros de la <xref:System.Drawing.Drawing2D.MatrixOrder> enumeración.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  

@@ -1,14 +1,6 @@
 ---
-title: "StrongNameSignatureVerification (Función)"
-ms.custom: 
+title: StrongNameSignatureVerification (Función)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameSignatureVerification
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 933758dd-231e-4382-8819-242c0a13a4b7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0950efd6c5323aa6a0cd2f1455ac3226b21a2b92
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c888c32a0b40d2458a919613e35ca9d1d830c4f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamesignatureverification-function"></a>StrongNameSignatureVerification (Función)
 Obtiene un valor que indica si el manifiesto del ensamblado en la ruta de acceso proporcionada contiene una firma de nombre seguro, que se comprueba según los marcadores especificados.  
@@ -56,25 +44,25 @@ BOOLEAN StrongNameSignatureVerification (
  `dwInFlags`  
  [in] Marcas para modificar el comportamiento de comprobación. Se admiten los siguientes valores:  
   
--   `SN_INFLAG_FORCE_VER`(0 x 00000001) - fuerza la comprobación aunque sea necesario invalidar la configuración del registro.  
+-   `SN_INFLAG_FORCE_VER` (0 x 00000001) - fuerza la comprobación aunque sea necesario invalidar la configuración del registro.  
   
--   `SN_INFLAG_INSTALL`(0 x 00000002): Especifica que ésta es la primera vez que se comprueba el manifiesto.  
+-   `SN_INFLAG_INSTALL` (0 x 00000002): Especifica que ésta es la primera vez que se comprueba el manifiesto.  
   
--   `SN_INFLAG_ADMIN_ACCESS`(0 x 00000004): Especifica que la memoria caché permitirá el acceso únicamente a los usuarios que tienen privilegios administrativos.  
+-   `SN_INFLAG_ADMIN_ACCESS` (0 x 00000004): Especifica que la memoria caché permitirá el acceso únicamente a los usuarios que tienen privilegios administrativos.  
   
--   `SN_INFLAG_USER_ACCESS`(0 x 00000008): Especifica que el ensamblado estará accesible sólo para el usuario actual.  
+-   `SN_INFLAG_USER_ACCESS` (0 x 00000008): Especifica que el ensamblado estará accesible sólo para el usuario actual.  
   
--   `SN_INFLAG_ALL_ACCESS`(0 x 00000010): Especifica que la memoria caché no proporcionará ninguna garantía de restricción de acceso.  
+-   `SN_INFLAG_ALL_ACCESS` (0 x 00000010): Especifica que la memoria caché no proporcionará ninguna garantía de restricción de acceso.  
   
--   `SN_INFLAG_RUNTIME`(0 x 80000000) - reservado para la depuración interna.  
+-   `SN_INFLAG_RUNTIME` (0 x 80000000) - reservado para la depuración interna.  
   
  `pdwOutFlags`  
  [out] Marcas que indica si se ha comprobado la firma de nombre seguro. Se admite el siguiente valor:  
   
--   `SN_OUTFLAG_WAS_VERIFIED`(0 x 00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.  
+-   `SN_OUTFLAG_WAS_VERIFIED` (0 x 00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true`Si la comprobación se realizó correctamente; en caso contrario, `false`.  
+ `true` Si la comprobación se realizó correctamente; en caso contrario, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -83,7 +71,7 @@ BOOLEAN StrongNameSignatureVerification (
   
  **Biblioteca:** incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [StrongNameSignatureVerification (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  

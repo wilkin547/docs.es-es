@@ -1,42 +1,28 @@
 ---
 title: Información general del modelo de programación web HTTP de WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-caps.latest.revision: 45
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f617aa68a052b60933db2dc4b2051c910af6b9b9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 2c3498857c7c0e69c3678ba03f94c14f9b6d8e67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Información general del modelo de programación web HTTP de WCF
-El modelo de programación WEB HTTP de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona los elementos de marco de trabajo básicos que son necesarios para compilar servicios WEB HTTP con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Los servicios WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] están diseñados para que la gama más amplia de clientes posible tenga acceso a ellos, incluidos los exploradores web, y tienen los requisitos únicos siguientes:  
+El modelo de programación WEB HTTP de Windows Communication Foundation (WCF) proporciona los elementos básicos necesarios para compilar servicios WEB HTTP con WCF. Servicios WEB HTTP de WCF están diseñados para tener acceso a la gama más amplia de clientes posibles, incluidos los exploradores Web y tienen los requisitos únicos siguientes:  
   
--   **URI y procesamiento de URI** URI juegan un papel fundamental en el diseño de servicios WEB HTTP. El modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa las clases <xref:System.UriTemplate> y <xref:System.UriTemplateTable> para proporcionar las funciones de procesamiento de URI.  
+-   **URI y procesamiento de URI** URI juegan un papel fundamental en el diseño de servicios WEB HTTP. La WEB HTTP de WCF usa del modelo de programación la <xref:System.UriTemplate> y <xref:System.UriTemplateTable> clases para proporcionar capacidades de procesamiento de URI.  
   
--   **Compatibilidad con las operaciones GET y POST** servicios WEB HTTP usan el verbo GET para la recuperación de datos, además de varios verbos de modificación de datos y la invocación remota de invocación. El modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa los atributos <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute> para asociar las operaciones de servicio con el verbo GET y otros verbos HTTP, como PUT, POST y DELETE.  
+-   **Compatibilidad con las operaciones GET y POST** servicios WEB HTTP usan el verbo GET para la recuperación de datos, además de varios verbos de modificación de datos y la invocación remota de invocación. La WEB HTTP de WCF usa del modelo de programación la <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute> para asociar las operaciones de servicio con el verbo GET y otros verbos HTTP como PUT, POST y DELETE.  
   
--   **Varios formatos de datos** servicios de estilo Web procesan muchos tipos de datos además de los mensajes SOAP. El modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa <xref:System.ServiceModel.WebHttpBinding> y <xref:System.ServiceModel.Description.WebHttpBehavior> para admitir muchos formatos de datos diferentes incluyendo documentos XML, objeto de datos de JSON y secuencias de contenido binario como imágenes, archivos de vídeo o texto sin formato.  
+-   **Varios formatos de datos** servicios de estilo Web procesan muchos tipos de datos además de los mensajes SOAP. La WEB HTTP de WCF usa del modelo de programación la <xref:System.ServiceModel.WebHttpBinding> y <xref:System.ServiceModel.Description.WebHttpBehavior> para admitir muchos formatos de datos diferentes incluyendo documentos XML, objeto de datos JSON y secuencias de contenido binario como imágenes, archivos de vídeo o texto sin formato.  
   
- El modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extiende el alcance de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para abarcar escenarios de tipo web que incluyen los servicios WEB HTTP, AJAX y JSON, así como las fuentes de distribución (ATOM/RSS). Para obtener más información acerca de los servicios de AJAX y JSON, consulte [integración de AJAX y compatibilidad de JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Para obtener más información acerca de la distribución, consulte [información general de la distribución de WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
+ El modelo de programación WEB HTTP de WCF extiende el alcance de WCF para abarcar los escenarios de estilo Web que incluyen servicios WEB HTTP, AJAX y JSON y las fuentes de distribución (ATOM/RSS). Para obtener más información acerca de los servicios de AJAX y JSON, consulte [integración de AJAX y compatibilidad de JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Para obtener más información acerca de la distribución, consulte [información general de la distribución de WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
  No existen restricciones adicionales en los tipos de datos que puedan devolverse desde un servicio WEB HTTP. Cualquier tipo serializable se puede devolver a partir de una operación de servicio WEB HTTP de WCF. Puesto que estas operaciones de servicio WEB HTTP las puede invocar un explorador web existe un límite en los tipos de datos que se pueden especificar en una dirección URL. Para obtener más información sobre los tipos admitidos de forma predeterminada, consulte el **parámetros de cadena de consulta de UriTemplate y las direcciones URL** sección más adelante. El comportamiento predeterminado se puede cambiar proporcionando su propia implementación de la clase T:System.ServiceModel.Dispatcher.QueryStringConverter que especifica cómo convertir los parámetros especificados de una dirección URL en el tipo de parámetro real. Para obtener más información, vea <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
->  Los servicios escritos mediante el modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no usan mensajes SOAP. Por este motivo, no se podrán usar las características de seguridad proporcionadas por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Sin embargo, puede usar la seguridad basada en el transporte hospedando el servicio con HTTPS. Para obtener más información acerca de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] seguridad, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+>  Servicios que se escriben con el modelo de programación WEB HTTP de WCF no utilizan mensajes SOAP. Dado que no se utiliza SOAP, no se puede usar las características de seguridad proporcionadas por WCF. Sin embargo, puede usar la seguridad basada en el transporte hospedando el servicio con HTTPS. Para obtener más información acerca de la seguridad WCF, vea [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
 >  Si se instala la extensión WebDAV para IIS, se puede provocar que los servicios web HTTP devuelvan un error 405 HTTP cuando la extensión WebDAV intente administrar todas las solicitudes PUT. Para evitar este problema puede desinstalar la extensión WebDAV o deshabilitarla para su sitio web. Para obtener más información, vea [IIS y WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
@@ -64,12 +50,12 @@ El modelo de programación WEB HTTP de [!INCLUDE[indigo1](../../../../includes/i
   
 -   `Bind`() y `Match`() son inversos para que pueda llamar `Match`( `Bind`(x)) y vuelven con el mismo entorno con el que comenzó.  
   
- Hay muchas veces (sobre todo en el servidor, donde es necesario enviar una solicitud a una operación de servicio basada en el URI) que desea realizar el seguimiento de un conjunto de objetos <xref:System.UriTemplate> en una estructura de datos que se puede direccionar independientemente de cada una de las plantillas contenidas. <xref:System.UriTemplateTable> representa un conjunto de plantillas de URI y selecciona la mejor coincidencia dado un conjunto de plantillas y un URI candidato. Esto no está asociado a ninguna pila de conexión de red determinada (incluido [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]) por lo que puede utilizarlo dondequiera que necesario.  
+ Hay muchas veces (sobre todo en el servidor, donde es necesario enviar una solicitud a una operación de servicio basada en el URI) que desea realizar el seguimiento de un conjunto de objetos <xref:System.UriTemplate> en una estructura de datos que se puede direccionar independientemente de cada una de las plantillas contenidas. <xref:System.UriTemplateTable> representa un conjunto de plantillas de URI y selecciona la mejor coincidencia dado un conjunto de plantillas y un URI candidato. Esto no está afiliado a cualquier pila de red determinada (incluido de WCF) por lo que puede usar siempre que sea necesario.  
   
- El modelo de servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hace uso de <xref:System.UriTemplate> y <xref:System.UriTemplateTable> para asociar las operaciones del servicio a un conjunto de URI descrito mediante una <xref:System.UriTemplate>. Una operación de servicio está asociada a una <xref:System.UriTemplate>, utilizando <xref:System.ServiceModel.Web.WebGetAttribute> o <xref:System.ServiceModel.Web.WebInvokeAttribute>. Para obtener más información acerca de <xref:System.UriTemplate> y <xref:System.UriTemplateTable>, consulte [UriTemplate y UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ El modelo de servicio WCF hace uso de <xref:System.UriTemplate> y <xref:System.UriTemplateTable> para asociar las operaciones del servicio a un conjunto de URI descrito mediante una <xref:System.UriTemplate>. Una operación de servicio está asociada a una <xref:System.UriTemplate>, utilizando <xref:System.ServiceModel.Web.WebGetAttribute> o <xref:System.ServiceModel.Web.WebInvokeAttribute>. Para obtener más información acerca de <xref:System.UriTemplate> y <xref:System.UriTemplateTable>, consulte [UriTemplate y UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
   
 ## <a name="webget-and-webinvoke-attributes"></a>Atributos WebGet y WebInvoke  
- Los servicios WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hacen uso de verbos de recuperación (por ejemplo, HTTP GET), además de varios verbos de invocación (por ejemplo, HTTP POST, PUT y DELETE). El modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite a los desarrolladores de servicios controlar la plantilla URI y el verbo asociado con sus operaciones de servicio con <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute>. <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute> le permiten controlar cómo las operaciones individuales se enlazan a los URI y los métodos HTTP asociados a esos URI. Por ejemplo, agregando en el siguiente código, <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute>.  
+ Los servicios WEB HTTP de WCF hacen uso de verbos de recuperación (por ejemplo, HTTP GET) además de varios verbos (por ejemplo, HTTP POST, PUT y DELETE) de invocación. El modelo de programación WEB HTTP de WCF permite a los programadores del servicio control de la plantilla URI y el verbo asociado con sus operaciones de servicio con el <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute>. <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute> le permiten controlar cómo las operaciones individuales se enlazan a los URI y los métodos HTTP asociados a esos URI. Por ejemplo, agregando en el siguiente código, <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute>.  
   
 ```  
 [ServiceContract]  
@@ -109,7 +95,7 @@ interface ICustomer
 }  
 ```  
   
- Para ver un ejemplo completo de un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio que utiliza el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP de modelo de programación, vea [Cómo: crear un servicio básico de HTTP de Web de WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ Para ver un ejemplo completo de un servicio WCF que usa el modelo de programación WEB HTTP de WCF, vea [Cómo: crear un servicio básico de HTTP de Web de WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
   
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>Parámetros de cadena de consulta y direcciones URL de UriTemplate  
  Se puede llamar a los servicios de tipo web desde un explorador web escribiendo una URL que está asociada a una operación del servicio. Estas operaciones del servicio pueden tomar parámetros de cadena de consulta que se deben especificar en forma de cadena dentro de la dirección URL. La siguiente tabla muestra los tipos que se pueden pasar dentro de una dirección URL y el formato utilizado.  
@@ -138,7 +124,7 @@ interface ICustomer
 |Tipos que tienen `TypeConverterAttribute` que puede convertir el tipo en una representación de cadena y viceversa.|Según el convertidor de tipos.|  
   
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>Los formatos y el modelo de programación WEB HTTP de WCF  
- El modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tiene nuevas características que funcionan con muchos formatos de datos diferentes. En la capa de enlace, <xref:System.ServiceModel.WebHttpBinding> puede leer y escribir los siguientes tipos diferentes de datos:  
+ El modelo de programación WEB HTTP de WCF tiene nuevas características que funcionan con muchos formatos de datos diferentes. En la capa de enlace, <xref:System.ServiceModel.WebHttpBinding> puede leer y escribir los siguientes tipos diferentes de datos:  
   
 -   XML  
   
@@ -146,12 +132,12 @@ interface ICustomer
   
 -   Secuencias binarias opacas  
   
- Esto significa que el modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puede administrar cualquier tipo de datos, pero puede estar programando con <xref:System.IO.Stream>.  
+ Esto significa que el modelo de programación WEB HTTP de WCF puede controlar cualquier tipo de datos, pero puede programar basándose en <xref:System.IO.Stream>.  
   
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] proporciona compatibilidad con datos JSON (AJAX) y las fuentes de distribución (incluidas ATOM y RSS). Para obtener más información acerca de estas características, consulte [Web HTTP de WCF formato](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[información general de la distribución de WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) y [integración de AJAX y compatibilidad de JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>El modelo de programación WEB HTTP de WCF y la seguridad  
- Dado que el modelo de programación WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no admite los protocolos WS-*, la única manera de proteger un servicio WEB HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consiste en exponer el servicio a través de HTTPS mediante SSL. Para obtener más información acerca de cómo configurar SSL con [!INCLUDE[iisver](../../../../includes/iisver-md.md)], vea [cómo implementar SSL en IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
+ Dado que el modelo de programación WEB HTTP de WCF no admite WS-* protocolos, la única manera de proteger un servicio WEB HTTP de WCF consiste en exponer el servicio a través de HTTPS con SSL. Para obtener más información acerca de cómo configurar SSL con [!INCLUDE[iisver](../../../../includes/iisver-md.md)], vea [cómo implementar SSL en IIS](http://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Solución de problemas relacionados con el modelo de programación WEB HTTP de WCF  
  Al llamar a los servicios WEB HTTP de WCF mediante un objeto <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> para crear un canal, <xref:System.ServiceModel.Description.WebHttpBehavior> usa la clase <xref:System.ServiceModel.EndpointAddress> establecida en el archivo de configuración, aunque se pase una <xref:System.ServiceModel.EndpointAddress> diferente al <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  

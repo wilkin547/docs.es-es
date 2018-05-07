@@ -1,9 +1,6 @@
 ---
-title: "Información general del modelo de programación con atributos (MEF)"
+title: Información general del modelo de programación con atributos (MEF)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -11,16 +8,13 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 565cd9384e150f707b2e5e72342579d95c3a096e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Información general del modelo de programación con atributos (MEF)
 En Managed Extensibility Framework (MEF), un *modelo de programación* es una manera específica de definir el conjunto de objetos conceptuales en los que opera MEF. Estos objetos conceptuales incluyen partes, importaciones y exportaciones. MEF utiliza estos objetos, pero no especifica cómo se deben representar. Por consiguiente, es posible una gran variedad de modelos de programación, incluidos modelos personalizados.  

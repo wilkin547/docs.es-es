@@ -1,28 +1,14 @@
 ---
 title: Flujo de la transacción WS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-caps.latest.revision: 43
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f79ffdfe624674074f2e9cadeaccb7f2ab3ba0d7
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 699ba3efad0c8b98aacfc4b64f2fdf03270478b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-transaction-flow"></a>Flujo de la transacción WS
 Este ejemplo muestra el uso de una transacción coordinada por cliente y las opciones de servidor y cliente para el flujo de la transacción utilizando la Transacción atómica del WS o el protocolo OleTransactions. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora, pero las operaciones se atribuyen para demostrar el uso de la `TransactionFlowAttribute` con el **TransactionFlowOption** enumeración para determinar a qué grado de transacción está habilitado el flujo. Dentro del ámbito de la transacción fluida, un registro de las operaciones solicitadas se escribe a una base de datos y se conserva hasta que la transacción coordinada por el cliente se ha completado - si la transacción del cliente no se completa, la transacción del Servicio Web se asegura de que no se confirmen las actualizaciones adecuadas a la base de datos.  
@@ -77,7 +63,7 @@ public interface ICalculator
 ```  
   
 > [!NOTE]
->  El netTcpBinding proporcionado por el sistema permite especificaciones de transactionProtocol, mientras que el wsHttpBinding proporcionado por el sistema utiliza solamente el protocolo más interoperable WSAtomicTransactionOctober2004. El protocolo OleTransactions solo está disponible para su uso por clientes [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+>  El netTcpBinding proporcionado por el sistema permite especificaciones de transactionProtocol, mientras que el wsHttpBinding proporcionado por el sistema utiliza solamente el protocolo más interoperable WSAtomicTransactionOctober2004. El OleTransactions protocolo solo está disponible para usar los clientes de Windows Communication Foundation (WCF).  
   
  Para la clase que implementa la interfaz `ICalculator`, todos los métodos se atribuyen con propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> establecida en `true`. Este valor declara que todas las acciones tomadas dentro del método se producen dentro del ámbito de una transacción. En este caso, las acciones tomadas incluyen la grabación a la base de datos de registro. Si la solicitud de la operación incluye a continuación una transacción fluida las acciones se producen dentro del ámbito de la transacción entrante o se genera automáticamente un nuevo ámbito de la transacción.  
   
@@ -298,6 +284,6 @@ Press <ENTER> to terminate the service.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

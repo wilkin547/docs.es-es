@@ -1,34 +1,20 @@
 ---
 title: Ataques por repetición
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4e827c51378b9f75835b9b98280b4995d2cae2fc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3139e0ea094f1f7483261ffd10026815e5d12f31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="replay-attacks"></a>Ataques por repetición
 A *ataque de reproducción* se produce cuando un atacante copia una secuencia de mensajes entre dos partes y reproduce la secuencia a una o varias de las partes. A menos que se mitigue, el equipo objeto del ataque procesa la secuencia como mensajes legítimos, produciendo una gama de malas consecuencias, como pedidos redundantes de un elemento.  
   
 ## <a name="bindings-may-be-subject-to-reflection-attacks"></a>Los enlaces pueden estar sujetos a ataques de reflexión  
- *Ataques de reflexión* son repeticiones de mensajes devueltos a un remitente como si procedieran del receptor como la respuesta. El estándar *la detección de reproducción* en el [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mecanismo no controlan automáticamente esto.  
+ *Ataques de reflexión* son repeticiones de mensajes devueltos a un remitente como si procedieran del receptor como la respuesta. El estándar *la detección de reproducción* en Windows Communication Foundation (WCF) mecanismo no controlan automáticamente esto.  
   
- Los ataques de reflexión se mitigan de forma predeterminada porque el modelo del servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] agrega un Id. de mensaje firmado a los mensajes de solicitud y espera un encabezado `relates-to` firmado en los mensajes de respuesta. Por consiguiente, el mensaje de solicitud no se puede volver a reproducir como una respuesta. En los escenarios de mensaje confiables (RM) seguros, los ataques de reflexión se mitigan porque:  
+ Ataques de reflexión se mitigan de forma predeterminada porque el modelo de servicio WCF agrega un identificador de mensaje firmado a mensajes de solicitud y espera iniciado `relates-to` encabezado en los mensajes de respuesta. Por consiguiente, el mensaje de solicitud no se puede volver a reproducir como una respuesta. En los escenarios de mensaje confiables (RM) seguros, los ataques de reflexión se mitigan porque:  
   
 -   Los esquemas de la secuencia de creación y los del mensaje de respuesta de la secuencia de creación son diferentes.  
   

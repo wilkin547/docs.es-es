@@ -1,11 +1,7 @@
 ---
-title: "Función Put (referencia de API no administrada)"
-description: "La función Put asigna un nuevo valor a una propiedad con nombre."
+title: Función Put (referencia de API no administrada)
+description: La función Put asigna un nuevo valor a una propiedad con nombre.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 09d3edc74b34688d5cc36e688f634850cfb60910
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f3ffe27bef6583b733fc04f2f25903d545daa74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="put-function"></a>Función Put
 Establece una propiedad con nombre en un nuevo valor.
@@ -93,7 +86,7 @@ Un usuario no puede crear propiedades con nombres que empezarán ni terminan con
 
 Si la propiedad se establece mediante el `Put` función existe en la clase primaria, el valor predeterminado de la propiedad se cambia a menos que el tipo de propiedad no coincide con el tipo de clase principal. Si la propiedad no existe y no es un tipo no coincidente, la propiedad es ceated.
 
-Use la `vtType` parámetro solo cuando se crean nuevas propiedades en una definición de clase CIM y `pVal` es `null` o apunta a un `VARIANT` de tipo `VT_NULL`. En este caso, el `vType` parámetro especifica el tipo CIM de la propiedad. En los demás casos, `vtType` debe ser 0. `vtType`También debe ser 0 si el objeto subyacente es una instancia (aunque `Val` es `null`) porque el tipo de la propiedad es fijo y no se puede cambiar.   
+Use la `vtType` parámetro solo cuando se crean nuevas propiedades en una definición de clase CIM y `pVal` es `null` o apunta a un `VARIANT` de tipo `VT_NULL`. En este caso, el `vType` parámetro especifica el tipo CIM de la propiedad. En los demás casos, `vtType` debe ser 0. `vtType` También debe ser 0 si el objeto subyacente es una instancia (aunque `Val` es `null`) porque el tipo de la propiedad es fijo y no se puede cambiar.   
 
 ## <a name="example"></a>Ejemplo
 
@@ -104,7 +97,7 @@ Para obtener un ejemplo, vea el [IWbemClassObject::Put](https://msdn.microsoft.c
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

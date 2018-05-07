@@ -1,27 +1,15 @@
 ---
 title: Servicios de WCF y seguimiento de eventos para Windows
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb8924cc04442e3b9eda5e251e6dcdc57f5660c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Servicios de WCF y seguimiento de eventos para Windows
-Este ejemplo muestra cómo utilizar la traza analítica en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para emitir eventos en Seguimiento de eventos para Windows (ETW). Los seguimientos analíticos son los eventos emitidos en los puntos clave de la pila de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que permiten solucionar problemas de los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en un entorno de producción.  
+Este ejemplo muestra cómo utilizar la traza analítica en Windows Communication Foundation (WCF) para emitir eventos de seguimiento de eventos para Windows (ETW). Los seguimientos analíticos son los eventos emitidos en los puntos clave de la pila de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que permiten solucionar problemas de los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en un entorno de producción.  
   
  El seguimiento analítico de servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se puede activar en un entorno de producción con una repercusión mínima en el rendimiento. Estos seguimientos se emiten como eventos para una sesión de ETW.  
   
@@ -37,7 +25,7 @@ Este ejemplo muestra cómo utilizar la traza analítica en [!INCLUDE[indigo1](..
   
      En el explorador Web, haga clic en **Calculator.svc**. El URI del documento WSDL para el servicio debería aparecer en el explorador. Copie ese URI.  
   
-     De forma predeterminada, el servicio empieza a realizar escuchas para las solicitudes en el puerto 1378 (http://localhost:1378/Calculator.svc).  
+     De forma predeterminada, el servicio inicia la escucha de solicitudes en el puerto 1378 (http://localhost:1378/Calculator.svc).  
   
 4.  Ejecute el cliente de prueba de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (WcfTestClient.exe).  
   
@@ -45,7 +33,7 @@ Este ejemplo muestra cómo utilizar la traza analítica en [!INCLUDE[indigo1](..
   
 5.  En el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente de prueba, agregue el servicio seleccionando **archivo**y, a continuación, **Agregar servicio**.  
   
-     Agregue la dirección del punto de conexión en el cuadro de entrada. El valor predeterminado es http://localhost:1378/Calculator.svc.  
+     Agregue la dirección del punto de conexión en el cuadro de entrada. De manera predeterminada, es http://localhost:1378/Calculator.svc.  
   
 6.  Abra la aplicación Visor de eventos.  
   
@@ -94,7 +82,7 @@ Este ejemplo muestra cómo utilizar la traza analítica en [!INCLUDE[indigo1](..
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   

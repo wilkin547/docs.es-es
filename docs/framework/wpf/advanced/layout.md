@@ -1,13 +1,6 @@
 ---
-title: "Diseño"
-ms.custom: 
+title: Diseño
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9a5f33ab22779002e85d7a73b29ae74dac81c26
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 00c2b2bcb58e60c1a60d2d360f25089c079c0704
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="layout"></a>Diseño
 En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Comprender cómo y cuándo se producen los cálculos de diseño es esencial para crear interfaces de usuario en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -97,7 +85,7 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
   
  Propiedades de tamaño en primer lugar, nativo de la <xref:System.Windows.UIElement> se evalúan, como <xref:System.Windows.UIElement.Clip%2A> y <xref:System.Windows.UIElement.Visibility%2A>. Esto genera un valor denominado `constraintSize` que se pasa a <xref:System.Windows.FrameworkElement.MeasureCore%2A>.  
   
- En segundo lugar, las propiedades de marco de trabajo definen <xref:System.Windows.FrameworkElement> se procesan, lo que afecta al valor de `constraintSize`. Por lo general, estas propiedades describen las características de ajuste de tamaño de subyacente <xref:System.Windows.UIElement>, como su <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, y <xref:System.Windows.FrameworkElement.Style%2A>. Cada una de estas propiedades puede cambiar el espacio necesario para mostrar el elemento. <xref:System.Windows.FrameworkElement.MeasureOverride%2A>a continuación, se llama con `constraintSize` como un parámetro.  
+ En segundo lugar, las propiedades de marco de trabajo definen <xref:System.Windows.FrameworkElement> se procesan, lo que afecta al valor de `constraintSize`. Por lo general, estas propiedades describen las características de ajuste de tamaño de subyacente <xref:System.Windows.UIElement>, como su <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, y <xref:System.Windows.FrameworkElement.Style%2A>. Cada una de estas propiedades puede cambiar el espacio necesario para mostrar el elemento. <xref:System.Windows.FrameworkElement.MeasureOverride%2A> a continuación, se llama con `constraintSize` como un parámetro.  
   
 > [!NOTE]
 >  Hay una diferencia entre las propiedades de <xref:System.Windows.FrameworkElement.Height%2A> y <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.ActualHeight%2A> y <xref:System.Windows.FrameworkElement.ActualWidth%2A>. Por ejemplo, el <xref:System.Windows.FrameworkElement.ActualHeight%2A> propiedad es un valor calculado en función de otras entradas de alto y el sistema de diseño. El valor se establece mediante el sistema de diseño, basándose en un paso de representación real y puede, por tanto, retrasarse ligeramente el valor de conjunto de propiedades, como <xref:System.Windows.FrameworkElement.Height%2A>, que son la base del cambio de entrada.  
@@ -108,11 +96,11 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
   
  El paso de organización comienza con una llamada a la <xref:System.Windows.UIElement.Arrange%2A> método. Durante el paso de organización, el elemento primario <xref:System.Windows.Controls.Panel> elemento genera un rectángulo que representa los límites del elemento secundario. Este valor se pasa a la <xref:System.Windows.FrameworkElement.ArrangeCore%2A> método para su procesamiento.  
   
- El <xref:System.Windows.FrameworkElement.ArrangeCore%2A> método evalúa la <xref:System.Windows.UIElement.DesiredSize%2A> del elemento secundario y evalúa cualquier margen adicional que puede afectar al tamaño representado del elemento. <xref:System.Windows.FrameworkElement.ArrangeCore%2A>genera un `arrangeSize`, que se pasa a la <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> método de la <xref:System.Windows.Controls.Panel> como un parámetro. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>genera el `finalSize` del elemento secundario. Por último, el <xref:System.Windows.FrameworkElement.ArrangeCore%2A> método realiza una última evaluación de propiedades de desplazamiento, como los márgenes y la alineación y coloca el elemento secundario dentro de su ranura de diseño. El elemento secundario no tiene que ocupar todo el espacio asignado y con frecuencia no lo hace. A continuación, se devuelve el control al elemento primario <xref:System.Windows.Controls.Panel> y completando el proceso de diseño.  
+ El <xref:System.Windows.FrameworkElement.ArrangeCore%2A> método evalúa la <xref:System.Windows.UIElement.DesiredSize%2A> del elemento secundario y evalúa cualquier margen adicional que puede afectar al tamaño representado del elemento. <xref:System.Windows.FrameworkElement.ArrangeCore%2A> genera un `arrangeSize`, que se pasa a la <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> método de la <xref:System.Windows.Controls.Panel> como un parámetro. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> genera el `finalSize` del elemento secundario. Por último, el <xref:System.Windows.FrameworkElement.ArrangeCore%2A> método realiza una última evaluación de propiedades de desplazamiento, como los márgenes y la alineación y coloca el elemento secundario dentro de su ranura de diseño. El elemento secundario no tiene que ocupar todo el espacio asignado y con frecuencia no lo hace. A continuación, se devuelve el control al elemento primario <xref:System.Windows.Controls.Panel> y completando el proceso de diseño.  
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>Elementos de panel y comportamientos de diseño personalizados  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]incluye un grupo de elementos que se derivan de <xref:System.Windows.Controls.Panel>. Estos <xref:System.Windows.Controls.Panel> elementos permiten numerosos diseños complejos. Por ejemplo, elementos de apilamiento se consigue fácilmente mediante el uso de la <xref:System.Windows.Controls.StackPanel> elemento mientras diseños de flujo de más complejos y libres son posibles con un <xref:System.Windows.Controls.Canvas>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluye un grupo de elementos que se derivan de <xref:System.Windows.Controls.Panel>. Estos <xref:System.Windows.Controls.Panel> elementos permiten numerosos diseños complejos. Por ejemplo, elementos de apilamiento se consigue fácilmente mediante el uso de la <xref:System.Windows.Controls.StackPanel> elemento mientras diseños de flujo de más complejos y libres son posibles con un <xref:System.Windows.Controls.Canvas>.  
   
  La siguiente tabla resume el diseño disponible <xref:System.Windows.Controls.Panel> elementos.  
   
@@ -133,11 +121,11 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
   
 -   Tenga en cuenta qué cambios de valor de propiedad forzarán una actualización recursiva por parte del sistema de diseño.  
   
-     Las propiedades de dependencia cuyos valores pueden provocar la inicialización del sistema de diseño se marcan con marcas públicas. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>y <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> proporcionar pistas útiles en cuanto a la propiedad que se cambia el valor, forzará una recursiva actualización el sistema de diseño. En general, cualquier propiedad que puede afectar al tamaño de un elemento cuadro de límite debe tener un <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> marca establecida en true. Para obtener más información sobre las propiedades de dependencia, vea [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+     Las propiedades de dependencia cuyos valores pueden provocar la inicialización del sistema de diseño se marcan con marcas públicas. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> y <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> proporcionar pistas útiles en cuanto a la propiedad que se cambia el valor, forzará una recursiva actualización el sistema de diseño. En general, cualquier propiedad que puede afectar al tamaño de un elemento cuadro de límite debe tener un <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> marca establecida en true. Para obtener más información sobre las propiedades de dependencia, vea [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
   
 -   Cuando sea posible, use un <xref:System.Windows.UIElement.RenderTransform%2A> en lugar de un <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
-     A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> puede ser una forma muy útil para influir en el contenido de un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Sin embargo, si no tiene el efecto de la transformación afectar a la posición de otros elementos, es mejor usar un <xref:System.Windows.UIElement.RenderTransform%2A> en su lugar, porque <xref:System.Windows.UIElement.RenderTransform%2A> no invoca el sistema de diseño. <xref:System.Windows.FrameworkElement.LayoutTransform%2A>se aplica su transformación y fuerza una actualización de diseño recursiva para tener en cuenta la nueva posición del elemento afectado.  
+     A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> puede ser una forma muy útil para influir en el contenido de un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Sin embargo, si no tiene el efecto de la transformación afectar a la posición de otros elementos, es mejor usar un <xref:System.Windows.UIElement.RenderTransform%2A> en su lugar, porque <xref:System.Windows.UIElement.RenderTransform%2A> no invoca el sistema de diseño. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> se aplica su transformación y fuerza una actualización de diseño recursiva para tener en cuenta la nueva posición del elemento afectado.  
   
 -   Evitar llamadas innecesarias al <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   

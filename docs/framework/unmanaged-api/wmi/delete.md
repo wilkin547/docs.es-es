@@ -1,11 +1,7 @@
 ---
-title: "Eliminar función (referencia de API no administrada)"
-description: "La función de eliminación elimina la propiedad especificada y todas sus calificadores de una definición de clase CIM."
+title: Eliminar función (referencia de API no administrada)
+description: La función de eliminación elimina la propiedad especificada y todas sus calificadores de una definición de clase CIM.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Delete
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 30f5bf651990cafe06811019cf2b3d92f866f646
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delete-function"></a>Eliminar (función)
 Elimina la propiedad especificada y todas sus calificadores de una definición de clase CIM.
@@ -53,7 +46,7 @@ HRESULT Delete (
 [in] Un puntero a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instancia.
 
 `wszName`  
-[in] El nombre de la propiedad que se va a eliminar. `wszName`debe ser un puntero a un válido `LPCWSTR`.
+[in] El nombre de la propiedad que se va a eliminar. `wszName` debe ser un puntero a un válido `LPCWSTR`.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -80,7 +73,7 @@ Esta función contiene una llamada a la [IWbemClassObject::Delete](https://msdn.
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

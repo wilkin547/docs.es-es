@@ -1,33 +1,19 @@
 ---
-title: "Direcciones de punto de conexión"
-ms.custom: 
+title: Direcciones de punto de conexión
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - addresses [WCF]
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 46278e35c6966e473f5a800f7e99814efd7b943c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoint-addresses"></a>Direcciones de punto de conexión
-Cada punto de conexión tiene una dirección asociada a él, que se utiliza para ubicar e identificar el punto de conexión. Esta dirección está compuesta principalmente de un Identificador uniforme de recursos (URI), que especifica la ubicación del punto de conexión. La dirección del extremo se representa en el modelo de programación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mediante la clase <xref:System.ServiceModel.EndpointAddress>, que contiene una propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A> opcional que permite la autenticación del extremo por parte otros extremos que intercambian mensajes con él, y un conjunto de propiedades <xref:System.ServiceModel.EndpointAddress.Headers%2A> opcionales, que definen cualquier otro encabezado SOAP requerido para alcanzar el servicio. Los encabezados opcionales proporcionan información de direccionamiento adicional y más detallada para identificar o interactuar con el extremo de servicio. La dirección de un punto de conexión se representa en la conexión como una referencia de punto de conexión (EPR) WS-Addressing.  
+Cada punto de conexión tiene una dirección asociada a él, que se utiliza para ubicar e identificar el punto de conexión. Esta dirección está compuesta principalmente de un Identificador uniforme de recursos (URI), que especifica la ubicación del punto de conexión. La dirección del extremo se representa en el modelo de programación de Windows Communication Foundation (WCF) mediante la <xref:System.ServiceModel.EndpointAddress> (clase), que contiene un elemento opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propiedad que habilita la autenticación del punto de conexión por otros extremos que intercambiar mensajes con él y un conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propiedades, que definen cualquier otro encabezado SOAP requerido para alcanzar el servicio. Los encabezados opcionales proporcionan información de direccionamiento adicional y más detallada para identificar o interactuar con el punto de conexión de servicio. La dirección de un punto de conexión se representa en la conexión como una referencia de punto de conexión (EPR) WS-Addressing.  
   
 ## <a name="uri-structure-of-an-address"></a>Estructura URI de una Dirección  
  El URI de la dirección de la mayoría de transportes tiene cuatro partes. Por ejemplo, las cuatro partes del URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint puede detallada de la siguiente manera:  
@@ -63,7 +49,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
 -   Información de enlace: Dirección IP, puerto, encabezado de host  
   
- IIS puede especificar varios enlaces para cada sitio, que resulta en varias direcciones base para cada esquema. Antes de [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no admitía varias direcciones para un esquema y, si se especificaban, se iniciaba una excepción <xref:System.ArgumentException> durante la activación.  
+ IIS puede especificar varios enlaces para cada sitio, que resulta en varias direcciones base para cada esquema. Anteriores a [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF no admitía varias direcciones para un esquema y, si se especificaron, produjo una <xref:System.ArgumentException> durante la activación.  
   
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] permite a los proveedores de acceso a Internet hospedar varias aplicaciones con direcciones base diferentes para el mismo esquema en el mismo sitio.  
   
@@ -111,9 +97,9 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
  Para obtener más información y ejemplos, vea [admiten varios enlaces de sitio de IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) y <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
   
 ## <a name="extending-addressing-in-wcf-services"></a>Extensión del direccionamiento en servicios WCF  
- El modelo de direccionamiento predeterminado de los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa el URI de la dirección de extremo para los siguientes fines:  
+ El valor predeterminado que se dirige el modelo de servicios WCF usa la dirección URI del extremo para los siguientes fines:  
   
--   Para especificar la dirección del agente de escuchas de servicio, la ubicación en la que el extremo realiza escuchas de mensajes,  
+-   Para especificar la dirección del agente de escuchas de servicio, la ubicación en la que el punto de conexión realiza escuchas de mensajes,  
   
 -   Para especificar el filtro de dirección de SOAP, la dirección que espera un punto de conexión como un encabezado SOAP.  
   

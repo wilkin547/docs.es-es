@@ -1,23 +1,16 @@
 ---
-title: "Cómo: Mostrar controles no enlazados en un control DataRepeater (Visual Studio)"
+title: 'Cómo: Mostrar controles no enlazados en un control DataRepeater (Visual Studio)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - DataRepeater, adding unbound controls
 - DataRepeater
 - displaying unbound data
 ms.assetid: f234fa40-5a13-4209-930e-7c5f81e86e66
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3e96219f0ea8b8198967e9fa3c6e5afb824352db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 698e518a4ed10ed6cf14ccafc6833b1acf8752db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio"></a>Cómo: Mostrar controles no enlazados en un control DataRepeater (Visual Studio)
 Además de los controles enlazados, puede que desee agregar otros controles a un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, como una etiqueta estática o una imagen que se repite en cada elemento de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  

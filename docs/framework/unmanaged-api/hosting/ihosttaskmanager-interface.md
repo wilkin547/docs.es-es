@@ -1,14 +1,6 @@
 ---
 title: IHostTaskManager (Interfaz)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9573891a2c27a2a92eccd0522f84175effa8037a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9715738931d1b6a91ad9fae7e00ba607905d380f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager (Interfaz)
 Proporciona métodos que permiten a common language runtime (CLR) para trabajar con tareas a través del host en lugar de utilizar las funciones de sistema operativo estándar de subprocesos o fibras.  
@@ -61,7 +49,7 @@ Proporciona métodos que permiten a common language runtime (CLR) para trabajar 
 |[SwitchToTask (método)](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|Notifica al host que debe cambiar la tarea actual.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IHostTaskManager`permite que el CLR para crear y administrar tareas, proporcionar enlaces para el host para realizar una acción cuando transfiera el control del código administrado al código no administrado y viceversa y para especificar determinadas acciones el host puede y no se puede realizar durante la ejecución del código.  
+ `IHostTaskManager` permite que el CLR para crear y administrar tareas, proporcionar enlaces para el host para realizar una acción cuando transfiera el control del código administrado al código no administrado y viceversa y para especificar determinadas acciones el host puede y no se puede realizar durante la ejecución del código.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -70,7 +58,7 @@ Proporciona métodos que permiten a common language runtime (CLR) para trabajar 
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICLRTask (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

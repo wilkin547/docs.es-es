@@ -1,11 +1,6 @@
 ---
-title: "Lista de parámetros (Visual Basic)"
+title: Lista de parámetros (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
 - parameters [Visual Basic], Visual Basic
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2c7190b618aa98c91b826ca7c065660d3b19c31a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 147a2501219db9f1f1c10f9cf1a81aa395b5ec2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameter-list-visual-basic"></a>Lista de parámetros (Visual Basic)
 Especifica los parámetros de que un procedimiento espera cuando se llama. Varios parámetros se separan mediante comas. A continuación se muestra la sintaxis para un parámetro.  
@@ -51,7 +43,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
  Opcional. Especifica que el último parámetro en la lista de parámetros es una matriz opcional de elementos del tipo de datos especificado. Esto permite que el código que realiza la llamada pasar un número arbitrario de argumentos al procedimiento.  
   
  `parametername`  
- Obligatorio. Nombre de la variable local que representa el parámetro.  
+ Requerido. Nombre de la variable local que representa el parámetro.  
   
  `parametertype`  
  Obligatorio si `Option Strict` es `On`. Tipo de datos de la variable local que representa el parámetro.  
