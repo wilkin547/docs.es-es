@@ -1,14 +1,6 @@
 ---
 title: ICorDebugArrayValue Interfaz1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugArrayValue
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 35169f0dd2ca71400d3aebddf9d5e2ae6b72be07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a96f2b21e524f03ea3290be268244eaceeb5c7f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugarrayvalue-interface1"></a>ICorDebugArrayValue Interfaz1
 Una subclase de ICorDebugHeapValue que representa una matriz unidimensional o multidimensional.  
@@ -51,7 +39,7 @@ Una subclase de ICorDebugHeapValue que representa una matriz unidimensional o mu
 |[HasBaseIndicies (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-hasbaseindicies-method.md)|Determina si la matriz tiene índices de base.|  
   
 ## <a name="remarks"></a>Comentarios  
- `ICorDebugArrayValue`admite matrices unidimensionales y multidimensionales.  
+ `ICorDebugArrayValue` admite matrices unidimensionales y multidimensionales.  
   
 > [!NOTE]
 >  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
@@ -63,7 +51,7 @@ Una subclase de ICorDebugHeapValue que representa una matriz unidimensional o mu
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

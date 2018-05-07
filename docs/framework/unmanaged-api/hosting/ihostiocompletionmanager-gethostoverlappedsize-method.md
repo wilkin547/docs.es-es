@@ -1,14 +1,6 @@
 ---
-title: "IHostIoCompletionManager::GetHostOverlappedSize (Método)"
-ms.custom: 
+title: IHostIoCompletionManager::GetHostOverlappedSize (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostIoCompletionManager.GetHostOverlappedSize
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2902578b-d5e2-4f8d-a103-0c7b6dceda9e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 41fc1a4a0debe0c302115c79962c0da50cc4ee37
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6713fdb822babf607752c1823a32dae43a7d567e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostiocompletionmanagergethostoverlappedsize-method"></a>IHostIoCompletionManager::GetHostOverlappedSize (Método)
 Obtiene el tamaño de los datos personalizados que el host pretende anexar a las solicitudes de E/S.  
@@ -54,7 +42,7 @@ HRESULT GetHostOverlappedSize (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`GetHostOverlappedSize`se devolvió correctamente.|  
+|S_OK|`GetHostOverlappedSize` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El CLR no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|La llamada agotó el tiempo de espera.|  
 |HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
@@ -62,12 +50,12 @@ HRESULT GetHostOverlappedSize (
 |E_FAIL|Se ha producido un error catastrófico desconocido. Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- Todas las llamadas de E/S asincrónicas a las API de plataforma de Windows toman Win32 `OVERLAPPED` object, que proporciona información como la posición del puntero de archivo. Para mantener el estado, las aplicaciones que hacen llamadas de E/S asincrónicas normalmente agregan datos personalizados a la estructura. `GetHostOverlappedSize`y [IHostIoCompletionManager:: InitializeHostOverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md) proporcionan una oportunidad para que el host de incluir dichos datos personalizados.  
+ Todas las llamadas de E/S asincrónicas a las API de plataforma de Windows toman Win32 `OVERLAPPED` object, que proporciona información como la posición del puntero de archivo. Para mantener el estado, las aplicaciones que hacen llamadas de E/S asincrónicas normalmente agregan datos personalizados a la estructura. `GetHostOverlappedSize` y [IHostIoCompletionManager:: InitializeHostOverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md) proporcionan una oportunidad para que el host de incluir dichos datos personalizados.  
   
  CLR llama el `GetHostOverlappedSize` método para determinar el tamaño de los datos personalizados que el host pretende anexar a la `OVERLAPPED` objeto.  
   
 > [!NOTE]
->  `GetHostOverlappedSize`se llama solo una vez. Datos personalizados del host deben tener el mismo tamaño para cada solicitud de E/S.  
+>  `GetHostOverlappedSize` se llama solo una vez. Datos personalizados del host deben tener el mismo tamaño para cada solicitud de E/S.  
   
 > [!IMPORTANT]
 >  El tamaño de la `OVERLAPPED` propio objeto no se incluye en el valor de `pcbSize`.  
@@ -81,7 +69,7 @@ HRESULT GetHostOverlappedSize (
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Threading.NativeOverlapped>  

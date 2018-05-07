@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataEmit::DefineField (Método)"
-ms.custom: 
+title: IMetaDataEmit::DefineField (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.DefineField
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2c4b5604c3daec78744eb8902a30750571b9f82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField (Método)
 Crea una definición para un campo con la firma de metadatos especificada y obtiene un símbolo (token) para esa definición de campo.  
@@ -71,7 +59,7 @@ HRESULT DefineField (
  [in] El recuento de bytes en `pvSigBlob`.  
   
  `dwCPlusTypeFlage`  
- [in] El `ELEMENT_TYPE_`  *\**  para el valor constante. Se trata de un `CorElementType` valor. Si no define un valor constante para el campo, use `ELEMENT_TYPE_END`.  
+ [in] El `ELEMENT_TYPE_` *\** para el valor constante. Se trata de un `CorElementType` valor. Si no define un valor constante para el campo, use `ELEMENT_TYPE_END`.  
   
  `pValue`  
  [in] El valor constante para el campo.  
@@ -89,7 +77,7 @@ HRESULT DefineField (
   
  **Biblioteca:** usada como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

@@ -1,31 +1,17 @@
 ---
 title: Contadores de rendimiento de WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: be4ffac8444f6365dacb2b20db6abbb6792c2239
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 74bf11779e6ccf032f2c8c920b62b2f0e5d0625d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-performance-counters"></a>Contadores de rendimiento de WCF
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] incluye un conjunto grande de contadores de rendimiento para ayudarle a calibrar el rendimiento de su aplicación.  
+Windows Communication Foundation (WCF) incluye un amplio conjunto de contadores de rendimiento para ayudarle a calibrar el rendimiento de su aplicación.  
   
 ## <a name="enabling-performance-counters"></a>Habilitación de contadores de rendimiento  
  Puede habilitar contadores de rendimiento para un servicio [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] a través del archivo de configuración app.config del servicio [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], como se indica a continuación:  

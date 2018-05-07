@@ -1,28 +1,14 @@
 ---
 title: Suplentes de contratos de datos
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6b372b998d7b3a91189032947a9ad8c68074b5d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 455900b1ac5d10c02e6b1341e737eb6874c874f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-surrogates"></a>Suplentes de contratos de datos
 El contrato de datos *suplente* es una característica avanzada basada en el modelo de contrato de datos. Esta característica está diseñada para ser utilizada para la personalización de tipo y substitución en situaciones donde los usuarios desean cambiar cómo un tipo se serializa, deserializa o se proyecta en metadatos. Algunos escenarios donde se puede utilizar un suplente es cuando un contrato de datos no se ha especificado para el tipo, los campos y las propiedades no están marcados con el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> o los usuarios desean crear dinámicamente las variaciones del esquema.  

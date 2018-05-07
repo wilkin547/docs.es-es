@@ -1,27 +1,15 @@
 ---
 title: Comparar valores GUID y uniqueidentifier
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0a61556859acec53315147149d67ff4cef493b68
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ce6ba9a73e65b5f418ff9cf5a1ef4ca4ff0c36ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>Comparar valores GUID y uniqueidentifier
 El tipo de datos de identificador único global (GUID) de SQL Server viene representado por el tipo de datos `uniqueidentifier`, que almacena un valor binario de 16 bytes. Un GUID es un número binario que sirve principalmente como identificador, el cual que debe ser único en una red formada por varios equipos en muchos sitios. Los GUID se pueden generar con la llamada a la función NEWID de Transact-SQL, y se tiene la garantía de que son únicos en todo el mundo. Para obtener más información, vea "Utilizar datos uniqueidentifier" en los Libros en pantalla de SQL Server.  

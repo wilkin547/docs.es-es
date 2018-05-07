@@ -1,14 +1,6 @@
 ---
-title: "CorThreadSafetyOptions (Enumeración)"
-ms.custom: 
+title: CorThreadSafetyOptions (Enumeración)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorThreadSafetyOptions
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: dae07d9b-df51-488c-b17e-52d6e48217bd
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e017732882841e1cb2b5f00b1c51e22bba11ae73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3407fcac420b8129dd39eabf84aec84b58651944
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions (Enumeración)
 Especifica marcas para seleccionar opciones de seguridad para subprocesos.  
@@ -60,7 +48,7 @@ typedef enum CorThreadSafetyOptions {
   
  **Encabezado:** CorHdr.h  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

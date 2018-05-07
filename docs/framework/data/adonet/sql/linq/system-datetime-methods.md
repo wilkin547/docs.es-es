@@ -1,24 +1,12 @@
 ---
-title: "System.DateTime (Métodos)"
-ms.custom: 
+title: System.DateTime (Métodos)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 74c07a2f873d715bd82fba19499b36e8ed305dcc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 57ffb3a7f79607b449c6e300ca15396a3f99386b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime (Métodos)
 Los métodos, operadores y propiedades siguientes admitidos en LINQ to SQL, están disponibles para su uso en las consultas de LINQ to SQL. Si no se admite un método, operador ni propiedad, LINQ to SQL no puede convertir el miembro para la ejecución en SQL Server. Puede usar estos miembros en el código, sin embargo, deben evaluarse antes de convertir la consulta a Transact-SQL o después de recuperar los resultados de la base de datos.  

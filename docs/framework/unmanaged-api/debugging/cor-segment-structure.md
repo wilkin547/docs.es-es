@@ -1,14 +1,6 @@
 ---
 title: COR_SEGMENT (Estructura)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_SEGMENT
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 93aeecb9-7fef-4545-8daf-f566dfc47084
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9414aa1c36ba059d9ee1101f6183dc8a669f9e6f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b816087f54e652f07dc791b7d66eb1af8f52f55e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corsegment-structure"></a>COR_SEGMENT (Estructura)
 Contiene información sobre una región de memoria en el montón administrado.  
@@ -58,7 +46,7 @@ typedef struct _COR_SEGMENT {
 |`heap`|El número de montón en el que reside la región de memoria. Vea la sección Comentarios para obtener más información.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `COR_SEGMENTS` estructura representa una región de memoria en el montón administrado.  `COR_SEGMENTS`los objetos son miembros de la [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) objeto de colección, que se rellena mediante una llamada a la[icordebugprocess5:: Enumerateheapregions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) método.  
+ El `COR_SEGMENTS` estructura representa una región de memoria en el montón administrado.  `COR_SEGMENTS` los objetos son miembros de la [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) objeto de colección, que se rellena mediante una llamada a la[icordebugprocess5:: Enumerateheapregions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) método.  
   
  El `heap` campo es el número de procesador, que se corresponde con el montón que se va a notificar. Para los recolectores de elementos no utilizados de estación de trabajo, su valor siempre es cero, porque las estaciones de trabajo tienen solo un montón de elementos no utilizados. Para recolectores de elementos no utilizados de servidor, su valor se corresponde con el procesador que está vinculado del montón. Tenga en cuenta que puede haber más o menos recolección montones de procesadores reales debido a los detalles de implementación del recolector de elementos no utilizados.  
   
@@ -69,7 +57,7 @@ typedef struct _COR_SEGMENT {
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

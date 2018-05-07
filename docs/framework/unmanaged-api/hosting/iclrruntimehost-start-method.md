@@ -1,14 +1,6 @@
 ---
-title: "ICLRRuntimeHost::Start (Método)"
-ms.custom: 
+title: ICLRRuntimeHost::Start (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeHost.Start
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c0a6dce5-0a8d-42e8-808b-6ca14df9d289
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a9705e4449da3b485bef7e7250ca08473d51387b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: df2747b7cce112e61c6fb99cdb91dc0d56047b9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimehoststart-method"></a>ICLRRuntimeHost::Start (Método)
 Inicializa common language runtime (CLR) en un proceso.  
@@ -48,7 +36,7 @@ HRESULT Start();
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`Start`se devolvió correctamente.|  
+|S_OK|`Start` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El CLR no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|La llamada agotó el tiempo de espera.|  
 |HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
@@ -65,7 +53,7 @@ HRESULT Start();
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.AppDomain>  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: f6cbdbb7c5569851055102cfe5d413e0b94376f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 0be428ef3b37222e1e8472591d2b54d950bef59f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;NetTcpBinding&gt;
 Especifica un enlace seguro, confiable y optimizado, adecuado para la comunicación entre equipos. De forma predeterminada, genera una pila de comunicación en tiempo de ejecución con Seguridad de Windows para la seguridad y autenticación de mensajes, TCP para la entrega de mensajes y codificación binaria de mensajes.  
@@ -92,7 +92,7 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 ## <a name="remarks"></a>Comentarios  
  De forma predeterminada, este enlace genera una pila de comunicación en tiempo de ejecución que usa la seguridad de transporte, TCP para la entrega del mensaje y una codificación de mensajes binaria. Este enlace es una opción adecuada de proporcionados por el sistema de Windows Communication Foundation (WCF) para comunicarse a través de una Intranet.  
   
- La configuración predeterminada para `netTcpBinding` es más rápida que la configuración proporcionada por `wsHttpBinding`, pero sólo está diseñada para la comunicación [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. El comportamiento de seguridad es configurable mediante el parámetro opcional `securityMode`. El uso de WS-ReliableMessaging es configurable utilizando el atributo `reliableSessionEnabled` opcional. Pero la mensajería de confianza está apagada de forma predeterminada. Más generalmente, los enlaces proporcionados por el sistema HTTP como `wsHttpBinding` y `basicHttpBinding` se configuran para activar de forma predeterminada las cosas, mientras que el enlace `netTcpBinding` desactiva de forma predeterminada las cosas para que tenga que inscribirse para obtener compatibilidad, por ejemplo, para una de las especificaciones de WS-*. Esto significa que la configuración predeterminada para TCP es más rápida en intercambiar los mensajes entre los puntos de conexión que la configurada de forma predeterminada para los enlaces HTTP.  
+ La configuración predeterminada para la `netTcpBinding` es más rápido que la configuración proporcionada por el `wsHttpBinding`, pero está pensado solo para la comunicación de WCF. El comportamiento de seguridad es configurable mediante el parámetro opcional `securityMode`. El uso de WS-ReliableMessaging es configurable utilizando el atributo `reliableSessionEnabled` opcional. Pero la mensajería de confianza está apagada de forma predeterminada. Más generalmente, los enlaces proporcionados por el sistema HTTP como `wsHttpBinding` y `basicHttpBinding` se configuran para activar de forma predeterminada las cosas, mientras que el enlace `netTcpBinding` desactiva de forma predeterminada las cosas para que tenga que inscribirse para obtener compatibilidad, por ejemplo, para una de las especificaciones de WS-*. Esto significa que la configuración predeterminada para TCP es más rápida en intercambiar los mensajes entre los puntos de conexión que la configurada de forma predeterminada para los enlaces HTTP.  
   
 ## <a name="example"></a>Ejemplo  
  El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en el atributo de `binding` del elemento `<endpoint>`. Si desea configurar el enlace netTcpBinding y cambiar parte de su configuración, es necesario definir una configuración de enlace. El extremo debe hacer referencia a la configuración de enlace con un atributo `bindingConfiguration`. En el siguiente ejemplo, se define una configuración de enlace.  

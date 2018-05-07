@@ -1,14 +1,6 @@
 ---
 title: ICorDebugGenericValue Interfaz1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugGenericValue
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6c6fb4893edf0bcda9d6f7ddbeea7054f5b4fd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0081f020da673023e2c35f9599e9682215e2c9d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebuggenericvalue-interface1"></a>ICorDebugGenericValue Interfaz1
 Una subclase de "ICorDebugValue" que se aplica a todos los valores. Esta interfaz proporciona métodos Get y Set para el valor.  
@@ -45,7 +33,7 @@ Una subclase de "ICorDebugValue" que se aplica a todos los valores. Esta interfa
 |[SetValue (método)](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|Copia un nuevo valor del búfer especificado.|  
   
 ## <a name="remarks"></a>Comentarios  
- `ICorDebugGenericValue`es una interfaz secundaria porque es no son utilizables de forma remota.  
+ `ICorDebugGenericValue` es una interfaz secundaria porque es no son utilizables de forma remota.  
   
  Para los tipos de referencia, el valor es la referencia en lugar de con el contenido de la referencia.  
   
@@ -61,7 +49,7 @@ Una subclase de "ICorDebugValue" que se aplica a todos los valores. Esta interfa
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
     

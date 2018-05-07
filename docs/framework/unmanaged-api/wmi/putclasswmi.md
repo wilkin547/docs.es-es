@@ -1,11 +1,7 @@
 ---
-title: "Función PutClassWmi (referencia de API no administrada)"
-description: "La función PutClassWmi crea una nueva clase o actualiza uno existente."
+title: Función PutClassWmi (referencia de API no administrada)
+description: La función PutClassWmi crea una nueva clase o actualiza uno existente.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutClassWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 219cec2096cd3d1dfe1e0d3c0903b62692e444e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ce887d59d02cfc2e4d8c183aa495dcc1535853c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi (función)
 Crea una nueva clase o actualiza uno existente.  
@@ -63,7 +56,7 @@ HRESULT PutClassWmi (
 | `WBEM_FLAG_OWNER_UPDATE` | 0 x 10000 | Proveedores de inserción deben especificar esta marca al llamar a `PutClassWmi` para indicar que esta clase ha cambiado. |
 | `WBEM_FLAG_UPDATE_COMPATIBLE` | 0 | Permite que una clase se actualice si no hay ninguna clase derivada y no hay instancias de esa clase. También permite actualizaciones en todos los casos si el cambio es simplemente calificadores sin importancia, por ejemplo, el calificador de descripción. Si la clase tiene instancias o cambios se encuentran en calificadores importantes, se produce un error en la actualización. |
 | `WBEM_FLAG_UPDATE_SAFE_MODE` | 0 x 20 | Permite actualizaciones en las clases incluso si hay clases secundarias, siempre y cuando el cambio no provoque conflictos con las clases secundarias. Por ejemplo, esta marca permite una nueva propiedad va a agregar a la clase base que no se haya mencionado anteriormente en cualquiera de las clases secundarias. Si la clase tiene instancias, se produce un error en la actualización. |
-| `WBEM_FLAG_UPDATE_FORCE_MODE` | 0 x 40 | fuerza las actualizaciones de clases cuando se den conflictos con clases secundarias. Por ejemplo, esta marca fuerza una actualización aunque un calificador de clase se define en una clase secundaria y la clase base intenta agregar el mismo calificador que entra en conflicto con thte uno existente. En modo forzado, se resuelve el conflicto de tis eliminando el calificador en conflicto en la clase secundaria. |
+| `WBEM_FLAG_UPDATE_FORCE_MODE` | 0x40 | fuerza las actualizaciones de clases cuando se den conflictos con clases secundarias. Por ejemplo, esta marca fuerza una actualización aunque un calificador de clase se define en una clase secundaria y la clase base intenta agregar el mismo calificador que entra en conflicto con thte uno existente. En modo forzado, se resuelve el conflicto de tis eliminando el calificador en conflicto en la clase secundaria. |
 
 `pCtx`  
 [in] Normalmente, este valor es `null`. En caso contrario, es un puntero a un [IWbemContext](https://msdn.microsoft.com/library/aa391465(v=vs.85).aspx) instancia que se puede usar el proveedor que proporciona las clases solicitadas. 
@@ -84,7 +77,7 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 | `WBEM_E_INVALID OPERATION` | 0x80041016 | El nombre de la clase especificada no es válido. |
 | `WBEM_E_CLASS_HAS_CHILDREN` | 0x80041025 | Se intentó realizar un cambio que dañaría una subclase. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | El `WBEM_FLAG_CREATE_ONLY` se especificó la marca, pero la clase ya existe. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`no se especificó en `lFlags`, y no se encontró la clase. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` no se especificó en `lFlags`, y no se encontró la clase. |
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | Las propiedades necesarias para las clases no todas se establecieron. |
 | `WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para completar la operación. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI se ha detenido probablemente y reiniciar. Llame a [ConnectServerWmi](connectserverwmi.md) nuevo. |
@@ -104,7 +97,7 @@ Si se produce un error en la llamada de función, puede obtener información de 
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

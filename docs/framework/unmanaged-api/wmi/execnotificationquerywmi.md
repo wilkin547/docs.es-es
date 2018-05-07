@@ -1,11 +1,7 @@
 ---
-title: "Función ExecNotificationQueryWmi (referencia de API no administrada)"
-description: "La función ExecNotificationQueryWmi ejecuta una consulta para recibir eventos."
+title: Función ExecNotificationQueryWmi (referencia de API no administrada)
+description: La función ExecNotificationQueryWmi ejecuta una consulta para recibir eventos.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ExecNotificationQueryWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6dd0926d2262f8d0aa125b86755017a65a95a7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi (función)
 Ejecuta una consulta para recibir eventos. La llamada devuelve inmediatamente, y el llamador puede sondear el enumerador devuelto para los eventos que llegan. Liberar el enumerador devuelto, cancela la consulta.  
@@ -77,7 +70,7 @@ HRESULT ExecNotificationQueryWmi (
 `authLevel`  
 [in] El nivel de autorización.
 
-`impLevel`[in] El nivel de suplantación.
+`impLevel` [in] El nivel de suplantación.
 
 `pCurrentNamespace`   
 [in] Un puntero a un [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) objeto que representa el espacio de nombres actual.
@@ -127,7 +120,7 @@ Si se produce un error en la llamada de función, puede obtener información de 
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

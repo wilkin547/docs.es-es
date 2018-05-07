@@ -1,28 +1,14 @@
 ---
 title: Creación de enlaces definidos por el usuario
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 05476adccca0deb5fd82b62f99f06939664cc876
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 82fe3baada73b89291311a891069c6ee3f19cf20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Creación de enlaces definidos por el usuario
 Hay varias maneras de crear enlaces no proporcionadas por el sistema:  
@@ -38,7 +24,7 @@ Hay varias maneras de crear enlaces no proporcionadas por el sistema:
   
  Hay tres tipos principales de elementos de enlace: elementos de enlaces de protocolo, elementos de enlaces de codificación y elementos de enlaces de transporte.  
   
- Elementos de enlaces protocolares: estos elementos representan pasos de procesamiento de nivel superior que actúan sobre mensajes. Los canales y los agentes de escucha creados por estos elementos de enlace pueden agregar, quitar o modificar el contenido del mensaje. Un enlace determinado puede tener un número arbitrario de elementos de enlace de protocolo, cada uno de los cuales hereda de <xref:System.ServiceModel.Channels.BindingElement>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] incluye varios elementos de enlace de protocolo, incluidos <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> y <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Elementos de enlaces protocolares: estos elementos representan pasos de procesamiento de nivel superior que actúan sobre mensajes. Los canales y los agentes de escucha creados por estos elementos de enlace pueden agregar, quitar o modificar el contenido del mensaje. Un enlace determinado puede tener un número arbitrario de elementos de enlace de protocolo, cada uno de los cuales hereda de <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) incluye varios elementos de enlace de protocolo, incluidos el <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> y <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
  Elemento de enlace de codificación: estos elementos representan las transformaciones entre un mensaje y una codificación lista para la transmisión en la conexión. Entre los enlaces de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] típicos se incluyen exactamente un elemento de enlace de codificación. Entre los ejemplos de elementos de enlace de codificación se incluyen los elementos <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> y <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Si no se especifica un elemento de enlace de codificación para un enlace, se utiliza una codificación predeterminada. Cuando el transporte es HTTP, el valor predeterminado es texto, y, si no fuese HTTP, es binario.  
   

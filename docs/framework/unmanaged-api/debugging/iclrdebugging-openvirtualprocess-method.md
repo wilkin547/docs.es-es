@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugging::OpenVirtualProcess (Método)"
-ms.custom: 
+title: ICLRDebugging::OpenVirtualProcess (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugging.OpenVirtualProcess
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f1f71f42f10c3d25714998d1697b20a5ee13e055
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51b5a9ecd85f0d40ac2fe2826cbbe7a56a6228d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess (Método)
 Obtiene el ICorDebugProcess (interfaz) que corresponde a un módulo de runtime (CLR) de lenguaje común cargado en el proceso.  
@@ -87,7 +75,7 @@ HRESULT OpenVirtualProcess(
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|El valor de `pDataTarget` es `null`.|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|El [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) devolución de llamada devuelve un error o no proporciona un identificador válido.|  
-|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget`no implementa las interfaces de destino de datos necesarios para esta versión del runtime.|  
+|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` no implementa las interfaces de destino de datos necesarios para esta versión del runtime.|  
 |CORDBG_E_NOT_CLR|El módulo indicado no es un módulo CLR. Este valor de HRESULT también se devuelve cuando un módulo CLR no se puede detectar porque se ha dañado la memoria, el módulo no está disponible o la versión CLR es posterior a la versión de la corrección de compatibilidad.|  
 |CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Esta versión del runtime no admite este modelo de depuración. Actualmente, el modelo de depuración no es compatible con versiones CLR antes de la [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. El `pwszVersion` parámetro de salida sigue establecido el valor correcto después de este error.|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|La versión de CLR es mayor que la versión de notificaciones para admitir este depurador. El `pwszVersion` parámetro de salida sigue establecido el valor correcto después de este error.|  
@@ -105,7 +93,7 @@ HRESULT OpenVirtualProcess(
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

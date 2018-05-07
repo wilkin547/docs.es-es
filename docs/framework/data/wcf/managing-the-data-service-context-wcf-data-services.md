@@ -1,24 +1,12 @@
 ---
 title: Administrar el contexto del servicio de datos (Data Services de WCF)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c993a4f09a7187b45331f6beb71a9637da87d20f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b2b0bb709081ca7b0b2a1367f10e1f7a08c98c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>Administrar el contexto del servicio de datos (Data Services de WCF)
 La clase <xref:System.Data.Services.Client.DataServiceContext> encapsula las operaciones admitidas en un servicio de datos determinado. Los servicios de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] carecen de estado, pero no ocurre lo mismo con el contexto. Por lo tanto, puede usar el <xref:System.Data.Services.Client.DataServiceContext> clase para mantener el estado en el cliente entre las interacciones con el servicio de datos para admitir características como la administración de cambios. Esta clase también administra las identidades y realiza el seguimiento de los cambios.  
@@ -29,7 +17,7 @@ La clase <xref:System.Data.Services.Client.DataServiceContext> encapsula las ope
  De forma predeterminada, el cliente solo materializa una entrada de la fuente de respuesta en un objeto para las entidades de las que aún no realiza un seguimiento <xref:System.Data.Services.Client.DataServiceContext>. Esto significa que los cambios en los objetos que ya están en la memoria caché no se sobrescriben. Este comportamiento se controla especificando un valor de <xref:System.Data.Services.Client.MergeOption> para las consultas y las operaciones de carga. Esta opción se especifica estableciendo la propiedad <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> en <xref:System.Data.Services.Client.DataServiceContext>. <xref:System.Data.Services.Client.MergeOption.AppendOnly> es el valor de la opción de combinación predeterminada. De este modo, solo se materializan los objetos de entidades de las que no se realiza un seguimiento, lo que significa que los objetos existentes no se sobrescriben. Otra manera de evitar que los cambios en los objetos del cliente se sobrescriban con las actualizaciones del servicio de datos es especificar <xref:System.Data.Services.Client.MergeOption.PreserveChanges>. Cuando se especifica <xref:System.Data.Services.Client.MergeOption.OverwriteChanges>, los valores de los objetos del cliente son reemplazados por los valores más recientes de las entradas de la fuente de respuesta, aunque se hayan realizado cambios en estos objetos. Cuando se utiliza una opción de combinación <xref:System.Data.Services.Client.MergeOption.NoTracking>, <xref:System.Data.Services.Client.DataServiceContext> no puede enviar los cambios realizados en los objetos de cliente al servicio de datos. Con esta opción, los cambios siempre se sobrescriben con valores del servicio de datos.  
   
 ## <a name="managing-concurrency"></a>Administrar la simultaneidad  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]admite simultaneidad optimista que permite que el servicio de datos detectar conflictos de actualización. El proveedor del servicio de datos se puede configurar de manera que el servicio de datos compruebe los cambios en las entidades mediante un token de simultaneidad. Este token incluye una o más propiedades de un tipo de entidad que el servicio de datos valida para determinar si un recurso ha cambiado. Tokens de simultaneidad, que se incluyen en el encabezado eTag de solicitudes y respuestas del servicio de datos, se administran automáticamente por el [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] cliente. Para obtener más información, consulte [actualizar el servicio de datos](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] admite simultaneidad optimista que permite que el servicio de datos detectar conflictos de actualización. El proveedor del servicio de datos se puede configurar de manera que el servicio de datos compruebe los cambios en las entidades mediante un token de simultaneidad. Este token incluye una o más propiedades de un tipo de entidad que el servicio de datos valida para determinar si un recurso ha cambiado. Tokens de simultaneidad, que se incluyen en el encabezado eTag de solicitudes y respuestas del servicio de datos, se administran automáticamente por el [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] cliente. Para obtener más información, consulte [actualizar el servicio de datos](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
  <xref:System.Data.Services.Client.DataServiceContext> realiza el seguimiento de los cambios realizados en los objetos notificados manualmente utilizando <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> y <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> o mediante <xref:System.Data.Services.Client.DataServiceCollection%601>. Cuando se llama al método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>, el cliente envía de nuevo los cambios al servicio de datos. Se puede producir un error en <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> cuando los cambios de datos en el cliente entran en conflicto con los cambios en el servicio de datos. Cuando esto sucede, debe consultar de nuevo el recurso de entidad para recibir los datos actualizados. Para sobrescribir los cambios en el servicio de datos, ejecute la consulta con la opción de combinación <xref:System.Data.Services.Client.MergeOption.PreserveChanges>. Al llamar de nuevo al método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>, los cambios conservados en el cliente se mantienen en el servicio de datos, siempre que no se hayan realizado otros cambios en el recurso del servicio de datos.  
   

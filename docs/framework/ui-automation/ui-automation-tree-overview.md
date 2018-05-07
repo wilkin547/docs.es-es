@@ -1,27 +1,18 @@
 ---
-title: "Información general sobre el árbol de la UI Automation"
-ms.custom: 
+title: Información general sobre el árbol de la UI Automation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 25a1ddb113916563c234eefb8cdc0746b04f3e66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0823a569b19d46f32c1cb780470a935f20429c11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-tree-overview"></a>Información general sobre el árbol de la UI Automation
 > [!NOTE]
@@ -43,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
  Los proveedores de UI Automation admiten el filtrado mediante la definición de propiedades en los elementos, incluidas las propiedades <xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty> y <xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]proporciona tres vistas predeterminadas. Estas vistas se definen mediante el tipo de filtrado realizado; el ámbito de cualquier vista lo define la aplicación. Además, la aplicación puede aplicar otros filtros en las propiedades; por ejemplo, para incluir únicamente controles habilitados en una vista de control.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] proporciona tres vistas predeterminadas. Estas vistas se definen mediante el tipo de filtrado realizado; el ámbito de cualquier vista lo define la aplicación. Además, la aplicación puede aplicar otros filtros en las propiedades; por ejemplo, para incluir únicamente controles habilitados en una vista de control.  
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Vista sin formato  

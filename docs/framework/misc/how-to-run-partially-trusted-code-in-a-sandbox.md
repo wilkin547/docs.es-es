@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Ejecutar código de confianza parcial en un recinto"
-ms.custom: 
+title: 'Cómo: Ejecutar código de confianza parcial en un recinto'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - partially trusted code
 - sandboxing
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc335bfef4993f6e730dca93cd645d886a9d13b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05ab0874c980d9e6138ae2bfd720c6d89628613c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Cómo: Ejecutar código de confianza parcial en un recinto
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  

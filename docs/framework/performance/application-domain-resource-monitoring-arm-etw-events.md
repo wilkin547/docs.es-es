@@ -1,27 +1,17 @@
 ---
-title: "Eventos ETW de supervisión de recursos de dominio de aplicación (ARM)"
-ms.custom: 
+title: Eventos ETW de supervisión de recursos de dominio de aplicación (ARM)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6384700c7039cb705f2db759ebd3d733bf8954ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 47ab6e52278c77156e828869dd23575561879bff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Eventos ETW de supervisión de recursos de dominio de aplicación (ARM)
 <a name="top"></a> Estos eventos proporcionan información de diagnóstico detallada sobre el estado de un dominio de aplicación. Puede utilizar estos eventos o la característica de supervisión de recursos del dominio de aplicación (ARM) para obtener la misma información.  

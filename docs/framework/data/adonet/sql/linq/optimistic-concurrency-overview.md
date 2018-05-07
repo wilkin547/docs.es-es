@@ -1,24 +1,12 @@
 ---
-title: "Simultaneidad optimista: Información general"
-ms.custom: 
+title: 'Simultaneidad optimista: Información general'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 616b035096dd636c65dba65bfe6b371db75bec8e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5b4603526896364285cb3c85d12568ed9031ed47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimistic-concurrency-overview"></a>Simultaneidad optimista: Información general
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite el control de simultaneidad optimista. En la tabla siguiente se describe los términos que se aplican a la simultaneidad optimista en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentación:  

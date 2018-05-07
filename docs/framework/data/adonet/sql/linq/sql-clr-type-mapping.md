@@ -1,24 +1,12 @@
 ---
-title: "Asignación de tipos entre CLR y SQL"
-ms.custom: 
+title: Asignación de tipos entre CLR y SQL
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: cc6a3d38b8534c9727562cb3fb82f96fa60db7ec
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-clr-type-mapping"></a>Asignación de tipos entre CLR y SQL
 En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a un modelo de objetos expresado en el lenguaje de programación que prefiera. Cuando la aplicación se ejecuta, LINQ to SQL convierte las consultas integradas del lenguaje del modelo de objetos a SQL y las envía a la base de datos para su ejecución. Cuando la base de datos devuelve los resultados, LINQ to SQL los vuelve a convertir en objetos con los que pueda trabajar en su propio lenguaje de programación.  
@@ -206,7 +194,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
 >  Los tipos de SQL Server `DATETIME2`, `DATETIMEOFFSET`, `DATE` y `TIME` están disponibles a partir de Microsoft SQL Server 2008. LINQ to SQL admite la asignación a estos tipos nuevos a partir del Service Pack 1 de .NET Framework 3.5.  
   
 ### <a name="systemdatetime"></a>System.Datetime  
- El intervalo y la precisión del tipo <xref:System.DateTime?displayProperty=nameWithType> de CLR son mayores que el intervalo y la precisión del tipo `DATETIME` de SQL Server, que es la asignación de tipos predeterminada para el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>. Para evitar las excepciones relacionadas con los datos que están fuera del intervalo de `DATETIME`, utilice `DATETIME2`, que está disponible a partir de Microsoft SQL Server 2008. `DATETIME2`puede coincidir con el intervalo y la precisión de CLR <xref:System.DateTime?displayProperty=nameWithType>.  
+ El intervalo y la precisión del tipo <xref:System.DateTime?displayProperty=nameWithType> de CLR son mayores que el intervalo y la precisión del tipo `DATETIME` de SQL Server, que es la asignación de tipos predeterminada para el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>. Para evitar las excepciones relacionadas con los datos que están fuera del intervalo de `DATETIME`, utilice `DATETIME2`, que está disponible a partir de Microsoft SQL Server 2008. `DATETIME2` puede coincidir con el intervalo y la precisión de CLR <xref:System.DateTime?displayProperty=nameWithType>.  
   
  Las fechas de SQL Server no disponen del concepto de <xref:System.TimeZone>, que es una característica totalmente admitida en CLR. Los valores de <xref:System.TimeZone> se guardan tal como están en la base de datos sin conversión de <xref:System.TimeZone>, independientemente de la información de  <xref:System.DateTimeKind> original. Cuando los valores <xref:System.DateTime> se recuperan de la base de datos, su valor se carga tal cual en <xref:System.DateTime>, con un valor <xref:System.DateTimeKind> de <xref:System.DateTimeKind.Unspecified>. Para obtener más información acerca de cómo admite <xref:System.DateTime?displayProperty=nameWithType> métodos, vea [System.DateTime (métodos)](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
   
@@ -224,7 +212,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
 |`BINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(MAX)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
-|`VARBINARY(MAX)`con el `FILESTREAM` atributo|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
+|`VARBINARY(MAX)` con el `FILESTREAM` atributo|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`IMAGE`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`TIMESTAMP`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
   

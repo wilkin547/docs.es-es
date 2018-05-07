@@ -1,14 +1,6 @@
 ---
-title: "StrongNameKeyGenEx (Función)"
-ms.custom: 
+title: StrongNameKeyGenEx (Función)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameKeyGenEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 36bd10b9-9857-45f3-8d3b-0da091d6169e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae564f7c4e8333e33b2f2f6229034c3a1396a687
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5e65e962d099e944fe243b3acc0a7c25a3bb960c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamekeygenex-function"></a>StrongNameKeyGenEx (Función)
 Genera un nuevo par de claves pública/privada con el tamaño de clave especificado, para su uso de nombre seguro.  
@@ -53,7 +41,7 @@ BOOLEAN StrongNameKeyGenEx (
   
 #### <a name="parameters"></a>Parámetros  
  `wszKeyContainer`  
- [in] El nombre de contenedor de claves solicitado. `wszKeyContainer`debe ser una cadena no vacía o null para generar un nombre temporal.  
+ [in] El nombre de contenedor de claves solicitado. `wszKeyContainer` debe ser una cadena no vacía o null para generar un nombre temporal.  
   
  `dwFlags`  
  [in] Especifica si se debe abandonar la clave registrada. Se admiten los siguientes valores:  
@@ -72,7 +60,7 @@ BOOLEAN StrongNameKeyGenEx (
  [out] El tamaño, en bytes, de `ppbKeyBlob`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true`Cuando se finaliza correctamente; en caso contrario, `false`.  
+ `true` Cuando se finaliza correctamente; en caso contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
  Las versiones de .NET Framework 1.0 y 1.1 requieren un `dwKeySize` de 1024 bits para firmar un ensamblado con un nombre seguro; la versión 2.0 también admite claves de 2048 bits de.  
@@ -88,7 +76,7 @@ BOOLEAN StrongNameKeyGenEx (
   
  **Biblioteca:** incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [StrongNameKeyGenEx (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)  

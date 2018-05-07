@@ -1,14 +1,6 @@
 ---
-title: "ICLRStrongName::StrongNameCompareAssemblies (Método)"
-ms.custom: 
+title: ICLRStrongName::StrongNameCompareAssemblies (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName.StrongNameCompareAssemblies
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: b1fb356c-72cf-4aa4-8376-f291a6d97c01
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96fbeccf76de87a3582bf8c2084d0ca9ad7d27f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5020c31f590f527856f966ede512e98c07496ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>ICLRStrongName::StrongNameCompareAssemblies (Método)
 Determina si dos ensamblados difieren solo en sus firmas de nombre seguro.  
@@ -58,14 +46,14 @@ HRESULT StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Uno de los siguientes valores:  
   
--   `SN_CMP_DIFFERENT`(0): Especifica que los ensamblados contienen datos distintos.  
+-   `SN_CMP_DIFFERENT` (0): Especifica que los ensamblados contienen datos distintos.  
   
--   `SN_CMP_IDENTICAL`(1): Especifica que los ensamblados son exactamente iguales, incluidas sus firmas y la suma de comprobación.  
+-   `SN_CMP_IDENTICAL` (1): Especifica que los ensamblados son exactamente iguales, incluidas sus firmas y la suma de comprobación.  
   
--   `SN_CMP_SIGONLY`(2): Especifica si los ensamblados difieren solo en la firma y la suma de comprobación.  
+-   `SN_CMP_SIGONLY` (2): Especifica si los ensamblados difieren solo en la firma y la suma de comprobación.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK`Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (vea [valores HRESULT comunes](http://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
+ `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (vea [valores HRESULT comunes](http://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -74,7 +62,7 @@ HRESULT StrongNameCompareAssemblies (
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="remarks"></a>Comentarios  
  La firma de nombre seguro de un ensamblado consta del nombre de texto, versión, referencia cultural y token de clave pública del ensamblado.  

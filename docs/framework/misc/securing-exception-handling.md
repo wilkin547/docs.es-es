@@ -1,14 +1,6 @@
 ---
 title: Proteger control de excepciones
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -17,17 +9,13 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 548606a0196012fdd21bf5512e8ea7b089c723ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe978930a9f84e0084f79f5fe585a1ecc3bf4eb2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-exception-handling"></a>Proteger control de excepciones
 En Visual C++ y Visual Basic, se ejecuta una expresión de filtro más arriba en la pila antes de cualquier **finalmente** instrucción. El **catch** bloque asociado con ese filtro se ejecuta después de la **finalmente** instrucción. Para obtener más información, consulte [excepciones filtradas por el usuario](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). Esta sección examina las implicaciones de seguridad de este pedido. Considere el siguiente ejemplo de pseudocódigo que ilustra el orden en que las instrucciones de filtro y **finalmente** las instrucciones que se ejecute.  

@@ -1,14 +1,6 @@
 ---
-title: "GetHistoryFileDirectory (Función)"
-ms.custom: 
+title: GetHistoryFileDirectory (Función)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetHistoryFileDirectory
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 93232222-926e-42ac-b85d-8a6d33977672
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5d0ec18a4f95d0d280a66b3b9d9200c560f5f187
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bba40acf7bfd20897ece4de285fe7a9175be83e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory (Función)
 Recupera la ruta de acceso del directorio de historial de la aplicación.  
@@ -59,7 +47,7 @@ HRESULT GetHistoryFileDirectory (
 |Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|E_INVALIDARG|`wzDir`o `pdwSize` es nulo o la versión de cadena no es correcta.|  
+|E_INVALIDARG|`wzDir` o `pdwSize` es nulo o la versión de cadena no es correcta.|  
   
 ## <a name="remarks"></a>Comentarios  
  Cuando se finaliza correctamente, el `pdwSize` argumento se establece en la longitud de la cadena de ruta de acceso.  
@@ -71,7 +59,7 @@ HRESULT GetHistoryFileDirectory (
   
  **Biblioteca:** Fusion.dll y Mscorwks.dll. Use Fusion.dll en lugar de Mscorwks.dll para asegurarse de que la versión correcta de .NET Framework de destino.  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [CreateHistoryReader (Función)](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  

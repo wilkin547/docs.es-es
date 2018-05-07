@@ -2,14 +2,14 @@
 title: '&lt;announcementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: 3ce141d70e17c14facd6aa8560c7b3424a8d9ae8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 15d60cd277b77fd52b2b77bfcdf4d0da1de7167a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
-Este elemento de configuración define un punto de conexión estándar con un contrato del anuncio fijo. Un servicio puede anunciar su disponibilidad opcionalmente enviando un mensaje del anuncio en línea y sin conexión cuando se abre o se cierra respectivamente. Un servicio de Windows Communication Foundation (WCF) especifica los extremos de anuncio en el [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) elemento y se utiliza el AnnouncementClient para realizar los anuncios. Un cliente que desea realizar escuchas para el anuncio de otro servicio realmente está actuando como un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] servicio; por tanto, tendrá que configurar los extremos de anuncio para el cliente en el [ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) sección.  
+Este elemento de configuración define un punto de conexión estándar con un contrato del anuncio fijo. Un servicio puede anunciar su disponibilidad opcionalmente enviando un mensaje del anuncio en línea y sin conexión cuando se abre o se cierra respectivamente. Un servicio de Windows Communication Foundation (WCF) especifica los extremos de anuncio en el [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) elemento y se utiliza el AnnouncementClient para realizar los anuncios. Un cliente que deseen realizar escuchas para el anuncio de otro servicio realmente está actuando como un servicio WCF; Por tanto, tendrá que configurar los extremos de anuncio para el cliente en el [ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) sección.  
   
 \<system.ServiceModel>  
 \<standardEndpoints >  

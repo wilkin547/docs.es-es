@@ -1,13 +1,6 @@
 ---
 title: Procedimientos recomendados para la confiabilidad
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - marking locks
 - rebooting databases
@@ -45,16 +38,13 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad218e8f87c2a04a9df6f67a918097de20296d0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d6f29d15297fc7faff6bb3bb07ee535647c2bb7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliability-best-practices"></a>Procedimientos recomendados para la confiabilidad
 Las siguientes reglas de confiabilidad están orientadas a SQL Server, pero también se aplican a cualquier aplicación de servidor basada en host. Es extremadamente importante que los servidores como SQL Server no pierdan recursos ni se interrumpan.  Pero eso no se puede realizar mediante la escritura de código devuelto para todos los métodos que modifican el estado de un objeto.  El objetivo no es escribir código administrado confiable al 100 por cien que se recupere de los errores en todas las ubicaciones con código devuelto.  Eso sería una tarea desalentadora con escasa probabilidad de éxito.  El Common Language Runtime (CLR) no puede proporcionar fácilmente garantías lo bastante seguras para el código administrado para que la escritura de código perfecto sea viable.  Tenga en cuenta que, a diferencia de ASP.NET, SQL Server solo usa un proceso que no se puede reciclar sin cerrar una base de datos durante un período inaceptablemente prolongado.  
@@ -258,7 +248,7 @@ public static MyClass SingletonProperty
  Considere la posibilidad de cambiar todos los lugares en que se detectan todas las excepciones por la detección de un tipo concreto de excepción que espera que se vaya producir, como una excepción <xref:System.FormatException> de métodos de formato de cadena.  Esto impide que el bloque catch se ejecute con excepciones inesperadas y ayuda a garantizar que el código no oculta errores detectando excepciones inesperadas.  Como norma general, no controle nunca una excepción en código de biblioteca (el código que requiere que se detecte una excepción puede indicar un problema de diseño en el código al que se está llamando).  En algunos casos es posible que quiera detectar una excepción e iniciar un tipo de excepción diferente para proporcionar más datos.  En este caso, use las excepciones anidadas, almacenando la causa real del error en la propiedad <xref:System.Exception.InnerException%2A> de la nueva excepción.  
   
 #### <a name="code-analysis-rule"></a>Regla de análisis de código  
- Revise todos los bloques catch en código administrado que detectan todos los objetos o todas las excepciones.  En C#, esto significa marcar tanto `catch` {} como `catch(Exception)` {}.  Considere la posibilidad de hacer que el tipo de excepción sea muy específico, o bien revise el código para asegurarse de que no actúa de forma incorrecta si detecta un tipo de excepción inesperada.  
+ Revise todos los bloques catch en código administrado que detectan todos los objetos o todas las excepciones.  En C#, esto significa marcar tanto `catch` {} y `catch(Exception)` {}.  Considere la posibilidad de hacer que el tipo de excepción sea muy específico, o bien revise el código para asegurarse de que no actúa de forma incorrecta si detecta un tipo de excepción inesperada.  
   
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>No suponer que un subproceso administrado es un subproceso Win32: es una fibra  
  El uso de almacenamiento local de subprocesos administrados sirve, pero no se puede usar el almacenamiento local de subprocesos no administrados ni suponer que el código se va a ejecutar de nuevo en el subproceso del sistema operativo actual.  No cambie ajustes como la configuración regional del subproceso.  No llame a `InitializeCriticalSection` o `CreateMutex` a través de la invocación de plataforma porque requieren que el subproceso del sistema operativo que entra en un bloqueo también salga del bloqueo.  Como este no es el caso cuando se usan fibras, las secciones críticas de Win32 y las exclusiones mutuas no se pueden usar directamente en SQL.  Tenga en cuenta que la clase administrada <xref:System.Threading.Mutex> no controla estas consideraciones de afinidad de subprocesos.  

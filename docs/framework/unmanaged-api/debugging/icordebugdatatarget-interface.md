@@ -1,14 +1,6 @@
 ---
 title: ICorDebugDataTarget (Interfaz)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugDataTarget
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: df5f05be-bed7-4f3c-bc89-dbb435d79a0b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b5d3a3b190cfa606bd4239e24c5defdaff9f4257
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 972c650e0fb3b42e943838b72faf2658f65543ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget (Interfaz)
 Proporciona una interfaz de devolución de llamada que brinda acceso a un proceso de destino determinado.  
@@ -46,7 +34,7 @@ Proporciona una interfaz de devolución de llamada que brinda acceso a un proces
 |[GetThreadContext (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|Solicita el contexto del subproceso actual para el subproceso especificado.|  
   
 ## <a name="remarks"></a>Comentarios  
- `ICorDebugDataTarget`y sus métodos tienen las siguientes características:  
+ `ICorDebugDataTarget` y sus métodos tienen las siguientes características:  
   
 -   Los servicios de depuración, llamar a métodos en esta interfaz para tener acceso a la memoria y otros datos en el proceso de destino.  
   
@@ -68,7 +56,7 @@ Proporciona una interfaz de devolución de llamada que brinda acceso a un proces
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  

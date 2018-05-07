@@ -1,14 +1,6 @@
 ---
-title: "ICLRMetaHostPolicy::GetRequestedRuntime (Método)"
-ms.custom: 
+title: ICLRMetaHostPolicy::GetRequestedRuntime (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRMetaHostPolicy.GetRequestedRuntime
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 59ec1832-9cc1-4b5c-983d-03407e51de56
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0501e104b2ed74656de125e668b7234efcbc9997
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e01affb5edb8b0766edf8548ae34cf8220bcc62d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>ICLRMetaHostPolicy::GetRequestedRuntime (Método)
 Proporciona una interfaz a una versión preferida de Common Language Runtime (CLR) basándose en una directiva de hospedaje, un ensamblado administrado, una cadena de versión y una secuencia de configuración. Este método realmente no carga ni activa el CLR, pero simplemente devuelve el [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaz que representa el resultado de la directiva. Este método reemplaza a la [GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md), [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md), [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md), [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md), y [GetCORRequiredVersion](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md) métodos.  
@@ -86,9 +74,9 @@ HRESULT GetRequestedRuntime(
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|E_POINTER|`pwzVersion` no es nulo y `pcchVersion` es nulo.<br /><br /> O bien<br /><br /> `pwzImageVersion` no es nulo y `pcchImageVersion` es nulo.|  
+|E_POINTER|`pwzVersion` no es nulo y `pcchVersion` es nulo.<br /><br /> -o bien-<br /><br /> `pwzImageVersion` no es nulo y `pcchImageVersion` es nulo.|  
 |E_INVALIDARG|`dwPolicyFlags` no especifica `METAHOST_POLICY_HIGHCOMPAT`.|  
-|ERROR_INSUFFICIENT_BUFFER|La memoria asignada a `pwzVerison` no es adecuada.<br /><br /> O bien<br /><br /> La memoria asignada a `pwzImageVerison` no es adecuada.|  
+|ERROR_INSUFFICIENT_BUFFER|La memoria asignada a `pwzVerison` no es adecuada.<br /><br /> -o bien-<br /><br /> La memoria asignada a `pwzImageVerison` no es adecuada.|  
 |CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags` incluye METAHOST_POLICY_APPLY_UPGRADE_POLICY y tanto `pwzVersion` como `pcchVersion` son nulos.|  
   
 ## <a name="requirements"></a>Requisitos  
@@ -98,7 +86,7 @@ HRESULT GetRequestedRuntime(
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICLRMetaHostPolicy (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)  

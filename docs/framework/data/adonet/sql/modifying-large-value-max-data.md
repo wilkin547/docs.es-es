@@ -1,27 +1,15 @@
 ---
 title: Modificar datos de valores grandes (max) en ADO.NET
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e42ff73cda8fc63d9b8ae6061cfbdb9749a0a864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 285803d92474efd3268816d1af06eb3ff4abbc79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modificar datos de valores grandes (max) en ADO.NET
 Los tipos de datos de objeto grande (LOB) son aquellos que superan el tamaño máximo de fila de 8 kilobytes (KB). SQL Server proporciona un especificador `max` para los tipos de datos `varchar`, `nvarchar` y `varbinary` a fin de permitir el almacenamiento de valores tan grandes como 2^32 bytes. Las columnas de tabla y las variables de Transact-SQL pueden especificar tipos de datos `varchar(max)`, `nvarchar(max)` o `varbinary(max)`. En ADO.NET, los tipos de datos `max` se pueden recuperar mediante `DataReader` y también se pueden especificar como valores de parámetros de entrada y salida sin ningún control especial. En el caso de tipos de datos `varchar` grandes, los datos se pueden recuperar y actualizar de manera incremental.  
@@ -78,7 +66,7 @@ FROM OPENROWSET
   
 |Si|A continuación|  
 |--------|----------|  
-|La expresión se establece en NULL|`@Length`se omite y el valor de *column_name* se trunca en el índice especificado `@Offset`.|  
+|La expresión se establece en NULL|`@Length` se omite y el valor de *column_name* se trunca en el índice especificado `@Offset`.|  
 |`@Offset` es NULL|La operación de actualización anexa la expresión al final de la existente *column_name* valor y `@Length` se omite.|  
 |`@Offset` es mayor que la longitud del valor de column_name|SQL Server devuelve un error.|  
 |`@Length` es NULL|La operación de actualización quita todos los datos de `@Offset` hasta el final del valor de `column_name`.|  

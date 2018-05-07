@@ -1,24 +1,12 @@
 ---
 title: '&lt;transport&gt; de &lt;ws2007HttpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3a0aa0e4dacafc4c81fa324529dfa3551fcc9c8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3be9d4e64e63b32156cb64257f5bed8230cee3aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;transport&gt; de &lt;ws2007HttpBinding&gt;
 Define la configuración de autenticación del transporte HTTP.  
@@ -26,9 +14,9 @@ Define la configuración de autenticación del transporte HTTP.
  \<system.serviceModel>  
 \<enlaces >  
 \<ws2007HttpBinding>  
-\<binding>  
+\<enlace >  
 \<seguridad >  
-\<transport>  
+\<transporte >  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -82,7 +70,7 @@ transport clientCredentialType =
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Representa las funciones de seguridad de la [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elemento.|  
+|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Representa las funciones de seguridad de la [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elemento.|  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.HttpTransportSecurity>  
@@ -93,4 +81,4 @@ transport clientCredentialType =
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<enlace >](../../../../../docs/framework/misc/binding.md)

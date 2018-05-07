@@ -1,14 +1,6 @@
 ---
-title: "IHostTask::Alert (Método)"
-ms.custom: 
+title: IHostTask::Alert (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTask.Alert
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5245d4b5-b6c3-48df-9cb9-8caf059f43fb
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 10dc8b9894c6f5444ccfcfd17f749df1a3fb5d05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 057e2aafff726b187f36b8b52859b2f2e812e70e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskalert-method"></a>IHostTask::Alert (Método)
 Las solicitudes que el host reactive la tarea representada por el actual [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instancia, por lo que se puede anular la tarea.  
@@ -59,7 +47,7 @@ HRESULT Alert ();
  CLR llama el `Alert` método cuando <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> se llama desde código de usuario, o cuando la <xref:System.AppDomain> asociados con el actual <xref:System.Threading.Thread> se cierra. El host debe volver inmediatamente, ya que se realiza la llamada de forma asincrónica. Si el host no puede alertar a la tarea inmediatamente, se debe reactivar en la próxima vez que entre en un estado en el que puede recibir alertas.  
   
 > [!NOTE]
->  `Alert`afecta únicamente aquellas tareas a las que ha pasado el tiempo de ejecución un [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) valor de WAIT_ALERTABLE para métodos como [unir](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md).  
+>  `Alert` afecta únicamente aquellas tareas a las que ha pasado el tiempo de ejecución un [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) valor de WAIT_ALERTABLE para métodos como [unir](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -68,7 +56,7 @@ HRESULT Alert ();
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICLRTask (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

@@ -1,24 +1,12 @@
 ---
-title: "Proteger la información de conexión"
-ms.custom: 
+title: Proteger la información de conexión
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ffd77bb1875b2de47602a6bd766463b0a274fadc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4cf503af6f57eefb0990a8e7e728ea5c1474bfa7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="protecting-connection-information"></a>Proteger la información de conexión
 La protección del acceso al origen de datos es uno de los objetivos más importantes a la hora de proteger una aplicación. Las cadenas de conexión presentan una posible vulnerabilidad si no se protegen. El almacenamiento de la información de conexión en texto sin formato o en la memoria ponen en riesgo el sistema completo. Cadenas de conexión incrustadas en el código fuente se pueden leer utilizando el [Ildasm.exe (Desensamblador de IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para ver el lenguaje intermedio de Microsoft (MSIL) en un ensamblado compilado.  

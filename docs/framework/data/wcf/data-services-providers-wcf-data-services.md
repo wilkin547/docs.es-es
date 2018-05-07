@@ -1,34 +1,20 @@
 ---
 title: Proveedores de Data Services (Data Services de WCF)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6f25f1f9137206c1adb3ab3f89b7c6a783aeccf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7be6578f0b237f986bcb68a3ace10ba04cf06474
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Proveedores de Data Services (Data Services de WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]admite varios modelos de proveedor para exponer datos como un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuente de distribución. En este tema se proporciona información con el fin de permitirle seleccionar el proveedor de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] más adecuado para su origen de datos.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] admite varios modelos de proveedor para exponer datos como un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuente de distribución. En este tema se proporciona información con el fin de permitirle seleccionar el proveedor de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] más adecuado para su origen de datos.  
   
 ## <a name="data-source-providers"></a>Proveedores de orígenes de datos  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]admite los siguientes proveedores para definir el modelo de datos de un servicio de datos.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] admite los siguientes proveedores para definir el modelo de datos de un servicio de datos.  
   
 |Proveedor|Descripción|  
 |--------------|-----------------|  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 |Proveedores de servicios de datos personalizados|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye un conjunto de proveedores que le permiten definir de forma dinámica un modelo de datos basado en tipos de datos enlazados en tiempo de ejecución. Debería implementar estas interfaces cuando no se conozcan los datos que se están exponiendo, cuando se esté diseñando la aplicación o cuando los proveedores de Entity Framework o de reflexión no sean suficientes. Para obtener más información, consulte [proveedores de servicios de datos personalizados](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).|  
   
 ## <a name="other-data-service-providers"></a>Otros proveedores de servicios de datos  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]tiene el siguiente proveedor de servicio de datos adicionales que mejora el rendimiento de un origen de datos definido mediante uno de los otros proveedores.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] tiene el siguiente proveedor de servicio de datos adicionales que mejora el rendimiento de un origen de datos definido mediante uno de los otros proveedores.  
   
 |Proveedor|Descripción|  
 |--------------|-----------------|  

@@ -1,13 +1,6 @@
 ---
 title: Modificadores de seguimiento
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4df092afd4d60811683b4187df78f27ad971cf89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b8ee0d04644cf504354767c296f504a937055d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trace-switches"></a>Modificadores de seguimiento
 Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la salida del seguimiento. Son objetos que existen en el código y que se pueden configurar externamente mediante el archivo config. Hay tres tipos de modificadores de seguimiento en .NET Framework: la clase <xref:System.Diagnostics.BooleanSwitch> , la clase <xref:System.Diagnostics.TraceSwitch> y la clase <xref:System.Diagnostics.SourceSwitch> . La clase <xref:System.Diagnostics.BooleanSwitch> actúa como modificador para alternar que habilita o deshabilita una serie de instrucciones de seguimiento. Las clases <xref:System.Diagnostics.TraceSwitch> y <xref:System.Diagnostics.SourceSwitch> permiten habilitar un modificador de seguimiento para un nivel de seguimiento determinado para que aparezcan los mensajes de <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.TraceSource> especificados para ese nivel y todos sus niveles inferiores. Si deshabilita el modificador, los mensajes de seguimiento no aparecerán. Todas estas clases derivan de la clase abstracta (**MustInherit**) **Switch**, igual que deberían todos los modificadores desarrollados por el usuario.  

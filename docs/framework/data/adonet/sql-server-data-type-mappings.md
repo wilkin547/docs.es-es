@@ -1,26 +1,12 @@
 ---
 title: Asignaciones de tipos de datos de SQL Server
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: e1af00ba0a1f631868711f191c028a04c5e0441a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 26ba7aa730eb9c30cfeaf50c59d6b9721fe5857d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-data-type-mappings"></a>Asignaciones de tipos de datos de SQL Server
 SQL Server y .NET Framework se basan en sistemas de tipos distintos. Por ejemplo, la estructura <xref:System.Decimal> de .NET Framework tiene una escala máxima de 28, mientras que los tipos de datos decimal y numérico de SQL Server tienen una escala máxima de 38. Para mantener la integridad de los datos al leer y escribir datos, <xref:System.Data.SqlClient.SqlDataReader> expone métodos de descriptores de acceso con tipo específicos de SQL Server que devuelven objetos de <xref:System.Data.SqlTypes> así como métodos de descriptores de acceso que devuelven tipos de .NET Framework. Los tipos de SQL Server y los de .NET Framework se representan también mediante enumeraciones en las clases <xref:System.Data.DbType> y <xref:System.Data.SqlDbType>, que puede usar al especificar los tipos de datos <xref:System.Data.SqlClient.SqlParameter>.  

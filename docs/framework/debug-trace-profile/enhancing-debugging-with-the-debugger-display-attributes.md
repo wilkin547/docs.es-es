@@ -1,13 +1,6 @@
 ---
-title: "Mejorar la depuración con los atributos de visualización del depurador"
-ms.custom: 
+title: Mejorar la depuración con los atributos de visualización del depurador
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,19 +13,16 @@ helpviewer_keywords:
 - display attributes for debugger
 - DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
-caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ac5097326ae76a8790569c13fd8b1285b0cfeec0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2efa8cfb2b196d6f5a26354161e42c1f376e43b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Mejorar la depuración con los atributos de visualización del depurador
-Los atributos de visualización del depurador permiten al desarrollador del tipo, que especifica y mejor comprende el comportamiento del runtime de ese tipo, que especifique también el aspecto que tendrá ese tipo cuando se muestre en un depurador. Además, los atributos de visualización del depurador que proporcionan una propiedad `Target` pueden aplicarse en el nivel de ensamblado por usuarios sin conocimiento del código fuente. El atributo <xref:System.Diagnostics.DebuggerDisplayAttribute> controla la forma en que se muestra un tipo o un miembro en las ventanas de variables del depurador. El atributo <xref:System.Diagnostics.DebuggerBrowsableAttribute> determina si un campo o propiedad se muestra en las ventanas de variables del depurador y cómo se muestra. El atributo <xref:System.Diagnostics.DebuggerTypeProxyAttribute> especifica un tipo sustitutivo, o un proxy, para un tipo y cambia la forma en que se muestra el tipo en las ventanas del depurador. Cuando se ve una variable que tiene un proxy, o un tipo sustitutivo, el proxy reemplaza al tipo original en la ventana de presentación del depurador**.** En la ventana de las variables del depurador se muestran solo los miembros públicos del tipo de servidor proxy. No se muestran los miembros privados.  
+Los atributos de visualización del depurador permiten al desarrollador del tipo, que especifica y mejor comprende el comportamiento del runtime de ese tipo, que especifique también el aspecto que tendrá ese tipo cuando se muestre en un depurador. Además, los atributos de visualización del depurador que proporcionan una propiedad `Target` pueden aplicarse en el nivel de ensamblado por usuarios sin conocimiento del código fuente. El atributo <xref:System.Diagnostics.DebuggerDisplayAttribute> controla la forma en que se muestra un tipo o un miembro en las ventanas de variables del depurador. El atributo <xref:System.Diagnostics.DebuggerBrowsableAttribute> determina si un campo o propiedad se muestra en las ventanas de variables del depurador y cómo se muestra. El atributo <xref:System.Diagnostics.DebuggerTypeProxyAttribute> especifica un tipo sustitutivo, o un proxy, para un tipo y cambia la forma en que se muestra el tipo en las ventanas del depurador. Cuando se ve una variable que tiene un proxy, o un tipo sustitutivo, el proxy reemplaza al tipo original en la ventana de presentación del depurador **.** En la ventana de las variables del depurador se muestran solo los miembros públicos del tipo de servidor proxy. No se muestran los miembros privados.  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>Usar el atributo DebuggerDisplayAttribute  
  El constructor <xref:System.Diagnostics.DebuggerDisplayAttribute.%23ctor%2A> tiene un argumento único: una cadena que se va a mostrar en la columna de valor de las instancias del tipo. Esta cadena puede contener llaves ({ y }). El texto encerrado entre llaves se evalúa como una expresión. Por ejemplo, el código de C# siguiente hace que "Recuento = 4" se muestre cuando el signo más (+) está seleccionado para expandir la presentación del depurador para una instancia de `MyHashtable`.  

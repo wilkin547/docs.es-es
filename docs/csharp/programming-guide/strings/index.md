@@ -1,22 +1,15 @@
 ---
 title: Cadenas (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: 41
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9478900be008588597c1dd9e75f704c751ebe344
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 9b108a1613e01016c541d088612303c6aaa13629
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
@@ -125,12 +118,14 @@ string s = String.Empty;
 |-----------|-----------------|  
 |[Cómo: Modificar el contenido de cadenas](../../how-to/modify-string-contents.md)|Muestra técnicas para transformar cadenas y modificar el contenido de estas.|  
 |[Cómo: Comparar cadenas](../../how-to/compare-strings.md)|Muestra cómo realizar comparaciones ordinales y culturales específicas de las cadenas.|  
-|[Cómo: Analizar cadenas mediante String.Split](../../how-to/parse-strings-using-split.md)|Contiene un ejemplo de código que muestra cómo utilizar el método `String.Split` para analizar cadenas.|  
+|[Cómo: Concatenar varias cadenas](../../how-to/concatenate-multiple-strings.md)|Muestra diferentes maneras de combinar varias cadenas en una.|
+|[Cómo: Analizar cadenas mediante String.Split](../../how-to/parse-strings-using-split.md)|Contiene ejemplos de código que muestran cómo utilizar el método `String.Split` para analizar cadenas.|  
 |[Cómo: Buscar cadenas](../../how-to/search-strings.md)|Explica cómo usar la búsqueda para especificar texto o patrones en cadenas.|  
 |[Cómo: Determinar si una cadena representa un valor numérico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Muestra cómo analizar de forma segura una cadena para ver si tiene un valor numérico válido.|  
-|[Cómo: Convertir una cadena en un valor DateTime](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Muestra cómo convertir una cadena como "24/01/2008" en un objeto <xref:System.DateTime?displayProperty=nameWithType>.|  
+|[Interpolación de cadenas](../../language-reference/tokens/interpolated.md)|Describe la característica de interpolación de cadena que proporciona una sintaxis adecuada para dar formato a las cadenas.|
 |[Operaciones básicas de cadenas](../../../../docs/standard/base-types/basic-string-operations.md)|Proporciona vínculos a temas que usan los métodos <xref:System.String?displayProperty=nameWithType> y <xref:System.Text.StringBuilder?displayProperty=nameWithType> para realizar operaciones básicas de cadenas.|  
-|[Analizar cadenas](../../../../docs/standard/base-types/parsing-strings.md)|Describe cómo insertar caracteres o espacios vacíos en una cadena.|  
+|[Analizar cadenas](../../../standard/base-types/parsing-strings.md)|Describe cómo convertir las representaciones de cadena de los tipos base de .NET en las instancias de los tipos correspondientes.|  
+|[Analizar cadenas de fecha y hora en .NET](../../../standard/base-types/parsing-datetime.md)|Muestra cómo convertir una cadena como "24/01/2008" en un objeto <xref:System.DateTime?displayProperty=nameWithType>.|  
 |[Comparar cadenas](../../../../docs/standard/base-types/comparing.md)|Incluye información sobre cómo comparar cadenas y proporciona ejemplos de C# y Visual Basic.|  
 |[Utilizar la clase StringBuilder](../../../standard/base-types/stringbuilder.md)|Describe cómo crear y modificar objetos de cadena dinámicos con la clase <xref:System.Text.StringBuilder>.|  
 |[LINQ y cadenas](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Proporciona información sobre cómo realizar varias operaciones de cadena utilizando consultas LINQ.|  

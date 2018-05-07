@@ -1,31 +1,17 @@
 ---
 title: Desarrollar e implementar WCF Data Services
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, developing
 - WCF Data Services, deploying
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc962b328f2321d1cfb016b78a53307b43fac30d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e02b7317eef8e7124bd5ba9ceef201cddc9bbea1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Desarrollar e implementar WCF Data Services
 En este tema se proporciona información sobre el desarrollo y la implementación de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Para obtener más información básica sobre [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], consulte [Introducción](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) y [Introducción](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -52,7 +38,7 @@ En este tema se proporciona información sobre el desarrollo y la implementació
   
 1.  **Servidor IIS local**  
   
-     Cuando cree un servicio de datos que sea una aplicación de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] o un sitio web de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que se ejecute en Internet Information Services (IIS), se recomienda que desarrolle y pruebe el servicio de datos con IIS en el equipo local. Si se ejecuta el servicio de datos en IIS, se facilita el seguimiento de las solicitudes HTTP durante el proceso de depuración. De esta forma, puede predeterminar los derechos necesarios que requiere IIS para obtener acceso a los archivos, a las bases de datos y al resto de los recursos que necesita el servicio de datos. Para ejecutar el servicio de datos en IIS, debe asegurarse de que tanto IIS como [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] estén instalados y configurados correctamente, así como de conceder acceso a las cuentas de IIS en las bases de datos y en el sistema de archivos. Para obtener más información, consulta [Cómo: Desarrollar un servicio de datos WCF que se ejecuta en IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
+     Cuando cree un servicio de datos que sea una aplicación de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] o un sitio web de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que se ejecute en Internet Information Services (IIS), se recomienda que desarrolle y pruebe el servicio de datos con IIS en el equipo local. Si se ejecuta el servicio de datos en IIS, se facilita el seguimiento de las solicitudes HTTP durante el proceso de depuración. De esta forma, puede predeterminar los derechos necesarios que requiere IIS para obtener acceso a los archivos, a las bases de datos y al resto de los recursos que necesita el servicio de datos. Para ejecutar el servicio de datos en IIS, debe asegura de que IIS y Windows Communication Foundation (WCF) están instalados y configurados correctamente y conceder acceso a las cuentas de IIS en el sistema de archivos y bases de datos. Para obtener más información, consulta [Cómo: Desarrollar un servicio de datos WCF que se ejecuta en IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
     > [!NOTE]
     >  Debe ejecutar Visual Studio con derechos de administrador para habilitar el entorno de desarrollo configurar el servidor IIS local.  

@@ -1,34 +1,22 @@
 ---
-title: "Recuperación de datos y operaciones CUD en aplicaciones de n niveles (LINQ to SQL)"
-ms.custom: 
+title: Recuperación de datos y operaciones CUD en aplicaciones de n niveles (LINQ to SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6cdf1a859595c82b8eea60311c3c96353849e3dc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ea27d6406ed588f2046dc938f5167a6c0200329e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Recuperación de datos y operaciones CUD en aplicaciones de n niveles (LINQ to SQL)
 Al serializar objetos entidad, como Clientes o Pedidos, con destino a un cliente a través de una red, esas entidades se desasocian de su contexto de datos. El contexto de datos ya no realiza un seguimiento de sus cambios o sus asociaciones con otros objetos. Esto no constituye un problema mientras los clientes solo estén leyendo los datos. También es relativamente sencillo permitir a los clientes agregar nuevas filas a una base de datos. Sin embargo, si su aplicación requiere que los clientes pueden actualizar o eliminar datos, deberá asociar las entidades a un nuevo contexto de datos antes de llamar a <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Además, si está utilizando una comprobación de simultaneidad optimista con valores originales, también necesitará un medio para proporcionar a la base de datos la entidad original y la entidad modificada. Los métodos `Attach` se utilizan para colocar las entidades en un nuevo contexto de datos después de haber sido desasociadas.  
   
  Incluso si está serializando objetos proxy en lugar de la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] entidades, tendrá que crear una entidad en la capa de acceso a datos (DAL) y adjuntarlo a un nuevo <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>, con el fin de enviar los datos a la base de datos.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]es completamente indiferente acerca de cómo se serializan las entidades. Para obtener más información sobre cómo usar el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] y herramientas de SQLMetal para generar clases que son serializables mediante el uso de Windows Communication Foundation (WCF), consulte [Cómo: hacer Serializable de entidades](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] es completamente indiferente acerca de cómo se serializan las entidades. Para obtener más información sobre cómo usar el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] y herramientas de SQLMetal para generar clases que son serializables mediante el uso de Windows Communication Foundation (WCF), consulte [Cómo: hacer Serializable de entidades](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
   
 > [!NOTE]
 >  Solo llame a los métodos `Attach` para entidades nuevas o deserializadas. La única manera de desasociar una entidad de su contexto de datos original es deserializarla. Si intenta asociar una entidad no desasociada a un nuevo contexto de datos, y esa entidad todavía tiene cargadores diferidos procedentes de su contexto de datos anterior, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] producirá una excepción. Una entidad con cargadores diferidos de dos contextos de datos diferentes podría producir resultados no deseados al realizar operaciones de inserción, actualización y eliminación sobre esa entidad. Para obtener más información acerca de cargadores diferidos, consulte [ejecución diferida frente a carga inmediata](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  

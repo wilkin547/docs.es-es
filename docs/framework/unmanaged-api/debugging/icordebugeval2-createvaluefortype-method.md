@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugEval2::CreateValueForType (Método)"
-ms.custom: 
+title: ICorDebugEval2::CreateValueForType (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEval2.CreateValueForType
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ea38ae20-7e0a-427a-be77-d78fae719d82
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 18e7eb5fc30c27fd2c4865dc61e2f75dc9e96068
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 683457c249915708becadaeda9dec265666e2023
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType (Método)
 Obtiene un puntero a un nuevo objeto ICorDebugValue del tipo especificado, con un valor inicial de cero o null.  
@@ -55,7 +43,7 @@ HRESULT CreateValueForType (
  [out] Puntero a la dirección de un `ICorDebugValue` objeto que representa el valor.  
   
 ## <a name="remarks"></a>Comentarios  
- `CreateValueForType`generaliza [ICorDebugEval:: CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) por lo que permite especificar un tipo de objeto arbitrario, incluidos construyen tipos como `List<int>`. El único propósito de este método consiste en generar un valor que puede pasarse a una evaluación de función.  
+ `CreateValueForType` generaliza [ICorDebugEval:: CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) por lo que permite especificar un tipo de objeto arbitrario, incluidos construyen tipos como `List<int>`. El único propósito de este método consiste en generar un valor que puede pasarse a una evaluación de función.  
   
  El tipo debe ser una clase o un tipo de valor. No se puede usar este método para crear valores de matriz o valores de cadena.  
   
@@ -66,4 +54,4 @@ HRESULT CreateValueForType (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

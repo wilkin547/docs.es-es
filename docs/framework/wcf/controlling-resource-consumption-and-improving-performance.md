@@ -1,32 +1,18 @@
 ---
 title: Control del consumo de recursos y mejora del rendimiento
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 031261f50a0615efa7227d3655c90c3423e77796
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Control del consumo de recursos y mejora del rendimiento
-En este tema se describen varias propiedades en diferentes áreas de la arquitectura [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] que trabajan para controlar el consumo de recursos y que afectan a las mediciones del rendimiento.  
+En este tema se describe varias propiedades en diferentes áreas de la arquitectura de Windows Communication Foundation (WCF) que trabajan para controlar el consumo de recursos y afectan a las métricas de rendimiento.  
   
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>Propiedades que restringen el consumo de recursos en WCF  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplica las restricciones en ciertos tipos de procesos con fines de seguridad o rendimiento. Estas restricciones adquieren dos formas básicas: cuotas y aceleradores. *Las cuotas* son límites que cuando se alcanzan o superan desencadenan una excepción inmediata en algún momento en el sistema. *Limita* son límites que no producen una excepción que se produzca inmediatamente. En su lugar, cuando se alcanza el límite del acelerador, el procesamiento continúa pero dentro de los límites establecidos por ese valor. Este procesamiento limitado puede activar una excepción en otra parte, pero esto depende de la aplicación.  
+ Windows Communication Foundation (WCF) aplica las restricciones en ciertos tipos de procesos para fines de seguridad o de rendimiento. Estas restricciones adquieren dos formas básicas: cuotas y aceleradores. *Las cuotas* son límites que cuando se alcanzan o superan desencadenan una excepción inmediata en algún momento en el sistema. *Limita* son límites que no producen una excepción que se produzca inmediatamente. En su lugar, cuando se alcanza el límite del acelerador, el procesamiento continúa pero dentro de los límites establecidos por ese valor. Este procesamiento limitado puede activar una excepción en otra parte, pero esto depende de la aplicación.  
   
  Además de la distinción entre cuotas y aceleradores, algunas propiedades de restricción se encuentran en el nivel de serialización, algunas en el nivel de transporte y algunas en el nivel de aplicación. Por ejemplo, la cuota <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType>, que implementan todos los elementos de enlace de transporte proporcionados por el sistema, está establecida de forma predeterminada en 65.536 bytes para impedir que los clientes malintencionados emprendan ataques de denegación de servicio contra un servicio provocando el consumo excesivo de memoria. (Normalmente, puede aumentar el rendimiento bajando este valor.)  
   

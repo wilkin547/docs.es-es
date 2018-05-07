@@ -1,27 +1,17 @@
 ---
-title: "Código transparente en seguridad"
-ms.custom: 
+title: Código transparente en seguridad
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97db1cef60af267087e86f86ecd0a77021604642
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a491a87c896c76fa62f1702d1ef0e99fc404607
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-transparent-code"></a>Código transparente en seguridad
 <a name="top"></a>
@@ -52,7 +42,7 @@ ms.lasthandoff: 12/22/2017
  La transparencia se introdujo en .NET Framework 2.0 para simplificar el modelo de seguridad y para facilitar la escritura e implementación de aplicaciones y bibliotecas seguras. El código transparente también se usa en Microsoft Silverlight a fin de simplificar el desarrollo de aplicaciones de confianza parcial.  
   
 > [!NOTE]
->  Al desarrollar una aplicación de confianza parcial, hay que tener en cuenta los requisitos de permisos para los hosts de destino. Si se desarrolla una aplicación que usa recursos no permitidos por algunos hosts, la aplicación se compilará sin problemas, pero producirá error cuando se cargue en el entorno hospedado. Si ha desarrollado su aplicación con Visual Studio, puede habilitar la depuración en confianza parcial o en un conjunto de permisos restringidos desde el entorno de desarrollo. Para obtener más información, consulte [Cómo: depurar una aplicación ClickOnce con permisos restringidos](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La característica Calcular permisos proporcionada para aplicaciones ClickOnce también está disponible para cualquier aplicación de confianza parcial.  
+>  Al desarrollar una aplicación de confianza parcial, hay que tener en cuenta los requisitos de permisos para los hosts de destino. Si se desarrolla una aplicación que usa recursos no permitidos por algunos hosts, la aplicación se compilará sin problemas, pero producirá error cuando se cargue en el entorno hospedado. Si ha desarrollado su aplicación con Visual Studio, puede habilitar la depuración en confianza parcial o en un conjunto de permisos restringidos desde el entorno de desarrollo. Para obtener más información, consulta [Cómo: Depurar una aplicación ClickOnce con permisos restringidos](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La característica Calcular permisos proporcionada para aplicaciones ClickOnce también está disponible para cualquier aplicación de confianza parcial.  
   
  [Volver al principio](#top)  
   

@@ -1,30 +1,16 @@
 ---
 title: Control de versiones del servicio de datos (Data Services de Microsoft WCF)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - versioning, WCF Data Services
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6d800b35a69c08ab9f7bd90165691eab7d8743f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0d77f54b5ef20db81c3c20f486ac7314f73aece8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Control de versiones del servicio de datos (Data Services de Microsoft WCF)
 El [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] le permite crear servicios de datos para que los clientes pueden tener acceso a datos como recursos usando URI que se basan en un modelo de datos. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] también admite la definición de operaciones de servicio. Después de la implementación inicial y de haber transcurrido potencialmente varias horas durante su duración, estos servicios de datos pueden necesitar ser cambiados debido a diversas razones, como cambios en las necesidades comerciales, requisitos de tecnología de la información o para resolver otros problemas. Al realizar cambios en un servicio de datos existente, debe considerar si va a definir una nueva versión de su servicio de datos y cómo minimizar mejor el impacto en las aplicaciones cliente existentes. En este tema se proporciona orientación sobre cuándo y cómo crear una nueva versión de un servicio de datos. También describe cómo administra [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] un intercambio entre clientes y servicios de datos que admite diferentes versiones del protocolo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
