@@ -1,11 +1,6 @@
 ---
 title: -target (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - target compiler options [Visual Basic]
 - -target compiler options [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8596cb7d43b2c54b46dedc40488ed1b4e2c31b69
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: acf47b24446656a539400c825f3332a70d211dad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 Especifica el formato de salida del compilador.  
@@ -31,7 +26,7 @@ Especifica el formato de salida del compilador.
 ## <a name="remarks"></a>Comentarios  
  En la tabla siguiente se resume el efecto de la `-target` opción.  
   
-|**Opción**|**Behavior**|  
+|**Opción**|**Comportamiento**|  
 |----------------|------------------|  
 |`-target:exe`|Hace que el compilador crear una aplicación de consola ejecutable.<br /><br /> Esta es la opción predeterminada si no `-target` se especifica la opción. El archivo ejecutable se crea con una extensión .exe.<br /><br /> A menos que se especifique lo contrario con la `/out` opción, el nombre de archivo de salida toma el nombre del archivo de entrada que contiene el `Sub Main` procedimiento.<br /><br /> Solo un `Sub Main` procedimiento es necesario en los archivos de código fuente que se compilan en un archivo .exe. Use la `-main` opción del compilador para especificar la clase que contiene el `Sub Main` procedimiento.|  
 |`-target:library`|Hace que el compilador crear una biblioteca de vínculos dinámicos (DLL).<br /><br /> El archivo de biblioteca de vínculos dinámicos se crea con una extensión. dll.<br /><br /> A menos que se especifique lo contrario con los `-out` opción, el nombre de archivo de salida toma el nombre del primer archivo de entrada.<br /><br /> Cuando se crea un archivo DLL, una `Sub Main` procedimiento no es necesario.|  

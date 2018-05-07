@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Manipular elementos de contenido dinámico mediante la propiedad Blocks"
-ms.custom: 
+title: 'Cómo: Manipular elementos de contenido dinámico mediante la propiedad Blocks'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - properties [WPF], Blocks [WPF], manipulating flow content elements
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d995e9a3a50e733a87a203f94b97a937560a0141
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74710c4a6dd58cf2836cd7671a3e39401a5ea774
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Cómo: Manipular elementos de contenido dinámico mediante la propiedad Blocks
 Estos ejemplos muestran algunas de las operaciones más comunes que se pueden realizar en elementos de contenido dinámico a través de la **bloques** propiedad. Esta propiedad se utiliza para agregar y quitar elementos de <xref:System.Windows.Documents.BlockCollection>. Flujo de contenido de elementos de esa característica un **bloques** propiedad incluyen:  

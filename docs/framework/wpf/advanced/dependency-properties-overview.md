@@ -1,10 +1,7 @@
 ---
-title: "Información general sobre propiedades de dependencia"
-description: "Una propiedad que está respaldada por el sistema de propiedades WPF se conoce como una propiedad de dependencia. Esta información general describe el sistema de propiedades WPF y las capacidades de una propiedad de dependencia."
+title: Información general sobre propiedades de dependencia
+description: Una propiedad que está respaldada por el sistema de propiedades WPF se conoce como una propiedad de dependencia. Esta información general describe el sistema de propiedades WPF y las capacidades de una propiedad de dependencia.
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +14,11 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d90e47c400f24eb10f2d262f9cb0e757ff472f0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 196e858c52c06c96d652209e86039bfcc81a785a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-properties-overview"></a>Información general sobre propiedades de dependencia
 
@@ -43,7 +35,7 @@ El propósito de las propiedades de dependencia es proporcionar una manera de ca
 En la referencia del SDK, puede identificar qué propiedad es una propiedad de dependencia por la presencia de la sección de información de la propiedad de dependencia en la página de referencia administrada de esa propiedad. La sección de información de la propiedad de dependencia incluye un vínculo a la <xref:System.Windows.DependencyProperty> identificador de campo para esa propiedad de dependencia y también incluye una lista de las opciones de metadatos que se establecen para esa propiedad, información de invalidación por clases y otros detalles.
 
 ## <a name="dependency-properties-back-clr-properties"></a>Propiedades CLR de respaldo de propiedades de dependencia
-Las propiedades de dependencia y el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] extienden la funcionalidad de las propiedades al proporcionar un tipo que respalda una propiedad, como implementación alternativa al patrón estándar de respaldar la propiedad con un campo privado. El nombre de este tipo es <xref:System.Windows.DependencyProperty>. El otro tipo important que define la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de propiedades es <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject>define la clase base que se puede registrar y poseer una propiedad de dependencia.
+Las propiedades de dependencia y el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] extienden la funcionalidad de las propiedades al proporcionar un tipo que respalda una propiedad, como implementación alternativa al patrón estándar de respaldar la propiedad con un campo privado. El nombre de este tipo es <xref:System.Windows.DependencyProperty>. El otro tipo important que define la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de propiedades es <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> define la clase base que se puede registrar y poseer una propiedad de dependencia.
 
 A continuación se muestra un resumen de la terminología que se usa en esta documentación de [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] para explicar las propiedades de dependencia:
 

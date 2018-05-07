@@ -1,28 +1,16 @@
 ---
-title: "Cómo: Pintar un área con un degradado lineal"
-ms.custom: 
+title: 'Cómo: Pintar un área con un degradado lineal'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - linear gradients [WPF], painting with
 - brushes [WPF], painting with linear gradients
 - painting [WPF], with linear gradients
 ms.assetid: 00e0cd04-48c0-4ec5-850e-d321beb37a34
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eec4ec2fc7ba99081eaafa6803d20c99bebc6c2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec07a0c33468681f67d086ec3d1d58b378412ff9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>Cómo: Pintar un área con un degradado lineal
 Este ejemplo muestra cómo utilizar la <xref:System.Windows.Media.LinearGradientBrush> clase para pintar un área con un degradado lineal. En el ejemplo siguiente, la <xref:System.Windows.Shapes.Shape.Fill%2A> de un <xref:System.Windows.Shapes.Rectangle> se pinta con un degradado lineal diagonal que realiza la transición de amarillo a rojo a azul para Lima verde.  

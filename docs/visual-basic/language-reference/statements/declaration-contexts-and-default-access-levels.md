@@ -1,11 +1,6 @@
 ---
-title: "Contextos de declaración y niveles de acceso predeterminados (Visual Basic)"
+title: Contextos de declaración y niveles de acceso predeterminados (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module level, defined
 - declaration contexts, Visual Basic
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b89b74a6c0393f6a52a0b5c1ddf6f66c505564ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b30b1068fe662d5f0318a1712dc4690b79bd739d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Contextos de declaración y niveles de acceso predeterminados (Visual Basic)
 Este tema describe qué tipos de Visual Basic se pueden declarar dentro de otros tipos, y lo que los niveles de acceso de forma predeterminada si no se especifica.  
@@ -41,18 +33,18 @@ Este tema describe qué tipos de Visual Basic se pueden declarar dentro de otros
   
 |Elemento declarado|Nivel de Namespace|Nivel de módulo|Nivel de procedimiento|  
 |----------------------|---------------------|------------------|---------------------|  
-|Variable ([Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md))|No permitido|`Private`(`Public` en `Structure`, no está permitida en `Interface`)|`Public`|  
-|Constante ([Const (instrucción)](../../../visual-basic/language-reference/statements/const-statement.md))|No permitido|`Private`(`Public` en `Structure`, no está permitida en `Interface`)|`Public`|  
+|Variable ([Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md))|No permitido|`Private` (`Public` en `Structure`, no está permitida en `Interface`)|`Public`|  
+|Constante ([Const (instrucción)](../../../visual-basic/language-reference/statements/const-statement.md))|No permitido|`Private` (`Public` en `Structure`, no está permitida en `Interface`)|`Public`|  
 |Enumeración ([Enum (instrucción)](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|No permitido|  
 |Clase ([Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|No permitido|  
 |Estructura ([estructura instrucción](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|No permitido|  
 |Módulo ([Module (instrucción)](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|No permitido|No permitido|  
 |Interfaz ([Interface (instrucción)](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|No permitido|  
 |Procedimiento ([función instrucción](../../../visual-basic/language-reference/statements/function-statement.md), [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md))|No permitido|`Public`|No permitido|  
-|Referencia externa ([instrucción Declare](../../../visual-basic/language-reference/statements/declare-statement.md))|No permitido|`Public`(no se permite en `Interface`)|No permitido|  
-|Operador ([Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md))|No permitido|`Public`(no se permite en `Interface` o `Module`)|No permitido|  
+|Referencia externa ([instrucción Declare](../../../visual-basic/language-reference/statements/declare-statement.md))|No permitido|`Public` (no se permite en `Interface`)|No permitido|  
+|Operador ([Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md))|No permitido|`Public` (no se permite en `Interface` o `Module`)|No permitido|  
 |Propiedad ([Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md))|No permitido|`Public`|No permitido|  
-|Propiedad predeterminada ([predeterminado](../../../visual-basic/language-reference/modifiers/default.md))|No permitido|`Public`(no se permite en `Module`)|No permitido|  
+|Propiedad predeterminada ([predeterminado](../../../visual-basic/language-reference/modifiers/default.md))|No permitido|`Public` (no se permite en `Module`)|No permitido|  
 |Evento ([Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md))|No permitido|`Public`|No permitido|  
 |Delegado ([Delegate (instrucción)](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|No permitido|  
   

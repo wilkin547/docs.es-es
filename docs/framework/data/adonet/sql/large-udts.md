@@ -1,27 +1,15 @@
 ---
 title: UDT grandes
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6090221981c8aaa894f94ebb7910659a1dbf210c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 3c74bed67069740354b36891db73ed80b952f0c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="large-udts"></a>UDT grandes
 Los tipos definidos por el usuario (UDT) permiten que el desarrollador amplíe el sistema de tipos escalares del servidor mediante el almacenamiento de objetos Common Language Runtime (CLR) en una base de datos de SQL Server. Los UDT pueden contener varios elementos y presentar diversos comportamientos, a diferencia de los tipos de datos de alias tradicionales, que constan de un solo tipo de datos del sistema SQL Server.  

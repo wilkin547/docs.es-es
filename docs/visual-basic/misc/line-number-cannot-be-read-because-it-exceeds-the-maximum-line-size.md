@@ -1,21 +1,14 @@
 ---
-title: "Línea &lt;número&gt; no se puede leer porque supera el tamaño máximo de línea."
+title: Línea &lt;número&gt; no se puede leer porque supera el tamaño máximo de línea.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrTextFieldParser_MaxLineSizeExceeded
 ms.assetid: c59116d9-9856-47af-b32d-616d8f2d10d3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d57d1991c3d3ea7f02c7d08cda38fa630393ac8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0611c79ccc30f323ceccf9fbbe30a80f73c6bbb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="line-ltnumbergt-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>Línea &lt;número&gt; no se puede leer porque supera el tamaño máximo de línea.
 La línea no se puede leer porque supera el tamaño de línea máximo. Normalmente, esto significa que en el archivo hay comillas de apertura, pero no hay comillas de cierre.  

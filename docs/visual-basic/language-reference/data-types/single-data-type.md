@@ -1,11 +1,6 @@
 ---
 title: Single (Tipo de datos, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Single
 helpviewer_keywords:
@@ -25,14 +20,11 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c91dbdf73ed1e26393518001ec8651557e5b780f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 770961f225b139aaddf34b42327bca63638c725d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="single-data-type-visual-basic"></a>Single (Tipo de datos, Visual Basic)
 Contiene con signo números de punto flotante IEEE 32 bits (4 bytes) precisión sencilla que abarcan un valor de - 3, 4028235E + 38 a - 1, 401298E-45 para los valores negativos y entre 1, 401298E-45 a 3, 4028235E + 38 para valores positivos. Los números de precisión sencilla almacenan una aproximación de un número real.  

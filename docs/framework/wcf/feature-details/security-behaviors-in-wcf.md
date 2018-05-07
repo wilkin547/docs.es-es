@@ -1,29 +1,17 @@
 ---
 title: Comportamientos de seguridad en WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: bb10d98eb96213029ae43533935312c6f1cf09c7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 57bd34c72e98091c4a429d683a0da4ce2d3967c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportamientos de seguridad en WCF
-En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], los comportamientos modifican el comportamiento de tiempo de ejecución en el nivel de servicio o en el nivel de extremo. (Para obtener más información acerca de los comportamientos en general, vea [especificar el comportamiento de tiempo de ejecución de servicio](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Comportamientos de seguridad* permiten el control sobre las credenciales, la autenticación, autorización y registros de auditoría. Puede utilizar comportamientos mediante programación o a través de configuración. Este tema se centra en la configuración de los siguientes comportamientos relacionados con las funciones de seguridad:  
+En Windows Communication Foundation (WCF), comportamientos modifican el comportamiento de tiempo de ejecución en el nivel de servicio o en el nivel de punto de conexión. (Para obtener más información acerca de los comportamientos en general, vea [especificar el comportamiento de tiempo de ejecución de servicio](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Comportamientos de seguridad* permiten el control sobre las credenciales, la autenticación, autorización y registros de auditoría. Puede utilizar comportamientos mediante programación o a través de configuración. Este tema se centra en la configuración de los siguientes comportamientos relacionados con las funciones de seguridad:  
   
 -   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
@@ -140,7 +128,7 @@ En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], los comportamientos 
  Especifica una dirección de servicio de token de seguridad predeterminada. Se utiliza cuando la <xref:System.ServiceModel.WSFederationHttpBinding> no le haya proporcionado una dirección URL para el servicio de token de seguridad, o cuando la dirección del emisor de un enlace federado es http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous o `null`. En casos como éste, las <xref:System.ServiceModel.Description.ClientCredentials> deben configurarse con la dirección del emisor local y el enlace que se va a utilizar para comunicarse con ese emisor.  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
- Use la [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) para agregar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comportamientos del cliente usados al comunicarse con un servicio de token de seguridad. Definir los comportamientos del cliente en el [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) sección. Para utilizar un comportamiento definido, agregue un <`add`> elemento a la `<issuerChannelBehaviors>` elemento con dos atributos. Establezca la `issuerAddress` en la dirección URL del servicio de token de seguridad y establezca el atributo `behaviorConfiguration` en el nombre del comportamiento del extremo definido, tal y como se muestra en el ejemplo siguiente.  
+ Use la [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) para agregar los comportamientos de cliente WCF usados al comunicarse con un servicio de token de seguridad. Definir los comportamientos del cliente en el [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) sección. Para utilizar un comportamiento definido, agregue un <`add`> elemento a la `<issuerChannelBehaviors>` elemento con dos atributos. Establezca la `issuerAddress` en la dirección URL del servicio de token de seguridad y establezca el atributo `behaviorConfiguration` en el nombre del comportamiento del extremo definido, tal y como se muestra en el ejemplo siguiente.  
   
 ```xml  
 <clientCredentials>  

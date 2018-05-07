@@ -1,9 +1,6 @@
 ---
 title: Crear una aplicación de WPF en Visual Studio
-ms.custom: 04/12/2018
-ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.topic: conceptual
+ms.date: 04/12/2018
 dev_langs:
 - csharp
 - vb
@@ -13,14 +10,11 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: edc7a22a7b108731e08c5d67ef8b8a52e9959ddc
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
-ms.translationtype: MT
+ms.openlocfilehash: a21a18b8e203cf57dfd1659b2eeeece157ad24ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Tutorial: Mi primera aplicación de escritorio WPF
 
@@ -488,7 +482,7 @@ La ilustración siguiente muestra ambas páginas de la aplicación ExpenseIt con
 >
 > - [Seguridad](../../../../docs/framework/wpf/security-wpf.md)
 >
-> - [Cuestiones de localización y globalización de WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
+> - [Globalización y localización de WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
 >
 > - [WPF: rendimiento](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
 

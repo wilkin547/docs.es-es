@@ -1,27 +1,15 @@
 ---
-title: "Información general sobre comportamientos de control de tiempo"
-ms.custom: 
+title: Información general sobre comportamientos de control de tiempo
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9305b69927a1ed0ad4f154ab972316f3dee951e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31a6b7d3b92e886d9c90fc39d69f31cf72b99666
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="timing-behaviors-overview"></a>Información general sobre comportamientos de control de tiempo
 En este tema se describe los comportamientos de control de tiempo de animaciones y otros <xref:System.Windows.Media.Animation.Timeline> objetos.  
@@ -34,7 +22,7 @@ En este tema se describe los comportamientos de control de tiempo de animaciones
 ## <a name="timeline-types"></a>Tipos de objetos Timeline  
  Un <xref:System.Windows.Media.Animation.Timeline> representa un segmento de tiempo. Proporciona propiedades que permiten especificar la longitud de ese segmento, cuándo debe iniciarse, cuántas veces se repetirá o la velocidad a la que progresará el tiempo en ese segmento, entre otras.  
   
- Las clases que heredan de la clase Timeline proporcionan funcionalidades adicionales, como reproducción de animaciones y multimedia. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Proporciona los siguientes <xref:System.Windows.Media.Animation.Timeline> tipos.  
+ Las clases que heredan de la clase Timeline proporcionan funcionalidades adicionales, como reproducción de animaciones y multimedia. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Proporciona los siguientes <xref:System.Windows.Media.Animation.Timeline> tipos.  
   
 |Tipos de objetos Timeline|Descripción|  
 |-------------------|-----------------|  
@@ -127,11 +115,11 @@ En este tema se describe los comportamientos de control de tiempo de animaciones
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>Propiedades que controlan la velocidad de un objeto Timeline  
  La <xref:System.Windows.Media.Animation.Timeline> clase proporciona tres propiedades para especificar su velocidad:  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>: Especifica la velocidad, en relación con su elemento primario, en el que pasa el tiempo para una <xref:System.Windows.Media.Animation.Timeline>. Los valores mayores que uno aumentan la velocidad de la <xref:System.Windows.Media.Animation.Timeline> y su elemento secundario <xref:System.Windows.Media.Animation.Timeline> objetos, valores comprendidos entre cero y uno lenta hacia abajo. Un valor de uno indica que <xref:System.Windows.Media.Animation.Timeline> que avanza a la misma velocidad que su elemento primario. El <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> configuración de escala de tiempo contenedora afecta a todos sus secundarios <xref:System.Windows.Media.Animation.Timeline> objetos también.  
+-   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> : Especifica la velocidad, en relación con su elemento primario, en el que pasa el tiempo para una <xref:System.Windows.Media.Animation.Timeline>. Los valores mayores que uno aumentan la velocidad de la <xref:System.Windows.Media.Animation.Timeline> y su elemento secundario <xref:System.Windows.Media.Animation.Timeline> objetos, valores comprendidos entre cero y uno lenta hacia abajo. Un valor de uno indica que <xref:System.Windows.Media.Animation.Timeline> que avanza a la misma velocidad que su elemento primario. El <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> configuración de escala de tiempo contenedora afecta a todos sus secundarios <xref:System.Windows.Media.Animation.Timeline> objetos también.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A>: Especifica el porcentaje de la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de escala de tiempo transcurrido acelerando. Para obtener un ejemplo, vea [Cómo: acelerar o desacelerar una animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> : Especifica el porcentaje de la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de escala de tiempo transcurrido acelerando. Para obtener un ejemplo, vea [Cómo: acelerar o desacelerar una animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>: Especifica el porcentaje de la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de escala de tiempo transcurrido desacelerando. Para obtener un ejemplo, vea [Cómo: acelerar o desacelerar una animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> : Especifica el porcentaje de la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de escala de tiempo transcurrido desacelerando. Para obtener un ejemplo, vea [Cómo: acelerar o desacelerar una animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  

@@ -1,12 +1,6 @@
 ---
 title: '&amp;= (Operador) (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.&=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 929a9e8c3384451679fc52ad478eb03219d67192
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c3db2d4095600f32af92d1a4ce1f806a3f032af0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= (Operador) (Visual Basic)
 Concatena una `String` expresión a un `String` variable o propiedad y asigna el resultado a la variable o propiedad.  
@@ -36,10 +27,10 @@ variableorproperty &= expression
   
 ## <a name="parts"></a>Elementos  
  `variableorproperty`  
- Obligatorio. Cualquier `String` variable o propiedad.  
+ Requerido. Cualquier `String` variable o propiedad.  
   
  `expression`  
- Obligatorio. Cualquier expresión `String`.  
+ Requerido. Cualquier expresión `String`.  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento en el lado izquierdo de la `&=` puede ser una variable escalar simple, una propiedad o un elemento de una matriz. La variable o propiedad no puede ser [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). El `&=` operador concatena el `String` expresión en su derecho a la `String` variable o propiedad de su izquierda y asigna el resultado a la variable o propiedad de su izquierda.  

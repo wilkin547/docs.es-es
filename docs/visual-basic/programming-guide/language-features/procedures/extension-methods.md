@@ -1,27 +1,17 @@
 ---
-title: "Métodos de extensión (Visual Basic)"
-ms.custom: 
+title: Métodos de extensión (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ExtensionMethods
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3db3bc2b213b78ef2dceebcf56c9d5fbfa3016e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1cc2ccef09dd027c6f1e82f60ed4ac5f50db6ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extension-methods-visual-basic"></a>Métodos de extensión (Visual Basic)
 Métodos de extensión permiten a los programadores agregar funcionalidad personalizada a los tipos de datos que ya se han definido sin crear un nuevo tipo derivado. Métodos de extensión permiten escribir un método que se pueda llamar como si fuera un método de instancia del tipo existente.  
@@ -38,7 +28,7 @@ Métodos de extensión permiten a los programadores agregar funcionalidad person
   
  [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
   
- Tenga en cuenta que la definición de método de extensión se marca con el atributo de extensión `<Extension()>`. Marcar el módulo en el que se define el método es opcional, pero se debe marcar cada método de extensión. <xref:System.Runtime.CompilerServices>se debe importar con el fin de obtener acceso al atributo de extensión.  
+ Tenga en cuenta que la definición de método de extensión se marca con el atributo de extensión `<Extension()>`. Marcar el módulo en el que se define el método es opcional, pero se debe marcar cada método de extensión. <xref:System.Runtime.CompilerServices> se debe importar con el fin de obtener acceso al atributo de extensión.  
   
  Métodos de extensión se pueden declarar únicamente dentro de los módulos. Normalmente, el módulo en el que se define un método de extensión no es el mismo módulo que el uno en el que se llama. En su lugar, se importa el módulo que contiene el método de extensión, si es necesario que, para volver a ponerlo en el ámbito. Después del módulo que contiene `Print` está en el ámbito, se puede llamar al método como si fuera un método de instancia normal que no toma ningún argumento, como `ToUpper`:  
   
@@ -48,9 +38,9 @@ Métodos de extensión permiten a los programadores agregar funcionalidad person
   
  [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
   
- Se llama al método mediante el envío de un argumento de cadena para `punc`:`example.PrintAndPunctuate(".")`  
+ Se llama al método mediante el envío de un argumento de cadena para `punc`: `example.PrintAndPunctuate(".")`  
   
- El ejemplo siguiente muestra `Print` y `PrintAndPunctuate` define y llama. <xref:System.Runtime.CompilerServices>se importa en el módulo de definición para habilitar el acceso al atributo de extensión.  
+ El ejemplo siguiente muestra `Print` y `PrintAndPunctuate` define y llama. <xref:System.Runtime.CompilerServices> se importa en el módulo de definición para habilitar el acceso al atributo de extensión.  
   
 ### <a name="code"></a>Código  
   

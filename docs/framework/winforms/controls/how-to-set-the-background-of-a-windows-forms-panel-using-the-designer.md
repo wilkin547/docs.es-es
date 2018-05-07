@@ -1,29 +1,17 @@
 ---
-title: "Cómo: Establecer el fondo de un control Panel de formularios Windows Forms mediante el Diseñador"
-ms.custom: 
+title: 'Cómo: Establecer el fondo de un control Panel de formularios Windows Forms mediante el Diseñador'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - background colors [Windows Forms], Windows Forms Panel controls
 - background images [Windows Forms], Windows Forms Panel controls
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 451fa6433a53255f5fe45557c2d8b03ac319de71
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 896aa61f3f0900760dffd09bcab6a08bbc01628d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Cómo: Establecer el fondo de un control Panel de formularios Windows Forms mediante el Diseñador
 Un formulario Windows Forms <xref:System.Windows.Forms.Panel> control puede mostrar un color de fondo y una imagen de fondo. El <xref:System.Windows.Forms.Control.BackColor%2A> propiedad establece el color de fondo para los controles que están contenidos en el panel, como las etiquetas y botones de radio. Si el <xref:System.Windows.Forms.Control.BackgroundImage%2A> propiedad no está establecida, la <xref:System.Windows.Forms.Control.BackColor%2A> selección llenará todo el panel. Si el <xref:System.Windows.Forms.Control.BackgroundImage%2A> propiedad está establecida, la imagen se mostrará detrás de los controles que se encuentran en el panel.  

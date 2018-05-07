@@ -1,12 +1,6 @@
 ---
-title: "Diferencias entre parámetros y argumentos (Visual Basic)"
-ms.custom: 
+title: Diferencias entre parámetros y argumentos (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
 - procedures [Visual Basic], parameters
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b6613c64a24ef18239422b69f8b5320eadc95b92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a5075c218371b754ac883b97475ab941811966b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Diferencias entre parámetros y argumentos (Visual Basic)
 En la mayoría de los casos, un procedimiento debe tener cierta información sobre las circunstancias en que se ha llamado. Un procedimiento que realiza las tareas repetitivas o compartidas utiliza información diferente para cada llamada. Esta información está formada por las variables, constantes y expresiones que se pasan al procedimiento cuando se llama al método.  

@@ -1,12 +1,6 @@
 ---
-title: "Instrucción On Error (Visual Basic)"
+title: Instrucción On Error (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.OnError
 helpviewer_keywords:
@@ -28,14 +22,11 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: b2e32dcca2e29a178af6dc985da536b47f0ebae6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>Instrucción On Error (Visual Basic)
 Habilita una rutina de control de errores y especifica la ubicación de la rutina dentro de un procedimiento; También puede utilizarse para desactivar una rutina de control de errores.  
@@ -55,7 +46,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`GoTo` `line`|Habilita la rutina de control de errores que comienza en la línea especificada en la sección necesario `line` argumento. El `line` argumento es cualquier etiqueta de línea o el número de línea. Si se produce un error en tiempo de ejecución, el control se transfiere a la línea especificada, hacer que el controlador de errores activos. La línea especificada debe estar en el mismo procedimiento que el `On Error` se producirá la instrucción o un error en tiempo de compilación.|  
 |`GoTo` 0|Deshabilita un controlador de errores habilitado en el procedimiento actual y la restablece a `Nothing`.|  
@@ -89,16 +80,16 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  Tenga en cuenta que el `On Error GoTo` instrucción intercepta todos los errores, independientemente de la clase de excepción.  
   
 ## <a name="on-error-resume-next"></a>On Error Resume Next  
- `On Error Resume Next`hace que la ejecución continuar con la instrucción inmediatamente posterior a la instrucción que produjo el error de tiempo de ejecución, o en la instrucción inmediatamente posterior a la última llamada a fuera del procedimiento que contiene el `On Error Resume Next` instrucción. Esta instrucción permite la ejecución continúe aunque se produzca un error en tiempo de ejecución. Puede colocar la rutina de control de errores donde se producirá el error, en lugar de transferir el control a otra ubicación dentro del procedimiento. Un `On Error Resume Next` instrucción queda inactiva cuando se llama a otro procedimiento, por lo que debe ejecutar un `On Error Resume Next` llama a la instrucción en cada una rutina si desea dentro de esa rutina de control de errores de en línea.  
+ `On Error Resume Next` hace que la ejecución continuar con la instrucción inmediatamente posterior a la instrucción que produjo el error de tiempo de ejecución, o en la instrucción inmediatamente posterior a la última llamada a fuera del procedimiento que contiene el `On Error Resume Next` instrucción. Esta instrucción permite la ejecución continúe aunque se produzca un error en tiempo de ejecución. Puede colocar la rutina de control de errores donde se producirá el error, en lugar de transferir el control a otra ubicación dentro del procedimiento. Un `On Error Resume Next` instrucción queda inactiva cuando se llama a otro procedimiento, por lo que debe ejecutar un `On Error Resume Next` llama a la instrucción en cada una rutina si desea dentro de esa rutina de control de errores de en línea.  
   
 > [!NOTE]
 >  El `On Error Resume Next` construcción puede ser preferible `On Error GoTo` al tratar los errores generados durante el acceso a otros objetos. Comprobando `Err` después de cada interacción con un objeto elimina la ambigüedad sobre qué objeto se obtuvo acceso el código. Puede estar seguro de qué objeto coloca el código de error `Err.Number`, así como qué objeto generó originalmente el error (el objeto especificado en `Err.Source`).  
   
 ## <a name="on-error-goto-0"></a>On Error GoTo 0  
- `On Error GoTo 0`deshabilita el control de errores en el procedimiento actual. No especifica la línea 0 como el inicio del código de control de errores, incluso si el procedimiento contiene una línea numerada de 0. Sin un `On Error GoTo 0` (instrucción), un controlador de errores se deshabilita automáticamente cuando se sale de un procedimiento.  
+ `On Error GoTo 0` deshabilita el control de errores en el procedimiento actual. No especifica la línea 0 como el inicio del código de control de errores, incluso si el procedimiento contiene una línea numerada de 0. Sin un `On Error GoTo 0` (instrucción), un controlador de errores se deshabilita automáticamente cuando se sale de un procedimiento.  
   
 ## <a name="on-error-goto--1"></a>On Error GoTo -1  
- `On Error GoTo -1`deshabilita la excepción en el procedimiento actual. No especifica la línea -1 como el inicio del código de control de errores, incluso si el procedimiento contiene una línea numerada como -1. Sin un `On Error GoTo -1` instrucción, una excepción se deshabilita automáticamente cuando se sale de un procedimiento.  
+ `On Error GoTo -1` deshabilita la excepción en el procedimiento actual. No especifica la línea -1 como el inicio del código de control de errores, incluso si el procedimiento contiene una línea numerada como -1. Sin un `On Error GoTo -1` instrucción, una excepción se deshabilita automáticamente cuando se sale de un procedimiento.  
   
  Para evitar que código de control de errores se ejecuta cuando no se ha producido ningún error, coloque una `Exit Sub`, `Exit Function`, o `Exit Property` instrucción inmediatamente antes de la rutina de control de errores, como se muestra en el siguiente fragmento:  
   

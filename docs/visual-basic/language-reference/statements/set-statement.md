@@ -1,12 +1,6 @@
 ---
-title: "Instrucción Set (Visual Basic)"
+title: Instrucción Set (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Set
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3b18e6c858e64e78d7ab85fdaafd70e510f7a02f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dbc48d14bac54809e4ddd12c87429bf407169950
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-statement-visual-basic"></a>Instrucción Set (Visual Basic)
 Declara un `Set` procedimiento de propiedad que se usa para asignar un valor a una propiedad.  
@@ -54,7 +45,7 @@ End Set
  Vea [tener acceso a niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `value`  
- Obligatorio. Parámetro que contiene el nuevo valor para la propiedad.  
+ Requerido. Parámetro que contiene el nuevo valor para la propiedad.  
   
  `datatype`  
  Obligatorio si `Option Strict` es `On`. Tipo de datos de la `value` parámetro. El tipo de datos especificado debe ser el mismo que el tipo de datos de la propiedad donde esto `Set` instrucción se declara.  
@@ -63,7 +54,7 @@ End Set
  Opcional. Una o más instrucciones que se ejecutan cuando el `Set` se llama al procedimiento de propiedad.  
   
  `End Set`  
- Obligatorio. Termina la definición de la `Set` procedimiento de propiedad.  
+ Requerido. Termina la definición de la `Set` procedimiento de propiedad.  
   
 ## <a name="remarks"></a>Comentarios  
  Cada propiedad debe tener un `Set` procedimiento de propiedad, a menos que la propiedad está marcada como `ReadOnly`. El `Set` procedimiento se utiliza para establecer el valor de la propiedad.  
@@ -86,7 +77,7 @@ End Set
   
 -   **Devolver desde un procedimiento de propiedad.** Cuando el `Set` procedimiento vuelve al código de llamada, la ejecución continúa después de la instrucción que proporciona el valor que se almacenará.  
   
-     `Set`los procedimientos de propiedad pueden devolver mediante el [instrucción Return](../../../visual-basic/language-reference/statements/return-statement.md) o [instrucción Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set` los procedimientos de propiedad pueden devolver mediante el [instrucción Return](../../../visual-basic/language-reference/statements/return-statement.md) o [instrucción Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
   
      El `Exit Property` y `Return` instrucciones provocan una salida inmediata de un procedimiento de propiedad. Cualquier número de `Exit Property` y `Return` instrucciones pueden aparecer en cualquier lugar en el procedimiento y se pueden mezclar `Exit Property` y `Return` las instrucciones.  
   

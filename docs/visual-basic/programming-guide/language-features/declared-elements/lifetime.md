@@ -1,13 +1,6 @@
 ---
 title: Período de duración en Visual Basic
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - static variables [Visual Basic], lifetime
 - static variables [Visual Basic], Visual Basic
@@ -17,14 +10,11 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 14a75a2c3af52f63051d02df9341faf19c3b76c7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d32639f1c392d53a7e9f6258440b6c0925d27a5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lifetime-in-visual-basic"></a>Período de duración en Visual Basic
 El *duración* de un elemento declarado es el período de tiempo durante el cual está disponible para su uso. Las variables son los únicos elementos que tienen duración. Para ello, el compilador trata los parámetros de procedimiento y función devuelve como casos especiales de variables. La duración de una variable representa el período de tiempo durante el cual puede contener un valor. Su valor puede cambiar durante su vida útil, pero siempre contiene un valor.  

@@ -2,11 +2,11 @@
 title: '&lt;add&gt; de &lt;baseAddressPrefixFilter&gt;'
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: 549574d0d6585a857f3e0979e814c827139c7536
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: e4408488036be210e3a8b9cf8b8f8f8c2e669a1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;add&gt; de &lt;baseAddressPrefixFilter&gt;
 Representa un elemento de configuración que especifica un filtro de paso a través, que proporciona un mecanismo para escoger los enlaces adecuados de Internet Information Services (IIS) al hospedar una aplicación de Windows Communication Foundation (WCF) en IIS.  
@@ -49,7 +49,7 @@ Representa un elemento de configuración que especifica un filtro de paso a trav
   
  Los sitios web de IIS son los contenedores para las aplicaciones virtuales que contienen los directorios virtuales. Se puede tener acceso a la aplicación de un sitio a través de uno o varios enlaces de IIS. Los enlaces de IIS proporcionan dos partes de información: protocolo de enlace e información de enlace. El protocolo de enlace (por ejemplo, HTTP), define el esquema sobre el que la comunicación se produce y la información de enlace (por ejemplo, IPAddress, Puerto, Hostheader) contiene los datos utilizados para tener acceso al sitio.  
   
- IIS admite la especificación de varios enlaces IIS para cada sitio, lo que tiene como resultado varias direcciones base para cada esquema. Puesto que un servicio [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hospedado bajo un sitio permite el enlace a solo una dirección base por cada esquema, se puede utilizar la característica de filtro de prefijo para escoger la dirección base necesaria del servicio hospedado. Las direcciones base de entrada, proporcionadas por IIS, se filtran dependiendo del filtro de la lista de prefijos opcional.  
+ IIS admite la especificación de varios enlaces IIS para cada sitio, lo que tiene como resultado varias direcciones base para cada esquema. Dado que un servicio WCF hospedado en un sitio permite el enlace a sólo una dirección base por cada esquema, puede utilizar la característica de filtro de prefijo para escoger la dirección base necesaria del servicio hospedado. Las direcciones base de entrada, proporcionadas por IIS, se filtran dependiendo del filtro de la lista de prefijos opcional.  
   
  Por ejemplo, su sitio puede contener las direcciones base siguientes.  
   

@@ -1,13 +1,6 @@
 ---
 title: Procedimientos de operador (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], operator
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8fba5180da6498d280fa4192937c39d3e33168e8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 63a16163900f1b4dc7dadef6a227f56b89f4e820
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedimientos de operador (Visual Basic)
 Un procedimiento de operador es una serie de instrucciones de Visual Basic que definen el comportamiento de un operador estándar (como `*`, `<>`, o `And`) en una clase o estructura que ha definido. También se denomina *sobrecarga de operadores*.  
@@ -53,7 +43,7 @@ Un procedimiento de operador es una serie de instrucciones de Visual Basic que d
 ## <a name="declaration-syntax"></a>Sintaxis de la declaración  
  La sintaxis para declarar un procedimiento de operador es como sigue:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol* `(` *operand1*`[,`*operand2* `]) As` *tipo de datos*   
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol* `(` *operand1*`[,`*operand2* `]) As` *tipo de datos*  
   
  `' Statements of the operator procedure.`  
   
@@ -77,7 +67,7 @@ Un procedimiento de operador es una serie de instrucciones de Visual Basic que d
   
  `Dim testStruct As`  *structurename*  
   
- `Dim testNewStruct As`  *structurename*`= testStruct`*operatorsymbol*   `10`  
+ `Dim testNewStruct As`  *structurename*`= testStruct`*operatorsymbol*  `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Ilustración de declaración y llamada  
  La siguiente estructura almacena un valor entero con signo de 128 bits como las partes constituyentes de orden superior y de orden inferior. Define la `+` operador que se va a agregar dos `veryLong` valores y generar una resultante `veryLong` valor.  

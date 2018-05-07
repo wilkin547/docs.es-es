@@ -1,24 +1,15 @@
 ---
-title: "Compilación condicional en Visual Basic"
-ms.custom: 
+title: Compilación condicional en Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 559380dc9baceb2fba4dca782e83f335f1bcd92d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 496df36242c6b43e7e3ec94ce675d11177e8b466
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Compilación condicional en Visual Basic
 En *compilación condicional*, bloques concretos de código en un programa se compilan de forma selectiva mientras que otros se omiten.  
@@ -49,7 +40,7 @@ En *compilación condicional*, bloques concretos de código en un programa se co
 |---|---|  
 |**Diseñador de proyectos**|Público para todos los archivos en el proyecto|  
 |Línea de comandos|Público para todos los archivos que se pasó al compilador de línea de comandos|  
-|`#Const`instrucción de código|Privado para el archivo en el que se declara|  
+|`#Const` instrucción de código|Privado para el archivo en el que se declara|  
   
 |Para definir constantes en el Diseñador de proyectos|  
 |---|  

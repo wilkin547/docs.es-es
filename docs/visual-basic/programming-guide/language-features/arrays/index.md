@@ -1,11 +1,6 @@
 ---
 title: Matrices en Visual Basic
-ms.custom: ''
 ms.date: 12/06/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Array
 helpviewer_keywords:
@@ -14,12 +9,11 @@ helpviewer_keywords:
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 author: rpetrusha
 ms.author: ronpet
-ms.manager: wpickett
-ms.openlocfilehash: d223ca8b0ff59a13c31fa777e5cb6a97918421c6
-ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
+ms.openlocfilehash: 3b6c1db0131f2a150dc1b00dd5e6dafc3a418f05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arrays-in-visual-basic"></a>Matrices en Visual Basic
 Una matriz es un conjunto de valores, que se denomina *elementos*, que se relacionan lógicamente entre sí. Por ejemplo, una matriz puede consistir en el número de alumnos de cada curso en una escuela primaria; cada elemento de la matriz es el número de alumnos de un curso único. De forma similar, una matriz puede constar de las calificaciones de un estudiante de una clase; cada elemento de la matriz es una puntuación de una sola.    
@@ -165,7 +159,7 @@ Igual que lo haría para las matrices unidimensionales, puede basarse en la infe
   
  [!code-vb[iterate-one-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]  
   
- En el ejemplo siguiente se recorre en iteración una matriz multidimensional utilizando un [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) instrucción. El método <xref:System.Array.GetUpperBound%2A> tiene un parámetro que especifica la dimensión. `GetUpperBound(0)`Devuelve el índice más alto de la primera dimensión y `GetUpperBound(1)` devuelve el índice más alto de la segunda dimensión.
+ En el ejemplo siguiente se recorre en iteración una matriz multidimensional utilizando un [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) instrucción. El método <xref:System.Array.GetUpperBound%2A> tiene un parámetro que especifica la dimensión. `GetUpperBound(0)` Devuelve el índice más alto de la primera dimensión y `GetUpperBound(1)` devuelve el índice más alto de la segunda dimensión.
   
  [!code-vb[iterate-two-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]  
   
@@ -320,7 +314,7 @@ Puesto que en este caso, las matrices de origen son todos los pequeñas, podemos
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |----------|----------------|  
 |[Array Dimensions in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)|Explica el rango y las dimensiones de las matrices.|  
 |[Cómo: Inicializar una variable de matriz en Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)|Describe cómo se llenan las matrices con valores iniciales.|  

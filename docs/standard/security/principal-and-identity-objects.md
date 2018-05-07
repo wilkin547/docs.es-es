@@ -1,13 +1,7 @@
 ---
 title: Objetos Principal e Identity
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WindowsIdentity objects
 - GenericIdentity objects
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02c8b4b9f46f051e42fb2ae85a39b6ff48ad2f1a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bfc9a08377a281f7325b120a873fc9b27b8ad856
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="principal-and-identity-objects"></a>Objetos Principal e Identity
 El código administrado puede descubrir la identidad o la función de una entidad de seguridad a través de un <xref:System.Security.Principal.IPrincipal> objeto, que contiene una referencia a un <xref:System.Security.Principal.IIdentity> objeto. La comparación de objetos Identity y Principal puede resultar útil en conceptos familiares, como cuentas de usuario y de grupo. En la mayoría de los entornos de red, las cuentas de usuario representan a personas o programas, mientras que las cuentas de grupo representan a ciertas categorías de usuarios y los derechos que poseen. De forma similar, los objetos Identity de .NET Framework representan a usuarios, mientras que los roles representan pertenencias y contextos de seguridad. En .NET Framework, el objeto Principal encapsula un objeto Identity y un rol. Las aplicaciones .NET Framework conceden derechos a la entidad de seguridad basándose en su identidad o, lo que es más normal, en su pertenencia a un rol.  

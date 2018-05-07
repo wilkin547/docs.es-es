@@ -1,12 +1,6 @@
 ---
-title: "Llamar a una propiedad o método mediante un nombre de cadena (Visual Basic)"
-ms.custom: 
+title: Llamar a una propiedad o método mediante un nombre de cadena (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - passing operators [Visual Basic]
 - strings [Visual Basic], passing new operators as
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c5974257fb82fe83c66a480225da200c14338898
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 76be426049489bb58e50878822c03fa5cd5cca8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Llamar a una propiedad o método mediante un nombre de cadena (Visual Basic)
 En la mayoría de los casos, puede descubrir las propiedades y métodos de un objeto en tiempo de diseño y escribir código para controlarlos. Sin embargo, en algunos casos quizás no sepa acerca de los métodos y propiedades de un objeto de antemano, o simplemente puede querer flexibilidad de permitir que un usuario final especificar las propiedades o ejecutar métodos en tiempo de ejecución.  

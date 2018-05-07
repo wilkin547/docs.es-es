@@ -1,12 +1,6 @@
 ---
 title: Expresiones booleanas (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - short-circuiting
 - Boolean expressions
@@ -20,17 +14,14 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 48071c6833f9841fa42311dda59d6959c0645ff4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ff5843c815658468ac69fe5d62a9ea4cac2be830
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boolean-expressions-visual-basic"></a>Expresiones booleanas (Visual Basic)
-A *expresión booleana* es una expresión que se evalúa como un valor de la [tipo de datos Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` o `False`. `Boolean`las expresiones pueden tener varias formas. La más simple es la comparación directa del valor de un `Boolean` variable a un `Boolean` literal, tal como se muestra en el ejemplo siguiente.  
+A *expresión booleana* es una expresión que se evalúa como un valor de la [tipo de datos Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` o `False`. `Boolean` las expresiones pueden tener varias formas. La más simple es la comparación directa del valor de un `Boolean` variable a un `Boolean` literal, tal como se muestra en el ejemplo siguiente.  
   
  [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
   

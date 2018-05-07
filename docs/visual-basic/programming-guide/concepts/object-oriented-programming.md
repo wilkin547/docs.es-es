@@ -1,21 +1,12 @@
 ---
-title: "Programación orientada a objetos (Visual Basic)"
-ms.custom: 
+title: Programación orientada a objetos (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 950f080949dce0fc1a2834825d2f7c945007fb7b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e8936eb9031ef68ea333835d8433e1ba1a45990f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Programación orientada a objetos (Visual Basic)
 Visual Basic proporciona compatibilidad completa para la programación orientada a objetos, incluidos la encapsulación, la herencia y el polimorfismo.  
@@ -239,7 +230,7 @@ Todas las clases y miembros de clase pueden especificar el nivel de acceso que p
 
 Están disponibles los siguientes modificadores de acceso:
 
-|Modificador de Visual Basic|Definición|
+|Modificador de Visual Basic|de esquema JSON|
 |---------------------------|----------------|
 |[Public](../../../visual-basic/language-reference/modifiers/public.md)|Puede obtener acceso al tipo o miembro cualquier otro código del mismo ensamblado o de otro ensamblado que haga referencia a éste.|
 |[Private](../../../visual-basic/language-reference/modifiers/private.md)|Solamente puede obtener acceso al tipo o miembro el código de la misma clase.|
@@ -278,7 +269,7 @@ Para obtener más información, consulte:
 
 - [Inicializadores de objeto: Tipos con nombre y anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <a name="Static"></a>Clases compartidas y miembros  
+###  <a name="Static"></a> Clases compartidas y miembros  
  Un miembro de la clase compartido es una propiedad, un procedimiento o un campo que comparten todas las instancias de una clase.  
   
  Para definir a un miembro compartido:  
@@ -359,7 +350,7 @@ De forma predeterminada, una clase derivada hereda todos los miembros de su clas
 
 Los siguientes modificadores se utilizan para controlar cómo se reemplazan propiedades y métodos:
 
-|Modificador de Visual Basic|Definición|
+|Modificador de Visual Basic|de esquema JSON|
 |---------------------------|----------------|
 |[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|Permite invalidar un miembro de una clase derivada.|
 |[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|Invalida un miembro virtual (invalidable) definido en la clase base.|

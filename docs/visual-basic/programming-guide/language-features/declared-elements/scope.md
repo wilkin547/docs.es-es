@@ -1,12 +1,6 @@
 ---
-title: "Ámbito en Visual Basic"
-ms.custom: 
+title: Ámbito en Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module scope [Visual Basic]
 - scope [Visual Basic], levels
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6692379626d787b728d6e92bd447c4a96e6680e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scope-in-visual-basic"></a>Ámbito en Visual Basic
 El *ámbito* de un elemento declarado es el conjunto de todo el código que puede hacer referencia sin calificar su nombre o ponerlo a disposición a través de un [Imports (instrucción Namespace de .NET y tipo)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Un elemento puede tener ámbito en uno de los siguientes niveles:  
@@ -61,7 +52,7 @@ El *ámbito* de un elemento declarado es el conjunto de todo el código que pued
   
 -   `Do` y `Loop`  
   
--   `For`[`Each`] y`Next`  
+-   `For` [`Each`] y `Next`  
   
 -   `If` y `End If`  
   
@@ -127,7 +118,7 @@ Public strMsg As String
   
  Ámbito de Namespace incluye espacios de nombres anidados. Un elemento disponible en un espacio de nombres también está disponible en cualquier espacio de nombres anidado dentro de ese espacio de nombres.  
   
- Si el proyecto no contiene ninguno [instrucción Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, todo el contenido en el proyecto está en el mismo espacio de nombres. En este caso, el ámbito de espacio de nombres puede considerarse como el ámbito del proyecto. `Public`elementos de un módulo, clase o estructura también están disponibles para cualquier proyecto que hace referencia a su proyecto.  
+ Si el proyecto no contiene ninguno [instrucción Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, todo el contenido en el proyecto está en el mismo espacio de nombres. En este caso, el ámbito de espacio de nombres puede considerarse como el ámbito del proyecto. `Public` elementos de un módulo, clase o estructura también están disponibles para cualquier proyecto que hace referencia a su proyecto.  
   
 ## <a name="choice-of-scope"></a>Elección de ámbito  
  Cuando se declara una variable, debe tener en cuenta los siguientes puntos al elegir su ámbito.  

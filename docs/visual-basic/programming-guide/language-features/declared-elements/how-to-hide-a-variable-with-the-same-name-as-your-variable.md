@@ -1,12 +1,6 @@
 ---
-title: "Cómo: Ocultar una variable con el mismo nombre que su variable (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Ocultar una variable con el mismo nombre que su variable (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
 - declarations [Visual Basic], elements
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: af031f3ef134b2a509922e6ada28aa5b2b80d641
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a7ebc4eb44592800decd5ef943750f0cd845afb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Cómo: Ocultar una variable con el mismo nombre que su variable (Visual Basic)
 Puede ocultar una variable por *sombrear* él, es decir, mediante la redefinición con una variable del mismo nombre. Puede reemplazar la variable que desea ocultar de dos maneras:  
@@ -42,7 +33,7 @@ Puede ocultar una variable por *sombrear* él, es decir, mediante la redefinici�
   
     |Región de la variable|Subregión permitida para volverla a definir|  
     |-----------------------|-------------------------------------------|  
-    |Módulo|Una clase dentro del módulo|  
+    |Module|Una clase dentro del módulo|  
     |Clase|Una subclase dentro de la clase<br /><br /> Un procedimiento dentro de la clase|  
   
      No se puede definir una variable de procedimiento en un bloque dentro de ese procedimiento, por ejemplo en un `If`... `End If` construcción o `For` bucle.  

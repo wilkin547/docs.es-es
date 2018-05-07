@@ -1,22 +1,12 @@
 ---
 title: Tipos de valor devueltos de Async (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1a62556fb93a3d8547d880e4ea6770b206ead900
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0c6c02efd282f8581f3dc85905149acf7b3ea6ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="async-return-types-visual-basic"></a>Tipos de valor devueltos de Async (Visual Basic)
 Métodos asincrónicos tienen tres posibles tipos devueltos: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>y void. En Visual Basic, el tipo de valor devuelto void se escribe como un procedimiento [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Para obtener más información sobre los métodos asincrónicos, vea [programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -107,7 +97,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync`se llama y se espera mediante una instrucción await en lugar de una expresión await, similar a la instrucción de llamada para sincrónica `Sub` o método que devuelve void. La aplicación de un `Await` operador en este caso no genera un valor.  
+ `Task_MethodAsync` se llama y se espera mediante una instrucción await en lugar de una expresión await, similar a la instrucción de llamada para sincrónica `Sub` o método que devuelve void. La aplicación de un `Await` operador en este caso no genera un valor.  
   
  El código siguiente llama y espera al método `Task_MethodAsync`.  
   

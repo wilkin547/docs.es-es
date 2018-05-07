@@ -1,32 +1,22 @@
 ---
 title: Escribir consultas en Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ [Visual Basic], walkthroughs
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-caps.latest.revision: "70"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e78d93895a86ad9b2456e5ac7c05db83ebf0379d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: beb192f6b136455cb1adcb6cf2616578b63fcebf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Tutorial: Escribir consultas en Visual Basic
 Este tutorial muestra cómo se pueden utilizar características del lenguaje Visual Basic para escribir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expresiones de consulta. El tutorial muestra cómo crear consultas en una lista de objetos Student, cómo ejecutar las consultas y cómo modificarlas. Las consultas incorporan varias características, incluidos los tipos anónimos, inferencia de tipo local y los inicializadores de objeto.  
   
- Después de completar este tutorial, estará listo para pasar a los ejemplos y documentación específica para la [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] proveedor que le interesen. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]proveedores incluyen [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+ Después de completar este tutorial, estará listo para pasar a los ejemplos y documentación específica para la [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] proveedor que le interesen. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] proveedores incluyen [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="create-a-project"></a>Crear un proyecto  
   

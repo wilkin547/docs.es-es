@@ -1,13 +1,6 @@
 ---
 title: Tipos anónimos (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AnonymousType
 helpviewer_keywords:
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 530e21e1595f9bbc3436280418287413e2a48111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 451fe45c9b5efbeb64b1066d6ba8e5f9b27300c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-types-visual-basic"></a>Tipos anónimos (Visual Basic)
 Visual Basic admite tipos anónimos, que le permiten crear objetos sin escribir una definición de clase para el tipo de datos. En su lugar, el compilador genera una clase. La clase no tiene ningún nombre utilizable, hereda directamente de <xref:System.Object>y contiene las propiedades especificadas al declarar el objeto. Dado que no se especifica el nombre del tipo de datos, se conoce como un *tipo anónimo*.  
@@ -95,11 +85,11 @@ Visual Basic admite tipos anónimos, que le permiten crear objetos sin escribir 
 ## <a name="anonymous-types-from-query-expressions"></a>Tipos anónimos de expresiones de consulta  
  Las expresiones de consulta no siempre requieren la creación de tipos anónimos. Cuando sea posible, usan un tipo existente para almacenar los datos de columna. Esto se produce cuando la consulta devuelve los registros completos desde el origen de datos o sólo un campo de cada registro. En los siguientes ejemplos de código, `customers` es una colección de objetos de un `Customer` clase. La clase tiene muchas propiedades y puede incluir uno o varios de ellos en el resultado de la consulta, en cualquier orden. En los dos primeros ejemplos, no hay tipos anónimos son necesarias porque las consultas seleccionan los elementos de tipos con nombre:  
   
--   `custs1`contiene una colección de cadenas, porque `cust.Name` es una cadena.  
+-   `custs1` contiene una colección de cadenas, porque `cust.Name` es una cadena.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_9.vb)]  
   
--   `custs2`contiene una colección de `Customer` objetos, dado que cada elemento de `customers` es un `Customer` objeto y todo el elemento está seleccionado por la consulta.  
+-   `custs2` contiene una colección de `Customer` objetos, dado que cada elemento de `customers` es un `Customer` objeto y todo el elemento está seleccionado por la consulta.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_10.vb)]  
   

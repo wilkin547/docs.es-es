@@ -1,26 +1,17 @@
 ---
-title: "La expresión llama recursivamente la propiedad contenedora &#39; &lt;propertyname&gt;&#39;"
+title: La expresión llama recursivamente la propiedad contenedora &#39; &lt;propertyname&gt;&#39;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc42026
 - BC42026
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47de3c2d25336962168f01a4c8717274de7c9aad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f14e2645772b22a8f6ff2385dcd316a42d1d5cf0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>La expresión llama recursivamente la propiedad contenedora &#39; &lt;propertyname&gt;&#39;
 Una instrucción en el `Set` procedimiento con una definición de propiedad almacena un valor en el nombre de la propiedad.  
