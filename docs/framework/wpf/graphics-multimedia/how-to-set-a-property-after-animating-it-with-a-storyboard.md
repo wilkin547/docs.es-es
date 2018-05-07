@@ -1,31 +1,17 @@
 ---
-title: "Cómo: Establecer una propiedad después de animarla con un guión gráfico"
-ms.custom: 
+title: 'Cómo: Establecer una propiedad después de animarla con un guión gráfico'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ffc534549f5b114a07f09326be72c1968d178a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b8e9c08075b13f8d6f701d5ac6ae4f8ea8949184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Cómo: Establecer una propiedad después de animarla con un guión gráfico
 En algunos casos, puede aparecer que no se puede cambiar el valor de una propiedad después de que se ha animado.  
@@ -43,7 +29,7 @@ En algunos casos, puede aparecer que no se puede cambiar el valor de una propied
   
  El código anterior no parece hacer nada: la permanece pincel amarillo, que es el valor proporcionado por el <xref:System.Windows.Media.Animation.ColorAnimation> que animar el pincel. El valor de propiedad subyacente (el valor base) sí se cambia a azul. Sin embargo, el valor efectivo, o actual, sigue siendo amarillo porque la <xref:System.Windows.Media.Animation.ColorAnimation> continúa invalidando el valor base. Si desea que el valor base se convierta en el valor efectivo de nuevo, debe detener la animación de influir en la propiedad. Hay tres modos para hacer esto con las animaciones de guión gráfico:  
   
--   Establecer la animación <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propiedad<xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+-   Establecer la animación <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propiedad <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
 -   Quitar el guión gráfico.  
   

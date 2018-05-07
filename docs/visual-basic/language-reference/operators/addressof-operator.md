@@ -1,11 +1,6 @@
 ---
 title: AddressOf (Operador) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - AddressOf
 - vb.AddressOf
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 52560a2d9071373fd28f7aad2e485da08324656d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c229c32a3b295b4dbfe50ca2abc60d4ad5f2145
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf (Operador) (Visual Basic)
 Crea una instancia de delegado de procedimiento que hace referencia el procedimiento específico.  
@@ -33,7 +25,7 @@ AddressOf procedurename
   
 ## <a name="parts"></a>Elementos  
  `procedurename`  
- Obligatorio. Especifica el procedimiento que hace referencia el delegado de procedimiento recién creado.  
+ Requerido. Especifica el procedimiento que hace referencia el delegado de procedimiento recién creado.  
   
 ## <a name="remarks"></a>Comentarios  
  El `AddressOf` operador crea un delegado de función que apunta a la función especificada por `procedurename`. Cuando el procedimiento especificado es que un método de instancia, a continuación, el delegado de función hace referencia a la instancia y el método. A continuación, cuando se invoca el delegado de función se llama al método especificado de la instancia especificada.  

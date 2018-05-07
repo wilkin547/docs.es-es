@@ -1,13 +1,6 @@
 ---
-title: "Orígenes de datos compatibles con formularios Windows Forms"
-ms.custom: 
+title: Orígenes de datos compatibles con formularios Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - collections [Windows Forms], binding to
 - OLE DB providers [Windows Forms], Windows Forms
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4705c8a7153e94fa1cd23cf6c2f622d5cd66ec77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Orígenes de datos compatibles con formularios Windows Forms
 Tradicionalmente, el enlace de datos se ha utilizado en las aplicaciones para aprovechar las ventajas de los datos almacenados en bases de datos. Con el enlace de datos de formularios Windows Forms, se pueden tener acceso a datos de bases de datos, así como datos de otras estructuras, como matrices y colecciones, siempre y cuando se cumplen ciertos requisitos mínimos.  
@@ -50,13 +38,13 @@ Tradicionalmente, el enlace de datos se ha utilizado en las aplicaciones para ap
  matriz o colección  
  Para que actúe como un origen de datos, debe implementar una lista el <xref:System.Collections.IList> interfaz; un ejemplo sería una matriz que es una instancia de la <xref:System.Array> clase. Para obtener más información sobre matrices, vea [Cómo: crear una matriz de objetos (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
- En general, debe usar <xref:System.ComponentModel.BindingList%601> al crear listas de objetos para el enlace de datos. <xref:System.ComponentModel.BindingList%601>es una versión genérica de la <xref:System.ComponentModel.IBindingList> interfaz. El <xref:System.ComponentModel.IBindingList> interfaz extiende el <xref:System.Collections.IList> interfaz agregando propiedades, métodos y eventos necesarios para el enlace de datos bidireccional.  
+ En general, debe usar <xref:System.ComponentModel.BindingList%601> al crear listas de objetos para el enlace de datos. <xref:System.ComponentModel.BindingList%601> es una versión genérica de la <xref:System.ComponentModel.IBindingList> interfaz. El <xref:System.ComponentModel.IBindingList> interfaz extiende el <xref:System.Collections.IList> interfaz agregando propiedades, métodos y eventos necesarios para el enlace de datos bidireccional.  
   
  <xref:System.Collections.IEnumerable>  
  Controles de formularios Windows Forms se pueden enlazar a orígenes de datos que solo son compatibles con el <xref:System.Collections.IEnumerable> interfaz si están enlazados a través de un <xref:System.Windows.Forms.BindingSource> componente.  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]objetos de datos  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]Proporciona una serie de estructuras de datos adecuadas para el enlace. Cada uno de ellos varía en sofisticación y complejidad.  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] objetos de datos  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] Proporciona una serie de estructuras de datos adecuadas para el enlace. Cada uno de ellos varía en sofisticación y complejidad.  
   
 -   <xref:System.Data.DataColumn>. A <xref:System.Data.DataColumn> es el bloque de creación fundamental de una <xref:System.Data.DataTable>, ya que un número de columnas componen una tabla. Cada <xref:System.Data.DataColumn> tiene un <xref:System.Data.DataColumn.DataType%2A> propiedad que determina el tipo de datos que contiene la columna (por ejemplo, la marca del modelo en una tabla que describa automóviles). También puede simple enlazar un control (como un <xref:System.Windows.Forms.TextBox> del control <xref:System.Windows.Forms.Control.Text%2A> propiedad) a una columna dentro de una tabla de datos.  
   

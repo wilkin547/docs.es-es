@@ -1,28 +1,14 @@
 ---
 title: Definir tipos personalizados para usarlos con los servicios XAML de .NET Framework
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9edc7baa1a540a71997cf5b1ed010ad5c7960d17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definir tipos personalizados para usarlos con los servicios XAML de .NET Framework
 Al definir tipos personalizados que son objetos de negocios o son tipos que no tienen una dependencia en marcos concretos, hay algunas prácticas recomendadas para XAML que puede seguir. Si sigue estas prácticas, los servicios XAML de .NET Framework y sus lectores XAML y escritores de XAML pueden detectar las características XAML de su tipo y darle la representación apropiada en un flujo de nodo XAML con el sistema de tipos XAML. En este tema se describe procedimientos recomendados para las definiciones de tipo, definiciones de miembros y CLR atribución de tipos o miembros.  
@@ -103,7 +89,7 @@ Al definir tipos personalizados que son objetos de negocios o son tipos que no t
  Recuerde que el valor de este método es la entrada procedente del uso de XAML, normalmente en forma de atributo. De forma de atributo debe ser compatibles con la conversión de valor para una sintaxis de texto y atributo en la `Get` *PropertyName* descriptor de acceso.  
   
 ### <a name="attachable-member-stores"></a>Almacenes de miembro adjuntable  
- Los métodos de descriptor de acceso normalmente no son suficientes para proporcionar un medio para situar los valores de miembro adjuntable en un gráfico de objetos, o para recuperar los valores del gráfico de objetos y serializarlos correctamente. Para proporcionar esta funcionalidad, la `target` objetos en las firmas de descriptor de acceso anterior deben ser capaces de almacenar valores. El mecanismo de almacenamiento debe ser coherente con el principio del miembro adjuntable que el miembro es que se puede asociar a los destinos donde el miembro adjuntable no está en la lista de miembros. Servicios XAML de .NET framework proporciona una técnica de implementación para el miembro adjuntable almacena a través de la API <xref:System.Xaml.IAttachedPropertyStore> y <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore>se usa por los escritores XAML para detectar la implementación del almacén y deben implementarse en el tipo que es el `target` de los descriptores de acceso. El método estático <xref:System.Xaml.AttachablePropertyServices> API se utilizan dentro del cuerpo de los descriptores de acceso y hacer referencia al miembro adjuntable por su <xref:System.Xaml.AttachableMemberIdentifier>.  
+ Los métodos de descriptor de acceso normalmente no son suficientes para proporcionar un medio para situar los valores de miembro adjuntable en un gráfico de objetos, o para recuperar los valores del gráfico de objetos y serializarlos correctamente. Para proporcionar esta funcionalidad, la `target` objetos en las firmas de descriptor de acceso anterior deben ser capaces de almacenar valores. El mecanismo de almacenamiento debe ser coherente con el principio del miembro adjuntable que el miembro es que se puede asociar a los destinos donde el miembro adjuntable no está en la lista de miembros. Servicios XAML de .NET framework proporciona una técnica de implementación para el miembro adjuntable almacena a través de la API <xref:System.Xaml.IAttachedPropertyStore> y <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore> se usa por los escritores XAML para detectar la implementación del almacén y deben implementarse en el tipo que es el `target` de los descriptores de acceso. El método estático <xref:System.Xaml.AttachablePropertyServices> API se utilizan dentro del cuerpo de los descriptores de acceso y hacer referencia al miembro adjuntable por su <xref:System.Xaml.AttachableMemberIdentifier>.  
   
 ## <a name="xaml-related-clr-attributes"></a>Atributos CLR relacionados con XAML  
  Atribución correctamente sus tipos, miembros y ensamblados es importante para notificar información del sistema de tipo XAML a los servicios XAML de .NET Framework. Esto es importante si piensa que los tipos para su uso con los sistemas de XAML directamente se basan en lectores de servicios XAML de .NET Framework y escritores XAML, o si define o usar un marco de uso de XAML que se basa en los lectores XAML y escritores de XAML.  

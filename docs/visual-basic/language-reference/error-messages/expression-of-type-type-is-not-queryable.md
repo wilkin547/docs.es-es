@@ -1,26 +1,17 @@
 ---
-title: "Expresión de tipo &lt;tipo&gt; no es consultable"
+title: Expresión de tipo &lt;tipo&gt; no es consultable
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc36593
 - vbc36593
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3f2b98bf48f0b3965929f9211c2944ff97754f23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d333abda5e303f8fab6d1f707df7ac77d8e03ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expression-of-type-lttypegt-is-not-queryable"></a>Expresión de tipo &lt;tipo&gt; no es consultable
 Expresión de tipo \<tipo > no es consultable. Asegúrese de que no falta una importación de referencia o espacio de nombres de ensamblado para el proveedor LINQ.  

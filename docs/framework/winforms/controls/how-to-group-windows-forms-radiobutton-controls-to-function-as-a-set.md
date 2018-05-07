@@ -1,29 +1,17 @@
 ---
-title: "Cómo: Agrupar controles RadioButton de formularios Windows Forms para que funcionen como un conjunto"
-ms.custom: 
+title: 'Cómo: Agrupar controles RadioButton de formularios Windows Forms para que funcionen como un conjunto'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - radio buttons [Windows Forms], grouping
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 - RadioButton control [Windows Forms], grouping
 ms.assetid: 58f8fe34-50b7-49d8-a2be-c271be3c6b32
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c92048374941f735568bcd758ed475eba78b81e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbc6ab410fa2ab9d89255f82863e51aad36f8c18
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>Cómo: Agrupar controles RadioButton de formularios Windows Forms para que funcionen como un conjunto
 Formularios Windows Forms <xref:System.Windows.Forms.RadioButton> controles están diseñados para proporcionar a los usuarios una opción entre dos o más configuraciones, de los cuales solo una puede asignarse a un procedimiento u objeto. Por ejemplo, un grupo de <xref:System.Windows.Forms.RadioButton> controles pueden mostrar una opción de transporte para un pedido, pero solo uno de los operadores se usará. Por lo tanto, solo una <xref:System.Windows.Forms.RadioButton> a la vez puede seleccionarse, incluso si forma parte de un grupo funcional.  

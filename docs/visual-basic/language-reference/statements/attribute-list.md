@@ -1,23 +1,15 @@
 ---
 title: Lista de atributos (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: adfb980380bb787280715ca0185950657e174eb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 35d031722a5eddd6adce5e32df62b86c500d305b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attribute-list-visual-basic"></a>Lista de atributos (Visual Basic)
 Especifica los atributos que se aplicará a un elemento de programación declarado. Los diversos atributos se separan con comas. A continuación se muestra la sintaxis para un atributo.  
@@ -33,7 +25,7 @@ Especifica los atributos que se aplicará a un elemento de programación declara
  Obligatorio para atributos aplicados al principio de un archivo de código fuente. Puede ser [ensamblado](../../../visual-basic/language-reference/modifiers/assembly.md) o [módulo](../../../visual-basic/language-reference/modifiers/module-keyword.md).  
   
  `attributename`  
- Obligatorio. Nombre del atributo.  
+ Requerido. Nombre del atributo.  
   
  `attributearguments`  
  Opcional. Lista de argumentos posicionales para este atributo. Varios argumentos están separados por comas.  
@@ -63,7 +55,7 @@ Especifica los atributos que se aplicará a un elemento de programación declara
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute>indica que el procedimiento con atributos representa un punto de entrada en una biblioteca de vínculos dinámicos (DLL) no administrada. El atributo proporciona el nombre de archivo DLL como un argumento de posición y el resto de información como inicializadores de variables.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> indica que el procedimiento con atributos representa un punto de entrada en una biblioteca de vínculos dinámicos (DLL) no administrada. El atributo proporciona el nombre de archivo DLL como un argumento de posición y el resto de información como inicializadores de variables.  
   
 ## <a name="see-also"></a>Vea también  
  [Ensamblado](../../../visual-basic/language-reference/modifiers/assembly.md)  

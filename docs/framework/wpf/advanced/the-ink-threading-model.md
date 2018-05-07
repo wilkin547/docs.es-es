@@ -1,13 +1,6 @@
 ---
 title: Modelo de subprocesamiento de entrada manuscrita
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application user interface thread [WPF]
 - stylus plug-in
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c8eb0cf9f1cbb1be688f228b7bbd10a3a3ca6ed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc0ff8a2345bd945dd2fffdfda80f00e1ab99c67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-ink-threading-model"></a>Modelo de subprocesamiento de entrada manuscrita
 Una de las ventajas de la tinta en un Tablet PC es que asemeja mucho a escribir con un lápiz normal y el papel.  Para lograr esto, el lápiz de tablet PC recopila datos de entrada a una velocidad mucho más alta que un mouse y representa la entrada de lápiz mientras el usuario escribe.  Subproceso de interfaz (UI) de usuario de la aplicación no es suficiente para recopilar los datos del lápiz y tinta de representación, porque puede quedarse bloqueado.  Para solucionarlo, un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación usa dos subprocesos adicionales cuando un usuario escribe la entrada de lápiz.  
@@ -72,11 +60,11 @@ Una de las ventajas de la tinta en un Tablet PC es que asemeja mucho a escribir 
   
  En el diagrama anterior, produzca el siguiente comportamiento:  
   
-1.  `StylusPlugin1`modifica los valores de x e y.  
+1.  `StylusPlugin1` modifica los valores de x e y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>recibe los puntos del lápiz modificados y los representa en el subproceso de representación dinámica.  
+2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> recibe los puntos del lápiz modificados y los representa en el subproceso de representación dinámica.  
   
-3.  `StylusPlugin2`recibe los puntos del lápiz modificados y más modifica los valores de x e y.  
+3.  `StylusPlugin2` recibe los puntos del lápiz modificados y más modifica los valores de x e y.  
   
 4.  La aplicación recopila los puntos del lápiz y, cuando el usuario finaliza el trazo, lo representa estáticamente.  
   
@@ -87,7 +75,7 @@ Una de las ventajas de la tinta en un Tablet PC es que asemeja mucho a escribir 
   
  En el diagrama siguiente ilustra la relación entre el subproceso del lápiz y el subproceso de interfaz de usuario con respecto a los eventos de lápiz de un <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.  
   
- ![Modelos de subprocesamiento &#40; la tinta Interfaz de usuario y lápiz &#41; ] (../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
+ ![Modelos de subprocesamiento de tinta &#40;IU y lápiz&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
   
 ## <a name="rendering-ink"></a>Representar entrada manuscrita  
  Como el usuario dibuja un trazo, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> representa la tinta en un subproceso independiente de forma que la entrada de lápiz parece "fluir" del lápiz incluso cuando el subproceso de interfaz de usuario está ocupado.  El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> genera un árbol visual en el subproceso de representación dinámica como recopila los puntos del lápiz.  Cuando el usuario finaliza el trazo, el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> le pide que se le notifique cuando la aplicación realiza el siguiente paso de representación.  Cuando la aplicación termina el siguiente paso de representación, el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> limpia su árbol visual.  El siguiente diagrama ilustra este proceso.  

@@ -1,25 +1,16 @@
 ---
-title: "End &lt;palabra clave&gt; (instrucción, Visual Basic)"
+title: End &lt;palabra clave&gt; (instrucción, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.EndDefinition
 helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cf0ac1221f8a85a8a43599d9c5ec210884205e5e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 8137434bfd8c26144d78b1761b784cdba4894eaf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>End &lt;palabra clave&gt; (instrucción, Visual Basic)
 Cuando va seguido de una palabra clave adicional, termina la definición del bloque de instrucciones introducida por esa palabra clave.  
@@ -53,7 +44,7 @@ End With
   
 ## <a name="parts"></a>Elementos  
  `End`  
- Obligatorio. Termina la definición del elemento de programación.  
+ Requerido. Termina la definición del elemento de programación.  
   
  `AddHandler`  
  Es obligatorio para terminar una `AddHandler` descriptor de acceso comenzada por una búsqueda de coincidencias `AddHandler` instrucción en un personalizado [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md).  
@@ -127,7 +118,7 @@ End With
  Cuando está precedido por un signo de número (`#`), el `End` palabra clave finaliza un bloque de preprocesamiento introducido por la directiva correspondiente.  
   
  `#End`  
- Obligatorio. Termina la definición del bloque de preprocesamiento.  
+ Requerido. Termina la definición del bloque de preprocesamiento.  
   
  `#ExternalSource`  
  Es obligatorio para terminar un bloque de origen externo que comienza por una búsqueda de coincidencias [#ExternalSource (directiva)](../../../visual-basic/language-reference/directives/externalsource-directive.md).  

@@ -1,25 +1,17 @@
 ---
 title: My.Settings (Objeto)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.MySettingsProperty.Settings
 - My.Settings
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2f744460f8ea6c6c7f5c8c5e1658bd357e910def
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 54176ae6706311b17227c7dc21a5060c9b369753
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mysettings-object"></a>My.Settings (Objeto)
 Proporciona propiedades y métodos para tener acceso a la configuración de la aplicación.  
@@ -52,7 +44,7 @@ Proporciona propiedades y métodos para tener acceso a la configuración de la a
 ## <a name="tasks"></a>Tareas  
  En la tabla siguiente se muestra ejemplos de tareas que implican la `My.Settings` objeto.  
   
-|Para|Vea|  
+|En|Vea|  
 |---|---|  
 |Leer la configuración de la aplicación|[Cómo: Leer la configuración de la aplicación en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
 |Cambiar una configuración de usuario|[Cómo: Cambiar la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
