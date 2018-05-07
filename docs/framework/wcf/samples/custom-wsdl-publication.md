@@ -1,24 +1,12 @@
 ---
-title: "Publicación de WSDL personalizada"
-ms.custom: 
+title: Publicación de WSDL personalizada
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba62c44ecf72df7faaed77f54f07ecd88157c6d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e475a37b5c8e868cf06d7764d561755112ed943e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-wsdl-publication"></a>Publicación de WSDL personalizada
 Este ejemplo explica cómo:  
@@ -29,12 +17,12 @@ Este ejemplo explica cómo:
   
 -   Implementar <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> y <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> en un comportamiento de contrato personalizado y un comportamiento de operación personalizado, respectivamente, para escribir las anotaciones importadas como comentarios en CodeDom para el contrato y operación importados.  
   
--   Utilizar <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> para descargar WSDL, <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> para importar el WSDL mediante al importador de WSDL personalizado y <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> Para compilar el código de cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con las anotaciones de WSDL como comentarios introducidos con /// y ''' en C# y Visual Basic.  
+-   Use la <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> para descargar el archivo WSDL, un <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> para importar el WSDL mediante al importador WSDL personalizado y el <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> para generar el código de cliente de Windows Communication Foundation (WCF) con las anotaciones de WSDL como / / / y ''' comentarios en C# y Visual Básica.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
-## <a name="service"></a>Servicio  
+## <a name="service"></a>web de Office  
  El servicio en este ejemplo se marca con dos atributos personalizados. El primero, `WsdlDocumentationAttribute`, acepta una cadena en el constructor y se aplica para proporcionar una interfaz u operación de contrato con una cadena que describe su uso. El segundo, `WsdlParamOrReturnDocumentationAttribute`, se puede aplicar para devolver valores o parámetros a fin de describir esos valores en la operación. El ejemplo siguiente muestra un contrato de servicios, `ICalculator`, descrito utilizando estos atributos.  
   
 ```  
@@ -311,7 +299,7 @@ public interface ICalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
   

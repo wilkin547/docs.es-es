@@ -1,13 +1,6 @@
 ---
-title: "Funciones de aceleración"
-ms.custom: 
+title: Funciones de aceleración
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 570a065d3f28befe8db4887ff908c3bd60a639a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ce7c1824dc53c154ba1091ea62c1b8950b757c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="easing-functions"></a>Funciones de aceleración
 Las funciones de aceleración le permiten aplicar fórmulas matemáticas personalizadas a las animaciones. Por ejemplo, puede que quiera que un objeto rebote de forma realista o se comporte como si estuviera sobre un muelle. Podría usar animaciones de fotogramas clave o incluso animaciones From/To/By para aproximarse a estos efectos pero supondría bastante trabajo y la animación sería menos precisa que si usa un fórmula matemática.  
@@ -50,7 +38,7 @@ Las funciones de aceleración le permiten aplicar fórmulas matemáticas persona
   
 -   <xref:System.Windows.Media.Animation.ExponentialEase>: Crea una animación que aumenta y/o reduce la velocidad mediante una fórmula exponencial.  
   
--   <xref:System.Windows.Media.Animation.PowerEase>: Crea una animación que aumenta y/o reduce la velocidad mediante la fórmula *f*(*t*) = *t*<sup>p</sup> donde p es igual que el <xref:System.Windows.Media.Animation.PowerEase.Power%2A> propiedad.  
+-   <xref:System.Windows.Media.Animation.PowerEase>: Crea una animación que aumenta y/o reduce la velocidad mediante la fórmula *f*(*t*) = *t*<sup>p</sup> donde p es igual a la <xref:System.Windows.Media.Animation.PowerEase.Power%2A>propiedad.  
   
 -   <xref:System.Windows.Media.Animation.QuadraticEase>: Crea una animación que aumenta y/o reduce la velocidad mediante la fórmula *f*(*t*) = *t*<sup>2</sup>.  
   

@@ -1,14 +1,6 @@
 ---
 title: Definición y especificación de errores
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6c200ad587d437875f510adc4f05b30bdb7ab089
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: b71aaf22c98c7f8e62b5c02449a45ec75567d064
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-and-specifying-faults"></a>Definición y especificación de errores
-Los errores de SOAP transmiten información de condición de error desde un servicio a un cliente y, en caso de comunicación dúplex, desde un cliente a un servicio de una manera interoperable. Este tema describe cuándo y cómo definir contenido personalizado de error y especificar qué operaciones pueden devolverlos. Para obtener más información acerca de cómo un servicio o cliente dúplex, puede enviar esos errores y cómo una aplicación cliente o servicio administra estos errores, vea [enviar y recibir errores](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para obtener información general de control de errores en [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] las aplicaciones, vea [especificar y control de errores en contactos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+Los errores de SOAP transmiten información de condición de error desde un servicio a un cliente y, en caso de comunicación dúplex, desde un cliente a un servicio de una manera interoperable. Este tema describe cuándo y cómo definir contenido personalizado de error y especificar qué operaciones pueden devolverlos. Para obtener más información acerca de cómo un servicio o cliente dúplex, puede enviar esos errores y cómo una aplicación cliente o servicio administra estos errores, vea [enviar y recibir errores](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para obtener información general de control de errores en las aplicaciones de Windows Communication Foundation (WCF), consulte [especificar y control de errores en contactos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="overview"></a>Información general  
  Los errores de SOAP declarados son aquéllos en los que una operación tiene <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> que especifica un tipo de error de SOAP personalizado. Los errores de SOAP no declarados son aquéllos que no se especifican en el contrato para una operación. Este tema le ayuda a identificar esas condiciones de error y crear un contrato de error para su servicio, que los clientes pueden utilizar para administrar correctamente esas condiciones de error cuando sean notificadas por errores de SOAP personalizados. Las tareas básicas son, en orden:  

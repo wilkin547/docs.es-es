@@ -1,29 +1,17 @@
 ---
 title: Recursos XAML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - reusing resources [WPF]
 - resources [WPF], reusing
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2d58802bcdfa57bb7689e7406651fcc9829a7e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b917b13909c463cd9d518d79bf8ce2683591dda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-resources"></a>Recursos XAML
 Un recurso es un objeto que se puede volver a usar en diferentes sitios de la aplicación. Pinceles y estilos son ejemplos de recursos. Esta información general describe cómo utilizar los recursos en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. También puede crear y tener acceso a recursos mediante código o indistintamente entre el código y [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Para obtener más información, consulte [recursos y el código](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -162,7 +150,7 @@ Un recurso es un objeto que se puede volver a usar en diferentes sitios de la ap
   
  Las claves implícitas para los estilos no se aplican en un control si <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> es `true` (tenga en cuenta también que <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> puede establecerse como parte del comportamiento nativo para la clase de control, en lugar de forma explícita en una instancia del control). Además, con el fin de admitir las claves implícitas para los escenarios de clase derivada, el control debe invalidar <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (todos los controles existentes proporcionados como parte de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ello). Para obtener más información sobre los estilos, temas y diseño de control, vea [directrices para diseñar controles con estilos](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md).  
   
- <xref:System.Windows.DataTemplate>También tiene una clave implícita. La clave implícita para una <xref:System.Windows.DataTemplate> es la <xref:System.Windows.DataTemplate.DataType%2A> valor de propiedad. <xref:System.Windows.DataTemplate.DataType%2A>También puede especificarse como el nombre del tipo en lugar de forma explícita mediante [{x: Type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Para obtener más información, consulte [información general sobre plantillas de datos](../../../../docs/framework/wpf/data/data-templating-overview.md).  
+ <xref:System.Windows.DataTemplate> También tiene una clave implícita. La clave implícita para una <xref:System.Windows.DataTemplate> es la <xref:System.Windows.DataTemplate.DataType%2A> valor de propiedad. <xref:System.Windows.DataTemplate.DataType%2A> También puede especificarse como el nombre del tipo en lugar de forma explícita mediante [{x: Type...} ](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Para obtener más información, consulte [información general sobre plantillas de datos](../../../../docs/framework/wpf/data/data-templating-overview.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.ResourceDictionary>  

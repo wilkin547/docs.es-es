@@ -1,24 +1,12 @@
 ---
 title: Almacenes de instancias
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a41c25dc3c664715bd9e811d6a21a6e3600aa8a5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0d59daeee318aaf82897517a23343065dc97d69f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instance-stores"></a>Almacenes de instancias
 Un almacén de instancias es un contenedor lógico de instancias. Es el lugar donde se almacenan los metadatos y los datos de las instancias. Un almacén de instancias no tiene que ser necesariamente un almacenamiento físico dedicado. Un almacén de instancias puede contener información duradera de una base de datos de SQL Server o información de estado no duradera de una memoria. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] distribuye con el Almacén de instancias de flujos de trabajo de SQL, que es una implementación concreta de un almacén de instancias que permite a los flujos de trabajo conservar metadatos y datos de instancia en una base de datos de SQL Server 2005 o SQL Server 2008. Además, Windows Server App Fabric también proporciona una implementación concreta de un almacén de instancias. Para obtener más información, consulte [almacén de instancias de Windows Server App Fabric, consulta y proveedores de Control de](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  

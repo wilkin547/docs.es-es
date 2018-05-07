@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Obtener las celdas, filas y columnas seleccionadas en el control DataGridView de formularios Windows Forms"
-ms.custom: 
+title: 'Cómo: Obtener las celdas, filas y columnas seleccionadas en el control DataGridView de formularios Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], getting selection
 - getting selection [Windows Forms], DataGridView control [Windows Forms]
 ms.assetid: d93c4b5b-498e-49bc-982a-2229d61778e4
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22b44668b403b5a991c03de661b6e680ccde0a44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1d2338250abbced89ef7821d02edc654d26d7fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Cómo: Obtener las celdas, filas y columnas seleccionadas en el control DataGridView de formularios Windows Forms
 Puede obtener las celdas seleccionadas, filas o columnas de una <xref:System.Windows.Forms.DataGridView> control mediante las propiedades correspondientes: <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, y <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>. En los procedimientos siguientes, obtendrá las celdas seleccionadas y mostrar sus índices de fila y columna en un <xref:System.Windows.Forms.MessageBox>.  
@@ -57,7 +45,7 @@ Puede obtener las celdas seleccionadas, filas o columnas de una <xref:System.Win
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   <xref:System.Windows.Forms.Button>controles denominados `selectedCellsButton`, `selectedRowsButton`, y `selectedColumnsButton`, cada uno con controladores para la <xref:System.Windows.Forms.Control.Click> evento adjunto.  
+-   <xref:System.Windows.Forms.Button> controles denominados `selectedCellsButton`, `selectedRowsButton`, y `selectedColumnsButton`, cada uno con controladores para la <xref:System.Windows.Forms.Control.Click> evento adjunto.  
   
 -   Control <xref:System.Windows.Forms.DataGridView> denominado `dataGridView1`.  
   

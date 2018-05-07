@@ -1,24 +1,12 @@
 ---
 title: Procedimientos recomendados para lograr sesiones confiables
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b94f6e01-8070-40b6-aac7-a2cb7b4cb4f2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c022db62103826aa89e9035fd36c050d1f7c0f84
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d9671e7e3124d535b66de8cd8468f76dcb32b10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-reliable-sessions"></a>Procedimientos recomendados para lograr sesiones confiables
 
@@ -26,7 +14,7 @@ En este tema se describe los procedimientos recomendados para las sesiones confi
 
 ## <a name="setting-maxtransferwindowsize"></a>Establecimiento de MaxTransferWindowSize
 
-Las sesiones confiables en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizan una ventana de transferencia para retener los mensajes en el cliente y el servicio. La propiedad configurable <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indica cuántos mensajes puede contener la ventana de transferencia.
+Las sesiones confiables en Windows Communication Foundation (WCF) utilizan una ventana de transferencia para retener los mensajes en el cliente y el servicio. La propiedad configurable <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indica cuántos mensajes puede contener la ventana de transferencia.
 
 En el remitente, esto indica cuántos mensajes puede contener la ventana de transferencia mientras espera las confirmaciones; en el receptor indica cuántos mensajes para almacenar en búfer para el servicio.
 
@@ -56,7 +44,7 @@ Se recomienda usar el mismo `MaxTransferWindowSize` en el remitente y el recepto
 
 *Control de flujo* es un mecanismo que asegura que el remitente y receptor mantienen el ritmo entre sí, es decir, los mensajes son consumidos y actúa sobre ellos está generan. El tamaño de la ventana de transferencia en el cliente y el servicio asegura que el remitente y receptor se encuentran dentro de una ventana razonable de sincronización.
 
-Se recomienda encarecidamente que establezca la propiedad <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> a `true` cuando se utiliza una sesión confiable entre un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente y un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio.
+Se recomienda encarecidamente que establezca la propiedad <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> a `true` cuando se utiliza una sesión confiable entre un cliente WCF y un servicio WCF.
 
 ## <a name="setting-maxpendingchannels"></a>Establecimiento de MaxPendingChannels
 

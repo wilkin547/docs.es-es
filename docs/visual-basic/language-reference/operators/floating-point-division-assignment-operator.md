@@ -1,12 +1,6 @@
 ---
 title: /= (Operador, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb./=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - operator /=
 - compound assignment statements [Visual Basic]
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 94448856072a949582e64577287134c4b975bfec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 642307bc531e7d9ce21a932b112795b35e7b3182
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>/= (Operador, Visual Basic)
 Divide el valor de una variable o propiedad por el valor de una expresión y asigna el resultado de punto flotante a la variable o propiedad.  
@@ -36,10 +27,10 @@ variableorproperty /= expression
   
 ## <a name="parts"></a>Elementos  
  `variableorproperty`  
- Obligatorio. Cualquier propiedad o variable numérica.  
+ Requerido. Cualquier propiedad o variable numérica.  
   
  `expression`  
- Obligatorio. Cualquier expresión numérica.  
+ Requerido. Cualquier expresión numérica.  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento en el lado izquierdo de la `/=` puede ser una variable escalar simple, una propiedad o un elemento de una matriz. La variable o propiedad no puede ser [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  

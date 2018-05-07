@@ -1,13 +1,6 @@
 ---
-title: "Tutorial: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute"
-ms.custom: 
+title: 'Tutorial: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0267020f7e7a52e92b05a0bda0ee397e5c3393fc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a502ecc30911f2296bf48eaa195f5b6452b7588a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Tutorial: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute
 Los controles personalizados a veces expondrá una colección como una propiedad. Este tutorial muestra cómo utilizar la <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> clase para controlar cómo se serializa una colección en tiempo de diseño. Aplicar el <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> valor para la propiedad de colección se asegura de que se van a serializar la propiedad.  
@@ -60,8 +48,8 @@ Los controles personalizados a veces expondrá una colección como una propiedad
     |Property|Cambiar a|  
     |--------------|---------------|  
     |**Multiline**|`true`|  
-    |**Dock**|<xref:System.Windows.Forms.DockStyle.Fill>|  
-    |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
+    |**Acoplar**|<xref:System.Windows.Forms.DockStyle.Fill>|  
+    |**Barras de desplazamiento**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
 6.  En el **Editor de código**, declare un campo de matriz de cadena denominado `stringsValue` en `SerializationDemoControl`.  

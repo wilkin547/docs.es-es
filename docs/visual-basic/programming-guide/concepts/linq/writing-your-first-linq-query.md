@@ -1,34 +1,24 @@
 ---
 title: Escribir la primera consulta con LINQ (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-caps.latest.revision: "56"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c16bb28189d5525654328da2dc80d868bbe61bf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f426aac5358837563081d2bf9783f6d4fe04d853
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Escribir la primera consulta con LINQ (Visual Basic)
 Una *consulta* es una expresión que recupera datos de un origen de datos. Las consultas se expresan en un lenguaje de consulta dedicado. Con el tiempo, distintos idiomas han ha desarrollado para diferentes tipos de orígenes de datos, por ejemplo, SQL para bases de datos relacionales y XQuery para XML. Esto hace que sea necesario para el desarrollador de aplicaciones aprender un nuevo lenguaje de consulta para cada tipo de origen de datos o formato de datos que se admite.  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]simplifica la situación, ya que ofrece un modelo coherente para trabajar con datos de varios formatos y orígenes de datos. En una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] siempre se trabaja con objetos. Utilice los mismos modelos de codificación básicos para consultar y transformar datos de documentos XML, bases de datos SQL, conjuntos de datos ADO.NET y entidades, las colecciones de .NET Framework y cualquier otro origen o formato para el que un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] proveedor está disponible. Este documento describen las tres fases de la creación y el uso de basic [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consultas.  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] simplifica la situación, ya que ofrece un modelo coherente para trabajar con datos de varios formatos y orígenes de datos. En una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] siempre se trabaja con objetos. Utilice los mismos modelos de codificación básicos para consultar y transformar datos de documentos XML, bases de datos SQL, conjuntos de datos ADO.NET y entidades, las colecciones de .NET Framework y cualquier otro origen o formato para el que un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] proveedor está disponible. Este documento describen las tres fases de la creación y el uso de basic [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consultas.  
   
 ## <a name="three-stages-of-a-query-operation"></a>Tres etapas de una operación de consulta  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]operaciones de consulta se componen de tres acciones:  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operaciones de consulta se componen de tres acciones:  
   
 1.  Obtener el origen de datos o los orígenes.  
   

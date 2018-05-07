@@ -1,11 +1,6 @@
 ---
-title: "From (Cláusula, Visual Basic)"
+title: From (Cláusula, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryFrom
 - vb.QueryFromIn
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0ecdc8b70fb1ae164a6c78998ce11db9938fbb56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1f113444efae83de7d299db330593937c7800bb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="from-clause-visual-basic"></a>From (Cláusula, Visual Basic)
 Especifica uno o más variables de rango y una colección a la consulta.  
@@ -38,9 +30,9 @@ From element [ As type ] In collection [ _ ]
   
 |Término|Definición|  
 |---|---|  
-|`element`|Obligatorio. A *variable de rango* utilizar para recorrer en iteración los elementos de la colección. Una variable de rango se utiliza para hacer referencia a cada miembro de la `collection` como la consulta recorre en iteración la `collection`. Debe ser un tipo enumerable.|  
+|`element`|Requerido. A *variable de rango* utilizar para recorrer en iteración los elementos de la colección. Una variable de rango se utiliza para hacer referencia a cada miembro de la `collection` como la consulta recorre en iteración la `collection`. Debe ser un tipo enumerable.|  
 |`type`|Opcional. Tipo de `element`. Si no hay ningún `type` se especifica, el tipo de `element` se deduce de `collection`.|  
-|`collection`|Obligatorio. Hace referencia a la colección para consultar. Debe ser un tipo enumerable.|  
+|`collection`|Requerido. Hace referencia a la colección para consultar. Debe ser un tipo enumerable.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `From` cláusula se utiliza para identificar los datos de origen para una consulta y las variables que se utilizan para hacer referencia a un elemento de la colección de origen. Estas variables se denominan *las variables de rango*. El `From` cláusula es necesaria para una consulta, excepto cuando la `Aggregate` cláusula se utiliza para identificar una consulta que devuelve solo agrega los resultados. Para obtener más información, consulte [Aggregate (cláusula)](../../../visual-basic/language-reference/queries/aggregate-clause.md).  

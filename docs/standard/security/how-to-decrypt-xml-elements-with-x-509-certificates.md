@@ -1,13 +1,7 @@
 ---
-title: "Cómo: Descifrar elementos XML con certificados X.509"
-ms.custom: 
+title: 'Cómo: Descifrar elementos XML con certificados X.509'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,21 +13,16 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
-caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c922b3da772c685343b8989c5dc1bc89cad857fd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0064aaf2e67eb3fb40e4c58995ce8678321d21aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Cómo: Descifrar elementos XML con certificados X.509
-Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar y descifrar un elemento dentro de un documento XML.  El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.  Para obtener más información sobre el estándar de cifrado XML, consulte la especificación de World Wide Web Consortium (W3C) del cifrado XML en http://www.w3.org/TR/xmldsig-core/.  
+Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar y descifrar un elemento dentro de un documento XML.  El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.  Para obtener más información acerca del estándar de cifrado XML, vea la especificación de World Wide Web Consortium (W3C) para el cifrado XML ubicado en http://www.w3.org/TR/xmldsig-core/.  
   
  Este ejemplo descifra un elemento XML que se cifró mediante los métodos descritos en: [Cómo: cifrar elementos XML con certificados X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Busca un elemento <`EncryptedData`>, lo descifra y lo reemplaza por el elemento XML de texto sin formato original.  
   

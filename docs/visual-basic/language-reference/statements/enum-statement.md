@@ -1,12 +1,6 @@
 ---
-title: "Instrucción Enum (Visual Basic)"
+title: Instrucción Enum (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Enum
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7a8244318e0be8e50f3384b56cf63e59182b6cda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 89de51f2551437d102ccdc5a0f1ff5f23b53e47f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enum-statement-visual-basic"></a>Instrucción Enum (Visual Basic)
 Declara una enumeración y define los valores de sus miembros.  
@@ -66,7 +57,7 @@ End Enum
   
 -   `enumerationname`  
   
-     Obligatorio. Nombre de la enumeración. Para obtener información sobre los nombres válidos, consulte [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Requerido. Nombre de la enumeración. Para obtener información sobre los nombres válidos, consulte [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `datatype`  
   
@@ -74,13 +65,13 @@ End Enum
   
 -   `memberlist`  
   
-     Obligatorio. Lista de constantes de miembros que se declaran en esta instrucción. Varios miembros aparecen en las líneas de código fuente individual.  
+     Requerido. Lista de constantes de miembros que se declaran en esta instrucción. Varios miembros aparecen en las líneas de código fuente individual.  
   
-     Cada `member` tiene la sintaxis y las partes siguientes:`[<attribute list>] member name [ = initializer ]`  
+     Cada `member` tiene la sintaxis y las partes siguientes: `[<attribute list>] member name [ = initializer ]`  
   
     |Parte|Descripción|  
     |---|---|  
-    |`membername`|Obligatorio. Nombre de este miembro.|  
+    |`membername`|Requerido. Nombre de este miembro.|  
     |`initializer`|Opcional. Expresión que se evalúa en tiempo de compilación y se asigna a este miembro.|  
   
 -   `End` `Enum`  

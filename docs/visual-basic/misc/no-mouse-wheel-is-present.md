@@ -1,21 +1,14 @@
 ---
 title: No hay rueda del mouse presente.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrMouse_NoWheelIsPresent
 ms.assetid: e924ffba-4af1-4247-9a6f-d19a03738f62
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7caf2e24bcbd86ad2b6175d593bd218a9bb4689d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d983fc538cf6ef255254ea8129796956fa50f622
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="no-mouse-wheel-is-present"></a>No hay rueda del mouse presente.
 Se llamó a la propiedad `My.Computer.Mouse.WheelScrollLines` , pero el mouse no tiene rueda del mouse.  
@@ -24,7 +17,7 @@ Se llamó a la propiedad `My.Computer.Mouse.WheelScrollLines` , pero el mouse no
   
 -   Compruebe la propiedad `My.Computer.Mouse.WheelExists` para ver si el mouse tiene una rueda antes de llamar a la propiedad `My.Computer.Mouse.WheelScrollLines` .  
   
-     O bien  
+     -o bien-  
   
 -   Instale un mouse con una rueda en el equipo.  
   

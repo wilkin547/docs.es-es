@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumParams (Método)"
-ms.custom: 
+title: IMetaDataImport::EnumParams (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumParams
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 52118dc9-fe6e-4b39-aa48-c3cc3ea4214d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 51544a44ed4bae25d4214e25c717769a8446f0f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b848c30e824d45f6f619cfdb3d00a2d3cdc4573e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumparams-method"></a>IMetaDataImport::EnumParams (Método)
 Enumera los tokens de ParamDef que representan los parámetros del método al que hace referencia el token de MethodDef especificado.  
@@ -70,7 +58,7 @@ HRESULT EnumParams (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumParams`se devolvió correctamente.|  
+|`S_OK`|`EnumParams` se devolvió correctamente.|  
 |`S_FALSE`|No hay ningún tokens para enumerar. En ese caso, `pcTokens` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
@@ -80,7 +68,7 @@ HRESULT EnumParams (
   
  **Biblioteca:** usada como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

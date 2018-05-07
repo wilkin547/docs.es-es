@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataDispenserEx::SetOption (Método)"
-ms.custom: 
+title: IMetaDataDispenserEx::SetOption (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataDispenserEx.SetOption
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96810ba0eab99d1df58f0b68b85ef4da8ce7084e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfe600b54eb03a07ea01375355c5ff94190e5d9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption (Método)
 Establece la opción especificada en un valor determinado para el ámbito de metadatos actual. La opción controla cómo se administran las llamadas al ámbito de metadatos actual.  
@@ -57,7 +45,7 @@ HRESULT SetOption (
 ## <a name="remarks"></a>Comentarios  
  En la tabla siguiente se enumera los GUID disponibles que el `optionId` parámetro puede apuntar a y los correspondientes valores válidos para el `pValue` parámetro.  
   
-|GUID|Descripción|`pValue`Parámetro|  
+|GUID|Descripción|`pValue` Parámetro|  
 |----------|-----------------|------------------------|  
 |MetaDataCheckDuplicatesFor|Controla qué elementos se comprueban los duplicados. Cada vez que se llama un [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) método que crea un nuevo elemento, puede pedir al método para comprobar si el elemento ya existe en el ámbito actual. Por ejemplo, puede comprobar la existencia de `mdMethodDef` elementos; en este caso, cuando se llama a [IMetaDataEmit:: DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), comprobará que el método no existe ya en el ámbito actual. Esta comprobación utiliza la clave que identifica de forma única un método determinado: primario de tipo, nombre y firma.|Debe ser una variante de tipo UI4 y debe contener una combinación de los valores de la [CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md) enumeración.|  
 |MetaDataRefToDefCheck|Controles que hacen referencia a elementos se convierten en definiciones. De forma predeterminada, el motor de metadatos optimizará el código convirtiendo un elemento que se hace referencia a su definición si realmente se ha definido el elemento que se hace referencia en el ámbito actual.|Debe ser una variante de tipo UI4 y debe contener una combinación de los valores de la [CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md) enumeración.|  
@@ -80,7 +68,7 @@ HRESULT SetOption (
   
  **Biblioteca:** usada como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [IMetaDataDispenserEx (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  

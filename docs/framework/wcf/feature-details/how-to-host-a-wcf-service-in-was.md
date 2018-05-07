@@ -1,36 +1,22 @@
 ---
 title: Procedimiento para hospedar un servicio WCF en WAS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c4613587d829b082ee7182cc32e34d2d2d563241
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7050d866233b248c7c8f9f41337ce451b5510c30
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Procedimiento para hospedar un servicio WCF en WAS
-Este tema describe los pasos básicos requeridos para crear un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hospedado de Windows Process Activation Services (también conocido como WAS). WAS es el nuevo servicio de activación de procesos que es una generalización de las características de Internet Information Services (IIS) que funcionan con protocolos de transporte no HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa la interfaz de adaptador de agentes de escucha para comunicar solicitudes de activación que se reciben a través de protocolos no HTTP admitidos por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como TCP, canalizaciones con nombre y Message Queuing.  
+Servicio de Windows Communication Foundation (WCF) hospedado en este tema se describen los pasos básicos necesarios para crear un Windows Process Activation Services (también conocido como WAS). WAS es el nuevo servicio de activación de procesos que es una generalización de las características de Internet Information Services (IIS) que funcionan con protocolos de transporte no HTTP. WCF usa la interfaz de adaptador de escuchas para comunicar las solicitudes de activación que se reciben a través de los protocolos no HTTP admitidos por WCF, como TCP, canalizaciones con nombre y Message Queue Server.  
   
  Esta opción de hospedaje necesita que los componentes de activación WAS se instalen y configuren correctamente, pero no necesita que se escriba ningún código de hospedaje como parte de la aplicación. Para obtener más información sobre la instalación y configuración de WAS, consulte [Cómo: instalar y configurar componentes de activación de WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 >  La activación de WAS no se admite si la canalización de procesamiento de solicitudes del servidor web está establecida en el modo clásico. La canalización de procesamiento de solicitudes del servidor web debe estar establecida en el modo integrado si debe usarse la activación de WAS.  
   
- Cuando un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se hospeda en WAS, los enlaces estándar se utilizan de la manera habitual. Sin embargo, al utilizar <xref:System.ServiceModel.NetTcpBinding> y <xref:System.ServiceModel.NetNamedPipeBinding> para configurar un servicio hospedado en WAS, se debe satisfacer una restricción. Cuando puntos de conexión diferentes utilizan el mismo transporte, las configuraciones del enlace tienen que coincidir en las siete propiedades siguientes:  
+ Cuando un servicio WCF se hospeda en WAS, los enlaces estándares se utilizan de la manera habitual. Sin embargo, al utilizar <xref:System.ServiceModel.NetTcpBinding> y <xref:System.ServiceModel.NetNamedPipeBinding> para configurar un servicio hospedado en WAS, se debe satisfacer una restricción. Cuando puntos de conexión diferentes utilizan el mismo transporte, las configuraciones del enlace tienen que coincidir en las siete propiedades siguientes:  
   
 -   ConnectionBufferSize  
   

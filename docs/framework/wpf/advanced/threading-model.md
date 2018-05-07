@@ -1,13 +1,6 @@
 ---
 title: Modelo de subprocesos
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -25,21 +18,16 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f598cecef2d0994692f197df09e9befc39a58723
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15115cc0ed14cb5605100ebe47abd5cd4dc02ec0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="threading-model"></a>Modelo de subprocesos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] está diseñado para evitar a los programadores las dificultades de los subprocesos. Como resultado, la mayoría de los [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] los programadores no tienen que escribir una interfaz que usa más de un subproceso. Dado que los programas multiproceso son complejos y difíciles de depurar, se deben evitar cuando existan soluciones de un único subproceso.  
   
- Importar lo bien no diseñado, sin embargo, no [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] framework nunca será capaz de proporcionar una solución de un solo subproceso para cada tipo de problema. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]incluye cerrar, pero todavía hay situaciones en las que varios subprocesos mejoran [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] rendimiento de la capacidad de respuesta o la aplicación. Después de explicar material básico, en este documento se exploran algunas de estas situaciones y, después, se concluye con una explicación de algunos detalles de nivel inferior.  
+ Importar lo bien no diseñado, sin embargo, no [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] framework nunca será capaz de proporcionar una solución de un solo subproceso para cada tipo de problema. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluye cerrar, pero todavía hay situaciones en las que varios subprocesos mejoran [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] rendimiento de la capacidad de respuesta o la aplicación. Después de explicar material básico, en este documento se exploran algunas de estas situaciones y, después, se concluye con una explicación de algunos detalles de nivel inferior.  
   
 
   
@@ -56,11 +44,11 @@ ms.lasthandoff: 12/22/2017
   
  ¿Cómo quiere [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones supone que administran grandes operaciones? ¿Qué ocurre si el código implica un cálculo grande o necesita consultar una base de datos de algún servidor remoto? Normalmente, la respuesta es administrar la operación grande en un subproceso independiente, dejando el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso libre tienden a los elementos de la <xref:System.Windows.Threading.Dispatcher> cola. Una vez completada la operación grande, puede informar sobre su resultado a la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso para su presentación.  
   
- Históricamente, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] permite [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos que solo esté accesible para el subproceso que los creó. Esto significa que un subproceso en segundo plano a cargo de una tarea de ejecución prolongada no puede actualizar un cuadro de texto cuando finalice. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]lo hace así para garantizar la integridad de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] componentes. Un cuadro de lista podría tener una apariencia extraña si un subproceso en segundo plano actualiza su contenido durante la presentación.  
+ Históricamente, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] permite [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos que solo esté accesible para el subproceso que los creó. Esto significa que un subproceso en segundo plano a cargo de una tarea de ejecución prolongada no puede actualizar un cuadro de texto cuando finalice. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] lo hace así para garantizar la integridad de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] componentes. Un cuadro de lista podría tener una apariencia extraña si un subproceso en segundo plano actualiza su contenido durante la presentación.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tiene un mecanismo de exclusión mutua integrado que aplica esta coordinación. Mayoría de las clases en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derivan de <xref:System.Windows.Threading.DispatcherObject>. En la construcción, un <xref:System.Windows.Threading.DispatcherObject> almacena una referencia a la <xref:System.Windows.Threading.Dispatcher> vinculado para el subproceso actualmente en ejecución. En efecto, el <xref:System.Windows.Threading.DispatcherObject> asocia con el subproceso que lo crea. Durante la ejecución del programa, un <xref:System.Windows.Threading.DispatcherObject> puede llamar a su público <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> método. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>examina la <xref:System.Windows.Threading.Dispatcher> asociado al subproceso actual y lo compara con el <xref:System.Windows.Threading.Dispatcher> almacenada durante la construcción de referencia. Si no coinciden, <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> produce una excepción. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>está pensado para ser invocado al principio de cada método perteneciente a una <xref:System.Windows.Threading.DispatcherObject>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tiene un mecanismo de exclusión mutua integrado que aplica esta coordinación. Mayoría de las clases en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derivan de <xref:System.Windows.Threading.DispatcherObject>. En la construcción, un <xref:System.Windows.Threading.DispatcherObject> almacena una referencia a la <xref:System.Windows.Threading.Dispatcher> vinculado para el subproceso actualmente en ejecución. En efecto, el <xref:System.Windows.Threading.DispatcherObject> asocia con el subproceso que lo crea. Durante la ejecución del programa, un <xref:System.Windows.Threading.DispatcherObject> puede llamar a su público <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> método. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> examina la <xref:System.Windows.Threading.Dispatcher> asociado al subproceso actual y lo compara con el <xref:System.Windows.Threading.Dispatcher> almacenada durante la construcción de referencia. Si no coinciden, <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> produce una excepción. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> está pensado para ser invocado al principio de cada método perteneciente a una <xref:System.Windows.Threading.DispatcherObject>.  
   
- Si solo un subproceso puede modificar el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], ¿cómo interactúan los subprocesos en segundo plano con el usuario? Puede pedir a un subproceso en segundo plano el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso para realizar una operación en su nombre. Para ello, registrando un elemento de trabajo con el <xref:System.Windows.Threading.Dispatcher> de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso. El <xref:System.Windows.Threading.Dispatcher> clase proporciona dos métodos para registrar los elementos de trabajo: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> y <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. Ambos métodos programan un delegado para que se ejecute. <xref:System.Windows.Threading.Dispatcher.Invoke%2A>es una llamada sincrónica: es decir, no devuelve hasta que el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] realmente subproceso termina de ejecutar el delegado. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>es asincrónica y vuelve inmediatamente.  
+ Si solo un subproceso puede modificar el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], ¿cómo interactúan los subprocesos en segundo plano con el usuario? Puede pedir a un subproceso en segundo plano el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso para realizar una operación en su nombre. Para ello, registrando un elemento de trabajo con el <xref:System.Windows.Threading.Dispatcher> de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso. El <xref:System.Windows.Threading.Dispatcher> clase proporciona dos métodos para registrar los elementos de trabajo: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> y <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. Ambos métodos programan un delegado para que se ejecute. <xref:System.Windows.Threading.Dispatcher.Invoke%2A> es una llamada sincrónica: es decir, no devuelve hasta que el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] realmente subproceso termina de ejecutar el delegado. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> es asincrónica y vuelve inmediatamente.  
   
  El <xref:System.Windows.Threading.Dispatcher> ordena los elementos en su cola por prioridad. Hay diez niveles que se pueden especificar cuando se agrega un elemento a la <xref:System.Windows.Threading.Dispatcher> cola. Estas prioridades se mantienen en la <xref:System.Windows.Threading.DispatcherPriority> enumeración. Obtener información sobre <xref:System.Windows.Threading.DispatcherPriority> niveles pueden encontrarse en el [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] documentación.  
   
@@ -143,7 +131,7 @@ ms.lasthandoff: 12/22/2017
   
  Cuando se completa el retraso y hemos seleccionado aleatoriamente nuestro boletín meteorológico, es el momento de informar a los [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso. Hacer esto mediante la programación de una llamada a `UpdateUserInterface` en el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subprocesos con ese subproceso <xref:System.Windows.Threading.Dispatcher>. Se pasa una cadena que describe la información meteorológica a esta llamada de método programada.  
   
--   Actualizar el[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
+-   Actualizar el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
   
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherupdateui)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherupdateui)]  
@@ -177,13 +165,13 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowserthreadstart)]
  [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowserthreadstart)]  
   
- Este método es el punto de partida para el nuevo subproceso. Se crea una nueva ventana bajo el control de este subproceso. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]crea automáticamente un nuevo <xref:System.Windows.Threading.Dispatcher> para administrar el nuevo subproceso. Todo lo que hay que hacer para que la ventana funcional consiste en iniciar el <xref:System.Windows.Threading.Dispatcher>.  
+ Este método es el punto de partida para el nuevo subproceso. Se crea una nueva ventana bajo el control de este subproceso. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] crea automáticamente un nuevo <xref:System.Windows.Threading.Dispatcher> para administrar el nuevo subproceso. Todo lo que hay que hacer para que la ventana funcional consiste en iniciar el <xref:System.Windows.Threading.Dispatcher>.  
   
 <a name="stumbling_points"></a>   
 ## <a name="technical-details-and-stumbling-points"></a>Detalles técnicos y puntos problemáticos  
   
 ### <a name="writing-components-using-threading"></a>Escribir componentes mediante subprocesos  
- El [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] Guía del desarrollador describe un patrón de cómo un componente puede exponer comportamiento asincrónico a sus clientes (vea [Event-based Asynchronous Pattern Overview](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)). Por ejemplo, supongamos que deseamos empaquetar el `FetchWeatherFromServer` método en un componente reutilizable, no gráfico. Sigue el estándar [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] patrón, esto sería algo parecido a lo siguiente.  
+ Guía de Microsoft .NET Framework Developer describe un patrón de cómo un componente puede exponer comportamiento asincrónico a sus clientes (vea [Event-based Asynchronous Pattern Overview](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)). Por ejemplo, supongamos que deseamos empaquetar el `FetchWeatherFromServer` método en un componente reutilizable, no gráfico. Siguiendo el patrón estándar de Microsoft .NET Framework, esto sería algo parecido a lo siguiente.  
   
  [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent1)]
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent1)]  
@@ -198,7 +186,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent2)]  
   
 ### <a name="nested-pumping"></a>Bombeo anidado  
- A veces no es posible bloquear completamente la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso. Veamos el <xref:System.Windows.MessageBox.Show%2A> método de la <xref:System.Windows.MessageBox> clase. <xref:System.Windows.MessageBox.Show%2A>no vuelve hasta que el usuario hace clic en el botón Aceptar. Pero crea una ventana que debe tener un bucle de mensajes para poder ser interactiva. Mientras se espera a que el usuario haga clic en Aceptar, la ventana de la aplicación original no responde a la entrada del usuario. Pero sigue procesando los mensajes de pintura. La ventana original se vuelve a dibujar cuando se oculta y se muestra.  
+ A veces no es posible bloquear completamente la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso. Veamos el <xref:System.Windows.MessageBox.Show%2A> método de la <xref:System.Windows.MessageBox> clase. <xref:System.Windows.MessageBox.Show%2A> no vuelve hasta que el usuario hace clic en el botón Aceptar. Pero crea una ventana que debe tener un bucle de mensajes para poder ser interactiva. Mientras se espera a que el usuario haga clic en Aceptar, la ventana de la aplicación original no responde a la entrada del usuario. Pero sigue procesando los mensajes de pintura. La ventana original se vuelve a dibujar cuando se oculta y se muestra.  
   
  ![MessageBox con un botón "Aceptar"](../../../../docs/framework/wpf/advanced/media/threadingnestedpumping.png "ThreadingNestedPumping")  
   
@@ -213,7 +201,7 @@ ms.lasthandoff: 12/22/2017
   
  Cuando se presiona el botón primario del mouse sobre la elipse, `handler2` se ejecuta. Después de `handler2` finaliza, el evento se pasa a la <xref:System.Windows.Controls.Canvas> objeto, que utiliza `handler1` para procesarlo. Esto solo sucede si `handler2` does explícitamente no marca el objeto de evento, como controlado.  
   
- Es posible que `handler2` tendrá una gran cantidad de tiempo de procesamiento de este evento. `handler2`Puede usar <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> para iniciar un bucle de mensajes anidados que no devuelve durante horas. Si `handler2` no no marca el evento como controlado cuando este bucle de mensajes se complete, el evento se pasa el árbol, aunque es muy antigua.  
+ Es posible que `handler2` tendrá una gran cantidad de tiempo de procesamiento de este evento. `handler2` Puede usar <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> para iniciar un bucle de mensajes anidados que no devuelve durante horas. Si `handler2` no no marca el evento como controlado cuando este bucle de mensajes se complete, el evento se pasa el árbol, aunque es muy antigua.  
   
 ### <a name="reentrancy-and-locking"></a>Reentrada y bloqueo  
  El mecanismo de bloqueo de la [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] no se comporta exactamente como se podría imaginar; se podría esperar que un subproceso para dejar de operación completamente cuando se solicita un bloqueo. En realidad, el subproceso continúa recibiendo y procesando mensajes de alta prioridad. Esto ayuda a evitar interbloqueos y a que la capacidad de respuesta de las interfaces sea mínima, pero introduce la posibilidad de errores sutiles.  La mayoría de las veces no es necesario saber nada sobre esto, pero, en algunas circunstancias poco frecuentes (normalmente relativos a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] mensajes de ventana o a los componentes COM STA) puede ser conveniente conocer.  

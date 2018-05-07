@@ -1,29 +1,17 @@
 ---
 title: Prioridad de los valores de propiedades de dependencia
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], classes as owners
 - dependency properties [WPF], metadata
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d95cd0545fa4800f159f4e5e0f661cf7bddc6548
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7719c39c82b69421477cadf9ae5caf9f9f55b457
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-value-precedence"></a>Prioridad de los valores de propiedades de dependencia
 <a name="introduction"></a> En este tema se explica cómo puede afectar el trabajo del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] al valor de una propiedad de dependencia y se describe la precedencia de aplicación de los aspectos del sistema de propiedades al valor efectivo de una propiedad.  
@@ -117,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="setcurrentvalue"></a>   
 ## <a name="setcurrentvalue"></a>SetCurrentValue  
- El <xref:System.Windows.DependencyObject.SetCurrentValue%2A> método es otra manera de establecer una propiedad, pero no está en el orden de prioridad. En su lugar, <xref:System.Windows.DependencyObject.SetCurrentValue%2A> le permite cambiar el valor de una propiedad sin sobrescribir el origen de un valor anterior. Puede usar <xref:System.Windows.DependencyObject.SetCurrentValue%2A> cada vez que se desea establecer un valor sin proporcionar ese valor de la prioridad de un valor local. Por ejemplo, si una propiedad se establece mediante un desencadenador y, a continuación, asignar otro valor mediante <xref:System.Windows.DependencyObject.SetCurrentValue%2A>, el sistema de propiedades todavía respeta el desencadenador y la propiedad cambiará si se produce la acción del desencadenador. <xref:System.Windows.DependencyObject.SetCurrentValue%2A>permite cambiar el valor de la propiedad sin darle un origen con una prioridad más alta. Del mismo modo, puede usar <xref:System.Windows.DependencyObject.SetCurrentValue%2A> para cambiar el valor de una propiedad sin sobrescribir un enlace.  
+ El <xref:System.Windows.DependencyObject.SetCurrentValue%2A> método es otra manera de establecer una propiedad, pero no está en el orden de prioridad. En su lugar, <xref:System.Windows.DependencyObject.SetCurrentValue%2A> le permite cambiar el valor de una propiedad sin sobrescribir el origen de un valor anterior. Puede usar <xref:System.Windows.DependencyObject.SetCurrentValue%2A> cada vez que se desea establecer un valor sin proporcionar ese valor de la prioridad de un valor local. Por ejemplo, si una propiedad se establece mediante un desencadenador y, a continuación, asignar otro valor mediante <xref:System.Windows.DependencyObject.SetCurrentValue%2A>, el sistema de propiedades todavía respeta el desencadenador y la propiedad cambiará si se produce la acción del desencadenador. <xref:System.Windows.DependencyObject.SetCurrentValue%2A> permite cambiar el valor de la propiedad sin darle un origen con una prioridad más alta. Del mismo modo, puede usar <xref:System.Windows.DependencyObject.SetCurrentValue%2A> para cambiar el valor de una propiedad sin sobrescribir un enlace.  
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>Coerción, animaciones y valor base  

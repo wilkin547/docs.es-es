@@ -1,25 +1,16 @@
 ---
 title: IsNot (Operador) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.isnot
 helpviewer_keywords:
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 969fdebdf15a1f779075c58616ccd16c64976a35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: babee364d350ca84a8379f675acc4b5c87f98303
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot (Operador) (Visual Basic)
 Compara dos variables de referencia de objeto.  
@@ -32,18 +23,18 @@ result = object1 IsNot object2
   
 ## <a name="parts"></a>Elementos  
  `result`  
- Obligatorio. Valor `Boolean`.  
+ Requerido. Valor `Boolean`.  
   
  `object1`  
- Obligatorio. Cualquier `Object` variable o expresión.  
+ Requerido. Cualquier `Object` variable o expresión.  
   
  `object2`  
- Obligatorio. Cualquier `Object` variable o expresión.  
+ Requerido. Cualquier `Object` variable o expresión.  
   
 ## <a name="remarks"></a>Comentarios  
  El `IsNot` operador determina si dos referencias de objeto hacen referencia a objetos diferentes. Sin embargo, no realiza las comparaciones de valores. Si `object1` y `object2` ambos hacen referencia a la misma instancia objeto exacta, `result` es `False`; si no lo hacen, `result` es `True`.  
   
- `IsNot`es el opuesto de la `Is` operador. La ventaja de `IsNot` es que puede evitar sintaxis extraña con `Not` y `Is`, que puede ser difícil de leer.  
+ `IsNot` es el opuesto de la `Is` operador. La ventaja de `IsNot` es que puede evitar sintaxis extraña con `Not` y `Is`, que puede ser difícil de leer.  
   
  Puede usar el `Is` y `IsNot` operadores a los objetos de tiempo de compilación y en tiempo de ejecución de prueba.  
   

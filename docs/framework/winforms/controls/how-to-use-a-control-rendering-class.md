@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Utilizar una clase de representación de controles"
-ms.custom: 
+title: 'Cómo: Utilizar una clase de representación de controles'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - visual themes [Windows Forms], applying to Windows Forms controls
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: c0125e34-cd74-4c35-818c-3e40f462b0a3
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bbf17ea84cb24d167975e6b918a0410a38c8ed3b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5b82c3317d2d162fbd5a182166a9e0061fd770e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-control-rendering-class"></a>Cómo: Utilizar una clase de representación de controles
 En este ejemplo se muestra cómo utilizar la <xref:System.Windows.Forms.ComboBoxRenderer> clase para representar la flecha de lista desplegable un combinado de control de cuadro. El ejemplo consta de los <xref:System.Windows.Forms.Control.OnPaint%2A> método de un control personalizado sencillo. El <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType> propiedad se utiliza para determinar si están habilitados los estilos visuales en el área de cliente de windows de la aplicación. Si los estilos visuales están activos, la <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType> método representará la flecha de lista desplegable con estilos visuales; en caso contrario, el <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType> método representará la flecha de lista desplegable en el estilo clásico de Windows.  

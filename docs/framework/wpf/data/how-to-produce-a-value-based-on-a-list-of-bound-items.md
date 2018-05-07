@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Generar un valor basado en una lista de elementos enlazados"
-ms.custom: 
+title: 'Cómo: Generar un valor basado en una lista de elementos enlazados'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - data binding [WPF], MultiBinding
 - Multibinding [WPF]
 ms.assetid: b3d06378-b511-4181-95aa-316d60c9229b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c3987690a1acb180ee22fa02e399accd9c5d481d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d61631949382c177000b85aa8f4e093c3532c7ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Cómo: Generar un valor basado en una lista de elementos enlazados
-<xref:System.Windows.Data.MultiBinding>permite enlazar una propiedad de destino de enlace a una lista de propiedades de origen y, a continuación, aplicar la lógica para generar un valor con las entradas indicadas. Este ejemplo muestra cómo usar <xref:System.Windows.Data.MultiBinding>.  
+<xref:System.Windows.Data.MultiBinding> permite enlazar una propiedad de destino de enlace a una lista de propiedades de origen y, a continuación, aplicar la lógica para generar un valor con las entradas indicadas. Este ejemplo muestra cómo usar <xref:System.Windows.Data.MultiBinding>.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, `NameListData` hace referencia a la colección de objetos `PersonName`, que son objetos que contienen dos propiedades, `firstName` y `lastName`. En el ejemplo siguiente se genera un <xref:System.Windows.Controls.TextBlock> que muestra los nombres y apellidos de una persona con el apellido en primer lugar.  

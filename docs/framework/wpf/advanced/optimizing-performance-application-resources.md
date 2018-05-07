@@ -1,13 +1,6 @@
 ---
-title: "Optimizar el rendimiento: Recursos de aplicación"
-ms.custom: 
+title: 'Optimizar el rendimiento: Recursos de aplicación'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application resources [WPF], performance
 - resources [WPF], performance
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c0a7c9920b321f15f3f01a64fbfc80693042a025
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53e906f31f32fb0f1df3f8d986daa0ae95ea9e4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-application-resources"></a>Optimizar el rendimiento: Recursos de aplicación
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]le permite compartir recursos de la aplicación para que pueda admitir una apariencia coherente o comportamiento a través de los elementos escritos de manera similar. Este tema proporciona algunas recomendaciones que aparecen en esta área que puede ayudar a mejora el rendimiento de las aplicaciones.  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le permite compartir recursos de la aplicación para que pueda admitir una apariencia coherente o comportamiento a través de los elementos escritos de manera similar. Este tema proporciona algunas recomendaciones que aparecen en esta área que puede ayudar a mejora el rendimiento de las aplicaciones.  
   
  Para más información sobre los recursos, vea [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   

@@ -1,12 +1,6 @@
 ---
-title: "Cómo: Controlar la disponibilidad de una variable (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Controlar la disponibilidad de una variable (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - access levels, declared elements
 - Private keyword [Visual Basic], accessing variables
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 004fb101661fadeaee084e1f9374ca8332ac7234
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27ee5d3405ea24c0754cffa85e9b89b2ac561e42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Cómo: Controlar la disponibilidad de una variable (Visual Basic)
 Controlar la disponibilidad de una variable mediante la especificación de su *nivel de acceso*. El nivel de acceso determina qué código tiene permiso para leer o escribir en la variable.  
@@ -53,7 +44,7 @@ Controlar la disponibilidad de una variable mediante la especificación de su *n
   
      Puede leer o escribir en la variable desde cualquier código que interopere con su ensamblado.  
   
- O bien  
+ -o bien-  
   
 1.  En el caso de una variable local, coloque el `Dim` instrucción para la variable dentro de un procedimiento.  
   

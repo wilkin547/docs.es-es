@@ -1,28 +1,16 @@
 ---
-title: "Cómo: Definir una duración para una animación"
-ms.custom: 
+title: 'Cómo: Definir una duración para una animación'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], duration
 - Timelines [WPF], description
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e8d15a1b8432b3dae5bee73396bdec9fc9d50f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: df9e12e1bd3a365c3013d0f75df663bd46186ee2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Cómo: Definir una duración para una animación
 A <xref:System.Windows.Media.Animation.Timeline> representa un segmento de tiempo y la longitud de ese segmento viene determinados por la escala de tiempo <xref:System.Windows.Duration>. Cuando un <xref:System.Windows.Media.Animation.Timeline> llega al final de su duración, se detiene la reproducción. Si el <xref:System.Windows.Media.Animation.Timeline> tiene escalas de tiempo secundarias, detiene su reproducción. En el caso de una animación, la <xref:System.Windows.Duration> especifica cuánto tiempo tarda la animación en la transición desde su valor inicial hasta su valor final.  

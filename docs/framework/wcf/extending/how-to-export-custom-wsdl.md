@@ -1,24 +1,12 @@
 ---
-title: "Cómo: Exportar el WSDL personalizado"
-ms.custom: 
+title: 'Cómo: Exportar el WSDL personalizado'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d4b34cc564dea5f189de29c9425c840ec96c80fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82f343d5e2637ff1330570a01b376e83567db4f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-export-custom-wsdl"></a>Cómo: Exportar el WSDL personalizado
 En este tema se explica cómo exportar la información del WSDL personalizado. Para ello, definiremos un nuevo atributo de código llamado `WsdlDocumentationAttribute` que agregará la información personalizada en el WSDL generado por el servicio.  

@@ -1,31 +1,19 @@
 ---
 title: Conceptos de seguridad empleados en WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-caps.latest.revision: 15
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 74b16698d40747937a89f84f0d958178b42d2e44
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ac76f1742ab72de9f5180d1ea2fcbc668ec2140c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-concepts-used-in-wcf"></a>Conceptos de seguridad empleados en WCF
-La seguridad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se basa en conceptos ya en uso e implementados en varias infraestructuras de seguridad.  
+Seguridad de Windows Communication Foundation (WCF) se basa en conceptos ya está en uso e implementa en varias infraestructuras de seguridad.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite algunas de esas infraestructuras, como Secure Sockets Layer (SSL) sobre HTTP (HTTPS). Sin embargo, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] va más allá de admitir las infraestructuras de seguridad existentes implementando las más nuevas normas de seguridad interoperables (como WS-Security) en mensajes codificados por SOAP. Tanto si usa los mecanismos existentes como los nuevos estándares interoperables, los conceptos de seguridad subyacentes a ambos son los mismos. Entender los conceptos subyacentes de las infraestructuras existentes y los más nuevos estándares es crucial para implementar el mejor modelo de seguridad para una aplicación.  
+ WCF admite algunas de esas infraestructuras, como Secure Sockets Layer (SSL) sobre HTTP (HTTPS). Sin embargo, WCF va más allá de admitir las infraestructuras de seguridad existentes mediante la implementación de los estándares más recientes de seguridad interoperables (por ejemplo, WS-Security) a través de mensajes con codificación SOAP. Tanto si usa los mecanismos existentes como los nuevos estándares interoperables, los conceptos de seguridad subyacentes a ambos son los mismos. Entender los conceptos subyacentes de las infraestructuras existentes y los más nuevos estándares es crucial para implementar el mejor modelo de seguridad para una aplicación.  
   
 ## <a name="introduction-to-security-for-wcf-web-services"></a>Introducción a la seguridad de los servicios Web de WCF  
  El grupo Microsoft Patterns and Practices escribió un notas del producto detalladas en la Guía de seguridad WCF que está disponible para su descarga aquí: [Guía de seguridad de WCF](http://go.microsoft.com/fwlink/?LinkId=210210). Estas notas sobre el producto describen los conceptos de seguridad indispensables ya que se relacionan con los servicios Web, los conceptos de seguridad clave de WCF, los escenarios de aplicaciones para redes intranet y los escenarios de aplicaciones para Internet.  

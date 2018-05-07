@@ -1,31 +1,17 @@
 ---
 title: Sintaxis de marcado de trazados
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - attribute usage in XAML [WPF]
 - XAML [WPF], attribute usage
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 86901f357c43dc7c0c1402bf313e674603eaccbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="path-markup-syntax"></a>Sintaxis de marcado de trazados
 Las rutas de acceso se tratan en [formas y dibujo básico en WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) y [información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), sin embargo, este tema describe en detalle el idioma de mínima eficaz y complejo que puede utilizar para especificar la ruta de acceso geometrías de forma más sólida usando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -115,7 +101,7 @@ En mayúscula `L` indica que `endPoint` es un valor absoluto; una minúscula `l`
   
 |Sintaxis|  
 |------------|  
-|`H`  *x*<br /><br /> O bien<br /><br /> `h`  *x*|  
+|`H`  *X*<br /><br /> O bien<br /><br /> `h`  *X*|  
   
 |Término|Descripción|  
 |----------|-----------------|  

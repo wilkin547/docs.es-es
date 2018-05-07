@@ -1,17 +1,12 @@
 ---
 title: Módulos (F#)
 description: 'Obtenga información acerca de cómo un módulo de F # es una agrupación de código de F #, como valores, tipos y valores de función, en un programa en F #.'
-author: cartermp
-ms.author: phcart
 ms.date: 04/24/2017
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: fc7ac25902169aa39c3f7c088cd87ab58bcb7296
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b503a78abed34cbb56a7a1ceaba61f851a125831
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modules"></a>Módulos
 

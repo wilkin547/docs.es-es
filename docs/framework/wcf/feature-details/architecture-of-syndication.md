@@ -1,26 +1,12 @@
 ---
 title: Arquitectura de distribución
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f0a6b288860c343157f31f74d5a461fad1784e0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="architecture-of-syndication"></a>Arquitectura de distribución
 La API de distribución está diseñada para proporcionar un modelo de programación neutral en cuanto al formato que permita escribir contenido distribuido en la conexión en una variedad de formatos. El modelo de datos abstracto está compuesto por las siguientes clases:  
@@ -37,16 +23,16 @@ La API de distribución está diseñada para proporcionar un modelo de programac
   
  Estas clases asignan estrechamente a las estructuras definidas en la especificación Atom 1.0, aunque algunos de los nombres son diferentes.  
   
- En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], las fuentes de distribución se modelan como otro tipo de operación de servicio, uno en donde el tipo de valor devuelto es el de las clases derivadas de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. La recuperación de una fuente se modela como un intercambio de mensajes de solicitud-respuesta. Un cliente envía una solicitud al servicio y el servicio responde. El mensaje de solicitud se establece a través de un protocolo de infraestructura (por ejemplo, HTTP sin formato) y el mensaje de respuesta contiene una carga útil que está compuesta por un formato de distribución reconocido (RSS 2.0 o Atom 1.0). Los servicios que implementan estos intercambios de mensajes se conocen como servicios de distribución.  
+ En Windows Communication Foundation (WCF), las fuentes de distribución se modelan como otro tipo de operación de servicio, una donde el tipo de valor devuelto es una de las clases derivadas de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. La recuperación de una fuente se modela como un intercambio de mensajes de solicitud-respuesta. Un cliente envía una solicitud al servicio y el servicio responde. El mensaje de solicitud se establece a través de un protocolo de infraestructura (por ejemplo, HTTP sin formato) y el mensaje de respuesta contiene una carga útil que está compuesta por un formato de distribución reconocido (RSS 2.0 o Atom 1.0). Los servicios que implementan estos intercambios de mensajes se conocen como servicios de distribución.  
   
  El contrato para un servicio de distribución está compuesto por un conjunto de operaciones que devuelve una instancia de la clase <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. El siguiente ejemplo muestra una declaración de interfaz para un servicio de distribución.  
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- La compatibilidad de la distribución se genera sobre el modelo de programación REST de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que define el enlace <xref:System.ServiceModel.WebHttpBinding>, que se usa junto con <xref:System.ServiceModel.Description.WebHttpBehavior> para hacer que las fuentes estén disponibles como servicios. Para obtener más información sobre la [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programación de REST, consulte [HTTP Web WCF Programming Model Overview](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Compatibilidad de la distribución se basa en el modelo de programación REST de WCF que define la <xref:System.ServiceModel.WebHttpBinding> enlace, que se usa junto con <xref:System.ServiceModel.Description.WebHttpBehavior> para que las fuentes estén disponibles como servicios. Para obtener más información sobre el modelo de programación de REST de WCF, vea [HTTP Web WCF Programming Model Overview](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
->  La especificación Atom 1.0 permite especificar segundos fraccionarios en cualquiera de sus estructuras de fechas. Al serializar y deserializar, la implementación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pasa por alto los segundos fraccionarios.  
+>  La especificación Atom 1.0 permite especificar segundos fraccionarios en cualquiera de sus estructuras de fechas. Al serializar y deserializar la implementación de WCF omite las fracciones de segundo.  
   
 ## <a name="object-model"></a>Modelo de objetos  
  El modelo de objetos para la distribución está compuesto de grupos de clases de las tablas siguientes.  
@@ -88,7 +74,7 @@ La API de distribución está diseñada para proporcionar un modelo de programac
   
 ## <a name="extensibility"></a>Extensibilidad  
   
--   Una característica clave de los protocolos de distribución es la extensibilidad. Atom 1.0 y RSS 2.0 le permiten agregar atributos y elementos a las fuentes de distribución que no están definidas en las especificaciones. El modelo de programación de distribución de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona dos maneras de trabajar con atributos y extensiones personalizados: la derivación de una nueva clase y el acceso escrito de forma imprecisa. Para obtener más información, consulte [extensibilidad de sindicación](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+-   Una característica clave de los protocolos de distribución es la extensibilidad. Atom 1.0 y RSS 2.0 le permiten agregar atributos y elementos a las fuentes de distribución que no están definidas en las especificaciones. El modelo de programación de distribución de WCF proporciona dos maneras de trabajar con atributos y extensiones personalizados: derivar una nueva clase y el acceso escrito de forma imprecisa. Para obtener más información, consulte [extensibilidad de sindicación](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de redifusión en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  

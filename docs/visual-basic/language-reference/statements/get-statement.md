@@ -1,12 +1,6 @@
 ---
-title: "Get (Instrucción)"
+title: Get (Instrucción)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Get
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c1ff062a5e3bf41794bd5b4c90f1e188d6d97480
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6a6fdfd191de76871619dea3bd1794b487698aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-statement"></a>Get (Instrucción)
 Declara un `Get` procedimiento de propiedad que se usa para recuperar el valor de una propiedad.  
@@ -44,7 +35,7 @@ End Get
 |`attributelist`|Opcional. Vea [lista de los atributos](../../../visual-basic/language-reference/statements/attribute-list.md).|  
 |`accessmodifier`|Opcional en al menos uno de los `Get` y `Set` las instrucciones de esta propiedad. Puede ser uno de los siguientes:<br /><br /> -   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privada](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vea [tener acceso a niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`statements`|Opcional. Una o más instrucciones que se ejecutan cuando el `Get` se llama al procedimiento de propiedad.|  
-|`End Get`|Obligatorio. Termina la definición de la `Get` procedimiento de propiedad.|  
+|`End Get`|Requerido. Termina la definición de la `Get` procedimiento de propiedad.|  
   
 ## <a name="remarks"></a>Comentarios  
  Cada propiedad debe tener un `Get` procedimiento de propiedad, a menos que la propiedad está marcada como `WriteOnly`. El `Get` procedimiento se utiliza para devolver el valor actual de la propiedad.  
@@ -69,7 +60,7 @@ End Get
   
 -   **Devolver desde un procedimiento.** Cuando el `Get` procedimiento vuelve al código de llamada, la ejecución continúa en la instrucción que solicita el valor de propiedad.  
   
-     `Get`procedimientos de propiedad pueden devolver un valor mediante la [instrucción Return](../../../visual-basic/language-reference/statements/return-statement.md) o asignando el valor devuelto al nombre de propiedad. Para obtener más información, vea "Valor devuelto" en [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get` procedimientos de propiedad pueden devolver un valor mediante la [instrucción Return](../../../visual-basic/language-reference/statements/return-statement.md) o asignando el valor devuelto al nombre de propiedad. Para obtener más información, vea "Valor devuelto" en [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md).  
   
      El `Exit Property` y `Return` instrucciones provocan una salida inmediata de un procedimiento de propiedad. Cualquier número de `Exit Property` y `Return` instrucciones pueden aparecer en cualquier lugar en el procedimiento y se pueden mezclar `Exit Property` y `Return` las instrucciones.  
   

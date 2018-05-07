@@ -1,32 +1,18 @@
 ---
-title: "Guía de la documentación"
-ms.custom: 
+title: Guía de la documentación
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 132cbc6c7c9ba7d8e6c29f477554fc7b3bbab469
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
-ms.translationtype: MT
+ms.openlocfilehash: 79a9465c81071a77a6901f21f59036ea88b9cb53
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guide-to-the-documentation"></a>Guía de la documentación
-Aquí se proporciona orientación sobre la documentación de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Los documentos vinculados son puntos iniciales recomendados agrupados según intereses y niveles de especialización concretos.  
+Aquí se proporciona orientación acerca de la documentación de Windows Communication Foundation (WCF). Los documentos vinculados son puntos iniciales recomendados agrupados según intereses y niveles de especialización concretos.  
   
  Para instalar una versión independiente de la documentación y un visor de ayuda, descargue el [v de Microsoft Windows SDK 7.1](http://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409).  
   

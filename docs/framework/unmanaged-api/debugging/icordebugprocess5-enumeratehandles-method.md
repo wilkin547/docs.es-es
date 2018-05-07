@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugProcess5::EnumerateHandles (Método)"
-ms.custom: 
+title: ICorDebugProcess5::EnumerateHandles (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugProcess5.EnumerateHandles
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c9bf9f1a4d565e0af4f3ee34a2805116407027d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f2177702c6c5999033d0852a932e52c0725fb8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles (Método)
 Obtiene un enumerador para los identificadores de objeto en un proceso.  
@@ -53,15 +41,15 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
  [out] Un puntero a la dirección de un [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) que es un enumerador para los objetos que se recolectarán como elementos no utilizados.  
   
 ## <a name="remarks"></a>Comentarios  
- `EnumerateHandles`es una función auxiliar que admite la inspección de la tabla de identificadores. Es similar a la [icordebugprocess5:: Enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) método, salvo que, en lugar de rellenar un [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) colección con todos los objetos que se recolectarán como elementos no utilizados, lo incluye solo los objetos que tienen identificadores de la tabla de identificadores.  
+ `EnumerateHandles` es una función auxiliar que admite la inspección de la tabla de identificadores. Es similar a la [icordebugprocess5:: Enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) método, salvo que, en lugar de rellenar un [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) colección con todos los objetos que se recolectarán como elementos no utilizados, lo incluye solo los objetos que tienen identificadores de la tabla de identificadores.  
   
- El `types` parámetro especifica los tipos de identificador que se incluirán en la colección. `types`puede ser cualquiera de los siguientes tres miembros de la [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) enumeración:  
+ El `types` parámetro especifica los tipos de identificador que se incluirán en la colección. `types` puede ser cualquiera de los siguientes tres miembros de la [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) enumeración:  
   
--   `CorHandleStrongOnly`(controladores para solo referencias fuertes).  
+-   `CorHandleStrongOnly` (controladores para solo referencias fuertes).  
   
--   `CorHandleWeakOnly`(controladores para solo referencias débiles).  
+-   `CorHandleWeakOnly` (controladores para solo referencias débiles).  
   
--   `CorHandleAll`(todos los controladores).  
+-   `CorHandleAll` (todos los controladores).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -70,7 +58,7 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

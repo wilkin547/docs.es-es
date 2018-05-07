@@ -1,28 +1,14 @@
 ---
-title: "Cómo: Controlar el evento ContextMenuOpening"
-ms.custom: 
+title: 'Cómo: Controlar el evento ContextMenuOpening'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5eec8646a48f94fb9ffdcad14849416732618a06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab4c4867981cd318738b7404d76f2f5932bb9059
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Cómo: Controlar el evento ContextMenuOpening
 El <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento se puede administrar en una aplicación para ajustar un menú contextual existente antes para mostrar o suprimir el menú que se mostraría en caso contrario, establezca el <xref:System.Windows.RoutedEventArgs.Handled%2A> propiedad `true` en los datos del evento. El motivo habitual para configuración <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true` en el evento datos consiste en reemplazar el menú completamente con un nuevo <xref:System.Windows.Controls.ContextMenu> de objeto, que a veces requiere cancelar la operación e iniciar una nueva apertura. Si escribe controladores para la <xref:System.Windows.FrameworkElement.ContextMenuOpening> eventos, debe tener en cuenta los problemas de sincronización entre un <xref:System.Windows.Controls.ContextMenu> control y el servicio que se encarga de abrir y colocar menús contextuales para los controles en general. En este tema se muestra algunas de las técnicas de código para el menú contextual de varios escenarios de apertura y muestra un caso donde el problema de sincronización entra en juego.  

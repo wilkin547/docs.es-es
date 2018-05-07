@@ -1,27 +1,15 @@
 ---
-title: "Cómo: Implementar una aplicación cliente que utiliza el proxy de detección para buscar un servicio"
-ms.custom: 
+title: 'Cómo: Implementar una aplicación cliente que utiliza el proxy de detección para buscar un servicio'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 920f2f85333f23d1b07b6a8ddf2a05279ee477ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82b38d684d6a8de66d569c6fe09813f8ee1bea6a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Cómo: Implementar una aplicación cliente que utiliza el proxy de detección para buscar un servicio
-Este tema es el tercero de tres temas y describe cómo implementar un proxy de detección. En el tema anterior, [Cómo: implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), que implementa un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio que se registra con el proxy de detección. En este tema, creará un cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que usará el proxy de detección para encontrar el servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Este tema es el tercero de tres temas y describe cómo implementar un proxy de detección. En el tema anterior, [Cómo: implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), implementa un servicio WCF que se registra con el proxy de detección. En este tema se crea a un cliente WCF que usa al proxy de detección para encontrar el servicio WCF.  
   
 ### <a name="implement-the-client"></a>Implementar el cliente  
   

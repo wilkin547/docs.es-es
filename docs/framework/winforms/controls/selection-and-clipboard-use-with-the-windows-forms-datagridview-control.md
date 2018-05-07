@@ -1,13 +1,6 @@
 ---
-title: "Selección y uso del Portapapeles con el control DataGridView de formularios Windows Forms"
-ms.custom: 
+title: Selección y uso del Portapapeles con el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], Clipboard use
 - cells [Windows Forms], selecting in grids
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], selecting cells
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ceea4108f39619ccbcbf0286905a94b8236607cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c777366124a3cc5f43df8efca54fc366245bcb75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Selección y uso del Portapapeles con el control DataGridView de formularios Windows Forms
 El `DataGridView` control proporciona una variedad de opciones para configurar cómo los usuarios pueden seleccionar celdas, filas y columnas. Por ejemplo, puede habilitar selección única o múltiple, selección de filas o columnas cuando los usuarios, haga clic en celdas completas o selección de filas o columnas completas sólo cuando los usuarios, haga clic en sus encabezados, que permite también la selección de celdas. Si desea proporcionar su propia interfaz de usuario para la selección, puede deshabilitar la selección ordinaria y controlar mediante programación toda la selección. Además, puede permitir a los usuarios copiar los valores seleccionados en el Portapapeles.  

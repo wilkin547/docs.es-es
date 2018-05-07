@@ -1,22 +1,12 @@
 ---
-title: "Cómo: serializar con XmlSerializer (Visual Basic)"
-ms.custom: 
+title: 'Cómo: serializar con XmlSerializer (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9d137296f6f4006cd222ebfa5e36e04d41f6ab9f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3a85d915d02f7e2cd2290b6cfc8446c271edf3b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Cómo: serializar con XmlSerializer (Visual Basic)
 Este tema presenta un ejemplo que serializa y deserializa información mediante <xref:System.Xml.Serialization.XmlSerializer>.  

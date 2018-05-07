@@ -1,21 +1,14 @@
 ---
-title: "No se admite Set en tiempo de ejecución"
+title: No se admite Set en tiempo de ejecución
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID382
 ms.assetid: cb7285d3-778f-423d-a2be-88573be8ad48
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c10691abf13ea00cc4eaea961b5ca6fd59a2be8d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bf84e5dd996d32827497dec8cdc8ae78946f5502
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-not-supported-at-run-time"></a>No se admite Set en tiempo de ejecución
 Se intentó establecer o cambiar una propiedad cuyo valor solo se puede establecer en tiempo de diseño.  

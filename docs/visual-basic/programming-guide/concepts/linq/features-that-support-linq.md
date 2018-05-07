@@ -1,25 +1,15 @@
 ---
-title: "Características de Visual Basic que admiten LINQ"
-ms.custom: 
+title: Características de Visual Basic que admiten LINQ
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-caps.latest.revision: "51"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 42465dbb168b7961792aec6b3c2bb7ae8f0a3355
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Características de Visual Basic que admiten LINQ
 El nombre [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] hace referencia a la tecnología en Visual Basic que admite la sintaxis de consulta y crea otro lenguaje directamente en el idioma. Con [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], no tienes que volver a aprender un nuevo lenguaje de consulta en un origen de datos externo. Puede consultar con los datos de bases de datos relacionales, los almacenes XML u objetos utilizando Visual Basic. Esta integración de capacidades de consulta en el lenguaje habilita la comprobación de tiempo de compilación para errores de sintaxis y seguridad de tipos. Esta integración también garantiza que ya conoce la mayor parte de lo que es preciso conocer para escribir consultas complejas y variadas en Visual Basic.  
@@ -100,7 +90,7 @@ El nombre [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] hace referenci
   
  [!code-vb[VbLINQVbFeatures#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_12.vb)]  
   
- Para obtener más información, vea [Lambda Expressions](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) (Expresiones lambda).  
+ Para obtener más información, vea [Expresiones lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  

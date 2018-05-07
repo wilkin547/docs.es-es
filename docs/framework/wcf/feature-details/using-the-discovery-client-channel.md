@@ -1,26 +1,12 @@
 ---
 title: Usar el canal del cliente de detección
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7828b3037318e4fb63820fe8d235a92e64fb0b07
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ecade2eedb167e216655a4b7b270806c04b25024
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-discovery-client-channel"></a>Usar el canal del cliente de detección
 Al escribir una aplicación cliente de WCF, debe conocer la dirección del punto de conexión del servicio al que está llamando. En muchas situaciones, la dirección del extremo de un servicio no se conoce de antemano o la dirección del servicio cambia con el tiempo. El canal del cliente de detección le permite escribir una aplicación cliente de WCF y describir el servicio al que desea llamar para que el canal de cliente envíe una solicitud de análisis de forma automática. Cuando un servicio responde, el canal del cliente de detección recupera la dirección del punto de conexión para el servicio de la respuesta de análisis y la usa para llamar al servicio.  

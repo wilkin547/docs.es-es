@@ -1,27 +1,15 @@
 ---
-title: "Cómo llamar a operaciones del servicio WCF de forma asincrónica"
-ms.custom: 
+title: Cómo llamar a operaciones del servicio WCF de forma asincrónica
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f8a22a5a5b9f388cdfb7b5e5edfa0a54b628aa0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8058f0fac8a0401f72f84e2d2e91c28c7e46d1e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Cómo llamar a operaciones del servicio WCF de forma asincrónica
 En este tema se explica cómo puede tener acceso un cliente a una operación de servicio de forma asincrónica. El servicio en este tema implementa la interfaz `ICalculator`. El cliente puede llamar a las operaciones de esta interfaz de forma asincrónica mediante el modelo de llamada asincrónica orientado a eventos. (Para obtener más información sobre el modelo de llamada asincrónico basado en eventos, vea [programación multiproceso con el modelo asincrónico basado en eventos](http://go.microsoft.com/fwlink/?LinkId=248184)). Para obtener un ejemplo que muestra cómo implementar una operación asincrónica en un servicio, consulte [Cómo: implementar una operación de servicio asincrónica](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Para obtener más información acerca de las operaciones sincrónicas y asincrónicas, vea [sincrónica y operaciones asincrónicas](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
@@ -39,7 +27,7 @@ En este tema se explica cómo puede tener acceso un cliente a una operación de 
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
     ```  
   
-     De este modo se genera, además de las operaciones sincrónicas y las operaciones estándar asincrónicas basadas en delegado, una clase de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que incluye:  
+     Esto genera, además de las operaciones sincrónicas y estándares basado en delegado asincrónicas, una clase de cliente WCF que contiene:  
   
     -   Dos <`operationName` > `Async` operaciones para su uso con el método que realiza la llamada asincrónico basado en eventos. Por ejemplo:  
   
@@ -51,7 +39,7 @@ En este tema se explica cómo puede tener acceso un cliente a una operación de 
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    -   <xref:System.EventArgs?displayProperty=nameWithType>tipos para cada operación (el formato <`operationName`>`CompletedEventArgs`) para su uso con el método que realiza la llamada asincrónico basado en eventos. Por ejemplo:  
+    -   <xref:System.EventArgs?displayProperty=nameWithType> tipos para cada operación (el formato <`operationName`>`CompletedEventArgs`) para su uso con el método que realiza la llamada asincrónico basado en eventos. Por ejemplo:  
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  

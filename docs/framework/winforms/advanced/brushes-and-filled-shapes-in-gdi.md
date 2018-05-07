@@ -1,13 +1,6 @@
 ---
 title: Pinceles y formas rellenas en GDI+
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,19 +13,14 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 89f0a7c86a83222030d9b50e20228f32e85ce730
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9475518a5f0422e0eac1ec521088071bb4d1c885
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pinceles y formas rellenas en GDI+
-Una forma cerrada, como un rectángulo o una elipse, consta de un esquema y un interior. El contorno se dibuja con un lápiz y el interior se rellena con un pincel. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]proporciona varias clases de pincel para rellenar el interior de las formas cerradas: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, y <xref:System.Drawing.Drawing2D.PathGradientBrush>. Todas estas clases heredan de la <xref:System.Drawing.Brush> clase. La ilustración siguiente muestra un rectángulo relleno con un pincel sólido y una elipse rellena con un pincel de trama.  
+Una forma cerrada, como un rectángulo o una elipse, consta de un esquema y un interior. El contorno se dibuja con un lápiz y el interior se rellena con un pincel. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona varias clases de pincel para rellenar el interior de las formas cerradas: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, y <xref:System.Drawing.Drawing2D.PathGradientBrush>. Todas estas clases heredan de la <xref:System.Drawing.Brush> clase. La ilustración siguiente muestra un rectángulo relleno con un pincel sólido y una elipse rellena con un pincel de trama.  
   
  ![Formas con relleno](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
@@ -51,7 +39,7 @@ Una forma cerrada, como un rectángulo o una elipse, consta de un esquema y un i
  [!code-csharp[LinesCurvesAndShapes#122](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]proporciona más de 50 estilos de trama; los tres estilos que se muestra en la siguiente ilustración son <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, y <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona más de 50 estilos de trama; los tres estilos que se muestra en la siguiente ilustración son <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, y <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
   
  ![Formas con relleno](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
@@ -70,7 +58,7 @@ Una forma cerrada, como un rectángulo o una elipse, consta de un esquema y un i
  ![Rellenar formas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
 ## <a name="gradient-brushes"></a>Pinceles degradados  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]proporciona dos tipos de pinceles degradados: lineal y ruta de acceso. Puede utilizar un pincel de degradado lineal para rellenar una forma con colores que cambian gradualmente a medida que se desplaza a través de la forma horizontal, vertical o diagonalmente. En el ejemplo de código siguiente se muestra cómo rellenar una elipse con un pincel degradado horizontal que cambia de azul a verde conforme mueve desde el borde izquierdo de la elipse al borde derecho.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona dos tipos de pinceles degradados: lineal y ruta de acceso. Puede utilizar un pincel de degradado lineal para rellenar una forma con colores que cambian gradualmente a medida que se desplaza a través de la forma horizontal, vertical o diagonalmente. En el ejemplo de código siguiente se muestra cómo rellenar una elipse con un pincel degradado horizontal que cambia de azul a verde conforme mueve desde el borde izquierdo de la elipse al borde derecho.  
   
  [!code-csharp[LinesCurvesAndShapes#124](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  

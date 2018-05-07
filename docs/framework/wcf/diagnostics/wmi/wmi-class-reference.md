@@ -1,27 +1,15 @@
 ---
 title: Referencia de clases WMI
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wmi-class-reference"></a>Referencia de clases WMI
-En esta sección se detallan todas las clases WMI expuestas por el proveedor de WMI [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+Esta sección enumeran todas las clases WMI expuestas por el proveedor WMI de Windows Communication Foundation (WCF).  
   
 ## <a name="accessing-wmi-instances"></a>Tener acceso a las instancias de WMI  
  No se puede crear directamente una instancia de todas las clases enumeradas en la Referencia de objeto WMI, excepto para Service, AppDomain, Contrat, ServiceAppDomain, ServiceToEndpointAssociation y Endpoint. Para tener acceso a otras instancias, puede tener acceso a las propiedades de las clases de nivel superior mencionadas anteriormente. Por ejemplo, puede obtener acceso a la instancia TransportBindingElement desde la instancia Endpoint -> Binding -> BindingElements.  

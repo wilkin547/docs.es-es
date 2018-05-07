@@ -1,38 +1,26 @@
 ---
-title: "Cómo: Configurar un cliente WCF para interoperar con los servicios WSE3.0"
-ms.custom: 
+title: 'Cómo: Configurar un cliente WCF para interoperar con los servicios WSE3.0'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea71737e1e214aa1a035739901bf79f8ef4a9c7a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e30403f9c97f31e93c22a9658ffb74d4d02a49ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Cómo: Configurar un cliente WCF para interoperar con los servicios WSE3.0
-Los clientes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] son compatibles en el nivel de conexión con Web Services Enhancements 3.0 para servicios de Microsoft .NET (WSE) cuando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se configura para utilizar la versión de agosto de 2004 de la especificación WS-Addressing.  
+Los clientes de Windows Communication Foundation (WCF) son compatibles de nivel de conexión con Web Services Enhancements 3.0 para servicios de Microsoft .NET (WSE) cuando los clientes de WCF están configurados para usar la versión de agosto de 2004 de la especificación WS-Addressing.  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>Configuración de un cliente WCF para interoperar con un servicio web WSE 3.0  
   
-1.  Ejecute el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para crear un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente para el servicio Web de WSE 3.0.  
+1.  Ejecute el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para crear un cliente WCF para el servicio Web de WSE 3.0.  
   
-     Para un servicio web WSE, se crea una clase de cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+     Para un servicio Web de WSE, se crea una clase de cliente WCF.  
   
-     Para obtener más información acerca de cómo crear un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente, consulte la [Cómo: crear un cliente](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+     Para obtener más información acerca de cómo crear un cliente de WCF, vea el [Cómo: crear un cliente](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Cree una clase que represente un enlace que puede comunicarse con los servicios Web WSE 3.0.  
   
@@ -61,13 +49,13 @@ Los clientes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] son comp
   
 3.  En el código de la aplicación cliente, agregue el código para definir las propiedades de enlace.  
   
-     El ejemplo de código siguiente especifica que el cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] debe utilizar protección de mensajes y autenticación tal y como define la aserción de seguridad de llave en mano `AnonymousForCertificate` de WSE 3.0. Además, se requieren sesiones seguras y claves derivadas.  
+     En el ejemplo de código siguiente se especifica que el cliente de WCF debe usar autenticación y protección de mensajes de acuerdo con WSE 3.0 `AnonymousForCertificate` aserción de seguridad inmediata. Además, se requieren sesiones seguras y claves derivadas.  
   
      [!code-csharp[c_WCFClientToWSEService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#4)]
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo de código siguiente define un enlace personalizado que expone propiedades que corresponden a las propiedades de una aserción de seguridad de llave en mano WSE 3.0. El enlace personalizado, que se denomina `WseHttpBinding`, se utiliza, a continuación, para especificar las propiedades de enlace de un cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ El ejemplo de código siguiente define un enlace personalizado que expone propiedades que corresponden a las propiedades de una aserción de seguridad de llave en mano WSE 3.0. El enlace personalizado, que se denomina `WseHttpBinding`, a continuación, se utiliza para especificar las propiedades de enlace para un cliente WCF.  
   
   
 [!code-csharp[c_WCFClientToWSEService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#0)]

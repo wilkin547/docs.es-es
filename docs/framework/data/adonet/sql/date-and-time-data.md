@@ -1,29 +1,15 @@
 ---
 title: Datos de fecha y hora
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 2130c79ba79ce7e327a2a1b3adccd92e52153d85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="date-and-time-data"></a>Datos de fecha y hora
 SQL Server 2008 incluye nuevos tipos de datos para administrar la información de fecha y hora. Los nuevos tipos de datos incluyen tipos individuales de fecha y hora y tipos de datos expandidos con mayor intervalo, precisión y conocimiento de la zona horaria. A partir de .NET Framework versión 3.5 Service Pack (SP) 1, el proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlClient>) proporciona compatibilidad total con todas las características nuevas del Motor de base de datos de SQL Server 2008. Debe instalar .NET Framework 3.5 SP1 (o posterior) para usar estas características nuevas con SqlClient.  
@@ -44,7 +30,7 @@ SQL Server 2008 incluye nuevos tipos de datos para administrar la información d
 |`date`|El tipo de datos `date` admite las fechas en el intervalo del 1 de enero de 01 al 31 de diciembre de 9999 con una precisión de 1 día. El valor predeterminado es el 1 de enero de 1900. El tamaño de almacenamiento es de 3 bytes.|  
 |`time`|El tipo de datos `time` solo almacena valores de hora, basándose en un reloj de 24 horas. El tipo de datos `time` admite un intervalo de 00:00:00.0000000 a 23:59:59.9999999 con una precisión de 100 nanosegundos. El valor predeterminado es 00:00:00.0000000 (medianoche). El tipo de datos `time` admite la precisión decimal de fracciones de segundo definida por el usuario y su tamaño de almacenamiento varía entre 3 y 6 bytes, en función de la precisión especificada.|  
 |`datetime2`|El tipo de datos `datetime2` combina el intervalo y la precisión de los tipos de datos `date` y `time` en un único tipo de datos.<br /><br /> Los valores predeterminados y los formatos de literal de cadena son los mismos que los definidos en los tipos de datos `date` y `time`.|  
-|`datetimeoffset`|El tipo de datos `datetimeoffset` incluye todas las características de `datetime2` con un desfase de zona horaria adicional. El desplazamiento de zona horaria se representa como [+ &#124;-] hh: mm. HH es una cifra de 2 dígitos de 00 a 14 que representa el número de horas de desfase de zona horaria. MM es una cifra de dos dígitos de 00 a 59 que representa el número de minutos adicionales en el desfase de zona horaria. Se admiten formatos de hora hasta 100 nanosegundos. El signo + o - obligatorio indica si el desfase de zona horaria se suma o resta de la hora UTC (hora universal coordinada u hora del meridiano de Greenwich) para obtener la hora local.|  
+|`datetimeoffset`|El tipo de datos `datetimeoffset` incluye todas las características de `datetime2` con un desfase de zona horaria adicional. El desplazamiento de zona horaria se representa como [+&#124;-] hh: mm. HH es una cifra de 2 dígitos de 00 a 14 que representa el número de horas de desfase de zona horaria. MM es una cifra de dos dígitos de 00 a 59 que representa el número de minutos adicionales en el desfase de zona horaria. Se admiten formatos de hora hasta 100 nanosegundos. El signo + o - obligatorio indica si el desfase de zona horaria se suma o resta de la hora UTC (hora universal coordinada u hora del meridiano de Greenwich) para obtener la hora local.|  
   
 > [!NOTE]
 >  Para obtener más información sobre cómo usar la palabra clave `Type System Version`, vea <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  

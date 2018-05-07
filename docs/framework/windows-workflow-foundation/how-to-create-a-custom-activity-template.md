@@ -1,26 +1,15 @@
 ---
-title: "Cómo: Crear una plantilla de actividad personalizada"
-ms.custom: 
+title: 'Cómo: Crear una plantilla de actividad personalizada'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 772ad2a7ea56001bf3ecba089e62d6bc0f59e5ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b455f8a763859d31405380e25cd7516856e8da2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Cómo: Crear una plantilla de actividad personalizada
-Las plantillas de actividad personalizadas se utilizan para personalizar la configuración de actividades, incluidas las actividades compuestas personalizadas, para que los usuarios no tengan que crear cada actividad de forma individual y configurar propiedades y otros valores manualmente. Estas plantillas personalizadas pueden estar disponibles en la **cuadro de herramientas** en el [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] o desde un diseñador rehospedado, desde el que los usuarios pueden arrastrarlas hasta la superficie de diseño preconfigurada. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]se suministra con buenos ejemplos de esas plantillas: el [Diseñador de plantilla SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) y [Diseñador de plantilla ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) en el [diseñadores de actividades de mensajería](/visualstudio/workflow-designer/messaging-activity-designers) categoría.  
+Las plantillas de actividad personalizadas se utilizan para personalizar la configuración de actividades, incluidas las actividades compuestas personalizadas, para que los usuarios no tengan que crear cada actividad de forma individual y configurar propiedades y otros valores manualmente. Estas plantillas personalizadas pueden estar disponibles en la **cuadro de herramientas** en el [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] o desde un diseñador rehospedado, desde el que los usuarios pueden arrastrarlas hasta la superficie de diseño preconfigurada. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] se suministra con buenos ejemplos de esas plantillas: el [Diseñador de plantilla SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) y [Diseñador de plantilla ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) en el [diseñadores de actividades de mensajería](/visualstudio/workflow-designer/messaging-activity-designers) categoría.  
   
  El primer procedimiento de este tema describe cómo crear una plantilla de actividad personalizada para un **retraso** actividad y el segundo procedimiento describe brevemente cómo hacer que esté disponible en un [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] para comprobar que funciona la plantilla personalizada.  
   
@@ -30,7 +19,7 @@ Las plantillas de actividad personalizadas se utilizan para personalizar la conf
   
 1.  Inicie [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  En el **archivo** menú, elija **New**y, a continuación, seleccione **proyecto**.  
+2.  En el menú **Archivo**, elija **Nuevo** y después seleccione **Proyecto**.  
   
      Aparece el cuadro de diálogo **Nuevo proyecto** .  
   

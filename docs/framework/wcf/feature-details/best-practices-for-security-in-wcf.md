@@ -1,43 +1,31 @@
 ---
 title: Procedimientos recomendados acerca de seguridad en WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-caps.latest.revision: 19
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0545ff40247b7ff86cb6227fa8cf4af8666c3629
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 62675bc5cca2eccfcd4f210f96e5eeec93341399
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Procedimientos recomendados acerca de seguridad en WCF
-Las siguientes secciones enumeran los procedimientos recomendados que hay que tener en cuenta a la hora de crear aplicaciones seguras mediante [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Para obtener más información acerca de la seguridad, consulte [consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), y [consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
+Las siguientes secciones enumeran las prácticas recomendadas para tener en cuenta al crear aplicaciones seguras mediante Windows Communication Foundation (WCF). Para obtener más información acerca de la seguridad, consulte [consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), y [consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
   
 ## <a name="identify-services-performing-windows-authentication-with-spns"></a>Identificación de los servicios que utilizan la autenticación de Windows con SPN  
  Los servicios se pueden identificar con nombres principales del usuario (UPN) o nombres de entidad de seguridad de servicio (SPN). Los servicios que se ejecutan con cuentas de equipo tales como servicio de red tienen una identidad de SPN que corresponde al equipo en que se ejecutan. Los servicios que se ejecutan con cuentas de usuario tienen una identidad de UPN que corresponde al usuario en nombre del que se ejecutan, aunque se puede usar la herramienta `setspn` para asignar un SPN a la cuenta de usuario. Configurar un servicio de modo que se pueda identificar a través del SPN y configurar los clientes que se conectan al servicio de manera que utilicen ese SPN puede dificultar ciertos ataques. Esta guía se aplica a los enlaces que utilizan la negociación Kerberos o SSPI.  Los clientes todavía deberían especificar el SPN si SSPI retrocede a NTLM.  
   
 ## <a name="verify-service-identities-in-wsdl"></a>Comprobación de las identidades de servicio en WSDL  
- WS-SecurityPolicy permite a los servicios publicar información sobre sus propias identidades en los metadatos. Cuando se recupera a través de `svcutil` u otros métodos como <xref:System.ServiceModel.Description.WsdlImporter>, esta información de identidad se convierte en las propiedades de identidad de las direcciones de extremo del servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Los clientes que no comprueban que estas identidades de servicio son correctas y válidas, omiten la autenticación del servicio. Un servicio malintencionado se puede aprovechar de estos clientes para ejecutar ataques de reenvío de credenciales y otros ataques de tipo "Man in the middle" cambiando la identidad alegada en su WSDL.  
+ WS-SecurityPolicy permite a los servicios publicar información sobre sus propias identidades en los metadatos. Cuando se recuperen a través de `svcutil` u otros métodos como <xref:System.ServiceModel.Description.WsdlImporter>, esta información de identidad se convierte en las propiedades de identidad de las direcciones de punto de conexión de servicio WCF. Los clientes que no comprueban que estas identidades de servicio son correctas y válidas, omiten la autenticación del servicio. Un servicio malintencionado se puede aprovechar de estos clientes para ejecutar ataques de reenvío de credenciales y otros ataques de tipo "Man in the middle" cambiando la identidad alegada en su WSDL.  
   
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>Uso de certificados X509 en lugar de NTLM  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona dos mecanismos para la autenticación punto a punto: los certificados X509 (utilizados por el canal del mismo nivel) y la autenticación de Windows, donde la negociación SSPI disminuye de Kerberos a NTLM.  Se prefiere la autenticación basada en certificado con tamaños de clave de 1024 bits o más antes que NTLM por varias razones:  
+ WCF proporciona dos mecanismos para la autenticación de peer-to-peer: X509 certificados (usados por el canal del mismo nivel) y la autenticación de Windows donde la negociación SSPI disminuye de Kerberos a NTLM.  Se prefiere la autenticación basada en certificado con tamaños de clave de 1024 bits o más antes que NTLM por varias razones:  
   
 -   la disponibilidad de la autenticación mutua  
   

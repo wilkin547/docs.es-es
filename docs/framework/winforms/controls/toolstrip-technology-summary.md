@@ -1,29 +1,17 @@
 ---
-title: "Resumen de la tecnología ToolStrip"
-ms.custom: 
+title: Resumen de la tecnología ToolStrip
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], technology summary
 - status bars [Windows Forms], technology summary
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4777a6cb30f641faf2305bc6d8bca55d243c94b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c4f7b13590457623bbdfd6e4c07317f3a0285fd0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrip-technology-summary"></a>Resumen de la tecnología ToolStrip
 En este tema se resume la información sobre el control `ToolStrip` y las clases que admiten su uso.  

@@ -1,24 +1,12 @@
 ---
-title: "Cómo: Hospedar un flujo de trabajo no perteneciente al servicio en IIS"
-ms.custom: 
+title: 'Cómo: Hospedar un flujo de trabajo no perteneciente al servicio en IIS'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70fd6aca94f2addd7ee568e897171ae1da86db67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Cómo: Hospedar un flujo de trabajo no perteneciente al servicio en IIS
 Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hospedar en IIS/WAS. Esto es útil cuando deba hospedar un flujo de trabajo escrito por otra persona. Por ejemplo, si hospeda en otro host el diseñador de flujo de trabajo y permite a los usuarios que creen sus propios flujos de trabajo.  Si se hospedan flujos de trabajo no pertenecientes al servicio en IIS, se proporciona compatibilidad con características como el reciclaje de proceso, el apagado por inactividad, la supervisión del estado de los procesos y la activación basada en mensajes. Los servicios de flujo de trabajo hospedados en IIS contienen actividades de la clase <xref:System.ServiceModel.Activities.Receive> y se activan cuando IIS recibe un mensaje. Los flujos de trabajo no pertenecientes al servicio no contienen actividades de mensajería y no se pueden activar enviando un mensaje de forma predeterminada.  Debe derivar una clase de la clase <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> y definir un contrato de servicio que contenga operaciones para crear una instancia de flujo de trabajo. Este tema le guiará a través de la creación de un flujo de trabajo simple, definir un contrato de servicio que un cliente puede utilizar para activar el flujo de trabajo y derivar una clase de <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> que utiliza el contrato de servicio para escuchar las solicitudes de creación de flujo de trabajo.  
@@ -332,7 +320,7 @@ Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hosped
   
 8.  Copie el archivo web.config en el directorio de la aplicación IIS.  
   
-9. Pruebe para ver si el extremo de creación funciona iniciando Internet Explorer y buscando http://localhost/MyCreationEndpoint/Workflow1.xamlx. Internet Explorer debe mostrar la siguiente pantalla:  
+9. Prueba para ver si el extremo de creación funciona Iniciando Internet Explorer y vaya a http://localhost/MyCreationEndpoint/Workflow1.xamlx. Internet Explorer debe mostrar la siguiente pantalla:  
   
      ![Probar el servicio](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   

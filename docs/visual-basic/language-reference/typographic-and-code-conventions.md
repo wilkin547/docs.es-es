@@ -1,9 +1,6 @@
 ---
-title: "Convenciones tipográficas y de código (Visual Basic)"
+title: Convenciones tipográficas y de código (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - best practices [Visual Basic], coding conventions
@@ -13,14 +10,11 @@ helpviewer_keywords:
 - conventions [Visual Basic], documentation
 - Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7b6db5c223b0548e308b49a686cff72eaaf8da36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb7a33ef21bf6beda730dffa8eb7ff9cabe599fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>Convenciones tipográficas y de código (Visual Basic)
 Documentación de Visual Basic utiliza la siguiente tipográfico y convenciones de código.  
@@ -32,7 +26,7 @@ Documentación de Visual Basic utiliza la siguiente tipográfico y convenciones 
 |`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|Palabras clave específicas del idioma y los miembros de tiempo de ejecución tienen letras mayúsculas iniciales y se da formato como se muestra en este ejemplo.|  
 |**SmallProject**, **ButtonCollection**|Palabras y frases que se le solicita que escriba se da formato como se muestra en este ejemplo.|  
 |[Module (instrucción)](../../visual-basic/language-reference/statements/module-statement.md)|Como se muestra en este ejemplo, se da formato a vínculos que puede hacer clic para ir a otra página de ayuda.|  
-|*objeto*, *variableName*,`argumentList`|Tal como se muestra en este ejemplo, se da formato a los marcadores de posición para obtener información que proporcione.|  
+|*objeto*, *variableName*, `argumentList`|Tal como se muestra en este ejemplo, se da formato a los marcadores de posición para obtener información que proporcione.|  
 |[Shadows], [ *expressionList* ]|En la sintaxis, los elementos opcionales aparecen entre corchetes.|  
 |{ `Public` &#124; `Friend` &#124; `Private` }|En la sintaxis, cuando debe tomar una decisión entre dos o más elementos de los elementos están entre llaves y separados por barras verticales.<br /><br /> Debe seleccionar uno y solo uno de los elementos.|  
 |[ `Protected` &#124; `Friend` ]|En la sintaxis, si tiene la opción de seleccionar entre dos o más elementos de los elementos son entre corchetes y separados por barras verticales.<br /><br /> Puede seleccionar cualquier combinación de los elementos, o no hay ningún elemento.|  

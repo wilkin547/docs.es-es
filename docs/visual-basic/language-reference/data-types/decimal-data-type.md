@@ -1,11 +1,6 @@
 ---
 title: Decimal (Tipo de datos, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Decimal
 helpviewer_keywords:
@@ -25,14 +20,11 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 55a9293fa680a7a04cff4099654d4d66790e8d3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e256e93d7857c8674a1d711fa9cafd3ed9a29f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal (Tipo de datos, Visual Basic)
 Contiene con signo valores de 128 bits (16 bytes) que representan números enteros de 96 bits (12 bytes) escalados por una potencia variable de 10. El factor de escala especifica el número de dígitos a la derecha del separador decimal; lo comprendido entre 0 y 28. Con una escala de 0 (sin decimales), el mayor valor posible es +/-79,228,162,514,264,337,593,543,950,335 (+/-7. 9228162514264337593543950335E + 28). Con 28 decimales, el mayor valor posible es +/-7,9228162514264337593543950335 y el valor más pequeño distinto de cero es +/-0.0000000000000000000000000001 (+/-1E-28).  
@@ -44,7 +36,7 @@ Contiene con signo valores de 128 bits (16 bytes) que representan números enter
   
 ## <a name="programming-tips"></a>Sugerencias de programación  
   
--   **Precisión.** `Decimal`no es un tipo de datos de punto flotante. El `Decimal` estructura contiene un valor entero binario, junto con un bit de signo y un entero factor de escala que especifica qué parte del valor es una fracción decimal. Por este motivo, `Decimal` números tienen una representación más precisa en la memoria que los tipos de punto flotante (`Single` y `Double`).  
+-   **Precisión.** `Decimal` no es un tipo de datos de punto flotante. El `Decimal` estructura contiene un valor entero binario, junto con un bit de signo y un entero factor de escala que especifica qué parte del valor es una fracción decimal. Por este motivo, `Decimal` números tienen una representación más precisa en la memoria que los tipos de punto flotante (`Single` y `Double`).  
   
 -   **Rendimiento.** El `Decimal` tipo de datos es el más lento de todos los tipos numéricos. Debería sopesar la importancia de la precisión con respecto al rendimiento antes de elegir un tipo de datos.  
   

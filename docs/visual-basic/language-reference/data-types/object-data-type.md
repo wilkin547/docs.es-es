@@ -1,10 +1,6 @@
 ---
 title: Object Data Type
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Object
 - vb.Variant
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 847f2b50296ad1a1ba6f0009d1d6afced27f9abe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9b1da5a88c12e0d883c3afe63be98c3fa3e9173
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-data-type"></a>Object Data Type
 Contiene direcciones que hacen referencia a objetos. Puede asignar cualquier tipo de referencia (cadena, matriz, clase o interfaz) a una `Object` variable. Un `Object` variable también puede hacer referencia a los datos de cualquier tipo de valor (numérico, `Boolean`, `Char`, `Date`, estructura o enumeración).  
@@ -58,7 +51,7 @@ datTyp = Type.GetTypeCode(myObject.GetType())
   
      Sin embargo, si convierte entre tipos de valor y `Object`, Visual Basic realiza operaciones llamadas *conversión boxing* y *unboxing*, que ralentizan la ejecución.  
   
--   **Caracteres de tipo.** `Object`no tiene ningún carácter de tipo literal ni caracteres de tipo identificador.  
+-   **Caracteres de tipo.** `Object` no tiene ningún carácter de tipo literal ni caracteres de tipo identificador.  
   
 -   **Tipo de Framework.** El tipo correspondiente en .NET Framework es la <xref:System.Object?displayProperty=nameWithType> clase.  
   

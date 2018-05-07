@@ -1,30 +1,20 @@
 ---
 title: Seguridad de los mensajes con un cliente de nombres de usuario
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-caps.latest.revision: "15"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: dfda34c6bf165ebcecfd6d9a3710e785586d6cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bda1bc18e2b5af1365c799c6f2be9d8d220e9ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-user-name-client"></a>Seguridad de los mensajes con un cliente de nombres de usuario
-La ilustración siguiente muestra un servicio y cliente de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protegidos mediante seguridad del nivel de mensaje. La autenticación del servicio se realiza mediante un certificado X.509. El cliente se autentica utilizando un nombre de usuario y contraseña.  
+La ilustración siguiente muestra un servicio de Windows Communication Foundation (WCF) y el cliente que se protegen utilizando la seguridad de nivel de mensaje. La autenticación del servicio se realiza mediante un certificado X.509. El cliente se autentica utilizando un nombre de usuario y contraseña.  
   
  Para una aplicación de ejemplo, vea [nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
   
@@ -33,7 +23,7 @@ La ilustración siguiente muestra un servicio y cliente de [!INCLUDE[indigo1](..
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Modo de seguridad|Mensaje|  
-|Interoperabilidad|Solo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]|  
+|Interoperabilidad|Windows Communication Foundation (WCF) solo|  
 |Autenticación (servidor)|La negociación inicial requiere autenticación de servidor|  
 |Autenticación (cliente)|Nombre de usuario/contraseña|  
 |Integridad|Sí, mediante el contexto de seguridad compartido|  

@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Aplicar material emisor a un objeto tridimensional"
-ms.custom: 
+title: 'Cómo: Aplicar material emisor a un objeto tridimensional'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - EmissiveMaterial [WPF], applying to 3-D objects
 - 3-D objects [WPF], applying EmissiveMaterial
 ms.assetid: fd442cc2-5adc-487a-ba70-e45ed54bb3b4
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c62436adc974df4b74cf1548abc09ac1f396fc2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da2c8c5d488afd02b50cfeee70048e6fa619248c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-apply-emissive-material-to-a-3-d-object"></a>Cómo: Aplicar material emisor a un objeto tridimensional
 En el ejemplo siguiente se muestra cómo utilizar <xref:System.Windows.Media.Media3D.EmissiveMaterial> para agregar color a un Material existente igual que el color de pincel de EmissiveMaterial. El código siguiente muestra <xref:System.Windows.Media.Media3D.DiffuseMaterial> y <xref:System.Windows.Media.Media3D.EmissiveMaterial> aplicados en combinación para agregar azul a la apariencia de DiffuseMaterial.  

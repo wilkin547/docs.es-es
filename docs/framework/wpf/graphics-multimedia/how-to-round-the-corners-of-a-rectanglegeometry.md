@@ -1,29 +1,17 @@
 ---
-title: "Cómo: Redondear las esquinas de un RectangleGeometry"
-ms.custom: 
+title: 'Cómo: Redondear las esquinas de un RectangleGeometry'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - corners [WPF], rounding
 - RectangleGeometry class [WPF], rounding corners
 - graphics [WPF], rounding corners of RectangleGeometry objects [WPF]
 - rounding corners of RectangleGeometry objects [WPF]
 ms.assetid: 926644bc-1357-4c0b-ac81-694bd090ae87
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92a51b3c610d3755583f8a39314f45d3980ee1bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e4f1d37e2c0f26967affff14ed6475fc8c0cb28c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>Cómo: Redondear las esquinas de un RectangleGeometry
 Para redondear los vértices de un <xref:System.Windows.Media.RectangleGeometry>, establezca su <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> y <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> propiedades en un valor mayor que cero. Cuanto mayores sean los valores, más redondeadas serán las esquinas del rectángulo.  
@@ -33,7 +21,7 @@ Para redondear los vértices de un <xref:System.Windows.Media.RectangleGeometry>
   
  [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMRoundedRectangleGeometryExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/RectangleGeometryRoundedCornerExample.xaml#graphicsmmroundedrectanglegeometryexamplewholepage)]  
   
- ![Rectángulos con diferentes valores de RadiusX &#47; Configuración radiusY](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rounded.png "graphicsmm_rounded")  
+ ![Rectángulos con diferentes valores de RadiusX&#47;configuración RadiusY](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rounded.png "graphicsmm_rounded")  
 Rectángulos con esquinas redondeadas  
   
 ## <a name="see-also"></a>Vea también  

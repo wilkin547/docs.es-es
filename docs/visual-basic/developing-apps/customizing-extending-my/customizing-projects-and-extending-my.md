@@ -1,28 +1,22 @@
 ---
 title: Personalizar proyectos y ampliar My con Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 397b345239f8707f0129ac14ab426f93372b4010
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 4dfe14f7680ad0c3a302334c07bb17e3e92011b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Personalizar proyectos y ampliar My con Visual Basic
 Puede personalizar las plantillas de proyecto para proporcionar adicionales `My` objetos. Esto facilita a otros desarrolladores encontrar y utilizar los objetos.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Extender el mi Namespace en Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+ [Extender el espacio de nombres My en Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  Describe cómo agregar miembros personalizados y valores para el `My` espacio de nombres en Visual Basic.  
   
  [Empaquetado e implementación de extensiones de My personalizadas](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  

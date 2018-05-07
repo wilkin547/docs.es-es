@@ -1,24 +1,14 @@
 ---
 title: Definición de tipos anónimos (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8b5b7eba55d719c1482b7224ecffc78b776feb00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 179fb9773fde2631666498d54894037b2bbfd087
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Definición de tipos anónimos (Visual Basic)
 En respuesta a la declaración de una instancia de un tipo anónimo, el compilador crea una nueva definición de clase que contiene las propiedades especificadas para el tipo.  
@@ -63,7 +53,7 @@ End Class
   
  Si una declaración de tipo anónimo contiene al menos una propiedad de clave, la definición de tipo invalida tres miembros heredados de <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, y <xref:System.Object.ToString%2A>. Si no se declara ninguna propiedad clave, solo <xref:System.Object.ToString%2A> se invalida. Las invalidaciones proporcionan la funcionalidad siguiente:  
   
--   `Equals`Devuelve `True` si dos instancias de tipo anónimo son la misma instancia o si cumplen las condiciones siguientes:  
+-   `Equals` Devuelve `True` si dos instancias de tipo anónimo son la misma instancia o si cumplen las condiciones siguientes:  
   
     -   Tienen el mismo número de propiedades.  
   
@@ -77,9 +67,9 @@ End Class
   
      [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
   
--   `GetHashcode`Proporciona un algoritmo GetHashCode único correctamente. El algoritmo utiliza sólo las propiedades de clave para calcular el código hash.  
+-   `GetHashcode` Proporciona un algoritmo GetHashCode único correctamente. El algoritmo utiliza sólo las propiedades de clave para calcular el código hash.  
   
--   `ToString`Devuelve una cadena de valores de propiedad concatenados, como se muestra en el ejemplo siguiente. Clave y propiedades de clave no se incluyen.  
+-   `ToString` Devuelve una cadena de valores de propiedad concatenados, como se muestra en el ejemplo siguiente. Clave y propiedades de clave no se incluyen.  
   
      [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
   

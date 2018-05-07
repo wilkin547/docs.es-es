@@ -1,28 +1,19 @@
 ---
-title: "El tipo de variable &#39; &lt;variablename&gt;&#39; no se inferirá porque está enlazada a un campo en un ámbito de inclusión"
+title: El tipo de variable &#39; &lt;variablename&gt; &#39; no se inferirá porque está enlazada a un campo en un ámbito de inclusión
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc42110
 - bc42110
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 39968407f4de5436df324320c99dede4d72e2808
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb423e8dcced6956eb86d484607915030c91412b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>El tipo de variable &#39; &lt;variablename&gt;&#39; no se inferirá porque está enlazada a un campo en un ámbito de inclusión
+# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>El tipo de variable &#39; &lt;variablename&gt; &#39; no se inferirá porque está enlazada a un campo en un ámbito de inclusión
 El tipo de variable '\<variablename >' no se inferirá porque está enlazada a un campo en un ámbito de inclusión. Cambie el nombre de '\<variablename >', o utilice el nombre completo (por ejemplo, 'Me.nombreDeVariable' o 'MiBase.nombreDeVariable').  
   
  Una variable de control de bucle en su código tiene el mismo nombre que un campo de la clase u otro ámbito de inclusión. Dado que la variable de control se utiliza sin una cláusula `As`, se enlaza al campo en el ámbito de inclusión y el compilador no crea una nueva variable para ella ni infiere su tipo.  

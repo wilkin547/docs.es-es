@@ -1,27 +1,15 @@
 ---
-title: "Anuncios de detección y cliente de anuncio"
-ms.custom: 
+title: Anuncios de detección y cliente de anuncio
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67eab6a5b35e29fe3df09ab286090433d25e8ca3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c32aca5e6deab01423d61c516ee924d00bc041ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Anuncios de detección y cliente de anuncio
-La característica de detección de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite a los componentes anunciar su disponibilidad. Si se configura para ello, un servicio envía anuncios de hola y de adiós. Clientes u otros componentes pueden realizar escuchas de dichos mensajes de anuncio y actuar de forma correspondiente. Esto proporciona un método alternativo para que los clientes sean consciente de los servicios. La funcionalidad de anuncios tiene varios usos. Por ejemplo, si los servicios acceden y dejan una red con frecuencia, los anuncios pueden ser una mejor alternativa que la búsqueda de servicios. Con este enfoque, el tráfico de red se reduce y el cliente puede obtener información sobre la presencia o salida del servicio en cuanto se reciban los anuncios.  
+La característica de detección WCF permite a los componentes anunciar su disponibilidad. Si se configura para ello, un servicio envía anuncios de hola y de adiós. Clientes u otros componentes pueden realizar escuchas de dichos mensajes de anuncio y actuar de forma correspondiente. Esto proporciona un método alternativo para que los clientes sean consciente de los servicios. La funcionalidad de anuncios tiene varios usos. Por ejemplo, si los servicios acceden y dejan una red con frecuencia, los anuncios pueden ser una mejor alternativa que la búsqueda de servicios. Con este enfoque, el tráfico de red se reduce y el cliente puede obtener información sobre la presencia o salida del servicio en cuanto se reciban los anuncios.  
   
 ## <a name="discovery-announcements"></a>Anuncios de detección  
  Cuando un servicio configurado para anuncios se une a una red y se vuelve reconocible, envía un mensaje de Hola que anuncia su disponibilidad a los clientes que realizan escuchas. El mensaje contiene información relacionada con la detección sobre el servicio, como el contrato, la dirección del extremo y los ámbitos asociados. Puede especificar dónde se envía el mensaje de anuncio mediante la clase <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>. Si el extremo del anuncio es una clase <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, el hola y el adiós se transmiten de forma adecuada o, si el extremo del anuncio es una unidifusión, los mensajes se envían directamente al extremo especificado.  

@@ -1,12 +1,6 @@
 ---
-title: "Select (Cláusula, Visual Basic)"
+title: Select (Cláusula, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QuerySelect
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9d8cabcbd8554ca2aee639eaac8a52f0485a266
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 55c1e79b9e8e26483c1b7374a755bf977129169b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="select-clause-visual-basic"></a>Select (Cláusula, Visual Basic)
 Define el resultado de una consulta.  
@@ -37,7 +28,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
  Opcional. Un alias que puede utilizarse para hacer referencia a los resultados de la expresión de columna.  
   
  `fieldName1`  
- Obligatorio. El nombre del campo que se va a devolver en el resultado de la consulta.  
+ Requerido. El nombre del campo que se va a devolver en el resultado de la consulta.  
   
 ## <a name="remarks"></a>Comentarios  
  Puede usar el `Select` cláusula para definir los resultados para devolver desde una consulta. Esto le permite definir los miembros de un nuevo tipo anónimo creado por una consulta, o a los miembros de un tipo con nombre que es devuelto por una consulta de destino. El `Select` cláusula no es necesaria para una consulta. Si no hay ningún `Select` cláusula se especifica, la consulta devolverá un tipo basado en todos los miembros de las variables de rango identificados para el ámbito actual. Para más información, vea [Tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). Cuando una consulta crea un tipo con nombre, devolverá un resultado de tipo <xref:System.Collections.Generic.IEnumerable%601> donde `T` es el tipo creado.  

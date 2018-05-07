@@ -1,29 +1,15 @@
 ---
 title: Transferencia de mensajes por secuencias
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 340c903e2cb34373514ea2f739cab57dc620df5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streaming-message-transfer"></a>Transferencia de mensajes por secuencias
-Los transportes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admiten dos modos para transferir los mensajes:  
+Los transportes de Windows Communication Foundation (WCF) que admiten dos modos para transferir los mensajes:  
   
 -   Las transferencias almacenadas en búfer contienen el mensaje completo en un búfer de memoria hasta que la transferencia haya finalizado. Un mensaje almacenado en búfer debe entregarse por completo antes de que un receptor pueda leerlo.  
   
@@ -52,7 +38,7 @@ Los transportes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] admit
   
  Las operaciones que se producen en un transporte por secuencias pueden tener un contrato con, como mucho, un parámetro de entrada o de salida. Ese parámetro corresponde al cuerpo completo del mensaje y ha de ser un <xref:System.ServiceModel.Channels.Message>, un tipo derivado de <xref:System.IO.Stream>, o una implementación <xref:System.Xml.Serialization.IXmlSerializable>. Tener un valor devuelto para una operación equivale a tener un parámetro de salida.  
   
- Algunas características de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como la mensajería de confianza, las transacciones y la seguridad del nivel del mensaje SOAP, confían en almacenar en búfer los mensajes para las transmisiones. El uso de estas características puede reducir o eliminar las ventajas de rendimiento ganadas mediante la transmisión por secuencias. Para proteger un transporte por secuencias, utilice la seguridad de nivel de transporte únicamente o utilice la seguridad de nivel de transporte más la seguridad de mensaje de solo autenticación.  
+ Algunas características WCF, como mensajería confiable, transacciones y la seguridad de nivel de mensaje SOAP, se basan en búfer los mensajes para las transmisiones. El uso de estas características puede reducir o eliminar las ventajas de rendimiento ganadas mediante la transmisión por secuencias. Para proteger un transporte por secuencias, utilice la seguridad de nivel de transporte únicamente o utilice la seguridad de nivel de transporte más la seguridad de mensaje de solo autenticación.  
   
  Los encabezados SOAP siempre están almacenados en búfer, incluso cuando el modo de transferencia es por secuencias. Los encabezados de un mensaje no deben superar el tamaño de la cuota de transporte `MaxBufferSize`. Para obtener más información sobre esta configuración, consulte [las cuotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   

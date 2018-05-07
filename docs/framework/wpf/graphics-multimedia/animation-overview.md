@@ -1,13 +1,6 @@
 ---
-title: "Información general sobre animaciones"
-ms.custom: 
+title: Información general sobre animaciones
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,20 +8,15 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-caps.latest.revision: "73"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 118d63bbbcd0cbb52d092af7002df2538df7790b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fb9550ddce4ead900206c2ece2f976ab8b42c4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="animation-overview"></a>Información general sobre animaciones
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Proporciona un conjunto eficaz de características de diseño y gráficos que le permiten crear interfaces de usuario atractivas y documentos atractivos. Las animaciones pueden hacer que una interfaz de usuario sea más vistosa y práctica. Simplemente animar un color de fondo o aplicando un elemento animado <xref:System.Windows.Media.Transform>, puede crear transiciones de pantalla espectaculares o proporcionar indicaciones visuales útiles.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Proporciona un conjunto eficaz de características de diseño y gráficos que le permiten crear interfaces de usuario atractivas y documentos atractivos. Las animaciones pueden hacer que una interfaz de usuario sea más vistosa y práctica. Simplemente animar un color de fondo o aplicando un elemento animado <xref:System.Windows.Media.Transform>, puede crear transiciones de pantalla espectaculares o proporcionar indicaciones visuales útiles.  
   
  Esta información general proporciona una introducción a la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de animación y temporización. Se centra en la animación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objetos mediante el uso de guiones gráficos.  
 
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Después, el programa actualiza el rectángulo con el nuevo valor y lo redibuja.  
   
- Anteriores a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] los programadores tenían que crear y administrar sus propios sistemas de temporización o utilizar bibliotecas personalizadas especiales. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]incluye un sistema eficaz de control de tiempo que se expone a través de código administrado y [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] y que está totalmente integrado en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. La animación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] facilita la animación de controles y otros objetos gráficos.  
+ Anteriores a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] los programadores tenían que crear y administrar sus propios sistemas de temporización o utilizar bibliotecas personalizadas especiales. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluye un sistema eficaz de control de tiempo que se expone a través de código administrado y [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] y que está totalmente integrado en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. La animación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] facilita la animación de controles y otros objetos gráficos.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controla de forma eficiente todo el trabajo de administración del sistema de control de tiempo y de actualización de la pantalla que se produce en segundo plano. Proporciona clases de control de tiempo que permiten centrarse en los efectos que se desea crear, en lugar de la mecánica para lograr esos efectos. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también facilita la creación de sus propias animaciones exponiendo clases base de animación de las que se pueden heredar sus clases, para generar animaciones personalizadas. Estas animaciones personalizadas se benefician de la mayoría de las ventajas de rendimiento de las clases de animación estándar.  
   
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Debe haber un tipo de animación compatible disponible. (Si [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no proporcione uno, puede crear los suyos propios. Consulte la [información general sobre animaciones personalizadas](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).)  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]contiene muchos objetos que tienen <xref:System.Windows.Media.Animation.IAnimatable> propiedades. Controles como <xref:System.Windows.Controls.Button> y <xref:System.Windows.Controls.TabControl>y también <xref:System.Windows.Controls.Panel> y <xref:System.Windows.Shapes.Shape> objetos heredan de <xref:System.Windows.DependencyObject>. La mayoría de sus propiedades son propiedades de dependencia.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contiene muchos objetos que tienen <xref:System.Windows.Media.Animation.IAnimatable> propiedades. Controles como <xref:System.Windows.Controls.Button> y <xref:System.Windows.Controls.TabControl>y también <xref:System.Windows.Controls.Panel> y <xref:System.Windows.Shapes.Shape> objetos heredan de <xref:System.Windows.DependencyObject>. La mayoría de sus propiedades son propiedades de dependencia.  
   
  Las animaciones pueden usarse casi en cualquier parte, lo que incluye estilos y plantillas de control. Las animaciones no tienen que ser visuales; puede animar objetos que no formen parte de la interfaz de usuario siempre y cuando cumplan los criterios que se describen en esta sección.  
   
@@ -268,7 +256,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="applyanimationstoproperty"></a>   
 ## <a name="applying-an-animation-to-a-property"></a>Aplicar una animación a una propiedad  
- En las secciones anteriores se han descrito los distintos tipos de animaciones y sus propiedades de control de tiempo. En esta sección se muestra cómo aplicar la animación a la propiedad que se desea animar. <xref:System.Windows.Media.Animation.Storyboard>los objetos proporcionan una manera de aplicar animaciones a propiedades. A <xref:System.Windows.Media.Animation.Storyboard> es un *escala de tiempo contenedora* que proporciona información de destino para las animaciones que contiene.  
+ En las secciones anteriores se han descrito los distintos tipos de animaciones y sus propiedades de control de tiempo. En esta sección se muestra cómo aplicar la animación a la propiedad que se desea animar. <xref:System.Windows.Media.Animation.Storyboard> los objetos proporcionan una manera de aplicar animaciones a propiedades. A <xref:System.Windows.Media.Animation.Storyboard> es un *escala de tiempo contenedora* que proporciona información de destino para las animaciones que contiene.  
   
 ### <a name="targeting-objects-and-properties"></a>Objetos y propiedades de destino  
  El <xref:System.Windows.Media.Animation.Storyboard> clase proporciona el <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> y <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> propiedades adjuntas. Al establecer estas propiedades en una animación, se indica a la animación qué debe animar. Sin embargo, para que una animación pueda tener un objeto como destino, normalmente se debe dar un nombre al objeto.  

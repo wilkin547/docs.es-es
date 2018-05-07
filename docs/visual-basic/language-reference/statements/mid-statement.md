@@ -1,11 +1,6 @@
 ---
-title: "Mid (Instrucción)"
+title: Mid (Instrucción)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.MidB
 - vb.Mid
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 61d812ef91acc65728b04efc9aa99e3975e71d0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 90b805df902dcdfebe85421583dd54e9af04bec9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mid-statement"></a>Mid (Instrucción)
 Reemplaza un número especificado de caracteres de un `String` variable con caracteres de otra cadena.  
@@ -39,22 +31,22 @@ Mid( _
   
 ## <a name="parts"></a>Elementos  
  `Target`  
- Obligatorio. Nombre de la `String` variable va a modificar.  
+ Requerido. Nombre de la `String` variable va a modificar.  
   
  `Start`  
- Obligatorio. `Integer`expresión. Posición de carácter de `Target` donde comienza el reemplazo de texto. `Start`utiliza un índice basado en uno.  
+ Requerido. `Integer` Expresión. Posición de carácter de `Target` donde comienza el reemplazo de texto. `Start` utiliza un índice basado en uno.  
   
  `Length`  
- Opcional. `Integer`expresión. Número de caracteres que se va a reemplazar. Si omite todos `String` se utiliza.  
+ Opcional. `Integer` Expresión. Número de caracteres que se va a reemplazar. Si omite todos `String` se utiliza.  
   
  `StringExpression`  
- Obligatorio. `String`Expresión que reemplaza parte de `Target`.  
+ Requerido. `String` Expresión que reemplaza parte de `Target`.  
   
 ## <a name="exceptions"></a>Excepciones  
   
 |Tipo de excepción|Condición|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start`< = 0 o `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start` < = 0 o `Length` < 0.|  
   
 ## <a name="remarks"></a>Comentarios  
  El número de caracteres reemplazados siempre es menor o igual que el número de caracteres en `Target`.  
@@ -72,7 +64,7 @@ Mid( _
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Módulo:**`Strings`  
+ **Módulo:** `Strings`  
   
  **Ensamblado:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   

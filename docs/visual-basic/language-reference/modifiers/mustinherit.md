@@ -1,10 +1,6 @@
 ---
 title: MustInherit (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - MustInherit
 - vb.MustInherit
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9d384986e42ee69a0f425c1590599aa2c82bc856
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d622c1cff77a45c8de7772af7efbb73586f4400
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Especifica que una clase puede usarse únicamente como clase base y que no se puede crear un objeto directamente a partir de él.  
@@ -31,7 +24,7 @@ Especifica que una clase puede usarse únicamente como clase base y que no se pu
   
  Otro uso de un `MustInherit` clase consiste en restringir una variable a un conjunto de clases relacionadas. Puede definir una clase base y derivan todas estas clases relacionadas. La clase base no es necesario proporcionar una funcionalidad común a todas las clases derivadas, pero puede actuar como un filtro para asignar valores a variables. Si el código utilizado declara una variable como la clase base, Visual Basic permite asignar solo un objeto de una de las clases derivadas a esa variable.  
   
- .NET Framework define varias `MustInherit` clases, entre ellas <xref:System.Array>, <xref:System.Enum>, y <xref:System.ValueType>. <xref:System.ValueType>es un ejemplo de una clase base que restringe una variable. Todos los tipos de valor se derivan de <xref:System.ValueType>. Si se declara una variable como <xref:System.ValueType>, puede asignar solo los tipos de valor a esa variable.  
+ .NET Framework define varias `MustInherit` clases, entre ellas <xref:System.Array>, <xref:System.Enum>, y <xref:System.ValueType>. <xref:System.ValueType> es un ejemplo de una clase base que restringe una variable. Todos los tipos de valor se derivan de <xref:System.ValueType>. Si se declara una variable como <xref:System.ValueType>, puede asignar solo los tipos de valor a esa variable.  
   
 ## <a name="rules"></a>Reglas  
   

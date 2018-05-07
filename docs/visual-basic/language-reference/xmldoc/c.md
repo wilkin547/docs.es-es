@@ -1,23 +1,15 @@
 ---
 title: '&lt;c&gt; (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7e57cae8fd4b93fee59992d717135ad7d3d78be5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 556c00fa761a1bce5e922a304706c78893550901
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltcgt-visual-basic"></a>&lt;c&gt; (Visual Basic)
 Indica que el texto de una descripción es código.  
@@ -37,7 +29,7 @@ Indica que el texto de una descripción es código.
 ## <a name="remarks"></a>Comentarios  
  La `<c>` etiqueta ofrece una manera de indicar que el texto dentro de una descripción se debe marcar como código. Use [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) para indicar varias líneas como código.  
   
- Compile con el parámetro [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
+ Compile con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación a un archivo.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo se utiliza la `<c>` etiqueta en la sección de resumen para indicar que `Counter` es el código.  

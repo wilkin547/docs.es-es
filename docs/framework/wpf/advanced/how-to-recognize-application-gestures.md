@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Reconocer gestos en aplicaciones"
-ms.custom: 
+title: 'Cómo: Reconocer gestos en aplicaciones'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - application gestures [WPF], recognizing
 - gestures [WPF], recognizing
 ms.assetid: d58b740f-5192-4a3e-af59-7aa162e6ca15
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fdff97fdb48126f3a7b970c677cf96f9c2ddaf8a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82ca91fc9e3745012d82357991b67f398079f1f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-recognize-application-gestures"></a>Cómo: Reconocer gestos en aplicaciones
 En el ejemplo siguiente se muestra cómo borrar tinta cuando un usuario realiza una <xref:System.Windows.Ink.ApplicationGesture.ScratchOut> de gestos en un <xref:System.Windows.Controls.InkCanvas>. En este ejemplo se da por supuesto un <xref:System.Windows.Controls.InkCanvas>, llamado `inkCanvas1`, se declara en el archivo XAML.  

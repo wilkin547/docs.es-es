@@ -1,11 +1,6 @@
 ---
-title: "Of (Cláusula, Visual Basic)"
+title: Of (Cláusula, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Of
 - vb.Of
@@ -22,14 +17,11 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ef3ac4ac88727b1dcae50fa14abde03f29a16fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9ace0ad55d9eb1618dbdafb0d49d1ff4b169a877
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="of-clause-visual-basic"></a>Of (Cláusula, Visual Basic)
 Presenta un `Of` cláusula, que identifica un *parámetro de tipo* en un *genérico* clase, estructura, interfaz, delegado o procedimiento. Para obtener información sobre los tipos genéricos, vea [tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
@@ -51,7 +43,7 @@ End Class
   
  Si completa la definición de clase anterior, puede construir una variedad de `dictionary` clases de él. Los tipos que se pasan al `entryType` y `keyType` determinar qué tipo de entrada de la clase contiene y qué tipo de clave se asocia a cada entrada. Debido a la restricción, debe proporcionar al `keyType` un tipo que implementa <xref:System.IComparable>.  
   
- En el ejemplo de código siguiente se crea un objeto que contiene `String` entradas y asocia un `Integer` clave con cada uno de ellos. `Integer`implementa <xref:System.IComparable> y por consiguiente satisface la restricción en `keyType`.  
+ En el ejemplo de código siguiente se crea un objeto que contiene `String` entradas y asocia un `Integer` clave con cada uno de ellos. `Integer` implementa <xref:System.IComparable> y por consiguiente satisface la restricción en `keyType`.  
   
 ```  
 Dim d As New dictionary(Of String, Integer)  

@@ -1,28 +1,19 @@
 ---
-title: '&#39; Get &#39; descriptor de acceso de propiedad &#39; &lt;propertyname&gt;&#39; no es accesible'
+title: '&#39;Obtener&#39; descriptor de acceso de propiedad &#39; &lt;propertyname&gt; &#39; no es accesible'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc31103
 - bc31103
 helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 167e040570af1fc78ce48f5e930e54981ba909ae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0972c0909f8b07aa1c6700ec32d1a1ca55d00cc1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39get39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39; Get &#39; descriptor de acceso de propiedad &#39; &lt;propertyname&gt;&#39; no es accesible
+# <a name="39get39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;Obtener&#39; descriptor de acceso de propiedad &#39; &lt;propertyname&gt; &#39; no es accesible
 Una instrucción intenta recuperar el valor de una propiedad cuando no tiene acceso a la propiedad `Get` procedimiento.  
   
  Si el [instrucción Get](../../../visual-basic/language-reference/statements/get-statement.md) está marcada con un acceso más restrictivo nivel que su [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md), se producirá un error en un intento de leer el valor de propiedad en los casos siguientes:  

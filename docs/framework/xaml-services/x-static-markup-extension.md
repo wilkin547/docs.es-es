@@ -1,13 +1,6 @@
 ---
 title: Extensiones de marcado x:Static
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - StaticExtension
 - xStatic
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-caps.latest.revision: "25"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 647bfed7b321a949090f6da047f9b8105d335101
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 980bf6a1bdb19afd5c8d3c798d31037ab8cd7086
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xstatic-markup-extension"></a>Extensiones de marcado x:Static
 Hace referencia a cualquier entidad de código por valor estático que se define en un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]: modo compatible. La propiedad estática que se hace referencia puede usarse para proporcionar el valor de una propiedad en XAML.  
@@ -41,7 +29,7 @@ Hace referencia a cualquier entidad de código por valor estático que se define
   
 |||  
 |-|-|  
-|`prefix`|Opcional. Un prefijo que hace referencia a un espacio de nombres XAML asignado, no predeterminado. `prefix`se muestra explícitamente el uso de porque rara vez hacen referencia a propiedades estáticas que proceden de un espacio de nombres XAML predeterminado. Vea la sección Comentarios.|  
+|`prefix`|Opcional. Un prefijo que hace referencia a un espacio de nombres XAML asignado, no predeterminado. `prefix` se muestra explícitamente el uso de porque rara vez hacen referencia a propiedades estáticas que proceden de un espacio de nombres XAML predeterminado. Vea la sección Comentarios.|  
 |`typeName`|Requerido. El nombre del tipo que define al miembro estático deseado.|  
 |`staticMemberName`|Requerido. El nombre del miembro de valor estático deseado (una constante, una propiedad estática, un campo o un valor de enumeración).|  
   
@@ -68,9 +56,9 @@ Hace referencia a cualquier entidad de código por valor estático que se define
   
  Hay dos otros usos XAML que son técnicamente posibles. Sin embargo, estos usos son menos común porque es innecesariamente detallados:  
   
- **Sintaxis de elemento de objeto:** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName``" .../>`  
+ **Sintaxis de elemento de objeto:** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName` `" .../>`  
   
- **Sintaxis de atributo con propiedad Member explícita para la cadena de inicialización:** `<` `object`  ``  `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName``}" .../>`  
+ **Sintaxis de atributo con propiedad Member explícita para la cadena de inicialización:** `<` `object` `` `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName` `}" .../>`  
   
  En la implementación de servicios XAML de .NET Framework, el control para esta extensión de marcado se define mediante la <xref:System.Windows.Markup.StaticExtension> clase.  
   

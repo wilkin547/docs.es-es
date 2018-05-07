@@ -1,11 +1,6 @@
 ---
-title: "Aggregate (Cláusula, Visual Basic)"
+title: Aggregate (Cláusula, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryAggregateIn
 - vb.QueryAggregate
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47017414a92bfbca0df4ce6e2b70398a01762d37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1db4b7fdcf9c8a38c2c49eca9d874eccea90ab1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate (Cláusula, Visual Basic)
 Aplica una o más funciones agregadas a una colección.  
@@ -40,11 +32,11 @@ Aggregate element [As type] In collection _
   
 |Término|Definición|  
 |---|---|  
-|`element`|Obligatorio. Variable que se utiliza para recorrer en iteración los elementos de la colección.|  
+|`element`|Requerido. Variable que se utiliza para recorrer en iteración los elementos de la colección.|  
 |`type`|Opcional. Tipo de `element`. Si se especifica ningún tipo, el tipo de `element` se deduce de `collection`.|  
-|`collection`|Obligatorio. Hace referencia a la colección para operar en.|  
+|`collection`|Requerido. Hace referencia a la colección para operar en.|  
 |`clause`|Opcional. Uno o más las cláusulas de consulta, como un `Where` cláusula para refinar los resultados de consulta para aplicar las cláusulas para o aggregate (cláusula).|  
-|`expressionList`|Obligatorio. Uno o más delimitada por comas expresiones que identifican una función de agregado para aplicar a la colección. Puede aplicar un alias a una función de agregado para especificar un nombre de miembro para el resultado de la consulta. Si no se proporciona ningún alias, se utiliza el nombre de la función de agregado. Para obtener ejemplos, vea la sección acerca de las funciones de agregado más adelante en este tema.|  
+|`expressionList`|Requerido. Uno o más delimitada por comas expresiones que identifican una función de agregado para aplicar a la colección. Puede aplicar un alias a una función de agregado para especificar un nombre de miembro para el resultado de la consulta. Si no se proporciona ningún alias, se utiliza el nombre de la función de agregado. Para obtener ejemplos, vea la sección acerca de las funciones de agregado más adelante en este tema.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `Aggregate` cláusula puede usarse para incluir funciones de agregado en las consultas. Las funciones de agregado realizan comprobaciones y cálculos sobre un conjunto de valores y devuelven un valor único. Puede acceder el valor calculado mediante el uso de un miembro del tipo del resultado de consulta. Las funciones agregadas estándares que puede utilizar son el `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, y `Sum` funciones. Estas funciones son familiares para los programadores que están familiarizados con agregados en SQL. Se describen en la sección siguiente de este tema.  

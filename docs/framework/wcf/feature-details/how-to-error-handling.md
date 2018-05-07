@@ -1,24 +1,12 @@
 ---
-title: "Cómo: Control de errores"
-ms.custom: 
+title: 'Cómo: Control de errores'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-caps.latest.revision: "5"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a5b0fe57bb6a4604c86e63a154e3af5542672912
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b173997eb53f8cf156ccb14083885a199dc8921
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-error-handling"></a>Cómo: Control de errores
 Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que utiliza el control de errores. En este ejemplo, los mensajes se enrutan a un extremo de destino. Si un mensaje no se puede entregar debido a un error de la red o relacionado con las comunicaciones (<xref:System.ServiceModel.CommunicationException>), el mensaje se reenvía a un extremo alternativo.  

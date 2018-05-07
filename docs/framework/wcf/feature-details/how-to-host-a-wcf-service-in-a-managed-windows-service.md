@@ -1,36 +1,22 @@
 ---
 title: Hospedaje de un servicio WCF en un servicio administrado de Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aab9780a0d40ab71710d454deb3144219557450f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c6c3e057fd07569d462f1bf25d1c283e42024a8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Hospedaje de un servicio WCF en un servicio administrado de Windows
-Este tema describe los pasos básicos necesarios para crear un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hospedado por un servicio de Windows. El escenario está habilitado por la opción de hospedaje de servicio de Windows administrado que es un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de ejecución prolongada hospedado fuera de Internet Information Services (IIS) en un entorno seguro que no es activado por mensaje. En su lugar, el sistema operativo controla la duración del servicio. Esta opción de hospedaje está disponible en todas las versiones de Windows.  
+En este tema se describe los pasos básicos necesarios para crear un servicio de Windows Communication Foundation (WCF) que se hospeda en un servicio de Windows. El escenario está habilitado el servicio de Windows administrado opción que es un servicio WCF de ejecución prolongada hospedado fuera de Internet Information Services (IIS) en un entorno seguro que no está activado el mensaje de hospedaje. En su lugar, el sistema operativo controla la duración del servicio. Esta opción de hospedaje está disponible en todas las versiones de Windows.  
   
- Los servicios de Windows se pueden administrar con Microsoft.ManagementConsole.SnapIn en Microsoft Management Console (MMC) y pueden configurarse automáticamente para iniciar cuando el sistema arranca. Esta opción de hospedaje consiste en el registro del dominio de la aplicación (AppDomain) que hospeda un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] como un servicio administrado por Windows, de modo que la vida del proceso está controlada por el Administrador de control de servicios (SCM) de los servicios de Windows.  
+ Los servicios de Windows se pueden administrar con Microsoft.ManagementConsole.SnapIn en Microsoft Management Console (MMC) y pueden configurarse automáticamente para iniciar cuando el sistema arranca. Esta opción de hospedaje consiste en registrar el dominio de aplicación (AppDomain) que hospeda un servicio WCF como un servicio de Windows administrado para que la duración de proceso del servicio se controla mediante el Administrador de Control de servicios (SCM) para los servicios de Windows.  
   
- El código del servicio incluye una implementación del contrato de servicios, una clase de Windows Service y una clase del instalador. La clase de implementación de servicio, `CalculatorService`, es un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. `CalculatorWindowsService` es un servicio de Windows. Para poder calificarse como servicio de Windows, la clase hereda de `ServiceBase` e implementa los métodos `OnStart` y `OnStop`. En `OnStart`, se crea <xref:System.ServiceModel.ServiceHost> para el tipo `CalculatorService` y se abre. En `OnStop`, el servicio se detiene y se elimina. El host también es responsable de proporcionar una dirección base al host de servicio, que se ha configurado en los valores de la aplicación. La clase del instalador, que hereda de <xref:System.Configuration.Install.Installer>, permite instalar el programa como un servicio de Windows mediante la herramienta Installutil.exe.  
+ El código del servicio incluye una implementación del contrato de servicios, una clase de Windows Service y una clase del instalador. La clase de implementación del servicio, `CalculatorService`, es un servicio WCF. `CalculatorWindowsService` es un servicio de Windows. Para poder calificarse como servicio de Windows, la clase hereda de `ServiceBase` e implementa los métodos `OnStart` y `OnStop`. En `OnStart`, se crea <xref:System.ServiceModel.ServiceHost> para el tipo `CalculatorService` y se abre. En `OnStop`, el servicio se detiene y se elimina. El host también es responsable de proporcionar una dirección base al host de servicio, que se ha configurado en los valores de la aplicación. La clase del instalador, que hereda de <xref:System.Configuration.Install.Installer>, permite instalar el programa como un servicio de Windows mediante la herramienta Installutil.exe.  
   
 ### <a name="construct-the-service-and-provide-the-hosting-code"></a>Construya el servicio y proporcione el código del hospedaje  
   
@@ -135,7 +121,7 @@ Este tema describe los pasos básicos necesarios para crear un servicio de [!INC
     > [!NOTE]
     >  Si no usa el símbolo del sistema de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], asegúrese de que el directorio `%WinDir%\Microsoft.NET\Framework\v4.0.<current version>` se encuentra en la ruta de acceso del sistema.  
   
-     Escriba `services.msc` en el símbolo del sistema para tener acceso al Administrador de control de servicios (SCM). El servicio de Windows debería aparecer en Servicios como "WCFWindowsServiceSample". El servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] solo puede responder a los clientes si el servicio de Windows se está ejecutando. Para iniciar el servicio, haga clic en él en el SCM y seleccione "Iniciar" o escriba **WCFWindowsServiceSample del comando net start** en el símbolo del sistema.  
+     Escriba `services.msc` en el símbolo del sistema para tener acceso al Administrador de control de servicios (SCM). El servicio de Windows debería aparecer en Servicios como "WCFWindowsServiceSample". El servicio WCF sólo puede responder a los clientes si se está ejecutando el servicio de Windows. Para iniciar el servicio, haga clic en él en el SCM y seleccione "Iniciar" o escriba **WCFWindowsServiceSample del comando net start** en el símbolo del sistema.  
   
 3.  Si realiza cambios en el servicio, debe detenerlo primero y desinstalarlo. Para detener el servicio, haga clic en el servicio en el SCM y seleccione "Stop", o **net stop de tipo WCFWindowsServiceSample** en el símbolo del sistema. Tenga en cuenta que si detiene el servicio de Windows y, a continuación, ejecuta un cliente, se produce una excepción <xref:System.ServiceModel.EndpointNotFoundException> cuando un cliente intenta tener acceso al servicio. Para desinstalar el tipo de servicio de Windows **installutil /u bin\service.exe** en el símbolo del sistema.  
   

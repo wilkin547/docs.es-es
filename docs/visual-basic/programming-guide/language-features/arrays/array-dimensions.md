@@ -1,12 +1,6 @@
 ---
 title: Dimensiones de matrices en Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - dimensions, arrays
 - arrays [Visual Basic], dimensions
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21e170ca5942862a26e05428fffaea7d1e875e19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf295288dd034d744dceb71b5c58278be5cc2a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensiones de matrices en Visual Basic
 A *dimensión* es una dirección en la que puede variar la especificación de elementos de la matriz. Una matriz que contiene las ventas totales para cada día del mes tiene una dimensión (el día del mes). Una matriz que contiene las ventas totales por departamento para cada día del mes tiene dos dimensiones (el número de departamento y el día del mes). El número de dimensiones tiene una matriz se denomina su *rango*.  
@@ -35,13 +26,13 @@ A *dimensión* es una dirección en la que puede variar la especificación de el
   
  Las ilustraciones siguientes muestran la estructura conceptual de matrices con rangos diferentes. Cada elemento de las ilustraciones muestra los valores de índice que tienen acceso a él. Por ejemplo, puede tener acceso el primer elemento de la segunda fila de la matriz bidimensional especificando los índices `(1, 0)`.  
   
- ![Diagrama gráfico de una ventana de &#45; matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
+ ![Diagrama gráfico de uno&#45;matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
 Matriz unidimensional  
   
- ![Diagrama gráfico de dos &#45; matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
+ ![Diagrama gráfico de dos&#45;matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
 matriz bidimensional  
   
- ![Diagrama gráfico de tres &#45; matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
+ ![Diagrama gráfico de tres&#45;matriz dimensional](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
 matriz tridimensional  
   
 ### <a name="one-dimension"></a>Una dimensión  

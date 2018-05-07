@@ -1,13 +1,6 @@
 ---
 title: Conversiones implícita y explícita (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - conversions [Visual Basic], type
 - variables [Visual Basic], changing data type
@@ -27,14 +20,11 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9827cecce0a15d37d2ffe3ccf691404149b156fb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8a0909641b653a1800bdf3f50ec1dfe993411824
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Conversiones implícita y explícita (Visual Basic)
 Un *conversión implícita* no requiere ninguna sintaxis especial en el código fuente. En el ejemplo siguiente, Visual Basic convierte implícitamente el valor de `k` a un valor de punto flotante de precisión simple antes de asignarlo a `q`.  

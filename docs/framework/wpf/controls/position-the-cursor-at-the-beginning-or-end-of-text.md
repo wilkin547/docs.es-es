@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Colocar el cursor al principio o al final del texto de un control"
-ms.custom: 
+title: 'Cómo: Colocar el cursor al principio o al final del texto de un control'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - TextBox control [WPF], positioning cursor
 - cursor [WPF], positioning
 ms.assetid: c771a0b8-c6b4-4240-aecd-a21d0ba51a2e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: df30adf232ad782999d8bdf52b1946f84785f98d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79ecf1d5dccee0dacef8e288c0c2e044334e65d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>Cómo: Colocar el cursor al principio o al final del texto de un control
 Este ejemplo muestra cómo colocar el cursor al principio o al final del contenido de texto de un <xref:System.Windows.Controls.TextBox> control.  

@@ -1,14 +1,6 @@
 ---
-title: "ExportNestedType (Método)"
-ms.custom: 
+title: ExportNestedType (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink.ExportNestedType
 - ExportNestedType
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: dec7df60-4d30-47c8-99db-72e0419e5f76
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6d40fffb2d40012d69599ad1bfcdbdaf454aa02
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0afe4daa1c85f3e15addac55bdbe631d40e03f19
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType (Método)
 Especifica los tipos anidados como exportable. El [ExportType (método)](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) puede también tipos de exportación anidado, pero este método es más rápido.  
@@ -69,7 +57,7 @@ HRESULT ExportNestedType(
  Nombre de tipo completo para exportar.  
   
  `dwFlags`  
- `ComType`marca como `tdPublic` o `tdNested`. Este valor puede pasarse a [DefineExportedType (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` marca como `tdPublic` o `tdNested`. Este valor puede pasarse a [DefineExportedType (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
  Recibe el token de tipos exportada.  

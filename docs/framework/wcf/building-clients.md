@@ -1,30 +1,18 @@
 ---
-title: "Creación de clientes"
-ms.custom: 
+title: Creación de clientes
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - clients [WCF], building
 - clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d50ab37a90df418b031cb8aba5d84f0bbac9a1d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 431f62c7de8161d0e687d8f1ee554c6d59ca69b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-clients"></a>Creación de clientes
-Los temas en esta sección muestran cómo crear y utilizar un cliente de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+Los temas de esta sección muestran cómo crear y utilizar a un cliente de Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción a un cliente WCF](../../../docs/framework/wcf/wcf-client-overview.md)  

@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Utilizar la función de suavizado de contorno con texto"
-ms.custom: 
+title: 'Cómo: Utilizar la función de suavizado de contorno con texto'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - text [Windows Forms], antialiasing
 - strings [Windows Forms], antialiasing when drawing
 ms.assetid: 48fc34f3-f236-4b01-a0cb-f0752e6d22ae
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: edd31ec5b9d94ac1791fb0f2a73522fdf4178627
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 842c1fb0b73533fd2e87474b9e8cfa282eba2a70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-antialiasing-with-text"></a>Cómo: Utilizar la función de suavizado de contorno con texto
 *Suavizado de contorno* se refiere al suavizado de los bordes irregulares de gráficos y texto para mejorar su apariencia y legibilidad dibujados. Con los recursos administrados [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] clases, puede representar texto con suavizado de contorno de alta calidad, así como texto de menor calidad. Normalmente, una representación de calidad superior tarda más tiempo de procesamiento que una calidad inferior. Para establecer el nivel de calidad de texto, establezca la <xref:System.Drawing.Graphics.TextRenderingHint%2A> propiedad de un <xref:System.Drawing.Graphics> a uno de los elementos de la <xref:System.Drawing.Text.TextRenderingHint> (enumeración)  

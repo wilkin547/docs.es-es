@@ -1,13 +1,6 @@
 ---
 title: Constantes y enumeraciones en Visual Basic
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - enumerations [Visual Basic]
 - Visual Basic code, constants
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], constants
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5bbba6434d8b0a5c02882d1ac858296fd8eeb346
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: dfd9330210dd748d739cd8da2985795099beacd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Constantes y enumeraciones en Visual Basic
 Las constantes son una forma de usar nombres significativos en lugar de un valor que no cambia. Las constantes almacenan valores que, como su nombre indica, permanecen constantes durante la ejecución de una aplicación. Puede usar constantes para proporcionar nombres descriptivos, en lugar de números, de forma que el código sea más legible.  
@@ -34,14 +24,14 @@ Las constantes son una forma de usar nombres significativos en lugar de un valor
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |[Información general sobre las constantes](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|En los temas de esta sección se describen las constantes y sus usos.|  
 |[Información general sobre las enumeraciones](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|En los temas de esta sección se describen las enumeraciones y sus usos.|  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |[Const (instrucción)](../../../../visual-basic/language-reference/statements/const-statement.md)|Se describe la instrucción `Const`, que se usa para declarar constantes.|  
 |[Enum (instrucción)](../../../../visual-basic/language-reference/statements/enum-statement.md)|Se describe la instrucción `Enum`, que se usa para crear enumeraciones.|  

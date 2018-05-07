@@ -1,39 +1,27 @@
 ---
-title: "Información general sobre controles ToolBar"
-ms.custom: 
+title: Información general sobre controles ToolBar
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f00597d48ff100325c1fb2884f64169164415a50
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c66867ce4d86a11424d7a7a859817d603b4227e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-overview"></a>Información general sobre controles ToolBar
-<xref:System.Windows.Controls.ToolBar>los controles son contenedores para un grupo de comandos o controles que suelen estar relacionados en su función. Un <xref:System.Windows.Controls.ToolBar> normalmente contiene botones que llamarán a comandos.  
+<xref:System.Windows.Controls.ToolBar> los controles son contenedores para un grupo de comandos o controles que suelen estar relacionados en su función. Un <xref:System.Windows.Controls.ToolBar> normalmente contiene botones que llamarán a comandos.  
   
   
 <a name="ToolBarControl"></a>   
 ## <a name="toolbar-control"></a>Barra de herramientas (Control)  
- El <xref:System.Windows.Controls.ToolBar> control toma su nombre de la organización de similares de la barra de botones u otros controles en una sola fila o columna. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.ToolBar> controles proporcionan un mecanismo de desbordamiento que coloca los elementos que no caben naturalmente dentro de una restricción de tamaño <xref:System.Windows.Controls.ToolBar> en un área de desbordamiento especial. Además, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> controles suelen utilizarse con relacionado <xref:System.Windows.Controls.ToolBarTray> control, que proporciona un comportamiento de diseño especial, así como compatibilidad para iniciada por el usuario ajustar el tamaño y la disposición de las barras de herramientas.  
+ El <xref:System.Windows.Controls.ToolBar> control toma su nombre de la organización de similares de la barra de botones u otros controles en una sola fila o columna. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> los controles proporcionan un mecanismo de desbordamiento que coloca los elementos que no caben naturalmente dentro de una restricción de tamaño <xref:System.Windows.Controls.ToolBar> en un área de desbordamiento especial. Además, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> controles suelen utilizarse con relacionado <xref:System.Windows.Controls.ToolBarTray> control, que proporciona un comportamiento de diseño especial, así como compatibilidad para iniciada por el usuario ajustar el tamaño y la disposición de las barras de herramientas.  
   
 <a name="Creating_ToolBars"></a>   
 ## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a>Especificar la posición de las barras de herramientas en un control ToolBarTray  
- Use la <xref:System.Windows.Controls.ToolBar.Band%2A> y <xref:System.Windows.Controls.ToolBar.BandIndex%2A> propiedades para colocar el <xref:System.Windows.Controls.ToolBar> en el <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.Band%2A>indica la posición en la que el <xref:System.Windows.Controls.ToolBar> se coloca dentro de su elemento primario <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.BandIndex%2A>indica el orden en que el <xref:System.Windows.Controls.ToolBar> se coloca dentro de su banda. El siguiente ejemplo se muestra cómo utiliza esta propiedad para colocar <xref:System.Windows.Controls.ToolBar> controla dentro de un <xref:System.Windows.Controls.ToolBarTray>.  
+ Use la <xref:System.Windows.Controls.ToolBar.Band%2A> y <xref:System.Windows.Controls.ToolBar.BandIndex%2A> propiedades para colocar el <xref:System.Windows.Controls.ToolBar> en el <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.Band%2A> indica la posición en la que el <xref:System.Windows.Controls.ToolBar> se coloca dentro de su elemento primario <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.BandIndex%2A> indica el orden en que el <xref:System.Windows.Controls.ToolBar> se coloca dentro de su banda. El siguiente ejemplo se muestra cómo utiliza esta propiedad para colocar <xref:System.Windows.Controls.ToolBar> controla dentro de un <xref:System.Windows.Controls.ToolBarTray>.  
   
  [!code-xaml[ToolBarExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
   

@@ -1,24 +1,12 @@
 ---
-title: "Arquitectura de activación de WAS"
-ms.custom: 
+title: Arquitectura de activación de WAS
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7563510fdd44336cb5f8c50705edefd732082347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c91ebd605fbe503dd11da7167512648afd86449
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="was-activation-architecture"></a>Arquitectura de activación de WAS
 Este tema detalla y discute los componentes de Windows Process Activation Service (también conocido como WAS).  
@@ -41,14 +29,14 @@ Este tema detalla y discute los componentes de Windows Process Activation Servic
  ![Arquitectura de WAS](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
   
 ### <a name="listener-adapters"></a>Adaptadores de escucha  
- Los adaptadores de escucha son servicios de Windows individuales que implementan la lógica de comunicación de red utilizada para recibir mensajes mediante el protocolo de red en el que realizan escuchas. La siguiente tabla enumera los adaptadores de escucha para los protocolos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Los adaptadores de escucha son servicios de Windows individuales que implementan la lógica de comunicación de red utilizada para recibir mensajes mediante el protocolo de red en el que realizan escuchas. La tabla siguiente enumera los adaptadores de escucha para protocolos de Windows Communication Foundation (WCF).  
   
 |Nombre de servicio de adaptador de escucha|Protocolo|Notas|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|Componente común que proporciona la activación de HTTP para IIS 7.0 e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
+|W3SVC|http|Componente común que proporciona activación de HTTP para IIS 7.0 y WCF.|  
 |NetTcpActivator|net.tcp|Depende del servicio NetTcpPortSharing.|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|net.msmq|Para el uso con aplicaciones de Message Queuing basadas en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
+|NetMsmqActivator|net.msmq|Para su uso con aplicaciones basadas en WCF Message Queue Server.|  
 |NetMsmqActivator|msmq.formatname|Proporciona compatibilidad con versiones anteriores para aplicaciones existentes de Message Queuing.|  
   
  Los adaptadores de escucha para protocolos concretos se registran durante la instalación en el archivo applicationHost.config, tal y como se muestra en el siguiente XML de ejemplo.  

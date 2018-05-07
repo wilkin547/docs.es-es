@@ -1,13 +1,6 @@
 ---
-title: "x:Code (Tipo XAML intrínseco)"
-ms.custom: 
+title: x:Code (Tipo XAML intrínseco)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Code
 - x:Code
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-caps.latest.revision: "19"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d39249a5d1c0e230d21e6d889b92d0b57c98e2ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 92be0b3b0fd1212c4254a449f902b85e998aa148
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code (Tipo XAML intrínseco)
 Permite la colocación de código dentro de una producción de XAML. O bien se puede compilar este código si cualquier implementación de procesador XAML que compila XAML o a la izquierda en la producción de XAML para usos posteriores como interpretación por un runtime.  
@@ -42,7 +30,7 @@ Permite la colocación de código dentro de una producción de XAML. O bien se p
 ## <a name="remarks"></a>Comentarios  
  El código dentro de la `x:Code` elemento de directiva de XAML es sigue interpretado dentro del espacio de nombres XML general y los espacios de nombres XAML proporcionado. Por lo tanto, resulta suele ser necesario incluir el código utilizado para `x:Code` dentro de un `CDATA` segmento.  
   
- `x:Code`no se permite para todos los mecanismos de implementación posibles de una producción de XAML. En marcos concretos (por ejemplo, WPF) se debe compilar el código. En otros marcos, `x:Code` uso no podría permitirse generalmente.  
+ `x:Code` no se permite para todos los mecanismos de implementación posibles de una producción de XAML. En marcos concretos (por ejemplo, WPF) se debe compilar el código. En otros marcos, `x:Code` uso no podría permitirse generalmente.  
   
  Para los marcos de trabajo que permiten administrado `x:Code` de contenido, el compilador del lenguaje correcto que se usará para `x:Code` contenido viene determinado por la configuración y los destinos del proyecto contenedor que se utiliza para compilar la aplicación.  
   

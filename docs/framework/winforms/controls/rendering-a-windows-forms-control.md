@@ -1,13 +1,6 @@
 ---
 title: Representar un control de formularios Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 587c9c8fb0bf634a2491acb1ae0b2f60979fa899
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2d7a02e725e3f8065b80a6b30ea21158be43ea8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rendering-a-windows-forms-control"></a>Representar un control de formularios Windows Forms
 Representación se refiere al proceso de creación de una representación visual en la pantalla del usuario. Windows Forms usa [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (la nueva biblioteca gráfica de Windows) para la representación. Las clases administradas que proporcionan acceso a [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] están en el <xref:System.Drawing?displayProperty=nameWithType> espacio de nombres y sus subespacios de nombres.  
@@ -72,9 +60,9 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics>es una clase administrada que encapsula la funcionalidad de dibujo, como se describe en la explicación de [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] más adelante en este tema. El <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> es una instancia de la <xref:System.Drawing.Rectangle> permite organizar y define el área disponible en la que puede dibujar un control. Un desarrollador del control se puede calcular el <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> mediante el <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> propiedad de un control, como se describe en la descripción de geometría más adelante en este tema.  
+ <xref:System.Drawing.Graphics> es una clase administrada que encapsula la funcionalidad de dibujo, como se describe en la explicación de [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] más adelante en este tema. El <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> es una instancia de la <xref:System.Drawing.Rectangle> permite organizar y define el área disponible en la que puede dibujar un control. Un desarrollador del control se puede calcular el <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> mediante el <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> propiedad de un control, como se describe en la descripción de geometría más adelante en este tema.  
   
- Un control debe proporcionar lógica de procesamiento reemplazando el <xref:System.Windows.Forms.Control.OnPaint%2A> método que hereda de <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A>Obtiene acceso a un objeto graphics y un rectángulo para dibujar a través de la <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> y <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> propiedades de la <xref:System.Windows.Forms.PaintEventArgs> instancia pasa a él.  
+ Un control debe proporcionar lógica de procesamiento reemplazando el <xref:System.Windows.Forms.Control.OnPaint%2A> método que hereda de <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> Obtiene acceso a un objeto graphics y un rectángulo para dibujar a través de la <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> y <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> propiedades de la <xref:System.Windows.Forms.PaintEventArgs> instancia pasa a él.  
   
 ```vb  
 Protected Overridable Sub OnPaint(pe As PaintEventArgs)  
@@ -99,7 +87,7 @@ Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)
 protected virtual void OnPaintBackground(PaintEventArgs pevent);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaintBackground%2A>pinta el fondo (y, por tanto, la forma) de la ventana y se garantiza que sea rápido, al <xref:System.Windows.Forms.Control.OnPaint%2A> dibuja los detalles y podría ser más lento debido a solicitudes de dibujo individuales se combinan en una sola <xref:System.Windows.Forms.Control.Paint> evento que abarca todas las áreas que deben estar vuelve a dibujar. Puede invocar la <xref:System.Windows.Forms.Control.OnPaintBackground%2A> si, por ejemplo, va a dibujar un fondo de color degradado para el control.  
+ <xref:System.Windows.Forms.Control.OnPaintBackground%2A> pinta el fondo (y, por tanto, la forma) de la ventana y se garantiza que sea rápido, al <xref:System.Windows.Forms.Control.OnPaint%2A> dibuja los detalles y podría ser más lento debido a solicitudes de dibujo individuales se combinan en una sola <xref:System.Windows.Forms.Control.Paint> evento que abarca todas las áreas que deben estar vuelve a dibujar. Puede invocar la <xref:System.Windows.Forms.Control.OnPaintBackground%2A> si, por ejemplo, va a dibujar un fondo de color degradado para el control.  
   
  Mientras <xref:System.Windows.Forms.Control.OnPaintBackground%2A> tiene una nomenclatura similar a eventos y los mismos argumentos que el `OnPaint` método <xref:System.Windows.Forms.Control.OnPaintBackground%2A> no es un método de evento auténtico. No hay ningún `PaintBackground` eventos y <xref:System.Windows.Forms.Control.OnPaintBackground%2A> no invoca delegados de eventos. Al reemplazar el <xref:System.Windows.Forms.Control.OnPaintBackground%2A> método, una clase derivada no es necesaria para invocar la <xref:System.Windows.Forms.Control.OnPaintBackground%2A> método de su clase base.  
   

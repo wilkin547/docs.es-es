@@ -1,11 +1,6 @@
 ---
 title: TypeOf (Operador, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - TypeOf
 - vb.TypeOf
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 51bd2af7af28aa229fa62770c5b92d31e461333b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe287794423048e993d953c83fc8590a06b7a5e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf (Operador, Visual Basic)
 Compara una variable de referencia de objeto a un tipo de datos.  
@@ -44,10 +36,10 @@ result = TypeOf objectexpression IsNot typename
  Devuelto. Valor `Boolean`.  
   
  `objectexpression`  
- Obligatorio. Cualquier expresión que se evalúa como un tipo de referencia.  
+ Requerido. Cualquier expresión que se evalúa como un tipo de referencia.  
   
  `typename`  
- Obligatorio. Cualquier nombre de tipo de datos.  
+ Requerido. Cualquier nombre de tipo de datos.  
   
 ## <a name="remarks"></a>Comentarios  
  El operador `TypeOf` determina si el tipo en tiempo de ejecución de `objectexpression` es compatible con `typename`. La compatibilidad depende de la categoría del tipo de `typename`. En la tabla siguiente se muestra cómo se determina la compatibilidad.  

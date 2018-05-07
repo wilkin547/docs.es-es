@@ -1,14 +1,6 @@
 ---
 title: ICLRDebugManager (Interfaz)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8e712f22156e96cfc58e9c1a835077ba21ecd184
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d123177bf9f1b5eee1a2ba4d9b7f2042ddc07aa2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager (Interfaz)
 Proporciona métodos que permiten a un host asociar un conjunto de tareas a un identificador y un nombre descriptivo.  
@@ -50,7 +38,7 @@ Proporciona métodos que permiten a un host asociar un conjunto de tareas a un i
 |[SetSymbolReadingPolicy (método)](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|Establece la directiva para leer los archivos de programa (PDB) de la base de datos. La directiva determina si se incluye información sobre los números de línea y los archivos en las pilas de llamadas.|  
   
 ## <a name="remarks"></a>Comentarios  
- En escenarios de depuración, un host podría desear agrupar las tareas según su propia lógica de programación. Por ejemplo, una agrupación permitiría que un desarrollador ver solo las tareas necesarias con las API del desarrollador, en lugar de ver todas las tareas de ejecución en el proceso. `ICLRDebugManager`permite al host implementar este tipo de agrupación.  
+ En escenarios de depuración, un host podría desear agrupar las tareas según su propia lógica de programación. Por ejemplo, una agrupación permitiría que un desarrollador ver solo las tareas necesarias con las API del desarrollador, en lugar de ver todas las tareas de ejecución en el proceso. `ICLRDebugManager` permite al host implementar este tipo de agrupación.  
   
 > [!IMPORTANT]
 >  Tres `ICLRDebugManager` métodos, `BeginConnection`, `SetConnectionTasks` y `EndConnection`, son dependientes entre sí. Se debe llamar en el orden especificado para que funcione según lo previsto.  
@@ -64,7 +52,7 @@ Proporciona métodos que permiten a un host asociar un conjunto de tareas a un i
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

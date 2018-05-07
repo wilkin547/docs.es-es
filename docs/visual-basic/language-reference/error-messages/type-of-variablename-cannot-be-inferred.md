@@ -1,28 +1,19 @@
 ---
-title: "Tipo de &#39; &lt;variablename&gt;&#39; no se puede inferir porque los límites del bucle y la variable step no se convierten en el mismo tipo"
+title: Tipo de &#39; &lt;variablename&gt; &#39; no se puede inferir porque los límites del bucle y la variable step no se convierten en el mismo tipo
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30982
 - vbc30982
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 022e29e38a93d2880bbfa250e65a8b95b39ff140
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6fdd9445b5336773d150c643c7bf1ca58a0c87a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tipo de &#39; &lt;variablename&gt;&#39; no se puede inferir porque los límites del bucle y la variable step no se convierten en el mismo tipo
+# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tipo de &#39; &lt;variablename&gt; &#39; no se puede inferir porque los límites del bucle y la variable step no se convierten en el mismo tipo
 Ha escrito un `For...Next` bucle en el que el compilador no puede inferir un tipo de datos para la variable de control de bucle porque las condiciones siguientes son ciertas:  
   
 -   El tipo de datos de la variable de control de bucle no se especifica con una cláusula `As` .  

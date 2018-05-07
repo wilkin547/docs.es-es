@@ -1,11 +1,7 @@
 ---
-title: "Función GetPropertyQualifierSet (referencia de API no administrada)"
-description: "La función GetPropertyQualifierSet recupera el calificador establecido para una propiedad."
+title: Función GetPropertyQualifierSet (referencia de API no administrada)
+description: La función GetPropertyQualifierSet recupera el calificador establecido para una propiedad.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetPropertyQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7ca2981c8833abaafd5d206b66d6e91f34e2c91d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2951733211737f06cd737b20bd1537277be1be1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet (función)
 Recupera el calificador establecido para una propiedad determinada.
@@ -54,7 +47,7 @@ HRESULT GetPropertyQualifierSet (
 [in] Un puntero a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instancia.
 
 `wszMethod`  
-[in] El nombre de propiedad. `wszProperty`debe apuntar a válido `LPCWSTR`. 
+[in] El nombre de propiedad. `wszProperty` debe apuntar a válido `LPCWSTR`. 
 
 `ppQualSet`  
 [out] Recibe el puntero de interfaz que permite el acceso a los calificadores de la propiedad. El valor de `ppQualSet` no puede ser `null`. Si se produce un error, no se devuelve un nuevo objeto y el puntero se establece para que apunte a `null`. 
@@ -87,7 +80,7 @@ Como propiedades del sistema no tengan ningún calificador, la función devuelve
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

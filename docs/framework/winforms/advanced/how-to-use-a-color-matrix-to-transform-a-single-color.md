@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Utilizar una matriz de color para transformar un color único"
-ms.custom: 
+title: 'Cómo: Utilizar una matriz de color para transformar un color único'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,23 +8,18 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d6c9273102dc8e8f0fe6be3e31d0f0b6e570c7af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 741259fcf853c82dfd13b43edc92e50d8767887b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Cómo: Utilizar una matriz de color para transformar un color único
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]proporciona el <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> clases para almacenar y manipular imágenes. <xref:System.Drawing.Image>y <xref:System.Drawing.Bitmap> objetos almacenan el color de cada píxel como un número de 32 bits: 8 bits para cada color rojo, verde, azul y alfa. Cada uno de los cuatro componentes es un número comprendido entre 0 y 255, donde 0 representa ninguna intensidad y que representa la intensidad máxima de 255. El componente alfa especifica la transparencia del color: 0 es totalmente transparente, y 255 es completamente opaco.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona el <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> clases para almacenar y manipular imágenes. <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> objetos almacenan el color de cada píxel como un número de 32 bits: 8 bits para cada color rojo, verde, azul y alfa. Cada uno de los cuatro componentes es un número comprendido entre 0 y 255, donde 0 representa ninguna intensidad y que representa la intensidad máxima de 255. El componente alfa especifica la transparencia del color: 0 es totalmente transparente, y 255 es completamente opaco.  
   
  Un vector de color es una tupla de 4 del formulario (rojo, verde, azul, alfa). Por ejemplo, el vector de color (0, 255, 0, 255) representa un color opaco que no tiene ningún color rojo o azul, pero tiene verde con intensidad total.  
   
- Otra convención para representar los colores emplea el número 1 para la intensidad total. Mediante esta convención, el color descrito en el párrafo anterior se representarán mediante el vector (0, 1, 0, 1). [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]utiliza la convención 1 como intensidad total cuando realiza las transformaciones de color.  
+ Otra convención para representar los colores emplea el número 1 para la intensidad total. Mediante esta convención, el color descrito en el párrafo anterior se representarán mediante el vector (0, 1, 0, 1). [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] utiliza la convención 1 como intensidad total cuando realiza las transformaciones de color.  
   
  Puede aplicar transformaciones lineales (rotación, escala y similares) a los vectores de color multiplicando los vectores de color por una matriz de 4 x 4. Sin embargo, no se puede utilizar una matriz de 4 x 4 para realizar una conversión (no lineal). Si agrega una quinta coordenada ficticia (por ejemplo, el número 1) a cada uno de los vectores de color, puede usar una matriz de 5 x 5 para aplicar cualquier combinación de conversiones y transformaciones lineales. Una transformación que se compone de una transformación lineal seguida de una traducción se denomina una transformación afín.  
   

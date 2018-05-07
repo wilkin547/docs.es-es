@@ -1,24 +1,12 @@
 ---
-title: "Escenarios sincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre"
-ms.custom: 
+title: Escenarios sincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 428e8852c9b1706e88b1688b4a1f2e36c167fe28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Escenarios sincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre
 En este tema se describen las actividades y transferencias para diferentes escenarios sincrónicos de solicitud/respuesta, con un cliente de un único subproceso, utilizando HTTP, TCP o canalización con nombre. Vea [escenarios asincrónicos utiliza HTTP, TCP o canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) para obtener más información sobre las solicitudes de varios subprocesos.  
@@ -56,7 +44,7 @@ En este tema se describen las actividades y transferencias para diferentes escen
 #### <a name="closing-a-service-host"></a>Cerrar un host de servicio  
  La actividad de cierre del ServiceHost (Z) se crea a partir de la actividad ambiente.  
   
- ![Escenarios sincrónicos mediante HTTP &#47; TCP &#47; Canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "sincronización")  
+ ![Escenarios sincrónicos mediante HTTP&#47;TCP&#47; canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "sincronización")  
   
  En \<A: name >, `A` es un símbolo de método abreviado que describe la actividad en el texto anterior y en la tabla 3. `Name` es un nombre abreviado de la actividad.  
   

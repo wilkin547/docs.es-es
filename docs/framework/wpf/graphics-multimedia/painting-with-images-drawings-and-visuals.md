@@ -1,13 +1,6 @@
 ---
-title: "Pintar con imágenes, dibujos y elementos visuales"
-ms.custom: 
+title: Pintar con imágenes, dibujos y elementos visuales
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abb5733ed54ea430ba161db5ea2dcb33e99298ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Pintar con imágenes, dibujos y elementos visuales
 Este tema describe cómo usar <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, y <xref:System.Windows.Media.VisualBrush> objetos que se va a pintar un área con una imagen, un <xref:System.Windows.Media.Drawing>, o un <xref:System.Windows.Media.Visual>.  
@@ -69,15 +57,15 @@ Objetos pintados mediante DrawingBrush
   
  A <xref:System.Windows.Media.DrawingBrush> pinta un área con un <xref:System.Windows.Media.Drawing> objeto. Un <xref:System.Windows.Media.Drawing> objeto describe el contenido visible, como una forma, mapa de bits, vídeo o una línea de texto. Distintos tipos de dibujo describen tipos de contenido diferentes. La siguiente lista muestra los distintos tipos de objetos de dibujo.  
   
--   <xref:System.Windows.Media.GeometryDrawing>– Dibuja una forma.  
+-   <xref:System.Windows.Media.GeometryDrawing> – Dibuja una forma.  
   
--   <xref:System.Windows.Media.ImageDrawing>– Dibuja una imagen.  
+-   <xref:System.Windows.Media.ImageDrawing> – Dibuja una imagen.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>– Dibuja texto.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> – Dibuja texto.  
   
--   <xref:System.Windows.Media.VideoDrawing>– Reproduce un archivo de audio o vídeo.  
+-   <xref:System.Windows.Media.VideoDrawing> – Reproduce un archivo de audio o vídeo.  
   
--   <xref:System.Windows.Media.DrawingGroup>– Dibuja otros dibujos. Use un grupo de dibujo para combinar otros dibujos en un solo dibujo compuesto.  
+-   <xref:System.Windows.Media.DrawingGroup> – Dibuja otros dibujos. Use un grupo de dibujo para combinar otros dibujos en un solo dibujo compuesto.  
   
  Para obtener más información acerca de <xref:System.Windows.Media.Drawing> los objetos, vea la [información general de objetos de dibujo](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
   
@@ -133,7 +121,7 @@ Objeto Visual reflejado
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>Características de TileBrush  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, y <xref:System.Windows.Media.VisualBrush> son tipos de <xref:System.Windows.Media.TileBrush> objetos. <xref:System.Windows.Media.TileBrush>objetos proporcionan un gran control sobre cómo se pinta un área con una imagen, dibujo o el objeto visual. Por ejemplo, en lugar de limitarse a dibujar un área con una sola imagen ajustada, puede dibujar un área con una serie de mosaicos de imagen que crean un patrón.  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, y <xref:System.Windows.Media.VisualBrush> son tipos de <xref:System.Windows.Media.TileBrush> objetos. <xref:System.Windows.Media.TileBrush> objetos proporcionan un gran control sobre cómo se pinta un área con una imagen, dibujo o el objeto visual. Por ejemplo, en lugar de limitarse a dibujar un área con una sola imagen ajustada, puede dibujar un área con una serie de mosaicos de imagen que crean un patrón.  
   
  Un <xref:System.Windows.Media.TileBrush> tiene tres componentes principales: contenido, mosaicos y el área de salida.  
   

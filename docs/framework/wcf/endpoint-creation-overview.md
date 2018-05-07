@@ -1,34 +1,20 @@
 ---
 title: Información general acerca de la creación de puntos finales
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-caps.latest.revision: 40
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3317bc47c03e0b100d094ba1d929a003dddab055
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 91e5e45d380ec6a8229a7272c841e1a345423c7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoint-creation-overview"></a>Información general acerca de la creación de puntos finales
-Toda la comunicación con un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] servicio se produce a través de la *extremos* del servicio. Los extremos proporcionan a los clientes acceso a la funcionalidad que ofrece un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Esta sección describe la estructura de un extremo, y detalla cómo definir un extremo en la configuración y el código.  
+Toda la comunicación con un servicio de Windows Communication Foundation (WCF) se produce a través de la *extremos* del servicio. Los extremos proporcionan a los clientes acceso a la funcionalidad que ofrece un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Esta sección describe la estructura de un extremo, y detalla cómo definir un extremo en la configuración y el código.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Estructura de un extremo  
  Cada punto de conexión contiene una dirección que indica dónde se encuentra el punto de conexión, un enlace que especifica cómo puede comunicarse un cliente con el punto de conexión, y un contrato que identifica los métodos disponibles.  

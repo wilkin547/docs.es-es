@@ -1,10 +1,6 @@
 ---
 title: My.Computer.FileSystem (Objeto)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - FileSystem module
 - FileClose function
@@ -16,14 +12,11 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa6b61333152e6cb52fac969551e93d6b3697e53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 111dde90912e586c92da4ed9f5be50d15a75485b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem (Objeto)
 Proporciona propiedades y métodos para trabajar con unidades, archivos y directorios.  
@@ -37,7 +30,7 @@ Proporciona propiedades y métodos para trabajar con unidades, archivos y direct
 >  También puede utilizar clases en el <xref:System.IO?displayProperty=nameWithType> espacio de nombres para trabajar con unidades, archivos y directorios.  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:**<xref:Microsoft.VisualBasic.MyServices>  
+ **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
   
  **Clase:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (proporciona acceso a <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   

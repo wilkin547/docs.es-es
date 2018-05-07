@@ -1,11 +1,6 @@
 ---
-title: "Group By (Cláusula, Visual Basic)"
+title: Group By (Cláusula, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryGroupByInto
 - vb.QueryGroupBy
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b719bfa2ebe4c324acf82a03e215e481283845fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7cf688dc2e0ccd10c8bfbe5f0308f0aa808fbef0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By (Cláusula, Visual Basic)
 Agrupa los elementos de los resultados de una consulta. También se puede usar para aplicar funciones de agregado a cada grupo. La operación de agrupación se basa en una o varias claves.  
@@ -44,7 +36,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 -   `keyExp1`  
   
-     Obligatorio. Expresión que identifica la clave que se va a usar para determinar los grupos de elementos. Puede especificar más de una clave para especificar una clave compuesta.  
+     Requerido. Expresión que identifica la clave que se va a usar para determinar los grupos de elementos. Puede especificar más de una clave para especificar una clave compuesta.  
   
 -   `keyExp2`  
   
@@ -52,13 +44,13 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 -   `aggregateList`  
   
-     Obligatorio. Una o más expresiones que identifican cómo se agregan los grupos. Para identificar un nombre de miembro para los resultados agrupados, use la palabra clave `Group` , que puede estar en cualquiera de los formatos siguientes:  
+     Requerido. Una o más expresiones que identifican cómo se agregan los grupos. Para identificar un nombre de miembro para los resultados agrupados, use la palabra clave `Group` , que puede estar en cualquiera de los formatos siguientes:  
   
     ```  
     Into Group  
     ```  
   
-     O bien  
+     -o bien-  
   
     ```  
     Into <alias> = Group  

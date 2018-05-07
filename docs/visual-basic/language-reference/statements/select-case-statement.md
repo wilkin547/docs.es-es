@@ -1,11 +1,6 @@
 ---
-title: "Instrucción Select...Case (Visual Basic)"
+title: Instrucción Select...Case (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Select
 - vb.Case
@@ -26,14 +21,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a7527763a05ec32af88c6ba66ef717d839c33154
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d24b455d92cbd00b268df26283aab082b7703a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selectcase-statement-visual-basic"></a>Instrucción Select...Case (Visual Basic)
 Ejecuta uno de varios grupos de instrucciones, dependiendo del valor de una expresión.  
@@ -53,8 +45,8 @@ End Select
   
 |Término|Definición|  
 |---|---|  
-|`testexpression`|Obligatorio. Expresión. Se debe evaluar como uno de los tipos de datos básicos (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, y `UShort`).|  
-|`expressionlist`|Necesario en un `Case` instrucción. Lista de cláusulas de expresiones que representan valores que coinciden para `testexpression`. Cláusulas de varias expresiones se separan mediante comas. Cada cláusula puede realizar una de las siguientes formas:<br /><br /> -   *expression1* `To` *expression2*<br />-[ `Is` ] *comparisonoperator* *expresión*<br />-   *expresión*<br /><br /> Use la `To` palabra clave para especificar los límites de un intervalo de coincidencia de los valores de `testexpression`. El valor de `expression1` debe ser menor o igual que el valor de `expression2`.<br /><br /> Use la `Is` palabra clave con un operador de comparación (`=`, `<>`, `<`, `<=`, `>`, o `>=`) para especificar una restricción en los valores coincidentes para `testexpression`. Si el `Is` palabra clave no se proporciona, se inserta automáticamente antes de *comparisonoperator*.<br /><br /> La forma de especificar sólo `expression` se trata como un caso especial de la `Is` forman where *comparisonoperator* es el signo igual (`=`). Este formulario se evalúa como `testexpression`  =  `expression`.<br /><br /> Las expresiones de `expressionlist` pueden ser de cualquier tipo de datos, siempre que se pueden convertir implícitamente al tipo de `testexpression` y la correspondiente `comparisonoperator` es válido para usarlo con los tipos de dos.|  
+|`testexpression`|Requerido. Expresión. Se debe evaluar como uno de los tipos de datos básicos (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, y `UShort`).|  
+|`expressionlist`|Necesario en un `Case` instrucción. Lista de cláusulas de expresiones que representan valores que coinciden para `testexpression`. Cláusulas de varias expresiones se separan mediante comas. Cada cláusula puede realizar una de las siguientes formas:<br /><br /> -   *expression1* `To` *expression2*<br />-[ `Is` ] *comparisonoperator* *expresión*<br />-   *Expresión*<br /><br /> Use la `To` palabra clave para especificar los límites de un intervalo de coincidencia de los valores de `testexpression`. El valor de `expression1` debe ser menor o igual que el valor de `expression2`.<br /><br /> Use la `Is` palabra clave con un operador de comparación (`=`, `<>`, `<`, `<=`, `>`, o `>=`) para especificar una restricción en los valores coincidentes para `testexpression`. Si el `Is` palabra clave no se proporciona, se inserta automáticamente antes de *comparisonoperator*.<br /><br /> La forma de especificar sólo `expression` se trata como un caso especial de la `Is` forman where *comparisonoperator* es el signo igual (`=`). Este formulario se evalúa como `testexpression`  =  `expression`.<br /><br /> Las expresiones de `expressionlist` pueden ser de cualquier tipo de datos, siempre que se pueden convertir implícitamente al tipo de `testexpression` y la correspondiente `comparisonoperator` es válido para usarlo con los tipos de dos.|  
 |`statements`|Opcional. Uno o más instrucciones que siguen `Case` que se ejecutarán si `testexpression` coincide con cualquier cláusula en `expressionlist`.|  
 |`elsestatements`|Opcional. Uno o más instrucciones que siguen `Case Else` que se ejecutarán si `testexpression` no coincide con cualquier cláusula en la `expressionlist` de cualquiera de los `Case` instrucciones.|  
 |`End Select`|Termina la definición de la `Select`... `Case` construcción.|  
@@ -82,7 +74,7 @@ End Select
   
  Si el código dentro de un `Case` o `Case Else` no es necesario ejecutar más de las instrucciones en el bloque de bloque de instrucciones, puede salir del bloque mediante el uso de la `Exit Select` instrucción. Esto transfiere el control inmediatamente a la siguiente instrucción `End Select`.  
   
- `Select Case`construcciones se pueden anidar. Cada uno anidado `Select Case` construcción debe tener su correspondiente `End Select` instrucción y deben estar contenidos completamente dentro de una única `Case` o `Case Else` bloque de instrucciones de la externa `Select Case` construcción en el que está anidada.  
+ `Select Case` construcciones se pueden anidar. Cada uno anidado `Select Case` construcción debe tener su correspondiente `End Select` instrucción y deben estar contenidos completamente dentro de una única `Case` o `Case Else` bloque de instrucciones de la externa `Select Case` construcción en el que está anidada.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa un `Select Case` construcción para escribir una línea correspondiente al valor de la variable `number`. El segundo `Case` instrucción contiene el valor que coincide con el valor actual de `number`, por lo que la instrucción que escribe "entre 6 y 8, inclusive" se ejecuta.  

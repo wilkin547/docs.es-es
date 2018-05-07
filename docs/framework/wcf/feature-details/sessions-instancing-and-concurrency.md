@@ -1,26 +1,12 @@
 ---
 title: Sesiones, creación de instancias y simultaneidad
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6dd96ea552bb92dd90c1c47abac744c55e2e67e5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a3f56a08c695b4d92529d2c1bec625e9e8c6b6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sesiones, creación de instancias y simultaneidad
 Una *sesión* es una correlación de todos los mensajes enviados entre dos extremos. *Creación de instancias* hace referencia al control de la vida de los objetos de servicio definidos por el usuario y sus objetos <xref:System.ServiceModel.InstanceContext> relacionados. La*simultaneidad* es el término dado al control del número de subprocesos que se ejecutan al mismo tiempo en un <xref:System.ServiceModel.InstanceContext> .  
@@ -30,7 +16,7 @@ Una *sesión* es una correlación de todos los mensajes enviados entre dos extre
 ## <a name="sessions"></a>Sesiones  
  Cuando un contrato de servicios establece la propiedad <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>, ese contrato está diciendo que todas las llamadas (es decir, los intercambios de mensajes subyacentes que admiten las llamadas) deben formar parte de la misma conversación. Si un contrato especifica que permite sesiones pero no requiere una, los clientes pueden conectarse y establecer o no una sesión. Si la sesión finaliza y se envía un mensaje se envía sobre el mismo canal basado en sesión, se produce una excepción.  
   
- Las sesiones de[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tienen las siguientes características conceptuales principales:  
+ Las sesiones WCF tienen las siguientes características conceptuales principales:  
   
 -   La aplicación que realiza la llamada inicia y finaliza explícitamente las sesiones.  
   
@@ -38,11 +24,11 @@ Una *sesión* es una correlación de todos los mensajes enviados entre dos extre
   
 -   Las sesiones correlacionan un grupo de mensajes en una conversación. El significado de esa correlación es una abstracción. Por ejemplo, un canal basado en sesión puede correlacionar mensajes basados en una conexión de red compartida, mientras que otro canal basado en sesión puede correlacionar mensajes basados en una etiqueta compartida en el cuerpo del mensaje. Las características que se pueden derivar a partir de la sesión dependen de la naturaleza de la correlación.  
   
--   No hay ningún almacén de datos general asociado a una sesión de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+-   No hay ningún almacén de datos general asociado a una sesión WCF.  
   
- Si está familiarizado con la clase <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> en aplicaciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y la funcionalidad que proporciona, podría observar las siguientes diferencias entre ese tipo de sesión y las sesiones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Si está familiarizado con la <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> clase [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicaciones y la funcionalidad que proporciona, podría observar las siguientes diferencias entre ese tipo de sesión y las sesiones WCF:  
   
--   Las sesiones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] siempre son iniciadas por servidor.  
+-   Las sesiones[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] siempre son iniciadas por servidor.  
   
 -   Las sesiones[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] están implícitamente desordenadas.  
   
@@ -78,7 +64,7 @@ public class CalculatorService : ICalculatorInstance
   
  Utilice el constructor <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> para crear este tipo de servicio. Ofrece una alternativa para implementar un <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> personalizado cuando desee proporcionar una instancia de objeto concreta para su uso con el servicio de singleton. Puede utilizar esta sobrecarga cuando su tipo de implementación de servicio es difícil de construir (por ejemplo, si no implementa un constructor público predeterminado que no tiene parámetros).  
   
- Tenga en cuenta que cuando se proporciona un objeto a este constructor, algunas características relacionadas con el comportamiento de creación de instancias de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] funcionan de manera diferente. Por ejemplo, llamar a <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType>, no tiene ningún efecto cuando se proporciona una instancia de objeto singleton. De igual forma, se omite cualquier otro mecanismo de publicación de instancia. <xref:System.ServiceModel.ServiceHost> siempre se comporta como si la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> estuviera definida en <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> para todas las operaciones.  
+ Tenga en cuenta que cuando se proporciona un objeto a este constructor, algunas características relacionadas con la que la Windows Communication Foundation (WCF) comportamiento de las instancias funcionan de manera diferente. Por ejemplo, llamar a <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType>, no tiene ningún efecto cuando se proporciona una instancia de objeto singleton. De igual forma, se omite cualquier otro mecanismo de publicación de instancia. <xref:System.ServiceModel.ServiceHost> siempre se comporta como si la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> estuviera definida en <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> para todas las operaciones.  
   
 ### <a name="sharing-instancecontext-objects"></a>Uso compartido de objetos InstanceContext  
  También puede controlar que canal con sesión o llamada se asocia a qué objeto <xref:System.ServiceModel.InstanceContext> realizando esa asociación usted mismo.  
@@ -92,7 +78,7 @@ public class CalculatorService : ICalculatorInstance
   
 -   <xref:System.ServiceModel.ConcurrencyMode.Multiple>: cada instancia de servicio puede tener varios subprocesos procesando mensajes al mismo tiempo. La implementación del servicio debe ser segura para los subprocesos para utilizar este modo de simultaneidad.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: cada instancia de servicio procesa a la vez un mensaje, pero acepta llamadas de operación reentrantes. El servicio solo acepta estas llamadas cuando está llamando al exterior través de un objeto de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+-   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: cada instancia de servicio procesa a la vez un mensaje, pero acepta llamadas de operación reentrantes. El servicio solo acepta estas llamadas cuando está llamando a través de un objeto de cliente WCF.  
   
 > [!NOTE]
 >  Entender y desarrollar código que use de manera segura más de un subproceso puede ser difícil de escribir correctamente. Antes de utilizar los valores <xref:System.ServiceModel.ConcurrencyMode.Multiple> o <xref:System.ServiceModel.ConcurrencyMode.Reentrant> , asegúrese de que su servicio está diseñado correctamente para estos modos. Para obtener más información, consulta <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  

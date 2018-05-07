@@ -1,21 +1,14 @@
 ---
 title: 'Cómo: crear y utilizar ensamblados desde la línea de comandos (Visual Basic)'
-ms.custom: ''
 ms.date: 03/14/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39648107697cdbaa8856705f44df605efda11fa
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: c02f694da4e03b666fa88ea6db8ddb2db4c9637d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Cómo: crear y utilizar ensamblados desde la línea de comandos (Visual Basic)
 Un ensamblado, o una biblioteca de vínculos dinámicos (DLL), se vincula al programa en tiempo de ejecución. Para ilustrar la creación y uso de una DLL, considere el siguiente escenario:  

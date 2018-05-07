@@ -1,26 +1,17 @@
 ---
-title: "Cómo: Aplicar etiquetas a las instrucciones (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Aplicar etiquetas a las instrucciones (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - colons (:)
 - statements [Visual Basic], labels
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 190ec9fc2392e6e4adae9b2b612edd69d73cedfd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: df368bdba73ca35dd70bdd2f4e88cc10af894b5a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-label-statements-visual-basic"></a>Cómo: Aplicar etiquetas a las instrucciones (Visual Basic)
 Bloques de instrucciones se componen de líneas de código delimitadas por dos puntos. Se dice que las líneas de código precedidas por una cadena o entero identificación *con la etiqueta*. Las etiquetas de instrucciones se utilizan para marcar una línea de código que se identifique para su uso con instrucciones como `On Error Goto`.  

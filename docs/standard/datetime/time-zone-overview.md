@@ -1,13 +1,7 @@
 ---
-title: "Información general sobre zonas horarias"
-ms.custom: 
+title: Información general sobre zonas horarias
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - time zones [.NET Framework], about time zones
 - transition time [.NET Framework]
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - adjustment rule [.NET Framework]
 - time zones [.NET Framework], terminology
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e93eee00983bc2ff1c466b1240629f1193358e96
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 85483e4319b56c0df150558ce6c6a3878a6fa041
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="time-zone-overview"></a>Información general sobre zonas horarias
 
@@ -52,7 +41,7 @@ Para las zonas horarias que admiten reglas de ajuste, el cambio de horario de ve
 
 En la tabla siguiente se definen los términos usados comúnmente al trabajar con zonas horarias y desarrollar aplicaciones basadas en la zona horaria.
 
-| Término            | Definición |
+| Término            | de esquema JSON |
 | --------------- | ---------- |
 | Regla de ajuste | Una regla que define cuándo se produce la transición desde el horario estándar hacia el horario de verano y desde el horario de verano hacia el horario estándar. Cada regla de ajuste tiene una fecha de inicio y finalización que define la regla está en su lugar (por ejemplo, la regla de ajuste está en su lugar desde el 1 de enero de 1986, y el 31 de diciembre de 2006), delta (la cantidad de tiempo por la que se cambia la hora estándar como resultado de la aplicación de n regla de ajuste e) e información sobre la fecha y hora específicas que son las transiciones que se produzca durante el período de ajuste. Las transiciones pueden seguir una regla fija o una regla flotante. |
 | Hora ambigua  | Una hora que se puede asignar a dos horas diferentes en una sola zona horaria. Esto sucede cuando la hora del reloj se atrasa, como durante la transición del horario de verano de una zona horaria al horario estándar. Por ejemplo, si se produce esta transición en un día determinado a las 2:00 A.M. y hace que la hora cambie a la 1:00 A.M., cualquier intervalo de tiempo entre la 1:00 A.M. y la 1:59:99 A.M. se puede interpretar como correspondiente a la hora estándar o correspondiente al horario de verano. |

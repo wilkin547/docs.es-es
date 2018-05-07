@@ -1,22 +1,12 @@
 ---
-title: "Cómo: buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)"
-ms.custom: 
+title: 'Cómo: buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 267e348ac528b210e25c5b8b6e01294a225bc48e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 77ff74788adddcd28e23028b034cd682f2d94233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Cómo: buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)
 En este ejemplo se muestra cómo usar LINQ para comparar dos listas de cadenas y generar estas líneas, que están en names1.txt pero no en names2.txt.  

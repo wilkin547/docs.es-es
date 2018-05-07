@@ -1,34 +1,22 @@
 ---
-title: "Autorización en WCF"
-ms.custom: 
+title: Autorización en WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ac43b2185048287d0edd4cb20561a936bce2f58b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c6bf779c7baeea1f9a253ad0bde966cea67b57aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authorization-in-wcf"></a>Autorización en WCF
-La autorización es el proceso para controlar el acceso y los derechos a los recursos, como servicios o archivos. Los temas en esta presentación de la sección le muestran cómo realizar esta tarea básica en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] en una gran variedad de maneras.  
+La autorización es el proceso para controlar el acceso y los derechos a los recursos, como servicios o archivos. Los temas de esta sección muestran cómo realizar esta tarea básica en Windows Communication Foundation (WCF) en una variedad de formas.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Mecanismos de control de acceso](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
- Proporciona un esquema breve de los mecanismos de la autorización en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]y los usos sugeridos.  
+ Proporciona un esquema breve de los mecanismos de autorización de WCF y los usos sugeridos.  
   
  [Cómo restringir el acceso con la clase PrincipalPermissionAttribute Class](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  Muestra el proceso de restringir el acceso a un servicio con <xref:System.Security.Permissions.PrincipalPermissionAttribute>.  
@@ -37,7 +25,7 @@ La autorización es el proceso para controlar el acceso y los derechos a los rec
  Abarca la configuración de un servicio para permitirle utilizar la característica de proveedor de funciones de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
  [Uso del proveedor de funciones del administrador de autorización de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] puede usar el Administrador de autorización para administrar la autorización para un sitio web. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puede aprovechar igualmente la combinación de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]/Administrador de autorización para la autorización de clientes.  
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] puede usar el Administrador de autorización para administrar la autorización para un sitio web. WCF del mismo modo puede aprovechar la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]/Authorization combinación para la autorización de los clientes.  
   
  [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  Explica los fundamentos para utilizar la infraestructura del modelo de identidad para la autorización basada en demandas.  

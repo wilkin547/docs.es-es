@@ -1,11 +1,6 @@
 ---
 title: Like (operador, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Like
 - vb.Like
@@ -27,14 +22,11 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad5729515362bfd52b0c3b401f218a49f569726e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a9c672a397510c69c9ee67358689feff80d8831a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="like-operator-visual-basic"></a>Like (operador, Visual Basic)
 Compara una cadena con un modelo.  
@@ -47,13 +39,13 @@ result = string Like pattern
   
 ## <a name="parts"></a>Elementos  
  `result`  
- Obligatorio. Cualquier `Boolean` variable. El resultado es un `Boolean` valor que indica si la `string` satisface la `pattern`.  
+ Requerido. Cualquier `Boolean` variable. El resultado es un `Boolean` valor que indica si la `string` satisface la `pattern`.  
   
  `string`  
- Obligatorio. Cualquier expresión `String`.  
+ Requerido. Cualquier expresión `String`.  
   
  `pattern`  
- Obligatorio. Cualquier `String` expresión que se ajuste a las convenciones de coincidencia de patrones que se describe en la sección "comentarios".  
+ Requerido. Cualquier `String` expresión que se ajuste a las convenciones de coincidencia de patrones que se describe en la sección "comentarios".  
   
 ## <a name="remarks"></a>Comentarios  
  Si el valor de `string` se ajusta al modelo contenido en `pattern`, `result` es `True`. Si la cadena no cumple el patrón, `result` es `False`. Si ambos `string` y `pattern` son cadenas vacías, el resultado es `True`.  
@@ -64,13 +56,13 @@ result = string Like pattern
 ## <a name="pattern-options"></a>Opciones de patrón  
  Coincidencia de patrones integrada proporciona una herramienta versátil para comparaciones de cadenas. La coincidencia de patrones características le permiten hacer coincidir cada carácter de `string` con un carácter concreto, un carácter comodín, una lista de caracteres o un intervalo de caracteres. La tabla siguiente muestran los caracteres permitidos en `pattern` y con los que coinciden.  
   
-|Caracteres en`pattern`|Coincidencias en`string`|  
+|Caracteres en `pattern`|Coincidencias en `string`|  
 |-----------------------------|-------------------------|  
 |`?`|Cualquier carácter individual|  
 |`*`|Cero o más caracteres|  
 |`#`|Cualquier dígito individual (0 – 9)|  
-|`[charlist]`|Cualquier carácter individual`charlist`|  
-|`[!charlist]`|Cualquier carácter individual que no está en`charlist`|  
+|`[charlist]`|Cualquier carácter individual `charlist`|  
+|`[!charlist]`|Cualquier carácter individual que no está en `charlist`|  
   
 ## <a name="character-lists"></a>Listas de caracteres  
  Un grupo de uno o varios caracteres (`charlist`) entre corchetes (`[ ]`) puede usarse para que coincida con cualquier carácter individual en `string` y puede incluir prácticamente cualquier código de carácter, incluidos los dígitos.  

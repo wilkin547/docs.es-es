@@ -1,27 +1,15 @@
 ---
 title: Metadatos de las propiedades de marco de trabajo
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4fec11a973572dce9e8d6f77bf65ce31ee77eb41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d968bc7a3033bd994590520c5cd5062d3c212b4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="framework-property-metadata"></a>Metadatos de las propiedades de marco de trabajo
 Las opciones de metadatos de propiedad de marco de trabajo se notifican para las propiedades de los elementos de objeto que se consideran presentes en el nivel de marco de trabajo de WPF en la arquitectura de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En general, la designación de nivel de marco de trabajo de WPF implica que las características, como la representación, el enlace de datos y los refinamientos del sistema de propiedades se controlen mediante las [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] y los ejecutables de presentación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Estos sistemas consultan los metadatos de las propiedades de marco de trabajo para determinar las particularidades específicas de las características de las propiedades de un elemento en particular.  
@@ -40,7 +28,7 @@ Las opciones de metadatos de propiedad de marco de trabajo se notifican para las
   
 -   Propiedades de diseño que afectan al elemento primario de un elemento de informe (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>). Algunos ejemplos donde se establecen estas marcas de forma predeterminada son <xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType> y <xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>.  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. De manera predeterminada, las propiedades de dependencia no heredan los valores. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A>permite a la ruta de herencia recorrer también en un árbol visual, que es necesario para algunos escenarios de control de la composición.  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. De manera predeterminada, las propiedades de dependencia no heredan los valores. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> permite a la ruta de herencia recorrer también en un árbol visual, que es necesario para algunos escenarios de control de la composición.  
   
     > [!NOTE]
     >  El término "hereda" en el contexto de los valores de propiedades significa algo específico para las propiedades de dependencia; significa que los elementos secundarios pueden heredar el valor real de la propiedad de dependencia de los elementos primarios debido a una capacidad de nivel de marco de trabajo de WPF del sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. No tiene nada que ver directamente con la herencia de tipos y miembros de código administrado a través de tipos derivados. Para obtener información detallada, consulte [Herencia de valores de propiedad](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
@@ -69,13 +57,13 @@ Las opciones de metadatos de propiedad de marco de trabajo se notifican para las
 ## <a name="framework-property-metadata-merge-behavior"></a>Comportamiento de combinación de los metadatos de las propiedades de marco de trabajo  
  Cuando se invalidan los metadatos de las propiedades de marco de trabajo, las distintas características de los metadatos se combinan o reemplazan.  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>se combina. Si agrega un nuevo <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, esa devolución de llamada se almacena en los metadatos. Si no especifica un <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> en la invalidación, el valor de <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> se promueve como una referencia desde el antecesor más cercano que especifique en los metadatos.  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> se combina. Si agrega un nuevo <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, esa devolución de llamada se almacena en los metadatos. Si no especifica un <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> en la invalidación, el valor de <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> se promueve como una referencia desde el antecesor más cercano que especifique en los metadatos.  
   
 -   El comportamiento del sistema de propiedad real para <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> es que las implementaciones de todos los propietarios de metadatos de la jerarquía se conservan y se agregan a una tabla, con el orden de ejecución en el sistema de propiedades que se va a que las devoluciones de llamada de la clase derivada más profundamente están se invoca en primer lugar. Las devoluciones de llamada heredadas se ejecutan solo una vez, y se cuentan como propiedad de la clase que las colocó en los metadatos.  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>se ha reemplazado. Si no especifica un <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> en la invalidación, el valor de <xref:System.Windows.PropertyMetadata.DefaultValue%2A> proceden el antecesor más cercano que especifique en los metadatos.  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> se ha reemplazado. Si no especifica un <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> en la invalidación, el valor de <xref:System.Windows.PropertyMetadata.DefaultValue%2A> proceden el antecesor más cercano que especifique en los metadatos.  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>se reemplazan las implementaciones. Si agrega un nuevo <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, esa devolución de llamada se almacena en los metadatos. Si no especifica un <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> en la invalidación, el valor de <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> se promueve como una referencia desde el antecesor más cercano que especifique en los metadatos.  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> se reemplazan las implementaciones. Si agrega un nuevo <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, esa devolución de llamada se almacena en los metadatos. Si no especifica un <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> en la invalidación, el valor de <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> se promueve como una referencia desde el antecesor más cercano que especifique en los metadatos.  
   
 -   El comportamiento del sistema de propiedad es que solo el <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> se invoca en los metadatos inmediato. No hay referencias a otras <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> se retienen las implementaciones en la jerarquía.  
   

@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo::SetILInstrumentedCodeMap (Método)"
-ms.custom: 
+title: ICorProfilerInfo::SetILInstrumentedCodeMap (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo.SetILInstrumentedCodeMap
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 127f6d76e85ed30f1407d16f8d81c93dd2941960
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ecb80de1ae46b072df4bab8357e78e7a22ae298
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap (Método)
 Establece un mapa de código para la función especificada usando las entradas de mapa de lenguaje intermedio (MSIL) de Microsoft especificadas.  
@@ -65,7 +53,7 @@ HRESULT SetILInstrumentedCodeMap(
  [in] Una matriz de estructuras COR_IL_MAP, cada uno de los cuales especifica un desplazamiento MSIL.  
   
 ## <a name="remarks"></a>Comentarios  
- A menudo, un generador de perfiles inserta instrucciones incluidas en el código fuente de un método para instrumentar ese método (por ejemplo, para notificar cuando se alcanza una línea de código fuente). `SetILInstrumentedCodeMap`permite a un generador de perfiles asignar las instrucciones de MSIL originales a sus nuevas ubicaciones. Un generador de perfiles puede usar el [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) método para obtener el desplazamiento MSIL original de un desplazamiento nativo dado.  
+ A menudo, un generador de perfiles inserta instrucciones incluidas en el código fuente de un método para instrumentar ese método (por ejemplo, para notificar cuando se alcanza una línea de código fuente). `SetILInstrumentedCodeMap` permite a un generador de perfiles asignar las instrucciones de MSIL originales a sus nuevas ubicaciones. Un generador de perfiles puede usar el [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) método para obtener el desplazamiento MSIL original de un desplazamiento nativo dado.  
   
  El depurador supondrá que cada desplazamiento anterior hace referencia a un desplazamiento dentro del código MSIL original, sin modificar de MSIL, y que cada nuevo desplazamiento hace referencia al desplazamiento de MSIL dentro del nuevo código instrumentado. La asignación se debe ordenar en orden ascendente. Para la ejecución paso a paso para que funcionen correctamente, siga estas instrucciones:  
   
@@ -100,7 +88,7 @@ HRESULT SetILInstrumentedCodeMap(
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

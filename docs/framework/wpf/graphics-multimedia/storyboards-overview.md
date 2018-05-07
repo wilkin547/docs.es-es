@@ -1,13 +1,6 @@
 ---
-title: "Información general sobre objetos Storyboard"
-ms.custom: 
+title: Información general sobre objetos Storyboard
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 614b5cc4843dbb886fa9cb02c56b28452e9fae8a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 36922dce795443a4c1136f6442eff1c297f3c641
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="storyboards-overview"></a>Información general sobre objetos Storyboard
 Este tema muestra cómo usar <xref:System.Windows.Media.Animation.Storyboard> objetos para organizar y aplicar animaciones. Describe cómo manipular interactivamente <xref:System.Windows.Media.Animation.Storyboard> objetos y se describe la sintaxis de establecimiento indirecto de propiedades.  
@@ -38,7 +26,7 @@ Este tema muestra cómo usar <xref:System.Windows.Media.Animation.Storyboard> ob
 ## <a name="what-is-a-storyboard"></a>¿Qué es un guión gráfico?  
  Las animaciones no son el único tipo útil de escala de tiempo. Se proporcionan otras clases de escalas de tiempo para ayudarle a organizar conjuntos de escalas de tiempo y para aplicar las escalas de tiempo a las propiedades. Escalas de tiempo contenedoras se derivan de la <xref:System.Windows.Media.Animation.TimelineGroup> clase e incluyen <xref:System.Windows.Media.Animation.ParallelTimeline> y <xref:System.Windows.Media.Animation.Storyboard>.  
   
- A <xref:System.Windows.Media.Animation.Storyboard> es un tipo de escala de tiempo contenedora que proporciona información de destino para las escalas de tiempo contiene. Un guión gráfico puede contener cualquier tipo de <xref:System.Windows.Media.Animation.Timeline>, incluidas otras escalas de tiempo contenedoras y las animaciones. <xref:System.Windows.Media.Animation.Storyboard>objetos permiten combinar escalas de tiempo que afectan a una variedad de objetos y propiedades en un árbol único de la escala de tiempo, lo que facilita organizar y controlar los comportamientos de control de tiempo complejos. Por ejemplo, supongamos que desea un botón que haga estas tres cosas.  
+ A <xref:System.Windows.Media.Animation.Storyboard> es un tipo de escala de tiempo contenedora que proporciona información de destino para las escalas de tiempo contiene. Un guión gráfico puede contener cualquier tipo de <xref:System.Windows.Media.Animation.Timeline>, incluidas otras escalas de tiempo contenedoras y las animaciones. <xref:System.Windows.Media.Animation.Storyboard> objetos permiten combinar escalas de tiempo que afectan a una variedad de objetos y propiedades en un árbol único de la escala de tiempo, lo que facilita organizar y controlar los comportamientos de control de tiempo complejos. Por ejemplo, supongamos que desea un botón que haga estas tres cosas.  
   
 -   Aumentar de tamaño y cambiar de color cuando el usuario selecciona el botón.  
   
@@ -46,7 +34,7 @@ Este tema muestra cómo usar <xref:System.Windows.Media.Animation.Storyboard> ob
   
 -   Disminuir de tamaño y desvanecerse con un fundido al 50 % de opacidad al deshabilitarse.  
   
- En este caso, tenemos varios conjuntos de animaciones que se aplican al mismo objeto, y hay que reproducirlas en distintos momentos, según cuál sea el estado del botón. <xref:System.Windows.Media.Animation.Storyboard>objetos permiten organizar las animaciones y aplicarlas en grupos a uno o varios objetos.  
+ En este caso, tenemos varios conjuntos de animaciones que se aplican al mismo objeto, y hay que reproducirlas en distintos momentos, según cuál sea el estado del botón. <xref:System.Windows.Media.Animation.Storyboard> objetos permiten organizar las animaciones y aplicarlas en grupos a uno o varios objetos.  
   
 <a name="wherecanyouuseastoryboard"></a>   
 ## <a name="where-can-you-use-a-storyboard"></a>¿Dónde se puede utilizar un guión gráfico?  
@@ -72,9 +60,9 @@ Este tema muestra cómo usar <xref:System.Windows.Media.Animation.Storyboard> ob
   
 |El guión gráfico se comienza utilizando...|Por instancia|Estilo|Plantilla de control|Plantilla de datos|Ejemplo|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>y un<xref:System.Windows.EventTrigger>|Sí|Sí|Sí|Sí|[Animar una propiedad utilizando un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>y una propiedad<xref:System.Windows.Trigger>|No|Sí|Sí|Sí|[Activar una animación al cambiar el valor de una propiedad](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>y un<xref:System.Windows.DataTrigger>|No|Sí|Sí|Sí|[Cómo: Activar una animación cuando se cambian datos](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> y un <xref:System.Windows.EventTrigger>|Sí|Sí|Sí|Sí|[Animar una propiedad utilizando un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> y una propiedad <xref:System.Windows.Trigger>|No|Sí|Sí|Sí|[Activar una animación al cambiar el valor de una propiedad](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> y un <xref:System.Windows.DataTrigger>|No|Sí|Sí|Sí|[Cómo: Activar una animación cuando se cambian datos](http://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |Método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Sí|No|No|No|[Animar una propiedad utilizando un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  En el ejemplo siguiente se usa un <xref:System.Windows.Media.Animation.Storyboard> para animar la <xref:System.Windows.FrameworkElement.Width%2A> de un <xref:System.Windows.Shapes.Rectangle> elemento y el <xref:System.Windows.Media.SolidColorBrush.Color%2A> de un <xref:System.Windows.Media.SolidColorBrush> usado para pintar que <xref:System.Windows.Shapes.Rectangle>.  
@@ -107,7 +95,7 @@ Este tema muestra cómo usar <xref:System.Windows.Media.Animation.Storyboard> ob
   
  [!code-csharp[storyboards_ovw_snip#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#105)]  
   
- <xref:System.Windows.Freezable>los tipos son las clases que heredan de la <xref:System.Windows.Freezable> clase. Ejemplos de <xref:System.Windows.Freezable> incluyen <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform>, y <xref:System.Windows.Media.GradientStop>.  
+ <xref:System.Windows.Freezable> los tipos son las clases que heredan de la <xref:System.Windows.Freezable> clase. Ejemplos de <xref:System.Windows.Freezable> incluyen <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.RotateTransform>, y <xref:System.Windows.Media.GradientStop>.  
   
  Para habilitar los destinatarios de un <xref:System.Windows.Freezable> una animación en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], usa el [Directiva x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) para asignar un nombre. En el código, utilice la <xref:System.Windows.NameScope.RegisterName%2A> método para registrar su nombre en el elemento para el que ha creado un <xref:System.Windows.NameScope>.  
   
@@ -123,7 +111,7 @@ Este tema muestra cómo usar <xref:System.Windows.Media.Animation.Storyboard> ob
   
  [!code-csharp[storyboards_ovw_snip#107](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#107)]  
   
- <xref:System.Windows.Media.Animation.Storyboard>objetos usan ámbitos de nombres para resolver la <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> propiedad. Para obtener más información sobre los ámbitos de nombres de WPF, consulte [Ámbitos de nombres XAML de WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md). Si el <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> propiedad se omite, la animación establece como destino el elemento en la que se define o, en el caso de los estilos, el elemento de estilo.  
+ <xref:System.Windows.Media.Animation.Storyboard> objetos usan ámbitos de nombres para resolver la <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> propiedad. Para obtener más información sobre los ámbitos de nombres de WPF, consulte [Ámbitos de nombres XAML de WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md). Si el <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> propiedad se omite, la animación establece como destino el elemento en la que se define o, en el caso de los estilos, el elemento de estilo.  
   
  En ocasiones, no se puede asignar un nombre a un <xref:System.Windows.Freezable> objeto. Por ejemplo, si un <xref:System.Windows.Freezable> se declara como un recurso o que utiliza para establecer un valor de propiedad en un estilo, no puede asignarse un nombre. Al no tener nombre, no se puede establecer como destino directamente, pero sí de manera indirecta. En las secciones siguientes se describe cómo utilizar el establecimiento indirecto de destinos.  
   
@@ -157,7 +145,7 @@ Este tema muestra cómo usar <xref:System.Windows.Media.Animation.Storyboard> ob
   
  El código siguiente muestra cómo animar la <xref:System.Windows.Media.SolidColorBrush.Color%2A> de un <xref:System.Windows.Media.SolidColorBrush> usa para establecer el  
   
- <xref:System.Windows.Shapes.Shape.Fill%2A>de un elemento de rectángulo.  
+ <xref:System.Windows.Shapes.Shape.Fill%2A> de un elemento de rectángulo.  
   
  [!code-xaml[storyboards_ovw_snip_XAML#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#32)]  
   
@@ -234,7 +222,7 @@ Este tema muestra cómo usar <xref:System.Windows.Media.Animation.Storyboard> ob
   
 <a name="controllable_storyboards"></a>   
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>Controlar guiones gráficos de forma interactiva en XAML  
- Para iniciar un guión gráfico en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], utiliza un <xref:System.Windows.Media.Animation.BeginStoryboard> desencadenar la acción. <xref:System.Windows.Media.Animation.BeginStoryboard>distribuye las animaciones a los objetos y propiedades que se animan e inicia el guión gráfico. (Para obtener más información acerca de este proceso, consulte la [animación y temporización información general del sistema](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) Si asigna el <xref:System.Windows.Media.Animation.BeginStoryboard> un nombre mediante la especificación de su <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> propiedad, permite que un guión gráfico controlable. A continuación, podrá controlar interactivamente el guión gráfico una vez iniciado. Esta es una lista de acciones de guión gráfico controlables que se utiliza con desencadenadores de eventos para controlar un guión gráfico.  
+ Para iniciar un guión gráfico en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], utiliza un <xref:System.Windows.Media.Animation.BeginStoryboard> desencadenar la acción. <xref:System.Windows.Media.Animation.BeginStoryboard> distribuye las animaciones a los objetos y propiedades que se animan e inicia el guión gráfico. (Para obtener más información acerca de este proceso, consulte la [animación y temporización información general del sistema](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).) Si asigna el <xref:System.Windows.Media.Animation.BeginStoryboard> un nombre mediante la especificación de su <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> propiedad, permite que un guión gráfico controlable. A continuación, podrá controlar interactivamente el guión gráfico una vez iniciado. Esta es una lista de acciones de guión gráfico controlables que se utiliza con desencadenadores de eventos para controlar un guión gráfico.  
   
 -   <xref:System.Windows.Media.Animation.PauseStoryboard>: Se detiene el guión gráfico.  
   

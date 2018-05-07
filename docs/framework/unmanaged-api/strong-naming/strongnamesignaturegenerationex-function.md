@@ -1,14 +1,6 @@
 ---
-title: "StrongNameSignatureGenerationEx (Función)"
-ms.custom: 
+title: StrongNameSignatureGenerationEx (Función)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameSignatureGenerationEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9a75469e-aa49-4e32-ad48-3bafd5202f09
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4f68befd145649e6d8921e160d302cdb81000a9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ac2dd50b26137ee4cf06f0545f1f8cf1bfabf80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx (Función)
 Genera una firma de nombre seguro para el ensamblado especificado, según las marcas especificadas.  
@@ -81,12 +69,12 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Uno o varios de los siguientes valores:  
   
--   `SN_SIGN_ALL_FILES`(0 x 00000001): volver a calcular todos los valores hash de los módulos vinculados.  
+-   `SN_SIGN_ALL_FILES` (0 x 00000001): volver a calcular todos los valores hash de los módulos vinculados.  
   
--   `SN_TEST_SIGN`(0 x 00000002) - la firma de prueba del ensamblado.  
+-   `SN_TEST_SIGN` (0 x 00000002) - la firma de prueba del ensamblado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true`Cuando se finaliza correctamente; en caso contrario, `false`.  
+ `true` Cuando se finaliza correctamente; en caso contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
  Especifique null para `wszFilePath` para calcular el tamaño de la firma sin necesidad de crear la firma.  
@@ -106,7 +94,7 @@ BOOLEAN StrongNameSignatureGenerationEx (
   
  **Biblioteca:** incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [StrongNameSignatureGenerationEx (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)  

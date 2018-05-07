@@ -1,31 +1,17 @@
 ---
-title: "Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP"
-ms.custom: 
+title: Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8f30ad7819a570f0149868502261f986f4dd8c0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d956a72c9413384176c10effefc0307b09744c4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP
-Este tema resume las diferencias en la característica de colas [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] entre [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+En este tema se resume las diferencias en la característica de colas de Windows Communication Foundation (WCF) entre [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ## <a name="application-specific-dead-letter-queue"></a>Cola de mensajes no enviados específica de la aplicación  
  Los mensajes en cola pueden permanecer indefinidamente en la cola si la aplicación receptora no los lee en un modo oportuno. Este comportamiento no es aconsejable si los mensajes son dependientes del tiempo. Los mensajes dependientes del tiempo tienen una propiedad `TimeToLive` establecida en el enlace en cola. Esta propiedad indica cuánto tiempo pueden estar los mensajes en la cola antes de expirar. Los mensajes caducados se envían a la cola especial llamada cola de mensajes no enviados. Un mensaje también puede terminar en una cola de mensajes no enviados por otras razones, como superar una cuota de la cola o experimentar un error de autenticación.  
@@ -43,7 +29,7 @@ Este tema resume las diferencias en la característica de colas [!INCLUDE[indigo
   
 -   MSMQ en [!INCLUDE[wv](../../../../includes/wv-md.md)] admite una confirmación de que no se pudo realizar la acción, mientras que [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)] no. Una confirmación de que no se pudo realizar la acción del administrador de la cola receptora hace que el administrador de la cola emisora coloque el mensaje rechazado en la cola de mensajes no enviados. Como tal, `ReceiveErrorHandling.Reject` no se permite con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   MSMQ en [!INCLUDE[wv](../../../../includes/wv-md.md)] admite una propiedad de mensaje que mantiene un recuento del número de veces que se intenta la entrega del mensaje. Esta propiedad de recuento de anulación no está disponible en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mantiene el recuento de anulación en memoria, por lo que es posible que esta propiedad no contenga un valor preciso cuando el mismo mensaje es leído por más de un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en una granja web.  
+-   MSMQ en [!INCLUDE[wv](../../../../includes/wv-md.md)] admite una propiedad de mensaje que mantiene un recuento del número de veces que se intenta la entrega del mensaje. Esta propiedad de recuento de anulación no está disponible en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF mantiene el recuento de anulación en memoria, por lo que es posible que esta propiedad no contenga un valor preciso cuando el mismo mensaje es leído por más de un servicio WCF en una granja de servidores Web.  
   
 ## <a name="remote-transactional-read"></a>Lectura transaccional remota  
  MSMQ en [!INCLUDE[wv](../../../../includes/wv-md.md)] admite lecturas transaccionales remotas. Esto permite que una aplicación que lea de una cola se hospede en un equipo diferente de aquel en el que se hospeda la cola. Así se garantiza la posibilidad de que un conjunto de servicios lea en una cola central, lo que aumenta el rendimiento total del sistema. También se garantiza que, si se produce un error al leer y procesar el mensaje, la transacción se revierte y el mensaje permanece en la cola para su posterior procesamiento.  

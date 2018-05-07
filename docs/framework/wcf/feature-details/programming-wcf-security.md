@@ -1,42 +1,30 @@
 ---
 title: Programación de la seguridad de WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-caps.latest.revision: 25
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 63f5c2c61a374b92b018419c83c9429e6ad796d8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 3eb645dcc5b8cc1c52818e290699ebadcd0943c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-wcf-security"></a>Programación de la seguridad de WCF
-Este tema describe las tareas de programación fundamentales utilizadas para crear una aplicación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] segura. Este tema trata únicamente la autenticación, confidencialidad e integridad, conocido colectivamente como *transferir seguridad*. Este tema no cubre la autorización (el control de acceso a recursos o servicios;) Para obtener información sobre la autorización, consulte [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+En este tema se describe las tareas de programación fundamentales utilizadas para crear una aplicación de Windows Communication Foundation (WCF) segura. Este tema trata únicamente la autenticación, confidencialidad e integridad, conocido colectivamente como *transferir seguridad*. Este tema no cubre la autorización (el control de acceso a recursos o servicios;) Para obtener información sobre la autorización, consulte [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 > [!NOTE]
->  Para obtener una introducción a los conceptos de seguridad, sobre todo en independientemente de valiosa [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vea el conjunto de modelos y prácticas de tutoriales en MSDN en [escenarios, los patrones y Guía de implementación de Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250).  
+>  Para obtener una introducción a los conceptos de seguridad, especialmente en relación con WCF, útil ver el conjunto de modelos y prácticas de tutoriales en MSDN en [escenarios, los patrones y Guía de implementación de Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250).  
   
- La programación de la seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se basa en tres pasos que establecen lo siguiente: el modo de seguridad, un tipo de credencial de cliente y los valores de credenciales. Puede realizar estos pasos mediante código o configuración.  
+ Programar la seguridad WCF se basa en tres pasos que establecen lo siguiente: el modo de seguridad, un tipo de credencial de cliente y los valores de credenciales. Puede realizar estos pasos mediante código o configuración.  
   
 ## <a name="setting-the-security-mode"></a>Establecimiento del modo de seguridad  
- Lo siguiente explica los pasos generales para programar con el modo de seguridad en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ A continuación explica los pasos generales para programar con el modo de seguridad en WCF:  
   
 1.  Seleccione uno de los enlaces predefinidos adecuado a sus requisitos de aplicación. Para obtener una lista de las opciones de enlace, vea [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md). De forma predeterminada, prácticamente todos los enlaces tienen la seguridad habilitada. La única excepción es el <xref:System.ServiceModel.BasicHttpBinding> clase (con la configuración, la [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   
