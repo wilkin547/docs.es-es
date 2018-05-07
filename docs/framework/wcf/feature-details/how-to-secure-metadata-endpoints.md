@@ -1,34 +1,22 @@
 ---
 title: 'Cómo: Proteger los puntos de conexión de metadatos'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-caps.latest.revision: 13
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50a62366063123de9e1773b2926f79b76a1b1c3b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 659291975902ec78c1484ac77f898b4486000e8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Cómo: Proteger los puntos de conexión de metadatos
-Los metadatos para un servicio pueden contener información confidencial sobre su aplicación que un usuario malintencionado puede aprovechar. Los consumidores de su servicio también pueden requerir un mecanismo seguro para obtener los metadatos sobre su servicio. Por consiguiente, a veces es necesario publicar sus metadatos utilizando un extremo seguro.  
+Los metadatos para un servicio pueden contener información confidencial sobre su aplicación que un usuario malintencionado puede aprovechar. Los consumidores de su servicio también pueden requerir un mecanismo seguro para obtener los metadatos sobre su servicio. Por consiguiente, a veces es necesario publicar sus metadatos utilizando un punto de conexión seguro.  
   
- Los extremos de metadatos generalmente se protegen utilizando los mecanismos de seguridad estándares definidos en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para proteger los extremos de la aplicación. (Para obtener más información, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
+ Los extremos de metadatos generalmente se protegen utilizando los mecanismos de seguridad estándar definidos en Windows Communication Foundation (WCF) para proteger los extremos de la aplicación. (Para obtener más información, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
   
  En este tema se describen los pasos para crear un punto de conexión protegido por un certificado SSL (Capa de sockets seguros) o, en otras palabras, un punto de conexión de HTTPS.  
   

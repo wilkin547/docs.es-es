@@ -2,11 +2,11 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: f81c71746b6b59a51ee825b44c9e6d9f93eb5fbd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 5498c300ab126bbc4e08cd228e3e7b48e905932e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicehost"></a>@ServiceHost
 Asocia el generador usado para crear el host del servicio con el servicio que se va a hospedar y otros aspectos de programación necesarios para tener acceso o compilar el código de hospedaje proporcionado en el archivo .svc.  
@@ -31,7 +31,7 @@ CodeBehind = "CodeBehind"%>
  El nombre de tipo de CLR del generador de host de servicio usado para crear instancias del host del servicio. Este atributo es opcional. Si no se especifica, se usa el valor predeterminado <xref:System.ServiceModel.Activation.ServiceHostFactory> que devuelve una instancia de <xref:System.ServiceModel.ServiceHost>.  
   
 #### <a name="debug"></a>Depuración  
- Indica si el servicio de Windows Communication Foundation (WCF) debe compilarse con símbolos de depuración. Es `true` si el servicio de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] debe compilarse con símbolos de depuración; de lo contrario, es `false`.  
+ Indica si el servicio de Windows Communication Foundation (WCF) debe compilarse con símbolos de depuración. `true` Si el servicio WCF debe compilarse con símbolos de depuración; en caso contrario, `false`.  
   
 #### <a name="language"></a>Lenguaje  
  Especifica el lenguaje usado al compilar todo el código en línea del archivo (.svc). Los valores pueden representar cualquier lenguaje compatible con .NET, incluyendo C#, VB y JS, que hacen referencia a C#, Visual Basic .NET y JScript .NET, respectivamente. Este atributo es opcional.  

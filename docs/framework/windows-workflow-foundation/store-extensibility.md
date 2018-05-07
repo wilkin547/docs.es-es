@@ -1,23 +1,12 @@
 ---
-title: "Extensibilidad de almacén"
-ms.custom: 
+title: Extensibilidad de almacén
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e269f485da16bcf3669bb8cb32396fad2875ca89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8cfbf96256d4b8416beb526875a1e9ac09c3bfbb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="store-extensibility"></a>Extensibilidad de almacén
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> permite a los usuarios promover propiedades personalizadas, específicas de la aplicación que se pueden utilizar para consultar instancias en la base de datos de persistencia. El acto de promover una propiedad hace que el valor esté disponible dentro de una vista especial en la base de datos. Estas propiedades promovidas (propiedades que se pueden usar en consultas de usuario) pueden ser de tipos simples como Int64, Guid, String y DateTime o de un tipo binario serializado (byte []).  
@@ -118,7 +107,7 @@ ms.lasthandoff: 12/22/2017
     go  
     ```  
   
-##  <a name="InstancePromotedProperties"></a>Vista [System.Activities.DurableInstancing.InstancePromotedProperties]  
+##  <a name="InstancePromotedProperties"></a> Vista [System.Activities.DurableInstancing.InstancePromotedProperties]  
   
 |Nombre de columna|Tipo de columna|Descripción|  
 |-----------------|-----------------|-----------------|  

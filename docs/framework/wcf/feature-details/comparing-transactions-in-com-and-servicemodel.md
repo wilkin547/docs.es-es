@@ -1,32 +1,20 @@
 ---
-title: "Comparación de las transacciones en COM+ y ServiceModel"
-ms.custom: 
+title: Comparación de las transacciones en COM+ y ServiceModel
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e493bcdd-b91a-4486-853f-83dbcd1931b7
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87e3df31060a9c71e0b2868aa34373bca221fa79
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a47fe1686dff2e705b06b001d7d5e4ea6e8c5f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparing-transactions-in-com-and-servicemodel"></a>Comparación de las transacciones en COM+ y ServiceModel
-Este tema expone cómo simular el comportamiento de un servicio transaccional de COM+ mediante los atributos [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que proporciona el espacio de nombres <xref:System.ServiceModel>.  
+Este tema describe cómo simular el comportamiento de un servicio transaccional de COM + mediante los atributos de Windows Communication Foundation (WCF) el <xref:System.ServiceModel> proporciona el espacio de nombres.  
   
 ## <a name="emulating-com-using-servicemodel-attributes"></a>Emulación de COM+ mediante los atributos de ServiceModel  
- La siguiente tabla compara la enumeración <xref:System.EnterpriseServices.TransactionOption> utilizada para crear una transacción `EnterpriseServices`, y cómo se correlacionan con los atributos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporcionados por el espacio de nombres <xref:System.ServiceModel>.  
+ La siguiente tabla compara la <xref:System.EnterpriseServices.TransactionOption> enumeración que se usa para crear un `EnterpriseServices` transacciones y cómo se correlacionan con los atributos WCF la <xref:System.ServiceModel> proporciona el espacio de nombres.  
   
-|Atributo COM+|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] atributos|  
+|Atributo COM+|Atributos WCF|  
 |---------------------|------------------------------------------------------------------------|  
 |RequiresNew|El valor de <xref:System.ServiceModel.TransactionFlowAttribute> está establecido en <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>.<br /><br /> El valor de <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> es `true`.<br /><br /> El atributo `TransactionFlow` en el elemento de enlace es `false`.|  
 |Obligatorio|El valor de <xref:System.ServiceModel.TransactionFlowAttribute> está establecido en <xref:System.ServiceModel.TransactionFlowOption.Allowed>.<br /><br /> El valor de <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> es `true`.<br /><br /> El atributo `TransactionFlow` en el elemento de enlace es `true`.|  

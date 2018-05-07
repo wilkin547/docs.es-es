@@ -1,13 +1,6 @@
 ---
-title: "Programación en SQL Server y atributos de protección de host"
-ms.custom: 
+title: Programación en SQL Server y atributos de protección de host
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - SQL Server [.NET Framework]
 - permission sets, SQL Server
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - host protection attributes
 - HostProtectionAttribute class, reliability
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a775b1c4f8446e756301650dcc61e3ef378408f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f3e5b3c4dcec98f293b4d6444d781705c700f88
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>Programación en SQL Server y atributos de protección de host
 La capacidad para cargar y ejecutar código administrado en un host de SQL Server requiere que se cumplan los requisitos del host tanto para la seguridad de acceso del código como para la protección de los recursos del host.  Los requisitos de la seguridad de acceso del código se especifican mediante uno de tres conjuntos de permisos de SQL Server: SAFE, EXTERNAL-ACCESS o UNSAFE. El código que se ejecuta dentro de los conjuntos de permisos SAFE o EXTERNAL-ACCESS debe evitar ciertos tipos o miembros que tienen aplicado el atributo <xref:System.Security.Permissions.HostProtectionAttribute>. <xref:System.Security.Permissions.HostProtectionAttribute> no es un permiso de seguridad, por más que una garantía de confiabilidad identifique construcciones de código específico (ya sean tipos o métodos) que el host podría rechazar.  El uso de <xref:System.Security.Permissions.HostProtectionAttribute> requiere un modelo de programación que ayude a proteger la estabilidad del host.  

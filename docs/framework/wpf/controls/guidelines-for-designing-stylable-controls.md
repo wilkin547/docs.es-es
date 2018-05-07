@@ -1,27 +1,15 @@
 ---
-title: "Instrucciones para el diseño de controles con estilos"
-ms.custom: 
+title: Instrucciones para el diseño de controles con estilos
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6707a434f64838467033966c9093e1e415b1fb31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Instrucciones para el diseño de controles con estilos
 En este documento se resume un conjunto de procedimientos recomendados que se deben tener en cuenta al diseñar un control con el que pretende crear estilos y plantillas con facilidad. Este conjunto de procedimientos se obtiene de una gran serie de pruebas y errores al trabajar con estilos de control de temas para el conjunto de controles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] integrado. Se ha observado que una aplicación de estilos correcta es tanto una función de un modelo de objeto bien diseñado como del propio estilo. Este documento está destinado a los autores de controles, y no a los autores de estilos.  

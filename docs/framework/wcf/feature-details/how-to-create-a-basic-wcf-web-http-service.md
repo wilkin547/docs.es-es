@@ -1,30 +1,18 @@
 ---
-title: "Cómo: Crear un servicio básico web HTTP de WCF"
-ms.custom: 
+title: 'Cómo: Crear un servicio básico web HTTP de WCF'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4dc60bbb51bc573840d0d45356f0cd84fd32db2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d147286fd2f8fe3f4f5e822598a07b51ae6d9791
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Cómo: Crear un servicio básico web HTTP de WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le permite crear un servicio que expone un extremo web. Los puntos de conexión web envían los datos por XML o JSON, no hay ninguna envoltura SOAP. En este tema se muestra cómo exponer este tipo de extremos.  
+Windows Communication Foundation (WCF) le permite crear un servicio que expone un extremo Web. Los puntos de conexión web envían los datos por XML o JSON, no hay ninguna envoltura SOAP. En este tema se muestra cómo exponer este tipo de extremos.  
   
 > [!NOTE]
 >  La única manera de proteger un extremo web es exponerlo a través de HTTPS, utilizando la seguridad de transporte. Al usar la seguridad basada en mensaje, la información de seguridad se coloca normalmente en encabezados SOAP, y dado que los mensajes enviados a los extremos que no son SOAP no contienen envoltura SOAP, no hay ningún lugar donde colocar la información de seguridad y debe confiar en la seguridad de transporte.  
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  Si no agrega un extremo, <xref:System.ServiceModel.Web.WebServiceHost> crea automáticamente un extremo predeterminado. <xref:System.ServiceModel.Web.WebServiceHost> también agrega <xref:System.ServiceModel.Description.WebHttpBehavior> y deshabilita la página de ayuda de HTTP y la funcionalidad GET del lenguaje de descripción de servicios Web (WSDL) para que el extremo de metadatos no interfiera con el extremo HTTP predeterminado.  
     >   
-    >  Agregar un extremo que no es SOAP a una dirección URL de"" causa un comportamiento inesperado cuando se intenta llamar a una operación en el extremo. La razón para esto es que el URI de escucha del extremo es igual al URI de la página de ayuda (la página que se muestra al ir a la dirección base de un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]).  
+    >  Agregar un punto de conexión que no es SOAP a una dirección URL de"" causa un comportamiento inesperado cuando se intenta llamar a una operación en el punto de conexión. La razón de ello es el URI del extremo es el mismo que el URI para la página de ayuda (la página que se muestra al ir a la dirección base de un servicio WCF) de escucha.  
   
      Para evitar que esto suceda, puede realizar una de las siguientes acciones:  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Para llamar a las operaciones de servicio asignadas a GET en Internet Explorer  
   
-1.  Abra Internet Explorer y escriba "`http://localhost:8000/EchoWithGet?s=Hello, world!`" y presione ENTRAR. La dirección URL contiene la dirección base del servicio ("http://localhost:8000/"), la dirección relativa del punto de conexión (""), la operación del servicio que se ha de llamar ("EchoWithGet") y un signo de interrogación seguido de una lista de parámetros con nombre separados por una Y comercial (&).  
+1.  Abra Internet Explorer y escriba "`http://localhost:8000/EchoWithGet?s=Hello, world!`" y presione ENTRAR. La dirección URL contiene la dirección base del servicio ("http://localhost:8000/"), la dirección relativa del punto de conexión (""), la operación de servicio para llamar ("EchoWithGet") y un signo de interrogación seguido de una lista de parámetros con nombre separados por una y comercial (&).  
   
 ### <a name="to-call-service-operations-in-code"></a>Realización de llamadas a operaciones de servicio mediante código  
   

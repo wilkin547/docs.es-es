@@ -1,29 +1,15 @@
 ---
 title: Enlaces personalizados
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5fc38becb4a737ada5102c187ddeaac73aaceb1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6880b04a3f8a82c1e109c32674804c5241913a8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-bindings"></a>Enlaces personalizados
 Puede usar la clase <xref:System.ServiceModel.Channels.CustomBinding> cuando uno de los enlaces proporcionados por el sistema no cumple los requisitos de su servicio. Todos los enlaces se construyen a partir de un conjunto ordenado de elementos de enlace. Los enlaces personalizados pueden crearse a partir de un conjunto de elementos de enlace proporcionado por el sistema o incluir elementos de enlace personalizado definidos por el usuario. Puede utilizar elementos de enlaces personalizados, por ejemplo, para habilitar el uso de nuevos transportes o codificadores en un punto de conexión de servicio. Para obtener ejemplos prácticos, vea [ejemplos de enlace personalizados](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Para obtener más información, consulte [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -55,7 +41,7 @@ Puede usar la clase <xref:System.ServiceModel.Channels.CustomBinding> cuando uno
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
- En la parte inferior hay un elemento de transporte necesario. Puede utilizar su propio transporte o uno de los siguientes elementos de enlace de transporte proporcionados por [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]:  
+ En la parte inferior hay un elemento de transporte necesario. Puede usar su propio transporte o uno de los siguientes elementos de enlace de transporte proporciona Windows Communication Foundation (WCF):  
   
 -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   

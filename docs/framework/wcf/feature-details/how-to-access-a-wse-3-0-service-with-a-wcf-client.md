@@ -1,42 +1,28 @@
 ---
 title: 'Cómo: Obtener acceso al servicio WSE 3.0 con un cliente WCF'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 382762917e790d54dca31158f2b7ffde560c1427
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 54d795858b85bd72a01f619b3603c9927df655d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Cómo: Obtener acceso al servicio WSE 3.0 con un cliente WCF
-Los clientes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] son compatibles en cuanto a conexión con Web Service Enhancements (WSE) para los servicios de Microsoft .NET (3.0) cuando los clientes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se configuran para utilizar la versión de agosto de 2004 de la especificación WS-Addressing. Sin embargo, los servicios de WSE 3.0 no admite el protocolo de intercambio (MEX) de metadatos, por lo que cuando se usa el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para crear un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clase de cliente, la configuración de seguridad no se aplica a generado [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente. Por consiguiente, debe especificar la configuración de seguridad que el servicio del WSE 3.0 requiere una vez generado el cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Los clientes de Windows Communication Foundation (WCF) son compatibles de nivel de conexión con Web Services Enhancements (WSE) 3.0 para servicios de Microsoft .NET cuando los clientes de WCF están configurados para usar la versión de agosto de 2004 de la especificación WS-Addressing. Sin embargo, los servicios de WSE 3.0 no admite el protocolo de intercambio (MEX) de metadatos, por lo que cuando se usa el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para crear una clase de cliente WCF, la configuración de seguridad no se aplica a los botones generados Cliente WCF. Por lo tanto, debe especificar la configuración de seguridad que el servicio de WSE 3.0 requiere una vez generado el cliente de WCF.  
   
- Puede aplicar esta configuración de seguridad utilizando un enlace personalizado para tener en cuenta los requisitos de servicio de WSE 3.0 y los requisitos interoperables entre un servicio del WSE 3.0 y un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Estos requisitos de interoperabilidad incluyen el uso mencionado anteriormente de agosto de 2004 de la especificación WS-Addressing y la protección predeterminada de mensajes de WSE 3.0 de <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. La protección predeterminada de mensajes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] es <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Este tema explica en detalle cómo crear un enlace de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que interopere con un servicio de WSE 3.0. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también proporciona un ejemplo que incorpora este enlace. Para obtener más información acerca de este ejemplo, vea [interoperar con servicios Web ASMX](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
+ Puede aplicar esta configuración de seguridad mediante un enlace personalizado para tener en cuenta los requisitos del servicio de WSE 3.0 y los requisitos interoperables entre un servicio de WSE 3.0 y un cliente de WCF. Estos requisitos de interoperabilidad incluyen el uso mencionado anteriormente de agosto de 2004 de la especificación WS-Addressing y la protección predeterminada de mensajes de WSE 3.0 de <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. La protección predeterminada de mensajes de WCF es <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Este tema describe cómo crear un enlace de WCF que interactúa con un servicio de WSE 3.0. WCF también proporciona un ejemplo que incorpora este enlace. Para obtener más información acerca de este ejemplo, vea [interoperar con servicios Web ASMX](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>Obtener acceso al servicio Web WSE 3.0 con un cliente WCF  
   
-1.  Ejecute el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para crear un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente para el servicio Web de WSE 3.0.  
+1.  Ejecute el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para crear un cliente WCF para el servicio Web de WSE 3.0.  
   
-     Para un servicio Web de WSE 3.0, se crea un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Dado que WSE 3.0 no admite el protocolo MEX, no se puede utilizar la herramienta para recuperar los requisitos de seguridad del Servicio Web. El desarrollador de aplicaciones debe agregar la configuración de seguridad del cliente.  
+     Para un servicio Web WSE 3.0, se crea un cliente WCF. Dado que WSE 3.0 no admite el protocolo MEX, no se puede utilizar la herramienta para recuperar los requisitos de seguridad del Servicio Web. El desarrollador de aplicaciones debe agregar la configuración de seguridad del cliente.  
   
-     Para obtener más información acerca de cómo crear un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente, consulte la [Cómo: crear un cliente](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+     Para obtener más información acerca de cómo crear un cliente de WCF, vea el [Cómo: crear un cliente](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Cree una clase que represente un enlace que puede comunicarse con los servicios Web WSE 3.0.  
   
@@ -49,7 +35,7 @@ Los clientes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] son comp
          [!code-csharp[c_WCFClientToWSEService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#1)]
          [!code-vb[c_WCFClientToWSEService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#1)]  
   
-    2.  Agregue propiedades a la clase que especifiquen la aserción de llave en mano usada por el servicio WSE, si se requieren las claves derivadas, si se utilizan sesiones seguras, si se requieren confirmaciones de firmas, y la configuración de protección de mensajes. En WSE 3.0, una aserción de llave en mano especifica los requisitos de seguridad para un cliente o servicio Web, similar al modo de autenticación de un enlace en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+    2.  Agregue propiedades a la clase que especifiquen la aserción de llave en mano usada por el servicio WSE, si se requieren las claves derivadas, si se utilizan sesiones seguras, si se requieren confirmaciones de firmas, y la configuración de protección de mensajes. En WSE 3.0, una aserción de llave en mano especifica los requisitos de seguridad para un cliente o servicio Web, similar al modo de autenticación de un enlace en WCF.  
   
          El ejemplo de código siguiente define las propiedades `SecurityAssertion`, `RequireDerivedKeys`, `EstablishSecurityContext` y `MessageProtectionOrder` que especifican la aserción de llave en mano de WSE, si se requieren claves derivadas, si se usan sesiones seguras, si se requieren confirmaciones de firmas y la configuración de protección de mensajes, respectivamente.  
   
@@ -65,13 +51,13 @@ Los clientes de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] son comp
   
 3.  En el código de la aplicación cliente, agregue el código para definir las propiedades de enlace.  
   
-     El ejemplo de código siguiente especifica que el cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] debe utilizar protección de mensajes y autenticación tal y como define la aserción de seguridad de llave en mano `AnonymousForCertificate` de WSE 3.0. Además, se requieren sesiones seguras y claves derivadas.  
+     En el ejemplo de código siguiente se especifica que el cliente de WCF debe usar autenticación y protección de mensajes de acuerdo con WSE 3.0 `AnonymousForCertificate` aserción de seguridad inmediata. Además, se requieren sesiones seguras y claves derivadas.  
   
      [!code-csharp[c_WCFClientToWSEService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#4)]
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo de código siguiente define un enlace personalizado que expone propiedades que corresponden a las propiedades de una aserción de seguridad de llave en mano WSE 3.0. Ese enlace personalizado, que se denomina `WseHttpBinding`, se utiliza a continuación para especificar las propiedades de enlace de un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se comunica con el ejemplo de Tutorial rápido de WSE 3.0 de WSSecurityAnonymous.  
+ El ejemplo de código siguiente define un enlace personalizado que expone propiedades que corresponden a las propiedades de una aserción de seguridad de llave en mano WSE 3.0. Ese enlace personalizado, que se denomina `WseHttpBinding`, a continuación, se utiliza para especificar las propiedades de enlace para un cliente WCF que se comunica con el ejemplo de tutorial rápido de WSSecurityAnonymous WSE 3.0.  
   
   
   

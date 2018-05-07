@@ -1,11 +1,7 @@
 ---
-title: "GetNames (función) (referencia de API no administrada)"
-description: "La función de GetNames recupera los nombres de las propiedades de un objeto."
+title: GetNames (función) (referencia de API no administrada)
+description: La función de GetNames recupera los nombres de las propiedades de un objeto.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetNames
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80284900c318a3776168b781ce2e0e5e4a68f96d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 108946428cdfadcfb9c653b7e444bf278dfa2782
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getnames-function"></a>GetNames (función)
 Recupera un subconjunto o todos los nombres de las propiedades de un objeto. 
@@ -91,22 +84,22 @@ Las marcas que se pueden pasar como el `lEnumFlags` argumento son campos de bits
 
 | Indicadores de grupo 1 |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | Devolver todos los nombres de propiedad. `strQualifierName`y `pQualifierVal` están sin utilizar. |
+| `WBEM_FLAG_ALWAYS` | 0 | Devolver todos los nombres de propiedad. `strQualifierName` y `pQualifierVal` están sin utilizar. |
 | `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Devolver solo las propiedades que tienen un calificador del nombre especificado por el `strQualifierName` parámetro. Si se usa esta marca, debe especificar `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Devolver solo las propiedades que no tienen un calificador del nombre especificado por el `strQualifierName` parámetro. Si se usa esta marca, debe especificar `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Devolver solo las propiedades que tienen un calificador del nombre especificado por el `wszQualifierName` parámetro y también tienen un valor idéntico al especificado por el `pQualifierVal` estructura. Si se utiliza esta marca, debe especificar tanto una `wszQualifierName` y `pQualifierValue`. |
 
 | Indicadores de grupo 2 |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0 x 4 | Devolver solo los nombres de propiedades que definen las claves. |
-|`WBEM_FLAG_REFS_ONLY` | 0 x 8 | Valor devuelto solo nombres de propiedad que son referencias de objeto. |
+|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Devolver solo los nombres de propiedades que definen las claves. |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | Valor devuelto solo nombres de propiedad que son referencias de objeto. |
 
 | Indicadores de grupo 3 |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Devolver solo los nombres de propiedad que pertenecen a la clase más derivada. Excluir propiedades de las clases principales. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Devolver solo los nombres de propiedad que pertenecen a las clases principales. |
 |`WBEM_FLAG_SYSTEM_ONLY` | 0 x 30 | Devolver solo los nombres de propiedades del sistema. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0 x 40 | Devolver solo los nombres de propiedades no son del sistema. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Devolver solo los nombres de propiedades no son del sistema. |
 
 La función siempre asigna un nuevo `SAFEARRAY` si devuelve `WBEM_S_NO_ERROR`, y `pstrNames` siempre se establece para que apunte a él. La matriz devuelta puede tener 0 elementos si no hay propiedades coinciden con los filtros especificados. Si la función devuelve un valor distinto de `WBM_S_NO_ERROR`, un nuevo `SAFEARRAY` estructura no se devuelve.
  
@@ -115,7 +108,7 @@ La función siempre asigna un nuevo `SAFEARRAY` si devuelve `WBEM_S_NO_ERROR`, y
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

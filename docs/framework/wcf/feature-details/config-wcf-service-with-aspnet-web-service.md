@@ -1,34 +1,22 @@
 ---
-title: "Cómo: Configurar servicios WCF para interoperar con clientes de servicios web ASP.NET"
-ms.custom: 
+title: 'Cómo: Configurar servicios WCF para interoperar con clientes de servicios web ASP.NET'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b4bd1dce4128e6f25294525f10226d98f732cd4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 12c5645b53e8e931edabc1a13fc1749e40538044
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Cómo: Configurar servicios WCF para interoperar con clientes de servicios web ASP.NET
-Para configurar un extremo de servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para que sea interoperable con clientes de servicios web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], utilice el tipo <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> como el tipo de enlace de su extremo de servicio.  
+Para configurar un punto de conexión de servicio de Windows Communication Foundation (WCF) para que sea interoperable con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] clientes de servicios Web, use la <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> tipo como el tipo de enlace para el extremo de servicio.  
   
  Puede habilitar opcionalmente el soporte para HTTPS y la autenticación del cliente del nivel de transporte en el enlace. Los clientes de servicios web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] no admiten la codificación de mensajes del MTOM, por lo que la propiedad <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> debería quedar dejarse en su valor predeterminado, que es <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. Los clientes de servicios web de ASP.NET no admiten WS-Security, por lo que la <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> debería estar establecida en <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
   
- Para que los metadatos una [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio disponible para [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] herramientas de generación de proxy de servicio Web (es decir, [Web Services Description Language Tool (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [(Web Services Discovery Tool Disco.exe)](http://go.microsoft.com/fwlink/?LinkId=73834)y la característica Agregar referencia Web en Visual Studio), debe exponer un extremo de metadatos HTTP/GET.  
+ Para que estén disponibles para los metadatos para un servicio WCF [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] herramientas de generación de proxy de servicio Web (es decir, [Web Services Description Language Tool (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [Web Services Discovery Tool (Disco.exe)](http://go.microsoft.com/fwlink/?LinkId=73834)y la característica Agregar referencia Web en Visual Studio), debe exponer un extremo de metadatos HTTP/GET.  
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>Para agregar un punto de conexión de WCF que sea compatible con clientes del servicio web de ASP.NET mediante código  
   
@@ -51,7 +39,7 @@ Para configurar un extremo de servicio de [!INCLUDE[indigo1](../../../../include
 4.  Habilite un punto de conexión de metadatos HTTP/GET para su servicio. Para obtener más información, consulte el [Cómo: Publicar metadatos para un servicio mediante un archivo de configuración](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
   
 ## <a name="example"></a>Ejemplo  
- El código de ejemplo siguiente muestra cómo agregar un extremo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que es compatible con clientes de servicios Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] en código y, alternativamente, en archivos de configuración.  
+ Ejemplo de código siguiente muestra cómo agregar un extremo de WCF que sea compatible con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] clientes de servicios en código Web y o bien en archivos de configuración.  
   
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)] 
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)] 

@@ -1,13 +1,6 @@
 ---
-title: "Información general sobre comandos"
-ms.custom: 
+title: Información general sobre comandos
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-caps.latest.revision: "35"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3eb7d05cdf5f6a80a0a247a5f429052cc9a8368b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0d426d8cf174a61c724e97b5e7af5c1428679716
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="commanding-overview"></a>Información general sobre comandos
 <a name="introduction"></a> Los comandos constituyen un mecanismo de entrada de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], que permite el control de entrada en un nivel más semántico que la entrada del dispositivo. Algunos ejemplos de comandos son las operaciones **Copiar**, **Cortar** y **Pegar** presentes en numerosas aplicaciones.  
@@ -83,13 +71,13 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Commands"></a>   
 ### <a name="commands"></a>Comandos  
- Comandos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se crean implementando la <xref:System.Windows.Input.ICommand> interfaz.  <xref:System.Windows.Input.ICommand>expone dos métodos, <xref:System.Windows.Input.ICommand.Execute%2A>, y <xref:System.Windows.Input.ICommand.CanExecute%2A>y un evento <xref:System.Windows.Input.ICommand.CanExecuteChanged>. <xref:System.Windows.Input.ICommand.Execute%2A>realiza las acciones que están asociadas con el comando. <xref:System.Windows.Input.ICommand.CanExecute%2A>Determina si el comando puede ejecutarse en el destino del comando actual. <xref:System.Windows.Input.ICommand.CanExecuteChanged>se produce si el Administrador de comandos que centraliza las operaciones de comandos detecta un cambio en el origen del comando que podría invalidar un comando que se ha generado pero aún no se ha ejecutado por el enlace de comando.  El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementación de <xref:System.Windows.Input.ICommand> es la <xref:System.Windows.Input.RoutedCommand> clase y es el foco de esta información general.  
+ Comandos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se crean implementando la <xref:System.Windows.Input.ICommand> interfaz.  <xref:System.Windows.Input.ICommand> expone dos métodos, <xref:System.Windows.Input.ICommand.Execute%2A>, y <xref:System.Windows.Input.ICommand.CanExecute%2A>y un evento <xref:System.Windows.Input.ICommand.CanExecuteChanged>. <xref:System.Windows.Input.ICommand.Execute%2A> realiza las acciones que están asociadas con el comando. <xref:System.Windows.Input.ICommand.CanExecute%2A> Determina si el comando puede ejecutarse en el destino del comando actual. <xref:System.Windows.Input.ICommand.CanExecuteChanged> se produce si el Administrador de comandos que centraliza las operaciones de comandos detecta un cambio en el origen del comando que podría invalidar un comando que se ha generado pero aún no se ha ejecutado por el enlace de comando.  El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementación de <xref:System.Windows.Input.ICommand> es la <xref:System.Windows.Input.RoutedCommand> clase y es el foco de esta información general.  
   
  Los orígenes principales de la entrada en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] son el mouse, el teclado, el lápiz y los comandos enrutados.  Las entradas más orientadas a dispositivo use un <xref:System.Windows.RoutedEvent> para notificar a los objetos en una página de aplicación que se ha producido un evento de entrada.  A <xref:System.Windows.Input.RoutedCommand> no es diferente.  El <xref:System.Windows.Input.RoutedCommand.Execute%2A> y <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> métodos de un <xref:System.Windows.Input.RoutedCommand> no contienen la lógica de aplicación para el comando, pero en su lugar provocar eventos enrutados que túnel y propagarse a través del árbol de elementos hasta que encuentran un objeto con un <xref:System.Windows.Input.CommandBinding>.  El <xref:System.Windows.Input.CommandBinding> contiene los controladores para estos eventos y los controladores que realizan el comando.  Para obtener más información sobre el enrutamiento de eventos en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
  El <xref:System.Windows.Input.RoutedCommand.Execute%2A> método en un <xref:System.Windows.Input.RoutedCommand> provoca la <xref:System.Windows.Input.CommandManager.PreviewExecuted> y <xref:System.Windows.Input.CommandManager.Executed> eventos en el destino del comando.  El <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> método en un <xref:System.Windows.Input.RoutedCommand> provoca la <xref:System.Windows.Input.CommandManager.CanExecute> y <xref:System.Windows.Input.CommandManager.PreviewCanExecute> eventos en el destino del comando.  Estos túnel de eventos y de burbujas a través del árbol de elementos hasta que encuentran un objeto que tiene un <xref:System.Windows.Input.CommandBinding> para ese comando concreto.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Proporciona un conjunto de comandos enrutados comunes distribuido entre varias clases: <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.ComponentCommands>, y <xref:System.Windows.Documents.EditingCommands>.  Estas clases se componen únicamente de los <xref:System.Windows.Input.RoutedCommand> objetos y no la lógica de implementación del comando.  La lógica de implementación es responsabilidad del objeto en el que se ejecuta el comando.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Proporciona un conjunto de comandos enrutados comunes distribuido entre varias clases: <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.ComponentCommands>, y <xref:System.Windows.Documents.EditingCommands>.  Estas clases se componen únicamente de los <xref:System.Windows.Input.RoutedCommand> objetos y no la lógica de implementación del comando.  La lógica de implementación es responsabilidad del objeto en el que se ejecuta el comando.  
   
 <a name="Command_Sources"></a>   
 ### <a name="command-sources"></a>Orígenes del comando  
@@ -97,13 +85,13 @@ ms.lasthandoff: 01/19/2018
   
  Comando orígenes en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] generalmente implementar la <xref:System.Windows.Input.ICommandSource> interfaz.  
   
- <xref:System.Windows.Input.ICommandSource>expone tres propiedades: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>, y <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>:  
+ <xref:System.Windows.Input.ICommandSource> expone tres propiedades: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>, y <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>:  
   
--   <xref:System.Windows.Input.ICommandSource.Command%2A>es el comando que se ejecutará cuando se invoque el origen de comando.  
+-   <xref:System.Windows.Input.ICommandSource.Command%2A> es el comando que se ejecutará cuando se invoque el origen de comando.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>es el objeto en el que se ejecute el comando.  Merece la pena mencionar que en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] el <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> propiedad <xref:System.Windows.Input.ICommandSource> solo es aplicable cuando la <xref:System.Windows.Input.ICommand> es una <xref:System.Windows.Input.RoutedCommand>.  Si el <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> se establece en un <xref:System.Windows.Input.ICommandSource> y el comando correspondiente no es un <xref:System.Windows.Input.RoutedCommand>, se omite el destino del comando. Si el <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> no se establece, el elemento tiene el foco de teclado será el destino del comando.  
+-   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> es el objeto en el que se ejecute el comando.  Merece la pena mencionar que en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] el <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> propiedad <xref:System.Windows.Input.ICommandSource> solo es aplicable cuando la <xref:System.Windows.Input.ICommand> es una <xref:System.Windows.Input.RoutedCommand>.  Si el <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> se establece en un <xref:System.Windows.Input.ICommandSource> y el comando correspondiente no es un <xref:System.Windows.Input.RoutedCommand>, se omite el destino del comando. Si el <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> no se establece, el elemento tiene el foco de teclado será el destino del comando.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>es un tipo de datos definido por el usuario que se utilizan para pasar información a los controladores de implementar el comando.  
+-   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> es un tipo de datos definido por el usuario que se utilizan para pasar información a los controladores de implementar el comando.  
   
  El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las clases que implementan <xref:System.Windows.Input.ICommandSource> son <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Documents.Hyperlink>, y <xref:System.Windows.Input.InputBinding>.  <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, y <xref:System.Windows.Documents.Hyperlink> invocar un comando cuando se hace clic en y un <xref:System.Windows.Input.InputBinding> un comando, se invoca cuando el <xref:System.Windows.Input.InputGesture> asociados con se lleva a cabo.  
   
@@ -140,7 +128,7 @@ ms.lasthandoff: 01/19/2018
   
  El <xref:System.Windows.Input.CommandBinding> clase contiene un <xref:System.Windows.Input.CommandBinding.Command%2A> propiedad, y <xref:System.Windows.Input.CommandBinding.PreviewExecuted>, <xref:System.Windows.Input.CommandBinding.Executed>, <xref:System.Windows.Input.CommandBinding.PreviewCanExecute>, y <xref:System.Windows.Input.CommandBinding.CanExecute> eventos.  
   
- <xref:System.Windows.Input.CommandBinding.Command%2A>es el comando que el <xref:System.Windows.Input.CommandBinding> se está asociando.  Los controladores de eventos que están conectados a la <xref:System.Windows.Input.CommandBinding.PreviewExecuted> y <xref:System.Windows.Input.CommandBinding.Executed> eventos implementan la lógica de comando.  Los controladores de eventos que se adjunta a la <xref:System.Windows.Input.CommandBinding.PreviewCanExecute> y <xref:System.Windows.Input.CommandBinding.CanExecute> eventos determinan si el comando puede ejecutarse en el destino del comando actual.  
+ <xref:System.Windows.Input.CommandBinding.Command%2A> es el comando que el <xref:System.Windows.Input.CommandBinding> se está asociando.  Los controladores de eventos que están conectados a la <xref:System.Windows.Input.CommandBinding.PreviewExecuted> y <xref:System.Windows.Input.CommandBinding.Executed> eventos implementan la lógica de comando.  Los controladores de eventos que se adjunta a la <xref:System.Windows.Input.CommandBinding.PreviewCanExecute> y <xref:System.Windows.Input.CommandBinding.CanExecute> eventos determinan si el comando puede ejecutarse en el destino del comando actual.  
   
  En el ejemplo siguiente se muestra cómo crear un <xref:System.Windows.Input.CommandBinding> en el directorio raíz <xref:System.Windows.Window> de una aplicación.  El <xref:System.Windows.Input.CommandBinding> asocia la <xref:System.Windows.Input.ApplicationCommands.Open%2A> con <xref:System.Windows.Input.CommandManager.Executed> y <xref:System.Windows.Input.CommandBinding.CanExecute> controladores.  
   

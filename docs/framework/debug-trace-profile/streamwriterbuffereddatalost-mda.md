@@ -1,13 +1,6 @@
 ---
 title: MDA de streamWriterBufferedDataLost
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - StreamWriter class, data buffering problems
 - managed debugging assistants (MDAs), StreamWriter data buffering
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f5a59b8735cf87e8b88036ffb317f7bbeb9f0885
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15957ce03925d75021d88bc81d12809c3fe31c2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>MDA de streamWriterBufferedDataLost
 El Asistente para la depuración administrada (MDA) `streamWriterBufferedDataLost` se activa cuando se escribe un <xref:System.IO.StreamWriter>, pero después no se llama al método <xref:System.IO.StreamWriter.Flush%2A> o <xref:System.IO.StreamWriter.Close%2A> antes de que se destruya la instancia del <xref:System.IO.StreamWriter>. Cuando este MDA está habilitado, el tiempo de ejecución determina si los datos almacenados en búfer todavía existen en <xref:System.IO.StreamWriter>. Si existen datos almacenados en búfer, se activa el MDA. Llamar a los métodos <xref:System.GC.Collect%2A> y <xref:System.GC.WaitForPendingFinalizers%2A> puede forzar la ejecución de los finalizadores. En caso contrario, los finalizadores se ejecutarán en momentos aparentemente arbitrarios y posiblemente no lo hagan en la salida del proceso. La ejecución explícita de los finalizadores con este MDA habilitado ayudará a reproducir este tipo de problema de forma más confiable.  

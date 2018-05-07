@@ -1,29 +1,17 @@
 ---
-title: "Propagación"
-ms.custom: 
+title: Propagación
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17b20b76d4932272c8e2a9e26603dc8483505242
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 5d848a2b74402d0adf125488481f5b82e0b09781
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propagation"></a>Propagación
-En este tema se describe la propagación de actividad en [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] el modelo de seguimiento de traza.  
+Este tema describe la propagación de actividad en el modelo de seguimiento de Windows Communication Foundation (WCF).  
   
-## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>Utilización de la propagación para poner en correlación actividades entre los extremos  
+## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>Utilización de la propagación para poner en correlación actividades entre los puntos de conexión  
  La propagación proporciona al usuario la correlación directa de las trazas de error de la misma unidad de procesamiento, entre los extremos de la aplicación, p. ej., una solicitud. Los errores emitidos en diferentes extremos de la misma unidad de procesamiento se agrupan en la misma actividad, incluso en todos los dominios de aplicación. Esto se realiza a través de la propagación del id. de actividad en los encabezados del mensaje. Por lo tanto, si a un cliente se le agota el tiempo de espera debido a un error interno del servidor, ambos errores aparecen en la misma actividad para una correlación directa.  
   
  Para ello, utilice el valor `ActivityTracing` como se mostró en el ejemplo anterior. Además, establezca el atributo `propagateActivity` para el origen de seguimiento de traza `System.ServiceModel` en todos los extremos.  

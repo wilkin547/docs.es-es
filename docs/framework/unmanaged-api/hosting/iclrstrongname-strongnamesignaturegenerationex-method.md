@@ -1,14 +1,6 @@
 ---
-title: "ICLRStrongName::StrongNameSignatureGenerationEx (Método)"
-ms.custom: 
+title: ICLRStrongName::StrongNameSignatureGenerationEx (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName.StrongNameSignatureGenerationEx
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 247bcfa3c9f7a02dea331ff14948a00812fb06e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8bf9a94c55258193e3172459da129ba16f9c3265
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx (Método)
 Genera una firma de nombre seguro para el ensamblado especificado, según las marcas especificadas.  
@@ -80,12 +68,12 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Uno o varios de los siguientes valores:  
   
--   `SN_SIGN_ALL_FILES`(0 x 00000001): volver a calcular todos los valores hash de los módulos vinculados.  
+-   `SN_SIGN_ALL_FILES` (0 x 00000001): volver a calcular todos los valores hash de los módulos vinculados.  
   
--   `SN_TEST_SIGN`(0 x 00000002) - la firma de prueba del ensamblado.  
+-   `SN_TEST_SIGN` (0 x 00000002) - la firma de prueba del ensamblado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK`Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (vea [valores HRESULT comunes](http://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
+ `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (vea [valores HRESULT comunes](http://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
   
 ## <a name="remarks"></a>Comentarios  
  Especifique null para `wszFilePath` para calcular el tamaño de la firma sin necesidad de crear la firma.  
@@ -103,7 +91,7 @@ HRESULT StrongNameSignatureGenerationEx (
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [StrongNameSignatureGeneration (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)  

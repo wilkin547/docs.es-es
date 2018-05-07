@@ -1,32 +1,18 @@
 ---
 title: Procedimientos recomendados para la comunicación en cola
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b54569ad3d11c3b9b1b96e2738bdf0582b63b0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>Procedimientos recomendados para la comunicación en cola
-En este tema se proporcionan procedimientos recomendados para la comunicación en cola en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Las secciones siguientes discuten los procedimientos recomendados desde una perspectiva del escenario.  
+Este tema proporciona prácticas recomendadas para la comunicación en cola en Windows Communication Foundation (WCF). Las secciones siguientes discuten los procedimientos recomendados desde una perspectiva del escenario.  
   
 ## <a name="fast-best-effort-queued-messaging"></a>Mensajería en cola rápida y eficiente  
  Para los escenarios que requieren la separación que proporciona la mensajería en cola y una mensajería rápida y de alto rendimiento con garantías de optimización, utilice una cola no transaccional y establezca la propiedad <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> en `false`.  
@@ -69,7 +55,7 @@ En este tema se proporcionan procedimientos recomendados para la comunicación e
   
  Al utilizar el procesamiento por lotes, sea consciente que la simultaneidad y la limitación de peticiones se traducen en los lotes simultáneos.  
   
- Para lograr un rendimiento y disponibilidad más altos, use un conjunto de servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que lean desde la cola. Esto requiere que todos estos servicios expongan el mismo contrato en el mismo punto de conexión. El enfoque del conjunto funciona mejor para las aplicaciones que tienen tasas altas de producción de mensajes porque permite a varios servicios que lean desde la misma cola.  
+ Para lograr mayor rendimiento y disponibilidad, utilice una granja de servidores de servicios WCF que leen de la cola. Esto requiere que todos estos servicios expongan el mismo contrato en el mismo punto de conexión. El enfoque del conjunto funciona mejor para las aplicaciones que tienen tasas altas de producción de mensajes porque permite a varios servicios que lean desde la misma cola.  
   
  Al utilizar los conjuntos, sea consciente de que MSMQ 3.0 no admite las lecturas con transacciones remotas. MSMQ 4.0 admite las lecturas con transacciones remotas.  
   
@@ -84,11 +70,11 @@ En este tema se proporcionan procedimientos recomendados para la comunicación e
  Aunque las colas son típicamente unidireccionales, en algunos escenarios puede querer correlacionar una respuesta recibida con una solicitud enviada anteriormente. Si requiere dicha correlación, se recomienda que aplique su propio encabezado de mensaje SOAP que contiene información de correlación con el mensaje. Normalmente, el remitente adjunta este encabezado al mensaje y el receptor, tras procesar el mensaje y responder con un nuevo mensaje en una cola de respuesta, adjunta el encabezado del mensaje del remitente que contiene la información de la correlación al mensaje de solicitud para que el remitente pueda identificar el mensaje de respuesta.  
   
 ## <a name="integrating-with-non-wcf-applications"></a>Integración en aplicaciones que no son WCF  
- Utilice `MsmqIntegrationBinding` al integrar servicios o clientes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con servicios o clientes que no sean de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. No es[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicación puede ser una aplicación MSMQ escrita mediante System.Messaging, COM +, Visual Basic o C++.  
+ Use `MsmqIntegrationBinding` al integrar servicios WCF o clientes con servicios no WCF y clientes. La aplicación de WCF no puede ser una aplicación MSMQ escrita mediante System.Messaging, COM +, Visual Basic o C++.  
   
  Al utilizar `MsmqIntegrationBinding`, sea consciente de lo siguiente:  
   
--   Un cuerpo del mensaje de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no es igual que un cuerpo del mensaje de MSMQ. Al enviar un mensaje de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mediante un enlace en cola, el cuerpo del mensaje de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se coloca dentro de un mensaje de MSMQ. La infraestructura de MSMQ es ajena a esta información adicional; solo ve el mensaje de MSMQ.  
+-   El cuerpo de un mensaje WCF no es el mismo que el cuerpo de un mensaje MSMQ. Al enviar un mensaje WCF mediante un enlace en cola, el cuerpo del mensaje WCF se coloca dentro de un mensaje MSMQ. La infraestructura de MSMQ es ajena a esta información adicional; solo ve el mensaje de MSMQ.  
   
 -   `MsmqIntegrationBinding` admite los tipos de serialización populares. Se basa en el tipo de serialización, el tipo de cuerpo del mensaje genérico, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, toma diferentes tipos de parámetros. Por ejemplo, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> requiere `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> y `MsmqMessage<Stream>` requiere .  
   

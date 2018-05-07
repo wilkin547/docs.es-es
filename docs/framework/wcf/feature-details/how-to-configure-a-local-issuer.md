@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Configurar un emisor local"
-ms.custom: 
+title: 'Cómo: Configurar un emisor local'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,26 +8,21 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c24b039709a013f210a42d67c744c03489e4cf73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b227398af3ea0dfd7cd866f1110ccc1737553c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Cómo: Configurar un emisor local
 En este tema se describe cómo configurar un cliente para utilizar un emisor local para los tokens emitidos.  
   
  A menudo, cuando un cliente se comunica con un servicio federado, el servicio especifica la dirección del servicio de token de seguridad que se espera que emita el token y que el cliente utilizará para autenticarse con el servicio federado. En determinadas situaciones, el cliente puede configurarse para utilizar un *emisor local*.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza un emisor local en casos donde la dirección del emisor de un enlace federado sea http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous o `null`. En casos como éste, debe configurar <xref:System.ServiceModel.Description.ClientCredentials> con la dirección del emisor local y el enlace que se va a utilizar para comunicarse con ese emisor.  
+ Windows Communication Foundation (WCF) utiliza un emisor local en casos donde es la dirección del emisor de un enlace federado http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous o `null`. En casos como éste, debe configurar <xref:System.ServiceModel.Description.ClientCredentials> con la dirección del emisor local y el enlace que se va a utilizar para comunicarse con ese emisor.  
   
 > [!NOTE]
->  Si el <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> propiedad de la `ClientCredentials` clase se establece en `true`, no se especifica una dirección de emisor local y la dirección del emisor especificado por el [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) u otros http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, el enlace federado es http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, o es `null`, a continuación, las ventanas [!INCLUDE[infocard](../../../../includes/infocard-md.md)] emisor se utiliza.  
+>  Si el <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> propiedad de la `ClientCredentials` clase se establece en `true`, no se especifica una dirección de emisor local y la dirección del emisor especificado por el [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) u otros enlace federado es http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, o es `null`, a continuación, las ventanas [!INCLUDE[infocard](../../../../includes/infocard-md.md)] emisor se utiliza.  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Para configurar el emisor local en código  
   

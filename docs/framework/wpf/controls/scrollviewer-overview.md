@@ -1,13 +1,6 @@
 ---
-title: "Información general sobre ScrollViewer"
-ms.custom: 
+title: Información general sobre ScrollViewer
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7317bade85641d7d055facabcf7103b945609583
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1797f956ec41ba085dee7e1cb11a3129004552b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scrollviewer-overview"></a>Información general sobre ScrollViewer
 El contenido en una interfaz de usuario suele ser mayor que el área de presentación de la pantalla del equipo. El <xref:System.Windows.Controls.ScrollViewer> control proporciona una manera cómoda de habilitar el desplazamiento de contenido en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones. Este tema se presentan los <xref:System.Windows.Controls.ScrollViewer> elemento y se proporcionan varios ejemplos de uso.  
@@ -45,7 +33,7 @@ El contenido en una interfaz de usuario suele ser mayor que el área de presenta
 #### <a name="the-iscrollinfo-interface"></a>Interfaz IScrollInfo  
  El <xref:System.Windows.Controls.Primitives.IScrollInfo> interfaz representa la región desplazable principal dentro de un <xref:System.Windows.Controls.ScrollViewer> o control derivado. La interfaz define el desplazamiento de propiedades y métodos que pueden ser implementadas por <xref:System.Windows.Controls.Panel> elementos que requieren desplazamiento por unidad lógica, en lugar de en un incremento físico. Convertir una instancia de <xref:System.Windows.Controls.Primitives.IScrollInfo> hasta un derivada <xref:System.Windows.Controls.Panel> y, a continuación, usando sus métodos de desplazamiento proporciona una manera útil para desplazarse a la siguiente unidad lógica en una colección secundaria, en lugar de por incrementos en píxeles. De forma predeterminada, el <xref:System.Windows.Controls.ScrollViewer> control admite el desplazamiento por unidades físicas.  
   
- <xref:System.Windows.Controls.StackPanel>y <xref:System.Windows.Controls.VirtualizingStackPanel> ambos implementan <xref:System.Windows.Controls.Primitives.IScrollInfo> y admiten de forma nativa el desplazamiento lógico. Para controles de diseño de esa forma nativa compatibilidad con el desplazamiento lógico, se puede mantener un desplazamiento físico ajustando el host <xref:System.Windows.Controls.Panel> elemento en un <xref:System.Windows.Controls.ScrollViewer> y estableciendo el <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propiedad `false`.  
+ <xref:System.Windows.Controls.StackPanel> y <xref:System.Windows.Controls.VirtualizingStackPanel> ambos implementan <xref:System.Windows.Controls.Primitives.IScrollInfo> y admiten de forma nativa el desplazamiento lógico. Para controles de diseño de esa forma nativa compatibilidad con el desplazamiento lógico, se puede mantener un desplazamiento físico ajustando el host <xref:System.Windows.Controls.Panel> elemento en un <xref:System.Windows.Controls.ScrollViewer> y estableciendo el <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> propiedad `false`.  
   
  En el ejemplo de código siguiente se muestra cómo convertir una instancia de <xref:System.Windows.Controls.Primitives.IScrollInfo> a una <xref:System.Windows.Controls.StackPanel> y usar los métodos de desplazamiento de contenido (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> y <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) definidos por la interfaz.  
   
@@ -54,7 +42,7 @@ El contenido en una interfaz de usuario suele ser mayor que el área de presenta
   
 <a name="scrollviewer_markup_syntax_and_sample"></a>   
 ## <a name="defining-and-using-a-scrollviewer-element"></a>Definir y utilizar un elemento ScrollViewer  
- En el ejemplo siguiente se crea un <xref:System.Windows.Controls.ScrollViewer> en una ventana que contiene texto y un rectángulo. <xref:System.Windows.Controls.Primitives.ScrollBar>los elementos aparecen solo cuando son necesarios. Cuando cambia el tamaño de la ventana, el <xref:System.Windows.Controls.Primitives.ScrollBar> elementos aparecen y desaparecen, debido a los valores actualizados de la <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> y <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A> propiedades.  
+ En el ejemplo siguiente se crea un <xref:System.Windows.Controls.ScrollViewer> en una ventana que contiene texto y un rectángulo. <xref:System.Windows.Controls.Primitives.ScrollBar> los elementos aparecen solo cuando son necesarios. Cuando cambia el tamaño de la ventana, el <xref:System.Windows.Controls.Primitives.ScrollBar> elementos aparecen y desaparecen, debido a los valores actualizados de la <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> y <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A> propiedades.  
   
  [!code-cpp[ScrollViewer#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
  [!code-csharp[ScrollViewer#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
@@ -67,7 +55,7 @@ El contenido en una interfaz de usuario suele ser mayor que el área de presenta
   
 <a name="scrollviewer_scroll_vs_paginate"></a>   
 ## <a name="paginating-documents"></a>Paginar documentos  
- Para el contenido del documento, una alternativa al desplazamiento es elegir un contenedor de documentos que admita la paginación. <xref:System.Windows.Documents.FlowDocument>es para los documentos que están diseñados para ser hospedados dentro de un control de visualización, como <xref:System.Windows.Controls.FlowDocumentPageViewer>, que permite paginar el contenido en varias páginas, evitando la necesidad de desplazamiento. <xref:System.Windows.Controls.DocumentViewer>Proporciona una solución para su visualización <xref:System.Windows.Documents.FixedDocument> contenido, que usa el desplazamiento tradicional para mostrar el contenido fuera del dominio Kerberos del área de presentación.  
+ Para el contenido del documento, una alternativa al desplazamiento es elegir un contenedor de documentos que admita la paginación. <xref:System.Windows.Documents.FlowDocument> es para los documentos que están diseñados para ser hospedados dentro de un control de visualización, como <xref:System.Windows.Controls.FlowDocumentPageViewer>, que permite paginar el contenido en varias páginas, evitando la necesidad de desplazamiento. <xref:System.Windows.Controls.DocumentViewer> Proporciona una solución para su visualización <xref:System.Windows.Documents.FixedDocument> contenido, que usa el desplazamiento tradicional para mostrar el contenido fuera del dominio Kerberos del área de presentación.  
   
  Para más información sobre los formatos de documentos y opciones de presentación, consulte [Documents in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md) (Documentos en WPF).  
   

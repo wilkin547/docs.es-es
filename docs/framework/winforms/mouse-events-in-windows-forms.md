@@ -1,13 +1,6 @@
 ---
-title: "Eventos del mouse (ratón) en formularios Windows Forms"
-ms.custom: 
+title: Eventos del mouse (ratón) en formularios Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MouseLeave event [Windows Forms]
 - events [Windows Forms], mouse
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5bde1c1045849fe5507081171711d5a00e99b0b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cd5f87b1c1e2d32a6e7fa94dfce977c7432f7f86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mouse-events-in-windows-forms"></a>Eventos del mouse (ratón) en formularios Windows Forms
 Cuando se controla la entrada de mouse, normalmente desea conocer la ubicación del puntero del mouse y el estado de los botones del mismo. En este tema se describe cómo obtener esta información de los eventos del mouse y explica el orden en que se generan los eventos de clic del mouse en los controles de Windows Forms. Para una lista y una descripción de todos los eventos del mouse, consulte [cómo funciona de entrada de mouse (ratón) en formularios Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Consulte también [información general sobre controladores de eventos (formularios Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [información general sobre eventos (formularios Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  

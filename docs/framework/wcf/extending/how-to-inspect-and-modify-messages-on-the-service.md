@@ -1,30 +1,18 @@
 ---
-title: "Cómo: Inspeccionar y modificar mensajes en el servicio"
-ms.custom: 
+title: 'Cómo: Inspeccionar y modificar mensajes en el servicio'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9c5b1cc7-84f3-45f8-9226-d59c278e8c42
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 64d9ccf97533be6be0da5d1e23763e8174aead3c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec1c60bc2b3e966c576de260dfe3b06a05ab84c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-inspect-and-modify-messages-on-the-service"></a>Cómo: Inspeccionar y modificar mensajes en el servicio
-Puede inspeccionar o modificar los mensajes de entrada o de salida a través de un cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementando <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> e insertándolo en el tiempo de ejecución del servicio. Para obtener más información, consulte [extender distribuidores](../../../../docs/framework/wcf/extending/extending-dispatchers.md). La característica equivalente del servicio es <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
+Puede inspeccionar o modificar los mensajes entrantes o salientes a través de un cliente de Windows Communication Foundation (WCF) mediante la implementación de un <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> e insertarlos en el runtime del servicio. Para obtener más información, consulte [extender distribuidores](../../../../docs/framework/wcf/extending/extending-dispatchers.md). La característica equivalente del servicio es <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
   
 ### <a name="to-inspect-or-modify-messages"></a>Inspeccionar o modificar los mensajes  
   

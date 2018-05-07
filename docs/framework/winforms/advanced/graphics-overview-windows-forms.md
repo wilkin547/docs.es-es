@@ -1,13 +1,6 @@
 ---
-title: "Información general de gráficos (Formularios Windows Forms)"
-ms.custom: 
+title: Información general de gráficos (Formularios Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, graphics
 - Windows Forms, GDI+
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c066b3c6c84d89a74b18e90ac3a6aa80c63a9b0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 197f9dfcc14260017911b37dd6e6b7ce49e44ed4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphics-overview-windows-forms"></a>Información general de gráficos (Formularios Windows Forms)
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]es una interfaz de dispositivo gráfico que permite a los programadores a escribir aplicaciones independientes del dispositivo. Los servicios de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] se exponen a través de un conjunto de clases administradas.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] es una interfaz de dispositivo gráfico que permite a los programadores a escribir aplicaciones independientes del dispositivo. Los servicios de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] se exponen a través de un conjunto de clases administradas.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general de gráficos](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  

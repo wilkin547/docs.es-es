@@ -1,31 +1,17 @@
 ---
 title: Codificadores personalizados
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 4f7b011b038714ee8349e74f6be270c85aed0a7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-encoders"></a>Codificadores personalizados
 Este tema describe cómo crear codificadores personalizados.  
   
- En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], utiliza un *enlace* para especificar cómo transferir datos a través de una red entre los extremos. Un enlace se compone de una secuencia de *elementos de enlace*. Un enlace incluye elementos de enlace de protocolo opcionales, como seguridad, *codificador de mensajes* elemento de enlace y un elemento de enlace de transporte necesario. Un codificador de mensaje está representado por un elemento de enlace de codificación de mensaje. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye tres codificadores de mensajes: binario, mecanismo de optimización de transmisión del mensaje (MTOM) y texto.  
+ En Windows Communication Foundation (WCF), utilice un *enlace* para especificar cómo transferir datos a través de una red entre los extremos. Un enlace se compone de una secuencia de *elementos de enlace*. Un enlace incluye elementos de enlace de protocolo opcionales, como seguridad, *codificador de mensajes* elemento de enlace y un elemento de enlace de transporte necesario. Un codificador de mensaje está representado por un elemento de enlace de codificación de mensaje. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye tres codificadores de mensajes: binario, mecanismo de optimización de transmisión del mensaje (MTOM) y texto.  
   
  Un elemento de enlace de codificación de mensajes serializa un <xref:System.ServiceModel.Channels.Message> saliente y lo pasa al transporte, o recibe del transporte la forma serializada de un mensaje y lo pasa al nivel de protocolo, si está presente, o, si no lo está, a la aplicación.  
   

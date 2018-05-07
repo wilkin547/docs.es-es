@@ -1,31 +1,17 @@
 ---
 title: WSDL y directivas
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 330a48989e9d6ca3cee0d11bf4b3fce38a25fa3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsdl-and-policy"></a>WSDL y directivas
-En este tema se explica [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1, WS-Policy y detalles de implementación de WS-PolicyAttachment, así como las aserciones adicionales de WS-Policy y las extensiones de WSDL 1.1 introducidas por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Este tema abarca Windows Communication Foundation (WCF) WSDL 1.1, detalles de implementación de WS-Policy y WS-PolicyAttachment, así como las aserciones adicionales de WS-Policy y las extensiones de WSDL 1.1 introducidas por WCF.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa WS-Policy y especificaciones de WS-PolicyAttachment enviadas a W3C con las restricciones y clarificaciones descritas en este documento.  
+ WCF implementa las especificaciones de WS-Policy y WS-PolicyAttachment enviadas a W3C con las restricciones y clarificaciones descritas en este documento.  
   
  En este documento se utilizan los prefijos y espacios de nombres mostrados en la tabla siguiente.  
   
@@ -41,19 +27,19 @@ En este tema se explica [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 
 |cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
 ## <a name="wcf-wsdl11-extensions"></a>Extensiones WCF WSDL1.1   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza las extensiones WSDL1.1 siguientes para describir los requisitos de sesión de contrato.  
+ WCF usa las extensiones WSDL1.1 siguientes para describir los requisitos de sesión de contrato.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
- xs:boolean, indica que esta operación inicia una sesión [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]; el valor predeterminado es `false`.  
+ xs: Boolean, indica que esta operación inicia una sesión WCF; el valor predeterminado es `false`.  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
- xs:boolean, indica que esta operación finaliza una sesión [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]; el valor predeterminado es `false`.  
+ xs: Boolean, indica que esta operación finaliza una sesión WCF; el valor predeterminado es `false`.  
   
  wsdl:portType/wsdl:operation/@msc:usingSession  
  xs:boolean, indica que este contrato requiere establecer la sesión.  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1.x HTTPTransporte de enlace URIs  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza los URI siguientes para indicar qué transportes se van a utilizar para los elementos de extensión de enlace WSDL 1.1, SOAP 1.1 y SOAP 1.2.  
+ WCF usa a los URI siguientes para indicar qué transportes que se usará para los elementos de extensión de enlace de WSDL 1.1, SOAP 1.1 y SOAP 1.2.  
   
 |Transporte|URI|  
 |---------------|---------|  
@@ -63,7 +49,7 @@ En este tema se explica [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 
 |Canalizaciones con nombre|http://schemas.microsoft.com/soap/named-pipe|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>Aserciones de directivas implementadas por WCF  
- Además de las aserciones de directiva introducidas en las especificaciones de los Servicio Web (WS - *) y mencionadas en otras secciones de este documento, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa las aserciones de directiva siguientes.  
+ Además de las aserciones de directiva introducidas en las especificaciones de servicios Web (WS-*) y mencionadas en otras secciones de este documento, WCF implementa las aserciones de directiva siguientes.  
   
 |Aserción de directiva|Asunto de directiva|Descripción|  
 |----------------------|--------------------|-----------------|  

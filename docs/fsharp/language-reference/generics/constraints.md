@@ -1,20 +1,17 @@
 ---
 title: Restricciones (F#)
-description: "Obtenga información acerca de F # las restricciones que se aplican a los parámetros de tipo genérico para especificar los requisitos para un argumento de tipo en un tipo genérico o una función."
-keywords: "visual f#, f#, programación funcional"
+description: 'Obtenga información acerca de F # las restricciones que se aplican a los parámetros de tipo genérico para especificar los requisitos para un argumento de tipo en un tipo genérico o una función.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 2f232a3a-9486-48fb-9759-f23404ed4b52
-ms.openlocfilehash: 91854fd2f692688e0f1c27aba1422eff64156048
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: MT
+ms.openlocfilehash: 65f648d39cf7c3dedf5e558c2ed35337a12efe4a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="constraints"></a>Restricciones
 

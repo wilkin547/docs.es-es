@@ -1,29 +1,15 @@
 ---
 title: Alojamiento web de una aplicación en cola
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f396ffadeca81d86d867842b63cad3c63d67ff3a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>Alojamiento web de una aplicación en cola
-El Servicio de Activación de Proceso de Windows (WAS) administra la activación y duración de los procesos de trabajo que contienen las aplicaciones que hospedan los servicios [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. El modelo de procesamiento WAS generaliza el modelo de procesamiento [!INCLUDE[iis601](../../../../includes/iis601-md.md)] para el servidor HTTP quitando la dependencia en HTTP. Esto permite a los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizar HTTP y protocolos distintos de HTTP, como net.msmq y msmq.formatname, en un entorno host que admite la activación basada en mensaje y ofrece la capacidad de hospedar un gran número de aplicaciones en un equipo determinado.  
+El servicio de activación de procesos de Windows (WAS) administra la activación y duración de los procesos de trabajo que contienen aplicaciones que Servicios de Windows Communication Foundation (WCF) de host. El modelo de procesamiento WAS generaliza el modelo de procesamiento [!INCLUDE[iis601](../../../../includes/iis601-md.md)] para el servidor HTTP quitando la dependencia en HTTP. Esto permite a los servicios WCF utilizar HTTP y protocolos distintos de HTTP, como net.msmq y msmq.formatname, en un entorno de hospedaje que admita la activación basada en mensajes y ofrece la capacidad de hospedar un gran número de aplicaciones en un equipo determinado.  
   
  WAS incluye un servicio de activación de Message Queuing (MSMQ) que activa una aplicación en cola cuando hay uno o más mensajes en una de las colas que la aplicación usa. El servicio de activación MSMQ es un servicio NT que se inicia automáticamente de forma predeterminada.  
   
@@ -49,7 +35,7 @@ El Servicio de Activación de Proceso de Windows (WAS) administra la activación
  El servicio de activación MSMQ se ejecuta como SERVICIO DE RED. Es el servicio que supervisa las colas para activar las aplicaciones. Para que active las aplicaciones desde la cola, la cola debe proporcionar acceso al SERVICIO DE RED para ejecutar el método Peek para los mensajes en su lista de control de acceso (ACL).  
   
 ### <a name="poison-messaging"></a>Mensajería dudosa  
- El canal, que no solo detecta que un mensaje es dudoso, sino que selecciona una disposición basada en la configuración del usuario, controla los mensajes dudosos en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] . Como resultado, solo hay un mensaje único en la cola. La aplicación hospedada en Web anula las ocasiones sucesivas y el mensaje se mueve a una cola de reintento. En un punto dictado por el retraso del ciclo de reintento, el mensaje se mueve desde la cola de reintento a la cola principal para intentarlo de nuevo. Pero esto exige que el al canal en cola esté activo. Si WAS recicla la aplicación, a continuación, el mensaje permanece en la cola de reintento hasta que otro mensaje llegue a la cola principal para activar la aplicación en cola. La solución alternativa en este caso es mover de nuevo manualmente el mensaje desde la cola de reintento a la cola principal para reactivar la aplicación.  
+ Mensajes dudosos en WCF se controlan mediante el canal, que no solo detecta que un mensaje es dudoso, sino que selecciona una disposición basada en la configuración de usuario. Como resultado, solo hay un mensaje único en la cola. La aplicación hospedada en Web anula las ocasiones sucesivas y el mensaje se mueve a una cola de reintento. En un punto dictado por el retraso del ciclo de reintento, el mensaje se mueve desde la cola de reintento a la cola principal para intentarlo de nuevo. Pero esto exige que el al canal en cola esté activo. Si WAS recicla la aplicación, a continuación, el mensaje permanece en la cola de reintento hasta que otro mensaje llegue a la cola principal para activar la aplicación en cola. La solución alternativa en este caso es mover de nuevo manualmente el mensaje desde la cola de reintento a la cola principal para reactivar la aplicación.  
   
 ### <a name="subqueue-and-system-queue-caveat"></a>Subcola y advertencia de cola de sistema  
  Una aplicación hospedada en WAS no se puede activar basándose en mensajes en una cola de sistema, como la cola de mensajes no enviados para todo el sistema o subcolas, como subcolas dudosas. Esto supone una limitación para esta versión del producto.  

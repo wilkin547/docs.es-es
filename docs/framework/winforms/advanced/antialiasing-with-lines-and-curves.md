@@ -1,13 +1,6 @@
 ---
-title: "Suavizado de contorno con líneas y curvas"
-ms.custom: 
+title: Suavizado de contorno con líneas y curvas
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8552f185a93b688555dbcfab3da9d28d9bfde6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ccc75a535d8ef21cc780ae8e20d590631306bdc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Suavizado de contorno con líneas y curvas
-Cuando se usa [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para dibujar una línea, se proporcionan los puntos inicial y final de la línea, pero no tendrá que proporcionar toda la información sobre los píxeles individuales en la línea. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]funciona junto con el software de controlador de vídeo para determinar qué píxeles se activará para mostrar la línea en un dispositivo de presentación determinado.  
+Cuando se usa [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para dibujar una línea, se proporcionan los puntos inicial y final de la línea, pero no tendrá que proporcionar toda la información sobre los píxeles individuales en la línea. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funciona junto con el software de controlador de vídeo para determinar qué píxeles se activará para mostrar la línea en un dispositivo de presentación determinado.  
   
 ## <a name="aliasing"></a>Uso de alias  
  Tenga en cuenta la línea recta de color rojo que va desde el punto (4, 2) al punto (16, 10). Suponga que el sistema de coordenadas tiene su origen en la esquina superior izquierda y que la unidad de medida es el píxel. También se supone que el eje x apunta a la derecha y el eje y hacia abajo. En la siguiente ilustración muestra una vista ampliada de la línea roja dibujada sobre un fondo multicolor.  

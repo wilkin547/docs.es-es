@@ -1,32 +1,20 @@
 ---
 title: Seguridad de los mensajes con un cliente de Windows sin negociación de credenciales
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: 18
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 056e743ff1849457f8a0e8ee509a56475f09435c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 05ffe731a578f8b8d2cdbdf5e3c9229e2b03821c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Seguridad de los mensajes con un cliente de Windows sin negociación de credenciales
-El escenario siguiente muestra un cliente y un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protegidos por el protocolo Kerberos.  
+El escenario siguiente muestra un cliente de Windows Communication Foundation (WCF) y el servicio protegido por el protocolo Kerberos.  
   
  Tanto el servicio como el cliente están en el mismo dominio, o dominios, de confianza.  
   
@@ -59,9 +47,9 @@ El escenario siguiente muestra un cliente y un servicio [!INCLUDE[indigo1](../..
 > [!NOTE]
 >  Para utilizar el tipo de credencial de Windows sin negociación, la cuenta de usuario del servicio debe tener acceso al nombre de entidad de seguridad de servicio (SPN) registrado en el dominio de Active Directory. Existen dos maneras de hacerlo:  
   
-1.  Utilice el `NetworkService`, o la cuenta `LocalSystem`, para ejecutar el servicio. Dado que esas cuentas tienen acceso al SPN del equipo, establecido cuando el equipo se une al dominio de Active Directory, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera automáticamente el elemento SPN apropiado en los metadatos del extremo del servicio (lenguaje de descripción de servicios Web o WSDL).  
+1.  Utilice el `NetworkService`, o la cuenta `LocalSystem`, para ejecutar el servicio. Dado que esas cuentas tienen acceso al SPN del equipo que se establece cuando el equipo une al dominio de Active Directory, WCF genera automáticamente el elemento SPN apropiado en el extremo del servicio en los metadatos del servicio (descripción de servicios Web Idioma, o WSDL).  
   
-2.  Utilice una cuenta de dominio arbitraria de Active Directory para ejecutar el servicio. En este caso, es necesario establecer un SPN para esa cuenta de dominio. Una manera de hacerlo es utilizar la herramienta de la utilidad Setspn.exe. Una vez creado el SPN para la cuenta del servicio, configure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para publicar ese SPN a los clientes del servicio a través de sus metadatos (WSDL). Esto se consigue estableciendo la identidad del extremo expuesto, mediante un archivo de configuración de la aplicación o el código. El siguiente ejemplo publica la identidad mediante programación.  
+2.  Utilice una cuenta de dominio arbitraria de Active Directory para ejecutar el servicio. En este caso, es necesario establecer un SPN para esa cuenta de dominio. Una manera de hacerlo es utilizar la herramienta de la utilidad Setspn.exe. Una vez creado el SPN para la cuenta del servicio, configurar WCF para publicar ese SPN a los clientes del servicio a través de sus metadatos (WSDL). Esto se consigue estableciendo la identidad del punto de conexión expuesto, mediante un archivo de configuración de la aplicación o el código. El siguiente ejemplo publica la identidad mediante programación.  
   
  Para obtener más información acerca de los SPN, el protocolo Kerberos y Active Directory, vea [complemento técnico de Kerberos para Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Para obtener más información acerca de las identidades de punto de conexión, vea [modos de autenticación de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   

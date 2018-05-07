@@ -1,11 +1,7 @@
 ---
-title: "Función GetObjectText (referencia de API no administrada)"
-description: "La función GetObjectText devuelve una representación textual de un objeto en la sintaxis MOF."
+title: Función GetObjectText (referencia de API no administrada)
+description: La función GetObjectText devuelve una representación textual de un objeto en la sintaxis MOF.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetObjectText
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0b47dc73bb9da71b0c8593aa5758179327d7572d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getobjecttext-function"></a>GetObjectText (función)
 Devuelve una representación textual del objeto en la sintaxis de Managed Object Format (MOF).
@@ -81,14 +74,14 @@ El siguiente algoritmo se utiliza para reconstruir el texto de los parámetros d
 1. Se cambia la secuencia de parámetros en el orden de sus valores de identificador.
 1. Parámetros que se especifican como `[in]` y `[out]` se combinan en un solo parámetro.
  
-`pstrObjectText`debe ser un puntero a un `null` cuando se llama a la función; no debe apuntar a una cadena que es válida antes de la llamada al método, porque el puntero no se cancela la asignación.
+`pstrObjectText` debe ser un puntero a un `null` cuando se llama a la función; no debe apuntar a una cadena que es válida antes de la llamada al método, porque el puntero no se cancela la asignación.
 
 ## <a name="requirements"></a>Requisitos  
 **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

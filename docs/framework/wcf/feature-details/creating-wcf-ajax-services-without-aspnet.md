@@ -1,42 +1,28 @@
 ---
 title: Creación de servicios AJAX WCF sin ASP.NET
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b652bcd522a8eea81b3d1218fbd054ee0b2caea8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 77a850408c3d952dbd4f682ea704d3248ae17c3e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>Creación de servicios AJAX WCF sin ASP.NET
-Se puede tener acceso a los servicios AJAX de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] desde cualquier página web con JavaScript habilitado, sin necesidad de AJAX de ASP.NET. En este tema se describe cómo crear un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Servicios de AJAX de Windows Communication Foundation (WCF) pueden tener acceso desde cualquier página Web con JavaScript habilitado, sin necesidad de AJAX de ASP.NET. En este tema se describe cómo crear este tipo de servicio WCF.  
   
- Para obtener instrucciones sobre el uso de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con AJAX de ASP.NET, vea [crear servicios de WCF para AJAX de ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md).  
+ Para obtener instrucciones sobre cómo usar WCF con AJAX de ASP.NET, vea [crear servicios de WCF para AJAX de ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md).  
   
- Para crear un servicio AJAX  de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] existen tres partes:  
+ Hay tres partes para crear un servicio de AJAX de WCF:  
   
--   Creación de un extremo de AJAX al que se puede tener acceso desde el explorador.  
+-   Creación de un punto de conexión de AJAX al que se puede tener acceso desde el explorador.  
   
 -   Creación de un contrato de servicios compatible con AJAX.  
   
 -   Acceso a servicios de AJAX de WCF.  
   
-## <a name="creating-an-ajax-endpoint"></a>Creación de un extremo de AJAX  
- La manera más simple de habilitar la compatibilidad de AJAX en un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consiste en utilizar <xref:System.ServiceModel.Activation.WebServiceHostFactory> en el archivo .svc asociado al servicio, como en el ejemplo siguiente.  
+## <a name="creating-an-ajax-endpoint"></a>Creación de un punto de conexión de AJAX  
+ La manera más sencilla de habilitar la compatibilidad con AJAX en un servicio WCF es usar el <xref:System.ServiceModel.Activation.WebServiceHostFactory> en el archivo .svc asociado al servicio, como en el ejemplo siguiente.  
   
 ```  
 <%ServiceHost   
@@ -47,7 +33,7 @@ Se puede tener acceso a los servicios AJAX de [!INCLUDE[indigo1](../../../../inc
 %>  
 ```  
   
- Por otra parte, también puede utilizar la configuración para agregar un extremo de AJAX. Utilice el <xref:System.ServiceModel.WebHttpBinding> en el extremo de servicio y configure ese extremo con <xref:System.ServiceModel.Description.WebHttpBehavior>, tal y como se muestra en el siguiente fragmento de código.  
+ Por otra parte, también puede utilizar la configuración para agregar un punto de conexión de AJAX. Utilice el <xref:System.ServiceModel.WebHttpBinding> en el extremo de servicio y configure ese extremo con <xref:System.ServiceModel.Description.WebHttpBehavior>, tal y como se muestra en el siguiente fragmento de código.  
   
 ```xml  
 <configuration>  
@@ -115,7 +101,7 @@ string[] GetCities(string firstLetters, int maxNumber);
 ```  
   
 ## <a name="accessing-ajax-services"></a>Acceso a servicios de AJAX  
- Los extremos de AJAX de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] siempre aceptan solicitudes JSON y XML.  
+ Los extremos de AJAX de WCF siempre aceptan solicitudes JSON y XML.  
   
  Las solicitudes HTTP POST con un tipo de contenido de "application/json" se tratan como JSON y aquellas cuyo tipo de contenido que indique XML (por ejemplo, "text/xml") se tratan como XML.  
   

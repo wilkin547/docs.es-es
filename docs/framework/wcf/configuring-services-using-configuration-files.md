@@ -1,31 +1,17 @@
 ---
 title: Configuración de servicios mediante archivos de configuración
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 62a8774ab2843d0b1f0a19ad04fc0a76abb7cac5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: abfe502c6b50234037cad786a658edc3d479cc9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configuración de servicios mediante archivos de configuración
-Configurar un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] con un archivo de configuración le da la flexibilidad de proporcionar datos de extremo y comportamiento del servicio en el punto de implementación en lugar de hacerlo en la fase de diseño. En este tema se describen las principales técnicas disponibles.  
+Configurar un servicio de Windows Communication Foundation (WCF) con un archivo de configuración le da la flexibilidad de proporcionar el punto de conexión y datos de comportamiento del servicio en el momento de la implementación en lugar de hacerlo en tiempo de diseño. En este tema se describen las principales técnicas disponibles.  
   
  Se puede configurar un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mediante la tecnología de configuración [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . Por lo general, los elementos XML se agregan al archivo Web.config para un sitio de Internet Information Services (IIS) que hospeda un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Los elementos le permiten cambiar detalles como las direcciones de extremos (las direcciones reales utilizadas para comunicarse con el servicio) equipo a equipo. Además, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye varios elementos proporcionados por el sistema que le permiten seleccionar rápidamente las características más básicas de un servicio. A partir de [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye un nuevo modelo de configuración predeterminado que simplifica los requisitos de configuración de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Si no se proporciona ninguna configuración de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para un servicio concreto, el tiempo de ejecución lo configurará automáticamente con varios extremos estándar y un enlace/comportamiento predeterminado. En la práctica, escribir la configuración es una parte principal de la programación de aplicaciones de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] .  
   

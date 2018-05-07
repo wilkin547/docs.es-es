@@ -1,28 +1,16 @@
 ---
 title: Escenarios del control DataGridView (formularios Windows Forms)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38e5337f775d98f8729c62b3481c3e839bff2252
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a320b40664e4fe2254109183731db346a5d7d0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Escenarios del control DataGridView (formularios Windows Forms)
 Con el <xref:System.Windows.Forms.DataGridView> control, puede mostrar datos tabulares de una variedad de orígenes de datos. Para usos sencillos, puede rellenar manualmente un <xref:System.Windows.Forms.DataGridView> y manipular los datos directamente a través del control. Normalmente, sin embargo, se almacenan los datos en un origen de datos externo y enlazar el control a él a través de un <xref:System.Windows.Forms.BindingSource> componente.  
@@ -80,7 +68,7 @@ Con el <xref:System.Windows.Forms.DataGridView> control, puede mostrar datos tab
   
 ### <a name="scenario-key-points"></a>Puntos clave del escenario  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle>objetos permiten proporcionar color, fuente, formato e información de posición en varios niveles y de los elementos individuales del control.  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle> objetos permiten proporcionar color, fuente, formato e información de posición en varios niveles y de los elementos individuales del control.  
   
 -   Estilos de celda se pueden niveles y compartidos por varios elementos, lo que le permite reutilizar el código.  
   

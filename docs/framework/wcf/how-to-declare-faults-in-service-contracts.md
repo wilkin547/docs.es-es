@@ -1,30 +1,18 @@
 ---
-title: "Cómo declarar errores en contratos de servicios"
-ms.custom: 
+title: Cómo declarar errores en contratos de servicios
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bcf707e58586673097c89e0e0f4d72ea68ef7247
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 142ad26702f0732bc5103e29d5a44bc57ab37625
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Cómo declarar errores en contratos de servicios
-En código administrado, las excepciones se inician al producirse condiciones de error. No obstante, en aplicaciones [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] los contratos de servicios especifican qué información de error se devuelve a los clientes mediante la declaración de los errores de SOAP en el contrato de servicios. Para obtener información general de la relación entre las excepciones y errores, vea [especificar y control de errores en contactos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+En código administrado, las excepciones se inician al producirse condiciones de error. Sin embargo, en aplicaciones de Windows Communication Foundation (WCF), contratos de servicio especifican qué información de error se devuelve a los clientes mediante la declaración de los errores de SOAP en el contrato de servicio. Para obtener información general de la relación entre las excepciones y errores, vea [especificar y control de errores en contactos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>Crear un contrato de servicio que especifica un error de SOAP  
   

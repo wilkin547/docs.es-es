@@ -1,14 +1,6 @@
 ---
 title: Tipos conocidos de contratos de datos
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: 42
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 00ae32ff394b1ce2acb38fb237527e934934b935
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-known-types"></a>Tipos conocidos de contratos de datos
 La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite especificar, de antemano, los tipos que deberían tenerse en cuenta durante la deserialización. Para ver un ejemplo ilustrativo, consulte el ejemplo [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  
@@ -43,7 +29,7 @@ La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite espec
 -   Algunos tipos, entre los que se incluyen los tipos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , tienen miembros que se encuentran en una de las tres categorías anteriores. Por ejemplo, <xref:System.Collections.Hashtable> utiliza <xref:System.Object> para almacenar los objetos reales en la tabla hash. Al serializar estos tipos, el lado receptor no puede determinar de antemano el contrato de datos de estos miembros.  
   
 ## <a name="the-knowntypeattribute-class"></a>La clase KnownTypeAttribute  
- Cuando los datos llegan a un extremo receptor, el tiempo de ejecución de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] intenta deserializar los datos en una instancia de un tipo de Common Language Runtime (CLR). El tipo del que se crea una instancia para la deserialización se elige inspeccionando primero el mensaje entrante para determinar el contrato de datos al que se ajusta el contenido del mensaje. El motor de deserialización intenta a continuación encontrar un tipo CLR que implemente un contrato de datos compatible con el contenido del mensaje. El conjunto de tipos de candidatos que admite el motor de deserialización durante este proceso se conoce como el conjunto del deserializador de "tipos conocidos."  
+ Cuando los datos llegan a un extremo receptor, el tiempo de ejecución WCF intenta deserializar los datos en una instancia de un tipo de common language runtime (CLR). El tipo del que se crea una instancia para la deserialización se elige inspeccionando primero el mensaje entrante para determinar el contrato de datos al que se ajusta el contenido del mensaje. El motor de deserialización intenta a continuación encontrar un tipo CLR que implemente un contrato de datos compatible con el contenido del mensaje. El conjunto de tipos de candidatos que admite el motor de deserialización durante este proceso se conoce como el conjunto del deserializador de "tipos conocidos."  
   
  Una manera de permitir al motor de deserialización saber sobre un tipo consiste en utilizar el <xref:System.Runtime.Serialization.KnownTypeAttribute>. El atributo no se puede aplicar a miembros de datos individuales, solo a tipos de contrato de datos enteros. El atributo se aplica a un *tipo exterior* que puede ser una clase o una estructura. En su uso más básico, al aplicar el atributo, se especifica un tipo como "tipo conocido". Esto hace que el tipo conocido forme parte del conjunto de tipos conocidos siempre que se deserialice un objeto del tipo exterior o cualquier objeto al que se hace referencia a través de sus miembros. Se puede aplicar más de un atributo <xref:System.Runtime.Serialization.KnownTypeAttribute> al mismo tipo.  
   
@@ -144,7 +130,7 @@ La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite espec
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
 ## <a name="additional-ways-to-add-known-types"></a>Maneras adicionales de agregar tipos conocidos  
- Además, los tipos conocidos se pueden agregar a través de un archivo de configuración. Esto es útil cuando no se controla el tipo que requiere tipos conocidos para la correcta deserialización, como cuando se usan bibliotecas de tipos de terceros con [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Además, los tipos conocidos se pueden agregar a través de un archivo de configuración. Esto es útil cuando no se controla el tipo que requiere tipos conocidos para la correcta deserialización, como cuando se usan aplicaciones de terceros tipos bibliotecas con Windows Communication Foundation (WCF).  
   
  En el archivo de configuración siguiente se observa cómo se especifica un tipo conocido en un archivo de configuración.  
   

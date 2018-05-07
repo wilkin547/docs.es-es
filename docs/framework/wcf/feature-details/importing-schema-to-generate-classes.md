@@ -1,14 +1,6 @@
 ---
 title: Importación del esquema para generar clases
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d7988630e2eba3e6d5ebdc8b15b23aeb280a66f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 338daa031ac2c1b31a121908643a15449c5401a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importación del esquema para generar clases
-Para generar las clases desde los esquemas que se pueden utilizar con [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], utilice la clase <xref:System.Runtime.Serialization.XsdDataContractImporter>. En este tema se describen el proceso y variaciones.  
+Para generar clases de esquemas que se pueden utilizables con Windows Communication Foundation (WCF), utilice la <xref:System.Runtime.Serialization.XsdDataContractImporter> clase. En este tema se describen el proceso y variaciones.  
   
 ## <a name="the-import-process"></a>El proceso de importación  
  El proceso de importación del esquema se inicia con <xref:System.Xml.Schema.XmlSchemaSet> y genera <xref:System.CodeDom.CodeCompileUnit>.  
@@ -114,7 +100,7 @@ Para generar las clases desde los esquemas que se pueden utilizar con [!INCLUDE[
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Las asociaciones también se podrían considerar una lista. Por ejemplo, puede ver la asociación anterior como una lista de objetos `city` complejos que tienen dos campos (un campo de cadena y un campo de valor entero). Ambos patrones tienen una representación en el Esquema XSD. No hay ningún modo de diferenciar entre una lista y una asociación, así que estos patrones siempre se tratan como listas a menos que haya una anotación especial en el esquema específica para [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La anotación indica que un patrón determinado representa una asociación. Para obtener más información, consulte [referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Las asociaciones también se podrían considerar una lista. Por ejemplo, puede ver la asociación anterior como una lista de objetos `city` complejos que tienen dos campos (un campo de cadena y un campo de valor entero). Ambos patrones tienen una representación en el Esquema XSD. No hay ninguna manera de diferenciar entre una lista y una asociación, así que estos patrones siempre se tratan como listas a menos que una anotación especial específica de WCF está presente en el esquema. La anotación indica que un patrón determinado representa una asociación. Para obtener más información, consulte [referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Normalmente, una lista se importa como un contrato de datos de colección derivado de una Lista Genérica o como una matriz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], según si el esquema sigue el patrón estándar de denominación o no para las colecciones. Esto se describe con más detalle en [tipos de colección en contratos de datos](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Las asociaciones se importan normalmente como <xref:System.Collections.Generic.Dictionary%602> o como un contrato de datos de colección derivado del objeto de diccionario. Por ejemplo, considere el siguiente esquema:  
   

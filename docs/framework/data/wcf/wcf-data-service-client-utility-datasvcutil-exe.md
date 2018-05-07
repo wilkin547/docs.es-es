@@ -1,28 +1,16 @@
 ---
 title: Utilidad del cliente de Servicio de datos de WCF (DataSvcUtil.exe)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, generating client data classes
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fcbbbe5180acaf943956310d4837a105d8d049d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3206947d06a1736116674b70e469c20f8f4fca86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Utilidad del cliente de Servicio de datos de WCF (DataSvcUtil.exe)
 DataSvcUtil.exe es una herramienta de línea de comandos proporcionada por [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] que consume una [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuente y genera las clases de servicio de datos de cliente que se necesitan para tener acceso a un servicio de datos desde una aplicación de cliente de .NET Framework. Esta utilidad puede generar las clases de datos utilizando los siguientes orígenes de metadatos:  
@@ -50,7 +38,7 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |`/dataservicecollection`|Especifica que también se genera el código necesario para enlazar los objetos a los controles.|  
 |`/help`<br /><br /> o bien<br /><br /> `/?`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
 |`/in:` *\<archivo >*|Especifica el archivo .csdl o .edmx o un directorio donde se encuentra el archivo.|  
-|`/language:`[VB &#124; CSharp]|Especifica el lenguaje de los archivos de código fuente generados. El lenguaje predeterminado es C#.|  
+|`/language:`[VB&#124;CSharp]|Especifica el lenguaje de los archivos de código fuente generados. El lenguaje predeterminado es C#.|  
 |`/nologo`|Evita que se muestre el mensaje de copyright.|  
 |`/out:` *\<archivo >*|Especifica el nombre del archivo de código fuente que contiene las clases de servicio de datos de cliente generadas.|  
 |`/uri:` *\<cadena >*|El URI de la [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente de distribución.|  

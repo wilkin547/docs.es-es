@@ -1,50 +1,38 @@
 ---
-title: "Migración de los servicios web ASP.NET a WCF"
-ms.custom: 
+title: Migración de los servicios web ASP.NET a WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f90f7dd508e2ff4058b787fc29d152abc18f24fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d43c66952d17a91e38ae1b086478b9416321b8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Migración de los servicios web ASP.NET a WCF
-ASP.NET proporciona bibliotecas de clases y las herramientas de .NET Framework para compilar servicios web, así como funciones para hospedar servicios dentro de Internet Information Services (IIS). [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona bibliotecas de clases de .NET Framework, herramientas y funciones de hospedaje para que las entidades de software puedan comunicarse usando cualquier protocolo, incluidos los usados por servicios web.  Migrar los servicios web de ASP.NET a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite que las aplicaciones saquen el máximo partido a las nuevas características y mejoras que son exclusivas de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ASP.NET proporciona bibliotecas de clases y las herramientas de .NET Framework para compilar servicios web, así como funciones para hospedar servicios dentro de Internet Information Services (IIS). Windows Communication Foundation (WCF) proporciona bibliotecas de clases de .NET Framework, herramientas y funciones de hospedaje para que las entidades de software puedan comunicarse usando cualquier protocolo, los usados por los servicios Web incluidos.  Migrar servicios Web de ASP.NET a WCF permite que sus aplicaciones aprovechar las nuevas características y mejoras que son exclusivas de WCF.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cuenta con varias ventajas importantes relacionadas con los servicios web de ASP.NET. Mientras que las herramientas de estos servicios solo sirven para crear servicios web, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona herramientas que pueden utilizarse cuando se deben crear entidades de software para comunicarse entre ellas. Esto reducirá el número de tecnologías que deben conocer los desarrolladores para adaptarse a distintos escenarios de comunicación de software, que a su vez reducirán el coste de los recursos de desarrollo de software y el tiempo para finalizar los proyectos de desarrollo de software.  
+ WCF tiene varias ventajas importantes con respecto a los servicios Web ASP.NET. Mientras que herramientas de servicios Web ASP.NET son solo sirven para crear servicios Web, WCF proporciona herramientas que se pueden usar cuando se deben crear entidades de software para comunicarse entre sí. Esto reducirá el número de tecnologías que deben conocer los desarrolladores para adaptarse a distintos escenarios de comunicación de software, que a su vez reducirán el coste de los recursos de desarrollo de software y el tiempo para finalizar los proyectos de desarrollo de software.  
   
- Incluso para los proyectos de desarrollo de los servicios web, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite más protocolos de servicios web que los admitidos por los servicios web de ASP.NET. Estos protocolos adicionales proporcionan más soluciones sofisticadas, como sesiones y transacciones confiables, entre otras.  
+ Incluso para los proyectos de desarrollo de servicios Web, WCF admite más protocolos de servicios Web de compatibilidad con servicios Web de ASP.NET. Estos protocolos adicionales proporcionan más soluciones sofisticadas, como sesiones y transacciones confiables, entre otras.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite más protocolos para transportar mensajes que los servicios web de ASP.NET. Los servicios web de ASP.NET solo admiten el envío de mensajes mediante el Protocolo de transferencia de hipertexto (HTTP). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite el envío de mensajes mediante HTTP, así como el Protocolo de control de transmisión (TCP), canalizaciones con nombre y Microsoft Message Queuing (MSMQ). Y lo que es más importante, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puede extenderse para admitir protocolos de transporte adicionales. Por consiguiente, el software desarrollado con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puede adaptarse para trabajar con una amplia variedad de otro software, con lo que se aumenta la devolución potencial de la inversión.  
+ WCF admite más protocolos para transportar mensajes a los servicios Web ASP.NET. Los servicios web de ASP.NET solo admiten el envío de mensajes mediante el Protocolo de transferencia de hipertexto (HTTP). WCF admite el envío de mensajes mediante HTTP, así como el protocolo de Control de transmisión (TCP), que canalizaciones con nombre y Microsoft Message Queuing (MSMQ). Más importante, WCF puede ampliarse para admitir protocolos de transporte adicionales. Por lo tanto, el software desarrollado con WCF pueden adaptarse para trabajar con una amplia variedad de otro software, con lo que aumenta el rendimiento potencial de la inversión.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona medios con más funciones para implementar y administrar las aplicaciones que los servicios web de ASP.NET proporcionan. Además de un sistema de configuración, que ASP.NET también tiene, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona un editor de configuración, seguimiento de actividades desde remitentes a receptores y de vuelta a través de intermediarios, un visor de seguimiento, registro de mensajes, un inmenso número de contadores de rendimiento y compatibilidad con el Instrumental de administración de Windows (WMI).  
+ WCF proporciona medios con más funciones para implementar y administrar aplicaciones de servicios Web de ASP.NET. Además de un sistema de configuración, que también tiene ASP.NET, WCF ofrece un editor de configuración de seguimiento de actividades desde remitentes a receptores y de vuelta a través de intermediarios, un visor de seguimiento, registro de mensajes, una gran cantidad de contadores de rendimiento, y compatibilidad con Instrumental de administración de Windows.  
   
- Dados estos beneficios potenciales de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] relacionados con los servicios web de ASP.NET, si está utilizando, o está pensando en utilizar los servicios web de ASP.NET, tiene varias opciones:  
+ Dados estos beneficios potenciales de WCF en relación con ASP.NET Web services, si está usando, o está pensando en utilizar los servicios Web ASP.NET que tiene varias opciones:  
   
--   Continúe utilizando los servicios web de ASP.NET y prescinda de las ventajas ofrecidas por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   Continuar usar los servicios Web ASP.NET y Prescinda de las ventajas ofrecidas por WCF.  
   
--   Siga utilizando los servicios web de ASP.NET con la intención de adoptar en algún momento [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en el futuro. Los temas en esta sección explican cómo maximizar las perspectivas para poder utilizar las nuevas aplicaciones de servicio web ASP.NET junto con las aplicaciones [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] futuras. Los temas en esta sección también explican cómo crear los nuevos servicios web de ASP.NET para facilitar su migración a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Sin embargo, si proteger los servicios es importante, si son necesarias garantías de confiabilidad o transacción, o si tendrán que construirse medios de administración personalizados, lo más adecuado es adoptar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está diseñado precisamente para tales escenarios.  
+-   Seguir usando los servicios Web ASP.NET con la intención de adoptar WCF en algún momento en el futuro. Los temas de esta sección explican cómo maximizar las perspectivas para poder usar nuevas aplicaciones de servicio Web ASP.NET junto con las aplicaciones WCF futuras. Los temas de esta sección también explican cómo crear nuevo Web de ASP.NET servicios con el fin de que sea más fácil migrarlos a WCF. Sin embargo, si proteger los servicios es importante o se necesitan garantías de confiabilidad o transacción, o si personalizada tendrán que construirse medios de administración, es más adecuado es adoptar WCF. WCF está diseñado precisamente para tales escenarios.  
   
--   Adopte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para el nuevo desarrollo, mientras continúa manteniendo las aplicaciones de servicios web de ASP.NET existentes. Es muy probable que esta opción sea la óptima. Cuenta con las ventajas de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mientras se ahorra el coste de modificar las aplicaciones existentes para usarlo. En este escenario, las nuevas aplicaciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pueden coexistir con aplicaciones ASP.NET anteriores. Las nuevas aplicaciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] podrán utilizar servicios web de ASP.NET existentes. Además, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puede utilizarse para programar nuevas capacidades operativos en aplicaciones de ASP.NET existentes según el modo de compatibilidad de ASP.NET de  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   Se han adoptado WCF para nuevas implementaciones, mientras continúa manteniendo las aplicaciones de servicio Web ASP.NET existentes. Es muy probable que esta opción sea la óptima. Las ventajas de WCF, produce mientras se ahorra el costo consiste en modificar las aplicaciones existentes para usarlo. En este escenario, nuevas aplicaciones WCF pueden coexistir con aplicaciones de ASP.NET existentes. Nuevas aplicaciones de WCF, podrán usar los servicios Web de ASP.NET existentes y WCF puede utilizarse para programar nuevas capacidades operativos en las aplicaciones de ASP.NET existentes en virtud de modo de compatibilidad ASP.NET de WCF.  
   
--   Adopte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y migre las aplicaciones de servicios web de ASP.NET existentes a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Puede elegir esta opción para mejorar las aplicaciones existentes con características proporcionadas por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o para reproducir la funcionalidad de los servicios web de ASP.NET existentes dentro de nuevas aplicaciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] más potentes.  
+-   Adoptar WCF y migrar las aplicaciones de servicio Web ASP.NET existentes a WCF. Puede elegir esta opción para mejorar las aplicaciones existentes con características proporcionadas por WCF, o para reproducir la funcionalidad de servicios Web ASP.NET existentes dentro de nuevas, aplicaciones de WCF más eficaces.  
   
 > [!NOTE]
->  Se debe tener cuidado si IIS 5.x hospeda un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y se desinstala ASP.NET. Cuando IIS 5.x hospeda un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], se puede solicitar el código para el servicio si se desinstala ASP.NET. Cuando ASP.NET se desinstala en un sistema operativo que está ejecutando IIS 5.x y se desinstala [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], se considerará un archivo de texto un archivo con la extensión .svc y el contenido, incluido cualquier código fuente, se devuelve al solicitante.  
+>  Se debe tener cuidado si un servicio WCF se hospeda en IIS 5.x y se desinstala ASP.NET. Cuando un servicio WCF está hospedado en IIS 5.x, el código para el servicio se puede solicitar si se desinstala ASP.NET. Cuando ASP.NET se desinstala en un sistema operativo que está ejecutando IIS 5.x y WCF se desinstala, se considerará un archivo de texto a un archivo con la extensión .svc y el contenido, incluido cualquier código fuente, se devuelve al solicitante.  
   
- Esta sección describe en detalle estas opciones, compara los servicios web de ASP.NET con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y proporciona las instrucciones sobre cómo migrar el código de los servicios web de ASP.NET a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ En esta sección se describe en detalle estas opciones, compara los servicios Web ASP.NET a WCF y proporciona instrucciones sobre cómo migrar el código de servicios Web ASP.NET a WCF.  
   
 ## <a name="see-also"></a>Vea también  
  [Anticipación de la adopción de Windows Communication Foundation: cómo facilitar la futura migración](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)  

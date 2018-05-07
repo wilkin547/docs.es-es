@@ -1,26 +1,14 @@
 ---
-title: "Modelo de programación de notificaciones de WIF"
-ms.custom: 
+title: Modelo de programación de notificaciones de WIF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bd84e6a1e6fb0d4808dca42af2e2916be1133a3
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 71327fb5a86c30d15ff060eff5cce170695e86a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-claims-programming-model"></a>Modelo de programación de notificaciones de WIF
 Los desarrolladores de ASP.NET y de Windows Communication Foundation (WCF) suelen usar las interfaces IIdentity e IPrincipal para trabajar con la información de identidad del usuario. En .NET 4.5, Windows Identity Foundation (WIF) se ha integrado de tal manera que las notificaciones ahora siempre están presentes para cualquier entidad de seguridad, como se muestra en el diagrama siguiente:  
@@ -35,7 +23,7 @@ Los desarrolladores de ASP.NET y de Windows Communication Foundation (WCF) suele
   
 -   <xref:System.Security.Claims.Claim.Value%2A> contiene el valor de la notificación y se representa como una cadena. Por ejemplo, la dirección de correo electrónico puede representarse como "someone@contoso.com".  
   
--   <xref:System.Security.Claims.Claim.ValueType%2A> representa el tipo del valor de la notificación. Suele ser un identificador URI. Por ejemplo, el tipo de cadena se representa como `http://www.w3.org/2001/XMLSchema#string`. El tipo de valor debe ser QName de acuerdo con el esquema XML. El valor debe tener el formato `namespace#format` para que WIF pueda emitir un valor QName válido. Si el espacio de nombres no está bien definido, el XML generado probablemente no se podrá validar con un esquema, porque no habrá ningún archivo XSD publicado para ese espacio de nombres. El tipo de valor predeterminado es `http://www.w3.org/2001/XMLSchema#string`. Consulte [http://www.w3.org/2001/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155) para ver los tipos de valor conocidos que se pueden usar sin ningún riesgo.  
+-   <xref:System.Security.Claims.Claim.ValueType%2A> representa el tipo del valor de la notificación. Suele ser un identificador URI. Por ejemplo, el tipo de cadena se representa como `http://www.w3.org/2001/XMLSchema#string`. El tipo de valor debe ser QName de acuerdo con el esquema XML. El valor debe tener el formato `namespace#format` para que WIF pueda emitir un valor QName válido. Si el espacio de nombres no está bien definido, el XML generado probablemente no se podrá validar con un esquema, porque no habrá ningún archivo XSD publicado para ese espacio de nombres. El tipo de valor predeterminado es `http://www.w3.org/2001/XMLSchema#string`. Vea [ http://www.w3.org/2001/XMLSchema ](http://go.microsoft.com/fwlink/?LinkId=209155) para tipos de valor conocido que puede utilizar sin ningún riesgo.  
   
 -   <xref:System.Security.Claims.Claim.Issuer%2A> es el identificador del servicio de token de seguridad (STS) que emitió la notificación. Se puede representar como una dirección URL del STS o como un nombre que represente el STS, como `https://sts1.contoso.com/sts`.  
   

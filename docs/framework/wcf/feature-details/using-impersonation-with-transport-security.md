@@ -1,29 +1,17 @@
 ---
 title: Utilización de la suplantación con la seguridad de transporte
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-caps.latest.revision: 12
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: d5610a107a198a3d8fd0517dca6ca7e2f4d22cbb
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5a4b05031061183cf0dddd82c900065155b1e561
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilización de la suplantación con la seguridad de transporte
-*Suplantación* es la capacidad de una aplicación de servidor para asumir la identidad del cliente. Es común que los servicios utilicen la suplantación al validar el acceso a los recursos. La aplicación de servidor se ejecuta utilizando una cuenta de servicio, pero cuando el servidor acepta una conexión de cliente, suplanta al cliente para que se realicen comprobaciones de acceso utilizando las credenciales del cliente. La seguridad de transporte es un mecanismo para pasar credenciales y proteger la comunicación mediante esas credenciales. Este tema describe el uso de la seguridad de transporte en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con la característica de suplantación. Para obtener más información acerca de la suplantación mediante la seguridad del mensaje, vea [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+*Suplantación* es la capacidad de una aplicación de servidor para asumir la identidad del cliente. Es común que los servicios utilicen la suplantación al validar el acceso a los recursos. La aplicación de servidor se ejecuta utilizando una cuenta de servicio, pero cuando el servidor acepta una conexión de cliente, suplanta al cliente para que se realicen comprobaciones de acceso utilizando las credenciales del cliente. La seguridad de transporte es un mecanismo para pasar credenciales y proteger la comunicación mediante esas credenciales. Este tema describe cómo usar seguridad de transporte en Windows Communication Foundation (WCF) con la característica de suplantación. Para obtener más información acerca de la suplantación mediante la seguridad del mensaje, vea [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="five-impersonation-levels"></a>Cinco niveles de suplantación  
  La seguridad de transporte utiliza cinco niveles de suplantación, como se describe en la siguiente tabla.  
@@ -32,7 +20,7 @@ ms.lasthandoff: 04/30/2018
 |-------------------------|-----------------|  
 |Ninguna|La aplicación de servidor no intenta suplantar al cliente.|  
 |Anónimo|La aplicación de servidor puede realizar comprobaciones de acceso frente a las credenciales de cliente, pero no recibe ninguna información sobre la identidad del cliente. Este nivel de suplantación solo es significativo para la comunicación en equipo, como, por ejemplo, en canalizaciones con nombre. Al utilizar `Anonymous` con una conexión remota, se promueve el nivel de suplantación a identificar.|  
-|Identificar|La aplicación de servidor conoce la identidad del cliente y puede realizar validación de acceso frente a las credenciales del cliente, pero no puede suplantar al cliente. Identificar es el nivel de suplantación predeterminado utilizado con credenciales SSPI en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], a menos que el proveedor de tokens proporcione un nivel de suplantación diferente.|  
+|Identificar|La aplicación de servidor conoce la identidad del cliente y puede realizar validación de acceso frente a las credenciales del cliente, pero no puede suplantar al cliente. Identificar es el nivel de suplantación predeterminado utilizado con credenciales SSPI en WCF a menos que el proveedor de tokens proporcione un nivel de suplantación diferente.|  
 |Suplantar|La aplicación de servidor puede obtener acceso a recursos en el equipo del servidor como el cliente además de realizar las comprobaciones de acceso. La aplicación de servidor no puede tener acceso a los recursos en los equipos remotos utilizando la identidad del cliente porque el token suplantado no tiene credenciales de red.|  
 |delegado|Además de tener las mismas funciones que `Impersonate`, el nivel de suplantación de Delegar también permite a la aplicación de servidor obtener acceso a los recursos en los equipos remotos utilizando la identidad del cliente y pasar la identidad a otras aplicaciones.<br /><br /> **Importante** la cuenta de dominio de servidor debe marcarse como de confianza para delegación en el controlador de dominio para utilizar estas características adicionales. Este nivel de suplantación no se puede utilizar con cuentas de dominio de cliente marcadas como sensibles.|  
   
@@ -41,12 +29,12 @@ ms.lasthandoff: 04/30/2018
  El uso de la suplantación en los niveles `Impersonate` o `Delegate` exige que la aplicación de servidor tenga el privilegio `SeImpersonatePrivilege`. Una aplicación tiene de forma predeterminada este privilegio si se está ejecutando en una cuenta del grupo Administradores o en una cuenta con un SID de Servicio (servicio de red, servicio local o sistema local). La suplantación no requiere autenticación mutua del cliente y el servidor. Algunos esquemas de autenticación que admiten la suplantación, como NTLM, no se pueden utilizar con autenticación mutua.  
   
 ## <a name="transport-specific-issues-with-impersonation"></a>Problemas específicos del transporte con suplantación  
- La opción de un transporte en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] afecta a las posibles opciones de suplantación. Esta sección describe problemas que afectan al HTTP estándar y a los transportes de canalización con nombre en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Los transportes personalizados tienen sus propias restricciones sobre la compatibilidad con la suplantación.  
+ La elección de un transporte de WCF afecta a las opciones posibles para la suplantación. En esta sección se describe los problemas que afectan a HTTP estándar y transportes de canalización en WCF con nombre. Los transportes personalizados tienen sus propias restricciones sobre la compatibilidad con la suplantación.  
   
 ### <a name="named-pipe-transport"></a>Transporte de canalización con nombre  
  Los elementos siguientes se utilizan con el transporte de canalización con nombre:  
   
--   El transporte de canalización con nombre solo está pensado para su uso en el equipo local. El transporte de canalización con nombre en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rechaza explícitamente las conexiones entre equipos.  
+-   El transporte de canalización con nombre solo está pensado para su uso en el equipo local. El transporte de canalización con nombre en WCF impide explícitamente las conexiones entre equipos.  
   
 -   Las canalizaciones con nombre no se pueden utilizar con `Impersonate` o el nivel de suplantación `Delegate`. La canalización con nombre no puede exigir la garantía en equipo en estos niveles de suplantación.  
   

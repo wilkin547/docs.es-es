@@ -1,31 +1,17 @@
 ---
 title: Requisitos del sistema WCF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, requirements
 ms.assetid: c43918db-9a36-426c-9e8a-e1bd6688a5b7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 81f79691424bb48679605e385785bd7bf11b4db5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7edb8de2bc7ce315336270b560bce5ec2153f239
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-system-requirements"></a>Requisitos del sistema WCF
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] es una infraestructura de comunicación que se usa para crear aplicaciones distribuidas. A continuación se detallan los requisitos que permiten [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ejecutarse.  
+Windows Communication Foundation (WCF) es una infraestructura de comunicación que se utiliza para crear aplicaciones distribuidas. A continuación se detallan los requisitos que permiten [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ejecutarse.  
   
 ## <a name="system-requirements"></a>Requisitos del sistema  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] está instalado de manera predeterminada en [!INCLUDE[wv](../../../includes/wv-md.md)].  

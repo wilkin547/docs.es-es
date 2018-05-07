@@ -1,30 +1,18 @@
 ---
-title: "Cómo: Exportar aserciones de directivas personalizadas"
-ms.custom: 
+title: 'Cómo: Exportar aserciones de directivas personalizadas'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8620dec4997947df2dc7078e337a5e421d66c55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4182007d32ea857aa333542b4df29da18b8062df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Cómo: Exportar aserciones de directivas personalizadas
-Las aserciones de directivas describen las funciones y requisitos de un punto de conexión de servicio. Las aplicaciones de servicio pueden utilizar las aserciones de directivas personalizadas en metadatos del servicio para comunicarse el extremo, enlace o información de personalización de contrato a la aplicación cliente. Puede utilizar [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para exportar las aserciones en expresiones de directivas adjuntas a enlaces de WSDL en el extremo, operación o asuntos del mensaje, dependiendo de las funciones o requisitos que esté comunicando.  
+Las aserciones de directivas describen las funciones y requisitos de un punto de conexión de servicio. Las aplicaciones de servicio pueden utilizar las aserciones de directivas personalizadas en metadatos del servicio para comunicarse el punto de conexión, enlace o información de personalización de contrato a la aplicación cliente. Puede usar Windows Communication Foundation (WCF) para exportar las aserciones en expresiones de directivas adjuntas a enlaces de WSDL en el punto de conexión, operación o asuntos del mensaje, dependiendo de las capacidades o requisitos que esté comunicando.  
   
  Las aserciones de directivas personalizadas se exportan implementando la interfaz <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> en <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> e insertando directamente el elemento de enlace en el enlace del extremo de servicio o registrando el elemento de enlace en su archivo de configuración de la aplicación. Su implementación de exportación de directivas debería agregar su aserción de directivas personalizada como una instancia <xref:System.Xml.XmlElement?displayProperty=nameWithType> al <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> adecuado en <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> que se pasa al método <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A>.  
   

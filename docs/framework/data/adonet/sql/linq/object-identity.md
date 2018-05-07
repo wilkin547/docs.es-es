@@ -1,27 +1,15 @@
 ---
 title: Identidad de objetos
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21b8dbb934b778d792ff55d54f60fca92cac8e88
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 930295073f9f75cf4101bf6fa3834561a4db8f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-identity"></a>Identidad de objetos
 Los objetos en tiempo de ejecución tienen identidades únicas. Dos variables que hacen referencia al mismo objeto en realidad hacen referencia a la misma instancia del objeto. Por este motivo, los cambios que se realizan a través de una variable están visibles inmediatamente a través de la otra.  
@@ -34,7 +22,7 @@ Los objetos en tiempo de ejecución tienen identidades únicas. Dos variables qu
   
  En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Data.Linq.DataContext> administra la identidad de objeto. Siempre que se recupera una nueva fila de la base de datos, la fila se registra en una tabla de identidad según su clave principal y se crea un nuevo objeto. Siempre que se recupera esa misma fila, la instancia de objeto original se devuelve a la aplicación. De esta manera, <xref:System.Data.Linq.DataContext> convierte el concepto de identidad desde el punto de vista de la base de datos (es decir, claves principales) en el concepto de identidad desde el punto de vista del lenguaje (es decir, instancias). La aplicación solo ve el objeto en el estado en que se recuperó por primera vez. Los nuevos datos, si son diferentes, se descartan. Para obtener más información, consulte [recuperar objetos de la caché de identidad](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]usa este enfoque para administrar la integridad de los objetos locales con el fin de admitir las actualizaciones optimistas. Dado que los únicos cambios que se producen después de crear el objeto son los realizados por la aplicación, la intención de la aplicación está clara. Si en ese período de tiempo un tercero ha realizado cambios, se identifican en el momento en que se llama a `SubmitChanges()`.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa este enfoque para administrar la integridad de los objetos locales con el fin de admitir las actualizaciones optimistas. Dado que los únicos cambios que se producen después de crear el objeto son los realizados por la aplicación, la intención de la aplicación está clara. Si en ese período de tiempo un tercero ha realizado cambios, se identifican en el momento en que se llama a `SubmitChanges()`.  
   
 > [!NOTE]
 >  Si el objeto solicitado por la consulta se puede identificar con facilidad como ya recuperado, no se ejecuta ninguna consulta. La tabla de identidad actúa como caché de todos los objetos previamente recuperados.  

@@ -1,31 +1,19 @@
 ---
-title: "Cómo: Implementar una aplicación de integración de COM+"
-ms.custom: 
+title: 'Cómo: Implementar una aplicación de integración de COM+'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aca9df2be74dba308d3c4e4eb1c61b3e1afaa580
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 872d0f0c84c1ac0ea96a87ed24a386bb9bedcf85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>Cómo: Implementar una aplicación de integración de COM+
 Cuando ha escrito una aplicación de integración de COM+, puede que desee implementarla en otro equipo. En este tema se describe cómo mover una aplicación de integración de COM+ de un equipo a otro.  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>Mover una aplicación de integración alojada por COM+  
   
-1.  Asegúrese de que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se instala en ambos equipos.  
+1.  Asegúrese de que WCF está instalado en ambos equipos.  
   
 2.  Exportar la aplicación desde el equipo A.  
   
@@ -39,7 +27,7 @@ Cuando ha escrito una aplicación de integración de COM+, puede que desee imple
   
 ### <a name="moving-a-web-hosted-integration-application"></a>Mover una aplicación de integración alojada en Web  
   
-1.  Asegúrese de que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se instala en ambos equipos.  
+1.  Asegúrese de que WCF está instalado en ambos equipos.  
   
 2.  Exportar la aplicación desde el equipo A.  
   

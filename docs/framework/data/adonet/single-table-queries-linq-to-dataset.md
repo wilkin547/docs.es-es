@@ -1,30 +1,18 @@
 ---
-title: "Consultas de tabla única (LINQ to DataSet)"
-ms.custom: 
+title: Consultas de tabla única (LINQ to DataSet)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5ac58f5e98113150123b152dad8d2cc25c61cf97
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5a128349ea81cda7397b2dadbc2ce4096f692744
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Consultas de tabla única (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]las consultas funcionan en los orígenes de datos que implementan la <xref:System.Collections.Generic.IEnumerable%601> interfaz o <xref:System.Linq.IQueryable%601> interfaz. El <xref:System.Data.DataTable> clase no implementa ninguna de estas interfaces, por lo que debe llamar a la <xref:System.Data.DataTableExtensions.AsEnumerable%2A> método si desea utilizar el <xref:System.Data.DataTable> como origen en la `From` cláusula de una [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consulta.  
+[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] las consultas funcionan en los orígenes de datos que implementan la <xref:System.Collections.Generic.IEnumerable%601> interfaz o <xref:System.Linq.IQueryable%601> interfaz. El <xref:System.Data.DataTable> clase no implementa ninguna de estas interfaces, por lo que debe llamar a la <xref:System.Data.DataTableExtensions.AsEnumerable%2A> método si desea utilizar el <xref:System.Data.DataTable> como origen en la `From` cláusula de una [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consulta.  
   
  En el ejemplo siguiente se obtienen todos los pedidos en línea desde la tabla SalesOrderHeader y se envían los resultados de id., fecha y número de pedido a la consola.  
   

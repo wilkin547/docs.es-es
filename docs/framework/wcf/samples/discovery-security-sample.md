@@ -1,24 +1,14 @@
 ---
-title: "Ejemplo de seguridad de la detección"
-ms.custom: 
+title: Ejemplo de seguridad de la detección
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f50334c8477b8823ef1dfb6abcae640e439d5ddd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a701a516a93cf94f76950b7b1b1c7f3a9b41214e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-security-sample"></a>Ejemplo de seguridad de la detección
 La especificación de la detección no requiere que los puntos de conexión que participan en el proceso de detección sean seguros. Al mejorar los mensajes de detección gracias a la seguridad, se mitigan varios tipos de ataques (alteración del mensaje, denegación de servicio, repetición y suplantación). Este ejemplo implementa canales personalizados que calculan y comprueban las firmas de mensaje utilizando el formato de firma compacto (descrito en la sección 8.2 de la especificación de detección WS). El ejemplo admite tanto la [especificación de detección de 2005](http://go.microsoft.com/fwlink/?LinkId=177912) y [versión 1.1](http://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -48,7 +38,7 @@ La especificación de la detección no requiere que los puntos de conexión que 
 > [!NOTE]
 >  `PrefixList` se agregó en el protocolo de la versión de detección de 2008.  
   
- Para calcular la firma, el ejemplo determina los elementos de firma expandidos. Se crea una firma XML (`SignedInfo`), utilizando el prefijo del espacio de nombres `ds`, tal y como requiere la especificación de la detección WS. En la firma se hace referencia al cuerpo y a todos los encabezados en los espacios de nombres de direccionamiento y detección, de modo que no se puedan alterar. Cada elemento al que se hace referencia se transforma utilizando la canonización exclusiva (http://www.w3.org/2001/10/xml-exc-c14n#) y, a continuación, se calcula un valor de síntesis de SHA-1 (http://www.w3.org/2000/09/xmldsig #sha1). Según todos los elementos a los que se hace referencia y sus valores de síntesis, el valor de firma se calcula utilizando el algoritmo RSA (http://www.w3.org/2000/09/xmldsig#rsa-sha1).  
+ Para calcular la firma, el ejemplo determina los elementos de firma expandidos. Se crea una firma XML (`SignedInfo`), utilizando el prefijo del espacio de nombres `ds`, tal y como requiere la especificación de la detección WS. En la firma se hace referencia al cuerpo y a todos los encabezados en los espacios de nombres de direccionamiento y detección, de modo que no se puedan alterar. Cada elemento que se hace referencia se transforma utilizando la canonización exclusiva (http://www.w3.org/2001/10/xml-exc-c14n# ), y, a continuación, se calcula un valor de síntesis de SHA-1 (http://www.w3.org/2000/09/xmldsig#sha1 ). En función de los elementos de todos los que se hace referencia y sus valores de resumen, el valor de firma se calcula utilizando el algoritmo RSA (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ).  
   
  Los mensajes se firman con un certificado especificado por el cliente. Cuando se crea el elemento de enlace, se debe especificar la ubicación del almacén, el nombre y el nombre de asunto del certificado. El `KeyId` de la firma compacta representa el identificador de clave del token de firma y es el identificador de clave de asunto (SKI) del token de firma o (si el SKI no existe) un valor hash SHA-1 de la clave pública del token de firma.  
   
@@ -82,7 +72,7 @@ La especificación de la detección no requiere que los puntos de conexión que 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
   

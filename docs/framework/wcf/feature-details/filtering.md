@@ -1,36 +1,24 @@
 ---
 title: Filtrado
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f67a7f6ac423bd66d9d25b834edc9cf55a5d6a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f599ac74aa63951f59c5e5c79d3fe37b2ab5100
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filtering"></a>Filtrado
-El sistema de filtrado de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] puede utilizar los filtros declarativos para igualar mensajes y tomar decisiones operacionales. Puede utilizar filtros para determinar qué hacer con un mensaje examinando parte del mensaje. Un proceso de cola, por ejemplo, puede utilizar una consulta de XPath 1.0 para comprobar el elemento de prioridad de un encabezado conocido para determinar si poner un mensaje al principio de la cola.  
+Windows Communication Foundation (WCF) sistema de filtrado puede usar los filtros declarativos para igualar mensajes y tomar decisiones operativas. Puede utilizar filtros para determinar qué hacer con un mensaje examinando parte del mensaje. Un proceso de cola, por ejemplo, puede utilizar una consulta de XPath 1.0 para comprobar el elemento de prioridad de un encabezado conocido para determinar si poner un mensaje al principio de la cola.  
   
- El sistema del filtrado está compuesto por un conjunto de clases que pueden determinar eficazmente cuáles de un conjunto de filtros son `true` para un mensaje de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] determinado.  
+ El sistema del filtrado se compone de un conjunto de clases que pueden eficazmente determinar qué miembro de un conjunto de filtros son `true` para un determinado mensaje WCF.  
   
- El sistema del filtrado es un componente básico de la mensajería de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]; está diseñado para ser extremadamente rápido. Cada implementación de filtro se ha optimizado para un tipo determinado de coincidencia frente a los mensajes de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ El sistema del filtrado es un componente básico de la mensajería WCF; está diseñado para ser extremadamente rápido. Cada implementación de filtro se ha optimizado para un tipo determinado de coincidencia frente a mensajes WCF.  
   
  El sistema de filtrado no es seguro para subprocesos. La aplicación debe administrar las semánticas de bloqueo. No obstante, sí que admite un sistema de escritura único y multilector.  
   
 ## <a name="where-filtering-fits"></a>Dónde encaja el filtrado  
- El filtrado se realiza una vez que se recibe un mensaje y es parte del proceso de enviar el mensaje al componente de aplicación apropiado. El diseño del sistema del filtrado se encarga de los requisitos de varios subsistemas de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], incluyendo la mensajería, el enrutamiento, la seguridad, el control de eventos y la administración del sistema.  
+ El filtrado se realiza una vez que se recibe un mensaje y es parte del proceso de enviar el mensaje al componente de aplicación apropiado. El diseño del sistema del filtrado encarga de los requisitos de varios subsistemas WCF, incluidos los de mensajería, enrutamiento, seguridad, control de eventos y administración del sistema.  
   
 ## <a name="filters"></a>Filtros  
  El motor del filtro tiene dos componentes primarios, filtros y tablas de filtro. Un filtro toma decisiones booleanas sobre un mensaje en función de condiciones lógicas especificadas por el usuario. Los filtros implementan la clase <xref:System.ServiceModel.Dispatcher.MessageFilter>.  
@@ -53,7 +41,7 @@ El sistema de filtrado de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)
   
 ### <a name="prefix-endpoint-address-filters"></a>Filtros de direcciones de puntos de conexión de prefijos  
   
-1.  Las funciones <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> como el filtro <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, solo que la coincidencia puede estar en un prefijo del URI del mensaje. Por ejemplo, un filtro que especifica que la dirección http://www.adatum.com coincide con mensajes enviados a http://www.adatum.com/userA.  
+1.  Las funciones <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> como el filtro <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, solo que la coincidencia puede estar en un prefijo del URI del mensaje. Por ejemplo, un filtro que especifica la dirección http://www.adatum.com coincide con los mensajes dirigidos a http://www.adatum.com/userA.  
   
 ### <a name="xpath-message-filters"></a>Filtros de mensajes XPath  
  Un <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> utiliza una expresión XPath para determinar si un documento XML contiene elementos concretos, atributos, texto u otras construcciones sintácticas de XML. El filtro se optimiza para ser extremadamente eficaz para un subconjunto estricto de XPath. El lenguaje XML Path Language se describe en el [especificación de lenguaje de ruta de acceso de W3C XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94779).  
@@ -79,7 +67,7 @@ El sistema de filtrado de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)
   
  La clase <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> optimiza la coincidencia para un subconjunto de XPath que cubre la mayoría de los escenarios de mensajería y también admite la gramática completa de XPath 1.0. Ha optimizado los algoritmos para una coincidencia paralela eficaz.  
   
- Esta tabla tiene varios métodos `Match` especializados que funcionan sobre un <xref:System.Xml.XPath.XPathNavigator> y un <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. Un <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> extiende la clase <xref:System.Xml.XPath.XPathNavigator> agregando una propiedad <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A>. Esta propiedad permite guardar las posiciones del documento XML y cargarlas rápidamente sin tener que clonar el explorador, una asignación de gran consumo de memoria que <xref:System.Xml.XPath.XPathNavigator> requiere para este tipo de operación. El motor de XPath de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] debe grabar con frecuencia la posición del cursor mientras ejecuta las consultas en documentos XML, de modo que el <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> proporciona una optimización importante para el procesamiento de mensajes.  
+ Esta tabla tiene varios métodos `Match` especializados que funcionan sobre un <xref:System.Xml.XPath.XPathNavigator> y un <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. Un <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> extiende la clase <xref:System.Xml.XPath.XPathNavigator> agregando una propiedad <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A>. Esta propiedad permite guardar las posiciones del documento XML y cargarlas rápidamente sin tener que clonar el explorador, una asignación de gran consumo de memoria que <xref:System.Xml.XPath.XPathNavigator> requiere para este tipo de operación. El motor de WCF XPath debe grabar con frecuencia la posición del cursor mientras ejecuta las consultas en documentos XML, por lo que el <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> proporciona una optimización importante para procesar el mensaje.  
   
 ## <a name="customer-scenarios"></a>Escenarios de cliente  
  Puede utilizar el filtrado siempre que desee enviar un mensaje a módulos de procesamiento diferentes en función de los datos contenidos en el mensaje. Dos escenarios típicos enrutan un mensaje en función de su código de acción y demultiplexan una secuencia de mensajes en función de la dirección del punto de conexión de los mensajes.  
