@@ -1,12 +1,6 @@
 ---
 title: Sobrecarga de procedimiento (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - signatures
 - Overloads keyword [Visual Basic]
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 65fd5a6763752c616f13891bfa5acabff6115d7c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0d1f2c4d8c88922659b3d91ed41d5e760e6e5233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="procedure-overloading-visual-basic"></a>Sobrecarga de procedimiento (Visual Basic)
 *Sobrecarga* un procedimiento significa definirlo en varias versiones, utilizando el mismo nombre pero distintas listas de parámetros. El propósito de sobrecarga es definir varias versiones estrechamente relacionadas de un procedimiento sin tener que distinguirlas por su nombre. La forma de hacerlo es mediante la variación de la lista de parámetros.  
@@ -56,13 +47,13 @@ ms.lasthandoff: 11/21/2017
   
 -   **Elementos no forman parte de la firma**. No se pueden sobrecargar un procedimiento sin modificar la firma. En concreto, no se puede sobrecargar un procedimiento cambiando únicamente uno o varios de los siguientes elementos:  
   
-    -   Palabras clave de modificador de procedimiento, como `Public`, `Shared`, y`Static`  
+    -   Palabras clave de modificador de procedimiento, como `Public`, `Shared`, y `Static`  
   
     -   Parámetro o escriba los nombres de parámetro  
   
     -   Restricciones de parámetro de tipo (para un procedimiento genérico)  
   
-    -   Palabras clave de modificador de parámetro, como `ByRef` y`Optional`  
+    -   Palabras clave de modificador de parámetro, como `ByRef` y `Optional`  
   
     -   Si devuelve un valor  
   

@@ -1,23 +1,16 @@
 ---
-title: "No se puede convertir el valor inicial del tipo &#39; &lt;type1&gt;&#39; el valor de límite de &#39;&lt; type2&gt;&#39; y el valor de paso de &#39;&lt; Tipo3&gt;&#39; a un tipo común"
+title: No se puede convertir el valor de inicio de tipo &#39; &lt;type1&gt;&#39;, valor de límite &#39; &lt;type2&gt; &#39; y el valor de step &#39; &lt;Tipo3&gt; &#39; a un tipo común
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrForLoop_CommonType3
 ms.assetid: 21c45bcf-539c-488a-9cae-221558c37146
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 04bcc14bf1ce85423c5a5a99659955c62c74d8a5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d2369d58edc43306dc5de0e37ea328862b307ff3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="cannot-convert-start-value-of-type-39lttype1gt39-limit-value-of-39lttype2gt39-and-step-value-of-39lttype3gt39-to-a-common-type"></a>No se puede convertir el valor inicial del tipo &#39; &lt;type1&gt;&#39; el valor de límite de &#39;&lt; type2&gt;&#39; y el valor de paso de &#39;&lt; Tipo3&gt;&#39; a un tipo común
+# <a name="cannot-convert-start-value-of-type-39lttype1gt39-limit-value-of-39lttype2gt39-and-step-value-of-39lttype3gt39-to-a-common-type"></a>No se puede convertir el valor de inicio de tipo &#39; &lt;type1&gt;&#39;, valor de límite &#39; &lt;type2&gt; &#39; y el valor de step &#39; &lt;Tipo3&gt; &#39; a un tipo común
 Los valores de control `For...Next` especificados tienen tipos distintos y, por tanto, no son válidos porque no se pueden convertir a un tipo común.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  

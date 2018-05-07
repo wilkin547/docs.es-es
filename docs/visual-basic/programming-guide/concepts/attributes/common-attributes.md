@@ -1,22 +1,12 @@
 ---
 title: Atributos comunes (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9528b7dcfa52c30954929d714bd098eb51886ebd
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a91b0aa48a22db4ea7fb56a9c632ff0cb44dce5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-attributes-visual-basic"></a>Atributos comunes (Visual Basic)
 En este tema se describe los atributos que se usan normalmente en programas de Visual Basic.  
@@ -231,7 +221,7 @@ End Class
   
  Para obtener más información acerca de los atributos de información del llamador, consulte [información del llamador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
-##  <a name="VB"></a>Atributos en Visual Basic  
+##  <a name="VB"></a> Atributos en Visual Basic  
  En la tabla siguiente se enumera los atributos que son específicos de Visual Basic.  
   
 |Atributo|Propósito|  

@@ -1,26 +1,17 @@
 ---
-title: "Cómo: Crear una propiedad (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Crear una propiedad (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - Visual Basic code, procedures
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d140e6a10061f7fabe3d12c6cce5d0c201e103d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6e3faed9880b6417f17ab8fe84bc5162e803c437
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Cómo: Crear una propiedad (Visual Basic)
 Incluir una definición de propiedad entre un `Property` instrucción y un `End Property` instrucción. Dentro de esta definición se define un `Get` procedimiento, un `Set` procedimiento, o ambos. Código de la de la propiedad se encuentra dentro de estos procedimientos.  

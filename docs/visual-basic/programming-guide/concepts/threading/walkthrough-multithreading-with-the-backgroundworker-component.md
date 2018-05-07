@@ -1,22 +1,12 @@
 ---
 title: Multithreading con el componente BackgroundWorker (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bb0734b4bbf3f8bf5b27305754829f1a9f29f42a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07700aa526866729f1ba1a8d846f22ce333c356d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>Tutorial: Multithreading con el componente BackgroundWorker (Visual Basic)
 Este tutorial muestra cómo crear una aplicación multiproceso de Windows Forms que busque las repeticiones de una palabra en un archivo de texto. Muestra cómo:  
@@ -37,7 +27,7 @@ Este tutorial muestra cómo crear una aplicación multiproceso de Windows Forms 
   
 3.  Asigne nombre a los objetos tal y como se muestra en la tabla siguiente.  
   
-    |Objeto|Propiedad|Parámetro|  
+    |Objeto|Property|Parámetro|  
     |------------|--------------|-------------|  
     |Primer botón|`Name`, `Text`|Iniciar, Iniciar|  
     |Segundo botón|`Name`, `Text`|Cancelar, Cancelar|  
@@ -48,7 +38,7 @@ Este tutorial muestra cómo crear una aplicación multiproceso de Windows Forms 
   
 4.  Agregue una etiqueta junto a cada cuadro de texto. Establezca la propiedad `Text` para cada etiqueta tal y como se muestra en la tabla siguiente.  
   
-    |Objeto|Propiedad|Parámetro|  
+    |Object|Property|Parámetro|  
     |------------|--------------|-------------|  
     |Primera etiqueta|`Text`|Archivo de código fuente|  
     |Segunda etiqueta|`Text`|Cadena de comparación|  
@@ -61,7 +51,7 @@ Este tutorial muestra cómo crear una aplicación multiproceso de Windows Forms 
   
 2.  Establezca las siguientes propiedades del objeto BackgroundWorker1.  
   
-    |Propiedad|Configuración|  
+    |Property|Configuración|  
     |--------------|-------------|  
     |`WorkerReportsProgress`|True|  
     |`WorkerSupportsCancellation`|True|  

@@ -1,12 +1,6 @@
 ---
-title: "Cómo: Comprobar si una cadena coincide con un modelo (Visual Basic)"
-ms.custom: 
+title: 'Cómo: Comprobar si una cadena coincide con un modelo (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
 - pattern matching
@@ -19,19 +13,16 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83433bdb41df0ce40d0979f3f44603f10ba1c7d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aef378bfc32d6deff431a2caac1261a6cd7520c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Cómo: Comprobar si una cadena coincide con un modelo (Visual Basic)
 Si desea averiguar si una expresión de la [tipo de datos String](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisface un patrón, puede usar el [operador Like](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
- `Like`se aplica a dos operandos. El operando izquierdo es una expresión de cadena y el operando derecho es una cadena que contiene el patrón que se usará para la coincidencia. `Like`Devuelve un `Boolean` valor que indica si la expresión de cadena ajusta al modelo.  
+ `Like` se aplica a dos operandos. El operando izquierdo es una expresión de cadena y el operando derecho es una cadena que contiene el patrón que se usará para la coincidencia. `Like` Devuelve un `Boolean` valor que indica si la expresión de cadena ajusta al modelo.  
   
  Puede hacer coincidir cada carácter de la expresión de cadena con un carácter concreto, un carácter comodín, una lista de caracteres o un intervalo de caracteres. Las posiciones de las especificaciones de la cadena patrón corresponden a las posiciones de los caracteres que se debe coincidir en la expresión de cadena.  
   
@@ -72,7 +63,7 @@ Si desea averiguar si una expresión de la [tipo de datos String](../../../../vi
      Tenga en cuenta que esta coincidencia distingue entre mayúsculas y minúsculas.  
   
 ## <a name="matching-empty-strings"></a>Coincidencia de cadenas vacías  
- `Like`trata la secuencia `[]` como una cadena de longitud cero (`""`). Puede usar `[]` para comprobar si la expresión de cadena completa está vacía, pero no puede utilizarlo para probar si una posición concreta en la expresión de cadena está vacía. Si una posición vacía es una de las opciones deberá comprobar, puede usar `Like` más de una vez.  
+ `Like` trata la secuencia `[]` como una cadena de longitud cero (`""`). Puede usar `[]` para comprobar si la expresión de cadena completa está vacía, pero no puede utilizarlo para probar si una posición concreta en la expresión de cadena está vacía. Si una posición vacía es una de las opciones deberá comprobar, puede usar `Like` más de una vez.  
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Para hacer coincidir un carácter en la expresión de cadena con una lista de caracteres o ningún carácter  
   
