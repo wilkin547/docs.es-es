@@ -1,14 +1,6 @@
 ---
 title: Los generadores de perfiles CLR y aplicaciones de la tienda de Windows
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 applies_to:
@@ -20,17 +12,13 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Los generadores de perfiles CLR y aplicaciones de la tienda de Windows
 En este tema se describe lo que debe pensar cuando herramientas de diagnóstico de escritura que analizan los administra el código que se ejecuta dentro de una aplicación de la tienda de Windows.  También proporciona instrucciones para modificar sus herramientas de desarrollo existentes, por lo que pueden seguir funcionando cuando se ejecutan en aplicaciones de la tienda de Windows.  Para entender esta información, es mejor que si está familiarizado con la API de generación de perfiles de Common Language en tiempo de ejecución, ya ha usado esta API en una herramienta de diagnóstico que se ejecuta correctamente en aplicaciones de escritorio de Windows y ahora está interesado en modificar la herramienta Para ejecutar correctamente en aplicaciones de la tienda de Windows.  
@@ -154,7 +142,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
  **Elegir una aplicación de la tienda de Windows al perfil**  
  En primer lugar, deberá pedir a los usuarios del generador de perfiles qué aplicación de la tienda de Windows para iniciar.  Para aplicaciones de escritorio, quizás le mostrará un cuadro de diálogo de exploración de archivos, y el usuario podría buscar y seleccionar un archivo .exe.  Pero aplicaciones de la tienda de Windows son diferentes y, mediante un cuadro de diálogo de examinar no tiene sentido.  En su lugar, es mejor mostrar al usuario una lista de aplicaciones de la tienda de Windows instalado para que seleccione en el usuario.  
   
- Puede usar el [PackageManager clase](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) para generar esta lista.  `PackageManager`es una clase en tiempo de ejecución de Windows que está disponible para aplicaciones de escritorio y de hecho es *sólo* disponibles para aplicaciones de escritorio.  
+ Puede usar el [PackageManager clase](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) para generar esta lista.  `PackageManager` es una clase en tiempo de ejecución de Windows que está disponible para aplicaciones de escritorio y de hecho es *sólo* disponibles para aplicaciones de escritorio.  
   
  El siguiente ejemplo de código de una interfaz de usuario de generador de perfiles hipotética escrito como una aplicación de escritorio en C# yses la `PackageManager` para generar una lista de aplicaciones de Windows:  
   
@@ -178,9 +166,9 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
   
  Hay un par de elementos que necesite realizar correctamente:  
   
--   `packageFullName`se puede determinar al recorrer en iteración los paquetes y arrastrar `package.Id.FullName`.  
+-   `packageFullName` se puede determinar al recorrer en iteración los paquetes y arrastrar `package.Id.FullName`.  
   
--   `debuggerCommandLine`es un poco más interesante.  Para pasar el bloque de entorno personalizado para la aplicación de la tienda de Windows, debe escribir al suyo propio, simplista depurador ficticio.  Genera de Windows, la aplicación de la tienda de Windows suspendido y, a continuación, asocia al depurador al ejecutar al depurador con una línea de comandos como en este ejemplo:  
+-   `debuggerCommandLine` es un poco más interesante.  Para pasar el bloque de entorno personalizado para la aplicación de la tienda de Windows, debe escribir al suyo propio, simplista depurador ficticio.  Genera de Windows, la aplicación de la tienda de Windows suspendido y, a continuación, asocia al depurador al ejecutar al depurador con una línea de comandos como en este ejemplo:  
   
     ```Output  
     MyDummyDebugger.exe -p 1336 -tid 1424  
@@ -341,7 +329,7 @@ CreateEventEx(
   
  `AppContainerNamedObjects\<acSid>\MyNamedEvent`  
   
- `<acSid>`es AppContainer SID la aplicación de la tienda Windows.  Una sección anterior de este tema se ha explicado cómo recorrer en iteración los paquetes instalados para el usuario actual.  De ese código de ejemplo, puede obtener el identificador de paquete.  Y desde el identificador de paquete, puede obtener el `<acSid>` con código similar al siguiente:  
+ `<acSid>` es AppContainer SID la aplicación de la tienda Windows.  Una sección anterior de este tema se ha explicado cómo recorrer en iteración los paquetes instalados para el usuario actual.  De ese código de ejemplo, puede obtener el identificador de paquete.  Y desde el identificador de paquete, puede obtener el `<acSid>` con código similar al siguiente:  
   
 ```csharp  
 IntPtr acPSID;  

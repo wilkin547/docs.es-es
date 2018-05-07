@@ -1,11 +1,7 @@
 ---
-title: "Función de BeginEnumeration (referencia de API no administrada)"
-description: "La función BeginEnumeration restablece el enumerador al principio de la enumeración"
+title: Función de BeginEnumeration (referencia de API no administrada)
+description: La función BeginEnumeration restablece el enumerador al principio de la enumeración
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BeginEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90c3e8448a61145290ea4a75b1d38f7ae010cb9f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9699f0cfc4e9fdb989337681b164cc1e703c1e60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration (función)
 Restablece el enumerador hasta el principio de la enumeración.  
@@ -49,7 +42,7 @@ HRESULT BeginEnumeration (
 `vFunc`  
 [in] Este parámetro no se utiliza.
 
-`ptr`[in] Un puntero a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instancia.
+`ptr` [in] Un puntero a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instancia.
 
 `lEnumFlags`  
 [in] Una combinación bit a bit de los indicadores o valores que se describen en la [comentarios](#remarks) sección que controla las propiedades incluidas en la enumeración.
@@ -75,15 +68,15 @@ Las marcas que se pueden pasar como el `lEnumFlags` argumento se definen en el *
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0 x 4 | Incluyen propiedades que constituyen la clave solo. |
-|`WBEM_FLAG_REFS_ONLY` | 0 x 8 | Incluyen propiedades que son las referencias de objeto. |
+|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Incluyen propiedades que constituyen la clave solo. |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | Incluyen propiedades que son las referencias de objeto. |
 
 **Grupo 2**
 
 Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_FLAG_SYSTEM_ONLY` | 0 x 30 | Limitar la enumeración de propiedades del sistema solo. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0 x 40 | Incluir propiedades locales y propagadas pero excluir propiedades del sistema de la enumeración. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Incluir propiedades locales y propagadas pero excluir propiedades del sistema de la enumeración. |
 
 Para las clases:
 
@@ -108,7 +101,7 @@ Constante  |Valor  |Descripción  |
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

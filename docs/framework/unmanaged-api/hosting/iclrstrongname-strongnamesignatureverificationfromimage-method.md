@@ -1,14 +1,6 @@
 ---
-title: "ICLRStrongName::StrongNameSignatureVerificationFromImage (Método)"
-ms.custom: 
+title: ICLRStrongName::StrongNameSignatureVerificationFromImage (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName.StrongNameSignatureVerificationFromImage
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: da91c138-ee30-4fd4-a040-464d97d7e41a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 57c8422d59a07de9ad045f2043594cb8d01f2f74
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60dbb8d8461015c791a70d6c2617b1c81e5ba17f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a>ICLRStrongName::StrongNameSignatureVerificationFromImage (Método)
 Comprueba que un ensamblado que ya se ha asignado a la memoria es válido para la clave pública asociada.  
@@ -59,25 +47,25 @@ HRESULT StrongNameSignatureVerificationFromImage (
  `dwInFlags`  
  [in] Marcas que influyen en el comportamiento de la comprobación. Se admiten los siguientes valores:  
   
--   `SN_INFLAG_FORCE_VER`(0 x 00000001) - fuerza la comprobación aunque sea necesario invalidar la configuración del registro.  
+-   `SN_INFLAG_FORCE_VER` (0 x 00000001) - fuerza la comprobación aunque sea necesario invalidar la configuración del registro.  
   
--   `SN_INFLAG_INSTALL`(0 x 00000002): Especifica que se trata de la primera comprobación que se realiza en esta imagen.  
+-   `SN_INFLAG_INSTALL` (0 x 00000002): Especifica que se trata de la primera comprobación que se realiza en esta imagen.  
   
--   `SN_INFLAG_ADMIN_ACCESS`(0 x 00000004): Especifica que la memoria caché permitirá el acceso únicamente a los usuarios que tienen privilegios administrativos.  
+-   `SN_INFLAG_ADMIN_ACCESS` (0 x 00000004): Especifica que la memoria caché permitirá el acceso únicamente a los usuarios que tienen privilegios administrativos.  
   
--   `SN_INFLAG_USER_ACCESS`(0 x 00000008): Especifica que el ensamblado estará accesible sólo para el usuario actual.  
+-   `SN_INFLAG_USER_ACCESS` (0 x 00000008): Especifica que el ensamblado estará accesible sólo para el usuario actual.  
   
--   `SN_INFLAG_ALL_ACCESS`(0 x 00000010): Especifica que la memoria caché no proporcionará ninguna garantía de restricción de acceso.  
+-   `SN_INFLAG_ALL_ACCESS` (0 x 00000010): Especifica que la memoria caché no proporcionará ninguna garantía de restricción de acceso.  
   
--   `SN_INFLAG_RUNTIME`(0 x 80000000) - reservado para la depuración interna.  
+-   `SN_INFLAG_RUNTIME` (0 x 80000000) - reservado para la depuración interna.  
   
  `pdwOutFlags`  
  [out] Una marca para obtener información de salida adicional. Se admite el siguiente valor:  
   
--   `SN_OUTFLAG_WAS_VERIFIED`(0 x 00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.  
+-   `SN_OUTFLAG_WAS_VERIFIED` (0 x 00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK`Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (vea [valores HRESULT comunes](http://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
+ `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (vea [valores HRESULT comunes](http://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -86,7 +74,7 @@ HRESULT StrongNameSignatureVerificationFromImage (
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

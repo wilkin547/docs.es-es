@@ -1,29 +1,15 @@
 ---
 title: Serialización independiente de JSON
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d3c7234c25b0a968ca67b58a560e8c8b55bb73d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5a157dfd55e722b3e7be967a26e8d2ff5fd54afe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stand-alone-json-serialization"></a>Serialización independiente de JSON
-JSON (JavaScript Object Notation) es un formato de datos diseñado específicamente para usarse por código JavaScript que se ejecute en páginas web dentro del explorador. Es el formato de datos predeterminado usado por servicios de AJAX de ASP.NET creados en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+JSON (JavaScript Object Notation) es un formato de datos diseñado específicamente para usarse por código JavaScript que se ejecute en páginas web dentro del explorador. Es el formato de datos predeterminado utilizado por los servicios de AJAX de ASP.NET creados en Windows Communication Foundation (WCF).  
   
  Este formato también puede usarse al crear servicios de AJAX sin integrar con ASP.NET, en este caso, XML es el valor predeterminado pero se puede elegir JSON.  
   
@@ -87,7 +73,7 @@ JSON (JavaScript Object Notation) es un formato de datos diseñado específicame
   
 -   Cualquier personalización que utilice <xref:System.Runtime.Serialization.CollectionDataContractAttribute> se omite en la representación de JSON.  
   
--   Los diccionarios no son una forma para trabajar directamente con JSON. Diccionario\<cadena, objeto > puede no ser compatible en la misma manera en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tal y como se espera que funcione con otras tecnologías de JSON. Por ejemplo, si "abc" está asignado a "xyz" y "def" está asignado a 42 en un diccionario, la representación de JSON no es {"abc":"xyz","def":42} si no que en su lugar es [{"Clave":"abc","Valor":"xyz"},{"Clave":"def","Valor":42}].  
+-   Los diccionarios no son una forma para trabajar directamente con JSON. Diccionario\<cadena, objeto > no se admite en la misma manera en WCF tal y como se espera que funcione con otras tecnologías de JSON. Por ejemplo, si "abc" está asignado a "xyz" y "def" está asignado a 42 en un diccionario, la representación de JSON no es {"abc":"xyz","def":42} si no que en su lugar es [{"Clave":"abc","Valor":"xyz"},{"Clave":"def","Valor":42}].  
   
 -   Si desea trabajar con JSON directamente (obteniendo acceso dinámicamente a claves y valores, sin predefinir una restricción rígida), tiene varias opciones:  
   
@@ -108,7 +94,7 @@ JSON (JavaScript Object Notation) es un formato de datos diseñado específicame
  El tipo JSON no tiene que coincidir con la tabla precedente en la deserialización. Por ejemplo, un `Int` normalmente asigna a un número JSON, pero también se puede deserializar correctamente de una cadena JSON siempre que esa cadena contenga un número válido. Es decir, ambos {"q": 42} y {"q": "42"} son válidos si hay un miembro de datos `Int` denominado "q".  
   
 ### <a name="polymorphism"></a>Polimorfismo  
- La serialización polimórfica es la capacidad de serializar un tipo derivado donde se espera su tipo base. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite la serialización JSON de la misma forma que admite la serialización XML. Por ejemplo, puede serializar `MyDerivedType` donde `MyBaseType` se espera o serializar `Int` donde `Object` se espera.  
+ La serialización polimórfica es la capacidad de serializar un tipo derivado donde se espera su tipo base. Esto se admite para la serialización de JSON WCF comparable a la forma en que se admite la serialización de XML. Por ejemplo, puede serializar `MyDerivedType` donde `MyBaseType` se espera o serializar `Int` donde `Object` se espera.  
   
  La información de tipo puede perderse al deserializar un tipo derivado si se espera el tipo base, a menos que esté deserializando un tipo complejo. Por ejemplo, si se serializa <xref:System.Uri> donde se espera un <xref:System.Object>, resulta en una cadena de JSON. Si esta cadena se vuelve a deserializar en <xref:System.Object>, se devuelve un <xref:System.String> .NET. El deserializador no conoce el tipo <xref:System.Uri> inicial de la cadena. Generalmente, cuando se espera <xref:System.Object>, todas las cadenas JSON se deserializan como cadenas .NET y todas las matrices JSON usadas para serializar colecciones, diccionarios y matrices .NET se deserializan como <xref:System.Array> .NET de tipo <xref:System.Object>, independientemente de cual haya sido el tipo original real. Un booleano JSON se asigna a un <xref:System.Boolean> .NET. No obstante, al esperar un <xref:System.Object>, los números de JSON se deserializan como <xref:System.Int32>, <xref:System.Decimal> o <xref:System.Double> .NET, donde se escoge automáticamente el tipo más adecuado.  
   
@@ -151,7 +137,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  El código JavaScript del cliente de AJAX de ASP.NET convierte automáticamente estas cadenas en instancias `DateTime` de JavaScript. Si existen otras cadenas con un formato similar que son sean de tipo <xref:System.DateTime> en .NET, también se convierten.  
   
- La conversión sólo se lleva a cabo si los caracteres "/" tienen escape (es decir, JSON se parece "\\/Date(700000+0500)\\/") y por esta razón [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]del codificador JSON (habilitadas por el <xref:System.ServiceModel.WebHttpBinding>) siempre tiene escape en el "/" carácter.  
+ La conversión sólo se lleva a cabo si los caracteres "/" tienen escape (es decir, JSON se parece "\\/Date(700000+0500)\\/") y para el codificador JSON de WCF de este motivo (habilitadas por el <xref:System.ServiceModel.WebHttpBinding>) siempre tiene escape el carácter "/".  
   
 ### <a name="xml-in-json-strings"></a>Cadenas XML en JSON  
   
@@ -209,7 +195,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 {"x":50,"y":70,"radius":10,"__type":"Circle:#MyApp.Shapes"}  
 ```  
   
- Los <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> usados por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y as páginas del cliente AJAX de ASP.NET siempre emiten primero la sugerencia de tipo.  
+ Tanto el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> utilizado por AJAX de ASP.NET y WCF páginas cliente emiten siempre la sugerencia de tipo en primer lugar.  
   
 #### <a name="type-hints-apply-only-to-complex-types"></a>Las sugerencias de tipo solo se aplican a tipos complejos.  
  No hay ninguna manera de emitir una sugerencia de tipo para tipos no complejos. Por ejemplo, si una operación tiene un valor de devolución de <xref:System.Object> pero devuelve un Círculo, la representación JSON se puede mostrar antes y la información de tipo se conserva. No obstante, si se devuelve el identificador URI, la representación JSON es una cadena y se pierde el hecho de la cadena usada para representar un URI. Esto se aplica no solo a tipos primitivos, si no también a colecciones y matrices.  

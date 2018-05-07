@@ -1,38 +1,24 @@
 ---
 title: Solución de problemas de la mensajería en cola
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 45a3bf82662fcc01b732428d1ca351e4ae8ddca0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Solución de problemas de la mensajería en cola
-Esta sección contiene preguntas comunes y solución de problemas para utilizar las colas en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Esta sección contiene preguntas comunes y solución de problemas para utilizar las colas en Windows Communication Foundation (WCF).  
   
 ## <a name="common-questions"></a>Preguntas comunes  
- **P: ¿** he usado [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Beta 1 e instalé instalado la revisión de MSMQ. ¿Debo quitar la revisión?  
+ **P: ¿** he usado WCF Beta 1 y he instalado la revisión MSMQ. ¿Debo quitar la revisión?  
   
- **R:** Sí. Esta revisión ya no se admite. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ahora funciona en MSMQ sin un requisito de revisión.  
+ **R:** Sí. Esta revisión ya no se admite. WCF ahora funciona en MSMQ sin un requisito de revisión.  
   
  **P: ¿** hay dos enlaces para MSMQ: <xref:System.ServiceModel.NetMsmqBinding> y <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. ¿Qué debería utilizar y cuándo?  
   
- **R:** usar la <xref:System.ServiceModel.NetMsmqBinding> cuando desea usar MSMQ como transporte para la comunicación en cola entre dos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicaciones. Utilice <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> cuando desee utilizar aplicaciones MSMQ existentes para comunicarse con nuevas aplicaciones [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ **R:** utilizar el <xref:System.ServiceModel.NetMsmqBinding> cuando desea usar MSMQ como transporte para la comunicación en cola entre dos aplicaciones de WCF. Utilice los <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> cuando desee utilizar aplicaciones MSMQ existentes para comunicarse con nuevas aplicaciones de WCF.  
   
  **P: ¿** ¿tengo que actualizar MSMQ para usar el <xref:System.ServiceModel.NetMsmqBinding> y `MsmqIntegration` enlaces?  
   
@@ -54,7 +40,7 @@ Esta sección contiene preguntas comunes y solución de problemas para utilizar 
   
  **R:** Sí.  
   
- **P: ¿** deseo integrar aplicaciones MSMQ existentes con nuevas [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clientes o servidores. ¿Necesito actualizar ambos lados de mi infraestructura de MSMQ?  
+ **P: ¿** deseo integrar aplicaciones MSMQ existentes con nuevos clientes WCF o servidores. ¿Necesito actualizar ambos lados de mi infraestructura de MSMQ?  
   
  **R:** no. No tiene que actualizar a MSMQ 4.0 en ningún lado.  
   
@@ -145,9 +131,9 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **P: ¿** cuando uso un nombre de formato público o privado y abro el host de servicio en [!INCLUDE[wv](../../../../includes/wv-md.md)], obtengo un error. ¿Por qué?  
   
- **R:** el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canal de integración en [!INCLUDE[wv](../../../../includes/wv-md.md)] comprueba si se puede abrir una subcola de la cola de aplicación principal para administrar los mensajes dudosos. El nombre de la subcola se deriva de un URI de msmq.formatname pasado a la escucha. El nombre de la subcola en MSMQ solo puede ser un nombre de formato directo. Aquí radica el error. Cambie el URI de la cola a un nombre de formato directo.  
+ **R:** canal de integración de la WCF en [!INCLUDE[wv](../../../../includes/wv-md.md)] comprueba si se puede abrir una subcola de la cola de aplicación principal para administrar los mensajes dudosos. El nombre de la subcola se deriva de un URI de msmq.formatname pasado a la escucha. El nombre de la subcola en MSMQ solo puede ser un nombre de formato directo. Aquí radica el error. Cambie el URI de la cola a un nombre de formato directo.  
   
- **P: ¿** al recibir un mensaje desde una aplicación MSMQ, el mensaje permanece en la cola y la recepción no lee [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicación. ¿Por qué?  
+ **P: ¿** al recibir un mensaje desde una aplicación MSMQ, el mensaje permanece en la cola y la aplicación receptora de WCF no lo lee. ¿Por qué?  
   
  **R:** Compruebe si el mensaje tiene un cuerpo. Si el mensaje no tiene ningún cuerpo, el canal de integración de MSMQ omite el mensaje. Implemente `IErrorHandler` para recibir notificaciones de las excepciones y comprobar las trazas.  
   
@@ -193,7 +179,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
  **R:** Compruebe la configuración del enlace. El enlace predeterminado tiene la seguridad de transporte de MSMQ activada para firmar el mensaje. Desactívela.  
   
 ### <a name="remote-transacted-receives"></a>Recepciones de transacción remotas  
- **P: ¿** cuando tengo una cola en el equipo A y un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio que lee mensajes de una cola en el equipo B (escenario de recepción de transacción remota), los mensajes no se leen de la cola. La información de seguimiento indica error en la recepción con el mensaje "no se puede importar transacción." ¿Qué puedo hacer para solucionar este problema?  
+ **P: ¿** cuando tengo una cola en el equipo A, y un servicio WCF que lee los mensajes de una cola en el equipo B (escenario de recepción de transacción remota), los mensajes no se leen de la cola. La información de seguimiento indica error en la recepción con el mensaje "no se puede importar transacción." ¿Qué puedo hacer para solucionar este problema?  
   
  **R:** existen tres posibles razones para esto:  
   

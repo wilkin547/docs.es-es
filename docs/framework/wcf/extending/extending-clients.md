@@ -1,33 +1,19 @@
 ---
-title: "Extensión de clientes"
-ms.custom: 
+title: Extensión de clientes
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2444488418b7647111cf4b89db0c41a8e66470d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7eea247602d24c545e0de5fa9df50e83aae8ed7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-clients"></a>Extensión de clientes
 En una aplicación que realiza la llamada, el nivel de modelo de servicio es responsable de traducir invocaciones de método en el código de la aplicación a mensajes salientes, insertarlos en los canales subyacentes, traducir los resultados en valores devueltos y los parámetros de salida en el código de la aplicación, y devolver los resultados al autor de la llamada. Las extensiones de modelo de servicio modifican o implementan el comportamiento de la comunicación o la ejecución y características implicadas en la funcionalidad de distribuidor o cliente, comportamientos personalizados, interceptación de mensajes y parámetros, y otra funcionalidad de extensibilidad.  
   
- En este tema se describe cómo utilizar las clases <xref:System.ServiceModel.Dispatcher.ClientRuntime> y <xref:System.ServiceModel.Dispatcher.ClientOperation> en una aplicación cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para modificar el comportamiento de ejecución predeterminado de un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o para interceptar o modificar mensajes, parámetros o valores devueltos antes o después de enviar o recuperarlos desde el nivel del canal. Para obtener más información acerca de cómo ampliar el tiempo de ejecución de servicio, consulte [extender distribuidores](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Para obtener más información acerca de los comportamientos que modificar e insertar los objetos de personalización en el tiempo de ejecución de cliente, consulte [configuración y al ampliar el tiempo de ejecución con comportamientos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Este tema describe cómo utilizar el <xref:System.ServiceModel.Dispatcher.ClientRuntime> y <xref:System.ServiceModel.Dispatcher.ClientOperation> clases en una aplicación de cliente de Windows Communication Foundation (WCF) para modificar el comportamiento de ejecución predeterminado de un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente o para interceptar o modificar mensajes, parámetros, o valores devueltos antes o después de enviar o recuperarlos desde la capa del canal. Para obtener más información acerca de cómo ampliar el tiempo de ejecución de servicio, consulte [extender distribuidores](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Para obtener más información acerca de los comportamientos que modificar e insertar los objetos de personalización en el tiempo de ejecución de cliente, consulte [configuración y al ampliar el tiempo de ejecución con comportamientos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="clients"></a>Clientes  
  En un cliente, un objeto de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o canal de cliente convierte las invocaciones de método en mensajes salientes y los entrantes en resultados de la operación devueltos a la aplicación que realiza la llamada. (Para obtener más información acerca de los tipos de cliente, consulte [arquitectura de cliente de WCF](../../../../docs/framework/wcf/feature-details/client-architecture.md).)  

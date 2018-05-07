@@ -1,14 +1,6 @@
 ---
-title: "StrongNameKeyGen (Función)"
-ms.custom: 
+title: StrongNameKeyGen (Función)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameKeyGen
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 883e413a-ad2f-4f7f-b1b9-aeb8fe5b65f8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e3bb9530884f61345d439ec8662a088e1d152de7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fce08434cb8864350fd333dcfcaa388a8031c09
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen (Función)
 Crea un nuevo par de claves pública y privada para su uso de nombre seguro.  
@@ -52,7 +40,7 @@ BOOLEAN StrongNameKeyGen (
   
 #### <a name="parameters"></a>Parámetros  
  `wszKeyContainer`  
- [in] El nombre de contenedor de claves solicitado. `wszKeyContainer`debe ser una cadena no vacía o null para generar un nombre temporal.  
+ [in] El nombre de contenedor de claves solicitado. `wszKeyContainer` debe ser una cadena no vacía o null para generar un nombre temporal.  
   
  `dwFlags`  
  [in] Especifica si se debe abandonar la clave registrada. Se admiten los siguientes valores:  
@@ -68,7 +56,7 @@ BOOLEAN StrongNameKeyGen (
  [out] El tamaño, en bytes, de `ppbKeyBlob`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true`Cuando se finaliza correctamente; en caso contrario, `false`.  
+ `true` Cuando se finaliza correctamente; en caso contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
  El `StrongNameKeyGen` función crea una clave de 1024 bits. Una vez recuperada la clave, debe llamar a la [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) función para liberar la memoria asignada.  
@@ -82,7 +70,7 @@ BOOLEAN StrongNameKeyGen (
   
  **Biblioteca:** incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [StrongNameKeyGen (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)  

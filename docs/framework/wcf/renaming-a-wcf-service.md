@@ -1,32 +1,18 @@
 ---
 title: Cambiar el nombre de un servicio WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 14235a65-b1c5-409d-b6cc-a979acd54bbd
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f2ab3d780f85131fc7adf24c5f420bd5fe643d9e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a215523b92757e3bde1dae2e50de22169020e870
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="renaming-a-wcf-service"></a>Cambiar el nombre de un servicio WCF
-En este tema se describe cómo cambiar el nombre de un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+Este tema describe cómo puede cambiar el nombre de un servicio de Windows Communication Foundation (WCF).  
   
 ## <a name="renaming-a-wcf-service"></a>Cambiar el nombre de un servicio WCF  
- Realice los pasos siguientes para cambiar el nombre de un servicio en una plantilla de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+ Realice los pasos siguientes para cambiar el nombre de un servicio en una plantilla de Windows Communication Foundation (WCF),  
   
 -   Cambie el nombre de la clase que implementa el servicio.  
   

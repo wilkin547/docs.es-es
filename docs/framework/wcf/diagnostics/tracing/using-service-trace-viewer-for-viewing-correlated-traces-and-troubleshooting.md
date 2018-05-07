@@ -1,30 +1,18 @@
 ---
-title: "Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas"
-ms.custom: 
+title: Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13c862c8191a9bc312de743fc3ed99396c600f8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas
 En este tema se describe el formato de datos de seguimiento, cómo verlo y enfoques sobre el uso de Service Trace Viewer para solucionar problemas de la aplicación.  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>Utilizar la herramienta de visor de seguimiento de servicio  
- La herramienta Service Trace Viewer de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] le ayuda a poner en correlación seguimientos de diagnósticos generados por agentes de escucha de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] para buscar la causa principal de un error. La herramienta le proporciona una forma de ver, agrupar y filtrar seguimientos de manera sencilla para que pueda diagnosticar, reparar y comprobar los problemas de los servicios de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Para obtener más información sobre el uso de esta herramienta, consulte [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+ La herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ayuda a poner en correlación seguimientos de diagnósticos generados por [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] los agentes de escucha para encontrar la raíz de la causa de un error. La herramienta le proporciona una forma de ver, agrupar y filtrar seguimientos de manera sencilla para que pueda diagnosticar, reparar y comprobar los problemas de los servicios de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Para obtener más información sobre el uso de esta herramienta, consulte [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
  Este tema contiene capturas de pantalla de seguimientos generados mediante la ejecución de la [seguimiento y registro de mensajes](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) de ejemplo, cuando se ven mediante la [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). En este tema se muestra cómo entender el contenido de los seguimientos, las actividades y su correlación y cómo analizar grandes cantidades de seguimientos al solucionar problemas.  
   

@@ -1,11 +1,7 @@
 ---
-title: "Función DeleteMethod (referencia de API no administrada)"
-description: "La función DeleteMethod elimina el método especificado de una definición de clase CIM."
+title: Función DeleteMethod (referencia de API no administrada)
+description: La función DeleteMethod elimina el método especificado de una definición de clase CIM.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - DeleteMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 03b147d2fd76e34c6152a0b41ee14319811e9300
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd862910d0c9bb0274158c2c516211cef598a553
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deletemethod-function"></a>DeleteMethod (función)
 Elimina el método especificado de una definición de clase CIM.
@@ -53,7 +46,7 @@ HRESULT Delete (
 [in] Un puntero a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instancia.
 
 `wszName`  
-[in] El nombre del método que se va a quitar de la tabla de la clase. `wszName`debe ser un puntero a un válido `LPCWSTR`.
+[in] El nombre del método que se va a quitar de la tabla de la clase. `wszName` debe ser un puntero a un válido `LPCWSTR`.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -76,7 +69,7 @@ No se admite la eliminación de método para [IWbemClassObject](https://msdn.mic
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
