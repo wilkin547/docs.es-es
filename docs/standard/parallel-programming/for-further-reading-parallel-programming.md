@@ -1,40 +1,35 @@
 ---
 title: Más información (Programación paralela)
-ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 04/26/2018
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tasks, further reading
-ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f09cbe788efb3baddf7b144c178e42a22c17bf95
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 87106f1d9b75775dd401cd856ccb50ceb733b944
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="for-further-reading-parallel-programming"></a>Más información (Programación paralela)
-Los siguientes recursos contienen información adicional sobre programación paralela en .NET Framework:  
-  
--   El [Parallel Computing Developer Center](https://msdn.microsoft.com/vstudio/bb964701) (centro para desarrolladores de informática en paralelo) del sitio web de MSDN contiene vínculos a contenido y a entradas de foros sobre la programación paralela en .NET Framework y en C++ nativo.  
-  
--   El [blog sobre programación paralela con .NET](https://blogs.msdn.microsoft.com/pfxteam/) del sitio de blogs de MSDN contiene muchos artículos detallados sobre la programación paralela en .NET Framework.  
-  
--   En el [foro de las extensiones paralelas](https://social.msdn.microsoft.com/Forums/en-US/home?forum=parallelextensions) del sitio de foros de MSDN puedo plantear preguntas y dar respuestas sobre la programación paralela.  
-  
--   En la página de [ejemplos de extensiones paralelas](https://code.msdn.microsoft.com/ParExtSamples) del sitio web de la galería de código de MSDN se incluyen muchos ejemplos que muestran las técnicas de programación paralela intermedias y avanzadas.  
-  
+
+Los siguientes recursos contienen información adicional sobre programación paralela en .NET:
+
+- En el documento [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) (Patrones de programación paralela: descripción y aplicación de patrones paralelos con .NET Framework 4) se describen patrones paralelos comunes y procedimientos recomendados para desarrollar componentes paralelos con el uso de dichos patrones.
+
+- En el libro [Design Patterns for Decomposition and Coordination on Multicore Architectures](https://msdn.microsoft.com/library/ff963553.aspx) (Diseño de patrones para descomposición y coordinación en arquitecturas multinúcleo) se describen los patrones de programación paralela que usan la compatibilidad con la programación paralela introducida en .NET Framework 4.
+
+- El blog sobre [programación paralela con .NET](https://blogs.msdn.microsoft.com/pfxteam/) contiene muchos artículos detallados sobre la programación paralela en .NET.
+
+- La página de [ejemplos de programación paralela con .NET Framework](https://code.msdn.microsoft.com/ParExtSamples) contiene muchos ejemplos que muestran las técnicas de programación paralela intermedias y avanzadas.
+
 ## <a name="see-also"></a>Vea también  
- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)  
- [Patrones para la programación paralela: comprender y aplicar patrones paralelos con .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)
+ [Centro para desarrolladores de informática en paralelo](https://msdn.microsoft.com/vstudio/bb964701)  
+ [Programación en paralelo en Visual C++](/cpp/parallel/parallel-programming-in-visual-cpp)  

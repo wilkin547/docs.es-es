@@ -10,11 +10,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c5e2d603062095c02af500ae74a9ea708cf9aefa
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 1a97bd393a4df080d9e2f9fc049165e4efbff852
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -135,7 +135,7 @@ El modelo de objetos y las interfaces de la aplicación se deben colocar en el p
 
 Los detalles de implementación, por ejemplo, cómo se realiza la persistencia o cómo se pueden enviar notificaciones a un usuario, se mantienen en el proyecto de infraestructura. Este proyecto hará referencia a paquetes específicos de la implementación como Entity Framework Core, pero no debe exponer detalles sobre estas implementaciones fuera del proyecto. Los servicios de infraestructura y los repositorios deben implementar interfaces definidas en el proyecto ApplicationCore, y sus implementaciones de persistencia serán responsables de recuperar y almacenar las entidades definidas en ApplicationCore.
 
-El propio proyecto ASP.NET Core es responsable de cualquier interés del nivel de la interfaz de usuario, pero no debe incluir lógica empresarial o detalles de infraestructura. De hecho, idealmente ni siquiera debería tener una dependencia en el proyecto de infraestructura, lo que ayudará a garantizar que no se introduce por accidente ninguna dependencia entre los dos proyectos. Esto se puede lograr mediante un contenedor de DI de terceros como StructureMap, que permite definir reglas de DI en clases del Registro en cada proyecto.
+El propio proyecto de interfaz de usuario de ASP.NET Core es responsable de cualquier interés del nivel de la interfaz de usuario, pero no debe incluir lógica empresarial o detalles de infraestructura. De hecho, idealmente ni siquiera debería tener una dependencia en el proyecto de infraestructura, lo que ayudará a garantizar que no se introduce por accidente ninguna dependencia entre los dos proyectos. Esto se puede lograr mediante un contenedor de DI de terceros como StructureMap, que permite definir reglas de DI en clases del Registro en cada proyecto.
 
 Otro enfoque para desacoplar la aplicación de los detalles de implementación consiste en hacer que la aplicación llame a microservicios, posiblemente implementados en contenedores de Docker individuales. Esto proporciona una separación de intereses y desacoplamiento incluso mayor que aprovechar la DI entre dos proyectos, pero tiene una complejidad adicional.
 
