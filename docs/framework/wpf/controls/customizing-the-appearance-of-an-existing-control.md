@@ -1,13 +1,6 @@
 ---
 title: Personalizar la apariencia de un control existente creando una clase ControlTemplate
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,19 +12,14 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0019b739c794cbffa62b49749371c2a19f752267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bbdc79fabf8dbe344baae66d718d79ac6375db7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Personalizar la apariencia de un control existente creando una clase ControlTemplate
-<a name="introduction"></a>A <xref:System.Windows.Controls.ControlTemplate> especifica la estructura visual y el comportamiento visual de un control. Puede personalizar la apariencia de un control dando a TI un nuevo <xref:System.Windows.Controls.ControlTemplate>. Cuando se crea un <xref:System.Windows.Controls.ControlTemplate>, reemplace la apariencia de un control existente sin cambiar su funcionalidad. Por ejemplo, puede que los botones de la aplicación redondeado en lugar de la forma de cuadrado de forma predeterminada, pero el botón seguirá generando el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
+<a name="introduction"></a> A <xref:System.Windows.Controls.ControlTemplate> especifica la estructura visual y el comportamiento visual de un control. Puede personalizar la apariencia de un control dando a TI un nuevo <xref:System.Windows.Controls.ControlTemplate>. Cuando se crea un <xref:System.Windows.Controls.ControlTemplate>, reemplace la apariencia de un control existente sin cambiar su funcionalidad. Por ejemplo, puede que los botones de la aplicación redondeado en lugar de la forma de cuadrado de forma predeterminada, pero el botón seguirá generando el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
  Este tema explica las distintas partes de un <xref:System.Windows.Controls.ControlTemplate>, se muestra cómo crear un sencillo <xref:System.Windows.Controls.ControlTemplate> para un <xref:System.Windows.Controls.Button>y se explica cómo entender el contrato de un control para que puedan personalizar su apariencia. Ya que usted crea un <xref:System.Windows.Controls.ControlTemplate> en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], puede cambiar el aspecto de un control sin escribir ningún código. También puede usar un diseñador, como Microsoft Expression Blend, para crear plantillas de control personalizado. En este tema se muestra ejemplos en los [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que personalizar la apariencia de un <xref:System.Windows.Controls.Button> y muestra el ejemplo completo al final del tema. Para más información acerca del uso de Expression Blend, consulte [Aplicar estilos a un control que admite plantillas](http://go.microsoft.com/fwlink/?LinkId=161153).  
   
@@ -93,7 +81,7 @@ Un control CheckBox que usa una plantilla de control personalizado
   
  En este ejemplo, el <xref:System.Windows.Controls.Grid> tiene su <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> propiedad plantilla enlaza a <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>. Dado que <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> está enlazado a la plantilla, puede crear varios botones que utilizan el mismo <xref:System.Windows.Controls.ControlTemplate> y establezca el <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> en valores distintos en cada botón. Si <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> plantilla no se enlazó a una propiedad de un elemento en el <xref:System.Windows.Controls.ControlTemplate>, y establece el <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> de un botón no tendría ningún efecto en la apariencia del botón.  
   
- Tenga en cuenta que los nombres de las dos propiedades no tienen que ser idénticos. En el ejemplo anterior, el <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> propiedad de la <xref:System.Windows.Controls.Button> plantilla depende de la <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> propiedad de la <xref:System.Windows.Controls.ContentPresenter>. Esto permite que el contenido del botón se sitúe horizontalmente. <xref:System.Windows.Controls.ContentPresenter>no tiene una propiedad denominada `HorizontalContentAlignment`, pero <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> pueden estar limitados por <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>. Cuando la plantilla enlaza una propiedad, asegúrese de que las propiedades de origen y de destino sean del mismo tipo.  
+ Tenga en cuenta que los nombres de las dos propiedades no tienen que ser idénticos. En el ejemplo anterior, el <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> propiedad de la <xref:System.Windows.Controls.Button> plantilla depende de la <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> propiedad de la <xref:System.Windows.Controls.ContentPresenter>. Esto permite que el contenido del botón se sitúe horizontalmente. <xref:System.Windows.Controls.ContentPresenter> no tiene una propiedad denominada `HorizontalContentAlignment`, pero <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> pueden estar limitados por <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>. Cuando la plantilla enlaza una propiedad, asegúrese de que las propiedades de origen y de destino sean del mismo tipo.  
   
  La <xref:System.Windows.Controls.Control> clase define varias propiedades que se deben utilizar la plantilla de control que tengan un efecto en el control cuando se establecen. El modo <xref:System.Windows.Controls.ControlTemplate> usa la propiedad depende de la propiedad. El <xref:System.Windows.Controls.ControlTemplate> debe utilizar la propiedad de una de las maneras siguientes:  
   
@@ -200,9 +188,9 @@ Un botón que usa una plantilla de control personalizado en el estado presionado
   
 |Tipo de restricción|Valor de Desde|Valor de Hasta|  
 |-------------------------|-------------------|-----------------|  
-|Desde un estado especificado hasta otro estado especificado|El nombre de un<xref:System.Windows.VisualState>|El nombre de un<xref:System.Windows.VisualState>|  
-|Desde cualquier estado hasta un estado especificado|Sin establecer|El nombre de un<xref:System.Windows.VisualState>|  
-|Desde un estado especificado hasta cualquier estado|El nombre de un<xref:System.Windows.VisualState>|Sin establecer|  
+|Desde un estado especificado hasta otro estado especificado|El nombre de un <xref:System.Windows.VisualState>|El nombre de un <xref:System.Windows.VisualState>|  
+|Desde cualquier estado hasta un estado especificado|Sin establecer|El nombre de un <xref:System.Windows.VisualState>|  
+|Desde un estado especificado hasta cualquier estado|El nombre de un <xref:System.Windows.VisualState>|Sin establecer|  
 |Desde cualquier estado hasta cualquier otro estado|Sin establecer|Sin establecer|  
   
  Puede tener varias <xref:System.Windows.VisualTransition> objetos en un <xref:System.Windows.VisualStateGroup> que hacen referencia al mismo estado, pero que se usarán en el orden en que se especifica en la tabla anterior. En el ejemplo siguiente, hay dos <xref:System.Windows.VisualTransition> objetos. Cuando el control realiza la transición de la `Pressed` estado para la `MouseOver` estado, el <xref:System.Windows.VisualTransition> que tenga a la vez <xref:System.Windows.VisualTransition.From%2A> y <xref:System.Windows.VisualTransition.To%2A> se utiliza el conjunto. Cuando el control realiza la transición de un estado que no es `Pressed` al estado `MouseOver`, se usa el otro estado.  

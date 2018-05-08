@@ -1,12 +1,6 @@
 ---
 title: ^ (Operador, Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.^
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - powers
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9e7159f289b687055c7d75cc8da58d6f76607a83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 426c3e9913dadda1091f4ba53c66c6b65e40e768
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>^ (Operador, Visual Basic)
 Eleva un número a la potencia de otro número.  
@@ -40,10 +31,10 @@ number ^ exponent
   
 ## <a name="parts"></a>Elementos  
  `number`  
- Obligatorio. Cualquier expresión numérica.  
+ Requerido. Cualquier expresión numérica.  
   
  `exponent`  
- Obligatorio. Cualquier expresión numérica.  
+ Requerido. Cualquier expresión numérica.  
   
 ## <a name="result"></a>Resultado  
  El resultado es `number` elevado a la potencia de `exponent`, siempre como un `Double` valor.  
@@ -68,23 +59,23 @@ number ^ exponent
   
  El ejemplo anterior produce los siguientes resultados:  
   
- `exp1`se establece en 4 (2 al cuadrado).  
+ `exp1` se establece en 4 (2 al cuadrado).  
   
- `exp2`se establece en 19683 (3 al cubo; a continuación, ese valor al cubo).  
+ `exp2` se establece en 19683 (3 al cubo; a continuación, ese valor al cubo).  
   
- `exp3`se establece en -125 (-5 al cubo).  
+ `exp3` se establece en -125 (-5 al cubo).  
   
- `exp4`se establece en 625 (-5 a la cuarta potencia).  
+ `exp4` se establece en 625 (-5 a la cuarta potencia).  
   
- `exp5`se establece en 2 (raíz cúbica de 8).  
+ `exp5` se establece en 2 (raíz cúbica de 8).  
   
- `exp6`se establece en 0,5 (1,0 dividido por la raíz cúbica de 8).  
+ `exp6` se establece en 0,5 (1,0 dividido por la raíz cúbica de 8).  
   
  Tenga en cuenta la importancia de los paréntesis en las expresiones en el ejemplo anterior. Debido *prioridad de operador*, Visual Basic realiza normalmente la `^` operador antes de los demás, incluso el operador unario `–` operador. Si `exp4` y `exp6` se hubieran calculado sin paréntesis, habrían generado los resultados siguientes:  
   
- `exp4 = -5 ^ 4`se calcula como: (5 a la cuarta potencia), lo que podría dar lugar a-625.  
+ `exp4 = -5 ^ 4` se calcula como: (5 a la cuarta potencia), lo que podría dar lugar a-625.  
   
- `exp6 = 8 ^ -1.0 / 3.0`se calcularía como (de 8 a la potencia de – 1 o 0,125) dividido entre 3,0, cuyo resultado sería 0,041666666666666666666666666666667.  
+ `exp6 = 8 ^ -1.0 / 3.0` se calcularía como (de 8 a la potencia de – 1 o 0,125) dividido entre 3,0, cuyo resultado sería 0,041666666666666666666666666666667.  
   
 ## <a name="see-also"></a>Vea también  
  [Operador ^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  

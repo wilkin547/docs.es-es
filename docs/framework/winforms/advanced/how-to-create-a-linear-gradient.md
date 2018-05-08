@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Crear un degradado lineal"
-ms.custom: 
+title: 'Cómo: Crear un degradado lineal'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33979decf37e9adb29d94a6602a43f992d93aaa1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9eeedf1ef92bdf6e5e2724eeca5060765b0778f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Cómo: Crear un degradado lineal
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]proporciona degradados lineales horizontales, verticales y diagonales. De forma predeterminada, el color de un degradado lineal cambia de manera uniforme. Sin embargo, puede personalizar un degradado lineal para que cambie el color de una manera no uniforme.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona degradados lineales horizontales, verticales y diagonales. De forma predeterminada, el color de un degradado lineal cambia de manera uniforme. Sin embargo, puede personalizar un degradado lineal para que cambie el color de una manera no uniforme.  
   
  En el ejemplo siguiente se rellena una línea, una elipse y un rectángulo con un pincel de degradado lineal horizontal.  
   
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  En el ejemplo anterior, los componentes de color cambian linealmente al pasar de una coordenada horizontal de 0 a una coordenada horizontal de 200. Por ejemplo, un punto cuya primera coordenada está comprendido entre 0 y 200 tendrá un componente azul que está comprendido entre 0 y 255.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]le permite ajustar la manera en que un color varía en función de uno de los bordes de un degradado al otro. Imagine que desea crear un pincel de degradado que cambia de negro a rojo según la tabla siguiente.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] le permite ajustar la manera en que un color varía en función de uno de los bordes de un degradado al otro. Imagine que desea crear un pincel de degradado que cambia de negro a rojo según la tabla siguiente.  
   
 |Coordenada horizontal|Componentes RGB|  
 |---------------------------|--------------------|  

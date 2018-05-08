@@ -1,9 +1,6 @@
 ---
 title: Lista de tipos (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - StructureConstraint
 - vb.StructureConstraint
@@ -27,14 +24,11 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 35e72414b236615dc230b654ccfeed290841fb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fbb07154fce27feb257b431c1726446b42fbfe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-list-visual-basic"></a>Lista de tipos (Visual Basic)
 Especifica la *parámetros de tipo* para un *genérico* elemento de programación. Varios parámetros se separan mediante comas. A continuación se muestra la sintaxis para un parámetro de tipo.  
@@ -50,7 +44,7 @@ Especifica la *parámetros de tipo* para un *genérico* elemento de programació
 |Término|Definición|  
 |---|---|  
 |`genericmodifier`|Opcional. Puede usarse solo en interfaces y delegados genéricos. Puede declarar un tipo covariante mediante la [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) palabra clave o contravariante utilizando la [en](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) (palabra clave). Vea [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md).|  
-|`typename`|Obligatorio. Nombre del parámetro de tipo. Se trata de un marcador de posición, que será sustituido por un tipo definido proporcionado por el argumento de tipo correspondiente.|  
+|`typename`|Requerido. Nombre del parámetro de tipo. Se trata de un marcador de posición, que será sustituido por un tipo definido proporcionado por el argumento de tipo correspondiente.|  
 |`constraintlist`|Opcional. Lista de requisitos que restringe el tipo de datos que se pueden proporcionar para `typename`. Si tiene varias restricciones, encierre entre llaves (`{ }`) y sepárelas con comas. Debe introducir la lista de restricciones con la [como](../../../visual-basic/language-reference/statements/as-clause.md) (palabra clave). Usa `As` una sola vez, al principio de la lista.|  
   
 ## <a name="remarks"></a>Comentarios  

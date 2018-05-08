@@ -1,13 +1,6 @@
 ---
-title: "Información general sobre documentos dinámicos"
-ms.custom: 
+title: Información general sobre documentos dinámicos
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-caps.latest.revision: "39"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a99bd2336de41366d27c15e4bc4cfb2b2aff3cd0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0cf8944298af62a512599fc52998a046c66fed9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flow-document-overview"></a>Información general sobre documentos dinámicos
 Los documentos dinámicos están diseñados para optimizar su visualización y legibilidad. En lugar de establecer un diseño predefinido, los documentos dinámicos ajustan y redistribuyen dinámicamente su contenido basándose en variables en tiempo de ejecución, como el tamaño de la ventana, la resolución del dispositivo y las preferencias opcionales del usuario. Además, los documentos dinámicos ofrecen características de documento avanzadas, como paginación y columnas. En este tema se proporciona información general sobre los documentos dinámicos y cómo crearlos.  
@@ -69,13 +57,13 @@ Los documentos dinámicos están diseñados para optimizar su visualización y l
 ## <a name="flow-document-types"></a>Tipos de documentos dinámicos  
  La visualización del contenido de los documentos dinámicos y cómo aparece depende de qué objeto se utilice para hospedar el contenido dinámico. Hay cuatro controles que admiten la visualización de contenido dinámico: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.RichTextBox>, y <xref:System.Windows.Controls.FlowDocumentScrollViewer>. Estos controles se describen brevemente a continuación.  
   
- **Nota:** <xref:System.Windows.Documents.FlowDocument> es necesario para directamente el contenido del flujo host, por lo que todos estos controles de vista utilizan un <xref:System.Windows.Documents.FlowDocument> para habilitar el hospedaje de contenido de flujo.
+ **Nota:** <xref:System.Windows.Documents.FlowDocument> es necesario para directamente el contenido del flujo host, por lo que todos estos controles de vista utilizan un <xref:System.Windows.Documents.FlowDocument> para habilitar el hospedaje de contenido de flujo.  
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader>incluye características que permiten al usuario elegir dinámicamente entre distintos modos de visualización, incluido un modo de visualización de página (una página a la vez), dos página a la vez (formato de lectura de libro) modo y un modo desplazamiento continuo de visualización (sin límite). Para obtener más información acerca de estos modos de visualización, consulte <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>. Si no necesita la capacidad de cambiar dinámicamente entre distintos modos de visualización, <xref:System.Windows.Controls.FlowDocumentPageViewer> y <xref:System.Windows.Controls.FlowDocumentScrollViewer> proporcionar dinámico más ligeros los visores de contenido que se corrigen en un modo de visualización concreto.  
+ <xref:System.Windows.Controls.FlowDocumentReader> incluye características que permiten al usuario elegir dinámicamente entre distintos modos de visualización, incluido un modo de visualización de página (una página a la vez), dos página a la vez (formato de lectura de libro) modo y un modo desplazamiento continuo de visualización (sin límite). Para obtener más información acerca de estos modos de visualización, consulte <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>. Si no necesita la capacidad de cambiar dinámicamente entre distintos modos de visualización, <xref:System.Windows.Controls.FlowDocumentPageViewer> y <xref:System.Windows.Controls.FlowDocumentScrollViewer> proporcionar dinámico más ligeros los visores de contenido que se corrigen en un modo de visualización concreto.  
   
 ### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer y FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>Muestra el contenido de página en tiempo modo de visualización, mientras <xref:System.Windows.Controls.FlowDocumentScrollViewer> muestra el contenido en el modo de desplazamiento continuo. Ambos <xref:System.Windows.Controls.FlowDocumentPageViewer> y <xref:System.Windows.Controls.FlowDocumentScrollViewer> son fijos para un modo de visualización concreto. Comparar con <xref:System.Windows.Controls.FlowDocumentReader>, que incluye características que permiten al usuario elegir dinámicamente entre distintos modos de visualización (proporcionados por el <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> enumeración), pero a costa de que se va a más recursos de forma intensiva que <xref:System.Windows.Controls.FlowDocumentPageViewer> o <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer> Muestra el contenido de página en tiempo modo de visualización, mientras <xref:System.Windows.Controls.FlowDocumentScrollViewer> muestra el contenido en el modo de desplazamiento continuo. Ambos <xref:System.Windows.Controls.FlowDocumentPageViewer> y <xref:System.Windows.Controls.FlowDocumentScrollViewer> son fijos para un modo de visualización concreto. Comparar con <xref:System.Windows.Controls.FlowDocumentReader>, que incluye características que permiten al usuario elegir dinámicamente entre distintos modos de visualización (proporcionados por el <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> enumeración), pero a costa de que se va a más recursos de forma intensiva que <xref:System.Windows.Controls.FlowDocumentPageViewer> o <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
  De manera predeterminada, siempre se muestra una barra de desplazamiento vertical y una barra de desplazamiento horizontal se vuelve visible cuando es necesario. El valor predeterminado interfaz de usuario para <xref:System.Windows.Controls.FlowDocumentScrollViewer> no incluye una barra de herramientas; sin embargo, la <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> propiedad puede utilizarse para habilitar una barra de herramientas integrada.  
   
@@ -111,7 +99,7 @@ Los documentos dinámicos están diseñados para optimizar su visualización y l
 ### <a name="block-derived-classes"></a>Clases derivadas de Block  
  **Paragraph**  
   
- <xref:System.Windows.Documents.Paragraph>se utiliza normalmente para agrupar el contenido en un párrafo. El uso más sencillo y común de Paragraph es crear un párrafo de texto.  
+ <xref:System.Windows.Documents.Paragraph> se utiliza normalmente para agrupar el contenido en un párrafo. El uso más sencillo y común de Paragraph es crear un párrafo de texto.  
   
  [!code-xaml[FlowOvwSnippets_snip#ParagraphExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ParagraphExample.xaml#paragraphexamplewholepage)]  
   
@@ -122,7 +110,7 @@ Los documentos dinámicos están diseñados para optimizar su visualización y l
   
  **Sección**  
   
- <xref:System.Windows.Documents.Section>solo se usa para contener otros <xref:System.Windows.Documents.Block>-elementos derivados. No aplica ningún formato predeterminado a los elementos que contiene. Sin embargo, cualquier propiedad valores establecidos en un <xref:System.Windows.Documents.Section> se aplica a sus elementos secundarios. Una sección permite iterar mediante programación en su colección secundaria. <xref:System.Windows.Documents.Section>se utiliza de forma similar a la \<DIV > etiqueta en HTML.  
+ <xref:System.Windows.Documents.Section> solo se usa para contener otros <xref:System.Windows.Documents.Block>-elementos derivados. No aplica ningún formato predeterminado a los elementos que contiene. Sin embargo, cualquier propiedad valores establecidos en un <xref:System.Windows.Documents.Section> se aplica a sus elementos secundarios. Una sección permite iterar mediante programación en su colección secundaria. <xref:System.Windows.Documents.Section> se utiliza de forma similar a la \<DIV > etiqueta en HTML.  
   
  En el ejemplo siguiente, se definen tres párrafos bajo una <xref:System.Windows.Documents.Section>. La sección tiene un <xref:System.Windows.Documents.TextElement.Background%2A> valor de la propiedad de color rojo, por lo tanto, el color de fondo de los párrafos también está en rojo.  
   
@@ -133,7 +121,7 @@ Los documentos dinámicos están diseñados para optimizar su visualización y l
   
  **BlockUIContainer**  
   
- <xref:System.Windows.Documents.BlockUIContainer>permite <xref:System.Windows.UIElement> elementos (es decir, un <xref:System.Windows.Controls.Button>) incrustado en contenido dinámico derivado de bloque. <xref:System.Windows.Documents.InlineUIContainer>(ver abajo) se utiliza para incrustar <xref:System.Windows.UIElement> elementos de contenido dinámico derivado insertado. <xref:System.Windows.Documents.BlockUIContainer>y <xref:System.Windows.Documents.InlineUIContainer> son importantes porque no hay ninguna otra manera de usar un <xref:System.Windows.UIElement> en flujo de contenido a menos que se encuentra dentro de uno de estos dos elementos.  
+ <xref:System.Windows.Documents.BlockUIContainer> permite <xref:System.Windows.UIElement> elementos (es decir, un <xref:System.Windows.Controls.Button>) incrustado en contenido dinámico derivado de bloque. <xref:System.Windows.Documents.InlineUIContainer> (ver abajo) se utiliza para incrustar <xref:System.Windows.UIElement> elementos de contenido dinámico derivado insertado. <xref:System.Windows.Documents.BlockUIContainer> y <xref:System.Windows.Documents.InlineUIContainer> son importantes porque no hay ninguna otra manera de usar un <xref:System.Windows.UIElement> en flujo de contenido a menos que se encuentra dentro de uno de estos dos elementos.  
   
  En el ejemplo siguiente se muestra cómo utilizar el <xref:System.Windows.Documents.BlockUIContainer> elemento para hospedar <xref:System.Windows.UIElement> objetos dentro del contenido dinámico.  
   
@@ -145,7 +133,7 @@ Los documentos dinámicos están diseñados para optimizar su visualización y l
   
  **List**  
   
- <xref:System.Windows.Documents.List>se utiliza para crear una lista con viñeta o numérica. Establecer el <xref:System.Windows.Documents.List.MarkerStyle%2A> propiedad a un <xref:System.Windows.TextMarkerStyle> valor de enumeración para determinar el estilo de la lista. En el ejemplo siguiente se muestra cómo crear una lista sencilla.  
+ <xref:System.Windows.Documents.List> se utiliza para crear una lista con viñeta o numérica. Establecer el <xref:System.Windows.Documents.List.MarkerStyle%2A> propiedad a un <xref:System.Windows.TextMarkerStyle> valor de enumeración para determinar el estilo de la lista. En el ejemplo siguiente se muestra cómo crear una lista sencilla.  
   
  [!code-xaml[FlowOvwSnippets_snip#ListExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ListExample.xaml#listexamplewholepage)]  
   
@@ -156,12 +144,12 @@ Los documentos dinámicos están diseñados para optimizar su visualización y l
   
  **Table**  
   
- <xref:System.Windows.Documents.Table>se utiliza para crear una tabla. <xref:System.Windows.Documents.Table>es similar a la <xref:System.Windows.Controls.Grid> elemento pero tiene más capacidades y, por lo tanto, requiere mayor consumo de recursos. Dado que <xref:System.Windows.Controls.Grid> es un <xref:System.Windows.UIElement>, no se puede usar en el contenido dinámico a menos que se encuentra en un <xref:System.Windows.Documents.BlockUIContainer> o <xref:System.Windows.Documents.InlineUIContainer>. Para obtener más información sobre <xref:System.Windows.Documents.Table>, consulte [información general de la tabla](../../../../docs/framework/wpf/advanced/table-overview.md).  
+ <xref:System.Windows.Documents.Table> se utiliza para crear una tabla. <xref:System.Windows.Documents.Table> es similar a la <xref:System.Windows.Controls.Grid> elemento pero tiene más capacidades y, por lo tanto, requiere mayor consumo de recursos. Dado que <xref:System.Windows.Controls.Grid> es un <xref:System.Windows.UIElement>, no se puede usar en el contenido dinámico a menos que se encuentra en un <xref:System.Windows.Documents.BlockUIContainer> o <xref:System.Windows.Documents.InlineUIContainer>. Para obtener más información sobre <xref:System.Windows.Documents.Table>, consulte [información general de la tabla](../../../../docs/framework/wpf/advanced/table-overview.md).  
   
 ### <a name="inline-derived-classes"></a>Clases derivadas de Inline  
  **Run**  
   
- <xref:System.Windows.Documents.Run>se usa para contener texto sin formato. Podría pensarse que <xref:System.Windows.Documents.Run> objetos que se usan ampliamente en contenido dinámico. Sin embargo, en el marcado, <xref:System.Windows.Documents.Run> elementos no se debe usar explícitamente. <xref:System.Windows.Documents.Run>es necesario que se utilizará al crear o manipular documentos dinámicos mediante código. Por ejemplo, en el marcado debajo de la primera <xref:System.Windows.Documents.Paragraph> especifica la <xref:System.Windows.Documents.Run> elemento explícitamente mientras que la segunda no. Ambos párrafos generan el mismo resultado.  
+ <xref:System.Windows.Documents.Run> se usa para contener texto sin formato. Podría pensarse que <xref:System.Windows.Documents.Run> objetos que se usan ampliamente en contenido dinámico. Sin embargo, en el marcado, <xref:System.Windows.Documents.Run> elementos no se debe usar explícitamente. <xref:System.Windows.Documents.Run> es necesario que se utilizará al crear o manipular documentos dinámicos mediante código. Por ejemplo, en el marcado debajo de la primera <xref:System.Windows.Documents.Paragraph> especifica la <xref:System.Windows.Documents.Run> elemento explícitamente mientras que la segunda no. Ambos párrafos generan el mismo resultado.  
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
@@ -169,7 +157,7 @@ Los documentos dinámicos están diseñados para optimizar su visualización y l
   
  **Span**  
   
- <xref:System.Windows.Documents.Span>Agrupa otros elementos de contenido en línea. No se aplica ninguna representación inherente al contenido dentro de un <xref:System.Windows.Documents.Span> elemento. Sin embargo, los elementos que heredan de <xref:System.Windows.Documents.Span> incluidos <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> y <xref:System.Windows.Documents.Underline> aplicar formato al texto.  
+ <xref:System.Windows.Documents.Span> Agrupa otros elementos de contenido en línea. No se aplica ninguna representación inherente al contenido dentro de un <xref:System.Windows.Documents.Span> elemento. Sin embargo, los elementos que heredan de <xref:System.Windows.Documents.Span> incluidos <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> y <xref:System.Windows.Documents.Underline> aplicar formato al texto.  
   
  A continuación se muestra un ejemplo de un <xref:System.Windows.Documents.Span> que se usa para incluir contenido inline, incluyendo el texto, un <xref:System.Windows.Documents.Bold> elemento y un <xref:System.Windows.Controls.Button>.  
   
@@ -181,7 +169,7 @@ Los documentos dinámicos están diseñados para optimizar su visualización y l
   
  **InlineUIContainer**  
   
- <xref:System.Windows.Documents.InlineUIContainer>permite <xref:System.Windows.UIElement> elementos (es decir, al igual que un control <xref:System.Windows.Controls.Button>) para incrustar en un <xref:System.Windows.Documents.Inline> elemento de contenido. Este elemento es el equivalente inline al <xref:System.Windows.Documents.BlockUIContainer> se ha descrito anteriormente. A continuación se muestra un ejemplo que utiliza <xref:System.Windows.Documents.InlineUIContainer> para insertar un <xref:System.Windows.Controls.Button> en línea en un <xref:System.Windows.Documents.Paragraph>.  
+ <xref:System.Windows.Documents.InlineUIContainer> permite <xref:System.Windows.UIElement> elementos (es decir, al igual que un control <xref:System.Windows.Controls.Button>) para incrustar en un <xref:System.Windows.Documents.Inline> elemento de contenido. Este elemento es el equivalente inline al <xref:System.Windows.Documents.BlockUIContainer> se ha descrito anteriormente. A continuación se muestra un ejemplo que utiliza <xref:System.Windows.Documents.InlineUIContainer> para insertar un <xref:System.Windows.Controls.Button> en línea en un <xref:System.Windows.Documents.Paragraph>.  
   
  [!code-xaml[FlowOvwSnippets_snip#InlineUIContainerExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/InlineUIContainerExample.xaml#inlineuicontainerexamplewholepage)]  
   
@@ -192,7 +180,7 @@ Los documentos dinámicos están diseñados para optimizar su visualización y l
   
  **Figure y Floater**  
   
- <xref:System.Windows.Documents.Figure>y <xref:System.Windows.Documents.Floater> se utilizan para insertar contenido en documentos dinámicos con las propiedades de ubicación que pueden personalizar de forma independiente del flujo de contenido principal. <xref:System.Windows.Documents.Figure>o <xref:System.Windows.Documents.Floater> elementos a menudo se usan para resaltar o recalcar partes de contenido, hospedar imágenes auxiliares u otro tipo de contenido dentro del flujo de contenido principal, o flexible insertar contenido como anuncios relacionado.  
+ <xref:System.Windows.Documents.Figure> y <xref:System.Windows.Documents.Floater> se utilizan para insertar contenido en documentos dinámicos con las propiedades de ubicación que pueden personalizar de forma independiente del flujo de contenido principal. <xref:System.Windows.Documents.Figure> o <xref:System.Windows.Documents.Floater> elementos a menudo se usan para resaltar o recalcar partes de contenido, hospedar imágenes auxiliares u otro tipo de contenido dentro del flujo de contenido principal, o flexible insertar contenido como anuncios relacionado.  
   
  En el ejemplo siguiente se muestra cómo incrustar un <xref:System.Windows.Documents.Figure> en un párrafo de texto.  
   
@@ -205,7 +193,7 @@ Los documentos dinámicos están diseñados para optimizar su visualización y l
   
  ![Captura de pantalla: Ejemplo de Figure](../../../../docs/framework/wpf/advanced/media/flow-ovw-figure-example.png "Flow_Ovw_Figure_Example")  
   
- <xref:System.Windows.Documents.Figure>y <xref:System.Windows.Documents.Floater> difieren de varias maneras y se utilizan para escenarios diferentes.  
+ <xref:System.Windows.Documents.Figure> y <xref:System.Windows.Documents.Floater> difieren de varias maneras y se utilizan para escenarios diferentes.  
   
  **Figure:**  
   
@@ -219,15 +207,15 @@ Los documentos dinámicos están diseñados para optimizar su visualización y l
   
 -   No se puede establecer su posición y se representará en cualquier espacio que pueda estar a su disposición. No se puede establecer el desplazamiento o el anclaje de un <xref:System.Windows.Documents.Floater>.  
   
--   No se deben preverse para más de una columna: de forma predeterminada, <xref:System.Windows.Documents.Floater> tamaños de al menos una columna. Tiene un <xref:System.Windows.Documents.Floater.Width%2A> propiedad que se puede establecer en un valor de píxel absolutas, pero si este valor es mayor que el ancho de una columna, se pasa por alto y el elemento floater tiene un tamaño de una columna. Tamaño a menos de una sola columna estableciendo el ancho en píxeles correcto, pero el tamaño no es relativo a la columna, por lo que "0.5Column" no es una expresión válida para <xref:System.Windows.Documents.Floater> ancho. <xref:System.Windows.Documents.Floater>no tiene ninguna propiedad de alto y es alto no se puede establecer, su alto depende del contenido  
+-   No se deben preverse para más de una columna: de forma predeterminada, <xref:System.Windows.Documents.Floater> tamaños de al menos una columna. Tiene un <xref:System.Windows.Documents.Floater.Width%2A> propiedad que se puede establecer en un valor de píxel absolutas, pero si este valor es mayor que el ancho de una columna, se pasa por alto y el elemento floater tiene un tamaño de una columna. Tamaño a menos de una sola columna estableciendo el ancho en píxeles correcto, pero el tamaño no es relativo a la columna, por lo que "0.5Column" no es una expresión válida para <xref:System.Windows.Documents.Floater> ancho. <xref:System.Windows.Documents.Floater> no tiene ninguna propiedad de alto y es alto no se puede establecer, su alto depende del contenido  
   
--   <xref:System.Windows.Documents.Floater>pagina: si su contenido en el ancho especificado se extiende a más de 1 alto de columna, floater se parte y salta a la columna siguiente, la página siguiente, etcetera.  
+-   <xref:System.Windows.Documents.Floater> pagina: si su contenido en el ancho especificado se extiende a más de 1 alto de columna, floater se parte y salta a la columna siguiente, la página siguiente, etcetera.  
   
- <xref:System.Windows.Documents.Figure>es un buen lugar para colocar el contenido independiente en la que desea controlar el tamaño y colocar y esté seguro de que el contenido se ajusta al tamaño especificado. <xref:System.Windows.Documents.Floater>es un buen lugar para incluir más contenido que fluye libre que fluye similar al contenido de la página principal, pero se separa de él.  
+ <xref:System.Windows.Documents.Figure> es un buen lugar para colocar el contenido independiente en la que desea controlar el tamaño y colocar y esté seguro de que el contenido se ajusta al tamaño especificado. <xref:System.Windows.Documents.Floater> es un buen lugar para incluir más contenido que fluye libre que fluye similar al contenido de la página principal, pero se separa de él.  
   
  **LineBreak**  
   
- <xref:System.Windows.Documents.LineBreak>hace que un salto de línea para que se produzca en el contenido del flujo. El siguiente ejemplo muestra el uso de <xref:System.Windows.Documents.LineBreak>.  
+ <xref:System.Windows.Documents.LineBreak> hace que un salto de línea para que se produzca en el contenido del flujo. El siguiente ejemplo muestra el uso de <xref:System.Windows.Documents.LineBreak>.  
   
  [!code-xaml[FlowOvwSnippets_snip#LineBreakExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/LineBreakExample.xaml#linebreakexamplewholepage)]  
   

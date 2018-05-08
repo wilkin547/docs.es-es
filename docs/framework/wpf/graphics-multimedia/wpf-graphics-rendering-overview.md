@@ -1,13 +1,6 @@
 ---
-title: "Información general sobre la representación de gráficos en WPF"
-ms.custom: 
+title: Información general sobre la representación de gráficos en WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-caps.latest.revision: "51"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cfb9a546ca33b848fbbcbd114951eddc5b000663
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 305af1025abb98950d90f46e75a9f261704a8ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Información general sobre la representación de gráficos en WPF
 En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Se centra en el rol de la <xref:System.Windows.Media.Visual> clase para representar la compatibilidad en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo.  
@@ -58,7 +46,7 @@ En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA
   
 -   Globalización  
   
- <xref:System.Windows.Media.Visual>se expone como una clase abstracta pública desde el que se deben derivar las clases secundarias. La siguiente ilustración muestra la jerarquía de los objetos visuales que se exponen en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ <xref:System.Windows.Media.Visual> se expone como una clase abstracta pública desde el que se deben derivar las clases secundarias. La siguiente ilustración muestra la jerarquía de los objetos visuales que se exponen en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  ![Diagrama de clases derivadas del objeto Visual](../../../../docs/framework/wpf/graphics-multimedia/media/visualclass01.png "VisualClass01")  
 Jerarquía de clase Visual  
@@ -86,7 +74,7 @@ Jerarquía de clase Visual
   
  Cuando se crea un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de control, como un <xref:System.Windows.Controls.Button>, el control genera implícitamente datos de representación para dibujarse a sí mismo. Por ejemplo, si se establece la <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad de la <xref:System.Windows.Controls.Button> hace que el control almacenar una representación de la representación de un glifo.  
   
- A <xref:System.Windows.Media.Visual> describe su contenido como uno o más <xref:System.Windows.Media.Drawing> objetos contenidos en un <xref:System.Windows.Media.DrawingGroup>. Un <xref:System.Windows.Media.DrawingGroup> también describe las máscaras de opacidad, transformaciones, los efectos de mapa de bits y otras operaciones que se aplican a su contenido. <xref:System.Windows.Media.DrawingGroup>las operaciones se aplican en el siguiente orden cuando se procesa el contenido: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>y, a continuación, <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
+ A <xref:System.Windows.Media.Visual> describe su contenido como uno o más <xref:System.Windows.Media.Drawing> objetos contenidos en un <xref:System.Windows.Media.DrawingGroup>. Un <xref:System.Windows.Media.DrawingGroup> también describe las máscaras de opacidad, transformaciones, los efectos de mapa de bits y otras operaciones que se aplican a su contenido. <xref:System.Windows.Media.DrawingGroup> las operaciones se aplican en el siguiente orden cuando se procesa el contenido: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>y, a continuación, <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
   
  La ilustración siguiente muestra el orden en el que <xref:System.Windows.Media.DrawingGroup> las operaciones se aplican durante la secuencia de representación.  
   

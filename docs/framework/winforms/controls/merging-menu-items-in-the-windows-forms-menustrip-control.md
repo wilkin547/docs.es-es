@@ -1,27 +1,15 @@
 ---
-title: "Combinar elementos de menú en el control MenuStrip de Windows Forms"
-ms.custom: 
+title: Combinar elementos de menú en el control MenuStrip de Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd54855f7ee618915fea4fcb8f465cc8c1a68164
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2782ae483d673f8f1eccab10876aca858737260a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Combinar elementos de menú en el control MenuStrip de Windows Forms
 Si tiene una aplicación de interfaz de múltiples documentos (MDI), puede combinar elementos de menú o menús completos del formulario secundario en los menús del formulario primario.  
@@ -41,7 +29,7 @@ Si tiene una aplicación de interfaz de múltiples documentos (MDI), puede combi
   
  Puede combinar elementos de menú de forma manual o automática. Combinación los elementos de menú de la misma manera para ambos métodos, pero la combinación se activa de forma diferente, como se describe en las secciones "Combinación Manual" y "Combinación automática" más adelante en este tema. En la combinación manual y automática, cada acción de combinación afecta a la acción de combinación siguiente.  
   
- <xref:System.Windows.Forms.MenuStrip>combinar mueve los elementos de menú de una <xref:System.Windows.Forms.ToolStrip> a otro, en lugar de clonación, como ocurría en el caso de <xref:System.Windows.Forms.MainMenu>.  
+ <xref:System.Windows.Forms.MenuStrip> combinar mueve los elementos de menú de una <xref:System.Windows.Forms.ToolStrip> a otro, en lugar de clonación, como ocurría en el caso de <xref:System.Windows.Forms.MainMenu>.  
   
 ## <a name="mergeaction-values"></a>Valores de MergeAction  
  Establecer la acción de combinación en elementos de menú en el origen de <xref:System.Windows.Forms.MenuStrip> mediante el <xref:System.Windows.Forms.MergeAction> propiedad.  
@@ -53,7 +41,7 @@ Si tiene una aplicación de interfaz de múltiples documentos (MDI), puede combi
 |<xref:System.Windows.Forms.MergeAction.Append>|(Valor predeterminado) Agrega el elemento de origen hasta el final de la colección del elemento de destino.|Agregar elementos de menú al final del menú cuando se activa alguna parte del programa.|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|Agrega el elemento de origen a la colección del elemento de destino, en la ubicación especificada por el <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> propiedad establecida en el elemento de origen.|Agregar elementos de menú a la mitad o al principio del menú cuando se activa alguna parte del programa.<br /><br /> Si el valor de <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> es el mismo para ambos elementos de menú, se agregan en orden inverso. Establecer <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> adecuadamente para conservar el orden original.|  
 |<xref:System.Windows.Forms.MergeAction.Replace>|Busca una coincidencia de texto o utiliza el <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> valor si se encuentra ninguna coincidencia de texto y, a continuación, reemplaza el elemento de menú de destino coincidente con el elemento de menú de origen.|Reemplazar un elemento de menú de destino con un elemento de menú de origen del mismo nombre que hace algo diferente.|  
-|<xref:System.Windows.Forms.MergeAction.MatchOnly>|Busca una coincidencia de texto o utiliza el <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> valor si se encuentra ninguna coincidencia de texto y, a continuación, agrega todos los elementos de lista desplegable desde el origen al destino.|Creación de una estructura de menús inserta o agrega elementos de menú en un submenú o quita elementos de menú de un submenú. Por ejemplo, puede agregar un elemento de menú de un formulario MDI secundario a un principal <xref:System.Windows.Forms.MenuStrip> **Guardar como** menú.<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly>le permite navegar por la estructura de menús sin realizar ninguna acción. Proporciona una manera de evaluar los elementos siguientes.|  
+|<xref:System.Windows.Forms.MergeAction.MatchOnly>|Busca una coincidencia de texto o utiliza el <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> valor si se encuentra ninguna coincidencia de texto y, a continuación, agrega todos los elementos de lista desplegable desde el origen al destino.|Creación de una estructura de menús inserta o agrega elementos de menú en un submenú o quita elementos de menú de un submenú. Por ejemplo, puede agregar un elemento de menú de un formulario MDI secundario a un principal <xref:System.Windows.Forms.MenuStrip> **Guardar como** menú.<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly> le permite navegar por la estructura de menús sin realizar ninguna acción. Proporciona una manera de evaluar los elementos siguientes.|  
 |<xref:System.Windows.Forms.MergeAction.Remove>|Busca una coincidencia de texto o utiliza el <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> valor si se encuentra ninguna coincidencia de texto y, a continuación, quita el elemento de destino.|Quitar un elemento de menú desde el destino de <xref:System.Windows.Forms.MenuStrip>.|  
   
 ## <a name="manual-merging"></a>Combinación manual  

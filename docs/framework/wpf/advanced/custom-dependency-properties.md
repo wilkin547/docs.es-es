@@ -1,13 +1,6 @@
 ---
 title: Propiedades de dependencia personalizadas
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 588ab00d61a701dc43e2af5978a6023a93f367f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2623f34418aad7a0b29c52d1310fdc79afced790
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-dependency-properties"></a>Propiedades de dependencia personalizadas
 En este tema se describen las razones por las que los autores de componentes y los desarrolladores de aplicaciones de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] quieren crear la propiedad de dependencia personalizada, y se describen los pasos de implementación y algunas opciones de implementación que pueden mejorar el rendimiento, la facilidad de uso o la versatilidad de la propiedad.  
@@ -134,11 +122,11 @@ En este tema se describen las razones por las que los autores de componentes y l
   
 -   Si su propiedad (o cambios en su valor) afecta a la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], y en particular afecta a cómo el sistema de diseño debe cambiar el tamaño o representar el elemento en una página, conjunto de uno o varios de los siguientes indicadores: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>indica que un cambio en esta propiedad requiere un cambio en [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] representación donde el objeto de contenedor puede requerir más o menos espacio dentro del elemento primario. Por ejemplo, una propiedad "Width" debe tener establecida esta marca.  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> indica que un cambio en esta propiedad requiere un cambio en [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] representación donde el objeto de contenedor puede requerir más o menos espacio dentro del elemento primario. Por ejemplo, una propiedad "Width" debe tener establecida esta marca.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>indica que un cambio en esta propiedad requiere un cambio en [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] presentación que normalmente no requiere un cambio en el espacio dedicado, pero indica que la posición dentro del espacio ha cambiado. Por ejemplo, una propiedad "Alignment" debe tener establecida esta marca.  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> indica que un cambio en esta propiedad requiere un cambio en [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] presentación que normalmente no requiere un cambio en el espacio dedicado, pero indica que la posición dentro del espacio ha cambiado. Por ejemplo, una propiedad "Alignment" debe tener establecida esta marca.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>indica que produjo algún otro cambio que no afectará al diseño y la medida, pero requieren otro procesamiento. Un ejemplo sería una propiedad que cambia un color de un elemento existente, como "Background".  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> indica que produjo algún otro cambio que no afectará al diseño y la medida, pero requieren otro procesamiento. Un ejemplo sería una propiedad que cambia un color de un elemento existente, como "Background".  
   
     -   Estas marcas se usan a menudo como un protocolo en los metadatos para sus propias implementaciones de invalidación de las devoluciones de llamada de diseño o del sistema propiedades. Por ejemplo, es posible que tenga un <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> devolución de llamada que se llamará <xref:System.Windows.UIElement.InvalidateArrange%2A> si cualquier propiedad de la instancia notifica un cambio de valor y tiene <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> como `true` en sus metadatos.  
   
@@ -148,7 +136,7 @@ En este tema se describen las razones por las que los autores de componentes y l
   
 -   De forma predeterminada, un enlace de datos <xref:System.Windows.Data.Binding.Mode%2A> para valores predeterminados de propiedades de dependencia para <xref:System.Windows.Data.BindingMode.OneWay>. Siempre puede cambiar el enlace que se va a ser <xref:System.Windows.Data.BindingMode.TwoWay> por instancia de enlace; para obtener más información, consulte [especificar la dirección del enlace](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md). Pero como autor de la propiedad de dependencia, puede hacer que la propiedad uso <xref:System.Windows.Data.BindingMode.TwoWay> modo de enlace predeterminada. Un ejemplo de una propiedad de dependencia existente es <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>; el escenario para esta propiedad es que el <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> configuración lógica y la composición de <xref:System.Windows.Controls.MenuItem> interactuar con el estilo del tema predeterminado. El <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> lógica de la propiedad utiliza enlace de datos de forma nativa para mantener el estado de la propiedad de acuerdo con otras propiedades de estado y llamadas a métodos. Otra propiedad de ejemplo que enlaza <xref:System.Windows.Data.BindingMode.TwoWay> de forma predeterminada es <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>.  
   
--   También puede habilitar la herencia de propiedades en una propiedad de dependencia personalizada estableciendo el <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> marca. La herencia de propiedades resulta útil para un escenario en que los elementos primarios y secundarios tienen una propiedad en común, y tiene sentido para los elementos secundarios que tienen ese valor de propiedad concreto establecido en el mismo valor que el elemento primario. Un ejemplo de propiedad heredable es <xref:System.Windows.FrameworkElement.DataContext%2A>, que se usa para las operaciones para habilitar el escenario principal-detalle importante para la presentación de datos de enlace. Mediante la realización de <xref:System.Windows.FrameworkElement.DataContext%2A> heredables, los elementos secundarios heredan ese contexto de datos también. Debido a la herencia de valores de propiedad, puede especificar un contexto de datos en la raíz de la aplicación o la página y no es necesario volver a especificarlo para los enlaces de todos los elementos secundarios posibles. <xref:System.Windows.FrameworkElement.DataContext%2A>También es un buen ejemplo para ilustrar el hecho de que la herencia reemplaza el valor predeterminado, pero siempre se puede establecer localmente en cualquier elemento secundario determinado; Para obtener más información, consulte [usar el patrón principal-detalle con datos jerárquicos](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). La herencia de valores de propiedad puede presentar un costo de rendimiento y, por tanto, debe usarse con moderación. Para obtener más información, consulte [Herencia de valores de propiedad](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
+-   También puede habilitar la herencia de propiedades en una propiedad de dependencia personalizada estableciendo el <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> marca. La herencia de propiedades resulta útil para un escenario en que los elementos primarios y secundarios tienen una propiedad en común, y tiene sentido para los elementos secundarios que tienen ese valor de propiedad concreto establecido en el mismo valor que el elemento primario. Un ejemplo de propiedad heredable es <xref:System.Windows.FrameworkElement.DataContext%2A>, que se usa para las operaciones para habilitar el escenario principal-detalle importante para la presentación de datos de enlace. Mediante la realización de <xref:System.Windows.FrameworkElement.DataContext%2A> heredables, los elementos secundarios heredan ese contexto de datos también. Debido a la herencia de valores de propiedad, puede especificar un contexto de datos en la raíz de la aplicación o la página y no es necesario volver a especificarlo para los enlaces de todos los elementos secundarios posibles. <xref:System.Windows.FrameworkElement.DataContext%2A> También es un buen ejemplo para ilustrar el hecho de que la herencia reemplaza el valor predeterminado, pero siempre se puede establecer localmente en cualquier elemento secundario determinado; Para obtener más información, consulte [usar el patrón principal-detalle con datos jerárquicos](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). La herencia de valores de propiedad puede presentar un costo de rendimiento y, por tanto, debe usarse con moderación. Para obtener más información, consulte [Herencia de valores de propiedad](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
   
 -   Establecer el <xref:System.Windows.FrameworkPropertyMetadataOptions.Journal> marca para indicar si la propiedad de dependencia debe ser detectado o usan los servicios de registro en diario de navegación. Un ejemplo es la <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> propiedad; todos los elementos seleccionados en una selección debe conservarse el control cuando se navega el historial de registro en diario.  
   

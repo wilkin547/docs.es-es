@@ -1,29 +1,17 @@
 ---
 title: Proceso de contratación
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hiring-process"></a>Proceso de contratación
 Este ejemplo muestra cómo implementar un proceso de negocio mediante actividades de mensajería y dos flujos de trabajo hospedados como servicios de flujo de trabajo. Estos flujos de trabajo son parte de la infraestructura de TI de una compañía ficticia denominada Contoso, Inc.  
   
- El proceso de flujo de trabajo `HiringRequest` (implementado como <xref:System.Activities.Statements.Flowchart>) solicita autorización a varios administradores de la organización. Para lograr este objetivo, el flujo de trabajo utiliza otros servicios existentes en la organización (en nuestro caso, un servicio de bandeja de entrada y un servicio de datos de la organización implementados como servicios normales de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]).  
+ El proceso de flujo de trabajo `HiringRequest` (implementado como <xref:System.Activities.Statements.Flowchart>) solicita autorización a varios administradores de la organización. Para lograr este objetivo, el flujo de trabajo utiliza otros servicios existentes en la organización (en nuestro caso, un servicio de bandeja de entrada y un servicio de datos de la organización implementados como servicios de Windows Communication Foundation (WCF) sin formato).  
   
  El flujo de trabajo `ResumeRequest` (implementado como <xref:System.Activities.Statements.Sequence>) publica un anuncio de vacante en el sitio web externo de ofertas de trabajo de Contoso y administra la adquisición de currículos. Un anuncio de vacante está disponible en el sitio web externo durante un período fijo de tiempo (hasta que expira un tiempo de espera) o hasta que un empleado en Contoso decide quitarlo.  
   
@@ -64,7 +52,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -111,7 +99,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
 |ContosoHR|Contiene contratos de datos, objetos de negocios y clases de repositorio.|  
 |HiringRequestService|Contiene la definición del flujo de trabajo del proceso de solicitud de contratación.<br /><br /> Este proyecto se implementa como una aplicación de consola que autohospeda el flujo de trabajo (archivo xaml) como servicio.|  
 |ResumeRequestService|Servicio de flujo de trabajo que recopila los currículos de los candidatos hasta que expira un tiempo de espera o alguien decide que el proceso tiene que detenerse.<br /><br /> Este proyecto se implementa como un servicio de flujo de trabajo declarativo (xamlx).|  
-|OrgService|Servicio que expone la información de la organización (empleados, vacantes, tipos de vacantes y departamentos). Puede pensar en este servicio como el módulo de organización de la compañía de un plan de recursos empresariales (ERP).<br /><br /> Este proyecto se implementa como una aplicación de consola que expone un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].|  
+|OrgService|Servicio que expone la información de la organización (empleados, vacantes, tipos de vacantes y departamentos). Puede pensar en este servicio como el módulo de organización de la compañía de un plan de recursos empresariales (ERP).<br /><br /> Este proyecto se implementa como una aplicación de consola que expone un servicio de Windows Communication Foundation (WCF).|  
 |InboxService|Bandeja de entrada que contiene las tareas procesables para los empleados.<br /><br /> Este proyecto se implementa como una aplicación de consola que expone un servicio WCF.|  
 |InternalClient|Aplicación web para interactuar con el proceso. Los usuarios pueden iniciar, participar y ver sus flujos de trabajo de HiringProcess. Con esta aplicación, también pueden iniciar y supervisar los procesos ResumeRequest.<br /><br /> Este sitio se implementa para ser interno a la intranet de Contoso. Este proyecto se implementa como un sitio web de ASP.NET.|  
 |CareersWebSite|Sitio web externo que expone las vacantes en Contoso. Cualquier candidato potencial puede navegar a este sitio y enviar un curriculum.|  

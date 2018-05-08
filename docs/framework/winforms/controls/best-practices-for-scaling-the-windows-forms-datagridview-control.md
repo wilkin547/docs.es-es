@@ -1,13 +1,6 @@
 ---
 title: Procedimientos recomendados para ajustar la escala del control DataGridView en formularios Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], row sharing
 - data grids [Windows Forms], best practices
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd629bd38e08c8d6909ee4ad771f17b1554fc80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91153df539871de571375d7bf6d49d712a0c43b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Procedimientos recomendados para ajustar la escala del control DataGridView en formularios Windows Forms
 El <xref:System.Windows.Forms.DataGridView> control está diseñado para ofrecer la máxima escalabilidad. Si tiene que mostrar grandes cantidades de datos, debe seguir las directrices descritas en este tema para evitar consumir grandes cantidades de memoria o la disminución de la capacidad de respuesta de la interfaz de usuario (UI). En este tema se describe los siguientes problemas:  
@@ -124,7 +112,7 @@ El <xref:System.Windows.Forms.DataGridView> control está diseñado para ofrecer
   
  Para evitar filas dejen de estar compartidas, utilice las siguientes directrices:  
   
--   Evite la indización de la <xref:System.Windows.Forms.DataGridView.Rows%2A> colección o recorrer en iteración mediante un `foreach` bucle. No normalmente debe tener acceso directamente a filas. <xref:System.Windows.Forms.DataGridView>los métodos que operan en filas toman argumentos de índice de fila en lugar de instancias de fila. Además, los controladores de eventos relacionados con la fila reciben objetos de argumento de evento con propiedades de fila que pueden utilizar para manipular filas sin provocar que deje de estar compartida.  
+-   Evite la indización de la <xref:System.Windows.Forms.DataGridView.Rows%2A> colección o recorrer en iteración mediante un `foreach` bucle. No normalmente debe tener acceso directamente a filas. <xref:System.Windows.Forms.DataGridView> los métodos que operan en filas toman argumentos de índice de fila en lugar de instancias de fila. Además, los controladores de eventos relacionados con la fila reciben objetos de argumento de evento con propiedades de fila que pueden utilizar para manipular filas sin provocar que deje de estar compartida.  
   
 -   Si necesita tener acceso a un objeto de fila, use el <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> método y pase el índice real de la fila. Sin embargo, tenga en cuenta que la modificación de un objeto de fila compartido recuperado a través de este método va a modificar todas las filas que comparten este objeto. La fila para los nuevos registros no se comparte con otras filas, sin embargo, por lo que no se verán afectado cuando se modifica ninguna otra fila. Tenga en cuenta también que filas distintas representadas por una fila compartida pueden tener menús contextuales distintos. Para recuperar el menú contextual correcto de una instancia de fila compartida, utilice el <xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A> método y pase el índice real de la fila. Si tiene acceso a la fila compartida <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> propiedad en su lugar, se utilizará el índice de fila compartida de -1 y no se recuperará el menú contextual correcto.  
   

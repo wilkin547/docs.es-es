@@ -1,13 +1,6 @@
 ---
 title: Tipos de sistemas de coordenadas
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,19 +15,14 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 287b1c9eddef882041d9e4eac44a06190f3585a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff53942cb90721d5411f99b261f90366d039e151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-coordinate-systems"></a>Tipos de sistemas de coordenadas
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]utiliza tres espacios de coordenadas: universales, de página y de dispositivo. Coordenadas universales son las coordenadas utilizadas para modelar un mundo gráfico determinado y las coordenadas que se pasan a los métodos de .NET Framework. Las coordenadas de página hacen referencia al sistema de coordenadas utilizado por una superficie de dibujo, como un formulario o control. Coordenadas de dispositivo son las utilizadas por el dispositivo físico que se dibuja, como una pantalla o una hoja de papel. Cuando realiza la llamada `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, lo que se pasa a la <xref:System.Drawing.Graphics.DrawLine%2A> método:`(0, 0)` y `(160, 80)`: están en el espacio de coordenadas universales. Antes de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] puede dibujar la línea en la pantalla, las coordenadas tienen que pasar a través de una secuencia de transformaciones. Una transformación, llamada a la transformación universal, convierte las coordenadas universales en coordenadas de página y otra transformación, llamado a la transformación de página, convierte las coordenadas de página en coordenadas de dispositivo.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] utiliza tres espacios de coordenadas: universales, de página y de dispositivo. Coordenadas universales son las coordenadas utilizadas para modelar un mundo gráfico determinado y las coordenadas que se pasan a los métodos de .NET Framework. Las coordenadas de página hacen referencia al sistema de coordenadas utilizado por una superficie de dibujo, como un formulario o control. Coordenadas de dispositivo son las utilizadas por el dispositivo físico que se dibuja, como una pantalla o una hoja de papel. Cuando realiza la llamada `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, lo que se pasa a la <xref:System.Drawing.Graphics.DrawLine%2A> método:`(0, 0)` y `(160, 80)`: están en el espacio de coordenadas universales. Antes de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] puede dibujar la línea en la pantalla, las coordenadas tienen que pasar a través de una secuencia de transformaciones. Una transformación, llamada a la transformación universal, convierte las coordenadas universales en coordenadas de página y otra transformación, llamado a la transformación de página, convierte las coordenadas de página en coordenadas de dispositivo.  
   
 ## <a name="transforms-and-coordinate-systems"></a>Sistemas de coordenadas y transformaciones  
  Imagine que desea trabajar con un sistema de coordenadas que tiene su origen en el cuerpo del área de cliente en lugar de la esquina superior izquierda. Por ejemplo, supongamos que desea que el origen sea 100 píxeles desde el borde izquierdo del área cliente y 50 píxeles desde la parte superior del área cliente. En la siguiente ilustración muestra un sistema de coordenadas de este tipo.  

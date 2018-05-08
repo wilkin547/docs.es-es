@@ -1,31 +1,19 @@
 ---
-title: "Información general sobre GridView"
-ms.custom: 
+title: Información general sobre GridView
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GridView view mode [WPF]
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 099584ff5149891f406d5ad24a28a6b3e3faafb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 776897d490b2748e240cf7b9a4ea21364284c4c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gridview-overview"></a>Información general sobre GridView
-<xref:System.Windows.Controls.GridView>modo de vista es uno de los modos de vista para un <xref:System.Windows.Controls.ListView> control. La <xref:System.Windows.Controls.GridView> clase y sus clases auxiliares permiten que usted y los usuarios ver el elemento colecciones en una tabla que normalmente utiliza botones como encabezados de columna interactivos. Este tema se presentan los <xref:System.Windows.Controls.GridView> clase y se describe su uso.  
+<xref:System.Windows.Controls.GridView> modo de vista es uno de los modos de vista para un <xref:System.Windows.Controls.ListView> control. La <xref:System.Windows.Controls.GridView> clase y sus clases auxiliares permiten que usted y los usuarios ver el elemento colecciones en una tabla que normalmente utiliza botones como encabezados de columna interactivos. Este tema se presentan los <xref:System.Windows.Controls.GridView> clase y se describe su uso.  
   
   
   
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  ![ListView con estilo](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "StyledListView")  
   
- <xref:System.Windows.Controls.GridView>las columnas se representan mediante <xref:System.Windows.Controls.GridViewColumn> objetos, que pueden cambiar el tamaño automáticamente a su contenido. Si lo desea, puede establecer explícitamente un <xref:System.Windows.Controls.GridViewColumn> a un ancho específico. Puede cambiar el tamaño de las columnas si arrastra la barra de redimensionamiento que se encuentra entre los encabezados de columna. Dinámicamente también puede agregar, quitar, reemplazar y reordenar las columnas, porque esta funcionalidad está integrada en <xref:System.Windows.Controls.GridView>. Sin embargo, <xref:System.Windows.Controls.GridView> no se puede actualizar directamente los datos que muestra.  
+ <xref:System.Windows.Controls.GridView> las columnas se representan mediante <xref:System.Windows.Controls.GridViewColumn> objetos, que pueden cambiar el tamaño automáticamente a su contenido. Si lo desea, puede establecer explícitamente un <xref:System.Windows.Controls.GridViewColumn> a un ancho específico. Puede cambiar el tamaño de las columnas si arrastra la barra de redimensionamiento que se encuentra entre los encabezados de columna. Dinámicamente también puede agregar, quitar, reemplazar y reordenar las columnas, porque esta funcionalidad está integrada en <xref:System.Windows.Controls.GridView>. Sin embargo, <xref:System.Windows.Controls.GridView> no se puede actualizar directamente los datos que muestra.  
   
  En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Controls.GridView> que muestra datos de empleados. En este ejemplo, <xref:System.Windows.Controls.ListView> define la `EmployeeInfoDataSource` como el <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Las definiciones de propiedades de <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> enlazar <xref:System.Windows.Controls.GridViewColumn> contenido a `EmployeeInfoDataSource` categorías de datos.  
   
