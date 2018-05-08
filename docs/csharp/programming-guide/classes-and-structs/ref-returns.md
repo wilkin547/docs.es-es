@@ -8,15 +8,15 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 57fa8f52320b30a1cb228b41e3f5e6655c235561
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 98c58d083cb806a92e28c1c9d27effa1124fd153
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valores devueltos y variables locales de tipo ref
 
-A partir de C# 7, C# admite los valores devueltos de referencia (valores devueltos de tipo ref). Un valor devuelto de referencia permite que un método devuelva una referencia a una variable, en lugar de un valor, al autor de una llamada. El autor de la llamada puede tratar la variable devuelta como si se hubiera devuelto por valor o por referencia. El autor de la llamada puede crear una variable que sea una referencia al valor devuelto, lo que se conoce como una referencia local.
+A partir de C# 7.0, C# admite los valores devueltos de referencia (valores devueltos de tipo ref). Un valor devuelto de referencia permite que un método devuelva una referencia a una variable, en lugar de un valor, al autor de una llamada. El autor de la llamada puede tratar la variable devuelta como si se hubiera devuelto por valor o por referencia. El autor de la llamada puede crear una variable que sea una referencia al valor devuelto, lo que se conoce como una referencia local.
 
 ## <a name="what-is-a-reference-return-value"></a>¿Qué es un valor devuelto de referencia?
 

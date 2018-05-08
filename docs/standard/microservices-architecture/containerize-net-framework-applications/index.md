@@ -1,21 +1,14 @@
 ---
 title: Migrar aplicaciones de .NET Framework monolíticas heredadas a contenedores de Windows
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Migrar aplicaciones de .NET Framework monolíticas heredadas a contenedores de Windows
-keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c88027156b55829f77357c1fdb1aef01a802b88a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a12012f115629a79734c18c3bc75733ae2fc8195
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>Migrar aplicaciones de .NET Framework monolíticas heredadas a contenedores de Windows
 
@@ -57,7 +50,7 @@ Estos cambios muestran el continuo de sus propias aplicaciones. Puede hacer de t
 
 ## <a name="application-tour"></a>Paseo por la aplicación
 
-Puede cargar la solución Catalog.WebForms y ejecutar la aplicación como una aplicación independiente. En esta configuración, en lugar de una base de datos de almacenamiento persistente, la aplicación usa un servicio falso para devolver los datos. La aplicación usa Autofac (<https://autofac.org/>) como contenedor de inversión de control (IOC). Mediante la inserción de dependencias (DI), puede configurar la aplicación para que use los datos falsos o el servicio de datos de catálogo activo. (Más adelante explicaremos con más detalle la inserción de dependencias). El código de inicio lee un valor useFake en los archivos web.config y configura el contenedor Autofac para insertar el servicio de datos falsos o el servicio de catálogo activo. Si ejecuta la aplicación con useFake establecido en false en el archivo web.config, verá que la aplicación de formularios Web Forms muestra los datos del catálogo.
+Puede cargar la solución Catalog.WebForms y ejecutar la aplicación como una aplicación independiente. En esta configuración, en lugar de una base de datos de almacenamiento persistente, la aplicación usa un servicio falso para devolver los datos. En la aplicación se usa Autofac (<https://autofac.org/>) como contenedor de inversión de control (IOC). Mediante la inserción de dependencias (DI), puede configurar la aplicación para que use los datos falsos o el servicio de datos de catálogo activo. (Más adelante explicaremos con más detalle la inserción de dependencias). El código de inicio lee un valor useFake en los archivos web.config y configura el contenedor Autofac para insertar el servicio de datos falsos o el servicio de catálogo activo. Si ejecuta la aplicación con useFake establecido en false en el archivo web.config, verá que la aplicación de formularios Web Forms muestra los datos del catálogo.
 
 La mayoría de las técnicas usadas en esta aplicación le resultarán conocidas a cualquier persona que haya usado formularios Web Forms. Aun así, el microservicio de catálogo introduce dos técnicas con las que probablemente no esté familiarizado: la inserción de dependencias (DI) mencionada anteriormente y el trabajo con almacenes de datos asincrónicos en formularios Web Forms.
 
