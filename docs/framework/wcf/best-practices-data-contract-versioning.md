@@ -7,11 +7,11 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33db8749656a8bb001f0a1797c77451476a126f2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Procedimientos recomendados: Creación de versiones de contratos de datos
 En este tema se enumeran los procedimientos recomendados para crear contratos de datos que pueden evolucionar con facilidad con el tiempo. Para obtener más información acerca de los contratos de datos, vea los temas de [usar contratos de datos](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -21,7 +21,7 @@ En este tema se enumeran los procedimientos recomendados para crear contratos de
   
  Esto significa que no se puede implementar ni siquiera el escenario de versión más común, como agregar un nuevo miembro de datos, de un modo uniforme con respecto a un esquema determinado. Las versiones más recientes de un contrato de datos (con un nuevo miembro de datos, por ejemplo) no se validan mediante el esquema anterior.  
   
- Sin embargo, hay muchos escenarios en los cuales no se requiere compatibilidad de esquema estricta. Muchas plataformas de servicios web, incluido [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y servicios web XML creadas utilizando ASP.NET, no realizan validación de esquema de forma predeterminada y, por lo tanto, toleran elementos adicionales que no describe el esquema. Cuando se trabaja con estas plataformas, muchos escenarios de versión son más fáciles de implementar.  
+ Sin embargo, hay muchos escenarios en los cuales no se requiere compatibilidad de esquema estricta. Muchas plataformas de servicios Web, incluidos WCF y servicios Web XML creados con ASP.NET, no realizan validación de esquema de forma predeterminada y, por tanto, toleran elementos adicionales que no se describen en el esquema. Cuando se trabaja con estas plataformas, muchos escenarios de versión son más fáciles de implementar.  
   
  De este modo, hay dos conjuntos de instrucciones de versión de contrato de datos: uno establecido para escenarios donde la validez estricta del esquema es importante, y otro conjunto para los escenarios cuando no lo es.  
   
@@ -36,7 +36,7 @@ En este tema se enumeran los procedimientos recomendados para crear contratos de
   
  Para obtener más información, vea prácticas recomendadas: [versiones del servicio](../../../docs/framework/wcf/service-versioning.md).  
   
- En algunos casos, debe garantizar la compatibilidad estricta del esquema para los mensajes enviados por su aplicación, pero no puede confiar en que los mensajes entrantes sean estrictamente conformes al esquema. En este caso, existe el peligro de que un mensaje entrante pueda contener datos extraños. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] almacena y devuelve los valores extraños y, por lo tanto, se envían mensajes no válidos para el esquema. Para evitar este problema, la característica de ida y vuelta debería estar desactivada. Existen dos formas de lograr esto.  
+ En algunos casos, debe garantizar la compatibilidad estricta del esquema para los mensajes enviados por su aplicación, pero no puede confiar en que los mensajes entrantes sean estrictamente conformes al esquema. En este caso, existe el peligro de que un mensaje entrante pueda contener datos extraños. Los valores extraños se almacenan y devueltos por WCF y, por tanto, da lugar a mensajes de esquema no válida que se envían. Para evitar este problema, la característica de ida y vuelta debería estar desactivada. Existen dos formas de lograr esto.  
   
 -   No implemente la interfaz <xref:System.Runtime.Serialization.IExtensibleDataObject> en ninguno de sus tipos.  
   

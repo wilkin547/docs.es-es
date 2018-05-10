@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: d320b3dc0a82db06efb496db7313dea901178148
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d68e3132224a7b60720fe7c293b9eee14e3fbd5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="analytic-tracing-overview"></a>Información general de traza analítica
 La traza analítica en [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] es una característica de traza de alto rendimiento y bajo nivel de detalle establecida en Seguimiento de eventos para Windows (ETW). ETW se ejecuta en el kernel para reducir en gran medida la sobrecarga de las operaciones de traza. Almacena en búfer eventos de usuario y en modo kernel, y permite una habilitación dinámica del registro sin requerir un reinicio del servicio. Los datos de la traza están disponibles en los registros de eventos una vez emitidos y recibidos.  
   
  Para obtener más información sobre ETW, vea [Improve Debugging and Performance Tuning with ETW](http://go.microsoft.com/fwlink/?LinkId=164781).  
   
- Además de usar registros de eventos del sistema Windows, de seguridad y de la aplicación para analizar la aplicación, [!INCLUDE[wv](../../../../../includes/wv-md.md)] y [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] introducen registros adicionales en el nodo superior de registros de servicios y aplicaciones. El propósito de estos nuevos registros es almacenar eventos para una aplicación determinada o un componente concreto en lugar de los eventos globales que tienen un impacto en todo el sistema (como el tipo de eventos que el registro de eventos de seguridad podría grabar). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] unifica y correlaciona el registro de eventos de seguimiento de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] , los registros de mensaje de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] y los registros de seguimiento de [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] en los Registros de aplicaciones y servicios.  
+ Además de usar registros de eventos del sistema Windows, de seguridad y de la aplicación para analizar la aplicación, [!INCLUDE[wv](../../../../../includes/wv-md.md)] y [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] introducen registros adicionales en el nodo superior de registros de servicios y aplicaciones. El propósito de estos nuevos registros es almacenar eventos para una aplicación determinada o un componente concreto en lugar de los eventos globales que tienen un impacto en todo el sistema (como el tipo de eventos que el registro de eventos de seguridad podría grabar). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] unifica y correlaciona el registro de eventos de seguimiento de WCF, registros de mensajes de WCF, y [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] registros de seguimiento en los registros de servicios y aplicaciones.  
   
 ## <a name="concepts-and-capabilities"></a>Conceptos y capacidades  
- Los siguientes conceptos y capacidades se aplican a la traza analítica de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] .  
+ Los siguientes conceptos y capacidades se aplican a la traza analítica de WCF.  
   
 ### <a name="enabling-wcf-diagnostics-settings"></a>Habilitar la configuración de diagnóstico de WCF  
  Se habilitan los diagnósticos WCF dentro de la \<system.serviceModel >\<diagnóstico > sección de configuración.  
@@ -33,7 +33,7 @@ La traza analítica en [!INCLUDE[netfx_current_long](../../../../../includes/net
 ### <a name="channels"></a>Canales  
  ETW permite a los componentes de software dirigir eventos de traza a una audiencia determinada mediante el empleo de canales. Por ejemplo, puede enviar eventos para los administradores del sistema a un canal, y eventos importantes para los desarrolladores de aplicaciones a otro canal. Los canales se denominan y se registran con Windows para que los consumidores puedan ver los eventos de un canal mediante el visor de eventos.  
   
- La característica de seguimiento analítico para [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] en [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] escribe en el canal Microsoft-Windows-Servidor de aplicaciones. Este canal está diseñado específicamente para los usuarios que desean supervisar el estado de los servicios de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] en producción. Define un pequeño conjunto de eventos que se puede usar en muchos casos de supervisión de estado y solución de problemas.  
+ La característica de traza analítica de WCF en [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] escribe en el canal de Microsoft-Windows--servidor de aplicaciones. Este canal está diseñado específicamente para los usuarios que desean supervisar el estado de los servicios WCF en producción. Define un pequeño conjunto de eventos que se puede usar en muchos casos de supervisión de estado y solución de problemas.  
   
  Para habilitar el manifiesto Seguimiento de eventos para Windows de modo que los mensajes se descodifiquen de forma apropiada en el registro de eventos, use la herramienta ServiceModelReg en la línea de comandos, como se indica a continuación:  
   

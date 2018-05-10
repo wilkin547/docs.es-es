@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |Detalles|A partir de .NET Framework 4.6, se ha clarificado el mensaje de excepción dado si no se puede serializar o deserializar <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=name> o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=name> debido a que faltan "tipos conocidos".|
-|Sugerencia|Las aplicaciones no deben depender de mensajes de excepción específicos. Si una aplicación depende de este mensaje, actualícela para que espere el mensaje nuevo o, preferiblemente, cámbiela para que solo dependa del tipo de excepción.|
+|Sugerencia|Las aplicaciones no deben depender de mensajes de excepción específicos. Si una aplicación depende de este mensaje, se puede actualizar para que espere el mensaje nuevo o, preferiblemente, cambiarla para que solo dependa del tipo de excepción.|
 |Ámbito|Borde|
 |Versión|4.6|
 |Tipo|Tiempo de ejecución|

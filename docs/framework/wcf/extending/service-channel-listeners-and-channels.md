@@ -2,11 +2,11 @@
 title: 'Servicio: Canales y escuchas de canales'
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
-ms.openlocfilehash: 5f5acff6ca933006707a863ea5ba04cd01cfb93e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eca7061243fa7f006079d19c3eaaf86ba906bca2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-channel-listeners-and-channels"></a>Servicio: Canales y escuchas de canales
 Hay tres categorías de objetos de canal: canales, escuchas de canales y generadores de canales. Los canales son la interfaz entre la aplicación y la pila de canales. Las escuchas de canales son responsables de crear los canales en el lado de recepción (o escucha), normalmente en respuesta a un nuevo mensaje entrante o conexión. Los generadores de canales son responsables de crear los canales en el lado de envío para iniciar la comunicación con un punto de conexión.  
@@ -21,7 +21,7 @@ Una escucha de canales recibiendo mensajes y entregándolos al nivel superior a 
   
  El proceso se puede modelar conceptualmente como una cola, aunque dentro de cada canal la implementación puede no utilizar una cola. La escucha de canales es responsable de recibir los mensajes del nivel inferior o de la red y colocarlos en la cola. El canal es responsable de recibir los mensajes de la cola y entregarlos al nivel superior cuando dicho nivel pide un mensaje, por ejemplo llamando a `Receive` en el canal.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona los elementos auxiliares de clase base para este proceso. (Para un diagrama de las clases de aplicación auxiliar de canal tratados en este tema, consulte [información general del modelo de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
+ WCF proporciona aplicaciones auxiliares de clase base para este proceso. (Para un diagrama de las clases de aplicación auxiliar de canal tratados en este tema, consulte [información general del modelo de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
   
 -   El <xref:System.ServiceModel.Channels.CommunicationObject> la clase implementa <xref:System.ServiceModel.ICommunicationObject> y aplica la máquina de Estados que se describe en el paso 2 de [canales de desarrollo](../../../../docs/framework/wcf/extending/developing-channels.md).  
   

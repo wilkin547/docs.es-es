@@ -2,22 +2,22 @@
 title: Proveedor de tokens SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 56c432b0874f59fed87c0d892732422161d668ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="saml-token-provider"></a>Proveedor de tokens SAML
-Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente personalizado. Un proveedor de tokens de Windows Communication Foundation (WCF) se utiliza para proporcionar las credenciales para la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye el Proveedor de tokens del administrador de credenciales predeterminado. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también se distribuye con un proveedor de tokens de [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Los proveedores de tokens personalizados son útiles en los casos siguientes:  
+Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente personalizado. Un proveedor de tokens de Windows Communication Foundation (WCF) se utiliza para proporcionar las credenciales para la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con el proveedor del Token de administrador de credenciales predeterminado. WCF también incluye una [!INCLUDE[infocard](../../../../includes/infocard-md.md)] proveedor de tokens. Los proveedores de tokens personalizados son útiles en los casos siguientes:  
   
 -   Si tiene un almacén de credenciales con el que estos proveedores de tokens no pueden funcionar.  
   
--   Si desea proporcionar su propio mecanismo personalizado para transformar las credenciales desde el punto en el que el usuario proporciona detalles cuando el marco de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza las credenciales.  
+-   Si desea proporcionar su propio mecanismo personalizado para transformar las credenciales desde el punto cuando el usuario proporciona detalles cuando el marco de trabajo de cliente WCF usa las credenciales.  
   
 -   Si está creando un token personalizado.  
   
- Este ejemplo muestra cómo crear un proveedor de tokens personalizado que permite que un token de SAML obtenido de fuera del marco de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se pueda utilizar.  
+ Este ejemplo muestra cómo crear un proveedor de tokens personalizado que permite que un token SAML obtenido de fuera del marco de cliente WCF que se usará.  
   
  En resumen, este ejemplo muestra lo siguiente:  
   
@@ -25,7 +25,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
   
 -   Cómo un token de SAML se puede pasar a las credenciales del cliente personalizadas.  
   
--   Cómo el token de SAML se proporciona al marco de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   ¿Cómo se proporciona el token de SAML para el marco de trabajo de cliente WCF.  
   
 -   Cómo el cliente autentica el servidor usando el certificado X.509 del servidor.  
   
@@ -110,7 +110,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 </system.serviceModel>  
 ```  
   
- Los siguientes pasos muestran cómo desarrollar un proveedor de tokens personalizado SAML y cómo integrarlo en la estructura de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ Los pasos siguientes muestran cómo desarrollar un proveedor de tokens SAML personalizado e integrarlo con WCF: marco de seguridad:  
   
 1.  Escriba un proveedor de tokens personalizado SAML.  
   

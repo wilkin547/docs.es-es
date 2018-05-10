@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-ms.openlocfilehash: 02e0b8822c29490462fe74803a34222188afc910
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f98da5db34686e3bf09cc14c42a2ff6b693201f6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reliable-services"></a>Servicios de confianza
-Las colas y sesiones confiables son las características de Windows Communication Foundation (WCF) que implementan la mensajería confiable. En este tema se explican las características de mensajería confiable de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Las colas y sesiones confiables son las características de Windows Communication Foundation (WCF) que implementan la mensajería confiable. En este tema se explica las características de mensajes confiable de WCF.  
   
  *Mensajería de confianza* se muestra cómo un origen de mensajería confiable (denominado el *origen*) transfiere mensajes de forma confiable a un destino de mensajería confiable (denominado el *destino*).  
   
@@ -25,7 +25,7 @@ Las colas y sesiones confiables son las características de Windows Communicatio
   
 -   Separa el origen del destino. Este hecho proporciona un error independiente y la recuperación del origen y el destino, además de la transferencia confiable y la entrega de los mensajes aun cuando no está disponible el origen o el destino.  
   
- La mensajería de confianza a menudo viene acompañada de una alta latencia. *Latencia* es el tiempo necesario para que el mensaje llegar al destino desde el origen. Por consiguiente, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proporciona los tipos siguientes de mensajería de confianza:  
+ La mensajería de confianza a menudo viene acompañada de una alta latencia. *Latencia* es el tiempo necesario para que el mensaje llegar al destino desde el origen. WCF, por lo tanto, proporciona los siguientes tipos de mensajería de confianza:  
   
 -   [Las sesiones confiables](../../../docs/framework/wcf/feature-details/reliable-sessions.md), que ofrece transferencia confiable sin el costo de latencia alta.  
   
@@ -37,7 +37,7 @@ Las colas y sesiones confiables son las características de Windows Communicatio
  Las sesiones de confianza proporcionan transferencias de mensajes de confianza de latencia baja. Los proporcionan para los mensajes SOAP sobre cualquier proxy o intermediario, el equivalente a lo que TCP proporciona para los paquetes sobre puentes de IP. Para obtener más información acerca de las sesiones confiables, vea [sesiones confiables](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
 ### <a name="queues"></a>Colas  
- Las colas de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proporcionan transferencias confiables de mensajes y separación entre los orígenes y los destinos a costa de una latencia alta. La comunicación puesta en cola de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se basa en Message Queuing (MSMQ).  
+ Las colas en WCF proporcionan a transferencias confiables de mensajes y separación entre los orígenes y destinos a costa de una latencia elevada. WCF en cola la comunicación se basa en la parte superior Message Queuing (MSMQ).  
   
  MSMQ se distribuye como un componente opcional con Windows. El servicio de MSMQ se ejecuta como un servicio de Windows. Captura mensajes para la transmisión en una cola de transmisión en nombre del origen y lo entrega a una cola de destino. La cola de destino acepta los mensajes en nombre del destino para la entrega posterior siempre que el destino solicite mensajes. Los administradores de MSMQ implementan un protocolo de transferencias de mensajes de confianza de manera que los mensajes no se pierdan durante la transmisión. El protocolo puede ser nativo o un protocolo basado en SOAP denominado "Protocolo de mensajería de confianza de SOAP" (SRMP).  
   

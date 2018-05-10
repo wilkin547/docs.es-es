@@ -2,17 +2,17 @@
 title: Visualización de registros de mensajes
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 56e4fb1ea8c67c35df440a2088034327788f6f15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4fa205b52e3d19d2421d93297b5689422775f719
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="viewing-message-logs"></a>Visualización de registros de mensajes
 En este tema se explica cómo puede ver registros de mensajes.  
   
 ## <a name="viewing-message-logs-in-the-service-trace-viewer"></a>Visualización de registros de mensajes en Service Trace Viewer  
- Un mensaje se transformará tal y como [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lo procese. Por consiguiente, un mensaje que se está registrando refleja solo el contenido del mensaje en el punto en el que se registró, no el contenido en la conexión.  
+ Un mensaje se transformará tal y como se procesa por WCF. Por consiguiente, un mensaje que se está registrando refleja solo el contenido del mensaje en el punto en el que se registró, no el contenido en la conexión.  
   
  Dado que el resultado del registro de mensajes no está relacionado con el formato de transferencia del mensaje, el registro de mensajes siempre tiene como resultado el mensaje decodificado. Si se configura correctamente el registro de mensajes, cualquier mensaje registrado debe estar en texto sin formato. Por ejemplo, el formato (texto sin formato) de los mensajes registrados no se ve afectado por la utilización de un codificador de mensajes binarios.  
   

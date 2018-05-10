@@ -22,18 +22,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e67d4297ca0fe7028380b6d862f9f86c93bcaa61
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>Tutorial: Usar servicios de aplicaciones cliente
 En este tema se describe cómo crear una aplicación de Windows que usa los servicios de aplicaciones cliente para autenticar usuarios y recuperar la configuración y los roles de usuario.  
   
  En este tutorial, realizará las tareas siguientes:  
   
--   Cree una aplicación de Windows Forms y use el diseñador de proyectos [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para habilitar y configurar servicios de aplicaciones cliente.  
+-   Cree una aplicación de Windows Forms y use el diseñador de proyectos de Visual Studio para habilitar y configurar servicios de aplicaciones cliente.  
   
 -   Cree una aplicación simple de servicio web ASP.NET para hospedar los servicios de aplicación y probar la configuración del cliente.  
   
@@ -57,7 +57,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
 #### <a name="to-create-a-client-application-and-enable-client-application-services"></a>Para crear una aplicación cliente y habilitar servicios de aplicaciones cliente  
   
-1.  En [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], seleccione la opción de menú **Archivo &#124; Nuevo &#124; Proyecto**.  
+1.  En Visual Studio, seleccione la opción de menú **Archivo &#124; Nuevo &#124; Proyecto**.  
   
 2.  En el cuadro de diálogo **Nuevo proyecto**, en el panel **Tipos de proyecto**, expanda el nodo **Visual Basic** o **Visual C#** y seleccione el tipo de proyecto **Windows**.  
   
@@ -65,7 +65,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
 4.  Cambie el valor de **Nombre** del proyecto a `ClientAppServicesDemo`y haga clic en **Aceptar**.  
   
-     Se abre un nuevo proyecto de Windows Forms en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+     Se abre un nuevo proyecto de Windows Forms en Visual Studio.  
   
 5.  En el menú **Proyecto** , seleccione **Propiedades de ClientAppServicesDemo**.  
   
@@ -250,7 +250,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
 1.  En el **Explorador de soluciones**, en el proyecto ClientAppServicesDemo, agregue una referencia al ensamblado System.Web.  
   
-2.  Seleccione el archivo Form1 y **Vista &#124; Código** en el menú principal de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+2.  Seleccione el archivo Form1 y **Vista &#124; Código** en el menú principal de Visual Studio.  
   
 3.  En el editor de código, agregue las instrucciones siguientes al principio del archivo Form1.  
   
@@ -331,7 +331,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
 5.  En la ventana **Propiedades**, especifique un valor **(Nombre)** de `rememberMeCheckBox` y un valor **Texto** de `&Remember me`.  
   
-6.  Seleccione **Vista &#124; Código** en el menú principal de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+6.  Seleccione **Vista &#124; Código** en el menú principal de Visual Studio.  
   
 7.  En el Editor de código, agregue el siguiente código al principio del archivo.  
   
@@ -371,7 +371,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
 #### <a name="to-change-the-user-interface-based-on-user-role"></a>Para cambiar la interfaz de usuario en función del rol de usuario  
   
-1.  En el **Explorador de soluciones**, en el proyecto ClientAppServicesDemo, seleccione Form1 y **Vista &#124; Diseñador** en el menú principal de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+1.  En el **Explorador de soluciones**, en el proyecto ClientAppServicesDemo, seleccione Form1 y **Vista &#124; Diseñador** en el menú principal de Visual Studio.  
   
 2.  En el diseñador, agregue un control <xref:System.Windows.Forms.Button> al formulario desde el **Cuadro de herramientas**.  
   
@@ -407,7 +407,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
  Ahora puede ejecutar la aplicación e iniciar sesión como empleado para comprobar que el botón no aparece y, a continuación, iniciar sesión como administrador para ver el botón.  
   
 ## <a name="accessing-web-settings"></a>Acceder a la configuración web  
- En el siguiente procedimiento, agregará un cuadro de texto al formulario y lo enlazará a una configuración web. Al igual que el código anterior, que usa autenticación y roles, el código de configuración no accede al proveedor de configuración directamente. En su lugar, usa la clase `Settings` fuertemente tipada (a la que se accede como `Properties.Settings.Default` en C# y como `My.Settings` en Visual Basic) que [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] genera para el proyecto.  
+ En el siguiente procedimiento, agregará un cuadro de texto al formulario y lo enlazará a una configuración web. Al igual que el código anterior, que usa autenticación y roles, el código de configuración no accede al proveedor de configuración directamente. En su lugar, usa la clase `Settings` fuertemente tipada (a la que se accede como `Properties.Settings.Default` en C# y como `My.Settings` en Visual Basic) que Visual Studio genera para el proyecto.  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>Para usar la configuración web en la interfaz de usuario  
   
@@ -425,7 +425,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
      El ajuste de configuración `WebSettingsTestText` aparece en el diseñador con el valor predeterminado de `DefaultText`. Además, se genera para el proyecto una clase `Settings` que contiene una propiedad `WebSettingsTestText`.  
   
-5.  En el **Explorador de soluciones**, en el proyecto ClientAppServicesDemo, seleccione Form1 y **Vista &#124; Diseñador** en el menú principal de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+5.  En el **Explorador de soluciones**, en el proyecto ClientAppServicesDemo, seleccione Form1 y **Vista &#124; Diseñador** en el menú principal de Visual Studio.  
   
 6.  En el diseñador, agregue un control <xref:System.Windows.Forms.TextBox> al formulario.  
   
@@ -510,7 +510,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
 #### <a name="to-enable-offline-mode-in-your-application"></a>Para habilitar el modo sin conexión en la aplicación  
   
-1.  En el **Explorador de soluciones**, en el proyecto ClientAppServicesDemo, seleccione Form1 y **Vista &#124; Diseñador** en el menú principal de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+1.  En el **Explorador de soluciones**, en el proyecto ClientAppServicesDemo, seleccione Form1 y **Vista &#124; Diseñador** en el menú principal de Visual Studio.  
   
 2.  En el diseñador, agregue un control <xref:System.Windows.Forms.CheckBox> al formulario.  
   

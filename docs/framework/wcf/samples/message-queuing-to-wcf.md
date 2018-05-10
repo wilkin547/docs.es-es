@@ -2,11 +2,11 @@
 title: Message Queuing a Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: c0208de93ad0c903b8a75383b509de57365ac4bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b3c16a95b21dcdea941e605f3e25e560b7193b03
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Message Queuing a Windows Communication Foundation
 Este ejemplo muestra cómo una aplicación de Message Queuing (MSMQ) puede enviar un mensaje de MSMQ a un servicio de Windows Communication Foundation (WCF). El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.  
@@ -59,7 +59,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
  El nombre de cola de MSMQ se especifica en una sección appSettings del archivo de configuración, tal y como se muestra en la configuración de ejemplo siguiente.  
   
 > [!NOTE]
->  El nombre de la cola utiliza un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso. La dirección de extremo de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] especifica un esquema msmq.formatname y utiliza localhost para el equipo local. La dirección de la cola para las directrices de direccionamiento del nombre de formato de MSMQ sigue el esquema msmq.formatname.  
+>  El nombre de la cola utiliza un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso. La dirección del extremo WCF especifica un esquema msmq.formatname y utiliza localhost para el equipo local. La dirección de la cola para las directrices de direccionamiento del nombre de formato de MSMQ sigue el esquema msmq.formatname.  
   
 ```xml  
 <appSettings>  

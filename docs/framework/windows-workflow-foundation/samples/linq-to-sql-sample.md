@@ -2,21 +2,21 @@
 title: LINQ to SQL ejemplo
 ms.date: 03/30/2017
 ms.assetid: 5f39db9e-0e62-42c9-8c98-bb8b54cec98c
-ms.openlocfilehash: a5c84dab941a50ddd5edb065004343cc304fd0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3cfcaf3de1a22b8bb5505083f127a9888b99dbd8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="linq-to-sql-sample"></a>LINQ to SQL ejemplo
 En este ejemplo se muestra cómo crear una actividad para utilizar las entidades de consulta de LINQ to SQL de las tablas en bases de datos de SQL Server.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+>  Puede que los ejemplos WCF ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardspace`  
 >   
->  Si este directorio no existe, haga clic en el vínculo de descarga de ejemplo en la parte superior de esta página. Tenga en cuenta que este vínculo descarga e instala todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, haga clic en el vínculo de descarga de ejemplo en la parte superior de esta página. Tenga en cuenta que este vínculo descarga e instala todos los [!INCLUDE[wf1](../../../../includes/wf1-md.md)], WCF, y [!INCLUDE[infocard](../../../../includes/infocard-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardSpace\WF\Scenario\ActivityLibrary\Linq\LinqToSql`  
   

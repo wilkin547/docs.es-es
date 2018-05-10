@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: dc3aeadafd54bbd8b57a3e8c781e0cced9e7e632
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7718edaefbad18afa11b3e3680fac39da585a610
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-services"></a>Configuración de servicios
 Cuando haya diseñado e implementado su contrato de servicios, usted está listo para configurar su servicio. En este momento define y personaliza cómo se expone su servicio a los clientes, además de especificar la dirección donde se puede encontrar, el transporte y codificación de mensajes que utiliza para enviar y recibir mensajes y el tipo de seguridad que requiere.  
   
- La configuración tal y como se utiliza aquí incluye todas las maneras, imperativamente en código o utilizando un archivo de configuración, en el que puede definir y personalizar los diferentes aspectos de un servicio, como especificar sus direcciones de extremo, los transportes utilizados y sus esquemas de seguridad. En la práctica, escribir la configuración es una parte principal de la programación de aplicaciones de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] .  
+ La configuración tal y como se utiliza aquí incluye todas las maneras, imperativamente en código o utilizando un archivo de configuración, en el que puede definir y personalizar los diferentes aspectos de un servicio, como especificar sus direcciones de punto de conexión, los transportes utilizados y sus esquemas de seguridad. En la práctica, escribir la configuración es una gran parte de la programación de aplicaciones de WCF.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md)  
- A partir de [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye un nuevo modelo de configuración predeterminado que simplifica los requisitos de configuración de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Si no se proporciona ninguna configuración de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para un servicio concreto, el tiempo de ejecución lo configurará automáticamente con extremos, enlaces y comportamientos predeterminados.  
+ A partir de [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF incluye un nuevo modelo de configuración predeterminado que simplifica los requisitos de configuración de WCF. Si no proporciona ninguna configuración de WCF para un servicio concreto, el tiempo de ejecución configurará automáticamente con comportamientos, enlaces y extremos predeterminados.  
   
  [Configuración de servicios mediante archivos de configuración](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Un servicio de Windows Communication Foundation (WCF) es que puede configurar mediante la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] tecnología de configuración. Por lo general, los elementos XML se agregan al archivo Web.config para un sitio de Internet Information Services (IIS) que hospeda un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Los elementos le permiten cambiar los datos, como las direcciones de punto de conexión (las direcciones reales utilizadas para comunicarse con el servicio) en una base equipo por equipo.  
+ Un servicio de Windows Communication Foundation (WCF) es que puede configurar mediante la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] tecnología de configuración. Normalmente, los elementos XML se agregan al archivo Web.config para un sitio de Internet Information Services (IIS) que hospeda un servicio WCF. Los elementos le permiten cambiar los datos, como las direcciones de punto de conexión (las direcciones reales utilizadas para comunicarse con el servicio) en una base equipo por equipo.  
   
  [Enlaces](../../../docs/framework/wcf/bindings.md)  
- Además, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye varias configuraciones comunes proporcionadas por el sistema en forma de enlaces que le permiten seleccionar rápidamente las características más básicas sobre cómo se comunican un cliente y el servicio, como los transportes, seguridad y codificación de mensajes utilizadas.  
+ Además, WCF incluye varias configuraciones comunes proporcionadas por el sistema en forma de enlaces que le permiten seleccionar rápidamente las características más básicas para la comunicación entre un cliente y servicio, como los transportes, seguridad y utilizan codificaciones de mensaje.  
   
  [Puntos de conexión](../../../docs/framework/wcf/endpoints.md)  
- Toda la comunicación con un [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicio se produce a través de la *extremos* del servicio. Los puntos de conexión contienen el contrato, la información de configuración que se especifica en los enlaces, y las direcciones que indican dónde encontrar el servicio o dónde obtener información sobre el servicio.  
+ Toda la comunicación con un servicio WCF se produce a través de la *extremos* del servicio. Los puntos de conexión contienen el contrato, la información de configuración que se especifica en los enlaces, y las direcciones que indican dónde encontrar el servicio o dónde obtener información sobre el servicio.  
   
  [Seguridad de servicios](../../../docs/framework/wcf/securing-services.md)  
- Utilizando [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y mecanismos de seguridad existentes, puede implementar confidencialidad, integridad, autenticación y autorización en cualquier servicio. También puede revisar los éxitos de seguridad y errores.  
+ Uso de WCF y que existe mecanismos de seguridad, puede implementar confidencialidad, integridad, autenticación y autorización en cualquier servicio. También puede revisar los éxitos de seguridad y errores.  
   
  [Creación de servicios interoperables de WS-I Basic Profile 1.1](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
  Los requisitos para implementar un servicio interoperable con servicios y clientes en cualquier otra plataforma o sistema operativo se describen en la especificación WS-I Basic Profile 1.1.  

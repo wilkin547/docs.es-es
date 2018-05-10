@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 142478352c8eb1c893d8b95b960c6079f735fa06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b302a7d0643ed61d12cfedf26348590d40d18f3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introduction-to-extensibility"></a>Introducción a la extensibilidad
-El modelo de aplicaciones de Windows Communication Foundation (WCF) está diseñado para resolver la mayor parte de los requisitos de comunicación de cualquier aplicación distribuida. No obstante, siempre hay escenarios con los que el modelo de aplicación predeterminado y las implementaciones proporcionadas por sistema no son compatibles. El modelo de extensibilidad [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] está diseñado para admitir escenarios personalizados permitiéndole modificar el comportamiento del sistema en cada nivel, incluso hasta el punto de reemplazar todo el modelo de aplicación. Este tema describe las distintas áreas de extensión e indica dónde obtener más información acerca de cada una de ellas.  
+El modelo de aplicaciones de Windows Communication Foundation (WCF) está diseñado para resolver la mayor parte de los requisitos de comunicación de cualquier aplicación distribuida. No obstante, siempre hay escenarios con los que el modelo de aplicación predeterminado y las implementaciones proporcionadas por sistema no son compatibles. El modelo de extensibilidad WCF está concebido para admitir escenarios personalizados por lo que le permite modificar el comportamiento del sistema en cada nivel, incluso hasta el punto de reemplazar el modelo de toda la aplicación. Este tema describe las distintas áreas de extensión e indica dónde obtener más información acerca de cada una de ellas.  
   
 ## <a name="areas-to-extend"></a>Áreas que pueden extenderse  
  Puede extenderse:  
@@ -25,7 +25,7 @@ El modelo de aplicaciones de Windows Communication Foundation (WCF) está diseñ
 -   El tiempo de ejecución del host. Se extiende la relación del dominio de aplicación de hospedaje al tiempo de ejecución del canal y de la aplicación.  
   
 ### <a name="extending-the-application-runtime"></a>Extender el tiempo de ejecución de la aplicación  
- En aplicaciones [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], existe una diferencia entre los mensajes destinados a un canal correspondiente y los mensajes destinados a la propia aplicación. Los mensajes del canal admiten alguna funcionalidad relacionada con el canal, como establecer una conversación segura o una sesión de confianza. Estos mensajes no están disponibles para el tiempo de ejecución de la aplicación; se procesan antes de que se implique el nivel de la aplicación.  
+ En aplicaciones de WCF, hay una diferencia entre los mensajes que están destinados a un canal correspondiente y que están destinados a la propia aplicación. Los mensajes del canal admiten alguna funcionalidad relacionada con el canal, como establecer una conversación segura o una sesión de confianza. Estos mensajes no están disponibles para el tiempo de ejecución de la aplicación; se procesan antes de que se implique el nivel de la aplicación.  
   
  Los mensajes de la aplicación contienen datos destinados a un cliente u operación del servicio que usted o su cliente creó. Estos mensajes están disponibles para el sistema de extensión del nivel de la aplicación en forma de mensaje u objeto, dependiendo de sus necesidades.  
   

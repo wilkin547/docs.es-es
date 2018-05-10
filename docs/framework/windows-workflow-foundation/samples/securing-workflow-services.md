@@ -2,11 +2,11 @@
 title: Proteger servicios de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 53f84ad5-1ed1-4114-8d0d-b12e8a021c6e
-ms.openlocfilehash: ac02b5ffcfc14ea4aab9e8aafd5f6a4cbcdef3b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5dbd724f3a2f8febfc74719584f4d69cbf75b567
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-workflow-services"></a>Proteger servicios de flujo de trabajo
 En el ejemplo del servicio de flujo de trabajo seguro se muestran los siguientes procedimientos:  
@@ -21,7 +21,7 @@ En el ejemplo del servicio de flujo de trabajo seguro se muestran los siguientes
  Usar la seguridad WCF para proteger la comunicación entre el cliente y el servicio de flujo de trabajo, con autorización basada en notificaciones  
   
 ## <a name="discussion"></a>Explicación  
- En este ejemplo se muestra el uso de la infraestructura de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para proteger un servicio de flujo de trabajo de la misma manera que se haría con un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] normal. Concretamente, usa una notificación personalizada para la autorización. En este caso, utiliza <xref:System.ServiceModel.WSHttpBinding> y la seguridad de modo de mensaje con credenciales de Windows.  
+ Este ejemplo muestra el uso de la infraestructura de seguridad WCF para proteger un servicio de flujo de trabajo, tal como lo haría con un servicio WCF normal. Concretamente, usa una notificación personalizada para la autorización. En este caso, utiliza <xref:System.ServiceModel.WSHttpBinding> y la seguridad de modo de mensaje con credenciales de Windows.  
   
  La interfaz <xref:System.IdentityModel.Policy.IAuthorizationPolicy> personalizada (`CustomNameCheckerPolicy`) comprueba el nombre de usuario de Windows del cliente y busca un carácter concreto. Si ese carácter está presente, crea y agrega la notificación a la clase <xref:System.IdentityModel.Policy.EvaluationContext>. Al llevar esto a cabo, la directiva personalizada indica que el cliente tiene este carácter en el nombre de usuario. Esta notificación se puede consultar mientras dura la llamada. Puede encontrar el carácter en `Constants.cs`.  
   

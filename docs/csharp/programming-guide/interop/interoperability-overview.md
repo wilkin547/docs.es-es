@@ -15,11 +15,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 58538b690958e11b1590c13e6709cac4109ef49d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 51a92f89415fd3750d8d2e1880be0d9c2867600d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Información general sobre interoperabilidad (Guía de programación de C#)
 En el tema se describen métodos para habilitar la interoperabilidad entre el código administrado y el código no administrado de C#.  
@@ -42,7 +42,7 @@ En el tema se describen métodos para habilitar la interoperabilidad entre el c�
   
 2.  Agregue al proyecto una referencia a la biblioteca de tipos o al componente COM.  
   
-     Al agregar la referencia, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] usa [Tlbimp.exe (importador de la biblioteca de tipos)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), que toma una biblioteca de tipos como entrada para generar un ensamblado de interoperabilidad de .NET Framework. El ensamblado, también denominado "contenedor RCW", contiene las clases e interfaces administradas que encapsulan las interfaces y clases COM que se encuentran en la biblioteca de tipos. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] agrega al proyecto una referencia al ensamblado generado.  
+     Al agregar la referencia, Visual Studio usa [Tlbimp.exe (importador de la biblioteca de tipos)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), que toma una biblioteca de tipos como entrada para generar un ensamblado de interoperabilidad de .NET Framework. El ensamblado, también denominado "contenedor RCW", contiene las clases e interfaces administradas que encapsulan las interfaces y clases COM que se encuentran en la biblioteca de tipos. Visual Studio agrega al proyecto una referencia al ensamblado generado.  
   
 3.  Cree una instancia de una clase definida en el RCW. Este, a su vez, crea una instancia del objeto COM.  
   
@@ -59,7 +59,7 @@ En el tema se describen métodos para habilitar la interoperabilidad entre el c�
   
 2.  Genere una biblioteca de tipos COM y regístrela para el uso de COM.  
   
-     Puede modificar las propiedades del proyecto de Visual C# para registrar automáticamente el ensamblado de C# para la interoperabilidad COM. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] usa [Regasm.exe (herramienta de registro de ensamblados)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) con el modificador de la línea de comandos `/tlb`, que toma un ensamblado administrado como entrada, para generar una biblioteca de tipos. Esta biblioteca de tipos describe los tipos `public` del ensamblado y agrega entradas del registro para que los clientes COM puedan crear clases administradas.  
+     Puede modificar las propiedades del proyecto de Visual C# para registrar automáticamente el ensamblado de C# para la interoperabilidad COM. Visual Studio usa [Regasm.exe (herramienta de registro de ensamblados)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), con el modificador de la línea de comandos `/tlb`, que toma un ensamblado administrado como entrada, para generar una biblioteca de tipos. Esta biblioteca de tipos describe los tipos `public` del ensamblado y agrega entradas del registro para que los clientes COM puedan crear clases administradas.  
   
  Para obtener más información, vea [Exponer componentes de .NET Framework en COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) y [Clase COM de ejemplo](../../../csharp/programming-guide/interop/example-com-class.md).  
   

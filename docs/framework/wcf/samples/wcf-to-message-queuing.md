@@ -2,11 +2,11 @@
 title: Windows Communication Foundation a Message Queuing
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 83c16fc097cc6eca76578730bcad0491b648c5c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0864098a55cbd7b43100bf9e0a1836e749eb2bc9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation a Message Queuing
 Este ejemplo muestra cómo una aplicación de Windows Communication Foundation (WCF) puede enviar un mensaje a una aplicación de Message Queuing (MSMQ). El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola. El servicio y el cliente no tienen que estar ejecutándose al mismo tiempo.  
@@ -95,9 +95,9 @@ Console.WriteLine("Order has been submitted:{0}", po);
 client.Close();  
 ```
 
- El cliente utiliza un cliente personalizado en orden para enviar el mensaje de MSMQ a la cola. Dado que la aplicación que recibe y procesa el mensaje es una aplicación MSMQ y no una aplicación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], no hay ningún contrato de servicios implícito entre las dos aplicaciones. Así que no podemos crear ningún proxy utilizando la herramienta Svcutil.exe en este escenario.  
+ El cliente utiliza un cliente personalizado en orden para enviar el mensaje de MSMQ a la cola. Dado que la aplicación que recibe y procesa el mensaje es una aplicación MSMQ y no es una aplicación de WCF, no hay ningún contrato de servicios implícito entre las dos aplicaciones. Así que no podemos crear ningún proxy utilizando la herramienta Svcutil.exe en este escenario.  
   
- El cliente personalizado es esencialmente el mismo para todas las aplicaciones [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que utilizan el enlace `MsmqIntegration` para enviar mensajes. A diferencia de otros clientes, no incluye ningún intervalo de operaciones de servicio. Solo es una operación de envío de mensaje.  
+ El cliente personalizado es esencialmente el mismo para todas las aplicaciones de WCF que usan el `MsmqIntegration` enlace para enviar mensajes. A diferencia de otros clientes, no incluye ningún intervalo de operaciones de servicio. Solo es una operación de envío de mensaje.  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  

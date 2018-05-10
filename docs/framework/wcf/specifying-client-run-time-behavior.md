@@ -7,11 +7,11 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: dbee1fecda66dc377513bdf8cae4645f009b6384
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bc104c4f51ebc64154bd3d9b39ac2bca13b2fab1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-client-run-time-behavior"></a>Especificación del comportamiento de tiempo de ejecución del cliente
 Los clientes de Windows Communication Foundation (WCF), como los servicios de Windows Communication Foundation (WCF), se pueden configurar para modificar el comportamiento de tiempo de ejecución para adaptarlo a la aplicación cliente. Tres atributos están disponibles para especificar el comportamiento de tiempo de ejecución del cliente. Los objetos de devolución de llamada de cliente dúplex pueden utilizar <xref:System.ServiceModel.CallbackBehaviorAttribute> y los atributos <xref:System.ServiceModel.Description.CallbackDebugBehavior> para modificar su comportamiento de tiempo de ejecución. El otro atributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, se puede utilizar para separar el destino lógico del destino de red inmediato. Además, los tipos de devolución de llamada de cliente dúplex pueden utilizar algunos de los comportamientos de lado del servicio. Para obtener más información, consulte [especificar el comportamiento de tiempo de ejecución de servicio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -35,7 +35,7 @@ Los clientes de Windows Communication Foundation (WCF), como los servicios de Wi
   
 -   lo haga solamente en escenarios de depuración controlados.  
   
- El ejemplo de código siguiente muestra un archivo de configuración del cliente que indica a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que devuelva la información de excepción administrada de un objeto de devolución de llamada de cliente en mensajes SOAP.  
+ En el ejemplo de código siguiente se muestra a un cliente de archivo de configuración que se indica a WCF para devolver información de excepción administrada desde un cliente de objeto de devolución de llamada en los mensajes SOAP.  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  

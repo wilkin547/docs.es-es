@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Detalles|En .NET Framework 4.0, el parámetro genérico <code>T</code> de los métodos <code>ObjectContext.Translate</code> y <code>ObjectContext.ExecuteStoreQuery</code> no podía ser un tipo enum. Ahora se admite este escenario.|
-|Sugerencia|Si se llamaba a un elemento Translate o ExecuteStoreQuery en un tipo enum en .NET Framework 4.0, devolvía "0". Si este era el comportamiento deseado, las llamadas deberían reemplazarse por una constante 0 (o su tipo enum equivalente).|
+|Detalles|En .NET Framework 4.0, el parámetro genérico <code>T</code> de los métodos <code>ObjectContext.Translate</code> y <code>ObjectContext.ExecuteStoreQuery</code> no podía ser una enumeración. Ahora se admite este escenario.|
+|Sugerencia|Si se llamaba a Translate o ExecuteStoreQuery en un tipo de enumeración en .NET Framework 4.0, se devolvía "0". Si este era el comportamiento deseado, las llamadas deberían reemplazarse por una constante 0 (o su tipo enum equivalente).|
 |Ámbito|Borde|
 |Versión|4.5|
 |Tipo|Tiempo de ejecución|

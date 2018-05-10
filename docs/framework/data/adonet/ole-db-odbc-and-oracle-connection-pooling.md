@@ -2,11 +2,11 @@
 title: Agrupación de conexiones de OLE DB, ODBC y Oracle
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 2e42b52bb75008fd34f3e4bef1788626d96368bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Agrupación de conexiones de OLE DB, ODBC y Oracle
 La agrupación de conexiones puede mejorar de forma considerable el rendimiento y la escalabilidad de la aplicación. En esta sección se describe la agrupación de conexiones en los proveedores de datos .NET Framework para OLE DB, ODBC y Oracle.  
@@ -26,8 +26,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  La agrupación de conexiones para el proveedor de datos .NET Framework para ODBC se administra a través del Administrador de controladores ODBC que se utiliza en la conexión, y que no está influido por dicho proveedor.  
   
  Para habilitar o deshabilitar la agrupación de conexiones, abra **Administrador de orígenes de datos ODBC** en la carpeta Herramientas administrativas del Panel de Control. El **agrupación de conexiones** ficha permite especificar parámetros para cada controlador ODBC instalado de agrupación de conexiones. Tenga en cuenta que los cambios en la agrupación de conexiones de un controlador ODBC específico afectarán a todas las aplicaciones que utilicen dicho controlador.  
-  
- Para obtener más información sobre la agrupación de conexiones ODBC, vea [INFO: con frecuencia más frecuentes preguntas acerca de la agrupación de conexiones ODBC](http://support.microsoft.com/kb/169470).  
   
 ## <a name="connection-pooling-for-oracleclient"></a>Agrupación de conexiones para OracleClient  
  El proveedor de datos .NET Framework para Oracle ofrece agrupación automática de conexiones para la aplicación cliente de ADO.NET. También puede suministrar varios modificadores de cadena de conexión para controlar el comportamiento de agrupación de conexiones (vea "Control de la agrupación de conexiones con palabras clave de cadena de conexión", más adelante en este tema).  

@@ -2,11 +2,11 @@
 title: Exportación de metadatos personalizados para una extensión WCF
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c2ae547f10e96a1fdc16fc428e98145fc81c59d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Exportación de metadatos personalizados para una extensión WCF
 En Windows Communication Foundation (WCF), la exportación de metadatos es el proceso de describir extremos de servicio y proyectarlos en una representación paralela y estandarizada que los clientes pueden utilizar para aprender a usar el servicio. Los metadatos personalizados están compuestos de elementos XML que los exportadores de metadatos proporcionados por el sistema no pueden exportar. Normalmente, esto incluye elementos WSDL personalizados para los elementos de enlace y los comportamientos definidos por el usuario y las aserciones de directiva sobre las funciones y requisitos de los enlaces y contratos.  
@@ -14,7 +14,7 @@ En Windows Communication Foundation (WCF), la exportación de metadatos es el pr
  Esta sección describe la exportación de WSDL o aserciones de directivas personalizados y no se centra en el propio proceso de exportación. Para obtener más información sobre cómo usar los tipos que exportación e importación metadatos independientemente de si los metadatos están personalizado o construido por el sistema, consulte [exportar e importar metadatos](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
 ## <a name="overview"></a>Información general  
- Cuando los metadatos se publican utilizando <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, se examina <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> y se generan XSD y WSDL (incluyendo las aserciones de directivas) para todos los contratos y enlaces que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puede admitir mediante enlaces y atributos proporcionados por el sistema. Sin embargo, los atributos de comportamiento o los elementos de enlace personalizados requieren la compatibilidad antes de que se puedan exportar correctamente.  
+ Cuando se publican metadatos mediante la <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, el <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> se examina y se generan XSD y WSDL (incluyendo las aserciones de directivas) para todos los contratos y enlaces de WCF puede admitir mediante enlaces y atributos proporcionados por el sistema. Sin embargo, los atributos de comportamiento o los elementos de enlace personalizados requieren la compatibilidad antes de que se puedan exportar correctamente.  
   
  En esta sección se describe:  
   

@@ -2,11 +2,11 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 614b651d02b511927eda3909a40d1382c0842512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9002597ef662c78b6519ab0c04700cddf7ee3714
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="jsonp"></a>JSONP
 En este ejemplo se muestra cómo admitir JSON con relleno (JSONP) en los servicios REST de WCF. JSONP es una convención usada para invocar scripts entre dominios generando las etiquetas de scripts en el documento actual. El resultado se devuelve en una función de devolución de llamada especificada. JSONP se basa en la idea de que etiquetas como `<script src="http://..." >` pueden evaluar los scripts desde cualquier dominio y el script que estas etiquetas recuperan se evalúa dentro de un ámbito en el que ya se pueden definir otras funciones.  
@@ -36,7 +36,7 @@ proxy.GetCustomer(onSuccess, onFail, null);
 </system.serviceModel>  
 ```  
   
- El ScriptManager administra la interacción con el servicio y oculta la complejidad de la implementación manual del acceso JSONP. Cuando `crossDomainScriptAccessEnabled` se establece en `true` y el formato de respuesta de una operación es JSON, la infraestructura de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inspecciona el URI de la solicitud para buscar un parámetro de cadena de una consulta de devolución de llamada y ajusta la respuesta JSON con el valor de dicho parámetro. En el ejemplo, la página web llama al servicio REST de WCF con el siguiente URI.  
+ El ScriptManager administra la interacción con el servicio y oculta la complejidad de la implementación manual del acceso JSONP. Cuando `crossDomainScriptAccessEnabled` está establecido en `true` y el formato de respuesta para una operación es JSON, la infraestructura de WCF inspecciona el URI de la solicitud para un parámetro de cadena de consulta de devolución de llamada y ajusta la respuesta JSON con el valor de la cadena de consulta de devolución de llamada parámetro. En el ejemplo, la página web llama al servicio REST de WCF con el siguiente URI.  
   
 ```  
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0  
@@ -50,7 +50,7 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
  Esta respuesta JSONP incluye los datos del cliente con formato JSON, ajustados con el nombre de la función de devolución de llamada que la página web solicitó. El ScriptManager ejecutará esta devolución de llamada utilizando una etiqueta de script para lograr la solicitud a través de los dominios y, a continuación, pasará el resultado al controlador onSuccess que se pasó a la operación GetCustomer del proxy AJAX de ASP.NET.  
   
- El ejemplo está compuesto de dos aplicaciones web de ASP.NET: uno contiene simplemente un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y el otro contiene la página web .aspx, que llama al servicio. Al ejecutar la solución, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] hospedará los dos sitios web en puertos diferentes, con lo que se crea un entorno donde el servicio y cliente están en dominios distintos.  
+ El ejemplo consta de dos aplicaciones web ASP.NET: uno contiene simplemente un servicio WCF, y otro contiene la página Web .aspx, que llama al servicio. Al ejecutar la solución, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] hospedará los dos sitios web en puertos diferentes, con lo que se crea un entorno donde el servicio y cliente están en dominios distintos.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
@@ -67,4 +67,4 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 2.  Presione F5 para iniciar `http://localhost:26648/JSONPClientPage.aspx` en el explorador.  
   
-3.  Tenga en cuenta que una vez cargada la página, las entradas de texto para "Nombre" y "Dirección" están rellenas con valores.  Estos valores se proporcionaron en una llamada al servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], una vez que el explorador terminó de representar la página.
+3.  Tenga en cuenta que una vez cargada la página, las entradas de texto para "Nombre" y "Dirección" están rellenas con valores.  Estos valores se proporcionaron en una llamada al servicio WCF después de que el explorador terminó de representar la página.

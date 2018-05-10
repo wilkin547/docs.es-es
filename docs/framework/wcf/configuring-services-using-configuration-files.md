@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: abfe502c6b50234037cad786a658edc3d479cc9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 19ba0e585dfdd2ee47781b04a3d1a5bbdba60371
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configuración de servicios mediante archivos de configuración
 Configurar un servicio de Windows Communication Foundation (WCF) con un archivo de configuración le da la flexibilidad de proporcionar el punto de conexión y datos de comportamiento del servicio en el momento de la implementación en lugar de hacerlo en tiempo de diseño. En este tema se describen las principales técnicas disponibles.  
   
- Se puede configurar un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mediante la tecnología de configuración [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . Por lo general, los elementos XML se agregan al archivo Web.config para un sitio de Internet Information Services (IIS) que hospeda un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Los elementos le permiten cambiar detalles como las direcciones de extremos (las direcciones reales utilizadas para comunicarse con el servicio) equipo a equipo. Además, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye varios elementos proporcionados por el sistema que le permiten seleccionar rápidamente las características más básicas de un servicio. A partir de [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye un nuevo modelo de configuración predeterminado que simplifica los requisitos de configuración de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Si no se proporciona ninguna configuración de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para un servicio concreto, el tiempo de ejecución lo configurará automáticamente con varios extremos estándar y un enlace/comportamiento predeterminado. En la práctica, escribir la configuración es una parte principal de la programación de aplicaciones de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] .  
+ Un servicio WCF es que puede configurar mediante la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] tecnología de configuración. Normalmente, los elementos XML se agregan al archivo Web.config para un sitio de Internet Information Services (IIS) que hospeda un servicio WCF. Los elementos le permiten cambiar detalles como las direcciones de extremos (las direcciones reales utilizadas para comunicarse con el servicio) equipo a equipo. Además, WCF incluye varios elementos proporcionados por el sistema que le permiten seleccionar rápidamente las características más básicas para un servicio. A partir de [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF incluye un nuevo modelo de configuración predeterminado que simplifica los requisitos de configuración de WCF. Si no proporciona ninguna configuración de WCF para un servicio concreto, el tiempo de ejecución configurará automáticamente con varios puntos de conexión estándar y un enlace/comportamiento predeterminado. En la práctica, escribir la configuración es una gran parte de la programación de aplicaciones de WCF.  
   
  Para obtener más información, consulte [configurar enlaces para servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Para una lista de la mayor parte de uso general elementos, vea [enlaces proporcionados](../../../docs/framework/wcf/system-provided-bindings.md). Para obtener más información acerca de los puntos de conexión de forma predeterminada, los enlaces y los comportamientos, consulte [configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
@@ -21,7 +21,7 @@ Configurar un servicio de Windows Communication Foundation (WCF) con un archivo 
 >  Al implementar escenarios en paralelo con dos versiones diferentes de un servicio, es necesario especificar los nombres parciales de los ensamblados a los que se hace referencia en los archivos de configuración. Esto se debe a que el archivo de configuración se comparte entre todas las versiones de un servicio y se podrían estar ejecutando con versiones diferentes de .NET Framework.  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web.config y App.config  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] utiliza el sistema de configuración System.Configuration de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ WCF usa el sistema de configuración System.Configuration de la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Al configurar un servicio en Visual Studio, utilice un archivo Web.config o un archivo App.config para especificar la configuración. El entorno de hospedaje determina la elección realizada del nombre del archivo de configuración para el servicio. Si está utilizando IIS para hospedar su servicio, utilice un archivo Web.config. Si está utilizando cualquier otro entorno de hospedaje, utilice un archivo App.config.  
   
@@ -115,7 +115,7 @@ Configurar un servicio de Windows Communication Foundation (WCF) con un archivo 
  [\<comportamiento >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Uso de las configuraciones de comportamientos y enlaces  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hace fácil compartir las configuraciones entre extremos utilizando un sistema de referencia en la configuración. En lugar de asignar directamente los valores de configuración a un extremo, los valores de configuración relacionados con el enlace se agrupan en elementos `bindingConfiguration` de la sección `<binding>` . Una configuración de enlace es un grupo con nombre de valores en un enlace. Entonces, los extremos pueden hacer referencia a `bindingConfiguration` por nombre.  
+ WCF hace fácil compartir las configuraciones entre extremos utilizando un sistema de referencia en la configuración. En lugar de asignar directamente los valores de configuración a un extremo, los valores de configuración relacionados con el enlace se agrupan en elementos `bindingConfiguration` de la sección `<binding>` . Una configuración de enlace es un grupo con nombre de valores en un enlace. Entonces, los extremos pueden hacer referencia a `bindingConfiguration` por nombre.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

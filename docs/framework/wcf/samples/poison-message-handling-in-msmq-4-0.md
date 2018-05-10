@@ -2,11 +2,11 @@
 title: Control de mensajes dudosos en MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 25d99e6864b967b498fc53a6f6d78f476f4d938f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0ddab7832e308336d5bfb1c5f75fd13fe63fe72
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Control de mensajes dudosos en MSMQ 4,0
 Este ejemplo muestra cómo administrar los mensajes dudosos en un servicio. En este ejemplo se basa en el [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo. Este ejemplo utiliza `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.  
@@ -156,7 +156,7 @@ public class OrderProcessorService : IOrderProcessor
 ## <a name="processing-messages-from-the-poison-message-queue"></a>Procesamiento de los mensajes de la cola de mensajes dudosos  
  El servicio de mensajes dudosos lee los mensajes desde la cola de mensajes dudosos final y los procesa.  
   
- Los mensajes en la cola de mensajes dudosos son los que se dirigen al servicio que está procesando el mensaje, que podría ser diferente del extremo de servicio de mensajes dudosos. Por consiguiente, cuando el servicio de mensajes dudosos lee los mensajes de la cola, el nivel de canal de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] encuentra la desigualdad en los extremos y no envía el mensaje. En este caso, el mensaje se dirige al servicio de procesamiento de pedidos pero está siendo recibido por el servicio de mensajes dudosos. Para continuar recibiendo el mensaje aun cuando se dirige a un extremo diferente, debemos agregar `ServiceBehavior` para filtrar las direcciones en las que el criterio de coincidencia sea coincidir con cualquier extremo de servicio al que se dirija el mensaje. Esto es necesario para procesar correctamente los mensajes que lee desde la cola de mensajes dudosos.  
+ Los mensajes en la cola de mensajes dudosos son los que se dirigen al servicio que está procesando el mensaje, que podría ser diferente del punto de conexión de servicio de mensajes dudosos. Por lo tanto, cuando el servicio de mensajes dudosos lee los mensajes de la cola, la capa del canal WCF encuentra la desigualdad en los puntos de conexión y no envía el mensaje. En este caso, el mensaje se dirige al servicio de procesamiento de pedidos pero está siendo recibido por el servicio de mensajes dudosos. Para continuar recibiendo el mensaje aun cuando se dirige a un extremo diferente, debemos agregar `ServiceBehavior` para filtrar las direcciones en las que el criterio de coincidencia sea coincidir con cualquier extremo de servicio al que se dirija el mensaje. Esto es necesario para procesar correctamente los mensajes que lee desde la cola de mensajes dudosos.  
   
  La propia implementación de servicio de los mensajes dudosos es muy similar a la implementación del servicio. Implementa el contrato y procesa los pedidos. El ejemplo de código es el siguiente.  
 

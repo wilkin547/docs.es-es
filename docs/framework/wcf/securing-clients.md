@@ -6,17 +6,17 @@ helpviewer_keywords:
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 34e7a3721fc70b5c418f0e473e09d9dacc8d9f15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dfbe1fcce8a3b860e88dae4f5af43adfedbe9890
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-clients"></a>Protección de clientes
 En Windows Communication Foundation (WCF), el servicio dicta los requisitos de seguridad para los clientes. Es decir, el servicio especifica qué modo de seguridad utilizar, y si el cliente debe proporcionar una credencial o no. El proceso de protección de un cliente, por consiguiente, es simple: utilice los metadatos obtenidos del servicio (si se publica) y cree un cliente. Los metadatos especifican cómo configurar el cliente. Si el servicio requiere que el cliente suministre una credencial, debe obtener una credencial que se ajuste al requisito. Este tema explica el proceso con más detalle. Para obtener más información acerca de cómo crear un servicio seguro, consulte [proteger Services](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>El servicio especifica la seguridad  
- De forma predeterminada, los enlaces [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tienen características de seguridad habilitadas. (La excepción es el <xref:System.ServiceModel.BasicHttpBinding>.) Por tanto, si el servicio se creó mediante [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], hay una mayor probabilidad de que implementará la seguridad para asegurar la autenticación, confidencialidad e integridad. En ese caso, los metadatos que proporciona el servicio indicarán lo que se requiere para establecer un canal de comunicación seguro. Si los metadatos del servicio no incluyen ningún requisito de seguridad, no hay ninguna manera de imponer un esquema de seguridad, como Secure Sockets Layer (SSL) sobre HTTP, en un servicio. Si, sin embargo, el servicio requiere que el cliente proporcione una credencial, el desarrollador, implementador o administrador del cliente, debe proporcionar la credencial real que el cliente utilizará para autenticarse en el servicio.  
+ De forma predeterminada, los enlaces de WCF tienen características de seguridad habilitadas. (La excepción es el <xref:System.ServiceModel.BasicHttpBinding>.) Por lo tanto, si el servicio se creó mediante WCF, hay una mayor probabilidad de que implementará la seguridad para garantizar la integridad, confidencialidad y autenticación. En ese caso, los metadatos que proporciona el servicio indicarán lo que se requiere para establecer un canal de comunicación seguro. Si los metadatos del servicio no incluyen ningún requisito de seguridad, no hay ninguna manera de imponer un esquema de seguridad, como Secure Sockets Layer (SSL) sobre HTTP, en un servicio. Si, sin embargo, el servicio requiere que el cliente proporcione una credencial, el desarrollador, implementador o administrador del cliente, debe proporcionar la credencial real que el cliente utilizará para autenticarse en el servicio.  
   
 ## <a name="obtaining-metadata"></a>Obtención de los metadatos  
  Al crear un cliente, el primer paso es obtener los metadatos para el servicio con el que el cliente se comunicará. Esto se puede llevar a cabo de dos maneras. En primer lugar, si el servicio publica un extremo de intercambio (MEX) de metadatos o pone sus metadatos a disposición sobre HTTP o HTTPS, puede descargar los metadatos mediante la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), lo cual genera ambos archivos de código para un cliente, así como un archivo de configuración. (Para obtener más información sobre el uso de la herramienta, consulte [al tener acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Si el servicio no publica un punto de conexión MEX y tampoco pone sus metadatos a disposición sobre HTTP o HTTPS, debe ponerse en contacto con el creador del servicio para obtener la documentación que describe los requisitos de seguridad y los metadatos.  

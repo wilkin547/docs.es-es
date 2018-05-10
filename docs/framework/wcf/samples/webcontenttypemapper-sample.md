@@ -2,18 +2,18 @@
 title: Ejemplo de WebContentTypeMapper
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 3b3d53b0fe619c74c5e7f3533194f4b5e7c18a16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 89f13599e23f3e60ae4d9bc973debc436f46c147
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="webcontenttypemapper-sample"></a>Ejemplo de WebContentTypeMapper
 Este ejemplo muestra cómo asignar nuevos tipos de contenido a formatos de cuerpo de mensaje de Windows Communication Foundation (WCF).  
   
- El elemento <xref:System.ServiceModel.Description.WebHttpEndpoint> complementa el codificador del mensaje web, que permite a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] recibir mensajes binarios sin formato, JSON o XML en el mismo extremo. El codificador determina el formato del cuerpo del mensaje examinando el tipo de contenido del Http de la solicitud. Este ejemplo incluye la clase <xref:System.ServiceModel.Channels.WebContentTypeMapper>, que permite al usuario controlar la asignación entre el tipo de contenido y el formato del cuerpo.  
+ El <xref:System.ServiceModel.Description.WebHttpEndpoint> elemento complementa el codificador de mensaje Web, que permite que WCF recibir mensajes binarios sin formato en el mismo extremo, JSON o XML. El codificador determina el formato del cuerpo del mensaje examinando el tipo de contenido del Http de la solicitud. Este ejemplo incluye la clase <xref:System.ServiceModel.Channels.WebContentTypeMapper>, que permite al usuario controlar la asignación entre el tipo de contenido y el formato del cuerpo.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona un conjunto de asignaciones predeterminadas para los tipos de contenido. Por ejemplo, `application/json` se asigna a JSON y `text/xml` se asigna a XML. Cualquier tipo de contenido que no está asignado a JSON o a XML, está asignado al formato binario sin formato.  
+ WCF proporciona un conjunto de asignaciones predeterminadas para los tipos de contenido. Por ejemplo, `application/json` se asigna a JSON y `text/xml` se asigna a XML. Cualquier tipo de contenido que no está asignado a JSON o a XML, está asignado al formato binario sin formato.  
   
  En algunos escenarios (por ejemplo, estilo de inserción API), el programador del servicio no controla el tipo de contenido devuelto por el cliente. Por ejemplo, los clientes podrían devolver JSON como `text/javascript` en lugar de `application/json`. En este caso, el programador del servicio debe proporcionar un tipo que deriva de <xref:System.ServiceModel.Channels.WebContentTypeMapper> para administrar correctamente el tipo de contenido determinado, como se muestra en el código de muestra siguiente.  
   

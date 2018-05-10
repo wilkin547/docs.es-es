@@ -6,18 +6,18 @@ helpviewer_keywords:
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 6ba6df24163064ee65c563253fa56a1ec574cffc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94aefe80674c5b4ec6fcce6a41d9b68e093f4262
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-security"></a>Extensión de la seguridad
 Para dar cabida a nuevos tipos de notificación y tokens personalizados, puede ampliar la infraestructura de seguridad de Windows Communication Foundation (WCF). Los temas de esta sección le muestran cómo hacerlo.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Arquitectura de seguridad](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- Describe la arquitectura del sistema de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Le guía a través de la arquitectura del sistema de seguridad WCF.  
   
  [Credencial personalizada y validación de la credencial](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
  Explica cómo se utiliza el modelo de identidad al validar las credenciales personalizadas.  

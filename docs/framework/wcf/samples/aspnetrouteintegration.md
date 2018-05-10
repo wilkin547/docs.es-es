@@ -2,25 +2,25 @@
 title: AspNetRouteIntegration
 ms.date: 03/30/2017
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-ms.openlocfilehash: c2b2a47a0c817e23a06c39d622bca9c649cbadb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 671857b0ace2e18f0dac7fd8033a20f3af889c8b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 Este ejemplo muestra cómo hospedar un servicio REST de Windows Communication Foundation (WCF) mediante las rutas de ASP.NET. El [servicio de recurso básico](../../../../docs/framework/wcf/samples/basic-resource-service.md) ejemplo muestra una versión de este escenario hospedada por sí mismo y se describe la implementación del servicio en profundidad. Este tema se centra en la característica de integración de ASP.NET. Para obtener más información sobre el enrutamiento de ASP.NET, vea <xref:System.Web.Routing>.  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
- El servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expone una colección de clientes al modo de REST u orientado a los recursos. Al igual que un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] basado en SOAP, el servicio se puede hospedar en ASP.NET utilizando un archivo .svc. Sin embargo, a menudo esto no es deseable para los escenarios del HTTP porque requiere tener .svc en la dirección URL del servicio. Además, requiere implementar un archivo .svc junto con la biblioteca de servicios. Estas limitaciones se pueden evitar hospedando el servicio mediante las rutas de ASP.NET, como se muestra en este ejemplo.  
+ El servicio WCF expone una colección de clientes de una manera de REST u orientado a recursos. Al igual que un servicio WCF basado en SOAP, el servicio se puede hospedar en ASP.NET utilizando un archivo .svc. Sin embargo, a menudo esto no es deseable para los escenarios del HTTP porque requiere tener .svc en la dirección URL del servicio. Además, requiere implementar un archivo .svc junto con la biblioteca de servicios. Estas limitaciones se pueden evitar hospedando el servicio mediante las rutas de ASP.NET, como se muestra en este ejemplo.  
   
  En el ejemplo se hospeda el servicio en ASP.NET agregando un objeto <xref:System.ServiceModel.Activation.ServiceRoute> en un archivo Global.asax. El objeto <xref:System.ServiceModel.Activation.ServiceRoute> especifica el tipo del servicio ('Service' en este caso), el tipo del generador de host de servicio para utilizar para el servicio (<xref:System.ServiceModel.Activation.WebServiceHostFactory> en este caso) y la dirección base HTTP para el servicio ('~/Customers en este caso).  
   
- Además de esto, en el ejemplo se incluye un archivo Web.config que agrega el objeto <xref:System.Web.Routing.UrlRoutingModule> (para activar las rutas ASP.NET) e incluye la configuración para el servicio. En particular, la configuración configura el servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con un objeto <xref:System.ServiceModel.Description.WebHttpEndpoint> predeterminado que tiene la propiedad <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> establecida en `true`. Como resultado, la infraestructura de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea una página de Ayuda basada en HTML automática en `http://localhost/Customers/help` que proporciona información acerca de cómo construir las solicitudes HTTP para servicio y cómo tener acceso a la respuesta HTTP del servicio, por ejemplo, lo que es una muestra de cómo se representan los detalles del cliente en XML y JSON.  
+ Además de esto, en el ejemplo se incluye un archivo Web.config que agrega el objeto <xref:System.Web.Routing.UrlRoutingModule> (para activar las rutas ASP.NET) e incluye la configuración para el servicio. En concreto, la configuración configura el servicio WCF no tiene un valor predeterminado <xref:System.ServiceModel.Description.WebHttpEndpoint> que tiene el <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> si se establece en `true`. Como resultado, la infraestructura de WCF crea una página de Ayuda basada en HTML automática en `http://localhost/Customers/help` que proporciona información sobre cómo construir HTTP las solicitudes al servicio y cómo obtener acceso a la respuesta del servicio HTTP: por ejemplo, un ejemplo de cómo el cliente detalles se representan en XML y JSON.  
   
  Exponer la colección del cliente (y más generalmente, de cualquier recurso) de esta manera permite a un cliente interactuar con un servicio de una manera uniforme utilizando direcciones URI y HTTP `GET`, `PUT`, `DELETE` y `POST`.  
   
- Program.cs en el proyecto cliente muestra el modo en que se puede crear este tipo de cliente utilizando <xref:System.Net.HttpWebRequest>. Observe que se trata simplemente de una manera de tener acceso a un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. También es posible tener acceso al servicio utilizando otras clases de .NET Framework como el generador de canales de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y <xref:System.Net.WebClient>. Otros ejemplos en el SDK (como el [servicio HTTP básico](../../../../docs/framework/wcf/samples/basic-http-service.md) ejemplo y la [la selección automática de formato](../../../../docs/framework/wcf/samples/automatic-format-selection.md) ejemplo) se muestra cómo utilizar estas clases para comunicarse con un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio.  
+ Program.cs en el proyecto cliente muestra el modo en que se puede crear este tipo de cliente utilizando <xref:System.Net.HttpWebRequest>. Observe que se trata simplemente de una manera de tener acceso a un servicio de WCF. También es posible tener acceso al servicio utilizando otras clases de .NET Framework como el generador de canales WCF y <xref:System.Net.WebClient>. Otros ejemplos del SDK (como el [servicio HTTP básico](../../../../docs/framework/wcf/samples/basic-http-service.md) ejemplo y la [la selección automática de formato](../../../../docs/framework/wcf/samples/automatic-format-selection.md) ejemplo) se muestra cómo utilizar estas clases para comunicarse con un servicio WCF.  
   
  ESte ejemplo consta de tres proyectos:  
   

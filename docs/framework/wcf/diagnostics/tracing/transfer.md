@@ -2,17 +2,17 @@
 title: Transferir
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa7535aa393544077a9802b5c3255d6e5f6accda
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transfer"></a>Transferir
 En este tema se describe la transferencia en el modelo de seguimiento de actividad de Windows Communication Foundation (WCF).  
   
 ## <a name="transfer-definition"></a>Definición de transferencia  
- Las transferencias entre actividades representan relaciones causales entre eventos en las actividades relacionadas dentro de los extremos. Dos actividades se relacionan con transferencias cuando el control fluye entre estas actividades, como por ejemplo, una llamada al método que cruza límites de actividad. En [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], cuando los bytes son de entrada en el servicio, la actividad Realizar escucha de se transfiere a la actividad Recibir bytes, donde se crea el objeto de mensaje. Para obtener una lista de escenarios de seguimiento de extremo a extremo y su respectivo actividad y seguimiento de diseño, vea [escenarios de seguimiento de End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
+ Las transferencias entre actividades representan relaciones causales entre eventos en las actividades relacionadas dentro de los extremos. Dos actividades se relacionan con transferencias cuando el control fluye entre estas actividades, como por ejemplo, una llamada al método que cruza límites de actividad. En WCF, cuando los bytes son entrantes en el servicio, la actividad escuchar a se transfiere a la actividad recibir Bytes donde se creó el objeto de mensaje. Para obtener una lista de escenarios de seguimiento de extremo a extremo y su respectivo actividad y seguimiento de diseño, vea [escenarios de seguimiento de End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
   
  Para emitir seguimientos de transferencia, use el valor `ActivityTracing` en el origen de seguimiento, tal y como se muestra en el código de configuración siguiente.  
   

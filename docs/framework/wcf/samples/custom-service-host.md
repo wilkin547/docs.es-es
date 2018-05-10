@@ -2,11 +2,11 @@
 title: Host de servicio personalizado
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: c081858d57d9575a616c7c057047b0593a177f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c02ceb114a5346ea2a851f711f1ab9b50373cb75
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-service-host"></a>Host de servicio personalizado
 Este ejemplo muestra cómo utilizar un derivado personalizado de la clase <xref:System.ServiceModel.ServiceHost> para modificar el comportamiento de tiempo de ejecución de un servicio. Este enfoque proporciona una alternativa reutilizable para configurar un gran número de servicios de una manera común. El ejemplo también muestra cómo utilizar la clase <xref:System.ServiceModel.Activation.ServiceHostFactory> para utilizar un ServiceHost personalizado en el entorno de host de Internet Information Services (IIS) o el Servicio de activación de procesos de Windows (WAS).  
@@ -121,7 +121,7 @@ host.Open();
  Nuestro host personalizado todavía lee la configuración del extremo del servicio del archivo de configuración de la aplicación, así como si hubiéramos utilizado la clase <xref:System.ServiceModel.ServiceHost> predeterminada para hospedar el servicio. Sin embargo, porque agregamos la lógica para habilitar metadatos que publican dentro de nuestro host personalizado, ya no debemos habilitar explícitamente los metadatos que publican el comportamiento en configuración. Este enfoque tiene una ventaja distinta al estar creando una aplicación que contiene varios servicios y desea habilitar metadatos que publican en cada uno de ellos sin escribir los mismos elementos de configuración una y otra vez.  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>Utilizar un ServiceHost personalizado en IIS o WAS  
- Utilizar un host del servicio personalizado en escenarios de autohospedaje es sencillo, porque es su código de aplicación el que es finalmente responsable de crear y abrir la instancia del host de servicio. En el entorno host IIS o WAS, sin embargo, la infraestructura [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] está creando dinámicamente instancias del host de su servicio en respuesta a los mensajes entrantes. Los hosts de servicio personalizados también se pueden utilizar en este entorno host, pero requieren código adicional en el formulario de ServiceHostFactory. El código siguiente muestra un derivado de <xref:System.ServiceModel.Activation.ServiceHostFactory> que devuelve instancias de nuestro `SelfDescribingServiceHost`personalizado.  
+ Utilizar un host del servicio personalizado en escenarios de autohospedaje es sencillo, porque es su código de aplicación el que es finalmente responsable de crear y abrir la instancia del host de servicio. En el host IIS o WAS entorno, sin embargo, la infraestructura de WCF está creando dinámicamente instancias host de su servicio en respuesta a los mensajes entrantes. Los hosts de servicio personalizados también se pueden utilizar en este entorno host, pero requieren código adicional en el formulario de ServiceHostFactory. El código siguiente muestra un derivado de <xref:System.ServiceModel.Activation.ServiceHostFactory> que devuelve instancias de nuestro `SelfDescribingServiceHost`personalizado.  
   
 ```  
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
@@ -150,7 +150,7 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>  
 ```  
   
- Aquí hemos agregado un atributo `Factory` adicional a la directiva `@ServiceHost` y pasamos el nombre de tipo de CLR de nuestro generador personalizado como el valor del atributo. Cuando IIS o WAS recibe un mensaje para este servicio, el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que hospeda primero la infraestructura, crea una instancia de ServiceHostFactory y, a continuación, crea instancias del propio host del servicio denominado `ServiceHostFactory.CreateServiceHost()`.  
+ Aquí hemos agregado un atributo `Factory` adicional a la directiva `@ServiceHost` y pasamos el nombre de tipo de CLR de nuestro generador personalizado como el valor del atributo. Cuando IIS o WAS recibe un mensaje para este servicio, la infraestructura de hospedaje de WCF crea primero una instancia de ServiceHostFactory y, a continuación, crear una instancia del propio host del servicio mediante una llamada a `ServiceHostFactory.CreateServiceHost()`.  
   
 ## <a name="running-the-sample"></a>Ejecutar el ejemplo  
  Aunque este ejemplo proporciona un cliente totalmente funcional y una implementación del servicio completa, el ejemplo pretende mostrar cómo modificar el comportamiento del tiempo de ejecución de un servicio por medio de un host personalizado. Siga los siguientes pasos:  

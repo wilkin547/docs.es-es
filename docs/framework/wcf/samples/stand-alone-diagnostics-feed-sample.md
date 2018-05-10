@@ -2,16 +2,16 @@
 title: Ejemplo de fuente de diagnósticos independientes
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 1edd1c2184dde368fbd16299a836f1811dd24ba6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 730cf011208ea1b57929fff4a1953fd3a935335c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Ejemplo de fuente de diagnósticos independientes
 Este ejemplo muestra cómo crear una fuente de distribución con Windows Communication Foundation (WCF) de RSS/Atom. Es un programa "Hola a todos" básico que muestra los conceptos básicos del modelo de objetos y cómo configurarlo en un servicio de Windows Communication Foundation (WCF).  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modela las fuentes de distribución como operaciones de servicio que devuelven un tipo de datos especial, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Las instancias de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> pueden serializar una fuente en los formatos RSS 2.0 y Atom 1.0. El código de ejemplo siguiente muestra el contrato utilizado.  
+ WCF modela las fuentes de distribución como operaciones de servicio que devuelven un tipo de datos especial, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Las instancias de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> pueden serializar una fuente en los formatos RSS 2.0 y Atom 1.0. El código de ejemplo siguiente muestra el contrato utilizado.  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -31,9 +31,9 @@ Este ejemplo muestra cómo crear una fuente de distribución con Windows Communi
     }  
 ```  
   
- La operación `GetProcesses` se agrega con el atributo <xref:System.ServiceModel.Web.WebGetAttribute> que le permite controlar cómo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] envía las solicitudes HTTP GET de operaciones de servicio y especifica el formato de los mensajes enviados.  
+ El `GetProcesses` operación se anota con el <xref:System.ServiceModel.Web.WebGetAttribute> solicitudes de atributo que le permite controlar cómo WCF envía HTTP GET para las operaciones del servicio y especificar el formato de los mensajes enviados.  
   
- Como cualquier servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], las fuentes de sindicación pueden hospedarse en sí mismas en cualquier aplicación administrada. Los servicios de distribución requieren un enlace específico (<xref:System.ServiceModel.WebHttpBinding>) y un comportamiento del extremo específico (<xref:System.ServiceModel.Description.WebHttpBehavior>) para funcionar correctamente. La nueva clase <xref:System.ServiceModel.Web.WebServiceHost> proporciona un API apropiado para crear estos extremos sin una configuración específica.  
+ Al igual que cualquier servicio WCF, las fuentes de distribución pueden ser alojada en cualquier aplicación administrada por el usuario. Los servicios de distribución requieren un enlace específico (<xref:System.ServiceModel.WebHttpBinding>) y un comportamiento del extremo específico (<xref:System.ServiceModel.Description.WebHttpBehavior>) para funcionar correctamente. La nueva clase <xref:System.ServiceModel.Web.WebServiceHost> proporciona un API apropiado para crear estos extremos sin una configuración específica.  
   
 ```  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  

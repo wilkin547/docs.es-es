@@ -2,14 +2,14 @@
 title: Tratamiento de errores y puentes
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: f13a55704422e8a958e55c489f6db11108b03c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bridging-and-error-handling"></a>Tratamiento de errores y puentes
-Este ejemplo muestra cómo se utiliza el servicio de enrutamiento de Windows Communication Foundation (WCF) para puentear la comunicación entre un cliente y un servicio que utilizan enlaces diferentes. Este ejemplo también muestra cómo utilizar un servicio de seguridad de reserva para escenarios de conmutación por error. El servicio de enrutamiento es un componente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que permite incluir fácilmente un enrutador basado en contenido en una aplicación. En este ejemplo se adapta el ejemplo de la calculadora de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estándar para comunicarse utilizando el servicio de enrutamiento.  
+Este ejemplo muestra cómo se utiliza el servicio de enrutamiento de Windows Communication Foundation (WCF) para puentear la comunicación entre un cliente y un servicio que utilizan enlaces diferentes. Este ejemplo también muestra cómo utilizar un servicio de seguridad de reserva para escenarios de conmutación por error. El servicio de enrutamiento es un componente WCF que facilita el proceso incluir un enrutador basado en contenido en la aplicación. Este ejemplo adapta el ejemplo de la calculadora de WCF estándar para comunicarse con el servicio de enrutamiento.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

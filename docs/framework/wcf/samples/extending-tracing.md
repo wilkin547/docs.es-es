@@ -2,11 +2,11 @@
 title: Extensión del seguimiento
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 685ba85dc240bc2fdefdf02d9ece2279e3507abc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59291b6a57ba602e5fea84dcd571a8d767b7cc04
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-tracing"></a>Extensión del seguimiento
 Este ejemplo muestra cómo extender la característica de seguimiento de Windows Communication Foundation (WCF) escribiendo el seguimiento de actividad definido por el usuario en el código de cliente y el servicio. Esto permite al usuario crear actividades de seguimiento y seguimientos de grupo en las unidades lógicas de trabajo. También es posible poner en correlación las actividades a través de las transferencias (dentro del mismo punto de conexión) y propagación (a través de los puntos de conexión). En este ejemplo, el seguimiento se habilita para el cliente y el servicio. Para obtener más información acerca de cómo habilitar el seguimiento en los archivos de configuración de cliente y el servicio, consulte [seguimiento y registro de mensajes](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -26,7 +26,7 @@ Este ejemplo muestra cómo extender la característica de seguimiento de Windows
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
 ## <a name="tracing-and-activity-propagation"></a>Propagación de seguimiento y de actividad  
- El seguimiento de actividad definida por el usuario permite al usuario crear sus propias actividades de seguimiento para agrupar seguimientos en unidades lógicas de trabajo, poner en correlación las actividades a través de transferencias y propagación, y disminuir el costo de rendimiento de la traza de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (por ejemplo, el costo del espacio en disco de un archivo de registro).  
+ Seguimiento de la actividad definida por el usuario permite al usuario crear sus propias actividades de seguimiento para agrupar los seguimientos en unidades lógicas de trabajo, poner en correlación las actividades a través de transferencias y propagación y reducir el costo de rendimiento de seguimiento de WCF (por ejemplo, el espacio en disco de costo un archivo de registro).  
   
 ### <a name="adding-custom-sources"></a>Adición de orígenes personalizados  
  Los seguimientos definidos por el usuario pueden añadirse tanto al código de cliente como de servicio. Agregar orígenes de seguimiento para los archivos de configuración de cliente o servicio permiten estos seguimientos personalizados que se registran y se muestra en el [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). El código siguiente muestra cómo agregar un origen de seguimiento definido por el usuario denominado `ServerCalculatorTraceSource` al archivo de configuración.  
@@ -67,7 +67,7 @@ Este ejemplo muestra cómo extender la característica de seguimiento de Windows
 ```  
   
 ### <a name="correlating-activities"></a>Cómo poner en correlación las actividades  
- Para poner en correlación directamente las actividades con los extremos, el atributo `propagateActivity` debe estar establecido en `true` en el origen de seguimiento `System.ServiceModel`. Además, para propagar los seguimientos sin pasar por las actividades de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], se debe desactivar el seguimiento de la actividad de ServiceModel. Esto puede verse en el siguiente ejemplo de código:  
+ Para poner en correlación directamente las actividades con los extremos, el atributo `propagateActivity` debe estar establecido en `true` en el origen de seguimiento `System.ServiceModel`. Además, para propagar los seguimientos sin pasar por las actividades WCF, seguimiento de actividad ServiceModel debe estar desactivada. Esto puede verse en el siguiente ejemplo de código:  
   
 > [!NOTE]
 >  Desactivar el seguimiento de actividades de ServiceModel no es igual que tener el nivel de seguimiento, indicado por la propiedad `switchValue`, definido en desactivado.  
@@ -85,7 +85,7 @@ Este ejemplo muestra cómo extender la característica de seguimiento de Windows
 ```  
   
 ### <a name="lessening-performance-cost"></a>Disminución del coste de rendimiento  
- Al establecer `ActivityTracing` en desactivado en el origen de seguimiento de `System.ServiceModel`, se genera un archivo de seguimiento que contiene solo seguimientos de actividad definidos por el usuario sin ninguno de los seguimientos de actividad de ServiceModel incluidos. Esto genera un archivo de registro de mucho menor tamaño. Sin embargo, se pierde la oportunidad de poner en correlación los seguimientos de procesamiento de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Al establecer `ActivityTracing` en desactivado en el origen de seguimiento de `System.ServiceModel`, se genera un archivo de seguimiento que contiene solo seguimientos de actividad definidos por el usuario sin ninguno de los seguimientos de actividad de ServiceModel incluidos. Esto genera un archivo de registro de mucho menor tamaño. Sin embargo, la oportunidad de poner en correlación seguimientos de procesamiento de WCF se pierde.  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   

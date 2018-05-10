@@ -2,14 +2,14 @@
 title: Ejemplo de XMLSerializer
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 3d1df93ef0efb7da24a1478f87e10dd18aa10bf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 155719f546491f53ad2587e12d030dd7821b1fd3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="xmlserializer-sample"></a>Ejemplo de XMLSerializer
-Este ejemplo muestra cómo serializar y deserializar tipos que sean compatibles con <xref:System.Xml.Serialization.XmlSerializer>. El formateador de Windows Communication Foundation (WCF) de forma predeterminada es la <xref:System.Runtime.Serialization.DataContractSerializer> clase. Se puede usar la clase <xref:System.Xml.Serialization.XmlSerializer> para serializar y deserializar los tipos cuando no se puede utilizar la clase <xref:System.Runtime.Serialization.DataContractSerializer>. Éste es a menudo el caso cuando se requiere el control preciso sobre XML; por ejemplo, si un dato debe ser un atributo XML y no un elemento XML. Además, <xref:System.Xml.Serialization.XmlSerializer> se selecciona automáticamente cuando se crean clientes para servicios que no sean de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Este ejemplo muestra cómo serializar y deserializar tipos que sean compatibles con <xref:System.Xml.Serialization.XmlSerializer>. El formateador de Windows Communication Foundation (WCF) de forma predeterminada es la <xref:System.Runtime.Serialization.DataContractSerializer> clase. Se puede usar la clase <xref:System.Xml.Serialization.XmlSerializer> para serializar y deserializar los tipos cuando no se puede utilizar la clase <xref:System.Runtime.Serialization.DataContractSerializer>. Éste es a menudo el caso cuando se requiere el control preciso sobre XML; por ejemplo, si un dato debe ser un atributo XML y no un elemento XML. Además, el <xref:System.Xml.Serialization.XmlSerializer> se selecciona automáticamente cuando se crean clientes para servicios no WCF.  
   
  En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
   

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: 32b8b9e1fbb3ae16f4dd81620658569a9408057b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2a0e797a921ff20b2432e824c92c09fff833bf7d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bindings-and-binding-elements"></a>Enlaces y elementos de enlace
 Los enlaces son colecciones de elementos de configuración especial, denominados *elementos de enlace*, que son evaluados por el runtime del servicio siempre que un cliente o el punto de conexión de servicio se está construyendo. El tipo y orden de los elementos de enlace dentro de un enlace determina la selección y el orden de apilamiento del protocolo y los canales de transporte en la pila de canales de un punto de conexión.  
@@ -18,7 +18,7 @@ Los enlaces son colecciones de elementos de configuración especial, denominados
  Un enlace debe contener exactamente un elemento de enlace del transporte. Cada elemento de enlace de transporte implica un elemento de enlace de codificación de mensajes predeterminado, que se puede invalidar agregando a lo sumo un elemento de enlace de codificación de mensajes al enlace. Además de los elementos de enlace de codificador y transporte, el enlace puede contener cualquier número de elementos de enlace protocolares que juntos implementan la funcionalidad necesaria para el servicio y envío de un mensaje SOAP de un punto de conexión a otro. Para obtener más información, consulte [utilizando enlaces para configurar servicios y clientes](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
 ## <a name="extending-bindings-and-binding-elements"></a>Extender enlaces y elementos de enlace  
- Windows Communication Foundation (WCF) incluye enlaces proporcionados por el sistema que abarcan una gran variedad de escenarios. (Para obtener más información, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md).) Puede que haya ocasiones, sin embargo, en las que necesite crear y utilizar un enlace que no esté incluido en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Los siguientes escenarios requieren la creación de un nuevo enlace.  
+ Windows Communication Foundation (WCF) incluye enlaces proporcionados por el sistema que abarcan una gran variedad de escenarios. (Para obtener más información, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md).) Puede haber ocasiones, sin embargo, cuando se necesita crear y utilizar un enlace que no se incluye en WCF. Los siguientes escenarios requieren la creación de un nuevo enlace.  
   
 -   Para utilizar un nuevo elemento de enlace (como un nuevo transporte, codificación o elemento de enlace protocolar), debe crear un nuevo enlace que incluya ese elemento de enlace. Por ejemplo, si agregase un `UdpTransportBindingElement` personalizado para transporte de UDP, necesitaría crear un nuevo enlace para utilizarlo. Para obtener información acerca de cómo realizar este comportamiento mediante la <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> los tipos, vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
@@ -37,7 +37,7 @@ Los enlaces son colecciones de elementos de configuración especial, denominados
   
  Hay dos tipos de canales generales: canales de transporte y canales de protocolo. Los canales de transporte son responsables de la transmisión real de un mensaje des un extremo de la red a otro. Los canales de transporte deben tener un codificador de mensajes predeterminado y poder utilizar un codificador de mensajes alternativo proporcionado a través de un elemento de enlace del codificador de mensajes. Un codificador de mensajes es responsable de convertir un<xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> en una representación de la conexión y viceversa. Los canales protocolares son responsables de la implementación de los protocolos de nivel SOAP (por ejemplo, WS-Security o WS-ReliableMessaging).  
   
- El requisito primario para los canales protocolares y de transporte es que implementen las interfaces de canales necesarias. Para crear una capa de canales activa, deben tener asociados generadores y agentes de escucha, etc. Para utilizar las implementaciones de canal de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] es necesario que haya un  elemento de enlace asociado derivado de <xref:System.ServiceModel.Channels.BindingElement> para cada canal y debería haber un elemento de extensión de enlace relacionado para la inclusión en los archivos de configuración que deriva de <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>.  
+ El requisito primario para los canales protocolares y de transporte es que implementen las interfaces de canales necesarias. Para crear una capa de canales activa, deben tener asociados generadores y agentes de escucha, etc. Para utilizar las implementaciones de canal de WCF, debe haber un elemento de enlace asociado derivado de <xref:System.ServiceModel.Channels.BindingElement> para cada canal y debería haber un elemento de extensión de enlace relacionado para su inclusión en archivos de configuración que deriva de <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>.  
   
  Como se mencionó anteriormente, los elementos de enlace para los codificadores de mensajes, protocolo e implementaciones de canal de transporte, se pueden apilar para formar una pila de canales y el mecanismo para alinearlos en un conjunto ordenado es el enlace. Los enlaces y elementos de enlace conectan el modelo de programación de aplicaciones al modelo de canales. Puede utilizar sus implementaciones de canal directamente a partir de código, pero, a menos que los codificadores, transportes y protocolos se implementen como elementos de enlace, no se podrán utilizar desde el modelo de programación de capa de servicio.  
   

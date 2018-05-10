@@ -2,11 +2,11 @@
 title: Información general del flujo de mensajes
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 056737b9d057101568274ab8d24c0c0e2780f93a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aea0ca4c5a8574f6039cd055561ce7da0099841b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-flow-overview"></a>Información general del flujo de mensajes
 En un sistema distribuido que contiene servicios interconectados es necesario determinar las relaciones causales entre los servicios. Es importante conocer los distintos componentes que formaron parte de un flujo de solicitud para admitir escenarios críticos, como los de supervisión de estado, solución de problemas y análisis de la causa raíz. Para habilitar la correlación de seguimientos entre varios servicios, en .NET Framework 4 agregamos compatibilidad a través de las siguientes características:  
@@ -25,7 +25,7 @@ En un sistema distribuido que contiene servicios interconectados es necesario de
   
 2.  Si no ha habilitado la traza analítica, expanda **registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **servidor de aplicaciones** . Seleccione **vista**, **mostrar analíticos y de depuración registros**. Haga clic en **analítico** y seleccione **Habilitar registro**. Deje el Visor de eventos abierto para que se puedan ver los seguimientos.  
   
-3.  Abra el ejemplo creado en el [Tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md) en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Observe que debe ejecutar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] como administrador para que se pueda crear el servicio. Si tiene la [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ejemplos instalados, puede abrir el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), que contiene el proyecto completado creado en el tutorial.  
+3.  Abra el ejemplo creado en el [Tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md) en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Observe que debe ejecutar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] como administrador para que se pueda crear el servicio. Si tiene instalados los ejemplos de WCF, puede abrir el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), que contiene el proyecto completado creado en el tutorial.  
   
 4.  Haga clic en el **servicio** de proyecto y seleccione **agregar**, **nuevo elemento**. Seleccione **archivo de configuración de aplicación** y haga clic en **Aceptar**.  
   

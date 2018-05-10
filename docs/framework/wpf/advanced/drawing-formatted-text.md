@@ -84,7 +84,7 @@ Ejemplo de pincel de imagen aplicado al trazo y el resaltado
  ![Esfera que sigue la geometría de trayecto de texto](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 Esfera que sigue la geometría de trayecto de texto  
   
- Para obtener más información, consulte [How to: Create a PathGeometry Animation for Text](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67) (Cómo: Crear una animación PathGeometry para texto).  
+ Para obtener más información, consulte [Cómo: Crear una animación PathGeometry para texto](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
   
  Puede crear otros usos interesantes para el texto con formato una vez que se ha convertido en un <xref:System.Windows.Media.PathGeometry> objeto. Por ejemplo, puede recortar vídeo para que se muestre dentro de él.  
   
@@ -127,4 +127,4 @@ Vídeo mostrándose en la geometría de trayecto de texto
  [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Tipografía en WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [Crear texto con contorno](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [How to: Create a PathGeometry Animation for Text](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67) (Cómo: Crear una animación PathGeometry para texto).
+ [Cómo: Crear una animación PathGeometry para texto](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).

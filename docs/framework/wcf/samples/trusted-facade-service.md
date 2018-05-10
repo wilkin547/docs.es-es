@@ -2,11 +2,11 @@
 title: Servicio de fachada confiable
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 08e115d297439910c16601051539a23a5a6bebc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5a4cfe63f2fc6facbe4ce78d1c0047349e303fd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="trusted-facade-service"></a>Servicio de fachada confiable
 Este ejemplo de escenario muestra cómo pasar la información de identidad del llamador de un servicio a otro mediante Windows Communication Foundation (WCF) la infraestructura de seguridad.  
@@ -21,7 +21,7 @@ Este ejemplo de escenario muestra cómo pasar la información de identidad del l
   
 -   Servicio back-end de calculadora.  
   
- El servicio de la fachada es responsable de validar la solicitud y autenticar el llamador. Después de la autenticación y validación correctas, reenvía la solicitud al servicio back-end utilizando el canal de comunicación controlado de la red perimetral a la red interna. Como parte de la solicitud reenviada, el servicio de fachada incluye información sobre la identidad del llamador para que el servicio back-end pueda utilizar esta información en su procesamiento. La identidad del llamador se transmite utilizando un token de seguridad `Username` dentro del encabezado `Security` del mensaje . El ejemplo utiliza la infraestructura de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para transmitir y extraer esta información del encabezado `Security` .  
+ El servicio de la fachada es responsable de validar la solicitud y autenticar el llamador. Después de la autenticación y validación correctas, reenvía la solicitud al servicio back-end utilizando el canal de comunicación controlado de la red perimetral a la red interna. Como parte de la solicitud reenviada, el servicio de fachada incluye información sobre la identidad del llamador para que el servicio back-end pueda utilizar esta información en su procesamiento. La identidad del llamador se transmite utilizando un token de seguridad `Username` dentro del encabezado `Security` del mensaje . El ejemplo usa la infraestructura de seguridad WCF para transmitir y extraer esta información desde el `Security` encabezado.  
   
 > [!IMPORTANT]
 >  El servicio back-end confia en el servicio de fachada para autenticar el llamador. Debido a esto, el servicio back-end no autentica de nuevo el llamador; utiliza la información de identidad proporcionada por el servicio de fachada en la solicitud reenviada. Debido a esta relación de confianza, el servicio back-end debe autenticar el servicio de fachada para asegurarse de que el mensaje reenviado procede de una fuente de confianza, en este caso el servicio de fachada.  
@@ -110,7 +110,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
   
  El [ \<seguridad >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elemento de enlace se encarga de transmisión del nombre de usuario y la extracción del llamador inicial. El [ \<inicial de windowsStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) y [ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) se encargan de autenticar los servicios de fachada y back-end y protección de mensajes.  
   
- Para reenviar la solicitud, la implementación del servicio de fachada debe proporcionar el nombre de usuario del llamador inicial para que la infraestructura de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pueda colocarlo en el mensaje reenviado. El nombre de usuario del llamador inicial se proporciona en la implementación del servicio de fachada estableciéndolo en la propiedad `ClientCredentials` en la instancia del proxy de cliente que el servicio de fachada utiliza para comunicarse con el servicio back-end.  
+ Para reenviar la solicitud, la implementación del servicio de fachada debe proporcionar el nombre de usuario del llamador inicial para que esa infraestructura de seguridad WCF puede colocarlo en el mensaje reenviado. El nombre de usuario del llamador inicial se proporciona en la implementación del servicio de fachada estableciéndolo en la propiedad `ClientCredentials` en la instancia del proxy de cliente que el servicio de fachada utiliza para comunicarse con el servicio back-end.  
   
  El código siguiente muestra cómo el método `GetCallerIdentity` se implementa en el servicio de fachada. Otros métodos utilizan el mismo patrón.  
   
@@ -125,9 +125,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Como se muestra en el código anterior, la contraseña no se establece en la propiedad `ClientCredentials` , solo se establece el nombre de usuario. La infraestructura de seguridad de[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea un token de seguridad de nombre de usuario sin contraseña en este caso, que es exactamente lo que se necesita en este escenario.  
+ Como se muestra en el código anterior, la contraseña no se establece en la propiedad `ClientCredentials` , solo se establece el nombre de usuario. Infraestructura de seguridad WCF crea un token de seguridad de nombre de usuario sin una contraseña en este caso, que es exactamente lo que se necesita en este escenario.  
   
- En el servicio back-end, la información contenida en el token de seguridad del nombre de usuario se debe autenticar. De forma predeterminada, la seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] intenta asignar al usuario a una cuenta de Windows utilizando la contraseña proporcionada. En este caso, no hay ninguna contraseña proporcionada y no se exige al servicio back-end que autentique el nombre de usuario porque ya la realizó el servicio de fachada. Para implementar esta funcionalidad en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], se proporciona un `UserNamePasswordValidator` personalizado que solo exige que un nombre de usuario se especifique en el token y no realiza ninguna autenticación adicional.  
+ En el servicio back-end, la información contenida en el token de seguridad del nombre de usuario se debe autenticar. De forma predeterminada, seguridad de WCF intenta asignar al usuario a una cuenta de Windows con la contraseña proporcionada. En este caso, no hay ninguna contraseña proporcionada y no se exige al servicio back-end que autentique el nombre de usuario porque ya la realizó el servicio de fachada. Para implementar esta funcionalidad en WCF, un personalizado `UserNamePasswordValidator` es proporcionado por el que solo exige que un nombre de usuario especificada en el token y no realiza ninguna autenticación adicional.  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -208,7 +208,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- La información de cuenta de servicio de fachada se extrae utilizando la propiedad `ServiceSecurityContext.Current.WindowsIdentity` . Para tener acceso a la información sobre el llamador inicial el servicio back-end utiliza la propiedad `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` . Busca una notificación `Identity` con un tipo `Name`. La infraestructura de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera automáticamente esta noftificación a partir de la información contenida en el token de seguridad `Username` .  
+ La información de cuenta de servicio de fachada se extrae utilizando la propiedad `ServiceSecurityContext.Current.WindowsIdentity` . Para tener acceso a la información sobre el llamador inicial el servicio back-end utiliza la propiedad `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` . Busca una notificación `Identity` con un tipo `Name`. Esta notificación se genera automáticamente por la infraestructura de seguridad WCF de la información contenida en el `Username` token de seguridad.  
   
 ## <a name="running-the-sample"></a>Ejecutar el ejemplo  
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente. Puede presionar Entrar en las ventanas de la consola de servicio de fachada y back-end para cerrar los servicios.  

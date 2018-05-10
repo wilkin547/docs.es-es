@@ -2,11 +2,11 @@
 title: Supervisar los errores de operación de servicio
 ms.date: 03/30/2017
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
-ms.openlocfilehash: 16ed779f77836fb68cf1edf1e01dbb3c0df01d45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d708b537789c8d0decf75df780300c1e185c4c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="monitoring-service-operation-failures"></a>Supervisar los errores de operación de servicio
 Si la traza analítica está habilitada para una aplicación, los errores del servicio se pueden supervisar con facilidad en el visor de eventos.  Este tema muestra cómo determinar cuándo se produce un error en una operación del servicio y cómo determinar lo que produjo el error.  
@@ -17,7 +17,7 @@ Si la traza analítica está habilitada para una aplicación, los errores del se
   
 2.  Si no ha habilitado la traza analítica, expanda **registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **servidor de aplicaciones** . Seleccione **vista**, **mostrar analíticos y de depuración registros**. Haga clic en **analítico** y seleccione **Habilitar registro**. Deje abierto el Visor de eventos para que los seguimientos se puedan ver cuando se produzca el error en la operación de servicio.  
   
-3.  A continuación, abra el ejemplo creado en el [Tutorial de introducción](../../../../../docs/framework/wcf/getting-started-tutorial.md) en [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] tenga en cuenta que debe ejecutar [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] como administrador para que se puede crear el servicio. Si tiene la [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ejemplos instalados, puede abrir el [Introducción](../../../../../docs/framework/wcf/samples/getting-started-sample.md), que contiene el proyecto completado creado en el tutorial.  
+3.  A continuación, abra el ejemplo creado en el [Tutorial de introducción](../../../../../docs/framework/wcf/getting-started-tutorial.md) en [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] tenga en cuenta que debe ejecutar [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] como administrador para que se puede crear el servicio. Si tiene instalados los ejemplos de WCF, puede abrir el [Introducción](../../../../../docs/framework/wcf/samples/getting-started-sample.md), que contiene el proyecto completado creado en el tutorial.  
   
 4.  En el archivo Program.cs del proyecto Servidor, agregue la siguiente línea de código al principio del método `Divide` en la clase `CalculatorService`:  
   

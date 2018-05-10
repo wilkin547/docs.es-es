@@ -2,11 +2,11 @@
 title: Configurar seguimiento para un flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 70697d82242ab0704dd67129940a6660d300bef9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23a20b014962b74b6408c8b3c9ac6764d4a42d56
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurar seguimiento para un flujo de trabajo
 Un flujo de trabajo se puede ejecutar de tres maneras:  
@@ -46,7 +46,7 @@ instance.Extensions.Add(trackingParticipant);
 ```  
   
 ### <a name="configuring-workflow-service-tracking"></a>Configurar el seguimiento de servicio de flujo de trabajo  
- Un flujo de trabajo se puede exponer como un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cuando se hospeda en el host de servicio <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowServiceHost> es una implementación especializada de .NET ServiceHost para un servicio basado en flujo de trabajo. En esta sección se explica cómo configurar el seguimiento para un servicio de flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] que se ejecuta en <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Se configura mediante un archivo Web.config (para un servicio hospedado en web) o un archivo App.config (para un servicio hospedado en una aplicación independiente, como una aplicación de consola) especificando un comportamiento de servicio o mediante código agregando un comportamiento específico de seguimiento a la colección <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> del host de servicio.  
+ Un flujo de trabajo puede exponerse como un servicio WCF cuando se hospeda en el <xref:System.ServiceModel.Activities.WorkflowServiceHost> host del servicio. <xref:System.ServiceModel.Activities.WorkflowServiceHost> es una implementación especializada de .NET ServiceHost para un servicio basado en flujo de trabajo. En esta sección se explica cómo configurar el seguimiento para un servicio de flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] que se ejecuta en <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Se configura mediante un archivo Web.config (para un servicio hospedado en web) o un archivo App.config (para un servicio hospedado en una aplicación independiente, como una aplicación de consola) especificando un comportamiento de servicio o mediante código agregando un comportamiento específico de seguimiento a la colección <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> del host de servicio.  
   
  En el caso de un servicio de host hospedado en <xref:System.ServiceModel.WorkflowServiceHost>, puede agregar <xref:System.Activities.Tracking.EtwTrackingParticipant> mediante el elemento <`behavior`> en un archivo de configuración, tal y como se muestra en el siguiente ejemplo.  
   

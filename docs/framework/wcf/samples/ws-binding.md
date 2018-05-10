@@ -2,11 +2,11 @@
 title: Enlace de WS
 ms.date: 03/30/2017
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
-ms.openlocfilehash: 67102c7c2925c2ac032d9defccdd5e187e76d608
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11480b91c6ac6a5501029dfdf10cd81d3fa18820
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-binding"></a>Enlace de WS
 Esta sección contiene ejemplos que muestran el enlace de servicio de Windows en Windows Communication Foundation (WCF).  
@@ -25,7 +25,7 @@ Esta sección contiene ejemplos que muestran el enlace de servicio de Windows en
  Muestra el uso de la codificación de mensajes del Mecanismo de optimización de transmisión del mensaje (MTOM) con WSHttpBinding.  
   
  [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)  
- Muestra cómo implementar un servicio y un cliente típicos con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Muestra cómo implementar un servicio típico y un cliente típicos con WCF.  
   
  [Sesión de confianza de WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md)  
  Muestra el uso de las sesiones de confianza.  
@@ -34,7 +34,7 @@ Esta sección contiene ejemplos que muestran el enlace de servicio de Windows en
  Muestra el uso de la seguridad de transporte de SSL con el enlace <xref:System.ServiceModel.WSHttpBinding>.  
   
  [Enlace de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-binding.md)  
- Muestra el uso de la seguridad de los mensajes en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Muestra cómo utilizar la seguridad de los mensajes en WCF.  
   
  [Transporte WS con credencial de mensaje](../../../../docs/framework/wcf/samples/ws-transport-with-message-credential.md)  
  Este ejemplo muestra el uso de la seguridad del transporte SSL en combinación con la credencial del cliente que se lleva en el mensaje.

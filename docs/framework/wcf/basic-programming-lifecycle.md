@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: df86b0750a0fb8760d77fa36ec0806a1c5a9c0a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b20167ad776f3524e4516b71e43ab8cdb5c2aea4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="basic-programming-lifecycle"></a>Ciclo de vida de programación básica
-Windows Communication Foundation (WCF) permite a las aplicaciones comunicar si están en el mismo equipo, a través de Internet o en diferentes plataformas de aplicación. En este tema se describen las tareas necesarias para crear una aplicación de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Para una aplicación de ejemplo de trabajo, consulte [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md).  
+Windows Communication Foundation (WCF) permite a las aplicaciones comunicar si están en el mismo equipo, a través de Internet o en diferentes plataformas de aplicación. En este tema se describe las tareas necesarias para crear una aplicación de WCF. Para una aplicación de ejemplo de trabajo, consulte [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md).  
   
 ## <a name="the-basic-tasks"></a>Las tareas básicas  
  Las tareas básicas que se van a realizar son, en orden:  

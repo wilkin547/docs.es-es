@@ -6,14 +6,14 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: e7786b6a59b139233f10f6fef8493c299c51b54e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e49b393b9dd09a513066a6cb3612ad9f938e9adb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>¿Qué es Windows Communication Foundation?
-Windows Communication Foundation (WCF) es un marco para generar aplicaciones orientadas a servicios. Con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], es posible enviar datos como mensajes asincrónicos de un extremo de servicio a otro. Un extremo de servicio puede formar parte de un servicio disponible continuamente hospedado por IIS, o puede ser un servicio hospedado en una aplicación. Un extremo puede ser un cliente de un servicio que solicita datos de un extremo de servicio. Los mensajes pueden ser tan simples como un carácter o una palabra que se envía como XML, o tan complejos como una secuencia de datos binarios. A continuación se indican unos cuantos escenarios de ejemplo:  
+Windows Communication Foundation (WCF) es un marco para generar aplicaciones orientadas a servicios. Usa WCF, puede enviar datos como mensajes asincrónicos de un extremo de servicio a otro. Un extremo de servicio puede formar parte de un servicio disponible continuamente hospedado por IIS, o puede ser un servicio hospedado en una aplicación. Un extremo puede ser un cliente de un servicio que solicita datos de un extremo de servicio. Los mensajes pueden ser tan simples como un carácter o una palabra que se envía como XML, o tan complejos como una secuencia de datos binarios. A continuación se indican unos cuantos escenarios de ejemplo:  
   
 -   Un servicio seguro para procesar transacciones comerciales.  
   
@@ -27,30 +27,30 @@ Windows Communication Foundation (WCF) es un marco para generar aplicaciones ori
   
 -   Una aplicación de Silverlight para sondear un servicio en busca de las fuentes de datos más recientes.  
   
- Si bien era posible crear tales aplicaciones antes de que existiera [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] el desarrollo de extremos resulta más sencillo que nunca. En resumen, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se ha diseñado para ofrecer un enfoque manejable para la creación de servicios web y clientes de servicios web.  
+ Si bien era posible antes de que existiera WCF crear tales aplicaciones, WCF simplifica el desarrollo de los puntos de conexión más fácil que nunca. En resumen, WCF está diseñado para ofrecer un enfoque manejable para la creación de servicios Web y clientes de servicios Web.  
   
 ## <a name="features-of-wcf"></a>Características de WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye el siguiente conjunto de características: Para obtener más información, consulte [detalles de las características WCF](../../../docs/framework/wcf/feature-details/index.md).  
+ WCF incluye el siguiente conjunto de características. Para obtener más información, consulte [detalles de las características WCF](../../../docs/framework/wcf/feature-details/index.md).  
   
 -   **Orientación a servicios**  
   
-     Como consecuencia del uso de los estándares de WS, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] le permite crear aplicaciones *orientadas a servicios* . SOA, la arquitectura orientada a servicios es el uso de servicios web para enviar y recibir datos. Los servicios tienen la ventaja general de estar débilmente acoplados entre una aplicación y otra en lugar de incluidos en el código. Una relación de acoplamiento débil implica que cualquier cliente creado en cualquier plataforma puede conectar con cualquier servicio siempre y cuando se cumplan los contratos esenciales.  
+     Una consecuencia del uso de estándares de WS es que WCF permite crear *orientadas a servicios* aplicaciones. SOA, la arquitectura orientada a servicios es el uso de servicios web para enviar y recibir datos. Los servicios tienen la ventaja general de estar débilmente acoplados entre una aplicación y otra en lugar de incluidos en el código. Una relación de acoplamiento débil implica que cualquier cliente creado en cualquier plataforma puede conectar con cualquier servicio siempre y cuando se cumplan los contratos esenciales.  
   
 -   **Interoperabilidad**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] implementa los estándares del sector modernos para la interoperabilidad de servicios web. Para obtener más información acerca de los estándares admitidos, consulte [interoperabilidad e integración](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
+     WCF implementa los estándares del sector modernos para la interoperabilidad de servicios Web. Para obtener más información acerca de los estándares admitidos, consulte [interoperabilidad e integración](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
   
 -   **Varios patrones de mensajes**  
   
-     Los mensajes se intercambian mediante uno de los distintos patrones. El más común es el de solicitud/respuesta, en que un extremo solicita datos de otro extremo. y el otro extremo responde. Existen otros patrones, como un mensaje unidireccional, en que un único extremo envía un mensaje sin esperar ninguna respuesta. Un patrón más complejo es el patrón de intercambio dúplex donde dos extremos establecen una conexión y envían datos hacia delante y hacia atrás, similar a un programa de mensajería instantánea. Para obtener más información acerca de cómo implementar patrones de intercambio de mensajes diferente mediante [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vea [contratos](../../../docs/framework/wcf/feature-details/contracts.md).  
+     Los mensajes se intercambian mediante uno de los distintos patrones. El más común es el de solicitud/respuesta, en que un extremo solicita datos de otro extremo. y el otro extremo responde. Existen otros patrones, como un mensaje unidireccional, en que un único extremo envía un mensaje sin esperar ninguna respuesta. Un patrón más complejo es el patrón de intercambio dúplex donde dos extremos establecen una conexión y envían datos hacia delante y hacia atrás, similar a un programa de mensajería instantánea. Para obtener más información sobre cómo implementar el intercambio de mensajes diferentes patrones de uso de WCF vea [contratos](../../../docs/framework/wcf/feature-details/contracts.md).  
   
 -   **Metadatos de servicios**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] admite la publicación de metadatos de servicios utilizando los formatos especificados en los estándares de la industria, como WSDL, Esquemas XML y WS-Policy. Estos metadatos pueden utilizarse para generar y configurar automáticamente clientes para el acceso a los servicios de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Los metadatos se pueden publicar sobre HTTP y HTTPS, o utilizando el estándar Intercambio de metadatos de servicios web. Para obtener más información, consulte [metadatos](../../../docs/framework/wcf/feature-details/metadata.md).  
+     WCF admite la publicación de servicio de metadatos utilizando los formatos especificados en los estándares del sector, como WSDL, esquemas XML y WS-Policy. Estos metadatos pueden utilizarse para generar y configurar automáticamente clientes para tener acceso a los servicios de WCF. Los metadatos se pueden publicar sobre HTTP y HTTPS, o utilizando el estándar Intercambio de metadatos de servicios web. Para obtener más información, consulte [metadatos](../../../docs/framework/wcf/feature-details/metadata.md).  
   
 -   **Contratos de datos**  
   
-     Dado que [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se basa en [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], también incluye métodos con código sencillo para proporcionar los contratos que desea aplicar. Uno de los tipos de contrato universales es el contrato de datos. Básicamente, mientras se escribe el código del servicio usando Visual C# o Visual Basic, la forma más sencilla de controlar los datos consiste en crear clases que representan una entidad de datos con propiedades que pertenecen a la misma. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye un completo sistema para trabajar con datos de esta manera fácil. Cuando se han creado las clases que representan los datos, el servicio genera automáticamente los metadatos que permiten a los clientes ajustarse a los tipos de datos que se han diseñado. Para obtener más información, vea [usar contratos de datos](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+     Dado que WCF se compila utilizando el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], también incluye métodos con código sencillo para proporcionar los contratos que desea aplicar. Uno de los tipos de contrato universales es el contrato de datos. Básicamente, mientras se escribe el código del servicio usando Visual C# o Visual Basic, la forma más sencilla de controlar los datos consiste en crear clases que representan una entidad de datos con propiedades que pertenecen a la misma. WCF incluye un completo sistema para trabajar con datos de esta manera fácil. Cuando se han creado las clases que representan los datos, el servicio genera automáticamente los metadatos que permiten a los clientes ajustarse a los tipos de datos que se han diseñado. Para obtener más información, vea [usar contratos de datos](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
 -   **Seguridad**  
   
@@ -58,11 +58,11 @@ Windows Communication Foundation (WCF) es un marco para generar aplicaciones ori
   
 -   **Varios transportes y codificaciones**  
   
-     Los mensajes pueden enviarse con cualquiera de los protocolos y codificaciones integrados. Cuanto más frecuente de protocolo y codificación consiste en enviar texto codificado mensajes SOAP mediante el protocolo de transferencia de hipertexto (HTTP) para su uso en World Wide Web. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] también le permite enviar mensajes sobre TCP, canalizaciones con nombre o MSMQ. Estos mensajes pueden codificarse como texto o utilizando un formato binario optimizado.  Los datos binarios pueden enviarse de manera eficaz utilizando el estándar MTOM. Si ninguno de los transportes o codificaciones proporcionados satisface sus necesidades, puede crear uno personalizado. Para obtener más información acerca de los transportes y codificaciones admitidos por [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vea [transportes](../../../docs/framework/wcf/feature-details/transports.md).  
+     Los mensajes pueden enviarse con cualquiera de los protocolos y codificaciones integrados. Cuanto más frecuente de protocolo y codificación consiste en enviar texto codificado mensajes SOAP mediante el protocolo de transferencia de hipertexto (HTTP) para su uso en World Wide Web. Como alternativa, WCF le permite enviar mensajes a través de TCP, denominado canalizaciones o MSMQ. Estos mensajes pueden codificarse como texto o utilizando un formato binario optimizado.  Los datos binarios pueden enviarse de manera eficaz utilizando el estándar MTOM. Si ninguno de los transportes o codificaciones proporcionados satisface sus necesidades, puede crear uno personalizado. Para obtener más información acerca de los transportes y codificaciones admitidos por WCF vea [transportes](../../../docs/framework/wcf/feature-details/transports.md).  
   
 -   **Mensajes confiables y en cola**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] admite intercambio de mensajes confiable usando sesiones confiables implementadas sobre mensajería WS-Reliable y mediante MSMQ. Para obtener más información acerca de la mensajería confiable y en cola la compatibilidad en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vea [colas y sesiones confiables](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
+     WCF admite intercambio de mensajes confiable usando sesiones confiables implementadas sobre mensajería WS-Reliable y mediante MSMQ. Para obtener más información sobre la compatibilidad de mensajería confiable y en cola en WCF, vea [colas y sesiones confiables](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
   
 -   **Mensajes duraderos**  
   
@@ -70,26 +70,26 @@ Windows Communication Foundation (WCF) es un marco para generar aplicaciones ori
   
 -   **Transacciones**  
   
-     WCF también admite las transacciones que usan uno de los tres modelos de transacción: las transacciones WS-Atomic, las API del espacio de nombres <xref:System.Transactions> y Coordinador de transacciones distribuidas de Microsoft. Para obtener más información acerca de la transacción se admite en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vea [transacciones](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).  
+     WCF también admite las transacciones que usan uno de los tres modelos de transacción: las transacciones WS-Atomic, las API del espacio de nombres <xref:System.Transactions> y Coordinador de transacciones distribuidas de Microsoft. Para obtener más información acerca de la transacción en WCF vea [transacciones](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).  
   
 -   **Compatibilidad con AJAX y REST**  
   
-     REST es un ejemplo de una tecnología de la Web 2.0 en evolución. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se puede configurar para procesar datos XML “sin formato” que no se ajustan en un sobre SOAP. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] también se puede extender para admitir formatos XML concretos, como ATOM (un estándar popular de RSS), e incluso formatos no XML, como notación de objetos JavaScript (JSON).  
+     REST es un ejemplo de una tecnología de la Web 2.0 en evolución. WCF se puede configurar para procesar datos XML "sin formato" que no se ajustan en un sobre SOAP. WCF también se puede extender para admitir formatos XML concretos, como ATOM (un estándar popular de RSS) e incluso formatos no XML, como JavaScript Object Notation (JSON).  
   
 -   **Extensibilidad**  
   
-     La arquitectura de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tiene varios puntos de extensibilidad. Si se necesita una función adicional, existen una serie de puntos de entrada que le permiten personalizar el comportamiento de un servicio. Para obtener más información sobre la extensibilidad disponible puntos, consulte [extensión de WCF](../../../docs/framework/wcf/extending/index.md).  
+     La arquitectura WCF tiene un número de puntos de extensibilidad. Si se necesita una función adicional, existen una serie de puntos de entrada que le permiten personalizar el comportamiento de un servicio. Para obtener más información sobre la extensibilidad disponible puntos, consulte [extensión de WCF](../../../docs/framework/wcf/extending/index.md).  
   
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>Integración de WCF con otras tecnologías de Microsoft  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] es una plataforma flexible. Debido a esta flexibilidad extrema, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] también se usa en varios otros productos Microsoft. Si comprende los fundamentos de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], tendrá una ventaja inmediata si también utiliza cualquiera de estos productos.  
+ WCF es una plataforma flexible. Debido a esta flexibilidad extrema, WCF también se utiliza en varios otros productos de Microsoft. Si comprende los fundamentos de WCF, tendrá una ventaja inmediata si también utiliza cualquiera de estos productos.  
   
- La primera tecnología en adaptarse a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fue Windows Workflow Foundation (WF). Los flujos de trabajo simplifican el desarrollo de aplicaciones encapsulando los pasos del flujo de trabajo como "actividades". En la primera versión de Windows Workflow Foundation, un desarrollador tenía que crear un host para el flujo de trabajo. La próxima versión de Windows Workflow Foundation se integró con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Esto permitió hospedar cualquier flujo de trabajo fácilmente en un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ; puede hacer esto si elige automáticamente el tipo de proyecto WF/WCF en [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
+ La primera tecnología en adaptarse a WCF fue Windows Workflow Foundation (WF). Los flujos de trabajo simplifican el desarrollo de aplicaciones encapsulando los pasos del flujo de trabajo como "actividades". En la primera versión de Windows Workflow Foundation, un desarrollador tenía que crear un host para el flujo de trabajo. La próxima versión de Windows Workflow Foundation se integró con WCF. Esto permitió hospedar fácilmente en un servicio WCF; cualquier flujo de trabajo Puede hacerlo eligiendo WF/WCF automáticamente un tipo de proyecto en [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
- Microsoft BizTalk Server R2 también utiliza [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] como tecnología de comunicaciones. BizTalk está diseñado para recibir y transformar datos de un formato normalizado en otro. Los mensajes deben entregarse en su cuadro de mensajes central, donde es posible transformar el mensaje utilizando una asignación estricta o mediante una de las características de BizTalk, como su motor de flujo de trabajo. BizTalk ahora puede utilizar el adaptador de línea de negocio (LOB, Line Of Business) de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para entregar mensajes en el cuadro de mensajes.  
+ Microsoft BizTalk Server R2 también utiliza WCF como tecnología de comunicaciones. BizTalk está diseñado para recibir y transformar datos de un formato normalizado en otro. Los mensajes deben entregarse en su cuadro de mensajes central, donde es posible transformar el mensaje utilizando una asignación estricta o mediante una de las características de BizTalk, como su motor de flujo de trabajo. BizTalk ahora puede usar el adaptador de WCF línea de negocio (LOB) para entregar mensajes en el cuadro de mensaje.  
   
- Microsoft Silverlight es una plataforma para la creación de sofisticadas aplicaciones web interoperables que permiten a los desarrolladores crear sitios Web con uso intensivo de contenidos multimedia (como la transmisión de vídeo por secuencias). A partir de la versión 2, Silverlight incorpora [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] como tecnología de comunicaciones para conectar las aplicaciones Silverlight con los extremos de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] .  
+ Microsoft Silverlight es una plataforma para la creación de sofisticadas aplicaciones web interoperables que permiten a los desarrolladores crear sitios Web con uso intensivo de contenidos multimedia (como la transmisión de vídeo por secuencias). A partir de la versión 2, Silverlight incorpora WCF como tecnología de comunicaciones para conectar las aplicaciones de Silverlight a extremos WCF.  
   
- El servidor de aplicaciones [!INCLUDE[dublin](../../../includes/dublin-md.md)] se ha diseñado específicamente para implementar y administrar aplicaciones que utilizan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para las comunicaciones. [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] incluye sofisticadas opciones de configuración y herramientas diseñadas específicamente para las aplicaciones habilitadas para [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ El [!INCLUDE[dublin](../../../includes/dublin-md.md)] servidor de aplicaciones se ha diseñado específicamente para implementar y administrar las aplicaciones que usan WCF para comunicarse. El [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] incluye sofisticadas opciones de configuración y herramientas diseñadas específicamente para aplicaciones habilitadas para WCF.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel>  

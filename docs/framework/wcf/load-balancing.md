@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 9ad9c9c569137534addfa3b91f412fb0c0a4b808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d554dfd8d21b6e0e5f4aef0f4402e16485c2e8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="load-balancing"></a>Equilibrio de carga
-Una manera de aumentar la capacidad de las aplicaciones de Windows Communication Foundation (WCF) es escalarlas implementándolas en una granja de servidores con equilibrio de carga. Las aplicaciones de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] pueden tener equilibrio de carga mediante técnicas estándar de equilibrio de carga, incluidos los equilibradores de carga de software como Equilibrio de carga de red de Windows junto con dispositivos de equilibrio de carga basados en hardware.  
+Una manera de aumentar la capacidad de las aplicaciones de Windows Communication Foundation (WCF) es escalarlas implementándolas en una granja de servidores con equilibrio de carga. Las aplicaciones WCF pueden carga equilibrada mediante técnicas, incluidos los equilibradores de carga de software como Windows Network Load Balancing de equilibrio de carga estándar, así como dispositivos de equilibrio de carga basado en hardware.  
   
- Las secciones siguientes tratan sobre las consideraciones para las aplicaciones [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de equilibrio de carga compiladas con varios enlaces proporcionados por el sistema.  
+ En las secciones siguientes tratan sobre las consideraciones para las aplicaciones WCF compiladas con varios enlaces proporcionados por el sistema de equilibrio de carga.  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>Equilibrio de carga con el enlace HTTP básico  
- Desde la perspectiva del equilibrio de carga, las aplicaciones de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que se comunican mediante <xref:System.ServiceModel.BasicHttpBinding> no son diferentes de otros tipos comunes de tráfico de red HTTP (contenido HTML estático, páginas ASP.NET o servicios web de ASMX). Los canales de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que usan este enlace son sin estados de forma inherente y terminan sus conexiones cuando se cierra el canal. Como tal, <xref:System.ServiceModel.BasicHttpBinding> funciona bien con técnicas de equilibrio de carga de HTTP existentes.  
+ Desde la perspectiva del equilibrio de carga, las aplicaciones WCF que se comunican mediante el <xref:System.ServiceModel.BasicHttpBinding> no son diferentes de otros tipos comunes de HTTP tráfico de red (estático contenido HTML, páginas ASP.NET o servicios Web de ASMX). Canales WCF que usan este enlace son sin estados de forma inherente y terminan sus conexiones cuando se cierra el canal. Como tal, <xref:System.ServiceModel.BasicHttpBinding> funciona bien con técnicas de equilibrio de carga de HTTP existentes.  
   
  De forma predeterminada, <xref:System.ServiceModel.BasicHttpBinding> envía un encabezado HTTP de conexión en mensajes con un valor `Keep-Alive`, que permite a los clientes establecer conexiones permanentes a los servicios que las admiten. Esta configuración proporciona un rendimiento mejorado ya que las conexiones previamente establecidas se pueden reutilizar para enviar los mensajes subsiguientes al mismo servidor. Sin embargo, la reutilización de la conexión puede hacer que los clientes se asocien con un servidor concreto dentro de la granja con la carga equilibrada, lo que reduce la eficacia del equilibrio de carga por turnos (round-robin). Si este comportamiento no es adecuado, `Keep-Alive` de HTTP puede estar deshabilitado en el servidor utilizando la propiedad <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> con <xref:System.ServiceModel.Channels.CustomBinding> o <xref:System.ServiceModel.Channels.Binding> definido por el usuario. En el ejemplo siguiente se muestra cómo hacerlo usando la configuración.  
   

@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e48c519f6e10be4521d75345845eb5c019ec342c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-channel-level-programming"></a>Programación de servicios a nivel de canal
 Este tema describe cómo escribir una aplicación de servicio de Windows Communication Foundation (WCF) sin utilizar el <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> y su modelo de objetos asociado.  
@@ -28,7 +28,7 @@ Este tema describe cómo escribir una aplicación de servicio de Windows Communi
 5.  Cerrar todos los objetos de canal.  
   
 #### <a name="creating-a-binding"></a>Crear un enlace  
- El primer paso para escuchar y recibir mensajes es crear un enlace. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se entrega con varios enlaces integrados o proporcionados por el sistema que se pueden usar directamente creando instancias de uno de ellos. Además, también puede crear su propio enlace personalizado creando instancias de una clase CustomBinding que es lo que hace el código en la lista 1.  
+ El primer paso para escuchar y recibir mensajes es crear un enlace. WCF incluye varios enlaces integrados o proporcionados por el sistema que se pueden usar directamente creando instancias de uno de ellos. Además, también puede crear su propio enlace personalizado creando instancias de una clase CustomBinding que es lo que hace el código en la lista 1.  
   
  El ejemplo de código siguiente crea una instancia de <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> y agrega <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> a su colección Elements, que es una colección de elementos de enlace que se utilizan para crear la pila del canal. En este ejemplo, puesto que la colección de elementos tiene solo <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, la pila del canal resultante tiene solo el canal de transporte HTTP.  
   

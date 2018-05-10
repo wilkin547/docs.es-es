@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 91e5e45d380ec6a8229a7272c841e1a345423c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46ca6294d68537e86a319b55d8c11e3ae0084738
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="endpoint-creation-overview"></a>Información general acerca de la creación de puntos finales
-Toda la comunicación con un servicio de Windows Communication Foundation (WCF) se produce a través de la *extremos* del servicio. Los extremos proporcionan a los clientes acceso a la funcionalidad que ofrece un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Esta sección describe la estructura de un extremo, y detalla cómo definir un extremo en la configuración y el código.  
+Toda la comunicación con un servicio de Windows Communication Foundation (WCF) se produce a través de la *extremos* del servicio. Los extremos proporcionan a los clientes acceso a la funcionalidad que ofrece un servicio WCF. Esta sección describe la estructura de un punto de conexión, y detalla cómo definir un punto de conexión en la configuración y el código.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Estructura de un extremo  
  Cada punto de conexión contiene una dirección que indica dónde se encuentra el punto de conexión, un enlace que especifica cómo puede comunicarse un cliente con el punto de conexión, y un contrato que identifica los métodos disponibles.  
   
--   **Dirección**. La dirección identifica únicamente el punto de conexión e indica a los consumidores potenciales dónde se ubica el servicio. En el modelo de objeto [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] está representada por la dirección <xref:System.ServiceModel.EndpointAddress>, que contiene un Identificador uniforme de recursos (URI) y propiedades de dirección que incluyen una identidad, algunos elementos del lenguaje de descripción de servicios Web (WSDL), y una colección de encabezados opcionales. Los encabezados opcionales proporcionan información de direccionamiento adicional para identificar o interactuar con el punto de conexión. Para obtener más información, consulte [al especificar una dirección de punto de conexión](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+-   **Dirección**. La dirección identifica únicamente el punto de conexión e indica a los consumidores potenciales dónde se ubica el servicio. Se representa en el modelo de objetos WCF mediante el <xref:System.ServiceModel.EndpointAddress> dirección, que contiene un identificador uniforme de recursos (URI) y las propiedades de dirección que incluyen una identidad, algunos elementos de lenguaje de descripción de servicios Web (WSDL) y una colección de opcional encabezados. Los encabezados opcionales proporcionan información de direccionamiento adicional para identificar o interactuar con el punto de conexión. Para obtener más información, consulte [al especificar una dirección de punto de conexión](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 -   **Enlace**. El enlace especifica cómo comunicarse con el punto de conexión. El enlace especifica cómo se comunica el punto de conexión con el mundo, incluido el protocolo de transporte que utiliza (por ejemplo, TCP o HTTP), la codificación utilizada en los mensajes (por ejemplo, texto o binario) y los requisitos de seguridad necesarios (por ejemplo, capa de sockets seguros [SSL] o seguridad del mensaje SOAP). Para obtener más información, consulte [utilizando enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   

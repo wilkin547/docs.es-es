@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], defining
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: 98e0b07f608db4396a5b8f5e25cde243e03390a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e8abbf8c5f9b0696d90ccbee94c5d8f4dd8b1ec
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Definición de un contrato de servicio de Windows Communication Foundation
 Se trata de la primera de las seis tareas necesarias para crear una aplicación básica de Windows Communication Foundation (WCF). Para obtener información general de las seis de las tareas, consulte la [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md) tema.  
   
- Al crear un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], la primera tarea es definir un contrato de servicio. El contrato de servicio especifica qué operaciones admite el servicio. Una operación se puede considerar un método de servicio Web. Los contratos se crean mediante la definición de una interfaz de C++, C# o Visual Basic (VB). Cada método de la interfaz se corresponde con una operación de servicio concreta. Cada interfaz debe tener <xref:System.ServiceModel.ServiceContractAttribute> aplicado y cada operación debe tener el atributo <xref:System.ServiceModel.OperationContractAttribute> aplicado. Si un método de una interfaz que tiene el atributo <xref:System.ServiceModel.ServiceContractAttribute> no tiene el atributo <xref:System.ServiceModel.OperationContractAttribute>, el servicio no expone ese método.  
+ Al crear un servicio WCF, la primera tarea es definir un contrato de servicio. El contrato de servicio especifica qué operaciones admite el servicio. Una operación se puede considerar un método de servicio Web. Los contratos se crean mediante la definición de una interfaz de C++, C# o Visual Basic (VB). Cada método de la interfaz se corresponde con una operación de servicio concreta. Cada interfaz debe tener <xref:System.ServiceModel.ServiceContractAttribute> aplicado y cada operación debe tener el atributo <xref:System.ServiceModel.OperationContractAttribute> aplicado. Si un método de una interfaz que tiene el atributo <xref:System.ServiceModel.ServiceContractAttribute> no tiene el atributo <xref:System.ServiceModel.OperationContractAttribute>, el servicio no expone ese método.  
   
  El código utilizado para esta tarea se proporciona en el ejemplo que sigue al procedimiento.  
   

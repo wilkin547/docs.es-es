@@ -2,11 +2,11 @@
 title: Dúplex duradero
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-duplex"></a>Dúplex duradero
 Este ejemplo muestra cómo instalar y configurar el intercambio de mensajes dúplex duradero utilizando las actividades de mensajería en Windows Workflow Foundation (WF). Un intercambio de mensajes dúplex duradero es un intercambio de mensajes bidireccional que tiene lugar a lo largo de un período largo de tiempo. La duración del intercambio de mensajes puede ser mayor que la duración del canal de comunicación y la duración en memoria de las instancias de servicio.  
@@ -41,7 +41,7 @@ Este ejemplo muestra cómo instalar y configurar el intercambio de mensajes dúp
 >  El enlace utilizado por este ejemplo no es seguro. Al implementar su aplicación, debería configurar el enlace en función de los requisitos de seguridad de la aplicación.  
   
 > [!NOTE]
->  Las colas utilizadas en este ejemplo no son transaccionales. Para obtener un ejemplo que muestra cómo configurar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] intercambios que utilizan colas de transacciones de mensajes, consulte el [activación de MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md) ejemplo.  
+>  Las colas utilizadas en este ejemplo no son transaccionales. Para obtener un ejemplo que muestra cómo configurar los intercambios de mensajes WCF con colas de transacciones, vea el [activación de MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md) ejemplo.  
   
  El mensaje enviado por Service1.xamlx a Service2.xamlx se envía mediante un punto de conexión de cliente configurado con la dirección de Service2.xamlx y el enlace personalizado definido previamente. La devolución de llamada de Service2.xamlx a Service1.xamlx se envía mediante un extremo de cliente sin ninguna dirección configurada explícitamente, ya que la dirección se toma del contexto de devolución de llamada enviado por Service1.xamlx. El siguiente ejemplo de código define los extremos de cliente.  
   

@@ -2,11 +2,11 @@
 title: Demux personalizado
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-ms.openlocfilehash: 76f8d60fdcc1fcba9942a78138e83104dfcd972b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e88672f152b87740feef1345b3eac213916a1527
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-demux"></a>Demux personalizado
 Este ejemplo muestra cómo se pueden asignar los encabezados de mensaje MSMQ para diferentes operaciones de servicio para que los servicios de Windows Communication Foundation (WCF) que utilizan <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> no están limitados a utilizar una operación de servicio como se muestra en el [ Message Queue Server de Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) y [Windows Communication Foundation a Message Queue Server](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) ejemplos.  
@@ -108,7 +108,7 @@ public static void Main()
  El nombre de cola de MSMQ se especifica en una sección appSettings del archivo de configuración.  
   
 > [!NOTE]
->  El nombre de la cola utiliza un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso. La dirección de extremo de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] especifica un esquema msmq.formatname y utiliza localhost para el equipo local. Lo que sigue al esquema es una dirección de cola con el formato apropiado según las instrucciones de direccionamiento del nombre de formato de MSMQ.  
+>  El nombre de la cola utiliza un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso. La dirección del extremo WCF especifica un esquema msmq.formatname y utiliza localhost para el equipo local. Lo que sigue al esquema es una dirección de cola con el formato apropiado según las instrucciones de direccionamiento del nombre de formato de MSMQ.  
   
 ```xml  
 <appSettings>  

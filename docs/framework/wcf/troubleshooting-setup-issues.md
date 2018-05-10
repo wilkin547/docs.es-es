@@ -2,11 +2,11 @@
 title: Solución de problemas de instalación
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 806e8a1f45deec5861e3bcc9a9c06a93ce410c1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3c750aa4f9a4ec4750aa24ffcd685c9c349a45a7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>Solución de problemas de instalación
 En este tema se describe cómo solucionar problemas de Windows Communication Foundation (WCF), configurar los problemas.  
@@ -61,12 +61,12 @@ En este tema se describe cómo solucionar problemas de Windows Communication Fou
  [Herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) puede encontrarse en %windir%\Microsoft.NET\framework\v3.5\ o %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Configurar IIS correctamente para Webhost de WCF/WF después de instalar .NET Framework 3.5  
- Cuando la instalación de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] no puede configurar valores de configuración IIS adicionales relacionados con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], registra un error en el registro de instalación y continúa. Cualquier intento de ejecutar las aplicaciones de WorkflowServices será en vano ya que faltan los valores de configuración necesarios. Por ejemplo, puede fallar la carga de los archivos .xoml o .rules.  
+ Cuando [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] se produce un error en la instalación configurar opciones adicionales de configuración de IIS relacionada con WCF, registra un error en el registro de instalación y continúa. Cualquier intento de ejecutar las aplicaciones de WorkflowServices será en vano ya que faltan los valores de configuración necesarios. Por ejemplo, puede fallar la carga de los archivos .xoml o .rules.  
   
  Para solucionar este problema, use la [herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) con la `/c` conmutador para configurar correctamente las asignaciones de secuencias de comandos IIS en el equipo. [Herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) puede encontrarse en %windir%\Microsoft.NET\framework\v3.5\ o %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>No se puede cargar el tipo ‘System.ServiceModel.Activation.HttpModule’ del ensamblado ‘System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089’  
- Este error se produce si [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] está instalado y, a continuación, [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] activación HTTP está habilitada. Para resolver el problema ejecute la siguiente línea de comandos desde el símbolo del sistema de [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]:  
+ Este error se produce si [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] está instalado y, a continuación, se habilita la activación HTTP de WCF. Para resolver el problema ejecute la siguiente línea de comandos desde el símbolo del sistema de [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]:  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

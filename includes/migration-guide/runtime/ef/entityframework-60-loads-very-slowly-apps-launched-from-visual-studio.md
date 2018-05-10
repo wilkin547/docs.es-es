@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |Detalles|Iniciar una aplicación desde Visual Studio 2013 que usa EntityFramework 6.0 puede resultar muy lento.|
-|Sugerencia|Este problema se corrigió en EntityFramework 6.0.2. Actualice EntityFramework para evitar este problema de rendimiento.|
+|Sugerencia|Este problema se corrigió en EntityFramework 6.0.2. Actualice EntityFramework para evitar el problema de rendimiento.|
 |Ámbito|Borde|
 |Versión|4.5|
 |Tipo|Tiempo de ejecución|

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: d171af8dbcbbdd51cc015986a2c69e0393fe56dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4c2e34b3e123e6fa9d8dc8e544f621b39861592
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Cómo: Utilizar diferentes certificados X.509 para la firma y el cifrado
 En este tema se muestra cómo configurar Windows Communication Foundation (WCF) para usar certificados diferentes para la firma de mensajes y el cifrado en el cliente y el servicio.  
   
- Para poder utilizar certificados independientes para la firma y el cifrado, se debe crear un cliente personalizado o las credenciales de servicio (o ambos) porque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no proporciona una API para establecer varios clientes o certificados de servicio. Además, se debe proporcionar un administrador de tokens de seguridad para sacar el máximo partido a la información de varios certificados y crear un proveedor de tokens de seguridad adecuado para el uso de claves especificado y la dirección del mensaje.  
+ Para habilitar certificados independientes que se usará para la firma y cifrado, un cliente personalizado o servicio credenciales (o ambos) deben crearse porque WCF no proporciona una API para establecer varios certificados de cliente o servicio. Además, se debe proporcionar un administrador de tokens de seguridad para sacar el máximo partido a la información de varios certificados y crear un proveedor de tokens de seguridad adecuado para el uso de claves especificado y la dirección del mensaje.  
   
  El diagrama siguiente muestra las clases principales que se utilizan, las clases de las que se heredan (identificadas mediante una flecha que señala hacia arriba) y los tipos de valor devueltos de ciertos métodos y propiedades.  
   

@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|Detalles|En .NET Framework 4.5, un pequeño número de métodos de .NET comenzaron a iniciar primeras excepciones <xref:System.EntryPointNotFoundException?displayProperty=name>. Estas primeras excepciones se controlaban dentro de .NET Framework, pero podían interrumpir la automatización de pruebas que no las esperasen. Estas mismas API interrumpen algunos escenarios de ApiVerifier con el elemento HighVersionLie habilitado.|
+|Detalles|En .NET Framework 4.5, un pequeño número de métodos de .NET comenzaron a iniciar primeras excepciones <xref:System.EntryPointNotFoundException?displayProperty=name>. Estas primeras excepciones se controlaban dentro de .NET Framework, pero podían interrumpir la automatización de las pruebas que no las esperasen. Estas mismas API interrumpen algunos escenarios de ApiVerifier con el elemento HighVersionLie habilitado.|
 |Sugerencia|Este error puede evitarse actualizando a .NET Framework 4.5.1. Como alternativa, se puede actualizar la automatización de pruebas para que no se interrumpa con las primeras excepciones <xref:System.EntryPointNotFoundException?displayProperty=name>.|
 |Ámbito|Borde|
 |Versión|4.5|

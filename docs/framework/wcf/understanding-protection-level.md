@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 0f17d6e787a48edd562559f52ac015edf7bc702c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 157e660a8b4d3866b9ab1994c409f82f16ac8359
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="understanding-protection-level"></a>Descripción de los niveles de protección
 La propiedad `ProtectionLevel` se encuentra en muchas clases diferentes, como las clases <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.OperationContractAttribute>. La propiedad controla cómo se protege una parte de un mensaje (o todo entero). Este tema explica la característica de Windows Communication Foundation (WCF) y cómo funciona.  
@@ -39,7 +39,7 @@ La propiedad `ProtectionLevel` se encuentra en muchas clases diferentes, como la
   
 -   El `ProtectionLevel` es una manera para que el programador establezca el *nivel mínimo* que debe cumplir un enlace. Cuando se implementa un servicio, el enlace real especificado en la configuración puede admitir o no el nivel mínimo. Por ejemplo, de forma predeterminada, la clase <xref:System.ServiceModel.BasicHttpBinding> no proporciona seguridad (aunque puede estar habilitada). Por consiguiente, utilizarlo con un contrato que tiene un valor distinto de `None` producirá una excepción.  
   
--   Si el servicio requiere que el valor mínimo de `ProtectionLevel` para todos los mensajes sea `Sign`, un cliente (quizás creado por una tecnología que no sea de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ) puede cifrar y firmar todos los mensajes (que es más que el mínimo requerido). En este caso, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] no producirá una excepción porque el cliente ha hecho más que el mínimo. Tenga en cuenta, sin embargo, que las aplicaciones [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (servicios o clientes) no sobreprotegerán una parte del mensaje si es posible, sino que cumplirán con el nivel mínimo. Además, tenga en cuenta que al utilizar `Transport` como modo de seguridad, el transporte puede sobreproteger la secuencia de mensajes porque no puede proteger en un nivel más específico.  
+-   Si el servicio requiere que el mínimo `ProtectionLevel` para todos los mensajes es `Sign`, un cliente (quizás creado por una tecnología no WCF) puede cifrar y firmar todos los mensajes (que es mayor que el mínimo requerido). En este caso, WCF no iniciará una excepción porque el cliente ha hecho más que el mínimo. Sin embargo, tenga en cuenta que las aplicaciones de WCF (servicios o clientes) no sobreprotegerán una parte del mensaje si es posible pero cumplan con el nivel mínimo. Además, tenga en cuenta que al utilizar `Transport` como modo de seguridad, el transporte puede sobreproteger la secuencia de mensajes porque no puede proteger en un nivel más específico.  
   
 -   Si establece `ProtectionLevel` como `Sign` o `EncryptAndSign`, deberá usar un enlace con la seguridad habilitada o se producirá una excepción.  
   

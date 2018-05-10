@@ -2,17 +2,17 @@
 title: Detalles de las características de Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: dc3ff5669d23e57685c89937f7c2171053f938ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f9bc81609379414ce022499e20791073d259cdc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Detalles de las características de Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] agrega una serie de características a Windows Workflow Foundation. Este documento describe algunas de las nuevas características y proporciona detalles sobre los escenarios en que pueden ser útiles.  
   
 ## <a name="messaging-activities"></a>Actividades de mensajería  
- Las actividades de mensajería (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) se utilizan para enviar y recibir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mensajes del flujo de trabajo.  <xref:System.ServiceModel.Activities.Receive> y <xref:System.ServiceModel.Activities.SendReply> actividades se usan para formar una operación de servicio de Windows Communication Foundation (WCF) que se expone a través de WSDL como estándar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicios web.  <xref:System.ServiceModel.Activities.Send> y <xref:System.ServiceModel.Activities.ReceiveReply> se usan para consumir un servicio web similar a WCF <xref:System.ServiceModel.ChannelFactory>; un **Agregar referencia de servicio** experiencia también existe para Workflow Foundation que genera actividades preconfiguradas.  
+ Las actividades de mensajería (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) se utilizan para enviar y recibir mensajes WCF del flujo de trabajo.  <xref:System.ServiceModel.Activities.Receive> y <xref:System.ServiceModel.Activities.SendReply> actividades se usan para formar una operación de servicio de Windows Communication Foundation (WCF) que se expone a través de WSDL como servicios web WCF estándar.  <xref:System.ServiceModel.Activities.Send> y <xref:System.ServiceModel.Activities.ReceiveReply> se usan para consumir un servicio web similar a WCF <xref:System.ServiceModel.ChannelFactory>; un **Agregar referencia de servicio** experiencia también existe para Workflow Foundation que genera actividades preconfiguradas.  
   
 ### <a name="getting-started-with-messaging-activities"></a>Introducción a las actividades de mensajería  
   
@@ -34,11 +34,11 @@ ms.lasthandoff: 05/04/2018
  Un `BestPriceFinder` servicio llama a varios servicios airline para encontrar el mejor precio de vale para una ruta determinada.  Implementar este escenario, necesitaría usar las actividades de mensaje para recibir la solicitud de precio, recuperar los precios de los servicios back-end y responder a la solicitud de precio con el mejor precio.  También necesitaría usar otras actividades de out-of-box para crear la lógica de negocios para calcular el mejor precio.  
   
 ## <a name="workflowservicehost"></a>WorkflowServiceHost  
- El <xref:System.ServiceModel.WorkflowServiceHost> es el host de flujo de trabajo que admite varias instancias, configuración, y [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] mensajería (aunque los flujos de trabajo no están necesario para usar la mensajería para ser hospedados).  También se integra con la persistencia, el seguimiento y el control de instancias a través de un conjunto de comportamientos de servicio.  Al igual que [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]del <xref:System.ServiceModel.ServiceHost>, el <xref:System.ServiceModel.WorkflowServiceHost> puede hospeda a sí mismo en una aplicación de consola/formularios Windows Forms o WPF o el servicio de Windows u hospedado en web (como un archivo .xamlx) en IIS o WAS.  
+ El <xref:System.ServiceModel.WorkflowServiceHost> es el host de flujo de trabajo que admite varias instancias, configuración y mensajería de WCF (aunque los flujos de trabajo no están necesarios usar la mensajería para ser hospedados).  También se integra con la persistencia, el seguimiento y el control de instancias a través de un conjunto de comportamientos de servicio.  Al igual que de WCF <xref:System.ServiceModel.ServiceHost>, el <xref:System.ServiceModel.WorkflowServiceHost> puede hospeda a sí mismo en una aplicación de consola/formularios Windows Forms o WPF o el servicio de Windows u hospedado en web (como un archivo .xamlx) en IIS o WAS.  
   
 ### <a name="getting-started-with-workflow-service-host"></a>Introducción a host de servicio de flujo de trabajo  
   
--   En Visual Studio 2010, cree un proyecto de aplicación de servicio de flujo de trabajo de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]: este proyecto se configurará para utilizar <xref:System.ServiceModel.WorkflowServiceHost> en un entorno de host de web.  
+-   En Visual Studio 2010, cree un proyecto de aplicación de servicio de flujo de trabajo de WCF: este proyecto se configurará para usar <xref:System.ServiceModel.WorkflowServiceHost> en un entorno de host de web.  
   
 -   Para hospedar un flujo de trabajo que no sea de mensajería, agregue un elemento <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> personalizado que creará la instancia basándose en un mensaje.  
   
@@ -92,15 +92,15 @@ ms.lasthandoff: 05/04/2018
  Un flujo de trabajo de procesamiento de pedidos se utiliza para controlar la creación de orden nuevo y actualizar los pedidos existentes que están en curso.  Implementar este escenario le exigiría hospedar el flujo de trabajo <xref:System.ServiceModel.WorkflowServiceHost> y usar las actividades de mensajería.  También requeriría la correlación basada en la `orderId` para asegurarse de que las actualizaciones se realizan en el flujo de trabajo correcta.  
   
 ## <a name="simplified-configuration"></a>Configuración simplificada  
- El esquema de configuración de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] es complejo y proporciona a los usuarios muchas dificultades para encontrar características. En [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], nos hemos centrado en ayudar a los usuarios de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] a configurar sus servicios con las siguientes características:  
+ El esquema de configuración de WCF es complejo y proporciona a los usuarios muchas dificultades para encontrar características. En [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], nos hemos centrado en ayudar a los usuarios WCF a configurar sus servicios con las siguientes características:  
   
 -   Eliminar la necesidad de configuración por servicio explícita. Si no configura cualquiera \<servicio > elementos para su servicio y el servicio no define extremos mediante programación, entonces un conjunto de extremos se agregará automáticamente a su servicio, uno por cada dirección base del servicio y por cada contrato implementado por el servicio.  
   
 -   Permite al usuario definir valores predeterminados para los comportamientos y enlaces de WCF, que se aplicarán a los servicios sin ninguna configuración explícita.  
   
--   Los extremos estándar definen extremos preconfigurados reutilizables, que tienen valores fijos para una o varias propiedades de extremo (dirección, enlace y contrato), y permiten la definición de propiedades personalizadas.  
+-   Los puntos de conexión estándar definen puntos de conexión preconfigurados reutilizables, que tienen valores fijos para una o varias propiedades de punto de conexión (dirección, enlace y contrato), y permiten la definición de propiedades personalizadas.  
   
--   Finalmente, <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> permite realizar la administración central de la configuración del cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], que es útil en escenarios en que la configuración se selecciona o se cambia después del tiempo de carga del dominio de aplicación.  
+-   Por último, el <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> le permite realizar la administración central de configuración de cliente WCF, útil en escenarios en los que se selecciona o se cambió después de la hora de carga del dominio de aplicación configuración.  
   
 ### <a name="getting-started"></a>Introducción  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="simplified-configuration-scenarios"></a>Escenarios de configuración simplificados  
   
--   Un desarrollador de ASMX experimentado desea empezar a utilizar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Sin embargo, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] parece también demasiado complicado. ¿Qué es toda la información que necesito escribir en un archivo de configuración? En .NET 4, se puede decidir incluso no tener un archivo de configuración en absoluto.  
+-   Un desarrollador de ASMX experimentado desea empezar a usar WCF. Sin embargo, WCF parece también demasiado complicado. ¿Qué es toda la información que necesito escribir en un archivo de configuración? En .NET 4, se puede decidir incluso no tener un archivo de configuración en absoluto.  
   
 -   Un conjunto existente de servicios de WCF es muy difícil de configurar y mantener. El archivo de configuración tiene miles de líneas de código XML cuya modificación es sumamente peligrosa. Se necesita ayuda para reducir esa cantidad de código a algo más fácil de tratar.  
   
@@ -272,7 +272,7 @@ ms.lasthandoff: 05/04/2018
  Se necesita solicitar una entrada a un usuario. En circunstancias normales, el desarrollador utilizaría una llamada a un método como <xref:System.Console.ReadLine%2A> para solicitar la entrada de un usuario. El problema con esta configuración es que el programa espera hasta que el usuario especifica algo. En este escenario, se necesita un tiempo de espera para desbloquear una actividad de bloqueo. Un escenario común es el que requiere que una tarea se complete dentro de un período de tiempo determinado. El agotamiento del tiempo de espera de una actividad de bloqueo es un escenario en el que Pick agrega gran cantidad de valor.  
   
 ## <a name="wcf-routing-service"></a>Servicio de enrutamiento de WCF  
- El servicio de enrutamiento está diseñado para ser un enrutador que le permite controlar cómo de software genérico [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]mensajes fluyen entre sus clientes y servicios.  El servicio de enrutamiento permite desacoplar a los clientes de los servicios que proporciona más libertad en cuanto a las configuraciones que puede admitir y la flexibilidad que tiene al considerar cómo hospedar los servicios.  En .NET 3.5, los clientes y servicios se complementan estrechamente; un cliente tenía que saber acerca de todos los servicios que necesita para comunicarse con y donde se encuentra. Además, WCF en .NET Framework 3.5 tenía las siguientes limitaciones:  
+ El servicio de enrutamiento está diseñado para ser un enrutador que le permite controlar cómo fluyen WCFmessages entre sus clientes y servicios de software genérico.  El servicio de enrutamiento permite desacoplar a los clientes de los servicios que proporciona más libertad en cuanto a las configuraciones que puede admitir y la flexibilidad que tiene al considerar cómo hospedar los servicios.  En .NET 3.5, los clientes y servicios se complementan estrechamente; un cliente tenía que saber acerca de todos los servicios que necesita para comunicarse con y donde se encuentra. Además, WCF en .NET Framework 3.5 tenía las siguientes limitaciones:  
   
 -   El control de errores era complejo, ya que esta lógica tenía que codificarse de forma rígida en el cliente.  
   
@@ -312,7 +312,7 @@ ms.lasthandoff: 05/04/2018
 -   Puede habilitarse a los clientes para que sean más sólidos ante errores o la no disponibilidad de servicios.  
   
 ## <a name="wcf-discovery"></a>Detección de WCF  
- La detección de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] es una tecnología de .NET Framework que permite incorporar un mecanismo de detección a la infraestructura de las aplicaciones. Puede utilizarla para hacer su servicio reconocible y configurar los clientes para buscar los servicios. Los clientes ya no necesitan estar codificados de forma rígida con el extremo, lo que hace que la aplicación sea más sólida y tolerante a los errores. La detección es la plataforma perfecta para integrar capacidades de autoconfiguración en la aplicación.  
+ La detección de WCF es una tecnología de framework que permite incorporar un mecanismo de detección para la infraestructura de aplicación. Puede utilizarla para hacer su servicio reconocible y configurar los clientes para buscar los servicios. Los clientes ya no necesitan estar codificados de forma rígida con el extremo, lo que hace que la aplicación sea más sólida y tolerante a los errores. La detección es la plataforma perfecta para integrar capacidades de autoconfiguración en la aplicación.  
   
  El producto se basa en la norma WS-Discovery. Está diseñado para ser interoperable, extensible y genérico. El producto admite dos modos de operación:  
   

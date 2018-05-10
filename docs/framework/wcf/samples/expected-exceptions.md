@@ -2,11 +2,11 @@
 title: Excepciones esperadas
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c4af62e0870cdd670c46ead169033ff72902fc0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="expected-exceptions"></a>Excepciones esperadas
 Este ejemplo muestra cómo detectar las excepciones esperadas cuando se usa un cliente con tipo. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora. En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
@@ -16,9 +16,9 @@ Este ejemplo muestra cómo detectar las excepciones esperadas cuando se usa un c
   
  Este ejemplo muestra la detección y administración de dos tipos de excepciones esperadas que los programas correctos deben gestionar: `TimeoutException` y `CommunicationException`.  
   
- Las excepciones que se producen en los métodos de comunicación en un cliente de Windows Communication Foundation (WCF) son esperado o inesperado. Las inesperadas incluyen errores graves como `OutOfMemoryException` y errores de programación como `ArgumentNullException` o `InvalidOperationException`. No hay normalmente ninguna manera útil de administrar errores inesperados, por lo que normalmente no debería detectarlos cuando se llama a un método de comunicación de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Las excepciones que se producen en los métodos de comunicación en un cliente de Windows Communication Foundation (WCF) son esperado o inesperado. Las inesperadas incluyen errores graves como `OutOfMemoryException` y errores de programación como `ArgumentNullException` o `InvalidOperationException`. Normalmente, no hay ninguna manera útil para controlar errores inesperados, por lo que normalmente que no debería detectarlos cuando se llama a un método de comunicación de cliente WCF.  
   
- Las excepciones esperadas de los métodos de comunicación en el cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluyen `TimeoutException`, `CommunicationException` y cualquier clase derivada de `CommunicationException`. Indican un problema durante la comunicación que se puede administrar sin ningún riesgo anulando el cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y creando un informe de un error de comunicación. Dado que los factores externos pueden producir estos errores en cualquier aplicación, las aplicaciones correctas deben detectar estas excepciones y recuperarse cuando se produzcan.  
+ Se esperaba incluyen las excepciones de los métodos de comunicación en un cliente WCF `TimeoutException`, `CommunicationException`, y cualquier clase derivada de `CommunicationException`. Indican un problema durante la comunicación que se pueden administrar de forma segura por el cliente de WCF se cancelará y notificar un error de comunicación. Dado que los factores externos pueden producir estos errores en cualquier aplicación, las aplicaciones correctas deben detectar estas excepciones y recuperarse cuando se produzcan.  
   
  Hay varias clases derivadas de `CommunicationException` que un cliente puede iniciar. En algunos casos, las aplicaciones detectan también algunas de ellas para que se gestionen de forma especial, pero deja que otras las gestionen como `CommunicationException`. Esto se puede lograr detectando el tipo de excepción más concreto primero y detectando a continuación `CommunicationException` en una cláusula catch posterior.  
   

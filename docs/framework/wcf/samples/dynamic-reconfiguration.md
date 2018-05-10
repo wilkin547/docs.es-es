@@ -2,14 +2,14 @@
 title: Reconfiguración dinámica
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-ms.openlocfilehash: 3783dd79918dc42a5ad6567bb4f3d2d0fe8bc1e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 81a2b494c48476e683053e12e58264e756201124
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="dynamic-reconfiguration"></a>Reconfiguración dinámica
-Este ejemplo muestra el servicio de enrutamiento de Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que permite incluir fácilmente un enrutador basado en contenido en una aplicación. En este ejemplo se adapta el ejemplo de la calculadora de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] estándar para comunicarse utilizando el servicio de enrutamiento. En este ejemplo se muestra el modo en que el servicio de enrutamiento puede reconfigurarse dinámicamente en tiempo de ejecución.  
+Este ejemplo muestra el servicio de enrutamiento de Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente WCF que facilita el proceso incluir un enrutador basado en contenido en la aplicación. Este ejemplo adapta el ejemplo de la calculadora de WCF estándar para comunicarse con el servicio de enrutamiento. En este ejemplo se muestra el modo en que el servicio de enrutamiento puede reconfigurarse dinámicamente en tiempo de ejecución.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

@@ -2,11 +2,11 @@
 title: Actualizaciones personalizadas de secuencias
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-stream-upgrades"></a>Actualizaciones personalizadas de secuencias
 Los transportes orientados a secuencia como TCP y las canalizaciones con nombre funcionan en una secuencia continua de bytes entre el cliente y servidor. Esta secuencia la realiza un objeto <xref:System.IO.Stream>. En una actualización de secuencia, el cliente desea agregar una capa de protocolo opcional a la pila del canal y pide al otro lado del canal de comunicación que lo haga. La actualización de secuencia consiste en reemplazar el objeto <xref:System.IO.Stream> original con uno actualizado.  
@@ -66,7 +66,7 @@ Los transportes orientados a secuencia como TCP y las canalizaciones con nombre 
 ## <a name="security-upgrades"></a>Actualizaciones de seguridad  
  Agregar una actualización de seguridad es una versión especializada del proceso de actualización de secuencia general.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ya proporciona dos elementos de enlace para actualizar la seguridad de la secuencia. La configuración de la seguridad de nivel de transporte la encapsula <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> y <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>, que se pueden configurar y agregar a un enlace personalizado. Estos elementos de enlace extienden la clase <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> que crea los proveedores de actualización de secuencia del cliente y el servidor. Estos elementos de enlace tienen métodos que crean las clases de proveedor de actualización de secuencia de seguridad especializadas, que no son `public`, por lo que para estos dos casos solamente se necesita agregar el elemento de enlace a este enlace.  
+ WCF ya proporciona dos elementos de enlace de seguridad de secuencia de actualización. La configuración de la seguridad de nivel de transporte la encapsula <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> y <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>, que se pueden configurar y agregar a un enlace personalizado. Estos elementos de enlace extienden la clase <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> que crea los proveedores de actualización de secuencia del cliente y el servidor. Estos elementos de enlace tienen métodos que crean las clases de proveedor de actualización de secuencia de seguridad especializadas, que no son `public`, por lo que para estos dos casos solamente se necesita agregar el elemento de enlace a este enlace.  
   
  Para los escenarios de seguridad que no se incluyan en los dos elementos de enlace anteriores, tres clases `abstract` relacionadas con seguridad se derivan de las clases base de iniciador, aceptador y proveedor anteriores:  
   

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2f84254a993df35ef999ee6cdd36c4f6b256a89f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f9603f79992c31ad1af3b6c672b448ab031ba78d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-tracing"></a>Configurar seguimiento
 En este tema se describe cómo se puede habilitar el seguimiento, configurar los orígenes de seguimiento para emitir trazas y establecer niveles de seguimiento, establecer el seguimiento y la propagación de actividades para admitir la correlación de seguimiento de un extremo a otro, y establecer escuchas de seguimiento para tener acceso a las trazas.  
@@ -25,11 +25,11 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
   
 -   Eventos de error de Windows cuando la característica de seguimiento no funciona bien. Vea [el registro de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
- El seguimiento [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] se basa en <xref:System.Diagnostics>. Para usar el seguimiento, debe definir los orígenes de seguimiento en el archivo de configuración o en el código. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] define un origen de seguimiento para cada ensamblado [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. El origen de seguimiento `System.ServiceModel` es el origen de seguimiento [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] más general y graba los hitos del procesamiento en la pila de comunicación [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], desde el transporte de entrada/salida al código de usuario de entrada/salida. El origen de seguimiento `System.ServiceModel.MessageLogging` graba todos los mensajes que fluyen a través del sistema.  
+ Seguimiento de WCF se basa en <xref:System.Diagnostics>. Para usar el seguimiento, debe definir los orígenes de seguimiento en el archivo de configuración o en el código. WCF define un origen de seguimiento para cada ensamblado WCF. El `System.ServiceModel` origen de seguimiento es el origen de seguimiento WCF más general y graba los hitos del procesamiento a través de la pila de comunicación de WCF de transporte de entrada/salida salida código de usuario. El origen de seguimiento `System.ServiceModel.MessageLogging` graba todos los mensajes que fluyen a través del sistema.  
   
- De forma predeterminada, el seguimiento no está habilitado. Para activar el seguimiento, debe crear una escucha de seguimiento y establecer un nivel de seguimiento diferente a "Off" para el origen de seguimiento seleccionado en configuración; de lo contrario, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] no genera ninguna traza. Si no especifica una escucha, el seguimiento se deshabilita automáticamente. Si se define una escucha pero no se especifica ningún nivel, el nivel se establece de forma predeterminada en "Off", lo que significa que no se emite ningún seguimiento.  
+ De forma predeterminada, el seguimiento no está habilitado. Para activar el seguimiento, debe crear un agente de escucha de seguimiento y establecer un nivel de seguimiento diferente a "Off" para el origen de seguimiento seleccionado en configuración; en caso contrario, WCF no genera ninguna traza. Si no especifica una escucha, el seguimiento se deshabilita automáticamente. Si se define una escucha pero no se especifica ningún nivel, el nivel se establece de forma predeterminada en "Off", lo que significa que no se emite ningún seguimiento.  
   
- Si utiliza puntos de extensibilidad de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], como invocadores de operación personalizados, debería emitir sus propios seguimientos. Esto se debe a que, si implementa un punto de extensibilidad, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ya no puede emitir los seguimientos estándar en la ruta de acceso predeterminada. Si no implementa la compatibilidad con el seguimiento manual mediante la emisión de seguimientos, puede que no vea los seguimientos que espera.  
+ Si usa puntos de extensibilidad WCF, como Invocadores de operación personalizado, debe emitir sus propios seguimientos. Esto es porque si implementa un punto de extensibilidad, WCF ya no puede emitir los seguimientos estándar en la ruta de acceso predeterminada. Si no implementa la compatibilidad con el seguimiento manual mediante la emisión de seguimientos, puede que no vea los seguimientos que espera.  
   
  Puede configurar el seguimiento editando el archivo de configuración de la aplicación: Web.config para las aplicaciones hospedadas en web o Appname.exe.config para las aplicaciones autohospedadas. A continuación se muestra un ejemplo de dicha modificación: Para obtener más información sobre estas opciones, vea la sección "Configurar agentes de escucha de seguimiento para seguimientos consumir".  
   
@@ -52,12 +52,12 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 ```  
   
 > [!NOTE]
->  Para editar el archivo de configuración de un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] servicio de proyecto en Visual Studio, haga clic en el archivo de configuración de la aplicación: Web.config para las aplicaciones hospedadas en Web o Appname.exe.config para las aplicaciones autohospedadas en  **El Explorador de soluciones**. A continuación, elija la **Editar configuración de WCF** elemento de menú contextual. Esto inicia el [herramienta Editor de configuración (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), lo que permite modificar la configuración para [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] los servicios mediante una interfaz gráfica de usuario.  
+>  Para editar el archivo de configuración de un proyecto de servicio WCF en Visual Studio, haga clic en el archivo de configuración de la aplicación: Web.config para las aplicaciones hospedadas en Web o Appname.exe.config para las aplicaciones autohospedadas en **el Explorador de soluciones** . A continuación, elija la **Editar configuración de WCF** elemento de menú contextual. Esto inicia el [herramienta Editor de configuración (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), lo que permite modificar la configuración para los servicios WCF mediante una interfaz gráfica de usuario.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configurar los orígenes de seguimiento para emitir trazas  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] define un origen de seguimiento para cada ensamblado. Las escuchas definidas para ese origen tienen acceso a las trazas generadas dentro de un ensamblado. Se definen los orígenes de seguimiento siguientes:  
+ WCF define un origen de seguimiento para cada ensamblado. Las escuchas definidas para ese origen tienen acceso a las trazas generadas dentro de un ensamblado. Se definen los orígenes de seguimiento siguientes:  
   
--   System.ServiceModel: registra todas las fases de procesamiento de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], cada vez que se lee la configuración, cada vez que se procesa un mensaje en el transporte, en el procesamiento de la seguridad, cuando un mensaje se envía en el código de usuario, etc.  
+-   System.ServiceModel: Registra todas las fases de procesamiento de WCF, cada vez que se lee la configuración, se procesa un mensaje en el transporte, seguridad de procesamiento, un mensaje se envía en el código de usuario y así sucesivamente.  
   
 -   System.ServiceModel.MessageLogging: Registra todos los mensajes que fluyen a través del sistema.  
   
@@ -135,7 +135,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
  Para obtener más información acerca de cómo crear orígenes de seguimiento definido por el usuario, consulte [extender seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Configurar las escuchas para consumir trazas  
- En tiempo de ejecución, las fuentes de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hacen un seguimiento de datos hasta los agentes de escucha que procesan los datos. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] proporciona varios agentes de escucha predefinidos para <xref:System.Diagnostics>, que difieren en el formato que usan para el resultado. También puede agregar tipos de escucha personalizados.  
+ En tiempo de ejecución, WCF las fuentes de datos de seguimiento para los agentes de escucha que procesan los datos. WCF proporciona varios agentes de escucha predefinidos para <xref:System.Diagnostics>, que difieren en el formato que se usan para la salida. También puede agregar tipos de escucha personalizados.  
   
  Puede utilizar `add` para especificar el nombre y tipo de agente de escucha de seguimiento que desea utilizar. En nuestra configuración de ejemplo, hemos llamado `traceListener` al agente de escucha y hemos agregado el agente de escucha de seguimiento estándar de .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) como el tipo que deseamos utilizar. Puede agregar cualquier número de escuchas de seguimiento para cada origen. Si la escucha de seguimiento emite el seguimiento a un archivo, debe especificar la ubicación del archivo de salida y el nombre en el archivo de configuración. Esto se hace estableciendo `initializeData` en el nombre del archivo para esa escucha. Si no especifica un nombre de archivo, se genera un nombre de archivo aleatorio basado en el tipo de escucha utilizado. Si se utiliza <xref:System.Diagnostics.XmlWriterTraceListener>, se genera un nombre de archivo sin extensión. Si implementa una escucha personalizada, también puede utilizar este atributo para recibir datos de inicialización distintos de un nombre de archivo. Por ejemplo, puede especificar un identificador de la base de datos para este atributo.  
   
@@ -169,13 +169,13 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
  El valor `activityTracing` especificado para el atributo `switchValue` se utiliza para habilitar el seguimiento de actividad, que emite las trazas para los límites de actividad y las transferencias dentro de los extremos.  
   
 > [!NOTE]
->  Cuando se utilizan ciertas características de extensibilidad en [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], puede obtenerse una <xref:System.NullReferenceException> si la traza de la actividad está habilitada. Para solucionar este problema, compruebe el archivo de configuración de la aplicación y asegúrese de que el atributo `switchValue` para el origen de seguimiento de traza no está establecido en `activityTracing`.  
+>  Cuando se utilizan ciertas características de extensibilidad de WCF, podría obtener un <xref:System.NullReferenceException> cuando está habilitado el seguimiento de la actividad. Para solucionar este problema, compruebe el archivo de configuración de la aplicación y asegúrese de que el atributo `switchValue` para el origen de seguimiento de traza no está establecido en `activityTracing`.  
   
  El atributo `propagateActivity` indica si la actividad se debería propagar a otros extremos que participan en el intercambio de mensajes. Estableciendo este valor en `true`, puede coger archivos de seguimiento generados por dos extremos cualesquiera y observar cómo un conjunto de trazas en un extremo fluyó a un conjunto de rastros de otro extremo.  
   
  Para obtener más información acerca del seguimiento de actividad y propagación, vea [propagación](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
- Ambos `propagateActivity` y `ActivityTracing` valores booleanos se aplican a la System.ServiceModel TraceSource. El `ActivityTracing` valor también se aplica a cualquier origen de seguimiento, incluido [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] o definido por el usuario.  
+ Ambos `propagateActivity` y `ActivityTracing` valores booleanos se aplican a la System.ServiceModel TraceSource. El `ActivityTracing` valor también se aplica a cualquier origen de seguimiento, incluido WCF o las definidas por el usuario.  
   
  No puede utilizar el atributo `propagateActivity` con orígenes de seguimiento definidos por el usuario. Para la propagación del identificador de actividad de código de usuario, asegúrese de no establecer ServiceModel `ActivityTracing`, mientras todavía tenga el atributo ServiceModel `propagateActivity` establecido en `true`.  
   

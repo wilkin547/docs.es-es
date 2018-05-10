@@ -2,11 +2,11 @@
 title: Tokens auxiliares
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 4f8cf62220955bef3f341c43b3c615f873387b2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d8ff3cf4d5a060d135cbcf40c043681ce72b6e0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="supporting-tokens"></a>Tokens auxiliares
 El ejemplo de los tokens auxiliares muestra cómo agregar tokens adicionales a un mensaje que utiliza WS-Security. El ejemplo agrega un token de seguridad binario de X.509 además de un token de seguridad del nombre de usuario. El token se pasa en un encabezado de mensaje de WS-Security desde el cliente al servicio y parte del mensaje se firma con una clave privada asociada con el token de seguridad de X.509 para demostrar la posesión del certificado X.509 al receptor. Esto es útil cuando es un requisito tener varias solicitudes asociadas con un mensaje para autenticar o autorizar el remitente. El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.  
@@ -345,7 +345,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```  
   
 ## <a name="running-the-sample"></a>Ejecutar el ejemplo  
- Al ejecutar el ejemplo, el cliente le pide primero que proporcione el nombre de usuario y la contraseña para el token del nombre de usuario. Asegúrese de proporcionar valores correctos para la cuenta del sistema, porque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en el servicio asigna los valores proporcionados en el token del nombre de usuario en la identidad proporcionada por el sistema. Después de esto, el cliente muestra la respuesta del servicio. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
+ Al ejecutar el ejemplo, el cliente le pide primero que proporcione el nombre de usuario y la contraseña para el token del nombre de usuario. Asegúrese de proporcionar los valores correctos para la cuenta del sistema, porque WCF en el servicio asigna los valores proporcionados en el token de nombre de usuario en la identidad proporcionada por el sistema. Después de esto, el cliente muestra la respuesta del servicio. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
 ## <a name="setup-batch-file"></a>Instalar el archivo por lotes  
  El archivo por lotes Setup.bat incluido con este ejemplo le permite configurar el servidor con certificados pertinentes para ejecutar la aplicación hospedada por Internet Information Services (IIS) que necesita la seguridad basada en el certificado del servidor. Este archivo por lotes debe modificarse para que funcione a través de los equipos o en un caso no hospedado.  
@@ -464,6 +464,6 @@ iisreset
 -   Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
   
 > [!NOTE]
->  Este script no quita los certificados del servicio en un cliente cuando se ejecuta este ejemplo en los equipos. Si ha ejecutado los ejemplos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se hayan instalado en el almacén CurrentUser - TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Este script no quita los certificados del servicio en un cliente cuando se ejecuta este ejemplo en los equipos. Si ha ejecutado ejemplos de WCF que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se hayan instalado en el almacén CurrentUser - TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Vea también

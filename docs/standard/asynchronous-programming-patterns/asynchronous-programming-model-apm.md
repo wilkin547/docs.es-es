@@ -1,12 +1,12 @@
 ---
-title: "Modelo de programación asincrónica (APM)"
-ms.custom: 
+title: Modelo de programación asincrónica (APM)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ending asynchronous operations
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -71,9 +71,9 @@ Una operación asincrónica que usa el modelo de diseño <xref:System.IAsyncResu
   
  Las aplicaciones que no necesiten bloquear mientras se completa la operación asincrónica pueden usar uno de los siguientes métodos:  
   
--   Sondee el estado de finalización de la operación activando la propiedad <xref:System.IAsyncResult.IsCompleted%2A> periódicamente y llamando a **End***OperationName* cuando finalice la operación. Para ver un ejemplo que ilustre esta técnica, consulte [Polling for the Status of an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
+-   Sondee el estado de finalización de la operación activando la propiedad <xref:System.IAsyncResult.IsCompleted%2A> periódicamente y llamando a **End***OperationName* cuando finalice la operación. Para ver un ejemplo que ilustre esta técnica, consulte [Sondear el estado de una operación asincrónica](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
   
--   Use un delegado <xref:System.AsyncCallback> para especificar un método que se debe invocar cuando finalice la operación. Para ver un ejemplo que ilustre esta técnica, consulte [Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
+-   Use un delegado <xref:System.AsyncCallback> para especificar un método que se debe invocar cuando finalice la operación. Para ver un ejemplo que ilustre esta técnica, consulte [Utilizar un delegado AsyncCallback para finalizar una operación asincrónica](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  

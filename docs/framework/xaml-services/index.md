@@ -1,30 +1,16 @@
 ---
 title: Servicios XAML
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], System.Xaml concepts
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f36f22e8bf68520f5f57280d33cf37990feb2df6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fbe67e81bdc461e290b5cdbb9e1050aec32ce8fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-services"></a>Servicios XAML
 Este tema describe las capacidades de un conjunto de tecnologías que se conoce como XAML de .NET Framework Services. La mayoría de los servicios y las API descritas se encuentran en el ensamblado System.Xaml, que es un ensamblado que se introdujo con la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] conjunto de ensamblados de .NET core. Los servicios incluyen lectores y escritores, clases de esquema y compatibilidad de esquema, generadores, atribución de clases, compatibilidad intrínseca del lenguaje XAML y otras características del lenguaje XAML.  
@@ -49,7 +35,7 @@ Este tema describe las capacidades de un conjunto de tecnologías que se conoce 
  Si desea obtener material introductorio en XAML como un lenguaje, puede intentar [información general sobre XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Ese tema discute XAML para una audiencia que es nueva para [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] y también al uso de marcado XAML y características del lenguaje XAML. Otro documento útil es el material introductorio en el [especificación del lenguaje XAML](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>Servicios XAML de .NET framework y System.Xaml en la arquitectura de .NET  
- En versiones anteriores de [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], la compatibilidad con características del lenguaje XAML implementada por marcos de trabajo que se basan en [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation y Windows Communication Foundation (WCF)) y, por tanto, modificarse en su comportamiento y la API que usa dependiendo de qué marco concreto estaba usando. Esto incluye el XAML analizador y su objeto de gráfico mecanismo de creación, funciones intrínsecas del lenguaje XAML, compatibilidad con la serialización y así sucesivamente.  
+ En versiones anteriores de Microsoft .NET Framework, la compatibilidad con los marcos de trabajo que está basado en Microsoft .NET Framework se implementa características del lenguaje XAML ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation y Windows Communication Foundation (WCF)) y, por tanto, variar en su comportamiento y la API que usa dependiendo de qué marco concreto estaba usando. Esto incluye el XAML analizador y su objeto de gráfico mecanismo de creación, funciones intrínsecas del lenguaje XAML, compatibilidad con la serialización y así sucesivamente.  
   
  En [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], servicios XAML de .NET Framework y el ensamblado System.Xaml definen gran parte de lo que se necesita para admitir características del lenguaje XAML. Esto incluye las clases base para los lectores y escritores de XAML. La característica más importante que se agregan a los servicios XAML de .NET Framework que no estaba presente en cualquiera de las implementaciones de XAML específicas del marco es una representación de sistema de tipos para XAML. La representación del sistema de tipo presenta XAML de una manera orientada a objetos que se centra en las capacidades XAML sin incurrir en las dependencias en las capacidades concretas de marcos de trabajo.  
   

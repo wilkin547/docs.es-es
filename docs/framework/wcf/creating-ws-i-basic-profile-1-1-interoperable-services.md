@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: 461bd7ba095300f945157db21122ccc610119680
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa76a6633ef86a908e00bb9dcb1b16eefe35c12d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>Creación de servicios interoperables de WS-I Basic Profile 1.1
-Para configurar un extremo del servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para ser interoperable con clientes de servicios Web [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]:  
+Para configurar un extremo de servicio WCF para que sea interoperable con [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] clientes de servicios Web:  
   
 -   Utilice el tipo <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> como tipo de enlace para su extremo de servicio.  
   
@@ -28,12 +28,12 @@ Para configurar un extremo del servicio [!INCLUDE[indigo2](../../../includes/ind
   
 -   La seguridad de mensaje que controla el valor <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> proporciona compatibilidad con WS-Security conforme a WS-I Basic Security Profile 1.0. Deje esta propiedad en su valor predeterminado, que es <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType>, para no usar WS-Security.  
   
- Para que los metadatos una [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicio disponible para [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], use las herramientas de generación de cliente de servicio Web: [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [(Web Services Discovery Tool Disco.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979)y el `Add Web Reference` característica en Visual Studio; también debe habilitar la publicación de metadatos. Para obtener más información, consulte [publicación de extremos de metadatos](../../../docs/framework/wcf/publishing-metadata-endpoints.md).  
+ Para que estén disponibles para los metadatos para un servicio WCF [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], use las herramientas de generación de cliente de servicio Web: [Web Services Description Language Tool (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [Web Services Discovery Tool (Disco.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979)y el `Add Web Reference` característica en Visual Studio; también debe habilitar la publicación de metadatos. Para obtener más información, consulte [publicación de extremos de metadatos](../../../docs/framework/wcf/publishing-metadata-endpoints.md).  
   
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- Ejemplo de código siguiente muestra cómo agregar un [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] punto de conexión que es compatible con [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] clientes de servicios en código y, o bien, en un archivo de configuración Web.  
+ Ejemplo de código siguiente muestra cómo agregar un extremo de WCF que sea compatible con [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] clientes de servicios en código y, o bien, en un archivo de configuración Web.  
   
 ### <a name="code"></a>Código  
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: e02b7317eef8e7124bd5ba9ceef201cddc9bbea1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca0f78239e6e259ec5bd75e9f93af5c3a4b7adf1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Desarrollar e implementar WCF Data Services
 En este tema se proporciona información sobre el desarrollo y la implementación de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Para obtener más información básica sobre [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], consulte [Introducción](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) y [Introducción](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -75,7 +75,7 @@ En este tema se proporciona información sobre el desarrollo y la implementació
   
 -   Un programa de inspección HTTP puede ser muy útil cuando se depure un servicio de datos, ya que permite inspeccionar el contenido de los mensajes de solicitud y respuesta. Cualquier analizador de paquetes de red que pueda mostrar paquetes sin procesar se puede usar para inspeccionar las solicitudes HTTP al servicio de datos y las respuestas.  
   
--   Cuando depure un servicio de datos, quizá desee obtener más información sobre un error desde el servicio de datos que durante el funcionamiento normal. Puede obtener información adicional sobre el error del servicio de datos si establece la propiedad <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> de <xref:System.Data.Services.DataServiceConfiguration> en `true` y la propiedad <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> del atributo <xref:System.ServiceModel.Description.ServiceDebugBehavior> de la clase de servicio de datos en `true`. Para obtener más información, vea la entrada [depurar WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=201868). También puede habilitar la traza en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para ver las excepciones producidas en la capa de mensajería HTTP. Para obtener más información, consulta [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+-   Cuando depure un servicio de datos, quizá desee obtener más información sobre un error desde el servicio de datos que durante el funcionamiento normal. Puede obtener información adicional sobre el error del servicio de datos si establece la propiedad <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> de <xref:System.Data.Services.DataServiceConfiguration> en `true` y la propiedad <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> del atributo <xref:System.ServiceModel.Description.ServiceDebugBehavior> de la clase de servicio de datos en `true`. Para obtener más información, vea la entrada [depurar WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=201868). También puede habilitar el seguimiento de WCF para ver las excepciones producidas en la capa de mensajería HTTP. Para obtener más información, consulta [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   Un servicio de datos normalmente se desarrolla como un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proyecto de aplicación, pero también puede crear el servicio de datos como un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proyecto de sitio Web en Visual Studio. Para obtener información sobre las diferencias entre los dos tipos de proyectos, vea [NIB: Web Application Projects versus Web Site Projects en Visual Studio](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
   
@@ -116,7 +116,7 @@ En este tema se proporciona información sobre el desarrollo y la implementació
   
 -   Al implementar un servicio de datos que usa el proveedor de [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] para tener acceso a una base de datos de SQL Server, también podría tener que propagar estructuras de datos, datos o ambos con su implementación del servicio de datos. Visual Studio puede crear automáticamente scripts (archivos. SQL) para hacer esto en la base de datos de destino y estos scripts se pueden incluir en el paquete de implementación Web de un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicación. Para obtener más información, consulte [NIB: Cómo: implementar una base de datos con un proyecto de aplicación Web](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Para una [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sitio Web, se puede hacer esto con el **Asistente para publicación de base de datos** en Visual Studio. Para obtener más información, consulta [implementar una base de datos mediante el Asistente para publicación de base de datos](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
--   Dado que [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye una implementación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] básica, puede usar Windows Server AppFabric para supervisar un servicio de datos implementado en IIS que se ejecuta en Windows Server. Para obtener más información acerca del uso de Windows Server AppFabric para supervisar un servicio de datos, vea la entrada [seguimiento WCF Data Services con Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
+-   Dado que [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye una implementación básica de WCF, puede usar Windows Server AppFabric para supervisar un servicio de datos implementado en IIS que se ejecuta en Windows Server. Para obtener más información acerca del uso de Windows Server AppFabric para supervisar un servicio de datos, vea la entrada [seguimiento WCF Data Services con Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   
 ## <a name="see-also"></a>Vea también  
  [Hospedaje del servicio de datos](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  

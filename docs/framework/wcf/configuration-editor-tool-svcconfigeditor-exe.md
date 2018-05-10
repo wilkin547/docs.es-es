@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: ab6e3a99f951d2977a079f49e4aa3eff250ee8d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75657786135fd13222c6c7edd5acfa122cc72e52
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Herramienta del editor de configuración (SvcConfigEditor.exe)
-El Editor de configuración de servicio de Windows Communication Foundation (WCF) (SvcConfigEditor.exe) permite a los administradores y desarrolladores crear y modificar valores de configuración para [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] los servicios mediante una interfaz gráfica de usuario. Con esta herramienta puede administrar los valores para los enlaces, comportamientos, servicios y diagnósticos [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sin tener que editar directamente los archivos de configuración XML.  
+El editor de configuración de servicios de Windows Communication Foundation (SvcConfigEditor.exe) permite a los administradores y programadores crear y modificar la configuración para los servicios WCF mediante una interfaz gráfica de usuario. Con esta herramienta puede administrar los valores para los enlaces, comportamientos, servicios y diagnósticos de WCF sin tener que editar directamente los archivos de configuración XML.  
   
  El Editor de configuración de servicio se puede encontrar en la carpeta C:\Archivos de programa\Microsoft SDKs\Windows\v6.0\Bin.  
   
 ## <a name="the-wcf-configuration-editor"></a>El editor de configuración de WCF  
- El editor de configuración de servicio viene con un asistente que lo guía a través de todos los pasos para configurar un servicio o cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Se le aconseja encarecidamente que utilice directamente el asistente en lugar del editor.  
+ El editor de configuración de servicio viene con un asistente que lo guía a través de todos los pasos para configurar un servicio o cliente de WCF. Se le aconseja encarecidamente que utilice directamente el asistente en lugar del editor.  
   
- Si ya tiene algunos archivos de configuración que obedecen al esquema estándar de System.Configuration, puede administrar valores concretos para enlaces, comportamiento, servicios y diagnósticos mediante la interfaz de usuario. El editor de configuración de servicio le permite administrar los valores para los archivos de configuración [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] existentes, así como archivos ejecutables, servicios de COM+ y servicios hospedados en web. Cuando se abre un servicio hospedado en web con el Editor de configuración de servicios, se muestran las secciones de configuraciones heredadas de los nodos de nivel superior y la propia configuración del servicio.  
+ Si ya tiene algunos archivos de configuración que obedecen al esquema estándar de System.Configuration, puede administrar valores concretos para enlaces, comportamiento, servicios y diagnósticos mediante la interfaz de usuario. El editor de configuración de servicio le permite administrar los valores para los archivos de configuración de WCF existentes, así como archivos ejecutables, servicios de COM+ y servicios hospedados en web. Cuando se abre un servicio hospedado en web con el Editor de configuración de servicios, se muestran las secciones de configuraciones heredadas de los nodos de nivel superior y la propia configuración del servicio.  
   
- Dado que la configuración [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se encuentra en la sección `<system.serviceModel>` del archivo de configuración, el editor actúa exclusivamente sobre el contenido de este elemento y no accede a otros elementos del mismo archivo. Puede navegar directamente a archivos de configuración existentes o puede seleccionar un ensamblado que contenga un servicio, un directorio virtual o un servicio de COM+. El editor carga el archivo de configuración para ese servicio particular y permite que el usuario agregue elementos nuevos o modifique elementos existentes anidados en la sección `<system.serviceModel>` del archivo de configuración.  
+ Dado que la configuración de WCF se encuentra en la sección `<system.serviceModel>` del archivo de configuración, el editor actúa exclusivamente sobre el contenido de este elemento y no accede a otros elementos del mismo archivo. Puede navegar directamente a archivos de configuración existentes o puede seleccionar un ensamblado que contenga un servicio, un directorio virtual o un servicio de COM+. El editor carga el archivo de configuración para ese servicio particular y permite que el usuario agregue elementos nuevos o modifique elementos existentes anidados en la sección `<system.serviceModel>` del archivo de configuración.  
   
  El editor admite IntelliSense y exige la compatibilidad del esquema. Se garantiza que el resultado obtenido es compatible con el esquema del archivo de configuración y tiene valores de datos sintácticamente correctos. Sin embargo, el editor no garantiza que el archivo de configuración sea semánticamente válido. En otras palabras, el editor no garantiza que el archivo de configuración pueda funcionar con el servicio que configura.  
   
@@ -45,7 +45,7 @@ El Editor de configuración de servicio de Windows Communication Foundation (WCF
   
  C:\Archivos de Programa\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe  
   
- Después de iniciar el Editor de configuración de servicio, puede usar el **archivo/abrir** menú para buscar el servicio o el ensamblado que desea administrar. Puede abrir directamente los archivos de configuración, busque [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] /servicios COM + y abra los archivos de configuración para servicios hospedados en web.  
+ Después de iniciar el Editor de configuración de servicio, puede usar el **archivo/abrir** menú para buscar el servicio o el ensamblado que desea administrar. Puede abrir directamente los archivos de configuración, busque WCF/servicios COM + y abra los archivos de configuración para servicios hospedados en web.  
   
  La interfaz de usuario del editor de configuración de servicio está dividida en las áreas siguientes:  
   
@@ -57,7 +57,7 @@ El Editor de configuración de servicio de Windows Communication Foundation (WCF
   
 ### <a name="opening-a-configuration-file"></a>Abrir un archivo de configuración  
   
-1.  Iniciar el Editor de configuración de servicio mediante el uso de una ventana de comandos para navegar hasta la [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ubicación de instalación y, a continuación, escriba `SvcConfigEditor.exe`.  
+1.  Iniciar el Editor de configuración de servicio mediante el uso de una ventana de comandos para navegar hasta la ubicación de instalación de WCF y, a continuación, escriba `SvcConfigEditor.exe`.  
   
 2.  Desde el **archivo** menú, seleccione **abiertos** y haga clic en el tipo de archivo que desea administrar.  
   
@@ -208,7 +208,7 @@ El Editor de configuración de servicio de Windows Communication Foundation (WCF
 3.  Seleccione la extensión de elemento de enlace que desea editar. La configuración del elemento aparece en el panel derecho, donde se puede editar.  
   
 ### <a name="diagnostics"></a>Diagnóstico  
- El **diagnósticos** nodo muestra todas las opciones de diagnóstico en el archivo de configuración. Le permite activar o desactivar contadores de rendimiento, habilitar o deshabilitar el Instrumental de administración de Windows (WMI) y configurar la traza [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y el registro de mensajes [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. La configuración de la **diagnósticos** nodo corresponde a la <`system.diagnostics`> sección, y `<diagnostics>` sección `<system.serviceModel>` en el archivo de configuración.  
+ El **diagnósticos** nodo muestra todas las opciones de diagnóstico en el archivo de configuración. Permite activar o desactivar la contadores de rendimiento, habilitar o deshabilitar Windows Management Instrumentation (WMI), configurar el seguimiento de WCF y configurar el registro de mensajes WCF. La configuración de la **diagnósticos** nodo corresponde a la <`system.diagnostics`> sección, y `<diagnostics>` sección `<system.serviceModel>` en el archivo de configuración.  
   
  Al hacer clic en el **diagnósticos** nodo, puede ver o realizar tareas en los diagnósticos **página resumen** en el **panel de detalles**.  
   
@@ -225,18 +225,18 @@ El Editor de configuración de servicio de Windows Communication Foundation (WCF
 2.  Para habilitar el proveedor WMI, haga clic en el **habilitar proveedor de WMI** vínculo.  
   
 #### <a name="enabling-wcf-tracing"></a>Habilitar la traza WCF  
- Puede crear un archivo de seguimiento [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] con propiedades estándar o configurar un archivo de seguimiento personalizado.  
+ Puede crear un archivo de seguimiento de WCF con propiedades estándar o configurar un archivo de seguimiento personalizado.  
   
 1.  Haga clic en el **diagnósticos** nodo.  
   
 2.  Haga clic en **habilita el seguimiento de**.  
   
-3.  Haga clic en el **nivel de seguimiento** vínculo para ajustar el nivel de seguimiento. Hay seis niveles de seguimiento: apagado, crítico, error, advertencia, información y detallado. El **seguimiento de la actividad** y **propagar actividad** opción permite usar el [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] característica de seguimiento de actividad.  
+3.  Haga clic en el **nivel de seguimiento** vínculo para ajustar el nivel de seguimiento. Hay seis niveles de seguimiento: apagado, crítico, error, advertencia, información y detallado. El **seguimiento de la actividad** y **propagar actividad** opción permite usar la característica de seguimiento de actividad WCF.  
   
 4.  Haga clic en el nombre del agente de escucha de traza para especificar el archivo y las opciones de seguimiento.  
   
 #### <a name="enabling-wcf-logging"></a>Habilitar el registro del WCF  
- Puede crear un archivo de seguimiento [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] con propiedades estándar o configurar un archivo de seguimiento personalizado.  
+ Puede crear un archivo de seguimiento de WCF con propiedades estándar o configurar un archivo de seguimiento personalizado.  
   
 1.  Haga clic en el **diagnósticos** nodo.  
   
@@ -316,7 +316,7 @@ El Editor de configuración de servicio de Windows Communication Foundation (WCF
  Esta sección permite establecer los tipos de enlaces predeterminados para los distintos protocolos como http, tcp, MSMQ o net.pipe mediante la asignación entre los esquemas de direcciones de protocolo y los posibles enlaces. También puede agregar nuevas asignaciones a otros protocolos.  
   
 #### <a name="extensions"></a>Extensiones  
- Las nuevas extensiones de enlace, extensiones de elemento de enlace y extensiones de extremo estándar se pueden registrar para su uso en la configuración [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Las extensiones son pares de nombre/tipo. El nombre define el nombre de la extensión en la configuración, mientras que el tipo implementa la extensión. Hay cuatro tipos de extensiones:  
+ Nuevas extensiones de enlace, extensiones de elemento de enlace, extensiones de punto de conexión estándar y extensiones de comportamiento se pueden registrar para su uso en la configuración de WCF. Las extensiones son pares de nombre/tipo. El nombre define el nombre de la extensión en la configuración, mientras que el tipo implementa la extensión. Hay cuatro tipos de extensiones:  
   
 -   Las extensiones de enlace definen un tipo entero de enlace. Ejemplo: `basicHttpBinding`.  
   
@@ -326,7 +326,7 @@ El Editor de configuración de servicio de Windows Communication Foundation (WCF
   
 -   Las extensiones de elemento de comportamiento definen un elemento de un comportamiento. Ejemplo: `clientVia`.  
   
- Las extensiones registradas en configuración se pueden utilizar como cualquier otro componente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] del mismo tipo.  
+ Las extensiones registradas en configuración se pueden utilizar como cualquier otro componente WCF del mismo tipo.  
   
 ##### <a name="adding-a-new-extension"></a>Agregar una nueva extensión  
  Seleccione uno de los nodos de extensión en los nodos avanzados:  
@@ -343,11 +343,11 @@ El Editor de configuración de servicio de Windows Communication Foundation (WCF
  Esta sección permite definir la configuración de creación de instancias para el entorno de hospedaje de servicio.  
   
 ### <a name="creating-a-configuration-file-using-the-wizard"></a>Crear un archivo de configuración mediante el asistente  
- Una forma de crear un archivo de configuración nuevo es utilizar el Asistente para nuevo elemento de servicio. El Asistente busca los tipos de servicio instalados y otros elementos compatibles con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] en el equipo, incluidos directorios COM+ y directorios virtuales hospedados en web, y los carga para que la creación de la configuración sea más simple.  
+ Una forma de crear un archivo de configuración nuevo es utilizar el Asistente para nuevo elemento de servicio. El asistente busca los tipos de servicio instalados y otros elementos compatibles con WCF en el equipo, incluidos COM + y directorios virtuales hospedados en Web y carga para que la creación de la configuración mucho más simple.  
   
 #### <a name="creating-a-configuration-file"></a>Crear un archivo de configuración  
   
-1.  Iniciar el Editor de configuración de servicio mediante el uso de una ventana de comandos para navegar hasta la [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ubicación de instalación y, a continuación, escriba `SvcConfigEditor.exe`.  
+1.  Iniciar el Editor de configuración de servicio mediante el uso de una ventana de comandos para navegar hasta la ubicación de instalación de WCF y, a continuación, escriba `SvcConfigEditor.exe`.  
   
 2.  Desde el **archivo** menú, seleccione **abiertos** y haga clic en **ejecutable**, **COM + Service**, o **WebHosted Service**, según el tipo de archivo de configuración que desea crear.  
   
@@ -370,7 +370,7 @@ El Editor de configuración de servicio de Windows Communication Foundation (WCF
   
 2.  En la primera página, seleccione la aplicación COM+ del árbol. Si no encuentra su aplicación COM+ en el árbol, compruebe que está instalada en los servicios de componente y registrada en la caché global de ensamblados (GAC).  
   
-3.  En la página siguiente, seleccione qué método(s) quiere exponer como servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Todos los métodos compatibles en la aplicación COM+ se muestran y se seleccionan de forma predeterminada.  
+3.  En la página siguiente, seleccione qué método(s) quiere exponer como servicios WCF. Todos los métodos compatibles en la aplicación COM+ se muestran y se seleccionan de forma predeterminada.  
   
 4.  Elija un método de hospedaje.  
   
@@ -390,6 +390,6 @@ El Editor de configuración de servicio de Windows Communication Foundation (WCF
     >  También puede abrir directamente un archivo de configuración que contenga contratos COM+ y modificarlo.  
   
 ## <a name="security"></a>Seguridad  
- No se garantiza que un archivo de configuración de servicio generado por el editor de configuración sea seguro. Consulte la [seguridad](../../../docs/framework/wcf/feature-details/security.md) documentación para obtener información sobre cómo proteger su [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicios.  
+ No se garantiza que un archivo de configuración de servicio generado por el editor de configuración sea seguro. Consulte la [seguridad](../../../docs/framework/wcf/feature-details/security.md) documentación para obtener información sobre cómo proteger los servicios WCF.  
   
- Además, el editor de configuración solo se puede utilizar para leer y escribir elementos de configuración [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] válidos. La herramienta omite los elementos conformes a esquema definidos por el usuario. Tampoco intenta quitar estos elementos del archivo de configuración ni determinar sus efectos en los elementos [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] conocidos. Es la responsabilidad del usuario determinar si estos elementos suponen una amenaza para la aplicación o el sistema.
+ Además, el editor de configuración solo se puede utilizar para leer y escribir elementos de configuración de WCF válidos. La herramienta omite los elementos conformes a esquema definidos por el usuario. Tampoco intenta quitar estos elementos del archivo de configuración o determinar sus efectos sobre los elementos de WCF conocidos. Es la responsabilidad del usuario determinar si estos elementos suponen una amenaza para la aplicación o el sistema.

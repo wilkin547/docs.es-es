@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF, tools
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-ms.openlocfilehash: 7d42ab9711a8d0b46ec3d35eec979e276a8c74a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27a18d436d4ee63cb6e65ed5981b65d55aadf036
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-tools"></a>Herramientas de Windows Communication Foundation
-Herramientas de Microsoft Windows Communication Foundation (WCF) están diseñadas para que sea más fácil para permitirle crear, implementar y administrar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplicaciones. Esta sección contiene información detallada acerca de las herramientas. Observe que no se admiten las herramientas.  
+Herramientas de Microsoft Windows Communication Foundation (WCF) están diseñadas para que sea más fácil para permitirle crear, implementar y administrar aplicaciones de WCF. Esta sección contiene información detallada acerca de las herramientas. Observe que no se admiten las herramientas.  
   
  Puede ejecutar todas las herramientas desde la línea de comandos.  
   
@@ -29,7 +29,7 @@ Herramientas de Microsoft Windows Communication Foundation (WCF) están diseñad
 |[Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|Configura valores básicos de compatibilidad de WS-AtomicTransaction mediante una herramienta de línea de comandos.|  
 |[Complemento MMC de configuración de WS-AtomicTransaction](../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)|Configura valores básicos de compatibilidad de WS-AtomicTransaction mediante un complemento MMC.|  
 |[Herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)|Registra un servicio de Windows Workflow.|  
-|[Host de servicio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|Hospeda servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] contenidos en archivos de bibliotecas (* .dll)|  
+|[Host de servicio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|Servicios WCF de hosts incluidos en las bibliotecas de archivos (*.dll)|  
 |[Cliente de prueba de WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)|Herramienta GUI que permite introducir parámetros de tipos arbitrarios, enviar esa entrada al servicio y ver la respuesta que devuelve el servicio.|  
 |[Herramienta de contrato primero](../../../docs/framework/wcf/contract-first-tool.md)|Una tarea de compilación de Visual Studio que crea clases desde código a partir de contratos de datos de XSD.|  
   

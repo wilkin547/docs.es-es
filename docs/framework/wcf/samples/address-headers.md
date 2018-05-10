@@ -2,11 +2,11 @@
 title: Encabezados de dirección
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: c0e3807aadc18c7737f3a5e354135721cbfccf3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 276649c17a04822eb27eb4e3ed9cbe711b384edc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="address-headers"></a>Encabezados de dirección
 El ejemplo de encabezados de dirección muestra cómo los clientes pueden pasar parámetros de referencia a un servicio mediante Windows Communication Foundation (WCF).  
@@ -14,9 +14,9 @@ El ejemplo de encabezados de dirección muestra cómo los clientes pueden pasar 
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- La especificación del direccionamiento del WS define la noción de una referencia del extremo como una manera de direccionar un extremo de servicio Web determinado. En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], las referencias del extremo se modelan utilizando la clase `EndpointAddress`- `EndpointAddress` es el tipo del campo de dirección de la clase `ServiceEndpoint`.  
+ La especificación del direccionamiento del WS define la noción de una referencia del punto de conexión como una manera de direccionar un punto de conexión de servicio Web determinado. En WCF, referencias de extremo se modelan utilizando la `EndpointAddress` class - `EndpointAddress` es el tipo del campo de dirección de la `ServiceEndpoint` clase.  
   
- La parte del modelo de referencia de extremo es que cada referencia puede llevar algunos parámetros de referencia que agregan información de identificación excepcional. En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], estos parámetros de referencia se modelan como instancias de la clase `AddressHeader`.  
+ La parte del modelo de referencia de punto de conexión es que cada referencia puede llevar algunos parámetros de referencia que agregan información de identificación excepcional. En WCF, estos parámetros de referencia se modelan como instancias de `AddressHeader` clase.  
   
  En este ejemplo, el cliente agrega un parámetro de referencia a `EndpointAddress` del extremo del cliente. El servicio busca este parámetro de referencia y utiliza su valor en la lógica de su operación del servicio "Hola".  
   

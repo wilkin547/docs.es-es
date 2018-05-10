@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>Riesgos de seguridad relativos al registro de mensajes
 En este tema se describe cómo puede proteger los datos confidenciales para que no se expongan en registros de mensajes, así como los eventos generados por el registro de mensajes.  
@@ -16,7 +16,7 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
 ## <a name="security-concerns"></a>Cuestiones de seguridad  
   
 ### <a name="logging-sensitive-information"></a>Registrar información confidencial  
- Windows Communication Foundation (WCF) no modifica ningún dato en encabezados específicos de la aplicación y el cuerpo. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tampoco realiza el seguimiento de datos personales en encabezados específicos de la aplicación o datos del cuerpo.  
+ Windows Communication Foundation (WCF) no modifica ningún dato en encabezados específicos de la aplicación y el cuerpo. WCF también no realizar un seguimiento de información personal en encabezados específicos de la aplicación o datos del cuerpo.  
   
  Cuando el registro de mensajes está habilitado, la información personal en encabezados específicos de la aplicación, como una cadena de consulta; e información del cuerpo, como un número de tarjeta de crédito, se puede volver visible en los registros. El implementador de la aplicación es el responsable de exigir el control de acceso en los archivos de registro y configuración. Si no desea que este tipo de información sea visible, debería deshabilitar el registro o filtrar parte de los datos si desea compartir los registros.  
   

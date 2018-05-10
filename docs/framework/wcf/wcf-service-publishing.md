@@ -2,19 +2,19 @@
 title: Publicación de servicio WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 9f76ab11e9697fc5af5c507d4dc9d944c433c918
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 258c7e65b69648477e58880f35b100a9378dc9c0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-service-publishing"></a>Publicación de servicio WCF
-Publicación de servicios de Windows Communication Foundation (WCF) ayuda a pasar del entorno de desarrollo preliminar proporcionado por [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host de servicio y [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cliente de prueba a la implementación real de la aplicación en producción entorno con fines de prueba. Antes de confirmar un plan de implementación final, puede usar la publicación de servicios de Windows Communication Foundation (WCF) para comprobar que su [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servicio funciona correctamente y está listo para publicarse. También puede decidir implementar las bibliotecas de servicios de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] en varias ubicaciones de destino para comprobarlas.  
+Publicación de servicios de Windows Communication Foundation (WCF) le ayuda a pasar del entorno de desarrollo preliminar proporcionado por el Host de servicio WCF y el cliente de prueba WCF para implementar realmente la aplicación en un entorno de producción con fines de prueba. Antes de confirmar un plan de implementación final, puede usar la publicación de servicios de Windows Communication Foundation (WCF) para comprobar que el servicio WCF funciona correctamente y está listo para publicarse. También puede implementar las bibliotecas de servicio WCF en varias ubicaciones de destino para las pruebas.  
   
 ## <a name="supported-services-and-target-locations"></a>Ubicaciones de destino y servicios compatibles  
- La publicación de servicios de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] permite publicar servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] creados a partir del conjunto de plantillas de biblioteca de servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y sus plantillas de elementos correspondientes, que son las siguientes:  
+ Publicación de servicios de WCF admite la publicación de servicios WCF creados desde el conjunto de plantillas de biblioteca de servicio WCF y sus correspondientes plantillas de elementos, como las siguientes:  
   
--   Plantilla de biblioteca de servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] con plantilla de elementos.  
+-   Plantilla de biblioteca de servicios WCF con plantilla de elementos.  
   
 -   Biblioteca de servicio de distribución.  
   
@@ -43,31 +43,31 @@ Publicación de servicios de Windows Communication Foundation (WCF) ayuda a pasa
   
  Puede usar **publicar** para especificar si desea copiar el ensamblado, la configuración y el archivo .svc para todos los servicios definidos en el proyecto para la ubicación de destino y sobrescribir archivos existentes en el destino.  
   
- Si decide implementar su aplicación en IIS local, puede encontrar errores relacionados con la instalación de IIS. Asegúrese de que IIS se instale correctamente. Puede escribir "HYPERLINK"http://localhost" http://localhost" en el explorador y comprobar si la página predeterminada IIS aparece.  En algunos casos, los problemas pueden deberse también a un registro incorrecto de ASP.NET o [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] en IIS. Puede abrir el símbolo del sistema de Visual Studio y ejecute el comando "aspnet_regiis.exe - ir" para solucionar problemas de registro de ASP.NET o ejecute el comando "ServiceModelReg.exe – ia" para corregir problemas de registro de WCF.  
+ Si decide implementar su aplicación en IIS local, puede encontrar errores relacionados con la instalación de IIS. Asegúrese de que IIS se instale correctamente. Puede escribir "HYPERLINK"http://localhost" http://localhost" en el explorador y comprobar si la página predeterminada IIS aparece.  En algunos casos, los problemas también pueden deberse a un registro incorrecto WCF o ASP.NET en IIS. Puede abrir el símbolo del sistema de Visual Studio y ejecute el comando "aspnet_regiis.exe - ir" para solucionar problemas de registro de ASP.NET o ejecute el comando "ServiceModelReg.exe – ia" para corregir problemas de registro de WCF.  
   
 ## <a name="files-generated-for-publishing"></a>Archivos generados para publicación  
- Antes de que una biblioteca de servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se pueda hospedar en Web, la herramienta genera los archivos siguientes: los archivos de ensamblado, el archivo Web.config y el archivo .svc. Todos los archivos se copian en la ubicación de destino. A continuación se publica el servicio.  
+ Antes de que puede ser una biblioteca de servicios WCF hospedados en Web, la herramienta genera los siguientes archivos: archivos de ensamblado, el archivo Web.config y el archivo .svc. Todos los archivos se copian en la ubicación de destino. A continuación se publica el servicio.  
   
 ### <a name="assembly-files"></a>Archivos de ensamblado  
- Al publicar un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] con esta herramienta, primero se crea el servicio automáticamente y, después, se generan los archivos de ensamblado en el proyecto de servicio.  
+ Al publicar un servicio WCF con esta herramienta, el servicio se genera automáticamente en primer lugar y se generan los archivos de ensamblado en el proyecto de servicio tras su creación.  
   
 ### <a name="svc-file"></a>Archivo .SVC  
- La operación de publicación genera un archivo *.svc para cada servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], exista o no el archivo, para garantizar la validez de la versión. Hay dos tipos de archivos svc diferentes: uno para la biblioteca de servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y la biblioteca de servicio de distribución, y otro para la biblioteca de servicio de flujo de trabajo secuencial y de máquina de estado. Generado \*archivo .svc se copia en la carpeta raíz en la ubicación de destino.  
+ La operación de publicación genera un archivo *.svc para cada servicio WCF, si el archivo existe o no es así, para garantizar la validez de la versión. Hay dos tipos de archivos svc diferentes: uno para la biblioteca de servicios WCF y biblioteca de servicios de distribución y otra para secuencial y de biblioteca de servicio de flujo de trabajo de equipo de estado. Generado \*archivo .svc se copia en la carpeta raíz en la ubicación de destino.  
   
 ### <a name="webconfig-file"></a>Archivo Web.config  
  Cada vez que un proyecto de servicio se publica en una ubicación de destino concreta, se crea un archivo Web.config.  
   
- El archivo Web.config generado incluye secciones web que son útiles para el hospedaje en Web y el contenido de App.config para la biblioteca de servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], con los cambios siguientes:  
+ El archivo Web.config generado incluye secciones Web que son útiles para el hospedaje Web y el contenido de App.config de la biblioteca de servicios WCF con los cambios siguientes:  
   
 -   Se excluye la dirección base.  
   
 -   La configuración del elemento `<diagnostics>` se excluye para conservar la configuración de seguimiento de la plataforma de destino.  
   
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>Publicación de servicios WCF con enlaces que no son HTTP en IIS  
- Si está utilizando IIS7.0 o una versión posterior, puede publicar servicios de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] con enlaces no HTTP en IIS. Necesita realizar algunas tareas de configuración previa. Para obtener más información, vea los temas en [hospedar en Windows Process Activation Service](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+ Si está utilizando IIS7.0 o una versión posterior, puede publicar servicios WCF con enlaces no HTTP en IIS. Necesita realizar algunas tareas de configuración previa. Para obtener más información, vea los temas en [hospedar en Windows Process Activation Service](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
 ## <a name="security"></a>Seguridad  
- Para la publicación en el servidor IIS local se requieren privilegios de administrador, porque IIS debe ejecutarse con la cuenta Administrador. Si un usuario sin privilegios de administrador inicia la publicación de servicios de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], IIS no estará disponible como ubicación de destino. Publicación en el sistema de archivos o el sitio FTP funciona sin privilegios de administrador.  
+ Para la publicación en el servidor IIS local se requieren privilegios de administrador, porque IIS debe ejecutarse con la cuenta Administrador. Si un usuario sin privilegios de administrador abre la publicación de servicios de WCF, IIS no está disponible como una ubicación de destino. Publicación en el sistema de archivos o el sitio FTP funciona sin privilegios de administrador.  
   
 ## <a name="see-also"></a>Vea también  
  [Plantillas de Visual Studio para WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  

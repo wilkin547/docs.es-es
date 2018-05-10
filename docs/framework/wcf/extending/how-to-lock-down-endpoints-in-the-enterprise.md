@@ -2,16 +2,16 @@
 title: Cómo bloquear puntos de conexión en la empresa
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: c91faf201c9a7cb0e5dd810059dbaa39b1e8eb05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4ec14193bdcc24722ad8e2259781c4c185f3ca3f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Cómo bloquear puntos de conexión en la empresa
 Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conforme a las directivas de seguridad de la empresa. El tema siguiente trata sobre cómo desarrollar e instalar un validador de punto de conexión de cliente que puede usarse para validar todas las aplicaciones de cliente de Windows Communication Foundation (WCF) instaladas en los equipos.  
   
- En este caso, el validador es un validador de cliente porque este comportamiento de extremo se agrega al cliente [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección en el archivo machine.config. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] carga comportamientos de extremo comunes solo para las aplicaciones cliente y carga los comportamientos de servicio comunes solo para las aplicaciones de servicio. Para instalar el mismo validador para las aplicaciones servicio, el validador debe ser un comportamiento de servicio. Para obtener más información, consulte el [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección.  
+ En este caso, el validador es un validador de cliente porque este comportamiento de extremo se agrega al cliente [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección en el archivo machine.config. WCF carga los comportamientos de extremo comunes solo para las aplicaciones cliente y carga los comportamientos de servicio comunes solo para las aplicaciones de servicio. Para instalar el mismo validador para las aplicaciones servicio, el validador debe ser un comportamiento de servicio. Para obtener más información, consulte el [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección.  
   
 > [!IMPORTANT]
 >  Comportamientos de servicio o punto de conexión no se marcan con la <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo (APTCA) que se agregan a la [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección de un archivo de configuración no se ejecutan cuando la aplicación se ejecuta en una relación de confianza parcial entorno y ninguna excepción se produce cuando ocurre esto. Para forzar la ejecución de los comportamientos habituales, como los validadores, es necesario:  

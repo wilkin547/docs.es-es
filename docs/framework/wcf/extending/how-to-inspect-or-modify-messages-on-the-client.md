@@ -2,14 +2,14 @@
 title: Cómo inspeccionar o modificar mensajes en el cliente
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 3cd0cf9dd772cad5e1dc16f61ef55eb3b314858d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cd0f39494006bf51b7c4bb55afcc112ec08aadb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Cómo inspeccionar o modificar mensajes en el cliente
-Puede inspeccionar o modificar los mensajes de entrada o de salida a través de un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementando <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> e insertándolo en el tiempo de ejecución del cliente. Para obtener más información, consulte [clientes extender](../../../../docs/framework/wcf/extending/extending-clients.md). La característica equivalente del servicio es <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Para obtener un ejemplo de código completo, vea el [inspectores de mensaje](../../../../docs/framework/wcf/samples/message-inspectors.md) ejemplo.  
+Puede inspeccionar o modificar los mensajes entrantes o salientes a través de un cliente de WCF mediante la implementación de un <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> e insertarlos en el tiempo de ejecución de cliente. Para obtener más información, consulte [clientes extender](../../../../docs/framework/wcf/extending/extending-clients.md). La característica equivalente del servicio es <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Para obtener un ejemplo de código completo, vea el [inspectores de mensaje](../../../../docs/framework/wcf/samples/message-inspectors.md) ejemplo.  
   
 ### <a name="to-inspect-or-modify-messages"></a>Inspeccionar o modificar los mensajes  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 1d4ac2fe884a3c6696dc70ea2de9967a23fc6605
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 910da1073f0dc787be26d2c87b5bf49b4115aaef
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>¿Qué&#39;s nuevos en Windows Communication Foundation 4.5
 Este tema describe las características nuevas a Windows Communication Foundation (WCF).  
@@ -73,7 +73,7 @@ Este tema describe las características nuevas a Windows Communication Foundatio
  Para ayudar a los desarrolladores de servicios WCF nuevos y existentes a configurar sus servicios, el Editor XML de Visual Studio proporciona ahora información sobre herramientas para cada elemento de configuración que forma parte del archivo de configuración del servicio y sus propiedades.  
   
 ## <a name="configuring-wcf-services-in-code"></a>Configurar servicios WCF en el código  
- Windows Communication Foundation (WCF) permite a los desarrolladores configurar servicios mediante archivos de configuración o código.  Los archivos de configuración son útiles cuando un servicio se debe configurar después de implementarse. Cuando se usan archivos de configuración, un profesional de TI solo debe actualizar el archivo de configuración; no es necesario que realice ninguna recompilación. Los archivos de configuración, sin embargo, pueden ser complejos y difíciles de mantener. No se admite la depuración de archivos de configuración y se hace referencia a los elementos de configuración por nombre, con lo que la creación de archivos de configuración resulta propensa a errores y difícil. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] también permite configurar servicios en el código. En versiones anteriores de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 y anteriores), la configuración de servicios en código era sencilla en escenarios autohospedados; la clase <xref:System.ServiceModel.ServiceHost> permitía configurar extremos y comportamientos antes de llamar a ServiceHost.Open. En escenarios hospedados en web, sin embargo, no tiene acceso a la clase <xref:System.ServiceModel.ServiceHost>. Para configurar un servicio hospedado en web era necesario crear un `System.ServiceModel.ServiceHostFactory` que creó el <xref:System.ServiceModel.Activation.ServiceHostFactory> y realizar cualquier configuración necesaria. A partir de .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proporciona una manera más fácil de configurar los servicios autohospedados y los hospedados en web en el código. Para obtener más información, consulte [configurar servicios de WCF en el código](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
+ Windows Communication Foundation (WCF) permite a los desarrolladores configurar servicios mediante archivos de configuración o código.  Los archivos de configuración son útiles cuando un servicio se debe configurar después de implementarse. Cuando se usan archivos de configuración, un profesional de TI solo debe actualizar el archivo de configuración; no es necesario que realice ninguna recompilación. Los archivos de configuración, sin embargo, pueden ser complejos y difíciles de mantener. No se admite la depuración de archivos de configuración y se hace referencia a los elementos de configuración por nombre, con lo que la creación de archivos de configuración resulta propensa a errores y difícil. WCF también permite configurar servicios en el código. En versiones anteriores de servicios de configuración de WCF (4.0 y anteriores) en código era sencilla en escenarios autohospedados; la <xref:System.ServiceModel.ServiceHost> clase permitía configurar extremos y comportamientos antes de llamar a ServiceHost.Open. En escenarios hospedados en web, sin embargo, no tiene acceso a la clase <xref:System.ServiceModel.ServiceHost>. Para configurar un servicio hospedado en web era necesario crear un `System.ServiceModel.ServiceHostFactory` que creó el <xref:System.ServiceModel.Activation.ServiceHostFactory> y realizar cualquier configuración necesaria. A partir de .NET 4.5, WCF proporciona una manera más fácil de configurar ambos hospeda a sí mismo y servicios en el código hospedado en web. Para obtener más información, consulte [configurar servicios de WCF en el código](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
   
 ## <a name="channelfactory-caching"></a>Almacenamiento en caché de ChannelFactory  
  Las aplicaciones cliente de WCF usan la clase <xref:System.ServiceModel.ChannelFactory%601> para crear un canal de comunicación con un servicio WCF.  La crear de instancias de <xref:System.ServiceModel.ChannelFactory%601> genera sobrecarga porque implica las siguientes operaciones:  
@@ -107,7 +107,7 @@ Este tema describe las características nuevas a Windows Communication Foundatio
  Los valores de atributo de los archivos de configuración para los atributos personalizados definidos en el proyecto ahora admiten IntelliSense para facilitar el trabajo con configuraciones de forma rápida y precisa.  
   
 ## <a name="configuration-tooltips"></a>Información sobre herramientas de configuración  
- Los elementos y atributos de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ahora tienen información sobre herramientas en el Editor XML, para identificar con mayor facilidad y exactitud el propósito del elemento o atributo.  
+ Atributos y elementos de WCF ahora tienen información sobre herramientas en el editor XML, que más fácilmente e identifican con precisión el propósito del elemento o atributo.  
   
 ## <a name="paste-data-as-classes"></a>Pegar datos como clases  
  En un proyecto de WCF, los tipos de datos definidos en XML (como los expuestos en un servicio) se pueden pegar directamente en una página de códigos. El tipo XML se pegará como un tipo de CLR. Vea [generar clases de tipos de datos desde XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md) para obtener más detalles.  

@@ -2,11 +2,11 @@
 title: Realizar el seguimiento del uso de un archivo de texto
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: 3ff786836dbf5b10d64702733c92579185ef2f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracking-using-a-text-file"></a>Realizar el seguimiento del uso de un archivo de texto
 Este ejemplo muestra cómo ampliar el seguimiento en Windows Workflow Foundation (WF) mediante la creación de un participante de seguimiento personalizado. Los participantes de seguimiento son clases de .NET Framework que reciben registros de seguimiento del motor en tiempo de ejecución a medida que se emiten. Puede crear un participante de seguimiento para transportar los eventos de seguimiento al destino necesario para su escenario. Por ejemplo, como parte de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se proporciona el participante de seguimiento de ETW (Seguimiento de eventos para Windows). El participante de seguimiento de este ejemplo escribe los registros en formato XML en un archivo de texto.  
@@ -17,7 +17,7 @@ Este ejemplo muestra cómo ampliar el seguimiento en Windows Workflow Foundation
 |Clase|Descripción|  
 |-----------|-----------------|  
 |`TextFileTrackingExtensionElement`|Se utiliza una clase <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> para definir la sección de configuración utilizada para configurar el participante de seguimiento de archivo de texto. Esto permite a los usuarios especificar el destino del archivo de registro utilizando archivos de configuración estándar de .NET Framework.|  
-|`TextFileTrackingBehavior`|Los comportamientos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permiten a los usuarios insertar extensiones en tiempo de ejecución. Este comportamiento agrega el participante de seguimiento al servicio cuando este se inicia.|  
+|`TextFileTrackingBehavior`|Comportamientos de WCF permiten a los usuarios insertar extensiones en tiempo de ejecución. Este comportamiento agrega el participante de seguimiento al servicio cuando este se inicia.|  
 |`TextFileTrackingParticipant`|El participante de seguimiento que recibe los participantes de seguimiento en tiempo de ejecución y los almacena en un archivo de registro como XML.|  
   
 ## <a name="behavior-extension-elements-configuration"></a>Configuración de elementos de extensión de comportamiento  

@@ -2,11 +2,11 @@
 title: Uso de contadores de rendimiento
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2e25551494a433c53832127fdb0a32cb4eccac47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8784b4a481b8313d370aad1d8f265dcb44ab3ed6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-performance-counters"></a>Uso de contadores de rendimiento
 Este ejemplo muestra cómo obtener acceso a los contadores de rendimiento de Windows Communication Foundation (WCF) y cómo crear contadores de rendimiento definidos por el usuario. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -28,7 +28,7 @@ Este ejemplo muestra cómo obtener acceso a los contadores de rendimiento de Win
   
  Esta tarea también puede realizarse mediante la [herramienta Editor de configuración (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Cuando los contadores de rendimiento se habiliten, se habilitará el conjunto completo de contadores de rendimiento [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para el servicio. .NET Framework mantiene automáticamente los datos de rendimiento en tres niveles: `ServiceModelService`, `ServiceModelEndpoint` y `ServiceModelOperation`. Cada uno de estos niveles tiene contadores de rendimiento como "Llamadas", "Llamadas por segundo" y "Llamadas de seguridad no autorizadas".  
+ Cuando se habilitan los contadores de rendimiento, el conjunto completo de contadores de rendimiento de WCF está habilitado para el servicio. .NET Framework mantiene automáticamente los datos de rendimiento en tres niveles: `ServiceModelService`, `ServiceModelEndpoint` y `ServiceModelOperation`. Cada uno de estos niveles tiene contadores de rendimiento como "Llamadas", "Llamadas por segundo" y "Llamadas de seguridad no autorizadas".  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
@@ -47,10 +47,10 @@ Este ejemplo muestra cómo obtener acceso a los contadores de rendimiento de Win
   
 2.  Quite los contadores de rendimiento que aparecen seleccionándolos y presionando la tecla Supr.  
   
-3.  Agregar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contadores haciendo clic en el panel del gráfico y seleccione **agregar contadores**. En el **agregar contadores** cuadro de diálogo, seleccione **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 o ServiceModelService 3.0.0.0** en el objeto de rendimiento cuadro de lista desplegable. Seleccione los contadores que desea ver en la lista.  
+3.  Agregar contadores WCF haciendo clic en el panel del gráfico y seleccione **agregar contadores**. En el **agregar contadores** cuadro de diálogo, seleccione **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 o ServiceModelService 3.0.0.0** en el objeto de rendimiento cuadro de lista desplegable. Seleccione los contadores que desea ver en la lista.  
   
     > [!NOTE]
-    >  No hay ningún contador de rendimiento de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para un servicio si no hay ningún servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se ejecute en el equipo.  
+    >  No hay ningún contador de rendimiento de WCF para un servicio si no hay ningún servicio WCF que se esté ejecutando en el equipo.  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Para utilizar el editor de configuración para habilitar los contadores  
   

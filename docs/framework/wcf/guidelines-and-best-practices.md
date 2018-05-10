@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 09996681b17d324d53c74b727b183f3a457cc664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40e0d2e8d9293792e295f1b1a45de84f4d66d8af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="guidelines-and-best-practices"></a>Instrucciones y procedimientos recomendados
 Esta sección contiene temas que proporcionan instrucciones para crear aplicaciones de Windows Communication Foundation (WCF).  
@@ -22,7 +22,7 @@ Esta sección contiene temas que proporcionan instrucciones para crear aplicacio
  Explica cómo y cuándo crear contratos de datos que no interrumpen al crearse las versiones futuras.  
   
  [Control de versiones del servicio](../../../docs/framework/wcf/service-versioning.md)  
- Explica cómo considerar el control de versiones en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Después de la implementación, los servicios (y los puntos de conexión que exponen) podrían necesitar cambios, por ejemplo, para satisfacer los cambiantes requisitos comerciales o de TI, o para corregir los problemas. Cada cambio produce una nueva versión del servicio.  
+ Explica cómo considerar el control de versiones en WCF. Después de la implementación, los servicios (y los puntos de conexión que exponen) podrían necesitar cambios, por ejemplo, para satisfacer los cambiantes requisitos comerciales o de TI, o para corregir los problemas. Cada cambio produce una nueva versión del servicio.  
   
  [Equilibrio de carga](../../../docs/framework/wcf/load-balancing.md)  
  Hace una lista de las instrucciones para el equilibrio de carga con una batería de servidores web.  

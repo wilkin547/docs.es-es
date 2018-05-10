@@ -2,26 +2,26 @@
 title: puntos de conexión SOAP y HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: bf11563b937426c3c1701e7fed79e82e4e4669ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c8a4695dbcaee2f0e7584418fbeac12815fa967
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="soap-and-http-endpoints"></a>puntos de conexión SOAP y HTTP
-Este ejemplo muestra cómo implementar un servicio basado en RPC y exponerlo en el formato SOAP y dar formato a la "Plain Old XML" (POX) mediante el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelo de programación Web. Consulte la [servicio HTTP básico](../../../../docs/framework/wcf/samples/basic-http-service.md) ejemplo para obtener más información sobre el enlace HTTP para el servicio. Este ejemplo se centra en los detalles relativos a la exposición del mismo servicio a través de SOAP y HTTP utilizando enlaces diferentes.  
+Este ejemplo muestra cómo implementar un servicio basado en RPC y exponerlo en el formato SOAP y el formato de "Plain Old XML" (POX) utilizando el modelo de programación Web de WCF. Consulte la [servicio HTTP básico](../../../../docs/framework/wcf/samples/basic-http-service.md) ejemplo para obtener más información sobre el enlace HTTP para el servicio. Este ejemplo se centra en los detalles relativos a la exposición del mismo servicio a través de SOAP y HTTP utilizando enlaces diferentes.  
   
 ## <a name="demonstrates"></a>Demostraciones  
- Exponer un servicio RPC sobre SOAP y HTTP utilizando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Exponer un servicio RPC sobre SOAP y HTTP con WCF.  
   
 ## <a name="discussion"></a>Explicación  
- Este ejemplo tiene dos componentes: un proyecto Aplicación web (Servicio) que contiene un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y una aplicación de consola (Cliente) que invoca las operaciones de servicio mediante enlaces HTTP y SOAP.  
+ Este ejemplo consta de dos componentes: un proyecto de aplicación Web (servicio) que contiene un servicio WCF y una aplicación de consola (cliente) que invoca las operaciones de servicio mediante enlaces HTTP y SOAP.  
   
- El servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expone dos operaciones, `GetData` y `PutData`, que repiten la cadena que se pasó como entrada. A las operaciones de servicio se les agregan los objetos <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute>. Estos atributos controlan la proyección HTTP de estas operaciones. Además, se les agrega el objeto <xref:System.ServiceModel.OperationContractAttribute>, que les permite ser expuestos a través de enlaces SOAP. El método `PutData` del servicio inicia una excepción <xref:System.ServiceModel.Web.WebFaultException>, que se devuelve a través de HTTP utilizando el código de estado HTTP y se devuelve a través de SOAP como un error de SOAP.  
+ El servicio WCF expone las 2 operaciones –`GetData` y `PutData` : que repiten la cadena que se pasó como entrada. A las operaciones de servicio se les agregan los objetos <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute>. Estos atributos controlan la proyección HTTP de estas operaciones. Además, se les agrega el objeto <xref:System.ServiceModel.OperationContractAttribute>, que les permite ser expuestos a través de enlaces SOAP. El método `PutData` del servicio inicia una excepción <xref:System.ServiceModel.Web.WebFaultException>, que se devuelve a través de HTTP utilizando el código de estado HTTP y se devuelve a través de SOAP como un error de SOAP.  
   
- El archivo Web.config configura el servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con tres extremos:  
+ El archivo Web.config configura el servicio WCF con 3 puntos de conexión:  
   
--   El extremo ~/service.svc/mex que expone los metadatos del servicio para el acceso de los clientes basados en SOAP.  
+-   El punto de conexión ~/service.svc/mex que expone los metadatos del servicio para el acceso de los clientes basados en SOAP.  
   
 -   El extremo ~/service.svc/http que permite a los clientes tener acceso al servicio utilizando el enlace HTTP.  
   

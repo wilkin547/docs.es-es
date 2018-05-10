@@ -2,11 +2,11 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: f146e469a323dffa2cdb9b76b6956be97747b2de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0a4c316957a002f7541d230f96299e3f43ef778
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 El ejemplo muestra cómo crear un enlace diseñado para admitir escenarios de transmisión por secuencias cuando se usa el transporte HTTP.  
@@ -51,7 +51,7 @@ El ejemplo muestra cómo crear un enlace diseñado para admitir escenarios de tr
   
 2.  Añadir la compatibilidad de configuración  
   
-     Para exponer el transporte a través de la configuración, el ejemplo implementa dos clases más, `WSStreamedHttpBindingConfigurationElement` y `WSStreamedHttpBindingSection`. La clase`WSStreamedHttpBindingSection` es un<xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> que expone `WSStreamedHttpBinding` al sistema de configuración[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. El volumen de la implementación se delega a `WSStreamedHttpBindingConfigurationElement`, lo cual deriva de <xref:System.ServiceModel.Configuration.StandardBindingElement>. La clase `WSStreamedHttpBindingConfigurationElement` tiene propiedades que corresponden a las propiedades de `WSStreamedHttpBinding`y funciones para asignar cada elemento de configuración a un enlace.  
+     Para exponer el transporte a través de la configuración, el ejemplo implementa dos clases más, `WSStreamedHttpBindingConfigurationElement` y `WSStreamedHttpBindingSection`. La clase `WSStreamedHttpBindingSection` es un <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> que expone `WSStreamedHttpBinding` en el sistema de configuración de WCF. El volumen de la implementación se delega a `WSStreamedHttpBindingConfigurationElement`, lo cual deriva de <xref:System.ServiceModel.Configuration.StandardBindingElement>. La clase `WSStreamedHttpBindingConfigurationElement` tiene propiedades que corresponden a las propiedades de `WSStreamedHttpBinding`y funciones para asignar cada elemento de configuración a un enlace.  
   
      Registre este controlador con el sistema de configuración, agregando la siguiente sección al archivo de configuración pertinente.  
   
@@ -133,7 +133,7 @@ public class StreamedEchoService : IStreamedEchoService
 ```  
   
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>Cliente de muestra WSStreamedHttpBinding   
- El cliente que se utiliza para interactuar con el servicio mediante `WSStreamedHttpBinding` se encuentra en el subdirectorio del cliente. Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con Makecert.exe, una alerta de seguridad se muestra cuando se intenta acceder a una dirección HTTPS en el explorador como https://localhost/servicemodelsamples/service.svc. Para permitir al cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trabajar con un certificado de prueba, se ha añadido código adicional al cliente para suprimir la alerta de seguridad. El código y la clase que lo acompaña no son necesarios cuando se usan certificados de producción.  
+ El cliente que se utiliza para interactuar con el servicio mediante `WSStreamedHttpBinding` se encuentra en el subdirectorio del cliente. Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con Makecert.exe, una alerta de seguridad se muestra cuando se intenta acceder a una dirección HTTPS en el explorador como https://localhost/servicemodelsamples/service.svc. Para permitir que el cliente de WCF para que funcione con un certificado de prueba en su lugar, se ha añadido código adicional al cliente para suprimir la alerta de seguridad. El código y la clase que lo acompaña no son necesarios cuando se usan certificados de producción.  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

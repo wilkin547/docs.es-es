@@ -2,11 +2,11 @@
 title: Conceptos fundamentales de Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: 8ffa1bd1cdcc0347691032885fb929784045bf8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c5306f8616086835373bc52bdd8195564441b8b7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Conceptos fundamentales de Windows Workflow
 El desarrollo del flujo de trabajo en [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] usa conceptos que pueden ser nuevos para algunos desarrolladores de software. En este tema se describen algunos de ellos y la forma en que se implementan.  
@@ -51,7 +51,7 @@ El desarrollo del flujo de trabajo en [!INCLUDE[netfx_current_long](../../../inc
  Las actividades tienen acceso al entorno de tiempo de ejecución de flujo de trabajo mediante la clase derivada de <xref:System.Activities.ActivityContext> adecuada, como <xref:System.Activities.NativeActivityContext> o <xref:System.Activities.CodeActivityContext>. Usan esto para resolver argumentos y variables, para programar las actividades secundarias, y para muchos otros objetivos.  
   
 ## <a name="services"></a>Servicios  
- Los flujos de trabajo proporcionan una manera natural de implementar y tener acceso a servicios flojamente acoplados usando actividades de mensajería. Las actividades de mensajería se compilan en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y son el mecanismo principal usado para obtener datos en y fuera de un flujo de trabajo. Puede componer actividades de mensajería para modelar cualquier tipo de patrón de intercambio de mensajes que desee. Para obtener más información, consulte vea [actividades de mensajería](../../../docs/framework/wcf/feature-details/messaging-activities.md). Los servicios de flujo de trabajo se hospedan mediante la clase <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Para obtener más información, consulte [información general de servicios de flujo de trabajo de hospedaje](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). Para obtener más información acerca de los servicios de flujo de trabajo, consulte [servicios de flujo de trabajo](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ Los flujos de trabajo proporcionan una manera natural de implementar y tener acceso a servicios flojamente acoplados usando actividades de mensajería. Las actividades de mensajería se compilan en WCF y son el mecanismo principal usado para obtener datos dentro y fuera de un flujo de trabajo. Puede componer actividades de mensajería para modelar cualquier tipo de patrón de intercambio de mensajes que desee. Para obtener más información, consulte vea [actividades de mensajería](../../../docs/framework/wcf/feature-details/messaging-activities.md). Los servicios de flujo de trabajo se hospedan mediante la clase <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Para obtener más información, consulte [información general de servicios de flujo de trabajo de hospedaje](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). Para obtener más información acerca de los servicios de flujo de trabajo, consulte [servicios de flujo de trabajo](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Persistencia, descarga y flujos de trabajo de ejecución prolongada  
  El flujo de trabajo de Windows simplifica la creación de programas reactivos de ejecución prolongada al proporcionar:  

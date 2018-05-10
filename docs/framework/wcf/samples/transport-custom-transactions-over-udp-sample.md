@@ -2,11 +2,11 @@
 title: 'Transporte: transacciones personalizadas sobre ejemplo UDP'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: e395300df4cd9917b9662d4bc3b1e8d50d82914d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 911331d5f5120f33a6c442a1eb4b2be2c8269a0e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transporte: transacciones personalizadas sobre ejemplo UDP
 En este ejemplo se basa en el [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo en Windows Communication Foundation (WCF)[extensibilidad de transporte](../../../../docs/framework/wcf/samples/transport-extensibility.md). Extiende el ejemplo de transporte UDP para admitir el flujo de transacciones personalizado y muestra el uso de la propiedad <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
@@ -47,7 +47,7 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  `TransactionMessageBuffer.WriteTransactionMessageBuffer` es un método auxiliar que contiene la nueva funcionalidad para combinar el token de propagación para la transacción actual con la entidad del mensaje y lo coloca en un búfer.  
   
- Para el transporte de flujo de transacción personalizado, la implementación del cliente debe conocer qué operaciones de servicio requieren flujo de transacción y pasar esta información a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Debería haber también un mecanismo para transmitir la transacción del usuario en el nivel de transporte. Este ejemplo utiliza "inspectores de mensaje[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]" para obtener esta información. El inspector de mensaje de cliente implementado aquí, que se denomina `TransactionFlowInspector`, realiza las tareas siguientes:  
+ Para el transporte de flujo de transacción personalizado, la implementación del cliente debe conocer qué operaciones de servicio requieren flujo de transacción y pasar esta información a WCF. Debería haber también un mecanismo para transmitir la transacción del usuario en el nivel de transporte. Este ejemplo utiliza "Inspectores de mensaje WCF" para obtener esta información. El inspector de mensaje de cliente implementado aquí, que se denomina `TransactionFlowInspector`, realiza las tareas siguientes:  
   
 -   Determina si se debe hacer fluir una transacción o no para una acción de mensaje determinada (esto tiene lugar en `IsTxFlowRequiredForThisOperation()`).  
   

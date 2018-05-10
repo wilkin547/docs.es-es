@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Detalles|A partir de .NET Framework 4.5, si se llama a <code>System.Windows.Forms.MessageBox.Show</code> desde un controlador de <xref:System.Windows.UIElement.PreviewLostKeyboardFocus>, se volverá a activar el controlador al cerrar el cuadro de mensaje, lo que podría generar un bucle infinito de cuadros de mensaje.|
-|Sugerencia|Hay dos opciones para solucionar este problema:<ol><li>Se puede evitar llamando a <code>System.Windows.MessageBox.Show</code> en lugar de a <code>System.Windows.Forms.MessageBox.Show</code>.</li><li>Se puede evitar mostrando el cuadro de mensaje desde un controlador de eventos <xref:System.Windows.UIElement.LostKeyboardFocus> (en contraposición a un controlador de eventos <xref:System.Windows.UIElement.PreviewLostKeyboardFocus?displayProperty=name>).</li></ol>|
+|Detalles|A partir de .NET Framework 4.5, si se llama a <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> desde un controlador de <xref:System.Windows.UIElement.PreviewLostKeyboardFocus>, se volverá a activar el controlador al cerrar el cuadro de mensaje, lo que podría generar un bucle infinito de cuadros de mensaje.|
+|Sugerencia|Hay dos opciones para solucionar este problema:<ol><li>Se puede evitar llamando a <xref:System.Windows.MessageBox.Show%2A?displayProperty=nameWithType> en lugar de a <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType>.</li><li>Se puede evitar mostrando el cuadro de mensaje desde un controlador de eventos <xref:System.Windows.UIElement.LostKeyboardFocus?displayProperty=nameWithType> (en contraposición a un controlador de eventos <xref:System.Windows.UIElement.PreviewLostKeyboardFocus?displayProperty=name>).</li></ol>|
 |Ámbito|Borde|
 |Versión|4.5|
 |Tipo|Tiempo de ejecución|

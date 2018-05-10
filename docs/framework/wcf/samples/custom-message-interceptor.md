@@ -2,11 +2,11 @@
 title: Interceptador de mensajes personalizados
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 0ed34823251dcc010fc438bda1e746549b97f0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a59b2075473e2ca4c8cb8751fd6cb733f282238b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-interceptor"></a>Interceptador de mensajes personalizados
 Este ejemplo muestra el uso del modelo de extensibilidad del canal. En particular, muestra cómo implementar un elemento de enlace personalizado que crea generadores de canales y agentes de escucha de canales para interceptar todos los mensajes entrantes y salientes en un punto concreto en la pila de tiempo de ejecución. El ejemplo también incluye un cliente y un servidor que muestran el uso de estos generadores personalizados.  
@@ -25,7 +25,7 @@ Este ejemplo muestra el uso del modelo de extensibilidad del canal. En particula
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- El ejemplo describe el procedimiento recomendado para crear un canal superpuesto personalizado en Windows Communication Foundation (WCF), utilizando el marco del canal y los siguientes [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prácticas recomendadas. Los pasos para crear un canal superpuesto personalizado son los siguientes:  
+ El ejemplo describe el procedimiento recomendado para crear un canal superpuesto personalizado en Windows Communication Foundation (WCF), utilizando el marco del canal y los siguientes procedimientos recomendados de WCF. Los pasos para crear un canal superpuesto personalizado son los siguientes:  
   
 1.  Decida cuál de las formas del canal admitirá el generador de canales y el agente de escucha del canal.  
   

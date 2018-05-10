@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 5a6ea4f3ba121f419d1a8c46fc2534988a93d554
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e752f6f4428d01474d643f1571935cb7d96d41ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Inicio rápido de solución de problemas de WCF
 En este tema se enumeran muchos problemas conocidos que los clientes han detectado al desarrollar clientes y servicios de WCF. Si el problema que tiene no aparece en esta lista, se recomienda que configure la traza del servicio. De esta forma, se genera un archivo de seguimiento que puede ver con el visor de archivos de seguimiento y obtiene información detallada sobre las excepciones que se pueden producir en el servicio. Para obtener más información sobre la configuración del seguimiento, consulte [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Para obtener más información sobre cómo usar el visor de archivos de seguimiento, consulte [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -153,7 +153,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>Parece que las operaciones unidireccionales y las operaciones solicitud-respuesta se devuelven aproximadamente a la misma velocidad cuando la respuesta no contiene datos. ¿Qué sucede?  
- Especificando que una operación es unidireccional solo significa que el contrato de operación acepta un mensaje de entrada y no devuelve un mensaje de salida. En [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], todas las invocaciones del cliente vuelven cuando los datos salientes se han escrito en la conexión o se produce una excepción. Las operaciones unidireccionales funcionan de la misma manera y se pueden iniciar si el servicio no se puede localizar o se pueden bloquear si el servicio no está preparado para aceptar los datos de la red. Normalmente, en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], se generan llamadas unidireccionales que vuelven al cliente más rápidamente que la solicitud-respuesta; pero las condiciones que ralentizan el envío de los datos salientes a través de la red ralentizan las operaciones unidireccionales, así como las operaciones de solicitud-respuesta. Para obtener más información, consulte [unidireccional servicios](../../../docs/framework/wcf/feature-details/one-way-services.md) y [al tener acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Especificando que una operación es unidireccional solo significa que el contrato de operación acepta un mensaje de entrada y no devuelve un mensaje de salida. En WCF, todas las invocaciones del cliente vuelven cuando los datos salientes se ha escrito en la conexión o se produce una excepción. Las operaciones unidireccionales funcionan de la misma manera y se pueden iniciar si el servicio no se puede localizar o se pueden bloquear si el servicio no está preparado para aceptar los datos de la red. Por lo general en WCF, esto da como resultado llamadas unidireccionales que vuelven al cliente más rápidamente que la solicitud y respuesta; pero las condiciones que ralentizan el envío de los datos salientes a través de la red ralentizan las operaciones unidireccionales, así como operaciones de solicitud y respuesta. Para obtener más información, consulte [unidireccional servicios](../../../docs/framework/wcf/feature-details/one-way-services.md) y [al tener acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>Estoy usando un certificado X.509 con mi servicio y obtengo una excepción System.Security.Cryptography.CryptographicException. ¿Qué sucede?  
@@ -169,7 +169,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>Estoy utilizando una de mis herramientas de traza y obtengo la excepción EndpointNotFoundException. ¿Qué sucede?  
- Si está utilizando una herramienta de seguimiento que no es el mecanismo de seguimiento de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proporcionado por el sistema y recibe la excepción <xref:System.ServiceModel.EndpointNotFoundException> , que indica que no coincide el filtro de direcciones, necesita utilizar la clase <xref:System.ServiceModel.Description.ClientViaBehavior> para dirigir los mensajes a la utilidad de seguimiento y permitir que esta redirija esos mensajes a la dirección del servicio. La clase <xref:System.ServiceModel.Description.ClientViaBehavior> modifica `Via` que dirige el encabezado para especificar la siguiente dirección de red de forma independiente con respecto al receptor último, indicado por `To` que dirige el encabezado. Cuando haga esto, sin embargo, no cambie la dirección del extremo, la cual se utiliza para establecer el valor `To` .  
+ Si está utilizando una herramienta de seguimiento que no es el mecanismo de seguimiento de WCF proporcionados por el sistema y recibe un <xref:System.ServiceModel.EndpointNotFoundException> que indica que se produjo un error de coincidencia de filtro de dirección, debe usar la <xref:System.ServiceModel.Description.ClientViaBehavior> clase para dirigir los mensajes a la utilidad de seguimiento y permitir que esta redirija esos mensajes a la dirección de servicio. La clase <xref:System.ServiceModel.Description.ClientViaBehavior> modifica `Via` que dirige el encabezado para especificar la siguiente dirección de red de forma independiente con respecto al receptor último, indicado por `To` que dirige el encabezado. Cuando haga esto, sin embargo, no cambie la dirección del extremo, la cual se utiliza para establecer el valor `To` .  
   
  El ejemplo de código siguiente muestra un ejemplo de archivo de configuración de cliente.  
   

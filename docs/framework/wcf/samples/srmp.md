@@ -2,11 +2,11 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 5c2079f1aa90821448c88de53d311d064bb6e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c746897666ae78844df35c2989c803d852c3f70e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="srmp"></a>SRMP
 Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transacciones utilizando Message Queuing (MSMQ) a través de HTTP.  
@@ -37,7 +37,7 @@ Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transaccio
  Para ejecutar este ejemplo, IIS se debe instalar en el servicio y en los equipos cliente además de en MSMQ.  
   
 ## <a name="demonstrates"></a>Demostraciones  
- El ejemplo muestra cómo enviar mensajes puestos en cola [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizando MSMQ sobre HTTP. Esto también se denomina mensajería de SRMP. Cuando se envía un mensaje en cola, MSMQ en el equipo emisor transfiere los mensajes al administrador receptor de cola mediante TCP o transporte HTTP. Eligiendo SRMP, el usuario indica la opción de HTTP como un transporte para la transferencia de la cola. SRMP Secure habilita el uso de HTTPS.  
+ El ejemplo muestra cómo enviar WCF mensajes en cola utilizando MSMQ sobre HTTP. Esto también se denomina mensajería de SRMP. Cuando se envía un mensaje en cola, MSMQ en el equipo emisor transfiere los mensajes al administrador receptor de cola mediante TCP o transporte HTTP. Eligiendo SRMP, el usuario indica la opción de HTTP como un transporte para la transferencia de la cola. SRMP Secure habilita el uso de HTTPS.  
   
 ## <a name="example"></a>Ejemplo  
  El código muestra de este ejemplo está basado en el ejemplo de transacción. El modo en que se envía un mensaje a la cola y se recibe un mensaje de la cola utilizando SRMP es igual al modo en que se envían y reciben mensajes mediante un protocolo Native.  

@@ -2,11 +2,11 @@
 title: Extensibilidad
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensibility"></a>Extensibilidad
 Esta sección contiene ejemplos que tratan sobre la extensibilidad personalizada y otras características de Windows Communication Foundation (WCF).  
@@ -55,10 +55,10 @@ Esta sección contiene ejemplos que tratan sobre la extensibilidad personalizada
  Muestra cómo se pueden personalizar procesos como la serialización, la deserialización, la exportación e importación del esquema mediante una clase suplente de contrato de datos.  
   
  [Extensión del control sobre el control y los informes de errores](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
- Muestra cómo extender el control sobre el control e informe de errores en un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mediante la interfaz <xref:System.ServiceModel.Dispatcher.IErrorHandler>.  
+ Muestra cómo extender el control sobre el control de errores y los informes de errores en un servicio WCF mediante el <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfaz.  
   
  [Inspectores de mensaje](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  Muestra cómo implementar y configurar los inspectores de mensaje de cliente y servicio.  
   
  [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
- Muestra cómo asignar los nuevos tipos de contenido a los formatos de cuerpo del mensaje de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].
+ Muestra cómo asignar nuevos tipos de contenido a formatos de cuerpo de mensaje WCF.

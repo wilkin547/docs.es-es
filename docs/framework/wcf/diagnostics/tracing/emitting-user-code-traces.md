@@ -2,11 +2,11 @@
 title: Emisión de trazas del código de usuario
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18b424139f4c1656193f80cf76c704af2b2887e3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="emitting-user-code-traces"></a>Emisión de trazas del código de usuario
 Además de habilitar el seguimiento en configuración para recopilar los datos de instrumentación generados por Windows Communication Foundation (WCF), también pueden emitir seguimientos mediante programación en código de usuario. De esta manera, puede crear proactivamente datos de instrumentación que examinará más tarde con el fin de realizar un diagnóstico. En este tema se describe cómo hacerlo.  
@@ -65,9 +65,9 @@ Trace.CorrelationManager.ActivityId = oldID;
  Si establece el atributo `propagateActivity` en `true` para el origen de seguimiento de traza `System.ServiceModel` en los archivos de configuración del servicio y del cliente, el servicio que procesa la solicitud Add se produce en la misma actividad que la definida en el cliente. Si el servicio define sus propias actividades y transferencias, las trazas del servicio no aparecen en la actividad propagada por el cliente. En su lugar, aparecen en una actividad que las trazas de la transferencia ponen en correlación con la actividad cuyo id. propaga el cliente.  
   
 > [!NOTE]
->  Si el atributo `propagateActivity` está establecido en `true` en el cliente y el servicio, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]establece la actividad de ambiente en el ámbito de la operación del servicio.  
+>  Si el `propagateActivity` atributo está establecido en `true` en el cliente y el servicio, se establece la actividad ambiente en el ámbito de la operación del servicio WCF.  
   
- Puede utilizar el siguiente código para comprobar si [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] estableció una actividad dentro del ámbito.  
+ Puede usar el código siguiente para comprobar si se estableció una actividad en el ámbito de WCF.  
   
 ```  
 // Check if an activity was set in scope by WCF, if it was   
@@ -135,9 +135,9 @@ Los errores en los puntos de conexión de una solicitud determinada aparecen en 
  ![Uso del Visor de seguimiento para emitir usuario&#45;código seguimientos](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Vista del gráfico de la correlación del error  
   
- Para obtener las trazas anteriores, se establece `ActivityTracing` para los orígenes del seguimiento de traza del usuario, y `propagateActivity=true` para el origen de seguimiento de traza `System.ServiceModel`. No se estableció `ActivityTracing` para el origen del seguimiento de traza `System.ServiceModel` para permitir habilitar el código de usuario a la propagación de actividad del código de usuario. (Cuando el seguimiento de traza de la actividad ServiceModel está activo, el Id. de actividad definido en el cliente no se propaga completamente al código de usuario del servicio. No obstante, las transferencias ponen en correlación las actividades del código de usuario del cliente y del servicio con las actividades [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] intermedias.)  
+ Para obtener las trazas anteriores, se establece `ActivityTracing` para los orígenes del seguimiento de traza del usuario, y `propagateActivity=true` para el origen de seguimiento de traza `System.ServiceModel`. No se estableció `ActivityTracing` para el origen del seguimiento de traza `System.ServiceModel` para permitir habilitar el código de usuario a la propagación de actividad del código de usuario. (Cuando el seguimiento de actividad de ServiceModel está activado, el identificador de actividad definido en el cliente no se propaga completamente al código de usuario de servicio; Las transferencias, sin embargo, poner en correlación las actividades de código de usuario de cliente y el servicio a las actividades WCF intermedias.)  
   
- La definición de actividades y la propagación de la id. de actividad permite poner directamente en correlación los errores con los extremos. De esta manera, podemos buscar más rápidamente la causa raíz de un error.  
+ La definición de actividades y la propagación de la id. de actividad permite poner directamente en correlación los errores con los puntos de conexión. De esta manera, podemos buscar más rápidamente la causa raíz de un error.  
   
 ## <a name="see-also"></a>Vea también  
  [Extensión del seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md)

@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 6fbdd7f09c7ae15368972afbce896c5ecb39ccbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df1f2490f8636d52ac75fad2469adadec2a57da
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Invalidación de la identidad de un servicio para la autenticación
 Normalmente, no tiene que establecer la identidad en un servicio porque la selección de un tipo de credencial de cliente dicta el tipo de identidad expuesto en los metadatos del servicio. Por ejemplo, el siguiente código de configuración usa la [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento y establece el `clientCredentialType` atribuir a Windows.  
@@ -30,9 +30,9 @@ Normalmente, no tiene que establecer la identidad en un servicio porque la selec
 > [!NOTE]
 >  Para usar el tipo de credencial de Windows sin negociación, la cuenta de usuario del servicio debe tener acceso al nombre de entidad de seguridad de servicio (SPN) registrado en el dominio de Active Directory. Puede hacer esto de las siguientes maneras:  
   
--   Use la cuenta NetworkService o LocalSystem para ejecutar el servicio. Dado que esas cuentas tienen acceso al SPN del equipo que se establece cuando el equipo se une al dominio de Active Directory, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera automáticamente el elemento SPN apropiado dentro del extremo del servicio en los metadatos del servicio (WSDL).  
+-   Use la cuenta NetworkService o LocalSystem para ejecutar el servicio. Dado que esas cuentas tienen acceso al SPN del equipo que se establece cuando el equipo une al dominio de Active Directory, WCF genera automáticamente el elemento SPN apropiado en el extremo del servicio en los metadatos del servicio (WSDL).  
   
--   Utilice una cuenta de dominio arbitraria de Active Directory para ejecutar el servicio. En este caso, establezca un SPN para esa cuenta de dominio, lo cual puede llevar a cabo utilizando la herramienta de utilidad Setspn.exe. Una vez creado el SPN para la cuenta del servicio, configure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para publicar ese SPN a los clientes del servicio a través de sus metadatos (WSDL). Para ello, hay que establecer la identidad del punto de conexión para el punto de conexión expuesto, ya sea mediante un archivo de configuración de la aplicación o el código.  
+-   Utilice una cuenta de dominio arbitraria de Active Directory para ejecutar el servicio. En este caso, establezca un SPN para esa cuenta de dominio, lo cual puede llevar a cabo utilizando la herramienta de utilidad Setspn.exe. Una vez creado el SPN para la cuenta del servicio, configurar WCF para publicar ese SPN a los clientes del servicio a través de sus metadatos (WSDL). Para ello, hay que establecer la identidad del punto de conexión para el punto de conexión expuesto, ya sea mediante un archivo de configuración de la aplicación o el código.  
   
  Para obtener más información acerca de los SPN, el protocolo Kerberos y Active Directory, vea [complemento técnico de Kerberos para Windows](http://go.microsoft.com/fwlink/?LinkId=88330).  
   
@@ -59,7 +59,7 @@ Normalmente, no tiene que establecer la identidad en un servicio porque la selec
   
   
 ### <a name="setting-identity-programmatically"></a>Establecimiento mediante programación de la identidad  
- Su servicio no tiene que especificar explícitamente una identidad, porque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lo determina automáticamente. Sin embargo, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] le permite especificar una identidad en un extremo, si se requiere. El código siguiente agrega un nuevo punto de conexión de servicio con una identidad de DNS concreta.  
+ El servicio no tiene que especificar explícitamente una identidad, porque WCF determina automáticamente. Sin embargo, WCF permite especificar una identidad en un punto de conexión, si es necesario. El código siguiente agrega un nuevo punto de conexión de servicio con una identidad de DNS concreta.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  

@@ -2,21 +2,21 @@
 title: Servicio AJAX mediante HTTP POST
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: 742f14d10fbd668609e8bd20db817d51269777ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f904a26d87a21a931035b45261dbcd970f7d63a1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ajax-service-using-http-post"></a>Servicio AJAX mediante HTTP POST
 Este ejemplo muestra cómo usar Windows Communication Foundation (WCF) para crear un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] servicio JavaScript asincrónico y XML (AJAX) que utiliza HTTP POST. Un servicio AJAX es un servicio al que puede tener acceso utilizando el código JavaScript básico desde un cliente del explorador web. En este ejemplo se basa en el [servicio AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) ejemplo; la única diferencia entre las dos muestras es el uso de HTTP POST en lugar de HTTP GET.  
   
- Compatibilidad con AJAX en Windows Communication Foundation (WCF) está optimizado para su uso con ASP.NET AJAX a través del `ScriptManager` control. Para obtener un ejemplo del uso de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con AJAX de ASP.NET, vea el [muestra Ajax](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
+ Compatibilidad con AJAX en Windows Communication Foundation (WCF) está optimizado para su uso con ASP.NET AJAX a través del `ScriptManager` control. Para obtener un ejemplo del uso de WCF con AJAX de ASP.NET, vea el [muestra Ajax](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- El servicio en el ejemplo siguiente es un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sin el código específico de AJAX.  
+ El servicio en el ejemplo siguiente es un servicio WCF con ningún código específico de AJAX.  
   
  Si el <xref:System.ServiceModel.Web.WebInvokeAttribute> se aplica el atributo en una operación, o la <xref:System.ServiceModel.Web.WebGetAttribute> no se aplica el atributo, se utiliza el verbo HTTP predeterminado ("POST"). Las solicitudes POST son más difíciles de construir que las solicitudes GET, aunque no estén almacenadas en la memoria caché. Use las solicitudes POST para todas las operaciones en las que no sea adecuado almacenar en memoria caché.  
 

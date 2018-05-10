@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: a93726598b31ee57d583aca16012d615e90441f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 38e3c62aaf0e87860732bcb12c61da69b1c4346d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Cómo restringir el acceso con la clase PrincipalPermissionAttribute
 Controlar el acceso a los recursos en un equipo del dominio de Windows es una tarea de seguridad básica. Por ejemplo, solo ciertos usuarios deberían poder ver los datos confidenciales, como la información de la nómina. Este tema explica cómo restringir el acceso a un método exigiendo que el usuario pertenezca a un grupo predefinido. Para obtener un ejemplo funcional, vea [autorizar el acceso a las operaciones de servicio](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -76,7 +76,7 @@ Controlar el acceso a los recursos en un equipo del dominio de Windows es una ta
     </behaviors>  
     ```  
   
-     Establecer este valor en `UseAspNetRoles` indica que la propiedad `Name` del `PrincipalPermissionAttribute` se utilizará para realizar una comparación de cadenas. Cuando se utiliza un certificado como una credencial del cliente, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] concatena de forma predeterminada el nombre común del certificado y la huella digital con un punto y coma para crear un valor único para la identidad primaria del cliente. Con `UseAspNetRoles` establecido como `PrincipalPermissionMode` en el servicio, este valor de identidad primaria se compara con el valor de la propiedad `Name` para determinar los derechos de acceso del usuario.  
+     Establecer este valor en `UseAspNetRoles` indica que la propiedad `Name` del `PrincipalPermissionAttribute` se utilizará para realizar una comparación de cadenas. Cuando se utiliza un certificado como credencial de cliente, de forma predeterminada WCF concatena el nombre común del certificado y la huella digital con un punto y coma para crear un valor único para la identidad del cliente principal. Con `UseAspNetRoles` establecido como `PrincipalPermissionMode` en el servicio, este valor de identidad primaria se compara con el valor de la propiedad `Name` para determinar los derechos de acceso del usuario.  
   
      Alternativamente, al crear un servicio autohospedado, establezca la propiedad <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> en código como se muestra en el código siguiente:  
   

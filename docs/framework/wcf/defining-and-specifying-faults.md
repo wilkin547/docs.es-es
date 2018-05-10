@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: b71aaf22c98c7f8e62b5c02449a45ec75567d064
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99e0c22a66eb1d839f1594cf53373a74fc3dd02d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="defining-and-specifying-faults"></a>Definición y especificación de errores
 Los errores de SOAP transmiten información de condición de error desde un servicio a un cliente y, en caso de comunicación dúplex, desde un cliente a un servicio de una manera interoperable. Este tema describe cuándo y cómo definir contenido personalizado de error y especificar qué operaciones pueden devolverlos. Para obtener más información acerca de cómo un servicio o cliente dúplex, puede enviar esos errores y cómo una aplicación cliente o servicio administra estos errores, vea [enviar y recibir errores](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para obtener información general de control de errores en las aplicaciones de Windows Communication Foundation (WCF), consulte [especificar y control de errores en contactos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -27,7 +27,7 @@ Los errores de SOAP transmiten información de condición de error desde un serv
 3.  Marque sus operaciones para que los errores de SOAP específicos que inician se expongan a los clientes en WSDL.  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>Definir Condiciones de error que los clientes deberían saber  
- Los errores de SOAP son mensajes descritos públicamente que llevan información de error para una operación determinada. Dado que se describen junto con otros mensajes de la operación en WSDL, los clientes saben y, por consiguiente, esperan controlar dichos errores al invocar una operación. Sin embargo, dado que los servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se escriben en código administrado, decidir qué condiciones de error en código administrado se convertirán en errores y se devolverán al cliente le proporciona la oportunidad de separar las condiciones de error y errores en su servicio de la conversación del error formal que usted tiene con un cliente.  
+ Los errores de SOAP son mensajes descritos públicamente que llevan información de error para una operación determinada. Dado que se describen junto con otros mensajes de la operación en WSDL, los clientes saben y, por consiguiente, esperan controlar dichos errores al invocar una operación. Sin embargo, dado que los servicios de WCF se escriben en código administrado, decidir qué error condiciones en código administrado se convertirán en errores y devuelven al cliente le proporciona la oportunidad de separar las condiciones de error y errores en el servicio del error formal conversación que tiene con un cliente.  
   
  Por ejemplo, el ejemplo de código siguiente muestra una operación que toma dos enteros y devuelve otro entero. Aquí, se pueden producir varias excepciones, por lo que al diseñar el contrato del error, debe determinar qué condiciones de error son importantes para su cliente. En este caso, el servicio debería detectar la excepción <xref:System.DivideByZeroException?displayProperty=nameWithType>.  
   
@@ -84,7 +84,7 @@ End Class
   
  Según la norma de SOAP, un error puede tener `Action`, `Code`y `Reason`. `Action` es controlado por la propiedad <xref:System.ServiceModel.FaultContractAttribute.Action%2A>. La propiedad <xref:System.ServiceModel.FaultException.Code%2A> y la propiedad <xref:System.ServiceModel.FaultException.Reason%2A> son ambas propiedades de la clase <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>, que es la clase primaria del <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> genérico. Una propiedad `Code` incluye un miembro <xref:System.ServiceModel.FaultCode.SubCode%2A>.  
   
- Al tener acceso a servicios que generan errores, ciertas limitaciones existen. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] solo admite errores con los tipos de detalle que el esquema describe y que son compatibles con los contratos de datos. Por ejemplo, tal y como se ha mencionado, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] no admite errores que utilizan los atributos XML en sus tipos de datos o errores con más de un elemento de nivel superior en la sección de datos.  
+ Al tener acceso a servicios que generan errores, ciertas limitaciones existen. WCF admite solo errores con tipos de detalle que describe el esquema y que son compatibles con contratos de datos. Por ejemplo, tal y como se mencionó anteriormente, WCF no admite errores que utilizan los atributos XML en sus tipos de datos o errores con más de un elemento de nivel superior en la sección de detalles.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.FaultContractAttribute>  

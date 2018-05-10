@@ -2,11 +2,11 @@
 title: Uso del moniker de WCF con clientes COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 79040cd267d354d32b3e957dc70fcc65b09b0fc8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6d47b9c655db932bb9a4243533fbd01bcf25e0df
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Uso del moniker de WCF con clientes COM
 Este ejemplo muestra cómo utilizar el moniker de servicio de Windows Communication Foundation (WCF) para integrar los servicios Web en entornos de desarrollo basado en COM, como Microsoft Office Visual Basic para aplicaciones (Office VBA) o Visual Basic 6.0. El ejemplo está compuesto por un cliente de Windows Script Host (.vbs), una biblioteca de cliente auxiliar (.dll) y una biblioteca de servicios (.dll) hospedados en Internet Information Services (IIS). El servicio es un servicio de calculadora y el cliente COM llama operaciones matemáticas: Sumar, Restar, Multiplicar y Dividir, en el servicio. La actividad Client está visible en las ventanas de cuadro de mensaje.  
@@ -99,7 +99,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
 ```  
   
- Al ejecutar el ejemplo, la respuesta de la operación se muestra en una ventana de cuadro de mensaje de Windows Script Host. Esto muestra un cliente COM que realiza llamadas COM utilizando el moniker con tipo para comunicarse con un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. A pesar del uso de COM en la aplicación cliente, la comunicación con el servicio está solo compuesto por las llamadas del Servicio Web.  
+ Al ejecutar el ejemplo, la respuesta de la operación se muestra en una ventana de cuadro de mensaje de Windows Script Host. Esto demuestra que un cliente COM que realiza llamadas COM utilizando el moniker con tipo para comunicarse con un servicio WCF. A pesar del uso de COM en la aplicación cliente, la comunicación con el servicio está solo compuesto por las llamadas del Servicio Web.  
   
 ## <a name="wsdl-contract"></a>Contrato WSDL  
  No se exigen ningún registro de biblioteca de cliente para utilizar el moniker con un contrato WSDL, pero el contrato WSDL para el servicio se debe recuperar a través de un mecanismo fuera de banda, como utilizar un explorador para tener acceso al extremo WSDL para el servicio. El moniker puede tener acceso entonces a ese contrato en el tiempo de ejecución.  
@@ -135,7 +135,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 -   El nombre y espacio de nombres del contrato. Se requiere esta identificación porque el WSDL puede contener más de un contrato.  
   
     > [!NOTE]
-    >  De forma predeterminada, los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generan archivos WSDL independientes para cada espacio de nombres que utilizan. Éstos se vinculan con el uso de la construcción de importación de WSDL. Dado que el moniker espera una definición WSDL única, el servicio debe utilizar un espacio de nombres único como se muestra en este ejemplo o los archivos independientes deben estar combinados manualmente.  
+    >  De forma predeterminada, los servicios WCF generan archivos WSDL independientes para cada espacio de nombres que el uso. Éstos se vinculan con el uso de la construcción de importación de WSDL. Dado que el moniker espera una definición WSDL única, el servicio debe utilizar un espacio de nombres único como se muestra en este ejemplo o los archivos independientes deben estar combinados manualmente.  
   
  Al haber construido la instancia del proxy con el moniker de servicio, la aplicación cliente puede llamar a los métodos en el proxy, lo que hace que la infraestructura del moniker de servicio llame a las operaciones de servicio correspondientes.  
   
@@ -144,7 +144,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
 ```  
   
- Al ejecutar el ejemplo, la respuesta de la operación se muestra en una ventana de cuadro de mensaje de Windows Script Host. Esto muestra un cliente COM que realiza llamadas COM utilizando el moniker con un contrato WSDL para comunicarse con un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Al ejecutar el ejemplo, la respuesta de la operación se muestra en una ventana de cuadro de mensaje de Windows Script Host. Esto demuestra que un cliente COM que realiza llamadas COM utilizando el moniker con un contrato WSDL para comunicarse con un servicio WCF.  
   
 ## <a name="metadata-exchange-contract"></a>Contrato de Intercambio de Metadatos  
  Para utilizar el moniker con un contrato MEX, como con el contrato WSDL, no se requiere ningún registro del cliente. El contrato para el servicio se recupera en el tiempo de ejecución a través del uso interno de Intercambio de Metadatos.  
@@ -179,7 +179,7 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
 ```  
   
- Al ejecutar el ejemplo, la respuesta de la operación se muestra en una ventana de cuadro de mensaje de Windows Script Host. Esto muestra un cliente COM que realiza llamadas COM a través del moniker con un contrato MEX para comunicarse con un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Al ejecutar el ejemplo, la respuesta de la operación se muestra en una ventana de cuadro de mensaje de Windows Script Host. Esto demuestra que un cliente COM que realiza llamadas COM utilizando el moniker con un contrato MEX para comunicarse con un servicio WCF.  
   
 #### <a name="to-set-up-and-build-the-sample"></a>Para configurar y compilar el ejemplo  
   

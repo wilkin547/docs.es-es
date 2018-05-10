@@ -2,11 +2,11 @@
 title: Activación NamedPipe
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: a4d6612f8d598be6f02def2526920251e36047f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46b59dab0f67c66ca364d9e880ef519386d0df94
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="namedpipe-activation"></a>Activación NamedPipe
 Este ejemplo muestra cómo hospedar un servicio que utiliza el servicio de activación de procesos de Windows (WAS) para activar un servicio que se comunica a través de las canalizaciones de los nombres. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) y requiere [!INCLUDE[wv](../../../../includes/wv-md.md)] para que se ejecute.  
@@ -160,7 +160,7 @@ Press <ENTER> to terminate client.
   
 2.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-     Además, debe instalar los componentes de activación que no son HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+     Además, debe instalar los componentes de activación no HTTP de WCF:  
   
     1.  Desde el **iniciar** menú, elija **el Panel de Control**.  
   

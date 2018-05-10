@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 455900b1ac5d10c02e6b1341e737eb6874c874f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b06cb45d6075c8de1da973a11e2edec6792df304
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-contract-surrogates"></a>Suplentes de contratos de datos
 El contrato de datos *suplente* es una característica avanzada basada en el modelo de contrato de datos. Esta característica está diseñada para ser utilizada para la personalización de tipo y substitución en situaciones donde los usuarios desean cambiar cómo un tipo se serializa, deserializa o se proyecta en metadatos. Algunos escenarios donde se puede utilizar un suplente es cuando un contrato de datos no se ha especificado para el tipo, los campos y las propiedades no están marcados con el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> o los usuarios desean crear dinámicamente las variaciones del esquema.  
@@ -133,7 +133,7 @@ El contrato de datos *suplente* es una característica avanzada basada en el mod
  Se llama al método al principio de la exportación e importación del esquema. El método devuelve los tipos de datos personalizados utilizados en el esquema exportado o importado. El método se pasa a <xref:System.Collections.ObjectModel.Collection%601> (el parámetro `customDataTypes`), que es una colección de tipos. El método debería agregar los tipos conocidos adicionales a esta colección. Los tipos de datos personalizados conocidos son necesarios para habilitar la serialización y deserialización de datos personalizados utilizando <xref:System.Runtime.Serialization.DataContractSerializer>. Para obtener más información, consulte [tipos conocidos de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Implementar un suplente  
- Para utilizar el suplente del contrato de datos dentro de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], debe seguir unos procedimientos especiales.  
+ Para utilizar el suplente del contrato de datos de WCF, debe seguir unos procedimientos especiales.  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>Para utilizar un suplente para la serialización y deserialización  
  Utilice <xref:System.Runtime.Serialization.DataContractSerializer> para realizar la serialización y deserialización de datos con el suplente. <xref:System.Runtime.Serialization.DataContractSerializer> es creado por <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. También se debe especificar el suplente.  
@@ -174,7 +174,7 @@ El contrato de datos *suplente* es una característica avanzada basada en el mod
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>Para utilizar un suplente para exportar metadatos  
- De forma predeterminada, al exportar metadatos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para un servicio, los esquemas WSDL y XSD deben generarse. El suplente necesita ser agregado al componente responsable para generar el esquema XSD para los tipos de contrato de datos, <xref:System.Runtime.Serialization.XsdDataContractExporter>. Para ello, utilice un comportamiento que implemente <xref:System.ServiceModel.Description.IWsdlExportExtension> para modificar <xref:System.ServiceModel.Description.WsdlExporter>o directamente modifique <xref:System.ServiceModel.Description.WsdlExporter> utilizado para exportar los metadatos.  
+ De forma predeterminada, al exportar los metadatos para un servicio de WCF, se deben generar esquemas WSDL y XSD. El suplente necesita ser agregado al componente responsable para generar el esquema XSD para los tipos de contrato de datos, <xref:System.Runtime.Serialization.XsdDataContractExporter>. Para ello, utilice un comportamiento que implemente <xref:System.ServiceModel.Description.IWsdlExportExtension> para modificar <xref:System.ServiceModel.Description.WsdlExporter>o directamente modifique <xref:System.ServiceModel.Description.WsdlExporter> utilizado para exportar los metadatos.  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>Para utilizar un suplente para exportar metadatos  
   

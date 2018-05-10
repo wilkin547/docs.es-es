@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 81fc656784dadf0706e2ae3feda09cd08b886560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec8af8c7df9335774b1f3953f88c2aad438963b6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pii-security-lockdown"></a>Bloqueo de seguridad PII
 Este ejemplo muestra cómo controlar varias características relacionadas con la seguridad de un servicio de Windows Communication Foundation (WCF) mediante:  
@@ -29,11 +29,11 @@ Este ejemplo muestra cómo controlar varias características relacionadas con la
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>Explicación  
- Cada una de estas características puede utilizarse por separado o conjuntamente para controlar los aspectos de la seguridad de un servicio. Ésta no es una guía definitiva para proteger un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Cada una de estas características puede utilizarse por separado o conjuntamente para controlar los aspectos de la seguridad de un servicio. No es una guía definitiva para proteger un servicio WCF.  
   
  Los archivos de configuración de .NET Framework pueden contener información confidencial como cadenas de conexión para conectar a las bases de datos. En escenarios compartidos hospedados en web puede ser deseable cifrar esta información en el archivo de configuración para un servicio, para que los datos que contiene el archivo de configuración sean resistentes a la vista casual. La versión de .NET Framework 2.0 y posteriores tienen la capacidad de cifrar partes del archivo de configuración utilizando la interfaz del programa de aplicaciones Windows Data Protection (DPAPI) o el proveedor Criptográfico de RSA. El aspnet_regiis.exe, que utiliza DPAPI o RSA, puede cifrar partes selectas de un archivo de configuración.  
   
- En escenarios hospedados en web es posible tener los servicios en subdirectorios de otros servicios. El valor predeterminado semántico para determinar los valores de configuración permite a los archivos de configuración de los directorios anidados reemplazar los valores de configuración del directorio primario. En algunas situaciones puede no ser deseable por varias razones. La configuración de servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite el bloqueo de valores de configuración para que la configuración anidada genere excepciones cuando se ejecute un servicio anidados usando valores de configuración invalidados.  
+ En escenarios hospedados en web es posible tener los servicios en subdirectorios de otros servicios. El valor predeterminado semántico para determinar los valores de configuración permite a los archivos de configuración de los directorios anidados reemplazar los valores de configuración del directorio primario. En algunas situaciones puede no ser deseable por varias razones. WCF servicio configuración admite el bloqueo de valores de configuración para que la configuración anidada genere excepciones cuando se ejecuta un servicio anidados usando valores de configuración invalidados.  
   
  Este ejemplo muestra cómo controlar el registro de información de identificación personal conocida (PII) en los registros de seguimiento y mensajes, como el nombre de usuario y contraseña. De forma predeterminada, el registro de PII conocida está deshabilitado, sin embargo en ciertas situaciones el registro de PII puede ser importante para depurar una aplicación. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). Además, este ejemplo utiliza traza y registro de mensajes. Para obtener más información, consulte el [seguimiento y registro de mensajes](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) ejemplo.  
   

@@ -2,18 +2,18 @@
 title: Proveedor WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 202923ab1d09b0ce836dbfce7360dd22a479a900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d135466c402fa21b6a1b11f208ca900f58748bdb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wmi-provider"></a>Proveedor WMI
-Este ejemplo muestra cómo recopilar los datos de servicios de Windows Communication Foundation (WCF) en tiempo de ejecución mediante el proveedor de Instrumental de administración de Windows (WMI) que está integrado en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Asimismo, este ejemplo muestra cómo agregar un objeto WMI definido por el usuario a un servicio. El ejemplo activa el proveedor WMI para la [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) y muestra cómo recopilar datos de la `ICalculator` servicio en tiempo de ejecución.  
+Este ejemplo muestra cómo recopilar los datos de servicios de Windows Communication Foundation (WCF) en tiempo de ejecución mediante el proveedor de Instrumental de administración de Windows (WMI) que está integrado en WCF. Asimismo, este ejemplo muestra cómo agregar un objeto WMI definido por el usuario a un servicio. El ejemplo activa el proveedor WMI para la [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) y muestra cómo recopilar datos de la `ICalculator` servicio en tiempo de ejecución.  
   
  WMI es la implementación de Microsoft del estándar Web-Based Enterprise Management (WBEM). Para obtener más información sobre el SDK de WMI, consulte [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx). WBEM es un estándar de la industria para saber cómo exponen las aplicaciones la instrumentación de administración a las herramientas de administración externas.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementa un proveedor de WMI, un componente que expone la instrumentación en el tiempo de ejecución a través de una interfaz compatible con WBEM. Las herramientas de administración pueden conectarse a los servicios a través de la interfaz en tiempo de ejecución. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expone atributos de servicios como direcciones, enlaces, comportamientos y agentes de escucha.  
+ WCF implementa un proveedor WMI, un componente que expone la instrumentación en tiempo de ejecución a través de una interfaz compatible con WBEM. Las herramientas de administración pueden conectarse a los servicios a través de la interfaz en tiempo de ejecución. WCF expone atributos de servicios como direcciones, enlaces, comportamientos y agentes de escucha.  
   
  El proveedor de WMI integrado se activa en el archivo de configuración de la aplicación. Esto se realiza a través de la `wmiProviderEnabled` atributo de la [ \<diagnóstico >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) en el [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sección, como se muestra en el ejemplo siguiente configuración:  
   
@@ -35,7 +35,7 @@ Este ejemplo muestra cómo recopilar los datos de servicios de Windows Communica
   
  Este ejemplo utiliza dos scripts Java: uno para enumerar los servicios que se ejecutan en el equipo junto con algunas de sus propiedades y otro para ver los datos de WMI definidos por el usuario. El script abre una conexión con el proveedor WMI, analiza los datos y muestra los datos recopilados.  
   
- Inicie el ejemplo para crear una instancia en ejecución de un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Mientras el servicio se está ejecutando, ejecute cada script de Java usando el comando siguiente en el símbolo del sistema:  
+ Iniciar el ejemplo para crear una instancia en ejecución de un servicio WCF. Mientras el servicio se está ejecutando, ejecute cada script de Java usando el comando siguiente en el símbolo del sistema:  
   
 ```  
 cscript EnumerateServices.js  
@@ -114,9 +114,9 @@ cscript EnumerateCustomObjects.js
 |-WMIInfo:       User Defined WMI Information.  
 ```  
   
- El resultado muestra que hay un único servicio que se ejecuta en el equipo. El servicio expone un extremo que implementa el contrato `ICalculator`. Los valores del comportamiento y el extremo que el extremo implementa se muestran como la suma de elementos individuales de la pila de mensajería.  
+ El resultado muestra que hay un único servicio que se ejecuta en el equipo. El servicio expone un extremo que implementa el contrato `ICalculator`. Los valores del comportamiento y enlace que el punto de conexión implementa se muestran como la suma de elementos individuales de la pila de mensajería.  
   
- WMI no se limita a exponer el instrumental de administración de la infraestructura [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La aplicación puede exponer sus propios elementos de datos específicos del dominio a través del mismo mecanismo. WMI es un mecanismo unificado para la inspección y control de un servicio Web.  
+ WMI no se limita a exponer el Instrumental de administración de la infraestructura de WCF. La aplicación puede exponer sus propios elementos de datos específicos del dominio a través del mismo mecanismo. WMI es un mecanismo unificado para la inspección y control de un servicio Web.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
@@ -129,7 +129,7 @@ cscript EnumerateCustomObjects.js
 4.  Para ejecutar el ejemplo en una configuración de equipo único o varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Si instaló [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] después de instalar ASP.NET, es posible que necesite ejecutar "%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe " -r -x para proporcionar a la cuenta de ASPNET permiso para publicar objetos WMI.  
+    >  Si ha instalado WCF después de instalar ASP.NET, debe ejecutar "%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe "- r - x para proporcionar a la cuenta de ASPNET permiso para publicar objetos WMI.  
   
 5.  Vea los datos del ejemplo que aparece mediante WMI con los comandos: `cscript EnumerateServices.js` o `cscript EnumerateCustomObjects.js`.  
   

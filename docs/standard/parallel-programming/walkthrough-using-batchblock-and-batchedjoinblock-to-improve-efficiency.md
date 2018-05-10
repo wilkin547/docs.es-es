@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c9ea53fb186551a24f678d905d35caaaa0c26494
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e9305fd2a0e61a71f6875d6061f835e9cdae5dd1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Tutorial: Usar BatchBlock y BatchedJoinBlock para mejorar la eficacia
 La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> para poder recibir y almacenar en búfer datos de uno o más orígenes y después propagar esos datos almacenados en búfer como una colección. Este mecanismo por lotes es útil cuando se recopilan datos de uno o más orígenes y después se procesan varios elementos de datos como un lote. Por ejemplo, piense en una aplicación que usa flujo de datos para insertar registros en una base de datos. Esta operación puede ser más eficaz si varios elementos se insertan al mismo tiempo en lugar de insertar de uno en uno de forma secuencial. En este documento se describe cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> para mejorar la eficacia de las operaciones de inserción de la base de datos. También se describe cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> para capturar los resultados y cualquier excepción que se produce cuando el programa lee de una base de datos.
@@ -35,7 +35,7 @@ La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threadi
 2.  Asegúrese de que tiene una copia de la base de datos Northwind, Northwind.sdf, disponible en el equipo. Este archivo se encuentra normalmente en la carpeta %Archivos de programa%\Microsoft SQL Server Compact Edition\v3.5\Ejemplos\\.  
   
     > [!IMPORTANT]
-    >  En algunas versiones de Windows, no podrá conectarse a Northwind.sdf si [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] se está ejecutando en modo que no sea de administrador. Para conectarse a Northwind.sdf, inicie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o un símbolo del sistema de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] en modo **Ejecutar como administrador**.  
+    >  En algunas versiones de Windows, no se puede conectar a Northwind.sdf si Visual Studio se ejecuta en modo que no sea de administrador. Para conectarse a Northwind.sdf, inicie Visual Studio o un símbolo del sistema de Visual Studio en modo **Ejecutar como administrador**.  
   
  Este tutorial contiene las siguientes secciones:  
   
@@ -57,7 +57,7 @@ La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threadi
 ## <a name="creating-the-console-application"></a>Crear la aplicación de consola  
   
 <a name="consoleApp"></a>   
-1.  En [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], cree un proyecto **Aplicación de consola** de Visual C# o Visual Basic. En este documento, el proyecto se denomina `DataflowBatchDatabase`.  
+1.  En Visual Studio, cree un proyecto **Aplicación de consola** de Visual C# o Visual Basic. En este documento, el proyecto se denomina `DataflowBatchDatabase`.  
   
 2.  En el proyecto, agregue una referencia a System.Data.SqlServerCe.dll y una referencia a System.Threading.Tasks.Dataflow.dll.  
   

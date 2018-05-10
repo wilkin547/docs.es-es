@@ -2,11 +2,11 @@
 title: Elección de un patrón de intercambio de mensajes
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 3466be98522eef0ebec6f6613f51566700a7cdb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac5ff841eb4e314c1c9d04c895d7a22766da003e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes
 El primer paso para escribir un transporte personalizado es decidir qué *patrones de intercambio de mensajes* (o MEP) son necesarios para el canal que está desarrollando. Este tema describe las opciones disponibles y trata sobre los distintos requisitos. Se trata de la primera tarea de la lista de tareas de desarrollo de canal se describe en [canales de desarrollo](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -47,7 +47,7 @@ Los tres patrones de intercambio de mensajes básicos. De arriba abajo: datagram
 >  En el caso del transporte de UDP, el único MEP que se admite es el datagrama, ya que UDP es en sí mismo un protocolo de tipo desencadenar y omitir.  
   
 ## <a name="sessions-and-sessionful-channels"></a>Sesiones y canales con sesiones  
- En el mundo de red, hay protocolos orientado a la conexión (por ejemplo, TCP) y protocolos sin conexión (por ejemplo, UDP). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa el término sesión para indicar una abstracción lógica de una conexión. Los protocolos WCF con sesión son similares a los protocolos de red orientados a la conexión y los protocolos WCF sin sesión son similares a los protocolos de red sin sesión.  
+ En el mundo de red, hay protocolos orientado a la conexión (por ejemplo, TCP) y protocolos sin conexión (por ejemplo, UDP). WCF usa el término sesión para indicar una abstracción lógica conexión. Los protocolos WCF con sesión son similares a los protocolos de red orientados a la conexión y los protocolos WCF sin sesión son similares a los protocolos de red sin sesión.  
   
  En el modelo de objetos de canal, cada sesión lógica se manifiesta como una instancia de un canal con sesión. Por consiguiente, cada nueva sesión creada por el cliente y aceptada en el servicio se corresponde con un nuevo canal con sesión en cada lado. El siguiente diagrama muestra, en la parte superior, la estructura de los canales sin sesión y, en la parte inferior, la estructura de los canales con sesión.  
   

@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: 78ad80188b8428bb718251045ef04ab803862a0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea0e6f3dc66bf40d631077c0dce20ea46f3a6688
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-logging-in-wcf"></a>Registro de eventos en WCF
 Windows Communication Foundation (WCF) realiza un seguimiento de los eventos internos en el registro de eventos de Windows.  
   
 ## <a name="viewing-event-logs"></a>Ver registros de eventos  
- El registro de eventos está habilitado automáticamente de forma predeterminada y no hay ningún mecanismo para deshabilitarlo. Los eventos registrados por [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] se pueden ver utilizando el Visor de eventos. Para iniciar esta herramienta, haga clic en **iniciar**, haga clic en **el Panel de Control**, haga doble clic en **herramientas administrativas**y, a continuación, haga doble clic en **Visor de eventos**.  
+ El registro de eventos está habilitado automáticamente de forma predeterminada y no hay ningún mecanismo para deshabilitarlo. Eventos registrados por WCF se pueden ver mediante el Visor de eventos. Para iniciar esta herramienta, haga clic en **iniciar**, haga clic en **el Panel de Control**, haga doble clic en **herramientas administrativas**y, a continuación, haga doble clic en **Visor de eventos**.  
   
 ### <a name="application-event-log"></a>Registro de eventos de aplicación  
- El **registro de eventos de aplicación** contiene la mayoría de los eventos generados por [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. La mayoría de las entradas indican que se produjo un error en una característica determinada en el inicio de una aplicación. Ejemplos:  
+ El **registro de eventos de aplicación** contiene la mayoría de los eventos generados por WCF. La mayoría de las entradas indican que se produjo un error en una característica determinada en el inicio de una aplicación. Ejemplos:  
   
--   Registro de mensajes/seguimiento: [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] escribe un evento en el registro de eventos cuando fallan el seguimiento y el registro de mensajes. Sin embargo, no todos los errores de seguimiento desencadenan un evento. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] implementa un período de espera de 10 minutos para tal evento. Esto significa que si [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] escribe un error de seguimiento en el registro de eventos, no lo hará de nuevo durante por lo menos 10 minutos.  
+-   Registro y seguimiento de mensajes: WCF escribe un evento en el registro de eventos cuando se produce un error en el seguimiento y registro de mensajes. Sin embargo, no todos los errores de seguimiento desencadenan un evento. Para evitar que el registro de eventos se llena completamente con errores de seguimientos, WCF implementa un período de espera de 10 minutos para tal evento. Esto significa que si WCF escribe un error de seguimiento en el registro de eventos, no se realizará de nuevo para al menos 10 minutos.  
   
 -   Agente de escucha compartido: el servicio de uso compartido de puertos WCF TCP registra un evento cuando no se inicia.  
   

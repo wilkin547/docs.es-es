@@ -2,11 +2,11 @@
 title: Publicación de WSDL personalizada
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: e475a37b5c8e868cf06d7764d561755112ed943e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b75aa2269d9c21a6f6d7f579d3c0b6f547a92332
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-wsdl-publication"></a>Publicación de WSDL personalizada
 Este ejemplo explica cómo:  
@@ -230,7 +230,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- Una vez especificado el importador personalizado, el sistema de metadatos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] carga al importador personalizado en <xref:System.ServiceModel.Description.WsdlImporter> creado para ese propósito. Este ejemplo utiliza <xref:System.ServiceModel.Description.MetadataExchangeClient> para descargar los metadatos, el <xref:System.ServiceModel.Description.WsdlImporter> configurado correctamente para importar los metadatos mediante el importador personalizado que el ejemplo crea y <xref:System.ServiceModel.Description.ServiceContractGenerator> para compilar la información del contrato modificada en el código de cliente de Visual Basic y C# que se puede utilizar en Visual Studio para admitir Intellisense o que se puede compilar en la documentación de XML.  
+ Una vez que se ha especificado el importador personalizado, el sistema de metadatos WCF carga al importador personalizado en cualquier <xref:System.ServiceModel.Description.WsdlImporter> creado para ese propósito. Este ejemplo utiliza <xref:System.ServiceModel.Description.MetadataExchangeClient> para descargar los metadatos, el <xref:System.ServiceModel.Description.WsdlImporter> configurado correctamente para importar los metadatos mediante el importador personalizado que el ejemplo crea y <xref:System.ServiceModel.Description.ServiceContractGenerator> para compilar la información del contrato modificada en el código de cliente de Visual Basic y C# que se puede utilizar en Visual Studio para admitir Intellisense o que se puede compilar en la documentación de XML.  
   
 ```  
 /// From WSDL Documentation:  

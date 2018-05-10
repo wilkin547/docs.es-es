@@ -2,11 +2,11 @@
 title: Autenticador de tokens
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 35bba0b6a81ff11164636e906440db7e9b2ca25b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-authenticator"></a>Autenticador de tokens
 Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. Un autenticador de tokens de Windows Communication Foundation (WCF) se utiliza para validar el token que se utiliza con el mensaje, comprobar que es coherente consigo mismo y autenticar la identidad asociada con el token.  
@@ -23,11 +23,11 @@ Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. 
   
 -   Cómo el servidor puede validar las credenciales del cliente mediante un autenticador de tokens personalizado.  
   
--   Cómo el código de servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se asocia con el autenticador de tokens personalizado.  
+-   Cómo el código del servicio WCF se asocia con el autenticador de token personalizado.  
   
 -   Cómo el servidor se puede autenticar utilizando el certificado X.509 del servidor.  
   
- Este ejemplo también muestra cómo la identidad del llamador es accesible desde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] después del proceso de autenticación del token personalizado.  
+ Este ejemplo también muestra cómo la identidad del llamador es accesible desde WCF después del proceso de autenticación de tokens personalizado.  
   
  El servicio expone un punto de conexión único para comunicarse con el servicio, definido mediante el archivo de configuración App.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding`estándar, con el conjunto de modo de seguridad en mensaje - el modo predeterminado de `wsHttpBinding`. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario del cliente. El servicio también configura el certificado del servicio utilizando comportamiento`serviceCredentials`. El comportamiento `securityCredentials` le permite especificar un certificado del servicio. Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje. La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las siguientes instrucciones de configuración.  
   

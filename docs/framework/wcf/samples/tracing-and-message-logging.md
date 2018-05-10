@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13d23c0f69c65dd3bd6b2714dd710eb7f97a1c07
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing-and-message-logging"></a>Seguimiento y registro de mensajes
 Este ejemplo muestra cómo habilitar el seguimiento y registro de mensajes. Los registros de mensajes y seguimientos resultantes se ven mediante la [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -17,7 +17,7 @@ Este ejemplo muestra cómo habilitar el seguimiento y registro de mensajes. Los 
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
 ## <a name="tracing"></a>Traza  
- Windows Communication Foundation (WCF) utiliza el mecanismo de seguimiento definido en el <xref:System.Diagnostics> espacio de nombres. Los orígenes de seguimiento que las aplicaciones implementan generan la información de seguimiento en este modelo de seguimiento. Un nombre identifica cada origen. Los consumidores de seguimiento crean los agentes de escucha de seguimiento para los orígenes de seguimiento para los que desean recuperar información. Debe crear un agente de escucha para que el origen de seguimiento reciba la información de seguimiento. En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], esto se puede hacer agregando el código siguiente al archivo de configuración del servicio o a la configuración del cliente estableciendo el Modelo de servicio de origen de seguimiento `switchValue`:  
+ Windows Communication Foundation (WCF) utiliza el mecanismo de seguimiento definido en el <xref:System.Diagnostics> espacio de nombres. Los orígenes de seguimiento que las aplicaciones implementan generan la información de seguimiento en este modelo de seguimiento. Un nombre identifica cada origen. Los consumidores de seguimiento crean los agentes de escucha de seguimiento para los orígenes de seguimiento para los que desean recuperar información. Debe crear un agente de escucha para que el origen de seguimiento reciba la información de seguimiento. En WCF, esto puede hacerse agregando el código siguiente al archivo de configuración del cliente o del servicio, establezca el origen de traza de modelo de servicio `switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -55,12 +55,12 @@ Este ejemplo muestra cómo habilitar el seguimiento y registro de mensajes. Los 
   
 -   Poner en correlación las actividades a través de las transferencias y la propagación.  
   
--   Disminuya el coste de rendimiento de traza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (por ejemplo, el coste del espacio en disco de un archivo de registro).  
+-   Reducir el costo de rendimiento de seguimiento de WCF (por ejemplo, el coste del espacio de disco de un archivo de registro).  
   
  Para obtener más información sobre el seguimiento de actividad definido por el usuario, consulte la [extender seguimiento](../../../../docs/framework/wcf/samples/extending-tracing.md) ejemplo.  
   
 ## <a name="message-logging"></a>Registro de mensajes  
- El registro de mensajes puede estar habilitado tanto en el cliente, como en el servicio de cualquier aplicación [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Para habilitar el registro de mensajes, debe agregar el código siguiente al cliente o servicio:  
+ Registro de mensajes puede habilitarse tanto en el cliente y el servicio de cualquier aplicación de WCF. Para habilitar el registro de mensajes, debe agregar el código siguiente al cliente o servicio:  
   
 ```xml  
 <configuration>  

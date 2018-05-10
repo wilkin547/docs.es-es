@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-ms.openlocfilehash: df2993d9ba25c043aa66029aa00fae945d5cec9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13fe07d1521832ed12ba5770e0bd069ff9b917d2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="channel-model-overview"></a>Información general del modelo de canales
-La pila del canal de Windows Communication Foundation (WCF) es una pila de comunicación superpuesta con uno o más canales que procesan los mensajes. En la parte inferior de la pila hay un canal de transporte que es responsable de adaptar la pila del canal al transporte subyacente (por ejemplo, TCP, HTTP, SMTP y otros tipos de transporte). Los canales proporcionan un modelo de programación de bajo nivel para enviar y recibir mensajes. Este modelo de programación confía en varias interfaces y otros tipos colectivamente conocidos como el modelo de canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. En este tema se tratan diversas formas de canal, la construcción de un agente de escucha básico del canal (en el servicio) y el generador de canales (en el cliente).  
+La pila del canal de Windows Communication Foundation (WCF) es una pila de comunicación superpuesta con uno o más canales que procesan los mensajes. En la parte inferior de la pila hay un canal de transporte que es responsable de adaptar la pila del canal al transporte subyacente (por ejemplo, TCP, HTTP, SMTP y otros tipos de transporte). Los canales proporcionan un modelo de programación de bajo nivel para enviar y recibir mensajes. Este modelo de programación se basa en varias interfaces y otros tipos colectivamente conocidos como el modelo de canal WCF. En este tema se tratan diversas formas de canal, la construcción de un agente de escucha básico del canal (en el servicio) y el generador de canales (en el cliente).  
   
 ## <a name="channel-stack"></a>Pila del canal  
- Los extremos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se comunican con el exterior mediante una pila de comunicación denominada "pila de canal". El diagrama siguiente compara la pila de canal con otras pilas de la comunicación, por ejemplo, TCP/IP.  
+ Extremos de WCF que se comunican con el exterior mediante una pila de comunicación que se llama a la pila de canales. El diagrama siguiente compara la pila de canal con otras pilas de la comunicación, por ejemplo, TCP/IP.  
   
  ![Modelo de canal](../../../../docs/framework/wcf/extending/media/wcfc-channelstackhighlevelc.gif "wcfc_ChannelStackHighLevelc")  
   

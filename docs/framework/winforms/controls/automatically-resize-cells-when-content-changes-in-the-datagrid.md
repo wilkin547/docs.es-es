@@ -21,7 +21,7 @@ Puede configurar el control <xref:System.Windows.Forms.DataGridView> para que aj
   
  Tiene muchas opciones para restringir qué celdas se usan para determinar los nuevos tamaños. Por ejemplo, puede configurar el control para ajustar automáticamente el ancho de sus columnas basándose solo en los valores de las filas que se muestran actualmente. De esta forma evita la falta de eficiencia al trabajar con grandes cantidades de filas, aunque en este caso quizás quiera usar métodos de ajuste de tamaño como <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> para ajustar el tamaño en el momento que elija.  
   
- Para obtener más información sobre el cambio de tamaño automático, consulte [Sizing Options in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+ Para obtener más información sobre el cambio de tamaño automático, consulte [Opciones de ajuste de tamaño en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
   
  El ejemplo de código siguiente muestra las opciones disponibles para el ajuste de tamaño automático.  
   

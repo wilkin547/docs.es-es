@@ -1,27 +1,15 @@
 ---
 title: Instrucciones de firewall
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-caps.latest.revision: "32"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 270df09f709dfdfeb78b9bd72bc3744c6614bc5e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ae7adcb773167a6af190355dd595f0f063fedc8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="firewall-instructions"></a>Instrucciones de firewall
-Debe habilitar varios puertos o programas en el firewall para que los ejemplos [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] puedan funcionar. Muchos de los ejemplos se comunican utilizando los puertos del intervalo 8000-8003 y el puerto 9000. El firewall se activa de forma predeterminada y evita el acceso a estos puertos. Para habilitar el firewall para los ejemplos, complete uno de los procedimientos siguientes, dependiendo de sus requisitos y entorno de seguridad:  
+Debe habilitar varios puertos o programas en el firewall para que los ejemplos de Windows Communication Foundation (WCF) pueden funcionar. Muchos de los ejemplos se comunican utilizando los puertos del intervalo 8000-8003 y el puerto 9000. El firewall se activa de forma predeterminada y evita el acceso a estos puertos. Para habilitar el firewall para los ejemplos, complete uno de los procedimientos siguientes, dependiendo de sus requisitos y entorno de seguridad:  
   
 -   Opción 1: Habilite de forma interactiva los ejemplos mientras se ejecutan. No realice ningún cambio de antemano en su configuración del firewall y proceda a iniciar la compilación y la ejecución de los ejemplos. Cuando se ejecuta un ejemplo, un **alerta de seguridad de Windows** aparece el cuadro de diálogo. El programa de ejemplo en cuestión se puede agregar a continuación a una lista desbloqueada de forma interactiva. Con este procedimiento, quizá tenga que reiniciar el ejemplo.  
   

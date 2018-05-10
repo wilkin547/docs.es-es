@@ -2,21 +2,21 @@
 title: Traza analítica de WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 99b28dcc1cfb32f5f6835eadee1bded14375c216
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e13aa0f7d0dbc48bedad0a9c639695ed038b9303
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-analytic-tracing"></a>Traza analítica de WCF
-Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en la secuencia de los seguimientos analíticos que Windows Communication Foundation (WCF) se escribe en ETW en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Los seguimientos analíticos pretenden facilitar la visibilidad en los servicios sin que el rendimiento se vea penalizado. En este ejemplo se muestra cómo utilizar las API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> para escribir eventos que se integran con los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en la secuencia de los seguimientos analíticos que Windows Communication Foundation (WCF) se escribe en ETW en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Los seguimientos analíticos pretenden facilitar la visibilidad en los servicios sin que el rendimiento se vea penalizado. Este ejemplo muestra cómo utilizar el <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API para escribir los eventos que se integran con los servicios WCF.  
   
  Para obtener más información sobre la <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API, consulte <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
  Para más información sobre el seguimiento de eventos de Windows, consulte [Improve Debugging and Performance Tuning with ETW](http://go.microsoft.com/fwlink/?LinkId=166488).  
   
 ## <a name="disposing-eventprovider"></a>Eliminar EventProvider  
- En este ejemplo se usa la clase <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, que implementa el objeto <xref:System.IDisposable?displayProperty=nameWithType>. Al implementar el seguimiento de un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], es probable que pueda utilizar los recursos de <xref:System.Diagnostics.Eventing.EventProvider> mientras dura el servicio. Por esta razón y para conservar la legibilidad, este ejemplo nunca elimina el objeto <xref:System.Diagnostics.Eventing.EventProvider> ajustado. Si por alguna razón su servicio tiene requisitos diferentes para el seguimiento y debe desechar este recurso, debe modificar este ejemplo de acuerdo con los procedimientos recomendados para desechar recursos no administrados. Para obtener más información sobre cómo deshacerse de recursos no administrados, vea [implementa un método Dispose](http://go.microsoft.com/fwlink/?LinkId=166436).  
+ En este ejemplo se usa la clase <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, que implementa el objeto <xref:System.IDisposable?displayProperty=nameWithType>. Al implementar el seguimiento para un servicio WCF, es probable que pueda utilizar el <xref:System.Diagnostics.Eventing.EventProvider>de recursos para la duración del servicio. Por esta razón y para conservar la legibilidad, este ejemplo nunca elimina el objeto <xref:System.Diagnostics.Eventing.EventProvider> ajustado. Si por alguna razón su servicio tiene requisitos diferentes para el seguimiento y debe desechar este recurso, debe modificar este ejemplo de acuerdo con los procedimientos recomendados para desechar recursos no administrados. Para obtener más información sobre cómo deshacerse de recursos no administrados, vea [implementa un método Dispose](http://go.microsoft.com/fwlink/?LinkId=166436).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Autohospedaje y Hospedaje web  
  Para los servicios hospedados en Web, los seguimientos analíticos de WCF proporcionan un campo, denominado "HostReference", que se utiliza para identificar el servicio que está emitiendo los seguimientos. Los seguimientos extensibles de usuario pueden participar en este modelo; este ejemplo muestra los procedimientos recomendados para ello. El formato de un host Web hacer referencia cuando la canalización '&#124;' carácter aparece realmente en el cuadro cadena puede ser cualquiera de las siguientes acciones:  
@@ -29,10 +29,10 @@ Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en la secu
   
      \<Nombre del sitio >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
- Para los servicios autohospedados, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]de seguimientos analíticos no rellenan el campo "HostReference". La clase `WCFUserEventProvider` de este ejemplo se comporta de forma coherente cuando se utiliza en un servicio autohospedado.  
+ Para los servicios autohospedados, los seguimientos analíticos de WCF no rellenan el campo "HostReference". La clase `WCFUserEventProvider` de este ejemplo se comporta de forma coherente cuando se utiliza en un servicio autohospedado.  
   
 ## <a name="custom-event-details"></a>Detalles de eventos personalizados  
- El manifiesto del proveedor de eventos de ETW de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] define tres eventos que están diseñados para ser emitidos por los autores de servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desde dentro del código del servicio. La siguiente tabla muestra un desglose de los tres eventos:  
+ Manifiesto del proveedor de eventos de ETW de WCF define tres eventos que están diseñados para ser emitidos por los autores del servicio WCF desde dentro del código de servicio. La siguiente tabla muestra un desglose de los tres eventos:  
   
 |evento|Descripción|Id. de evento|  
 |-----------|-----------------|--------------|  
@@ -50,11 +50,11 @@ Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en la secu
   
      En el explorador Web, haga clic en **Calculator.svc**. El URI del documento WSDL para el servicio debería aparecer en el explorador. Copie ese URI.  
   
-4.  Ejecute el cliente de prueba de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (WcfTestClient.exe).  
+4.  Ejecute al cliente de prueba WCF (WcfTestClient.exe).  
   
-     El [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente de prueba (WcfTestClient.exe) se encuentra en la \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] directorio de instalación > \Common7\IDE\ WcfTestClient.exe (valor predeterminado [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] directorio de instalación es C:\Program Files\Microsoft Visual Studio 10.0).  
+     El cliente de prueba WCF (WcfTestClient.exe) se encuentra en la \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] directorio de instalación > \Common7\IDE\ WcfTestClient.exe (valor predeterminado [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] directorio de instalación es C:\Program Files\Microsoft Visual Studio 10.0).  
   
-5.  En el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente de prueba, agregue el servicio seleccionando **archivo**y, a continuación, **Agregar servicio**.  
+5.  En el cliente de prueba WCF, agregue el servicio seleccionando **archivo**y, a continuación, **Agregar servicio**.  
   
      Agregue la dirección del punto de conexión en el cuadro de entrada.  
   
@@ -64,7 +64,7 @@ Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en la secu
   
 7.  Abra la aplicación Visor de eventos.  
   
-     Antes de invocar el servicio, inicie el Visor de eventos y asegúrese de que el registro de eventos escucha los eventos de seguimiento emitidos por el servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+     Antes de invocar el servicio, inicie el Visor de eventos y asegúrese de que el registro de eventos escucha eventos de seguimiento emitidos desde el servicio WCF.  
   
 8.  Desde el **iniciar** menú, seleccione **herramientas administrativas**y, a continuación, **Visor de eventos**. Habilitar la **analítico** y **depurar** registros.  
   

@@ -2,11 +2,11 @@
 title: Transporte WS con credencial de mensaje
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: acb2960fe3d563a05b0bdeee70af0d4093aae6f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 708869f2350f01e75b949f4817fcf8aac35ea018
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-transport-with-message-credential"></a>Transporte WS con credencial de mensaje
 Este ejemplo muestra el uso de la seguridad de transporte de SSL en combinación con la credencial del cliente que se lleva en el mensaje. El ejemplo usa el enlace `wsHttpBinding`.  
@@ -60,7 +60,7 @@ public string GetCallerIdentity()
   
  La dirección especificada utiliza el esquema https://. La configuración de enlace establece el modo de seguridad en `TransportWithMessageCredential`. Debe especificarse el mismo modo de seguridad en el archivo Web.config del servicio.  
   
- Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con Makecert.exe, una alerta de seguridad aparece cuando se intenta acceder a un https: dirección, como https://localhost/servicemodelsamples/service.svc, desde el explorador. Para permitir al cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trabajar con un certificado de prueba, se ha añadido código adicional al cliente para suprimir la alerta de seguridad. Este código, y la clase que lo acompaña, no son necesarios cuando se usan certificados de producción.  
+ Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con Makecert.exe, una alerta de seguridad aparece cuando se intenta acceder a un https: dirección, como https://localhost/servicemodelsamples/service.svc, desde el explorador. Para permitir que el cliente de WCF para que funcione con un certificado de prueba en su lugar, se ha añadido código adicional al cliente para suprimir la alerta de seguridad. Este código, y la clase que lo acompaña, no son necesarios cuando se usan certificados de producción.  
 
 ```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   

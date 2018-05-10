@@ -2,21 +2,21 @@
 title: Proveedor de token emitido duradero
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 20006f87f7ecba9c09f6c957f8b6355dec7fbd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 145faaae709119708240863f85eb5352fb2c5a1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-issued-token-provider"></a>Proveedor de token emitido duradero
 Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emitidos por el cliente.  
   
 ## <a name="discussion"></a>Explicación  
- Un proveedor de tokens de Windows Communication Foundation (WCF) se utiliza para proporcionar credenciales para la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se entrega con un proveedor de tokens de [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Los proveedores de tokens personalizados son útiles en los casos siguientes:  
+ Un proveedor de tokens de Windows Communication Foundation (WCF) se utiliza para proporcionar credenciales para la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF incluye un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] proveedor de tokens. Los proveedores de tokens personalizados son útiles en los casos siguientes:  
   
 -   Si tiene un almacén de credenciales con el que el proveedor de tokens integrado no puede funcionar.  
   
--   Si desea proporcionar su propio mecanismo personalizado para transformar las credenciales desde el punto en el que el usuario proporciona detalles cuando el cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza las credenciales.  
+-   Si desea proporcionar su propio mecanismo personalizado para transformar las credenciales desde el punto cuando el usuario proporciona detalles cuando el cliente de WCF usa las credenciales.  
   
 -   Si está creando un token personalizado.  
   
@@ -26,7 +26,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
   
 -   Cómo se puede configurar un cliente con un proveedor de tokens personalizado.  
   
--   Cómo se pueden almacenar en caché y proporcionar los tokens emitidos en el cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   Cómo pueden se almacena en caché y proporciona al cliente de WCF tokens emitidos.  
   
 -   Cómo el cliente autentica el servidor usando el certificado X.509 del servidor.  
   
@@ -109,7 +109,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
  El Servicio de token de seguridad expone un solo punto de conexión con el wsHttpBinding estándar. El Servicio de token de seguridad responde a las solicitudes de tokens de los clientes y, siempre que el cliente se autentique utilizando una cuenta de Windows, emite un token que contiene el nombre de usuario del cliente como una notificación en el token emitido. Como parte de la creación del token, el servicio de token de seguridad firma el token usando la clave privada asociada con el certificado de CN=STS. Además, crea una clave simétrica y la cifra utilizando la clave pública asociada con el certificado de CN=localhost. Para devolver el token al cliente, el servicio de token de seguridad devuelve también la clave simétrica. El cliente presenta el token emitido al servicio de la calculadora y demuestra que conoce la clave simétrica firmando el mensaje con esa clave.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>Credenciales de cliente personalizadas y proveedor de tokens  
- Los pasos siguientes muestran cómo desarrollar un proveedor de tokens personalizado que almacena en caché los tokens emitidos y cómo integrarlo con el marco de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Los pasos siguientes muestran cómo desarrollar un proveedor de tokens personalizado que las memorias caché los tokens emitieron e integrarlo con WCF: seguridad.  
   
 #### <a name="to-develop-a-custom-token-provider"></a>Para desarrollar un proveedor de tokens personalizado  
   

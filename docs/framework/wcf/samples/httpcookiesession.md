@@ -2,14 +2,14 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 54e2459f5b480d8f53df42a08d4ebc8ac07b128c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64a7cba7b1bbc55a4504e3af4784fcb2a84f0fa1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-Este ejemplo muestra cómo generar un canal de protocolo personalizado para usar cookies de HTTP para la administración de sesiones. Este canal habilita la comunicación entre los servicios de Windows Communication Foundation (WCF) y los clientes ASMX o entre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] los clientes y servicios ASMX.  
+Este ejemplo muestra cómo generar un canal de protocolo personalizado para usar cookies de HTTP para la administración de sesiones. Este canal habilita la comunicación entre los servicios de Windows Communication Foundation (WCF) y los clientes ASMX o entre los clientes de WCF y servicios ASMX.  
   
  Cuando un cliente llama a un método web en un servicio Web de ASMX que se basa en la sesión, el motor [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hace lo siguiente:  
   
@@ -74,7 +74,7 @@ Este ejemplo muestra cómo generar un canal de protocolo personalizado para usar
 InputQueue<RequestContext> requestQueue;  
 ```  
   
- En el caso de que alguien llame al método <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> y no haya ningún mensaje en la cola de mensajes, el canal espera un periodo de tiempo especificado antes de apagarse. Esto limpia los canales de sesión creados para clientes que no sean de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ En el caso de que alguien llame al método <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> y no haya ningún mensaje en la cola de mensajes, el canal espera un periodo de tiempo especificado antes de apagarse. Esto limpia los canales de sesión creados para los clientes no WCF.  
   
  Utilizamos `channelMapping` para realizar el seguimiento de `ReplySessionChannels` y no cerramos nuestro `innerChannel` subyacente hasta que se hayan cerrado todos los canales aceptados. De esta manera `HttpCookieReplySessionChannel`, puede existir más allá de la duración de `HttpCookieReplySessionChannelListener`. Además, no nos tenemos que preocupar por el hecho de que el agente de escucha recopile elementos no utilizados debajo de nosotros porque los canales aceptados mantienen una referencia para su agente de escucha mediante la devolución de llamada `OnClosed`.  
   
@@ -82,7 +82,7 @@ InputQueue<RequestContext> requestQueue;
  El canal de cliente correspondiente está en la clase `HttpCookieSessionChannelFactory`. Durante la creación del canal, el generador de canales ajusta el canal de solicitud interno con `HttpCookieRequestSessionChannel`. La clase `HttpCookieRequestSessionChannel` reenvía las llamadas al canal de solicitud subyacente. Cuando el cliente cierra el proxy, `HttpCookieRequestSessionChannel` envía un mensaje al servicio que indica que se cierra el canal. Así, la pila del canal del servicio puede apagar correctamente el canal de la sesión que está en uso.  
   
 ## <a name="binding-and-binding-element"></a>Enlace y elemento de enlace  
- Después de crear los canales de cliente y servicio, el paso siguiente es integrarlos en el tiempo de ejecución de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Los canales se exponen en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a través de los enlaces y elementos de enlace. Un enlace consta de uno o varios elementos de enlace. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ofrece varios enlaces definidos por el sistema; por ejemplo, BasicHttpBinding o WSHttpBinding. La clase `HttpCookieSessionBindingElement` contiene la implementación para el elemento de enlace. Invalida el agente de escucha del canal y los métodos de creación del generador de canales para crear las instancias del agente de escucha del canal y el generador de canales necesarios.  
+ Después de crear los canales de cliente y del servicio, el paso siguiente es integrarlos en el tiempo de ejecución WCF. Los canales se exponen a WCF a través de enlaces y elementos de enlace. Un enlace consta de uno o varios elementos de enlace. WCF ofrece varios enlaces definidos por el sistema; Por ejemplo, BasicHttpBinding o WSHttpBinding. La clase `HttpCookieSessionBindingElement` contiene la implementación para el elemento de enlace. Invalida el agente de escucha del canal y los métodos de creación del generador de canales para crear las instancias del agente de escucha del canal y el generador de canales necesarios.  
   
  El ejemplo utiliza las aserciones de directiva para la descripción del servicio. Esto permite al ejemplo publicar sus requisitos de canal en otros clientes que pueden utilizar el servicio. Por ejemplo, este elemento de enlace publica las aserciones de directiva para que los clientes potenciales sepan que admite sesiones. Dado que el ejemplo habilita la propiedad `ExchangeTerminateMessage` en la configuración del elemento de enlace, agrega las aserciones necesarias para mostrar que el servicio admite una acción de intercambio de mensajes adicional para finalizar la conversación de la sesión. Los clientes pueden utilizar a continuación esta acción. El código WSDL siguiente muestra las aserciones de directiva creadas a partir de `HttpCookieSessionBindingElement`.  
   

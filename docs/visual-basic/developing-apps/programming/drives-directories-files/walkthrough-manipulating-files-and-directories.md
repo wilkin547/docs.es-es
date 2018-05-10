@@ -25,11 +25,11 @@ ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bff2e66b1a196117117370f7620f3f55576ad19b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 12461cc99ec03ed87924c894e23740f9d76385ed
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Tutorial: Manipular archivos y directorios en Visual Basic
 En este tutorial se ofrece una introducción a los conceptos básicos de E/S de archivos en Visual Basic. En él se describe cómo crear una pequeña aplicación que enumera y examina archivos de texto en un directorio. Para cada archivo de texto seleccionado, la aplicación proporciona atributos de archivo y la primera línea de contenido. Existe una opción para escribir información en un archivo de registro.  
@@ -48,7 +48,7 @@ En este tutorial se ofrece una introducción a los conceptos básicos de E/S de 
   
 3.  En la casilla **Nombre**, escriba `FileExplorer` para establecer el nombre del proyecto y, luego, haga clic en **Aceptar**.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] agrega el proyecto al **Explorador de soluciones** y se abre el Diseñador de Windows Forms.  
+     Visual Studio agrega el proyecto al **Explorador de soluciones** y se abre el Diseñador de Windows Forms.  
   
 4.  Agregue los controles de la siguiente tabla al formulario y establezca los valores correspondientes para sus propiedades.  
   

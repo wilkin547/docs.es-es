@@ -87,7 +87,6 @@
 ## [Controlar prefijos de espacio de nombres (LINQ to XML)](how-to-control-namespace-prefixes-linq-to-xml.md)
 ## [Ámbito del espacio de nombres predeterminado](scope-of-default-namespaces.md)
 ## [Trabajar con espacios de nombres globales (LINQ to XML)](working-with-global-namespaces-linq-to-xml.md)
-## [Espacios de nombres (LINQ to XML)](namespaces-linq-to-xml.md)
 ## [Escribir consultas de XML en espacios de nombres](how-to-write-queries-on-xml-in-namespaces.md)
 
 # [Serializar árboles XML](serializing-xml-trees.md)

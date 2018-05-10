@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95bd354e3aed8e0968debcac160383eb9c26cd0a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensible-objects"></a>Objetos extensibles
 El patrón de objeto extensible se utiliza para extender clases de tiempo de ejecución existentes con nueva funcionalidad o para agregar un nuevo estado a un objeto. Las extensiones, asociadas a uno de los objetos extensibles, permiten que los comportamientos en fases muy diferentes de procesamiento tengan acceso al estado compartido y funcionalidad adjuntos a un objeto extensible común al que pueden tener acceso.  
@@ -56,7 +56,7 @@ where T : IExtensibleObject<T>
   
 -   <xref:System.ServiceModel.OperationContext>. Esta clase representa la información de la operación que el tiempo de ejecución reúne para cada operación.  Esto incluye información como los encabezados de los mensajes entrantes, las propiedades de los mensajes entrantes, la identidad de seguridad de entrada y otra información.  Las extensiones de esta clase pueden extender el comportamiento de <xref:System.ServiceModel.OperationContext> o almacenar el estado para cada operación.  
   
--   <xref:System.ServiceModel.IContextChannel>. Esta interfaz permite la inspección de cada estado para los canales y servidores proxy generados por el tiempo de ejecución [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  Las extensiones de esta clase pueden extender el comportamiento de <xref:System.ServiceModel.IClientChannel> o utilizarlo para almacenar el estado de cada canal.  
+-   <xref:System.ServiceModel.IContextChannel> : Esta interfaz permite la inspección de cada estado de los canales y servidores proxy generados por el tiempo de ejecución WCF.  Las extensiones de esta clase pueden extender el comportamiento de <xref:System.ServiceModel.IClientChannel> o utilizarlo para almacenar el estado de cada canal.  
   
 -  
   

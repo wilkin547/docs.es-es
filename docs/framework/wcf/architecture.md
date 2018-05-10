@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: b54c9cd7f4e6bc33dac07d30a86df81668ae13e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1514010ca573be364e54a53ae047a2ff49cdad82
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-architecture"></a>Arquitectura de Windows Communication Foundation
 El siguiente gráfico ilustra las capas principales de la arquitectura de Windows Communication Foundation (WCF).  
@@ -24,7 +24,7 @@ El siguiente gráfico ilustra las capas principales de la arquitectura de Window
  Las directivas y enlaces estipulan las condiciones exigidas para comunicarse con un servicio.  Por ejemplo, el enlace debe especificar (como mínimo) el transporte utilizado (por ejemplo, HTTP o TCP) y una codificación. Las directivas incluyen los requisitos de seguridad y otras condiciones que se deben cumplir para comunicarse con un servicio.  
   
 ### <a name="service-runtime"></a>Tiempo de ejecución de servicio  
- La capa del tiempo de ejecución del servicio contiene los comportamientos que solo se producen durante la operación actual del servicio, es decir, los comportamientos en tiempo de ejecución del servicio. La limitación de peticiones controla cuántos mensajes se procesan que puede variar si la demanda para el servicio crece a un límite preestablecido. Un comportamiento de error especifica lo que sucede cuando se produce un error interno en el servicio, por ejemplo, controlando qué información se comunica al cliente. (Demasiada información puede dar ventaja a un usuario malintencionado para organizar un ataque.) El comportamiento de los metadatos rige cómo y si los metadatos se ponen a disposición del mundo externo. El comportamiento de la instancia especifica cuántas instancias del servicio se pueden ejecutar (por ejemplo, un singleton especifica solo una instancia para procesar todos los mensajes). El comportamiento de la transacción habilita la recuperación de operaciones de transacción si se produce un error. El comportamiento de la expedición es el control de cómo la infraestructura [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] procesa un mensaje.  
+ La capa del tiempo de ejecución del servicio contiene los comportamientos que solo se producen durante la operación actual del servicio, es decir, los comportamientos en tiempo de ejecución del servicio. La limitación de peticiones controla cuántos mensajes se procesan que puede variar si la demanda para el servicio crece a un límite preestablecido. Un comportamiento de error especifica lo que sucede cuando se produce un error interno en el servicio, por ejemplo, controlando qué información se comunica al cliente. (Demasiada información puede dar ventaja a un usuario malintencionado para organizar un ataque.) El comportamiento de los metadatos rige cómo y si los metadatos se ponen a disposición del mundo externo. El comportamiento de la instancia especifica cuántas instancias del servicio se pueden ejecutar (por ejemplo, un singleton especifica solo una instancia para procesar todos los mensajes). El comportamiento de la transacción habilita la recuperación de operaciones de transacción si se produce un error. Comportamiento de la expedición es el control de cómo se procesa un mensaje por la infraestructura WCF.  
   
  La extensibilidad habilita la personalización de procesos en tiempo de ejecución. Por ejemplo, la inspección del mensaje es la facilidad para inspeccionar partes de un mensaje y la filtración de parámetros permite que se realicen acciones preestablecidas basándose en filtros que actúan en encabezados del mensaje.  
   
@@ -42,7 +42,7 @@ El siguiente gráfico ilustra las capas principales de la arquitectura de Window
 ### <a name="hosting-and-activation"></a>Alojamiento y activación  
  En su forma final, un servicio es un programa. Como otros programas, un servicio se debe ejecutar en un ejecutable. Esto se conoce como un *hospeda a sí mismo* servicio.  
   
- También pueden ser servicios *hospedado*, o ejecutar en un ejecutable administrado por un agente externo, como IIS o servicio de activación de Windows (WAS). WAS permite activar automáticamente aplicaciones [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cuando se implementan en un equipo que ejecuta WAS. Los servicios también se pueden ejecutar manualmente como ejecutables (archivos .exe). Un servicio también se puede ejecutar automáticamente como un servicio de Windows. Los componentes COM+ también se pueden hospedar como servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ También pueden ser servicios *hospedado*, o ejecutar en un ejecutable administrado por un agente externo, como IIS o servicio de activación de Windows (WAS). Permite que las aplicaciones WCF que se debe activar automáticamente cuando se implementa en un equipo que ejecuta al era. Los servicios también se pueden ejecutar manualmente como ejecutables (archivos .exe). Un servicio también se puede ejecutar automáticamente como un servicio de Windows. Componentes COM + también se pueden hospedar como servicios WCF.  
   
 ## <a name="see-also"></a>Vea también  
  [¿Qué es Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)  

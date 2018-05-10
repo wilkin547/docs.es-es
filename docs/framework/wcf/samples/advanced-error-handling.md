@@ -2,14 +2,14 @@
 title: Control de errores avanzado
 ms.date: 03/30/2017
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
-ms.openlocfilehash: 035f15cb817e6a6a9ed54c56f4b848932a193ecf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 723b1ca9c2fa771d8bc3f337d9c4fde8c9632c68
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-error-handling"></a>Control de errores avanzado
-Este ejemplo muestra el servicio de enrutamiento de Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que permite incluir fácilmente un enrutador basado en contenido en una aplicación. Este ejemplo muestra el modo en que el servicio de enrutamiento se recupera de los errores de forma inteligente, utilizando transacciones y otros conceptos de mensajería más complejos, como la multidifusión.  
+Este ejemplo muestra el servicio de enrutamiento de Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente WCF que facilita el proceso incluir un enrutador basado en contenido en la aplicación. Este ejemplo muestra el modo en que el servicio de enrutamiento se recupera de los errores de forma inteligente, utilizando transacciones y otros conceptos de mensajería más complejos, como la multidifusión.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

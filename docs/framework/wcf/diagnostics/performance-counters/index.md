@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 74bf11779e6ccf032f2c8c920b62b2f0e5d0625d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d9e6b83a78967193c4cb0343f6c77560354a837
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-performance-counters"></a>Contadores de rendimiento de WCF
 Windows Communication Foundation (WCF) incluye un amplio conjunto de contadores de rendimiento para ayudarle a calibrar el rendimiento de su aplicación.  
   
 ## <a name="enabling-performance-counters"></a>Habilitación de contadores de rendimiento  
- Puede habilitar contadores de rendimiento para un servicio [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] a través del archivo de configuración app.config del servicio [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], como se indica a continuación:  
+ Puede habilitar los contadores de rendimiento para un servicio WCF a través del archivo de configuración app.config del servicio WCF de la manera siguiente:  
   
 ```xml  
 <configuration>  
@@ -32,9 +32,9 @@ Windows Communication Foundation (WCF) incluye un amplio conjunto de contadores 
   
 -   Off: los contadores de rendimiento ServiceModel* están deshabilitados.  
   
- Si desea habilitar los contadores de rendimiento para todas las aplicaciones de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], incluya los parámetros de configuración en el archivo Machine.config.  Vea la **aumentar el tamaño de memoria para los contadores de rendimiento** sección para obtener más información acerca de cómo configurar memoria suficiente para que los contadores de rendimiento en su equipo.  
+ Si desea habilitar los contadores de rendimiento para todas las aplicaciones de WCF, puede colocar los valores de configuración en el archivo Machine.config.  Vea la **aumentar el tamaño de memoria para los contadores de rendimiento** sección para obtener más información acerca de cómo configurar memoria suficiente para que los contadores de rendimiento en su equipo.  
   
- Si utiliza puntos de extensibilidad de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], como invocadores de operación personalizados, también debe emitir sus propios contadores de rendimiento. Esto se debe a que, si implementa un punto de extensibilidad, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] quizá no pueda emitir los datos de contador de rendimiento estándar en la ruta de acceso predeterminada. Si no implementa la compatibilidad con el contador de rendimiento manual, puede que no vea los datos de contador de rendimiento que espera.  
+ Si usa puntos de extensibilidad WCF, como Invocadores de operación personalizado, también debe emitir sus propios contadores de rendimiento. Esto es porque si implementa un punto de extensibilidad, WCF quizá no pueda emitir los datos de contador de rendimiento estándar en la ruta de acceso predeterminada. Si no implementa la compatibilidad con el contador de rendimiento manual, puede que no vea los datos de contador de rendimiento que espera.  
   
  Además, puede habilitar los contadores de rendimiento en el código de la siguiente forma,  
   
@@ -56,11 +56,11 @@ config.Save();
 >  Se pueden lanzar instancias del contador de rendimiento antes de que el distribuidor del punto de conexión haya procesado los últimos mensajes. Esto puede dar lugar a que no se capturen los datos de rendimiento de algunos mensajes.  
   
 ## <a name="increasing-memory-size-for-performance-counters"></a>Aumento del tamaño de la memoria para los contadores de rendimiento  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] utiliza la memoria compartida independiente para sus categorías de contador de rendimiento.  
+ WCF usa memoria compartida independiente para sus categorías de contador de rendimiento.  
   
- De forma predeterminada, la memoria compartida independiente se establece en un cuarto del tamaño de la memoria global del contador de rendimiento. La memoria global del contador de rendimiento predeterminada es 524.288 bytes. Por lo tanto, las tres categorías de contador de rendimiento [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] tienen un tamaño predeterminado de aproximadamente 128KB cada una. Dependiendo de las características del tiempo de ejecución de las aplicaciones [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] de un equipo, es posible agotar la memoria del contador de rendimiento. Cuando esto ocurre, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] escribe un error en el registro de eventos de la aplicación. El contenido del error indica que no se cargó un contador de rendimiento, y la entrada contiene la excepción "System.InvalidOperationException: Memoria insuficiente para la vista personaliza del archivo de contadores". Si se habilita la traza en el nivel de error, también se sigue la traza del error. Si se agota la memoria del contador de rendimiento y continúan ejecutándose las aplicaciones [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] con los contadores de rendimiento habilitados, podría degradarse el rendimiento. Si es administrador de la máquina, configúrela y asigne memoria suficiente para admitir el número máximo de contadores de rendimiento que puedan existir en cualquier momento.  
+ De forma predeterminada, la memoria compartida independiente se establece en un cuarto del tamaño de la memoria global del contador de rendimiento. La memoria global del contador de rendimiento predeterminada es 524.288 bytes. Por lo tanto, las tres categorías de contador de rendimiento de WCF tienen un tamaño predeterminado de aproximadamente 128KB. Dependiendo de las características en tiempo de ejecución de las aplicaciones de WCF en un equipo, se puede agotar la memoria de contador de rendimiento. Cuando esto sucede, WCF escribe un error en el registro de eventos de aplicación. El contenido del error indica que no se cargó un contador de rendimiento, y la entrada contiene la excepción "System.InvalidOperationException: Memoria insuficiente para la vista personaliza del archivo de contadores". Si se habilita la traza en el nivel de error, también se sigue la traza del error. Si se agota la memoria del contador de rendimiento, continuar ejecutando las aplicaciones WCF con contadores de rendimiento habilitados podría provocar una degradación del rendimiento. Si es administrador de la máquina, configúrela y asigne memoria suficiente para admitir el número máximo de contadores de rendimiento que puedan existir en cualquier momento.  
   
- Puede cambiar la cantidad de memoria del contador de rendimiento para las categorías de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] del registro. Para cambiarla, es necesario agregar un nuevo valor DWORD, denominado `FileMappingSize`, a las tres ubicaciones siguientes y establecerlo en el valor en bytes deseado. Reinicie su equipo para que estos cambios se hagan efectivos.  
+ Puede cambiar la cantidad de memoria del contador de rendimiento en el registro de las categorías de WCF. Para cambiarla, es necesario agregar un nuevo valor DWORD, denominado `FileMappingSize`, a las tres ubicaciones siguientes y establecerlo en el valor en bytes deseado. Reinicie su equipo para que estos cambios se hagan efectivos.  
   
 -   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
@@ -123,7 +123,7 @@ ServiceName@ServiceBaseAddress
 >  Si existen nombres de la operación duplicados en un contrato, solo se obtiene una instancia de contador para ambas operaciones.  
   
 ## <a name="programming-the-wcf-performance-counters"></a>Programación de los contadores de rendimiento de WCF  
- Se instalan varios archivos en la carpeta de instalación de SDK de modo que pueda obtenerse acceso a los contadores de rendimiento [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] mediante programación. Estos archivos se enumeran como se indica a continuación.  
+ Por lo que puede tener acceso a los contadores de rendimiento de WCF mediante programación, se instalan varios archivos en la carpeta de instalación del SDK. Estos archivos se enumeran como se indica a continuación.  
   
 -   _ServiceModelEndpointPerfCounters.vrg  
   

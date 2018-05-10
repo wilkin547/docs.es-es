@@ -2,16 +2,16 @@
 title: Traza
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: a0c3e5591280247cab97b6597a42ca496c9654d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6f427425b1bbf19ecd8b30fb1498634a7a3d5fa9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing"></a>Traza
 Windows Communication Foundation (WCF) proporciona instrumentación de aplicaciones y datos de diagnóstico para la supervisión de los errores y el análisis. Puede utilizar el seguimiento en lugar de un depurador para entender cómo se está comportando una aplicación o por qué genera errores. También puede correlacionar los errores y el procesamiento en los componentes para proporcionar una experiencia de extremo a extremo.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] genera los datos siguientes para el seguimiento de diagnóstico:  
+ WCF genera los datos siguientes para el seguimiento de diagnóstico:  
   
 -   Trazas para los hitos del proceso en todos los componentes de las aplicaciones, como llamadas de la operación, excepciones de código, advertencias y otros eventos de procesamiento significativos.”  
   
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) proporciona instrumentación de aplicacio
   
  [Referencias del seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
   
- En este tema se detallan todos los seguimientos generados por [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ Este tema enumeran todos los rastros generados por WCF.  
   
 ## <a name="see-also"></a>Vea también  
  [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

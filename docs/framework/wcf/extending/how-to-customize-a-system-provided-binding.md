@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 40efa49836561351dc14c2cb49d906a6d344a5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 04b81689d7d625d519a0a9fc8b1fa6df3df16ada
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Personalización de un enlace proporcionado por el sistema
 Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por el sistema que le permiten configurar algunas de las propiedades de los elementos de enlace subyacente, pero no todas las propiedades. En este tema se muestra cómo establecer las propiedades en los elementos de enlace para crear un enlace personalizado.  
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por
   
  Para obtener más información sobre cómo crear y extender enlaces personalizados, consulte [extender enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
- En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] todos los enlaces se componen de *elementos de enlace*. Cada elemento de enlace deriva de la clase <xref:System.ServiceModel.Channels.BindingElement>. Los enlaces proporcionados por el sistema, como <xref:System.ServiceModel.BasicHttpBinding> crean y configuran sus propios elementos de enlace. En este tema se muestra cómo obtener acceso y cambiar las propiedades de estos elementos de enlace, que no se exponen directamente en el enlace; en concreto, la clase <xref:System.ServiceModel.BasicHttpBinding>.  
+ En WCF todos los enlaces se componen de *elementos de enlace*. Cada elemento de enlace deriva de la clase <xref:System.ServiceModel.Channels.BindingElement>. Los enlaces proporcionados por el sistema, como <xref:System.ServiceModel.BasicHttpBinding> crean y configuran sus propios elementos de enlace. En este tema se muestra cómo obtener acceso y cambiar las propiedades de estos elementos de enlace, que no se exponen directamente en el enlace; en concreto, la clase <xref:System.ServiceModel.BasicHttpBinding>.  
   
  Los elementos de enlace individuales se incluyen en una colección representada por la clase <xref:System.ServiceModel.Channels.BindingElementCollection> y se agregan en este orden: flujo de la transacción, sesión confiable, seguridad, dúplex compuesto, unidireccional, seguridad de secuencia, codificación de mensajes y transporte. Tenga en cuenta que no todos los elementos de enlace enumerados se necesitan en cada enlace. Los elementos de enlace definidos por el usuario pueden aparecer también en esta colección de elementos de enlace y deben aparecer en el orden descrito anteriormente. Por ejemplo, un transporte definido por el usuario debe ser el último elemento de la colección de elementos de enlace.  
   

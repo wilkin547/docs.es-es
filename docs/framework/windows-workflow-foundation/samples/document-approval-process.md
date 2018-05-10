@@ -2,11 +2,11 @@
 title: Proceso de aprobación de un documento
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: b1ef35f5a96399b669f0cda039bf1f6dd0fde979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="document-approval-process"></a>Proceso de aprobación de un documento
 Este ejemplo muestra el uso de muchas características de Windows Workflow Foundation (WF) y Windows Communication Foundation (WCF) conjuntamente. Juntas implementan un escenario de proceso de aprobación de un documento. Una aplicación cliente puede enviar documentos para su aprobación y aprobar documentos. Existe una aplicación de administrador de aprobaciones para facilitar las comunicaciones entre los clientes y aplicar las reglas del proceso de aprobación. El proceso de aprobación es un flujo de trabajo que puede ejecutar varios tipos de aprobación. Existen actividades para obtener una aprobación única, una aprobación de quórum (un porcentaje de un conjunto de aprobadores) y un proceso de aprobación compleja que consta de una aprobación de quórum y una aprobación única en una secuencia.  
@@ -29,7 +29,7 @@ Este ejemplo muestra el uso de muchas características de Windows Workflow Found
   
 1.  Un cliente realiza una suscripción para convertirse en usuario en el sistema del proceso de aprobación.  
   
-2.  Un cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] la envía a un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hospedado por la aplicación de administrador de aprobaciones.  
+2.  Un cliente WCF se envía a un servicio WCF hospedado por la aplicación de administrador de aprobaciones.  
   
 3.  Se devuelve un Id. de usuario único al cliente. El cliente puede participar ahora en los procesos de aprobación.  
   
@@ -47,19 +47,19 @@ Este ejemplo muestra el uso de muchas características de Windows Workflow Found
   
 10. Un cliente puede recibir una solicitud de aprobación y responder a la solicitud en cualquier momento.  
   
-11. Un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hospedado en el cliente puede recibir una solicitud de aprobación procedente de la aplicación de administrador de aprobaciones.  
+11. Un servicio WCF hospedado en el cliente puede recibir una solicitud de aprobación de la aplicación de administrador de autorización.  
   
 12. La información del documento se presenta en el cliente para revisión.  
   
 13. El usuario puede aprobar o rechazar el documento.  
   
-14. Se utiliza un cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para devolver una respuesta de aprobación a la aplicación de administrador de aprobaciones.  
+14. Un cliente de WCF se usa para enviar una respuesta de aprobación a la aplicación de administrador de autorización.  
   
  Desde el punto de vista de la aplicación de administrador de aprobaciones, el proceso de aprobación funciona del siguiente modo:  
   
 1.  Un cliente solicita al sistema del proceso de aprobación participar.  
   
-2.  Un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en el administrador de aprobaciones recibe una solicitud para formar parte del sistema del proceso de aprobación.  
+2.  Un servicio WCF en el Administrador de aprobaciones recibe una solicitud para formar parte del sistema del proceso de aprobación.  
   
 3.  Se genera un identificador único para el cliente. La información sobre el usuario se almacena en una base de datos.  
   

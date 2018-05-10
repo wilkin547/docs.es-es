@@ -2,11 +2,11 @@
 title: Escenarios sincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11a5d8f43d12d35728c65c7a60ad8a4fa2fc1b3a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Escenarios sincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre
 En este tema se describen las actividades y transferencias para diferentes escenarios sincrónicos de solicitud/respuesta, con un cliente de un único subproceso, utilizando HTTP, TCP o canalización con nombre. Vea [escenarios asincrónicos utiliza HTTP, TCP o canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) para obtener más información sobre las solicitudes de varios subprocesos.  
@@ -54,7 +54,7 @@ En este tema se describen las actividades y transferencias para diferentes escen
  La única diferencia con el escenario anterior es que un mensaje de error SOAP se devuelve como un mensaje de respuesta. Si `propagateActivity` = `true`, el identificador de actividad del mensaje de solicitud se agrega al mensaje de error SOAP.  
   
 ## <a name="synchronous-one-way-without-errors"></a>Unidireccional sincrónico sin errores  
- La única diferencia con el primer escenario es que ningún mensaje se devuelve al servidor. Para los protocolos basados en HTTP, un estado (valid o error) se devuelve todavía al cliente. Esto es porque HTTP es el único protocolo con un semántica de solicitud-respuesta que forma parte de la pila del protocolo [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Dado que el procesamiento del TCP se oculta de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], ninguna confirmación se envía al cliente.  
+ La única diferencia con el primer escenario es que ningún mensaje se devuelve al servidor. Para los protocolos basados en HTTP, un estado (valid o error) se devuelve todavía al cliente. Esto es porque HTTP es el único protocolo con una semántica de solicitud-respuesta que forma parte de la pila del protocolo WCF. Puesto que el procesamiento del TCP se oculta de WCF, ninguna confirmación se envía al cliente.  
   
 ## <a name="synchronous-one-way-with-errors"></a>Unidireccional sincrónico con errores  
  Si un error se produce procesando el mensaje (Q o más allá), ninguna notificación se devuelve al cliente. Esto es idéntico al escenario "Unidireccional sincrónico sin errores". No debería utilizar un escenario unidireccional si desea recibir un mensaje de error.  

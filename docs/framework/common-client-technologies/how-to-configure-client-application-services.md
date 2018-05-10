@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f8a6c6be6874c1a90c9e40b5b82d833aeaa9b63a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Cómo: Configurar servicios de aplicaciones cliente
-En este tema se describe cómo utilizar el **Diseñador de proyectos** de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para habilitar y configurar servicios de aplicaciones cliente. Los servicios de aplicaciones cliente se pueden usar para validar a los usuarios y recuperar configuraciones y roles de usuario de un servicio de aplicaciones [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existente. Después de la configuración, se puede acceder a los servicios habilitados en el código de la aplicación, tal como se describe en [Información general sobre los servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Para más información sobre los servicios de la aplicación de [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Información general sobre los servicios de aplicación ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+En este tema se describe cómo usar el **Diseñador de proyectos** de Visual Studio para habilitar y configurar servicios de aplicaciones cliente. Los servicios de aplicaciones cliente se pueden usar para validar a los usuarios y recuperar configuraciones y roles de usuario de un servicio de aplicaciones [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existente. Después de la configuración, se puede acceder a los servicios habilitados en el código de la aplicación, tal como se describe en [Información general sobre los servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Para más información sobre los servicios de la aplicación de [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Información general sobre los servicios de aplicación ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
  Puede habilitar y configurar servicios de aplicaciones cliente en la página **Servicios** del **Diseñador de proyectos**. La página **Servicios** actualiza los valores en el archivo App.config del proyecto. Para acceder al **Diseñador de proyectos**, utilice el comando **Propiedades** en el menú **Proyecto**. Para obtener más información sobre la página **Servicios**, consulte [Página Servicios, Diseñador de proyectos](https://msdn.microsoft.com/library/bb398109).  
   
@@ -100,7 +100,7 @@ En este tema se describe cómo utilizar el **Diseñador de proyectos** de [!INCL
   
      El valor predeterminado de `Data Source = |SQL/CE|` aparece en el cuadro de texto.  
   
-3.  Para generar y utilizar una base de datos de SQL Server Compact, mantenga el valor de cadena de conexión predeterminado. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] generará un archivo de base de datos y lo colocará en el directorio indicado por la propiedad <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>.  
+3.  Para generar y utilizar una base de datos de SQL Server Compact, mantenga el valor de cadena de conexión predeterminado. Visual Studio generará un archivo de base de datos y lo colocará en el directorio indicado por la propiedad <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>.  
   
 4.  Para generar y utilizar una base de datos cifrada de [!INCLUDE[ssEW](../../../includes/ssew-md.md)], agregue los valores `password` y `encrypt database` en la cadena de conexión como se muestra en el ejemplo siguiente.  
   

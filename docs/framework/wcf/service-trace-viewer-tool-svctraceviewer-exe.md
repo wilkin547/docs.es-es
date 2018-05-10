@@ -2,14 +2,14 @@
 title: Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 215e34a3e7b075463ceeaa15386d3a347ffff064
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
-Herramienta de Visor de seguimiento de servicio de Windows Communication Foundation (WCF) le ayuda a analizar seguimientos del diagnóstico generados por [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. El visor de seguimiento de servicio proporciona una manera fácil de combinar, ver y filtrar los mensajes del registro para que así pueda diagnosticar, reparar y comprobar los problemas del servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Herramienta de Visor de seguimiento de servicio de Windows Communication Foundation (WCF) le ayuda a analizar seguimientos del diagnóstico generados por WCF. Service Trace Viewer proporciona una forma combinar fácilmente, ver y filtrar los mensajes de seguimiento en el registro para que pueda diagnosticar, reparar y comprobar los problemas del servicio WCF.  
   
 ## <a name="configuring-tracing"></a>Configurar seguimiento  
  El seguimiento de diagnóstico le proporciona información que muestra lo que está pasando a lo largo de la operación de su aplicación. Como su propio nombre indica, también puede seguir las operaciones desde el origen hasta el destino y en los puntos intermedios.  
@@ -55,7 +55,7 @@ Herramienta de Visor de seguimiento de servicio de Windows Communication Foundat
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Abrir y ver los archivos de seguimiento de WCF  
  El visor de seguimiento de servicio admite tres tipos de archivo:  
   
--   Archivo de traza de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (.svcLog)  
+-   (.SvcLog) del archivo de seguimiento de WCF  
   
 -   Archivo de seguimiento de eventos (.etl)  
   
@@ -65,7 +65,7 @@ Herramienta de Visor de seguimiento de servicio de Windows Communication Foundat
   
 ##### <a name="to-open-a-trace-file"></a>Para abrir un archivo de seguimiento  
   
-1.  Iniciar Service Trace Viewer mediante una ventana de comandos para navegar hasta la [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ubicación de instalación (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) y, a continuación, escriba `SvcTraceViewer.exe`.  
+1.  Iniciar Service Trace Viewer mediante una ventana de comandos para navegar hasta la ubicación de instalación de WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) y, a continuación, escriba `SvcTraceViewer.exe`.  
   
 > [!NOTE]
 >  La herramienta del visor de seguimiento de servicio puede asociar dos tipos de archivo: .svclog y .stvproj. Puede utilizar dos parámetros en línea de comandos para registrar y eliminar del registro las extensiones de archivo.  
@@ -87,7 +87,7 @@ Herramienta de Visor de seguimiento de servicio de Windows Communication Foundat
 >  No se recomienda cargar un archivo de seguimiento mayor de 200MB. Si intenta cargar un archivo mayor que ese límite, el proceso de carga puede tardar mucho tiempo, dependiendo de su recurso informático. Puede que la herramienta del visor de seguimiento de servicio no responda durante mucho tiempo o que agote la memoria de su equipo. Se recomienda que configure carga parcial para evitarlo. Para obtener más información sobre cómo hacerlo, vea la sección “Cargar archivos de seguimiento grandes”.  
   
 #### <a name="event-tracing-and-crimson-tracing"></a>Traza de eventos y traza carmesí  
- El formato original del visor es el formato de traza de la actividad que emite [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Las trazas emitidas en un formato diferente se deben convertir antes de que el visor las muestre. Actualmente, además del formato de traza de la actividad, el visor admite traza de eventos y traza carmesí.  
+ El formato nativo del Visor es el formato de traza de actividad que emite de WCF. Las trazas emitidas en un formato diferente se deben convertir antes de que el visor las muestre. Actualmente, además del formato de traza de la actividad, el visor admite traza de eventos y traza carmesí.  
   
  Al abrir un archivo que no contiene seguimientos de actividad, el visor intenta convertir el archivo. Debe especificar el nombre y la ubicación del archivo que contendrá los datos de seguimiento convertidos. Una vez convertidos los datos, el visor muestra el contenido del nuevo archivo.  
   
@@ -104,7 +104,7 @@ Herramienta de Visor de seguimiento de servicio de Windows Communication Foundat
 -   En el **proyecto** ficha, puede agregar archivos a un proyecto.  
   
 ### <a name="viewing-wcf-traces"></a>Ver seguimiento de WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] emite trazas usando el formato de traza de la actividad. En el modelo de seguimiento de actividad, los seguimientos individuales están agrupados en actividades según su propósito. El flujo de control lógico se transfiere entre las actividades. Por ejemplo, durante el tiempo que dura una aplicación, aparecen y desaparecen muchas "actividades de envío de mensaje". Para obtener más información acerca de cómo ver seguimientos y actividades y la interfaz de usuario de Service Trace Viewer demasiado, consulte [utilizando Service Trace Viewer para ver los seguimientos correlacionados y solución de problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ WCF emite trazas usando el formato de traza de actividad. En el modelo de seguimiento de actividad, los seguimientos individuales están agrupados en actividades según su propósito. El flujo de control lógico se transfiere entre las actividades. Por ejemplo, durante el tiempo que dura una aplicación, aparecen y desaparecen muchas "actividades de envío de mensaje". Para obtener más información acerca de cómo ver seguimientos y actividades y la interfaz de usuario de Service Trace Viewer demasiado, consulte [utilizando Service Trace Viewer para ver los seguimientos correlacionados y solución de problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
 #### <a name="switching-to-different-views"></a>Alternar vistas diferentes  
  El visor de seguimiento de servicio proporciona estas vistas diferentes. Se muestran como pestañas en el panel izquierdo del Visor y también puede tener acceso desde el **vista** menú.  
@@ -217,7 +217,7 @@ Herramienta de Visor de seguimiento de servicio de Windows Communication Foundat
   
 -   La barra de herramientas de filtro proporciona el acceso a los filtros predefinidos y personalizados. Puede habilitarse a través de la **vista** menú.  
   
--   El filtro predefinido del visor se puede utilizar para filtrar selectivamente partes de los seguimientos de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Se establece de forma predeterminada que todos los seguimientos de infraestructura puedan pasar. La configuración de este filtro se define en el **opciones de filtro** submenú en **vista** menú.  
+-   El filtro predefinido del Visor se puede utilizar para filtrar selectivamente partes de los seguimientos WCF. Se establece de forma predeterminada que todos los seguimientos de infraestructura puedan pasar. La configuración de este filtro se define en el **opciones de filtro** submenú en **vista** menú.  
   
 -   Los filtros del XPath personalizados les dan a los usuarios el control completo sobre cómo filtrar. Se pueden definir en el **filtro personalizado** en **vista** menú.  
   
@@ -237,7 +237,7 @@ Herramienta de Visor de seguimiento de servicio de Windows Communication Foundat
  El **desactive** botón restablece los filtros predefinidos y personalizados para permitir que todos los seguimientos que pasen.  
   
 #### <a name="filter-options"></a>Opciones de filtro:  
- El visor puede quitar de la vista automáticamente los seguimientos [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Puede quitar selectivamente seguimientos emitidos por áreas concretas de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], por ejemplo, mediante la eliminación de la vista de seguimientos relacionados con la transacción.  
+ El visor puede quitar de la vista automáticamente los seguimientos de WCF. Puede quitar selectivamente seguimientos emitidos por áreas concretas de WCF, por ejemplo, mediante la eliminación de la vista de seguimientos relacionados con la transacción.  
   
  La configuración de este filtro se define en el **opciones de filtro** submenú en **vista** menú.  
   
@@ -347,7 +347,7 @@ Herramienta de Visor de seguimiento de servicio de Windows Communication Foundat
 -   Retroceder paso a paso: Use la **actividad** menú o presione "F9". También puede utilizar la tecla de dirección "arriba" en el panel de seguimiento.  
   
 > [!NOTE]
->  Esto puede llevarlo a una actividad que ocurre en un proceso diferente o incluso en un equipo diferente, porque los mensajes de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] pueden llevar identificadores de actividad que abarcan varias máquinas.  
+>  Esto puede llevarlo a una actividad que ocurre en un proceso diferente o incluso en un equipo diferente, porque los mensajes de WCF pueden llevar identificadores de actividad que abarcan varias máquinas.  
   
 #### <a name="follow-transfer"></a>Seguir la transferencia  
  Los seguimientos de transferencia son seguimientos especiales en el archivo de seguimiento. Una actividad puede transferir a otra actividad mediante un seguimiento de transferencia. Por ejemplo, puede transferir "Actividad A" a "Actividad B". En este caso, hay una traza de transferencia en el icono "Actividad A" con el nombre "A: actividad" y la transferencia. Esta traza de transferencia es un vínculo entre las dos trazas. En la "Actividad B", también puede haber una traza de transferencia al final de la actividad que se va a transferir de vuelta a la "Actividad A". Esto es similar a las llamadas de función en programas: A llama a B, a continuación, B devuelve.  
@@ -417,9 +417,9 @@ Herramienta de Visor de seguimiento de servicio de Windows Communication Foundat
   
 |Iconos|Descripción|  
 |----------|-----------------|  
-|![Seguimiento de registro de mensajes](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Seguimiento de registro de mensajes: un seguimiento que se emite cuando la característica de registro de mensajes registra un mensaje de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] cuando el origen de traza de `System.ServiceModel.MessageLogging` está habilitado. Al hacer clic en este seguimiento, se muestra el mensaje. Hay cuatro puntos de registro configurables para un mensaje: ServiceLevelSendRequest, TransportSend, TransportReceive y ServiceLevelReceiveRequest, que también pueden ser especificados por el atributo `messageSource` en el seguimiento del registro de mensajes.|  
-|![Seguimiento de mensajes recibidos](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Seguimiento de mensaje recibido: un seguimiento que se emite cuando se recibe un mensaje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], si el origen de traza `System.ServiceModel` está habilitado en los niveles de Información o Detallado. Este seguimiento es esencial para ver la flecha de correlación del mensaje en la actividad **gráfico** vista.|  
-|![Seguimiento de mensajes enviados](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Seguimiento de mensaje enviado: un seguimiento que se emite cuando se envía un mensaje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], si el origen de traza `System.ServiceModel` está habilitado en los niveles de Información o Detallado. Este seguimiento es esencial para ver la flecha de correlación del mensaje en la actividad **gráfico** vista.|  
+|![Seguimiento de registro de mensajes](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Seguimiento de registro de mensajes: un seguimiento que se genera cuando se registra un mensaje WCF mediante la característica de registro de mensajes, cuando el `System.ServiceModel.MessageLogging` origen de seguimiento está habilitado. Al hacer clic en este seguimiento, se muestra el mensaje. Hay cuatro puntos de registro configurables para un mensaje: ServiceLevelSendRequest, TransportSend, TransportReceive y ServiceLevelReceiveRequest, que también pueden ser especificados por el atributo `messageSource` en el seguimiento del registro de mensajes.|  
+|![Seguimiento de mensajes recibidos](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Seguimiento de mensajes recibidos: un seguimiento que se genera cuando se recibe un mensaje WCF, si el `System.ServiceModel` origen de seguimiento está habilitado en el nivel de información o detallado. Este seguimiento es esencial para ver la flecha de correlación del mensaje en la actividad **gráfico** vista.|  
+|![Seguimiento de mensajes enviados](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Seguimiento de mensajes enviados: un seguimiento que se genera cuando se envía un mensaje WCF si el `System.ServiceModel` origen de seguimiento está habilitado en el nivel de información o detallado. Este seguimiento es esencial para ver la flecha de correlación del mensaje en la actividad **gráfico** vista.|  
   
 ### <a name="activities"></a>Actividades  
   
@@ -432,11 +432,11 @@ Herramienta de Visor de seguimiento de servicio de Windows Communication Foundat
   
 |Iconos|Descripción|  
 |----------|-----------------|  
-|![Actividad del entorno](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Actividad de entorno: una actividad que crea, abre o cierra un host o un cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Los errores que se han producido durante estas fases aparecerán en esta actividad.|  
+|![Actividad del entorno](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Actividad del entorno: una actividad que crea, abre o cierra un cliente o host WCF. Los errores que se han producido durante estas fases aparecerán en esta actividad.|  
 |![Actividad de escucha](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Actividad de escucha: una actividad que registra los seguimientos relacionados con un agente de escucha. Dentro de esta actividad, podemos ver información del agente de escucha y solicitudes de conexión.|  
 |![Actividad de Bytes de recepción](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Actividad de recepción de bytes: agrupa todos los seguimientos relacionados con la recepción de bytes de entrada en una conexión entre dos puntos de conexión. Esta actividad es esencial para ponerse en correlación con actividades de transporte que propagan su id. de actividad como http.sys. En esta actividad aparecerán errores de conexión tales como interrupciones.|  
-|![Actividad de mensaje de procesamiento de](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Actividad de procesamiento de mensajes: una actividad que agrupa los seguimientos relacionados con crear un mensaje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. En esta actividad aparecerán errores debidos a una envoltura no válida o a un mensaje incorrecto. Dentro de esta actividad, podemos inspeccionar los encabezados del mensaje para ver si un id. de actividad se propagó a partir del autor de la llamada. Si esto es verdad, cuando transferimos a la actividad de procesamiento de acción (el icono siguiente), también podemos asignar a esa actividad el id. de actividad propagado para la correlación entre el autor de la llamada y los seguimientos del destinatario.|  
-|![Seguimiento de registro de mensajes](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Actividad de procesamiento de acción: actividad que agrupa todas las trazas relacionadas con una solicitud de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] a través de dos extremos. Si `propagateActivity` está establecido en `true` en los dos extremos de la configuración, se combinan todos los seguimientos de ambos extremos en una actividad para la correlación directa. Tal actividad contendrá los errores debidos al procesamiento de seguridad o transporte, extendiéndose al límite del código de usuario y de vuelta (si existe una respuesta).|  
+|![Actividad de mensaje de procesamiento de](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Actividad de mensaje de procesamiento: una actividad que agrupa los seguimientos relacionados con la creación de un mensaje de WCF. En esta actividad aparecerán errores debidos a una envoltura no válida o a un mensaje incorrecto. Dentro de esta actividad, podemos inspeccionar los encabezados del mensaje para ver si un id. de actividad se propagó a partir del autor de la llamada. Si esto es verdad, cuando transferimos a la actividad de procesamiento de acción (el icono siguiente), también podemos asignar a esa actividad el id. de actividad propagado para la correlación entre el autor de la llamada y los seguimientos del destinatario.|  
+|![Seguimiento de registro de mensajes](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Actividad de acción de procesamiento: una actividad que agrupa todos los seguimientos relacionados con una solicitud WCF a través de dos puntos de conexión. Si `propagateActivity` está establecido en `true` en los dos extremos de la configuración, se combinan todos los seguimientos de ambos extremos en una actividad para la correlación directa. Tal actividad contendrá los errores debidos al procesamiento de seguridad o transporte, extendiéndose al límite del código de usuario y de vuelta (si existe una respuesta).|  
 |![Actividad de mensaje de procesamiento de](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Actividad de ejecución de código de usuario: una actividad que agrupa seguimientos de código de usuario para procesar una solicitud.|  
   
 ## <a name="troubleshooting"></a>Solución de problemas  

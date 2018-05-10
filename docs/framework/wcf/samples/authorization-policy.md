@@ -2,11 +2,11 @@
 title: Directiva de autorización
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: fc0c147f2f9a57c80edda6144a14f208bde835eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3744afb20c06e1ca85b91dadde6549d87ac89337
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="authorization-policy"></a>Directiva de autorización
 Este ejemplo muestra cómo implementar una directiva de autorización de notificación personalizada y un administrador de autorización de servicio personalizado asociado. Esto es útil cuando el servicio realiza las comprobaciones de acceso basadas en las notificaciones para operaciones de servicio y antes de las comprobaciones de acceso, concede ciertos derechos al autor de la llamada. Este ejemplo muestra el proceso de agregar las notificaciones así como el proceso para hacer una comprobación de acceso con el conjunto finalizado de notificaciones. Todos los mensajes de la aplicación entre el cliente y el servidor se firman y se cifran. De forma predeterminada, con el enlace `wsHttpBinding`, se utiliza un nombre de usuario y una contraseña proporcionadas por el cliente para iniciar sesión con una cuenta válida de Windows NT. En este ejemplo se muestra cómo utilizar un personalizado <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` para autenticar el cliente. Además, este ejemplo muestra el cliente que se autentica con el servicio utilizando un certificado X.509. Este ejemplo muestra una implementación de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> y <xref:System.ServiceModel.ServiceAuthorizationManager>, que entre ellos conceden acceso a métodos concretos del servicio para usuarios específicos. En este ejemplo se basa en el [nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md), pero se muestra cómo realizar una transformación de notificaciones anteriores a la <xref:System.ServiceModel.ServiceAuthorizationManager> que se va a llamar.  
@@ -496,6 +496,6 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 1.  Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo. Esto quita los certificados de cliente y servidor del almacén de certificados.  
   
 > [!NOTE]
->  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que usan certificados en varios equipos, asegúrese de borrar los certificados del servicio que se hayan instalado en el almacén CurrentUser - TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de WCF que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se hayan instalado en el CurrentUser - TrustedPeople almacenar. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Vea también

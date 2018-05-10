@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 83b796c76887c6ba30ddb3c985ee43ab8dce2ec9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0bacf874e09aca82b2f2685a146612cdef0673db
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Cómo: Crear una directiva de autorización personalizada
-La infraestructura del modelo de identidad en Windows Communication Foundation (WCF) es compatible con un modelo de autorización basada en notificaciones. Las notificaciones se extraen de los tokens, procesados opcionalmente por la directiva de autorización personalizada. Después se colocan en un <xref:System.IdentityModel.Policy.AuthorizationContext> que se puede examinar a continuación para tomar las decisiones de autorización. Se puede utilizar una directiva personalizada para transformar las notificaciones de tokens entrantes en notificaciones esperadas por la aplicación. De esta manera, el nivel de aplicación se puede aislar de los detalles en las distintas notificaciones servidas por los distintos tokens que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite. En este tema se muestra cómo implementar una directiva de autorización personalizada y cómo agregarla a la colección de directivas utilizada por un servicio.  
+La infraestructura del modelo de identidad en Windows Communication Foundation (WCF) es compatible con un modelo de autorización basada en notificaciones. Las notificaciones se extraen de los tokens, procesados opcionalmente por la directiva de autorización personalizada. Después se colocan en un <xref:System.IdentityModel.Policy.AuthorizationContext> que se puede examinar a continuación para tomar las decisiones de autorización. Se puede utilizar una directiva personalizada para transformar las notificaciones de tokens entrantes en notificaciones esperadas por la aplicación. De este modo, se puede aislar la capa de aplicación de los detalles en las distintas notificaciones servidas por los distintos tipos de token que WCF admite. En este tema se muestra cómo implementar una directiva de autorización personalizada y cómo agregarla a la colección de directivas utilizada por un servicio.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Para implementar una directiva de autorización personalizada  
   

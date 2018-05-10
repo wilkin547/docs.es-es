@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 39866d7cdd871c6450e0864848c7a3197779045a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8271f51885c0d7800d26018b94942a7d832bf4a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Utilización de enlaces para configurar servicios y clientes
 Los enlaces son los objetos que especifican los datos de comunicación exigidos para conectar a un punto de conexión. Más específicamente, los enlaces contienen información de configuración utilizada para crear el cliente o servicio en tiempo de ejecución mediante la definición de las características de transportes, formatos de la conexión (codificación de mensajes) y protocolos que se utilizarán en el punto de conexión respectivo o canal de cliente. Para crear un servicio de Windows Communication Foundation (WCF) funcione, cada punto de conexión en el servicio requiere un enlace. Este tema explica qué enlaces son, cómo se definen, y cómo se especifica un enlace determinado para un punto de conexión.  
@@ -26,15 +26,15 @@ Los enlaces son los objetos que especifican los datos de comunicación exigidos 
  Determina la codificación del mensaje, por ejemplo, texto/XML, binario o Mecanismo de optimización de transmisión del mensaje (MTOM), que determinan cómo se representan los mensajes como secuencias de bytes en la conexión.  
   
 ## <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] incluye un conjunto de enlaces proporcionados por el sistema que están diseñados para cubrir la mayoría de los requisitos de aplicación y escenarios. Las clases siguientes representan algunos ejemplos de enlaces proporcionados por el sistema:  
+ WCF incluye un conjunto de enlaces proporcionados por el sistema que están diseñados para cubrir la mayoría de los escenarios y requisitos de la aplicación. Las clases siguientes representan algunos ejemplos de enlaces proporcionados por el sistema:  
   
 -   <xref:System.ServiceModel.BasicHttpBinding>: Un enlace de protocolo HTTP conveniente para conectar a los Servicios Web que cumple a la especificación del WS-I Basic Profile 1.1 (por ejemplo, servicios web ASP.NET [ASMX] - servicios basados).  
   
 -   <xref:System.ServiceModel.WSHttpBinding>: Un enlace de protocolo HTTP conveniente para conectar a los extremos que cumplen con los protocolos de especificaciones de servicios Web.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Utiliza la codificación binaria .NET y las tecnologías de trama junto con el transporte de canalización con nombre de Windows para conectar a otros extremos [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] en el mismo equipo.  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>: Utiliza la codificación binaria de .NET y tramas tecnologías junto con el transporte de canalización con nombre de Windows para conectarse a otros extremos WCF en el mismo equipo.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Utiliza la codificación binaria .NET y las tecnologías de trama junto con el Message Queuing (también conocido como MSMQ) para crear las conexiones de mensaje en cola con otros extremos [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+-   <xref:System.ServiceModel.NetMsmqBinding>: Utiliza la codificación binaria .NET y las tecnologías de junto con el Message Queuing (también conocido como MSMQ) trama para crear conexiones de mensajes en cola con otros extremos WCF.  
   
  Para obtener una lista completa de los enlaces proporcionados por el sistema, con descripciones, consulte [enlaces proporcionados](../../../docs/framework/wcf/system-provided-bindings.md).  
   
@@ -49,7 +49,7 @@ Los enlaces son los objetos que especifican los datos de comunicación exigidos 
 2.  Cree un extremo que utiliza este enlace.  
   
 ## <a name="code-and-configuration"></a>Código y configuración  
- Puede definir o configurar los enlaces a través del código o configuración. Estos dos enfoques son independientes según el tipo de enlace utilizado, por ejemplo, si utiliza un enlace proporcionado por el sistema o un enlace <xref:System.ServiceModel.Channels.CustomBinding>. En general, el uso de código proporciona un control total sobre la definición de un enlace cuando se compila. El uso de configuración, por otro lado, permite al administrador del sistema o al usuario de un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] o cliente cambiar los parámetros de enlaces. Esta flexibilidad es a menudo deseable porque no hay ninguna manera de predecir los requisitos específicos del equipo y las condiciones de red en la cual se implementará una aplicación [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Separar la información de enlace (y direccionamiento) del código permite a los administradores cambiar los datos obligatorios sin tener que recompilar o implementar de nuevo la aplicación. Tenga en cuenta que si el enlace se define en código, sobrescribe las definiciones basadas en configuración realizadas en el archivo de configuración. Para obtener ejemplos de estos enfoques, consulte los temas siguientes:  
+ Puede definir o configurar los enlaces a través del código o configuración. Estos dos enfoques son independientes según el tipo de enlace utilizado, por ejemplo, si utiliza un enlace proporcionado por el sistema o un enlace <xref:System.ServiceModel.Channels.CustomBinding>. En general, el uso de código proporciona un control total sobre la definición de un enlace cuando se compila. Con la configuración, por otro lado, permite que un administrador del sistema o el usuario de un servicio WCF o cliente cambiar los parámetros de enlaces. Esta flexibilidad es a menudo deseable porque no hay ninguna manera de predecir los requisitos específicos del equipo y las condiciones en la que es una aplicación de WCF para su implementación de red. Separar la información de enlace (y direccionamiento) del código permite a los administradores cambiar los datos obligatorios sin tener que recompilar o implementar de nuevo la aplicación. Tenga en cuenta que si el enlace se define en código, sobrescribe las definiciones basadas en configuración realizadas en el archivo de configuración. Para obtener ejemplos de estos enfoques, consulte los temas siguientes:  
   
 -   [Cómo: hospedar un servicio WCF en una aplicación administrada](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) proporciona un ejemplo de cómo crear un enlace en código.  
   

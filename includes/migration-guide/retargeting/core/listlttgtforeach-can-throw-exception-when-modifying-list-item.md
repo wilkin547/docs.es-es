@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Detalles|A partir de .NET 4.5, un enumerador <xref:System.Collections.Generic.List%601.ForEach(System.Action{%600})> inicia una excepción <xref:System.InvalidOperationException?displayProperty=name> si se modifica un elemento de la colección que realiza la llamada. En versiones anteriores no se iniciaban excepciones en estos casos, aunque sí podían producirse condiciones de carrera.|
-|Sugerencia|Lo ideal es corregir el código para no modificar listas durante la enumeración de sus elementos, ya que esta nunca es una operación segura. No obstante, para revertir al comportamiento anterior, es posible seleccionar .NET 4.0 como destino de una aplicación.|
+|Detalles|A partir de .NET Framework 4.5, un enumerador <xref:System.Collections.Generic.List%601.ForEach(System.Action{%600})> iniciará una excepción <xref:System.InvalidOperationException?displayProperty=name> si se modifica un elemento de la colección que realiza la llamada. En versiones anteriores no se iniciaban excepciones en estos casos, aunque sí podían producirse condiciones de carrera.|
+|Sugerencia|Lo ideal es corregir el código para no modificar listas durante la enumeración de sus elementos, ya que esta nunca es una operación segura. Pero para revertir al comportamiento anterior, es posible seleccionar .NET Framework 4.0 como destino de una aplicación.|
 |Ámbito|Borde|
 |Versión|4.5|
 |Tipo|Redestinación|

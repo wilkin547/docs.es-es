@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 99d46b19e744190c50a2ba316fe0f59a8f6cf07b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9f03419c5c924f129b3ec8580ee25693c218715
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Cómo crear un comprobador de identidad de cliente personalizado
 El *identidad* característica de Windows Communication Foundation (WCF) permite a un cliente especificar de antemano la identidad esperada del servicio. Siempre que un servidor se autentica al cliente, se comprueba la identidad frente a la identidad prevista. (Para obtener una explicación de la identidad y cómo funciona, consulte [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
@@ -43,7 +43,7 @@ El *identidad* característica de Windows Communication Foundation (WCF) permite
   
 ### <a name="to-implement-the-trygetidentity-method"></a>Para implementar el método TryGetIdentity  
   
-1.  Implemente el método <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A>, que determina si el cliente puede devolver una instancia de la clase <xref:System.ServiceModel.EndpointIdentity>. La infraestructura [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] llama primero a la implementación del método `TryGetIdentity` para recuperar la identidad del servicio desde el mensaje. Después, la infraestructura llama a la implementación `CheckAccess` con la `EndpointIdentity` devuelta y a <xref:System.IdentityModel.Policy.AuthorizationContext>.  
+1.  Implemente el método <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A>, que determina si el cliente puede devolver una instancia de la clase <xref:System.ServiceModel.EndpointIdentity>. La infraestructura de WCF llama a la implementación de la `TryGetIdentity` método primero para recuperar la identidad del servicio del mensaje. Después, la infraestructura llama a la implementación `CheckAccess` con la `EndpointIdentity` devuelta y a <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
 2.  En el método `TryGetIdentity`, agregue el siguiente código:  
   

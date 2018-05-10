@@ -2,20 +2,20 @@
 title: Ejemplo de elemento de enlace de detección
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 7dc38acbe91e03f579414294da07bff5cc53cc4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="discovery-binding-element-sample"></a>Ejemplo de elemento de enlace de detección
 En este ejemplo se muestra cómo utilizar el elemento de enlace de cliente de detección para detectar un servicio. Esta característica permite a los desarrolladores de software agregar un canal de cliente de detección a su pila del canal de clientes existente, con lo que el modelo de programación resulta muy intuitivo. Cuando se abre el canal asociado, la dirección del servicio se resuelve utilizando la detección. Este ejemplo consta de los siguientes proyectos:  
   
--   **CalculatorService**: un reconocible [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio.  
+-   **CalculatorService**: un servicio WCF reconocible.  
   
--   **CalculatorClient**: un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicación cliente que utiliza el canal de cliente de detección para buscar y llamar a CalculatorService.  
+-   **CalculatorClient**: aplicación de cliente de WCF que utiliza el canal de cliente de detección para buscar y llamar a CalculatorService.  
   
--   **DynamicCalculatorClient**: un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicación cliente que utiliza un extremo dinámico para buscar y llamar a CalculatorService.  
+-   **DynamicCalculatorClient**: aplicación de cliente de WCF que usa un extremo dinámico para buscar y llamar a CalculatorService.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
