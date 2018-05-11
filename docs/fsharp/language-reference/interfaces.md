@@ -2,11 +2,11 @@
 title: Interfaces (F#)
 description: 'Obtenga información acerca de cómo F # Interfaces especificar conjuntos de miembros relacionados que otras clases implementan.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 174e30c03cd555d2d9c89c88bd80e06a2cdcef46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54ae8a2840ce26814be25f08c3ed02e12df6b7c0
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="interfaces"></a>Interfaces
 
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 ```fsharp
 // Interface declaration:
 [ attributes ]
-type interface-name =
+type [accessibility-modifier] interface-name =
     [ interface ]     [ inherit base-interface-name ...]
     abstract member1 : [ argument-types1 -> ] return-type1
     abstract member2 : [ argument-types2 -> ] return-type2
@@ -42,6 +42,8 @@ let class-name (argument-list) =
 
 ## <a name="remarks"></a>Comentarios
 Declaraciones de interfaz son similares a las declaraciones de clase, salvo que no se implementa ningún miembro. En su lugar, todos los miembros son abstractos, tal como se indica mediante la palabra clave `abstract`. No se proporciona un cuerpo de método para los métodos abstractos. Sin embargo, puede proporcionar una implementación predeterminada también incluye una definición independiente del miembro como método junto con el `default` palabra clave. Esto es equivalente a la creación de un método virtual en una clase base en otros lenguajes. NET. Este tipo de método virtual puede reemplazarse en las clases que implementan la interfaz.
+
+La accesibilidad predeterminada para las interfaces es `public`.
 
 También puede asignar a cada parámetro de método un nombre que se usa la sintaxis normal de F #:
 

@@ -3,12 +3,12 @@ title: Migrar las bases de datos relacionales a azure
 description: Modernizar las aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | migrar las bases de datos relacionales a azure
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/26/2017
-ms.openlocfilehash: efc558115d184ed53a963eab2acdd847a12dbb3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 04/28/2018
+ms.openlocfilehash: fe1bf5820c2306beb380749b34d5a56964e016e4
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrar las bases de datos relacionales a azure
 
@@ -22,11 +22,11 @@ En Azure, puede migrar los servidores de base de datos directamente a las máqui
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Cuándo se debe migrar a la instancia de base de datos administrada de SQL de Azure
 
-En la mayoría de los casos, la instancia de base de datos administrada de SQL de Azure será la mejor opción para tener en cuenta al migrar los datos en Azure. Si va a migrar las bases de datos de SQL Server y necesita casi garantía de 100% que no tendrá que volver a diseñar la aplicación o realizar cambios en los datos o el código de acceso de datos, elija la característica de instancia administrada de la base de datos de SQL Azure.
+En la mayoría de los casos, la instancia de base de datos administrada de SQL de Azure será la mejor opción para tener en cuenta al migrar los datos en Azure. Si va a migrar las bases de datos de SQL Server y necesita casi garantía de 100% que no tendrá que cambie la arquitectura de la aplicación o realizar cambios en los datos o el código de acceso de datos, elija la característica de instancia administrada de la base de datos de SQL Azure.
 
 Instancia de administrados de la base de datos de SQL Azure es la mejor opción si tiene requisitos adicionales para la funcionalidad de nivel de instancia de SQL Server o requisitos de aislamiento más allá de las características proporcionadas en una base de datos estándar SQL de Azure (modelo de base de datos única). Esta última de ellas es la opción más orientados a PaaS, pero que no ofrece las mismas características que la de un servidor SQL tradicional. Migración podría expuesta frictions.
 
-Por ejemplo, una organización que ha realizado fuertes inversiones en las capacidades de SQL Server de nivel de instancia se beneficiaría de la migración a la instancia administrada de SQL. Algunos ejemplos de las capacidades de SQL Server de nivel de instancia son SQL integración common language runtime (CLR), Agente SQL Server y entre bases de datos realizar consultas. Compatibilidad con estas características no están disponibles en Azure SQL Database estándar (un modelo de base de datos única).
+Por ejemplo, una organización que ha realizado fuertes inversiones en las capacidades de SQL Server de nivel de instancia se beneficiaría de la migración a la instancia administrada de SQL. Algunos ejemplos de las capacidades de SQL Server de nivel de instancia son SQL integración common language runtime (CLR), Agente SQL Server y entre bases de datos realizar consultas. Compatibilidad con estas características no está disponible en Azure SQL Database estándar (un modelo de base de datos única).
 
 Una organización que opera en un sector altamente regulado y que necesitan mantener el aislamiento por motivos de seguridad, también puede beneficiarse de elegir el modelo de instancia administrada de SQL.
 
@@ -56,9 +56,9 @@ Instancia administrada es probablemente la mejor opción para las empresas que a
 
 Como se mencionó, la base de datos de SQL de Azure estándar es un DBaaS completamente administrado y relacionales. Base de datos SQL actualmente administra millones de bases de datos de producción, en centros de 38 datos, todo el mundo. Admite una amplia gama de aplicaciones y cargas de trabajo, de la administración de los datos transaccionales sencillos, para controlar las aplicaciones de misión crítica, de uso más intensivo de datos que requieren procesamiento avanzado de datos en una escala global.
 
-Debido a sus características de PaaS completas y una mejor precios- y en última instancia menor costo-debe mover la base de datos de SQL de Azure estándar como "de forma predeterminada prefiera" Si tiene una aplicación que usa básico, estándar SQL bases de datos y ninguna característica de instancia adicional. Características de SQL Server como la integración CLR de SQL, Agente SQL Server y realizar consultas entre bases de datos no se admiten en la base de datos de SQL de Azure estándar. Estas características solo están disponibles en el modelo de instancia de base de datos administrada de SQL de Azure.
+Debido a sus características completas de PaaS, mejor precios- y en última instancia menor costo-debe mover la base de datos de SQL de Azure estándar como "de forma predeterminada prefiera" Si tiene una aplicación que usa básico, estándar SQL bases de datos y ninguna característica de instancia adicional. Características de SQL Server como la integración CLR de SQL, Agente SQL Server y realizar consultas entre bases de datos no se admiten en la base de datos de SQL de Azure estándar. Estas características solo están disponibles en el modelo de instancia de base de datos administrada de SQL de Azure.
 
-La base de datos de SQL Azure es el servicio de base de datos de nube solo inteligente que se ha diseñado para los desarrolladores de aplicaciones. También es el único servicio de base de datos en la nube que admita la ampliación sobre la marcha, sin tiempo de inactividad, que le ayudarán a distribuir aplicaciones para varios inquilinos de manera eficaz. En última instancia, base de datos de SQL Azure, queda más tiempo para innovar y acelera el tiempo de comercialización. Puede crear aplicaciones seguras y conectarse a la base de datos SQL mediante el uso de los lenguajes y plataformas que prefiera.
+La base de datos de SQL Azure es el servicio de base de datos de nube solo inteligente que se ha diseñado para los desarrolladores de aplicaciones. También es el único servicio de base de datos en la nube que admita la ampliación sobre la marcha, sin tiempo de inactividad, que le ayudarán a distribuir aplicaciones para varios inquilinos de manera eficaz. En última instancia, base de datos de SQL Azure, queda más tiempo para innovar y acelera el tiempo de comercialización. Puede crear aplicaciones seguras y conéctese a la base de datos SQL mediante el uso de los lenguajes y plataformas que prefiera.
 
 La base de datos de SQL Azure ofrece las siguientes ventajas:
 
@@ -76,13 +76,13 @@ La base de datos de SQL Azure ofrece las siguientes ventajas:
 
 - Compatibilidad con SQL Server 2016, incluidos híbrida y migración
 
-La base de datos de SQL de Azure estándar está más cerca de PaaS que la instancia de base de datos administrada de SQL de Azure. Debe intentar usarlo, si es posible, ya que obtendrá ventajas más de una nube administrada. Sin embargo, base de datos de SQL Azure presenta algunas diferencias claves normales y las instancias de SQL Server local. Dependiendo de los requisitos de la base de datos de la aplicación existente y los requisitos de empresa y directivas, no sería la mejor opción cuando planee la migración a la nube.
+La base de datos de SQL de Azure estándar está más cerca de PaaS que la instancia de base de datos administrada de SQL de Azure. Prefieren la base de datos de SQL de Azure estándar porque obtendrá ventajas más de una nube administrada. Sin embargo, base de datos de SQL Azure presenta algunas diferencias claves normales y las instancias de SQL Server local. Dependiendo de los requisitos de la base de datos de la aplicación existente y los requisitos de empresa y directivas, no sería la mejor opción cuando planee la migración a la nube.
 
 ## <a name="when-to-move-your-original-rdbms-to-a-vm-iaas"></a>Cuándo se debe pasar el RDBMS original a una máquina virtual (IaaS)
 
 Una de las opciones de migración es mover el original sistema de administración de bases de datos relacionales (RDBMS), entre otras, Oracle, IBM DB2, MySQL, PostgreSQL o SQL Server, un servidor similar a la que se ejecuta en una VM de Azure. Si tiene aplicaciones existentes que requieren la migración más rápida a la nube con unos cambios mínimos o ningún cambio en absoluto, una migración directa a IaaS en la nube podría ser una opción razonable. Es posible que no sea la mejor manera de aprovechar las ventajas de la de la nube, pero probablemente es la ruta de acceso inicial más rápida.
 
-En la actualidad, Microsoft Azure admite hasta [331 servidores de base de datos diferente](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) implementados como máquinas virtuales de IaaS. Esto incluye RDBMSes populares como SQL Server, Oracle, MySQL, PostgreSQL e IBM DB2 y muchas otras bases de datos NoSQL como MongoDB, Casandra, DataStax, MariaDB y Cloudera.
+En la actualidad, Microsoft Azure admite hasta [331 servidores de base de datos diferente](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) implementados como máquinas virtuales de IaaS. Esto incluye RDBMS populares como SQL Server, Oracle, MySQL, PostgreSQL e IBM DB2 y muchas otras bases de datos NoSQL como MongoDB, Casandra, DataStax, MariaDB y Cloudera.
 
 > [!NOTE]
 > Aunque mover el RDBMS para una VM de Azure puede ser la manera más rápida para migrar los datos a la nube (porque está IaaS), este enfoque requiere una inversión importante en los equipos de TI (administradores de base de datos y los profesionales de TI). Los equipos de la empresa necesitan poder configurar y administrar la aplicación de revisiones de SQL Server, alta disponibilidad y recuperación ante desastres. Este contexto también necesita un entorno personalizado, con derechos administrativos completos.
@@ -99,7 +99,7 @@ El flujo de trabajo automatizado, con los informes de evaluación, le guía a tr
 
 Cada vez que cambie un RDBMS original, debe volver a probar. También podrían necesitar cambiar el código de asignación relacional de objetos (ORM) en la aplicación, según los resultados de las pruebas o las sentencias SQL.
 
-Si tiene cualquier otra base de datos (por ejemplo, IBM DB2) y optar por un enfoque elevar y cambiar, puede seguir usando esas bases de datos como las máquinas virtuales de IaaS en Azure, a menos que esté dispuesto a realizar una migración de datos más compleja. Una migración de datos más compleja requerirán esfuerzo adicional, ya que podría migrar a un tipo diferente de la base de datos con el nuevo esquema y las bibliotecas de programación diferentes.
+Si tiene cualquier otra base de datos (por ejemplo, IBM DB2) y optar por un enfoque elevar y cambiar, puede seguir usando esas bases de datos como las máquinas virtuales de IaaS en Azure, a menos que esté dispuesto a realizar una migración de datos más compleja. Una migración de datos más compleja requerirán un esfuerzo adicional porque podría migrar a un tipo diferente de la base de datos con el nuevo esquema y las bibliotecas de programación diferentes.
 
 Para obtener información sobre cómo migrar las bases de datos mediante el servicio de migración de base de datos de Azure, consulte [llegar a la nube más rápida con la instancia de base de datos administrada de SQL de Azure y el servicio de migración de base de datos de Azure](https://channel9.msdn.com/Events/Build/2017/P4008).
 
@@ -127,4 +127,4 @@ Para obtener información sobre cómo migrar las bases de datos mediante el serv
 
 >[!div class="step-by-step"]
 [Anterior](lift-and-shift-existing-apps-azure-iaas.md)
-[Siguiente](lift-and-shift-existing-apps-devops/index.md)
+[Siguiente](modernize-existing-apps-to-cloud-optimized/index.md)

@@ -1,22 +1,22 @@
 ---
-title: Levantar y mover las aplicaciones existentes IaaS de Azure
+title: Levantar y mover las aplicaciones .NET existentes a Azure IaaS (infraestructura preparada para la nube)
 description: Modernizar las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/26/2017
-ms.openlocfilehash: b844373d4ea995b553d9a32ea51997fd664064bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 04/28/2018
+ms.openlocfilehash: 458b1bd1fc9fc24ce43d0926655fe0767aabc43c
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="lift-and-shift-existing-apps-azure-iaas"></a>Levantar y mover las aplicaciones existentes IaaS de Azure
+# <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Levantar y mover las aplicaciones .NET existentes a Azure IaaS (infraestructura preparada para la nube)
 
 > Visión: como primer paso, para reducir su local inversión y coste total de hardware y redes de mantenimiento, simplemente hospedar las aplicaciones existentes en la nube.
 
 Antes de entrar en *cómo* para migrar las aplicaciones existentes para la infraestructura de Azure como una plataforma de servicio (IaaS), es importante analizar las razones *¿por qué* desea migrar directamente a IaaS en Azure. El escenario en este nivel de madurez modernización es básicamente empezar a usar las máquinas virtuales en la nube, en lugar de seguir utilizando la infraestructura local actual.
 
-Otro punto a analizar es *¿por qué* desea migrar a la nube de IaaS pura en lugar de limitarse a agregar más avanzada de servicios administrados en Azure. Debe determinar qué casos podrían requerir IaaS en primer lugar.
+Otro punto a analizar es *¿por qué* desea migrar a la nube de IaaS pura en lugar de limitarse a agregar más avanzada de servicios administrados en Azure. Determinar qué casos podrían requerir IaaS en primer lugar.
 
 Figura 2-1 se coloca en los niveles de madurez Modernización aplicaciones de uso de infraestructura de nube:
 
@@ -30,17 +30,17 @@ Es la razón principal para migrar a la nube, incluso en un nivel de IaaS inicia
 
 Después de tomar la decisión para mover las aplicaciones a la nube, la razón principal por qué es conveniente IaaS en lugar de las opciones más avanzadas como PaaS es simplemente que el entorno de IaaS será mucho más familiar. Mover a un entorno que es similar a la actual, el entorno local ofrece una curva de aprendizaje inferior, que lo hace la ruta de acceso más rápido para la nube.
 
-Sin embargo, tomar la ruta de acceso más rápido a la nube no significa que dispondrá de los mayores beneficios de tener las aplicaciones que se ejecutan en la nube. Cualquier organización dispondrá de las ventajas más importantes de una migración a la nube en los niveles de madurez (optimizada para la nube) se ha introducido ya preparada para DevOps la nube y de PaaS.
+Sin embargo, tomar la ruta de acceso más rápido a la nube no significa que dispondrá de los mayores beneficios de tener las aplicaciones que se ejecutan en la nube. Las ventajas más importantes de una migración a la nube en los niveles de madurez optimizada para la nube y nativo en la nube se ha introducido ya dispondrá de cualquier organización.
 
-También ha resultado evidente de que las aplicaciones son más fáciles de modernizar y volver a diseñar en el futuro cuando todavía se están ejecutando en la nube, incluso en IaaS. Esto es cierto en parte porque ya se ha logrado la migración de datos de aplicación. Además, su organización habrá obtenido destrezas necesarias para trabajar en la nube y realizan el desplazamiento hasta la operación en "cultura de nube".
+También ha resultado evidente de que las aplicaciones son más fáciles de modernizar y cambie la arquitectura en el futuro cuando todavía se están ejecutando en la nube, incluso en IaaS. Ya se ha logrado la migración de datos de aplicación. Además, su organización habrá obtenido destrezas necesarias para trabajar en la nube y realizan el desplazamiento hasta la operación en "cultura de nube".
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>Cuándo se debe migrar a IaaS en lugar de a PaaS
 
-Las secciones siguientes describen las aplicaciones de uso de DevOps de nube que se basan principalmente en los servicios y plataformas de PaaS. Estas aplicaciones proporcionan las mayores ventajas de migrar a la nube.
+Las secciones siguientes describen las aplicaciones optimizada para la nube que se basan principalmente en los servicios y plataformas de PaaS. Estas aplicaciones proporcionan las mayores ventajas de migrar a la nube. 
 
-Si su objetivo es simplemente mover las aplicaciones existentes a la nube, en primer lugar, identificar las aplicaciones existentes que requerirán una modificación sustancial para que se ejecute en el servicio de aplicación de Azure. Estas aplicaciones deben ser los primeros candidatos.
+Si su objetivo es simplemente mover las aplicaciones existentes a la nube, en primer lugar, identificar las aplicaciones existentes que no requiere una modificación sustancial para que se ejecute en el servicio de aplicación de Azure. Estas aplicaciones deben ser los primeros candidatos para optimizada para la nube. 
 
-A continuación, si no desea o todavía no se puede mover a los contenedores de Windows y o orchestrators como Azure Service Fabric o Kubernetes, todavía, entonces es cuándo usar máquinas virtuales sin formato (IaaS).
+A continuación, para las aplicaciones que aún no se puede mover a PaaS y contenedores de Windows como servicio de aplicaciones o orchestrators como Azure Service Fabric, migrarlas máquinas virtuales sin formato simple (IaaS). 
 
 Sin embargo, tenga en cuenta que correctamente configurar, proteger y mantener las máquinas virtuales requieren mucho más tiempo y experiencia en TI en comparación con el uso de los servicios de PaaS de Azure. Si está pensando en máquinas virtuales de Azure, asegúrese de tener en cuenta la intervención de un mantenimiento continuado necesaria para aplicar la revisión, actualizar y administrar su entorno de máquinas virtuales. Máquinas virtuales de Azure es IaaS.
 
@@ -54,7 +54,7 @@ Migración a la nube no tiene que ser difícil. Aunque muchas organizaciones tie
 
 - Asignación de dependencia integradas para la detección de confianza alta de aplicaciones de varios niveles
 
-- Redimensionamiento inteligente para máquinas virtuales de Azure
+- Inteligente adquirir un tamaño adecuado para máquinas virtuales de Azure
 
 - Informes con instrucciones para aplicar posibles problemas de compatibilidad
 

@@ -1,15 +1,15 @@
 ---
 title: Servicios dúplex
-ms.date: 03/30/2017
+ms.date: 05/09/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: afe72b01fe3ec38cc34b0a7ff4d28ff714cf3dd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da92b8f2d1223f582677a93a8ff6fd697512d297
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="duplex-services"></a>Servicios dúplex
 Un contrato de servicios dúplex es un patrón de intercambio de mensajes en el que ambos extremos pueden enviar mensajes al otro de manera independiente. Un servicio dúplex, por tanto, puede enviar mensajes de vuelta al extremo del cliente, proporcionando un comportamiento parecido a los eventos. La comunicación dúplex se produce cuando un cliente se conecta a un servicio y proporciona al servicio un canal en el que el servicio puede devolver los mensajes al cliente. Tenga en cuenta que el comportamiento como evento de los servicios dúplex solo funciona dentro de una sesión.  
@@ -52,15 +52,20 @@ HTTP could not register URL
 htp://+:80/Temporary_Listen_Addresses/<guid> because TCP port 80 is being used by another application.  
 ```  
   
- El siguiente ejemplo de código muestra cómo especificar la dirección de extremo de cliente mediante código.  
+ El código de ejemplo siguiente muestra cómo especificar al cliente de dirección de punto de conexión mediante programación.
   
-```  
+```csharp  
 WSDualHttpBinding binding = new WSDualHttpBinding();  
 EndpointAddress endptadr = new EndpointAddress("http://localhost:12000/DuplexTestUsingCode/Server");  
 binding.ClientBaseAddress = new Uri("http://localhost:8000/DuplexTestUsingCode/Client/");  
 ```  
-  
- El siguiente ejemplo de código muestra cómo especificar la dirección de extremo de cliente mediante configuración.  
+```vb
+Dim binding As New WSDualHttpBinding()
+Dim endptadr As New EndpointAddress("http://localhost:12000/DuplexTestUsingCode/Server")
+binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/Client/")  
+```
+
+ El siguiente ejemplo de código muestra cómo especificar la dirección de punto de conexión de cliente mediante configuración.  
   
 ```xml  
 <client>  
