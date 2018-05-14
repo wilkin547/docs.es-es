@@ -22,7 +22,7 @@ Opcionalmente, también le interesará que el **Editor de DGML** muestre los gr�
 1. Ejecute el **Instalador de Visual Studio**. 
 1. Haga clic en **Modificar**. 
 1. Haga clic en la pestaña **Componentes individuales**. 
-1. Active la casilla **SDK de .NET Compiler Platform**. La encontrará en último lugar bajo la sección **Compiladores, herramientas de compilación y tiempos de ejecución**.
+1. Active la casilla **SDK de .NET Compiler Platform**. La encontrará en la parte superior bajo la sección **Compiladores, herramientas de compilación y tiempos de ejecución**.
 
 Opcionalmente, también le interesará que el **Editor de DGML** muestre los gráficos en el visualizador:
 
