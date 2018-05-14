@@ -2,11 +2,11 @@
 title: Uniones discriminadas (F#)
 description: 'Obtenga información acerca de cómo usar F # uniones discriminadas.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7949fd1685ca128f19dd0d0d4aec7236169cd375
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 617c659e26df52819a98294bcbfa081ab82fed03
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="discriminated-unions"></a>Uniones discriminadas
 
@@ -16,14 +16,16 @@ Uniones discriminadas proporcionan compatibilidad para los valores que pueden se
 
 ```fsharp
 [ attributes ]
-type type-name =
+type [accessibility-modifier] type-name =
     | case-identifier1 [of [ fieldname1 : ] type1 [ * [ fieldname2 : ] type2 ...]
     | case-identifier2 [of [fieldname3 : ]type3 [ * [ fieldname4 : ]type4 ...]
 ...
 ```
 
 ## <a name="remarks"></a>Comentarios
-Uniones discriminadas son similares a los tipos de unión en otros lenguajes, pero hay diferencias. Como con un tipo de unión en C++ o un tipo variant en Visual Basic, los datos almacenados en el valor no es fijo; puede ser una de varias opciones distintas. A diferencia de uniones en estos otros idiomas, sin embargo, cada una de las opciones posibles se concede un *identificador de caso*. Los identificadores de caso son nombres para los diversos posibles tipos de valores que pudieron ser objetos de este tipo; los valores son opcionales. Si los valores no están presentes, el caso equivale a un caso de enumeración. Si los valores están presentes, cada valor puede ser un valor único de un tipo especificado o una tupla que agrega varios campos de la mismos o de tipos diferentes. A partir de F # 3.1, puede asignar un campo individual de un nombre, pero el nombre es opcional, aunque se denominan otros campos en las mismas mayúsculas y minúsculas.
+Uniones discriminadas son similares a los tipos de unión en otros lenguajes, pero hay diferencias. Como con un tipo de unión en C++ o un tipo variant en Visual Basic, los datos almacenados en el valor no es fijo; puede ser una de varias opciones distintas. A diferencia de uniones en estos otros idiomas, sin embargo, cada una de las opciones posibles se concede un *identificador de caso*. Los identificadores de caso son nombres para los diversos posibles tipos de valores que pudieron ser objetos de este tipo; los valores son opcionales. Si los valores no están presentes, el caso equivale a un caso de enumeración. Si los valores están presentes, cada valor puede ser un valor único de un tipo especificado o una tupla que agrega varios campos de la mismos o de tipos diferentes. Puede asignar un campo individual de un nombre, pero el nombre es opcional, aunque se denominan otros campos en las mismas mayúsculas y minúsculas.
+
+Accesibilidad para uniones discriminadas tiene como valor predeterminado `public`.
 
 Por ejemplo, considere la siguiente declaración de un tipo de forma.
 

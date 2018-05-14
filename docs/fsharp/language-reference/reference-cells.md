@@ -2,11 +2,11 @@
 title: Celdas de referencia (F#)
 description: 'Obtenga información acerca de cómo las celdas de referencia de F # son ubicaciones de almacenamiento que le permiten crear valores mutables con semántica de referencias.'
 ms.date: 05/16/2016
-ms.openlocfilehash: d68726619bdfce5a9ed9bd94d6434427644cd9f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="reference-cells"></a>Celdas de referencia
 
@@ -81,6 +81,9 @@ Para obtener más información sobre cómo pasar por referencia, vea [parámetro
 >[!NOTE]
 Programadores de C# deben saber que ref funciona forma distinta en F # que en C#. Por ejemplo, el uso de ref cuando se pasa un argumento no tiene el mismo efecto en F # como ocurre en C#.
 
+>[!NOTE]
+`mutable` las variables se pueden promover automáticamente a `'a ref` si captura una clausura; vea [valores](values/index.md).
+
 ## <a name="consuming-c-ref-returns"></a>Utilizar en C# `ref` devuelve
 
 A partir de F # 4.1, puedes utilizar `ref` devuelve generado en C#.  El resultado de una llamada de este tipo es un `byref<_>` puntero.
@@ -132,3 +135,5 @@ Actualmente no hay ninguna manera de generar un `ref` devuelto en F # que en C# 
 [Parámetros y argumentos](parameters-and-arguments.md)
 
 [Referencia de símbolos y operadores](symbol-and-operator-reference/index.md)
+
+[Valores](values/index.md)

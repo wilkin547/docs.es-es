@@ -2,11 +2,11 @@
 title: Signaturas (F#)
 description: 'Obtenga información acerca de cómo usar un archivo de signatura de F # para almacenar información sobre las signaturas públicas de un conjunto de F # elementos del programa, como tipos y espacios de nombres, módulos.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 04539a871dda9eedd1495e0e5b1f3f5026bae037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e182a1a0ac7f3f9fab27026e582d83ee737822e
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="signatures"></a>Prototipos
 
@@ -64,6 +64,9 @@ Las reglas de las signaturas de valor son las siguientes:
 
 
 - El patrón de parámetros (también conocido como *aridad*) de las signaturas y las implementaciones debe ser coherente.
+
+
+- Si el archivo de implementación correspondiente se diferencian de nombres de parámetros en un archivo de signatura, el nombre en el archivo de signatura se usará en su lugar, lo que puede producir problemas al depurar o de generación de perfiles. Si desea recibir una notificación de tales errores de coincidencia, habilitar advertencia 3218 en el archivo de proyecto o al invocar el compilador (vea `--warnon` en [opciones del compilador](compiler-options.md)).
 
 
 En el ejemplo de código siguiente se muestra un ejemplo de archivo de signatura que tiene el espacio de nombres, el módulo, el valor de la función y las signaturas de tipo junto con los atributos adecuados. También muestra el archivo de implementación correspondiente.
