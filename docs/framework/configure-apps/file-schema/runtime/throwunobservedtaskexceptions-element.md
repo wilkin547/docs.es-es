@@ -1,13 +1,6 @@
 ---
 title: '&lt;ThrowUnobservedTaskExceptions&gt; elemento'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,75 +8,72 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 635270a6461b573663b7719843d81ff2b23e63dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f72bedbaaf0b15ade7ff6b7b8c3edcdfd3fda6d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltthrowunobservedtaskexceptionsgt-element"></a><span data-ttu-id="6f1d7-102">&lt;ThrowUnobservedTaskExceptions&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="6f1d7-102">&lt;ThrowUnobservedTaskExceptions&gt; Element</span></span>
-<span data-ttu-id="6f1d7-103">Especifica si las excepciones de tareas no controladas deben finalizar un proceso en ejecución.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-103">Specifies whether unhandled task exceptions should terminate a running process.</span></span>  
+# <a name="ltthrowunobservedtaskexceptionsgt-element"></a><span data-ttu-id="b325e-102">&lt;ThrowUnobservedTaskExceptions&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="b325e-102">&lt;ThrowUnobservedTaskExceptions&gt; Element</span></span>
+<span data-ttu-id="b325e-103">Especifica si las excepciones de tareas no controladas deben finalizar un proceso en ejecución.</span><span class="sxs-lookup"><span data-stu-id="b325e-103">Specifies whether unhandled task exceptions should terminate a running process.</span></span>  
   
- <span data-ttu-id="6f1d7-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="6f1d7-104">\<configuration></span></span>  
-<span data-ttu-id="6f1d7-105">\<en tiempo de ejecución ></span><span class="sxs-lookup"><span data-stu-id="6f1d7-105">\<runtime></span></span>  
-<span data-ttu-id="6f1d7-106">\<ThrowUnobservedTaskExceptions ></span><span class="sxs-lookup"><span data-stu-id="6f1d7-106">\<ThrowUnobservedTaskExceptions></span></span>  
+ <span data-ttu-id="b325e-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b325e-104">\<configuration></span></span>  
+<span data-ttu-id="b325e-105">\<en tiempo de ejecución ></span><span class="sxs-lookup"><span data-stu-id="b325e-105">\<runtime></span></span>  
+<span data-ttu-id="b325e-106">\<ThrowUnobservedTaskExceptions ></span><span class="sxs-lookup"><span data-stu-id="b325e-106">\<ThrowUnobservedTaskExceptions></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f1d7-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6f1d7-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b325e-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b325e-107">Syntax</span></span>  
   
 ```xml  
 <ThrowUnobservedTaskExceptions  
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6f1d7-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="6f1d7-108">Attributes and Elements</span></span>  
- <span data-ttu-id="6f1d7-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b325e-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="b325e-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="b325e-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="b325e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6f1d7-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="6f1d7-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b325e-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="b325e-110">Attributes</span></span>  
   
-|<span data-ttu-id="6f1d7-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="6f1d7-111">Attribute</span></span>|<span data-ttu-id="6f1d7-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="6f1d7-112">Description</span></span>|  
+|<span data-ttu-id="b325e-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="b325e-111">Attribute</span></span>|<span data-ttu-id="b325e-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="b325e-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="6f1d7-113">Atributo necesario.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="6f1d7-114">Especifica si las excepciones no controladas tarea deben finalizar el proceso en ejecución.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-114">Specifies whether unhandled task exceptions should terminate the running process.</span></span>|  
+|`enabled`|<span data-ttu-id="b325e-113">Atributo necesario.</span><span class="sxs-lookup"><span data-stu-id="b325e-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="b325e-114">Especifica si las excepciones no controladas tarea deben finalizar el proceso en ejecución.</span><span class="sxs-lookup"><span data-stu-id="b325e-114">Specifies whether unhandled task exceptions should terminate the running process.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="6f1d7-115">Atributo enabled</span><span class="sxs-lookup"><span data-stu-id="6f1d7-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="b325e-115">Atributo enabled</span><span class="sxs-lookup"><span data-stu-id="b325e-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="6f1d7-116">Valor</span><span class="sxs-lookup"><span data-stu-id="6f1d7-116">Value</span></span>|<span data-ttu-id="6f1d7-117">Descripción</span><span class="sxs-lookup"><span data-stu-id="6f1d7-117">Description</span></span>|  
+|<span data-ttu-id="b325e-116">Valor</span><span class="sxs-lookup"><span data-stu-id="b325e-116">Value</span></span>|<span data-ttu-id="b325e-117">Descripción</span><span class="sxs-lookup"><span data-stu-id="b325e-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="6f1d7-118">No termina con el proceso en ejecución para una excepción de tarea no controlada.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-118">Does not terminate the running process for an unhandled task exception.</span></span> <span data-ttu-id="6f1d7-119">Este es el valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="6f1d7-120">Finaliza el proceso en ejecución para una excepción de tarea no controlada.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-120">Terminates the running process for an unhandled task exception.</span></span>|  
+|`false`|<span data-ttu-id="b325e-118">No termina con el proceso en ejecución para una excepción de tarea no controlada.</span><span class="sxs-lookup"><span data-stu-id="b325e-118">Does not terminate the running process for an unhandled task exception.</span></span> <span data-ttu-id="b325e-119">Este es el valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="b325e-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="b325e-120">Finaliza el proceso en ejecución para una excepción de tarea no controlada.</span><span class="sxs-lookup"><span data-stu-id="b325e-120">Terminates the running process for an unhandled task exception.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="6f1d7-121">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="6f1d7-121">Child Elements</span></span>  
- <span data-ttu-id="6f1d7-122">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b325e-121">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="b325e-121">Child Elements</span></span>  
+ <span data-ttu-id="b325e-122">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="b325e-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="6f1d7-123">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="6f1d7-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b325e-123">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="b325e-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="6f1d7-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="6f1d7-124">Element</span></span>|<span data-ttu-id="6f1d7-125">Descripción</span><span class="sxs-lookup"><span data-stu-id="6f1d7-125">Description</span></span>|  
+|<span data-ttu-id="b325e-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="b325e-124">Element</span></span>|<span data-ttu-id="b325e-125">Descripción</span><span class="sxs-lookup"><span data-stu-id="b325e-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="6f1d7-126">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="6f1d7-127">Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-127">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="b325e-126">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b325e-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="b325e-127">Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="b325e-127">Contains information about runtime initialization options.</span></span>|  
 |||  
   
-## <a name="remarks"></a><span data-ttu-id="6f1d7-128">Comentarios</span><span class="sxs-lookup"><span data-stu-id="6f1d7-128">Remarks</span></span>  
- <span data-ttu-id="6f1d7-129">Si una excepción que está asociada con un <xref:System.Threading.Tasks.Task> no se cumplió con ninguna, no hay ningún <xref:System.Threading.Tasks.Task.Wait%2A> operación, el elemento primario no está conectado y el <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> propiedad no se puede leer la excepción de la tarea se considera inadvertida.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-129">If an exception that is associated with a <xref:System.Threading.Tasks.Task> has not been observed, there is no <xref:System.Threading.Tasks.Task.Wait%2A> operation, the parent is not attached, and the <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> property was not read the task exception is considered to be unobserved.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b325e-128">Comentarios</span><span class="sxs-lookup"><span data-stu-id="b325e-128">Remarks</span></span>  
+ <span data-ttu-id="b325e-129">Si una excepción que está asociada con un <xref:System.Threading.Tasks.Task> no se cumplió con ninguna, no hay ningún <xref:System.Threading.Tasks.Task.Wait%2A> operación, el elemento primario no está conectado y el <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> propiedad no se puede leer la excepción de la tarea se considera inadvertida.</span><span class="sxs-lookup"><span data-stu-id="b325e-129">If an exception that is associated with a <xref:System.Threading.Tasks.Task> has not been observed, there is no <xref:System.Threading.Tasks.Task.Wait%2A> operation, the parent is not attached, and the <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> property was not read the task exception is considered to be unobserved.</span></span>  
   
- <span data-ttu-id="6f1d7-130">En el [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], valor predeterminado, si un <xref:System.Threading.Tasks.Task> que tiene un inadvertida excepción es la recolección, el finalizador produce una excepción y finaliza el proceso.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-130">In the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], by default, if a <xref:System.Threading.Tasks.Task> that has an unobserved exception is garbage collected, the finalizer throws an exception and terminates the process.</span></span> <span data-ttu-id="6f1d7-131">La terminación del proceso está determinada por el tiempo de finalización y de recolección de elementos.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-131">The termination of the process is determined by the timing of garbage collection and finalization.</span></span>  
+ <span data-ttu-id="b325e-130">En el [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], valor predeterminado, si un <xref:System.Threading.Tasks.Task> que tiene un inadvertida excepción es la recolección, el finalizador produce una excepción y finaliza el proceso.</span><span class="sxs-lookup"><span data-stu-id="b325e-130">In the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], by default, if a <xref:System.Threading.Tasks.Task> that has an unobserved exception is garbage collected, the finalizer throws an exception and terminates the process.</span></span> <span data-ttu-id="b325e-131">La terminación del proceso está determinada por el tiempo de finalización y de recolección de elementos.</span><span class="sxs-lookup"><span data-stu-id="b325e-131">The termination of the process is determined by the timing of garbage collection and finalization.</span></span>  
   
- <span data-ttu-id="6f1d7-132">Para facilitar a los desarrolladores a escribir código asincrónico basado en tareas, el [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] cambia este comportamiento predeterminado para las excepciones inadvertidas.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-132">To make it easier for developers to write asynchronous code based on tasks, the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] changes this default behavior for unobserved exceptions.</span></span> <span data-ttu-id="6f1d7-133">Excepciones inadvertidas hacen que se siga el <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> evento, pero de forma predeterminada, el proceso no finaliza.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-133">Unobserved exceptions still cause the <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> event to be raised, but by default, the process does not terminate.</span></span> <span data-ttu-id="6f1d7-134">En su lugar, se omite la excepción después de que se genera el evento, independientemente de si la excepción ajusta a un controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-134">Instead, the exception is ignored after the event is raised, regardless of whether an event handler observes the exception.</span></span>  
+ <span data-ttu-id="b325e-132">Para facilitar a los desarrolladores a escribir código asincrónico basado en tareas, el [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] cambia este comportamiento predeterminado para las excepciones inadvertidas.</span><span class="sxs-lookup"><span data-stu-id="b325e-132">To make it easier for developers to write asynchronous code based on tasks, the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] changes this default behavior for unobserved exceptions.</span></span> <span data-ttu-id="b325e-133">Excepciones inadvertidas hacen que se siga el <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> evento, pero de forma predeterminada, el proceso no finaliza.</span><span class="sxs-lookup"><span data-stu-id="b325e-133">Unobserved exceptions still cause the <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> event to be raised, but by default, the process does not terminate.</span></span> <span data-ttu-id="b325e-134">En su lugar, se omite la excepción después de que se genera el evento, independientemente de si la excepción ajusta a un controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="b325e-134">Instead, the exception is ignored after the event is raised, regardless of whether an event handler observes the exception.</span></span>  
   
- <span data-ttu-id="6f1d7-135">En el [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], puede usar el [ \<ThrowUnobservedTaskExceptions > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) en un archivo de configuración de aplicación para habilitar la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] comportamiento de producir una excepción.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-135">In the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], you can use the [\<ThrowUnobservedTaskExceptions> element](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) in an application configuration file to enable the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] behavior of throwing an exception.</span></span>  
+ <span data-ttu-id="b325e-135">En el [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], puede usar el [ \<ThrowUnobservedTaskExceptions > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) en un archivo de configuración de aplicación para habilitar la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] comportamiento de producir una excepción.</span><span class="sxs-lookup"><span data-stu-id="b325e-135">In the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], you can use the [\<ThrowUnobservedTaskExceptions> element](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) in an application configuration file to enable the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] behavior of throwing an exception.</span></span>  
   
- <span data-ttu-id="6f1d7-136">También puede especificar el comportamiento de excepción en una de las maneras siguientes:</span><span class="sxs-lookup"><span data-stu-id="6f1d7-136">You can also specify the exception behavior in one of the following ways:</span></span>  
+ <span data-ttu-id="b325e-136">También puede especificar el comportamiento de excepción en una de las maneras siguientes:</span><span class="sxs-lookup"><span data-stu-id="b325e-136">You can also specify the exception behavior in one of the following ways:</span></span>  
   
--   <span data-ttu-id="6f1d7-137">Estableciendo la variable de entorno `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).</span><span class="sxs-lookup"><span data-stu-id="6f1d7-137">By setting the environment variable `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).</span></span>  
+-   <span data-ttu-id="b325e-137">Estableciendo la variable de entorno `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).</span><span class="sxs-lookup"><span data-stu-id="b325e-137">By setting the environment variable `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).</span></span>  
   
--   <span data-ttu-id="6f1d7-138">Al establecer el valor DWORD del Registro valor ThrowUnobservedTaskExceptions = 1 en el HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Tecla NETFramework.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-138">By setting the registry DWORD value ThrowUnobservedTaskExceptions = 1 in the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework key.</span></span>  
+-   <span data-ttu-id="b325e-138">Al establecer el valor DWORD del Registro valor ThrowUnobservedTaskExceptions = 1 en el HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Tecla NETFramework.</span><span class="sxs-lookup"><span data-stu-id="b325e-138">By setting the registry DWORD value ThrowUnobservedTaskExceptions = 1 in the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework key.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6f1d7-139">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6f1d7-139">Example</span></span>  
- <span data-ttu-id="6f1d7-140">En el ejemplo siguiente se muestra cómo habilitar el inicio de excepciones en tareas mediante un archivo de configuración de aplicación.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-140">The following example shows how to enable the throwing of exceptions in tasks by using an application configuration file.</span></span>  
+## <a name="example"></a><span data-ttu-id="b325e-139">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b325e-139">Example</span></span>  
+ <span data-ttu-id="b325e-140">En el ejemplo siguiente se muestra cómo habilitar el inicio de excepciones en tareas mediante un archivo de configuración de aplicación.</span><span class="sxs-lookup"><span data-stu-id="b325e-140">The following example shows how to enable the throwing of exceptions in tasks by using an application configuration file.</span></span>  
   
 ```xml  
 <configuration>   
@@ -93,12 +83,12 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="6f1d7-141">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6f1d7-141">Example</span></span>  
- <span data-ttu-id="6f1d7-142">En el ejemplo siguiente se muestra cómo se produce una excepción no observada desde una tarea.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-142">The following example demonstrates how an unobserved exception is thrown from a task.</span></span> <span data-ttu-id="6f1d7-143">El código debe ejecutarse como un programa publicado para que funcione correctamente.</span><span class="sxs-lookup"><span data-stu-id="6f1d7-143">The code must be run as a released program to work correctly.</span></span>  
+## <a name="example"></a><span data-ttu-id="b325e-141">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b325e-141">Example</span></span>  
+ <span data-ttu-id="b325e-142">En el ejemplo siguiente se muestra cómo se produce una excepción no observada desde una tarea.</span><span class="sxs-lookup"><span data-stu-id="b325e-142">The following example demonstrates how an unobserved exception is thrown from a task.</span></span> <span data-ttu-id="b325e-143">El código debe ejecutarse como un programa publicado para que funcione correctamente.</span><span class="sxs-lookup"><span data-stu-id="b325e-143">The code must be run as a released program to work correctly.</span></span>  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="6f1d7-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="6f1d7-144">See Also</span></span>  
- [<span data-ttu-id="6f1d7-145">Esquema de la configuración de Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="6f1d7-145">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="6f1d7-146">Esquema de los archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="6f1d7-146">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="b325e-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="b325e-144">See Also</span></span>  
+ [<span data-ttu-id="b325e-145">Esquema de la configuración de Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="b325e-145">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="b325e-146">Esquema de los archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="b325e-146">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

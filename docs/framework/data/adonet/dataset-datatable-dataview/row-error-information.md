@@ -1,30 +1,18 @@
 ---
-title: "Información de error de fila"
-ms.custom: 
+title: Información de error de fila
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3e8b2e486f33cbe3851b0d24911f5976a1a4b3c6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 6f3f332d4b9bd0be9934c7bf7722e8ff71c4eb2f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="row-error-information"></a><span data-ttu-id="88fb4-102">Información de error de fila</span><span class="sxs-lookup"><span data-stu-id="88fb4-102">Row Error Information</span></span>
-<span data-ttu-id="88fb4-103">Para evitar responder a errores de fila durante la edición de valores en una <xref:System.Data.DataTable>, puede agregar la información de error a la fila para utilizarla más adelante.</span><span class="sxs-lookup"><span data-stu-id="88fb4-103">To avoid having to respond to row errors while editing values in a <xref:System.Data.DataTable>, you can add the error information to the row for later use.</span></span> <span data-ttu-id="88fb4-104">Para ello, el objeto <xref:System.Data.DataRow> proporciona una propiedad <xref:System.Data.DataRow.RowError%2A> en cada fila.</span><span class="sxs-lookup"><span data-stu-id="88fb4-104">The <xref:System.Data.DataRow> object provides a <xref:System.Data.DataRow.RowError%2A> property on each row for this purpose.</span></span> <span data-ttu-id="88fb4-105">Agregar datos a la **RowError** propiedad de un **DataRow** establece la <xref:System.Data.DataRow.HasErrors%2A> propiedad de la **DataRow** a **true**.</span><span class="sxs-lookup"><span data-stu-id="88fb4-105">Adding data to the **RowError** property of a **DataRow** sets the <xref:System.Data.DataRow.HasErrors%2A> property of the **DataRow** to **true**.</span></span> <span data-ttu-id="88fb4-106">Si el **DataRow** forma parte de un **DataTable**, y **DataRow.HasErrors** es **true**, el **DataTable.HasErrors** propiedad también es **true**.</span><span class="sxs-lookup"><span data-stu-id="88fb4-106">If the **DataRow** is part of a **DataTable**, and **DataRow.HasErrors** is **true**, the **DataTable.HasErrors** property is also **true**.</span></span> <span data-ttu-id="88fb4-107">Esto se aplica también a la **conjunto de datos** a la que el **DataTable** pertenece.</span><span class="sxs-lookup"><span data-stu-id="88fb4-107">This applies as well to the **DataSet** to which the **DataTable** belongs.</span></span> <span data-ttu-id="88fb4-108">Al probar si hay errores, puede comprobar la **HasErrors** propiedad para determinar si se ha agregado información de error a alguna fila.</span><span class="sxs-lookup"><span data-stu-id="88fb4-108">When testing for errors, you can check the **HasErrors** property to determine if error information has been added to any rows.</span></span> <span data-ttu-id="88fb4-109">Si **HasErrors** es **true**, puede usar el <xref:System.Data.DataTable.GetErrors%2A> método de la **DataTable** para obtener y examinar sólo las filas con errores, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="88fb4-109">If **HasErrors** is **true**, you can use the <xref:System.Data.DataTable.GetErrors%2A> method of the **DataTable** to return and examine only the rows with errors, as shown in the following example.</span></span>  
+# <a name="row-error-information"></a><span data-ttu-id="ef2df-102">Información de error de fila</span><span class="sxs-lookup"><span data-stu-id="ef2df-102">Row Error Information</span></span>
+<span data-ttu-id="ef2df-103">Para evitar responder a errores de fila durante la edición de valores en una <xref:System.Data.DataTable>, puede agregar la información de error a la fila para utilizarla más adelante.</span><span class="sxs-lookup"><span data-stu-id="ef2df-103">To avoid having to respond to row errors while editing values in a <xref:System.Data.DataTable>, you can add the error information to the row for later use.</span></span> <span data-ttu-id="ef2df-104">Para ello, el objeto <xref:System.Data.DataRow> proporciona una propiedad <xref:System.Data.DataRow.RowError%2A> en cada fila.</span><span class="sxs-lookup"><span data-stu-id="ef2df-104">The <xref:System.Data.DataRow> object provides a <xref:System.Data.DataRow.RowError%2A> property on each row for this purpose.</span></span> <span data-ttu-id="ef2df-105">Agregar datos a la **RowError** propiedad de un **DataRow** establece la <xref:System.Data.DataRow.HasErrors%2A> propiedad de la **DataRow** a **true**.</span><span class="sxs-lookup"><span data-stu-id="ef2df-105">Adding data to the **RowError** property of a **DataRow** sets the <xref:System.Data.DataRow.HasErrors%2A> property of the **DataRow** to **true**.</span></span> <span data-ttu-id="ef2df-106">Si el **DataRow** forma parte de un **DataTable**, y **DataRow.HasErrors** es **true**, el **DataTable.HasErrors** propiedad también es **true**.</span><span class="sxs-lookup"><span data-stu-id="ef2df-106">If the **DataRow** is part of a **DataTable**, and **DataRow.HasErrors** is **true**, the **DataTable.HasErrors** property is also **true**.</span></span> <span data-ttu-id="ef2df-107">Esto se aplica también a la **conjunto de datos** a la que el **DataTable** pertenece.</span><span class="sxs-lookup"><span data-stu-id="ef2df-107">This applies as well to the **DataSet** to which the **DataTable** belongs.</span></span> <span data-ttu-id="ef2df-108">Al probar si hay errores, puede comprobar la **HasErrors** propiedad para determinar si se ha agregado información de error a alguna fila.</span><span class="sxs-lookup"><span data-stu-id="ef2df-108">When testing for errors, you can check the **HasErrors** property to determine if error information has been added to any rows.</span></span> <span data-ttu-id="ef2df-109">Si **HasErrors** es **true**, puede usar el <xref:System.Data.DataTable.GetErrors%2A> método de la **DataTable** para obtener y examinar sólo las filas con errores, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="ef2df-109">If **HasErrors** is **true**, you can use the <xref:System.Data.DataTable.GetErrors%2A> method of the **DataTable** to return and examine only the rows with errors, as shown in the following example.</span></span>  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -88,9 +76,9 @@ protected static void OnRowChanged(
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="88fb4-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="88fb4-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ef2df-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="ef2df-110">See Also</span></span>  
  <xref:System.Data.DataColumnCollection>  
  <xref:System.Data.DataRow>  
  <xref:System.Data.DataTable>  
- [<span data-ttu-id="88fb4-111">Manipulación de datos en un objeto DataTable</span><span class="sxs-lookup"><span data-stu-id="88fb4-111">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [<span data-ttu-id="88fb4-112">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="88fb4-112">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="ef2df-111">Manipulación de datos en un objeto DataTable</span><span class="sxs-lookup"><span data-stu-id="ef2df-111">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [<span data-ttu-id="ef2df-112">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="ef2df-112">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

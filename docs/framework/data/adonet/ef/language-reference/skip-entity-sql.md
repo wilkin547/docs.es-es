@@ -1,53 +1,41 @@
 ---
 title: SKIP (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0dd0754158000642dd078f00033c9ddc2f78686d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3b63ca6ade93331b9d1c3ef3e8de15ed520864dc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="skip-entity-sql"></a><span data-ttu-id="37900-102">SKIP (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="37900-102">SKIP (Entity SQL)</span></span>
-<span data-ttu-id="37900-103">Puede realizar la paginación física utilizando la subcláusula SKIP en la cláusula ORDER BY.</span><span class="sxs-lookup"><span data-stu-id="37900-103">You can perform physical paging by using the SKIP sub-clause in the ORDER BY clause.</span></span> <span data-ttu-id="37900-104">SKIP no se puede utilizar por separado de la cláusula ORDER BY.</span><span class="sxs-lookup"><span data-stu-id="37900-104">SKIP cannot be used separately from the ORDER BY clause.</span></span>  
+# <a name="skip-entity-sql"></a><span data-ttu-id="5a3c9-102">SKIP (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="5a3c9-102">SKIP (Entity SQL)</span></span>
+<span data-ttu-id="5a3c9-103">Puede realizar la paginación física utilizando la subcláusula SKIP en la cláusula ORDER BY.</span><span class="sxs-lookup"><span data-stu-id="5a3c9-103">You can perform physical paging by using the SKIP sub-clause in the ORDER BY clause.</span></span> <span data-ttu-id="5a3c9-104">SKIP no se puede utilizar por separado de la cláusula ORDER BY.</span><span class="sxs-lookup"><span data-stu-id="5a3c9-104">SKIP cannot be used separately from the ORDER BY clause.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37900-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="37900-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a3c9-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5a3c9-105">Syntax</span></span>  
   
 ```  
 [ SKIP n ]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="37900-106">Argumentos</span><span class="sxs-lookup"><span data-stu-id="37900-106">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="5a3c9-106">Argumentos</span><span class="sxs-lookup"><span data-stu-id="5a3c9-106">Arguments</span></span>  
  `n`  
- <span data-ttu-id="37900-107">Número de elementos que se han de omitir.</span><span class="sxs-lookup"><span data-stu-id="37900-107">The number of items to skip.</span></span>  
+ <span data-ttu-id="5a3c9-107">Número de elementos que se han de omitir.</span><span class="sxs-lookup"><span data-stu-id="5a3c9-107">The number of items to skip.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="37900-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="37900-108">Remarks</span></span>  
- <span data-ttu-id="37900-109">Si en una cláusula ORDER BY hay una subcláusula de expresión SKIP, los resultados se ordenarán en función de la especificación de clasificación, y el conjunto de resultados incluirá filas a partir de la situada inmediatamente después de la expresión SKIP.</span><span class="sxs-lookup"><span data-stu-id="37900-109">If a SKIP expression sub-clause is present in an ORDER BY clause, the results will be sorted according the sort specification and the result set will include rows starting from the next row immediately after the SKIP expression.</span></span> <span data-ttu-id="37900-110">Por ejemplo, SKIP 5 omitirá las cinco primeras filas y devolverá a partir de la sexta.</span><span class="sxs-lookup"><span data-stu-id="37900-110">For example, SKIP 5 will skip the first five rows and return from the sixth row forward.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="37900-111">Una consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se no es válida si tanto el modificador TOP como la subcláusula SKIP están presentes en la misma expresión de consulta.</span><span class="sxs-lookup"><span data-stu-id="37900-111">An [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query is invalid if both the TOP modifier and the SKIP sub-clause are present in the same query expression.</span></span> <span data-ttu-id="37900-112">La consulta se debe volver a escribir cambiando la expresión TOP a la expresión LIMIT.</span><span class="sxs-lookup"><span data-stu-id="37900-112">The query should be rewritten by changing the TOP expression to the LIMIT expression.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5a3c9-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5a3c9-108">Remarks</span></span>  
+ <span data-ttu-id="5a3c9-109">Si en una cláusula ORDER BY hay una subcláusula de expresión SKIP, los resultados se ordenarán en función de la especificación de clasificación, y el conjunto de resultados incluirá filas a partir de la situada inmediatamente después de la expresión SKIP.</span><span class="sxs-lookup"><span data-stu-id="5a3c9-109">If a SKIP expression sub-clause is present in an ORDER BY clause, the results will be sorted according the sort specification and the result set will include rows starting from the next row immediately after the SKIP expression.</span></span> <span data-ttu-id="5a3c9-110">Por ejemplo, SKIP 5 omitirá las cinco primeras filas y devolverá a partir de la sexta.</span><span class="sxs-lookup"><span data-stu-id="5a3c9-110">For example, SKIP 5 will skip the first five rows and return from the sixth row forward.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="37900-113">En [!INCLUDE[ssVersion2000](../../../../../../includes/ssversion2000-md.md)], el uso de SKIP con ORDER BY en columnas sin clave puede hacer que los resultados devueltos sean incorrectos.</span><span class="sxs-lookup"><span data-stu-id="37900-113">In [!INCLUDE[ssVersion2000](../../../../../../includes/ssversion2000-md.md)], using SKIP with ORDER BY on non-key columns might return incorrect results.</span></span> <span data-ttu-id="37900-114">Se puede omitir un número superior al número especificado de filas si la columna sin clave tiene datos duplicados en ella.</span><span class="sxs-lookup"><span data-stu-id="37900-114">More than the specified number of rows might be skipped if the non-key column has duplicate data in it.</span></span> <span data-ttu-id="37900-115">Esto se debe a cómo se convierte SKIP en [!INCLUDE[ssVersion2000](../../../../../../includes/ssversion2000-md.md)].</span><span class="sxs-lookup"><span data-stu-id="37900-115">This is due to how SKIP is translated for [!INCLUDE[ssVersion2000](../../../../../../includes/ssversion2000-md.md)].</span></span> <span data-ttu-id="37900-116">Por ejemplo, en el código siguiente se pueden omitir más de cinco filas si `E.NonKeyColumn` tiene valores duplicados:</span><span class="sxs-lookup"><span data-stu-id="37900-116">For example, in the following code more than five rows might be skipped if `E.NonKeyColumn` has duplicate values:</span></span>  
+>  <span data-ttu-id="5a3c9-111">Una consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se no es válida si tanto el modificador TOP como la subcláusula SKIP están presentes en la misma expresión de consulta.</span><span class="sxs-lookup"><span data-stu-id="5a3c9-111">An [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query is invalid if both the TOP modifier and the SKIP sub-clause are present in the same query expression.</span></span> <span data-ttu-id="5a3c9-112">La consulta se debe volver a escribir cambiando la expresión TOP a la expresión LIMIT.</span><span class="sxs-lookup"><span data-stu-id="5a3c9-112">The query should be rewritten by changing the TOP expression to the LIMIT expression.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="5a3c9-113">En [!INCLUDE[ssVersion2000](../../../../../../includes/ssversion2000-md.md)], el uso de SKIP con ORDER BY en columnas sin clave puede hacer que los resultados devueltos sean incorrectos.</span><span class="sxs-lookup"><span data-stu-id="5a3c9-113">In [!INCLUDE[ssVersion2000](../../../../../../includes/ssversion2000-md.md)], using SKIP with ORDER BY on non-key columns might return incorrect results.</span></span> <span data-ttu-id="5a3c9-114">Se puede omitir un número superior al número especificado de filas si la columna sin clave tiene datos duplicados en ella.</span><span class="sxs-lookup"><span data-stu-id="5a3c9-114">More than the specified number of rows might be skipped if the non-key column has duplicate data in it.</span></span> <span data-ttu-id="5a3c9-115">Esto se debe a cómo se convierte SKIP en [!INCLUDE[ssVersion2000](../../../../../../includes/ssversion2000-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5a3c9-115">This is due to how SKIP is translated for [!INCLUDE[ssVersion2000](../../../../../../includes/ssversion2000-md.md)].</span></span> <span data-ttu-id="5a3c9-116">Por ejemplo, en el código siguiente se pueden omitir más de cinco filas si `E.NonKeyColumn` tiene valores duplicados:</span><span class="sxs-lookup"><span data-stu-id="5a3c9-116">For example, in the following code more than five rows might be skipped if `E.NonKeyColumn` has duplicate values:</span></span>  
 >   
 >  `SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L`  
   
- <span data-ttu-id="37900-117">La consulta de  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] en [este](https://msdn.microsoft.com/library/bb738702\(v=vs.100\).aspx#_ESQL) ejemplo, usa el operador ORDER BY con SKIP para especificar el criterio de ordenación que se usa en los objetos devueltos en una instrucción SELECT.</span><span class="sxs-lookup"><span data-stu-id="37900-117">The  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query in [this](https://msdn.microsoft.com/library/bb738702\(v=vs.100\).aspx#_ESQL) example uses the ORDER BY operator with SKIP to specify the sort order used on objects returned in a SELECT statement.</span></span>  
+ <span data-ttu-id="5a3c9-117">La consulta de  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] en [este](https://msdn.microsoft.com/library/bb738702\(v=vs.100\).aspx#_ESQL) ejemplo, usa el operador ORDER BY con SKIP para especificar el criterio de ordenación que se usa en los objetos devueltos en una instrucción SELECT.</span><span class="sxs-lookup"><span data-stu-id="5a3c9-117">The  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query in [this](https://msdn.microsoft.com/library/bb738702\(v=vs.100\).aspx#_ESQL) example uses the ORDER BY operator with SKIP to specify the sort order used on objects returned in a SELECT statement.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37900-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="37900-118">See Also</span></span>  
- [<span data-ttu-id="37900-119">ORDER BY</span><span class="sxs-lookup"><span data-stu-id="37900-119">ORDER BY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)  
- [<span data-ttu-id="37900-120">Cómo: resultados de la página a través de consulta</span><span class="sxs-lookup"><span data-stu-id="37900-120">How to: Page Through Query Results</span></span>](http://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
- [<span data-ttu-id="37900-121">Paginación</span><span class="sxs-lookup"><span data-stu-id="37900-121">Paging</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)  
- [<span data-ttu-id="37900-122">TOP</span><span class="sxs-lookup"><span data-stu-id="37900-122">TOP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+## <a name="see-also"></a><span data-ttu-id="5a3c9-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="5a3c9-118">See Also</span></span>  
+ [<span data-ttu-id="5a3c9-119">ORDER BY</span><span class="sxs-lookup"><span data-stu-id="5a3c9-119">ORDER BY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)  
+ [<span data-ttu-id="5a3c9-120">Cómo: resultados de la página a través de consulta</span><span class="sxs-lookup"><span data-stu-id="5a3c9-120">How to: Page Through Query Results</span></span>](http://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
+ [<span data-ttu-id="5a3c9-121">Paginación</span><span class="sxs-lookup"><span data-stu-id="5a3c9-121">Paging</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)  
+ [<span data-ttu-id="5a3c9-122">TOP</span><span class="sxs-lookup"><span data-stu-id="5a3c9-122">TOP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

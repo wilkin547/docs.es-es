@@ -1,13 +1,6 @@
 ---
-title: "Asignar identificadores de objeto a algoritmos de criptografía"
-ms.custom: 
+title: Asignar identificadores de objeto a algoritmos de criptografía
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - digital signatures
 - identifiers, mapping object identifiers
@@ -15,19 +8,17 @@ helpviewer_keywords:
 - mapping object identifiers
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: bcde53450e3656ec958898864bb7d7200a4b03e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7801c55cf6b3334347788013d9052038d5d2f3ec
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="mapping-object-identifiers-to-cryptography-algorithms"></a><span data-ttu-id="74798-102">Asignar identificadores de objeto a algoritmos de criptografía</span><span class="sxs-lookup"><span data-stu-id="74798-102">Mapping Object Identifiers to Cryptography Algorithms</span></span>
-<span data-ttu-id="74798-103">Las firmas digitales garantizan que los datos no se manipulación con cuando se envía desde un programa a otro.</span><span class="sxs-lookup"><span data-stu-id="74798-103">Digital signatures ensure that data is not tampered with when it is sent from one program to another.</span></span> <span data-ttu-id="74798-104">Normalmente, la firma digital se calcula aplicando una función matemática al hash de los datos debe estar firmado.</span><span class="sxs-lookup"><span data-stu-id="74798-104">Typically the digital signature is computed by applying a mathematical function to the hash of the data to be signed.</span></span> <span data-ttu-id="74798-105">Al dar formato a un valor hash que se va a firmar, algunos algoritmos de firma digital anexar ASN.1 identificador del objeto (OID) como parte de la operación de formato.</span><span class="sxs-lookup"><span data-stu-id="74798-105">When formatting a hash value to be signed, some digital signature algorithms append an ASN.1 Object Identifier (OID) as part of the formatting operation.</span></span> <span data-ttu-id="74798-106">El OID identifica el algoritmo que se usó para calcular el hash.</span><span class="sxs-lookup"><span data-stu-id="74798-106">The OID identifies the algorithm that was used to compute the hash.</span></span> <span data-ttu-id="74798-107">Puede asignar algoritmos a identificadores de objeto para extender el mecanismo de criptografía para usar algoritmos personalizados.</span><span class="sxs-lookup"><span data-stu-id="74798-107">You can map algorithms to object identifiers to extend the cryptography mechanism to use custom algorithms.</span></span> <span data-ttu-id="74798-108">En el ejemplo siguiente se muestra cómo asignar un identificador de objeto a un nuevo algoritmo de hash.</span><span class="sxs-lookup"><span data-stu-id="74798-108">The following example shows how to map an object identifier to a new hash algorithm.</span></span>  
+# <a name="mapping-object-identifiers-to-cryptography-algorithms"></a><span data-ttu-id="6e708-102">Asignar identificadores de objeto a algoritmos de criptografía</span><span class="sxs-lookup"><span data-stu-id="6e708-102">Mapping Object Identifiers to Cryptography Algorithms</span></span>
+<span data-ttu-id="6e708-103">Las firmas digitales garantizan que los datos no se manipulación con cuando se envía desde un programa a otro.</span><span class="sxs-lookup"><span data-stu-id="6e708-103">Digital signatures ensure that data is not tampered with when it is sent from one program to another.</span></span> <span data-ttu-id="6e708-104">Normalmente, la firma digital se calcula aplicando una función matemática al hash de los datos debe estar firmado.</span><span class="sxs-lookup"><span data-stu-id="6e708-104">Typically the digital signature is computed by applying a mathematical function to the hash of the data to be signed.</span></span> <span data-ttu-id="6e708-105">Al dar formato a un valor hash que se va a firmar, algunos algoritmos de firma digital anexar ASN.1 identificador del objeto (OID) como parte de la operación de formato.</span><span class="sxs-lookup"><span data-stu-id="6e708-105">When formatting a hash value to be signed, some digital signature algorithms append an ASN.1 Object Identifier (OID) as part of the formatting operation.</span></span> <span data-ttu-id="6e708-106">El OID identifica el algoritmo que se usó para calcular el hash.</span><span class="sxs-lookup"><span data-stu-id="6e708-106">The OID identifies the algorithm that was used to compute the hash.</span></span> <span data-ttu-id="6e708-107">Puede asignar algoritmos a identificadores de objeto para extender el mecanismo de criptografía para usar algoritmos personalizados.</span><span class="sxs-lookup"><span data-stu-id="6e708-107">You can map algorithms to object identifiers to extend the cryptography mechanism to use custom algorithms.</span></span> <span data-ttu-id="6e708-108">En el ejemplo siguiente se muestra cómo asignar un identificador de objeto a un nuevo algoritmo de hash.</span><span class="sxs-lookup"><span data-stu-id="6e708-108">The following example shows how to map an object identifier to a new hash algorithm.</span></span>  
   
 ```xml  
 <configuration>  
@@ -49,8 +40,8 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- <span data-ttu-id="74798-109">El [ \<oidEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contiene dos atributos.</span><span class="sxs-lookup"><span data-stu-id="74798-109">The [\<oidEntry> element](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contains two attributes.</span></span> <span data-ttu-id="74798-110">El **OID** atributo es el número de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="74798-110">The **OID** attribute is the object identifier number.</span></span> <span data-ttu-id="74798-111">El **nombre** atributo es el valor de la **nombre** de atributo de la [ \<nameEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).</span><span class="sxs-lookup"><span data-stu-id="74798-111">The **name** attribute is the value of the **name** attribute from the [\<nameEntry> element](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).</span></span> <span data-ttu-id="74798-112">Debe haber una asignación de un nombre de algoritmo a una clase antes de que se puede asignar un identificador de objeto a un nombre simple.</span><span class="sxs-lookup"><span data-stu-id="74798-112">There must be a mapping from an algorithm name to a class before an object identifier can be mapped to a simple name.</span></span>  
+ <span data-ttu-id="6e708-109">El [ \<oidEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contiene dos atributos.</span><span class="sxs-lookup"><span data-stu-id="6e708-109">The [\<oidEntry> element](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contains two attributes.</span></span> <span data-ttu-id="6e708-110">El **OID** atributo es el número de identificador de objeto.</span><span class="sxs-lookup"><span data-stu-id="6e708-110">The **OID** attribute is the object identifier number.</span></span> <span data-ttu-id="6e708-111">El **nombre** atributo es el valor de la **nombre** de atributo de la [ \<nameEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).</span><span class="sxs-lookup"><span data-stu-id="6e708-111">The **name** attribute is the value of the **name** attribute from the [\<nameEntry> element](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).</span></span> <span data-ttu-id="6e708-112">Debe haber una asignación de un nombre de algoritmo a una clase antes de que se puede asignar un identificador de objeto a un nombre simple.</span><span class="sxs-lookup"><span data-stu-id="6e708-112">There must be a mapping from an algorithm name to a class before an object identifier can be mapped to a simple name.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74798-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="74798-113">See Also</span></span>  
- [<span data-ttu-id="74798-114">Configurar clases de criptografía</span><span class="sxs-lookup"><span data-stu-id="74798-114">Configuring Cryptography Classes</span></span>](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [<span data-ttu-id="74798-115">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="74798-115">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a><span data-ttu-id="6e708-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="6e708-113">See Also</span></span>  
+ [<span data-ttu-id="6e708-114">Configurar clases de criptografía</span><span class="sxs-lookup"><span data-stu-id="6e708-114">Configuring Cryptography Classes</span></span>](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [<span data-ttu-id="6e708-115">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="6e708-115">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)

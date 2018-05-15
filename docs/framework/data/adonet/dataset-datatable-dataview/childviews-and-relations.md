@@ -1,30 +1,18 @@
 ---
 title: Objetos ChildView y Relation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b42cd2e825e6d5ab9470bc0cc264b7cd98a1f1ce
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e55e28fd3acdb145e03f0916e3681e95cc7a041a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="childviews-and-relations"></a><span data-ttu-id="3875d-102">Objetos ChildView y Relation</span><span class="sxs-lookup"><span data-stu-id="3875d-102">ChildViews and Relations</span></span>
-<span data-ttu-id="3875d-103">Si existe una relación entre tablas de un <xref:System.Data.DataSet>, puede crear una <xref:System.Data.DataView> que contenga filas de la tabla secundaria relacionada mediante el método <xref:System.Data.DataRowView.CreateChildView%2A> de la <xref:System.Data.DataRowView> para las filas de la tabla primaria.</span><span class="sxs-lookup"><span data-stu-id="3875d-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="3875d-104">Por ejemplo, el código siguiente muestra **categorías** y sus relacionados **productos** en orden alfabético por **CategoryName** y **ProductName** .</span><span class="sxs-lookup"><span data-stu-id="3875d-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
+# <a name="childviews-and-relations"></a><span data-ttu-id="5dfd3-102">Objetos ChildView y Relation</span><span class="sxs-lookup"><span data-stu-id="5dfd3-102">ChildViews and Relations</span></span>
+<span data-ttu-id="5dfd3-103">Si existe una relación entre tablas de un <xref:System.Data.DataSet>, puede crear una <xref:System.Data.DataView> que contenga filas de la tabla secundaria relacionada mediante el método <xref:System.Data.DataRowView.CreateChildView%2A> de la <xref:System.Data.DataRowView> para las filas de la tabla primaria.</span><span class="sxs-lookup"><span data-stu-id="5dfd3-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="5dfd3-104">Por ejemplo, el código siguiente muestra **categorías** y sus relacionados **productos** en orden alfabético por **CategoryName** y **ProductName** .</span><span class="sxs-lookup"><span data-stu-id="5dfd3-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -84,9 +72,9 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3875d-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="3875d-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5dfd3-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="5dfd3-105">See Also</span></span>  
  <xref:System.Data.DataSet>  
  <xref:System.Data.DataView>  
  <xref:System.Data.DataRowView>  
- [<span data-ttu-id="3875d-106">Objetos DataView</span><span class="sxs-lookup"><span data-stu-id="3875d-106">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [<span data-ttu-id="3875d-107">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="3875d-107">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="5dfd3-106">Objetos DataView</span><span class="sxs-lookup"><span data-stu-id="5dfd3-106">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="5dfd3-107">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="5dfd3-107">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

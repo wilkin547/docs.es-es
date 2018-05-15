@@ -1,6 +1,6 @@
 ---
 title: fixed (Instrucción, Referencia de C#)
-ms.date: 07/20/2015
+ms.date: 04/20/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -10,53 +10,70 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.assetid: 7ea6db08-ad49-4a7a-b934-d8c4acad1c3a
-caps.latest.revision: 24
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 13633e71c863b075eede41c9a18419d65350bdb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5dd117461f792ec7a10b740fbad277de52d05623
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="fixed-statement-c-reference"></a><span data-ttu-id="53662-102">fixed (Instrucción, Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="53662-102">fixed Statement (C# Reference)</span></span>
-<span data-ttu-id="53662-103">La instrucción `fixed` evita que el recolector de elementos no utilizados reubique una variable móvil.</span><span class="sxs-lookup"><span data-stu-id="53662-103">The `fixed` statement prevents the garbage collector from relocating a movable variable.</span></span> <span data-ttu-id="53662-104">La instrucción `fixed` solo se permite en un contexto de [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="53662-104">The `fixed` statement is only permitted in an [unsafe](../../../csharp/language-reference/keywords/unsafe.md) context.</span></span> <span data-ttu-id="53662-105">`Fixed` también puede usarse para crear [búferes de tamaño fijo](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md).</span><span class="sxs-lookup"><span data-stu-id="53662-105">`Fixed` can also be used to create [fixed size buffers](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md).</span></span>  
-  
- <span data-ttu-id="53662-106">La instrucción `fixed` establece un puntero a una variable administrada y "ancla" esa variable durante su ejecución.</span><span class="sxs-lookup"><span data-stu-id="53662-106">The `fixed` statement sets a pointer to a managed variable and "pins" that variable during the execution of the statement.</span></span> <span data-ttu-id="53662-107">Sin `fixed`, los punteros a variables administradas móviles serían de poca utilidad, puesto que la recolección de elementos no utilizados podría reubicar las variables de forma impredecible.</span><span class="sxs-lookup"><span data-stu-id="53662-107">Without `fixed`, pointers to movable managed variables would be of little use since garbage collection could relocate the variables unpredictably.</span></span> <span data-ttu-id="53662-108">El compilador de C# solo permite asignar un puntero a una variable administrada en una instrucción `fixed`.</span><span class="sxs-lookup"><span data-stu-id="53662-108">The C# compiler only lets you assign a pointer to a managed variable in a `fixed` statement.</span></span>  
-  
- [!code-csharp[csrefKeywordsFixedLock#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_1.cs)]  
-  
- <span data-ttu-id="53662-109">Puede inicializar un puntero mediante una matriz, una cadena, un búfer de tamaño fijo o la dirección de una variable.</span><span class="sxs-lookup"><span data-stu-id="53662-109">You can initialize a pointer by using an array, a string, a fixed-size buffer, or the address of a variable.</span></span> <span data-ttu-id="53662-110">En el ejemplo siguiente se muestra el uso de direcciones, matrices y cadenas de variables.</span><span class="sxs-lookup"><span data-stu-id="53662-110">The following example illustrates the use of variable addresses, arrays, and strings.</span></span> <span data-ttu-id="53662-111">Para obtener más información sobre los búferes de tamaño fijo, consulte [Fixed Size Buffers](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md) (Búferes de tamaño fijo).</span><span class="sxs-lookup"><span data-stu-id="53662-111">For more information about fixed-size buffers, see [Fixed Size Buffers](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md).</span></span>  
-  
- [!code-csharp[csrefKeywordsFixedLock#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_2.cs)]  
-  
- <span data-ttu-id="53662-112">Puede inicializar varios punteros, siempre que sean del mismo tipo.</span><span class="sxs-lookup"><span data-stu-id="53662-112">You can initialize multiple pointers, as long as they are all of the same type.</span></span>  
-  
+# <a name="fixed-statement-c-reference"></a><span data-ttu-id="9bf01-102">fixed (Instrucción, Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="9bf01-102">fixed Statement (C# Reference)</span></span>
+
+<span data-ttu-id="9bf01-103">La instrucción `fixed` evita que el recolector de elementos no utilizados reubique una variable móvil.</span><span class="sxs-lookup"><span data-stu-id="9bf01-103">The `fixed` statement prevents the garbage collector from relocating a movable variable.</span></span> <span data-ttu-id="9bf01-104">La instrucción `fixed` solo se permite en un contexto de [unsafe](unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="9bf01-104">The `fixed` statement is only permitted in an [unsafe](unsafe.md) context.</span></span> <span data-ttu-id="9bf01-105">`Fixed` también puede usarse para crear [búferes de tamaño fijo](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).</span><span class="sxs-lookup"><span data-stu-id="9bf01-105">`Fixed` can also be used to create [fixed size buffers](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).</span></span>
+
+<span data-ttu-id="9bf01-106">La instrucción `fixed` establece un puntero a una variable administrada y "ancla" esa variable durante su ejecución.</span><span class="sxs-lookup"><span data-stu-id="9bf01-106">The `fixed` statement sets a pointer to a managed variable and "pins" that variable during the execution of the statement.</span></span> <span data-ttu-id="9bf01-107">Los punteros a variables administradas móviles solo son útiles en un contexto `fixed`.</span><span class="sxs-lookup"><span data-stu-id="9bf01-107">Pointers to movable managed variables are useful only in a `fixed` context.</span></span> <span data-ttu-id="9bf01-108">Sin un contexto `fixed`, la recolección de elementos no utilizados podría reubicar las variables de forma impredecible.</span><span class="sxs-lookup"><span data-stu-id="9bf01-108">Without a `fixed` context, garbage collection could relocate the variables unpredictably.</span></span> <span data-ttu-id="9bf01-109">El compilador de C# solo permite asignar un puntero a una variable administrada en una instrucción `fixed`.</span><span class="sxs-lookup"><span data-stu-id="9bf01-109">The C# compiler only lets you assign a pointer to a managed variable in a `fixed` statement.</span></span>
+
+[!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#1)]
+
+<span data-ttu-id="9bf01-110">Puede inicializar un puntero mediante una matriz, una cadena, un búfer de tamaño fijo o la dirección de una variable.</span><span class="sxs-lookup"><span data-stu-id="9bf01-110">You can initialize a pointer by using an array, a string, a fixed-size buffer, or the address of a variable.</span></span> <span data-ttu-id="9bf01-111">En el ejemplo siguiente se muestra el uso de direcciones, matrices y cadenas de variables.</span><span class="sxs-lookup"><span data-stu-id="9bf01-111">The following example illustrates the use of variable addresses, arrays, and strings.</span></span> <span data-ttu-id="9bf01-112">Para obtener más información sobre los búferes de tamaño fijo, consulte [Fixed Size Buffers](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md) (Búferes de tamaño fijo).</span><span class="sxs-lookup"><span data-stu-id="9bf01-112">For more information about fixed-size buffers, see [Fixed Size Buffers](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).</span></span>
+
+[!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
+
+<span data-ttu-id="9bf01-113">Es posible inicializar varios punteros en una sola instrucción si todos son del mismo tipo:</span><span class="sxs-lookup"><span data-stu-id="9bf01-113">Multiple pointers can be initialized in one statement if they are all the same type:</span></span>
+
 ```csharp
-fixed (byte* ps = srcarray, pd = dstarray) {...}  
+fixed (byte* ps = srcarray, pd = dstarray) {...}
 ```
-  
- <span data-ttu-id="53662-113">Para inicializar punteros de tipos diferentes, simplemente anide instrucciones `fixed`, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="53662-113">To initialize pointers of different types, simply nest `fixed` statements, as shown in the following example.</span></span>  
-  
- [!code-csharp[csrefKeywordsFixedLock#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_3.cs)]  
-  
- <span data-ttu-id="53662-114">Después de ejecutar el código de la instrucción, las variables ancladas se desanclan y quedan sujetas a la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="53662-114">After the code in the statement is executed, any pinned variables are unpinned and subject to garbage collection.</span></span> <span data-ttu-id="53662-115">Por lo tanto, no debe apuntar a esas variables fuera de la instrucción `fixed`.</span><span class="sxs-lookup"><span data-stu-id="53662-115">Therefore, do not point to those variables outside the `fixed` statement.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="53662-116">Los punteros inicializados en instrucciones fijas no pueden modificarse.</span><span class="sxs-lookup"><span data-stu-id="53662-116">Pointers initialized in fixed statements cannot be modified.</span></span>  
-  
- <span data-ttu-id="53662-117">En el modo no seguro, puede asignar memoria en la pila, en la que no está sujeta a la recolección de elementos no utilizados y, por tanto, no necesita anclarse.</span><span class="sxs-lookup"><span data-stu-id="53662-117">In unsafe mode, you can allocate memory on the stack, where it is not subject to garbage collection and therefore does not need to be pinned.</span></span> <span data-ttu-id="53662-118">Para obtener más información, consulte [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md).</span><span class="sxs-lookup"><span data-stu-id="53662-118">For more information, see [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="53662-119">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="53662-119">Example</span></span>  
- [!code-csharp[csrefKeywordsFixedLock#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_4.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="53662-120">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="53662-120">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="53662-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="53662-121">See Also</span></span>  
- [<span data-ttu-id="53662-122">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="53662-122">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="53662-123">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="53662-123">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="53662-124">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="53662-124">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="53662-125">unsafe</span><span class="sxs-lookup"><span data-stu-id="53662-125">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
- [<span data-ttu-id="53662-126">Búferes de tamaño fijo</span><span class="sxs-lookup"><span data-stu-id="53662-126">Fixed Size Buffers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+
+<span data-ttu-id="9bf01-114">Para inicializar punteros de tipos diferentes, simplemente anide instrucciones `fixed`, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="9bf01-114">To initialize pointers of different types, simply nest `fixed` statements, as shown in the following example.</span></span>
+
+[!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#3)]
+
+<span data-ttu-id="9bf01-115">Después de ejecutar el código de la instrucción, las variables ancladas se desanclan y quedan sujetas a la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="9bf01-115">After the code in the statement is executed, any pinned variables are unpinned and subject to garbage collection.</span></span> <span data-ttu-id="9bf01-116">Por lo tanto, no debe apuntar a esas variables fuera de la instrucción `fixed`.</span><span class="sxs-lookup"><span data-stu-id="9bf01-116">Therefore, do not point to those variables outside the `fixed` statement.</span></span> <span data-ttu-id="9bf01-117">Las variables declaradas en la instrucción `fixed` se limitan a dicha instrucción, lo que simplifica esta tarea:</span><span class="sxs-lookup"><span data-stu-id="9bf01-117">The variables declared in the `fixed` statement are scoped to that statement, making this easier:</span></span>
+
+```csharp
+fixed (byte* ps = srcarray, pd = dstarray)
+{
+   ...
+}
+// ps and pd are no longer in scope here.
+```
+
+<span data-ttu-id="9bf01-118">Los punteros inicializados en instrucciones `fixed` son variables de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="9bf01-118">Pointers initialized in `fixed` statements are readonly variables.</span></span> <span data-ttu-id="9bf01-119">Si quiere modificar el valor del puntero, debe declarar una segunda variable de puntero y modificarla.</span><span class="sxs-lookup"><span data-stu-id="9bf01-119">If you want to modify the pointer value, you must declare a second pointer variable, and modify that.</span></span> <span data-ttu-id="9bf01-120">La variable declarada en la instrucción `fixed` no se puede modificar:</span><span class="sxs-lookup"><span data-stu-id="9bf01-120">The variable declared in the `fixed` statement cannot be modified:</span></span>
+
+```csharp
+fixed (byte* ps = srcarray, pd = dstarray)
+{
+    byte* pSourceCopy = ps;
+    pSourceCopy++; // point to the next element.
+    ps++; // invalid: cannot modify ps, as it is declared in the fixed statement.
+}
+```
+
+
+<span data-ttu-id="9bf01-121">En el modo no seguro, puede asignar memoria en la pila, en la que no está sujeta a la recolección de elementos no utilizados y, por tanto, no necesita anclarse.</span><span class="sxs-lookup"><span data-stu-id="9bf01-121">In unsafe mode, you can allocate memory on the stack, where it is not subject to garbage collection and therefore does not need to be pinned.</span></span> <span data-ttu-id="9bf01-122">Para obtener más información, consulte [stackalloc](stackalloc.md).</span><span class="sxs-lookup"><span data-stu-id="9bf01-122">For more information, see [stackalloc](stackalloc.md).</span></span>
+
+[!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#4)]
+
+## <a name="c-language-specification"></a><span data-ttu-id="9bf01-123">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="9bf01-123">C# Language Specification</span></span>
+
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a><span data-ttu-id="9bf01-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="9bf01-124">See Also</span></span>
+
+ [<span data-ttu-id="9bf01-125">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="9bf01-125">C# Reference</span></span>](../index.md)  
+ [<span data-ttu-id="9bf01-126">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="9bf01-126">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+ [<span data-ttu-id="9bf01-127">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="9bf01-127">C# Keywords</span></span>](index.md)  
+ [<span data-ttu-id="9bf01-128">unsafe</span><span class="sxs-lookup"><span data-stu-id="9bf01-128">unsafe</span></span>](unsafe.md)  
+ [<span data-ttu-id="9bf01-129">Búferes de tamaño fijo</span><span class="sxs-lookup"><span data-stu-id="9bf01-129">Fixed Size Buffers</span></span>](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

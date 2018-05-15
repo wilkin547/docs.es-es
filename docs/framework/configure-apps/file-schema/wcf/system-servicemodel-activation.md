@@ -1,30 +1,18 @@
 ---
 title: '&lt;system.serviceModel.activation&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae6fb19fe956d819337c7c06a0c5b58ac70c8327
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d4ad87e9ad9f0bc4cb3c5157666b098dd0b0243
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltsystemservicemodelactivationgt"></a><span data-ttu-id="628f2-102">&lt;system.serviceModel.activation&gt;</span><span class="sxs-lookup"><span data-stu-id="628f2-102">&lt;system.serviceModel.activation&gt;</span></span>
-<span data-ttu-id="628f2-103">Esta sección de configuración representa la configuración de la herramienta SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="628f2-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="628f2-104">Los elementos de configuración se pueden configurar en el archivo SMSvcHost.exe.config.</span><span class="sxs-lookup"><span data-stu-id="628f2-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="628f2-105">Específicamente, incluye todos los valores de equipo que se deben configurar.</span><span class="sxs-lookup"><span data-stu-id="628f2-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
+# <a name="ltsystemservicemodelactivationgt"></a><span data-ttu-id="6b244-102">&lt;system.serviceModel.activation&gt;</span><span class="sxs-lookup"><span data-stu-id="6b244-102">&lt;system.serviceModel.activation&gt;</span></span>
+<span data-ttu-id="6b244-103">Esta sección de configuración representa la configuración de la herramienta SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="6b244-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="6b244-104">Los elementos de configuración se pueden configurar en el archivo SMSvcHost.exe.config.</span><span class="sxs-lookup"><span data-stu-id="6b244-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="6b244-105">Específicamente, incluye todos los valores de equipo que se deben configurar.</span><span class="sxs-lookup"><span data-stu-id="6b244-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
   
-## <a name="sample-configuration-file"></a><span data-ttu-id="628f2-106">Archivo de configuración del ejemplo</span><span class="sxs-lookup"><span data-stu-id="628f2-106">Sample Configuration File</span></span>  
- <span data-ttu-id="628f2-107">A continuación, se muestra un archivo de configuración del ejemplo (SMSvcHost.exe.config), que es utilizado por el proceso de agente de escucha SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="628f2-107">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
+## <a name="sample-configuration-file"></a><span data-ttu-id="6b244-106">Archivo de configuración del ejemplo</span><span class="sxs-lookup"><span data-stu-id="6b244-106">Sample Configuration File</span></span>  
+ <span data-ttu-id="6b244-107">A continuación, se muestra un archivo de configuración del ejemplo (SMSvcHost.exe.config), que es utilizado por el proceso de agente de escucha SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="6b244-107">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
   
 ```xml  
 <configuration>  
@@ -71,5 +59,5 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="628f2-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="628f2-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6b244-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="6b244-108">See Also</span></span>  
  <xref:System.ServiceModel.Activation.Configuration>

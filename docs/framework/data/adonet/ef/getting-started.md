@@ -1,29 +1,17 @@
 ---
-title: "Introducción (Entity Framework)"
-ms.custom: 
+title: Introducción (Entity Framework)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4735a220-3301-4ec4-8833-7209abb7208f
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0796d3523038895ddbd4d1fb6129a0cb6dc0382a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e7b6906e2e08ef812e67f745d65415ccf16c3e50
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="getting-started-entity-framework"></a><span data-ttu-id="3a7ca-102">Introducción (Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="3a7ca-102">Getting Started (Entity Framework)</span></span>
-<span data-ttu-id="3a7ca-103">El [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es compatible con aplicaciones basadas en datos y servicios y proporciona una plataforma para la programación con datos que eleva el nivel de abstracción del nivel lógico relacional al nivel conceptual.</span><span class="sxs-lookup"><span data-stu-id="3a7ca-103">The [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supports data-centric applications and services, and provides a platform for programming against data that raises the level of abstraction from the logical relational level to the conceptual level.</span></span> <span data-ttu-id="3a7ca-104">Permitiendo a los programadores trabajar con datos en un nivel de abstracción superior, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] admite código que es independiente de cualquier motor de almacenamiento de datos o esquema relacional determinados.</span><span class="sxs-lookup"><span data-stu-id="3a7ca-104">By enabling developers to work with data at a greater level of abstraction, the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supports code that is independent of any particular data storage engine or relational schema.</span></span> <span data-ttu-id="3a7ca-105">Para obtener más información, consulte [Introducción a Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md).</span><span class="sxs-lookup"><span data-stu-id="3a7ca-105">For more information, see [Entity Framework Overview](../../../../../docs/framework/data/adonet/ef/overview.md).</span></span>  
+# <a name="getting-started-entity-framework"></a><span data-ttu-id="f4a7b-102">Introducción (Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="f4a7b-102">Getting Started (Entity Framework)</span></span>
+<span data-ttu-id="f4a7b-103">El [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es compatible con aplicaciones basadas en datos y servicios y proporciona una plataforma para la programación con datos que eleva el nivel de abstracción del nivel lógico relacional al nivel conceptual.</span><span class="sxs-lookup"><span data-stu-id="f4a7b-103">The [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supports data-centric applications and services, and provides a platform for programming against data that raises the level of abstraction from the logical relational level to the conceptual level.</span></span> <span data-ttu-id="f4a7b-104">Permitiendo a los programadores trabajar con datos en un nivel de abstracción superior, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] admite código que es independiente de cualquier motor de almacenamiento de datos o esquema relacional determinados.</span><span class="sxs-lookup"><span data-stu-id="f4a7b-104">By enabling developers to work with data at a greater level of abstraction, the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supports code that is independent of any particular data storage engine or relational schema.</span></span> <span data-ttu-id="f4a7b-105">Para obtener más información, consulte [Introducción a Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md).</span><span class="sxs-lookup"><span data-stu-id="f4a7b-105">For more information, see [Entity Framework Overview](../../../../../docs/framework/data/adonet/ef/overview.md).</span></span>  
   
- <span data-ttu-id="3a7ca-106">Para empezar rápidamente a usar la versión más reciente de Entity Framework, vea [Introducción](http://go.microsoft.com/fwlink/?LinkId=235280)</span><span class="sxs-lookup"><span data-stu-id="3a7ca-106">To quickly start using the latest version of the Entity Framework, see [Get Started](http://go.microsoft.com/fwlink/?LinkId=235280)</span></span>  
+ <span data-ttu-id="f4a7b-106">Para empezar rápidamente a usar la versión más reciente de Entity Framework, vea [Introducción](http://go.microsoft.com/fwlink/?LinkId=235280)</span><span class="sxs-lookup"><span data-stu-id="f4a7b-106">To quickly start using the latest version of the Entity Framework, see [Get Started](http://go.microsoft.com/fwlink/?LinkId=235280)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a7ca-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="3a7ca-107">See Also</span></span>  
- [<span data-ttu-id="3a7ca-108">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="3a7ca-108">Entity Framework</span></span>](http://go.microsoft.com/fwlink/?LinkID=234900&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="f4a7b-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="f4a7b-107">See Also</span></span>  
+ [<span data-ttu-id="f4a7b-108">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="f4a7b-108">Entity Framework</span></span>](http://go.microsoft.com/fwlink/?LinkID=234900&clcid=0x409)

@@ -1,51 +1,43 @@
 ---
 title: Programar en Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3c19b68746cf32bf405a6ce1d8a12b203f27f03c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 74fd333b97f2e5fbbee3771f6715cc36bbd12037
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="programming-in-visual-basic"></a><span data-ttu-id="08583-102">Programar en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="08583-102">Programming in Visual Basic</span></span>
-<span data-ttu-id="08583-103">En esta sección se describen las tareas de programación sobre las que necesitará obtener información adicional a medida que crea la aplicación de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="08583-103">This section discusses programming tasks that you may want to learn more about as you create your Visual Basic application.</span></span>  
+# <a name="programming-in-visual-basic"></a><span data-ttu-id="5a2e0-102">Programar en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5a2e0-102">Programming in Visual Basic</span></span>
+<span data-ttu-id="5a2e0-103">En esta sección se describen las tareas de programación sobre las que necesitará obtener información adicional a medida que crea la aplicación de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="5a2e0-103">This section discusses programming tasks that you may want to learn more about as you create your Visual Basic application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="08583-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="08583-104">In this section</span></span>  
- [<span data-ttu-id="08583-105">Acceso a los recursos del equipo</span><span class="sxs-lookup"><span data-stu-id="08583-105">Accessing Computer Resources</span></span>](../../../visual-basic/developing-apps/programming/computer-resources/computer-resources.md)  
- <span data-ttu-id="08583-106">Contiene documentación sobre cómo utilizar el objeto `My.Computer` para acceder a información sobre el equipo en el que se ejecuta una aplicación y cómo controlar el equipo.</span><span class="sxs-lookup"><span data-stu-id="08583-106">Contains documentation on how to use the `My.Computer` object to access information about the computer on which an application runs and how to control the computer.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5a2e0-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="5a2e0-104">In this section</span></span>  
+ [<span data-ttu-id="5a2e0-105">Acceso a los recursos del equipo</span><span class="sxs-lookup"><span data-stu-id="5a2e0-105">Accessing Computer Resources</span></span>](../../../visual-basic/developing-apps/programming/computer-resources/computer-resources.md)  
+ <span data-ttu-id="5a2e0-106">Contiene documentación sobre cómo utilizar el objeto `My.Computer` para acceder a información sobre el equipo en el que se ejecuta una aplicación y cómo controlar el equipo.</span><span class="sxs-lookup"><span data-stu-id="5a2e0-106">Contains documentation on how to use the `My.Computer` object to access information about the computer on which an application runs and how to control the computer.</span></span>  
   
- [<span data-ttu-id="08583-107">Registrar información de la aplicación</span><span class="sxs-lookup"><span data-stu-id="08583-107">Logging Information from the Application</span></span>](../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)  
- <span data-ttu-id="08583-108">Contiene documentación sobre cómo registrar información de la aplicación mediante los objetos `My.Application.Log` y `My.Log` y cómo ampliar las capacidades de registro de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="08583-108">Contains documentation on how to log information from your application using the `My.Application.Log` and `My.Log` objects, and how to extend the application's logging capabilities.</span></span>  
+ [<span data-ttu-id="5a2e0-107">Registrar información de la aplicación</span><span class="sxs-lookup"><span data-stu-id="5a2e0-107">Logging Information from the Application</span></span>](../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)  
+ <span data-ttu-id="5a2e0-108">Contiene documentación sobre cómo registrar información de la aplicación mediante los objetos `My.Application.Log` y `My.Log` y cómo ampliar las capacidades de registro de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="5a2e0-108">Contains documentation on how to log information from your application using the `My.Application.Log` and `My.Log` objects, and how to extend the application's logging capabilities.</span></span>  
   
- [<span data-ttu-id="08583-109">Acceso a los datos del usuario</span><span class="sxs-lookup"><span data-stu-id="08583-109">Accessing User Data</span></span>](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
- <span data-ttu-id="08583-110">Contiene documentación sobre las tareas que puede realizar con el objeto `My.User`.</span><span class="sxs-lookup"><span data-stu-id="08583-110">Contains documentation on tasks that you can accomplish using the `My.User` object.</span></span>  
+ [<span data-ttu-id="5a2e0-109">Acceso a los datos del usuario</span><span class="sxs-lookup"><span data-stu-id="5a2e0-109">Accessing User Data</span></span>](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
+ <span data-ttu-id="5a2e0-110">Contiene documentación sobre las tareas que puede realizar con el objeto `My.User`.</span><span class="sxs-lookup"><span data-stu-id="5a2e0-110">Contains documentation on tasks that you can accomplish using the `My.User` object.</span></span>  
   
- [<span data-ttu-id="08583-111">Acceso ad los formularios de la aplicación</span><span class="sxs-lookup"><span data-stu-id="08583-111">Accessing Application Forms</span></span>](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)  
- <span data-ttu-id="08583-112">Contiene documentación sobre el acceso a los formularios de una aplicación mediante los objetos `My.Forms` y `My.Application`.</span><span class="sxs-lookup"><span data-stu-id="08583-112">Contains documentation on accessing an application's forms by using the `My.Forms` and `My.Application` objects.</span></span>  
+ [<span data-ttu-id="5a2e0-111">Acceso ad los formularios de la aplicación</span><span class="sxs-lookup"><span data-stu-id="5a2e0-111">Accessing Application Forms</span></span>](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)  
+ <span data-ttu-id="5a2e0-112">Contiene documentación sobre el acceso a los formularios de una aplicación mediante los objetos `My.Forms` y `My.Application`.</span><span class="sxs-lookup"><span data-stu-id="5a2e0-112">Contains documentation on accessing an application's forms by using the `My.Forms` and `My.Application` objects.</span></span>  
   
- [<span data-ttu-id="08583-113">Acceso a los servicios web de la aplicación</span><span class="sxs-lookup"><span data-stu-id="08583-113">Accessing Application Web Services</span></span>](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
- <span data-ttu-id="08583-114">Contiene documentación sobre cómo acceder a los servicios web a los que hace referencia la aplicación con el objeto `My.WebServices`.</span><span class="sxs-lookup"><span data-stu-id="08583-114">Contains documentation on how to access the Web services referenced by the application using the `My.WebServices` object.</span></span>  
+ [<span data-ttu-id="5a2e0-113">Acceso a los servicios web de la aplicación</span><span class="sxs-lookup"><span data-stu-id="5a2e0-113">Accessing Application Web Services</span></span>](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
+ <span data-ttu-id="5a2e0-114">Contiene documentación sobre cómo acceder a los servicios web a los que hace referencia la aplicación con el objeto `My.WebServices`.</span><span class="sxs-lookup"><span data-stu-id="5a2e0-114">Contains documentation on how to access the Web services referenced by the application using the `My.WebServices` object.</span></span>  
   
- [<span data-ttu-id="08583-115">Acceso a la configuración de la aplicación</span><span class="sxs-lookup"><span data-stu-id="08583-115">Accessing Application Settings</span></span>](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)  
- <span data-ttu-id="08583-116">Contiene documentación sobre el acceso a la configuración de una aplicación con el objeto `My.Settings`.</span><span class="sxs-lookup"><span data-stu-id="08583-116">Contains documentation on accessing an application's settings using the `My.Settings` object.</span></span>  
+ [<span data-ttu-id="5a2e0-115">Acceso a la configuración de la aplicación</span><span class="sxs-lookup"><span data-stu-id="5a2e0-115">Accessing Application Settings</span></span>](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)  
+ <span data-ttu-id="5a2e0-116">Contiene documentación sobre el acceso a la configuración de una aplicación con el objeto `My.Settings`.</span><span class="sxs-lookup"><span data-stu-id="5a2e0-116">Contains documentation on accessing an application's settings using the `My.Settings` object.</span></span>  
   
- [<span data-ttu-id="08583-117">Procesar unidades, directorios y archivos</span><span class="sxs-lookup"><span data-stu-id="08583-117">Processing Drives, Directories, and Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
- <span data-ttu-id="08583-118">Contiene documentación sobre cómo acceder al sistema de archivos mediante el objeto `My.Computer.FileSystem`.</span><span class="sxs-lookup"><span data-stu-id="08583-118">Contains documentation on how to access the file system using the `My.Computer.FileSystem` object.</span></span>  
+ [<span data-ttu-id="5a2e0-117">Procesar unidades, directorios y archivos</span><span class="sxs-lookup"><span data-stu-id="5a2e0-117">Processing Drives, Directories, and Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
+ <span data-ttu-id="5a2e0-118">Contiene documentación sobre cómo acceder al sistema de archivos mediante el objeto `My.Computer.FileSystem`.</span><span class="sxs-lookup"><span data-stu-id="5a2e0-118">Contains documentation on how to access the file system using the `My.Computer.FileSystem` object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="08583-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="08583-119">See Also</span></span>  
- [<span data-ttu-id="08583-120">Características del lenguaje Visual Basic</span><span class="sxs-lookup"><span data-stu-id="08583-120">Visual Basic Language Features</span></span>](../../../visual-basic/programming-guide/language-features/index.md)  
- [<span data-ttu-id="08583-121">Conceptos de programación</span><span class="sxs-lookup"><span data-stu-id="08583-121">Programming Concepts</span></span>](../../../visual-basic/programming-guide/concepts/index.md)  
- [<span data-ttu-id="08583-122">Colecciones</span><span class="sxs-lookup"><span data-stu-id="08583-122">Collections</span></span>](../../../visual-basic/programming-guide/concepts/collections.md)  
- [<span data-ttu-id="08583-123">Desarrollo de aplicaciones con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="08583-123">Developing Applications with Visual Basic</span></span>](../../../visual-basic/developing-apps/index.md)
+## <a name="see-also"></a><span data-ttu-id="5a2e0-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="5a2e0-119">See Also</span></span>  
+ [<span data-ttu-id="5a2e0-120">Características del lenguaje Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5a2e0-120">Visual Basic Language Features</span></span>](../../../visual-basic/programming-guide/language-features/index.md)  
+ [<span data-ttu-id="5a2e0-121">Conceptos de programación</span><span class="sxs-lookup"><span data-stu-id="5a2e0-121">Programming Concepts</span></span>](../../../visual-basic/programming-guide/concepts/index.md)  
+ [<span data-ttu-id="5a2e0-122">Colecciones</span><span class="sxs-lookup"><span data-stu-id="5a2e0-122">Collections</span></span>](../../../visual-basic/programming-guide/concepts/collections.md)  
+ [<span data-ttu-id="5a2e0-123">Desarrollo de aplicaciones con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5a2e0-123">Developing Applications with Visual Basic</span></span>](../../../visual-basic/developing-apps/index.md)

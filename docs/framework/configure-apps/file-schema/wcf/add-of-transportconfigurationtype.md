@@ -1,34 +1,22 @@
 ---
 title: '&lt;add&gt; de &lt;transportConfigurationType&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2b52345ae30ab56a6f34d2aa46f9836d67555b15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d13ef51444e1600b0cea5d55a1b5e332e440bc6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltaddgt-of-lttransportconfigurationtypegt"></a><span data-ttu-id="d3fed-102">&lt;add&gt; de &lt;transportConfigurationType&gt;</span><span class="sxs-lookup"><span data-stu-id="d3fed-102">&lt;add&gt; of &lt;transportConfigurationType&gt;</span></span>
-<span data-ttu-id="d3fed-103">Este elemento es una par clave-valor, que identifica el tipo de un transporte determinado.</span><span class="sxs-lookup"><span data-stu-id="d3fed-103">This element is a key/value pair, which identifies the type of a particular transport.</span></span>  
+# <a name="ltaddgt-of-lttransportconfigurationtypegt"></a><span data-ttu-id="3e19f-102">&lt;add&gt; de &lt;transportConfigurationType&gt;</span><span class="sxs-lookup"><span data-stu-id="3e19f-102">&lt;add&gt; of &lt;transportConfigurationType&gt;</span></span>
+<span data-ttu-id="3e19f-103">Este elemento es una par clave-valor, que identifica el tipo de un transporte determinado.</span><span class="sxs-lookup"><span data-stu-id="3e19f-103">This element is a key/value pair, which identifies the type of a particular transport.</span></span>  
   
- <span data-ttu-id="d3fed-104">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="d3fed-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="d3fed-105">\<ServiceHostingEnvironment ></span><span class="sxs-lookup"><span data-stu-id="d3fed-105">\<ServiceHostingEnvironment></span></span>  
-<span data-ttu-id="d3fed-106">\<transportConfigurationTypes ></span><span class="sxs-lookup"><span data-stu-id="d3fed-106">\<transportConfigurationTypes></span></span>  
-<span data-ttu-id="d3fed-107">\<add></span><span class="sxs-lookup"><span data-stu-id="d3fed-107">\<add></span></span>  
+ <span data-ttu-id="3e19f-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="3e19f-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="3e19f-105">\<ServiceHostingEnvironment ></span><span class="sxs-lookup"><span data-stu-id="3e19f-105">\<ServiceHostingEnvironment></span></span>  
+<span data-ttu-id="3e19f-106">\<transportConfigurationTypes ></span><span class="sxs-lookup"><span data-stu-id="3e19f-106">\<transportConfigurationTypes></span></span>  
+<span data-ttu-id="3e19f-107">\<add></span><span class="sxs-lookup"><span data-stu-id="3e19f-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d3fed-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d3fed-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3e19f-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="3e19f-108">Syntax</span></span>  
   
 ```xml  
 <serviceHostingEnvironment>   
@@ -39,26 +27,26 @@ ms.lasthandoff: 12/22/2017
 </serviceHostingEnvironment>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d3fed-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="d3fed-109">Attributes and Elements</span></span>  
- <span data-ttu-id="d3fed-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="d3fed-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3e19f-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="3e19f-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="3e19f-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="3e19f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d3fed-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="d3fed-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3e19f-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="3e19f-111">Attributes</span></span>  
   
-|<span data-ttu-id="d3fed-112">Atributo</span><span class="sxs-lookup"><span data-stu-id="d3fed-112">Attribute</span></span>|<span data-ttu-id="d3fed-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="d3fed-113">Description</span></span>|  
+|<span data-ttu-id="3e19f-112">Atributo</span><span class="sxs-lookup"><span data-stu-id="3e19f-112">Attribute</span></span>|<span data-ttu-id="3e19f-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="3e19f-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="d3fed-114">name</span><span class="sxs-lookup"><span data-stu-id="d3fed-114">name</span></span>|<span data-ttu-id="d3fed-115">Atributo de cadena necesario.</span><span class="sxs-lookup"><span data-stu-id="d3fed-115">Required String attribute.</span></span><br /><br /> <span data-ttu-id="d3fed-116">Contiene una clave definida por el usuario que identifica de forma única el tipo de transporte.</span><span class="sxs-lookup"><span data-stu-id="d3fed-116">Contains a user-defined key that uniquely identifies the transport type.</span></span>|  
-|<span data-ttu-id="d3fed-117">transportConfigurationType</span><span class="sxs-lookup"><span data-stu-id="d3fed-117">transportConfigurationType</span></span>|<span data-ttu-id="d3fed-118">Una cadena que contiene el tipo que implementa el transporte concreto.</span><span class="sxs-lookup"><span data-stu-id="d3fed-118">A string that contains the type that implements the specific transport.</span></span>|  
+|<span data-ttu-id="3e19f-114">name</span><span class="sxs-lookup"><span data-stu-id="3e19f-114">name</span></span>|<span data-ttu-id="3e19f-115">Atributo de cadena necesario.</span><span class="sxs-lookup"><span data-stu-id="3e19f-115">Required String attribute.</span></span><br /><br /> <span data-ttu-id="3e19f-116">Contiene una clave definida por el usuario que identifica de forma única el tipo de transporte.</span><span class="sxs-lookup"><span data-stu-id="3e19f-116">Contains a user-defined key that uniquely identifies the transport type.</span></span>|  
+|<span data-ttu-id="3e19f-117">transportConfigurationType</span><span class="sxs-lookup"><span data-stu-id="3e19f-117">transportConfigurationType</span></span>|<span data-ttu-id="3e19f-118">Una cadena que contiene el tipo que implementa el transporte concreto.</span><span class="sxs-lookup"><span data-stu-id="3e19f-118">A string that contains the type that implements the specific transport.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d3fed-119">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="d3fed-119">Child Elements</span></span>  
- <span data-ttu-id="d3fed-120">Ninguna</span><span class="sxs-lookup"><span data-stu-id="d3fed-120">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3e19f-119">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="3e19f-119">Child Elements</span></span>  
+ <span data-ttu-id="3e19f-120">Ninguna</span><span class="sxs-lookup"><span data-stu-id="3e19f-120">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d3fed-121">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="d3fed-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3e19f-121">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="3e19f-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="d3fed-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="d3fed-122">Element</span></span>|<span data-ttu-id="d3fed-123">Descripción</span><span class="sxs-lookup"><span data-stu-id="d3fed-123">Description</span></span>|  
+|<span data-ttu-id="3e19f-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="3e19f-122">Element</span></span>|<span data-ttu-id="3e19f-123">Descripción</span><span class="sxs-lookup"><span data-stu-id="3e19f-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d3fed-124">\<transportConfigurationTypes ></span><span class="sxs-lookup"><span data-stu-id="d3fed-124">\<transportConfigurationTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|<span data-ttu-id="d3fed-125">Una colección de tipos que implementan el transporte concreto.</span><span class="sxs-lookup"><span data-stu-id="d3fed-125">A collection of types that implement the specific transport.</span></span>|  
+|[<span data-ttu-id="3e19f-124">\<transportConfigurationTypes ></span><span class="sxs-lookup"><span data-stu-id="3e19f-124">\<transportConfigurationTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|<span data-ttu-id="3e19f-125">Una colección de tipos que implementan el transporte concreto.</span><span class="sxs-lookup"><span data-stu-id="3e19f-125">A collection of types that implement the specific transport.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="d3fed-126">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d3fed-126">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3e19f-126">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3e19f-126">Example</span></span>  
   
 ```xml  
 <serviceHostingEnvironment>   
@@ -69,8 +57,8 @@ ms.lasthandoff: 12/22/2017
 </serviceHostingEnvironment>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d3fed-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="d3fed-127">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3e19f-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="3e19f-127">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [<span data-ttu-id="d3fed-128">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="d3fed-128">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)
+ [<span data-ttu-id="3e19f-128">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="3e19f-128">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)

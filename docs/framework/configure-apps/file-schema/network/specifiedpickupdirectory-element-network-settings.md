@@ -1,14 +1,6 @@
 ---
 title: '&lt;specifiedPickupDirectory&gt; Element (Network Settings)'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#specifiedPickupDirectory
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp/specifiedPickupDirectory
@@ -16,28 +8,25 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: e68ce8cac4048ee2df89d0241cc50242e20391a2
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 3a982bdbe4953691d4e8e7663f14059ff4771934
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a><span data-ttu-id="d0c4f-102">&lt;specifiedPickupDirectory&gt; Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="d0c4f-102">&lt;specifiedPickupDirectory&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="d0c4f-103">Configura el directorio local de un servidor SMTP (Protocolo simple de transferencia de correo).</span><span class="sxs-lookup"><span data-stu-id="d0c4f-103">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>  
+# <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a><span data-ttu-id="7a445-102">&lt;specifiedPickupDirectory&gt; Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="7a445-102">&lt;specifiedPickupDirectory&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="7a445-103">Configura el directorio local de un servidor SMTP (Protocolo simple de transferencia de correo).</span><span class="sxs-lookup"><span data-stu-id="7a445-103">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>  
   
- <span data-ttu-id="d0c4f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d0c4f-104">\<configuration></span></span>  
-<span data-ttu-id="d0c4f-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="d0c4f-105">\<system.net></span></span>  
-<span data-ttu-id="d0c4f-106">\<mailSettings ></span><span class="sxs-lookup"><span data-stu-id="d0c4f-106">\<mailSettings></span></span>  
-<span data-ttu-id="d0c4f-107">\<smtp></span><span class="sxs-lookup"><span data-stu-id="d0c4f-107">\<smtp></span></span>  
-<span data-ttu-id="d0c4f-108">\<specifiedPickupDirectory></span><span class="sxs-lookup"><span data-stu-id="d0c4f-108">\<specifiedPickupDirectory></span></span>  
+ <span data-ttu-id="7a445-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7a445-104">\<configuration></span></span>  
+<span data-ttu-id="7a445-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="7a445-105">\<system.net></span></span>  
+<span data-ttu-id="7a445-106">\<mailSettings ></span><span class="sxs-lookup"><span data-stu-id="7a445-106">\<mailSettings></span></span>  
+<span data-ttu-id="7a445-107">\<SMTP ></span><span class="sxs-lookup"><span data-stu-id="7a445-107">\<smtp></span></span>  
+<span data-ttu-id="7a445-108">\<specifiedPickupDirectory ></span><span class="sxs-lookup"><span data-stu-id="7a445-108">\<specifiedPickupDirectory></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0c4f-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d0c4f-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7a445-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7a445-109">Syntax</span></span>  
   
 ```xml  
 <specifiedPickupDirectory  
@@ -45,29 +34,29 @@ ms.lasthandoff: 02/01/2018
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d0c4f-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="d0c4f-110">Attributes and Elements</span></span>  
- <span data-ttu-id="d0c4f-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="d0c4f-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7a445-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="7a445-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="7a445-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="7a445-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d0c4f-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="d0c4f-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7a445-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="7a445-112">Attributes</span></span>  
   
-|<span data-ttu-id="d0c4f-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="d0c4f-113">Attribute</span></span>|<span data-ttu-id="d0c4f-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="d0c4f-114">Description</span></span>|  
+|<span data-ttu-id="7a445-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="7a445-113">Attribute</span></span>|<span data-ttu-id="7a445-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="7a445-114">Description</span></span>|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|<span data-ttu-id="d0c4f-115">El directorio donde las aplicaciones guardan correo electrónico para su posterior procesamiento por el servidor SMTP.</span><span class="sxs-lookup"><span data-stu-id="d0c4f-115">The directory where applications save email for later processing by the SMTP server.</span></span>|  
+|`pickupDirectoryLocation`|<span data-ttu-id="7a445-115">El directorio donde las aplicaciones guardan correo electrónico para su posterior procesamiento por el servidor SMTP.</span><span class="sxs-lookup"><span data-stu-id="7a445-115">The directory where applications save email for later processing by the SMTP server.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d0c4f-116">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="d0c4f-116">Child Elements</span></span>  
- <span data-ttu-id="d0c4f-117">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="d0c4f-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7a445-116">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="7a445-116">Child Elements</span></span>  
+ <span data-ttu-id="7a445-117">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="7a445-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d0c4f-118">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="d0c4f-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7a445-118">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="7a445-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="d0c4f-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="d0c4f-119">Element</span></span>|<span data-ttu-id="d0c4f-120">Descripción</span><span class="sxs-lookup"><span data-stu-id="d0c4f-120">Description</span></span>|  
+|<span data-ttu-id="7a445-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="7a445-119">Element</span></span>|<span data-ttu-id="7a445-120">Descripción</span><span class="sxs-lookup"><span data-stu-id="7a445-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d0c4f-121">\<SMTP > elemento (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="d0c4f-121">\<smtp> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|<span data-ttu-id="d0c4f-122">Configura opciones de envío de correo de Protocolo Simple de transferencia de correo (SMTP).</span><span class="sxs-lookup"><span data-stu-id="d0c4f-122">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
+|[<span data-ttu-id="7a445-121">\<SMTP > elemento (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="7a445-121">\<smtp> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|<span data-ttu-id="7a445-122">Configura opciones de envío de correo de Protocolo Simple de transferencia de correo (SMTP).</span><span class="sxs-lookup"><span data-stu-id="7a445-122">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d0c4f-123">Comentarios</span><span class="sxs-lookup"><span data-stu-id="d0c4f-123">Remarks</span></span>  
- <span data-ttu-id="d0c4f-124">El `specifiedPickupDirectory` atributo establece el directorio donde las aplicaciones guardan los mensajes de correo electrónico para ser procesados por el servidor SMTP.</span><span class="sxs-lookup"><span data-stu-id="d0c4f-124">The `specifiedPickupDirectory` attribute sets the directory where applications save mail messages to be processed by the SMTP server.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7a445-123">Comentarios</span><span class="sxs-lookup"><span data-stu-id="7a445-123">Remarks</span></span>  
+ <span data-ttu-id="7a445-124">El `specifiedPickupDirectory` atributo establece el directorio donde las aplicaciones guardan los mensajes de correo electrónico para ser procesados por el servidor SMTP.</span><span class="sxs-lookup"><span data-stu-id="7a445-124">The `specifiedPickupDirectory` attribute sets the directory where applications save mail messages to be processed by the SMTP server.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d0c4f-125">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d0c4f-125">Example</span></span>  
- <span data-ttu-id="d0c4f-126">En el ejemplo siguiente se especifica c:\maildrop como el directorio de recogida de correo electrónico.</span><span class="sxs-lookup"><span data-stu-id="d0c4f-126">The following example specifies c:\maildrop as the mail pickup directory.</span></span>  
+## <a name="example"></a><span data-ttu-id="7a445-125">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7a445-125">Example</span></span>  
+ <span data-ttu-id="7a445-126">En el ejemplo siguiente se especifica c:\maildrop como el directorio de recogida de correo electrónico.</span><span class="sxs-lookup"><span data-stu-id="7a445-126">The following example specifies c:\maildrop as the mail pickup directory.</span></span>  
   
 ```xml  
 <configuration>  
@@ -83,8 +72,8 @@ ms.lasthandoff: 02/01/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d0c4f-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="d0c4f-127">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7a445-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="7a445-127">See Also</span></span>  
  <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>  
- [<span data-ttu-id="d0c4f-128">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="d0c4f-128">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="7a445-128">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="7a445-128">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
