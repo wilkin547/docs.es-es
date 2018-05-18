@@ -1,13 +1,6 @@
 ---
 title: Winres.exe (Editor de recursos de Windows Forms)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Winres.exe
 - Windows Forms Resource Editor
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efdb5055197611baf56fdc25fe7c0700c1a06dfd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 69ba816e5b7cf05ef094153b7ff044d573ac1760
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Editor de recursos de Windows Forms)
 El Editor de recursos de Windows Forms, Winres.exe, es una herramienta de diseño visual que ayuda a los expertos en localización a traducir los recursos de la interfaz de usuario (IU) de Windows Forms que usan los formularios. Los archivos .resx o .resources que se utilizan como entrada en Winres.exe se pueden crear mediante un entorno de diseño visual como Microsoft Visual Studio. Para obtener información sobre cómo implementar recursos en aplicaciones .NET Framework, vea [Resources in Desktop Apps](../../../docs/framework/resources/index.md) (Recursos de aplicaciones de escritorio).  
@@ -94,7 +84,7 @@ winres /?
 ## <a name="version-compatibility"></a>Compatibilidad de versiones  
  Como el formato de los archivos de recursos cambió entre las versiones de Visual Studio .NET 2002 y Visual Studio 2005, Winres.exe también se ha modificado para que sea compatible. Por consiguiente, como norma general, debe utilizar la versión de Winres.exe que se comercializó con la versión de .NET Framework que vaya a utilizar para crear la aplicación. En la siguiente tabla se identifican las versiones compatibles.  
   
-|Visual Studio|.NET Framework|Winres.exe|  
+|Programa para la mejora|.NET Framework|Winres.exe|  
 |-------------------|--------------------|----------------|  
 |Visual Studio .NET 2002|1.0|1.0|  
 |Visual Studio .NET 2003|1.1|1.1|  

@@ -1,9 +1,6 @@
 ---
 title: extern (Referencia de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - extern_CSharpKeyword
 - extern
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-caps.latest.revision: "26"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 106ceb6a4acf57daa01919acb38e4245655fca2f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f4fd42505937b2623ab9460489f5277364550d71
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extern-c-reference"></a>extern (Referencia de C#)
 El modificador `extern` se usa para declarar un método que se implementa externamente. Un uso común del modificador `extern` es con el atributo `DllImport` al usar servicios de interoperabilidad para llamar a código no administrado. En este caso, el método se debe declarar también como `static`, como se muestra en el ejemplo siguiente:  

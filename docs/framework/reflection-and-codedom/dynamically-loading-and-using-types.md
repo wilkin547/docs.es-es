@@ -1,13 +1,6 @@
 ---
-title: "Cargar y utilizar tipos dinámicamente"
-ms.custom: 
+title: Cargar y utilizar tipos dinámicamente
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b924f1c1b46eb132070b6d582cf065f38a8a600
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9795fa411d3b81f9092ddab183c6978ee701ef67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamically-loading-and-using-types"></a>Cargar y utilizar tipos dinámicamente
 La reflexión proporciona la infraestructura que los compiladores de lenguaje como [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] y JScript usan para implementar el enlace en tiempo de ejecución implícito. El enlace es el proceso de buscar la declaración (es decir, la implementación) que corresponde a un tipo especificado de manera exclusiva. Cuando este proceso se produce en tiempo de ejecución, en lugar de en tiempo de compilación, se denomina enlace en tiempo de ejecución. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] permite usar el enlace en tiempo de ejecución en el código; el compilador de Visual Basic llama a un método auxiliar que usa la reflexión para obtener el tipo de objeto. Los argumentos pasados al método auxiliar hacen que se invoque el método adecuado en tiempo de ejecución. Estos argumentos son la instancia (un objeto) en la que se invoca el método, el nombre del método invocado (una cadena) y los argumentos pasados al método invocado (una matriz de objetos).  

@@ -1,28 +1,22 @@
 ---
-title: "Miembros (Guía de programación de C#)"
+title: Miembros (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-caps.latest.revision: "20"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 184d4f2976b8594c308efeb113a0490499e3460e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61818b153bb74c5c0da053f381fd1ed9132c066b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="members-c-programming-guide"></a>Miembros (Guía de programación de C#)
 Las clases y structs tienen miembros que representan sus datos y comportamiento. Los miembros de una clase incluyen todos los miembros declarados en la clase, junto con todos los miembros (excepto constructores y finalizadores) declarados en todas las clases de su jerarquía de herencia. Los miembros privados de clases base se heredan en las clases derivadas, pero estas no pueden tener acceso a ellos.  
   
  En la tabla siguiente se enumeran los tipos de miembros que puede contener una clase o struct:  
   
-|Miembro|Descripción|  
+|Miembro|Description|  
 |------------|-----------------|  
 |[Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)|Los campos son variables declaradas en el ámbito de clase. Un campo puede ser un tipo numérico integrado o una instancia de otra clase. Por ejemplo, una clase de calendario puede tener un campo con la fecha actual.|  
 |[Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)|Las constantes son campos o propiedades cuyo valor se establece en tiempo de compilación y no se puede cambiar.|  

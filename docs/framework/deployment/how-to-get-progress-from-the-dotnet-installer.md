@@ -1,31 +1,19 @@
 ---
-title: "Cómo: Obtener el progreso del instalador de .NET Framework 4.5"
-ms.custom: 
+title: 'Cómo: Obtener el progreso del instalador de .NET Framework 4.5'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c11d1c3469100b8bd0eb530a59bb3a01b152f3f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84bd96f27e8276546bef0dd9994163ccd843ac20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Cómo: Obtener el progreso del instalador de .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] es un runtime redistribuible. Si desarrolla aplicaciones para esta versión de .NET Framework, puede incluir (encadenar) el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] como un requisito previo para la instalación de su aplicación. Para presentar al usuario una experiencia de instalación personalizada o unificada, tal vez desee iniciar silenciosamente el proceso de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y realizar su seguimiento mientras se muestra el progreso de la instalación de la aplicación. Para habilitar el seguimiento silencioso, el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (que se puede observar) define un protocolo mediante el uso de un segmento de E/S (MMIO) asignado a la memoria para comunicarse con el programa de instalación (el proceso observador o encadenador). Este protocolo proporciona al encadenador una manera de obtener información de progreso, conseguir resultados detallados, responder a mensajes y cancelar el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

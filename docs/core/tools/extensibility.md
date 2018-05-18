@@ -4,17 +4,11 @@ description: Obtenga información sobre cómo puede ampliar las herramientas de 
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 11cf9843f5c10ed7114d45a8c6be0ffeff2b6bad
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6cabd3959a29878788916ae26589be408c12e0ca
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modelo de extensibilidad de las herramientas de la CLI de .NET Core
 
@@ -26,15 +20,15 @@ Las herramientas de la CLI pueden extenderse de tres maneras principales:
 
 1. [A través de paquetes NuGet por proyecto](#per-project-based-extensibility)
 
-  Las herramientas por proyecto se incluyen en el contexto del proyecto, pero permiten la instalación fácil mediante la restauración.
+   Las herramientas por proyecto se incluyen en el contexto del proyecto, pero permiten la instalación fácil mediante la restauración.
 
 2. [A través de paquetes NuGet con destinos personalizados](#custom-targets)
 
-  Los destinos personalizados permiten extender fácilmente el proceso de compilación con tareas personalizadas.
+   Los destinos personalizados permiten extender fácilmente el proceso de compilación con tareas personalizadas.
 
 3. [A través de la RUTA DE ACCESO del sistema](#path-based-extensibility)
 
-  Las herramientas basadas en la RUTA DE ACCESO son buenas para herramientas entre proyectos generales que se pueden usar en una sola máquina.
+   Las herramientas basadas en la RUTA DE ACCESO son buenas para herramientas entre proyectos generales que se pueden usar en una sola máquina.
 
 Los tres mecanismos de extensibilidad descritos anteriormente no son exclusivos. Puede usar uno, o todos, o una combinación de ellos. La selección de uno u otro depende en gran medida del objetivo que intenta alcanzar con su extensión.
 

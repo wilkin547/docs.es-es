@@ -1,13 +1,7 @@
 ---
 title: 'Cómo: Aplicar acciones de ida y vuelta a valores de fecha y hora'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - time [.NET Framework], round-trip values
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6ded0a08970e55b7f1267cb229eaf668313392c6
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 26a1cafc7ed6e497e5aab9cd33654f3aa3d4d98c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Cómo: Aplicar acciones de ida y vuelta a valores de fecha y hora
 En muchas aplicaciones, un valor de fecha y hora sirve para identificar inequívocamente un único punto en el tiempo. Este tema muestra cómo guardar y restaurar un valor <xref:System.DateTime>, un valor <xref:System.DateTimeOffset> y un valor de fecha y hora con información sobre la zona horaria, de manera que el valor restaurado identifique la misma hora que el valor guardado.  

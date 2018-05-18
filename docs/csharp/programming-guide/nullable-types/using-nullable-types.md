@@ -1,21 +1,14 @@
 ---
 title: Uso de tipos que aceptan valores NULL (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c8a42392bbcd2e53c54ff4c13bf98c048262ae4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2fe0f34c45d3de0516a71ca5ed4dc807df4bf93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Uso de tipos que aceptan valores NULL (Guía de programación de C#)
 Los tipos que aceptan valores NULL pueden representar todos los valores de un tipo subyacente y un valor [NULL](../../../csharp/language-reference/keywords/null.md) adicional. Los tipos que aceptan valores NULL se declaran de una de las siguientes dos maneras:  
@@ -103,16 +96,16 @@ Los tipos que aceptan valores NULL pueden representar todos los valores de un ti
   
  Los resultados de estos operadores se muestran en la siguiente tabla:  
   
-|X|y|x e y|x&#124;y|  
+|X|y|x e y|x | y|  
 |-------|-------|---------|--------------|  
 |true|true|true|true|  
-|true|false|false|true|  
+|true|False|false|true|  
 |true|nulo|nulo|true|  
-|false|true|false|true|  
-|false|false|false|false|  
-|false|nulo|false|nulo|  
+|False|true|False|true|  
+|False|False|False|False|  
+|False|nulo|False|nulo|  
 |nulo|true|nulo|true|  
-|nulo|false|false|nulo|  
+|nulo|False|False|nulo|  
 |nulo|nulo|nulo|nulo|  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,13 +1,7 @@
 ---
-title: "Notificaciones de recolección de elementos no utilizados"
-ms.custom: 
+title: Notificaciones de recolección de elementos no utilizados
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ac951ad1f89d058b06280bc176ca7928a1dc65bf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d3470ebdd55adc97a60f07228c441cb7c94a53e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="garbage-collection-notifications"></a>Notificaciones de recolección de elementos no utilizados
 Hay situaciones en que una colección de elementos no utilizados completa (es decir, una colección de generación 2) de Common Language Runtime puede afectar negativamente al rendimiento. Esto puede ser un problema especialmente con servidores que procesan grandes volúmenes de solicitudes; en este caso, una recolección grande de elementos no utilizados puede causar un tiempo de espera en la solicitud. Para evitar una recolección grande durante un período crítico, puede recibir una notificación de la proximidad de una recolección grande de elementos no utilizados y adoptar las medidas pertinentes para redirigir la carga de trabajo a otra instancia del servidor. También puede incluir una recolección por su cuenta, siempre que la instancia de servidor actual no necesite procesar solicitudes.  
@@ -106,7 +95,7 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
   
  El código siguiente contiene el método `OnFullGCApproachNotify` tras realizar la llamada al  
   
- método `WaitForFullGCProc`.  
+ Método `WaitForFullGCProc`.  
   
  [!code-cpp[GCNotification#5](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#5)]
  [!code-csharp[GCNotification#5](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#5)]
@@ -114,7 +103,7 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
   
  El código siguiente contiene el método `OnFullGCApproachComplete` tras realizar la llamada al  
   
- método `WaitForFullGCProc`.  
+ Método `WaitForFullGCProc`.  
   
  [!code-cpp[GCNotification#6](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#6)]
  [!code-csharp[GCNotification#6](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#6)]

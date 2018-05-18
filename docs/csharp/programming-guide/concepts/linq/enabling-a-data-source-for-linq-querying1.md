@@ -1,21 +1,12 @@
 ---
 title: Habilitar un origen de datos para realizar consultas LINQ
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: bbb21c5cc0367e0bdc0dd935a5c91538c18c071b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5b67995f40bc0cb703003aa80b511268f21da8b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Habilitar un origen de datos para realizar consultas LINQ
 Existen varias maneras de extender [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para permitir consultar cualquier origen de datos en el patrón de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. El origen de datos podría ser una estructura de datos, un servicio Web, un sistema de archivos o una base de datos, por nombrar algunos. El modelo de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] facilita a los clientes las consultas a un origen de datos para el que las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] están habilitadas, ya que la sintaxis y el modelo de la consulta no cambian. Las maneras en las que [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se puede extender a estos orígenes de datos son las siguientes:  

@@ -1,13 +1,7 @@
 ---
 title: Crear subprocesos y analizar los datos en el inicio
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - threading [.NET Framework], passing data to threads
 - threading [.NET Framework], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d17ef8a199061f56f00e39fa887e2e64f64427ec
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 96c0c898f103c058c370a0d108568056b1ff8196
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Crear subprocesos y analizar los datos en el inicio
 Cuando se crea un proceso de sistema operativo, el sistema operativo inserta un subproceso para ejecutar el código en dicho proceso, incluido cualquier dominio de aplicación original. Desde ese momento, los dominios de aplicación se pueden crear y destruir sin que se cree o destruya necesariamente ningún subproceso del sistema operativo. Si el código ejecutado es código administrado, se puede obtener un objeto <xref:System.Threading.Thread> para el subproceso que se ejecuta en el dominio de aplicación actual mediante la recuperación de la propiedad <xref:System.Threading.Thread.CurrentThread%2A> estática de tipo <xref:System.Threading.Thread>. En este tema se describe la creación de subprocesos y se analizan las alternativas para pasar datos al procedimiento de los subprocesos.  

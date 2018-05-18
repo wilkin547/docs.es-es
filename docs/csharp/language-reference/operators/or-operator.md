@@ -1,10 +1,6 @@
 ---
 title: Operador | (Referencia de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '|_CSharpKeyword'
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - '| operator [C#]'
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
-caps.latest.revision: 15
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 374adc30e6937a68d67bfae152f2546c854b829b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7b62af53f0d8b7cba29f4496887717f1726eabf9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>Operador | (Referencia de C#)
 Los operadores binarios `|` están predefinidos para los tipos enteros y `bool`. Para los tipos enteros, `|` calcula OR bit a bit de sus operandos. Para operandos `bool`, `|` calcula el OR lógico de sus operandos; es decir, el resultado es `false` si y solo si ambos operandos son `false`.  

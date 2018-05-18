@@ -1,14 +1,6 @@
 ---
 title: Recuperar recursos de aplicaciones de escritorio
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -26,17 +18,13 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a02d9efcadcc4c7066dba4e55268ab898b6790e8
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 40eec7c03de616b22ae7b20c56cd5a05237ec759
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperar recursos de aplicaciones de escritorio
 Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Framework, en principio se deberían empaquetar los recursos de la referencia cultural predeterminada o neutra con el ensamblado principal y, luego, crear un ensamblado satélite independiente para todos los idiomas o referencias culturales que admita la aplicación. Después podrá usar la clase <xref:System.Resources.ResourceManager> como se describe en la siguiente sección para obtener acceso a los recursos con nombre. Si opta por no insertar los recursos en el ensamblado principal y los ensamblados satélite, también puede obtener acceso directamente a los archivos .resources binarios, como se describe en la sección [Recuperar recursos desde archivos .resources](#from_file) , que aparece más adelante en este artículo.  Para recuperar recursos en las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , consulte [Crear y recuperar recursos en las aplicaciones de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkID=241674) en el Centro de desarrollo de Windows.  

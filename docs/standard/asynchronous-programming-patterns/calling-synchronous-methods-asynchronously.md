@@ -1,13 +1,7 @@
 ---
-title: "Llamar a métodos sincrónicos de forma asincrónica"
-ms.custom: 
+title: Llamar a métodos sincrónicos de forma asincrónica
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -26,18 +20,13 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e7e6f402d9423a8ae1ee464499f1b794785c2b06
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cbe0178033338754c9e412dfcac993f042d943d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Llamar a métodos sincrónicos de forma asincrónica
 .NET Framework permite llamar a cualquier método de forma asincrónica. Para ello, es necesario que defina un delegado con la misma firma que el método al que desea llamar. Common Language Runtime definirá automáticamente los métodos `BeginInvoke` y `EndInvoke` para este delegado, con las firmas adecuadas.  

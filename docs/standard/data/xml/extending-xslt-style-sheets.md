@@ -1,26 +1,15 @@
 ---
-title: "Extensión de hojas de estilos SXLT"
-ms.custom: 
+title: Extensión de hojas de estilos SXLT
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: df4ba2bf-a99e-4d22-bbf3-04fc67669dbc
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: aea28532dd81745b8d018cbeed454bbd008c8ed7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ff952df59dc8291b12df2b238052d4c40c834e2a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-xslt-style-sheets"></a>Extensión de hojas de estilos SXLT
 En esta sección se describen los diferentes métodos para extender la funcionalidad XSLT. Puede agregar parámetros u objetos de extensión utilizando la clase <xref:System.Xml.Xsl.XsltArgumentList>. Los parámetros u objetos de extensión se pueden llamar luego desde la hoja de estilos. Además, puede incrustar bloques de scripts en la hoja de estilos utilizando el elemento `msxsl:script`.  

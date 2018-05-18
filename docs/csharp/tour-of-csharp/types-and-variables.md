@@ -1,20 +1,13 @@
 ---
 title: 'Variables y tipos de C#: un paseo por el lenguaje C#'
-description: "Obtenga información sobre cómo definir tipos y declarar variables de C#"
-keywords: .NET, CSharp, tipo, tipo de referencia, tipo de valor
-author: BillWagner
-ms.author: wiwagn
+description: Obtenga información sobre cómo definir tipos y declarar variables de C#
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 1f1031384520b9ed37246361da8bbc1b42addb0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 752ff490ec91919dc54539c3e39f6d0c527d6260
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-and-variables"></a>Tipos y variables
 

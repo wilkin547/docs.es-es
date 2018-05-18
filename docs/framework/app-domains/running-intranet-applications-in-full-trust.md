@@ -1,28 +1,18 @@
 ---
 title: Ejecutar aplicaciones de Intranet con plena confianza
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - full trust, running intranet applications in
 - intranet applications, running in full trust
 - running intranet applications in full trust
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 51a9b9ee938d6a03330d53c25fdf0468781e02a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c6f58ef5bd96d8a74ce27bb53acd36af005c335
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Ejecutar aplicaciones de Intranet con plena confianza
 A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las aplicaciones y sus ensamblados de biblioteca se pueden ejecutar como ensamblados de plena confianza desde un recurso compartido de red. Se agrega automáticamente la evidencia de zona <xref:System.Security.SecurityZone.MyComputer> a los ensamblados que se cargan desde un recurso compartido en la intranet. Esta evidencia proporciona a dichos ensamblados el mismo conjunto de permisos (generalmente, de plena confianza) que tienen los ensamblados que residen en el equipo. Esta funcionalidad no se aplica a las aplicaciones ClickOnce o a las aplicaciones que están diseñadas para ejecutarse en un host.  

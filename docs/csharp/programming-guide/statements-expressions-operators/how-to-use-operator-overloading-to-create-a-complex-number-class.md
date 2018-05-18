@@ -1,10 +1,6 @@
 ---
-title: "Cómo: Utilizar la sobrecarga de operadores para crear una clase de números complejos (Guía de programación de C#)"
+title: 'Cómo: Utilizar la sobrecarga de operadores para crear una clase de números complejos (Guía de programación de C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - complex numbers [C#]
 - classes [C#], operator overloading
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - operator overloading [C#], using to create classes
 - operators [C#], overloading to create a complex number class
 ms.assetid: c9b8d982-5112-413f-bae3-b42ae3248ddf
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e851b9d8a46f9cab73883a7b38761fed749c4f93
-ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
+ms.openlocfilehash: d746355dac1b99690a5a94c829bd35598c6c8be8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-operator-overloading-to-create-a-complex-number-class-c-programming-guide"></a>Cómo: Utilizar la sobrecarga de operadores para crear una clase de números complejos (Guía de programación de C#)
 En este ejemplo, se muestra cómo puede usar la sobrecarga de operador para crear una clase de números complejos `Complex` que define la suma compleja. El programa muestra el imaginario y las partes reales de los números y el resultado de la suma con una invalidación del método `ToString`.  

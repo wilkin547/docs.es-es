@@ -1,26 +1,15 @@
 ---
-title: "Cómo quitar atributos de un nodo de elementos en el DOM"
-ms.custom: 
+title: Cómo quitar atributos de un nodo de elementos en el DOM
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 967344db880347bde94330912bc5689c57b29921
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 758ce84390c9ba47e3eb56e1feb293a4cf0408a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Cómo quitar atributos de un nodo de elementos en el DOM
 Existen muchas formas de quitar atributos. Una de estas técnicas consiste en quitarlos de la colección de atributos. Para ello, hay que realizar los siguientes pasos:  

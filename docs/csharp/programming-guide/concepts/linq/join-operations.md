@@ -1,21 +1,12 @@
 ---
-title: "Operaciones de combinación (C#)"
-ms.custom: 
+title: Operaciones de combinación (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 158d035985dae0d1c1daf0f276a9df7b913f2263
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: caf93848450bcef35fef492985ef9703321b1dcb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-operations-c"></a>Operaciones de combinación (C#)
 Una *combinación* de dos orígenes de datos es la asociación de objetos de un origen de datos con los objetos que comparten un atributo común en otro origen de datos.  
@@ -30,7 +21,7 @@ Una *combinación* de dos orígenes de datos es la asociación de objetos de un 
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre del método|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
+|Nombre del método|Description|Sintaxis de la expresión de consulta de C#|Más información|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Join|Combina dos secuencias según las funciones de selector de claves y extrae pares de valores.|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|Combina dos secuencias según las funciones de selector de claves y agrupa los resultados coincidentes para cada elemento.|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
@@ -39,7 +30,7 @@ Una *combinación* de dos orígenes de datos es la asociación de objetos de un 
  <xref:System.Linq>  
  [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))  
  [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [Formular combinaciones y consultas de varios productos](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [Formulación de combinaciones y consultas entre productos](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
  [join (cláusula)](../../../../csharp/language-reference/keywords/join-clause.md)  
  [Cómo: Realizar una unión usando claves compuestas](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
  [Cómo: Combinar contenido de archivos no similares (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  

@@ -1,9 +1,7 @@
 ---
 title: 'Cómo: Cancelar un bloque de flujos de datos'
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -14,15 +12,11 @@ helpviewer_keywords:
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: eece4992deecbf30299d6e9e96fa8c2faf16d3ab
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2684473f82eb156bf8762c9797503324f318632d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Cómo: Cancelar un bloque de flujos de datos
 En este ejemplo se explica cómo habilitar la cancelación en la aplicación. Este ejemplo usa Windows Forms para mostrar dónde están activos los elementos de trabajo en una canalización de flujo de datos y también los efectos de la canalización.  

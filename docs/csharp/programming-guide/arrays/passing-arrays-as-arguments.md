@@ -1,21 +1,14 @@
 ---
-title: "Pasar matrices como argumentos (Guía de programación de C#)"
+title: Pasar matrices como argumentos (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f152173b747a171052ab99f261ed91ced9465fdc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d863cdc33a8a1a844aabbea9ba5876614e6e8dba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Pasar matrices como argumentos (Guía de programación de C#)
 Las matrices se pueden pasar como argumentos a parámetros de método. Dado que las matrices son tipos de referencia, el método puede cambiar el valor de los elementos.  
@@ -35,7 +28,7 @@ Las matrices se pueden pasar como argumentos a parámetros de método. Dado que 
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Descripción  
+### <a name="description"></a>Description  
  En el ejemplo siguiente, una matriz de cadenas se inicializa y pasa como un argumento a un método `PrintArray` para cadenas. El método muestra los elementos de la matriz. Después, se llama a los métodos `ChangeArray` y `ChangeArrayElement` para demostrar que enviar un argumento de matriz en función del valor no evita los cambios a los elementos de matriz.  
   
 ### <a name="code"></a>Código  
@@ -56,7 +49,7 @@ Las matrices se pueden pasar como argumentos a parámetros de método. Dado que 
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Descripción  
+### <a name="description"></a>Description  
  En el ejemplo siguiente, una matriz bidimensional de enteros se inicializa y pasa al método `Print2DArray`. El método muestra los elementos de la matriz.  
   
 ### <a name="code"></a>Código  

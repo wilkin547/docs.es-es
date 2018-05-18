@@ -1,21 +1,12 @@
 ---
-title: "Serializar árboles XML (C#)"
-ms.custom: 
+title: Serializar árboles XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b3937e54-4ce9-4236-ac96-14e7972aa594
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 27001dbc92afddc35be12b593f5ba082c29af5f0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8f372a05bd69b801085cba9d9a3b11ae01841a2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializing-xml-trees-c"></a>Serializar árboles XML (C#)
 Serializar un árbol XML significa generar XML a partir de un árbol XML. Puede serializarlo en un archivo, en una implementación concreta de la clase <xref:System.IO.TextWriter> o en una implementación concreta de un <xref:System.Xml.XmlWriter>.  
@@ -24,7 +15,7 @@ Serializar un árbol XML significa generar XML a partir de un árbol XML. Puede 
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Descripción|  
+|Tema|Description|  
 |-----------|-----------------|  
 |[Mantener un espacio en blanco al serializar](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)|Describe cómo controlar el comportamiento de los espacios en blanco a la hora de serializar árboles XML.|  
 |[Serializar con una declaración XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-with-an-xml-declaration.md)|Describe cómo serializar un árbol XML que incluya una declaración XML.|  

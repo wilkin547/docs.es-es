@@ -1,9 +1,6 @@
 ---
-title: "&lt;seealso&gt; (Guía de programación de C#)"
+title: '&lt;seealso&gt; (Guía de programación de C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - cref
 - <seealso>
@@ -15,14 +12,11 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-caps.latest.revision: "11"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 088445680375e1c1805f9fb4356fe98c730178e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e3c9d68884e5cd4f5a4f81580f60cdde775458a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltseealsogt-c-programming-guide"></a>&lt;seealso&gt; (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  
@@ -40,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>Comentarios  
  La etiqueta \<seealso> le permite especificar el texto que quiere que aparezca en una sección Vea también. Use [\<see>](../../../csharp/programming-guide/xmldoc/see.md) para especificar un vínculo desde dentro del texto.  
   
- Compile con el parámetro [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
+ Compile con [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación a un archivo.  
   
 ## <a name="example"></a>Ejemplo  
  Vea [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) para obtener un ejemplo del uso de \<seealso>.  

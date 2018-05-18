@@ -1,13 +1,7 @@
 ---
-title: "Información general de la biblioteca de clases de .NET"
-ms.custom: 
+title: Información general de la biblioteca de clases de .NET
 ms.date: 02/08/2018
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - classes [.NET Framework], library overview
 - classes [.NET Core], library overview
@@ -45,15 +39,11 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ffa64d3a1f9ade7a97b15edfdecbad566c871c12
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: c6c61e4721e6daa548db2fffccc75606e98f71cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-class-library-overview"></a>Información general de la biblioteca de clases de .NET
 Las implementaciones de .NET incluyen clases, interfaces, delegados y tipos de valor que agilizan y optimizan el proceso de desarrollo y proporcionan acceso a las funciones del sistema. Para facilitar la interoperabilidad entre lenguajes, la mayoría de los tipos de .NET son conformes a CLS y, por tanto, se pueden utilizar en todos los lenguajes de programación cuyo compilador satisfaga los requisitos de CLS.  

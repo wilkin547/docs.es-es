@@ -1,29 +1,18 @@
 ---
 title: XPathNodeIterator en transformaciones
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 523a4774de9975812838b22bbb5193e59cd58130
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0d30760ef018c9b2d1264b323b57172417e4ef0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>XPathNodeIterator en transformaciones
 <xref:System.Xml.XPath.XPathNodeIterator> proporciona métodos para iterar por un conjunto de nodos creados como resultado de una consulta XPath o un fragmento del árbol de resultados convertido en un conjunto de nodos mediante el uso del método node-set. <xref:System.Xml.XPath.XPathNodeIterator> permite iterar por los nodos de un conjunto de nodos. Una vez que se ha recuperado un conjunto de nodos, la clase <xref:System.Xml.XPath.XPathNodeIterator> proporciona un cursor de solo avance y de solo lectura para el conjunto de nodos seleccionado. El conjunto de nodos se crea en orden de documento, de forma que al llamar a este método se desplaza al siguiente nodo en orden de documento. <xref:System.Xml.XPath.XPathNodeIterator> no construye un árbol de nodos de todos los nodos en el conjunto. En lugar de ello, proporciona una ventana de un único nodo en los datos y expone el nodo subyacente al que apunta a medida que se recorre el árbol. Los métodos y las propiedades disponibles desde la clase <xref:System.Xml.XPath.XPathNodeIterator> permiten obtener información desde el nodo actual. Para obtener una lista de los métodos y de las propiedades disponibles, vea <xref:System.Windows.Forms.ToolBar>.  

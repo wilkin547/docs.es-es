@@ -1,21 +1,15 @@
 ---
-title: "Utilizar foreach con matrices (Guía de programación de C#)"
+title: Utilizar foreach con matrices (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 797cb9a63a5e1009b170b2afda8634bd21a50035
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8511d9dd3b7155d2f6bca229f264071b54ed173b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>Utilizar foreach con matrices (Guía de programación de C#)
 C# también proporciona la instrucción [foreach](../../../csharp/language-reference/keywords/foreach-in.md). Esta instrucción ofrece una manera sencilla y limpia de recorrer en iteración los elementos de una matriz o cualquier colección enumerable. La instrucción `foreach` procesa los elementos en el orden devuelto por el enumerador del tipo de colección o matriz, normalmente del elemento 0 al último. Por ejemplo, el siguiente código crea una matriz denominada `numbers` y la recorre en iteración mediante la instrucción `foreach`:  

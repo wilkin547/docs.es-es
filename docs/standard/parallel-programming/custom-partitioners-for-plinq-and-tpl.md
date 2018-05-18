@@ -1,31 +1,20 @@
 ---
 title: Particionadores personalizados para PLINQ y TPL
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: bc409a528dd095d3defb0026a48430b10a3ba6f3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0868ce76f82ed0575154744d9ab02814a0bd990a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Particionadores personalizados para PLINQ y TPL
 Para paralelizar una operación en un origen de datos, uno de los pasos esenciales es *particionar* el origen en varias secciones a las que pueden acceder varios subprocesos al mismo tiempo. PLINQ y la biblioteca TPL proporcionan particionadores predeterminados que funcionan de manera transparente al escribir un bucle <xref:System.Threading.Tasks.Parallel.ForEach%2A> o una consulta en paralelo. Para escenarios más avanzados, puede conectar su propio particionador.  

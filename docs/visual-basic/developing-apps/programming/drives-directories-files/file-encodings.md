@@ -1,26 +1,17 @@
 ---
-title: "Codificación de archivos (Visual Basic)"
-ms.custom: 
+title: Codificación de archivos (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - character encodings
 - files [Visual Basic], encoding
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: deaab4371ab0d5d15c627bfd6352a7090bf08024
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 30aba517b3b0fbb5fa5bea48134934b2c2d26e50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-encodings-visual-basic"></a>Codificación de archivos (Visual Basic)
 Las codificaciones de archivos, también denominadas codificaciones de caracteres, especifican cómo se representan los caracteres durante el procesamiento de texto. Una codificación puede ser preferible sobre otra por lo que se refiere a los caracteres del lenguaje que puede o no controlar, aunque normalmente se prefiere Unicode.  
@@ -35,7 +26,7 @@ Las codificaciones de archivos, también denominadas codificaciones de caractere
 ## <a name="encoding-class"></a>Clase Encoding  
  La clase <xref:System.Text.Encoding> representa una codificación de caracteres. En esta tabla se muestra el tipo de codificaciones disponibles y se describe cada uno.  
   
-|Nombre|Descripción|
+|nombre|Description|
 |---|---|    
 |<xref:System.Text.ASCIIEncoding>|Representa una codificación de caracteres ASCII de caracteres Unicode.|  
 |<xref:System.Text.UnicodeEncoding>|Representa una codificación UTF-16 de caracteres Unicode.|  

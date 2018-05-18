@@ -1,24 +1,12 @@
 ---
-title: "Información general sobre manipulaciones e inercia"
-ms.custom: 
+title: Información general sobre manipulaciones e inercia
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-caps.latest.revision: "7"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d6a0b8b62b997ab0dc7ff21375e82bda7e05d3c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7aec2756bfc3a7d4ccd394d54f19428d73b44fcb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manipulations-and-inertia-overview"></a>Información general sobre manipulaciones e inercia
 Las *manipulaciones* permiten a los usuarios mover, girar y cambiar de tamaño los elementos de la interfaz de usuario (UI) con *manipuladores*. Un manipulador representa un mouse o (en los escenarios táctiles) un lápiz o un dedo.  

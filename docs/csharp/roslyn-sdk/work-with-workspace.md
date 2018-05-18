@@ -1,18 +1,13 @@
 ---
 title: Trabajar con el modelo de área de trabajo del SDK de .NET Compiler Platform
 description: En este tema se proporciona una descripción del tipo que se usa para consultar y manipular el área de trabajo y los proyectos del código.
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/15/2017
-ms.topic: conceptual
-ms.prod: .net
-ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c42795346c505f925c0b4cb232325085fa065201
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 7d450b31cbf2c83c79552d1ace3a1ae692bfdd88
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="work-with-a-workspace"></a>Trabajar con un área de trabajo
 

@@ -1,21 +1,12 @@
 ---
-title: "Cómo: Consultar los metadatos de un ensamblado con reflexión (LINQ) (C#)"
-ms.custom: 
+title: 'Cómo: Consultar los metadatos de un ensamblado con reflexión (LINQ) (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b15fbed050c35dbe7c31eaa61accefe96d4b15da
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ada4fdb8ea0a552b9b6a27d7f0dfd9da447e612e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-c"></a>Cómo: Consultar los metadatos de un ensamblado con reflexión (LINQ) (C#)
 En el ejemplo siguiente se muestra cómo se puede usar LINQ con reflexión para recuperar metadatos concretos sobre métodos que coinciden con un criterio de búsqueda especificado. En este caso, la consulta encontrará los nombres de todos los métodos del ensamblado que devuelven tipos enumerables, como matrices.  

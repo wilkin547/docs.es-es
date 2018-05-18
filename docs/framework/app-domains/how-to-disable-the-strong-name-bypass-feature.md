@@ -1,27 +1,17 @@
 ---
-title: "Cómo: Deshabilitar la característica de omisión de nombres seguros"
-ms.custom: 
+title: 'Cómo: Deshabilitar la característica de omisión de nombres seguros'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - strong-name bypass feature
 - strong-named assemblies, loading into trusted application domains
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
-caps.latest.revision: "30"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 29e2036eda51d895535f5a5f3f8fc9ab5831990e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9604969ea073b07af0eca8d481f5459ee15d099
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Cómo: Deshabilitar la característica de omisión de nombres seguros
 A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las firmas de nombre seguro no se validan cuando un ensamblado se carga en un objeto <xref:System.AppDomain> de plena confianza, como el objeto <xref:System.AppDomain> predeterminado para la zona `MyComputer`. Esta característica se denomina omisión de nombres seguros. En un entorno de plena confianza, las peticiones de <xref:System.Security.Permissions.StrongNameIdentityPermission> siempre se realizan correctamente para los ensamblados de plena confianza firmados, independientemente de su firma. La única restricción es que el ensamblado debe ser de plena confianza porque su zona es de plena confianza. Dado que el nombre seguro no es un factor determinante en estas condiciones, no hay ninguna razón para que se valide. La omisión de la validación de firmas de nombre seguro proporciona importantes mejoras en el rendimiento.  

@@ -1,21 +1,12 @@
 ---
-title: "Operaciones de generación (C#)"
-ms.custom: 
+title: Operaciones de generación (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 1c421b3a-5954-448c-bcac-a27798d1858f
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8bbc4b1c33e992d322ad8048a72b496515358c1c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 01b3d439e826dc5fd8435d37f8c80a29141b3ecc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generation-operations-c"></a>Operaciones de generación (C#)
 La generación hace referencia a la creación de una nueva secuencia de valores.  
@@ -24,7 +15,7 @@ La generación hace referencia a la creación de una nueva secuencia de valores.
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre del método|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
+|Nombre del método|Description|Sintaxis de la expresión de consulta de C#|Más información|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |DefaultIfEmpty|Reemplaza una colección vacía con una colección de singleton con valores predeterminados.|No es aplicable.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
 |Empty|Devuelve una colección vacía.|No es aplicable.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  

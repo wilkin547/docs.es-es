@@ -1,23 +1,16 @@
 ---
 title: Async en profundidad
-description: "Obtenga información sobre cómo es sencillo escribir código asincrónico enlazado a E/S y CPU al usar el modelo asincrónico basado en tareas de .NET."
-keywords: .NET, .NET Core, .NET Standard
+description: Obtenga información sobre cómo es sencillo escribir código asincrónico enlazado a E/S y CPU al usar el modelo asincrónico basado en tareas de .NET.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b01aa5d0fade29d04313a9db2e44517b6512166b
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: fbee7e6ad0fad312e9e5524f7b3fcc7c417ad47b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="async-in-depth"></a>Async en profundidad
 

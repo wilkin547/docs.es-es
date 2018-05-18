@@ -1,26 +1,15 @@
 ---
 title: Resolver recursos externos
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c711cbd7b563bf647d7b4fb90873a396ddfaefdf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c1c56d69724212b9d1cd6a24204a12460071633f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resolving-external-resources"></a>Resolver recursos externos
 La clase **XmlDocument** utiliza la propiedad **XmlResolver** de **XmlDocument** para localizar recursos que no están alineados en los datos XML, como las definiciones de tipo de documento (DTD), entidades y esquemas externos. Estos elementos se pueden localizar en una red o en una unidad local, y se identifican mediante un identificador de recursos uniforme (URI). Esto permite a **XmlDocument** resolver los nodos **EntityReference** presentes en el documento y validar el documento de acuerdo con la DTD o el esquema externos.  

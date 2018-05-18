@@ -1,13 +1,7 @@
 ---
 title: Crear secuencias
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d49661e93675b80bcd579a6cd341b3dc88a688c2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 231bd98b556dafeb69091de4a6770c1462824659
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="composing-streams"></a>Crear secuencias
 Una memoria auxiliar es un medio de almacenamiento, como un disco o memoria. Cada memoria auxiliar distinta implementa su propia secuencia como una implementación de la clase <xref:System.IO.Stream>. Cada tipo de secuencia lee y escribe los bytes desde y en su memoria auxiliar determinada. Las secuencias que se conectan a las memorias auxiliares reciben el nombre de secuencias base. Las secuencias base tienen constructores que disponen de los parámetros necesarios para conectar la secuencia a la memoria auxiliar. Por ejemplo, <xref:System.IO.FileStream> tiene constructores que especifican un parámetro de ruta de acceso, que especifica cómo los procesos compartirán el archivo, etc.  

@@ -1,13 +1,6 @@
 ---
-title: "Consideraciones de seguridad sobre la reflexión"
-ms.custom: 
+title: Consideraciones de seguridad sobre la reflexión
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - permissions [.NET Framework], reflection
 - MethodInfo parameters
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef0f9aac9222badb43e19c2901ff705485d5cf3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9dc7bec2023e3ee0db9987e053dd54647ab2e94f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-considerations-for-reflection"></a>Consideraciones de seguridad sobre la reflexión
 La reflexión proporciona la capacidad de obtener información sobre tipos y miembros, así como de obtener acceso a miembros (es decir, para llamar a métodos y constructores, obtener y establecer valores de propiedades, agregar y quitar controladores de eventos etc.). No hay restricciones en el uso de la reflexión para obtener información sobre tipos y miembros. Todo el código puede usar la reflexión para realizar las siguientes tareas:  

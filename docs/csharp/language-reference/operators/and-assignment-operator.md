@@ -1,24 +1,17 @@
 ---
 title: Operador &amp;= (Referencia de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '&=_CSharpKeyword'
 helpviewer_keywords:
 - AND assignment operator (&=) [C#]
 - '&= operator [C#]'
 ms.assetid: e8d58f3f-72dd-4b5a-b995-452fcce7e6bb
-caps.latest.revision: 15
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: bea90651faaafe7b754ce1cf16bddbab997d5f5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a749cf2f73faa80df49699b1e466cde290ed386e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="amp-operator-c-reference"></a>Operador &amp;= (Referencia de C#)
 El operador de asignación AND.  

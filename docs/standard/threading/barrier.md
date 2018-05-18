@@ -1,31 +1,20 @@
 ---
 title: Barrier (.NET Framework)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - synchronization primitives, Barrier
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
-caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 392e975f6bf566c2ba36290940eb0daee03f004f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 864571262d1c9c060235840424542856187341df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="barrier-net-framework"></a>Barrier (.NET Framework)
 Una *barrera* es un primitivo de sincronización definido por el usuario que permite que varios subprocesos (conocidos como *participantes*) trabajen simultáneamente en un algoritmo por fases. Cada participante se ejecuta hasta que alcanza el punto de barrera en el código. La barrera representa el final de una fase de trabajo. Cuando un participante alcanza la barrera, se bloquea hasta que todos los participantes alcancen la misma barrera. Cuando todos los participantes alcanzan la barrera, opcionalmente puede invocar una acción posterior a la fase. Esta acción posterior a la fase puede usarse para realizar acciones con un solo subproceso mientras todos los demás subprocesos siguen bloqueados. Una vez ejecutada la acción, se desbloquean todos los participantes.  

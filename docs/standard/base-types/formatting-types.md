@@ -1,13 +1,7 @@
 ---
 title: Aplicar formato a tipos en .NET
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -31,18 +25,13 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 201212251bf99e5a5bab7685544079968bbebdb1
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 10dd7e007ecd24ec3f127ab9c102cd758dfc7d75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatting-types-in-net"></a>Aplicar formato a tipos en .NET
 <a name="Introduction"></a> Aplicar formato es el proceso de convertir una instancia de una clase, una estructura o un valor de enumeración en su representación de cadena, a menudo para que la cadena resultante se pueda mostrar a los usuarios o deserializar para restaurar el tipo de datos original. Esta conversión puede plantear varios desafíos:  
@@ -264,7 +253,7 @@ ms.lasthandoff: 01/10/2018
 ### <a name="format-strings-and-net-types"></a>Cadenas de formato y tipos de .NET  
  Todos los tipos numéricos (es decir, los tipos <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64> y <xref:System.Numerics.BigInteger>), así como <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>y todos los tipos de enumeración, son compatibles con el formato con cadenas de formato. Para obtener información sobre las cadenas de formato específicas que admite cada tipo, consulte los temas siguientes:  
   
-|Title|Definición|  
+|Title|de esquema JSON|  
 |-----------|----------------|  
 |[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores numéricos.|  
 |[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores numéricos.|  
@@ -411,7 +400,7 @@ ms.lasthandoff: 01/10/2018
 <a name="RelatedTopics"></a>   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Definición|  
+|Title|de esquema JSON|  
 |-----------|----------------|  
 |[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Describe cadenas de formato estándar que crean representaciones de cadena usadas con frecuencia de valores numéricos.|  
 |[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Describe cadenas de formato personalizado que crean formatos específicos de la aplicación para valores numéricos.|  

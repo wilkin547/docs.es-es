@@ -1,27 +1,17 @@
 ---
-title: "Migración desde .NET Framework 1.1"
-ms.custom: 
+title: Migración desde .NET Framework 1.1
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d54fac935e7b1fad6b07a3a6cf2031dbca702cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc181d0aecd6a0c7c0800544ea00a818573c954c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migración desde .NET Framework 1.1
 [!INCLUDE[win7](../../../includes/win7-md.md)] y las versiones posteriores del sistema operativo Windows no admiten [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. En consecuencia, las aplicaciones que tienen como destino [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] no podrán ejecutarse sin modificaciones en [!INCLUDE[win7](../../../includes/win7-md.md)] o versiones posteriores. En este tema describen los pasos necesarios para ejecutar una aplicación destinada a [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] en [!INCLUDE[win7](../../../includes/win7-md.md)] y versiones posteriores del sistema operativo Windows. Para obtener más información sobre [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] y [!INCLUDE[win8](../../../includes/win8-md.md)], vea [Ejecutar aplicaciones .NET Framework 1.1 en Windows 8 y versiones posteriores](../../../docs/framework/install/run-net-framework-1-1-apps.md).  

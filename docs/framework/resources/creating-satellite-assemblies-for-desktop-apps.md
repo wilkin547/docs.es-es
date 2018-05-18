@@ -1,14 +1,6 @@
 ---
 title: Crear ensamblados satélite para aplicaciones de escritorio
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -31,17 +23,13 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f75da3332c8172a6a888e6f40c66383866799ea
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: c308c7e16f106d00e5fd1b5ad820f8b330f4bbbf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Crear ensamblados satélite para aplicaciones de escritorio
 Los archivos de recursos desempeñan un papel fundamental en las aplicaciones localizadas. Permiten que una aplicación muestre cadenas, imágenes y otros datos en el idioma y la referencia cultural del usuario, y que proporcione datos alternativos si los recursos para el idioma o la referencia cultural del usuario no están disponibles. .NET Framework usa un modelo de concentrador y radio para buscar y recuperar recursos localizados. El concentrador es el ensamblado principal que contiene el código ejecutable no localizable y los recursos de una referencia cultural única, denominada referencia cultural neutra o predeterminada. La referencia cultural predeterminada es la referencia cultural de reserva de la aplicación y se usa si no hay recursos localizados disponibles. El atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> se usa para designar la referencia cultural predeterminada de la aplicación. Cada radio se conecta a un ensamblado satélite que contiene los recursos de una única referencia cultural localizada, pero no contiene código. Debido a que los ensamblados satélite no forman parte del ensamblado principal, los recursos correspondientes a una referencia cultural específica se pueden actualizar o reemplazar fácilmente sin reemplazar el ensamblado principal de la aplicación.  
@@ -87,11 +75,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 |Opción|Description|  
 |------------|-----------------|  
-|**-target:**lib|Especifica que el ensamblado satélite se compila en un archivo de biblioteca (.dll). Dado que un ensamblado satélite no contiene código ejecutable y no es el ensamblado principal de la aplicación, debe guardar los ensamblados satélite como archivos DLL.|  
-|**-embed:**strings.de.resources|Especifica el nombre del archivo de recursos que se va a insertar cuando Al.exe compile el ensamblado. Puede insertar varios archivos .resources en un ensamblado satélite, pero si sigue el modelo de concentrador y radio, debe compilar un ensamblado satélite para cada referencia cultural. Aun así, puede crear archivos .resources independientes para cadenas y objetos.|  
-|**-culture:**de|Especifica la referencia cultural del recurso que se va a compilar. Common Language Runtime usa esta información cuando busca los recursos para la referencia cultural especificada. Si se omite esta opción, Al.exe compilará igualmente el recurso, pero el tiempo de ejecución no podrá encontrarlo cuando un usuario lo solicite.|  
-|**-out:**Example.resources.dll|Especifica el nombre del archivo de salida. El nombre debe seguir la convención de nomenclatura *baseName*.resources.*extension*, donde *baseName* es el nombre del ensamblado principal y *extension* es una extensión de nombre de archivo válida (por ejemplo, .dll). Tenga en cuenta que el tiempo de ejecución no puede determinar la referencia cultural de un ensamblado satélite a partir del nombre de su archivo de salida; debe usar la opción **/culture** para especificarla.|  
-|**-template:**Example.dll|Especifica el ensamblado del que el ensamblado satélite heredará todos los metadatos de ensamblado, salvo el campo correspondiente a la referencia cultural. Esta opción solo afecta a los ensamblados satélite si se especifica un ensamblado con [nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
+|**-target:** lib|Especifica que el ensamblado satélite se compila en un archivo de biblioteca (.dll). Dado que un ensamblado satélite no contiene código ejecutable y no es el ensamblado principal de la aplicación, debe guardar los ensamblados satélite como archivos DLL.|  
+|**-embed:** strings.de.resources|Especifica el nombre del archivo de recursos que se va a insertar cuando Al.exe compile el ensamblado. Puede insertar varios archivos .resources en un ensamblado satélite, pero si sigue el modelo de concentrador y radio, debe compilar un ensamblado satélite para cada referencia cultural. Aun así, puede crear archivos .resources independientes para cadenas y objetos.|  
+|**-culture:** de|Especifica la referencia cultural del recurso que se va a compilar. Common Language Runtime usa esta información cuando busca los recursos para la referencia cultural especificada. Si se omite esta opción, Al.exe compilará igualmente el recurso, pero el tiempo de ejecución no podrá encontrarlo cuando un usuario lo solicite.|  
+|**-out:** Example.resources.dll|Especifica el nombre del archivo de salida. El nombre debe seguir la convención de nomenclatura *baseName*.resources.*extension*, donde *baseName* es el nombre del ensamblado principal y *extension* es una extensión de nombre de archivo válida (por ejemplo, .dll). Tenga en cuenta que el tiempo de ejecución no puede determinar la referencia cultural de un ensamblado satélite a partir del nombre de su archivo de salida; debe usar la opción **/culture** para especificarla.|  
+|**-template:** Example.dll|Especifica el ensamblado del que el ensamblado satélite heredará todos los metadatos de ensamblado, salvo el campo correspondiente a la referencia cultural. Esta opción solo afecta a los ensamblados satélite si se especifica un ensamblado con [nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
   
  Para obtener una lista completa de las opciones disponibles con Al.exe, vea [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   

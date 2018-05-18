@@ -1,24 +1,17 @@
 ---
 title: sizeof (Referencia de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - sizeof_CSharpKeyword
 - sizeof
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-caps.latest.revision: 20
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0148ae8381804ca9286315251582c8ab40778369
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 83038255160ec778c71120566cf8f99092761add
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sizeof-c-reference"></a>sizeof (Referencia de C#)
 Se usa para obtener el tamaño en bytes de un tipo no administrado. Los tipos no administrados incluyen los tipos integrados que se muestran en la tabla que aparece a continuación, además de estos:  
@@ -72,5 +65,5 @@ int intSize = sizeof(int);
  [Palabras clave de operador](../../../csharp/language-reference/keywords/operator-keywords.md)  
  [enum](../../../csharp/language-reference/keywords/enum.md)  
  [Código no seguro y punteros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
- [Estructuras](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+ [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)  
  [Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)

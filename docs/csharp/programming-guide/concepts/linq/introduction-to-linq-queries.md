@@ -1,26 +1,17 @@
 ---
-title: "Introducción a las consultas LINQ (C#)"
-ms.custom: 
+title: Introducción a las consultas LINQ (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - deferred execution [LINQ]
 - LINQ, queries
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-caps.latest.revision: "47"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ae7a2d03859e95d939ff4c62fa33e07917a873a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f74b762532f0fb2795625185e59360cdfb76b124
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introducción a las consultas LINQ (C#)
 Una *consulta* es una expresión que recupera datos de un origen de datos. Las consultas se suelen expresar en un lenguaje de consultas especializado. Con el tiempo se han desarrollado diferentes lenguajes para los distintos tipos de orígenes de datos, como SQL para las bases de datos relacionales y XQuery para XML. Por lo tanto, los programadores han tenido que aprender un lenguaje de consultas nuevo para cada tipo de origen de datos o formato de datos que deben admitir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] simplifica esta situación al ofrecer un modelo coherente para trabajar con los datos de varios formatos y orígenes. En una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] siempre se trabaja con objetos. Se usan los mismos modelos de codificación básicos para consultar y transformar los datos en documentos XML, bases de datos SQL, conjuntos de datos [!INCLUDE[vstecado](~/includes/vstecado-md.md)], colecciones de .NET y cualquier otro formato para el que está disponible un proveedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  

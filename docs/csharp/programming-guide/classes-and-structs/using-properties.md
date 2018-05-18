@@ -1,23 +1,16 @@
 ---
-title: "Utilizar propiedades (Guía de programación de C#)"
+title: Utilizar propiedades (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 36345748e514f0e0a4c945d8ead149c7d8ca9a19
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: f0d470d2c38a07db9a936fc645b7a97aa12a7f84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilizar propiedades (Guía de programación de C#)
 Las propiedades combinan aspectos de los campos y los métodos. Para el usuario de un objeto, una propiedad que parece un campo, el acceso a la propiedad necesita la misma sintaxis. Para el implementador de una clase, una propiedad es uno o dos bloques de código que representa un descriptor de acceso [get](../../../csharp/language-reference/keywords/get.md) o un descriptor de acceso [set](../../../csharp/language-reference/keywords/set.md). El bloque de código del descriptor de acceso `get` se ejecuta cuando se lee la propiedad; el bloque de código del descriptor de acceso `set` se ejecuta cuando se asigna un nuevo valor a la propiedad. Una propiedad sin un descriptor de acceso `set` se considera de solo lectura. Una propiedad sin un descriptor de acceso `get` se considera de solo escritura. Una propiedad que tiene ambos descriptores de acceso es de lectura y escritura.  

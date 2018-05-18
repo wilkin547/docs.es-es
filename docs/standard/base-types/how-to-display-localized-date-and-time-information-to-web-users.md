@@ -1,13 +1,7 @@
 ---
-title: "Cómo: Mostrar información localizada de fecha y hora a usuarios web"
-ms.custom: 
+title: 'Cómo: Mostrar información localizada de fecha y hora a usuarios web'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - formatting [.NET Framework], dates
 - parsing strings [.NET Framework], date and time strings
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b6c68ddd29b8221a073b00ade87e3b9d3dc870b8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63775d48ca2e11cfa121f3b7aeaff708d86e50de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Cómo: Mostrar información localizada de fecha y hora a usuarios web
 Dado que una página web puede mostrarse en cualquier lugar del mundo, las operaciones que analizarán y darán formato a valores de fecha y hora no deben basarse en un formato predeterminado (que suele ser el formato de referencia cultural local del servidor web) al interactuar con el usuario. En su lugar, los formularios Web Forms que controlan las entradas del usuario de cadenas de fecha y hora deben analizar estas cadenas usando la referencia cultural preferida del usuario. De forma similar, los datos de fecha y hora deben mostrarse al usuario en un formato que se ajuste a la referencia cultural del usuario. En este tema se explica cómo hacerlo.  

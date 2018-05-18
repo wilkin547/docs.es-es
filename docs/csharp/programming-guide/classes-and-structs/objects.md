@@ -1,27 +1,21 @@
 ---
-title: "Objetos (Guía de programación de C#)"
+title: Objetos (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-caps.latest.revision: "26"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f8a8e283b42b27a40780068be42c03fc5047a511
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 553b0a5e75364bc5c294867852265575fb9271b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="objects-c-programming-guide"></a>Objetos (Guía de programación de C#)
 Una definición de clase o estructura es como un plano que especifica qué puede hacer el tipo. Un objeto es básicamente un bloque de memoria que se ha asignado y configurado de acuerdo con el plano. Un programa puede crear muchos objetos de la misma clase. Los objetos también se denominan instancias y pueden almacenarse en una variable con nombre, o en una matriz o colección. El código de cliente es el código que usa estas variables para llamar a los métodos y acceder a las propiedades públicas del objeto. En un lenguaje orientado a objetos, como C#, un programa típico consta de varios objetos que interactúan dinámicamente.  
   
 > [!NOTE]
->  Los tipos estáticos se comportan de forma diferente a lo que se describe aquí. Para obtener más información, consulte [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+>  Los tipos estáticos se comportan de forma diferente a lo que se describe aquí. Para más información, vea [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
 ## <a name="struct-instances-vs-class-instances"></a>Instancias de estructura frente a Instancias de clase  
  Puesto que las clases son tipos de referencia, una variable de un objeto de clase contiene una referencia a la dirección del objeto del montón administrado. Si se asigna un segundo objeto del mismo tipo al primer objeto, ambas variables hacen referencia al objeto de esa dirección. Este punto se analiza con más detalle más adelante en este tema.  
@@ -57,7 +51,7 @@ Una definición de clase o estructura es como un plano que especifica qué puede
   
 -   [Clases](../../../csharp/programming-guide/classes-and-structs/classes.md)  
   
--   [Estructuras](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+-   [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)  
   
 -   [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   

@@ -1,31 +1,20 @@
 ---
 title: Control de excepciones (Task Parallel Library)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 86b4d105b7d79abbd25b342774705866119ada68
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 16ab0b8967ac394540f201fcc9098024faaccaa7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-task-parallel-library"></a>Control de excepciones (Task Parallel Library)
 Las excepciones no controladas que se inician mediante código de usuario que se ejecuta dentro de una tarea se propagan de vuelta al subproceso que hace la llamada, excepto en determinados escenarios que se describen posteriormente en este tema. Las excepciones se propagan cuando se usa uno de los métodos estáticos o de instancia <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> o <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait`, los cuales se pueden controlar si se incluye la llamada en una instrucción `try`/`catch`. Si una tarea es la tarea primaria de tareas secundarias asociadas o si se esperan varias tareas, pueden producirse varias excepciones.  

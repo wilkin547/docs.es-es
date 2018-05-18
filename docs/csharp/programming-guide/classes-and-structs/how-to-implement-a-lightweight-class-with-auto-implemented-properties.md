@@ -1,21 +1,15 @@
 ---
-title: "Cómo: Implementar una clase ligera con propiedades autoimplementadas (Guía de programación de C#)"
+title: 'Cómo: Implementar una clase ligera con propiedades autoimplementadas (Guía de programación de C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-caps.latest.revision: "11"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f43dfaffe6ff696387573729dc25cabe33c1fede
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9612ec916481776691e85a84503ce5063c20b099
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Cómo: Implementar una clase ligera con propiedades autoimplementadas (Guía de programación de C#)
 En este ejemplo se muestra cómo crear una clase ligera inmutable que solo sirve para encapsular un conjunto de propiedades autoimplementadas. Use este tipo de construcción en lugar de un struct cuando deba utilizar una semántica de tipo de referencia.  

@@ -1,28 +1,18 @@
 ---
 title: Copias sombra de ensamblados
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], shadow copying
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 611af6226e28369c30b251a23e901c140433808a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea7c85e956828e918e3cfe205b980e543e257eb4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shadow-copying-assemblies"></a>Copias sombra de ensamblados
 Las instantáneas permiten que los ensamblados que se usan en un dominio de aplicación se actualicen sin descargar el dominio de aplicación. Esto es especialmente útil para las aplicaciones que tienen que estar disponibles continuamente, como los sitios de ASP.NET.  

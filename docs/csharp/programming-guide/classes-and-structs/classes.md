@@ -2,22 +2,15 @@
 title: Clases (Guía de programación de C#)
 description: Obtenga información sobre los tipos de clases y cómo crearlas
 ms.date: 04/05/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-caps.latest.revision: 40
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1909623d3d8f6110a5fb466575bdab2d45495c2a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 808e25315b0010fd55112f2ed237485c3d0c40d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classes-c-programming-guide"></a>Clases (Guía de programación de C#)
 Una *class* es una construcción que le permite crear sus propios tipos personalizados agrupando las variables de otros tipos, métodos y eventos. Una clase es como un plano. Define los datos y el comportamiento de un tipo. Si la clase no se declara como estática, el código de cliente puede crear *instancias* de ella. Estas instancias son *objetos* que se asignan a una variable. La instancia de una clase permanece en memoria hasta que todas las referencias a ella están fuera del ámbito. En ese momento, CLR la marca como apta para la recolección de elementos no utilizados. Si la clase se declara como [estática](../../../csharp/language-reference/keywords/static.md), no puede crear instancias y el código de cliente solo puede tener acceso a ella a través de la propia clase. Para más información, vea [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  

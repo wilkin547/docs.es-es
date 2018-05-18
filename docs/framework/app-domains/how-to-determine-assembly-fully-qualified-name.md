@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Determinar el nombre completo de un ensamblado"
-ms.custom: 
+title: 'Cómo: Determinar el nombre completo de un ensamblado'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
-caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 841bec105f171f3450bfc33ee9052ddb85814a5e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 663e7456337a2d9c413b15236e7ba1de33fbfa9b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Cómo: Determinar el nombre completo de un ensamblado
 Para conocer el nombre completo de un ensamblado de la caché global de ensamblados, use la herramienta Caché global de ensamblados ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Vea [Cómo: Consultar el contenido de la caché global de ensamblados](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  

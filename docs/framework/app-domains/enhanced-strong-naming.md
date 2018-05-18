@@ -1,27 +1,17 @@
 ---
 title: Nombres seguros mejorados
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - strong-named assemblies
 - strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 77eec473b95720e432c94b79778fa518f3ecf1c4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bf4a8df87cd507f2bfb17086e83dc8374a22fe71
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enhanced-strong-naming"></a>Nombres seguros mejorados
 Una firma de nombre seguro es un mecanismo de identidad de .NET Framework para identificar ensamblados. Es una firma digital de clave pública que se suele usar para comprobar la integridad de los datos que se pasan de un remitente (firmante) a un destinatario (comprobador). Esta firma se usa como identidad única para un ensamblado y garantiza que las referencias al ensamblado no son ambiguas. El ensamblado se firma como parte del proceso de compilación y, después, se comprueba cuando se carga.  

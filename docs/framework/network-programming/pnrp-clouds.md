@@ -1,23 +1,15 @@
 ---
 title: Nubes PNRP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f142c7aaa71ab2dbee1d2955f2c235a65e6c8bfa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ef3f4fd2f7333c5a78024edf7eb536e9254c0293
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pnrp-clouds"></a>Nubes PNRP
 Una "nube" PNRP representa un conjunto de nodos que pueden comunicarse entre sí a través de la red. El término "nube" es sinónimo de "malla del mismo nivel" y "grafo punto a punto".  

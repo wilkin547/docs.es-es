@@ -1,21 +1,14 @@
 ---
-title: "Utilizar indizadores (Guía de programación de C#)"
+title: Utilizar indizadores (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 17bbfabe8a53fc51e81434d0a2bd9fb2b29c4695
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 82de2841a74f58905d3089bb0b320e7501a77045
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-indexers-c-programming-guide"></a>Utilizar indizadores (Guía de programación de C#)
 Los indexadores son una comodidad sintáctica que le permiten crear una [clase](../../../csharp/language-reference/keywords/class.md), un [struct](../../../csharp/language-reference/keywords/struct.md) o una [interfaz](../../../csharp/language-reference/keywords/interface.md) a los que pueden acceder las aplicaciones cliente simplemente como una matriz. Los indexadores se implementan con más frecuencia en tipos cuyo propósito principal consiste en encapsular una matriz o colección interna. Por ejemplo, suponga que tiene una clase denominada TempRecord que representa la temperatura en grados Fahrenheit que se registra en 10 momentos diferentes durante un período de 24 horas. La clase contiene una matriz denominada "temps" de tipo float para representar la temperatura y un <xref:System.DateTime> que representa la fecha en que se han registrado las temperaturas. Si implementa un indexador en esta clase, los clientes pueden tener acceso a las temperaturas en una instancia de TempRecord como `float temp = tr[4]` en lugar de como `float temp = tr.temps[4]`. La notación del indexador no solo simplifica la sintaxis para las aplicaciones cliente; también hace que la clase y su finalidad sean más intuitivas para que las conozcan otros desarrolladores.  

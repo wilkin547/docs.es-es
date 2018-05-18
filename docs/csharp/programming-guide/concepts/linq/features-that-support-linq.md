@@ -1,24 +1,14 @@
 ---
-title: "Características de C# compatibles con LINQ"
-ms.custom: 
+title: Características de C# compatibles con LINQ
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2f5accb188e54e0d3e2b941832637ec33afc26b2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f1c045ffe311dfad851c7cace37966d8d42a22cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-features-that-support-linq"></a>Características de C# compatibles con LINQ
 La siguiente sección presenta las nuevas construcciones de lenguaje incluidas en C# 3.0. Aunque estas nuevas características se usan hasta cierto punto con consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], no se limitan a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] y se pueden usar en cualquier contexto en las que se consideren de utilidad.  
@@ -48,7 +38,7 @@ var query = from str in stringArray
   
  Las variables declaradas como `var` son tan fuertemente tipadas como las variables cuyo tipo se especifica explícitamente. El uso de `var` hace posible crear tipos anónimos, pero se puede usar para cualquier variable local. También se pueden declarar matrices con asignación implícita de tipos.  
   
- Para obtener más información, vea [Variables locales con asignación implícita de tipos](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+ Para más información, vea [Variables locales con asignación implícita de tipos](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
 ## <a name="object-and-collection-initializers"></a>Inicializadores de objeto y colección  
  Los inicializadores de objeto y colección permiten inicializar objetos sin llamar explícitamente a un constructor para el objeto. Los inicializadores normalmente se usan en expresiones de consulta cuando proyectan los datos de origen en un nuevo tipo de datos. Suponiendo que hay una clase denominada `Customer` con las propiedades públicas `Name` y `Phone`, el inicializador de objeto se puede usar como en el código siguiente:  
@@ -94,4 +84,4 @@ public string Name {get; set;}
  Para obtener más información, vea [Propiedades implementadas automáticamente](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+ [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

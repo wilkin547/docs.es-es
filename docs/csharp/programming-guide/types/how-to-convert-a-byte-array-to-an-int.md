@@ -1,21 +1,15 @@
 ---
-title: "Cómo: Convertir una matriz de bytes en un valor int (Guía de programación de C#)"
+title: 'Cómo: Convertir una matriz de bytes en un valor int (Guía de programación de C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-caps.latest.revision: "18"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ee51cd94e961c7274286c812cb6900d26c6ce033
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e8c232a604837d32675229f7f91b8e329ac4b5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Cómo: Convertir una matriz de bytes en un valor int (Guía de programación de C#)
 En este ejemplo se muestra cómo usar la clase <xref:System.BitConverter> para convertir una matriz de bytes en un valor [int](../../../csharp/language-reference/keywords/int.md) y de nuevo en una matriz de bytes. Por ejemplo, es posible que tenga que realizar una conversión de bytes a un tipo de datos integrado después de leer los bytes fuera de la red. Además del método [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) del ejemplo, en la tabla siguiente se muestran los métodos de la clase <xref:System.BitConverter> que sirven para convertir bytes (de una matriz de bytes) en otros tipos integrados.  

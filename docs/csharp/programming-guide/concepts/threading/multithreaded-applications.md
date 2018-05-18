@@ -1,21 +1,12 @@
 ---
 title: Aplicaciones multiproceso (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b7015cfb-d506-4eac-b2f8-b2caaa9cc977
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 48b056172e3260952155eb40a1a393d86da78344
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ee4d92ae0ad3dadf6568b367522817484cb7337f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multithreaded-applications-c"></a>Aplicaciones multiproceso (C#)
 Con C#, puede escribir aplicaciones que realicen varias tareas al mismo tiempo. Las tareas con la posibilidad de contener otras tareas pueden ejecutarse en subprocesos separados, lo que se conoce como *multithreading* o *subprocesamiento libre*.  
@@ -65,7 +56,7 @@ newThread.Abort();
 ### <a name="thread-properties"></a>Propiedades del subproceso  
  Los subprocesos también contienen varias propiedades útiles, como se muestra en la tabla siguiente:  
   
-|Propiedad|Valor|  
+|Property|Valor|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Contiene el valor `True` si un subproceso está activo.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Obtiene o establece un valor booleano que indica si un subproceso es o debe ser un subproceso en segundo plano. Los subprocesos en segundo plano son como subprocesos en primer plano, con la diferencia de que un subproceso en segundo plano no impide que un proceso se detenga. Una vez que se hayan detenido todos los subprocesos en primer plano que pertenecen a un proceso, Common Language Runtime finaliza el proceso mediante una llamada al método <xref:System.Threading.Thread.Abort%2A> en los subprocesos en segundo plano que continúan activos.|  

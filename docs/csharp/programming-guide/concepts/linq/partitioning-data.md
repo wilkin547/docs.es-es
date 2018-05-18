@@ -1,21 +1,12 @@
 ---
 title: Realizar particiones de datos (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 32b95887e05767513dd818743dd1726149503b0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 003e292979b1dc75baa298ea4bda7ef432d0f27b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partitioning-data-c"></a>Realizar particiones de datos (C#)
 Partición en LINQ es la operación de dividir una secuencia de entrada en dos secciones, sin reorganizar los elementos, y devolver después una de las secciones.  
@@ -28,7 +19,7 @@ Partición en LINQ es la operación de dividir una secuencia de entrada en dos s
   
 ## <a name="operators"></a>Operadores  
   
-|Nombre de operador|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
+|Nombre de operador|Description|Sintaxis de la expresión de consulta de C#|Más información|  
 |-------------------|-----------------|---------------------------------|----------------------|  
 |Skip|Omite los elementos hasta una determinada posición de una secuencia.|No es aplicable.|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
 |SkipWhile|Omite los elementos según una función de predicado hasta que un elemento no satisface la condición.|No es aplicable.|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  

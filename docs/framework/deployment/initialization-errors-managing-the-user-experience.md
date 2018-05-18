@@ -1,28 +1,18 @@
 ---
-title: "Errores de inicialización de .NET Framework: Administrar la experiencia del usuario"
-ms.custom: 
+title: 'Errores de inicialización de .NET Framework: Administrar la experiencia del usuario'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - no framework found experience
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8679e930b1f12119211a6463289fb37a18692d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6fe59075f04443ba40c209b6cda5a5071d16c79e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Errores de inicialización de .NET Framework: Administrar la experiencia del usuario
 El sistema de activación de Common Language Runtime (CLR) determina qué versión del CLR se utilizará para ejecutar código de aplicaciones administradas. El sistema de activación no siempre encuentra una versión de CLR para cargar. Esta situación normalmente se produce cuando una aplicación requiere una versión de CLR que está desusada o no está instalada en un equipo determinado. Si no se encuentra la versión solicitada, el sistema de activación de CLR devuelve un código de error HRESULT desde la función o interfaz a la que se llamó, y muestra al usuario que ejecuta la aplicación un mensaje de error. Este artículo facilita una lista de códigos HRESULT y explica cómo se puede impedir que aparezca el mensaje de error.  

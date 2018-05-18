@@ -1,13 +1,6 @@
 ---
-title: "Mpgo.exe (Herramienta de optimización guiada por perfiles administrados)"
-ms.custom: 
+title: Mpgo.exe (Herramienta de optimización guiada por perfiles administrados)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Mpgo.exe
 - training scenarios, generating profiles with
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 49d2154b1af4350c3145f2cb9be30505e0967a4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 42e1fb080ac0af34c621cef3a991cad7bcf603ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Herramienta de optimización guiada por perfiles administrados)
 La herramienta de optimización guiada por perfiles administrados (Mpgo.exe) es una herramienta de línea de comandos que usa escenarios de usuario final comunes para optimizar los ensamblados de imagen nativa creados por el [Generador de imágenes nativas (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). Esta herramienta permite ejecutar escenarios de aprendizaje que generan datos de perfil. El [Generador de imágenes nativas (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) usa estos datos para optimizar los ensamblados de aplicación de imagen nativa generados. Un escenario de aprendizaje es una ejecución de prueba de un uso previsto de la aplicación. Mpgo.exe está disponible en Visual Studio Ultimate 2012 y versiones posteriores. A partir de [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], también puede usar Mpgo.exe para optimizar las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  

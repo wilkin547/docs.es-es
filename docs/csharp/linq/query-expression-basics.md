@@ -1,20 +1,13 @@
 ---
-title: "Conceptos básicos de las expresiones de consultas"
+title: Conceptos básicos de las expresiones de consultas
 description: En este tema se presentan los conceptos relacionados con las expresiones de consulta.
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
 ms.date: 11/30/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 7a1cf9eea4c5d75c6bcb6d2f0d5f68a07e3158d0
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.openlocfilehash: d211b0770bdc69f513e4129c818f96650de63e77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-expression-basics"></a>Conceptos básicos de las expresiones de consultas
 
@@ -157,7 +150,7 @@ ms.lasthandoff: 11/30/2017
   
  [!code-csharp[csrefQueryExpBasics#61](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_17.cs)]  
   
- También puede realizar una combinación agrupada. Para ello, almacene los resultados de la operación `join` en una variable temporal mediante el uso de la palabra clave [into](../language-reference/keywords/into.md). Para obtener más información, vea [join (Cláusula, Referencia de C#)](../language-reference/keywords/join-clause.md).  
+ También puede realizar una combinación agrupada. Para ello, almacene los resultados de la operación `join` en una variable temporal mediante el uso de la palabra clave [into](../language-reference/keywords/into.md). Para obtener más información, consulte [join (Cláusula, Referencia de C#)](../language-reference/keywords/join-clause.md).  
   
 #### <a name="let-clause"></a>let (cláusula) 
 

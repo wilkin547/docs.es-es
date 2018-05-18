@@ -1,21 +1,12 @@
 ---
-title: "Cómo: Crear ensamblados de confianza con signo (C#)"
-ms.custom: 
+title: 'Cómo: Crear ensamblados de confianza con signo (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d3d9d4c549654341c0739cc8132d953623482d62
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 34243a65f57f41c358439baac82a1ce169233259
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Cómo: Crear ensamblados de confianza con signo (C#)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  

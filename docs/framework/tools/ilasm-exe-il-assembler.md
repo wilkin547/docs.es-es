@@ -1,13 +1,6 @@
 ---
 title: Ilasm.exe (Ensamblador de IL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MSIL generators
 - metadata, MSIL Assembler
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Ensamblador de IL)
 
@@ -74,7 +64,7 @@ ilasm [options] filename [[options]filename...]
 |**/noautoinherit**|Deshabilita la herencia predeterminada de <xref:System.Object> cuando no se especifica ninguna clase base.|
 |**/nocorstub**|Suprime la generación de código auxiliar de CORExeMain.|
 |**/nologo**|Suprime la presentación de la portada de inicio de Microsoft.|
-|**/output:** `file.ext`|Especifica el nombre y la extensión del archivo de salida. De forma predeterminada, el nombre del archivo de salida coincide con el nombre del primer archivo de código fuente. La extensión predeterminada es *.exe*. Si se especifica la opción **/dll**, la extensión predeterminada es *.dll*. **Nota:** El hecho de especificar **/output:**myfile.dll no implica que se establezca la opción **/dll**. Si no se especifica **/dll**, el resultado será un archivo ejecutable denominado *myfile.dll*.|
+|**/output:** `file.ext`|Especifica el nombre y la extensión del archivo de salida. De forma predeterminada, el nombre del archivo de salida coincide con el nombre del primer archivo de código fuente. La extensión predeterminada es *.exe*. Si se especifica la opción **/dll**, la extensión predeterminada es *.dll*. **Nota:** El hecho de especificar **/output:** myfile.dll no implica que se establezca la opción **/dll**. Si no se especifica **/dll**, el resultado será un archivo ejecutable denominado *myfile.dll*.|
 |**/optimize**|Optimiza las instrucciones largas en instrucciones cortas. Por ejemplo, `br` en `br.s`.|
 |**/pe64**|Crea una imagen de 64 bits (PE32+).<br /><br /> Si no se especifica un procesador de destino, el valor predeterminado es `/itanium`.|
 |**/pdb**|Crea un archivo PDB sin habilitar un seguimiento de la información de depuración.|

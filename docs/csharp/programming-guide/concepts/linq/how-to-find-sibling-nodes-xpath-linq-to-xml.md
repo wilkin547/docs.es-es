@@ -1,21 +1,12 @@
 ---
-title: "Cómo: Buscar nodos del mismo nivel (XPath-LINQ to XML) (C#)"
-ms.custom: 
+title: 'Cómo: Buscar nodos del mismo nivel (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 65965ef1a5e24a6356bb90d3439d5ccb0dc74f86
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a448be9d86f9f2e2f85d45f9bc1f019b3f72305c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Cómo: Buscar nodos del mismo nivel (XPath-LINQ to XML) (C#)
 Quizás desea buscar todos los elementos relacionados de un nodo que tienen un nombre específico. La recopilación resultante puede incluir el nodo de contexto si también tiene el nombre específico.  
@@ -27,7 +18,7 @@ Quizás desea buscar todos los elementos relacionados de un nodo que tienen un n
 ## <a name="example"></a>Ejemplo  
  Este ejemplo primero busca un elemento `Book` y después busca todos los elementos secundarios con el nombre `Book`. La colección resultante incluye el nodo de contexto.  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: libros (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Libros (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  

@@ -1,14 +1,6 @@
 ---
 title: Empaquetar e implementar recursos en aplicaciones de escritorio
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -34,17 +26,13 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 479ab530ddf02fa3701a7f6f3699258d0eab727e
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 0a6e6219d6449fedabe6e7cb0b349efb6fc74ee6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Empaquetar e implementar recursos en aplicaciones de escritorio
 Las aplicaciones se basan en el Administrador de recursos de .NET Framework, representado por la clase <xref:System.Resources.ResourceManager>, para recuperar recursos localizados. El Administrador de recursos da por supuesto que se usa un modelo de concentrador y radio para empaquetar e implementar los recursos. El concentrador es el ensamblado principal que contiene el código ejecutable no localizable y los recursos de una referencia cultural única, denominada referencia cultural neutra o predeterminada. La referencia cultural predeterminada es la referencia cultural de reserva de la aplicación. Se trata de la referencia cultural cuyos recursos se usarán si no se encuentran recursos localizados. Cada radio se conecta a un ensamblado satélite que contiene los recursos de una única referencia cultural, pero no contiene código.  

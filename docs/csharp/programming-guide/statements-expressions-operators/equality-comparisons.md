@@ -1,21 +1,14 @@
 ---
-title: "Comparaciones de igualdad (Guía de programación de C#)"
+title: Comparaciones de igualdad (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 199257b1fe371dea3e4ee1eedcf11f3bdce02366
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: c1abee8636cf540d42d92eb7496fb078f06e6e0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Comparaciones de igualdad (Guía de programación de C#)
 A veces es necesario comparar si dos valores son iguales. En algunos casos, se prueba la *igualdad de valores*, también denominada *equivalencia*, lo que significa que los valores contenidos en las dos variables son iguales. En otros casos, hay que determinar si dos variables hacen referencia al mismo objeto subyacente de la memoria. Este tipo de igualdad se denomina *igualdad de referencia* o *identidad*. En este tema se describen estos dos tipos de igualdad y se proporcionan vínculos a otros temas para obtener más información.  
@@ -52,7 +45,7 @@ if( b == a)
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Descripción|  
+|Title|Description|  
 |-----------|-----------------|  
 |[Cómo: Probar la igualdad de referencia (Identidad)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)|Describe cómo determinar si dos variables presentan igualdad de referencia.|  
 |[Cómo: Definir la igualdad de valores para un tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)|Describe cómo proporcionar una definición personalizada de igualdad de valores para un tipo.|  

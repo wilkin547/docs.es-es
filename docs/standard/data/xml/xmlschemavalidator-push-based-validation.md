@@ -1,29 +1,18 @@
 ---
 title: Validación basada en inserción de XmlSchemaValidator
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 60c2effea612a579b4c66b7c30243b785b86a263
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 36d91d4bd479c1592ae0b3f98d227947686188d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Validación basada en inserción de XmlSchemaValidator
 La clase <xref:System.Xml.Schema.XmlSchemaValidator> incluye un mecanismo eficiente y de alto rendimiento para validar datos XML con esquemas XML mediante inserción. Por ejemplo, la clase <xref:System.Xml.Schema.XmlSchemaValidator> le permite validar un conjunto de información XML en el lugar sin tener que serializarla como un documento XML y, a continuación, volver a analizar el documento utilizando un sistema de lectura XML de validación.  
@@ -158,7 +147,7 @@ validator.ValidateEndElement(null);
 ### <a name="validating-elements-attributes-and-content"></a>Validación de elementos, atributos y contenido  
  La clase <xref:System.Xml.Schema.XmlSchemaValidator> incluye varios métodos que se utilizan para validar elementos, atributos y contenido en un conjunto de información XML con esquemas XML. En la siguiente tabla se describen cada uno de estos métodos.  
   
-|Método|Descripción|  
+|Método|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Valida el nombre del elemento en el contexto actual.|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Valida el atributo en el contexto del elemento actual o con el objeto <xref:System.Xml.Schema.XmlSchemaAttribute> que se pasa como parámetro al método <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>.|  
@@ -458,7 +447,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
   
  En la siguiente tabla se describe cómo los signos de puntuación que se encuentran en la tabla de transiciones de estado anterior afectan a los métodos y otros estados que se pueden llamar para cada estado de la transición de la clase <xref:System.Xml.Schema.XmlSchemaValidator>.  
   
-|Símbolo|Descripción|  
+|Símbolo|Description|  
 |------------|-----------------|  
 |&#124;|Se puede llamar al método o al estado (al que está antes o después de la barra).|  
 |?|El método o estado que precede al signo de interrogación es opcional, pero si se llama, solo se puede llamar una vez.|  

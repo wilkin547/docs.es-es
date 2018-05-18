@@ -1,21 +1,12 @@
 ---
-title: "Crear árboles XML en C# (LINQ to XML)"
-ms.custom: 
+title: Crear árboles XML en C# (LINQ to XML)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2e37ee7cd61058157b9c6c7d37784e215faf900a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4fcd0c14970dd4aabe4d51335f9a0a0a991ef019
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Crear árboles XML en C# (LINQ to XML)
 En esta sección encontrará información acerca de cómo crear árboles XML en C#.  
@@ -50,7 +41,7 @@ XElement contacts =
 ## <a name="xelement-constructors"></a>Constructores de XElement  
  La clase <xref:System.Xml.Linq.XElement> utiliza los siguientes constructores para llevar a cabo una construcción funcional. Observe que existen algunos constructores más para <xref:System.Xml.Linq.XElement>, pero, dado que no se utilizan para el proceso de construcción funcional, no se detallarán aquí.  
   
-|Constructor|Descripción|  
+|Constructor|Description|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|Crea una interfaz <xref:System.Xml.Linq.XElement>. El parámetro `name` especifica el nombre del elemento; `content` especifica el contenido del elemento.|  
 |`XElement(XName name)`|Crea un <xref:System.Xml.Linq.XElement> cuyo <xref:System.Xml.Linq.XName> se inicializa con el nombre especificado.|  
@@ -191,7 +182,7 @@ Console.WriteLine(n);
 <Customer />  
 ```  
   
-### <a name="attaching-vs-cloning"></a>Diferencias entre adjuntar y clonar  
+### <a name="attaching-vs-cloning"></a>Diferencias entre adjuntar y Clonación  
  Como mencionamos anteriormente, cuando se agregan objetos <xref:System.Xml.Linq.XNode> (incluyendo el objeto <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute>, si el contenido nuevo no tiene un elemento primario, los objetos simplemente se adjuntan al árbol XML. Si el contenido nuevo ya tiene un elemento primario y forma parte de otro árbol XML, el nuevo contenido se clonará y ese clon se asociará al árbol XML.  
   
 ```csharp  

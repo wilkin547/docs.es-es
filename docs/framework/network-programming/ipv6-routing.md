@@ -1,23 +1,15 @@
 ---
 title: Enrutamiento de IPv6
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: c7bfb79c5ab5406793a27f653b7e6a1abf2b2859
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c3e2662eb444c70d2376a05e44ac84f472f27384
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ipv6-routing"></a>Enrutamiento de IPv6
 Una de las ventajas de IPv6 es el mecanismo de enrutamiento flexible. Debido a la manera en que se asignaban y todavía se asignan los identificadores de red IPv4, los enrutadores que se encuentran en las redes troncales de Internet deben mantener grandes tablas de enrutamiento. Estos enrutadores deben conocer todas las rutas con el fin de reenviar los paquetes que se dirigen potencialmente a cualquier nodo de Internet. Con su capacidad para agregar direcciones, IPv6 permite el direccionamiento flexible y reduce drásticamente el tamaño de las tablas de enrutamiento. En esta nueva arquitectura de direccionamiento, los enrutadores intermedios deben realizar un seguimiento únicamente de la parte local de su red para reenviar los mensajes de forma adecuada.  

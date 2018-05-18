@@ -1,21 +1,14 @@
 ---
 title: Crear una interfaz de usuario compuesta en función de los microservicios, incluidos la forma y el diseño visual de la interfaz de usuario generados por varios microservicios
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Crear una interfaz de usuario compuesta en función de los microservicios, incluidos la forma y el diseño visual de la interfaz de usuario generados por varios microservicios
-keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 55b643fa6f87e5e2b1f49ba201032df655195b46
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: cbadb13109c51ba53530011a17006b585573f40a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Crear una interfaz de usuario compuesta en función de los microservicios, incluidos la forma y el diseño visual de la interfaz de usuario generados por varios microservicios
 

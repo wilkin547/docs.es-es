@@ -1,20 +1,13 @@
 ---
-title: "Patrón de eventos actualizado de .NET Core"
-description: "Obtenga información sobre cómo el patrón de eventos de .NET Core permite la flexibilidad con la compatibilidad con versiones anteriores y cómo implementar un procesamiento de eventos seguro con suscriptores asincrónicos."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: Patrón de eventos actualizado de .NET Core
+description: Obtenga información sobre cómo el patrón de eventos de .NET Core permite la flexibilidad con la compatibilidad con versiones anteriores y cómo implementar un procesamiento de eventos seguro con suscriptores asincrónicos.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: cf69cbe0a7adbd274d1cb9e9544dda77d9fa1740
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d0ad85479265041d895039d6c72f1f9909ea5fa8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Patrón de eventos actualizado de .NET Core
 

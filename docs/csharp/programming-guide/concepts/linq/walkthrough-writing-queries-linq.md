@@ -1,26 +1,17 @@
 ---
 title: 'Tutorial: Escribir consultas en C# (LINQ)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: get-started-article
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
 - LINQ [C#], writing queries
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-caps.latest.revision: "32"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8db1b59bd8de523ae74ca198302f814c2d43f25a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 10ffdbd6430c0ad55b0a5d71f217a7cb18163741
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Tutorial: Escribir consultas en C# (LINQ)
 Este tutorial muestra las características del lenguaje C# que se usan para escribir expresiones de consulta de LINQ.  
@@ -42,7 +33,7 @@ Este tutorial muestra las características del lenguaje C# que se usan para escr
   
 4.  En el cuadro de texto **Nombre**, escriba otro nombre o acepte el predeterminado y luego elija el botón **Aceptar**.  
   
-     El nuevo proyecto aparece en el **Explorador de soluciones**.  
+     El proyecto nuevo aparece en el **Explorador de soluciones**.  
   
 5.  Observe que el proyecto tiene una referencia a System.Core.dll y una directiva `using` para el espacio de nombres <xref:System.Linq?displayProperty=nameWithType>.  
   
@@ -191,6 +182,6 @@ Este tutorial muestra las características del lenguaje C# que se usan para escr
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
  [Introducción a LINQ en C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)

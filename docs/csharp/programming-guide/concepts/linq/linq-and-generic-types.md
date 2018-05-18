@@ -1,25 +1,16 @@
 ---
-title: "LINQ y tipos genéricos (C#)"
-ms.custom: 
+title: LINQ y tipos genéricos (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#], generic types
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-caps.latest.revision: "18"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e62a1573fa5ebf51a5f0f23b133c274730cfbeb6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f9bb4ec21685d21d0975529c7460944b5f0f9fc6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ y tipos genéricos (C#)
 Las consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se basan en tipos genéricos, introducidos en la versión 2.0 de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. No es necesario tener conocimientos avanzados de genéricos para poder empezar a escribir consultas, aunque debería entender dos conceptos básicos:  

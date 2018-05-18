@@ -1,21 +1,12 @@
 ---
 title: Convertir tipos de datos (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4733694c2a9fd7c83520b0bf2edea6ebffb47041
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 374ce15b8329c02c6b496a276a40fd9a60596e1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-data-types-c"></a>Convertir tipos de datos (C#)
 Los métodos de conversión cambian el tipo de los objetos de entrada.  
@@ -33,7 +24,7 @@ Los métodos de conversión cambian el tipo de los objetos de entrada.
   
  Los métodos de conversión de esta tabla cuyos nombres comienzan por "As" cambian el tipo estático de la colección de origen, pero no lo enumeran. Los métodos cuyos nombres empiezan por "To" enumeran la colección de origen y colocan los elementos en el tipo de colección correspondiente.  
   
-|Nombre del método|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
+|Nombre del método|Description|Sintaxis de la expresión de consulta de C#|Más información|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |AsEnumerable|Devuelve la entrada con tipo como <xref:System.Collections.Generic.IEnumerable%601>.|No es aplicable.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
 |AsQueryable|Convierte un <xref:System.Collections.IEnumerable> (genérico) en un <xref:System.Linq.IQueryable> (genérico).|No es aplicable.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  

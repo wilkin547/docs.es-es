@@ -1,9 +1,6 @@
 ---
-title: "Herencia (Guía de programación de C#)"
+title: Herencia (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: "38"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6294669a05f5cc6c52de5164d89e29062ceb6bdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-c-programming-guide"></a>Herencia (Guía de programación de C#)
 
@@ -45,12 +39,12 @@ Herencia de clases
  Cuando una clase base declara un método como [virtual](../../../csharp/language-reference/keywords/virtual.md), una clase derivada puede [reemplazar](../../../csharp/language-reference/keywords/override.md) el método con su propia implementación. Si una clase base declara un miembro como [abstracto](../../../csharp/language-reference/keywords/abstract.md), ese método se debe reemplazar en todas las clases no abstractas que hereden directamente de dicha clase. Si una clase derivada es abstracta, hereda los miembros abstractos sin implementarlos. Los miembros abstractos y virtuales son la base del polimorfismo, que es la segunda característica principal de la programación orientada a objetos. Para obtener más información, vea [Polimorfismo ](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
 ## <a name="abstract-base-classes"></a>Clases base abstractas  
- Puede declarar una clase como [abstracta](../../../csharp/language-reference/keywords/abstract.md) para quiere impedir la creación directa de instancias mediante la palabra clave [new](../../../csharp/language-reference/keywords/new.md). Si lo hace, la clase solo se puede usar si se deriva de ella una clase nueva. Una clase abstracta puede contener una o más firmas de método que, a su vez, se declaran como abstractas. Estas firmas especifican los parámetros y el valor devuelto, pero no tienen ninguna implementación (cuerpo del método). Una clase abstracta no tiene que contener miembros abstractos, pero si lo hace, la clase debe declararse como abstracta. Las clases derivadas que no son abstractas deben proporcionar la implementación para todos los métodos abstractos de una clase base abstracta. Para obtener más información, vea [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Puede declarar una clase como [abstracta](../../../csharp/language-reference/keywords/abstract.md) para quiere impedir la creación directa de instancias mediante la palabra clave [new](../../../csharp/language-reference/keywords/new.md). Si lo hace, la clase solo se puede usar si se deriva de ella una clase nueva. Una clase abstracta puede contener una o más firmas de método que, a su vez, se declaran como abstractas. Estas firmas especifican los parámetros y el valor devuelto, pero no tienen ninguna implementación (cuerpo del método). Una clase abstracta no tiene que contener miembros abstractos, pero si lo hace, la clase debe declararse como abstracta. Las clases derivadas que no son abstractas deben proporcionar la implementación para todos los métodos abstractos de una clase base abstracta. Para más información, vea [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 ## <a name="interfaces"></a>Interfaces  
  Una *interfaz* es un tipo de referencia similar a una clase base abstracta formada únicamente por miembros abstractos. Cuando una clase implementa una interfaz, debe proporcionar una implementación para todos los miembros de la interfaz. Una clase puede implementar varias interfaces, aunque solo puede derivar de una única clase base directa.  
   
- Las interfaces se usan para definir funciones específicas para clases que no tienen necesariamente una relación "es un/una". Por ejemplo, la interfaz <xref:System.IEquatable%601?displayProperty=nameWithType> se puede implementar mediante cualquier clase o struct que deba permitir que el código de cliente determine si dos objetos del tipo son equivalentes (pero el tipo define la equivalencia). <xref:System.IEquatable%601> no implica el mismo tipo de relación "es un/una" que existe entre una clase base y una clase derivada (por ejemplo, `Mammal` es `Animal`). Para más información, vea [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
+ Las interfaces se usan para definir funciones específicas para clases que no tienen necesariamente una relación "es un/una". Por ejemplo, la interfaz <xref:System.IEquatable%601?displayProperty=nameWithType> se puede implementar mediante cualquier clase o struct que deba permitir que el código de cliente determine si dos objetos del tipo son equivalentes (pero el tipo define la equivalencia). <xref:System.IEquatable%601> no implica el mismo tipo de relación "es un/una" que existe entre una clase base y una clase derivada (por ejemplo, `Mammal` es `Animal`). Para obtener más información, vea [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
   
 ## <a name="preventing-further-derivation"></a>Impedir la derivación adicional  
  Una clase puede impedir que otras clases hereden de ella o de cualquiera de sus miembros. Para ello, se declara a sí misma o declara su miembro como [sellado](../../../csharp/language-reference/keywords/sealed.md). Para obtener más información, vea [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  

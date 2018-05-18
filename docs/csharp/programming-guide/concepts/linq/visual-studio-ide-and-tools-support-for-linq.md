@@ -1,21 +1,12 @@
 ---
 title: Compatibilidad del IDE y las herramientas de Visual Studio con LINQ (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 577338cc70bf9c335b162ca32bb3fc026addd49e
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 866b8938d127bf20314bb13d2951e0aa5f666094
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>Compatibilidad del IDE y las herramientas de Visual Studio con LINQ (C#)
 El entorno de desarrollo integrado (IDE) de Visual Studio proporciona las siguientes características que admiten el desarrollo de aplicaciones de LINQ:  
@@ -33,4 +24,4 @@ El entorno de desarrollo integrado (IDE) de Visual Studio proporciona las siguie
  El depurador de Visual Studio admite la depuración de expresiones de consulta. Para obtener más información, vea [Depurar LINQ](/visualstudio/debugger/debugging-linq).  
   
 ## <a name="see-also"></a>Vea también  
- [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+ [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: e39afea9fe11cdab9e5a6623499a96468aa9d091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="styling-and-templating"></a>Aplicar estilos y plantillas
 La aplicación de estilos y plantillas de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] hace referencia a un conjunto de características (estilos, plantillas, desencadenadores y guiones gráficos) que permiten a los desarrolladores y diseñadores crear efectos visualmente atractivos y una apariencia coherente para su producto. Aunque los desarrolladores y los diseñadores pueden personalizar muchas apariencias aplicación por aplicación, es necesario un modelo de aplicación de estilos y plantillas para el mantenimiento y el uso compartido de la apariencia entre las distintas aplicaciones. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ofrece ese modelo.  
@@ -38,7 +38,7 @@ La aplicación de estilos y plantillas de [!INCLUDE[TLA#tla_winclient](../../../
   
  ![ListView con estilo](../../../../docs/framework/wpf/controls/media/stylingintro-triggers.png "StylingIntro_triggers")  
   
- En esta sencilla foto de ejemplo se aplican estilos y plantillas para crear una experiencia de usuario visualmente atractiva. El ejemplo tiene dos <xref:System.Windows.Controls.TextBlock> elementos y un <xref:System.Windows.Controls.ListBox> control que está enlazado a una lista de imágenes. Para el ejemplo completo, consulte [Introducción a la aplicación de estilos y plantillas de ejemplo](http://go.microsoft.com/fwlink/?LinkID=160010).  
+ En esta sencilla foto de ejemplo se aplican estilos y plantillas para crear una experiencia de usuario visualmente atractiva. El ejemplo tiene dos <xref:System.Windows.Controls.TextBlock> elementos y un <xref:System.Windows.Controls.ListBox> control que está enlazado a una lista de imágenes. Para el ejemplo completo, consulte [Introducción a la aplicación de estilos y plantillas de ejemplo](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 <a name="styling_basics"></a>   
 ## <a name="style-basics"></a>Conceptos básicos del estilo  

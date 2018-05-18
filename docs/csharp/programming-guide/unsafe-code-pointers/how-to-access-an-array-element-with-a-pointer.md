@@ -1,21 +1,14 @@
 ---
-title: "Cómo: Obtener acceso a un elemento de matriz con un puntero (Guía de programación de C#)"
+title: 'Cómo: Obtener acceso a un elemento de matriz con un puntero (Guía de programación de C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 737c1d7fc0bc0a739de5c0a6cbc5dc09f813133e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92eb7a79c0e7522d1474537aeefbfdb083a11dc2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>Cómo: Obtener acceso a un elemento de matriz con un puntero (Guía de programación de C#)
 En un contexto no seguro, puede tener acceso a un elemento en la memoria con el acceso a un elemento de puntero, como se muestra en el ejemplo siguiente:  

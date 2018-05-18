@@ -1,22 +1,12 @@
 ---
-title: "Cómo: Consultar un objeto ArrayList con LINQ (C#)"
-ms.custom: 
+title: 'Cómo: Consultar un objeto ArrayList con LINQ (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2f32fcca4504ce3d3f297cfc1b81529dd027f9a6
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 8aaf90843fa85cf20a92a40644f085769404aa85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>Cómo: Consultar un objeto ArrayList con LINQ (C#)
 Cuando use LINQ para consultar colecciones no genéricas <xref:System.Collections.IEnumerable> como <xref:System.Collections.ArrayList>, debe declarar explícitamente el tipo de variable de rango para reflejar el tipo específico de los objetos de la colección. Por ejemplo, si tiene una <xref:System.Collections.ArrayList> de objetos `Student`, la [cláusula from](../../../../csharp/language-reference/keywords/from-clause.md) debe tener un aspecto similar a este:  

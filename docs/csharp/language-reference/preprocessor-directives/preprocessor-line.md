@@ -1,23 +1,16 @@
 ---
 title: '#line (Referencia de C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '#line'
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-caps.latest.revision: 13
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3d2f42915d214349eebff40949482d7f603c0c2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 08ba94ec3f1799f858e098bd2c0e059b7f45af2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="line-c-reference"></a>#line (Referencia de C#)
 `#line` le permite modificar el número de línea del compilador y (opcionalmente) la salida del nombre de archivo de errores y advertencias. En este ejemplo, se muestra cómo notificar dos advertencias asociadas con números de línea. La directiva `#line 200` fuerza el número de línea para que sea 200 (aunque el valor predeterminado es 7) y hasta la siguiente directiva #line, el nombre de archivo se notificará como "Especial". La directiva #line predeterminada devuelve la numeración de líneas a su numeración predeterminada, que cuenta las líneas a las que la directiva anterior ha cambiado el número.  

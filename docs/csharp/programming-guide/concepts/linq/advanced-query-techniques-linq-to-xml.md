@@ -1,28 +1,19 @@
 ---
-title: "Técnicas de consulta avanzadas (LINQ to XML) (C#)"
-ms.custom: 
+title: Técnicas de consulta avanzadas (LINQ to XML) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5898813d5773f13fa2c969b065e5ab1412726e9e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b1045308d18afb46c5f3bb0da9d02b07f17db95e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>Técnicas de consulta avanzadas (LINQ to XML) (C#)
 En esta sección se proporcionan ejemplos de técnicas de consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] más avanzadas.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Descripción|  
+|Tema|Description|  
 |-----------|-----------------|  
 |[How to: Join Two Collections (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md) (Cómo: Combinar dos colecciones (LINQ to XML) [C#])|Muestra cómo utilizar la cláusula `Join` para aprovechar las relaciones de los datos XML.|  
 |[How to: Create Hierarchy Using Grouping (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md) (Cómo: Crear una jerarquía mediante la agrupación [C#])|Muestra cómo agrupar datos y después generar XML basado en la agrupación.|  

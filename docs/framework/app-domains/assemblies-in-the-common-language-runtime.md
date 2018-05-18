@@ -1,13 +1,6 @@
 ---
 title: Ensamblados en Common Language Runtime
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dynamic assemblies
 - security [.NET Framework], boundaries
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - version boundaries
 - type boundaries
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
-caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4123ea28b317d432f9a36ea0c084d7fdacc7ffe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eefd3773d26fe71741668a9df366f041ba0ae0a4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Ensamblados en Common Language Runtime
 Los ensamblados son los bloques de creación de las aplicaciones .NET Framework; constituyen la unidad fundamental de implementación, control de versiones, reutilización, ámbitos de activación y permisos de seguridad. Un ensamblado es una colección de tipos y recursos compilados para funcionar en conjunto y formar una unidad lógica de funcionalidad. Los ensamblados proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos. Para la ejecución, un tipo no existe fuera del contexto de un ensamblado.  

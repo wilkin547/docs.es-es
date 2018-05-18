@@ -1,21 +1,15 @@
 ---
-title: "out (Modificador genérico) (Referencia de C#)"
+title: out (Modificador genérico) (Referencia de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - covariance, out keyword [C#]
 - out keyword [C#]
 ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
-caps.latest.revision: "15"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 25019408387bbf085475482c74a3fc6001321b24
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 95ccbe3ab5bf2d326e1154af0b169972a24f7e38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (Modificador genérico) (Referencia de C#)
 Para los parámetros de tipo genérico, la palabra clave `out` especifica que el parámetro de tipo es covariante. Puede usar la palabra clave `out` en las interfaces y delegados genéricos.  

@@ -1,23 +1,15 @@
 ---
-title: "Mejoras de rendimiento de socket en la versión 3.5"
-ms.custom: 
+title: Mejoras de rendimiento de socket en la versión 3.5
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 868ab986a0f7343e2efd2d4b5f7016d0554084cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: db52123167648744141657d885f3d3dcc524dd3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Mejoras de rendimiento de socket en la versión 3.5
 En la versión 3.5 se ha mejorado la clase <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> para su uso por parte de aplicaciones que usan la E/S de red asincrónica para lograr el máximo rendimiento. Se han agregado una serie de clases como parte de un conjunto de mejoras de la clase <xref:System.Net.Sockets.Socket> que proporcionan un patrón asincrónico alternativo que pueden usar las aplicaciones de socket de alto rendimiento especializadas. Estas mejoras se han diseñado específicamente para las aplicaciones de servidor de red que necesitan un alto rendimiento. Una aplicación puede usar el patrón asincrónico mejorado exclusivamente o solo en áreas activas de destino de su aplicación (al recibir grandes cantidades de datos, por ejemplo).  

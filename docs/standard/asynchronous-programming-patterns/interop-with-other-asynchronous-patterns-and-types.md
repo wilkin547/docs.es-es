@@ -1,13 +1,7 @@
 ---
-title: "Interoperabilidad con otros tipos y patrones asincrónicos"
-ms.custom: 
+title: Interoperabilidad con otros tipos y patrones asincrónicos
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a46358052eb93662408f9c01592f917eee4540b9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c92725a43e43877488ff9ba93007530c794dd290
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interoperabilidad con otros tipos y patrones asincrónicos
 .NET Framework 1.0 introdujo el patrón <xref:System.IAsyncResult> , conocido también como [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)o el patrón `Begin/End` .  .NET Framework 2.0 agregó [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  A partir de .NET Framework 4, [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) reemplaza a APM y EAP, pero proporciona la capacidad de crear fácilmente rutinas de migración a partir de los patrones anteriores:  

@@ -1,21 +1,12 @@
 ---
-title: "Conceptos y terminología (transformación funcional) (C#)"
-ms.custom: 
+title: Conceptos y terminología (transformación funcional) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c62aadc84f9c62429ffe59b78de386aac0f5cf63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f0d09f8846556dfa0ce70f253d59ddd41f254363
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Conceptos y terminología (transformación funcional) (C#)
 Este tema presenta los conceptos y la terminología en relación con las transformaciones funcionales. La aproximación que utiliza la transformación funcional para transformar datos permite obtener un código que normalmente se escribe más rápido, es más expresivo y fácil de mantener y depurar, si lo comparamos con la programación imperativa, que es más tradicional.  
@@ -65,7 +56,7 @@ Este tema presenta los conceptos y la terminología en relación con las transfo
  Tupla (tipos anónimos)  
  Se trata de un concepto matemático: una tupa es una secuencia finita de objetos, cada uno de los cuales es de un tipo específico. A las tuplas también se las conoce como listas ordenadas. Los tipos anónimos son una implementación del lenguaje para este concepto, lo que permite declarar un tipo de clase sin nombre e instanciar un objeto de este tipo al mismo tiempo.  
   
- Para obtener más información, consulte [Anonymous Types](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#]).  
+ Para más información, vea [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
  Inferencia de tipos (tipos implícitos)  
  Consiste en la capacidad del compilador para determinar el tipo de una variable en caso de que no exista una declaración de tipos explícita.  

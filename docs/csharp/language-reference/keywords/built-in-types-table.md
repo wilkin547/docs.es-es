@@ -1,21 +1,15 @@
 ---
 title: Tabla de tipos integrados (Referencia de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-caps.latest.revision: "12"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d9d1e4945526a862074e73e608185696328946be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7407d18c58dd3d12337c6845627d83f02eaf7fa0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabla de tipos integrados (Referencia de C#)
 En la siguiente tabla se muestran las palabras clave para los tipos de C# integrados, que son alias de los tipos predefinidos en el espacio de nombres <xref:System>.  

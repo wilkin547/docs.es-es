@@ -1,27 +1,15 @@
 ---
-title: "MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)"
-ms.custom: 
+title: MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-caps.latest.revision: "38"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ec4ac8d89d2d3a7d0dce11e5057db80190e7b963
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0772fcb32ce4d7500b358db312241e489b3a24c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)
 MageUI.exe admite la misma funcionalidad que la herramienta de línea de comandos Mage.exe, pero con una interfaz de usuario (IU) basada en Windows. Con esta herramienta puede crear, editar y firmar manifiestos de implementación y de aplicación. Los nuevos manifiestos que se crean con MageUI.exe tienen [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino. Cuando el destino es una versión anterior de .NET Framework, se deben usar las versiones anteriores de MageUI.exe. Cuando se agregan o quitan ensamblados de un manifiesto, o cuando se vuelven a firmar manifiestos existentes, MageUI.exe no actualiza el manifiesto para destinarlo a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Para más información, consulte [Mage.exe (Herramienta de generación y edición de manifiestos)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  

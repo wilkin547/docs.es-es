@@ -1,21 +1,15 @@
 ---
-title: "Propiedades de interfaces (Guía de programación de C#)"
+title: Propiedades de interfaces (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-caps.latest.revision: "13"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1da48adf73cccb28d9cff641948db52b40b8c1bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bfa03c7ebe82f3f6a03666d908a5fa9d4e386172
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-properties-c-programming-guide"></a>Propiedades de interfaces (Guía de programación de C#)
 Las propiedades se pueden declarar en una [interfaz](../../../csharp/language-reference/keywords/interface.md). A continuación tiene un ejemplo de un descriptor de acceso de indexador de interfaz:  

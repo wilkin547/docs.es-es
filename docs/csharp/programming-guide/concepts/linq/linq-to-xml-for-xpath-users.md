@@ -1,18 +1,12 @@
 ---
 title: LINQ to XML para usuarios de XPath (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 69109cc8541970695d463e6163bf4d63925ca5bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e55e763db2169b704b0b1fcc72e21d9e339b01f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>LINQ to XML para usuarios de XPath (C#)
 En este conjunto de temas se muestran varias expresiones XPath y sus equivalentes de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -21,7 +15,7 @@ En este conjunto de temas se muestran varias expresiones XPath y sus equivalente
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Descripción|  
+|Tema|Description|  
 |-----------|-----------------|  
 |[Comparación de XPath y LINQ to XML](../../../../csharp/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md)|Proporciona información general de las similitudes y diferencias entre XPath y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Cómo: Buscar un elemento secundario (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md)|Compara el eje del elemento secundario XPath con el método [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A>.<br /><br /> La expresión XPath asociada es:`"DeliveryNotes"`.|  

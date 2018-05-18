@@ -1,22 +1,12 @@
 ---
-title: "Cancelar una tarea asincrónica o una lista de tareas (C#)"
-ms.custom: 
+title: Cancelar una tarea asincrónica o una lista de tareas (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3003c7b4a10890ddf7faa098ed672ef40b591b30
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: f24571fe6b80ea7ba0f69422cf51f5c8785df172
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Cancelar una tarea asincrónica o una lista de tareas (C#)
 Puede configurar un botón para cancelar una aplicación asincrónica si no quiere esperar a que termine. Mediante los ejemplos de este tema, puede agregar un botón de cancelación a una aplicación que descargue el contenido de un sitio web o una lista de sitios web.  

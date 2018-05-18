@@ -1,18 +1,12 @@
 ---
-title: "Quitar elementos, atributos y nodos de un árbol XML (C#)"
+title: Quitar elementos, atributos y nodos de un árbol XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1745b1ce84b33a67d54f5e752da2ecf9bbfdbc17
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 85c1adc06321abf90fe478abf5375882069f11ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Quitar elementos, atributos y nodos de un árbol XML (C#)
 Puede modificar un árbol XML mediante la eliminación de elementos, atributos y otros tipos de nodos.  
@@ -23,7 +17,7 @@ Puede modificar un árbol XML mediante la eliminación de elementos, atributos y
   
  Los siguientes métodos sirven para quitar nodos y atributos de un árbol XML.  
   
-|Método|Descripción|  
+|Método|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|Quita un elemento <xref:System.Xml.Linq.XAttribute> de su elemento primario.|  
 |<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|Quita los nodos secundarios de un elemento <xref:System.Xml.Linq.XContainer> de la colección.|  
@@ -36,7 +30,7 @@ Puede modificar un árbol XML mediante la eliminación de elementos, atributos y
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Descripción  
+### <a name="description"></a>Description  
  Este ejemplo demuestra tres métodos para quitar elementos. Primero, quita un solo elemento. En segundo lugar, recupera una colección de elementos, los materializa con el operador <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> y quita la colección. Por último, recupera una colección de elementos y los quita con el método de extensión <xref:System.Xml.Linq.Extensions.Remove%2A>.  
   
  Para obtener más información sobre el operador <xref:System.Linq.Enumerable.ToList%2A>, vea [Convertir tipos de datos (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md).  

@@ -1,22 +1,16 @@
 ---
-title: "Cómo: Saber las diferencias entre pasar a un método un struct y una referencia a clase (Guía de programación de C#)"
+title: 'Cómo: Saber las diferencias entre pasar a un método un struct y una referencia a clase (Guía de programación de C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - structs [C#], passing as method parameter
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-caps.latest.revision: "25"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b989c3cefe72c6c17d10dd91005dcecbfc84e389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a6dae35d31cf1553bdca8ebf0345c49b120ae13b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Cómo: Saber las diferencias entre pasar a un método un struct y una referencia a clase (Guía de programación de C#)
 En el ejemplo siguiente se muestra cómo pasar un [struct](../../../csharp/language-reference/keywords/struct.md) a un método es diferente de pasar una instancia de [clase](../../../csharp/language-reference/keywords/class.md) a un método. En el ejemplo, los dos argumentos (struct e instancia de clase) se pasan mediante valor, y ambos métodos cambian el valor de un campo del argumento. En cambio, los resultados de los dos métodos no son los mismos porque lo que se pasa cuando pasa un struct difiere de lo que se pasa cuando pasa una instancia de una clase.  
@@ -33,5 +27,5 @@ En el ejemplo siguiente se muestra cómo pasar un [struct](../../../csharp/langu
 ## <a name="see-also"></a>Vea también  
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
  [Clases](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [Estructuras](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+ [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)  
  [Pasar parámetros](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)

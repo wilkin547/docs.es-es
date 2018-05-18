@@ -1,21 +1,12 @@
 ---
-title: "Cómo: Usar un grupo de subprocesos (C#)"
-ms.custom: 
+title: 'Cómo: Usar un grupo de subprocesos (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 210a9235-83a6-420b-af52-2d6a58e5133f
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9ad5ffb224821c67d227297f8a5a4a1476d77b0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c89093bcff82715482b2ddb822916cfa5ff8ed72
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-thread-pool-c"></a>Cómo: Usar un grupo de subprocesos (C#)
 La *agrupación de subprocesos* es una forma de multithreading en la que se agregan tareas a una cola y se inician automáticamente cuando se crean subprocesos. Para obtener más información, vea [Thread Pooling (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md) (Agrupación de subprocesos [C#]).  

@@ -1,28 +1,19 @@
 ---
-title: "Introducción a las transformaciones funcionales puras (C#)"
-ms.custom: 
+title: Introducción a las transformaciones funcionales puras (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 535d022b68fd4d08f04648fb98f5a7a7c53ed6e3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 278b3afc66e4c4f222e27e648274cb8cea814d50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Introducción a las transformaciones funcionales puras (C#)
 Esta sección ofrece una introducción a las transformaciones funcionales, incluyendo los conceptos subyacentes y los constructores del lenguaje que las hacen posible. Realiza una comparación entre las metodologías de programación de orientación a objetos y de transformación funcional, incluyendo consejos acerca de cómo llevar a cabo la transición a ésta última. Aunque es posible utiliza las transformaciones funcionales en numerosos escenarios, aquí utilizaremos la transformación XML como un ejemplo concreto.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Descripción|  
+|Tema|Description|  
 |-----------|-----------------|  
 |[Conceptos y terminología (transformación funcional) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)|Presenta los conceptos y la terminología en relación con las transformaciones funcionales.|  
 |[Diferencias entre la programación funcional y programación imperativa (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)|Compara y contrasta la programación funcional con la programación imperativa (orientada a procedimientos) más tradicional.|  

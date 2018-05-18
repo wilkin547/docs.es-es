@@ -1,21 +1,12 @@
 ---
-title: "Sincronización de subprocesos (C#)"
-ms.custom: 
+title: Sincronización de subprocesos (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2b51775eac5221ec8c723d89323d1f4f542d2453
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 138b94ef8ae5fc54e42277127f9b22f88803457f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-synchronization-c"></a>Sincronización de subprocesos (C#)
 En las secciones siguientes se describen las características y clases que se pueden usar para sincronizar el acceso a recursos en aplicaciones multiproceso.  
