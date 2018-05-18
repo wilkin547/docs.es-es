@@ -1,30 +1,18 @@
 ---
-title: "Mitigación: Nuevo compilador JIT de 64 bits"
-ms.custom: 
+title: 'Mitigación: Nuevo compilador JIT de 64 bits'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-bcl
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - JIT compiler, 64-bit
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1ea1f5a832e2db63590fe5cbc3425078e17d3825
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4edce9558cdbdd5937aa12866077210a91ee8494
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigación: Nuevo compilador JIT de 64 bits
 A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilador JIT de 64 bits para la compilación Just-In-Time. Este cambio no afecta a la compilación con el compilador JIT de 32 bits.  

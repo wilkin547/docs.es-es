@@ -1,9 +1,6 @@
 ---
 title: Crear y utilizar ensamblados con nombre seguro
 ms.date: 08/01/2017
-ms.prod: .net-framework
-ms.technology: dotnet-bcl
-ms.topic: article
 helpviewer_keywords:
 - strong-name bypass feature
 - strong-named assemblies, about strong-named assemblies
@@ -15,16 +12,13 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f3a087f296a742bc9f0f5672d9bf0cb73c836121
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94659919d4e902f8562e669fbb0f98d6ebc679ab
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Crear y utilizar ensamblados con nombre seguro
 <a name="top"></a> Un nombre seguro se compone de la identidad del ensamblado, es decir, de su nombre de texto simple, número de versión e información sobre referencia cultural (si se proporciona), más una clave pública y una firma digital. Se genera a partir de un archivo de ensamblado mediante la clave privada correspondiente. (El archivo de ensamblado contiene el manifiesto del ensamblado, que a su vez contiene los nombres y códigos hash de todos los archivos que forman el ensamblado).  

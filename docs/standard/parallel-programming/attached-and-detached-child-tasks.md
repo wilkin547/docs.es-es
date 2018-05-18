@@ -1,31 +1,20 @@
 ---
 title: Tareas secundarias asociadas y desasociadas
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 298ccdc4628c840874d10832da29c10d6d496655
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 53f31402e78a15289bb996c63e1e8e3cd98e6aac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attached-and-detached-child-tasks"></a>Tareas secundarias asociadas y desasociadas
 Una *tarea secundaria* o *tarea anidada* es una instancia de <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> que se crea en el delegado de usuario de otra tarea, conocida como *tarea primaria*. Una tarea secundaria puede estar desasociada o asociada. Una *tarea secundaria desasociada* es una tarea que se ejecuta independientemente de su elemento principal. Una *tarea secundaria asociada* es una tarea anidada que se crea con la opción <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> y cuyo elemento primario no le prohíbe asociarse de forma explícita o predeterminada. Una tarea puede crear cualquier número de tareas secundarias asociadas y desasociadas, con la única limitación de los recursos del sistema.  

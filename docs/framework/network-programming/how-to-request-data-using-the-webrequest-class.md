@@ -1,12 +1,6 @@
 ---
-title: "Cómo solicitar datos mediante la clase WebRequest"
-ms.custom: 
+title: Cómo solicitar datos mediante la clase WebRequest
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +11,14 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 463a59444d3f93e5560e149033fd845ac8cbe62d
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: e02ad4772d3ba84a2735a2e146a9979862d75989
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>Cómo solicitar datos mediante la clase WebRequest
 En el procedimiento siguiente se describen los pasos usados para solicitar un recurso de un servidor, por ejemplo, una página web o un archivo. El recurso debe ser identificado por un identificador URI.  

@@ -1,20 +1,13 @@
 ---
-title: "Structs: Guía de C#"
-description: "Obtenga información sobre el tipo struct y cómo se crea."
-keywords: .NET, .NET Core, C#
-author: BillWagner
-ms.author: wiwagn
+title: 'Structs: Guía de C#'
+description: Obtenga información sobre el tipo struct y cómo se crea.
 ms.date: 10/12/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 4c12e886ec388671fc47f08f8df6d6f2af8aac62
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 9fe4e0278ecf46f762a93aa489030c0a9e5563b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structs"></a>Estructuras
 Un *struct* es un tipo de valor. Cuando se crea un struct, la variable a la que se asigna el struct contiene los datos reales del struct. Cuando la estructura se asigna a una nueva variable, se copia. Por lo tanto, la nueva variable y la variable original contienen dos copias independientes de los mismos datos. Los cambios realizados en una copia no afectan a la otra copia.

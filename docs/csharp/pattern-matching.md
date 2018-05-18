@@ -1,19 +1,13 @@
 ---
 title: 'Coincidencia de patrones: Guía de C#'
 description: Información sobre las expresiones de coincidencia de patrones en C#
-keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
-ms.author: wiwagn
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: a0f80fc2c019cefa81506d9dcdeabc57a1e98c2b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0f95ac8b16939173e6cfd7304b9cbe52526b5169
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos #
 
@@ -51,7 +45,7 @@ En esta versión actualizada, la expresión `is` prueba la variable y la asigna 
 
 Las reglas del lenguaje para las expresiones de coincidencia de patrones ayudan a evitar el uso indebido de los resultados de una expresión de coincidencia. En el ejemplo anterior, las variables `s`, `c` y `r` solo están en el ámbito y se asignan definitivamente cuando las expresiones de coincidencia de patrones respectivas tienen resultados `true`. Si intenta usar una de las variables en otra ubicación, el código genera errores del compilador.
 
-Vamos a examinar detenidamente esas dos reglas, a partir del ámbito. La variable `c` está en el ámbito únicamente en la rama `else` de la primera instrucción `if`. La variable `s` está en el ámbito en el método `ComputeArea`. Eso se debe a que cada rama de una instrucción `if` establece un ámbito independiente para las variables. Pero la propia instrucción `if` no. Eso significa que las variables declaradas en la instrucción `if` están en el mismo ámbito que la instrucción `if` (el método en este caso). Este comportamiento no es específico de la coincidencia de patrones, sino que es el definido para los ámbitos de variable y las instrucciones `if` y `else`.
+Vamos a examinar detenidamente esas dos reglas, a partir del ámbito. La variable `c` está en el ámbito únicamente en la rama `else` de la primera instrucción `if`. La variable `s` está en el ámbito en el método `ComputeAreaModernIs`. Eso se debe a que cada rama de una instrucción `if` establece un ámbito independiente para las variables. Pero la propia instrucción `if` no. Eso significa que las variables declaradas en la instrucción `if` están en el mismo ámbito que la instrucción `if` (el método en este caso). Este comportamiento no es específico de la coincidencia de patrones, sino que es el definido para los ámbitos de variable y las instrucciones `if` y `else`.
 
 Las variables `c` y `s` se asignan cuando las respectivas instrucciones `if` son true debido al mecanismo when true asignado definitivamente.
 

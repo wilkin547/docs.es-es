@@ -1,28 +1,17 @@
 ---
 title: SpinLock
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e83505a36252457d286bc7fbc6bbe442732229a4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f7d1d95030d2bc9f9288ae134471c150a37291b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spinlock"></a>SpinLock
 La estructura <xref:System.Threading.SpinLock> es un primitivo de sincronización de exclusión mutua y de bajo nivel que itera mientras espera a que se adquiera un bloqueo. En los equipos con varios núcleos, cuando se prevea que los tiempos de espera van ser breves y si la contención es mínima, <xref:System.Threading.SpinLock> puede funcionar mejor que otros tipos de bloqueos. Sin embargo, se recomienda usar <xref:System.Threading.SpinLock> solo cuando determine mediante la generación de perfiles que el método <xref:System.Threading.Monitor?displayProperty=nameWithType> o los métodos <xref:System.Threading.Interlocked> reducen significativamente el rendimiento del programa.  

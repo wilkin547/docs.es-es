@@ -1,13 +1,7 @@
 ---
 title: Limpiar recursos no administrados
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Close method
 - Dispose method
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fea76042bb603889764a9d42b5a7836d704fcd48
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5e32d2d4424d05b95af1eda400974da3293b8499
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Limpiar recursos no administrados
 En el caso de la mayoría de los objetos creados por la aplicación, puede usar el recolector de elementos no utilizados de .NET para administrar la memoria. No obstante, cuando se crean objetos que incluyen recursos no administrados, debe liberar explícitamente dichos recursos cuando termine de utilizarlos en la aplicación. Los tipos más comunes de recurso no administrado son objetos que contienen recursos del sistema operativo, como archivos, ventanas, conexiones de red o conexiones de bases de datos. Aunque el recolector de elementos no utilizados puede realizar el seguimiento de la duración de un objeto que encapsula un recurso no administrado, no conoce cómo liberar y limpiar el recurso no administrado.  

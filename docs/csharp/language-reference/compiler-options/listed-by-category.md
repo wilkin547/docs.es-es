@@ -1,23 +1,16 @@
 ---
 title: Opciones del compilador de C#, por categoría
 ms.date: 04/12/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - Visual C# compiler, options listed by category
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-caps.latest.revision: 17
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 99db7b554b714d5dc964d0259b790715ca1be429
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: a3352b9f929382c7d5b7d0c62ef4022560caf371
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opciones del compilador de C#, por categoría
 Las opciones del compilador siguientes están ordenadas por categoría. Para acceder a una lista en orden alfabético, vea [Opciones del compilador de C#, por orden alfabético](listed-alphabetically.md).  

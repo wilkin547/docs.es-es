@@ -1,27 +1,17 @@
 ---
-title: "Implementación de .NET Framework"
-ms.custom: 
+title: Implementación de .NET Framework
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1320c0364b1fdc3a67d2ac99d0591f37044c36a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa204b9ac604cd4e0f2c1ae75e872f6bb5cdaf22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-the-net-framework"></a>Implementación de .NET Framework
 En esta sección de la documentación de .NET Framework se proporciona información para los desarrolladores que quieran instalar .NET Framework con sus aplicaciones y para los administradores que quieran implementar .NET Framework en una red. También se describen los problemas de activación y reinicio asociados a la implementación, así como la manera de supervisar el progreso de la instalación de .NET Framework.  

@@ -1,12 +1,6 @@
 ---
-title: "directivas de caché basadas en la ubicación"
-ms.custom: 
+title: directivas de caché basadas en la ubicación
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Cache If Available policy
 - reload policy
@@ -21,16 +15,14 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: a09c8c47c91222d6292d46d2eea80a30ed786494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b4109cef8d527d397903854e05a2204a3e551938
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="location-based-cache-policies"></a>directivas de caché basadas en la ubicación
 Una directiva de caché basada en la ubicación define la actualización de las entradas válidas almacenadas en caché en función de dónde se puede obtener el recurso solicitado. Un recurso almacenado en caché es válido si al usarlo no se infringen los requisitos de revalidación especificados por el servidor. Una directiva de caché basada en la ubicación se crea mediante programación con un constructor de clase <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>. El tipo de la directiva basada en la ubicación se pasa al constructor con un valor de enumeración <xref:System.Net.Cache.RequestCacheLevel> o <xref:System.Net.Cache.HttpRequestCacheLevel>. Para obtener ejemplos de código en los que se crean directivas de caché basadas en ubicación, vea [How to: Set a Location-Based Cache Policy for an Application](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md) (Cómo: establecer en una aplicación una directiva de caché basada en la ubicación). En las secciones siguientes se explica cada tipo de directiva de caché basada en la ubicación para recursos del Protocolo de transferencia de hipertexto (http y https).  
