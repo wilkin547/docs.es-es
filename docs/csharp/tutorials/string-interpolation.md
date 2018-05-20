@@ -1,125 +1,113 @@
 ---
-title: 'Interpolación de cadenas: C#'
-description: Aprenda cómo funciona la interpolación de cadenas en C# 6.
-keywords: .NET, .NET Core, C#, cadena
-author: mgroves
-ms.author: wiwagn
-ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+title: Interpolación de cadenas en C#
+description: Obtenga información sobre cómo incluir resultados de expresión con formato en una cadena de resultado en C# con la interpolación de cadenas.
+author: pkulikov
+ms.date: 05/09/2018
+ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="string-interpolation-in-c"></a>Interpolación de cadenas en C# #
 
-La interpolación de cadenas es la forma en que los marcadores de posición de una cadena se reemplazan por el valor de una variable de cadena. Antes de C# 6, la manera de hacerlo era con <xref:System.String.Format%2A?displayProperty=nameWithType>. Aunque este sistema funciona bien, como se usan marcadores de posición numerados, puede ser más difícil de leer y más detallado.
+En este tutorial se explica cómo usar la [interpolación de cadenas](../language-reference/tokens/interpolated.md) para dar formato a resultados de expresión e incluirlos en una cadena de resultado. En los ejemplos se da por hecho que ya está familiarizado con los conceptos básicos de C# y el formato de tipos .NET. Si no conoce la interpolación de cadenas o el formato de tipos .NET, vea antes el [inicio rápido de interpolación de cadenas interactivo](../quick-starts/interpolated-strings.yml). Para más información sobre cómo aplicar formato a tipos .NET, vea el tema [Aplicar formato a tipos en .NET](../../standard/base-types/formatting-types.md).
 
-Durante un tiempo, otros lenguajes de programación tuvieron la interpolación de cadenas integrada. Por ejemplo, en PHP:
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-```php
-$name = "Jonas";
-echo "My name is $name.";
-// This will output "My name is Jonas."
-```
+## <a name="introduction"></a>Introducción
 
-En C# 6, tenemos finalmente ese estilo de interpolación de cadenas. Puede usar `$` delante de una cadena para indicar que se deben sustituir variables y expresiones por sus valores.
+La característica de [interpolación de cadenas](../language-reference/tokens/interpolated.md) se basa en la característica de [formato compuesto](../../standard/base-types/composite-formatting.md) y proporciona una sintaxis más legible y cómoda para incluir resultados de expresiones con formato en una cadena de resultado.
 
-## <a name="prerequisites"></a>Requisitos previos
-Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página de [.NET Core](https://www.microsoft.com/net/core).
-Puede ejecutar esta aplicación en Windows, Ubuntu Linux, macOS o en un contenedor de Docker. Deberá instalar su editor de código favorito. En las siguientes descripciones se usa [Visual Studio Code](https://code.visualstudio.com/), que es un editor multiplataforma de código abierto. Sin embargo, puede usar las herramientas que le resulten más cómodas.
+Para distinguir un literal de cadena como una cadena interpolada, antepóngale el símbolo `$`. Puede insertar cualquier expresión de C# válida que devuelva un valor en una cadena interpolada. En el siguiente ejemplo, en cuanto la expresión se evalúa, su resultado se convierte en una cadena y se incluye en una cadena de resultado:
 
-## <a name="create-the-application"></a>Crear la aplicación
+[!code-csharp-interactive[string interpolation example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#1)]
 
-Ahora que ha instalado todas las herramientas, cree una nueva aplicación de .NET Core. Para usar el generador de línea de comandos, cree un directorio para el proyecto, como `interpolated`, y ejecute el siguiente comando en su shell favorito:
+Como se ilustra en el ejemplo, para incluir una expresión en una cadena interpolada hay que meterla entre llaves:
 
 ```
-dotnet new console
+{<interpolatedExpression>}
 ```
 
-Este comando crea un proyecto de .NET Core esencial con un archivo de proyecto, *interpolated.csproj*, y un archivo de código fuente, *Program.cs*. Debe ejecutar `dotnet restore` para restaurar las dependencias necesarias para compilar este proyecto.
+En tiempo de compilación, una cadena interpolada se suele transformar en una llamada de método <xref:System.String.Format%2A?displayProperty=nameWithType>, lo que permite que todas las capacidades de la característica de [formato compuesto de cadena](../../standard/base-types/composite-formatting.md) estén disponibles para su uso también con cadenas interpoladas.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Cómo especificar una cadena de formato para una expresión interpolada
 
-Para ejecutar el programa, use `dotnet run`. Deberá ver la salida "Hola a todos" a la consola.
-
-
-
-## <a name="intro-to-string-interpolation"></a>Introducción a la interpolación de cadenas
-
-Con <xref:System.String.Format%2A?displayProperty=nameWithType>, se especifican "marcadores de posición" en una cadena que se reemplazan por los argumentos que siguen a la cadena. Por ejemplo:
-
-[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
-
-El resultado será "My name is Matt Groves".
-
-En C# 6, en lugar de usar `String.Format`, se define una cadena interpolada colocando delante el símbolo `$` y luego usando las variables directamente en la cadena. Por ejemplo:
-
-[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
-
-No tiene que usar solo variables. Puede usar cualquier expresión entre corchetes. Por ejemplo:
-
-[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
-
-Cuya salida sería:
+Para especificar una cadena de formato compatible con el tipo de resultado de expresión, coloque después de la expresión interpolada dos puntos (":") y la cadena de formato:
 
 ```
-This is line number 1
-This is line number 2
-This is line number 3
-This is line number 4
-This is line number 5
+{<interpolatedExpression>:<formatString>}
 ```
 
-## <a name="how-string-interpolation-works"></a>Cómo funciona la interpolación de cadenas
+En el siguiente ejemplo se muestra cómo especificar cadenas de formato estándar y personalizadas para expresiones que generan resultados numéricos o de fecha y hora:
 
-En segundo plano, el compilador convierte esta sintaxis de interpolación de cadenas en `String.Format`. Por lo tanto, puede hacer [lo mismo que ha hecho antes con `String.Format`](../../standard/base-types/formatting-types.md).
+[!code-csharp-interactive[format string example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#2)]
 
-Por ejemplo, puede agregar relleno y formato numérico:
+Para más información, vea la sección [Format String (Componente)](../../standard/base-types/composite-formatting.md#format-string-component) del tema [Formatos compuestos](../../standard/base-types/composite-formatting.md). En esa sección encontrará vínculos a temas en los que se describen las cadenas de formato estándar y personalizadas compatibles con los tipos base .NET.
 
-[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>Cómo controlar el ancho de campo y la alineación de las expresiones interpoladas con formato
 
-El comando anterior generaría la siguiente salida:
+Para especificar el ancho de campo mínimo y la alineación del resultado de expresión con formato, coloque después de la expresión interpolada una coma puntos (",") y la expresión constante:
 
 ```
-998        5,177.67
-999        6,719.30
-1000       9,910.61
-1001       529.34
-1002       1,349.86
-1003       2,660.82
-1004       6,227.77
+{<interpolatedExpression>,<alignment>}
 ```
 
-Si no se encuentra un nombre de variable, se genera un error en tiempo de compilación.
+Si el valor de *alignment* es positivo, el resultado de la expresión con formato se alineará a la derecha y, si es negativo, lo hará a la izquierda.
 
-Por ejemplo:
+En caso de que haya que especificar una alineación y una cadena de formato, comience por el componente de alineación:
 
-```csharp
-var animal = "fox";
-var localizeMe = $"The {adj} brown {animal} jumped over the lazy {otheranimal}";
-var adj = "quick";
-Console.WriteLine(localizeMe);
+```
+{<interpolatedExpression>,<alignment>:<formatString>}
 ```
 
-Si compila esto, obtiene errores:
- 
-* `Cannot use local variable 'adj' before it is declared`: la variable `adj` no se ha declarado hasta *después* de la cadena interpolada.
-* `The name 'otheranimal' does not exist in the current context`: no se ha declarado ninguna variable `otheranimal`.
+En el siguiente ejemplo se muestra cómo especificar la alineación y se emplean caracteres de barra vertical ("|") para delimitar los campos de texto:
 
-## <a name="localization-and-internationalization"></a>Internacionalización y localización
+[!code-csharp-interactive[alignment example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#3)]
 
-Una cadena interpolada admite <xref:System.IFormattable?displayProperty=nameWithType> y <xref:System.FormattableString?displayProperty=nameWithType>, que pueden ser útiles para la internacionalización.
+Tal y como refleja la salida del ejemplo, si la longitud del resultado de expresión con formato supera el ancho de campo especificado, se omitirá el valor de *alignment*.
 
-De forma predeterminada, una cadena interpolada usa la referencia cultural actual. Para usar otra referencia cultural, convierta una cadena interpolada como `IFormattable`. Por ejemplo:
+Para más información, vea la sección [Alignment (Componente)](../../standard/base-types/composite-formatting.md#alignment-component) del tema [Formatos compuestos](../../standard/base-types/composite-formatting.md).
 
-[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+## <a name="how-to-use-escape-sequences-in-an-interpolated-string"></a>Cómo usar secuencias de escape en una cadena interpolada
 
-## <a name="conclusion"></a>Conclusión 
+Las cadenas interpoladas admiten todas las secuencias de escape que se usan en los literales de cadena ordinarios. Para más información, vea [Secuencias de escape de cadena](../programming-guide/strings/index.md#string-escape-sequences).
 
-En este tutorial, aprendió a usar las características de interpolación de cadenas de C# 6. Básicamente es una manera más concisa de escribir instrucciones `String.Format` simples, con algunas advertencias para usos más avanzados. Para más información, vea el tema [Interpolación de cadenas](../../csharp//language-reference/tokens/interpolated.md).
+Para interpretar las secuencias de escape literalmente, use un literal de cadena [textual](../language-reference/tokens/verbatim.md). Las cadenas interpoladas textuales comienzan por el carácter `$`, seguido del carácter `@`.
+
+Para incluir una llave ("{" o "}") en una cadena de resultado, use dos llaves ("{{" o "}}"). Para más información, vea la sección [Llaves de escape](../../standard/base-types/composite-formatting.md#escaping-braces) del tema [Formatos compuestos](../../standard/base-types/composite-formatting.md).
+
+En el siguiente ejemplo se muestra cómo incluir llaves en una cadena de resultado y cómo construir una cadena interpolada textual:
+
+[!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
+
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>Cómo usar un operador condicional ternario `?:` en una expresión interpolada
+
+Dado que los dos puntos (:) tienen un significado especial en un elemento con una expresión interpolada, para poder usar un [operador condicional](../language-reference/operators/conditional-operator.md) en una expresión de este tipo, habrá que ponerlo entre paréntesis, como vemos en el siguiente ejemplo:
+
+[!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
+
+## <a name="how-to-create-a-culture-specific-result-string-with-string-interpolation"></a>Cómo crear una cadena de resultado específica de la referencia cultural con interpolación de cadenas
+
+Las cadenas interpoladas usan de forma predeterminada la referencia cultural definida actualmente por la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> en todas las operaciones de formato. Use la conversión implícita de una cadena interpolada en una instancia de <xref:System.FormattableString?displayProperty=nameWithType> y llame al método <xref:System.FormattableString.ToString(System.IFormatProvider)> correspondiente para crear una cadena de resultado específica de referencia cultural. En el siguiente ejemplo se muestra cómo hacerlo:
+
+[!code-csharp-interactive[specify different cultures](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#6)]
+
+Tal y como se muestra en el ejemplo, se puede usar una instancia de <xref:System.FormattableString> para generar varias cadenas de resultado para varias referencias culturales.
+
+## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a>Cómo crear una cadena de resultado usando la referencia de cultura invariable
+
+Puede usar el método estático <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> junto con el método <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> para resolver una cadena interpolada en una cadena de resultado de <xref:System.Globalization.CultureInfo.InvariantCulture>. En el siguiente ejemplo se muestra cómo hacerlo:
+
+[!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
+
+## <a name="conclusion"></a>Conclusión
+
+En este tutorial se han descrito escenarios habituales en los que se usa la interpolación de cadenas. Para más información sobre la interpolación de cadenas, vea el tema [Interpolación de cadenas](../language-reference/tokens/interpolated.md). Para más información sobre cómo aplicar formato a tipos .NET, vea los temas [Aplicar formato a tipos en .NET](../../standard/base-types/formatting-types.md) y [Formatos compuestos](../../standard/base-types/composite-formatting.md).
+
+## <a name="see-also"></a>Vea también
+
+<xref:System.String.Format%2A?displayProperty=nameWithType>  
+<xref:System.FormattableString?displayProperty=nameWithType>  
+<xref:System.IFormattable?displayProperty=nameWithType>  
+[Cadenas](../programming-guide/strings/index.md)  

@@ -1,16 +1,16 @@
 ---
 title: Instrucción Const (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5842e284eaa858e7a66160060123edc21858a3a
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="const-statement-visual-basic"></a>Instrucción Const (Visual Basic)
 Declara y define una o varias constantes.  
@@ -27,7 +27,7 @@ Const constantlist
  Opcional. Lista de atributos que se aplican a todas las constantes declaradas en esta instrucción. Vea [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) corchetes angulares ("`<`"y"`>`").  
   
  `accessmodifier`  
- Opcional. Se usa para especificar qué código puede tener acceso a estas constantes. Puede ser [público](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, o [privada](../../../visual-basic/language-reference/modifiers/private.md).  
+ Opcional. Se usa para especificar qué código puede tener acceso a estas constantes. Puede ser [público](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [privada](../../../visual-basic/language-reference/modifiers/private.md), o [Privado protegido](../../language-reference/modifiers/private-protected.md).
   
  `Shadows`  
  Opcional. Utilícelo para volver a declarar y ocultar un elemento de programación en una clase base. Vea [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).  

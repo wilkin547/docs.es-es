@@ -2,11 +2,11 @@
 title: 'Guía de estilo de F #'
 description: 'Obtenga información acerca de los cinco principios de buen código F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 317fc2c101449b0500a54dd9fea3d426757af5cd
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 6d8c1336ca991040a8f6e13290d209cb3b70054d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-style-guide"></a>Guía de estilo de F #
 
@@ -40,8 +40,8 @@ Debe mantener los siguientes principios presente siempre al que escribir código
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-El [instrucciones de formato de F #](formatting.md) ofrecen orientación sobre cómo dar formato de código para que resulte fácil de leer.
+El [instrucciones de formato de código de F #](formatting.md) ofrecen orientación sobre cómo dar formato de código para que resulte fácil de leer.
 
 El [convenciones de código de F #](conventions.md) proporcionan instrucciones para expresiones que le ayudarán al mantenimiento a largo plazo de mayor F # de programación de F # dotarlo.
 
-El [directrices de diseño del componente de F #](component-design-guidelines.md) es un conjunto completo de instrucciones para crear componentes de F #, como las bibliotecas.
+El [directrices de diseño del componente de F #](component-design-guidelines.md) proporcionan instrucciones para crear componentes de F #, como las bibliotecas.

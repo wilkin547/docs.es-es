@@ -10,11 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aed418fe5e2c7d8a217f3016655f39c99300d53
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="data-templating-overview"></a>Información general sobre plantillas de datos
 El modelo de plantillas de datos de WPF ofrece gran flexibilidad para definir la presentación de los datos. Los controles WPF tienen funcionalidad integrada que admite la personalización de la presentación de los datos. En este tema muestra primero cómo definir un <xref:System.Windows.DataTemplate> y, a continuación, presenta otras características de creación de plantillas de datos, como la selección de plantillas basadas en la lógica personalizada y la compatibilidad con la presentación de datos jerárquicos.  
@@ -132,7 +132,8 @@ El modelo de plantillas de datos de WPF ofrece gran flexibilidad para definir la
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>Lo que corresponde a un DataTemplate  
- En el ejemplo anterior, se coloca el desencadenador dentro de la <xref:System.Windows.DataTemplate> mediante el <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> propiedad. El <xref:System.Windows.Setter> del desencadenador establece el valor de una propiedad de un elemento (la <xref:System.Windows.Controls.Border> elemento) que está dentro de la <xref:System.Windows.DataTemplate>. Sin embargo, si las propiedades que su `Setters` relevantes y no son propiedades de elementos que están dentro del actual <xref:System.Windows.DataTemplate>, puede ser más adecuado establecer las propiedades mediante un <xref:System.Windows.Style> que es para el <xref:System.Windows.Controls.ListBoxItem> clase (si el va a enlazar el control es un <xref:System.Windows.Controls.ListBox>). Por ejemplo, si desea que su <xref:System.Windows.Trigger> para animar la <xref:System.Windows.UIElement.Opacity%2A> valor del elemento cuando un mouse apunta a un elemento, defina desencadenadores dentro de un <xref:System.Windows.Controls.ListBoxItem> estilo. Para obtener un ejemplo, vea [Introducción a la aplicación de estilos y plantillas de ejemplo](http://go.microsoft.com/fwlink/?LinkID=160010).  
+
+En el ejemplo anterior, se coloca el desencadenador dentro de la <xref:System.Windows.DataTemplate> mediante el <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> propiedad. El <xref:System.Windows.Setter> del desencadenador establece el valor de una propiedad de un elemento (la <xref:System.Windows.Controls.Border> elemento) que está dentro de la <xref:System.Windows.DataTemplate>. Sin embargo, si las propiedades que su `Setters` relevantes y no son propiedades de elementos que están dentro del actual <xref:System.Windows.DataTemplate>, puede ser más adecuado establecer las propiedades mediante un <xref:System.Windows.Style> que es para el <xref:System.Windows.Controls.ListBoxItem> clase (si el va a enlazar el control es un <xref:System.Windows.Controls.ListBox>). Por ejemplo, si desea que su <xref:System.Windows.Trigger> para animar la <xref:System.Windows.UIElement.Opacity%2A> valor del elemento cuando un mouse apunta a un elemento, defina desencadenadores dentro de un <xref:System.Windows.Controls.ListBoxItem> estilo. Para obtener un ejemplo, vea [Introducción a la aplicación de estilos y plantillas de ejemplo](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
   
  En general, tenga en cuenta que la <xref:System.Windows.DataTemplate> se aplica a cada uno de los botones generados <xref:System.Windows.Controls.ListBoxItem> (para obtener más información acerca de cómo y dónde se aplica realmente, vea la <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> página.). Su <xref:System.Windows.DataTemplate> se refiere con solo la presentación y la apariencia de los objetos de datos. En la mayoría de los casos, todos los demás aspectos de presentación, como un elemento de qué aspecto cuando se selecciona o cómo la <xref:System.Windows.Controls.ListBox> establece los elementos, no pertenecen a la definición de un <xref:System.Windows.DataTemplate>. Para obtener un ejemplo, vea la sección [Aplicar estilos y plantillas con un ItemsControl](#DataTemplating_ItemsControl).  
   
@@ -164,9 +165,9 @@ El modelo de plantillas de datos de WPF ofrece gran flexibilidad para definir la
  Con el selector de plantilla en su lugar, el <xref:System.Windows.Controls.ListBox> aparece ahora como sigue:  
   
  ![Captura de pantalla de ejemplo de plantillas de datos](../../../../docs/framework/wpf/data/media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
-  
- Con esto concluye la explicación de este ejemplo. Para obtener el ejemplo completo, vea [Introducción a la aplicación de plantillas de ejemplo](http://go.microsoft.com/fwlink/?LinkID=160009).  
-  
+
+Con esto concluye la explicación de este ejemplo. Para obtener el ejemplo completo, vea [Introducción a la aplicación de plantillas de ejemplo](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro).
+
 <a name="DataTemplating_ItemsControl"></a>   
 ## <a name="styling-and-templating-an-itemscontrol"></a>Aplicar estilos y plantillas con un ItemsControl  
  Aunque la <xref:System.Windows.Controls.ItemsControl> no es el único tipo de control que puede usar un <xref:System.Windows.DataTemplate> con, es un escenario muy común para enlazar un <xref:System.Windows.Controls.ItemsControl> a una colección. En el [lo que pertenece a un objeto DataTemplate](#what_belongs_in_datatemplate) sección se explicó que la definición de su <xref:System.Windows.DataTemplate> solo debe tener en cuenta la presentación de datos. Para saber cuándo no es adecuado usar un <xref:System.Windows.DataTemplate> es importante comprender las diferentes propiedades de estilo y la plantilla proporcionadas por el <xref:System.Windows.Controls.ItemsControl>. El ejemplo siguiente se ha diseñado para ilustrar la función de cada una de dichas propiedades. El <xref:System.Windows.Controls.ItemsControl> en este ejemplo se enlaza a la misma `Tasks` colección como en el ejemplo anterior. A efectos de demostración, los estilos y las plantillas de este ejemplo se declaran todas como inline.  

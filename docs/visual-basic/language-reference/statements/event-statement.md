@@ -1,6 +1,6 @@
 ---
 title: Event (Instrucción)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59dc8e7b01612af0e4c8f6c1018269580284c46
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="event-statement"></a>Event (Instrucción)
 Declara un evento definido por el usuario.  
@@ -58,7 +58,7 @@ End Event
 |Parte|Descripción|  
 |---|---|  
 |`attrlist`|Opcional. Lista de atributos que se aplican a este evento. Los diversos atributos se separan con comas. Debe incluir el [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) corchetes angulares ("`<`"y"`>`").|  
-|`accessmodifier`|Opcional. Especifica qué código puede tener acceso al evento. Puede ser uno de los siguientes:<br /><br /> -   [Pública](../../../visual-basic/language-reference/modifiers/public.md): cualquier código que puede tener acceso al elemento que lo declara puede tener acceso a él.<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md): solo el código de su clase o una clase derivada puede obtener acceso a él.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md): solo el código en el mismo ensamblado puede tener acceso a él.<br />-   [Privada](../../../visual-basic/language-reference/modifiers/private.md): sólo el código en el elemento que lo declara puede tener acceso a él.<br /><br /> Puede especificar `Protected Friend` para habilitar el acceso desde el código de la clase del evento, una clase derivada o el mismo ensamblado.|  
+|`accessmodifier`|Opcional. Especifica qué código puede tener acceso al evento. Puede ser uno de los siguientes:<br /><br /> -   [Pública](../../../visual-basic/language-reference/modifiers/public.md): cualquier código que puede tener acceso al elemento que lo declara puede tener acceso a él.<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md): solo el código de su clase o una clase derivada puede obtener acceso a él.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md): solo el código en el mismo ensamblado puede tener acceso a él.<br />-   [Privada](../../../visual-basic/language-reference/modifiers/private.md): sólo el código en el elemento que lo declara puede tener acceso a él.<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-solo código de la clase del evento, una clase derivada o el mismo ensamblado puede tener acceso a él. <br />- [Protected Private](../../language-reference/modifiers/private-protected.md)-solo código de la clase del evento o una clase derivada en el mismo ensamblado puede tener acceso a él.|  
 |`Shared`|Opcional. Especifica que este evento no está asociado a una instancia específica de una clase o estructura.|  
 |`Shadows`|Opcional. Indica que este evento vuelve a declarar y oculta un elemento de programación con el mismo nombre, o un conjunto de elementos sobrecargados, en una clase base. Puede reemplazar cualquier tipo de elemento declarado con cualquier otro tipo.<br /><br /> Un elemento reemplazado no está disponible desde la clase derivada que lo reemplaza, excepto desde donde el elemento reemplazado es inaccesible. Por ejemplo, si un elemento `Private` reemplaza un elemento de clase base, el código que no tiene permiso para acceder al elemento `Private` accede en su lugar al elemento de clase base.|  
 |`eventname`|Requerido. Nombre del evento; sigue las convenciones estándar de nomenclatura de variables.|  
