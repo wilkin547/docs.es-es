@@ -5,11 +5,11 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: cf4295eea6a257fe053bf889f0c2f3d3fa5bb2a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa9006b6864b9b6b129eed323b0d6d7b29064189
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Cómo: Definir propiedades abstractas (Guía de programación de C#)
 En el ejemplo siguiente se muestra cómo definir las propiedades [abstract](../../../csharp/language-reference/keywords/abstract.md). Una declaración de propiedad abstracta no proporciona una implementación de los descriptores de acceso de propiedad, declara que la clase admite propiedades, pero deja la implementación del descriptor de acceso a las clases derivadas. En el ejemplo siguiente se muestra cómo implementar las propiedades abstractas heredadas de una clase base.  
@@ -35,7 +35,7 @@ En el ejemplo siguiente se muestra cómo definir las propiedades [abstract](../.
   
 -   Los modificadores de la propiedad se colocan en la propia declaración de propiedad. Por ejemplo:  
   
-    ```  
+    ```csharp  
     public abstract double Area  
     ```  
   

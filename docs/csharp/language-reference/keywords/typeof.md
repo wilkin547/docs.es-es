@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-ms.openlocfilehash: be79fa4f2cfb1119a50201bf6c18a144726f2f21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4203b597d7045a13ffed9e61ddbbde57e2113c23
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="typeof-c-reference"></a>typeof (Referencia de C#)
 Se usa para obtener el objeto `System.Type` de un tipo. Una expresión `typeof` tiene el formato siguiente:  
   
-```  
+```csharp  
 System.Type type = typeof(int);  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener el tipo en tiempo de ejecución de una expresión, puede usar el método <xref:System.Object.GetType%2A> de .NET Framework, como en el ejemplo siguiente:  
   
-```  
+```csharp  
 int i = 0;  
 System.Type type = i.GetType();  
 ```  
@@ -32,7 +32,7 @@ System.Type type = i.GetType();
   
  El operador `typeof` también puede usarse en tipos genéricos abiertos. Los tipos con más de un parámetro de tipo deben incluir el número correspondiente de comas en la especificación. En el ejemplo siguiente se muestra cómo determinar si el tipo de valor devuelto de un método es un <xref:System.Collections.Generic.IEnumerable%601> genérico. Suponga que el método es una instancia de un tipo de MethodInfo:  
   
-```  
+```csharp  
 string s = method.ReturnType.GetInterface  
     (typeof(System.Collections.Generic.IEnumerable<>).FullName);  
 ```  

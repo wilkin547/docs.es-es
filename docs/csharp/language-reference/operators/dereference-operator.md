@@ -7,11 +7,11 @@ helpviewer_keywords:
 - member access operator (->) [C#]
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
-ms.openlocfilehash: 09d67b8386da371f7d98a8171f60298b316091ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 037229b2081a43077cb4b5d02a8929b06ba9e077
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="-gt-operator-c-reference"></a>Operador -&gt; (Referencia de C#)
 El operador `->` combina la desreferenciación del puntero y el acceso a miembros.  
@@ -19,13 +19,13 @@ El operador `->` combina la desreferenciación del puntero y el acceso a miembro
 ## <a name="remarks"></a>Comentarios  
  Una expresión con el formato,  
   
-```  
+```csharp  
 x->y  
 ```  
   
  (donde `x` es un puntero de tipo `T*` y `y` es un miembro de `T`) es equivalente a,  
   
-```  
+```csharp  
 (*x).y  
 ```  
   

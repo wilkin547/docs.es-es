@@ -8,16 +8,16 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: f4fd42505937b2623ab9460489f5277364550d71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 996888a585f8355bdda14e09b6bb9544257ae824
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="extern-c-reference"></a>extern (Referencia de C#)
 El modificador `extern` se usa para declarar un método que se implementa externamente. Un uso común del modificador `extern` es con el atributo `DllImport` al usar servicios de interoperabilidad para llamar a código no administrado. En este caso, el método se debe declarar también como `static`, como se muestra en el ejemplo siguiente:  
   
-```  
+```csharp  
 [DllImport("avifil32.dll")]  
 private static extern void AVIFileInit();  
 ```  
@@ -52,7 +52,7 @@ int __declspec(dllexport) SampleMethod(int i)
   
  3. En el mismo directorio, cree el siguiente archivo de C# y denomínelo `cm.cs`:  
   
-```  
+```csharp  
 // cm.cs  
 using System;  
 using System.Runtime.InteropServices;  

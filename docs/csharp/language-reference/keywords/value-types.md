@@ -8,11 +8,11 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fdda6942c6883baaaea5e305a1e699a01e707d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49043a9fe9eabbb54176a0106007ef0d26ed795f
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
 Los tipos de valor constan de dos categorías principales:  
@@ -56,31 +56,31 @@ Los tipos de valor constan de dos categorías principales:
 ## <a name="initializing-value-types"></a>Inicializar tipos de valor  
  Las variables locales en C# deben inicializarse antes de usarse. Por ejemplo, puede declarar una variable local sin inicialización como en el ejemplo siguiente:  
   
-```  
+```csharp  
 int myInt;  
 ```  
   
  No puede usarla antes de inicializarla. Puede inicializarla con la siguiente instrucción:  
   
-```  
+```csharp  
 myInt = new int();  // Invoke default constructor for int type.  
 ```  
   
  Esta instrucción es equivalente a la instrucción siguiente:  
   
-```  
+```csharp  
 myInt = 0;         // Assign an initial value, 0 in this example.  
 ```  
   
  Por supuesto, puede tener la declaración y la inicialización en la misma instrucción como en los ejemplos siguientes:  
   
-```  
+```csharp  
 int myInt = new int();  
 ```  
   
  -O bien-  
   
-```  
+```csharp  
 int myInt = 0;  
 ```  
   
@@ -88,7 +88,7 @@ int myInt = 0;
   
  Con los tipos definidos por el usuario, use [new](../../../csharp/language-reference/keywords/new.md) para invocar al constructor predeterminado. Por ejemplo, la siguiente instrucción invoca al constructor predeterminado del struct `Point`:  
   
-```  
+```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
 ```  
   

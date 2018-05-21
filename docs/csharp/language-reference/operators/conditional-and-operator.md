@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '&& operator [C#]'
 - logical AND operator [C#]
 ms.assetid: 2e4f0a1c-92a3-40f8-8e3b-17b607f20c31
-ms.openlocfilehash: 86508c6eeb2998c6f202608f9204b72b60786e4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15bb3e9702f04cc805af63767c7ecbfc68160368
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="ampamp-operator-c-reference"></a>Operador &amp;&amp; (Referencia de C#)
 El operador AND condicional (`&&`) realiza una operación lógica AND con sus operandos `bool`, pero solo evalúa el segundo operando si es necesario.  
@@ -19,13 +19,13 @@ El operador AND condicional (`&&`) realiza una operación lógica AND con sus op
 ## <a name="remarks"></a>Comentarios  
  La operación  
   
-```  
+```csharp  
 x && y  
 ```  
   
  corresponde a la operación  
   
-```  
+```csharp  
 x & y  
 ```  
   

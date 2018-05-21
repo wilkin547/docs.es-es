@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04028a2b350493a3cc8f2c92bafafd9658fc7c58
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811443dbd8e2483f7fc1b0f8c44afb4ebcd9efcf
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="application-domains"></a>Dominios de aplicación
 Normalmente, los sistemas operativos y los entornos de Common Language Runtime proporcionan algún tipo de aislamiento entre las aplicaciones. Por ejemplo, Windows utiliza procesos para aislar las aplicaciones. Este aislamiento es necesario para garantizar que el código que se ejecuta en una aplicación no afecta negativamente a otras aplicaciones no relacionadas.  
@@ -74,11 +74,11 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
   
  Existen tres opciones para cargar ensamblados neutrales respecto al dominio:  
   
--   <xref:System.LoaderOptimization> no carga ensamblados con dominio neutro, a excepción de Mscorlib que siempre se carga con dominio neutro. Esta configuración se denomina dominio simple porque suele utilizarse cuando el host ejecuta una sola aplicación en el proceso.  
-  
--   <xref:System.LoaderOptimization> carga todos los ensamblados con dominio neutro. Use esta configuración cuando en el proceso haya varios dominios de aplicación que ejecutan el mismo código.  
-  
--   <xref:System.LoaderOptimization> carga con dominio neutro los ensamblados que tienen un nombre seguro si se han instalado junto con todas sus dependencias en la caché global de ensamblados. La carga y la compilación JIT de los demás ensamblados se realiza de forma independiente en cada dominio de aplicación y, por tanto, estos ensamblados pueden descargarse del proceso. Utilice esta configuración cuando ejecute más de una aplicación en el mismo proceso, o si tiene un grupo heterogéneo de ensamblados compartidos por varios dominios de aplicación y ensamblados que es necesario descargar del proceso.  
+- <xref:System.LoaderOptimization.SingleDomain?displayProperty=nameWithType> no carga ensamblados con dominio neutro, a excepción de Mscorlib que siempre se carga con dominio neutro. Esta configuración se denomina dominio simple porque suele utilizarse cuando el host ejecuta una sola aplicación en el proceso.
+
+- <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> carga todos los ensamblados con dominio neutro. Use esta configuración cuando en el proceso haya varios dominios de aplicación que ejecutan el mismo código.
+
+- <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType> carga con dominio neutro los ensamblados que tienen un nombre seguro si se han instalado junto con todas sus dependencias en la caché global de ensamblados. La carga y la compilación JIT de los demás ensamblados se realiza de forma independiente en cada dominio de aplicación y, por tanto, estos ensamblados pueden descargarse del proceso. Utilice esta configuración cuando ejecute más de una aplicación en el mismo proceso, o si tiene un grupo heterogéneo de ensamblados compartidos por varios dominios de aplicación y ensamblados que es necesario descargar del proceso.
   
  El código compilado JIT no se puede compartir en los ensamblados que se cargan en la carga de ensamblado por contexto especificado por el usuario utilizando el método <xref:System.Reflection.Assembly.LoadFrom%2A> de la clase <xref:System.Reflection.Assembly>, o que se cargan a partir de imágenes que utilizan las sobrecargas del método <xref:System.Reflection.Assembly.Load%2A> que especifican matrices de bytes.  
   

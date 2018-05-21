@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '*= operator [C#]'
 - binary multiplication assignment operator (*=) [C#]
 ms.assetid: 2e472155-59db-4dbf-bb94-bcccfa1a794d
-ms.openlocfilehash: 465cf37d38a989d5c1bf6f0d0242c295e55684f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6bbf2142ca7e9e05010a29920da52e1439f6e882
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="-operator-c-reference"></a>Operador *= (Referencia de C#)
 El operador de asignación y multiplicación binaria.  
@@ -19,13 +19,13 @@ El operador de asignación y multiplicación binaria.
 ## <a name="remarks"></a>Comentarios  
  Una expresión que use el operador de asignación `*=`, como  
   
-```  
+```csharp  
 x *= y  
 ```  
   
  es equivalente a  
   
-```  
+```csharp  
 x = x * y  
 ```  
   
