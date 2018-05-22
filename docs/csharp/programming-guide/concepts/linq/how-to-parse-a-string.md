@@ -1,27 +1,18 @@
 ---
-title: "Cómo: Analizar una cadena (C#)"
-ms.custom: 
+title: 'Cómo: Analizar una cadena (C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 37e09885b00830f319a829e900f33927498df0e3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fe1ef6d601b97252eb2d146f28003cad352b2d84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="db06b-102">Cómo: Analizar una cadena (C#)</span><span class="sxs-lookup"><span data-stu-id="db06b-102">How to: Parse a String (C#)</span></span>
-<span data-ttu-id="db06b-103">En este tema se muestra cómo analizar una cadena para crear un árbol XML en C#.</span><span class="sxs-lookup"><span data-stu-id="db06b-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  
+# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="b491a-102">Cómo: Analizar una cadena (C#)</span><span class="sxs-lookup"><span data-stu-id="b491a-102">How to: Parse a String (C#)</span></span>
+<span data-ttu-id="b491a-103">En este tema se muestra cómo analizar una cadena para crear un árbol XML en C#.</span><span class="sxs-lookup"><span data-stu-id="b491a-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="db06b-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="db06b-104">Example</span></span>  
- <span data-ttu-id="db06b-105">El siguiente código C# muestra cómo analizar una cadena.</span><span class="sxs-lookup"><span data-stu-id="db06b-105">The following C# code shows how to parse a string.</span></span>  
+## <a name="example"></a><span data-ttu-id="b491a-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b491a-104">Example</span></span>  
+ <span data-ttu-id="b491a-105">El siguiente código C# muestra cómo analizar una cadena.</span><span class="sxs-lookup"><span data-stu-id="b491a-105">The following C# code shows how to parse a string.</span></span>  
   
 ```csharp  
 XElement contacts = XElement.Parse(  
@@ -53,5 +44,5 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="db06b-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="db06b-106">See Also</span></span>  
- [<span data-ttu-id="db06b-107">Analizar XML (C#)</span><span class="sxs-lookup"><span data-stu-id="db06b-107">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a><span data-ttu-id="b491a-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="b491a-106">See Also</span></span>  
+ [<span data-ttu-id="b491a-107">Analizar XML (C#)</span><span class="sxs-lookup"><span data-stu-id="b491a-107">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
