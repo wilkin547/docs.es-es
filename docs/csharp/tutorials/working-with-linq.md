@@ -3,11 +3,11 @@ title: Trabajar con LINQ
 description: En este tutorial se enseña cómo generar secuencias con LINQ, escribir métodos para su uso en consultas LINQ y distinguir entre la evaluación diligente y diferida.
 ms.date: 03/28/2017
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 17c294a372a05a05d3893fce7b3adc426c6305fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5f9baab13cddfb9e294de1e1a6ce967ccbe0813
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="working-with-linq"></a>Trabajar con LINQ
 
@@ -200,7 +200,7 @@ Ejecute el ejemplo y observe cómo la baraja se reorganiza en cada orden aleator
 
 ## <a name="optimizations"></a>Optimizaciones
 
-El ejemplo creado hasta el momento se ejecuta *en orden aleatorio*, donde las cartas superiores e inferiores son las mismas en cada ejecución. Se va a realizar un cambio y realice una ejecución *en orden no aleatorio*, donde las 52 cartas cambian de posición. Si se trata de un orden no aleatorio, intercale la baraja de tal forma que la primera carta de la mitad inferior sea la primera carta de la baraja. Esto significa que la última carta de la mitad superior será la carta inferior. Se trata solo de un cambio de línea. Actualice la llamada al orden aleatorio para cambiar el orden de las mitades superior e inferior de la baraja:
+El ejemplo creado hasta el momento se ejecuta *en orden no aleatorio*, donde las cartas superiores e inferiores son las mismas en cada ejecución. Se va a realizar un cambio y realice una ejecución *en orden no aleatorio*, donde las 52 cartas cambian de posición. Si se trata de un orden aleatorio, intercale la baraja de tal forma que la primera carta de la mitad inferior sea la primera carta de la baraja. Esto significa que la última carta de la mitad superior será la carta inferior. Se trata solo de un cambio de línea. Actualice la llamada al orden aleatorio para cambiar el orden de las mitades superior e inferior de la baraja:
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
@@ -264,13 +264,13 @@ public static void Main(string[] args)
 }
 ```
 
-Observe que no se genera un registro cada vez que accede a una consulta. El registro solo se genera cuando crea la consulta original. El programa todavía tarda mucho tiempo en ejecutarse, pero ahora puede ver por qué. Si se le agota la paciencia al ejecutar el orden aleatorio externo con los registros activados, cambie de nuevo al orden aleatorio interno. Aún puede ver los efectos de la evaluación diferida. En una ejecución, ejecuta 2592 consultas, incluida toda la generación de palos y valores.
+Observe que no se genera un registro cada vez que accede a una consulta. El registro solo se genera cuando crea la consulta original. El programa todavía tarda mucho tiempo en ejecutarse, pero ahora puede ver por qué. Si se le agota la paciencia al ejecutar el orden aleatorio interno con los registros activados, cambie de nuevo al orden aleatorio externo. Aún puede ver los efectos de la evaluación diferida. En una ejecución, ejecuta 2592 consultas, incluida toda la generación de palos y valores.
 
 Hay una manera fácil de actualizar este programa para evitar todas esas ejecuciones. Existen los métodos LINQ `ToArray()` y `ToList()` que hacen que la consulta se ejecute y almacenan los resultados en una matriz o en una lista, respectivamente. Utilice estos métodos para almacenar en caché los resultados de una consulta, en lugar de volver a ejecutar la consulta de origen.  Anexe las consultas que generan las barajas con una llamada a `ToArray()` y vuelva a ejecutar la consulta:
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
-Vuelva a realizar la ejecución, y el orden aleatorio interno baja a 30 consultas. Ejecute de nuevo con el orden aleatorio externo y verá mejoras similares. (Ahora ejecuta 162 consultas).
+Vuelva a realizar la ejecución, y el orden aleatorio externo baja a 30 consultas. Ejecute de nuevo con el orden aleatorio interno y verá mejoras similares. (Ahora ejecuta 162 consultas).
 
 No interprete este ejemplo incorrectamente al pensar que todas las consultas deben ejecutarse de manera diligente. Este ejemplo está diseñado para resaltar los casos de uso en que la evaluación diferida puede generar dificultades de rendimiento. Eso se debe a que cada nueva disposición de la baraja de cartas se crea a partir de la disposición anterior. La evaluación diferida supone que cada nueva configuración de la baraja se realiza a partir de la baraja original, incluso con la ejecución del código que crea el elemento `startingDeck`. Esto conlleva una gran cantidad de trabajo adicional. 
 
@@ -324,4 +324,4 @@ Realice la compilación y vuelva a ejecutarla. La salida está un poco más limp
 
 En este ejemplo se han mostrado algunos de los métodos usados en LINQ, como la forma de crear métodos propios que pueden usarse con facilidad con código habilitado para LINQ. También se presentan las diferencias entre la evaluación diligente y diferida, y el efecto que puede tener la decisión en el rendimiento.
 
-Ha obtenido un poco de información sobre una técnica de magia. Los magos usan la mezcla faro porque les permite controlar dónde está cada carta en la baraja. En algunos trucos, el mago pide a un miembro de la audiencia que coloque una carta en la parte superior de la baraja, y la mezcla en orden aleatorio durante algunos minutos, pero puede controlar dónde se encuentra la carta en cuestión. En otras ilusiones, es necesario organizar la baraja de una forma determinada. Un mago debe organizar la baraja antes de realizar el truco. Después, mezclará la baraja en orden aleatorio 5 veces usando un orden aleatorio interno. En el escenario, el mago puede mostrar qué aspecto tiene una baraja aleatoria, ordenarla aleatoriamente 3 veces más y organizar la baraja exactamente como lo desea.
+Ha obtenido un poco de información sobre una técnica de magia. Los magos usan la mezcla faro porque les permite controlar dónde está cada carta en la baraja. En algunos trucos, el mago pide a un miembro de la audiencia que coloque una carta en la parte superior de la baraja, y la mezcla en orden aleatorio durante algunos minutos, pero puede controlar dónde se encuentra la carta en cuestión. En otras ilusiones, es necesario organizar la baraja de una forma determinada. Un mago debe organizar la baraja antes de realizar el truco. Después, mezclará la baraja en orden aleatorio 5 veces usando un orden aleatorio externo. En el escenario, el mago puede mostrar qué aspecto tiene una baraja aleatoria, ordenarla aleatoriamente 3 veces más y organizar la baraja exactamente como lo desea.

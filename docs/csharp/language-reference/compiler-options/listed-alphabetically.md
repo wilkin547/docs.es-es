@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: f0c9e0ff5881695cc9426610056677d6053376a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1198249afe6933342aea1a05515e6766603ab147
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opciones del compilador de C#, por orden alfabético
 Las siguientes opciones del compilador están ordenadas alfabéticamente. Para obtener una lista por categoría, vea [Opciones del compilador de C# por categoría](listed-by-category.md).  
@@ -27,7 +27,7 @@ Las siguientes opciones del compilador están ordenadas alfabéticamente. Para o
 |[-baseaddress](baseaddress-compiler-option.md)|Especifica la dirección base de la biblioteca que se compilará.|  
 |[-bugreport](bugreport-compiler-option.md)|Crea un archivo 'Informe de errores'. Este archivo se enviará junto con la información de bloqueo si se usa con -errorreport:prompt o -errorreport:send.|  
 |[/checked](checked-compiler-option.md)|Hace que el compilador genere comprobaciones de desbordamiento.|  
-|-checksumalgorithm:\<alg>|Especifique el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (predeterminado) o SHA256.|  
+|-checksumalgorithm:\<alg>|Especifica el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (predeterminado) o SHA256.|  
 |[-codepage](codepage-compiler-option.md)|Especifica la página de códigos que se va a utilizar cuando se abren los archivos de código fuente.|  
 |[-debug](debug-compiler-option.md)|Emite información de depuración.|  
 |[-define](define-compiler-option.md)|Define símbolos de compilación condicional.|  
@@ -42,13 +42,13 @@ Las siguientes opciones del compilador están ordenadas alfabéticamente. Para o
 |-incremental|Habilita la compilación incremental [obsoleto].|  
 |[-keycontainer](keycontainer-compiler-option.md)|Especifica un contenedor de claves de nombre seguro.|  
 |[-keyfile](keyfile-compiler-option.md)|Especifica un archivo de clave de nombre seguro.|  
-|[-langversion:\<string>](langversion-compiler-option.md)|Especifica el modo de versión de lenguaje: valor predeterminado, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 o el más reciente |  
+|[-langversion:\<string>](langversion-compiler-option.md)|Especifica la versión de lenguaje: valor predeterminado, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o el más reciente |  
 |[/lib](lib-compiler-option.md)|Especifica más directorios donde buscar referencias.|  
 |[-link](link-compiler-option.md)|Hace que la información de tipo COM de ensamblados específicos esté disponible en el proyecto.|  
 |[-linkresource](linkresource-compiler-option.md)|Vincula el recurso especificado a este ensamblado.|  
 |[-main](main-compiler-option.md)|Especifica el tipo que contiene el punto de entrada (se pasan por alto los demás puntos de entrada posibles).|  
 |[-moduleassemblyname](moduleassemblyname-compiler-option.md)|Especifica un ensamblado con tipos no públicos a los que puede acceder un archivo .netmodule.|  
-|-modulename:\<string>|Especifica el nombre del módulo de origen.|  
+|-modulename:\<string>|Especifica el nombre del módulo de origen|  
 |[-noconfig](noconfig-compiler-option.md)|Indica al compilador que no incluya el archivo CSC.RSP de forma automática.|  
 |[-nologo](nologo-compiler-option.md)|Suprime el mensaje de copyright del compilador.|  
 |[-nostdlib](nostdlib-compiler-option.md)|Indica al compilador que no haga referencia a la biblioteca estándar (mscorlib.dll).|  

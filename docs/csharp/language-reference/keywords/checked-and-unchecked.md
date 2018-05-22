@@ -1,6 +1,6 @@
 ---
 title: Checked y Unchecked (Referencia de C#)
-ms.date: 07/20/2015
+ms.date: 05/15/2018
 helpviewer_keywords:
 - operators [C#], checked and unchecked
 - exceptions [C#], overflow checking
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 26ea8a7864d93b8d64661db2b0dc1df6634f989a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8e292a67fab49b5fc3616e438d063eca2617274
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked y Unchecked (Referencia de C#)
-Las instrucciones de C# se pueden ejecutar en un contexto comprobado o no comprobado. En un contexto no comprobado, el desbordamiento aritmético produce una excepción. En un contexto no comprobado, el desbordamiento aritmético se pasa por alto y el resultado se trunca.  
+Las instrucciones de C# se pueden ejecutar en un contexto comprobado o no comprobado. En un contexto no comprobado, el desbordamiento aritmético produce una excepción. En un contexto sin comprobar, se omite el desbordamiento aritmético y se produce un truncamiento del resultado al descartar los bits de orden superior que no caben en el tipo de destino.  
   
--   [checked](../../../csharp/language-reference/keywords/checked.md) Especifica un contexto comprobado.  
+-   [checked](checked.md) Especifica un contexto comprobado.  
   
--   [unchecked](../../../csharp/language-reference/keywords/unchecked.md) Especifica un contexto no comprobado.  
-  
- Si no se especifican `checked` ni `unchecked`, el contexto predeterminado depende de factores externos, como las opciones del compilador.  
+-   [unchecked](unchecked.md) Especifica un contexto no comprobado.  
   
  Las siguientes operaciones se ven afectadas por la comprobación del desbordamiento:  
   
 -   Expresiones que usan los siguientes operadores predefinidos en tipos integrales:  
   
-     `++` `--` - (unario)   `+` -   `*` `/`  
+     `++`, `--`, `-` unario, `+`, `-`, `*`, `/`  
   
--   Conversiones numéricas explícitas entre tipos integrales.  
+-   Conversiones numéricas explícitas entre tipos integrales o de `float` o `double` a un tipo integral.  
   
- La opción del compilador [/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md) permite especificar un contexto comprobado o no comprobado para todas las declaraciones aritméticas que no están explícitamente en el ámbito de una palabra clave `checked` o `unchecked`.  
+ Si no se especifica `checked` ni `unchecked`, el contexto predeterminado para expresiones no constantes (expresiones que se evalúan en tiempo de ejecución) se define por medio del valor de la opción del compilador [/checked](../compiler-options/checked-compiler-option.md). De forma predeterminada, el valor de esa opción se desactiva y se ejecutan operaciones aritméticas en un contexto sin comprobar. 
+ 
+ Para expresiones constantes (expresiones que se pueden evaluar completamente en tiempo de compilación), el contexto predeterminado se comprueba siempre. A menos que se coloque de forma explícita una expresión constante en un contexto sin comprobar, los desbordamientos que se producen durante la evaluación de tiempo de compilación de la expresión dan lugar a errores en tiempo de compilación.
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
- [Palabras clave de instrucciones](../../../csharp/language-reference/keywords/statement-keywords.md)
+ [Referencia de C#](../index.md)  
+ [Guía de programación de C#](../../programming-guide/index.md)  
+ [Palabras clave de C#](index.md)  
+ [Palabras clave de instrucciones](statement-keywords.md)

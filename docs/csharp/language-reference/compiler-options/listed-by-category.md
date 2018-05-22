@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: a3352b9f929382c7d5b7d0c62ef4022560caf371
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f02ae84544a60a992177332d528dd7970f84bf3f
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opciones del compilador de C#, por categoría
 Las opciones del compilador siguientes están ordenadas por categoría. Para acceder a una lista en orden alfabético, vea [Opciones del compilador de C#, por orden alfabético](listed-alphabetically.md).  
@@ -35,7 +35,7 @@ Las opciones del compilador siguientes están ordenadas por categoría. Para acc
 |[/refout](refout-compiler-option.md)|Genere un ensamblado de referencia además del ensamblado principal.|  
 |[/refonly](refonly-compiler-option.md)|Genere un ensamblado de referencia en lugar del ensamblado principal.|  
 |[-target](target-compiler-option.md)|Especifica el formato del archivo de salida con una de estas cinco opciones: [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md) o [-target:winmdobj](target-winmdobj-compiler-option.md).|  
-|-modulename:\<string>|Especifica el nombre del módulo de origen.|  
+|-modulename:\<string>|Especifica el nombre del módulo de origen|  
   
 ### <a name="net-framework-assemblies"></a>Ensamblados de .NET Framework  
   
@@ -91,7 +91,7 @@ Las opciones del compilador siguientes están ordenadas por categoría. Para acc
 |[-codepage](codepage-compiler-option.md)|Especifica la página de códigos que se va a usar para todos los archivos de código fuente de la compilación.|  
 |[-help](help-compiler-option.md)|Enumera las opciones del compilador para stdout.|  
 |[-highentropyva](highentropyva-compiler-option.md)|Especifica que el archivo ejecutable es compatible con la selección aleatoria del diseño del espacio de direcciones (ASLR).|  
-|[-langversion](langversion-compiler-option.md)|Especifica el modo de versión de lenguaje: valor predeterminado, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 o el más reciente |  
+|[-langversion](langversion-compiler-option.md)|Especifica la versión de lenguaje: valor predeterminado, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o el más reciente |  
 |[-main](main-compiler-option.md)|Especifica la ubicación del método **Main**.|  
 |[-noconfig](noconfig-compiler-option.md)|Indica al compilador que no debe compilar con csc.rsp.|  
 |[-nologo](nologo-compiler-option.md)|Suprime la información de titular del compilador.|  
@@ -100,7 +100,7 @@ Las opciones del compilador siguientes están ordenadas por categoría. Para acc
 |[/unsafe](unsafe-compiler-option.md)|Habilita la compilación del código que usa la palabra clave [unsafe](../../../csharp/language-reference/keywords/unsafe.md).|  
 |[-utf8output](utf8output-compiler-option.md)|Muestra los resultados del compilador en codificación UTF-8.|  
 |-parallel[+&#124;-]|Especifica si hay que usar la compilación simultánea (+).|  
-|-checksumalgorithm:\<alg>|Especifique el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (predeterminado) o SHA256.|  
+|-checksumalgorithm:\<alg>|Especifica el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (predeterminado) o SHA256.|  
   
 ## <a name="obsolete-options"></a>Opciones obsoletas  
   

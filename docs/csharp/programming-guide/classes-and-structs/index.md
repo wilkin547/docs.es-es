@@ -1,5 +1,5 @@
 ---
-title: Clases y structs (Guía de programación de C#)
+title: Clases y estructuras (Guía de programación de C#)
 description: Describe el uso de clases y estructuras (struct) en C#.
 ms.date: 01/17/2016
 helpviewer_keywords:
@@ -16,8 +16,8 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
 ---
-# <a name="classes-and-structs-c-programming-guide"></a>Clases y structs (Guía de programación de C#)
-Las clases y estructuras son dos de las construcciones básicas de Common Type System en .NET Framework. Cada una de ellas es básicamente una estructura de datos que encapsula un conjunto de datos y comportamientos que forman un conjunto como una unidad lógica. Los datos y comportamientos son los *miembros* de la clase o estructura, e incluyen sus métodos, propiedades y eventos, entre otros elementos, como se muestra más adelante en este tema.  
+# <a name="classes-and-structs-c-programming-guide"></a>Clases y estructuras (Guía de programación de C#)
+Las clases (class) y estructuras (struct) son dos de las construcciones básicas de Common Type System en .NET Framework. Cada una de ellas es básicamente una estructura de datos que encapsula un conjunto de datos y comportamientos que forman un conjunto como una unidad lógica. Los datos y comportamientos son los *miembros* de la clase o estructura, e incluyen sus métodos, propiedades y eventos, entre otros elementos, como se muestra más adelante en este tema.  
   
  Una declaración de clase o estructura es como un plano que se utiliza para crear instancias u objetos en tiempo de ejecución. Si define una clase o estructura llamada `Person`, `Person` es el nombre del tipo. Si declara e inicializa una variable `p` de tipo `Person`, se dice que `p` es un objeto o instancia de `Person`. Se pueden crear varias instancias del mismo tipo `Person`, y cada instancia tiene diferentes valores en sus propiedades y campos.  
   
@@ -91,7 +91,7 @@ Las clases y estructuras son dos de las construcciones básicas de Common Type S
 ### <a name="anonymous-types"></a>Tipos anónimos  
  En situaciones donde no es conveniente o necesario crear una clase con nombre, por ejemplo al rellenar una lista con estructuras de datos que no tiene que conservar o pasar a otro método, utilice los tipos anónimos. Para más información, vea [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
-### <a name="extension-methods"></a>métodos de extensión.  
+### <a name="extension-methods"></a>Métodos de extensión.  
  Puede "extender" una clase sin crear una clase derivada mediante la creación de un tipo independiente cuyos métodos pueden llamarse como si pertenecieran al tipo original. Para más información, vea [Métodos de extensión](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
   
 ### <a name="implicitly-typed-local-variables"></a>Variables locales con asignación implícita de tipos  
