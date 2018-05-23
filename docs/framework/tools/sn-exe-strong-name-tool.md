@@ -1,13 +1,6 @@
 ---
 title: Sn.exe (Herramienta de nombre seguro)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - public keys, signing files
 - Strong Name tool
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ff7036bce069aa24742f7ead7bb0735fed0f3678
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c7e58d14eb29939ea1b91b5bdb75f691f5233d8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Herramienta de nombre seguro)
 La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres seguros](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe proporciona opciones para la administración de claves, así como para la generación y comprobación de firmas.  

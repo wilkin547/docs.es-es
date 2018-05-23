@@ -1,33 +1,27 @@
 ---
 title: Operador =&gt; (Referencia de C#)
 ms.date: 10/02/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - =>_CSharpKeyword
 helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 44cb0485aefa8b0ab10a00ae0525180020ce436d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d1565e262fbd3ebcee2d1576a2a0c8ed3ba8ce38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gt-operator-c-reference"></a>Operador =&gt; (Referencia de C#)
 
-El `=>` operador se puede usar de dos maneras en C#:
+El operador `=>` se puede usar de dos maneras en C#:
 
-- Como el [operador lambda](#lamba-operator) en un [expresión lambda](../../lambda-expressions.md), separa las variables de entrada desde el cuerpo de la expresión lambda.
+- Como [operador lambda](#lamba-operator) en una [expresión lambda](../../lambda-expressions.md), para separar las variables de entrada del cuerpo de lambda.
  
-- En un [definición de cuerpo de la expresión](#expression-body-definition), separa un nombre de miembro de la implementación de un miembro. 
+- En una [definición de cuerpo de expresiones](#expression-body-definition), para separar un nombre de miembro de la implementación de miembro. 
 
-## <a name="lambda-operator"></a>Lambda (operador)
+## <a name="lambda-operator"></a>Operador lambda
 
 El token `=>` se denomina operador lambda. Se usa en *expresiones lambda* para separar las variables de entrada del lado izquierdo y el cuerpo lambda del lado derecho. Las expresiones lambda son expresiones insertadas similares a los métodos anónimos, pero más flexibles. Se usan ampliamente en las consultas LINQ que se expresan en la sintaxis de método. Para obtener más información, vea [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
@@ -88,24 +82,24 @@ static void Main(string[] args)
     // nine  
 }  
 ```  
-## <a name="expression-body-definition"></a>Definición de cuerpo de la expresión
+## <a name="expression-body-definition"></a>Definición de cuerpo de expresiones
 
-Una definición de cuerpo de expresión proporciona implementación de un miembro en un formulario muy comprimido y legible. Tiene la siguiente sintaxis:
+Una definición de cuerpo de expresiones proporciona la implementación de un miembro de una forma muy concisa y legible. Presenta la siguiente sintaxis general:
 
 ```csharp
 member => expression;
 ```
-donde *expresión* es una expresión válida. Tenga en cuenta que *expresión* puede ser un *expresión de instrucción* sólo si el valor devuelto del miembro del tipo es `void`, o si el miembro es un constructor o un finalizador.
+donde *expresión* es una expresión válida. Cabe mencionar que *expression* puede ser una *expresión de instrucción* únicamente si el tipo de valor devuelto del miembro es `void` o si el miembro es un constructor o un finalizador.
 
-Se admiten las definiciones de cuerpos de expresión para los métodos y las instrucciones get de propiedad a partir de C# 6. Las definiciones de cuerpos de expresión para constructores, finalizadores, instrucciones set de propiedad y los indizadores se admiten a partir de C# 7.
+Desde C# 6, se admite el uso de definiciones de cuerpos de expresiones en métodos e instrucciones de propiedad get. Desde C# 7, se admite el uso de definiciones de cuerpos de expresiones en constructores, finalizadores, instrucciones propiedad set e indizadores.
 
-La siguiente es una definición de cuerpo de expresión para un `Person.ToString` método:
+Esta es una definición de cuerpo de expresiones de un método `Person.ToString`:
 
 ```csharp
 public override string ToString() => $"{fname} {lname}".Trim();
 ```
 
-Es una versión abreviada de la definición de método siguiente:
+Se trata de una versión abreviada de la siguiente definición de método:
 
 ```csharp
 public override string ToString()
@@ -113,10 +107,10 @@ public override string ToString()
    return $"{fname} {lname}".Trim();
 }
 ```
-Para obtener más información sobre las definiciones de cuerpos de expresión, vea [miembros en el cuerpo expresión](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+Para más información sobre las definiciones de cuerpos de expresiones, vea [Expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) (Miembros con cuerpos de expresiones).
 
 ## <a name="see-also"></a>Vea también  
 [Referencia de C#](../../../csharp/language-reference/index.md)   
 [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
 [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
-[Los miembros en el cuerpo expresión](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+[Expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) (Miembros con cuerpos de expresiones).

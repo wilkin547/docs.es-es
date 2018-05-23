@@ -1,11 +1,7 @@
 ---
 title: Tabla de valores predeterminados (Referencia de C#)
-descripton: Learn what are the default values of value types returned by the default constructors.
+description: Sepa cuáles son los valores predeterminados de los tipos de valor devueltos por los constructores predeterminados.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - constructors [C#], return values
 - keywords [C#], new
@@ -15,13 +11,11 @@ helpviewer_keywords:
 - variables [C#], value types
 - constructors [C#], default constructor
 - types [C#], default constructor return values
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e249dd2f352fe6177f3afbfd089fc4dc9b1b7798
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 634a55304534b4269487f29be1fbb4930f51d8ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-values-table-c-reference"></a>Tabla de valores predeterminados (Referencia de C#)
 

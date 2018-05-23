@@ -1,27 +1,18 @@
 ---
-title: "Colaboración de punto a punto"
-ms.custom: 
+title: Colaboración de punto a punto
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5060e12fb6a9fcc1bac1dfe6ccdcbaea9f2e6385
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
-ms.translationtype: MT
+ms.openlocfilehash: a933c81105399a9411fcb749a06e47bf769cf532
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-to-peer-collaboration"></a>Colaboración de punto a punto
-La función de las redes punto a punto es permitir que los equipos PC que existen en el perímetro de Internet puedan realizar tareas informáticas que van más allá de las simplemente basadas en el cliente. El equipo moderno (PC) tiene un procesador muy rápido, gran memoria y un disco duro grande, ninguna de las cuales se utilizan para realizar tareas de computación habituales, como correo electrónico y exploración Web. Estos equipos pueden actuar fácilmente como cliente y servidor (del mismo nivel) para varios tipos de aplicaciones.  
+La función de las redes punto a punto es permitir que los equipos PC que existen en el perímetro de Internet puedan realizar tareas informáticas que van más allá de las simplemente basadas en el cliente. Los equipos PC modernos cuentan con un procesador muy rápido, una memoria amplia y un disco duro grande, si bien ninguna de estas características se usa en su totalidad para realizar las tareas informáticas habituales, como el correo electrónico y la exploración web. Estos equipos pueden actuar fácilmente como cliente y servidor (del mismo nivel) para varios tipos de aplicaciones.  
   
 -   La infraestructura de colaboración de punto a punto es una implementación simplificada de la infraestructura punto a punto de Microsoft Windows que aprovecha el servicio Equipos a mi alrededor de Windows Vista y plataformas posteriores. Está concebida para aplicaciones habilitadas para el mismo nivel dentro de una subred para la que funciona el servicio Equipos a mi alrededor, aunque también puede ofrecer servicio a puntos de conexión de Internet o contactos. Incorpora el Administrador de contactos común que usan Live Messenger y otras aplicaciones compatibles con Live para determinar puntos de conexión de contacto, disponibilidad y presencia.  
   

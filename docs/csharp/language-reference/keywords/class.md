@@ -1,24 +1,17 @@
 ---
 title: class (Referencia de C#)
 ms.date: 07/18/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - class_CSharpKeyword
 - class
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-caps.latest.revision: 30
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ae4b019ee88b6f331a76c750ab94fc76a3343adb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 20968d2f72195db6d16de1b726c6e946b91ffcd5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-c-reference"></a>class (Referencia de C#)
 
@@ -44,7 +37,7 @@ Solo la herencia simple se permite en C#. En otras palabras, una clase puede her
 
 Las clases que se declaran directamente dentro de un espacio de nombres, que no están anidadas dentro de otras clases, pueden ser de tipo [public](../../../csharp/language-reference/keywords/public.md) o [internal](../../../csharp/language-reference/keywords/internal.md). De forma predeterminada, las clases son `internal`.
 
-Los miembros de clase, incluidas las clases anidadas, pueden ser [público](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protegido](../../../csharp/language-reference/keywords/protected.md), [interno](../../../csharp/language-reference/keywords/internal.md), [privada](../../../csharp/language-reference/keywords/private.md), o `private protected`. Los miembros son [private](../../../csharp/language-reference/keywords/private.md) de forma predeterminada.
+Los miembros de clase, incluidas las clases anidadas, pueden ser de tipo [public](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [private](../../../csharp/language-reference/keywords/private.md) o `private protected`. Los miembros son [private](../../../csharp/language-reference/keywords/private.md) de forma predeterminada.
 
 Para obtener más información, consulte [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
 
@@ -76,7 +69,7 @@ Una clase puede contener declaraciones de los miembros siguientes:
 
 - [Interfaces](../../../csharp/programming-guide/interfaces/index.md)
 
-- [Estructuras](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)
 
 ## <a name="example"></a>Ejemplo
 En el ejemplo siguiente se muestra cómo declarar campos de clase, constructores y métodos. También se muestra la creación de instancias de objeto y la impresión de datos de instancias. En este ejemplo, se declaran dos clases. La primera clase, `Child`, contiene dos campos privados (`name` y `age`), dos constructores públicos y un método público. La segunda clase, `StringTest`, se usa para contener `Main`.

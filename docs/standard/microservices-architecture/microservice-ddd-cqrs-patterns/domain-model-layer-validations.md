@@ -1,21 +1,14 @@
 ---
-title: "Diseñar las validaciones en el nivel de modelo de dominio"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Diseñar las validaciones en el nivel de modelo de dominio"
-keywords: Docker, microservicios, ASP.NET, contenedor
+title: Diseñar las validaciones en el nivel de modelo de dominio
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Diseñar las validaciones en el nivel de modelo de dominio
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e7a111ce20039f8c87d3c3d63efdeaf38a4e1e96
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ce3cb0c79cbd492224ce1d4ecb25cd02062f11cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>Diseñar las validaciones en el nivel de modelo de dominio
 
@@ -116,24 +109,24 @@ Si usa la validación de campos con anotaciones de datos, por ejemplo, no se dup
 ## <a name="additional-resources"></a>Recursos adicionales
 
 -   **Rachel Appel. Introducción a la validación de modelos en ASP.NET Core MVC**
-    [*https://docs.microsoft.com/es-es/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
+    [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
 
--   **Rick Anderson. Adición de validación**
-    [*https://docs.microsoft.com/es-es/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+-   **Rick Anderson. Adding validation (Adición de validación)**
+    [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
--   **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations (Reemplazar la generación de excepciones con notificación en las validaciones)**
+-   **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations (Reemplazar el inicio de excepciones por notificaciones en validaciones)**
     [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
 
 -   **Specification and Notification Patterns (Patrones de especificación y notificación)**
     [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
 
--   **Lev Gorodinski. Validation in Domain-Driven Design (DDD) [Validación en el diseño guiado por el dominio (DDD)]**
+-   **Lev Gorodinski. Validation in Domain-Driven Design (DDD) (Validación en diseños guiados por dominio)**
     [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
--   **Colin Jack. Domain Model Validation (Validación de un modelo de dominio)**
+-   **Colin Jack. Domain Model Validation (Validación de modelos de dominio)**
     [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
--   **Jimmy Bogard. Validation in a DDD world (Validación en un mundo de DDD)**
+-   **Jimmy Bogard. Validation in a DDD world (Validación en un mundo de diseños guiados por dominio)**
     [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
 
 

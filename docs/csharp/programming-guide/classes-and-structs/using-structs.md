@@ -1,34 +1,27 @@
 ---
-title: "Utilizar estructuras (Guía de programación de C#)"
+title: Utilizar estructuras (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 94181c42ce913dc76c9a074e4bcbb8240764c896
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 553a6d1d2e922d1683cb5dbe2fa0b525c9b1e37a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-structs-c-programming-guide"></a>Utilizar estructuras (Guía de programación de C#)
 El tipo `struct` resulta adecuado para representar objetos pequeños como `Point`, `Rectangle`y `Color`. Aunque es igual de válido representar un punto como un elemento [class](../../../csharp/language-reference/keywords/class.md) con [Propiedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), seguramente un [struct](../../../csharp/language-reference/keywords/struct.md) sea más eficaz en algunos escenarios. Por ejemplo, si declara una matriz de 1000 objetos `Point` , se asignará más memoria para hacer referencia a cada objeto y, en este caso, un struct sería menos costoso. Como [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] contiene un objeto denominado <xref:System.Drawing.Point>, denominaremos el struct de este ejemplo "CoOrds".  
   
  [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
   
- Definir un constructor (sin parámetros) predeterminado para un struct es un error, como también lo es inicializar un campo de instancia en el cuerpo de un struct. Puede inicializar los miembros de struct accesible desde el exterior solo mediante un constructor parametrizado, implícito, constructor predeterminado, un [inicializador de objeto](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md), o mediante el acceso a los miembros individualmente una vez declarado el struct. Los miembros privados o inaccesibles requieren el uso de constructores exclusivamente.
+ Definir un constructor (sin parámetros) predeterminado para un struct es un error, como también lo es inicializar un campo de instancia en el cuerpo de un struct. Los miembros de struct accesibles de forma externa solo se pueden inicializar por medio de un constructor con parámetros, del constructor predeterminado implícito, de un [inicializador de objeto](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) o bien teniendo acceso individualmente a cada miembro una vez declarado el struct. Los miembros privados o inaccesibles por cualquier otro motivo requieren el uso únicamente de constructores.
   
- Cuando se crea un objeto de struct mediante el [nueva](../../../csharp/language-reference/keywords/new.md) (operador), se crea y se llama al constructor adecuado según la [firma del constructor](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). A diferencia de las clases, se pueden crear instancias de structs sin usar el operador `new` . En tal caso, no hay ninguna llamada de constructor, con lo cual la asignación es más eficaz. Pero los campos seguirán sin asignar y el objeto no se podrá usar hasta que todos los campos se inicialicen. Esto incluye la incapacidad para obtener o establecer los valores a través de las propiedades implementadas automáticamente.
+ Cuando se crea un objeto de struct con el operador [new](../../../csharp/language-reference/keywords/new.md), el objeto se crea y se llama al constructor apropiado en función de cuál sea la [firma del constructor](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). A diferencia de las clases, se pueden crear instancias de structs sin usar el operador `new` . En tal caso, no hay ninguna llamada de constructor, con lo cual la asignación es más eficaz. Pero los campos seguirán sin asignar y el objeto no se podrá usar hasta que todos los campos se inicialicen. Esto abarca la imposibilidad de obtener o establecer valores a través de propiedades implementadas automáticamente.
  
- Si crea una instancia de un objeto de struct mediante el valor predeterminado, el constructor sin parámetros, todos los miembros se asignan según sus [valores predeterminados](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md).
+ Si crea una instancia de un objeto de struct usando el constructor sin parámetros predeterminado, todos los miembros se asignarán según sus [valores predeterminados](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md).
   
- Al escribir un constructor con parámetros para un struct, debe inicializar explícitamente todos los miembros; en caso contrario, uno o más miembros permanecen sin asignar y no se puede usar la estructura, que produce el error del compilador CS0171.  
+ Al escribir un constructor con parámetros de un struct, todos los miembros se deben inicializar explícitamente o, de lo contrario, uno o varios de ellos permanecerán sin asignar y el struct no se podrá usar, lo que generará el error de compilador CS0171.  
   
  En los structs no existe el concepto de herencia que sí hay en las clases. Así, un struct no puede heredar de otra clase o de otro struct, como tampoco puede ser la base de una clase. Pero los structs sí heredan de la clase base <xref:System.Object>. Un struct puede implementar interfaces y lo hace exactamente igual que las clases.  
   
@@ -38,7 +31,7 @@ El tipo `struct` resulta adecuado para representar objetos pequeños como `Point
   
 ## <a name="example-1"></a>Ejemplo 1  
   
-### <a name="description"></a>Descripción  
+### <a name="description"></a>Description  
  En este ejemplo se muestra la inicialización de `struct` mediante constructores predeterminados y constructores con parámetros.  
   
 ### <a name="code"></a>Código  
@@ -48,7 +41,7 @@ El tipo `struct` resulta adecuado para representar objetos pequeños como `Point
   
 ## <a name="example-2"></a>Ejemplo 2  
   
-### <a name="description"></a>Descripción  
+### <a name="description"></a>Description  
  En este ejemplo se muestra una característica única de los structs. Se crea un objeto CoOrds sin usar el operador `new` . Si reemplaza la palabra `struct` por la palabra `class`, el programa no se compilará.  
   
 ### <a name="code"></a>Código  
@@ -59,4 +52,4 @@ El tipo `struct` resulta adecuado para representar objetos pequeños como `Point
 ## <a name="see-also"></a>Vea también  
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
  [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Estructuras](../../../csharp/programming-guide/classes-and-structs/structs.md)
+ [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)

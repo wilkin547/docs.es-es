@@ -1,24 +1,17 @@
 ---
 title: virtual (Referencia de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - virtual_CSharpKeyword
 - virtual
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-caps.latest.revision: 26
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dce3333646bca6f558e3760849b6cffdb34a6c0b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e1a65455df9b0a9272bc5cef257f0d00b36b500
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-c-reference"></a>virtual (Referencia de C#)
 La palabra clave `virtual` se usa para modificar una declaración de método, propiedad, indizador o evento y permitir que se invalide en una clase derivada. Por ejemplo, cualquier clase que herede este método puede reemplazarlo:  
@@ -37,7 +30,7 @@ public virtual double Area()
   
  De forma predeterminada, los métodos son no virtuales. No se puede invalidar un método no virtual.  
   
- No se puede utilizar el `virtual` modificador con la `static`, `abstract`, `private`, o `override` modificadores. En el siguiente ejemplo se muestra una propiedad virtual:  
+ El modificador `virtual` no se puede usar con los modificadores `static`, `abstract`, `private` o `override`. En el siguiente ejemplo se muestra una propiedad virtual:  
   
  [!code-csharp[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
   

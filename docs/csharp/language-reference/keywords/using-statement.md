@@ -1,21 +1,14 @@
 ---
 title: using (Instrucción, Referencia de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1fdf37e1bfc57bf850b332f167e57d3e05d23e78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fa27039e8444090c8a516b92ba5ab62c7f93c51a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-statement-c-reference"></a>using (Instrucción, Referencia de C#)
 Ofrece una sintaxis adecuada que garantiza el uso correcto de objetos <xref:System.IDisposable>.  
@@ -28,7 +21,7 @@ Ofrece una sintaxis adecuada que garantiza el uso correcto de objetos <xref:Syst
 ## <a name="remarks"></a>Comentarios  
  <xref:System.IO.File> y <xref:System.Drawing.Font> son ejemplos de tipos administrados que acceden a recursos no administrados (en este caso, identificadores de archivo y contextos de dispositivo). Hay muchos otros tipos de recursos no administrados y tipos de la biblioteca de clases que los encapsulan. Todos estos tipos deben implementar la interfaz <xref:System.IDisposable>.  
   
-Cuando la duración de un `IDisposable` objeto se limita a un único método, debe declarar y crear instancias de él en un `using` instrucción. La instrucción `using` llama al método <xref:System.IDisposable.Dispose%2A> del objeto de forma correcta y (cuando se usa tal y como se muestra anteriormente) también hace que el propio objeto salga del ámbito en cuanto se llame a <xref:System.IDisposable.Dispose%2A>. Dentro del bloque `using`, el objeto es de solo lectura y no se puede modificar ni reasignar.  
+Cuando la duración de un objeto `IDisposable` se limita a un único método, debe declarar y crear instancias del mismo en una instrucción `using`. La instrucción `using` llama al método <xref:System.IDisposable.Dispose%2A> del objeto de forma correcta y (cuando se usa tal y como se muestra anteriormente) también hace que el propio objeto salga del ámbito en cuanto se llame a <xref:System.IDisposable.Dispose%2A>. Dentro del bloque `using`, el objeto es de solo lectura y no se puede modificar ni reasignar.  
   
  La instrucción `using` garantiza que se llama a <xref:System.IDisposable.Dispose%2A> aunque se produzca una excepción mientras llama a métodos en el objeto. Puede lograr el mismo resultado colocando el objeto dentro de un bloque try y llamando luego a <xref:System.IDisposable.Dispose%2A> en un bloque finally; de hecho, es así cómo el compilador traduce la instrucción `using`. El ejemplo de código anterior se extiende al siguiente código en tiempo de compilación (tenga en cuenta las llaves adicionales para crear el ámbito limitado del objeto):  
   
@@ -42,7 +35,7 @@ Cuando la duración de un `IDisposable` objeto se limita a un único método, de
   
  [!code-csharp[csrefKeywordsNamespace#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_4.cs)]  
   
-Para obtener más información sobre la eliminación de `IDisposable` los objetos, vea [con objetos que implementan IDisposable](../../../standard/garbage-collection/using-objects.md).
+Para más información sobre cómo eliminar objetos `IDisposable`, vea [Uso de objetos que implementan IDisposable](../../../standard/garbage-collection/using-objects.md).
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -54,4 +47,4 @@ Para obtener más información sobre la eliminación de `IDisposable` los objeto
  [using (directiva)](../../../csharp/language-reference/keywords/using-directive.md)  
  [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)  
  [Uso de objetos que implementan IDisposable](../../../standard/garbage-collection/using-objects.md)  
- [Interfaz IDisposable](xref:System.IDisposable)
+ [IDisposable interface](xref:System.IDisposable) (Interfaz IDisposable)

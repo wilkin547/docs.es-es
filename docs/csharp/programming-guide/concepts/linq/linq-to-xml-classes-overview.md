@@ -1,21 +1,12 @@
 ---
-title: "Información general de las clases LINQ to XML (C#)"
-ms.custom: 
+title: Información general de las clases LINQ to XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0dc4307c3cf87fa9b5cb38bdaa9d9bf77adf1424
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 619bf59c2b10cbb699f8e5b177991da9a0a2b238
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>Información general de las clases LINQ to XML (C#)
 En este tema se proporciona una lista de las clases de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] en el espacio de nombres <xref:System.Xml.Linq> y proporciona una breve descripción de cada una.  
@@ -86,7 +77,7 @@ En este tema se proporciona una lista de las clases de [!INCLUDE[sqltecxlinq](~/
  <xref:System.Xml.Linq.XObjectChange> especifica el tipo de evento cuando se produce para un <xref:System.Xml.Linq.XObject>.  
   
 ### <a name="xobjectchangeeventargs-class"></a>Clase XObjectChangeEventArgs  
- <xref:System.Xml.Linq.XObjectChangeEventArgs> proporciona datos para los eventos <xref:System.Xml.Linq.XObject.Changing> y <xref:System.Xml.Linq.XObject.Changed>.  
+ <xref:System.Xml.Linq.XObjectChangeEventArgs> proporciona datos de los eventos <xref:System.Xml.Linq.XObject.Changing> y <xref:System.Xml.Linq.XObject.Changed>.  
   
 ### <a name="xprocessinginstruction-class"></a>Clase XProcessingInstruction  
  <xref:System.Xml.Linq.XProcessingInstruction> representa una instrucción de procesamiento de XML. Una instrucción de procesamiento comunica información a una aplicación que procesa el XML.  

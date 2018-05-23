@@ -1,22 +1,15 @@
 ---
 title: Procesar el archivo XML (Guía de programación de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-caps.latest.revision: 16
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1e6e983d4fc07aaadc294bc67e146ac600f4c5bc
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: b95101d2f8e12f7c6fee5b410e7801f9d890182d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Procesar el archivo XML (Guía de programación de C#)
 El compilador genera una cadena de identificador para cada construcción del código que se etiqueta para generar documentación. (Para más información sobre cómo etiquetar el código, vea [Etiquetas recomendadas para comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)). La cadena de identificador identifica la construcción de forma exclusiva. Los programas que procesan el archivo XML pueden usar la cadena de identificador para identificar el elemento de reflexión o de metadatos correspondiente de .NET Framework al que se aplica la documentación.  
@@ -77,7 +70,7 @@ El compilador genera una cadena de identificador para cada construcción del có
   
 -   Para tipos genéricos, el nombre del tipo irá seguido de una tilde aguda y después de un número que indica el número de parámetros de tipo genérico.  Por ejemplo,  
   
-     `<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>`.  
+     ``<member name="T:SampleClass`2">`` es la etiqueta de un tipo que se define como `public class SampleClass<T, U>`.  
   
      Para los métodos que usan tipos genéricos como parámetros, los parámetros de tipo genérico se especifican como números precedidos por tildes agudas (por ejemplo, \`0,`1).  Cada número representa una notación de matriz de base cero para los parámetros genéricos del tipo.  
   

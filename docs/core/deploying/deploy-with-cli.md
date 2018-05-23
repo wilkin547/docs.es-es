@@ -4,16 +4,11 @@ description: Obtenga información sobre la implementación de aplicaciones de .N
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 21e824e6092b0d30e0499ff05c5471a291c8d269
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Implementación de aplicaciones de .NET Core con herramientas de la interfaz de la línea de comandos (CLI)
 
@@ -63,11 +58,15 @@ La implementación de una implementación dependiente del marco sin dependencias
       ```
    Con esto se crea una versión (en lugar de una depuración) de la aplicación. Los archivos resultantes se colocan en un directorio denominado *publish* que se encuentra en un subdirectorio del directorio *bin* del proyecto.
 
-Junto con los archivos de la aplicación, el proceso de publicación emite un archivo de base de datos de programa (.pdb) que contiene información de depuración sobre la aplicación. El archivo es útil principalmente para depurar excepciones. Puede decidir no distribuirlo con los archivos de la aplicación. Pero se debe guardar en caso de que se quiera depurar la compilación de versión de la aplicación.
+   Junto con los archivos de la aplicación, el proceso de publicación emite un archivo de base de datos de programa (.pdb) que contiene información de depuración sobre la aplicación. El archivo es útil principalmente para depurar excepciones. Puede decidir no distribuirlo con los archivos de la aplicación. Pero se debe guardar en caso de que se quiera depurar la compilación de versión de la aplicación.
 
-El conjunto completo de archivos de la aplicación se puede implementar del modo que quiera. Por ejemplo, puede empaquetarlos en un archivo ZIP, usar un simple comando `copy` o implementarlos con el paquete de instalación que prefiera. Una vez instalados, los usuarios pueden ejecutar la aplicación mediante el comando `dotnet` y proporcionando el nombre de archivo, como `dotnet fdd.dll`.
+   El conjunto completo de archivos de la aplicación se puede implementar del modo que quiera. Por ejemplo, puede empaquetarlos en un archivo ZIP, usar un simple comando `copy` o implementarlos con el paquete de instalación que prefiera.
 
-Además de los archivos binarios de la aplicación, el instalador también debe empaquetar el instalador de marco compartido o buscarlo como requisito previo como parte de la instalación de la aplicación.  La instalación del marco compartido requiere acceso raíz o de administrador.
+1. Ejecutar la aplicación
+
+   Una vez instalados, los usuarios pueden ejecutar la aplicación mediante el comando `dotnet` y proporcionando el nombre de archivo, como `dotnet fdd.dll`.
+
+   Además de los archivos binarios de la aplicación, el instalador también debe empaquetar el instalador de marco compartido o buscarlo como requisito previo como parte de la instalación de la aplicación.  La instalación del marco compartido requiere acceso raíz o de administrador.
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Implementación dependiente de marco de trabajo con dependencias de terceros
 

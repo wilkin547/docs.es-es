@@ -1,26 +1,15 @@
 ---
-title: "Notas de implementación de la compatibilidad con tipos XML"
-ms.custom: 
+title: Notas de implementación de la compatibilidad con tipos XML
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8c2706782ed1242ecdb5af1fdfab7a3f24e19236
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 4d2d6f2932e1afeb7369c32a43ca48f55fade2e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-type-support-implementation-notes"></a>Notas de implementación de la compatibilidad con tipos XML
 En este tema se describen algunos detalles de la implementación que debería conocer.  
@@ -37,14 +26,14 @@ En este tema se describen algunos detalles de la implementación que debería co
  A continuación se describen determinadas diferencias que se podrían producir entre los tipos de datos XML y los tipos CLR y cómo se tratan.  
   
 > [!NOTE]
->  El `xs` prefijo se asigna a la http://www.w3.org/2001/XMLSchema y URI de espacio de nombres.  
+>  El prefijo `xs` está asignado a http://www.w3.org/2001/XMLSchema y al URI del espacio de nombres.  
   
 ### <a name="systemtimespan-and-xsduration"></a>System.TimeSpan y xs:duration  
  El tipo `xs:duration` está parcialmente ordenado, ya que hay determinados valores de duración que son diferentes, pero equivalentes. Eso significa que para el valor del tipo `xs:duration`, por ejemplo 1 mes (P1M), es menor que 32 días (P32D), mayor que 27 días (P27D) y equivalente a 28, 29 o 30 días.  
   
  La clase <xref:System.TimeSpan> no admite esta ordenación parcial. En su lugar, toma un número de días específico para 1 año y 1 mes; 365 días y 30 días, respectivamente.  
   
- Para obtener más información sobre la `xs:duration` los tipos, vea W3C XML Schema Part 2: Datatypes Recommendation en http://www.w3.org/TR/xmlschema-2/.  
+ Para más información sobre el tipo `xs:duration`, vea la recomendación sobre tipos de datos de esquema XML del W3C, XML Schema Part 2: Datatypes, en la dirección http://www.w3.org/TR/xmlschema-2/.  
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs:time, tipos de fechas gregorianas y System.DateTime  
  Cuando se asigna un valor `xs:time` a un objeto <xref:System.DateTime>, el campo <xref:System.DateTime.MinValue> se utiliza para inicializar las propiedades de fecha del objeto <xref:System.DateTime> (por ejemplo, <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A> y <xref:System.DateTime.Day%2A>) con el valor <xref:System.DateTime> más pequeño posible.  

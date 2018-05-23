@@ -1,21 +1,14 @@
 ---
-title: "Implementación del patrón de interruptor"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Implementación del patrón de interruptor"
-keywords: Docker, microservicios, ASP.NET, contenedor
+title: Implementación del patrón de interruptor
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Implementación del patrón de interruptor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/12/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5d7db6899068f84f9165022cfbf17767a75e7db9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dea94d8eda3341cca5e3aaf6b3c8369c27381135
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-circuit-breaker-pattern"></a>Implementación del patrón de interruptor
 
@@ -137,7 +130,7 @@ public class OrderingService : IOrderingService
 }
 ```
 
-Cada vez que se utiliza el objeto de miembro \_apiClient, se usa internamente la clase contenedora con las directivas de Polly: la directiva de reintentos, la directiva de interruptor y cualquier otra directiva de Polly que quiera aplicar.
+Cada vez que se usa el objeto de miembro \_apiClient, este emplea internamente la clase contenedora con las directivas de Polly: la directiva de reintentos, la directiva de interruptor y cualquier otra directiva de Polly que quiera aplicar.
 
 ## <a name="testing-retries-in-eshoponcontainers"></a>Pruebas de los reintentos en eShopOnContainers
 
@@ -173,7 +166,7 @@ Por ejemplo, cuando la aplicación se está ejecutando, puede habilitar el middl
 
 http://localhost:5103/failing?enable
 
-A continuación, puede comprobar el estado usando el URI [http://localhost:5103/failing](http://localhost:5103/failing), como se muestra en la Figura 10-4.
+Luego, puede comprobar el estado usando el URI [http://localhost:5103/failing](http://localhost:5103/failing), como se muestra en la Figura 10-4.
 
 ![](./media/image4.png)
 
@@ -235,14 +228,14 @@ Policy.Handle<HttpResponseException>() // etc
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
--   **Patrón de reintento**
+-   **Retry pattern (Patrón de reintento)**
     [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
--   **Resistencia de conexión** (núcleo del marco de entidad) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+-   **Connection Resiliency** (Entity Framework Core) (Resistencia de conexión [Entity Framework Core])[*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
 
--   **Polly** (biblioteca de control de errores transitorios y resistencia .NET) [ *https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
+-   **Polly** (.NET resilience and transient-fault-handling library) (Polly [Biblioteca de control de errores transitorios y resistencia .NET])[*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
--   **Patrón de interruptor**
+-   **Circuit Breaker pattern (Patrón de interruptor)**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
 -   **Marc Brooker. Jitter: Making Things Better With Randomness** (Vibración: hacer mejor las cosas gracias a la aleatoriedad) https://brooker.co.za/blog/2015/03/21/backoff.html

@@ -1,20 +1,13 @@
 ---
-title: "Documentar el código con comentarios XML"
-description: "Obtenga información sobre cómo documentar el código con comentarios de documentación XML y generar un archivo de documentación XML en tiempo de compilación."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: Documentar el código con comentarios XML
+description: Obtenga información sobre cómo documentar el código con comentarios de documentación XML y generar un archivo de documentación XML en tiempo de compilación.
 ms.date: 02/14/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 709ef2ba2202e69ba35834789ad6e743a0f6b719
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1284f179c7debb323ea3bbd302df1f02bf8b31b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentar el código con comentarios XML
 
@@ -25,7 +18,7 @@ El compilador omite los comentarios de documentación XML, igual que los demás 
 
 Para generar el archivo XML en tiempo de compilación, realice una de las siguientes acciones:
 
-- Si está desarrollando una aplicación con .NET Core desde la línea de comandos, puede agregar un [elemento DocumentationFile](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) a la sección `<PropertyGroup>` de su archivo de proyecto .csproj. En el ejemplo siguiente se genera un archivo XML en el directorio del proyecto con el mismo nombre de archivo raíz que el ensamblado:
+- Si está desarrollando una aplicación con .NET Core desde la línea de comandos, puede agregar un [elemento DocumentationFile](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) a la sección `<PropertyGroup>` de su archivo de proyecto .csproj. En el siguiente ejemplo se genera un archivo XML en el directorio del proyecto con el mismo nombre de archivo raíz que el ensamblado:
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>

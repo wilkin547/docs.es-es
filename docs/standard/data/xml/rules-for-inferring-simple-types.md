@@ -1,26 +1,15 @@
 ---
 title: Reglas para deducir tipos simples
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c3e6c24fafdd79676e68fa9dd06cf399fc09d5ea
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: d265d9247d00a20770d401d62fd1e065e2ef1627
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rules-for-inferring-simple-types"></a>Reglas para deducir tipos simples
 Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el tipo de datos para atributos y elementos.  
@@ -34,7 +23,7 @@ Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el ti
   
  La siguiente tabla enumera los tipos deducidos posibles para el esquema resultante.  
   
-|Tipo simple|Descripción|  
+|Tipo simple|Description|  
 |-----------------|-----------------|  
 |booleano|True, false, 0, 1.|  
 |byte|Enteros en un intervalo de -128 a 127.|  
@@ -54,7 +43,7 @@ Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el ti
 |hora|El formato time W3C.|  
 |date|Los valores de años están restringidos de 0001 a 9999.|  
 |gYearMonth|El formato W3C de mes y año gregoriano.|  
-|string|Uno o más caracteres Unicode.|  
+|cadena|Uno o más caracteres Unicode.|  
   
 ## <a name="type-promotion"></a>Promoción de tipos  
  La clase <xref:System.Xml.Schema.XmlSchemaInference> examina los valores de atributo y elemento uno por uno. A medida que se encuentran valores, se deduce el tipo sin signo más restrictivo. Si un tipo ha sido deducido para un atributo o elemento y se encuentra un nuevo valor que no coincide con el tipo deducido actual, el tipo deducido se promueve a un nuevo tipo que se aplica al tipo deducido actualmente y al nuevo valor. La clase <xref:System.Xml.Schema.XmlSchemaInference> considera valores anteriores cuando promueve el tipo deducido.  
@@ -75,10 +64,10 @@ Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el ti
   
  Cuando se encuentra el primer valor `attr2`, el tipo de `attr2` se deduce como `unsignedByte` basado en el valor `0`. Cuando se encuentra el segundo `attr2`, el tipo se promueve a `string` basado en el tipo deducido actualmente de `unsignedByte` y el valor actual `true` ya que la clase <xref:System.Xml.Schema.XmlSchemaInference> tiene en cuenta valores anteriores cuando promueve el tipo deducido. No obstante, si ambas instancias de `attr2` se encuentran en el mismo documento XML y no en dos documentos XML diferentes, tal como se ilustra arriba, `attr2` hubiese sido deducido como `boolean`.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Omite los atributos de la http://www.w3.org/2001/XMLSchema-instance Namespace  
+### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Atributos omitidos del espacio de nombres http://www.w3.org/2001/XMLSchema-instance  
  Los siguientes son atributos que definen el esquema que son omitidos durante la deducción del sistema.  
   
-|Atributo|Descripción|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |`xsi:type`|Si un elemento se encuentra con tipo `xsi:type` especificado, el `xsi:type` es omitido.|  
 |`xsi:nil`|Si se encuentra un elemento con un atributo `xsi:nil`, su declaración de elemento en el esquema deducido tiene el valor de `nillable="true"`. Un elemento con un atributo `xsi:nil` establecido en `true` no puede tener elementos secundarios.|  

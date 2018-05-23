@@ -1,21 +1,14 @@
 ---
 title: Aplicar enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Aplicar enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
-keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 63e61a93aa2a162d7b48e0d423dab99dcea9d020
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6be8b52f42e3e37ff03e561af45c46f4dd283d9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Aplicar enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
 
@@ -53,19 +46,19 @@ Solo hay una arquitectura de aplicación: la arquitectura del sistema o la aplic
 -   **Greg Young. CQS vs. CQRS**
     [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young. CQRS Documents**
+-   **Greg Young. CQRS Documents (Documentos de CQRS)**
     [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
--   **Greg Young. CQRS, Task Based UIs and Event Sourcing**
+-   **Greg Young. CQRS, Task Based UIs and Event Sourcing (CQRS, interfaces de usuario basadas en tareas y origen de eventos)**
     [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
--   **Udi Dahan. Clarified CQRS**
+-   **Udi Dahan. Clarified CQRS (CQRS aclarado)**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 -   **CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Event-Sourcing (ES)**
+-   **Event-Sourcing (ES) (Orígenes de eventos)**
     [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 

@@ -1,13 +1,6 @@
 ---
-title: "Mgmtclassgen.exe (Generador de clases fuertemente tipadas para administración)"
-ms.custom: 
+title: Mgmtclassgen.exe (Generador de clases fuertemente tipadas para administración)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 05ab4874d025eff3eb1aba6b7a336f562159b6ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 282d6376b434121ed6d59297be2ce36ce361c589
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Generador de clases fuertemente tipadas para administración)
 La herramienta Generador de clases fuertemente tipadas para administración permite generar con rapidez una clase administrada en tiempo de compilación para una clase especificada de Instrumental de administración de Windows (WMI). La clase generada simplifica el código que se debe escribir para tener acceso a una instancia de la clase de WMI.  
@@ -47,7 +37,7 @@ WMIClass [options]
 |------------|-----------------|  
 |**/l**  *language*|Especifica el lenguaje en el que se genera la clase administrada en tiempo de compilación. Puede especificar **CS** (C#, predeterminado), **VB** (Visual Basic), **MC** (C++) o **JS** (JScript) como argumento del lenguaje.|  
 |**/m**  *machine*|Especifica el equipo con el que se va a conectar y en el que reside la clase de WMI. La opción predeterminada es el equipo local.|  
-|**/n**  *path*|Especifica la ruta de acceso al espacio de nombres de WMI que contiene la clase de WMI. Si no se especifica esta opción, la herramienta genera código para *WMIClass* en el espacio de nombres **Root\cimv2** predeterminado.|  
+|**/n**  *ruta*|Especifica la ruta de acceso al espacio de nombres de WMI que contiene la clase de WMI. Si no se especifica esta opción, la herramienta genera código para *WMIClass* en el espacio de nombres **Root\cimv2** predeterminado.|  
 |**/o**  *classnamespace*|Especifica el espacio de nombres de .NET en el que se genera la clase de código administrado. Si no se especifica esta opción, la herramienta genera el espacio de nombres utilizando el espacio de nombres de WMI y el prefijo de esquema. El prefijo de esquema es la parte del nombre de clase que figura delante del carácter de subrayado. Por ejemplo, para la clase **Win32_OperatingSystem** del espacio de nombres **Root\cimv2**, la herramienta generaría la clase en **ROOT.CIMV2.Win32**.|  
 |**/p**  *filepath*|Especifica la ruta de acceso al archivo donde se guarda el código generado. Si no se especifica esta opción, la herramienta crea el archivo en el directorio actual. Asigna un nombre a la clase y al archivo donde se genera la clase mediante el argumento *WMIClass*. El nombre de la clase y el nombre del archivo coinciden con el nombre de *WMIClass*. Si *WMIClass* contiene un carácter de subrayado, la herramienta usa la parte del nombre de clase que figura detrás del carácter de subrayado. Por ejemplo, si el nombre de *WMIClass* tiene el formato **Win32_LogicalDisk**, el nombre de la clase generada y del archivo es "logicaldisk". Si ya existe un archivo, la herramienta sobrescribe el archivo existente.|  
 |**/pw**  *password*|Especifica la contraseña que se usa al iniciar sesión en el equipo especificado con la opción **/m**.|  

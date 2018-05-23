@@ -1,9 +1,6 @@
 ---
 title: foreach, in (Referencia de C#)
 ms.date: 10/11/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-caps.latest.revision: "29"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d5601682d53a01ff07aba7e416aa81ded4c03e4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f00ae873e615f653d3e760f82b157a57fdaef6ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Referencia de C#)
 La instrucción `foreach` repite un grupo de instrucciones insertadas por cada elemento de una matriz o una colección de objetos que implementa la interfaz <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. La instrucción `foreach` se usa para recorrer en iteración la colección para obtener la información deseada, pero no puede usarse para agregar o quitar elementos de la colección de origen para evitar efectos secundarios imprevisibles. Si se necesitan agregar o quitar elementos de la colección de origen, se usa un bucle [for](for.md).
@@ -37,10 +31,10 @@ La instrucción `foreach` repite un grupo de instrucciones insertadas por cada e
  [Cómo: Obtener acceso a una clase de colección mediante Foreach](../../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)  
 
 ## <a name="example"></a>Ejemplo
- El código siguiente muestra tres ejemplos.
+ En el siguiente código se muestran tres ejemplos.
 
 > [!TIP]
-> Puede modificar los ejemplos para experimentar con la sintaxis y probar usos diferentes que son más similares a los casos de uso. Presione "Ejecutar" para ejecutar el código, a continuación, editar y vuelva a presionar "Ejecutar".
+> Puede modificar los ejemplos para probar la sintaxis y tantear distintos usos que se acerquen más a su caso particular. Presione "Ejecutar" para ejecutar el código, cámbielo y vuelva a presionar "Ejecutar".
 
 -   un bucle `foreach` típico que muestra el contenido de una matriz de enteros
 

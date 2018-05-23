@@ -1,23 +1,15 @@
 ---
-title: "Cambios en la autenticación NTLM para HttpWebRequest en la versión 3.5 SP1"
-ms.custom: 
+title: Cambios en la autenticación NTLM para HttpWebRequest en la versión 3.5 SP1
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 239834a732fe3bc1cb3e8e7f1d126d26c210d1f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f5affc15607ddae76ec90a90928cb42fa0ad49e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Cambios en la autenticación NTLM para HttpWebRequest en la versión 3.5 SP1
 Se han realizado cambios de seguridad en .NET Framework versión 3.5 SP1 que afectan al modo en que las clases <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> y relacionadas del espacio de nombres System.Net controlan la autenticación integrada de Windows. Estos cambios pueden afectar a las aplicaciones que usan estas clases para realizar solicitudes web y recibir respuestas donde se emplea la autenticación integrada de Windows basada en NTLM. Este cambio puede afectar a los servidores web y a las aplicaciones cliente configurados para usar autenticación integrada de Windows.  
@@ -30,7 +22,7 @@ Se han realizado cambios de seguridad en .NET Framework versión 3.5 SP1 que afe
 ## <a name="changes"></a>Cambios  
  El proceso de autenticación NTLM usado con la autenticación integrada de Windows incluye un desafío emitido por el equipo de destino y enviado de vuelta al equipo cliente. Cuando un equipo recibe un desafío que ha generado él mismo, se produce un error en la autenticación, a menos que la conexión sea una conexión de bucle invertido (dirección IPv4 127.0.0.1, por ejemplo).  
   
- Al acceder a un servicio que se ejecuta en un servidor web interno, es habitual hacerlo mediante una dirección URL similar a http://contoso/service o https://contoso/service. El nombre "contoso" no suele ser el nombre del equipo en el que se implementa el servicio. Los espacios de nombres <xref:System.Net> y relacionados admiten el uso de Active Directory, DNS, NetBIOS, el archivo de hosts del equipo local (normalmente WINDOWS\system32\drivers\etc\hosts, por ejemplo) o el archivo Imhosts del equipo local (normalmente WINDOWS\system32\drivers\etc\lmhosts, por ejemplo) para resolver nombres en direcciones. El nombre "contoso" se resuelve de modo que las solicitudes enviadas a "contoso" se envíen al equipo de servidor adecuado.  
+ Al tener acceso a un servicio que se ejecuta en un servidor web interno, es habitual hacerlo por medio de una dirección URL similar a http://contoso/service o https://contoso/service. El nombre "contoso" no suele ser el nombre del equipo en el que se implementa el servicio. Los espacios de nombres <xref:System.Net> y relacionados admiten el uso de Active Directory, DNS, NetBIOS, el archivo de hosts del equipo local (normalmente WINDOWS\system32\drivers\etc\hosts, por ejemplo) o el archivo Imhosts del equipo local (normalmente WINDOWS\system32\drivers\etc\lmhosts, por ejemplo) para resolver nombres en direcciones. El nombre "contoso" se resuelve de modo que las solicitudes enviadas a "contoso" se envíen al equipo de servidor adecuado.  
   
  Cuando se ha configurado para implementaciones grandes, también es común que se asigne un nombre único de servidor virtual a la implementación con los nombres de equipos subyacentes no usados nunca por aplicaciones cliente y usuarios finales. Por ejemplo, se podría asignar el nombre www.contoso.com al servidor, pero en una red interna, usar simplemente "contoso". Este nombre se denomina encabezado de host en la solicitud de web cliente. Como especifica el protocolo HTTP, el campo de encabezado o solicitud de host especifica el número de puerto y el host de Internet del recurso que se solicita. Esta información se obtiene del URI original proporcionado por el usuario o el recurso que hace referencia (normalmente una dirección URL HTTP). En .NET Framework versión 4, esta información también puede establecerla el cliente con la nueva propiedad <xref:System.Net.HttpWebRequest.Host%2A>.  
   

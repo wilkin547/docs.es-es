@@ -1,21 +1,12 @@
 ---
-title: "Cómo: Crear un documento con espacios de nombres (C#) (LINQ to XML)"
-ms.custom: 
+title: 'Cómo: Crear un documento con espacios de nombres (C#) (LINQ to XML)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d913cdf8b9018aa2bf91fd5a05b823e90ba63df2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ab572e0af79d51205167ad60b1b80e8ba6b43707
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Cómo: Crear un documento con espacios de nombres (C#) (LINQ to XML)
 En este tema se muestra cómo crear documentos con espacios de nombres.  
@@ -66,7 +57,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra la creación de un documento que contiene dos espacios de nombres. Uno es el espacio de nombres predeterminado. El otro es un espacio de nombres con un prefijo.  
   
- Mediante la inclusión de los atributos de espacios de nombres en el elemento raíz, los espacios de nombres se serializan de modo que http://www.adventure-works.com sea el espacio de nombres predeterminado y www.fourthcoffee.com se serialice con un prefijo "fc". Para crear un atributo que declare un espacio de nombres predeterminado, debe crear un atributo con el nombre "xmlns", sin un espacio de nombres. El valor del atributo es el URI del espacio de nombres predeterminado.  
+ Al incluir atributos de espacios de nombres en el elemento raíz, los espacios de nombres se serializan, de modo que http://www.adventure-works.com sea el espacio de nombres predeterminado y www.fourthcoffee.com se serialice con un prefijo "fc". Para crear un atributo que declare un espacio de nombres predeterminado, debe crear un atributo con el nombre "xmlns", sin un espacio de nombres. El valor del atributo es el URI del espacio de nombres predeterminado.  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  

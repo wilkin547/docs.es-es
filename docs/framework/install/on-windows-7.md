@@ -1,19 +1,15 @@
 ---
-title: "Instalación de .NET Framework en Windows 7 SP1"
+title: Instalación de .NET Framework en Windows 7 SP1
 ms.custom: updateeachrelease
 description: Aprenda a instalar .NET Framework en Windows 7 SP1.
 author: rlander
 ms.author: mairaw
-keywords: .NET Framework, Instalar
-ms.date: 10/17/2017
-ms.topic: article
-ms.prod: .net-framework
-ms.workload: dotnet
-ms.openlocfilehash: 9056a07859b388d2fa4c1992c270eaa4788f194c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.date: 04/10/2018
+ms.openlocfilehash: 4f63bed0bad41c31bd28ae63b50440e4144a9bda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Instalación de .NET Framework en Windows 7 SP1 y Windows Server 2008 R2
 
@@ -21,13 +17,14 @@ ms.lasthandoff: 12/22/2017
 
 ![No se pudo iniciar esta aplicación.](./media/this-application-could-not-be-started.png)
 
-Estas instrucciones ayudan a instalar las versiones necesarias de .NET Framework. [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) es la última versión. Es compatible con Windows 7 y Windows Server 2008 R2, y está incluida en [Windows 10 Fall Creators Update](https://www.microsoft.com/software-download/windows10) y [Windows Server 2016 versión 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).
+Estas instrucciones ayudan a instalar las versiones necesarias de .NET Framework. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) es la última versión. Es compatible con Windows 7 SP1 y Windows Server 2008 R2, y está incluida en la [Actualización de abril de 2018 de Windows 10](https://www.microsoft.com/software-download/windows10).
 
-## <a name="net-framework-471"></a>.NET Framework 4.7.1
+## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
-* [Descarga de .NET Framework 4.7.1](https://www.microsoft.com/net/framework/versions/net471?utm_source=ms-docs&utm_medium=referral)
+> [!div class="button"]
+[Descargar .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-[.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) se puede usar para ejecutar aplicaciones creadas para .NET Framework 4.0 o posterior.
+[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) se puede usar para ejecutar aplicaciones creadas para .NET Framework 4.0 o posterior.
 
 ## <a name="net-framework-35"></a>.NET Framework 3,5
 

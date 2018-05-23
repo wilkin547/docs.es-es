@@ -1,24 +1,20 @@
 ---
-title: protected internal (referencia de C#)
+title: protected internal (Referencia de C#)
 ms.date: 11/15/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 author: sputier
-ms.author: wiwagn
-ms.openlocfilehash: f9004a5e8d65179c9ff2e30688e63c14c95ab431
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 5ba2c811a1a4f095bcee65ed6678a7dc50fe94db
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="protected-internal-c-reference"></a>protected internal (referencia de C#)
-El `protected internal` combinación de palabra clave es un modificador de acceso de miembro. Un miembro protected internal es accesible desde el ensamblado actual o desde tipos que se derivan de la clase contenedora. Para obtener una comparación de `protected internal` con los demás modificadores de acceso, vea [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md). 
+# <a name="protected-internal-c-reference"></a>protected internal (Referencia de C#)
+La combinación de palabras claves `protected internal` es un modificador de acceso de miembro. Se puede obtener acceso a un miembro protected internal desde el ensamblado actual o desde tipos que se deriven de la clase contenedora. Para obtener una comparación de `protected internal` con los demás modificadores de acceso, vea [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md). 
    
 ## <a name="example"></a>Ejemplo  
- Un miembro interno protegido de una clase base es accesible desde cualquier tipo de ensamblado que lo contiene. También es accesible en una clase derivada que se encuentra en otro ensamblado sólo si el acceso se produce a través de una variable del tipo de clase derivada. Por ejemplo, vea el siguiente segmento de código:  
+ Se puede obtener acceso a un miembro protected internal de una clase base desde cualquier tipo de ensamblado que lo contenga. También estará accesible en una clase derivada ubicada en otro ensamblado, pero solo si el acceso se produce a través de una variable del tipo de clase derivada. Por ejemplo, vea el siguiente segmento de código:  
 
-```
+```csharp
 // Assembly1.cs  
 // Compile with: /target:library  
 public class BaseClass   
@@ -36,7 +32,7 @@ class TestAccess
 }  
 ```  
   
-```  
+```csharp  
 // Assembly2.cs  
 // Compile with: /reference:Assembly1.dll  
 class DerivedClass : BaseClass   
@@ -55,9 +51,9 @@ class DerivedClass : BaseClass
     }
 } 
 ```  
- Este ejemplo contiene dos archivos, `Assembly1.cs` y `Assembly2.cs`. El primer archivo contiene una clase base pública, `BaseClass`y otra clase, `TestAccess`. `BaseClass`posee un miembro protected internal, `myValue`, que se obtiene acceso a la `TestAccess` tipo. En el segundo archivo, un intento para tener acceso a `myValue` a través de una instancia de `BaseClass` generará un error, mientras que un acceso a este miembro a través de una instancia de una clase derivada, `DerivedClass` se realizará correctamente. 
+ Este ejemplo contiene dos archivos, `Assembly1.cs` y `Assembly2.cs`. El primer archivo contiene una clase base interna, `BaseClass`, y otra clase, `TestAccess`. `BaseClass` posee un miembro protected internal (`myValue`), al que se obtiene acceso por medio del tipo `TestAccess`. En el segundo archivo, un intento de tener acceso a `myValue` a través de una instancia de `BaseClass` generará un error, mientras que un acceso a este miembro a través de una instancia de una clase derivada (`DerivedClass`) se realizará correctamente. 
 
- Los miembros de estructura no pueden ser `protected internal` porque el struct no puede heredarse.  
+ Los miembros de struct no pueden ser `protected internal`, porque los structs no se heredan.  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -72,4 +68,4 @@ class DerivedClass : BaseClass
  [public](../../../csharp/language-reference/keywords/public.md)   
  [private](../../../csharp/language-reference/keywords/private.md)   
  [internal](../../../csharp/language-reference/keywords/internal.md)   
- [Cuestiones de seguridad para palabras clave virtuales internas](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))
+ [Security concerns for internal virtual keywords](https://msdn.microsoft.com/library/heyd8kky(v=vs.110)) (Problemas de seguridad de palabras clave virtuales internas)

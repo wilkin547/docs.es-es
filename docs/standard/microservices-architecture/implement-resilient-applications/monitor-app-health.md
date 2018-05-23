@@ -1,21 +1,14 @@
 ---
 title: Seguimiento de estado
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Seguimiento de estado
-keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 81c4fc7662212bb3c6586a590d87e731220b7b7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="health-monitoring"></a>Seguimiento de estado
 
@@ -27,7 +20,7 @@ En el modelo típico, los servicios envían informes sobre su estado. Esa inform
 
 ## <a name="implementing-health-checks-in-aspnet-core-services"></a>Implementación de comprobaciones de estado en servicios de ASP.NET Core
 
-Al desarrollar una aplicación web o un microservicio de ASP.NET Core, se puede usar una biblioteca denominada `HealthChecks` del equipo de ASP.NET. Hay una versión temprana disponible en este [repositorio de GitHub](https://github.com/dotnet-architecture/HealthChecks).
+Al desarrollar una aplicación web o un microservicio de ASP.NET Core, se puede usar una biblioteca fuera de banda (no oficial como parte de ASP.NET Core) denominada `HealthChecks` del equipo de ASP.NET. La encontrará en este [repositorio de GitHub](https://github.com/dotnet-architecture/HealthChecks).
 
 Esta biblioteca es fácil de usar y proporciona características que permiten validar el funcionamiento correcto de cualquier recurso externo específico necesario para la aplicación (por ejemplo, una base de datos de SQL Server o API remota). Cuando se utiliza esta biblioteca, también se puede decidir lo que significa que el estado del recurso sea correcto, tal y como se explica más adelante.
 
@@ -37,7 +30,7 @@ Para poder usar esta biblioteca, debe usar primero la biblioteca en su microserv
 
 Puede ver cómo se utiliza la biblioteca HealthChecks en la aplicación de ejemplo eShopOnContainers. Para empezar, debe definir qué constituye un estado correcto en cada microservicio. En la aplicación de ejemplo, el estado de los microservicios es correcto si se puede acceder a la API del microservicio a través de HTTP y si su base de datos de SQL Server relacionada también está disponible.
 
-En el futuro, podrá instalar la biblioteca HealthChecks como un paquete NuGet. Pero en el momento de redactar este documento, es necesario descargar y compilar el código como parte de la solución. Clonar el código disponible en https://github.com/dotnet-architecture/HealthChecks y copie las siguientes carpetas en la solución:
+En el futuro, podrá instalar la biblioteca HealthChecks como un paquete NuGet. Pero en el momento de redactar este documento, es necesario descargar y compilar el código como parte de la solución. Clone el código disponible en https://github.com/dotnet-architecture/HealthChecks y copie las siguientes carpetas en su solución:
 
   - src/common
   - src/Microsoft.AspNetCore.HealthChecks
@@ -190,12 +183,12 @@ Por último, si se han almacenado todos los flujos de eventos, se puede utilizar
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
--   **Comprobaciones de estado de ASP.NET Core** (lanzamiento temprano) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
+-   **HealthChecks de ASP.NET Core** (versión temprana) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
--   **Introducción a la supervisión de estado de Service Fabric**
+-   **Introduction to Service Fabric health monitoring (Introducción al seguimiento de estado de Service Fabric)**
     [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
 
--   **Visión de la aplicación de Azure**
+-   **Azure Application Insights**
     [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**

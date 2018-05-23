@@ -1,20 +1,13 @@
 ---
 title: Delegados fuertemente tipados
-description: "Obtenga información sobre cómo usar tipos de delegado genéricos para declarar tipos personalizados al crear una característica que necesita delegados."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+description: Obtenga información sobre cómo usar tipos de delegado genéricos para declarar tipos personalizados al crear una característica que necesita delegados.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-ms.openlocfilehash: 467ba18f8e032b9b3b8f480d4b10c92d0d7ba3b9
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2e4cc1c7bfa0aaa90f3aaefa0da64c5486a9d10f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongly-typed-delegates"></a>Delegados fuertemente tipados
 
@@ -39,7 +32,7 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 
 El modificador `in` del argumento de tipo genérico se trata en el artículo sobre la covarianza.
 
-Hay variaciones de la `Action` delegado que contienen hasta 16 argumentos como <xref:System.Action%6016>.
+Hay variaciones del delegado `Action` que contienen hasta 16 argumentos, como <xref:System.Action%6016>.
 Es importante que estas definiciones usen argumentos genéricos distintos para cada uno de los argumentos del delegado: eso proporciona la máxima flexibilidad. Los argumentos de método no tienen que ser, aunque pueden ser, del mismo tipo.
 
 Use uno de los tipos `Action` para cualquier tipo de delegado que tenga un tipo de valor devuelto void.
@@ -55,12 +48,12 @@ public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 
 El modificador `out` del argumento de tipo genérico result se trata en el artículo sobre la covarianza.
 
-Hay variaciones de la `Func` delegar con hasta 16 argumentos de entrada como <xref:System.Func%6017>.
+Hay variaciones del delegado `Func` con hasta 16 argumentos de entrada, como <xref:System.Func%6017>.
 Por convención, el tipo del resultado siempre es el último parámetro de tipo de todas las declaraciones `Func`.
 
 Use uno de los tipos `Func` para cualquier tipo de delegado que devuelva un valor.
 
-Hay también un especializada <xref:System.Predicate%601> para un delegado que devuelve una prueba en un valor único:
+También hay un tipo <xref:System.Predicate%601> especializado para un delegado que devuelva una prueba en un valor único:
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);
