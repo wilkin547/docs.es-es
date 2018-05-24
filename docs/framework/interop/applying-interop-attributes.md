@@ -17,7 +17,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 554ea7c54973852510e539000baf03bdce8e7bcf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
 ---
@@ -29,7 +29,7 @@ El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres cat
 ## <a name="design-time-attributes"></a>Atributos en tiempo de diseño  
  Puede ajustar el resultado del proceso de conversión realizado por las API y las herramientas de interoperabilidad COM mediante atributos en tiempo de diseño. En la tabla siguiente se describen los atributos que se pueden aplicar al código fuente administrado. En ocasiones, es posible que las herramientas de interoperabilidad COM también apliquen los atributos descritos en esta tabla.  
   
-|Atributo|Descripción|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|Especifica si el tipo debe serializarse mediante el contador de referencias de Automation o un proxy personalizado y código auxiliar.|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|Controla el tipo de interfaz generada para una clase.|  
@@ -56,7 +56,7 @@ El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres cat
 ## <a name="conversion-tool-attributes"></a>Atributos de la herramienta de conversión  
  En la tabla siguiente se describen los atributos que las herramientas de interoperabilidad COM aplican durante el proceso de conversión. Estos atributos no se aplican en tiempo de diseño.  
   
-|Atributo|Descripción|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|Indica el alias COM de un parámetro o tipo de campo. Puede usarse para parámetros de atributo, campos o valores devueltos.|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|Indica que se perdió la información sobre una clase o interfaz cuando se importó desde una biblioteca de tipos a un ensamblado.|  

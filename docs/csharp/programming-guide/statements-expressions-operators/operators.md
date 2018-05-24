@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: d2eace5782b3a070a22acf751fd68340fa939a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="operators-c-programming-guide"></a>Operadores (Guía de programación de C#)
 En C#, un *operador* es un elemento de programa que se aplica a uno o varios *operandos* en una expresión o instrucción. Los operadores que toman un operando, como el operador de incremento (`++`) o `new`, se conocen como operadores *unarios* . Los operadores que toman dos operandos, como los operadores aritméticos (`+`,`-`,`*`,`/`) se conocen como operadores *binarios* . Un operador, el operador condicional (`?:`), toma tres operandos y es el único operador ternario de C#.  
@@ -114,7 +114,7 @@ En C#, un *operador* es un elemento de programa que se aplica a uno o varios *op
 |OR lógico|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|OR bit a bit entero, OR lógico booleano|  
 |AND condicional|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Evalúa y solo si x es true|  
 |OR condicional|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Evalúa y solo si x es false|  
-|Uso combinado de NULL|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) s|Se evalúa como y si x es NULL; de lo contrario, se evalúa como x|  
+|Uso combinado de NULL|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) s|Se evalúa como y si x es NULL; de lo contrario, se evalúa como x|  
 |Condicional|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Se evalúa como y si x es true y como z si x es false|  
   
  **Operadores de asignación y anónimos**  

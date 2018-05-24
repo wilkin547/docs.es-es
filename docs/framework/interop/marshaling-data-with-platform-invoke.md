@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
 ---
@@ -30,7 +30,7 @@ Para llamar a las funciones exportadas desde una biblioteca no administrada, una
 ## <a name="platform-invoke-data-types"></a>Tipos de datos de invocación de plataforma  
  En la tabla siguiente se enumeran los tipos de datos usados en las funciones de estilo C y en la API Win32 (incluida en el archivo Wtypes.h). Muchas bibliotecas no administradas contienen funciones que pasan estos tipos de datos como parámetros y valores devueltos. La tercera columna muestra la clase o el tipo de valor integrado de .NET Framework correspondiente que se usa en el código administrado. En algunos casos, puede sustituir un tipo del mismo tamaño por el tipo indicado en la tabla.  
   
-|Tipo no administrado en Wtypes.h|Tipo de lenguaje C no administrado|Nombre de clase administrada|Descripción|  
+|Tipo no administrado en Wtypes.h|Tipo de lenguaje C no administrado|Nombre de clase administrada|Description|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
 |**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|32 bits en sistemas de operativos Windows de 32 bits, 64 bits en sistemas operativos Windows de 64 bits.|  
 |**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 bits|  

@@ -24,7 +24,7 @@
 #### [Pasar estructuras](passing-structures.md)
 #### [Funciones de devolución de llamada](callback-functions.md)
 #### [Cómo: Implementar funciones de devolución de llamada](how-to-implement-callback-functions.md)
-## [Serialización para interoperabilidad](interop-marshaling.md)
+## [Serialización de interoperabilidad](interop-marshaling.md)
 ### [Comportamiento predeterminado del cálculo de referencias](default-marshaling-behavior.md)
 #### [Tipos que pueden o que no pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md)
 #### [Copiar y fijar](copying-and-pinning.md)
