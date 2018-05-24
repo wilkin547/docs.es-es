@@ -2,11 +2,11 @@
 title: 'Instrucciones de diseño del componente de F #'
 description: 'Obtenga información acerca de las instrucciones para escribir componentes de F # previstos para su uso por otros llamadores.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 7859baac76be01b2cfbdc8602b6cc417cfe5106f
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7e71710b1bc2fe3e8d7a5a091513a1432650dc04
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-component-design-guidelines"></a>Instrucciones de diseño del componente de F #
 
@@ -483,7 +483,7 @@ Sin embargo, las operaciones lógicas de notación de puntos de este tipo no son
 
 Cuando diseñe bibliotecas para usarlas en otros lenguajes. NET, es importante cumplir con la [instrucciones de diseño de biblioteca de .NET](../../standard/design-guidelines/index.md). En este documento, estas bibliotecas se etiquetan como vainilla bibliotecas de. NET, en lugar de F #-orientada hacia las bibliotecas que usen F # construye sin restricciones. Diseñar vainilla bibliotecas de .NET significa proporciona las API conocidas e idiomáticas coherentes con el resto de .NET Framework, pues minimiza el uso de F #-construcciones específicas de la API pública. Las reglas se explican en las secciones siguientes.
 
-### <a name="namespace-and-type-sesign-for-libraries-for-use-from-other-net-languages"></a>Sesign Namespace y el tipo (para las bibliotecas para su uso desde otros lenguajes. NET)
+### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>Namespace y el tipo de diseño (para las bibliotecas para su uso desde otros lenguajes. NET)
 
 #### <a name="apply-the-net-naming-conventions-to-the-public-api-of-your-components"></a>Las convenciones de nomenclatura de .NET se aplican a la API pública de los componentes
 

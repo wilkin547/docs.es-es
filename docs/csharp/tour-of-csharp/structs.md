@@ -1,20 +1,13 @@
 ---
 title: 'Estructuras de C#: un paseo por el lenguaje C#'
-description: "Aprenda los conceptos básicos de los tipos de valores de C #, llamados structs."
-keywords: .NET, C#, struct, tipo de valor
-author: BillWagner
-ms.author: wiwagn
+description: 'Aprenda los conceptos básicos de los tipos de valores de C #, llamados structs.'
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: fa840d80bba98889f75863db2612f196d78bd3c5
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: dac0952e6a55a16ecefec79f9789f9e2d44aada1
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="structs"></a>Estructuras
 
@@ -30,7 +23,7 @@ Una alternativa es convertir Point en un struct.
 
 Ahora, se crea la instancia de un solo objeto: la de la matriz, y las instancias de `Point` se asignan en línea dentro de la matriz.
 
-Los structs se invocan con el nuevo operador, pero eso no implica que se asigne memoria. En lugar de asignar dinámicamente un objeto y devolver una referencia a él, un constructor de structs simplemente devuelve el valor del struct propiamente dicho (normalmente en una ubicación temporal en la pila) y este valor se copia luego cuando es necesario.
+Los structs se invocan con el operador `new`, pero eso no implica que se asigne memoria. En lugar de asignar dinámicamente un objeto y devolver una referencia a él, un constructor de structs simplemente devuelve el valor del struct propiamente dicho (normalmente en una ubicación temporal en la pila) y este valor se copia luego cuando es necesario.
 
 Con las clases, es posible que dos variables hagan referencia al mismo objeto y, que por tanto, las operaciones en una variable afecten al objeto al que hace referencia la otra variable. Con los struct, cada variable tiene su propia copia de los datos y no es posible que las operaciones en una afecten a la otra. Por ejemplo, la salida producida por el fragmento de código siguiente depende de si Point es una clase o un struct.
 

@@ -2,11 +2,11 @@
 title: 'Convenciones de código de F #'
 description: 'Obtenga información acerca de expresiones y directrices generales al escribir código de F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 4db1e2b4fef97fc060f717a080cd762f9fe08ee0
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: f3d16f735ddc1901aeaa5ebb39e2fa2b70a3d836
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-coding-conventions"></a>Convenciones de código de F #
 
@@ -91,7 +91,7 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 En F #, el orden de las declaraciones es importante, incluidos con `open` instrucciones. Esto es distinto de C#, donde el efecto de `using` y `using static` es independiente de la orden de esas instrucciones en un archivo.
 
-En F #, porque los elementos abiertos en un ámbito pueden reemplazar otras ya presente. Esto significa que la reordenación `open` instrucciones pueden alterar el significado del código. Como resultado, ordenar por orden alfanumérico (o pseudorandomly) generalmente no se recomienda, menos generar un comportamiento diferente que cabría esperar.
+En F #, pueden reemplazar elementos abiertos en un ámbito otros ya está presente. Esto significa que la reordenación `open` instrucciones podrían alterar el significado del código. Como resultado, cualquier arbitrario ordenar de todos los `open` instrucciones (por ejemplo, por orden alfanumérico) generalmente no se recomienda, menos generar un comportamiento diferente que cabría esperar.
 
 En su lugar, se recomienda que las ordenar [topológicamente](https://en.wikipedia.org/wiki/Topological_sorting); es decir, ordenar su `open` las instrucciones en el orden en que _capas_ del sistema se definen. También se puede considerar realizar alfanumérico de ordenación en diferentes capas topológicas.
 
@@ -108,12 +108,11 @@ open System.IO
 open System.Reflection
 open System.Text
 
-open Microsoft.FSharp.Core.Printf
 open Microsoft.FSharp.Compiler
 open Microsoft.FSharp.Compiler.AbstractIL
+open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.IL
 open Microsoft.FSharp.Compiler.AbstractIL.ILBinaryReader
-open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.Internal
 open Microsoft.FSharp.Compiler.AbstractIL.Internal.Library
 
@@ -123,24 +122,23 @@ open Microsoft.FSharp.Compiler.CompileOps
 open Microsoft.FSharp.Compiler.CompileOptions
 open Microsoft.FSharp.Compiler.Driver
 open Microsoft.FSharp.Compiler.ErrorLogger
+open Microsoft.FSharp.Compiler.Infos
+open Microsoft.FSharp.Compiler.InfoReader
+open Microsoft.FSharp.Compiler.Lexhelp
+open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Lib
+open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.PrettyNaming
 open Microsoft.FSharp.Compiler.Parser
 open Microsoft.FSharp.Compiler.Range
-open Microsoft.FSharp.Compiler.Lexhelp
-open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Tast
 open Microsoft.FSharp.Compiler.Tastops
 open Microsoft.FSharp.Compiler.TcGlobals
-open Microsoft.FSharp.Compiler.Infos
-open Microsoft.FSharp.Compiler.InfoReader
-open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.TypeChecker
 open Microsoft.FSharp.Compiler.SourceCodeServices.SymbolHelpers
 
 open Internal.Utilities
 open Internal.Utilities.Collections
-open Microsoft.FSharp.Compiler.Layout.TaggedTextOps
 ```
 
 Tenga en cuenta que un salto de línea separa las capas de topología con cada capa que se ordenan alfabéticamente posteriormente. Esto organiza limpiamente código sin accidentalmente sombrear valores.
@@ -154,7 +152,9 @@ Hay muchas veces al inicializar un valor puede tener efectos secundarios, como c
 module MyApi =
     let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
-    let dep3 = Random().Next() // Random is not thread-safe
+
+    let private r = Random()
+    let dep3() = r.Next() // Problematic if multiple threads use this
 
     let function1 arg = doStuffWith dep1 dep2 dep3 arg
     let function2 arg = doSutffWith dep1 dep2 dep3 arg
@@ -162,7 +162,9 @@ module MyApi =
 
 Esto suele ser una mala idea por diversas razones:
 
-En primer lugar, realiza la propia API dependa del estado compartido. Por ejemplo, varios subprocesos que realiza la llamada pueden estar intentando tener acceso a la `dep3` valor (y no es seguro para subprocesos). En segundo lugar, inserta la configuración de la aplicación en el código base propio. Esto es difícil de mantener para dotarlo mayor.
+En primer lugar, se inserta la configuración de la aplicación en el código base con `dep1` y `dep2`. Esto es difícil de mantener en dotarlo mayor.
+
+En segundo lugar, inicializadas estáticamente datos no deben incluir valores que no son seguros para subprocesos si su componente utilice varios subprocesos. Esto se infringe claramente `dep3`.
 
 Por último, inicialización del módulo se compila en un constructor estático para la unidad de compilación completo. Si se produce un error en la inicialización de un valor de límite permiten en ese módulo, se manifiesta como un `TypeInitializationException` que se almacena en la caché durante toda la duración de la aplicación. Esto puede ser difícil de diagnosticar. Normalmente hay una excepción interna que puede intentar volver a analizar, pero, a continuación, si no existe, no hay ningún indicando la causa raíz.
 
@@ -318,7 +320,7 @@ Tipos como `Result<'Success, 'Error>` son adecuados para las operaciones básica
 
 ## <a name="partial-application-and-point-free-programming"></a>Aplicación parcial y libre de punto de programación
 
-F # admite la aplicación parcial y por lo tanto, varias maneras de programa en un estilo libre de punto. Esto puede ser beneficioso para reutilizar el código dentro de un módulo o la implementación de algo, pero en general no es algo para exponer públicamente. En general, libre de punto de programación no es un virtud de por sí y puede agregar una barrera cognitiva significativa para las personas que no se sumergen en el estilo. Liberar de punto de programación en F # es básica para un matemático bien entrenado, pero puede ser difícil para los usuarios que no están familiarizados con cálculo lambda.
+F # admite la aplicación parcial y por lo tanto, varias maneras de programa en un estilo libre de punto. Esto puede ser beneficioso para reutilizar el código dentro de un módulo o la implementación de algo, pero en general no es algo para exponer públicamente. En general, libre de punto de programación no es un virtud de por sí y puede agregar una barrera cognitiva significativa para las personas que no se sumergen en el estilo.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>No use aplicación parcial y la currificación en las API públicas
 

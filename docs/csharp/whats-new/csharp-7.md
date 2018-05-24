@@ -1,20 +1,13 @@
 ---
 title: Novedades de C# 7.0 | Guía de C#
 description: Obtenga información general sobre las nuevas características que entran en la próxima versión 7 del lenguaje C#.
-keywords: C#, .NET, .NET Core, Características más recientes, Novedades
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/21/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 1951c60ee11d0d5c4856f5f92eee8ba690b11f8d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="whats-new-in-c-70"></a>Novedades de C# 7.0
 
@@ -91,7 +84,7 @@ Los campos no se validan y no se pueden definir métodos propios
 > Las tuplas estaban disponibles antes de C# 7.0, pero no eran eficientes ni compatibles con ningún lenguaje.
 > Esto significaba que solo se podía hacer referencia a los elementos tupla como `Item1`, `Item2`, por ejemplo. C# 7.0 presenta la compatibilidad de lenguaje con las tuplas, que permite usar nombres semánticos en los campos de una tupla mediante tipos de tupla nuevos y más eficientes.
 
-Puede crear una tupla asignando cada miembro a un valor:
+Puede crear una tupla asignando un valor a cada miembro:
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
@@ -136,7 +129,7 @@ También puede proporcionar una deconstrucción similar para cualquier tipo de .
 
 [!code-csharp[PointWithDeconstruction](../../../samples/snippets/csharp/new-in-7/point.cs#11_PointWithDeconstruction "Point with deconstruction method")]
  
-Puede extraer los campos individuales asignando una tupla a un `Point`:
+Puede extraer los campos individuales asignando un `Point` a una tupla:
 
 [!code-csharp[DeconstructPoint](../../../samples/snippets/csharp/new-in-7/program.cs#12_DeconstructPoint "Deconstruct a point")]
 

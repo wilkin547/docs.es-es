@@ -15,11 +15,11 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: f18a369157c1e37411a3c8d8b6dfcce99bc347c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensiones de marcado y XAML de WPF
 En este tema se presenta el concepto de extensiones de marcado para XAML, incluidos sus reglas de sintaxis, su finalidad y el modelo de objeto de clase subyacente. Las extensiones de marcado son una característica general del lenguaje XAML y de la implementación .NET de servicios XAML. En este tema se detallan las extensiones de marcado para su uso en XAML de WPF.  
@@ -64,7 +64,7 @@ En este tema se presenta el concepto de extensiones de marcado para XAML, inclui
   
 -   `RelativeSource` Proporciona información de origen para un <xref:System.Windows.Data.Binding> que puede navegar por varias posibles relaciones en el árbol de objetos de tiempo de ejecución. Esto proporciona un origen especializado para los enlaces que se crean en plantillas de uso múltiple o creados en código sin conocimiento completo del árbol de objetos adyacente. Para obtener más información, consulte [Extensión de marcado RelativeSource](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
   
--   `TemplateBinding` permite que una plantilla de control use valores para propiedades con plantilla procedentes de propiedades definidas por el modelo de objeto de la clase que usará la plantilla. En otras palabras, la propiedad dentro de la definición de plantilla puede obtener acceso a un contexto que solo existe cuando se aplica la plantilla. Para obtener más información, consulte [Extensión de marcado TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Para obtener más información sobre el uso práctico de `TemplateBinding`, consulte [Aplicación de estilos con el ejemplo ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
+-   `TemplateBinding` permite que una plantilla de control use valores para propiedades con plantilla procedentes de propiedades definidas por el modelo de objeto de la clase que usará la plantilla. En otras palabras, la propiedad dentro de la definición de plantilla puede obtener acceso a un contexto que solo existe cuando se aplica la plantilla. Para obtener más información, consulte [Extensión de marcado TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Para obtener más información sobre el uso práctico de `TemplateBinding`, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 -   `ColorConvertedBitmap` admite un escenario de creación de imágenes relativamente avanzado. Para obtener más información, consulte [ColorConvertedBitmap (extensión de marcado)](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md).  
   

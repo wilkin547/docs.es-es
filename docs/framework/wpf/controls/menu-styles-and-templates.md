@@ -9,11 +9,11 @@ helpviewer_keywords:
 - templates [WPF], Menu
 - parts [WPF], Menu
 ms.assetid: b89da183-9b87-42c6-ac53-731a42c7b09e
-ms.openlocfilehash: b7148f4148f6f141b44899c2c14d0b0028cb6795
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f5e1b85059727b97b08a03b5ee494e5d2b37fb2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="menu-styles-and-templates"></a>Estilos y plantillas de menú
 En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Menu> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para dar al control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -67,7 +67,7 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
   
  [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
+ Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.FrameworkElement.Style%2A>  

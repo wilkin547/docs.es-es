@@ -1,52 +1,49 @@
 ---
-title: "Instalación de .NET Framework en Windows 10"
+title: Instalación de .NET Framework en Windows 10
 description: Aprenda a instalar .NET Framework en Windows 10 o Windows Server 2016.
 author: rlander
 ms.author: mairaw
-keywords: .NET Framework, Instalar
-ms.date: 12/20/2017
-ms.topic: article
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.prod: .net-framework
-ms.workload: dotnet
-ms.openlocfilehash: bd588dff62e5d4ac1c1059e697a07598ba272042
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: f069686866c4fd0e8e380af3ef448d282df34801
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Instalación de .NET Framework en Windows 10 o Windows Server 2016
 
-.NET Framework se requiere para ejecutar muchas aplicaciones en Windows. Las instrucciones de este artículo puede ayudarle a instalar las versiones de .NET Framework que necesite. [.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) es la última versión disponible.
+.NET Framework se requiere para ejecutar muchas aplicaciones en Windows. Las instrucciones de este artículo puede ayudarle a instalar las versiones de .NET Framework que necesite. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) es la última versión disponible.
 
 Es posible que haya llegado a esta página tras haber intentado ejecutar una aplicación y que haya aparecido un cuadro de diálogo en el equipo similar al siguiente:
 
 ![No se pudo iniciar esta aplicación.](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-471"></a>.NET Framework 4.7.1
+## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
-.NET Framework 4.7.1 se incluye con:
+.NET Framework 4.7.2 se incluye con:
 
-* [Windows 10 Fall Creators Update (versión 1709)](https://www.microsoft.com/software-download/windows10)
-* [Windows Server, versión 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)
+* [Actualización de abril de 2018 de Windows 10](https://www.microsoft.com/software-download/windows10)
 
 > [!div class="button"]
-[Descargar .NET Framework 4.7.1](https://www.microsoft.com/net/download/thank-you/net471?utm_source=ms-docs&utm_medium=referral)
+[Descargar .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-[.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) se puede usar para ejecutar aplicaciones creadas para .NET Framework de 4.0 a 4.7.1.
+[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) se puede usar para ejecutar aplicaciones creadas para .NET Framework de 4.0 a 4.7.1.
 
-Puede instalar [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) en:
+[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) se puede instalar en:
 
+* Windows 10 Fall Creators Update (versión 1709)
 * Windows 10 Creators Update (versión 1703)
 * Actualización de aniversario de Windows 10 (versión 1607)
+* Windows Server, versión 1709
 * Windows Server 2016
 
-.NET Framework 4.7.1 no se admite en:
+.NET Framework 4.7.2 no se admite en:
 
 * Windows 10 1507
 * Windows 10 1511
 
-Si está usando Windows 10 1507 o 1511 y desea instalar .NET Framework 4.7.1, primero debe actualizar a una versión posterior de Windows 10.
+Si está usando Windows 10 1507 o 1511 y quiere instalar .NET Framework 4.7.2, primero debe actualizar a una versión posterior de Windows 10.
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 

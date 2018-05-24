@@ -1,13 +1,7 @@
 ---
 title: Clases de carácter en expresiones regulares
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: 58
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 538aa21712f1e2290fb009c24774059098c60c1e
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 241bc9756118cd2db15356dcc2c724a24c84d0fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Clases de carácter en expresiones regulares
 <a name="Top"></a> Una clase de caracteres define un conjunto de caracteres, cualquiera de los cuales puede estar en una cadena de entrada para que se produzca una coincidencia. El lenguaje de expresiones regulares de .NET admite las siguientes clases de caracteres:  

@@ -231,8 +231,8 @@
 ### [Tuplas](csharp/tuples.md)
 ### [Deconstrucción de tuplas y otros tipos](csharp/deconstruct.md)
 ### [Interfaces](csharp/programming-guide/interfaces/index.md)
-#### [Métodos](csharp/methods.md)
-#### [Expresiones lambda](csharp/lambda-expressions.md)
+### [Métodos](csharp/methods.md)
+### [Expresiones lambda](csharp/lambda-expressions.md)
 ### [Propiedades](csharp/properties.md)
 ### [Indizadores](csharp/indexers.md)
 ### [Descartes](csharp/discards.md)
@@ -287,7 +287,7 @@
 ### [Introducción a la CLI de .NET Core](fsharp/get-started/get-started-command-line.md)
 
 ## [Guía de estilo de F#](fsharp/style-guide/index.md)
-### [Instrucciones de formato de F#](fsharp/style-guide/formatting.md)
+### [Instrucciones de formato de código de F#](fsharp/style-guide/formatting.md)
 ### [Convenciones de código de F#](fsharp/style-guide/conventions.md)
 ### [Instrucciones de diseño del componente F#](fsharp/style-guide/component-design-guidelines.md)
 

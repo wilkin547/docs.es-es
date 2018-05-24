@@ -1,13 +1,7 @@
 ---
 title: cuantificadores en expresiones regulares
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,18 +14,13 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ad4e8ab527ca59c21bf4771ca9d386866d9919f7
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 374ef3e015ee477c5979e2e31574aabfdd03dd1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="quantifiers-in-regular-expressions"></a>cuantificadores en expresiones regulares
 Los cuantificadores especifican cuántas instancias de un carácter, grupo o clase de caracteres deben estar presentes en la entrada para que se encuentre una coincidencia.  En la tabla siguiente se indican los cuantificadores compatibles con .NET.  
@@ -125,7 +114,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |`\b`|Finaliza en un límite de palabras.|  
   
 ### <a name="match-at-least-n-times-n"></a>Coincidir al menos n veces: {n,}  
- El cuantificador `{`*n*`,}` coincide con el elemento anterior al menos *n* veces, donde *n* es un entero. `{`*n*`,}` es un cuantificador expansivo cuyo equivalente diferido es `{`*n*`}?`.  
+ El cuantificador `{`*n*`,}` coincide con el elemento anterior al menos *n*, donde *n* es un entero. `{`*n*`,}` es un cuantificador expansivo cuyo equivalente diferido es `{`*n*`}?`.  
   
  Por ejemplo, la expresión regular `\b\d{2,}\b\D+` intenta coincidir con un límite de palabra seguido de por lo menos dos dígitos, seguidos de un límite de palabra y de un carácter que no sea un dígito. En el ejemplo siguiente se muestra esta expresión regular. La expresión regular no coincide con la frase `"7 days"` porque solo contiene un dígito decimal, pero coincide correctamente con las frases `"10 weeks and 300 years"`.  
   

@@ -4,16 +4,12 @@ description: En esta guía de inicio rápido se muestra cómo usar la caracterí
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7ef904e30475d2cc0584f2baf56bc33a68e172d4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="string-interpolation"></a>Interpolación de cadenas
 
@@ -173,4 +169,4 @@ Ha completado la guía de inicio rápido sobre interpolación de cadenas.
 
 Puede continuar con la guía de inicio rápido [Colección de listas](arrays-and-collections.md) en su propio entorno de desarrollo.
 
-Obtenga más información sobre la interpolación de cadenas en el tema [Interpolación de cadenas](../language-reference/tokens/interpolated.md) de la referencia de C#.
+Para más información, vea el tema [Interpolación de cadenas](../language-reference/tokens/interpolated.md) y el tutorial [Interpolación de cadenas en C#](../tutorials/string-interpolation.md).

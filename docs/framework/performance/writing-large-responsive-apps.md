@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 51b4758690257b999cce51f3e80fd263a6d5e275
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escribir aplicaciones grandes de .NET Framework que respondan
 En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de las aplicaciones .NET Framework de gran tamaño o de aquellas aplicaciones que procesan una gran cantidad de datos, como archivos o bases de datos. Estas sugerencias proceden de reescribir los compiladores de C# y Visual Basic en código administrado; además, el artículo incluye varios ejemplos reales del compilador de C#.  
@@ -433,7 +433,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- Este código cambia el tipo de `cachedResult` a `Task<SyntaxTree>` y emplea una función auxiliar `async` que contiene el código original de `GetSyntaxTreeAsync()`.  `GetSyntaxTreeAsync()` ahora usa el [operador de uso combinado de NULL](~/docs/csharp/language-reference/operators/null-conditional-operator.md) para devolver `cachedResult` si no es null.  Si `cachedResult` es null, entonces `GetSyntaxTreeAsync()` llama a `GetSyntaxTreeUncachedAsync()` y almacena el resultado en la caché.  Observe que `GetSyntaxTreeAsync()` no aguarda por la llamada a `GetSyntaxTreeUncachedAsync()`, como haría el código normalmente.  No usar await significa que cuando `GetSyntaxTreeUncachedAsync()` devuelve su objeto <xref:System.Threading.Tasks.Task>, `GetSyntaxTreeAsync()` devuelve inmediatamente <xref:System.Threading.Tasks.Task>.  Ahora, el resultado almacenado en la caché es <xref:System.Threading.Tasks.Task>, por lo que no hay asignaciones que devolver el resultado almacenado en la caché.  
+ Este código cambia el tipo de `cachedResult` a `Task<SyntaxTree>` y emplea una función auxiliar `async` que contiene el código original de `GetSyntaxTreeAsync()`.  `GetSyntaxTreeAsync()` ahora usa el [operador de uso combinado de NULL](../../csharp/language-reference/operators/null-coalescing-operator.md) para devolver `cachedResult` si no es null.  Si `cachedResult` es null, entonces `GetSyntaxTreeAsync()` llama a `GetSyntaxTreeUncachedAsync()` y almacena el resultado en la caché.  Observe que `GetSyntaxTreeAsync()` no aguarda por la llamada a `GetSyntaxTreeUncachedAsync()`, como haría el código normalmente.  No usar await significa que cuando `GetSyntaxTreeUncachedAsync()` devuelve su objeto <xref:System.Threading.Tasks.Task>, `GetSyntaxTreeAsync()` devuelve inmediatamente <xref:System.Threading.Tasks.Task>.  Ahora, el resultado almacenado en la caché es <xref:System.Threading.Tasks.Task>, por lo que no hay asignaciones que devolver el resultado almacenado en la caché.  
   
 ### <a name="additional-considerations"></a>Consideraciones adicionales  
  A continuación se señalan otras cuestiones sobre aplicaciones grandes o que procesan una gran cantidad de datos.  

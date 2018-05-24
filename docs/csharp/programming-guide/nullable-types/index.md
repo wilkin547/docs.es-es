@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 10a2d4ab248276d9fdbe9d2bba40ccdd02a77408
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcff492f420a60a41b373bf9042ed0c2d66d0446
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="nullable-types-c-programming-guide"></a>Tipos que aceptan valores NULL (Guía de programación de C#)
 Los tipos que aceptan valores NULL son instancias de la estructura <xref:System.Nullable%601?displayProperty=nameWithType>. Un tipo que acepta valores NULL puede representar el intervalo de valores correcto para su tipo de valor subyacente, además de un valor `null` adicional correcto. Por ejemplo, a un valor `Nullable<Int32>`, también conocido como "Nullable of Int32", se le puede asignar cualquier valor comprendido entre -2147483648 y 2147483647, o se le puede asignar el valor `null`. A `Nullable<bool>` se le pueden asignar los valores [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) o [null](../../../csharp/language-reference/keywords/null.md). La capacidad de asignar `null` a tipos numéricos y booleanos resulta especialmente útil cuando se trabaja con bases de datos y otros tipos de datos que contienen elementos a los que no se les puede asignar ningún valor. Por ejemplo, un campo booleano en una base de datos puede almacenar los valores `true` o `false`, o puede ser indefinido. 
@@ -51,7 +51,7 @@ Para obtener más ejemplos, vea [Utilizar tipos que aceptan valores NULL](../../
   
 -   [Aplicar la conversión boxing a tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
   
--   [Operador ??](../../../csharp/language-reference/operators/null-conditional-operator.md)  
+-   [Operador ??](../../../csharp/language-reference/operators/null-coalescing-operator.md)  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

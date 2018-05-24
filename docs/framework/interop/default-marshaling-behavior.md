@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed306098852e93d43a4055fd1d9b8cf97a01766
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="default-marshaling-behavior"></a>Comportamiento de serialización predeterminado
 La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada. Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  
@@ -345,7 +345,7 @@ interface _Graphics {
 }  
 ```  
   
- Las mismas reglas usadas para serializar valores y referencias para llamadas de invocación de plataforma se usan al serializar a través de interfaces COM. Por ejemplo, cuando una instancia del tipo de valor `Point` se pasa de .NET Framework a COM, `Point` se pasa por valor. Si el tipo de valor `Point` se pasa por referencia, un puntero a un `Point` se pasa en la pila. El serializador de interoperabilidad no admite niveles superiores de direccionamiento indirecto (**Point \*\***) en ninguna dirección.  
+ Las mismas reglas usadas para serializar valores y referencias para llamadas de invocación de plataforma se usan al serializar a través de interfaces COM. Por ejemplo, cuando una instancia del tipo de valor `Point` se pasa de .NET Framework a COM, `Point` se pasa por valor. Si el tipo de valor `Point` se pasa por referencia, un puntero a un `Point` se pasa en la pila. El serializador de interoperabilidad no admite niveles superiores de direccionamiento indirecto (**punto** \* \*) en cualquier dirección.  
   
 > [!NOTE]
 >  Las estructuras que tienen el valor de enumeración <xref:System.Runtime.InteropServices.LayoutKind> establecido en **Explicit** no se pueden usar en la interoperabilidad COM porque la biblioteca de tipos exportada no puede expresar una distribución explícita.  

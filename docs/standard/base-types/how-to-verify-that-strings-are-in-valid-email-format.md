@@ -1,13 +1,7 @@
 ---
-title: "Cómo: Comprobar si las cadenas tienen un formato de correo electrónico válido"
-ms.custom: 
+title: 'Cómo: Comprobar si las cadenas tienen un formato de correo electrónico válido'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0400fba20e614b441eb549f39d8e831811c55e5e
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 573a3e954bf15bdbcf8b1885c10f68a222329ac1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Cómo: Comprobar si las cadenas tienen un formato de correo electrónico válido
 En el ejemplo siguiente se usa una expresión regular para comprobar que una cadena tiene un formato de correo electrónico válido.  

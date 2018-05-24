@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 9c2c38020bb57a008d0948a360a5b2cbe401089d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="styling-and-templating"></a>Aplicar estilos y plantillas
 La aplicación de estilos y plantillas de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] hace referencia a un conjunto de características (estilos, plantillas, desencadenadores y guiones gráficos) que permiten a los desarrolladores y diseñadores crear efectos visualmente atractivos y una apariencia coherente para su producto. Aunque los desarrolladores y los diseñadores pueden personalizar muchas apariencias aplicación por aplicación, es necesario un modelo de aplicación de estilos y plantillas para el mantenimiento y el uso compartido de la apariencia entre las distintas aplicaciones. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ofrece ese modelo.  
@@ -28,10 +28,8 @@ La aplicación de estilos y plantillas de [!INCLUDE[TLA#tla_winclient](../../../
   
  Esta información general se centra en los aspectos de los estilos y las plantillas de la aplicación y no abarca los conceptos de enlace de datos. Para información sobre el enlace de datos, consulte [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md) (Introducción al enlace de datos).  
   
- Además, es importante entender los recursos, gracias a los cuales se pueden reutilizar los estilos y las plantillas. Para más información acerca de los recursos, consulte [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md) (Recursos de XAML).  
-  
- 
-  
+ Además, es importante entender los recursos, gracias a los cuales se pueden reutilizar los estilos y las plantillas. Para más información acerca de los recursos, consulte [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md) (Recursos de XAML).
+
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>Ejemplo de aplicación de estilos y plantillas  
  Los ejemplos de código de esta introducción se basan en la sencilla foto de ejemplo de la siguiente ilustración:  
@@ -183,9 +181,9 @@ La aplicación de estilos y plantillas de [!INCLUDE[TLA#tla_winclient](../../../
   
  Los diccionarios de recursos se pueden redefinir como archivos individuales para reutilizar un tema en varias aplicaciones. También se pueden crear temas intercambiables al definir varios diccionarios de recursos que proporcionen los mismos tipos de recursos, pero con diferentes valores. Redefinir estos estilos u otros recursos en el nivel de aplicación es el enfoque recomendado para aplicar una máscara a una aplicación.  
   
- Para compartir un conjunto de recursos, incluidos los estilos y plantillas, en todas las aplicaciones, puede crear un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de archivos y definir un <xref:System.Windows.ResourceDictionary>. Por ejemplo, eche un vistazo en la ilustración siguiente, donde se muestra parte del [ejemplo de aplicación de estilo con la clase ControlTemplate](http://go.microsoft.com/fwlink/?LinkID=160041):  
-  
- ![Ejemplos de Control Template](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
+ Para compartir un conjunto de recursos, incluidos los estilos y plantillas, en todas las aplicaciones, puede crear un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de archivos y definir un <xref:System.Windows.ResourceDictionary>. Por ejemplo, eche un vistazo en la ilustración siguiente, donde se muestra parte del [ejemplo de aplicación de estilo con la clase ControlTemplate](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating):
+
+![Ejemplos de Control Template](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
   
  Si observa los archivos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] del ejemplo, observará que todos tienen lo siguiente:  
   

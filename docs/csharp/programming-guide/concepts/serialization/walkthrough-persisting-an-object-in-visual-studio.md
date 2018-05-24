@@ -1,225 +1,102 @@
 ---
-title: 'Tutorial: Conservar un objeto en Visual Studio (C#)'
-ms.custom: 
-ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: get-started-article
-ms.assetid: a544ce46-ee25-49da-afd4-457a3d59bf63
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7b1a3fc377875ee25baa0718a25b5ac509822154
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+title: 'Tutorial: Conservar un objeto con C#'
+ms.date: 04/26/2018
+ms.openlocfilehash: 6c9719dc3aaf997ea144515a553f787450e54041
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>Tutorial: Conservar un objeto en Visual Studio (C#)
-Aunque puede establecer las propiedades de un objeto en los valores predeterminados en el tiempo de diseño, cualquier valor que se establezca en tiempo de ejecución se pierde cuando se destruye el objeto. Puede usar la serialización para conservar los datos de un objeto entre instancias, lo que le permite almacenar valores y recuperarlos la próxima vez que se cree una instancia del objeto.  
-  
- En este tutorial, creará un objeto `Loan` sencillo y conservará sus datos en un archivo. Después, recuperará los datos del archivo cuando vuelva a crear el objeto.  
-  
+# <a name="walkthrough-persisting-an-object-using-c"></a>Tutorial: Conservar un objeto con C# #
+
+Puede usar la serialización para conservar los datos de un objeto entre instancias, lo que le permite almacenar valores y recuperarlos la próxima vez que se cree una instancia del objeto.
+
+En este tutorial, creará un objeto `Loan` básico y conservará sus datos en un archivo. Después, recuperará los datos del archivo cuando vuelva a crear el objeto.
+
 > [!IMPORTANT]
->  En este ejemplo se crea un nuevo archivo, si este no existe aún. Si una aplicación debe crear un archivo, debe `Create` permiso para la carpeta. Los permisos se establecen mediante el uso de las listas de control de acceso. Si el archivo ya existe, la aplicación necesitará solo un permiso `Write`, un permiso menor. Siempre que sea posible, resulta más seguro crear el archivo durante la implementación y conceder solo permisos `Read` a un único archivo (en lugar de crear permisos para una carpeta). Además, es más seguro escribir datos en carpetas de usuario que en la carpeta raíz o en la carpeta Archivos de programa.  
-  
+> En este ejemplo se crea un nuevo archivo, si este no existe aún. Si una aplicación debe crear un archivo, es necesario que tenga el permiso `Create` en la carpeta. Los permisos se establecen mediante el uso de las listas de control de acceso. Si el archivo ya existe, la aplicación necesitará solo un permiso `Write`, un permiso menor. Siempre que sea posible, resulta más seguro crear el archivo durante la implementación y conceder solo permisos `Read` a un único archivo (en lugar de crear permisos para una carpeta). También es más seguro escribir datos en carpetas de usuario en lugar de hacerlo en la carpeta raíz o en la carpeta Archivos de programa.
+
 > [!IMPORTANT]
->  En este ejemplo se almacenan datos en un archivo de formato binario. Estos formatos no deben usarse para datos confidenciales, como contraseñas o información de tarjetas de crédito.  
-  
-> [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, haga clic en **Importar y exportar configuraciones** en el menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="creating-the-loan-object"></a>Crear el objeto Loan  
- El primer paso consiste en crear una clase `Loan` y una aplicación de prueba que use la clase.  
-  
-### <a name="to-create-the-loan-class"></a>Para crear la clase Loan  
-  
-1.  Cree un nuevo proyecto de bibliotecas de clases y denomínelo "LoanClass". Para más información, vea [Crear soluciones y proyectos](/visualstudio/ide/creating-solutions-and-projects).  
-  
-2.  En el **Explorador de soluciones**, abra el menú contextual del archivo Class1 y pulse **Cambiar nombre**. Cambie el nombre del archivo a `Loan` y pulse ENTRAR. Al cambiar el nombre del archivo también se cambiará el nombre de la clase a `Loan`.  
-  
-3.  Agregue los siguientes miembros públicos a la clase:  
-  
-    ```csharp  
-    public class Loan : System.ComponentModel.INotifyPropertyChanged  
-    {  
-        public double LoanAmount {get; set;}  
-        public double InterestRate {get; set;}  
-        public int Term {get; set;}  
-  
-        private string p_Customer;  
-        public string Customer  
-        {  
-            get { return p_Customer; }  
-            set   
-            {  
-                p_Customer = value;  
-                PropertyChanged(this,  
-                  new System.ComponentModel.PropertyChangedEventArgs("Customer"));  
-            }  
-        }  
-  
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;  
-  
-        public Loan(double loanAmount,  
-                    double interestRate,  
-                    int term,  
-                    string customer)  
-        {  
-            this.LoanAmount = loanAmount;  
-            this.InterestRate = interestRate;  
-            this.Term = term;  
-            p_Customer = customer;  
-        }  
-    }  
-    ```  
-  
- También tendrá que crear una aplicación sencilla que use la clase `Loan`.  
-  
-### <a name="to-create-a-test-application"></a>Para crear una aplicación de prueba  
-  
-1.  Para agregar un proyecto de Aplicación de Windows Forms a su solución, en el menú **Archivo**, pulse **Agregar**, **Nuevo proyecto**.  
-  
-2.  En el cuadro de diálogo **Agregar nuevo proyecto**, pulse **Aplicación de Windows Forms** y escriba `LoanApp` como el nombre del proyecto y, después, haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
-  
-3.  En el **Explorador de soluciones**, elija el proyecto de LoanApp.  
-  
-4.  En el menú **Proyecto**, seleccione **Establecer como proyecto de inicio**.  
-  
-5.  En el menú **Proyecto** , elija **Agregar referencia**.  
-  
-6.  En el cuadro de diálogo **Agregar referencia**, pulse la pestaña **Proyectos** y, después, elija el proyecto de LoanClass.  
-  
-7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
-  
-8.  En el diseñador, agregue cuatro controles <xref:System.Windows.Forms.TextBox> al formulario.  
-  
-9. En el Editor de códigos, agregue el siguiente código:  
-  
-    ```csharp  
-    private LoanClass.Loan TestLoan = new LoanClass.Loan(10000.0, 0.075, 36, "Neil Black");  
-  
-    private void Form1_Load(object sender, EventArgs e)  
-    {  
-        textBox1.Text = TestLoan.LoanAmount.ToString();  
-        textBox2.Text = TestLoan.InterestRate.ToString();  
-        textBox3.Text = TestLoan.Term.ToString();  
-        textBox4.Text = TestLoan.Customer;  
-    }  
-    ```  
-  
-10. Agregue un controlador de eventos para el evento `PropertyChanged` al formulario con el código siguiente:  
-  
-    ```csharp  
-    private void CustomerPropertyChanged(object sender,   
-        System.ComponentModel.PropertyChangedEventArgs e)  
-    {  
-        MessageBox.Show(e.PropertyName + " has been changed.");  
-    }  
-    ```  
-  
- En este punto, podrá compilar y ejecutar la aplicación. Tenga en cuenta que los valores predeterminados de la clase `Loan` aparecen en los cuadros de texto. Intente cambiar el valor de la tasa de interés de 7,5 a 7,1 y, después, cierre la aplicación y ejecútela de nuevo; el valor vuelve a ser el valor predeterminado de 7,5.  
-  
- En el mundo real, las tasas de interés cambian periódicamente, pero no necesariamente cada vez que se ejecuta la aplicación. En lugar de hacer que el usuario actualice la tasa de interés cada vez que se ejecuta la aplicación, es mejor conservar la tasa de interés más reciente entre instancias de la aplicación. En el paso siguiente, hará esto agregando la serialización a la clase Loan.  
-  
-## <a name="using-serialization-to-persist-the-object"></a>Usar la serialización para conservar el objeto  
- Para conservar los valores de la clase Loan, primero debe marcar la clase con el atributo `Serializable`.  
-  
-### <a name="to-mark-a-class-as-serializable"></a>Para marcar una clase como serializable  
-  
--   Cambie la declaración de clase para la clase Loan de la manera siguiente:  
-  
-    ```csharp  
-    [Serializable()]  
-    public class Loan : System.ComponentModel.INotifyPropertyChanged  
-    {  
-    ```  
-  
- El atributo `Serializable` indica al compilador que todo el contenido de la clase puede conservarse en un archivo. Como el evento `PropertyChanged` está controlado por un objeto de Windows Forms, no puede serializarse. El atributo `NonSerialized` puede usarse para marcar miembros de clase que no deben conservarse.  
-  
-### <a name="to-prevent-a-member-from-being-serialized"></a>Para evitar que un miembro se serialice  
-  
--   Cambie la declaración del evento `PropertyChanged` de la manera siguiente:  
-  
-    ```csharp  
-    [field: NonSerialized()]  
-    public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;  
-    ```  
-  
- El siguiente paso consiste en agregar el código de serialización a la aplicación LoanApp. Para serializar la clase y escribirla en un archivo, usará los espacios de nombres <xref:System.IO> y <xref:System.Xml.Serialization>. Para evitar escribir los nombres completos, puede agregar referencias a las bibliotecas de clase necesarias.  
-  
-### <a name="to-add-references-to-namespaces"></a>Para agregar referencias a los espacios de nombres  
-  
--   Agregue las instrucciones siguientes en la parte superior de la clase `Form1`:  
-  
-    ```csharp  
-    using System.IO;  
-    using System.Runtime.Serialization.Formatters.Binary;  
-    ```  
-  
-     En este caso, está usando un formateador binario para guardar el objeto en un formato binario.  
-  
- El siguiente paso es agregar código para deserializar el objeto del archivo cuando el objeto se crea.  
-  
-### <a name="to-deserialize-an-object"></a>Para deserializar un objeto  
-  
-1.  Agregue una constante a la clase para el nombre de archivo de los datos serializados.  
-  
-    ```csharp  
-    const string FileName = @"..\..\SavedLoan.bin";  
-    ```  
-  
-2.  Modifique el código en el procedimiento de evento `Form1_Load` de la manera siguiente:  
-  
-    ```csharp  
-    private LoanClass.Loan TestLoan = new LoanClass.Loan(10000.0, 0.075, 36, "Neil Black");  
-  
-    private void Form1_Load(object sender, EventArgs e)  
-    {  
-        if (File.Exists(FileName))  
-        {  
-            Stream TestFileStream = File.OpenRead(FileName);  
-            BinaryFormatter deserializer = new BinaryFormatter();  
-            TestLoan = (LoanClass.Loan)deserializer.Deserialize(TestFileStream);  
-            TestFileStream.Close();  
-        }  
-  
-        TestLoan.PropertyChanged += this.CustomerPropertyChanged;  
-  
-        textBox1.Text = TestLoan.LoanAmount.ToString();  
-        textBox2.Text = TestLoan.InterestRate.ToString();  
-        textBox3.Text = TestLoan.Term.ToString();  
-        textBox4.Text = TestLoan.Customer;  
-    }  
-    ```  
-  
-     Tenga en cuenta que primero debe comprobar que existe el archivo. Si existe, cree una clase <xref:System.IO.Stream> para leer el archivo binario y una clase <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> para traducirlo. También necesita convertir del tipo de secuencia al tipo de objeto Loan.  
-  
- Después, debe agregar código para guardar los datos que se han escrito en los cuadros de texto en la clase `Loan` y, luego, debe serializar la clase en un archivo.  
-  
-### <a name="to-save-the-data-and-serialize-the-class"></a>Para guardar los datos y serializar la clase  
-  
--   Agregue el código siguiente al procedimiento de eventos `Form1_FormClosing`:  
-  
-    ```csharp  
-    private void Form1_FormClosing(object sender, FormClosingEventArgs e)  
-    {  
-        TestLoan.LoanAmount = Convert.ToDouble(textBox1.Text);  
-        TestLoan.InterestRate = Convert.ToDouble(textBox2.Text);  
-        TestLoan.Term = Convert.ToInt32(textBox3.Text);  
-        TestLoan.Customer = textBox4.Text;  
-  
-        Stream TestFileStream = File.Create(FileName);  
-        BinaryFormatter serializer = new BinaryFormatter();  
-        serializer.Serialize(TestFileStream, TestLoan);  
-        TestFileStream.Close();  
-    }  
-    ```  
-  
- En este punto, podrá compilar y ejecutar la aplicación de nuevo. Inicialmente, los valores predeterminados aparecen en los cuadros de texto. Pruebe a cambiar los valores y escriba un nombre en el cuarto cuadro de texto. Cierre la aplicación y, después, ejecútela de nuevo. Tenga en cuenta que los valores nuevos aparecen ahora en los cuadros de texto.  
-  
-## <a name="see-also"></a>Vea también  
- [Serialización (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
+> En este ejemplo se almacenan datos en un archivo de formato binario. Estos formatos no deben usarse para datos confidenciales, como contraseñas o información de tarjetas de crédito.
+
+## <a name="prerequisites"></a>Requisitos previos
+
+* Para compilar y ejecutar, instalar el [SDK de .NET Core](https://www.microsoft.com/net/core).
+
+* Instale el editor de código que prefiera si aún no lo ha hecho.
+
+> [!TIP]
+> ¿Es necesario instalar un editor de código? Pruebe [Visual Studio](https://visualstudio.com/downloads).
+
+En el [repositorio de GitHub de ejemplos de .NET](https://github.com/dotnet/samples/tree/master/csharp/serialization) puede examinar el código de ejemplo en línea.
+
+## <a name="creating-the-loan-object"></a>Crear el objeto Loan
+
+El primer paso consiste en crear una clase `Loan` y una aplicación de consola que use la clase:
+
+1. Cree una aplicación. Escriba `dotnet new console -o serialization` para crear una aplicación de consola en un subdirectorio llamado `serialization`.
+1. Abra la aplicación en el editor y agregue una nueva clase denominada `Loan.cs`.
+1. Agregue el siguiente código a la clase `Loan`:
+
+[!code-csharp[Loan class definition](../../../../../samples/csharp/serialization/Loan.cs#1)]
+
+También tendrá que crear una aplicación que use la clase `Loan`.
+
+## <a name="serialize-the-loan-object"></a>Serializar el objeto Loan
+
+1. Abra `Program.cs`. Agregue el código siguiente:
+
+[!code-csharp[Create a loan object](../../../../../samples/csharp/serialization/Program.cs#1)]
+
+Agregue un controlador de eventos del evento `PropertyChanged` y unas cuantas líneas para modificar el objeto `Loan` y ver los cambios. En el siguiente código puede ver las adiciones realizadas:
+
+[!code-csharp[Listening for the PropertyChanged event](../../../../../samples/csharp/serialization/Program.cs#2)]
+
+Llegado este punto, puede ejecutar el código y ver el resultado actual:
+
+```console
+New customer value: Henry Clay
+7.5
+7.1
+```
+
+Si ejecuta esta aplicación repetidamente, verá que siempre escribe los mismos valores. Se creará un objeto Loan cada vez que ejecute el programa. En el mundo real, las tasas de interés cambian periódicamente, pero no necesariamente cada vez que se ejecuta la aplicación. El código de serialización conlleva que se va a conservar la tasa de interés más reciente entre las instancias de la aplicación. En el paso siguiente, hará esto agregando la serialización a la clase Loan.
+
+## <a name="using-serialization-to-persist-the-object"></a>Usar la serialización para conservar el objeto
+
+Para conservar los valores de la clase Loan, primero debe marcar la clase con el atributo `Serializable`. Agregue el siguiente código encima de la declaración de la clase Loan:
+
+[!code-csharp[Loan class definition](../../../../../samples/csharp/serialization/Loan.cs#2)]
+
+<xref:System.SerializableAttribute> indica al compilador que todo el contenido de la clase se puede conservar en un archivo. El evento `PropertyChanged` no representa la parte del gráfico de objeto que se debe almacenar, de modo que no se debería serializar. Si lo hace, se serializarían todos los objetos que estén asociados a ese evento. Puede agregar <xref:System.NonSerializedAttribute> a la declaración de campo del controlador de eventos `PropertyChanged`.
+
+[!code-csharp[Disable serialization for the event handler](../../../../../samples/csharp/serialization/Loan.cs#3)]
+
+A partir de C# 7.3, los atributos se pueden asociar al campo de respaldo de una propiedad implementada automáticamente usando el valor de destino `field`. El siguiente código agrega una propiedad `TimeLastLoaded` y la marca como no serializable:
+
+[!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/csharp/serialization/Loan.cs#4)]
+
+El siguiente paso consiste en agregar el código de serialización a la aplicación LoanApp. Para serializar la clase y escribirla en un archivo, usaremos los espacios de nombres <xref:System.IO> y <xref:System.Runtime.Serialization.Formatters.Binary>. Para evitar escribir los nombres completos, puede agregar referencias a los espacios de nombres necesarios, tal y como se muestra en el siguiente código:
+
+[!code-csharp[Adding namespaces for serialization](../../../../../samples/csharp/serialization/Program.cs#3)]
+
+El siguiente paso es agregar código para deserializar el objeto del archivo cuando el objeto se crea. Agregue una constante a la clase para el nombre de archivo de los datos serializados, tal y como se muestra en el siguiente código:
+
+[!code-csharp[Define the name of the saved file](../../../../../samples/csharp/serialization/Program.cs#4)]
+
+Luego, agregue el siguiente código después de la línea que crea el objeto `TestLoan`:
+
+[!code-csharp[Read from a file if it exists](../../../../../samples/csharp/serialization/Program.cs#5)]
+
+Primero hay que confirmar que el archivo existe. Si existe, cree una clase <xref:System.IO.Stream> para leer el archivo binario y una clase <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> para traducirlo. También necesita convertir del tipo de secuencia al tipo de objeto Loan.
+
+Luego, debemos agregar código para serializar la clase en un archivo. Agregue el siguiente código después del código existente en el método `Main`:
+
+[!code-csharp[Save the existing Loan object](../../../../../samples/csharp/serialization/Program.cs#6)]
+
+En este punto, podrá compilar y ejecutar la aplicación de nuevo. La primera vez que se ejecuta, observe que el tipo de interés comienza en 7.5 y, después, pasa a 7.1. Cierre la aplicación y, después, ejecútela de nuevo. Ahora, la aplicación muestra un mensaje que indica que se ha leído el archivo guardado y la tasa de interés es 7.1 incluso antes del código que la cambia.
+
+## <a name="see-also"></a>Vea también
+
+ [Serialización (C#)](index.md)  
+ [Guía de programación de C#](../..//index.md)  

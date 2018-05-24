@@ -1,21 +1,14 @@
 ---
 title: Diseño de una aplicación orientada a microservicios
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Diseño de una aplicación orientada a microservicios
-keywords: Docker, microservicios, ASP.NET, contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: a5107e979dc2101380cf848dc574033caf750fd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Diseño de una aplicación orientada a microservicios
 
@@ -85,7 +78,7 @@ La aplicación consta de varios subsistemas, incluidos varios front-end de inter
 
 -   Comunicación asincrónica basada en eventos. Se realiza a través de un bus de eventos para propagar las actualizaciones entre los microservicios o para la integración con aplicaciones externas. El bus de eventos se puede implementar con cualquier tecnología de infraestructura de agente de mensajería como RabbitMQ, o bien mediante Service Bus de nivel superior como Azure Service Bus, NServiceBus, MassTransit o Brighter.
 
-La aplicación se implementa como un conjunto de microservicios en forma de contenedores. Las aplicaciones cliente se pueden comunicar con los contenedores, así como entre los microservicios. Como se mencionó, en esta arquitectura inicial se usa una arquitectura de comunicación directa del cliente al microservicio, lo que significa que una aplicación cliente puede realizar solicitudes directamente a cada uno de los microservicios. Cada microservicio tiene un punto de conexión público como https://nombre_del_servicio.nombre_de_la_aplicación.nombre_de_la_empresa. Si es necesario, cada microservicio puede usar un puerto TCP diferente. En producción, esa dirección URL se asignaría al equilibrador de carga de los microservicios, que distribuye las solicitudes entre las instancias de microservicio disponibles.
+La aplicación se implementa como un conjunto de microservicios en forma de contenedores. Las aplicaciones cliente se pueden comunicar con los contenedores, así como entre los microservicios. Como se mencionó, en esta arquitectura inicial se usa una arquitectura de comunicación directa del cliente al microservicio, lo que significa que una aplicación cliente puede realizar solicitudes directamente a cada uno de los microservicios. Cada microservicio tiene un punto de conexión público, como https://servicename.applicationname.companyname. Si es necesario, cada microservicio puede usar un puerto TCP diferente. En producción, esa dirección URL se asignaría al equilibrador de carga de los microservicios, que distribuye las solicitudes entre las instancias de microservicio disponibles.
 
 **Nota importante sobre las diferencias entre una puerta de enlace de API y la comunicación directa en eShopOnContainers.** Como se explicó en la sección sobre arquitectura de esta guía, la arquitectura de comunicación directa del cliente al microservicio puede tener inconvenientes al diseñar una aplicación grande y compleja basada en microservicios. Pero puede ser suficiente para una aplicación pequeña, como eShopOnContainers, cuyo objetivo es centrarse en una aplicación de introducción más sencilla basada en contenedores de Docker y no queríamos crear una única puerta de enlace de API monolítica que afectara a la autonomía de desarrollo de los microservicios.
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - styles [WPF], NavigationWindow
 - templates [WPF], NavigationWindow
 ms.assetid: 3656055e-3222-43c8-b868-fd0c90cc31a3
-ms.openlocfilehash: 51e09a1e7f09640804f888cf29a214a2e4c74f27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e481c84b462bc8d5114aadda2a368c4e7506d778
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="navigationwindow-styles-and-templates"></a>Estilos y plantillas de NavigationWindow
 En este tema se describe los estilos y plantillas para el <xref:System.Windows.Navigation.NavigationWindow> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para dar al control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -44,7 +44,7 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.N
  [!code-xaml[ControlTemplateExamples#ResizeGrip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/resizegrip.xaml#resizegrip)]  
 [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
+ Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.FrameworkElement.Style%2A>  

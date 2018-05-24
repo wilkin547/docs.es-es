@@ -1,21 +1,14 @@
 ---
-title: "Orientación general"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Orientación general"
-keywords: Docker, microservicios, ASP.NET, contenedor
+title: Orientación general
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Orientación general
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fa58d1d81b2d1523baf123d4963db2ca00fee15d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ccaae99f4c46fe739041f9b9e907a702303e62f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-guidance"></a>Orientación general
 
@@ -45,10 +38,10 @@ Utilizar .NET Framework en Docker puede mejorar sus experiencias de implementaci
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Libro electrónico: Modernize existing .NET Framework applications with Azure and Windows Containers** (Modernizar aplicaciones de .NET Framework existentes con Azure y contenedores de Windows)
+-   **e-book: Modernize existing .NET Framework applications with Azure and Windows Containers (Modernizar las aplicaciones .NET Framework existentes con contenedores de Azure y Windows)**
     [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
 
--   **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers** (Aplicaciones de ejemplo: modernización de aplicaciones web de ASP.NET heredadas mediante el uso de contenedores de Windows)
+-   **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers (Aplicaciones de ejemplo: modernizar aplicaciones web de ASP.NET heredadas usando contenedores de Windows)**
     [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
 
 

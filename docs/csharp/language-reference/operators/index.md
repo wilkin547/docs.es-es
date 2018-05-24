@@ -18,11 +18,11 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: d4b570c93b4bf5f612a74de80fc2cceea2063cc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b0441dfebb6692cbea0d1ab7909d7b8f04490cb
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="c-operators"></a>operadores de C#
 C# proporciona muchos operadores, que son símbolos que especifican las operaciones (matemáticas, indización, llamada de función, etc.) que se realizan en una expresión. Puede [sobrecargar](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) muchos operadores para cambiar su significado al aplicarlos a un tipo definido por el usuario.  
@@ -160,7 +160,7 @@ C# proporciona muchos operadores, que son símbolos que especifican las operacio
 ## <a name="null-coalescing-operator"></a>Operador de uso combinado de null  
  Este operador tiene mayor precedencia que el de la sección siguiente y menor que el de la anterior.  
   
- [x ?? y](../../../csharp/language-reference/operators/null-conditional-operator.md): devuelve `x` si no es `null`; de lo contrario, devuelve `y`.  
+ [x ?? y](../../../csharp/language-reference/operators/null-coalescing-operator.md): devuelve `x` si no es `null`; de lo contrario, devuelve `y`.  
   
 ## <a name="conditional-operator"></a>Operador condicional  
  Este operador tiene mayor precedencia que el de la sección siguiente y menor que el de la anterior.  

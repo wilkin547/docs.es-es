@@ -7,11 +7,11 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0d442f71a0e2fc7deacd9aaa02cfba7b66f2349
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: acd66cdff9f2c68e7d665b1fd236b18eeb9b4bac
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; elemento
 Especifica si los ensamblados de orígenes remotos se deben conceder plena confianza.  
@@ -69,7 +69,7 @@ Especifica si los ensamblados de orígenes remotos se deben conceder plena confi
   
  El `enabled` de atributo para este elemento es efectivo únicamente cuando la seguridad de acceso del código (CAS) está deshabilitada. De forma predeterminada, la directiva CAS está deshabilitada en el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] y versiones posteriores. Si establece `enabled` a `true`, aplicaciones remotas gozan de plena confianza.  
   
- Si `<loadFromRemoteSources>``enabled` no está establecido en `true`, se produce una excepción en las siguientes condiciones:  
+ Si `<loadFromRemoteSources>` `enabled` no está establecido en `true`, se produce una excepción en las siguientes condiciones:  
   
 -   El comportamiento de espacio aislado del dominio actual es diferente de su comportamiento en el [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]. Esto requiere la directiva de entidades emisoras de certificados que se deshabilite y el dominio actual no sea en un espacio aislado.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - styles [WPF], GroupBox
 - templates [WPF], GroupBox
 ms.assetid: 33df7037-0a1b-476f-b9d0-41566a777699
-ms.openlocfilehash: 57f5411f880ae7bafe852e9e84db1995ccd70e68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 539bf5b0ef8772ea469123442d152726d0948be9
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="groupbox-styles-and-templates"></a>Estilos y plantillas de GroupBox
 <a name="introduction"></a> En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.GroupBox> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para dar al control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
+ Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.FrameworkElement.Style%2A>  

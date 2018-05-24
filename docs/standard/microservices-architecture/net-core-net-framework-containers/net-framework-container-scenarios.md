@@ -1,21 +1,14 @@
 ---
-title: "Cuándo elegir .NET Framework para contenedores de Docker"
-description: "Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Cuándo elegir .NET Framework para contenedores de Docker"
-keywords: Docker, microservicios, ASP.NET, contenedor
+title: Cuándo elegir .NET Framework para contenedores de Docker
+description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Cuándo elegir .NET Framework para contenedores de Docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: eec258ff01bcfeb834fa7a1138fdf822fd00c996
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: e707c8f0e721915e829e41628891928594010b92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Cuándo elegir .NET Framework para contenedores de Docker
 
@@ -55,16 +48,16 @@ Mientras tanto, si cualquier plataforma o servicio en Azure todavía no es compa
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Guía de .NET Core**
+-   **.NET Core Guide (Guía de .NET Core)**
     [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md)
 
--   **Portabilidad a .NET Core desde .NET Framework**
+-   **Porting from .NET Framework to .NET Core (Portabilidad a .NET Core desde .NET Framework)**
     [*https://docs.microsoft.com/dotnet/core/porting/index*](../../../core/porting/index.md)
 
--   **Implementación de aplicaciones de .NET Framework con Docker**
+-   **.NET Framework on Docker Guide (Guía de .NET Framework en Docker)**
     [*https://docs.microsoft.com/dotnet/framework/docker/*](../../../framework/docker/index.md)
 
--   **Componentes de la arquitectura .NET**
+-   **.NET Components Overview (Introducción a los componentes de .NET)**
     [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
 
 

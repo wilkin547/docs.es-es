@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ControlTemplate [WPF], ToolTip
 - templates [WPF], ToolTip
 ms.assetid: 405fe385-4de9-49ee-a448-d8f4d1f740dd
-ms.openlocfilehash: 862e887e69b30f8dbe175bb7014af8a5f3b8369b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53b21f610ba957370fac70b79e6a827d624b6473
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="tooltip-styles-and-templates"></a>Estilos y plantillas de ToolTip
 En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.ToolTip> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para dar al control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -41,7 +41,7 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
   
  [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
+ Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.FrameworkElement.Style%2A>  
