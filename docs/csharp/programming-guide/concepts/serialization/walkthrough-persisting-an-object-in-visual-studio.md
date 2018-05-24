@@ -1,225 +1,102 @@
 ---
-title: 'Tutorial: Conservar un objeto en Visual Studio (C#)'
-ms.custom: 
-ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: get-started-article
-ms.assetid: a544ce46-ee25-49da-afd4-457a3d59bf63
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7b1a3fc377875ee25baa0718a25b5ac509822154
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+title: 'Tutorial: Conservar un objeto con C#'
+ms.date: 04/26/2018
+ms.openlocfilehash: 6c9719dc3aaf997ea144515a553f787450e54041
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a><span data-ttu-id="fee35-102">Tutorial: Conservar un objeto en Visual Studio (C#)</span><span class="sxs-lookup"><span data-stu-id="fee35-102">Walkthrough: Persisting an Object in Visual Studio (C#)</span></span>
-<span data-ttu-id="fee35-103">Aunque puede establecer las propiedades de un objeto en los valores predeterminados en el tiempo de diseño, cualquier valor que se establezca en tiempo de ejecución se pierde cuando se destruye el objeto.</span><span class="sxs-lookup"><span data-stu-id="fee35-103">Although you can set an object's properties to default values at design time, any values entered at run time are lost when the object is destroyed.</span></span> <span data-ttu-id="fee35-104">Puede usar la serialización para conservar los datos de un objeto entre instancias, lo que le permite almacenar valores y recuperarlos la próxima vez que se cree una instancia del objeto.</span><span class="sxs-lookup"><span data-stu-id="fee35-104">You can use serialization to persist an object's data between instances, which enables you to store values and retrieve them the next time that the object is instantiated.</span></span>  
-  
- <span data-ttu-id="fee35-105">En este tutorial, creará un objeto `Loan` sencillo y conservará sus datos en un archivo.</span><span class="sxs-lookup"><span data-stu-id="fee35-105">In this walkthrough, you will create a simple `Loan` object and persist its data to a file.</span></span> <span data-ttu-id="fee35-106">Después, recuperará los datos del archivo cuando vuelva a crear el objeto.</span><span class="sxs-lookup"><span data-stu-id="fee35-106">You will then retrieve the data from the file when you re-create the object.</span></span>  
-  
+# <a name="walkthrough-persisting-an-object-using-c"></a><span data-ttu-id="41184-102">Tutorial: Conservar un objeto con C#</span><span class="sxs-lookup"><span data-stu-id="41184-102">Walkthrough: persisting an object using C#</span></span> #
+
+<span data-ttu-id="41184-103">Puede usar la serialización para conservar los datos de un objeto entre instancias, lo que le permite almacenar valores y recuperarlos la próxima vez que se cree una instancia del objeto.</span><span class="sxs-lookup"><span data-stu-id="41184-103">You can use serialization to persist an object's data between instances, which enables you to store values and retrieve them the next time that the object is instantiated.</span></span>
+
+<span data-ttu-id="41184-104">En este tutorial, creará un objeto `Loan` básico y conservará sus datos en un archivo.</span><span class="sxs-lookup"><span data-stu-id="41184-104">In this walkthrough, you will create a basic `Loan` object and persist its data to a file.</span></span> <span data-ttu-id="41184-105">Después, recuperará los datos del archivo cuando vuelva a crear el objeto.</span><span class="sxs-lookup"><span data-stu-id="41184-105">You will then retrieve the data from the file when you re-create the object.</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="fee35-107">En este ejemplo se crea un nuevo archivo, si este no existe aún.</span><span class="sxs-lookup"><span data-stu-id="fee35-107">This example creates a new file if the file does not already exist.</span></span> <span data-ttu-id="fee35-108">Si una aplicación debe crear un archivo, debe `Create` permiso para la carpeta.</span><span class="sxs-lookup"><span data-stu-id="fee35-108">If an application must create a file, that application must `Create` permission for the folder.</span></span> <span data-ttu-id="fee35-109">Los permisos se establecen mediante el uso de las listas de control de acceso.</span><span class="sxs-lookup"><span data-stu-id="fee35-109">Permissions are set by using access control lists.</span></span> <span data-ttu-id="fee35-110">Si el archivo ya existe, la aplicación necesitará solo un permiso `Write`, un permiso menor.</span><span class="sxs-lookup"><span data-stu-id="fee35-110">If the file already exists, the application needs only `Write` permission, a lesser permission.</span></span> <span data-ttu-id="fee35-111">Siempre que sea posible, resulta más seguro crear el archivo durante la implementación y conceder solo permisos `Read` a un único archivo (en lugar de crear permisos para una carpeta).</span><span class="sxs-lookup"><span data-stu-id="fee35-111">Where possible, it is more secure to create the file during deployment, and only grant `Read` permissions to a single file (instead of Create permissions for a folder).</span></span> <span data-ttu-id="fee35-112">Además, es más seguro escribir datos en carpetas de usuario que en la carpeta raíz o en la carpeta Archivos de programa.</span><span class="sxs-lookup"><span data-stu-id="fee35-112">Also, it is more secure to write data to user folders than to the root folder or the Program Files folder.</span></span>  
-  
+> <span data-ttu-id="41184-106">En este ejemplo se crea un nuevo archivo, si este no existe aún.</span><span class="sxs-lookup"><span data-stu-id="41184-106">This example creates a new file if the file does not already exist.</span></span> <span data-ttu-id="41184-107">Si una aplicación debe crear un archivo, es necesario que tenga el permiso `Create` en la carpeta.</span><span class="sxs-lookup"><span data-stu-id="41184-107">If an application must create a file, that application must have `Create` permission for the folder.</span></span> <span data-ttu-id="41184-108">Los permisos se establecen mediante el uso de las listas de control de acceso.</span><span class="sxs-lookup"><span data-stu-id="41184-108">Permissions are set by using access control lists.</span></span> <span data-ttu-id="41184-109">Si el archivo ya existe, la aplicación necesitará solo un permiso `Write`, un permiso menor.</span><span class="sxs-lookup"><span data-stu-id="41184-109">If the file already exists, the application needs only `Write` permission, a lesser permission.</span></span> <span data-ttu-id="41184-110">Siempre que sea posible, resulta más seguro crear el archivo durante la implementación y conceder solo permisos `Read` a un único archivo (en lugar de crear permisos para una carpeta).</span><span class="sxs-lookup"><span data-stu-id="41184-110">Where possible, it's more secure to create the file during deployment and only grant `Read` permissions to a single file (instead of Create permissions for a folder).</span></span> <span data-ttu-id="41184-111">También es más seguro escribir datos en carpetas de usuario en lugar de hacerlo en la carpeta raíz o en la carpeta Archivos de programa.</span><span class="sxs-lookup"><span data-stu-id="41184-111">Also, it's more secure to write data to user folders than to the root folder or the Program Files folder.</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="fee35-113">En este ejemplo se almacenan datos en un archivo de formato binario.</span><span class="sxs-lookup"><span data-stu-id="fee35-113">This example stores data in a binary format file.</span></span> <span data-ttu-id="fee35-114">Estos formatos no deben usarse para datos confidenciales, como contraseñas o información de tarjetas de crédito.</span><span class="sxs-lookup"><span data-stu-id="fee35-114">These formats should not be used for sensitive data, such as passwords or credit-card information.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="fee35-115">Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.</span><span class="sxs-lookup"><span data-stu-id="fee35-115">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="fee35-116">Para cambiar la configuración, haga clic en **Importar y exportar configuraciones** en el menú **Herramientas** .</span><span class="sxs-lookup"><span data-stu-id="fee35-116">To change your settings, click **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="fee35-117">Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="fee35-117">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
-  
-## <a name="creating-the-loan-object"></a><span data-ttu-id="fee35-118">Crear el objeto Loan</span><span class="sxs-lookup"><span data-stu-id="fee35-118">Creating the Loan Object</span></span>  
- <span data-ttu-id="fee35-119">El primer paso consiste en crear una clase `Loan` y una aplicación de prueba que use la clase.</span><span class="sxs-lookup"><span data-stu-id="fee35-119">The first step is to create a `Loan` class and a test application that uses the class.</span></span>  
-  
-### <a name="to-create-the-loan-class"></a><span data-ttu-id="fee35-120">Para crear la clase Loan</span><span class="sxs-lookup"><span data-stu-id="fee35-120">To create the Loan class</span></span>  
-  
-1.  <span data-ttu-id="fee35-121">Cree un nuevo proyecto de bibliotecas de clases y denomínelo "LoanClass".</span><span class="sxs-lookup"><span data-stu-id="fee35-121">Create a new Class Library project and name it "LoanClass".</span></span> <span data-ttu-id="fee35-122">Para más información, vea [Crear soluciones y proyectos](/visualstudio/ide/creating-solutions-and-projects).</span><span class="sxs-lookup"><span data-stu-id="fee35-122">For more information, see [Creating Solutions and Projects](/visualstudio/ide/creating-solutions-and-projects).</span></span>  
-  
-2.  <span data-ttu-id="fee35-123">En el **Explorador de soluciones**, abra el menú contextual del archivo Class1 y pulse **Cambiar nombre**.</span><span class="sxs-lookup"><span data-stu-id="fee35-123">In **Solution Explorer**, open the shortcut menu for the Class1 file and choose **Rename**.</span></span> <span data-ttu-id="fee35-124">Cambie el nombre del archivo a `Loan` y pulse ENTRAR.</span><span class="sxs-lookup"><span data-stu-id="fee35-124">Rename the file to `Loan` and press ENTER.</span></span> <span data-ttu-id="fee35-125">Al cambiar el nombre del archivo también se cambiará el nombre de la clase a `Loan`.</span><span class="sxs-lookup"><span data-stu-id="fee35-125">Renaming the file will also rename the class to `Loan`.</span></span>  
-  
-3.  <span data-ttu-id="fee35-126">Agregue los siguientes miembros públicos a la clase:</span><span class="sxs-lookup"><span data-stu-id="fee35-126">Add the following public members to the class:</span></span>  
-  
-    ```csharp  
-    public class Loan : System.ComponentModel.INotifyPropertyChanged  
-    {  
-        public double LoanAmount {get; set;}  
-        public double InterestRate {get; set;}  
-        public int Term {get; set;}  
-  
-        private string p_Customer;  
-        public string Customer  
-        {  
-            get { return p_Customer; }  
-            set   
-            {  
-                p_Customer = value;  
-                PropertyChanged(this,  
-                  new System.ComponentModel.PropertyChangedEventArgs("Customer"));  
-            }  
-        }  
-  
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;  
-  
-        public Loan(double loanAmount,  
-                    double interestRate,  
-                    int term,  
-                    string customer)  
-        {  
-            this.LoanAmount = loanAmount;  
-            this.InterestRate = interestRate;  
-            this.Term = term;  
-            p_Customer = customer;  
-        }  
-    }  
-    ```  
-  
- <span data-ttu-id="fee35-127">También tendrá que crear una aplicación sencilla que use la clase `Loan`.</span><span class="sxs-lookup"><span data-stu-id="fee35-127">You will also have to create a simple application that uses the `Loan` class.</span></span>  
-  
-### <a name="to-create-a-test-application"></a><span data-ttu-id="fee35-128">Para crear una aplicación de prueba</span><span class="sxs-lookup"><span data-stu-id="fee35-128">To create a test application</span></span>  
-  
-1.  <span data-ttu-id="fee35-129">Para agregar un proyecto de Aplicación de Windows Forms a su solución, en el menú **Archivo**, pulse **Agregar**, **Nuevo proyecto**.</span><span class="sxs-lookup"><span data-stu-id="fee35-129">To add a Windows Forms Application project to your solution, on the **File** menu, choose **Add**, **New Project**.</span></span>  
-  
-2.  <span data-ttu-id="fee35-130">En el cuadro de diálogo **Agregar nuevo proyecto**, pulse **Aplicación de Windows Forms** y escriba `LoanApp` como el nombre del proyecto y, después, haga clic en **Aceptar** para cerrar el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="fee35-130">In the **Add New Project** dialog box, choose **Windows Forms Application**, and enter `LoanApp` as the name of the project, and then click **OK** to close the dialog box.</span></span>  
-  
-3.  <span data-ttu-id="fee35-131">En el **Explorador de soluciones**, elija el proyecto de LoanApp.</span><span class="sxs-lookup"><span data-stu-id="fee35-131">In **Solution Explorer**, choose the LoanApp project.</span></span>  
-  
-4.  <span data-ttu-id="fee35-132">En el menú **Proyecto**, seleccione **Establecer como proyecto de inicio**.</span><span class="sxs-lookup"><span data-stu-id="fee35-132">On the **Project** menu, choose **Set as StartUp Project**.</span></span>  
-  
-5.  <span data-ttu-id="fee35-133">En el menú **Proyecto** , elija **Agregar referencia**.</span><span class="sxs-lookup"><span data-stu-id="fee35-133">On the **Project** menu, choose **Add Reference**.</span></span>  
-  
-6.  <span data-ttu-id="fee35-134">En el cuadro de diálogo **Agregar referencia**, pulse la pestaña **Proyectos** y, después, elija el proyecto de LoanClass.</span><span class="sxs-lookup"><span data-stu-id="fee35-134">In the **Add Reference** dialog box, choose the **Projects** tab and then choose the LoanClass project.</span></span>  
-  
-7.  <span data-ttu-id="fee35-135">Haga clic en **Aceptar** para cerrar el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="fee35-135">Click **OK** to close the dialog box.</span></span>  
-  
-8.  <span data-ttu-id="fee35-136">En el diseñador, agregue cuatro controles <xref:System.Windows.Forms.TextBox> al formulario.</span><span class="sxs-lookup"><span data-stu-id="fee35-136">In the designer, add four <xref:System.Windows.Forms.TextBox> controls to the form.</span></span>  
-  
-9. <span data-ttu-id="fee35-137">En el Editor de códigos, agregue el siguiente código:</span><span class="sxs-lookup"><span data-stu-id="fee35-137">In the Code Editor, add the following code:</span></span>  
-  
-    ```csharp  
-    private LoanClass.Loan TestLoan = new LoanClass.Loan(10000.0, 0.075, 36, "Neil Black");  
-  
-    private void Form1_Load(object sender, EventArgs e)  
-    {  
-        textBox1.Text = TestLoan.LoanAmount.ToString();  
-        textBox2.Text = TestLoan.InterestRate.ToString();  
-        textBox3.Text = TestLoan.Term.ToString();  
-        textBox4.Text = TestLoan.Customer;  
-    }  
-    ```  
-  
-10. <span data-ttu-id="fee35-138">Agregue un controlador de eventos para el evento `PropertyChanged` al formulario con el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="fee35-138">Add an event handler for the `PropertyChanged` event to the form by using the following code:</span></span>  
-  
-    ```csharp  
-    private void CustomerPropertyChanged(object sender,   
-        System.ComponentModel.PropertyChangedEventArgs e)  
-    {  
-        MessageBox.Show(e.PropertyName + " has been changed.");  
-    }  
-    ```  
-  
- <span data-ttu-id="fee35-139">En este punto, podrá compilar y ejecutar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="fee35-139">At this point, you can build and run the application.</span></span> <span data-ttu-id="fee35-140">Tenga en cuenta que los valores predeterminados de la clase `Loan` aparecen en los cuadros de texto.</span><span class="sxs-lookup"><span data-stu-id="fee35-140">Note that the default values from the `Loan` class appear in the text boxes.</span></span> <span data-ttu-id="fee35-141">Intente cambiar el valor de la tasa de interés de 7,5 a 7,1 y, después, cierre la aplicación y ejecútela de nuevo; el valor vuelve a ser el valor predeterminado de 7,5.</span><span class="sxs-lookup"><span data-stu-id="fee35-141">Try to change the interest-rate value from 7.5 to 7.1, and then close the application and run it again—the value reverts to the default of 7.5.</span></span>  
-  
- <span data-ttu-id="fee35-142">En el mundo real, las tasas de interés cambian periódicamente, pero no necesariamente cada vez que se ejecuta la aplicación.</span><span class="sxs-lookup"><span data-stu-id="fee35-142">In the real world, interest rates change periodically, but not necessarily every time that the application is run.</span></span> <span data-ttu-id="fee35-143">En lugar de hacer que el usuario actualice la tasa de interés cada vez que se ejecuta la aplicación, es mejor conservar la tasa de interés más reciente entre instancias de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="fee35-143">Rather than making the user update the interest rate every time that the application runs, it is better to preserve the most recent interest rate between instances of the application.</span></span> <span data-ttu-id="fee35-144">En el paso siguiente, hará esto agregando la serialización a la clase Loan.</span><span class="sxs-lookup"><span data-stu-id="fee35-144">In the next step, you will do just that by adding serialization to the Loan class.</span></span>  
-  
-## <a name="using-serialization-to-persist-the-object"></a><span data-ttu-id="fee35-145">Usar la serialización para conservar el objeto</span><span class="sxs-lookup"><span data-stu-id="fee35-145">Using Serialization to Persist the Object</span></span>  
- <span data-ttu-id="fee35-146">Para conservar los valores de la clase Loan, primero debe marcar la clase con el atributo `Serializable`.</span><span class="sxs-lookup"><span data-stu-id="fee35-146">In order to persist the values for the Loan class, you must first mark the class with the `Serializable` attribute.</span></span>  
-  
-### <a name="to-mark-a-class-as-serializable"></a><span data-ttu-id="fee35-147">Para marcar una clase como serializable</span><span class="sxs-lookup"><span data-stu-id="fee35-147">To mark a class as serializable</span></span>  
-  
--   <span data-ttu-id="fee35-148">Cambie la declaración de clase para la clase Loan de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="fee35-148">Change the class declaration for the Loan class as follows:</span></span>  
-  
-    ```csharp  
-    [Serializable()]  
-    public class Loan : System.ComponentModel.INotifyPropertyChanged  
-    {  
-    ```  
-  
- <span data-ttu-id="fee35-149">El atributo `Serializable` indica al compilador que todo el contenido de la clase puede conservarse en un archivo.</span><span class="sxs-lookup"><span data-stu-id="fee35-149">The `Serializable` attribute tells the compiler that everything in the class can be persisted to a file.</span></span> <span data-ttu-id="fee35-150">Como el evento `PropertyChanged` está controlado por un objeto de Windows Forms, no puede serializarse.</span><span class="sxs-lookup"><span data-stu-id="fee35-150">Because the `PropertyChanged` event is handled by a Windows Form object, it cannot be serialized.</span></span> <span data-ttu-id="fee35-151">El atributo `NonSerialized` puede usarse para marcar miembros de clase que no deben conservarse.</span><span class="sxs-lookup"><span data-stu-id="fee35-151">The `NonSerialized` attribute can be used to mark class members that should not be persisted.</span></span>  
-  
-### <a name="to-prevent-a-member-from-being-serialized"></a><span data-ttu-id="fee35-152">Para evitar que un miembro se serialice</span><span class="sxs-lookup"><span data-stu-id="fee35-152">To prevent a member from being serialized</span></span>  
-  
--   <span data-ttu-id="fee35-153">Cambie la declaración del evento `PropertyChanged` de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="fee35-153">Change the declaration for the `PropertyChanged` event as follows:</span></span>  
-  
-    ```csharp  
-    [field: NonSerialized()]  
-    public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;  
-    ```  
-  
- <span data-ttu-id="fee35-154">El siguiente paso consiste en agregar el código de serialización a la aplicación LoanApp.</span><span class="sxs-lookup"><span data-stu-id="fee35-154">The next step is to add the serialization code to the LoanApp application.</span></span> <span data-ttu-id="fee35-155">Para serializar la clase y escribirla en un archivo, usará los espacios de nombres <xref:System.IO> y <xref:System.Xml.Serialization>.</span><span class="sxs-lookup"><span data-stu-id="fee35-155">In order to serialize the class and write it to a file, you will use the <xref:System.IO> and <xref:System.Xml.Serialization> namespaces.</span></span> <span data-ttu-id="fee35-156">Para evitar escribir los nombres completos, puede agregar referencias a las bibliotecas de clase necesarias.</span><span class="sxs-lookup"><span data-stu-id="fee35-156">To avoid typing the fully qualified names, you can add references to the necessary class libraries.</span></span>  
-  
-### <a name="to-add-references-to-namespaces"></a><span data-ttu-id="fee35-157">Para agregar referencias a los espacios de nombres</span><span class="sxs-lookup"><span data-stu-id="fee35-157">To add references to namespaces</span></span>  
-  
--   <span data-ttu-id="fee35-158">Agregue las instrucciones siguientes en la parte superior de la clase `Form1`:</span><span class="sxs-lookup"><span data-stu-id="fee35-158">Add the following statements to the top of the `Form1` class:</span></span>  
-  
-    ```csharp  
-    using System.IO;  
-    using System.Runtime.Serialization.Formatters.Binary;  
-    ```  
-  
-     <span data-ttu-id="fee35-159">En este caso, está usando un formateador binario para guardar el objeto en un formato binario.</span><span class="sxs-lookup"><span data-stu-id="fee35-159">In this case, you are using a binary formatter to save the object in a binary format.</span></span>  
-  
- <span data-ttu-id="fee35-160">El siguiente paso es agregar código para deserializar el objeto del archivo cuando el objeto se crea.</span><span class="sxs-lookup"><span data-stu-id="fee35-160">The next step is to add code to deserialize the object from the file when the object is created.</span></span>  
-  
-### <a name="to-deserialize-an-object"></a><span data-ttu-id="fee35-161">Para deserializar un objeto</span><span class="sxs-lookup"><span data-stu-id="fee35-161">To deserialize an object</span></span>  
-  
-1.  <span data-ttu-id="fee35-162">Agregue una constante a la clase para el nombre de archivo de los datos serializados.</span><span class="sxs-lookup"><span data-stu-id="fee35-162">Add a constant to the class for the serialized data's file name.</span></span>  
-  
-    ```csharp  
-    const string FileName = @"..\..\SavedLoan.bin";  
-    ```  
-  
-2.  <span data-ttu-id="fee35-163">Modifique el código en el procedimiento de evento `Form1_Load` de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="fee35-163">Modify the code in the `Form1_Load` event procedure as follows:</span></span>  
-  
-    ```csharp  
-    private LoanClass.Loan TestLoan = new LoanClass.Loan(10000.0, 0.075, 36, "Neil Black");  
-  
-    private void Form1_Load(object sender, EventArgs e)  
-    {  
-        if (File.Exists(FileName))  
-        {  
-            Stream TestFileStream = File.OpenRead(FileName);  
-            BinaryFormatter deserializer = new BinaryFormatter();  
-            TestLoan = (LoanClass.Loan)deserializer.Deserialize(TestFileStream);  
-            TestFileStream.Close();  
-        }  
-  
-        TestLoan.PropertyChanged += this.CustomerPropertyChanged;  
-  
-        textBox1.Text = TestLoan.LoanAmount.ToString();  
-        textBox2.Text = TestLoan.InterestRate.ToString();  
-        textBox3.Text = TestLoan.Term.ToString();  
-        textBox4.Text = TestLoan.Customer;  
-    }  
-    ```  
-  
-     <span data-ttu-id="fee35-164">Tenga en cuenta que primero debe comprobar que existe el archivo.</span><span class="sxs-lookup"><span data-stu-id="fee35-164">Note that you first must check that the file exists.</span></span> <span data-ttu-id="fee35-165">Si existe, cree una clase <xref:System.IO.Stream> para leer el archivo binario y una clase <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> para traducirlo.</span><span class="sxs-lookup"><span data-stu-id="fee35-165">If it exists, create a <xref:System.IO.Stream> class to read the binary file and a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> class to translate the file.</span></span> <span data-ttu-id="fee35-166">También necesita convertir del tipo de secuencia al tipo de objeto Loan.</span><span class="sxs-lookup"><span data-stu-id="fee35-166">You also need to convert from the stream type to the Loan object type.</span></span>  
-  
- <span data-ttu-id="fee35-167">Después, debe agregar código para guardar los datos que se han escrito en los cuadros de texto en la clase `Loan` y, luego, debe serializar la clase en un archivo.</span><span class="sxs-lookup"><span data-stu-id="fee35-167">Next you must add code to save the data entered in the text boxes to the `Loan` class, and then you must serialize the class to a file.</span></span>  
-  
-### <a name="to-save-the-data-and-serialize-the-class"></a><span data-ttu-id="fee35-168">Para guardar los datos y serializar la clase</span><span class="sxs-lookup"><span data-stu-id="fee35-168">To save the data and serialize the class</span></span>  
-  
--   <span data-ttu-id="fee35-169">Agregue el código siguiente al procedimiento de eventos `Form1_FormClosing`:</span><span class="sxs-lookup"><span data-stu-id="fee35-169">Add the following code to the `Form1_FormClosing` event procedure:</span></span>  
-  
-    ```csharp  
-    private void Form1_FormClosing(object sender, FormClosingEventArgs e)  
-    {  
-        TestLoan.LoanAmount = Convert.ToDouble(textBox1.Text);  
-        TestLoan.InterestRate = Convert.ToDouble(textBox2.Text);  
-        TestLoan.Term = Convert.ToInt32(textBox3.Text);  
-        TestLoan.Customer = textBox4.Text;  
-  
-        Stream TestFileStream = File.Create(FileName);  
-        BinaryFormatter serializer = new BinaryFormatter();  
-        serializer.Serialize(TestFileStream, TestLoan);  
-        TestFileStream.Close();  
-    }  
-    ```  
-  
- <span data-ttu-id="fee35-170">En este punto, podrá compilar y ejecutar la aplicación de nuevo.</span><span class="sxs-lookup"><span data-stu-id="fee35-170">At this point, you can again build and run the application.</span></span> <span data-ttu-id="fee35-171">Inicialmente, los valores predeterminados aparecen en los cuadros de texto.</span><span class="sxs-lookup"><span data-stu-id="fee35-171">Initially, the default values appear in the text boxes.</span></span> <span data-ttu-id="fee35-172">Pruebe a cambiar los valores y escriba un nombre en el cuarto cuadro de texto.</span><span class="sxs-lookup"><span data-stu-id="fee35-172">Try to change the values and enter a name in the fourth text box.</span></span> <span data-ttu-id="fee35-173">Cierre la aplicación y, después, ejecútela de nuevo.</span><span class="sxs-lookup"><span data-stu-id="fee35-173">Close the application and then run it again.</span></span> <span data-ttu-id="fee35-174">Tenga en cuenta que los valores nuevos aparecen ahora en los cuadros de texto.</span><span class="sxs-lookup"><span data-stu-id="fee35-174">Note that the new values now appear in the text boxes.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="fee35-175">Vea también</span><span class="sxs-lookup"><span data-stu-id="fee35-175">See Also</span></span>  
- [<span data-ttu-id="fee35-176">Serialización (C#)</span><span class="sxs-lookup"><span data-stu-id="fee35-176">Serialization (C# )</span></span>](../../../../csharp/programming-guide/concepts/serialization/index.md)  
- [<span data-ttu-id="fee35-177">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="fee35-177">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
+> <span data-ttu-id="41184-112">En este ejemplo se almacenan datos en un archivo de formato binario.</span><span class="sxs-lookup"><span data-stu-id="41184-112">This example stores data in a binary format file.</span></span> <span data-ttu-id="41184-113">Estos formatos no deben usarse para datos confidenciales, como contraseñas o información de tarjetas de crédito.</span><span class="sxs-lookup"><span data-stu-id="41184-113">These formats should not be used for sensitive data, such as passwords or credit-card information.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="41184-114">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="41184-114">Prerequisites</span></span>
+
+* <span data-ttu-id="41184-115">Para compilar y ejecutar, instalar el [SDK de .NET Core](https://www.microsoft.com/net/core).</span><span class="sxs-lookup"><span data-stu-id="41184-115">To build and run, install the [.NET Core SDK](https://www.microsoft.com/net/core).</span></span>
+
+* <span data-ttu-id="41184-116">Instale el editor de código que prefiera si aún no lo ha hecho.</span><span class="sxs-lookup"><span data-stu-id="41184-116">Install your favorite code editor, if you haven't already.</span></span>
+
+> [!TIP]
+> <span data-ttu-id="41184-117">¿Es necesario instalar un editor de código?</span><span class="sxs-lookup"><span data-stu-id="41184-117">Need to install a code editor?</span></span> <span data-ttu-id="41184-118">Pruebe [Visual Studio](https://visualstudio.com/downloads).</span><span class="sxs-lookup"><span data-stu-id="41184-118">Try [Visual Studio](https://visualstudio.com/downloads)!</span></span>
+
+<span data-ttu-id="41184-119">En el [repositorio de GitHub de ejemplos de .NET](https://github.com/dotnet/samples/tree/master/csharp/serialization) puede examinar el código de ejemplo en línea.</span><span class="sxs-lookup"><span data-stu-id="41184-119">You can examine the sample code online [at the .NET samples GitHub repository](https://github.com/dotnet/samples/tree/master/csharp/serialization).</span></span>
+
+## <a name="creating-the-loan-object"></a><span data-ttu-id="41184-120">Crear el objeto Loan</span><span class="sxs-lookup"><span data-stu-id="41184-120">Creating the loan object</span></span>
+
+<span data-ttu-id="41184-121">El primer paso consiste en crear una clase `Loan` y una aplicación de consola que use la clase:</span><span class="sxs-lookup"><span data-stu-id="41184-121">The first step is to create a `Loan` class and a console application that uses the class:</span></span>
+
+1. <span data-ttu-id="41184-122">Cree una aplicación.</span><span class="sxs-lookup"><span data-stu-id="41184-122">Create a new application.</span></span> <span data-ttu-id="41184-123">Escriba `dotnet new console -o serialization` para crear una aplicación de consola en un subdirectorio llamado `serialization`.</span><span class="sxs-lookup"><span data-stu-id="41184-123">Type `dotnet new console -o serialization` to create a new console application in a subdirectory named `serialization`.</span></span>
+1. <span data-ttu-id="41184-124">Abra la aplicación en el editor y agregue una nueva clase denominada `Loan.cs`.</span><span class="sxs-lookup"><span data-stu-id="41184-124">Open the application in your editor, and add a new class named `Loan.cs`.</span></span>
+1. <span data-ttu-id="41184-125">Agregue el siguiente código a la clase `Loan`:</span><span class="sxs-lookup"><span data-stu-id="41184-125">Add the following code to your `Loan` class:</span></span>
+
+[!code-csharp[Loan class definition](../../../../../samples/csharp/serialization/Loan.cs#1)]
+
+<span data-ttu-id="41184-126">También tendrá que crear una aplicación que use la clase `Loan`.</span><span class="sxs-lookup"><span data-stu-id="41184-126">You will also have to create an application that uses the `Loan` class.</span></span>
+
+## <a name="serialize-the-loan-object"></a><span data-ttu-id="41184-127">Serializar el objeto Loan</span><span class="sxs-lookup"><span data-stu-id="41184-127">Serialize the loan object</span></span>
+
+1. <span data-ttu-id="41184-128">Abra `Program.cs`.</span><span class="sxs-lookup"><span data-stu-id="41184-128">Open `Program.cs`.</span></span> <span data-ttu-id="41184-129">Agregue el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="41184-129">Add the following code:</span></span>
+
+[!code-csharp[Create a loan object](../../../../../samples/csharp/serialization/Program.cs#1)]
+
+<span data-ttu-id="41184-130">Agregue un controlador de eventos del evento `PropertyChanged` y unas cuantas líneas para modificar el objeto `Loan` y ver los cambios.</span><span class="sxs-lookup"><span data-stu-id="41184-130">Add an event handler for the `PropertyChanged` event, and a few lines to modify the `Loan` object and display the changes.</span></span> <span data-ttu-id="41184-131">En el siguiente código puede ver las adiciones realizadas:</span><span class="sxs-lookup"><span data-stu-id="41184-131">You can see the additions in the following code:</span></span>
+
+[!code-csharp[Listening for the PropertyChanged event](../../../../../samples/csharp/serialization/Program.cs#2)]
+
+<span data-ttu-id="41184-132">Llegado este punto, puede ejecutar el código y ver el resultado actual:</span><span class="sxs-lookup"><span data-stu-id="41184-132">At this point, you can run the code, and see the current output:</span></span>
+
+```console
+New customer value: Henry Clay
+7.5
+7.1
+```
+
+<span data-ttu-id="41184-133">Si ejecuta esta aplicación repetidamente, verá que siempre escribe los mismos valores.</span><span class="sxs-lookup"><span data-stu-id="41184-133">Running this application repeatedly always writes the same values.</span></span> <span data-ttu-id="41184-134">Se creará un objeto Loan cada vez que ejecute el programa.</span><span class="sxs-lookup"><span data-stu-id="41184-134">A new Loan object is created every time you run the program.</span></span> <span data-ttu-id="41184-135">En el mundo real, las tasas de interés cambian periódicamente, pero no necesariamente cada vez que se ejecuta la aplicación.</span><span class="sxs-lookup"><span data-stu-id="41184-135">In the real world, interest rates change periodically, but not necessarily every time that the application is run.</span></span> <span data-ttu-id="41184-136">El código de serialización conlleva que se va a conservar la tasa de interés más reciente entre las instancias de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="41184-136">Serialization code means you preserve the most recent interest rate between instances of the application.</span></span> <span data-ttu-id="41184-137">En el paso siguiente, hará esto agregando la serialización a la clase Loan.</span><span class="sxs-lookup"><span data-stu-id="41184-137">In the next step, you will do just that by adding serialization to the Loan class.</span></span>
+
+## <a name="using-serialization-to-persist-the-object"></a><span data-ttu-id="41184-138">Usar la serialización para conservar el objeto</span><span class="sxs-lookup"><span data-stu-id="41184-138">Using Serialization to Persist the Object</span></span>
+
+<span data-ttu-id="41184-139">Para conservar los valores de la clase Loan, primero debe marcar la clase con el atributo `Serializable`.</span><span class="sxs-lookup"><span data-stu-id="41184-139">In order to persist the values for the Loan class, you must first mark the class with the `Serializable` attribute.</span></span> <span data-ttu-id="41184-140">Agregue el siguiente código encima de la declaración de la clase Loan:</span><span class="sxs-lookup"><span data-stu-id="41184-140">Add the following code above the Loan class definition:</span></span>
+
+[!code-csharp[Loan class definition](../../../../../samples/csharp/serialization/Loan.cs#2)]
+
+<span data-ttu-id="41184-141"><xref:System.SerializableAttribute> indica al compilador que todo el contenido de la clase se puede conservar en un archivo.</span><span class="sxs-lookup"><span data-stu-id="41184-141">The <xref:System.SerializableAttribute> tells the compiler that everything in the class can be persisted to a file.</span></span> <span data-ttu-id="41184-142">El evento `PropertyChanged` no representa la parte del gráfico de objeto que se debe almacenar, de modo que no se debería serializar.</span><span class="sxs-lookup"><span data-stu-id="41184-142">Because the `PropertyChanged` event does not represent part of the object graph that should be stored, it should not be serialized.</span></span> <span data-ttu-id="41184-143">Si lo hace, se serializarían todos los objetos que estén asociados a ese evento.</span><span class="sxs-lookup"><span data-stu-id="41184-143">Doing so would serialize all objects that are attached to that event.</span></span> <span data-ttu-id="41184-144">Puede agregar <xref:System.NonSerializedAttribute> a la declaración de campo del controlador de eventos `PropertyChanged`.</span><span class="sxs-lookup"><span data-stu-id="41184-144">You can add the <xref:System.NonSerializedAttribute> to the field declaration for the `PropertyChanged` event handler.</span></span>
+
+[!code-csharp[Disable serialization for the event handler](../../../../../samples/csharp/serialization/Loan.cs#3)]
+
+<span data-ttu-id="41184-145">A partir de C# 7.3, los atributos se pueden asociar al campo de respaldo de una propiedad implementada automáticamente usando el valor de destino `field`.</span><span class="sxs-lookup"><span data-stu-id="41184-145">Beginning with C# 7.3, you can attach attributes to the backing field of an auto-implemented property using the `field` target value.</span></span> <span data-ttu-id="41184-146">El siguiente código agrega una propiedad `TimeLastLoaded` y la marca como no serializable:</span><span class="sxs-lookup"><span data-stu-id="41184-146">The following code adds a `TimeLastLoaded` property and marks it as not serializable:</span></span>
+
+[!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/csharp/serialization/Loan.cs#4)]
+
+<span data-ttu-id="41184-147">El siguiente paso consiste en agregar el código de serialización a la aplicación LoanApp.</span><span class="sxs-lookup"><span data-stu-id="41184-147">The next step is to add the serialization code to the LoanApp application.</span></span> <span data-ttu-id="41184-148">Para serializar la clase y escribirla en un archivo, usaremos los espacios de nombres <xref:System.IO> y <xref:System.Runtime.Serialization.Formatters.Binary>.</span><span class="sxs-lookup"><span data-stu-id="41184-148">In order to serialize the class and write it to a file, you use the <xref:System.IO> and <xref:System.Runtime.Serialization.Formatters.Binary> namespaces.</span></span> <span data-ttu-id="41184-149">Para evitar escribir los nombres completos, puede agregar referencias a los espacios de nombres necesarios, tal y como se muestra en el siguiente código:</span><span class="sxs-lookup"><span data-stu-id="41184-149">To avoid typing the fully qualified names, you can add references to the necessary namespaces as shown in the following code:</span></span>
+
+[!code-csharp[Adding namespaces for serialization](../../../../../samples/csharp/serialization/Program.cs#3)]
+
+<span data-ttu-id="41184-150">El siguiente paso es agregar código para deserializar el objeto del archivo cuando el objeto se crea.</span><span class="sxs-lookup"><span data-stu-id="41184-150">The next step is to add code to deserialize the object from the file when the object is created.</span></span> <span data-ttu-id="41184-151">Agregue una constante a la clase para el nombre de archivo de los datos serializados, tal y como se muestra en el siguiente código:</span><span class="sxs-lookup"><span data-stu-id="41184-151">Add a constant to the class for the serialized data's file name as shown in the following code:</span></span>
+
+[!code-csharp[Define the name of the saved file](../../../../../samples/csharp/serialization/Program.cs#4)]
+
+<span data-ttu-id="41184-152">Luego, agregue el siguiente código después de la línea que crea el objeto `TestLoan`:</span><span class="sxs-lookup"><span data-stu-id="41184-152">Next, add the following code after the line that creates the `TestLoan` object:</span></span>
+
+[!code-csharp[Read from a file if it exists](../../../../../samples/csharp/serialization/Program.cs#5)]
+
+<span data-ttu-id="41184-153">Primero hay que confirmar que el archivo existe.</span><span class="sxs-lookup"><span data-stu-id="41184-153">You first must check that the file exists.</span></span> <span data-ttu-id="41184-154">Si existe, cree una clase <xref:System.IO.Stream> para leer el archivo binario y una clase <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> para traducirlo.</span><span class="sxs-lookup"><span data-stu-id="41184-154">If it exists, create a <xref:System.IO.Stream> class to read the binary file and a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> class to translate the file.</span></span> <span data-ttu-id="41184-155">También necesita convertir del tipo de secuencia al tipo de objeto Loan.</span><span class="sxs-lookup"><span data-stu-id="41184-155">You also need to convert from the stream type to the Loan object type.</span></span>
+
+<span data-ttu-id="41184-156">Luego, debemos agregar código para serializar la clase en un archivo.</span><span class="sxs-lookup"><span data-stu-id="41184-156">Next you must add code to serialize the class to a file.</span></span> <span data-ttu-id="41184-157">Agregue el siguiente código después del código existente en el método `Main`:</span><span class="sxs-lookup"><span data-stu-id="41184-157">Add the following code after the existing code in the `Main` method:</span></span>
+
+[!code-csharp[Save the existing Loan object](../../../../../samples/csharp/serialization/Program.cs#6)]
+
+<span data-ttu-id="41184-158">En este punto, podrá compilar y ejecutar la aplicación de nuevo.</span><span class="sxs-lookup"><span data-stu-id="41184-158">At this point, you can again build and run the application.</span></span> <span data-ttu-id="41184-159">La primera vez que se ejecuta, observe que el tipo de interés comienza en 7.5 y, después, pasa a 7.1.</span><span class="sxs-lookup"><span data-stu-id="41184-159">The first time it runs, notice that the interest rates starts at 7.5, and then changes to 7.1.</span></span> <span data-ttu-id="41184-160">Cierre la aplicación y, después, ejecútela de nuevo.</span><span class="sxs-lookup"><span data-stu-id="41184-160">Close the application and then run it again.</span></span> <span data-ttu-id="41184-161">Ahora, la aplicación muestra un mensaje que indica que se ha leído el archivo guardado y la tasa de interés es 7.1 incluso antes del código que la cambia.</span><span class="sxs-lookup"><span data-stu-id="41184-161">Now, the application prints the message that it has read the saved file, and the interest rate is 7.1 even before the code that changes it.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="41184-162">Vea también</span><span class="sxs-lookup"><span data-stu-id="41184-162">See also</span></span>
+
+ [<span data-ttu-id="41184-163">Serialización (C#)</span><span class="sxs-lookup"><span data-stu-id="41184-163">Serialization (C# )</span></span>](index.md)  
+ [<span data-ttu-id="41184-164">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="41184-164">C# Programming Guide</span></span>](../..//index.md)  

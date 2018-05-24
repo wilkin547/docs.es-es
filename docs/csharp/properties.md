@@ -1,175 +1,94 @@
 ---
 title: Propiedades
 description: Obtenga información sobre las propiedades de C#, que incluyen características para la validación, valores calculados, evaluación diferida y notificaciones de cambio de propiedad.
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
-ms.date: 04/03/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-ms.openlocfilehash: 05e51d527dc3c05301fc85d7717c751dc46bf9fa
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.date: 04/25/2018
+ms.openlocfilehash: d4fa7b6117bec63c41318dd4bcc3850ce55a5907
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="properties"></a><span data-ttu-id="4d988-104">Propiedades</span><span class="sxs-lookup"><span data-stu-id="4d988-104">Properties</span></span>
+# <a name="properties"></a><span data-ttu-id="2c3d5-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="2c3d5-103">Properties</span></span>
 
-<span data-ttu-id="4d988-105">Las propiedades son ciudadanos de primera clase en C#.</span><span class="sxs-lookup"><span data-stu-id="4d988-105">Properties are first class citizens in C#.</span></span> <span data-ttu-id="4d988-106">El lenguaje define la sintaxis que permite a los desarrolladores escribir código que exprese con precisión su intención de diseño.</span><span class="sxs-lookup"><span data-stu-id="4d988-106">The language defines syntax that enables developers to write code that accurately expresses their design intent.</span></span>
+<span data-ttu-id="2c3d5-104">Las propiedades son ciudadanos de primera clase en C#.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-104">Properties are first class citizens in C#.</span></span> <span data-ttu-id="2c3d5-105">El lenguaje define la sintaxis que permite a los desarrolladores escribir código que exprese con precisión su intención de diseño.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-105">The language defines syntax that enables developers to write code that accurately expresses their design intent.</span></span>
 
-<span data-ttu-id="4d988-107">Las propiedades se comportan como campos cuando se obtiene acceso a ellas.</span><span class="sxs-lookup"><span data-stu-id="4d988-107">Properties behave like fields when they are accessed.</span></span>
-<span data-ttu-id="4d988-108">Pero, a diferencia de los campos, las propiedades se implementan con descriptores de acceso que definen las instrucciones que se ejecutan cuando se tiene acceso a una propiedad o se asigna.</span><span class="sxs-lookup"><span data-stu-id="4d988-108">However, unlike fields, properties are implemented with accessors that define the statements executed when a property is accessed or assigned.</span></span>
+<span data-ttu-id="2c3d5-106">Las propiedades se comportan como campos cuando se obtiene acceso a ellas.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-106">Properties behave like fields when they are accessed.</span></span>
+<span data-ttu-id="2c3d5-107">Pero, a diferencia de los campos, las propiedades se implementan con descriptores de acceso que definen las instrucciones que se ejecutan cuando se tiene acceso a una propiedad o se asigna.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-107">However, unlike fields, properties are implemented with accessors that define the statements executed when a property is accessed or assigned.</span></span>
 
-## <a name="property-syntax"></a><span data-ttu-id="4d988-109">Sintaxis de propiedades</span><span class="sxs-lookup"><span data-stu-id="4d988-109">Property Syntax</span></span>
+## <a name="property-syntax"></a><span data-ttu-id="2c3d5-108">Sintaxis de las propiedades</span><span class="sxs-lookup"><span data-stu-id="2c3d5-108">Property syntax</span></span>
 
-<span data-ttu-id="4d988-110">La sintaxis para propiedades es una extensión natural de los campos.</span><span class="sxs-lookup"><span data-stu-id="4d988-110">The syntax for properties is a natural extension to fields.</span></span> <span data-ttu-id="4d988-111">Un campo define una ubicación de almacenamiento:</span><span class="sxs-lookup"><span data-stu-id="4d988-111">A field defines a storage location:</span></span>
+<span data-ttu-id="2c3d5-109">La sintaxis para propiedades es una extensión natural de los campos.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-109">The syntax for properties is a natural extension to fields.</span></span> <span data-ttu-id="2c3d5-110">Un campo define una ubicación de almacenamiento:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-110">A field defines a storage location:</span></span>
 
-```csharp
-public class Person
-{
-    public string FirstName;
-    // remaining implementation removed from listing
-}
-```
+[!code-csharp[Person class with public fields](../../samples/snippets/csharp/properties/Person.cs#1)]
 
-<span data-ttu-id="4d988-112">Una definición de propiedad contiene las declaraciones para un descriptor de acceso `get` y `set` que recupera y asigna el valor de esa propiedad:</span><span class="sxs-lookup"><span data-stu-id="4d988-112">A property definition contains declarations for a `get` and `set` accessor that retrieves and assigns the value of that property:</span></span>
+<span data-ttu-id="2c3d5-111">Una definición de propiedad contiene las declaraciones para un descriptor de acceso `get` y `set` que recupera y asigna el valor de esa propiedad:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-111">A property definition contains declarations for a `get` and `set` accessor that retrieves and assigns the value of that property:</span></span>
 
-```csharp
-public class Person
-{
-    public string FirstName { get; set; }
+[!code-csharp[Person class with public properties](../../samples/snippets/csharp/properties/Person.cs#2)]
 
-    // remaining implementation removed from listing
-}
-```
+<span data-ttu-id="2c3d5-112">La sintaxis anterior es la sintaxis *de propiedades automáticas*.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-112">The syntax shown above is the *auto property* syntax.</span></span> <span data-ttu-id="2c3d5-113">El compilador genera la ubicación de almacenamiento para el campo que respalda a la propiedad.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-113">The compiler generates the storage location for the field that backs up the property.</span></span> <span data-ttu-id="2c3d5-114">El compilador también implementa el cuerpo de los descriptores de acceso `get` y `set`.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-114">The compiler also implements the body of the `get` and `set` accessors.</span></span>
 
-<span data-ttu-id="4d988-113">La sintaxis anterior es la sintaxis *de propiedades automáticas*.</span><span class="sxs-lookup"><span data-stu-id="4d988-113">The syntax shown above is the *auto property* syntax.</span></span> <span data-ttu-id="4d988-114">El compilador genera la ubicación de almacenamiento para el campo que respalda a la propiedad.</span><span class="sxs-lookup"><span data-stu-id="4d988-114">The compiler generates the storage location for the field that backs up the property.</span></span> <span data-ttu-id="4d988-115">El compilador también implementa el cuerpo de los descriptores de acceso `get` y `set`.</span><span class="sxs-lookup"><span data-stu-id="4d988-115">The compiler also implements the body of the `get` and `set` accessors.</span></span>
+<span data-ttu-id="2c3d5-115">A veces, necesita inicializar una propiedad en un valor distinto del predeterminado para su tipo.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-115">Sometimes, you need to initialize a property to a value other than the default for its type.</span></span>  <span data-ttu-id="2c3d5-116">C# permite esto estableciendo un valor después de la llave de cierre de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-116">C# enables that by setting a value after the closing brace for the property.</span></span> <span data-ttu-id="2c3d5-117">Puede que prefiera que el valor inicial para la propiedad `FirstName` sea la cadena vacía en lugar de `null`.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-117">You may prefer the initial value for the `FirstName` property to be the empty string rather than `null`.</span></span> <span data-ttu-id="2c3d5-118">Debe especificarlo como se muestra a continuación:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-118">You would specify that as shown below:</span></span>
 
-<span data-ttu-id="4d988-116">A veces, necesita inicializar una propiedad en un valor distinto del predeterminado para su tipo.</span><span class="sxs-lookup"><span data-stu-id="4d988-116">Sometimes, you need to initialize a property to a value other than the default for its type.</span></span>  <span data-ttu-id="4d988-117">C# permite esto estableciendo un valor después de la llave de cierre de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="4d988-117">C# enables that by setting a value after the closing brace for the property.</span></span> <span data-ttu-id="4d988-118">Puede que prefiera que el valor inicial para la propiedad `FirstName` sea la cadena vacía en lugar de `null`.</span><span class="sxs-lookup"><span data-stu-id="4d988-118">You may prefer the initial value for the `FirstName` property to be the empty string rather than `null`.</span></span> <span data-ttu-id="4d988-119">Debe especificarlo como se muestra a continuación:</span><span class="sxs-lookup"><span data-stu-id="4d988-119">You would specify that as shown below:</span></span>
+[!code-csharp[Person class with properties and initializer](../../samples/snippets/csharp/properties/Person.cs#3)]
 
-```csharp
-public class Person
-{
-    public string FirstName { get; set; } = string.Empty;
+<span data-ttu-id="2c3d5-119">La inicialización específica es más útil en las propiedades de solo lectura, como verá posteriormente en este artículo.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-119">Specific initialization is most useful for read-only properties, as you'll see later in this article.</span></span>
 
-    // remaining implementation removed from listing
-}
-```
+<span data-ttu-id="2c3d5-120">También puede definir su propio almacenamiento, como se muestra a continuación:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-120">You can also define the storage yourself, as shown below:</span></span>
 
-<span data-ttu-id="4d988-120">Esto es más útil para las propiedades de solo lectura, como verá posteriormente en este tema.</span><span class="sxs-lookup"><span data-stu-id="4d988-120">This is most useful for read-only properties, as you'll see later in this topic.</span></span>
+[!code-csharp[Person class with properties and backing field](../../samples/snippets/csharp/properties/Person.cs#4)]
 
-<span data-ttu-id="4d988-121">También puede definir su propio almacenamiento, como se muestra a continuación:</span><span class="sxs-lookup"><span data-stu-id="4d988-121">You can also define the storage yourself, as shown below:</span></span>
+<span data-ttu-id="2c3d5-121">Cuando una implementación de propiedad es una expresión única, puede usar *miembros con forma de expresión* para el captador o establecedor:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-121">When a property implementation is a single expression, you can use *expression-bodied members* for the getter or setter:</span></span>
 
-```csharp
-public class Person
-{
-    public string FirstName
-    {
-        get { return firstName; }
-        set { firstName = value; }
-    }
-    private string firstName;
-    // remaining implementation removed from listing
-}
-```
+[!code-csharp[Person class with properties and expression bodied getters and setters](../../samples/snippets/csharp/properties/Person.cs#5)]
 
-<span data-ttu-id="4d988-122">Cuando una implementación de propiedad es una expresión única, puede usar *miembros con forma de expresión* para el captador o establecedor:</span><span class="sxs-lookup"><span data-stu-id="4d988-122">When a property implementation is a single expression, you can use *expression-bodied members* for the getter or setter:</span></span>
+<span data-ttu-id="2c3d5-122">Esta sintaxis simplificada se usará cuando sea necesario en todo el artículo.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-122">This simplified syntax will be used where applicable throughout this article.</span></span>
 
-```csharp
-public class Person
-{
-    public string FirstName
-    {
-        get => firstName;
-        set => firstName = value;
-    }
-    private string firstName;
-    // remaining implementation removed from listing
-}
-```
+<span data-ttu-id="2c3d5-123">La definición de propiedad anterior es una propiedad de lectura y escritura.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-123">The property definition shown above is a read-write property.</span></span> <span data-ttu-id="2c3d5-124">Observe la palabra clave `value` en el descriptor de acceso set.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-124">Notice the keyword `value` in the set accessor.</span></span> <span data-ttu-id="2c3d5-125">El descriptor de acceso `set` siempre tiene un único parámetro denominado `value`.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-125">The `set` accessor always has a single parameter named `value`.</span></span> <span data-ttu-id="2c3d5-126">El descriptor de acceso `get` tiene que devolver un valor que se pueda convertir al tipo de la propiedad (`string` en este ejemplo).</span><span class="sxs-lookup"><span data-stu-id="2c3d5-126">The `get` accessor must return a value that is convertible to the type of the property (`string` in this example).</span></span>
 
-<span data-ttu-id="4d988-123">Esta sintaxis simplificada se usará cuando sea necesario en todo el tema.</span><span class="sxs-lookup"><span data-stu-id="4d988-123">This simplified syntax will be used where applicable throughout this topic.</span></span>
+<span data-ttu-id="2c3d5-127">Estos son los conceptos básicos de la sintaxis.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-127">That's the basics of the syntax.</span></span> <span data-ttu-id="2c3d5-128">Hay muchas variantes distintas que admiten diversos lenguajes de diseño diferentes.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-128">There are many different variations that support a variety of different design idioms.</span></span> <span data-ttu-id="2c3d5-129">Vamos a explorarlas y a aprender las opciones de sintaxis de cada una.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-129">Let's explore, and learn the syntax options for each.</span></span>
 
-<span data-ttu-id="4d988-124">La definición de propiedad anterior es una propiedad de lectura y escritura.</span><span class="sxs-lookup"><span data-stu-id="4d988-124">The property definition shown above is a read-write property.</span></span> <span data-ttu-id="4d988-125">Observe la palabra clave `value` en el descriptor de acceso set.</span><span class="sxs-lookup"><span data-stu-id="4d988-125">Notice the keyword `value` in the set accessor.</span></span> <span data-ttu-id="4d988-126">El descriptor de acceso `set` siempre tiene un único parámetro denominado `value`.</span><span class="sxs-lookup"><span data-stu-id="4d988-126">The `set` accessor always has a single parameter named `value`.</span></span> <span data-ttu-id="4d988-127">El descriptor de acceso `get` tiene que devolver un valor que se pueda convertir al tipo de la propiedad (`string` en este ejemplo).</span><span class="sxs-lookup"><span data-stu-id="4d988-127">The `get` accessor must return a value that is convertible to the type of the property (`string` in this example).</span></span>
- 
-<span data-ttu-id="4d988-128">Estos son los conceptos básicos de la sintaxis.</span><span class="sxs-lookup"><span data-stu-id="4d988-128">That's the basics of the syntax.</span></span> <span data-ttu-id="4d988-129">Hay muchas variantes distintas que admiten diversos lenguajes de diseño diferentes.</span><span class="sxs-lookup"><span data-stu-id="4d988-129">There are many different variations that support a variety of different design idioms.</span></span> <span data-ttu-id="4d988-130">Vamos a explorarlos y a aprender las opciones de sintaxis de cada uno.</span><span class="sxs-lookup"><span data-stu-id="4d988-130">Let's explore those, and learn the syntax options for each.</span></span>
+## <a name="scenarios"></a><span data-ttu-id="2c3d5-130">Escenarios</span><span class="sxs-lookup"><span data-stu-id="2c3d5-130">Scenarios</span></span>
 
-## <a name="scenarios"></a><span data-ttu-id="4d988-131">Escenarios</span><span class="sxs-lookup"><span data-stu-id="4d988-131">Scenarios</span></span>
+<span data-ttu-id="2c3d5-131">Los ejemplos anteriores mostraron uno de los casos más simples de definición de propiedad: una propiedad de lectura y escritura sin validación.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-131">The examples above showed one of the simplest cases of property definition: a read-write property with no validation.</span></span> <span data-ttu-id="2c3d5-132">Al escribir el código que quiere en los descriptores de acceso `get` y `set`, puede crear muchos escenarios diferentes.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-132">By writing the code you want in the `get` and `set` accessors, you can create many different scenarios.</span></span>
 
-<span data-ttu-id="4d988-132">Los ejemplos anteriores mostraron uno de los casos más simples de definición de propiedad: una propiedad de lectura y escritura sin validación.</span><span class="sxs-lookup"><span data-stu-id="4d988-132">The examples above showed one of the simplest cases of property definition: a read-write property with no validation.</span></span> <span data-ttu-id="4d988-133">Al escribir el código que quiere en los descriptores de acceso `get` y `set`, puede crear muchos escenarios diferentes.</span><span class="sxs-lookup"><span data-stu-id="4d988-133">By writing the code you want in the `get` and `set` accessors, you can create many different scenarios.</span></span>
+### <a name="validation"></a><span data-ttu-id="2c3d5-133">Validación</span><span class="sxs-lookup"><span data-stu-id="2c3d5-133">Validation</span></span>
 
-### <a name="validation"></a><span data-ttu-id="4d988-134">Validación</span><span class="sxs-lookup"><span data-stu-id="4d988-134">Validation</span></span>
+<span data-ttu-id="2c3d5-134">Puede escribir código en el descriptor de acceso `set` para asegurarse de que los valores representados por una propiedad siempre son válidos.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-134">You can write code in the `set` accessor to ensure that the values represented by a property are always valid.</span></span> <span data-ttu-id="2c3d5-135">Por ejemplo, suponga que una regla para la clase `Person` es que el nombre no puede estar en blanco ni tener espacios en blanco.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-135">For example, suppose one rule for the `Person` class is that the name cannot be blank or white space.</span></span> <span data-ttu-id="2c3d5-136">Se escribiría de esta forma:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-136">You would write that as follows:</span></span>
 
-<span data-ttu-id="4d988-135">Puede escribir código en el descriptor de acceso `set` para asegurarse de que los valores representados por una propiedad siempre son válidos.</span><span class="sxs-lookup"><span data-stu-id="4d988-135">You can write code in the `set` accessor to ensure that the values represented by a property are always valid.</span></span> <span data-ttu-id="4d988-136">Por ejemplo, suponga que una regla para la clase `Person` es que el nombre no puede estar en blanco ni tener espacios en blanco.</span><span class="sxs-lookup"><span data-stu-id="4d988-136">For example, suppose one rule for the `Person` class is that the name cannot be blank or white space.</span></span> <span data-ttu-id="4d988-137">Se escribiría de esta forma:</span><span class="sxs-lookup"><span data-stu-id="4d988-137">You would write that as follows:</span></span>
+[!code-csharp[Validating property setters](../../samples/snippets/csharp/properties/Person.cs#6)]
 
-```csharp
-public class Person
-{
-    public string FirstName
-    {
-        get => firstName;
-        set
-        {
-            if (string.IsNullOrWhiteSpace(value))
-                throw new ArgumentException("First name must not be blank");
-            firstName = value;
-        }
-    }
-    private string firstName;
-    // remaining implementation removed from listing
-}
-```
+<span data-ttu-id="2c3d5-137">El ejemplo anterior se puede simplificar usando una expresión `throw` como parte de la validación del establecedor de propiedad:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-137">The preceding example can be simplified by using a`throw` expression as part of the property setter validation:</span></span>
 
-<span data-ttu-id="4d988-138">En el ejemplo anterior, se aplica la regla de que el nombre no debe estar en blanco ni tener espacios en blanco.</span><span class="sxs-lookup"><span data-stu-id="4d988-138">The example above enforces the rule that the first name must not be blank or white space.</span></span> <span data-ttu-id="4d988-139">Si un desarrollador escribe:</span><span class="sxs-lookup"><span data-stu-id="4d988-139">If a developer writes</span></span>
+[!code-csharp[Validating property setters](../../samples/snippets/csharp/properties/Person.cs#7)]
+
+<span data-ttu-id="2c3d5-138">En el ejemplo anterior, se aplica la regla de que el nombre no debe estar en blanco ni tener espacios en blanco.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-138">The example above enforces the rule that the first name must not be blank or white space.</span></span> <span data-ttu-id="2c3d5-139">Si un desarrollador escribe:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-139">If a developer writes</span></span>
 
 ```csharp
 hero.FirstName = "";
 ```
 
-<span data-ttu-id="4d988-140">Esa asignación produce una excepción `ArgumentException`.</span><span class="sxs-lookup"><span data-stu-id="4d988-140">That assignment throws an `ArgumentException`.</span></span> <span data-ttu-id="4d988-141">Dado que un descriptor de acceso set de propiedad debe tener un tipo de valor devuelto void, los errores se notifican en el descriptor de acceso set iniciando una excepción.</span><span class="sxs-lookup"><span data-stu-id="4d988-141">Because a property set accessor must have a void return type, you report errors in the set accessor by throwing an exception.</span></span>
+<span data-ttu-id="2c3d5-140">Esa asignación produce una excepción `ArgumentException`.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-140">That assignment throws an `ArgumentException`.</span></span> <span data-ttu-id="2c3d5-141">Dado que un descriptor de acceso set de propiedad debe tener un tipo de valor devuelto void, los errores se notifican en el descriptor de acceso set iniciando una excepción.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-141">Because a property set accessor must have a void return type, you report errors in the set accessor by throwing an exception.</span></span>
 
-<span data-ttu-id="4d988-142">Es un caso sencillo de validación.</span><span class="sxs-lookup"><span data-stu-id="4d988-142">That is a simple case of validation.</span></span> <span data-ttu-id="4d988-143">Se puede extender esta misma sintaxis para todo lo que se necesite en el escenario.</span><span class="sxs-lookup"><span data-stu-id="4d988-143">You can extend this same syntax to anything needed in your scenario.</span></span> <span data-ttu-id="4d988-144">Se pueden comprobar las relaciones entre las diferentes propiedades o validar con respecto a cualquier condición externa.</span><span class="sxs-lookup"><span data-stu-id="4d988-144">You can check the relationships between different properties, or validate against any external conditions.</span></span> <span data-ttu-id="4d988-145">Todas las instrucciones de C# válidas son válidas en un descriptor de acceso de propiedad.</span><span class="sxs-lookup"><span data-stu-id="4d988-145">Any valid C# statements are valid in a property accessor.</span></span>
+<span data-ttu-id="2c3d5-142">Se puede extender esta misma sintaxis para todo lo que se necesite en el escenario.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-142">You can extend this same syntax to anything needed in your scenario.</span></span> <span data-ttu-id="2c3d5-143">Se pueden comprobar las relaciones entre las diferentes propiedades o validar con respecto a cualquier condición externa.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-143">You can check the relationships between different properties, or validate against any external conditions.</span></span> <span data-ttu-id="2c3d5-144">Todas las instrucciones de C# válidas son válidas en un descriptor de acceso de propiedad.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-144">Any valid C# statements are valid in a property accessor.</span></span>
 
-### <a name="read-only"></a><span data-ttu-id="4d988-146">De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="4d988-146">Read-only</span></span>
+### <a name="read-only"></a><span data-ttu-id="2c3d5-145">De sólo lectura</span><span class="sxs-lookup"><span data-stu-id="2c3d5-145">Read-only</span></span>
 
-<span data-ttu-id="4d988-147">Hasta ahora, todas las definiciones de propiedad que se vieron son propiedades de lectura y escritura con descriptores de acceso públicos.</span><span class="sxs-lookup"><span data-stu-id="4d988-147">Up to this point, all the property definitions you have seen are read/write properties with public accessors.</span></span> <span data-ttu-id="4d988-148">No es la única accesibilidad válida para las propiedades.</span><span class="sxs-lookup"><span data-stu-id="4d988-148">That's not the only valid accessibility for properties.</span></span>
-<span data-ttu-id="4d988-149">Se pueden crear propiedades de solo lectura, o proporcionar accesibilidad diferente a los descriptores de acceso set y get.</span><span class="sxs-lookup"><span data-stu-id="4d988-149">You can create read-only properties, or give different accessibility to the set and get accessors.</span></span> <span data-ttu-id="4d988-150">Suponga que su clase `Person` solo debe habilitar el cambio del valor de la propiedad `FirstName` desde otros métodos de esa clase.</span><span class="sxs-lookup"><span data-stu-id="4d988-150">Suppose that your `Person` class should only enable changing the value of the `FirstName` property from other methods in that class.</span></span> <span data-ttu-id="4d988-151">Podría asignar al descriptor de acceso set la accesibilidad `private` en lugar de `public`:</span><span class="sxs-lookup"><span data-stu-id="4d988-151">You could give the set accessor `private` accessibility instead of `public`:</span></span>
+<span data-ttu-id="2c3d5-146">Hasta ahora, todas las definiciones de propiedad que se vieron son propiedades de lectura y escritura con descriptores de acceso públicos.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-146">Up to this point, all the property definitions you have seen are read/write properties with public accessors.</span></span> <span data-ttu-id="2c3d5-147">No es la única accesibilidad válida para las propiedades.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-147">That's not the only valid accessibility for properties.</span></span>
+<span data-ttu-id="2c3d5-148">Se pueden crear propiedades de solo lectura, o proporcionar accesibilidad diferente a los descriptores de acceso set y get.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-148">You can create read-only properties, or give different accessibility to the set and get accessors.</span></span> <span data-ttu-id="2c3d5-149">Suponga que su clase `Person` solo debe habilitar el cambio del valor de la propiedad `FirstName` desde otros métodos de esa clase.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-149">Suppose that your `Person` class should only enable changing the value of the `FirstName` property from other methods in that class.</span></span> <span data-ttu-id="2c3d5-150">Podría asignar al descriptor de acceso set la accesibilidad `private` en lugar de `public`:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-150">You could give the set accessor `private` accessibility instead of `public`:</span></span>
 
-```csharp
-public class Person
-{
-    public string FirstName { get; private set; }
+[!code-csharp[Using a private setter for a publicly readonly property](../../samples/snippets/csharp/properties/Person.cs#8)]
 
-    // remaining implementation removed from listing
-}
-```
+<span data-ttu-id="2c3d5-151">Ahora, se puede obtener acceso a la propiedad `FirstName` desde cualquier código, pero solo puede asignarse desde otro código de la clase `Person`.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-151">Now, the `FirstName` property can be accessed from any code, but it can only be assigned from other code in the `Person` class.</span></span>
 
-<span data-ttu-id="4d988-152">Ahora, se puede obtener acceso a la propiedad `FirstName` desde cualquier código, pero solo puede asignarse desde otro código de la clase `Person`.</span><span class="sxs-lookup"><span data-stu-id="4d988-152">Now, the `FirstName` property can be accessed from any code, but it can only be assigned from other code in the `Person` class.</span></span>
+<span data-ttu-id="2c3d5-152">Puede agregar cualquier modificador de acceso restrictivo al descriptor de acceso set o get.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-152">You can add any restrictive access modifier to either the set or get accessors.</span></span> <span data-ttu-id="2c3d5-153">Ningún modificador de acceso que se coloque en el descriptor de acceso concreto debe ser más limitado que el modificador de acceso en la definición de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-153">Any access modifier you place on the individual accessor must be more limited than the access modifier on the property definition.</span></span> <span data-ttu-id="2c3d5-154">El ejemplo anterior es válido porque la propiedad `FirstName` es `public`, pero el descriptor de acceso set es `private`.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-154">The above is legal because the `FirstName` property is `public`, but the set accessor is `private`.</span></span> <span data-ttu-id="2c3d5-155">No se puede declarar una propiedad `private` con un descriptor de acceso `public`.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-155">You could not declare a `private` property with a `public` accessor.</span></span> <span data-ttu-id="2c3d5-156">Las declaraciones de propiedad también se pueden declarar como `protected`, `internal`, `protected internal` o incluso `private`.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-156">Property declarations can also be declared `protected`, `internal`, `protected internal`, or, even `private`.</span></span>
 
-<span data-ttu-id="4d988-153">Puede agregar cualquier modificador de acceso restrictivo al descriptor de acceso set o get.</span><span class="sxs-lookup"><span data-stu-id="4d988-153">You can add any restrictive access modifier to either the set or get accessors.</span></span> <span data-ttu-id="4d988-154">Ningún modificador de acceso que se coloque en el descriptor de acceso concreto debe ser más limitado que el modificador de acceso en la definición de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="4d988-154">Any access modifier you place on the individual accessor must be more limited than the access modifier on the property definition.</span></span> <span data-ttu-id="4d988-155">El ejemplo anterior es válido porque la propiedad `FirstName` es `public`, pero el descriptor de acceso set es `private`.</span><span class="sxs-lookup"><span data-stu-id="4d988-155">The above is legal because the `FirstName` property is `public`, but the set accessor is `private`.</span></span> <span data-ttu-id="4d988-156">No se puede declarar una propiedad `private` con un descriptor de acceso `public`.</span><span class="sxs-lookup"><span data-stu-id="4d988-156">You could not declare a `private` property with a `public` accessor.</span></span> <span data-ttu-id="4d988-157">Las declaraciones de propiedad también se pueden declarar como `protected`, `internal`, `protected internal`, `private protected` o incluso `private`.</span><span class="sxs-lookup"><span data-stu-id="4d988-157">Property declarations can also be declared `protected`, `internal`, `protected internal`, `private protected` or even `private`.</span></span>   
+<span data-ttu-id="2c3d5-157">También es válido colocar el modificador más restrictivo en el descriptor de acceso `get`.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-157">It is also legal to place the more restrictive modifier on the `get` accessor.</span></span> <span data-ttu-id="2c3d5-158">Por ejemplo, se podría tener una propiedad `public`, pero restringir el descriptor de acceso `get` a `private`.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-158">For example, you could have a `public` property, but restrict the `get` accessor to `private`.</span></span> <span data-ttu-id="2c3d5-159">Ese escenario raramente se aplica en la práctica.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-159">That scenario is rarely done in practice.</span></span>
 
-<span data-ttu-id="4d988-158">También es válido colocar el modificador más restrictivo en el descriptor de acceso `get`.</span><span class="sxs-lookup"><span data-stu-id="4d988-158">It is also legal to place the more restrictive modifier on the `get` accessor.</span></span> <span data-ttu-id="4d988-159">Por ejemplo, se podría tener una propiedad `public`, pero restringir el descriptor de acceso `get` a `private`.</span><span class="sxs-lookup"><span data-stu-id="4d988-159">For example, you could have a `public` property, but restrict the `get` accessor to `private`.</span></span> <span data-ttu-id="4d988-160">Ese escenario raramente se aplica en la práctica.</span><span class="sxs-lookup"><span data-stu-id="4d988-160">That scenario is rarely done in practice.</span></span>
+<span data-ttu-id="2c3d5-160">También puede restringir las modificaciones de una propiedad, de manera que solo pueda establecerse en un constructor o en un inicializador de propiedades.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-160">You can also restrict modifications to a property so that it can only be set in a constructor or a property initializer.</span></span> <span data-ttu-id="2c3d5-161">Puede modificar la clase `Person` de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-161">You can modify the `Person` class so as follows:</span></span>
 
-<span data-ttu-id="4d988-161">También puede restringir las modificaciones de una propiedad, de manera que solo pueda establecerse en un constructor o en un inicializador de propiedades.</span><span class="sxs-lookup"><span data-stu-id="4d988-161">You can also restrict modifications to a property so that it can only be set in a constructor or a property initializer.</span></span> <span data-ttu-id="4d988-162">Puede modificar la clase `Person` de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="4d988-162">You can modify the `Person` class so as follows:</span></span>
+[!code-csharp[A readonly auto implemented property](../../samples/snippets/csharp/properties/Person.cs#9)]
 
-```csharp
-public class Person
-{
-    public Person(string firstName)
-    {
-        this.FirstName = firstName;
-    }
-
-    public string FirstName { get; }
-
-    // remaining implementation removed from listing
-}
-```
-
-<span data-ttu-id="4d988-163">Esta característica se usa normalmente para inicializar colecciones que están expuestas como propiedades de solo lectura:</span><span class="sxs-lookup"><span data-stu-id="4d988-163">This feature is most commonly used for initializing collections that are exposed as read-only properties:</span></span>
+<span data-ttu-id="2c3d5-162">Esta característica se usa normalmente para inicializar colecciones que están expuestas como propiedades de solo lectura:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-162">This feature is most commonly used for initializing collections that are exposed as read-only properties:</span></span>
 
 ```csharp
 public class Measurements
@@ -178,140 +97,54 @@ public class Measurements
 }
 ```
 
-### <a name="computed-properties"></a><span data-ttu-id="4d988-164">Propiedades calculadas</span><span class="sxs-lookup"><span data-stu-id="4d988-164">Computed Properties</span></span>
+### <a name="computed-properties"></a><span data-ttu-id="2c3d5-163">Propiedades calculadas</span><span class="sxs-lookup"><span data-stu-id="2c3d5-163">Computed properties</span></span>
 
-<span data-ttu-id="4d988-165">Una propiedad no tiene por qué devolver únicamente el valor de un campo de miembro.</span><span class="sxs-lookup"><span data-stu-id="4d988-165">A property does not need to simply return the value of a member field.</span></span> <span data-ttu-id="4d988-166">Se pueden crear propiedades que devuelvan un valor calculado.</span><span class="sxs-lookup"><span data-stu-id="4d988-166">You can create properties that return a computed value.</span></span> <span data-ttu-id="4d988-167">Vamos a ampliar el objeto `Person` para que devuelva el nombre completo, que se calcula mediante la concatenación del nombre y el apellido:</span><span class="sxs-lookup"><span data-stu-id="4d988-167">Let's expand the `Person` object to return the full name, computed by concatenating the first and last names:</span></span>
+<span data-ttu-id="2c3d5-164">Una propiedad no tiene por qué devolver únicamente el valor de un campo de miembro.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-164">A property does not need to simply return the value of a member field.</span></span> <span data-ttu-id="2c3d5-165">Se pueden crear propiedades que devuelvan un valor calculado.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-165">You can create properties that return a computed value.</span></span> <span data-ttu-id="2c3d5-166">Vamos a ampliar el objeto `Person` para que devuelva el nombre completo, que se calcula mediante la concatenación del nombre y el apellido:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-166">Let's expand the `Person` object to return the full name, computed by concatenating the first and last names:</span></span>
 
-```csharp
-public class Person
-{
-    public string FirstName { get; set; }
+[!code-csharp[A computed property](../../samples/snippets/csharp/properties/Person.cs#10)]
 
-    public string LastName { get; set; }
+<span data-ttu-id="2c3d5-167">En el ejemplo anterior se usa la característica de [interpolación de cadenas](../csharp/language-reference/tokens/interpolated.md) para crear la cadena con formato para el nombre completo.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-167">The example above uses the [string interpolation](../csharp/language-reference/tokens/interpolated.md) feature to create the formatted string for the full name.</span></span>
 
-    public string FullName { get { return $"{FirstName} {LastName}"; } }
-}
-```
+<span data-ttu-id="2c3d5-168">También se pueden usar un *miembro con forma de expresión*, que proporciona una manera más concisa de crear la propiedad `FullName` calculada:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-168">You can also use an *expression-bodied member*, which provides a more succinct way to create the computed `FullName` property:</span></span>
 
-<span data-ttu-id="4d988-168">En el ejemplo anterior se usa la característica de [interpolación de cadenas](../csharp/language-reference/tokens/interpolated.md) para crear la cadena con formato para el nombre completo.</span><span class="sxs-lookup"><span data-stu-id="4d988-168">The example above uses the [string interpolation](../csharp/language-reference/tokens/interpolated.md) feature to create the formatted string for the full name.</span></span>
+[!code-csharp[A computed property using an expression bodied member](../../samples/snippets/csharp/properties/Person.cs#11)]
 
-<span data-ttu-id="4d988-169">También se pueden usar *miembros con forma de expresión*, que proporcionan una manera más concisa de crear la propiedad `FullName` calculada:</span><span class="sxs-lookup"><span data-stu-id="4d988-169">You can also use *expression-bodied members*, which provides a more succinct way to create the computed `FullName` property:</span></span>
+<span data-ttu-id="2c3d5-169">Los *miembros con forma de expresión* usan la sintaxis de *expresión lambda* para definir métodos que contienen una única expresión.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-169">*Expression-bodied members* use the *lambda expression* syntax to define methods that contain a single expression.</span></span> <span data-ttu-id="2c3d5-170">En este caso, esa expresión devuelve el nombre completo para el objeto person.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-170">Here, that expression returns the full name for the person object.</span></span>
 
-```csharp
-public class Person
-{
-    public string FirstName { get; set; }
+### <a name="cached-evaluated-properties"></a><span data-ttu-id="2c3d5-171">Propiedades de evaluación en caché</span><span class="sxs-lookup"><span data-stu-id="2c3d5-171">Cached evaluated properties</span></span>
 
-    public string LastName { get; set; }
+<span data-ttu-id="2c3d5-172">Se puede combinar el concepto de una propiedad calculada con almacenamiento de información y crear una *propiedad de evaluación en caché*.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-172">You can mix the concept of a computed property with storage and create a *cached evaluated property*.</span></span>  <span data-ttu-id="2c3d5-173">Por ejemplo, se podría actualizar la propiedad `FullName` para que la cadena de formato solo apareciera la primera vez que se obtuvo acceso a ella:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-173">For example, you could update the `FullName` property so that the string formatting only happened the first time it was accessed:</span></span>
 
-    public string FullName =>  $"{FirstName} {LastName}";
-}
-```
- 
-<span data-ttu-id="4d988-170">Los *miembros con forma de expresión* usan la sintaxis de *expresión lambda* para definir un método que contiene una única expresión.</span><span class="sxs-lookup"><span data-stu-id="4d988-170">*Expression-bodied members* use the *lambda expression* syntax to define a method that contain a single expression.</span></span> <span data-ttu-id="4d988-171">En este caso, esa expresión devuelve el nombre completo para el objeto person.</span><span class="sxs-lookup"><span data-stu-id="4d988-171">Here, that expression returns the full name for the person object.</span></span>
+[!code-csharp[Caching the value of a computed property](../../samples/snippets/csharp/properties/Person.cs#12)]
 
-### <a name="lazy-evaluated-properties"></a><span data-ttu-id="4d988-172">Propiedades de evaluación diferida</span><span class="sxs-lookup"><span data-stu-id="4d988-172">Lazy Evaluated Properties</span></span>
+<span data-ttu-id="2c3d5-174">Pero el código anterior contiene un error.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-174">The above code contains a bug though.</span></span> <span data-ttu-id="2c3d5-175">Si el código actualiza el valor de la propiedad `FirstName` o `LastName`, el campo evaluado previamente `fullName` no es válido.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-175">If code updates the value of either the `FirstName` or `LastName` property, the previously evaluated `fullName` field is invalid.</span></span> <span data-ttu-id="2c3d5-176">Hay que modificar los descriptores de acceso `set` de la propiedad `FirstName` y `LastName` para que el campo `fullName` se calcule de nuevo:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-176">You modify the `set` accessors of the `FirstName` and `LastName` property so that the `fullName` field is calculated again:</span></span>
 
-<span data-ttu-id="4d988-173">Se puede combinar el concepto de una propiedad calculada con almacenamiento de información y crear una *propiedad de evaluación diferida*.</span><span class="sxs-lookup"><span data-stu-id="4d988-173">You can mix the concept of a computed property with storage and create a *lazy evaluated property*.</span></span>  <span data-ttu-id="4d988-174">Por ejemplo, se podría actualizar la propiedad `FullName` para que la cadena de formato solo apareciera la primera vez que se obtuvo acceso a ella:</span><span class="sxs-lookup"><span data-stu-id="4d988-174">For example, you could update the `FullName` property so that the string formatting only happened the first time it was accessed:</span></span>
+[!code-csharp[Invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#13)]
 
-```csharp
-public class Person
-{
-    public string FirstName { get; set; }
+<span data-ttu-id="2c3d5-177">Esta versión final da como resultado la propiedad `FullName` solo cuando sea necesario.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-177">This final version evaluates the `FullName` property only when needed.</span></span>
+<span data-ttu-id="2c3d5-178">Si la versión calculada previamente es válida, es la que se usa.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-178">If the previously calculated version is valid, it's used.</span></span> <span data-ttu-id="2c3d5-179">Si otro cambio de estado invalida la versión calculada previamente, se vuelve a calcular.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-179">If another state change invalidates the previously calculated version, it will be recalculated.</span></span> <span data-ttu-id="2c3d5-180">No es necesario que los desarrolladores que usan esta clase conozcan los detalles de la implementación.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-180">Developers that use this class do not need to know the details of the implementation.</span></span> <span data-ttu-id="2c3d5-181">Ninguno de estos cambios internos afectan al uso del objeto Person.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-181">None of these internal changes affect the use of the Person object.</span></span> <span data-ttu-id="2c3d5-182">Es el motivo principal para usar propiedades para exponer los miembros de datos de un objeto.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-182">That's the key reason for using Properties to expose data members of an object.</span></span>
 
-    public string LastName { get; set; }
+### <a name="attaching-attributes-to-auto-implemented-properties"></a><span data-ttu-id="2c3d5-183">Asociar atributos a propiedades implementadas automáticamente</span><span class="sxs-lookup"><span data-stu-id="2c3d5-183">Attaching attributes to auto-implemented properties</span></span>
 
-    private string fullName;
-    public string FullName
-    {
-        get
-        {
-            if (fullName == null)
-                fullName = $"{FirstName} {LastName}";
-            return fullName;
-        }
-    }
-}
-```
+<span data-ttu-id="2c3d5-184">A partir de C# 7.3, los atributos de campo se pueden conectar al campo de respaldo generado por el compilador en las propiedades implementadas automáticamente.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-184">Beginning with C# 7.3, field attributes can be attached to the compiler generated backing field in auto-implemented properties.</span></span> <span data-ttu-id="2c3d5-185">Por ejemplo, pensemos en una revisión de la clase `Person` que agrega una propiedad `Id` de entero único.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-185">For example, consider a revision to the `Person` class that adds a unique integer `Id` property.</span></span>
+<span data-ttu-id="2c3d5-186">Escribimos la propiedad `Id` usando una propiedad implementada automáticamente, pero el diseño no requiere que la propiedad `Id` se conserve.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-186">You write the`Id` property using an auto-implemented property, but your design does not call for persisting the `Id` property.</span></span> <span data-ttu-id="2c3d5-187"><xref:System.NonSerializedAttribute> solo se puede asociar a campos, no a propiedades.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-187">The <xref:System.NonSerializedAttribute> can only be attached to fields, not properties.</span></span> <span data-ttu-id="2c3d5-188"><xref:System.NonSerializedAttribute> se puede asociar al campo de respaldo de la propiedad `Id` usando el especificador `field:` en el atributo, como se muestra en el siguiente ejemplo:</span><span class="sxs-lookup"><span data-stu-id="2c3d5-188">You can attach the <xref:System.NonSerializedAttribute> to the backing field for the `Id` property by using the `field:` specifier on the attribute, as shown in the following example:</span></span>
 
-<span data-ttu-id="4d988-175">Pero el código anterior contiene un error.</span><span class="sxs-lookup"><span data-stu-id="4d988-175">The above code contains a bug though.</span></span> <span data-ttu-id="4d988-176">Si el código actualiza el valor de la propiedad `FirstName` o `LastName`, el campo evaluado previamente `fullName` no es válido.</span><span class="sxs-lookup"><span data-stu-id="4d988-176">If code updates the value of either the `FirstName` or `LastName` property, the previously evaluated `fullName` field is invalid.</span></span> <span data-ttu-id="4d988-177">Es necesario actualizar los descriptores de acceso `set` de la propiedad `FirstName` y `LastName` para que el campo `fullName` se calcule de nuevo:</span><span class="sxs-lookup"><span data-stu-id="4d988-177">You need to update the `set` accessors of the `FirstName` and `LastName` property so that the `fullName` field is calculated again:</span></span>
+[!code-csharp[Attaching attributes to a backing field](../../samples/snippets/csharp/properties/Person.cs#14)]
 
-```csharp
-public class Person
-{
-    private string firstName;
-    public string FirstName
-    {
-        get => firstName;
-        set
-        {
-            firstName = value;
-            fullName = null;
-        }
-    }
+<span data-ttu-id="2c3d5-189">Esta técnica funciona con cualquier atributo que se asocie al campo de respaldo en la propiedad implementada automáticamente.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-189">This technique works for any attribute you attach to the backing field on the auto-implemented property.</span></span>
 
-    private string lastName;
-    public string LastName
-    {
-        get => lastName;
-        set
-        {
-            lastName = value;
-            fullName = null;
-        }
-    }
+### <a name="implementing-inotifypropertychanged"></a><span data-ttu-id="2c3d5-190">Implementar INotifyPropertyChanged</span><span class="sxs-lookup"><span data-stu-id="2c3d5-190">Implementing INotifyPropertyChanged</span></span>
 
-    private string fullName;
-    public string FullName
-    {
-        get
-        {
-            if (fullName == null)
-                fullName = $"{FirstName} {LastName}";
-            return fullName;
-        }
-    }
-}
-```
+<span data-ttu-id="2c3d5-191">Un último escenario donde se necesita escribir código en un descriptor de acceso de propiedad es para admitir la interfaz <xref:System.ComponentModel.INotifyPropertyChanged> que se usa para notificar a los clientes de enlace de datos el cambio de un valor.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-191">A final scenario where you need to write code in a property accessor is to support the <xref:System.ComponentModel.INotifyPropertyChanged> interface used to notify data binding clients that a value has changed.</span></span> <span data-ttu-id="2c3d5-192">Cuando se cambia el valor de una propiedad, el objeto genera el evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged?displayProperty=nameWithType> para indicar el cambio.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-192">When the value of a property changes, the object raises the <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged?displayProperty=nameWithType> event to indicate the change.</span></span> <span data-ttu-id="2c3d5-193">A su vez, las bibliotecas de enlace de datos actualizan los elementos de visualización en función de ese cambio.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-193">The data binding libraries, in turn, update display elements based on that change.</span></span> <span data-ttu-id="2c3d5-194">El código siguiente muestra cómo se implementaría `INotifyPropertyChanged` para la propiedad `FirstName` de esta clase person.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-194">The code below shows how you would implement `INotifyPropertyChanged` for the `FirstName` property of this person class.</span></span>
 
-<span data-ttu-id="4d988-178">Esta versión final da como resultado la propiedad `FullName` solo cuando sea necesario.</span><span class="sxs-lookup"><span data-stu-id="4d988-178">This final version evaluates the `FullName` property only when needed.</span></span>
-<span data-ttu-id="4d988-179">Si la versión calculada previamente es válida, es la que se usa.</span><span class="sxs-lookup"><span data-stu-id="4d988-179">If the previously calculated version is valid, it's used.</span></span> <span data-ttu-id="4d988-180">Si otro cambio de estado invalida la versión calculada previamente, se vuelve a calcular.</span><span class="sxs-lookup"><span data-stu-id="4d988-180">If another state change invalidates the previously calculated version, it will be recalculated.</span></span> <span data-ttu-id="4d988-181">No es necesario que los desarrolladores que usan esta clase conozcan los detalles de la implementación.</span><span class="sxs-lookup"><span data-stu-id="4d988-181">Developers that use this class do not need to know the details of the implementation.</span></span> <span data-ttu-id="4d988-182">Ninguno de estos cambios internos afectan al uso del objeto Person.</span><span class="sxs-lookup"><span data-stu-id="4d988-182">None of these internal changes affect the use of the Person object.</span></span> <span data-ttu-id="4d988-183">Es el motivo principal para usar propiedades para exponer los miembros de datos de un objeto.</span><span class="sxs-lookup"><span data-stu-id="4d988-183">That's the key reason for using Properties to expose data members of an object.</span></span>
- 
-### <a name="inotifypropertychanged"></a><span data-ttu-id="4d988-184">INotifyPropertyChanged</span><span class="sxs-lookup"><span data-stu-id="4d988-184">INotifyPropertyChanged</span></span>
+[!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-<span data-ttu-id="4d988-185">Un último escenario donde se necesita escribir código en un descriptor de acceso de propiedad es para admitir la interfaz `INotifyPropertyChanged` que se usa para notificar a los clientes de enlace de datos el cambio de un valor.</span><span class="sxs-lookup"><span data-stu-id="4d988-185">A final scenario where you need to write code in a property accessor is to support the `INotifyPropertyChanged` interface used to notify data binding clients that a value has changed.</span></span> <span data-ttu-id="4d988-186">Cuando se cambia el valor de una propiedad, el objeto genera el evento `PropertyChanged` para indicar el cambio.</span><span class="sxs-lookup"><span data-stu-id="4d988-186">When the value of a property changes, the object raises the `PropertyChanged` event to indicate the change.</span></span> <span data-ttu-id="4d988-187">A su vez, las bibliotecas de enlace de datos actualizan los elementos de visualización en función de ese cambio.</span><span class="sxs-lookup"><span data-stu-id="4d988-187">The data binding libraries, in turn, update display elements based on that change.</span></span> <span data-ttu-id="4d988-188">El código siguiente muestra cómo se implementaría `INotifyPropertyChanged` para la propiedad `FirstName` de esta clase person.</span><span class="sxs-lookup"><span data-stu-id="4d988-188">The code below shows how you would implement `INotifyPropertyChanged` for the `FirstName` property of this person class.</span></span>
+<span data-ttu-id="2c3d5-195">El operador `?.` se denomina *operador condicional NULL*.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-195">The `?.` operator is called the *null conditional operator*.</span></span> <span data-ttu-id="2c3d5-196">Comprueba si existe una referencia nula antes de evaluar el lado derecho del operador.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-196">It checks for a null reference before evaluating the right side of the operator.</span></span> <span data-ttu-id="2c3d5-197">El resultado final es que si no hay ningún suscriptor para el evento `PropertyChanged`, no se ejecuta el código para generar el evento.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-197">The end result is that if there are no subscribers to the `PropertyChanged` event, the code to raise the event doesn't execute.</span></span> <span data-ttu-id="2c3d5-198">En ese caso, se producirá una `NullReferenceException` sin esta comprobación.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-198">It would throw a `NullReferenceException` without this check in that case.</span></span> <span data-ttu-id="2c3d5-199">Para obtener más información, vea [`events`](delegates-events.md).</span><span class="sxs-lookup"><span data-stu-id="2c3d5-199">For more information, see [`events`](delegates-events.md).</span></span> <span data-ttu-id="2c3d5-200">En este ejemplo también se usa el nuevo operador `nameof` para convertir el símbolo de nombre de propiedad en su representación de texto.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-200">This example also uses the new `nameof` operator to convert from the property name symbol to its text representation.</span></span>
+<span data-ttu-id="2c3d5-201">Con `nameof` se pueden reducir los errores en los que no se escribió correctamente el nombre de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-201">Using `nameof` can reduce errors where you have mistyped the name of the property.</span></span>
 
-```csharp
-public class Person : INotifyPropertyChanged
-{
-    public string FirstName
-    {
-        get => firstName;
-        set
-        {
-            if (string.IsNullOrWhiteSpace(value))
-                throw new ArgumentException("First name must not be blank");
-            if (value != firstName)
-            {
-                PropertyChanged?.Invoke(this, 
-                    new PropertyChangedEventArgs(nameof(FirstName)));
-            }
-            firstName = value;
-        }
-    }
-    private string firstName;
+<span data-ttu-id="2c3d5-202">De nuevo, la implementación de <xref:System.ComponentModel.INotifyPropertyChanged> es un ejemplo de un caso en el que se puede escribir código en los descriptores de acceso para admitir los escenarios que se necesitan.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-202">Again, implementing <xref:System.ComponentModel.INotifyPropertyChanged> is an example of a case where you can write code in your accessors to support the scenarios you need.</span></span>
 
-    public event PropertyChangedEventHandler PropertyChanged;
-    // remaining implementation removed from listing
-}
-```
+## <a name="summing-up"></a><span data-ttu-id="2c3d5-203">Resumen</span><span class="sxs-lookup"><span data-stu-id="2c3d5-203">Summing up</span></span>
 
-<span data-ttu-id="4d988-189">El operador `?.` se denomina *operador condicional NULL*.</span><span class="sxs-lookup"><span data-stu-id="4d988-189">The `?.` operator is called the *null conditional operator*.</span></span> <span data-ttu-id="4d988-190">Comprueba si existe una referencia nula antes de evaluar el lado derecho del operador.</span><span class="sxs-lookup"><span data-stu-id="4d988-190">It checks for a null reference before evaluating the right side of the operator.</span></span> <span data-ttu-id="4d988-191">El resultado final es que si no hay ningún suscriptor para el evento `PropertyChanged`, no se ejecuta el código para generar el evento.</span><span class="sxs-lookup"><span data-stu-id="4d988-191">The end result is that if there are no subscribers to the `PropertyChanged` event, the code to raise the event doesn't execute.</span></span> <span data-ttu-id="4d988-192">En ese caso, se producirá una `NullReferenceException` sin esta comprobación.</span><span class="sxs-lookup"><span data-stu-id="4d988-192">It would throw a `NullReferenceException` without this check in that case.</span></span> <span data-ttu-id="4d988-193">Para obtener más detalles, vea la página sobre [`events`](delegates-events.md).</span><span class="sxs-lookup"><span data-stu-id="4d988-193">See the page on [`events`](delegates-events.md) for more details.</span></span> <span data-ttu-id="4d988-194">En este ejemplo también se usa el nuevo operador `nameof` para convertir el símbolo de nombre de propiedad en su representación de texto.</span><span class="sxs-lookup"><span data-stu-id="4d988-194">This example also uses the new `nameof` operator to convert from the property name symbol to its text representation.</span></span>
-<span data-ttu-id="4d988-195">Con `nameof` se pueden reducir los errores en los que no se escribió correctamente el nombre de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="4d988-195">Using `nameof` can reduce errors where you have mistyped the name of the property.</span></span>
-
-<span data-ttu-id="4d988-196">De nuevo, es un ejemplo de un caso en el que se puede escribir código en los descriptores de acceso para admitir los escenarios que se necesitan.</span><span class="sxs-lookup"><span data-stu-id="4d988-196">Again, this is an example of a case where you can write code in your accessors to support the scenarios you need.</span></span>
-
-## <a name="summing-up"></a><span data-ttu-id="4d988-197">Resumen</span><span class="sxs-lookup"><span data-stu-id="4d988-197">Summing up</span></span>
-
-<span data-ttu-id="4d988-198">Las propiedades son una forma de campos inteligentes en una clase o un objeto.</span><span class="sxs-lookup"><span data-stu-id="4d988-198">Properties are a form of smart fields in a class or object.</span></span> <span data-ttu-id="4d988-199">Desde fuera del objeto, parecen campos en el objeto.</span><span class="sxs-lookup"><span data-stu-id="4d988-199">From outside the object, they appear like fields in the object.</span></span> <span data-ttu-id="4d988-200">Pero las propiedades pueden implementarse mediante la paleta completa de funcionalidad de C#.</span><span class="sxs-lookup"><span data-stu-id="4d988-200">However, properties can be implemented using the full palette of C# functionality.</span></span>
-<span data-ttu-id="4d988-201">Se puede proporcionar validación, tipos diferentes de accesibilidad, evaluación diferida o los requisitos que se necesiten para cada escenario.</span><span class="sxs-lookup"><span data-stu-id="4d988-201">You can provide validation, different accessibility, lazy evaluation, or any requirements your scenarios need.</span></span>
+<span data-ttu-id="2c3d5-204">Las propiedades son una forma de campos inteligentes en una clase o un objeto.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-204">Properties are a form of smart fields in a class or object.</span></span> <span data-ttu-id="2c3d5-205">Desde fuera del objeto, parecen campos en el objeto.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-205">From outside the object, they appear like fields in the object.</span></span> <span data-ttu-id="2c3d5-206">Pero las propiedades pueden implementarse mediante la paleta completa de funcionalidad de C#.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-206">However, properties can be implemented using the full palette of C# functionality.</span></span>
+<span data-ttu-id="2c3d5-207">Se puede proporcionar validación, tipos diferentes de accesibilidad, evaluación diferida o los requisitos que se necesiten para cada escenario.</span><span class="sxs-lookup"><span data-stu-id="2c3d5-207">You can provide validation, different accessibility, lazy evaluation, or any requirements your scenarios need.</span></span>
