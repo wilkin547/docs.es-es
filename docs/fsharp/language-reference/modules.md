@@ -2,11 +2,11 @@
 title: Módulos (F#)
 description: 'Obtenga información acerca de cómo un módulo de F # es una agrupación de código de F #, como valores, tipos y valores de función, en un programa en F #.'
 ms.date: 04/24/2017
-ms.openlocfilehash: ddb6a0762171f8acc94f0ba0cf29c4b6b3e4990e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 9a1416321e392f7a06551b4a7e3429e3a2d023bd
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="modules"></a>Módulos
 
@@ -131,6 +131,6 @@ Esta funcionalidad también es posible en [espacios de nombres](namespaces.md) c
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia del lenguaje F #](index.md)
-[espacios de nombres](namespaces.md)
-[F # RFC FS-1009 - permitir módulos y tipos mutuamente referenciales a través de ámbitos mayores de archivos](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+[Referencia del lenguaje F#](index.md)  
+[Espacios de nombres](namespaces.md)  
+[F # RFC FS-1009 - permitir módulos y tipos mutuamente referenciales a través de ámbitos mayores de archivos](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  
