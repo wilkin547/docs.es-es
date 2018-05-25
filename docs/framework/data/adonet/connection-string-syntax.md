@@ -1,12 +1,12 @@
 ---
 title: Sintaxis de cadenas de conexión
-ms.date: 03/30/2017
+ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: ac7053d1b1b0865f33ae1bcd955493b4c62c7be6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1df49a9ed5d45a1a1ee50145ff036c98ec72cca8
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="connection-string-syntax"></a>Sintaxis de cadenas de conexión
 Cada proveedor de datos .NET Framework tiene un objeto `Connection` que hereda de la clase <xref:System.Data.Common.DbConnection>, así como una propiedad <xref:System.Data.Common.DbConnection.ConnectionString%2A> específica del proveedor. La sintaxis de la cadena de conexión específica de cada proveedor se indica en su propiedad `ConnectionString`. En la tabla siguiente se muestran los cuatro proveedores de datos que se incluyen en .NET Framework.  
@@ -112,11 +112,11 @@ A la hora de crear una cadena de conexión, también puede establecer la propied
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |No|N/D|No (opción predeterminada)|Se ignora.|No se produce cifrado.|  
 |No|N/D|Sí|No (opción predeterminada)|Solo se produce cifrado si hay un certificado de servidor que se pueda comprobar; de lo contrario, el intento de conexión genera un error.|  
-|No|N/D|Sí|Sí|Solo se produce cifrado si hay un certificado de servidor que se pueda comprobar; de lo contrario, el intento de conexión genera un error.|  
-|Sí|No|Se ignora.|Se ignora.|Solo se produce cifrado si hay un certificado de servidor que se pueda comprobar; de lo contrario, el intento de conexión genera un error.|  
-|Sí|Sí|No (opción predeterminada)|Se ignora.|Solo se produce cifrado si hay un certificado de servidor que se pueda comprobar; de lo contrario, el intento de conexión genera un error.|  
-|Sí|Sí|Sí|No (opción predeterminada)|Solo se produce cifrado si hay un certificado de servidor que se pueda comprobar; de lo contrario, el intento de conexión genera un error.|  
-|Sí|Sí|Sí|Sí|Solo se produce cifrado si hay un certificado de servidor que se pueda comprobar; de lo contrario, el intento de conexión genera un error.|  
+|No|N/D|Sí|Sí|Cifrado siempre se produce, pero puede utilizar un certificado de servidor autofirmado.|  
+|Sí|No|Se ignora.|Se ignora.|El cifrado se realiza solo si hay un certificado de servidor comprobable; en caso contrario, se produce un error en el intento de conexión.|  
+|Sí|Sí|No (opción predeterminada)|Se ignora.|Cifrado siempre se produce, pero puede utilizar un certificado de servidor autofirmado.|  
+|Sí|Sí|Sí|No (opción predeterminada)|El cifrado se realiza solo si hay un certificado de servidor comprobable; en caso contrario, se produce un error en el intento de conexión.|  
+|Sí|Sí|Sí|Sí|Cifrado siempre se produce, pero puede utilizar un certificado de servidor autofirmado.|  
   
  Para obtener más información, consulte [utilizar el cifrado sin validación](http://go.microsoft.com/fwlink/?LinkId=120500) en libros en pantalla de SQL Server.  
   
