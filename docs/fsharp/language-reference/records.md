@@ -2,11 +2,11 @@
 title: Registros (F#)
 description: 'Obtenga información acerca de cómo F # registros representan agregados simples de valores con nombre, opcionalmente con miembros.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 5bd1f76937bf5839b7da5cae7dea578747ec9b99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffb853ee11ff8cacb45dadf6ef14a4f29400aad4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="records"></a>Registros
 
@@ -16,15 +16,15 @@ Los registros representan agregados simples de valores con nombre, opcionalmente
 
 ```fsharp
 [ attributes ]
-type [accessibility-modifier] typename = {
-    [ mutable ] label1 : type1;
-    [ mutable ] label2 : type2;
-    ...
-}
+type [accessibility-modifier] typename =
+    { [ mutable ] label1 : type1;
+      [ mutable ] label2 : type2;
+      ... }
     [ member-list ]
 ```
 
 ## <a name="remarks"></a>Comentarios
+
 En la sintaxis anterior, *typename* es el nombre del tipo de registro, *label1* y *label2* son nombres de valores, denominados *etiquetas*, y *type1* y *type2* son los tipos de estos valores. *lista de miembros* es la lista opcional de miembros para el tipo.  Puede usar el `[<Struct>]` atributo para crear un registro de struct en lugar de un registro que es un tipo de referencia.
 
 Estos son algunos ejemplos.
@@ -48,6 +48,7 @@ Las etiquetas del tipo declarado más recientemente tienen prioridad frente a la
 Métodos pueden definirse para tipos de registros, como ocurre con los tipos de clase.
 
 ## <a name="creating-records-by-using-record-expressions"></a>Creación de registros mediante expresiones de registro
+
 Puede inicializar los registros mediante el uso de las etiquetas que se definen en el registro. Una expresión que hace esto se conoce como un *grabar expresión*. Use llaves para incluir la expresión de registro y utilice el punto y coma como delimitador.
 
 En el ejemplo siguiente se muestra cómo crear un registro.
@@ -77,20 +78,19 @@ No utilice el atributo DefaultValue con campos de registro. Un enfoque más adec
 ```fsharp
 // Rather than use [<DefaultValue>], define a default record.
 type MyRecord =
-{
-    field1 : int
-    field2 : int
-}
+    { Field1 : int
+      Field2 : int }
 
-let defaultRecord1 = { field1 = 0; field2 = 0 }
-let defaultRecord2 = { field1 = 1; field2 = 25 }
+let defaultRecord1 = { Field1 = 0; Field2 = 0 }
+let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 
 // Use the with keyword to populate only a few chosen fields
 // and leave the rest with default values.
-let rr3 = { defaultRecord1 with field2 = 42 }
+let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
 
 ## <a name="pattern-matching-with-records"></a>Coincidencia de patrones con registros
+
 Registros pueden utilizarse con coincidencia de patrones. Puede especificar algunos campos explícitamente y proporcionar variables para otros campos que se va a asignar cuando se produce una coincidencia. En el siguiente ejemplo código se muestra cómo hacerlo.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
@@ -104,17 +104,25 @@ Point is at (10.000000, 0.000000, -1.000000).
 ```
 
 ## <a name="differences-between-records-and-classes"></a>Diferencias entre las clases y los registros
+
 Campos de registro difieren de las clases en cuanto automáticamente se exponen como propiedades, y se usan en la creación y copia de registros. La construcción de registros también difiere de la construcción de la clase. En un tipo de registro, no se puede definir un constructor. En su lugar, se aplica la sintaxis de construcción descrita en este tema. Clases no tienen ninguna relación directa entre los parámetros del constructor, campos y propiedades.
 
 Al igual que los tipos de estructura y unión, los registros tienen una semántica de igualdad estructural. Las clases tienen referencia semántica de igualdad. El siguiente ejemplo de código muestra esto.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
+El resultado de este código es como sigue:
+
+```
+The records are equal.
+```
+
 Si escribe el mismo código con clases, los dos objetos de clase serían desiguales porque los dos valores representarían dos objetos en el montón y solo las direcciones se compararía (a menos que el tipo de clase invalide la `System.Object.Equals` método).
 
 Si necesita hacer referencia a igualdad para los registros, agregue el atributo `[<ReferenceEquality>]` anteriormente el registro.
 
 ## <a name="see-also"></a>Vea también
+
 [Tipos en F#](fsharp-types.md)
 
 [Clases](classes.md)
