@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: ca70f0c8237a5d9cc4ad9e0bb8c1947c871ce064
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 659562864ad323162f15351aa960c2a54164c77d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Procesar el archivo XML (Guía de programación de C#)
 El compilador genera una cadena de identificador para cada construcción del código que se etiqueta para generar documentación. (Para más información sobre cómo etiquetar el código, vea [Etiquetas recomendadas para comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)). La cadena de identificador identifica la construcción de forma exclusiva. Los programas que procesan el archivo XML pueden usar la cadena de identificador para identificar el elemento de reflexión o de metadatos correspondiente de .NET Framework al que se aplica la documentación.  
@@ -40,7 +40,7 @@ El compilador genera una cadena de identificador para cada construcción del có
   
     -   Los tipos intrínsecos (por ejemplo, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF y ELEMENT_TYPE_VOID) se representan como el nombre completo del tipo completo correspondiente. Por ejemplo, System.Int32 o System.TypedReference.  
   
-    -   ELEMENT_TYPE_PTR se representa como un "*" después del tipo modificado.  
+    -   ELEMENT_TYPE_PTR se representa como un "\*" después del tipo modificado.  
   
     -   ELEMENT_TYPE_BYREF se representa como un "\@" después del tipo modificado.  
   
@@ -68,11 +68,11 @@ El compilador genera una cadena de identificador para cada construcción del có
   
 -   Solo para los operadores de conversión (op_Implicit y op_Explicit), el valor devuelto del método se codifica como "~" seguido de un tipo de valor devuelto, como se ha codificado anteriormente.  
   
--   Para tipos genéricos, el nombre del tipo irá seguido de una tilde aguda y después de un número que indica el número de parámetros de tipo genérico.  Por ejemplo,  
+-   Para tipos genéricos, el nombre del tipo está seguido de una tilde aguda y después de un número que indica el número de parámetros de tipo genérico. Por ejemplo:
   
      ``<member name="T:SampleClass`2">`` es la etiqueta de un tipo que se define como `public class SampleClass<T, U>`.  
   
-     Para los métodos que usan tipos genéricos como parámetros, los parámetros de tipo genérico se especifican como números precedidos por tildes agudas (por ejemplo, \`0,`1).  Cada número representa una notación de matriz de base cero para los parámetros genéricos del tipo.  
+     Para los métodos que usan tipos genéricos como parámetros, los parámetros de tipo genérico se especifican como números precedidos por tildes agudas (por ejemplo, \`0,\`1). Cada número representa una notación de matriz de base cero para los parámetros genéricos del tipo.  
   
 ## <a name="examples"></a>Ejemplos  
  En los ejemplos siguientes se muestra cómo se generarían las cadenas de identificador para una clase y sus miembros:  

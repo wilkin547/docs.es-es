@@ -20,14 +20,17 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573a3e954bf15bdbcf8b1885c10f68a222329ac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Cómo: Comprobar si las cadenas tienen un formato de correo electrónico válido
 En el ejemplo siguiente se usa una expresión regular para comprobar que una cadena tiene un formato de correo electrónico válido.  
+
+> [!NOTE]
+>  Se recomienda utilizar la clase <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> para comprobar si una cadena está en un formato de dirección de correo electrónico válido. Para ello, pase la cadena de dirección de correo electrónico al constructor de la clase <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType>, que inicia una <xref:System.FormatException> si la cadena tiene un formato no reconocido.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo se define un método `IsValidEmail` , que devuelve `true` si la cadena contiene una dirección de correo electrónico válida y `false` si no es válida, pero no realiza ninguna otra acción.  
@@ -67,9 +70,6 @@ En el ejemplo siguiente se usa una expresión regular para comprobar que una cad
 |<code>&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+</code>|Si el carácter que va detrás de @ no es un corchete de apertura, buscar un carácter alfanumérico con un valor de la A a la Z, de la a a la z o del 0 al 9, seguido de cero o más apariciones de un guión, seguido de cero o de un carácter alfanumérico con un valor de la A a la Z, de la a a la z o del 0 al 9, seguido de un punto. Este patrón se puede repetir una o más veces y debe ir seguido del nombre de dominio de nivel superior.|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|El nombre de dominio de nivel superior debe empezar y finalizar por un carácter alfanumérico (a-z, A-Z y 0-9). También puede incluir de cero a 22 caracteres ASCII que sean alfanuméricos o guiones.|  
 |`$`|Finalizar la búsqueda al final de la cadena.|  
-  
-> [!NOTE]
->  En lugar de usar una expresión regular para validar una dirección de correo electrónico, puede usar la clase <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType>. Para determinar si una dirección de correo es válida, pase la dirección al constructor de clases <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType>.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Los métodos `IsValidEmail` y `DomainMapper` pueden estar incluidos en una biblioteca de métodos de la utilidad de expresiones regulares o pueden incluirse como métodos estáticos o de instancia privados en la clase de aplicación.  

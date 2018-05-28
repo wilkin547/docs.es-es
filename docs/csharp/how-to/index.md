@@ -2,11 +2,11 @@
 title: Artículos de procedimientos (guía de C#)
 description: Colección de sugerencias rápidas y ejemplos de código breves y concisos.
 ms.date: 12/20/2017
-ms.openlocfilehash: b8164abd84647fc9118acc6e0b84e7fd46838fe9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-c"></a>Procedimientos (C#)
 
@@ -43,9 +43,8 @@ Cree clases y estructuras para implementar su programa. Estas técnicas suelen u
 Estos artículos le ayudarán a trabajar con colecciones de datos.
 
 - [Inicialice un diccionario con un inicializador de colección](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md).
-- [Acceda a todos los elementos de una colección mediante `foreach`](../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md).
 
-## <a name="strings"></a>cadenas
+## <a name="working-with-strings"></a>Trabajo con cadenas
 
 Las cadenas son el tipo de datos básico que se usa para mostrar o manipular texto. En estos artículos se muestran prácticas habituales con cadenas.
 
