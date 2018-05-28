@@ -14,7 +14,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 583cfb6e3a5145c6c0dfc82ec9ff64c6d87414ba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
 ---
@@ -45,16 +45,16 @@ Se describe la asignación entre las excepciones y los valores HRESULT.
 Describe los contenedores proporcionados por la interoperabilidad COM.
 
 [Equivalencia de tipos y tipos de interoperabilidad incrustados](type-equivalence-and-embedded-interop-types.md)  
-Describe cómo se incrusta información de tipos COM en los ensamblados y cómo common language runtime determina la equivalencia de tipos COM incrustados.
+Describe cómo la información de tipo para tipos COM está insertada en los ensamblados y cómo Common Language Runtime determina la equivalencia de los tipos COM insertados.
 
 [Cómo: Generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
-Describe cómo generar ensamblados de interoperabilidad primarios mediante *Tlbimp.exe* (importador de la biblioteca de tipos).
+Describe cómo producir ensamblados de interoperabilidad primarios con *Tlbimp.exe*  (importador de bibliotecas de tipos).
 
 [Cómo: Registrar ensamblados de interoperabilidad primarios](how-to-register-primary-interop-assemblies.md)  
-Describe cómo registrar los ensamblados de interoperabilidad primarios antes de hacer referencia a ellos en sus proyectos.
+Describe cómo registrar los ensamblados de interoperabilidad primarios antes de hacer referencia a ellos en los proyectos.
 
 [Interoperabilidad COM sin registro](registration-free-com-interop.md)  
-Describe cómo la interoperabilidad COM puede activar componentes sin usar el registro de Windows.
+Describe cómo la interoperabilidad COM puede activar componentes sin usar el Registro de Windows.
 
 [Cómo: Configurar componentes COM basados en .NET Framework para la activación sin registro](configure-net-framework-based-com-components-for-reg.md)  
-Describe cómo crear un manifiesto de aplicación y cómo crear e incrustar un manifiesto de componente.
+Describe cómo crear un manifiesto de aplicación y cómo crear e insertar un manifiesto de componente.

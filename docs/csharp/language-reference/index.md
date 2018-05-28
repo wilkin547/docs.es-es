@@ -8,11 +8,11 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 7ed85e294e25535f7600dab425a74adbbdbc4bc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9400c2836d923fe92ed88ec947a1953800bc47d
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="c-reference"></a>Referencia de C#
 En esta sección se proporciona material de referencia sobre palabras clave, operadores, caracteres especiales, directivas de preprocesador, opciones del compilador y errores y advertencias del compilador de C#.  
@@ -37,11 +37,12 @@ En esta sección se proporciona material de referencia sobre palabras clave, ope
  Incluye fragmentos de código que muestran la causa y la corrección de errores y advertencias del compilador de C#.  
   
  [Especificación del lenguaje C#](../../csharp/language-reference/language-specification/index.md)  
- Ofrece punteros a la versión más reciente de la especificación de lenguaje de C# en formato Microsoft Word.  
+ Proporciona vínculos a las últimas versiones de la especificación del lenguaje C#.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
 
- [C#](../../csharp/index.md) Ofrece un portal para la documentación de Visual C#.  
+ [Guía de C#](../../csharp/index.md)  
+ Ofrece un portal para la documentación de Visual C#.  
   
  [Usar el entorno de desarrollo de Visual C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  Ofrece vínculos para los temas de tareas y conceptos y temas que describen el IDE y el Editor.  
