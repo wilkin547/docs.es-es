@@ -2,11 +2,11 @@
 title: Colecciones (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 85cbabf74a702a4d6442a29c3cf3d7b726ab38da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7400d4eee4df99cb1e255e428f83028fddf481f4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="collections-c"></a>Colecciones (C#)
 Para muchas aplicaciones, puede que desee crear y administrar grupos de objetos relacionados. Existen dos formas de agrupar objetos: mediante la creación de matrices de objetos y con la creación de colecciones de objetos.  
@@ -460,7 +460,7 @@ public class Car : IComparable<Car>
   
 <a name="BKMK_CustomCollection"></a>
 ## <a name="defining-a-custom-collection"></a>Definición de una colección personalizada  
- Puede definir una colección implementando la interfaz <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.IEnumerable>. Para obtener más información, vea [How to: Access a Collection Class with foreach](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md) (Cómo: Obtener acceso a una clase de colección mediante Foreach).  
+ Puede definir una colección implementando la interfaz <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.IEnumerable>.  
   
  Aunque puede definir una colección personalizada, es mejor usar las colecciones incluidas en .NET Framework. Estas colecciones se describen en la sección [Tipos de colecciones](#BKMK_KindsOfCollections) de este tema.  
   
@@ -585,4 +585,3 @@ private static IEnumerable<int> EvenSequence(
  [Seleccionar una clase de colección](../../../standard/collections/selecting-a-collection-class.md)  
  [Comparaciones y ordenaciones en colecciones](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Cuándo utilizar colecciones genéricas](../../../standard/collections/when-to-use-generic-collections.md)  
- [Cómo: Obtener acceso a una clase de colección mediante Foreach](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)
