@@ -1,6 +1,6 @@
 ---
 title: foreach, in (Referencia de C#)
-ms.date: 10/11/2017
+ms.date: 05/24/2018
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,61 +9,44 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: c0b1481988a2e3199fc6d06ca30cb5194ab2f44c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: b6b7dc0a4d3970ddfbbb6635ccebbbd5b75671e4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/18/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549389"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Referencia de C#)
 
-La instrucción `foreach` repite un grupo de instrucciones insertadas por cada elemento de una matriz o una colección de objetos que implementa la interfaz <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. La [instrucción foreach](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement) se usa para recorrer en iteración la colección para obtener la información que le interesa, pero no se puede usar para agregar o quitar elementos de la colección de origen para evitar efectos secundarios imprevistos. Si se necesitan agregar o quitar elementos de la colección de origen, se usa un bucle [for](for.md).
-  
- Las instrucciones incrustadas continúan ejecutándose para cada elemento de la matriz o la colección. Cuando la iteración se completa en todos los elementos de la colección, el control se transfiere a la instrucción que sigue al bloque `foreach`.
-  
- En cualquier punto del bloque `foreach`, se puede salir del bucle mediante la palabra clave [break](break.md), o bien se puede ir a la siguiente iteración del bucle mediante la palabra clave [continue](continue.md).
+La instrucción `foreach` ejecuta una instrucción o un bloque de instrucciones para cada elemento en una instancia del tipo que implementa la interfaz <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. La instrucción `foreach` no se limita a esos tipos y puede aplicarse a una instancia de cualquier tipo que satisfaga las siguientes condiciones:
 
- También se puede salir de un bucle `foreach` mediante las instrucciones [goto](goto.md), [return](return.md) o [throw](throw.md).
+- tiene el método público sin parámetros `GetEnumerator` cuyo tipo de valor devuelto es clase, estructura o tipo de interfaz,
+- el tipo de valor devuelto del método `GetEnumerator` tiene la propiedad pública `Current` y el método público sin parámetros `MoveNext` cuyo tipo de valor devuelto es <xref:System.Boolean>.
 
- Para más información sobre la palabra clave `foreach` y obtener ejemplos de código, vea los temas siguientes:  
+En cualquier punto del bloque de instrucciones `foreach`, se puede salir del bucle mediante la palabra clave [break](break.md), o bien se puede ir a la siguiente iteración del bucle mediante la palabra clave [continue](continue.md). También se puede salir de un bucle `foreach` mediante las instrucciones [goto](goto.md), [return](return.md) o [throw](throw.md).
 
- [Utilizar foreach con matrices](../../programming-guide/arrays/using-foreach-with-arrays.md)  
+## <a name="examples"></a>Ejemplos
 
- [Cómo: Obtener acceso a una clase de colección mediante Foreach](../../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)  
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-## <a name="example"></a>Ejemplo
+El siguiente ejemplo muestra el uso de la instrucción `foreach` con una instancia del tipo <xref:System.Collections.Generic.List%601> que implementa la interfaz <xref:System.Collections.Generic.IEnumerable%601>:
 
-En el código siguiente, se muestran tres ejemplos:
+[!code-csharp-interactive[list example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#1)]
 
-> [!TIP]
-> Puede modificar los ejemplos para probar la sintaxis y tantear distintos usos que se acerquen más a su caso particular. Presione "Ejecutar" para ejecutar el código, cámbielo y vuelva a presionar "Ejecutar".
+El siguiente ejemplo utiliza la instrucción `foreach` con una instancia del tipo <xref:System.Span%601?displayProperty=nameWithType>, que no implementa ninguna interfaz:
 
--   un bucle `foreach` típico que muestra el contenido de una matriz de enteros
+[!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L12-L26)]
-
--   un bucle [for](../../../csharp/language-reference/keywords/for.md) que hace lo mismo
-
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L31-L46)]
-
--   un bucle `foreach` que mantiene un recuento del número de elementos de la matriz
-
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L51-L69)]
- 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 
-[La instrucción foreach (especificación del lenguaje C#)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
-
-[Referencia de C#](../index.md)
-
-[Guía de programación de C#](../../programming-guide/index.md)
-
-[Palabras clave de C#](index.md)
-
-[Instrucciones de iteración](iteration-statements.md)
-
-[for](for.md)
+[La instrucción foreach (especificación del lenguaje C#)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)  
+[Utilizar foreach con matrices](../../programming-guide/arrays/using-foreach-with-arrays.md)  
+[for](for.md)  
+[Instrucciones de iteración](iteration-statements.md)  
+[Palabras clave de C#](index.md)  
+[Referencia de C#](../index.md)  
+[Guía de programación de C#](../../programming-guide/index.md)  

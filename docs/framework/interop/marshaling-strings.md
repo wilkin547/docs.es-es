@@ -15,16 +15,17 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 52a78e0c3969e879bf2fd1b1f5c41b2caac2ba11
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391126"
 ---
 # <a name="marshaling-strings"></a>Serialización de cadenas
 La invocación de plataforma copia los parámetros de cadena y los convierte del formato de .NET Framework (Unicode) al formato no administrado (ANSI), si es necesario. Dado que las cadenas administradas son inmutables, la invocación de plataforma no las vuelve a copiar desde la memoria no administrada a la memoria administrada cuando finaliza la función.  
   
  En la tabla siguiente se enumeran las opciones de serialización para cadenas, se describe su uso y se proporciona un vínculo al ejemplo de .NET Framework correspondiente.  
   
-|String|Descripción|Ejemplo|  
+|String|Description|Ejemplo|  
 |------------|-----------------|------------|  
 |Por valor.|Pasa las cadenas como parámetros In.|[MsgBox](msgbox-sample.md)|  
 |Como resultado.|Devuelve las cadenas desde código no administrado.|[Cadenas](https://msdn.microsoft.com/library/be9e82a3-dc95-4aaa-9396-61b66e467e02(v=vs.100))|  

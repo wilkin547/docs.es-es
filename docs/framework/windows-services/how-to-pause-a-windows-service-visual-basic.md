@@ -13,18 +13,19 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: 43a852f1b618582c5aa65636e0a529434f8fd6a1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511519"
 ---
 # <a name="how-to-pause-a-windows-service-visual-basic"></a>Cómo: Pausar un servicio de Windows (Visual Basic)
-Este ejemplo se utiliza la <xref:System.ServiceProcess.ServiceController> componente para pausar el servicio de administración de IIS en el equipo local.  
+En este ejemplo se utiliza el componente <xref:System.ServiceProcess.ServiceController> para pausar un servicio IIS Admin en el equipo local.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#12](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#12)]  
   
- Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **sistema operativo Windows > Servicios de Windows**. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).  
+ Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Sistema operativo Windows > Servicios de Windows**. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -34,7 +35,7 @@ Este ejemplo se utiliza la <xref:System.ServiceProcess.ServiceController> compon
 -   Acceso a los miembros del espacio de nombres <xref:System.ServiceProcess>. Agregue una instrucción `Imports` si no hay nombres de miembros completos en el código. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="robust-programming"></a>Programación sólida  
- El <xref:System.ServiceProcess.ServiceController.MachineName%2A> propiedad de la <xref:System.ServiceProcess.ServiceController> clase es el equipo local de forma predeterminada. Para hacer referencia a los servicios de Windows en otro equipo, cambie el <xref:System.ServiceProcess.ServiceController.MachineName%2A> propiedad en el nombre de ese equipo.  
+ De manera predeterminada, la propiedad <xref:System.ServiceProcess.ServiceController.MachineName%2A> de la clase <xref:System.ServiceProcess.ServiceController> es el equipo local. Para hacer referencia a los servicios de Windows en otro equipo, cambie la propiedad <xref:System.ServiceProcess.ServiceController.MachineName%2A> al nombre de ese equipo.  
   
  Las condiciones siguientes pueden provocar una excepción:  
   
@@ -43,9 +44,9 @@ Este ejemplo se utiliza la <xref:System.ServiceProcess.ServiceController> compon
 -   Error de acceso a la API del sistema. (<xref:System.ComponentModel.Win32Exception>)  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- Control de servicios en el equipo puede restringirse mediante el uso de la <xref:System.ServiceProcess.ServiceControllerPermissionAccess> para establecer permisos en el <xref:System.ServiceProcess.ServiceControllerPermission>.  
+ El control de servicios en el equipo puede restringirse con <xref:System.ServiceProcess.ServiceControllerPermissionAccess> para establecer los permisos en <xref:System.ServiceProcess.ServiceControllerPermission>.  
   
- Acceso a la información del servicio puede restringirse mediante el uso de la <xref:System.Security.Permissions.PermissionState> para establecer permisos en el <xref:System.Security.Permissions.SecurityPermission>.  
+ El acceso a la información del servicio puede restringirse con <xref:System.Security.Permissions.PermissionState> para establecer los permisos en <xref:System.Security.Permissions.SecurityPermission>.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceProcess.ServiceController>  

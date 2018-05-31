@@ -4,11 +4,12 @@ description: Aprenda la terminología sobre paquetes, metapaquetes y marcos de t
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 915ccadbb4d2cca50fd1caa53d90aa05d83d9378
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472807"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Paquetes, metapaquetes y marcos de trabajo
 
@@ -96,9 +97,10 @@ Existe una relación recíproca entre los marcos de trabajo y los paquetes. La p
 
 La segunda parte de la relación es la selección de recursos. Los paquetes pueden incluir recursos para varios marcos de trabajo. Dada una referencia a un conjunto de paquetes o metapaquetes, el marco de trabajo es necesario para determinar el recurso que se debe seleccionar, por ejemplo `net46` o `netstandard1.3`. Es importante seleccionar el recurso correcto. Por ejemplo, es poco probable que un recurso de `net46` sea compatible con .NET Framework 4.0 o .NET Core 1.0.
 
-![Composición del marco de trabajo basado en paquete](./media/packages/package-framework.png)
 
-Puede ver esta relación en la imagen anterior. La *API* tiene como destino el *marco de trabajo* y lo define. El *marco de trabajo* se usa para la *selección de recursos*. El *recurso* le brinda la API.
+Puede ver esta relación en la imagen siguiente. La *API* tiene como destino el *marco de trabajo* y lo define. El *marco de trabajo* se usa para la *selección de recursos*. El *recurso* le brinda la API.
+
+![Composición del marco de trabajo basado en paquete](./media/packages/package-framework.png)
 
 Los dos principales marcos de trabajo basados en paquete que se usan con .NET Core son los siguientes:
 

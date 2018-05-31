@@ -1,5 +1,5 @@
 ---
-title: Cálculo de referencias predeterminado para objetos
+title: Serialización predeterminada para objetos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94377fb2079689e7b6af2c94fa24ca2214a5c729
 ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312188"
 ---
 # <a name="default-marshaling-for-objects"></a>Serialización predeterminada para objetos
 Los parámetros y campos de tipo <xref:System.Object?displayProperty=nameWithType> pueden exponerse a código no administrado como uno de los siguientes tipos:  

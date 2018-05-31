@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 503ef7066b5d66b05c1642512ab8d59a2b1d3f9a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392806"
 ---
 # <a name="copying-and-pinning"></a>Copiar y fijar
 Al serializar datos, el serializador de interoperabilidad puede copiar o anclar los datos que se van a serializar. Copiar los datos coloca una copia de datos desde una ubicación de memoria en otra. En la siguiente ilustración se muestran las diferencias entre copiar un tipo de valor y copiar un tipo pasado por referencia de memoria administrada a memoria no administrada.  

@@ -4,11 +4,12 @@ description: El comando dotnet publish publica el proyecto de .NET Core en un di
 author: mairaw
 ms.author: mairaw
 ms.date: 03/10/2018
-ms.openlocfilehash: f4c422eab20f5fe2d1b0c09133953f22a539474e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e7ce5ce1240f03f53f6e120dfce53d15917425f
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472635"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -89,8 +90,8 @@ No realiza una restauración implícita al ejecutar el comando.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Especifica la ruta de acceso del directorio de salida. Si no se especifica, el valor predeterminado es *./bin/[configuration]/[framework]/* para una implementación dependiente del marco de trabajo o *./bin/[configuration]/[framework]/[runtime]* para una implementación independiente.
-Si se ha proporcionado una ruta de acceso relativa, el directorio de salida generado es relativo a la ubicación del archivo de proyecto, no al directorio de trabajo actual.
+Especifica la ruta de acceso del directorio de salida. Si no se especifica, el valor predeterminado es *./bin/[configuration]/[framework]/publish/* para una implementación dependiente del marco de trabajo o *./bin/[configuration]/[framework]/[runtime]/publish/* para una implementación independiente.
+Si la ruta de acceso es relativa, el directorio de salida generado es relativo a la ubicación del archivo de proyecto, no al directorio de trabajo actual.
 
 `--self-contained`
 
@@ -128,8 +129,8 @@ Especifica uno o varios [manifiestos de destino](../deploying/runtime-store.md) 
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Especifica la ruta de acceso del directorio de salida. Si no se especifica, el valor predeterminado es *./bin/[configuration]/[framework]/* para una implementación dependiente del marco de trabajo o *./bin/[configuration]/[framework]/[runtime]* para una implementación independiente.
-Si se ha proporcionado una ruta de acceso relativa, el directorio de salida generado es relativo a la ubicación del archivo de proyecto, no al directorio de trabajo actual.
+Especifica la ruta de acceso del directorio de salida. Si no se especifica, el valor predeterminado es *./bin/[configuration]/[framework]/publish/* para una implementación dependiente del marco de trabajo o *./bin/[configuration]/[framework]/[runtime]/publish/* para una implementación independiente.
+Si la ruta de acceso es relativa, el directorio de salida generado es relativo a la ubicación del archivo de proyecto, no al directorio de trabajo actual.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 

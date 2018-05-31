@@ -2,14 +2,18 @@
 title: private protected (Referencia de C#)
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: ee36cc713dd5fdb90ae20ef992f8e75eca09597d
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 0d511f55f44511590fbe92a98cef118e0cb482e2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457256"
 ---
 # <a name="private-protected-c-reference"></a>private protected (Referencia de C#)
 La combinación de palabras claves `private protected` es un modificador de acceso de miembro. Los miembros private protected están accesibles para los tipos que se deriven de la clase contenedora, pero solo desde dentro del ensamblado correspondiente que lo contenga. Para obtener una comparación de `private protected` con los demás modificadores de acceso, vea [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md). 
+
+> [!NOTE]
+> El modificador de acceso `private protected` es válido en C# versión 7.2 y versiones posteriores.
    
 ## <a name="example"></a>Ejemplo  
  Se puede tener acceso a un miembro private protected de una clase base desde tipos derivados en el ensamblado que lo contiene solo si el tipo estático de la variable es el tipo de clase derivada. Por ejemplo, vea el siguiente segmento de código:  

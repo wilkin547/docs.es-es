@@ -9,9 +9,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f54d77be130d57c39319e81d58ad5af7815e548
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390866"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Cómo: Registrar ensamblados de interoperabilidad primarios
 Las clases solo se pueden serializar con la interoperabilidad COM y siempre se serializan como interfaces. En algunos casos, la interfaz usada para serializar la clase se conoce como interfaz de clase. Para obtener información sobre cómo invalidar la interfaz de clase con una interfaz de su elección, vea [Contenedor CCW](../../../docs/framework/interop/com-callable-wrapper.md).  
@@ -49,5 +50,5 @@ regasm CompanyA.UtilLib.dll
   
 ## <a name="see-also"></a>Vea también  
  [Programar con ensamblados de interoperabilidad primarios](https://msdn.microsoft.com/library/306fa1d6-0703-4004-9e93-d0a57f1be81e(v=vs.100))  
- [Buscar ensamblados de interoperabilidad primarios](https://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b(v=vs.100))  
+ [Búsqueda de ensamblados de interoperabilidad primarios](https://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b(v=vs.100))  
  [Redistribuir ensamblados de interoperabilidad primarios](https://msdn.microsoft.com/library/e76384f0-d631-474c-bdbd-13884cba0265(v=vs.100))

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d4689c52dee84e2a310f0ddb39d0874c273081bb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389423"
 ---
 # <a name="deploying-an-interop-application"></a>Implementar una aplicación interoperativa
 Una aplicación de interoperabilidad suele incluir un ensamblado de cliente de .NET, uno o varios ensamblados de interoperabilidad que representan diferentes bibliotecas de tipos COM, y uno o varios componentes COM registrados. Visual Studio y el [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] proporcionan herramientas para importar y convertir una biblioteca de tipos en un ensamblado de interoperabilidad, como se describe en [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md). Hay dos maneras de implementar una aplicación de interoperabilidad:  
@@ -48,5 +49,5 @@ Estructura de directorios y entradas del Registro para una implementación priva
 ## <a name="see-also"></a>Vea también  
  [Exponer componentes COM en .NET Framework](exposing-com-components.md)  
  [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md)  
- [Utilizar tipos COM en código administrado](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+ [Uso de tipos COM en código administrado](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
  [Compilar un proyecto de interoperabilidad](compiling-an-interop-project.md)

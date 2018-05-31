@@ -14,51 +14,52 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: faece1d7ee752e4c17f39027ff8a97fc95ed451b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514365"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Cómo: Agregar instaladores a una aplicación de servicio
-Visual Studio incluye componentes de instalación que pueden instalar recursos asociados con las aplicaciones de servicio. Componentes de instalación registran un servicio individual en el sistema al que se va a instalar y que el Administrador de Control de servicios sepan que existe el servicio. Cuando se trabaja con una aplicación de servicio, puede seleccionar un vínculo en la ventana Propiedades para agregar automáticamente los instaladores adecuados al proyecto.  
+Visual Studio incluye componentes de instalación que pueden instalar recursos asociados con sus aplicaciones de servicios. Los componentes de la instalación registran un servicio individual en el sistema en el que se está instalando e informan al Administrador de control de servicios que el servicio existe. Cuando trabaje con una aplicación de servicio, puede seleccionar un vínculo en la ventana Propiedades para agregar automáticamente los instaladores apropiados a su proyecto.  
   
 > [!NOTE]
->  Los valores de propiedad para el servicio se copian de la clase de servicio a la clase del instalador. Si actualiza los valores de propiedad en la clase de servicio, no se actualizan automáticamente en el programa de instalación.  
+>  Los valores de propiedad de su servicio se copian de la clase de servicio a la clase de instalador. Si actualiza los valores de las propiedades en la clase de servicio, no se actualizan automáticamente en el instalador.  
   
- Al agregar un instalador al proyecto, una nueva clase (que, de forma predeterminada, se denomina `ProjectInstaller`) se crea en el proyecto y las instancias de la instalación adecuada componentes se crean dentro de él. Esta clase actúa como punto central para todos los componentes de instalación de su proyecto necesite. Por ejemplo, si agrega un segundo servicio a la aplicación y haga clic en el vínculo Agregar instalador, no se crea una segunda clase del instalador; en su lugar, el componente de instalación adicional necesario para el segundo servicio se agrega a la clase existente.  
+ Cuando agrega un instalador a su proyecto, se crea una nueva clase (que, de forma predeterminada, se llama `ProjectInstaller`) en el proyecto, y se crean instancias de los componentes de instalación apropiados dentro de él. Esta clase actúa como un punto central para todos los componentes de instalación que el proyecto necesita. Por ejemplo, si agrega un segundo servicio a la aplicación y hace clic en el vínculo Agregar instalador, no se creará una segunda clase de instalador; en su lugar, el componente de instalación adicional necesario para el segundo servicio se agregará a la clase existente.  
   
- No es necesario hacer ninguna codificación especial dentro de los instaladores para hacer que los servicios se instale correctamente. Sin embargo, en ocasiones, necesite modificar el contenido de los instaladores si necesita agregar funcionalidad especial al proceso de instalación.  
+ No necesita hacer ninguna codificación especial dentro de los instaladores para que los servicios se instalen correctamente. Sin embargo, es posible que ocasionalmente tenga que modificar el contenido de los instaladores si necesita agregar funciones especiales al proceso de instalación.  
   
 > [!NOTE]
 >  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### <a name="to-add-installers-to-your-service-application"></a>Para agregar a instaladores a la aplicación de servicio  
+### <a name="to-add-installers-to-your-service-application"></a>Para agregar instaladores a la aplicación de servicio  
   
-1.  En **el Explorador de soluciones**, acceso **diseño** vista para el servicio para el que desea agregar un componente de instalación.  
+1.  En el **Explorador de soluciones**, acceda a la vista **Diseño** del servicio para el que desea agregar un componente de instalación.  
   
-2.  Haga clic en el fondo del diseñador para seleccionar el servicio de sí mismo, en lugar de su contenido.  
+2.  Haga clic en el fondo del diseñador para seleccionar el propio servicio, en vez de cualquier elemento de su contenido.  
   
-3.  Con el diseñador en foco, el menú contextual y, a continuación, haga clic en **Agregar instalador**.  
+3.  Con el foco en el diseñador, haga clic con el botón derecho y, a continuación, haga clic en **Agregar instalador**.  
   
-     Una nueva clase, `ProjectInstaller`y dos componentes de instalación, <xref:System.ServiceProcess.ServiceProcessInstaller> y <xref:System.ServiceProcess.ServiceInstaller>, se agregan a su proyecto y los valores de propiedad para el servicio se copian en los componentes.  
+     Una nueva clase, `ProjectInstaller` y dos componentes de instalación, <xref:System.ServiceProcess.ServiceProcessInstaller> y <xref:System.ServiceProcess.ServiceInstaller>, se agregan al proyecto, y los valores de propiedad del servicio se copian a los componentes.  
   
-4.  Haga clic en el <xref:System.ServiceProcess.ServiceInstaller> componente y compruebe que el valor de la <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> propiedad se establece en el mismo valor que el <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> propiedad en el propio servicio.  
+4.  Haga clic en el componente <xref:System.ServiceProcess.ServiceInstaller> y compruebe que el valor de la propiedad <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> es el mismo que el de la propiedad <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> del propio servicio.  
   
-5.  Para determinar cómo se iniciará el servicio, haga clic en el <xref:System.ServiceProcess.ServiceInstaller> componente y establezca el <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> propiedad en el valor adecuado.  
+5.  Para determinar cómo se iniciará el servicio, haga clic en el componente <xref:System.ServiceProcess.ServiceInstaller> y establezca la propiedad <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> en el valor adecuado.  
   
     |Valor|Resultado|  
     |-----------|------------|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|El servicio debe iniciarse manualmente después de la instalación. Para obtener más información, consulte [Cómo: iniciar servicios](../../../docs/framework/windows-services/how-to-start-services.md).|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|El servicio debe iniciarse manualmente después de la instalación. Para más información, consulte [Inicio de servicios](../../../docs/framework/windows-services/how-to-start-services.md).|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|El servicio se iniciará por sí mismo cada vez que el equipo se reinicia.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|No se puede iniciar el servicio.|  
   
-6.  Para determinar el contexto de seguridad en el que se ejecutará el servicio, haga clic en el <xref:System.ServiceProcess.ServiceProcessInstaller> componente y establezca los valores de propiedad correspondiente. Para obtener más información, consulte [Cómo: especificar el contexto de seguridad para los servicios](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
+6.  Para determinar el contexto de seguridad en el que se ejecutará el servicio, haga clic en el componente <xref:System.ServiceProcess.ServiceProcessInstaller> y establezca los valores de propiedad adecuados. Para más información, consulte [Definición del contexto de seguridad de los servicios](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
   
-7.  Reemplace los métodos para la que necesita realizar el procesamiento personalizado.  
+7.  Sustituya cualquier método para el que necesite realizar un procesamiento personalizado.  
   
 8.  Realice los pasos del 1 al 7 para cada servicio adicional en el proyecto.  
   
     > [!NOTE]
-    >  Para cada servicio adicional en el proyecto, debe agregar otro <xref:System.ServiceProcess.ServiceInstaller> componente para el proyecto `ProjectInstaller` clase. El <xref:System.ServiceProcess.ServiceProcessInstaller> el componente se agregó en el paso tres funciona con todos los instaladores de servicio individuales en el proyecto.  
+    >  Por cada servicio adicional en el proyecto, debe agregar un componente adicional <xref:System.ServiceProcess.ServiceInstaller> a la clase `ProjectInstaller` del proyecto. El componente <xref:System.ServiceProcess.ServiceProcessInstaller> agregado en el paso tres funciona con todos los instaladores de servicio individuales del proyecto.  
   
 ## <a name="see-also"></a>Vea también  
  [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

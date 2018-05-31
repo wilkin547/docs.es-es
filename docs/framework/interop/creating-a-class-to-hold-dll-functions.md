@@ -14,16 +14,17 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 09088d1ac0a8312ee5832a5f3bc0547e6654de93
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387067"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>Crear una clase para contener funciones de archivos DLL
 Encapsular una función DLL que se usa con frecuencia en una clase administrada es un enfoque efectivo para encapsular la funcionalidad de la plataforma. Aunque no es obligatorio hacerlo en todos los casos, proporcionar un contenedor de clases es cómodo porque la definición de funciones DLL puede ser compleja y propensa a errores. Si está programando en Visual Basic o C#, debe declarar las funciones DLL dentro de una clase o módulo de Visual Basic.  
   
  Dentro de una clase, se define un método estático para cada función DLL que se quiere llamar. La definición puede incluir información adicional, como el juego de caracteres o la convención de llamada que se usa para pasar argumentos de método; si se omite esta información, se selecciona la configuración predeterminada. Para obtener una lista completa de las opciones de declaración y sus valores predeterminados, vea [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
   
- Una vez ajustada, puede llamar a los métodos en la clase que llame a métodos estáticos en cualquier otra clase. La invocación de plataforma controla automáticamente la función exportada subyacente.  
+ Una vez encapsulados, puede llamar a métodos en la clase como llamaría a los métodos estáticos en cualquier otra clase. La invocación de plataforma controla automáticamente la función exportada subyacente.  
   
  Al diseñar una clase administrada para la invocación de plataforma, tenga en cuenta las relaciones entre las clases y las funciones de archivo DLL. Por ejemplo, se puede:  
   

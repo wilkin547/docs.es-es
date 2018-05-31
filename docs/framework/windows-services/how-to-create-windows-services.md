@@ -9,12 +9,13 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: 7719af9393bee816665040d6e4ced191419d0855
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517867"
 ---
 # <a name="how-to-create-windows-services"></a>Cómo: Crear servicios de Windows
-Cuando se crea un servicio, puede usar una plantilla de proyecto de Visual Studio denominada **servicio de Windows**. Esta plantilla realiza automáticamente gran parte del trabajo: hace referencia a las clases y los espacios de nombres correctos, configura la herencia de la clase base para los servicios y reemplazar algunos de los métodos que es probable que desee reemplazar.  
+Al crear un servicio, puede usar una plantilla de proyecto de Visual Studio denominada **Servicio de Windows**. Esta plantilla realiza automáticamente gran parte del trabajo: hace referencia a las clases y los espacios de nombres correctos, configura la herencia de la clase base para los servicios y reemplazar algunos de los métodos que es probable que desee reemplazar.  
   
 > [!WARNING]
 >  La plantilla de proyecto Servicios de Windows no está disponible en la edición Express de Visual Studio.  
@@ -29,38 +30,38 @@ Cuando se crea un servicio, puede usar una plantilla de proyecto de Visual Studi
   
 ### <a name="to-create-a-windows-service-application"></a>Para crear una aplicación de servicio de Windows  
   
-1.  Crear un **servicio de Windows** proyecto.  
+1.  Cree un proyecto de **Servicio Windows**.  
   
     > [!NOTE]
-    >  Para obtener instrucciones sobre cómo escribir un servicio sin utilizar la plantilla, consulte [Cómo: escribir servicios mediante programación](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    >  Para obtener instrucciones sobre cómo escribir un servicio sin usar la plantilla, consulte [Creación de servicios mediante programación](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
-2.  En el **propiedades** ventana, establezca el <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> propiedad para el servicio.  
+2.  En la ventana **Propiedades**, establezca la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> para el servicio.  
   
-     ![Establezca la propiedad ServiceName. ] (../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
+     ![Establezca la propiedad ServiceName.](../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
   
     > [!NOTE]
     >  El valor de la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> siempre debe coincidir con el nombre registrado en las clases del instalador. Si cambia esta propiedad, también debe actualizar la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> de las clases del instalador.  
   
 3.  Establezca cualquiera de las siguientes propiedades para determinar cómo funcionará el servicio.  
   
-    |Propiedad|Parámetro|  
+    |Property|Parámetro|  
     |--------------|-------------|  
     |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` para indicar que el servicio aceptará solicitudes para detener la ejecución; `false` para impedir que el servicio se detenga.|  
     |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` para indicar que el servicio desea recibir una notificación cuando se apaga el equipo en que reside, lo que le permite llamar al procedimiento <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>.|  
     |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` para indicar que el servicio aceptará solicitudes para pausar o reanudar la ejecución; `false` para impedir que el servicio se pause y se reanude.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` para indicar que el servicio puede controlar la notificación de cambios en el estado de energía del equipo; `false` para impedir que el servicio de notificación de estos cambios.|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` para escribir entradas informativas en el registro de sucesos de aplicación cuando el servicio realice una acción; `false` para deshabilitar esta funcionalidad. Para obtener más información, consulte [Cómo: obtener información acerca de servicios de registro](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Nota:** de forma predeterminada, <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> está establecido en `true`.|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` para indicar que el servicio puede controlar la notificación de cambios en el estado de alimentación del equipo; `false` para impedir la notificación al servicio de estos cambios.|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` para escribir entradas informativas en el registro de sucesos de aplicación cuando el servicio realice una acción; `false` para deshabilitar esta funcionalidad. Para más información, consulte [Registro de información sobre servicios](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Nota:** De manera predeterminada, <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> se establece en `true`.|  
   
     > [!NOTE]
-    >  Cuando <xref:System.ServiceProcess.ServiceBase.CanStop%2A> o <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> se establecen en `false`, **Service Control Manager** deshabilitará las opciones de menú correspondientes para detener, pausar o reanudar el servicio.  
+    >  Cuando <xref:System.ServiceProcess.ServiceBase.CanStop%2A> o <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> se establecen en `false`, el **Administrador de control de servicios** deshabilitará las opciones de menú correspondientes para detener, pausar o continuar el servicio.  
   
 4.  Obtenga acceso al Editor de código y rellene el procesamiento que desee para los procedimientos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> y <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.  
   
 5.  Reemplace los otros métodos para los que desee definir la funcionalidad.  
   
-6.  Agregar los instaladores necesarios para su aplicación de servicio. Para obtener más información, consulte [Cómo: agregar instaladores a la aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+6.  Agregar los instaladores necesarios para su aplicación de servicio. Para más información, consulte [Adición de instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-7.  Compilar el proyecto seleccionando **generar solución** desde el **generar** menú.  
+7.  En el menú **Compilar**, seleccione **Compilar solución** para compilar el proyecto.  
   
     > [!NOTE]
     >  No presione F5 para ejecutar el proyecto: no se puede ejecutar un proyecto de servicio de esta manera.  

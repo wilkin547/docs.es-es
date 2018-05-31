@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1995c367039591c086054a086f2107e4a88ecefb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395374"
 ---
 # <a name="interop-marshaling"></a>Serialización de interoperabilidad
 <a name="top"></a> La serialización de interoperabilidad rige cómo se pasan los datos en argumentos de método y valores devueltos entre la memoria administrada y la no administrada durante las llamadas. La serialización de interoperabilidad es una actividad en tiempo de ejecución realizada por el servicio de serialización de Common Language Runtime.  
@@ -135,14 +136,14 @@ Paso de referencia entre límites de hosts y procesos
  ![SOAP o TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
 Llamadas remotas a través de firewalls que usan SOAP o la clase TcpChannel  
   
- Algunas llamadas no administradas pueden canalizarse mediante SOAP, como las llamadas entre componentes con servicio y COM.  
+ Algunas llamadas no administradas pueden canalizarse mediante SOAP, como las llamadas entre componentes de servicio y COM.  
   
  [Volver al principio](#top)  
   
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Descripción|  
+|Title|Description|  
 |-----------|-----------------|  
 |[Comportamiento predeterminado del cálculo de referencias](default-marshaling-behavior.md)|Describe las reglas que usa el servicio de serialización de interoperabilidad para serializar datos.|  
 |[Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md)|Describe cómo se declaran parámetros de método y se pasan argumentos a funciones exportadas por bibliotecas no administradas.|  

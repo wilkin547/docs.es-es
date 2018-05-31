@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7366bfd6459a9387e8c57092ba85cac5f4da125b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393515"
 ---
 # <a name="runtime-callable-wrapper"></a>Contenedor al que se puede llamar en tiempo de ejecución
 Common Language Runtime expone objetos COM mediante un proxy denominado el contenedor RCW (Runtime Callable Wrapper). Aunque el contenedor RCW aparece como un objeto corriente para los clientes .NET, su función principal es calcular referencias de llamadas entre un cliente .NET y un objeto COM.  
@@ -40,7 +41,7 @@ Interfaces COM y el contenedor RCW
   
  El contenedor RCW consume las interfaces enumeradas en la siguiente tabla, expuestas por el objeto que encapsula.  
   
-|Interfaz|Descripción|  
+|Interfaz|Description|  
 |---------------|-----------------|  
 |**IDispatch**|Para el enlace en tiempo de ejecución a objetos COM mediante reflexión.|  
 |**IErrorInfo**|Proporciona una descripción textual del error, su origen, un archivo de ayuda, contexto de ayuda y el GUID de la interfaz que definió el error (siempre **GUID_NULL** para las clases. NET).|  
@@ -49,7 +50,7 @@ Interfaces COM y el contenedor RCW
   
  Opcionalmente, el contenedor RCW consume las interfaces enumeradas en la siguiente tabla, expuestas por el objeto que encapsula.  
   
-|Interfaz|Descripción|  
+|Interfaz|Description|  
 |---------------|-----------------|  
 |**IConnectionPoint** e **IConnectionPointContainer**|El contenedor RCW convierte los objetos que exponen el estilo de evento de punto de conexión en eventos basados en delegado.|  
 |**IDispatchEx**|Si la clase implementa **IDispatchEx**, el contenedor RCW implementa **IExpando**. La interfaz **IDispatchEx** es una extensión de la interfaz **IDispatch** que, a diferencia de **IDispatch**, permite enumerar, agregar, eliminar y llamar a miembros con distinción de mayúsculas y minúsculas.|  
@@ -57,7 +58,7 @@ Interfaces COM y el contenedor RCW
   
 ## <a name="see-also"></a>Vea también  
  [Contenedores COM](com-wrappers.md)  
- [Serialización de Interfaces seleccionadas](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))  
+ [Serialización de interfaces seleccionadas](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))  
  [Contenedor CCW (COM callable wrapper)](com-callable-wrapper.md)  
  [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
  [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md)

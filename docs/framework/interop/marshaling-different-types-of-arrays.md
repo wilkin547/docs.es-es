@@ -12,16 +12,17 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed2a4b91608306021ce510098eaf044520cbb089
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391461"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Serialización de tipos diferentes de matrices
-Una matriz es un tipo de referencia en código administrado que contiene uno o varios elementos del mismo tipo. Aunque las matrices son tipos de referencia, se pasan como parámetros In a funciones no administradas. Este comportamiento no se corresponde con la manera en que se pasan las matrices administradas a los objetos administrados, que es como parámetros In/Out. Para obtener más información, consulte [copiar y fijar](copying-and-pinning.md).  
+Una matriz es un tipo de referencia en código administrado que contiene uno o varios elementos del mismo tipo. Aunque las matrices son tipos de referencia, se pasan como parámetros In a funciones no administradas. Este comportamiento no se corresponde con la manera en que se pasan las matrices administradas a los objetos administrados, que es como parámetros In/Out. Para obtener más información, consulte [Copiado y fijación](copying-and-pinning.md).  
   
  En la tabla siguiente se muestran las opciones de cálculo de referencias de matrices y se describe su uso.  
   
-|Matriz|Descripción|  
+|Matriz|Description|  
 |-----------|-----------------|  
 |De enteros por valor.|Pasa una matriz de enteros como un parámetro In.|  
 |De enteros por referencia.|Pasa una matriz de enteros como un parámetro In/Out.|  
@@ -85,7 +86,7 @@ Una matriz es un tipo de referencia en código administrado que contiene uno o v
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) es una biblioteca personalizada no administrada que contiene implementaciones para las funciones enumeradas anteriormente y dos variables de estructura, **MyStrStruct** y **MYPERSON**. Estas estructuras contienen los siguientes elementos:  
+ [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) es una biblioteca personalizada no administrada que contiene implementaciones de las funciones enumeradas anteriormente y dos variables de estructura: **MYSTRSTRUCT** y **MYSTRSTRUCT2**. Estas estructuras contienen los siguientes elementos:  
   
 ```  
 typedef struct _MYPOINT  

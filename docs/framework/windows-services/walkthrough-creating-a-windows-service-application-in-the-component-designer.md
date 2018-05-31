@@ -12,9 +12,10 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520518"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Tutorial: Crear una aplicación de servicios de Windows en el Diseñador de componentes
 En este artículo se demuestra cómo crear una sencilla aplicación de servicio de Windows en Visual Studio que escribe mensajes en un registro de eventos. A continuación se incluyen los pasos básicos que se realizan para crear y usar el servicio:  
@@ -108,7 +109,7 @@ En este artículo se demuestra cómo crear una sencilla aplicación de servicio 
     AddHandler timer.Elapsed, AddressOf Me.OnTimer  
     timer.Start()  
     ```  
-     Agregue una variable miembro a la clase. Contendrá el identificador del evento siguiente para escribir en el registro de eventos.
+     Agregue una variable de miembro a la clase. Contendrá el identificador del siguiente evento para escribir en el registro de eventos.
 
     ```csharp
     private int eventId = 1;
@@ -296,7 +297,7 @@ En este artículo se demuestra cómo crear una sencilla aplicación de servicio 
   
 8.  Establezca la propiedad <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> en <xref:System.ServiceProcess.ServiceStartMode.Automatic>.  
   
-     ![Propiedades de instalador de un servicio de Windows](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")  
+     ![Propiedades de instalador para un servicio de Windows](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")  
   
 9. En el diseñador, elija **serviceProcessInstaller1** para un proyecto de Visual C# o **ServiceProcessInstaller1** para un proyecto de Visual Basic. Establezca la propiedad <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> en <xref:System.ServiceProcess.ServiceAccount.LocalSystem>. Esto hará que se instale el servicio y se ejecute con una cuenta de servicio local.  
   
@@ -429,7 +430,7 @@ Este código modifica la clave del Registro **ImagePath** , que suele contener l
   
      Si el servicio se instala correctamente, installutil.exe indicará que la instalación ha sido correcta. Si el sistema no encuentra InstallUtil.exe, asegúrese de que existe en el equipo. Esta herramienta se instala con .NET Framework en la carpeta `%WINDIR%\Microsoft.NET\Framework[64]\`*versión_Framework*. Por ejemplo, la ruta de acceso predeterminada para la versión de 32 bits de .NET Framework 4, 4.5, 4.5.1 y 4.5.2 es `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe`.  
   
-     Si el proceso installutil.exe informa de un error, compruebe el registro de instalación para averiguar por qué. De manera predeterminada, el registro está en la misma carpeta que el ejecutable del servicio. La instalación puede fallar si el <xref:System.ComponentModel.RunInstallerAttribute> clase no está presente en el `ProjectInstaller` clase, o si el atributo no está establecido en `true`, o bien el `ProjectInstaller` clase no es `public`.  
+     Si el proceso installutil.exe informa de un error, compruebe el registro de instalación para averiguar por qué. De manera predeterminada, el registro está en la misma carpeta que el ejecutable del servicio. La instalación puede producir un error si la clase <xref:System.ComponentModel.RunInstallerAttribute> no está presente en la clase `ProjectInstaller`, o si el atributo no está establecido en `true` o la clase `ProjectInstaller` no es `public`.  
   
      Para obtener más información, consulta [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
@@ -442,7 +443,7 @@ Este código modifica la clave del Registro **ImagePath** , que suele contener l
   
      Podrá ver el servicio **MyNewService** en la lista de la ventana **Servicios** .  
   
-     ![MyNewService en la ventana Servicios. ] (../../../docs/framework/windows-services/media/windowsservices-serviceswindow.PNG "WindowsServices_ServicesWindow")  
+     ![MyNewService en la ventana Servicios.](../../../docs/framework/windows-services/media/windowsservices-serviceswindow.PNG "WindowsServices_ServicesWindow")  
   
 2.  En la ventana **Servicios** , abra el menú contextual del servicio y, a continuación, elija **Iniciar**.  
   
@@ -456,7 +457,7 @@ Este código modifica la clave del Registro **ImagePath** , que suele contener l
   
 2.  Localice la lista correspondiente a **MyNewLog** (o **MyLogFile1**, si se usa el procedimiento opcional para agregar argumentos de línea de comandos) y expándala. Debería ver las entradas de las dos acciones (iniciar y detener) que ha realizado el servicio.  
   
-     ![Use el Visor de eventos para ver las entradas del registro de eventos. ] (../../../docs/framework/windows-services/media/windowsservices-eventviewer.PNG "WindowsServices_EventViewer")  
+     ![Utilice el Visor de eventos para consultar las entradas del registro de eventos.](../../../docs/framework/windows-services/media/windowsservices-eventviewer.PNG "WindowsServices_EventViewer")  
   
 <a name="BK_Uninstall"></a>   
 ## <a name="uninstalling-a-windows-service"></a>Desinstalar un servicio de Windows  

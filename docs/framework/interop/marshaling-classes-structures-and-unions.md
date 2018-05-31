@@ -22,16 +22,17 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: be4c15f1093f359eeb9e742464b9d9e1dd5c756e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393398"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Serialización de clases, estructuras y uniones
 Las clases y las estructuras son similares en .NET Framework. Ambas pueden tener campos, propiedades y eventos, además de métodos estáticos y no estáticos. Una diferencia importante entre ellas es que las estructuras son tipos de valor y las clases son tipos de referencia.  
   
  En la tabla siguiente se enumeran las opciones de serialización para clases, estructuras y uniones, se describe su uso y se proporciona un vínculo al ejemplo de invocación de la plataforma correspondiente.  
   
-|Tipo|Descripción|Ejemplo|  
+|Tipo|Description|Ejemplo|  
 |----------|-----------------|------------|  
 |Clase por valor.|Pasa una clase con miembros de tipo entero como un parámetro In/Out, al igual que el caso administrado.|SysTime (ejemplo)|  
 |Estructura por valor.|Pasa las estructuras como parámetros In.|Ejemplo Structs|  

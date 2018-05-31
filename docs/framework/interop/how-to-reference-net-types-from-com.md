@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0333cd73240e685b46917d85afe0876532db3fd1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391905"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Cómo: Hacer referencia a tipos de .NET desde COM
 Desde el punto de vista del código de cliente y servidor, las diferencias entre COM y .NET Framework son prácticamente inapreciables. Los clientes Microsoft Visual Basic pueden ver los objetos de .NET en el Examinador de objetos, que expone los métodos y la sintaxis, las propiedades, y los campos de los objetos exactamente del mismo modo que si se tratase de cualquier otro objeto COM.  
@@ -33,7 +34,7 @@ Desde el punto de vista del código de cliente y servidor, las diferencias entre
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
     ```  
   
-     -o bien-  
+     O bien  
   
 -   Incluya una directiva #import para Mscorlib.tlb. Por ejemplo:  
   
@@ -45,5 +46,5 @@ Desde el punto de vista del código de cliente y servidor, las diferencias entre
 ## <a name="see-also"></a>Vea también  
  [Exponer componentes de .NET Framework en COM](exposing-dotnet-components-to-com.md)  
  [Registrar ensamblados con COM](registering-assemblies-with-com.md)  
- [Llamar a un objeto de .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
+ [Llamada a un objeto de .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
  [Implementar una aplicación para obtener acceso a COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

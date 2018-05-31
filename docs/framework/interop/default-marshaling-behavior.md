@@ -13,9 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
 ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457415"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamiento de serialización predeterminado
 La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada. Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  
@@ -43,7 +44,7 @@ BSTR MethodOne (BSTR b) {
  El tiempo de ejecución usa siempre el método **CoTaskMemFree** para liberar memoria. Si la memoria con la que está trabajando no se asignó con el método **CoTaskMemAlloc**, debe usar un **IntPtr** y liberar la memoria manualmente mediante el método adecuado. De forma similar, puede evitar la liberación automática de la memoria en situaciones donde nunca se debería liberar, como al usar la función **GetCommandLine** de Kernel32.dll, que devuelve un puntero a la memoria del kernel. Para obtener más información sobre cómo liberar memoria manualmente, vea el [ejemplo sobre búferes](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Serialización predeterminada para clases  
- Las clases solo se pueden serializar con la interoperabilidad COM y siempre se serializan como interfaces. En algunos casos, la interfaz usada para serializar la clase se conoce como interfaz de clase. Para obtener información sobre cómo reemplazar la interfaz de clase con una interfaz de su elección, vea [Introducción a la interfaz de clase](com-callable-wrapper.md#introducing-the-class-interface).  
+ Las clases solo se pueden serializar con la interoperabilidad COM y siempre se serializan como interfaces. En algunos casos, la interfaz usada para serializar la clase se conoce como interfaz de clase. Para obtener información sobre cómo reemplazar la interfaz de clase por una interfaz de su elección, consulte [Presentar la interfaz de clase](com-callable-wrapper.md#introducing-the-class-interface).  
   
 ### <a name="passing-classes-to-com"></a>Pasar clases a COM  
  Cuando una clase administrada se pasa a COM, el serializador de interoperabilidad automáticamente encapsula la clase con un proxy COM y pasa la interfaz de clase generada por el proxy a la llamada de método COM. El proxy delega entonces todas las llamadas en la interfaz de clase al objeto administrado. El proxy también expone otras interfaces que no están implementadas explícitamente por la clase. El proxy implementa automáticamente interfaces como **IUnknown** e **IDispatch** en nombre de la clase.  
@@ -345,7 +346,7 @@ interface _Graphics {
 }  
 ```  
   
- Las mismas reglas usadas para serializar valores y referencias para llamadas de invocación de plataforma se usan al serializar a través de interfaces COM. Por ejemplo, cuando una instancia del tipo de valor `Point` se pasa de .NET Framework a COM, `Point` se pasa por valor. Si el tipo de valor `Point` se pasa por referencia, un puntero a un `Point` se pasa en la pila. El serializador de interoperabilidad no admite niveles superiores de direccionamiento indirecto (**punto** \* \*) en cualquier dirección.  
+ Las mismas reglas usadas para serializar valores y referencias para llamadas de invocación de plataforma se usan al serializar a través de interfaces COM. Por ejemplo, cuando una instancia del tipo de valor `Point` se pasa de .NET Framework a COM, `Point` se pasa por valor. Si el tipo de valor `Point` se pasa por referencia, un puntero a un `Point` se pasa en la pila. El serializador de interoperabilidad no admite niveles superiores de direccionamiento indirecto (**Point** \*\*) en ninguna dirección.  
   
 > [!NOTE]
 >  Las estructuras que tienen el valor de enumeración <xref:System.Runtime.InteropServices.LayoutKind> establecido en **Explicit** no se pueden usar en la interoperabilidad COM porque la biblioteca de tipos exportada no puede expresar una distribución explícita.  

@@ -1,5 +1,5 @@
 ---
-title: Cálculo de referencias predeterminado para cadenas
+title: Serialización predeterminada para cadenas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 88604058bd460d80214be6051abef7dc561c7710
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394912"
 ---
 # <a name="default-marshaling-for-strings"></a>Serialización predeterminada para cadenas
 Las clases <xref:System.String?displayProperty=nameWithType> y <xref:System.Text.StringBuilder?displayProperty=nameWithType> tienen un comportamiento de cálculo de referencias similar.  

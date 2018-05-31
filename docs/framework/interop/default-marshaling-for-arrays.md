@@ -1,5 +1,5 @@
 ---
-title: Cálculo de referencias predeterminado para matrices
+title: Serialización predeterminada para matrices
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b05ac1016710109110c3ff9d0d318a71fe0827f1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393155"
 ---
 # <a name="default-marshaling-for-arrays"></a>Serialización predeterminada para matrices
 En una aplicación que consta únicamente de código administrado, Common Language Runtime pasa los tipos de matriz como parámetros In/Out. En cambio, el serializador de interoperabilidad pasa una matriz como parámetros In de forma predeterminada.  
@@ -41,9 +42,9 @@ En una aplicación que consta únicamente de código administrado, Common Langua
   
 |Tipo de matriz administrada|Tipo de elemento|Rango|Límite inferior|Notación de firma|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|Especificado por el tipo.|Especificado por el rango.|Especificado opcionalmente por los límites.|*tipo de* **[** *n*,*m* **]**|  
+|**ELEMENT_TYPE_ARRAY**|Especificado por el tipo.|Especificado por el rango.|Especificado opcionalmente por los límites.|*tipo* **[** *n*,*m* **]**|  
 |**ELEMENT_TYPE_CLASS**|Desconocido|Desconocido|Desconocido|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|Especificado por el tipo.|1|0|*tipo de* **[** *n* **]**|  
+|**ELEMENT_TYPE_SZARRAY**|Especificado por el tipo.|1|0|*tipo* **[** *n* **]**|  
   
 <a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>Matrices no administradas  

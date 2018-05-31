@@ -21,9 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b305158ac87f01044bae5455cea07ca3b3a2e491
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398214"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Crear prototipos en código administrado
 En este tema se describe cómo acceder a funciones no administradas y presenta varios campos de atributo que anotan la definición de método en el código administrado. Para obtener ejemplos que muestran cómo construir declaraciones basadas en .NET para usarse con la invocación de plataforma, vea [Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md).  
@@ -78,11 +79,11 @@ using namespace System::Runtime::InteropServices;
   
  En la tabla siguiente se muestra el conjunto completo de campos de atributo que pertenecen a la invocación de plataforma. Para cada campo, la tabla incluye el valor predeterminado y un vínculo a información sobre cómo usar estos campos para definir funciones DLL no administradas.  
   
-|Campo|Descripción|  
+|Campo|Description|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|Habilita o deshabilita la asignación con ajuste perfecto.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|Especifica la convención de llamada que se usará al pasar argumentos de método. El valor predeterminado es `WinAPI`, que corresponde a `__stdcall` para las plataformas de 32 bits basadas en Intel.|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|Controla la eliminación de nombres y la forma en que deben calcularse las referencias de los argumentos de cadena a la función. De manera predeterminada, es `CharSet.Ansi`.|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|Controla la eliminación de nombres y la forma en que deben calcularse las referencias de los argumentos de cadena a la función. El valor predeterminado es `CharSet.Ansi`.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|Especifica el punto de entrada DLL al que se debe llamar.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|Controla si un punto de entrada debe modificarse para que coincida con el juego de caracteres. El valor predeterminado varía según el lenguaje de programación.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|Controla si la firma del método administrado debería transformarse en una firma no administrada que devuelve un resultado HRESULT y tiene un argumento adicional [out, retval] para el valor devuelto.<br /><br /> El valor predeterminado es `true` (la firma no debe transformarse).|  
@@ -97,7 +98,7 @@ using namespace System::Runtime::InteropServices;
 ### <a name="platform-invoke-examples"></a>Ejemplos de invocación de plataforma  
  Los ejemplos de invocación de plataforma de esta sección muestran el uso del atributo `RegistryPermission` con los modificadores del recorrido de la pila.  
   
- En el ejemplo de código siguiente, la <xref:System.Security.Permissions.SecurityAction> `Assert`, `Deny`, y `PermitOnly` se omiten los modificadores.  
+ En el ejemplo de código siguiente, se omiten los modificadores <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny` y `PermitOnly`.  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -225,7 +226,7 @@ interface IDemandStubsItf
  [Especificar un punto de entrada](specifying-an-entry-point.md)  
  [Especificar un juego de caracteres](specifying-a-character-set.md)  
  [Ejemplos de invocación de plataforma](platform-invoke-examples.md)  
- [Consideraciones de seguridad de invocación de plataforma](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
+ [Consideraciones de seguridad de la invocación de plataforma](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
  [Identificar funciones en archivos DLL](identifying-functions-in-dlls.md)  
  [Creación de una clase para contener funciones de archivos DLL](creating-a-class-to-hold-dll-functions.md)  
  [Llamar a una función DLL](calling-a-dll-function.md)

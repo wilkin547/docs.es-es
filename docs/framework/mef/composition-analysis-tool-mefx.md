@@ -10,16 +10,17 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392582"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Herramienta de análisis de composición (Mefx)
 La herramienta de análisis de composición (Mefx) es una aplicación de línea de comandos que analiza los archivos de biblioteca (.dll) y los archivos de aplicación (.exe) que contienen elementos de Managed Extensibility Framework (MEF). El propósito principal de Mefx es ofrecer a los desarrolladores una manera de diagnosticar errores de composición en sus aplicaciones de MEF sin el engorro de tener que agregar código de seguimiento a la propia aplicación. También puede ser útil para ayudar a comprender los elementos de una biblioteca de terceros. En este tema se describe cómo usar Mefx y se proporciona una referencia de su sintaxis.  
   
 <a name="getting_mefx"></a>   
 ## <a name="getting-mefx"></a>Obtener Mefx  
- Mefx está disponible en GitHub en [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0). Simplemente descargue y descomprima la herramienta.  
+ Mefx está disponible en GitHub, en [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0). Simplemente descargue y descomprima la herramienta.  
   
 <a name="basic_syntax"></a>   
 ## <a name="basic-syntax"></a>Sintaxis básica  

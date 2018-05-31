@@ -5,11 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
-ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 80b7a2c39094f1101e714b47f0e77f0a7c4907f2
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472768"
 ---
 # <a name="string-interpolation"></a>Interpolación de cadenas
 
@@ -48,13 +49,13 @@ Probemos algunos ejemplos más de interpolación de cadenas con otros tipos de d
 
 En la sección anterior, se ha usado una interpolación de cadena para insertar una cadena dentro de otra, pero el resultado de una expresión interpolada puede ser cualquier tipo de datos. Vamos a incluir valores de distintos tipos de datos en una cadena interpolada.
 
-En el ejemplo siguiente, en primer lugar se define un tipo de datos personalizado `Vegetable` que tiene la [propiedad](../properties.md) `Name` y el método `ToString`. El código de cliente puede usar ese método para obtener la representación de cadena de una instancia `Vegetable`. En el ejemplo, el método `Vegetable.ToString` devuelve el valor de la propiedad `Name` que se inicializa en el constructor `Vegetable`:
+En el ejemplo siguiente, en primer lugar se define un tipo de datos de [clase](../programming-guide/classes-and-structs/classes.md) `Vegetable` que tiene la [propiedad ](../properties.md) `Name` y el [método](../methods.md) `ToString` que [reemplaza](../language-reference/keywords/override.md) el comportamiento del método <xref:System.Object.ToString?displayProperty=nameWithType>. El [`public`modificador de acceso](../language-reference/keywords/public.md) pone ese método a disposición de cualquier código de cliente para obtener la representación de la cadena de una instancia de `Vegetable`. En el ejemplo, el método `Vegetable.ToString` devuelve el valor de la propiedad `Name` que se inicializa en el [constructor](../programming-guide/classes-and-structs/constructors.md) `Vegetable`:
 
 ```csharp
 public Vegetable(string name) => Name = name;
 ```
 
-Se crea una instancia del tipo `Vegetable` al usar la palabra clave `new` y al proporcionar un parámetro de nombre para el constructor `Vegetable`:
+Luego se crea una instancia de la clase `Vegetable` al usar la [`new`palabra clave](../language-reference/keywords/new-operator.md) y al proporcionar un parámetro de nombre para el constructor `Vegetable`:
 
 ```csharp
 var item = new Vegetable("eggplant");
@@ -93,7 +94,7 @@ Observe que la expresión interpolada `item` de la cadena interpolada se resuelv
 
 - Si la expresión interpolada se evalúa en `null`, se usa una cadena vacía ("", o <xref:System.String.Empty?displayProperty=nameWithType>).
 
-- Si la expresión interpolada no se evalúa en `null`, se suele llamar al método `ToString` del tipo de resultado. Puede probar esto mediante la actualización de la implementación del método `Vegetable.ToString`. Podría incluso no implementar el método `ToString`, puesto que cada tipo de datos de C# tiene alguna implementación de este método. Para probar esto, comente la definición del método `Vegetable.ToString` del ejemplo (para ello, coloque delante un símbolo de comentario `//`). En el resultado, se reemplaza la cadena "eggplant" por el nombre del tipo completo ("Vegetable" en este ejemplo), que es el comportamiento predeterminado del método <xref:System.Object.ToString?displayProperty=nameWithType>. El comportamiento predeterminado del método `ToString` para un tipo de enumeración es devolver la representación de cadena de un valor usado en la definición de la enumeración.
+- Si la expresión interpolada no se evalúa en `null`, se suele llamar al método `ToString` del tipo de resultado. Puede probar esto mediante la actualización de la implementación del método `Vegetable.ToString`. Podría incluso no implementar el método `ToString`, puesto que cada tipo de datos tiene alguna implementación de este método. Para probar esto, comente la definición del método `Vegetable.ToString` del ejemplo (para ello, coloque delante un símbolo de comentario `//`). En el resultado, se reemplaza la cadena "eggplant" por el nombre del tipo completo ("Vegetable" en este ejemplo), que es el comportamiento predeterminado del método <xref:System.Object.ToString?displayProperty=nameWithType>. El comportamiento predeterminado del método `ToString` para un valor de enumeración es devolver la representación de cadena del valor.
 
 En el resultado de este ejemplo, la fecha es demasiado precisa (el precio de "eggplant" no varía por segundos) y el valor del precio no indica una unidad de moneda. En la sección siguiente se aprende a corregir esos problemas al controlar el formato de representaciones de cadena de los resultados de la expresión.
 

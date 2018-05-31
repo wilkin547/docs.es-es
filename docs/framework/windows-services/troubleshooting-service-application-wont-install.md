@@ -1,5 +1,5 @@
 ---
-title: 'Solución de problemas: Servicio aplicación ganadas&#39;Install t'
+title: 'Solución de problemas: la aplicación de servicio no se instala'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - troubleshooting service applications
@@ -13,17 +13,18 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: 1f3e5674f9a52627efdc24d6c70c0ab16dcdbbbd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509665"
 ---
-# <a name="troubleshooting-service-application-won39t-install"></a>Solución de problemas: Servicio aplicación ganadas&#39;Install t
-Si la aplicación de servicio no se instala correctamente, compruebe para asegurarse de que el <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> propiedad para la clase de servicio se establece en el mismo valor tal y como se muestra en el instalador para ese servicio. El valor debe ser el mismo en ambas instancias para el servicio instalar correctamente.  
+# <a name="troubleshooting-service-application-won39t-install"></a>Solución de problemas: la aplicación de servicio no se instala
+Si la aplicación de servicio no se instala correctamente, compruebe que la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> para la clase de servicio está configurada con el mismo valor que se muestra en el instalador para ese servicio. El valor debe ser el mismo en ambos casos para que el servicio se instale correctamente.  
   
 > [!NOTE]
->  También puede buscar en los registros de instalación para obtener los comentarios en el proceso de instalación.  
+>  También puede consultar los registros de instalación para obtener comentarios sobre el proceso de instalación.  
   
- También debe comprobar para determinar si tiene otro servicio con el mismo nombre ya instalado. Nombres de servicio deben ser únicos para la instalación se realice correctamente.  
+ También debe comprobar si tiene otro servicio con el mismo nombre ya instalado. Los nombres de los servicios deben ser únicos para que la instalación se realice correctamente.  
   
 ## <a name="see-also"></a>Vea también  
  [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

@@ -3,11 +3,12 @@ title: Novedades de C# 6 - Guía de C#
 description: Obtenga información sobre las nuevas características de la versión 6 de C#
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 00aeb3ed940acfca748a1a9eb876fd0133baf6c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458010"
 ---
 # <a name="whats-new-in-c-6"></a>Novedades de C# 6
 
@@ -351,7 +352,7 @@ Ahora, también se pueden usar con colecciones <xref:System.Collections.Generic.
 
 Esta característica significa que los contenedores asociativos se pueden inicializar mediante una sintaxis similar a la que se lleva usando en varias versiones para los contenedores de secuencia.
 
-### <a name="extension-add-methods-in-collection-initializers"></a>Métodos `Add` de extensión para inicializadores de colección
+## <a name="extension-add-methods-in-collection-initializers"></a>Métodos `Add` de extensión para inicializadores de colección
 
 Otra característica que facilita la inicialización de colecciones es la capacidad de usar un *método de extensión* para el método `Add`. Esta característica se agregó por motivos de paridad con Visual Basic. 
 
@@ -370,10 +371,7 @@ Ahora se puede, pero solo si se crea un método de extensión que asigna `Add` a
 
 [!code-csharp[ExtensionAdd](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAdd)]
 
-Lo que hace esta característica es asignar cualquier método que agrega elementos a una colección a un método denominado `Add` mediante la creación de un método de extensión: 
-
-[!code-csharp[Enrollment](../../../samples/snippets/csharp/new-in-6/enrollment.cs#Enrollment)]
-[!code-csharp[ExtensionAddSample](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAddSample)]
+Lo que hace esta característica es asignar cualquier método que agrega elementos a una colección a un método denominado `Add` mediante la creación de un método de extensión.
 
 ## <a name="improved-overload-resolution"></a>Mejoras en la resolución de sobrecarga
 

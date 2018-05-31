@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e3eeba609349bb9d5b7c68e15e0e0e6ff3f1b7ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390938"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Equivalencia de tipos y tipos de interoperabilidad incrustados
 
@@ -32,9 +33,9 @@ La equivalencia de tipos significa que un objeto COM que se pasa de un ensamblad
 
 - Los tipos tienen la misma identidad, como se explica en la sección siguiente.
 
-- Ambos tipos son aptos para la equivalencia de tipos, como se describe en el [tipos COM marcar para la equivalencia de tipos](#marking-com-types-for-type-equivalence) sección.
+- Ambos tipos son aptos para la equivalencia de tipos, como se explica en la sección [Marcado de tipos COM para la equivalencia de tipos](#marking-com-types-for-type-equivalence).
 
-### <a name="type-identity"></a>Identidad de tipo
+### <a name="type-identity"></a>Identidad de tipos
 
 Se considera que dos tipos tienen la misma identidad cuando sus ámbitos e identidades coinciden, es decir, si cada uno de ellos tiene el atributo <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> y los dos atributos tienen propiedades <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> y <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> coincidentes. La comparación de <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> no distingue mayúsculas de minúsculas.
 
@@ -44,7 +45,7 @@ Si un tipo no tiene el atributo <xref:System.Runtime.InteropServices.TypeIdentif
 
 - En estructuras, enumeraciones y delegados, se usa el elemento <xref:System.Runtime.InteropServices.GuidAttribute> del ensamblado contenedor en lugar de la propiedad <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> y se emplea la propiedad <xref:System.Type.FullName%2A?displayProperty=nameWithType> en lugar de la propiedad <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A>.
 
-### <a name="marking-com-types-for-type-equivalence"></a>Marcar tipos COM para la equivalencia de tipos
+### <a name="marking-com-types-for-type-equivalence"></a>Marcado de tipos COM para la equivalencia de tipos
 
  Puede marcar un tipo como apto para la equivalencia de tipos de dos maneras:
 
@@ -55,5 +56,5 @@ Si un tipo no tiene el atributo <xref:System.Runtime.InteropServices.TypeIdentif
 ## <a name="see-also"></a>Vea también
 
 <xref:System.Type.IsEquivalentTo%2A>  
-[Utilizar tipos COM en código administrado](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+[Uso de tipos COM en código administrado](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
 [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md)  
