@@ -1,14 +1,6 @@
 ---
 title: Crear una clase para contener funciones de archivos DLL
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM interop, DLL functions
 - unmanaged functions
@@ -18,37 +10,34 @@ helpviewer_keywords:
 - platform invoke, creating class for functions
 - DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ed5ef9b7aaad3405ff31ff45ee8d0b22f56f51d7
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
-ms.translationtype: MT
+ms.openlocfilehash: 09088d1ac0a8312ee5832a5f3bc0547e6654de93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387067"
 ---
-# <a name="creating-a-class-to-hold-dll-functions"></a><span data-ttu-id="f43e1-102">Crear una clase para contener funciones de archivos DLL</span><span class="sxs-lookup"><span data-stu-id="f43e1-102">Creating a Class to Hold DLL Functions</span></span>
-<span data-ttu-id="f43e1-103">Encapsular una función DLL que se usa con frecuencia en una clase administrada es un enfoque efectivo para encapsular la funcionalidad de la plataforma.</span><span class="sxs-lookup"><span data-stu-id="f43e1-103">Wrapping a frequently used DLL function in a managed class is an effective approach to encapsulate platform functionality.</span></span> <span data-ttu-id="f43e1-104">Aunque no es obligatorio hacerlo en todos los casos, proporcionar un contenedor de clases es cómodo porque la definición de funciones DLL puede ser compleja y propensa a errores.</span><span class="sxs-lookup"><span data-stu-id="f43e1-104">Although it is not mandatory to do so in every case, providing a class wrapper is convenient because defining DLL functions can be cumbersome and error-prone.</span></span> <span data-ttu-id="f43e1-105">Si está programando en Visual Basic o C#, debe declarar las funciones DLL dentro de una clase o módulo de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="f43e1-105">If you are programming in Visual Basic or C#, you must declare DLL functions within a class or Visual Basic module.</span></span>  
+# <a name="creating-a-class-to-hold-dll-functions"></a><span data-ttu-id="4dd61-102">Crear una clase para contener funciones de archivos DLL</span><span class="sxs-lookup"><span data-stu-id="4dd61-102">Creating a Class to Hold DLL Functions</span></span>
+<span data-ttu-id="4dd61-103">Encapsular una función DLL que se usa con frecuencia en una clase administrada es un enfoque efectivo para encapsular la funcionalidad de la plataforma.</span><span class="sxs-lookup"><span data-stu-id="4dd61-103">Wrapping a frequently used DLL function in a managed class is an effective approach to encapsulate platform functionality.</span></span> <span data-ttu-id="4dd61-104">Aunque no es obligatorio hacerlo en todos los casos, proporcionar un contenedor de clases es cómodo porque la definición de funciones DLL puede ser compleja y propensa a errores.</span><span class="sxs-lookup"><span data-stu-id="4dd61-104">Although it is not mandatory to do so in every case, providing a class wrapper is convenient because defining DLL functions can be cumbersome and error-prone.</span></span> <span data-ttu-id="4dd61-105">Si está programando en Visual Basic o C#, debe declarar las funciones DLL dentro de una clase o módulo de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="4dd61-105">If you are programming in Visual Basic or C#, you must declare DLL functions within a class or Visual Basic module.</span></span>  
   
- <span data-ttu-id="f43e1-106">Dentro de una clase, se define un método estático para cada función DLL que se quiere llamar.</span><span class="sxs-lookup"><span data-stu-id="f43e1-106">Within a class, you define a static method for each DLL function you want to call.</span></span> <span data-ttu-id="f43e1-107">La definición puede incluir información adicional, como el juego de caracteres o la convención de llamada que se usa para pasar argumentos de método; si se omite esta información, se selecciona la configuración predeterminada.</span><span class="sxs-lookup"><span data-stu-id="f43e1-107">The definition can include additional information, such as the character set or the calling convention used in passing method arguments; by omitting this information, you select the default settings.</span></span> <span data-ttu-id="f43e1-108">Para obtener una lista completa de las opciones de declaración y sus valores predeterminados, vea [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span><span class="sxs-lookup"><span data-stu-id="f43e1-108">For a complete list of declaration options and their default settings, see [Creating Prototypes in Managed Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span></span>  
+ <span data-ttu-id="4dd61-106">Dentro de una clase, se define un método estático para cada función DLL que se quiere llamar.</span><span class="sxs-lookup"><span data-stu-id="4dd61-106">Within a class, you define a static method for each DLL function you want to call.</span></span> <span data-ttu-id="4dd61-107">La definición puede incluir información adicional, como el juego de caracteres o la convención de llamada que se usa para pasar argumentos de método; si se omite esta información, se selecciona la configuración predeterminada.</span><span class="sxs-lookup"><span data-stu-id="4dd61-107">The definition can include additional information, such as the character set or the calling convention used in passing method arguments; by omitting this information, you select the default settings.</span></span> <span data-ttu-id="4dd61-108">Para obtener una lista completa de las opciones de declaración y sus valores predeterminados, vea [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span><span class="sxs-lookup"><span data-stu-id="4dd61-108">For a complete list of declaration options and their default settings, see [Creating Prototypes in Managed Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span></span>  
   
- <span data-ttu-id="f43e1-109">Una vez ajustada, puede llamar a los métodos en la clase que llame a métodos estáticos en cualquier otra clase.</span><span class="sxs-lookup"><span data-stu-id="f43e1-109">Once wrapped, you can call the methods on the class as you call static methods on any other class.</span></span> <span data-ttu-id="f43e1-110">La invocación de plataforma controla automáticamente la función exportada subyacente.</span><span class="sxs-lookup"><span data-stu-id="f43e1-110">Platform invoke handles the underlying exported function automatically.</span></span>  
+ <span data-ttu-id="4dd61-109">Una vez encapsulados, puede llamar a métodos en la clase como llamaría a los métodos estáticos en cualquier otra clase.</span><span class="sxs-lookup"><span data-stu-id="4dd61-109">Once wrapped, you can call the methods on the class as you call static methods on any other class.</span></span> <span data-ttu-id="4dd61-110">La invocación de plataforma controla automáticamente la función exportada subyacente.</span><span class="sxs-lookup"><span data-stu-id="4dd61-110">Platform invoke handles the underlying exported function automatically.</span></span>  
   
- <span data-ttu-id="f43e1-111">Al diseñar una clase administrada para la invocación de plataforma, tenga en cuenta las relaciones entre las clases y las funciones de archivo DLL.</span><span class="sxs-lookup"><span data-stu-id="f43e1-111">When designing a managed class for platform invoke, consider the relationships between classes and DLL functions.</span></span> <span data-ttu-id="f43e1-112">Por ejemplo, se puede:</span><span class="sxs-lookup"><span data-stu-id="f43e1-112">For example, you can:</span></span>  
+ <span data-ttu-id="4dd61-111">Al diseñar una clase administrada para la invocación de plataforma, tenga en cuenta las relaciones entre las clases y las funciones de archivo DLL.</span><span class="sxs-lookup"><span data-stu-id="4dd61-111">When designing a managed class for platform invoke, consider the relationships between classes and DLL functions.</span></span> <span data-ttu-id="4dd61-112">Por ejemplo, se puede:</span><span class="sxs-lookup"><span data-stu-id="4dd61-112">For example, you can:</span></span>  
   
--   <span data-ttu-id="f43e1-113">Declarar funciones DLL dentro de una clase existente.</span><span class="sxs-lookup"><span data-stu-id="f43e1-113">Declare DLL functions within an existing class.</span></span>  
+-   <span data-ttu-id="4dd61-113">Declarar funciones DLL dentro de una clase existente.</span><span class="sxs-lookup"><span data-stu-id="4dd61-113">Declare DLL functions within an existing class.</span></span>  
   
--   <span data-ttu-id="f43e1-114">Crear una clase individual para cada función DLL, para mantener las funciones aisladas y facilitar su búsqueda.</span><span class="sxs-lookup"><span data-stu-id="f43e1-114">Create an individual class for each DLL function, keeping functions isolated and easy to find.</span></span>  
+-   <span data-ttu-id="4dd61-114">Crear una clase individual para cada función DLL, para mantener las funciones aisladas y facilitar su búsqueda.</span><span class="sxs-lookup"><span data-stu-id="4dd61-114">Create an individual class for each DLL function, keeping functions isolated and easy to find.</span></span>  
   
--   <span data-ttu-id="f43e1-115">Crear una clase para un conjunto de funciones DLL relacionadas para formar grupos lógicos y reducir la sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="f43e1-115">Create one class for a set of related DLL functions to form logical groupings and reduce overhead.</span></span>  
+-   <span data-ttu-id="4dd61-115">Crear una clase para un conjunto de funciones DLL relacionadas para formar grupos lógicos y reducir la sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="4dd61-115">Create one class for a set of related DLL functions to form logical groupings and reduce overhead.</span></span>  
   
- <span data-ttu-id="f43e1-116">Puede asignar el nombre que quiera a la clase y sus métodos.</span><span class="sxs-lookup"><span data-stu-id="f43e1-116">You can name the class and its methods as you please.</span></span> <span data-ttu-id="f43e1-117">Para obtener ejemplos que muestran cómo construir declaraciones basadas en .NET para usarse con la invocación de plataforma, vea [Serialización de datos con invocación de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span><span class="sxs-lookup"><span data-stu-id="f43e1-117">For examples that demonstrate how to construct .NET-based declarations to be used with platform invoke, see [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span></span>  
+ <span data-ttu-id="4dd61-116">Puede asignar el nombre que quiera a la clase y sus métodos.</span><span class="sxs-lookup"><span data-stu-id="4dd61-116">You can name the class and its methods as you please.</span></span> <span data-ttu-id="4dd61-117">Para obtener ejemplos que muestran cómo construir declaraciones basadas en .NET para usarse con la invocación de plataforma, vea [Serialización de datos con invocación de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span><span class="sxs-lookup"><span data-stu-id="4dd61-117">For examples that demonstrate how to construct .NET-based declarations to be used with platform invoke, see [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f43e1-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="f43e1-118">See Also</span></span>  
- [<span data-ttu-id="f43e1-119">Consumir funciones DLL no administradas</span><span class="sxs-lookup"><span data-stu-id="f43e1-119">Consuming Unmanaged DLL Functions</span></span>](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [<span data-ttu-id="f43e1-120">Identificar funciones en archivos DLL</span><span class="sxs-lookup"><span data-stu-id="f43e1-120">Identifying Functions in DLLs</span></span>](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
- [<span data-ttu-id="f43e1-121">Crear prototipos en código administrado</span><span class="sxs-lookup"><span data-stu-id="f43e1-121">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [<span data-ttu-id="f43e1-122">Llamar a una función DLL</span><span class="sxs-lookup"><span data-stu-id="f43e1-122">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a><span data-ttu-id="4dd61-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="4dd61-118">See Also</span></span>  
+ [<span data-ttu-id="4dd61-119">Consumir funciones DLL no administradas</span><span class="sxs-lookup"><span data-stu-id="4dd61-119">Consuming Unmanaged DLL Functions</span></span>](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ [<span data-ttu-id="4dd61-120">Identificar funciones en archivos DLL</span><span class="sxs-lookup"><span data-stu-id="4dd61-120">Identifying Functions in DLLs</span></span>](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
+ [<span data-ttu-id="4dd61-121">Crear prototipos en código administrado</span><span class="sxs-lookup"><span data-stu-id="4dd61-121">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
+ [<span data-ttu-id="4dd61-122">Llamar a una función DLL</span><span class="sxs-lookup"><span data-stu-id="4dd61-122">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)

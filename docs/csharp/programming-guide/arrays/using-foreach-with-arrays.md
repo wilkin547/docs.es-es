@@ -1,37 +1,35 @@
 ---
-title: "Utilizar foreach con matrices (Guía de programación de C#)"
-ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
+title: Utilizar foreach con matrices (Guía de programación de C#)
+ms.date: 05/23/2018
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 797cb9a63a5e1009b170b2afda8634bd21a50035
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b858f35167e24390a729769487ce98908a3d349f
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549460"
 ---
-# <a name="using-foreach-with-arrays-c-programming-guide"></a><span data-ttu-id="78d68-102">Utilizar foreach con matrices (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="78d68-102">Using foreach with Arrays (C# Programming Guide)</span></span>
-<span data-ttu-id="78d68-103">C# también proporciona la instrucción [foreach](../../../csharp/language-reference/keywords/foreach-in.md).</span><span class="sxs-lookup"><span data-stu-id="78d68-103">C# also provides the [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement.</span></span> <span data-ttu-id="78d68-104">Esta instrucción ofrece una manera sencilla y limpia de recorrer en iteración los elementos de una matriz o cualquier colección enumerable.</span><span class="sxs-lookup"><span data-stu-id="78d68-104">This statement provides a simple, clean way to iterate through the elements of an array or any enumerable collection.</span></span> <span data-ttu-id="78d68-105">La instrucción `foreach` procesa los elementos en el orden devuelto por el enumerador del tipo de colección o matriz, normalmente del elemento 0 al último.</span><span class="sxs-lookup"><span data-stu-id="78d68-105">The `foreach` statement processes elements in the order returned by the array or collection type’s enumerator, which is usually from the 0th element to the last.</span></span> <span data-ttu-id="78d68-106">Por ejemplo, el siguiente código crea una matriz denominada `numbers` y la recorre en iteración mediante la instrucción `foreach`:</span><span class="sxs-lookup"><span data-stu-id="78d68-106">For example, the following code creates an array called `numbers` and iterates through it with the `foreach` statement:</span></span>  
-  
- [!code-csharp[csProgGuideArrays#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_1.cs)]  
-  
- <span data-ttu-id="78d68-107">Con las matrices multidimensionales, se puede usar el mismo método para recorrer en iteración los elementos, por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="78d68-107">With multidimensional arrays, you can use the same method to iterate through the elements, for example:</span></span>  
-  
- [!code-csharp[csProgGuideArrays#29](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_2.cs)]  
-  
- <span data-ttu-id="78d68-108">En cambio, con las matrices multidimensionales, usar un bucle [for](../../../csharp/language-reference/keywords/for.md) anidado ofrece un mayor control sobre los elementos de la matriz.</span><span class="sxs-lookup"><span data-stu-id="78d68-108">However, with multidimensional arrays, using a nested [for](../../../csharp/language-reference/keywords/for.md) loop gives you more control over the array elements.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="78d68-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="78d68-109">See Also</span></span>  
+# <a name="using-foreach-with-arrays-c-programming-guide"></a><span data-ttu-id="87d86-102">Utilizar foreach con matrices (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="87d86-102">Using foreach with Arrays (C# Programming Guide)</span></span>
+
+<span data-ttu-id="87d86-103">La instrucción [foreach](../../language-reference/keywords/foreach-in.md) ofrece una manera sencilla y limpia de iterar los elementos de una matriz.</span><span class="sxs-lookup"><span data-stu-id="87d86-103">The [foreach](../../language-reference/keywords/foreach-in.md) statement provides a simple, clean way to iterate through the elements of an array.</span></span>
+
+<span data-ttu-id="87d86-104">Para matrices unidimensionales, la instrucción `foreach` procesa los elementos en orden creciente de índice, comenzando con el índice 0 y terminando con el índice `Length - 1`:</span><span class="sxs-lookup"><span data-stu-id="87d86-104">For single-dimensional arrays, the `foreach` statement processes elements in increasing index order, starting with index 0 and ending with index `Length - 1`:</span></span>
+
+[!code-csharp[csProgGuideArrays#28](./codesnippet/CSharp/using-foreach-with-arrays_1.cs)]
+
+<span data-ttu-id="87d86-105">En el caso de matrices multidimensionales, los elementos se recorren de tal manera que primero se incrementan los índices de la dimensión más a la derecha, luego la siguiente dimensión a la izquierda, y así sucesivamente a la izquierda:</span><span class="sxs-lookup"><span data-stu-id="87d86-105">For multi-dimensional arrays, elements are traversed such that the indices of the rightmost dimension are increased first, then the next left dimension, and so on to the left:</span></span>
+
+[!code-csharp[csProgGuideArrays#29](./codesnippet/CSharp/using-foreach-with-arrays_2.cs)]
+
+<span data-ttu-id="87d86-106">En cambio, con las matrices multidimensionales, usar un bucle [for](../../language-reference/keywords/for.md) anidado ofrece un mayor control sobre el orden en el que se procesan los elementos de la matriz.</span><span class="sxs-lookup"><span data-stu-id="87d86-106">However, with multidimensional arrays, using a nested [for](../../language-reference/keywords/for.md) loop gives you more control over the order in which to process the array elements.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="87d86-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="87d86-107">See also</span></span>  
  <xref:System.Array>  
- [<span data-ttu-id="78d68-110">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="78d68-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="78d68-111">Matrices</span><span class="sxs-lookup"><span data-stu-id="78d68-111">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
- [<span data-ttu-id="78d68-112">Matrices unidimensionales</span><span class="sxs-lookup"><span data-stu-id="78d68-112">Single-Dimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [<span data-ttu-id="78d68-113">Matrices multidimensionales</span><span class="sxs-lookup"><span data-stu-id="78d68-113">Multidimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [<span data-ttu-id="78d68-114">Matrices escalonadas</span><span class="sxs-lookup"><span data-stu-id="78d68-114">Jagged Arrays</span></span>](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+ [<span data-ttu-id="87d86-108">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="87d86-108">C# Programming Guide</span></span>](../index.md)  
+ [<span data-ttu-id="87d86-109">Matrices</span><span class="sxs-lookup"><span data-stu-id="87d86-109">Arrays</span></span>](index.md)  
+ [<span data-ttu-id="87d86-110">Matrices unidimensionales</span><span class="sxs-lookup"><span data-stu-id="87d86-110">Single-Dimensional Arrays</span></span>](single-dimensional-arrays.md)  
+ [<span data-ttu-id="87d86-111">Matrices multidimensionales</span><span class="sxs-lookup"><span data-stu-id="87d86-111">Multidimensional Arrays</span></span>](multidimensional-arrays.md)  
+ [<span data-ttu-id="87d86-112">Matrices escalonadas</span><span class="sxs-lookup"><span data-stu-id="87d86-112">Jagged Arrays</span></span>](jagged-arrays.md)
