@@ -2,11 +2,12 @@
 title: 'Cómo: ampliar el tutorial de Async usando Task.WhenAll (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-ms.openlocfilehash: 918a02eadde367d870df4c51bccadf86c04eeb02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12d195caa11cd33b4e450e5a57699da4037ed4a2
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696356"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>Cómo: ampliar el tutorial de Async usando Task.WhenAll (Visual Basic)
 Puede mejorar el rendimiento de la solución asincrónica en [Tutorial: obtener acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) utilizando el <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> método. Este método espera de forma asincrónica varias operaciones asincrónicas, que se representan como una colección de tareas.  
@@ -16,7 +17,7 @@ Puede mejorar el rendimiento de la solución asincrónica en [Tutorial: obtener 
  El método `Task.WhenAll` se aplica a una colección de tareas. La aplicación de `WhenAll` devuelve una única tarea que no está completa hasta que se completen todas las tareas de la colección. La tarea parece ejecutarse en paralelo, pero no se crean subprocesos adicionales. Las tareas se pueden completar en cualquier orden.  
   
 > [!IMPORTANT]
->  Los procedimientos siguientes describen las extensiones para las aplicaciones asincrónicas que se desarrollan en [Tutorial: obtener acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Puede desarrollar las aplicaciones completando el tutorial o descargando el código de [Ejemplos de código para desarrolladores](http://go.microsoft.com/fwlink/?LinkId=255191).  
+>  Los procedimientos siguientes describen las extensiones para las aplicaciones asincrónicas que se desarrollan en [Tutorial: obtener acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Puede desarrollar las aplicaciones completando el tutorial o descargando el código de [Ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
 >   
 >  Para ejecutar el ejemplo, debe tener instalado Visual Studio 2012 o una versión posterior en el equipo.  
   
@@ -24,7 +25,7 @@ Puede mejorar el rendimiento de la solución asincrónica en [Tutorial: obtener 
   
 1.  Agregar el `ProcessURLAsync` método a la primera aplicación que se desarrolló en [Tutorial: obtener acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Si ha descargado el código de [muestras para desarrolladores de código](http://go.microsoft.com/fwlink/?LinkId=255191), abra el proyecto AsyncWalkthrough y, a continuación, agregue `ProcessURLAsync` en el archivo MainWindow.Xaml.  
+    -   Si ha descargado el código de [muestras para desarrolladores de código](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), abra el proyecto AsyncWalkthrough y, a continuación, agregue `ProcessURLAsync` en el archivo MainWindow.Xaml.  
   
     -   Si desarrolló el código completando el tutorial, agregue `ProcessURLAsync` a la aplicación que incluye el método `GetURLContentsAsync`. El archivo MainWindow.xaml.vb para esta aplicación es el primer ejemplo en la sección "Completar código ejemplos desde el tutorial".  
   
@@ -97,7 +98,7 @@ Puede mejorar el rendimiento de la solución asincrónica en [Tutorial: obtener 
   
 1.  Agregue la siguiente versión de `ProcessURLAsync` a la segunda aplicación que se desarrolló en [Tutorial: obtener acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Si ha descargado el código de [muestras para desarrolladores de código](http://go.microsoft.com/fwlink/?LinkId=255191), abra el proyecto AsyncWalkthrough_HttpClient y, a continuación, agregue `ProcessURLAsync` en el archivo MainWindow.Xaml.  
+    -   Si ha descargado el código de [muestras para desarrolladores de código](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), abra el proyecto AsyncWalkthrough_HttpClient y, a continuación, agregue `ProcessURLAsync` en el archivo MainWindow.Xaml.  
   
     -   Si desarrolló el código completando el tutorial, agregue `ProcessURLAsync` a la aplicación que usa el método `HttpClient.GetByteArrayAsync`. El archivo MainWindow.xaml.vb para esta aplicación es el segundo ejemplo de la sección "Completar código ejemplos desde el tutorial".  
   
