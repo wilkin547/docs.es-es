@@ -1,1 +1,0 @@
-<span data-ttu-id="cc8e4-101">Windows Communication Foundation (WCF)</span><span class="sxs-lookup"><span data-stu-id="cc8e4-101">Windows Communication Foundation (WCF)</span></span>
