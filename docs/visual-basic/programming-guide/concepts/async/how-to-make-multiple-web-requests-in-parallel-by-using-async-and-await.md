@@ -2,11 +2,12 @@
 title: 'Cómo: hacer varias solicitudes Web en paralelo utilizando Async y Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 1b98a0f29409fa49af1c9c8f7c91f2170981f7cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728448"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Cómo: hacer varias solicitudes Web en paralelo utilizando Async y Await (Visual Basic)
 En un método asincrónico, las tareas se inician en el momento de crearse. El [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operador se aplica a la tarea en el punto en el método que no se puede continuar el procesamiento hasta que finalice la tarea. A menudo se espera una tarea en cuanto se crea, como se muestra en el ejemplo siguiente.  
@@ -39,7 +40,7 @@ Dim result = Await myTask
   
  Para obtener otro ejemplo que inicia varias tareas al mismo tiempo, consulte [Cómo: Extender la Async Walkthrough usando Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
- Puede descargar el código de este ejemplo en [Muestras de código para desarrollador](http://go.microsoft.com/fwlink/?LinkId=254906).  
+ Puede descargar el código de este ejemplo en [Muestras de código para desarrollador](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
 ### <a name="to-set-up-the-project"></a>Para configurar el proyecto  
   

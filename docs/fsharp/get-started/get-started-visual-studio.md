@@ -2,11 +2,12 @@
 title: 'Empezar a trabajar con F # en Visual Studio'
 description: 'Obtenga información acerca de cómo usar F # con Visual Studio.'
 ms.date: 02/13/2017
-ms.openlocfilehash: d392e3a93d5b13206f654e35a266e9d9569942fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22fbe8086ec133605e1d9b4b28e524fe2ed8ac28
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728539"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Empezar a trabajar con F # en Visual Studio
 
@@ -71,58 +72,6 @@ Ahora debería aparecer el siguiente imprime en la ventana de consola que aparec
 ```
 
 ¡Enhorabuena!  Ha creado su primer proyecto de F # en Visual Studio, escribe que una función de F # imprime los resultados de la llamada a esa función y ejecute el proyecto para ver algunos resultados.
-
-## <a name="using-f-interactive"></a>Uso de F # Interactive
-
-Una de las mejores características de la Visual F # herramientas en Visual Studio es la ventana interactiva de F #.  Permite enviar código a través a un proceso donde puede llamar a ese código y ver el resultado de forma interactiva.
-
-Para empezar a usarlo, resalte el `square` función definida en el código.  A continuación, mantenga presionada la **Alt** clave y presione **ENTRAR**.  Esto ejecuta el código en la ventana interactiva de F #.  Debe aparecer la ventana interactiva de F # con lo siguiente en él:
-
-```
->
-
-val square : x:int -> int
-
->
-```
-
-Esto muestra la misma firma de función para el `square` función, que vio anteriormente cuando mantiene el mouse sobre la función.  Dado que `square` es ahora definido en el proceso de F # Interactive, se puede llamar con valores diferentes:
-
-```
-> square 12;;
-val it : int = 144
->square 13;;
-val it : int = 169
-```
-
-Esto ejecuta la función, se enlaza el resultado a un nuevo nombre `it`y muestra el tipo y el valor de `it`.  Tenga en cuenta que debe finalizar cada línea con `;;`.  Se trata cómo F # Interactive sabe cuando finalice la llamada de función.  También puede definir nuevas funciones en F # Interactive:
-
-```
-> let isOdd x = x % 2 <> 0;;
-
-val isOdd : x:int -> bool
-
-> isOdd 12;;
-val it : bool = false
-```
-
-Los pasos anteriores, define una nueva función, `isOdd`, que toma un `int` y comprueba si es impar. Puede llamar a esta función para ver lo que devuelve con diferentes entradas.  Puede llamar a funciones dentro de las llamadas a funciones:
-
-```
-> isOdd (square 15);;
-val it : bool = true
-```
-
-También puede usar el [operador de canalización hacia delante](../language-reference/symbol-and-operator-reference/index.md) debe canalizar el valor en las dos funciones:
-
-```
-> 15 |> square |> isOdd;;
-val it : bool = true
-```
-
-El operador de canalización hacia delante etc., se tratan en los tutoriales posteriores.
-
-Esto es sólo un vistazo a lo que puede hacer con F # Interactive. Para obtener más información, visite [programación interactiva con F #](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
