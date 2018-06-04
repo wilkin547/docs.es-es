@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9df41a404c091bb76490d762b55580c36cf33f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728685"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Ejemplo de expresiones regulares: Buscar etiquetas HREF
 En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los valores href="…" y sus ubicaciones en la cadena.  
@@ -43,9 +44,9 @@ En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los v
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  
 |`=`|Coincide con el signo igual.|  
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|Coincide con uno de los siguientes sin asignar el resultado a un grupo capturado:<br /> <ul><li><p>Una comilla o un apóstrofo, seguido de cero o más apariciones de cualquier carácter que no sea una comilla o un apóstrofo, seguido por una comilla o un apóstrofo. El grupo con nombre `1` se incluye en este patrón.</p></li><li><p>Uno o varios caracteres que no son espacios en blanco. El grupo con nombre `1` se incluye en este patrón.</p></li></ul>|  
+|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Coincide con uno de los siguientes sin asignar el resultado a un grupo capturado:<br /> <ul><li><p>Una comilla o un apóstrofo, seguido de cero o más apariciones de cualquier carácter que no sea una comilla o un apóstrofo, seguido por una comilla o un apóstrofo. El grupo con nombre `1` se incluye en este patrón.</p></li><li><p>Uno o varios caracteres que no son espacios en blanco. El grupo con nombre `1` se incluye en este patrón.</p></li></ul>|  
 |`(?<1>[^"']*)`|Asigna cero o más apariciones de cualquier carácter que no sea apóstrofo o comilla al grupo de captura con nombre `1`.|  
-|`"(?<1>\S+)`|Asigna uno o varios caracteres que no sean un espacio en blanco al grupo de captura con nombre `1`.|  
+|`(?<1>\S+)`|Asigna uno o varios caracteres que no sean un espacio en blanco al grupo de captura con nombre `1`.|  
   
 ## <a name="match-result-class"></a>Clase de resultado Match  
  Los resultados de la búsqueda se almacenan en la clase <xref:System.Text.RegularExpressions.Match>, que proporciona acceso a todas las subcadenas extraídas por la búsqueda. También recuerda la cadena buscada y la expresión regular que se usa, por lo que puede llamar al método <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> para realizar otra búsqueda desde donde terminó la anterior.  
