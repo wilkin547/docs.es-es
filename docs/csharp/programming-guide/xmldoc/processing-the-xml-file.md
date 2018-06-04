@@ -6,10 +6,11 @@ helpviewer_keywords:
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
 ms.openlocfilehash: 659562864ad323162f15351aa960c2a54164c77d
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34458065"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Procesar el archivo XML (Guía de programación de C#)
 El compilador genera una cadena de identificador para cada construcción del código que se etiqueta para generar documentación. (Para más información sobre cómo etiquetar el código, vea [Etiquetas recomendadas para comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)). La cadena de identificador identifica la construcción de forma exclusiva. Los programas que procesan el archivo XML pueden usar la cadena de identificador para identificar el elemento de reflexión o de metadatos correspondiente de .NET Framework al que se aplica la documentación.  

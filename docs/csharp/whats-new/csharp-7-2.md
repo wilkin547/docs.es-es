@@ -2,11 +2,12 @@
 title: Novedades de C# 7.2
 description: Información general sobre las nuevas características en C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: b813bf5b38ef17986b21e928c9c86e583174c7d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a74afd7f073daa46328d60149e2dd90207420a80
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566194"
 ---
 # <a name="whats-new-in-c-72"></a>Novedades de C# 7.2
 
@@ -15,7 +16,7 @@ Una de las ventajas de esta versión es que funciona mejor con tipos de valor, y
 
 El resto de características son menos importantes, pero igualmente útiles.
 
-C# 7.2 usa el elemento de configuración de [selección de versión de lenguaje](csharp-7-1.md#language-version-selection) para seleccionar la versión del lenguaje del compilador.
+C# 7.2 usa el elemento de configuración de [selección de versión de lenguaje](../language-reference/configure-language-version.md) para seleccionar la versión del lenguaje del compilador.
 
 Las nuevas características de lenguaje de esta versión son las siguientes:
 

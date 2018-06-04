@@ -4,17 +4,18 @@ description: Obtenga información sobre el paquete de compatibilidad de Windows 
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
-ms.openlocfilehash: 6b25a2d5c197a6c9b0a7ead18370870ddc091e1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51b96d7828285964c1b0cbb835b8eb5ed92c47d6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566178"
 ---
 # <a name="using-the-windows-compatibility-pack"></a>Uso del paquete de compatibilidad de Windows
 
 Uno de los problemas más comunes al que se enfrentan los desarrolladores al migrar el código existente a .NET Core es que dependen de API y tecnologías que solo existen en .NET Framework. El *paquete de compatibilidad de Windows* proporciona muchas de estas tecnologías para que compilar aplicaciones .NET Core y bibliotecas de .NET Standard sea mucho más viable para el código existente.
 
-Este paquete es una [extensión lógica de .NET Standard 2.0](../whats-new/index.md#api-changes-and-library-support) que aumenta considerablemente las compilaciones del conjunto de API y el código existente prácticamente sin modificaciones. Pero con el fin de mantener la promesa de .NET Standard ("es el conjunto de API que proporcionan todas las implementaciones de .NET"), no incluye tecnologías que no puedan funcionar en todas las plataformas, como el Registro, Windows Management Instrumentation (WMI) o las API de emisión de la reflexión.
+Este paquete es una [extensión lógica de .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) que aumenta considerablemente las compilaciones del conjunto de API y el código existente prácticamente sin modificaciones. Pero con el fin de mantener la promesa de .NET Standard ("es el conjunto de API que proporcionan todas las implementaciones de .NET"), no incluye tecnologías que no puedan funcionar en todas las plataformas, como el Registro, Windows Management Instrumentation (WMI) o las API de emisión de la reflexión.
 
 El *paquete de compatibilidad de Windows* está un nivel por encima de .NET Standard y proporciona acceso a tecnologías que solo son de Windows. Es especialmente útil para los clientes que quieren migrar a .NET Core pero piensan permanecer en Windows como primer paso. En ese escenario, la imposibilidad de usar tecnologías solo de Windows es únicamente un escollo para la migración con cero ventajas arquitectónicas.
 

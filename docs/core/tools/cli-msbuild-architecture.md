@@ -3,11 +3,12 @@ title: Arquitectura de las herramientas de la línea de comandos de .NET Core
 description: Obtenga información sobre las capas de herramientas de .NET Core y sobre lo que ha cambiado en versiones recientes.
 author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 50ccaa490f079c62901c57eb9cf91690ee655bf2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d96a0b1e19bf84af0ab645ebd104afc899ae656
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696548"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Introducción de alto nivel de los cambios en las herramientas de .NET Core
 
@@ -66,4 +67,5 @@ Este comando está publicando una aplicación en una carpeta `pub` mediante la c
 
 La excepción importante a esta regla son los comandos `new` y `run`, dado que no se han implementado como destinos de MSBuild.
 
-<a name="dotnet-restore-note"></a> [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+<a name="dotnet-restore-note"></a>  
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

@@ -7,11 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 8b36f94e9476b857066c292feb9e77e9c2199b7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4d5719bccd240658880cc5c6e549e8c912ca1b9
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696399"
 ---
 # <a name="ref-c-reference"></a>ref (Referencia de C#)
 
@@ -125,8 +126,9 @@ Cuando el autor de la llamada almacena el valor devuelto mediante el método `Ge
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Pasar parámetros](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
- [Parámetros de métodos](../../../csharp/language-reference/keywords/method-parameters.md)  
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
+ [Semántica de referencia con tipos de valor](../../reference-semantics-with-value-types.md)  
+ [Pasar parámetros](../../programming-guide/classes-and-structs/passing-parameters.md)  
+ [Parámetros de métodos](method-parameters.md)  
+ [Referencia de C#](../index.md)  
+ [Guía de programación de C#](../../programming-guide/index.md)  
+ [Palabras clave de C#](index.md)

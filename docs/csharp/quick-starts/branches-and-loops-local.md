@@ -3,12 +3,12 @@ title: 'Tutorial de ramas y bucles: guías de inicio rápido para entornos local
 description: En este inicio rápido sobre ramas y bucles, escribirá código de C# para explorar la sintaxis del lenguaje que admite ramas y bucles condicionales para ejecutar instrucciones de forma repetida.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a25ea7f266405a017f6f4576659195b2ac1afbf4
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 4324e8b4704682f128e3122661fb6a0eddfe158b
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457909"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566142"
 ---
 # <a name="branches-and-loops"></a>Bifurcaciones y bucles
 

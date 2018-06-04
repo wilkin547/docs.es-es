@@ -3,12 +3,13 @@ title: 'Comando dotnet add package: CLI de .NET Core'
 description: El comando “dotnet add package” constituye una opción práctica para agregar la referencia de un paquete de NuGet a un proyecto.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/11/2017
-ms.openlocfilehash: fd3704bbb941835421d78e19f196fa52b3767c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 31dda9dbb101238b3a33d8b0d9a17765744480e0
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696304"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Sinopsis
 
-`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]`
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
 ## <a name="description"></a>Description
 
@@ -30,7 +31,7 @@ El comando `dotnet add package` constituye una opción práctica para agregar un
 
 Por ejemplo, si agrega `Newtonsoft.Json` a *ToDo.csproj* se producirá un resultado similar al del siguiente ejemplo:
 
-```
+```console
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
 log  : Restoring packages for C:\projects\ToDo\ToDo.csproj...
@@ -62,10 +63,6 @@ La referencia de paquete que se va a agregar.
 
 Imprime una corta ayuda para el comando.
 
-`-v|--version <VERSION>`
-
-Versión del paquete.
-
 `-f|--framework <FRAMEWORK>`
 
 Agrega una referencia de paquete solo cuando se destina a un [marco](../../standard/frameworks.md) específico.
@@ -74,13 +71,17 @@ Agrega una referencia de paquete solo cuando se destina a un [marco](../../stand
 
 Agrega una referencia de paquete sin realizar una vista previa de restauración y una comprobación de compatibilidad.
 
+`--package-directory <PACKAGE_DIRECTORY>`
+
+Restaura el paquete al directorio especificado.
+
 `-s|--source <SOURCE>`
 
 Usa un origen de paquete específico NuGet durante la operación de restauración.
 
-`--package-directory <PACKAGE_DIRECTORY>`
+`-v|--version <VERSION>`
 
-Restaura el paquete al directorio especificado.
+Versión del paquete.
 
 ## <a name="examples"></a>Ejemplos
 

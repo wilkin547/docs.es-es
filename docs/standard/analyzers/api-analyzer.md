@@ -3,13 +3,14 @@ title: Analizador de API en .NET
 description: Obtenga información sobre cómo el analizador de API de .NET puede ayudar a detectar problemas de compatibilidad de plataforma y de API en desuso.
 author: oliag
 ms.author: mairaw
-ms.date: 01/30/2018
+ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ac0e777e1df837ff7e9fbe185c462f56765e47bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696889"
 ---
 # <a name="net-api-analyzer"></a>Analizador de API en .NET
 
@@ -70,11 +71,11 @@ La supresión global es el método recomendado para garantizar la coherencia del
 
 ## <a name="discovering-cross-platform-issues"></a>Detección de problemas multiplataforma
 
-De forma similar a las API en desuso, el analizador identifica todas las API que no son multiplataforma. Por ejemplo, <xref:System.Console.WindowWidth?displayProperty=nameWithType> funciona en Windows, pero no en Linux y macOS. El Id. de diagnóstico se muestra en la ventana **Lista de errores**. Puede suprimir dicha advertencia si hace clic con el botón derecho y selecciona **Acciones rápidas y refactorizaciones**. A diferencia de los casos de degradación donde tiene dos opciones (seguir usando el miembro en desuso y suprimir advertencias o no utilizarlo en absoluto), en este caso, si va a desarrollar el código solo para algunas plataformas, puede suprimir todas las advertencias para todas las demás plataformas en las que no pretende ejecutar el código. Para ello, solo tiene que editar el archivo de proyecto y agregar la propiedad `PlatformCompatIgnore` que enumera todas las plataformas que se deben ignorar. Los valores permitidos son: `Linux`, `MacOSX` y `Windows`.
+De forma similar a las API en desuso, el analizador identifica todas las API que no son multiplataforma. Por ejemplo, <xref:System.Console.WindowWidth?displayProperty=nameWithType> funciona en Windows, pero no en Linux y macOS. El Id. de diagnóstico se muestra en la ventana **Lista de errores**. Puede suprimir dicha advertencia si hace clic con el botón derecho y selecciona **Acciones rápidas y refactorizaciones**. A diferencia de los casos de degradación donde tiene dos opciones (seguir usando el miembro en desuso y suprimir advertencias o no utilizarlo en absoluto), en este caso, si va a desarrollar el código solo para algunas plataformas, puede suprimir todas las advertencias para todas las demás plataformas en las que no pretende ejecutar el código. Para ello, solo tiene que editar el archivo de proyecto y agregar la propiedad `PlatformCompatIgnore` que enumera todas las plataformas que se deben ignorar. Los valores permitidos son: `Linux`, `macOS` y `Windows`.
 
 ```xml
 <PropertyGroup>
-    <PlatformCompatIgnore>Linux;MacOS</PlatformCompatIgnore>
+    <PlatformCompatIgnore>Linux;macOS</PlatformCompatIgnore>
 </PropertyGroup>
 ```
 
