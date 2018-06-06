@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-ms.openlocfilehash: 12a25d727aae09bc523f47e25b280c5c3ebb47d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b871a7edd8285c26148cf1393c53f537dfd40c56
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753275"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>Literales XML y la especificación XML 1.0 (Visual Basic)
-La sintaxis de literales XML en Visual Basic admite la mayor parte de la especificación de lenguaje de marcado Extensible (XML) 1.0. Para obtener más información acerca de la especificación XML 1.0, vea [lenguaje de marcado Extensible (XML) 1.0](http://go.microsoft.com/fwlink/?LinkId=73927) en el sitio Web de W3C.  
+La sintaxis de literales XML en Visual Basic admite la mayor parte de la especificación de lenguaje de marcado Extensible (XML) 1.0. Para obtener más información acerca de la especificación XML 1.0, vea [lenguaje de marcado Extensible (XML) 1.0](https://www.w3.org/TR/xml) en el sitio Web de W3C.  
   
 ## <a name="what-visual-basic-does-not-support"></a>Lo que no admite Visual Basic  
   
