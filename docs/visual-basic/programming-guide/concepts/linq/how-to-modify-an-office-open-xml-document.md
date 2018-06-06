@@ -1,32 +1,23 @@
 ---
-title: "Cómo: modificar un documento XML abierto de Office (Visual Basic)"
-ms.custom: 
+title: 'Cómo: modificar un documento XML abierto de Office (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0d2f6b9bc7acf7c9108112b61fe8edf70c549cac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8d4ecdf89606190eed16b5374a5e43421d1260b7
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753398"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a><span data-ttu-id="4bd85-102">Cómo: modificar un documento XML abierto de Office (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4bd85-102">How to: Modify an Office Open XML Document (Visual Basic)</span></span>
-<span data-ttu-id="4bd85-103">En este tema se presenta un ejemplo que abre un documento XML abierto de Office, lo modifica y lo guarda.</span><span class="sxs-lookup"><span data-stu-id="4bd85-103">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span></span>  
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a><span data-ttu-id="d9908-102">Cómo: modificar un documento XML abierto de Office (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d9908-102">How to: Modify an Office Open XML Document (Visual Basic)</span></span>
+<span data-ttu-id="d9908-103">En este tema se presenta un ejemplo que abre un documento XML abierto de Office, lo modifica y lo guarda.</span><span class="sxs-lookup"><span data-stu-id="d9908-103">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span></span>  
   
- <span data-ttu-id="4bd85-104">Para más información sobre Office Open XML, visite [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).</span><span class="sxs-lookup"><span data-stu-id="4bd85-104">For more information on Office Open XML, see [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).</span></span>  
+ <span data-ttu-id="d9908-104">Para obtener más información acerca de Office Open XML, vea [Blog de Eric White](http://www.ericwhite.com).</span><span class="sxs-lookup"><span data-stu-id="d9908-104">For more information on Office Open XML, see [Eric White's Blog](http://www.ericwhite.com).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4bd85-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="4bd85-105">Example</span></span>  
- <span data-ttu-id="4bd85-106">Este ejemplo busca el primer elemento de párrafo del documento.</span><span class="sxs-lookup"><span data-stu-id="4bd85-106">This example finds the first paragraph element in the document.</span></span> <span data-ttu-id="4bd85-107">Recupera el texto del párrafo y, a continuación, elimina todas las ejecuciones de texto del párrafo.</span><span class="sxs-lookup"><span data-stu-id="4bd85-107">It retrieves the text from the paragraph, and then deletes all text runs in the paragraph.</span></span> <span data-ttu-id="4bd85-108">Crea una nueva ejecución de texto que está formada por el texto del primer párrafo que se ha convertido a mayúsculas.</span><span class="sxs-lookup"><span data-stu-id="4bd85-108">It creates a new text run that consists of the first paragraph text that has been converted to upper case.</span></span> <span data-ttu-id="4bd85-109">A continuación serializa el XML cambiado en el paquete de XML abierto y lo cierra.</span><span class="sxs-lookup"><span data-stu-id="4bd85-109">It then serializes the changed XML into the Open XML package and closes it.</span></span>  
+## <a name="example"></a><span data-ttu-id="d9908-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d9908-105">Example</span></span>  
+ <span data-ttu-id="d9908-106">Este ejemplo busca el primer elemento de párrafo del documento.</span><span class="sxs-lookup"><span data-stu-id="d9908-106">This example finds the first paragraph element in the document.</span></span> <span data-ttu-id="d9908-107">Recupera el texto del párrafo y, a continuación, elimina todas las ejecuciones de texto del párrafo.</span><span class="sxs-lookup"><span data-stu-id="d9908-107">It retrieves the text from the paragraph, and then deletes all text runs in the paragraph.</span></span> <span data-ttu-id="d9908-108">Crea una nueva ejecución de texto que está formada por el texto del primer párrafo que se ha convertido a mayúsculas.</span><span class="sxs-lookup"><span data-stu-id="d9908-108">It creates a new text run that consists of the first paragraph text that has been converted to upper case.</span></span> <span data-ttu-id="d9908-109">A continuación serializa el XML cambiado en el paquete de XML abierto y lo cierra.</span><span class="sxs-lookup"><span data-stu-id="d9908-109">It then serializes the changed XML into the Open XML package and closes it.</span></span>  
   
- <span data-ttu-id="4bd85-110">Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="4bd85-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="4bd85-111">Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4bd85-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="d9908-110">Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="d9908-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="d9908-111">Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d9908-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -144,13 +135,13 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="4bd85-112">Si abre `SampleDoc.docx` tras ejecutar este programa, puede ver que este programa ha convertido el primer párrafo del documento a mayúsculas.</span><span class="sxs-lookup"><span data-stu-id="4bd85-112">If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.</span></span>  
+ <span data-ttu-id="d9908-112">Si abre `SampleDoc.docx` tras ejecutar este programa, puede ver que este programa ha convertido el primer párrafo del documento a mayúsculas.</span><span class="sxs-lookup"><span data-stu-id="d9908-112">If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.</span></span>  
   
- <span data-ttu-id="4bd85-113">Cuando se ejecuta con el documento de Open XML de ejemplo descrito en [crear el origen de Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="4bd85-113">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
+ <span data-ttu-id="d9908-113">Cuando se ejecuta con el documento de Open XML de ejemplo descrito en [crear el origen de Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="d9908-113">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4bd85-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="4bd85-114">See Also</span></span>  
- [<span data-ttu-id="4bd85-115">Técnicas avanzadas de consulta (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4bd85-115">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="d9908-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="d9908-114">See Also</span></span>  
+ [<span data-ttu-id="d9908-115">Técnicas avanzadas de consulta (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d9908-115">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
