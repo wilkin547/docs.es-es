@@ -2,11 +2,12 @@
 title: 'Paseo de F #.'
 description: 'Examinar algunas de las características clave de la programación de idioma en este paseo le con ejemplos de código de F #.'
 ms.date: 02/28/2018
-ms.openlocfilehash: 2ce251b90d5c202996e0b1673e8f7f378a38af5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63c38d59376a148c439482fcf47488fc72b7b8aa
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753492"
 ---
 # <a name="tour-of-f"></a>Paseo de F #. #
 
@@ -54,11 +55,11 @@ Es importante tener en cuenta que, dado que `struct` tuplas son tipos de valor, 
 
 ## <a name="pipelines-and-composition"></a>Las canalizaciones y composición
 
-Canalizar operadores (`|>`, `<|`, `||>`, `<||`, `|||>`, `<|||`) y operadores de composición (`>>` y `<<`) se utilizan ampliamente al procesar datos en F #.  Estos operadores son funciones que le permiten establecer "canalizaciones" de las funciones de una forma flexible.  En el ejemplo siguiente se describen cómo puede aprovechar las ventajas de estos operadores para crear una canalización funcional simple.
+Canalizar operadores como `|>` se utilizan ampliamente al procesar datos en F #. Estos operadores son funciones que le permiten establecer "canalizaciones" de las funciones de una forma flexible. En el ejemplo siguiente se recorre cómo puede aprovechar las funciones de estos operadores para crear una canalización funcional simple:
 
-[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L300)]
+[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
 
-El ejemplo anterior realiza uso de muchas características de F #, incluidas las funciones de procesamiento de lista, funciones de primera clase, y [aplicación parcial](language-reference/functions/index.md#partial-application-of-arguments).  Aunque una comprensión profunda de cada uno de esos conceptos puede convertirse en algo avanzada, debe quedar claro cómo fácilmente las funciones pueden utilizarse para procesar los datos al generar las canalizaciones.
+El ejemplo anterior realiza uso de muchas características de F #, incluidas las funciones de procesamiento de lista, funciones de primera clase, y [aplicación parcial](language-reference/functions/index.md#partial-application-of-arguments). Aunque una comprensión profunda de cada uno de esos conceptos puede convertirse en algo avanzada, debe quedar claro cómo fácilmente las funciones pueden utilizarse para procesar los datos al generar las canalizaciones.
 
 ## <a name="lists-arrays-and-sequences"></a>Listas, matrices y secuencias
 
