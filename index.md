@@ -5,11 +5,12 @@ hide_bc: true
 title: Documentación de .NET
 description: Obtenga información sobre cómo usar .NET para crear una variedad de aplicaciones en cualquier plataforma mediante C#, Visual Basic y F#. Examine referencias de API, código de ejemplo, tutoriales y mucho más.
 ms.custom: updateeachrelease
-ms.openlocfilehash: f5967e21fcda580635dd53f976e2e5dabc0fbce8
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 25f01910ba6f004cafbe8b981e4a986791044ded
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826987"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -392,13 +393,13 @@ ms.lasthandoff: 05/11/2018
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-cloud-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-cloud-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/azure/cloud-services/cloud-services-dotnet-get-started">
-                                                    <h3>Azure Cloud Services y ASP.NET</h3>
-                                                    <p>Aprenda a configurar, supervisar y escalar los servicios en la nube en Azure.</p>
+                                                <a href="/azure/storage/">
+                                                    <h3>Almacenamiento de Azure</h3>
+                                                    <p>Obtenga información sobre Azure Storage y cómo crear aplicaciones con blobs, tablas, colas y archivos de Azure.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -418,25 +419,6 @@ ms.lasthandoff: 05/11/2018
                                                 <a href="/dotnet/fsharp/using-fsharp-on-azure">
                                                     <h3>Uso de F # en Azure</h3>
                                                     <p>Aprenda a usar los distintos servicios de Azure en F# como Azure Storage, Cloud Services y Azure Functions.</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/images/hub/net-docs-cloud-4.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <a href="/azure/storage/">
-                                                    <h3>Almacenamiento de Azure</h3>
-                                                    <p>Obtenga información sobre Azure Storage y cómo crear aplicaciones con blobs, tablas, colas y archivos de Azure.</p>
                                                 </a>
                                             </div>
                                         </div>
