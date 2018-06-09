@@ -15,11 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 907d5dcaae8f6e09902c2b3548d5ba8ac9a2b077
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251173"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensiones de marcado y XAML de WPF
 En este tema se presenta el concepto de extensiones de marcado para XAML, incluidos sus reglas de sintaxis, su finalidad y el modelo de objeto de clase subyacente. Las extensiones de marcado son una característica general del lenguaje XAML y de la implementación .NET de servicios XAML. En este tema se detallan las extensiones de marcado para su uso en XAML de WPF.  
@@ -88,7 +89,7 @@ En este tema se presenta el concepto de extensiones de marcado para XAML, inclui
 -   Si los token separados individuales no contienen ningún signo igual, cada token se trata como un argumento constructor. Cada parámetro constructor debe proporcionarse como el tipo que espera la signatura y en el orden apropiado que espera la signatura.  
   
     > [!NOTE]
-    >  Un procesador XAML debe llamar al constructor que coincida con el recuento de argumentos del número de pares. Por este motivo, si está implementando una extensión de marcado personalizada, no proporcione varios parámetros con el mismo recuento de argumentos. El comportamiento de cómo se comporta un procesador XAML si existe más de una ruta de acceso de constructor de extensión de marcado con el mismo recuento de parámetros no está definido, pero debe prever que un procesador XAML puede producir una excepción en el uso si esta situación se da en las definiciones de tipo de las extensiones de marcado.  
+    >  Un procesador XAML debe llamar al constructor que coincida con el recuento de argumentos del número de pares. Por esta razón, si está implementando una extensión de marcado personalizada, no proporcionan varios constructores con el mismo número de argumentos. El comportamiento de cómo se comporta un procesador XAML si existe más de una ruta de acceso de constructor de extensión de marcado con el mismo recuento de parámetros no está definido, pero debe prever que un procesador XAML puede producir una excepción en el uso si esta situación se da en las definiciones de tipo de las extensiones de marcado.  
   
 -   Si los token separados individuales contienen signos igual, un procesador XAML llama primero al constructor predeterminado para la extensión de marcado. A continuación, cada par nombre=valor se interpreta como un nombre de propiedad que existe en la extensión de marcado y un valor que se asigna a esa propiedad.  
   
