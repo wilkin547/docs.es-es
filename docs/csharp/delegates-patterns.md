@@ -3,11 +3,12 @@ title: Patrones comunes para delegados
 description: Obtenga información sobre los patrones comunes para usar delegados en su código para evitar el acoplamiento seguro entre sus componentes.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: b9762841656aa362589d01ed011407aeedfe4a20
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827025"
 ---
 # <a name="common-patterns-for-delegates"></a>Patrones comunes para delegados
 
@@ -53,32 +54,15 @@ Con este diseño, el componente de registro principal puede ser una clase no vir
 
 Comencemos poco a poco: la implementación inicial aceptará mensajes nuevos y los escribirá con cualquier delegado asociado. Puede comenzar con un delegado que escriba mensajes en la consola.
 
-```csharp
-public static class Logger
-{
-    public static Action<string> WriteMessage;
-    
-    public static void LogMessage(string msg)
-    {
-        WriteMessage(msg);
-    }
-}
-```
+[!code-csharp[LoggerImplementation](../../samples/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
 
 La clase estática anterior es lo más sencillo que puede funcionar. Necesitamos escribir solo la implementación para el método que escribe mensajes en la consola: 
 
-```csharp
-public static void LogToConsole(string message)
-{
-    Console.Error.WriteLine(message);
-}
-```
+[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
 
 Por último, necesita conectar el delegado asociándolo al delegado WriteMessage que se declara en el registrador:
 
-```csharp
-Logger.WriteMessage += LogToConsole;
-```
+[!code-csharp[ConnectDelegate](../../samples/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
 
 ## <a name="practices"></a>Procedimientos
 
@@ -94,49 +78,13 @@ Vamos a hacer esta primera versión un poco más sólida y, después, empezaremo
 
 Después, vamos a agregar algunos argumentos al método `LogMessage()` de manera que su clase de registro cree más mensajes estructurados:
 
-```csharp
-// Logger implementation two
-public enum Severity
-{
-    Verbose,
-    Trace,
-    Information,
-    Warning,
-    Error,
-    Critical
-}
-
-public static class Logger
-{
-    public static Action<string> WriteMessage;
-    
-    public static void LogMessage(Severity s, string component, string msg)
-    {
-        var outputMsg = $"{DateTime.Now}\t{s}\t{component}\t{msg}";
-        WriteMessage(outputMsg);
-    }
-}
-```
+[!code-csharp[Severity](../../samples/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
+[!code-csharp[NextLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
 
 A continuación, vamos a usar ese argumento `Severity` para filtrar los mensajes que se envían a la salida del registro. 
 
-```csharp
-public static class Logger
-{
-    public static Action<string> WriteMessage;
-    
-    public static Severity LogLevel {get;set;} = Severity.Warning;
-    
-    public static void LogMessage(Severity s, string component, string msg)
-    {
-        if (s < LogLevel)
-            return;
-            
-        var outputMsg = $"{DateTime.Now}\t{s}\t{component}\t{msg}";
-        WriteMessage(outputMsg);
-    }
-}
-```
+[!code-csharp[FinalLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
+
 ## <a name="practices"></a>Procedimientos
 
 Ha agregado características nuevas a la infraestructura de registro. Como el componente del registrador se acopla débilmente a cualquier mecanismo de salida, estas características nuevas pueden agregarse sin afectar a ningún código que implementa el delegado del registrador.
@@ -149,41 +97,12 @@ El componente de registro se está desarrollando correctamente. Vamos a agregar 
 
 Aquí se muestra ese registrador basado en archivos:
 
-```csharp
-public class FileLogger
-{
-    private readonly string logPath;
-    public FileLogger(string path)
-    {
-        logPath = path;
-        Logger.WriteMessage += LogMessage;
-    }
-    
-    public void DetachLog() => Logger.WriteMessage -= LogMessage;
+[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
-    // make sure this can't throw.
-    private void LogMessage(string msg)
-    {
-        try {
-            using (var log = File.AppendText(logPath))
-            {
-                log.WriteLine(msg);
-                log.Flush();
-            }
-        } catch (Exception e)
-        {
-            // Hmm. Not sure what to do.
-            // Logging is failing...
-        }
-    }
-}
-```
 
 Una vez que haya creado esta clase, puede inicializarla y esta asocia su método LogMessage al componente de registrador:
 
-```csharp
-var file = new FileLogger("log.txt");
-```
+[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
 
 Estos dos no son mutuamente exclusivos. Puede asociar ambos métodos de registro y generar mensajes en la consola y en un archivo:
 

@@ -6,11 +6,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: e26e7e7f15dd48cf029d5f67bf5ef0de3e19b7bb
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 28c8e9bd078e07a185f541214aa5b5ff79018ff5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826999"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed (Instrucción, Referencia de C#)
 
@@ -24,11 +25,11 @@ Puede inicializar un puntero mediante una matriz, una cadena, un búfer de tama�
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
-A partir de C# 7.3, la instrucción `fixed` funciona en tipos adicionales más allá de matrices, cadenas, búferes de tamaño fijo o variables no administradas. Cualquier tipo que implemente un método denominado `DangerousGetPinnableReference` se puede anclar. `DangerousGetPinnableReference` debe devolver una variable `ref` a un tipo no administrado. Consulte el tema sobre [tipos de puntero](../../programming-guide/unsafe-code-pointers/pointer-types.md) para obtener más información. Los tipos de .NET <xref:System.Span%601?displayProperty=nameWithType> y <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> presentados en .NET Core 2.0 usan este patrón y se pueden anclar. Esto se muestra en el ejemplo siguiente:
+A partir de C# 7.3, la instrucción `fixed` funciona en tipos adicionales más allá de matrices, cadenas, búferes de tamaño fijo o variables no administradas. Cualquier tipo que implemente un método denominado `GetPinnableReference` se puede anclar. `GetPinnableReference` debe devolver una variable `ref` a un tipo no administrado. Consulte el tema sobre [tipos de puntero](../../programming-guide/unsafe-code-pointers/pointer-types.md) para obtener más información. Los tipos de .NET <xref:System.Span%601?displayProperty=nameWithType> y <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> presentados en .NET Core 2.0 usan este patrón y se pueden anclar. Esto se muestra en el ejemplo siguiente:
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
 
-Si crea tipos que deben participar en este patrón, consulta <xref:System.Span%601.DangerousGetPinnableReference?displayProperty=nameWithType> para ver un ejemplo de implementación del patrón.
+Si crea tipos que deben participar en este patrón, consulta <xref:System.Span%601.GetPinnableReference?displayProperty=nameWithType> para ver un ejemplo de implementación del patrón.
 
 Es posible inicializar varios punteros en una sola instrucción si todos son del mismo tipo:
 
