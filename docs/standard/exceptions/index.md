@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575458"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a><span data-ttu-id="d4793-102">Controlar y generar excepciones en .NET</span><span class="sxs-lookup"><span data-stu-id="d4793-102">Handling and throwing exceptions in .NET</span></span>
 

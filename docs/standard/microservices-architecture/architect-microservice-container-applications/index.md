@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573651"
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a><span data-ttu-id="fd95d-103">Diseñar la arquitectura de aplicaciones basadas en contenedores y microservicios</span><span class="sxs-lookup"><span data-stu-id="fd95d-103">Architecting Container- and Microservice-Based Applications</span></span>
 
