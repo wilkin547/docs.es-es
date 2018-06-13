@@ -1,57 +1,46 @@
 ---
 title: Authenticode (Referencia de la API no administrada)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: reference
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
-caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0b790064ef64ab44f3798a62d5dbf004f0f0bba6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 78149d1f8fdad3c11fe693221888f115af84ada2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406427"
 ---
-# <a name="authenticode-unmanaged-api-reference"></a><span data-ttu-id="6adbb-102">Authenticode (Referencia de la API no administrada)</span><span class="sxs-lookup"><span data-stu-id="6adbb-102">Authenticode (Unmanaged API Reference)</span></span>
-<span data-ttu-id="6adbb-103">Admite el módulo de creación y verificación de licencias Authenticode XrML.</span><span class="sxs-lookup"><span data-stu-id="6adbb-103">Supports the Authenticode XrML license creation and verification module.</span></span>  
+# <a name="authenticode-unmanaged-api-reference"></a><span data-ttu-id="d926c-102">Authenticode (Referencia de la API no administrada)</span><span class="sxs-lookup"><span data-stu-id="d926c-102">Authenticode (Unmanaged API Reference)</span></span>
+<span data-ttu-id="d926c-103">Admite el módulo de creación y verificación de licencias Authenticode XrML.</span><span class="sxs-lookup"><span data-stu-id="d926c-103">Supports the Authenticode XrML license creation and verification module.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6adbb-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="6adbb-104">In This Section</span></span>  
- [<span data-ttu-id="6adbb-105">_AxlGetIssuerPublicKeyHash (Función)</span><span class="sxs-lookup"><span data-stu-id="6adbb-105">_AxlGetIssuerPublicKeyHash Function</span></span>](../../../../docs/framework/unmanaged-api/authenticode/axlgetissuerpublickeyhash-function.md)  
- <span data-ttu-id="6adbb-106">Recupera el hash SHA-1 de la clave pública asociada con la clave privada que se usa para firmar el certificado especificado.</span><span class="sxs-lookup"><span data-stu-id="6adbb-106">Retrieves the SHA-1 hash of the public key associated with the private key that is used to sign the specified certificate.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="d926c-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="d926c-104">In This Section</span></span>  
+ [<span data-ttu-id="d926c-105">_AxlGetIssuerPublicKeyHash (Función)</span><span class="sxs-lookup"><span data-stu-id="d926c-105">_AxlGetIssuerPublicKeyHash Function</span></span>](../../../../docs/framework/unmanaged-api/authenticode/axlgetissuerpublickeyhash-function.md)  
+ <span data-ttu-id="d926c-106">Recupera el hash SHA-1 de la clave pública asociada con la clave privada que se usa para firmar el certificado especificado.</span><span class="sxs-lookup"><span data-stu-id="d926c-106">Retrieves the SHA-1 hash of the public key associated with the private key that is used to sign the specified certificate.</span></span>  
   
- [<span data-ttu-id="6adbb-107">_AxlPublicKeyBlobToPublicKeyToken (Función)</span><span class="sxs-lookup"><span data-stu-id="6adbb-107">_AxlPublicKeyBlobToPublicKeyToken Function</span></span>](../../../../docs/framework/unmanaged-api/authenticode/axlpublickeyblobtopublickeytoken-function.md)  
- <span data-ttu-id="6adbb-108">Calcula el token de clave pública del nombre seguro a partir de un formato CSP PUBLICKEYBLOB.</span><span class="sxs-lookup"><span data-stu-id="6adbb-108">Computes the strong name public key token from a CSP PUBLICKEYBLOB format.</span></span>  
+ [<span data-ttu-id="d926c-107">_AxlPublicKeyBlobToPublicKeyToken (Función)</span><span class="sxs-lookup"><span data-stu-id="d926c-107">_AxlPublicKeyBlobToPublicKeyToken Function</span></span>](../../../../docs/framework/unmanaged-api/authenticode/axlpublickeyblobtopublickeytoken-function.md)  
+ <span data-ttu-id="d926c-108">Calcula el token de clave pública del nombre seguro a partir de un formato CSP PUBLICKEYBLOB.</span><span class="sxs-lookup"><span data-stu-id="d926c-108">Computes the strong name public key token from a CSP PUBLICKEYBLOB format.</span></span>  
   
- [<span data-ttu-id="6adbb-109">_AxlRSAKeyValueToPublicKeyToken (Función)</span><span class="sxs-lookup"><span data-stu-id="6adbb-109">_AxlRSAKeyValueToPublicKeyToken Function</span></span>](../../../../docs/framework/unmanaged-api/authenticode/axlrsakeyvaluetopublickeytoken-function.md)  
- <span data-ttu-id="6adbb-110">Convierte un blob Modulus y Exponent en un token de clave pública de nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="6adbb-110">Converts a Modulus and Exponent to a strong name public key token.</span></span>  
+ [<span data-ttu-id="d926c-109">_AxlRSAKeyValueToPublicKeyToken (Función)</span><span class="sxs-lookup"><span data-stu-id="d926c-109">_AxlRSAKeyValueToPublicKeyToken Function</span></span>](../../../../docs/framework/unmanaged-api/authenticode/axlrsakeyvaluetopublickeytoken-function.md)  
+ <span data-ttu-id="d926c-110">Convierte un blob Modulus y Exponent en un token de clave pública de nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="d926c-110">Converts a Modulus and Exponent to a strong name public key token.</span></span>  
   
- [<span data-ttu-id="6adbb-111">CertFreeAuthenticodeSignerInfo (Función)</span><span class="sxs-lookup"><span data-stu-id="6adbb-111">CertFreeAuthenticodeSignerInfo Function</span></span>](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md)  
- <span data-ttu-id="6adbb-112">Libera recursos asignados para la estructura AXL_AUTHENTICODE_SIGNER_INFO.</span><span class="sxs-lookup"><span data-stu-id="6adbb-112">Frees resources allocated for the AXL_AUTHENTICODE_SIGNER_INFO structure.</span></span>  
+ [<span data-ttu-id="d926c-111">CertFreeAuthenticodeSignerInfo (Función)</span><span class="sxs-lookup"><span data-stu-id="d926c-111">CertFreeAuthenticodeSignerInfo Function</span></span>](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md)  
+ <span data-ttu-id="d926c-112">Libera recursos asignados para la estructura AXL_AUTHENTICODE_SIGNER_INFO.</span><span class="sxs-lookup"><span data-stu-id="d926c-112">Frees resources allocated for the AXL_AUTHENTICODE_SIGNER_INFO structure.</span></span>  
   
- [<span data-ttu-id="6adbb-113">CertFreeAuthenticodeTimestamperInfo (Función)</span><span class="sxs-lookup"><span data-stu-id="6adbb-113">CertFreeAuthenticodeTimestamperInfo Function</span></span>](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md)  
- <span data-ttu-id="6adbb-114">Libera recursos asignados para la estructura AXL_AUTHENTICODE_TIMESTAMPER_INFO.</span><span class="sxs-lookup"><span data-stu-id="6adbb-114">Frees resources allocated for the AXL_AUTHENTICODE_TIMESTAMPER_INFO structure.</span></span>  
+ [<span data-ttu-id="d926c-113">CertFreeAuthenticodeTimestamperInfo (Función)</span><span class="sxs-lookup"><span data-stu-id="d926c-113">CertFreeAuthenticodeTimestamperInfo Function</span></span>](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md)  
+ <span data-ttu-id="d926c-114">Libera recursos asignados para la estructura AXL_AUTHENTICODE_TIMESTAMPER_INFO.</span><span class="sxs-lookup"><span data-stu-id="d926c-114">Frees resources allocated for the AXL_AUTHENTICODE_TIMESTAMPER_INFO structure.</span></span>  
   
- [<span data-ttu-id="6adbb-115">CertTimestampAuthenticodeLicense (Función)</span><span class="sxs-lookup"><span data-stu-id="6adbb-115">CertTimestampAuthenticodeLicense Function</span></span>](../../../../docs/framework/unmanaged-api/authenticode/certtimestampauthenticodelicense-function.md)  
- <span data-ttu-id="6adbb-116">Aplica marcas de hora a una licencia Authenticode XrML creada por CertCreateAuthenticodeLicense.</span><span class="sxs-lookup"><span data-stu-id="6adbb-116">Time stamps an Authenticode XrML license created by CertCreateAuthenticodeLicense.</span></span>  
+ [<span data-ttu-id="d926c-115">CertTimestampAuthenticodeLicense (Función)</span><span class="sxs-lookup"><span data-stu-id="d926c-115">CertTimestampAuthenticodeLicense Function</span></span>](../../../../docs/framework/unmanaged-api/authenticode/certtimestampauthenticodelicense-function.md)  
+ <span data-ttu-id="d926c-116">Aplica marcas de hora a una licencia Authenticode XrML creada por CertCreateAuthenticodeLicense.</span><span class="sxs-lookup"><span data-stu-id="d926c-116">Time stamps an Authenticode XrML license created by CertCreateAuthenticodeLicense.</span></span>  
   
- [<span data-ttu-id="6adbb-117">CertVerifyAuthenticodeLicense (Función)</span><span class="sxs-lookup"><span data-stu-id="6adbb-117">CertVerifyAuthenticodeLicense Function</span></span>](../../../../docs/framework/unmanaged-api/authenticode/certverifyauthenticodelicense-function.md)  
- <span data-ttu-id="6adbb-118">Comprueba la validez de una licencia Authenticode XrML.</span><span class="sxs-lookup"><span data-stu-id="6adbb-118">Verifies the validity of an Authenticode XrML license.</span></span>  
+ [<span data-ttu-id="d926c-117">CertVerifyAuthenticodeLicense (Función)</span><span class="sxs-lookup"><span data-stu-id="d926c-117">CertVerifyAuthenticodeLicense Function</span></span>](../../../../docs/framework/unmanaged-api/authenticode/certverifyauthenticodelicense-function.md)  
+ <span data-ttu-id="d926c-118">Comprueba la validez de una licencia Authenticode XrML.</span><span class="sxs-lookup"><span data-stu-id="d926c-118">Verifies the validity of an Authenticode XrML license.</span></span>  
   
- [<span data-ttu-id="6adbb-119">AXL_AUTHENTICODE_SIGNER_INFO (estructura)</span><span class="sxs-lookup"><span data-stu-id="6adbb-119">AXL_AUTHENTICODE_SIGNER_INFO Structure</span></span>](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)  
- <span data-ttu-id="6adbb-120">Define la información del firmante de Authenticode.</span><span class="sxs-lookup"><span data-stu-id="6adbb-120">Defines the Authenticode signer information.</span></span>  
+ [<span data-ttu-id="d926c-119">AXL_AUTHENTICODE_SIGNER_INFO (estructura)</span><span class="sxs-lookup"><span data-stu-id="d926c-119">AXL_AUTHENTICODE_SIGNER_INFO Structure</span></span>](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)  
+ <span data-ttu-id="d926c-120">Define la información del firmante de Authenticode.</span><span class="sxs-lookup"><span data-stu-id="d926c-120">Defines the Authenticode signer information.</span></span>  
   
- [<span data-ttu-id="6adbb-121">AXL_AUTHENTICODE_TIMESTAMPER_INFO (estructura)</span><span class="sxs-lookup"><span data-stu-id="6adbb-121">AXL_AUTHENTICODE_TIMESTAMPER_INFO Structure</span></span>](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)  
- <span data-ttu-id="6adbb-122">Define la información del autor de la marca de hora de Authenticode.</span><span class="sxs-lookup"><span data-stu-id="6adbb-122">Defines the Authenticode time stamper information.</span></span>  
+ [<span data-ttu-id="d926c-121">AXL_AUTHENTICODE_TIMESTAMPER_INFO (estructura)</span><span class="sxs-lookup"><span data-stu-id="d926c-121">AXL_AUTHENTICODE_TIMESTAMPER_INFO Structure</span></span>](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)  
+ <span data-ttu-id="d926c-122">Define la información del autor de la marca de hora de Authenticode.</span><span class="sxs-lookup"><span data-stu-id="d926c-122">Defines the Authenticode time stamper information.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6adbb-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="6adbb-123">See Also</span></span>  
- [<span data-ttu-id="6adbb-124">Referencia de API no administrada</span><span class="sxs-lookup"><span data-stu-id="6adbb-124">Unmanaged API Reference</span></span>](../../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a><span data-ttu-id="d926c-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="d926c-123">See Also</span></span>  
+ [<span data-ttu-id="d926c-124">Referencia de API no administrada</span><span class="sxs-lookup"><span data-stu-id="d926c-124">Unmanaged API Reference</span></span>](../../../../docs/framework/unmanaged-api/index.md)
