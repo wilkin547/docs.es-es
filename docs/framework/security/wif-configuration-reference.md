@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399251"
 ---
 # <a name="wif-configuration-reference"></a>Referencia de configuración de WIF
 Puede configurar Windows Identity Foundation (WIF) en sus aplicaciones agregando elementos a un archivo de configuración. Este tema contiene vínculos a temas de referencia para los elementos de configuración de WIF.  

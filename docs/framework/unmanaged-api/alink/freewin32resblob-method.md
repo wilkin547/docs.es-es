@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d124ce5dd38bed7eb439a055ff9e30a75efe5891
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400749"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob (Método)
 Libera el objeto binario de recursos de Win32 y los recursos asociados.  

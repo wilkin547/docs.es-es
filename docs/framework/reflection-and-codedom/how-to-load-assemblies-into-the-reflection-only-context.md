@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398731"
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Cómo: Cargar ensamblados en el contexto de sólo reflexión
 El contexto de carga de solo reflexión permite examinar ensamblados compilados para otras plataformas o para otras versiones de .NET Framework. El código cargado en este contexto solo se puede examinar; no se puede ejecutar. Esto significa que no se pueden crear objetos, porque no se pueden ejecutar constructores. Dado que no se puede ejecutar el código, las dependencias no se cargan automáticamente. Si necesita examinarlas, tiene que cargarlas manualmente.  

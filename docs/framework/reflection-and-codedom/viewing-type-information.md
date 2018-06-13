@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399748"
 ---
 # <a name="viewing-type-information"></a>Ver información de tipos
 La clase <xref:System.Type?displayProperty=nameWithType> es fundamental para la reflexión. Common Language Runtime crea el objeto **Type** para un tipo cargado cuando lo solicita la reflexión. Puede usar los métodos, los campos, las propiedades y las clases anidadas de un objeto **Type** para averiguarlo todo sobre dicho tipo.  
