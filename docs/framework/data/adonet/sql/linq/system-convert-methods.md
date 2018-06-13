@@ -1,31 +1,20 @@
 ---
-title: "System.Convert (Métodos)"
-ms.custom: 
+title: System.Convert (Métodos)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0d0dc8889c9d71063dabd89b0434b088b4368080
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a16839bf64d5786caa6feb557333fe93c66edc3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357379"
 ---
-# <a name="systemconvert-methods"></a><span data-ttu-id="ef0f8-102">System.Convert (Métodos)</span><span class="sxs-lookup"><span data-stu-id="ef0f8-102">System.Convert Methods</span></span>
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="ef0f8-103"> no admite los métodos <xref:System.Convert> siguientes.</span><span class="sxs-lookup"><span data-stu-id="ef0f8-103"> does not support the following <xref:System.Convert> methods.</span></span>  
+# <a name="systemconvert-methods"></a><span data-ttu-id="d97d1-102">System.Convert (Métodos)</span><span class="sxs-lookup"><span data-stu-id="d97d1-102">System.Convert Methods</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="d97d1-103"> no admite los métodos <xref:System.Convert> siguientes.</span><span class="sxs-lookup"><span data-stu-id="d97d1-103"> does not support the following <xref:System.Convert> methods.</span></span>  
   
--   <span data-ttu-id="ef0f8-104">Versiones con un parámetro <xref:System.IFormatProvider>.</span><span class="sxs-lookup"><span data-stu-id="ef0f8-104">Versions with an <xref:System.IFormatProvider> parameter.</span></span>  
+-   <span data-ttu-id="d97d1-104">Versiones con un parámetro <xref:System.IFormatProvider>.</span><span class="sxs-lookup"><span data-stu-id="d97d1-104">Versions with an <xref:System.IFormatProvider> parameter.</span></span>  
   
--   <span data-ttu-id="ef0f8-105">Métodos que incluyen matrices de caracteres o matrices de bytes:</span><span class="sxs-lookup"><span data-stu-id="ef0f8-105">Methods that involve char arrays or byte arrays:</span></span>  
+-   <span data-ttu-id="d97d1-105">Métodos que incluyen matrices de caracteres o matrices de bytes:</span><span class="sxs-lookup"><span data-stu-id="d97d1-105">Methods that involve char arrays or byte arrays:</span></span>  
   
     -   <xref:System.Convert.FromBase64CharArray%2A>  
   
@@ -35,19 +24,19 @@ ms.lasthandoff: 01/17/2018
   
     -   <xref:System.Convert.ToBase64String%2A>  
   
--   <span data-ttu-id="ef0f8-106">Los métodos siguientes:</span><span class="sxs-lookup"><span data-stu-id="ef0f8-106">The following methods:</span></span>  
+-   <span data-ttu-id="d97d1-106">Los métodos siguientes:</span><span class="sxs-lookup"><span data-stu-id="d97d1-106">The following methods:</span></span>  
   
-    -   <span data-ttu-id="ef0f8-107">`public static <Type2> To<Type2>(<Type1> value);` donde</span><span class="sxs-lookup"><span data-stu-id="ef0f8-107">`public static <Type2> To<Type2>(<Type1> value);` where</span></span>  
+    -   <span data-ttu-id="d97d1-107">`public static <Type2> To<Type2>(<Type1> value);` donde</span><span class="sxs-lookup"><span data-stu-id="d97d1-107">`public static <Type2> To<Type2>(<Type1> value);` where</span></span>  
   
-         <span data-ttu-id="ef0f8-108">`Type1` y `Type2` son `sbyte`, `uint`, `ulong` o `ushort`.</span><span class="sxs-lookup"><span data-stu-id="ef0f8-108">`Type1` and `Type2` are each one of `sbyte`, `uint`, `ulong`, or `ushort`.</span></span>  
+         <span data-ttu-id="d97d1-108">`Type1` y `Type2` son `sbyte`, `uint`, `ulong` o `ushort`.</span><span class="sxs-lookup"><span data-stu-id="d97d1-108">`Type1` and `Type2` are each one of `sbyte`, `uint`, `ulong`, or `ushort`.</span></span>  
   
-    -   <span data-ttu-id="ef0f8-109">C#:</span><span class="sxs-lookup"><span data-stu-id="ef0f8-109">C#:</span></span>  
+    -   <span data-ttu-id="d97d1-109">C#:</span><span class="sxs-lookup"><span data-stu-id="d97d1-109">C#:</span></span>  
   
          `int To<int type>(string value, int fromBase),`  
   
          `ToString(... value, int toBase)`  
   
-    -   <span data-ttu-id="ef0f8-110">Visual Basic:</span><span class="sxs-lookup"><span data-stu-id="ef0f8-110">Visual Basic:</span></span>  
+    -   <span data-ttu-id="d97d1-110">Visual Basic:</span><span class="sxs-lookup"><span data-stu-id="d97d1-110">Visual Basic:</span></span>  
   
          `Function To(Of [Numeric])(value as String, fromBase As Integer)`  
   
@@ -59,5 +48,5 @@ ms.lasthandoff: 01/17/2018
   
     -   <xref:System.Convert.ChangeType%2A>  
   
-## <a name="see-also"></a><span data-ttu-id="ef0f8-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="ef0f8-111">See Also</span></span>  
- [<span data-ttu-id="ef0f8-112">Tipos de datos y funciones</span><span class="sxs-lookup"><span data-stu-id="ef0f8-112">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a><span data-ttu-id="d97d1-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="d97d1-111">See Also</span></span>  
+ [<span data-ttu-id="d97d1-112">Tipos de datos y funciones</span><span class="sxs-lookup"><span data-stu-id="d97d1-112">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

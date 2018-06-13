@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172167"
 ---
 # <a name="string-c-reference"></a><span data-ttu-id="3ca7e-102">string (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="3ca7e-102">string (C# Reference)</span></span>
 <span data-ttu-id="3ca7e-103">El tipo `string` representa una secuencia de cero o más caracteres Unicode.</span><span class="sxs-lookup"><span data-stu-id="3ca7e-103">The `string` type represents a sequence of zero or more Unicode characters.</span></span> <span data-ttu-id="3ca7e-104">`string` es un alias de <xref:System.String> en .NET.</span><span class="sxs-lookup"><span data-stu-id="3ca7e-104">`string` is an alias for <xref:System.String> in .NET.</span></span>  

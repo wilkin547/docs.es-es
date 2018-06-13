@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugAssembly::GetName (Método)"
-ms.custom: 
+title: ICorDebugAssembly::GetName (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugAssembly.GetName
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: cdeda721-b214-4503-a291-c70b68b5f36b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cf2b84a6ab7cc1745fbf7330e66f94ea04635892
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: fe587f6356eec861c39c9eb0aa0b6476e0b9a232
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407524"
 ---
-# <a name="icordebugassemblygetname-method"></a><span data-ttu-id="5f42d-102">ICorDebugAssembly::GetName (Método)</span><span class="sxs-lookup"><span data-stu-id="5f42d-102">ICorDebugAssembly::GetName Method</span></span>
-<span data-ttu-id="5f42d-103">Obtiene el nombre del ensamblado que esto `ICorDebugAssembly` instancia representa.</span><span class="sxs-lookup"><span data-stu-id="5f42d-103">Gets the name of the assembly that this `ICorDebugAssembly` instance represents.</span></span>  
+# <a name="icordebugassemblygetname-method"></a><span data-ttu-id="14dbf-102">ICorDebugAssembly::GetName (Método)</span><span class="sxs-lookup"><span data-stu-id="14dbf-102">ICorDebugAssembly::GetName Method</span></span>
+<span data-ttu-id="14dbf-103">Obtiene el nombre del ensamblado que esto `ICorDebugAssembly` instancia representa.</span><span class="sxs-lookup"><span data-stu-id="14dbf-103">Gets the name of the assembly that this `ICorDebugAssembly` instance represents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5f42d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5f42d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="14dbf-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="14dbf-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName (  
@@ -48,24 +37,24 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5f42d-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5f42d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="14dbf-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="14dbf-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="5f42d-106">[in] Tamaño de la matriz `szName`.</span><span class="sxs-lookup"><span data-stu-id="5f42d-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="14dbf-106">[in] Tamaño de la matriz `szName`.</span><span class="sxs-lookup"><span data-stu-id="14dbf-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="5f42d-107">[out] Un puntero a un entero que especifica la longitud real del nombre.</span><span class="sxs-lookup"><span data-stu-id="5f42d-107">[out] A pointer to an integer that specifies the actual length of the name.</span></span>  
+ <span data-ttu-id="14dbf-107">[out] Un puntero a un entero que especifica la longitud real del nombre.</span><span class="sxs-lookup"><span data-stu-id="14dbf-107">[out] A pointer to an integer that specifies the actual length of the name.</span></span>  
   
  `szName`  
- <span data-ttu-id="5f42d-108">[out] Una matriz que almacena el nombre.</span><span class="sxs-lookup"><span data-stu-id="5f42d-108">[out] An array that stores the name.</span></span>  
+ <span data-ttu-id="14dbf-108">[out] Una matriz que almacena el nombre.</span><span class="sxs-lookup"><span data-stu-id="14dbf-108">[out] An array that stores the name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5f42d-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5f42d-109">Remarks</span></span>  
- <span data-ttu-id="5f42d-110">El `GetName` método devuelve la ruta de acceso y el nombre completo del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="5f42d-110">The `GetName` method returns the full path and file name of the assembly.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="14dbf-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="14dbf-109">Remarks</span></span>  
+ <span data-ttu-id="14dbf-110">El `GetName` método devuelve la ruta de acceso y el nombre completo del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="14dbf-110">The `GetName` method returns the full path and file name of the assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5f42d-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5f42d-111">Requirements</span></span>  
- <span data-ttu-id="5f42d-112">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5f42d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="14dbf-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="14dbf-111">Requirements</span></span>  
+ <span data-ttu-id="14dbf-112">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="14dbf-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5f42d-113">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5f42d-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="14dbf-113">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="14dbf-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5f42d-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5f42d-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="14dbf-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="14dbf-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5f42d-115">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f42d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="14dbf-115">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14dbf-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

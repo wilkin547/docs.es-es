@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334761"
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a><span data-ttu-id="2d02b-102">Aplicar la conversión boxing a tipos que aceptan valores NULL (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="2d02b-102">Boxing Nullable Types (C# Programming Guide)</span></span>
 <span data-ttu-id="2d02b-103">La conversión boxing solo se aplica a los objetos basados en tipos que aceptan valores NULL si el valor del objeto no es NULL.</span><span class="sxs-lookup"><span data-stu-id="2d02b-103">Objects based on nullable types are only boxed if the object is non-null.</span></span> <span data-ttu-id="2d02b-104">Si <xref:System.Nullable%601.HasValue%2A> es `false`, la referencia de objeto se asigna a `null` en lugar de aplicar la conversión boxing.</span><span class="sxs-lookup"><span data-stu-id="2d02b-104">If <xref:System.Nullable%601.HasValue%2A> is `false`, the object reference is assigned to `null` instead of boxing.</span></span> <span data-ttu-id="2d02b-105">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="2d02b-105">For example:</span></span>  

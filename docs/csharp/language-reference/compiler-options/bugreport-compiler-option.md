@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214097"
 ---
 # <a name="-bugreport-c-compiler-options"></a><span data-ttu-id="a2de9-102">-bugreport (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="a2de9-102">-bugreport (C# Compiler Options)</span></span>
 <span data-ttu-id="a2de9-103">Especifica que esa información de depuración debe colocarse en un archivo para su análisis posterior.</span><span class="sxs-lookup"><span data-stu-id="a2de9-103">Specifies that debug information should be placed in a file for later analysis.</span></span>  
