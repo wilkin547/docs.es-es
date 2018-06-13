@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748157"
 ---
 # <a name="ltconnectionpoolsettingsgt"></a><span data-ttu-id="cf54e-102">&lt;connectionPoolSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="cf54e-102">&lt;connectionPoolSettings&gt;</span></span>
 <span data-ttu-id="cf54e-103">Especifica valores adicionales del grupo de conexiones para un enlace de canalización con nombre.</span><span class="sxs-lookup"><span data-stu-id="cf54e-103">Specifies additional connection pool settings for a Named Pipe binding.</span></span>  

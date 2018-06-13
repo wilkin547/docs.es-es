@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745008"
 ---
 # <a name="ltprobinggt-element"></a><span data-ttu-id="c359c-102">&lt;el sondeo&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="c359c-102">&lt;probing&gt; Element</span></span>
 <span data-ttu-id="c359c-103">Especifica los subdirectorios base de common language runtime buscar al cargar los ensamblados de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="c359c-103">Specifies application base subdirectories for the common language runtime to search when loading assemblies.</span></span>  

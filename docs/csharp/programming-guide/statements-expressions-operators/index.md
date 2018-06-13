@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338801"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a><span data-ttu-id="735b9-102">Instrucciones, expresiones y operadores (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="735b9-102">Statements, Expressions, and Operators (C# Programming Guide)</span></span>
 <span data-ttu-id="735b9-103">El código de C# que conforma una aplicación consta de instrucciones basadas en palabras clave, expresiones y operadores.</span><span class="sxs-lookup"><span data-stu-id="735b9-103">The C# code that comprises an application consists of statements made up of keywords, expressions and operators.</span></span> <span data-ttu-id="735b9-104">Esta sección contiene información sobre los elementos fundamentales de un programa de C#.</span><span class="sxs-lookup"><span data-stu-id="735b9-104">This section contains information regarding these fundamental elements of a C# program.</span></span>  

@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugReferenceValue::IsNull (Método)"
-ms.custom: 
+title: ICorDebugReferenceValue::IsNull (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugReferenceValue.IsNull
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 99e8c8d7-a1c0-47c8-9dbd-03e0b2bcb4d5
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 53eaa411dc405142461de99bc787eba7a5d52db6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2c82c72350931bf3aed8ec6699cd0af834798e92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417220"
 ---
-# <a name="icordebugreferencevalueisnull-method"></a><span data-ttu-id="e1b28-102">ICorDebugReferenceValue::IsNull (Método)</span><span class="sxs-lookup"><span data-stu-id="e1b28-102">ICorDebugReferenceValue::IsNull Method</span></span>
-<span data-ttu-id="e1b28-103">Obtiene un valor que indica si este ICorDebugReferenceValue es un valor null, en cuyo caso el `ICorDebugReferenceValue` no señala a un objeto.</span><span class="sxs-lookup"><span data-stu-id="e1b28-103">Gets a value that indicates whether this ICorDebugReferenceValue is a null value, in which case the `ICorDebugReferenceValue` does not point to an object.</span></span>  
+# <a name="icordebugreferencevalueisnull-method"></a><span data-ttu-id="2b53f-102">ICorDebugReferenceValue::IsNull (Método)</span><span class="sxs-lookup"><span data-stu-id="2b53f-102">ICorDebugReferenceValue::IsNull Method</span></span>
+<span data-ttu-id="2b53f-103">Obtiene un valor que indica si este ICorDebugReferenceValue es un valor null, en cuyo caso el `ICorDebugReferenceValue` no señala a un objeto.</span><span class="sxs-lookup"><span data-stu-id="2b53f-103">Gets a value that indicates whether this ICorDebugReferenceValue is a null value, in which case the `ICorDebugReferenceValue` does not point to an object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e1b28-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e1b28-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b53f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2b53f-104">Syntax</span></span>  
   
 ```  
 HRESULT IsNull (  
@@ -46,15 +35,15 @@ HRESULT IsNull (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e1b28-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="e1b28-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2b53f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="2b53f-105">Parameters</span></span>  
  `pbNull`  
- <span data-ttu-id="e1b28-106">[out] Un puntero a un valor booleano que es `true` si `ICorDebugReferenceValue` objeto es null; en caso contrario, `pbNull` es `false`.</span><span class="sxs-lookup"><span data-stu-id="e1b28-106">[out] A pointer to a Boolean value that is `true` if this `ICorDebugReferenceValue` object is null; otherwise, `pbNull` is `false`.</span></span>  
+ <span data-ttu-id="2b53f-106">[out] Un puntero a un valor booleano que es `true` si `ICorDebugReferenceValue` objeto es null; en caso contrario, `pbNull` es `false`.</span><span class="sxs-lookup"><span data-stu-id="2b53f-106">[out] A pointer to a Boolean value that is `true` if this `ICorDebugReferenceValue` object is null; otherwise, `pbNull` is `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e1b28-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e1b28-107">Requirements</span></span>  
- <span data-ttu-id="e1b28-108">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1b28-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2b53f-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2b53f-107">Requirements</span></span>  
+ <span data-ttu-id="2b53f-108">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b53f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e1b28-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e1b28-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2b53f-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2b53f-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e1b28-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e1b28-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2b53f-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2b53f-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e1b28-111">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1b28-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2b53f-111">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b53f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

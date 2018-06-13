@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746714"
 ---
 # <a name="ltentriesgt"></a><span data-ttu-id="913ed-102">&lt;Entradas&gt;</span><span class="sxs-lookup"><span data-stu-id="913ed-102">&lt;entries&gt;</span></span>
 <span data-ttu-id="913ed-103">Una entrada del enrutamiento que contiene las asignaciones entre los filtros del enrutamiento y los puntos de conexión de destino a los que enviar mensajes cuando coincida el filtro.</span><span class="sxs-lookup"><span data-stu-id="913ed-103">A routing entry that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  
