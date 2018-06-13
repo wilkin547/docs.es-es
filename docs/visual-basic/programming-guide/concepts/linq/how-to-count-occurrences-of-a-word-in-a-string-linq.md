@@ -1,27 +1,18 @@
 ---
-title: "Cómo: contar las apariciones de una palabra en una cadena (LINQ) (Visual Basic)"
-ms.custom: 
+title: 'Cómo: contar las apariciones de una palabra en una cadena (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 82b40e11a72d26858cc2b0b5c0c759517f5b5ee3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a2e7b59ee1d289fe794fb83705d42ac0e48fb4a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642004"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="309aa-102">Cómo: contar las apariciones de una palabra en una cadena (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="309aa-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="309aa-103">En este ejemplo se muestra cómo usar una consulta LINQ para contar las apariciones de una palabra determinada en una cadena.</span><span class="sxs-lookup"><span data-stu-id="309aa-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="309aa-104">Observe que para realizar el recuento, primero se llama al método <xref:System.String.Split%2A> para crear una matriz de palabras.</span><span class="sxs-lookup"><span data-stu-id="309aa-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="309aa-105">Existe un costo de rendimiento en el método <xref:System.String.Split%2A>.</span><span class="sxs-lookup"><span data-stu-id="309aa-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="309aa-106">Si la única operación de la cadena es para contar las palabras, debe considerar la posibilidad de usar en su lugar los métodos <xref:System.Text.RegularExpressions.Regex.Matches%2A> o <xref:System.String.IndexOf%2A>.</span><span class="sxs-lookup"><span data-stu-id="309aa-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="309aa-107">Pero si el rendimiento no es un problema crítico, o si ya ha dividido la frase para realizar otros tipos de consultas, tiene sentido usar LINQ para además contar las palabras o frases.</span><span class="sxs-lookup"><span data-stu-id="309aa-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="5ab50-102">Cómo: contar las apariciones de una palabra en una cadena (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ab50-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="5ab50-103">En este ejemplo se muestra cómo usar una consulta LINQ para contar las apariciones de una palabra determinada en una cadena.</span><span class="sxs-lookup"><span data-stu-id="5ab50-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="5ab50-104">Observe que para realizar el recuento, primero se llama al método <xref:System.String.Split%2A> para crear una matriz de palabras.</span><span class="sxs-lookup"><span data-stu-id="5ab50-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="5ab50-105">Existe un costo de rendimiento en el método <xref:System.String.Split%2A>.</span><span class="sxs-lookup"><span data-stu-id="5ab50-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="5ab50-106">Si la única operación de la cadena es para contar las palabras, debe considerar la posibilidad de usar en su lugar los métodos <xref:System.Text.RegularExpressions.Regex.Matches%2A> o <xref:System.String.IndexOf%2A>.</span><span class="sxs-lookup"><span data-stu-id="5ab50-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="5ab50-107">Pero si el rendimiento no es un problema crítico, o si ya ha dividido la frase para realizar otros tipos de consultas, tiene sentido usar LINQ para además contar las palabras o frases.</span><span class="sxs-lookup"><span data-stu-id="5ab50-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="309aa-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="309aa-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5ab50-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5ab50-108">Example</span></span>  
   
 ```vb  
 Class CountWords  
@@ -66,8 +57,8 @@ End Class
 ' 3 occurrence(s) of the search term "data" were found.  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="309aa-109">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="309aa-109">Compiling the Code</span></span>  
- <span data-ttu-id="309aa-110">Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.</span><span class="sxs-lookup"><span data-stu-id="309aa-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="5ab50-109">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="5ab50-109">Compiling the Code</span></span>  
+ <span data-ttu-id="5ab50-110">Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.</span><span class="sxs-lookup"><span data-stu-id="5ab50-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="309aa-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="309aa-111">See Also</span></span>  
- [<span data-ttu-id="309aa-112">LINQ y cadenas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="309aa-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="5ab50-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="5ab50-111">See Also</span></span>  
+ [<span data-ttu-id="5ab50-112">LINQ y cadenas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ab50-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

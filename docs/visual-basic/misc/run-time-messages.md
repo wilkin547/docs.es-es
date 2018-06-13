@@ -1,564 +1,558 @@
 ---
 title: Mensajes en tiempo de ejecución de Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 14258d0cb19b62ec93672998039b8d59a1943fb2
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: de291aebe3bef156dab414635c3cb2c00a2300f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644464"
 ---
-# <a name="visual-basic-run-time-messages"></a><span data-ttu-id="e5301-102">Mensajes en tiempo de ejecución de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e5301-102">Visual Basic Run-Time Messages</span></span>
-<span data-ttu-id="e5301-103">Esta sección contiene los mensajes de error de Visual Basic que se producen en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="e5301-103">This section contains the Visual Basic error messages that occur at run time.</span></span>  
+# <a name="visual-basic-run-time-messages"></a><span data-ttu-id="50d76-102">Mensajes en tiempo de ejecución de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="50d76-102">Visual Basic Run-Time Messages</span></span>
+<span data-ttu-id="50d76-103">Esta sección contiene los mensajes de error de Visual Basic que se producen en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="50d76-103">This section contains the Visual Basic error messages that occur at run time.</span></span>  
   
- [<span data-ttu-id="e5301-104">\<dirección > no es una dirección de archivo remoto válida</span><span class="sxs-lookup"><span data-stu-id="e5301-104">\<address> is not a valid remote file address</span></span>](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
+ [<span data-ttu-id="50d76-104">\<dirección > no es una dirección de archivo remoto válida</span><span class="sxs-lookup"><span data-stu-id="50d76-104">\<address> is not a valid remote file address</span></span>](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
   
- [<span data-ttu-id="e5301-105">Un delimitador no puede ser Nothing o del tipo String vacío</span><span class="sxs-lookup"><span data-stu-id="e5301-105">A delimiter cannot be Nothing or an empty String</span></span>](../../visual-basic/misc/a-delimiter-cannot-be-nothing-or-an-empty-string.md)  
+ [<span data-ttu-id="50d76-105">Un delimitador no puede ser Nothing o del tipo String vacío</span><span class="sxs-lookup"><span data-stu-id="50d76-105">A delimiter cannot be Nothing or an empty String</span></span>](../../visual-basic/misc/a-delimiter-cannot-be-nothing-or-an-empty-string.md)  
   
- [<span data-ttu-id="e5301-106">Un carácter de comilla doble no es un símbolo (token) de comentario válido para campos delimitados donde EscapeQuote está establecido en True</span><span class="sxs-lookup"><span data-stu-id="e5301-106">A double quote is not a valid comment token for delimited fields where EscapeQuote is set to True</span></span>](../../visual-basic/language-reference/error-messages/a-double-quote-is-not-a-valid-comment-token-for-delimited-fields.md)  
+ [<span data-ttu-id="50d76-106">Un carácter de comilla doble no es un símbolo (token) de comentario válido para campos delimitados donde EscapeQuote está establecido en True</span><span class="sxs-lookup"><span data-stu-id="50d76-106">A double quote is not a valid comment token for delimited fields where EscapeQuote is set to True</span></span>](../../visual-basic/language-reference/error-messages/a-double-quote-is-not-a-valid-comment-token-for-delimited-fields.md)  
   
- [<span data-ttu-id="e5301-107">Ya ha creado un registro con este nombre en esta máquina</span><span class="sxs-lookup"><span data-stu-id="e5301-107">A log has already been created with this name on this machine</span></span>](../../visual-basic/misc/a-log-has-already-been-created-with-this-name-on-this-machine.md)  
+ [<span data-ttu-id="50d76-107">Ya ha creado un registro con este nombre en esta máquina</span><span class="sxs-lookup"><span data-stu-id="50d76-107">A log has already been created with this name on this machine</span></span>](../../visual-basic/misc/a-log-has-already-been-created-with-this-name-on-this-machine.md)  
   
- [<span data-ttu-id="e5301-108">Una llamada a una propiedad o un método no puede incluir una referencia a un objeto privado como un argumento o un valor de retorno</span><span class="sxs-lookup"><span data-stu-id="e5301-108">A property or method call cannot include a reference to a private object, either as an argument or as a return value</span></span>](../../visual-basic/language-reference/error-messages/a-property-or-method-call-cannot-include-a-reference-to-a-private-object.md)  
+ [<span data-ttu-id="50d76-108">Una llamada a una propiedad o un método no puede incluir una referencia a un objeto privado como un argumento o un valor de retorno</span><span class="sxs-lookup"><span data-stu-id="50d76-108">A property or method call cannot include a reference to a private object, either as an argument or as a return value</span></span>](../../visual-basic/language-reference/error-messages/a-property-or-method-call-cannot-include-a-reference-to-a-private-object.md)  
   
- [<span data-ttu-id="e5301-109">No se ha especificado un formulario de inicio</span><span class="sxs-lookup"><span data-stu-id="e5301-109">A startup form has not been specified</span></span>](../../visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md)  
+ [<span data-ttu-id="50d76-109">No se ha especificado un formulario de inicio</span><span class="sxs-lookup"><span data-stu-id="50d76-109">A startup form has not been specified</span></span>](../../visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md)  
   
- [<span data-ttu-id="e5301-110">Deniega el acceso a '\<nombre >'</span><span class="sxs-lookup"><span data-stu-id="e5301-110">Access denied to '\<name>'</span></span>](../../visual-basic/misc/access-denied-to-name.md)  
+ [<span data-ttu-id="50d76-110">Deniega el acceso a '\<nombre >'</span><span class="sxs-lookup"><span data-stu-id="50d76-110">Access denied to '\<name>'</span></span>](../../visual-basic/misc/access-denied-to-name.md)  
   
- [<span data-ttu-id="e5301-111">Error al agregar. Se proporcionó un valor de clave duplicado</span><span class="sxs-lookup"><span data-stu-id="e5301-111">Add failed. Duplicate key value supplied</span></span>](../../visual-basic/misc/add-failed-duplicate-key-value-supplied.md)  
+ [<span data-ttu-id="50d76-111">Error al agregar. Se proporcionó un valor de clave duplicado</span><span class="sxs-lookup"><span data-stu-id="50d76-111">Add failed. Duplicate key value supplied</span></span>](../../visual-basic/misc/add-failed-duplicate-key-value-supplied.md)  
   
- [<span data-ttu-id="e5301-112">Todos los anchos de campo, excepto el último elemento, deben ser mayores que cero</span><span class="sxs-lookup"><span data-stu-id="e5301-112">All field widths, except the last element, must be greater than zero</span></span>](../../visual-basic/misc/all-field-widths-except-the-last-element-must-be-greater-than-zero.md)  
+ [<span data-ttu-id="50d76-112">Todos los anchos de campo, excepto el último elemento, deben ser mayores que cero</span><span class="sxs-lookup"><span data-stu-id="50d76-112">All field widths, except the last element, must be greater than zero</span></span>](../../visual-basic/misc/all-field-widths-except-the-last-element-must-be-greater-than-zero.md)  
   
- [<span data-ttu-id="e5301-113">Se ha especificado un valor no válido para el registro de eventos</span><span class="sxs-lookup"><span data-stu-id="e5301-113">An invalid name was specified for the event log</span></span>](../../visual-basic/misc/an-invalid-name-was-specified-for-the-event-log.md)  
+ [<span data-ttu-id="50d76-113">Se ha especificado un valor no válido para el registro de eventos</span><span class="sxs-lookup"><span data-stu-id="50d76-113">An invalid name was specified for the event log</span></span>](../../visual-basic/misc/an-invalid-name-was-specified-for-the-event-log.md)  
   
- [<span data-ttu-id="e5301-114">Error inesperado porque no se puede conseguir un recurso del sistema operativo necesario para el inicio de una instancia única</span><span class="sxs-lookup"><span data-stu-id="e5301-114">An unexpected error has occurred because an operating system resource required for single instance startup cannot be acquired</span></span>](../../visual-basic/language-reference/error-messages/an-unexpected-error-has-occurred.md)  
+ [<span data-ttu-id="50d76-114">Error inesperado porque no se puede conseguir un recurso del sistema operativo necesario para el inicio de una instancia única</span><span class="sxs-lookup"><span data-stu-id="50d76-114">An unexpected error has occurred because an operating system resource required for single instance startup cannot be acquired</span></span>](../../visual-basic/language-reference/error-messages/an-unexpected-error-has-occurred.md)  
   
- [<span data-ttu-id="e5301-115">Otro registro de eventos ya ha registrado un origen con este nombre</span><span class="sxs-lookup"><span data-stu-id="e5301-115">Another event log has already registered a source with this name</span></span>](../../visual-basic/misc/another-event-log-has-already-registered-a-source-with-this-name.md)  
+ [<span data-ttu-id="50d76-115">Otro registro de eventos ya ha registrado un origen con este nombre</span><span class="sxs-lookup"><span data-stu-id="50d76-115">Another event log has already registered a source with this name</span></span>](../../visual-basic/misc/another-event-log-has-already-registered-a-source-with-this-name.md)  
   
- [<span data-ttu-id="e5301-116">Error definido por la aplicación o por el objeto</span><span class="sxs-lookup"><span data-stu-id="e5301-116">Application-defined or object-defined error</span></span>](../../visual-basic/misc/application-defined-or-object-defined-error.md)  
+ [<span data-ttu-id="50d76-116">Error definido por la aplicación o por el objeto</span><span class="sxs-lookup"><span data-stu-id="50d76-116">Application-defined or object-defined error</span></span>](../../visual-basic/misc/application-defined-or-object-defined-error.md)  
   
- [<span data-ttu-id="e5301-117">Argumento '\<argument1 >' debe ser menor o igual que la longitud del argumento '\<argument2 >'</span><span class="sxs-lookup"><span data-stu-id="e5301-117">Argument '\<argument1>' must be less than or equal to the length of argument '\<argument2>'</span></span>](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
+ [<span data-ttu-id="50d76-117">Argumento '\<argument1 >' debe ser menor o igual que la longitud del argumento '\<argument2 >'</span><span class="sxs-lookup"><span data-stu-id="50d76-117">Argument '\<argument1>' must be less than or equal to the length of argument '\<argument2>'</span></span>](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
   
- [<span data-ttu-id="e5301-118">Argumento '\<argumentname >' no puede ser una matriz multidimensional</span><span class="sxs-lookup"><span data-stu-id="e5301-118">Argument '\<argumentname>' cannot be a multidimensional array</span></span>](../../visual-basic/misc/argument-argumentname-cannot-be-a-multidimensional-array.md)  
+ [<span data-ttu-id="50d76-118">Argumento '\<argumentname >' no puede ser una matriz multidimensional</span><span class="sxs-lookup"><span data-stu-id="50d76-118">Argument '\<argumentname>' cannot be a multidimensional array</span></span>](../../visual-basic/misc/argument-argumentname-cannot-be-a-multidimensional-array.md)  
   
- [<span data-ttu-id="e5301-119">Argumento \<argumentname > no puede ser una cadena vacía o Nothing</span><span class="sxs-lookup"><span data-stu-id="e5301-119">Argument \<argumentname> cannot be an empty string or Nothing</span></span>](../../visual-basic/misc/argument-argumentname-cannot-be-an-empty-string-or-nothing.md)  
+ [<span data-ttu-id="50d76-119">Argumento \<argumentname > no puede ser una cadena vacía o Nothing</span><span class="sxs-lookup"><span data-stu-id="50d76-119">Argument \<argumentname> cannot be an empty string or Nothing</span></span>](../../visual-basic/misc/argument-argumentname-cannot-be-an-empty-string-or-nothing.md)  
   
- [<span data-ttu-id="e5301-120">Argumento '\<argumentname >' no se puede convertir en un valor numérico</span><span class="sxs-lookup"><span data-stu-id="e5301-120">Argument '\<argumentname>' cannot be converted to a numeric value</span></span>](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-a-numeric-value.md)  
+ [<span data-ttu-id="50d76-120">Argumento '\<argumentname >' no se puede convertir en un valor numérico</span><span class="sxs-lookup"><span data-stu-id="50d76-120">Argument '\<argumentname>' cannot be converted to a numeric value</span></span>](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-a-numeric-value.md)  
   
- [<span data-ttu-id="e5301-121">Argumento '\<argumentname >' no se puede convertir al tipo '\<typename >'</span><span class="sxs-lookup"><span data-stu-id="e5301-121">Argument '\<argumentname>' cannot be converted to type '\<typename>'</span></span>](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-typename.md)  
+ [<span data-ttu-id="50d76-121">Argumento '\<argumentname >' no se puede convertir al tipo '\<typename >'</span><span class="sxs-lookup"><span data-stu-id="50d76-121">Argument '\<argumentname>' cannot be converted to type '\<typename>'</span></span>](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-typename.md)  
   
- [<span data-ttu-id="e5301-122">Argumento '\<argumentname >' no se puede convertir al tipo 'Date'.</span><span class="sxs-lookup"><span data-stu-id="e5301-122">Argument '\<argumentname>' cannot be converted to type 'Date'</span></span>](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-date.md)  
+ [<span data-ttu-id="50d76-122">Argumento '\<argumentname >' no se puede convertir al tipo 'Date'.</span><span class="sxs-lookup"><span data-stu-id="50d76-122">Argument '\<argumentname>' cannot be converted to type 'Date'</span></span>](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-date.md)  
   
- [<span data-ttu-id="e5301-123">Argumento '\<argumentname >' no es un valor válido</span><span class="sxs-lookup"><span data-stu-id="e5301-123">Argument '\<argumentname>' is not a valid value</span></span>](../../visual-basic/misc/argument-argumentname-is-not-a-valid-value.md)  
+ [<span data-ttu-id="50d76-123">Argumento '\<argumentname >' no es un valor válido</span><span class="sxs-lookup"><span data-stu-id="50d76-123">Argument '\<argumentname>' is not a valid value</span></span>](../../visual-basic/misc/argument-argumentname-is-not-a-valid-value.md)  
   
- [<span data-ttu-id="e5301-124">Argumento '\<argumentname >' no es válido para la matriz</span><span class="sxs-lookup"><span data-stu-id="e5301-124">Argument '\<argumentname>' is not valid for the array</span></span>](../../visual-basic/misc/argument-argumentname-is-not-valid-for-the-array.md)  
+ [<span data-ttu-id="50d76-124">Argumento '\<argumentname >' no es válido para la matriz</span><span class="sxs-lookup"><span data-stu-id="50d76-124">Argument '\<argumentname>' is not valid for the array</span></span>](../../visual-basic/misc/argument-argumentname-is-not-valid-for-the-array.md)  
   
- [<span data-ttu-id="e5301-125">Argumento '\<argumentname >' tiene un valor Nothing</span><span class="sxs-lookup"><span data-stu-id="e5301-125">Argument '\<argumentname>' is Nothing</span></span>](../../visual-basic/misc/argument-argumentname-is-nothing.md)  
+ [<span data-ttu-id="50d76-125">Argumento '\<argumentname >' tiene un valor Nothing</span><span class="sxs-lookup"><span data-stu-id="50d76-125">Argument '\<argumentname>' is Nothing</span></span>](../../visual-basic/misc/argument-argumentname-is-nothing.md)  
   
- [<span data-ttu-id="e5301-126">Argumento '\<argumentname >' tiene un valor o está vacío</span><span class="sxs-lookup"><span data-stu-id="e5301-126">Argument '\<argumentname>' is Nothing or empty</span></span>](../../visual-basic/misc/argument-argumentname-is-nothing-or-empty.md)  
+ [<span data-ttu-id="50d76-126">Argumento '\<argumentname >' tiene un valor o está vacío</span><span class="sxs-lookup"><span data-stu-id="50d76-126">Argument '\<argumentname>' is Nothing or empty</span></span>](../../visual-basic/misc/argument-argumentname-is-nothing-or-empty.md)  
   
- [<span data-ttu-id="e5301-127">Argumento '\<argumentname >' debe ser mayor que 0 o igual a -1</span><span class="sxs-lookup"><span data-stu-id="e5301-127">Argument '\<argumentname>' must be greater than 0 or equal to -1</span></span>](../../visual-basic/misc/argument-argumentname-must-be-greater-than-0-or-equal-to-1.md)  
+ [<span data-ttu-id="50d76-127">Argumento '\<argumentname >' debe ser mayor que 0 o igual a -1</span><span class="sxs-lookup"><span data-stu-id="50d76-127">Argument '\<argumentname>' must be greater than 0 or equal to -1</span></span>](../../visual-basic/misc/argument-argumentname-must-be-greater-than-0-or-equal-to-1.md)  
   
- [<span data-ttu-id="e5301-128">Argumento '\<argumentname >' debe ser mayor o igual que 1.</span><span class="sxs-lookup"><span data-stu-id="e5301-128">Argument '\<argumentname>' must be greater than or equal to 1</span></span>](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1.md)  
+ [<span data-ttu-id="50d76-128">Argumento '\<argumentname >' debe ser mayor o igual que 1.</span><span class="sxs-lookup"><span data-stu-id="50d76-128">Argument '\<argumentname>' must be greater than or equal to 1</span></span>](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1.md)  
   
- [<span data-ttu-id="e5301-129">Argumento '\<argumentname >' debe ser mayor o igual a -1</span><span class="sxs-lookup"><span data-stu-id="e5301-129">Argument '\<argumentname>' must be greater than or equal to -1</span></span>](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1-1.md)  
+ [<span data-ttu-id="50d76-129">Argumento '\<argumentname >' debe ser mayor o igual a -1</span><span class="sxs-lookup"><span data-stu-id="50d76-129">Argument '\<argumentname>' must be greater than or equal to -1</span></span>](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-1-1.md)  
   
- [<span data-ttu-id="e5301-130">Argumento \<argumentname > debe ser mayor o igual a cero.</span><span class="sxs-lookup"><span data-stu-id="e5301-130">Argument \<argumentname> must be greater than or equal to zero</span></span>](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero-1.md)  
+ [<span data-ttu-id="50d76-130">Argumento \<argumentname > debe ser mayor o igual a cero.</span><span class="sxs-lookup"><span data-stu-id="50d76-130">Argument \<argumentname> must be greater than or equal to zero</span></span>](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero-1.md)  
   
- [<span data-ttu-id="e5301-131">Argumento '\<argumentname >' debe ser mayor o igual a cero.</span><span class="sxs-lookup"><span data-stu-id="e5301-131">Argument '\<argumentname>' must be greater than or equal to zero</span></span>](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero.md)  
+ [<span data-ttu-id="50d76-131">Argumento '\<argumentname >' debe ser mayor o igual a cero.</span><span class="sxs-lookup"><span data-stu-id="50d76-131">Argument '\<argumentname>' must be greater than or equal to zero</span></span>](../../visual-basic/misc/argument-argumentname-must-be-greater-than-or-equal-to-zero.md)  
   
- [<span data-ttu-id="e5301-132">Argumento '\<argumentname >' debe ser mayor que cero.</span><span class="sxs-lookup"><span data-stu-id="e5301-132">Argument '\<argumentname>' must be greater than zero</span></span>](../../visual-basic/misc/argument-argumentname-must-be-greater-than-zero.md)  
+ [<span data-ttu-id="50d76-132">Argumento '\<argumentname >' debe ser mayor que cero.</span><span class="sxs-lookup"><span data-stu-id="50d76-132">Argument '\<argumentname>' must be greater than zero</span></span>](../../visual-basic/misc/argument-argumentname-must-be-greater-than-zero.md)  
   
- [<span data-ttu-id="e5301-133">Argumento '\<argumentname >' debe estar en el intervalo entre-32768 y 65535</span><span class="sxs-lookup"><span data-stu-id="e5301-133">Argument '\<argumentname>' must be in the range of -32768 to 65535</span></span>](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
+ [<span data-ttu-id="50d76-133">Argumento '\<argumentname >' debe estar en el intervalo entre-32768 y 65535</span><span class="sxs-lookup"><span data-stu-id="50d76-133">Argument '\<argumentname>' must be in the range of -32768 to 65535</span></span>](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
   
- [<span data-ttu-id="e5301-134">Argumento '\<argumentname >' debe estar dentro del intervalo de 0 a 99</span><span class="sxs-lookup"><span data-stu-id="e5301-134">Argument '\<argumentname>' must be within the range 0 to 99</span></span>](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
+ [<span data-ttu-id="50d76-134">Argumento '\<argumentname >' debe estar dentro del intervalo de 0 a 99</span><span class="sxs-lookup"><span data-stu-id="50d76-134">Argument '\<argumentname>' must be within the range 0 to 99</span></span>](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
   
- [<span data-ttu-id="e5301-135">Argumento '\<argumentname >' debe estar dentro del intervalo de 1 a 255</span><span class="sxs-lookup"><span data-stu-id="e5301-135">Argument '\<argumentname>' must be within the range 1 to 255</span></span>](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
+ [<span data-ttu-id="50d76-135">Argumento '\<argumentname >' debe estar dentro del intervalo de 1 a 255</span><span class="sxs-lookup"><span data-stu-id="50d76-135">Argument '\<argumentname>' must be within the range 1 to 255</span></span>](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
   
- [<span data-ttu-id="e5301-136">Argumento '\<nombreargumento1 >' debe ser menor o igual la longitud del argumento '\<nombreargumento2 >'</span><span class="sxs-lookup"><span data-stu-id="e5301-136">Argument '\<argumentname1>' must be less than or equal the length of argument '\<argumentname2>'</span></span>](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
+ [<span data-ttu-id="50d76-136">Argumento '\<nombreargumento1 >' debe ser menor o igual la longitud del argumento '\<nombreargumento2 >'</span><span class="sxs-lookup"><span data-stu-id="50d76-136">Argument '\<argumentname1>' must be less than or equal the length of argument '\<argumentname2>'</span></span>](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
   
- [<span data-ttu-id="e5301-137">El argumento 'Access' no es válido. Los valores válidos para el modo Append son 'OpenAccess.Write' y 'OpenAccess.Default'</span><span class="sxs-lookup"><span data-stu-id="e5301-137">Argument 'Access' is not valid. Valid values for Append mode are 'OpenAccess.Write' and 'OpenAccess.Default'</span></span>](../../visual-basic/misc/argument-access-is-not-valid-append-mode.md)  
+ [<span data-ttu-id="50d76-137">El argumento 'Access' no es válido. Los valores válidos para el modo Append son 'OpenAccess.Write' y 'OpenAccess.Default'</span><span class="sxs-lookup"><span data-stu-id="50d76-137">Argument 'Access' is not valid. Valid values for Append mode are 'OpenAccess.Write' and 'OpenAccess.Default'</span></span>](../../visual-basic/misc/argument-access-is-not-valid-append-mode.md)  
   
- [<span data-ttu-id="e5301-138">El argumento 'Access' no es válido. Los valores válidos para el modo Input son 'OpenAccess.Read' y 'OpenAccess.Default'</span><span class="sxs-lookup"><span data-stu-id="e5301-138">Argument 'Access' is not valid. Valid values for Input mode are 'OpenAccess.Read' and 'OpenAccess.Default'</span></span>](../../visual-basic/misc/argument-access-is-not-valid-input-mode.md)  
+ [<span data-ttu-id="50d76-138">El argumento 'Access' no es válido. Los valores válidos para el modo Input son 'OpenAccess.Read' y 'OpenAccess.Default'</span><span class="sxs-lookup"><span data-stu-id="50d76-138">Argument 'Access' is not valid. Valid values for Input mode are 'OpenAccess.Read' and 'OpenAccess.Default'</span></span>](../../visual-basic/misc/argument-access-is-not-valid-input-mode.md)  
   
- [<span data-ttu-id="e5301-139">El argumento 'Access' no es válido. Los valores válidos para el modo Output son 'OpenAccess.Write' y 'OpenAccess.Default'</span><span class="sxs-lookup"><span data-stu-id="e5301-139">Argument 'Access' is not valid. Valid values for Output mode are 'OpenAccess.Write' and 'OpenAccess.Default'</span></span>](../../visual-basic/misc/argument-access-is-not-valid.md)  
+ [<span data-ttu-id="50d76-139">El argumento 'Access' no es válido. Los valores válidos para el modo Output son 'OpenAccess.Write' y 'OpenAccess.Default'</span><span class="sxs-lookup"><span data-stu-id="50d76-139">Argument 'Access' is not valid. Valid values for Output mode are 'OpenAccess.Write' and 'OpenAccess.Default'</span></span>](../../visual-basic/misc/argument-access-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-140">El argumento BasePath debe ser una ruta de acceso a una carpeta</span><span class="sxs-lookup"><span data-stu-id="e5301-140">Argument BasePath must be a path to a folder</span></span>](../../visual-basic/misc/argument-basepath-must-be-a-path-to-a-folder.md)  
+ [<span data-ttu-id="50d76-140">El argumento BasePath debe ser una ruta de acceso a una carpeta</span><span class="sxs-lookup"><span data-stu-id="50d76-140">Argument BasePath must be a path to a folder</span></span>](../../visual-basic/misc/argument-basepath-must-be-a-path-to-a-folder.md)  
   
- [<span data-ttu-id="e5301-141">El argumento no puede ser una cadena vacía</span><span class="sxs-lookup"><span data-stu-id="e5301-141">Argument cannot be an empty string</span></span>](../../visual-basic/misc/argument-cannot-be-an-empty-string.md)  
+ [<span data-ttu-id="50d76-141">El argumento no puede ser una cadena vacía</span><span class="sxs-lookup"><span data-stu-id="50d76-141">Argument cannot be an empty string</span></span>](../../visual-basic/misc/argument-cannot-be-an-empty-string.md)  
   
- [<span data-ttu-id="e5301-142">El argumento no puede ser inferior a cero</span><span class="sxs-lookup"><span data-stu-id="e5301-142">Argument cannot be less than zero</span></span>](../../visual-basic/misc/argument-cannot-be-less-than-zero.md)  
+ [<span data-ttu-id="50d76-142">El argumento no puede ser inferior a cero</span><span class="sxs-lookup"><span data-stu-id="50d76-142">Argument cannot be less than zero</span></span>](../../visual-basic/misc/argument-cannot-be-less-than-zero.md)  
   
- [<span data-ttu-id="e5301-143">El argumento no puede ser Nothing</span><span class="sxs-lookup"><span data-stu-id="e5301-143">Argument cannot be Nothing</span></span>](../../visual-basic/misc/argument-cannot-be-nothing.md)  
+ [<span data-ttu-id="50d76-143">El argumento no puede ser Nothing</span><span class="sxs-lookup"><span data-stu-id="50d76-143">Argument cannot be Nothing</span></span>](../../visual-basic/misc/argument-cannot-be-nothing.md)  
   
- [<span data-ttu-id="e5301-144">El argumento 'Conversion' no es válido</span><span class="sxs-lookup"><span data-stu-id="e5301-144">Argument 'Conversion' is not valid</span></span>](../../visual-basic/misc/argument-conversion-is-not-valid.md)  
+ [<span data-ttu-id="50d76-144">El argumento 'Conversion' no es válido</span><span class="sxs-lookup"><span data-stu-id="50d76-144">Argument 'Conversion' is not valid</span></span>](../../visual-basic/misc/argument-conversion-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-145">El argumento 'Life' no puede ser cero</span><span class="sxs-lookup"><span data-stu-id="e5301-145">Argument 'Life' cannot be zero</span></span>](../../visual-basic/misc/argument-life-cannot-be-zero.md)  
+ [<span data-ttu-id="50d76-145">El argumento 'Life' no puede ser cero</span><span class="sxs-lookup"><span data-stu-id="50d76-145">Argument 'Life' cannot be zero</span></span>](../../visual-basic/misc/argument-life-cannot-be-zero.md)  
   
- [<span data-ttu-id="e5301-146">Argumento no opcional (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-146">Argument not optional (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/argument-not-optional.md)  
+ [<span data-ttu-id="50d76-146">Argumento no opcional (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-146">Argument not optional (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/argument-not-optional.md)  
   
- [<span data-ttu-id="e5301-147">El argumento 'NPer' debe ser mayor que cero</span><span class="sxs-lookup"><span data-stu-id="e5301-147">Argument 'NPer' must be greater than zero</span></span>](../../visual-basic/misc/argument-nper-must-be-greater-than-zero.md)  
+ [<span data-ttu-id="50d76-147">El argumento 'NPer' debe ser mayor que cero</span><span class="sxs-lookup"><span data-stu-id="50d76-147">Argument 'NPer' must be greater than zero</span></span>](../../visual-basic/misc/argument-nper-must-be-greater-than-zero.md)  
   
- [<span data-ttu-id="e5301-148">El argumento 'Path' tiene un valor Nothing o está vacío</span><span class="sxs-lookup"><span data-stu-id="e5301-148">Argument 'Path' is Nothing or empty</span></span>](../../visual-basic/misc/argument-path-is-nothing-or-empty.md)  
+ [<span data-ttu-id="50d76-148">El argumento 'Path' tiene un valor Nothing o está vacío</span><span class="sxs-lookup"><span data-stu-id="50d76-148">Argument 'Path' is Nothing or empty</span></span>](../../visual-basic/misc/argument-path-is-nothing-or-empty.md)  
   
- [<span data-ttu-id="e5301-149">El argumento 'Per' no es válido</span><span class="sxs-lookup"><span data-stu-id="e5301-149">Argument 'Per' is not valid</span></span>](../../visual-basic/misc/argument-per-is-not-valid.md)  
+ [<span data-ttu-id="50d76-149">El argumento 'Per' no es válido</span><span class="sxs-lookup"><span data-stu-id="50d76-149">Argument 'Per' is not valid</span></span>](../../visual-basic/misc/argument-per-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-150">El argumento 'Period' debe ser menor o igual que el argumento 'Life'</span><span class="sxs-lookup"><span data-stu-id="e5301-150">Argument 'Period' must be less than or equal to argument 'Life'</span></span>](../../visual-basic/misc/argument-period-must-be-less-than-or-equal-to-argument-life.md)  
+ [<span data-ttu-id="50d76-150">El argumento 'Period' debe ser menor o igual que el argumento 'Life'</span><span class="sxs-lookup"><span data-stu-id="50d76-150">Argument 'Period' must be less than or equal to argument 'Life'</span></span>](../../visual-basic/misc/argument-period-must-be-less-than-or-equal-to-argument-life.md)  
   
- [<span data-ttu-id="e5301-151">El valor del argumento '\<pathname >' contiene caracteres que no son válidos en el nombre de ruta de acceso</span><span class="sxs-lookup"><span data-stu-id="e5301-151">Argument value '\<pathname>' contains characters that are not valid in a path name</span></span>](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
+ [<span data-ttu-id="50d76-151">El valor del argumento '\<pathname >' contiene caracteres que no son válidos en el nombre de ruta de acceso</span><span class="sxs-lookup"><span data-stu-id="50d76-151">Argument value '\<pathname>' contains characters that are not valid in a path name</span></span>](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
   
- [<span data-ttu-id="e5301-152">Los argumentos no son válidos</span><span class="sxs-lookup"><span data-stu-id="e5301-152">Arguments are not valid</span></span>](../../visual-basic/misc/arguments-are-not-valid.md)  
+ [<span data-ttu-id="50d76-152">Los argumentos no son válidos</span><span class="sxs-lookup"><span data-stu-id="50d76-152">Arguments are not valid</span></span>](../../visual-basic/misc/arguments-are-not-valid.md)  
   
- [<span data-ttu-id="e5301-153">Las dimensiones de la matriz no coinciden con las especificadas por el atributo 'VBFixedArray'</span><span class="sxs-lookup"><span data-stu-id="e5301-153">Array dimensions do not match those specified in the 'VBFixedArray' attribute</span></span>](../../visual-basic/misc/array-dimensions-do-not-match-those-specified-in-the-vbfixedarray-attribute.md)  
+ [<span data-ttu-id="50d76-153">Las dimensiones de la matriz no coinciden con las especificadas por el atributo 'VBFixedArray'</span><span class="sxs-lookup"><span data-stu-id="50d76-153">Array dimensions do not match those specified in the 'VBFixedArray' attribute</span></span>](../../visual-basic/misc/array-dimensions-do-not-match-those-specified-in-the-vbfixedarray-attribute.md)  
   
- [<span data-ttu-id="e5301-154">Error de automatización</span><span class="sxs-lookup"><span data-stu-id="e5301-154">Automation error</span></span>](../../visual-basic/language-reference/error-messages/automation-error.md)  
+ [<span data-ttu-id="50d76-154">Error de automatización</span><span class="sxs-lookup"><span data-stu-id="50d76-154">Automation error</span></span>](../../visual-basic/language-reference/error-messages/automation-error.md)  
   
- [<span data-ttu-id="e5301-155">El objeto de automatización no tiene un valor predeterminado</span><span class="sxs-lookup"><span data-stu-id="e5301-155">Automation object does not have a default value</span></span>](../../visual-basic/misc/automation-object-does-not-have-a-default-value.md)  
+ [<span data-ttu-id="50d76-155">El objeto de automatización no tiene un valor predeterminado</span><span class="sxs-lookup"><span data-stu-id="50d76-155">Automation object does not have a default value</span></span>](../../visual-basic/misc/automation-object-does-not-have-a-default-value.md)  
   
- [<span data-ttu-id="e5301-156">Convención de llamada a archivo DLL no válida</span><span class="sxs-lookup"><span data-stu-id="e5301-156">Bad DLL calling convention</span></span>](../../visual-basic/language-reference/error-messages/bad-dll-calling-convention.md)  
+ [<span data-ttu-id="50d76-156">Convención de llamada a archivo DLL no válida</span><span class="sxs-lookup"><span data-stu-id="50d76-156">Bad DLL calling convention</span></span>](../../visual-basic/language-reference/error-messages/bad-dll-calling-convention.md)  
   
- [<span data-ttu-id="e5301-157">Modo de archivo incorrecto</span><span class="sxs-lookup"><span data-stu-id="e5301-157">Bad file mode</span></span>](../../visual-basic/language-reference/error-messages/bad-file-mode.md)  
+ [<span data-ttu-id="50d76-157">Modo de archivo incorrecto</span><span class="sxs-lookup"><span data-stu-id="50d76-157">Bad file mode</span></span>](../../visual-basic/language-reference/error-messages/bad-file-mode.md)  
   
- [<span data-ttu-id="e5301-158">Número o nombre de archivo incorrecto</span><span class="sxs-lookup"><span data-stu-id="e5301-158">Bad file name or number</span></span>](../../visual-basic/language-reference/error-messages/bad-file-name-or-number.md)  
+ [<span data-ttu-id="50d76-158">Número o nombre de archivo incorrecto</span><span class="sxs-lookup"><span data-stu-id="50d76-158">Bad file name or number</span></span>](../../visual-basic/language-reference/error-messages/bad-file-name-or-number.md)  
   
- [<span data-ttu-id="e5301-159">Longitud de registro incorrecta</span><span class="sxs-lookup"><span data-stu-id="e5301-159">Bad record length</span></span>](../../visual-basic/language-reference/error-messages/bad-record-length.md)  
+ [<span data-ttu-id="50d76-159">Longitud de registro incorrecta</span><span class="sxs-lookup"><span data-stu-id="50d76-159">Bad record length</span></span>](../../visual-basic/language-reference/error-messages/bad-record-length.md)  
   
- [<span data-ttu-id="e5301-160">Número de registro incorrecto</span><span class="sxs-lookup"><span data-stu-id="e5301-160">Bad record number</span></span>](../../visual-basic/misc/bad-record-number.md)  
+ [<span data-ttu-id="50d76-160">Número de registro incorrecto</span><span class="sxs-lookup"><span data-stu-id="50d76-160">Bad record number</span></span>](../../visual-basic/misc/bad-record-number.md)  
   
- [<span data-ttu-id="e5301-161">BaseLogName no puede ser Nothing o un tipo String vacío</span><span class="sxs-lookup"><span data-stu-id="e5301-161">BaseLogName cannot be Nothing or an empty String</span></span>](../../visual-basic/misc/baselogname-cannot-be-nothing-or-an-empty-string.md)  
+ [<span data-ttu-id="50d76-161">BaseLogName no puede ser Nothing o un tipo String vacío</span><span class="sxs-lookup"><span data-stu-id="50d76-161">BaseLogName cannot be Nothing or an empty String</span></span>](../../visual-basic/misc/baselogname-cannot-be-nothing-or-an-empty-string.md)  
   
- [<span data-ttu-id="e5301-162">El valor de BaudRate debe ser mayor que 0</span><span class="sxs-lookup"><span data-stu-id="e5301-162">BaudRate must be greater than 0</span></span>](../../visual-basic/misc/baudrate-must-be-greater-than-0.md)  
+ [<span data-ttu-id="50d76-162">El valor de BaudRate debe ser mayor que 0</span><span class="sxs-lookup"><span data-stu-id="50d76-162">BaudRate must be greater than 0</span></span>](../../visual-basic/misc/baudrate-must-be-greater-than-0.md)  
   
- [<span data-ttu-id="e5301-163">No se pueden combinar los argumentos 'Before' y 'After'</span><span class="sxs-lookup"><span data-stu-id="e5301-163">'Before' and 'After' arguments cannot be combined</span></span>](../../visual-basic/misc/before-and-after-arguments-cannot-be-combined.md)  
+ [<span data-ttu-id="50d76-163">No se pueden combinar los argumentos 'Before' y 'After'</span><span class="sxs-lookup"><span data-stu-id="50d76-163">'Before' and 'After' arguments cannot be combined</span></span>](../../visual-basic/misc/before-and-after-arguments-cannot-be-combined.md)  
   
- [<span data-ttu-id="e5301-164">No se puede calcular el número de períodos con los argumentos proporcionados</span><span class="sxs-lookup"><span data-stu-id="e5301-164">Cannot calculate number of periods using the arguments provided</span></span>](../../visual-basic/misc/cannot-calculate-number-of-periods-using-the-arguments-provided.md)  
+ [<span data-ttu-id="50d76-164">No se puede calcular el número de períodos con los argumentos proporcionados</span><span class="sxs-lookup"><span data-stu-id="50d76-164">Cannot calculate number of periods using the arguments provided</span></span>](../../visual-basic/misc/cannot-calculate-number-of-periods-using-the-arguments-provided.md)  
   
- [<span data-ttu-id="e5301-165">No se puede calcular la tasa con los argumentos proporcionados</span><span class="sxs-lookup"><span data-stu-id="e5301-165">Cannot calculate rate using the arguments provided</span></span>](../../visual-basic/misc/cannot-calculate-rate-using-the-arguments-provided.md)  
+ [<span data-ttu-id="50d76-165">No se puede calcular la tasa con los argumentos proporcionados</span><span class="sxs-lookup"><span data-stu-id="50d76-165">Cannot calculate rate using the arguments provided</span></span>](../../visual-basic/misc/cannot-calculate-rate-using-the-arguments-provided.md)  
   
- [<span data-ttu-id="e5301-166">No se puede llamar a una función friend de un objeto que no sea una instancia de una clase</span><span class="sxs-lookup"><span data-stu-id="e5301-166">Cannot call friend function on object which is not an instance of defining class</span></span>](../../visual-basic/misc/cannot-call-friend-function-on-object-which-is-not-instance-of-defining-class.md)  
+ [<span data-ttu-id="50d76-166">No se puede llamar a una función friend de un objeto que no sea una instancia de una clase</span><span class="sxs-lookup"><span data-stu-id="50d76-166">Cannot call friend function on object which is not an instance of defining class</span></span>](../../visual-basic/misc/cannot-call-friend-function-on-object-which-is-not-instance-of-defining-class.md)  
   
- [<span data-ttu-id="e5301-167">No se puede convertir el argumento '\<argumentname >' de tipo '\<type1 >' al tipo '\<type2 >'</span><span class="sxs-lookup"><span data-stu-id="e5301-167">Cannot convert argument '\<argumentname>' of type '\<type1>' to type '\<type2>'</span></span>](../../visual-basic/misc/cannot-convert-argument-argumentname-of-type-type1-to-type-type2.md)  
+ [<span data-ttu-id="50d76-167">No se puede convertir el argumento '\<argumentname >' de tipo '\<type1 >' al tipo '\<type2 >'</span><span class="sxs-lookup"><span data-stu-id="50d76-167">Cannot convert argument '\<argumentname>' of type '\<type1>' to type '\<type2>'</span></span>](../../visual-basic/misc/cannot-convert-argument-argumentname-of-type-type1-to-type-type2.md)  
   
- [<span data-ttu-id="e5301-168">No se puede convertir el valor de inicio de tipo '\<type1 >' y el valor de step de tipo '\<type2 >' a un tipo común</span><span class="sxs-lookup"><span data-stu-id="e5301-168">Cannot convert start value of type '\<type1>' and step value of type '\<type2>' to a common type</span></span>](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
+ [<span data-ttu-id="50d76-168">No se puede convertir el valor de inicio de tipo '\<type1 >' y el valor de step de tipo '\<type2 >' a un tipo común</span><span class="sxs-lookup"><span data-stu-id="50d76-168">Cannot convert start value of type '\<type1>' and step value of type '\<type2>' to a common type</span></span>](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
   
- [<span data-ttu-id="e5301-169">No se puede convertir el valor de inicio de tipo '\<type1 >', valor de límite '\<type2 >' y el valor de step '\<Tipo3 >' a un tipo común</span><span class="sxs-lookup"><span data-stu-id="e5301-169">Cannot convert start value of type '\<type1>', limit value of '\<type2>' and step value of '\<type3>' to a common type</span></span>](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
+ [<span data-ttu-id="50d76-169">No se puede convertir el valor de inicio de tipo '\<type1 >', valor de límite '\<type2 >' y el valor de step '\<Tipo3 >' a un tipo común</span><span class="sxs-lookup"><span data-stu-id="50d76-169">Cannot convert start value of type '\<type1>', limit value of '\<type2>' and step value of '\<type3>' to a common type</span></span>](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
   
- [<span data-ttu-id="e5301-170">No se puede crear el componente ActiveX</span><span class="sxs-lookup"><span data-stu-id="e5301-170">Cannot create ActiveX Component</span></span>](../../visual-basic/language-reference/error-messages/cannot-create-activex-component.md)  
+ [<span data-ttu-id="50d76-170">No se puede crear el componente ActiveX</span><span class="sxs-lookup"><span data-stu-id="50d76-170">Cannot create ActiveX Component</span></span>](../../visual-basic/language-reference/error-messages/cannot-create-activex-component.md)  
   
- [<span data-ttu-id="e5301-171">No se puede eliminar un subárbol del Registro</span><span class="sxs-lookup"><span data-stu-id="e5301-171">Cannot delete a registry hive</span></span>](../../visual-basic/misc/cannot-delete-a-registry-hive.md)  
+ [<span data-ttu-id="50d76-171">No se puede eliminar un subárbol del Registro</span><span class="sxs-lookup"><span data-stu-id="50d76-171">Cannot delete a registry hive</span></span>](../../visual-basic/misc/cannot-delete-a-registry-hive.md)  
   
- [<span data-ttu-id="e5301-172">No se puede determinar el tipo de matriz porque tiene el valor Nothing</span><span class="sxs-lookup"><span data-stu-id="e5301-172">Cannot determine array type because it is Nothing</span></span>](../../visual-basic/misc/cannot-determine-array-type-because-it-is-nothing.md)  
+ [<span data-ttu-id="50d76-172">No se puede determinar el tipo de matriz porque tiene el valor Nothing</span><span class="sxs-lookup"><span data-stu-id="50d76-172">Cannot determine array type because it is Nothing</span></span>](../../visual-basic/misc/cannot-determine-array-type-because-it-is-nothing.md)  
   
- [<span data-ttu-id="e5301-173">No se puede cambiar el nombre con una unidad de disco diferente</span><span class="sxs-lookup"><span data-stu-id="e5301-173">Cannot rename with different drive</span></span>](../../visual-basic/misc/cannot-rename-with-different-drive.md)  
+ [<span data-ttu-id="50d76-173">No se puede cambiar el nombre con una unidad de disco diferente</span><span class="sxs-lookup"><span data-stu-id="50d76-173">Cannot rename with different drive</span></span>](../../visual-basic/misc/cannot-rename-with-different-drive.md)  
   
- [<span data-ttu-id="e5301-174">No se puede guardar el archivo en TEMP</span><span class="sxs-lookup"><span data-stu-id="e5301-174">Cannot save file to TEMP</span></span>](../../visual-basic/misc/cannot-save-file-to-temp.md)  
+ [<span data-ttu-id="50d76-174">No se puede guardar el archivo en TEMP</span><span class="sxs-lookup"><span data-stu-id="50d76-174">Cannot save file to TEMP</span></span>](../../visual-basic/misc/cannot-save-file-to-temp.md)  
   
- [<span data-ttu-id="e5301-175">No se puede crear el archivo temporal necesario</span><span class="sxs-lookup"><span data-stu-id="e5301-175">Can't create necessary temporary file</span></span>](../../visual-basic/language-reference/error-messages/can-t-create-necessary-temporary-file.md)  
+ [<span data-ttu-id="50d76-175">No se puede crear el archivo temporal necesario</span><span class="sxs-lookup"><span data-stu-id="50d76-175">Can't create necessary temporary file</span></span>](../../visual-basic/language-reference/error-messages/can-t-create-necessary-temporary-file.md)  
   
- [<span data-ttu-id="e5301-176">No se puede realizar la operación solicitada (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-176">Can't perform requested operation (Visual Basic)</span></span>](../../visual-basic/misc/cant-perform-requested-operation.md)  
+ [<span data-ttu-id="50d76-176">No se puede realizar la operación solicitada (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-176">Can't perform requested operation (Visual Basic)</span></span>](../../visual-basic/misc/cant-perform-requested-operation.md)  
   
- [<span data-ttu-id="e5301-177">Conversión de la cadena "\<cadena >" al tipo '\<typename >' no es válido</span><span class="sxs-lookup"><span data-stu-id="e5301-177">Cast from string "\<string>" to type '\<typename>' is not valid</span></span>](../../visual-basic/misc/cast-from-string-string-to-type-typename-is-not-valid.md)  
+ [<span data-ttu-id="50d76-177">Conversión de la cadena "\<cadena >" al tipo '\<typename >' no es válido</span><span class="sxs-lookup"><span data-stu-id="50d76-177">Cast from string "\<string>" to type '\<typename>' is not valid</span></span>](../../visual-basic/misc/cast-from-string-string-to-type-typename-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-178">Conversión de valores de tipo '\<NombreTipo1 >' al tipo '\<nombredetipo2 >' no es válido</span><span class="sxs-lookup"><span data-stu-id="e5301-178">Cast from type '\<typename1>' to type '\<typename2>' is not valid</span></span>](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
+ [<span data-ttu-id="50d76-178">Conversión de valores de tipo '\<NombreTipo1 >' al tipo '\<nombredetipo2 >' no es válido</span><span class="sxs-lookup"><span data-stu-id="50d76-178">Cast from type '\<typename1>' to type '\<typename2>' is not valid</span></span>](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-179">Clase\<classname >' no implementa la interfaz System.Collections.ICollection</span><span class="sxs-lookup"><span data-stu-id="e5301-179">Class '\<classname>' does not implement the System.Collections.ICollection interface</span></span>](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
+ [<span data-ttu-id="50d76-179">Clase\<classname >' no implementa la interfaz System.Collections.ICollection</span><span class="sxs-lookup"><span data-stu-id="50d76-179">Class '\<classname>' does not implement the System.Collections.ICollection interface</span></span>](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
   
- [<span data-ttu-id="e5301-180">Esta clase no admite Automation o no admite la interfaz esperada</span><span class="sxs-lookup"><span data-stu-id="e5301-180">Class does not support Automation or does not support expected interface</span></span>](../../visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md)  
+ [<span data-ttu-id="50d76-180">Esta clase no admite Automation o no admite la interfaz esperada</span><span class="sxs-lookup"><span data-stu-id="50d76-180">Class does not support Automation or does not support expected interface</span></span>](../../visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md)  
   
- [<span data-ttu-id="e5301-181">La clase no está registrada en el equipo local</span><span class="sxs-lookup"><span data-stu-id="e5301-181">Class not registered on local machine</span></span>](../../visual-basic/misc/class-not-registered-on-local-machine.md)  
+ [<span data-ttu-id="50d76-181">La clase no está registrada en el equipo local</span><span class="sxs-lookup"><span data-stu-id="50d76-181">Class not registered on local machine</span></span>](../../visual-basic/misc/class-not-registered-on-local-machine.md)  
   
- [<span data-ttu-id="e5301-182">El formato de Portapapeles no es válido</span><span class="sxs-lookup"><span data-stu-id="e5301-182">Clipboard format is not valid</span></span>](../../visual-basic/language-reference/error-messages/clipboard-format-is-not-valid.md)  
+ [<span data-ttu-id="50d76-182">El formato de Portapapeles no es válido</span><span class="sxs-lookup"><span data-stu-id="50d76-182">Clipboard format is not valid</span></span>](../../visual-basic/language-reference/error-messages/clipboard-format-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-183">Error al bloquear el recurso de código</span><span class="sxs-lookup"><span data-stu-id="e5301-183">Code resource lock error</span></span>](../../visual-basic/misc/code-resource-lock-error.md)  
+ [<span data-ttu-id="50d76-183">Error al bloquear el recurso de código</span><span class="sxs-lookup"><span data-stu-id="50d76-183">Code resource lock error</span></span>](../../visual-basic/misc/code-resource-lock-error.md)  
   
- [<span data-ttu-id="e5301-184">No se encuentra el recurso de código</span><span class="sxs-lookup"><span data-stu-id="e5301-184">Code resource not found</span></span>](../../visual-basic/misc/code-resource-not-found.md)  
+ [<span data-ttu-id="50d76-184">No se encuentra el recurso de código</span><span class="sxs-lookup"><span data-stu-id="50d76-184">Code resource not found</span></span>](../../visual-basic/misc/code-resource-not-found.md)  
   
- [<span data-ttu-id="e5301-185">El índice de la colección debe estar en el intervalo 1 del tamaño de la colección</span><span class="sxs-lookup"><span data-stu-id="e5301-185">Collection index must be in the range 1 to the size of the collection</span></span>](../../visual-basic/misc/collection-index-must-be-in-the-range-1-to-the-size-of-the-collection.md)  
+ [<span data-ttu-id="50d76-185">El índice de la colección debe estar en el intervalo 1 del tamaño de la colección</span><span class="sxs-lookup"><span data-stu-id="50d76-185">Collection index must be in the range 1 to the size of the collection</span></span>](../../visual-basic/misc/collection-index-must-be-in-the-range-1-to-the-size-of-the-collection.md)  
   
- [<span data-ttu-id="e5301-186">Se ha perdido la conexión a la biblioteca de tipos o biblioteca de objetos para el proceso remoto</span><span class="sxs-lookup"><span data-stu-id="e5301-186">Connection to type library or object library for remote process has been lost</span></span>](../../visual-basic/misc/connection-to-type-library-or-object-library-for-remote-process-has-been-lost.md)  
+ [<span data-ttu-id="50d76-186">Se ha perdido la conexión a la biblioteca de tipos o biblioteca de objetos para el proceso remoto</span><span class="sxs-lookup"><span data-stu-id="50d76-186">Connection to type library or object library for remote process has been lost</span></span>](../../visual-basic/misc/connection-to-type-library-or-object-library-for-remote-process-has-been-lost.md)  
   
- [<span data-ttu-id="e5301-187">No se pudo completar la operación porque el directorio de destino se encuentra bajo el directorio de origen</span><span class="sxs-lookup"><span data-stu-id="e5301-187">Could not complete operation since target directory is under source directory</span></span>](../../visual-basic/misc/could-not-complete-operation-since-target-directory-is-under-source-directory.md)  
+ [<span data-ttu-id="50d76-187">No se pudo completar la operación porque el directorio de destino se encuentra bajo el directorio de origen</span><span class="sxs-lookup"><span data-stu-id="50d76-187">Could not complete operation since target directory is under source directory</span></span>](../../visual-basic/misc/could-not-complete-operation-since-target-directory-is-under-source-directory.md)  
   
- [<span data-ttu-id="e5301-188">No se pudo obtener el nombre del sistema operativo completo debido a un error interno</span><span class="sxs-lookup"><span data-stu-id="e5301-188">Could not obtain full operation system name due to internal error</span></span>](../../visual-basic/misc/could-not-obtain-full-operation-system-name-due-to-internal-error.md)  
+ [<span data-ttu-id="50d76-188">No se pudo obtener el nombre del sistema operativo completo debido a un error interno</span><span class="sxs-lookup"><span data-stu-id="50d76-188">Could not obtain full operation system name due to internal error</span></span>](../../visual-basic/misc/could-not-obtain-full-operation-system-name-due-to-internal-error.md)  
   
- [<span data-ttu-id="e5301-189">No se pudo obtener la información de memoria debido a un error interno</span><span class="sxs-lookup"><span data-stu-id="e5301-189">Could not obtain memory information due to internal error</span></span>](../../visual-basic/misc/could-not-obtain-memory-information-due-to-internal-error.md)  
+ [<span data-ttu-id="50d76-189">No se pudo obtener la información de memoria debido a un error interno</span><span class="sxs-lookup"><span data-stu-id="50d76-189">Could not obtain memory information due to internal error</span></span>](../../visual-basic/misc/could-not-obtain-memory-information-due-to-internal-error.md)  
   
- [<span data-ttu-id="e5301-190">DataBits debe ser mayor que 0</span><span class="sxs-lookup"><span data-stu-id="e5301-190">DataBits must be greater than 0</span></span>](../../visual-basic/misc/databits-must-be-greater-than-0.md)  
+ [<span data-ttu-id="50d76-190">DataBits debe ser mayor que 0</span><span class="sxs-lookup"><span data-stu-id="50d76-190">DataBits must be greater than 0</span></span>](../../visual-basic/misc/databits-must-be-greater-than-0.md)  
   
- [<span data-ttu-id="e5301-191">Error de E/S del dispositivo</span><span class="sxs-lookup"><span data-stu-id="e5301-191">Device I/O error</span></span>](../../visual-basic/language-reference/error-messages/device-i-o-error.md)  
+ [<span data-ttu-id="50d76-191">Error de E/S del dispositivo</span><span class="sxs-lookup"><span data-stu-id="50d76-191">Device I/O error</span></span>](../../visual-basic/language-reference/error-messages/device-i-o-error.md)  
   
- [<span data-ttu-id="e5301-192">Dispositivo no disponible</span><span class="sxs-lookup"><span data-stu-id="e5301-192">Device unavailable</span></span>](../../visual-basic/misc/device-unavailable.md)  
+ [<span data-ttu-id="50d76-192">Dispositivo no disponible</span><span class="sxs-lookup"><span data-stu-id="50d76-192">Device unavailable</span></span>](../../visual-basic/misc/device-unavailable.md)  
   
- [<span data-ttu-id="e5301-193">Se debe llamar primero a la función 'Dir' con un argumento "Pathname"</span><span class="sxs-lookup"><span data-stu-id="e5301-193">'Dir' function must first be called with a 'PathName' argument</span></span>](../../visual-basic/language-reference/error-messages/dir-function-must-first-be-called-with-a-pathname-argument.md)  
+ [<span data-ttu-id="50d76-193">Se debe llamar primero a la función 'Dir' con un argumento "Pathname"</span><span class="sxs-lookup"><span data-stu-id="50d76-193">'Dir' function must first be called with a 'PathName' argument</span></span>](../../visual-basic/language-reference/error-messages/dir-function-must-first-be-called-with-a-pathname-argument.md)  
   
- [<span data-ttu-id="e5301-194">Disco lleno (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-194">Disk full (Visual Basic)</span></span>](../../visual-basic/misc/disk-full.md)  
+ [<span data-ttu-id="50d76-194">Disco lleno (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-194">Disk full (Visual Basic)</span></span>](../../visual-basic/misc/disk-full.md)  
   
- [<span data-ttu-id="e5301-195">Disco no preparado</span><span class="sxs-lookup"><span data-stu-id="e5301-195">Disk not ready</span></span>](../../visual-basic/misc/disk-not-ready.md)  
+ [<span data-ttu-id="50d76-195">Disco no preparado</span><span class="sxs-lookup"><span data-stu-id="50d76-195">Disk not ready</span></span>](../../visual-basic/misc/disk-not-ready.md)  
   
- [<span data-ttu-id="e5301-196">División por cero (error de Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-196">Division by zero (Visual Basic Error)</span></span>](../../visual-basic/misc/division-by-zero-error.md)  
+ [<span data-ttu-id="50d76-196">División por cero (error de Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-196">Division by zero (Visual Basic Error)</span></span>](../../visual-basic/misc/division-by-zero-error.md)  
   
- [<span data-ttu-id="e5301-197">División por cero (error en tiempo de ejecución de Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-197">Division by zero (Visual Basic Run-Time Error)</span></span>](../../visual-basic/misc/division-by-zero-run-time-error.md)  
+ [<span data-ttu-id="50d76-197">División por cero (error en tiempo de ejecución de Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-197">Division by zero (Visual Basic Run-Time Error)</span></span>](../../visual-basic/misc/division-by-zero-run-time-error.md)  
   
- [<span data-ttu-id="e5301-198">Unidad '\<drivename >' no encontrado</span><span class="sxs-lookup"><span data-stu-id="e5301-198">Drive '\<drivename>' not found</span></span>](../../visual-basic/misc/drive-drivename-not-found.md)  
+ [<span data-ttu-id="50d76-198">Unidad '\<drivename >' no encontrado</span><span class="sxs-lookup"><span data-stu-id="50d76-198">Drive '\<drivename>' not found</span></span>](../../visual-basic/misc/drive-drivename-not-found.md)  
   
- [<span data-ttu-id="e5301-199">La codificación no se puede establecer en Nothing</span><span class="sxs-lookup"><span data-stu-id="e5301-199">Encoding cannot be set to Nothing</span></span>](../../visual-basic/misc/encoding-cannot-be-set-to-nothing.md)  
+ [<span data-ttu-id="50d76-199">La codificación no se puede establecer en Nothing</span><span class="sxs-lookup"><span data-stu-id="50d76-199">Encoding cannot be set to Nothing</span></span>](../../visual-basic/misc/encoding-cannot-be-set-to-nothing.md)  
   
- [<span data-ttu-id="e5301-200">Error al cargar el archivo DLL (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-200">Error in loading DLL (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/error-in-loading-dll.md)  
+ [<span data-ttu-id="50d76-200">Error al cargar el archivo DLL (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-200">Error in loading DLL (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/error-in-loading-dll.md)  
   
- [<span data-ttu-id="e5301-201">El número de errores debe estar en el intervalo entre 0 y 65535</span><span class="sxs-lookup"><span data-stu-id="e5301-201">Error number must be within the range 0 and 65535</span></span>](../../visual-basic/misc/error-number-must-be-within-the-range-0-and-65535.md)  
+ [<span data-ttu-id="50d76-201">El número de errores debe estar en el intervalo entre 0 y 65535</span><span class="sxs-lookup"><span data-stu-id="50d76-201">Error number must be within the range 0 and 65535</span></span>](../../visual-basic/misc/error-number-must-be-within-the-range-0-and-65535.md)  
   
- [<span data-ttu-id="e5301-202">Expresión '\<nombre >' no es un procedimiento, pero se produce cuando el destino de una llamada a procedimiento</span><span class="sxs-lookup"><span data-stu-id="e5301-202">Expression '\<name>' is not a procedure, but occurs as the target of a procedure call</span></span>](../../visual-basic/misc/expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call.md)  
+ [<span data-ttu-id="50d76-202">Expresión '\<nombre >' no es un procedimiento, pero se produce cuando el destino de una llamada a procedimiento</span><span class="sxs-lookup"><span data-stu-id="50d76-202">Expression '\<name>' is not a procedure, but occurs as the target of a procedure call</span></span>](../../visual-basic/misc/expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call.md)  
   
- [<span data-ttu-id="e5301-203">Expresión demasiado compleja</span><span class="sxs-lookup"><span data-stu-id="e5301-203">Expression too complex</span></span>](../../visual-basic/language-reference/error-messages/expression-too-complex.md)  
+ [<span data-ttu-id="50d76-203">Expresión demasiado compleja</span><span class="sxs-lookup"><span data-stu-id="50d76-203">Expression too complex</span></span>](../../visual-basic/language-reference/error-messages/expression-too-complex.md)  
   
- [<span data-ttu-id="e5301-204">Característica no implementada aún</span><span class="sxs-lookup"><span data-stu-id="e5301-204">Feature not yet implemented</span></span>](../../visual-basic/misc/feature-not-yet-implemented.md)  
+ [<span data-ttu-id="50d76-204">Característica no implementada aún</span><span class="sxs-lookup"><span data-stu-id="50d76-204">Feature not yet implemented</span></span>](../../visual-basic/misc/feature-not-yet-implemented.md)  
   
- [<span data-ttu-id="e5301-205">Campo '\<fieldname >' de tipo '\<typename >' es 'ReadOnly'</span><span class="sxs-lookup"><span data-stu-id="e5301-205">Field '\<fieldname>' of type '\<typename>' is 'ReadOnly'</span></span>](../../visual-basic/misc/field-fieldname-of-type-typename-is-readonly.md)  
+ [<span data-ttu-id="50d76-205">Campo '\<fieldname >' de tipo '\<typename >' es 'ReadOnly'</span><span class="sxs-lookup"><span data-stu-id="50d76-205">Field '\<fieldname>' of type '\<typename>' is 'ReadOnly'</span></span>](../../visual-basic/misc/field-fieldname-of-type-typename-is-readonly.md)  
   
- [<span data-ttu-id="e5301-206">Archivo '\<filename >' no se puede eliminar porque está abierto</span><span class="sxs-lookup"><span data-stu-id="e5301-206">File '\<filename>' cannot be deleted because it is open</span></span>](../../visual-basic/misc/file-filename-cannot-be-deleted-because-it-is-open.md)  
+ [<span data-ttu-id="50d76-206">Archivo '\<filename >' no se puede eliminar porque está abierto</span><span class="sxs-lookup"><span data-stu-id="50d76-206">File '\<filename>' cannot be deleted because it is open</span></span>](../../visual-basic/misc/file-filename-cannot-be-deleted-because-it-is-open.md)  
   
- [<span data-ttu-id="e5301-207">Archivo '\<filename >' está protegido contra escritura</span><span class="sxs-lookup"><span data-stu-id="e5301-207">File '\<filename>' is write protected</span></span>](../../visual-basic/misc/file-filename-is-write-protected.md)  
+ [<span data-ttu-id="50d76-207">Archivo '\<filename >' está protegido contra escritura</span><span class="sxs-lookup"><span data-stu-id="50d76-207">File '\<filename>' is write protected</span></span>](../../visual-basic/misc/file-filename-is-write-protected.md)  
   
- [<span data-ttu-id="e5301-208">Archivo '\<filename >' no encontrado</span><span class="sxs-lookup"><span data-stu-id="e5301-208">File '\<filename>' not found</span></span>](../../visual-basic/misc/file-filename-not-found.md)  
+ [<span data-ttu-id="50d76-208">Archivo '\<filename >' no encontrado</span><span class="sxs-lookup"><span data-stu-id="50d76-208">File '\<filename>' not found</span></span>](../../visual-basic/misc/file-filename-not-found.md)  
   
- [<span data-ttu-id="e5301-209">El archivo ya existe</span><span class="sxs-lookup"><span data-stu-id="e5301-209">File already exists</span></span>](../../visual-basic/misc/file-already-exists.md)  
+ [<span data-ttu-id="50d76-209">El archivo ya existe</span><span class="sxs-lookup"><span data-stu-id="50d76-209">File already exists</span></span>](../../visual-basic/misc/file-already-exists.md)  
   
- [<span data-ttu-id="e5301-210">Archivo ya abierto</span><span class="sxs-lookup"><span data-stu-id="e5301-210">File already open</span></span>](../../visual-basic/language-reference/error-messages/file-already-open.md)  
+ [<span data-ttu-id="50d76-210">Archivo ya abierto</span><span class="sxs-lookup"><span data-stu-id="50d76-210">File already open</span></span>](../../visual-basic/language-reference/error-messages/file-already-open.md)  
   
- [<span data-ttu-id="e5301-211">Formato de archivo no válido</span><span class="sxs-lookup"><span data-stu-id="e5301-211">File format not valid</span></span>](../../visual-basic/misc/file-format-not-valid.md)  
+ [<span data-ttu-id="50d76-211">Formato de archivo no válido</span><span class="sxs-lookup"><span data-stu-id="50d76-211">File format not valid</span></span>](../../visual-basic/misc/file-format-not-valid.md)  
   
- [<span data-ttu-id="e5301-212">E/S del archivo de una estructura con el campo '\<fieldname >' de tipo '\<typename >' no es válido</span><span class="sxs-lookup"><span data-stu-id="e5301-212">File I/O of a structure with field '\<fieldname>' of type '\<typename>' is not valid</span></span>](../../visual-basic/misc/file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid.md)  
+ [<span data-ttu-id="50d76-212">E/S del archivo de una estructura con el campo '\<fieldname >' de tipo '\<typename >' no es válido</span><span class="sxs-lookup"><span data-stu-id="50d76-212">File I/O of a structure with field '\<fieldname>' of type '\<typename>' is not valid</span></span>](../../visual-basic/misc/file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-213">E/S de archivos con el tipo '\<typename >' no es válido</span><span class="sxs-lookup"><span data-stu-id="e5301-213">File I/O with type '\<typename>' is not valid</span></span>](../../visual-basic/misc/file-i-o-with-type-typename-is-not-valid.md)  
+ [<span data-ttu-id="50d76-213">E/S de archivos con el tipo '\<typename >' no es válido</span><span class="sxs-lookup"><span data-stu-id="50d76-213">File I/O with type '\<typename>' is not valid</span></span>](../../visual-basic/misc/file-i-o-with-type-typename-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-214">No se puede consultar la información de archivo si el archivo no existe</span><span class="sxs-lookup"><span data-stu-id="e5301-214">File information cannot be queried if the file does not exist</span></span>](../../visual-basic/misc/file-information-cannot-be-queried-if-the-file-does-not-exist.md)  
+ [<span data-ttu-id="50d76-214">No se puede consultar la información de archivo si el archivo no existe</span><span class="sxs-lookup"><span data-stu-id="50d76-214">File information cannot be queried if the file does not exist</span></span>](../../visual-basic/misc/file-information-cannot-be-queried-if-the-file-does-not-exist.md)  
   
- [<span data-ttu-id="e5301-215">No se puede consultar la información de archivo mientras está abierto y se escribe en él</span><span class="sxs-lookup"><span data-stu-id="e5301-215">File information cannot be queried while open for writing</span></span>](../../visual-basic/misc/file-information-cannot-be-queried-while-open-for-writing.md)  
+ [<span data-ttu-id="50d76-215">No se puede consultar la información de archivo mientras está abierto y se escribe en él</span><span class="sxs-lookup"><span data-stu-id="50d76-215">File information cannot be queried while open for writing</span></span>](../../visual-basic/misc/file-information-cannot-be-queried-while-open-for-writing.md)  
   
- [<span data-ttu-id="e5301-216">Archivo demasiado grande para su lectura en una matriz de bytes</span><span class="sxs-lookup"><span data-stu-id="e5301-216">File is too large to read into a byte array</span></span>](../../visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md)  
+ [<span data-ttu-id="50d76-216">Archivo demasiado grande para su lectura en una matriz de bytes</span><span class="sxs-lookup"><span data-stu-id="50d76-216">File is too large to read into a byte array</span></span>](../../visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md)  
   
- [<span data-ttu-id="e5301-217">Nombre de archivo o nombre de clase no encontrado durante la operación de automatización (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-217">File name or class name not found during Automation operation (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
+ [<span data-ttu-id="50d76-217">Nombre de archivo o nombre de clase no encontrado durante la operación de automatización (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-217">File name or class name not found during Automation operation (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
   
- [<span data-ttu-id="e5301-218">No se encuentra el archivo (error en tiempo de ejecución de Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-218">File not found (Visual Basic Run-Time Error)</span></span>](../../visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md)  
+ [<span data-ttu-id="50d76-218">No se encuentra el archivo (error en tiempo de ejecución de Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-218">File not found (Visual Basic Run-Time Error)</span></span>](../../visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md)  
   
- [<span data-ttu-id="e5301-219">El archivo especificado por FileName no usa la codificación especificada por FileEncoding</span><span class="sxs-lookup"><span data-stu-id="e5301-219">File specified by FileName does not use the encoding specified by FileEncoding</span></span>](../../visual-basic/misc/file-specified-by-filename-does-not-use-the-encoding-specified-by-fileencoding.md)  
+ [<span data-ttu-id="50d76-219">El archivo especificado por FileName no usa la codificación especificada por FileEncoding</span><span class="sxs-lookup"><span data-stu-id="50d76-219">File specified by FileName does not use the encoding specified by FileEncoding</span></span>](../../visual-basic/misc/file-specified-by-filename-does-not-use-the-encoding-specified-by-fileencoding.md)  
   
- [<span data-ttu-id="e5301-220">El archivo especificado en Nombre de archivo no es un archivo XML válido</span><span class="sxs-lookup"><span data-stu-id="e5301-220">File specified in FileName is not a valid XML file</span></span>](../../visual-basic/misc/file-specified-in-filename-is-not-a-valid-xml-file.md)  
+ [<span data-ttu-id="50d76-220">El archivo especificado en Nombre de archivo no es un archivo XML válido</span><span class="sxs-lookup"><span data-stu-id="50d76-220">File specified in FileName is not a valid XML file</span></span>](../../visual-basic/misc/file-specified-in-filename-is-not-a-valid-xml-file.md)  
   
- [<span data-ttu-id="e5301-221">El modo de apertura del archivo no se estableció con un valor válido</span><span class="sxs-lookup"><span data-stu-id="e5301-221">File's open mode wasn't set to a valid value</span></span>](../../visual-basic/misc/file-s-open-mode-wasn-t-set-to-a-valid-value.md)  
+ [<span data-ttu-id="50d76-221">El modo de apertura del archivo no se estableció con un valor válido</span><span class="sxs-lookup"><span data-stu-id="50d76-221">File's open mode wasn't set to a valid value</span></span>](../../visual-basic/misc/file-s-open-mode-wasn-t-set-to-a-valid-value.md)  
   
- [<span data-ttu-id="e5301-222">Bucle For no inicializado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-222">For loop not initialized (Visual Basic)</span></span>](../../visual-basic/misc/for-loop-not-initialized.md)  
+ [<span data-ttu-id="50d76-222">Bucle For no inicializado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-222">For loop not initialized (Visual Basic)</span></span>](../../visual-basic/misc/for-loop-not-initialized.md)  
   
- [<span data-ttu-id="e5301-223">El formato del archivo de recursos no es válido</span><span class="sxs-lookup"><span data-stu-id="e5301-223">Format not valid in resource file</span></span>](../../visual-basic/misc/format-not-valid-in-resource-file.md)  
+ [<span data-ttu-id="50d76-223">El formato del archivo de recursos no es válido</span><span class="sxs-lookup"><span data-stu-id="50d76-223">Format not valid in resource file</span></span>](../../visual-basic/misc/format-not-valid-in-resource-file.md)  
   
- [<span data-ttu-id="e5301-224">No se admite Get (propiedad de solo escritura)</span><span class="sxs-lookup"><span data-stu-id="e5301-224">Get not supported (write-only property)</span></span>](../../visual-basic/misc/get-not-supported-write-only-property.md)  
+ [<span data-ttu-id="50d76-224">No se admite Get (propiedad de solo escritura)</span><span class="sxs-lookup"><span data-stu-id="50d76-224">Get not supported (write-only property)</span></span>](../../visual-basic/misc/get-not-supported-write-only-property.md)  
   
- [<span data-ttu-id="e5301-225">No se admite Get en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="e5301-225">Get not supported at run time</span></span>](../../visual-basic/misc/get-not-supported-at-run-time.md)  
+ [<span data-ttu-id="50d76-225">No se admite Get en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="50d76-225">Get not supported at run time</span></span>](../../visual-basic/misc/get-not-supported-at-run-time.md)  
   
- [<span data-ttu-id="e5301-226">La referencia implícita a un objeto en construcción no es válida mientras se llama a otro constructor</span><span class="sxs-lookup"><span data-stu-id="e5301-226">Implicit reference to object under construction is not valid when calling another constructor</span></span>](../../visual-basic/misc/bc31096.md)  
+ [<span data-ttu-id="50d76-226">La referencia implícita a un objeto en construcción no es válida mientras se llama a otro constructor</span><span class="sxs-lookup"><span data-stu-id="50d76-226">Implicit reference to object under construction is not valid when calling another constructor</span></span>](../../visual-basic/misc/bc31096.md)  
   
- [<span data-ttu-id="e5301-227">Se sobrepasó el final del archivo</span><span class="sxs-lookup"><span data-stu-id="e5301-227">Input past end of file</span></span>](../../visual-basic/language-reference/error-messages/input-past-end-of-file.md)  
+ [<span data-ttu-id="50d76-227">Se sobrepasó el final del archivo</span><span class="sxs-lookup"><span data-stu-id="50d76-227">Input past end of file</span></span>](../../visual-basic/language-reference/error-messages/input-past-end-of-file.md)  
   
- [<span data-ttu-id="e5301-228">Permisos de seguridad insuficientes para establecer la fecha del sistema</span><span class="sxs-lookup"><span data-stu-id="e5301-228">Insufficient security permissions to set the system date</span></span>](../../visual-basic/misc/insufficient-security-permissions-to-set-the-system-date.md)  
+ [<span data-ttu-id="50d76-228">Permisos de seguridad insuficientes para establecer la fecha del sistema</span><span class="sxs-lookup"><span data-stu-id="50d76-228">Insufficient security permissions to set the system date</span></span>](../../visual-basic/misc/insufficient-security-permissions-to-set-the-system-date.md)  
   
- [<span data-ttu-id="e5301-229">Permisos de seguridad insuficientes para establecer la hora del sistema</span><span class="sxs-lookup"><span data-stu-id="e5301-229">Insufficient security permissions to set the system time</span></span>](../../visual-basic/misc/insufficient-security-permissions-to-set-the-system-time.md)  
+ [<span data-ttu-id="50d76-229">Permisos de seguridad insuficientes para establecer la hora del sistema</span><span class="sxs-lookup"><span data-stu-id="50d76-229">Insufficient security permissions to set the system time</span></span>](../../visual-basic/misc/insufficient-security-permissions-to-set-the-system-time.md)  
   
- [<span data-ttu-id="e5301-230">Error interno (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-230">Internal error (Visual Basic)</span></span>](../../visual-basic/misc/internal-error.md)  
+ [<span data-ttu-id="50d76-230">Error interno (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-230">Internal error (Visual Basic)</span></span>](../../visual-basic/misc/internal-error.md)  
   
- [<span data-ttu-id="e5301-231">Se produjo un error interno al \<ubicación ></span><span class="sxs-lookup"><span data-stu-id="e5301-231">Internal error happened at \<location></span></span>](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
+ [<span data-ttu-id="50d76-231">Se produjo un error interno al \<ubicación ></span><span class="sxs-lookup"><span data-stu-id="50d76-231">Internal error happened at \<location></span></span>](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
   
- [<span data-ttu-id="e5301-232">Error interno en el tiempo de ejecución de Microsoft Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e5301-232">Internal error in the Microsoft Visual Basic runtime</span></span>](../../visual-basic/misc/internal-error-in-the-microsoft-visual-basic-runtime.md)  
+ [<span data-ttu-id="50d76-232">Error interno en el tiempo de ejecución de Microsoft Visual Basic</span><span class="sxs-lookup"><span data-stu-id="50d76-232">Internal error in the Microsoft Visual Basic runtime</span></span>](../../visual-basic/misc/internal-error-in-the-microsoft-visual-basic-runtime.md)  
   
- [<span data-ttu-id="e5301-233">Cadena de patrón no válida</span><span class="sxs-lookup"><span data-stu-id="e5301-233">Invalid pattern string</span></span>](../../visual-basic/misc/invalid-pattern-string.md)  
+ [<span data-ttu-id="50d76-233">Cadena de patrón no válida</span><span class="sxs-lookup"><span data-stu-id="50d76-233">Invalid pattern string</span></span>](../../visual-basic/misc/invalid-pattern-string.md)  
   
- [<span data-ttu-id="e5301-234">La clave no se puede eliminar porque tiene subclaves</span><span class="sxs-lookup"><span data-stu-id="e5301-234">Key cannot be deleted because it has subkeys</span></span>](../../visual-basic/misc/key-cannot-be-deleted-because-it-has-subkeys.md)  
+ [<span data-ttu-id="50d76-234">La clave no se puede eliminar porque tiene subclaves</span><span class="sxs-lookup"><span data-stu-id="50d76-234">Key cannot be deleted because it has subkeys</span></span>](../../visual-basic/misc/key-cannot-be-deleted-because-it-has-subkeys.md)  
   
- [<span data-ttu-id="e5301-235">Asignación de tiempo de ejecución a un campo de tipo de valor '\<typename >' no es válida cuando '\<nombre >' es el resultado de una expresión en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="e5301-235">Late-bound assignment to a field of value type '\<typename>' is not valid when '\<name>' is the result of a late-bound expression</span></span>](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
+ [<span data-ttu-id="50d76-235">Asignación de tiempo de ejecución a un campo de tipo de valor '\<typename >' no es válida cuando '\<nombre >' es el resultado de una expresión en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="50d76-235">Late-bound assignment to a field of value type '\<typename>' is not valid when '\<name>' is the result of a late-bound expression</span></span>](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-236">La longitud del argumento '\<argumentname >' debe ser mayor que cero.</span><span class="sxs-lookup"><span data-stu-id="e5301-236">Length of argument '\<argumentname>' must be greater than zero</span></span>](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
+ [<span data-ttu-id="50d76-236">La longitud del argumento '\<argumentname >' debe ser mayor que cero.</span><span class="sxs-lookup"><span data-stu-id="50d76-236">Length of argument '\<argumentname>' must be greater than zero</span></span>](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
   
- [<span data-ttu-id="e5301-237">Línea \<número > no se puede analizar mediante el método Delimiters actual</span><span class="sxs-lookup"><span data-stu-id="e5301-237">Line \<number> cannot be parsed using the current Delimiters</span></span>](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
+ [<span data-ttu-id="50d76-237">Línea \<número > no se puede analizar mediante el método Delimiters actual</span><span class="sxs-lookup"><span data-stu-id="50d76-237">Line \<number> cannot be parsed using the current Delimiters</span></span>](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
   
- [<span data-ttu-id="e5301-238">Línea \<número > no se puede analizar mediante los FieldWidths actuales</span><span class="sxs-lookup"><span data-stu-id="e5301-238">Line \<number> cannot be parsed using the current FieldWidths</span></span>](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-fieldwidths.md)  
+ [<span data-ttu-id="50d76-238">Línea \<número > no se puede analizar mediante los FieldWidths actuales</span><span class="sxs-lookup"><span data-stu-id="50d76-238">Line \<number> cannot be parsed using the current FieldWidths</span></span>](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-fieldwidths.md)  
   
- [<span data-ttu-id="e5301-239">Línea \<número > no se puede leer porque supera el tamaño máximo de línea.</span><span class="sxs-lookup"><span data-stu-id="e5301-239">Line \<number> cannot be read because it exceeds the maximum line size.</span></span>](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
+ [<span data-ttu-id="50d76-239">Línea \<número > no se puede leer porque supera el tamaño máximo de línea.</span><span class="sxs-lookup"><span data-stu-id="50d76-239">Line \<number> cannot be read because it exceeds the maximum line size.</span></span>](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
   
- [<span data-ttu-id="e5301-240">Identificador de configuración regional '\<nombre >' no se admite en este sistema</span><span class="sxs-lookup"><span data-stu-id="e5301-240">Locale ID '\<name>' is not supported on this system</span></span>](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
+ [<span data-ttu-id="50d76-240">Identificador de configuración regional '\<nombre >' no se admite en este sistema</span><span class="sxs-lookup"><span data-stu-id="50d76-240">Locale ID '\<name>' is not supported on this system</span></span>](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
   
- [<span data-ttu-id="e5301-241">Variable de control de bucles de tipo '\<typename >' no implementa la interfaz 'System.IComparable'</span><span class="sxs-lookup"><span data-stu-id="e5301-241">Loop control variable of type '\<typename>' does not implement the 'System.IComparable' interface</span></span>](../../visual-basic/misc/loop-control-variable-of-type-typename-does-not-implement-system-icomparable.md)  
+ [<span data-ttu-id="50d76-241">Variable de control de bucles de tipo '\<typename >' no implementa la interfaz 'System.IComparable'</span><span class="sxs-lookup"><span data-stu-id="50d76-241">Loop control variable of type '\<typename>' does not implement the 'System.IComparable' interface</span></span>](../../visual-basic/misc/loop-control-variable-of-type-typename-does-not-implement-system-icomparable.md)  
   
- [<span data-ttu-id="e5301-242">No se pueden realizar llamadas enlazadas en tiempo de ejecución a clases administradas derivadas de una clase COM</span><span class="sxs-lookup"><span data-stu-id="e5301-242">Managed classes derived from a COM class cannot be called late-bound.</span></span>](../../visual-basic/misc/managed-classes-derived-from-a-com-class-cannot-be-called-late-bound.md)  
+ [<span data-ttu-id="50d76-242">No se pueden realizar llamadas enlazadas en tiempo de ejecución a clases administradas derivadas de una clase COM</span><span class="sxs-lookup"><span data-stu-id="50d76-242">Managed classes derived from a COM class cannot be called late-bound.</span></span>](../../visual-basic/misc/managed-classes-derived-from-a-com-class-cannot-be-called-late-bound.md)  
   
- [<span data-ttu-id="e5301-243">Método '\<methodname >' no se puede llamar con \<número > argumentos</span><span class="sxs-lookup"><span data-stu-id="e5301-243">Method '\<methodname>' cannot be called with \<number> arguments</span></span>](../../visual-basic/misc/method-methodname-cannot-be-called-with-number-arguments.md)  
+ [<span data-ttu-id="50d76-243">Método '\<methodname >' no se puede llamar con \<número > argumentos</span><span class="sxs-lookup"><span data-stu-id="50d76-243">Method '\<methodname>' cannot be called with \<number> arguments</span></span>](../../visual-basic/misc/method-methodname-cannot-be-called-with-number-arguments.md)  
   
- [<span data-ttu-id="e5301-244">Método '\<methodname >' no tiene un parámetro denominado '\<parametername >'</span><span class="sxs-lookup"><span data-stu-id="e5301-244">Method '\<methodname>' has no parameter named '\<parametername>'</span></span>](../../visual-basic/misc/method-methodname-has-no-parameter-named-parametername.md)  
+ [<span data-ttu-id="50d76-244">Método '\<methodname >' no tiene un parámetro denominado '\<parametername >'</span><span class="sxs-lookup"><span data-stu-id="50d76-244">Method '\<methodname>' has no parameter named '\<parametername>'</span></span>](../../visual-basic/misc/method-methodname-has-no-parameter-named-parametername.md)  
   
- [<span data-ttu-id="e5301-245">No se encuentra el método o miembro de datos</span><span class="sxs-lookup"><span data-stu-id="e5301-245">Method or data member not found</span></span>](../../visual-basic/misc/method-or-data-member-not-found.md)  
+ [<span data-ttu-id="50d76-245">No se encuentra el método o miembro de datos</span><span class="sxs-lookup"><span data-stu-id="50d76-245">Method or data member not found</span></span>](../../visual-basic/misc/method-or-data-member-not-found.md)  
   
- [<span data-ttu-id="e5301-246">My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="e5301-246">My.Application.Log</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
+ [<span data-ttu-id="50d76-246">My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="50d76-246">My.Application.Log</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
   
- [<span data-ttu-id="e5301-247">Un argumento con nombre '\<argumentname >' se especificó varias veces</span><span class="sxs-lookup"><span data-stu-id="e5301-247">Named argument '\<argumentname>' specified multiple times</span></span>](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
+ [<span data-ttu-id="50d76-247">Un argumento con nombre '\<argumentname >' se especificó varias veces</span><span class="sxs-lookup"><span data-stu-id="50d76-247">Named argument '\<argumentname>' specified multiple times</span></span>](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
   
- [<span data-ttu-id="e5301-248">Argumento con nombre no encontrado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-248">Named argument not found (Visual Basic)</span></span>](../../visual-basic/misc/named-argument-not-found.md)  
+ [<span data-ttu-id="50d76-248">Argumento con nombre no encontrado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-248">Named argument not found (Visual Basic)</span></span>](../../visual-basic/misc/named-argument-not-found.md)  
   
- [<span data-ttu-id="e5301-249">Los argumentos con nombre no pueden coincidir con los parámetros ParamArray</span><span class="sxs-lookup"><span data-stu-id="e5301-249">Named arguments cannot match ParamArray parameters</span></span>](../../visual-basic/misc/named-arguments-cannot-match-paramarray-parameters.md)  
+ [<span data-ttu-id="50d76-249">Los argumentos con nombre no pueden coincidir con los parámetros ParamArray</span><span class="sxs-lookup"><span data-stu-id="50d76-249">Named arguments cannot match ParamArray parameters</span></span>](../../visual-basic/misc/named-arguments-cannot-match-paramarray-parameters.md)  
   
- [<span data-ttu-id="e5301-250">Se necesita un índice de matriz de propiedades</span><span class="sxs-lookup"><span data-stu-id="e5301-250">Need property array index</span></span>](../../visual-basic/language-reference/error-messages/need-property-array-index.md)  
+ [<span data-ttu-id="50d76-250">Se necesita un índice de matriz de propiedades</span><span class="sxs-lookup"><span data-stu-id="50d76-250">Need property array index</span></span>](../../visual-basic/language-reference/error-messages/need-property-array-index.md)  
   
- [<span data-ttu-id="e5301-251">Ninguna sobrecarga accesible '\<methodname >' puede llamar con estos argumentos sin una conversión de restricción</span><span class="sxs-lookup"><span data-stu-id="e5301-251">No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion</span></span>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
+ [<span data-ttu-id="50d76-251">Ninguna sobrecarga accesible '\<methodname >' puede llamar con estos argumentos sin una conversión de restricción</span><span class="sxs-lookup"><span data-stu-id="50d76-251">No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion</span></span>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
   
- [<span data-ttu-id="e5301-252">Ninguna sobrecarga accesible '\<methodname >' puede llamar con estos argumentos sin una conversión de restricción: \<lista ></span><span class="sxs-lookup"><span data-stu-id="e5301-252">No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion: \<list></span></span>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
+ [<span data-ttu-id="50d76-252">Ninguna sobrecarga accesible '\<methodname >' puede llamar con estos argumentos sin una conversión de restricción: \<lista ></span><span class="sxs-lookup"><span data-stu-id="50d76-252">No accessible overloaded '\<methodname>' can be called with these arguments without a narrowing conversion: \<list></span></span>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
   
- [<span data-ttu-id="e5301-253">Ninguna sobrecarga accesible '\<methodname >' puede llamar con estos argumentos sin una conversión de ampliación: \<lista ></span><span class="sxs-lookup"><span data-stu-id="e5301-253">No accessible overloaded '\<methodname>' can be called with these arguments without a widening conversion: \<list></span></span>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
+ [<span data-ttu-id="50d76-253">Ninguna sobrecarga accesible '\<methodname >' puede llamar con estos argumentos sin una conversión de ampliación: \<lista ></span><span class="sxs-lookup"><span data-stu-id="50d76-253">No accessible overloaded '\<methodname>' can be called with these arguments without a widening conversion: \<list></span></span>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
   
- [<span data-ttu-id="e5301-254">Ninguna sobrecarga accesible '\<methodname >' puede llamar con estos argumentos: \<lista ></span><span class="sxs-lookup"><span data-stu-id="e5301-254">No accessible overloaded '\<methodname>' can be called with these arguments: \<list></span></span>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
+ [<span data-ttu-id="50d76-254">Ninguna sobrecarga accesible '\<methodname >' puede llamar con estos argumentos: \<lista ></span><span class="sxs-lookup"><span data-stu-id="50d76-254">No accessible overloaded '\<methodname>' can be called with these arguments: \<list></span></span>](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
   
- [<span data-ttu-id="e5301-255">Se encontró ningún miembro predeterminado para el tipo '\<typename >'</span><span class="sxs-lookup"><span data-stu-id="e5301-255">No default member found for type '\<typename>'</span></span>](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
+ [<span data-ttu-id="50d76-255">Se encontró ningún miembro predeterminado para el tipo '\<typename >'</span><span class="sxs-lookup"><span data-stu-id="50d76-255">No default member found for type '\<typename>'</span></span>](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
   
- [<span data-ttu-id="e5301-256">No encuentran archivos coincidentes '\<filename >'</span><span class="sxs-lookup"><span data-stu-id="e5301-256">No files found matching '\<filename>'</span></span>](../../visual-basic/misc/no-files-found-matching-filename.md)  
+ [<span data-ttu-id="50d76-256">No encuentran archivos coincidentes '\<filename >'</span><span class="sxs-lookup"><span data-stu-id="50d76-256">No files found matching '\<filename>'</span></span>](../../visual-basic/misc/no-files-found-matching-filename.md)  
   
- [<span data-ttu-id="e5301-257">No hay ningún método '\<methodname >' puede aceptar un argumento de tipo '\<typename >' para el parámetro '\<parametername >'</span><span class="sxs-lookup"><span data-stu-id="e5301-257">No method '\<methodname>' can accept an argument of type '\<typename>' for parameter '\<parametername>'</span></span>](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
+ [<span data-ttu-id="50d76-257">No hay ningún método '\<methodname >' puede aceptar un argumento de tipo '\<typename >' para el parámetro '\<parametername >'</span><span class="sxs-lookup"><span data-stu-id="50d76-257">No method '\<methodname>' can accept an argument of type '\<typename>' for parameter '\<parametername>'</span></span>](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
   
- [<span data-ttu-id="e5301-258">No hay un mouse presente</span><span class="sxs-lookup"><span data-stu-id="e5301-258">No mouse is present</span></span>](../../visual-basic/misc/no-mouse-is-present.md)  
+ [<span data-ttu-id="50d76-258">No hay un mouse presente</span><span class="sxs-lookup"><span data-stu-id="50d76-258">No mouse is present</span></span>](../../visual-basic/misc/no-mouse-is-present.md)  
   
- [<span data-ttu-id="e5301-259">No hay rueda del mouse presente</span><span class="sxs-lookup"><span data-stu-id="e5301-259">No mouse wheel is present</span></span>](../../visual-basic/misc/no-mouse-wheel-is-present.md)  
+ [<span data-ttu-id="50d76-259">No hay rueda del mouse presente</span><span class="sxs-lookup"><span data-stu-id="50d76-259">No mouse wheel is present</span></span>](../../visual-basic/misc/no-mouse-wheel-is-present.md)  
   
- [<span data-ttu-id="e5301-260">NumberOfChars debe ser mayor que cero</span><span class="sxs-lookup"><span data-stu-id="e5301-260">NumberOfChars must be greater than zero</span></span>](../../visual-basic/misc/numberofchars-must-be-greater-than-zero.md)  
+ [<span data-ttu-id="50d76-260">NumberOfChars debe ser mayor que cero</span><span class="sxs-lookup"><span data-stu-id="50d76-260">NumberOfChars must be greater than zero</span></span>](../../visual-basic/misc/numberofchars-must-be-greater-than-zero.md)  
   
- [<span data-ttu-id="e5301-261">El objeto no admite la configuración regional actual (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-261">Object doesn't support current locale setting (Visual Basic)</span></span>](../../visual-basic/misc/object-doesn-t-support-current-locale-setting.md)  
+ [<span data-ttu-id="50d76-261">El objeto no admite la configuración regional actual (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-261">Object doesn't support current locale setting (Visual Basic)</span></span>](../../visual-basic/misc/object-doesn-t-support-current-locale-setting.md)  
   
- [<span data-ttu-id="e5301-262">El objeto no admite argumentos con nombre</span><span class="sxs-lookup"><span data-stu-id="e5301-262">Object doesn't support named arguments</span></span>](../../visual-basic/misc/object-doesn-t-support-named-arguments.md)  
+ [<span data-ttu-id="50d76-262">El objeto no admite argumentos con nombre</span><span class="sxs-lookup"><span data-stu-id="50d76-262">Object doesn't support named arguments</span></span>](../../visual-basic/misc/object-doesn-t-support-named-arguments.md)  
   
- [<span data-ttu-id="e5301-263">El objeto no acepta esta acción (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-263">Object doesn't support this action (Visual Basic)</span></span>](../../visual-basic/misc/object-doesn-t-support-this-action.md)  
+ [<span data-ttu-id="50d76-263">El objeto no acepta esta acción (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-263">Object doesn't support this action (Visual Basic)</span></span>](../../visual-basic/misc/object-doesn-t-support-this-action.md)  
   
- [<span data-ttu-id="e5301-264">El objeto no es compatible con esta propiedad ni con este método (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-264">Object doesn't support this property or method (Visual Basic)</span></span>](../../visual-basic/misc/object-doesn-t-support-this-property-or-method.md)  
+ [<span data-ttu-id="50d76-264">El objeto no es compatible con esta propiedad ni con este método (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-264">Object doesn't support this property or method (Visual Basic)</span></span>](../../visual-basic/misc/object-doesn-t-support-this-property-or-method.md)  
   
- [<span data-ttu-id="e5301-265">El objeto o la clase no admite el conjunto de eventos</span><span class="sxs-lookup"><span data-stu-id="e5301-265">Object or class does not support the set of events</span></span>](../../visual-basic/language-reference/error-messages/object-or-class-does-not-support-the-set-of-events.md)  
+ [<span data-ttu-id="50d76-265">El objeto o la clase no admite el conjunto de eventos</span><span class="sxs-lookup"><span data-stu-id="50d76-265">Object or class does not support the set of events</span></span>](../../visual-basic/language-reference/error-messages/object-or-class-does-not-support-the-set-of-events.md)  
   
- [<span data-ttu-id="e5301-266">Se requiere un objeto</span><span class="sxs-lookup"><span data-stu-id="e5301-266">Object required</span></span>](../../visual-basic/language-reference/error-messages/object-required.md)  
+ [<span data-ttu-id="50d76-266">Se requiere un objeto</span><span class="sxs-lookup"><span data-stu-id="50d76-266">Object required</span></span>](../../visual-basic/language-reference/error-messages/object-required.md)  
   
- [<span data-ttu-id="e5301-267">Variable de objeto o de bloque With no establecida</span><span class="sxs-lookup"><span data-stu-id="e5301-267">Object variable or With block variable not set</span></span>](../../visual-basic/language-reference/error-messages/object-variable-or-with-block-variable-not-set.md)  
+ [<span data-ttu-id="50d76-267">Variable de objeto o de bloque With no establecida</span><span class="sxs-lookup"><span data-stu-id="50d76-267">Object variable or With block variable not set</span></span>](../../visual-basic/language-reference/error-messages/object-variable-or-with-block-variable-not-set.md)  
   
- [<span data-ttu-id="e5301-268">Una o varias carpetas en la ruta de acceso de destino no existen</span><span class="sxs-lookup"><span data-stu-id="e5301-268">One or more folders in the target path do not exist</span></span>](../../visual-basic/misc/one-or-more-folders-in-the-target-path-do-not-exist.md)  
+ [<span data-ttu-id="50d76-268">Una o varias carpetas en la ruta de acceso de destino no existen</span><span class="sxs-lookup"><span data-stu-id="50d76-268">One or more folders in the target path do not exist</span></span>](../../visual-basic/misc/one-or-more-folders-in-the-target-path-do-not-exist.md)  
   
- [<span data-ttu-id="e5301-269">Solo los ocho primeros caracteres de un nombre de registro personalizado son significativos</span><span class="sxs-lookup"><span data-stu-id="e5301-269">Only the first eight characters of a custom log name are significant</span></span>](../../visual-basic/misc/only-the-first-eight-characters-of-a-custom-log-name-are-significant.md)  
+ [<span data-ttu-id="50d76-269">Solo los ocho primeros caracteres de un nombre de registro personalizado son significativos</span><span class="sxs-lookup"><span data-stu-id="50d76-269">Only the first eight characters of a custom log name are significant</span></span>](../../visual-basic/misc/only-the-first-eight-characters-of-a-custom-log-name-are-significant.md)  
   
- [<span data-ttu-id="e5301-270">Operador no es válido para '\<nombre1 >' y '\<nombre2 >'</span><span class="sxs-lookup"><span data-stu-id="e5301-270">Operator is not valid for '\<name1>' and '\<name2>'</span></span>](../../visual-basic/misc/operator-is-not-valid-for-name1-and-name2.md)  
+ [<span data-ttu-id="50d76-270">Operador no es válido para '\<nombre1 >' y '\<nombre2 >'</span><span class="sxs-lookup"><span data-stu-id="50d76-270">Operator is not valid for '\<name1>' and '\<name2>'</span></span>](../../visual-basic/misc/operator-is-not-valid-for-name1-and-name2.md)  
   
- [<span data-ttu-id="e5301-271">Operador no es válido para el tipo '\<typename >'</span><span class="sxs-lookup"><span data-stu-id="e5301-271">Operator is not valid for type '\<typename>'</span></span>](../../visual-basic/misc/operator-is-not-valid-for-type-typename.md)  
+ [<span data-ttu-id="50d76-271">Operador no es válido para el tipo '\<typename >'</span><span class="sxs-lookup"><span data-stu-id="50d76-271">Operator is not valid for type '\<typename>'</span></span>](../../visual-basic/misc/operator-is-not-valid-for-type-typename.md)  
   
- [<span data-ttu-id="e5301-272">El ordinal no es válido</span><span class="sxs-lookup"><span data-stu-id="e5301-272">Ordinal is not valid</span></span>](../../visual-basic/language-reference/error-messages/ordinal-is-not-valid.md)  
+ [<span data-ttu-id="50d76-272">El ordinal no es válido</span><span class="sxs-lookup"><span data-stu-id="50d76-272">Ordinal is not valid</span></span>](../../visual-basic/language-reference/error-messages/ordinal-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-273">Memoria insuficiente (error en tiempo de ejecución de Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-273">Out of memory (Visual Basic Run-Time Error)</span></span>](../../visual-basic/misc/out-of-memory-run-time-error.md)  
+ [<span data-ttu-id="50d76-273">Memoria insuficiente (error en tiempo de ejecución de Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-273">Out of memory (Visual Basic Run-Time Error)</span></span>](../../visual-basic/misc/out-of-memory-run-time-error.md)  
   
- [<span data-ttu-id="e5301-274">Espacio de pila (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-274">Out of stack space (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
+ [<span data-ttu-id="50d76-274">Espacio de pila (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-274">Out of stack space (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
   
- [<span data-ttu-id="e5301-275">Espacio de cadena (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-275">Out of string space (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
+ [<span data-ttu-id="50d76-275">Espacio de cadena (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-275">Out of string space (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
   
- [<span data-ttu-id="e5301-276">Desbordamiento (error en tiempo de ejecución de Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-276">Overflow (Visual Basic Run-Time Error)</span></span>](../../visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md)  
+ [<span data-ttu-id="50d76-276">Desbordamiento (error en tiempo de ejecución de Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-276">Overflow (Visual Basic Run-Time Error)</span></span>](../../visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md)  
   
- [<span data-ttu-id="e5301-277">Ruta de acceso '\<pathname >' no encontrado</span><span class="sxs-lookup"><span data-stu-id="e5301-277">Path '\<pathname>' not found</span></span>](../../visual-basic/misc/path-pathname-not-found.md)  
+ [<span data-ttu-id="50d76-277">Ruta de acceso '\<pathname >' no encontrado</span><span class="sxs-lookup"><span data-stu-id="50d76-277">Path '\<pathname>' not found</span></span>](../../visual-basic/misc/path-pathname-not-found.md)  
   
- [<span data-ttu-id="e5301-278">No se encuentra la ruta de acceso</span><span class="sxs-lookup"><span data-stu-id="e5301-278">Path not found</span></span>](../../visual-basic/language-reference/error-messages/path-not-found.md)  
+ [<span data-ttu-id="50d76-278">No se encuentra la ruta de acceso</span><span class="sxs-lookup"><span data-stu-id="50d76-278">Path not found</span></span>](../../visual-basic/language-reference/error-messages/path-not-found.md)  
   
- [<span data-ttu-id="e5301-279">Error de acceso de archivo o ruta de acceso</span><span class="sxs-lookup"><span data-stu-id="e5301-279">Path/File access error</span></span>](../../visual-basic/language-reference/error-messages/path-file-access-error.md)  
+ [<span data-ttu-id="50d76-279">Error de acceso de archivo o ruta de acceso</span><span class="sxs-lookup"><span data-stu-id="50d76-279">Path/File access error</span></span>](../../visual-basic/language-reference/error-messages/path-file-access-error.md)  
   
- [<span data-ttu-id="e5301-280">Permiso denegado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-280">Permission denied (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/permission-denied.md)  
+ [<span data-ttu-id="50d76-280">Permiso denegado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-280">Permission denied (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/permission-denied.md)  
   
- [<span data-ttu-id="e5301-281">La imagen no es válida</span><span class="sxs-lookup"><span data-stu-id="e5301-281">Picture is not valid</span></span>](../../visual-basic/misc/picture-is-not-valid.md)  
+ [<span data-ttu-id="50d76-281">La imagen no es válida</span><span class="sxs-lookup"><span data-stu-id="50d76-281">Picture is not valid</span></span>](../../visual-basic/misc/picture-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-282">Error en la impresora</span><span class="sxs-lookup"><span data-stu-id="e5301-282">Printer error</span></span>](../../visual-basic/misc/printer-error.md)  
+ [<span data-ttu-id="50d76-282">Error en la impresora</span><span class="sxs-lookup"><span data-stu-id="50d76-282">Printer error</span></span>](../../visual-basic/misc/printer-error.md)  
   
- [<span data-ttu-id="e5301-283">Llamada a procedimiento o argumento no es válido (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-283">Procedure call or argument is not valid (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md)  
+ [<span data-ttu-id="50d76-283">Llamada a procedimiento o argumento no es válido (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-283">Procedure call or argument is not valid (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-284">Proceso\<processname >' no se encontró</span><span class="sxs-lookup"><span data-stu-id="e5301-284">Process '\<processname>' was not found</span></span>](../../visual-basic/misc/process-processname-was-not-found.md)  
+ [<span data-ttu-id="50d76-284">Proceso\<processname >' no se encontró</span><span class="sxs-lookup"><span data-stu-id="50d76-284">Process '\<processname>' was not found</span></span>](../../visual-basic/misc/process-processname-was-not-found.md)  
   
- [<span data-ttu-id="e5301-285">Propiedad \<propertyname > no puede establecerse en una cadena vacía o Nothing</span><span class="sxs-lookup"><span data-stu-id="e5301-285">Property \<propertyname> cannot be set to an empty string or Nothing</span></span>](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
+ [<span data-ttu-id="50d76-285">Propiedad \<propertyname > no puede establecerse en una cadena vacía o Nothing</span><span class="sxs-lookup"><span data-stu-id="50d76-285">Property \<propertyname> cannot be set to an empty string or Nothing</span></span>](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
   
- [<span data-ttu-id="e5301-286">Propiedad \<propertyname > no se puede establecer en Nothing</span><span class="sxs-lookup"><span data-stu-id="e5301-286">Property \<propertyname> cannot be set to Nothing</span></span>](../../visual-basic/misc/property-propertyname-cannot-be-set-to-nothing.md)  
+ [<span data-ttu-id="50d76-286">Propiedad \<propertyname > no se puede establecer en Nothing</span><span class="sxs-lookup"><span data-stu-id="50d76-286">Property \<propertyname> cannot be set to Nothing</span></span>](../../visual-basic/misc/property-propertyname-cannot-be-set-to-nothing.md)  
   
- [<span data-ttu-id="e5301-287">El índice de la matriz de propiedades no es válido</span><span class="sxs-lookup"><span data-stu-id="e5301-287">Property array index is not valid</span></span>](../../visual-basic/language-reference/error-messages/property-array-index-is-not-valid.md)  
+ [<span data-ttu-id="50d76-287">El índice de la matriz de propiedades no es válido</span><span class="sxs-lookup"><span data-stu-id="50d76-287">Property array index is not valid</span></span>](../../visual-basic/language-reference/error-messages/property-array-index-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-288">El procedimiento Let de la propiedad no está definido y el procedimiento Get no ha devuelto un objeto</span><span class="sxs-lookup"><span data-stu-id="e5301-288">Property let procedure not defined and property get procedure did not return an object</span></span>](../../visual-basic/language-reference/error-messages/property-let-procedure-not-defined-and-property-get-procedure-did-not-return.md)  
+ [<span data-ttu-id="50d76-288">El procedimiento Let de la propiedad no está definido y el procedimiento Get no ha devuelto un objeto</span><span class="sxs-lookup"><span data-stu-id="50d76-288">Property let procedure not defined and property get procedure did not return an object</span></span>](../../visual-basic/language-reference/error-messages/property-let-procedure-not-defined-and-property-get-procedure-did-not-return.md)  
   
- [<span data-ttu-id="e5301-289">Propiedad no encontrada</span><span class="sxs-lookup"><span data-stu-id="e5301-289">Property not found</span></span>](../../visual-basic/language-reference/error-messages/property-not-found.md)  
+ [<span data-ttu-id="50d76-289">Propiedad no encontrada</span><span class="sxs-lookup"><span data-stu-id="50d76-289">Property not found</span></span>](../../visual-basic/language-reference/error-messages/property-not-found.md)  
   
- [<span data-ttu-id="e5301-290">No se encuentra la propiedad ni el método</span><span class="sxs-lookup"><span data-stu-id="e5301-290">Property or method not found</span></span>](../../visual-basic/language-reference/error-messages/property-or-method-not-found.md)  
+ [<span data-ttu-id="50d76-290">No se encuentra la propiedad ni el método</span><span class="sxs-lookup"><span data-stu-id="50d76-290">Property or method not found</span></span>](../../visual-basic/language-reference/error-messages/property-or-method-not-found.md)  
   
- [<span data-ttu-id="e5301-291">Valor de propiedad no válido</span><span class="sxs-lookup"><span data-stu-id="e5301-291">Property value is not valid</span></span>](../../visual-basic/misc/property-value-is-not-valid.md)  
+ [<span data-ttu-id="50d76-291">Valor de propiedad no válido</span><span class="sxs-lookup"><span data-stu-id="50d76-291">Property value is not valid</span></span>](../../visual-basic/misc/property-value-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-292">Miembro público '\<nombreDeMiembro >' en el tipo '\<typename >' no encontrado</span><span class="sxs-lookup"><span data-stu-id="e5301-292">Public member '\<membername>' on type '\<typename>' not found</span></span>](../../visual-basic/misc/public-member-membername-on-type-typename-not-found.md)  
+ [<span data-ttu-id="50d76-292">Miembro público '\<nombreDeMiembro >' en el tipo '\<typename >' no encontrado</span><span class="sxs-lookup"><span data-stu-id="50d76-292">Public member '\<membername>' on type '\<typename>' not found</span></span>](../../visual-basic/misc/public-member-membername-on-type-typename-not-found.md)  
   
- [<span data-ttu-id="e5301-293">'ReDim' solo puede cambiar la dimensión situada más a la derecha</span><span class="sxs-lookup"><span data-stu-id="e5301-293">'ReDim' can only change the right-most dimension</span></span>](../../visual-basic/misc/redim-can-only-change-the-right-most-dimension.md)  
+ [<span data-ttu-id="50d76-293">'ReDim' solo puede cambiar la dimensión situada más a la derecha</span><span class="sxs-lookup"><span data-stu-id="50d76-293">'ReDim' can only change the right-most dimension</span></span>](../../visual-basic/misc/redim-can-only-change-the-right-most-dimension.md)  
   
- [<span data-ttu-id="e5301-294">'ReDim' no puede cambiar el número de dimensiones</span><span class="sxs-lookup"><span data-stu-id="e5301-294">'ReDim' cannot change the number of dimensions</span></span>](../../visual-basic/misc/redim-cannot-change-the-number-of-dimensions.md)  
+ [<span data-ttu-id="50d76-294">'ReDim' no puede cambiar el número de dimensiones</span><span class="sxs-lookup"><span data-stu-id="50d76-294">'ReDim' cannot change the number of dimensions</span></span>](../../visual-basic/misc/redim-cannot-change-the-number-of-dimensions.md)  
   
- [<span data-ttu-id="e5301-295">El operando Preserve 'ReDim' no puede ser Nothing</span><span class="sxs-lookup"><span data-stu-id="e5301-295">'ReDim' Preserve operand cannot be Nothing</span></span>](../../visual-basic/misc/redim-preserve-operand-cannot-be-nothing.md)  
+ [<span data-ttu-id="50d76-295">El operando Preserve 'ReDim' no puede ser Nothing</span><span class="sxs-lookup"><span data-stu-id="50d76-295">'ReDim' Preserve operand cannot be Nothing</span></span>](../../visual-basic/misc/redim-preserve-operand-cannot-be-nothing.md)  
   
- [<span data-ttu-id="e5301-296">Clave del registro '\<keyname >' no se pudo crear</span><span class="sxs-lookup"><span data-stu-id="e5301-296">Registry key '\<keyname>' could not be created</span></span>](../../visual-basic/misc/registry-key-keyname-could-not-be-created.md)  
+ [<span data-ttu-id="50d76-296">Clave del registro '\<keyname >' no se pudo crear</span><span class="sxs-lookup"><span data-stu-id="50d76-296">Registry key '\<keyname>' could not be created</span></span>](../../visual-basic/misc/registry-key-keyname-could-not-be-created.md)  
   
- [<span data-ttu-id="e5301-297">Clave del registro '\<keyname >' no se pudo encontrar</span><span class="sxs-lookup"><span data-stu-id="e5301-297">Registry key '\<keyname>' could not be found</span></span>](../../visual-basic/misc/registry-key-keyname-could-not-be-found.md)  
+ [<span data-ttu-id="50d76-297">Clave del registro '\<keyname >' no se pudo encontrar</span><span class="sxs-lookup"><span data-stu-id="50d76-297">Registry key '\<keyname>' could not be found</span></span>](../../visual-basic/misc/registry-key-keyname-could-not-be-found.md)  
   
- [<span data-ttu-id="e5301-298">Los reemplazos son demasiado largos</span><span class="sxs-lookup"><span data-stu-id="e5301-298">Replacements too long</span></span>](../../visual-basic/misc/replacements-too-long.md)  
+ [<span data-ttu-id="50d76-298">Los reemplazos son demasiado largos</span><span class="sxs-lookup"><span data-stu-id="50d76-298">Replacements too long</span></span>](../../visual-basic/misc/replacements-too-long.md)  
   
- [<span data-ttu-id="e5301-299">Reanudar sin error</span><span class="sxs-lookup"><span data-stu-id="e5301-299">Resume without error</span></span>](../../visual-basic/language-reference/error-messages/resume-without-error.md)  
+ [<span data-ttu-id="50d76-299">Reanudar sin error</span><span class="sxs-lookup"><span data-stu-id="50d76-299">Resume without error</span></span>](../../visual-basic/language-reference/error-messages/resume-without-error.md)  
   
- [<span data-ttu-id="e5301-300">No se puede cambiar el nombre de la carpeta raíz</span><span class="sxs-lookup"><span data-stu-id="e5301-300">Root folder cannot be renamed</span></span>](../../visual-basic/misc/root-folder-cannot-be-renamed.md)  
+ [<span data-ttu-id="50d76-300">No se puede cambiar el nombre de la carpeta raíz</span><span class="sxs-lookup"><span data-stu-id="50d76-300">Root folder cannot be renamed</span></span>](../../visual-basic/misc/root-folder-cannot-be-renamed.md)  
   
- [<span data-ttu-id="e5301-301">No se encuentra el texto de la búsqueda</span><span class="sxs-lookup"><span data-stu-id="e5301-301">Search text not found</span></span>](../../visual-basic/misc/search-text-not-found.md)  
+ [<span data-ttu-id="50d76-301">No se encuentra el texto de la búsqueda</span><span class="sxs-lookup"><span data-stu-id="50d76-301">Search text not found</span></span>](../../visual-basic/misc/search-text-not-found.md)  
   
- [<span data-ttu-id="e5301-302">Set no está permitido</span><span class="sxs-lookup"><span data-stu-id="e5301-302">Set not permitted</span></span>](../../visual-basic/misc/set-not-permitted.md)  
+ [<span data-ttu-id="50d76-302">Set no está permitido</span><span class="sxs-lookup"><span data-stu-id="50d76-302">Set not permitted</span></span>](../../visual-basic/misc/set-not-permitted.md)  
   
- [<span data-ttu-id="e5301-303">No se admite Set (propiedad de solo lectura)</span><span class="sxs-lookup"><span data-stu-id="e5301-303">Set not supported (read-only property)</span></span>](../../visual-basic/misc/set-not-supported-read-only-property.md)  
+ [<span data-ttu-id="50d76-303">No se admite Set (propiedad de solo lectura)</span><span class="sxs-lookup"><span data-stu-id="50d76-303">Set not supported (read-only property)</span></span>](../../visual-basic/misc/set-not-supported-read-only-property.md)  
   
- [<span data-ttu-id="e5301-304">No se admite Set en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="e5301-304">Set not supported at run time</span></span>](../../visual-basic/misc/set-not-supported-at-run-time.md)  
+ [<span data-ttu-id="50d76-304">No se admite Set en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="50d76-304">Set not supported at run time</span></span>](../../visual-basic/misc/set-not-supported-at-run-time.md)  
   
- [<span data-ttu-id="e5301-305">No se pueden combinar SimplifiedChinese y VbStrConv.TraditionalChinese</span><span class="sxs-lookup"><span data-stu-id="e5301-305">SimplifiedChinese and VbStrConv.TraditionalChinese cannot be combined</span></span>](../../visual-basic/misc/simplifiedchinese-and-vbstrconv-traditionalchinese-cannot-be-combined.md)  
+ [<span data-ttu-id="50d76-305">No se pueden combinar SimplifiedChinese y VbStrConv.TraditionalChinese</span><span class="sxs-lookup"><span data-stu-id="50d76-305">SimplifiedChinese and VbStrConv.TraditionalChinese cannot be combined</span></span>](../../visual-basic/misc/simplifiedchinese-and-vbstrconv-traditionalchinese-cannot-be-combined.md)  
   
- [<span data-ttu-id="e5301-306">Algunos archivos y carpetas han provocado excepciones durante la operación</span><span class="sxs-lookup"><span data-stu-id="e5301-306">Some files and folders caused exceptions during the operation</span></span>](../../visual-basic/misc/some-files-and-folders-caused-exceptions-during-the-operation.md)  
+ [<span data-ttu-id="50d76-306">Algunos archivos y carpetas han provocado excepciones durante la operación</span><span class="sxs-lookup"><span data-stu-id="50d76-306">Some files and folders caused exceptions during the operation</span></span>](../../visual-basic/misc/some-files-and-folders-caused-exceptions-during-the-operation.md)  
   
- [<span data-ttu-id="e5301-307">Algunas subclaves no se pueden eliminar</span><span class="sxs-lookup"><span data-stu-id="e5301-307">Some subkeys cannot be deleted</span></span>](../../visual-basic/language-reference/error-messages/some-subkeys-cannot-be-deleted.md)  
+ [<span data-ttu-id="50d76-307">Algunas subclaves no se pueden eliminar</span><span class="sxs-lookup"><span data-stu-id="50d76-307">Some subkeys cannot be deleted</span></span>](../../visual-basic/language-reference/error-messages/some-subkeys-cannot-be-deleted.md)  
   
- [<span data-ttu-id="e5301-308">La carpeta de origen y de destino son la misma</span><span class="sxs-lookup"><span data-stu-id="e5301-308">Source folder and target folder are the same</span></span>](../../visual-basic/misc/source-folder-and-target-folder-are-the-same.md)  
+ [<span data-ttu-id="50d76-308">La carpeta de origen y de destino son la misma</span><span class="sxs-lookup"><span data-stu-id="50d76-308">Source folder and target folder are the same</span></span>](../../visual-basic/misc/source-folder-and-target-folder-are-the-same.md)  
   
- [<span data-ttu-id="e5301-309">El nombre de origen especificado en EventLogSource se registra en un registro distinto del especificado en EventLogName</span><span class="sxs-lookup"><span data-stu-id="e5301-309">Source name specified in EventLogSource is registered to a log other than that specified in EventLogName</span></span>](../../visual-basic/misc/source-name-specified-in-eventlogsource-is-registered-to-another-log.md)  
+ [<span data-ttu-id="50d76-309">El nombre de origen especificado en EventLogSource se registra en un registro distinto del especificado en EventLogName</span><span class="sxs-lookup"><span data-stu-id="50d76-309">Source name specified in EventLogSource is registered to a log other than that specified in EventLogName</span></span>](../../visual-basic/misc/source-name-specified-in-eventlogsource-is-registered-to-another-log.md)  
   
- [<span data-ttu-id="e5301-310">No se encuentra la función de biblioteca DLL especificada</span><span class="sxs-lookup"><span data-stu-id="e5301-310">Specified DLL function not found</span></span>](../../visual-basic/misc/specified-dll-function-not-found.md)  
+ [<span data-ttu-id="50d76-310">No se encuentra la función de biblioteca DLL especificada</span><span class="sxs-lookup"><span data-stu-id="50d76-310">Specified DLL function not found</span></span>](../../visual-basic/misc/specified-dll-function-not-found.md)  
   
- [<span data-ttu-id="e5301-311">El registro de eventos especificado no existe en este equipo</span><span class="sxs-lookup"><span data-stu-id="e5301-311">Specified event log does not exist on this machine</span></span>](../../visual-basic/misc/specified-event-log-does-not-exist-on-this-machine.md)  
+ [<span data-ttu-id="50d76-311">El registro de eventos especificado no existe en este equipo</span><span class="sxs-lookup"><span data-stu-id="50d76-311">Specified event log does not exist on this machine</span></span>](../../visual-basic/misc/specified-event-log-does-not-exist-on-this-machine.md)  
   
- [<span data-ttu-id="e5301-312">La clave del Registro especificada no existe</span><span class="sxs-lookup"><span data-stu-id="e5301-312">Specified registry key does not exist</span></span>](../../visual-basic/misc/specified-registry-key-does-not-exist.md)  
+ [<span data-ttu-id="50d76-312">La clave del Registro especificada no existe</span><span class="sxs-lookup"><span data-stu-id="50d76-312">Specified registry key does not exist</span></span>](../../visual-basic/misc/specified-registry-key-does-not-exist.md)  
   
- [<span data-ttu-id="e5301-313">La clave del Registro especificada no es válida porque contiene dos o más barras diagonales inversas consecutivas</span><span class="sxs-lookup"><span data-stu-id="e5301-313">Specified registry key is not valid because it contains two or more consecutive backslashes</span></span>](../../visual-basic/misc/specified-registry-key-is-not-valid.md)  
+ [<span data-ttu-id="50d76-313">La clave del Registro especificada no es válida porque contiene dos o más barras diagonales inversas consecutivas</span><span class="sxs-lookup"><span data-stu-id="50d76-313">Specified registry key is not valid because it contains two or more consecutive backslashes</span></span>](../../visual-basic/misc/specified-registry-key-is-not-valid.md)  
   
- [<span data-ttu-id="e5301-314">La ruta de acceso del registro especificada no empieza por un nombre de sección válido</span><span class="sxs-lookup"><span data-stu-id="e5301-314">Specified registry path does not start with a valid hive name</span></span>](../../visual-basic/misc/specified-registry-path-does-not-start-with-a-valid-hive-name.md)  
+ [<span data-ttu-id="50d76-314">La ruta de acceso del registro especificada no empieza por un nombre de sección válido</span><span class="sxs-lookup"><span data-stu-id="50d76-314">Specified registry path does not start with a valid hive name</span></span>](../../visual-basic/misc/specified-registry-path-does-not-start-with-a-valid-hive-name.md)  
   
- [<span data-ttu-id="e5301-315">Se encontró una instrucción Stop</span><span class="sxs-lookup"><span data-stu-id="e5301-315">Stop statement encountered</span></span>](../../visual-basic/misc/stop-statement-encountered.md)  
+ [<span data-ttu-id="50d76-315">Se encontró una instrucción Stop</span><span class="sxs-lookup"><span data-stu-id="50d76-315">Stop statement encountered</span></span>](../../visual-basic/misc/stop-statement-encountered.md)  
   
- [<span data-ttu-id="e5301-316">'StrConv.LinguisticCasing' requiere 'StrConv.LowerCase' o 'StrConv.UpperCase'</span><span class="sxs-lookup"><span data-stu-id="e5301-316">'StrConv.LinguisticCasing' requires 'StrConv.LowerCase' or 'StrConv.UpperCase'</span></span>](../../visual-basic/misc/strconv-linguisticcasing-requires-strconv-lowercase-or-strconv-uppercase.md)  
+ [<span data-ttu-id="50d76-316">'StrConv.LinguisticCasing' requiere 'StrConv.LowerCase' o 'StrConv.UpperCase'</span><span class="sxs-lookup"><span data-stu-id="50d76-316">'StrConv.LinguisticCasing' requires 'StrConv.LowerCase' or 'StrConv.UpperCase'</span></span>](../../visual-basic/misc/strconv-linguisticcasing-requires-strconv-lowercase-or-strconv-uppercase.md)  
   
- [<span data-ttu-id="e5301-317">La longitud de cadena supera la longitud máxima de 32767 caracteres para las API de 'FileSystem'</span><span class="sxs-lookup"><span data-stu-id="e5301-317">String length exceeds maximum length of 32767 characters for 'FileSystem' APIs</span></span>](../../visual-basic/misc/string-length-exceeds-maximum-length-of-32767-characters-for-filesystem-apis.md)  
+ [<span data-ttu-id="50d76-317">La longitud de cadena supera la longitud máxima de 32767 caracteres para las API de 'FileSystem'</span><span class="sxs-lookup"><span data-stu-id="50d76-317">String length exceeds maximum length of 32767 characters for 'FileSystem' APIs</span></span>](../../visual-basic/misc/string-length-exceeds-maximum-length-of-32767-characters-for-filesystem-apis.md)  
   
- [<span data-ttu-id="e5301-318">Sub o Function no definida (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-318">Sub or Function not defined (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/sub-or-function-not-defined.md)  
+ [<span data-ttu-id="50d76-318">Sub o Function no definida (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-318">Sub or Function not defined (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/sub-or-function-not-defined.md)  
   
- [<span data-ttu-id="e5301-319">Subíndice está fuera de intervalo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-319">Subscript out of range (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/subscript-out-of-range.md)  
+ [<span data-ttu-id="50d76-319">Subíndice está fuera de intervalo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-319">Subscript out of range (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/subscript-out-of-range.md)  
   
- [<span data-ttu-id="e5301-320">No se puede eliminar el registro de eventos del sistema</span><span class="sxs-lookup"><span data-stu-id="e5301-320">System event log cannot be deleted</span></span>](../../visual-basic/misc/system-event-log-cannot-be-deleted.md)  
+ [<span data-ttu-id="50d76-320">No se puede eliminar el registro de eventos del sistema</span><span class="sxs-lookup"><span data-stu-id="50d76-320">System event log cannot be deleted</span></span>](../../visual-basic/misc/system-event-log-cannot-be-deleted.md)  
   
- [<span data-ttu-id="e5301-321">La carpeta de destino es un archivo</span><span class="sxs-lookup"><span data-stu-id="e5301-321">Target folder is a file</span></span>](../../visual-basic/misc/target-folder-is-a-file.md)  
+ [<span data-ttu-id="50d76-321">La carpeta de destino es un archivo</span><span class="sxs-lookup"><span data-stu-id="50d76-321">Target folder is a file</span></span>](../../visual-basic/misc/target-folder-is-a-file.md)  
   
- [<span data-ttu-id="e5301-322">TargetFilePath especifica una carpeta existente</span><span class="sxs-lookup"><span data-stu-id="e5301-322">TargetFilePath specifies an existing folder</span></span>](../../visual-basic/misc/targetfilepath-specifies-an-existing-folder.md)  
+ [<span data-ttu-id="50d76-322">TargetFilePath especifica una carpeta existente</span><span class="sxs-lookup"><span data-stu-id="50d76-322">TargetFilePath specifies an existing folder</span></span>](../../visual-basic/misc/targetfilepath-specifies-an-existing-folder.md)  
   
- [<span data-ttu-id="e5301-323">TextFieldParser no admite tokens de comentarios que contengan espacios en blanco</span><span class="sxs-lookup"><span data-stu-id="e5301-323">TextFieldParser does not support comment tokens that contain whitespace</span></span>](../../visual-basic/misc/textfieldparser-does-not-support-comment-tokens-that-contain-whitespace.md)  
+ [<span data-ttu-id="50d76-323">TextFieldParser no admite tokens de comentarios que contengan espacios en blanco</span><span class="sxs-lookup"><span data-stu-id="50d76-323">TextFieldParser does not support comment tokens that contain whitespace</span></span>](../../visual-basic/misc/textfieldparser-does-not-support-comment-tokens-that-contain-whitespace.md)  
   
- [<span data-ttu-id="e5301-324">TextFieldParser no admite delimitadores que contengan caracteres de fin de línea</span><span class="sxs-lookup"><span data-stu-id="e5301-324">TextFieldParser does not support delimiters that contain endline characters</span></span>](../../visual-basic/misc/textfieldparser-does-not-support-delimiters-that-contain-endline-characters.md)  
+ [<span data-ttu-id="50d76-324">TextFieldParser no admite delimitadores que contengan caracteres de fin de línea</span><span class="sxs-lookup"><span data-stu-id="50d76-324">TextFieldParser does not support delimiters that contain endline characters</span></span>](../../visual-basic/misc/textfieldparser-does-not-support-delimiters-that-contain-endline-characters.md)  
   
- [<span data-ttu-id="e5301-325">TextFieldParser no puede finalizar la operación de lectura porque se ha superado el tamaño máximo de búfer</span><span class="sxs-lookup"><span data-stu-id="e5301-325">TextFieldParser is unable to complete the read operation because maximum buffer size has been exceeded</span></span>](../../visual-basic/language-reference/error-messages/textfieldparser-is-unable-to-complete-read-operation.md)  
+ [<span data-ttu-id="50d76-325">TextFieldParser no puede finalizar la operación de lectura porque se ha superado el tamaño máximo de búfer</span><span class="sxs-lookup"><span data-stu-id="50d76-325">TextFieldParser is unable to complete the read operation because maximum buffer size has been exceeded</span></span>](../../visual-basic/language-reference/error-messages/textfieldparser-is-unable-to-complete-read-operation.md)  
   
- [<span data-ttu-id="e5301-326">La dirección de UploadFile necesita incluir un nombre de archivo</span><span class="sxs-lookup"><span data-stu-id="e5301-326">The address for UploadFile needs to include a filename</span></span>](../../visual-basic/misc/the-address-for-uploadfile-needs-to-include-a-filename.md)  
+ [<span data-ttu-id="50d76-326">La dirección de UploadFile necesita incluir un nombre de archivo</span><span class="sxs-lookup"><span data-stu-id="50d76-326">The address for UploadFile needs to include a filename</span></span>](../../visual-basic/misc/the-address-for-uploadfile-needs-to-include-a-filename.md)  
   
- [<span data-ttu-id="e5301-327">ConnectionTimeout debe ser mayor que 0</span><span class="sxs-lookup"><span data-stu-id="e5301-327">The ConnectionTimeout must be greater than 0</span></span>](../../visual-basic/misc/the-connectiontimeout-must-be-greater-than-0.md)  
+ [<span data-ttu-id="50d76-327">ConnectionTimeout debe ser mayor que 0</span><span class="sxs-lookup"><span data-stu-id="50d76-327">The ConnectionTimeout must be greater than 0</span></span>](../../visual-basic/misc/the-connectiontimeout-must-be-greater-than-0.md)  
   
- [<span data-ttu-id="e5301-328">El archivo ya está abierto</span><span class="sxs-lookup"><span data-stu-id="e5301-328">The file is already open</span></span>](../../visual-basic/misc/the-file-is-already-open.md)  
+ [<span data-ttu-id="50d76-328">El archivo ya está abierto</span><span class="sxs-lookup"><span data-stu-id="50d76-328">The file is already open</span></span>](../../visual-basic/misc/the-file-is-already-open.md)  
   
- [<span data-ttu-id="e5301-329">El archivo está actualmente cerrado</span><span class="sxs-lookup"><span data-stu-id="e5301-329">The file is currently closed</span></span>](../../visual-basic/misc/the-file-is-currently-closed.md)  
+ [<span data-ttu-id="50d76-329">El archivo está actualmente cerrado</span><span class="sxs-lookup"><span data-stu-id="50d76-329">The file is currently closed</span></span>](../../visual-basic/misc/the-file-is-currently-closed.md)  
   
- [<span data-ttu-id="e5301-330">El archivo está actualmente abierto para su lectura</span><span class="sxs-lookup"><span data-stu-id="e5301-330">The file is currently open for reading</span></span>](../../visual-basic/misc/the-file-is-currently-open-for-reading.md)  
+ [<span data-ttu-id="50d76-330">El archivo está actualmente abierto para su lectura</span><span class="sxs-lookup"><span data-stu-id="50d76-330">The file is currently open for reading</span></span>](../../visual-basic/misc/the-file-is-currently-open-for-reading.md)  
   
- [<span data-ttu-id="e5301-331">El archivo está actualmente abierto para escribir en él</span><span class="sxs-lookup"><span data-stu-id="e5301-331">The file is currently open for writing</span></span>](../../visual-basic/misc/the-file-is-currently-open-for-writing.md)  
+ [<span data-ttu-id="50d76-331">El archivo está actualmente abierto para escribir en él</span><span class="sxs-lookup"><span data-stu-id="50d76-331">The file is currently open for writing</span></span>](../../visual-basic/misc/the-file-is-currently-open-for-writing.md)  
   
- [<span data-ttu-id="e5301-332">La carpeta no se puede crear porque ya existe un archivo con la misma ruta de acceso</span><span class="sxs-lookup"><span data-stu-id="e5301-332">The folder cannot be created since a file already exists with the same path</span></span>](../../visual-basic/misc/the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path.md)  
+ [<span data-ttu-id="50d76-332">La carpeta no se puede crear porque ya existe un archivo con la misma ruta de acceso</span><span class="sxs-lookup"><span data-stu-id="50d76-332">The folder cannot be created since a file already exists with the same path</span></span>](../../visual-basic/misc/the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path.md)  
   
- [<span data-ttu-id="e5301-333">La ruta de acceso de entrada hace referencia a un archivo, pero termina con un carácter separador de directorio</span><span class="sxs-lookup"><span data-stu-id="e5301-333">The input path refers to a file but ends with a directory separator character</span></span>](../../visual-basic/misc/the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character.md)  
+ [<span data-ttu-id="50d76-333">La ruta de acceso de entrada hace referencia a un archivo, pero termina con un carácter separador de directorio</span><span class="sxs-lookup"><span data-stu-id="50d76-333">The input path refers to a file but ends with a directory separator character</span></span>](../../visual-basic/misc/the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character.md)  
   
- [<span data-ttu-id="e5301-334">No se ha establecido la ruta de acceso</span><span class="sxs-lookup"><span data-stu-id="e5301-334">The path has not been set</span></span>](../../visual-basic/misc/the-path-has-not-been-set.md)  
+ [<span data-ttu-id="50d76-334">No se ha establecido la ruta de acceso</span><span class="sxs-lookup"><span data-stu-id="50d76-334">The path has not been set</span></span>](../../visual-basic/misc/the-path-has-not-been-set.md)  
   
- [<span data-ttu-id="e5301-335">La máquina del servidor remoto no existe o no está disponible (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-335">The remote server machine does not exist or is unavailable (Visual Basic)</span></span>](../../visual-basic/misc/the-remote-server-machine-does-not-exist-or-is-unavailable.md)  
+ [<span data-ttu-id="50d76-335">La máquina del servidor remoto no existe o no está disponible (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-335">The remote server machine does not exist or is unavailable (Visual Basic)</span></span>](../../visual-basic/misc/the-remote-server-machine-does-not-exist-or-is-unavailable.md)  
   
- [<span data-ttu-id="e5301-336">La carpeta de origen no existe</span><span class="sxs-lookup"><span data-stu-id="e5301-336">The source folder does not exist</span></span>](../../visual-basic/misc/the-source-folder-does-not-exist.md)  
+ [<span data-ttu-id="50d76-336">La carpeta de origen no existe</span><span class="sxs-lookup"><span data-stu-id="50d76-336">The source folder does not exist</span></span>](../../visual-basic/misc/the-source-folder-does-not-exist.md)  
   
- [<span data-ttu-id="e5301-337">La ruta de acceso especificada no existe</span><span class="sxs-lookup"><span data-stu-id="e5301-337">The specified path does not exist</span></span>](../../visual-basic/misc/the-specified-path-does-not-exist.md)  
+ [<span data-ttu-id="50d76-337">La ruta de acceso especificada no existe</span><span class="sxs-lookup"><span data-stu-id="50d76-337">The specified path does not exist</span></span>](../../visual-basic/misc/the-specified-path-does-not-exist.md)  
   
- [<span data-ttu-id="e5301-338">La secuencia pasada a TextFieldParser no se puede leer</span><span class="sxs-lookup"><span data-stu-id="e5301-338">The stream passed to TextFieldParser cannot be read</span></span>](../../visual-basic/misc/the-stream-passed-to-textfieldparser-cannot-be-read.md)  
+ [<span data-ttu-id="50d76-338">La secuencia pasada a TextFieldParser no se puede leer</span><span class="sxs-lookup"><span data-stu-id="50d76-338">The stream passed to TextFieldParser cannot be read</span></span>](../../visual-basic/misc/the-stream-passed-to-textfieldparser-cannot-be-read.md)  
   
- [<span data-ttu-id="e5301-339">El valor de \<argumentname > debe ser un número positivo.</span><span class="sxs-lookup"><span data-stu-id="e5301-339">The value of \<argumentname> must be a positive number</span></span>](../../visual-basic/misc/the-value-of-argumentname-must-be-a-positive-number.md)  
+ [<span data-ttu-id="50d76-339">El valor de \<argumentname > debe ser un número positivo.</span><span class="sxs-lookup"><span data-stu-id="50d76-339">The value of \<argumentname> must be a positive number</span></span>](../../visual-basic/misc/the-value-of-argumentname-must-be-a-positive-number.md)  
   
- [<span data-ttu-id="e5301-340">El valor de \<argumentname > debe ser mayor o igual que 1000</span><span class="sxs-lookup"><span data-stu-id="e5301-340">The value of \<argumentname> must be greater than or equal to 1000</span></span>](../../visual-basic/misc/the-value-of-argumentname-must-be-greater-than-or-equal-to-1000.md)  
+ [<span data-ttu-id="50d76-340">El valor de \<argumentname > debe ser mayor o igual que 1000</span><span class="sxs-lookup"><span data-stu-id="50d76-340">The value of \<argumentname> must be greater than or equal to 1000</span></span>](../../visual-basic/misc/the-value-of-argumentname-must-be-greater-than-or-equal-to-1000.md)  
   
- [<span data-ttu-id="e5301-341">Esta matriz es fija o está bloqueada temporalmente (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-341">This array is fixed or temporarily locked (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md)  
+ [<span data-ttu-id="50d76-341">Esta matriz es fija o está bloqueada temporalmente (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-341">This array is fixed or temporarily locked (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md)  
   
- [<span data-ttu-id="e5301-342">Esta clave ya está asociada con un elemento de esta colección</span><span class="sxs-lookup"><span data-stu-id="e5301-342">This key is already associated with an element of this collection</span></span>](../../visual-basic/language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md)  
+ [<span data-ttu-id="50d76-342">Esta clave ya está asociada con un elemento de esta colección</span><span class="sxs-lookup"><span data-stu-id="50d76-342">This key is already associated with an element of this collection</span></span>](../../visual-basic/language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md)  
   
- [<span data-ttu-id="e5301-343">Esta operación solo se puede realizar cuando el archivo está cerrado</span><span class="sxs-lookup"><span data-stu-id="e5301-343">This operation can only be done when the File is closed</span></span>](../../visual-basic/misc/this-operation-can-only-be-done-when-the-file-is-closed.md)  
+ [<span data-ttu-id="50d76-343">Esta operación solo se puede realizar cuando el archivo está cerrado</span><span class="sxs-lookup"><span data-stu-id="50d76-343">This operation can only be done when the File is closed</span></span>](../../visual-basic/misc/this-operation-can-only-be-done-when-the-file-is-closed.md)  
   
- [<span data-ttu-id="e5301-344">Esta aplicación de una sola instancia no pudo conectar con la instancia original</span><span class="sxs-lookup"><span data-stu-id="e5301-344">This single-instance application could not connect to the original instance</span></span>](../../visual-basic/misc/this-single-instance-application-could-not-connect-to-the-original-instance.md)  
+ [<span data-ttu-id="50d76-344">Esta aplicación de una sola instancia no pudo conectar con la instancia original</span><span class="sxs-lookup"><span data-stu-id="50d76-344">This single-instance application could not connect to the original instance</span></span>](../../visual-basic/misc/this-single-instance-application-could-not-connect-to-the-original-instance.md)  
   
- [<span data-ttu-id="e5301-345">Este sistema no admite la configuración regional para japonés</span><span class="sxs-lookup"><span data-stu-id="e5301-345">This system does not contain support for the Japanese locale</span></span>](../../visual-basic/misc/this-system-does-not-contain-support-for-the-japanese-locale.md)  
+ [<span data-ttu-id="50d76-345">Este sistema no admite la configuración regional para japonés</span><span class="sxs-lookup"><span data-stu-id="50d76-345">This system does not contain support for the Japanese locale</span></span>](../../visual-basic/misc/this-system-does-not-contain-support-for-the-japanese-locale.md)  
   
- [<span data-ttu-id="e5301-346">Este sistema no admite la configuración regional especificada</span><span class="sxs-lookup"><span data-stu-id="e5301-346">This system does not contain support for the Locale specified</span></span>](../../visual-basic/misc/this-system-does-not-contain-support-for-the-locale-specified.md)  
+ [<span data-ttu-id="50d76-346">Este sistema no admite la configuración regional especificada</span><span class="sxs-lookup"><span data-stu-id="50d76-346">This system does not contain support for the Locale specified</span></span>](../../visual-basic/misc/this-system-does-not-contain-support-for-the-locale-specified.md)  
   
- [<span data-ttu-id="e5301-347">Este sistema no admite la configuración regional para chino simplificado</span><span class="sxs-lookup"><span data-stu-id="e5301-347">This system does not contain support for the SimplifiedChinese locale</span></span>](../../visual-basic/misc/this-system-does-not-contain-support-for-the-simplifiedchinese-locale.md)  
+ [<span data-ttu-id="50d76-347">Este sistema no admite la configuración regional para chino simplificado</span><span class="sxs-lookup"><span data-stu-id="50d76-347">This system does not contain support for the SimplifiedChinese locale</span></span>](../../visual-basic/misc/this-system-does-not-contain-support-for-the-simplifiedchinese-locale.md)  
   
- [<span data-ttu-id="e5301-348">Este sistema no admite la configuración regional para chino tradicional</span><span class="sxs-lookup"><span data-stu-id="e5301-348">This system does not contain support for the Traditional Chinese locale</span></span>](../../visual-basic/misc/this-system-does-not-contain-support-for-the-traditional-chinese-locale.md)  
+ [<span data-ttu-id="50d76-348">Este sistema no admite la configuración regional para chino tradicional</span><span class="sxs-lookup"><span data-stu-id="50d76-348">This system does not contain support for the Traditional Chinese locale</span></span>](../../visual-basic/misc/this-system-does-not-contain-support-for-the-traditional-chinese-locale.md)  
   
- [<span data-ttu-id="e5301-349">Demasiados clientes de aplicación DLL</span><span class="sxs-lookup"><span data-stu-id="e5301-349">Too many DLL application clients</span></span>](../../visual-basic/misc/too-many-dll-application-clients.md)  
+ [<span data-ttu-id="50d76-349">Demasiados clientes de aplicación DLL</span><span class="sxs-lookup"><span data-stu-id="50d76-349">Too many DLL application clients</span></span>](../../visual-basic/misc/too-many-dll-application-clients.md)  
   
- [<span data-ttu-id="e5301-350">Demasiados archivos</span><span class="sxs-lookup"><span data-stu-id="e5301-350">Too many files</span></span>](../../visual-basic/language-reference/error-messages/too-many-files.md)  
+ [<span data-ttu-id="50d76-350">Demasiados archivos</span><span class="sxs-lookup"><span data-stu-id="50d76-350">Too many files</span></span>](../../visual-basic/language-reference/error-messages/too-many-files.md)  
   
- [<span data-ttu-id="e5301-351">Discordancia de tipos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5301-351">Type mismatch (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/type-mismatch.md)  
+ [<span data-ttu-id="50d76-351">Discordancia de tipos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50d76-351">Type mismatch (Visual Basic)</span></span>](../../visual-basic/language-reference/error-messages/type-mismatch.md)  
   
- [<span data-ttu-id="e5301-352">Tipo de argumento '\<argumentname >' es '\<typename >', que no es numérico</span><span class="sxs-lookup"><span data-stu-id="e5301-352">Type of argument '\<argumentname>' is '\<typename>', which is not numeric</span></span>](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
+ [<span data-ttu-id="50d76-352">Tipo de argumento '\<argumentname >' es '\<typename >', que no es numérico</span><span class="sxs-lookup"><span data-stu-id="50d76-352">Type of argument '\<argumentname>' is '\<typename>', which is not numeric</span></span>](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
   
- [<span data-ttu-id="e5301-353">No se pueden obtener los nombres de los puertos serie a causa de un error interno del sistema</span><span class="sxs-lookup"><span data-stu-id="e5301-353">Unable to get serial port names because of an internal system error</span></span>](../../visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md)  
+ [<span data-ttu-id="50d76-353">No se pueden obtener los nombres de los puertos serie a causa de un error interno del sistema</span><span class="sxs-lookup"><span data-stu-id="50d76-353">Unable to get serial port names because of an internal system error</span></span>](../../visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md)  
   
- [<span data-ttu-id="e5301-354">No se pudo obtener una secuencia para el registro</span><span class="sxs-lookup"><span data-stu-id="e5301-354">Unable to obtain a stream for the log</span></span>](../../visual-basic/misc/unable-to-obtain-a-stream-for-the-log.md)  
+ [<span data-ttu-id="50d76-354">No se pudo obtener una secuencia para el registro</span><span class="sxs-lookup"><span data-stu-id="50d76-354">Unable to obtain a stream for the log</span></span>](../../visual-basic/misc/unable-to-obtain-a-stream-for-the-log.md)  
   
- [<span data-ttu-id="e5301-355">No se puede ejecutar el comando ping porque no hay disponible ninguna conexión de red</span><span class="sxs-lookup"><span data-stu-id="e5301-355">Unable to ping because a network connection is not available</span></span>](../../visual-basic/misc/unable-to-ping-because-a-network-connection-is-not-available.md)  
+ [<span data-ttu-id="50d76-355">No se puede ejecutar el comando ping porque no hay disponible ninguna conexión de red</span><span class="sxs-lookup"><span data-stu-id="50d76-355">Unable to ping because a network connection is not available</span></span>](../../visual-basic/misc/unable-to-ping-because-a-network-connection-is-not-available.md)  
   
- [<span data-ttu-id="e5301-356">No se pueden leer los campos delimitados porque una comilla doble no es un delimitador válido cuando EscapeQuotes se establece en True</span><span class="sxs-lookup"><span data-stu-id="e5301-356">Unable to read delimited fields because a double quote is not a legal delimiter when EscapeQuotes is set to True</span></span>](../../visual-basic/misc/unable-to-read-delimited-fields.md)  
+ [<span data-ttu-id="50d76-356">No se pueden leer los campos delimitados porque una comilla doble no es un delimitador válido cuando EscapeQuotes se establece en True</span><span class="sxs-lookup"><span data-stu-id="50d76-356">Unable to read delimited fields because a double quote is not a legal delimiter when EscapeQuotes is set to True</span></span>](../../visual-basic/misc/unable-to-read-delimited-fields.md)  
   
- [<span data-ttu-id="e5301-357">No se pueden leer campos delimitados porque Delimiters tiene un valor Nothing o está vacía</span><span class="sxs-lookup"><span data-stu-id="e5301-357">Unable to read delimited fields because Delimiters is Nothing or empty</span></span>](../../visual-basic/misc/unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty.md)  
+ [<span data-ttu-id="50d76-357">No se pueden leer campos delimitados porque Delimiters tiene un valor Nothing o está vacía</span><span class="sxs-lookup"><span data-stu-id="50d76-357">Unable to read delimited fields because Delimiters is Nothing or empty</span></span>](../../visual-basic/misc/unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty.md)  
   
- [<span data-ttu-id="e5301-358">No se pueden leer los campos de ancho fijo porque FieldWidths tiene el valor Nothing o está vacío</span><span class="sxs-lookup"><span data-stu-id="e5301-358">Unable to read fixed width fields because FieldWidths is Nothing or empty</span></span>](../../visual-basic/misc/unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty.md)  
+ [<span data-ttu-id="50d76-358">No se pueden leer los campos de ancho fijo porque FieldWidths tiene el valor Nothing o está vacío</span><span class="sxs-lookup"><span data-stu-id="50d76-358">Unable to read fixed width fields because FieldWidths is Nothing or empty</span></span>](../../visual-basic/misc/unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty.md)  
   
- [<span data-ttu-id="e5301-359">No se pueden recibir eventos del objeto porque el objeto ya está desencadenando eventos hasta el número máximo de receptores de eventos que admite</span><span class="sxs-lookup"><span data-stu-id="e5301-359">Unable to sink events of object because the object is already firing events to the maximum number of event receivers it supports</span></span>](../../visual-basic/misc/unable-to-sink-events-of-object.md)  
+ [<span data-ttu-id="50d76-359">No se pueden recibir eventos del objeto porque el objeto ya está desencadenando eventos hasta el número máximo de receptores de eventos que admite</span><span class="sxs-lookup"><span data-stu-id="50d76-359">Unable to sink events of object because the object is already firing events to the maximum number of event receivers it supports</span></span>](../../visual-basic/misc/unable-to-sink-events-of-object.md)  
   
- [<span data-ttu-id="e5301-360">No se puede escribir en el archivo de registro porque se superaría el valor de MaximumSize</span><span class="sxs-lookup"><span data-stu-id="e5301-360">Unable to write to log file because writing to it would cause it to exceed MaximumSize value</span></span>](../../visual-basic/misc/unable-to-write-to-log-file-it-would-cause-it-to-exceed-maximumsize-value.md)  
+ [<span data-ttu-id="50d76-360">No se puede escribir en el archivo de registro porque se superaría el valor de MaximumSize</span><span class="sxs-lookup"><span data-stu-id="50d76-360">Unable to write to log file because writing to it would cause it to exceed MaximumSize value</span></span>](../../visual-basic/misc/unable-to-write-to-log-file-it-would-cause-it-to-exceed-maximumsize-value.md)  
   
- [<span data-ttu-id="e5301-361">No se puede escribir en el archivo de registro porque el espacio en disco disponible pasaría a ser inferior al valor ReservedSpace</span><span class="sxs-lookup"><span data-stu-id="e5301-361">Unable to write to log file because writing to it would reduce free disk space below ReservedSpace value</span></span>](../../visual-basic/misc/unable-to-write-to-log-file-because-reduce-free-disk-space-below-reservedspace.md)  
+ [<span data-ttu-id="50d76-361">No se puede escribir en el archivo de registro porque el espacio en disco disponible pasaría a ser inferior al valor ReservedSpace</span><span class="sxs-lookup"><span data-stu-id="50d76-361">Unable to write to log file because writing to it would reduce free disk space below ReservedSpace value</span></span>](../../visual-basic/misc/unable-to-write-to-log-file-because-reduce-free-disk-space-below-reservedspace.md)  
   
- [<span data-ttu-id="e5301-362">Use 'FileGetObject' en lugar de 'FileGet' al usar el argumento de tipo 'Object'</span><span class="sxs-lookup"><span data-stu-id="e5301-362">Use 'FileGetObject' instead of 'FileGet' when using argument of type 'Object'</span></span>](../../visual-basic/misc/use-filegetobject-instead-of-fileget-when-using-argument-of-type-object.md)  
+ [<span data-ttu-id="50d76-362">Use 'FileGetObject' en lugar de 'FileGet' al usar el argumento de tipo 'Object'</span><span class="sxs-lookup"><span data-stu-id="50d76-362">Use 'FileGetObject' instead of 'FileGet' when using argument of type 'Object'</span></span>](../../visual-basic/misc/use-filegetobject-instead-of-fileget-when-using-argument-of-type-object.md)  
   
- [<span data-ttu-id="e5301-363">Use 'FilePutObject' en lugar de 'FilePut' al utilizar el argumento de tipo 'Object'</span><span class="sxs-lookup"><span data-stu-id="e5301-363">Use 'FilePutObject' instead of 'FilePut' when using argument of type 'Object'</span></span>](../../visual-basic/misc/use-fileputobject-instead-of-fileput-when-using-argument-of-type-object.md)  
+ [<span data-ttu-id="50d76-363">Use 'FilePutObject' en lugar de 'FilePut' al utilizar el argumento de tipo 'Object'</span><span class="sxs-lookup"><span data-stu-id="50d76-363">Use 'FilePutObject' instead of 'FilePut' when using argument of type 'Object'</span></span>](../../visual-basic/misc/use-fileputobject-instead-of-fileput-when-using-argument-of-type-object.md)  
   
- [<span data-ttu-id="e5301-364">El uso de la instancia predeterminada de una clase en el constructor de la clase puede provocar una llamada recursiva infinita</span><span class="sxs-lookup"><span data-stu-id="e5301-364">Use of Default Instance of a class in the class constructor could lead to infinite recursive call</span></span>](../../visual-basic/misc/use-of-default-instance-of-a-class-in-the-class-constructor.md)  
+ [<span data-ttu-id="50d76-364">El uso de la instancia predeterminada de una clase en el constructor de la clase puede provocar una llamada recursiva infinita</span><span class="sxs-lookup"><span data-stu-id="50d76-364">Use of Default Instance of a class in the class constructor could lead to infinite recursive call</span></span>](../../visual-basic/misc/use-of-default-instance-of-a-class-in-the-class-constructor.md)  
   
- [<span data-ttu-id="e5301-365">Se produjo una interrupción por parte del usuario</span><span class="sxs-lookup"><span data-stu-id="e5301-365">User interrupt occurred</span></span>](../../visual-basic/misc/user-interrupt-occurred.md)  
+ [<span data-ttu-id="50d76-365">Se produjo una interrupción por parte del usuario</span><span class="sxs-lookup"><span data-stu-id="50d76-365">User interrupt occurred</span></span>](../../visual-basic/misc/user-interrupt-occurred.md)  
   
- [<span data-ttu-id="e5301-366">La variable utiliza un tipo de Automation no compatible con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e5301-366">Variable uses an Automation type not supported in Visual Basic</span></span>](../../visual-basic/language-reference/error-messages/variable-uses-an-automation-type-not-supported.md)  
+ [<span data-ttu-id="50d76-366">La variable utiliza un tipo de Automation no compatible con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="50d76-366">Variable uses an Automation type not supported in Visual Basic</span></span>](../../visual-basic/language-reference/error-messages/variable-uses-an-automation-type-not-supported.md)  
   
- [<span data-ttu-id="e5301-367">VbStrConv.Wide y VbStrConv.Narrow no son aplicables a la configuración regional especificada</span><span class="sxs-lookup"><span data-stu-id="e5301-367">VbStrConv.Wide and VbStrConv.Narrow are not applicable to the locale specified</span></span>](../../visual-basic/misc/vbstrconv-wide-and-vbstrconv-narrow-are-not-applicable-to-the-locale-specified.md)  
+ [<span data-ttu-id="50d76-367">VbStrConv.Wide y VbStrConv.Narrow no son aplicables a la configuración regional especificada</span><span class="sxs-lookup"><span data-stu-id="50d76-367">VbStrConv.Wide and VbStrConv.Narrow are not applicable to the locale specified</span></span>](../../visual-basic/misc/vbstrconv-wide-and-vbstrconv-narrow-are-not-applicable-to-the-locale-specified.md)  
   
- [<span data-ttu-id="e5301-368">No se pueden combinar VbStrConv.Wide y VbStrConv.Narrow</span><span class="sxs-lookup"><span data-stu-id="e5301-368">VbStrConv.Wide and VbStrConv.Narrow cannot be combined</span></span>](../../visual-basic/misc/vbstrconv-wide-and-vbstrconv-narrow-cannot-be-combined.md)  
+ [<span data-ttu-id="50d76-368">No se pueden combinar VbStrConv.Wide y VbStrConv.Narrow</span><span class="sxs-lookup"><span data-stu-id="50d76-368">VbStrConv.Wide and VbStrConv.Narrow cannot be combined</span></span>](../../visual-basic/misc/vbstrconv-wide-and-vbstrconv-narrow-cannot-be-combined.md)  
   
- [<span data-ttu-id="e5301-369">El número de argumentos es erróneo o la asignación de propiedad no es válida</span><span class="sxs-lookup"><span data-stu-id="e5301-369">Wrong number of arguments or property assignment not valid</span></span>](../../visual-basic/misc/wrong-number-of-arguments-or-property-assignment-not-valid.md)  
+ [<span data-ttu-id="50d76-369">El número de argumentos es erróneo o la asignación de propiedad no es válida</span><span class="sxs-lookup"><span data-stu-id="50d76-369">Wrong number of arguments or property assignment not valid</span></span>](../../visual-basic/misc/wrong-number-of-arguments-or-property-assignment-not-valid.md)  
   
- [<span data-ttu-id="e5301-370">Especifique un nombre de archivo</span><span class="sxs-lookup"><span data-stu-id="e5301-370">You must specify a file name</span></span>](../../visual-basic/misc/you-must-specify-a-file-name.md)  
+ [<span data-ttu-id="50d76-370">Especifique un nombre de archivo</span><span class="sxs-lookup"><span data-stu-id="50d76-370">You must specify a file name</span></span>](../../visual-basic/misc/you-must-specify-a-file-name.md)  
   
- [<span data-ttu-id="e5301-371">Debe especificar un nombre</span><span class="sxs-lookup"><span data-stu-id="e5301-371">You must specify a name</span></span>](../../visual-basic/misc/you-must-specify-a-name.md)  
+ [<span data-ttu-id="50d76-371">Debe especificar un nombre</span><span class="sxs-lookup"><span data-stu-id="50d76-371">You must specify a name</span></span>](../../visual-basic/misc/you-must-specify-a-name.md)  
   
- [<span data-ttu-id="e5301-372">Debe especificar una ruta de acceso que se encuentre en la carpeta actual o en una de sus subcarpetas</span><span class="sxs-lookup"><span data-stu-id="e5301-372">You must specify a path that is under the current folder or one of its sub-folders</span></span>](../../visual-basic/misc/you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
+ [<span data-ttu-id="50d76-372">Debe especificar una ruta de acceso que se encuentre en la carpeta actual o en una de sus subcarpetas</span><span class="sxs-lookup"><span data-stu-id="50d76-372">You must specify a path that is under the current folder or one of its sub-folders</span></span>](../../visual-basic/misc/you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
-## <a name="see-also"></a><span data-ttu-id="e5301-373">Vea también</span><span class="sxs-lookup"><span data-stu-id="e5301-373">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="50d76-373">Vea también</span><span class="sxs-lookup"><span data-stu-id="50d76-373">See Also</span></span>  
    
- [<span data-ttu-id="e5301-374">Mensajes de error</span><span class="sxs-lookup"><span data-stu-id="e5301-374">Error Messages</span></span>](../../visual-basic/language-reference/error-messages/index.md)
+ [<span data-ttu-id="50d76-374">Mensajes de error</span><span class="sxs-lookup"><span data-stu-id="50d76-374">Error Messages</span></span>](../../visual-basic/language-reference/error-messages/index.md)
