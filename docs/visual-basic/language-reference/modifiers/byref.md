@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596235"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)
 Especifica que un argumento se pasa de tal manera que el procedimiento llamado puede cambiar el valor de una variable subyacente del argumento en el código de llamada.  

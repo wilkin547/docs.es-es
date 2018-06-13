@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598860"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a>La instrucción no es válida dentro de un método o una expresión lambda de varias líneas
 La instrucción no es válida dentro de un `Sub`, `Function`, propiedad `Get`, o la propiedad `Set` procedimiento. Algunas instrucciones pueden colocarse en el nivel de clase o módulo. Otros, como `Option Strict`, debe estar en el nivel de espacio de nombres y preceder a todas las demás declaraciones.  

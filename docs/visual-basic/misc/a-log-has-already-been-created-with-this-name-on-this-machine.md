@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603436"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>Ya ha creado un registro con este nombre en esta máquina
 Se ha intentado crear un registro con un nombre que ya está en uso.  

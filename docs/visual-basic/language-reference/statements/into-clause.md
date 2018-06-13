@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598497"
 ---
 # <a name="into-clause-visual-basic"></a>Into (Cláusula, Visual Basic)
 Identifica las funciones de agregado o agrupaciones para aplicar a una colección.  
