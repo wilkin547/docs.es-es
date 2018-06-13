@@ -1,14 +1,6 @@
 ---
-title: "GetPublicKeyToken (Método)"
-ms.custom: 
+title: GetPublicKeyToken (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink2.GetPublicKeyToken
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4a16374c-94b0-47b0-9fed-88c2b0cdccd4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 230c98e85bd0aa3bd2f368965b6f7ac028e43df4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 94a473d00110c07615ccdfc98bb8944e40dc30e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405478"
 ---
-# <a name="getpublickeytoken-method"></a><span data-ttu-id="56b5c-102">GetPublicKeyToken (Método)</span><span class="sxs-lookup"><span data-stu-id="56b5c-102">GetPublicKeyToken Method</span></span>
-<span data-ttu-id="56b5c-103">Recupera el token de clave pública para un determinado archivo de clave o un contenedor de claves.</span><span class="sxs-lookup"><span data-stu-id="56b5c-103">Retrieves the public key token for a given keyfile or key container.</span></span>  
+# <a name="getpublickeytoken-method"></a><span data-ttu-id="c8086-102">GetPublicKeyToken (Método)</span><span class="sxs-lookup"><span data-stu-id="c8086-102">GetPublicKeyToken Method</span></span>
+<span data-ttu-id="c8086-103">Recupera el token de clave pública para un determinado archivo de clave o un contenedor de claves.</span><span class="sxs-lookup"><span data-stu-id="c8086-103">Retrieves the public key token for a given keyfile or key container.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56b5c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="56b5c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c8086-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c8086-104">Syntax</span></span>  
   
 ```  
 HRESULT GetPublicKeyToken(  
@@ -48,26 +37,26 @@ HRESULT GetPublicKeyToken(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="56b5c-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="56b5c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c8086-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c8086-105">Parameters</span></span>  
  `pszKeyFile`  
- <span data-ttu-id="56b5c-106">Nombre de archivo de la clave.</span><span class="sxs-lookup"><span data-stu-id="56b5c-106">Filename of the key.</span></span>  
+ <span data-ttu-id="c8086-106">Nombre de archivo de la clave.</span><span class="sxs-lookup"><span data-stu-id="c8086-106">Filename of the key.</span></span>  
   
  `pszKeyContainer`  
- <span data-ttu-id="56b5c-107">Nombre del contenedor de claves.</span><span class="sxs-lookup"><span data-stu-id="56b5c-107">Name of the key container.</span></span>  
+ <span data-ttu-id="c8086-107">Nombre del contenedor de claves.</span><span class="sxs-lookup"><span data-stu-id="c8086-107">Name of the key container.</span></span>  
   
  `pvPublicKeyToken`  
- <span data-ttu-id="56b5c-108">Dirección donde se almacenará el token de clave.</span><span class="sxs-lookup"><span data-stu-id="56b5c-108">Address where key token is to be stored.</span></span>  
+ <span data-ttu-id="c8086-108">Dirección donde se almacenará el token de clave.</span><span class="sxs-lookup"><span data-stu-id="c8086-108">Address where key token is to be stored.</span></span>  
   
  `pcbPublicKeyToken`  
- <span data-ttu-id="56b5c-109">Especifica el tamaño, en bytes, del búfer indicado por `pvPublicKeyToken`.</span><span class="sxs-lookup"><span data-stu-id="56b5c-109">Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`.</span></span> <span data-ttu-id="56b5c-110">Tras la devolución, contiene el número real de bytes que se usa.</span><span class="sxs-lookup"><span data-stu-id="56b5c-110">Upon return, contains actual number of bytes used.</span></span>  
+ <span data-ttu-id="c8086-109">Especifica el tamaño, en bytes, del búfer indicado por `pvPublicKeyToken`.</span><span class="sxs-lookup"><span data-stu-id="c8086-109">Specifies the size, in bytes, of the buffer indicated by `pvPublicKeyToken`.</span></span> <span data-ttu-id="c8086-110">Tras la devolución, contiene el número real de bytes que se usa.</span><span class="sxs-lookup"><span data-stu-id="c8086-110">Upon return, contains actual number of bytes used.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="56b5c-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="56b5c-111">Return Value</span></span>  
- <span data-ttu-id="56b5c-112">Devuelve S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="56b5c-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c8086-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="c8086-111">Return Value</span></span>  
+ <span data-ttu-id="c8086-112">Devuelve S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="c8086-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="56b5c-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="56b5c-113">Requirements</span></span>  
- <span data-ttu-id="56b5c-114">Requiere alink.h.</span><span class="sxs-lookup"><span data-stu-id="56b5c-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c8086-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c8086-113">Requirements</span></span>  
+ <span data-ttu-id="c8086-114">Requiere alink.h.</span><span class="sxs-lookup"><span data-stu-id="c8086-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56b5c-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="56b5c-115">See Also</span></span>  
- [<span data-ttu-id="56b5c-116">IALink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="56b5c-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="56b5c-117">IALink (interfaz)</span><span class="sxs-lookup"><span data-stu-id="56b5c-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="56b5c-118">API de ALink</span><span class="sxs-lookup"><span data-stu-id="56b5c-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="c8086-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="c8086-115">See Also</span></span>  
+ [<span data-ttu-id="c8086-116">IALink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c8086-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="c8086-117">IALink (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c8086-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="c8086-118">API de ALink</span><span class="sxs-lookup"><span data-stu-id="c8086-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

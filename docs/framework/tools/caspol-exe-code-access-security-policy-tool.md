@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410103"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a><span data-ttu-id="761ad-102">Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)</span><span class="sxs-lookup"><span data-stu-id="761ad-102">Caspol.exe (Code Access Security Policy Tool)</span></span>
 <span data-ttu-id="761ad-103">La herramienta de la directiva de seguridad de acceso del código (CAS), o herramienta Caspol.exe, permite a los usuarios y administradores modificar las directivas de seguridad correspondientes a los niveles de equipo, usuario y empresa.</span><span class="sxs-lookup"><span data-stu-id="761ad-103">The Code Access Security (CAS) Policy tool (Caspol.exe) enables users and administrators to modify security policy for the machine policy level, the user policy level, and the enterprise policy level.</span></span>  

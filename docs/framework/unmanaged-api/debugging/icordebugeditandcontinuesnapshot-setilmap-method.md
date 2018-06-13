@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugEditAndContinueSnapshot::SetILMap (Método)"
-ms.custom: 
+title: ICorDebugEditAndContinueSnapshot::SetILMap (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEditAndContinueSnapshot.SetILMap
 api_location:
@@ -23,20 +15,17 @@ helpviewer_keywords:
 ms.assetid: 26c1bf4b-75ff-4c32-872c-3078ccdde04f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 349fd87c75a2de175322bf114bd2ef9e160ed31b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 22e35f06cfe5175ef3666dd5466d79384b17f2f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411663"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="0b9e2-102">ICorDebugEditAndContinueSnapshot::SetILMap (Método)</span><span class="sxs-lookup"><span data-stu-id="0b9e2-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
-<span data-ttu-id="0b9e2-103">`SetILMap` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="0b9e2-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="0b9e2-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="0b9e2-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="99495-102">ICorDebugEditAndContinueSnapshot::SetILMap (Método)</span><span class="sxs-lookup"><span data-stu-id="99495-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
+<span data-ttu-id="99495-103">`SetILMap` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="99495-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="99495-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="99495-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b9e2-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="0b9e2-105">See Also</span></span>  
- [<span data-ttu-id="0b9e2-106">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="0b9e2-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="99495-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="99495-105">See Also</span></span>  
+ [<span data-ttu-id="99495-106">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="99495-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
