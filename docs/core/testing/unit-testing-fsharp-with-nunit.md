@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215763"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a><span data-ttu-id="849e0-103">Bibliotecas de F# de prueba unitaria en .NET Core con pruebas de dotnet y NUnit</span><span class="sxs-lookup"><span data-stu-id="849e0-103">Unit testing F# libraries in .NET Core using dotnet test and NUnit</span></span>
 

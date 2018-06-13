@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757585"
 ---
 # <a name="defining-primary-keys"></a><span data-ttu-id="1025c-102">Definir claves principales</span><span class="sxs-lookup"><span data-stu-id="1025c-102">Defining Primary Keys</span></span>
 <span data-ttu-id="1025c-103">Generalmente, una tabla de base de datos tiene una columna o grupo de columnas que identifican de manera exclusiva cada fila de la tabla.</span><span class="sxs-lookup"><span data-stu-id="1025c-103">A database table commonly has a column or group of columns that uniquely identifies each row in the table.</span></span> <span data-ttu-id="1025c-104">Esta columna o grupo de columnas de identificación se denomina clave principal.</span><span class="sxs-lookup"><span data-stu-id="1025c-104">This identifying column or group of columns is called the primary key.</span></span>  

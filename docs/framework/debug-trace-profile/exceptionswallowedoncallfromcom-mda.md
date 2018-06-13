@@ -1,13 +1,6 @@
 ---
 title: MDA de exceptionSwallowedOnCallFromCom
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - messages, informational
 - informational messages
@@ -16,36 +9,34 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), exceptions
 - ExceptionSwallowedOnCallFromCOM MDA
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c20c4e0b6c1c711b2044bc3ba32d00447220cb8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b4c1cbf075ef96073061679b6d062075490f5e4e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390613"
 ---
-# <a name="exceptionswallowedoncallfromcom-mda"></a><span data-ttu-id="2a10c-102">MDA de exceptionSwallowedOnCallFromCom</span><span class="sxs-lookup"><span data-stu-id="2a10c-102">exceptionSwallowedOnCallFromCom MDA</span></span>
-<span data-ttu-id="2a10c-103">El asistente para la depuración administrada (MDA, por sus siglas en inglés) `exceptionSwallowedOnCallFromCOM` se activa cuando se produce una excepción del código de Common Language Runtime (CLR) llamado desde COM a través de un método que no tiene un tipo de resultado HRESULT sin administrar.</span><span class="sxs-lookup"><span data-stu-id="2a10c-103">The `exceptionSwallowedOnCallFromCOM` managed debugging assistant (MDA) is activated when an exception is thrown from common language runtime (CLR) code called from COM via a method that does not have an unmanaged HRESULT return type.</span></span>  
+# <a name="exceptionswallowedoncallfromcom-mda"></a><span data-ttu-id="912c6-102">MDA de exceptionSwallowedOnCallFromCom</span><span class="sxs-lookup"><span data-stu-id="912c6-102">exceptionSwallowedOnCallFromCom MDA</span></span>
+<span data-ttu-id="912c6-103">El asistente para la depuración administrada (MDA, por sus siglas en inglés) `exceptionSwallowedOnCallFromCOM` se activa cuando se produce una excepción del código de Common Language Runtime (CLR) llamado desde COM a través de un método que no tiene un tipo de resultado HRESULT sin administrar.</span><span class="sxs-lookup"><span data-stu-id="912c6-103">The `exceptionSwallowedOnCallFromCOM` managed debugging assistant (MDA) is activated when an exception is thrown from common language runtime (CLR) code called from COM via a method that does not have an unmanaged HRESULT return type.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="2a10c-104">Síntomas</span><span class="sxs-lookup"><span data-stu-id="2a10c-104">Symptoms</span></span>  
- <span data-ttu-id="2a10c-105">Una llamada de COM a un componente administrado devuelve un valor FALSE o 0.</span><span class="sxs-lookup"><span data-stu-id="2a10c-105">A call to a managed component from COM returns with a value of FALSE or 0.</span></span> <span data-ttu-id="2a10c-106">También puede ser que, si el método tiene un tipo de valor devuelto void, no haya indicación de que se produjese una excepción durante la ejecución del método.</span><span class="sxs-lookup"><span data-stu-id="2a10c-106">Alternatively, if the method has a void return type, there may be no indication that an exception was thrown during the execution of the method.</span></span> <span data-ttu-id="2a10c-107">En este caso, la excepción se detectará de forma silenciosa y la ejecución regresará al emisor de la llamada COM.</span><span class="sxs-lookup"><span data-stu-id="2a10c-107">In this case, the exception will be silently caught and execution will return to the COM caller.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="912c6-104">Síntomas</span><span class="sxs-lookup"><span data-stu-id="912c6-104">Symptoms</span></span>  
+ <span data-ttu-id="912c6-105">Una llamada de COM a un componente administrado devuelve un valor FALSE o 0.</span><span class="sxs-lookup"><span data-stu-id="912c6-105">A call to a managed component from COM returns with a value of FALSE or 0.</span></span> <span data-ttu-id="912c6-106">También puede ser que, si el método tiene un tipo de valor devuelto void, no haya indicación de que se produjese una excepción durante la ejecución del método.</span><span class="sxs-lookup"><span data-stu-id="912c6-106">Alternatively, if the method has a void return type, there may be no indication that an exception was thrown during the execution of the method.</span></span> <span data-ttu-id="912c6-107">En este caso, la excepción se detectará de forma silenciosa y la ejecución regresará al emisor de la llamada COM.</span><span class="sxs-lookup"><span data-stu-id="912c6-107">In this case, the exception will be silently caught and execution will return to the COM caller.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="2a10c-108">Motivo</span><span class="sxs-lookup"><span data-stu-id="2a10c-108">Cause</span></span>  
- <span data-ttu-id="2a10c-109">Se produjo una excepción, pero no hay ningún modo válido de notificarla.</span><span class="sxs-lookup"><span data-stu-id="2a10c-109">An exception was thrown, but there is no valid way to report it.</span></span>  
+## <a name="cause"></a><span data-ttu-id="912c6-108">Motivo</span><span class="sxs-lookup"><span data-stu-id="912c6-108">Cause</span></span>  
+ <span data-ttu-id="912c6-109">Se produjo una excepción, pero no hay ningún modo válido de notificarla.</span><span class="sxs-lookup"><span data-stu-id="912c6-109">An exception was thrown, but there is no valid way to report it.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="2a10c-110">Solución</span><span class="sxs-lookup"><span data-stu-id="2a10c-110">Resolution</span></span>  
- <span data-ttu-id="2a10c-111">Solo tiene carácter informativo, no es necesariamente indicativo de un error.</span><span class="sxs-lookup"><span data-stu-id="2a10c-111">Informational only, not necessarily indicative of a bug.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="912c6-110">Solución</span><span class="sxs-lookup"><span data-stu-id="912c6-110">Resolution</span></span>  
+ <span data-ttu-id="912c6-111">Solo tiene carácter informativo, no es necesariamente indicativo de un error.</span><span class="sxs-lookup"><span data-stu-id="912c6-111">Informational only, not necessarily indicative of a bug.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="2a10c-112">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="2a10c-112">Effect on the Runtime</span></span>  
- <span data-ttu-id="2a10c-113">Este MDA no tiene ningún efecto en el CLR.</span><span class="sxs-lookup"><span data-stu-id="2a10c-113">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="2a10c-114">Solo recoge los datos sobre excepciones detectadas de forma silenciosa.</span><span class="sxs-lookup"><span data-stu-id="2a10c-114">It only reports data about silently caught exceptions.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="912c6-112">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="912c6-112">Effect on the Runtime</span></span>  
+ <span data-ttu-id="912c6-113">Este MDA no tiene ningún efecto en el CLR.</span><span class="sxs-lookup"><span data-stu-id="912c6-113">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="912c6-114">Solo recoge los datos sobre excepciones detectadas de forma silenciosa.</span><span class="sxs-lookup"><span data-stu-id="912c6-114">It only reports data about silently caught exceptions.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="2a10c-115">Salida</span><span class="sxs-lookup"><span data-stu-id="2a10c-115">Output</span></span>  
- <span data-ttu-id="2a10c-116">Mensaje informativo que contiene el nombre del método, el nombre del tipo y el mensaje de la excepción.</span><span class="sxs-lookup"><span data-stu-id="2a10c-116">Informational message containing the method name, type name, and exception message.</span></span>  
+## <a name="output"></a><span data-ttu-id="912c6-115">Salida</span><span class="sxs-lookup"><span data-stu-id="912c6-115">Output</span></span>  
+ <span data-ttu-id="912c6-116">Mensaje informativo que contiene el nombre del método, el nombre del tipo y el mensaje de la excepción.</span><span class="sxs-lookup"><span data-stu-id="912c6-116">Informational message containing the method name, type name, and exception message.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="2a10c-117">Configuración</span><span class="sxs-lookup"><span data-stu-id="2a10c-117">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="912c6-117">Configuración</span><span class="sxs-lookup"><span data-stu-id="912c6-117">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -55,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2a10c-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="2a10c-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="912c6-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="912c6-118">See Also</span></span>  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [<span data-ttu-id="2a10c-119">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="2a10c-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="2a10c-120">Serialización de interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="2a10c-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+ [<span data-ttu-id="912c6-119">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="912c6-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="912c6-120">Serialización de interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="912c6-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

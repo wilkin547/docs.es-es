@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391321"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a><span data-ttu-id="0006a-102">Serialización de datos con invocación de plataforma</span><span class="sxs-lookup"><span data-stu-id="0006a-102">Marshaling Data with Platform Invoke</span></span>
 <span data-ttu-id="0006a-103">Para llamar a las funciones exportadas desde una biblioteca no administrada, una aplicación de .NET Framework requiere un prototipo de función en código administrado que representa la función no administrada.</span><span class="sxs-lookup"><span data-stu-id="0006a-103">To call functions exported from an unmanaged library, a .NET Framework application requires a function prototype in managed code that represents the unmanaged function.</span></span> <span data-ttu-id="0006a-104">Para crear un prototipo que permita a la invocación de plataforma serializar los datos correctamente, debe hacer lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="0006a-104">To create a prototype that enables platform invoke to marshal data correctly, you must do the following:</span></span>  

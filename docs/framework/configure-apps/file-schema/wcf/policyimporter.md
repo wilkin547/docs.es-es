@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753032"
 ---
 # <a name="ltpolicyimportergt"></a><span data-ttu-id="54830-102">&lt;policyImporter&gt;</span><span class="sxs-lookup"><span data-stu-id="54830-102">&lt;policyImporter&gt;</span></span>
 <span data-ttu-id="54830-103">Especifica un importador de directivas que controla la importación de aserciones de directivas personalizadas de los enlaces.</span><span class="sxs-lookup"><span data-stu-id="54830-103">Specifies a policy importer that controls the import of custom policy assertions about bindings.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742528"
 ---
 # <a name="ltcleargt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="120cf-102">&lt;Borrar&gt; elemento para schemeSettings (configuración de Uri)</span><span class="sxs-lookup"><span data-stu-id="120cf-102">&lt;clear&gt; Element for schemeSettings (Uri Settings)</span></span>
 <span data-ttu-id="120cf-103">Borra todos los valores de esquema existente.</span><span class="sxs-lookup"><span data-stu-id="120cf-103">Clears all existing scheme settings.</span></span>  

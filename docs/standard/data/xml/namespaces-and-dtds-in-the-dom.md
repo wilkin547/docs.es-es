@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568685"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a><span data-ttu-id="5566f-102">Espacios de nombres y DTD en DOM</span><span class="sxs-lookup"><span data-stu-id="5566f-102">Namespaces and DTDs in the DOM</span></span>
 <span data-ttu-id="5566f-103">Las definiciones de tipo de documento (DTD) complican la compatibilidad del espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="5566f-103">Document type definitions (DTDs) complicate namespace support.</span></span> <span data-ttu-id="5566f-104">Por ejemplo, el siguiente código XML contiene atributos predeterminados que incluyen signos de dos puntos en su nombre.</span><span class="sxs-lookup"><span data-stu-id="5566f-104">For example, the following XML contains default attributes containing colons in their names.</span></span>  

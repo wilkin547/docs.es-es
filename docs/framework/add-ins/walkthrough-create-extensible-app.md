@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744829"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a><span data-ttu-id="27c51-102">Tutorial: Crear una aplicación extensible</span><span class="sxs-lookup"><span data-stu-id="27c51-102">Walkthrough: Creating an Extensible Application</span></span>
 <span data-ttu-id="27c51-103">Este tutorial describe cómo crear una canalización para un complemento que realiza funciones de calculadora sencillo.</span><span class="sxs-lookup"><span data-stu-id="27c51-103">This walkthrough describes how to create a pipeline for an add-in that performs simple calculator functions.</span></span> <span data-ttu-id="27c51-104">No se muestra un escenario real; en su lugar, muestra la funcionalidad básica de una canalización y cómo un complemento puede proporcionar servicios para un host.</span><span class="sxs-lookup"><span data-stu-id="27c51-104">It does not demonstrate a real-world scenario; rather, it demonstrates the basic functionality of a pipeline and how an add-in can provide services for a host.</span></span>  

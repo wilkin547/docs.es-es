@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391656"
 ---
 # <a name="deploying-net-framework-applications"></a><span data-ttu-id="172a2-102">Implementar aplicaciones de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="172a2-102">Deploying .NET Framework Applications</span></span>
 <span data-ttu-id="172a2-103">Esta sección de la documentación de .NET Framework proporciona información esencial para implementar aplicaciones de .NET Framework, incluidas las directrices para cargar ensamblados, resolver referencias de ensamblados y mejorar el rendimiento de la aplicación mediante la generación de imágenes nativas.</span><span class="sxs-lookup"><span data-stu-id="172a2-103">This section of the .NET Framework documentation provides essential information for deploying .NET Framework applications, including guidelines for loading assemblies, resolving assembly references, and improving the performance of your application through native image generation.</span></span>  

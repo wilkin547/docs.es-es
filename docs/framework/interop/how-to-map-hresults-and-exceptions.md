@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393554"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a><span data-ttu-id="6224b-102">Cómo: Asignar resultados HRESULT y excepciones</span><span class="sxs-lookup"><span data-stu-id="6224b-102">How to: Map HRESULTs and Exceptions</span></span>
 <span data-ttu-id="6224b-103">Los métodos COM informan de errores devolviendo valores HRESULT; los métodos de .NET informan de ellos iniciando excepciones.</span><span class="sxs-lookup"><span data-stu-id="6224b-103">COM methods report errors by returning HRESULTs; .NET methods report them by throwing exceptions.</span></span> <span data-ttu-id="6224b-104">El tiempo de ejecución controla la transición entre los dos.</span><span class="sxs-lookup"><span data-stu-id="6224b-104">The runtime handles the transition between the two.</span></span> <span data-ttu-id="6224b-105">Cada clase de excepción de .NET Framework se asigna a un valor HRESULT.</span><span class="sxs-lookup"><span data-stu-id="6224b-105">Each exception class in the .NET Framework maps to an HRESULT.</span></span>  

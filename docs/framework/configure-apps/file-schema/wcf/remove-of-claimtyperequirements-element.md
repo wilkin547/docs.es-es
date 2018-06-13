@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753253"
 ---
 # <a name="ltremovegt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="9d36e-102">&lt;remove&gt; del elemento &lt;claimTypeRequirements&gt;</span><span class="sxs-lookup"><span data-stu-id="9d36e-102">&lt;remove&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="9d36e-103">Especifica los tipos de notificaciones que se van a quitar en la credencial aliada.</span><span class="sxs-lookup"><span data-stu-id="9d36e-103">Specifies the types of claims to be removed in the federated credential.</span></span>  

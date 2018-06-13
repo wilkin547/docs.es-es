@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759158"
 ---
 # <a name="handling-dataadapter-events"></a><span data-ttu-id="d611a-102">Controlar eventos de DataAdapter</span><span class="sxs-lookup"><span data-stu-id="d611a-102">Handling DataAdapter Events</span></span>
 <span data-ttu-id="d611a-103"><xref:System.Data.Common.DataAdapter> de ADO.NET expone tres eventos que se pueden utilizar para responder a los cambios efectuados en los datos en el origen.</span><span class="sxs-lookup"><span data-stu-id="d611a-103">The ADO.NET <xref:System.Data.Common.DataAdapter> exposes three events that you can use to respond to changes made to data at the data source.</span></span> <span data-ttu-id="d611a-104">En la siguiente tabla se muestran los eventos de `DataAdapter`.</span><span class="sxs-lookup"><span data-stu-id="d611a-104">The following table shows the `DataAdapter` events.</span></span>  
