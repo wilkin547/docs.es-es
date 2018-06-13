@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521559"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>Recortar y ajustar la escala de las imágenes en GDI+
 Puede usar el <xref:System.Drawing.Graphics.DrawImage%2A> método de la <xref:System.Drawing.Graphics> clase para dibujar y colocar imágenes vectoriales e imágenes de trama. <xref:System.Drawing.Graphics.DrawImage%2A> es un método sobrecargado, por lo que hay varias formas de proporcionar argumentos.  

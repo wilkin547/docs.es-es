@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513554"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Enlazar una propiedad de actividad personalizada a un control de diseñador
 La operación de enlazar un control de diseñador de cuadro de texto a un argumento de actividad es bastante sencillo; sin embargo, la operación de enlazar un control de diseñador complejo (como un cuadro combinado) a un argumento de actividad puede presentar desafíos. En este tema se analiza la forma de enlazar un argumento de actividad a un control de cuadro combinado en un diseñador de actividad personalizado.  

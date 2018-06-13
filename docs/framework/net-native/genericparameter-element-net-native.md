@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393099"
 ---
 # <a name="ltgenericparametergt-element-net-native"></a>Elemento &lt;GenericParameter&gt; (.NET Native)
 Aplica la directiva al tipo de parámetro de un método o tipo genérico.  

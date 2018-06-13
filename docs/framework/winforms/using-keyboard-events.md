@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542267"
 ---
 # <a name="using-keyboard-events"></a>Utilizar eventos de teclado
 La mayoría de los programas de Windows Forms procesan la entrada de teclado controlando los eventos de teclado. Este ofrece una introducción a los eventos de teclado, incluidos detalles sobre cuándo usar cada evento y los datos que se proporcionan para cada evento.  Consulte también [información general sobre controladores de eventos (formularios Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [información general sobre eventos (formularios Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  

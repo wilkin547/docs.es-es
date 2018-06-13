@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535736"
 ---
 # <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>Cómo: Establecer modos de ordenación de columnas en el control DataGridView de formularios Windows Forms
 En el <xref:System.Windows.Forms.DataGridView> columnas del cuadro de texto de control, use la clasificación automática de forma predeterminada, mientras que otros tipos de columna no se ordenan automáticamente. En ocasiones, deseará invalidar estos valores predeterminados. Por ejemplo, puede mostrar imágenes en lugar de texto, números o valores de celda de enumeración. Mientras no se pueden ordenar las imágenes, se pueden ordenar los valores subyacentes que representan.  

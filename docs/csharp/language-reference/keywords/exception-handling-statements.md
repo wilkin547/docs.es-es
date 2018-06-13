@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213228"
 ---
 # <a name="exception-handling-statements-c-reference"></a>Instrucciones para el control de excepciones (Referencia de C#)
 C# proporciona compatibilidad integrada para controlar las situaciones anómalas, denominadas "excepciones", que pueden producirse durante la ejecución del programa. Estas excepciones se controlan mediante código situado fuera del flujo normal de control.  

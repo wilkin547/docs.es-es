@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515998"
 ---
 # <a name="auto-confirm-pattern"></a>Patrón de autoconfirmación
 Este ejemplo consta de tres escenarios que se ejecutan para mostrar una actividad `AutoConfirmScope` personalizada. En el primer ejemplo se muestra la ejecución correcta de una secuencia de cuatro actividades de compensación, donde las actividades segunda y tercera están anidadas en una actividad `AutoConfirmScope`. En el segundo ejemplo se muestra la misma secuencia, con una excepción que se produce después de la ejecución de la cuarta actividad <xref:System.Activities.Statements.CompensableActivity>. En el tercer escenario se muestra la misma secuencia, con una excepción que se produce en la actividad `AutoConfirmScope` después de que se complete la segunda actividad <xref:System.Activities.Statements.CompensableActivity>.  

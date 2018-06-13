@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517691"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Líneas y rellenos con mezcla alfa
 En [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], un color es un valor de 32 bits con 8 bits para alfa, rojo, verde y azul. El valor alfa indica la transparencia del color, la extensión a la que el color se mezcla con el color de fondo. Los valores alfa oscilan entre 0 y 255, donde 0 representa un color totalmente transparente, y 255 representa un color totalmente opaco.  

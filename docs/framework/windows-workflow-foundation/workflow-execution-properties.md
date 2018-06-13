@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518649"
 ---
 # <a name="workflow-execution-properties"></a>Propiedades de ejecución del flujo de trabajo
 A través del almacenamiento local para el subproceso (TLS), el CLR mantiene un contexto de ejecución para cada subproceso. Este contexto de ejecución rige propiedades de subproceso bien conocidas, como la identidad del subproceso, la transacción ambiente y el conjunto de permisos actual así como las propiedades de subproceso definidas por el usuario como ranuras con nombre.  

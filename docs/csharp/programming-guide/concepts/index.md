@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335644"
 ---
 # <a name="programming-concepts-c"></a>Conceptos de programación (C#)
 En esta sección se explican los conceptos de programación del lenguaje C#.  

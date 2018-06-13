@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518818"
 ---
 # <a name="about-gdi-managed-code"></a>Código administrado de GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] es la parte del sistema operativo Windows que proporciona gráficos vectoriales de dos dimensiones, imágenes y tipografía. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] mejora [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (la interfaz de dispositivo gráfico incluida en versiones anteriores de Windows), al agregar nuevas características y optimizar las características existentes.  

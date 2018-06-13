@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ed65181abab58117d539d23fcfeffe71ac19388
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430575"
 ---
 # <a name="assemblyinfo-structure"></a>ASSEMBLY_INFO (Estructura)
 Contiene información sobre un ensamblado que está registrado en la caché global de ensamblados.  

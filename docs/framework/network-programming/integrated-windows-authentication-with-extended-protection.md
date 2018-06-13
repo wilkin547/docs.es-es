@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398136"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticación de Windows integrada con protección ampliada
 Se han realizado mejoras que afectan al modo en que las clases <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> y clases relacionadas del espacio de nombres <xref:System.Net> y espacios de nombres relacionados controlan la autenticación integrada de Windows. Se ha agregado compatibilidad para que la protección ampliada mejore la seguridad.  

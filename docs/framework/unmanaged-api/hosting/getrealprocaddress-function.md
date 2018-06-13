@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 256afe9a4304654ddb263a0671db7525f3bedcba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429642"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress (Función)
 Obtiene la dirección de la función especificada que se exporta desde la última versión instalada de common language runtime (CLR).  

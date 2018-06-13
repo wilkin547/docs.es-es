@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520349"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Cómo: Crear un diseñador de actividad personalizado
 Normalmente los diseñadores de actividad personalizados se implementan de forma que sus actividades asociadas admitan composición con otras actividades cuyos diseñadores se pueden colocar en la superficie de diseño con ellas. Esta funcionalidad requiere que un diseñador de actividad personalizado proporcione un "área de colocación" donde se puede colocar una actividad arbitraria y también los medios para administrar la colección resultante de elementos en la superficie de diseño. En este tema se describe cómo crear un diseñador de actividad personalizado que contenga esta área de colocación y cómo crear un diseñador de actividad personalizado que proporcione la funcionalidad de edición necesaria para administrar la colección de elementos del diseñador.  

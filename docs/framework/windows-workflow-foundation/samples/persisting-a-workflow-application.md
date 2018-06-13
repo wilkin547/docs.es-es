@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519192"
 ---
 # <a name="persisting-a-workflow-application"></a>Conservar una aplicación de flujo de trabajo
 En este ejemplo se muestra cómo ejecutar un objeto <xref:System.Activities.WorkflowApplication>, cómo descargarlo cuando pasa a estado inactivo, y cómo recargarlo después para continuar su ejecución.  

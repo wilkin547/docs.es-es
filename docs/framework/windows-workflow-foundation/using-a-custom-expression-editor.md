@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518582"
 ---
 # <a name="using-a-custom-expression-editor"></a>Usar un editor de expresiones personalizado
 Se puede implementar un editor de expresiones personalizado para proporcionar una experiencia de edición de expresiones más sencilla o más enriquecida. Existen varios escenarios en los que se podría desear utilizar un editor de expresiones personalizado:  

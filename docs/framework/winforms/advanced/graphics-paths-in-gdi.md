@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523894"
 ---
 # <a name="graphics-paths-in-gdi"></a>Trazados de gráficos en GDI+
 Las rutas de acceso se crean mediante la combinación de líneas, rectángulos y curvas simples. Recuerde de la [información general de gráficos vectoriales](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) que los bloques de creación básicos siguientes han resultado para ser las más útiles para dibujar imágenes:  

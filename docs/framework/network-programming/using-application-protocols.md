@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394870"
 ---
 # <a name="using-application-protocols"></a>Usar protocolos de aplicaciones
 .NET Framework admite protocolos de aplicaciones de Internet de uso frecuente. Esta sección incluye información sobre el uso de los protocolos [HTTP](../../../docs/framework/network-programming/http.md), "TCP" y "UDP", así como información sobre el uso de la interfaz [Windows Sockets](../../../docs/framework/network-programming/sockets.md) para implementar protocolos personalizados.  

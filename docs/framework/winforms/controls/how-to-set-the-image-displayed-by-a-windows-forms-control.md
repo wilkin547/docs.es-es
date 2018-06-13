@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533746"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Cómo: Establecer la imagen que muestra un control de formularios Windows Forms
 Varios controles de formularios Windows Forms pueden mostrar imágenes. Estas imágenes pueden ser iconos que clarifican el propósito del control, como un icono del disquete en un botón que denota el **guardar** comando. Como alternativa, los iconos pueden ser imágenes de fondo para proporcionar el control de la apariencia y el comportamiento que desee.  

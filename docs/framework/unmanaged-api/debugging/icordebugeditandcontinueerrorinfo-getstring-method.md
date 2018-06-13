@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74b0fc10b7d838265a6ccd9e2581f67a432f2c9e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417802"
 ---
 # <a name="icordebugeditandcontinueerrorinfogetstring-method"></a>ICorDebugEditAndContinueErrorInfo::GetString (Método)
 `GetString` está obsoleto. No llame a este método.  

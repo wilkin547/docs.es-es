@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523960"
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>Cómo: Administrar manualmente gráficos almacenados en búfer
 Para escenarios más avanzados de almacenamiento en búfer dobles, puede usar el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] las clases para implementar su propia lógica de almacenamiento en búfer doble. La clase responsable de asignar y administrar los búferes de gráficos individuales es la <xref:System.Drawing.BufferedGraphicsContext> clase. Cada aplicación tiene su propio valor predeterminado <xref:System.Drawing.BufferedGraphicsContext> que administra todos de manera predeterminada el doble búfer para esa aplicación. Puede recuperar una referencia a esta instancia mediante una llamada a la <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  

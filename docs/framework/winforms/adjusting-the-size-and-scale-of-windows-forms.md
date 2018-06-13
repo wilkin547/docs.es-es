@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516418"
 ---
 # <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Ajustar el tamaño y la escala de formularios Windows Forms
 Este tema proporciona vínculos a información acerca de cómo cambiar el tamaño de Windows Forms.  

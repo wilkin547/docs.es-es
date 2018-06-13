@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524347"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>Utilizar lápiz para dibujar líneas y formas
 Use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` objetos que se va a dibujar segmentos de línea, curvas y los contornos de formas. En esta sección, *línea* hace referencia a cualquiera de estos, a menos que indique que se trata únicamente de un segmento de línea. Establecer las propiedades de un lápiz para controlar el color, el ancho, la alineación y el estilo de las líneas dibujadas con ese lápiz.  

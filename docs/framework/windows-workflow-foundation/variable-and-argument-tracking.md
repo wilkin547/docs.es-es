@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516989"
 ---
 # <a name="variable-and-argument-tracking"></a>Seguimiento de variable y argumento
 Al realizar el seguimiento de la ejecución de un flujo de trabajo, a menudo resulta útil extraer los datos. Esto proporciona contexto adicional al tener acceso a un registro de seguimiento posterior a la ejecución. En [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], puede extraer cualquier variable o argumento visibles dentro del ámbito de cualquier actividad en un flujo de trabajo que use el seguimiento. Los perfiles de seguimiento facilitan la extracción de datos.  

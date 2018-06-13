@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362755"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Interoperabilidad con Enterprise Services y transacciones de COM+
 El espacio de nombres <xref:System.Transactions> admite la interoperabilidad entre los objetos de transacción creados utilizando este espacio de nombres y las transacciones creadas a través de COM+.  

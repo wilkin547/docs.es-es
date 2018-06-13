@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 401c23e44cc473d0a27a82a00343852693cb0f2e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429350"
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity (Interfaz)
 Representa la firma única del código que define la aplicación en el ámbito actual.  

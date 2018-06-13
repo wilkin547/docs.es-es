@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514529"
 ---
 # <a name="flowchart-workflows"></a>Flujos de trabajo del diagrama de flujo
 Un diagrama de flujo es un paradigma conocido para diseñar programas. La actividad Flowchart se usa normalmente para implementar flujos de trabajo no secuenciales, aunque se puede usar para flujos de trabajo secuenciales si no se usa ningún nodo `FlowDecision`.  
