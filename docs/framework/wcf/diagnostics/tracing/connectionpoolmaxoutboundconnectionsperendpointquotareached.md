@@ -1,32 +1,21 @@
 ---
 title: System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 01c1fd61-84ef-43b8-a2e8-ae64ebbd0d18
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2eae5a3019b77ace6b67d7487d621a47439534e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 337c8547cd2afd373a31879697f4f568f1562697
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474446"
 ---
-# <a name="systemservicemodelchannelsconnectionpoolmaxoutboundconnectionsperendpointquotareached"></a><span data-ttu-id="54935-102">System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached</span><span class="sxs-lookup"><span data-stu-id="54935-102">System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached</span></span>
-<span data-ttu-id="54935-103">System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached</span><span class="sxs-lookup"><span data-stu-id="54935-103">System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached</span></span>  
+# <a name="systemservicemodelchannelsconnectionpoolmaxoutboundconnectionsperendpointquotareached"></a><span data-ttu-id="f584c-102">System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached</span><span class="sxs-lookup"><span data-stu-id="f584c-102">System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached</span></span>
+<span data-ttu-id="f584c-103">System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached</span><span class="sxs-lookup"><span data-stu-id="f584c-103">System.ServiceModel.Channels.ConnectionPoolMaxOutboundConnectionsPerEndpointQuotaReached</span></span>  
   
-## <a name="description"></a><span data-ttu-id="54935-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="54935-104">Description</span></span>  
- <span data-ttu-id="54935-105">Se alcanzó la cuota de MaxOutboundConnectionsPerEndpoint, por lo que se cerró la conexión y no se almacenó en este grupo de conexiones.</span><span class="sxs-lookup"><span data-stu-id="54935-105">MaxOutboundConnectionsPerEndpoint quota has been reached, so the connection was closed and not stored in this connection pool.</span></span>  
+## <a name="description"></a><span data-ttu-id="f584c-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="f584c-104">Description</span></span>  
+ <span data-ttu-id="f584c-105">Se alcanzó la cuota de MaxOutboundConnectionsPerEndpoint, por lo que se cerró la conexión y no se almacenó en este grupo de conexiones.</span><span class="sxs-lookup"><span data-stu-id="f584c-105">MaxOutboundConnectionsPerEndpoint quota has been reached, so the connection was closed and not stored in this connection pool.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54935-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="54935-106">See Also</span></span>  
- [<span data-ttu-id="54935-107">Traza</span><span class="sxs-lookup"><span data-stu-id="54935-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="54935-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="54935-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="54935-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="54935-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f584c-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="f584c-106">See Also</span></span>  
+ [<span data-ttu-id="f584c-107">Traza</span><span class="sxs-lookup"><span data-stu-id="f584c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f584c-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="f584c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f584c-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="f584c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

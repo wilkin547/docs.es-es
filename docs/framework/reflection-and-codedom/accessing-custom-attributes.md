@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397096"
 ---
 # <a name="accessing-custom-attributes"></a><span data-ttu-id="ad3f0-102">Acceso a atributos personalizados</span><span class="sxs-lookup"><span data-stu-id="ad3f0-102">Accessing Custom Attributes</span></span>
 <span data-ttu-id="ad3f0-103">Después de asociar atributos a elementos de un programa, puede usar la reflexión para consultar su existencia y sus valores.</span><span class="sxs-lookup"><span data-stu-id="ad3f0-103">After attributes have been associated with program elements, reflection can be used to query their existence and values.</span></span> <span data-ttu-id="ad3f0-104">En .NET Framework versión 1.0 y 1.1, los atributos personalizados se examinan en el contexto de ejecución.</span><span class="sxs-lookup"><span data-stu-id="ad3f0-104">In the .NET Framework version 1.0 and 1.1, custom attributes are examined in the execution context.</span></span> <span data-ttu-id="ad3f0-105">.NET Framework versión 2.0 proporciona un nuevo contexto de carga, el contexto de solo reflexión, que puede usarse para examinar el código que no se puede cargar para su ejecución.</span><span class="sxs-lookup"><span data-stu-id="ad3f0-105">The .NET Framework version 2.0 provides a new load context, the reflection-only context, which can be used to examine code that cannot be loaded for execution.</span></span>  

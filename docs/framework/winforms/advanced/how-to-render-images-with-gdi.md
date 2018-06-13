@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Representar imágenes con GDI+"
-ms.custom: 
+title: 'Cómo: Representar imágenes con GDI+'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,23 +9,19 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a6edc48c93f83611bdc2be5b7398ab0abe843407
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6f5b139c6831a065c85e9d9889c259c859a649cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524611"
 ---
-# <a name="how-to-render-images-with-gdi"></a><span data-ttu-id="fff39-102">Cómo: Representar imágenes con GDI+</span><span class="sxs-lookup"><span data-stu-id="fff39-102">How to: Render Images with GDI+</span></span>
-<span data-ttu-id="fff39-103">Puede usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para representar imágenes que existan como archivos en las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="fff39-103">You can use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] to render images that exist as files in your applications.</span></span> <span data-ttu-id="fff39-104">Para ello, cree un nuevo objeto de un <xref:System.Drawing.Image> clase (como <xref:System.Drawing.Bitmap>), creando un <xref:System.Drawing.Graphics> objeto que hace referencia a la superficie de dibujo que desea usar y, al llamar a la <xref:System.Drawing.Graphics.DrawImage%2A> método de la <xref:System.Drawing.Graphics> objeto.</span><span class="sxs-lookup"><span data-stu-id="fff39-104">You do this by creating a new object of an <xref:System.Drawing.Image> class (such as <xref:System.Drawing.Bitmap>), creating a <xref:System.Drawing.Graphics> object that refers to the drawing surface you want to use, and calling the <xref:System.Drawing.Graphics.DrawImage%2A> method of the <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="fff39-105">La imagen se pintará sobre la superficie de dibujo representada por la clase graphics.</span><span class="sxs-lookup"><span data-stu-id="fff39-105">The image will be painted onto the drawing surface represented by the graphics class.</span></span> <span data-ttu-id="fff39-106">Puede usar el Editor de imágenes para crear y editar archivos de imagen en tiempo de diseño y representarlos con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="fff39-106">You can use the Image Editor to create and edit image files at design time, and render them with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] at run time.</span></span> <span data-ttu-id="fff39-107">Para más información, consulte [Editor de imágenes para iconos](/cpp/windows/image-editor-for-icons).</span><span class="sxs-lookup"><span data-stu-id="fff39-107">For more information, see [Image Editor for Icons](/cpp/windows/image-editor-for-icons).</span></span>  
+# <a name="how-to-render-images-with-gdi"></a><span data-ttu-id="186db-102">Cómo: Representar imágenes con GDI+</span><span class="sxs-lookup"><span data-stu-id="186db-102">How to: Render Images with GDI+</span></span>
+<span data-ttu-id="186db-103">Puede usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para representar imágenes que existan como archivos en las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="186db-103">You can use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] to render images that exist as files in your applications.</span></span> <span data-ttu-id="186db-104">Para ello, cree un nuevo objeto de un <xref:System.Drawing.Image> clase (como <xref:System.Drawing.Bitmap>), creando un <xref:System.Drawing.Graphics> objeto que hace referencia a la superficie de dibujo que desea usar y, al llamar a la <xref:System.Drawing.Graphics.DrawImage%2A> método de la <xref:System.Drawing.Graphics> objeto.</span><span class="sxs-lookup"><span data-stu-id="186db-104">You do this by creating a new object of an <xref:System.Drawing.Image> class (such as <xref:System.Drawing.Bitmap>), creating a <xref:System.Drawing.Graphics> object that refers to the drawing surface you want to use, and calling the <xref:System.Drawing.Graphics.DrawImage%2A> method of the <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="186db-105">La imagen se pintará sobre la superficie de dibujo representada por la clase graphics.</span><span class="sxs-lookup"><span data-stu-id="186db-105">The image will be painted onto the drawing surface represented by the graphics class.</span></span> <span data-ttu-id="186db-106">Puede usar el Editor de imágenes para crear y editar archivos de imagen en tiempo de diseño y representarlos con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="186db-106">You can use the Image Editor to create and edit image files at design time, and render them with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] at run time.</span></span> <span data-ttu-id="186db-107">Para más información, consulte [Editor de imágenes para iconos](/cpp/windows/image-editor-for-icons).</span><span class="sxs-lookup"><span data-stu-id="186db-107">For more information, see [Image Editor for Icons](/cpp/windows/image-editor-for-icons).</span></span>  
   
-### <a name="to-render-an-image-with-gdi"></a><span data-ttu-id="fff39-108">Para representar una imagen con GDI+</span><span class="sxs-lookup"><span data-stu-id="fff39-108">To render an image with GDI+</span></span>  
+### <a name="to-render-an-image-with-gdi"></a><span data-ttu-id="186db-108">Para representar una imagen con GDI+</span><span class="sxs-lookup"><span data-stu-id="186db-108">To render an image with GDI+</span></span>  
   
-1.  <span data-ttu-id="fff39-109">Cree un objeto que represente la imagen que desee mostrar.</span><span class="sxs-lookup"><span data-stu-id="fff39-109">Create an object representing the image you want to display.</span></span> <span data-ttu-id="fff39-110">Este objeto debe ser un miembro de una clase que hereda de <xref:System.Drawing.Image>, como <xref:System.Drawing.Bitmap> o <xref:System.Drawing.Imaging.Metafile>.</span><span class="sxs-lookup"><span data-stu-id="fff39-110">This object must be a member of a class that inherits from <xref:System.Drawing.Image>, such as <xref:System.Drawing.Bitmap> or <xref:System.Drawing.Imaging.Metafile>.</span></span> <span data-ttu-id="fff39-111">Se muestra un ejemplo:</span><span class="sxs-lookup"><span data-stu-id="fff39-111">An example is shown:</span></span>  
+1.  <span data-ttu-id="186db-109">Cree un objeto que represente la imagen que desee mostrar.</span><span class="sxs-lookup"><span data-stu-id="186db-109">Create an object representing the image you want to display.</span></span> <span data-ttu-id="186db-110">Este objeto debe ser un miembro de una clase que hereda de <xref:System.Drawing.Image>, como <xref:System.Drawing.Bitmap> o <xref:System.Drawing.Imaging.Metafile>.</span><span class="sxs-lookup"><span data-stu-id="186db-110">This object must be a member of a class that inherits from <xref:System.Drawing.Image>, such as <xref:System.Drawing.Bitmap> or <xref:System.Drawing.Imaging.Metafile>.</span></span> <span data-ttu-id="186db-111">Se muestra un ejemplo:</span><span class="sxs-lookup"><span data-stu-id="186db-111">An example is shown:</span></span>  
   
     ```vb  
     ' Uses the System.Environment.GetFolderPath to get the path to the   
@@ -58,7 +47,7 @@ ms.lasthandoff: 12/22/2017
           (System::Environment::SpecialFolder::MyPictures));  
     ```  
   
-2.  <span data-ttu-id="fff39-112">Crear un <xref:System.Drawing.Graphics> objeto que representa la superficie de dibujo que desea usar.</span><span class="sxs-lookup"><span data-stu-id="fff39-112">Create a <xref:System.Drawing.Graphics> object that represents the drawing surface you want to use.</span></span> <span data-ttu-id="fff39-113">Para más información, consulte [Cómo: Crear objetos Graphics para dibujar](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).</span><span class="sxs-lookup"><span data-stu-id="fff39-113">For more information, see [How to: Create Graphics Objects for Drawing](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).</span></span>  
+2.  <span data-ttu-id="186db-112">Crear un <xref:System.Drawing.Graphics> objeto que representa la superficie de dibujo que desea usar.</span><span class="sxs-lookup"><span data-stu-id="186db-112">Create a <xref:System.Drawing.Graphics> object that represents the drawing surface you want to use.</span></span> <span data-ttu-id="186db-113">Para más información, consulte [Cómo: Crear objetos Graphics para dibujar](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).</span><span class="sxs-lookup"><span data-stu-id="186db-113">For more information, see [How to: Create Graphics Objects for Drawing](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).</span></span>  
   
     ```vb  
     ' Creates a Graphics object that represents the drawing surface of   
@@ -78,7 +67,7 @@ ms.lasthandoff: 12/22/2017
     Graphics^ g = button1->CreateGraphics();  
     ```  
   
-3.  <span data-ttu-id="fff39-114">Llame a la <xref:System.Drawing.Graphics.DrawImage%2A> del objeto graphics para representar la imagen.</span><span class="sxs-lookup"><span data-stu-id="fff39-114">Call the <xref:System.Drawing.Graphics.DrawImage%2A> of your graphics object to render the image.</span></span> <span data-ttu-id="fff39-115">Debe especificar la imagen que se va a dibujar y las coordenadas en las que se va a dibujar.</span><span class="sxs-lookup"><span data-stu-id="fff39-115">You must specify both the image to be drawn, and the coordinates where it is to be drawn.</span></span>  
+3.  <span data-ttu-id="186db-114">Llame a la <xref:System.Drawing.Graphics.DrawImage%2A> del objeto graphics para representar la imagen.</span><span class="sxs-lookup"><span data-stu-id="186db-114">Call the <xref:System.Drawing.Graphics.DrawImage%2A> of your graphics object to render the image.</span></span> <span data-ttu-id="186db-115">Debe especificar la imagen que se va a dibujar y las coordenadas en las que se va a dibujar.</span><span class="sxs-lookup"><span data-stu-id="186db-115">You must specify both the image to be drawn, and the coordinates where it is to be drawn.</span></span>  
   
     ```vb  
     g.DrawImage(myBitmap, 1, 1)  
@@ -92,11 +81,11 @@ ms.lasthandoff: 12/22/2017
     g->DrawImage(myBitmap, 1, 1);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="fff39-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="fff39-116">See Also</span></span>  
- [<span data-ttu-id="fff39-117">Introducción a la programación de gráficos</span><span class="sxs-lookup"><span data-stu-id="fff39-117">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [<span data-ttu-id="fff39-118">Crear objetos Graphics para dibujar</span><span class="sxs-lookup"><span data-stu-id="fff39-118">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [<span data-ttu-id="fff39-119">Lápices, líneas y rectángulos en GDI+</span><span class="sxs-lookup"><span data-stu-id="fff39-119">Pens, Lines, and Rectangles in GDI+</span></span>](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)  
- [<span data-ttu-id="fff39-120">Dibujar texto en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fff39-120">How to: Draw Text on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
- [<span data-ttu-id="fff39-121">Gráficos y dibujos en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fff39-121">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [<span data-ttu-id="fff39-122">Dibujar líneas o figuras cerradas</span><span class="sxs-lookup"><span data-stu-id="fff39-122">Drawing Lines or Closed Figures</span></span>](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)  
- [<span data-ttu-id="fff39-123">Editor de imágenes para iconos</span><span class="sxs-lookup"><span data-stu-id="fff39-123">Image Editor for Icons</span></span>](/cpp/windows/image-editor-for-icons)
+## <a name="see-also"></a><span data-ttu-id="186db-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="186db-116">See Also</span></span>  
+ [<span data-ttu-id="186db-117">Introducción a la programación de gráficos</span><span class="sxs-lookup"><span data-stu-id="186db-117">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [<span data-ttu-id="186db-118">Crear objetos Graphics para dibujar</span><span class="sxs-lookup"><span data-stu-id="186db-118">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [<span data-ttu-id="186db-119">Lápices, líneas y rectángulos en GDI+</span><span class="sxs-lookup"><span data-stu-id="186db-119">Pens, Lines, and Rectangles in GDI+</span></span>](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)  
+ [<span data-ttu-id="186db-120">Dibujar texto en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="186db-120">How to: Draw Text on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
+ [<span data-ttu-id="186db-121">Gráficos y dibujos en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="186db-121">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="186db-122">Dibujar líneas o figuras cerradas</span><span class="sxs-lookup"><span data-stu-id="186db-122">Drawing Lines or Closed Figures</span></span>](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)  
+ [<span data-ttu-id="186db-123">Editor de imágenes para iconos</span><span class="sxs-lookup"><span data-stu-id="186db-123">Image Editor for Icons</span></span>](/cpp/windows/image-editor-for-icons)

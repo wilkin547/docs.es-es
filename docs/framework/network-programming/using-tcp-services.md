@@ -1,12 +1,6 @@
 ---
 title: Usar Servicios TCP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,25 +16,24 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 5fce23d35c5c90799960a8075b610e5b7294ef66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d11566182cc9d0b4f2634350868ec94a0685d996
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397174"
 ---
-# <a name="using-tcp-services"></a><span data-ttu-id="d7516-102">Usar Servicios TCP</span><span class="sxs-lookup"><span data-stu-id="d7516-102">Using TCP Services</span></span>
-<span data-ttu-id="d7516-103">La clase <xref:System.Net.Sockets.TcpClient> solicita datos de un recurso de Internet mediante TCP.</span><span class="sxs-lookup"><span data-stu-id="d7516-103">The <xref:System.Net.Sockets.TcpClient> class requests data from an Internet resource using TCP.</span></span> <span data-ttu-id="d7516-104">Los métodos y propiedades de **TcpClient** abstraen los detalles para crear un <xref:System.Net.Sockets.Socket> a fin de solicitar y recibir datos mediante TCP.</span><span class="sxs-lookup"><span data-stu-id="d7516-104">The methods and properties of **TcpClient** abstract the details for creating a <xref:System.Net.Sockets.Socket> for requesting and receiving data using TCP.</span></span> <span data-ttu-id="d7516-105">Dado que la conexión al dispositivo remoto se representa como una secuencia, los datos se pueden leer y escribir empleando técnicas de control de secuencias de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d7516-105">Because the connection to the remote device is represented as a stream, data can be read and written with .NET Framework stream-handling techniques.</span></span>  
+# <a name="using-tcp-services"></a><span data-ttu-id="4a5a1-102">Usar Servicios TCP</span><span class="sxs-lookup"><span data-stu-id="4a5a1-102">Using TCP Services</span></span>
+<span data-ttu-id="4a5a1-103">La clase <xref:System.Net.Sockets.TcpClient> solicita datos de un recurso de Internet mediante TCP.</span><span class="sxs-lookup"><span data-stu-id="4a5a1-103">The <xref:System.Net.Sockets.TcpClient> class requests data from an Internet resource using TCP.</span></span> <span data-ttu-id="4a5a1-104">Los métodos y propiedades de **TcpClient** abstraen los detalles para crear un <xref:System.Net.Sockets.Socket> a fin de solicitar y recibir datos mediante TCP.</span><span class="sxs-lookup"><span data-stu-id="4a5a1-104">The methods and properties of **TcpClient** abstract the details for creating a <xref:System.Net.Sockets.Socket> for requesting and receiving data using TCP.</span></span> <span data-ttu-id="4a5a1-105">Dado que la conexión al dispositivo remoto se representa como una secuencia, los datos se pueden leer y escribir empleando técnicas de control de secuencias de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="4a5a1-105">Because the connection to the remote device is represented as a stream, data can be read and written with .NET Framework stream-handling techniques.</span></span>  
   
- <span data-ttu-id="d7516-106">El protocolo TCP establece una conexión con un punto de conexión remoto y luego usa esa conexión para enviar y recibir paquetes de datos.</span><span class="sxs-lookup"><span data-stu-id="d7516-106">The TCP protocol establishes a connection with a remote endpoint and then uses that connection to send and receive data packets.</span></span> <span data-ttu-id="d7516-107">El protocolo TCP es responsable de garantizar que los paquetes de datos se envíen al punto de conexión y que se monten en el orden correcto cuando lleguen.</span><span class="sxs-lookup"><span data-stu-id="d7516-107">TCP is responsible for ensuring that data packets are sent to the endpoint and assembled in the correct order when they arrive.</span></span>  
+ <span data-ttu-id="4a5a1-106">El protocolo TCP establece una conexión con un punto de conexión remoto y luego usa esa conexión para enviar y recibir paquetes de datos.</span><span class="sxs-lookup"><span data-stu-id="4a5a1-106">The TCP protocol establishes a connection with a remote endpoint and then uses that connection to send and receive data packets.</span></span> <span data-ttu-id="4a5a1-107">El protocolo TCP es responsable de garantizar que los paquetes de datos se envíen al punto de conexión y que se monten en el orden correcto cuando lleguen.</span><span class="sxs-lookup"><span data-stu-id="4a5a1-107">TCP is responsible for ensuring that data packets are sent to the endpoint and assembled in the correct order when they arrive.</span></span>  
   
- <span data-ttu-id="d7516-108">Para establecer una conexión TCP, debe conocer la dirección del dispositivo de red que hospeda el servicio que necesita, así como el puerto TCP que usa el servicio para comunicarse.</span><span class="sxs-lookup"><span data-stu-id="d7516-108">To establish a TCP connection, you must know the address of the network device hosting the service you need and you must know the TCP port that the service uses to communicate.</span></span> <span data-ttu-id="d7516-109">Internet Assigned Numbers Authority (Iana) define los números de puerto para los servicios comunes (vea www.iana.org/assignments/port-numbers).</span><span class="sxs-lookup"><span data-stu-id="d7516-109">The Internet Assigned Numbers Authority (Iana) defines port numbers for common services (see www.iana.org/assignments/port-numbers).</span></span> <span data-ttu-id="d7516-110">Los servicios que no están en la lista de Iana pueden tener números de puerto en el intervalo comprendido entre 1024 y 65 535.</span><span class="sxs-lookup"><span data-stu-id="d7516-110">Services not on the Iana list can have port numbers in the range 1,024 to 65,535.</span></span>  
+ <span data-ttu-id="4a5a1-108">Para establecer una conexión TCP, debe conocer la dirección del dispositivo de red que hospeda el servicio que necesita, así como el puerto TCP que usa el servicio para comunicarse.</span><span class="sxs-lookup"><span data-stu-id="4a5a1-108">To establish a TCP connection, you must know the address of the network device hosting the service you need and you must know the TCP port that the service uses to communicate.</span></span> <span data-ttu-id="4a5a1-109">Internet Assigned Numbers Authority (Iana) define los números de puerto para los servicios comunes (vea www.iana.org/assignments/port-numbers).</span><span class="sxs-lookup"><span data-stu-id="4a5a1-109">The Internet Assigned Numbers Authority (Iana) defines port numbers for common services (see www.iana.org/assignments/port-numbers).</span></span> <span data-ttu-id="4a5a1-110">Los servicios que no están en la lista de Iana pueden tener números de puerto en el intervalo comprendido entre 1024 y 65 535.</span><span class="sxs-lookup"><span data-stu-id="4a5a1-110">Services not on the Iana list can have port numbers in the range 1,024 to 65,535.</span></span>  
   
- <span data-ttu-id="d7516-111">En el ejemplo siguiente se muestra cómo configurar un **TcpClient** para conectarse a un servidor horario en el puerto TCP 13.</span><span class="sxs-lookup"><span data-stu-id="d7516-111">The following example demonstrates setting up a **TcpClient** to connect to a time server on TCP port 13.</span></span>  
+ <span data-ttu-id="4a5a1-111">En el ejemplo siguiente se muestra cómo configurar un **TcpClient** para conectarse a un servidor horario en el puerto TCP 13.</span><span class="sxs-lookup"><span data-stu-id="4a5a1-111">The following example demonstrates setting up a **TcpClient** to connect to a time server on TCP port 13.</span></span>  
   
 ```vb  
 Imports System  
@@ -110,9 +103,9 @@ public class TcpTimeClient {
 }  
 ```  
   
- <span data-ttu-id="d7516-112"><xref:System.Net.Sockets.TcpListener> se usa para supervisar un puerto TCP para las solicitudes entrantes y para luego crear un **Socket** o un **TcpClient** que administre la conexión al cliente.</span><span class="sxs-lookup"><span data-stu-id="d7516-112"><xref:System.Net.Sockets.TcpListener> is used to monitor a TCP port for incoming requests and then create either a **Socket** or a **TcpClient** that manages the connection to the client.</span></span> <span data-ttu-id="d7516-113">El método <xref:System.Net.Sockets.TcpListener.Start%2A> habilita las escuchas, mientras que el método <xref:System.Net.Sockets.TcpListener.Stop%2A> deshabilita las escuchas en el puerto.</span><span class="sxs-lookup"><span data-stu-id="d7516-113">The <xref:System.Net.Sockets.TcpListener.Start%2A> method enables listening, and the <xref:System.Net.Sockets.TcpListener.Stop%2A> method disables listening on the port.</span></span> <span data-ttu-id="d7516-114">El método <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> acepta las solicitudes de conexión entrantes y crea un **TcpClient** para gestionar la solicitud, mientras que el método <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> acepta las solicitudes de conexión entrantes y crea un **Socket** para gestionar la solicitud.</span><span class="sxs-lookup"><span data-stu-id="d7516-114">The <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> method accepts incoming connection requests and creates a **TcpClient** to handle the request, and the <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> method accepts incoming connection requests and creates a **Socket** to handle the request.</span></span>  
+ <span data-ttu-id="4a5a1-112"><xref:System.Net.Sockets.TcpListener> se usa para supervisar un puerto TCP para las solicitudes entrantes y para luego crear un **Socket** o un **TcpClient** que administre la conexión al cliente.</span><span class="sxs-lookup"><span data-stu-id="4a5a1-112"><xref:System.Net.Sockets.TcpListener> is used to monitor a TCP port for incoming requests and then create either a **Socket** or a **TcpClient** that manages the connection to the client.</span></span> <span data-ttu-id="4a5a1-113">El método <xref:System.Net.Sockets.TcpListener.Start%2A> habilita las escuchas, mientras que el método <xref:System.Net.Sockets.TcpListener.Stop%2A> deshabilita las escuchas en el puerto.</span><span class="sxs-lookup"><span data-stu-id="4a5a1-113">The <xref:System.Net.Sockets.TcpListener.Start%2A> method enables listening, and the <xref:System.Net.Sockets.TcpListener.Stop%2A> method disables listening on the port.</span></span> <span data-ttu-id="4a5a1-114">El método <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> acepta las solicitudes de conexión entrantes y crea un **TcpClient** para gestionar la solicitud, mientras que el método <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> acepta las solicitudes de conexión entrantes y crea un **Socket** para gestionar la solicitud.</span><span class="sxs-lookup"><span data-stu-id="4a5a1-114">The <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> method accepts incoming connection requests and creates a **TcpClient** to handle the request, and the <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> method accepts incoming connection requests and creates a **Socket** to handle the request.</span></span>  
   
- <span data-ttu-id="d7516-115">En el ejemplo siguiente se muestra cómo crear un servidor horario de red mediante un **TcpListener** para supervisar el puerto TCP 13.</span><span class="sxs-lookup"><span data-stu-id="d7516-115">The following example demonstrates creating a network time server using a **TcpListener** to monitor TCP port 13.</span></span> <span data-ttu-id="d7516-116">Cuando se acepta una solicitud de conexión entrante, el servidor horario responde con la fecha y hora actuales del servidor host.</span><span class="sxs-lookup"><span data-stu-id="d7516-116">When an incoming connection request is accepted, the time server responds with the current date and time from the host server.</span></span>  
+ <span data-ttu-id="4a5a1-115">En el ejemplo siguiente se muestra cómo crear un servidor horario de red mediante un **TcpListener** para supervisar el puerto TCP 13.</span><span class="sxs-lookup"><span data-stu-id="4a5a1-115">The following example demonstrates creating a network time server using a **TcpListener** to monitor TCP port 13.</span></span> <span data-ttu-id="4a5a1-116">Cuando se acepta una solicitud de conexión entrante, el servidor horario responde con la fecha y hora actuales del servidor host.</span><span class="sxs-lookup"><span data-stu-id="4a5a1-116">When an incoming connection request is accepted, the time server responds with the current date and time from the host server.</span></span>  
   
 ```vb  
 Imports System  
@@ -204,5 +197,5 @@ public class TcpTimeServer {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d7516-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="d7516-117">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4a5a1-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="4a5a1-117">See Also</span></span>  
  
