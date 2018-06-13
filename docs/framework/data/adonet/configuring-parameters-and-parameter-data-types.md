@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759548"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurar parámetros y tipos de datos de parámetros
 Los objetos de comando usan parámetros para pasar valores a instrucciones SQL o procedimientos almacenados que permiten realizar operaciones de comprobación de tipos y validación. A diferencia del texto de comando, la entrada de parámetros se trata como un valor literal, y no como código ejecutable. De esta forma, se protege contra ataques por "inyección de código SQL", en los que un atacante inserta un comando que pone en peligro la seguridad del servidor en una instrucción SQL.  

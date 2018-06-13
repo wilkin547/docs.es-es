@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394253"
 ---
 # <a name="security-and-serialization"></a>Seguridad y serialización
 Como la serialización puede permitir que otro código vea o modifique datos de instancias de objeto que de otra forma podrían estar inaccesibles, se requiere un permiso especial del código que realiza la serialización: <xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> especificada. De acuerdo con la directiva predeterminada, no se concede este permiso al código descargado de Internet o de la intranet; únicamente el código del equipo local tiene garantizado este permiso.  
