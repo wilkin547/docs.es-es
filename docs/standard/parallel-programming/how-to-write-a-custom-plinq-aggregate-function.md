@@ -1,48 +1,38 @@
 ---
-title: "Cómo: Escribir una función de agregado personalizada de PLINQ"
-ms.custom: 
+title: 'Cómo: Escribir una función de agregado personalizada de PLINQ'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 210e9913ab3eba636ff99b7610df05655246f4eb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a7aa2a8e5d9695c08d1c98e05cdd1eaa4d9a5318
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580915"
 ---
-# <a name="how-to-write-a-custom-plinq-aggregate-function"></a><span data-ttu-id="c434b-102">Cómo: Escribir una función de agregado personalizada de PLINQ</span><span class="sxs-lookup"><span data-stu-id="c434b-102">How to: Write a Custom PLINQ Aggregate Function</span></span>
-<span data-ttu-id="c434b-103">En este ejemplo se muestra cómo utilizar el método <xref:System.Linq.ParallelEnumerable.Aggregate%2A> para aplicar una función de agregación personalizada a una secuencia de origen.</span><span class="sxs-lookup"><span data-stu-id="c434b-103">This example shows how to use the <xref:System.Linq.ParallelEnumerable.Aggregate%2A> method to apply a custom aggregation function to a source sequence.</span></span>  
+# <a name="how-to-write-a-custom-plinq-aggregate-function"></a><span data-ttu-id="eef69-102">Cómo: Escribir una función de agregado personalizada de PLINQ</span><span class="sxs-lookup"><span data-stu-id="eef69-102">How to: Write a Custom PLINQ Aggregate Function</span></span>
+<span data-ttu-id="eef69-103">En este ejemplo se muestra cómo utilizar el método <xref:System.Linq.ParallelEnumerable.Aggregate%2A> para aplicar una función de agregación personalizada a una secuencia de origen.</span><span class="sxs-lookup"><span data-stu-id="eef69-103">This example shows how to use the <xref:System.Linq.ParallelEnumerable.Aggregate%2A> method to apply a custom aggregation function to a source sequence.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="c434b-104">La finalidad de este ejemplo es mostrar el uso, y puede que su ejecución no sea tan rápida como la de la consulta LINQ to Objects secuencial equivalente.</span><span class="sxs-lookup"><span data-stu-id="c434b-104">This example is intended to demonstrate usage, and might not run faster than the equivalent sequential LINQ to Objects query.</span></span> <span data-ttu-id="c434b-105">Para más información sobre la velocidad, vea [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span><span class="sxs-lookup"><span data-stu-id="c434b-105">For more information about speedup, see [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span></span>  
+>  <span data-ttu-id="eef69-104">La finalidad de este ejemplo es mostrar el uso, y puede que su ejecución no sea tan rápida como la de la consulta LINQ to Objects secuencial equivalente.</span><span class="sxs-lookup"><span data-stu-id="eef69-104">This example is intended to demonstrate usage, and might not run faster than the equivalent sequential LINQ to Objects query.</span></span> <span data-ttu-id="eef69-105">Para más información sobre la velocidad, vea [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span><span class="sxs-lookup"><span data-stu-id="eef69-105">For more information about speedup, see [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c434b-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c434b-106">Example</span></span>  
- <span data-ttu-id="c434b-107">En el ejemplo siguiente se calcula la desviación estándar de una secuencia de enteros.</span><span class="sxs-lookup"><span data-stu-id="c434b-107">The following example calculates the standard deviation of a sequence of integers.</span></span>  
+## <a name="example"></a><span data-ttu-id="eef69-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="eef69-106">Example</span></span>  
+ <span data-ttu-id="eef69-107">En el ejemplo siguiente se calcula la desviación estándar de una secuencia de enteros.</span><span class="sxs-lookup"><span data-stu-id="eef69-107">The following example calculates the standard deviation of a sequence of integers.</span></span>  
   
  [!code-csharp[PLINQ#31](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#31)]
  [!code-vb[PLINQ#31](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#31)]  
   
- <span data-ttu-id="c434b-108">Este ejemplo utiliza una sobrecarga del operador de consulta estándar agregado que sea único en PLINQ.</span><span class="sxs-lookup"><span data-stu-id="c434b-108">This example uses an overload of the Aggregate standard query operator that is unique to PLINQ.</span></span> <span data-ttu-id="c434b-109">Esta sobrecarga adopta un delegado adicional <xref:System.Func%603?displayProperty=nameWithType> como tercer parámetro de entrada.</span><span class="sxs-lookup"><span data-stu-id="c434b-109">This overload takes an extra <xref:System.Func%603?displayProperty=nameWithType> as the third input parameter.</span></span> <span data-ttu-id="c434b-110">Este delegado combina los resultados de todos los subprocesos antes de realizar el cálculo final de los resultados agregados.</span><span class="sxs-lookup"><span data-stu-id="c434b-110">This delegate combines the results from all threads before it performs the final calculation on the aggregated results.</span></span> <span data-ttu-id="c434b-111">En este ejemplo se agregan las sumas de todos los subprocesos.</span><span class="sxs-lookup"><span data-stu-id="c434b-111">In this example we add together the sums from all the threads.</span></span>  
+ <span data-ttu-id="eef69-108">Este ejemplo utiliza una sobrecarga del operador de consulta estándar agregado que sea único en PLINQ.</span><span class="sxs-lookup"><span data-stu-id="eef69-108">This example uses an overload of the Aggregate standard query operator that is unique to PLINQ.</span></span> <span data-ttu-id="eef69-109">Esta sobrecarga adopta un delegado adicional <xref:System.Func%603?displayProperty=nameWithType> como tercer parámetro de entrada.</span><span class="sxs-lookup"><span data-stu-id="eef69-109">This overload takes an extra <xref:System.Func%603?displayProperty=nameWithType> as the third input parameter.</span></span> <span data-ttu-id="eef69-110">Este delegado combina los resultados de todos los subprocesos antes de realizar el cálculo final de los resultados agregados.</span><span class="sxs-lookup"><span data-stu-id="eef69-110">This delegate combines the results from all threads before it performs the final calculation on the aggregated results.</span></span> <span data-ttu-id="eef69-111">En este ejemplo se agregan las sumas de todos los subprocesos.</span><span class="sxs-lookup"><span data-stu-id="eef69-111">In this example we add together the sums from all the threads.</span></span>  
   
- <span data-ttu-id="c434b-112">Tenga en cuenta que, cuando un cuerpo de expresiones lambda consta de una única expresión, el valor devuelto del delegado <xref:System.Func%602?displayProperty=nameWithType> es el valor de la expresión.</span><span class="sxs-lookup"><span data-stu-id="c434b-112">Note that when a lambda expression body consists of a single expression, the return value of the <xref:System.Func%602?displayProperty=nameWithType> delegate is the value of the expression.</span></span>  
+ <span data-ttu-id="eef69-112">Tenga en cuenta que, cuando un cuerpo de expresiones lambda consta de una única expresión, el valor devuelto del delegado <xref:System.Func%602?displayProperty=nameWithType> es el valor de la expresión.</span><span class="sxs-lookup"><span data-stu-id="eef69-112">Note that when a lambda expression body consists of a single expression, the return value of the <xref:System.Func%602?displayProperty=nameWithType> delegate is the value of the expression.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c434b-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="c434b-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="eef69-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="eef69-113">See Also</span></span>  
  <xref:System.Linq.ParallelEnumerable>  
- [<span data-ttu-id="c434b-114">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="c434b-114">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+ [<span data-ttu-id="eef69-114">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="eef69-114">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
