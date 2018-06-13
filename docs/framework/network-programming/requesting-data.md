@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396303"
 ---
 # <a name="requesting-data"></a>Solicitud de datos
 El desarrollo de aplicaciones que se ejecutan en el entorno operativo distribuido de Internet hoy en día requiere un método eficaz y fácil de usar para recuperar datos de recursos de todo tipo. Los protocolos acoplables permiten desarrollar aplicaciones que usan una sola interfaz para recuperar datos de varios protocolos de Internet.  

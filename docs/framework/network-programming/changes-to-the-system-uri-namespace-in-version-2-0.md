@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392453"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Cambios realizados en el espacio de nombres System.Uri de la versión 2.0
 Se han realizado varios cambios en la clase <xref:System.Uri?displayProperty=nameWithType>. Estos cambios han corregido un comportamiento incorrecto, han mejorado el uso y también la seguridad.  
