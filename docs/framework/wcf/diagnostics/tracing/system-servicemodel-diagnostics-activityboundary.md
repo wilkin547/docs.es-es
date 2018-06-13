@@ -1,32 +1,21 @@
 ---
 title: System.ServiceModel.Diagnostics.ActivityBoundary
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a24e3076-0c14-4271-9990-090c0dfed07f
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5a0e0b01df5cf40d69fd242db71a85e86a5da938
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6bbfbe1b2cc3803204a2d0384530a42feb3fe749
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33480082"
 ---
-# <a name="systemservicemodeldiagnosticsactivityboundary"></a><span data-ttu-id="03b0b-102">System.ServiceModel.Diagnostics.ActivityBoundary</span><span class="sxs-lookup"><span data-stu-id="03b0b-102">System.ServiceModel.Diagnostics.ActivityBoundary</span></span>
-<span data-ttu-id="03b0b-103">System.ServiceModel.Diagnostics.ActivityBoundary</span><span class="sxs-lookup"><span data-stu-id="03b0b-103">System.ServiceModel.Diagnostics.ActivityBoundary</span></span>  
+# <a name="systemservicemodeldiagnosticsactivityboundary"></a><span data-ttu-id="1764a-102">System.ServiceModel.Diagnostics.ActivityBoundary</span><span class="sxs-lookup"><span data-stu-id="1764a-102">System.ServiceModel.Diagnostics.ActivityBoundary</span></span>
+<span data-ttu-id="1764a-103">System.ServiceModel.Diagnostics.ActivityBoundary</span><span class="sxs-lookup"><span data-stu-id="1764a-103">System.ServiceModel.Diagnostics.ActivityBoundary</span></span>  
   
-## <a name="description"></a><span data-ttu-id="03b0b-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="03b0b-104">Description</span></span>  
- <span data-ttu-id="03b0b-105">Límite de la actividad.</span><span class="sxs-lookup"><span data-stu-id="03b0b-105">Activity boundary.</span></span>  
+## <a name="description"></a><span data-ttu-id="1764a-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="1764a-104">Description</span></span>  
+ <span data-ttu-id="1764a-105">Límite de la actividad.</span><span class="sxs-lookup"><span data-stu-id="1764a-105">Activity boundary.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03b0b-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="03b0b-106">See Also</span></span>  
- [<span data-ttu-id="03b0b-107">Traza</span><span class="sxs-lookup"><span data-stu-id="03b0b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="03b0b-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="03b0b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="03b0b-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="03b0b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="1764a-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="1764a-106">See Also</span></span>  
+ [<span data-ttu-id="1764a-107">Traza</span><span class="sxs-lookup"><span data-stu-id="1764a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="1764a-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="1764a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="1764a-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="1764a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
