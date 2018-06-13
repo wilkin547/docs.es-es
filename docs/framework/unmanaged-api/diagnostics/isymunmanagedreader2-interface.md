@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1dfc67ecf1eeb9ea5a19c98a8c378e73021da6c8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426833"
 ---
 # <a name="isymunmanagedreader2-interface"></a>ISymUnmanagedReader2 (Interfaz)
 Representa un lector de símbolos que proporciona acceso a documentos, métodos y variables del sistema en un almacén de símbolos. Esta interfaz extiende la [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interfaz.  

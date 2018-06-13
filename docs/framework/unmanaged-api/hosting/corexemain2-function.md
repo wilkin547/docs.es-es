@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 573336b32040f44ff1b59fcbb75b59aa00976b5c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430184"
 ---
 # <a name="corexemain2-function"></a>_CorExeMain2 (Función)
 Ejecuta el punto de entrada en el código asignado a la memoria especificado. Esta función se invoca por el cargador del sistema operativo.  

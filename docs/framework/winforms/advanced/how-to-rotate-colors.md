@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522400"
 ---
 # <a name="how-to-rotate-colors"></a>Cómo: Rotar colores
 Rotación en un espacio de colores de cuatro dimensiones es difícil de visualizar. Podemos facilitar la visualizar rotación decidido mantener uno de los componentes de color fijo. Supongamos que se decide mantener el componente alfa fijado en 1 (completamente opaco). A continuación, podemos visualizar un espacio de color tridimensional con ejes de rojos, verde y azules como se muestra en la siguiente ilustración.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536259"
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox (Control, formularios Windows Forms)
 Cuadros de texto de formularios Windows Forms se utilizan para obtener datos proporcionados por el usuario o para mostrar el texto. El `TextBox` control se utiliza generalmente para el texto editable, aunque también pueden realizarse de solo lectura. Cuadros de texto pueden mostrar varias líneas, ajustar el texto al tamaño del control y agregar formato básico. El `TextBox` control permite un único formato para el texto mostrado o escrito en el control.  

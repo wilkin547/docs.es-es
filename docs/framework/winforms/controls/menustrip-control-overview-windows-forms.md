@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537491"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>Información general sobre el control MenuStrip (formularios Windows Forms)
 Los menús exponen la funcionalidad a los usuarios, se conservan los comandos que están agrupados por un tema común.  

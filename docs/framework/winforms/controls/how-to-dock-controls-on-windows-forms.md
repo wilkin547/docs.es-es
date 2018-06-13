@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532330"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Cómo: Acoplar controles en formularios Windows Forms
 Puede acoplar controles a los bordes del formulario o hacer que llenen el contenedor del control (un formulario o un control contenedor). Por ejemplo, el Explorador de Windows acopla su <xref:System.Windows.Forms.TreeView> control a la izquierda de la ventana y su <xref:System.Windows.Forms.ListView> control a la derecha de la ventana. Use la <xref:System.Windows.Forms.Control.Dock%2A> propiedad para todos los controles de formularios Windows Forms visibles definir el modo de acoplamiento.  

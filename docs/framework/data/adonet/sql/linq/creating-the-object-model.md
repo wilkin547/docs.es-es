@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359938"
 ---
 # <a name="creating-the-object-model"></a>Crear el modelo de objetos
 Puede crear un modelo de objetos a partir de una base de datos existente y utilizar el modelo en su estado predeterminado. También puede personalizar muchos aspectos del modelo y su comportamiento.  

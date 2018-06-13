@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528293"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Cómo: Agregar capacidades de búsqueda a un control ListView
 A menudo cuando se trabaja con una amplia lista de elementos en una <xref:System.Windows.Forms.ListView> (control), que desea ofrecer capacidades de búsqueda para el usuario. El <xref:System.Windows.Forms.ListView> control ofrece esta capacidad de dos maneras diferentes: coincidencia de texto y búsqueda de ubicación.  

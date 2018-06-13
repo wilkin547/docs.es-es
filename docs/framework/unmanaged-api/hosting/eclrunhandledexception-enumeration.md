@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eeff8aa0336c0c497e306825c6c77f4f8745ca7c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431810"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException (Enumeración)
 Describe las opciones disponibles para administrar las excepciones que son no está controladas en código de usuario.  

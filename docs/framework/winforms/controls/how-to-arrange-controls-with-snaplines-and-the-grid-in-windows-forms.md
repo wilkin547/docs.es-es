@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528381"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Cómo: Organizar controles con las líneas de ajuste y la cuadrícula en formularios Windows Forms
 Con las características de diseño de Visual Studio, puede dirigir con precisión donde se colocan los controles en un formulario. Controles agregada a un formulario o se desplaza en un formulario se pueden alinear automáticamente a las filas y columnas de cuadrícula del Diseñador de Windows Forms, o puede alinear controles mediante la característica de las guías de alineación.  

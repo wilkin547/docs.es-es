@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d3bc8b00b568f96cd55b7811f310d34c1ff700d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428653"
 ---
 # <a name="isymunmanagedwriter5openmaptokenstosourcespans-method"></a>ISymUnmanagedWriter5::OpenMapTokensToSourceSpans (Método)
 Abra una sección especial de datos personalizados para emitir información de asignación de intervalos de origen de token en. Apertura de esta sección cuando un método ya está abierto, o viceversa, es un error.  

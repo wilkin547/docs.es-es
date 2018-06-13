@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc6c9079b6f233946fa38979800e28097e849f8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428594"
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Fusión (Referencia de la API no administrada)
 La API de fusión permite a un host en tiempo de ejecución acceder a las propiedades de recursos de una aplicación para encontrar las versiones correctas de estos recursos para la aplicación.  

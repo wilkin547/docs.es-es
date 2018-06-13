@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1b48adcb8e9de49a312af77c8a9b80a07455ebfe
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432991"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity (Función)
 Compara dos identidades de ensamblado para determinar si son equivalentes.  

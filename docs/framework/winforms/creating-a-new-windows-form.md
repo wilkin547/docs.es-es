@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537786"
 ---
 # <a name="creating-a-new-windows-form"></a>Crear un nuevos Windows Forms
 Este tema contiene vínculos a temas que describen cómo crear su primera aplicación de Windows Forms. Además, los temas de esta sección presentan algunas directrices y vocabulario básico que debe conocer cuando empiece a crear una aplicación de Windows Forms. Para obtener más información acerca de las aplicaciones de Windows Forms, los controles que puede usar en ellas, eventos y control de eventos y cómo controlar los datos proporcionados por el usuario, consulte la lista de temas relacionados.  

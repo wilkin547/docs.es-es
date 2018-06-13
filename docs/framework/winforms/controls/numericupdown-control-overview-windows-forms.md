@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537166"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>Información general sobre el control NumericUpDown (formularios Windows Forms)
 El <xref:System.Windows.Forms.NumericUpDown> control es similar a una combinación de un cuadro de texto y un par de flechas en las que el usuario puede hacer clic para ajustar un valor. El control muestra y establece un valor numérico único en una lista de opciones de valor numérico fijas. El usuario puede aumentar y reducir el número, haga clic en arriba y abajo, presionando las teclas de dirección arriba y abajo, o escriba un número en el elemento de cuadro de texto del control. Al presionar la tecla flecha arriba desplaza el número en el valor máximo; al presionar la tecla de flecha abajo mueve el número hacia el valor mínimo.  

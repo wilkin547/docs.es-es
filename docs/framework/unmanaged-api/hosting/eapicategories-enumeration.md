@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f25348410387a7b0e03ef897e8534336baeb126a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432214"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories (Enumeración)
 Describe las categorías de funciones cuya ejecución en código de confianza parcial puede bloquear el host.  

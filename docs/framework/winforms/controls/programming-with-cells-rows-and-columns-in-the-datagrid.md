@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538546"
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Programar con celdas, filas y columnas en el control DataGridView de formularios Windows Forms
 Esta sección proporciona temas que explican diversas tareas de programación relacionadas con objetos de celda, fila y columna.  

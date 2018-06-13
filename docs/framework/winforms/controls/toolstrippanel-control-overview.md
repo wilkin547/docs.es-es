@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538495"
 ---
 # <a name="toolstrippanel-control-overview"></a>Información general del control ToolStripPanel
 A <xref:System.Windows.Forms.ToolStripPanel> proporciona un área única para colocar y compartir el espacio <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, y <xref:System.Windows.Forms.StatusStrip> controles. Varios <xref:System.Windows.Forms.ToolStrip> controles se apilan vertical u horizontalmente en función de la <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> de la <xref:System.Windows.Forms.ToolStripPanel>.  

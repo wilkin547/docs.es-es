@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: acf4f3f582e417c5e7b814622986427f996796ce
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432537"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel (Enumeración)
 Contiene valores que indican el impacto de un error cuando se ha solicitado una asignación de memoria concreta, pero no se puede satisfacer.  

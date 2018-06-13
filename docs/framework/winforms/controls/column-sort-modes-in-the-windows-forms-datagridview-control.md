@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529693"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Modos de ordenación de columnas del control DataGridView de formularios Windows Forms
 <xref:System.Windows.Forms.DataGridView> las columnas tienen tres modos de ordenación. El modo de ordenación para cada columna se especifica a través de la <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> propiedad de la columna, que puede establecerse en uno de los siguientes <xref:System.Windows.Forms.DataGridViewColumnSortMode> valores de enumeración.  

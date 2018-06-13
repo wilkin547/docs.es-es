@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754485"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;quitar&gt; elemento para connectionManagement (configuración de red)
 Quita una dirección IP o nombre DNS de la lista de administración de conexiones.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eb6a3e65b1f1d59cde3bff99e491bcf09816c8ad
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428063"
 ---
 # <a name="isymunmanagedwriterabort-method"></a>ISymUnmanagedWriter::Abort (Método)
 Cierra el escritor de símbolos sin confirmar los símbolos al almacén de símbolos. Después de esta llamada, el escritor de símbolos deja de ser válido para futuras actualizaciones. Para confirmar los símbolos y cerrar el escritor de símbolos, utilice el [ISymUnmanagedWriter:: Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) método en su lugar.  

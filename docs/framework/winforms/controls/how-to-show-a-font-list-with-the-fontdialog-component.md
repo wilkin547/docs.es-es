@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536503"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Cómo: Mostrar una lista de fuentes con el componente FontDialog
 El [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) componente permite a los usuarios seleccionar una fuente, así como para cambiar sus características de presentación, como el grosor y el tamaño.  

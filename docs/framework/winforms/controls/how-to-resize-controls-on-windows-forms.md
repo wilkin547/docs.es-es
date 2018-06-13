@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533931"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Cómo: Cambiar el tamaño de los controles en formularios Windows Forms
 Puede cambiar el tamaño de los controles individuales, y puede cambiar el tamaño varios controles del mismo o diferente tipo, como <xref:System.Windows.Forms.Button> y <xref:System.Windows.Forms.GroupBox> controles.  

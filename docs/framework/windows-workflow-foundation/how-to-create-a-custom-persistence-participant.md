@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517246"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Cómo: Crear un participante de persistencia personalizado
 El siguiente procedimiento describe los pasos para crear un participante de persistencia. Consulte la [participa en la persistencia](http://go.microsoft.com/fwlink/?LinkID=177735) ejemplo y [extensibilidad del almacén](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) tema para las implementaciones de ejemplo de participantes de persistencia.  

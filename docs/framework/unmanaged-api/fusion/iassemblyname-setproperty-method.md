@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bcfb584fc2380a7ae1567d3d4d6203b537676220
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429704"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty (Método)
 Establece el valor de la propiedad al que hace referencia el identificador de propiedad especificado.  

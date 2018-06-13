@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535274"
 ---
 # <a name="notifyicon-component-windows-forms"></a>NotifyIcon (Componente, formularios Windows Forms)
 Los formularios de Windows `NotifyIcon` componente muestra iconos en el área de notificación de estado de la barra de tareas para procesos que se ejecutan en segundo plano y no lo haría en caso contrario, tienen interfaces de usuario. Un ejemplo sería un programa antivirus al que se puede acceder haciendo clic en un icono en el área de notificación de estado de la barra de tareas.  

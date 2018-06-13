@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527539"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Cómo: Agregar botones a un control ToolBar mediante el Diseñador
 > [!NOTE]
