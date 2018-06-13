@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764728"
 ---
 # <a name="floating-point-numbers"></a><span data-ttu-id="4f03f-102">Números de punto flotante</span><span class="sxs-lookup"><span data-stu-id="4f03f-102">Floating-Point Numbers</span></span>
 <span data-ttu-id="4f03f-103">En este tema se describen algunos de los problemas que con frecuencia se encuentran los programadores al trabajar con números de punto flotante en [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4f03f-103">This topic describes some of the issues that developers frequently encounter when they work with floating-point numbers in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span></span> <span data-ttu-id="4f03f-104">Estos problemas se deben a la forma que los equipos almacenan los números de punto flotante y no son específicos de un proveedor determinado como <xref:System.Data.SqlClient> o <xref:System.Data.OracleClient>.</span><span class="sxs-lookup"><span data-stu-id="4f03f-104">These issues are caused by the way that computers store floating-point numbers, and are not specific to a particular provider such as <xref:System.Data.SqlClient> or <xref:System.Data.OracleClient>.</span></span>  

@@ -1,12 +1,6 @@
 ---
-title: "Usar un Socket de cliente sincrónico"
-ms.custom: 
+title: Usar un Socket de cliente sincrónico
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,21 +17,20 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 03595539d825f26251a24fce33ede2552b79b38b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c9101957c6c4b9961ca5985bda8b8f82d69b45d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397707"
 ---
-# <a name="using-a-synchronous-client-socket"></a><span data-ttu-id="4a6d1-102">Usar un Socket de cliente sincrónico</span><span class="sxs-lookup"><span data-stu-id="4a6d1-102">Using a Synchronous Client Socket</span></span>
-<span data-ttu-id="4a6d1-103">Un socket de cliente sincrónico suspende el programa de la aplicación mientras se completa la operación de red.</span><span class="sxs-lookup"><span data-stu-id="4a6d1-103">A synchronous client socket suspends the application program while the network operation completes.</span></span> <span data-ttu-id="4a6d1-104">Los sockets sincrónicos no son adecuados para las aplicaciones que hacen un uso intensivo de la red durante su funcionamiento, pero pueden proporcionar un acceso simple a los servicios de red para otras aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="4a6d1-104">Synchronous sockets are not suitable for applications that make heavy use of the network for their operation, but they can enable simple access to network services for other applications.</span></span>  
+# <a name="using-a-synchronous-client-socket"></a><span data-ttu-id="cc24c-102">Usar un Socket de cliente sincrónico</span><span class="sxs-lookup"><span data-stu-id="cc24c-102">Using a Synchronous Client Socket</span></span>
+<span data-ttu-id="cc24c-103">Un socket de cliente sincrónico suspende el programa de la aplicación mientras se completa la operación de red.</span><span class="sxs-lookup"><span data-stu-id="cc24c-103">A synchronous client socket suspends the application program while the network operation completes.</span></span> <span data-ttu-id="cc24c-104">Los sockets sincrónicos no son adecuados para las aplicaciones que hacen un uso intensivo de la red durante su funcionamiento, pero pueden proporcionar un acceso simple a los servicios de red para otras aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="cc24c-104">Synchronous sockets are not suitable for applications that make heavy use of the network for their operation, but they can enable simple access to network services for other applications.</span></span>  
   
- <span data-ttu-id="4a6d1-105">Para enviar datos, pase una matriz de bytes a uno de los métodos de datos de envío de la clase <xref:System.Net.Sockets.Socket> (<xref:System.Net.Sockets.Socket.Send%2A> y <xref:System.Net.Sockets.Socket.SendTo%2A>).</span><span class="sxs-lookup"><span data-stu-id="4a6d1-105">To send data, pass a byte array to one of the <xref:System.Net.Sockets.Socket> class's send-data methods (<xref:System.Net.Sockets.Socket.Send%2A> and <xref:System.Net.Sockets.Socket.SendTo%2A>).</span></span> <span data-ttu-id="4a6d1-106">En el ejemplo siguiente se codifica una cadena en un búfer de matriz de bytes mediante la propiedad <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> y luego se transmite el búfer al dispositivo de red mediante el método **Send**.</span><span class="sxs-lookup"><span data-stu-id="4a6d1-106">The following example encodes a string into a byte array buffer using the <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> property and then transmits the buffer to the network device using the **Send** method.</span></span> <span data-ttu-id="4a6d1-107">El método **Send** devuelve el número de bytes enviados al dispositivo de red.</span><span class="sxs-lookup"><span data-stu-id="4a6d1-107">The **Send** method returns the number of bytes sent to the network device.</span></span>  
+ <span data-ttu-id="cc24c-105">Para enviar datos, pase una matriz de bytes a uno de los métodos de datos de envío de la clase <xref:System.Net.Sockets.Socket> (<xref:System.Net.Sockets.Socket.Send%2A> y <xref:System.Net.Sockets.Socket.SendTo%2A>).</span><span class="sxs-lookup"><span data-stu-id="cc24c-105">To send data, pass a byte array to one of the <xref:System.Net.Sockets.Socket> class's send-data methods (<xref:System.Net.Sockets.Socket.Send%2A> and <xref:System.Net.Sockets.Socket.SendTo%2A>).</span></span> <span data-ttu-id="cc24c-106">En el ejemplo siguiente se codifica una cadena en un búfer de matriz de bytes mediante la propiedad <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> y luego se transmite el búfer al dispositivo de red mediante el método **Send**.</span><span class="sxs-lookup"><span data-stu-id="cc24c-106">The following example encodes a string into a byte array buffer using the <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> property and then transmits the buffer to the network device using the **Send** method.</span></span> <span data-ttu-id="cc24c-107">El método **Send** devuelve el número de bytes enviados al dispositivo de red.</span><span class="sxs-lookup"><span data-stu-id="cc24c-107">The **Send** method returns the number of bytes sent to the network device.</span></span>  
   
 ```vb  
 Dim msg As Byte() = _  
@@ -50,9 +43,9 @@ byte[] msg = System.Text.Encoding.ASCII.GetBytes("This is a test");
 int bytesSent = s.Send(msg);  
 ```  
   
- <span data-ttu-id="4a6d1-108">El método **Send** quita los bytes del búfer y los pone en cola con la interfaz de red que se enviará al dispositivo de red.</span><span class="sxs-lookup"><span data-stu-id="4a6d1-108">The **Send** method removes the bytes from the buffer and queues them with the network interface to be sent to the network device.</span></span> <span data-ttu-id="4a6d1-109">Es posible que la interfaz de red no envíe los datos inmediatamente, pero los enviará, siempre y cuando la conexión se cierre correctamente con el método <xref:System.Net.Sockets.Socket.Shutdown%2A>.</span><span class="sxs-lookup"><span data-stu-id="4a6d1-109">The network interface might not send the data immediately, but it will send it eventually, as long as the connection is closed normally with the <xref:System.Net.Sockets.Socket.Shutdown%2A> method.</span></span>  
+ <span data-ttu-id="cc24c-108">El método **Send** quita los bytes del búfer y los pone en cola con la interfaz de red que se enviará al dispositivo de red.</span><span class="sxs-lookup"><span data-stu-id="cc24c-108">The **Send** method removes the bytes from the buffer and queues them with the network interface to be sent to the network device.</span></span> <span data-ttu-id="cc24c-109">Es posible que la interfaz de red no envíe los datos inmediatamente, pero los enviará, siempre y cuando la conexión se cierre correctamente con el método <xref:System.Net.Sockets.Socket.Shutdown%2A>.</span><span class="sxs-lookup"><span data-stu-id="cc24c-109">The network interface might not send the data immediately, but it will send it eventually, as long as the connection is closed normally with the <xref:System.Net.Sockets.Socket.Shutdown%2A> method.</span></span>  
   
- <span data-ttu-id="4a6d1-110">Para recibir datos de un dispositivo de red, pase un búfer a uno de los métodos de datos de recepción de la clase **Socket** (<xref:System.Net.Sockets.Socket.Receive%2A> y <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>).</span><span class="sxs-lookup"><span data-stu-id="4a6d1-110">To receive data from a network device, pass a buffer to one of the **Socket** class's receive-data methods (<xref:System.Net.Sockets.Socket.Receive%2A> and <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>).</span></span> <span data-ttu-id="4a6d1-111">Los sockets sincrónicos suspenderán la aplicación hasta que se reciban bytes de la red o hasta que se cierre el socket.</span><span class="sxs-lookup"><span data-stu-id="4a6d1-111">Synchronous sockets will suspend the application until bytes are received from the network or until the socket is closed.</span></span> <span data-ttu-id="4a6d1-112">En el siguiente ejemplo se reciben datos de la red y se muestran en la consola.</span><span class="sxs-lookup"><span data-stu-id="4a6d1-112">The following example receives data from the network and then displays it on the console.</span></span> <span data-ttu-id="4a6d1-113">En el ejemplo se presupone que los datos procedentes de la red son texto codificado en ASCII.</span><span class="sxs-lookup"><span data-stu-id="4a6d1-113">The example assumes that the data coming from the network is ASCII-encoded text.</span></span> <span data-ttu-id="4a6d1-114">El método **Receive** devuelve el número de bytes recibidos de la red.</span><span class="sxs-lookup"><span data-stu-id="4a6d1-114">The **Receive** method returns the number of bytes received from the network.</span></span>  
+ <span data-ttu-id="cc24c-110">Para recibir datos de un dispositivo de red, pase un búfer a uno de los métodos de datos de recepción de la clase **Socket** (<xref:System.Net.Sockets.Socket.Receive%2A> y <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>).</span><span class="sxs-lookup"><span data-stu-id="cc24c-110">To receive data from a network device, pass a buffer to one of the **Socket** class's receive-data methods (<xref:System.Net.Sockets.Socket.Receive%2A> and <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>).</span></span> <span data-ttu-id="cc24c-111">Los sockets sincrónicos suspenderán la aplicación hasta que se reciban bytes de la red o hasta que se cierre el socket.</span><span class="sxs-lookup"><span data-stu-id="cc24c-111">Synchronous sockets will suspend the application until bytes are received from the network or until the socket is closed.</span></span> <span data-ttu-id="cc24c-112">En el siguiente ejemplo se reciben datos de la red y se muestran en la consola.</span><span class="sxs-lookup"><span data-stu-id="cc24c-112">The following example receives data from the network and then displays it on the console.</span></span> <span data-ttu-id="cc24c-113">En el ejemplo se presupone que los datos procedentes de la red son texto codificado en ASCII.</span><span class="sxs-lookup"><span data-stu-id="cc24c-113">The example assumes that the data coming from the network is ASCII-encoded text.</span></span> <span data-ttu-id="cc24c-114">El método **Receive** devuelve el número de bytes recibidos de la red.</span><span class="sxs-lookup"><span data-stu-id="cc24c-114">The **Receive** method returns the number of bytes received from the network.</span></span>  
   
 ```vb  
 Dim bytes(1024) As Byte  
@@ -68,7 +61,7 @@ Console.WriteLine("Echoed text = {0}",
     System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRec));  
 ```  
   
- <span data-ttu-id="4a6d1-115">Cuando el socket ya no sea necesario, deberá liberarlo llamando al método <xref:System.Net.Sockets.Socket.Shutdown%2A> y, luego, llamando al método **Close**.</span><span class="sxs-lookup"><span data-stu-id="4a6d1-115">When the socket is no longer needed, you need to release it by calling the <xref:System.Net.Sockets.Socket.Shutdown%2A> method and then calling the **Close** method.</span></span> <span data-ttu-id="4a6d1-116">En el ejemplo siguiente se libera un **Socket**.</span><span class="sxs-lookup"><span data-stu-id="4a6d1-116">The following example releases a **Socket**.</span></span> <span data-ttu-id="4a6d1-117">La enumeración <xref:System.Net.Sockets.SocketShutdown> define constantes que indican si se debe cerrar el socket para efectuar un envío, una recepción o ambos.</span><span class="sxs-lookup"><span data-stu-id="4a6d1-117">The <xref:System.Net.Sockets.SocketShutdown> enumeration defines constants that indicate whether the socket should be closed for sending, for receiving, or for both.</span></span>  
+ <span data-ttu-id="cc24c-115">Cuando el socket ya no sea necesario, deberá liberarlo llamando al método <xref:System.Net.Sockets.Socket.Shutdown%2A> y, luego, llamando al método **Close**.</span><span class="sxs-lookup"><span data-stu-id="cc24c-115">When the socket is no longer needed, you need to release it by calling the <xref:System.Net.Sockets.Socket.Shutdown%2A> method and then calling the **Close** method.</span></span> <span data-ttu-id="cc24c-116">En el ejemplo siguiente se libera un **Socket**.</span><span class="sxs-lookup"><span data-stu-id="cc24c-116">The following example releases a **Socket**.</span></span> <span data-ttu-id="cc24c-117">La enumeración <xref:System.Net.Sockets.SocketShutdown> define constantes que indican si se debe cerrar el socket para efectuar un envío, una recepción o ambos.</span><span class="sxs-lookup"><span data-stu-id="cc24c-117">The <xref:System.Net.Sockets.SocketShutdown> enumeration defines constants that indicate whether the socket should be closed for sending, for receiving, or for both.</span></span>  
   
 ```vb  
 s.Shutdown(SocketShutdown.Both)  
@@ -80,7 +73,7 @@ s.Shutdown(SocketShutdown.Both);
 s.Close();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4a6d1-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="4a6d1-118">See Also</span></span>  
- [<span data-ttu-id="4a6d1-119">Uso de un socket de cliente asincrónico</span><span class="sxs-lookup"><span data-stu-id="4a6d1-119">Using an Asynchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [<span data-ttu-id="4a6d1-120">Escuchas con sockets</span><span class="sxs-lookup"><span data-stu-id="4a6d1-120">Listening with Sockets</span></span>](../../../docs/framework/network-programming/listening-with-sockets.md)  
- [<span data-ttu-id="4a6d1-121">Ejemplo de sockets de cliente sincrónicos</span><span class="sxs-lookup"><span data-stu-id="4a6d1-121">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+## <a name="see-also"></a><span data-ttu-id="cc24c-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="cc24c-118">See Also</span></span>  
+ [<span data-ttu-id="cc24c-119">Uso de un socket de cliente asincrónico</span><span class="sxs-lookup"><span data-stu-id="cc24c-119">Using an Asynchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [<span data-ttu-id="cc24c-120">Escuchas con sockets</span><span class="sxs-lookup"><span data-stu-id="cc24c-120">Listening with Sockets</span></span>](../../../docs/framework/network-programming/listening-with-sockets.md)  
+ [<span data-ttu-id="cc24c-121">Ejemplo de sockets de cliente sincrónicos</span><span class="sxs-lookup"><span data-stu-id="cc24c-121">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
