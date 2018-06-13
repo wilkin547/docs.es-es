@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638335"
 ---
 # <a name="the-path-has-not-been-set"></a>No se ha establecido la ruta de acceso
 Se intentó realizar una operación de archivo, como mover o copiar un archivo, sin proporcionar la ruta de acceso necesaria. Esto puede ser el resultado de un análisis incorrecto de la ruta de acceso.  

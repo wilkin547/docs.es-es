@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636658"
 ---
 # <a name="file-already-exists"></a>El archivo ya existe
 Este error se produce al intentar asignar como nombre de un archivo nuevo el de un archivo existente o utilizar el comando **Guardar como** para guardar un proyecto cargado actualmente con un nombre que ya existe.  
