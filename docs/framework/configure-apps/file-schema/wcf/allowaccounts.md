@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352882"
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
 Contiene una colección de elementos de configuración especificada por el usuario cuentas para los procesos que hospedan servicios Windows Communication Foundation (WCF) y se concede el acceso de conexión al servicio de uso compartido.  

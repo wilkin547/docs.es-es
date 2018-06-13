@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525959"
 ---
 # <a name="recoloring-images"></a>Cambiar el color de las imágenes
 Cambio de color es el proceso de ajustar los colores de la imagen. Algunos ejemplos de cambio de color están cambiando un color a otro, ajuste de la intensidad del color en relación con otro color, ajustar el brillo o el contraste de todos los colores y convertir colores a tonalidades de gris.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541026"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Modo virtual del control DataGridView de formularios Windows Forms
 Con el modo virtual, puede administrar la interacción entre el <xref:System.Windows.Forms.DataGridView> control y una memoria caché de datos personalizados. Para implementar el modo virtual, establezca la <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> propiedad `true` y administrar uno o varios de los eventos descritos en este tema. Normalmente controlará por lo menos el `CellValueNeeded` eventos, lo que permite el control buscar valores en la caché de datos.  

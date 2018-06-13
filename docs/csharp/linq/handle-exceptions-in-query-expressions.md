@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284856"
 ---
 # <a name="handle-exceptions-in-query-expressions"></a>Controlar excepciones en expresiones de consulta
 

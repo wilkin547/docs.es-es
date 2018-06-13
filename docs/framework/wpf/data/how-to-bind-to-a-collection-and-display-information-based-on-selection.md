@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557416"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Cómo: Enlazar a una colección y mostrar información basada en la selección
 En un escenario principal-detalle simple, tiene un enlace de datos <xref:System.Windows.Controls.ItemsControl> como un <xref:System.Windows.Controls.ListBox>. En función de la selección del usuario, se muestra más información acerca del elemento seleccionado. Este ejemplo muestra cómo implementar este escenario.  

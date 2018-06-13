@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555995"
 ---
 # <a name="how-to-implement-property-change-notification"></a>Cómo: Implementar la notificación de cambio de propiedad
 Para admitir <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> de enlace para habilitar las propiedades de destino de enlace reflejar automáticamente los cambios dinámicos de origen del enlace (por ejemplo, para que el panel de vista previa que se actualizan automáticamente cuando el usuario edita un formulario), la clase debe proporcionar las notificaciones de cambio de propiedad apropiado. Este ejemplo muestra cómo crear una clase que implementa <xref:System.ComponentModel.INotifyPropertyChanged>.  

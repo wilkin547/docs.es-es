@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526082"
 ---
 # <a name="why-transformation-order-is-significant"></a>Importancia del orden de transformación
 Una sola <xref:System.Drawing.Drawing2D.Matrix> objeto puede almacenar una transformación o una secuencia de transformaciones. Se llama a este último una transformación compuesta. La matriz de una transformación compuesta se obtiene multiplicando las matrices de las transformaciones individuales.  
