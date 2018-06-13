@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590243"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>La expresión es un valor y, por lo tanto, no puede ser destino de una asignación
 Una instrucción intenta asignar un valor a una expresión. Puede asignar un valor únicamente a una variable de lectura, una propiedad o un elemento de matriz en tiempo de ejecución. En el ejemplo siguiente se muestra cómo puede producirse este error.  

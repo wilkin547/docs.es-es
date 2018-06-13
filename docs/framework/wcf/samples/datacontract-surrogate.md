@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507868"
 ---
 # <a name="datacontract-surrogate"></a>Suplente de DataContract
 Este ejemplo muestra cómo se pueden personalizar procesos como la serialización, la deserialización, la exportación e importación del esquema mediante una clase suplente de contrato de datos. Este ejemplo muestra cómo utilizar a un suplente en un escenario de cliente y el servidor donde se serializa y se transmiten entre un cliente de Windows Communication Foundation (WCF) y el servicio de datos.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327758"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Cómo: Controlar prefijos de espacio de nombres (C#) (LINQ to XML)
 En este tema se describe cómo puede controlar los prefijos de espacios de nombres al serializar un árbol XML.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590970"
 ---
 # <a name="principal-and-identity-objects"></a>Objetos Principal e Identity
 El código administrado puede descubrir la identidad o la función de una entidad de seguridad a través de un <xref:System.Security.Principal.IPrincipal> objeto, que contiene una referencia a un <xref:System.Security.Principal.IIdentity> objeto. La comparación de objetos Identity y Principal puede resultar útil en conceptos familiares, como cuentas de usuario y de grupo. En la mayoría de los entornos de red, las cuentas de usuario representan a personas o programas, mientras que las cuentas de grupo representan a ciertas categorías de usuarios y los derechos que poseen. De forma similar, los objetos Identity de .NET Framework representan a usuarios, mientras que los roles representan pertenencias y contextos de seguridad. En .NET Framework, el objeto Principal encapsula un objeto Identity y un rol. Las aplicaciones .NET Framework conceden derechos a la entidad de seguridad basándose en su identidad o, lo que es más normal, en su pertenencia a un rol.  

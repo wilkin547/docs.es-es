@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579332"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadatos y componentes autodescriptivos
 Hasta ahora, un componente de software (.exe o .dll) escrito en un lenguaje no podía usar fácilmente un componente de software escrito en otro lenguaje. COM supuso un paso adelante en la resolución de este problema. .NET Framework hace la interoperación entre componentes todavía más fácil, permitiendo que los compiladores emitan información de declaración adicional en todos los módulos y ensamblados. Esta información, denominada metadatos, contribuye a que los componentes interactúen sin problemas.  

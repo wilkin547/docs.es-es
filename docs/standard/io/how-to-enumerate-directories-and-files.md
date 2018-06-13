@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575855"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Cómo: Enumerar directorios y archivos
 Puede enumerar directorios y archivos utilizando métodos que devuelven una colección enumerable de cadenas de sus nombres. También puede utilizar métodos que devuelven una colección enumerable de objetos <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> o <xref:System.IO.FileSystemInfo>. Las colecciones enumerables ofrecen mayor rendimiento que las matrices cuando se trabaja con colecciones grandes de directorios y archivos.  

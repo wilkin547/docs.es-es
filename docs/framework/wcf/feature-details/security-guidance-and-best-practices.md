@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497508"
 ---
 # <a name="security-guidance-and-best-practices"></a>Orientación de seguridad y procedimientos recomendados
 Los temas de esta sección ofrece una guía y elementos a considerar al crear aplicaciones seguras de Windows Communication Foundation (WCF). Para obtener más información acerca de Windows Server AppFabric y seguridad, consulte [seguridad modelo para Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

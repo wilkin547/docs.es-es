@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590925"
 ---
 # <a name="key-security-concepts"></a>Conceptos clave de seguridad
 Microsoft .NET Framework ofrece seguridad basada en roles para ayudar a solucionar problemas de seguridad relativos a código móvil y para permitir que los componentes determinen qué usuarios tienen autorización para operar.  

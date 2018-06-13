@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576827"
 ---
 # <a name="building-xml-schemas"></a>Compilar esquemas XML
 Las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> se asignan a las estructuras definidas en la recomendación de esquemas XML del W3C (World Wide Web Consortium) y se pueden utilizar para compilar esquemas XML en memoria.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590269"
 ---
 # <a name="double-data-type-visual-basic"></a>Double (Tipo de datos, Visual Basic)
 Incluye números IEEE de 64 bits (8 bytes) precisión doble números de punto flotante que van de un valor de - 1, 79769313486231570E + 308 a - 4, 94065645841246544E-324 para los valores negativos y de 4, 94065645841246544E-324 a 1, 79769313486231570E + 308 para valores positivos. Los números de precisión doble almacenan una aproximación de un número real.  

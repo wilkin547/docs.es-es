@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592020"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Información general sobre los primitivos de sincronización
 <a name="top"></a> .NET Framework proporciona un intervalo de primitivas de sincronización para controlar las interacciones de subprocesos y evitar las condiciones de carrera. En líneas generales, estas pueden dividirse en tres categorías: operaciones de bloqueos, de señalización y de interbloqueos.  

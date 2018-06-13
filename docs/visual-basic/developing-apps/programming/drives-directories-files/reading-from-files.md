@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590804"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Leer archivos en Visual Basic
 En esta sección se explica cómo realizar tareas que se asocian a la lectura de archivos.  

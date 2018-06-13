@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501975"
 ---
 # <a name="multiple-endpoints"></a>Varios puntos de conexión
 El ejemplo de los puntos de conexión varios muestra cómo configurar varios puntos de conexión en un servicio y cómo comunicar con cada punto de conexión de un cliente. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). La configuración de servicio se ha modificado para definir dos extremos que admiten el contrato `ICalculator`, pero cada uno en una dirección diferente utilizando un enlace diferente. La configuración y el código del cliente se han modificado para comunicarse con ambos de los puntos de conexión del servicio.  

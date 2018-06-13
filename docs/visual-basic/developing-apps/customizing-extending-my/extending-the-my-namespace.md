@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591838"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Extender el espacio de nombres My en Visual Basic
 El `My` espacio de nombres en Visual Basic expone propiedades y métodos que permiten aprovechar fácilmente la eficacia de .NET Framework. El `My` simplifica el espacio de nombres de los problemas comunes de programación, a menudo reduce una tarea difícil en una sola línea de código. Además, el `My` espacio de nombres es totalmente extensible para que puedan personalizar el comportamiento de `My` y agregar nuevos servicios a su jerarquía para adaptarse a las necesidades específicas de aplicaciones. Este tema describe cómo personalizar los miembros existentes de la `My` espacio de nombres y cómo agregar sus propias clases personalizadas a la `My` espacio de nombres.  

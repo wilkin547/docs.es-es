@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765638"
 ---
 # <a name="entity-data-model-key-concepts"></a>Conceptos clave de Entity Data Model
 Entity Data Model (EDM) utiliza tres conceptos clave para describir la estructura de datos: *tipo de entidad*, *tipo de asociación*, y *propiedad*. Estos son los conceptos más importantes para describir la estructura de datos en cualquier implementación de EDM.  

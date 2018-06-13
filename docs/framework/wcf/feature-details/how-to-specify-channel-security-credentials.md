@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496856"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Cómo especificar las credenciales de seguridad de los canales
 El Moniker de servicio de Windows Communication Foundation (WCF) permite que las aplicaciones COM para llamar a los servicios WCF. La mayoría de los servicios WCF requieren que el cliente especificar las credenciales para la autenticación y autorización. Al llamar a un servicio WCF desde un cliente WCF, puede especificar estas credenciales en código administrado o en un archivo de configuración de aplicación. Al llamar a un servicio WCF desde una aplicación COM, puede usar el <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaz para especificar las credenciales. Este tema describe varias maneras de especificar credenciales mediante la interfaz <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  

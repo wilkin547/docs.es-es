@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593267"
 ---
 # <a name="this-key-is-already-associated-with-an-element-of-this-collection"></a>Esta clave ya está asociada con un elemento de esta colección
 La clave especificada para un miembro de la colección ya identifica a otro miembro de la colección. Una clave es una cadena especificada en el `Add` método que identifica de forma única un miembro específico de una colección.  

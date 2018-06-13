@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499198"
 ---
 # <a name="workflow-services"></a>Servicios de flujo de trabajo
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] le permite describir totalmente un servicio basado en flujo de trabajo mediante declaración en XAML. Puede definir un flujo de trabajo que implemente el servicio y describir los puntos de conexión que expone el servicio, todos completamente en XAML. Los temas de esta sección describen con detalle el modelo de programación que permite escribir servicios mediante declaración.  

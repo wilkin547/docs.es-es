@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595084"
 ---
 # <a name="ansi-visual-basic"></a>Ansi (Visual Basic)
 Especifica que Visual Basic debe calcular las referencias de todas las cadenas con valores de American National Standards Institute (ANSI) sin tener en cuenta el nombre del procedimiento externo que se declara.  
