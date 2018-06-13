@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760614"
 ---
 # <a name="sorting-and-filtering-data"></a><span data-ttu-id="da32f-102">Ordenar y filtrar datos</span><span class="sxs-lookup"><span data-stu-id="da32f-102">Sorting and Filtering Data</span></span>
 <span data-ttu-id="da32f-103">La <xref:System.Data.DataView> proporciona varias formas de ordenación y filtrado de datos en una <xref:System.Data.DataTable>:</span><span class="sxs-lookup"><span data-stu-id="da32f-103">The <xref:System.Data.DataView> provides several ways of sorting and filtering data in a <xref:System.Data.DataTable>:</span></span>  
