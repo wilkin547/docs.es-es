@@ -7,6 +7,7 @@ ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33840894"
 ---
 # <a name="keyword-reference"></a><span data-ttu-id="4c65b-103">Referencia de palabras clave</span><span class="sxs-lookup"><span data-stu-id="4c65b-103">Keyword Reference</span></span>
 
