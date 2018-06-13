@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569913"
 ---
 # <a name="character-escapes-in-regular-expressions"></a><span data-ttu-id="7cd12-102">Escapes de carácter en expresiones regulares</span><span class="sxs-lookup"><span data-stu-id="7cd12-102">Character Escapes in Regular Expressions</span></span>
 <span data-ttu-id="7cd12-103">La barra diagonal inversa (\\) en una expresión regular indica una de las siguientes situaciones:</span><span class="sxs-lookup"><span data-stu-id="7cd12-103">The backslash (\\) in a regular expression indicates one of the following:</span></span>  
