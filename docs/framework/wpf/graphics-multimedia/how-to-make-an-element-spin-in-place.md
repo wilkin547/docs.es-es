@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562516"
 ---
 # <a name="how-to-make-an-element-spin-in-place"></a>Cómo: Hacer que un elemento gire en su posición
 Este ejemplo muestra cómo hacer que un elemento de número utilizando un <xref:System.Windows.Media.RotateTransform> y <xref:System.Windows.Media.Animation.DoubleAnimation>.  

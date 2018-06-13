@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523772"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Cómo: Crear un nuevo valor de configuración en tiempo de diseño
 Puede crear una nueva configuración en tiempo de diseño mediante el Diseñador de configuración. El Diseñador de configuración es una interfaz de estilo de cuadrícula que le permite crear una nueva configuración y especificar propiedades para ver esas configuraciones. Debe especificar el nombre, valor, tipo y ámbito de la nueva configuración. Una vez que se crea una configuración, es accesible en el código.  

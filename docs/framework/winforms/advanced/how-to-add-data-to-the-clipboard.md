@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522072"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Cómo: Agregar datos al Portapapeles
 La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede usar para interactuar con la característica de Portapapeles del sistema operativo Windows. Muchas aplicaciones utilizan el Portapapeles como repositorio temporal para los datos. Por ejemplo, procesadores de textos utilizan el Portapapeles durante las operaciones de cortar y pegar. El Portapapeles también es útil para transferir datos desde una aplicación a otra.  

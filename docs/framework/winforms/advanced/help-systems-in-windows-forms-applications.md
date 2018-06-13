@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520726"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Sistemas de ayuda en aplicaciones de Windows Forms
 Una de las ventajas más importantes, como un desarrollador de aplicaciones, puede ofrecer a los usuarios es un sistema de ayuda eficaz. Esto es donde mostrará en color cuando estén confundidos o desorientados. Proporcionar un sistema de ayuda en una aplicación basada en Windows se realiza fácilmente mediante la [HelpProvider (componente)](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md).  

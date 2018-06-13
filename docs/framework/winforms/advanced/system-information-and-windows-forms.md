@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524120"
 ---
 # <a name="system-information-and-windows-forms"></a>Información del sistema y formularios Windows Forms
 A veces es necesario recopilar información sobre el equipo que se ejecuta en la aplicación con el fin de tomar decisiones en el código. Por ejemplo, podría tener una función que solo es aplicable cuando se conecta a un dominio de red determinado; en este caso necesitaría una manera de determinar el dominio y deshabilitar la función si el dominio no está presente.  

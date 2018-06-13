@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523093"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Cómo: Crear una colección de fuentes privada
 El <xref:System.Drawing.Text.PrivateFontCollection> clase hereda de la <xref:System.Drawing.Text.FontCollection> clase base abstracta. Puede usar un <xref:System.Drawing.Text.PrivateFontCollection> objeto para mantener un conjunto de fuentes específicamente para la aplicación. Una colección de fuentes privada puede incluir fuentes del sistema instaladas, así como las fuentes que no se hayan instalado en el equipo. Para agregar un archivo de fuente a una colección de fuentes privada, llame a la <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> método de una <xref:System.Drawing.Text.PrivateFontCollection> objeto.  

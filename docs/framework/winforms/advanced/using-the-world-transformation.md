@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523688"
 ---
 # <a name="using-the-world-transformation"></a>Utilizar la transformación de coordenadas universales
 La transformación universal es una propiedad de la <xref:System.Drawing.Graphics> clase. Los números que especifican la transformación universal se almacenan en un <xref:System.Drawing.Drawing2D.Matrix> objeto, que representa una matriz de 3 x 3. El <xref:System.Drawing.Drawing2D.Matrix> y <xref:System.Drawing.Graphics> clases tienen varios métodos para establecer los números en la matriz de transformación universal.  

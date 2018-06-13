@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522881"
 ---
 # <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Cómo: Capturar datos proporcionados por el usuario de un componente PrintDialog en tiempo de ejecución
 Aunque puede establecer opciones relacionadas con la impresión en tiempo de diseño, en ocasiones, deseará cambiar estas opciones en tiempo de ejecución, probablemente debido a las opciones elegidas por el usuario. Puede capturar proporcionados por el usuario para imprimir un documento utilizando el <xref:System.Windows.Forms.PrintDialog> y <xref:System.Drawing.Printing.PrintDocument> componentes.  

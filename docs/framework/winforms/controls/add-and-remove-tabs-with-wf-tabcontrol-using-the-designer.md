@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525274"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Cómo: Agregar y quitar fichas de un control TabControl de formularios Windows Forms mediante el Diseñador
 Cuando coloca un <xref:System.Windows.Forms.TabControl> control en el formulario, contiene dos pestañas de forma predeterminada. Puede agregar o quitar fichas mediante el diseñador.  

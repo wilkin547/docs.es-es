@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572228"
 ---
 # <a name="xml-processing-options"></a>Opciones de procesamiento XML
 Consulte las tablas siguientes para obtener una lista de tecnologías de Microsoft que puede usar para procesar los datos XML.  

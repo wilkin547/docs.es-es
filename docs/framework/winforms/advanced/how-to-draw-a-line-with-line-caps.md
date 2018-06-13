@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523226"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>Cómo: Dibujar una línea con extremos de línea
 Puede dibujar el inicio o el final de una línea en una de varias formas llamadas extremos de línea. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] admite varios extremos de línea, como redondo, cuadrado, rombo y punta de flecha.  

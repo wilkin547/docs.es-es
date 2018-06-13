@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523801"
 ---
 # <a name="using-transformations-in-managed-gdi"></a>Usar transformaciones en la interfaz GDI+ administrada
 Transformaciones afines incluyen la rotación, escala, reflejar, distorsionar y traducir. En [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], la <xref:System.Drawing.Drawing2D.Matrix> clase proporciona la base para realizar transformaciones afines en dibujos vectoriales, imágenes y texto.  

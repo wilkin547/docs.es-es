@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520362"
 ---
 # <a name="dynamic-update"></a>actualización dinámica
 La actualización dinámica proporciona un mecanismo para que los desarrolladores de aplicaciones de flujo de trabajo actualicen la definición de flujo de trabajo de una instancia de flujo de trabajo persistente. Puede ser para implementar una corrección de errores, nuevos requisitos o acomodar cambios inesperados. Este tema proporciona información general sobre la funcionalidad de actualización dinámica presentada en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

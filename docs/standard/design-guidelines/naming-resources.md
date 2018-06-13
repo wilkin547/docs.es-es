@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571191"
 ---
 # <a name="naming-resources"></a>Asignar nombres a recursos
 Porque los recursos localizables se pueden hacer referencia a través de ciertos objetos como si fueran propiedades, las instrucciones de nomenclatura para los recursos son similares a las directrices de propiedad.  

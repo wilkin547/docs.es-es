@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523164"
 ---
 # <a name="global-and-local-transformations"></a>Transformaciones globales y locales
 Una transformación global es una transformación que se aplica a todos los elementos dibujados por un determinado <xref:System.Drawing.Graphics> objeto. En cambio, una transformación local es una transformación que se aplica a un elemento específico que se va a dibujar.  

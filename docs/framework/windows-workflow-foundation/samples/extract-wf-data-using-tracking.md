@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519878"
 ---
 # <a name="extract-wf-data-using-tracking"></a>Extraer datos de WF mediante seguimiento
 En este ejemplo se muestra cómo utilizar el seguimiento del flujo de trabajo para extraer variables de flujo de trabajo y argumentos de las actividades. También muestra cómo agregar anotaciones a los registros de seguimiento y cómo extraer una carga de datos en los registros de seguimiento personalizados. En el ejemplo se utiliza el participante de seguimiento de Seguimiento de eventos para Windows (ETW) para extraer datos del flujo de trabajo.  

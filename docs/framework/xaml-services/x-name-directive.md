@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565855"
 ---
 # <a name="xname-directive"></a>x:Name (Directiva)
 Identifica de forma única los elementos definidos por el XAML en un ámbito de nombres XAML. Ámbitos de nombres XAML y sus modelos de unicidad pueden aplicarse a los objetos con instancias, cuando marcos de trabajo proporcionan API o implementan comportamientos que tienen acceso al gráfico de objetos creados por el XAML en tiempo de ejecución.  

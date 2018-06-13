@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522920"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>Cómo: Dibujar texto con GDI
 Con el <xref:System.Windows.Forms.TextRenderer.DrawText%2A> método en el <xref:System.Windows.Forms.TextRenderer> (clase), puede tener acceso a [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] funcionalidad para dibujar texto en un formulario o control. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] representación de texto normalmente ofrece un mejor rendimiento y una medida de texto más preciso [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
