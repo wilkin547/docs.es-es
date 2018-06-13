@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544877"
 ---
 # <a name="how-to-automatically-size-a-window-to-fit-its-content"></a>Cómo: cambiar automáticamente el tamaño de una ventana para ajustar su contenido
 Este ejemplo muestra cómo establecer el <xref:System.Windows.Window.SizeToContent%2A> propiedad para especificar cómo cambia el tamaño de una ventana para ajustar su contenido.  

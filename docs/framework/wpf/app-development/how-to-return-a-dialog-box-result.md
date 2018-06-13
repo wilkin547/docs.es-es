@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545592"
 ---
 # <a name="how-to-return-a-dialog-box-result"></a>Cómo: devolver un resultado de cuadro de diálogo
 Este ejemplo muestra cómo recuperar el resultado de cuadro de diálogo de una ventana que se abre mediante una llamada a <xref:System.Windows.Window.ShowDialog%2A>.  

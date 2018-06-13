@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544237"
 ---
 # <a name="input-wpf"></a>Entrada (WPF)
 Windows Presentation Foundation (WPF) incluye compatibilidad con varios tipos de entrada. Esta entrada incluye texto, táctil, mouse, comandos, foco, entrada táctil, arrastrar y colocar y entrada de lápiz digital. Esta sección describe temas relacionados con la entrada en WPF.  

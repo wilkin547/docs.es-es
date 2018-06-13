@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545303"
 ---
 # <a name="how-to-manipulate-a-table39s-columns-through-the-columns-property"></a>Cómo: manipular una tabla&#39;s columnas mediante la propiedad Columns
 Este ejemplo muestra algunas de las operaciones más comunes que pueden realizarse en las columnas de una tabla a través de la <xref:System.Windows.Documents.Table.Columns%2A> propiedad.  

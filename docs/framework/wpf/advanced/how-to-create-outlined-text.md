@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544970"
 ---
 # <a name="how-to-create-outlined-text"></a>Cómo: Crear texto con contorno
 En la mayoría de los casos, al agregar ornamentación a las cadenas de texto en su [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicación, se utiliza el texto considerándolo una colección de caracteres discretos, o glifos. Por ejemplo, podría crear un pincel de degradado lineal y aplicarlo a la <xref:System.Windows.Controls.Control.Foreground%2A> propiedad de un <xref:System.Windows.Controls.TextBox> objeto. Al mostrar o editar el cuadro de texto, el pincel de degradado lineal se aplica automáticamente al conjunto actual de caracteres de la cadena de texto.  

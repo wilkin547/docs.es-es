@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547987"
 ---
 # <a name="how-to-get-and-set-the-main-application-window"></a>Cómo: obtener y establecer la ventana de la aplicación principal
 En este ejemplo se muestra cómo obtener y establecer la ventana de la aplicación principal.  

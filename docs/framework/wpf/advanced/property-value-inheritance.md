@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547399"
 ---
 # <a name="property-value-inheritance"></a>Herencia de valores de propiedad
 La herencia de valores de propiedad es una característica del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. La herencia de valores de propiedad permite que los elementos secundarios de un árbol de elementos obtengan el valor de una propiedad determinada de los elementos principales y que hereden ese valor tal como se estableció en cualquier otro lugar del elemento principal más cercano. Es posible que el elemento principal también haya obtenido su valor a través de la herencia de valores de propiedad, por lo que el sistema se repite potencialmente hasta la raíz de la página. La herencia de valores de propiedad no es el comportamiento del sistema de propiedades predeterminado: es necesario establecer una propiedad con un valor de metadatos concreto para que inicie la herencia de valores de propiedad en elementos secundarios.  

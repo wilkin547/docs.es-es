@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547146"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>Compilar e implementar aplicaciones WPF
 El modelo de compilación e implementación proporciona la capacidad de crear e implementar aplicaciones de forma local y remota, incluidas las siguientes:  
