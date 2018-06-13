@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491994"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Cómo: Establecer una confirmación de firma
 *Confirmación de firma* es un mecanismo para que un iniciador de mensaje para asegurarse de que se generó una respuesta recibida en respuesta al mensaje original del remitente. La confirmación de la firma se define en la especificación WS-Security 1.1. Si un punto de conexión admite WS-Security 1.0, no puede utilizar la confirmación de firma.  

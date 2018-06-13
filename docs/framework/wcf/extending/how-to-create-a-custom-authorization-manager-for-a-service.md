@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490449"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Cómo crear un administrador de autorización personalizado para un servicio
 La infraestructura del modelo de identidad en Windows Communication Foundation (WCF) admite un modelo de autorización extensible basada en notificaciones. Las demandas se extraen de los tokens y opcionalmente son procesadas por directivas de autorización personalizadas y, a continuación, colocadas en <xref:System.IdentityModel.Policy.AuthorizationContext>. Un administrador de autorización examina las demandas en <xref:System.IdentityModel.Policy.AuthorizationContext> para tomar las decisiones de autorización.  

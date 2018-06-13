@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493355"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Cómo: Ver certificados con el complemento de MMC
 Un tipo común de credencial es el certificado X.509. Al crear servicios o clientes seguros, puede especificar que un certificado se utilice como la credencial del cliente o servicio utilizando métodos como el método <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>. El método requiere varios parámetros, como el almacén donde se guarda el certificado y un valor que utilizar al buscar el certificado. El siguiente procedimiento muestra cómo examinar los almacenes de un equipo para encontrar un certificado adecuado. Para obtener un ejemplo de encontrar la huella digital del certificado, consulte [Cómo: recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  

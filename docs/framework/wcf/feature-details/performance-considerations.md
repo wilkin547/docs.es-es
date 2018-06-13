@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490840"
 ---
 # <a name="performance-considerations"></a>Consideraciones sobre el rendimiento
 Las consideraciones de rendimiento siempre son importantes al crear aplicaciones. Esta sección contiene entradas relacionadas con el rendimiento y la seguridad.  

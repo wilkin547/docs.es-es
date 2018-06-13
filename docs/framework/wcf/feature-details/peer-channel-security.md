@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494509"
 ---
 # <a name="peer-channel-security"></a>Seguridad del canal del mismo nivel
 El canal del mismo nivel admite varios tipos de aplicaciones distribuidas que dependen de la mensajería entre varias entidades. Algunos ejemplos incluyen la distribución del contenido a escala de Internet, donde una fuente de confianza distribuye contenido (como multimedia o actualizaciones de software), un grupo de amigos intercambian música y fotos, o un equipo de compañeros de trabajo editan conjuntamente un documento. Cada uno de estos escenarios requiere un modelo de seguridad único. El modelo de seguridad del canal del mismo nivel está diseñado para resolver estos escenarios y proporciona un modelo de seguridad robusto para las necesidades respectivas de los diferentes modelos de identidad, autenticación y autorización.  

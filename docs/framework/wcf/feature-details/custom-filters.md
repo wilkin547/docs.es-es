@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489760"
 ---
 # <a name="custom-filters"></a>Filtros personalizados
 Los filtros personalizados le permiten definir una lógica coincidente que no se puede lograr mediante los filtros de mensajes proporcionados por el sistema. Por ejemplo, puede crear un filtro personalizado que aplique un algoritmo hash a un elemento de mensaje determinado y, a continuación, examine el valor para determinar si el filtro debería indicar verdadero o falso.  

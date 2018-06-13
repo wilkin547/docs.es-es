@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271034"
 ---
 # <a name="-operator-c-reference"></a>. Operador (Referencia de C#)
 El operador punto (`.`) se usa para el acceso a miembros. El operador punto especifica un miembro de un tipo o espacio de nombres. Por ejemplo, el operador punto se usa para tener acceso a métodos específicos de las bibliotecas de clases de .NET Framework:  

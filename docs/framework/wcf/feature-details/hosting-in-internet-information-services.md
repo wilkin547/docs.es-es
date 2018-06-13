@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494119"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hospedaje en Internet Information Services
 Es una opción de hospedaje de servicios de Windows Communication Foundation (WCF) dentro de una aplicación de Internet Information Services (IIS). Este modelo de hospedaje es similar al modelo utilizado por [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y los servicios Web ASP.NET (ASMX).  

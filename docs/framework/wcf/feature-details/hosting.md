@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489403"
 ---
 # <a name="hosting"></a>Hospedaje
 Los temas de esta sección describen el hospedaje de servicios. Se puede hospedar un servicio por Internet Information Services (IIS), servicio de activación de proceso de Windows (WAS), Windows Server AppFabric, un servicio de Windows o una aplicación administrada, esta opción se conoce a menudo como *hospedaje propio*.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492728"
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>Cómo crear un servicio que requiere sesiones
 Las sesiones crean un estado compartido entre dos o más puntos de conexión que habilita características útiles como las devoluciones de llamada, la seguridad de saltos múltiples y asociaciones entre clientes e instancias de servicio. Para obtener más información acerca de las sesiones en las aplicaciones de Windows Communication Foundation (WCF), consulte [mediante sesiones](../../../../docs/framework/wcf/using-sessions.md).  

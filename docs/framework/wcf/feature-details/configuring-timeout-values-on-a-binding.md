@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489614"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Configuración de los valores de tiempo de espera en un enlace
 Hay varias configuraciones de tiempo de espera disponibles en los enlaces de WCF. Establecer estas configuraciones de tiempo de espera correctamente puede mejorar no solo el rendimiento del servicio sino también desempeñar un papel en la facilidad de uso y la seguridad del servicio. Los tiempos de espera siguientes están disponibles en los enlaces de WCF:  

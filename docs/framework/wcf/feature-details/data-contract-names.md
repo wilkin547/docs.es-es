@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494275"
 ---
 # <a name="data-contract-names"></a>Nombres de contratos de datos
 A veces un cliente y un servicio no comparten los mismos tipos. Todavía pueden pasar datos entre sí porque los contratos de datos son equivalentes en ambos lados. [Equivalencia del contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) se basa en el contrato de datos y nombres de miembro de datos, y, por tanto, se proporciona un mecanismo para asignar los tipos y miembros a esos nombres. En este tema se explica las reglas para asignar nombres a los contratos de datos, así como el comportamiento predeterminado de la infraestructura de Windows Communication Foundation (WCF) al crear nombres.  

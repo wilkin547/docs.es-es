@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495540"
 ---
 # <a name="choosing-a-transport"></a>Elección del transporte
 En este tema se analiza los criterios para elegir entre los tres transportes principales que se incluyen en Windows Communication Foundation (WCF): HTTP, TCP y canalizaciones con nombre. WCF también incluye un message Queue Server (también conocido como MSMQ) de transporte, pero este documento no cubre message Queue Server.  

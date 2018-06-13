@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494737"
 ---
 # <a name="saml-tokens-and-claims"></a>Tokens y notificaciones SAML
 Lenguaje de marcado de aserciones de seguridad (SAML) *tokens* son representaciones XML de notificaciones. De forma predeterminada, Windows Communication Foundation (WCF) que se usa en escenarios de seguridad federada de tokens SAML son *tokens emitidos*.  

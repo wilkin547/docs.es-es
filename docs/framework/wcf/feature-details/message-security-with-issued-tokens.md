@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491191"
 ---
 # <a name="message-security-with-issued-tokens"></a>Seguridad de los mensajes con tokens emitidos
 El cliente del token emitido habilita el escenario de seguridad federada en Windows Communication Foundation (WCF).  

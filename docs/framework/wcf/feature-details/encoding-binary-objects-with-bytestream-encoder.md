@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489487"
 ---
 # <a name="encoding-binary-objects-with-bytestream-encoder"></a>Codificar objetos binarios con codificador de ByteStream
 Enviar y recibir datos binarios sin formato con Windows Communication Foundation (WCF) se configuren mediante <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>.  

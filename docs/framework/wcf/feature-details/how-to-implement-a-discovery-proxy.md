@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496717"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Cómo: Implementar un proxy de detección
 En este tema se explica cómo implementar un proxy de detección. Para obtener más información acerca de la característica de detección de Windows Communication Foundation (WCF), consulte [información general sobre la detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Puede implementarse un proxy de detección creando una clase que extienda la clase abstracta <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Hay otras clases de compatibiildad definidas y usadas en este ejemplo. `OnResolveAsyncResult`, `OnFindAsyncResult` y `AsyncResult`. Estas clases implementan la interfaz <xref:System.IAsyncResult>. Para obtener más información acerca de <xref:System.IAsyncResult> vea [interfaz System.IAsyncResult](xref:System.IAsyncResult).

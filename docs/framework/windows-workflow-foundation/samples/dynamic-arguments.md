@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517983"
 ---
 # <a name="dynamic-arguments"></a>Argumentos dinámicos
 En este ejemplo se muestra cómo implementar una actividad para la que define los argumentos el consumidor de la actividad y no su autor. Para ello se invalida la forma en que el motor en tiempo de ejecución construye los metadatos de la actividad.  

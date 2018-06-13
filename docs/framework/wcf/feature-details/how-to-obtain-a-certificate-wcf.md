@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491512"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Cómo obtener un certificado (WCF)
 Para usar cualquiera de Windows Communication Foundation (WCF) características de los usan certificados X.509, obtener primero los certificados.  

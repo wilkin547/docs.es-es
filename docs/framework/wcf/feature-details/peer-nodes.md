@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491540"
 ---
 # <a name="peer-nodes"></a>Nodos del mismo nivel
 PeerNode es un punto de conexión único en una malla de canal del mismo nivel. Una aplicación puede tener varios nodos del mismo nivel que participan en mallas diferentes. Por ejemplo, una aplicación de conversación punto a punto puede formar parte de dos mallas independientes: una para charlar con amigos de la universidad y otra para charlar con compañeros de trabajo.  

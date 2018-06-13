@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493609"
 ---
 # <a name="how-to-error-handling"></a>Cómo: Control de errores
 Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que utiliza el control de errores. En este ejemplo, los mensajes se enrutan a un extremo de destino. Si un mensaje no se puede entregar debido a un error de la red o relacionado con las comunicaciones (<xref:System.ServiceModel.CommunicationException>), el mensaje se reenvía a un extremo alternativo.  

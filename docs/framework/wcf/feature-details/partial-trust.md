@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492016"
 ---
 # <a name="partial-trust"></a>Confianza parcial
 Al iniciar con [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)], los llamadores de confianza parcial pueden tener acceso a los tipos y métodos públicos implementados en <xref:System.ServiceModel>, <xref:System.Runtime.Serialization>y <xref:System.ServiceModel.Web>. Esta sección describen los escenarios admitidos para el uso de Windows Communication Foundation (WCF) dentro de una aplicación de confianza parcial, así como el subconjunto limitado de funciones WCF disponibles para aplicaciones que se ejecutan con seguridad de acceso del código reducida (CAS) permisos.  

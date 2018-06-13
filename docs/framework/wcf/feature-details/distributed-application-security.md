@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496170"
 ---
 # <a name="distributed-application-security"></a>Seguridad distribuida de aplicaciones
 Seguridad de Windows Communication Foundation (WCF) se divide en tres áreas funcionales principales: transferencia de seguridad, control de acceso y auditoría. La seguridad de transferencia proporciona integridad, confidencialidad y autenticación. La seguridad de transferencia la proporciona uno de los siguientes elementos: seguridad de transporte, seguridad de mensajes o `TransportWithMessageCredential`.  

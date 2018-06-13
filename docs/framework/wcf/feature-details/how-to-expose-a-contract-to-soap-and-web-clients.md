@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494155"
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Cómo exponer un contrato a clientes web y de SOAP
 De forma predeterminada, Windows Communication Foundation (WCF) hace que los extremos estén disponibles solo a los clientes SOAP. En [Cómo: crear un servicio básico de HTTP de Web de WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), un punto de conexión están disponible para los clientes no sea SOAP. Puede haber veces en las que desee poner el mismo contrato a disposición de ambos modos, como, por ejemplo, un punto de conexión web y un punto de conexión SOAP. En este tema se muestra un ejemplo sobre cómo hacerlo.  

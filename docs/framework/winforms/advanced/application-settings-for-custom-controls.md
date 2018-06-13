@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518569"
 ---
 # <a name="application-settings-for-custom-controls"></a>Configuración de la aplicación para controles personalizados
 Debe finalizar determinadas tareas para proporcionar a los controles personalizados la capacidad para conservar la configuración de la aplicación cuando se hospedan los controles en aplicaciones de otros fabricantes.  
