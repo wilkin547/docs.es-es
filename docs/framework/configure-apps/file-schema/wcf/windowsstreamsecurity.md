@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755115"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a><span data-ttu-id="620e9-102">&lt;inicial de windowsStreamSecurity&gt;</span><span class="sxs-lookup"><span data-stu-id="620e9-102">&lt;windowsStreamSecurity&gt;</span></span>
 <span data-ttu-id="620e9-103">Especifique configuración de seguridad de secuencia de Windows del enlace personalizado.</span><span class="sxs-lookup"><span data-stu-id="620e9-103">Specify Windows stream security settings of the custom binding.</span></span>  

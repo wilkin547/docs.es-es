@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766041"
 ---
 # <a name="the-shape-of-the-command-trees"></a><span data-ttu-id="6998d-102">Forma de los árboles de comandos</span><span class="sxs-lookup"><span data-stu-id="6998d-102">The Shape of the Command Trees</span></span>
 <span data-ttu-id="6998d-103">El módulo de generación de SQL es responsable de la generación de una consulta SQL back-end específica en función de una expresión determinada del árbol de comandos de consulta de entrada.</span><span class="sxs-lookup"><span data-stu-id="6998d-103">The SQL generation module is responsible for generating a backend specific SQL query based on a given input query command tree expression.</span></span> <span data-ttu-id="6998d-104">En esta sección se describen las características, propiedades y estructura de los árboles de comandos de consulta.</span><span class="sxs-lookup"><span data-stu-id="6998d-104">This section discusses the characteristics, properties, and structure of the query command trees.</span></span>  

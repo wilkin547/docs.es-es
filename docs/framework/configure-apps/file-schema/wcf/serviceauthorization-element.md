@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751459"
 ---
 # <a name="ltserviceauthorizationgt-element"></a><span data-ttu-id="fe883-102">&lt;serviceAuthorization&gt; (elemento)</span><span class="sxs-lookup"><span data-stu-id="fe883-102">&lt;serviceAuthorization&gt; element</span></span>
 <span data-ttu-id="fe883-103">Especifica valores que autorizan que el acceso repare las operaciones</span><span class="sxs-lookup"><span data-stu-id="fe883-103">Specifies settings that authorize access to service operations</span></span>  

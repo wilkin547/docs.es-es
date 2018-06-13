@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328560"
 ---
 # <a name="linq-to-xml-c"></a><span data-ttu-id="4c840-102">LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="4c840-102">LINQ to XML (C#)</span></span>
 <span data-ttu-id="4c840-103">LINQ to XML proporciona una interfaz de programación XML en memoria que aprovecha .NET Language-Integrated Query (LINQ) Framework.</span><span class="sxs-lookup"><span data-stu-id="4c840-103">LINQ to XML provides an in-memory XML programming interface that leverages the .NET Language-Integrated Query (LINQ) Framework.</span></span> <span data-ttu-id="4c840-104">LINQ to XML usa las características más recientes del lenguaje .NET Framework y es comparable a una actualizada y rediseñada interfaz de programación XML para el Modelo de objetos de documento (DOM).</span><span class="sxs-lookup"><span data-stu-id="4c840-104">LINQ to XML uses the latest .NET Framework language capabilities and is comparable to an updated, redesigned Document Object Model (DOM) XML programming interface.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315794"
 ---
 # <a name="private-constructors-c-programming-guide"></a><span data-ttu-id="70915-102">Constructores privados (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="70915-102">Private Constructors (C# Programming Guide)</span></span>
 <span data-ttu-id="70915-103">Un constructor privado es un constructor de instancia especial.</span><span class="sxs-lookup"><span data-stu-id="70915-103">A private constructor is a special instance constructor.</span></span> <span data-ttu-id="70915-104">Se usa generalmente en clases que contienen solo miembros estáticos.</span><span class="sxs-lookup"><span data-stu-id="70915-104">It is generally used in classes that contain static members only.</span></span> <span data-ttu-id="70915-105">Si una clase tiene uno o más constructores privados y ningún constructor público, el resto de clases (excepto las anidadas) no podrán crear instancias de esta clase.</span><span class="sxs-lookup"><span data-stu-id="70915-105">If a class has one or more private constructors and no public constructors, other classes (except nested classes) cannot create instances of this class.</span></span> <span data-ttu-id="70915-106">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="70915-106">For example:</span></span>  
