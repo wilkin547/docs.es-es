@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 050bfb08dfd95e29b6534f69dbd35400d59e6099
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419609"
 ---
 # <a name="icordebugthreadenumnext-method"></a>ICorDebugThreadEnum::Next (Método)
 Obtiene el número de instancias de ICorDebugThread especificadas de la enumeración, comenzando en la posición actual.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537881"
 ---
 # <a name="windows-forms-coordinates"></a>Coordenadas de formularios Windows Forms
 El sistema de coordenadas de un formulario Windows Forms se basa en coordenadas de dispositivo y la unidad básica de medida al dibujar en formularios Windows Forms es la unidad de dispositivo (normalmente, el píxel). Puntos en la pantalla se describen mediante pares de coordenadas x e y, con las coordenadas x aumentando hacia la derecha y las coordenadas aumenta de arriba a abajo. La ubicación de origen, con respecto a la pantalla, variará dependiendo de si está especificando coordenadas de pantalla o el cliente.  

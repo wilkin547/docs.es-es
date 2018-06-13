@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640562"
 ---
 # <a name="specified-registry-path-does-not-start-with-a-valid-hive-name"></a>La ruta de acceso del registro especificada no empieza por un nombre de sección válido.
 La ruta de acceso del registro especificada no empieza por un nombre de sección válido. Los nombres de sección válidos son:  

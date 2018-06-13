@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568789"
 ---
 # <a name="inferring-an-xml-schema"></a>Deducción de esquema XML
 Describe cómo utilizar la clase del Modelo de objetos de esquema (SOM) <xref:System.Xml.Schema.XmlSchemaInference> para deducir un lenguaje de definición de esquema XML a partir de la estructura de un documento XML.  

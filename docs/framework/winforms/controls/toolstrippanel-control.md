@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535433"
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel (Control)
 El control `ToolStripPanel` habilita el uso compartido de espacio horizontal o vertical dentro del área de herramientas cuando se acopla y la disposición de controles <xref:System.Windows.Forms.ToolStrip> cuando no necesita los cuatro paneles y el panel central de un control <xref:System.Windows.Forms.ToolStripContainer>.  

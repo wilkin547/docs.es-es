@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393834"
 ---
 # <a name="runtime-changes-in-the-net-framework"></a>Cambios en tiempo de ejecución en .NET Framework
 

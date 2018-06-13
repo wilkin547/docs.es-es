@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741859"
 ---
 # <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;agregar&gt; elemento para schemeSettings (configuración de Uri)
 Agrega un valor de esquema para un nombre de esquema.  

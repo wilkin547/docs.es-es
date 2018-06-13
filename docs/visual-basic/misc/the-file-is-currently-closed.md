@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639547"
 ---
 # <a name="the-file-is-currently-closed"></a>El archivo está actualmente cerrado
 Se ha intentado realizar una operación que solo se puede realizar en un archivo abierto, pero el archivo está actualmente cerrado.  

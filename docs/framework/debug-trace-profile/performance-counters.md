@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394425"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de rendimiento de .NET Framework
 En este tema se proporciona una lista de los contadores de rendimiento que se pueden encontrar en el [Monitor de rendimiento](http://technet.microsoft.com/library/cc749249.aspx).  

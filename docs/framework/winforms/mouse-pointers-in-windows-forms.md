@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539522"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Punteros del mouse (ratón) en formularios Windows Forms
 El mouse *puntero*, que a veces se conoce como el cursor es un mapa de bits que especifica un punto de enfoque en la pantalla para la entrada de usuario con el mouse. En este tema se proporciona información general del puntero del mouse (ratón) en formularios Windows Forms y describe algunas de las formas para modificar y controlar el puntero del mouse.  

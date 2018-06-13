@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394048"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>Acerca del espacio de nombres System.Net.PeerToPeer.Collaboration
 El espacio de nombres <xref:System.Net.PeerToPeer.Collaboration> proporciona clases y API que se usan para implementar actividades de colaboración de punto a punto mediante la infraestructura de colaboración de punto a punto.  

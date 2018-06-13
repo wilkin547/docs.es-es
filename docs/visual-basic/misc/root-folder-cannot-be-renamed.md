@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639578"
 ---
 # <a name="root-folder-cannot-be-renamed"></a>No se puede cambiar el nombre de la carpeta raíz
 Se ha intentado cambiar el nombre del directorio raíz. Esto puede deberse a una ruta de acceso de archivo analizada incorrectamente.  
