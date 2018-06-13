@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651023"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Cómo: Interrumpir y combinar instrucciones en código (Visual Basic)
 Al escribir el código, en ocasiones puede crear instrucciones largas que requieren un desplazamiento horizontal en el Editor de código. Aunque esto no afecta a la forma en el código se ejecuta, es difícil para que usted o cualquier persona leer el código tal y como aparece en el monitor. En estos casos, considere la posibilidad de dividir la única instrucción larga en varias líneas.  
