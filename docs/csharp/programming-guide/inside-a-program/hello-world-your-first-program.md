@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339175"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a><span data-ttu-id="53240-102">Hello World, su primer programa (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="53240-102">Hello World -- Your First Program (C# Programming Guide)</span></span>
 <span data-ttu-id="53240-103">En el siguiente procedimiento se crea una versión de C# del programa tradicional "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="53240-103">The following procedure creates a C# version of the traditional "Hello World!"</span></span> <span data-ttu-id="53240-104">.</span><span class="sxs-lookup"><span data-stu-id="53240-104">program.</span></span> <span data-ttu-id="53240-105">El programa muestra la cadena `Hello World!`.</span><span class="sxs-lookup"><span data-stu-id="53240-105">The program displays the string `Hello World!`</span></span>  

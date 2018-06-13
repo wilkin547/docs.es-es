@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339373"
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a><span data-ttu-id="0ca2d-102">Tutorial: Multithreading con el componente BackgroundWorker (C#)</span><span class="sxs-lookup"><span data-stu-id="0ca2d-102">Walkthrough: Multithreading with the BackgroundWorker Component (C#)</span></span>
 <span data-ttu-id="0ca2d-103">Este tutorial muestra cómo crear una aplicación multiproceso de Windows Forms que busque las repeticiones de una palabra en un archivo de texto.</span><span class="sxs-lookup"><span data-stu-id="0ca2d-103">This walkthrough demonstrates how to create a multithreaded Windows Forms application that searches a text file for occurrences of a word.</span></span> <span data-ttu-id="0ca2d-104">Muestra cómo:</span><span class="sxs-lookup"><span data-stu-id="0ca2d-104">It demonstrates:</span></span>  

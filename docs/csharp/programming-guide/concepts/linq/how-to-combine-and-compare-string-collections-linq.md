@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328018"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a><span data-ttu-id="3aeee-102">Cómo: Combinar y comparar colecciones de cadenas (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="3aeee-102">How to: Combine and Compare String Collections (LINQ) (C#)</span></span>
 <span data-ttu-id="3aeee-103">En este ejemplo se muestra cómo combinar archivos que contienen líneas de texto y después ordenar los resultados.</span><span class="sxs-lookup"><span data-stu-id="3aeee-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="3aeee-104">En concreto, se muestra cómo realizar una concatenación simple, una unión y una intersección en los dos conjuntos de líneas de texto.</span><span class="sxs-lookup"><span data-stu-id="3aeee-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  

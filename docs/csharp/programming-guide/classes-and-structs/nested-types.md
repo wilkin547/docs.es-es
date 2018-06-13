@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319938"
 ---
 # <a name="nested-types-c-programming-guide"></a><span data-ttu-id="fd60d-102">Tipos anidados (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="fd60d-102">Nested Types (C# Programming Guide)</span></span>
 <span data-ttu-id="fd60d-103">Un tipo definido en una [clase](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md) se denomina tipo anidado.</span><span class="sxs-lookup"><span data-stu-id="fd60d-103">A type defined within a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md) is called a nested type.</span></span> <span data-ttu-id="fd60d-104">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="fd60d-104">For example:</span></span>  

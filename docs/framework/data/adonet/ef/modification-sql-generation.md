@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766665"
 ---
 # <a name="modification-sql-generation"></a><span data-ttu-id="e8367-102">Generar SQL de modificación</span><span class="sxs-lookup"><span data-stu-id="e8367-102">Modification SQL Generation</span></span>
 <span data-ttu-id="e8367-103">En esta sección se describe cómo desarrollar un módulo de generación de SQL de modificación para el proveedor (de bases de datos conformes a SQL:1999).</span><span class="sxs-lookup"><span data-stu-id="e8367-103">This section discusses how to develop a modification SQL generation module for your (SQL:1999-compliant database) provider.</span></span> <span data-ttu-id="e8367-104">Este módulo es responsable de la conversión de un árbol de comandos de modificación en las instrucciones INSERT, UPDATE o DELETE de SQL adecuadas.</span><span class="sxs-lookup"><span data-stu-id="e8367-104">This module is responsible for translating a modification command tree into the appropriate SQL INSERT, UPDATE or DELETE statements.</span></span>  
