@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561841"
 ---
 # <a name="xuid-directive"></a>x:Uid (Directiva)
 Proporciona un identificador único para los elementos de marcado. En muchos escenarios, este identificador único se usa por los procesos de localización de XAML y las herramientas.  

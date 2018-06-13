@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576687"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Cómo: Obtener los almacenes de almacenamiento aislado
 Un almacén aislado expone un sistema de archivos virtual dentro de un compartimiento de datos. La clase <xref:System.IO.IsolatedStorage.IsolatedStorageFile> proporciona una serie de métodos para interactuar con un almacén aislado. Para crear y recuperar almacenes, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> proporciona tres métodos estáticos:  

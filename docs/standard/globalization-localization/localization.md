@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573918"
 ---
 # <a name="localization"></a>Localización
 La localización es el proceso de traducción de los recursos de una aplicación en versiones localizadas para cada referencia cultural que la aplicación admite. Debe continuar con el paso de localización solo después de completar el paso de [revisión de localización](../../../docs/standard/globalization-localization/localizability-review.md) para verificar que la aplicación globalizada está lista para su localización.  

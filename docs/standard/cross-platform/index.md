@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573713"
 ---
 # <a name="developing-for-multiple-platforms-with-the-net-framework"></a>Desarrollo de varias plataformas con .NET Framework
 Con .NET Framework y Visual Studio se pueden desarrollar aplicaciones destinadas a plataformas de Microsoft y de terceros.  
