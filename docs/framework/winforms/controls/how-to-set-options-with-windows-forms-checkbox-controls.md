@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534091"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Cómo: Establecer opciones con los controles CheckBox de formularios Windows Forms
 Un formulario Windows Forms <xref:System.Windows.Forms.CheckBox> control se utiliza para proporcionar a los usuarios True/False o Sí/No (opciones). El control muestra una marca de verificación cuando se selecciona.  

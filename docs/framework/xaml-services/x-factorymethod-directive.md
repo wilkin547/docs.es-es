@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563420"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod (Directiva)
 Especifica un método que no sea un constructor que un procesador XAML debe usar para inicializar un objeto después de resolver su tipo de respaldo.  

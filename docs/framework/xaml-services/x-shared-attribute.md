@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563802"
 ---
 # <a name="xshared-attribute"></a>Atributo x:Shared
 Cuando se establece en `false`, modifica el comportamiento de recuperación de los recursos WPF para que las solicitudes para el recurso con atributos crear una nueva instancia para cada solicitud en lugar de compartir la misma instancia para todas las solicitudes.  

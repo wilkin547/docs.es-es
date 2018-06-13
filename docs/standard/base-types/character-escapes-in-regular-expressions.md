@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569913"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapes de carácter en expresiones regulares
 La barra diagonal inversa (\\) en una expresión regular indica una de las siguientes situaciones:  

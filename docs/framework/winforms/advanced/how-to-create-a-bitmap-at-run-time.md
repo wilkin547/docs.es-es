@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520645"
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>Cómo: Crear un mapa de bits en tiempo de ejecución
 En este ejemplo se crea y se dibuja en un <xref:System.Drawing.Bitmap> objeto y lo muestra en un Windows Forms existente <xref:System.Windows.Forms.PictureBox> control.  

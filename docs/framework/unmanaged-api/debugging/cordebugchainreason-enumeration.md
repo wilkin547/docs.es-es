@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e19897015a00d82da30fd670efcdd97c4d06f56f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406323"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason (Enumeración)
 Indica el motivo o los motivos para que se inicie una cadena de llamadas.  

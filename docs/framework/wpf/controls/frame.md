@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552050"
 ---
 # <a name="frame"></a>Fotograma
 El <xref:System.Windows.Controls.Frame> control admite la navegación de contenido en el contenido. <xref:System.Windows.Controls.Frame> se puede hospedar en un elemento raíz como <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, o como una isla dentro de un árbol de contenido que pertenece a un elemento raíz.  

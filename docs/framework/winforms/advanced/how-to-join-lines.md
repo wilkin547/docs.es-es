@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522020"
 ---
 # <a name="how-to-join-lines"></a>Cómo: Unir líneas
 Una unión de líneas es el área común que está formado por dos líneas cuyos extremos se encuentran o se superponen. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona tres estilos de unión de línea: ángulo, bisel y redondo. Estilo de unión de línea es una propiedad de la <xref:System.Drawing.Pen> clase. Cuando se especifica un estilo de unión de línea para un <xref:System.Drawing.Pen> objeto, que se aplicará a todas las líneas conectadas en cualquier estilo de unión <xref:System.Drawing.Drawing2D.GraphicsPath> objeto dibujado con ese lápiz.  
