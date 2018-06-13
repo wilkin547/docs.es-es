@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746662"
 ---
 # <a name="ltpersistenceprovidergt"></a><span data-ttu-id="b5853-102">&lt;persistenceProvider&gt;</span><span class="sxs-lookup"><span data-stu-id="b5853-102">&lt;persistenceProvider&gt;</span></span>
 <span data-ttu-id="b5853-103">Especifica el tipo de la implementación de proveedor de persistencia que se va a usar, así como el tiempo de espera que se va a utilizar en las operaciones de persistencia.</span><span class="sxs-lookup"><span data-stu-id="b5853-103">Specifies the type of the persistence provider implementation to use, as well as the time-out to use for persistence operations.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746870"
 ---
 # <a name="ltaddgt-of-ltcommonparametersgt"></a><span data-ttu-id="a317a-102">&lt;add&gt; de &lt;commonParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="a317a-102">&lt;add&gt; of &lt;commonParameters&gt;</span></span>
 <span data-ttu-id="a317a-103">Especifica un par de nombre y valor de parámetros que se utilizan globalmente en varios servicios.</span><span class="sxs-lookup"><span data-stu-id="a317a-103">Specifies a name-value pair of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="a317a-104">Normalmente este parámetro incluye la cadena de conexión a la base de datos que podría ser compartida por servicios duraderos.</span><span class="sxs-lookup"><span data-stu-id="a317a-104">Typically this parameter includes the database connection string that might be shared by durable services.</span></span>  

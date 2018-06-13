@@ -1,49 +1,38 @@
 ---
 title: Generar clases de tipos de datos a partir de XML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30d6035e04f09ae1169ef8e89bcfb38470be9d12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b38a0aea3101c70b3c3ec0c8feb4ee88018b64e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498672"
 ---
-# <a name="generating-data-type-classes-from-xml"></a><span data-ttu-id="69b25-102">Generar clases de tipos de datos a partir de XML</span><span class="sxs-lookup"><span data-stu-id="69b25-102">Generating Data Type Classes from XML</span></span>
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<span data-ttu-id="69b25-103"> incluye una nueva característica para generar clases de tipo de datos de XML.</span><span class="sxs-lookup"><span data-stu-id="69b25-103"> includes a new feature to generate data type classes from XML.</span></span> <span data-ttu-id="69b25-104">Este tema describe cómo generar automáticamente tipos de datos para la fuente RSS de Blog. NET.</span><span class="sxs-lookup"><span data-stu-id="69b25-104">This topic describes how to automatically generate data types for the .NET Blog RSS feed.</span></span>  
+# <a name="generating-data-type-classes-from-xml"></a><span data-ttu-id="621e6-102">Generar clases de tipos de datos a partir de XML</span><span class="sxs-lookup"><span data-stu-id="621e6-102">Generating Data Type Classes from XML</span></span>
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<span data-ttu-id="621e6-103"> incluye una nueva característica para generar clases de tipo de datos de XML.</span><span class="sxs-lookup"><span data-stu-id="621e6-103"> includes a new feature to generate data type classes from XML.</span></span> <span data-ttu-id="621e6-104">Este tema describe cómo generar automáticamente tipos de datos para la fuente RSS de Blog. NET.</span><span class="sxs-lookup"><span data-stu-id="621e6-104">This topic describes how to automatically generate data types for the .NET Blog RSS feed.</span></span>  
   
-### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a><span data-ttu-id="69b25-105">Obtener el XML de RSS del Blog de .NET de fuentes de distribución</span><span class="sxs-lookup"><span data-stu-id="69b25-105">Obtaining the XML from the .NET Blog RSS feed</span></span>  
+### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a><span data-ttu-id="621e6-105">Obtener el XML de RSS del Blog de .NET de fuentes de distribución</span><span class="sxs-lookup"><span data-stu-id="621e6-105">Obtaining the XML from the .NET Blog RSS feed</span></span>  
   
-1.  <span data-ttu-id="69b25-106">En Internet Explorer, vaya a la [fuente RSS del Blog de .NET](https://blogs.msdn.microsoft.com/dotnet/feed/).</span><span class="sxs-lookup"><span data-stu-id="69b25-106">In Internet Explorer, navigate to the [.NET Blog RSS feed](https://blogs.msdn.microsoft.com/dotnet/feed/).</span></span>  
+1.  <span data-ttu-id="621e6-106">En Internet Explorer, vaya a la [fuente RSS del Blog de .NET](https://blogs.msdn.microsoft.com/dotnet/feed/).</span><span class="sxs-lookup"><span data-stu-id="621e6-106">In Internet Explorer, navigate to the [.NET Blog RSS feed](https://blogs.msdn.microsoft.com/dotnet/feed/).</span></span>  
   
-2.  <span data-ttu-id="69b25-107">Haga clic en la página y seleccione **ver código fuente**.</span><span class="sxs-lookup"><span data-stu-id="69b25-107">Right-click the page and select **View Source**.</span></span>  
+2.  <span data-ttu-id="621e6-107">Haga clic en la página y seleccione **ver código fuente**.</span><span class="sxs-lookup"><span data-stu-id="621e6-107">Right-click the page and select **View Source**.</span></span>  
   
-3.  <span data-ttu-id="69b25-108">Copie el texto de la fuente presionando **CTRL+a** para seleccionar todo el texto, y **Ctrl + C** para copiar.</span><span class="sxs-lookup"><span data-stu-id="69b25-108">Copy the text of the feed by pressing **Ctrl+A** to select all text, and **Ctrl+C** to copy.</span></span>  
+3.  <span data-ttu-id="621e6-108">Copie el texto de la fuente presionando **CTRL+a** para seleccionar todo el texto, y **Ctrl + C** para copiar.</span><span class="sxs-lookup"><span data-stu-id="621e6-108">Copy the text of the feed by pressing **Ctrl+A** to select all text, and **Ctrl+C** to copy.</span></span>  
   
-### <a name="creating-the-data-types"></a><span data-ttu-id="69b25-109">Crear los tipos de datos</span><span class="sxs-lookup"><span data-stu-id="69b25-109">Creating the data types</span></span>  
+### <a name="creating-the-data-types"></a><span data-ttu-id="621e6-109">Crear los tipos de datos</span><span class="sxs-lookup"><span data-stu-id="621e6-109">Creating the data types</span></span>  
   
-1.  <span data-ttu-id="69b25-110">Abra un archivo de código donde se vaya a usar el proxy.</span><span class="sxs-lookup"><span data-stu-id="69b25-110">Open a code file where the proxy is to be used.</span></span> <span data-ttu-id="69b25-111">Este archivo debe formar parte de un proyecto de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="69b25-111">This file should be part of a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] project.</span></span>  
+1.  <span data-ttu-id="621e6-110">Abra un archivo de código donde se vaya a usar el proxy.</span><span class="sxs-lookup"><span data-stu-id="621e6-110">Open a code file where the proxy is to be used.</span></span> <span data-ttu-id="621e6-111">Este archivo debe formar parte de un proyecto de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="621e6-111">This file should be part of a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] project.</span></span>  
   
-2.  <span data-ttu-id="69b25-112">Coloque el cursor en una ubicación en el archivo fuera de las clases existentes.</span><span class="sxs-lookup"><span data-stu-id="69b25-112">Place the cursor in a location in the file outside any existing classes.</span></span>  
+2.  <span data-ttu-id="621e6-112">Coloque el cursor en una ubicación en el archivo fuera de las clases existentes.</span><span class="sxs-lookup"><span data-stu-id="621e6-112">Place the cursor in a location in the file outside any existing classes.</span></span>  
   
-3.  <span data-ttu-id="69b25-113">Seleccione **editar**, **Pegado especial**, **pegar XML como clases**.</span><span class="sxs-lookup"><span data-stu-id="69b25-113">Select **Edit**, **Paste Special**, **Paste XML as Classes**.</span></span>  
+3.  <span data-ttu-id="621e6-113">Seleccione **editar**, **Pegado especial**, **pegar XML como clases**.</span><span class="sxs-lookup"><span data-stu-id="621e6-113">Select **Edit**, **Paste Special**, **Paste XML as Classes**.</span></span>  
   
-4.  <span data-ttu-id="69b25-114">Las clases denominadas `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` y `rssChannelItemGuid` se crean con los miembros necesarios para tener acceso a los elementos de la fuente RSS.</span><span class="sxs-lookup"><span data-stu-id="69b25-114">Classes called `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` and `rssChannelItemGuid` are created with the necessary members for accessing the elements in the RSS feed.</span></span>  
+4.  <span data-ttu-id="621e6-114">Las clases denominadas `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` y `rssChannelItemGuid` se crean con los miembros necesarios para tener acceso a los elementos de la fuente RSS.</span><span class="sxs-lookup"><span data-stu-id="621e6-114">Classes called `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` and `rssChannelItemGuid` are created with the necessary members for accessing the elements in the RSS feed.</span></span>  
   
-### <a name="using-the-generated-classes"></a><span data-ttu-id="69b25-115">Usar las clases generadas</span><span class="sxs-lookup"><span data-stu-id="69b25-115">Using the generated classes</span></span>  
+### <a name="using-the-generated-classes"></a><span data-ttu-id="621e6-115">Usar las clases generadas</span><span class="sxs-lookup"><span data-stu-id="621e6-115">Using the generated classes</span></span>  
   
-1.  <span data-ttu-id="69b25-116">Una vez que se generan las clases, se pueden usar en código como cualquier otra clase.</span><span class="sxs-lookup"><span data-stu-id="69b25-116">Once the classes are generated, they can be used in code like any other classes.</span></span> <span data-ttu-id="69b25-117">En el siguiente ejemplo de código se devuelve una nueva instancia de la clase `rssChannelImage`.</span><span class="sxs-lookup"><span data-stu-id="69b25-117">The following code example returns a new instance of the `rssChannelImage` class.</span></span>  
+1.  <span data-ttu-id="621e6-116">Una vez que se generan las clases, se pueden usar en código como cualquier otra clase.</span><span class="sxs-lookup"><span data-stu-id="621e6-116">Once the classes are generated, they can be used in code like any other classes.</span></span> <span data-ttu-id="621e6-117">En el siguiente ejemplo de código se devuelve una nueva instancia de la clase `rssChannelImage`.</span><span class="sxs-lookup"><span data-stu-id="621e6-117">The following code example returns a new instance of the `rssChannelImage` class.</span></span>  
   
     ```  
     var channelImage = new rssChannelImage()   

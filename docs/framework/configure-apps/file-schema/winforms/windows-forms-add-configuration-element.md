@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759665"
 ---
 # <a name="windows-forms-add-configuration-element"></a><span data-ttu-id="c84b6-102">Formularios Windows Forms Agregar elemento de configuración</span><span class="sxs-lookup"><span data-stu-id="c84b6-102">Windows Forms Add Configuration Element</span></span>
 
