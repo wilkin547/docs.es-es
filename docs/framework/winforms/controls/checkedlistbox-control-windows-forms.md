@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525593"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox (Control, formularios Windows Forms)
 Los formularios Windows Forms `CheckedListBox` control muestra una lista de elementos, como el <xref:System.Windows.Forms.ListBox> controlar y también puede mostrar una marca de verificación junto a los elementos de la lista.  

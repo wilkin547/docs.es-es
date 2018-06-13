@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520843"
 ---
 # <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Cómo: Dibujar un rectángulo relleno en Windows Forms
 En este ejemplo se dibuja un rectángulo relleno en un formulario.  

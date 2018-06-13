@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 015116e96a2fa534ecf26845c5926ddfa179df0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440887"
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory (Coclase)
 Proporciona una interfaz para administrar la anulación de la construcción de un nombre de tipo.  

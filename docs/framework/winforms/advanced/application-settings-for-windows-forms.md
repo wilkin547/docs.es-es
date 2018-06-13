@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517175"
 ---
 # <a name="application-settings-for-windows-forms"></a>Configuración de la aplicación en formularios Windows Forms
 La característica Configuración de la aplicación de Windows Forms facilita la creación, el almacenamiento y el mantenimiento de preferencias de usuarios y aplicaciones personalizadas en el cliente. Con la Configuración de aplicación de Windows Forms, no solo se pueden almacenar datos de las aplicaciones (por ejemplo, cadenas de conexión a bases de datos), sino también datos específicos de los usuarios (por ejemplo, posiciones de la barra de herramientas y listas de archivos usados recientemente).  

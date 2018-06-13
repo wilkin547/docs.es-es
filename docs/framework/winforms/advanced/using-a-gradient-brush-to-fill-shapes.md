@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525039"
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>Utilizar un pincel degradado para rellenar formas
 Puede utilizar un pincel de degradado para rellenar una forma con un color que cambia gradualmente. Por ejemplo, puede utilizar un degradado horizontal para rellenar una forma con un color que cambia gradualmente a medida que se desplaza desde el borde izquierdo de la forma para el borde derecho. Imagine un rectángulo con un borde izquierdo es negro (representado por los componentes rojos, verde y azules 0, 0, 0) y un borde derecho de color rojo (representado por 255, 0, 0). Si el rectángulo es 256 píxeles de ancho, el componente rojo de un píxel determinado será una unidad mayor que el componente rojo del píxel situado a su izquierda. El píxel situado en una fila tiene componentes de color (0, 0, 0), el segundo tiene (1, 0, 0), el tercer píxel (2, 0, 0) y así sucesivamente, hasta llegar al píxel más a la derecha, que tiene componentes de color (255, 0, 0). Estos valores de color interpolados forman el degradado de color.  

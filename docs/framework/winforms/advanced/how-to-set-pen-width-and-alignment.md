@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522287"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Cómo: Establecer el ancho y la alineación del lápiz
 Cuando se crea un <xref:System.Drawing.Pen>, puede proporcionar el ancho del lápiz como uno de los argumentos del constructor. También puede cambiar el ancho del lápiz con la <xref:System.Drawing.Pen.Width%2A> propiedad de la <xref:System.Drawing.Pen> clase.  

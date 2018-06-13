@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520219"
 ---
 # <a name="tracking-events-reference"></a>Referencia de eventos de seguimiento
 Durante la ejecución, el flujo de trabajo en [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] genera eventos de seguimiento cuando va pasando por sus distintas fases de su duración. El host puede suscribirse a estos eventos y mantenerse actualizado con el estado del progreso del flujo de trabajo todo el tiempo que dure. Los eventos de seguimiento generados se tratan en esta sección.  

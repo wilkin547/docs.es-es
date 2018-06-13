@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490466"
 ---
 # <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>Cómo: Utilizar Svcutil.exe para validar el código del servicio compilado
 Puede usar el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para detectar errores en las configuraciones y las implementaciones del servicio sin hospedar el servicio.  

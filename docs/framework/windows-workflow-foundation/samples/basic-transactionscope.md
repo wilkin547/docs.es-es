@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516807"
 ---
 # <a name="basic-transactionscope"></a>TransactionScope básico
 Este ejemplo consta de cuatro escenarios que se ejecutan para mostrar cómo se anidan instancias de <xref:System.Activities.Statements.TransactionScope>. El primer escenario muestra la anidación de una actividad de terceros de la que el autor no conoce su construcción. El segundo y tercer escenarios muestran cómo se respetan los tiempos de espera y el último escenario muestra el valor de <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A>.  
