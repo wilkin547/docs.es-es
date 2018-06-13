@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755531"
 ---
 # <a name="connection-pooling"></a><span data-ttu-id="814e9-102">Agrupación de conexiones</span><span class="sxs-lookup"><span data-stu-id="814e9-102">Connection Pooling</span></span>
 <span data-ttu-id="814e9-103">La conexión a un origen de datos puede ser un proceso largo.</span><span class="sxs-lookup"><span data-stu-id="814e9-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="814e9-104">Para minimizar el costo de abrir conexiones, ADO.NET emplea una técnica de optimización llamada *agrupación de conexiones*, que reduce el costo de abrir y cerrar las conexiones repetidamente.</span><span class="sxs-lookup"><span data-stu-id="814e9-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="814e9-105">Los proveedores de datos .NET Framework tratan de forma diferente la agrupación de conexiones.</span><span class="sxs-lookup"><span data-stu-id="814e9-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  

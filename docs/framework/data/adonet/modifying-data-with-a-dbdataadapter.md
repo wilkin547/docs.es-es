@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765846"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a><span data-ttu-id="0aa85-102">Modificar datos con un objeto DbDataAdapter</span><span class="sxs-lookup"><span data-stu-id="0aa85-102">Modifying Data with a DbDataAdapter</span></span>
 <span data-ttu-id="0aa85-103">El método <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> de un objeto <xref:System.Data.Common.DbProviderFactory> proporciona un objeto <xref:System.Data.Common.DbDataAdapter> fuertemente tipado en el proveedor de datos subyacente especificado en el momento de crear el generador.</span><span class="sxs-lookup"><span data-stu-id="0aa85-103">The <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> method of a <xref:System.Data.Common.DbProviderFactory> object gives you a <xref:System.Data.Common.DbDataAdapter> object that is strongly typed to the underlying data provider specified at the time you create the factory.</span></span> <span data-ttu-id="0aa85-104">Se puede utilizar <xref:System.Data.Common.DbCommandBuilder> para crear comandos para insertar, actualizar y eliminar datos desde <xref:System.Data.DataSet> a un origen de datos.</span><span class="sxs-lookup"><span data-stu-id="0aa85-104">You can then use a <xref:System.Data.Common.DbCommandBuilder> to create commands to insert, update, and delete data from a <xref:System.Data.DataSet> to a data source.</span></span>  

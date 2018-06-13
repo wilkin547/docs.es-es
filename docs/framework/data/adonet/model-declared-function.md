@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757247"
 ---
 # <a name="model-declared-function"></a><span data-ttu-id="82a76-102">función declarada por el modelo</span><span class="sxs-lookup"><span data-stu-id="82a76-102">model-declared function</span></span>
 <span data-ttu-id="82a76-103">A *función declarada por modelo* es una función que se declara en un modelo conceptual, pero no está definida en el modelo conceptual.</span><span class="sxs-lookup"><span data-stu-id="82a76-103">A *model-declared function* is a function that is declared in a conceptual model, but is not defined in that conceptual model.</span></span> <span data-ttu-id="82a76-104">La función se podría definir en el entorno de almacenamiento u hospedaje.</span><span class="sxs-lookup"><span data-stu-id="82a76-104">The function might be defined in the hosting or storage environment.</span></span> <span data-ttu-id="82a76-105">Por ejemplo, una función declarada por modelo se podría asignar a una función definida en una base de datos, exponiendo así la funcionalidad de servidor en el modelo conceptual.</span><span class="sxs-lookup"><span data-stu-id="82a76-105">For example, a model-declared function might be mapped to a function that is defined in a database, thus exposing server-side functionality in the conceptual model.</span></span>  

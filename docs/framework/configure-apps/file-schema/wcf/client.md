@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752642"
 ---
 # <a name="ltclientgt"></a><span data-ttu-id="75bf1-102">&lt;Cliente&gt;</span><span class="sxs-lookup"><span data-stu-id="75bf1-102">&lt;client&gt;</span></span>
 <span data-ttu-id="75bf1-103">El elemento `client` define una lista de extremos a los que un cliente puede conectarse.</span><span class="sxs-lookup"><span data-stu-id="75bf1-103">The `client` element defines a list of endpoints that a client can connect to.</span></span>  

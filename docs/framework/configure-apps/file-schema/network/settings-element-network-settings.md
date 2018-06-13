@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752483"
 ---
 # <a name="ltsettingsgt-element-network-settings"></a><span data-ttu-id="26ab8-102">&lt;configuración&gt; Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="26ab8-102">&lt;settings&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="26ab8-103">Configura opciones de red básicas para el espacio de nombres <xref:System.Net?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="26ab8-103">Configures basic network options for the <xref:System.Net?displayProperty=nameWithType> namespace.</span></span>  

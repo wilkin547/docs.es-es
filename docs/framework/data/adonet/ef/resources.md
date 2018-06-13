@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765544"
 ---
 # <a name="entity-framework-resources"></a><span data-ttu-id="f2a96-102">Recursos de Entity Framework</span><span class="sxs-lookup"><span data-stu-id="f2a96-102">Entity Framework Resources</span></span>
 <span data-ttu-id="f2a96-103">Los recursos externos siguientes proporcionan información y compatibilidad para la creación de aplicaciones de Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="f2a96-103">The following external resources provide information and support for creating Entity Framework applications.</span></span>  

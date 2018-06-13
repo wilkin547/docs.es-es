@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758651"
 ---
 # <a name="ltworkflowgt"></a><span data-ttu-id="a589c-102">&lt;flujo de trabajo&gt;</span><span class="sxs-lookup"><span data-stu-id="a589c-102">&lt;workflow&gt;</span></span>
 <span data-ttu-id="a589c-103">Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la **un hipervínculo "http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx" ctivityDefinitionId** propiedad.</span><span class="sxs-lookup"><span data-stu-id="a589c-103">A configuration element that contains all queries for a specific workflow identified by the **a HYPERLINK "http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx" ctivityDefinitionId** property.</span></span>  

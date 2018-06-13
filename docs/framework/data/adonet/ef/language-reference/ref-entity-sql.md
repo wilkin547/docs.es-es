@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762109"
 ---
 # <a name="ref-entity-sql"></a><span data-ttu-id="f9710-102">REF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f9710-102">REF (Entity SQL)</span></span>
 <span data-ttu-id="f9710-103">Devuelve una referencia a una instancia de entidad.</span><span class="sxs-lookup"><span data-stu-id="f9710-103">Returns a reference to an entity instance.</span></span>  

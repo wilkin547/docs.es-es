@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751992"
 ---
 # <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="ba53b-102">&lt;Borrar&gt; elemento para authenticationModules (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="ba53b-102">&lt;clear&gt; Element for authenticationModules (Network Settings)</span></span>
 <span data-ttu-id="ba53b-103">Borra todos los módulos de autenticación de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="ba53b-103">Clears all authentication modules from the application.</span></span>  

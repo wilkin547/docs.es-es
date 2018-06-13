@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752798"
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a><span data-ttu-id="e3a22-102">Elemento &lt;security&gt; de &lt;netNamedPipeBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="e3a22-102">&lt;security&gt; of &lt;netNamedPipeBinding&gt;</span></span>
 <span data-ttu-id="e3a22-103">Define la configuración de seguridad de un enlace.</span><span class="sxs-lookup"><span data-stu-id="e3a22-103">Defines the security settings for a binding.</span></span>  

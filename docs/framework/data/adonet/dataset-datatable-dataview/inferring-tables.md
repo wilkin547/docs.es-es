@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757832"
 ---
 # <a name="inferring-tables"></a><span data-ttu-id="90c48-102">Inferir tablas</span><span class="sxs-lookup"><span data-stu-id="90c48-102">Inferring Tables</span></span>
 <span data-ttu-id="90c48-103">Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML, ADO.NET determina en primer lugar qué elementos XML representan tablas.</span><span class="sxs-lookup"><span data-stu-id="90c48-103">When inferring a schema for a <xref:System.Data.DataSet> from an XML document, ADO.NET first determines which XML elements represent tables.</span></span> <span data-ttu-id="90c48-104">Las siguientes estructuras XML como resultado una tabla para la **conjunto de datos** esquema:</span><span class="sxs-lookup"><span data-stu-id="90c48-104">The following XML structures result in a table for the **DataSet** schema:</span></span>  

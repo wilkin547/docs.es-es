@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756779"
 ---
 # <a name="ltstatesgt-of-ltactivitystatequerygt"></a><span data-ttu-id="4403d-102">&lt;estados&gt; de &lt;activityStateQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="4403d-102">&lt;states&gt; of &lt;activityStateQuery&gt;</span></span>
 <span data-ttu-id="4403d-103">Una colección de elementos de configuración que contienen los estados de la actividad suscrita para la que se debería emitir un registro del seguimiento.</span><span class="sxs-lookup"><span data-stu-id="4403d-103">A collection of configuration elements that contain the states of the subscribed activity for which a tracking record should be emitted.</span></span>  

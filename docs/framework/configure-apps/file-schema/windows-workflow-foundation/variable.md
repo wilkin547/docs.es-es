@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756792"
 ---
 # <a name="ltvariablegt"></a><span data-ttu-id="fc89f-102">&lt;Variable&gt;</span><span class="sxs-lookup"><span data-stu-id="fc89f-102">&lt;variable&gt;</span></span>
 <span data-ttu-id="fc89f-103">Representa una colección de variables asociada a esta consulta de actividad.</span><span class="sxs-lookup"><span data-stu-id="fc89f-103">Represents a collection of variables associated with this activity query.</span></span>  

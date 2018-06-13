@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Crear un borde alrededor de un control de formularios Windows Forms con relleno"
-ms.custom: 
+title: 'Cómo: Crear un borde alrededor de un control de formularios Windows Forms con relleno'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,24 +14,20 @@ helpviewer_keywords:
 - margins [Windows Forms], Windows Forms
 - Margin property [Windows Forms]
 ms.assetid: bac7ed4d-a163-4259-98bd-155a36345890
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b8fc8774e1f861db989b05678235ea34e38318c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7866b78afd768fa99ceacfdee13c086a9ac00e0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530294"
 ---
-# <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a><span data-ttu-id="a62a6-102">Cómo: Crear un borde alrededor de un control de formularios Windows Forms con relleno</span><span class="sxs-lookup"><span data-stu-id="a62a6-102">How to: Create a Border Around a Windows Forms Control Using Padding</span></span>
-<span data-ttu-id="a62a6-103">En el ejemplo de código siguiente se muestra cómo crear un borde o contorno de un <xref:System.Windows.Forms.RichTextBox> control.</span><span class="sxs-lookup"><span data-stu-id="a62a6-103">The following code example demonstrates how to create a border or outline around a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="a62a6-104">En el ejemplo se establece el valor de un <xref:System.Windows.Forms.Panel> del control <xref:System.Windows.Forms.Padding> propiedad a 5 y se establece la <xref:System.Windows.Forms.Control.Dock%2A> propiedad de un elemento secundario <xref:System.Windows.Forms.RichTextBox> el control a <xref:System.Windows.Forms.DockStyle.Fill>.</span><span class="sxs-lookup"><span data-stu-id="a62a6-104">The example sets the value of a <xref:System.Windows.Forms.Panel> control’s <xref:System.Windows.Forms.Padding> property to 5 and sets the <xref:System.Windows.Forms.Control.Dock%2A> property of a child <xref:System.Windows.Forms.RichTextBox> control to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span> <span data-ttu-id="a62a6-105">El <xref:System.Windows.Forms.Control.BackColor%2A> de la <xref:System.Windows.Forms.Panel> control se establece en <xref:System.Drawing.Color.Blue%2A>, que crea un borde azul alrededor de la <xref:System.Windows.Forms.RichTextBox> control.</span><span class="sxs-lookup"><span data-stu-id="a62a6-105">The <xref:System.Windows.Forms.Control.BackColor%2A> of the <xref:System.Windows.Forms.Panel> control is set to <xref:System.Drawing.Color.Blue%2A>, which creates a blue border around the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
+# <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a><span data-ttu-id="37a27-102">Cómo: Crear un borde alrededor de un control de formularios Windows Forms con relleno</span><span class="sxs-lookup"><span data-stu-id="37a27-102">How to: Create a Border Around a Windows Forms Control Using Padding</span></span>
+<span data-ttu-id="37a27-103">En el ejemplo de código siguiente se muestra cómo crear un borde o contorno de un <xref:System.Windows.Forms.RichTextBox> control.</span><span class="sxs-lookup"><span data-stu-id="37a27-103">The following code example demonstrates how to create a border or outline around a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="37a27-104">En el ejemplo se establece el valor de un <xref:System.Windows.Forms.Panel> del control <xref:System.Windows.Forms.Padding> propiedad a 5 y se establece la <xref:System.Windows.Forms.Control.Dock%2A> propiedad de un elemento secundario <xref:System.Windows.Forms.RichTextBox> el control a <xref:System.Windows.Forms.DockStyle.Fill>.</span><span class="sxs-lookup"><span data-stu-id="37a27-104">The example sets the value of a <xref:System.Windows.Forms.Panel> control’s <xref:System.Windows.Forms.Padding> property to 5 and sets the <xref:System.Windows.Forms.Control.Dock%2A> property of a child <xref:System.Windows.Forms.RichTextBox> control to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span> <span data-ttu-id="37a27-105">El <xref:System.Windows.Forms.Control.BackColor%2A> de la <xref:System.Windows.Forms.Panel> control se establece en <xref:System.Drawing.Color.Blue%2A>, que crea un borde azul alrededor de la <xref:System.Windows.Forms.RichTextBox> control.</span><span class="sxs-lookup"><span data-stu-id="37a27-105">The <xref:System.Windows.Forms.Control.BackColor%2A> of the <xref:System.Windows.Forms.Panel> control is set to <xref:System.Drawing.Color.Blue%2A>, which creates a blue border around the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a62a6-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a62a6-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="37a27-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="37a27-106">Example</span></span>  
  [!code-csharp[System.Windows.Forms.Padding#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.Padding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Padding/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="a62a6-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="a62a6-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="37a27-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="37a27-107">See Also</span></span>  
  <xref:System.Windows.Forms.Padding>  
- [<span data-ttu-id="a62a6-108">Márgenes y relleno en controles de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a62a6-108">Margin and Padding in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/margin-and-padding-in-windows-forms-controls.md)
+ [<span data-ttu-id="37a27-108">Márgenes y relleno en controles de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="37a27-108">Margin and Padding in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/margin-and-padding-in-windows-forms-controls.md)
