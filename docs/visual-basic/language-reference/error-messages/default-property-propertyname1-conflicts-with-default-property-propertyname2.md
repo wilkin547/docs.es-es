@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586629"
 ---
 # <a name="default-property-39ltpropertyname1gt39-conflicts-with-default-property-39ltpropertyname2gt39-in-39ltclassnamegt39-and-so-should-be-declared-39shadows39"></a>Propiedad predeterminada &#39; &lt;nombrepropiedad1&gt; &#39; entra en conflicto con la propiedad predeterminada &#39; &lt;nombrepropiedad2&gt; &#39; en &#39; &lt;classname&gt; &#39;, por lo que se debe declarar como &#39;sombras&#39;
 Se declara una propiedad con el mismo nombre que una propiedad definida en la clase base. En esta situación, la propiedad de esta clase debe ocultar la propiedad de clase base.  

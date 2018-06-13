@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597792"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf (Operador) (Visual Basic)
 Crea una instancia de delegado de procedimiento que hace referencia el procedimiento específico.  

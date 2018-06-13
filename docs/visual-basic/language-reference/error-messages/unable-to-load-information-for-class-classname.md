@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604177"
 ---
 # <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a>No se puede cargar la información de clase &#39; &lt;classname&gt;&#39;
 Se realizó una referencia a una clase que no está disponible.  

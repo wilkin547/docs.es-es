@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594785"
 ---
 # <a name="need-property-array-index"></a>Se necesita un índice de matriz de propiedades
 Este valor de propiedad consiste en una matriz, más que en un único valor. No especificó el índice de la propiedad de matriz a la que intenta acceder.  

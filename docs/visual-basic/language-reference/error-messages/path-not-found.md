@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593898"
 ---
 # <a name="path-not-found"></a>No se encuentra la ruta de acceso
 Durante una operación de acceso a archivos o acceso al disco, el sistema operativo no pudo encontrar la ruta de acceso especificada. La ruta de acceso a un archivo incluye la especificación de unidad y los directorios y subdirectorios que deben recorrerse para localizar el archivo. Una ruta de acceso puede ser relativa o absoluta.  

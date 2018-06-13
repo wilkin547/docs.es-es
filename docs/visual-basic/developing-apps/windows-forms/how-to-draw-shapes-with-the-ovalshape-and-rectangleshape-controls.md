@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592280"
 ---
 # <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Cómo: Dibujar formas con los controles OvalShape y RectangleShape (Visual Studio)
 Puede utilizar el control <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> para dibujar círculos u óvalos en un formulario o contenedor, tanto en tiempo de diseño como en tiempo de ejecución. Puede utilizar el control <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> para dibujar cuadrados, rectángulos o rectángulos con esquinas redondeadas en un formulario o contenedor. También puede utilizar este control para dibujar formas en tiempo de diseño y en tiempo de ejecución.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587601"
 ---
 # <a name="39isnot39-operand-of-type-39typename39-can-only-be-compared-to-39nothing39-because-39typename39-is-a-nullable-type"></a>&#39;IsNot&#39; operando de tipo &#39;typename&#39; solo se puede comparar a &#39;nada&#39;, porque &#39;typename&#39; es un tipo que acepta valores null
 Una variable declarada como que acepta valores NULL se ha comparado con una expresión distinta de `Nothing` mediante el `IsNot` operador.  

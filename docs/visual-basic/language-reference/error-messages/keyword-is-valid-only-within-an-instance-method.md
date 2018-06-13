@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586365"
 ---
 # <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39;&lt;palabra clave&gt; &#39; es válida sólo dentro de un método de instancia
 El `Me`, `MyClass`, y `MyBase` palabras clave hacen referencia a instancias de clase específica. No se pueden usar dentro de un compartido `Function` o `Sub` procedimiento.  

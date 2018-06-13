@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594193"
 ---
 # <a name="xml-namespace-uri-39httpwwww3orgxml1998namespace39-can-be-bound-only-to-39xmlns39"></a>URI de espacio de nombres XML &#39; http://www.w3.org/XML/1998/namespace&#39; se pueden enlazar únicamente a &#39;xmlns&#39;
 El URI http://www.w3.org/XML/1998/namespace se utiliza en una declaración de espacio de nombres XML. Este URI es un espacio de nombres reservado y no se pueden incluir en una declaración de espacio de nombres XML.  

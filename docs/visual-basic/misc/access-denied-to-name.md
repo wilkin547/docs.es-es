@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595792"
 ---
 # <a name="access-denied-to-39ltnamegt39"></a>Deniega el acceso a &#39; &lt;nombre&gt;&#39;
 No se puede acceder a un dispositivo, archivo o disco porque no los permisos de seguridad del equipo son insuficientes.  

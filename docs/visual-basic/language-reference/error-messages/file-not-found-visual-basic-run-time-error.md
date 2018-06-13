@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587751"
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a>No se encuentra el archivo (error en tiempo de ejecución de Visual Basic)
 No se encontró el archivo cuando se especifique. El error tiene las siguientes causas posibles:  

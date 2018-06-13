@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593959"
 ---
 # <a name="39optional39-expected"></a>&#39;Opcional&#39; esperado
 Un argumento opcional de una declaración de procedimiento va seguido de un argumento requerido. Cada argumento que sigue a un argumento opcional también debe ser opcional.  

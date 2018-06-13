@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590847"
 ---
 # <a name="how-to-change-the-layout-of-a-datarepeater-control-visual-studio"></a>Cómo: Cambiar el diseño de un control DataRepeater (Visual Studio)
 El <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control puede mostrarse en un vertical (los elementos se desplazan verticalmente) u horizontal (los elementos se desplazan horizontalmente) orientación. Puede cambiar la orientación en tiempo de diseño o en tiempo de ejecución cambiando el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> propiedad. Si cambia la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> propiedad en tiempo de ejecución, también puede cambiar el tamaño de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> y la posición de los controles secundarios.  

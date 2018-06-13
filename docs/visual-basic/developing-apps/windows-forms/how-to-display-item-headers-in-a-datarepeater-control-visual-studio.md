@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592145"
 ---
 # <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a>Cómo: Mostrar los encabezados de los elementos en un control DataRepeater (Visual Studio)
 El encabezado de elemento en un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control proporciona un indicador visual cuando un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> está seleccionada. Cuando el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> propiedad está establecida en <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> (valor predeterminado), se muestra el encabezado de elemento a la izquierda de cada elemento. Cuando el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> propiedad está establecida en <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>, el encabezado de elemento se muestra en la parte superior de cada elemento.  

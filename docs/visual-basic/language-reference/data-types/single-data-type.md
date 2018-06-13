@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590791"
 ---
 # <a name="single-data-type-visual-basic"></a>Single (Tipo de datos, Visual Basic)
 Contiene con signo números de punto flotante IEEE 32 bits (4 bytes) precisión sencilla que abarcan un valor de - 3, 4028235E + 38 a - 1, 401298E-45 para los valores negativos y entre 1, 401298E-45 a 3, 4028235E + 38 para valores positivos. Los números de precisión sencilla almacenan una aproximación de un número real.  

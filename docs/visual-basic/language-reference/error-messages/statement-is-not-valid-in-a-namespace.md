@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594772"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>La instrucción no es válida en un espacio de nombres
 La instrucción no puede aparecer en el nivel de un espacio de nombres. Las declaraciones sola que se permite en el nivel de espacio de nombres son módulo, interfaz, clase, delegado, enumeración y declaraciones de estructura.  

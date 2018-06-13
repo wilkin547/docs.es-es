@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594272"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>El subíndice está fuera del intervalo (Visual Basic)
 Un subíndice de matriz no es válido porque está fuera del intervalo permitido. El valor más bajo de subíndice para una dimensión es siempre 0 y el valor de subíndice más alto es devuelto por la `GetUpperBound` método para esa dimensión.  

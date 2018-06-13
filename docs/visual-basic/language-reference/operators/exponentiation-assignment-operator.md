@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603501"
 ---
 # <a name="-operator-visual-basic"></a>^= (Operador, Visual Basic)
 Genera el valor de una variable o propiedad a la potencia de una expresión y asigna el resultado a la variable o propiedad.  

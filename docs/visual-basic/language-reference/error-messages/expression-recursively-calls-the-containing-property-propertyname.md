@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588848"
 ---
 # <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>La expresión llama recursivamente la propiedad contenedora &#39; &lt;propertyname&gt;&#39;
 Una instrucción en el `Set` procedimiento con una definición de propiedad almacena un valor en el nombre de la propiedad.  
