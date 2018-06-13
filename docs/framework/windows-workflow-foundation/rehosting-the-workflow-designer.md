@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513316"
 ---
 # <a name="rehosting-the-workflow-designer"></a>Rehospedar el Diseñador de flujo de trabajo
 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] puede rehospedarse en entornos fuera de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] con el fin de crear, modificar y supervisar flujos de trabajo.  

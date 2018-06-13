@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756285"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>Comparar objetos DataRow (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] define varios operadores de conjuntos para comparar elementos de origen y ver si son iguales. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] proporciona los siguientes operadores de conjuntos:  

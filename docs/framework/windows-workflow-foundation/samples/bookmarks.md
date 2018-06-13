@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514165"
 ---
 # <a name="bookmarks"></a>Marcadores
 En este ejemplo se muestra cómo escribir una actividad personalizada que crea un marcador para recibir entrada externa. El ejemplo también incluye una aplicación de consola básica que usa la actividad personalizada en un flujo de trabajo y muestra cómo detectar y reanudar los marcadores asociados a una instancia de flujo de trabajo en ejecución. Para obtener más información acerca de los marcadores, vea [marcadores](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).  

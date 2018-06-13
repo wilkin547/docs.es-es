@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505735"
 ---
 # <a name="conditional-get-and-put"></a>Get y Put condicionales
 En este ejemplo se muestra cómo utilizar las nuevas API de recuperación y actualización condicionales para el modelo de programación REST de WCF. Porque son más adecuadas para la recuperación condicional y actualización orientada a servicios de recursos y servicios REST, este ejemplo amplía la [servicio de recurso básico](../../../../docs/framework/wcf/samples/basic-resource-service.md) ejemplo. En este ejemplo se centra en Agregar compatibilidad con recuperación condicional y actualice a la [servicio de recurso básico](../../../../docs/framework/wcf/samples/basic-resource-service.md) ejemplo utilizando las nuevas API introducidas en [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  

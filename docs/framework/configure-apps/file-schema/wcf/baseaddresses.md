@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747491"
 ---
 # <a name="ltbaseaddressesgt"></a>&lt;direcciones base&gt;
 Representa una colección de elementos `baseAddress`, que son las direcciones base para un host del servicio en un entorno autohospedado. Si una dirección base está presente, los puntos de conexión se pueden configurar con direcciones relativas a la dirección base.  

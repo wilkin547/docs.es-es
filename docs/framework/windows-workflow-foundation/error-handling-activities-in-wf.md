@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512390"
 ---
 # <a name="error-handling-activities-in-wf"></a>Actividades de control de errores en WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] proporciona varias actividades proporcionadas por el sistema para implementar el control y la recuperación de errores. Para obtener más información, consulte [excepciones](../../../docs/framework/windows-workflow-foundation/exceptions.md).  

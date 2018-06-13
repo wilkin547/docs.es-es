@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513672"
 ---
 # <a name="waiting-for-input-in-a-workflow"></a>Esperar entrada en un flujo de trabajo
 Los temas en esta sección tratan cómo usar marcadores y actividades de mensajería.  

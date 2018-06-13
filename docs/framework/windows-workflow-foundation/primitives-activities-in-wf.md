@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513381"
 ---
 # <a name="primitives-activities-in-wf"></a>Actividades primitivas en WF
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] proporciona varias actividades proporcionadas por el sistema que proporcionan un mecanismo conveniente para realizar tareas comunes.  

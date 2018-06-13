@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513255"
 ---
 # <a name="composite"></a>Compuestos
 Esta sección contiene ejemplos de actividades personalizadas creadas a partir de otras actividades en Windows Workflow Foundation (WF).  
