@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217407"
 ---
 # <a name="net-core-distribution-packaging"></a><span data-ttu-id="9c6b6-103">Empaquetado de distribución de .NET Core</span><span class="sxs-lookup"><span data-stu-id="9c6b6-103">.NET Core distribution packaging</span></span>
 

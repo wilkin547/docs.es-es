@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764127"
 ---
 # <a name="oftype-entity-sql"></a><span data-ttu-id="6c5c8-102">OFTYPE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="6c5c8-102">OFTYPE (Entity SQL)</span></span>
 <span data-ttu-id="6c5c8-103">Devuelve una colección de objetos de una expresión de consulta de un tipo específico.</span><span class="sxs-lookup"><span data-stu-id="6c5c8-103">Returns a collection of objects from a query expression that is of a specific type.</span></span>  

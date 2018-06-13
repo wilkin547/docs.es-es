@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265767"
 ---
 # <a name="literal-keywords-c-reference"></a><span data-ttu-id="1188f-102">Palabras clave de literales (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="1188f-102">Literal Keywords (C# Reference)</span></span>
 <span data-ttu-id="1188f-103">C# tiene las siguientes palabras clave literales:</span><span class="sxs-lookup"><span data-stu-id="1188f-103">C# has the following literal keywords:</span></span>  

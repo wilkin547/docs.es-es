@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763191"
 ---
 # <a name="group-by-entity-sql"></a><span data-ttu-id="104fc-102">GROUP BY (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="104fc-102">GROUP BY (Entity SQL)</span></span>
 <span data-ttu-id="104fc-103">Especifica los grupos en los que se van a colocar los objetos devueltos por una expresión de consulta ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)).</span><span class="sxs-lookup"><span data-stu-id="104fc-103">Specifies groups into which objects returned by a query ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) expression are to be placed.</span></span>  
