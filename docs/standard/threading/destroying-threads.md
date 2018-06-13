@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582948"
 ---
 # <a name="destroying-threads"></a>Destruir subprocesos
 El método <xref:System.Threading.Thread.Abort%2A> se utiliza para detener un subproceso administrado de forma permanente. Cuando se llama a <xref:System.Threading.Thread.Abort%2A>, Common Language Runtime produce una clase <xref:System.Threading.ThreadAbortException> en el subproceso de destino, que este último puede detectar. Para obtener más información, consulta <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  

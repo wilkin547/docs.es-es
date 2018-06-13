@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575367"
 ---
 # <a name="traversing-xml-schemas"></a>Cómo atravesar esquemas XML
 Al atravesar un esquema XML con la API del Modelo de objetos de esquema (SOM), se obtiene acceso a los elementos, atributos y tipos almacenados en el SOM. Atravesar un esquema XML cargado en el SOM es también el primer paso para editar un esquema XML utilizando la API del SOM.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312097"
 ---
 # <a name="classes-c-programming-guide"></a>Clases (Guía de programación de C#)
 Una *class* es una construcción que le permite crear sus propios tipos personalizados agrupando las variables de otros tipos, métodos y eventos. Una clase es como un plano. Define los datos y el comportamiento de un tipo. Si la clase no se declara como estática, el código de cliente puede crear *instancias* de ella. Estas instancias son *objetos* que se asignan a una variable. La instancia de una clase permanece en memoria hasta que todas las referencias a ella están fuera del ámbito. En ese momento, CLR la marca como apta para la recolección de elementos no utilizados. Si la clase se declara como [estática](../../../csharp/language-reference/keywords/static.md), no puede crear instancias y el código de cliente solo puede tener acceso a ella a través de la propia clase. Para más información, vea [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  

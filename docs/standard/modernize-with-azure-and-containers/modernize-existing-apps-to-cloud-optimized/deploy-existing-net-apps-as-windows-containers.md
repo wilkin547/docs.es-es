@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958005"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implementar aplicaciones de .NET existentes como contenedores de Windows
 

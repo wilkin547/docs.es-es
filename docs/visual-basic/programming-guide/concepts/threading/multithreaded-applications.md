@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650483"
 ---
 # <a name="multithreaded-applications-visual-basic"></a>Aplicaciones multiproceso (Visual Basic)
 Con Visual Basic, puede escribir aplicaciones que realizan varias tareas al mismo tiempo. Las tareas con la posibilidad de contener otras tareas pueden ejecutarse en subprocesos separados, lo que se conoce como *multithreading* o *subprocesamiento libre*.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579397"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Procedimientos recomendados para modelos de diseño de observador
 En .NET Framework, el patrón de diseño de observador se implementa como un conjunto de interfaces. La interfaz <xref:System.IObservable%601?displayProperty=nameWithType> representa al proveedor de datos, que también es responsable de proporcionar una implementación <xref:System.IDisposable> que permite a los observadores cancelar la suscripción a las notificaciones. La interfaz <xref:System.IObserver%601?displayProperty=nameWithType> representa al observador. En este tema se describen los procedimientos recomendados que los desarrolladores deben seguir al implementar el patrón de diseño de observador con estas interfaces.  

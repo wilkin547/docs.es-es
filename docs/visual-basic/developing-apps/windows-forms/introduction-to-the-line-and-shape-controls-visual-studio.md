@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590743"
 ---
 # <a name="introduction-to-the-line-and-shape-controls-visual-studio"></a>Introducción a los controles de líneas y formas (Visual Studio)
 Los controles de Visual Basic PowerPacks líneas y formas son un conjunto de tres controles gráficos que le permiten dibujar líneas y formas en formularios y contenedores. El <xref:Microsoft.VisualBasic.PowerPacks.LineShape> control se utiliza para dibujar líneas horizontales, verticales y diagonales. El <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> control se utiliza para dibujar círculos y óvalos y el <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> control se utiliza para dibujar rectángulos y cuadrados.  

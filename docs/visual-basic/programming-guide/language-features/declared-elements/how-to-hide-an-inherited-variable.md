@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649144"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Cómo: Ocultar una variable heredada (Visual Basic)
 Una clase derivada hereda todas las definiciones de su clase base. Si desea definir una variable con el mismo nombre que un elemento de la clase base, puede ocultar, o *instantáneas*, ese elemento de clase base cuando se define la variable en la clase derivada. Si lo hace, código de la clase derivada tiene acceso a la variable a menos que explícitamente omite el mecanismo de sombreado.  

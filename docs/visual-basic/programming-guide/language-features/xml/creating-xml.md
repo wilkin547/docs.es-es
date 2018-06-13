@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651105"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Crear XML en Visual Basic
 Visual Basic permite usar *literales XML* directamente en el código. La sintaxis de los literales XML representa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objetos y es similar a la sintaxis XML 1.0. Esto hace más fácil crear elementos XML, documentos y fragmentos mediante programación porque el código tiene la misma estructura que el XML final.  

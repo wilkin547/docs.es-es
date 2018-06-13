@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234560"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 Especifica que uno o varios elementos de programación declarados son accesibles únicamente desde dentro de su contexto de declaración, incluyendo desde dentro de los tipos contenidos.  

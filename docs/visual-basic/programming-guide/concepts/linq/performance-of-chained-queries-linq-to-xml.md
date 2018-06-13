@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645712"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>Rendimiento de consultas encadenadas (LINQ to XML) (Visual Basic)
 Una de las ventajas más importantes de LINQ (y LINQ to XML) es que las consultas encadenadas funcionan igual de bien que una sola consulta más grande y complicada.  

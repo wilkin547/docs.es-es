@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649853"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Tipos de datos constantes y literales (Visual Basic)
 Un literal es un valor que se expresa por sí misma en lugar de como valor de una variable o el resultado de una expresión, como el número 3 o la cadena "Hello". Una constante es un nombre descriptivo que ocupa el lugar de un literal y retiene este mismo valor en todo el programa, en lugar de una variable, cuyo valor puede cambiar.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574883"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Cómo: Buscar archivos y directorios existentes en almacenamiento aislado
 Para buscar un directorio en el almacenamiento aislado, use el método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>. Este método adopta una cadena que representa un patrón de búsqueda. Puede usar caracteres comodín de un solo carácter (?) y de varios caracteres (*) en el patrón de búsqueda, pero los caracteres comodín deben aparecer en la parte final del nombre. Por ejemplo, `directory1/*ect*` es una cadena de búsqueda válida, pero `*ect*/directory2` no lo es.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590681"
 ---
 # <a name="user-defined-data-type"></a>Tipo de datos definido por el usuario
 Contiene los datos en un formato que defina. El `Structure` instrucción define el formato.  

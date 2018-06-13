@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645231"
 ---
 # <a name="projections-and-transformations-linq-to-xml-visual-basic"></a>Proyecciones y transformaciones (LINQ to XML) (Visual Basic)
 En esta sección se proporcionan ejemplos de proyecciones y transformaciones [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

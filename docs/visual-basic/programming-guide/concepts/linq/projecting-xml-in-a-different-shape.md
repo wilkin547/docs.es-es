@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645660"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Proyectando XML de una forma diferente (Visual Basic)
 Este tema muestra un ejemplo de cómo proyectar un XML cuya apariencia es diferente a la del XML de origen.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577566"
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Cómo: Convertir flujos de .NET Framework en flujos de Windows Runtime, y viceversa
 .NET Framework para aplicaciones de la Tienda Windows es un subconjunto de la plataforma .NET Framework completa. Debido a los requisitos de seguridad y de otro tipo de las aplicaciones de la Tienda Windows, no se puede usar el conjunto completo de API de .NET Framework para abrir y leer archivos. Para más información, consulte [Información general de .NET para aplicaciones de la Tienda Windows](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Sin embargo, puede que desee usar las API de .NET Framework para otras operaciones de manipulación de secuencias. Para manipular estas secuencias, puede que sea necesario convertir entre un tipo de secuencia de .NET Framework como <xref:System.IO.MemoryStream> o <xref:System.IO.FileStream>, y una secuencia de Windows Runtime como [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx), [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx)o [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx).  

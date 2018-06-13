@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650431"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Nombres de atributos y elementos XML declarados (Visual Basic)
 Este tema proporcionan instrucciones de Visual Basic para asignar nombres a atributos en los literales XML y elementos XML.  En un literal XML, puede especificar un nombre local o un nombre completo. Un nombre calificado se compone de un prefijo de espacio de nombres XML, un signo de dos puntos y un nombre local. Para obtener más información acerca de los prefijos de espacio de nombres XML, vea [Literal de elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
