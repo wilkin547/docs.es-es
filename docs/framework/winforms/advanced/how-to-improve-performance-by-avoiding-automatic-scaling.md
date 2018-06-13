@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523047"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Cómo: Mejorar el rendimiento evitando el ajuste de tamaño automático
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] puede escalar automáticamente una imagen como dibujarlo, por lo que reduciría el rendimiento. O bien, puede controlar la escala de la imagen pasando las dimensiones del rectángulo de destino para la <xref:System.Drawing.Graphics.DrawImage%2A> método.  

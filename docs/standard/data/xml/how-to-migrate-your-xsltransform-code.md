@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571007"
 ---
 # <a name="how-to-migrate-your-xsltransform-code"></a>Cómo migrar el código XslTransform
 Las nuevas clases XSLT se han diseñado para que sean muy similares a las clases existentes. La clase <xref:System.Xml.Xsl.XslCompiledTransform> reemplaza a la clase <xref:System.Xml.Xsl.XslTransform>. Las hojas de estilos se compilan utilizando el método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>. Las transformaciones se ejecutan utilizando el método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>. Los siguientes procedimientos muestran tareas XSLT comunes y comparan el código utilizando la clase <xref:System.Xml.Xsl.XslTransform> y la clase <xref:System.Xml.Xsl.XslCompiledTransform>.  

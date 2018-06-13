@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579579"
 ---
 # <a name="globalization"></a>Globalización
 La globalización implica diseñar y desarrollar una aplicación de uso internacional que admita interfaces localizadas y datos regionales para usuarios de varias referencias culturales. Antes de comenzar la fase de diseño, debe determinar qué referencias culturales admitirá la aplicación. Aunque una aplicación se dirige a una sola referencia cultural o región de forma predeterminada, puede diseñarla y escribirla de tal forma que se pueda ampliar fácilmente a los usuarios de otras referencias culturales o regiones.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521762"
 ---
 # <a name="graphics-overview-windows-forms"></a>Información general de gráficos (Formularios Windows Forms)
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] es una interfaz de dispositivo gráfico que permite a los programadores a escribir aplicaciones independientes del dispositivo. Los servicios de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] se exponen a través de un conjunto de clases administradas.  

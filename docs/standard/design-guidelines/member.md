@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571402"
 ---
 # <a name="member-design-guidelines"></a>Instrucciones de diseño de miembros
 Métodos, propiedades, eventos, constructores y campos se conocen colectivamente como miembros. Los miembros en última instancia son el medio por el que la funcionalidad de framework se expone a los usuarios finales de un marco de trabajo.  

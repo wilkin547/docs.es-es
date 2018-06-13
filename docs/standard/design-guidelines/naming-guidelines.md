@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572975"
 ---
 # <a name="naming-guidelines"></a>Instrucciones de nomenclatura
 Después de un conjunto coherente de las convenciones de nomenclatura en el desarrollo de un marco de trabajo pueden ser una contribución importante para facilidad de uso del marco de trabajo. Permite al marco de trabajo se utilizan numerosos desarrolladores en proyectos ampliamente separados. Más allá de la coherencia del formulario, los nombres de elementos de marco deben entenderse fácilmente y deben transmitir la función de cada elemento.  

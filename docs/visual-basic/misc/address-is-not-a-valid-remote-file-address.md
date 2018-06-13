@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599904"
 ---
 # <a name="ltaddressgt-is-not-a-valid-remote-file-address"></a>&lt;dirección&gt; no es una dirección de archivo remoto válida
 \<dirección > no es una dirección de archivo remoto válida. Una dirección válida debe incluir un protocolo, una ruta de acceso y un nombre de archivo.  

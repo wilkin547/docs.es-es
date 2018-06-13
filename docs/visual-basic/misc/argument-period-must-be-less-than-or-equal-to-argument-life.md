@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599036"
 ---
 # <a name="argument-39period39-must-be-less-than-or-equal-to-argument-39life39"></a>Argumento &#39;período&#39; debe ser menor o igual al argumento &#39;vida&#39;
 El valor del argumento `Period` , que especifica el período para el que se calcula la amortización del recurso, es superior al valor del argumento `Life` .  

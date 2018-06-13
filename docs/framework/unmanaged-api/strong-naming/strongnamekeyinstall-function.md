@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1b6760a6418533f5c8f6cec815d86b4cff68aab1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460086"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall (Función)
 Importa un par de claves pública/privada en un contenedor.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474914"
 ---
 # <a name="msmq-transport"></a>Transporte MSMQ
 En este tema se hace una lista de todas las excepciones generadas por el transporte MSMQ.  
