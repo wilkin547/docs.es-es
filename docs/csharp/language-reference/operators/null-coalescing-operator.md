@@ -13,6 +13,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458109"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="ca785-103">??</span><span class="sxs-lookup"><span data-stu-id="ca785-103">??</span></span> <span data-ttu-id="ca785-104">Operador (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="ca785-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="ca785-105">Al operador `??` se le llama el operador de uso combinado de NULL.</span><span class="sxs-lookup"><span data-stu-id="ca785-105">The `??` operator is called the null-coalescing operator.</span></span>  <span data-ttu-id="ca785-106">Dicho operador devuelve el operando izquierdo si no es NULL; de lo contrario, devuelve el operando derecho.</span><span class="sxs-lookup"><span data-stu-id="ca785-106">It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.</span></span>  

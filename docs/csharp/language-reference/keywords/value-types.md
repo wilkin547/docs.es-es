@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172217"
 ---
 # <a name="value-types-c-reference"></a><span data-ttu-id="0e3e6-102">Tipos de valor (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="0e3e6-102">Value Types (C# Reference)</span></span>
 <span data-ttu-id="0e3e6-103">Los tipos de valor constan de dos categorías principales:</span><span class="sxs-lookup"><span data-stu-id="0e3e6-103">The value types consist of two main categories:</span></span>  

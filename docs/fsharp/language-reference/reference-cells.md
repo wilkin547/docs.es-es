@@ -7,6 +7,7 @@ ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/12/2018
+ms.locfileid: "34149067"
 ---
 # <a name="reference-cells"></a><span data-ttu-id="d5025-103">Celdas de referencia</span><span class="sxs-lookup"><span data-stu-id="d5025-103">Reference Cells</span></span>
 

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957935"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a><span data-ttu-id="14b8e-105">Crear servicios resistentes listos para la nube: adoptar errores transitorios en la nube</span><span class="sxs-lookup"><span data-stu-id="14b8e-105">Build resilient services ready for the cloud: Embrace transient failures in the cloud</span></span>
 

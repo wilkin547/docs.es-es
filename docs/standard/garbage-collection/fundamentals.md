@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579540"
 ---
 # <a name="fundamentals-of-garbage-collection"></a><span data-ttu-id="170dc-102">Fundamentos de la recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="170dc-102">Fundamentals of Garbage Collection</span></span>
 <a name="top"></a> <span data-ttu-id="170dc-103">En el Common Language Runtime (CLR), el recolector de elementos no utilizados actúa como administrador de memoria automático.</span><span class="sxs-lookup"><span data-stu-id="170dc-103">In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="170dc-104">Proporciona las siguientes ventajas:</span><span class="sxs-lookup"><span data-stu-id="170dc-104">It provides the following benefits:</span></span>  

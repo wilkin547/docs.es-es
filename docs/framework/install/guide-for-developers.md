@@ -15,6 +15,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312201"
 ---
 # <a name="install-the-net-framework-for-developers"></a><span data-ttu-id="a4b28-102">Instalación de .NET Framework para desarrolladores</span><span class="sxs-lookup"><span data-stu-id="a4b28-102">Install the .NET Framework for developers</span></span>
 
