@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497963"
 ---
 # <a name="wcf-discovery"></a>Detección de WCF
 Windows Communication Foundation (WCF) proporciona compatibilidad para habilitar los servicios para que sea reconocible en tiempo de ejecución de una manera interoperable mediante el protocolo WS-Discovery. Los servicios de WCF pueden anunciar su disponibilidad a la red mediante un mensaje de multidifusión o a un servidor de proxy de detección. Las aplicaciones cliente pueden buscar en la red o en un servidor proxy de detección para encontrar servicios que cumplan un conjunto de criterios. Los temas de esta sección proporcionan información general y describen el modelo de programación para esta característica de forma detallada.  

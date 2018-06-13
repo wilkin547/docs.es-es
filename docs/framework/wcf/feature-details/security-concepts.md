@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497404"
 ---
 # <a name="security-concepts"></a>Conceptos de seguridad
 En esta sección se explica brevemente los conceptos asociados con la seguridad de Windows Communication Foundation (WCF).  

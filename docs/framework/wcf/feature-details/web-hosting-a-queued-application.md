@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505054"
 ---
 # <a name="web-hosting-a-queued-application"></a>Alojamiento web de una aplicación en cola
 El servicio de activación de procesos de Windows (WAS) administra la activación y duración de los procesos de trabajo que contienen aplicaciones que Servicios de Windows Communication Foundation (WCF) de host. El modelo de procesamiento WAS generaliza el modelo de procesamiento [!INCLUDE[iis601](../../../../includes/iis601-md.md)] para el servidor HTTP quitando la dependencia en HTTP. Esto permite a los servicios WCF utilizar HTTP y protocolos distintos de HTTP, como net.msmq y msmq.formatname, en un entorno de hospedaje que admita la activación basada en mensajes y ofrece la capacidad de hospedar un gran número de aplicaciones en un equipo determinado.  

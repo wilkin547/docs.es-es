@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497950"
 ---
 # <a name="using-metadata"></a>Utilización de los metadatos
 Los metadatos del servicio contienen una descripción del servicio que puede leer la máquina. Los metadatos del servicio incluyen descripciones de los extremos de servicio, enlaces, contratos, operaciones y mensajes. Puede usar los metadatos de servicio para una gran variedad de fines, incluidos generar automáticamente un cliente para utilizar el servicio, implementar la descripción del servicio y actualizar dinámicamente el enlace para un cliente.  
