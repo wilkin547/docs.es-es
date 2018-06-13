@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649232"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Llamar a una propiedad o método mediante un nombre de cadena (Visual Basic)
 En la mayoría de los casos, puede descubrir las propiedades y métodos de un objeto en tiempo de diseño y escribir código para controlarlos. Sin embargo, en algunos casos quizás no sepa acerca de los métodos y propiedades de un objeto de antemano, o simplemente puede querer flexibilidad de permitir que un usuario final especificar las propiedades o ejecutar métodos en tiempo de ejecución.  

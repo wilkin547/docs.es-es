@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803759"
 ---
 # <a name="reliable-services"></a>Servicios de confianza
 Las colas y sesiones confiables son las características de Windows Communication Foundation (WCF) que implementan la mensajería confiable. En este tema se explica las características de mensajes confiable de WCF.  

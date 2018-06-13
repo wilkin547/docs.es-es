@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805452"
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Desarrollar e implementar WCF Data Services
 En este tema se proporciona información sobre el desarrollo y la implementación de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Para obtener más información básica sobre [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], consulte [Introducción](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) y [Introducción](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  

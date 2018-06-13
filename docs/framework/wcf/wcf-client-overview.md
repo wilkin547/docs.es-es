@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808437"
 ---
 # <a name="wcf-client-overview"></a>Introducción a un cliente WCF
 En esta sección se describe cómo proteger las aplicaciones cliente, lo que las aplicaciones cliente y cómo configurar, crear y utilizar a un cliente de Windows Communication Foundation (WCF).  

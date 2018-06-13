@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646544"
 ---
 # <a name="visual-basic-programming-guide"></a>Guía de programación en Visual Basic
 Al igual que con cualquier lenguaje de programación moderno, Visual Basic admite muchos elementos de lenguaje y construcciones de programación comunes. Esta guía describe todos los elementos principales de la programación con Visual Basic.  

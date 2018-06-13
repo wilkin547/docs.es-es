@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647958"
 ---
 # <a name="how-to-convert-strings-into-an-array-of-bytes-in-visual-basic"></a>Cómo: Convertir cadenas en una matriz de bytes en Visual Basic
 Este tema muestra cómo convertir una cadena en una matriz de bytes.  

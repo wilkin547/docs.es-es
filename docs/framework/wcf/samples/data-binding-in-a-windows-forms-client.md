@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804383"
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Enlace de datos en un cliente de Windows Forms
 Este ejemplo muestra cómo enlazar a los datos devueltos por un servicio de Windows Communication Foundation (WCF) en una aplicación de formularios Windows Forms.  

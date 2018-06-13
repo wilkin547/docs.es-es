@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808096"
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Cómo: cambiar el proveedor de servicios criptográfico para un certificado X.509&#39;clave privada de s
 Este tema muestra cómo cambiar el proveedor criptográfico utilizado para proporcionar la clave privada de un certificado X.509 y cómo integrar el proveedor en el marco de seguridad de Windows Communication Foundation (WCF). Para obtener más información sobre el uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  

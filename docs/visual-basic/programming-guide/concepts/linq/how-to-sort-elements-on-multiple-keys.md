@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644113"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Cómo: Ordenar elementos en varias claves (Visual Basic)
 En este tema se describe cómo ordenar en varias claves.  

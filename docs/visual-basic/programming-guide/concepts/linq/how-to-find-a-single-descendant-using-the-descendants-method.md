@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642860"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Cómo: buscar un descendiente único mediante el método Descendants (Visual Basic)
 Puede utilizar el método de eje <xref:System.Xml.Linq.XContainer.Descendants%2A> para escribir rápidamente código para buscar un solo elemento cuyo nombre es único. Esta técnica es especialmente útil si desea buscar un descendiente particular con un nombre específico. Puede escribir el código para desplazarse al elemento deseado, pero a menudo resulta más rápido escribir el código usando el eje <xref:System.Xml.Linq.XContainer.Descendants%2A>.  

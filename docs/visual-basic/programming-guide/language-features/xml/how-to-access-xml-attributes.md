@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649037"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>Cómo: Obtener acceso a atributos XML (Visual Basic)
 Este ejemplo muestra cómo usar una propiedad de eje de atributo para obtener acceso a atributos XML en un elemento XML por su nombre. En concreto, usa el `type` propiedad de eje para obtener acceso al atributo con el nombre de atributo `type` en la `phone` objeto.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645278"
 ---
 # <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a>Ejes integrados en el lenguaje de Visual Basic (LINQ to XML)
 Esta sección describen características integradas directamente en el lenguaje de Visual Basic que resulte sencillo tener acceso a XML. Muchos de los ejemplos de LINQ para documentación XML usan estos ejes integrados de Visual Basic.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644021"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Clasificación de operadores de consulta estándar por modo de ejecución (Visual Basic)
 Las implementaciones de LINQ to Objects de los métodos de operador de consulta estándar se ejecutan de una de dos formas principales: inmediata o aplazada. Los operadores de consulta que usan la ejecución aplazada pueden dividirse además en dos categorías: de streaming y de no streaming. Si sabe cómo se ejecutan los diferentes operadores de consulta, puede servirle para entender los resultados que se obtienen de una consulta determinada. Esto es especialmente cierto si se está cambiando el origen de datos o si se está creando una consulta sobre otra. En este tema se clasifican los operadores de consulta estándar según su modo de ejecución.  

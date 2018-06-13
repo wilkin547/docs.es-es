@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637014"
 ---
 # <a name="collection-index-must-be-in-the-range-1-to-the-size-of-the-collection"></a>El índice de la colección debe estar en el intervalo 1 del tamaño de la colección.
 El valor de índice proporcionado está fuera del intervalo válido, que es 1 para el tamaño de la colección.  

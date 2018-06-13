@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647610"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>Cómo: Comprobar si dos objetos son iguales (Visual Basic)
 Si tiene dos variables que hacen referencia a objetos, puede utilizar cualquiera el `Is` o `IsNot` operador o ambos, para determinar si hacen referencia a la misma instancia.  

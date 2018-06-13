@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643591"
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilidad COM (Visual Basic)
 El Modelo de objetos componentes (COM) permite que un objeto exponga su funcionalidad a otros componentes y aplicaciones host. La mayoría del software actual incluye objetos COM. Aunque los ensamblados .NET son la mejor opción para las aplicaciones nuevas, en ocasiones deberá usar objetos COM. En esta sección se trata algunos de los problemas asociados con la creación y uso de objetos COM con Visual Basic.  

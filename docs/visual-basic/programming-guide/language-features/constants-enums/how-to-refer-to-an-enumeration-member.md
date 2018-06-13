@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646327"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>Cómo: Hacer referencia al miembro de una enumeración (Visual Basic)
 Las enumeraciones proporcionan una manera cómoda para trabajar con conjuntos de constantes relacionadas y asociar valores constantes con nombres. Por ejemplo, puede declarar una enumeración para un conjunto de constantes de tipo entero asociadas con los días de la semana y, después, usar los nombres de los días en lugar de sus valores enteros en el código.  

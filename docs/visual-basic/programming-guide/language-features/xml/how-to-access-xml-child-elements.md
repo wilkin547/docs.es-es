@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649209"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>Cómo: Obtener acceso a elementos secundarios XML (Visual Basic)
 Este ejemplo muestra cómo utilizar a un elemento secundario de propiedad de eje para tener acceso a todos los elementos secundarios XML que tienen el nombre especificado en un elemento XML. En concreto, usa el <xref:System.Xml.Linq.XElement.Value%2A> propiedad para obtener el valor del primer elemento de la colección que la `name` devuelve de propiedad de eje secundario. El `name` propiedad de eje secundario obtiene todos los elementos secundarios llamados `phone` en la `contact` objeto. Este ejemplo también utiliza el `phone` propiedad de eje secundario para obtener acceso a todos los elementos secundarios llamados `phone` que están contenidas en el `contact` objeto.  

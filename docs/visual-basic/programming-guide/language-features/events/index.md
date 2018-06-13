@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655276"
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
 Aunque puede visualizar un proyecto de Visual Studio como una serie de procedimientos que se ejecutan en una secuencia, en realidad, la mayoría de programas son orientada a eventos, lo que significa que el flujo de ejecución viene determinado por elementos externos denominados *eventos*.  

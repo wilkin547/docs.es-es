@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803680"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Personalización de un enlace proporcionado por el sistema
 Windows Communication Foundation (WCF) incluye varios enlaces proporcionados por el sistema que le permiten configurar algunas de las propiedades de los elementos de enlace subyacente, pero no todas las propiedades. En este tema se muestra cómo establecer las propiedades en los elementos de enlace para crear un enlace personalizado.  

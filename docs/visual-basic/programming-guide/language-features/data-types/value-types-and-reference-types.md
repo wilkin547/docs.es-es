@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651588"
 ---
 # <a name="value-types-and-reference-types"></a>Tipos de valor y tipos de referencia
 En Visual Basic, tipos de datos se implementan según su clasificación. Los tipos de datos de Visual Basic se pueden clasificar según si una variable de un tipo determinado almacena sus propios datos o un puntero a los datos. Si almacena sus propios datos es un *tipo de valor*; si mantiene un puntero a los datos en otra ubicación en la memoria es un *tipo de referencia*.  

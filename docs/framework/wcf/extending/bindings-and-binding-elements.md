@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804630"
 ---
 # <a name="bindings-and-binding-elements"></a>Enlaces y elementos de enlace
 Los enlaces son colecciones de elementos de configuración especial, denominados *elementos de enlace*, que son evaluados por el runtime del servicio siempre que un cliente o el punto de conexión de servicio se está construyendo. El tipo y orden de los elementos de enlace dentro de un enlace determina la selección y el orden de apilamiento del protocolo y los canales de transporte en la pila de canales de un punto de conexión.  

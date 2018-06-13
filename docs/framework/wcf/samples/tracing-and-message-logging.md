@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807988"
 ---
 # <a name="tracing-and-message-logging"></a>Seguimiento y registro de mensajes
 Este ejemplo muestra cómo habilitar el seguimiento y registro de mensajes. Los registros de mensajes y seguimientos resultantes se ven mediante la [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

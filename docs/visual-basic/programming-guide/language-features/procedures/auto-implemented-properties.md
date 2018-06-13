@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656341"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Propiedades implementadas automáticamente (Visual Basic)
 *Propiedades autoimplementadas* permiten especificar rápidamente una propiedad de una clase sin tener que escribir código para `Get` y `Set` la propiedad. Al escribir código para una propiedad implementada automáticamente, el compilador de Visual Basic crea de manera automática un campo privado para almacenar la variable de propiedad, además de crear los procedimientos `Get` y `Set` asociados.  

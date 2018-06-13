@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647393"
 ---
 # <a name="character-data-types-visual-basic"></a>Tipos de datos de caracteres (Visual Basic)
 Visual Basic proporciona *tipos de datos de caracteres* para tratar con caracteres que se pueden mostrar e imprimir. Aunque ambas tienen que ver con caracteres Unicode, `Char` contiene un único carácter, mientras que `String` contiene un número indefinido de caracteres.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804191"
 ---
 # <a name="wcf-system-requirements"></a>Requisitos del sistema WCF
 Windows Communication Foundation (WCF) es una infraestructura de comunicación que se utiliza para crear aplicaciones distribuidas. A continuación enumeran los requisitos que permiten WCF para que se ejecute.  

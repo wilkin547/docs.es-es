@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803600"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Enlaces de Windows Communication Foundation
 Los enlaces especifican cómo un punto de conexión de servicio de Windows Communication Foundation (WCF) se comunica con otros puntos de conexión. En lo más básico, un enlace debe especificar el transporte (por ejemplo, HTTP o TCP) a utilizar. También puede establecer otras características, como seguridad y soporte de transacción, a través de los enlaces.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641685"
 ---
 # <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Cómo: Controlar prefijos de espacio de nombres (Visual Basic) (LINQ to XML)
 En este tema se describe cómo puede controlar prefijos de espacios de nombres.  
