@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593582"
 ---
 # <a name="39sub-main39-was-not-found-in-39ltnamegt39"></a>&#39;Sub Main&#39; no se encontró en &#39; &lt;nombre&gt;&#39;
 Falta `Sub Main` o se ha especificado una ubicación incorrecta para la instrucción.  

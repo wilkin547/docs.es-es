@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597388"
 ---
 # <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>La excepción del comentario XML debe tener un &#39;cref&#39; atributo
 El \<excepción > etiqueta proporciona un medio para documentar las excepciones que se pueden iniciar mediante un método. Requerido `cref` atributo designa el nombre de un miembro, que comprueba el generador de documentación. Si el miembro existe, se traduce al nombre de elemento canónico en el archivo de documentación.  

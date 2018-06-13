@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592189"
 ---
 # <a name="threads-and-threading"></a>Subprocesos y subprocesamiento
 Los sistemas operativos usan procesos para separar las distintas aplicaciones que ejecutan. Los subprocesos son la unidad básica a la que el sistema operativo asigna tiempo de procesador, y más de un subproceso puede ejecutar código dentro de ese proceso. Cada subproceso mantiene controladores de excepciones, una prioridad de programación y un conjunto de estructuras que el sistema usa para guardar el contexto del subproceso hasta que esté programado. El contexto del subproceso incluye toda la información que el subproceso necesita para reanudar sin problemas la ejecución, incluido el conjunto de pila y registros de CPU del subproceso, en el espacio de direcciones del proceso de host del subproceso.  

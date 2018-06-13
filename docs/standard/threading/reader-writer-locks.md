@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586378"
 ---
 # <a name="reader-writer-locks"></a>Bloqueos de lector y escritor
 La clase <xref:System.Threading.ReaderWriterLockSlim> permite que varios subprocesos lean un recurso al mismo tiempo, pero requiere que un subproceso espere a un bloqueo exclusivo para poder escribir en el recurso.  

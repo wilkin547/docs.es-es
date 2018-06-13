@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586080"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>Cómo: Cifrar elementos XML con claves simétricas
 Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar un elemento dentro de un documento XML.  El cifrado XML le permite almacenar o transportar información XML confidencial, sin preocuparse de que los datos se puedan leer con facilidad.  Este procedimiento descifra un elemento XML mediante el algoritmo AES (Estándar de cifrado avanzado), también conocido como Rijndael.  

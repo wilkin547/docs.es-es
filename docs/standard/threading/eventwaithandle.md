@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592202"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 La clase <xref:System.Threading.EventWaitHandle> permite que los subprocesos se comuniquen entre sí mediante señalización y espera de señales. Los identificadores de espera de eventos (también denominados simplemente como eventos) son identificadores de espera que se pueden señalar con el fin de liberar uno o varios subprocesos en espera. Cuando se envía una señal, se restablece un identificador de espera de evento de forma manual o automática. La clase <xref:System.Threading.EventWaitHandle> puede representar cualquier identificador de espera de evento local (evento local) o identificador de espera de evento del sistema con nombre (denominado evento o evento del sistema y visible para todos los procesos).  

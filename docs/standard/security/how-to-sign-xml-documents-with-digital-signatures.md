@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590304"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Cómo: Firmar documentos XML con firmas digitales
 Puede usar las clases del espacio de nombres <xref:System.Security.Cryptography.Xml> para firmar un documento XML o parte de un documento XML con una firma digital.  Las firmas XML digitales (XMLDSIG) permiten comprobar que los datos no se modificaron después de firmarlos.  Para obtener más información sobre el estándar XMLDSIG, consulte la recomendación de World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  

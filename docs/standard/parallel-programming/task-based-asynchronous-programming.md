@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592594"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programación asincrónica basada en tareas
 La biblioteca TPL se basa en el concepto de *tarea*, que representa una operación asincrónica. De cierta forma, una tarea recuerda a un subproceso o elemento de trabajo <xref:System.Threading.ThreadPool>, pero en un nivel más alto de abstracción. El término *paralelismo de tareas* hace referencia a la ejecución simultánea de una o varias tareas independientes. Las tareas proporcionan dos ventajas fundamentales:  

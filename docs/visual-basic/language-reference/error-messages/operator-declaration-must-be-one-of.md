@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595025"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a>Declaración del operador debe ser uno de: +,-, *,\,/, ^, &amp;, Like, Mod y, Or, Xor, no es así, &lt; &lt;, &gt; &gt;...
 Puede declarar solo un operador que es apto para la sobrecarga. En la tabla siguiente se enumera los operadores que se puede declarar.  

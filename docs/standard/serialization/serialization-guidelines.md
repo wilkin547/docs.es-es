@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592098"
 ---
 # <a name="serialization-guidelines"></a>Directrices de serialización
 Este documento enumera las instrucciones que se deben tener en cuenta al diseñar una API para su serialización.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591333"
 ---
 # <a name="threading-objects-and-features"></a>Objetos y características de subprocesos
 .NET Framework proporciona varios objetos que le ayudarán a crear y administrar aplicaciones multiproceso. Los subprocesos administrados se representan mediante la clase <xref:System.Threading.Thread>. La clase <xref:System.Threading.ThreadPool> permite crear y administrar fácilmente tareas multiproceso en segundo plano. La clase <xref:System.ComponentModel.BackgroundWorker> hace lo mismo para las tareas que interactúan con la interfaz de usuario. La clase <xref:System.Threading.Timer> ejecuta tareas en segundo plano a intervalos de tiempo definidos.  

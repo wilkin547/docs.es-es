@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597401"
 ---
 # <a name="in-clause-visual-basic"></a>In (Cláusula, Visual Basic)
 Especifica el grupo que la variable de bucle recorrer en un `For Each` de bucle o especifica la colección para consultar en un `From`, `Join`, o `Group Join` cláusula.  

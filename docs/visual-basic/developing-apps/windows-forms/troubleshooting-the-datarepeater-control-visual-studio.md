@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591903"
 ---
 # <a name="troubleshooting-the-datarepeater-control-visual-studio"></a>Solución de problemas del control DataRepeater (Visual Studio)
 En este tema se enumera los problemas comunes que pueden producirse cuando se trabaja con el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  

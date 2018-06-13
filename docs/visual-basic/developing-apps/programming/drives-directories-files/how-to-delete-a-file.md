@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588628"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>Cómo: Eliminar un archivo en Visual Basic
 El método `DeleteFile` del objeto `My.Computer.FileSystem` permite eliminar un archivo. Entre las opciones que ofrece se encuentran: enviar el archivo eliminado a la **Papelera de reciclaje**, pedir al usuario que confirme la eliminación del archivo o qué hacer si el usuario cancela la operación.  

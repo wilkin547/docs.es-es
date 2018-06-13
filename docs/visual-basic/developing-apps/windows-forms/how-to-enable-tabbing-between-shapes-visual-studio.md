@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589552"
 ---
 # <a name="how-to-enable-tabbing-between-shapes-visual-studio"></a>Cómo: Habilitar la tabulación entre las formas (Visual Studio)
 No tiene controles Line y shape `TabStop` o `TabIndex` propiedades, pero todavía puede habilitar la tabulación entre ellos. En el siguiente ejemplo, al presionar la tecla CTRL y las teclas TAB se pestaña entre formas; solo la tecla TAB se pestaña entre los botones.  

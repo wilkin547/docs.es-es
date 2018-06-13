@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586518"
 ---
 # <a name="managed-threading-basics"></a>Principios básicos del subprocesamiento administrado
 Los cinco primeros temas de esta sección están diseñados para ayudarle a determinar cuándo se debe utilizar un subproceso administrado así como para explicar algunas características básicas. Para obtener información sobre las clases que proporcionan características adicionales, vea [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md) e [Información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  

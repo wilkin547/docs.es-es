@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590756"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Cómo: Crear una clave del Registro y establecer su valor en Visual Basic
 El método `CreateSubKey` del objeto `My.Computer.Registry` se puede usar para crear una clave del Registro.  

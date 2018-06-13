@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594811"
 ---
 # <a name="string-constants-must-end-with-a-double-quote"></a>Las constantes de cadena deben terminar en comillas dobles
 Las constantes de cadena deben empezar y terminar con comillas.  

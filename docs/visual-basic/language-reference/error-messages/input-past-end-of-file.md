@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586746"
 ---
 # <a name="input-past-end-of-file"></a>Se sobrepasó el final del archivo
 Ya sea un `Input` instrucción está leyendo de un archivo que está vacío o uno en el que se usan todos los datos o usa el `EOF` función con un archivo abierto para acceso binario.  

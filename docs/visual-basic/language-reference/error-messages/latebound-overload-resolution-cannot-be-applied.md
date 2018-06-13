@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589885"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>No se puede aplicar la resolución de sobrecarga enlazada a &#39; &lt;nombreProcedimiento&gt; &#39; porque la instancia de acceso es un tipo de interfaz
 El compilador está intentando resolver una referencia a una propiedad o procedimiento sobrecargados, pero se produce un error en la referencia porque es un argumento de tipo `Object` y el objeto que hace referencia tiene el tipo de datos de una interfaz. El `Object` argumento hace que el compilador para resolver la referencia como en tiempo de ejecución.  

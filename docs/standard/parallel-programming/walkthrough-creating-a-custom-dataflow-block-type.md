@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592156"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Tutorial: Crear tipos de bloques de flujos de datos personalizados
 Aunque la biblioteca de flujo de datos TPL proporciona varios tipos de bloques de flujo de datos que permiten una variedad de funciones, también puede crear tipos de bloques personalizados. En este documento se describe cómo crear un tipo de bloque de flujo de datos que implementa un comportamiento personalizado.  

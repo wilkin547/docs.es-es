@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590139"
 ---
 # <a name="error-messages-visual-basic"></a>Mensajes de error (Visual Basic)
 Al escribir, compilar o ejecutar una aplicación de Visual Basic, pueden producirse los siguientes tipos de errores:  

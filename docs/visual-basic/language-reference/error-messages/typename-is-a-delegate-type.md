@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595653"
 ---
 # <a name="39lttypenamegt39-is-a-delegate-type"></a>&#39;&lt;TypeName&gt; &#39; es un tipo delegado
 '\<typename >' es un tipo de delegado. Construcción de delegado permite una única expresión AddressOf como una lista de argumentos. A menudo se puede utilizar una expresión AddressOf en lugar de una construcción de delegado.  

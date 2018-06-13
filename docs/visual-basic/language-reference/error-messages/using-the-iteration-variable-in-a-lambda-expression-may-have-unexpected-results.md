@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594167"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>El uso de una variable de iteración en una expresión lambda puede producir resultados inesperados.
 Uso de la variable de iteración en una expresión lambda puede producir resultados inesperados. En su lugar, cree una variable local dentro del bucle y asígnele el valor de la variable de iteración.  

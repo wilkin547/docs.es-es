@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588975"
 ---
 # <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>&#39;&lt;InterfaceName&gt;.&lt; MemberName&gt; &#39; ya está implementado por la clase base &#39; &lt;nombredeclasebase&gt;&#39;. Reimplementación de &lt;tipo&gt; supone
 Una propiedad, procedimiento o evento en una clase derivada utiliza un `Implements` cláusula que especifica un miembro de interfaz que ya se ha implementado en la clase base.  

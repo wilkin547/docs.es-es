@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594847"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>No se admiten literales XML ni propiedades XML en código incrustado en ASP.NET
 No se admiten literales XML ni propiedades XML en código incrustado en ASP.NET. Para usar características XML, mueva el código al código subyacente.  

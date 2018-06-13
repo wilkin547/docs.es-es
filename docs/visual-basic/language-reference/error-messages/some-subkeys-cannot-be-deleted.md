@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594798"
 ---
 # <a name="some-subkeys-cannot-be-deleted"></a>Algunas subclaves no se pueden eliminar
 Se ha intentado eliminar una clave del registro, pero la operación falló debido a que algunas subclaves no se puede eliminar. Normalmente esto es debido a una falta de permisos.  

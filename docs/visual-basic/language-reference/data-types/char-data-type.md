@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590821"
 ---
 # <a name="char-data-type-visual-basic"></a>Char (Tipo de datos, Visual Basic)
 Contiene puntos de código de (2 bytes) de 16 bits sin signo comprendidos entre valor comprendido entre 0 y 65535. Cada *punto de código*, o el código de carácter, representa un único carácter Unicode.  

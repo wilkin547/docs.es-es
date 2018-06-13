@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585774"
 ---
 # <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a>No se puede representar en el tipo de expresión constante &#39; &lt;typename&gt;&#39;
 Está intentando evaluar una constante que no encaja en el tipo de destino, normalmente porque desborda el intervalo.  

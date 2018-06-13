@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593170"
 ---
 # <a name="39module39-statements-can-occur-only-at-file-or-namespace-level"></a>&#39;Módulo&#39; instrucciones pueden ocurrir solo en el nivel de archivo o espacio de nombres
 `Module` las instrucciones deben aparecer en la parte superior del archivo de origen inmediatamente después de `Option` y `Imports` instrucciones, los atributos globales y declaraciones de espacios de nombres, pero antes de todas las demás declaraciones.  

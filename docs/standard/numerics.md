@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588702"
 ---
 # <a name="numerics-in-the-net-framework"></a>Valores numéricos en .NET Framework
 .NET Framework admite los tipos primitivos estándar de entero numérico y de punto flotante, así como <xref:System.Numerics.BigInteger>, un tipo entero sin límite inferior ni superior teórico, <xref:System.Numerics.Complex>, un tipo que representa números complejos y un conjunto de tipos de vector habilitados para SIMD en el espacio de nombres <xref:System.Numerics>.  
