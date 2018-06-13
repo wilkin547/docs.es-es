@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643710"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a><span data-ttu-id="9f861-102">Solucionar problemas de interoperabilidad (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9f861-102">Troubleshooting Interoperability (Visual Basic)</span></span>
 <span data-ttu-id="9f861-103">Cuando se interoperar entre COM y el código administrado de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], pueden surgir uno o varios de los siguientes problemas comunes.</span><span class="sxs-lookup"><span data-stu-id="9f861-103">When you interoperate between COM and the managed code of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], you may encounter one or more of the following common issues.</span></span>  
