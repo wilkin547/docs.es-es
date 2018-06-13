@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516479"
 ---
 # <a name="programming-model-item-tree"></a>Programar el árbol de elementos de modelo
 Este ejemplo muestra cómo navegar hasta el <xref:System.Activities.Presentation.Model.ModelItem> árbol utilizando el enlace de datos declarativo de la vista de árbol de Windows Presentation Foundation (WPF).  

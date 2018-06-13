@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604008"
 ---
 # <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>No se puede escribir el archivo temporal porque la ruta de acceso temporal no está disponible
 Visual Basic no se pudo determinar la ruta de acceso donde se almacenan los archivos temporales.  

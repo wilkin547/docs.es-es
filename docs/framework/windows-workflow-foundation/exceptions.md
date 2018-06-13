@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520164"
 ---
 # <a name="exceptions"></a>Excepciones
 Los flujos de trabajo pueden usar la actividad <xref:System.Activities.Statements.TryCatch> para controlar excepciones que se producen durante la ejecución de un flujo de trabajo. Se pueden controlar estas excepciones o se pueden volver a producir usando la actividad <xref:System.Activities.Statements.Rethrow>. Las actividades de la sección <xref:System.Activities.Statements.TryCatch.Finally%2A> se ejecutan cuando la sección <xref:System.Activities.Statements.TryCatch.Try%2A> o la sección <xref:System.Activities.Statements.TryCatch.Catches%2A> se hayan completado. Los flujos de trabajo hospedan por un <xref:System.Activities.WorkflowApplication> también puede usar la instancia de la <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> controlador de eventos para controlar las excepciones no controladas por un <xref:System.Activities.Statements.TryCatch> actividad.  

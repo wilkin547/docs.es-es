@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639481"
 ---
 # <a name="the-stream-passed-to-textfieldparser-cannot-be-read"></a>La secuencia pasada a TextFieldParser no se puede leer.
 El [TextFieldParser Object](../../visual-basic/language-reference/objects/textfieldparser-object.md) no puede leer la secuencia que se le ha pasado. Puede ser como consecuencia de intentar leer un archivo que no es un archivo de texto.  

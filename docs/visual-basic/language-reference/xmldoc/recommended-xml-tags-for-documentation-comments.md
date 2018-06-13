@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604430"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Etiquetas XML recomendadas para comentarios de documentación (Visual Basic)
 El compilador de Visual Basic puede procesar los comentarios de documentación en el código en un archivo XML. Puede utilizar herramientas adicionales para procesar el archivo XML en la documentación.  

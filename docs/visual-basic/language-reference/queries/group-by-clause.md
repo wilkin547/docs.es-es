@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605035"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By (Cláusula, Visual Basic)
 Agrupa los elementos de los resultados de una consulta. También se puede usar para aplicar funciones de agregado a cada grupo. La operación de agrupación se basa en una o varias claves.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522274"
 ---
 # <a name="how-to-print-a-windows-form"></a>Cómo: Imprimir Windows Forms
 Como parte del proceso de desarrollo, normalmente deseará imprimir una copia de los formularios Windows Forms. En el ejemplo de código siguiente se muestra cómo imprimir una copia del formulario actual mediante el uso de la <xref:System.Drawing.Graphics.CopyFromScreen%2A> método.  

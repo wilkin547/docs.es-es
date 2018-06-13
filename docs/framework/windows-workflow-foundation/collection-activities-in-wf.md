@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516732"
 ---
 # <a name="collection-activities-in-wf"></a>Actividades de colección en WF
 Las actividades de colección se usan para trabajar con objetos de colección en un flujo de trabajo. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tiene actividades proporcionadas por el sistema para agregar y quitar elementos de una colección, probar la existencia de un elemento en una colección y borrar una colección. `ExistsInCollection` y `RemoveFromCollection` tiene un <xref:System.Activities.OutArgument%601> de tipo <xref:System.Boolean>, lo que indica el resultado.  

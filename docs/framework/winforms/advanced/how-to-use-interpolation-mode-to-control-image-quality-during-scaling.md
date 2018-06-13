@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522364"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Cómo: Utilizar el modo de interpolación para controlar la calidad de imagen durante el ajuste de tamaño
 El modo de interpolación de un <xref:System.Drawing.Graphics> objeto influye en la forma [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] imágenes escalas (se expande y se reduce). El <xref:System.Drawing.Drawing2D.InterpolationMode> enumeración define varios modos de interpolación, algunos de los cuales se muestran en la lista siguiente:  

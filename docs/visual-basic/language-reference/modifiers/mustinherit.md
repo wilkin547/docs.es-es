@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602845"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Especifica que una clase puede usarse únicamente como clase base y que no se puede crear un objeto directamente a partir de él.  

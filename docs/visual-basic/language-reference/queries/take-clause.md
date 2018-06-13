@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604034"
 ---
 # <a name="take-clause-visual-basic"></a>Take (Cláusula, Visual Basic)
 Devuelve un número especificado de elementos contiguos desde el principio de una colección.  

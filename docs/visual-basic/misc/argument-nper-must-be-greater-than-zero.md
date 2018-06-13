@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601197"
 ---
 # <a name="argument-39nper39-must-be-greater-than-zero"></a>Argumento &#39;NPer&#39; debe ser mayor que cero.
 La función `NPer` , que devuelve un `Double` que especifica el número de períodos de una anualidad basada en pagos fijos periódicos y en tipo de interés fijo, requiere un argumento mayor que cero.  

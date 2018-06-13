@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 94a473d00110c07615ccdfc98bb8944e40dc30e3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405478"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken (Método)
 Recupera el token de clave pública para un determinado archivo de clave o un contenedor de claves.  

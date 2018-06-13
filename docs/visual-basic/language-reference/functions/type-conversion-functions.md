@@ -86,6 +86,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605087"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funciones de conversión de tipos (Visual Basic)
 Estas funciones están compilados de forma alineada, lo que significa que el código de conversión forma parte del código que evalúa la expresión. En ocasiones, no hay ninguna llamada a un procedimiento para realizar la conversión, lo que mejora el rendimiento. Cada función convierte una expresión al tipo de datos específico.  

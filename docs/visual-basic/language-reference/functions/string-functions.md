@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604151"
 ---
 # <a name="string-functions-visual-basic"></a>Funciones de cadena (Visual Basic)
 En la tabla siguiente se enumera las funciones que proporciona Visual Basic para buscar y manipular cadenas.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524071"
 ---
 # <a name="double-buffered-graphics"></a>Gráficos de doble búfer
 El parpadeo es un problema frecuente al programar gráficos. Las operaciones gráficas que requieren varias operaciones de pintura complejas pueden hacer que las imágenes representadas parezcan parpadear o tengan un aspecto de algún modo inaceptable. Para resolver estos problemas, .NET Framework proporciona acceso al almacenamiento en doble búfer.  

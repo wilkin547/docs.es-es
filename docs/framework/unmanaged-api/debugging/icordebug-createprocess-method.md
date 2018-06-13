@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 044f94a567dc4bc2b169ba2a5f2a5d7b4f98e516
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408582"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess (Método)
 Inicia un proceso y su subproceso principal bajo el control del depurador.  

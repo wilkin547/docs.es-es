@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602767"
 ---
 # <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a>Valor de tipo &#39;type1&#39; no se puede convertir a &#39;type2&#39;
 No se puede convertir el valor de tipo 'tipo1' a 'tipo2'. Puede utilizar la propiedad 'Value' para obtener el valor de cadena del primer elemento de '\<Elementoprimario >'.  

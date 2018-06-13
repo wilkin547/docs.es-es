@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395309"
 ---
 # <a name="etw-events-in-the-net-framework"></a>Eventos de ETW en .NET Framework
 El Seguimiento de eventos para Windows (ETW) es un sistema de seguimiento escalable de alto rendimiento y escasa sobrecarga proporcionado por los sistemas operativos Windows. Complementa la compatibilidad de generación de perfiles y de depuración proporcionada por .NET Framework y se puede usar para solucionar problemas en numerosos escenarios.  

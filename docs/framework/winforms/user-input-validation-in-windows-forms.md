@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541812"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validación de los datos proporcionados por el usuario en formularios Windows Forms
 Cuando los usuarios escriben datos en la aplicación, puede que desee comprobar que los datos son válidos antes de que la aplicación usa. Puede requerir que determinados campos de texto no sea de longitud cero, que tenga formato de un campo como un número de teléfono u otro tipo de datos con formato correcto o que una cadena no contiene ningún carácter no seguro que podría usarse para poner en peligro la seguridad de una base de datos. Windows Forms proporciona varias maneras de validar los datos introducidos en la aplicación.  

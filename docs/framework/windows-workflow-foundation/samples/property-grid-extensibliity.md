@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519599"
 ---
 # <a name="property-grid-extensibliity"></a>Extensibilidad de la cuadrícula de propiedades
 Un desarrollador puede personalizar la cuadrícula de propiedad que se muestra cuando una actividad determinada se selecciona dentro del diseñador. Esto se puede hacer para crear una experiencia de edición enriquecida. En este ejemplo se muestra cómo llevarlo a cabo.  
