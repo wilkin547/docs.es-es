@@ -1,53 +1,40 @@
 ---
 title: Orden de los miembros de datos
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 41eb191a08aba0f84a677087a3771b6d8e90efcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e286b900d7647bcd5bc99b78164e6820c1417a63
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489549"
 ---
-# <a name="data-member-order"></a><span data-ttu-id="fa9ca-102">Orden de los miembros de datos</span><span class="sxs-lookup"><span data-stu-id="fa9ca-102">Data Member Order</span></span>
-<span data-ttu-id="fa9ca-103">En algunas aplicaciones, es útil conocer el orden en el que se envían los datos de los distintos miembros de datos o en el que se espera recibir (como el orden en el que los datos aparecen en el XML serializado).</span><span class="sxs-lookup"><span data-stu-id="fa9ca-103">In some applications, it is useful to know the order in which data from the various data members is sent or is expected to be received (such as the order in which data appears in the serialized XML).</span></span> <span data-ttu-id="fa9ca-104">A veces puede ser necesario cambiar este orden.</span><span class="sxs-lookup"><span data-stu-id="fa9ca-104">Sometimes it may be necessary to change this order.</span></span> <span data-ttu-id="fa9ca-105">En este tema se explican las reglas de la clasificación.</span><span class="sxs-lookup"><span data-stu-id="fa9ca-105">This topic explains the ordering rules.</span></span>  
+# <a name="data-member-order"></a><span data-ttu-id="4efd4-102">Orden de los miembros de datos</span><span class="sxs-lookup"><span data-stu-id="4efd4-102">Data Member Order</span></span>
+<span data-ttu-id="4efd4-103">En algunas aplicaciones, es útil conocer el orden en el que se envían los datos de los distintos miembros de datos o en el que se espera recibir (como el orden en el que los datos aparecen en el XML serializado).</span><span class="sxs-lookup"><span data-stu-id="4efd4-103">In some applications, it is useful to know the order in which data from the various data members is sent or is expected to be received (such as the order in which data appears in the serialized XML).</span></span> <span data-ttu-id="4efd4-104">A veces puede ser necesario cambiar este orden.</span><span class="sxs-lookup"><span data-stu-id="4efd4-104">Sometimes it may be necessary to change this order.</span></span> <span data-ttu-id="4efd4-105">En este tema se explican las reglas de la clasificación.</span><span class="sxs-lookup"><span data-stu-id="4efd4-105">This topic explains the ordering rules.</span></span>  
   
-## <a name="basic-rules"></a><span data-ttu-id="fa9ca-106">Reglas básicas</span><span class="sxs-lookup"><span data-stu-id="fa9ca-106">Basic Rules</span></span>  
- <span data-ttu-id="fa9ca-107">Las reglas básicas sobre el orden de los datos incluyen:</span><span class="sxs-lookup"><span data-stu-id="fa9ca-107">The basic rules for data ordering include:</span></span>  
+## <a name="basic-rules"></a><span data-ttu-id="4efd4-106">Reglas básicas</span><span class="sxs-lookup"><span data-stu-id="4efd4-106">Basic Rules</span></span>  
+ <span data-ttu-id="4efd4-107">Las reglas básicas sobre el orden de los datos incluyen:</span><span class="sxs-lookup"><span data-stu-id="4efd4-107">The basic rules for data ordering include:</span></span>  
   
--   <span data-ttu-id="fa9ca-108">Si un tipo de contrato de datos forma parte de una jerarquía de herencia, los miembros de datos de sus tipos base siempre aparecerán en primer lugar.</span><span class="sxs-lookup"><span data-stu-id="fa9ca-108">If a data contract type is a part of an inheritance hierarchy, data members of its base types are always first in the order.</span></span>  
+-   <span data-ttu-id="4efd4-108">Si un tipo de contrato de datos forma parte de una jerarquía de herencia, los miembros de datos de sus tipos base siempre aparecerán en primer lugar.</span><span class="sxs-lookup"><span data-stu-id="4efd4-108">If a data contract type is a part of an inheritance hierarchy, data members of its base types are always first in the order.</span></span>  
   
--   <span data-ttu-id="fa9ca-109">A continuación, se encontrarán los miembros de datos del tipo actual que no tienen la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> del conjunto de atributos <xref:System.Runtime.Serialization.DataMemberAttribute>, en orden alfabético.</span><span class="sxs-lookup"><span data-stu-id="fa9ca-109">Next in order are the current type’s data members that do not have the <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute set, in alphabetical order.</span></span>  
+-   <span data-ttu-id="4efd4-109">A continuación, se encontrarán los miembros de datos del tipo actual que no tienen la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> del conjunto de atributos <xref:System.Runtime.Serialization.DataMemberAttribute>, en orden alfabético.</span><span class="sxs-lookup"><span data-stu-id="4efd4-109">Next in order are the current type’s data members that do not have the <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute set, in alphabetical order.</span></span>  
   
--   <span data-ttu-id="fa9ca-110">Después se encontrará cualquier miembro de datos que tenga la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> del conjunto de atributos <xref:System.Runtime.Serialization.DataMemberAttribute>.</span><span class="sxs-lookup"><span data-stu-id="fa9ca-110">Next are any data members that have the <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute set.</span></span> <span data-ttu-id="fa9ca-111">Se ordenan por el valor de la propiedad `Order` y después alfabéticamente si hay más de un miembro de un valor `Order` concreto.</span><span class="sxs-lookup"><span data-stu-id="fa9ca-111">These are ordered by the value of the `Order` property first and then alphabetically if there is more than one member of a certain `Order` value.</span></span> <span data-ttu-id="fa9ca-112">Los valores de orden pueden omitirse.</span><span class="sxs-lookup"><span data-stu-id="fa9ca-112">Order values may be skipped.</span></span>  
+-   <span data-ttu-id="4efd4-110">Después se encontrará cualquier miembro de datos que tenga la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> del conjunto de atributos <xref:System.Runtime.Serialization.DataMemberAttribute>.</span><span class="sxs-lookup"><span data-stu-id="4efd4-110">Next are any data members that have the <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute set.</span></span> <span data-ttu-id="4efd4-111">Se ordenan por el valor de la propiedad `Order` y después alfabéticamente si hay más de un miembro de un valor `Order` concreto.</span><span class="sxs-lookup"><span data-stu-id="4efd4-111">These are ordered by the value of the `Order` property first and then alphabetically if there is more than one member of a certain `Order` value.</span></span> <span data-ttu-id="4efd4-112">Los valores de orden pueden omitirse.</span><span class="sxs-lookup"><span data-stu-id="4efd4-112">Order values may be skipped.</span></span>  
   
- <span data-ttu-id="fa9ca-113">El orden alfabético se establece llamando al método <xref:System.String.CompareOrdinal%2A>.</span><span class="sxs-lookup"><span data-stu-id="fa9ca-113">Alphabetical order is established by calling the <xref:System.String.CompareOrdinal%2A> method.</span></span>  
+ <span data-ttu-id="4efd4-113">El orden alfabético se establece llamando al método <xref:System.String.CompareOrdinal%2A>.</span><span class="sxs-lookup"><span data-stu-id="4efd4-113">Alphabetical order is established by calling the <xref:System.String.CompareOrdinal%2A> method.</span></span>  
   
-## <a name="examples"></a><span data-ttu-id="fa9ca-114">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="fa9ca-114">Examples</span></span>  
- <span data-ttu-id="fa9ca-115">Observe el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="fa9ca-115">Consider the following code.</span></span>  
+## <a name="examples"></a><span data-ttu-id="4efd4-114">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="4efd4-114">Examples</span></span>  
+ <span data-ttu-id="4efd4-115">Observe el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="4efd4-115">Consider the following code.</span></span>  
   
  [!code-csharp[C_DataContractNames#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#4)]
  [!code-vb[C_DataContractNames#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#4)]  
   
- <span data-ttu-id="fa9ca-116">El XML generado es similar a lo siguiente.</span><span class="sxs-lookup"><span data-stu-id="fa9ca-116">The XML produced is similar to the following.</span></span>  
+ <span data-ttu-id="4efd4-116">El XML generado es similar a lo siguiente.</span><span class="sxs-lookup"><span data-stu-id="4efd4-116">The XML produced is similar to the following.</span></span>  
   
 ```xml  
 <DerivedType>  
@@ -75,7 +62,7 @@ ms.lasthandoff: 12/22/2017
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fa9ca-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="fa9ca-117">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4efd4-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="4efd4-117">See Also</span></span>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
- [<span data-ttu-id="fa9ca-118">Equivalencia de contratos de datos</span><span class="sxs-lookup"><span data-stu-id="fa9ca-118">Data Contract Equivalence</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [<span data-ttu-id="fa9ca-119">Utilización de contratos de datos</span><span class="sxs-lookup"><span data-stu-id="fa9ca-119">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+ [<span data-ttu-id="4efd4-118">Equivalencia de contratos de datos</span><span class="sxs-lookup"><span data-stu-id="4efd4-118">Data Contract Equivalence</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [<span data-ttu-id="4efd4-119">Utilización de contratos de datos</span><span class="sxs-lookup"><span data-stu-id="4efd4-119">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
