@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804718"
 ---
 # <a name="significant-traces"></a>Seguimientos significativos
 Este tema enumeran algunos de los principales seguimientos emitidos por Windows Communication Foundation (WCF).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805387"
 ---
 # <a name="extensibility"></a>Extensibilidad
 Esta sección contiene ejemplos que tratan sobre la extensibilidad personalizada y otras características de Windows Communication Foundation (WCF).  

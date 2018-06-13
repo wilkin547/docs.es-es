@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653919"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Sobrecarga de procedimiento (Visual Basic)
 *Sobrecarga* un procedimiento significa definirlo en varias versiones, utilizando el mismo nombre pero distintas listas de parámetros. El propósito de sobrecarga es definir varias versiones estrechamente relacionadas de un procedimiento sin tener que distinguirlas por su nombre. La forma de hacerlo es mediante la variación de la lista de parámetros.  

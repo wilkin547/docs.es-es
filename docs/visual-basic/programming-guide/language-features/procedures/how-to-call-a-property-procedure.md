@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654822"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Cómo: Llamar a un procedimiento de propiedad (Visual Basic)
 Puede llamar a un procedimiento de propiedad almacena un valor en la propiedad o recuperar su valor. Tener acceso a una propiedad de la misma manera que se obtenga acceso a una variable.  

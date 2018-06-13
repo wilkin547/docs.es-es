@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644685"
 ---
 # <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Archivo XML de ejemplo: Datos numéricos (LINQ to XML)
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo contiene datos numéricos para realizar sumas, promedios y agrupaciones.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647935"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Cómo: Asignar una matriz a otra (Visual Basic)
 Dado que las matrices son objetos, se puede usar en instrucciones de asignación como otros tipos de objeto. Una variable de matriz contiene un puntero a los datos que constituyen los elementos de matriz y la información de rango y longitud, y una asignación de copia solo this (puntero).  

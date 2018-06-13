@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649768"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Diferencias entre argumentos modificables y no modificables (Visual Basic)
 Cuando se llama a un procedimiento, normalmente se pasa uno o más argumentos a él. Cada argumento corresponde a un elemento de programación subyacente. Los elementos subyacentes y los argumentos pueden ser modificables o no modificables.  

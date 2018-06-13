@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635624"
 ---
 # <a name="length-of-argument-39ltargumentnamegt39-must-be-greater-than-zero"></a>La longitud del argumento &#39; &lt;nombredeargumento&gt; &#39; debe ser mayor que cero.
 Un argumento tiene un valor que es menor o igual a cero.  

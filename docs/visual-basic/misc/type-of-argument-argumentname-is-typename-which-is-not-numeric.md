@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639616"
 ---
 # <a name="type-of-argument-39ltargumentnamegt39-is-39lttypenamegt39-which-is-not-numeric"></a>Tipo de argumento &#39; &lt;nombredeargumento&gt; &#39; es &#39; &lt;typename&gt;&#39;, que no es numérico
 Un argumento no numérico se produce en una situación en la que se espera un argumento numérico.  

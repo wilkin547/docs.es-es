@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635553"
 ---
 # <a name="code-resource-not-found"></a>No se encuentra el recurso de código
 Se realizó una llamada a un procedimiento en un recurso de código, pero no se encontró el recurso de código.  

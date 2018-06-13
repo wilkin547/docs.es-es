@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642859"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Cómo: consultar un objeto ArrayList con LINQ (Visual Basic)
 Cuando use LINQ para consultar colecciones no genéricas <xref:System.Collections.IEnumerable> como <xref:System.Collections.ArrayList>, debe declarar explícitamente el tipo de variable de rango para reflejar el tipo específico de los objetos de la colección. Por ejemplo, si tiene una <xref:System.Collections.ArrayList> de `Student` objetos, su [cláusula From](../../../../visual-basic/language-reference/queries/from-clause.md) debería tener este aspecto:  

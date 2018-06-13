@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644020"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>Cómo: buscar un elemento con un elemento secundario específico (Visual Basic)
 Este tema muestra cómo encontrar un elemento en particular que tenga un elemento secundario con un valor específico.  

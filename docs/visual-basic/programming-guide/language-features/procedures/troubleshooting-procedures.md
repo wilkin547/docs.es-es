@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655524"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Solucionar problemas de procedimientos (Visual Basic)
 Esta página enumera algunos problemas comunes que pueden producirse al trabajar con los procedimientos.  

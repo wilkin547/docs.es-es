@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648299"
 ---
 # <a name="determining-object-type-visual-basic"></a>Determinar tipos de objeto (Visual Basic)
 Variables de objeto genéricas (es decir, las variables se declara como `Object`) puede contener objetos de cualquier clase. Al usar las variables de tipo `Object`, puede que necesite realizar diferentes acciones basadas en la clase del objeto; por ejemplo, algunos objetos podrían no admitir un método o propiedad determinado. Visual Basic proporciona dos formas de determinar qué tipo de objeto se almacena en una variable de objeto: la `TypeName` función y el `TypeOf...Is` operador.  

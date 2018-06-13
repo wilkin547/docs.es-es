@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633812"
 ---
 # <a name="insufficient-security-permissions-to-set-the-system-time"></a>Permisos de seguridad insuficientes para establecer la hora del sistema
 Los permisos de seguridad son insuficientes para establecer la hora del sistema.  

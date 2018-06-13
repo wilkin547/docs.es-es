@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639502"
 ---
 # <a name="you-must-specify-a-path-that-is-under-the-current-folder-or-one-of-its-sub-folders"></a>Debe especificar una ruta de acceso que se encuentre en la carpeta actual o en una de sus subcarpetas
 La ruta especificada no está en el directorio actual. Puede que se deba al análisis incorrecto de las rutas de acceso del archivo al proporcionar una ruta de acceso relativa.  

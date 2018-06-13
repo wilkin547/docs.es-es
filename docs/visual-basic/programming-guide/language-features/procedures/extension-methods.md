@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655289"
 ---
 # <a name="extension-methods-visual-basic"></a>Métodos de extensión (Visual Basic)
 Métodos de extensión permiten a los programadores agregar funcionalidad personalizada a los tipos de datos que ya se han definido sin crear un nuevo tipo derivado. Métodos de extensión permiten escribir un método que se pueda llamar como si fuera un método de instancia del tipo existente.  

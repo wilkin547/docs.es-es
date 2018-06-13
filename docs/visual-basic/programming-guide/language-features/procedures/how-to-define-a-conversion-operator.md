@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648478"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>Cómo: Definir un operador de conversión (Visual Basic)
 Si ha definido una clase o estructura, puede definir un operador de conversión de tipos entre el tipo de dicha clase o estructura y otro tipo de datos (como `Integer`, `Double`, o `String`).  

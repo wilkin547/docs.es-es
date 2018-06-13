@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633180"
 ---
 # <a name="cannot-rename-with-different-drive"></a>No se puede cambiar por un nombre con una unidad diferente
 La instrucción `Rename` no puede especificar una letra de unidad en la ruta de acceso de archivo.  

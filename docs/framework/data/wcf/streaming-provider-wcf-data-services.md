@@ -15,6 +15,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805478"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Proveedores de transmisión por secuencias (WCF Data Services)
 Un servicio de datos puede exponer datos binarios de objetos grandes. Estos datos binarios pueden representar secuencias de vídeo y audio, imágenes, archivos de documento u otros tipos de medios binarios. Cuando una entidad del modelo de datos incluye una o más propiedades binarias, el servicio de datos devuelve estos datos binarios codificados en base 64 en la entrada de la fuente de respuesta. Dado que carga y serialización de datos binarios grandes de esta manera pueden afectar al rendimiento, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define un mecanismo para recuperar datos binarios independientemente de la entidad a la que pertenece. Para ello, se separan los datos binarios de la entidad en uno o varios flujos de datos.  

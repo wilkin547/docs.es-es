@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654731"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Tareas comunes realizadas con los operadores de Visual Basic
 Los operadores realizan muchas tareas comunes relacionadas con una o más expresiones denominadas *operandos*.  

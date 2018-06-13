@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649196"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Cómo: Controlar el ámbito de una variable (Visual Basic)
 Normalmente, una variable consiste en *ámbito*, o como referencia, en toda la región en la que se declara está visible. En del algunos casos, la variable *nivel de acceso* puede influir en su ámbito.  
