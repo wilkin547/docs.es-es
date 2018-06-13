@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f452a3324365fb23e1affc11dbdb2ede15346010
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462447"
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4 (Interfaz)
 Proporciona métodos que los generadores de perfiles de código usan para comunicarse con el common language runtime (CLR) para controlar la supervisión de eventos y la información de la solicitud. . El `ICorProfilerInfo4` interfaz es una extensión de la otra `ICorProfilerInfo` interfaces. Proporciona nuevos métodos para admitir la nueva compilación just-in-time (JIT), agregado en el [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  

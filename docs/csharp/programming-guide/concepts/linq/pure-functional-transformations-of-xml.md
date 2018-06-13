@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336715"
 ---
 # <a name="pure-functional-transformations-of-xml-c"></a>Transformaciones funcionales puras de XML (C#)
 En esta sección se proporciona un tutorial de transformación funcional para XML. Incluye explicaciones de los conceptos y las construcciones del lenguaje principales que debe comprender para usar las transformaciones funcionales, y ejemplos de uso de transformaciones funcionales para manipular un documento XML. Aunque este tutorial proporciona ejemplos de código de LINQ to XML, todos los conceptos subyacentes también se aplican a otras tecnologías de LINQ.  

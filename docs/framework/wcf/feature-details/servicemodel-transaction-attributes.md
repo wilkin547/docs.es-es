@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500836"
 ---
 # <a name="servicemodel-transaction-attributes"></a>Atributos de transacción de ServiceModel
 Windows Communication Foundation (WCF) proporciona las propiedades en tres estándar <xref:System.ServiceModel> atributos que permiten configurar el comportamiento de transacciones para un servicio WCF:  

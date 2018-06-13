@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500199"
 ---
 # <a name="basicbinding"></a>BasicBinding
 El ejemplo muestra el uso de `basicHttpBinding` que proporciona a la comunicación HTTP y a la interoperabilidad máxima los servicios Web de primera y segunda generación.  

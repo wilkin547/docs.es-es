@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502837"
 ---
 # <a name="http-acknowledgement-channel"></a>Canal de confirmación de HTTP
 El canal de confirmación HTTP es un ejemplo de canal en niveles que cambia el patrón de mensajería unidireccional, permitiendo que un servicio confirme o rechace los mensajes entrantes en lugar de enviar una confirmación de recibo automáticamente. Además, permite al servicio retrasar la confirmación hasta que pueda tener la garantía de que el mensaje se procesará.  

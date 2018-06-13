@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557009"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>Cómo: Navegar por los objetos de una colección de datos mediante CollectionView
 Las vistas permiten la misma colección de datos a verse de maneras diferentes, dependiendo de ordenar, filtrar o agrupar. Vistas también proporcionan un concepto de puntero de registro actual y habilitan el movimiento del puntero. Este ejemplo muestra cómo obtener el objeto actual, así como navegar por los objetos en una recopilación de datos mediante la funcionalidad proporcionada en el <xref:System.Windows.Data.CollectionView> clase.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5304496da992b44c171ca3c6ffa3fffa35d6f9cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425371"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay (Interfaz)
 Proporciona métodos que muestran la información de enlace actual sobre la aplicación en ejecución.  

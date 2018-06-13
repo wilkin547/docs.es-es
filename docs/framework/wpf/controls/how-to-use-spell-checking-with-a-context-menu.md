@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553772"
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>Cómo: Usar el corrector ortográfico con un menú contextual
 De forma predeterminada, cuando se habilita el corrector ortográfico en un control de edición como <xref:System.Windows.Controls.TextBox> o <xref:System.Windows.Controls.RichTextBox>, obtendrá las opciones de revisión ortográfica en el menú contextual. Por ejemplo, cuando los usuarios haga clic en una palabra mal escrita, obtener un conjunto de sugerencias de ortografía o la opción de **omitir todas**. Sin embargo, cuando se reemplaza con su propio menú contextual personalizado en el menú contextual de predeterminado, esta funcionalidad se pierde y necesita escribir código para volver a habilitar la característica de corrector ortográfico en el menú contextual. En el ejemplo siguiente se muestra cómo habilitarla en un <xref:System.Windows.Controls.TextBox>.  

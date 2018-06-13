@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554877"
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>Cómo: Invalidar el método OnRender de un objeto Panel
 Este ejemplo muestra cómo invalidar el <xref:System.Windows.Controls.Panel.OnRender%2A> método <xref:System.Windows.Controls.Panel> para agregar efectos gráficos personalizados a un elemento de diseño.  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2779138a0999e34ad6424d76ddfebbcfdf611d58
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422902"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses (Método)
 Obtiene un enumerador para los procesos administrados que se ejecutan en este equipo.  

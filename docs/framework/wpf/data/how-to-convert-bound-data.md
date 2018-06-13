@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556645"
 ---
 # <a name="how-to-convert-bound-data"></a>Cómo: Convertir datos enlazados
 En este ejemplo se muestra cómo aplicar la conversión a datos que se utilizan en enlaces.  

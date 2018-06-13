@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497096"
 ---
 # <a name="enabling-transaction-flow"></a>Habilitar el flujo de transacciones
 Windows Communication Foundation (WCF) proporciona opciones muy flexibles para controlar el flujo de transacciones. La configuración del flujo de transacción de un servicio se puede expresar utilizando una combinación de atributos y configuración.  

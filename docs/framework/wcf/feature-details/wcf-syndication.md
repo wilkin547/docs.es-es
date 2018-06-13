@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499172"
 ---
 # <a name="wcf-syndication"></a>Sindicación en WCF
 Windows Communication Foundation (WCF) proporciona compatibilidad para trabajar fácilmente con las fuentes de distribución de Atom, RSS u otros formatos personalizados, que le permite leer y creación, así como su exposición en un extremo de servicio. Los temas de esta sección describen en detalle este modelo de programación para la sindicación.  

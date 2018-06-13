@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334202"
 ---
 # <a name="thread-pooling-c"></a>Agrupación de subprocesos (C#)
 Un *grupo de subprocesos* es una colección de subprocesos que puede usarse para realizar varias tareas en segundo plano. (Vea [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md) (Subprocesos (C#)) para obtener información general). Esto deja libre el subproceso primario para realizar otras tareas de forma asincrónica.  

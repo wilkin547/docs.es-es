@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554413"
 ---
 # <a name="slider"></a>Slider
 El <xref:System.Windows.Controls.Slider> permite seleccionar entre una gama de valores moviendo un <xref:System.Windows.Controls.Primitives.Thumb> a lo largo de un <xref:System.Windows.Controls.Primitives.Track>.  

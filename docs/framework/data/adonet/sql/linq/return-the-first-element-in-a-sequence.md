@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361353"
 ---
 # <a name="return-the-first-element-in-a-sequence"></a>Devolver el primer elemento de una secuencia
 Utilice el operador <xref:System.Linq.Enumerable.First%2A> para devolver el primer elemento de una secuencia. Las consultas que usan <xref:System.Linq.Enumerable.First%2A> se ejecutan inmediatamente.  
