@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958025"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a><span data-ttu-id="d54cc-103">Cuándo se debe implementar contenedores de Windows en máquinas virtuales de Azure (IaaS nube)</span><span class="sxs-lookup"><span data-stu-id="d54cc-103">When to deploy Windows Containers to Azure VMs (IaaS cloud)</span></span>
 

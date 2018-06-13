@@ -10,6 +10,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172271"
 ---
 # <a name="built-in-types-table-c-reference"></a><span data-ttu-id="bcb35-102">Tabla de tipos integrados (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="bcb35-102">Built-In Types Table (C# Reference)</span></span>
 <span data-ttu-id="bcb35-103">En la siguiente tabla se muestran las palabras clave para los tipos de C# integrados, que son alias de los tipos predefinidos en el espacio de nombres <xref:System>.</span><span class="sxs-lookup"><span data-stu-id="bcb35-103">The following table shows the keywords for built-in C# types, which are aliases of predefined types in the <xref:System> namespace.</span></span>  

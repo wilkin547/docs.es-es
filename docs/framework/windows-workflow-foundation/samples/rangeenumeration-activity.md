@@ -1,54 +1,44 @@
 ---
 title: Actividad RangeEnumeration
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ca5b78f4-94fa-4aa7-830d-26039ac422c8
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7dc793d57718dbc68f304d3eb5031a9fa96b00cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9aa04c80f20e2d410fb49e2d07d836c8c5ab1b4d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516583"
 ---
-# <a name="rangeenumeration-activity"></a><span data-ttu-id="1cbbf-102">Actividad RangeEnumeration</span><span class="sxs-lookup"><span data-stu-id="1cbbf-102">RangeEnumeration Activity</span></span>
-<span data-ttu-id="1cbbf-103">En este ejemplo se muestra cómo crear una actividad personalizada que recorra en iteración una colección de números. La tabla que sigue detalla los archivos principales incluidos en el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="1cbbf-103">This sample demonstrates how to create a custom activity that iterates over a collection of numbers.The following table details the main files included in the sample.</span></span>  
+# <a name="rangeenumeration-activity"></a><span data-ttu-id="7e636-102">Actividad RangeEnumeration</span><span class="sxs-lookup"><span data-stu-id="7e636-102">RangeEnumeration Activity</span></span>
+<span data-ttu-id="7e636-103">En este ejemplo se muestra cómo crear una actividad personalizada que recorra en iteración una colección de números. La tabla que sigue detalla los archivos principales incluidos en el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="7e636-103">This sample demonstrates how to create a custom activity that iterates over a collection of numbers.The following table details the main files included in the sample.</span></span>  
   
-|<span data-ttu-id="1cbbf-104">Nombre del archivo</span><span class="sxs-lookup"><span data-stu-id="1cbbf-104">File name</span></span>|<span data-ttu-id="1cbbf-105">Descripción</span><span class="sxs-lookup"><span data-stu-id="1cbbf-105">Description</span></span>|  
+|<span data-ttu-id="7e636-104">Nombre del archivo</span><span class="sxs-lookup"><span data-stu-id="7e636-104">File name</span></span>|<span data-ttu-id="7e636-105">Descripción</span><span class="sxs-lookup"><span data-stu-id="7e636-105">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="1cbbf-106">RangeEnumeration.cs</span><span class="sxs-lookup"><span data-stu-id="1cbbf-106">RangeEnumeration.cs</span></span>|<span data-ttu-id="1cbbf-107">Define una actividad personalizada denominada `RangeEnumeration` que invalida la clase <xref:System.Activities.NativeActivity> y recorre en bucle una serie de números.</span><span class="sxs-lookup"><span data-stu-id="1cbbf-107">Defines a custom activity named `RangeEnumeration` that overrides the <xref:System.Activities.NativeActivity> class and loops through a series of numbers.</span></span>|  
-|<span data-ttu-id="1cbbf-108">RangeEnumerationSample.cs</span><span class="sxs-lookup"><span data-stu-id="1cbbf-108">RangeEnumerationSample.cs</span></span>|<span data-ttu-id="1cbbf-109">Una aplicación cliente que utiliza la actividad `RangeEnumeration` para recorrer en iteración una colección de números.</span><span class="sxs-lookup"><span data-stu-id="1cbbf-109">A client application that uses the `RangeEnumeration` activity to iterate over a collection of numbers.</span></span>|  
+|<span data-ttu-id="7e636-106">RangeEnumeration.cs</span><span class="sxs-lookup"><span data-stu-id="7e636-106">RangeEnumeration.cs</span></span>|<span data-ttu-id="7e636-107">Define una actividad personalizada denominada `RangeEnumeration` que invalida la clase <xref:System.Activities.NativeActivity> y recorre en bucle una serie de números.</span><span class="sxs-lookup"><span data-stu-id="7e636-107">Defines a custom activity named `RangeEnumeration` that overrides the <xref:System.Activities.NativeActivity> class and loops through a series of numbers.</span></span>|  
+|<span data-ttu-id="7e636-108">RangeEnumerationSample.cs</span><span class="sxs-lookup"><span data-stu-id="7e636-108">RangeEnumerationSample.cs</span></span>|<span data-ttu-id="7e636-109">Una aplicación cliente que utiliza la actividad `RangeEnumeration` para recorrer en iteración una colección de números.</span><span class="sxs-lookup"><span data-stu-id="7e636-109">A client application that uses the `RangeEnumeration` activity to iterate over a collection of numbers.</span></span>|  
   
- <span data-ttu-id="1cbbf-110">En la tabla siguiente se detallan las propiedades de la actividad `RangeEnumeration`.</span><span class="sxs-lookup"><span data-stu-id="1cbbf-110">The following table details the properties of the `RangeEnumeration` activity.</span></span>  
+ <span data-ttu-id="7e636-110">En la tabla siguiente se detallan las propiedades de la actividad `RangeEnumeration`.</span><span class="sxs-lookup"><span data-stu-id="7e636-110">The following table details the properties of the `RangeEnumeration` activity.</span></span>  
   
-|<span data-ttu-id="1cbbf-111">Propiedad</span><span class="sxs-lookup"><span data-stu-id="1cbbf-111">Property</span></span>|<span data-ttu-id="1cbbf-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="1cbbf-112">Description</span></span>|  
+|<span data-ttu-id="7e636-111">Propiedad</span><span class="sxs-lookup"><span data-stu-id="7e636-111">Property</span></span>|<span data-ttu-id="7e636-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="7e636-112">Description</span></span>|  
 |--------------|-----------------|  
-|<span data-ttu-id="1cbbf-113">Iniciar</span><span class="sxs-lookup"><span data-stu-id="1cbbf-113">Start</span></span>|<span data-ttu-id="1cbbf-114">El entero a partir del cual se inicia el bucle.</span><span class="sxs-lookup"><span data-stu-id="1cbbf-114">The integer to start the loop from.</span></span>|  
-|<span data-ttu-id="1cbbf-115">Detener</span><span class="sxs-lookup"><span data-stu-id="1cbbf-115">Stop</span></span>|<span data-ttu-id="1cbbf-116">El entero en el que detener el bucle.</span><span class="sxs-lookup"><span data-stu-id="1cbbf-116">The integer to stop the loop at.</span></span>|  
-|<span data-ttu-id="1cbbf-117">Paso</span><span class="sxs-lookup"><span data-stu-id="1cbbf-117">Step</span></span>|<span data-ttu-id="1cbbf-118">Especifica cuánto se recorre en iteración cada vez.</span><span class="sxs-lookup"><span data-stu-id="1cbbf-118">Specifies how much to iterate each time.</span></span>|  
-|<span data-ttu-id="1cbbf-119">Body</span><span class="sxs-lookup"><span data-stu-id="1cbbf-119">Body</span></span>|<span data-ttu-id="1cbbf-120">Especifica el código para ejecutar durante cada iteración.</span><span class="sxs-lookup"><span data-stu-id="1cbbf-120">Specifies the code to execute during each iteration.</span></span>|  
+|<span data-ttu-id="7e636-113">Iniciar</span><span class="sxs-lookup"><span data-stu-id="7e636-113">Start</span></span>|<span data-ttu-id="7e636-114">El entero a partir del cual se inicia el bucle.</span><span class="sxs-lookup"><span data-stu-id="7e636-114">The integer to start the loop from.</span></span>|  
+|<span data-ttu-id="7e636-115">Detener</span><span class="sxs-lookup"><span data-stu-id="7e636-115">Stop</span></span>|<span data-ttu-id="7e636-116">El entero en el que detener el bucle.</span><span class="sxs-lookup"><span data-stu-id="7e636-116">The integer to stop the loop at.</span></span>|  
+|<span data-ttu-id="7e636-117">Paso</span><span class="sxs-lookup"><span data-stu-id="7e636-117">Step</span></span>|<span data-ttu-id="7e636-118">Especifica cuánto se recorre en iteración cada vez.</span><span class="sxs-lookup"><span data-stu-id="7e636-118">Specifies how much to iterate each time.</span></span>|  
+|<span data-ttu-id="7e636-119">Body</span><span class="sxs-lookup"><span data-stu-id="7e636-119">Body</span></span>|<span data-ttu-id="7e636-120">Especifica el código para ejecutar durante cada iteración.</span><span class="sxs-lookup"><span data-stu-id="7e636-120">Specifies the code to execute during each iteration.</span></span>|  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="1cbbf-121">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="1cbbf-121">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="7e636-121">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="7e636-121">To use this sample</span></span>  
   
-1.  <span data-ttu-id="1cbbf-122">Abra el archivo de solución de RangeEnumeration.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1cbbf-122">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the RangeEnumeration.sln solution file.</span></span>  
+1.  <span data-ttu-id="7e636-122">Abra el archivo de solución de RangeEnumeration.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7e636-122">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the RangeEnumeration.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="1cbbf-123">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="1cbbf-123">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="7e636-123">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="7e636-123">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="1cbbf-124">Para ejecutar la solución, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="1cbbf-124">To run the solution, press CTRL+F5.</span></span>  
+3.  <span data-ttu-id="7e636-124">Para ejecutar la solución, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="7e636-124">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="1cbbf-125">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="1cbbf-125">The samples may already be installed on your machine.</span></span> <span data-ttu-id="1cbbf-126">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="1cbbf-126">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="7e636-125">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="7e636-125">The samples may already be installed on your machine.</span></span> <span data-ttu-id="7e636-126">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="7e636-126">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="1cbbf-127">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="1cbbf-127">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="1cbbf-128">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="1cbbf-128">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="7e636-127">Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos.</span><span class="sxs-lookup"><span data-stu-id="7e636-127">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="7e636-128">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="7e636-128">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\RangeEnumeration`

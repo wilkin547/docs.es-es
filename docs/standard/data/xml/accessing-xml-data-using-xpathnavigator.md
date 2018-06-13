@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569088"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a><span data-ttu-id="5a378-102">Acceso a datos XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="5a378-102">Accessing XML Data using XPathNavigator</span></span>
 <span data-ttu-id="5a378-103">La clase <xref:System.Xml.XPath.XPathNavigator> incluye métodos que se utilizan para navegar por los nodos, extraer datos XML y obtener acceso a datos XML fuertemente tipados en un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="5a378-103">The <xref:System.Xml.XPath.XPathNavigator> class provides methods to navigate nodes, extract XML data and access strongly typed XML data in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object.</span></span>  

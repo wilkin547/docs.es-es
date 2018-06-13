@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956090"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a><span data-ttu-id="d5c99-103">Migrar las bases de datos relacionales a azure</span><span class="sxs-lookup"><span data-stu-id="d5c99-103">Migrate your relational databases to azure</span></span>
 

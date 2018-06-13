@@ -7,6 +7,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235910"
 ---
 # <a name="f-style-guide"></a><span data-ttu-id="82bd7-103">Guía de estilo de F #</span><span class="sxs-lookup"><span data-stu-id="82bd7-103">F# style guide</span></span>
 
