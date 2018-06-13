@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642800"
 ---
 # <a name="unable-to-sink-events-of-object-because-the-object-is-already-firing-events-to-the-maximum-number-of-event-receivers-it-supports"></a>No se pueden recibir eventos del objeto porque el objeto ya está desencadenando eventos hasta el número máximo de receptores de eventos que admite.
 Se ha superado el número máximo de receptores de eventos admitidos por el objeto.  

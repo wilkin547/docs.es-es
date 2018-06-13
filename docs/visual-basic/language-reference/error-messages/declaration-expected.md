@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583895"
 ---
 # <a name="declaration-expected"></a>Se esperaba una declaración
 Una instrucción no declarativa, como una asignación o una instrucción del bucle, se produce fuera de cualquier procedimiento. Sólo se permiten declaraciones procedimientos externos.  

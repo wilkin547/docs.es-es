@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639260"
 ---
 # <a name="simplifiedchinese-and-vbstrconvtraditionalchinese-cannot-be-combined"></a>No se pueden combinar SimplifiedChinese y VbStrConv.TraditionalChinese
 La aplicación está intentando combinar los `VbStrConv` miembros de la enumeración `SimplifiedChinese` y `TraditionalChinese`, que son mutuamente excluyentes.  

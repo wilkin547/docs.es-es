@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655816"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Referencias a elementos declarados (Visual Basic)
 Cuando el código hace referencia a un elemento declarado, el compilador de Visual Basic coincide con el nombre de la referencia con la declaración pertinente de ese nombre. Si más de un elemento se declara con el mismo nombre, se puede controlar cuál de los elementos se haga referencia a *aplicables* su nombre.  

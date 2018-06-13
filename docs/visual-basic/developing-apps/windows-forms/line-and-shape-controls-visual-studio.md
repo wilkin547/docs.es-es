@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585559"
 ---
 # <a name="line-and-shape-controls-visual-studio"></a>Controles de líneas y formas (Visual Studio)
 Los controles Línea y Forma de Visual Basic PowerPacks son controles gráficos que le permiten dibujar líneas horizontales, verticales y diagonales; rectángulos, cuadrados, óvalos y círculos; y rectángulos y cuadrados con esquinas redondeadas en un formulario o contenedor.  

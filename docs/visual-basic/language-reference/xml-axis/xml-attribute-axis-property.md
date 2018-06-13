@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604918"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>Propiedad de eje para atributos XML (Visual Basic)
 Proporciona acceso al valor de un atributo para un <xref:System.Xml.Linq.XElement> objeto o hasta el primer elemento de una colección de <xref:System.Xml.Linq.XElement> objetos.  

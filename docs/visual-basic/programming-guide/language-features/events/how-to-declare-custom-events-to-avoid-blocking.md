@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646931"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>Cómo: Declarar eventos personalizados para evitar bloqueos (Visual Basic)
 Hay varias circunstancias cuando es importante que un controlador de eventos no se bloqueará siguientes controladores de eventos. Los eventos personalizados permiten el evento llamar a sus controladores de eventos de forma asincrónica.  

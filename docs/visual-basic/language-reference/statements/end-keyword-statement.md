@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605269"
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>End &lt;palabra clave&gt; (instrucción, Visual Basic)
 Cuando va seguido de una palabra clave adicional, termina la definición del bloque de instrucciones introducida por esa palabra clave.  

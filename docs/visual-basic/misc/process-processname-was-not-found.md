@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638439"
 ---
 # <a name="process-39ltprocessnamegt39-was-not-found"></a>Proceso &#39; &lt;processname&gt; &#39; no se encontró
 No se puede encontrar el proceso especificado.  

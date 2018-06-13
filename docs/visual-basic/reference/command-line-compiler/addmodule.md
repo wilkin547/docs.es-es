@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656011"
 ---
 # <a name="-addmodule"></a>-addmodule
 Hace que el compilador facilite al proyecto que se está compilando toda la información de tipos presente en los archivos especificados.  

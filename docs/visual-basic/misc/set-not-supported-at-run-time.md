@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638348"
 ---
 # <a name="set-not-supported-at-run-time"></a>No se admite Set en tiempo de ejecución
 Se intentó establecer o cambiar una propiedad cuyo valor solo se puede establecer en tiempo de diseño.  

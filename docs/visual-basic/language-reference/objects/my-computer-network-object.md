@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596969"
 ---
 # <a name="mycomputernetwork-object"></a>My.Computer.Network (Objeto)
 Proporciona una propiedad, evento y métodos para interactuar con la red a la que está conectado el equipo.  

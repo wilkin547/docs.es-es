@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638788"
 ---
 # <a name="the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character"></a>La ruta de acceso de entrada hace referencia a un archivo, pero termina con un carácter separador de directorio
 Se intentó una operación que requiere que se proporcione un nombre de archivo, pero el nombre proporcionado termina con un carácter separador de directorio (`\`). Esto puede deberse a una ruta de acceso de archivo analizada incorrectamente.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604878"
 ---
 # <a name="yield-statement-visual-basic"></a>Yield (Instrucción) (Visual Basic)
 Envía el siguiente elemento de una colección para un `For Each...Next` instrucción.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637392"
 ---
 # <a name="class-39ltclassnamegt39-does-not-implement-the-systemcollectionsicollection-interface"></a>Clase &#39; &lt;classname&gt; &#39; implementa la interfaz System.Collections.ICollection
 La clase no implementa la interfaz `System.Collections.ICollection` , que define los métodos de tamaño, enumeradores y sincronización de todas las colecciones. Puede ser necesario volver a instalar Visual Studio.  

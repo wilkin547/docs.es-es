@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642784"
 ---
 # <a name="how-to-generate-text-files-from-xml-visual-basic"></a>Cómo: generar archivos de texto de XML (Visual Basic)
 Este ejemplo muestra cómo generar un archivo de valores separados por comas (CSV) a partir de un archivo XML.  

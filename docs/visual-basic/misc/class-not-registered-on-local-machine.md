@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638391"
 ---
 # <a name="class-not-registered-on-local-machine"></a>La clase no está registrada en el equipo local.
 Normalmente se encuentra este error como resultado de un archivo dañado. Debe volver a instalar Visual Studio.  

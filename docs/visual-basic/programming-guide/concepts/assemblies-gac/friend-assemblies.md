@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644386"
 ---
 # <a name="friend-assemblies-visual-basic"></a>Ensamblados de confianza (Visual Basic)
 A *ensamblado de confianza* es un ensamblado que puede tener acceso a otro ensamblado [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) tipos y miembros. Si identifica un ensamblado como ensamblado de confianza, ya no hay que marcar los tipos y miembros como públicos para que otros ensamblados accedan a ellos. Esto resulta especialmente útil en los siguientes escenarios:  

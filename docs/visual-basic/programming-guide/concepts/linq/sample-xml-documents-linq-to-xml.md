@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646138"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Documentos XML de ejemplo (LINQ to XML)
 Los archivos del siguiente ejemplo se usan en los ejemplos de código y en los fragmentos de código de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

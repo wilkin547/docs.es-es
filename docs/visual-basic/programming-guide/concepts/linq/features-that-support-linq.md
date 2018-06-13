@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643905"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Características de Visual Basic que admiten LINQ
 El nombre [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] hace referencia a la tecnología en Visual Basic que admite la sintaxis de consulta y crea otro lenguaje directamente en el idioma. Con [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], no tienes que volver a aprender un nuevo lenguaje de consulta en un origen de datos externo. Puede consultar con los datos de bases de datos relacionales, los almacenes XML u objetos utilizando Visual Basic. Esta integración de capacidades de consulta en el lenguaje habilita la comprobación de tiempo de compilación para errores de sintaxis y seguridad de tipos. Esta integración también garantiza que ya conoce la mayor parte de lo que es preciso conocer para escribir consultas complejas y variadas en Visual Basic.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641817"
 ---
 # <a name="vbstrconvwide-and-vbstrconvnarrow-cannot-be-combined"></a>No se pueden combinar VbStrConv.Wide y VbStrConv.Narrow
 La aplicación está intentando combinar los miembros de la enumeración `VbStrConv` `Wide` y `Narrow`, que son mutuamente excluyentes.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642813"
 ---
 # <a name="how-to-create-a-list-of-items"></a>Cómo: Crear una lista de elementos
 El código de este tema define una clase `Student` y crea una lista de instancias de la clase. La lista está diseñada para admitir el tema [Tutorial: escribir consultas en Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md). También se puede usar para cualquier aplicación que requiera una lista de objetos. El código define los elementos de la lista de estudiantes mediante inicializadores de objeto.  

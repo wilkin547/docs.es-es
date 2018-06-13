@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644919"
 ---
 # <a name="reference-linq-to-xml"></a>Referencia (LINQ to XML)
 Este tema contiene vínculos a temas de referencia asociados a LINQ to XML.  

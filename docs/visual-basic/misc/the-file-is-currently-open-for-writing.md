@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637576"
 ---
 # <a name="the-file-is-currently-open-for-writing"></a>El archivo está abierto actualmente para escritura
 Se intentó acceder a un archivo que está actualmente abierto para escritura.  

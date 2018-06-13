@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639453"
 ---
 # <a name="specified-registry-key-is-not-valid-because-it-contains-two-or-more-consecutive-backslashes"></a>La clave del registro especificada no es válida porque contiene dos o más barras diagonales inversas consecutivas
 Una clave del registro especificada con una ruta de acceso contiene dos o más barras diagonales inversas consecutivas. Esto puede ser el resultado de la combinación de varias cadenas para formar la ruta de acceso y la inclusión accidental de demasiadas barras diagonales inversas.  

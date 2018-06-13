@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641159"
 ---
 # <a name="property-ltpropertynamegt-cannot-be-set-to-nothing"></a>Propiedad &lt;propertyname&gt; no se puede establecer en Nothing
 La propiedad requiere un valor distinto de `Nothing`. Esto puede ser el resultado del cálculo incorrecto del valor.  
