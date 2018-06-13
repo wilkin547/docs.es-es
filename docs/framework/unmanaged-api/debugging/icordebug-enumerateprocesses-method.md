@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 53d40c198b53370733009c76fd3d49f14df93e6c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402101"
 ---
 # <a name="icordebugenumerateprocesses-method"></a>ICorDebug::EnumerateProcesses (Método)
 Obtiene un enumerador para los procesos que se están depurando.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356864"
 ---
 # <a name="transaction-management-escalation"></a>Extensión de administración de transacción
 Windows hospeda un conjunto de servicios y módulos que juntos constituyen un administrador de transacciones. La subida de administración de transacciones describe el proceso de migración de una transacción desde uno de los componentes del administrador de transacciones a otro.  

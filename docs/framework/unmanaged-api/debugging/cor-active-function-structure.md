@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86ab3d3a0f460f1ecdf86147b14df205aaf49635
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404205"
 ---
 # <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION (Estructura)
 Contiene información sobre las funciones que están actualmente activas en los marcos de un subproceso. Esta estructura se usa por la [ICorDebugThread2:: GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) método.  

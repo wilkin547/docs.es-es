@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bfdde1f29300fcdc0f4e267949fdc3f6fd9917ee
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401413"
 ---
 # <a name="icordebugchaingetregisterset-method"></a>ICorDebugChain::GetRegisterSet (Método)
 Obtiene el conjunto de registros para la parte activa de esta cadena.  

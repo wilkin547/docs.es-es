@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f489ab29726292f6c55151169ad9efc6f0fbfbcf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407799"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState (Enumeración)
 Indica el estado de uso de un subproceso.  

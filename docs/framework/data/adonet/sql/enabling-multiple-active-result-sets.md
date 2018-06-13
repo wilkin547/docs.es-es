@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364884"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Habilitar conjuntos de resultados activos múltiples
 MARS (Multiple Active Result Sets, conjuntos de resultados activos múltiples) es una característica que funciona con SQL Server y que permite la ejecución de varios lotes en una sola conexión. Cuando MARS está habilitado para su uso con SQL Server, cada objeto de comando usado agrega una sesión a la conexión.  

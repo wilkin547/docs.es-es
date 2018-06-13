@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332373"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() y argumentos de la línea de comandos (Guía de programación de C#)
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337566"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo es un pedido de compra típico. El XML se encuentra en un espacio de nombres.  

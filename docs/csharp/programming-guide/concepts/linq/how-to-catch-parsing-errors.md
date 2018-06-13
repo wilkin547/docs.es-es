@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333390"
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>Cómo: Detectar errores de análisis (C#)
 En este tema se describe cómo detectar XML no válido o mal formado.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399709"
 ---
 # <a name="reflection-and-generic-types"></a>Reflexión y tipos genéricos
 <a name="top"></a> Desde el punto de vista de la reflexión, la diferencia entre un tipo genérico y un tipo normal es que un tipo genérico tiene asociado un conjunto de parámetros de tipo (si es una definición de tipo genérico) o argumentos de tipo (si es un tipo construido). Un método genérico difiere de un método normal de la misma manera.  

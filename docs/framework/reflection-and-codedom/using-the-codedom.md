@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399024"
 ---
 # <a name="using-the-codedom"></a>Usar CodeDOM
 CodeDOM proporciona tipos que representan muchos tipos comunes de elementos de código fuente. Se puede diseñar un programa que compile un modelo de código fuente utilizando los elementos de CodeDOM para ensamblar un gráfico de objetos. Este gráfico de objetos se puede representar como código fuente utilizando un generador de código de CodeDOM para un lenguaje de programación compatible. CodeDOM también se puede utilizar para compilar código fuente en un ensamblado binario.  

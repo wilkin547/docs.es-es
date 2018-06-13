@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8299be7189522c1b508e647ae227de5d5dd68c73
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403323"
 ---
 # <a name="icordebugbreakpointenum-interface1"></a>ICorDebugBreakpointEnum Interfaz1
 Implementa los métodos ICorDebugEnum y enumera las matrices de ICorDebugBreakpoint.  

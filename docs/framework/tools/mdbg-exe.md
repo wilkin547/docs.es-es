@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399774"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (depurador de línea de comandos .NET Framework)
 El Depurador de la línea de comandos de .NET Framework ayuda a los proveedores de herramientas y a los programadores de aplicaciones a encontrar y a corregir los errores que pueden producirse en programas orientados al Common Language Runtime de .NET Framework. Esta herramienta utiliza el runtime de la API de depuración para proporcionar servicios de depuración. Puede utilizar MDbg.exe para depurar solo código administrado; no se admite la depuración de código no administrado.  

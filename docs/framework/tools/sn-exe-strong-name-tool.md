@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401126"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Herramienta de nombre seguro)
 La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres seguros](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe proporciona opciones para la administración de claves, así como para la generación y comprobación de firmas.  

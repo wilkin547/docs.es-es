@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399118"
 ---
 # <a name="wif-session-management"></a>Administración de sesiones de WIF
 Cuando un cliente intenta acceder a un recurso protegido hospedado en un usuario de confianza por primera vez, primero debe autenticarse en un servicio de token de seguridad (STS) que sea de confianza para el usuario de confianza. Luego el STS emite un token de seguridad al cliente. El cliente presenta este token al usuario de confianza, que, entonces, le concede acceso al recurso protegido. Pero no es deseable que el cliente tenga que volver a autenticarse en el STS para cada solicitud, sobre todo porque incluso podría no ser en el mismo equipo o en el mismo dominio que el usuario de confianza. Así, Windows Identity Foundation (WIF) hace que el cliente y el usuario de confianza establezcan una sesión en la que el cliente usa un token de seguridad de sesión para autenticarse en el usuario de confianza para todas las solicitudes después de la primera. El usuario de confianza puede usar este token de seguridad de sesión, que se almacena en una cookie, para reconstruir el elemento <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> del cliente.  

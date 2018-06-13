@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352869"
 ---
 # <a name="clr-triggers"></a>Desencadenadores de CLR
 Un desencadenador es un tipo especial de procedimiento almacenado que se ejecuta automáticamente cuando tiene lugar un evento de lenguaje. Debido a la integración de Microsoft SQL Server con Common Language Runtime (CLR) de .NET Framework, es posible utilizar cualquier lenguaje .NET Framework para crear desencadenadores CLR.  

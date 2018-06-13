@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398754"
 ---
 # <a name="downloading-the-validating-issuer-name-registry-package"></a>Descargar el paquete de validación del Registro de nombres de emisores
 En este tema se explica cómo descargar y usar el Registro de nombres del emisor que valida (VINR) en el proyecto.  

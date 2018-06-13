@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c2b590e7402bf29ffeb5bd14fc383edae41a04e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404006"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate (Método)
 Finaliza el `ICorDebug` objeto.  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399696"
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Empaquetar e implementar recursos en aplicaciones de escritorio
 Las aplicaciones se basan en el Administrador de recursos de .NET Framework, representado por la clase <xref:System.Resources.ResourceManager>, para recuperar recursos localizados. El Administrador de recursos da por supuesto que se usa un modelo de concentrador y radio para empaquetar e implementar los recursos. El concentrador es el ensamblado principal que contiene el código ejecutable no localizable y los recursos de una referencia cultural única, denominada referencia cultural neutra o predeterminada. La referencia cultural predeterminada es la referencia cultural de reserva de la aplicación. Se trata de la referencia cultural cuyos recursos se usarán si no se encuentran recursos localizados. Cada radio se conecta a un ensamblado satélite que contiene los recursos de una única referencia cultural, pero no contiene código.  

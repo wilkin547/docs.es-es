@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340273"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Saber cuándo utilizar las palabras clave Override y New (Guía de programación de C#)
 En C#, un método de una clase derivada puede tener el mismo nombre que un método de la clase base. Se puede especificar cómo interactúan los métodos mediante las palabras clave [new](../../../csharp/language-reference/keywords/new.md) y [override](../../../csharp/language-reference/keywords/override.md). El modificador `override` *extiende* el método de clase base y el modificador `new` lo *oculta*. En los ejemplos de este tema se ilustra la diferencia.  

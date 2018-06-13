@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399826"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Crear archivos de recursos para aplicaciones de escritorio
 Puede incluir recursos, como cadenas, imágenes o datos de objeto, en los archivos de recursos para hacer que estén disponibles fácilmente en su aplicación. .NET Framework ofrece cinco mecanismos para crear archivos de recursos:  

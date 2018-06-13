@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361778"
 ---
 # <a name="debugging-support"></a>Capacidad de depuración
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proporciona compatibilidad con la depuración general para [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyectos.  Consulte también [Depurar LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.110\)) o [Depurar LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.120\)).  

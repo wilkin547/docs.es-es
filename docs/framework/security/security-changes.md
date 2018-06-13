@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400086"
 ---
 # <a name="security-changes-in-the-net-framework"></a>Cambios de seguridad en .NET Framework
 El cambio más importante en la seguridad de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] es la adopción de nombres seguros. Consulte [Enhanced Strong Naming](../../../docs/framework/app-domains/enhanced-strong-naming.md) para obtener una descripción de estos cambios.  
