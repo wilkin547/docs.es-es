@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361671"
 ---
 # <a name="how-to-manage-change-conflicts"></a>Cómo: Administrar conflictos de cambios
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Proporciona una colección de API para ayudarle a detectar, evaluar y solucionar conflictos de simultaneidad.  

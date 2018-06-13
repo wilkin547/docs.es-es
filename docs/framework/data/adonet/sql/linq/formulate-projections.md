@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364953"
 ---
 # <a name="formulate-projections"></a>Formular proyecciones
 Los ejemplos siguientes muestran cómo el `select` instrucción en C# y `Select` instrucción en Visual Basic puede combinarse con otras características para formar proyecciones de consulta.  

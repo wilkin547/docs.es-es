@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365610"
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>Dar de alta los recursos como participantes en una transacción
 Un administrador de recursos administra cada recurso participante, cuyas acciones coordina un administrador de transacciones. La coordinación se hace a través de las notificaciones dadas a los suscriptores que han dado de alta una transacción a través del administrador de transacciones.  

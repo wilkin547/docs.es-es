@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365194"
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;add&gt; de &lt;baseAddressPrefixFilter&gt;
 Representa un elemento de configuración que especifica un filtro de paso a través, que proporciona un mecanismo para escoger los enlaces adecuados de Internet Information Services (IIS) al hospedar una aplicación de Windows Communication Foundation (WCF) en IIS.  

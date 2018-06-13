@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541702"
 ---
 # <a name="dependency-property-metadata"></a>Metadatos de las propiedades de dependencia
 El sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] incluye un sistema de informe de metadatos que va más allá de lo que puede notificarse sobre una propiedad mediante la reflexión o las características generales de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Los metadatos de una propiedad de dependencia también los puede asignar de manera exclusiva la clase que define una propiedad de dependencia, se pueden cambiar cuando la propiedad de dependencia se agrega a una clase diferente y los pueden invalidar específicamente todas las clases derivadas que heredan la propiedad de dependencia de la clase base de definición.  

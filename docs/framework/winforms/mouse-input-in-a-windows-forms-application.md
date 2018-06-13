@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537595"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Entradas mediante el mouse (ratón) en una aplicación de Windows Forms
 Windows Forms incluye una variedad de eventos del mouse y compatibilidad adicional con cursores personalizados del mouse, captura del mouse y comportamiento de arrastrar y soltar.  
