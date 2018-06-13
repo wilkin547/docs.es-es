@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457662"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a><span data-ttu-id="5656f-102">Operadores sobrecargables (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="5656f-102">Overloadable Operators (C# Programming Guide)</span></span>
 

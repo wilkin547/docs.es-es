@@ -7,6 +7,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957767"
 ---
 # <a name="namespaces"></a><span data-ttu-id="25201-103">Espacios de nombres</span><span class="sxs-lookup"><span data-stu-id="25201-103">Namespaces</span></span>
 

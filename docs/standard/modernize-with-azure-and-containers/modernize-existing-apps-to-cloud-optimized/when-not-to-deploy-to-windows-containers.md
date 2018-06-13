@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957965"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a><span data-ttu-id="cddb7-103">Cuándo no se debe implementar en los contenedores de Windows</span><span class="sxs-lookup"><span data-stu-id="cddb7-103">When not to deploy to Windows Containers</span></span>
 

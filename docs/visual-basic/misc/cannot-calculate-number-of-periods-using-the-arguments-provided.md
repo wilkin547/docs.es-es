@@ -1,25 +1,19 @@
 ---
-title: "No se puede calcular el número de períodos con los argumentos proporcionados."
+title: No se puede calcular el número de períodos con los argumentos proporcionados.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrFinancial_CannotCalculateNPer
 ms.assetid: a96fed1c-73e6-4a2b-9906-0190bc3d4c3c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4b915fec69e757cb9aa69a83b5c92c1af2988ac4
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: a88837d198091f9f8d11dd90656534588c2f0550
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633125"
 ---
-# <a name="cannot-calculate-number-of-periods-using-the-arguments-provided"></a><span data-ttu-id="26a5b-102">No se puede calcular el número de períodos con los argumentos proporcionados.</span><span class="sxs-lookup"><span data-stu-id="26a5b-102">Cannot calculate number of periods using the arguments provided</span></span>
-<span data-ttu-id="26a5b-103">Una llamada a la `NPer` función no contiene todos los argumentos necesarios.</span><span class="sxs-lookup"><span data-stu-id="26a5b-103">A call to the `NPer` function does not contain all of the required arguments.</span></span>  
+# <a name="cannot-calculate-number-of-periods-using-the-arguments-provided"></a><span data-ttu-id="e7917-102">No se puede calcular el número de períodos con los argumentos proporcionados.</span><span class="sxs-lookup"><span data-stu-id="e7917-102">Cannot calculate number of periods using the arguments provided</span></span>
+<span data-ttu-id="e7917-103">Una llamada a la `NPer` función no contiene todos los argumentos necesarios.</span><span class="sxs-lookup"><span data-stu-id="e7917-103">A call to the `NPer` function does not contain all of the required arguments.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="26a5b-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="26a5b-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e7917-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="e7917-104">To correct this error</span></span>  
   
--   <span data-ttu-id="26a5b-105">Asegúrese de que los valores `Rate`, `Prnt` y `PV` están incluidos en la llamada de función.</span><span class="sxs-lookup"><span data-stu-id="26a5b-105">Ensure that the `Rate`, `Prnt` and `PV` values are included in the function call.</span></span>
+-   <span data-ttu-id="e7917-105">Asegúrese de que los valores `Rate`, `Prnt` y `PV` están incluidos en la llamada de función.</span><span class="sxs-lookup"><span data-stu-id="e7917-105">Ensure that the `Rate`, `Prnt` and `PV` values are included in the function call.</span></span>
