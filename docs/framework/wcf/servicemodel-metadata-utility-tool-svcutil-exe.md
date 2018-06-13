@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509156"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)
 La herramienta de utilidad de metadatos de ServiceModel se utiliza para generar el código de modelo de servicio a partir de los documentos de metadatos y los documentos de metadatos a partir del código de modelo de servicio.  

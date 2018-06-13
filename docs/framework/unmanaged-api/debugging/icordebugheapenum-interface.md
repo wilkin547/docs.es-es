@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25f352a3a6dfae69116d6cda2497d55485b951cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417068"
 ---
 # <a name="icordebugheapenum-interface"></a>ICorDebugHeapEnum (Interfaz)
 Proporciona un enumerador para los objetos del montón administrado. Esta interfaz es una subclase de ICorDebugEnum (interfaz).  

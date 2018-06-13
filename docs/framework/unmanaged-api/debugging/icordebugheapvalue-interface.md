@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c510912412f2344dfd92d6ab2c41c35c1f237ae7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415706"
 ---
 # <a name="icordebugheapvalue-interface1"></a>ICorDebugHeapValue Interfaz1
 Una subclase de "ICorDebugValue" que representa un objeto que ha sido recopilado por el recolector de elementos no utilizados de common language runtime (CLR).  

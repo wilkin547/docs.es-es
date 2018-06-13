@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 77ffb53e3a2b3802d3fcc1319397c8f51c5b127c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416116"
 ---
 # <a name="icordebugprocess2getdesiredngencompilerflags-method"></a>ICorDebugProcess2::GetDesiredNGENCompilerFlags (Método)
 Obtiene el compilador actual configuración de marca que common language runtime (CLR) se utiliza para seleccionar el valor correcto precompilado (es decir, nativo) imagen que se va a cargar en este proceso.  

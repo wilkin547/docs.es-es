@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547490"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Cómo: Controlar el evento ContextMenuOpening
 El <xref:System.Windows.FrameworkElement.ContextMenuOpening> evento se puede administrar en una aplicación para ajustar un menú contextual existente antes para mostrar o suprimir el menú que se mostraría en caso contrario, establezca el <xref:System.Windows.RoutedEventArgs.Handled%2A> propiedad `true` en los datos del evento. El motivo habitual para configuración <xref:System.Windows.RoutedEventArgs.Handled%2A> a `true` en el evento datos consiste en reemplazar el menú completamente con un nuevo <xref:System.Windows.Controls.ContextMenu> de objeto, que a veces requiere cancelar la operación e iniciar una nueva apertura. Si escribe controladores para la <xref:System.Windows.FrameworkElement.ContextMenuOpening> eventos, debe tener en cuenta los problemas de sincronización entre un <xref:System.Windows.Controls.ContextMenu> control y el servicio que se encarga de abrir y colocar menús contextuales para los controles en general. En este tema se muestra algunas de las técnicas de código para el menú contextual de varios escenarios de apertura y muestra un caso donde el problema de sincronización entra en juego.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 45a710e6d8be4a041d9852585ea83fea85376f66
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413831"
 ---
 # <a name="icordebuginternalframe-interface1"></a>ICorDebugInternalFrame Interfaz1
 Representa un marco de tiempo de ejecución interno en la pila. Esta interfaz es una subclase de ICorDebugFrame (interfaz).  
