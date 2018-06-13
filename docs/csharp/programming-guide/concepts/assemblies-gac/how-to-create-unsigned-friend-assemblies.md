@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340208"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a><span data-ttu-id="d6442-102">Cómo: Crear ensamblados de confianza sin firmar(C#)</span><span class="sxs-lookup"><span data-stu-id="d6442-102">How to: Create Unsigned Friend Assemblies (C#)</span></span>
 <span data-ttu-id="d6442-103">En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados sin firmar.</span><span class="sxs-lookup"><span data-stu-id="d6442-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  

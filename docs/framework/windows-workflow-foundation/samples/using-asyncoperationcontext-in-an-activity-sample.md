@@ -1,41 +1,31 @@
 ---
 title: Usar AsyncOperationContext en un ejemplo de actividad
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0888a0bd-d227-4c00-ad6a-b654a01740e8
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5aa36c3173e4e20d063f93b3583d063057b9bac7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da7b62ef9e29621d1e6ee1046afb5455af1164bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515502"
 ---
-# <a name="using-asyncoperationcontext-in-an-activity-sample"></a><span data-ttu-id="5e33a-102">Usar AsyncOperationContext en un ejemplo de actividad</span><span class="sxs-lookup"><span data-stu-id="5e33a-102">Using AsyncOperationContext in an Activity Sample</span></span>
-<span data-ttu-id="5e33a-103">En este ejemplo se muestra cómo desarrollar una actividad <xref:System.Activities.CodeActivity> personalizada que utiliza <xref:System.Activities.AsyncCodeActivityContext> para realizar trabajo de forma asincrónica fuera del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="5e33a-103">This sample demonstrates how to develop a custom <xref:System.Activities.CodeActivity> that uses <xref:System.Activities.AsyncCodeActivityContext> to perform work asynchronously outside of the workflow.</span></span>  
+# <a name="using-asyncoperationcontext-in-an-activity-sample"></a><span data-ttu-id="2b9fe-102">Usar AsyncOperationContext en un ejemplo de actividad</span><span class="sxs-lookup"><span data-stu-id="2b9fe-102">Using AsyncOperationContext in an Activity Sample</span></span>
+<span data-ttu-id="2b9fe-103">En este ejemplo se muestra cómo desarrollar una actividad <xref:System.Activities.CodeActivity> personalizada que utiliza <xref:System.Activities.AsyncCodeActivityContext> para realizar trabajo de forma asincrónica fuera del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="2b9fe-103">This sample demonstrates how to develop a custom <xref:System.Activities.CodeActivity> that uses <xref:System.Activities.AsyncCodeActivityContext> to perform work asynchronously outside of the workflow.</span></span>  
   
-## <a name="sample-details"></a><span data-ttu-id="5e33a-104">Detalles del ejemplo</span><span class="sxs-lookup"><span data-stu-id="5e33a-104">Sample Details</span></span>  
- <span data-ttu-id="5e33a-105">La actividad de ejemplo utiliza los métodos <xref:System.IO.FileStream.BeginWrite%2A> y <xref:System.IO.FileStream.EndWrite%2A> de la clase <xref:System.IO.FileStream> para escribir datos en un archivo de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="5e33a-105">The sample activity uses the <xref:System.IO.FileStream.BeginWrite%2A> and <xref:System.IO.FileStream.EndWrite%2A> methods on the <xref:System.IO.FileStream> class to asynchronously write data to a file.</span></span> <span data-ttu-id="5e33a-106">El patrón introducido aquí se puede adaptar para el uso con otros métodos asincrónicos.</span><span class="sxs-lookup"><span data-stu-id="5e33a-106">The pattern introduced here can be adapted for use with other asynchronous methods.</span></span> <span data-ttu-id="5e33a-107">Mientras se está ejecutando la operación asincrónica, se pueden ejecutar otras actividades del flujo de trabajo, pero este no se puede guardar.</span><span class="sxs-lookup"><span data-stu-id="5e33a-107">While the asynchronous operation is executing, other activities in the workflow can execute, but the workflow cannot be persisted.</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="2b9fe-104">Detalles del ejemplo</span><span class="sxs-lookup"><span data-stu-id="2b9fe-104">Sample Details</span></span>  
+ <span data-ttu-id="2b9fe-105">La actividad de ejemplo utiliza los métodos <xref:System.IO.FileStream.BeginWrite%2A> y <xref:System.IO.FileStream.EndWrite%2A> de la clase <xref:System.IO.FileStream> para escribir datos en un archivo de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="2b9fe-105">The sample activity uses the <xref:System.IO.FileStream.BeginWrite%2A> and <xref:System.IO.FileStream.EndWrite%2A> methods on the <xref:System.IO.FileStream> class to asynchronously write data to a file.</span></span> <span data-ttu-id="2b9fe-106">El patrón introducido aquí se puede adaptar para el uso con otros métodos asincrónicos.</span><span class="sxs-lookup"><span data-stu-id="2b9fe-106">The pattern introduced here can be adapted for use with other asynchronous methods.</span></span> <span data-ttu-id="2b9fe-107">Mientras se está ejecutando la operación asincrónica, se pueden ejecutar otras actividades del flujo de trabajo, pero este no se puede guardar.</span><span class="sxs-lookup"><span data-stu-id="2b9fe-107">While the asynchronous operation is executing, other activities in the workflow can execute, but the workflow cannot be persisted.</span></span>  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="5e33a-108">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="5e33a-108">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="2b9fe-108">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="2b9fe-108">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="5e33a-109">Abra la solución de ejemplo Async.sln en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5e33a-109">Open the Async.sln sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="2b9fe-109">Abra la solución de ejemplo Async.sln en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2b9fe-109">Open the Async.sln sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  <span data-ttu-id="5e33a-110">Compile y ejecute la solución.</span><span class="sxs-lookup"><span data-stu-id="5e33a-110">Build and run the solution.</span></span>  
+2.  <span data-ttu-id="2b9fe-110">Compile y ejecute la solución.</span><span class="sxs-lookup"><span data-stu-id="2b9fe-110">Build and run the solution.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="5e33a-111">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="5e33a-111">The samples may already be installed on your machine.</span></span> <span data-ttu-id="5e33a-112">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="5e33a-112">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="2b9fe-111">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="2b9fe-111">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2b9fe-112">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="2b9fe-112">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="5e33a-113">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="5e33a-113">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="5e33a-114">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="5e33a-114">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="2b9fe-113">Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos.</span><span class="sxs-lookup"><span data-stu-id="2b9fe-113">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2b9fe-114">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="2b9fe-114">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\Async`

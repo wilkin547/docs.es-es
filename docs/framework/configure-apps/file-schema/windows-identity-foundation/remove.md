@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755082"
 ---
 # <a name="ltremovegt"></a><span data-ttu-id="9c468-102">&lt;remove&gt;</span><span class="sxs-lookup"><span data-stu-id="9c468-102">&lt;remove&gt;</span></span>
 <span data-ttu-id="9c468-103">Quita el controlador de token de seguridad especificado de la colección de controlador de token.</span><span class="sxs-lookup"><span data-stu-id="9c468-103">Removes the specified security token handler from the token handler collection.</span></span>  

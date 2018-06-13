@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753959"
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a><span data-ttu-id="cba9f-102">&lt;add&gt; de &lt;authorizationPolicies&gt;</span><span class="sxs-lookup"><span data-stu-id="cba9f-102">&lt;add&gt; of &lt;authorizationPolicies&gt;</span></span>
 <span data-ttu-id="cba9f-103">Especifica una directiva de autorización para la transformación de notificaciones.</span><span class="sxs-lookup"><span data-stu-id="cba9f-103">Specifies an authorization policy for claim transformation.</span></span>  

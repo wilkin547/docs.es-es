@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218064"
 ---
 # <a name="command-line-build-with-cscexe"></a><span data-ttu-id="a8209-102">Compilar la línea de comandos con csc.exe</span><span class="sxs-lookup"><span data-stu-id="a8209-102">Command-line build with csc.exe</span></span>
 <span data-ttu-id="a8209-103">Puede invocar el compilador de C# escribiendo el nombre de su archivo ejecutable (*csc.exe*) en un símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="a8209-103">You can invoke the C# compiler by typing the name of its executable file (*csc.exe*) at a command prompt.</span></span>

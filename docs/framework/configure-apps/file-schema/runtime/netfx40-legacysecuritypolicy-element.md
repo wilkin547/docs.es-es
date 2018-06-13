@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753988"
 ---
 # <a name="ltnetfx40legacysecuritypolicygt-element"></a><span data-ttu-id="93665-102">&lt;NetFx40_LegacySecurityPolicy&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="93665-102">&lt;NetFx40_LegacySecurityPolicy&gt; Element</span></span>
 <span data-ttu-id="93665-103">Especifica si el runtime usa la directiva de seguridad de acceso al código (CAS) heredada.</span><span class="sxs-lookup"><span data-stu-id="93665-103">Specifies whether the runtime uses legacy code access security (CAS) policy.</span></span>  

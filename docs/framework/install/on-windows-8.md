@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386914"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a><span data-ttu-id="0813d-103">Instalación de .NET Framework en Windows 8 y Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="0813d-103">Install the .NET Framework on Windows 8 and Windows Server 2012</span></span>
 

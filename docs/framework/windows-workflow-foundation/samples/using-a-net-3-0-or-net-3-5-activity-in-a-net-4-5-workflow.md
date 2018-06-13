@@ -1,43 +1,32 @@
 ---
 title: Usar una actividad de .NET Framework 3.0 o .NET Framework 3.5 en un flujo de trabajo de .NET Framework 4.5
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 6c53fd4c-5dd0-4fb4-ab6b-111302629548
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 64c0e4b6e84f442b6e34f0cbd442ae04e2a9d0b5
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ab2e93918617bd1ca21fb32878d446db0dd2ef16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514904"
 ---
-# <a name="using-a-net-framework-30-or-net-framework-35-activity-in-a-net-framework-45-workflow"></a><span data-ttu-id="4a131-102">Usar una actividad de .NET Framework 3.0 o .NET Framework 3.5 en un flujo de trabajo de .NET Framework 4.5</span><span class="sxs-lookup"><span data-stu-id="4a131-102">Using a .NET Framework 3.0 or .NET Framework 3.5 Activity in a .NET Framework 4.5 Workflow</span></span>
-<span data-ttu-id="4a131-103">El <xref:System.Activities.Statements.Interop> actividad le permite ejecutar una actividad de Windows Workflow Foundation (WF) de .NET Framework 3.0 en un [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="4a131-103">The <xref:System.Activities.Statements.Interop> activity allows you to run a .NET Framework 3.0 Windows Workflow Foundation (WF) activity within a [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] workflow.</span></span> <span data-ttu-id="4a131-104">En este ejemplo se muestra cómo utilizar la actividad <xref:System.Activities.Statements.Interop> para pasar una cadena como un argumento a una actividad de [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] personalizada.</span><span class="sxs-lookup"><span data-stu-id="4a131-104">This sample demonstrates how to use the <xref:System.Activities.Statements.Interop> activity to pass a string as an argument to a custom [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] activity.</span></span>  
+# <a name="using-a-net-framework-30-or-net-framework-35-activity-in-a-net-framework-45-workflow"></a><span data-ttu-id="04f51-102">Usar una actividad de .NET Framework 3.0 o .NET Framework 3.5 en un flujo de trabajo de .NET Framework 4.5</span><span class="sxs-lookup"><span data-stu-id="04f51-102">Using a .NET Framework 3.0 or .NET Framework 3.5 Activity in a .NET Framework 4.5 Workflow</span></span>
+<span data-ttu-id="04f51-103">El <xref:System.Activities.Statements.Interop> actividad le permite ejecutar una actividad de Windows Workflow Foundation (WF) de .NET Framework 3.0 en un [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="04f51-103">The <xref:System.Activities.Statements.Interop> activity allows you to run a .NET Framework 3.0 Windows Workflow Foundation (WF) activity within a [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] workflow.</span></span> <span data-ttu-id="04f51-104">En este ejemplo se muestra cómo utilizar la actividad <xref:System.Activities.Statements.Interop> para pasar una cadena como un argumento a una actividad de [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] personalizada.</span><span class="sxs-lookup"><span data-stu-id="04f51-104">This sample demonstrates how to use the <xref:System.Activities.Statements.Interop> activity to pass a string as an argument to a custom [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] activity.</span></span>  
   
-## <a name="to-use-this-sample"></a><span data-ttu-id="4a131-105">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="4a131-105">To use this sample</span></span>  
+## <a name="to-use-this-sample"></a><span data-ttu-id="04f51-105">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="04f51-105">To use this sample</span></span>  
   
-1.  <span data-ttu-id="4a131-106">Abra el archivo de solución SimpleInterop.sln con [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4a131-106">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the SimpleInterop.sln solution file.</span></span>  
+1.  <span data-ttu-id="04f51-106">Abra el archivo de solución SimpleInterop.sln con [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="04f51-106">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the SimpleInterop.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="4a131-107">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="4a131-107">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="04f51-107">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="04f51-107">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="4a131-108">Para ejecutar la solución, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="4a131-108">To run the solution, press CTRL+F5.</span></span>  
+3.  <span data-ttu-id="04f51-108">Para ejecutar la solución, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="04f51-108">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="4a131-109">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="4a131-109">The samples may already be installed on your machine.</span></span> <span data-ttu-id="4a131-110">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="4a131-110">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="04f51-109">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="04f51-109">The samples may already be installed on your machine.</span></span> <span data-ttu-id="04f51-110">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="04f51-110">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="4a131-111">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="4a131-111">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="4a131-112">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="4a131-112">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="04f51-111">Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos.</span><span class="sxs-lookup"><span data-stu-id="04f51-111">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="04f51-112">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="04f51-112">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Migration\SimpleInterop`  
   
-## <a name="see-also"></a><span data-ttu-id="4a131-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="4a131-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04f51-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="04f51-113">See Also</span></span>

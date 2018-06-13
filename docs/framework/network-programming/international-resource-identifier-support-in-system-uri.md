@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398257"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a><span data-ttu-id="1a3af-102">Compatibilidad de identificadores de recursos internacionales en System.Uri</span><span class="sxs-lookup"><span data-stu-id="1a3af-102">International Resource Identifier Support in System.Uri</span></span>
 <span data-ttu-id="1a3af-103">La clase <xref:System.Uri?displayProperty=nameWithType> se ha ampliado con la compatibilidad con Identificadores de recursos internacionales (IRI) y Nombres de dominio internacionalizados (IDN).</span><span class="sxs-lookup"><span data-stu-id="1a3af-103">The <xref:System.Uri?displayProperty=nameWithType> class has been extended with International Resource Identifier (IRI) and Internationalized Domain Names (IDN) support.</span></span> <span data-ttu-id="1a3af-104">Estas mejoras están disponibles en .NET Framework 3.5, 3.0 SP1 y 2.0 SP1.</span><span class="sxs-lookup"><span data-stu-id="1a3af-104">These enhancements are available in .NET Framework 3.5, 3.0 SP1, and 2.0 SP1.</span></span>  
