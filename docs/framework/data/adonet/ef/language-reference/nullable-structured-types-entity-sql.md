@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762392"
 ---
 # <a name="nullable-structured-types-entity-sql"></a><span data-ttu-id="ae0d6-102">Tipos estructurados que aceptan valores NULL [Entity SQL]</span><span class="sxs-lookup"><span data-stu-id="ae0d6-102">Nullable Structured Types (Entity SQL)</span></span>
 <span data-ttu-id="ae0d6-103">Una instancia `null` de un tipo estructurado es una instancia que no existe.</span><span class="sxs-lookup"><span data-stu-id="ae0d6-103">A `null` instance of a structured type is an instance that does not exist.</span></span> <span data-ttu-id="ae0d6-104">Es diferente de una instancia existente en la que todas las propiedades tienen valores `null`.</span><span class="sxs-lookup"><span data-stu-id="ae0d6-104">This is different from an existing instance in which all properties have `null` values.</span></span>  

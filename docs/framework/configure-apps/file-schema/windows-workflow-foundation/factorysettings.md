@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756467"
 ---
 # <a name="ltfactorysettingsgt"></a><span data-ttu-id="f418c-102">&lt;factorySettings&gt;</span><span class="sxs-lookup"><span data-stu-id="f418c-102">&lt;factorySettings&gt;</span></span>
 <span data-ttu-id="f418c-103">Especifica los valores de la memoria caché del generador de canales.</span><span class="sxs-lookup"><span data-stu-id="f418c-103">Specifies the settings of the channel factory cache.</span></span>  

@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugManagedCallback::StepComplete (Método)"
-ms.custom: 
+title: ICorDebugManagedCallback::StepComplete (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugManagedCallback.StepComplete
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 5e1f2c47-81df-4530-826d-96489cd68719
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8e7a09216284593c79c0cda6f5283ea8250678af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3cd6cce73a96cf522521d7cd8d0cc8024e95b93c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413262"
 ---
-# <a name="icordebugmanagedcallbackstepcomplete-method"></a><span data-ttu-id="7106e-102">ICorDebugManagedCallback::StepComplete (Método)</span><span class="sxs-lookup"><span data-stu-id="7106e-102">ICorDebugManagedCallback::StepComplete Method</span></span>
-<span data-ttu-id="7106e-103">Notifica al depurador que se ha completado un paso.</span><span class="sxs-lookup"><span data-stu-id="7106e-103">Notifies the debugger that a step has completed.</span></span>  
+# <a name="icordebugmanagedcallbackstepcomplete-method"></a><span data-ttu-id="a1479-102">ICorDebugManagedCallback::StepComplete (Método)</span><span class="sxs-lookup"><span data-stu-id="a1479-102">ICorDebugManagedCallback::StepComplete Method</span></span>
+<span data-ttu-id="a1479-103">Notifica al depurador que se ha completado un paso.</span><span class="sxs-lookup"><span data-stu-id="a1479-103">Notifies the debugger that a step has completed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7106e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7106e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a1479-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a1479-104">Syntax</span></span>  
   
 ```  
 HRESULT StepComplete (  
@@ -49,30 +38,30 @@ HRESULT StepComplete (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7106e-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7106e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a1479-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a1479-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="7106e-106">[in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso en el que se ha completado el paso.</span><span class="sxs-lookup"><span data-stu-id="7106e-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the thread in which the step has completed.</span></span>  
+ <span data-ttu-id="a1479-106">[in] Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso en el que se ha completado el paso.</span><span class="sxs-lookup"><span data-stu-id="a1479-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the thread in which the step has completed.</span></span>  
   
  `pThread`  
- <span data-ttu-id="7106e-107">[in] Un puntero a un objeto ICorDebugThread que representa el subproceso en el que se ha completado el paso.</span><span class="sxs-lookup"><span data-stu-id="7106e-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the step has completed.</span></span>  
+ <span data-ttu-id="a1479-107">[in] Un puntero a un objeto ICorDebugThread que representa el subproceso en el que se ha completado el paso.</span><span class="sxs-lookup"><span data-stu-id="a1479-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the step has completed.</span></span>  
   
  `pStepper`  
- <span data-ttu-id="7106e-108">[in] Un puntero a un objeto ICorDebugStepper que representa el paso en la ejecución de código.</span><span class="sxs-lookup"><span data-stu-id="7106e-108">[in] A pointer to an ICorDebugStepper object that represents the step in code execution.</span></span>  
+ <span data-ttu-id="a1479-108">[in] Un puntero a un objeto ICorDebugStepper que representa el paso en la ejecución de código.</span><span class="sxs-lookup"><span data-stu-id="a1479-108">[in] A pointer to an ICorDebugStepper object that represents the step in code execution.</span></span>  
   
  `reason`  
- <span data-ttu-id="7106e-109">[in] Un valor de la enumeración CorDebugStepReason que indica el resultado de un paso individual.</span><span class="sxs-lookup"><span data-stu-id="7106e-109">[in] A value of the CorDebugStepReason enumeration that indicates the outcome of an individual step.</span></span>  
+ <span data-ttu-id="a1479-109">[in] Un valor de la enumeración CorDebugStepReason que indica el resultado de un paso individual.</span><span class="sxs-lookup"><span data-stu-id="a1479-109">[in] A value of the CorDebugStepReason enumeration that indicates the outcome of an individual step.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7106e-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="7106e-110">Remarks</span></span>  
- <span data-ttu-id="7106e-111">El paso a paso desencadene puede utilizarse para continuar ejecución paso a paso si lo desea, a menos que se termine la depuración.</span><span class="sxs-lookup"><span data-stu-id="7106e-111">The stepper may be used to continue stepping if desired, unless the debugging is terminated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a1479-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a1479-110">Remarks</span></span>  
+ <span data-ttu-id="a1479-111">El paso a paso desencadene puede utilizarse para continuar ejecución paso a paso si lo desea, a menos que se termine la depuración.</span><span class="sxs-lookup"><span data-stu-id="a1479-111">The stepper may be used to continue stepping if desired, unless the debugging is terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7106e-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7106e-112">Requirements</span></span>  
- <span data-ttu-id="7106e-113">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7106e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a1479-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a1479-112">Requirements</span></span>  
+ <span data-ttu-id="a1479-113">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a1479-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7106e-114">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7106e-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a1479-114">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a1479-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7106e-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7106e-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a1479-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a1479-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7106e-116">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7106e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a1479-116">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a1479-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7106e-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="7106e-117">See Also</span></span>  
- [<span data-ttu-id="7106e-118">ICorDebugManagedCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="7106e-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a1479-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="a1479-117">See Also</span></span>  
+ [<span data-ttu-id="a1479-118">ICorDebugManagedCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a1479-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

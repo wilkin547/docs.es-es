@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752408"
 ---
 # <a name="ltsslstreamsecuritygt"></a><span data-ttu-id="a0413-102">&lt;sslStreamSecurity&gt;</span><span class="sxs-lookup"><span data-stu-id="a0413-102">&lt;sslStreamSecurity&gt;</span></span>
 <span data-ttu-id="a0413-103">Representa un elemento de enlace personalizado que admite seguridad del canal mediante una secuencia de SSL.</span><span class="sxs-lookup"><span data-stu-id="a0413-103">Represents a custom binding element that supports channel security using an SSL stream.</span></span>  

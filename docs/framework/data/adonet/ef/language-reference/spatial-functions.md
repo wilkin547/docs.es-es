@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763935"
 ---
 # <a name="spatial-functions"></a><span data-ttu-id="694d7-102">Funciones espaciales</span><span class="sxs-lookup"><span data-stu-id="694d7-102">Spatial Functions</span></span>
 <span data-ttu-id="694d7-103">No existe ningún formato literal para los tipos espaciales.</span><span class="sxs-lookup"><span data-stu-id="694d7-103">There is no literal format for spatial types.</span></span> <span data-ttu-id="694d7-104">Sin embargo, puede usar las funciones canónicas de Entity Framework a las que se llama mediante cadenas en formato Well-Known Text.</span><span class="sxs-lookup"><span data-stu-id="694d7-104">However, you can use canonical Entity Framework functions that you call using strings in Well-Known Text format.</span></span> <span data-ttu-id="694d7-105">Por ejemplo, la siguiente llamada de función crea un punto de geometría:</span><span class="sxs-lookup"><span data-stu-id="694d7-105">For example, the following function call creates a geometry point:</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410395"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a><span data-ttu-id="88cd8-102">Mage.exe (Herramienta de generación y edición de manifiestos)</span><span class="sxs-lookup"><span data-stu-id="88cd8-102">Mage.exe (Manifest Generation and Editing Tool)</span></span>
 <span data-ttu-id="88cd8-103">La herramienta de generación y edición de manifiestos (Mage.exe) es una herramienta de línea de comandos que permite crear y editar manifiestos de aplicación y de implementación.</span><span class="sxs-lookup"><span data-stu-id="88cd8-103">The Manifest Generation and Editing Tool (Mage.exe) is a command-line tool that supports the creation and editing of application and deployment manifests.</span></span> <span data-ttu-id="88cd8-104">Como herramienta de línea de comandos, Mage.exe se puede ejecutar desde scripts por lotes y desde otras aplicaciones basadas en Windows, incluidas las aplicaciones de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="88cd8-104">As a command-line tool, Mage.exe can be run from both batch scripts and other Windows-based applications, including [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications.</span></span>  
