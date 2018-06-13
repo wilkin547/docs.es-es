@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742642"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a><span data-ttu-id="ae8de-102">&lt;performanceCounter&gt; Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="ae8de-102">&lt;performanceCounter&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="ae8de-103">Habilita o deshabilita los contadores de rendimiento de red.</span><span class="sxs-lookup"><span data-stu-id="ae8de-103">Enables or disables networking performance counters.</span></span>  

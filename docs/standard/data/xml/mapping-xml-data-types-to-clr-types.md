@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568554"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="792b3-102">Asignación de tipos de datos XML a tipos CLR</span><span class="sxs-lookup"><span data-stu-id="792b3-102">Mapping XML Data Types to CLR Types</span></span>
 <span data-ttu-id="792b3-103">En la siguiente tabla se describen las asignaciones predeterminadas entre tipos de datos XML y los tipos Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="792b3-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743828"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a><span data-ttu-id="3bfce-102">&lt;agregar&gt; (elemento) para &lt;namedCaches&gt;</span><span class="sxs-lookup"><span data-stu-id="3bfce-102">&lt;add&gt; Element for &lt;namedCaches&gt;</span></span>
 <span data-ttu-id="3bfce-103">Agrega un `namedCache` entrada para el `namedCaches` colección de una memoria caché.</span><span class="sxs-lookup"><span data-stu-id="3bfce-103">Adds a `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  

@@ -1,65 +1,61 @@
 ---
 title: Control de acceso (F#)
 description: 'Obtener información sobre cómo controlar el acceso a elementos de programación como tipos, métodos y funciones, en el lenguaje de programación de F #.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: fee5f719904b61c3082d56f73448defdea39f472
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0a5cc1faa1aef343aaca0abb0c42a0dd9a52fcbb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566527"
 ---
-# <a name="access-control"></a><span data-ttu-id="2bb7c-103">Control de acceso</span><span class="sxs-lookup"><span data-stu-id="2bb7c-103">Access Control</span></span>
+# <a name="access-control"></a><span data-ttu-id="93ff3-103">Control de acceso</span><span class="sxs-lookup"><span data-stu-id="93ff3-103">Access Control</span></span>
 
-<span data-ttu-id="2bb7c-104">*Control de acceso* se refiere a declarar qué clientes pueden utilizar ciertos elementos del programa, como tipos, métodos y funciones.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-104">*Access control* refers to declaring which clients can use certain program elements, such as types, methods, and functions.</span></span>
-
-
-## <a name="basics-of-access-control"></a><span data-ttu-id="2bb7c-105">Conceptos básicos de Control de acceso</span><span class="sxs-lookup"><span data-stu-id="2bb7c-105">Basics of Access Control</span></span>
-<span data-ttu-id="2bb7c-106">En F #, el acceso de control especificadores `public`, `internal`, y `private` pueden aplicarse a los módulos, tipos, métodos, definiciones de valor, funciones, propiedades y campos explícitos.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-106">In F#, the access control specifiers `public`, `internal`, and `private` can be applied to modules, types, methods, value definitions, functions, properties, and explicit fields.</span></span>
+<span data-ttu-id="93ff3-104">*Control de acceso* se refiere a declarar qué clientes pueden utilizar ciertos elementos del programa, como tipos, métodos y funciones.</span><span class="sxs-lookup"><span data-stu-id="93ff3-104">*Access control* refers to declaring which clients can use certain program elements, such as types, methods, and functions.</span></span>
 
 
-- <span data-ttu-id="2bb7c-107">`public` indica que la entidad puede tener acceso a todos los llamadores.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-107">`public` indicates that the entity can be accessed by all callers.</span></span>
+## <a name="basics-of-access-control"></a><span data-ttu-id="93ff3-105">Conceptos básicos de Control de acceso</span><span class="sxs-lookup"><span data-stu-id="93ff3-105">Basics of Access Control</span></span>
+<span data-ttu-id="93ff3-106">En F #, el acceso de control especificadores `public`, `internal`, y `private` pueden aplicarse a los módulos, tipos, métodos, definiciones de valor, funciones, propiedades y campos explícitos.</span><span class="sxs-lookup"><span data-stu-id="93ff3-106">In F#, the access control specifiers `public`, `internal`, and `private` can be applied to modules, types, methods, value definitions, functions, properties, and explicit fields.</span></span>
 
-- <span data-ttu-id="2bb7c-108">`internal` indica que se puede tener acceso a la entidad únicamente desde el mismo ensamblado.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-108">`internal` indicates that the entity can be accessed only from the same assembly.</span></span>
 
-- <span data-ttu-id="2bb7c-109">`private` indica que la entidad puede tener acceso sólo desde el tipo o módulo envolvente.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-109">`private` indicates that the entity can be accessed only from the enclosing type or module.</span></span>
+- <span data-ttu-id="93ff3-107">`public` indica que la entidad puede tener acceso a todos los llamadores.</span><span class="sxs-lookup"><span data-stu-id="93ff3-107">`public` indicates that the entity can be accessed by all callers.</span></span>
+
+- <span data-ttu-id="93ff3-108">`internal` indica que se puede tener acceso a la entidad únicamente desde el mismo ensamblado.</span><span class="sxs-lookup"><span data-stu-id="93ff3-108">`internal` indicates that the entity can be accessed only from the same assembly.</span></span>
+
+- <span data-ttu-id="93ff3-109">`private` indica que la entidad puede tener acceso sólo desde el tipo o módulo envolvente.</span><span class="sxs-lookup"><span data-stu-id="93ff3-109">`private` indicates that the entity can be accessed only from the enclosing type or module.</span></span>
 
 
 >[!NOTE] 
-<span data-ttu-id="2bb7c-110">El especificador de acceso `protected` no se utiliza en F #, aunque es aceptable si se utilizan tipos creados en lenguajes que admitan `protected` acceso.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-110">The access specifier `protected` is not used in F#, although it is acceptable if you are using types authored in languages that do support `protected` access.</span></span> <span data-ttu-id="2bb7c-111">Por lo tanto, si invalida un método protegido, el método permanecerá accesible únicamente dentro de la clase y sus descendientes.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-111">Therefore, if you override a protected method, your method remains accessible only within the class and its descendents.</span></span>
+<span data-ttu-id="93ff3-110">El especificador de acceso `protected` no se utiliza en F #, aunque es aceptable si se utilizan tipos creados en lenguajes que admitan `protected` acceso.</span><span class="sxs-lookup"><span data-stu-id="93ff3-110">The access specifier `protected` is not used in F#, although it is acceptable if you are using types authored in languages that do support `protected` access.</span></span> <span data-ttu-id="93ff3-111">Por lo tanto, si invalida un método protegido, el método permanecerá accesible únicamente dentro de la clase y sus descendientes.</span><span class="sxs-lookup"><span data-stu-id="93ff3-111">Therefore, if you override a protected method, your method remains accessible only within the class and its descendents.</span></span>
 
-<span data-ttu-id="2bb7c-112">En general, el especificador se coloca delante del nombre de la entidad, excepto cuando una `mutable` o `inline` especificador se usa, que aparecen después del especificador de control de acceso.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-112">In general, the specifier is put in front of the name of the entity, except when a `mutable` or `inline` specifier is used, which appear after the access control specifier.</span></span>
+<span data-ttu-id="93ff3-112">En general, el especificador se coloca delante del nombre de la entidad, excepto cuando una `mutable` o `inline` especificador se usa, que aparecen después del especificador de control de acceso.</span><span class="sxs-lookup"><span data-stu-id="93ff3-112">In general, the specifier is put in front of the name of the entity, except when a `mutable` or `inline` specifier is used, which appear after the access control specifier.</span></span>
 
-<span data-ttu-id="2bb7c-113">Si no se utiliza ningún especificador de acceso, el valor predeterminado es `public`, excepto para `let` enlaces en un tipo, que siempre son `private` al tipo.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-113">If no access specifier is used, the default is `public`, except for `let` bindings in a type, which are always `private` to the type.</span></span>
+<span data-ttu-id="93ff3-113">Si no se utiliza ningún especificador de acceso, el valor predeterminado es `public`, excepto para `let` enlaces en un tipo, que siempre son `private` al tipo.</span><span class="sxs-lookup"><span data-stu-id="93ff3-113">If no access specifier is used, the default is `public`, except for `let` bindings in a type, which are always `private` to the type.</span></span>
 
-<span data-ttu-id="2bb7c-114">Las firmas en F # proporcionan otro mecanismo para controlar el acceso a elementos de programa de F #.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-114">Signatures in F# provide another mechanism for controlling access to F# program elements.</span></span> <span data-ttu-id="2bb7c-115">Las firmas no son necesarias para el control de acceso.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-115">Signatures are not required for access control.</span></span> <span data-ttu-id="2bb7c-116">Para más información, vea [Signatures](signatures.md) (Firmas).</span><span class="sxs-lookup"><span data-stu-id="2bb7c-116">For more information, see [Signatures](signatures.md).</span></span>
-
-
-## <a name="rules-for-access-control"></a><span data-ttu-id="2bb7c-117">Reglas para el Control de acceso</span><span class="sxs-lookup"><span data-stu-id="2bb7c-117">Rules for Access Control</span></span>
-<span data-ttu-id="2bb7c-118">Control de acceso está sujeto a las reglas siguientes:</span><span class="sxs-lookup"><span data-stu-id="2bb7c-118">Access control is subject to the following rules:</span></span>
+<span data-ttu-id="93ff3-114">Las firmas en F # proporcionan otro mecanismo para controlar el acceso a elementos de programa de F #.</span><span class="sxs-lookup"><span data-stu-id="93ff3-114">Signatures in F# provide another mechanism for controlling access to F# program elements.</span></span> <span data-ttu-id="93ff3-115">Las firmas no son necesarias para el control de acceso.</span><span class="sxs-lookup"><span data-stu-id="93ff3-115">Signatures are not required for access control.</span></span> <span data-ttu-id="93ff3-116">Para más información, vea [Signatures](signatures.md) (Firmas).</span><span class="sxs-lookup"><span data-stu-id="93ff3-116">For more information, see [Signatures](signatures.md).</span></span>
 
 
-- <span data-ttu-id="2bb7c-119">Las declaraciones de herencia (es decir, el uso de `inherit` para especificar una clase base para una clase), interfaz declaraciones (es decir, especificar que una clase implementa una interfaz) y resumir los miembros siempre tienen la misma accesibilidad que el tipo envolvente.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-119">Inheritance declarations (that is, the use of `inherit` to specify a base class for a class), interface declarations (that is, specifying that a class implements an interface), and abstract members always have the same accessibility as the enclosing type.</span></span> <span data-ttu-id="2bb7c-120">Por lo tanto, no se puede usar un especificador de control de acceso en estas construcciones.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-120">Therefore, an access control specifier cannot be used on these constructs.</span></span>
-
-- <span data-ttu-id="2bb7c-121">Los casos individuales de una unión discriminada no pueden tener sus propios modificadores de control de acceso independientes del tipo de unión.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-121">Individual cases in a discriminated union cannot have their own access control modifiers separate from the union type.</span></span>
-
-- <span data-ttu-id="2bb7c-122">Los campos individuales de un tipo de registro no pueden tener sus propios modificadores de control de acceso independientes del tipo de registro.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-122">Individual fields of a record type cannot have their own access control modifiers separate from the record type.</span></span>
+## <a name="rules-for-access-control"></a><span data-ttu-id="93ff3-117">Reglas para el Control de acceso</span><span class="sxs-lookup"><span data-stu-id="93ff3-117">Rules for Access Control</span></span>
+<span data-ttu-id="93ff3-118">Control de acceso está sujeto a las reglas siguientes:</span><span class="sxs-lookup"><span data-stu-id="93ff3-118">Access control is subject to the following rules:</span></span>
 
 
-## <a name="example"></a><span data-ttu-id="2bb7c-123">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2bb7c-123">Example</span></span>
-<span data-ttu-id="2bb7c-124">El código siguiente muestra el uso de especificadores de control de acceso.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-124">The following code illustrates the use of access control specifiers.</span></span> <span data-ttu-id="2bb7c-125">Hay dos archivos en el proyecto, `Module1.fs` y `Module2.fs`.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-125">There are two files in the project, `Module1.fs` and `Module2.fs`.</span></span> <span data-ttu-id="2bb7c-126">Cada archivo de forma implícita es un módulo.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-126">Each file is implicitly a module.</span></span> <span data-ttu-id="2bb7c-127">Por lo tanto, hay dos módulos, `Module1` y `Module2`.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-127">Therefore, there are two modules, `Module1` and `Module2`.</span></span> <span data-ttu-id="2bb7c-128">Un tipo privado y un tipo interno se definen en `Module1`.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-128">A private type and an internal type are defined in `Module1`.</span></span> <span data-ttu-id="2bb7c-129">No se puede tener acceso a un tipo privado de `Module2`, pero puede del tipo interno.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-129">The private type cannot be accessed from `Module2`, but the internal type can.</span></span>
+- <span data-ttu-id="93ff3-119">Las declaraciones de herencia (es decir, el uso de `inherit` para especificar una clase base para una clase), interfaz declaraciones (es decir, especificar que una clase implementa una interfaz) y resumir los miembros siempre tienen la misma accesibilidad que el tipo envolvente.</span><span class="sxs-lookup"><span data-stu-id="93ff3-119">Inheritance declarations (that is, the use of `inherit` to specify a base class for a class), interface declarations (that is, specifying that a class implements an interface), and abstract members always have the same accessibility as the enclosing type.</span></span> <span data-ttu-id="93ff3-120">Por lo tanto, no se puede usar un especificador de control de acceso en estas construcciones.</span><span class="sxs-lookup"><span data-stu-id="93ff3-120">Therefore, an access control specifier cannot be used on these constructs.</span></span>
+
+- <span data-ttu-id="93ff3-121">Los casos individuales de una unión discriminada no pueden tener sus propios modificadores de control de acceso independientes del tipo de unión.</span><span class="sxs-lookup"><span data-stu-id="93ff3-121">Individual cases in a discriminated union cannot have their own access control modifiers separate from the union type.</span></span>
+
+- <span data-ttu-id="93ff3-122">Los campos individuales de un tipo de registro no pueden tener sus propios modificadores de control de acceso independientes del tipo de registro.</span><span class="sxs-lookup"><span data-stu-id="93ff3-122">Individual fields of a record type cannot have their own access control modifiers separate from the record type.</span></span>
+
+
+## <a name="example"></a><span data-ttu-id="93ff3-123">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="93ff3-123">Example</span></span>
+<span data-ttu-id="93ff3-124">El código siguiente muestra el uso de especificadores de control de acceso.</span><span class="sxs-lookup"><span data-stu-id="93ff3-124">The following code illustrates the use of access control specifiers.</span></span> <span data-ttu-id="93ff3-125">Hay dos archivos en el proyecto, `Module1.fs` y `Module2.fs`.</span><span class="sxs-lookup"><span data-stu-id="93ff3-125">There are two files in the project, `Module1.fs` and `Module2.fs`.</span></span> <span data-ttu-id="93ff3-126">Cada archivo de forma implícita es un módulo.</span><span class="sxs-lookup"><span data-stu-id="93ff3-126">Each file is implicitly a module.</span></span> <span data-ttu-id="93ff3-127">Por lo tanto, hay dos módulos, `Module1` y `Module2`.</span><span class="sxs-lookup"><span data-stu-id="93ff3-127">Therefore, there are two modules, `Module1` and `Module2`.</span></span> <span data-ttu-id="93ff3-128">Un tipo privado y un tipo interno se definen en `Module1`.</span><span class="sxs-lookup"><span data-stu-id="93ff3-128">A private type and an internal type are defined in `Module1`.</span></span> <span data-ttu-id="93ff3-129">No se puede tener acceso a un tipo privado de `Module2`, pero puede del tipo interno.</span><span class="sxs-lookup"><span data-stu-id="93ff3-129">The private type cannot be accessed from `Module2`, but the internal type can.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/access-control/snippet1.fs)]
     
-<span data-ttu-id="2bb7c-130">El código siguiente comprueba la accesibilidad de los tipos creados en `Module1.fs`.</span><span class="sxs-lookup"><span data-stu-id="2bb7c-130">The following code tests the accessibility of the types created in `Module1.fs`.</span></span>
+<span data-ttu-id="93ff3-130">El código siguiente comprueba la accesibilidad de los tipos creados en `Module1.fs`.</span><span class="sxs-lookup"><span data-stu-id="93ff3-130">The following code tests the accessibility of the types created in `Module1.fs`.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/access-control/snippet2.fs)]
     
-## <a name="see-also"></a><span data-ttu-id="2bb7c-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="2bb7c-131">See Also</span></span>
-[<span data-ttu-id="2bb7c-132">Referencia del lenguaje F#</span><span class="sxs-lookup"><span data-stu-id="2bb7c-132">F# Language Reference</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="93ff3-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="93ff3-131">See Also</span></span>
+[<span data-ttu-id="93ff3-132">Referencia del lenguaje F#</span><span class="sxs-lookup"><span data-stu-id="93ff3-132">F# Language Reference</span></span>](index.md)
 
-[<span data-ttu-id="2bb7c-133">Firmas</span><span class="sxs-lookup"><span data-stu-id="2bb7c-133">Signatures</span></span>](signatures.md)
+[<span data-ttu-id="93ff3-133">Firmas</span><span class="sxs-lookup"><span data-stu-id="93ff3-133">Signatures</span></span>](signatures.md)

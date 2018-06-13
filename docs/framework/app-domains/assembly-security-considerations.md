@@ -22,6 +22,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743425"
 ---
 # <a name="assembly-security-considerations"></a><span data-ttu-id="5aaa9-102">Consideraciones de seguridad sobre ensamblados</span><span class="sxs-lookup"><span data-stu-id="5aaa9-102">Assembly Security Considerations</span></span>
 <a name="top"></a> <span data-ttu-id="5aaa9-103">Cuando se compila un ensamblado, se puede especificar el conjunto de permisos que son necesarios para la ejecución del mismo.</span><span class="sxs-lookup"><span data-stu-id="5aaa9-103">When you build an assembly, you can specify a set of permissions that the assembly requires to run.</span></span> <span data-ttu-id="5aaa9-104">La concesión de permisos específicos para un ensamblado se basa en la evidencia.</span><span class="sxs-lookup"><span data-stu-id="5aaa9-104">Whether certain permissions are granted or not granted to an assembly is based on evidence.</span></span>  

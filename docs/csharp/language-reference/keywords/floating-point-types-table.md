@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219279"
 ---
 # <a name="floating-point-types-table-c-reference"></a><span data-ttu-id="ad614-102">Tabla de tipos de punto flotante (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="ad614-102">Floating-Point Types Table (C# Reference)</span></span>
 <span data-ttu-id="ad614-103">La siguiente tabla muestra la precisión y el intervalo aproximado para los tipos de punto flotante.</span><span class="sxs-lookup"><span data-stu-id="ad614-103">The following table shows the precision and approximate ranges for the floating-point types.</span></span>  

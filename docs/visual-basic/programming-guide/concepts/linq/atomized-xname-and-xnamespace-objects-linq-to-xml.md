@@ -1,35 +1,26 @@
 ---
 title: Subdividida objetos XName y XNamespace (LINQ to XML) (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3d3c0b1278411c41d002c546f4b1a3be9975a801
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e311de901a9a54bd4fc6ee56d425cc16b4978e8f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643278"
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a><span data-ttu-id="af4aa-102">Subdividida objetos XName y XNamespace (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af4aa-102">Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="af4aa-103">Los objetos <xref:System.Xml.Linq.XName> y <xref:System.Xml.Linq.XNamespace> se *atomizan*; es decir, si contienen el mismo nombre completo, hacen referencia al mismo objeto.</span><span class="sxs-lookup"><span data-stu-id="af4aa-103"><xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> objects are *atomized*; that is, if they contain the same qualified name, they refer to the same object.</span></span> <span data-ttu-id="af4aa-104">De esta forma, se incrementan los beneficios de rendimiento de las consultas: cuando compare la igualdad de dos nombres atomizados, el lenguaje intermedio subyacente solo debe determinar si los dos puntos de referencia apuntan al mismo objeto.</span><span class="sxs-lookup"><span data-stu-id="af4aa-104">This yields performance benefits for queries: When you compare two atomized names for equality, the underlying intermediate language only has to determine whether the two references point to the same object.</span></span> <span data-ttu-id="af4aa-105">El código subyacente no debe hacer comparaciones de cadenas, ya que sería un proceso muy lento.</span><span class="sxs-lookup"><span data-stu-id="af4aa-105">The underlying code does not have to do string comparisons, which would be time consuming.</span></span>  
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a><span data-ttu-id="70ae3-102">Subdividida objetos XName y XNamespace (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="70ae3-102">Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="70ae3-103">Los objetos <xref:System.Xml.Linq.XName> y <xref:System.Xml.Linq.XNamespace> se *atomizan*; es decir, si contienen el mismo nombre completo, hacen referencia al mismo objeto.</span><span class="sxs-lookup"><span data-stu-id="70ae3-103"><xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> objects are *atomized*; that is, if they contain the same qualified name, they refer to the same object.</span></span> <span data-ttu-id="70ae3-104">De esta forma, se incrementan los beneficios de rendimiento de las consultas: cuando compare la igualdad de dos nombres atomizados, el lenguaje intermedio subyacente solo debe determinar si los dos puntos de referencia apuntan al mismo objeto.</span><span class="sxs-lookup"><span data-stu-id="70ae3-104">This yields performance benefits for queries: When you compare two atomized names for equality, the underlying intermediate language only has to determine whether the two references point to the same object.</span></span> <span data-ttu-id="70ae3-105">El código subyacente no debe hacer comparaciones de cadenas, ya que sería un proceso muy lento.</span><span class="sxs-lookup"><span data-stu-id="70ae3-105">The underlying code does not have to do string comparisons, which would be time consuming.</span></span>  
   
-## <a name="atomization-semantics"></a><span data-ttu-id="af4aa-106">Semántica de atomización</span><span class="sxs-lookup"><span data-stu-id="af4aa-106">Atomization Semantics</span></span>  
- <span data-ttu-id="af4aa-107">Atomización significa que si dos objetos <xref:System.Xml.Linq.XName> tienen el mismo nombre local y se encuentran en el mismo espacio de nombres, comparten la misma instancia.</span><span class="sxs-lookup"><span data-stu-id="af4aa-107">Atomization means that if two <xref:System.Xml.Linq.XName> objects have the same local name, and they are in the same namespace, they share the same instance.</span></span> <span data-ttu-id="af4aa-108">De igual forma, si dos objetos <xref:System.Xml.Linq.XNamespace> tienen el mismo URI de espacio de nombres, comparten la misma instancia.</span><span class="sxs-lookup"><span data-stu-id="af4aa-108">In the same way, if two <xref:System.Xml.Linq.XNamespace> objects have the same namespace URI, they share the same instance.</span></span>  
+## <a name="atomization-semantics"></a><span data-ttu-id="70ae3-106">Semántica de atomización</span><span class="sxs-lookup"><span data-stu-id="70ae3-106">Atomization Semantics</span></span>  
+ <span data-ttu-id="70ae3-107">Atomización significa que si dos objetos <xref:System.Xml.Linq.XName> tienen el mismo nombre local y se encuentran en el mismo espacio de nombres, comparten la misma instancia.</span><span class="sxs-lookup"><span data-stu-id="70ae3-107">Atomization means that if two <xref:System.Xml.Linq.XName> objects have the same local name, and they are in the same namespace, they share the same instance.</span></span> <span data-ttu-id="70ae3-108">De igual forma, si dos objetos <xref:System.Xml.Linq.XNamespace> tienen el mismo URI de espacio de nombres, comparten la misma instancia.</span><span class="sxs-lookup"><span data-stu-id="70ae3-108">In the same way, if two <xref:System.Xml.Linq.XNamespace> objects have the same namespace URI, they share the same instance.</span></span>  
   
- <span data-ttu-id="af4aa-109">Para que una clase habilite objetos atomizados, el constructor de la clase debe ser privado y no público.</span><span class="sxs-lookup"><span data-stu-id="af4aa-109">For a class to enable atomized objects, the constructor for the class must be private, not public.</span></span> <span data-ttu-id="af4aa-110">La razón es que si el constructor fuera público, podría crea un objeto no atomizado.</span><span class="sxs-lookup"><span data-stu-id="af4aa-110">This is because if the constructor were public, you could create a non-atomized object.</span></span> <span data-ttu-id="af4aa-111">Las clases <xref:System.Xml.Linq.XName> y <xref:System.Xml.Linq.XNamespace> implementan un operador de conversión implícita para convertir una cadena en <xref:System.Xml.Linq.XName> o <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="af4aa-111">The <xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> classes implement an implicit conversion operator to convert a string into an <xref:System.Xml.Linq.XName> or <xref:System.Xml.Linq.XNamespace>.</span></span> <span data-ttu-id="af4aa-112">De esta forma, obtiene una instancia de estos objetos.</span><span class="sxs-lookup"><span data-stu-id="af4aa-112">This is how you get an instance of these objects.</span></span> <span data-ttu-id="af4aa-113">No puede obtener ninguna instancia mediante un constructor, ya que no se puede tener acceso a él.</span><span class="sxs-lookup"><span data-stu-id="af4aa-113">You cannot get an instance by using a constructor, because the constructor is inaccessible.</span></span>  
+ <span data-ttu-id="70ae3-109">Para que una clase habilite objetos atomizados, el constructor de la clase debe ser privado y no público.</span><span class="sxs-lookup"><span data-stu-id="70ae3-109">For a class to enable atomized objects, the constructor for the class must be private, not public.</span></span> <span data-ttu-id="70ae3-110">La razón es que si el constructor fuera público, podría crea un objeto no atomizado.</span><span class="sxs-lookup"><span data-stu-id="70ae3-110">This is because if the constructor were public, you could create a non-atomized object.</span></span> <span data-ttu-id="70ae3-111">Las clases <xref:System.Xml.Linq.XName> y <xref:System.Xml.Linq.XNamespace> implementan un operador de conversión implícita para convertir una cadena en <xref:System.Xml.Linq.XName> o <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="70ae3-111">The <xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> classes implement an implicit conversion operator to convert a string into an <xref:System.Xml.Linq.XName> or <xref:System.Xml.Linq.XNamespace>.</span></span> <span data-ttu-id="70ae3-112">De esta forma, obtiene una instancia de estos objetos.</span><span class="sxs-lookup"><span data-stu-id="70ae3-112">This is how you get an instance of these objects.</span></span> <span data-ttu-id="70ae3-113">No puede obtener ninguna instancia mediante un constructor, ya que no se puede tener acceso a él.</span><span class="sxs-lookup"><span data-stu-id="70ae3-113">You cannot get an instance by using a constructor, because the constructor is inaccessible.</span></span>  
   
- <span data-ttu-id="af4aa-114"><xref:System.Xml.Linq.XName> y <xref:System.Xml.Linq.XNamespace> también implementan los operadores de igualdad y desigualdad, para determinar si los dos objetos que se comparan son referencias a la misma instancia.</span><span class="sxs-lookup"><span data-stu-id="af4aa-114"><xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> also implement the equality and inequality operators, to determine whether the two objects being compared are references to the same instance.</span></span>  
+ <span data-ttu-id="70ae3-114"><xref:System.Xml.Linq.XName> y <xref:System.Xml.Linq.XNamespace> también implementan los operadores de igualdad y desigualdad, para determinar si los dos objetos que se comparan son referencias a la misma instancia.</span><span class="sxs-lookup"><span data-stu-id="70ae3-114"><xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> also implement the equality and inequality operators, to determine whether the two objects being compared are references to the same instance.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="af4aa-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="af4aa-115">Example</span></span>  
- <span data-ttu-id="af4aa-116">El siguiente código crea algunos objetos <xref:System.Xml.Linq.XElement> y muestra que nombres idénticos comparten la misma instancia.</span><span class="sxs-lookup"><span data-stu-id="af4aa-116">The following code creates some <xref:System.Xml.Linq.XElement> objects and demonstrates that identical names share the same instance.</span></span>  
+## <a name="example"></a><span data-ttu-id="70ae3-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="70ae3-115">Example</span></span>  
+ <span data-ttu-id="70ae3-116">El siguiente código crea algunos objetos <xref:System.Xml.Linq.XElement> y muestra que nombres idénticos comparten la misma instancia.</span><span class="sxs-lookup"><span data-stu-id="70ae3-116">The following code creates some <xref:System.Xml.Linq.XElement> objects and demonstrates that identical names share the same instance.</span></span>  
   
 ```vb  
 Dim r1 As New XElement("Root", "data1")  
@@ -50,16 +41,16 @@ Else
 End If  
 ```  
   
- <span data-ttu-id="af4aa-117">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="af4aa-117">This example produces the following output:</span></span>  
+ <span data-ttu-id="70ae3-117">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="70ae3-117">This example produces the following output:</span></span>  
   
 ```  
 r1 and r2 have names that refer to the same instance.  
 The name of r1 and the name in 'n' refer to the same instance.  
 ```  
   
- <span data-ttu-id="af4aa-118">Como se ha mencionado anteriormente, la ventaja de los objetos atomizados es que el usuario utiliza uno de los métodos de eje que toman <xref:System.Xml.Linq.XName> como parámetro, el método de eje solo debe determinar que los dos nombres hagan referencia a la misma instancia para seleccionar los elementos deseados.</span><span class="sxs-lookup"><span data-stu-id="af4aa-118">As mentioned earlier, the benefit of atomized objects is that when you use one of the axis methods that take an <xref:System.Xml.Linq.XName> as a parameter, the axis method only has to determine that two names reference the same instance to select the desired elements.</span></span>  
+ <span data-ttu-id="70ae3-118">Como se ha mencionado anteriormente, la ventaja de los objetos atomizados es que el usuario utiliza uno de los métodos de eje que toman <xref:System.Xml.Linq.XName> como parámetro, el método de eje solo debe determinar que los dos nombres hagan referencia a la misma instancia para seleccionar los elementos deseados.</span><span class="sxs-lookup"><span data-stu-id="70ae3-118">As mentioned earlier, the benefit of atomized objects is that when you use one of the axis methods that take an <xref:System.Xml.Linq.XName> as a parameter, the axis method only has to determine that two names reference the same instance to select the desired elements.</span></span>  
   
- <span data-ttu-id="af4aa-119">El siguiente ejemplo pasa <xref:System.Xml.Linq.XName> a la llamada del método <xref:System.Xml.Linq.XContainer.Descendants%2A>, cuyo rendimiento mejora gracias al patrón de atomización.</span><span class="sxs-lookup"><span data-stu-id="af4aa-119">The following example passes an <xref:System.Xml.Linq.XName> to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method call, which then has better performance because of the atomization pattern.</span></span>  
+ <span data-ttu-id="70ae3-119">El siguiente ejemplo pasa <xref:System.Xml.Linq.XName> a la llamada del método <xref:System.Xml.Linq.XContainer.Descendants%2A>, cuyo rendimiento mejora gracias al patrón de atomización.</span><span class="sxs-lookup"><span data-stu-id="70ae3-119">The following example passes an <xref:System.Xml.Linq.XName> to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method call, which then has better performance because of the atomization pattern.</span></span>  
   
 ```vb  
 Dim root As New XElement("Root", New XElement("C1", 1), New XElement("Z1", New XElement("C1", 2), New XElement("C1", 1)))  
@@ -71,12 +62,12 @@ For Each z As var In query
 Next  
 ```  
   
- <span data-ttu-id="af4aa-120">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="af4aa-120">This example produces the following output:</span></span>  
+ <span data-ttu-id="70ae3-120">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="70ae3-120">This example produces the following output:</span></span>  
   
 ```xml  
 <C1>1</C1>  
 <C1>1</C1>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="af4aa-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="af4aa-121">See Also</span></span>  
- [<span data-ttu-id="af4aa-122">Rendimiento (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="af4aa-122">Performance (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="70ae3-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="70ae3-121">See Also</span></span>  
+ [<span data-ttu-id="70ae3-122">Rendimiento (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="70ae3-122">Performance (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

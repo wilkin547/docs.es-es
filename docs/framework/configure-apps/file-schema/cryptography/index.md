@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742879"
 ---
 # <a name="cryptography-settings-schema"></a><span data-ttu-id="69740-102">Esquema de la configuración de criptografía</span><span class="sxs-lookup"><span data-stu-id="69740-102">Cryptography Settings Schema</span></span>
 <span data-ttu-id="69740-103">El esquema de la configuración de criptografía contiene elementos que especifican cómo asignar nombres de algoritmo descriptivos a las clases que implementan algoritmos criptográficos.</span><span class="sxs-lookup"><span data-stu-id="69740-103">The cryptography settings schema contains elements that specify how to map friendly algorithm names to classes that implement cryptography algorithms.</span></span>  
