@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520661"
 ---
 # <a name="constructing-and-drawing-paths"></a>Crear y dibujar trazados
 Una ruta de acceso es una secuencia de primitivos de gráficos (líneas, rectángulos, curvas, texto etc.) que se pueden manipular y dibujar como una sola unidad. Una ruta de acceso puede dividirse en *cifras* que están abiertos o cerrados. Una figura puede contener a varios tipos primitivos.  

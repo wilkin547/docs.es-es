@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523415"
 ---
 # <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a>Cómo: Cambiar el valor de una opción de configuración entre sesiones de aplicación
 En ocasiones, puede cambiar el valor de una configuración entre sesiones de aplicación después de que se ha compilado e implementada la aplicación. Por ejemplo, puede cambiar una cadena de conexión para que señale a la ubicación de la base de datos correcta. Puesto que las herramientas de tiempo de diseño no están disponibles después de que se ha compilado e implementada la aplicación, debe cambiar el valor de configuración manualmente en el archivo.  

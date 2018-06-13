@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551154"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
 <xref:System.Windows.Controls.Primitives.BulletDecorator> tiene dos propiedades de contenido: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> y <xref:System.Windows.Controls.Decorator.Child%2A>. El <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> propiedad define el <xref:System.Windows.UIElement> a usar como viñeta. El <xref:System.Windows.Controls.Decorator.Child%2A> propiedad define un <xref:System.Windows.UIElement> que alinea visualmente con la viñeta.  

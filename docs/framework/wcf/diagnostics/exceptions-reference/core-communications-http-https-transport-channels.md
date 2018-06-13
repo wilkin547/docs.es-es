@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473332"
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>Comunicaciones básicas: canales de transporte HTTP/HTTPS
 Este tema enumeran todas las excepciones generadas por los canales de transporte HTTP/HTTPS de Windows Communication Foundation (WCF).  

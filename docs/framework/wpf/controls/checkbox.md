@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550766"
 ---
 # <a name="checkbox"></a>CheckBox
 Puede usar un <xref:System.Windows.Controls.CheckBox> en el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] de la aplicación para representar opciones que un usuario puede activar o desactivar. Puede utilizar una casilla de verificación o puede agrupar dos o más casillas de verificación.  

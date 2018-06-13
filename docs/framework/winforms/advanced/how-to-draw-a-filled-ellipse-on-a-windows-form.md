@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521438"
 ---
 # <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>Cómo: Dibujar una elipse rellena en Windows Forms
 En este ejemplo se dibuja una elipse rellena en un formulario.  

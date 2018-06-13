@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522452"
 ---
 # <a name="how-to-shear-colors"></a>Cómo: Recortar colores
 Distorsionar aumenta o disminuye un componente de color en una cantidad proporcional a otro componente de color. Por ejemplo, puede usar la transformación que aumenta el componente rojo en mitad del valor del componente azul. En este tipo de transformación, el color (0.2, 0.5, 1) se volverían (0,7, 0,5, 1). El nuevo componente rojo es 0,2 + (1/2)(1) = 0,7.  

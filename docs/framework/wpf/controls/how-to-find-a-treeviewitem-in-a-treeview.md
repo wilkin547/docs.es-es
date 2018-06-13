@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554760"
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Cómo: Buscar un TreeViewItem en un TreeView
 El <xref:System.Windows.Controls.TreeView> control proporciona una manera cómoda para mostrar datos jerárquicos. Si su <xref:System.Windows.Controls.TreeView> está enlazado a un origen de datos, la <xref:System.Windows.Controls.TreeView.SelectedItem%2A> propiedad proporciona una manera cómoda para que pueda recuperar rápidamente el objeto de datos seleccionado. Normalmente es mejor trabajar con el objeto de datos subyacente, pero en ocasiones puede que necesite manipular mediante programación los datos que contiene <xref:System.Windows.Controls.TreeViewItem>. Por ejemplo, deberá expandir mediante programación el <xref:System.Windows.Controls.TreeViewItem>, o seleccione otro elemento en el <xref:System.Windows.Controls.TreeView>.  

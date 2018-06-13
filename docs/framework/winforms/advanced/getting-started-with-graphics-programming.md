@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522830"
 ---
 # <a name="getting-started-with-graphics-programming"></a>Introducción a la programación de gráficos
 En esta sección se muestra cómo empezar a usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] en una aplicación de formularios Windows Forms. Los temas siguientes muestra cómo completar varias [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] tareas tales como dibujar y rellenar formas y texto.  

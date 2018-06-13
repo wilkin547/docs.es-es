@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554903"
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Cómo: Ordenar una columna de GridView cuando se hace clic en un encabezado
 Este ejemplo muestra cómo crear un <xref:System.Windows.Controls.ListView> control que implementa un <xref:System.Windows.Controls.GridView> Ver modo y ordena los datos de contenido cuando un usuario hace clic en un encabezado de columna.  

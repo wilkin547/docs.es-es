@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520193"
 ---
 # <a name="persistence-best-practices"></a>Procedimientos recomendados de persistencia
 Este documento trata de los procedimientos recomendados el diseño de flujo de trabajo y de la configuración relacionada con la persistencia del flujo de trabajo.  

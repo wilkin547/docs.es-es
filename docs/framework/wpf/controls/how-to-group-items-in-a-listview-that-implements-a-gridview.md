@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551913"
 ---
 # <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a>Cómo: Agrupar elementos en un control ListView que implementa un modo GridView
 Este ejemplo muestra cómo mostrar grupos de elementos en el <xref:System.Windows.Controls.GridView> modo de vista de un <xref:System.Windows.Controls.ListView> control.  

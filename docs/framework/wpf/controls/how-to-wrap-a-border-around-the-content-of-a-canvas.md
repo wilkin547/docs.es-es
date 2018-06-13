@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551796"
 ---
 # <a name="how-to-wrap-a-border-around-the-content-of-a-canvas"></a>Cómo: Ajustar un borde en torno al contenido de un control Canvas
 Este ejemplo muestra cómo ajustar un <xref:System.Windows.Controls.Canvas> elemento con un <xref:System.Windows.Controls.Border>.  

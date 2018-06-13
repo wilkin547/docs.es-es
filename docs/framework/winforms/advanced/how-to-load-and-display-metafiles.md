@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522775"
 ---
 # <a name="how-to-load-and-display-metafiles"></a>Cómo: Cargar y mostrar metarchivos
 El <xref:System.Drawing.Imaging.Metafile> (clase), que se hereda de la <xref:System.Drawing.Image> clase, proporciona métodos para registrar, mostrar y examinar imágenes vectoriales.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516405"
 ---
 # <a name="activity-authoring-options-in-wf"></a>Opciones de creación de actividades en WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] proporciona varias opciones para crear actividades personalizadas. El método correcto que usar para crear una actividad determinada depende de las características en tiempo de ejecución que se requieran.  

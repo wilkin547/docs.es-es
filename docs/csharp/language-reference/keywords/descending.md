@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214184"
 ---
 # <a name="descending-c-reference"></a>descending (Referencia de C#)
 La palabra clave contextual `descending` se usa en la [cláusula orderby](../../../csharp/language-reference/keywords/orderby-clause.md) en expresiones de consulta para especificar que el criterio de ordenación es de mayor a menor.  

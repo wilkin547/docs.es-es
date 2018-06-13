@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551985"
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>Cómo: Obtener o establecer propiedades de situación de Canvas
 Este ejemplo muestra cómo utilizar los métodos de colocación de la <xref:System.Windows.Controls.Canvas> elemento que se va a colocar el contenido secundario. Este ejemplo utiliza el contenido de un <xref:System.Windows.Controls.ListBoxItem> para representar valores de posición y convierte los valores a las instancias de <xref:System.Double>, que es un argumento necesario para determinar la posición. Los valores, a continuación, se convierten en cadenas y se muestran como texto en un <xref:System.Windows.Controls.TextBlock> elemento mediante la <xref:System.Windows.Controls.Canvas.GetLeft%2A> método.  

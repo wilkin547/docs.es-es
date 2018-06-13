@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518465"
 ---
 # <a name="suppress-transaction-scope"></a>Suprimir el ámbito de transacción
 El ejemplo muestra cómo crear una actividad `SuppressTransactionScope` personalizada para suprimir la transacción en tiempo de ejecución ambiente, si está presente.  
