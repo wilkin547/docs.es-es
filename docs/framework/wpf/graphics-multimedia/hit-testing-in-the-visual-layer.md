@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558114"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Realizar pruebas de posicionamiento en la capa visual
 En este tema se proporciona información general sobre la funcionalidad de prueba de posicionamiento que proporciona la capa visual. Compatibilidad con prueba de posicionamiento permite determinar si un valor de geometría o de punto está dentro del contenido representado de un <xref:System.Windows.Media.Visual>, lo que le permite implementar el comportamiento de la interfaz de usuario, como un rectángulo de selección para seleccionar varios objetos.  

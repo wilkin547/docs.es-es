@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760887"
 ---
 # <a name="finding-rows"></a>Buscar filas
 Es posible buscar filas en función de los valores clave de ordenación mediante los métodos <xref:System.Data.DataView.Find%2A> y <xref:System.Data.DataView.FindRows%2A> de la <xref:System.Data.DataView>. Las mayúsculas y minúsculas de búsqueda de valores en el **buscar** y **FindRows** métodos viene determinado por la **CaseSensitive** propiedad de subyacente <xref:System.Data.DataTable>. Los valores de búsqueda deben coincidir en su totalidad con los valores de clave de ordenación existentes para que se devuelva un resultado.  

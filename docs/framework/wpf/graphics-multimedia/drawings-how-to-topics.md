@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556671"
 ---
 # <a name="drawings-how-to-topics"></a>Temas "Cómo..." de dibujo
 Los temas de esta sección describen cómo usar <xref:System.Windows.Media.Drawing> objetos que se va a dibujar formas, imágenes o texto.  

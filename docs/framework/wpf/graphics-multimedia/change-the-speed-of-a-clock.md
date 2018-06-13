@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556619"
 ---
 # <a name="how-to-change-the-speed-of-a-clock-without-changing-the-speed-of-its-timeline"></a>Cómo: Cambiar la velocidad de un reloj sin cambiar la velocidad de su escala de tiempo
 A <xref:System.Windows.Media.Animation.ClockController> del objeto <xref:System.Windows.Media.Animation.ClockController.SpeedRatio%2A> propiedad le permite cambiar la velocidad de un <xref:System.Windows.Media.Animation.Clock> sin modificar el <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> del reloj <xref:System.Windows.Media.Animation.Timeline>. En el ejemplo siguiente, un <xref:System.Windows.Media.Animation.ClockController> se utiliza para modificar de forma interactiva el <xref:System.Windows.Media.Animation.ClockController.SpeedRatio%2A> de un reloj. El <xref:System.Windows.Media.Animation.Clock.CurrentGlobalSpeedInvalidated> eventos y el reloj <xref:System.Windows.Media.Animation.Clock.CurrentGlobalSpeed%2A> propiedad se utiliza para mostrar la velocidad del reloj actual global cada vez que su interactivo <xref:System.Windows.Media.Animation.ClockController.SpeedRatio%2A> se cambia.  

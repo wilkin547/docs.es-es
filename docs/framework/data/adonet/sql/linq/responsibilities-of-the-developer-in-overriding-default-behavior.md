@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365259"
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Responsabilidades del desarrollador al invalidar un comportamiento predeterminado
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no exige los requisitos siguientes, pero el comportamiento es indefinido si no se cumplen estos requisitos.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398071"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Información acerca de los problemas y excepciones del elemento WebRequest
 <xref:System.Net.WebRequest> y sus clases derivadas (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> y <xref:System.Net.FileWebRequest>) generan excepciones para indicar una condición anormal. A veces, la resolución de estos problemas no es obvia.  

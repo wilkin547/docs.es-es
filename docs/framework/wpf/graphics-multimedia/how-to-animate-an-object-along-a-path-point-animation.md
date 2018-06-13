@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558786"
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Cómo: Animar un objeto a lo largo de un trazado (animación en punto)
 Este ejemplo muestra cómo utilizar un <xref:System.Windows.Media.Animation.PointAnimationUsingPath> objeto que se va a animar un <xref:System.Windows.Point> a lo largo de un trazado curvo.  
