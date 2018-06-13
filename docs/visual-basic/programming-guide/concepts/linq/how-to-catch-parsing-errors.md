@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643528"
 ---
 # <a name="how-to-catch-parsing-errors-visual-basic"></a>Cómo: detectar errores (Visual Basic) de análisis
 En este tema se describe cómo detectar XML no válido o mal formado.  

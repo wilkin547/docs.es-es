@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804948"
 ---
 # <a name="event-logging-in-wcf"></a>Registro de eventos en WCF
 Windows Communication Foundation (WCF) realiza un seguimiento de los eventos internos en el registro de eventos de Windows.  

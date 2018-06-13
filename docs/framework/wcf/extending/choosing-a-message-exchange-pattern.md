@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805894"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes
 El primer paso para escribir un transporte personalizado es decidir qué *patrones de intercambio de mensajes* (o MEP) son necesarios para el canal que está desarrollando. Este tema describe las opciones disponibles y trata sobre los distintos requisitos. Se trata de la primera tarea de la lista de tareas de desarrollo de canal se describe en [canales de desarrollo](../../../../docs/framework/wcf/extending/developing-channels.md).  

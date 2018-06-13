@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807543"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Especificación del comportamiento en tiempo de ejecución del servicio
 Una vez que haya diseñado un contrato de servicios ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) y haya implementado su contrato de servicios ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)), puede configurar el comportamiento de la operación del tiempo de ejecución del servicio. En este tema se tratan los comportamientos de operaciones y servicios proporcionados por el sistema y se describe dónde encontrar más información para crear nuevos comportamientos. Aunque algunos comportamientos se aplican como atributos, muchos se aplican usando un archivo de configuración de la aplicación o mediante programación. Para obtener más información acerca de cómo configurar la aplicación de servicio, consulte [configurar Services](../../../docs/framework/wcf/configuring-services.md).  

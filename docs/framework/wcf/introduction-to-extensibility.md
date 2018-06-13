@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804438"
 ---
 # <a name="introduction-to-extensibility"></a>Introducción a la extensibilidad
 El modelo de aplicaciones de Windows Communication Foundation (WCF) está diseñado para resolver la mayor parte de los requisitos de comunicación de cualquier aplicación distribuida. No obstante, siempre hay escenarios con los que el modelo de aplicación predeterminado y las implementaciones proporcionadas por sistema no son compatibles. El modelo de extensibilidad WCF está concebido para admitir escenarios personalizados por lo que le permite modificar el comportamiento del sistema en cada nivel, incluso hasta el punto de reemplazar el modelo de toda la aplicación. Este tema describe las distintas áreas de extensión e indica dónde obtener más información acerca de cada una de ellas.  

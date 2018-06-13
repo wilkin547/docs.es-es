@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806674"
 ---
 # <a name="securing-workflow-services"></a>Proteger servicios de flujo de trabajo
 En el ejemplo del servicio de flujo de trabajo seguro se muestran los siguientes procedimientos:  

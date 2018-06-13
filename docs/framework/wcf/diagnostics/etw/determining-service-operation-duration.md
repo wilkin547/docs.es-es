@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804968"
 ---
 # <a name="determining-service-operation-duration"></a>Determinar la duración de la operación de servicio
 Si está habilitada la traza analítica en una aplicación de Windows Communication Foundation (WCF), la duración de ejecución de una operación de servicio fácilmente se puede determinar examinando el registro de eventos.  En este tema se muestra cómo determinar la cantidad de tiempo que una operación de servicio tarda en completarse.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649401"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Procedimientos genéricos en Visual Basic
 A *procedimiento genérico*, también denominado una *método genérico*, es un procedimiento definido con al menos un parámetro de tipo. Esto permite que el código de llamada para personalizar los tipos de datos a sus requisitos cada vez que llama al procedimiento.  

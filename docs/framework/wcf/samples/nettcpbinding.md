@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805059"
 ---
 # <a name="nettcpbinding"></a>NetTCPBinding
 Esta sección contiene ejemplos que muestran cómo utilizar el enlace TCP en Windows Communication Foundation (WCF).  

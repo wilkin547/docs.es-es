@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651614"
 ---
 # <a name="optional-parameters-visual-basic"></a>Parámetros opcionales (Visual Basic)
 Un parámetro de un procedimiento puede ser opcional si así se especifica y no es necesario proporcionarle argumentos al llamar al procedimiento. *Parámetros opcionales* se indican mediante el `Optional` palabra clave en la definición del procedimiento. Se aplican las siguientes reglas:  

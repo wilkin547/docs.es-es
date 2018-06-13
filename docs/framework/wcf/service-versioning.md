@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809695"
 ---
 # <a name="service-versioning"></a>Control de versiones del servicio
 Después de la implementación inicial y de haber transcurrido potencialmente varias horas durante su duración, los servicios (y los extremos que exponen) pueden necesitar ser cambiados debido a diversas razones, como cambios en las necesidades comerciales, requisitos de tecnología de la información o para resolver otros problemas. Cada cambio produce una nueva versión del servicio. Este tema explica cómo considerar el control de versiones de Windows Communication Foundation (WCF).  

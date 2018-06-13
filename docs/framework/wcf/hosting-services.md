@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807858"
 ---
 # <a name="hosting-services"></a>Servicios de hospedaje
 Para activarse, se debe hospedar un servicio dentro de un entorno de tiempo en ejecución que lo crea y controla su contexto y duración. Servicios de Windows Communication Foundation (WCF) están diseñados para ejecutarse en cualquier proceso de Windows que admite código administrado.  

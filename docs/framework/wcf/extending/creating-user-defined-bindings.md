@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806749"
 ---
 # <a name="creating-user-defined-bindings"></a>Creación de enlaces definidos por el usuario
 Hay varias maneras de crear enlaces no proporcionadas por el sistema:  

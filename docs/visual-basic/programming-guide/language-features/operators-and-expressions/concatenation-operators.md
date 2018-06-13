@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650623"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Operadores de concatenación en Visual Basic
 Los operadores de concatenación unen varias cadenas en una sola. Existen dos operadores de concatenación: `+` y `&`. Ambos efectúan la operación de concatenación básica, como se aprecia en el siguiente ejemplo.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808613"
 ---
 # <a name="durable-instance-context"></a>Contexto de instancia duradera
 Este ejemplo muestra cómo personalizar el tiempo de ejecución de Windows Communication Foundation (WCF) para permitir que los contextos de instancia duraderos. Utiliza SQL Server 2005 como su memoria auxiliar (SQL Server 2005 Express en este caso). Sin embargo, también proporciona una manera de tener acceso a los mecanismos de almacenamiento personalizados.  

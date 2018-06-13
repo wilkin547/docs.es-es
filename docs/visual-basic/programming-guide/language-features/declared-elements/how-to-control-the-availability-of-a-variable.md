@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652173"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Cómo: Controlar la disponibilidad de una variable (Visual Basic)
 Controlar la disponibilidad de una variable mediante la especificación de su *nivel de acceso*. El nivel de acceso determina qué código tiene permiso para leer o escribir en la variable.  

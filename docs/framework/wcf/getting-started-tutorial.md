@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806024"
 ---
 # <a name="getting-started-tutorial"></a>Tutorial de introducción
 Los temas contenidos en esta sección están diseñados para ofrecerle una visión rápida a la Windows Communication Foundation (WCF) experiencia de programación. Están diseñados para ser completados en el orden en que aparecen en la lista incluida al final de este tema. Trabajar a través de este tutorial le ofrece una introducción de los pasos necesarios para crear los aplicaciones cliente y el servicio WCF. Un servicio expone uno o más puntos de conexión, donde cada uno de ellos expone una o más operaciones de servicio. El *extremo* especifica una dirección donde se puede encontrar el servicio, un enlace que contiene la información que describe cómo un cliente debe comunicar con el servicio y un contrato que define la funcionalidad de un servicio proporciona el servicio a sus clientes.  

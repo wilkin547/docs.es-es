@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809737"
 ---
 # <a name="service-interoperability"></a>interoperabilidad del servicio
 Esta sección contiene ejemplos que muestran la interacción entre Windows Communication Foundation (WCF) y otras tecnologías de servicios.  

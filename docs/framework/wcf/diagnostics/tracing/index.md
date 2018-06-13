@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809321"
 ---
 # <a name="tracing"></a>Traza
 Windows Communication Foundation (WCF) proporciona instrumentación de aplicaciones y datos de diagnóstico para la supervisión de los errores y el análisis. Puede utilizar el seguimiento en lugar de un depurador para entender cómo se está comportando una aplicación o por qué genera errores. También puede correlacionar los errores y el procesamiento en los componentes para proporcionar una experiencia de extremo a extremo.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806635"
 ---
 # <a name="hierarchical-configuration-model"></a>Modelo de configuración jerárquica
 En este ejemplo se muestra cómo implementar una jerarquía de archivos de configuración para los servicios. También muestra cómo se heredan los enlaces, los comportamientos de servicio y los comportamientos de punto de conexión de los niveles superiores de la jerarquía.  

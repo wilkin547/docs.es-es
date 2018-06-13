@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809523"
 ---
 # <a name="soap-and-http-endpoints"></a>puntos de conexión SOAP y HTTP
 Este ejemplo muestra cómo implementar un servicio basado en RPC y exponerlo en el formato SOAP y el formato de "Plain Old XML" (POX) utilizando el modelo de programación Web de WCF. Consulte la [servicio HTTP básico](../../../../docs/framework/wcf/samples/basic-http-service.md) ejemplo para obtener más información sobre el enlace HTTP para el servicio. Este ejemplo se centra en los detalles relativos a la exposición del mismo servicio a través de SOAP y HTTP utilizando enlaces diferentes.  

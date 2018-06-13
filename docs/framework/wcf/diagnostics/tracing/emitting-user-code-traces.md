@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807126"
 ---
 # <a name="emitting-user-code-traces"></a>Emisión de trazas del código de usuario
 Además de habilitar el seguimiento en configuración para recopilar los datos de instrumentación generados por Windows Communication Foundation (WCF), también pueden emitir seguimientos mediante programación en código de usuario. De esta manera, puede crear proactivamente datos de instrumentación que examinará más tarde con el fin de realizar un diagnóstico. En este tema se describe cómo hacerlo.  

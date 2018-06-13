@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647896"
 ---
 # <a name="loop-structures-visual-basic"></a>Estructuras de bucles (Visual Basic)
 Estructuras de bucle de Visual Basic permiten ejecutar una o más líneas de código repetidamente. Puede repetir las instrucciones en una estructura de bucle hasta que una condición es `True`, hasta que una condición es `False`, un número de veces o una vez por cada elemento especificado en una colección.  

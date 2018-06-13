@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808541"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Procedimientos recomendados: Creación de versiones de contratos de datos
 En este tema se enumeran los procedimientos recomendados para crear contratos de datos que pueden evolucionar con facilidad con el tiempo. Para obtener más información acerca de los contratos de datos, vea los temas de [usar contratos de datos](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  

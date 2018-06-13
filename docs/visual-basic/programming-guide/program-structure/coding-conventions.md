@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655366"
 ---
 # <a name="visual-basic-coding-conventions"></a>Convenciones de código de Visual Basic
 Microsoft desarrolla ejemplos y documentación que siga las directrices descritas en este tema. Si sigue las mismas convenciones de codificación, puede obtener las ventajas siguientes:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805569"
 ---
 # <a name="custom-demux"></a>Demux personalizado
 Este ejemplo muestra cómo se pueden asignar los encabezados de mensaje MSMQ para diferentes operaciones de servicio para que los servicios de Windows Communication Foundation (WCF) que utilizan <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> no están limitados a utilizar una operación de servicio como se muestra en el [ Message Queue Server de Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) y [Windows Communication Foundation a Message Queue Server](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) ejemplos.  

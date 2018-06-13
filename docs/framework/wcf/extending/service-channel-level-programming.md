@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805865"
 ---
 # <a name="service-channel-level-programming"></a>Programación de servicios a nivel de canal
 Este tema describe cómo escribir una aplicación de servicio de Windows Communication Foundation (WCF) sin utilizar el <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> y su modelo de objetos asociado.  

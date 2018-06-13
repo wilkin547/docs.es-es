@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655972"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Programación orientada a objetos (Visual Basic)
 Visual Basic proporciona compatibilidad completa para la programación orientada a objetos, incluidos la encapsulación, la herencia y el polimorfismo.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808746"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Codificador de mensaje personalizado: codificador de compresión
 Este ejemplo muestra cómo implementar un codificador personalizado mediante la plataforma de Windows Communication Foundation (WCF).  

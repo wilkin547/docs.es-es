@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809162"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Uso del seguimiento para solucionar problemas de su aplicación
 Esta sección contiene varios temas que describen cómo puede utilizar el seguimiento para solucionar los problemas de su aplicación.  
