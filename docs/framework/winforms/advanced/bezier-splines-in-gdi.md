@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517578"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;Bézier spline de Bézier en GDI +
 Una curva spline de Bézier es una curva especificada por cuatro puntos: dos puntos finales (p1 y p2) y dos puntos de control (c1 y c2). La curva comienza en p1 y termina en p2. La curva no pasa por los puntos de control, pero los puntos de control actúan como imán tiran de la curva en ciertas direcciones e influyen en la forma de que la curva. En la siguiente ilustración muestra una curva de Bézier con los extremos y los puntos de control.  

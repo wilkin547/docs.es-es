@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546170"
 ---
 # <a name="resources-how-to-topics"></a>Temas "Cómo..." de recursos
 Los temas de esta sección describen cómo usar los recursos de Windows Presentation Foundation (WPF).  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493047"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Cómo: Proteger un servicio con un certificado X.509
 Protección de un servicio con un certificado X.509 es una técnica básica que usan la mayoría de los enlaces de Windows Communication Foundation (WCF). En este tema se describen los pasos necesarios para configurar un servicio autoalojado con un certificado X.509.  

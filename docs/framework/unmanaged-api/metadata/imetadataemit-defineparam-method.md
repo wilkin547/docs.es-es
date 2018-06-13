@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5d49ac70aceb76f69711ea4bf514f69697ac156c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447377"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam (Método)
 Crea una definición de parámetro con la firma especificada para el método al que hace referencia el token especificado y obtiene un símbolo (token) para esa definición de parámetro.  

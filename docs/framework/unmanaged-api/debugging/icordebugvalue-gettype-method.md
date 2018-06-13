@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0fc0dd03abc1adb8eeea76a1053fb4d58de4ecf8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419837"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType (Método)
 Obtiene el tipo primitivo de este objeto de "ICorDebugValue".  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548271"
 ---
 # <a name="relativesource-markupextension"></a>Extensión de marcado RelativeSource
 Especifica las propiedades de un <xref:System.Windows.Data.RelativeSource> origen de enlace, que se utiliza dentro de un [extensión de marcado de enlace](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), o al establecer la <xref:System.Windows.Data.Binding.RelativeSource%2A> propiedad de un <xref:System.Windows.Data.Binding> elemento establecido en XAML.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524588"
 ---
 # <a name="regions-in-gdi"></a>Regiones de GDI+
 Una región es una parte del área de presentación de un dispositivo de salida. Las regiones pueden ser simples (un único rectángulo) o complejas (una combinación de polígonos y curvas cerradas). En la siguiente ilustración se muestra dos regiones: una construida a partir de un rectángulo y la otra construida a partir de una ruta de acceso.  

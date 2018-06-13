@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543398"
 ---
 # <a name="how-to-change-the-cursor-type"></a>Cómo: Cambiar el tipo de cursor
 Este ejemplo muestra cómo cambiar la <xref:System.Windows.Input.Cursor> del puntero del mouse para un elemento específico y para la aplicación.  

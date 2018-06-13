@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 418c9afdec32b685f67bd457c055476b5501b414
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425007"
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>Almacén de símbolos de diagnósticos (Referencia de la API no administrada)
 La API del almacén de símbolos de diagnósticos permite a un compilador generar información de símbolos para su uso por un depurador.  
