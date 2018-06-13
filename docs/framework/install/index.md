@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386758"
 ---
 # <a name="installation-guide"></a><span data-ttu-id="d4319-103">Guía de instalación</span><span class="sxs-lookup"><span data-stu-id="d4319-103">Installation guide</span></span>
 

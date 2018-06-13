@@ -1,31 +1,20 @@
 ---
-title: "Cómo importar WSDL personalizado"
-ms.custom: 
+title: Cómo importar WSDL personalizado
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af43baabfe979baa5c6fd7010c8be4dc72a3be9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33762afffca6e90cb32c358bee6d9f29ca609994
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488275"
 ---
-# <a name="how-to-import-custom-wsdl"></a><span data-ttu-id="c5ac9-102">Cómo importar WSDL personalizado</span><span class="sxs-lookup"><span data-stu-id="c5ac9-102">How to: Import Custom WSDL</span></span>
-<span data-ttu-id="c5ac9-103">En este tema se describe cómo importar WSDL personalizado.</span><span class="sxs-lookup"><span data-stu-id="c5ac9-103">This topic describes how to import custom WSDL.</span></span> <span data-ttu-id="c5ac9-104">Para administrar el WSDL personalizado, debe implementar la interfaz <xref:System.ServiceModel.Description.IWsdlImportExtension>.</span><span class="sxs-lookup"><span data-stu-id="c5ac9-104">To handle the custom WSDL, you must implement the <xref:System.ServiceModel.Description.IWsdlImportExtension> interface.</span></span>  
+# <a name="how-to-import-custom-wsdl"></a><span data-ttu-id="28352-102">Cómo importar WSDL personalizado</span><span class="sxs-lookup"><span data-stu-id="28352-102">How to: Import Custom WSDL</span></span>
+<span data-ttu-id="28352-103">En este tema se describe cómo importar WSDL personalizado.</span><span class="sxs-lookup"><span data-stu-id="28352-103">This topic describes how to import custom WSDL.</span></span> <span data-ttu-id="28352-104">Para administrar el WSDL personalizado, debe implementar la interfaz <xref:System.ServiceModel.Description.IWsdlImportExtension>.</span><span class="sxs-lookup"><span data-stu-id="28352-104">To handle the custom WSDL, you must implement the <xref:System.ServiceModel.Description.IWsdlImportExtension> interface.</span></span>  
   
-### <a name="to-import-custom-wsdl"></a><span data-ttu-id="c5ac9-105">Para importar el WSDL personalizado</span><span class="sxs-lookup"><span data-stu-id="c5ac9-105">To import custom WSDL</span></span>  
+### <a name="to-import-custom-wsdl"></a><span data-ttu-id="28352-105">Para importar el WSDL personalizado</span><span class="sxs-lookup"><span data-stu-id="28352-105">To import custom WSDL</span></span>  
   
-1.  <span data-ttu-id="c5ac9-106">Implemente <xref:System.ServiceModel.Description.IWsdlImportExtension>.</span><span class="sxs-lookup"><span data-stu-id="c5ac9-106">Implement <xref:System.ServiceModel.Description.IWsdlImportExtension>.</span></span> <span data-ttu-id="c5ac9-107">Implemente el método <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> para modificar los metadatos antes de que se importen.</span><span class="sxs-lookup"><span data-stu-id="c5ac9-107">Implement the <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> method to modify the metadata before it is imported.</span></span> <span data-ttu-id="c5ac9-108">Implemente los métodos <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> y <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> para modificar contratos y extremos importados de los metadatos.</span><span class="sxs-lookup"><span data-stu-id="c5ac9-108">Implement the <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> and <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> methods to modify contracts and endpoints imported from the metadata.</span></span> <span data-ttu-id="c5ac9-109">Para tener acceso al contrato o extremo importados, utilice el objeto de contexto (<xref:System.ServiceModel.Description.WsdlContractConversionContext> correspondiente o <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>):</span><span class="sxs-lookup"><span data-stu-id="c5ac9-109">To access the imported contract or endpoint, use the corresponding context object (<xref:System.ServiceModel.Description.WsdlContractConversionContext> or <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>):</span></span>  
+1.  <span data-ttu-id="28352-106">Implemente <xref:System.ServiceModel.Description.IWsdlImportExtension>.</span><span class="sxs-lookup"><span data-stu-id="28352-106">Implement <xref:System.ServiceModel.Description.IWsdlImportExtension>.</span></span> <span data-ttu-id="28352-107">Implemente el método <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> para modificar los metadatos antes de que se importen.</span><span class="sxs-lookup"><span data-stu-id="28352-107">Implement the <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> method to modify the metadata before it is imported.</span></span> <span data-ttu-id="28352-108">Implemente los métodos <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> y <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> para modificar contratos y extremos importados de los metadatos.</span><span class="sxs-lookup"><span data-stu-id="28352-108">Implement the <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> and <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> methods to modify contracts and endpoints imported from the metadata.</span></span> <span data-ttu-id="28352-109">Para tener acceso al contrato o extremo importados, utilice el objeto de contexto (<xref:System.ServiceModel.Description.WsdlContractConversionContext> correspondiente o <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>):</span><span class="sxs-lookup"><span data-stu-id="28352-109">To access the imported contract or endpoint, use the corresponding context object (<xref:System.ServiceModel.Description.WsdlContractConversionContext> or <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>):</span></span>  
   
     ```  
     public class WsdlDocumentationImporter : IWsdlImportExtension  
@@ -63,7 +52,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-2.  <span data-ttu-id="c5ac9-110">Configure la aplicación de cliente para utilizar el importador de WSDL personalizado.</span><span class="sxs-lookup"><span data-stu-id="c5ac9-110">Configure the client application to use the custom WSDL importer.</span></span> <span data-ttu-id="c5ac9-111">Tenga en cuenta que si está utilizando Svcutil.exe, debería agregar esta configuración al archivo de configuración para Svcutil.exe (Svcutil.exe.config):</span><span class="sxs-lookup"><span data-stu-id="c5ac9-111">Note that if you are using Svcutil.exe, you should add this configuration to the configuration file for Svcutil.exe (Svcutil.exe.config):</span></span>  
+2.  <span data-ttu-id="28352-110">Configure la aplicación de cliente para utilizar el importador de WSDL personalizado.</span><span class="sxs-lookup"><span data-stu-id="28352-110">Configure the client application to use the custom WSDL importer.</span></span> <span data-ttu-id="28352-111">Tenga en cuenta que si está utilizando Svcutil.exe, debería agregar esta configuración al archivo de configuración para Svcutil.exe (Svcutil.exe.config):</span><span class="sxs-lookup"><span data-stu-id="28352-111">Note that if you are using Svcutil.exe, you should add this configuration to the configuration file for Svcutil.exe (Svcutil.exe.config):</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -82,13 +71,13 @@ ms.lasthandoff: 12/22/2017
         </system.serviceModel>  
     ```  
   
-3.  <span data-ttu-id="c5ac9-112">Cree una nueva instancia <xref:System.ServiceModel.Description.WsdlImporter> (pasar la instancia <xref:System.ServiceModel.Description.MetadataSet> que contiene los documentos WSDL que desea importar) y llame a <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>:</span><span class="sxs-lookup"><span data-stu-id="c5ac9-112">Create a new <xref:System.ServiceModel.Description.WsdlImporter> instance (passing in the <xref:System.ServiceModel.Description.MetadataSet> instance that contains the WSDL documents that you want to import), and call <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>:</span></span>  
+3.  <span data-ttu-id="28352-112">Cree una nueva instancia <xref:System.ServiceModel.Description.WsdlImporter> (pasar la instancia <xref:System.ServiceModel.Description.MetadataSet> que contiene los documentos WSDL que desea importar) y llame a <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>:</span><span class="sxs-lookup"><span data-stu-id="28352-112">Create a new <xref:System.ServiceModel.Description.WsdlImporter> instance (passing in the <xref:System.ServiceModel.Description.MetadataSet> instance that contains the WSDL documents that you want to import), and call <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>:</span></span>  
   
     ```  
     WsdlImporter importer = new WsdlImporter(metaDocs);          System.Collections.ObjectModel.Collection<ContractDescription> contracts  = importer.ImportAllContracts();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="c5ac9-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="c5ac9-113">See Also</span></span>  
- [<span data-ttu-id="c5ac9-114">Metadatos</span><span class="sxs-lookup"><span data-stu-id="c5ac9-114">Metadata</span></span>](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [<span data-ttu-id="c5ac9-115">Exportación e importación de metadatos</span><span class="sxs-lookup"><span data-stu-id="c5ac9-115">Exporting and Importing Metadata</span></span>](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
- [<span data-ttu-id="c5ac9-116">Publicación de WSDL personalizada</span><span class="sxs-lookup"><span data-stu-id="c5ac9-116">Custom WSDL Publication</span></span>](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+## <a name="see-also"></a><span data-ttu-id="28352-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="28352-113">See Also</span></span>  
+ [<span data-ttu-id="28352-114">Metadatos</span><span class="sxs-lookup"><span data-stu-id="28352-114">Metadata</span></span>](../../../../docs/framework/wcf/feature-details/metadata.md)  
+ [<span data-ttu-id="28352-115">Exportación e importación de metadatos</span><span class="sxs-lookup"><span data-stu-id="28352-115">Exporting and Importing Metadata</span></span>](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
+ [<span data-ttu-id="28352-116">Publicación de WSDL personalizada</span><span class="sxs-lookup"><span data-stu-id="28352-116">Custom WSDL Publication</span></span>](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)

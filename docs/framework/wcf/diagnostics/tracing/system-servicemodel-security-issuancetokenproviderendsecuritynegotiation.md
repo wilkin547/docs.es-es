@@ -1,32 +1,23 @@
 ---
 title: System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 44a0b49e-fbd7-4649-a29a-1d1a6cd36a90
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: ec88dde395615937268d172c0ce5b5d3640a9809
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a83a72afb2eb4945134870aea9174565618e8390
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33483232"
 ---
-# <a name="systemservicemodelsecurityissuancetokenproviderendsecuritynegotiation"></a><span data-ttu-id="d1f9d-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="d1f9d-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>
-<span data-ttu-id="d1f9d-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="d1f9d-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>  
+# <a name="systemservicemodelsecurityissuancetokenproviderendsecuritynegotiation"></a><span data-ttu-id="36b6d-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="36b6d-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>
+<span data-ttu-id="36b6d-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="36b6d-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d1f9d-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="d1f9d-104">Description</span></span>  
- <span data-ttu-id="d1f9d-105">El IssuanceTokenProvider ha completado una negociación de seguridad.</span><span class="sxs-lookup"><span data-stu-id="d1f9d-105">The IssuanceTokenProvider has completed the security negotiation.</span></span>  
+## <a name="description"></a><span data-ttu-id="36b6d-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="36b6d-104">Description</span></span>  
+ <span data-ttu-id="36b6d-105">El IssuanceTokenProvider ha completado una negociación de seguridad.</span><span class="sxs-lookup"><span data-stu-id="36b6d-105">The IssuanceTokenProvider has completed the security negotiation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d1f9d-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="d1f9d-106">See Also</span></span>  
- [<span data-ttu-id="d1f9d-107">Traza</span><span class="sxs-lookup"><span data-stu-id="d1f9d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="d1f9d-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="d1f9d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="d1f9d-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="d1f9d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="36b6d-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="36b6d-106">See Also</span></span>  
+ [<span data-ttu-id="36b6d-107">Traza</span><span class="sxs-lookup"><span data-stu-id="36b6d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="36b6d-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="36b6d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="36b6d-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="36b6d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

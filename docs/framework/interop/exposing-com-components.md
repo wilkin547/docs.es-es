@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388227"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a><span data-ttu-id="b2fb5-102">Exponer componentes COM en .NET Framework</span><span class="sxs-lookup"><span data-stu-id="b2fb5-102">Exposing COM Components to the .NET Framework</span></span>
 <span data-ttu-id="b2fb5-103">En esta sección se resume el proceso necesario para exponer un componente COM existente a código administrado.</span><span class="sxs-lookup"><span data-stu-id="b2fb5-103">This section summarizes the process needed to expose an existing COM component to managed code.</span></span> <span data-ttu-id="b2fb5-104">Para obtener más detalles sobre cómo escribir servidores COM que se integren estrechamente con .NET Framework, vea [Consideraciones de diseño para interoperaciones](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="b2fb5-104">For details about writing COM servers that tightly integrate with the .NET Framework, see [Design Considerations for Interoperation](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100)).</span></span>
