@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751795"
 ---
 # <a name="ltcustombindinggt"></a>&lt;CustomBinding&gt;
 Proporciona el control completo sobre la pila de la mensajería para el usuario.  

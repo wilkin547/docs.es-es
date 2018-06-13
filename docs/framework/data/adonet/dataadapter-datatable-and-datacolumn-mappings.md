@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759028"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Correspondencias de DataTable y DataColumn en un objeto DataAdapter
 A **DataAdapter** contiene una colección de cero o más <xref:System.Data.Common.DataTableMapping> objetos en su **TableMappings** propiedad. A **DataTableMapping** proporciona una asignación principal entre los datos devueltos por una consulta en un origen de datos y un <xref:System.Data.DataTable>. El **DataTableMapping** puede pasar el nombre en lugar de la **DataTable** nombre a la **rellenar** método de la **DataAdapter**. En el ejemplo siguiente se crea un **DataTableMapping** denominado **AuthorsMapping** para el **autores** tabla.  

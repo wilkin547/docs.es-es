@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746064"
 ---
 # <a name="lttracegt-element"></a>&lt;seguimiento&gt; elemento
 Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.  

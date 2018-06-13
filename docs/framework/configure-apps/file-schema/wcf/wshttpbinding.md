@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762265"
 ---
 # <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
 Define un enlace seguro, de confianza e interoperable, adecuado para contratos de servicio no dúplex. El enlace implementa las características siguientes: WS-Reliable Messaging para confiabilidad y WS-Security para la seguridad del mensaje y autenticación. El transporte es HTTP y la codificación del mensaje es codificación de texto/XML.  

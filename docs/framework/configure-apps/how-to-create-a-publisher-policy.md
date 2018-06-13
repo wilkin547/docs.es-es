@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758131"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Cómo: Crear una directiva de publicador
 Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar una versión más reciente de un ensamblado mediante la inclusión de un archivo de directiva de publicador con el ensamblado actualizado. El archivo de directiva de publicador especifica la redirección de ensamblado y la configuración del código base y usa el mismo formato que un archivo de configuración de aplicación. El archivo de directiva de edición se compila en un ensamblado y se coloca en la caché global de ensamblados.  

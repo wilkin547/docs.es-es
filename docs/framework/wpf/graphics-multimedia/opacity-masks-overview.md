@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566238"
 ---
 # <a name="opacity-masks-overview"></a>Información general sobre las máscaras de opacidad
 Las máscaras de opacidad permiten hacer que partes de un elemento o un objeto visual sea total o parcialmente transparentes. Para crear una máscara de opacidad, aplicar un <xref:System.Windows.Media.Brush> a la <xref:System.Windows.UIElement.OpacityMask%2A> propiedad de un elemento o <xref:System.Windows.Media.Visual>.  El pincel se asigna al elemento o al objeto visual, y el valor de opacidad de cada píxel del pincel se usa para determinar la opacidad resultante de cada píxel correspondiente del elemento o objeto visual.  

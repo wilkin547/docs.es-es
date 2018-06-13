@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765001"
 ---
 # <a name="entity-key"></a>clave de entidad
 Un *clave de entidad* es un [propiedad](../../../../docs/framework/data/adonet/property.md) o un conjunto de propiedades de un [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) que se usan para determinar la identidad. Las propiedades que constituyen una entidad se eligen en tiempo de diseño. Los valores de propiedades de clave de entidad deben identificar de forma exclusiva una instancia de tipo de entidad dentro de un [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md) en tiempo de ejecución. Las propiedades que constituyen una clave de entidad se deben elegir de tal forma que garanticen la unicidad de las instancias de un conjunto de entidades.  

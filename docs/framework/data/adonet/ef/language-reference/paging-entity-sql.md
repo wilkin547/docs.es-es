@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764871"
 ---
 # <a name="paging-entity-sql"></a>Paginación (Entity SQL)
 La paginación física puede realizarse mediante la [omitir](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) y [límite](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) subcláusulas en el [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) cláusula. Para llevar a cabo la paginación física de forma determinista, debe usar SKIP y LIMIT. Si solo desea restringir el número de filas en el resultado de una manera no determinista, debe usar [arriba](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md). TOP y SKIP/LIMIT se excluyen mutuamente.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605295"
 ---
 # <a name="type-list-visual-basic"></a>Lista de tipos (Visual Basic)
 Especifica la *parámetros de tipo* para un *genérico* elemento de programación. Varios parámetros se separan mediante comas. A continuación se muestra la sintaxis para un parámetro de tipo.  

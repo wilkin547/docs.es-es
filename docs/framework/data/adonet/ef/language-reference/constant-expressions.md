@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762522"
 ---
 # <a name="constant-expressions"></a>Expresiones constantes
 Una expresión constante consta de un valor constante. Los valores constantes se convierten directamente en expresiones constantes de árbol de comandos, sin sufrir ninguna traducción en el cliente. Esto incluye a las expresiones que producen un valor constante. Por consiguiente, debe esperarse el comportamiento del origen de datos para todas las expresiones que impliquen constantes. Esto puede producir un comportamiento que difiera del comportamiento de CLR.  

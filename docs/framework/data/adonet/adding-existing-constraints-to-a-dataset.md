@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758362"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Agregar restricciones existentes a un conjunto de datos
 El **rellenar** método de la **DataAdapter** rellena un <xref:System.Data.DataSet> sólo con las columnas y filas de un origen de datos; aunque las restricciones se suelen establecer en el origen de datos, el **derelleno** método no agrega esta información de esquema para el **conjunto de datos** de forma predeterminada. Para rellenar un **conjunto de datos** con la información de restricción de clave principal existente de un origen de datos, puede llamar a la **FillSchema** método de la **DataAdapter**, o establecer la **MissingSchemaAction** propiedad de la **DataAdapter** a **AddWithKey** antes de llamar a **rellenar**. Así asegurará de que la clave principal restricciones en la **conjunto de datos** las del origen de datos reflejan. Información de restricción de clave externa no están incluidas y deben crearse de forma explícita, como se muestra en [restricciones de DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  

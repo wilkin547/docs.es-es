@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757910"
 ---
 # <a name="managing-dataviews"></a>Administrar objetos DataView
 Puede utilizar un <xref:System.Data.DataViewManager> para administrar la configuración de vista para todas las tablas de un <xref:System.Data.DataView>. Si tiene un control que desea enlazar a varias tablas, como una cuadrícula que navega por relaciones, un **DataViewManager** es ideal.  

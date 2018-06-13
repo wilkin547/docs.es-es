@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757475"
 ---
 # <a name="lttrustedissuersgt"></a>&lt;trustedIssuers&gt;
 Configura la lista de certificados de emisor de confianza utilizado por el registro de nombre de emisor basadas en configuración (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758833"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Crear un objeto DataTable a partir de una consulta (LINQ to DataSet)
 El enlace de datos es una utilización muy frecuente del objeto <xref:System.Data.DataTable>. El método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> toma los resultados de una consulta y copia los datos en un objeto <xref:System.Data.DataTable> que puede utilizarse después para el enlace de datos. Cuando las operaciones de datos se han realizado, el <xref:System.Data.DataTable> nuevo se vuelve a combinar en el <xref:System.Data.DataTable> de origen.  

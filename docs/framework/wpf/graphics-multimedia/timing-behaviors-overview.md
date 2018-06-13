@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566329"
 ---
 # <a name="timing-behaviors-overview"></a>Información general sobre comportamientos de control de tiempo
 En este tema se describe los comportamientos de control de tiempo de animaciones y otros <xref:System.Windows.Media.Animation.Timeline> objetos.  

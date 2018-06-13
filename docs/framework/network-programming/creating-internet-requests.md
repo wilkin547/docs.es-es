@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395770"
 ---
 # <a name="creating-internet-requests"></a>Crear solicitudes de Internet
 Las aplicaciones crean instancias <xref:System.Net.WebRequest> con el método <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>. Este es un método estático que crea una clase derivada de **WebRequest** según el esquema de URI que se ha pasado.  

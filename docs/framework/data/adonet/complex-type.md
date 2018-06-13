@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756818"
 ---
 # <a name="complex-type"></a>tipo complejo
 A *tipo complejo* es una plantilla para definir propiedades enriquecidas y estructuradas para [tipos de entidad](../../../../docs/framework/data/adonet/entity-type.md) u otros tipos complejos. Cada plantilla contiene lo siguiente:  

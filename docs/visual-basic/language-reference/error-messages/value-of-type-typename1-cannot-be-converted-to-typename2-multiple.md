@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603696"
 ---
 # <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>Valor de tipo &#39; &lt;typename1&gt; &#39; no se puede convertir a &#39; &lt;nombredetipo2&gt; &#39; (varias referencias de archivo)
 Valor de tipo '\<NombreTipo1 >' no se puede convertir a '\<nombredetipo2 >'. Discordancia de tipos puede deberse a la combinación de una referencia de archivo a '\<rutaaccesoarchivo1 >' en el proyecto '\<projectname1 >' con una referencia de archivo a '\<rutaaccesoarchivo2 >' en el proyecto '\<projectname2 >'. Si ambos ensamblados son idénticos, intente reemplazar estas referencias para que ambas procedan de la misma ubicación.  

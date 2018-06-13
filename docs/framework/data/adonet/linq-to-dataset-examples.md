@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764975"
 ---
 # <a name="linq-to-dataset-examples"></a>Ejemplos de LINQ to DataSet
 Esta sección se proporciona [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ejemplos que usan los operadores de consulta estándar de programación. El <xref:System.Data.DataSet> usa en estos ejemplos se rellena mediante la `FillDataSet` método, que se especifica en [cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obtener más información, consulte [información general sobre operadores de consulta estándar](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758846"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Utilizar un conjunto de datos desde un servicio Web XML
 La arquitectura del <xref:System.Data.DataSet> tiene un diseño desconectado, en parte para facilitar el transporte de datos a través de Internet. El **conjunto de datos** es "serializable" en que puede especificarse como entrada o salida de los servicios Web XML sin ninguna codificación adicional necesario para transmitir el contenido de la **conjunto de datos** desde un servicio Web XML para un cliente y viceversa. El **conjunto de datos** se convierte implícitamente en una secuencia XML mediante el formato DiffGram, enviados a través de la red y se reconstruye a partir de la secuencia XML como un **conjunto de datos** en el extremo receptor. Esto proporciona un método muy sencillo y flexible para transmitir y devolver datos relacionales mediante servicios Web XML. Para obtener más información acerca del formato DiffGram, vea [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766860"
 ---
 # <a name="oracle-schema-collections"></a>Colecciones de esquemas de Oracle
 El proveedor de datos Microsoft .NET Framework para Oracle admite, además de las colecciones de esquemas comunes, las siguientes colecciones de esquemas específicas:  

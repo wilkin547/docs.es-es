@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603943"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>Literal de comentario XML (Visual Basic)
 Un literal que representa un <xref:System.Xml.Linq.XComment> objeto.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750874"
 ---
 # <a name="ltservicecertificategt-of-ltservicecredentialsgt"></a>Elemento &lt;serviceCertificate&gt; de &lt;serviceCredentials&gt;
 Especifique un certificado X.509 que se vaya a utilizar para autenticar el servicio a los clientes utilizando el modo de seguridad de mensajes.  

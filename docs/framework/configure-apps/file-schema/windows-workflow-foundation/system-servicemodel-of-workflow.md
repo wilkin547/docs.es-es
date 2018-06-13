@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755642"
 ---
 # <a name="ltsystemservicemodelgt-of-workflow"></a>&lt;system.serviceModel&gt; de flujo de trabajo
 Esta sección de configuración contiene todos los elementos de configuración del flujo de trabajo.  

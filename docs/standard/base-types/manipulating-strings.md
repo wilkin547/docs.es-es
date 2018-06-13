@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567593"
 ---
 # <a name="manipulating-strings-in-net"></a>Manipular cadenas en .NET
 .NET proporciona un amplio conjunto de rutinas que permiten crear, comparar y modificar cadenas de forma eficaz, así como analizar rápidamente grandes cantidades de texto y datos para buscar, quitar y reemplazar patrones de texto.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747960"
 ---
 # <a name="ltcallbackdebuggt"></a>&lt;callbackDebug&gt;
 Especifica la depuración de servicio para un objeto de devolución de llamada de Windows Communication Foundation (WCF).  

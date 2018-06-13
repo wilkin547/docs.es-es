@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746740"
 ---
 # <a name="ltdnsgt"></a>&lt;DNS&gt;
 Especifica la identidad esperada del servidor. Esta identidad es válida para el modo de autenticación de certificado X509 si el certificado del servidor contiene un DNS con el mismo valor. También es válido para el modo de autenticación de Windows si el SPN tiene el mismo valor.  

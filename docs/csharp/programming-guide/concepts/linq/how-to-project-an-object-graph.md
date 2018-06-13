@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321618"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Cómo: Proyectar un gráfico de objetos (C#)
 En este tema se ilustra cómo proyectar o rellenar un gráfico de objetos de XML.  

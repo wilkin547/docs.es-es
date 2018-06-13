@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766873"
 ---
 # <a name="architecture-and-design"></a>Arquitectura y diseño
 El módulo de generación de SQL en el [proveedor de ejemplo](http://go.microsoft.com/fwlink/?LinkId=180616) se implementa como un visitante en el árbol de expresión que representa el árbol de comandos. La generación se realiza en un paso único al árbol de expresión.  

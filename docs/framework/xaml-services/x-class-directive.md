@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566813"
 ---
 # <a name="xclass-directive"></a>x:Class (Directiva)
 Configura la compilación de marcado XAML para unir clases parciales entre el marcado y código subyacente. La clase parcial de código se define en un archivo de código independiente en un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] lenguaje, mientras que la clase parcial de marcado normalmente se crea mediante generación de código durante la compilación de XAML.  

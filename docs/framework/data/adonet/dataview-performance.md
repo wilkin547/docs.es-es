@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762785"
 ---
 # <a name="dataview-performance"></a>Rendimiento de DataView
 En este tema se abordan las ventajas del uso de los métodos <xref:System.Data.DataView.Find%2A> y <xref:System.Data.DataView.FindRows%2A> de la clase <xref:System.Data.DataView>, y del almacenamiento en memoria caché de <xref:System.Data.DataView> en una aplicación web.  

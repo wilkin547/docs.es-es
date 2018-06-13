@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747387"
 ---
 # <a name="ltexposedmethodgt"></a>&lt;exposedMethod&gt;
 Representa un método de COM+ que se expone cuando la interfaz en un componente COM+ se expone como un servicio web.  
