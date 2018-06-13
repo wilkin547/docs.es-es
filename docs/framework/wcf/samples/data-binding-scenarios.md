@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803840"
 ---
 # <a name="data-binding-scenarios"></a><span data-ttu-id="07ad2-102">Escenarios de enlace de datos</span><span class="sxs-lookup"><span data-stu-id="07ad2-102">Data Binding Scenarios</span></span>
 <span data-ttu-id="07ad2-103">Esta sección contiene ejemplos que muestran escenarios de enlace de datos de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="07ad2-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) data binding scenarios.</span></span>  
