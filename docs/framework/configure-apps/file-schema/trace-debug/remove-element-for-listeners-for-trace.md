@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746558"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="ed768-102">&lt;quitar&gt; (elemento) para &lt;los agentes de escucha&gt; para &lt;seguimiento&gt;</span><span class="sxs-lookup"><span data-stu-id="ed768-102">&lt;remove&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
 <span data-ttu-id="ed768-103">Quita un agente de escucha de la **los agentes de escucha** colección.</span><span class="sxs-lookup"><span data-stu-id="ed768-103">Removes a listener from the **Listeners** collection.</span></span>  

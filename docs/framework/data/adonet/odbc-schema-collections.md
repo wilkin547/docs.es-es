@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766652"
 ---
 # <a name="odbc-schema-collections"></a><span data-ttu-id="fad4c-102">Colecciones de esquemas de ODBC</span><span class="sxs-lookup"><span data-stu-id="fad4c-102">ODBC Schema Collections</span></span>
 <span data-ttu-id="fad4c-103">En esta sección se describe la compatibilidad de las colecciones de esquemas con los controladores ODBC de Microsoft SQL Server, Oracle y Microsoft Jet.</span><span class="sxs-lookup"><span data-stu-id="fad4c-103">This section discusses schema collection support for the ODBC drivers for Microsoft SQL Server, Oracle, and Microsoft Jet.</span></span>  

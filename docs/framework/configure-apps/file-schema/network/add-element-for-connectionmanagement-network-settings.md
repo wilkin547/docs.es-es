@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753747"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="01819-102">&lt;agregar&gt; elemento para connectionManagement (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="01819-102">&lt;add&gt; Element for connectionManagement (Network Settings)</span></span>
 <span data-ttu-id="01819-103">Agrega una dirección IP o nombre DNS a la lista de administración de conexión.</span><span class="sxs-lookup"><span data-stu-id="01819-103">Adds an IP address or DNS name to the connection management list.</span></span>  

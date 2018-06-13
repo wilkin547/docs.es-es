@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750224"
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a><span data-ttu-id="24979-102">&lt;transport&gt; de &lt;netHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="24979-102">&lt;transport&gt; of &lt;netHttpBinding&gt;</span></span>
 <span data-ttu-id="24979-103">Define las propiedades que controlan los parámetros de autenticación para el transporte HTTP.</span><span class="sxs-lookup"><span data-stu-id="24979-103">Defines properties that control authentication parameters for the HTTP transport.</span></span>  

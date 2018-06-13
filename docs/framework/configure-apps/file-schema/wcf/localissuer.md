@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749119"
 ---
 # <a name="ltlocalissuergt"></a><span data-ttu-id="479d0-102">&lt;localIssuer&gt;</span><span class="sxs-lookup"><span data-stu-id="479d0-102">&lt;localIssuer&gt;</span></span>
 <span data-ttu-id="479d0-103">Especifica la dirección y el enlace del emisor local que se van a usar para obtener un token de seguridad.</span><span class="sxs-lookup"><span data-stu-id="479d0-103">Specifies the address and binding of the local issuer to be used to obtain a security token.</span></span>  

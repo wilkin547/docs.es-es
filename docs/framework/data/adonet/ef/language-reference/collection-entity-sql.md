@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761638"
 ---
 # <a name="collection-entity-sql"></a><span data-ttu-id="820df-102">COLLECTION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="820df-102">COLLECTION (Entity SQL)</span></span>
 <span data-ttu-id="820df-103">La palabra clave COLLECTION solo se usa en la definición de una función inline.</span><span class="sxs-lookup"><span data-stu-id="820df-103">The COLLECTION keyword is only used in the definition of an inline function.</span></span> <span data-ttu-id="820df-104">Las funciones de colección son funciones que operan en una colección de valores y generan un resultado escalar.</span><span class="sxs-lookup"><span data-stu-id="820df-104">Collection functions are functions that operate on a collection of values and produce a scalar output.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750341"
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a><span data-ttu-id="d8ecf-102">&lt;System.Diagnostics&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="d8ecf-102">&lt;system.diagnostics&gt; Element</span></span>
 <span data-ttu-id="d8ecf-103">Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="d8ecf-103">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>  

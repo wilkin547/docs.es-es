@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766925"
 ---
 # <a name="ltunrecognizedpolicyassertiongt"></a><span data-ttu-id="0fd92-102">&lt;unrecognizedPolicyAssertion&gt;</span><span class="sxs-lookup"><span data-stu-id="0fd92-102">&lt;unrecognizedPolicyAssertion&gt;</span></span>
 <span data-ttu-id="0fd92-103">Representa un elemento de enlace que especifica la aserción de directiva.</span><span class="sxs-lookup"><span data-stu-id="0fd92-103">Represents a binding element that specifies policy assertion.</span></span> <span data-ttu-id="0fd92-104">Este elemento no tiene ningún atributo y está presente como modificador vacío.</span><span class="sxs-lookup"><span data-stu-id="0fd92-104">This element has no attribute and is present as an empty switch.</span></span>  

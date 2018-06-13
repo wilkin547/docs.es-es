@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766841"
 ---
 # <a name="ltbufferreceivegt"></a><span data-ttu-id="2ad24-102">&lt;bufferReceive&gt;</span><span class="sxs-lookup"><span data-stu-id="2ad24-102">&lt;bufferReceive&gt;</span></span>
 <span data-ttu-id="2ad24-103">Un comportamiento del servicio que permite a un servicio usar procesamiento de recepción almacenado en búfer, lo que permite que un servicio de flujo de trabajo procese mensajes desordenados.</span><span class="sxs-lookup"><span data-stu-id="2ad24-103">A service behavior that enables a service to use buffered receive processing, which enables a workflow service to process out-of-order messages.</span></span>  

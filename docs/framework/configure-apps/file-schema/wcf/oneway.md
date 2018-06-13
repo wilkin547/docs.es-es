@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746727"
 ---
 # <a name="ltonewaygt"></a><span data-ttu-id="36136-102">&lt;Unidireccional&gt;</span><span class="sxs-lookup"><span data-stu-id="36136-102">&lt;oneWay&gt;</span></span>
 <span data-ttu-id="36136-103">Habilita el enrutamiento de paquetes y el uso de métodos unidireccionales para un enlace personalizado.</span><span class="sxs-lookup"><span data-stu-id="36136-103">Enables packet routing and the use of one-way methods for a custom binding.</span></span>  

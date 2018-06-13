@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750562"
 ---
 # <a name="ltissuergt"></a><span data-ttu-id="06590-102">&lt;Emisor&gt;</span><span class="sxs-lookup"><span data-stu-id="06590-102">&lt;issuer&gt;</span></span>
 <span data-ttu-id="06590-103">Especifica el servicio de token de seguridad (STS) que emite los tokens de seguridad.</span><span class="sxs-lookup"><span data-stu-id="06590-103">Specifies the Security Token Service (STS) that issues security tokens.</span></span>  

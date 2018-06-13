@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747960"
 ---
 # <a name="ltcallbackdebuggt"></a><span data-ttu-id="fdefa-102">&lt;callbackDebug&gt;</span><span class="sxs-lookup"><span data-stu-id="fdefa-102">&lt;callbackDebug&gt;</span></span>
 <span data-ttu-id="fdefa-103">Especifica la depuración de servicio para un objeto de devolución de llamada de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="fdefa-103">Specifies service debugging for a Windows Communication Foundation (WCF) callback object.</span></span>  

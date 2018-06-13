@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750874"
 ---
 # <a name="ltservicecertificategt-of-ltservicecredentialsgt"></a><span data-ttu-id="621c5-102">Elemento &lt;serviceCertificate&gt; de &lt;serviceCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="621c5-102">&lt;serviceCertificate&gt; of &lt;serviceCredentials&gt;</span></span>
 <span data-ttu-id="621c5-103">Especifique un certificado X.509 que se vaya a utilizar para autenticar el servicio a los clientes utilizando el modo de seguridad de mensajes.</span><span class="sxs-lookup"><span data-stu-id="621c5-103">Specify an X.509 certificate that will be used to authenticate the service to clients using Message security mode.</span></span>  

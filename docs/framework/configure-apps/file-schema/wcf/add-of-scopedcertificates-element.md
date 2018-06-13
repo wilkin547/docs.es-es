@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746649"
 ---
 # <a name="ltaddgt-of-ltscopedcertificatesgt-element"></a><span data-ttu-id="42221-102">&lt;add&gt; de &lt;scopedCertificates&gt; (elemento)</span><span class="sxs-lookup"><span data-stu-id="42221-102">&lt;add&gt; of &lt;scopedCertificates&gt; Element</span></span>
 <span data-ttu-id="42221-103">Agrega un certificado X.509 a la colección de certificados con ámbito.</span><span class="sxs-lookup"><span data-stu-id="42221-103">Adds an X.509 certificate to the collection of scoped certificates.</span></span>  

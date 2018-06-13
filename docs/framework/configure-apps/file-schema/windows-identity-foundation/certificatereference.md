@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756844"
 ---
 # <a name="ltcertificatereferencegt"></a><span data-ttu-id="590d3-102">&lt;certificateReference&gt;</span><span class="sxs-lookup"><span data-stu-id="590d3-102">&lt;certificateReference&gt;</span></span>
 <span data-ttu-id="590d3-103">Especifica valores que se usan para encontrar y validar un certificado X.509 en un almacén de certificados.</span><span class="sxs-lookup"><span data-stu-id="590d3-103">Specifies settings that are used to find and validate an X.509 certificate in a certificate store.</span></span>  

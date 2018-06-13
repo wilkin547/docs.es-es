@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746103"
 ---
 # <a name="ltpublisherpolicygt-element"></a><span data-ttu-id="3c527-102">&lt;publisherPolicy&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="3c527-102">&lt;publisherPolicy&gt; Element</span></span>
 <span data-ttu-id="3c527-103">Especifica si el tiempo de ejecución aplica la directiva de editor.</span><span class="sxs-lookup"><span data-stu-id="3c527-103">Specifies whether the runtime applies publisher policy.</span></span>  

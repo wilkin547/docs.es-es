@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747416"
 ---
 # <a name="ltfiltertablegt"></a><span data-ttu-id="453fd-102">&lt;filterTable&gt;</span><span class="sxs-lookup"><span data-stu-id="453fd-102">&lt;filterTable&gt;</span></span>
 <span data-ttu-id="453fd-103">Representa una tabla de enrutamiento que contiene una lista de filtros para evaluar los mensajes con respecto a y el punto de conexión de cliente para enrutar mensajes a si el filtro se evalúa como true.</span><span class="sxs-lookup"><span data-stu-id="453fd-103">Represents a routing table that contains a list of filters to evaluate messages against and the client endpoint to route messages to if the filter evaluates to true.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748433"
 ---
 # <a name="ltstartupgt-element"></a><span data-ttu-id="a7842-102">&lt;Inicio&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="a7842-102">&lt;startup&gt; Element</span></span>
 <span data-ttu-id="a7842-103">Especifica la información de inicio de common language runtime.</span><span class="sxs-lookup"><span data-stu-id="a7842-103">Specifies common language runtime startup information.</span></span>  

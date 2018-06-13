@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756818"
 ---
 # <a name="complex-type"></a><span data-ttu-id="5aac2-102">tipo complejo</span><span class="sxs-lookup"><span data-stu-id="5aac2-102">complex type</span></span>
 <span data-ttu-id="5aac2-103">A *tipo complejo* es una plantilla para definir propiedades enriquecidas y estructuradas para [tipos de entidad](../../../../docs/framework/data/adonet/entity-type.md) u otros tipos complejos.</span><span class="sxs-lookup"><span data-stu-id="5aac2-103">A *complex type* is a template for defining rich, structured properties on [entity types](../../../../docs/framework/data/adonet/entity-type.md) or on other complex types.</span></span> <span data-ttu-id="5aac2-104">Cada plantilla contiene lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="5aac2-104">Each template contains the following:</span></span>  

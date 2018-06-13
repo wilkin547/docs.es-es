@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765326"
 ---
 # <a name="entity-type"></a><span data-ttu-id="84c94-102">tipo de entidad</span><span class="sxs-lookup"><span data-stu-id="84c94-102">entity type</span></span>
 <span data-ttu-id="84c94-103">El *tipo de entidad* es el bloque de creación fundamental para describir la estructura de datos con Entity Data Model (EDM).</span><span class="sxs-lookup"><span data-stu-id="84c94-103">The *entity type* is the fundamental building block for describing the structure of data with the Entity Data Model (EDM).</span></span> <span data-ttu-id="84c94-104">En un modelo conceptual, un tipo de entidad representa la estructura de conceptos de nivel superior, como clientes o pedidos.</span><span class="sxs-lookup"><span data-stu-id="84c94-104">In a conceptual model, an entity type represents the structure of top-level concepts, such as customers or orders.</span></span> <span data-ttu-id="84c94-105">Un tipo de entidad es una plantilla para las instancias de tipo de entidad.</span><span class="sxs-lookup"><span data-stu-id="84c94-105">An entity type is a template for entity type instances.</span></span> <span data-ttu-id="84c94-106">Cada plantilla contiene la información siguiente:</span><span class="sxs-lookup"><span data-stu-id="84c94-106">Each template contains the following information:</span></span>  

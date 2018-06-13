@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748144"
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a><span data-ttu-id="357ca-102">&lt;los agentes de escucha&gt; (elemento) para &lt;seguimiento&gt;</span><span class="sxs-lookup"><span data-stu-id="357ca-102">&lt;listeners&gt; Element for &lt;trace&gt;</span></span>
 <span data-ttu-id="357ca-103">Especifica un agente de escucha que recopila, almacena y enruta los mensajes.</span><span class="sxs-lookup"><span data-stu-id="357ca-103">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="357ca-104">Agentes de escucha dirigen los resultados del seguimiento a un destino apropiado.</span><span class="sxs-lookup"><span data-stu-id="357ca-104">Listeners direct the tracing output to an appropriate target.</span></span>  

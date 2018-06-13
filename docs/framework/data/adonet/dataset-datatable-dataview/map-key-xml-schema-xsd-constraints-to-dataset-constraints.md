@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757871"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="7b310-102">Asignar restricciones KEY de un esquema XML (XSD) a restricciones de conjuntos de datos</span><span class="sxs-lookup"><span data-stu-id="7b310-102">Map key XML Schema (XSD) Constraints to DataSet Constraints</span></span>
 <span data-ttu-id="7b310-103">En un esquema, puede especificar una restricción de clave en un elemento o atributo mediante la **clave** elemento.</span><span class="sxs-lookup"><span data-stu-id="7b310-103">In a schema, you can specify a key constraint on an element or attribute using the **key** element.</span></span> <span data-ttu-id="7b310-104">El elemento o el atributo para el que se especifica una restricción de clave debe tener valores únicos en cualquier instancia del esquema y no puede tener valores nulos.</span><span class="sxs-lookup"><span data-stu-id="7b310-104">The element or attribute on which a key constraint is specified must have unique values in any schema instance, and cannot have null values.</span></span>  

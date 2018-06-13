@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329227"
 ---
 # <a name="performance-linq-to-xml-c"></a><span data-ttu-id="4c2cb-102">Rendimiento (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="4c2cb-102">Performance (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="4c2cb-103">En esta sección se proporciona información sobre el rendimiento de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], específicamente sobre el rendimiento de la construcción y las consultas funcionales.</span><span class="sxs-lookup"><span data-stu-id="4c2cb-103">This section provides information about performance in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], specifically the performance of functional construction and queries.</span></span>  

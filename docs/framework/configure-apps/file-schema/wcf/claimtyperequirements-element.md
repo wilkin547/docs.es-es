@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748027"
 ---
 # <a name="ltclaimtyperequirementsgt-element"></a><span data-ttu-id="2458f-102">&lt;claimTypeRequirements&gt; (elemento)</span><span class="sxs-lookup"><span data-stu-id="2458f-102">&lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="2458f-103">Especifica una colección de tipos de notificación requeridos.</span><span class="sxs-lookup"><span data-stu-id="2458f-103">Specifies a collection of required claim types.</span></span>  

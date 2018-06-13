@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754790"
 ---
 # <a name="ltworkflowcontrolendpointgt"></a><span data-ttu-id="efb40-102">&lt;workflowControlEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="efb40-102">&lt;workflowControlEndpoint&gt;</span></span>
 <span data-ttu-id="efb40-103">Este elemento de configuración define un punto de conexión estándar para controlar la ejecución de instancias de flujo de trabajo (crear, ejecutar, suspender, terminar, etc).</span><span class="sxs-lookup"><span data-stu-id="efb40-103">This configuration element defines a standard endpoint for controlling the execution of workflow instances (create, run, suspend, terminate, etc).</span></span>  

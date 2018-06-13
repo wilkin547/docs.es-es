@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746064"
 ---
 # <a name="lttracegt-element"></a><span data-ttu-id="b8fa0-102">&lt;seguimiento&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="b8fa0-102">&lt;trace&gt; Element</span></span>
 <span data-ttu-id="b8fa0-103">Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="b8fa0-103">Contains listeners that collect, store, and route tracing messages.</span></span>  

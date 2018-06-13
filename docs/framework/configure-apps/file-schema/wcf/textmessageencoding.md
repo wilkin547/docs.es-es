@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753487"
 ---
 # <a name="lttextmessageencodinggt"></a><span data-ttu-id="87dda-102">&lt;textMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="87dda-102">&lt;textMessageEncoding&gt;</span></span>
 <span data-ttu-id="87dda-103">Especifica la codificación de caracteres y la versión del mensaje utilizadas para los mensajes XML basados en texto.</span><span class="sxs-lookup"><span data-stu-id="87dda-103">Specifies the character encoding and message versioning used for text-based XML messages.</span></span>  

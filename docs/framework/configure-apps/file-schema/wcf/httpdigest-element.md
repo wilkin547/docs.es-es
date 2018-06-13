@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748898"
 ---
 # <a name="lthttpdigestgt-element"></a><span data-ttu-id="410de-102">Elemento &lt;httpDigest&gt;</span><span class="sxs-lookup"><span data-stu-id="410de-102">&lt;httpDigest&gt; Element</span></span>
 <span data-ttu-id="410de-103">Especifica una credencial de tipo de resumen utilizada al autenticar el cliente a un servicio.</span><span class="sxs-lookup"><span data-stu-id="410de-103">Specifies a digest type credential used when authenticating the client to a service.</span></span>  

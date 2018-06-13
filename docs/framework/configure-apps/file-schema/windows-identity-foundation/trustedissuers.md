@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757475"
 ---
 # <a name="lttrustedissuersgt"></a><span data-ttu-id="e1c6c-102">&lt;trustedIssuers&gt;</span><span class="sxs-lookup"><span data-stu-id="e1c6c-102">&lt;trustedIssuers&gt;</span></span>
 <span data-ttu-id="e1c6c-103">Configura la lista de certificados de emisor de confianza utilizado por el registro de nombre de emisor basadas en configuración (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).</span><span class="sxs-lookup"><span data-stu-id="e1c6c-103">Configures the list of trusted issuer certificates used by the configuration-based issuer name registry (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).</span></span>  

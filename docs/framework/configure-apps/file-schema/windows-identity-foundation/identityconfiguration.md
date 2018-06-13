@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759002"
 ---
 # <a name="ltidentityconfigurationgt"></a><span data-ttu-id="4369c-102">&lt;identityConfiguration&gt;</span><span class="sxs-lookup"><span data-stu-id="4369c-102">&lt;identityConfiguration&gt;</span></span>
 <span data-ttu-id="4369c-103">Especifica los valores de identidad de nivel de servicio.</span><span class="sxs-lookup"><span data-stu-id="4369c-103">Specifies service-level identity settings.</span></span>  

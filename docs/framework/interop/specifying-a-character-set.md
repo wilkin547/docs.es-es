@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398240"
 ---
 # <a name="specifying-a-character-set"></a><span data-ttu-id="c48dd-102">Especificar un juego de caracteres</span><span class="sxs-lookup"><span data-stu-id="c48dd-102">Specifying a Character Set</span></span>
 <span data-ttu-id="c48dd-103">El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> controla la serialización de cadenas y determina cómo la invocación de plataforma busca nombres de función en un archivo DLL.</span><span class="sxs-lookup"><span data-stu-id="c48dd-103">The <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field controls string marshaling and determines how platform invoke finds function names in a DLL.</span></span> <span data-ttu-id="c48dd-104">En este tema se describen ambos comportamientos.</span><span class="sxs-lookup"><span data-stu-id="c48dd-104">This topic describes both behaviors.</span></span>  

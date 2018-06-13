@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755050"
 ---
 # <a name="ltsessionsecuritytokencachegt"></a><span data-ttu-id="284a3-102">&lt;sessionSecurityTokenCache&gt;</span><span class="sxs-lookup"><span data-stu-id="284a3-102">&lt;sessionSecurityTokenCache&gt;</span></span>
 <span data-ttu-id="284a3-103">Registra una memoria caché de símbolos de sesión con un servicio o una colección de controlador de token de seguridad.</span><span class="sxs-lookup"><span data-stu-id="284a3-103">Registers a cache for session tokens with a service or a security token handler collection.</span></span>  

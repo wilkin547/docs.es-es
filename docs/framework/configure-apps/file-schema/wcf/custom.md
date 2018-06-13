@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748365"
 ---
 # <a name="ltcustomgt"></a><span data-ttu-id="c27d8-102">&lt;Personalizada&gt;</span><span class="sxs-lookup"><span data-stu-id="c27d8-102">&lt;custom&gt;</span></span>
 <span data-ttu-id="c27d8-103">Especifica la configuración concreta para un servicio de resolución del mismo nivel personalizado.</span><span class="sxs-lookup"><span data-stu-id="c27d8-103">Specifies settings for a custom peer resolver service.</span></span>  

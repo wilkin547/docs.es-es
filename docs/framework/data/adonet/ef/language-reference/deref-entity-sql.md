@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761485"
 ---
 # <a name="deref-entity-sql"></a><span data-ttu-id="f6ccc-102">DEREF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f6ccc-102">DEREF (Entity SQL)</span></span>
 <span data-ttu-id="f6ccc-103">Desreferencia un valor de referencia y genera el resultado de dicha desreferenciación.</span><span class="sxs-lookup"><span data-stu-id="f6ccc-103">Dereferences a reference value and produces the result of that dereference.</span></span>  

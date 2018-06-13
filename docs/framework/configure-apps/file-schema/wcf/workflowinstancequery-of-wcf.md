@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767562"
 ---
 # <a name="ltworkflowinstancequerygt-of-wcf"></a><span data-ttu-id="b040c-102">&lt;workflowInstanceQuery&gt; de WCF</span><span class="sxs-lookup"><span data-stu-id="b040c-102">&lt;workflowInstanceQuery&gt; of WCF</span></span>
 <span data-ttu-id="b040c-103">Representa una consulta que realiza el seguimiento de los cambios del ciclo de vida de la instancia de flujo de trabajo, como por ejemplo, un evento iniciado o completado.</span><span class="sxs-lookup"><span data-stu-id="b040c-103">Represents a query that tracks workflow instance life cycle changes such as a started or completed event.</span></span>  

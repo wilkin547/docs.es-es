@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751680"
 ---
 # <a name="ltnetmsmqbindinggt"></a><span data-ttu-id="53d76-102">&lt;NetMsmqBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="53d76-102">&lt;netMsmqBinding&gt;</span></span>
 <span data-ttu-id="53d76-103">Define un enlace en cola adecuado para la comunicación del equipo de cruce.</span><span class="sxs-lookup"><span data-stu-id="53d76-103">Defines a queued binding suitable for cross-machine communication.</span></span>  
