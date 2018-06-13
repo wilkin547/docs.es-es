@@ -1,27 +1,16 @@
 ---
-title: "Operaciones de transacción anuladas"
-ms.custom: 
+title: Operaciones de transacción anuladas
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d0ff844c-a33c-4ecf-8be5-b5b33635914a
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2371dfde8c82fbaa9a8ec7ece9085201b6e0f4fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f227197a5c2d1b96cc200ca598ba54641dc0bcf1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473299"
 ---
-# <a name="transacted-operations-aborted"></a><span data-ttu-id="fa280-102">Operaciones de transacción anuladas</span><span class="sxs-lookup"><span data-stu-id="fa280-102">Transacted Operations Aborted</span></span>
-<span data-ttu-id="fa280-103">Nombre de contador: Operaciones de transacción anuladas.</span><span class="sxs-lookup"><span data-stu-id="fa280-103">Counter Name: Transacted Operations Aborted.</span></span>  
+# <a name="transacted-operations-aborted"></a><span data-ttu-id="b94e5-102">Operaciones de transacción anuladas</span><span class="sxs-lookup"><span data-stu-id="b94e5-102">Transacted Operations Aborted</span></span>
+<span data-ttu-id="b94e5-103">Nombre de contador: Operaciones de transacción anuladas.</span><span class="sxs-lookup"><span data-stu-id="b94e5-103">Counter Name: Transacted Operations Aborted.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="fa280-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="fa280-104">Description</span></span>  
- <span data-ttu-id="fa280-105">Número de operaciones de transacción anuladas en este servicio.</span><span class="sxs-lookup"><span data-stu-id="fa280-105">Number of transactional operations that have been aborted in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="b94e5-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="b94e5-104">Description</span></span>  
+ <span data-ttu-id="b94e5-105">Número de operaciones de transacción anuladas en este servicio.</span><span class="sxs-lookup"><span data-stu-id="b94e5-105">Number of transactional operations that have been aborted in this service.</span></span>
