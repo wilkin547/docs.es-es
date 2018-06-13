@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523128"
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Cómo: Disponer una forma en mosaico con una imagen
 Tal y como se pueden colocar iconos junto a la otra para cubrir una planta, se pueden colocar rectangulares imágenes junto a la otra para rellenar una forma (mosaico). El interior de una forma de mosaico, utilice un pincel de textura. Al construir un <xref:System.Drawing.TextureBrush> objeto, uno de los argumentos que se pasan al constructor es un <xref:System.Drawing.Image> objeto. Cuando se usa el pincel de textura para pintar el interior de una forma, la forma se rellena con las copias repetidas de esta imagen.  

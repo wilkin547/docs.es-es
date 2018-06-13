@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216184"
 ---
 # <a name="equals-c-reference"></a>equals (Referencia de C#)
 La palabra clave contextual `equals` se usa en una cláusula `join` en una expresión de consulta para comparar los elementos de dos secuencias. Para obtener más información, consulte [join (Cláusula, Referencia de C#)](../../../csharp/language-reference/keywords/join-clause.md).  

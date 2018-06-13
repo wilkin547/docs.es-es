@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523574"
 ---
 # <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Cómo: Obtener acceso a elementos específicos de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms
 Obtener acceso a elementos específicos en un cuadro combinado de formularios Windows Forms, un cuadro de lista o un cuadro de lista activados es una tarea esencial. Permite determinar mediante programación qué hay en una lista, en cualquier posición dada.  

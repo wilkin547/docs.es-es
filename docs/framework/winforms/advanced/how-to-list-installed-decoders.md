@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523714"
 ---
 # <a name="how-to-list-installed-decoders"></a>Cómo: Enumerar los descodificadores instalados
 Puede que desee enumerar los descodificadores de imágenes disponibles en un equipo, para determinar si la aplicación puede leer un formato de archivo de imagen determinado. El <xref:System.Drawing.Imaging.ImageCodecInfo> clase proporciona el <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> métodos estáticos para que pueda determinar qué imagen descodificadores están disponibles. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> Devuelve una matriz de <xref:System.Drawing.Imaging.ImageCodecInfo> objetos.  

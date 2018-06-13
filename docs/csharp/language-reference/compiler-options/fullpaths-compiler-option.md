@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215315"
 ---
 # <a name="-fullpaths-c-compiler-options"></a>-fullpaths (Opciones del compilador de C#)
 La opción **-fullpaths** hace que el compilador especifique una ruta de acceso completa al archivo cuando se muestran los errores de compilación y las advertencias.  
