@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581185"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>Expresiones lambda en PLINQ y TPL
 La biblioteca TPL contiene muchos métodos que adoptan una de las familias <xref:System.Func%601?displayProperty=nameWithType> o <xref:System.Action?displayProperty=nameWithType> de delegados como parámetros de entrada. Puede usar estos delegados para pasar de la lógica personalizada del programa al bucle, tarea o consulta en paralelo. Los ejemplos de código de TPL, igual que igual que de PLINQ, usan expresiones lambda para crear instancias de esos delegados como bloques de código insertados. En este tema se proporciona una breve introducción a Func y Action, y muestra cómo usar las expresiones lambda en la biblioteca TPL y PLINQ.  

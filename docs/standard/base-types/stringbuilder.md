@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579150"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Utilizar la clase StringBuilder en .NET
 El objeto <xref:System.String> es inmutable. Cada vez que se usa uno de los métodos de la clase <xref:System.String?displayProperty=nameWithType>, se crea un objeto de cadena en la memoria, lo que requiere una nueva asignación de espacio para ese objeto. En las situaciones en las que es necesario realizar modificaciones repetidas en una cadena, la sobrecarga asociada a la creación de un objeto <xref:System.String> puede ser costosa. La clase <xref:System.Text.StringBuilder?displayProperty=nameWithType> se puede usar para modificar una cadena sin crear un objeto. Por ejemplo, el uso de la clase <xref:System.Text.StringBuilder> puede mejorar el rendimiento al concatenar muchas cadenas en un bucle.  

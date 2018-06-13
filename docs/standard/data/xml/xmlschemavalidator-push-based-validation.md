@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579605"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Validación basada en inserción de XmlSchemaValidator
 La clase <xref:System.Xml.Schema.XmlSchemaValidator> incluye un mecanismo eficiente y de alto rendimiento para validar datos XML con esquemas XML mediante inserción. Por ejemplo, la clase <xref:System.Xml.Schema.XmlSchemaValidator> le permite validar un conjunto de información XML en el lugar sin tener que serializarla como un documento XML y, a continuación, volver a analizar el documento utilizando un sistema de lectura XML de validación.  

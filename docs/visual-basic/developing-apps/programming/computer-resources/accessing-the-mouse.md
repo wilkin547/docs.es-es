@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582595"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>Acceso al mouse (Visual Basic)
 El objeto `My.Computer.Mouse` proporciona un método para localizar información sobre el mouse del equipo, como si existe, el número de botones y detalles sobre su rueda.  

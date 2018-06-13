@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595009"
 ---
 # <a name="return-type-of-function-39ltprocedurenamegt39-is-not-cls-compliant"></a>Valor devuelto de función &#39; &lt;nombreProcedimiento&gt; &#39; no es compatible con CLS
 A `Function` procedimiento está marcado como `<CLSCompliant(True)>` pero devuelve un tipo que está marcado como `<CLSCompliant(False)>`, no está marcado o no cumple los requisitos porque es un tipo no compatible.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586817"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Los tipos de datos de los parámetros de tipo no se pueden inferir de estos argumentos
 Tipos de datos de los parámetros de tipo no se pueden inferir de estos argumentos. Especificar los tipos de datos explícitamente puede corregir este error.  

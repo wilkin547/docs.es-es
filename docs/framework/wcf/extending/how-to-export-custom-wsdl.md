@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489055"
 ---
 # <a name="how-to-export-custom-wsdl"></a>Cómo: Exportar el WSDL personalizado
 En este tema se explica cómo exportar la información del WSDL personalizado. Para ello, definiremos un nuevo atributo de código llamado `WsdlDocumentationAttribute` que agregará la información personalizada en el WSDL generado por el servicio.  

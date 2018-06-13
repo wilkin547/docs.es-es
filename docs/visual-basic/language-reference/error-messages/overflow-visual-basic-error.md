@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594918"
 ---
 # <a name="overflow-visual-basic-error"></a>Desbordamiento (Error de Visual Basic)
 Un literal representa un valor fuera de los límites del tipo de datos a la que se va a asignar.  

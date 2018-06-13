@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803733"
 ---
 # <a name="basic-resource-service"></a>Servicio de recurso básico
 Este ejemplo muestra cómo implementar un servicio basado en HTTP mediante el modelo de programación de REST de Windows Communication Foundation (WCF) que expone una colección de clientes que admite la recuperación, agregar, eliminar o reemplazar las operaciones. Este ejemplo consta de 2 componentes: un servicio HTTP WCF hospedado por sí mismo (Service.cs) y una aplicación de consola (program.cs) que crea el servicio y lo llama.  

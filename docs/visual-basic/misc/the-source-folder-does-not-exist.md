@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640373"
 ---
 # <a name="the-source-folder-does-not-exist"></a>La carpeta de origen no existe
 Intentó realizar una operación que hace referencia a una carpeta de origen que no existe. Esto puede ser consecuencia de haber facilitado una ruta de acceso de archivo incorrecta.  
