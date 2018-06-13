@@ -1,14 +1,6 @@
 ---
-title: "ICLRDataTarget::GetTLSValue (Método)"
-ms.custom: 
+title: ICLRDataTarget::GetTLSValue (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDataTarget.GetTLSValue
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ab3d978e9500a17f5b8ae011322ad05aedddf98b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 130ba2864537f017bd3037412d742d887df1ae68
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405732"
 ---
-# <a name="iclrdatatargetgettlsvalue-method"></a><span data-ttu-id="42e43-102">ICLRDataTarget::GetTLSValue (Método)</span><span class="sxs-lookup"><span data-stu-id="42e43-102">ICLRDataTarget::GetTLSValue Method</span></span>
-<span data-ttu-id="42e43-103">Obtiene un valor desde el almacenamiento local de subprocesos (TLS) del subproceso especificado en el proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="42e43-103">Gets a value from the thread local storage (TLS) of the specified thread in the target process.</span></span> <span data-ttu-id="42e43-104">Los servicios de acceso a datos de common language runtime (CLR) llama a este método.</span><span class="sxs-lookup"><span data-stu-id="42e43-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
+# <a name="iclrdatatargetgettlsvalue-method"></a><span data-ttu-id="37d3e-102">ICLRDataTarget::GetTLSValue (Método)</span><span class="sxs-lookup"><span data-stu-id="37d3e-102">ICLRDataTarget::GetTLSValue Method</span></span>
+<span data-ttu-id="37d3e-103">Obtiene un valor desde el almacenamiento local de subprocesos (TLS) del subproceso especificado en el proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="37d3e-103">Gets a value from the thread local storage (TLS) of the specified thread in the target process.</span></span> <span data-ttu-id="37d3e-104">Los servicios de acceso a datos de common language runtime (CLR) llama a este método.</span><span class="sxs-lookup"><span data-stu-id="37d3e-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42e43-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="42e43-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="37d3e-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="37d3e-105">Syntax</span></span>  
   
 ```  
 HRESULT GetTLSValue (  
@@ -48,27 +37,27 @@ HRESULT GetTLSValue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="42e43-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="42e43-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="37d3e-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="37d3e-106">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="42e43-107">[in] El identificador de sistema operativo de un subproceso en el proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="42e43-107">[in] The operating system identifier of a thread in the target process.</span></span>  
+ <span data-ttu-id="37d3e-107">[in] El identificador de sistema operativo de un subproceso en el proceso de destino.</span><span class="sxs-lookup"><span data-stu-id="37d3e-107">[in] The operating system identifier of a thread in the target process.</span></span>  
   
  `index`  
- <span data-ttu-id="42e43-108">[in] El índice de la ubicación.</span><span class="sxs-lookup"><span data-stu-id="42e43-108">[in] The index of the location.</span></span> <span data-ttu-id="42e43-109">Este valor debe ser un índice válido en el almacén local del subproceso especificado.</span><span class="sxs-lookup"><span data-stu-id="42e43-109">This value must be a valid index in the local store of the specified thread.</span></span>  
+ <span data-ttu-id="37d3e-108">[in] El índice de la ubicación.</span><span class="sxs-lookup"><span data-stu-id="37d3e-108">[in] The index of the location.</span></span> <span data-ttu-id="37d3e-109">Este valor debe ser un índice válido en el almacén local del subproceso especificado.</span><span class="sxs-lookup"><span data-stu-id="37d3e-109">This value must be a valid index in the local store of the specified thread.</span></span>  
   
  `value`  
- <span data-ttu-id="42e43-110">[out] Un puntero a un `CLRDATA_ADDRESS` valor que especifica el valor devuelto desde la ubicación de TLS dada.</span><span class="sxs-lookup"><span data-stu-id="42e43-110">[out] A pointer to a `CLRDATA_ADDRESS` value that specifies the value returned from the given TLS location.</span></span>  
+ <span data-ttu-id="37d3e-110">[out] Un puntero a un `CLRDATA_ADDRESS` valor que especifica el valor devuelto desde la ubicación de TLS dada.</span><span class="sxs-lookup"><span data-stu-id="37d3e-110">[out] A pointer to a `CLRDATA_ADDRESS` value that specifies the value returned from the given TLS location.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="42e43-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="42e43-111">Remarks</span></span>  
- <span data-ttu-id="42e43-112">Este método lo implementa el escritor de la aplicación de depuración.</span><span class="sxs-lookup"><span data-stu-id="42e43-112">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="37d3e-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="37d3e-111">Remarks</span></span>  
+ <span data-ttu-id="37d3e-112">Este método lo implementa el escritor de la aplicación de depuración.</span><span class="sxs-lookup"><span data-stu-id="37d3e-112">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="42e43-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="42e43-113">Requirements</span></span>  
- <span data-ttu-id="42e43-114">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="42e43-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="37d3e-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="37d3e-113">Requirements</span></span>  
+ <span data-ttu-id="37d3e-114">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="37d3e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="42e43-115">**Encabezado:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="42e43-115">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="37d3e-115">**Encabezado:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="37d3e-115">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="42e43-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="42e43-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="37d3e-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="37d3e-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="42e43-117">**Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42e43-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="37d3e-117">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37d3e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="42e43-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="42e43-118">See Also</span></span>  
- [<span data-ttu-id="42e43-119">ICLRDataTarget (interfaz)</span><span class="sxs-lookup"><span data-stu-id="42e43-119">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="37d3e-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="37d3e-118">See Also</span></span>  
+ [<span data-ttu-id="37d3e-119">ICLRDataTarget (interfaz)</span><span class="sxs-lookup"><span data-stu-id="37d3e-119">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

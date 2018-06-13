@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751796"
 ---
 # <a name="ltservicemetadatagt"></a><span data-ttu-id="c2c35-102">&lt;serviceMetadata&gt;</span><span class="sxs-lookup"><span data-stu-id="c2c35-102">&lt;serviceMetadata&gt;</span></span>
 <span data-ttu-id="c2c35-103">Especifica la publicación de metadatos e información asociada del servicio.</span><span class="sxs-lookup"><span data-stu-id="c2c35-103">Specifies the publication of service metadata and associated information.</span></span>  

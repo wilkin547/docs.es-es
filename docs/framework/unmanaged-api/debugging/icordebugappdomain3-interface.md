@@ -1,14 +1,6 @@
 ---
 title: ICorDebugAppDomain3 (Interfaz)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugAppDomain3
 api_location:
@@ -22,44 +14,41 @@ helpviewer_keywords:
 ms.assetid: 875ef5be-c1e7-4d95-97e9-d3a667aeaba0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 017a2f018569b17c0b0011638e16f1921b6c9801
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7c130b92fd5114d067730da3b7cd138d98cf0577
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407410"
 ---
-# <a name="icordebugappdomain3-interface"></a><span data-ttu-id="ab3ce-102">ICorDebugAppDomain3 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="ab3ce-102">ICorDebugAppDomain3 Interface</span></span>
-<span data-ttu-id="ab3ce-103">Proporciona métodos para recuperar información acerca de las representaciones administradas de [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipos cargados actualmente en un dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="ab3ce-103">Provides methods to retrieve information about the managed representations of [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types currently loaded in an application domain.</span></span> <span data-ttu-id="ab3ce-104">Esta interfaz es una extensión de las interfaces ICorDebugAppDomain y ICorDebugAppDomain2.</span><span class="sxs-lookup"><span data-stu-id="ab3ce-104">This interface is an extension of the ICorDebugAppDomain and ICorDebugAppDomain2 interfaces.</span></span>  
+# <a name="icordebugappdomain3-interface"></a><span data-ttu-id="6c679-102">ICorDebugAppDomain3 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="6c679-102">ICorDebugAppDomain3 Interface</span></span>
+<span data-ttu-id="6c679-103">Proporciona métodos para recuperar información acerca de las representaciones administradas de [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipos cargados actualmente en un dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="6c679-103">Provides methods to retrieve information about the managed representations of [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types currently loaded in an application domain.</span></span> <span data-ttu-id="6c679-104">Esta interfaz es una extensión de las interfaces ICorDebugAppDomain y ICorDebugAppDomain2.</span><span class="sxs-lookup"><span data-stu-id="6c679-104">This interface is an extension of the ICorDebugAppDomain and ICorDebugAppDomain2 interfaces.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="ab3ce-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="ab3ce-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="6c679-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="6c679-105">Methods</span></span>  
   
-|<span data-ttu-id="ab3ce-106">Método</span><span class="sxs-lookup"><span data-stu-id="ab3ce-106">Method</span></span>|<span data-ttu-id="ab3ce-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="ab3ce-107">Description</span></span>|  
+|<span data-ttu-id="6c679-106">Método</span><span class="sxs-lookup"><span data-stu-id="6c679-106">Method</span></span>|<span data-ttu-id="6c679-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="6c679-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="ab3ce-108">Icordebugappdomain3:: Getcachedwinrttypes</span><span class="sxs-lookup"><span data-stu-id="ab3ce-108">ICorDebugAppDomain3::GetCachedWinRTTypes</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|<span data-ttu-id="ab3ce-109">Obtiene un enumerador para todos los almacena en caché [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipos.</span><span class="sxs-lookup"><span data-stu-id="ab3ce-109">Gets an enumerator for all cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types.</span></span>|  
-|[<span data-ttu-id="ab3ce-110">Icordebugappdomain3:: Getcachedwinrttypesforiids</span><span class="sxs-lookup"><span data-stu-id="ab3ce-110">ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|<span data-ttu-id="ab3ce-111">Obtiene un enumerador para almacenado en memoria caché [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipos en un dominio de aplicación en función de sus identificadores de interfaz.</span><span class="sxs-lookup"><span data-stu-id="ab3ce-111">Gets an enumerator for cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types in an application domain based on their interface identifiers.</span></span>|  
+|[<span data-ttu-id="6c679-108">Icordebugappdomain3:: Getcachedwinrttypes</span><span class="sxs-lookup"><span data-stu-id="6c679-108">ICorDebugAppDomain3::GetCachedWinRTTypes</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|<span data-ttu-id="6c679-109">Obtiene un enumerador para todos los almacena en caché [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipos.</span><span class="sxs-lookup"><span data-stu-id="6c679-109">Gets an enumerator for all cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types.</span></span>|  
+|[<span data-ttu-id="6c679-110">Icordebugappdomain3:: Getcachedwinrttypesforiids</span><span class="sxs-lookup"><span data-stu-id="6c679-110">ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|<span data-ttu-id="6c679-111">Obtiene un enumerador para almacenado en memoria caché [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipos en un dominio de aplicación en función de sus identificadores de interfaz.</span><span class="sxs-lookup"><span data-stu-id="6c679-111">Gets an enumerator for cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types in an application domain based on their interface identifiers.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ab3ce-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ab3ce-112">Remarks</span></span>  
- <span data-ttu-id="ab3ce-113">Esta interfaz está pensada para usarse con un depurador junto con una llamada a evaluación de función `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`.</span><span class="sxs-lookup"><span data-stu-id="ab3ce-113">This interface is meant to be used by a debugger in conjunction with a function evaluation call to `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`.</span></span> <span data-ttu-id="ab3ce-114">Cuando el método recupera los identificadores de interfaz admitidos por un [!INCLUDE[wrt](../../../../includes/wrt-md.md)] objeto de servidor, el depurador puede usar los métodos definidos en esta interfaz para asignarlas a los tipos administrados que se corresponden con esas interfaces.</span><span class="sxs-lookup"><span data-stu-id="ab3ce-114">When the method retrieves the interface identifiers supported by a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] server object, the debugger may use the methods defined in this interface to map them to managed types that correspond to those interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6c679-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="6c679-112">Remarks</span></span>  
+ <span data-ttu-id="6c679-113">Esta interfaz está pensada para usarse con un depurador junto con una llamada a evaluación de función `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`.</span><span class="sxs-lookup"><span data-stu-id="6c679-113">This interface is meant to be used by a debugger in conjunction with a function evaluation call to `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`.</span></span> <span data-ttu-id="6c679-114">Cuando el método recupera los identificadores de interfaz admitidos por un [!INCLUDE[wrt](../../../../includes/wrt-md.md)] objeto de servidor, el depurador puede usar los métodos definidos en esta interfaz para asignarlas a los tipos administrados que se corresponden con esas interfaces.</span><span class="sxs-lookup"><span data-stu-id="6c679-114">When the method retrieves the interface identifiers supported by a [!INCLUDE[wrt](../../../../includes/wrt-md.md)] server object, the debugger may use the methods defined in this interface to map them to managed types that correspond to those interfaces.</span></span>  
   
- <span data-ttu-id="ab3ce-115">Para recuperar una instancia de esta interfaz, ejecute `QueryInterface` en una instancia de la interfaz ICorDebugAppDomain o ICorDebugAppDomain2.</span><span class="sxs-lookup"><span data-stu-id="ab3ce-115">To retrieve an instance of this interface, run `QueryInterface` on an instance of the ICorDebugAppDomain or ICorDebugAppDomain2 interface.</span></span>  
+ <span data-ttu-id="6c679-115">Para recuperar una instancia de esta interfaz, ejecute `QueryInterface` en una instancia de la interfaz ICorDebugAppDomain o ICorDebugAppDomain2.</span><span class="sxs-lookup"><span data-stu-id="6c679-115">To retrieve an instance of this interface, run `QueryInterface` on an instance of the ICorDebugAppDomain or ICorDebugAppDomain2 interface.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ab3ce-116">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="ab3ce-116">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="6c679-116">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="6c679-116">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ab3ce-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ab3ce-117">Requirements</span></span>  
- <span data-ttu-id="ab3ce-118">**Plataformas:**[!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab3ce-118">**Platforms:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6c679-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6c679-117">Requirements</span></span>  
+ <span data-ttu-id="6c679-118">**Plataformas:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c679-118">**Platforms:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span></span>  
   
- <span data-ttu-id="ab3ce-119">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ab3ce-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6c679-119">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6c679-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ab3ce-120">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ab3ce-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6c679-120">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6c679-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ab3ce-121">**Versiones de .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab3ce-121">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="6c679-121">**Versiones de .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c679-121">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab3ce-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="ab3ce-122">See Also</span></span>  
- [<span data-ttu-id="ab3ce-123">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="ab3ce-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="6c679-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="6c679-122">See Also</span></span>  
+ [<span data-ttu-id="6c679-123">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="6c679-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
