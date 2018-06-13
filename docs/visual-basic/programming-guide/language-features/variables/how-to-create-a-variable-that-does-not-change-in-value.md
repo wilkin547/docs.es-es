@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651381"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Cómo: Crear una variable que no cambia de valor (Visual Basic)
 La noción de una variable que no cambia su valor podría parecer contradictoria. Pero hay ocasiones una constante no es factible y resulta útil disponer de una variable con un valor fijo. En tal caso puede definir una variable miembro con la [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) palabra clave.  

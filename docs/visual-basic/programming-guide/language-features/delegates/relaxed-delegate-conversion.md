@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650834"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Conversión de delegado no estricta (Visual Basic)
 Conversión de delegado flexible le permite asignar funciones y subrutinas a delegados o controladores incluso cuando sus firmas no son idénticas. Por lo tanto, el enlace a delegados pasa a ser coherente con el enlace ya permitido para las invocaciones de método.  

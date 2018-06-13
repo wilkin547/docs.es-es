@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653603"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 Hace que el compilador para informar de errores si no se declaran variables antes de utilizarlos.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652134"
 ---
 # <a name="-verbose"></a>-verbose
 Hace que el compilador generar mensajes de estado y de error detallados.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654835"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Estructura de un programa de Visual Basic
 Un programa de Visual Basic se componen de bloques de creación estándar. A *solución* consta de uno o varios proyectos. A *proyecto* a su vez puede contener uno o más ensamblados. Cada *ensamblado* se compila a partir de uno o varios archivos de origen. A *archivo de código fuente* proporciona la definición e implementación de clases, estructuras, módulos y las interfaces, que en última instancia contienen todo el código.  

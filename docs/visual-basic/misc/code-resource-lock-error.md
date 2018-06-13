@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635611"
 ---
 # <a name="code-resource-lock-error"></a>Error al bloquear el recurso de código
 Se realizó una llamada a un procedimiento en un recurso de código. Se encontró el recurso de código, pero se produjo un error cuando se intentó bloquear el recurso, quizá porque está en uso.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636583"
 ---
 # <a name="file-39ltfilenamegt39-not-found"></a>Archivo &#39; &lt;filename&gt; &#39; no encontrado
 Un nombre de archivo es incorrecto o el archivo no existe.  

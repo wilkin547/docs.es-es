@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805959"
 ---
 # <a name="net-binding"></a>Enlace de red
 Esta sección contiene ejemplos que muestran cómo utilizar atributos de enlace de red de un elemento de punto de conexión.  

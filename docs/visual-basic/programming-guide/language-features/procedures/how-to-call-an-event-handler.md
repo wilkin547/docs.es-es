@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652687"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Cómo: Llamar a un controlador de eventos en Visual Basic
 Un *eventos* es una acción o una aparición, como un mouse, haga clic en o un límite de crédito superado, que es reconocido por algún componente del programa y, por lo que puede escribir código para responder. Un *controlador de eventos* es el código que escribe para responder a un evento.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636720"
 ---
 # <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a>Una o varias carpetas en la ruta de acceso de destino no existen.
 Uno o varios directorios indicados en la ruta de acceso de destino no existe. Puede ser el resultado de una ruta de acceso incorrectamente analizada, en especial si se proporciona una ruta de acceso relativa.  

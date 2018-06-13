@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653486"
 ---
 # <a name="-keyfile"></a>-keyfile
 Especifica un archivo que contiene una clave o un par de claves que asigna un nombre seguro al ensamblado.  

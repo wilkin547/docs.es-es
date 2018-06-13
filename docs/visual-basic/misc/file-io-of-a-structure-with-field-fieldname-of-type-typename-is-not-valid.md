@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634948"
 ---
 # <a name="file-io-of-a-structure-with-field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-not-valid"></a>Una estructura con el campo de E/S de archivos &#39; &lt;fieldname&gt; &#39; de tipo &#39; &lt;typename&gt; &#39; no es válido
 La estructura que está intentando escribir en un archivo contiene un tipo no admitido.  

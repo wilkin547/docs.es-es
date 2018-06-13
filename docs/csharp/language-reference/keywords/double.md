@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172521"
 ---
 # <a name="double-c-reference"></a>double (Referencia de C#)
 La palabra clave `double` indica un tipo simple que almacena valores de punto flotante de 64 bits. En la tabla siguiente se muestran la precisión y el intervalo aproximado para el tipo `double`.  

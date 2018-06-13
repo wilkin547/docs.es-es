@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636684"
 ---
 # <a name="39before39-and-39after39-arguments-cannot-be-combined"></a>&#39;Antes de&#39; y &#39;después&#39; argumentos no se pueden combinar
 Una lista de argumentos incluye ambos argumentos `Before` y `After` , que son mutuamente excluyentes.  

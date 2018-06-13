@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654208"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Tipos de datos numéricos (Visual Basic)
 Visual Basic proporciona varios *tipos de datos numéricos* para controlar números en varias representaciones. *Entero* tipos representan sólo números enteros (positivos, negativos y cero), y *no integrales* tipos representan números con entero y fracción.  

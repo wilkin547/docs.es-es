@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650574"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Conversiones entre cadenas y otros tipos (Visual Basic)
 Puede convertir un valor numérico, `Boolean`, o fecha y hora valor a un `String`. También puede convertir en la dirección inversa, de un valor de cadena en valor numérico, `Boolean`, o `Date` , siempre que el contenido de la cadena se pueda interpretar como un valor válido del tipo de datos de destino. Si no es posible, se produce un error en tiempo de ejecución.  

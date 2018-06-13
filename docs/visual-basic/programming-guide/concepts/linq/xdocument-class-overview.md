@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651189"
 ---
 # <a name="xdocument-class-overview-visual-basic"></a>Información general de la clase XDocument (Visual Basic)
 En este tema se presenta la clase <xref:System.Xml.Linq.XDocument>.  

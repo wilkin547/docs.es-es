@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636733"
 ---
 # <a name="managed-classes-derived-from-a-com-class-cannot-be-called-late-bound"></a>No se pueden realizar llamadas enlazadas en tiempo de ejecución a clases administradas derivadas de una clase COM.
 Se intentó realizar una llamada enlazada en tiempo de ejecución a una clase administrada derivada de una clase COM; no se admiten llamadas de este tipo.  
