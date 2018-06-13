@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488080"
 ---
 # <a name="how-to-inspect-and-modify-messages-on-the-service"></a>Cómo: Inspeccionar y modificar mensajes en el servicio
 Puede inspeccionar o modificar los mensajes entrantes o salientes a través de un cliente de Windows Communication Foundation (WCF) mediante la implementación de un <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> e insertarlos en el runtime del servicio. Para obtener más información, consulte [extender distribuidores](../../../../docs/framework/wcf/extending/extending-dispatchers.md). La característica equivalente del servicio es <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  

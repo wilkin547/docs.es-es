@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb37394799db39baa406ef332066d5ebb2dbf19d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441934"
 ---
 # <a name="waitoption-enumeration"></a>WAIT_OPTION (Enumeración)
 Contiene valores que indican que la acción de un host debe tomar si una operación solicitada por el common language runtime (CLR) bloquea.  

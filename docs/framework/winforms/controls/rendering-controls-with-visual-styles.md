@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540909"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Representar controles con estilos visuales
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporciona compatibilidad para representar controles y otros elementos de la interfaz de usuario (IU) de Windows usando estilos visuales en los sistemas operativos compatibles. En este tema se tratan los distintos niveles de compatibilidad de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para representar controles y otros elementos de IU con el estilo visual actual del sistema operativo.  

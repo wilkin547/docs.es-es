@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494947"
 ---
 # <a name="routing"></a>Enrutamiento
 Los temas de esta sección explican el servicio de enrutamiento. El servicio de enrutamiento es un intermediario de SOAP configurable genérico que permite configurar el enrutamiento basado en contenido, preparar puentes protocolares, administrar errores de comunicaciones, así como actualizar dinámicamente la lógica de enrutamiento durante el tiempo de ejecución.  

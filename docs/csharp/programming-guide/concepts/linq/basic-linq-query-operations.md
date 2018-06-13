@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333045"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operaciones básicas de consulta LINQ (C#)
 En este tema se ofrece una breve introducción a las expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] y algunas de las clases de operaciones típicas que se realizan en una consulta. En los temas siguientes se ofrece información más detallada:  

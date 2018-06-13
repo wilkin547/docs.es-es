@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544490"
 ---
 # <a name="properties-how-to-topics"></a>Temas "Cómo..." sobre propiedades
 ## <a name="in-this-section"></a>En esta sección  

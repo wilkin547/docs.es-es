@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1455ce7c3b07809d1dead8e98019c991475eb02
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33442152"
 ---
 # <a name="waitortimercallback-function-pointer"></a>puntero a la función WAITORTIMERCALLBACK
 Señala a una función que notifica al host que controlar una espera (<xref:System.Threading.WaitHandle>) se ha señalado o agotó el tiempo.  

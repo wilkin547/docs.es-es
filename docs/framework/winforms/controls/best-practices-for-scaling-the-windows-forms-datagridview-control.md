@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529813"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Procedimientos recomendados para ajustar la escala del control DataGridView en formularios Windows Forms
 El <xref:System.Windows.Forms.DataGridView> control está diseñado para ofrecer la máxima escalabilidad. Si tiene que mostrar grandes cantidades de datos, debe seguir las directrices descritas en este tema para evitar consumir grandes cantidades de memoria o la disminución de la capacidad de respuesta de la interfaz de usuario (UI). En este tema se describe los siguientes problemas:  

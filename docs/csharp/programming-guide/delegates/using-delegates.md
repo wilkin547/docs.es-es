@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337410"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Utilizar delegados (Guía de programación de C#)
 Un [delegado](../../../csharp/language-reference/keywords/delegate.md) es un tipo que encapsula de forma segura un método, similar a un puntero de función en C y C++. A diferencia de los punteros de función de C, los delegados están orientados a objetos, proporcionan seguridad de tipos y son seguros. El tipo de un delegado se define por el nombre del delegado. En el ejemplo siguiente, se declara un delegado denominado `Del` que puede encapsular un método que toma una [string](../../../csharp/language-reference/keywords/string.md) como argumento y devuelve [void](../../../csharp/language-reference/keywords/void.md):  

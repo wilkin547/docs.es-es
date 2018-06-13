@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486742"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>Configuración recomendada para el seguimiento y el registro de mensajes
 En este tema se describen la traza recomendada y configuración del registro de mensajes para los entornos operativos diferentes.  

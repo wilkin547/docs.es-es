@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338258"
 ---
 # <a name="ltexamplegt-c-programming-guide"></a>&lt;example&gt; (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  

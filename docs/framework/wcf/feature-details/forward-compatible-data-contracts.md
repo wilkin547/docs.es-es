@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492211"
 ---
 # <a name="forward-compatible-data-contracts"></a>Contratos de datos compatibles con el reenvío
 Una característica de la Windows Communication Foundation (WCF) es el sistema de contrato de datos que los contratos puede evolucionar con el tiempo sin causar interrupciones. Es decir, un cliente con una versión anterior de un contrato de datos puede comunicarse con un servicio con una versión más reciente del mismo contrato de datos, o un cliente con una versión más reciente de un contrato de datos puede comunicarse con una versión anterior del mismo contrato de datos. Para obtener más información, consulte [procedimientos recomendados: control de versiones de contrato de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  

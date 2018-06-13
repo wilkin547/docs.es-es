@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517970"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Curvas spline cardinales en GDI+
 Una curva spline cardinal es una secuencia de curvas individuales combinadas para formar una curva mayor. La curva spline se especifica mediante una matriz de puntos y un parámetro de tensión. Una curva spline cardinal pasa suavemente por cada punto de la matriz; hay sin esquinas definidas y ningún cambio abrupto en la tensión de la curva. En la siguiente ilustración muestra un conjunto de puntos y una curva spline cardinal que pasa por cada punto en el conjunto.  

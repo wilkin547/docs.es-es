@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540649"
 ---
 # <a name="windows-forms-data-binding"></a>Enlace de datos en Windows Forms
 El enlace de datos en Windows Forms proporciona los medios para mostrar y realizar cambios en la información de un origen de datos en los controles del formulario. Puede enlazar a orígenes de datos tradicionales y a casi cualquier estructura que contenga datos.  

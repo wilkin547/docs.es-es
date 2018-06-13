@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490157"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Cómo: Obtener acceso a los servicios con un contrato dúplex
 Una característica de Windows Communication Foundation (WCF) es la capacidad para crear un servicio que utiliza un patrón de mensajería dúplex. Este patrón permite a un servicio comunicarse con el cliente mediante una devolución de llamada. En este tema se muestra los pasos para crear a un cliente WCF en una clase de cliente que implementa la interfaz de devolución de llamada.  

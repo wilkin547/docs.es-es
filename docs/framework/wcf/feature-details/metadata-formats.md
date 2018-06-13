@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493443"
 ---
 # <a name="metadata-formats"></a>Formatos de metadatos
 Windows Communication Foundation (WCF) es compatible con los formatos de metadatos en la tabla siguiente.  

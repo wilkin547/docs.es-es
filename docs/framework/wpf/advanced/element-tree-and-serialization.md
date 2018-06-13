@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542866"
 ---
 # <a name="element-tree-and-serialization"></a>Árbol de elementos y serialización
 Los elementos de programación de WPF a menudo existen con alguna forma de relación recíproca en el árbol. Por ejemplo, la interfaz de usuario de una aplicación, creada en XAML, puede conceptualizarse como un árbol de objetos. El árbol de elementos puede dividirse aún más en dos árboles discretos, pero paralelos en ocasiones: el árbol lógico y el árbol visual. La serialización en WPF implica guardar el estado de estos dos árboles, así como el estado de la aplicación y escribirlo en un archivo, posiblemente en XAML.  

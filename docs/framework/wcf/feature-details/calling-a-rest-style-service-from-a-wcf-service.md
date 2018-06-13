@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488516"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Llamar a un servicio de estilo REST desde un servicio WCF
 Al llamar a un servicio de estilo REST desde un servicio WCF normal (basado en SOAP), el contexto de la operación en el método del servicio (que contiene información sobre la solicitud entrante) reemplaza el contexto que se debería usar en la solicitud saliente. Esto da lugar a las solicitudes HTTP GET para cambiar a solicitudes HTTP POST. Para obligar al servicio WCF a que use el contexto idóneo para llamar al servicio de estilo REST, cree un nuevo <xref:System.ServiceModel.OperationContextScope> y llame al servicio de estilo REST desde dentro del ámbito del contexto de la operación. Este tema describirá cómo crear un sencillo ejemplo que muestra esta técnica.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523736"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Utilizar un pincel para rellenar formas
 A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> objeto se usa para rellenar el interior de una forma cerrada. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] define varios estilos de relleno: color sólido, patrón de trama, textura de imagen y degradado de color.  

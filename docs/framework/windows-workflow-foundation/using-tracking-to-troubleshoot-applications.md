@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517048"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Usar el seguimiento para resolver problemas de las aplicaciones
 Windows Workflow Foundation (WF) le permite realizar un seguimiento de información relacionada con el flujo de trabajo para proporcionar detalles en la ejecución de un servicio o aplicación de Windows Workflow Foundation. Los hosts de Windows Workflow Foundation son capaz de capturar eventos de flujo de trabajo durante la ejecución de una instancia de flujo de trabajo. Si el flujo de trabajo genera errores o excepciones, puede usar los detalles de seguimiento para solucionar problemas de procesamiento de Windows Workflow Foundation.  

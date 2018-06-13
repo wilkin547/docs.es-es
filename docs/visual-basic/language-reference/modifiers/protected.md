@@ -15,6 +15,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234762"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 Un modificador de acceso de miembro que se especifica que uno o varios elementos de programación declaran son accesibles únicamente desde dentro de su propia clase o desde una clase derivada.  

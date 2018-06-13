@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489669"
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Enlaces de Windows Communication Foundation
 Windows Communication Foundation (WCF) separa cómo se escribe el software para una aplicación de cómo se comunica con otro software. Los enlaces se usan para especificar el transporte, codificación y detalles protocolares requeridos para que los clientes y servicios se comuniquen entre sí. WCF usa enlaces para generar la representación subyacente de conexión del punto de conexión, por lo que la mayoría de los detalles de enlace se debe acordar entre las partes que se comunican. La manera más sencilla de lograrlo es que los clientes de un servicio usen el mismo enlace que emplea el punto de conexión para el servicio. Para obtener más información acerca de cómo hacerlo, consulte [utilizando enlaces para configurar los servicios de Windows Communication Foundation y los clientes](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  

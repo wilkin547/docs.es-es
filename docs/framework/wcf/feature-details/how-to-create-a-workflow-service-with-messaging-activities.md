@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495601"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Cómo: Crear un servicio de flujo de trabajo con actividades de mensajería
 En este tema, se describe cómo crear un servicio de flujo de trabajo simple mediante actividades de mensajería. Este tema se centra en los sistemas de creación de un servicio de flujo de trabajo compuesto solo por actividades de mensajería. En un servicio real, el flujo de trabajo contiene muchas otras actividades. El servicio implementa una operación denominada Eco, que toma una cadena y la devuelve al autor de la llamada. Este tema es el primero en una serie de dos temas. El siguiente tema [Cómo: obtener acceso a un servicio desde un flujo de trabajo de aplicación](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) describe cómo crear una aplicación de flujo de trabajo que puede llamar al servicio creado en este tema.  

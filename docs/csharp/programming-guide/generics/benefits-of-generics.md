@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336835"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>Ventajas de los genéricos (Guía de programación de C#)
 Los genéricos proporcionan la solución a una limitación en versiones anteriores de Common Language Runtime y el lenguaje de C# en el que se obtiene la generalización mediante la conversión de tipos a y desde el tipo base universal <xref:System.Object>. Mediante la creación de una clase genérica, puede crear una colección con seguridad de tipos en tiempo de compilación.  

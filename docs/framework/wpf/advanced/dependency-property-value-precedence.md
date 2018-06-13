@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541942"
 ---
 # <a name="dependency-property-value-precedence"></a>Prioridad de los valores de propiedades de dependencia
 <a name="introduction"></a> En este tema se explica cómo puede afectar el trabajo del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] al valor de una propiedad de dependencia y se describe la precedencia de aplicación de los aspectos del sistema de propiedades al valor efectivo de una propiedad.  

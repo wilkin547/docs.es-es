@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356362"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>MDA de callbackOnCollectedDelegate
 El Asistente para la depuración administrada (MDA) `callbackOnCollectedDelegate` se activa si se calculan las referencias de un delegado desde código administrado a no administrado como un puntero de función y se coloca una devolución de llamada en dicho puntero después de que el delegado haya sido recolectado como elemento no utilizado.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494901"
 ---
 # <a name="how-to-service-versioning"></a>Cómo: Control de versiones del servicio
 Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que enrute mensajes a las diferentes versiones del mismo servicio. En este ejemplo, los mensajes se enrutan a dos versiones diferentes de un servicio de la calculadora, `roundingCalc` (v1) y `regularCalc` (v2). Ambas implementaciones admiten las mismas operaciones; sin embargo, el servicio más antiguo, `roundingCalc`, redondea todos los cálculos al valor entero más cercano antes de devolverlos. Una aplicación cliente debe poder indicar cuándo se debe usar el servicio `regularCalc` más reciente.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520073"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Crear actividades asincrónicas en WF
 <xref:System.Activities.AsyncCodeActivity> proporciona a los autores de actividad el uso de una clase base que permite a las actividades derivadas implementar la lógica de ejecución asincrónica. Resulta útil para las actividades personalizadas que deben realizar el trabajo asincrónico sin retener el subproceso de programador de flujo de trabajo y bloquear cualquier actividad que pueda ejecutarse en paralelo. En este tema se proporciona información general de cómo crear actividades asincrónicas personalizadas mediante <xref:System.Activities.AsyncCodeActivity>.  

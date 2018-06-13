@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358373"
 ---
 # <a name="data-encryption-in-sql-server"></a>Cifrado de datos en SQL Server
 SQL Server proporciona funciones para cifrar y descifrar datos con un certificado, una clave asimétrica o una clave simétrica. El programa administra estas opciones en un almacén de certificados interno. El almacén usa una jerarquía de cifrado que protege los certificados y las claves en un nivel, con la capa por encima de él en la jerarquía. Esta área de características de SQL Server se denomina almacenamiento secreto.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541744"
 ---
 # <a name="attached-events-overview"></a>Información general sobre eventos adjuntos
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] define un componente de lenguaje y un tipo de evento denominado *evento adjunto*. El concepto de un evento adjunto permite agregar un controlador de un evento determinado a un elemento arbitrario, en lugar de agregarlo a un elemento que realmente define o hereda el evento. En este caso, ni el objeto que genera potencialmente el evento ni la instancia de control del destino definen ni "poseen" de otro modo el evento.  

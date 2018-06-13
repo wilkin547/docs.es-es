@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534305"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Cómo: Crear un cuadro de texto de contraseña con el control TextBox de formularios Windows Forms
 Un cuadro de contraseña es un cuadro de texto de formularios Windows Forms que muestra caracteres marcadores mientras el usuario escribe una cadena.  

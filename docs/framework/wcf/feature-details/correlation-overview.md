@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493205"
 ---
 # <a name="correlation-overview"></a>Información general de correlación
 Correlación es el mecanismo para relacionar mensajes de servicio de flujo de trabajo entre sí o con el estado de instancia de aplicación, como una respuesta con una solicitud inicial o un identificador de orden determinado con el estado persistente de un flujo de trabajo de procesamiento del orden. En este tema, se proporciona información general sobre la correlación. Los otros temas de esta sección proporcionan información adicional para cada tipo de correlación.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532638"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Cómo: Exponer propiedades de controles constituyentes
 Los controles que componen un control compuesto se denominan *controles constituyentes*. Estos controles normalmente se ha declarado privados y, por tanto, no es accesible para el desarrollador. Si desea disponer de propiedades de estos controles para futuros usuarios, debe exponer al usuario. Una propiedad de un control constituyente se expone mediante la creación de una propiedad en el control de usuario y usando la `get` y `set` descriptores de acceso de esa propiedad para llevar a cabo el cambio en la propiedad privada del control que lo componen.  

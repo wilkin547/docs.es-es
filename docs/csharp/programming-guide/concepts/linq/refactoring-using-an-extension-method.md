@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335489"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refactorizar mediante un método de extensión (C#)
 Este ejemplo se basa en el ejemplo anterior, [Recuperar el texto de los párrafos (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), mediante la refactorización de la concatenación de cadenas con una función pura que se implementa como método de extensión.  

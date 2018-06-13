@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a8e30020a8296e037d1dacc8dbaabde7e40032e4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445291"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum (Método)
 Obtiene el número de elementos de la enumeración recuperada por el enumerador especificado.  

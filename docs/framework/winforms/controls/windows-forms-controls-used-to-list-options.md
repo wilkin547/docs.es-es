@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539755"
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>Controles de formularios Windows Forms usados para mostrar opciones
 Puede agregar una variedad de controles a un formulario de Windows si desea proporcionar a los usuarios con una lista de opciones que puede elegir. Dependiendo de la cantidad que desea restringir los usuarios de entrada, puede agregar un <xref:System.Windows.Forms.ListBox> (control), un <xref:System.Windows.Forms.ComboBox> (control), o un <xref:System.Windows.Forms.CheckedListBox> control. Use los vínculos siguientes para determinar qué control que mejor se adapte a sus necesidades.  

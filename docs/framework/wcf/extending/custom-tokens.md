@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485370"
 ---
 # <a name="custom-tokens"></a>Tokens personalizados
 Aunque Windows Communication Foundation (WCF) admite de forma nativa los certificados X.509, Tokens de contexto de seguridad, vales de Kerberos y tokens de nombre de usuario como credenciales, es lo suficientemente flexible como para que pueda utilizar sus propias credenciales personalizadas.  

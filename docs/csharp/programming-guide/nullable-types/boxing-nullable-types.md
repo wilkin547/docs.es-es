@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334761"
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>Aplicar la conversión boxing a tipos que aceptan valores NULL (Guía de programación de C#)
 La conversión boxing solo se aplica a los objetos basados en tipos que aceptan valores NULL si el valor del objeto no es NULL. Si <xref:System.Nullable%601.HasValue%2A> es `false`, la referencia de objeto se asigna a `null` en lugar de aplicar la conversión boxing. Por ejemplo:  

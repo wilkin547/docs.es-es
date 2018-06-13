@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1bc8d588641163ccf98054fdf1930a72a04c770c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452067"
 ---
 # <a name="corprffunction-structure"></a>COR_PRF_FUNCTION (Estructura)
 Proporciona una representación única de una función combinando su identificador con el identificador de la versión que se ha vuelto a compilar.  

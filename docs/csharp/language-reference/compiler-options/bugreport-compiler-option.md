@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214097"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (Opciones del compilador de C#)
 Especifica que esa información de depuración debe colocarse en un archivo para su análisis posterior.  

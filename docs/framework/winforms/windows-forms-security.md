@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542241"
 ---
 # <a name="windows-forms-security"></a>Seguridad en los formularios Windows Forms
 Windows Forms incluye un modelo de seguridad que está basada en código (niveles de seguridad se establecen para el código, sin tener en cuenta el usuario que ejecuta el código). Esto es además de los esquemas de seguridad que pueden estar en su lugar ya en el sistema del equipo. Estos pueden incluirlos en el explorador (por ejemplo, la seguridad basada en la zona en Internet Explorer) o el sistema operativo (por ejemplo, la seguridad basada en la credencial de Windows NT).  

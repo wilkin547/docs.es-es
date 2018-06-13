@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516528"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> es un tipo clave en el modelo de programación de diseñador de WF que permite la edición de una colección de elementos incluidos. En este ejemplo se muestra cómo compilar un diseñador de actividad que muestra este tipo de colección modificable.  

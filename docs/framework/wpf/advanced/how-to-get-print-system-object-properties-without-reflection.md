@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544736"
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>Cómo: Obtener propiedades de un objeto de sistema de impresión sin reflexión
 Use la reflexión para detallar las propiedades (y los tipos de esas propiedades) en un objeto puede ralentizar el rendimiento de la aplicación. El <xref:System.Printing.IndexedProperties> espacio de nombres proporciona un medio para obtener esta información sin utilizar la reflexión.  
