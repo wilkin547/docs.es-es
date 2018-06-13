@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803142"
 ---
 # <a name="endpoint-performance-counters"></a><span data-ttu-id="d3cb9-102">Contadores de rendimiento del punto de conexión</span><span class="sxs-lookup"><span data-stu-id="d3cb9-102">Endpoint Performance Counters</span></span>
 <span data-ttu-id="d3cb9-103">Los contadores de rendimiento del punto de conexión capturan datos que revelan cómo un punto de conexión está aceptando los mensajes.</span><span class="sxs-lookup"><span data-stu-id="d3cb9-103">Endpoint performance counters capture data that reveals how an endpoint is accepting messages.</span></span> <span data-ttu-id="d3cb9-104">Se pueden encontrar en el objeto de rendimiento `ServiceModelEndpoint 4.0.0.0` al verlo con el Monitor de rendimiento.</span><span class="sxs-lookup"><span data-stu-id="d3cb9-104">They can be found under the `ServiceModelEndpoint 4.0.0.0` performance object when viewing with the Performance Monitor.</span></span> <span data-ttu-id="d3cb9-105">Las instancias se denominan utilizando este patrón:</span><span class="sxs-lookup"><span data-stu-id="d3cb9-105">The instances are named using this pattern:</span></span>  

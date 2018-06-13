@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803028"
 ---
 # <a name="deploying-a-wcf-library-project"></a><span data-ttu-id="907dd-102">Implementación de un proyecto de biblioteca de WFC</span><span class="sxs-lookup"><span data-stu-id="907dd-102">Deploying a WCF Library Project</span></span>
 <span data-ttu-id="907dd-103">Este tema describe cómo se puede implementar un proyecto de biblioteca de servicio de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="907dd-103">This topic describes how you can deploy a Windows Communication Foundation (WCF) Service Library Project.</span></span>  

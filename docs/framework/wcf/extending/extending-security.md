@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809406"
 ---
 # <a name="extending-security"></a><span data-ttu-id="6a986-102">Extensión de la seguridad</span><span class="sxs-lookup"><span data-stu-id="6a986-102">Extending Security</span></span>
 <span data-ttu-id="6a986-103">Para dar cabida a nuevos tipos de notificación y tokens personalizados, puede ampliar la infraestructura de seguridad de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="6a986-103">To accommodate new claim types and custom tokens, you can extend the security infrastructure of Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="6a986-104">Los temas de esta sección le muestran cómo hacerlo.</span><span class="sxs-lookup"><span data-stu-id="6a986-104">The topics in this section show you how this is done.</span></span>  

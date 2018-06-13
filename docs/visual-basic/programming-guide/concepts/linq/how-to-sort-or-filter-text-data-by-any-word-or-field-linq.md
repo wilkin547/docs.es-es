@@ -1,31 +1,22 @@
 ---
-title: "Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (Visual Basic)"
-ms.custom: 
+title: Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 19224bf51c95acdccbeb019631fdc884231610b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0e27a72fcb5789ac9a067091aeb150d33f646708
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641991"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="1b7c7-102">Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1b7c7-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="1b7c7-103">En el ejemplo siguiente se muestra cómo ordenar líneas de texto estructurado, como valores separados por comas, por cualquier campo de la línea.</span><span class="sxs-lookup"><span data-stu-id="1b7c7-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="1b7c7-104">El campo se puede especificar dinámicamente en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="1b7c7-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="1b7c7-105">Supongamos que los campos de scores.csv representan el número de identificación de un alumno, seguido de una serie de cuatro calificaciones.</span><span class="sxs-lookup"><span data-stu-id="1b7c7-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>  
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="5f7d6-102">Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5f7d6-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="5f7d6-103">En el ejemplo siguiente se muestra cómo ordenar líneas de texto estructurado, como valores separados por comas, por cualquier campo de la línea.</span><span class="sxs-lookup"><span data-stu-id="5f7d6-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="5f7d6-104">El campo se puede especificar dinámicamente en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="5f7d6-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="5f7d6-105">Supongamos que los campos de scores.csv representan el número de identificación de un alumno, seguido de una serie de cuatro calificaciones.</span><span class="sxs-lookup"><span data-stu-id="5f7d6-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>  
   
-### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="1b7c7-106">Para crear un archivo que contenga datos</span><span class="sxs-lookup"><span data-stu-id="1b7c7-106">To create a file that contains data</span></span>  
+### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="5f7d6-106">Para crear un archivo que contenga datos</span><span class="sxs-lookup"><span data-stu-id="5f7d6-106">To create a file that contains data</span></span>  
   
-1.  <span data-ttu-id="1b7c7-107">Copiar los datos de scores.csv del tema [Cómo: combinar contenido de archivos diferentes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) y guárdelo en la carpeta de su solución.</span><span class="sxs-lookup"><span data-stu-id="1b7c7-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>  
+1.  <span data-ttu-id="5f7d6-107">Copiar los datos de scores.csv del tema [Cómo: combinar contenido de archivos diferentes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) y guárdelo en la carpeta de su solución.</span><span class="sxs-lookup"><span data-stu-id="5f7d6-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1b7c7-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1b7c7-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5f7d6-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5f7d6-108">Example</span></span>  
   
 ```vb  
 Class SortLines  
@@ -78,10 +69,10 @@ End Class
 ' 115, 35, 72, 91, 70  
 ```  
   
- <span data-ttu-id="1b7c7-109">En este ejemplo también muestra cómo devolver una variable de consulta de una función.</span><span class="sxs-lookup"><span data-stu-id="1b7c7-109">This example also demonstrates how to return a query variable from a Function.</span></span>  
+ <span data-ttu-id="5f7d6-109">En este ejemplo también muestra cómo devolver una variable de consulta de una función.</span><span class="sxs-lookup"><span data-stu-id="5f7d6-109">This example also demonstrates how to return a query variable from a Function.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="1b7c7-110">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="1b7c7-110">Compiling the Code</span></span>  
- <span data-ttu-id="1b7c7-111">Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.</span><span class="sxs-lookup"><span data-stu-id="1b7c7-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="5f7d6-110">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="5f7d6-110">Compiling the Code</span></span>  
+ <span data-ttu-id="5f7d6-111">Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.</span><span class="sxs-lookup"><span data-stu-id="5f7d6-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b7c7-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="1b7c7-112">See Also</span></span>  
- [<span data-ttu-id="1b7c7-113">LINQ y cadenas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1b7c7-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="5f7d6-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="5f7d6-112">See Also</span></span>  
+ [<span data-ttu-id="5f7d6-113">LINQ y cadenas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5f7d6-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804630"
 ---
 # <a name="bindings-and-binding-elements"></a><span data-ttu-id="ec84e-102">Enlaces y elementos de enlace</span><span class="sxs-lookup"><span data-stu-id="ec84e-102">Bindings and Binding Elements</span></span>
 <span data-ttu-id="ec84e-103">Los enlaces son colecciones de elementos de configuración especial, denominados *elementos de enlace*, que son evaluados por el runtime del servicio siempre que un cliente o el punto de conexión de servicio se está construyendo.</span><span class="sxs-lookup"><span data-stu-id="ec84e-103">Bindings are collections of special configuration elements, called *binding elements*, which are evaluated by the service runtime whenever a client or service endpoint is being constructed.</span></span> <span data-ttu-id="ec84e-104">El tipo y orden de los elementos de enlace dentro de un enlace determina la selección y el orden de apilamiento del protocolo y los canales de transporte en la pila de canales de un punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="ec84e-104">The type and order of the binding elements within a binding determines the selection and stacking order of the protocol and transport channels in an endpoint's channel stack.</span></span>  

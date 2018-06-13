@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806323"
 ---
 # <a name="custom-message-interceptor"></a><span data-ttu-id="85ca1-102">Interceptador de mensajes personalizados</span><span class="sxs-lookup"><span data-stu-id="85ca1-102">Custom Message Interceptor</span></span>
 <span data-ttu-id="85ca1-103">Este ejemplo muestra el uso del modelo de extensibilidad del canal.</span><span class="sxs-lookup"><span data-stu-id="85ca1-103">This sample demonstrates the use of the channel extensibility model.</span></span> <span data-ttu-id="85ca1-104">En particular, muestra cómo implementar un elemento de enlace personalizado que crea generadores de canales y agentes de escucha de canales para interceptar todos los mensajes entrantes y salientes en un punto concreto en la pila de tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="85ca1-104">In particular, it shows how to implement a custom binding element that creates channel factories and channel listeners to intercept all incoming and outgoing messages at a particular point in the run-time stack.</span></span> <span data-ttu-id="85ca1-105">El ejemplo también incluye un cliente y un servidor que muestran el uso de estos generadores personalizados.</span><span class="sxs-lookup"><span data-stu-id="85ca1-105">The sample also includes a client and server that demonstrate the use of these custom factories.</span></span>  

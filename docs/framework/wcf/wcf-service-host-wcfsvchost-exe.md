@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807039"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a><span data-ttu-id="02ce8-102">Host de servicio WCF (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="02ce8-102">WCF Service Host (WcfSvcHost.exe)</span></span>
 <span data-ttu-id="02ce8-103">Host de servicio de Windows Communication Foundation (WCF) (WcfSvcHost.exe) permite iniciar al depurador de Visual Studio (F5) para hospedar y probar un servicio implementado automáticamente.</span><span class="sxs-lookup"><span data-stu-id="02ce8-103">Windows Communication Foundation (WCF) Service Host (WcfSvcHost.exe) allows you to launch the Visual Studio debugger (F5) to automatically host and test a service you have implemented.</span></span> <span data-ttu-id="02ce8-104">A continuación, puede probar el servicio mediante el cliente de prueba de WCF (WcfTestClient.exe) o su propio cliente, para buscar y corregir cualquier error potencial.</span><span class="sxs-lookup"><span data-stu-id="02ce8-104">You can then test the service using WCF Test Client (WcfTestClient.exe), or your own client, to find and fix any potential errors.</span></span>  

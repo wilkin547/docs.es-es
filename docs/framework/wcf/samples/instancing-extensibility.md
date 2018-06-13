@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804595"
 ---
 # <a name="instancing-extensibility"></a><span data-ttu-id="d4246-102">Extensibilidad de creación de instancias</span><span class="sxs-lookup"><span data-stu-id="d4246-102">Instancing Extensibility</span></span>
 <span data-ttu-id="d4246-103">Esta sección contiene ejemplos que muestran la creación personalizada de instancias.</span><span class="sxs-lookup"><span data-stu-id="d4246-103">This section contains samples that demonstrate custom instancing.</span></span>  
