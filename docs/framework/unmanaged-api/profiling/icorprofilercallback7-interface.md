@@ -13,9 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f681001b610f42fef28181ffe3b47d702aabdf6e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452698"
 ---
 # <a name="icorprofilercallback7-interface"></a>Interfaz ICorProfilerCallback7
 [Compatible con .NET Framework 4.6.1 y versiones posteriores]  

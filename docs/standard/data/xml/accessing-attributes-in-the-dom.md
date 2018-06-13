@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572026"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>Acceso a atributos en DOM
 Los atributos son propiedades del elemento, no elementos secundarios del elemento. Es importante hacer esta distinción, debido a los métodos utilizados para navegar por los nodos relacionados, principales y secundarios del DOM. Por ejemplo, los métodos **PreviousSibling** y **NextSibling** no se utilizan para navegar de un elemento a un atributo, ni entre atributos. En su lugar, un atributo es una propiedad de un elemento y pertenece a un elemento, tiene una propiedad **OwnerElement** y no una propiedad **parentNode**, y tiene métodos de navegación distintos.  

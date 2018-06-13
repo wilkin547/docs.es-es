@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573905"
 ---
 # <a name="latency-modes"></a>Modos de latencia
 Para reclamar objetos, el recolector de elementos no utilizados debe detener todos los subprocesos en ejecución en una aplicación. En algunos casos, como cuando una aplicación recupera datos o muestra contenido, la recolección completa de elementos no utilizados puede producirse en un momento crítico y reducir el rendimiento. Puede ajustar la tendencia a la intrusión del recolector de elementos no utilizados estableciendo la propiedad <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> en uno de los valores de <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  

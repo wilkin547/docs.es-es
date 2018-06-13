@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572858"
 ---
 # <a name="composing-streams"></a>Crear secuencias
 Una memoria auxiliar es un medio de almacenamiento, como un disco o memoria. Cada memoria auxiliar distinta implementa su propia secuencia como una implementación de la clase <xref:System.IO.Stream>. Cada tipo de secuencia lee y escribe los bytes desde y en su memoria auxiliar determinada. Las secuencias que se conectan a las memorias auxiliares reciben el nombre de secuencias base. Las secuencias base tienen constructores que disponen de los parámetros necesarios para conectar la secuencia a la memoria auxiliar. Por ejemplo, <xref:System.IO.FileStream> tiene constructores que especifican un parámetro de ruta de acceso, que especifica cómo los procesos compartirán el archivo, etc.  

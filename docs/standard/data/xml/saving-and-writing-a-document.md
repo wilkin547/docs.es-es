@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573599"
 ---
 # <a name="saving-and-writing-a-document"></a>Guardar y escribir un documento
 Cuando cargue y guarde un <xref:System.Xml.XmlDocument>, el documento guardado puede ser diferente al original de varias formas:  

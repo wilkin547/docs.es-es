@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572741"
 ---
 # <a name="struct-design"></a>Diseño de structs
 El tipo de valor de uso general más a menudo se conoce como un struct, la palabra clave de C#. Esta sección proporciona instrucciones para el diseño de la estructura general.  

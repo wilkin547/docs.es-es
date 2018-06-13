@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573807"
 ---
 # <a name="compiled-xpath-expressions"></a>Expresiones XPath compiladas
 Un objeto <xref:System.Xml.XPath.XPathExpression> representa una consulta XPath compilada devuelta desde el método <xref:System.Xml.XPath.XPathExpression.Compile%2A> estático de la clase <xref:System.Xml.XPath.XPathExpression> o desde el método <xref:System.Xml.XPath.XPathNavigator.Compile%2A> de la clase <xref:System.Xml.XPath.XPathNavigator>.  

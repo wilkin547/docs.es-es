@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571467"
 ---
 # <a name="xpath-queries-and-namespaces"></a>Espacios de nombres y consultas XPath
 Las consultas XPath distinguen los espacios de nombres de un documento XML y pueden utilizar prefijos de espacio de nombres para calificar nombres de atributos y elementos. Al calificar los nombres de atributos y elementos con un prefijo de espacio de nombres, se limitan los nodos que devuelve la consulta XPath a únicamente aquellos nodos que pertenecen a un espacio de nombres específico.  
