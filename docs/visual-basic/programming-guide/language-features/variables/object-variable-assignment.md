@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656063"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Asignación de variables de objeto (Visual Basic)
 Usar una instrucción de asignación normal para asignar un objeto a una variable de objeto. Puede asignar una expresión de objeto o la [nada](../../../../visual-basic/language-reference/nothing.md) palabra clave, como en el ejemplo siguiente se muestra.  

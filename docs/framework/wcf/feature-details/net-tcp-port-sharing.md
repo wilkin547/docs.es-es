@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497157"
 ---
 # <a name="nettcp-port-sharing"></a>Uso compartido de puertos Net.TCP
 Windows Communication Foundation (WCF) proporciona un nuevo protocolo de red TCP (net.tcp://) para la comunicación de alto rendimiento. WCF también introduce un nuevo componente del sistema, el servicio de uso compartido de puertos Net.TCP que permite compartir puertos pueden compartir entre varios procesos de usuario.  
