@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219224"
 ---
 # <a name="char-c-reference"></a><span data-ttu-id="b6f7e-102">char (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="b6f7e-102">char (C# Reference)</span></span>
 <span data-ttu-id="b6f7e-103">La palabra clave `char` se usa para declarar una instancia de la estructura <xref:System.Char?displayProperty=nameWithType> que .NET Framework usa para representar un carácter Unicode.</span><span class="sxs-lookup"><span data-stu-id="b6f7e-103">The `char` keyword is used to declare an instance of the <xref:System.Char?displayProperty=nameWithType> structure that the .NET Framework uses to represent a Unicode character.</span></span> <span data-ttu-id="b6f7e-104">El valor de un objeto `Char` es un valor numérico de 16 bits (ordinal).</span><span class="sxs-lookup"><span data-stu-id="b6f7e-104">The value of a `Char` object is a 16-bit numeric (ordinal) value.</span></span>  

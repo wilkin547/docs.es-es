@@ -1,91 +1,85 @@
 ---
 title: ulong (Referencia de C#)
 ms.date: 03/14/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - ulong_CSharpKeyword
 - ulong
 helpviewer_keywords:
 - ulong keyword [C#]
 ms.assetid: f2ece624-837a-40cf-92c5-343e7f33397c
-caps.latest.revision: 16
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 049d1cc4b30e16535f20cee8e0ad80e5c80b4a49
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1f291d2dd2706231f018a04f0af86051cef6c28a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288312"
 ---
-# <a name="ulong-c-reference"></a><span data-ttu-id="f1207-102">ulong (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="f1207-102">ulong (C# Reference)</span></span>
+# <a name="ulong-c-reference"></a><span data-ttu-id="a8f18-102">ulong (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="a8f18-102">ulong (C# Reference)</span></span>
 
-<span data-ttu-id="f1207-103">La palabra clave `ulong` denota un tipo entero que almacena valores según el tamaño y el intervalo que se indican en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="f1207-103">The `ulong` keyword denotes an integral type that stores values according to the size and range shown in the following table.</span></span>  
+<span data-ttu-id="a8f18-103">La palabra clave `ulong` denota un tipo entero que almacena valores según el tamaño y el intervalo que se indican en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="a8f18-103">The `ulong` keyword denotes an integral type that stores values according to the size and range shown in the following table.</span></span>  
   
-|<span data-ttu-id="f1207-104">Tipo</span><span class="sxs-lookup"><span data-stu-id="f1207-104">Type</span></span>|<span data-ttu-id="f1207-105">Intervalo</span><span class="sxs-lookup"><span data-stu-id="f1207-105">Range</span></span>|<span data-ttu-id="f1207-106">Tamaño</span><span class="sxs-lookup"><span data-stu-id="f1207-106">Size</span></span>|<span data-ttu-id="f1207-107">Tipo de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f1207-107">.NET Framework type</span></span>|  
+|<span data-ttu-id="a8f18-104">Tipo</span><span class="sxs-lookup"><span data-stu-id="a8f18-104">Type</span></span>|<span data-ttu-id="a8f18-105">Intervalo</span><span class="sxs-lookup"><span data-stu-id="a8f18-105">Range</span></span>|<span data-ttu-id="a8f18-106">Tamaño</span><span class="sxs-lookup"><span data-stu-id="a8f18-106">Size</span></span>|<span data-ttu-id="a8f18-107">Tipo de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="a8f18-107">.NET Framework type</span></span>|  
 |----------|-----------|----------|-------------------------|  
-|`ulong`|<span data-ttu-id="f1207-108">De 0 a 18.446.744.073.709.551.615</span><span class="sxs-lookup"><span data-stu-id="f1207-108">0 to 18,446,744,073,709,551,615</span></span>|<span data-ttu-id="f1207-109">Entero de 64 bits sin signo</span><span class="sxs-lookup"><span data-stu-id="f1207-109">Unsigned 64-bit integer</span></span>|<xref:System.UInt64?displayProperty=nameWithType>|  
+|`ulong`|<span data-ttu-id="a8f18-108">De 0 a 18.446.744.073.709.551.615</span><span class="sxs-lookup"><span data-stu-id="a8f18-108">0 to 18,446,744,073,709,551,615</span></span>|<span data-ttu-id="a8f18-109">Entero de 64 bits sin signo</span><span class="sxs-lookup"><span data-stu-id="a8f18-109">Unsigned 64-bit integer</span></span>|<xref:System.UInt64?displayProperty=nameWithType>|  
   
-## <a name="literals"></a><span data-ttu-id="f1207-110">Literales</span><span class="sxs-lookup"><span data-stu-id="f1207-110">Literals</span></span>  
+## <a name="literals"></a><span data-ttu-id="a8f18-110">Literales</span><span class="sxs-lookup"><span data-stu-id="a8f18-110">Literals</span></span>  
 
-<span data-ttu-id="f1207-111">Puede declarar e inicializar una variable `ulong` mediante la asignación de un literal decimal, un literal hexadecimal o (a partir de C# 7.0) un literal binario.</span><span class="sxs-lookup"><span data-stu-id="f1207-111">You can declare and initialize a `ulong` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7.0) a binary literal to it.</span></span>  <span data-ttu-id="f1207-112">Si el literal entero está fuera del intervalo de `ulong` (es decir, si es inferior a <xref:System.UInt64.MinValue?displayProperty=nameWithType> o mayor que <xref:System.UInt64.MaxValue?displayProperty=nameWithType>), se produce un error de compilación.</span><span class="sxs-lookup"><span data-stu-id="f1207-112">If the integer literal is outside the range of `ulong` (that is, if it is less than <xref:System.UInt64.MinValue?displayProperty=nameWithType> or greater than <xref:System.UInt64.MaxValue?displayProperty=nameWithType>), a compilation error occurs.</span></span> 
+<span data-ttu-id="a8f18-111">Puede declarar e inicializar una variable `ulong` mediante la asignación de un literal decimal, un literal hexadecimal o (a partir de C# 7.0) un literal binario.</span><span class="sxs-lookup"><span data-stu-id="a8f18-111">You can declare and initialize a `ulong` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7.0) a binary literal to it.</span></span>  <span data-ttu-id="a8f18-112">Si el literal entero está fuera del intervalo de `ulong` (es decir, si es inferior a <xref:System.UInt64.MinValue?displayProperty=nameWithType> o mayor que <xref:System.UInt64.MaxValue?displayProperty=nameWithType>), se produce un error de compilación.</span><span class="sxs-lookup"><span data-stu-id="a8f18-112">If the integer literal is outside the range of `ulong` (that is, if it is less than <xref:System.UInt64.MinValue?displayProperty=nameWithType> or greater than <xref:System.UInt64.MaxValue?displayProperty=nameWithType>), a compilation error occurs.</span></span> 
 
-<span data-ttu-id="f1207-113">En el ejemplo siguiente, los enteros que equivalen a 7 934 076 125 que se representan como literales binarios, hexadecimales y decimales se asignan a valores `ulong`.</span><span class="sxs-lookup"><span data-stu-id="f1207-113">In the following example, integers equal to 7,934,076,125 that are represented as decimal, hexadecimal, and binary literals are assigned to `ulong` values.</span></span>  
+<span data-ttu-id="a8f18-113">En el ejemplo siguiente, los enteros que equivalen a 7 934 076 125 que se representan como literales binarios, hexadecimales y decimales se asignan a valores `ulong`.</span><span class="sxs-lookup"><span data-stu-id="a8f18-113">In the following example, integers equal to 7,934,076,125 that are represented as decimal, hexadecimal, and binary literals are assigned to `ulong` values.</span></span>  
   
 [!code-csharp[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
 
 > [!NOTE] 
-> <span data-ttu-id="f1207-114">Use el prefijo `0x` o `0X` para denotar un literal hexadecimal y el prefijo `0b` o `0B` para denotar un literal binario.</span><span class="sxs-lookup"><span data-stu-id="f1207-114">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="f1207-115">Los literales decimales no tienen prefijo.</span><span class="sxs-lookup"><span data-stu-id="f1207-115">Decimal literals have no prefix.</span></span> 
+> <span data-ttu-id="a8f18-114">Use el prefijo `0x` o `0X` para denotar un literal hexadecimal y el prefijo `0b` o `0B` para denotar un literal binario.</span><span class="sxs-lookup"><span data-stu-id="a8f18-114">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="a8f18-115">Los literales decimales no tienen prefijo.</span><span class="sxs-lookup"><span data-stu-id="a8f18-115">Decimal literals have no prefix.</span></span> 
 
-<span data-ttu-id="f1207-116">A partir de C# 7.0, se han agregado un par de características para mejorar la legibilidad.</span><span class="sxs-lookup"><span data-stu-id="f1207-116">Starting with C# 7.0, a couple of features have been added to enhance readability.</span></span> 
- - <span data-ttu-id="f1207-117">C# 7.0 permite usar el carácter de subrayado, `_`, como separador de dígitos.</span><span class="sxs-lookup"><span data-stu-id="f1207-117">C# 7.0 allows the usage of the underscore character, `_`, as a digit separator.</span></span>
- - <span data-ttu-id="f1207-118">C# 7.2 permite usar `_` como separador de dígitos de un literal binario o hexadecimal, después del prefijo.</span><span class="sxs-lookup"><span data-stu-id="f1207-118">C# 7.2 allows `_` to be used as a digit separator for a binary or hexadecimal literal, after the prefix.</span></span> <span data-ttu-id="f1207-119">Un literal decimal no puede tener un carácter de subrayado inicial.</span><span class="sxs-lookup"><span data-stu-id="f1207-119">A decimal literal isn't permitted to have a leading underscore.</span></span>
+<span data-ttu-id="a8f18-116">A partir de C# 7.0, se han agregado un par de características para mejorar la legibilidad.</span><span class="sxs-lookup"><span data-stu-id="a8f18-116">Starting with C# 7.0, a couple of features have been added to enhance readability.</span></span> 
+ - <span data-ttu-id="a8f18-117">C# 7.0 permite usar el carácter de subrayado, `_`, como separador de dígitos.</span><span class="sxs-lookup"><span data-stu-id="a8f18-117">C# 7.0 allows the usage of the underscore character, `_`, as a digit separator.</span></span>
+ - <span data-ttu-id="a8f18-118">C# 7.2 permite usar `_` como separador de dígitos de un literal binario o hexadecimal, después del prefijo.</span><span class="sxs-lookup"><span data-stu-id="a8f18-118">C# 7.2 allows `_` to be used as a digit separator for a binary or hexadecimal literal, after the prefix.</span></span> <span data-ttu-id="a8f18-119">Un literal decimal no puede tener un carácter de subrayado inicial.</span><span class="sxs-lookup"><span data-stu-id="a8f18-119">A decimal literal isn't permitted to have a leading underscore.</span></span>
 
-<span data-ttu-id="f1207-120">A continuación se muestran algunos ejemplos.</span><span class="sxs-lookup"><span data-stu-id="f1207-120">Some examples are shown below.</span></span>
+<span data-ttu-id="a8f18-120">A continuación se muestran algunos ejemplos.</span><span class="sxs-lookup"><span data-stu-id="a8f18-120">Some examples are shown below.</span></span>
 
 [!code-csharp[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
- <span data-ttu-id="f1207-121">Los literales enteros también pueden incluir un sufijo que denote el tipo.</span><span class="sxs-lookup"><span data-stu-id="f1207-121">Integer literals can also include a suffix that denotes the type.</span></span> <span data-ttu-id="f1207-122">El sufijo `UL` o `ul` identifica de manera inequívoca un literal numérico como un valor `ulong`.</span><span class="sxs-lookup"><span data-stu-id="f1207-122">The suffix `UL` or `ul` unambiguously identifies a numeric literal as a `ulong` value.</span></span> <span data-ttu-id="f1207-123">El sufijo `L` denota un `ulong` si el valor literal supera <xref:System.Int64.MaxValue?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f1207-123">The `L` suffix denotes a `ulong` if the literal value exceeds <xref:System.Int64.MaxValue?displayProperty=nameWithType>.</span></span> <span data-ttu-id="f1207-124">Y el sufijo `U` o `u` denota un `ulong` si el valor literal supera <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f1207-124">And the `U` or `u` suffix denotes a `ulong` if the literal value exceeds <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.</span></span> <span data-ttu-id="f1207-125">En el ejemplo siguiente se usa el sufijo `ul` para denotar un entero largo:</span><span class="sxs-lookup"><span data-stu-id="f1207-125">The following example uses the `ul` suffix to denote a long integer:</span></span>
+ <span data-ttu-id="a8f18-121">Los literales enteros también pueden incluir un sufijo que denote el tipo.</span><span class="sxs-lookup"><span data-stu-id="a8f18-121">Integer literals can also include a suffix that denotes the type.</span></span> <span data-ttu-id="a8f18-122">El sufijo `UL` o `ul` identifica de manera inequívoca un literal numérico como un valor `ulong`.</span><span class="sxs-lookup"><span data-stu-id="a8f18-122">The suffix `UL` or `ul` unambiguously identifies a numeric literal as a `ulong` value.</span></span> <span data-ttu-id="a8f18-123">El sufijo `L` denota un `ulong` si el valor literal supera <xref:System.Int64.MaxValue?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a8f18-123">The `L` suffix denotes a `ulong` if the literal value exceeds <xref:System.Int64.MaxValue?displayProperty=nameWithType>.</span></span> <span data-ttu-id="a8f18-124">Y el sufijo `U` o `u` denota un `ulong` si el valor literal supera <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a8f18-124">And the `U` or `u` suffix denotes a `ulong` if the literal value exceeds <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.</span></span> <span data-ttu-id="a8f18-125">En el ejemplo siguiente se usa el sufijo `ul` para denotar un entero largo:</span><span class="sxs-lookup"><span data-stu-id="a8f18-125">The following example uses the `ul` suffix to denote a long integer:</span></span>
  
 [!code-csharp[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
 
-<span data-ttu-id="f1207-126">Si un literal entero no tiene sufijo, su tipo es el primero de los siguientes tipos en el que se puede representar su valor:</span><span class="sxs-lookup"><span data-stu-id="f1207-126">If an integer literal has no suffix, its type is the first of the following types in which its value can be represented:</span></span> 
+<span data-ttu-id="a8f18-126">Si un literal entero no tiene sufijo, su tipo es el primero de los siguientes tipos en el que se puede representar su valor:</span><span class="sxs-lookup"><span data-stu-id="a8f18-126">If an integer literal has no suffix, its type is the first of the following types in which its value can be represented:</span></span> 
 
-1. [<span data-ttu-id="f1207-127">int</span><span class="sxs-lookup"><span data-stu-id="f1207-127">int</span></span>](int.md)
-2. [<span data-ttu-id="f1207-128">uint</span><span class="sxs-lookup"><span data-stu-id="f1207-128">uint</span></span>](../../../csharp/language-reference/keywords/uint.md)
-3. [<span data-ttu-id="f1207-129">long</span><span class="sxs-lookup"><span data-stu-id="f1207-129">long</span></span>](long.md)
+1. [<span data-ttu-id="a8f18-127">int</span><span class="sxs-lookup"><span data-stu-id="a8f18-127">int</span></span>](int.md)
+2. [<span data-ttu-id="a8f18-128">uint</span><span class="sxs-lookup"><span data-stu-id="a8f18-128">uint</span></span>](../../../csharp/language-reference/keywords/uint.md)
+3. [<span data-ttu-id="a8f18-129">long</span><span class="sxs-lookup"><span data-stu-id="a8f18-129">long</span></span>](long.md)
 4. `ulong`
 
-## <a name="compiler-overload-resolution"></a><span data-ttu-id="f1207-130">Resolución de sobrecarga del compilador</span><span class="sxs-lookup"><span data-stu-id="f1207-130">Compiler overload resolution</span></span>
+## <a name="compiler-overload-resolution"></a><span data-ttu-id="a8f18-130">Resolución de sobrecarga del compilador</span><span class="sxs-lookup"><span data-stu-id="a8f18-130">Compiler overload resolution</span></span>
   
- <span data-ttu-id="f1207-131">El sufijo se usa habitualmente en las llamadas a métodos sobrecargados.</span><span class="sxs-lookup"><span data-stu-id="f1207-131">A common use of the suffix is with calling overloaded methods.</span></span> <span data-ttu-id="f1207-132">Por ejemplo, considere los siguientes métodos sobrecargados que usan parámetros `ulong` e [int](../../../csharp/language-reference/keywords/int.md):</span><span class="sxs-lookup"><span data-stu-id="f1207-132">Consider, for example, the following overloaded methods that use `ulong` and [int](../../../csharp/language-reference/keywords/int.md) parameters:</span></span>  
+ <span data-ttu-id="a8f18-131">El sufijo se usa habitualmente en las llamadas a métodos sobrecargados.</span><span class="sxs-lookup"><span data-stu-id="a8f18-131">A common use of the suffix is with calling overloaded methods.</span></span> <span data-ttu-id="a8f18-132">Por ejemplo, considere los siguientes métodos sobrecargados que usan parámetros `ulong` e [int](../../../csharp/language-reference/keywords/int.md):</span><span class="sxs-lookup"><span data-stu-id="a8f18-132">Consider, for example, the following overloaded methods that use `ulong` and [int](../../../csharp/language-reference/keywords/int.md) parameters:</span></span>  
   
 ```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ulong l) {}  
 ```  
   
- <span data-ttu-id="f1207-133">Si se usa un sufijo con el parámetro `ulong`, se garantiza la llamada al tipo correcto, por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="f1207-133">Using a suffix with the `ulong` parameter guarantees that the correct type is called, for example:</span></span>  
+ <span data-ttu-id="a8f18-133">Si se usa un sufijo con el parámetro `ulong`, se garantiza la llamada al tipo correcto, por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="a8f18-133">Using a suffix with the `ulong` parameter guarantees that the correct type is called, for example:</span></span>  
   
 ```csharp  
 SampleMethod(5);    // Calling the method with the int parameter  
 SampleMethod(5UL);  // Calling the method with the ulong parameter  
 ```  
   
-## <a name="conversions"></a><span data-ttu-id="f1207-134">Conversiones</span><span class="sxs-lookup"><span data-stu-id="f1207-134">Conversions</span></span>  
- <span data-ttu-id="f1207-135">Existe una conversión implícita predefinida de `ulong` a [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) o [decimal](../../../csharp/language-reference/keywords/decimal.md).</span><span class="sxs-lookup"><span data-stu-id="f1207-135">There is a predefined implicit conversion from `ulong` to [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span>  
+## <a name="conversions"></a><span data-ttu-id="a8f18-134">Conversiones</span><span class="sxs-lookup"><span data-stu-id="a8f18-134">Conversions</span></span>  
+ <span data-ttu-id="a8f18-135">Existe una conversión implícita predefinida de `ulong` a [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) o [decimal](../../../csharp/language-reference/keywords/decimal.md).</span><span class="sxs-lookup"><span data-stu-id="a8f18-135">There is a predefined implicit conversion from `ulong` to [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span>  
   
- <span data-ttu-id="f1207-136">No existe conversión implícita de `ulong` a cualquier tipo entero.</span><span class="sxs-lookup"><span data-stu-id="f1207-136">There is no implicit conversion from `ulong` to any integral type.</span></span> <span data-ttu-id="f1207-137">Por ejemplo, la instrucción siguiente producirá un error de compilación sin una conversión explícita:</span><span class="sxs-lookup"><span data-stu-id="f1207-137">For example, the following statement will produce a compilation error without an explicit cast:</span></span>  
+ <span data-ttu-id="a8f18-136">No existe conversión implícita de `ulong` a cualquier tipo entero.</span><span class="sxs-lookup"><span data-stu-id="a8f18-136">There is no implicit conversion from `ulong` to any integral type.</span></span> <span data-ttu-id="a8f18-137">Por ejemplo, la instrucción siguiente producirá un error de compilación sin una conversión explícita:</span><span class="sxs-lookup"><span data-stu-id="a8f18-137">For example, the following statement will produce a compilation error without an explicit cast:</span></span>  
   
 ```csharp  
 long long1 = 8UL;   // Error: no implicit conversion from ulong  
 ```  
   
- <span data-ttu-id="f1207-138">Existe una conversión implícita predefinida de [byte](../../../csharp/language-reference/keywords/byte.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [uint](../../../csharp/language-reference/keywords/uint.md) o [char](../../../csharp/language-reference/keywords/char.md) a `ulong`.</span><span class="sxs-lookup"><span data-stu-id="f1207-138">There is a predefined implicit conversion from [byte](../../../csharp/language-reference/keywords/byte.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [uint](../../../csharp/language-reference/keywords/uint.md), or [char](../../../csharp/language-reference/keywords/char.md) to `ulong`.</span></span>  
+ <span data-ttu-id="a8f18-138">Existe una conversión implícita predefinida de [byte](../../../csharp/language-reference/keywords/byte.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [uint](../../../csharp/language-reference/keywords/uint.md) o [char](../../../csharp/language-reference/keywords/char.md) a `ulong`.</span><span class="sxs-lookup"><span data-stu-id="a8f18-138">There is a predefined implicit conversion from [byte](../../../csharp/language-reference/keywords/byte.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [uint](../../../csharp/language-reference/keywords/uint.md), or [char](../../../csharp/language-reference/keywords/char.md) to `ulong`.</span></span>  
   
- <span data-ttu-id="f1207-139">Además, no hay ninguna conversión implícita de tipos de punto flotante a `ulong`.</span><span class="sxs-lookup"><span data-stu-id="f1207-139">Also, there is no implicit conversion from floating-point types to `ulong`.</span></span> <span data-ttu-id="f1207-140">Por ejemplo, la instrucción siguiente genera un error del compilador, a menos que se use una conversión explícita:</span><span class="sxs-lookup"><span data-stu-id="f1207-140">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>  
+ <span data-ttu-id="a8f18-139">Además, no hay ninguna conversión implícita de tipos de punto flotante a `ulong`.</span><span class="sxs-lookup"><span data-stu-id="a8f18-139">Also, there is no implicit conversion from floating-point types to `ulong`.</span></span> <span data-ttu-id="a8f18-140">Por ejemplo, la instrucción siguiente genera un error del compilador, a menos que se use una conversión explícita:</span><span class="sxs-lookup"><span data-stu-id="a8f18-140">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>  
   
 ```csharp  
 // Error -- no implicit conversion from double:  
@@ -94,19 +88,19 @@ ulong x = 3.0;
 ulong y = (ulong)3.0;    
 ```  
   
- <span data-ttu-id="f1207-141">Para más información sobre expresiones aritméticas con combinaciones de tipos de punto flotante y tipos enteros, vea [float](../../../csharp/language-reference/keywords/float.md) y [double](../../../csharp/language-reference/keywords/double.md).</span><span class="sxs-lookup"><span data-stu-id="f1207-141">For information on arithmetic expressions with mixed floating-point types and integral types, see [float](../../../csharp/language-reference/keywords/float.md) and [double](../../../csharp/language-reference/keywords/double.md).</span></span>  
+ <span data-ttu-id="a8f18-141">Para más información sobre expresiones aritméticas con combinaciones de tipos de punto flotante y tipos enteros, vea [float](../../../csharp/language-reference/keywords/float.md) y [double](../../../csharp/language-reference/keywords/double.md).</span><span class="sxs-lookup"><span data-stu-id="a8f18-141">For information on arithmetic expressions with mixed floating-point types and integral types, see [float](../../../csharp/language-reference/keywords/float.md) and [double](../../../csharp/language-reference/keywords/double.md).</span></span>  
   
- <span data-ttu-id="f1207-142">Para obtener más información sobre las reglas de conversión numéricas implícitas, vea la [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="f1207-142">For more information on implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
+ <span data-ttu-id="a8f18-142">Para obtener más información sobre las reglas de conversión numéricas implícitas, vea la [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="a8f18-142">For more information on implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
   
-## <a name="c-language-specification"></a><span data-ttu-id="f1207-143">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="f1207-143">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="a8f18-143">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="a8f18-143">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f1207-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="f1207-144">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a8f18-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="a8f18-144">See Also</span></span>  
  <xref:System.UInt64>  
- [<span data-ttu-id="f1207-145">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="f1207-145">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="f1207-146">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="f1207-146">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="f1207-147">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="f1207-147">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="f1207-148">Tabla de tipos enteros</span><span class="sxs-lookup"><span data-stu-id="f1207-148">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [<span data-ttu-id="f1207-149">Tabla de tipos integrados</span><span class="sxs-lookup"><span data-stu-id="f1207-149">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [<span data-ttu-id="f1207-150">Tabla de conversiones numéricas implícitas</span><span class="sxs-lookup"><span data-stu-id="f1207-150">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [<span data-ttu-id="f1207-151">Tabla de conversiones numéricas explícitas</span><span class="sxs-lookup"><span data-stu-id="f1207-151">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+ [<span data-ttu-id="a8f18-145">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="a8f18-145">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="a8f18-146">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="a8f18-146">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="a8f18-147">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="a8f18-147">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="a8f18-148">Tabla de tipos enteros</span><span class="sxs-lookup"><span data-stu-id="a8f18-148">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [<span data-ttu-id="a8f18-149">Tabla de tipos integrados</span><span class="sxs-lookup"><span data-stu-id="a8f18-149">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [<span data-ttu-id="a8f18-150">Tabla de conversiones numéricas implícitas</span><span class="sxs-lookup"><span data-stu-id="a8f18-150">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+ [<span data-ttu-id="a8f18-151">Tabla de conversiones numéricas explícitas</span><span class="sxs-lookup"><span data-stu-id="a8f18-151">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216208"
 ---
 # <a name="-win32icon-c-compiler-options"></a><span data-ttu-id="934bf-102">-win32icon (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="934bf-102">-win32icon (C# Compiler Options)</span></span>
 <span data-ttu-id="934bf-103">La opción **-win32icon** inserta un archivo .ico en el archivo de salida, lo que proporciona al archivo de salida la apariencia esperada en el Explorador de archivos.</span><span class="sxs-lookup"><span data-stu-id="934bf-103">The **-win32icon** option inserts an .ico file in the output file, which gives the output file the desired appearance in the File Explorer.</span></span>  
