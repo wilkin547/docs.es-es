@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579189"
 ---
 # <a name="composite-formatting"></a><span data-ttu-id="7c82a-102">Formatos compuestos</span><span class="sxs-lookup"><span data-stu-id="7c82a-102">Composite Formatting</span></span>
 <span data-ttu-id="7c82a-103">La característica de formato compuesto de .NET toma una lista de objetos y una cadena de formato compuesto como entrada.</span><span class="sxs-lookup"><span data-stu-id="7c82a-103">The .NET composite formatting feature takes a list of objects and a composite format string as input.</span></span> <span data-ttu-id="7c82a-104">Una cadena de formato compuesto está formada por texto fijo combinado con marcadores de posición indizados, que reciben el nombre de elementos de formato, y que se corresponden con los objetos de la lista.</span><span class="sxs-lookup"><span data-stu-id="7c82a-104">A composite format string consists of fixed text intermixed with indexed placeholders, called format items, that correspond to the objects in the list.</span></span> <span data-ttu-id="7c82a-105">La operación de formato genera una cadena de resultado compuesta por el texto fijo original combinado con la representación de cadena de los objetos de la lista.</span><span class="sxs-lookup"><span data-stu-id="7c82a-105">The formatting operation yields a result string that consists of the original fixed text intermixed with the string representation of the objects in the list.</span></span>  

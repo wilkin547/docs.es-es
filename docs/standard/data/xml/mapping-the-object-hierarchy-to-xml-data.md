@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577207"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a><span data-ttu-id="2c4da-102">Asignar la jerarquía de objetos a datos XML</span><span class="sxs-lookup"><span data-stu-id="2c4da-102">Mapping the Object Hierarchy to XML Data</span></span>
 <span data-ttu-id="2c4da-103">Cuando un documento XML está en la memoria, la representación conceptual es un árbol.</span><span class="sxs-lookup"><span data-stu-id="2c4da-103">When an XML document is in memory, the conceptual representation is a tree.</span></span> <span data-ttu-id="2c4da-104">Al programar, hay una jerarquía de objetos para tener acceso a los nodos del árbol.</span><span class="sxs-lookup"><span data-stu-id="2c4da-104">For programming, you have an object hierarchy to access the nodes of the tree.</span></span> <span data-ttu-id="2c4da-105">En el ejemplo siguiente se muestra cómo se convierte el contenido XML en nodos.</span><span class="sxs-lookup"><span data-stu-id="2c4da-105">The following example shows you how the XML content becomes nodes.</span></span>  

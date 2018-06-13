@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579761"
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a><span data-ttu-id="ac125-103">Implementación del nivel de aplicación de microservicios mediante la API web</span><span class="sxs-lookup"><span data-stu-id="ac125-103">Implementing the microservice application layer using the Web API</span></span>
 

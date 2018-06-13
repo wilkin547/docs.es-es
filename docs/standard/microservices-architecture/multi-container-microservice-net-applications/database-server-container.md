@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578175"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a><span data-ttu-id="1da10-103">Uso de un servidor de bases de datos que se ejecuta como un contenedor</span><span class="sxs-lookup"><span data-stu-id="1da10-103">Using a database server running as a container</span></span>
 

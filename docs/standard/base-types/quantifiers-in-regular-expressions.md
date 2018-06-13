@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579098"
 ---
 # <a name="quantifiers-in-regular-expressions"></a><span data-ttu-id="eb0fe-102">cuantificadores en expresiones regulares</span><span class="sxs-lookup"><span data-stu-id="eb0fe-102">Quantifiers in Regular Expressions</span></span>
 <span data-ttu-id="eb0fe-103">Los cuantificadores especifican cuántas instancias de un carácter, grupo o clase de caracteres deben estar presentes en la entrada para que se encuentre una coincidencia.</span><span class="sxs-lookup"><span data-stu-id="eb0fe-103">Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found.</span></span>  <span data-ttu-id="eb0fe-104">En la tabla siguiente se indican los cuantificadores compatibles con .NET.</span><span class="sxs-lookup"><span data-stu-id="eb0fe-104">The following table lists the quantifiers supported by .NET.</span></span>  

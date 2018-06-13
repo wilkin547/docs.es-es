@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592501"
 ---
 # <a name="common-web-application-architectures"></a><span data-ttu-id="bc548-103">Arquitecturas de aplicaciones web comunes</span><span class="sxs-lookup"><span data-stu-id="bc548-103">Common Web Application Architectures</span></span>
 

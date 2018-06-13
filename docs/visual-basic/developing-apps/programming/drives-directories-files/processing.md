@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586759"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a><span data-ttu-id="13676-102">Procesar unidades, directorios y archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="13676-102">Processing Drives, Directories, and Files (Visual Basic)</span></span>
 <span data-ttu-id="13676-103">Se puede usar Visual Basic para procesar unidades, carpetas y archivos con el objeto `My.Computer.FileSystem`, que proporciona un mejor rendimiento y es más fácil de usar que los métodos tradicionales como las funciones `FileOpen` y `Write` (aunque siguen estando disponibles).</span><span class="sxs-lookup"><span data-stu-id="13676-103">You can use Visual Basic to process drives, folders, and files with the `My.Computer.FileSystem` object, which provides better performance and is easier to use than traditional methods such as the `FileOpen` and `Write` functions (although they are still available).</span></span> <span data-ttu-id="13676-104">En las secciones siguientes se describen estos métodos con detalle.</span><span class="sxs-lookup"><span data-stu-id="13676-104">The following sections discuss these methods in detail.</span></span>  

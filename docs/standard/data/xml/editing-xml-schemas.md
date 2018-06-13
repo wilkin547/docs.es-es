@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577220"
 ---
 # <a name="editing-xml-schemas"></a><span data-ttu-id="fea70-102">Edición de esquemas XML</span><span class="sxs-lookup"><span data-stu-id="fea70-102">Editing XML Schemas</span></span>
 <span data-ttu-id="fea70-103">La edición de un esquema XML es una de las características más importantes del Modelo de objetos de esquema (SOM).</span><span class="sxs-lookup"><span data-stu-id="fea70-103">Editing an XML schema is one of the most important features of the Schema Object Model (SOM).</span></span> <span data-ttu-id="fea70-104">Se pueden utilizar todas las propiedades previas a la compilación de esquemas del SOM para cambiar los valores existentes de un esquema XML.</span><span class="sxs-lookup"><span data-stu-id="fea70-104">All of the pre-schema-compilation properties of the SOM can be used to change the existing values in an XML schema.</span></span> <span data-ttu-id="fea70-105">Luego, el esquema XML se puede recompilar para reflejar los cambios.</span><span class="sxs-lookup"><span data-stu-id="fea70-105">The XML schema can then be recompiled to reflect the changes.</span></span>  

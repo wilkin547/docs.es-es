@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577233"
 ---
 # <a name="collections-and-data-structures"></a><span data-ttu-id="2b081-102">Colecciones y estructuras de datos</span><span class="sxs-lookup"><span data-stu-id="2b081-102">Collections and Data Structures</span></span>
 <span data-ttu-id="2b081-103">A menudo, los datos similares pueden controlarse de forma más eficaz si se almacenan y manipulan como si fuesen una colección.</span><span class="sxs-lookup"><span data-stu-id="2b081-103">Similar data can often be handled more efficiently when stored and manipulated as a collection.</span></span> <span data-ttu-id="2b081-104">Puede usar la clase <xref:System.Array?displayProperty=nameWithType> o las clases de los espacios de nombres <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> y System.Collections.Immutable para agregar, quitar y modificar elementos individuales o intervalos de elementos de una colección.</span><span class="sxs-lookup"><span data-stu-id="2b081-104">You can use the <xref:System.Array?displayProperty=nameWithType> class or the classes in the <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable namespaces to add, remove, and modify either individual elements or a range of elements in a collection.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584962"
 ---
 # <a name="timers"></a><span data-ttu-id="78361-102">Temporizadores</span><span class="sxs-lookup"><span data-stu-id="78361-102">Timers</span></span>
 <span data-ttu-id="78361-103">Los temporizadores son objetos pequeños que permiten especificar un delegado para llamarlo en un momento específico.</span><span class="sxs-lookup"><span data-stu-id="78361-103">Timers are lightweight objects that enable you to specify a delegate to be called at a specified time.</span></span> <span data-ttu-id="78361-104">Un subproceso del grupo realiza la operación de espera.</span><span class="sxs-lookup"><span data-stu-id="78361-104">A thread in the thread pool performs the wait operation.</span></span>  

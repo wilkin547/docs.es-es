@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580369"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a><span data-ttu-id="5e4e4-102">Cómo: Recorrer un árbol binario con tareas paralelas</span><span class="sxs-lookup"><span data-stu-id="5e4e4-102">How to: Traverse a Binary Tree with Parallel Tasks</span></span>
 <span data-ttu-id="5e4e4-103">En el ejemplo siguiente se muestran dos formas de usar las tareas paralelas para recorrer una estructura de datos en árbol.</span><span class="sxs-lookup"><span data-stu-id="5e4e4-103">The following example shows two ways in which parallel tasks can be used to traverse a tree data structure.</span></span> <span data-ttu-id="5e4e4-104">La creación del árbol se deja como un ejercicio.</span><span class="sxs-lookup"><span data-stu-id="5e4e4-104">The creation of the tree itself is left as an exercise.</span></span>  

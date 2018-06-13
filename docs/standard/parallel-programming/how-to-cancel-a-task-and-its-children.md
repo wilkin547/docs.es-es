@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580231"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a><span data-ttu-id="72c09-102">Cómo: Cancelar una tarea y sus elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="72c09-102">How to: Cancel a Task and Its Children</span></span>
 <span data-ttu-id="72c09-103">En estos ejemplos se muestra cómo realizar las tareas siguientes:</span><span class="sxs-lookup"><span data-stu-id="72c09-103">These examples show how to perform the following tasks:</span></span>  

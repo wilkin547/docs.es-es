@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579228"
 ---
 # <a name="implementing-resilient-entity-framework-core-sql-connections"></a><span data-ttu-id="5c547-103">Implementar conexiones SQL resistentes de Entity Framework Core</span><span class="sxs-lookup"><span data-stu-id="5c547-103">Implementing resilient Entity Framework Core SQL connections</span></span>
 

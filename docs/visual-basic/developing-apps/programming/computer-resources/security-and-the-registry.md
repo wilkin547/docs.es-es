@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583934"
 ---
 # <a name="security-and-the-registry-visual-basic"></a><span data-ttu-id="df46d-102">La seguridad y el Registro (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df46d-102">Security and the Registry (Visual Basic)</span></span>
 <span data-ttu-id="df46d-103">En esta página se describen las implicaciones de seguridad relativas al almacenamiento de datos en el Registro.</span><span class="sxs-lookup"><span data-stu-id="df46d-103">This page discusses the security implications of storing data in the registry.</span></span>  
