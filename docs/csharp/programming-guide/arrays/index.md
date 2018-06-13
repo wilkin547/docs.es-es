@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313506"
 ---
 # <a name="arrays-c-programming-guide"></a><span data-ttu-id="29a37-102">Matrices (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="29a37-102">Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="29a37-103">Puede almacenar varias variables del mismo tipo en una estructura de datos de matriz.</span><span class="sxs-lookup"><span data-stu-id="29a37-103">You can store multiple variables of the same type in an array data structure.</span></span> <span data-ttu-id="29a37-104">Puede declarar una matriz mediante la especificación del tipo de sus elementos.</span><span class="sxs-lookup"><span data-stu-id="29a37-104">You declare an array by specifying the type of its elements.</span></span>  

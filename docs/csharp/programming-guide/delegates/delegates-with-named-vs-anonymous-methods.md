@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330770"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a><span data-ttu-id="ab689-102">Delegados con métodos con nombre y Métodos anónimos (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="ab689-102">Delegates with Named vs. Anonymous Methods (C# Programming Guide)</span></span>
 <span data-ttu-id="ab689-103">Un [delegado](../../../csharp/language-reference/keywords/delegate.md) puede asociarse con un método con nombre.</span><span class="sxs-lookup"><span data-stu-id="ab689-103">A [delegate](../../../csharp/language-reference/keywords/delegate.md) can be associated with a named method.</span></span> <span data-ttu-id="ab689-104">Cuando crea una instancia de un delegado mediante un método con nombre, el método se pasa como un parámetro, por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="ab689-104">When you instantiate a delegate by using a named method, the method is passed as a parameter, for example:</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322993"
 ---
 # <a name="structs-c-programming-guide"></a><span data-ttu-id="0b491-102">Structs (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="0b491-102">Structs (C# Programming Guide)</span></span>
 <span data-ttu-id="0b491-103">Los structs se definen mediante la palabra clave [struct](../../../csharp/language-reference/keywords/struct.md), por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="0b491-103">Structs are defined by using the [struct](../../../csharp/language-reference/keywords/struct.md) keyword, for example:</span></span>  

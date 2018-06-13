@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313919"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a><span data-ttu-id="f0b89-102">Clases y miembros de clase abstractos y sellados (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="f0b89-102">Abstract and Sealed Classes and Class Members (C# Programming Guide)</span></span>
 <span data-ttu-id="f0b89-103">La palabra clave [abstract](../../../csharp/language-reference/keywords/abstract.md) permite crear clases y miembros [class](../../../csharp/language-reference/keywords/class.md) que están incompletos y se deben implementar en una clase derivada.</span><span class="sxs-lookup"><span data-stu-id="f0b89-103">The [abstract](../../../csharp/language-reference/keywords/abstract.md) keyword enables you to create classes and [class](../../../csharp/language-reference/keywords/class.md) members that are incomplete and must be implemented in a derived class.</span></span>  

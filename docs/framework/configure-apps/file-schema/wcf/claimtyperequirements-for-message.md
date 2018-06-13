@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754550"
 ---
 # <a name="ltclaimtyperequirementsgt-for-ltmessagegt"></a><span data-ttu-id="ab6e2-102">&lt;claimTypeRequirements&gt; para &lt;message&gt;</span><span class="sxs-lookup"><span data-stu-id="ab6e2-102">&lt;claimTypeRequirements&gt; for &lt;message&gt;</span></span>
 <span data-ttu-id="ab6e2-103">Especifica una colección de tipos de notificación requeridos.</span><span class="sxs-lookup"><span data-stu-id="ab6e2-103">Specifies a collection of required claim types.</span></span>  

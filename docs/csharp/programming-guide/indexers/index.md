@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334225"
 ---
 # <a name="indexers-c-programming-guide"></a><span data-ttu-id="9747f-102">Indizadores (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="9747f-102">Indexers (C# Programming Guide)</span></span>
 

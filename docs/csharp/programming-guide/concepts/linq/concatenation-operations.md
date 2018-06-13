@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323386"
 ---
 # <a name="concatenation-operations-c"></a><span data-ttu-id="aec24-102">Operaciones de concatenación (C#)</span><span class="sxs-lookup"><span data-stu-id="aec24-102">Concatenation Operations (C#)</span></span>
 <span data-ttu-id="aec24-103">La concatenación hace referencia a la operación de anexar una secuencia a otra.</span><span class="sxs-lookup"><span data-stu-id="aec24-103">Concatenation refers to the operation of appending one sequence to another.</span></span>  

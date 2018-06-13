@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324306"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a><span data-ttu-id="b4d27-102">Operaciones aritméticas en punteros (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="b4d27-102">Arithmetic Operations on Pointers (C# Programming Guide)</span></span>
 <span data-ttu-id="b4d27-103">En este tema se describe el uso de los operadores aritméticos `+` y **-** para manipular punteros.</span><span class="sxs-lookup"><span data-stu-id="b4d27-103">This topic discusses using the arithmetic operators `+` and **-** to manipulate pointers.</span></span>  

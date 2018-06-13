@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326503"
 ---
 # <a name="expression-trees-c"></a><span data-ttu-id="fc3f0-102">Árboles de expresión (C#)</span><span class="sxs-lookup"><span data-stu-id="fc3f0-102">Expression Trees (C#)</span></span>
 <span data-ttu-id="fc3f0-103">Los árboles de expresión representan el código en una estructura de datos en forma de árbol donde cada nodo es una expresión, por ejemplo, una llamada a método o una operación binaria como `x < y`.</span><span class="sxs-lookup"><span data-stu-id="fc3f0-103">Expression trees represent code in a tree-like data structure, where each node is an expression, for example, a method call or a binary operation such as `x < y`.</span></span>  

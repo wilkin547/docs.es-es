@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749974"
 ---
 # <a name="ltissuedtokenauthenticationgt-of-ltservicecredentialsgt"></a><span data-ttu-id="8db43-102">&lt;issuedTokenAuthentication&gt; de &lt;serviceCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="8db43-102">&lt;issuedTokenAuthentication&gt; of &lt;serviceCredentials&gt;</span></span>
 <span data-ttu-id="8db43-103">Especifica un token personalizado emitido como una credencial de servicio.</span><span class="sxs-lookup"><span data-stu-id="8db43-103">Specifies a custom token issued as a service credential.</span></span>  

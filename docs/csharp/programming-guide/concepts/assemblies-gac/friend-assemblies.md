@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320871"
 ---
 # <a name="friend-assemblies-c"></a><span data-ttu-id="2a895-102">Ensamblados de confianza (C#)</span><span class="sxs-lookup"><span data-stu-id="2a895-102">Friend Assemblies (C#)</span></span>
 <span data-ttu-id="2a895-103">Un *ensamblado de confianza* puede acceder a los tipos y miembros [internal](../../../../csharp/language-reference/keywords/internal.md) de otro ensamblado.</span><span class="sxs-lookup"><span data-stu-id="2a895-103">A *friend assembly* is an assembly that can access another assembly's [internal](../../../../csharp/language-reference/keywords/internal.md) types and members.</span></span> <span data-ttu-id="2a895-104">Si identifica un ensamblado como ensamblado de confianza, ya no hay que marcar los tipos y miembros como públicos para que otros ensamblados accedan a ellos.</span><span class="sxs-lookup"><span data-stu-id="2a895-104">If you identify an assembly as a friend assembly, you no longer have to mark types and members as public in order for them to be accessed by other assemblies.</span></span> <span data-ttu-id="2a895-105">Esto resulta especialmente útil en los siguientes escenarios:</span><span class="sxs-lookup"><span data-stu-id="2a895-105">This is especially convenient in the following scenarios:</span></span>  

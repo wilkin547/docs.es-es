@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314332"
 ---
 # <a name="fields-c-programming-guide"></a><span data-ttu-id="24cce-102">Campos (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="24cce-102">Fields (C# Programming Guide)</span></span>
 <span data-ttu-id="24cce-103">Un *campo* es una variable de cualquier tipo que se declara directamente en una [clase](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md).</span><span class="sxs-lookup"><span data-stu-id="24cce-103">A *field* is a variable of any type that is declared directly in a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md).</span></span> <span data-ttu-id="24cce-104">Los campos son *miembros* de su tipo contenedor.</span><span class="sxs-lookup"><span data-stu-id="24cce-104">Fields are *members* of their containing type.</span></span>  
