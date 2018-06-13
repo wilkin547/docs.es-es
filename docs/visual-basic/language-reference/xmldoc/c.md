@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599611"
 ---
 # <a name="ltcgt-visual-basic"></a>&lt;c&gt; (Visual Basic)
 Indica que el texto de una descripción es código.  

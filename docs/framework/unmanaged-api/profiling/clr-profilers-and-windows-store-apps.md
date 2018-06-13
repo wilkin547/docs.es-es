@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462291"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Los generadores de perfiles CLR y aplicaciones de la tienda de Windows
 En este tema se describe lo que debe pensar cuando herramientas de diagnóstico de escritura que analizan los administra el código que se ejecuta dentro de una aplicación de la tienda de Windows.  También proporciona instrucciones para modificar sus herramientas de desarrollo existentes, por lo que pueden seguir funcionando cuando se ejecutan en aplicaciones de la tienda de Windows.  Para entender esta información, es mejor que si está familiarizado con la API de generación de perfiles de Common Language en tiempo de ejecución, ya ha usado esta API en una herramienta de diagnóstico que se ejecuta correctamente en aplicaciones de escritorio de Windows y ahora está interesado en modificar la herramienta Para ejecutar correctamente en aplicaciones de la tienda de Windows.  

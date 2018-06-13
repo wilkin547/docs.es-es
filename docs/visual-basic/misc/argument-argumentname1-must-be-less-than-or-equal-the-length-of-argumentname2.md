@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599094"
 ---
 # <a name="argument-39ltargumentname1gt39-must-be-less-than-or-equal-the-length-of-argument-39ltargumentname2gt39"></a>Argumento &#39; &lt;nombreargumento1&gt; &#39; debe ser menor o igual la longitud del argumento &#39; &lt;nombreargumento2&gt;&#39;
 La longitud del argumento proporcionado supera la longitud del argumento que va a sustituir.  

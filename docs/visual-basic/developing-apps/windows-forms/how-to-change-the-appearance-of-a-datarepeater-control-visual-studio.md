@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590126"
 ---
 # <a name="how-to-change-the-appearance-of-a-datarepeater-control-visual-studio"></a>Cómo: Cambiar la apariencia de un control DataRepeater (Visual Studio)
 Puede cambiar la apariencia de un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control en tiempo de diseño estableciendo las propiedades o en tiempo de ejecución controlando el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> eventos.  

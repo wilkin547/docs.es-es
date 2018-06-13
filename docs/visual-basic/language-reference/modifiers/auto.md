@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595880"
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
 Especifica que Visual Basic debe calcular las referencias de cadenas según las reglas de .NET Framework basadas en el nombre externo del procedimiento externo que se declara.  

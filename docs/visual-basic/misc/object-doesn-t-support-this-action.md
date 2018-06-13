@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312214"
 ---
 # <a name="object-doesnt-support-this-action-visual-basic"></a>El objeto no acepta esta acción (Visual Basic)
 Ha hecho referencia a un método o una propiedad que no es compatible con este objeto.  

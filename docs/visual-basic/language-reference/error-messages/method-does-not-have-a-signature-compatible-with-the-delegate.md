@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593254"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>El método no tiene una firma compatible con el delegado
 Hay una incompatibilidad entre las firmas del método y el delegado que está intentando usar. La instrucción `Delegate` define los tipos de parámetro y los tipos de valores devueltos de una clase de delegado. Cualquier procedimiento que tenga parámetros coincidentes de tipos compatibles y que devuelven tipos se pueden utilizar para crear una instancia de este tipo de delegado.  

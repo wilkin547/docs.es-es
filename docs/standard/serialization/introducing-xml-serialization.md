@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592228"
 ---
 # <a name="introducing-xml-serialization"></a>Introducir la serialización XML
 La serialización es el proceso de convertir un objeto a un formulario que pueda transportarse fácilmente. Por ejemplo, puede serializar un objeto y transportarlo a través de Internet utilizando http entre un cliente y un servidor. El otro fin para el cual sirve es que la deserialización reconstruye el objeto desde la secuencia.  
