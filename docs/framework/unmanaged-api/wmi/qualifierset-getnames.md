@@ -1,11 +1,7 @@
 ---
-title: "Función QualifierSet_GetNames (referencia de API no administrada)"
-description: "La función QualifierSet_GetNames recupera los nombres de calificadores de un objeto o una propiedad."
+title: Función QualifierSet_GetNames (referencia de API no administrada)
+description: La función QualifierSet_GetNames recupera los nombres de calificadores de un objeto o una propiedad.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_GetNames
 api_location:
@@ -20,21 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6077b448c2644f68d12679cf208ee921c2af119a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b7c96439cf50c18e336baa70cf463b9463203290
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461183"
 ---
-# <a name="qualifiersetgetnames-function"></a><span data-ttu-id="48d7a-103">QualifierSet_GetNames (función)</span><span class="sxs-lookup"><span data-stu-id="48d7a-103">QualifierSet_GetNames function</span></span>
-<span data-ttu-id="48d7a-104">Recupera los nombres de todos los calificadores o de ciertos calificadores que están disponibles en el objeto actual o la propiedad.</span><span class="sxs-lookup"><span data-stu-id="48d7a-104">Retrieves the names of all the qualifiers or of certain qualifiers that are available from the current object or property.</span></span> 
+# <a name="qualifiersetgetnames-function"></a><span data-ttu-id="3fe30-103">QualifierSet_GetNames (función)</span><span class="sxs-lookup"><span data-stu-id="3fe30-103">QualifierSet_GetNames function</span></span>
+<span data-ttu-id="3fe30-104">Recupera los nombres de todos los calificadores o de ciertos calificadores que están disponibles en el objeto actual o la propiedad.</span><span class="sxs-lookup"><span data-stu-id="3fe30-104">Retrieves the names of all the qualifiers or of certain qualifiers that are available from the current object or property.</span></span> 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="48d7a-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="48d7a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3fe30-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="3fe30-105">Syntax</span></span>  
   
 ```  
 HRESULT QualifierSet_GetNames (
@@ -45,49 +39,49 @@ HRESULT QualifierSet_GetNames (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="48d7a-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="48d7a-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="3fe30-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="3fe30-106">Parameters</span></span>
 
 `vFunc`   
-<span data-ttu-id="48d7a-107">[in] Este parámetro no se utiliza.</span><span class="sxs-lookup"><span data-stu-id="48d7a-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="3fe30-107">[in] Este parámetro no se utiliza.</span><span class="sxs-lookup"><span data-stu-id="3fe30-107">[in] This parameter is unused.</span></span>
 
 `ptr`   
-<span data-ttu-id="48d7a-108">[in] Un puntero a un [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instancia.</span><span class="sxs-lookup"><span data-stu-id="48d7a-108">[in] A pointer to an [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instance.</span></span>
+<span data-ttu-id="3fe30-108">[in] Un puntero a un [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instancia.</span><span class="sxs-lookup"><span data-stu-id="3fe30-108">[in] A pointer to an [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instance.</span></span>
 
 `lFlags`   
-<span data-ttu-id="48d7a-109">[in] Uno de los siguientes indicadores o valores que especifica los nombres que desee incluir en la enumeración.</span><span class="sxs-lookup"><span data-stu-id="48d7a-109">[in] One of the following flags or values that specifies which names to include in the enumeration.</span></span>
+<span data-ttu-id="3fe30-109">[in] Uno de los siguientes indicadores o valores que especifica los nombres que desee incluir en la enumeración.</span><span class="sxs-lookup"><span data-stu-id="3fe30-109">[in] One of the following flags or values that specifies which names to include in the enumeration.</span></span>
 
-|<span data-ttu-id="48d7a-110">Constante</span><span class="sxs-lookup"><span data-stu-id="48d7a-110">Constant</span></span>  |<span data-ttu-id="48d7a-111">Valor</span><span class="sxs-lookup"><span data-stu-id="48d7a-111">Value</span></span>  |<span data-ttu-id="48d7a-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="48d7a-112">Description</span></span>  |
+|<span data-ttu-id="3fe30-110">Constante</span><span class="sxs-lookup"><span data-stu-id="3fe30-110">Constant</span></span>  |<span data-ttu-id="3fe30-111">Valor</span><span class="sxs-lookup"><span data-stu-id="3fe30-111">Value</span></span>  |<span data-ttu-id="3fe30-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="3fe30-112">Description</span></span>  |
 |---------|---------|---------|
-|  | <span data-ttu-id="48d7a-113">0</span><span class="sxs-lookup"><span data-stu-id="48d7a-113">0</span></span> | <span data-ttu-id="48d7a-114">Devolver los nombres de todos los calificadores.</span><span class="sxs-lookup"><span data-stu-id="48d7a-114">Return the names of all qualifiers.</span></span> |
-| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="48d7a-115">0 x 10</span><span class="sxs-lookup"><span data-stu-id="48d7a-115">0x10</span></span> | <span data-ttu-id="48d7a-116">Devolver solo los nombres de calificadores específicos que el objeto o la propiedad actual.</span><span class="sxs-lookup"><span data-stu-id="48d7a-116">Return only the names of qualifiers specific to the current property or object.</span></span> <br/> <span data-ttu-id="48d7a-117">Para una propiedad: devolver solo los calificadores específicos a la propiedad (incluidas las invalidaciones) y no los calificadores se propagan desde la definición de clase.</span><span class="sxs-lookup"><span data-stu-id="48d7a-117">For a property: Return only the qualifiers specific to the property (including overrides), and not those qualifiers propagated from the class definition.</span></span> <br/> <span data-ttu-id="48d7a-118">Para una instancia: devolver solo los nombres de calificador de específicos de la instancia.</span><span class="sxs-lookup"><span data-stu-id="48d7a-118">For an instance: Return only instance-specific qualifier names.</span></span> <br/> <span data-ttu-id="48d7a-119">Para una clase: devolver solo calificadores específicos a la beiong de la clase derivada.</span><span class="sxs-lookup"><span data-stu-id="48d7a-119">For a class: Return only qualifiers specific to the class beiong derived.</span></span>
-|`WBEM_FLAG_PROPAGATED_ONLY` | <span data-ttu-id="48d7a-120">0 x 20</span><span class="sxs-lookup"><span data-stu-id="48d7a-120">0x20</span></span> | <span data-ttu-id="48d7a-121">Devuelve solo los nombres de calificadores propagan de otro objeto.</span><span class="sxs-lookup"><span data-stu-id="48d7a-121">Return only the names of qualifiers propagated from another object.</span></span> <br/> <span data-ttu-id="48d7a-122">Para una propiedad: devuelven solo los calificadores se propagan a esta propiedad en la definición de clase y no los de la propiedad en Sí.</span><span class="sxs-lookup"><span data-stu-id="48d7a-122">For a property: Return only the qualifiers propagated to this property from the class definition, and not those from the property itself.</span></span> <br/> <span data-ttu-id="48d7a-123">Para una instancia: devolución propagan sólo los calificadores de la definición de clase.</span><span class="sxs-lookup"><span data-stu-id="48d7a-123">For an instance: Return only those qualifiers propagated from the class definition.</span></span> <br/> <span data-ttu-id="48d7a-124">Para una clase: devolver sólo los nombres de calificador que se heredaron de las clases principales.</span><span class="sxs-lookup"><span data-stu-id="48d7a-124">For a class: Return only those qualifier names inherited from the parent classes.</span></span> |
+|  | <span data-ttu-id="3fe30-113">0</span><span class="sxs-lookup"><span data-stu-id="3fe30-113">0</span></span> | <span data-ttu-id="3fe30-114">Devolver los nombres de todos los calificadores.</span><span class="sxs-lookup"><span data-stu-id="3fe30-114">Return the names of all qualifiers.</span></span> |
+| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="3fe30-115">0 x 10</span><span class="sxs-lookup"><span data-stu-id="3fe30-115">0x10</span></span> | <span data-ttu-id="3fe30-116">Devolver solo los nombres de calificadores específicos que el objeto o la propiedad actual.</span><span class="sxs-lookup"><span data-stu-id="3fe30-116">Return only the names of qualifiers specific to the current property or object.</span></span> <br/> <span data-ttu-id="3fe30-117">Para una propiedad: devolver solo los calificadores específicos a la propiedad (incluidas las invalidaciones) y no los calificadores se propagan desde la definición de clase.</span><span class="sxs-lookup"><span data-stu-id="3fe30-117">For a property: Return only the qualifiers specific to the property (including overrides), and not those qualifiers propagated from the class definition.</span></span> <br/> <span data-ttu-id="3fe30-118">Para una instancia: devolver solo los nombres de calificador de específicos de la instancia.</span><span class="sxs-lookup"><span data-stu-id="3fe30-118">For an instance: Return only instance-specific qualifier names.</span></span> <br/> <span data-ttu-id="3fe30-119">Para una clase: devolver solo calificadores específicos a la beiong de la clase derivada.</span><span class="sxs-lookup"><span data-stu-id="3fe30-119">For a class: Return only qualifiers specific to the class beiong derived.</span></span>
+|`WBEM_FLAG_PROPAGATED_ONLY` | <span data-ttu-id="3fe30-120">0 x 20</span><span class="sxs-lookup"><span data-stu-id="3fe30-120">0x20</span></span> | <span data-ttu-id="3fe30-121">Devuelve solo los nombres de calificadores propagan de otro objeto.</span><span class="sxs-lookup"><span data-stu-id="3fe30-121">Return only the names of qualifiers propagated from another object.</span></span> <br/> <span data-ttu-id="3fe30-122">Para una propiedad: devuelven solo los calificadores se propagan a esta propiedad en la definición de clase y no los de la propiedad en Sí.</span><span class="sxs-lookup"><span data-stu-id="3fe30-122">For a property: Return only the qualifiers propagated to this property from the class definition, and not those from the property itself.</span></span> <br/> <span data-ttu-id="3fe30-123">Para una instancia: devolución propagan sólo los calificadores de la definición de clase.</span><span class="sxs-lookup"><span data-stu-id="3fe30-123">For an instance: Return only those qualifiers propagated from the class definition.</span></span> <br/> <span data-ttu-id="3fe30-124">Para una clase: devolver sólo los nombres de calificador que se heredaron de las clases principales.</span><span class="sxs-lookup"><span data-stu-id="3fe30-124">For a class: Return only those qualifier names inherited from the parent classes.</span></span> |
 
-<span data-ttu-id="48d7a-125">`pstrNames`[out] Un nuevo `SAFEARRAY` que contiene los nombres solicitados.</span><span class="sxs-lookup"><span data-stu-id="48d7a-125">`pstrNames` [out] A new `SAFEARRAY` that contains the requested names.</span></span> <span data-ttu-id="48d7a-126">La matriz puede tener 0 elementos.</span><span class="sxs-lookup"><span data-stu-id="48d7a-126">The array can have 0 elements.</span></span> <span data-ttu-id="48d7a-127">Si se produce un error, un nuevo `SAFEARRAY` no se devuelve.</span><span class="sxs-lookup"><span data-stu-id="48d7a-127">If an error occurs, a new `SAFEARRAY` is not returned.</span></span>
+<span data-ttu-id="3fe30-125">`pstrNames` [out] Un nuevo `SAFEARRAY` que contiene los nombres solicitados.</span><span class="sxs-lookup"><span data-stu-id="3fe30-125">`pstrNames` [out] A new `SAFEARRAY` that contains the requested names.</span></span> <span data-ttu-id="3fe30-126">La matriz puede tener 0 elementos.</span><span class="sxs-lookup"><span data-stu-id="3fe30-126">The array can have 0 elements.</span></span> <span data-ttu-id="3fe30-127">Si se produce un error, un nuevo `SAFEARRAY` no se devuelve.</span><span class="sxs-lookup"><span data-stu-id="3fe30-127">If an error occurs, a new `SAFEARRAY` is not returned.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="48d7a-128">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="48d7a-128">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="3fe30-128">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="3fe30-128">Return value</span></span>
 
-<span data-ttu-id="48d7a-129">Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, o bien puede definirlas como constantes en el código:</span><span class="sxs-lookup"><span data-stu-id="48d7a-129">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="3fe30-129">Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, o bien puede definirlas como constantes en el código:</span><span class="sxs-lookup"><span data-stu-id="3fe30-129">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="48d7a-130">Constante</span><span class="sxs-lookup"><span data-stu-id="48d7a-130">Constant</span></span>  |<span data-ttu-id="48d7a-131">Valor</span><span class="sxs-lookup"><span data-stu-id="48d7a-131">Value</span></span>  |<span data-ttu-id="48d7a-132">Descripción</span><span class="sxs-lookup"><span data-stu-id="48d7a-132">Description</span></span>  |
+|<span data-ttu-id="3fe30-130">Constante</span><span class="sxs-lookup"><span data-stu-id="3fe30-130">Constant</span></span>  |<span data-ttu-id="3fe30-131">Valor</span><span class="sxs-lookup"><span data-stu-id="3fe30-131">Value</span></span>  |<span data-ttu-id="3fe30-132">Descripción</span><span class="sxs-lookup"><span data-stu-id="3fe30-132">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="48d7a-133">0 x 80041008</span><span class="sxs-lookup"><span data-stu-id="48d7a-133">0x80041008</span></span> | <span data-ttu-id="48d7a-134">Un parámetro no es válido.</span><span class="sxs-lookup"><span data-stu-id="48d7a-134">A parameter is not valid.</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="48d7a-135">0 x 80041006</span><span class="sxs-lookup"><span data-stu-id="48d7a-135">0x80041006</span></span> | <span data-ttu-id="48d7a-136">No hay suficiente memoria disponible para iniciar una nueva enumeración.</span><span class="sxs-lookup"><span data-stu-id="48d7a-136">Not enough memory is available to begin a new enumeration.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="48d7a-137">0</span><span class="sxs-lookup"><span data-stu-id="48d7a-137">0</span></span> | <span data-ttu-id="48d7a-138">La llamada de función tuvo éxito.</span><span class="sxs-lookup"><span data-stu-id="48d7a-138">The function call was successful.</span></span>  |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="3fe30-133">0 x 80041008</span><span class="sxs-lookup"><span data-stu-id="3fe30-133">0x80041008</span></span> | <span data-ttu-id="3fe30-134">Un parámetro no es válido.</span><span class="sxs-lookup"><span data-stu-id="3fe30-134">A parameter is not valid.</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="3fe30-135">0 x 80041006</span><span class="sxs-lookup"><span data-stu-id="3fe30-135">0x80041006</span></span> | <span data-ttu-id="3fe30-136">No hay suficiente memoria disponible para iniciar una nueva enumeración.</span><span class="sxs-lookup"><span data-stu-id="3fe30-136">Not enough memory is available to begin a new enumeration.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="3fe30-137">0</span><span class="sxs-lookup"><span data-stu-id="3fe30-137">0</span></span> | <span data-ttu-id="3fe30-138">La llamada de función tuvo éxito.</span><span class="sxs-lookup"><span data-stu-id="3fe30-138">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="48d7a-139">Comentarios</span><span class="sxs-lookup"><span data-stu-id="48d7a-139">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="3fe30-139">Comentarios</span><span class="sxs-lookup"><span data-stu-id="3fe30-139">Remarks</span></span>
 
-<span data-ttu-id="48d7a-140">Esta función contiene una llamada a la [IWbemQualifierSet::GetNames](https://msdn.microsoft.com/library/aa391868(v=vs.85).aspx) método.</span><span class="sxs-lookup"><span data-stu-id="48d7a-140">This function wraps a call to the [IWbemQualifierSet::GetNames](https://msdn.microsoft.com/library/aa391868(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="3fe30-140">Esta función contiene una llamada a la [IWbemQualifierSet::GetNames](https://msdn.microsoft.com/library/aa391868(v=vs.85).aspx) método.</span><span class="sxs-lookup"><span data-stu-id="3fe30-140">This function wraps a call to the [IWbemQualifierSet::GetNames](https://msdn.microsoft.com/library/aa391868(v=vs.85).aspx) method.</span></span>
 
-<span data-ttu-id="48d7a-141">Una vez que haya recuperado los nombres de calificador, se puede tener acceso a cada calificador por su nombre mediante una llamada a la [QualifierSet_Get](qualifierset-get.md) (función).</span><span class="sxs-lookup"><span data-stu-id="48d7a-141">Once you've retrieved the qualifier names, you can access each qualifier by name by calling the [QualifierSet_Get](qualifierset-get.md) function.</span></span> 
+<span data-ttu-id="3fe30-141">Una vez que haya recuperado los nombres de calificador, se puede tener acceso a cada calificador por su nombre mediante una llamada a la [QualifierSet_Get](qualifierset-get.md) (función).</span><span class="sxs-lookup"><span data-stu-id="3fe30-141">Once you've retrieved the qualifier names, you can access each qualifier by name by calling the [QualifierSet_Get](qualifierset-get.md) function.</span></span> 
 
-<span data-ttu-id="48d7a-142">No es un error de un determinado objeto de tener cero calificadores, por lo que el número de cadenas en `pstrNames` en el valor devuelto puede ser 0, incluso si la función devuelve `WBEM_S_NO_ERROR`.</span><span class="sxs-lookup"><span data-stu-id="48d7a-142">It is not an error for a given object to have zero qualifiers, so the number of strings in `pstrNames` on return can be 0, even though the function returns `WBEM_S_NO_ERROR`.</span></span>
+<span data-ttu-id="3fe30-142">No es un error de un determinado objeto de tener cero calificadores, por lo que el número de cadenas en `pstrNames` en el valor devuelto puede ser 0, incluso si la función devuelve `WBEM_S_NO_ERROR`.</span><span class="sxs-lookup"><span data-stu-id="3fe30-142">It is not an error for a given object to have zero qualifiers, so the number of strings in `pstrNames` on return can be 0, even though the function returns `WBEM_S_NO_ERROR`.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="48d7a-143">Requisitos</span><span class="sxs-lookup"><span data-stu-id="48d7a-143">Requirements</span></span>  
- <span data-ttu-id="48d7a-144">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="48d7a-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3fe30-143">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3fe30-143">Requirements</span></span>  
+ <span data-ttu-id="3fe30-144">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3fe30-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="48d7a-145">**Encabezado:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="48d7a-145">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="3fe30-145">**Encabezado:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="3fe30-145">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="48d7a-146">**Versiones de .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="48d7a-146">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="3fe30-146">**Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="3fe30-146">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48d7a-147">Vea también</span><span class="sxs-lookup"><span data-stu-id="48d7a-147">See also</span></span>  
-[<span data-ttu-id="48d7a-148">WMI y contadores de rendimiento (referencia de API no administrada)</span><span class="sxs-lookup"><span data-stu-id="48d7a-148">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="3fe30-147">Vea también</span><span class="sxs-lookup"><span data-stu-id="3fe30-147">See also</span></span>  
+[<span data-ttu-id="3fe30-148">WMI y contadores de rendimiento (referencia de API no administrada)</span><span class="sxs-lookup"><span data-stu-id="3fe30-148">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

@@ -1,39 +1,28 @@
 ---
 title: 3390 - ClientSendPreambleStop
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fbf6e4ed-8538-417e-b4d1-a30b45ee6b5d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 413e075f2cd391cba3bf0cc15be2a664aa8a7eb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ae0d6a630d8ab0e39ed85155e4d458132a96addc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33463808"
 ---
-# <a name="3390---clientsendpreamblestop"></a><span data-ttu-id="61920-102">3390 - ClientSendPreambleStop</span><span class="sxs-lookup"><span data-stu-id="61920-102">3390 - ClientSendPreambleStop</span></span>
-## <a name="properties"></a><span data-ttu-id="61920-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="61920-103">Properties</span></span>  
+# <a name="3390---clientsendpreamblestop"></a><span data-ttu-id="880de-102">3390 - ClientSendPreambleStop</span><span class="sxs-lookup"><span data-stu-id="880de-102">3390 - ClientSendPreambleStop</span></span>
+## <a name="properties"></a><span data-ttu-id="880de-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="880de-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="61920-104">Id.</span><span class="sxs-lookup"><span data-stu-id="61920-104">ID</span></span>|<span data-ttu-id="61920-105">3390</span><span class="sxs-lookup"><span data-stu-id="61920-105">3390</span></span>|  
-|<span data-ttu-id="61920-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="61920-106">Keywords</span></span>|<span data-ttu-id="61920-107">Canal</span><span class="sxs-lookup"><span data-stu-id="61920-107">Channel</span></span>|  
-|<span data-ttu-id="61920-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="61920-108">Level</span></span>|<span data-ttu-id="61920-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="61920-109">Verbose</span></span>|  
-|<span data-ttu-id="61920-110">Canal</span><span class="sxs-lookup"><span data-stu-id="61920-110">Channel</span></span>|<span data-ttu-id="61920-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="61920-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="880de-104">Id.</span><span class="sxs-lookup"><span data-stu-id="880de-104">ID</span></span>|<span data-ttu-id="880de-105">3390</span><span class="sxs-lookup"><span data-stu-id="880de-105">3390</span></span>|  
+|<span data-ttu-id="880de-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="880de-106">Keywords</span></span>|<span data-ttu-id="880de-107">Canal</span><span class="sxs-lookup"><span data-stu-id="880de-107">Channel</span></span>|  
+|<span data-ttu-id="880de-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="880de-108">Level</span></span>|<span data-ttu-id="880de-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="880de-109">Verbose</span></span>|  
+|<span data-ttu-id="880de-110">Canal</span><span class="sxs-lookup"><span data-stu-id="880de-110">Channel</span></span>|<span data-ttu-id="880de-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="880de-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="61920-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="61920-112">Description</span></span>  
- <span data-ttu-id="61920-113">Este evento se genera cuando se detiene del envío de preámbulos por parte de cliente.</span><span class="sxs-lookup"><span data-stu-id="61920-113">This event is emitted on the client sending preamble stop.</span></span>  
+## <a name="description"></a><span data-ttu-id="880de-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="880de-112">Description</span></span>  
+ <span data-ttu-id="880de-113">Este evento se genera cuando se detiene del envío de preámbulos por parte de cliente.</span><span class="sxs-lookup"><span data-stu-id="880de-113">This event is emitted on the client sending preamble stop.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="61920-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="61920-114">Message</span></span>  
- <span data-ttu-id="61920-115">Cliente enviando la detención del preámbulo.</span><span class="sxs-lookup"><span data-stu-id="61920-115">Client sending preamble stop.</span></span>  
+## <a name="message"></a><span data-ttu-id="880de-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="880de-114">Message</span></span>  
+ <span data-ttu-id="880de-115">Cliente enviando la detención del preámbulo.</span><span class="sxs-lookup"><span data-stu-id="880de-115">Client sending preamble stop.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="61920-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="61920-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="880de-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="880de-116">Details</span></span>

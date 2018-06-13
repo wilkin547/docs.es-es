@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172040"
 ---
 # <a name="this-c-reference"></a><span data-ttu-id="ce1e9-103">this (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="ce1e9-103">this (C# Reference)</span></span>
 <span data-ttu-id="ce1e9-104">La palabra clave `this` hace referencia a la instancia actual de la clase y también se usa como modificador del primer parámetro de un método de extensión.</span><span class="sxs-lookup"><span data-stu-id="ce1e9-104">The `this` keyword refers to the current instance of the class and is also used as a modifier of the first parameter of an extension method.</span></span>  
