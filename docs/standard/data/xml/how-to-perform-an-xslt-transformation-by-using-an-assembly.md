@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569508"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a><span data-ttu-id="88503-102">Cómo realizar una transformación XSLT mediante un ensamblado</span><span class="sxs-lookup"><span data-stu-id="88503-102">How to: Perform an XSLT Transformation by Using an Assembly</span></span>
 <span data-ttu-id="88503-103">El compilador XSLT (xsltc.exe) compila hojas de estilo XSLT y genera un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="88503-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="88503-104">Dicho ensamblado se puede pasar directamente al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="88503-104">The assembly can be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span>  

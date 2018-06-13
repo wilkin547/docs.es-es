@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759769"
 ---
 # <a name="loading-a-dataset-from-xml"></a><span data-ttu-id="41435-102">Cargar un conjunto de datos desde XML</span><span class="sxs-lookup"><span data-stu-id="41435-102">Loading a DataSet from XML</span></span>
 <span data-ttu-id="41435-103">Es posible crear el contenido de un <xref:System.Data.DataSet> de ADO.NET a partir de una secuencia o de un documento XML.</span><span class="sxs-lookup"><span data-stu-id="41435-103">The contents of an ADO.NET <xref:System.Data.DataSet> can be created from an XML stream or document.</span></span> <span data-ttu-id="41435-104">Además, con .NET Framework se dispone de una gran flexibilidad sobre qué información se carga desde XML y cómo se crea el esquema o la estructura relacional del <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="41435-104">In addition, with the .NET Framework you have great flexibility over what information is loaded from XML, and how the schema or relational structure of the <xref:System.Data.DataSet> is created.</span></span>  
