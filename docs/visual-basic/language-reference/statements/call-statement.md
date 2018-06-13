@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603397"
 ---
 # <a name="call-statement-visual-basic"></a>Call (Instrucción, Visual Basic)
 Transfiere el control a un `Function`, `Sub`, o un procedimiento de biblioteca de vínculos dinámicos (DLL).  

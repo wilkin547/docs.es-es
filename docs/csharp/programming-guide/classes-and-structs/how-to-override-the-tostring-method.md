@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330712"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Cómo: Invalidar el método ToString (Guía de programación de C#)
 Cada clase o struct de C# hereda implícitamente la clase <xref:System.Object>. Por consiguiente, cada objeto de C# obtiene el método <xref:System.Object.ToString%2A>, que devuelve una representación de cadena de ese objeto. Por ejemplo, todas las variables de tipo `int` tienen un método `ToString`, que las habilita para devolver su contenido como cadena:  

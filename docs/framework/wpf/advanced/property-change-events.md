@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547656"
 ---
 # <a name="property-change-events"></a>Eventos de cambio de propiedades
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] define varios eventos que se producen como respuesta a un cambio en el valor de una propiedad. A menudo, la propiedad es una propiedad de dependencia. A veces, el propio evento es un evento enrutado y, otras, es un evento [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] estándar. La definición del evento varía según el escenario, porque algunos cambios de propiedad deben enrutarse a través de un árbol de elementos, mientras que otros cambios de propiedad, generalmente, solo son de interés para el objeto en el que se modifica la propiedad.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320149"
 ---
 # <a name="how-to-parse-a-string-c"></a>Cómo: Analizar una cadena (C#)
 En este tema se muestra cómo analizar una cadena para crear un árbol XML en C#.  

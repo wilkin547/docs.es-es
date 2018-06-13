@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333058"
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Archivo XML de ejemplo: Configuración de prueba en un espacio de nombres
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Se trata de un archivo de configuración de pruebas. El XML se encuentra en un espacio de nombres.  

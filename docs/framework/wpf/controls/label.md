@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553733"
 ---
 # <a name="label"></a>Etiqueta
 <xref:System.Windows.Controls.Label> controles suelen proporcionan información en el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Históricamente, un <xref:System.Windows.Controls.Label> sólo contenía texto, sin embargo, dado el <xref:System.Windows.Controls.Label> que se distribuye con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] es un <xref:System.Windows.Controls.ContentControl>, puede contener cualquier texto o un <xref:System.Windows.UIElement>.  

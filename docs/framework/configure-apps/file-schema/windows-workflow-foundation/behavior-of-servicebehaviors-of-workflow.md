@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757975"
 ---
 # <a name="ltbehaviorgt-of-ltservicebehaviorsgt-of-workflow"></a>&lt;comportamiento&gt; de &lt;serviceBehaviors&gt; de flujo de trabajo
 El **comportamiento** elemento contiene una colección de valores para el comportamiento de un servicio. Cada comportamiento se indiza por su **nombre**. Servicios pueden vincularse a cada comportamiento a través de este nombre mediante la **behaviorConfiguration**atributo de la [ \<extremo >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento. De esta forma, los puntos de conexión pueden compartir configuraciones de comportamientos comunes sin volver a definir la configuración.  

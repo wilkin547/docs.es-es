@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327517"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-c"></a>Cómo: Crear una jerarquía mediante la agrupación (C#)
 Este ejemplo muestra cómo agrupar datos y después generar XML basado en la agrupación.  

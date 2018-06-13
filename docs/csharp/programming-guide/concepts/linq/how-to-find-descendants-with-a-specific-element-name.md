@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320237"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Cómo: Buscar descendientes con un nombre de elemento específico (C#)
 A veces, desea encontrar todos los descendientes con un nombre determinado. Podría escribir código para procesar una iteración en todos los descendientes, pero es más fácil usar el eje <xref:System.Xml.Linq.XContainer.Descendants%2A>.  

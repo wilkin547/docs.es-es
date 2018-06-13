@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321878"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Cómo: Usar argumentos opcionales y con nombre en la programación de Office (Guía de programación de C#)
 Los argumentos con nombre y los argumentos opcionales, introducidos en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], mejoran la comodidad, la flexibilidad y la legibilidad en la programación de C#. Además, estas características facilitan enormemente el acceso a interfaces COM, como las API de automatización de Microsoft Office.  

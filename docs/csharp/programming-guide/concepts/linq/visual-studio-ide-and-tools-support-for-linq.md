@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330725"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>Compatibilidad del IDE y las herramientas de Visual Studio con LINQ (C#)
 El entorno de desarrollo integrado (IDE) de Visual Studio proporciona las siguientes características que admiten el desarrollo de aplicaciones de LINQ:  

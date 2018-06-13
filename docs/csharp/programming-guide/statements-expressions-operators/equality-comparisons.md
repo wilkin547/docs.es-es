@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335253"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Comparaciones de igualdad (Guía de programación de C#)
 A veces es necesario comparar si dos valores son iguales. En algunos casos, se prueba la *igualdad de valores*, también denominada *equivalencia*, lo que significa que los valores contenidos en las dos variables son iguales. En otros casos, hay que determinar si dos variables hacen referencia al mismo objeto subyacente de la memoria. Este tipo de igualdad se denomina *igualdad de referencia* o *identidad*. En este tema se describen estos dos tipos de igualdad y se proporcionan vínculos a otros temas para obtener más información.  

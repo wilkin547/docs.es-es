@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320871"
 ---
 # <a name="friend-assemblies-c"></a>Ensamblados de confianza (C#)
 Un *ensamblado de confianza* puede acceder a los tipos y miembros [internal](../../../../csharp/language-reference/keywords/internal.md) de otro ensamblado. Si identifica un ensamblado como ensamblado de confianza, ya no hay que marcar los tipos y miembros como públicos para que otros ensamblados accedan a ellos. Esto resulta especialmente útil en los siguientes escenarios:  

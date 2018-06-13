@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328180"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Cómo: Rellenar un árbol XML desde el sistema de archivos (C#)
 Una aplicación habitual y útil de los árboles XML es un almacén de datos de nombres y valores jerárquicos. Puede rellenar un árbol XML con datos jerárquicos y, a continuación, consultarlo, transformarlo y, si es necesario, serializarlo. En este escenario de uso, gran parte de la semántica específica XML (por ejemplo, el comportamiento de los espacios en blanco y los espacios de nombres) no es importante. En su lugar, usará el árbol XML como una base de datos jerárquica, pequeña y en memoria, de usuario único.  

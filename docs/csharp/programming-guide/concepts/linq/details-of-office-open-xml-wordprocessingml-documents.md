@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326724"
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-c"></a>Detalles de los documentos de WordprocessingML de Office Open XML (C#)
 Esta sección proporciona información acerca de los detalles de los documentos WordprocessingML XML abierto de Office. Muestra ejemplos de las partes de documento y estilo de un documento XML abierto.  

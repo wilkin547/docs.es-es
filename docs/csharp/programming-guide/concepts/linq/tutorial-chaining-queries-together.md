@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323715"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>Tutorial: encadenar cadenas juntas (C#)
 Este tutorial ilustra el modelo de procesamiento que se usa al encadenar cadenas conjuntamente. Encadenar cadenas conjuntamente constituye una parte clave de escribir transformaciones funcionales. Es importante entender exactamente cómo funciona el encadenamiento de consultas.  

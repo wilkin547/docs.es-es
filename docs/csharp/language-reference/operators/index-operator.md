@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286034"
 ---
 # <a name="-operator-c-reference"></a>Operador [] (Referencia de C#)
 Los corchetes (`[]`) se usan para matrices, indexadores y atributos. También se pueden usar con punteros.  

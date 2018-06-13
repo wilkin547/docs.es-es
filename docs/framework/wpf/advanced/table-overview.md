@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549375"
 ---
 # <a name="table-overview"></a>Información general sobre tablas
 <xref:System.Windows.Documents.Table> es un elemento de nivel de bloque que admite presentación basada en cuadrícula de flujo de contenido del documento. La flexibilidad de este elemento lo hace muy útil, pero también más complicado de entender y usar correctamente.  

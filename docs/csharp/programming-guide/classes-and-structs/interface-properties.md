@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325414"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Propiedades de interfaces (Guía de programación de C#)
 Las propiedades se pueden declarar en una [interfaz](../../../csharp/language-reference/keywords/interface.md). A continuación tiene un ejemplo de un descriptor de acceso de indexador de interfaz:  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548356"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>Tutorial: Crear su primera aplicación táctil
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite que las aplicaciones responder a la entrada táctil. Por ejemplo, puede interactuar con una aplicación mediante el uso de uno o más dedos en un dispositivo táctil, como una pantalla táctil que este tutorial crea una aplicación que permite al usuario mover, cambiar el tamaño o girar un solo objeto usando el toque.  

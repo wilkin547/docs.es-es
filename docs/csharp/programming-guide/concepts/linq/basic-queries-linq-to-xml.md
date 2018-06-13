@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320777"
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Consultas básicas (LINQ to XML) (C#)
 En esta sección se ofrecen ejemplos de consultas básicas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

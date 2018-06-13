@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317848"
 ---
 # <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>Cómo: Recuperar una colección de atributos (LINQ to XML) (C#)
 En este tema se presenta el método <xref:System.Xml.Linq.XElement.Attributes%2A>. Este método recupera los atributos de un elemento.  

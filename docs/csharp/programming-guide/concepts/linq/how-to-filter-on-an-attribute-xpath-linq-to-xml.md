@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326123"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Cómo: Filtrar por un atributo (XPath-LINQ to XML) (C#)
 Este tema muestra cómo obtener los elementos descendientes con un nombre especificado y con un atributo con un valor especificado.  
