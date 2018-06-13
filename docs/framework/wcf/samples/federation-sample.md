@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806853"
 ---
 # <a name="federation-sample"></a><span data-ttu-id="d34ab-102">Ejemplo de federación</span><span class="sxs-lookup"><span data-stu-id="d34ab-102">Federation Sample</span></span>
 <span data-ttu-id="d34ab-103">Este ejemplo muestra la seguridad aliada.</span><span class="sxs-lookup"><span data-stu-id="d34ab-103">This sample demonstrates federated security.</span></span>  

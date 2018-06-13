@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810088"
 ---
 # <a name="advanced-error-handling"></a><span data-ttu-id="17ec2-102">Control de errores avanzado</span><span class="sxs-lookup"><span data-stu-id="17ec2-102">Advanced Error Handling</span></span>
 <span data-ttu-id="17ec2-103">Este ejemplo muestra el servicio de enrutamiento de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="17ec2-103">This sample demonstrates the Windows Communication Foundation (WCF) routing service.</span></span> <span data-ttu-id="17ec2-104">El servicio de enrutamiento es un componente WCF que facilita el proceso incluir un enrutador basado en contenido en la aplicación.</span><span class="sxs-lookup"><span data-stu-id="17ec2-104">The routing service is a WCF component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="17ec2-105">Este ejemplo muestra el modo en que el servicio de enrutamiento se recupera de los errores de forma inteligente, utilizando transacciones y otros conceptos de mensajería más complejos, como la multidifusión.</span><span class="sxs-lookup"><span data-stu-id="17ec2-105">This sample shows how the routing service intelligently recovers from errors, using transactions and other more complex messaging concepts such as multicasting.</span></span>  

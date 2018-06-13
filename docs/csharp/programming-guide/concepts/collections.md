@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549625"
 ---
 # <a name="collections-c"></a><span data-ttu-id="6611b-102">Colecciones (C#)</span><span class="sxs-lookup"><span data-stu-id="6611b-102">Collections (C#)</span></span>
 <span data-ttu-id="6611b-103">Para muchas aplicaciones, puede que desee crear y administrar grupos de objetos relacionados.</span><span class="sxs-lookup"><span data-stu-id="6611b-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="6611b-104">Existen dos formas de agrupar objetos: mediante la creación de matrices de objetos y con la creación de colecciones de objetos.</span><span class="sxs-lookup"><span data-stu-id="6611b-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>  

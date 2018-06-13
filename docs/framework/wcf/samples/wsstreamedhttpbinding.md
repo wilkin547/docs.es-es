@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807181"
 ---
 # <a name="wsstreamedhttpbinding"></a><span data-ttu-id="db4a5-102">WSStreamedHttpBinding</span><span class="sxs-lookup"><span data-stu-id="db4a5-102">WSStreamedHttpBinding</span></span>
 <span data-ttu-id="db4a5-103">El ejemplo muestra cómo crear un enlace diseñado para admitir escenarios de transmisión por secuencias cuando se usa el transporte HTTP.</span><span class="sxs-lookup"><span data-stu-id="db4a5-103">The sample demonstrates how to create a binding that is designed to support streaming scenarios when the HTTP transport is used.</span></span>  

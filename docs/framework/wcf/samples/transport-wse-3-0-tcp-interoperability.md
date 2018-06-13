@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808017"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a><span data-ttu-id="b08b1-102">Transporte: interoperabilidad de WSE 3.0 TCP</span><span class="sxs-lookup"><span data-stu-id="b08b1-102">Transport: WSE 3.0 TCP Interoperability</span></span>
 <span data-ttu-id="b08b1-103">El ejemplo de transporte de interoperabilidad de WSE 3.0 TCP muestra cómo implementar una sesión dúplex TCP como un transporte personalizado de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="b08b1-103">The WSE 3.0 TCP Interoperability Transport sample demonstrates how to implement a TCP duplex session as a custom Windows Communication Foundation (WCF) transport.</span></span> <span data-ttu-id="b08b1-104">También muestra cómo puede utilizar la extensibilidad de la capa del canal para comunicarse a través de la conexión con sistemas que ya estén implementados.</span><span class="sxs-lookup"><span data-stu-id="b08b1-104">It also demonstrates how you can use the extensibility of the channel layer to interface over the wire with existing deployed systems.</span></span> <span data-ttu-id="b08b1-105">Los pasos siguientes muestran cómo crear este transporte WCF personalizado:</span><span class="sxs-lookup"><span data-stu-id="b08b1-105">The following steps show how to build this custom WCF transport:</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806749"
 ---
 # <a name="creating-user-defined-bindings"></a><span data-ttu-id="6bec1-102">Creación de enlaces definidos por el usuario</span><span class="sxs-lookup"><span data-stu-id="6bec1-102">Creating User-Defined Bindings</span></span>
 <span data-ttu-id="6bec1-103">Hay varias maneras de crear enlaces no proporcionadas por el sistema:</span><span class="sxs-lookup"><span data-stu-id="6bec1-103">There are several ways to create bindings not provided by the system:</span></span>  

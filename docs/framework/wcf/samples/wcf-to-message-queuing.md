@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806375"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a><span data-ttu-id="00eeb-102">Windows Communication Foundation a Message Queuing</span><span class="sxs-lookup"><span data-stu-id="00eeb-102">Windows Communication Foundation to Message Queuing</span></span>
 <span data-ttu-id="00eeb-103">Este ejemplo muestra cómo una aplicación de Windows Communication Foundation (WCF) puede enviar un mensaje a una aplicación de Message Queuing (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="00eeb-103">This sample demonstrates how a Windows Communication Foundation (WCF) application can send a message to a Message Queuing (MSMQ) application.</span></span> <span data-ttu-id="00eeb-104">El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.</span><span class="sxs-lookup"><span data-stu-id="00eeb-104">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span> <span data-ttu-id="00eeb-105">El servicio y el cliente no tienen que estar ejecutándose al mismo tiempo.</span><span class="sxs-lookup"><span data-stu-id="00eeb-105">The service and client do not have to be running at the same time.</span></span>  

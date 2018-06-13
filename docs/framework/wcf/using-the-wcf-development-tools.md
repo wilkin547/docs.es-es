@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806788"
 ---
 # <a name="using-the-wcf-development-tools"></a><span data-ttu-id="ce92a-102">Utilización de las herramientas de desarrollo de WCF</span><span class="sxs-lookup"><span data-stu-id="ce92a-102">Using the WCF Development Tools</span></span>
 <span data-ttu-id="ce92a-103">Esta sección describe las herramientas de desarrollo de Visual Studio que le ayudarán a desarrollar su WCFservice.</span><span class="sxs-lookup"><span data-stu-id="ce92a-103">This section describes the Visual Studio development tools that can assist you in developing your WCFservice.</span></span>  

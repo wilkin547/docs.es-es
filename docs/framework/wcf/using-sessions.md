@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808597"
 ---
 # <a name="using-sessions"></a><span data-ttu-id="20931-102">Uso de sesiones</span><span class="sxs-lookup"><span data-stu-id="20931-102">Using Sessions</span></span>
 <span data-ttu-id="20931-103">En las aplicaciones de Windows Communication Foundation (WCF), un *sesión* correlaciona un grupo de mensajes en una conversación.</span><span class="sxs-lookup"><span data-stu-id="20931-103">In Windows Communication Foundation (WCF) applications, a *session* correlates a group of messages into a conversation.</span></span> <span data-ttu-id="20931-104">Las sesiones WCF son diferentes del objeto de sesión disponible en [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplicaciones, admiten diferentes comportamientos y se controlan de maneras diferentes.</span><span class="sxs-lookup"><span data-stu-id="20931-104">WCF sessions are different than the session object available in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications, support different behaviors, and are controlled in different ways.</span></span> <span data-ttu-id="20931-105">En este tema se describe las características que habilitan las sesiones en WCF aplicaciones y cómo utilizarlas.</span><span class="sxs-lookup"><span data-stu-id="20931-105">This topic describes the features that sessions enable in WCF applications and how to use them.</span></span>  

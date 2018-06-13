@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805413"
 ---
 # <a name="aspnet-caching-integration"></a><span data-ttu-id="add92-102">Integración de almacenamiento en caché de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="add92-102">ASP.NET Caching Integration</span></span>
 <span data-ttu-id="add92-103">En este ejemplo se muestra cómo utilizar la memoria caché de resultados de ASP.NET con el modelo de programación HTTP wEB de WCF.</span><span class="sxs-lookup"><span data-stu-id="add92-103">This sample demonstrates how to utilize the ASP.NET output cache with the WCF WEB HTTP programming model.</span></span> <span data-ttu-id="add92-104">Vea la [servicio de recurso básico](../../../../docs/framework/wcf/samples/basic-resource-service.md) ejemplo para obtener una versión de este escenario que se explica la implementación del servicio en profundidad hospedada por sí mismo.</span><span class="sxs-lookup"><span data-stu-id="add92-104">Please see the [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample for a self-hosted version of this scenario that discusses the service implementation in depth.</span></span> <span data-ttu-id="add92-105">Este tema se centra en la característica de integración de la memoria caché de resultados de ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="add92-105">This topic focuses on the ASP.NET output cache integration feature.</span></span>  

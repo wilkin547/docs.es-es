@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806544"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a><span data-ttu-id="702f5-102">Cómo bloquear puntos de conexión en la empresa</span><span class="sxs-lookup"><span data-stu-id="702f5-102">How to: Lock Down Endpoints in the Enterprise</span></span>
 <span data-ttu-id="702f5-103">Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conforme a las directivas de seguridad de la empresa.</span><span class="sxs-lookup"><span data-stu-id="702f5-103">Large enterprises often require that applications are developed in compliance with enterprise security policies.</span></span> <span data-ttu-id="702f5-104">El tema siguiente trata sobre cómo desarrollar e instalar un validador de punto de conexión de cliente que puede usarse para validar todas las aplicaciones de cliente de Windows Communication Foundation (WCF) instaladas en los equipos.</span><span class="sxs-lookup"><span data-stu-id="702f5-104">The following topic discusses how to develop and install a client endpoint validator that can be used to validate all Windows Communication Foundation (WCF) client applications installed on computers.</span></span>  

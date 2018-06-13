@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807556"
 ---
 # <a name="durable-issued-token-provider"></a><span data-ttu-id="64151-102">Proveedor de token emitido duradero</span><span class="sxs-lookup"><span data-stu-id="64151-102">Durable Issued Token Provider</span></span>
 <span data-ttu-id="64151-103">Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emitidos por el cliente.</span><span class="sxs-lookup"><span data-stu-id="64151-103">This sample demonstrates how to implement a custom client issued token provider.</span></span>  

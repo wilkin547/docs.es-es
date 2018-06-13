@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808613"
 ---
 # <a name="durable-instance-context"></a><span data-ttu-id="07e4c-102">Contexto de instancia duradera</span><span class="sxs-lookup"><span data-stu-id="07e4c-102">Durable Instance Context</span></span>
 <span data-ttu-id="07e4c-103">Este ejemplo muestra cómo personalizar el tiempo de ejecución de Windows Communication Foundation (WCF) para permitir que los contextos de instancia duraderos.</span><span class="sxs-lookup"><span data-stu-id="07e4c-103">This sample demonstrates how to customize the Windows Communication Foundation (WCF) runtime to enable durable instance contexts.</span></span> <span data-ttu-id="07e4c-104">Utiliza SQL Server 2005 como su memoria auxiliar (SQL Server 2005 Express en este caso).</span><span class="sxs-lookup"><span data-stu-id="07e4c-104">It uses SQL Server 2005 as its backing store (SQL Server 2005 Express in this case).</span></span> <span data-ttu-id="07e4c-105">Sin embargo, también proporciona una manera de tener acceso a los mecanismos de almacenamiento personalizados.</span><span class="sxs-lookup"><span data-stu-id="07e4c-105">However, it also provides a way to access custom storage mechanisms.</span></span>  

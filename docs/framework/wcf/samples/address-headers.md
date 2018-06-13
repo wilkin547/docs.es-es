@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803795"
 ---
 # <a name="address-headers"></a><span data-ttu-id="9f6ef-102">Encabezados de dirección</span><span class="sxs-lookup"><span data-stu-id="9f6ef-102">Address Headers</span></span>
 <span data-ttu-id="9f6ef-103">El ejemplo de encabezados de dirección muestra cómo los clientes pueden pasar parámetros de referencia a un servicio mediante Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="9f6ef-103">The Address Headers sample demonstrates how clients can pass reference parameters to a service using Windows Communication Foundation (WCF).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807666"
 ---
 # <a name="trusted-facade-service"></a><span data-ttu-id="2455c-102">Servicio de fachada confiable</span><span class="sxs-lookup"><span data-stu-id="2455c-102">Trusted Facade Service</span></span>
 <span data-ttu-id="2455c-103">Este ejemplo de escenario muestra cómo pasar la información de identidad del llamador de un servicio a otro mediante Windows Communication Foundation (WCF) la infraestructura de seguridad.</span><span class="sxs-lookup"><span data-stu-id="2455c-103">This scenario sample demonstrates how to flow caller's identity information from one service to another using Windows Communication Foundation (WCF) security infrastructure.</span></span>  

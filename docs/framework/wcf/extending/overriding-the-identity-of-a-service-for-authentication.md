@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806947"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a><span data-ttu-id="cbb81-102">Invalidación de la identidad de un servicio para la autenticación</span><span class="sxs-lookup"><span data-stu-id="cbb81-102">Overriding the Identity of a Service for Authentication</span></span>
 <span data-ttu-id="cbb81-103">Normalmente, no tiene que establecer la identidad en un servicio porque la selección de un tipo de credencial de cliente dicta el tipo de identidad expuesto en los metadatos del servicio.</span><span class="sxs-lookup"><span data-stu-id="cbb81-103">Typically, you do not have to set the identity on a service because the selection of a client credential type dictates the type of identity exposed in the service metadata.</span></span> <span data-ttu-id="cbb81-104">Por ejemplo, el siguiente código de configuración usa la [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento y establece el `clientCredentialType` atribuir a Windows.</span><span class="sxs-lookup"><span data-stu-id="cbb81-104">For example, the following configuration code uses the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) element and sets the `clientCredentialType` attribute to Windows.</span></span>  
