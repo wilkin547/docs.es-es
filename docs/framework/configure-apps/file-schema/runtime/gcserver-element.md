@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745024"
 ---
 # <a name="ltgcservergt-element"></a><span data-ttu-id="db993-102">&lt;gcServer&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="db993-102">&lt;gcServer&gt; Element</span></span>
 <span data-ttu-id="db993-103">Especifica si Common Language Runtime ejecuta la recopilación de elementos no utilizados de servidor.</span><span class="sxs-lookup"><span data-stu-id="db993-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  
