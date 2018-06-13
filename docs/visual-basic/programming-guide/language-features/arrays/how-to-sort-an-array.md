@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646320"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>Cómo: Ordenar una matriz en Visual Basic
 Este ejemplo declara una matriz de `String` objetos denominados `zooAnimals`lo rellena y, a continuación, ordena alfabéticamente.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805543"
 ---
 # <a name="guide-to-the-documentation"></a>Guía de la documentación
 Aquí se proporciona orientación acerca de la documentación de Windows Communication Foundation (WCF). Los documentos vinculados son puntos iniciales recomendados agrupados según intereses y niveles de especialización concretos.  

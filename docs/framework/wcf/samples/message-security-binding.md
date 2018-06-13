@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805046"
 ---
 # <a name="message-security-binding"></a>Enlace de seguridad de mensaje
 Esta sección contiene ejemplos que muestran el enlace de seguridad de mensajes en servicios de Windows en WCF.  

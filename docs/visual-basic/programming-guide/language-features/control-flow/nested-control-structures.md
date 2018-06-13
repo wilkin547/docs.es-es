@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648078"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Estructuras de control anidadas (Visual Basic)
 Puede colocar instrucciones de control dentro de otras instrucciones de control, por ejemplo un `If...Then...Else` bloquear dentro de un `For...Next` bucle. Cuando una instrucción de control que se coloca dentro de otra instrucción de control se dice *anidada*.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804308"
 ---
 # <a name="scenario"></a>Escenario
 Esta sección contiene ejemplos que muestran escenarios de Windows Communication Foundation (WCF).  

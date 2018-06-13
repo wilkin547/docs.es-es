@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647236"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Cómo: Deshacerse de un recurso del sistema (Visual Basic)
 Puede usar un `Using` bloque para garantizar que el sistema dispone de un recurso cuando el código sale del bloque. Esto es útil si está usando un recurso del sistema que consume una gran cantidad de memoria o que otros componentes también va a usar.  

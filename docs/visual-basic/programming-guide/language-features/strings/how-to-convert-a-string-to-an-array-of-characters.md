@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648624"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Cómo: Convertir una cadena en una matriz de caracteres en Visual Basic
 A veces resulta útil tener información sobre los caracteres de la cadena y las posiciones de los caracteres de la cadena, como cuando se está analizando una cadena. Este ejemplo muestra cómo puede obtener una matriz de los caracteres de una cadena mediante una llamada a la cadena <xref:System.String.ToCharArray%2A> método.  

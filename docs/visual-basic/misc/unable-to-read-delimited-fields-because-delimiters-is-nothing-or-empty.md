@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640188"
 ---
 # <a name="unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty"></a>No se pueden leer campos delimitados porque la propiedad Delimiters tiene un valor Nothing o está vacía.
 `TextFieldParser` no puede leer el archivo porque la propiedad `Delimiters` está establecida en `Nothing` o está vacía.  

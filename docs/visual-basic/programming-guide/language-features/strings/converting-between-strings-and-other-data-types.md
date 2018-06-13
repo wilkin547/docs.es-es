@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648286"
 ---
 # <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Conversión entre cadenas y otros tipos de datos en Visual Basic
 En esta sección se describe cómo convertir cadenas en otros tipos de datos.  

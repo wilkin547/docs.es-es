@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649934"
 ---
 # <a name="visual-basic-limitations"></a>Limitaciones de Visual Basic
 Las versiones anteriores de Visual Basic aplican límites en el código, como la longitud de los nombres de variable, el número de variables permitidas en los módulos y el tamaño de módulo. En Visual Basic. NET, se han reducido estas restricciones, lo que le proporciona mayor libertad para crear y organizar el código.  

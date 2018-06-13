@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649599"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Obtener acceso a XML en Visual Basic
 Visual Basic proporciona propiedades de eje XML para obtener acceso y navegar por [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] estructuras. Estas propiedades utilizan una sintaxis especial que le permite tener acceso a elementos y atributos especificando los nombres XML.  

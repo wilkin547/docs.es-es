@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636622"
 ---
 # <a name="named-arguments-cannot-match-paramarray-parameters"></a>Los argumentos con nombre no pueden coincidir con los parámetros ParamArray
 Las matrices de parámetros deben pasarse por valor.  

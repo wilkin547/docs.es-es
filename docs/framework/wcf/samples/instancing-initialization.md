@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807927"
 ---
 # <a name="instancing-initialization"></a>Creación de instancias de inicialización
 Este ejemplo amplía la [Pooling](../../../../docs/framework/wcf/samples/pooling.md) ejemplo mediante la definición de una interfaz, `IObjectControl`, que personaliza la inicialización de un objeto mediante la activación y desactivación de él. El cliente invoca métodos que devuelven el objeto al grupo y que no devuelven el objeto al grupo.  
