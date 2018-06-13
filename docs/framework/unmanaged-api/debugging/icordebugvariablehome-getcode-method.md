@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugVariableHome::GetCode (método)"
-ms.custom: 
+title: ICorDebugVariableHome::GetCode (método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 api_name:
 - ICorDebugVariableHome.GetCode
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: ef002890-4a7b-4a5d-abbf-16c60083f794
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6fccbd05ac03aca640e3f847abaa68ca84949110
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ee8fa8feebba7258fc84ee7ba00ce2ab1977faa4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420409"
 ---
-# <a name="icordebugvariablehomegetcode-method"></a><span data-ttu-id="02dba-102">ICorDebugVariableHome::GetCode (método)</span><span class="sxs-lookup"><span data-stu-id="02dba-102">ICorDebugVariableHome::GetCode Method</span></span>
-<span data-ttu-id="02dba-103">Obtiene la instancia de "ICorDebugCode" que contiene este [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="02dba-103">Gets the "ICorDebugCode" instance that contains this [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object.</span></span>  
+# <a name="icordebugvariablehomegetcode-method"></a><span data-ttu-id="91193-102">ICorDebugVariableHome::GetCode (método)</span><span class="sxs-lookup"><span data-stu-id="91193-102">ICorDebugVariableHome::GetCode Method</span></span>
+<span data-ttu-id="91193-103">Obtiene la instancia de "ICorDebugCode" que contiene este [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="91193-103">Gets the "ICorDebugCode" instance that contains this [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="02dba-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="02dba-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="91193-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="91193-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCode(  
@@ -46,19 +35,19 @@ HRESULT GetCode(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="02dba-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="02dba-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="91193-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="91193-105">Parameters</span></span>  
  `ppCode`  
- <span data-ttu-id="02dba-106">[out] Un puntero a la dirección de la instancia de "ICorDebugCode" que contiene este [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="02dba-106">[out] A pointer to the address of the "ICorDebugCode" instance that contains this [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object.</span></span>  
+ <span data-ttu-id="91193-106">[out] Un puntero a la dirección de la instancia de "ICorDebugCode" que contiene este [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="91193-106">[out] A pointer to the address of the "ICorDebugCode" instance that contains this [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="02dba-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="02dba-107">Requirements</span></span>  
- <span data-ttu-id="02dba-108">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="02dba-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="91193-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="91193-107">Requirements</span></span>  
+ <span data-ttu-id="91193-108">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="91193-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="02dba-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="02dba-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="91193-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="91193-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="02dba-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="02dba-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="91193-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="91193-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="02dba-111">**Versiones de .NET framework:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02dba-111">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="91193-111">**Versiones de .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="91193-111">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="02dba-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="02dba-112">See Also</span></span>  
- [<span data-ttu-id="02dba-113">ICorDebugVariableHome (interfaz)</span><span class="sxs-lookup"><span data-stu-id="02dba-113">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)  
+## <a name="see-also"></a><span data-ttu-id="91193-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="91193-112">See Also</span></span>  
+ [<span data-ttu-id="91193-113">ICorDebugVariableHome (interfaz)</span><span class="sxs-lookup"><span data-stu-id="91193-113">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)  
  

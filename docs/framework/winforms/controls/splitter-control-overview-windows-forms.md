@@ -1,41 +1,28 @@
 ---
-title: "Información general sobre Splitter (Control, formularios Windows Forms)"
-ms.custom: 
+title: Información general sobre Splitter (Control, formularios Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Splitter
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 32d8829e7303ce23a22d0a01f2428a889ce4ae0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d36a0cc7117ab88dc575f0f9531c93814243f4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534123"
 ---
-# <a name="splitter-control-overview-windows-forms"></a><span data-ttu-id="ea028-102">Información general sobre Splitter (Control, formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="ea028-102">Splitter Control Overview (Windows Forms)</span></span>
+# <a name="splitter-control-overview-windows-forms"></a><span data-ttu-id="72bd2-102">Información general sobre Splitter (Control, formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="72bd2-102">Splitter Control Overview (Windows Forms)</span></span>
 > [!IMPORTANT]
->  <span data-ttu-id="ea028-103">Aunque <xref:System.Windows.Forms.SplitContainer> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.Splitter> control de versiones anteriores, <xref:System.Windows.Forms.Splitter> se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.</span><span class="sxs-lookup"><span data-stu-id="ea028-103">Although <xref:System.Windows.Forms.SplitContainer> replaces and adds functionality to the <xref:System.Windows.Forms.Splitter> control of previous versions, <xref:System.Windows.Forms.Splitter> is retained for both backward compatibility and future use if you choose.</span></span>  
+>  <span data-ttu-id="72bd2-103">Aunque <xref:System.Windows.Forms.SplitContainer> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.Splitter> control de versiones anteriores, <xref:System.Windows.Forms.Splitter> se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.</span><span class="sxs-lookup"><span data-stu-id="72bd2-103">Although <xref:System.Windows.Forms.SplitContainer> replaces and adds functionality to the <xref:System.Windows.Forms.Splitter> control of previous versions, <xref:System.Windows.Forms.Splitter> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- <span data-ttu-id="ea028-104">Formularios Windows Forms <xref:System.Windows.Forms.Splitter> controles se usan para cambiar el tamaño de los controles acoplados en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="ea028-104">Windows Forms <xref:System.Windows.Forms.Splitter> controls are used to resize docked controls at run time.</span></span> <span data-ttu-id="ea028-105">El <xref:System.Windows.Forms.Splitter> control suele utilizarse en formularios con controles que tienen diversas longitudes de datos que se va a presentar, como el Explorador de Windows, cuyos paneles de datos contienen información de diversos anchos en momentos diferentes.</span><span class="sxs-lookup"><span data-stu-id="ea028-105">The <xref:System.Windows.Forms.Splitter> control is often used on forms with controls that have varying lengths of data to present, like Windows Explorer, whose data panes contain information of varying widths at different times.</span></span>  
+ <span data-ttu-id="72bd2-104">Formularios Windows Forms <xref:System.Windows.Forms.Splitter> controles se usan para cambiar el tamaño de los controles acoplados en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="72bd2-104">Windows Forms <xref:System.Windows.Forms.Splitter> controls are used to resize docked controls at run time.</span></span> <span data-ttu-id="72bd2-105">El <xref:System.Windows.Forms.Splitter> control suele utilizarse en formularios con controles que tienen diversas longitudes de datos que se va a presentar, como el Explorador de Windows, cuyos paneles de datos contienen información de diversos anchos en momentos diferentes.</span><span class="sxs-lookup"><span data-stu-id="72bd2-105">The <xref:System.Windows.Forms.Splitter> control is often used on forms with controls that have varying lengths of data to present, like Windows Explorer, whose data panes contain information of varying widths at different times.</span></span>  
   
-## <a name="working-with-the-splitter-control"></a><span data-ttu-id="ea028-106">Trabajar con el Control del divisor</span><span class="sxs-lookup"><span data-stu-id="ea028-106">Working with the Splitter Control</span></span>  
- <span data-ttu-id="ea028-107">Cuando el usuario sitúa el puntero del mouse sobre el borde desacoplado de un control que puede cambiarse por un control divisor, el puntero cambia de apariencia para indicar que el control puede cambiarse.</span><span class="sxs-lookup"><span data-stu-id="ea028-107">When the user points the mouse pointer at the undocked edge of a control that can be resized by a splitter control, the pointer changes its appearance to indicate that the control can be resized.</span></span> <span data-ttu-id="ea028-108">Con el control del divisor, el usuario puede cambiar el tamaño del control acoplado que está inmediatamente antes de él.</span><span class="sxs-lookup"><span data-stu-id="ea028-108">With the splitter control, the user can resize the docked control that is immediately before it.</span></span> <span data-ttu-id="ea028-109">Por lo tanto, para permitir al usuario cambiar el tamaño de un control acoplado en tiempo de ejecución, acople el control para cambiar de tamaño a un borde de un contenedor y, a continuación, acoplar un control divisor en el mismo lado de ese contenedor.</span><span class="sxs-lookup"><span data-stu-id="ea028-109">Therefore, to enable the user to resize a docked control at run time, dock the control to be resized to an edge of a container, and then dock a splitter control to the same side of that container.</span></span>  
+## <a name="working-with-the-splitter-control"></a><span data-ttu-id="72bd2-106">Trabajar con el Control del divisor</span><span class="sxs-lookup"><span data-stu-id="72bd2-106">Working with the Splitter Control</span></span>  
+ <span data-ttu-id="72bd2-107">Cuando el usuario sitúa el puntero del mouse sobre el borde desacoplado de un control que puede cambiarse por un control divisor, el puntero cambia de apariencia para indicar que el control puede cambiarse.</span><span class="sxs-lookup"><span data-stu-id="72bd2-107">When the user points the mouse pointer at the undocked edge of a control that can be resized by a splitter control, the pointer changes its appearance to indicate that the control can be resized.</span></span> <span data-ttu-id="72bd2-108">Con el control del divisor, el usuario puede cambiar el tamaño del control acoplado que está inmediatamente antes de él.</span><span class="sxs-lookup"><span data-stu-id="72bd2-108">With the splitter control, the user can resize the docked control that is immediately before it.</span></span> <span data-ttu-id="72bd2-109">Por lo tanto, para permitir al usuario cambiar el tamaño de un control acoplado en tiempo de ejecución, acople el control para cambiar de tamaño a un borde de un contenedor y, a continuación, acoplar un control divisor en el mismo lado de ese contenedor.</span><span class="sxs-lookup"><span data-stu-id="72bd2-109">Therefore, to enable the user to resize a docked control at run time, dock the control to be resized to an edge of a container, and then dock a splitter control to the same side of that container.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea028-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="ea028-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="72bd2-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="72bd2-110">See Also</span></span>  
  <xref:System.Windows.Forms.SplitContainer>  
- [<span data-ttu-id="ea028-111">Procedimiento para acoplar controles en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ea028-111">How to: Dock Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
- [<span data-ttu-id="ea028-112">Controles que se utilizan en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ea028-112">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [<span data-ttu-id="72bd2-111">Procedimiento para acoplar controles en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="72bd2-111">How to: Dock Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ [<span data-ttu-id="72bd2-112">Controles que se utilizan en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="72bd2-112">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

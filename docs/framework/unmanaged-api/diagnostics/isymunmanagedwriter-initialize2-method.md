@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedWriter::Initialize2 (Método)"
-ms.custom: 
+title: ISymUnmanagedWriter::Initialize2 (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter.Initialize2
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 93de56b6-4ae8-4cca-acdc-25a434623509
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 015c7d43a856990251b3e67febe685759cc4e5fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ac76ef58badcc8e443279415b7239c0b6017af3e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427134"
 ---
-# <a name="isymunmanagedwriterinitialize2-method"></a><span data-ttu-id="eb278-102">ISymUnmanagedWriter::Initialize2 (Método)</span><span class="sxs-lookup"><span data-stu-id="eb278-102">ISymUnmanagedWriter::Initialize2 Method</span></span>
-<span data-ttu-id="eb278-103">Establece la interfaz emisora de metadatos con el que se asociará este sistema de escritura y el nombre de archivo de salida a la que se escribirán los símbolos de depuración.</span><span class="sxs-lookup"><span data-stu-id="eb278-103">Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.</span></span> <span data-ttu-id="eb278-104">Este método también permite establecer la ubicación final del archivo de programa (PDB) de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="eb278-104">This method also lets you set the final location of the program database (PDB) file.</span></span>  
+# <a name="isymunmanagedwriterinitialize2-method"></a><span data-ttu-id="98390-102">ISymUnmanagedWriter::Initialize2 (Método)</span><span class="sxs-lookup"><span data-stu-id="98390-102">ISymUnmanagedWriter::Initialize2 Method</span></span>
+<span data-ttu-id="98390-103">Establece la interfaz emisora de metadatos con el que se asociará este sistema de escritura y el nombre de archivo de salida a la que se escribirán los símbolos de depuración.</span><span class="sxs-lookup"><span data-stu-id="98390-103">Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.</span></span> <span data-ttu-id="98390-104">Este método también permite establecer la ubicación final del archivo de programa (PDB) de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="98390-104">This method also lets you set the final location of the program database (PDB) file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eb278-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="eb278-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="98390-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="98390-105">Syntax</span></span>  
   
 ```  
 HRESULT Initialize2(  
@@ -49,28 +38,28 @@ HRESULT Initialize2(
     [in] const WCHAR  *finalfilename);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="eb278-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="eb278-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="98390-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="98390-106">Parameters</span></span>  
  `emitter`  
- <span data-ttu-id="eb278-107">[in] Un puntero a interfaz emisora de metadatos.</span><span class="sxs-lookup"><span data-stu-id="eb278-107">[in] A pointer to the metadata emitter interface.</span></span>  
+ <span data-ttu-id="98390-107">[in] Un puntero a interfaz emisora de metadatos.</span><span class="sxs-lookup"><span data-stu-id="98390-107">[in] A pointer to the metadata emitter interface.</span></span>  
   
  `tempfilename`  
- <span data-ttu-id="eb278-108">[in] Un puntero a un `WCHAR` que contiene el nombre de archivo a la que se escriben los símbolos de depuración.</span><span class="sxs-lookup"><span data-stu-id="eb278-108">[in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written.</span></span> <span data-ttu-id="eb278-109">Si se especifica un nombre de archivo para un escritor que no usa nombres de archivo, se omite este parámetro.</span><span class="sxs-lookup"><span data-stu-id="eb278-109">If a file name is specified for a writer that does not use file names, this parameter is ignored.</span></span>  
+ <span data-ttu-id="98390-108">[in] Un puntero a un `WCHAR` que contiene el nombre de archivo a la que se escriben los símbolos de depuración.</span><span class="sxs-lookup"><span data-stu-id="98390-108">[in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written.</span></span> <span data-ttu-id="98390-109">Si se especifica un nombre de archivo para un escritor que no usa nombres de archivo, se omite este parámetro.</span><span class="sxs-lookup"><span data-stu-id="98390-109">If a file name is specified for a writer that does not use file names, this parameter is ignored.</span></span>  
   
  `pIStream`  
- <span data-ttu-id="eb278-110">[in] Si se especifica, el escritor de símbolos emite los símbolos en el dado <xref:System.Runtime.InteropServices.ComTypes.IStream> en vez de en el archivo especificado en el `filename` parámetro.</span><span class="sxs-lookup"><span data-stu-id="eb278-110">[in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter.</span></span> <span data-ttu-id="eb278-111">El parámetro `pIStream` es opcional.</span><span class="sxs-lookup"><span data-stu-id="eb278-111">The `pIStream` parameter is optional.</span></span>  
+ <span data-ttu-id="98390-110">[in] Si se especifica, el escritor de símbolos emite los símbolos en el dado <xref:System.Runtime.InteropServices.ComTypes.IStream> en vez de en el archivo especificado en el `filename` parámetro.</span><span class="sxs-lookup"><span data-stu-id="98390-110">[in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter.</span></span> <span data-ttu-id="98390-111">El parámetro `pIStream` es opcional.</span><span class="sxs-lookup"><span data-stu-id="98390-111">The `pIStream` parameter is optional.</span></span>  
   
  `fFullBuild`  
- <span data-ttu-id="eb278-112">[in] `true` si se trata de una regeneración completa; `false` si se trata de una compilación incremental.</span><span class="sxs-lookup"><span data-stu-id="eb278-112">[in] `true` if this is a full rebuild; `false` if this is an incremental compilation.</span></span>  
+ <span data-ttu-id="98390-112">[in] `true` si se trata de una regeneración completa; `false` si se trata de una compilación incremental.</span><span class="sxs-lookup"><span data-stu-id="98390-112">[in] `true` if this is a full rebuild; `false` if this is an incremental compilation.</span></span>  
   
  `finalfilename`  
- <span data-ttu-id="eb278-113">[in] Un puntero a un `WCHAR` que es la cadena de ruta de acceso a la ubicación final del archivo PDB.</span><span class="sxs-lookup"><span data-stu-id="eb278-113">[in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.</span></span>  
+ <span data-ttu-id="98390-113">[in] Un puntero a un `WCHAR` que es la cadena de ruta de acceso a la ubicación final del archivo PDB.</span><span class="sxs-lookup"><span data-stu-id="98390-113">[in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="eb278-114">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="eb278-114">Return Value</span></span>  
- <span data-ttu-id="eb278-115">S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="eb278-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="98390-114">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="98390-114">Return Value</span></span>  
+ <span data-ttu-id="98390-115">S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="98390-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eb278-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="eb278-116">Requirements</span></span>  
- <span data-ttu-id="eb278-117">**Encabezado:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="eb278-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="98390-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="98390-116">Requirements</span></span>  
+ <span data-ttu-id="98390-117">**Encabezado:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="98390-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb278-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="eb278-118">See Also</span></span>  
- [<span data-ttu-id="eb278-119">ISymUnmanagedWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="eb278-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [<span data-ttu-id="eb278-120">Initialize (método)</span><span class="sxs-lookup"><span data-stu-id="eb278-120">Initialize Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)
+## <a name="see-also"></a><span data-ttu-id="98390-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="98390-118">See Also</span></span>  
+ [<span data-ttu-id="98390-119">ISymUnmanagedWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="98390-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
+ [<span data-ttu-id="98390-120">Initialize (método)</span><span class="sxs-lookup"><span data-stu-id="98390-120">Initialize Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)
