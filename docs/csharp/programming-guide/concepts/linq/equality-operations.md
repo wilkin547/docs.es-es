@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326955"
 ---
 # <a name="equality-operations-c"></a>Operaciones de igualdad (C#)
 Dos secuencias cuyos respectivos elementos sean iguales y que tengan el mismo número de elementos se consideran iguales.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398266"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>Ensamblados recopilables para la generación dinámica de tipos
 

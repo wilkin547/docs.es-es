@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591695"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Subprocesamiento administrado y no administrado en Windows
 La administración de todos los subprocesos se realiza mediante la clase <xref:System.Threading.Thread> , incluidos los subprocesos creados por Common Language Runtime y los creados fuera del runtime que entran en el entorno administrado para ejecutar código. El runtime supervisa todos los subprocesos del proceso que han ejecutado alguna vez código en el entorno de ejecución administrado. No realiza un seguimiento de ningún otro subproceso. Los subprocesos pueden acceder al entorno de ejecución administrado a través de la interoperabilidad COM (porque el runtime expone los objetos administrados como objetos COM a los entornos no administrados), la función COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) y la invocación de plataforma.  

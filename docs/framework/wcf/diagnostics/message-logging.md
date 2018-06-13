@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474037"
 ---
 # <a name="message-logging"></a>Registro de mensajes
 Windows Communication Foundation (WCF) proporciona la capacidad de registrar los mensajes entrantes y salientes para su uso sin conexión. El registro de mensajes le permite ver el aspecto del mensaje y del cuerpo del mensaje. Este tipo de registros es particularmente útil para ver qué argumentos se pasaron y cómo vio el punto de conexión receptor los argumentos expresados como XML. Además, el registro de mensajes tal y como se reciben le permite diagnosticar mensajes incorrectos, así como ver cómo llegó el mensaje. También puede examinar los tokens de seguridad utilizados, las partes cifradas y firmadas, y las partes que no se han modificado.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764728"
 ---
 # <a name="floating-point-numbers"></a>Números de punto flotante
 En este tema se describen algunos de los problemas que con frecuencia se encuentran los programadores al trabajar con números de punto flotante en [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Estos problemas se deben a la forma que los equipos almacenan los números de punto flotante y no son específicos de un proveedor determinado como <xref:System.Data.SqlClient> o <xref:System.Data.OracleClient>.  

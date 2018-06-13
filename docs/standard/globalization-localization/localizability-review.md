@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576134"
 ---
 # <a name="localizability-review"></a>Revisión de adaptabilidad
 La revisión de localización es un paso intermedio en el desarrollo de una aplicación de uso internacional. Comprueba que una aplicación globalizada está preparada para la localización e identifica cualquier código o los aspectos de la interfaz de usuario que requieren un tratamiento especial. Este paso también ayuda a asegurarse de que el proceso de localización no introducirá defectos funcionales en la aplicación. Una vez solucionados todos los problemas que planteó la revisión de localización, la aplicación estará lista para la localización. Si la revisión de localización es exhaustiva, no tiene que modificar ningún código fuente durante el proceso de localización.  
