@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268926"
 ---
 # <a name="new-operator-c-reference"></a><span data-ttu-id="172bd-102">new (Operador, Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="172bd-102">new Operator (C# Reference)</span></span>
 <span data-ttu-id="172bd-103">Se usa para crear objetos e invocar constructores.</span><span class="sxs-lookup"><span data-stu-id="172bd-103">Used to create objects and invoke constructors.</span></span> <span data-ttu-id="172bd-104">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="172bd-104">For example:</span></span>  

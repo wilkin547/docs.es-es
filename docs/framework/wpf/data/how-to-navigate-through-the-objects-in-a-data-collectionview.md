@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Navegar por los objetos de una colección de datos mediante CollectionView"
-ms.custom: 
+title: 'Cómo: Navegar por los objetos de una colección de datos mediante CollectionView'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,33 +9,29 @@ helpviewer_keywords:
 - data binding [WPF], navigating through objects in data CollectionView
 - navigating through objects in data CollectionView [WPF]
 ms.assetid: fcd37590-bce1-4ac9-8b74-3b96c7458b8a
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 215e3583d50567a2bfec8226e006bc7398628299
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec78b7350d23364cfb0eaa9a0611be8449073cd7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557009"
 ---
-# <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a><span data-ttu-id="e5095-102">Cómo: Navegar por los objetos de una colección de datos mediante CollectionView</span><span class="sxs-lookup"><span data-stu-id="e5095-102">How to: Navigate Through the Objects in a Data CollectionView</span></span>
-<span data-ttu-id="e5095-103">Las vistas permiten la misma colección de datos a verse de maneras diferentes, dependiendo de ordenar, filtrar o agrupar.</span><span class="sxs-lookup"><span data-stu-id="e5095-103">Views allow the same data collection to be viewed in different ways, depending on sorting, filtering, or grouping.</span></span> <span data-ttu-id="e5095-104">Vistas también proporcionan un concepto de puntero de registro actual y habilitan el movimiento del puntero.</span><span class="sxs-lookup"><span data-stu-id="e5095-104">Views also provide a current record pointer concept and enable moving the pointer.</span></span> <span data-ttu-id="e5095-105">Este ejemplo muestra cómo obtener el objeto actual, así como navegar por los objetos en una recopilación de datos mediante la funcionalidad proporcionada en el <xref:System.Windows.Data.CollectionView> clase.</span><span class="sxs-lookup"><span data-stu-id="e5095-105">This example shows how to get the current object as well as navigate through the objects in a data collection using the functionality provided in the <xref:System.Windows.Data.CollectionView> class.</span></span>  
+# <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a><span data-ttu-id="62c12-102">Cómo: Navegar por los objetos de una colección de datos mediante CollectionView</span><span class="sxs-lookup"><span data-stu-id="62c12-102">How to: Navigate Through the Objects in a Data CollectionView</span></span>
+<span data-ttu-id="62c12-103">Las vistas permiten la misma colección de datos a verse de maneras diferentes, dependiendo de ordenar, filtrar o agrupar.</span><span class="sxs-lookup"><span data-stu-id="62c12-103">Views allow the same data collection to be viewed in different ways, depending on sorting, filtering, or grouping.</span></span> <span data-ttu-id="62c12-104">Vistas también proporcionan un concepto de puntero de registro actual y habilitan el movimiento del puntero.</span><span class="sxs-lookup"><span data-stu-id="62c12-104">Views also provide a current record pointer concept and enable moving the pointer.</span></span> <span data-ttu-id="62c12-105">Este ejemplo muestra cómo obtener el objeto actual, así como navegar por los objetos en una recopilación de datos mediante la funcionalidad proporcionada en el <xref:System.Windows.Data.CollectionView> clase.</span><span class="sxs-lookup"><span data-stu-id="62c12-105">This example shows how to get the current object as well as navigate through the objects in a data collection using the functionality provided in the <xref:System.Windows.Data.CollectionView> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e5095-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e5095-106">Example</span></span>  
- <span data-ttu-id="e5095-107">En este ejemplo, `myCollectionView` es un <xref:System.Windows.Data.CollectionView> objeto que es una vista a través de una colección enlazada.</span><span class="sxs-lookup"><span data-stu-id="e5095-107">In this example, `myCollectionView` is a <xref:System.Windows.Data.CollectionView> object that is a view over a bound collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="62c12-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="62c12-106">Example</span></span>  
+ <span data-ttu-id="62c12-107">En este ejemplo, `myCollectionView` es un <xref:System.Windows.Data.CollectionView> objeto que es una vista a través de una colección enlazada.</span><span class="sxs-lookup"><span data-stu-id="62c12-107">In this example, `myCollectionView` is a <xref:System.Windows.Data.CollectionView> object that is a view over a bound collection.</span></span>  
   
- <span data-ttu-id="e5095-108">En el ejemplo siguiente, `OnButton` es un controlador de eventos para el `Previous` y `Next` botones en una aplicación, que son botones que permiten al usuario navegar por la recolección de datos.</span><span class="sxs-lookup"><span data-stu-id="e5095-108">In the following example, `OnButton` is an event handler for the `Previous` and `Next` buttons in an application, which are buttons that allow the user to navigate the data collection.</span></span> <span data-ttu-id="e5095-109">Tenga en cuenta que la <xref:System.Windows.Data.CollectionView.IsCurrentBeforeFirst%2A> y <xref:System.Windows.Data.CollectionView.IsCurrentAfterLast%2A> propiedades de informes si el puntero de registro actual ha llegado al principio y el final de la lista respectivamente así que <xref:System.Windows.Data.CollectionView.MoveCurrentToFirst%2A> y <xref:System.Windows.Data.CollectionView.MoveCurrentToLast%2A> pueden llamarse como corresponda.</span><span class="sxs-lookup"><span data-stu-id="e5095-109">Note that the <xref:System.Windows.Data.CollectionView.IsCurrentBeforeFirst%2A> and <xref:System.Windows.Data.CollectionView.IsCurrentAfterLast%2A> properties report whether the current record pointer has come to the beginning and the end of the list respectively so that <xref:System.Windows.Data.CollectionView.MoveCurrentToFirst%2A> and <xref:System.Windows.Data.CollectionView.MoveCurrentToLast%2A> can be called as appropriately.</span></span>  
+ <span data-ttu-id="62c12-108">En el ejemplo siguiente, `OnButton` es un controlador de eventos para el `Previous` y `Next` botones en una aplicación, que son botones que permiten al usuario navegar por la recolección de datos.</span><span class="sxs-lookup"><span data-stu-id="62c12-108">In the following example, `OnButton` is an event handler for the `Previous` and `Next` buttons in an application, which are buttons that allow the user to navigate the data collection.</span></span> <span data-ttu-id="62c12-109">Tenga en cuenta que la <xref:System.Windows.Data.CollectionView.IsCurrentBeforeFirst%2A> y <xref:System.Windows.Data.CollectionView.IsCurrentAfterLast%2A> propiedades de informes si el puntero de registro actual ha llegado al principio y el final de la lista respectivamente así que <xref:System.Windows.Data.CollectionView.MoveCurrentToFirst%2A> y <xref:System.Windows.Data.CollectionView.MoveCurrentToLast%2A> pueden llamarse como corresponda.</span><span class="sxs-lookup"><span data-stu-id="62c12-109">Note that the <xref:System.Windows.Data.CollectionView.IsCurrentBeforeFirst%2A> and <xref:System.Windows.Data.CollectionView.IsCurrentAfterLast%2A> properties report whether the current record pointer has come to the beginning and the end of the list respectively so that <xref:System.Windows.Data.CollectionView.MoveCurrentToFirst%2A> and <xref:System.Windows.Data.CollectionView.MoveCurrentToLast%2A> can be called as appropriately.</span></span>  
   
- <span data-ttu-id="e5095-110">El <xref:System.Windows.Data.CollectionView.CurrentItem%2A> propiedad de la vista se convierte como un `Order` para devolver el elemento actual de la colección.</span><span class="sxs-lookup"><span data-stu-id="e5095-110">The <xref:System.Windows.Data.CollectionView.CurrentItem%2A> property of the view is cast as an `Order` to return the current order item in the collection.</span></span>  
+ <span data-ttu-id="62c12-110">El <xref:System.Windows.Data.CollectionView.CurrentItem%2A> propiedad de la vista se convierte como un `Order` para devolver el elemento actual de la colección.</span><span class="sxs-lookup"><span data-stu-id="62c12-110">The <xref:System.Windows.Data.CollectionView.CurrentItem%2A> property of the view is cast as an `Order` to return the current order item in the collection.</span></span>  
   
  [!code-csharp[CollectionView#OnButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionView/CSharp/Page1.xaml.cs#onbutton)]
  [!code-vb[CollectionView#OnButton](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionView/VisualBasic/Page1.xaml.vb#onbutton)]  
   
-## <a name="see-also"></a><span data-ttu-id="e5095-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="e5095-111">See Also</span></span>  
- [<span data-ttu-id="e5095-112">Información general sobre el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="e5095-112">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [<span data-ttu-id="e5095-113">Ordenar datos en una vista</span><span class="sxs-lookup"><span data-stu-id="e5095-113">Sort Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [<span data-ttu-id="e5095-114">Filtrar datos en una vista</span><span class="sxs-lookup"><span data-stu-id="e5095-114">Filter Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [<span data-ttu-id="e5095-115">Ordenar y agrupar datos mediante una vista en XAML</span><span class="sxs-lookup"><span data-stu-id="e5095-115">Sort and Group Data Using a View in XAML</span></span>](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [<span data-ttu-id="e5095-116">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="e5095-116">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="62c12-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="62c12-111">See Also</span></span>  
+ [<span data-ttu-id="62c12-112">Información general sobre el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="62c12-112">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="62c12-113">Ordenar datos en una vista</span><span class="sxs-lookup"><span data-stu-id="62c12-113">Sort Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
+ [<span data-ttu-id="62c12-114">Filtrar datos en una vista</span><span class="sxs-lookup"><span data-stu-id="62c12-114">Filter Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
+ [<span data-ttu-id="62c12-115">Ordenar y agrupar datos mediante una vista en XAML</span><span class="sxs-lookup"><span data-stu-id="62c12-115">Sort and Group Data Using a View in XAML</span></span>](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
+ [<span data-ttu-id="62c12-116">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="62c12-116">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

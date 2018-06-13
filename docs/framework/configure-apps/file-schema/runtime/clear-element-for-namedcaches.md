@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745518"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a><span data-ttu-id="f11ae-102">&lt;Borrar&gt; (elemento) para &lt;namedCaches&gt;</span><span class="sxs-lookup"><span data-stu-id="f11ae-102">&lt;clear&gt; Element for &lt;namedCaches&gt;</span></span>
 <span data-ttu-id="f11ae-103">Todos los borra `namedCache` entradas en el `namedCaches` colección de una memoria caché.</span><span class="sxs-lookup"><span data-stu-id="f11ae-103">Clears all `namedCache` entries in the `namedCaches` collection for a memory cache.</span></span>  

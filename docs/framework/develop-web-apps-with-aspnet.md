@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386953"
 ---
 # <a name="developing-web-applications-with-aspnet"></a><span data-ttu-id="2cc0f-102">Desarrollar aplicaciones web mediante ASP.NET</span><span class="sxs-lookup"><span data-stu-id="2cc0f-102">Developing Web Applications with ASP.NET</span></span>
 <span data-ttu-id="2cc0f-103">ASP.NET es una tecnología de .NET Framework que permite crear aplicaciones web.</span><span class="sxs-lookup"><span data-stu-id="2cc0f-103">ASP.NET is a .NET Framework technology for creating web apps.</span></span> <span data-ttu-id="2cc0f-104">Los siguientes vínculos se proporcionan para su comodidad:</span><span class="sxs-lookup"><span data-stu-id="2cc0f-104">The following links are provided for your convenience:</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387109"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="e312e-102">Ejemplo de interoperabilidad COM: cliente .NET y servidor COM</span><span class="sxs-lookup"><span data-stu-id="e312e-102">COM Interop Sample: .NET Client and COM Server</span></span>
 <span data-ttu-id="e312e-103">En este ejemplo se muestra cómo un [cliente .NET](#cpconcominteropsamplenetclientcomserveranchor1), creado para tener acceso a un [servidor COM](#cpconcominteropsamplenetclientcomserveranchor2), crea una instancia de una coclase COM y llama a los miembros de clase para realizar cálculos de hipotecas.</span><span class="sxs-lookup"><span data-stu-id="e312e-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  

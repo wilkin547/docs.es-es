@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334202"
 ---
 # <a name="thread-pooling-c"></a><span data-ttu-id="9d110-102">Agrupación de subprocesos (C#)</span><span class="sxs-lookup"><span data-stu-id="9d110-102">Thread Pooling (C#)</span></span>
 <span data-ttu-id="9d110-103">Un *grupo de subprocesos* es una colección de subprocesos que puede usarse para realizar varias tareas en segundo plano.</span><span class="sxs-lookup"><span data-stu-id="9d110-103">A *thread pool* is a collection of threads that can be used to perform several tasks in the background.</span></span> <span data-ttu-id="9d110-104">(Vea [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md) (Subprocesos (C#)) para obtener información general). Esto deja libre el subproceso primario para realizar otras tareas de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="9d110-104">(See [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md) for background information.) This leaves the primary thread free to perform other tasks asynchronously.</span></span>  

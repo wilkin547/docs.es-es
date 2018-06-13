@@ -1,42 +1,34 @@
 ---
 title: Ejemplo de FindPrivateKey - WCF
 ms.date: 12/04/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 32e1a4a3de01371d67be8d19613b1f29c1ce3c29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72e2f49ae7c39b4a0486ec053ff1164c2d833cbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501666"
 ---
-# <a name="findprivatekey-sample"></a><span data-ttu-id="4c008-102">Ejemplo de FindPrivateKey</span><span class="sxs-lookup"><span data-stu-id="4c008-102">FindPrivateKey sample</span></span>
+# <a name="findprivatekey-sample"></a><span data-ttu-id="f7de4-102">Ejemplo de FindPrivateKey</span><span class="sxs-lookup"><span data-stu-id="f7de4-102">FindPrivateKey sample</span></span>
 
-<span data-ttu-id="4c008-103">Puede ser difícil buscar la ubicación y el nombre del archivo de clave privada asociados a un certificado X.509 concreto en el almacén de certificados.</span><span class="sxs-lookup"><span data-stu-id="4c008-103">It can be difficult to find the location and name of the private key file associated with a specific X.509 certificate in the certificate store.</span></span> <span data-ttu-id="4c008-104">La herramienta FindPrivateKey.exe facilita este proceso.</span><span class="sxs-lookup"><span data-stu-id="4c008-104">The FindPrivateKey.exe tool facilitates this process.</span></span>
+<span data-ttu-id="f7de4-103">Puede ser difícil buscar la ubicación y el nombre del archivo de clave privada asociados a un certificado X.509 concreto en el almacén de certificados.</span><span class="sxs-lookup"><span data-stu-id="f7de4-103">It can be difficult to find the location and name of the private key file associated with a specific X.509 certificate in the certificate store.</span></span> <span data-ttu-id="f7de4-104">La herramienta FindPrivateKey.exe facilita este proceso.</span><span class="sxs-lookup"><span data-stu-id="f7de4-104">The FindPrivateKey.exe tool facilitates this process.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="4c008-105">FindPrivateKey es un ejemplo que debe compilarse antes de su uso.</span><span class="sxs-lookup"><span data-stu-id="4c008-105">FindPrivateKey is a sample that needs to be compiled prior to use.</span></span> <span data-ttu-id="4c008-106">Consulte la [para compilar el proyecto FindPrivateKey](#to-build-the-findprivatekey-project) sección para obtener instrucciones sobre cómo compilar la herramienta FindPrivateKey.</span><span class="sxs-lookup"><span data-stu-id="4c008-106">See the [To build the FindPrivateKey project](#to-build-the-findprivatekey-project) section for instructions on how to build the FindPrivateKey tool.</span></span>
+> <span data-ttu-id="f7de4-105">FindPrivateKey es un ejemplo que debe compilarse antes de su uso.</span><span class="sxs-lookup"><span data-stu-id="f7de4-105">FindPrivateKey is a sample that needs to be compiled prior to use.</span></span> <span data-ttu-id="f7de4-106">Consulte la [para compilar el proyecto FindPrivateKey](#to-build-the-findprivatekey-project) sección para obtener instrucciones sobre cómo compilar la herramienta FindPrivateKey.</span><span class="sxs-lookup"><span data-stu-id="f7de4-106">See the [To build the FindPrivateKey project](#to-build-the-findprivatekey-project) section for instructions on how to build the FindPrivateKey tool.</span></span>
 
-<span data-ttu-id="4c008-107">Un administrador o cualquier usuario instala los certificados X.509 en el equipo.</span><span class="sxs-lookup"><span data-stu-id="4c008-107">X.509 certificates are installed by an Administrator or any user in the machine.</span></span> <span data-ttu-id="4c008-108">Sin embargo, puede tener acceso al certificado por un servicio que se ejecuta bajo una cuenta diferente.</span><span class="sxs-lookup"><span data-stu-id="4c008-108">However, the certificate may be accessed by a service running under a different account.</span></span> <span data-ttu-id="4c008-109">Por ejemplo, la cuenta de servicio de red.</span><span class="sxs-lookup"><span data-stu-id="4c008-109">For example, the NETWORK SERVICE account.</span></span>
+<span data-ttu-id="f7de4-107">Un administrador o cualquier usuario instala los certificados X.509 en el equipo.</span><span class="sxs-lookup"><span data-stu-id="f7de4-107">X.509 certificates are installed by an Administrator or any user in the machine.</span></span> <span data-ttu-id="f7de4-108">Sin embargo, puede tener acceso al certificado por un servicio que se ejecuta bajo una cuenta diferente.</span><span class="sxs-lookup"><span data-stu-id="f7de4-108">However, the certificate may be accessed by a service running under a different account.</span></span> <span data-ttu-id="f7de4-109">Por ejemplo, la cuenta de servicio de red.</span><span class="sxs-lookup"><span data-stu-id="f7de4-109">For example, the NETWORK SERVICE account.</span></span>
 
-<span data-ttu-id="4c008-110">Puede que esta cuenta no tenga acceso al archivo de clave privada porque no instaló el certificado en un principio.</span><span class="sxs-lookup"><span data-stu-id="4c008-110">This account may not have access to the private key file because the certificate was not installed by it originally.</span></span> <span data-ttu-id="4c008-111">La herramienta FindPrivateKey le da la ubicación del archivo de clave privada de un certificado X.509 determinado.</span><span class="sxs-lookup"><span data-stu-id="4c008-111">The FindPrivateKey tool gives you the location of a given X.509 Certificate's private key file.</span></span> <span data-ttu-id="4c008-112">Puede agregar o quitar permisos a este archivo cuando conoce la ubicación del archivo de clave privada de los certificados X.509 determinados.</span><span class="sxs-lookup"><span data-stu-id="4c008-112">You can add permissions or remove permissions to this file once you know the location of the particular X.509 certificates' private key file.</span></span>
+<span data-ttu-id="f7de4-110">Puede que esta cuenta no tenga acceso al archivo de clave privada porque no instaló el certificado en un principio.</span><span class="sxs-lookup"><span data-stu-id="f7de4-110">This account may not have access to the private key file because the certificate was not installed by it originally.</span></span> <span data-ttu-id="f7de4-111">La herramienta FindPrivateKey le da la ubicación del archivo de clave privada de un certificado X.509 determinado.</span><span class="sxs-lookup"><span data-stu-id="f7de4-111">The FindPrivateKey tool gives you the location of a given X.509 Certificate's private key file.</span></span> <span data-ttu-id="f7de4-112">Puede agregar o quitar permisos a este archivo cuando conoce la ubicación del archivo de clave privada de los certificados X.509 determinados.</span><span class="sxs-lookup"><span data-stu-id="f7de4-112">You can add permissions or remove permissions to this file once you know the location of the particular X.509 certificates' private key file.</span></span>
 
-<span data-ttu-id="4c008-113">Los ejemplos que utilizan certificados para la seguridad usan la herramienta FindPrivateKey en el *Setup.bat* archivo.</span><span class="sxs-lookup"><span data-stu-id="4c008-113">The samples that use certificates for security use the FindPrivateKey tool in the *Setup.bat* file.</span></span> <span data-ttu-id="4c008-114">Una vez que se ha encontrado el archivo de clave privada, puede usar otras herramientas como *Cacls.exe* para establecer los derechos de acceso adecuados en el archivo.</span><span class="sxs-lookup"><span data-stu-id="4c008-114">Once the private key file has been found, you can use other tools such as *Cacls.exe* to set the appropriate access rights onto the file.</span></span>
+<span data-ttu-id="f7de4-113">Los ejemplos que utilizan certificados para la seguridad usan la herramienta FindPrivateKey en el *Setup.bat* archivo.</span><span class="sxs-lookup"><span data-stu-id="f7de4-113">The samples that use certificates for security use the FindPrivateKey tool in the *Setup.bat* file.</span></span> <span data-ttu-id="f7de4-114">Una vez que se ha encontrado el archivo de clave privada, puede usar otras herramientas como *Cacls.exe* para establecer los derechos de acceso adecuados en el archivo.</span><span class="sxs-lookup"><span data-stu-id="f7de4-114">Once the private key file has been found, you can use other tools such as *Cacls.exe* to set the appropriate access rights onto the file.</span></span>
 
-<span data-ttu-id="4c008-115">Cuando se ejecuta un servicio de Windows Communication Foundation (WCF) en una cuenta de usuario, como una aplicación ejecutable autohospedada, asegúrese de que la cuenta de usuario tiene acceso de solo lectura al archivo.</span><span class="sxs-lookup"><span data-stu-id="4c008-115">When running a Windows Communication Foundation (WCF) service under a user account, such as a self-hosted executable, ensure that the user account has read-only access to the file.</span></span> <span data-ttu-id="4c008-116">Cuando se ejecuta un servicio WCF en Internet Information Services (IIS) son las cuentas predeterminadas que se ejecuta el servicio en el servicio de red en IIS 7 y versiones anteriores, o la identidad del grupo de aplicaciones en IIS 7.5 y versiones posteriores.</span><span class="sxs-lookup"><span data-stu-id="4c008-116">When running a WCF service under Internet Information Services (IIS) the default accounts that the service runs under are the NETWORK SERVICE on IIS 7 and earlier versions, or Application Pool Identity on IIS 7.5 and later versions.</span></span> <span data-ttu-id="4c008-117">Para obtener más información, consulte [identidades del grupo de aplicaciones](/iis/manage/configuring-security/application-pool-identities).</span><span class="sxs-lookup"><span data-stu-id="4c008-117">For more information, see [Application Pool Identities](/iis/manage/configuring-security/application-pool-identities).</span></span>
+<span data-ttu-id="f7de4-115">Cuando se ejecuta un servicio de Windows Communication Foundation (WCF) en una cuenta de usuario, como una aplicación ejecutable autohospedada, asegúrese de que la cuenta de usuario tiene acceso de solo lectura al archivo.</span><span class="sxs-lookup"><span data-stu-id="f7de4-115">When running a Windows Communication Foundation (WCF) service under a user account, such as a self-hosted executable, ensure that the user account has read-only access to the file.</span></span> <span data-ttu-id="f7de4-116">Cuando se ejecuta un servicio WCF en Internet Information Services (IIS) son las cuentas predeterminadas que se ejecuta el servicio en el servicio de red en IIS 7 y versiones anteriores, o la identidad del grupo de aplicaciones en IIS 7.5 y versiones posteriores.</span><span class="sxs-lookup"><span data-stu-id="f7de4-116">When running a WCF service under Internet Information Services (IIS) the default accounts that the service runs under are the NETWORK SERVICE on IIS 7 and earlier versions, or Application Pool Identity on IIS 7.5 and later versions.</span></span> <span data-ttu-id="f7de4-117">Para obtener más información, consulte [identidades del grupo de aplicaciones](/iis/manage/configuring-security/application-pool-identities).</span><span class="sxs-lookup"><span data-stu-id="f7de4-117">For more information, see [Application Pool Identities](/iis/manage/configuring-security/application-pool-identities).</span></span>
 
-## <a name="examples"></a><span data-ttu-id="4c008-118">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="4c008-118">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="f7de4-118">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="f7de4-118">Examples</span></span>
 
-<span data-ttu-id="4c008-119">Cuando se obtiene acceso a un certificado para el que el proceso no tiene privilegios de lectura, verá un mensaje de excepción similar al ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="4c008-119">When accessing a certificate for which the process doesn't have read privilege, you see an exception message similar to the following example:</span></span>
+<span data-ttu-id="f7de4-119">Cuando se obtiene acceso a un certificado para el que el proceso no tiene privilegios de lectura, verá un mensaje de excepción similar al ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="f7de4-119">When accessing a certificate for which the process doesn't have read privilege, you see an exception message similar to the following example:</span></span>
 
 ```
 System.ArgumentException was unhandled
@@ -44,41 +36,41 @@ Message="The certificate 'CN=localhost' must have a private key that is capable 
 Source="System.ServiceModel"
 ```
 
-<span data-ttu-id="4c008-120">Cuando esto ocurre, use la herramienta FindPrivateKey para buscar el archivo de clave privada y, a continuación, establezca el derecho de acceso para el proceso que se ejecuta el servicio.</span><span class="sxs-lookup"><span data-stu-id="4c008-120">When this occurs, use the FindPrivateKey tool to find the private key file, and then set the access right for the process that the service is running under.</span></span> <span data-ttu-id="4c008-121">Por ejemplo, puede hacerlo con la herramienta Cacls.exe tal como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="4c008-121">For example, this can be done with the Cacls.exe tool as shown in the following example:</span></span>
+<span data-ttu-id="f7de4-120">Cuando esto ocurre, use la herramienta FindPrivateKey para buscar el archivo de clave privada y, a continuación, establezca el derecho de acceso para el proceso que se ejecuta el servicio.</span><span class="sxs-lookup"><span data-stu-id="f7de4-120">When this occurs, use the FindPrivateKey tool to find the private key file, and then set the access right for the process that the service is running under.</span></span> <span data-ttu-id="f7de4-121">Por ejemplo, puede hacerlo con la herramienta Cacls.exe tal como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="f7de4-121">For example, this can be done with the Cacls.exe tool as shown in the following example:</span></span>
 
 ```
 cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /E /G "NETWORK SERVICE":R
 ```
 
-#### <a name="to-build-the-findprivatekey-project"></a><span data-ttu-id="4c008-122">Para compilar el proyecto FindPrivateKey</span><span class="sxs-lookup"><span data-stu-id="4c008-122">To build the FindPrivateKey project</span></span>
+#### <a name="to-build-the-findprivatekey-project"></a><span data-ttu-id="f7de4-122">Para compilar el proyecto FindPrivateKey</span><span class="sxs-lookup"><span data-stu-id="f7de4-122">To build the FindPrivateKey project</span></span>
 
-<span data-ttu-id="4c008-123">Para descargar el proyecto, visite [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459).</span><span class="sxs-lookup"><span data-stu-id="4c008-123">To download the project, visit [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459).</span></span>
+<span data-ttu-id="f7de4-123">Para descargar el proyecto, visite [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459).</span><span class="sxs-lookup"><span data-stu-id="f7de4-123">To download the project, visit [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459).</span></span>
 
-1. <span data-ttu-id="4c008-124">Abra [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] y navegue hasta la *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* carpeta en la ubicación del directorio donde instaló el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="4c008-124">Open [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] and navigate to the *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* folder under the directory location where you installed the sample.</span></span>
+1. <span data-ttu-id="f7de4-124">Abra [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] y navegue hasta la *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* carpeta en la ubicación del directorio donde instaló el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="f7de4-124">Open [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] and navigate to the *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* folder under the directory location where you installed the sample.</span></span>
 
-2. <span data-ttu-id="4c008-125">Haga doble clic en el icono del archivo .sln para abrir el archivo en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="4c008-125">Double-click the .sln file icon to open the file in Visual Studio.</span></span>
+2. <span data-ttu-id="f7de4-125">Haga doble clic en el icono del archivo .sln para abrir el archivo en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="f7de4-125">Double-click the .sln file icon to open the file in Visual Studio.</span></span>
 
-3. <span data-ttu-id="4c008-126">En el **generar** menú, seleccione **volver a generar solución**.</span><span class="sxs-lookup"><span data-stu-id="4c008-126">In the **Build** menu, select **Rebuild Solution**.</span></span>
+3. <span data-ttu-id="f7de4-126">En el **generar** menú, seleccione **volver a generar solución**.</span><span class="sxs-lookup"><span data-stu-id="f7de4-126">In the **Build** menu, select **Rebuild Solution**.</span></span>
 
-4. <span data-ttu-id="4c008-127">Al compilar la solución, se crea el archivo: FindPrivateKey.exe.</span><span class="sxs-lookup"><span data-stu-id="4c008-127">Building the solution generates the file: FindPrivateKey.exe.</span></span>
+4. <span data-ttu-id="f7de4-127">Al compilar la solución, se crea el archivo: FindPrivateKey.exe.</span><span class="sxs-lookup"><span data-stu-id="f7de4-127">Building the solution generates the file: FindPrivateKey.exe.</span></span>
 
-## <a name="conventionscommand-line-entries"></a><span data-ttu-id="4c008-128">Convenciones: entradas de línea de comandos</span><span class="sxs-lookup"><span data-stu-id="4c008-128">Conventions—Command-Line entries</span></span>
+## <a name="conventionscommand-line-entries"></a><span data-ttu-id="f7de4-128">Convenciones: entradas de línea de comandos</span><span class="sxs-lookup"><span data-stu-id="f7de4-128">Conventions—Command-Line entries</span></span>
 
- <span data-ttu-id="4c008-129">"[*opción*]" representa un conjunto opcional de parámetros.</span><span class="sxs-lookup"><span data-stu-id="4c008-129">"[*option*]" represents an optional set of parameters.</span></span>
+ <span data-ttu-id="f7de4-129">"[*opción*]" representa un conjunto opcional de parámetros.</span><span class="sxs-lookup"><span data-stu-id="f7de4-129">"[*option*]" represents an optional set of parameters.</span></span>
 
- <span data-ttu-id="4c008-130">"{*opción*}" representa un conjunto de parámetros obligatorio.</span><span class="sxs-lookup"><span data-stu-id="4c008-130">"{*option*}" represents a mandatory set of parameters.</span></span>
+ <span data-ttu-id="f7de4-130">"{*opción*}" representa un conjunto de parámetros obligatorio.</span><span class="sxs-lookup"><span data-stu-id="f7de4-130">"{*option*}" represents a mandatory set of parameters.</span></span>
 
- <span data-ttu-id="4c008-131">"*opción1* &#124; *opción2*"representa una opción entre conjuntos de opciones.</span><span class="sxs-lookup"><span data-stu-id="4c008-131">"*option1* &#124; *option2*" represents a choice between sets of options.</span></span>
+ <span data-ttu-id="f7de4-131">"*opción1* &#124; *opción2*" representa una opción entre conjuntos de opciones.</span><span class="sxs-lookup"><span data-stu-id="f7de4-131">"*option1* &#124; *option2*" represents a choice between sets of options.</span></span>
 
- <span data-ttu-id="4c008-132">"\<*valor*>" representa un valor de parámetro que se especifique.</span><span class="sxs-lookup"><span data-stu-id="4c008-132">"\<*value*>" represents a parameter value to be entered.</span></span>
+ <span data-ttu-id="f7de4-132">"\<*valor*>" representa un valor de parámetro que se especifique.</span><span class="sxs-lookup"><span data-stu-id="f7de4-132">"\<*value*>" represents a parameter value to be entered.</span></span>
 
-## <a name="usage"></a><span data-ttu-id="4c008-133">Uso</span><span class="sxs-lookup"><span data-stu-id="4c008-133">Usage</span></span>
+## <a name="usage"></a><span data-ttu-id="f7de4-133">Uso</span><span class="sxs-lookup"><span data-stu-id="f7de4-133">Usage</span></span>
 
 ```
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]
 ```
 
-<span data-ttu-id="4c008-134">Dónde:</span><span class="sxs-lookup"><span data-stu-id="4c008-134">Where:</span></span>
+<span data-ttu-id="f7de4-134">Dónde:</span><span class="sxs-lookup"><span data-stu-id="f7de4-134">Where:</span></span>
 
 ```
        <subjectName> The subject name of the certificate
@@ -88,23 +80,23 @@ FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbpri
        -a            output absolute file name
 ```
 
-<span data-ttu-id="4c008-135">Si se especifica ningún parámetro en el símbolo del sistema, se muestra este texto de ayuda.</span><span class="sxs-lookup"><span data-stu-id="4c008-135">If no parameters are specified at the command prompt, then this help text is displayed.</span></span>
+<span data-ttu-id="f7de4-135">Si se especifica ningún parámetro en el símbolo del sistema, se muestra este texto de ayuda.</span><span class="sxs-lookup"><span data-stu-id="f7de4-135">If no parameters are specified at the command prompt, then this help text is displayed.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="4c008-136">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="4c008-136">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="f7de4-136">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="f7de4-136">Examples</span></span>
 
-<span data-ttu-id="4c008-137">Este ejemplo busca el nombre de archivo del certificado con un nombre de sujeto de "CN = localhost", en el almacén Personal del usuario actual.</span><span class="sxs-lookup"><span data-stu-id="4c008-137">This example finds the filename of the certificate with a subject name of "CN=localhost", in the Personal store of the Current User.</span></span>
+<span data-ttu-id="f7de4-137">Este ejemplo busca el nombre de archivo del certificado con un nombre de sujeto de "CN = localhost", en el almacén Personal del usuario actual.</span><span class="sxs-lookup"><span data-stu-id="f7de4-137">This example finds the filename of the certificate with a subject name of "CN=localhost", in the Personal store of the Current User.</span></span>
 
 ```
 FindPrivateKey My CurrentUser -n "CN=localhost"
 ```
 
-<span data-ttu-id="4c008-138">Este ejemplo busca el nombre de archivo del certificado con un nombre de sujeto de "CN = localhost", en el Personal almacén del usuario actual y la ruta de acceso completa del directorio de salida.</span><span class="sxs-lookup"><span data-stu-id="4c008-138">This example finds the filename of the certificate with a subject name of "CN=localhost", in the Personal store of the Current User and output the full directory path.</span></span>
+<span data-ttu-id="f7de4-138">Este ejemplo busca el nombre de archivo del certificado con un nombre de sujeto de "CN = localhost", en el Personal almacén del usuario actual y la ruta de acceso completa del directorio de salida.</span><span class="sxs-lookup"><span data-stu-id="f7de4-138">This example finds the filename of the certificate with a subject name of "CN=localhost", in the Personal store of the Current User and output the full directory path.</span></span>
 
 ```
 FindPrivateKey My CurrentUser -n "CN=localhost" -a
 ```
 
-<span data-ttu-id="4c008-139">Este ejemplo busca el nombre de archivo del certificado con una huella digital de "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52", en el almacén personal del equipo local.</span><span class="sxs-lookup"><span data-stu-id="4c008-139">This example finds the filename of the certificate with a thumbprint of "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52", in the Personal store of the Local Computer.</span></span>
+<span data-ttu-id="f7de4-139">Este ejemplo busca el nombre de archivo del certificado con una huella digital de "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52", en el almacén personal del equipo local.</span><span class="sxs-lookup"><span data-stu-id="f7de4-139">This example finds the filename of the certificate with a thumbprint of "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52", in the Personal store of the Local Computer.</span></span>
 
 ```
 FindPrivateKey My LocalMachine -t "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52"

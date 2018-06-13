@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747312"
 ---
 # <a name="ltdiagnosticsgt"></a><span data-ttu-id="6c498-102">&lt;diagnósticos&gt;</span><span class="sxs-lookup"><span data-stu-id="6c498-102">&lt;diagnostics&gt;</span></span>
 <span data-ttu-id="6c498-103">El elemento `diagnostics` define valores que pueden ser utilizados por un administrador para la inspección y control en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="6c498-103">The `diagnostics` element defines settings that can be used by an administrator for run-time inspection and control.</span></span>  

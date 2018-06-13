@@ -6,9 +6,10 @@ ms.author: wiwagn
 ms.date: 09/22/2017
 ms.openlocfilehash: b4a88725de78f59c62aac1bd33764db6b2e0887e
 ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32768494"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a><span data-ttu-id="3908e-103">Flujo de trabajo de DevOps para aplicaciones de Docker con herramientas de Microsoft</span><span class="sxs-lookup"><span data-stu-id="3908e-103">Docker application DevOps workflow with Microsoft tools</span></span>
 
