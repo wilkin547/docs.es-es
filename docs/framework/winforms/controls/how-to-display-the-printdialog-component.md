@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532192"
 ---
 # <a name="how-to-display-the-printdialog-component"></a>Cómo: Mostrar el componente PrintDialog
 El <xref:System.Windows.Forms.PrintDialog> componente es el cuadro de diálogo de impresión de Windows estándar que muchos de los usuarios estarán familiarizados con. Dado que los usuarios cómodos con él, sería beneficioso para su uso la <xref:System.Windows.Forms.PrintDialog> componente.  

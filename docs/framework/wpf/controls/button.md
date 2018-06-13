@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551705"
 ---
 # <a name="button"></a>Botón
 A <xref:System.Windows.Controls.Button> control responde a los proporcionados por el usuario desde un mouse, teclado, lápiz, o cualquier otro dispositivo de entrada y genera un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos. A <xref:System.Windows.Controls.Button> es básico [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] componente que puede incluir contenido simple, como texto y también puede contener contenido complejo, como imágenes y <xref:System.Windows.Controls.Panel> controles.  

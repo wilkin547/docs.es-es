@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549064"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Arquitectura de entrada de interoperabilidad entre formularios Windows Forms y WPF
 Interoperación entre el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] requiere que ambas tecnologías tengan el procesamiento de entrada de teclado correspondiente. Este tema describe cómo estas tecnologías implementan el teclado y procesamiento para habilitar la interoperabilidad sin contratiempos en aplicaciones híbridas de mensajes.  

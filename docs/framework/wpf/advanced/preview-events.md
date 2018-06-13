@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546141"
 ---
 # <a name="preview-events"></a>Eventos de vista previa
 Eventos de vista previa, también conocidos como eventos de túnel, son eventos enrutados que se pasa la dirección de la ruta desde la raíz de la aplicación hacia el elemento que provocó el evento y se notifica como el origen de datos del evento. No todos los escenarios de eventos admiten o requieren los eventos de vista previa. en este tema se describe las situaciones donde existen eventos de vista previa, cómo las aplicaciones o componentes deben controlar, y los casos donde la creación de eventos de vista previa en componentes personalizados o de clases puede ser adecuado.  

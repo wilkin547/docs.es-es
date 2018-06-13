@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530151"
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a>Cómo: Crear un cuadro de texto de sólo lectura (formularios Windows Forms)
 Puede transformar un cuadro de texto editable de formularios Windows Forms en un control de solo lectura. Por ejemplo, el cuadro de texto puede mostrar un valor que normalmente se edita pero no puede estar en la actualidad, debido al estado de la aplicación.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544858"
 ---
 # <a name="migration-and-interoperability"></a>Migración e interoperabilidad
 Esta página contiene vínculos a documentos que describen cómo implementar la interoperación entre [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones y otros tipos de [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] las aplicaciones.  

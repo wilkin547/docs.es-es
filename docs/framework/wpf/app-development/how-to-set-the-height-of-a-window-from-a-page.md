@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546060"
 ---
 # <a name="how-to-set-the-height-of-a-window-from-a-page"></a>Cómo: establecer el alto de una ventana desde una página
 Este ejemplo muestra cómo establecer el alto de la ventana de un <xref:System.Windows.Controls.Page>.  

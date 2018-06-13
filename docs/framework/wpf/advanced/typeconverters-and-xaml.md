@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549687"
 ---
 # <a name="typeconverters-and-xaml"></a>Clases TypeConverter y XAML
 En este tema se presenta el propósito de la conversión de tipos desde cadenas como característica general del lenguaje XAML. En .NET Framework, el <xref:System.ComponentModel.TypeConverter> clase sirve para un propósito determinado como parte de la implementación para una clase administrada personalizada que puede usarse como un valor de propiedad en el uso de atributos XAML. Si escribe una clase personalizada y desea que las instancias de la clase que se pueda usar como valores de atributo configurables de XAML, tendrá que aplicar un <xref:System.ComponentModel.TypeConverterAttribute> a su clase, escribir un personalizado <xref:System.ComponentModel.TypeConverter> clase, o ambos.  

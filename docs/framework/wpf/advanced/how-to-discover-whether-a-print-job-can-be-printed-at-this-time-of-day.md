@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548040"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Cómo: Detectar si un trabajo de impresión se puede imprimir en esta hora del día
 Las colas de impresión no están siempre disponibles para 24 horas al día. Tienen propiedades de tiempo de inicio y finalización que se pueden establecer para que no estén disponibles en determinados momentos del día. Esta característica se puede utilizar, por ejemplo, para reservar una impresora para uso exclusivo de un determinado departamento después de las 5 P.M.. Ese departamento tendría otra cola de servicio de la impresora que otros departamentos a usar. La cola de los demás departamentos se establecería en estar disponible después de las 5 P.M., mientras la cola del departamento favorecido podría establecerse como disponible en todo momento.  

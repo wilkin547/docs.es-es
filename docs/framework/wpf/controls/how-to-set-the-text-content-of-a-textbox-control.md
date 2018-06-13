@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551731"
 ---
 # <a name="how-to-set-the-text-content-of-a-textbox-control"></a>Cómo: Establecer el contenido de texto de un control TextBox
 Este ejemplo muestra cómo utilizar el <xref:System.Windows.Controls.TextBox.Text%2A> propiedad que se va a establecer el contenido de texto inicial de un <xref:System.Windows.Controls.TextBox> control.  

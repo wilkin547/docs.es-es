@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547621"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Interceptar entradas del lápiz óptico
 El <xref:System.Windows.Input.StylusPlugIns> arquitectura proporciona un mecanismo para implementar el control de bajo nivel sobre <xref:System.Windows.Input.Stylus> de entrada y la creación de la entrada de lápiz digital <xref:System.Windows.Ink.Stroke> objetos. La <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> clase proporciona un mecanismo para implementar un comportamiento personalizado y aplicarlo a la secuencia de datos procedente del dispositivo de lápiz para lograr un rendimiento óptimo.  

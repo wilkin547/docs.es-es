@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524891"
 ---
 # <a name="using-managed-graphics-classes"></a>Utilizar clases gráficas administradas
 Los temas siguientes describen cómo utilizar el [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API en el marco de trabajo de la clase administrada.  

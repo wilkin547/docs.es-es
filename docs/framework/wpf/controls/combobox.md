@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551196"
 ---
 # <a name="combobox"></a>ComboBox
 El <xref:System.Windows.Controls.ComboBox> control presenta a los usuarios con una lista de opciones. La lista se muestran y oculta como el control se expande y se contrae. En su estado predeterminado, la lista está contraída, mostrar sólo una opción. El usuario hace clic en un botón para ver una lista completa de opciones.  

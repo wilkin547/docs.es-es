@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544400"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Cómo: Voltear un control UIElement horizontal o verticalmente
 Este ejemplo muestra cómo utilizar un <xref:System.Windows.Media.ScaleTransform> debe voltear un <xref:System.Windows.UIElement> horizontal o verticalmente. En este ejemplo, un <xref:System.Windows.Controls.Button> control (un tipo de <xref:System.Windows.UIElement>) se voltea aplicando un <xref:System.Windows.Media.ScaleTransform> a su <xref:System.Windows.UIElement.RenderTransform%2A> propiedad.  

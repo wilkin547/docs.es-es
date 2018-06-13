@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544516"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>Cómo: Agregar datos personalizados a datos de entrada manuscrita
 Puede agregar datos personalizados a tinta que se guardará cuando la tinta se guarda como formato serializado de tinta (ISF).  Puede guardar los datos personalizados a la <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, o <xref:System.Windows.Ink.Stroke>.  Posibilidad de guardar los datos personalizados en tres objetos permite decidir el mejor lugar para guardar los datos.  Las tres clases usan métodos similares para almacenar y tener acceso a datos personalizados.  

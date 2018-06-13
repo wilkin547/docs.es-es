@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752772"
 ---
 # <a name="ltdatacontractserializergt"></a>&lt;DataContractSerializer&gt;
 Contiene los datos de configuración para <xref:System.Runtime.Serialization.DataContractSerializer>. Este elemento se produce en dos jerarquías diferentes. Uno aparece en la lista de la siguiente sección, Jerarquía del esquema, y el otro se enumera en la sección Comentarios.  

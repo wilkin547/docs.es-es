@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549352"
 ---
 # <a name="weak-event-patterns"></a>Modelos de evento débil
 En las aplicaciones, es posible que los controladores que están conectados a los orígenes de eventos no se destruirán en coordinación con el objeto de agente de escucha que se adjunta el controlador para el origen. Esta situación puede provocar pérdidas de memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Introduce un modelo de diseño que puede utilizarse para solucionar este problema, debe proporcionar una clase de administrador dedicada para eventos concretos e implementando una interfaz en los agentes de escucha para ese evento. Este patrón de diseño se conoce como el *modelo de evento débil*.  

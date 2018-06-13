@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549414"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marcar eventos enrutados como controlados y control de clases
 Los controladores de un evento enrutado pueden marcar el evento como controlado en los datos del evento. Controlar el evento acorta de forma efectiva la ruta. El control de clases es un concepto de programación que admiten los eventos enrutados. Un controlador de clases tiene la oportunidad de controlar un evento enrutado determinado en un nivel de clase con un controlador que se invoca antes que cualquier controlador de instancias de cualquier instancia de la clase.  

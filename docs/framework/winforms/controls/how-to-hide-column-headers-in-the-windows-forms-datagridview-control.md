@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532280"
 ---
 # <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Cómo: Ocultar encabezados de columnas en el control DataGridView de formularios Windows Forms
 En ocasiones, deseará mostrar un <xref:System.Windows.Forms.DataGridView> sin encabezados de columna. En el <xref:System.Windows.Forms.DataGridView> (control), el <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> valor de la propiedad determina si se muestran los encabezados de columna.  

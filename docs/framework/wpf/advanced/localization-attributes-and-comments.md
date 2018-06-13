@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547272"
 ---
 # <a name="localization-attributes-and-comments"></a>Atributos y comentarios sobre localización
 Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] son propiedades, en el código fuente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], que proporcionan los desarrolladores para ofrecer reglas y sugerencias para la localización. Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contienen dos conjuntos de información: atributos de localizabilidad y comentarios de localización de forma libre. Los atributos de localización se usan en la API de localización de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para indicar qué recursos se van a localizar. Los comentarios de forma libre son cualquier información que el autor de la aplicación quiera incluir.  

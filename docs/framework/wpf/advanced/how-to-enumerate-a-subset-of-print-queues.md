@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543594"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>Cómo: Enumerar un subconjunto de colas de impresión
 Una situación común que enfrentan profesionales de informática (TI) administrar un conjunto de toda la compañía de las impresoras consiste en generar una lista de impresoras que tienen ciertas características. Esta funcionalidad se proporciona mediante la <xref:System.Printing.PrintServer.GetPrintQueues%2A> método de un <xref:System.Printing.PrintServer> objeto y el <xref:System.Printing.EnumeratedPrintQueueTypes> enumeración.  

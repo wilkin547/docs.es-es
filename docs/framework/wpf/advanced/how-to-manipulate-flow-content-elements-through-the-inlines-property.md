@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545576"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Cómo: Manipular elementos de contenido dinámico mediante la propiedad Inlines
 Estos ejemplos muestran algunas de las operaciones más comunes que se pueden realizar en elementos de contenido dinámico insertado (y los contenedores de elementos de este tipo, como <xref:System.Windows.Controls.TextBlock>) a través de la **elementos incorporados** propiedad. Esta propiedad se utiliza para agregar y quitar elementos de <xref:System.Windows.Documents.InlineCollection>. Flujo de contenido de elementos de esa característica un **elementos incorporados** propiedad incluyen:  

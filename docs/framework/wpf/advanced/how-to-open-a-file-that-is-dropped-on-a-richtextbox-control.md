@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547767"
 ---
 # <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Cómo: Abrir un archivo colocado en un control RichTextBox
 En [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, y <xref:System.Windows.Documents.FlowDocument> todos los controles tienen funcionalidad de arrastrar y colocar integrada. La funcionalidad integrada permite arrastrar y colocar dentro y entre los controles de texto. Sin embargo, no permite abrir un archivo si se coloca el archivo en el control. Estos controles también marcan los eventos de arrastrar y colocar como controlado. Como resultado, de forma predeterminada, no se puede agregar sus propios controladores de eventos para proporcionar la funcionalidad para abrir archivos colocados.  

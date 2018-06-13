@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532999"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer"></a>Cómo: Establecer el texto mostrado por un control de formularios Windows Forms mediante el Diseñador
 Controles de formularios Windows Forms muestran habitualmente algún texto relacionado con la función principal del control. Por ejemplo, un <xref:System.Windows.Forms.Button> control suele mostrar un título que indica qué acción se realizará cuando se hace clic en el botón. Para todos los controles, puede establecer o devolver el texto usando la propiedad <xref:System.Windows.Forms.Control.Text%2A>. Puede cambiar la fuente usando la propiedad <xref:System.Windows.Forms.Control.Font%2A>.  

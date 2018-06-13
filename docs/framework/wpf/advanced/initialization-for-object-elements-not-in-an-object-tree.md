@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545537"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Inicialización de elementos de objeto no incluidos en un árbol de objetos
 Algunos aspectos de inicialización de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] se fraccionan en procesos que suelen depender de la conexión del elemento con el árbol lógico o visual. En este tema se describen los pasos que pueden ser necesarios para inicializar un elemento que no esté conectado a ninguno de estos árboles.  

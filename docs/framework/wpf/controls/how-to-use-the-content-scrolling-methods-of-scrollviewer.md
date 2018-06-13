@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552771"
 ---
 # <a name="how-to-use-the-content-scrolling-methods-of-scrollviewer"></a>Cómo: Utilizar los métodos de desplazamiento de contenido de ScrollViewer
 Este ejemplo muestra cómo utilizar los métodos de desplazamiento de la <xref:System.Windows.Controls.ScrollViewer> elemento. Estos métodos proporcionan incremental desplazamiento de contenido, ya sea por línea o por página, en un <xref:System.Windows.Controls.ScrollViewer>.  

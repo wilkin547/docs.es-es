@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c4b28d60b3a1da32d2d9db84aa92ca4c9bf769aa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423200"
 ---
 # <a name="icordebugregisterset-interface"></a>ICorDebugRegisterSet (Interfaz)
 Representa el conjunto de registros disponibles en el equipo que está ejecutando el código.  

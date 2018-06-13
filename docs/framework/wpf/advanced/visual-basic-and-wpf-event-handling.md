@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547828"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Control de eventos en Visual Basic y WPF
 Para el idioma de Microsoft Visual Basic .NET concreto, puede usar el específicos del idioma `Handles` palabra clave que se va a asociar controladores de eventos con instancias, en lugar de adjuntar controladores de eventos con atributos o utilizando el <xref:System.Windows.UIElement.AddHandler%2A> método. Pero la técnica de `Handles` para adjuntar controladores a instancias tiene algunas limitaciones, ya que la sintaxis de `Handles` no es compatible con algunas de las características específicas de eventos enrutados del sistema de eventos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  

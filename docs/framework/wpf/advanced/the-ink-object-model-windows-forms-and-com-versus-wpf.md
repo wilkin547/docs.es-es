@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548954"
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Modelo de objetos de entrada manuscrita: COM y formularios Windows Forms frente a WPF
 

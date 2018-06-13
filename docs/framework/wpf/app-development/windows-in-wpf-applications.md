@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550782"
 ---
 # <a name="windows-in-wpf-applications"></a>Windows en aplicaciones para WPF
 Los usuarios interactúan con las aplicaciones a través de windows. El objetivo fundamental de una ventana es hospedar y mostrar el contenido. El tipo de contenido que una ventana hospeda depende del tipo de datos que una aplicación funciona a través de, que puede incluir multimedia, páginas de lenguaje de marcado de aplicaciones Extensible (XAML), páginas Web, documentos, tablas de base de datos y registros e información del sistema.  

@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 103a37d7549d7ec18617b74c777506b3ad225a18
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422867"
 ---
 # <a name="icordebugprocess6-interface"></a>Interfaz ICorDebugProcess6
 Extiende lógicamente la ICorDebugProcess (interfaz) para habilitar características como la descodificación de eventos de depuración administrados que están codificados en eventos de depuración de excepción nativos o la división de módulos virtuales.  

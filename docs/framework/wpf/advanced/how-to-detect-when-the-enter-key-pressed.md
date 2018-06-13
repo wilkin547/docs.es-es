@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544750"
 ---
 # <a name="how-to-detect-when-the-enter-key-pressed"></a>Cómo: Detectar cuándo se presiona la tecla ENTRAR
 Este ejemplo muestra cómo detectar cuándo el <xref:System.Windows.Input.Key.Enter> se presiona la tecla del teclado.  

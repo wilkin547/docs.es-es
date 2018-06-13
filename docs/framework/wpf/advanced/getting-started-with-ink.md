@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546242"
 ---
 # <a name="getting-started-with-ink"></a>Introducción a las entradas manuscritas
 La incorporación de entrada de lápiz digital en sus aplicaciones es más fácil que nunca. Tinta ha evolucionado ante un corolario al método COM y formularios Windows Forms de la programación para lograr una integración completa en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. No es necesario instalar ningún SDK independiente ni bibliotecas en tiempo de ejecución.  

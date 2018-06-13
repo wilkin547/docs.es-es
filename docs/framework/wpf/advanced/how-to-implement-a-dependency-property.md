@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544653"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>Cómo: Implementar una propiedad de dependencia
 Este ejemplo muestra cómo realizar copias de un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] propiedad con un <xref:System.Windows.DependencyProperty> campo, lo que define una propiedad de dependencia. Si define sus propias propiedades y quiere que admitan muchos aspectos de la funcionalidad de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], incluidos los estilos, el enlace de datos, la herencia, la animación y los valores predeterminados, debe implementarlas como una propiedad de dependencia.  

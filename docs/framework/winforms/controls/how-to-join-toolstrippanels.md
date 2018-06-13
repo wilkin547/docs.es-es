@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531848"
 ---
 # <a name="how-to-join-toolstrippanels"></a>Cómo: Unir ToolStripPanels
 Puede unir los controles <xref:System.Windows.Forms.ToolStrip> a un <xref:System.Windows.Forms.ToolStripPanel> en tiempo de ejecución que proporciona la flexibilidad de las aplicaciones de interfaz de múltiples documentos (MDI).  
