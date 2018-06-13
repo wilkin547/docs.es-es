@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496330"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración en la información general de las aplicaciones COM+
 Windows Communication Foundation (WCF) proporciona un entorno rico para crear aplicaciones distribuidas. Si ya usa la lógica de la aplicación basada en componentes alojada en COM +, puede utilizar WCF para extender su lógica existente en lugar de tener que rescribir. Un escenario común es cuando se quiere exponer una lógica de negocio de Enterprise Services o COM+ mediante servicios web.  

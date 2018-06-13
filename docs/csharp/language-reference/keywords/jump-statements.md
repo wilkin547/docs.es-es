@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265225"
 ---
 # <a name="jump-statements-c-reference"></a>Instrucciones de salto (Referencia de C#)
 La creación de una rama se realiza mediante instrucciones de salto, que producen una transferencia inmediata del control del programa. Las siguientes palabras clave se usan en instrucciones de salto:  

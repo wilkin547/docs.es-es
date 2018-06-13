@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495878"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Depuración de errores de autenticación de Windows
 Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, la interfaz del proveedor de compatibilidad para seguridad (SSPI) controla los procesos de seguridad. Cuando se producen errores de seguridad en el nivel de SSPI, emerge por Windows Communication Foundation (WCF). En este tema se proporciona un marco y conjunto de cuestiones que le ayudarán a diagnosticar los errores.  

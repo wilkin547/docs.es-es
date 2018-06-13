@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757884"
 ---
 # <a name="ltsqlworkflowinstancestoregt"></a>&lt;sqlWorkflowInstanceStore&gt;
 Un comportamiento del servicio que le permite configurar el <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> característica, que admite conservar información de estado para instancias de servicio de flujo de trabajo en una base de datos de SQL Server 2005 o SQL Server 2008. Para obtener más información sobre esta característica, consulte [almacén de instancias de flujo de trabajo de SQL](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  

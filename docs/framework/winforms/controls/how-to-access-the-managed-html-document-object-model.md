@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527666"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Cómo: Obtener acceso al Modelo de objetos de documento HTML administrado
 Puede acceder al Document Object Model (DOM) HTML administrado desde dos tipos de aplicaciones:  

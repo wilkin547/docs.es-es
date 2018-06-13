@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279989"
 ---
 # <a name="select-clause-c-reference"></a>select (Cláusula, Referencia de C#)
 En una expresión de consulta, la cláusula `select` especifica el tipo de valores que se producirán cuando se ejecute la consulta. El resultado se basa en la evaluación de todas las cláusulas anteriores y en cualquier expresión de la propia cláusula `select`. Una expresión de consulta debe finalizar con una cláusula `select` o con una cláusula [group](../../../csharp/language-reference/keywords/group-clause.md).  

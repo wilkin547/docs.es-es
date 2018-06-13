@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395202"
 ---
 # <a name="code-access-security-basics"></a>Conceptos básicos sobre la seguridad de acceso del código
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  

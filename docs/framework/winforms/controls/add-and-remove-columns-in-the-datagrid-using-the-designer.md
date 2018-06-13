@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528150"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Cómo: Agregar y quitar columnas en el control DataGridView de formularios Windows Forms mediante el Diseñador
 Los formularios Windows Forms <xref:System.Windows.Forms.DataGridView> control debe contener las columnas para mostrar los datos. Si tiene previsto rellenar el control manualmente, debe agregar las columnas. Como alternativa, puede enlazar el control a un origen de datos, que genera y rellena las columnas automáticamente. Si el origen de datos contiene más columnas de las que desea mostrar, puede quitar las columnas innecesarias.  

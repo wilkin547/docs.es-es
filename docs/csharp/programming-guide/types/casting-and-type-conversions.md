@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336562"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Conversiones de tipos (Guía de programación de C#)
 Dado que C# tiene tipos estáticos en tiempo de compilación, después de declarar una variable, no se puede volver a declarar ni usar para almacenar valores de otro tipo a menos que ese tipo sea convertible al tipo de la variable. Por ejemplo, no hay ninguna conversión de un entero a una cadena arbitraria. Por tanto, después de declarar `i` como un entero, no se le puede asignar la cadena "Hello", como se muestra en el código siguiente.  

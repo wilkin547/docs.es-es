@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527737"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Notificación de cambios en el enlace de datos de Windows Forms
 Uno de los conceptos más importantes de enlace de datos de formularios Windows Forms es *de notificación de cambio*. Para garantizar que el origen de datos y los controles enlazados siempre tengan los datos más recientes, debe agregar la notificación de cambio para el enlace de datos. En concreto, para asegurarse de que se notifiquen a los controles enlazados de cambios que se realizaron en su origen de datos y el origen de datos es una notificación de cambios que se realizaron en las propiedades de un control enlazadas.  
