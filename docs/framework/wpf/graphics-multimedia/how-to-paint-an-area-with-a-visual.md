@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559806"
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>Cómo: Pintar un área con un objeto Visual
 Este ejemplo muestra cómo utilizar el <xref:System.Windows.Media.VisualBrush> clase para pintar un área con un <xref:System.Windows.Media.Visual>.  

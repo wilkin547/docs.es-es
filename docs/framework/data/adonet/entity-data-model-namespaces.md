@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765235"
 ---
 # <a name="entity-data-model-namespaces"></a>Entity Data Model: Espacios de nombres
 Un espacio de nombres en Entity Data Model (EDM) es un contenedor abstracto para [tipos de entidad](../../../../docs/framework/data/adonet/entity-type.md), [tipos complejos](../../../../docs/framework/data/adonet/complex-type.md), y [asociaciones](../../../../docs/framework/data/adonet/association-type.md). Los espacios de nombres en EDM son similares a los de un lenguaje de programación: proporcionan el contexto para los objetos que contienen, así como una manera de eliminar la ambigüedad de objetos que tienen el mismo nombre (pero que contienen espacios de nombres diferentes).  

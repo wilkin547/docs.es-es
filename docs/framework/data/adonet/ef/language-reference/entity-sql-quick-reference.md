@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765859"
 ---
 # <a name="entity-sql-quick-reference"></a>Referencia rápida de Entity SQL
 Este tema proporciona una referencia rápida a las consultas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Las consultas en este tema se basan en el modelo AdventureWorks Sales.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530808"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Cómo: Crear teclas de acceso con controles Label de formularios Windows Forms
 Formularios Windows Forms <xref:System.Windows.Forms.Label> controles pueden utilizarse para definir teclas de acceso para otros controles. Al definir una tecla de acceso en un control de etiqueta, el usuario puede presionar la tecla ALT y el carácter designado para mover el foco al control que sigue en el orden de tabulación. Dado que las etiquetas no pueden recibir el foco, el foco automáticamente se desplaza al siguiente control en el orden de tabulación. Utilice esta técnica para asignar teclas de acceso a cuadros de texto, cuadros combinados, cuadros de lista y cuadrículas de datos.  

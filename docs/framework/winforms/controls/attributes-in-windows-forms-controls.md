@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525783"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Atributos en controles de formularios Windows Forms
 .NET Framework proporciona una variedad de atributos que puede aplicar a los miembros de sus controles y componentes personalizados. Algunos de estos atributos afectan al comportamiento en tiempo de ejecución de una clase y otros afectan al comportamiento en tiempo de diseño.  

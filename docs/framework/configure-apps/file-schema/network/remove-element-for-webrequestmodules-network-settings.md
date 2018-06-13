@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743032"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;quitar&gt; elemento para webRequestModules (configuración de red)
 Quita un módulo de solicitud Web personalizado de la aplicación.  

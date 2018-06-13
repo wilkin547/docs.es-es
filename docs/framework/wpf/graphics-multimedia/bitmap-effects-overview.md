@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558010"
 ---
 # <a name="bitmap-effects-overview"></a>Información general sobre efectos de imagen
 Los efectos de imagen permiten a los diseñadores y desarrolladores para aplicar efectos visuales para representan contenido Windows Presentation Foundation (WPF). Por ejemplo, los efectos de imagen permiten aplicar con más facilidad un <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> efecto o un efecto de desenfoque a una imagen o un botón.  

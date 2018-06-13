@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559982"
 ---
 # <a name="how-to-transform-points-and-vectors"></a>Cómo: Transformar puntos y vectores
 Este ejemplo muestra cómo utilizar un <xref:System.Windows.Media.Matrix> transformar <xref:System.Windows.Point> y <xref:System.Windows.Vector> objetos.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532813"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Cómo: Mostrar la vista preliminar en aplicaciones de Windows Forms
 Puede usar el <xref:System.Windows.Forms.PrintPreviewDialog> control para permitir a los usuarios mostrar un documento, con frecuencia antes de que se imprimirán.  

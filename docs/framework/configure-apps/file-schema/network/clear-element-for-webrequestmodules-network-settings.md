@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752733"
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Borrar&gt; elemento para webRequestModules (configuración de red)
 Quita todos los módulos de solicitud Web registrados de la aplicación.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745505"
 ---
 # <a name="ltdevelopmentmodegt-element"></a>&lt;developmentMode&gt; elemento
 Especifica si el runtime busca ensamblados en los directorios especificados por la variable de entorno DEVPATH.  

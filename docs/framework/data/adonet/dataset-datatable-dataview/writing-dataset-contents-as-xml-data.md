@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761914"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Escribir el contenido de un conjunto de datos como datos XML
 En ADO.NET es posible escribir una representación XML de un <xref:System.Data.DataSet>, con o sin su esquema. Si la información de esquema está incluida alineada con el código XML, se escribirá con el lenguaje de definición de esquemas XML (XSD). El esquema contiene las definiciones de tabla del <xref:System.Data.DataSet>, así como las definiciones de relaciones y restricciones.  

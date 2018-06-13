@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557594"
 ---
 # <a name="expander-overview"></a>Información general sobre el control Expander
 Un <xref:System.Windows.Controls.Expander> control proporciona una manera de proporcionar contenido en un área ampliable que se parece a una ventana e incluye un encabezado.  

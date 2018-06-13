@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524493"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Propiedades de los controles de formularios Windows Forms que admiten las directrices de accesibilidad
 Controles en el cuadro de herramientas estándar de Windows Forms admiten muchas de las directrices de accesibilidad, incluida la exposición el foco del teclado y de los elementos de la pantalla.  

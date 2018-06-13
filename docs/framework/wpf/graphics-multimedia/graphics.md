@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556853"
 ---
 # <a name="graphics"></a>Gráficos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ofrece compatibilidad integrada para multimedia, gráficos vectoriales, animación y creación de contenido, lo que facilita a los desarrolladores crear interfaces de usuario y contenido interesantes.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524978"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Cómo: Dibujar texto ajustado en un rectángulo
 Se puede dibujar texto ajustado en un rectángulo con el <xref:System.Drawing.Graphics.DrawString%2A> sobrecargar el método de la <xref:System.Drawing.Graphics> clase que toma un <xref:System.Drawing.Rectangle> o <xref:System.Drawing.RectangleF> parámetro. También se utiliza un <xref:System.Drawing.Brush> y <xref:System.Drawing.Font>.  

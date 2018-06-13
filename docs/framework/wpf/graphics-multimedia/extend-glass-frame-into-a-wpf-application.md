@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557516"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Ampliar el marco de vidrio en una aplicación de WPF
 Este tema muestra cómo extender el [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] marco glass en el área de cliente de una aplicación de Windows Presentation Foundation (WPF).  

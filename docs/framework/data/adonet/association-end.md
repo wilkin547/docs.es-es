@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757442"
 ---
 # <a name="association-end"></a>extremo de asociación
 Un *extremo de asociación* identifica el [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) en un extremo de un [asociación](../../../../docs/framework/data/adonet/association-type.md) y el número de entidades escriba instancias que pueden existir en ese extremo de una asociación. Los extremos de asociación se definen como parte de una asociación, y esta debe tener exactamente dos extremos. [Propiedades de navegación](../../../../docs/framework/data/adonet/navigation-property.md) permiten la navegación de extremo de asociación de uno a otro.  

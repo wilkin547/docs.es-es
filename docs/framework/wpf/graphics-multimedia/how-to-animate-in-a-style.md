@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558818"
 ---
 # <a name="how-to-animate-in-a-style"></a>Cómo: Animar en un estilo
 En este ejemplo se muestra cómo animar propiedades dentro de un estilo. Al animar dentro de un estilo, se puede destinar solo el elemento de marco de trabajo para el que se define el estilo directamente. Que tenga como destino un objeto freezable, debe "establecer una relación" desde una propiedad del elemento de estilo.  

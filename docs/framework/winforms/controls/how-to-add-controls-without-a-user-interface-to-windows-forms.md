@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529490"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Cómo: Agregar controles sin una interfaz de usuario a formularios Windows Forms
 Un control no Visual (o componente) proporciona la funcionalidad a la aplicación. A diferencia de otros controles, componentes no proporcionan una interfaz de usuario para el usuario y, por tanto, no es necesario que se mostrará en la superficie del Diseñador de Windows Forms. Cuando se agrega un componente a un formulario, el Diseñador de Windows Forms muestra una bandeja de tamaño variable en la parte inferior del formulario donde se muestran todos los componentes. Una vez que un control se ha agregado a la Bandeja de componentes, puede seleccionar el componente y establecer sus propiedades tal y como lo haría con cualquier otro control en el formulario.  

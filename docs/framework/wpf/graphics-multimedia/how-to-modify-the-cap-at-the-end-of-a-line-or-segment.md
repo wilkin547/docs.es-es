@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559842"
 ---
 # <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Cómo: Modificar el extremo en el final de una línea o segmento
 Este ejemplo muestra cómo modificar la forma al principio o al final de un circuito abierto <xref:System.Windows.Shapes.Shape> elemento. Para cambiar el extremo al principio de un formato de archivo <xref:System.Windows.Shapes.Shape>, usar su <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> propiedad. Para cambiar el extremo al final de un formato de archivo <xref:System.Windows.Shapes.Shape>, usar su <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> propiedad. Para ver los extremos de línea disponibles, vea el <xref:System.Windows.Media.PenLineCap> enumeración.  

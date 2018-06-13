@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524789"
 ---
 # <a name="how-to-draw-text-on-a-windows-form"></a>Cómo: Dibujar texto en Windows Forms
 En el ejemplo de código siguiente se muestra cómo utilizar el <xref:System.Drawing.Graphics.DrawString%2A> método de la <xref:System.Drawing.Graphics> para dibujar texto en un formulario. Como alternativa, puede usar <xref:System.Windows.Forms.TextRenderer> para dibujar texto en un formulario. Para obtener más información, consulte [Cómo: dibujar texto con GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md).  

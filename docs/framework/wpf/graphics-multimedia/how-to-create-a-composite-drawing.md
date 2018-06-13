@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561598"
 ---
 # <a name="how-to-create-a-composite-drawing"></a>Cómo: Crear un dibujo compuesto
 Este ejemplo muestra cómo utilizar un <xref:System.Windows.Media.DrawingGroup> para crear dibujos complejos combinando varias <xref:System.Windows.Media.Drawing> objetos en un único dibujo compuesto.  

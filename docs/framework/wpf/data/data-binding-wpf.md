@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555783"
 ---
 # <a name="data-binding-wpf"></a>Enlace de datos (WPF)
 Enlace de datos de Windows Presentation Foundation (WPF) proporciona una manera sencilla y coherente para las aplicaciones presentar e interactuar con datos. Elementos se pueden enlazar a datos desde una variedad de orígenes de datos en forma de objetos common language runtime (CLR) y XML.  

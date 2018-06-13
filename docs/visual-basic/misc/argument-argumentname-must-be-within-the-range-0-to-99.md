@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600476"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-within-the-range-0-to-99"></a>Argumento &#39; &lt;nombredeargumento&gt; &#39; debe estar dentro del intervalo de 0 a 99
 Un argumento no es válido porque está fuera del intervalo de 0 a 99.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530502"
 ---
 # <a name="how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem"></a>Cómo: Detectar cuándo está el puntero del mouse (ratón) en un elemento ToolStripItem
 Utilice el procedimiento siguiente para detectar cuando el puntero del mouse está sobre un <xref:System.Windows.Forms.ToolStripItem>.  

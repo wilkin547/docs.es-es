@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524506"
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>Usar codificadores y descodificadores de imagen en la interfaz GDI+ administrada
 El <xref:System.Drawing> espacio de nombres proporciona la <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> clases para almacenar y manipular imágenes. Mediante el uso de codificadores de imágenes en [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], puede escribir imágenes de la memoria en el disco. Mediante el uso de descodificadores de imágenes en [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], puede cargar imágenes desde el disco en la memoria. Un codificador convierte los datos en un <xref:System.Drawing.Image> o <xref:System.Drawing.Bitmap> objeto en un formato de archivo de disco designado. Un descodificador traduce los datos en un archivo de disco para el formato requerido por la <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> objetos.  

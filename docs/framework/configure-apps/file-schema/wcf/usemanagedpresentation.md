@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755297"
 ---
 # <a name="ltusemanagedpresentationgt"></a>&lt;useManagedPresentation&gt;
 Elemento de enlace utilizado para comunicarse con un Servicio de token de seguridad de CardSpace que admite el perfil CardSpace de WS-Trust. Este elemento no tiene ningún atributo y está presente como modificador vacío.  
