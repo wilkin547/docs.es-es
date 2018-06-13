@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516557"
 ---
 # <a name="workflow-hosting-options"></a>Opciones de hospedaje de flujo de trabajo
 La mayoría de los ejemplos de Windows Workflow Foundation (WF) usa los flujos de trabajo que se hospedan en una aplicación de consola, pero esto no es un escenario realista para los flujos de trabajo reales. Los flujos de trabajo de aplicaciones empresariales reales se hospedarán en procesos persistentes: un servicio de Windows creado por el desarrollador o una aplicación de servidor como [!INCLUDE[iisver](../../../includes/iisver-md.md)] o AppFabric. Las diferencias entre estas aproximaciones son las que se indican a continuación.  

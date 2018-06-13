@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511935"
 ---
 # <a name="connection-string-and-connection-string-name"></a>Cadena de conexión y nombre de cadena de conexión
 **Cadena de conexión** propiedad especifica la cadena de conexión que el almacén de instancias de flujo de trabajo de SQL debe usar para conectarse a una base de datos de persistencia. Este parámetro es opcional. **Nombre de la cadena de conexión** propiedad especifica el nombre de la cadena de conexión con nombre que el almacén de instancias de flujo de trabajo de SQL debe usar para conectarse a la base de datos de persistencia. Este parámetro es opcional. Debe especificar un valor para la propiedad de nombre de la cadena de conexión o la propiedad de cadena de conexión si no desea que el almacén de instancias de flujo de trabajo de SQL para utilizar el valor predeterminado con el nombre de cadena de conexión **DefaultSqlWorkflowInstanceStoreConnectionString** .

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564526"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} Secuencia de escape / extensión de marcado
 Proporciona la secuencia de escape XAML para los valores de atributo. La secuencia de escape permite los valores siguientes en el atributo debe interpretarse como un literal.  

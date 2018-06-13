@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556931"
 ---
 # <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Cómo: Animar un objeto Boolean mediante fotogramas clave
 Este ejemplo muestra cómo animar el valor de propiedad booleana de una <xref:System.Windows.Controls.Button> control mediante el uso de fotogramas clave.  

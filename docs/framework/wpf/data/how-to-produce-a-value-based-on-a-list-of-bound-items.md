@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556840"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Cómo: Generar un valor basado en una lista de elementos enlazados
 <xref:System.Windows.Data.MultiBinding> permite enlazar una propiedad de destino de enlace a una lista de propiedades de origen y, a continuación, aplicar la lógica para generar un valor con las entradas indicadas. Este ejemplo muestra cómo usar <xref:System.Windows.Data.MultiBinding>.  

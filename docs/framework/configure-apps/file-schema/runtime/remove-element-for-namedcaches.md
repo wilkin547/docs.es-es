@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745219"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;quitar&gt; (elemento) para &lt;namedCaches&gt;
 Quita una entrada de caché con nombre de la colección `namedCaches` de una caché en memoria.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557687"
 ---
 # <a name="gridview-overview"></a>Información general sobre GridView
 <xref:System.Windows.Controls.GridView> modo de vista es uno de los modos de vista para un <xref:System.Windows.Controls.ListView> control. La <xref:System.Windows.Controls.GridView> clase y sus clases auxiliares permiten que usted y los usuarios ver el elemento colecciones en una tabla que normalmente utiliza botones como encabezados de columna interactivos. Este tema se presentan los <xref:System.Windows.Controls.GridView> clase y se describe su uso.  

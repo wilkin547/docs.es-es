@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557789"
 ---
 # <a name="treeview-overview"></a>Introducción a TreeView
 El <xref:System.Windows.Controls.TreeView> control proporciona una manera de mostrar información en una estructura jerárquica con nodos contraíbles. Este tema se presentan los <xref:System.Windows.Controls.TreeView> y <xref:System.Windows.Controls.TreeViewItem> controla y proporciona ejemplos sencillos de su uso.  

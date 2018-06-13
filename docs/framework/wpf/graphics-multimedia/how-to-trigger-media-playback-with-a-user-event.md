@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561480"
 ---
 # <a name="how-to-trigger-media-playback-with-a-user-event"></a>Cómo: Desencadenar la reproducción de medios con un evento de usuario
 En este ejemplo se muestra cómo sincronizar la reproducción de medios con un evento.  

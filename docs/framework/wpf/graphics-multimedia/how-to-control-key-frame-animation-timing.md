@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562302"
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>Cómo: Controlar la temporización de animaciones y fotogramas clave
 En este ejemplo se muestra cómo controlar la temporización de fotogramas clave dentro de una animación de fotogramas clave. Al igual que otras animaciones, animaciones de fotogramas clave tienen una <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propiedad. Además de especificar la duración de una animación, debe especificar qué parte de esa duración se asigna a cada uno de sus fotogramas clave. Para asignar el tiempo, especifique un <xref:System.Windows.Media.Animation.KeyTime> para cada fotograma clave en la animación.  

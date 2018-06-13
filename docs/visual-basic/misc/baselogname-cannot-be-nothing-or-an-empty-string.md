@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601051"
 ---
 # <a name="baselogname-cannot-be-nothing-or-an-empty-string"></a>BaseLogName no puede ser Nothing o un tipo String vacío.
 El valor de la propiedad <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> no puede ser `Nothing` ni una cadena vacía.  

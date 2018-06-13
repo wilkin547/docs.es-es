@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567850"
 ---
 # <a name="performing-formatting-operations"></a>Efectuar operaciones de formato
 En los temas siguientes se proporcionan instrucciones detalladas para realizar operaciones de formato concretas.  

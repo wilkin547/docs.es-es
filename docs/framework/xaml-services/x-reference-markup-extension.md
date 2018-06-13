@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562250"
 ---
 # <a name="xreference-markup-extension"></a>x:Reference (extensión de marcado)
 Hace referencia a una instancia que se declara en otra parte en el marcado XAML. La referencia se refiere a un elemento `x:Name`.  

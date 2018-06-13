@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554787"
 ---
 # <a name="how-to-get-or-set-a-dock-value"></a>Cómo: Obtener o establecer un valor de acoplamiento
 En el ejemplo siguiente se muestra cómo asignar un <xref:System.Windows.Controls.Dock> valor para un objeto. El ejemplo se utiliza la <xref:System.Windows.Controls.DockPanel.GetDock%2A> y <xref:System.Windows.Controls.DockPanel.SetDock%2A> métodos de <xref:System.Windows.Controls.DockPanel>.  

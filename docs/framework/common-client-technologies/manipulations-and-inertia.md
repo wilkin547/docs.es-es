@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742158"
 ---
 # <a name="manipulations-and-inertia"></a>Manipulaciones e inercia
 Las clases de procesador *manipulations* e *inertia* ayudan a la aplicación a mover elementos de la interfaz de usuario (UI) en la pantalla de manera natural e intuitiva. Las manipulaciones permiten a los usuarios mover, girar y cambiar el tamaño de los componentes mediante el uso de manipuladores, como un mouse, un lápiz o los dedos (en un escenario habilitado para toque directo). La *inercia* emula el comportamiento real de los elementos de la UI que están en movimiento, ya que simula fuerzas de fricción en los elementos. Esto permite que el movimiento (lineal y angular) de los elementos se ralentice gradualmente antes de detenerse.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559430"
 ---
 # <a name="how-to-write-metadata-to-a-bitmap"></a>Cómo: Escribir metadatos en un mapa de bits
 Este ejemplo muestra cómo escribir metadatos en un mapa de bits utilizando el lenguaje de consulta de metadatos.  

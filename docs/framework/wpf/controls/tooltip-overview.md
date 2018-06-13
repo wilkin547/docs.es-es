@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557243"
 ---
 # <a name="tooltip-overview"></a>Información general de información sobre herramientas
 Una información sobre herramientas es una pequeña ventana emergente que aparece cuando un usuario pausa el puntero del mouse sobre un elemento, por ejemplo, como en un <xref:System.Windows.Controls.Button>. En este tema se presenta la información sobre herramientas y se explica cómo crear y personalizar el contenido de la información sobre herramientas.  

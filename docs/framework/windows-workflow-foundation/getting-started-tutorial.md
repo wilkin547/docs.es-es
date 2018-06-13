@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512445"
 ---
 # <a name="getting-started-tutorial"></a>Tutorial de introducción
 Esta sección contiene un conjunto de temas del tutorial que servirán de introducción a la programación de aplicaciones de Windows Workflow Foundation (WF). Siguiendo los procedimientos incluidos en estos temas, compilará una aplicación que consiste en un juego de adivinanzas de números. El primer tema del tutorial le guía a través de los pasos necesarios para crear las actividades personalizadas que requiere el flujo de trabajo. En el segundo tema, estas actividades se ensamblan junto con actividades de flujo de trabajo integradas en un flujo de trabajo de diagrama de flujo. En el tercer tema, la aplicación host se configura para ejecutar el flujo de trabajo y en el último tema, se introduce la persistencia. Cada paso de este proceso depende de los pasos anteriores, por lo que le recomendamos completarlos en orden.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515774"
 ---
 # <a name="state-machine-activities-in-wf"></a>Actividades de equipo de estado en WF
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] proporciona varias actividades y diseñadores de actividad proporcionados por el sistema para crear flujos de trabajo de máquina de estados.  

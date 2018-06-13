@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562198"
 ---
 # <a name="shapes"></a>Formas
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona compatibilidad para dibujar formas básicas mediante la <xref:System.Windows.Shapes.Shape> clase. Objetos de forma que se derivan de <xref:System.Windows.FrameworkElement> y por lo tanto, participar en el sistema de diseño y se pueden dibujar simplemente mediante [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

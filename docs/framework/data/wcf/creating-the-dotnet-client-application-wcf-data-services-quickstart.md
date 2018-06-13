@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365360"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Crear la aplicación cliente de .NET Framework (Inicio rápido de Data Services de WCF)
 Esta es la tarea final de la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inicio rápido. En esta tarea, agregará una aplicación de consola a la solución, agregue una referencia a la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] incorporar esta nueva aplicación de cliente y el acceso a la [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente de la aplicación cliente mediante el uso de las clases de servicio de datos de cliente generado y cliente bibliotecas.  

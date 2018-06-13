@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362581"
 ---
 # <a name="retrieving-binary-data"></a>Recuperar datos binarios
 De forma predeterminada, el **DataReader** carga los datos entrantes como una fila tan pronto como hay una fila completa de datos. Sin embargo, los objetos binarios grandes (BLOB) se deben tratar de otra forma, ya que pueden llegar a contener grandes cantidades de datos (del orden de gigabytes) que no pueden almacenarse en una sola fila. El **Command.ExecuteReader** método tiene una sobrecarga que vaya a realizar una <xref:System.Data.CommandBehavior> argumento para modificar el comportamiento predeterminado de la **DataReader**. Puede pasar <xref:System.Data.CommandBehavior.SequentialAccess> a la **ExecuteReader** método para modificar el comportamiento predeterminado de la **DataReader** para que en lugar de cargar filas de datos, los vaya cargando secuencialmente a medida que se recibe. Este sistema es idóneo para cargar BLOB y otras estructuras de datos grandes. Tenga en cuenta que este comportamiento puede depender del origen de datos. Por ejemplo, si se devuelve un BLOB desde Microsoft Access, el BLOB completo se cargará en memoria, en lugar de hacerlo secuencialmente a medida que se recibe.  

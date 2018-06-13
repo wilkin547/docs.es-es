@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561766"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Cómo: Dibujar una polilínea mediante el uso del elemento Polyline
 Este ejemplo muestra cómo dibujar una polilínea, que es una serie de líneas conectadas, mediante el uso de la <xref:System.Windows.Shapes.Polyline> elemento.  

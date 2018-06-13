@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570608"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Instrucciones de diseño de excepciones
 Control de excepciones tiene muchas ventajas comparado con informe de errores basada en valores de retorno. Diseño de buena framework ayuda al desarrollador de aplicaciones tenga en cuenta las ventajas de las excepciones. En esta sección se describe las ventajas de las excepciones y se presenta las directrices para usar de forma eficaz.  

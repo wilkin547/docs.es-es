@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556814"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>Cómo: Animar un objeto a lo largo de un trazado (animación en matriz con acumulación de desplazamiento)
 Este ejemplo muestra cómo utilizar la <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> clase animar un objeto a lo largo de una ruta de acceso y hacer que esa animación su desplazamiento se acumulan los valores mientras se repite.  
