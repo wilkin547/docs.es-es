@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531640"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Cómo: Definir el comportamiento de cambio de tamaño y colocación de una ventana dividida
 Los paneles de la <xref:System.Windows.Forms.SplitContainer> control prestan apropiado para la que se va a cambiar de tamaño y manipulados por los usuarios. Sin embargo, habrá veces cuando desea controlar mediante programación el divisor, donde se coloca y hasta qué punto se puede mover.  

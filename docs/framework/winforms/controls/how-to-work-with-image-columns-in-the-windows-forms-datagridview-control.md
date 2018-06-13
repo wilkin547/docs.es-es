@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532777"
 ---
 # <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Cómo: Trabajar con columnas de imágenes en el control DataGridView de formularios Windows Forms
 El ejemplo de código siguiente muestra cómo utilizar las columnas de imagen <xref:System.Windows.Forms.DataGridView> en una interfaz de usuario interactiva (UI). El ejemplo también muestra las posibilidades de diseño y ajuste de tamaño de la imagen con <xref:System.Windows.Forms.DataGridViewImageColumn>.  

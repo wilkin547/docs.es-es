@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532088"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Cómo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms
 En el siguiente procedimiento, creará una interfaz de usuario de varios paneles que es similar al utilizado en Microsoft Outlook, con un **carpeta** lista, un **mensajes** panel y un **devistaprevia** panel. Esta disposición se consigue principalmente mediante el acoplamiento de controles con el formulario.  

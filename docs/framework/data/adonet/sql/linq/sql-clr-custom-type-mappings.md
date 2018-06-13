@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359668"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>Asignaciones de tipos personalizadas entre SQL y CLR
 La asignación de tipos entre SQL Server y Common Language Runtime (CLR) se especifica automáticamente al usar la herramienta de línea de comandos SQLMetal, Object Relational Designer.  

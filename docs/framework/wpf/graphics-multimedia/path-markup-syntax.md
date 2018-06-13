@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566774"
 ---
 # <a name="path-markup-syntax"></a>Sintaxis de marcado de trazados
 Las rutas de acceso se tratan en [formas y dibujo básico en WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) y [información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), sin embargo, este tema describe en detalle el idioma de mínima eficaz y complejo que puede utilizar para especificar la ruta de acceso geometrías de forma más sólida usando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

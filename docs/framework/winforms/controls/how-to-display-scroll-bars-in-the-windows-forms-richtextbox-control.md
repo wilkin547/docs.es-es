@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532748"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Cómo: Mostrar barras de desplazamiento en el control RichTextBox de formularios Windows Forms
 De forma predeterminada, los formularios Windows Forms <xref:System.Windows.Forms.RichTextBox> control muestra las barras de desplazamiento horizontal y vertical según sea necesario. Hay siete valores posibles para la <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> propiedad de la <xref:System.Windows.Forms.RichTextBox> control, que se describen en la tabla siguiente.  
