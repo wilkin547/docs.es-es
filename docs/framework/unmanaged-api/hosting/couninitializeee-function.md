@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73fa281d28e9b5362ff386b55b07dd431f1915f4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429187"
 ---
 # <a name="couninitializeee-function"></a>CoUninitializeEE (Función)
 `CoUninitializeEE` está obsoleto y no proporciona ninguna funcionalidad.  
