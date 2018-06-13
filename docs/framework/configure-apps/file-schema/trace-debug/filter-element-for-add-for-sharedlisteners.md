@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745060"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a><span data-ttu-id="c989c-102">&lt;filtro&gt; (elemento) para &lt;agregar&gt; para &lt;sharedListeners&gt;</span><span class="sxs-lookup"><span data-stu-id="c989c-102">&lt;filter&gt; Element for &lt;add&gt; for &lt;sharedListeners&gt;</span></span>
 <span data-ttu-id="c989c-103">Agrega un filtro a un agente de escucha en la colección `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="c989c-103">Adds a filter to a listener in the `sharedListeners` collection.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756064"
 ---
 # <a name="ltcertificatevalidationgt"></a><span data-ttu-id="ba6e0-102">&lt;certificateValidation&gt;</span><span class="sxs-lookup"><span data-stu-id="ba6e0-102">&lt;certificateValidation&gt;</span></span>
 <span data-ttu-id="ba6e0-103">Controla la configuración que usan los controladores de tokens para validar certificados.</span><span class="sxs-lookup"><span data-stu-id="ba6e0-103">Controls the settings that token handlers use to validate certificates.</span></span> <span data-ttu-id="ba6e0-104">Estos valores se sustituyen si se configura un controlador específico con su propio validador.</span><span class="sxs-lookup"><span data-stu-id="ba6e0-104">These settings are overridden if a specific handler is configured with its own validator.</span></span>  
