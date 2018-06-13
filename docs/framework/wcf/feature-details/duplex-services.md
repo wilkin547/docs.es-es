@@ -10,6 +10,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34037368"
 ---
 # <a name="duplex-services"></a>Servicios dúplex
 Un contrato de servicios dúplex es un patrón de intercambio de mensajes en el que ambos extremos pueden enviar mensajes al otro de manera independiente. Un servicio dúplex, por tanto, puede enviar mensajes de vuelta al extremo del cliente, proporcionando un comportamiento parecido a los eventos. La comunicación dúplex se produce cuando un cliente se conecta a un servicio y proporciona al servicio un canal en el que el servicio puede devolver los mensajes al cliente. Tenga en cuenta que el comportamiento como evento de los servicios dúplex solo funciona dentro de una sesión.  

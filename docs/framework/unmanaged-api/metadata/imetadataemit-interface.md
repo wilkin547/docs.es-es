@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4c77edfff640f796dd3f345eaeb4728830c5f4c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449149"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit (Interfaz)
 Proporciona métodos para crear, modificar y guardar los metadatos sobre el ensamblado del ámbito definido actualmente. Los metadatos se pueda almacenar en memoria o guardado en el disco.  

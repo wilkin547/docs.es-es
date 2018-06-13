@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541393"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Representar un control de formularios Windows Forms
 Representación se refiere al proceso de creación de una representación visual en la pantalla del usuario. Windows Forms usa [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (la nueva biblioteca gráfica de Windows) para la representación. Las clases administradas que proporcionan acceso a [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] están en el <xref:System.Drawing?displayProperty=nameWithType> espacio de nombres y sus subespacios de nombres.  

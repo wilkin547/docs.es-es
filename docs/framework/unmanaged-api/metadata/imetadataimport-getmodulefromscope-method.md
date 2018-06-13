@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1f8acc546c0d96aca079223200b43aec933f729
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447914"
 ---
 # <a name="imetadataimportgetmodulefromscope-method"></a>IMetaDataImport::GetModuleFromScope (Método)
 Obtiene metadatos de un símbolo (token) para el módulo al que hace referencia en el ámbito de metadatos actual.  

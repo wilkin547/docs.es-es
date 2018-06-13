@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f40fb2e94eac13211cf8ccf179904071a23f59ed
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447232"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken (Método)
 Obtiene la firma de metadatos binaria asociada al token especificado.  

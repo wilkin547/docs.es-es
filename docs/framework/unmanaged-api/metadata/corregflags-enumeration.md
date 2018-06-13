@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f7b935b8f59e434c9da364be1986dbed654a1efd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445814"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags (Enumeración)
 Proporciona valores de marca usados para el registro al instalar un módulo o una imagen compuesta.  

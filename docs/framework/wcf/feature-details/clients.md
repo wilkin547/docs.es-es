@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488808"
 ---
 # <a name="clients"></a>Clientes
 Los temas de esta sección tratan la arquitectura de cliente, cómo tener acceso a servicios Windows Communication Foundation (WCF), cómo configurar un cliente de WCF y algunas consideraciones de seguridad de los clientes de WCF.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542215"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Cómo: Crear un control enlazado y aplicar formato a los datos mostrados
 Con el enlace de datos de formularios Windows Forms, puede dar formato a los datos mostrados en un control enlazado a datos mediante el uso de la **formato y enlace avanzada** cuadro de diálogo.  

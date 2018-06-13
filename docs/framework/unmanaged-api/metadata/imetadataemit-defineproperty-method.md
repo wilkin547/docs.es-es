@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5c250a577f2ccdbbfefb35225b880c0e4317db36
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448112"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty (Método)
 Crea una definición de propiedad para el tipo especificado, con los valores especificados `get` y `set` descriptores de acceso de método y obtiene un símbolo (token) a esa definición de propiedad.  

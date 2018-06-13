@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569456"
 ---
 # <a name="namespace-support-in-the-dom"></a>Compatibilidad con los espacios de nombres en DOM
 El modelo de objetos de documento XML (DOM) tiene en cuenta completamente al espacio de nombres. Sólo se admiten documentos XML que tengan en cuenta los espacios de nombres. El W3C especifica que las aplicaciones DOM que implementan el nivel 1 pueden no tener en cuenta los espacios de nombres, a diferencia de las características de nivel 2 de DOM, que sí los tienen en cuenta. No obstante, todas las características de DOM XML tienen en cuenta los espacios de nombres, independientemente de si el método proviene del nivel 1 o del nivel 2 de la recomendación de DOM.  

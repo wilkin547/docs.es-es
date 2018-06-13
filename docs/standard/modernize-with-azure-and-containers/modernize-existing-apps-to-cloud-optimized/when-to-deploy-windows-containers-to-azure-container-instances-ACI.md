@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957955"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Cuándo se debe implementar contenedores de Windows para instancias de contenedor de Azure (ACI)
 

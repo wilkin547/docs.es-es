@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956491"
 ---
 # <a name="configuring-http-and-https"></a>Configuración de HTTP y HTTPS
 Los servicios y clientes de WCF se pueden comunicar a través de HTTP y HTTPS, que se configuran mediante el uso de Internet Information Services (IIS) o de una herramienta de la línea de comandos. Cuando un servicio WCF se hospeda bajo IIS y necesita la configuración de HTTP o HTTPS se puede configurar en IIS (con la herramienta inetmgr.exe). Si el servicio WCF se autohospeda, la configuración de HTTP o HTTPS se configura usando una herramienta de la línea de comandos.  

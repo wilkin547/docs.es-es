@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493643"
 ---
 # <a name="how-to-enable-streaming"></a>Cómo habilitar la transmisión
 Windows Communication Foundation (WCF) puede enviar mensajes mediante transferencias almacenadas en búfer o transmitidas. En el modo de transferencia almacenado en búfer (predeterminado), se debe entregar completamente un mensaje antes de que un receptor pueda leerlo. En modo de transferencia de transmisión por secuencias, el receptor puede empezar a procesar el mensaje antes de se entregue completamente. El modo de transmisión por secuencias es útil cuando la información que se pasa es larga y puede procesarse en serie. El modo de transmisión por secuencias también es útil cuando el mensaje es demasiado grande para que se almacene en búfer completamente.  

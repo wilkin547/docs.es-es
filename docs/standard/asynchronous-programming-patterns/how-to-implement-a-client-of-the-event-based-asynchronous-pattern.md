@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567281"
 ---
 # <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>Cómo: Implementar un cliente en un modelo asincrónico basado en eventos
 En el ejemplo de código siguiente se muestra cómo utilizar un componente que se adhiera a la [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md). En el formulario de este ejemplo se usa el componente `PrimeNumberCalculator` descrito en [Implementar un componente que admita el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  

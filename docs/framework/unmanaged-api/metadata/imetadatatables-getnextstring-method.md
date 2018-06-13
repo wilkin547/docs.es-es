@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eea43e5eaa037a3b70f482b0602d8d8d3d594f75
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449854"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>IMetaDataTables::GetNextString (Método)
 Obtiene el índice de la cadena siguiente en la columna de tabla actual.  

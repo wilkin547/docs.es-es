@@ -7,6 +7,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235910"
 ---
 # <a name="f-style-guide"></a>Guía de estilo de F #
 

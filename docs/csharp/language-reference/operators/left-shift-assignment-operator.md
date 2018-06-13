@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171798"
 ---
 # <a name="ltlt-operator-c-reference"></a>Operador &lt;&lt;= (Referencia de C#)
 Operador de asignación de desplazamiento a la izquierda.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566423"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass (Directiva)
 Modifica el comportamiento de compilación de marcado XAML cuando `x:Class` también se proporciona. En lugar de crear una clase parcial que se basa en `x:Class`, proporcionado `x:Class` se crea como una clase intermedia, y, a continuación, se espera que la clase derivada proporcionada basarse en `x:Class`.  

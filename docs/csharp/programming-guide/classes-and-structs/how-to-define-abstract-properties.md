@@ -10,6 +10,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172066"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Cómo: Definir propiedades abstractas (Guía de programación de C#)
 En el ejemplo siguiente se muestra cómo definir las propiedades [abstract](../../../csharp/language-reference/keywords/abstract.md). Una declaración de propiedad abstracta no proporciona una implementación de los descriptores de acceso de propiedad, declara que la clase admite propiedades, pero deja la implementación del descriptor de acceso a las clases derivadas. En el ejemplo siguiente se muestra cómo implementar las propiedades abstractas heredadas de una clase base.  

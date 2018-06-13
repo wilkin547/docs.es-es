@@ -13,6 +13,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235923"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
 No especifica que uno o varios elementos de programación declarados restricciones de acceso.  

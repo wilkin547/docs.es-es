@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494220"
 ---
 # <a name="content-based-correlation"></a>Correlación basada en contenido
 Cuando los servicios de flujo de trabajo se comunican con clientes y otros servicios, suele haber ciertos datos en los mensajes intercambiados que relacionan de forma única un mensaje con una instancia determinada. La correlación basada en contenidos usa estos datos en el mensaje, como un número de cliente o un identificador de orden, para enrutar los mensajes a la instancia de flujo de trabajo apropiada. En este tema, se explica cómo utilizar la correlación basada en contenidos en flujos de trabajo.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449447"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd (Método)
 Definir el ámbito de mezclas en actual todos los ámbitos de metadatos especificados por una o más llamadas anteriores a [IMetaDataEmit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  

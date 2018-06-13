@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172495"
 ---
 # <a name="data-templating-overview"></a>Información general sobre plantillas de datos
 El modelo de plantillas de datos de WPF ofrece gran flexibilidad para definir la presentación de los datos. Los controles WPF tienen funcionalidad integrada que admite la personalización de la presentación de los datos. En este tema muestra primero cómo definir un <xref:System.Windows.DataTemplate> y, a continuación, presenta otras características de creación de plantillas de datos, como la selección de plantillas basadas en la lógica personalizada y la compatibilidad con la presentación de datos jerárquicos.  

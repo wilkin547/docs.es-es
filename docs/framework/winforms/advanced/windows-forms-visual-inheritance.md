@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524418"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Herencia visual de formularios Windows Forms
 En ocasiones, puede decidir que un proyecto llame a un formulario similar al que ha creado en un proyecto anterior. O puede que desee crear un formulario básico con opciones como una marca de agua o determinado diseño de controles que utilizará de nuevo dentro de un proyecto, incluyendo modificaciones a la plantilla de formulario original con cada iteración. La herencia de formularios le permite crear un formulario base y, a continuación, heredarlo y realizar modificaciones mientras se conserva la configuración original que necesita.  
