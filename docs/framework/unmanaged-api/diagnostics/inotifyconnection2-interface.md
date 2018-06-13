@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d0f67b1be58da82c2096c355ba5334b3bfd73611
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426514"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 (Interfaz)
 Declara los métodos para registrar y anular el registro de un origen de notificación de conexión.  

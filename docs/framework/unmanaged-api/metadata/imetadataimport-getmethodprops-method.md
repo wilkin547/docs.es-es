@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4037ca42c5a66f075e949cd2035c1e7db510bb8e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448914"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps (Método)
 Obtiene los metadatos asociados al método al que hace referencia el token de MethodDef especificado.  

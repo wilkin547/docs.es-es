@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522541"
 ---
 # <a name="how-to-translate-image-colors"></a>Cómo: Convertir colores de imágenes
 Una traducción, agrega un valor para uno o varios de los cuatro componentes de color. En la tabla siguiente se indican las entradas de la matriz de color que representan las traducciones.  

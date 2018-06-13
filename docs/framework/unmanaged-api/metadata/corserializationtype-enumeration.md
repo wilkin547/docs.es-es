@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446664"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType (Enumeración)
 Especifica cómo se serializa un objeto por common language runtime.  

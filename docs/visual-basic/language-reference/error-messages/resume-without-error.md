@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597880"
 ---
 # <a name="resume-without-error"></a>Reanudar sin error
 Un `Resume` instrucción ha aparecido fuera del código de control de errores o el código salta en un controlador de errores, incluso si se ha producido ningún error.  

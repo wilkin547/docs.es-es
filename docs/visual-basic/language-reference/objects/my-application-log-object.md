@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595805"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log (objeto)
 Proporciona una propiedad y métodos para escribir información de eventos y excepciones en los agentes de escucha de registro de la aplicación.  

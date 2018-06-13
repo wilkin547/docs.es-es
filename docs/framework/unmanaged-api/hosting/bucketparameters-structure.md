@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0b5e4db8e385baefe3067755bbdc4555c5887ab6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429960"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters (Estructura)
 Almacena el nombre de tipo de un evento y los parámetros de la excepción actual que está asociado con el evento.  

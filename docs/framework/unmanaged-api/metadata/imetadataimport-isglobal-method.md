@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4156c3507ccbd21d59893c5e03e15fe9b7322e48
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447803"
 ---
 # <a name="imetadataimportisglobal-method"></a>IMetaDataImport::IsGlobal (Método)
 Obtiene un valor que indica si el campo, el método o el tipo representado por el token de metadatos especificado es de ámbito global.  

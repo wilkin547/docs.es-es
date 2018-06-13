@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557997"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Tutorial: Crear un botón mediante el uso de XAML
 El objetivo de este tutorial es aprender a crear un botón animado para usarlo en una aplicación de Windows Presentation Foundation (WPF). En este tutorial usa estilos y una plantilla para crear un recurso de botón personalizado que permite la reutilización del código y la separación de la lógica de botón de la declaración del botón. En este tutorial se escribe completamente en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

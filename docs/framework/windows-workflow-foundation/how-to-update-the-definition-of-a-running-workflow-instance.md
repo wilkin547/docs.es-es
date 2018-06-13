@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520307"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Cómo actualizar la definición de una instancia de flujo de trabajo en ejecución
 La actualización dinámica proporciona un mecanismo para que los desarrolladores de aplicaciones de flujo de trabajo actualicen la definición de flujo de trabajo de una instancia de flujo de trabajo persistente. El cambio necesario puede ser implementar una corrección de errores, nuevos requisitos o dar cabida a cambios inesperados. Este paso en el tutorial muestra cómo usar la actualización dinámica para modificar las instancias persistentes de la `v1` número averiguación de flujo de trabajo para que coincida con la nueva funcionalidad incluida en [Cómo: Host varias versiones de un flujo de trabajo paralelo ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515113"
 ---
 # <a name="activity-relationships-validation"></a>Validar relaciones de actividad
 Este ejemplo consta de tres actividades, `CreateCity`, `CreateState` y `CreateCountry`. `CreateCity` debe estar dentro de una actividad `CreateState` y `CreateState` debe estar dentro de una actividad `CreateCountry`. Para este ejemplo, la lógica de validación está en código para la actividad `CreateState` y en XAML para la actividad `CreateCity`. Ambas restricciones tienen el mismo comportamiento.  

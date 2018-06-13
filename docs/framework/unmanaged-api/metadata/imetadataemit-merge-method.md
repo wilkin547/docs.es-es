@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98997bfbb7d3c9343f78438b1195222565c5b9ad
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444556"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge (Método)
 Agrega el ámbito importado especificado a la lista de ámbitos que se combinarán.  

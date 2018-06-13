@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525852"
 ---
 # <a name="polygons-in-gdi"></a>Polígonos en GDI+
 Un polígono es una forma cerrada con tres o más líneas rectas. Por ejemplo, un triángulo es un polígono con tres lados, un rectángulo es un polígono con cuatro lados y un Pentágono es un polígono con cinco lados. La ilustración siguiente muestra varios polígonos.  

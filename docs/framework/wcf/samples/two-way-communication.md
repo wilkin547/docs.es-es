@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508350"
 ---
 # <a name="two-way-communication"></a>Comunicación bidireccional
 Este ejemplo muestra cómo llevar a cabo la comunicación en cola bidireccional sobre MSMQ. El ejemplo usa el enlace `netMsmqBinding`. En este caso, el servicio es una aplicación de consola hospedada en sí misma que permite observar el servicio que recibe los mensajes en cola.  

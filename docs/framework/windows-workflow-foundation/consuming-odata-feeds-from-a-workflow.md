@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520505"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Usar fuentes de OData en un flujo de trabajo
 Servicios de datos de WCF es un componente de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] que le habilita para crear servicios que usan Open Data Protocol (OData) para exponer y usar datos en Internet o una intranet mediante la semántica de  transferencia de estado representacional (REST, Representational State Transfer). OData expone los datos como recursos direccionables a través de identificadores uniformes de recursos (URI). Cualquier aplicación puede interactuar con un servicio de datos basado en OData si puede enviar una solicitud HTTP y procesar la fuente de OData que devuelve un servicio de datos. Además, Servicios de datos de WCF incluye bibliotecas de cliente que proporcionan una experiencia de programación más enriquecida cuando se usan fuentes OData desde aplicaciones [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . En este tema se proporciona una información general del uso de una fuente de OData en un flujo de trabajo con y sin utilizar las bibliotecas de clientes.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525875"
 ---
 # <a name="errorprovider-component-windows-forms"></a>ErrorProvider (Componente, Formularios Windows Forms)
 Los formularios de Windows `ErrorProvider` componente se utiliza para mostrar al usuario de forma no intrusiva que algo no funciona correctamente. Normalmente se utiliza junto con la validación proporcionados por el usuario en un formulario o mostrar los errores dentro de un conjunto de datos.  

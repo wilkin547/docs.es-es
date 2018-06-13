@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558244"
 ---
 # <a name="panels-overview"></a>Información general sobre elementos Panel
 <xref:System.Windows.Controls.Panel> los elementos son componentes que controlan la representación de elementos, su tamaño y dimensiones, su posición y la organización de su contenido secundario. El [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una serie de predefinidos <xref:System.Windows.Controls.Panel> elementos, así como la capacidad de construir personalizado <xref:System.Windows.Controls.Panel> elementos.  

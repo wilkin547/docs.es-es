@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474713"
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>Escenarios asincrónicos en los que se usa HTTP, TCP o canalizaciones con nombre
 En este tema se describen las actividades y transferencias para diferentes escenarios asincrónicos de solicitud-respuesta, con solicitudes de varios subprocesos, utilizando HTTP, TCP o canalización con nombre.  

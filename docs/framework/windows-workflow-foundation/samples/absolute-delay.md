@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518390"
 ---
 # <a name="absolute-delay"></a>Retraso absoluto
 El escenario principal de este ejemplo es el retraso hasta un valor de <xref:System.DateTime> especificado utilizando temporizadores duraderos en una aplicación de flujo de trabajo. Esto es diferente a utilizar la actividad <xref:System.Activities.Statements.Delay> integrada, ya que en este caso solo se permitirá el retraso para un valor de <xref:System.TimeSpan> (o número de minutos/segundos) determinado.  

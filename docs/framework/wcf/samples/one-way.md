@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505712"
 ---
 # <a name="one-way"></a>Unidireccional
 Este ejemplo muestra un contacto del servicio con operaciones de servicio unidireccionales. El cliente no espera a que se completen las operaciones de servicio como en el caso de las operaciones de servicio bidireccionales. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) y usa el `wsHttpBinding` enlace. El servicio en este ejemplo es una aplicación de consola autohospedada que le permite observar el servicio que recibe y procesa las solicitudes. El cliente es también una aplicación de consola.  

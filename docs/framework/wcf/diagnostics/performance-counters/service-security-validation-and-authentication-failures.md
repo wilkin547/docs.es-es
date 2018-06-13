@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474407"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>Servicio: errores en la validación de la seguridad y la autenticación
 Nombre del contador: errores en la autenticación y validación de la seguridad  

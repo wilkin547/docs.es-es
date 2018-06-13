@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474225"
 ---
 # <a name="end-to-end-tracing"></a>Seguimiento de traza de un extremo a otro
 Extremo a otro (e2e) seguimiento permite a los desarrolladores deben seguir la ejecución de código en la infraestructura de Windows Communication Foundation (WCF) para investigar por qué ha producido un error de una ruta de acceso del código, o para proporcionar un seguimiento detallado para el análisis de rendimiento y planificación de capacidad. Windows Communication Foundation (WCF) proporciona tres mecanismos de correlación para ayudar a diagnosticar la causa del error: actividades, transferencias y propagación.  

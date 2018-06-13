@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520414"
 ---
 # <a name="database-access-activities"></a>Actividades de acceso a bases de datos
 Las actividades de acceso a bases de datos permiten tener acceso a una base de datos dentro de un flujo de trabajo. Estas actividades permiten tener acceso a las bases de datos para recuperar o modificar la información y usar [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) para tener acceso a la base de datos.  

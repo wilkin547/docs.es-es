@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518325"
 ---
 # <a name="using-custom-activity-designers-and-templates"></a>Usar plantillas y diseñadores de actividad personalizados
 Esta sección contiene temas que describen cómo crear diseñadores de actividad personalizados y plantillas de actividad personalizadas.  

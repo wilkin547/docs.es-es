@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521165"
 ---
 # <a name="how-to-fill-open-figures"></a>Cómo: Rellenar figuras abiertas
 Una ruta de acceso se puede rellenar pasando un <xref:System.Drawing.Drawing2D.GraphicsPath> el objeto a la <xref:System.Drawing.Graphics.FillPath%2A> método. El <xref:System.Drawing.Graphics.FillPath%2A> método rellena el trazado según el modo de relleno (alternativo o generación) establecido actualmente para la ruta de acceso. Si la ruta de acceso tiene figuras abiertas, la ruta de acceso se rellena como si esas figuras estuvieran cerradas. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] cierra una figura dibujando una línea recta desde su punto final hasta su punto inicial.  

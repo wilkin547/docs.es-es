@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b9e729732175b7249e4d3be91996bc5e4050855
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450211"
 ---
 # <a name="imetadatatablesgetnextuserstring-method"></a>IMetaDataTables::GetNextUserString (Método)
 Obtiene el índice de la fila que contiene la siguiente cadena codificados de forma rígida en la columna de tabla actual.  

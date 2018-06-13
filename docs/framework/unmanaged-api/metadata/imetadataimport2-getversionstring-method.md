@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 112ddcf51a5637bb89df9479850c2a4a70d2e1d8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448731"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString (Método)
 Obtiene el número de versión del runtime que se usó para generar el ensamblado.  

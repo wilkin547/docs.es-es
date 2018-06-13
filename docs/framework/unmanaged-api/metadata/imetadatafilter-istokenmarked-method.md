@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5bf5149e8e42a810a6a490767638b374f66b5679
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445869"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked (Método)
 Obtiene un valor que indica si el token de metadatos especificado se ha marcado como procesado.  

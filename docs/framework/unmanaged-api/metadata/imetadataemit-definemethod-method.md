@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 53fd830cdefda58d40f96f8662a80d1888d963dc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449204"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod (Método)
 Crea una definición para un método o una función global con la firma especificada y devuelve un token al que la definición de método.  
