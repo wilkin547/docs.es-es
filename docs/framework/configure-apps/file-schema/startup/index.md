@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745102"
 ---
 # <a name="startup-settings-schema"></a><span data-ttu-id="69aac-102">Esquema de la configuración de inicio</span><span class="sxs-lookup"><span data-stu-id="69aac-102">Startup Settings Schema</span></span>
 <span data-ttu-id="69aac-103">La configuración de inicio especifica la versión de Common Language Runtime que debe ejecutar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="69aac-103">Startup settings specify the version of the common language runtime that should run the application.</span></span>  

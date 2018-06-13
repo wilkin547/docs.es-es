@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215490"
 ---
 # <a name="-nowarn-c-compiler-options"></a><span data-ttu-id="66d04-102">-nowarn (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="66d04-102">-nowarn (C# Compiler Options)</span></span>
 <span data-ttu-id="66d04-103">La opción **-nowarn** permite impedir que el compilador muestre una o más advertencias.</span><span class="sxs-lookup"><span data-stu-id="66d04-103">The **-nowarn** option lets you suppress the compiler from displaying one or more warnings.</span></span> <span data-ttu-id="66d04-104">Separe varios números de advertencia con una coma.</span><span class="sxs-lookup"><span data-stu-id="66d04-104">Separate multiple warning numbers with a comma.</span></span>  
