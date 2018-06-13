@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742372"
 ---
 # <a name="servicepointmconnectiongrouplist-field"></a><span data-ttu-id="f87ce-102">ServicePoint.m\_ConnectionGroupList campo</span><span class="sxs-lookup"><span data-stu-id="f87ce-102">ServicePoint.m\_ConnectionGroupList Field</span></span>
 
