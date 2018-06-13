@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498080"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Cómo: Especificar la cadena de certificados de la entidad de certificación utilizada para comprobar las firmas (WCF)
 Cuando Windows Communication Foundation (WCF) recibe un mensaje SOAP firmado mediante un certificado X.509, de forma predeterminada comprueba que el certificado X.509 haya sido emitido por una entidad de certificación de confianza. Esto se hace consultando un almacén de certificados y determinando si el certificado para esa entidad de certificación se ha designado como de confianza. En orden de WCF tomar esta decisión, la cadena de certificados de entidad de certificación debe instalarse en el almacén de certificados correcto.  

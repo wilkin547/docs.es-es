@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334904"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Diferencias entre la programación funcional y La programación imperativa (C#)
 Este tema compara y contrasta la programación funcional y la programación imperativa (orientada a procedimientos) más tradicional.  

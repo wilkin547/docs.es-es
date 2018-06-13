@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338801"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Instrucciones, expresiones y operadores (Guía de programación de C#)
 El código de C# que conforma una aplicación consta de instrucciones basadas en palabras clave, expresiones y operadores. Esta sección contiene información sobre los elementos fundamentales de un programa de C#.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744387"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Cómo: Instalar un ensamblado en la memoria caché global de ensamblados
 Hay dos formas de instalar un ensamblado con nombre seguro en la memoria caché global de ensamblados (GAC):  

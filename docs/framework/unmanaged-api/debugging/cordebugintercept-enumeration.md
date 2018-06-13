@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3ee2272a43d9f71cd49754a7f4233868b8bb9134
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406597"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept (Enumeración)
 Indica los tipos de código que se pueden interceptar, es decir, ejecutar paso a paso.  
