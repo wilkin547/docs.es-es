@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531491"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Cómo: Cambiar la apariencia del control LinkLabel de formularios Windows Forms
 Puede cambiar el texto mostrado por el <xref:System.Windows.Forms.LinkLabel> control para satisfacer una variedad de propósitos. Por ejemplo, es una práctica habitual indicar al usuario que puede hacer clic texto estableciendo el texto que aparezca en un color específico con un subrayado. Después de que el usuario hace clic en el texto, el color cambia a un color diferente. Para controlar este comportamiento, puede establecer cinco propiedades diferentes: la <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, y <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propiedades.  

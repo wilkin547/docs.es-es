@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327742"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ y tipos genéricos (C#)
 Las consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se basan en tipos genéricos, introducidos en la versión 2.0 de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. No es necesario tener conocimientos avanzados de genéricos para poder empezar a escribir consultas, aunque debería entender dos conceptos básicos:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642069"
 ---
 # <a name="the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path"></a>La carpeta no se puede crear porque ya existe un archivo con la misma ruta de acceso.
 Se ha intentado crear un directorio, pero ya existe un archivo con esa ruta de acceso. Esto puede ser el resultado de analizar incorrectamente las rutas de acceso, especialmente cuando se trabaja con rutas de acceso relativas.  

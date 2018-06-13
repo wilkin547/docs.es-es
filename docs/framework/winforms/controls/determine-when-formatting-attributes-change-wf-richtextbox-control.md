@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525219"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Cómo: Determinar cuándo cambian los atributos de formato en el control RichTextBox de formularios Windows Forms
 Un uso común de Windows Forms <xref:System.Windows.Forms.RichTextBox> control es aplicar formato a texto con atributos tales como opciones de fuente o estilos de párrafo. La aplicación que necesite realizar un seguimiento de los cambios en el formato del texto para mostrar una barra de herramientas, como en muchas aplicaciones de procesamiento de texto.  

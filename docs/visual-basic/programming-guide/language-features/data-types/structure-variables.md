@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648504"
 ---
 # <a name="structure-variables-visual-basic"></a>Variables de estructura (Visual Basic)
 Una vez haya creado una estructura, puede declarar variables de nivel de procedimiento y el nivel de módulo como ese tipo. Por ejemplo, puede crear una estructura que registra la información acerca de un sistema informático. En el siguiente ejemplo se muestra cómo hacerlo.  

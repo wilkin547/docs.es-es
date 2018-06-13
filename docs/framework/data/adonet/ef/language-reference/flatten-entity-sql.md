@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760575"
 ---
 # <a name="flatten-entity-sql"></a>FLATTEN (Entity SQL)
 Convierte una colección de colecciones en una colección plana. La nueva colección contiene los mismos elementos que la colección anterior, pero sin una estructura anidada.  

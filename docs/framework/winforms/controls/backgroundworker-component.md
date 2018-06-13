@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525757"
 ---
 # <a name="backgroundworker-component"></a>BackgroundWorker (Componente)
 El `BackgroundWorker` componente permite que el formulario o control para ejecutar una operación asincrónica.  

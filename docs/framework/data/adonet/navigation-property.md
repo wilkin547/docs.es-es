@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767406"
 ---
 # <a name="navigation-property"></a>propiedad de navegación
 A *propiedad de navegación* es una propiedad opcional de un [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) que permite navegar desde un [final](../../../../docs/framework/data/adonet/association-end.md) de un [asociación](../../../../docs/framework/data/adonet/association-type.md) a el otro extremo. A diferencia de otras [propiedades](../../../../docs/framework/data/adonet/property.md), propiedades de navegación no transportan datos.  

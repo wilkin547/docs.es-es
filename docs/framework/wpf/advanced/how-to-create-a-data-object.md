@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544786"
 ---
 # <a name="how-to-create-a-data-object"></a>Cómo: Crear un objeto de datos
 Los ejemplos siguientes muestran distintas maneras de crear un objeto de datos mediante los constructores proporcionadas por la <xref:System.Windows.DataObject> clase.  

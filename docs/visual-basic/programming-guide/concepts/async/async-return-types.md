@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644087"
 ---
 # <a name="async-return-types-visual-basic"></a>Tipos de valor devueltos de Async (Visual Basic)
 Métodos asincrónicos tienen tres posibles tipos devueltos: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>y void. En Visual Basic, el tipo de valor devuelto void se escribe como un procedimiento [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Para obtener más información sobre los métodos asincrónicos, vea [programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  

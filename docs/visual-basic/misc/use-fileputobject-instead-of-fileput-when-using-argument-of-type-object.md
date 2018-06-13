@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641133"
 ---
 # <a name="use-39fileputobject39-instead-of-39fileput39-when-using-argument-of-type-39object39"></a>Use &#39;FilePutObject&#39; en lugar de &#39;FilePut&#39; al usar el argumento de tipo &#39;objeto&#39;
 El `FilePut` método incluye un argumento de tipo `Object`. Debe usarse`FilePutObject` en lugar de `FilePut` para evitar ambigüedades.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646557"
 ---
 # <a name="control-flow-in-visual-basic"></a>Flujo de control en Visual Basic
 Si un programa no se regula, procede a través de las instrucciones que contiene de principio a fin. Algunos programas muy simples pueden escribirse únicamente con este flujo unidireccional. Pero gran parte del rendimiento y la utilidad de un lenguaje de programación se debe a la capacidad de cambiar el orden de ejecución mediante instrucciones de control y bucles.  

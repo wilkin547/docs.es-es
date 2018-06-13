@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546688"
 ---
 # <a name="document-serialization-and-storage"></a>Almacenamiento y serialización de documentos
 Microsoft .NET Framework proporciona un entorno eficaz para crear y mostrar documentos de alta calidad.  Ver los controles, combinan características mejoradas que admiten tanto documentos fijos como documentos dinámicos, avanzados con 2D eficaz y capacidades de gráficos 3D toman las aplicaciones de .NET Framework a un nuevo nivel de calidad y experiencia del usuario.  Permite administrar con flexibilidad una representación en memoria de un documento es una característica clave de .NET Framework y la capacidad guardar y cargar documentos desde un almacén de datos de forma eficaz es una necesidad de casi todas las aplicaciones.  El proceso de convertir un documento de una representación en memoria interna a un almacén de datos externo se denomina “serialización”.  El proceso inverso de leer un almacén de datos y volver a crear la instancia en memoria original se denomina “deserialización”.  

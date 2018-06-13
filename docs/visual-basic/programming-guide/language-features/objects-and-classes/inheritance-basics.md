@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655194"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Fundamentos de la herencia (Visual Basic)
 El `Inherits` instrucción se utiliza para declarar una nueva clase, denominada una *clase derivada*, en función de una clase existente, conocida como un *clase base*. Las clases derivadas heredan y pueden extender, las propiedades, métodos, eventos, campos y constantes definidas en la clase base. En la siguiente sección se describe algunas de las reglas de herencia, y los modificadores que puede utilizar para cambiar las clases de manera heredan o son heredados:  

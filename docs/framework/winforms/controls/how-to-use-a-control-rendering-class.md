@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534110"
 ---
 # <a name="how-to-use-a-control-rendering-class"></a>Cómo: Utilizar una clase de representación de controles
 En este ejemplo se muestra cómo utilizar la <xref:System.Windows.Forms.ComboBoxRenderer> clase para representar la flecha de lista desplegable un combinado de control de cuadro. El ejemplo consta de los <xref:System.Windows.Forms.Control.OnPaint%2A> método de un control personalizado sencillo. El <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType> propiedad se utiliza para determinar si están habilitados los estilos visuales en el área de cliente de windows de la aplicación. Si los estilos visuales están activos, la <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType> método representará la flecha de lista desplegable con estilos visuales; en caso contrario, el <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType> método representará la flecha de lista desplegable en el estilo clásico de Windows.  

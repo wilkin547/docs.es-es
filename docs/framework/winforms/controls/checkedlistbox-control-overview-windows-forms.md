@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524312"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>Información general sobre el control CheckedListBox (formularios Windows Forms)
 Los formularios Windows Forms <xref:System.Windows.Forms.CheckedListBox> el control se extiende el <xref:System.Windows.Forms.ListBox> control. Casi todo lo que un cuadro de lista y también puede mostrar una marca de verificación junto a los elementos de la lista hace. Otras diferencias entre los dos controles son que comprueban solo un soporte de cuadros de lista <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; y se comprueba que los cuadros de lista solo pueden tener un elemento o ninguno seleccionado. Tenga en cuenta que un elemento seleccionado aparece resaltado en el formulario y no es igual que un elemento activado.  

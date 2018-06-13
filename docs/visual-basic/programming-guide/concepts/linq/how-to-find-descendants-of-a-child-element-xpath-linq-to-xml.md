@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643173"
 ---
 # <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar descendientes de un elemento secundario (XPath-LINQ to XML) (Visual Basic)
 En este tema se muestra cómo obtener los elementos descendientes de un elemento secundario con un nombre particular.  

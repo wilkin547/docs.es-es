@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534750"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Cómo: Bloquear controles en formularios Windows Forms
 Al diseñar la interfaz de usuario (UI) de la aplicación de Windows, puede bloquear los controles, una vez ubicados correctamente, por lo que no accidentalmente mover o cambiar su tamaño al establecer otras propiedades.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 82d718c6f6aee36f3a916eb7f9b9a1e0b3b46cb5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452473"
 ---
 # <a name="functiontailcall3-function"></a>FunctionTailcall3 (Función)
 Notifica al generador de perfiles que la función en ejecución está a punto de realizar una llamada de cola a otra función.  

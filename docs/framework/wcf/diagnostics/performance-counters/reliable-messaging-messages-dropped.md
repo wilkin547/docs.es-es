@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470560"
 ---
 # <a name="reliable-messaging-messages-dropped"></a>Mensajes de mensajería de confianza quitados
 Nombre del contador: sesiones de mensajería de confianza quitadas.  

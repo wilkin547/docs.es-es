@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525972"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Utilizar transformaciones para ajustar la escala de los colores
 Una transformación de escala multiplica uno o varios de los cuatro componentes de color por un número. Las entradas de la matriz de color que representan el ajuste de escala se proporcionan en la tabla siguiente.  

@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbedff96abe525a1fe39d7255379c0e1612d5893
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422264"
 ---
 # <a name="icordebugprocess8-interface"></a>Interfaz de ICorDebugProcess8
 [compatible con la versión [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] y posteriores]  

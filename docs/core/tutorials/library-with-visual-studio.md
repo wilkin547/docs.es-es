@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33211994"
 ---
 # <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Creación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017
 

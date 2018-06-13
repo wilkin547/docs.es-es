@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765885"
 ---
 # <a name="identifiers-entity-sql"></a>Identificadores (Entity SQL)
 En [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se utilizan identificadores como representación de los alias de expresiones de consulta, referencias de variables, propiedades de objetos, funciones, etc. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] proporciona dos tipos de identificadores: los identificadores simples y los identificadores entre comillas.  

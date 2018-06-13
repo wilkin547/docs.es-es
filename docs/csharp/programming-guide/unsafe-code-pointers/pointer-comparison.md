@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337709"
 ---
 # <a name="pointer-comparison-c-programming-guide"></a>Comparación de punteros (Guía de programación de C#)
 Puede aplicar los siguientes operadores para comparar los punteros de cualquier tipo:  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6ba2103003e3976e51e82ad6b42315a881582f5a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444296"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr (Enumeración)
 Contiene valores que describen los metadatos de un parámetro de método.  

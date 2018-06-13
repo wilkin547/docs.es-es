@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4e9f475ee3c46b8abb94ce7f804cc8b4a8054ec2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423213"
 ---
 # <a name="icordebugsymbolprovider-interface"></a>ICorDebugSymbolProvider (Interfaz)
 Proporciona métodos que pueden usarse para recuperar información de símbolos de depuración.  

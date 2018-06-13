@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213215"
 ---
 # <a name="c-compiler-errors"></a>Errores del compilador de C#
 Algunos errores del compilador de C# tienen temas correspondientes que explican por qué se genera el error y, en algunos casos, cómo corregirlo. Utilice uno de los siguientes pasos para ver si la Ayuda está disponible para un mensaje de error concreto.  

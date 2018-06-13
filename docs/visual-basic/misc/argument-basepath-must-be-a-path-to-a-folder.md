@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602072"
 ---
 # <a name="argument-basepath-must-be-a-path-to-a-folder"></a>El argumento BasePath debe ser una ruta de acceso a una carpeta.
 El argumento `BasePath` debe consistir en una ruta de acceso a una carpeta. Puede que esté analizando una cadena de forma incorrecta y proporcionando un valor que no se reconoce como una ruta válida.  

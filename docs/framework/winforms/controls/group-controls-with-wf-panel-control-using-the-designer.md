@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525628"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Cómo: Agrupar controles con el control Panel de Windows Forms mediante el Diseñador
 Formularios Windows Forms <xref:System.Windows.Forms.Panel> controles se utilizan para agrupar otros controles. Hay tres razones para agrupar controles. Uno es visual de agrupación de elementos de formulario relacionados para una interfaz de usuario clara; otra razón es la programación de agrupación, de botones de radio, por ejemplo, el último es para mover los controles como una unidad en tiempo de diseño.  

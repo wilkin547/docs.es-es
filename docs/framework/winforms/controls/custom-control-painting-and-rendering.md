@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526056"
 ---
 # <a name="custom-control-painting-and-rendering"></a>Dibujo y representación personalizados de controles
 Dibujo personalizado de controles es una de las muchas tareas complicadas facilitan por .NET Framework. Al crear un control personalizado, se tienen muchas opciones con respecto a la apariencia del control gráfica. Si va a crear un control que hereda de la `Control`, deberá proporcionar código que permita al control crear su representación gráfica. Si está creando un control de usuario mediante la herencia de la `UserControl`, o está heredando de uno de los controles de formularios Windows Forms, puede reemplazar la representación gráfica estándar y proporcionar su propio código de gráficos. Si desea proporcionar una representación personalizada para los controles constituyentes de una `UserControl` está creando, las opciones estarán mas limitadas, pero seguirá permitan a una amplia gama de posibilidades gráficas para los controles y aplicaciones.  

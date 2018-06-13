@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531269"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Cómo: Cambiar el espaciado y la alineación de los elementos ToolStrip en formularios Windows Forms
 El <xref:System.Windows.Forms.ToolStrip> control es totalmente compatible con características de diseño como ajustar el tamaño, el espaciado de <xref:System.Windows.Forms.ToolStripItem> a los controles relacionados entre sí, la organización de los controles de la <xref:System.Windows.Forms.ToolStrip>, así como el espaciado de los controles relativo a la <xref:System.Windows.Forms.ToolStrip>.  

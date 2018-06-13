@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218876"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (Opciones del compilador de C#)
 La opción **-warn** especifica el nivel de advertencia que debe mostrar el compilador.  

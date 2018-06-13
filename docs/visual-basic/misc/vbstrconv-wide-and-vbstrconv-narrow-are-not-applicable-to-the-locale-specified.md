@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641965"
 ---
 # <a name="vbstrconvwide-and-vbstrconvnarrow-are-not-applicable-to-the-locale-specified"></a>VbStrConv.Wide y VbStrConv.Narrow no son aplicables a la configuración regional especificada
 La aplicación está intentando usar los miembros `VbStrConv` o `Wide` de la enumeración `Narrow`, que no son aplicables a la configuración regional especificada.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643814"
 ---
 # <a name="variance-in-delegates-visual-basic"></a>Varianza en delegados (Visual Basic)
 .NET framework 3.5 se introdujo compatibilidad con la varianza para hacer coincidir las firmas de método con tipos de delegado en todos los delegados en C# y Visual Basic. Esto significa que puede asignar a los delegados no solo métodos con firmas coincidentes, sino métodos que devuelven tipos más derivados (covarianza) o que aceptan parámetros con tipos menos derivados (contravarianza) que el especificado por el tipo de delegado. Esto incluye delegados genéricos y no genéricos.  

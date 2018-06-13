@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ac69bab45ccd39b6a055fe4d2f74950ab47da779
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447037"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField (Método)
 Obtiene un puntero a la FieldDef token para el campo que se encierra entre según los valores especificados <xref:System.Type> y que tiene la firma de nombre y los metadatos especificada.  
