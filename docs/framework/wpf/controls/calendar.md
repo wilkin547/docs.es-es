@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557711"
 ---
 # <a name="calendar"></a>Calendario
 Un calendario permite al usuario seleccionar una fecha mediante el uso de una presentación del calendario visual.  

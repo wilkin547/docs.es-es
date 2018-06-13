@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577822"
 ---
 # <a name="comparing-strings-in-net"></a>Comparación de cadenas en .NET
 .NET proporciona varios métodos para comparar los valores de cadenas. En la tabla siguiente se enumeran y describen los métodos de comparación de valores.  

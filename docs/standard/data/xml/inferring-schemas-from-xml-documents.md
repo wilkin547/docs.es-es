@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574825"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Deducción de esquemas a partir de documentos XML
 Este tema describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInference> para deducir un lenguaje de definición de esquema XML (XSD) a partir de la estructura de un documento XML.  

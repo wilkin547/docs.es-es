@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568630"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Recuperación de nodos ordenados por índice
 En Document Object Model (DOM) XML del World Wide Web Consortium (W3C) también se describe un objeto NodeList, que tiene la capacidad de controlar una lista de nodos ordenados, en contraposición al conjunto desordenado controlado por **XmlNamedNodeMap**. El objeto NodeList incluido en Microsoft .NET Framework se denomina **XmlNodeList**. Los métodos y las propiedades que devuelve un objeto **XmlNodeList** son los siguientes:  

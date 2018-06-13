@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491135"
 ---
 # <a name="how-to-migrate-aspnet-web-service-client-code-to-the-windows-communication-foundation"></a>Cómo: Migrar el código de cliente de servicio web ASP.NET a Windows Communication Foundation
 El procedimiento siguiente describe los amplios pasos que deben seguirse para migrar el código de cliente de servicio Web ASP.NET a WCF.  

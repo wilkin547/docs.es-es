@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556762"
 ---
 # <a name="how-to-sort-data-in-a-view"></a>Cómo: Ordenar datos en una vista
 En este ejemplo se describe cómo ordenar datos en una vista.  

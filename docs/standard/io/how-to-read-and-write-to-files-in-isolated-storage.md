@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573781"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Cómo: Leer y escribir en archivos en almacenamiento aislado
 Para leer o escribir en un archivo de un almacén aislado, use un objeto <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> con un lector de secuencias (objeto <xref:System.IO.StreamReader>) o el escritor de secuencias (objeto <xref:System.IO.StreamWriter>).  

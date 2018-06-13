@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33dc6a863af0c03066d5f01e5101c9a6cc6d5859
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451128"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>ICorProfilerCallback::ExceptionCLRCatcherFound (Método)
 Llamado cuando un `catch` bloquee durante una excepción se encuentra dentro de common language runtime (CLR). Este método está obsoleto en la versión 2.0 de .NET Framework.  

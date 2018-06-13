@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758586"
 ---
 # <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
 Registra a la resolución del token de emisor que se usa por los controladores de la colección de controlador de token. La resolución del token de emisor se utiliza para resolver el token de firma en mensajes y los tokens entrantes.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566033"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Contexto de esquema XAML predeterminado y contexto de esquema XAML de WPF
 Un contexto de esquema XAML es una entidad conceptual que califica cómo una producción de XAML que usa un vocabulario XAML determinado interactúa con el objeto de escritura de comportamiento, incluido cómo resuelve asignación de tipos, cómo se cargan los ensamblados, cómo ciertos lector y escritor se interpreta la configuración. En este tema se describe las características de los servicios XAML de .NET Framework y el contexto de esquema XAML predeterminado asociado, que se basa en el sistema de tipos CLR. Este tema también describe el contexto de esquema XAML que se usa para WPF.  

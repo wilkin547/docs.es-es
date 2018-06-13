@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570457"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Lectura y escritura de esquemas XML
 La API del Modelo de objetos de esquema (SOM) se puede utilizar para leer y escribir esquemas del lenguaje de definición de esquemas XML (XSD) desde archivos u otros orígenes y compilar esquemas XML en memoria, utilizando las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> que se asignan a las estructuras definidas en la recomendación de esquemas XML del W3C (World Wide Web Consortium).  

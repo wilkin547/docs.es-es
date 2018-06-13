@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491158"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Cómo: Importar aserciones de directivas personalizadas
 Las aserciones de directivas describen las funciones y requisitos de un punto de conexión de servicio.  Las aplicaciones cliente pueden utilizar aserciones de directivas en metadatos del servicio para configurar el enlace de cliente o para personalizar el contrato de servicio de un extremo de servicio.  
