@@ -8,6 +8,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312006"
 ---
 # <a name="f-guide"></a><span data-ttu-id="5c873-103">Guía de F#</span><span class="sxs-lookup"><span data-stu-id="5c873-103">F# Guide</span></span>
 

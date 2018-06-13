@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171423"
 ---
 # <a name="gtgt-operator-c-reference"></a><span data-ttu-id="65410-102">Operador &gt;&gt;= (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="65410-102">&gt;&gt;= Operator (C# Reference)</span></span>
 <span data-ttu-id="65410-103">Operador de asignación de desplazamiento a la derecha.</span><span class="sxs-lookup"><span data-stu-id="65410-103">The right-shift assignment operator.</span></span>  

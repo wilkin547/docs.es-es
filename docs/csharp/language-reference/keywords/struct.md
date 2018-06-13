@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172154"
 ---
 # <a name="struct-c-reference"></a><span data-ttu-id="efa6d-102">struct (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="efa6d-102">struct (C# Reference)</span></span>
 <span data-ttu-id="efa6d-103">Un tipo `struct` es un tipo de valor que normalmente se usa para encapsular pequeños grupos de variables relacionadas, como las coordenadas de un rectángulo o las características de un elemento en un inventario.</span><span class="sxs-lookup"><span data-stu-id="efa6d-103">A `struct` type is a value type that is typically used to encapsulate small groups of related variables, such as the coordinates of a rectangle or the characteristics of an item in an inventory.</span></span> <span data-ttu-id="efa6d-104">En el siguiente ejemplo se muestra una declaración de struct simple:</span><span class="sxs-lookup"><span data-stu-id="efa6d-104">The following example shows a simple struct declaration:</span></span>  

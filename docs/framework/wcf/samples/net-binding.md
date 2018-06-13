@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805959"
 ---
 # <a name="net-binding"></a><span data-ttu-id="5fbac-102">Enlace de red</span><span class="sxs-lookup"><span data-stu-id="5fbac-102">Net Binding</span></span>
 <span data-ttu-id="5fbac-103">Esta sección contiene ejemplos que muestran cómo utilizar atributos de enlace de red de un elemento de punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="5fbac-103">This section contains samples that demonstrate using network binding attributes of an endpoint element.</span></span>  

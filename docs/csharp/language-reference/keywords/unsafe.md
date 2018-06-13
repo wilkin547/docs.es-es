@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171959"
 ---
 # <a name="unsafe-c-reference"></a><span data-ttu-id="aaee8-102">unsafe (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="aaee8-102">unsafe (C# Reference)</span></span>
 <span data-ttu-id="aaee8-103">La palabra clave `unsafe` denota un contexto no seguro, que es necesario para realizar cualquier operación que implique punteros.</span><span class="sxs-lookup"><span data-stu-id="aaee8-103">The `unsafe` keyword denotes an unsafe context, which is required for any operation involving pointers.</span></span> <span data-ttu-id="aaee8-104">Para obtener más información, vea [Unsafe Code and Pointers](../../../csharp/programming-guide/unsafe-code-pointers/index.md) (Código no seguro y punteros [Guía de programación de C#]).</span><span class="sxs-lookup"><span data-stu-id="aaee8-104">For more information, see [Unsafe Code and Pointers](../../../csharp/programming-guide/unsafe-code-pointers/index.md).</span></span>  
