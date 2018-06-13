@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808876"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Información de privacidad de Windows Communication Foundation
 Microsoft se compromete a proteger la privacidad de usuarios finales. Cuando se compila una aplicación con Windows Communication Foundation (WCF), versión 3.0, la aplicación puede afectar la privacidad de sus usuarios finales. Por ejemplo, su aplicación puede recoger explícitamente información de contacto del usuario o puede solicitar o enviar información a través de Internet a su sitio web. Si incrusta la tecnología de Microsoft en su aplicación, esa tecnología puede tener su propio comportamiento que podría afectar a la privacidad. WCF no envía ninguna información a Microsoft desde su aplicación a menos que usted o el usuario final elija enviarla.  

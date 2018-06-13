@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583869"
 ---
 # <a name="array-subscript-expression-missing"></a>Falta la expresión de subíndice de matriz
 Una inicialización de matriz omite uno o varios de los subíndices que definen los límites de matriz. Por ejemplo, la instrucción podría contener la expresión `myArray (5,5,,10)`, lo que deja el tercer subíndice.  

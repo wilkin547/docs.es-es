@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809932"
 ---
 # <a name="designing-service-contracts"></a>Diseño de contratos de servicios
 En este tema se describe qué son los contratos de servicios, cómo se definen, qué operaciones están disponibles (y las implicaciones para los intercambios de mensajes subyacentes), qué tipos de datos se usan y otras cuestiones que le ayudan a diseñar operaciones que satisfagan adecuadamente los requisitos de su escenario.  

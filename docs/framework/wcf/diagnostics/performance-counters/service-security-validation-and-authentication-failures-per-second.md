@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474823"
 ---
 # <a name="service-security-validation-and-authentication-failures-per-second"></a>Servicio: Errores por segundo en la validación de seguridad y en la autenticación
 Nombre del contador: Errores de validación de seguridad y de autenticación por segundo  

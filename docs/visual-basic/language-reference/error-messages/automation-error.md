@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583882"
 ---
 # <a name="automation-error"></a>Error de automatización
 Se ha producido un error al ejecutar un método u obtener o establecer una propiedad de una variable de objeto. El error se notificó a través de la aplicación que creó el objeto.  

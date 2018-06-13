@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599485"
 ---
 # <a name="argument-39path39-is-nothing-or-empty"></a>Argumento &#39;ruta de acceso&#39; tiene un valor o está vacío
 Un nombre de ruta de acceso no es válido porque se inicializó en `Nothing` o está vacío. Una ruta de acceso debe tener un tipo de datos específico y un nombre válido.  

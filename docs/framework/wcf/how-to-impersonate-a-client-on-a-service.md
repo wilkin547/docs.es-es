@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810231"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Cómo suplantar a un cliente en un servicio
 Suplantar a un cliente en un servicio de Windows Communication Foundation (WCF) permite que el servicio realizar acciones en nombre del cliente. Para las acciones sujetas a las comprobaciones de la lista de control de acceso (ACL), como el acceso a los directorios y archivos de un equipo o el acceso a una base de datos de SQL Server, ACL realiza una comprobación frente a la cuenta de usuario del cliente. Este tema muestra los pasos básicos requeridos para permitir a un cliente de un dominio de Windows establecer un nivel de la suplantación del cliente. Para obtener un ejemplo ilustrativo, consulte [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obtener más información acerca de la suplantación de cliente, consulte [delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  

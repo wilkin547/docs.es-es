@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810023"
 ---
 # <a name="wcf-visual-studio-templates"></a>Plantillas de Visual Studio para WCF
 Plantillas de Visual Studio de Windows Communication Foundation (WCF) son proyecto predefinidas y plantillas de elemento que puede usar en Visual Studio para generar rápidamente servicios WCF y las aplicaciones relacionadas.  

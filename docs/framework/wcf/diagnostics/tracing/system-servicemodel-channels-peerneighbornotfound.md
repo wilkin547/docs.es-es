@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478685"
 ---
 # <a name="systemservicemodelchannelspeerneighbornotfound"></a>System.ServiceModel.Channels.PeerNeighborNotFound
 No se pudo realizar una operación en un vecino porque no se pudo encontrar en la lista de vecinos.  

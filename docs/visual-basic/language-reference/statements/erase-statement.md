@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601798"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase (Instrucción, Visual Basic)
 Se utiliza para liberar variables de matriz y desasignar la memoria utilizada para sus elementos.  

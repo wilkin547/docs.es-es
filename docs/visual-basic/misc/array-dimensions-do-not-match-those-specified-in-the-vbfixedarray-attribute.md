@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599296"
 ---
 # <a name="array-dimensions-do-not-match-those-specified-in-the-39vbfixedarray39-attribute"></a>Dimensiones de la matriz no coinciden con los especificados en el &#39;VBFixedArray&#39; atributo
 Las dimensiones de la matriz no coinciden con las dimensiones que ha especificado en el atributo `VBFixedArray` .  
