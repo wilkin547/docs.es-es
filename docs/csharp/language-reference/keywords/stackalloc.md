@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269173"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Referencia de C#)
 La palabra clave `stackalloc` se usa en un contexto de código no seguro para asignar un bloque de memoria a la pila.

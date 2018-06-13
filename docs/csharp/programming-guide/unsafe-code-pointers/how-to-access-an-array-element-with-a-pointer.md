@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332044"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>Cómo: Obtener acceso a un elemento de matriz con un puntero (Guía de programación de C#)
 En un contexto no seguro, puede tener acceso a un elemento en la memoria con el acceso a un elemento de puntero, como se muestra en el ejemplo siguiente:  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756064"
 ---
 # <a name="ltcertificatevalidationgt"></a>&lt;certificateValidation&gt;
 Controla la configuración que usan los controladores de tokens para validar certificados. Estos valores se sustituyen si se configura un controlador específico con su propio validador.  
