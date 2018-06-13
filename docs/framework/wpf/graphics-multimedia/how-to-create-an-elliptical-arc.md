@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560895"
 ---
 # <a name="how-to-create-an-elliptical-arc"></a>Cómo: Crear un arco elíptico
 Este ejemplo muestra cómo dibujar un arco elíptico. Para crear un arco elíptico, utilice la <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, y <xref:System.Windows.Media.ArcSegment> clases.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398630"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorización basada en notificaciones con WIF
 En una aplicación de usuario de confianza, la autorización determina los recursos a los que una identidad autenticada puede tener acceso y las operaciones que puede realizar en estos. Una autorización incorrecta o débil da lugar a la revelación de información y a la alteración de los datos. En este tema se describen distintos enfoques para implementar la autorización para aplicaciones web y servicios Web ASP.NET compatibles con notificaciones mediante Windows Identity Foundation (WIF) y un servicio de token de seguridad (STS), por ejemplo, Microsoft Azure Access Control Service (ACS).  

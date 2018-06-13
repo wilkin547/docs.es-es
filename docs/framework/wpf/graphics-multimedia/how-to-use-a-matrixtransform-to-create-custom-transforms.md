@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561165"
 ---
 # <a name="how-to-use-a-matrixtransform-to-create-custom-transforms"></a>Cómo: Utilizar un objeto MatrixTransform para crear transformaciones personalizadas
 Este ejemplo muestra cómo utilizar un <xref:System.Windows.Media.MatrixTransform> traslación (movimiento) la posición, expandir y contraer de un <xref:System.Windows.Controls.Button>.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561396"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Cómo: Controlar un MediaElement (Reproducir, Pausar, Detener, Volumen y Velocidad)
 En el ejemplo siguiente se muestra cómo controlar la reproducción de medios mediante un <xref:System.Windows.Controls.MediaElement>. En el ejemplo se crea un reproductor multimedia simple que permite reproducir, pausar, detener y avanzar o retroceder en el medio así como ajustar la proporción de volumen y la velocidad.  

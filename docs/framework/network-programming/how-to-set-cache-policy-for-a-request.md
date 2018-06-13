@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395432"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Cómo establecer una directiva de caché para una solicitud
 En el ejemplo siguiente se muestra cómo establecer una directiva de caché para una solicitud. La entrada de ejemplo es un URI como http://www.contoso.com/.  

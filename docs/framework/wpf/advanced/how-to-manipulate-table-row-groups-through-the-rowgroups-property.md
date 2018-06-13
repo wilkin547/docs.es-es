@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545170"
 ---
 # <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a>Cómo: manipular una tabla&#39;s grupos de filas a través de la propiedad de grupos de filas
 Este ejemplo muestra algunas de las operaciones más comunes que se pueden realizar en grupos de filas de una tabla a través de la <xref:System.Windows.Documents.Table.RowGroups%2A> propiedad.  

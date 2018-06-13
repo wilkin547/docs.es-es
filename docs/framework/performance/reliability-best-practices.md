@@ -45,6 +45,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397772"
 ---
 # <a name="reliability-best-practices"></a>Procedimientos recomendados para la confiabilidad
 Las siguientes reglas de confiabilidad están orientadas a SQL Server, pero también se aplican a cualquier aplicación de servidor basada en host. Es extremadamente importante que los servidores como SQL Server no pierdan recursos ni se interrumpan.  Pero eso no se puede realizar mediante la escritura de código devuelto para todos los métodos que modifican el estado de un objeto.  El objetivo no es escribir código administrado confiable al 100 por cien que se recupere de los errores en todas las ubicaciones con código devuelto.  Eso sería una tarea desalentadora con escasa probabilidad de éxito.  El Common Language Runtime (CLR) no puede proporcionar fácilmente garantías lo bastante seguras para el código administrado para que la escritura de código perfecto sea viable.  Tenga en cuenta que, a diferencia de ASP.NET, SQL Server solo usa un proceso que no se puede reciclar sin cerrar una base de datos durante un período inaceptablemente prolongado.  

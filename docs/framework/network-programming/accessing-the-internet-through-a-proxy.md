@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394984"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Acceso a Internet a través de un proxy
 Si el sitio usa un proxy para proporcionar acceso a Internet, debe configurar una instancia de proxy para permitir que la aplicación se comunique con el proxy web.  

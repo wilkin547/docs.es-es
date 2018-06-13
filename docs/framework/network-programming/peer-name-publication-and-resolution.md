@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396150"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Publicación y resolución de nombres del mismo nivel
 ## <a name="publishing-a-peer-name"></a>Publicación de un nombre de mismo nivel  

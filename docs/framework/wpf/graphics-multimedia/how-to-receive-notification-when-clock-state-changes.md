@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561178"
 ---
 # <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a>Cómo: recibir una notificación cuando un reloj&#39;s cambios de estado
 Un reloj <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> evento tiene lugar cuando su <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> deja de ser válido, por ejemplo, cuando se inicia o detiene el reloj. Puede registrarse para este evento con directamente mediante un <xref:System.Windows.Media.Animation.Clock>, o puede registrar con un <xref:System.Windows.Media.Animation.Timeline>.  

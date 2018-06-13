@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397538"
 ---
 # <a name="proxy-configuration"></a>Configuración de proxy
 Un servidor proxy controla las solicitudes de cliente de recursos. Un proxy puede devolver un recurso solicitado de su caché o reenviar la solicitud al servidor donde reside el recurso. Los servidores proxy pueden mejorar el rendimiento de la red al reducir el número de solicitudes enviadas a servidores remotos. Los servidores proxy también pueden usarse para restringir el acceso a los recursos.  

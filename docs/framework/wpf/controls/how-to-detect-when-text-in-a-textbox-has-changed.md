@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552957"
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>Cómo: Detectar cuándo cambia el texto en un control TextBox
 Este ejemplo muestra cómo usar la <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> evento para ejecutar un método cada vez que el texto de un <xref:System.Windows.Controls.TextBox> control ha cambiado.  

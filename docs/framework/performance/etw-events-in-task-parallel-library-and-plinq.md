@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397694"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Eventos ETW en Task Parallel Library y PLINQ
 Tanto la biblioteca TPL como PLINQ generan eventos ETW (Seguimiento de eventos de Windows) que puede usar para generar perfiles y solucionar problemas de aplicaciones con herramientas como el Analizador de rendimiento de Windows. En cambio, en la mayoría de los escenarios, la mejor forma de generar perfiles del código de aplicación paralelo es usar el [Visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer) en [!INCLUDE[vsUltShort](../../../includes/vsultshort-md.md)].  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553373"
 ---
 # <a name="styles-and-templates"></a>Estilos y plantillas
 Creación de plantillas y estilos de Windows Presentation Foundation (WPF) hacen referencia a un conjunto de características (estilos, plantillas, desencadenadores y guiones gráficos) que permite que una aplicación, el documento o el Diseñador de interfaz de usuario crear aplicaciones visualmente atractivas y estandaricen un aspecto determinado para su producto.  

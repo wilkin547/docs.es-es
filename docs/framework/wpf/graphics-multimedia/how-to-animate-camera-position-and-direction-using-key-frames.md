@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558849"
 ---
 # <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>Cómo: Animar la posición y la dirección de una cámara mediante fotogramas clave
 En el ejemplo siguiente, <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> se usa para animar la posición de un <xref:System.Windows.Media.Media3D.PerspectiveCamera> en una escena 3D. Además, <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> se usa para animar la dirección en que apunta la cámara en la escena 3D. En ambas animaciones utilizan varios fotogramas clave que crean una serie de efectos de animación:  

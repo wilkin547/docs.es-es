@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557178"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Cómo: Obtener la vista predeterminada de una recolección de datos
 Las vistas permiten la misma colección de datos a verse de varias maneras, dependiendo de ordenación, filtrado o criterio de agrupación. Cada colección tiene una vista predeterminada compartida, que se usa como origen de enlace real cuando un enlace especifica una colección como origen. En este ejemplo se muestra cómo obtener la vista predeterminada de una colección.  

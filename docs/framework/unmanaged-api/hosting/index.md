@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5063a2169e8ae8c3328df220ebc5e6d464aae0a6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440861"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>Hospedaje (Referencia de la API no administrada)
 La API de hospedaje permite a los hosts no administrados integrar Common Language Runtime (CLR) en sus aplicaciones.  

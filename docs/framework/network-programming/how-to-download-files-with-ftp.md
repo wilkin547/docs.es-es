@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394854"
 ---
 # <a name="how-to-download-files-with-ftp"></a>Cómo: descargar archivos mediante FTP
 En este ejemplo se muestra cómo descargar un archivo de un servidor FTP.  

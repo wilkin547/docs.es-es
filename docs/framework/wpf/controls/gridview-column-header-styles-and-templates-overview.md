@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553877"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Información general sobre plantillas y estilos de encabezado de columna en modo GridView
 Esta información general describe el orden de prioridad para las propiedades que se usan para personalizar un encabezado de columna en la <xref:System.Windows.Controls.GridView> modo de vista de un <xref:System.Windows.Controls.ListView> control.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559688"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>Cómo: Hacer una prueba de posicionamiento en Viewport3D
 Este ejemplo muestra cómo se alcanza la prueba para los objetos visuales 3D en una <xref:System.Windows.Controls.Viewport3D>.  

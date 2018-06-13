@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396190"
 ---
 # <a name="internet-authentication"></a>Autenticación de Internet
 Las clases <xref:System.Net> admiten diversos mecanismos de autenticación de cliente, incluidos los métodos de autenticación de Internet estándares básico, implícito, negociado, NTLM y autenticación Kerberos, así como métodos personalizados que puede crear.  

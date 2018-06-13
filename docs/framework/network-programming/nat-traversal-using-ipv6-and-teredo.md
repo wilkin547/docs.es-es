@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398123"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>NAT Traversal mediante IPv6 y Teredo
 Se han realizado mejoras que proporcionan compatibilidad con la traducción de direcciones de red (NAT) transversal. Estos cambios están diseñados para su uso con IPv6 y Teredo, pero también son aplicables a otras tecnologías de túnel IP. Estas mejoras afectan a las clases del espacio de nombres <xref:System.Net> y de otros espacios de nombres relacionados.  

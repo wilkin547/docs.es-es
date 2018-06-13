@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560721"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Cómo: Girar un objeto utilizando un trazado geométrico
 Este ejemplo muestra cómo girar un objeto a lo largo de una ruta de acceso geométrica definida por un <xref:System.Windows.Media.PathGeometry> objeto.  
