@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317092"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-c"></a><span data-ttu-id="f3b17-102">Cómo: Consultar LINQ to XML mediante XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="f3b17-102">How to: Query LINQ to XML Using XPath (C#)</span></span>
 <span data-ttu-id="f3b17-103">Este tema presenta los métodos de extensión que permiten consultar un árbol XML con XPath.</span><span class="sxs-lookup"><span data-stu-id="f3b17-103">This topic introduces the extension methods that enable you to query an XML tree by using XPath.</span></span> <span data-ttu-id="f3b17-104">Para obtener información detallada acerca del uso de estos métodos de extensión, vea <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f3b17-104">For detailed information about using these extension methods, see <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.</span></span>  

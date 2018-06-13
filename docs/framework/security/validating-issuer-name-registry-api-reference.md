@@ -1,24 +1,13 @@
 ---
 title: Validar la referencia de API del Registro de nombres de emisores
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1ecb66f6-af65-47e9-93bc-afd1c1575a9a
-caps.latest.revision: "2"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 665979517d6aca9b867cfe0ea5ce1d567f1ff067
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 22adfa92b6d1b441c06a1058e779e2aec2d9b210
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400008"
 ---
-# <a name="validating-issuer-name-registry-api-reference"></a><span data-ttu-id="44f35-102">Validar la referencia de API del Registro de nombres de emisores</span><span class="sxs-lookup"><span data-stu-id="44f35-102">Validating Issuer Name Registry API Reference</span></span>
-<span data-ttu-id="44f35-103">Esta sección contiene la referencia de API para la extensión de WIF Validar el Registro de nombres de emisores.</span><span class="sxs-lookup"><span data-stu-id="44f35-103">This section contains the API Reference for the Validating Issuer Name Registry WIF Extension.</span></span>
+# <a name="validating-issuer-name-registry-api-reference"></a><span data-ttu-id="413be-102">Validar la referencia de API del Registro de nombres de emisores</span><span class="sxs-lookup"><span data-stu-id="413be-102">Validating Issuer Name Registry API Reference</span></span>
+<span data-ttu-id="413be-103">Esta sección contiene la referencia de API para la extensión de WIF Validar el Registro de nombres de emisores.</span><span class="sxs-lookup"><span data-stu-id="413be-103">This section contains the API Reference for the Validating Issuer Name Registry WIF Extension.</span></span>

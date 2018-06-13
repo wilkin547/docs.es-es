@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugCode::GetFunction (Método)"
-ms.custom: 
+title: ICorDebugCode::GetFunction (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugCode.GetFunction
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: c568b737-fdb2-4816-accd-051f5ab760f1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d05d5d7172a43ebaa04155fb42c2711eaf1ac085
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8d0e7f20be3f18e49dcc1b986460d5da0c3d7777
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401945"
 ---
-# <a name="icordebugcodegetfunction-method"></a><span data-ttu-id="57787-102">ICorDebugCode::GetFunction (Método)</span><span class="sxs-lookup"><span data-stu-id="57787-102">ICorDebugCode::GetFunction Method</span></span>
-<span data-ttu-id="57787-103">Obtiene la "ICorDebugFunction" asociado "ICorDebugCode".</span><span class="sxs-lookup"><span data-stu-id="57787-103">Gets the "ICorDebugFunction" associated with this "ICorDebugCode".</span></span>  
+# <a name="icordebugcodegetfunction-method"></a><span data-ttu-id="15208-102">ICorDebugCode::GetFunction (Método)</span><span class="sxs-lookup"><span data-stu-id="15208-102">ICorDebugCode::GetFunction Method</span></span>
+<span data-ttu-id="15208-103">Obtiene la "ICorDebugFunction" asociado "ICorDebugCode".</span><span class="sxs-lookup"><span data-stu-id="15208-103">Gets the "ICorDebugFunction" associated with this "ICorDebugCode".</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="57787-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="57787-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15208-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="15208-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunction (  
@@ -46,21 +35,21 @@ HRESULT GetFunction (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="57787-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="57787-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="15208-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="15208-105">Parameters</span></span>  
  `ppFunction`  
- <span data-ttu-id="57787-106">[out] Un puntero a la dirección de la función.</span><span class="sxs-lookup"><span data-stu-id="57787-106">[out] A pointer to the address of the function.</span></span>  
+ <span data-ttu-id="15208-106">[out] Un puntero a la dirección de la función.</span><span class="sxs-lookup"><span data-stu-id="15208-106">[out] A pointer to the address of the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="57787-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="57787-107">Remarks</span></span>  
- <span data-ttu-id="57787-108">`ICorDebugCode`y `ICorDebugFunction` mantienen una relación uno a uno.</span><span class="sxs-lookup"><span data-stu-id="57787-108">`ICorDebugCode` and `ICorDebugFunction` maintain a one-to-one relationship.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="15208-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="15208-107">Remarks</span></span>  
+ <span data-ttu-id="15208-108">`ICorDebugCode` y `ICorDebugFunction` mantienen una relación uno a uno.</span><span class="sxs-lookup"><span data-stu-id="15208-108">`ICorDebugCode` and `ICorDebugFunction` maintain a one-to-one relationship.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="57787-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="57787-109">Requirements</span></span>  
- <span data-ttu-id="57787-110">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="57787-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15208-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="15208-109">Requirements</span></span>  
+ <span data-ttu-id="15208-110">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="15208-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="57787-111">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="57787-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="15208-111">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="15208-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="57787-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="57787-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="15208-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="15208-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="57787-113">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="57787-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="15208-113">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15208-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57787-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="57787-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="15208-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="15208-114">See Also</span></span>  
  
