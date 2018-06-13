@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579293"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] admite varios escenarios de desarrollo de software con [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Estos escenarios se clasifican en tres categorías:  

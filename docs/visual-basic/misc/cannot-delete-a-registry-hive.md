@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635192"
 ---
 # <a name="cannot-delete-a-registry-hive"></a>No se puede eliminar un subárbol del Registro.
 Se ha intentado eliminar un subárbol del Registro. Los subárboles son claves del Registro de nivel superior, como `HKEY_CURRENT_USER` y `HKEY_LOCAL_MACHINE`, y no se pueden eliminar.  

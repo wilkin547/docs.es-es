@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585546"
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Acceso a los puertos del equipo (Visual Basic)
 El objeto `My.Computer.Ports` proporciona una propiedad y un método para tener acceso a los puertos serie del equipo.  

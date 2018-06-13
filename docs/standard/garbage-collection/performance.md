@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579800"
 ---
 # <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
 <a name="top"></a> En este tema se describen problemas relacionados con la recolección de elementos no utilizados y el uso de memoria. Se tratan problemas relativos al montón administrado y se explica cómo minimizar el efecto de la recolección de elementos no utilizados en las aplicaciones. Cada problema contiene vínculos a procedimientos que puede emplear para investigar los problemas.  

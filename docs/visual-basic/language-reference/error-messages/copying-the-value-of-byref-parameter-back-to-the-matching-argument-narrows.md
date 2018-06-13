@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591812"
 ---
 # <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Copiar el valor de &#39;ByRef&#39; parámetro &#39; &lt;parametername&gt; &#39; en el argumento correspondiente se reduce de tipo &#39; &lt;typename1&gt; &#39; al tipo &#39; &lt;nombredetipo2&gt;&#39;
 Se llama a un procedimiento con un argumento que se amplía al tipo de parámetro correspondiente, y la conversión del parámetro al argumento es de restricción.  

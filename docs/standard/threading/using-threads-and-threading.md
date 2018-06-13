@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584185"
 ---
 # <a name="using-threads-and-threading"></a>Utilizar subprocesos y subprocesamiento
 En los temas de esta sección se explica la creación y administración de subprocesos administrados, cómo pasar datos a subprocesos administrados y recibir resultados devueltos y cómo destruir subprocesos y administrar una clase <xref:System.Threading.ThreadAbortException>.  

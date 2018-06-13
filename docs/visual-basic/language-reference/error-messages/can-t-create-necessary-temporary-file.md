@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585057"
 ---
 # <a name="can39t-create-necessary-temporary-file"></a>Puede&#39;t crear archivo temporal necesario
 Está lleno o la unidad que contiene el directorio especificado por la variable de entorno TEMP o la variable de entorno TEMP especifica una unidad no válida o de solo lectura o un directorio.  

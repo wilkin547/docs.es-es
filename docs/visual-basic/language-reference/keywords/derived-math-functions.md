@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596813"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Funciones matemáticas derivadas (Visual Basic)
 La tabla siguiente muestran funciones matemáticas no intrínsecas que se pueden derivar de las funciones matemáticas intrínsecas de la <xref:System.Math?displayProperty=nameWithType> objeto. Puede tener acceso a las funciones matemáticas intrínsecas agregando `Imports System.Math` en el archivo o proyecto.  

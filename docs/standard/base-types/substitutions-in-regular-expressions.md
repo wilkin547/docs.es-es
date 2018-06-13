@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579423"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sustituciones en expresiones regulares
 <a name="Top"></a> Las sustituciones son elementos del lenguaje que se reconocen solo dentro de patrones de reemplazo. Usan un patrón de expresión regular para definir todo o parte del texto que reemplazará el texto coincidente en la cadena de entrada. El patrón de reemplazo puede estar compuesto de una o más sustituciones junto con caracteres literales. Los patrones de reemplazo se proporcionan a las sobrecargas del método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que tiene un parámetro `replacement` y al método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Los métodos reemplazan el patrón que coincide con el patrón que define el parámetro `replacement` .  

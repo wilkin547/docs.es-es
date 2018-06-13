@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583934"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>La seguridad y el Registro (Visual Basic)
 En esta página se describen las implicaciones de seguridad relativas al almacenamiento de datos en el Registro.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638687"
 ---
 # <a name="some-files-and-folders-caused-exceptions-during-the-operation"></a>Algunos archivos y carpetas han provocado excepciones durante la operación
 Los directorios y archivos pueden producir excepciones cuando se intenta una operación, pero el usuario no tiene los permisos necesarios.  

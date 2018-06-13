@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582742"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>Cómo: Escribir un bucle Parallel.ForEach con variables locales de subproceso
 En el siguiente ejemplo se muestra cómo escribir un método <xref:System.Threading.Tasks.Parallel.ForEach%2A> que utiliza variables locales de subproceso. Cuando un bucle <xref:System.Threading.Tasks.Parallel.ForEach%2A> se ejecuta, divide su colección de origen en varias particiones. Cada partición obtendrá su propia copia de la variable "local de subproceso". (El término "local de subproceso" es ligeramente inexacto, porque en algunos casos dos particiones se pueden ejecutar en el mismo subproceso).  

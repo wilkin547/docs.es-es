@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586482"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Cómo: Leer un valor a partir de una clave del Registro en Visual Basic
 El método `GetValue` del objeto `My.Computer.Registry` se puede usar para leer valores en el Registro de Windows.  

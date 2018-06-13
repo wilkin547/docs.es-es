@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579774"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retroceso en expresiones regulares
 <a name="top"></a> El retroceso se produce cuando un patrón de expresión regular contiene [cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) o [construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)opcionales y el motor de expresiones regulares vuelve a un estado guardado anterior para continuar la búsqueda de una coincidencia. El retroceso es fundamental para la eficacia de las expresiones regulares; permite que las expresiones sean eficaces y flexibles, y que coincidan con modelos muy complejos. Al mismo tiempo, esta eficacia tiene un costo. El retroceso suele ser el factor único más importante que afecta al rendimiento del motor de expresiones regulares. Afortunadamente, el desarrollador tiene control sobre el comportamiento del motor de expresiones regulares y cómo usa el retroceso. En este tema se explica cómo funciona el retroceso y cómo se puede controlar.  

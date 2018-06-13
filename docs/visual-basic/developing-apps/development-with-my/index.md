@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584429"
 ---
 # <a name="development-with-my-visual-basic"></a>Desarrollo con My (Visual Basic)
 Visual Basic ofrece nuevas características para el desarrollo rápido de aplicaciones que mejoran la productividad y la facilidad de uso con la máxima eficacia. Una de estas funciones, `My`, proporciona acceso a información y a las instancias de objetos predeterminados relacionados con la aplicación y su entorno de ejecución. Esta información está organizada en un formato que se descubre mediante IntelliSense y se define lógicamente según su uso.  

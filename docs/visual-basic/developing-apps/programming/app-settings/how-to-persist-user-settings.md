@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584571"
 ---
 # <a name="how-to-persist-user-settings-in-visual-basic"></a>Cómo: Conservar la configuración del usuario en Visual Basic
 Puede usar el método `My.Settings.Save` para conservar los cambios en la configuración del usuario.  

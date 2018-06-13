@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596624"
 ---
 # <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>Tipo subyacente &lt;typename&gt; de enumeración no es compatible con CLS
 El tipo de datos especificado para esta enumeración no es parte de la [independencia del lenguaje y componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md) (CLS). Esto no es un error dentro de un componente, porque el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] y Visual Basic admite este tipo de datos. Sin embargo, otro componente escrito en código estrictamente conforme a CLS podría no admitir este tipo de datos. Posible que un componente de ese tipo no pueda interactuar correctamente con su componente.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603995"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Representa el valor predeterminado de cualquier tipo de datos. Para los tipos de referencia, el valor predeterminado es el `null` referencia. Para los tipos de valor, el valor predeterminado depende de si el tipo de valor es que aceptan valores NULL.  

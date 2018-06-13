@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583284"
 ---
 # <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Cómo: Usar SpinWait para implementar una operación de espera de dos fases
 En el ejemplo siguiente se muestra cómo utilizar un objeto <xref:System.Threading.SpinWait?displayProperty=nameWithType> para implementar una operación de espera de dos fases. En la primera fase, el objeto de sincronización, `Latch`, gira durante unos ciclos mientras comprueba si el bloqueo está disponible. En la segunda fase, si el bloqueo está disponible, el método `Wait` realiza la devolución sin usar <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> para la espera; en caso contrario, `Wait` realiza la espera.  

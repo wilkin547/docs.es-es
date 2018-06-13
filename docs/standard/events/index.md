@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578589"
 ---
 # <a name="handling-and-raising-events"></a>Controlar y provocar eventos
 Los eventos de .NET Framework se basan en un modelo de delegado. El modelo de delegado sigue el patrón de diseño del observador, que permite que un suscriptor se registre con un proveedor y reciba notificaciones de dicho proveedor. El emisor de un evento inserta una notificación de que se ha producido un evento, y un receptor de eventos recibe la notificación y define una respuesta a la misma. En este artículo se describen los componentes principales del modelo de delegado, cómo consumir eventos en las aplicaciones y cómo implementar eventos en el código.  

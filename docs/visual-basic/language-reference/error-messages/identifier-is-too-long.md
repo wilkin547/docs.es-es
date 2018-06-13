@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586456"
 ---
 # <a name="identifier-is-too-long"></a>El identificador es demasiado largo
 El nombre o identificador de cada elemento de programación se limita a 1023 caracteres. Además, un nombre completo no puede superar los 1023 caracteres. Esto significa que la cadena de identificador completa (`<namespace>.<...>.<namespace>.<class>.<element>`) no puede tener más de 1023 caracteres, incluyendo el operador de acceso a miembros (`.`) caracteres.  

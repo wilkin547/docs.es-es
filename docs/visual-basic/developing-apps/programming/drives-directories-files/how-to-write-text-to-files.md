@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589436"
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>Cómo: Escribir texto en archivos en Visual Basic
 El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> se puede usar para escribir texto en archivos. Si el archivo especificado no existe, se crea.  

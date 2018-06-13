@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576352"
 ---
 # <a name="how-to-implement-a-provider"></a>Cómo: Implementar un proveedor
 El modelo de diseño de observador requiere una división entre un proveedor, que controla los datos y envía notificaciones, y uno o varios observadores, que reciben notificaciones (devoluciones de llamada) del proveedor. En este tema se describe cómo crear un proveedor. En un tema relacionado, [Cómo: Implementar un observador](../../../docs/standard/events/how-to-implement-an-observer.md), se describe cómo crear un observador.  

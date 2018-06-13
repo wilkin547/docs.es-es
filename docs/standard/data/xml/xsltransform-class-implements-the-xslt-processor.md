@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579202"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>La clase XslTransform implementa el procesador XSLT
 > [!NOTE]

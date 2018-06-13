@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604502"
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>Convenciones tipográficas y de código (Visual Basic)
 Documentación de Visual Basic utiliza la siguiente tipográfico y convenciones de código.  

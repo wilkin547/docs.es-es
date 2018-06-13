@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595831"
 ---
 # <a name="xml-entity-references-are-not-supported"></a>No se admiten referencias de entidad XML
 Una referencia de entidad (por ejemplo, `©`) que no está definido en XML 1.0 especificación se incluye como un valor de un literal XML. Solo `&`, `"`, `<`, `>`, y `'` se admiten las referencias de entidad XML en literales XML.  

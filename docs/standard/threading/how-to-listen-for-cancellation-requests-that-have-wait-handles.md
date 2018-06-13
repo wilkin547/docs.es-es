@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583921"
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>Cómo: Realizar escuchas de solicitudes de cancelación cuando tienen controladores de espera
 Si un método se bloquea mientras está en espera para que se señalice un evento, no se puede comprobar el valor del token de cancelación ni responder de manera oportuna. El primer ejemplo muestra cómo resolver este problema cuando se trabaja con eventos como <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> que no admiten de forma nativa el marco de cancelación unificada. El segundo ejemplo muestra un enfoque más sencillo que utiliza <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>, que es compatible con la cancelación unificada.  

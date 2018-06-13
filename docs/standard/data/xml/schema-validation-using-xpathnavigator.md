@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578358"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>Validación de esquemas con XPathNavigator
 Con la clase <xref:System.Xml.XmlDocument>, puede validar el contenido XML de un objeto <xref:System.Xml.XmlDocument> de dos formas. La primera forma sirve para validar el contenido XML utilizando un objeto <xref:System.Xml.XmlReader> de validación y, la segunda, consiste en utilizar el método <xref:System.Xml.XmlDocument.Validate%2A> de la clase <xref:System.Xml.XmlDocument>. También se puede realizar una validación de solo lectura del contenido XML utilizando la clase <xref:System.Xml.XPath.XPathDocument>.  

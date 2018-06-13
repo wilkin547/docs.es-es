@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578426"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Procedimientos recomendados para implementar el modelo asincrónico basado en eventos
 El modelo asincrónico basado en eventos proporciona un método eficaz de exponer el comportamiento asincrónico en clases, con una semántica de delegados y eventos ya conocida. Para implementar el modelo asincrónico basado en eventos, es necesario cumplir algunos requisitos de comportamiento específicos. En las secciones siguientes se describen los requisitos y las instrucciones que se deben tener en cuenta a la hora de implementar una clase que responda a este modelo.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577220"
 ---
 # <a name="editing-xml-schemas"></a>Edición de esquemas XML
 La edición de un esquema XML es una de las características más importantes del Modelo de objetos de esquema (SOM). Se pueden utilizar todas las propiedades previas a la compilación de esquemas del SOM para cambiar los valores existentes de un esquema XML. Luego, el esquema XML se puede recompilar para reflejar los cambios.  

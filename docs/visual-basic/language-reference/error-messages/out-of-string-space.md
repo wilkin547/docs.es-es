@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594451"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Espacio para cadenas insuficiente (Visual Basic)
 Con Visual Basic, puede usar cadenas muy grandes. No obstante, los requisitos de otros programas y la forma de trabajar con las cadenas también pueden generar este error.  

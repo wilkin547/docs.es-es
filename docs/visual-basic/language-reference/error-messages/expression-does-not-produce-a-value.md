@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586662"
 ---
 # <a name="expression-does-not-produce-a-value"></a>La expresión no genera un valor
 Ha intentado utilizar una expresión que no genera un valor en un contexto que genera valores, como la llamada a un `Sub` en un contexto donde un `Function` se espera.  

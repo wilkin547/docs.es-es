@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579839"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
 <a name="top"></a> El motor de expresiones regulares de .NET es una herramienta eficaz y completa que procesa texto basándose en coincidencias de patrones en lugar de comparar y buscar coincidencias con texto literal. En la mayoría de los casos, realiza la coincidencia de modelos de manera rápida y eficaz. Sin embargo, en algunos casos, puede parecer que el motor de expresiones regulares es muy lento. En casos extremos, incluso puede parecer que deja de responder mientras procesa una entrada relativamente pequeña a lo largo de las horas o incluso los días.  

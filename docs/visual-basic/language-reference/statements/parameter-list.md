@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605061"
 ---
 # <a name="parameter-list-visual-basic"></a>Lista de parámetros (Visual Basic)
 Especifica los parámetros de que un procedimiento espera cuando se llama. Varios parámetros se separan mediante comas. A continuación se muestra la sintaxis para un parámetro.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584962"
 ---
 # <a name="timers"></a>Temporizadores
 Los temporizadores son objetos pequeños que permiten especificar un delegado para llamarlo en un momento específico. Un subproceso del grupo realiza la operación de espera.  

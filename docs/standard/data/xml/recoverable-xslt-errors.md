@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579280"
 ---
 # <a name="recoverable-xslt-errors"></a>Errores XSLT recuperables
 La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C incluye áreas en las que el proveedor de las implementaciones puede decidir cómo controlar una situación. Estas áreas se consideran comportamientos discrecionales. Por ejemplo, en la sección 7.3 Creación de instrucciones de procesamiento, la recomendación 1.0 de XSLT dice que el hecho de que al crear instancias del contenido de `xsl:processing-instruction` se creen nodos que no sean de texto, es un error. Para algunos problemas, la recomendación 1.0 de XSLT indica qué decisión tomar si el procesador decide recuperarse del error. En el caso del problema en particular de la sección 7.3, W3C indica que la implementación puede recuperarse del error pasando por alto los nodos y su contenido.  

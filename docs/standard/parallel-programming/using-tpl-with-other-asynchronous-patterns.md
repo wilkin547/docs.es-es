@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580931"
 ---
 # <a name="using-tpl-with-other-asynchronous-patterns"></a>Usar TPL con otros patrones asincrónicos
 La biblioteca TPL puede utilizarse con patrones de programación asincrónica de .NET Framework tradicionales de varias formas.  

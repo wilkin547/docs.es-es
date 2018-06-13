@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578994"
 ---
 # <a name="dispose-pattern"></a>Patrón de Dispose
 Todos los programas adquieren uno o más recursos del sistema, como la memoria, los identificadores del sistema o las conexiones de base de datos, en el transcurso de su ejecución. Los desarrolladores tienen que tenga cuidado al usar estos recursos del sistema, porque debe liberarse después de adquirir y usar.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582849"
 ---
 # <a name="accessing-user-data-visual-basic"></a>Acceso a los datos de usuario (Visual Basic)
 Esta sección contiene temas que tratan del objeto `My.User` y de las tareas que se pueden realizar con él.  

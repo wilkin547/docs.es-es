@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595051"
 ---
 # <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a>No puede crear el ensamblado con nombre seguro del archivo de clave &#39; &lt;filename&gt;&#39;: &lt;error&gt;
 No se pudo crear un ensamblado con nombre seguro en el archivo de clave especificado.  

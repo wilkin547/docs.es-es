@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591301"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Control de excepciones (Task Parallel Library)
 Las excepciones no controladas que se inician mediante código de usuario que se ejecuta dentro de una tarea se propagan de vuelta al subproceso que hace la llamada, excepto en determinados escenarios que se describen posteriormente en este tema. Las excepciones se propagan cuando se usa uno de los métodos estáticos o de instancia <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> o <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait`, los cuales se pueden controlar si se incluye la llamada en una instrucción `try`/`catch`. Si una tarea es la tarea primaria de tareas secundarias asociadas o si se esperan varias tareas, pueden producirse varias excepciones.  

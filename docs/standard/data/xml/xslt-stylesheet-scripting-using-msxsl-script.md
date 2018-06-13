@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577181"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Escritura de scripts de hojas de estilos XSLT mediante &lt;msxsl:script&gt;
 Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediante el elemento `script`.  

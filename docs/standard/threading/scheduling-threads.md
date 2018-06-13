@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582813"
 ---
 # <a name="scheduling-threads"></a>Planear subprocesos
 Cada subproceso tiene una prioridad de subproceso asignada a él. A los subprocesos creados en Common Language Runtime se les asigna inicialmente la prioridad de **ThreadPriority.Normal**. Los subprocesos creados fuera del tiempo de ejecución mantienen la prioridad que tenían antes de entrar en el entorno administrado. Puede obtener o establecer la prioridad de los subprocesos con la propiedad **Thread.Priority**.  

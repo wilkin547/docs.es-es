@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583752"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Cómo: Realizar escuchas de solicitudes mediante sondeo
 En el ejemplo siguiente se muestra una manera de que el código de usuario pueda sondear un token de cancelación a intervalos regulares para ver si se ha solicitado la cancelación del subproceso que realiza la llamada. En este ejemplo se usa el tipo <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, pero se aplica el mismo modelo a operaciones asincrónicas creadas directamente por el tipo <xref:System.Threading.ThreadPool?displayProperty=nameWithType> o el tipo <xref:System.Threading.Thread?displayProperty=nameWithType>.  

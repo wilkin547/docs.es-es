@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601886"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= (Operador) (Visual Basic)
 Concatena una `String` expresión a un `String` variable o propiedad y asigna el resultado a la variable o propiedad.  

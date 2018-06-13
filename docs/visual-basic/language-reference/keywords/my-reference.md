@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597326"
 ---
 # <a name="my-reference-visual-basic"></a>Referencia de My (Visual Basic)
 El `My` característica hace que la programación más rápida y fácilmente por lo que le ofrece acceso intuitivo a métodos utilizados con frecuencia, propiedades y eventos. Esta tabla enumeran los objetos contenidos en `My`y las acciones que se pueden realizar con cada uno de ellos.  

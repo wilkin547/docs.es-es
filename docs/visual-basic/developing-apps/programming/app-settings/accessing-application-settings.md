@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591916"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>Acceso a la configuración de la aplicación (Visual Basic)
 Esta sección contiene temas en los que se describe el objeto `My.Settings` y las tareas que le permite realizar.  

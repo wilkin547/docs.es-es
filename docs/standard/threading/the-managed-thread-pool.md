@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592423"
 ---
 # <a name="the-managed-thread-pool"></a>Grupo de subprocesos administrados
 La clase <xref:System.Threading.ThreadPool> proporciona a la aplicación un grupo de subprocesos de trabajo administrados por el sistema, que le permite concentrarse en las tareas de la aplicación en lugar de en la administración de los subprocesos. Si tiene tareas cortas que requieran procesamiento en segundo plano, el grupo de subprocesos administrados permite aprovechar fácilmente las ventajas de varios subprocesos. Por ejemplo, a partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede crear objetos <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>, que realizan tareas asincrónicas en los subprocesos del grupo de subprocesos.  
