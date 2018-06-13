@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599153"
 ---
 # <a name="baudrate-must-be-greater-than-0"></a>El valor de BaudRate debe ser mayor que 0
 El argumento `BaudRate` especificado para el método `My.Computer.Ports.OpenSerialPort` debe ser mayor que cero.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575354"
 ---
 # <a name="names-of-type-members"></a>Nombres de miembros de tipos
 Se realizan los tipos de miembros: métodos, propiedades, eventos, constructores y campos. Las siguientes secciones describen las directrices para asignar nombres a los miembros de tipo.  

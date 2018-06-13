@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457509"
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>Cómo: Convertir con seguridad de bool? a bool (Guía de programación de C#)
 El tipo que acepta valores NULL `bool?` puede contener tres valores distintos: `true`, `false` y `null`. Por lo tanto, el tipo `bool?` no se puede usar en instrucciones condicionales como `if`, `for` o `while`. Por ejemplo, el siguiente código causa un error del compilador.  

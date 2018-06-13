@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591864"
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Empaquetar e implementar extensiones de My (Visual Basic) de personalizadas
 Visual Basic proporciona una manera sencilla de implementar su personalizado `My` extensiones de espacio de nombres mediante el uso de plantillas de Visual Studio. Si va a crear una plantilla de proyecto para que su `My` las extensiones son una parte integral del nuevo tipo de proyecto, solo puede incluir su personalizado `My` código de extensión con el proyecto al exportar la plantilla. Para obtener más información acerca de cómo exportar plantillas de proyecto, vea [Cómo: crear plantillas de proyecto](/visualstudio/ide/how-to-create-project-templates).  

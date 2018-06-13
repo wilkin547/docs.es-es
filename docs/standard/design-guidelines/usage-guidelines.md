@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571038"
 ---
 # <a name="usage-guidelines"></a>Instrucciones de uso
 Esta sección contiene directrices para utilizar tipos comunes en las API es accesibles públicamente. Ocupa de uso directo de integrados tipos de marco de trabajo (por ejemplo, los atributos de serialización) y la sobrecarga de operadores comunes.  

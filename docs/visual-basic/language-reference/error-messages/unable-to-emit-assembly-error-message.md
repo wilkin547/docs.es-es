@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595178"
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>No se puede emitir el ensamblado: &lt;mensaje de error&gt;
 El compilador de Visual Basic llama a Assembly Linker (Al.exe, también denominado Alink) para generar un ensamblado con un manifiesto y el vinculador informa de un error en la fase de emisión de creación del ensamblado.  

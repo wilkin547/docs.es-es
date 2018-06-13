@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589184"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Herramienta Generador de serializador XML (Sgen.exe)
 El Generador de serializador XML crea un ensamblado de serialización XML para los tipos de un ensamblado especificado a fin de mejorar el rendimiento en el inicio de <xref:System.Xml.Serialization.XmlSerializer> cuando serializa o deserializa objetos de los tipos especificados.  

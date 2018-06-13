@@ -9,6 +9,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172664"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Cómo: Devolver subconjuntos de propiedades de elementos en una consulta (Guía de programación de C#)
 Use un tipo anónimo en una expresión de consulta cuando se cumplan estas dos condiciones:  

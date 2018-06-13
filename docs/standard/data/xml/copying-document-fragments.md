@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568022"
 ---
 # <a name="copying-document-fragments"></a>Copiar fragmentos de documento
 Se puede crear un nodo **XmlDocumentFragment** y, después, agregar nodos en niveles inferiores. Al insertar el nodo **XmlDocumentFragment** mediante el método **InsertNode**, no se copia el nodo **XmlDocumentFragment**, pero se insertan sus nodos secundarios en Document Object Model (DOM) XML.  

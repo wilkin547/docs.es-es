@@ -14,6 +14,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483546"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Compatibilidad con alta de PPP en Windows Forms
 

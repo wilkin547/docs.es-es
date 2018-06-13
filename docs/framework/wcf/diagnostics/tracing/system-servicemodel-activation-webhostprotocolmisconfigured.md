@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476617"
 ---
 # <a name="systemservicemodelactivationwebhostprotocolmisconfigured"></a>System.ServiceModel.Activation.WebHostProtocolMisconfigured
 El protocolo se configura incorrectamente en Servicio de activación de procesos de Windows (WAS).  

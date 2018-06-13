@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575471"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>Lectura de datos XML con XPathDocument y XmlDocument
 Existen dos formas de leer un documento XML en el espacio de nombres <xref:System.Xml.XPath?displayProperty=nameWithType>. La primera consiste en leer un documento XML utilizando la clase de solo lectura <xref:System.Xml.XPath.XPathDocument>, y la segunda en leer un documento XML utilizando la clase <xref:System.Xml.XmlDocument> editable en el espacio de nombres <xref:System.Xml?displayProperty=nameWithType>.  

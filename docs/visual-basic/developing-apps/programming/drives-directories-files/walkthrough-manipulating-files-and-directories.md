@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592514"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Tutorial: Manipular archivos y directorios en Visual Basic
 En este tutorial se ofrece una introducción a los conceptos básicos de E/S de archivos en Visual Basic. En él se describe cómo crear una pequeña aplicación que enumera y examina archivos de texto en un directorio. Para cada archivo de texto seleccionado, la aplicación proporciona atributos de archivo y la primera línea de contenido. Existe una opción para escribir información en un archivo de registro.  

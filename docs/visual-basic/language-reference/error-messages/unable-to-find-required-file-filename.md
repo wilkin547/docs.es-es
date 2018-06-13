@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595266"
 ---
 # <a name="unable-to-find-required-file-39ltfilenamegt39"></a>No se puede encontrar el archivo requerido &#39; &lt;nombre de archivo&gt;&#39;
 Falta un archivo requerido por Visual Studio o está dañado.  

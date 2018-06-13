@@ -7,16 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 4e1a65455df9b0a9272bc5cef257f0d00b36b500
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a188e9a7cbb7a1c497d577039c2b2578eaa7526
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172651"
 ---
 # <a name="virtual-c-reference"></a>virtual (Referencia de C#)
 La palabra clave `virtual` se usa para modificar una declaración de método, propiedad, indizador o evento y permitir que se invalide en una clase derivada. Por ejemplo, cualquier clase que herede este método puede reemplazarlo:  
   
-```  
+```csharp  
 public virtual double Area()   
 {  
     return x * y;  
@@ -45,7 +46,7 @@ public virtual double Area()
   
  Observe que las clases heredadas `Circle`, `Sphere` y `Cylinder` usan constructores que inicializan la clase base, como se muestra en la siguiente declaración.  
   
-```  
+```csharp  
 public Cylinder(double r, double h): base(r, h) {}  
 ```  
   

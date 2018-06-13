@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570658"
 ---
 # <a name="working-with-xml-schemas"></a>Trabajo con esquemas XML
 Para definir la estructura de un documento XML, así como las relaciones de sus elementos, tipos de datos y restricciones de contenido, se utiliza una definición de tipo de documento (DTD) o esquema del lenguaje de definición de esquemas (XSD). Aunque se considera que un documento XML es correcto si cumple todos los requisitos sintácticos que define la recomendación del Lenguaje de marcado extensible (XML) 1.0 del W3C (World Wide Web Consortium), no se considera válido a menos que sea correcto y además cumpla las restricciones que define su DTD o esquema. Por lo tanto, aunque todos los documentos XML válidos sean correctos, no todos los documentos XML correctos son válidos.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571948"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Cómo: Abrir y anexar a un archivo de registro
 <xref:System.IO.StreamWriter> y <xref:System.IO.StreamReader> escriben y leen caracteres de secuencias. En el siguiente ejemplo de código se abre el archivo `log.txt` para realizar entradas o se crea el archivo en caso de que no exista y se adjunta información al final del archivo. El contenido del archivo, a continuación, se escribe en la salida estándar para su presentación. Como alternativa a este ejemplo, la información se puede almacenar como una sola cadena o como una matriz de cadenas, y el método <xref:System.IO.File.WriteAllText%2A> o <xref:System.IO.File.WriteAllLines%2A> podría utilizarse para lograr la misma funcionalidad.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569335"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>Directivas de hoja de estilos incrustadas en un documento
 A veces, el documento XML contiene la directiva de hoja de estilos `<?xml:stylesheet?>`. Microsoft Internet Explorer lo acepta como alternativa a la sintaxis `<?xml-stylesheet?>`. Cuando los datos XML contienen una directiva `<?xml:stylesheet?>`, tal como se muestra en los datos siguientes, si se intentan cargar estos datos en el Modelo de objetos de documento XML (DOM), se inicia una excepción.  

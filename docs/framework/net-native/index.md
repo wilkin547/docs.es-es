@@ -15,6 +15,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457312"
 ---
 # <a name="compiling-apps-with-net-native"></a>Compilar aplicaciones con .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] es una tecnología de precompilación para crear e implementar aplicaciones de Windows que se incluye con Visual Studio 2015 y versiones posteriores. Su función es compilar automáticamente, a código nativo, aquellas versiones de lanzamiento de las aplicaciones escritas en código administrado (C# o Visual Basic) y que tienen como destino .NET Framework y Windows 10.  

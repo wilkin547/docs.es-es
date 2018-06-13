@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589859"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Almacenamiento local para los subprocesos: Campos estáticos relacionados con subprocesos y ranuras de datos
 Puede usar el almacenamiento local para el subproceso (TLS) administrado para almacenar los datos que sean exclusivos de un subproceso y un dominio de aplicación. .NET Framework proporciona dos maneras de utilizar el TLS administrado: ranuras para datos y campos estáticos relacionados con subprocesos.  

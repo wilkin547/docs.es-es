@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568802"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Ejecutar aplicaciones basadas en microservicios y compuestas en entornos de producción
 

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591536"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizar datos para subprocesamiento múltiple
 Cuando varios subprocesos pueden realizar llamadas a las propiedades y los métodos de un objeto individual, es fundamental sincronizarlas. De lo contrario, un subproceso puede interrumpir lo que esté realizando otro y el objeto podría quedar en un estado no válido. La clase cuyos miembros están protegidos de tales interrupciones se conoce como segura para subprocesos.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807819"
 ---
 # <a name="token-provider"></a>Proveedor de tokens
 Este ejemplo muestra cómo implementar un proveedor de tokens personalizado. Un proveedor de tokens de Windows Communication Foundation (WCF) se utiliza para proporcionar las credenciales para la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con el proveedor del Token de administrador de credenciales predeterminado. WCF también incluye una [!INCLUDE[infocard](../../../../includes/infocard-md.md)] proveedor de tokens. Los proveedores de tokens personalizados son útiles en los casos siguientes:  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599780"
 ---
 # <a name="add-failed-duplicate-key-value-supplied"></a>Error al agregar. Se proporcionó un valor de clave duplicado
 No se pudo realizar la operación `Add` porque el valor de clave es igual que otro valor clave. Los nombres de clave deben ser únicos.  

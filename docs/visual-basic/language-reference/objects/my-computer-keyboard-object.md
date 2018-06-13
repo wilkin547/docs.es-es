@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594112"
 ---
 # <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard (Objeto)
 Proporciona propiedades para obtener acceso al estado actual del teclado, como las teclas que se han presionado, y proporciona un método para enviar pulsaciones de teclas a la ventana activa.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571129"
 ---
 # <a name="type-conversion-tables-in-net"></a>Tablas de conversión de tipos en .NET
 Una conversión de ampliación se produce cuando se convierte un valor de un tipo a otro tipo que es de igual o mayor tamaño. Una conversión de restricción se produce cuando se convierte un valor de un tipo a otro tipo que es de un tamaño menor. En las tablas de este tema se muestran los comportamientos de ambos tipos de conversiones.  

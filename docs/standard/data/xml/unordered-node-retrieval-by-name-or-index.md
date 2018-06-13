@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572946"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Recuperación de nodos desordenados por nombre o índice
 La clase **XmlNamedNodeMap** se describe en la especificación del W3C como NamedNodeMap y es necesaria para controlar un conjunto de nodos desordenado con la capacidad de hacer referencia a los mismos mediante su nombre o índice. El único modo de acceder a una clase **XmlNamedNodeMap** es devolverla a través de un método o una propiedad. Hay tres métodos o propiedades que devuelven una clase **XmlNamedNodeMap**:  

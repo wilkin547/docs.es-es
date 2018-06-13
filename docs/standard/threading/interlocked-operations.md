@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589976"
 ---
 # <a name="interlocked-operations"></a>Operaciones de bloqueo
 La clase <xref:System.Threading.Interlocked> proporciona métodos que sincronizan el acceso a una variable que comparten varios subprocesos. Los subprocesos de distintos procesos pueden usar este mecanismo si la variable está en una memoria compartida. Las operaciones de bloqueo son atómicas, es decir, toda la operación es una unidad que no se puede interrumpir por otra operación de bloqueo en la misma variable. Esto es importante en los sistemas operativos con multithreading preferente, donde se puede suspender un subproceso después de cargar un valor desde una dirección de memoria, pero antes de tener la oportunidad de alterarlo y almacenarlo.  

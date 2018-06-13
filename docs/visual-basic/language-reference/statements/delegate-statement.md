@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234683"
 ---
 # <a name="delegate-statement"></a>Delegate (Instrucción)
 Se utiliza para declarar a un delegado. Un delegado es un tipo de referencia que hace referencia a un `Shared` método de un tipo o a un método de instancia de un objeto. Cualquier procedimiento con la coincidencia de parámetros y tipos devueltos puede usarse para crear una instancia de esta clase de delegado. Puede llamar al procedimiento por medio de la instancia del delegado.  

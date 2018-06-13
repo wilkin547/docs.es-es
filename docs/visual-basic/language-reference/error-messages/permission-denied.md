@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596000"
 ---
 # <a name="permission-denied-visual-basic"></a>Permiso denegado (Visual Basic)
 Se ha intentado escribir en un disco protegido contra escritura u obtener acceso a un archivo bloqueado.  

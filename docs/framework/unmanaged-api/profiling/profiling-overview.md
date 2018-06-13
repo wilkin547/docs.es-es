@@ -31,9 +31,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461918"
 ---
 # <a name="profiling-overview"></a>Información general sobre la generación de perfiles
 <a name="top"></a> Un generador de perfiles es una herramienta que supervisa la ejecución de otra aplicación. Un generador de perfiles de Common Language Runtime (CLR) es una biblioteca de vínculos dinámicos (DLL) compuesta de funciones que intercambian mensajes con el CLR utilizando la API de generación de perfiles. CLR carga en tiempo de ejecución la DLL del generador de perfiles.  

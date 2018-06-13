@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573664"
 ---
 # <a name="nested-types"></a>Tipos anidados
 Un tipo anidado es un tipo definido en el ámbito de otro tipo, que se denomina el tipo envolvente. Un tipo anidado tiene acceso a todos los miembros de su tipo envolvente. Por ejemplo, tiene acceso a los campos privados definidos en el tipo envolvente y proteger los campos definidos en todos los antecesores del tipo envolvente.  

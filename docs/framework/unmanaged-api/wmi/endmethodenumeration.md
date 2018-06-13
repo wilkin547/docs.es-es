@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d09a2ee278dba7e711891bc6d72043bb3a499dd8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458495"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration (función)
 Finaliza una secuencia de enumeración que se inició con una llamada a la [BeginMethodEnumeration función](beginmethodenumeration.md).  
