@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765469"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a><span data-ttu-id="de996-102">Problemas conocidos y consideraciones en LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="de996-102">Known Issues and Considerations in LINQ to Entities</span></span>
 <span data-ttu-id="de996-103">En esta sección se ofrece información sobre los problemas conocidos relacionados con las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].</span><span class="sxs-lookup"><span data-stu-id="de996-103">This section provides information about known issues with [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] queries.</span></span>  

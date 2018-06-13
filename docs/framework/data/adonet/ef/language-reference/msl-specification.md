@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763032"
 ---
 # <a name="msl-specification"></a><span data-ttu-id="45a87-102">Especificación MSL</span><span class="sxs-lookup"><span data-stu-id="45a87-102">MSL Specification</span></span>
 <span data-ttu-id="45a87-103">El [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) sitio ahora es la ubicación principal para el contenido de Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="45a87-103">The [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  

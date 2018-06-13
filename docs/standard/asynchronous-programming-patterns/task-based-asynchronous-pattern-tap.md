@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579020"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a><span data-ttu-id="d1d85-102">Modelo asincrónico basado en tareas (TAP)</span><span class="sxs-lookup"><span data-stu-id="d1d85-102">Task-based Asynchronous Pattern (TAP)</span></span>
 <span data-ttu-id="d1d85-103">El patrón asincrónico basado en tareas (TAP) se basa en los tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> del espacio de nombres <xref:System.Threading.Tasks?displayProperty=nameWithType>, que se usan para representar operaciones asincrónicas arbitrarias.</span><span class="sxs-lookup"><span data-stu-id="d1d85-103">The Task-based Asynchronous Pattern (TAP) is based on the <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> types in the <xref:System.Threading.Tasks?displayProperty=nameWithType> namespace, which are used to represent arbitrary asynchronous operations.</span></span> <span data-ttu-id="d1d85-104">TAP es el patrón asincrónico de diseño recomendado para los nuevos desarrollos.</span><span class="sxs-lookup"><span data-stu-id="d1d85-104">TAP is the recommended asynchronous design pattern for new development.</span></span>  

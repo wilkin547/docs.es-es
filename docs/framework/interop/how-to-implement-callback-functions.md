@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389280"
 ---
 # <a name="how-to-implement-callback-functions"></a><span data-ttu-id="988bd-102">Cómo: Implementar funciones de devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="988bd-102">How to: Implement Callback Functions</span></span>
 <span data-ttu-id="988bd-103">El procedimiento y el ejemplo siguiente muestran cómo una aplicación administrada, mediante la invocación de la plataforma, puede imprimir el valor del identificador de cada ventana en el equipo local.</span><span class="sxs-lookup"><span data-stu-id="988bd-103">The following procedure and example demonstrate how a managed application, using platform invoke, can print the handle value for each window on the local computer.</span></span> <span data-ttu-id="988bd-104">En concreto, el uso del procedimiento y el ejemplo usan la función **EnumWindows** para recorrer la lista de ventanas y una función de devolución de llamada administrada (denominada CallBack) para imprimir el valor del identificador de ventana.</span><span class="sxs-lookup"><span data-stu-id="988bd-104">Specifically, the procedure and example use the **EnumWindows** function to step through the list of windows and a managed callback function (named CallBack) to print the value of the window handle.</span></span>  

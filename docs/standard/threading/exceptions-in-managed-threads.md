@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591578"
 ---
 # <a name="exceptions-in-managed-threads"></a><span data-ttu-id="ef123-102">Excepciones en subprocesos administrados</span><span class="sxs-lookup"><span data-stu-id="ef123-102">Exceptions in Managed Threads</span></span>
 <span data-ttu-id="ef123-103">A partir de .NET Framework versión 2.0, Common Language Runtime permite que la mayoría de las excepciones no controladas en subprocesos continúen naturalmente.</span><span class="sxs-lookup"><span data-stu-id="ef123-103">Starting with the .NET Framework version 2.0, the common language runtime allows most unhandled exceptions in threads to proceed naturally.</span></span> <span data-ttu-id="ef123-104">En la mayoría de los casos, esto implica que la excepción no controlada provoque la finalización de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="ef123-104">In most cases this means that the unhandled exception causes the application to terminate.</span></span>  

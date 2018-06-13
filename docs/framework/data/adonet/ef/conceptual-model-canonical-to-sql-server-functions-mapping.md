@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766314"
 ---
 # <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a><span data-ttu-id="bfcec-102">Asignación entre las funciones canónicas del modelo conceptual y las funciones de SQL Server</span><span class="sxs-lookup"><span data-stu-id="bfcec-102">Conceptual Model Canonical to SQL Server Functions Mapping</span></span>
 <span data-ttu-id="bfcec-103">En este tema se describe cómo se asignan las funciones canónicas del modelo conceptual a las funciones de SQL Server correspondientes.</span><span class="sxs-lookup"><span data-stu-id="bfcec-103">This topic describes how conceptual model canonical functions map to the corresponding SQL Server functions.</span></span>  

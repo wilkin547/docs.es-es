@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591494"
 ---
 # <a name="whats-new-in-the-net-standard"></a><span data-ttu-id="fe8dc-103">Novedades de .NET Standard</span><span class="sxs-lookup"><span data-stu-id="fe8dc-103">What's new in the .NET Standard</span></span>
 

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766782"
 ---
 # <a name="ltservicecertificategt"></a><span data-ttu-id="cd6ef-102">&lt;serviceCertificate&gt;</span><span class="sxs-lookup"><span data-stu-id="cd6ef-102">&lt;serviceCertificate&gt;</span></span>
 <span data-ttu-id="cd6ef-103">Configura el certificado X.509 que se utiliza para cifrar y descifrar los tokens.</span><span class="sxs-lookup"><span data-stu-id="cd6ef-103">Configures the X.509 certificate that is used to encrypt and decrypt tokens.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764637"
 ---
 # <a name="-member-access-entity-sql"></a><span data-ttu-id="379d1-103">.</span><span class="sxs-lookup"><span data-stu-id="379d1-103">.</span></span> <span data-ttu-id="379d1-104">(Acceso a miembros) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="379d1-104">(Member Access) (Entity SQL)</span></span>
 <span data-ttu-id="379d1-105">El operador punto (.) es el [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operador de acceso de miembro.</span><span class="sxs-lookup"><span data-stu-id="379d1-105">The dot operator (.) is the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] member access operator.</span></span> <span data-ttu-id="379d1-106">El operador de acceso a miembros se usa para obtener el valor de una propiedad o un campo de una instancia de un tipo del modelo conceptual estructural.</span><span class="sxs-lookup"><span data-stu-id="379d1-106">You use the member access operator to yield the value of a property or field of an instance of structural conceptual model type.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767328"
 ---
 # <a name="literals-entity-sql"></a><span data-ttu-id="e181f-102">Literales (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e181f-102">Literals (Entity SQL)</span></span>
 <span data-ttu-id="e181f-103">En este tema se describe la compatibilidad con los literales en [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e181f-103">This topic describes [!INCLUDE[esql](../../../../../../includes/esql-md.md)] support for literals.</span></span>  

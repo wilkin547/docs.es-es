@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591890"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a><span data-ttu-id="d7675-102">Tutorial: Filtrar el resultado de My.Application.Log (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d7675-102">Walkthrough: Filtering My.Application.Log Output (Visual Basic)</span></span>
 <span data-ttu-id="d7675-103">En este tutorial se muestra cómo cambiar el filtrado del registro predeterminado para el objeto `My.Application.Log`, para controlar qué información se pasa desde el objeto `Log` a los agentes de escucha y qué información escriben estos.</span><span class="sxs-lookup"><span data-stu-id="d7675-103">This walkthrough demonstrates how to change the default log filtering for the `My.Application.Log` object, to control what information is passed from the `Log` object to the listeners and what information is written by the listeners.</span></span> <span data-ttu-id="d7675-104">Puede cambiar el comportamiento del registro incluso después de generar la aplicación, porque la información de configuración se almacena en el archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="d7675-104">You can change the logging behavior even after building the application, because the configuration information is stored in the application's configuration file.</span></span>  
