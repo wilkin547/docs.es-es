@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396677"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a><span data-ttu-id="803d6-102">Cómo establecer en una aplicación una directiva de caché predeterminada de duración definida</span><span class="sxs-lookup"><span data-stu-id="803d6-102">How to: Set the Default Time-Based Cache Policy for an Application</span></span>
 <span data-ttu-id="803d6-103">La directiva de caché predeterminada de duración definida permite que una aplicación tenga su comportamiento de caché definido por medio de los encabezados que se han enviado con el recurso almacenado en caché y el comportamiento de caché definido en las secciones 13 y 14 de RFC 2616, disponibles en [http://www.ietf.org](http://www.ietf.org/). Este es el comportamiento de caché apropiado para la mayoría de aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="803d6-103">The default time-based cache policy allows an application to have its cache behavior defined by the headers sent with the cached resource and the cache behavior defined in sections 13 and 14 of RFC 2616, available at [http://www.ietf.org](http://www.ietf.org/). This is the appropriate cache behavior for most applications.</span></span>  
