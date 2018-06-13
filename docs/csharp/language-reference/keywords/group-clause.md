@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217489"
 ---
 # <a name="group-clause-c-reference"></a>group (Cláusula, Referencia de C#)
 La cláusula `group` devuelve una secuencia de objetos <xref:System.Linq.IGrouping%602> que contienen cero o más elementos que coinciden con el valor de clave del grupo. Por ejemplo, puede agrupar una secuencia de cadenas según la primera letra de cada cadena. En este caso, la primera letra es la clave, es de tipo [char](../../../csharp/language-reference/keywords/char.md) y se almacena en la propiedad `Key` de cada objeto <xref:System.Linq.IGrouping%602>. El compilador deduce el tipo de la clave.  

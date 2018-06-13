@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218850"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (Opciones del compilador de C#)
 La opción **-debug** da lugar a que el compilador genere información de depuración y la incluya en el archivo o los archivos de salida.  

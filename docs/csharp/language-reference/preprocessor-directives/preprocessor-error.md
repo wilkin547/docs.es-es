@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269404"
 ---
 # <a name="error-c-reference"></a>#error (Referencia de C#)
 `#error` le permite generar un error desde una ubicación específica en el código. Por ejemplo:  

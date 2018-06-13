@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218402"
 ---
 # <a name="from-clause-c-reference"></a>from (Cláusula, Referencia de C#)
 Una expresión de consulta debe comenzar con una cláusula `from`, Además, una expresión de consulta puede contener subconsultas, que también comienzan con una cláusula `from`. La cláusula `from` especifica lo siguiente:  

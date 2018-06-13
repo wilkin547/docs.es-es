@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269666"
 ---
 # <a name="statement-keywords-c-reference"></a>Palabras clave de instrucciones (Referencia de C#)
 Las instrucciones son instrucciones de programa. A excepción de como se describe en los temas a los que se hace referencia en la tabla siguiente, las instrucciones se ejecutan en secuencia. En la tabla siguiente, se enumeran las palabras claves de instrucción de C#. Para obtener más información sobre las instrucciones que no se expresan con ninguna palabra clave, consulte [Instrucciones](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  

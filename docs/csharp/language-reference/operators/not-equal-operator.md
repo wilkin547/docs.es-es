@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272444"
 ---
 # <a name="-operator-c-reference"></a>Operador != (Referencia de C#)
 El operador de desigualdad (`!=`) devuelve false si sus dos operandos son iguales; en caso contrario, devuelve true. Los operadores de desigualdad están predefinidos para todos los tipos, incluidos string y object. Los tipos definidos por el usuario pueden sobrecargar el operador `!=`.  

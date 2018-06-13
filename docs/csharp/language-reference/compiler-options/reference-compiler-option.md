@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218181"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (Opciones del compilador de C#)
 La opción **-reference** hace que el compilador importe información de tipo [public](../../../csharp/language-reference/keywords/public.md) del archivo especificado al proyecto actual, lo que permite hacer referencia a metadatos de los archivos de ensamblado especificados.  

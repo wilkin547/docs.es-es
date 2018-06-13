@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273320"
 ---
 # <a name="operator-keywords-c-reference"></a>Palabras clave de operadores (Referencia de C#)
 Se usa para realizar acciones diferentes como crear objetos, comprobar el tipo en tiempo de ejecución de un objeto, obtener el tamaño de un tipo y otras acciones. En esta sección se presentan las siguientes palabras clave:  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268201"
 ---
 # <a name="endregion-c-reference"></a>#endregion (Referencia de C#)
 `#endregion` marca el final de un bloque [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md). Por ejemplo:  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269160"
 ---
 # <a name="else-c-reference"></a>#else (Referencia de C#)
 `#else` le permite crear una directiva condicional compuesta, de modo que, si ninguna de las expresiones de las directivas [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) o [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) (opcional) anteriores es `true`, el compilador evaluará todo el código entre `#else` y la siguiente directiva `#endif`.  

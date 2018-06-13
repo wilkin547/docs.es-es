@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218925"
 ---
 # <a name="await-c-reference"></a>await (Referencia de C#)
 El operador `await` se aplica a una tarea de un método asincrónico para insertar un punto de suspensión en la ejecución del método hasta que la tarea en espera se complete. La tarea representa el trabajo en curso.  
