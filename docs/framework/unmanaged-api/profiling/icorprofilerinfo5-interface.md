@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ba082182ec7e2f639ef94baeb29203ee792fba0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455333"
 ---
 # <a name="icorprofilerinfo5-interface"></a>ICorProfilerInfo5 (Interfaz)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  

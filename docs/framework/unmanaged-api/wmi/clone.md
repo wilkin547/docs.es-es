@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457321"
 ---
 # <a name="clone-function"></a>Clone (función)
 Devuelve un nuevo objeto que es un clon completo del objeto actual.   

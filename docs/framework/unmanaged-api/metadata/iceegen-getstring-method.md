@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f7ac5ef95ca3705b11cfda51d7fd1aca7400abc4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443078"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString (Método)
 Obtiene la cadena almacenada en la dirección virtual relativa especificada.  

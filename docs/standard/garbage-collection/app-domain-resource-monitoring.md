@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578335"
 ---
 # <a name="application-domain-resource-monitoring"></a>Supervisión de recursos de dominio de aplicación
 La supervisión de recursos de dominio de aplicación (ARM) permite a los hosts supervisar el uso de CPU y de memoria por parte del dominio de aplicación. Esto es útil para los hosts como ASP.NET que utilizan varios dominios de aplicación en un proceso de ejecución prolongada. El host puede descargar el dominio de aplicación de una aplicación que afecta negativamente al rendimiento de todo el proceso, pero solo si puede identificar la aplicación problemática. ARM proporciona información que puede usarse para ayudar a tomar estas decisiones.  

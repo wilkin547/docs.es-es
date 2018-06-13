@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f41a233e9b5338bdb0a324ff9af267a97821d4e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455878"
 ---
 # <a name="tlbexp-helper-functions-unmanaged-api-reference"></a>Funciones auxiliares de Tlbexp (Referencia de la API no administrada)
 El [herramienta Exportador de la biblioteca de tipo](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) (Tlbexp.exe) carga una biblioteca de vínculos dinámicos denominada TlbRef.dll. Este archivo DLL contiene dos funciones auxiliares y una interfaz que la herramienta exportador utiliza durante el proceso de conversión de ensamblado a biblioteca de tipos.  

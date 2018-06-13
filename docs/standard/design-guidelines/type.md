@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572894"
 ---
 # <a name="type-design-guidelines"></a>Instrucciones de diseño de tipos
 Desde la perspectiva CLR, hay solo dos categorías de tipos: tipos de referencia y tipos de valor, pero con el fin de obtener una explicación sobre el diseño de marco de trabajo, se dividen los tipos en grupos lógicos más, cada uno con sus propias reglas de diseño específicas.  

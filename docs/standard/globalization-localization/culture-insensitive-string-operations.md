@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574055"
 ---
 # <a name="culture-insensitive-string-operations"></a>Operaciones de cadenas que no distinguen entre referencias culturales
 Las operaciones de cadena que tienen en cuenta la referencia cultural pueden resultar ventajosas si va a crear aplicaciones diseñadas para mostrar los resultados en función de la referencia cultural. De manera predeterminada, los métodos que tienen en cuenta las referencias culturales obtienen la referencia cultural que van a usar de la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A> del subproceso actual.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575341"
 ---
 # <a name="exceptions-and-performance"></a>Excepciones y rendimiento
 Una preocupación comunes relacionados con las excepciones es que si las excepciones se utilizan para el código que produce errores repetidamente, el rendimiento de la implementación es inaceptable. Se trata de una preocupación válida. Cuando un miembro produce una excepción, su rendimiento puede ser órdenes de magnitud más lento. Sin embargo, es posible lograr un buen rendimiento al estrictamente siguiendo las directrices de excepción que no permitir el uso de códigos de error. Dos patrones que se describen en esta sección ofrecen sugerencias para hacer esto.  

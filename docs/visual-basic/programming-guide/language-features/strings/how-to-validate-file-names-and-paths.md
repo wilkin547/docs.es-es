@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647809"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>Cómo: Validar rutas de acceso y nombres de archivo en Visual Basic
 Este ejemplo devuelve una `Boolean` valor que indica si una cadena representa un nombre de archivo o ruta de acceso. La validación comprueba si el nombre contiene caracteres que no se admiten en el sistema de archivos.  

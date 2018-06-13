@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397031"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Cómo: Definir y ejecutar métodos dinámicos
 En los procedimientos siguientes se muestra cómo definir y ejecutar un método dinámico simple y un método dinámico enlazado a una instancia de una clase. Para obtener más información sobre los métodos dinámicos, vea la clase <xref:System.Reflection.Emit.DynamicMethod> y [Reflection Emit Dynamic Method Scenarios](http://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e) (Escenarios de métodos dinámicos de emisión de reflexión).  

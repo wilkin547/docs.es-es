@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603956"
 ---
 # <a name="of-clause-visual-basic"></a>Of (Cláusula, Visual Basic)
 Presenta un `Of` cláusula, que identifica un *parámetro de tipo* en un *genérico* clase, estructura, interfaz, delegado o procedimiento. Para obtener información sobre los tipos genéricos, vea [tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520466"
 ---
 # <a name="application-settings-overview"></a>Introducción a la configuración de la aplicación
 En este tema se describe cómo crear y almacenar los datos de configuración en nombre de la aplicación y sus usuarios.  

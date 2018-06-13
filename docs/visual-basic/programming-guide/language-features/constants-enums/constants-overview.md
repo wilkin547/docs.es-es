@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648390"
 ---
 # <a name="constants-overview-visual-basic"></a>Información general sobre las constantes (Visual Basic)
 Una constante es un nombre descriptivo que ocupa el lugar de un número o una cadena que no cambia. Las constantes almacenan valores que, como su nombre indica, siguen siendo los mismos a lo largo de la ejecución de una aplicación. En gran medida puede mejorar la legibilidad del código y que resulten más fáciles de mantener mediante el uso de constantes. Utilizarlas en el código que contiene valores que vuelva a aparecer o que depende de algunos números que son difíciles de recordar o no tienen ningún significado obvio.  
