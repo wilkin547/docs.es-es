@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803571"
 ---
 # <a name="binding"></a><span data-ttu-id="6717f-102">Enlaces</span><span class="sxs-lookup"><span data-stu-id="6717f-102">Binding</span></span>
 <span data-ttu-id="6717f-103">Esta sección contiene ejemplos que muestran cómo utilizar el atributo de enlace de un elemento de punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="6717f-103">This section contains samples that demonstrate using the binding attribute of an endpoint element.</span></span>  
