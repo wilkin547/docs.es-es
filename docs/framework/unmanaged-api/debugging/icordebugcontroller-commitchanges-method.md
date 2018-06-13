@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugController::CommitChanges (Método)"
-ms.custom: 
+title: ICorDebugController::CommitChanges (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugController.CommitChanges
 api_location:
@@ -23,20 +15,17 @@ helpviewer_keywords:
 ms.assetid: f8e38bf6-0312-4517-bed5-42031ed86331
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bf397f36d29b1d8bc7be16beeb4e4d3e49f1fb69
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7ed8c616fd71855f3c2313cee0b9fee3ba31babd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415180"
 ---
-# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="b730e-102">ICorDebugController::CommitChanges (Método)</span><span class="sxs-lookup"><span data-stu-id="b730e-102">ICorDebugController::CommitChanges Method</span></span>
-<span data-ttu-id="b730e-103">`CommitChanges` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="b730e-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="b730e-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="b730e-104">Do not call this method.</span></span>  
+# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="fc503-102">ICorDebugController::CommitChanges (Método)</span><span class="sxs-lookup"><span data-stu-id="fc503-102">ICorDebugController::CommitChanges Method</span></span>
+<span data-ttu-id="fc503-103">`CommitChanges` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="fc503-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="fc503-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="fc503-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b730e-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="b730e-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="fc503-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="fc503-105">See Also</span></span>  
  
