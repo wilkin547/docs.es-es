@@ -1,14 +1,6 @@
 ---
-title: "CorGenericParamAttr (Enumeración)"
-ms.custom: 
+title: CorGenericParamAttr (Enumeración)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorGenericParamAttr
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e40613d790baed5bd89bee1e1f5ca57043bfe76a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9d56be8c6f224010da22803894524299c0d376ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443543"
 ---
-# <a name="corgenericparamattr-enumeration"></a><span data-ttu-id="560bd-102">CorGenericParamAttr (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="560bd-102">CorGenericParamAttr Enumeration</span></span>
-<span data-ttu-id="560bd-103">Contiene valores que describen la <xref:System.Type> parámetros de tipos genéricos, como usan en las llamadas a [IMetaDataEmit2:: DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).</span><span class="sxs-lookup"><span data-stu-id="560bd-103">Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).</span></span>  
+# <a name="corgenericparamattr-enumeration"></a><span data-ttu-id="28617-102">CorGenericParamAttr (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="28617-102">CorGenericParamAttr Enumeration</span></span>
+<span data-ttu-id="28617-103">Contiene valores que describen la <xref:System.Type> parámetros de tipos genéricos, como usan en las llamadas a [IMetaDataEmit2:: DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).</span><span class="sxs-lookup"><span data-stu-id="28617-103">Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="560bd-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="560bd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="28617-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="28617-104">Syntax</span></span>  
   
 ```  
 typedef enum CorGenericParamAttr {  
@@ -56,26 +45,26 @@ typedef enum CorGenericParamAttr {
 } CorGenericParamAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="560bd-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="560bd-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="28617-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="28617-105">Members</span></span>  
   
-|<span data-ttu-id="560bd-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="560bd-106">Member</span></span>|<span data-ttu-id="560bd-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="560bd-107">Description</span></span>|  
+|<span data-ttu-id="28617-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="28617-106">Member</span></span>|<span data-ttu-id="28617-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="28617-107">Description</span></span>|  
 |------------|-----------------|  
-|`gpVarianceMask`|<span data-ttu-id="560bd-108">La varianza de parámetros solo se aplica a parámetros genéricos para las interfaces y delegados.</span><span class="sxs-lookup"><span data-stu-id="560bd-108">Parameter variance applies only to generic parameters for interfaces and delegates.</span></span>|  
-|`gpNonVariant`|<span data-ttu-id="560bd-109">Indica la ausencia de varianza.</span><span class="sxs-lookup"><span data-stu-id="560bd-109">Indicates the absence of variance.</span></span>|  
-|`gpCovariant`|<span data-ttu-id="560bd-110">Indica la covarianza.</span><span class="sxs-lookup"><span data-stu-id="560bd-110">Indicates covariance.</span></span>|  
-|`gpContravariant`|<span data-ttu-id="560bd-111">Indica la contravarianza.</span><span class="sxs-lookup"><span data-stu-id="560bd-111">Indicates contravariance.</span></span>|  
-|`gpSpecialConstraintMask`|<span data-ttu-id="560bd-112">Pueden aplicar las restricciones especiales a cualquier <xref:System.Type> parámetro.</span><span class="sxs-lookup"><span data-stu-id="560bd-112">Special constraints can apply to any <xref:System.Type> parameter.</span></span>|  
-|`gpNoSpecialConstraint`|<span data-ttu-id="560bd-113">Indica que se aplica ninguna restricción a la <xref:System.Type> parámetro.</span><span class="sxs-lookup"><span data-stu-id="560bd-113">Indicates that no constraint applies to the <xref:System.Type> parameter.</span></span>|  
-|`gpReferenceTypeConstraint`|<span data-ttu-id="560bd-114">Indica que el <xref:System.Type> parámetro debe ser un tipo de referencia.</span><span class="sxs-lookup"><span data-stu-id="560bd-114">Indicates that the <xref:System.Type> parameter must be a reference type.</span></span>|  
-|`gpNotNullableValueTypeConstraint`|<span data-ttu-id="560bd-115">Indica que el <xref:System.Type> parámetro debe ser un tipo de valor no puede ser un valor null.</span><span class="sxs-lookup"><span data-stu-id="560bd-115">Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.</span></span>|  
-|`gpDefaultConstructorConstraint`|<span data-ttu-id="560bd-116">Indica que el <xref:System.Type> parámetro debe tener un constructor público predeterminado que no toma ningún parámetro.</span><span class="sxs-lookup"><span data-stu-id="560bd-116">Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.</span></span>|  
+|`gpVarianceMask`|<span data-ttu-id="28617-108">La varianza de parámetros solo se aplica a parámetros genéricos para las interfaces y delegados.</span><span class="sxs-lookup"><span data-stu-id="28617-108">Parameter variance applies only to generic parameters for interfaces and delegates.</span></span>|  
+|`gpNonVariant`|<span data-ttu-id="28617-109">Indica la ausencia de varianza.</span><span class="sxs-lookup"><span data-stu-id="28617-109">Indicates the absence of variance.</span></span>|  
+|`gpCovariant`|<span data-ttu-id="28617-110">Indica la covarianza.</span><span class="sxs-lookup"><span data-stu-id="28617-110">Indicates covariance.</span></span>|  
+|`gpContravariant`|<span data-ttu-id="28617-111">Indica la contravarianza.</span><span class="sxs-lookup"><span data-stu-id="28617-111">Indicates contravariance.</span></span>|  
+|`gpSpecialConstraintMask`|<span data-ttu-id="28617-112">Pueden aplicar las restricciones especiales a cualquier <xref:System.Type> parámetro.</span><span class="sxs-lookup"><span data-stu-id="28617-112">Special constraints can apply to any <xref:System.Type> parameter.</span></span>|  
+|`gpNoSpecialConstraint`|<span data-ttu-id="28617-113">Indica que se aplica ninguna restricción a la <xref:System.Type> parámetro.</span><span class="sxs-lookup"><span data-stu-id="28617-113">Indicates that no constraint applies to the <xref:System.Type> parameter.</span></span>|  
+|`gpReferenceTypeConstraint`|<span data-ttu-id="28617-114">Indica que el <xref:System.Type> parámetro debe ser un tipo de referencia.</span><span class="sxs-lookup"><span data-stu-id="28617-114">Indicates that the <xref:System.Type> parameter must be a reference type.</span></span>|  
+|`gpNotNullableValueTypeConstraint`|<span data-ttu-id="28617-115">Indica que el <xref:System.Type> parámetro debe ser un tipo de valor no puede ser un valor null.</span><span class="sxs-lookup"><span data-stu-id="28617-115">Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.</span></span>|  
+|`gpDefaultConstructorConstraint`|<span data-ttu-id="28617-116">Indica que el <xref:System.Type> parámetro debe tener un constructor público predeterminado que no toma ningún parámetro.</span><span class="sxs-lookup"><span data-stu-id="28617-116">Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="560bd-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="560bd-117">Requirements</span></span>  
- <span data-ttu-id="560bd-118">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="560bd-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="28617-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="28617-117">Requirements</span></span>  
+ <span data-ttu-id="28617-118">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="28617-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="560bd-119">**Encabezado:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="560bd-119">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="28617-119">**Encabezado:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="28617-119">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="560bd-120">**Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="560bd-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="28617-120">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="28617-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="560bd-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="560bd-121">See Also</span></span>  
- [<span data-ttu-id="560bd-122">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="560bd-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="28617-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="28617-121">See Also</span></span>  
+ [<span data-ttu-id="28617-122">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="28617-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

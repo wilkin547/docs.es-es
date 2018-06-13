@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335840"
 ---
 # <a name="threading-c"></a><span data-ttu-id="47f44-102">Subprocesamiento (C#)</span><span class="sxs-lookup"><span data-stu-id="47f44-102">Threading (C#)</span></span>
 <span data-ttu-id="47f44-103">El subprocesamiento permite a los programas de C# llevar a cabo un procesamiento simultáneo para que pueda hacer más de una operación a la vez.</span><span class="sxs-lookup"><span data-stu-id="47f44-103">Threading enables your C# program to perform concurrent processing so that you can do more than one operation at a time.</span></span> <span data-ttu-id="47f44-104">Por ejemplo, puede usar el subprocesamiento para hacer un seguimiento de los datos escritos por un usuario, realizar tareas en segundo plano y administrar transmisiones simultáneas de los datos escritos.</span><span class="sxs-lookup"><span data-stu-id="47f44-104">For example, you can use threading to monitor input from the user, perform background tasks, and handle simultaneous streams of input.</span></span>  

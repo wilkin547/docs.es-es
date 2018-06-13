@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765885"
 ---
 # <a name="identifiers-entity-sql"></a><span data-ttu-id="6fbc2-102">Identificadores (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="6fbc2-102">Identifiers (Entity SQL)</span></span>
 <span data-ttu-id="6fbc2-103">En [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se utilizan identificadores como representación de los alias de expresiones de consulta, referencias de variables, propiedades de objetos, funciones, etc.</span><span class="sxs-lookup"><span data-stu-id="6fbc2-103">Identifiers are used in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to represent query expression aliases, variable references, properties of objects, functions, and so on.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="6fbc2-104"> proporciona dos tipos de identificadores: los identificadores simples y los identificadores entre comillas.</span><span class="sxs-lookup"><span data-stu-id="6fbc2-104"> provides two kinds of identifiers: simple identifiers and quoted identifiers.</span></span>  

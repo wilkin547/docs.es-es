@@ -1,62 +1,51 @@
 ---
-title: "Cómo: Copiar y pegar un control ElementHost en tiempo de diseño"
-ms.custom: 
+title: 'Cómo: Copiar y pegar un control ElementHost en tiempo de diseño'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, content copying and pasting
 - interoperability [WPF]
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ab87761167c19ee0fe78d33edcfe8662d90e36a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1a9938500287b3b44f13f0aa664da85b7fdb4675
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524861"
 ---
-# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a><span data-ttu-id="74164-102">Cómo: Copiar y pegar un control ElementHost en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="74164-102">How to: Copy and Paste an ElementHost Control at Design Time</span></span>
-<span data-ttu-id="74164-103">Este procedimiento muestra cómo copiar un control de Windows Presentation Foundation (WPF) en un formulario Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="74164-103">This procedure shows you how to copy a Windows Presentation Foundation (WPF) control on a Windows Form.</span></span>  
+# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a><span data-ttu-id="463c8-102">Cómo: Copiar y pegar un control ElementHost en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="463c8-102">How to: Copy and Paste an ElementHost Control at Design Time</span></span>
+<span data-ttu-id="463c8-103">Este procedimiento muestra cómo copiar un control de Windows Presentation Foundation (WPF) en un formulario Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="463c8-103">This procedure shows you how to copy a Windows Presentation Foundation (WPF) control on a Windows Form.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="74164-104">Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.</span><span class="sxs-lookup"><span data-stu-id="74164-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="74164-105">Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .</span><span class="sxs-lookup"><span data-stu-id="74164-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="74164-106">Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="74164-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
+>  <span data-ttu-id="463c8-104">Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.</span><span class="sxs-lookup"><span data-stu-id="463c8-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="463c8-105">Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .</span><span class="sxs-lookup"><span data-stu-id="463c8-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="463c8-106">Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="463c8-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### <a name="to-copy-and-paste-an-elementhost-control-at-design-time"></a><span data-ttu-id="74164-107">Para copiar y pegar un control ElementHost en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="74164-107">To copy and paste an ElementHost control at design time</span></span>  
+### <a name="to-copy-and-paste-an-elementhost-control-at-design-time"></a><span data-ttu-id="463c8-107">Para copiar y pegar un control ElementHost en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="463c8-107">To copy and paste an ElementHost control at design time</span></span>  
   
-1.  <span data-ttu-id="74164-108">Agregue un nuevo WPF <xref:System.Windows.Controls.UserControl> a su proyecto de formularios Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="74164-108">Add a new WPF <xref:System.Windows.Controls.UserControl> to your Windows Forms project.</span></span> <span data-ttu-id="74164-109">Use el nombre predeterminado del tipo de control, `UserControl1.xaml`.</span><span class="sxs-lookup"><span data-stu-id="74164-109">Use the default name for the control type, `UserControl1.xaml`.</span></span> <span data-ttu-id="74164-110">Para obtener más información, consulte [Tutorial: crear nuevo WPF contenido en Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="74164-110">For more information, see [Walkthrough: Creating New WPF Content on Windows Forms at Design Time](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span></span>  
+1.  <span data-ttu-id="463c8-108">Agregue un nuevo WPF <xref:System.Windows.Controls.UserControl> a su proyecto de formularios Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="463c8-108">Add a new WPF <xref:System.Windows.Controls.UserControl> to your Windows Forms project.</span></span> <span data-ttu-id="463c8-109">Use el nombre predeterminado del tipo de control, `UserControl1.xaml`.</span><span class="sxs-lookup"><span data-stu-id="463c8-109">Use the default name for the control type, `UserControl1.xaml`.</span></span> <span data-ttu-id="463c8-110">Para obtener más información, consulte [Tutorial: crear nuevo WPF contenido en Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="463c8-110">For more information, see [Walkthrough: Creating New WPF Content on Windows Forms at Design Time](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span></span>  
   
-2.  <span data-ttu-id="74164-111">En el **propiedades** ventana, establezca el valor de la <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> propiedades de `UserControl1` a `200`.</span><span class="sxs-lookup"><span data-stu-id="74164-111">In the **Properties** window, set the value of the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties of `UserControl1` to `200`.</span></span>  
+2.  <span data-ttu-id="463c8-111">En el **propiedades** ventana, establezca el valor de la <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> propiedades de `UserControl1` a `200`.</span><span class="sxs-lookup"><span data-stu-id="463c8-111">In the **Properties** window, set the value of the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties of `UserControl1` to `200`.</span></span>  
   
-3.  <span data-ttu-id="74164-112">Establezca el valor de la propiedad <xref:System.Windows.Controls.Control.Background%2A> en `Blue`.</span><span class="sxs-lookup"><span data-stu-id="74164-112">Set the value of the <xref:System.Windows.Controls.Control.Background%2A> property to `Blue`.</span></span>  
+3.  <span data-ttu-id="463c8-112">Establezca el valor de la propiedad <xref:System.Windows.Controls.Control.Background%2A> en `Blue`.</span><span class="sxs-lookup"><span data-stu-id="463c8-112">Set the value of the <xref:System.Windows.Controls.Control.Background%2A> property to `Blue`.</span></span>  
   
-4.  <span data-ttu-id="74164-113">Compile el proyecto.</span><span class="sxs-lookup"><span data-stu-id="74164-113">Build the project.</span></span>  
+4.  <span data-ttu-id="463c8-113">Compile el proyecto.</span><span class="sxs-lookup"><span data-stu-id="463c8-113">Build the project.</span></span>  
   
-5.  <span data-ttu-id="74164-114">Abra `Form1` en el Diseñador de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="74164-114">Open `Form1` in the Windows Forms Designer.</span></span>  
+5.  <span data-ttu-id="463c8-114">Abra `Form1` en el Diseñador de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="463c8-114">Open `Form1` in the Windows Forms Designer.</span></span>  
   
-6.  <span data-ttu-id="74164-115">Desde el **cuadro de herramientas**, arrastre una instancia de `UserControl1` hasta el formulario.</span><span class="sxs-lookup"><span data-stu-id="74164-115">From the **Toolbox**, drag an instance of `UserControl1` onto the form.</span></span>  
+6.  <span data-ttu-id="463c8-115">Desde el **cuadro de herramientas**, arrastre una instancia de `UserControl1` hasta el formulario.</span><span class="sxs-lookup"><span data-stu-id="463c8-115">From the **Toolbox**, drag an instance of `UserControl1` onto the form.</span></span>  
   
-     <span data-ttu-id="74164-116">La instancia de `UserControl1` se hospeda en un nuevo control <xref:System.Windows.Forms.Integration.ElementHost> llamado `elementHost1`.</span><span class="sxs-lookup"><span data-stu-id="74164-116">An instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.</span></span>  
+     <span data-ttu-id="463c8-116">La instancia de `UserControl1` se hospeda en un nuevo control <xref:System.Windows.Forms.Integration.ElementHost> llamado `elementHost1`.</span><span class="sxs-lookup"><span data-stu-id="463c8-116">An instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.</span></span>  
   
-7.  <span data-ttu-id="74164-117">Con `elementHost1` seleccionado, presione CTRL+C para copiarlo en el Portapapeles.</span><span class="sxs-lookup"><span data-stu-id="74164-117">With `elementHost1` selected, press CTRL+C to copy it to the clipboard.</span></span>  
+7.  <span data-ttu-id="463c8-117">Con `elementHost1` seleccionado, presione CTRL+C para copiarlo en el Portapapeles.</span><span class="sxs-lookup"><span data-stu-id="463c8-117">With `elementHost1` selected, press CTRL+C to copy it to the clipboard.</span></span>  
   
-8.  <span data-ttu-id="74164-118">Presione CTRL+V para pegar el control copiado en el formulario.</span><span class="sxs-lookup"><span data-stu-id="74164-118">Press CTRL+V to paste the copied control onto the form.</span></span>  
+8.  <span data-ttu-id="463c8-118">Presione CTRL+V para pegar el control copiado en el formulario.</span><span class="sxs-lookup"><span data-stu-id="463c8-118">Press CTRL+V to paste the copied control onto the form.</span></span>  
   
-     <span data-ttu-id="74164-119">Un nuevo <xref:System.Windows.Forms.Integration.ElementHost> control denominado `elementHost2` se crea en el formulario.</span><span class="sxs-lookup"><span data-stu-id="74164-119">A new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost2` is created on the form.</span></span>  
+     <span data-ttu-id="463c8-119">Un nuevo <xref:System.Windows.Forms.Integration.ElementHost> control denominado `elementHost2` se crea en el formulario.</span><span class="sxs-lookup"><span data-stu-id="463c8-119">A new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost2` is created on the form.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74164-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="74164-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="463c8-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="463c8-120">See Also</span></span>  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [<span data-ttu-id="74164-121">Tutorial: Copiar y pegar un control ElementHost en formularios Windows Forms independientes</span><span class="sxs-lookup"><span data-stu-id="74164-121">Walkthrough: Copying and Pasting an ElementHost Control into Separate Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
- [<span data-ttu-id="74164-122">Migración e interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="74164-122">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [<span data-ttu-id="74164-123">Utilizar controles WPF</span><span class="sxs-lookup"><span data-stu-id="74164-123">Using WPF Controls</span></span>](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [<span data-ttu-id="74164-124">WPF Designer</span><span class="sxs-lookup"><span data-stu-id="74164-124">WPF Designer</span></span>](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+ [<span data-ttu-id="463c8-121">Tutorial: Copiar y pegar un control ElementHost en formularios Windows Forms independientes</span><span class="sxs-lookup"><span data-stu-id="463c8-121">Walkthrough: Copying and Pasting an ElementHost Control into Separate Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
+ [<span data-ttu-id="463c8-122">Migración e interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="463c8-122">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+ [<span data-ttu-id="463c8-123">Utilizar controles WPF</span><span class="sxs-lookup"><span data-stu-id="463c8-123">Using WPF Controls</span></span>](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+ [<span data-ttu-id="463c8-124">WPF Designer</span><span class="sxs-lookup"><span data-stu-id="463c8-124">WPF Designer</span></span>](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)

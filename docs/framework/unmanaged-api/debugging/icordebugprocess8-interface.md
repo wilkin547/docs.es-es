@@ -1,47 +1,38 @@
 ---
 title: Interfaz de ICorDebugProcess8
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: 7ab1a70f-ec11-46ff-8869-cd8ca679cc51
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2985352cf8b209e98f749fbe40170e49014c9d9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dbedff96abe525a1fe39d7255379c0e1612d5893
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422264"
 ---
-# <a name="icordebugprocess8-interface"></a><span data-ttu-id="92048-102">Interfaz de ICorDebugProcess8</span><span class="sxs-lookup"><span data-stu-id="92048-102">ICorDebugProcess8 Interface</span></span>
-<span data-ttu-id="92048-103">[compatible con la versión [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] y posteriores]</span><span class="sxs-lookup"><span data-stu-id="92048-103">[Supported in the [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] and later versions]</span></span>  
+# <a name="icordebugprocess8-interface"></a><span data-ttu-id="88ca5-102">Interfaz de ICorDebugProcess8</span><span class="sxs-lookup"><span data-stu-id="88ca5-102">ICorDebugProcess8 Interface</span></span>
+<span data-ttu-id="88ca5-103">[compatible con la versión [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] y posteriores]</span><span class="sxs-lookup"><span data-stu-id="88ca5-103">[Supported in the [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] and later versions]</span></span>  
   
- <span data-ttu-id="92048-104">Extiende lógicamente la ICorDebugProcess (interfaz) para habilitar o deshabilitar ciertos tipos de [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) las devoluciones de llamada de excepción.</span><span class="sxs-lookup"><span data-stu-id="92048-104">Logically extends the ICorDebugProcess interface to enable or disable certain types of [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) exception callbacks.</span></span>  
+ <span data-ttu-id="88ca5-104">Extiende lógicamente la ICorDebugProcess (interfaz) para habilitar o deshabilitar ciertos tipos de [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) las devoluciones de llamada de excepción.</span><span class="sxs-lookup"><span data-stu-id="88ca5-104">Logically extends the ICorDebugProcess interface to enable or disable certain types of [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) exception callbacks.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="92048-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="92048-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="88ca5-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="88ca5-105">Methods</span></span>  
   
-|<span data-ttu-id="92048-106">Método</span><span class="sxs-lookup"><span data-stu-id="92048-106">Method</span></span>|<span data-ttu-id="92048-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="92048-107">Description</span></span>|  
+|<span data-ttu-id="88ca5-106">Método</span><span class="sxs-lookup"><span data-stu-id="88ca5-106">Method</span></span>|<span data-ttu-id="88ca5-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="88ca5-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="92048-108">EnableExceptionCallbacksOutsideOfMyCode (método)</span><span class="sxs-lookup"><span data-stu-id="92048-108">EnableExceptionCallbacksOutsideOfMyCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md)|<span data-ttu-id="92048-109">Habilita o deshabilita ciertos tipos de [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) las devoluciones de llamada de excepción.</span><span class="sxs-lookup"><span data-stu-id="92048-109">Enables or disables certain types of [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) exception callbacks.</span></span>|  
+|[<span data-ttu-id="88ca5-108">EnableExceptionCallbacksOutsideOfMyCode (método)</span><span class="sxs-lookup"><span data-stu-id="88ca5-108">EnableExceptionCallbacksOutsideOfMyCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md)|<span data-ttu-id="88ca5-109">Habilita o deshabilita ciertos tipos de [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) las devoluciones de llamada de excepción.</span><span class="sxs-lookup"><span data-stu-id="88ca5-109">Enables or disables certain types of [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) exception callbacks.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="92048-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="92048-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="88ca5-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="88ca5-110">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="92048-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="92048-111">Requirements</span></span>  
- <span data-ttu-id="92048-112">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="92048-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="88ca5-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="88ca5-111">Requirements</span></span>  
+ <span data-ttu-id="88ca5-112">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="88ca5-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="92048-113">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="92048-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="88ca5-113">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="88ca5-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="92048-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="92048-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="88ca5-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="88ca5-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="92048-115">**Versiones de .NET framework:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="92048-115">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
+ <span data-ttu-id="88ca5-115">**Versiones de .NET framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="88ca5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="92048-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="92048-116">See Also</span></span>  
- [<span data-ttu-id="92048-117">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="92048-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="92048-118">Depuración</span><span class="sxs-lookup"><span data-stu-id="92048-118">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="88ca5-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="88ca5-116">See Also</span></span>  
+ [<span data-ttu-id="88ca5-117">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="88ca5-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [<span data-ttu-id="88ca5-118">Depuración</span><span class="sxs-lookup"><span data-stu-id="88ca5-118">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

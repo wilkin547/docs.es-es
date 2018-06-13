@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767146"
 ---
 # <a name="provider-manifest-specification"></a><span data-ttu-id="6b5ef-102">Especificación del manifiesto del proveedor</span><span class="sxs-lookup"><span data-stu-id="6b5ef-102">Provider Manifest Specification</span></span>
 <span data-ttu-id="6b5ef-103">En esta sección se explica cómo puede un proveedor de almacén de datos admitir los tipos y funciones del almacén de datos.</span><span class="sxs-lookup"><span data-stu-id="6b5ef-103">This section discusses how a data store provider can support the types and functions in the data store.</span></span>  

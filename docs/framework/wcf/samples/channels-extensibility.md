@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803373"
 ---
 # <a name="channels-extensibility"></a><span data-ttu-id="413ff-102">Extensibilidad de los canales</span><span class="sxs-lookup"><span data-stu-id="413ff-102">Channels Extensibility</span></span>
 <span data-ttu-id="413ff-103">Esta sección contiene ejemplos que muestran los canales personalizados.</span><span class="sxs-lookup"><span data-stu-id="413ff-103">This section contains samples that demonstrate custom channels.</span></span>  

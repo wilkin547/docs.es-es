@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214018"
 ---
 # <a name="-keyfile-c-compiler-options"></a><span data-ttu-id="c3257-102">-keyfile (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="c3257-102">-keyfile (C# Compiler Options)</span></span>
 <span data-ttu-id="c3257-103">Especifica el nombre de archivo que contiene la clave criptográfica.</span><span class="sxs-lookup"><span data-stu-id="c3257-103">Specifies the filename containing the cryptographic key.</span></span>  
