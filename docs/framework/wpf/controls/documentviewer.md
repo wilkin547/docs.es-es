@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550912"
 ---
 # <a name="documentviewer"></a>DocumentViewer
 El <xref:System.Windows.Controls.DocumentViewer> control sirve para ver los <xref:System.Windows.Documents.FixedDocument> contenido (como [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documentos) en un formato paginado.  

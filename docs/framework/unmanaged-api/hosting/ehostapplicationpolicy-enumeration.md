@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 591b3e43712832156283baf16e3d65b09172fe14
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428499"
 ---
 # <a name="ehostapplicationpolicy-enumeration"></a>EHostApplicationPolicy (Enumeración)
 Indica cómo modificar un [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) objeto de interfaz. Esta enumeración está desusada.  

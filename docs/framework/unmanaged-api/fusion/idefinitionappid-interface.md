@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2735355097a1f3f581b3a4bc74f08d8f2ebf3bd8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430385"
 ---
 # <a name="idefinitionappid-interface"></a>IDefinitionAppId (Interfaz)
 Representa un identificador único para el código que define la aplicación en el ámbito actual.  

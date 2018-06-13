@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4605b893169ccfc592aae0d07dc032f455314cc5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412738"
 ---
 # <a name="icordebugcontrollerisrunning-method"></a>ICorDebugController::IsRunning (Método)
 Obtiene un valor que indica si los subprocesos del proceso se están ejecutando libremente.  

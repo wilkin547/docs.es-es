@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dd8f1adee6bbcb3b57b87a2d6c85c01c624da9ec
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421235"
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2 (Interfaz)
 Proporciona métodos que comprueban las relaciones entre marcos primarios y secundarios.  
