@@ -1,12 +1,6 @@
 ---
 title: Escribir en archivos en Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], writing to files
 - files [Visual Basic], writing to
@@ -14,56 +8,54 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0fe0432ab37ee22869924e7885aefc0fcfa29312
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 92e9d717eb52fa393d9215068d8fe70c84f613ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588124"
 ---
-# <a name="writing-to-files-in-visual-basic"></a><span data-ttu-id="e5744-102">Escribir en archivos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e5744-102">Writing to Files in Visual Basic</span></span>
-<span data-ttu-id="e5744-103">En esta sección se explica cómo realizar tareas relacionadas con la escritura en archivos.</span><span class="sxs-lookup"><span data-stu-id="e5744-103">This section explains how to perform tasks that involve writing to files.</span></span>  
+# <a name="writing-to-files-in-visual-basic"></a><span data-ttu-id="a372c-102">Escribir en archivos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a372c-102">Writing to Files in Visual Basic</span></span>
+<span data-ttu-id="a372c-103">En esta sección se explica cómo realizar tareas relacionadas con la escritura en archivos.</span><span class="sxs-lookup"><span data-stu-id="a372c-103">This section explains how to perform tasks that involve writing to files.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e5744-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="e5744-104">In This Section</span></span>  
- [<span data-ttu-id="e5744-105">Escribir texto en archivos</span><span class="sxs-lookup"><span data-stu-id="e5744-105">How to: Write Text to Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
- <span data-ttu-id="e5744-106">Explica cómo se puede escribir en archivos de texto.</span><span class="sxs-lookup"><span data-stu-id="e5744-106">Demonstrates how to write to text files.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="a372c-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="a372c-104">In This Section</span></span>  
+ [<span data-ttu-id="a372c-105">Escribir texto en archivos</span><span class="sxs-lookup"><span data-stu-id="a372c-105">How to: Write Text to Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
+ <span data-ttu-id="a372c-106">Explica cómo se puede escribir en archivos de texto.</span><span class="sxs-lookup"><span data-stu-id="a372c-106">Demonstrates how to write to text files.</span></span>  
   
- [<span data-ttu-id="e5744-107">Anexar a archivos de texto</span><span class="sxs-lookup"><span data-stu-id="e5744-107">How to: Append to Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
- <span data-ttu-id="e5744-108">Explica cómo se puede anexar texto a un archivo de texto.</span><span class="sxs-lookup"><span data-stu-id="e5744-108">Demonstrates how to append text to a text file.</span></span>  
+ [<span data-ttu-id="a372c-107">Anexar a archivos de texto</span><span class="sxs-lookup"><span data-stu-id="a372c-107">How to: Append to Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
+ <span data-ttu-id="a372c-108">Explica cómo se puede anexar texto a un archivo de texto.</span><span class="sxs-lookup"><span data-stu-id="a372c-108">Demonstrates how to append text to a text file.</span></span>  
   
- [<span data-ttu-id="e5744-109">Escribir en archivos binarios</span><span class="sxs-lookup"><span data-stu-id="e5744-109">How to: Write to Binary Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
- <span data-ttu-id="e5744-110">Explica cómo se puede escribir en un archivo binario.</span><span class="sxs-lookup"><span data-stu-id="e5744-110">Demonstrates how to write to a binary file.</span></span>  
+ [<span data-ttu-id="a372c-109">Escribir en archivos binarios</span><span class="sxs-lookup"><span data-stu-id="a372c-109">How to: Write to Binary Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
+ <span data-ttu-id="a372c-110">Explica cómo se puede escribir en un archivo binario.</span><span class="sxs-lookup"><span data-stu-id="a372c-110">Demonstrates how to write to a binary file.</span></span>  
   
- [<span data-ttu-id="e5744-111">Escribir texto en archivos del directorio Mis documentos</span><span class="sxs-lookup"><span data-stu-id="e5744-111">How to: Write Text to Files in the My Documents Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
- <span data-ttu-id="e5744-112">Explica cómo se puede crear un archivo de texto en el directorio **Mis documentos** y cómo se puede escribir en él.</span><span class="sxs-lookup"><span data-stu-id="e5744-112">Demonstrates how to create and write to a new text file in the **My Documents** directory.</span></span>  
+ [<span data-ttu-id="a372c-111">Escribir texto en archivos del directorio Mis documentos</span><span class="sxs-lookup"><span data-stu-id="a372c-111">How to: Write Text to Files in the My Documents Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
+ <span data-ttu-id="a372c-112">Explica cómo se puede crear un archivo de texto en el directorio **Mis documentos** y cómo se puede escribir en él.</span><span class="sxs-lookup"><span data-stu-id="a372c-112">Demonstrates how to create and write to a new text file in the **My Documents** directory.</span></span>  
   
- [<span data-ttu-id="e5744-113">Escribir texto en archivos con StreamReader</span><span class="sxs-lookup"><span data-stu-id="e5744-113">How to: Write Text to Files with a StreamWriter</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
- <span data-ttu-id="e5744-114">Explica cómo se puede escribir en un archivo con un objeto <xref:System.IO.StreamWriter?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e5744-114">Demonstrates how to write to a file with a <xref:System.IO.StreamWriter?displayProperty=nameWithType> object.</span></span>  
+ [<span data-ttu-id="a372c-113">Escribir texto en archivos con StreamReader</span><span class="sxs-lookup"><span data-stu-id="a372c-113">How to: Write Text to Files with a StreamWriter</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
+ <span data-ttu-id="a372c-114">Explica cómo se puede escribir en un archivo con un objeto <xref:System.IO.StreamWriter?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a372c-114">Demonstrates how to write to a file with a <xref:System.IO.StreamWriter?displayProperty=nameWithType> object.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="e5744-115">Referencia</span><span class="sxs-lookup"><span data-stu-id="e5744-115">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a372c-115">Referencia</span><span class="sxs-lookup"><span data-stu-id="a372c-115">Reference</span></span>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <span data-ttu-id="e5744-116">Describe el objeto `My.Computer.FileSystem` y sus métodos y propiedades.</span><span class="sxs-lookup"><span data-stu-id="e5744-116">Describes the `My.Computer.FileSystem` object and its methods and properties.</span></span>  
+ <span data-ttu-id="a372c-116">Describe el objeto `My.Computer.FileSystem` y sus métodos y propiedades.</span><span class="sxs-lookup"><span data-stu-id="a372c-116">Describes the `My.Computer.FileSystem` object and its methods and properties.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>  
- <span data-ttu-id="e5744-117">Describe el método `OpenTextFileWriter`.</span><span class="sxs-lookup"><span data-stu-id="e5744-117">Describes the `OpenTextFileWriter` method.</span></span>  
+ <span data-ttu-id="a372c-117">Describe el método `OpenTextFileWriter`.</span><span class="sxs-lookup"><span data-stu-id="a372c-117">Describes the `OpenTextFileWriter` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>  
- <span data-ttu-id="e5744-118">Describe el método `WriteAllBytes`.</span><span class="sxs-lookup"><span data-stu-id="e5744-118">Describes the `WriteAllBytes` method.</span></span>  
+ <span data-ttu-id="a372c-118">Describe el método `WriteAllBytes`.</span><span class="sxs-lookup"><span data-stu-id="a372c-118">Describes the `WriteAllBytes` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
- <span data-ttu-id="e5744-119">Describe el método `WriteAllText`.</span><span class="sxs-lookup"><span data-stu-id="e5744-119">Describes the `WriteAllText` method.</span></span>  
+ <span data-ttu-id="a372c-119">Describe el método `WriteAllText`.</span><span class="sxs-lookup"><span data-stu-id="a372c-119">Describes the `WriteAllText` method.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="e5744-120">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="e5744-120">Related Sections</span></span>  
- [<span data-ttu-id="e5744-121">Leer archivos</span><span class="sxs-lookup"><span data-stu-id="e5744-121">Reading from Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- <span data-ttu-id="e5744-122">Explica cómo realizar tareas relacionadas con la lectura de archivos.</span><span class="sxs-lookup"><span data-stu-id="e5744-122">Explains how to perform tasks that involve reading from files.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="a372c-120">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="a372c-120">Related Sections</span></span>  
+ [<span data-ttu-id="a372c-121">Leer archivos</span><span class="sxs-lookup"><span data-stu-id="a372c-121">Reading from Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ <span data-ttu-id="a372c-122">Explica cómo realizar tareas relacionadas con la lectura de archivos.</span><span class="sxs-lookup"><span data-stu-id="a372c-122">Explains how to perform tasks that involve reading from files.</span></span>  
   
- [<span data-ttu-id="e5744-123">Creación, eliminación y movimiento de archivos y directorios</span><span class="sxs-lookup"><span data-stu-id="e5744-123">Creating, Deleting, and Moving Files and Directories</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- <span data-ttu-id="e5744-124">Explica cómo realizar tareas que implican crear, eliminar, mover y cambiar el nombre de archivos y directorios.</span><span class="sxs-lookup"><span data-stu-id="e5744-124">Explains how to perform tasks that involve creating, deleting, moving, and renaming files and directories.</span></span>  
+ [<span data-ttu-id="a372c-123">Creación, eliminación y movimiento de archivos y directorios</span><span class="sxs-lookup"><span data-stu-id="a372c-123">Creating, Deleting, and Moving Files and Directories</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
+ <span data-ttu-id="a372c-124">Explica cómo realizar tareas que implican crear, eliminar, mover y cambiar el nombre de archivos y directorios.</span><span class="sxs-lookup"><span data-stu-id="a372c-124">Explains how to perform tasks that involve creating, deleting, moving, and renaming files and directories.</span></span>  
   
- [<span data-ttu-id="e5744-125">Almacenar y leer datos en el Portapapeles</span><span class="sxs-lookup"><span data-stu-id="e5744-125">Storing Data to and Reading from the Clipboard</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
- <span data-ttu-id="e5744-126">Explica cómo realizar tareas que se asocian a `My.Computer.Clipboard`, como, por ejemplo, leer datos o escribir datos en el Portapapeles.</span><span class="sxs-lookup"><span data-stu-id="e5744-126">Explains how to perform tasks that are associated with `My.Computer.Clipboard`, such as reading data from or writing data to the Clipboard.</span></span>  
+ [<span data-ttu-id="a372c-125">Almacenar y leer datos en el Portapapeles</span><span class="sxs-lookup"><span data-stu-id="a372c-125">Storing Data to and Reading from the Clipboard</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
+ <span data-ttu-id="a372c-126">Explica cómo realizar tareas que se asocian a `My.Computer.Clipboard`, como, por ejemplo, leer datos o escribir datos en el Portapapeles.</span><span class="sxs-lookup"><span data-stu-id="a372c-126">Explains how to perform tasks that are associated with `My.Computer.Clipboard`, such as reading data from or writing data to the Clipboard.</span></span>  
   
- [<span data-ttu-id="e5744-127">Codificaciones de archivos</span><span class="sxs-lookup"><span data-stu-id="e5744-127">File Encodings</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
- <span data-ttu-id="e5744-128">Proporciona información general sobre las codificaciones de archivo.</span><span class="sxs-lookup"><span data-stu-id="e5744-128">Provides an overview of file encodings.</span></span>
+ [<span data-ttu-id="a372c-127">Codificaciones de archivos</span><span class="sxs-lookup"><span data-stu-id="a372c-127">File Encodings</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ <span data-ttu-id="a372c-128">Proporciona información general sobre las codificaciones de archivo.</span><span class="sxs-lookup"><span data-stu-id="a372c-128">Provides an overview of file encodings.</span></span>

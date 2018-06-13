@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589937"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a><span data-ttu-id="0f3c7-102">Registrar información de la aplicación (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0f3c7-102">Logging Information from the Application (Visual Basic)</span></span>
 <span data-ttu-id="0f3c7-103">Esta sección contiene temas que explican cómo registrar información sobre su aplicación usando el objeto `My.Application.Log` o `My.Log` y cómo ampliar las capacidades de registro de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="0f3c7-103">This section contains topics that cover how to log information from your application using the `My.Application.Log` or `My.Log` object, and how to extend the application's logging capabilities.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767653"
 ---
 # <a name="ltxmlelementgt"></a><span data-ttu-id="a4369-102">&lt;XmlElement&gt;</span><span class="sxs-lookup"><span data-stu-id="a4369-102">&lt;xmlElement&gt;</span></span>
 <span data-ttu-id="a4369-103">Especifica un elemento XML que se envía en el cuerpo del mensaje al servicio de token de seguridad cuando se solicita un token.</span><span class="sxs-lookup"><span data-stu-id="a4369-103">Specifies an XML element that is sent in the message body to the Security Token Service when requesting a token.</span></span>  

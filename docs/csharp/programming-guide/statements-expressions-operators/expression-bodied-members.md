@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332759"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a><span data-ttu-id="37770-102">Miembros con cuerpo de expresión (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="37770-102">Expression-bodied members (C# programming guide)</span></span>
 <span data-ttu-id="37770-103">Las definiciones de cuerpos de expresión permiten proporcionar la implementación de un miembro de una forma muy concisa y legible.</span><span class="sxs-lookup"><span data-stu-id="37770-103">Expression body definitions let you provide a member's implementation in a very concise, readable form.</span></span> <span data-ttu-id="37770-104">Se puede usar una definición de cuerpo de expresión siempre que la lógica de cualquier miembro compatible, como un método o propiedad, se componga de una expresión única.</span><span class="sxs-lookup"><span data-stu-id="37770-104">You can use an expression body definition whenever the logic for any supported member, such as a method or property, consists of a single expression.</span></span> <span data-ttu-id="37770-105">Una definición de cuerpo de expresión tiene la siguiente sintaxis general:</span><span class="sxs-lookup"><span data-stu-id="37770-105">An expression body definition has the following general syntax:</span></span>

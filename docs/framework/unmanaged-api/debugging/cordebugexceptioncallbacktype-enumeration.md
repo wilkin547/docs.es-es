@@ -1,14 +1,6 @@
 ---
-title: "CorDebugExceptionCallbackType (Enumeración)"
-ms.custom: 
+title: CorDebugExceptionCallbackType (Enumeración)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorDebugExceptionCallbackType
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4efc969395e30dcc237d2ad99c9bc67ee30f4278
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2fc0919a7c05bfcbfb4b54dd0b618564f019f3fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407825"
 ---
-# <a name="cordebugexceptioncallbacktype-enumeration"></a><span data-ttu-id="38ea1-102">CorDebugExceptionCallbackType (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="38ea1-102">CorDebugExceptionCallbackType Enumeration</span></span>
-<span data-ttu-id="38ea1-103">Indica el tipo de devolución de llamada que se realiza desde un [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) eventos.</span><span class="sxs-lookup"><span data-stu-id="38ea1-103">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) event.</span></span>  
+# <a name="cordebugexceptioncallbacktype-enumeration"></a><span data-ttu-id="bc596-102">CorDebugExceptionCallbackType (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="bc596-102">CorDebugExceptionCallbackType Enumeration</span></span>
+<span data-ttu-id="bc596-103">Indica el tipo de devolución de llamada que se realiza desde un [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) eventos.</span><span class="sxs-lookup"><span data-stu-id="bc596-103">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38ea1-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="38ea1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bc596-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="bc596-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugExceptionCallbackType {  
@@ -48,23 +37,23 @@ typedef enum CorDebugExceptionCallbackType {
 } CorDebugExceptionCallbackType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="38ea1-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="38ea1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="bc596-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="bc596-105">Members</span></span>  
   
-|<span data-ttu-id="38ea1-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="38ea1-106">Member</span></span>|<span data-ttu-id="38ea1-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="38ea1-107">Description</span></span>|  
+|<span data-ttu-id="bc596-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="bc596-106">Member</span></span>|<span data-ttu-id="bc596-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="bc596-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="38ea1-108">Se inició una excepción.</span><span class="sxs-lookup"><span data-stu-id="38ea1-108">An exception was thrown.</span></span>|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="38ea1-109">El proceso de conclusión de la excepción al escribir código de usuario.</span><span class="sxs-lookup"><span data-stu-id="38ea1-109">The exception windup process entered user code.</span></span>|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="38ea1-110">El proceso de conclusión de la excepción se encontró un `catch` bloque de código de usuario.</span><span class="sxs-lookup"><span data-stu-id="38ea1-110">The exception windup process found a `catch` block in user code.</span></span>|  
-|`DEBUG_EXCEPTION_UNHANDLED`|<span data-ttu-id="38ea1-111">No se controló la excepción.</span><span class="sxs-lookup"><span data-stu-id="38ea1-111">The exception was not handled.</span></span>|  
+|`DEBUG_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="bc596-108">Se inició una excepción.</span><span class="sxs-lookup"><span data-stu-id="bc596-108">An exception was thrown.</span></span>|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="bc596-109">El proceso de conclusión de la excepción al escribir código de usuario.</span><span class="sxs-lookup"><span data-stu-id="bc596-109">The exception windup process entered user code.</span></span>|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="bc596-110">El proceso de conclusión de la excepción se encontró un `catch` bloque de código de usuario.</span><span class="sxs-lookup"><span data-stu-id="bc596-110">The exception windup process found a `catch` block in user code.</span></span>|  
+|`DEBUG_EXCEPTION_UNHANDLED`|<span data-ttu-id="bc596-111">No se controló la excepción.</span><span class="sxs-lookup"><span data-stu-id="bc596-111">The exception was not handled.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="38ea1-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="38ea1-112">Requirements</span></span>  
- <span data-ttu-id="38ea1-113">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="38ea1-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bc596-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bc596-112">Requirements</span></span>  
+ <span data-ttu-id="bc596-113">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bc596-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="38ea1-114">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="38ea1-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bc596-114">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bc596-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="38ea1-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="38ea1-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bc596-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bc596-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="38ea1-116">**Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38ea1-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bc596-116">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bc596-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38ea1-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="38ea1-117">See Also</span></span>  
- [<span data-ttu-id="38ea1-118">Enumeraciones de depuración</span><span class="sxs-lookup"><span data-stu-id="38ea1-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="bc596-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="bc596-117">See Also</span></span>  
+ [<span data-ttu-id="bc596-118">Enumeraciones de depuración</span><span class="sxs-lookup"><span data-stu-id="bc596-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
