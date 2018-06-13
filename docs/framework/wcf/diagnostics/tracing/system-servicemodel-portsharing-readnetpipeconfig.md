@@ -1,32 +1,21 @@
 ---
 title: System.ServiceModel.PortSharing.ReadNetPipeConfig
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a782f971-0195-4bad-a151-55d35656ae86
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c06fd73aa718640c09749fc83b52c14ee713dd2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c7f71f49e18990ce3eac20619684f0e88b53518
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33481337"
 ---
-# <a name="systemservicemodelportsharingreadnetpipeconfig"></a><span data-ttu-id="f568b-102">System.ServiceModel.PortSharing.ReadNetPipeConfig</span><span class="sxs-lookup"><span data-stu-id="f568b-102">System.ServiceModel.PortSharing.ReadNetPipeConfig</span></span>
-<span data-ttu-id="f568b-103">System.ServiceModel.PortSharing.ReadNetPipeConfig</span><span class="sxs-lookup"><span data-stu-id="f568b-103">System.ServiceModel.PortSharing.ReadNetPipeConfig</span></span>  
+# <a name="systemservicemodelportsharingreadnetpipeconfig"></a><span data-ttu-id="15685-102">System.ServiceModel.PortSharing.ReadNetPipeConfig</span><span class="sxs-lookup"><span data-stu-id="15685-102">System.ServiceModel.PortSharing.ReadNetPipeConfig</span></span>
+<span data-ttu-id="15685-103">System.ServiceModel.PortSharing.ReadNetPipeConfig</span><span class="sxs-lookup"><span data-stu-id="15685-103">System.ServiceModel.PortSharing.ReadNetPipeConfig</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f568b-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="f568b-104">Description</span></span>  
- <span data-ttu-id="f568b-105">Los datos de configuración para NetPipeSection se han leído con los datos especificados:  con los datos especificados: maxConnectionsPendingDispatch, maxPendingAccepts, y receiveTimeout.</span><span class="sxs-lookup"><span data-stu-id="f568b-105">Configuration data for the NetPipeSection has been read with the specified data:  with the specified data: maxConnectionsPendingDispatch, maxPendingAccepts, and receiveTimeout.</span></span>  
+## <a name="description"></a><span data-ttu-id="15685-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="15685-104">Description</span></span>  
+ <span data-ttu-id="15685-105">Los datos de configuración para NetPipeSection se han leído con los datos especificados:  con los datos especificados: maxConnectionsPendingDispatch, maxPendingAccepts, y receiveTimeout.</span><span class="sxs-lookup"><span data-stu-id="15685-105">Configuration data for the NetPipeSection has been read with the specified data:  with the specified data: maxConnectionsPendingDispatch, maxPendingAccepts, and receiveTimeout.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f568b-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="f568b-106">See Also</span></span>  
- [<span data-ttu-id="f568b-107">Traza</span><span class="sxs-lookup"><span data-stu-id="f568b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f568b-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="f568b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f568b-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="f568b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="15685-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="15685-106">See Also</span></span>  
+ [<span data-ttu-id="15685-107">Traza</span><span class="sxs-lookup"><span data-stu-id="15685-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="15685-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="15685-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="15685-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="15685-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
