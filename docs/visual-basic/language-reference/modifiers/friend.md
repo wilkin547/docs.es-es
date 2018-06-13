@@ -15,6 +15,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234594"
 ---
 # <a name="friend-visual-basic"></a><span data-ttu-id="e50f7-102">Friend (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e50f7-102">Friend (Visual Basic)</span></span>
 <span data-ttu-id="e50f7-103">Especifica que uno o varios elementos de programación declarados son accesibles únicamente desde dentro del ensamblado que contiene su declaración.</span><span class="sxs-lookup"><span data-stu-id="e50f7-103">Specifies that one or more declared programming elements are accessible only from within the assembly that contains their declaration.</span></span>  

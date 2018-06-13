@@ -1,25 +1,20 @@
 ---
-title: Argumento &#39; &lt;nombreargumento1&gt;&#39; debe ser menor o igual la longitud del argumento &#39;&lt; nombreargumento2&gt;&#39;
+title: Argumento &#39; &lt;nombreargumento1&gt; &#39; debe ser menor o igual la longitud del argumento &#39; &lt;nombreargumento2&gt;&#39;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 55a2401f-a44d-4671-b35e-878f48594162
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ccd628042f934fa6b16e014b0a8887c534772c62
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 975fcdd55689dad05f7c78a22c842fa3c40211a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599094"
 ---
-# <a name="argument-39ltargumentname1gt39-must-be-less-than-or-equal-the-length-of-argument-39ltargumentname2gt39"></a><span data-ttu-id="f6f12-102">Argumento &#39; &lt;nombreargumento1&gt;&#39; debe ser menor o igual la longitud del argumento &#39;&lt; nombreargumento2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="f6f12-102">Argument &#39;&lt;argumentname1&gt;&#39; must be less than or equal the length of argument &#39;&lt;argumentname2&gt;&#39;</span></span>
-<span data-ttu-id="f6f12-103">La longitud del argumento proporcionado supera la longitud del argumento que va a sustituir.</span><span class="sxs-lookup"><span data-stu-id="f6f12-103">The length of a supplied argument exceeds the length of the argument it is replacing.</span></span>  
+# <a name="argument-39ltargumentname1gt39-must-be-less-than-or-equal-the-length-of-argument-39ltargumentname2gt39"></a><span data-ttu-id="0c881-102">Argumento &#39; &lt;nombreargumento1&gt; &#39; debe ser menor o igual la longitud del argumento &#39; &lt;nombreargumento2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="0c881-102">Argument &#39;&lt;argumentname1&gt;&#39; must be less than or equal the length of argument &#39;&lt;argumentname2&gt;&#39;</span></span>
+<span data-ttu-id="0c881-103">La longitud del argumento proporcionado supera la longitud del argumento que va a sustituir.</span><span class="sxs-lookup"><span data-stu-id="0c881-103">The length of a supplied argument exceeds the length of the argument it is replacing.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f6f12-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="f6f12-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0c881-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="0c881-104">To correct this error</span></span>  
   
--   <span data-ttu-id="f6f12-105">Asegúrese de que la longitud del primer argumento es menor o igual a la longitud del segundo argumento.</span><span class="sxs-lookup"><span data-stu-id="f6f12-105">Make the length of the first argument less than or equal to the length of the second argument.</span></span>  
+-   <span data-ttu-id="0c881-105">Asegúrese de que la longitud del primer argumento es menor o igual a la longitud del segundo argumento.</span><span class="sxs-lookup"><span data-stu-id="0c881-105">Make the length of the first argument less than or equal to the length of the second argument.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f6f12-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="f6f12-106">See Also</span></span>  
- [<span data-ttu-id="f6f12-107">Tipos de error</span><span class="sxs-lookup"><span data-stu-id="f6f12-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="0c881-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="0c881-106">See Also</span></span>  
+ [<span data-ttu-id="0c881-107">Tipos de error</span><span class="sxs-lookup"><span data-stu-id="0c881-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

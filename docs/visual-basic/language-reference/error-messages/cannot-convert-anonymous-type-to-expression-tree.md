@@ -1,29 +1,21 @@
 ---
-title: "No se puede convertir un tipo anónimo en un árbol de expresión porque contiene un campo que se usa en la inicialización de otro campo"
+title: No se puede convertir un tipo anónimo en un árbol de expresión porque contiene un campo que se usa en la inicialización de otro campo
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc36548
 - vbc36548
 helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c2cf8a40060359393807cfb648c46fef9ed853af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d43f6ef19591af326d06a4ce21194d8f9fa58c2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585481"
 ---
-# <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a><span data-ttu-id="cdd9b-102">No se puede convertir un tipo anónimo en un árbol de expresión porque contiene un campo que se usa en la inicialización de otro campo</span><span class="sxs-lookup"><span data-stu-id="cdd9b-102">Cannot convert anonymous type to expression tree because it contains a field that is used in the initialization of another field</span></span>
-<span data-ttu-id="cdd9b-103">El compilador no acepta la conversión de un anónimo a un árbol de expresión cuando una propiedad del tipo anónimo se utiliza para inicializar otra propiedad del tipo anónimo.</span><span class="sxs-lookup"><span data-stu-id="cdd9b-103">The compiler does not accept conversion of an anonymous to an expression tree when one property of the anonymous type is used to initialize another property of the anonymous type.</span></span> <span data-ttu-id="cdd9b-104">Por ejemplo, en el código siguiente, `Prop1` se declara en la lista de inicialización y, a continuación, se utiliza como valor inicial para `Prop2`.</span><span class="sxs-lookup"><span data-stu-id="cdd9b-104">For example, in the following code, `Prop1` is declared in the initialization list and then used as the initial value for `Prop2`.</span></span>  
+# <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a><span data-ttu-id="807ba-102">No se puede convertir un tipo anónimo en un árbol de expresión porque contiene un campo que se usa en la inicialización de otro campo</span><span class="sxs-lookup"><span data-stu-id="807ba-102">Cannot convert anonymous type to expression tree because it contains a field that is used in the initialization of another field</span></span>
+<span data-ttu-id="807ba-103">El compilador no acepta la conversión de un anónimo a un árbol de expresión cuando una propiedad del tipo anónimo se utiliza para inicializar otra propiedad del tipo anónimo.</span><span class="sxs-lookup"><span data-stu-id="807ba-103">The compiler does not accept conversion of an anonymous to an expression tree when one property of the anonymous type is used to initialize another property of the anonymous type.</span></span> <span data-ttu-id="807ba-104">Por ejemplo, en el código siguiente, `Prop1` se declara en la lista de inicialización y, a continuación, se utiliza como valor inicial para `Prop2`.</span><span class="sxs-lookup"><span data-stu-id="807ba-104">For example, in the following code, `Prop1` is declared in the initialization list and then used as the initial value for `Prop2`.</span></span>  
   
 ```vb  
 Module M2  
@@ -39,11 +31,11 @@ Module M2
 End Module  
 ```  
   
- <span data-ttu-id="cdd9b-105">**Id. de error:** BC36548</span><span class="sxs-lookup"><span data-stu-id="cdd9b-105">**Error ID:** BC36548</span></span>  
+ <span data-ttu-id="807ba-105">**Id. de error:** BC36548</span><span class="sxs-lookup"><span data-stu-id="807ba-105">**Error ID:** BC36548</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="cdd9b-106">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="cdd9b-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="807ba-106">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="807ba-106">To correct this error</span></span>  
   
--   <span data-ttu-id="cdd9b-107">Asigne el valor inicial para `Prop1` a una variable local.</span><span class="sxs-lookup"><span data-stu-id="cdd9b-107">Assign the initial value for `Prop1` to a local variable.</span></span> <span data-ttu-id="cdd9b-108">Asigne esta variable a ambos `Prop1` y `Prop2`, tal y como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="cdd9b-108">Assign that variable to both `Prop1` and `Prop2`, as shown in the following code.</span></span>  
+-   <span data-ttu-id="807ba-107">Asigne el valor inicial para `Prop1` a una variable local.</span><span class="sxs-lookup"><span data-stu-id="807ba-107">Assign the initial value for `Prop1` to a local variable.</span></span> <span data-ttu-id="807ba-108">Asigne esta variable a ambos `Prop1` y `Prop2`, tal y como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="807ba-108">Assign that variable to both `Prop1` and `Prop2`, as shown in the following code.</span></span>  
   
     ```  
     Sub Main()  
@@ -54,7 +46,7 @@ End Module
     End Sub  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="cdd9b-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="cdd9b-109">See Also</span></span>  
- [<span data-ttu-id="cdd9b-110">Tipos anónimos</span><span class="sxs-lookup"><span data-stu-id="cdd9b-110">Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [<span data-ttu-id="cdd9b-111">Árboles de expresión</span><span class="sxs-lookup"><span data-stu-id="cdd9b-111">Expression Trees</span></span>](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
- [<span data-ttu-id="cdd9b-112">Usar árboles de expresión para crear consultas dinámicas</span><span class="sxs-lookup"><span data-stu-id="cdd9b-112">How to: Use Expression Trees to Build Dynamic Queries</span></span>](http://msdn.microsoft.com/library/1e37e0cc-eef3-48bb-8b69-3adabf322735)
+## <a name="see-also"></a><span data-ttu-id="807ba-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="807ba-109">See Also</span></span>  
+ [<span data-ttu-id="807ba-110">Tipos anónimos</span><span class="sxs-lookup"><span data-stu-id="807ba-110">Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [<span data-ttu-id="807ba-111">Árboles de expresión</span><span class="sxs-lookup"><span data-stu-id="807ba-111">Expression Trees</span></span>](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [<span data-ttu-id="807ba-112">Usar árboles de expresión para crear consultas dinámicas</span><span class="sxs-lookup"><span data-stu-id="807ba-112">How to: Use Expression Trees to Build Dynamic Queries</span></span>](http://msdn.microsoft.com/library/1e37e0cc-eef3-48bb-8b69-3adabf322735)
