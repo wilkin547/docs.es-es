@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556021"
 ---
 # <a name="audio-and-video-how-to-topics"></a>Temas "Cómo..." de audio y vídeo
 Los temas siguientes muestran cómo usar el <xref:System.Windows.Controls.MediaElement> para integrar el contenido de audio y vídeo en sus aplicaciones.  

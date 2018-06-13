@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560647"
 ---
 # <a name="how-to-paint-an-area-with-a-radial-gradient"></a>Cómo: Pintar un área con un degradado radial
 Este ejemplo muestra cómo utilizar la <xref:System.Windows.Media.RadialGradientBrush> clase para pintar un área con un degradado radial.  

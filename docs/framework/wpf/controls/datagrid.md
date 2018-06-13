@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557087"
 ---
 # <a name="datagrid"></a>DataGrid
 El <xref:System.Windows.Controls.DataGrid> control le permite mostrar y editar datos de muchos orígenes diferentes, como en una base de datos SQL, consulta LINQ o cualquier otro origen de datos se puede enlazar. Para más información, consulte [Binding Sources Overview](../../../../docs/framework/wpf/data/binding-sources-overview.md) (Introducción a los orígenes de enlace).  

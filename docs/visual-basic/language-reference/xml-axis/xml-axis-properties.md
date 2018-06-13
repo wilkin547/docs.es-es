@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600866"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>Propiedades de eje XML (Visual Basic)
 Los temas de esta sección documentan la sintaxis de propiedades de eje XML en Visual Basic. Las propiedades de eje XML facilitan el acceso a XML directamente en el código.  

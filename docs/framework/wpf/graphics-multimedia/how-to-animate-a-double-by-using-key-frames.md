@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557438"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>Cómo: Animar un objeto Double mediante fotogramas clave
 Este ejemplo muestra cómo animar el valor de una propiedad que toma un <xref:System.Double> mediante el uso de fotogramas clave.  

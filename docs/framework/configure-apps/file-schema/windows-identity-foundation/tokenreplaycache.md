@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755128"
 ---
 # <a name="lttokenreplaycachegt"></a>&lt;tokenReplayCache&gt;
 Registra una caché de respuesta de token con un servicio o una colección de controlador de token de seguridad.  

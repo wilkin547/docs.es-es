@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557672"
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Cómo: Acumular valores de animaciones durante la repetición de ciclos
 Este ejemplo muestra cómo utilizar el <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propiedad que se va a acumular valores de animaciones entre ciclos que se repiten.  

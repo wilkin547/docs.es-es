@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561435"
 ---
 # <a name="how-to-animate-a-rectangle"></a>Cómo: Animar un rectángulo
 En este ejemplo se muestra cómo animar los cambios de tamaño y posición de un rectángulo.  

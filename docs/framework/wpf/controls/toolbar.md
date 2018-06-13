@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555434"
 ---
 # <a name="toolbar"></a>ToolBar
 El <xref:System.Windows.Controls.ToolBar> control es un contenedor para un grupo de comandos o controles que suelen estar relacionados en su función.  

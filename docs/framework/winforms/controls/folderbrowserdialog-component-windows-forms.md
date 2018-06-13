@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524457"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog (Componente, Formularios Windows Forms)
 Los formularios de Windows `FolderBrowserDialog` componente muestra una interfaz con la que los usuarios pueden examinar y seleccionar una carpeta o crear uno nuevo. Es un complemento para el [OpenFileDialog (componente)](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) componente, que se utiliza para examinar y seleccionar los archivos.  

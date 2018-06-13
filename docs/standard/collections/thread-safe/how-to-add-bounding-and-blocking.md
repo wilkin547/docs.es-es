@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568581"
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Cómo: Agregar la funcionalidad de límite y bloqueo a una colección
 En este ejemplo se muestra cómo agregar la funcionalidad de límite y bloqueo a una clase de colección personalizada. Para ello, se implementa la interfaz <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> en la clase y, después, se usa una instancia de clase como mecanismo de almacenamiento interno para <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>. Para obtener más información acerca de la funcionalidad de límite y bloqueo, consulte [Información general sobre BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  

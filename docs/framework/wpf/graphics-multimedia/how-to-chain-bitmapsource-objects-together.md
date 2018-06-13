@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558870"
 ---
 # <a name="how-to-chain-bitmapsource-objects-together"></a>Cómo: Encadenar objetos BitmapSource
 Este ejemplo muestra cómo se puede aplicar una variedad de efectos a un origen de imagen con el encadenamiento de varios <xref:System.Windows.Media.Imaging.BitmapSource> objetos derivados juntos.  

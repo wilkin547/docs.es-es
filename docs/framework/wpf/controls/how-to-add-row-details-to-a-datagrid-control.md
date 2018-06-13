@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555956"
 ---
 # <a name="how-to-add-row-details-to-a-datagrid-control"></a>Cómo: Agregar detalles de fila a un control DataGrid
 Cuando se usa el <xref:System.Windows.Controls.DataGrid> control, puede personalizar la presentación de datos mediante la adición de una sección de detalles de fila. Agregar una sección de detalles de la fila le permite agrupar algunos datos en una plantilla que está visible o contraído opcionalmente. Por ejemplo, puede agregar detalles de las filas a una <xref:System.Windows.Controls.DataGrid> que presenta únicamente un resumen de los datos para cada fila de la <xref:System.Windows.Controls.DataGrid>, pero presenta más campos de datos cuando el usuario selecciona una fila. Definir la plantilla para la sección de detalles de la fila en la <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> propiedad. En la siguiente ilustración muestra un ejemplo de una sección de detalles de fila.  

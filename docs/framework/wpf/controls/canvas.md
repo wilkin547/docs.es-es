@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553279"
 ---
 # <a name="canvas"></a>Canvas
 <xref:System.Windows.Controls.Canvas> es un control de diseño que permite la colocación absoluta de los elementos secundarios.  

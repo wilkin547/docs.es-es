@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559771"
 ---
 # <a name="how-to-create-a-bitmap-from-a-visual"></a>Cómo: Crear un mapa de bits desde un objeto Visual
 Este ejemplo muestra cómo puede crear un mapa de bits de un <xref:System.Windows.Media.Visual>. A <xref:System.Windows.Media.DrawingVisual> se representa con <xref:System.Windows.Media.FormattedText>. El <xref:System.Windows.Media.Visual> , a continuación, se representa en la <xref:System.Windows.Media.Imaging.RenderTargetBitmap> crear un mapa de bits del texto dado.  

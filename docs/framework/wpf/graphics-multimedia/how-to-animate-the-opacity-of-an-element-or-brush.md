@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559683"
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Cómo: Animar la opacidad de un elemento o pincel
 Para hacer que un elemento de marco fundido, puede animar su <xref:System.Windows.UIElement.Opacity%2A> propiedad o se puede animar la <xref:System.Windows.Media.Brush.Opacity%2A> propiedad de la <xref:System.Windows.Media.Brush> (o pinceles) utilizado para pintar. Animar la opacidad del elemento facilita y fundido sus elementos secundarios, pero animar el pincel que se usa para pintar el elemento permite que sea más selectivo con respecto a qué parte del elemento fundido. Por ejemplo, podría animar la opacidad de un pincel utilizado para pintar el fondo del botón. Esto provocaría que el fondo del botón fundido de entrada y salida de la vista, dejando su texto completamente opaco.  

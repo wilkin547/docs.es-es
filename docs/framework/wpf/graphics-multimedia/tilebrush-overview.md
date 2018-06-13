@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566342"
 ---
 # <a name="tilebrush-overview"></a>Información general sobre objetos TileBrush
 <xref:System.Windows.Media.TileBrush> los objetos proporcionan un gran control sobre cómo se pinta un área con una imagen, <xref:System.Windows.Media.Drawing>, o <xref:System.Windows.Media.Visual>. Este tema describe cómo usar <xref:System.Windows.Media.TileBrush> características para tener más control sobre cómo un <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, o <xref:System.Windows.Media.VisualBrush> pinta un área.  

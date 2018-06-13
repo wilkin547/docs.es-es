@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555930"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a>Cómo: Usar el patrón principal-detalle con datos XML jerárquicos
 Este ejemplo muestra cómo implementar el escenario principal-detalle con [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] datos.  

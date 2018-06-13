@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559606"
 ---
 # <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a>Cómo: Crear patrones de mosaico diferentes con un objeto TileBrush
 Este ejemplo muestra cómo utilizar el <xref:System.Windows.Media.TileBrush.TileMode%2A> propiedad de una <xref:System.Windows.Media.TileBrush> para crear un patrón.  

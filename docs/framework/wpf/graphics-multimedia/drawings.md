@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556046"
 ---
 # <a name="drawings"></a>Dibujos
 <xref:System.Windows.Media.Drawing> los objetos se utilizan para dibujar eficazmente formas, imágenes o texto. Dibujos se utilizan al pintar con un <xref:System.Windows.Media.DrawingBrush> o programación con <xref:System.Windows.Media.Visual> objetos.  

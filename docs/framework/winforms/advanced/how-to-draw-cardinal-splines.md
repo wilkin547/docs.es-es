@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525065"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>Cómo: Dibujar curvas spline cardinales
 Una curva spline cardinal es una curva que pasa suavemente por un determinado conjunto de puntos. Para dibujar una curva spline cardinal, cree un <xref:System.Drawing.Graphics> objeto y pasar la dirección de una matriz de puntos para la <xref:System.Drawing.Graphics.DrawCurve%2A> método.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566579"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Información general sobre las extensiones de marcado para el lenguaje XAML
 Las extensiones de marcado son una técnica XAML para obtener un valor que no es un tipo primitivo ni específico de XAML. Para el uso de atributos, las extensiones de marcado usan la secuencia de caracteres conocida de una llave de apertura `{` para entrar en el ámbito de la extensión de marcado y una llave de cierre `}` para salir. Al usar los servicios XAML de .NET Framework, puede usar algunas de las extensiones de marcado del lenguaje XAML predefinidas del ensamblado System.Xaml. También puede crear subclases de la clase <xref:System.Windows.Markup.MarkupExtension> , definida en System.Xaml, y definir sus propias extensiones de marcado. Asimismo, puede usar las extensiones de marcado definidas por un marco determinado si ya se hace referencia a dicho marco.  

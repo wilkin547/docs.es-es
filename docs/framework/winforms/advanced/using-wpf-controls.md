@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526609"
 ---
 # <a name="using-wpf-controls"></a>Utilizar controles WPF
 Puede usar controles de Windows Presentation Foundation (WPF) en las aplicaciones basadas en formularios Windows Forms. Aunque se trata de dos tecnologías de presentación diferentes, operan perfectamente entre sí.  

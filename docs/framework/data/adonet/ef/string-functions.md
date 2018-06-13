@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766483"
 ---
 # <a name="string-functions"></a>Funciones de cadena
 El proveedor de datos .NET Framework para SQL Server (SqlClient) proporciona funciones de `String` que realizan operaciones en una `String` de entrada y devuelven una `String` o un resultado con un valor numérico. Estas funciones están en el espacio de nombres SqlServer, que está disponible al utilizar SqlClient. La propiedad del espacio de nombres de un proveedor permite a Entity Framework detectar qué prefijo usa este proveedor para estructuras concretas, como tipos y funciones.  

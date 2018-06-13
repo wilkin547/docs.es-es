@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565065"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier (Directiva)
 Modifica el comportamiento de compilación de XAML para que se han definido campos para las referencias de objeto con nombre con <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> accesos en lugar de la <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> comportamiento predeterminado.  

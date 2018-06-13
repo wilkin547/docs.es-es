@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555069"
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Cómo: Cambiar el tamaño de un lienzo mediante un control Thumb
 Este ejemplo muestra cómo utilizar un <xref:System.Windows.Controls.Primitives.Thumb> control para cambiar el tamaño de una <xref:System.Windows.Controls.Canvas> control.  
