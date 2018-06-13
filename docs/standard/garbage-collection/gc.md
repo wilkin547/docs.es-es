@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578149"
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a>Administración automática de la memoria y recolección de elementos no utilizados
 

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553902"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>Cómo: Cambiar la alineación horizontal de una columna en un control ListView
 De forma predeterminada, el contenido de cada columna en un <xref:System.Windows.Controls.ListViewItem> está alineado a la izquierda. Puede cambiar la alineación de cada columna, proporcionando un <xref:System.Windows.DataTemplate> y estableciendo el <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> propiedad del elemento dentro de la <xref:System.Windows.DataTemplate>. Este tema se muestra cómo un <xref:System.Windows.Controls.ListView> alinea su contenido de forma predeterminada y cómo cambiar la alineación de una columna en un <xref:System.Windows.Controls.ListView>.  

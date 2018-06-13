@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571666"
 ---
 # <a name="unsealed-classes"></a>Clases no selladas
 No se puede heredar clases selladas de e impiden que extensibilidad. En cambio, las clases que se pueden heredar de se denominan clases no selladas.  

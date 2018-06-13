@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570553"
 ---
 # <a name="changing-case-in-net"></a>Cambiar mayúsculas y minúsculas en .NET
 Si escribe una aplicación que acepta la entrada de un usuario, nunca podrá estar seguro de si usará mayúsculas o minúsculas para escribir los datos. Normalmente querrá que las cadenas usen mayúsculas y minúsculas de forma coherente, especialmente si se van a mostrar en la interfaz de usuario. En la tabla siguiente se describen tres métodos para cambiar las mayúsculas y minúsculas. Los dos primeros métodos proporcionan una sobrecarga que acepta una referencia cultural.  

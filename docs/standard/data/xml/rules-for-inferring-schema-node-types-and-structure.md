@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578240"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Reglas para deducir los tipos de nodo de esquema y estructura
 Este tema describe cómo el proceso de deducción del esquema traduce los tipos de nodo de un documento XML a una estructura de lenguaje de definición de esquema XML (XSD).  

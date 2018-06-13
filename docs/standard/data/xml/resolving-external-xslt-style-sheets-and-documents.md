@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574766"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Resolver hojas de estilos XSLT y documentos externos
 Hay varios momentos a lo largo de una transformación en los cuales puede que necesite resolver recursos externos:  

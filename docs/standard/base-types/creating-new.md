@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567824"
 ---
 # <a name="creating-new-strings-in-net"></a>Creación de cadenas en .NET
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permite crear cadenas mediante asignaciones simples y además sobrecarga a un constructor de clases para admitir la creación de cadenas con una serie de parámetros. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] también proporciona varios métodos en la clase <xref:System.String?displayProperty=nameWithType> que crean nuevos objetos de cadena al combinar varias cadenas, matrices de cadenas u objetos.  

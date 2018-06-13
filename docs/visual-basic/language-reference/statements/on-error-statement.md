@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605100"
 ---
 # <a name="on-error-statement-visual-basic"></a>Instrucción On Error (Visual Basic)
 Habilita una rutina de control de errores y especifica la ubicación de la rutina dentro de un procedimiento; También puede utilizarse para desactivar una rutina de control de errores.  

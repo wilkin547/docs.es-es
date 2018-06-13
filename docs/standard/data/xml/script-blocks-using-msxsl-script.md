@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577168"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Bloques de scripts con msxsl:script
 La clase <xref:System.Xml.Xsl.XslCompiledTransform> admite scripts incrustados mediante el elemento `msxsl:script`. Cuando se carga la hoja de estilos, cualquier función definida se compila en el lenguaje intermedio de Microsoft (MSIL) por medio del Code Document Object Model (CodeDOM) y se ejecutan en tiempo de ejecución. El ensamblado que se genera a partir del bloque de scripts incrustado es distinto al ensamblado que se genera para la hoja de estilos.  
