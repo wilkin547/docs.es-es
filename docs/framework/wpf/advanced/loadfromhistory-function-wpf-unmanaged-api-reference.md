@@ -1,14 +1,6 @@
 ---
-title: "Función LoadFromHistory (referencia de la API no administrada de WPF)"
-ms.custom: 
+title: Función LoadFromHistory (referencia de la API no administrada de WPF)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 api_name:
@@ -16,24 +8,19 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6eca1c30664e381101b6e51c1347341432a042b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 19674b45af84e1e6a6ca169f7b6654c6e3847416
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544669"
 ---
-# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="4f24e-102">Función LoadFromHistory (referencia de la API no administrada de WPF)</span><span class="sxs-lookup"><span data-stu-id="4f24e-102">LoadFromHistory Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="4f24e-103">Esta API es compatible con la infraestructura de Windows Presentation Foundation (WPF) y no está diseñada para utilizarse directamente desde el código.</span><span class="sxs-lookup"><span data-stu-id="4f24e-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="a8495-102">Función LoadFromHistory (referencia de la API no administrada de WPF)</span><span class="sxs-lookup"><span data-stu-id="a8495-102">LoadFromHistory Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="a8495-103">Esta API es compatible con la infraestructura de Windows Presentation Foundation (WPF) y no está diseñada para utilizarse directamente desde el código.</span><span class="sxs-lookup"><span data-stu-id="a8495-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="4f24e-104">Usa la infraestructura de Windows Presentation Foundation (WPF) para la administración de windows.</span><span class="sxs-lookup"><span data-stu-id="4f24e-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="a8495-104">Usa la infraestructura de Windows Presentation Foundation (WPF) para la administración de windows.</span><span class="sxs-lookup"><span data-stu-id="a8495-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4f24e-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4f24e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a8495-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a8495-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT LoadFromHistory_export(  
@@ -42,23 +29,23 @@ HRESULT LoadFromHistory_export(
 )  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4f24e-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="4f24e-106">Parameters</span></span>  
- <span data-ttu-id="4f24e-107">pHistoryStream</span><span class="sxs-lookup"><span data-stu-id="4f24e-107">pHistoryStream</span></span>  
- <span data-ttu-id="4f24e-108">Un puntero a una secuencia de información de historial.</span><span class="sxs-lookup"><span data-stu-id="4f24e-108">A pointer to a stream of history information.</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a8495-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a8495-106">Parameters</span></span>  
+ <span data-ttu-id="a8495-107">pHistoryStream</span><span class="sxs-lookup"><span data-stu-id="a8495-107">pHistoryStream</span></span>  
+ <span data-ttu-id="a8495-108">Un puntero a una secuencia de información de historial.</span><span class="sxs-lookup"><span data-stu-id="a8495-108">A pointer to a stream of history information.</span></span>  
   
- <span data-ttu-id="4f24e-109">pBindCtx</span><span class="sxs-lookup"><span data-stu-id="4f24e-109">pBindCtx</span></span>  
- <span data-ttu-id="4f24e-110">Un puntero a un contexto de enlace.</span><span class="sxs-lookup"><span data-stu-id="4f24e-110">A pointer to a bind context.</span></span>  
+ <span data-ttu-id="a8495-109">pBindCtx</span><span class="sxs-lookup"><span data-stu-id="a8495-109">pBindCtx</span></span>  
+ <span data-ttu-id="a8495-110">Un puntero a un contexto de enlace.</span><span class="sxs-lookup"><span data-stu-id="a8495-110">A pointer to a bind context.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4f24e-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4f24e-111">Requirements</span></span>  
- <span data-ttu-id="4f24e-112">**Plataformas:** vea [requisitos de sistema de .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4f24e-112">**Platforms:** See [.NET Framework System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a8495-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a8495-111">Requirements</span></span>  
+ <span data-ttu-id="a8495-112">**Plataformas:** vea [requisitos de sistema de .NET Framework](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a8495-112">**Platforms:** See [.NET Framework System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4f24e-113">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="4f24e-113">**DLL:**</span></span>  
+ <span data-ttu-id="a8495-113">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="a8495-113">**DLL:**</span></span>  
   
- <span data-ttu-id="4f24e-114">En .NET Framework 3.0 y 3.5: PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="4f24e-114">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="a8495-114">En .NET Framework 3.0 y 3.5: PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="a8495-114">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="4f24e-115">En .NET Framework 4 y versiones posteriores: PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="4f24e-115">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="a8495-115">En .NET Framework 4 y versiones posteriores: PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="a8495-115">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="4f24e-116">**Versión de .NET framework:**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4f24e-116">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="a8495-116">**Versión de .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a8495-116">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4f24e-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="4f24e-117">See Also</span></span>  
- [<span data-ttu-id="4f24e-118">Referencia de API no administrada de WPF</span><span class="sxs-lookup"><span data-stu-id="4f24e-118">WPF Unmanaged API Reference</span></span>](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a><span data-ttu-id="a8495-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="a8495-117">See Also</span></span>  
+ [<span data-ttu-id="a8495-118">Referencia de API no administrada de WPF</span><span class="sxs-lookup"><span data-stu-id="a8495-118">WPF Unmanaged API Reference</span></span>](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Mostrar los formatos de datos en un objeto de datos"
-ms.custom: 
+title: 'Cómo: Mostrar los formatos de datos en un objeto de datos'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,38 +9,34 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - data formats [WPF], listing
 ms.assetid: 18e7ba4b-ccef-4815-ae2d-3a32891010c0
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb27928031b551da2957aab0696646e8adc3f803
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c0e5917d52d9253737a56307beed69bc0255807c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543486"
 ---
-# <a name="how-to-list-the-data-formats-in-a-data-object"></a><span data-ttu-id="b0f62-102">Cómo: Mostrar los formatos de datos en un objeto de datos</span><span class="sxs-lookup"><span data-stu-id="b0f62-102">How to: List the Data Formats in a Data Object</span></span>
-<span data-ttu-id="b0f62-103">Los ejemplos siguientes muestran cómo utilizar el <xref:System.Windows.DataObject.GetFormats%2A> sobrecargas del método obtiene una matriz de cadenas que representan cada formato de datos que está disponible en un objeto de datos.</span><span class="sxs-lookup"><span data-stu-id="b0f62-103">The following examples show how to use the <xref:System.Windows.DataObject.GetFormats%2A> method overloads get an array of strings denoting each data format that is available in a data object.</span></span>  
+# <a name="how-to-list-the-data-formats-in-a-data-object"></a><span data-ttu-id="2b39b-102">Cómo: Mostrar los formatos de datos en un objeto de datos</span><span class="sxs-lookup"><span data-stu-id="2b39b-102">How to: List the Data Formats in a Data Object</span></span>
+<span data-ttu-id="2b39b-103">Los ejemplos siguientes muestran cómo utilizar el <xref:System.Windows.DataObject.GetFormats%2A> sobrecargas del método obtiene una matriz de cadenas que representan cada formato de datos que está disponible en un objeto de datos.</span><span class="sxs-lookup"><span data-stu-id="2b39b-103">The following examples show how to use the <xref:System.Windows.DataObject.GetFormats%2A> method overloads get an array of strings denoting each data format that is available in a data object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b0f62-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b0f62-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2b39b-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2b39b-104">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="b0f62-105">Descripción</span><span class="sxs-lookup"><span data-stu-id="b0f62-105">Description</span></span>  
- <span data-ttu-id="b0f62-106">El código de ejemplo siguiente usa el <xref:System.Windows.DataObject.GetFormats%2A> sobrecarga para obtener una matriz de cadenas que representan todos los formatos de datos disponibles en un objeto de datos (nativo y convertir automáticamente).</span><span class="sxs-lookup"><span data-stu-id="b0f62-106">The following example code uses the <xref:System.Windows.DataObject.GetFormats%2A> overload to get an array of strings denoting all data formats available in a data object (both native and auto-convertible).</span></span>  
+### <a name="description"></a><span data-ttu-id="2b39b-105">Descripción</span><span class="sxs-lookup"><span data-stu-id="2b39b-105">Description</span></span>  
+ <span data-ttu-id="2b39b-106">El código de ejemplo siguiente usa el <xref:System.Windows.DataObject.GetFormats%2A> sobrecarga para obtener una matriz de cadenas que representan todos los formatos de datos disponibles en un objeto de datos (nativo y convertir automáticamente).</span><span class="sxs-lookup"><span data-stu-id="2b39b-106">The following example code uses the <xref:System.Windows.DataObject.GetFormats%2A> overload to get an array of strings denoting all data formats available in a data object (both native and auto-convertible).</span></span>  
   
-### <a name="code"></a><span data-ttu-id="b0f62-107">Código</span><span class="sxs-lookup"><span data-stu-id="b0f62-107">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="2b39b-107">Código</span><span class="sxs-lookup"><span data-stu-id="2b39b-107">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getalldataformats)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getalldataformats)]  
   
-## <a name="example"></a><span data-ttu-id="b0f62-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b0f62-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2b39b-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2b39b-108">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="b0f62-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="b0f62-109">Description</span></span>  
- <span data-ttu-id="b0f62-110">El código de ejemplo siguiente usa el <xref:System.Windows.DataObject.GetFormats%2A> sobrecarga para obtener una matriz de cadenas que denotan sólo los formatos de datos disponibles en un objeto de datos (se filtran los formatos de datos convertibles automáticamente).</span><span class="sxs-lookup"><span data-stu-id="b0f62-110">The following example code uses the <xref:System.Windows.DataObject.GetFormats%2A> overload to get an array of strings denoting only data formats available in a data object (auto-convertible data formats are filtered).</span></span>  
+### <a name="description"></a><span data-ttu-id="2b39b-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="2b39b-109">Description</span></span>  
+ <span data-ttu-id="2b39b-110">El código de ejemplo siguiente usa el <xref:System.Windows.DataObject.GetFormats%2A> sobrecarga para obtener una matriz de cadenas que denotan sólo los formatos de datos disponibles en un objeto de datos (se filtran los formatos de datos convertibles automáticamente).</span><span class="sxs-lookup"><span data-stu-id="2b39b-110">The following example code uses the <xref:System.Windows.DataObject.GetFormats%2A> overload to get an array of strings denoting only data formats available in a data object (auto-convertible data formats are filtered).</span></span>  
   
-### <a name="code"></a><span data-ttu-id="b0f62-111">Código</span><span class="sxs-lookup"><span data-stu-id="b0f62-111">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="2b39b-111">Código</span><span class="sxs-lookup"><span data-stu-id="2b39b-111">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats_NativeOnly](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getalldataformats_nativeonly)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats_NativeOnly](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getalldataformats_nativeonly)]  
   
-## <a name="see-also"></a><span data-ttu-id="b0f62-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="b0f62-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2b39b-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="2b39b-112">See Also</span></span>  
  <xref:System.Windows.IDataObject>  
- [<span data-ttu-id="b0f62-113">Información general sobre la función de arrastrar y colocar</span><span class="sxs-lookup"><span data-stu-id="b0f62-113">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+ [<span data-ttu-id="2b39b-113">Información general sobre la función de arrastrar y colocar</span><span class="sxs-lookup"><span data-stu-id="2b39b-113">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

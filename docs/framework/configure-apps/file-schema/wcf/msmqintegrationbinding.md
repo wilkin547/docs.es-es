@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751667"
 ---
 # <a name="ltmsmqintegrationbindinggt"></a><span data-ttu-id="0b21a-102">&lt;msmqIntegrationBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="0b21a-102">&lt;msmqIntegrationBinding&gt;</span></span>
 <span data-ttu-id="0b21a-103">Define un enlace que proporciona la compatibilidad de uso de colas enrutando los mensajes a través de MSMQ.</span><span class="sxs-lookup"><span data-stu-id="0b21a-103">Defines a binding that provides queuing support by routing messages through MSMQ.</span></span>  

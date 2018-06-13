@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752239"
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a><span data-ttu-id="ef733-102">Elemento &lt;security&gt; de &lt;customBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="ef733-102">&lt;security&gt; of &lt;customBinding&gt;</span></span>
 <span data-ttu-id="ef733-103">Especifica las opciones de seguridad de un enlace personalizado.</span><span class="sxs-lookup"><span data-stu-id="ef733-103">Specifies the security options for a custom binding.</span></span>  
