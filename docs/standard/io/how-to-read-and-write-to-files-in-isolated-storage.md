@@ -1,13 +1,7 @@
 ---
-title: "Cómo: Leer y escribir en archivos en almacenamiento aislado"
-ms.custom: 
+title: 'Cómo: Leer y escribir en archivos en almacenamiento aislado'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,34 +16,30 @@ helpviewer_keywords:
 - data stores, reading and writing to files
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cfb1500150d2dfb500a698713c0de6b8e5518010
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 90195e4e1a368f8b8b0fcf04fd8d86afce3ea7c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573781"
 ---
-# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a><span data-ttu-id="e2785-102">Cómo: Leer y escribir en archivos en almacenamiento aislado</span><span class="sxs-lookup"><span data-stu-id="e2785-102">How to: Read and Write to Files in Isolated Storage</span></span>
-<span data-ttu-id="e2785-103">Para leer o escribir en un archivo de un almacén aislado, use un objeto <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> con un lector de secuencias (objeto <xref:System.IO.StreamReader>) o el escritor de secuencias (objeto <xref:System.IO.StreamWriter>).</span><span class="sxs-lookup"><span data-stu-id="e2785-103">To read from, or write to, a file in an isolated store, use an <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> object with a stream reader (<xref:System.IO.StreamReader> object) or stream writer (<xref:System.IO.StreamWriter> object).</span></span>  
+# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a><span data-ttu-id="0e5a6-102">Cómo: Leer y escribir en archivos en almacenamiento aislado</span><span class="sxs-lookup"><span data-stu-id="0e5a6-102">How to: Read and Write to Files in Isolated Storage</span></span>
+<span data-ttu-id="0e5a6-103">Para leer o escribir en un archivo de un almacén aislado, use un objeto <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> con un lector de secuencias (objeto <xref:System.IO.StreamReader>) o el escritor de secuencias (objeto <xref:System.IO.StreamWriter>).</span><span class="sxs-lookup"><span data-stu-id="0e5a6-103">To read from, or write to, a file in an isolated store, use an <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> object with a stream reader (<xref:System.IO.StreamReader> object) or stream writer (<xref:System.IO.StreamWriter> object).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e2785-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e2785-104">Example</span></span>  
- <span data-ttu-id="e2785-105">En el ejemplo de código siguiente se obtiene un almacén aislado y se comprueba si existe un archivo denominado TestStore.txt en el almacén.</span><span class="sxs-lookup"><span data-stu-id="e2785-105">The following code example obtains an isolated store and checks whether a file named TestStore.txt exists in the store.</span></span> <span data-ttu-id="e2785-106">Si no existe, crea el archivo y escribe "Hello Isolated Storage" en el archivo.</span><span class="sxs-lookup"><span data-stu-id="e2785-106">If it doesn't exist, it creates the file and writes "Hello Isolated Storage" to the file.</span></span> <span data-ttu-id="e2785-107">Si TestStore.txt ya existe, el código de ejemplo se lee desde el archivo.</span><span class="sxs-lookup"><span data-stu-id="e2785-107">If TestStore.txt already exists, the example code reads from the file.</span></span>  
+## <a name="example"></a><span data-ttu-id="0e5a6-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0e5a6-104">Example</span></span>  
+ <span data-ttu-id="0e5a6-105">En el ejemplo de código siguiente se obtiene un almacén aislado y se comprueba si existe un archivo denominado TestStore.txt en el almacén.</span><span class="sxs-lookup"><span data-stu-id="0e5a6-105">The following code example obtains an isolated store and checks whether a file named TestStore.txt exists in the store.</span></span> <span data-ttu-id="0e5a6-106">Si no existe, crea el archivo y escribe "Hello Isolated Storage" en el archivo.</span><span class="sxs-lookup"><span data-stu-id="0e5a6-106">If it doesn't exist, it creates the file and writes "Hello Isolated Storage" to the file.</span></span> <span data-ttu-id="0e5a6-107">Si TestStore.txt ya existe, el código de ejemplo se lee desde el archivo.</span><span class="sxs-lookup"><span data-stu-id="0e5a6-107">If TestStore.txt already exists, the example code reads from the file.</span></span>  
   
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  
   
-## <a name="see-also"></a><span data-ttu-id="e2785-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="e2785-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="0e5a6-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="0e5a6-108">See Also</span></span>  
  <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
  <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
  <xref:System.IO.FileMode?displayProperty=nameWithType>  
  <xref:System.IO.FileAccess?displayProperty=nameWithType>  
  <xref:System.IO.StreamReader?displayProperty=nameWithType>  
  <xref:System.IO.StreamWriter?displayProperty=nameWithType>  
- [<span data-ttu-id="e2785-109">E/S de archivos y secuencias</span><span class="sxs-lookup"><span data-stu-id="e2785-109">File and Stream I-O</span></span>](../../../docs/standard/io/index.md)  
- [<span data-ttu-id="e2785-110">Almacenamiento aislado</span><span class="sxs-lookup"><span data-stu-id="e2785-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)
+ [<span data-ttu-id="0e5a6-109">E/S de archivos y secuencias</span><span class="sxs-lookup"><span data-stu-id="0e5a6-109">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)  
+ [<span data-ttu-id="0e5a6-110">Almacenamiento aislado</span><span class="sxs-lookup"><span data-stu-id="0e5a6-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)

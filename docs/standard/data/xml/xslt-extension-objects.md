@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570584"
 ---
 # <a name="xslt-extension-objects"></a><span data-ttu-id="7c746-102">Objetos de extensión de XSLT</span><span class="sxs-lookup"><span data-stu-id="7c746-102">XSLT Extension Objects</span></span>
 <span data-ttu-id="7c746-103">Los objetos de extensión se utilizan para ampliar la funcionalidad de las hojas de estilos.</span><span class="sxs-lookup"><span data-stu-id="7c746-103">Extension objects are used to extend the functionality of style sheets.</span></span> <span data-ttu-id="7c746-104">La clase <xref:System.Xml.Xsl.XsltArgumentList> mantiene los objetos de extensión.</span><span class="sxs-lookup"><span data-stu-id="7c746-104">Extension objects are maintained by the <xref:System.Xml.Xsl.XsltArgumentList> class.</span></span>  
