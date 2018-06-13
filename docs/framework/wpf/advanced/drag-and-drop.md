@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542579"
 ---
 # <a name="drag-and-drop"></a>Arrastrar y colocar
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Proporciona una infraestructura de entrega que permite arrastrar y colocar datos dentro y arrastre muy flexible [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones, así como otros [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] las aplicaciones.  

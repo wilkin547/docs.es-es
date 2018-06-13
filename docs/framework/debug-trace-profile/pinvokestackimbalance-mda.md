@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388061"
 ---
 # <a name="pinvokestackimbalance-mda"></a>MDA de pInvokeStackImbalance
 El Asistente para la depuración administrada (MDA) `pInvokeStackImbalance` se activa cuando CLR detecta que la profundidad de la pila después de la llamada de invocación de plataforma no coincide con la profundidad de pila esperada, según la convención de llamada especificada en el atributo <xref:System.Runtime.InteropServices.DllImportAttribute> y la declaración de los parámetros en la firma administrada.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364630"
 ---
 # <a name="ltmessagegt-of-ltwshttpbindinggt"></a>Elemento &lt;message&gt; de &lt;wsHttpBinding&gt;
 Define la configuración de seguridad de nivel de mensaje de la [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542280"
 ---
 # <a name="how-to-open-files-using-the-openfiledialog-component"></a>Cómo: Abrir archivos mediante el componente OpenFileDialog
 El <xref:System.Windows.Forms.OpenFileDialog> componente permite a los usuarios examinar las carpetas de su equipo o en cualquier equipo en la red y seleccionar uno o más archivos para abrirlos. El cuadro de diálogo devuelve la ruta de acceso y el nombre del archivo que seleccionó el usuario en el cuadro de diálogo.  

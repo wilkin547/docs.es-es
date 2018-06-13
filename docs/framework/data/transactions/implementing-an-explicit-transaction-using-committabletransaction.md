@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365688"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementar una transacción explícita mediante una transacción confirmable
 La clase <xref:System.Transactions.CommittableTransaction> proporciona a las aplicaciones una manera explícita de utilizar una transacción, a diferencia de utilizar implícitamente la clase <xref:System.Transactions.TransactionScope>. Es útil para las aplicaciones que desean utilizar la misma transacción por varias llamadas de función o llamadas de subproceso múltiples. A diferencia de la clase <xref:System.Transactions.TransactionScope>, el sistema de escritura de la aplicación ha de llamar específicamente a los métodos <xref:System.Transactions.CommittableTransaction.Commit%2A> y <xref:System.Transactions.Transaction.Rollback%2A> para confirmar o anular la transacción.  

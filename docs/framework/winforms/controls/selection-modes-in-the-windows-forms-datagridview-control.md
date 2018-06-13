@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539577"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Modos de selección en el control DataGridView de formularios Windows Forms
 A veces, desea que la aplicación para realizar acciones en función de las selecciones del usuario dentro de un <xref:System.Windows.Forms.DataGridView> control. Dependiendo de las acciones, puede que desee restringir los tipos de selección que son posibles. Por ejemplo, suponga que la aplicación puede imprimir un informe para el registro seleccionado actualmente. En este caso, puede que desee configurar el <xref:System.Windows.Forms.DataGridView> control para que al hacer clic en cualquier lugar dentro de una fila siempre selecciona toda la fila y, por lo que se puede seleccionar que sólo una fila a la vez.  

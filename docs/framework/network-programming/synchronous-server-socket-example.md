@@ -17,6 +17,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955958"
 ---
 # <a name="synchronous-server-socket-example"></a>Ejemplo de sockets de servidor sincrónicos
 El programa de ejemplo siguiente crea un servidor que recibe solicitudes de conexión de clientes. El servidor se ha creado con un socket sincrónico, por lo que se suspende la ejecución de la aplicación de servidor mientras se espera una conexión desde un cliente. La aplicación recibe una cadena desde el cliente, la muestra en la consola y luego la devuelve al cliente. La cadena del cliente debe contener la cadena "\<EOF>" para indicar el final del mensaje.  

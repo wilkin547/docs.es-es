@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541851"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Interfaces relacionadas con el enlace de datos
 Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], puede crear varias estructuras de datos distintas para satisfacer las necesidades de enlace de la aplicación y los datos con los que trabaja. Es posible que quiera crear sus propias clases que proporcionen o consuman datos en Windows Forms. Estos objetos pueden ofrecer varios niveles de funcionalidad y complejidad, desde el enlace de datos básico hasta proporcionar compatibilidad en tiempo de diseño, comprobación de errores, notificación de cambios o incluso compatibilidad con la reversión estructurada de los cambios hechos en los datos.  

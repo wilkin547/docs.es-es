@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1dccb2a3a3f3aaf0f209c8f3543056ab81c562dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443904"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString (Método)
 Emite la cadena especificada en el código base.  

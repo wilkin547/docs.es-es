@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542202"
 ---
 # <a name="user-drawn-controls"></a>Controles dibujados por el usuario
 .NET Framework proporciona la capacidad de desarrollar fácilmente sus propios controles. Puede crear un control de usuario, que es un conjunto de controles estándar Unidos mediante código, o puede diseñar su propio control desde el principio de seguridad. Incluso puede usar la herencia para crear un control que hereda de un control existente y agregar a su funcionalidad inherente. Independientemente del método que utilice, .NET Framework proporciona la funcionalidad necesaria para dibujar una interfaz gráfica personalizada para cualquier control que cree.  

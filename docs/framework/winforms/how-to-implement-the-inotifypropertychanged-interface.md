@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536417"
 ---
 # <a name="how-to-implement-the-inotifypropertychanged-interface"></a>Cómo: Implementar la interfaz INotifyPropertyChanged
 En el ejemplo de código siguiente se muestra cómo implementar el <xref:System.ComponentModel.INotifyPropertyChanged> interfaz. Implemente esta interfaz en los objetos de negocios que se utilizan en el enlace de datos de formularios Windows Forms. Cuando se implementa, la interfaz comunica con un control enlazado los cambios de propiedad en un objeto comercial.  

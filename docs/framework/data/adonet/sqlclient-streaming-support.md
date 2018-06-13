@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364741"
 ---
 # <a name="sqlclient-streaming-support"></a>Compatibilidad de transmisión de datos de SqlClient
 Compatibilidad entre SQL Server y una aplicación de streaming (nuevo en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) es compatible con los datos no estructurados en el servidor (archivos de documentos, imágenes y multimedia). Una base de datos de SQL Server puede almacenar objetos binarios grandes (BLOB), pero la recuperación de BLOB puede usar una gran cantidad de memoria.  

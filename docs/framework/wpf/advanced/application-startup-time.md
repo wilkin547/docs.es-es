@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541955"
 ---
 # <a name="application-startup-time"></a>Tiempo de inicio de una aplicación
 La cantidad de tiempo necesaria para iniciar una aplicación de WPF puede variar en gran medida. En este tema se describen varias técnicas para reducir el tiempo de inicio percibido y real de una aplicación de Windows Presentation Foundation (WPF).  

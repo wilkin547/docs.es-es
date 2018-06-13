@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386342"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>MDA de invalidMemberDeclaration
 El asistente para la depuración administrada (MDA) de `invalidMemberDeclaration` se activa para informar acerca de un error que se produce a la hora de determinar cómo calcular las referencias de los parámetros de un miembro al que se va a llamar desde COM.  

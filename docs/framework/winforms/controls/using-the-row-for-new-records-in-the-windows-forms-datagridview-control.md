@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540665"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Utilizar la fila de nuevos registros en el control DataGridView de formularios Windows Forms
 Cuando se usa un <xref:System.Windows.Forms.DataGridView> para modificar los datos en la aplicación, a menudo desea ofrecer a los usuarios la posibilidad de agregar nuevas filas de datos al almacén de datos. El <xref:System.Windows.Forms.DataGridView> control es compatible con esta funcionalidad proporcionando una fila para nuevos registros, que siempre se muestra como la última fila. Se marca con un símbolo de asterisco (*) en el encabezado de fila. Las secciones siguientes tratan algunas de las cosas que debe considerar cuando se programa con la fila de nuevos registros habilitada.  

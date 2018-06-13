@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5042f59b3716d077cc441585004e075b765c0cfb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407860"
 ---
 # <a name="icordebugassembly3-interface"></a>Interfaz ICorDebugAssembly3
 Extiende lógicamente la ICorDebugAssembly (interfaz) para proporcionar compatibilidad con los ensamblados de contenedor y sus contenidos.  

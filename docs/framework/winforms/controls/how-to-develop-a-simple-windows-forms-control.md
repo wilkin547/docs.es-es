@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539671"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Cómo: Desarrollar un control de formularios Windows Forms sencillo
 Esta sección le guiará a través de los pasos clave para crear un control de Windows Forms personalizado. El control sencillo desarrollado en este tutorial permite la alineación de sus <xref:System.Windows.Forms.Control.Text%2A> propiedad que debe cambiarse. No genera ni controla eventos.  

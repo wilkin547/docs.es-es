@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543291"
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a>Cómo: Insertar un elemento en texto mediante programación
 En el ejemplo siguiente se muestra cómo utilizar dos <xref:System.Windows.Documents.TextPointer> objetos para especificar un intervalo de texto que se va a aplicar un <xref:System.Windows.Documents.Span> elemento.  

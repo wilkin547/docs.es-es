@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485823"
 ---
 # <a name="extending-bindings"></a>Extensión de enlaces
 Los enlaces especifican el transporte, codificación y protocolo requeridos para conectar a un punto de conexión. Las extensiones de enlace y los enlaces personalizados implementan la funcionalidad de la comunicación personalizada exigida para admitir las características de la aplicación.  

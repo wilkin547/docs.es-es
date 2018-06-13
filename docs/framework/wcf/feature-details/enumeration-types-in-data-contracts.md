@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494522"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Tipos de enumeración en contratos de datos
 Las enumeraciones se pueden expresar en el modelo del contrato de datos. En este tema se exponen varios ejemplos que explican el modelo de programación.  

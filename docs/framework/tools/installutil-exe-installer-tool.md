@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410152"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Herramienta Installer)
 La herramienta de instalación es una utilidad de la línea de comandos que le permite instalar y desinstalar recursos de servidor mediante la ejecución de los componentes del instalador en ensamblados específicos. Esta herramienta funciona junto con clases del espacio de nombres <xref:System.Configuration.Install>.  

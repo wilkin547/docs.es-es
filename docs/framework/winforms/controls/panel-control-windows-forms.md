@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536727"
 ---
 # <a name="panel-control-windows-forms"></a>Control Panel (Windows Forms)
 Formularios Windows Forms `Panel` controles se utilizan para proporcionar un agrupamiento identificable para otros controles. Por lo general, utilice los paneles para subdividir un formulario por funciones. El `Panel` control es similar a la <xref:System.Windows.Forms.GroupBox> control; sin embargo, solo la `Panel` control puede tener barras de desplazamiento y solo el <xref:System.Windows.Forms.GroupBox> control muestra un título.  

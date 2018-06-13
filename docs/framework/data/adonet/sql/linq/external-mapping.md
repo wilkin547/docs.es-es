@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365220"
 ---
 # <a name="external-mapping"></a>Asignación externa
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite *asignación externa*, un proceso por el que utiliza un archivo XML independiente para especificar la asignación entre el modelo de datos de la base de datos y su modelo de objetos. Las ventajas de utilizar una archivo de asignación externa son las siguientes:  

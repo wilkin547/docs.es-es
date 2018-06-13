@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638559"
 ---
 # <a name="the-value-of-ltargumentnamegt-must-be-a-positive-number"></a>El valor de &lt;argumentname&gt; debe ser un número positivo.
 El valor de la propiedad <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> debe ser mayor que cero.  

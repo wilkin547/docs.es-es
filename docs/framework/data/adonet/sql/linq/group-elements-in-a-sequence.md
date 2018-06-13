@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364508"
 ---
 # <a name="group-elements-in-a-sequence"></a>Agrupar elementos de una secuencia
 El operador <xref:System.Linq.Enumerable.GroupBy%2A> agrupa los elementos de una secuencia. En los ejemplos siguientes se utiliza la base de datos Northwind.  

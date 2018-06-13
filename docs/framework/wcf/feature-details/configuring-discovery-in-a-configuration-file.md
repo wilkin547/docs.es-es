@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492292"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Configurar la detección en un archivo de configuración
 Hay cuatro grupos principales de configuración usados en la detección. Este tema describirá brevemente cada uno de ellos y mostrará ejemplos de cómo configurarlos. Tras cada sección, se ofrece un vínculo a documentación más detallada sobre cada área.  

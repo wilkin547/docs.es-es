@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488223"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Cómo: Exportar aserciones de directivas personalizadas
 Las aserciones de directivas describen las funciones y requisitos de un punto de conexión de servicio. Las aplicaciones de servicio pueden utilizar las aserciones de directivas personalizadas en metadatos del servicio para comunicarse el punto de conexión, enlace o información de personalización de contrato a la aplicación cliente. Puede usar Windows Communication Foundation (WCF) para exportar las aserciones en expresiones de directivas adjuntas a enlaces de WSDL en el punto de conexión, operación o asuntos del mensaje, dependiendo de las capacidades o requisitos que esté comunicando.  

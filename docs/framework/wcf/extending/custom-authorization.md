@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487862"
 ---
 # <a name="custom-authorization"></a>Autorización personalizada
 La autorización es el proceso de controlar el acceso a los recursos y tareas. Los temas en esta sección le permiten crear para implementar los diferentes tipos de demanda, o directivas.  

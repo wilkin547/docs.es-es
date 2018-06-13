@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542628"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Cómo: Agregar un controlador de eventos mediante código
 Este ejemplo muestra cómo agregar un controlador de eventos a un elemento mediante código.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387866"
 ---
 # <a name="reentrancy-mda"></a>MDA de reentrada
 El Asistente para la depuración administrada (MDA) `reentrancy` se activa cuando se realiza un intento de realizar la transición de código nativo a código administrado en casos donde no se realizó un cambio anterior desde código administrado a código nativo a través de una transición ordenada.  

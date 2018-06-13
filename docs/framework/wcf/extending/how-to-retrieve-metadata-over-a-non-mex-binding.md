@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488093"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Cómo: Recuperar metadatos mediante un enlace que no sea MEX
 En este tema se describe cómo recuperar metadatos de un punto de conexión MEX mediante un enlace que no sea MEX. El código en este ejemplo se basa en el [personalizado extremo de metadatos seguros](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) ejemplo.  
