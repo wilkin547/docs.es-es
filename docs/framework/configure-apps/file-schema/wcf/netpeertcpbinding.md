@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750887"
 ---
 # <a name="ltnetpeertcpbindinggt"></a><span data-ttu-id="d48f2-102">&lt;netPeerTcpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="d48f2-102">&lt;netPeerTcpBinding&gt;</span></span>
 <span data-ttu-id="d48f2-103">Define un enlace para la mensajería TCP concreta del canal del par.</span><span class="sxs-lookup"><span data-stu-id="d48f2-103">Defines a binding for peer channel specific TCP messaging.</span></span>  

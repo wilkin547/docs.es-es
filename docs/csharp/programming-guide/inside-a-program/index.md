@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339399"
 ---
 # <a name="inside-a-c-program"></a><span data-ttu-id="3f615-102">Dentro de un programa de C#</span><span class="sxs-lookup"><span data-stu-id="3f615-102">Inside a C# Program</span></span>
 <span data-ttu-id="3f615-103">En esta sección, se describe la estructura general de un programa de C# y se incluye el ejemplo estándar</span><span class="sxs-lookup"><span data-stu-id="3f615-103">The section discusses the general structure of a C# program, and includes the standard "Hello, World!"</span></span> <span data-ttu-id="3f615-104">"Hola mundo".</span><span class="sxs-lookup"><span data-stu-id="3f615-104">example.</span></span>  

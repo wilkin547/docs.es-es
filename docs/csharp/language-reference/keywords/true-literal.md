@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268988"
 ---
 # <a name="true-literal-c-reference"></a><span data-ttu-id="d839f-102">true (Literal, Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="d839f-102">true Literal (C# Reference)</span></span>
 <span data-ttu-id="d839f-103">Representa el valor booleano true.</span><span class="sxs-lookup"><span data-stu-id="d839f-103">Represents the boolean value true.</span></span>  

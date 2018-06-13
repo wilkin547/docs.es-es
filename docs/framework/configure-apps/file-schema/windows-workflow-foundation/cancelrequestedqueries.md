@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757026"
 ---
 # <a name="ltcancelrequestedqueriesgt"></a><span data-ttu-id="9f75a-102">&lt;cancelRequestedQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="9f75a-102">&lt;cancelRequestedQueries&gt;</span></span>
 <span data-ttu-id="9f75a-103">Representa una colección de consultas que se usan para realizar el seguimiento de las solicitudes para cancelar una actividad secundaria por parte de la actividad primaria.</span><span class="sxs-lookup"><span data-stu-id="9f75a-103">Represents a collection of queries that are used to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="9f75a-104">La consulta es necesaria para que un participante del seguimiento se suscriba con el fin de cancelar los objetos de registro de solicitud.</span><span class="sxs-lookup"><span data-stu-id="9f75a-104">The query is necessary for a tracking participant to subscribe to cancel request record objects.</span></span>  
