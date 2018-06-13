@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318804"
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a>Buscar un atributo del elemento principal (XPath-LINQ to XML) (C#)
 En este tema se muestra cómo desplazarse hasta el elemento primario y buscar un atributo en él.  

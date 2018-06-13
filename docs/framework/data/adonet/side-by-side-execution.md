@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365454"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Ejecución en paralelo en ADO.NET
 La ejecución en paralelo en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] es la posibilidad de ejecutar una aplicación en un equipo que tiene instaladas varias versiones de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], utilizando exclusivamente la versión para la que se ha compilado la aplicación. Para obtener información detallada sobre la configuración de ejecución en paralelo, vea [ejecución Side-by-Side](../../../../docs/framework/deployment/side-by-side-execution.md).  

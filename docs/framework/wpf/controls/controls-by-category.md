@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552004"
 ---
 # <a name="controls-by-category"></a>Agrupar controles por categoría
 Controles de Windows Presentation Foundation (WPF) pueden agruparse lógicamente en varias categorías. Estas categorías se pueden usar para seleccionar el control adecuado para su escenario al ayudarle a ver qué controles tienen patrones de uso o funcionalidad similares.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340026"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Cómo: Detectar excepciones no compatibles con CLS
 Algunos lenguajes. NET, incluido C++/CLI, permiten que los objetos inicien excepciones que no se derivan de <xref:System.Exception>. Dichas excepciones se denominan *excepciones de no compatibilidad con CLS* o *no excepciones*. En Visual C# no se pueden producir excepciones de no compatibilidad con CLS, pero se pueden detectar de dos formas:  

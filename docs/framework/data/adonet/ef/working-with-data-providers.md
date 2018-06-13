@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765700"
 ---
 # <a name="working-with-data-providers"></a>Trabajar con proveedores de datos
 Los temas de esta sección describen los servicios y los proveedores que transforman las consultas sobre un modelo conceptual en consultas nativas sobre un origen de datos que Entity Framework admite.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526438"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Acceso a miembros no expuestos en el Modelo de objetos de documento HTML administrado
 Administrado HTML Document Object Model (DOM) contiene una clase denominada <xref:System.Windows.Forms.HtmlElement> que expone las propiedades, métodos y eventos que todos los elementos HTML tienen en común. A veces, sin embargo, debe tener acceso a miembros que la interfaz administrada no expone directamente. En este tema se describen dos formas para tener acceso a miembros no expuestos, incluidos [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] y las funciones de VBScript definidas dentro de una página Web.  

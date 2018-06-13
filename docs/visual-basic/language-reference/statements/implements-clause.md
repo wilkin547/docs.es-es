@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603410"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements (Cláusula, Visual Basic)
 Indica que un miembro de clase o estructura proporciona la implementación para un miembro definido en una interfaz.  

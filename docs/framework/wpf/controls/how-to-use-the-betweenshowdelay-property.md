@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552719"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>Cómo: Usar la propiedad BetweenShowDelay
 Este ejemplo muestra cómo utilizar el <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propiedad de tiempo para que la información sobre herramientas aparezca rápidamente, con poco o ningún retraso: cuando un usuario mueve el puntero del mouse en una información sobre herramientas directamente a otro.  

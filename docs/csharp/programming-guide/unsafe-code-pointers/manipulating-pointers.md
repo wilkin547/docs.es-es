@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339686"
 ---
 # <a name="manipulating-pointers-c-programming-guide"></a>Manipular punteros (Guía de programación de C#)
 Esta sección contiene las siguientes operaciones de puntero:  

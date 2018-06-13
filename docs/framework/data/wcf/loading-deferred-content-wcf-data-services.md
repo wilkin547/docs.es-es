@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365207"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Cargar contenido diferido (Data Services de WCF)
 De forma predeterminada, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limita la cantidad de datos que devuelve una consulta. Sin embargo, es posible cargar explícitamente datos adicionales, incluidos los datos de la respuesta paginados, las entidades relacionadas y los flujos de datos binarios, del servicio de datos cuando sea necesario. En este tema se describe cómo cargar dicho contenido aplazado en una aplicación.  

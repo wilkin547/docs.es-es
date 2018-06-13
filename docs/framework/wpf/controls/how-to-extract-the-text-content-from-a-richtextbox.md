@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553941"
 ---
 # <a name="how-to-extract-the-text-content-from-a-richtextbox"></a>Cómo: Extraer el contenido de texto de un control RichTextBox
 Este ejemplo muestra cómo extraer el contenido de un <xref:System.Windows.Controls.RichTextBox> como texto sin formato.  

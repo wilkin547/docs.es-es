@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528608"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Modos de presentación de datos en el control DataGridView de formularios Windows Forms
 El <xref:System.Windows.Forms.DataGridView> control puede mostrar datos en tres modos distintos: dependientes, independientes y virtual. Elija el modo más adecuado según sus requisitos.  

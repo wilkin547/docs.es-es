@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363268"
 ---
 # <a name="implementing-a-resource-manager"></a>Implementar un administrador de recursos
 Un administrador de recursos administra cada recurso utilizado, cuyas acciones coordina un administrador de transacciones. Los administradores de recursos trabajan en cooperación con el administrador de transacciones para proporcionar una garantía de atomicidad y aislamiento a la aplicación. Microsoft SQL Server, colas de mensajes durables, las tablas hash en memoria, son ejemplos de administradores de recursos.  

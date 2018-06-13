@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767588"
 ---
 # <a name="lttransportgt-of-ltwshttpbindinggt"></a>Elemento &lt;transport&gt; de &lt;wsHttpBinding&gt;
 Define la configuración de autenticación del transporte HTTP.  

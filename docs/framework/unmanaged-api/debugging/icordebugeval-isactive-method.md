@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2fe29b3e35d2fbd42fac2d9ec1d1c594abe1239c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411163"
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive (Método)
 Obtiene un valor que indica si este objeto ICorDebugEval se está ejecutando actualmente.  
