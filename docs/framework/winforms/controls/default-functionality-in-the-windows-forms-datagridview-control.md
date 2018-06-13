@@ -1,62 +1,51 @@
 ---
 title: Funcionalidad predeterminada en el control DataGridView de formularios Windows Forms
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecb8cdaa4e8eb0498259c597e0de3f80c3106549
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a475d8bce388860c88571fbf638d206bfe01223d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526632"
 ---
-# <a name="default-functionality-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="0e69c-102">Funcionalidad predeterminada en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0e69c-102">Default Functionality in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="0e69c-103">Los formularios Windows Forms <xref:System.Windows.Forms.DataGridView> control proporciona a los usuarios con una cantidad significativa de funcionalidad predeterminada.</span><span class="sxs-lookup"><span data-stu-id="0e69c-103">The Windows Forms <xref:System.Windows.Forms.DataGridView> control provides users with a significant amount of default functionality.</span></span>  
+# <a name="default-functionality-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="1e7fe-102">Funcionalidad predeterminada en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1e7fe-102">Default Functionality in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="1e7fe-103">Los formularios Windows Forms <xref:System.Windows.Forms.DataGridView> control proporciona a los usuarios con una cantidad significativa de funcionalidad predeterminada.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-103">The Windows Forms <xref:System.Windows.Forms.DataGridView> control provides users with a significant amount of default functionality.</span></span>  
   
-## <a name="default-functionality"></a><span data-ttu-id="0e69c-104">Funcionalidad predeterminada</span><span class="sxs-lookup"><span data-stu-id="0e69c-104">Default Functionality</span></span>  
- <span data-ttu-id="0e69c-105">De forma predeterminada, un <xref:System.Windows.Forms.DataGridView> control:</span><span class="sxs-lookup"><span data-stu-id="0e69c-105">By default, a <xref:System.Windows.Forms.DataGridView> control:</span></span>  
+## <a name="default-functionality"></a><span data-ttu-id="1e7fe-104">Funcionalidad predeterminada</span><span class="sxs-lookup"><span data-stu-id="1e7fe-104">Default Functionality</span></span>  
+ <span data-ttu-id="1e7fe-105">De forma predeterminada, un <xref:System.Windows.Forms.DataGridView> control:</span><span class="sxs-lookup"><span data-stu-id="1e7fe-105">By default, a <xref:System.Windows.Forms.DataGridView> control:</span></span>  
   
--   <span data-ttu-id="0e69c-106">Muestra automáticamente encabezados de columna y encabezados de fila que permanecen visibles cuando la tabla se desplaza verticalmente.</span><span class="sxs-lookup"><span data-stu-id="0e69c-106">Automatically displays column headers and row headers that remain visible as the table scrolls vertically.</span></span>  
+-   <span data-ttu-id="1e7fe-106">Muestra automáticamente encabezados de columna y encabezados de fila que permanecen visibles cuando la tabla se desplaza verticalmente.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-106">Automatically displays column headers and row headers that remain visible as the table scrolls vertically.</span></span>  
   
--   <span data-ttu-id="0e69c-107">Tiene un encabezado de fila que contiene un indicador de selección de la fila actual.</span><span class="sxs-lookup"><span data-stu-id="0e69c-107">Has a row header that contains a selection indicator for the current row.</span></span>  
+-   <span data-ttu-id="1e7fe-107">Tiene un encabezado de fila que contiene un indicador de selección de la fila actual.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-107">Has a row header that contains a selection indicator for the current row.</span></span>  
   
--   <span data-ttu-id="0e69c-108">Tiene un rectángulo de selección en la primera celda.</span><span class="sxs-lookup"><span data-stu-id="0e69c-108">Has a selection rectangle in the first cell.</span></span>  
+-   <span data-ttu-id="1e7fe-108">Tiene un rectángulo de selección en la primera celda.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-108">Has a selection rectangle in the first cell.</span></span>  
   
--   <span data-ttu-id="0e69c-109">Tiene columnas que pueden cambiarse automáticamente cuando el usuario hace doble clic en los divisores de columna.</span><span class="sxs-lookup"><span data-stu-id="0e69c-109">Has columns that can be automatically resized when the user double-clicks the column dividers.</span></span>  
+-   <span data-ttu-id="1e7fe-109">Tiene columnas que pueden cambiarse automáticamente cuando el usuario hace doble clic en los divisores de columna.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-109">Has columns that can be automatically resized when the user double-clicks the column dividers.</span></span>  
   
--   <span data-ttu-id="0e69c-110">Admite automáticamente los estilos visuales en Windows XP y la familia Windows Server 2003 cuando la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método se llama desde la aplicación `Main` método.</span><span class="sxs-lookup"><span data-stu-id="0e69c-110">Automatically supports visual styles on Windows XP and the Windows Server 2003 family when the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method is called from the application's `Main` method.</span></span>  
+-   <span data-ttu-id="1e7fe-110">Admite automáticamente los estilos visuales en Windows XP y la familia Windows Server 2003 cuando la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método se llama desde la aplicación `Main` método.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-110">Automatically supports visual styles on Windows XP and the Windows Server 2003 family when the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method is called from the application's `Main` method.</span></span>  
   
- <span data-ttu-id="0e69c-111">Además, el contenido de un <xref:System.Windows.Forms.DataGridView> control puede modificarse de forma predeterminada:</span><span class="sxs-lookup"><span data-stu-id="0e69c-111">Additionally, the contents of a <xref:System.Windows.Forms.DataGridView> control can be edited by default:</span></span>  
+ <span data-ttu-id="1e7fe-111">Además, el contenido de un <xref:System.Windows.Forms.DataGridView> control puede modificarse de forma predeterminada:</span><span class="sxs-lookup"><span data-stu-id="1e7fe-111">Additionally, the contents of a <xref:System.Windows.Forms.DataGridView> control can be edited by default:</span></span>  
   
--   <span data-ttu-id="0e69c-112">Si el usuario hace doble clic o presiona F2 en una celda, el control pone la celda en modo de edición y actualiza el contenido de la celda cuando el usuario escribe automáticamente.</span><span class="sxs-lookup"><span data-stu-id="0e69c-112">If the user double-clicks or presses F2 in a cell, the control automatically puts the cell into edit mode and updates the contents of the cell as the user types.</span></span>  
+-   <span data-ttu-id="1e7fe-112">Si el usuario hace doble clic o presiona F2 en una celda, el control pone la celda en modo de edición y actualiza el contenido de la celda cuando el usuario escribe automáticamente.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-112">If the user double-clicks or presses F2 in a cell, the control automatically puts the cell into edit mode and updates the contents of the cell as the user types.</span></span>  
   
--   <span data-ttu-id="0e69c-113">Si el usuario se desplaza hasta el final de la cuadrícula, el usuario verá que una fila para agregar nuevos registros está presente.</span><span class="sxs-lookup"><span data-stu-id="0e69c-113">If the user scrolls to the end of the grid, the user will see that a row for adding new records is present.</span></span> <span data-ttu-id="0e69c-114">Cuando el usuario hace clic en esta fila, se agrega una nueva fila a la <xref:System.Windows.Forms.DataGridView> control, con los valores predeterminados.</span><span class="sxs-lookup"><span data-stu-id="0e69c-114">When the user clicks this row, a new row is added to the <xref:System.Windows.Forms.DataGridView> control, with default values.</span></span> <span data-ttu-id="0e69c-115">Cuando el usuario presiona ESC, esta nueva fila desaparece.</span><span class="sxs-lookup"><span data-stu-id="0e69c-115">When the user presses ESC, this new row disappears.</span></span>  
+-   <span data-ttu-id="1e7fe-113">Si el usuario se desplaza hasta el final de la cuadrícula, el usuario verá que una fila para agregar nuevos registros está presente.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-113">If the user scrolls to the end of the grid, the user will see that a row for adding new records is present.</span></span> <span data-ttu-id="1e7fe-114">Cuando el usuario hace clic en esta fila, se agrega una nueva fila a la <xref:System.Windows.Forms.DataGridView> control, con los valores predeterminados.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-114">When the user clicks this row, a new row is added to the <xref:System.Windows.Forms.DataGridView> control, with default values.</span></span> <span data-ttu-id="1e7fe-115">Cuando el usuario presiona ESC, esta nueva fila desaparece.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-115">When the user presses ESC, this new row disappears.</span></span>  
   
--   <span data-ttu-id="0e69c-116">Si el usuario hace clic en un encabezado de fila, se selecciona la fila completa.</span><span class="sxs-lookup"><span data-stu-id="0e69c-116">If the user clicks a row header, the whole row is selected.</span></span>  
+-   <span data-ttu-id="1e7fe-116">Si el usuario hace clic en un encabezado de fila, se selecciona la fila completa.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-116">If the user clicks a row header, the whole row is selected.</span></span>  
   
- <span data-ttu-id="0e69c-117">Al enlazar un <xref:System.Windows.Forms.DataGridView> control a un origen de datos estableciendo su <xref:System.Windows.Forms.DataGridView.DataSource%2A> propiedad, el control:</span><span class="sxs-lookup"><span data-stu-id="0e69c-117">When you bind a <xref:System.Windows.Forms.DataGridView> control to a data source by setting its <xref:System.Windows.Forms.DataGridView.DataSource%2A> property, the control:</span></span>  
+ <span data-ttu-id="1e7fe-117">Al enlazar un <xref:System.Windows.Forms.DataGridView> control a un origen de datos estableciendo su <xref:System.Windows.Forms.DataGridView.DataSource%2A> propiedad, el control:</span><span class="sxs-lookup"><span data-stu-id="1e7fe-117">When you bind a <xref:System.Windows.Forms.DataGridView> control to a data source by setting its <xref:System.Windows.Forms.DataGridView.DataSource%2A> property, the control:</span></span>  
   
--   <span data-ttu-id="0e69c-118">Usa automáticamente los nombres de columnas del origen de datos como el texto del encabezado de columna.</span><span class="sxs-lookup"><span data-stu-id="0e69c-118">Automatically uses the names of the data source's columns as the column header text.</span></span>  
+-   <span data-ttu-id="1e7fe-118">Usa automáticamente los nombres de columnas del origen de datos como el texto del encabezado de columna.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-118">Automatically uses the names of the data source's columns as the column header text.</span></span>  
   
--   <span data-ttu-id="0e69c-119">Se rellena con el contenido del origen de datos.</span><span class="sxs-lookup"><span data-stu-id="0e69c-119">Is populated with the contents of the data source.</span></span> <span data-ttu-id="0e69c-120"><xref:System.Windows.Forms.DataGridView>las columnas se crean automáticamente para cada columna del origen de datos.</span><span class="sxs-lookup"><span data-stu-id="0e69c-120"><xref:System.Windows.Forms.DataGridView> columns are automatically created for each column in the data source.</span></span>  
+-   <span data-ttu-id="1e7fe-119">Se rellena con el contenido del origen de datos.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-119">Is populated with the contents of the data source.</span></span> <span data-ttu-id="1e7fe-120"><xref:System.Windows.Forms.DataGridView> las columnas se crean automáticamente para cada columna del origen de datos.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-120"><xref:System.Windows.Forms.DataGridView> columns are automatically created for each column in the data source.</span></span>  
   
--   <span data-ttu-id="0e69c-121">Crea una fila para cada fila visible en la tabla.</span><span class="sxs-lookup"><span data-stu-id="0e69c-121">Creates a row for each visible row in the table.</span></span>  
+-   <span data-ttu-id="1e7fe-121">Crea una fila para cada fila visible en la tabla.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-121">Creates a row for each visible row in the table.</span></span>  
   
--   <span data-ttu-id="0e69c-122">Se ordena automáticamente las filas basándose en los datos subyacentes cuando el usuario hace clic en un encabezado de columna.</span><span class="sxs-lookup"><span data-stu-id="0e69c-122">Automatically sorts the rows based on the underlying data when the user clicks a column header.</span></span>  
+-   <span data-ttu-id="1e7fe-122">Se ordena automáticamente las filas basándose en los datos subyacentes cuando el usuario hace clic en un encabezado de columna.</span><span class="sxs-lookup"><span data-stu-id="1e7fe-122">Automatically sorts the rows based on the underlying data when the user clicks a column header.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0e69c-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="0e69c-123">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="1e7fe-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="1e7fe-123">See Also</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
- [<span data-ttu-id="0e69c-124">DataGridView (control)</span><span class="sxs-lookup"><span data-stu-id="0e69c-124">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+ [<span data-ttu-id="1e7fe-124">DataGridView (control)</span><span class="sxs-lookup"><span data-stu-id="1e7fe-124">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

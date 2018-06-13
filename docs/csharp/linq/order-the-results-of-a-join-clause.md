@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269705"
 ---
 # <a name="order-the-results-of-a-join-clause"></a><span data-ttu-id="461c4-103">Ordenar los resultados de una cláusula join</span><span class="sxs-lookup"><span data-stu-id="461c4-103">Order the results of a join clause</span></span>
 <span data-ttu-id="461c4-104">En este ejemplo se muestra cómo ordenar los resultados de una operación de combinación.</span><span class="sxs-lookup"><span data-stu-id="461c4-104">This example shows how to order the results of a join operation.</span></span> <span data-ttu-id="461c4-105">Observe que la ordenación se realiza después de la combinación.</span><span class="sxs-lookup"><span data-stu-id="461c4-105">Note that the ordering is performed after the join.</span></span> <span data-ttu-id="461c4-106">Aunque puede usar una cláusula `orderby` con una o varias de las secuencias de origen antes de la combinación, normalmente no se recomienda.</span><span class="sxs-lookup"><span data-stu-id="461c4-106">Although you can use an `orderby` clause with one or more of the source sequences before the join, generally we do not recommend it.</span></span> <span data-ttu-id="461c4-107">Algunos proveedores LINQ podrían no conservar esa ordenación después de la combinación.</span><span class="sxs-lookup"><span data-stu-id="461c4-107">Some LINQ providers might not preserve that ordering after the join.</span></span>  

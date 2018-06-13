@@ -1,35 +1,24 @@
 ---
-title: "Llamadas a métodos locales"
-ms.custom: 
+title: Llamadas a métodos locales
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d652072d5f2e0e0cfc74d627b573389864bca9dc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 366c174a13e9a1a1928ef943febf199ae8485dfb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352443"
 ---
-# <a name="local-method-calls"></a><span data-ttu-id="56742-102">Llamadas a métodos locales</span><span class="sxs-lookup"><span data-stu-id="56742-102">Local Method Calls</span></span>
-<span data-ttu-id="56742-103">Las llamadas a métodos locales son las que se ejecutan dentro del modelo de objetos.</span><span class="sxs-lookup"><span data-stu-id="56742-103">A local method call is one that is executed within the object model.</span></span> <span data-ttu-id="56742-104">Las llamadas a métodos remotos son la que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convierte a SQL y después transmite al motor de base de datos para su ejecución.</span><span class="sxs-lookup"><span data-stu-id="56742-104">A remote method call is one that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translates to SQL and transmits to the database engine for execution.</span></span> <span data-ttu-id="56742-105">Llamadas a métodos locales son necesarios cuando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no se puede convertir una llamada a SQL.</span><span class="sxs-lookup"><span data-stu-id="56742-105">Local method calls are needed when [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] cannot translate the call into SQL.</span></span> <span data-ttu-id="56742-106">En caso contrario, un <xref:System.InvalidOperationException> se produce.</span><span class="sxs-lookup"><span data-stu-id="56742-106">Otherwise, an <xref:System.InvalidOperationException> is thrown.</span></span>  
+# <a name="local-method-calls"></a><span data-ttu-id="53b71-102">Llamadas a métodos locales</span><span class="sxs-lookup"><span data-stu-id="53b71-102">Local Method Calls</span></span>
+<span data-ttu-id="53b71-103">Las llamadas a métodos locales son las que se ejecutan dentro del modelo de objetos.</span><span class="sxs-lookup"><span data-stu-id="53b71-103">A local method call is one that is executed within the object model.</span></span> <span data-ttu-id="53b71-104">Las llamadas a métodos remotos son la que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convierte a SQL y después transmite al motor de base de datos para su ejecución.</span><span class="sxs-lookup"><span data-stu-id="53b71-104">A remote method call is one that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translates to SQL and transmits to the database engine for execution.</span></span> <span data-ttu-id="53b71-105">Llamadas a métodos locales son necesarios cuando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no se puede convertir una llamada a SQL.</span><span class="sxs-lookup"><span data-stu-id="53b71-105">Local method calls are needed when [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] cannot translate the call into SQL.</span></span> <span data-ttu-id="53b71-106">En caso contrario, un <xref:System.InvalidOperationException> se produce.</span><span class="sxs-lookup"><span data-stu-id="53b71-106">Otherwise, an <xref:System.InvalidOperationException> is thrown.</span></span>  
   
-## <a name="example-1"></a><span data-ttu-id="56742-107">Ejemplo 1</span><span class="sxs-lookup"><span data-stu-id="56742-107">Example 1</span></span>  
- <span data-ttu-id="56742-108">En el ejemplo siguiente, se asigna una clase `Order` a la tabla Orders de la base de datos de ejemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="56742-108">In the following example, an `Order` class is mapped to the Orders table in the Northwind sample database.</span></span> <span data-ttu-id="56742-109">Se ha agregado a la clase un método de instancia local.</span><span class="sxs-lookup"><span data-stu-id="56742-109">A local instance method has been added to the class.</span></span>  
+## <a name="example-1"></a><span data-ttu-id="53b71-107">Ejemplo 1</span><span class="sxs-lookup"><span data-stu-id="53b71-107">Example 1</span></span>  
+ <span data-ttu-id="53b71-108">En el ejemplo siguiente, se asigna una clase `Order` a la tabla Orders de la base de datos de ejemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="53b71-108">In the following example, an `Order` class is mapped to the Orders table in the Northwind sample database.</span></span> <span data-ttu-id="53b71-109">Se ha agregado a la clase un método de instancia local.</span><span class="sxs-lookup"><span data-stu-id="53b71-109">A local instance method has been added to the class.</span></span>  
   
- <span data-ttu-id="56742-110">En la consulta 1, el constructor de la clase `Order` se ejecuta localmente.</span><span class="sxs-lookup"><span data-stu-id="56742-110">In Query 1, the constructor for the `Order` class is executed locally.</span></span> <span data-ttu-id="56742-111">En la consulta 2, si [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] intentara convertir `LocalInstanceMethod()` a SQL, se produciría un error y se iniciaría una excepción <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="56742-111">In Query 2, if [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tried to translate `LocalInstanceMethod()`into SQL, the attempt would fail and an <xref:System.InvalidOperationException> exception would be thrown.</span></span> <span data-ttu-id="56742-112">Pero, dado que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proporciona compatibilidad con las llamadas a métodos locales, la consulta 2 no iniciará una excepción.</span><span class="sxs-lookup"><span data-stu-id="56742-112">But because [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides support for local method calls, Query2 will not throw an exception.</span></span>  
+ <span data-ttu-id="53b71-110">En la consulta 1, el constructor de la clase `Order` se ejecuta localmente.</span><span class="sxs-lookup"><span data-stu-id="53b71-110">In Query 1, the constructor for the `Order` class is executed locally.</span></span> <span data-ttu-id="53b71-111">En la consulta 2, si [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] intentara convertir `LocalInstanceMethod()` a SQL, se produciría un error y se iniciaría una excepción <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="53b71-111">In Query 2, if [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tried to translate `LocalInstanceMethod()`into SQL, the attempt would fail and an <xref:System.InvalidOperationException> exception would be thrown.</span></span> <span data-ttu-id="53b71-112">Pero, dado que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proporciona compatibilidad con las llamadas a métodos locales, la consulta 2 no iniciará una excepción.</span><span class="sxs-lookup"><span data-stu-id="53b71-112">But because [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides support for local method calls, Query2 will not throw an exception.</span></span>  
   
  [!code-csharp[DlinqLocalMethodCall#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqLocalMethodCall/cs/Program.cs#1)]
  [!code-vb[DlinqLocalMethodCall#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqLocalMethodCall/vb/Module1.vb#1)]  
@@ -37,5 +26,5 @@ ms.lasthandoff: 01/17/2018
  [!code-csharp[DlinqLocalMethodCall#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqLocalMethodCall/cs/northwind.cs#2)]
  [!code-vb[DlinqLocalMethodCall#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqLocalMethodCall/vb/northwind.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="56742-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="56742-113">See Also</span></span>  
- [<span data-ttu-id="56742-114">Información general</span><span class="sxs-lookup"><span data-stu-id="56742-114">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a><span data-ttu-id="53b71-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="53b71-113">See Also</span></span>  
+ [<span data-ttu-id="53b71-114">Información general</span><span class="sxs-lookup"><span data-stu-id="53b71-114">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

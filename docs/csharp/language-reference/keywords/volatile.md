@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272589"
 ---
 # <a name="volatile-c-reference"></a><span data-ttu-id="efd86-102">volatile (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="efd86-102">volatile (C# Reference)</span></span>
 <span data-ttu-id="efd86-103">La palabra clave `volatile` indica que un campo puede ser modificado por varios subprocesos que se ejecutan al mismo tiempo.</span><span class="sxs-lookup"><span data-stu-id="efd86-103">The `volatile` keyword indicates that a field might be modified by multiple threads that are executing at the same time.</span></span> <span data-ttu-id="efd86-104">Los campos declarados como `volatile` no están sujetos a optimizaciones del compilador que dan por hecho el acceso por parte de un único subproceso.</span><span class="sxs-lookup"><span data-stu-id="efd86-104">Fields that are declared `volatile` are not subject to compiler optimizations that assume access by a single thread.</span></span> <span data-ttu-id="efd86-105">Esto garantiza que el valor más actualizado esté presente en el campo en todo momento.</span><span class="sxs-lookup"><span data-stu-id="efd86-105">This ensures that the most up-to-date value is present in the field at all times.</span></span>  

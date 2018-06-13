@@ -1,14 +1,6 @@
 ---
-title: "IGCHost::GetStats (Método)"
-ms.custom: 
+title: IGCHost::GetStats (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IGCHost.GetStats
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: c4ae022c-46ac-4f19-9ddd-09b955f19412
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8d105b0aed9c47d5e2d8ad664744e6424db63961
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c3e0d6f68ffa5280d4616d4fa4ac60b4cb86f6a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437770"
 ---
-# <a name="igchostgetstats-method"></a><span data-ttu-id="6c69f-102">IGCHost::GetStats (Método)</span><span class="sxs-lookup"><span data-stu-id="6c69f-102">IGCHost::GetStats Method</span></span>
-<span data-ttu-id="6c69f-103">Obtiene las estadísticas para el estado actual del sistema de recopilación de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="6c69f-103">Gets the statistics for the current state of the garbage collection system.</span></span>  
+# <a name="igchostgetstats-method"></a><span data-ttu-id="fa564-102">IGCHost::GetStats (Método)</span><span class="sxs-lookup"><span data-stu-id="fa564-102">IGCHost::GetStats Method</span></span>
+<span data-ttu-id="fa564-103">Obtiene las estadísticas para el estado actual del sistema de recopilación de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="fa564-103">Gets the statistics for the current state of the garbage collection system.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6c69f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6c69f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fa564-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="fa564-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStats (  
@@ -46,21 +35,21 @@ HRESULT GetStats (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6c69f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="6c69f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="fa564-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="fa564-105">Parameters</span></span>  
  `pStats`  
- <span data-ttu-id="6c69f-106">[entrada, salida] Un puntero a un [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) estructura que contiene las estadísticas para el estado actual del sistema de recopilación de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="6c69f-106">[in, out] A pointer to a [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) structure that contains the statistics for the current state of the garbage collection system.</span></span>  
+ <span data-ttu-id="fa564-106">[entrada, salida] Un puntero a un [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) estructura que contiene las estadísticas para el estado actual del sistema de recopilación de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="fa564-106">[in, out] A pointer to a [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) structure that contains the statistics for the current state of the garbage collection system.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6c69f-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="6c69f-107">Remarks</span></span>  
- <span data-ttu-id="6c69f-108">Las estadísticas se pueden utilizar un sistema de asignación inteligente para el sistema de recopilación de elementos no utilizados que funcione.</span><span class="sxs-lookup"><span data-stu-id="6c69f-108">The statistics can be used by a smart allocation system to help the garbage collection system operate.</span></span> <span data-ttu-id="6c69f-109">Por ejemplo, puede determinar el sistema de asignación después de revisar las estadísticas, que necesita agregar más memoria o forzar una recolección.</span><span class="sxs-lookup"><span data-stu-id="6c69f-109">For example, the allocation system may determine, after reviewing the statistics, that it needs to add more memory or force a collection.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fa564-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="fa564-107">Remarks</span></span>  
+ <span data-ttu-id="fa564-108">Las estadísticas se pueden utilizar un sistema de asignación inteligente para el sistema de recopilación de elementos no utilizados que funcione.</span><span class="sxs-lookup"><span data-stu-id="fa564-108">The statistics can be used by a smart allocation system to help the garbage collection system operate.</span></span> <span data-ttu-id="fa564-109">Por ejemplo, puede determinar el sistema de asignación después de revisar las estadísticas, que necesita agregar más memoria o forzar una recolección.</span><span class="sxs-lookup"><span data-stu-id="fa564-109">For example, the allocation system may determine, after reviewing the statistics, that it needs to add more memory or force a collection.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6c69f-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6c69f-110">Requirements</span></span>  
- <span data-ttu-id="6c69f-111">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6c69f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fa564-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fa564-110">Requirements</span></span>  
+ <span data-ttu-id="fa564-111">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fa564-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6c69f-112">**Encabezado:** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="6c69f-112">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="fa564-112">**Encabezado:** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="fa564-112">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="6c69f-113">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6c69f-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="fa564-113">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fa564-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6c69f-114">**Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c69f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="fa564-114">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa564-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c69f-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="6c69f-115">See Also</span></span>  
- [<span data-ttu-id="6c69f-116">IGCHost (interfaz)</span><span class="sxs-lookup"><span data-stu-id="6c69f-116">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fa564-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="fa564-115">See Also</span></span>  
+ [<span data-ttu-id="fa564-116">IGCHost (interfaz)</span><span class="sxs-lookup"><span data-stu-id="fa564-116">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

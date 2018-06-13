@@ -1,33 +1,27 @@
 ---
 title: remove (Referencia de C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - remove_CSharpKeyword
 helpviewer_keywords:
 - remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
-caps.latest.revision: 8
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 66647dee0c4cc728ae5e19457a4a5ef0e7f72248
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 16a169ce1a0ef5dbc29739b2d808acb19737669e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269124"
 ---
-# <a name="remove-c-reference"></a><span data-ttu-id="c83b7-102">remove (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="c83b7-102">remove (C# Reference)</span></span>
-<span data-ttu-id="c83b7-103">La palabra clave contextual `remove` se usa para definir un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente cancela la suscripción a su [evento](../../../csharp/language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="c83b7-103">The `remove` contextual keyword is used to define a custom event accessor that is invoked when client code unsubscribes from your [event](../../../csharp/language-reference/keywords/event.md).</span></span> <span data-ttu-id="c83b7-104">Si proporciona un descriptor de acceso `remove` personalizado, también debe proporcionar un descriptor de acceso [add](../../../csharp/language-reference/keywords/add.md).</span><span class="sxs-lookup"><span data-stu-id="c83b7-104">If you supply a custom `remove` accessor, you must also supply an [add](../../../csharp/language-reference/keywords/add.md) accessor.</span></span>  
+# <a name="remove-c-reference"></a><span data-ttu-id="bda38-102">remove (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="bda38-102">remove (C# Reference)</span></span>
+<span data-ttu-id="bda38-103">La palabra clave contextual `remove` se usa para definir un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente cancela la suscripción a su [evento](../../../csharp/language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="bda38-103">The `remove` contextual keyword is used to define a custom event accessor that is invoked when client code unsubscribes from your [event](../../../csharp/language-reference/keywords/event.md).</span></span> <span data-ttu-id="bda38-104">Si proporciona un descriptor de acceso `remove` personalizado, también debe proporcionar un descriptor de acceso [add](../../../csharp/language-reference/keywords/add.md).</span><span class="sxs-lookup"><span data-stu-id="bda38-104">If you supply a custom `remove` accessor, you must also supply an [add](../../../csharp/language-reference/keywords/add.md) accessor.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c83b7-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c83b7-105">Example</span></span>  
- <span data-ttu-id="c83b7-106">En el ejemplo siguiente, se muestra un evento con descriptores de acceso [add](../../../csharp/language-reference/keywords/add.md) y `remove` personalizados.</span><span class="sxs-lookup"><span data-stu-id="c83b7-106">The following example shows an event with custom [add](../../../csharp/language-reference/keywords/add.md) and `remove` accessors.</span></span> <span data-ttu-id="c83b7-107">Para obtener el ejemplo completo, vea [Cómo: Implementar eventos de interfaz](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span><span class="sxs-lookup"><span data-stu-id="c83b7-107">For the full example, see [How to:  Implement Interface Events](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="bda38-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="bda38-105">Example</span></span>  
+ <span data-ttu-id="bda38-106">En el ejemplo siguiente, se muestra un evento con descriptores de acceso [add](../../../csharp/language-reference/keywords/add.md) y `remove` personalizados.</span><span class="sxs-lookup"><span data-stu-id="bda38-106">The following example shows an event with custom [add](../../../csharp/language-reference/keywords/add.md) and `remove` accessors.</span></span> <span data-ttu-id="bda38-107">Para obtener el ejemplo completo, vea [Cómo: Implementar eventos de interfaz](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span><span class="sxs-lookup"><span data-stu-id="bda38-107">For the full example, see [How to:  Implement Interface Events](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span></span>  
   
  [!code-csharp[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/remove_1.cs)]  
   
- <span data-ttu-id="c83b7-108">Normalmente, no necesita proporcionar sus propios descriptores de acceso de eventos personalizados.</span><span class="sxs-lookup"><span data-stu-id="c83b7-108">You do not typically need to provide your own custom event accessors.</span></span> <span data-ttu-id="c83b7-109">Los descriptores de acceso que se generan automáticamente mediante el compilador cuando declara un evento son suficientes para la mayoría de escenarios.</span><span class="sxs-lookup"><span data-stu-id="c83b7-109">The accessors that are automatically generated by the compiler when you declare an event are sufficient for most scenarios.</span></span>  
+ <span data-ttu-id="bda38-108">Normalmente, no necesita proporcionar sus propios descriptores de acceso de eventos personalizados.</span><span class="sxs-lookup"><span data-stu-id="bda38-108">You do not typically need to provide your own custom event accessors.</span></span> <span data-ttu-id="bda38-109">Los descriptores de acceso que se generan automáticamente mediante el compilador cuando declara un evento son suficientes para la mayoría de escenarios.</span><span class="sxs-lookup"><span data-stu-id="bda38-109">The accessors that are automatically generated by the compiler when you declare an event are sufficient for most scenarios.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c83b7-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="c83b7-110">See Also</span></span>  
- [<span data-ttu-id="c83b7-111">Eventos</span><span class="sxs-lookup"><span data-stu-id="c83b7-111">Events</span></span>](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="bda38-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="bda38-110">See Also</span></span>  
+ [<span data-ttu-id="bda38-111">Eventos</span><span class="sxs-lookup"><span data-stu-id="bda38-111">Events</span></span>](../../../csharp/programming-guide/events/index.md)
