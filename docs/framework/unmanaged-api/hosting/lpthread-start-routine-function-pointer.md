@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5025b75106b2cb0853047a09ca263f795d99633f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441184"
 ---
 # <a name="lpthreadstartroutine-function-pointer"></a>puntero a la función LPTHREAD_START_ROUTINE
 Señala a una función que notifica al host que ha empezado a ejecutar un subproceso.  

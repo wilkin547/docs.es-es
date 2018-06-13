@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 355d2e259adb13da44b09e19872337c17ac20ade
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439327"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager (Método)
 Obtiene un puntero de interfaz a la implementación del host de la interfaz con los valores especificados `IID`.  

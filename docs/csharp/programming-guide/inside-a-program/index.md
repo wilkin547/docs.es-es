@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339399"
 ---
 # <a name="inside-a-c-program"></a>Dentro de un programa de C#
 En esta sección, se describe la estructura general de un programa de C# y se incluye el ejemplo estándar "Hola mundo".  

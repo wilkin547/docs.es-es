@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356608"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>Comportamiento específico en proceso de SQL Server en ADO.NET
 Existen cuatro extensiones funcionales principales para ADO.NET, situadas en el espacio de nombres <xref:Microsoft.SqlServer.Server>, que se utilizan específicamente en proceso: <xref:Microsoft.SqlServer.Server.SqlContext>, <xref:Microsoft.SqlServer.Server.SqlPipe>, <xref:Microsoft.SqlServer.Server.SqlTriggerContext> y <xref:Microsoft.SqlServer.Server.SqlDataRecord>.  

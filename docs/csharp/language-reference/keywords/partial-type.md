@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266694"
 ---
 # <a name="partial-type-c-reference"></a>Tipo parcial (Referencia de C#)
 Las definiciones de tipo parcial permiten dividir la definición de una clase, estructura o interfaz en varios archivos.  

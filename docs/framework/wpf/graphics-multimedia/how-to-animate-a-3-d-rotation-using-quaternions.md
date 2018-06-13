@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556944"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a>Cómo: Animar un giro 3D mediante cuaterniones
 En este ejemplo se muestra cómo animar un giro de un objeto 3D utilizando cuaterniones.  
