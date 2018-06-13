@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745414"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="63b66-102">&lt;add&gt; de &lt;claimTypeRequirements&gt; (elemento)</span><span class="sxs-lookup"><span data-stu-id="63b66-102">&lt;add&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="63b66-103">Especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada.</span><span class="sxs-lookup"><span data-stu-id="63b66-103">Specifies the types of required and optional claims expected to appear in the federated credential.</span></span> <span data-ttu-id="63b66-104">Por ejemplo, los servicios indican los requisitos en las credenciales de entrada, que deben poseer un cierto conjunto de tipos de notificaciones.</span><span class="sxs-lookup"><span data-stu-id="63b66-104">For example, services state the requirements on incoming credentials, which must possess a certain set of claim types.</span></span>  

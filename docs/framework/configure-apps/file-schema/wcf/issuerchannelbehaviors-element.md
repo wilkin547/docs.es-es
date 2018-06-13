@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747062"
 ---
 # <a name="ltissuerchannelbehaviorsgt-element"></a><span data-ttu-id="b59a3-102">&lt;issuerChannelBehaviors&gt; (elemento)</span><span class="sxs-lookup"><span data-stu-id="b59a3-102">&lt;issuerChannelBehaviors&gt; Element</span></span>
 <span data-ttu-id="b59a3-103">Contiene una colección de comportamientos de extremo de cliente de Windows Communication Foundation (WCF) (definidos en la configuración) que debe utilizarse al comunicar con los servicios de Token de servicio especificado.</span><span class="sxs-lookup"><span data-stu-id="b59a3-103">Contains a collection of Windows Communication Foundation (WCF) client endpoint behaviors (defined in the configuration) to be used when communicating with the specified Service Token Services.</span></span> <span data-ttu-id="b59a3-104">Los comportamientos definidos no pueden contener ninguno [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementos.</span><span class="sxs-lookup"><span data-stu-id="b59a3-104">The defined behaviors cannot include any [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elements.</span></span>  

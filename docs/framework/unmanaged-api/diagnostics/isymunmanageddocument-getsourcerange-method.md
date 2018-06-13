@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedDocument::GetSourceRange (Método)"
-ms.custom: 
+title: ISymUnmanagedDocument::GetSourceRange (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedDocument.GetSourceRange
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 20fefee7-1040-41ba-93dc-bd42f68b90c2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dcddebbca74bb94bd2411038a02b900b2f64f2d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 00baed93bd9ab48c92de83dac76931c3149afc2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424643"
 ---
-# <a name="isymunmanageddocumentgetsourcerange-method"></a><span data-ttu-id="81945-102">ISymUnmanagedDocument::GetSourceRange (Método)</span><span class="sxs-lookup"><span data-stu-id="81945-102">ISymUnmanagedDocument::GetSourceRange Method</span></span>
-<span data-ttu-id="81945-103">Devuelve el intervalo especificado de código fuente incrustado en el búfer especificado.</span><span class="sxs-lookup"><span data-stu-id="81945-103">Returns the specified range of the embedded source into the given buffer.</span></span> <span data-ttu-id="81945-104">El búfer debe ser suficientemente grande como para contener el código fuente.</span><span class="sxs-lookup"><span data-stu-id="81945-104">The buffer must be large enough to hold the source.</span></span>  
+# <a name="isymunmanageddocumentgetsourcerange-method"></a><span data-ttu-id="5b209-102">ISymUnmanagedDocument::GetSourceRange (Método)</span><span class="sxs-lookup"><span data-stu-id="5b209-102">ISymUnmanagedDocument::GetSourceRange Method</span></span>
+<span data-ttu-id="5b209-103">Devuelve el intervalo especificado de código fuente incrustado en el búfer especificado.</span><span class="sxs-lookup"><span data-stu-id="5b209-103">Returns the specified range of the embedded source into the given buffer.</span></span> <span data-ttu-id="5b209-104">El búfer debe ser suficientemente grande como para contener el código fuente.</span><span class="sxs-lookup"><span data-stu-id="5b209-104">The buffer must be large enough to hold the source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="81945-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="81945-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5b209-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5b209-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceRange(  
@@ -52,30 +41,30 @@ HRESULT GetSourceRange(
         length_is(*pcSourceBytes)] BYTE source[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="81945-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="81945-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5b209-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5b209-106">Parameters</span></span>  
  `startLine`  
- <span data-ttu-id="81945-107">[in] Línea inicial del documento actual.</span><span class="sxs-lookup"><span data-stu-id="81945-107">[in] The starting line in the current document.</span></span>  
+ <span data-ttu-id="5b209-107">[in] Línea inicial del documento actual.</span><span class="sxs-lookup"><span data-stu-id="5b209-107">[in] The starting line in the current document.</span></span>  
   
  `startColumn`  
- <span data-ttu-id="81945-108">[in] La columna inicial del documento actual.</span><span class="sxs-lookup"><span data-stu-id="81945-108">[in] The starting column in the current document.</span></span>  
+ <span data-ttu-id="5b209-108">[in] La columna inicial del documento actual.</span><span class="sxs-lookup"><span data-stu-id="5b209-108">[in] The starting column in the current document.</span></span>  
   
  `endLine`  
- <span data-ttu-id="81945-109">[in] La línea final del documento actual.</span><span class="sxs-lookup"><span data-stu-id="81945-109">[in] The final line in the current document.</span></span>  
+ <span data-ttu-id="5b209-109">[in] La línea final del documento actual.</span><span class="sxs-lookup"><span data-stu-id="5b209-109">[in] The final line in the current document.</span></span>  
   
  `endColumn`  
- <span data-ttu-id="81945-110">[in] La columna final del documento actual.</span><span class="sxs-lookup"><span data-stu-id="81945-110">[in] The final column in the current document.</span></span>  
+ <span data-ttu-id="5b209-110">[in] La columna final del documento actual.</span><span class="sxs-lookup"><span data-stu-id="5b209-110">[in] The final column in the current document.</span></span>  
   
  `cSourceBytes`  
- <span data-ttu-id="81945-111">[in] El tamaño de la fuente, en bytes.</span><span class="sxs-lookup"><span data-stu-id="81945-111">[in] The size of the source, in bytes.</span></span>  
+ <span data-ttu-id="5b209-111">[in] El tamaño de la fuente, en bytes.</span><span class="sxs-lookup"><span data-stu-id="5b209-111">[in] The size of the source, in bytes.</span></span>  
   
  `pcSourceBytes`  
- <span data-ttu-id="81945-112">[out] Un puntero a una variable que recibe el tamaño de fuente.</span><span class="sxs-lookup"><span data-stu-id="81945-112">[out] A pointer to a variable that receives the source size.</span></span>  
+ <span data-ttu-id="5b209-112">[out] Un puntero a una variable que recibe el tamaño de fuente.</span><span class="sxs-lookup"><span data-stu-id="5b209-112">[out] A pointer to a variable that receives the source size.</span></span>  
   
  `source`  
- <span data-ttu-id="81945-113">[out] El tamaño y la longitud del intervalo especificado del documento de origen, en bytes.</span><span class="sxs-lookup"><span data-stu-id="81945-113">[out] The size and length of the specified range of the source document, in bytes.</span></span>  
+ <span data-ttu-id="5b209-113">[out] El tamaño y la longitud del intervalo especificado del documento de origen, en bytes.</span><span class="sxs-lookup"><span data-stu-id="5b209-113">[out] The size and length of the specified range of the source document, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="81945-114">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="81945-114">Return Value</span></span>  
- <span data-ttu-id="81945-115">S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="81945-115">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5b209-114">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="5b209-114">Return Value</span></span>  
+ <span data-ttu-id="5b209-115">S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="5b209-115">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81945-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="81945-116">See Also</span></span>  
- [<span data-ttu-id="81945-117">ISymUnmanagedDocument (interfaz)</span><span class="sxs-lookup"><span data-stu-id="81945-117">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5b209-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="5b209-116">See Also</span></span>  
+ [<span data-ttu-id="5b209-117">ISymUnmanagedDocument (interfaz)</span><span class="sxs-lookup"><span data-stu-id="5b209-117">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

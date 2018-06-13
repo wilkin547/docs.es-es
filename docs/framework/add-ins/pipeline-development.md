@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744582"
 ---
 # <a name="pipeline-development"></a><span data-ttu-id="fd58a-102">Desarrollo de canalizaciones</span><span class="sxs-lookup"><span data-stu-id="fd58a-102">Pipeline Development</span></span>
 <span data-ttu-id="fd58a-103">La canalización de complementos es la ruta de acceso de los segmentos de canalización que la aplicación host y su complemento deben utilizar para comunicarse entre sí.</span><span class="sxs-lookup"><span data-stu-id="fd58a-103">The add-in pipeline is the path of pipeline segments that the host application and its add-in must use to communicate with each other.</span></span>  

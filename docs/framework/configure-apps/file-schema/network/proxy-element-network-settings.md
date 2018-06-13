@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744452"
 ---
 # <a name="ltproxygt-element-network-settings"></a><span data-ttu-id="8ed51-102">&lt;proxy&gt; Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="8ed51-102">&lt;proxy&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="8ed51-103">Define un servidor proxy.</span><span class="sxs-lookup"><span data-stu-id="8ed51-103">Defines a proxy server.</span></span>  

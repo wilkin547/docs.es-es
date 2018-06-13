@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744881"
 ---
 # <a name="lthttplistenergt-element-network-settings"></a><span data-ttu-id="c33fe-102">&lt;httpListener&gt; Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="c33fe-102">&lt;httpListener&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="c33fe-103">Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> clase.</span><span class="sxs-lookup"><span data-stu-id="c33fe-103">Customizes parameters used by the <xref:System.Net.HttpListener> class.</span></span>  

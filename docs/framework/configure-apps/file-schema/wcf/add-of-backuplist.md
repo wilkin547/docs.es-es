@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745557"
 ---
 # <a name="ltaddgt-of-ltbackuplistgt"></a><span data-ttu-id="a7bd1-102">&lt;add&gt; de &lt;backupList&gt;</span><span class="sxs-lookup"><span data-stu-id="a7bd1-102">&lt;add&gt; of &lt;backupList&gt;</span></span>
 <span data-ttu-id="a7bd1-103">Representa un elemento de configuración que define un elemento de extremo de reserva.</span><span class="sxs-lookup"><span data-stu-id="a7bd1-103">Represents a configuration element that defines a backup endpoint element.</span></span>  

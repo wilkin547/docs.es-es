@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743906"
 ---
 # <a name="ltbypasslistgt-element-network-settings"></a><span data-ttu-id="6e401-102">&lt;bypasslist&gt; Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="6e401-102">&lt;bypasslist&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="6e401-103">Proporciona un conjunto de expresiones regulares que describen direcciones que no utilizan a un servidor proxy.</span><span class="sxs-lookup"><span data-stu-id="6e401-103">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>  
