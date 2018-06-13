@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289157"
 ---
 # <a name="c-keywords"></a><span data-ttu-id="180ce-102">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="180ce-102">C# Keywords</span></span>
 <span data-ttu-id="180ce-103">Las palabras clave son identificadores reservados predefinidos que tienen un significado especial para el compilador.</span><span class="sxs-lookup"><span data-stu-id="180ce-103">Keywords are predefined, reserved identifiers that have special meanings to the compiler.</span></span> <span data-ttu-id="180ce-104">No podrá utilizarlos como identificadores en el programa a no ser que incluyan `@` como prefijo.</span><span class="sxs-lookup"><span data-stu-id="180ce-104">They cannot be used as identifiers in your program unless they include `@` as a prefix.</span></span> <span data-ttu-id="180ce-105">Por ejemplo, `@if` es un identificador válido, pero `if` no lo es, porque `if` es una palabra clave.</span><span class="sxs-lookup"><span data-stu-id="180ce-105">For example, `@if` is a valid identifier, but `if` is not because `if` is a keyword.</span></span>  
