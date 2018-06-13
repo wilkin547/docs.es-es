@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397395"
 ---
 # <a name="callback-functions"></a><span data-ttu-id="85455-102">Funciones de devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="85455-102">Callback Functions</span></span>
 <span data-ttu-id="85455-103">Una función de devolución de llamada es código dentro de una aplicación administrada que ayuda a una función DLL no administrada a completar una tarea.</span><span class="sxs-lookup"><span data-stu-id="85455-103">A callback function is code within a managed application that helps an unmanaged DLL function complete a task.</span></span> <span data-ttu-id="85455-104">Las llamadas a una función de devolución de llamada pasan indirectamente desde una aplicación administrada, a través de una función DLL, y de nuevo a la implementación administrada.</span><span class="sxs-lookup"><span data-stu-id="85455-104">Calls to a callback function pass indirectly from a managed application, through a DLL function, and back to the managed implementation.</span></span> <span data-ttu-id="85455-105">Algunas de las muchas funciones DLL que se llaman con la invocación de plataforma requieren una función de devolución de llamada en código administrado para ejecutarse correctamente.</span><span class="sxs-lookup"><span data-stu-id="85455-105">Some of the many DLL functions called with platform invoke require a callback function in managed code to run properly.</span></span>  

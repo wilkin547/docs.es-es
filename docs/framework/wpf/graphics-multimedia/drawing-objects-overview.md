@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558192"
 ---
 # <a name="drawing-objects-overview"></a><span data-ttu-id="26041-102">Información general sobre objetos Drawing</span><span class="sxs-lookup"><span data-stu-id="26041-102">Drawing Objects Overview</span></span>
 <span data-ttu-id="26041-103">Este tema se presentan <xref:System.Windows.Media.Drawing> objetos y se describe cómo utilizarlos para dibujar con eficacia formas, mapas de bits, texto y multimedia.</span><span class="sxs-lookup"><span data-stu-id="26041-103">This topic introduces <xref:System.Windows.Media.Drawing> objects and describes how to use them to efficiently draw shapes, bitmaps, text, and media.</span></span> <span data-ttu-id="26041-104">Usar <xref:System.Windows.Media.Drawing> objetos al crear imágenes prediseñadas, pintar con un <xref:System.Windows.Media.DrawingBrush>, o use <xref:System.Windows.Media.Visual> objetos.</span><span class="sxs-lookup"><span data-stu-id="26041-104">Use <xref:System.Windows.Media.Drawing> objects when you create clip art, paint with a <xref:System.Windows.Media.DrawingBrush>, or use <xref:System.Windows.Media.Visual> objects.</span></span>  

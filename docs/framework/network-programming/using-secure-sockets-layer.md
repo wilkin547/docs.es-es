@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396251"
 ---
 # <a name="using-secure-sockets-layer"></a><span data-ttu-id="fc88c-102">Usar la capa de sockets seguros</span><span class="sxs-lookup"><span data-stu-id="fc88c-102">Using Secure Sockets Layer</span></span>
 <span data-ttu-id="fc88c-103">Las clases <xref:System.Net> usan la Capa de sockets seguros (SSL) para cifrar la conexión de varios protocolos de red.</span><span class="sxs-lookup"><span data-stu-id="fc88c-103">The <xref:System.Net> classes use the Secure Sockets Layer (SSL) to encrypt the connection for several network protocols.</span></span>  

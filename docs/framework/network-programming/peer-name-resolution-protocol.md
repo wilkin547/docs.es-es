@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397005"
 ---
 # <a name="peer-name-resolution-protocol"></a><span data-ttu-id="fcffe-102">Protocolo de resolución de nombres del mismo nivel</span><span class="sxs-lookup"><span data-stu-id="fcffe-102">Peer Name Resolution Protocol</span></span>
 <span data-ttu-id="fcffe-103">En entornos punto a punto, los elementos del mismo nivel usan sistemas de resolución de nombres específicos para resolver sus respectivas ubicaciones de red (direcciones, protocolos y puertos) a partir de nombres u otros tipos de identificadores.</span><span class="sxs-lookup"><span data-stu-id="fcffe-103">In peer-to-peer environments, peers use specific name resolution systems to resolve each other's network locations (addresses, protocols, and ports) from names or other types of identifiers.</span></span> <span data-ttu-id="fcffe-104">Antes, la resolución de nombres del mismo nivel resultaba complicada por la conectividad intrínsecamente transitoria y por otras limitaciones del Sistema de nombres de dominio (DNS).</span><span class="sxs-lookup"><span data-stu-id="fcffe-104">In the past, peer name resolution has been complicated by the inherently transient connectivity as well as other shortcomings within the Domain Name System (DNS).</span></span>  

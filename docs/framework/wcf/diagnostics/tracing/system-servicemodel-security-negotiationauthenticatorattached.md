@@ -1,32 +1,23 @@
 ---
 title: System.ServiceModel.Security.NegotiationAuthenticatorAttached
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 20a289a5-6450-46dd-bb83-c394379b857b
-caps.latest.revision: "5"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 86f7076ba4c66a4b31004faaacb281078ee27091
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a0dcd90386ab67bacbd0e87cb2abade423a16ad7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33482084"
 ---
-# <a name="systemservicemodelsecuritynegotiationauthenticatorattached"></a><span data-ttu-id="0e2c9-102">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span><span class="sxs-lookup"><span data-stu-id="0e2c9-102">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span></span>
-<span data-ttu-id="0e2c9-103">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span><span class="sxs-lookup"><span data-stu-id="0e2c9-103">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span></span>  
+# <a name="systemservicemodelsecuritynegotiationauthenticatorattached"></a><span data-ttu-id="e914c-102">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span><span class="sxs-lookup"><span data-stu-id="e914c-102">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span></span>
+<span data-ttu-id="e914c-103">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span><span class="sxs-lookup"><span data-stu-id="e914c-103">System.ServiceModel.Security.NegotiationAuthenticatorAttached</span></span>  
   
-## <a name="description"></a><span data-ttu-id="0e2c9-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="0e2c9-104">Description</span></span>  
- <span data-ttu-id="0e2c9-105">Se adjuntó el NegotiationTokenAuthenticator.</span><span class="sxs-lookup"><span data-stu-id="0e2c9-105">The NegotiationTokenAuthenticator was attached.</span></span>  
+## <a name="description"></a><span data-ttu-id="e914c-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="e914c-104">Description</span></span>  
+ <span data-ttu-id="e914c-105">Se adjuntó el NegotiationTokenAuthenticator.</span><span class="sxs-lookup"><span data-stu-id="e914c-105">The NegotiationTokenAuthenticator was attached.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0e2c9-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="0e2c9-106">See Also</span></span>  
- [<span data-ttu-id="0e2c9-107">Traza</span><span class="sxs-lookup"><span data-stu-id="0e2c9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="0e2c9-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="0e2c9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="0e2c9-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="0e2c9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="e914c-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="e914c-106">See Also</span></span>  
+ [<span data-ttu-id="e914c-107">Traza</span><span class="sxs-lookup"><span data-stu-id="e914c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="e914c-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="e914c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="e914c-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="e914c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
