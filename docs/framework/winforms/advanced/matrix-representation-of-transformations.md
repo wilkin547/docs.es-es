@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527289"
 ---
 # <a name="matrix-representation-of-transformations"></a>Representación matricial de transformaciones
 Una matriz m × n es un conjunto de números organizados en filas de la m y n columnas. La ilustración siguiente muestra varias matrices.  

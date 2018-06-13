@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546957"
 ---
 # <a name="planning-for-application-performance"></a>Planear para mejorar el rendimiento de aplicaciones
 El éxito de alcanzar los objetivos de rendimiento depende del grado de desarrollo de la estrategia de rendimiento. Planificación es la primera fase de desarrollo de cualquier producto. Este tema describen algunas reglas muy simples para desarrollar una estrategia de un buen rendimiento.  

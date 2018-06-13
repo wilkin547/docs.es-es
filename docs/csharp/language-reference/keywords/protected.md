@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269575"
 ---
 # <a name="protected-c-reference"></a>protected (Referencia de C#)
 La palabra clave `protected` es un modificador de acceso de miembro. 

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410408"
 ---
 # <a name="wif-configuration-schema-conventions"></a>Convenciones del esquema de configuración de WIF
 En este tema se describen las convenciones que se emplean a lo largo de los temas de configuración de Windows Identity Foundation (WIF), así como algunas de las funciones y atributos que se usan en las secciones [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) y [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md).  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537478"
 ---
 # <a name="digital-ink"></a>Entrada manuscrita digital
 Esta sección describe el uso de entrada de lápiz digital en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Tradicionalmente solo se encuentran en el SDK de Tablet PC, entrada de lápiz digital ahora está disponible en el núcleo de Windows Presentation Foundation. Esto significa que ahora puede desarrollar aplicaciones completas de Tablet PC mediante el uso de la eficacia de Windows Presentation Foundation.  

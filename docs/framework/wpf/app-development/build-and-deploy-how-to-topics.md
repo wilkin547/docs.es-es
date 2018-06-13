@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548343"
 ---
 # <a name="build-and-deploy-how-to-topics"></a>Temas "Cómo..." de compilar e implementar
 Los temas siguientes muestran cómo crear archivos de proyecto para los distintos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tipos de aplicaciones.  

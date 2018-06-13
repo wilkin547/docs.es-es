@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541075"
 ---
 # <a name="collecting-ink"></a>Recopilación de entradas manuscritas
 La plataforma [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) recopila entradas de lápiz digitales como parte esencial de su funcionalidad. Este tema describe los métodos para la recopilación de tinta en Windows Presentation Foundation (WPF).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763981"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 Trata un objeto de un tipo base determinado como un objeto del tipo derivado especificado.  

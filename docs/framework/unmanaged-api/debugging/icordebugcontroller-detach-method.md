@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cad8b305de580ce7cf4876939b95cc05d0fd11f5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411488"
 ---
 # <a name="icordebugcontrollerdetach-method"></a>ICorDebugController::Detach (Método)
 Desasocia al depurador desde el proceso o dominio de aplicación.  

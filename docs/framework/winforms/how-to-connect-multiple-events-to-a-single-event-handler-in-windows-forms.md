@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538585"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Cómo: Conectar varios eventos con un único controlador de eventos en formularios Windows Forms
 En el diseño de aplicaciones, le resultará necesario usar un único controlador de eventos para varios eventos o tener varios eventos, realice el mismo procedimiento. Por ejemplo, a menudo resulta ahorrar mucho tiempo si un comando de menú producen el mismo evento como un botón en el formulario si expone la misma funcionalidad. Puede hacerlo mediante la vista de eventos de la ventana Propiedades en C# o mediante el `Handles` palabra clave y el **nombre de la clase** y **nombre del método** cuadros de lista desplegable en el Editor de código de Visual Basic.  

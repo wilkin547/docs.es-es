@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528482"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Cómo: Agregar controles a formularios Windows Forms
 Mayoría de los formularios se diseñan agregando controles a la superficie del formulario para definir una interfaz de usuario (UI). A *control* es un componente en un formulario que se utiliza para mostrar información o Aceptar proporcionados por el usuario. Para obtener más información acerca de los controles, consulte [controles de Windows Forms](../../../../docs/framework/winforms/controls/index.md).  

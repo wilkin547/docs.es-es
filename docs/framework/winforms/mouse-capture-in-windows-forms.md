@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538413"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Captura del mouse (ratón) en formularios Windows Forms
 *Captura el mouse* hace referencia a cuando un control dirige la entrada del mouse. Cuando un control ha capturado el mouse, recibe la entrada del mouse si o no el puntero está dentro de sus bordes.  

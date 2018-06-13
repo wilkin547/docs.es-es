@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541553"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Código subyacente y XAML en WPF
 <a name="introduction"></a> Código subyacente es un término que se usa para describir el código que se une con objetos definidos por marcado, cuando un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] página está compilado por marcado. Este tema describen los requisitos para el código subyacente, así como un mecanismo de código insertado alternativo para el código en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  

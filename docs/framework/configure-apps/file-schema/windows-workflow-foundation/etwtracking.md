@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756750"
 ---
 # <a name="ltetwtrackinggt"></a>&lt;etwTracking&gt;
 Un comportamiento de servicio que permite que un servicio utilizar el seguimiento de ETW mediante un <xref:System.Activities.Tracking.EtwTrackingParticipant>.  

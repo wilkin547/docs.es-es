@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550073"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>Cómo: Agregar una marca de agua a un TextBox
 En el ejemplo siguiente se muestra cómo facilitar el uso de un <xref:System.Windows.Controls.TextBox> , mostrando una imagen de fondo explicativa dentro de la <xref:System.Windows.Controls.TextBox> hasta que el usuario escribe texto, momento en que se quita la imagen. Además, la imagen de fondo se restaura de nuevo si el usuario quita su entrada. Vea la ilustración siguiente.  

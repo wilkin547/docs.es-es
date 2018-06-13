@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1653913ca7410728f0f90a546f613a9d8b88be7a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414058"
 ---
 # <a name="icordebugilframegetargument-method"></a>ICorDebugILFrame::GetArgument (Método)
 Obtiene el valor del argumento especificado en este marco de pila de lenguaje intermedio (MSIL) de Microsoft.  

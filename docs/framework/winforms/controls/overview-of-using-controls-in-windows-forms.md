@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537367"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Información general sobre cómo utilizar controles en los formularios Windows Forms
 En este tema se describe los elementos esenciales de una aplicación de formularios Windows Forms y proporciona un ejemplo sencillo que utiliza controles y controla los eventos en una aplicación de formularios Windows Forms.  

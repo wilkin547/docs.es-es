@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539035"
 ---
 # <a name="advanced-ink-handling"></a>Control avanzado de entrada manuscrita
 El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se suministra con la <xref:System.Windows.Controls.InkCanvas>, y es un elemento que se puede colocar en la aplicación para iniciar inmediatamente recopilar y mostrar tinta. Sin embargo, si la <xref:System.Windows.Controls.InkCanvas> control no proporciona un nivel suficiente de control, puede mantener el control en un nivel superior mediante la personalización de su propia colección de tinta y clases de representación de tinta mediante <xref:System.Windows.Input.StylusPlugIns>.  

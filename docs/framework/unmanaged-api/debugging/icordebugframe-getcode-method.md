@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15206fbd7724383b1ec6df123790d3171e58e9f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411923"
 ---
 # <a name="icordebugframegetcode-method"></a>ICorDebugFrame::GetCode (Método)
 Obtiene un puntero al código asociado con este marco de pila.  

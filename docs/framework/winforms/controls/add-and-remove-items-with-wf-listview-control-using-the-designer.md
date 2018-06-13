@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528738"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>Cómo: Agregar y quitar elementos de un control ListView de formularios Windows Forms mediante el Diseñador
 El proceso de agregar un elemento a un formulario Windows Forms <xref:System.Windows.Forms.ListView> control está compuesto principalmente de especificar el elemento y asignarle propiedades. Es posible agregar o quitar elementos de lista en cualquier momento.  

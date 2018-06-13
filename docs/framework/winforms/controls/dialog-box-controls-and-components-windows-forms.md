@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527215"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>Controles y componentes de cuadros de diálogo (formularios Windows Forms)
 Los siguientes controles y componentes de Windows Forms presentan cuadros de diálogo estándar. Siga los vínculos para obtener más información acerca de las funciones disponibles en cada cuadro de diálogo.  

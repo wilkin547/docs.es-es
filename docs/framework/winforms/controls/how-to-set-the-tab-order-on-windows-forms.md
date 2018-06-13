@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539856"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Cómo: Establecer el orden de tabulación en formularios Windows Forms
 El orden de tabulación es el orden en que un usuario mueve foco de un control a otro presionando la tecla TAB. Cada formulario tiene su propio orden de tabulación. De forma predeterminada, el orden de tabulación es el mismo que el orden en que se crean los controles. Numeración de orden de tabulación empieza por cero.  

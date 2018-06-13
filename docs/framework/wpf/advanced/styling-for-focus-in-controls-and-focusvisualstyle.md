@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549521"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Aplicar estilo a los controles al recibir el foco y FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona dos mecanismos paralelos para cambiar el aspecto visual de un control cuando recibe el foco de teclado. El primer mecanismo consiste en utilizar los establecedores de propiedad para las propiedades como <xref:System.Windows.UIElement.IsKeyboardFocused%2A> en el estilo o la plantilla que se aplica al control. El segundo mecanismo es proporcionar un estilo independiente como el valor de la <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propiedad; la "estilo visual de foco" crea un árbol visual independiente para un adorno que dibuja en la parte superior del control, en lugar de cambiar el árbol visual del control u otra interfaz de usuario elemento reemplazándolo. En este tema se describen los escenarios en los que es apropiado cada uno de estos mecanismos.  
