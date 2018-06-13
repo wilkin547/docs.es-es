@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1da1d368725ab0a2334080c1caa7d4e25f5f3bab
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431128"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels (Enumeración)
 Proporciona las marcas que especifican el nivel en el que se va a aplicar o modificar la directiva de ensamblado.  

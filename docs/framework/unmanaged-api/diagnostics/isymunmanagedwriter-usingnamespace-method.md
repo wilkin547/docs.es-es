@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9a5ff52a95fd6ebaec05439cbc702d5513d0cc78
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427774"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace (Método)
 Especifica que el nombre completo del espacio de nombres especificado se utiliza dentro del ámbito léxico abierto. El espacio de nombres se utilizará en todos los ámbitos que heredan del ámbito abierto actualmente. Cerrar el ámbito actual, también se detendrá el uso del espacio de nombres.  

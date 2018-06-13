@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: acf2ba752ace49ae288857dc22819a8e7e429a34
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424058"
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext (Estructura)
 Proporciona un contexto simple que se puede usar en lugar de una estructura `CONTEXT` completa.  

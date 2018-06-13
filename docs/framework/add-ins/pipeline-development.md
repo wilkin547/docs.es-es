@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744582"
 ---
 # <a name="pipeline-development"></a>Desarrollo de canalizaciones
 La canalización de complementos es la ruta de acceso de los segmentos de canalización que la aplicación host y su complemento deben utilizar para comunicarse entre sí.  

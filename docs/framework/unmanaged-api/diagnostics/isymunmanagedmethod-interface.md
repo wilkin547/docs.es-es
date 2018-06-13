@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 728acc09f739fe567fca4a2571cbabf1ba8838a2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427436"
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod (Interfaz)
 Representa un método en el almacén de símbolos. Esta interfaz proporciona acceso a solo los atributos relacionados con símbolos de un método, en lugar de los atributos relacionados con el tipo.  

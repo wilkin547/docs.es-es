@@ -11,9 +11,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7675e4ade28be1f57e20e655fd7b82603b91f4c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427299"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>Enumeraciones de almacén de símbolos de diagnósticos
 En este tema se describe las enumeraciones no administradas que utiliza la API del almacén de símbolos de diagnósticos.  

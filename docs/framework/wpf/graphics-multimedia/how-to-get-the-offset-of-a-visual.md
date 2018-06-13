@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561854"
 ---
 # <a name="how-to-get-the-offset-of-a-visual"></a>Cómo: Obtener el desplazamiento de un objeto Visual
 Estos ejemplos muestran cómo recuperar el valor de desplazamiento de un objeto visual que es relativa a su elemento primario, o cualquier antecesor o descendiente.  

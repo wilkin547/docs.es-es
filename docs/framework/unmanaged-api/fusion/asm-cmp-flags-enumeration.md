@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb5266a5ad1e91904432111049e70c4acc35cf37
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429937"
 ---
 # <a name="asmcmpflags-enumeration"></a>ASM_CMP_FLAGS (Enumeración)
 Indica la versión, compilación, referencia cultural, firma etc., de dos ensamblados que se pueda comparar la [IAssemblyName:: IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) método.  

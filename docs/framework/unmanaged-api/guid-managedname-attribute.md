@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3bae50f695de81856d4fddcb2af3d1188d896642
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430016"
 ---
 # <a name="guidmanagedname-attribute"></a>GUID_ManagedName (Atributo)
 Define un atributo de interfaz personalizado que especifica el nombre de espacio de nombres administrado para una biblioteca de (componentes COM) del modelo de objetos de componente.  

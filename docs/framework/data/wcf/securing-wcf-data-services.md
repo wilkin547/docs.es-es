@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359267"
 ---
 # <a name="securing-wcf-data-services"></a>Proteger WCF Data Services
 En este tema se describen consideraciones de seguridad específicas del desarrollo. de la implementación y la ejecución de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] y de aplicaciones que acceden a servicios compatibles con [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. También debe seguir las recomendaciones para crear aplicaciones de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] seguras.  

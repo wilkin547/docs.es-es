@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ffa06fd42b5cfa09817bae9f0b3a3810e30f99c4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430972"
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback (Interfaz)
 Proporciona métodos para hacer que las devoluciones de llamada dentro de un apartamento. Un *apartamento* es un contenedor lógico dentro de un proceso para los objetos que comparten los mismos requisitos de acceso de subproceso.  
