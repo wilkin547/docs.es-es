@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744985"
 ---
 # <a name="ltaddgt-of-ltentriesgt"></a><span data-ttu-id="b53f1-102">&lt;add&gt; de &lt;entries&gt;</span><span class="sxs-lookup"><span data-stu-id="b53f1-102">&lt;add&gt; of &lt;entries&gt;</span></span>
 <span data-ttu-id="b53f1-103">Representa una entrada de enrutamiento que asigna un filtro a un punto de conexión de cliente que se definió previamente.</span><span class="sxs-lookup"><span data-stu-id="b53f1-103">Represents a routing entry that maps a filter to a client endpoint that was previously defined.</span></span> <span data-ttu-id="b53f1-104">Los mensajes que coincidan con este filtro se enviarán a este destino.</span><span class="sxs-lookup"><span data-stu-id="b53f1-104">Messages matching this filter will be sent to this destination.</span></span>  
