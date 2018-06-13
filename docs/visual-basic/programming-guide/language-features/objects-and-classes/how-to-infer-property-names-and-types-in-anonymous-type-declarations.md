@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653317"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Cómo: Deducir tipos y nombres de propiedades en declaraciones de tipos anónimos (Visual Basic)
 Los tipos anónimos no proporcionan ningún mecanismo para especificar directamente los tipos de datos de propiedades. Los tipos de todas las propiedades son inferidos. En el ejemplo siguiente, los tipos de `Name` y `Price` se infieren directamente de los valores que se usan para inicializarlos.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648699"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Tipos de métodos de manipulación de cadenas en Visual Basic
 Hay varias maneras de analizar y manipular las cadenas. Algunos de los métodos forman parte del lenguaje Visual Basic, y otros son inherentes a la `String` clase.  

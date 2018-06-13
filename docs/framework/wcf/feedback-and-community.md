@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810166"
 ---
 # <a name="feedback-and-community"></a>Comentarios y comunidad
 Agradecemos sus comentarios y preocupaciones sobre Windows Communication Foundation (WCF) o [!INCLUDE[infocard](../../../includes/infocard-md.md)] documentación. En la parte inferior de cada página del SDK puede encontrar la frase "Envíe comentarios sobre este tema a Microsoft." Haga clic en el vínculo "comentarios" para enviar sus opiniones o sugerencias sobre el tema correspondiente.  

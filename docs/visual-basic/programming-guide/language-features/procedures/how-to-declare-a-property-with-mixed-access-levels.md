@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651416"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Cómo: Declarar una propiedad con niveles de acceso mixtos (Visual Basic)
 Si desea que la `Get` y `Set` procedimientos en una propiedad que se va a tener diferentes niveles de acceso, puede utilizar el nivel más permisivo en la `Property` instrucción y el nivel más restrictivo en uno el `Get` o `Set` instrucción. Usar niveles de acceso mixtos en una propiedad cuando desee que ciertas partes del código para que pueda obtener el valor de propiedad y otras partes del código para que pueda cambiar el valor.  

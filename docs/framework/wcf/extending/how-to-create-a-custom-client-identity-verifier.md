@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804481"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Cómo crear un comprobador de identidad de cliente personalizado
 El *identidad* característica de Windows Communication Foundation (WCF) permite a un cliente especificar de antemano la identidad esperada del servicio. Siempre que un servidor se autentica al cliente, se comprueba la identidad frente a la identidad prevista. (Para obtener una explicación de la identidad y cómo funciona, consulte [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  

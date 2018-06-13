@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641058"
 ---
 # <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a>No se pueden leer los campos de ancho fijo porque FieldWidths tiene el valor Nothing o está vacío
 `TextFieldParser` no puede leer los campos de ancho fijo porque la propiedad `FieldWidths` se estableció en `Nothing` o está vacía.  

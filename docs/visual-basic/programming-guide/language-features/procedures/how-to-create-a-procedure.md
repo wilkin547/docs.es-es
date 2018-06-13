@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649268"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Cómo: Crear un procedimiento (Visual Basic)
 Incluir un procedimiento entre una instrucción de declaración inicial (`Sub` o `Function`) y una instrucción de declaración final (`End Sub` o `End Function`). Todo el código de procedimiento está comprendida entre estas instrucciones.  

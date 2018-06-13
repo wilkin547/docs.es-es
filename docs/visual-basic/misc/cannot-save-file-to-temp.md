@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637887"
 ---
 # <a name="cannot-save-file-to-temp"></a>No se puede guardar el archivo en TEMP.
 Un componente no puede encontrar un directorio denominado TEMP, o la unidad o partición que contiene el directorio TEMP carece de espacio suficiente para guardar la información.  

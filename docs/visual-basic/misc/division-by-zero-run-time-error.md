@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636518"
 ---
 # <a name="division-by-zero-visual-basic-run-time-error"></a>División por cero (error en tiempo de ejecución de Visual Basic)
 Una expresión que se está usando como divisor tiene un valor de cero.  

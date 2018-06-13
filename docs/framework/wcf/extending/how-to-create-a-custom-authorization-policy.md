@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804240"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Cómo: Crear una directiva de autorización personalizada
 La infraestructura del modelo de identidad en Windows Communication Foundation (WCF) es compatible con un modelo de autorización basada en notificaciones. Las notificaciones se extraen de los tokens, procesados opcionalmente por la directiva de autorización personalizada. Después se colocan en un <xref:System.IdentityModel.Policy.AuthorizationContext> que se puede examinar a continuación para tomar las decisiones de autorización. Se puede utilizar una directiva personalizada para transformar las notificaciones de tokens entrantes en notificaciones esperadas por la aplicación. De este modo, se puede aislar la capa de aplicación de los detalles en las distintas notificaciones servidas por los distintos tipos de token que WCF admite. En este tema se muestra cómo implementar una directiva de autorización personalizada y cómo agregarla a la colección de directivas utilizada por un servicio.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653123"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Cómo: Ocultar una variable con el mismo nombre que su variable (Visual Basic)
 Puede ocultar una variable por *sombrear* él, es decir, mediante la redefinición con una variable del mismo nombre. Puede reemplazar la variable que desea ocultar de dos maneras:  

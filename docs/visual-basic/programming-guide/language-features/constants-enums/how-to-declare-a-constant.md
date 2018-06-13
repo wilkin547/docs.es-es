@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649742"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Cómo: Declarar una constante (Visual Basic)
 Usa el `Const` instrucción para declarar una constante y establecer su valor. Al declarar una constante, se asigna un nombre significativo a un valor. Una vez que se declara una constante, no se pueden modificar ni asigna un nuevo valor.  
