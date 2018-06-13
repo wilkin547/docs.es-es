@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633125"
 ---
 # <a name="cannot-calculate-number-of-periods-using-the-arguments-provided"></a>No se puede calcular el número de períodos con los argumentos proporcionados.
 Una llamada a la `NPer` función no contiene todos los argumentos necesarios.  

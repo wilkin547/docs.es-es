@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636570"
 ---
 # <a name="get-not-supported-at-run-time"></a>No se admite Get en tiempo de ejecución.
 Se intentó leer una propiedad en tiempo de ejecución que solo es accesible en tiempo de diseño.  

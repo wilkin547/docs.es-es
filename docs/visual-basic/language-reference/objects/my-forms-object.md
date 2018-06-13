@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603904"
 ---
 # <a name="myforms-object"></a>My.Forms (Objeto)
 Proporciona propiedades para tener acceso a una instancia de cada formulario Windows Forms declarado en el proyecto actual.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605282"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit (Instrucción, Visual Basic)
 Sale de un procedimiento o bloque y transfiere el control inmediatamente a la instrucción que sigue a la llamada de procedimiento o la definición del bloque.  
