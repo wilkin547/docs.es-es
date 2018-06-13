@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 71be697a8a1decd9b5f780d047c3dbb397e351d0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426898"
 ---
 # <a name="isymunmanagedwriterclosemethod-method"></a>ISymUnmanagedWriter::CloseMethod (Método)
 Cierra el método actual. Una vez que se cierra un método, no se puede definir ningún símbolo más dentro de él.  

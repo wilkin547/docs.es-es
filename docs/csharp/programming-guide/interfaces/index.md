@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337592"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guía de programación de C#)
 Una interfaz contiene las definiciones de un grupo de funcionalidades relacionadas que una [clase](../../../csharp/language-reference/keywords/class.md) o una [estructura](../../../csharp/language-reference/keywords/struct.md) pueden implementar.  

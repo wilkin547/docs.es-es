@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334540"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Genéricos en el motor en tiempo de ejecución (Guía de programación de C#)
 Cuando se compila un tipo o método genérico en el lenguaje intermedio de Microsoft (MSIL), contiene metadatos que lo identifican como poseedor de parámetros de tipo. La forma en que se usa MSIL para un tipo genérico depende de si el parámetro de tipo proporcionado es un tipo de valor o de referencia.  

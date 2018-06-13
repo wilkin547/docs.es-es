@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763857"
 ---
 # <a name="type-system-entity-sql"></a>Sistema de tipos (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite un número de tipos:  

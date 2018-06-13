@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546284"
 ---
 # <a name="printing-how-to-topics"></a>Temas "Cómo..." de impresión
 Los temas de esta sección muestran cómo usar la impresión y características de administración de sistema de impresión incluyen con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , así como el nuevo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ruta de acceso de impresión.  

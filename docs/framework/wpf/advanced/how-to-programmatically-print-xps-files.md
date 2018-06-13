@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547595"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Cómo: Imprimir mediante programación archivos XPS
 Puede utilizar una sobrecarga de la <xref:System.Printing.PrintQueue.AddJob%2A> método imprimir [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] archivos sin abrir una <xref:System.Windows.Controls.PrintDialog> o, en principio, cualquier [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] en absoluto.  

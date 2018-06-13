@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546681"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>Cómo: navegar hacia atrás en el historial de navegación
 Este ejemplo muestra cómo navegar hacia atrás en las entradas historial de navegación.  

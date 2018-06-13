@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529706"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Tutorial: Demostración de la herencia visual
 La herencia visual le permite ver los controles del formulario base y agregar controles nuevos. En este tutorial, creará un formulario base y lo compilará para convertirlo en una biblioteca de clases. Importará la biblioteca de clases en otro proyecto y creará un nuevo formulario que herede del formulario base. Durante este tutorial aprenderá a:  
