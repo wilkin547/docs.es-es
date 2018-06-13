@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495891"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Cómo: Crear una credencial de apoyo
 Es posible tener un esquema de seguridad personalizado que requiera más de una credencial. Por ejemplo, un servicio puede solicitar del cliente un nombre de usuario y contraseña, pero también una credencial que demuestre que el cliente tiene más de 18 años. La segunda credencial es un *credencial de apoyo*. En este tema se explica cómo implementar dichos credenciales en un cliente de Windows Communication Foundation (WCF).  

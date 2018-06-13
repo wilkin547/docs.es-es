@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501699"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilización de la suplantación con la seguridad de transporte
 *Suplantación* es la capacidad de una aplicación de servidor para asumir la identidad del cliente. Es común que los servicios utilicen la suplantación al validar el acceso a los recursos. La aplicación de servidor se ejecuta utilizando una cuenta de servicio, pero cuando el servidor acepta una conexión de cliente, suplanta al cliente para que se realicen comprobaciones de acceso utilizando las credenciales del cliente. La seguridad de transporte es un mecanismo para pasar credenciales y proteger la comunicación mediante esas credenciales. Este tema describe cómo usar seguridad de transporte en Windows Communication Foundation (WCF) con la característica de suplantación. Para obtener más información acerca de la suplantación mediante la seguridad del mensaje, vea [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  

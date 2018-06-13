@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355422"
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>Cómo: Ejecutar consultas en un lote (Data Services de WCF)
 Mediante el uso de la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente, puede ejecutar más de una consulta en el servicio de datos en un único lote. Para obtener más información, consulte [operaciones por lotes](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).  

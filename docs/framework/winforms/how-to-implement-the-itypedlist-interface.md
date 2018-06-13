@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538075"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>Cómo: Implementar la interfaz ITypedList
 Implemente el <xref:System.ComponentModel.ITypedList> interfaz para habilitar la detección del esquema para obtener una lista enlazable.  

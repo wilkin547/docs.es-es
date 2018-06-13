@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504151"
 ---
 # <a name="custom-message-filter"></a>Filtro de mensaje personalizado
 Este ejemplo muestra cómo reemplazar los filtros de mensajes que Windows Communication Foundation (WCF) se utiliza para enviar mensajes a puntos de conexión.  

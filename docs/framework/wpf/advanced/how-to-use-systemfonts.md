@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544682"
 ---
 # <a name="how-to-use-systemfonts"></a>Cómo: Utilizar SystemFonts
 Este ejemplo muestra cómo utilizar los recursos estáticos de la <xref:System.Windows.SystemFonts> clase para aplicar estilo a un botón o personalizarlo.  

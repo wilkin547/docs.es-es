@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506498"
 ---
 # <a name="usage-of-standard-endpoints"></a>Uso de extremos estándar
 Este ejemplo muestra cómo utilizar los puntos de conexión estándar en archivos de configuración de servicio. Un extremo estándar permite al usuario simplificar las definiciones de extremo utilizando una sola propiedad para describir una dirección, enlace y combinación de contratos con propiedades adicionales asocias. En este ejemplo se muestra cómo definir e implementar un extremo estándar personalizado y cómo definir propiedades concretas en él.  

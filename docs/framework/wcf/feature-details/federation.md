@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496772"
 ---
 # <a name="federation"></a>Federación
 En este tema se proporciona una información general breve sobre el concepto de seguridad federada. También describe la compatibilidad de Windows Communication Foundation (WCF) para la implementación de arquitecturas de seguridad federada. Para una aplicación de ejemplo que muestra la federación, consulte [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  

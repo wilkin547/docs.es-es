@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509084"
 ---
 # <a name="security-considerations-for-data"></a>Consideraciones de seguridad para datos
 Cuando se trabaja con datos en Windows Communication Foundation (WCF), debe considerar varias categorías de amenaza. La tabla siguiente enumera las clases más importantes de amenazas relacionadas con el procesamiento de datos. WCF proporciona herramientas para mitigar estas amenazas.  

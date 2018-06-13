@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536200"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Cómo: Guardar archivos con el control RichTextBox de formularios Windows Forms
 Los formularios Windows Forms <xref:System.Windows.Forms.RichTextBox> control puede escribir la información que muestra en uno de los siguientes formatos:  

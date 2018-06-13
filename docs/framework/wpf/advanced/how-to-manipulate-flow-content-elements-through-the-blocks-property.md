@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544555"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Cómo: Manipular elementos de contenido dinámico mediante la propiedad Blocks
 Estos ejemplos muestran algunas de las operaciones más comunes que se pueden realizar en elementos de contenido dinámico a través de la **bloques** propiedad. Esta propiedad se utiliza para agregar y quitar elementos de <xref:System.Windows.Documents.BlockCollection>. Flujo de contenido de elementos de esa característica un **bloques** propiedad incluyen:  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509052"
 ---
 # <a name="using-the-xmlserializer-class"></a>Utilización de la clase XmlSerializer
 Windows Communication Foundation (WCF) puede utilizar dos tecnologías de serialización diferentes para convertir los datos de su aplicación en XML transmitidos entre los clientes y servicios, un proceso llamado serialización.  

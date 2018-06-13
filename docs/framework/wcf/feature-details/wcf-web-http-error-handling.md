@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498490"
 ---
 # <a name="wcf-web-http-error-handling"></a>Controlar errores de web HTTP de WCF
 Control de errores de Web HTTP de Windows Communication Foundation (WCF) le permite devolver errores de servicios Web HTTP de WCF que especifican un código de estado HTTP y devuelve los detalles del error mediante el mismo formato que la operación (por ejemplo, XML o JSON).  

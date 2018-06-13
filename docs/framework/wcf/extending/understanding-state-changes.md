@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496668"
 ---
 # <a name="understanding-state-changes"></a>Introducción a los cambios de estado
 En este tema se discuten los estados y transiciones que los canales tienen, los tipos utilizados para estructurar los estados del canal, y cómo implementarlos.  

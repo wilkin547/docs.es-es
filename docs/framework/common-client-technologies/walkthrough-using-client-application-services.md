@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745375"
 ---
 # <a name="walkthrough-using-client-application-services"></a>Tutorial: Usar servicios de aplicaciones cliente
 En este tema se describe cómo crear una aplicación de Windows que usa los servicios de aplicaciones cliente para autenticar usuarios y recuperar la configuración y los roles de usuario.  

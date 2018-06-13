@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506537"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Patrones de diseño: suscripción-publicación basada en la lista
 Este ejemplo muestra el patrón de lista-suscripción-publicación implementado como un programa de Windows Communication Foundation (WCF).  

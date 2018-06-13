@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501254"
 ---
 # <a name="syndication-extensibility-samples"></a>Ejemplos de extensibilidad de sindicación
 Esta sección contiene ejemplos que muestran la distribución personalizada de Windows Communication Foundation (WCF).  

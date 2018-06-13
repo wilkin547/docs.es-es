@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541864"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Cómo: Realizar llamadas seguras para subprocesos en controles de formularios Windows Forms
 Si utiliza multithreading para mejorar el rendimiento de las aplicaciones de Windows Forms, asegúrese de que realiza llamadas a los controles de una manera segura para subprocesos.  

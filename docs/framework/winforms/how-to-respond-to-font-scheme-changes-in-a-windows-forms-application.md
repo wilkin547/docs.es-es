@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539457"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Cómo: Responder a los cambios de las combinaciones de fuentes en una aplicación de Windows Forms
 En los sistemas operativos de Windows, un usuario puede cambiar la configuración de fuente de todo el sistema para que la fuente predeterminada aparezca mayor o menor. Cambiar esta configuración de fuente es fundamental para personas con discapacidades visuales y requieren un tipo mayor leer el texto en las pantallas. Puede ajustar la aplicación de formularios Windows Forms para reaccionar a estos cambios aumentando o reduciendo el tamaño del formulario y de todo el texto cada vez que cambia la combinación de fuentes. Si desea que el formulario para adaptarse dinámicamente a cambios en los tamaños de fuente, puede agregar código al formulario.  

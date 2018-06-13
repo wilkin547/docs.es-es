@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498067"
 ---
 # <a name="supported-deployment-scenarios"></a>Escenarios de implementación admitidos
 El subconjunto de características de Windows Communication Foundation (WCF) que se pueden usar en aplicaciones de confianza parcial está diseñado para cumplir los requisitos de algunos, pero no todos, escenarios de uso WCF. En el servidor, WCF cumple los requisitos de escala de Internet compartido de proveedores de hospedaje que ejecutan aplicaciones de terceros en el [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] conjunto por motivos de seguridad de permisos de nivel de confianza medio. En el cliente, la compatibilidad de confianza parcial de WCF está diseñado para cumplir los requisitos de tecnologías de implementación como [implementación ClickOnce](http://go.microsoft.com/fwlink/?LinkId=83712) o [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]de tecnología de aplicación de explorador XAML, lo que permite perfecta y segura implementación de aplicaciones de escritorio de sitios de confianza.  

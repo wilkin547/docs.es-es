@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536685"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>Información general del control TabControl (Formularios Windows Forms)
 El control <xref:System.Windows.Forms.TabControl> de Windows Forms muestra múltiples fichas, similares a los divisores de un cuaderno o a las etiquetas de un conjunto de carpetas de un archivador. Las fichas pueden contener imágenes y otros controles. Puede utilizar el control de ficha para generar el tipo de cuadro de diálogo de varias páginas que aparecen muchos lugares en el sistema operativo Windows, como las propiedades de presentación del Panel de Control. Además, el <xref:System.Windows.Forms.TabControl> puede utilizarse para crear páginas de propiedades, que se usan para definir un grupo de propiedades relacionadas.  

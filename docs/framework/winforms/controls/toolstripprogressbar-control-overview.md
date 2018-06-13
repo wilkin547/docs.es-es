@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537757"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>Información general del control ToolStripProgressBar
 El <xref:System.Windows.Forms.ToolStripProgressBar> combina el espacio compartido y la funcionalidad de procesamiento de todos los <xref:System.Windows.Forms.ToolStrip> controles con su funcionalidad de seguimiento de procesos típico. A <xref:System.Windows.Forms.ToolStripProgressBar> más normalmente está hospedado por <xref:System.Windows.Forms.StatusStrip>y menos frecuentemente, un <xref:System.Windows.Forms.ToolStrip>.  

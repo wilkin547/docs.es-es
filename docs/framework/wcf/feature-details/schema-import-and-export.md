@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497287"
 ---
 # <a name="schema-import-and-export"></a>Importación y exportación de esquemas
 Windows Communication Foundation (WCF) incluye un nuevo motor de serialización, el <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` traduce entre los objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] y XML (en ambas direcciones). Además del propio serializador, WCF incluye la importación del esquema asociado y los mecanismos de exportación de esquema. *Esquema* es una descripción formal, exacta y legible por el equipo de la forma del XML que el serializador genera o al que puede tener acceso el deserializador. WCF usa el lenguaje de definición de esquema XML de World Wide Web Consortium (W3C) (XSD) como su representación de esquema, que es muy interoperable con numerosas plataformas de terceros.  

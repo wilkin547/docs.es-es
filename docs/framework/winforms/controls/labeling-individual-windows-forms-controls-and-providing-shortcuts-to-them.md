@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535520"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos
 Los controles que se agregan a Windows Forms tienen propiedades y métodos que permiten a los usuarios especificar en mayor medida la forma de utilizarlos. La personalización de la interfaz de usuario para que se ajuste a las necesidades del usuario es muy importante para el buen diseño de las aplicaciones para Windows.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495744"
 ---
 # <a name="programming-wcf-security"></a>Programación de la seguridad de WCF
 En este tema se describe las tareas de programación fundamentales utilizadas para crear una aplicación de Windows Communication Foundation (WCF) segura. Este tema trata únicamente la autenticación, confidencialidad e integridad, conocido colectivamente como *transferir seguridad*. Este tema no cubre la autorización (el control de acceso a recursos o servicios;) Para obtener información sobre la autorización, consulte [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  

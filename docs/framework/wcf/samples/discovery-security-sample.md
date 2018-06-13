@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505849"
 ---
 # <a name="discovery-security-sample"></a>Ejemplo de seguridad de la detección
 La especificación de la detección no requiere que los puntos de conexión que participan en el proceso de detección sean seguros. Al mejorar los mensajes de detección gracias a la seguridad, se mitigan varios tipos de ataques (alteración del mensaje, denegación de servicio, repetición y suplantación). Este ejemplo implementa canales personalizados que calculan y comprueban las firmas de mensaje utilizando el formato de firma compacto (descrito en la sección 8.2 de la especificación de detección WS). El ejemplo admite tanto la [especificación de detección de 2005](http://go.microsoft.com/fwlink/?LinkId=177912) y [versión 1.1](http://go.microsoft.com/fwlink/?LinkId=179677).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496655"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Comparación de los servicios web ASP.NET con el WCF basado en desarrollo
 Windows Communication Foundation (WCF) tiene una opción de modo de compatibilidad ASP.NET para habilitar las aplicaciones de WCF para programar y configurar como los servicios Web de ASP.NET e imitar su comportamiento. Las secciones siguientes comparan los servicios Web ASP.NET y WCF se basa en lo que se requiere para desarrollar aplicaciones mediante ambas tecnologías.  

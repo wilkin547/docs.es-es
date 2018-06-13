@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551242"
 ---
 # <a name="listview"></a>ListView
 El <xref:System.Windows.Controls.ListView> control proporciona la infraestructura necesaria para mostrar un conjunto de elementos de datos en distintos diseños o vistas.  

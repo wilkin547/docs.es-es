@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503903"
 ---
 # <a name="avoiding-problems-with-the-using-statement"></a>Evitar problemas mediante una declaración de instrucción
 Este ejemplo muestra cómo no debería utilizar el C# "utilizando" la instrucción para limpiar automáticamente los recursos al utilizar un cliente especificado. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora. En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  

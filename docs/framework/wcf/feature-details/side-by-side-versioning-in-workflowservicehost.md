@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505758"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Control de versiones en paralelo en WorkflowServiceHost
 El control de versiones en paralelo en <xref:System.ServiceModel.Activities.WorkflowServiceHost> presentado en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] ofrece la capacidad de hospedar varias versiones de un servicio de flujo de trabajo en un único extremo. La funcionalidad en paralelo proporcionada permite configurar un servicio de flujo de trabajo para crear nuevas instancias del servicio de flujo de trabajo usando la nueva definición de flujo de trabajo, mientras que las instancias en ejecución se completan usando la definición existente. Este tema proporciona información general sobre la ejecución en paralelo del servicio de flujo de trabajo mediante <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  

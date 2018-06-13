@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543776"
 ---
 # <a name="how-to-use-flowdocument-column-separating-attributes"></a>Cómo: Usar atributos de separación de columnas de FlowDocument
 Este ejemplo muestra cómo utilizar las características de separación de columnas de una <xref:System.Windows.Documents.FlowDocument>.  
