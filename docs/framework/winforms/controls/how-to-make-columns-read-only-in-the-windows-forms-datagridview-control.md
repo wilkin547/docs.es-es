@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Crear columnas de sólo lectura en el control DataGridView de formularios Windows Forms"
-ms.custom: 
+title: 'Cómo: Crear columnas de sólo lectura en el control DataGridView de formularios Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,39 +8,35 @@ helpviewer_keywords:
 - data grids [Windows Forms], read-only columns
 - DataGridView control [Windows Forms], read-only columns
 ms.assetid: 2bb73ebb-1a55-4362-9fda-e50574c087d5
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7a3b6a72a3dac2e7957f73ee466ded0282988923
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ea4fdb6d38464993672c9aa98d8866812d21972
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532101"
 ---
-# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="4d0a3-102">Cómo: Crear columnas de sólo lectura en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d0a3-102">How to: Make Columns Read-Only in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="4d0a3-103">No todos los datos están diseñados para ser editados.</span><span class="sxs-lookup"><span data-stu-id="4d0a3-103">Not all data is meant for editing.</span></span> <span data-ttu-id="4d0a3-104">En el control <xref:System.Windows.Forms.DataGridView>, el valor de propiedad <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> de la columna determina si los usuarios pueden editar las celdas de esa columna.</span><span class="sxs-lookup"><span data-stu-id="4d0a3-104">In the <xref:System.Windows.Forms.DataGridView> control, the column <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> property value determines whether users can edit cells in that column.</span></span> <span data-ttu-id="4d0a3-105">Para obtener información acerca de cómo hacer que el control sea de solo lectura, vea [Cómo: impedir la adición de fila y eliminación en el DataGridView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md).</span><span class="sxs-lookup"><span data-stu-id="4d0a3-105">For information about how to make the control entirely read-only, see [How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md).</span></span>  
+# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="53f26-102">Cómo: Crear columnas de sólo lectura en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="53f26-102">How to: Make Columns Read-Only in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="53f26-103">No todos los datos están diseñados para ser editados.</span><span class="sxs-lookup"><span data-stu-id="53f26-103">Not all data is meant for editing.</span></span> <span data-ttu-id="53f26-104">En el control <xref:System.Windows.Forms.DataGridView>, el valor de propiedad <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> de la columna determina si los usuarios pueden editar las celdas de esa columna.</span><span class="sxs-lookup"><span data-stu-id="53f26-104">In the <xref:System.Windows.Forms.DataGridView> control, the column <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> property value determines whether users can edit cells in that column.</span></span> <span data-ttu-id="53f26-105">Para obtener información acerca de cómo hacer que el control sea de solo lectura, vea [Cómo: impedir la adición de fila y eliminación en el DataGridView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md).</span><span class="sxs-lookup"><span data-stu-id="53f26-105">For information about how to make the control entirely read-only, see [How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md).</span></span>  
   
- <span data-ttu-id="4d0a3-106">Visual Studio es compatible con esta tarea.</span><span class="sxs-lookup"><span data-stu-id="4d0a3-106">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="4d0a3-107">Consulte también [Cómo: asegúrese de solo lectura de las columnas en el Control Windows Forms DataGridView mediante el diseñador](http://msdn.microsoft.com/library/xd4k3c7e\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="4d0a3-107">Also see [How to: Make Columns Read-Only in the Windows Forms DataGridView Control Using the Designer](http://msdn.microsoft.com/library/xd4k3c7e\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="53f26-106">Visual Studio es compatible con esta tarea.</span><span class="sxs-lookup"><span data-stu-id="53f26-106">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="53f26-107">Consulte también [Cómo: asegúrese de solo lectura de las columnas en el Control Windows Forms DataGridView mediante el diseñador](http://msdn.microsoft.com/library/xd4k3c7e\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="53f26-107">Also see [How to: Make Columns Read-Only in the Windows Forms DataGridView Control Using the Designer](http://msdn.microsoft.com/library/xd4k3c7e\(v=vs.110\)).</span></span>  
   
-### <a name="to-make-a-column-read-only-programmatically"></a><span data-ttu-id="4d0a3-108">Para que hacer que una columna sea de solo lectura mediante programación</span><span class="sxs-lookup"><span data-stu-id="4d0a3-108">To make a column read-only programmatically</span></span>  
+### <a name="to-make-a-column-read-only-programmatically"></a><span data-ttu-id="53f26-108">Para que hacer que una columna sea de solo lectura mediante programación</span><span class="sxs-lookup"><span data-stu-id="53f26-108">To make a column read-only programmatically</span></span>  
   
--   <span data-ttu-id="4d0a3-109">Establezca la propiedad <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType> en `true`.</span><span class="sxs-lookup"><span data-stu-id="4d0a3-109">Set the <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType> property to `true`.</span></span>  
+-   <span data-ttu-id="53f26-109">Establezca la propiedad <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType> en `true`.</span><span class="sxs-lookup"><span data-stu-id="53f26-109">Set the <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType> property to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#064](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#064)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#064](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#064)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="4d0a3-110">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="4d0a3-110">Compiling the Code</span></span>  
- <span data-ttu-id="4d0a3-111">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="4d0a3-111">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="53f26-110">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="53f26-110">Compiling the Code</span></span>  
+ <span data-ttu-id="53f26-111">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="53f26-111">This example requires:</span></span>  
   
--   <span data-ttu-id="4d0a3-112">Un control <xref:System.Windows.Forms.DataGridView> denominado `dataGridView1` con una columna denominada `CompanyName`.</span><span class="sxs-lookup"><span data-stu-id="4d0a3-112">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1` with a column named `CompanyName`.</span></span>  
+-   <span data-ttu-id="53f26-112">Un control <xref:System.Windows.Forms.DataGridView> denominado `dataGridView1` con una columna denominada `CompanyName`.</span><span class="sxs-lookup"><span data-stu-id="53f26-112">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1` with a column named `CompanyName`.</span></span>  
   
--   <span data-ttu-id="4d0a3-113">Referencias a los ensamblados <xref:System?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4d0a3-113">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="53f26-113">Referencias a los ensamblados <xref:System?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="53f26-113">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d0a3-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="4d0a3-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="53f26-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="53f26-114">See Also</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="4d0a3-115">Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d0a3-115">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
- [<span data-ttu-id="4d0a3-116">Impedir la adición y eliminación de filas en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d0a3-116">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)
+ [<span data-ttu-id="53f26-115">Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="53f26-115">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [<span data-ttu-id="53f26-116">Impedir la adición y eliminación de filas en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="53f26-116">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)

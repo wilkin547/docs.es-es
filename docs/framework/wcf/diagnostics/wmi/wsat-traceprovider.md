@@ -1,29 +1,18 @@
 ---
 title: WSAT_TraceProvider
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8eb89b45-78b8-407d-8858-f8a9d43d55cb
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 59ed34841aa6a22c6b9fce60ec579cdf562185a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6ca677762b9465a32211b7fdf91d8c4957bb86dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485355"
 ---
-# <a name="wsattraceprovider"></a><span data-ttu-id="ae7e5-102">WSAT_TraceProvider</span><span class="sxs-lookup"><span data-stu-id="ae7e5-102">WSAT_TraceProvider</span></span>
-<span data-ttu-id="ae7e5-103">WSAT_TraceProvider</span><span class="sxs-lookup"><span data-stu-id="ae7e5-103">WSAT_TraceProvider</span></span>  
+# <a name="wsattraceprovider"></a><span data-ttu-id="61891-102">WSAT_TraceProvider</span><span class="sxs-lookup"><span data-stu-id="61891-102">WSAT_TraceProvider</span></span>
+<span data-ttu-id="61891-103">WSAT_TraceProvider</span><span class="sxs-lookup"><span data-stu-id="61891-103">WSAT_TraceProvider</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ae7e5-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ae7e5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61891-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="61891-104">Syntax</span></span>  
   
 ```  
 class WSAT_TraceProvider : EventTrace  
@@ -31,11 +20,11 @@ class WSAT_TraceProvider : EventTrace
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="ae7e5-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="ae7e5-105">Methods</span></span>  
- <span data-ttu-id="ae7e5-106">La clase WSAT_TraceProvider hereda de EventTracer pero no define métodos adicionales ni propiedades.</span><span class="sxs-lookup"><span data-stu-id="ae7e5-106">The WSAT_TraceProvider class inherits from EventTrace but does not define additional methods or properties.</span></span>  
+## <a name="methods"></a><span data-ttu-id="61891-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="61891-105">Methods</span></span>  
+ <span data-ttu-id="61891-106">La clase WSAT_TraceProvider hereda de EventTracer pero no define métodos adicionales ni propiedades.</span><span class="sxs-lookup"><span data-stu-id="61891-106">The WSAT_TraceProvider class inherits from EventTrace but does not define additional methods or properties.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ae7e5-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ae7e5-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="61891-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="61891-107">Requirements</span></span>  
   
-|<span data-ttu-id="ae7e5-108">MOF</span><span class="sxs-lookup"><span data-stu-id="ae7e5-108">MOF</span></span>|<span data-ttu-id="ae7e5-109">Se declara en Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="ae7e5-109">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="61891-108">MOF</span><span class="sxs-lookup"><span data-stu-id="61891-108">MOF</span></span>|<span data-ttu-id="61891-109">Se declara en Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="61891-109">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="ae7e5-110">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="ae7e5-110">Namespace</span></span>|<span data-ttu-id="ae7e5-111">Se define en root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="ae7e5-111">Defined in root\ServiceModel</span></span>|
+|<span data-ttu-id="61891-110">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="61891-110">Namespace</span></span>|<span data-ttu-id="61891-111">Se define en root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="61891-111">Defined in root\ServiceModel</span></span>|

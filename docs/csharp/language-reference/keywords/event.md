@@ -14,6 +14,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955971"
 ---
 # <a name="event-c-reference"></a><span data-ttu-id="43c2a-102">event (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="43c2a-102">event (C# Reference)</span></span>
 <span data-ttu-id="43c2a-103">La palabra clave `event` se usa para declarar un evento en una clase de publicador.</span><span class="sxs-lookup"><span data-stu-id="43c2a-103">The `event` keyword is used to declare an event in a publisher class.</span></span>  

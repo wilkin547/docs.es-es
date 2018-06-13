@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336835"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a><span data-ttu-id="c62de-102">Ventajas de los genéricos (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="c62de-102">Benefits of Generics (C# Programming Guide)</span></span>
 <span data-ttu-id="c62de-103">Los genéricos proporcionan la solución a una limitación en versiones anteriores de Common Language Runtime y el lenguaje de C# en el que se obtiene la generalización mediante la conversión de tipos a y desde el tipo base universal <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="c62de-103">Generics provide the solution to a limitation in earlier versions of the common language runtime and the C# language in which generalization is accomplished by casting types to and from the universal base type <xref:System.Object>.</span></span> <span data-ttu-id="c62de-104">Mediante la creación de una clase genérica, puede crear una colección con seguridad de tipos en tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="c62de-104">By creating a generic class, you can create a collection that is type-safe at compile-time.</span></span>  

@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Reproducir un sonido incrustado en un recurso desde Windows Forms"
-ms.custom: 
+title: 'Cómo: Reproducir un sonido incrustado en un recurso desde Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,34 +10,30 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], from resources
 - SoundPlayer class [Windows Forms], playing sounds from resources
 ms.assetid: 7d148bb6-8a1e-47d7-a08d-35828d2e688f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 90b0c2748960443c0d63d22b33566ebcb2b4545b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9dc8499e2d12ed17f9b409a805148d08da894fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532140"
 ---
-# <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a><span data-ttu-id="2d2ef-102">Cómo: Reproducir un sonido incrustado en un recurso desde Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2d2ef-102">How to: Play a Sound Embedded in a Resource from a Windows Form</span></span>
-<span data-ttu-id="2d2ef-103">Puede usar el <xref:System.Media.SoundPlayer> clase para reproducir un sonido desde un recurso incrustado.</span><span class="sxs-lookup"><span data-stu-id="2d2ef-103">You can use the <xref:System.Media.SoundPlayer> class to play a sound from an embedded resource.</span></span>  
+# <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a><span data-ttu-id="403a8-102">Cómo: Reproducir un sonido incrustado en un recurso desde Windows Forms</span><span class="sxs-lookup"><span data-stu-id="403a8-102">How to: Play a Sound Embedded in a Resource from a Windows Form</span></span>
+<span data-ttu-id="403a8-103">Puede usar el <xref:System.Media.SoundPlayer> clase para reproducir un sonido desde un recurso incrustado.</span><span class="sxs-lookup"><span data-stu-id="403a8-103">You can use the <xref:System.Media.SoundPlayer> class to play a sound from an embedded resource.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2d2ef-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2d2ef-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="403a8-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="403a8-104">Example</span></span>  
  [!code-csharp[System.Windows.Forms.Sound#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Sound/CS/soundtestform.cs#10)]
  [!code-vb[System.Windows.Forms.Sound#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Sound/VB/soundtestform.vb#10)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="2d2ef-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="2d2ef-105">Compiling the Code</span></span>  
- <span data-ttu-id="2d2ef-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="2d2ef-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="403a8-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="403a8-105">Compiling the Code</span></span>  
+ <span data-ttu-id="403a8-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="403a8-106">This example requires:</span></span>  
   
- <span data-ttu-id="2d2ef-107">Importar el <xref:System.Media?displayProperty=nameWithType> espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="2d2ef-107">Importing the <xref:System.Media?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="403a8-107">Importar el <xref:System.Media?displayProperty=nameWithType> espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="403a8-107">Importing the <xref:System.Media?displayProperty=nameWithType> namespace.</span></span>  
   
- <span data-ttu-id="2d2ef-108">Incluir el archivo de sonido como recurso incrustado en el proyecto.</span><span class="sxs-lookup"><span data-stu-id="2d2ef-108">Including the sound file as an embedded resource in your project.</span></span>  
+ <span data-ttu-id="403a8-108">Incluir el archivo de sonido como recurso incrustado en el proyecto.</span><span class="sxs-lookup"><span data-stu-id="403a8-108">Including the sound file as an embedded resource in your project.</span></span>  
   
- <span data-ttu-id="2d2ef-109">Reemplazar "\<AssemblyName >" con el nombre del ensamblado en el que se incrusta el archivo de sonido.</span><span class="sxs-lookup"><span data-stu-id="2d2ef-109">Replacing "\<AssemblyName>" with the name of the assembly in which the sound file is embedded.</span></span> <span data-ttu-id="2d2ef-110">No incluya el sufijo ".dll".</span><span class="sxs-lookup"><span data-stu-id="2d2ef-110">Do not include the ".dll" suffix.</span></span>  
+ <span data-ttu-id="403a8-109">Reemplazar "\<AssemblyName >" con el nombre del ensamblado en el que se incrusta el archivo de sonido.</span><span class="sxs-lookup"><span data-stu-id="403a8-109">Replacing "\<AssemblyName>" with the name of the assembly in which the sound file is embedded.</span></span> <span data-ttu-id="403a8-110">No incluya el sufijo ".dll".</span><span class="sxs-lookup"><span data-stu-id="403a8-110">Do not include the ".dll" suffix.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2d2ef-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="2d2ef-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="403a8-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="403a8-111">See Also</span></span>  
  <xref:System.Media.SoundPlayer>  
- [<span data-ttu-id="2d2ef-112">Cómo: Reproducir un sonido desde Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2d2ef-112">How to: Play a Sound from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
- [<span data-ttu-id="2d2ef-113">Cómo: Repetir la reproducción de un sonido en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2d2ef-113">How to: Loop a Sound Playing on a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)
+ [<span data-ttu-id="403a8-112">Cómo: Reproducir un sonido desde Windows Forms</span><span class="sxs-lookup"><span data-stu-id="403a8-112">How to: Play a Sound from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
+ [<span data-ttu-id="403a8-113">Cómo: Repetir la reproducción de un sonido en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="403a8-113">How to: Loop a Sound Playing on a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)

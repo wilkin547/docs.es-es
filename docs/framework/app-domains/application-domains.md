@@ -19,6 +19,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34233956"
 ---
 # <a name="application-domains"></a><span data-ttu-id="2b907-102">Dominios de aplicación</span><span class="sxs-lookup"><span data-stu-id="2b907-102">Application Domains</span></span>
 <span data-ttu-id="2b907-103">Normalmente, los sistemas operativos y los entornos de Common Language Runtime proporcionan algún tipo de aislamiento entre las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="2b907-103">Operating systems and runtime environments typically provide some form of isolation between applications.</span></span> <span data-ttu-id="2b907-104">Por ejemplo, Windows utiliza procesos para aislar las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="2b907-104">For example, Windows uses processes to isolate applications.</span></span> <span data-ttu-id="2b907-105">Este aislamiento es necesario para garantizar que el código que se ejecuta en una aplicación no afecta negativamente a otras aplicaciones no relacionadas.</span><span class="sxs-lookup"><span data-stu-id="2b907-105">This isolation is necessary to ensure that code running in one application cannot adversely affect other, unrelated applications.</span></span>  
