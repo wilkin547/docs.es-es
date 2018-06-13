@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393434"
 ---
 # <a name="ipv6-auto-configuration"></a>Configuración automática de IPv6
 Un objetivo importante para IPv6 es ser compatible con el nodo Plug and Play. Es decir, debería ser posible conectar un nodo en una red IPv6 y hacer que se configurase automáticamente sin intervención humana.  

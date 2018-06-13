@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539405"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Funcionalidad de arrastrar y colocar en formularios Windows Forms
 Windows Forms incluye un conjunto de métodos, eventos y clases que implementan el comportamiento de arrastrar y colocar. En este tema se proporciona una introducción a la compatibilidad para arrastrar y colocar en Windows Forms.  Consulte también [operaciones de arrastrar y colocar](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  

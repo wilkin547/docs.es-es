@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539545"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Cómo: Garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados
 A menudo, cuando se trabaja con enlace de datos en formularios Windows Forms, varios controles están enlazados al mismo origen de datos. En algunos casos, puede ser necesario realizar pasos adicionales para asegurarse de que las propiedades de los controles enlazadas sigan estando sincronizadas con entre sí y el origen de datos. Estos pasos son necesarios en dos situaciones:  

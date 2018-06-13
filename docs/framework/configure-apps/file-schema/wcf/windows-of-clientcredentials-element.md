@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767068"
 ---
 # <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a>Elemento &lt;windows&gt; de &lt;clientCredentials&gt;
 Especifica los valores para una credencial de Windows que se va a utilizar para representar al cliente.  

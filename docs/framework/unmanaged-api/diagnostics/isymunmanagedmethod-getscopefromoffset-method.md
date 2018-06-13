@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0898d554a2602a1139f2e37eb67f3aa00c5bd79e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436090"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset (Método)
 Obtiene el ámbito léxico más envolvente dentro de este método que contiene el desplazamiento especificado. Esto se puede utilizar para iniciar búsquedas de variables locales.  

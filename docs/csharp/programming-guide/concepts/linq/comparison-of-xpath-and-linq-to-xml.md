@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326438"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Comparación de XPath y LINQ to XML
 XPath y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ofrecen una funcionalidad similar. Ambos se pueden usar para consultar un árbol XML, devolviendo resultados como recopilación de elementos, recopilación de nodos o el valor de un elemento o atributo. Sin embargo, también hay algunas diferencias.  

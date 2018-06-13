@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 68698aab0fd0872c6e6f67e4ec531ab0226e784f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401958"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly (Método)
 Finaliza las operaciones de montaje. Llamar a este método antes de comenzar un nuevo ensamblado o módulo no enlazado.  

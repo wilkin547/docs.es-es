@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766912"
 ---
 # <a name="ltservicebehaviorsgt-of-workflow"></a>&lt;serviceBehaviors&gt; de flujo de trabajo
 Esta sección de configuración representa todos los comportamientos definidos para un servicio concreto.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366039"
 ---
 # <a name="what39s-new-in-adonet"></a>¿Qué&#39;s nuevas en ADO.NET
 Las siguientes características son nuevas en [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  

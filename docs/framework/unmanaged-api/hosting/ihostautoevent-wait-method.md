@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7921f0361d7369cddf14dd1ab477529d1bbac481
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439366"
 ---
 # <a name="ihostautoeventwait-method"></a>IHostAutoEvent::Wait (Método)
 Hace que el actual [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instancia espere hasta que encuentre un propietario o una cantidad especificada de tiempo determinado.  

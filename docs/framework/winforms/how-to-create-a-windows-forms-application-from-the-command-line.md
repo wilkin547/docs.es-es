@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539496"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Cómo: crear una aplicación de formularios Windows Forms desde la línea de comandos
 Los procedimientos siguientes describen los pasos básicos que debe seguir para crear y ejecutar una aplicación de Windows Forms desde la línea de comandos. Visual Studio es altamente compatible con estos procedimientos.  Consulte también [Tutorial: crear un formulario Windows Forms sencillo](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  

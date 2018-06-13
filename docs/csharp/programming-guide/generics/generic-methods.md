@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329873"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Métodos genéricos (Guía de programación de C#)
 Un método genérico es un método que se declara con parámetros de tipo, de la manera siguiente:  

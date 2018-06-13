@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766639"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Métodos de LINQ compatibles y no compatibles (LINQ to Entities)
 En esta sección se proporciona información sobre los operadores de consulta estándar de Language-Integrated Query (LINQ) que se admiten o no en las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Muchos de los operadores de consulta estándar de LINQ tienen una versión sobrecargada que acepta un argumento entero. El argumento entero corresponde a un índice de base cero de la secuencia que se opera, un <xref:System.Collections.Generic.IEqualityComparer%601>, o <xref:System.Collections.Generic.IComparer%601>. A menos que se especifique lo contrario, estas versiones sobrecargadas de los operadores de consulta estándar de LINQ no se admiten y, si intenta utilizarlos, se iniciará una excepción.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349696"
 ---
 # <a name="ltaddgt-of-ltallowaccountsgt"></a>&lt;add&gt; de &lt;allowAccounts&gt;
 Especifica una cuenta de usuario para los procesos que alojan servicios WCF y se concede el acceso de conexión al servicio de uso compartido.  

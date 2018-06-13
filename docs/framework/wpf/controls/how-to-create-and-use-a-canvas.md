@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552849"
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>Cómo crear y utilizar un control Canvas
 Este ejemplo muestra cómo crear y usar una instancia de <xref:System.Windows.Controls.Canvas>.  
