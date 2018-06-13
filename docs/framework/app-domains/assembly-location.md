@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743919"
 ---
 # <a name="assembly-location"></a><span data-ttu-id="4b1ff-102">Ubicación del ensamblado</span><span class="sxs-lookup"><span data-stu-id="4b1ff-102">Assembly Location</span></span>
 <span data-ttu-id="4b1ff-103">La ubicación de un ensamblado determina si Common Language Runtime lo encontrará cuando se haga referencia a él y también puede determinar si el ensamblado se puede compartir con otros ensamblados.</span><span class="sxs-lookup"><span data-stu-id="4b1ff-103">An assembly's location determines whether the common language runtime can locate it when referenced, and can also determine whether the assembly can be shared with other assemblies.</span></span> <span data-ttu-id="4b1ff-104">Puede implementar un ensamblado en las ubicaciones siguientes:</span><span class="sxs-lookup"><span data-stu-id="4b1ff-104">You can deploy an assembly in the following locations:</span></span>  

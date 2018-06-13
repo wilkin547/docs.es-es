@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743981"
 ---
 # <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a><span data-ttu-id="7a445-102">&lt;specifiedPickupDirectory&gt; Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="7a445-102">&lt;specifiedPickupDirectory&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="7a445-103">Configura el directorio local de un servidor SMTP (Protocolo simple de transferencia de correo).</span><span class="sxs-lookup"><span data-stu-id="7a445-103">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>  

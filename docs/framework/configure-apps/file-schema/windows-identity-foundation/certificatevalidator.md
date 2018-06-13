@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766899"
 ---
 # <a name="ltcertificatevalidatorgt"></a><span data-ttu-id="e5e4a-102">&lt;certificateValidator&gt;</span><span class="sxs-lookup"><span data-stu-id="e5e4a-102">&lt;certificateValidator&gt;</span></span>
 <span data-ttu-id="e5e4a-103">Especifica un tipo personalizado para la validación del certificado.</span><span class="sxs-lookup"><span data-stu-id="e5e4a-103">Specifies a custom type for certificate validation.</span></span> <span data-ttu-id="e5e4a-104">Este tipo se usa únicamente si la `certificateValidationMode` atributo de la [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) elemento está establecido en "Custom".</span><span class="sxs-lookup"><span data-stu-id="e5e4a-104">This type is used only if the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element is set to "Custom".</span></span>  

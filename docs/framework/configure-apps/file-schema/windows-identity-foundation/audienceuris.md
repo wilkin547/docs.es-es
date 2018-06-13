@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755999"
 ---
 # <a name="ltaudienceurisgt"></a><span data-ttu-id="b4ee7-102">&lt;audienceUris&gt;</span><span class="sxs-lookup"><span data-stu-id="b4ee7-102">&lt;audienceUris&gt;</span></span>
 <span data-ttu-id="b4ee7-103">Especifica el conjunto de URI que son aceptables identificadores de usuario de confianza (RP).</span><span class="sxs-lookup"><span data-stu-id="b4ee7-103">Specifies the set of URIs that are acceptable identifiers of the relying party (RP).</span></span> <span data-ttu-id="b4ee7-104">No se aceptarán tokens a menos que tengan el ámbito de uno de lo URI de público permitido.</span><span class="sxs-lookup"><span data-stu-id="b4ee7-104">Tokens will not be accepted unless they are scoped for one of the allowed audience URIs.</span></span>  

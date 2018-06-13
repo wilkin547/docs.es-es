@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757221"
 ---
 # <a name="connection-strings-in-adonet"></a><span data-ttu-id="74cad-102">Cadenas de conexión de ADO.NET</span><span class="sxs-lookup"><span data-stu-id="74cad-102">Connection Strings in ADO.NET</span></span>
 <span data-ttu-id="74cad-103">.NET Framework 2.0 incorporó nuevas capacidades para trabajar con cadenas de conexión, incluida la introducción de nuevas palabras clave en las clases generadoras de cadenas de conexión, que facilitan la creación de cadenas de conexión válidas en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="74cad-103">The .NET Framework 2.0 introduced new capabilities for working with connection strings, including the introduction of new keywords to the connection string builder classes, which facilitate creating valid connection strings at run time.</span></span>  

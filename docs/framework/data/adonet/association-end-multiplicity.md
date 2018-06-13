@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755879"
 ---
 # <a name="association-end-multiplicity"></a><span data-ttu-id="ccb2e-102">multiplicidad de extremo de asociación</span><span class="sxs-lookup"><span data-stu-id="ccb2e-102">association end multiplicity</span></span>
 <span data-ttu-id="ccb2e-103">*Multiplicidad de extremo de asociación* define el número de [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) instancias que pueden estar en uno de los extremos de un [asociación](../../../../docs/framework/data/adonet/association-type.md).</span><span class="sxs-lookup"><span data-stu-id="ccb2e-103">*Association end multiplicity* defines the number of [entity type](../../../../docs/framework/data/adonet/entity-type.md) instances that can be at one end of an [association](../../../../docs/framework/data/adonet/association-type.md).</span></span>  

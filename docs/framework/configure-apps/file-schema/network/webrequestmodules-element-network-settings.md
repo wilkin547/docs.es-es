@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742697"
 ---
 # <a name="ltwebrequestmodulesgt-element-network-settings"></a><span data-ttu-id="7cc80-102">&lt;webRequestModules&gt; Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="7cc80-102">&lt;webRequestModules&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="7cc80-103">Especifica los módulos que se utilizan para solicitar información de hosts de la red.</span><span class="sxs-lookup"><span data-stu-id="7cc80-103">Specifies modules to use to request information from network hosts.</span></span>  

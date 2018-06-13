@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751979"
 ---
 # <a name="global-assembly-cache"></a><span data-ttu-id="aca8b-102">Caché global de ensamblados</span><span class="sxs-lookup"><span data-stu-id="aca8b-102">Global Assembly Cache</span></span>
 <span data-ttu-id="aca8b-103">Cada equipo donde está instalado Common Language Runtime tiene una memoria caché de código denominada caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="aca8b-103">Each computer where the Common Language Runtime is installed has a machine-wide code cache called the Global Assembly Cache.</span></span> <span data-ttu-id="aca8b-104">La caché global de ensamblados almacena los ensamblados designados específicamente para ser compartidos por varias aplicaciones del equipo.</span><span class="sxs-lookup"><span data-stu-id="aca8b-104">The Global Assembly Cache stores assemblies specifically designated to be shared by several applications on the computer.</span></span>  
