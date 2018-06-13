@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217966"
 ---
 # <a name="accessibility-domain-c-reference"></a><span data-ttu-id="b63c8-102">Dominio de accesibilidad (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="b63c8-102">Accessibility Domain (C# Reference)</span></span>
 <span data-ttu-id="b63c8-103">El dominio de accesibilidad de un miembro especifica en qué secciones del programa se puede hacer referencia a dicho miembro.</span><span class="sxs-lookup"><span data-stu-id="b63c8-103">The accessibility domain of a member specifies in which program sections a member can be referenced.</span></span> <span data-ttu-id="b63c8-104">Si el miembro está anidado dentro de otro tipo, su dominio de accesibilidad viene determinado por el [nivel de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md) del miembro y por el dominio de accesibilidad del tipo contenedor inmediato.</span><span class="sxs-lookup"><span data-stu-id="b63c8-104">If the member is nested within another type, its accessibility domain is determined by both the [accessibility level](../../../csharp/language-reference/keywords/accessibility-levels.md) of the member and the accessibility domain of the immediately containing type.</span></span>  
