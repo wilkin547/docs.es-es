@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744166"
 ---
 # <a name="ltremovegt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="06ac6-102">&lt;quitar&gt; elemento para schemeSettings (configuración de Uri)</span><span class="sxs-lookup"><span data-stu-id="06ac6-102">&lt;remove&gt; Element for schemeSettings (Uri Settings)</span></span>
 <span data-ttu-id="06ac6-103">Quita un valor de esquema para un nombre de esquema.</span><span class="sxs-lookup"><span data-stu-id="06ac6-103">Removes a scheme setting for a scheme name.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747985"
 ---
 # <a name="ltpnrppeerresolvergt"></a><span data-ttu-id="db1c1-102">&lt;pnrpPeerResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="db1c1-102">&lt;pnrpPeerResolver&gt;</span></span>
 <span data-ttu-id="db1c1-103">Especifica que la resolución de PNRP (Protocolo de resolución de nombres de mismo nivel) será utilizada como resolución.</span><span class="sxs-lookup"><span data-stu-id="db1c1-103">Specifies that the PNRP (Peer Name Resolution Protocol) resolver is to be used as a resolver.</span></span> <span data-ttu-id="db1c1-104">Este elemento es opcional porque PNRP es la resolución predeterminada.</span><span class="sxs-lookup"><span data-stu-id="db1c1-104">This element is optional because PNRP is the default resolver.</span></span>  

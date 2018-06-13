@@ -1,13 +1,6 @@
 ---
-title: "Devoluciones de llamadas en la serialización tolerante a versiones"
-ms.custom: 
+title: Devoluciones de llamadas en la serialización tolerante a versiones
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,44 +11,40 @@ helpviewer_keywords:
 - serialization [WCF], setting default values
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b6e8606b8dbc0733632c2a6dc6aeb039f5277990
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84e38451f10acc341642c0bf0923cc73b79d771f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497937"
 ---
-# <a name="version-tolerant-serialization-callbacks"></a><span data-ttu-id="ace9c-102">Devoluciones de llamadas en la serialización tolerante a versiones</span><span class="sxs-lookup"><span data-stu-id="ace9c-102">Version-Tolerant Serialization Callbacks</span></span>
-<span data-ttu-id="ace9c-103">El modelo de programación del contrato de datos admite totalmente los métodos de devolución de llamada de serialización tolerante a versiones que las clases <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> y <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> admiten.</span><span class="sxs-lookup"><span data-stu-id="ace9c-103">The data contract programming model fully supports the version-tolerant serialization callback methods that the <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> and <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> classes support.</span></span>  
+# <a name="version-tolerant-serialization-callbacks"></a><span data-ttu-id="a6ce5-102">Devoluciones de llamadas en la serialización tolerante a versiones</span><span class="sxs-lookup"><span data-stu-id="a6ce5-102">Version-Tolerant Serialization Callbacks</span></span>
+<span data-ttu-id="a6ce5-103">El modelo de programación del contrato de datos admite totalmente los métodos de devolución de llamada de serialización tolerante a versiones que las clases <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> y <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> admiten.</span><span class="sxs-lookup"><span data-stu-id="a6ce5-103">The data contract programming model fully supports the version-tolerant serialization callback methods that the <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> and <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> classes support.</span></span>  
   
-## <a name="version-tolerant-attributes"></a><span data-ttu-id="ace9c-104">Atributos tolerantes a versiones</span><span class="sxs-lookup"><span data-stu-id="ace9c-104">Version-Tolerant Attributes</span></span>  
- <span data-ttu-id="ace9c-105">Hay cuatro atributos de devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="ace9c-105">There are four callback attributes.</span></span> <span data-ttu-id="ace9c-106">Cada atributo se puede aplicar a un método que el motor de serialización/deserialización denomina en varios momentos.</span><span class="sxs-lookup"><span data-stu-id="ace9c-106">Each attribute can be applied to a method that the serialization/deserialization engine calls at various times.</span></span> <span data-ttu-id="ace9c-107">La siguiente tabla explica cuándo utilizar cada atributo.</span><span class="sxs-lookup"><span data-stu-id="ace9c-107">The table below explains when to use each attribute.</span></span>  
+## <a name="version-tolerant-attributes"></a><span data-ttu-id="a6ce5-104">Atributos tolerantes a versiones</span><span class="sxs-lookup"><span data-stu-id="a6ce5-104">Version-Tolerant Attributes</span></span>  
+ <span data-ttu-id="a6ce5-105">Hay cuatro atributos de devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="a6ce5-105">There are four callback attributes.</span></span> <span data-ttu-id="a6ce5-106">Cada atributo se puede aplicar a un método que el motor de serialización/deserialización denomina en varios momentos.</span><span class="sxs-lookup"><span data-stu-id="a6ce5-106">Each attribute can be applied to a method that the serialization/deserialization engine calls at various times.</span></span> <span data-ttu-id="a6ce5-107">La siguiente tabla explica cuándo utilizar cada atributo.</span><span class="sxs-lookup"><span data-stu-id="a6ce5-107">The table below explains when to use each attribute.</span></span>  
   
-|<span data-ttu-id="ace9c-108">Atributo</span><span class="sxs-lookup"><span data-stu-id="ace9c-108">Attribute</span></span>|<span data-ttu-id="ace9c-109">Cuando se llama al método correspondiente</span><span class="sxs-lookup"><span data-stu-id="ace9c-109">When the corresponding method is called</span></span>|  
+|<span data-ttu-id="a6ce5-108">Atributo</span><span class="sxs-lookup"><span data-stu-id="a6ce5-108">Attribute</span></span>|<span data-ttu-id="a6ce5-109">Cuando se llama al método correspondiente</span><span class="sxs-lookup"><span data-stu-id="a6ce5-109">When the corresponding method is called</span></span>|  
 |---------------|---------------------------------------------|  
-|<xref:System.Runtime.Serialization.OnSerializingAttribute>|<span data-ttu-id="ace9c-110">Llamado antes de serializar el tipo.</span><span class="sxs-lookup"><span data-stu-id="ace9c-110">Called before serializing the type.</span></span>|  
-|<xref:System.Runtime.Serialization.OnSerializedAttribute>|<span data-ttu-id="ace9c-111">Llamado después de serializar el tipo.</span><span class="sxs-lookup"><span data-stu-id="ace9c-111">Called after serializing the type.</span></span>|  
-|<xref:System.Runtime.Serialization.OnDeserializingAttribute>|<span data-ttu-id="ace9c-112">Llamado antes de deserializar el tipo.</span><span class="sxs-lookup"><span data-stu-id="ace9c-112">Called before deserializing the type.</span></span>|  
-|<xref:System.Runtime.Serialization.OnDeserializedAttribute>|<span data-ttu-id="ace9c-113">Llamado después de deserializar el tipo.</span><span class="sxs-lookup"><span data-stu-id="ace9c-113">Called after deserializing the type.</span></span>|  
+|<xref:System.Runtime.Serialization.OnSerializingAttribute>|<span data-ttu-id="a6ce5-110">Llamado antes de serializar el tipo.</span><span class="sxs-lookup"><span data-stu-id="a6ce5-110">Called before serializing the type.</span></span>|  
+|<xref:System.Runtime.Serialization.OnSerializedAttribute>|<span data-ttu-id="a6ce5-111">Llamado después de serializar el tipo.</span><span class="sxs-lookup"><span data-stu-id="a6ce5-111">Called after serializing the type.</span></span>|  
+|<xref:System.Runtime.Serialization.OnDeserializingAttribute>|<span data-ttu-id="a6ce5-112">Llamado antes de deserializar el tipo.</span><span class="sxs-lookup"><span data-stu-id="a6ce5-112">Called before deserializing the type.</span></span>|  
+|<xref:System.Runtime.Serialization.OnDeserializedAttribute>|<span data-ttu-id="a6ce5-113">Llamado después de deserializar el tipo.</span><span class="sxs-lookup"><span data-stu-id="a6ce5-113">Called after deserializing the type.</span></span>|  
   
- <span data-ttu-id="ace9c-114">Los métodos deben aceptar un parámetro <xref:System.Runtime.Serialization.StreamingContext>.</span><span class="sxs-lookup"><span data-stu-id="ace9c-114">The methods must accept a <xref:System.Runtime.Serialization.StreamingContext> parameter.</span></span>  
+ <span data-ttu-id="a6ce5-114">Los métodos deben aceptar un parámetro <xref:System.Runtime.Serialization.StreamingContext>.</span><span class="sxs-lookup"><span data-stu-id="a6ce5-114">The methods must accept a <xref:System.Runtime.Serialization.StreamingContext> parameter.</span></span>  
   
- <span data-ttu-id="ace9c-115">Estos métodos están pensados principalmente para utilizarlos con controlador de versiones o inicialización.</span><span class="sxs-lookup"><span data-stu-id="ace9c-115">These methods are primarily intended for use with versioning or initialization.</span></span> <span data-ttu-id="ace9c-116">No se llama a ningún constructor durante la deserialización.</span><span class="sxs-lookup"><span data-stu-id="ace9c-116">During deserialization, no constructors are called.</span></span> <span data-ttu-id="ace9c-117">Por lo tanto, puede que no se puedan inicializar correctamente los miembros de datos (en valores predeterminados intencionales), si los datos de estos miembros faltan en la secuencia de entrada, por ejemplo, si los datos proceden de una versión anterior de un tipo al cual le faltan algunos miembros de datos. </span><span class="sxs-lookup"><span data-stu-id="ace9c-117">Therefore, data members may not be correctly initialized (to intended default values) if the data for these members is missing in the incoming stream, for example, if the data comes from a previous version of a type that is missing some data members.</span></span> <span data-ttu-id="ace9c-118">Para corregirlo, utilice el método de devolución de llamada marcado con <xref:System.Runtime.Serialization.OnDeserializingAttribute>, tal y como se muestra en el siguiente ejemplo.</span><span class="sxs-lookup"><span data-stu-id="ace9c-118">To correct this, use the callback method marked with the <xref:System.Runtime.Serialization.OnDeserializingAttribute>, as shown in the following example.</span></span>  
+ <span data-ttu-id="a6ce5-115">Estos métodos están pensados principalmente para utilizarlos con controlador de versiones o inicialización.</span><span class="sxs-lookup"><span data-stu-id="a6ce5-115">These methods are primarily intended for use with versioning or initialization.</span></span> <span data-ttu-id="a6ce5-116">No se llama a ningún constructor durante la deserialización.</span><span class="sxs-lookup"><span data-stu-id="a6ce5-116">During deserialization, no constructors are called.</span></span> <span data-ttu-id="a6ce5-117">Por lo tanto, puede que no se puedan inicializar correctamente los miembros de datos (en valores predeterminados intencionales), si los datos de estos miembros faltan en la secuencia de entrada, por ejemplo, si los datos proceden de una versión anterior de un tipo al cual le faltan algunos miembros de datos. </span><span class="sxs-lookup"><span data-stu-id="a6ce5-117">Therefore, data members may not be correctly initialized (to intended default values) if the data for these members is missing in the incoming stream, for example, if the data comes from a previous version of a type that is missing some data members.</span></span> <span data-ttu-id="a6ce5-118">Para corregirlo, utilice el método de devolución de llamada marcado con <xref:System.Runtime.Serialization.OnDeserializingAttribute>, tal y como se muestra en el siguiente ejemplo.</span><span class="sxs-lookup"><span data-stu-id="a6ce5-118">To correct this, use the callback method marked with the <xref:System.Runtime.Serialization.OnDeserializingAttribute>, as shown in the following example.</span></span>  
   
- <span data-ttu-id="ace9c-119">Puede marcar sólo un método por tipo con cada uno de los atributos de devolución de llamada anteriores.</span><span class="sxs-lookup"><span data-stu-id="ace9c-119">You can mark only one method per type with each of the preceding callback attributes.</span></span>  
+ <span data-ttu-id="a6ce5-119">Puede marcar sólo un método por tipo con cada uno de los atributos de devolución de llamada anteriores.</span><span class="sxs-lookup"><span data-stu-id="a6ce5-119">You can mark only one method per type with each of the preceding callback attributes.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="ace9c-120">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ace9c-120">Example</span></span>  
+### <a name="example"></a><span data-ttu-id="a6ce5-120">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a6ce5-120">Example</span></span>  
  [!code-csharp[C_DataContract#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#9)]
  [!code-vb[C_DataContract#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#9)]  
   
-## <a name="see-also"></a><span data-ttu-id="ace9c-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="ace9c-121">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a6ce5-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="a6ce5-121">See Also</span></span>  
  <xref:System.Runtime.Serialization.OnSerializingAttribute>  
  <xref:System.Runtime.Serialization.OnSerializedAttribute>  
  <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
  <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
  <xref:System.Runtime.Serialization.StreamingContext>  
- [<span data-ttu-id="ace9c-122">Serialización tolerante a versiones</span><span class="sxs-lookup"><span data-stu-id="ace9c-122">Version Tolerant Serialization</span></span>](../../../../docs/standard/serialization/version-tolerant-serialization.md)
+ [<span data-ttu-id="a6ce5-122">Serialización tolerante a versiones</span><span class="sxs-lookup"><span data-stu-id="a6ce5-122">Version Tolerant Serialization</span></span>](../../../../docs/standard/serialization/version-tolerant-serialization.md)

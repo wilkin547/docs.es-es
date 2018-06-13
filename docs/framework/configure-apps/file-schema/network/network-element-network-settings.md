@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744673"
 ---
 # <a name="ltnetworkgt-element-network-settings"></a><span data-ttu-id="adb10-102">&lt;red&gt; Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="adb10-102">&lt;network&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="adb10-103">Configura las opciones de red para un servidor de Protocolo Simple de transferencia de correo (SMTP) externo.</span><span class="sxs-lookup"><span data-stu-id="adb10-103">Configures the network options for an external Simple Mail Transport Protocol (SMTP) server.</span></span>  

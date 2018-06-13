@@ -29,6 +29,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744114"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a><span data-ttu-id="74949-102">Esquema de los archivos de configuración de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="74949-102">Configuration file schema for the .NET Framework</span></span>
 

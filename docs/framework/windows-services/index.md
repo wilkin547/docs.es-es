@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512273"
 ---
 # <a name="developing-windows-service-applications"></a><span data-ttu-id="112ab-102">Desarrollar aplicaciones de servicios de Windows</span><span class="sxs-lookup"><span data-stu-id="112ab-102">Developing Windows Service Applications</span></span>
 <span data-ttu-id="112ab-103">Con Microsoft Visual Studio o el SDK de Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], puede crear fácilmente servicios mediante la creación de una aplicación que se instale como un servicio.</span><span class="sxs-lookup"><span data-stu-id="112ab-103">Using Microsoft Visual Studio or the Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, you can easily create services by creating an application that is installed as a service.</span></span> <span data-ttu-id="112ab-104">Este tipo de aplicación se denomina servicio Windows.</span><span class="sxs-lookup"><span data-stu-id="112ab-104">This type of application is called a Windows service.</span></span> <span data-ttu-id="112ab-105">Con las características de la plataforma, puede crear servicios, instalarlos e iniciar, detener y controlar su comportamiento.</span><span class="sxs-lookup"><span data-stu-id="112ab-105">With framework features, you can create services, install them, and start, stop, and otherwise control their behavior.</span></span>  

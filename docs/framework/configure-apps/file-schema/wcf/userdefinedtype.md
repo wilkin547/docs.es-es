@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755284"
 ---
 # <a name="ltuserdefinedtypegt"></a><span data-ttu-id="3db93-102">&lt;userDefinedType&gt;</span><span class="sxs-lookup"><span data-stu-id="3db93-102">&lt;userDefinedType&gt;</span></span>
 <span data-ttu-id="3db93-103">Representa un tipo definido por el usuario (UDT) que se va a incluir en el contrato del servicio.</span><span class="sxs-lookup"><span data-stu-id="3db93-103">Represents a User Defined Type (UDT) that is to be included in the service contract.</span></span>  

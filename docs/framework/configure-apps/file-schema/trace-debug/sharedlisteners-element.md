@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745580"
 ---
 # <a name="ltsharedlistenersgt-element"></a><span data-ttu-id="4670f-102">&lt;sharedListeners&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="4670f-102">&lt;sharedListeners&gt; Element</span></span>
 <span data-ttu-id="4670f-103">Contiene los agentes de escucha a los que puede hacer referencia cualquier origen o elemento de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="4670f-103">Contains listeners that any source or trace element can reference.</span></span>  <span data-ttu-id="4670f-104">Estos agentes de escucha no reciben ninguna traza de forma predeterminada y no es posible recuperar estos agentes de escucha en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="4670f-104">These listeners do not receive any traces by default, and it is not possible to retrieve these listeners at run time.</span></span> <span data-ttu-id="4670f-105">Los agentes de escucha identificados como agentes de escucha compartidos se pueden agregar a los orígenes o seguimientos por su nombre.</span><span class="sxs-lookup"><span data-stu-id="4670f-105">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>  

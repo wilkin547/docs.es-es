@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745154"
 ---
 # <a name="ltswitchesgt-element"></a><span data-ttu-id="65b5a-102">&lt;conmutadores&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="65b5a-102">&lt;switches&gt; Element</span></span>
 <span data-ttu-id="65b5a-103">Contiene modificadores de seguimiento y el nivel en el que están establecidos.</span><span class="sxs-lookup"><span data-stu-id="65b5a-103">Contains trace switches and the level where the trace switches are set.</span></span>  

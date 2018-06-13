@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747491"
 ---
 # <a name="ltbaseaddressesgt"></a><span data-ttu-id="7f07b-102">&lt;direcciones base&gt;</span><span class="sxs-lookup"><span data-stu-id="7f07b-102">&lt;baseAddresses&gt;</span></span>
 <span data-ttu-id="7f07b-103">Representa una colección de elementos `baseAddress`, que son las direcciones base para un host del servicio en un entorno autohospedado.</span><span class="sxs-lookup"><span data-stu-id="7f07b-103">Represents a collection of `baseAddress` elements, which are base addresses for a service host in a self-hosted environment.</span></span> <span data-ttu-id="7f07b-104">Si una dirección base está presente, los puntos de conexión se pueden configurar con direcciones relativas a la dirección base.</span><span class="sxs-lookup"><span data-stu-id="7f07b-104">If a base address is present, endpoints can be configured with addresses relative to the base address.</span></span>  

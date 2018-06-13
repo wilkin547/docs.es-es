@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753084"
 ---
 # <a name="ltconnectionpoolsettingsgt-of-lttcptransportgt"></a><span data-ttu-id="8e66b-102">Elemento &lt;connectionPoolSettings&gt; de &lt;tcpTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="8e66b-102">&lt;connectionPoolSettings&gt; of &lt;tcpTransport&gt;</span></span>
 <span data-ttu-id="8e66b-103">Especifica los valores de grupo de conexiones adicionales para un transporte TCP.</span><span class="sxs-lookup"><span data-stu-id="8e66b-103">Specifies additional connection pool settings for a TCP transport.</span></span>  

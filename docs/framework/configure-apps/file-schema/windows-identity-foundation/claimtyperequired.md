@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754959"
 ---
 # <a name="ltclaimtyperequiredgt"></a><span data-ttu-id="d8746-102">&lt;claimTypeRequired&gt;</span><span class="sxs-lookup"><span data-stu-id="d8746-102">&lt;claimTypeRequired&gt;</span></span>
 <span data-ttu-id="d8746-103">Especifica el conjunto de notificaciones necesarias para los tokens de seguridad entrantes.</span><span class="sxs-lookup"><span data-stu-id="d8746-103">Specifies the set of required claims for incoming security tokens.</span></span>  
