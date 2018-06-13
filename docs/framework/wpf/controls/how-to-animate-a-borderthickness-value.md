@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551344"
 ---
 # <a name="how-to-animate-a-borderthickness-value"></a>Cómo: Animar el valor del grosor de un borde
 Este ejemplo muestra cómo animar los cambios en el grosor de un borde utilizando la <xref:System.Windows.Media.Animation.ThicknessAnimation> clase.  
