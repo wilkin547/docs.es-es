@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545368"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Cómo: Agregar control de clases a un evento enrutado
 Los eventos enrutados pueden controlarse mediante controladores de clase o de instancia en cualquier nodo determinado en la ruta. Controladores de clase se invocan en primer lugar y las implementaciones de clase pueden utilizar para suprimir los eventos del control de instancias o introducir otros comportamientos específicos de eventos en los eventos que pertenecen a las clases base. En este ejemplo se muestra dos técnicas estrechamente relacionadas para implementar controladores de clases.  

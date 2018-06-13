@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533158"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a>Controles HScrollBar y VScrollBar (formularios Windows Forms)
 Los controles de la barra de desplazamiento de Windows Forms se utilizan para facilitar el desplazamiento por una lista de elementos larga o un gran volumen de información, ya sea horizontal o verticalmente, dentro de una aplicación o control. Las barras de desplazamiento son un elemento común de la interfaz de Windows.  

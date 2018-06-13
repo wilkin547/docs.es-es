@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527305"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Cómo: Mostrar iconos de error para la validación de formularios con el componente ErrorProvider de formularios Windows Forms
 Puede utilizar un formulario Windows Forms <xref:System.Windows.Forms.ErrorProvider> componente para mostrar un icono de error cuando el usuario escriba datos no válidos. Debe tener al menos dos controles en el formulario con el fin de pestaña entre ellos y, por tanto, invocar el código de validación.  

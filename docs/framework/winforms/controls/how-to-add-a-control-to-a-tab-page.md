@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526701"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page"></a>Cómo: Agregar un control a una página de fichas
 Puede utilizar los formularios de Windows <xref:System.Windows.Forms.TabControl> para mostrar otros controles de un modo organizado. El siguiente procedimiento muestra cómo agregar un botón a la primera pestaña. Para obtener información sobre cómo agregar un icono a la parte de la etiqueta de una página de fichas, vea [Cómo: cambiar la apariencia del control TabControl de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
