@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback4::ReJITError (Método)"
-ms.custom: 
+title: ICorProfilerCallback4::ReJITError (Método)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback4.ReJITError
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c746d0f7a6be96f95f1a051e22de0ad1bd2d2269
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ec6472a33c49d9345793d73ac2f78f8896dc218b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454823"
 ---
-# <a name="icorprofilercallback4rejiterror-method"></a><span data-ttu-id="9c563-102">ICorProfilerCallback4::ReJITError (Método)</span><span class="sxs-lookup"><span data-stu-id="9c563-102">ICorProfilerCallback4::ReJITError Method</span></span>
-<span data-ttu-id="9c563-103">Notifica al generador de perfiles que el compilador de just-in-time (JIT) encontró un error en el proceso de recompilación.</span><span class="sxs-lookup"><span data-stu-id="9c563-103">Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.</span></span>  
+# <a name="icorprofilercallback4rejiterror-method"></a><span data-ttu-id="7608f-102">ICorProfilerCallback4::ReJITError (Método)</span><span class="sxs-lookup"><span data-stu-id="7608f-102">ICorProfilerCallback4::ReJITError Method</span></span>
+<span data-ttu-id="7608f-103">Notifica al generador de perfiles que el compilador de just-in-time (JIT) encontró un error en el proceso de recompilación.</span><span class="sxs-lookup"><span data-stu-id="7608f-103">Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9c563-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9c563-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7608f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7608f-104">Syntax</span></span>  
   
 ```  
 HRESULT ReJITError(  
@@ -48,42 +37,42 @@ HRESULT ReJITError(
     [in] HRESULT     hrStatus);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9c563-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9c563-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7608f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7608f-105">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="9c563-106">[in] El `ModuleID` en que se realizara el intento de volver a compilar errores.</span><span class="sxs-lookup"><span data-stu-id="9c563-106">[in] The `ModuleID` in which the failed recompilation attempt was made.</span></span>  
+ <span data-ttu-id="7608f-106">[in] El `ModuleID` en que se realizara el intento de volver a compilar errores.</span><span class="sxs-lookup"><span data-stu-id="7608f-106">[in] The `ModuleID` in which the failed recompilation attempt was made.</span></span>  
   
  `methodId`  
- <span data-ttu-id="9c563-107">[in] El `MethodDef` del método en el que se realizara el intento de volver a compilar errores.</span><span class="sxs-lookup"><span data-stu-id="9c563-107">[in] The `MethodDef` of the method on which the failed recompilation attempt was made.</span></span>  
+ <span data-ttu-id="7608f-107">[in] El `MethodDef` del método en el que se realizara el intento de volver a compilar errores.</span><span class="sxs-lookup"><span data-stu-id="7608f-107">[in] The `MethodDef` of the method on which the failed recompilation attempt was made.</span></span>  
   
  `functionId`  
- <span data-ttu-id="9c563-108">[in] La instancia de la función que se ha vuelto a compilar o está marcado para volver a compilar.</span><span class="sxs-lookup"><span data-stu-id="9c563-108">[in] The function instance that is being recompiled or marked for recompilation.</span></span> <span data-ttu-id="9c563-109">Este valor puede ser `NULL` si se produjo el error en una base por cada método en lugar de una base de cada instancia (por ejemplo, si el generador de perfiles especifica un token de metadatos no válidos para el método se vuelvan a compilar).</span><span class="sxs-lookup"><span data-stu-id="9c563-109">This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).</span></span>  
+ <span data-ttu-id="7608f-108">[in] La instancia de la función que se ha vuelto a compilar o está marcado para volver a compilar.</span><span class="sxs-lookup"><span data-stu-id="7608f-108">[in] The function instance that is being recompiled or marked for recompilation.</span></span> <span data-ttu-id="7608f-109">Este valor puede ser `NULL` si se produjo el error en una base por cada método en lugar de una base de cada instancia (por ejemplo, si el generador de perfiles especifica un token de metadatos no válidos para el método se vuelvan a compilar).</span><span class="sxs-lookup"><span data-stu-id="7608f-109">This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="9c563-110">[in] Un valor HRESULT que indica la naturaleza del error.</span><span class="sxs-lookup"><span data-stu-id="9c563-110">[in] An HRESULT that indicates the nature of the failure.</span></span> <span data-ttu-id="9c563-111">Vea la sección de valores HRESULT de estado para obtener una lista de valores.</span><span class="sxs-lookup"><span data-stu-id="9c563-111">See the Status HRESULTS section for a list of values.</span></span>  
+ <span data-ttu-id="7608f-110">[in] Un valor HRESULT que indica la naturaleza del error.</span><span class="sxs-lookup"><span data-stu-id="7608f-110">[in] An HRESULT that indicates the nature of the failure.</span></span> <span data-ttu-id="7608f-111">Vea la sección de valores HRESULT de estado para obtener una lista de valores.</span><span class="sxs-lookup"><span data-stu-id="7608f-111">See the Status HRESULTS section for a list of values.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9c563-112">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="9c563-112">Return Value</span></span>  
- <span data-ttu-id="9c563-113">Los valores devueltos de esta devolución de llamada se pasan por alto.</span><span class="sxs-lookup"><span data-stu-id="9c563-113">Return values from this callback are ignored.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7608f-112">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="7608f-112">Return Value</span></span>  
+ <span data-ttu-id="7608f-113">Los valores devueltos de esta devolución de llamada se pasan por alto.</span><span class="sxs-lookup"><span data-stu-id="7608f-113">Return values from this callback are ignored.</span></span>  
   
-## <a name="status-hresults"></a><span data-ttu-id="9c563-114">HRESULT de estado</span><span class="sxs-lookup"><span data-stu-id="9c563-114">Status HRESULTS</span></span>  
+## <a name="status-hresults"></a><span data-ttu-id="7608f-114">HRESULT de estado</span><span class="sxs-lookup"><span data-stu-id="7608f-114">Status HRESULTS</span></span>  
   
-|<span data-ttu-id="9c563-115">HRESULT de la matriz de estados</span><span class="sxs-lookup"><span data-stu-id="9c563-115">Status array HRESULT</span></span>|<span data-ttu-id="9c563-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="9c563-116">Description</span></span>|  
+|<span data-ttu-id="7608f-115">HRESULT de la matriz de estados</span><span class="sxs-lookup"><span data-stu-id="7608f-115">Status array HRESULT</span></span>|<span data-ttu-id="7608f-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="7608f-116">Description</span></span>|  
 |--------------------------|-----------------|  
-|<span data-ttu-id="9c563-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="9c563-117">E_INVALIDARG</span></span>|<span data-ttu-id="9c563-118">El `moduleID` o `methodDef` token es `NULL`.</span><span class="sxs-lookup"><span data-stu-id="9c563-118">The `moduleID` or `methodDef` token is `NULL`.</span></span>|  
-|<span data-ttu-id="9c563-119">CORPROF_E_DATAINCOMPLETE</span><span class="sxs-lookup"><span data-stu-id="9c563-119">CORPROF_E_DATAINCOMPLETE</span></span>|<span data-ttu-id="9c563-120">El módulo no está totalmente cargado aún o está en proceso de descarga.</span><span class="sxs-lookup"><span data-stu-id="9c563-120">The module is not fully loaded yet, or it is in the process of being unloaded.</span></span>|  
-|<span data-ttu-id="9c563-121">CORPROF_E_MODULE_IS_DYNAMIC</span><span class="sxs-lookup"><span data-stu-id="9c563-121">CORPROF_E_MODULE_IS_DYNAMIC</span></span>|<span data-ttu-id="9c563-122">El módulo especificado se genera dinámicamente (por ejemplo, `Reflection.Emit`) y, por tanto, no se admite este método.</span><span class="sxs-lookup"><span data-stu-id="9c563-122">The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.</span></span>|  
-|<span data-ttu-id="9c563-123">CORPROF_E_FUNCTION_IS_COLLECTIBLE</span><span class="sxs-lookup"><span data-stu-id="9c563-123">CORPROF_E_FUNCTION_IS_COLLECTIBLE</span></span>|<span data-ttu-id="9c563-124">El método se crea una instancia en un ensamblado recopilable y, por lo tanto, no puede volver a compilar.</span><span class="sxs-lookup"><span data-stu-id="9c563-124">The method is instantiated into a collectible assembly, and is therefore not able to be recompiled.</span></span> <span data-ttu-id="9c563-125">Tenga en cuenta que los tipos y funciones definidas en un contexto de reflexión no (por ejemplo, `List<MyCollectibleStruct>`) se pueden crear instancias en un ensamblado recopilable.</span><span class="sxs-lookup"><span data-stu-id="9c563-125">Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.</span></span>|  
-|<span data-ttu-id="9c563-126">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="9c563-126">E_OUTOFMEMORY</span></span>|<span data-ttu-id="9c563-127">El CLR se quedó sin memoria al intentar marcar el método especificado para la recompilación con JIT.</span><span class="sxs-lookup"><span data-stu-id="9c563-127">The CLR ran out of memory while trying to mark the specified method for JIT recompilation.</span></span>|  
-|<span data-ttu-id="9c563-128">Otros</span><span class="sxs-lookup"><span data-stu-id="9c563-128">Other</span></span>|<span data-ttu-id="9c563-129">El sistema operativo devolvió un error fuera del control del CLR.</span><span class="sxs-lookup"><span data-stu-id="9c563-129">The operating system returned a failure outside the control of the CLR.</span></span> <span data-ttu-id="9c563-130">Por ejemplo, si se produce un error en una llamada del sistema para cambiar la protección de acceso de una página de memoria, se muestra el error del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="9c563-130">For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.</span></span>|  
+|<span data-ttu-id="7608f-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="7608f-117">E_INVALIDARG</span></span>|<span data-ttu-id="7608f-118">El `moduleID` o `methodDef` token es `NULL`.</span><span class="sxs-lookup"><span data-stu-id="7608f-118">The `moduleID` or `methodDef` token is `NULL`.</span></span>|  
+|<span data-ttu-id="7608f-119">CORPROF_E_DATAINCOMPLETE</span><span class="sxs-lookup"><span data-stu-id="7608f-119">CORPROF_E_DATAINCOMPLETE</span></span>|<span data-ttu-id="7608f-120">El módulo no está totalmente cargado aún o está en proceso de descarga.</span><span class="sxs-lookup"><span data-stu-id="7608f-120">The module is not fully loaded yet, or it is in the process of being unloaded.</span></span>|  
+|<span data-ttu-id="7608f-121">CORPROF_E_MODULE_IS_DYNAMIC</span><span class="sxs-lookup"><span data-stu-id="7608f-121">CORPROF_E_MODULE_IS_DYNAMIC</span></span>|<span data-ttu-id="7608f-122">El módulo especificado se genera dinámicamente (por ejemplo, `Reflection.Emit`) y, por tanto, no se admite este método.</span><span class="sxs-lookup"><span data-stu-id="7608f-122">The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.</span></span>|  
+|<span data-ttu-id="7608f-123">CORPROF_E_FUNCTION_IS_COLLECTIBLE</span><span class="sxs-lookup"><span data-stu-id="7608f-123">CORPROF_E_FUNCTION_IS_COLLECTIBLE</span></span>|<span data-ttu-id="7608f-124">El método se crea una instancia en un ensamblado recopilable y, por lo tanto, no puede volver a compilar.</span><span class="sxs-lookup"><span data-stu-id="7608f-124">The method is instantiated into a collectible assembly, and is therefore not able to be recompiled.</span></span> <span data-ttu-id="7608f-125">Tenga en cuenta que los tipos y funciones definidas en un contexto de reflexión no (por ejemplo, `List<MyCollectibleStruct>`) se pueden crear instancias en un ensamblado recopilable.</span><span class="sxs-lookup"><span data-stu-id="7608f-125">Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.</span></span>|  
+|<span data-ttu-id="7608f-126">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="7608f-126">E_OUTOFMEMORY</span></span>|<span data-ttu-id="7608f-127">El CLR se quedó sin memoria al intentar marcar el método especificado para la recompilación con JIT.</span><span class="sxs-lookup"><span data-stu-id="7608f-127">The CLR ran out of memory while trying to mark the specified method for JIT recompilation.</span></span>|  
+|<span data-ttu-id="7608f-128">Otros</span><span class="sxs-lookup"><span data-stu-id="7608f-128">Other</span></span>|<span data-ttu-id="7608f-129">El sistema operativo devolvió un error fuera del control del CLR.</span><span class="sxs-lookup"><span data-stu-id="7608f-129">The operating system returned a failure outside the control of the CLR.</span></span> <span data-ttu-id="7608f-130">Por ejemplo, si se produce un error en una llamada del sistema para cambiar la protección de acceso de una página de memoria, se muestra el error del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="7608f-130">For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9c563-131">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9c563-131">Requirements</span></span>  
- <span data-ttu-id="9c563-132">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9c563-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7608f-131">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7608f-131">Requirements</span></span>  
+ <span data-ttu-id="7608f-132">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7608f-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9c563-133">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9c563-133">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="7608f-133">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7608f-133">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9c563-134">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9c563-134">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7608f-134">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7608f-134">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9c563-135">**Versiones de .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9c563-135">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="7608f-135">**Versiones de .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7608f-135">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c563-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="9c563-136">See Also</span></span>  
- [<span data-ttu-id="9c563-137">ICorProfilerCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9c563-137">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="9c563-138">ICorProfilerCallback4 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9c563-138">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7608f-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="7608f-136">See Also</span></span>  
+ [<span data-ttu-id="7608f-137">ICorProfilerCallback (interfaz)</span><span class="sxs-lookup"><span data-stu-id="7608f-137">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
+ [<span data-ttu-id="7608f-138">ICorProfilerCallback4 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="7608f-138">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
