@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762912"
 ---
 # <a name="csdl-specification"></a><span data-ttu-id="be77c-102">Especificación CSDL</span><span class="sxs-lookup"><span data-stu-id="be77c-102">CSDL Specification</span></span>
 <span data-ttu-id="be77c-103">El [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) sitio ahora es la ubicación principal para el contenido de Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="be77c-103">The [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  

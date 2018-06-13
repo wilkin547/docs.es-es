@@ -1,13 +1,6 @@
 ---
-title: "Cómo: Crear teclas de acceso para controles de Windows Forms"
-ms.custom: 
+title: 'Cómo: Crear teclas de acceso para controles de Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -27,23 +20,19 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 81aa68a65d09b073b117f4d96dfc06e614d68aea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53ffd3632ff3e1179a72f1e2bfe4ea366e28b0f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530954"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a><span data-ttu-id="0080a-102">Cómo: Crear teclas de acceso para controles de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0080a-102">How to: Create Access Keys for Windows Forms Controls</span></span>
-<span data-ttu-id="0080a-103">Un *clave de acceso* es un carácter subrayado en el texto de un menú, elemento de menú o la etiqueta de un control como un botón.</span><span class="sxs-lookup"><span data-stu-id="0080a-103">An *access key* is an underlined character in the text of a menu, menu item, or the label of a control such as a button.</span></span> <span data-ttu-id="0080a-104">Con una clave de acceso, el usuario puede "haga clic en" un botón presionando la tecla ALT en combinación con la clave de acceso predefinidas.</span><span class="sxs-lookup"><span data-stu-id="0080a-104">With an access key, the user can "click" a button by pressing the ALT key in combination with the predefined access key.</span></span> <span data-ttu-id="0080a-105">Por ejemplo, si un botón ejecuta un procedimiento para imprimir un formulario y por tanto su `Text` propiedad se establece en "Print","Agregar una y comercial antes de la letra"P"hace que la letra"P"aparecerá subrayada en el texto del botón en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="0080a-105">For example, if a button runs a procedure to print a form, and therefore its `Text` property is set to "Print," adding an ampersand before the letter "P" causes the letter "P" to be underlined in the button text at run time.</span></span> <span data-ttu-id="0080a-106">El usuario puede ejecutar el comando asociado con el botón presionando ALT + P.</span><span class="sxs-lookup"><span data-stu-id="0080a-106">The user can run the command associated with the button by pressing ALT+P.</span></span> <span data-ttu-id="0080a-107">No puede tener una tecla de acceso para un control que no se puede recibir el foco.</span><span class="sxs-lookup"><span data-stu-id="0080a-107">You cannot have an access key for a control that cannot receive focus.</span></span>  
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a><span data-ttu-id="102bf-102">Cómo: Crear teclas de acceso para controles de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="102bf-102">How to: Create Access Keys for Windows Forms Controls</span></span>
+<span data-ttu-id="102bf-103">Un *clave de acceso* es un carácter subrayado en el texto de un menú, elemento de menú o la etiqueta de un control como un botón.</span><span class="sxs-lookup"><span data-stu-id="102bf-103">An *access key* is an underlined character in the text of a menu, menu item, or the label of a control such as a button.</span></span> <span data-ttu-id="102bf-104">Con una clave de acceso, el usuario puede "haga clic en" un botón presionando la tecla ALT en combinación con la clave de acceso predefinidas.</span><span class="sxs-lookup"><span data-stu-id="102bf-104">With an access key, the user can "click" a button by pressing the ALT key in combination with the predefined access key.</span></span> <span data-ttu-id="102bf-105">Por ejemplo, si un botón ejecuta un procedimiento para imprimir un formulario y por tanto su `Text` propiedad se establece en "Print","Agregar una y comercial antes de la letra"P"hace que la letra"P"aparecerá subrayada en el texto del botón en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="102bf-105">For example, if a button runs a procedure to print a form, and therefore its `Text` property is set to "Print," adding an ampersand before the letter "P" causes the letter "P" to be underlined in the button text at run time.</span></span> <span data-ttu-id="102bf-106">El usuario puede ejecutar el comando asociado con el botón presionando ALT + P.</span><span class="sxs-lookup"><span data-stu-id="102bf-106">The user can run the command associated with the button by pressing ALT+P.</span></span> <span data-ttu-id="102bf-107">No puede tener una tecla de acceso para un control que no se puede recibir el foco.</span><span class="sxs-lookup"><span data-stu-id="102bf-107">You cannot have an access key for a control that cannot receive focus.</span></span>  
   
-### <a name="to-create-an-access-key-for-a-control"></a><span data-ttu-id="0080a-108">Para crear una clave de acceso para un control</span><span class="sxs-lookup"><span data-stu-id="0080a-108">To create an access key for a control</span></span>  
+### <a name="to-create-an-access-key-for-a-control"></a><span data-ttu-id="102bf-108">Para crear una clave de acceso para un control</span><span class="sxs-lookup"><span data-stu-id="102bf-108">To create an access key for a control</span></span>  
   
-1.  <span data-ttu-id="0080a-109">Establecer el `Text` propiedad a una cadena que incluye una y comercial (&) delante de la letra que será el acceso directo.</span><span class="sxs-lookup"><span data-stu-id="0080a-109">Set the `Text` property to a string that includes an ampersand (&) before the letter that will be the shortcut.</span></span>  
+1.  <span data-ttu-id="102bf-109">Establecer el `Text` propiedad a una cadena que incluye una y comercial (&) delante de la letra que será el acceso directo.</span><span class="sxs-lookup"><span data-stu-id="102bf-109">Set the `Text` property to a string that includes an ampersand (&) before the letter that will be the shortcut.</span></span>  
   
     ```vb  
     ' Set the letter "P" as an access key.  
@@ -61,10 +50,10 @@ ms.lasthandoff: 12/22/2017
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="0080a-110">Para incluir una y comercial en un título sin crear una tecla de acceso, incluya dos símbolos de y comercial (& &).</span><span class="sxs-lookup"><span data-stu-id="0080a-110">To include an ampersand in a caption without creating an access key, include two ampersands (&&).</span></span> <span data-ttu-id="0080a-111">Un solo carácter & se muestra en el título y no está subrayados ningún carácter.</span><span class="sxs-lookup"><span data-stu-id="0080a-111">A single ampersand is displayed in the caption and no characters are underlined.</span></span>  
+    >  <span data-ttu-id="102bf-110">Para incluir una y comercial en un título sin crear una tecla de acceso, incluya dos símbolos de y comercial (& &).</span><span class="sxs-lookup"><span data-stu-id="102bf-110">To include an ampersand in a caption without creating an access key, include two ampersands (&&).</span></span> <span data-ttu-id="102bf-111">Un solo carácter & se muestra en el título y no está subrayados ningún carácter.</span><span class="sxs-lookup"><span data-stu-id="102bf-111">A single ampersand is displayed in the caption and no characters are underlined.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0080a-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="0080a-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="102bf-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="102bf-112">See Also</span></span>  
  <xref:System.Windows.Forms.Button>  
- [<span data-ttu-id="0080a-113">Responder a clics de botones en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0080a-113">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [<span data-ttu-id="0080a-114">Establecer el texto mostrado por un control de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0080a-114">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [<span data-ttu-id="0080a-115">Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos</span><span class="sxs-lookup"><span data-stu-id="0080a-115">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+ [<span data-ttu-id="102bf-113">Responder a clics de botones en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="102bf-113">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [<span data-ttu-id="102bf-114">Establecer el texto mostrado por un control de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="102bf-114">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [<span data-ttu-id="102bf-115">Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos</span><span class="sxs-lookup"><span data-stu-id="102bf-115">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

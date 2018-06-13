@@ -1,35 +1,24 @@
 ---
 title: Insertar una imagen desde un archivo
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a913e660292713d4c728da75e91d812a285edc51
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 3b5b6f2f267f19b3ea42c352a8a1e3721a1ceb86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359320"
 ---
-# <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="9858b-102">Insertar una imagen desde un archivo</span><span class="sxs-lookup"><span data-stu-id="9858b-102">Inserting an Image from a File</span></span>
-<span data-ttu-id="9858b-103">Un objeto binario grande (BLOB) se puede escribir en una base de datos en forma de datos binarios o de caracteres, según el tipo de campo del origen de datos.</span><span class="sxs-lookup"><span data-stu-id="9858b-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="9858b-104">BLOB es un término genérico que hace referencia a los tipos de datos `text`, `ntext` e `image`, que suelen contener documentos e imágenes.</span><span class="sxs-lookup"><span data-stu-id="9858b-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  
+# <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="cb507-102">Insertar una imagen desde un archivo</span><span class="sxs-lookup"><span data-stu-id="cb507-102">Inserting an Image from a File</span></span>
+<span data-ttu-id="cb507-103">Un objeto binario grande (BLOB) se puede escribir en una base de datos en forma de datos binarios o de caracteres, según el tipo de campo del origen de datos.</span><span class="sxs-lookup"><span data-stu-id="cb507-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="cb507-104">BLOB es un término genérico que hace referencia a los tipos de datos `text`, `ntext` e `image`, que suelen contener documentos e imágenes.</span><span class="sxs-lookup"><span data-stu-id="cb507-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  
   
- <span data-ttu-id="9858b-105">Para escribir un valor BLOB en la base de datos, utilice la instrucción INSERT o UPDATE correspondiente y pase el valor BLOB como parámetro de entrada (vea [configurar parámetros y tipos de datos de parámetro](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)).</span><span class="sxs-lookup"><span data-stu-id="9858b-105">To write a BLOB value to your database, issue the appropriate INSERT or UPDATE statement and pass the BLOB value as an input parameter (see [Configuring Parameters and Parameter Data Types](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)).</span></span> <span data-ttu-id="9858b-106">Si el BLOB se almacena como texto, por ejemplo, un campo `text` de SQL Server, puede pasar dicho BLOB como parámetro de cadena.</span><span class="sxs-lookup"><span data-stu-id="9858b-106">If your BLOB is stored as text, such as a SQL Server `text` field, you can pass the BLOB as a string parameter.</span></span> <span data-ttu-id="9858b-107">Si el BLOB se almacena en formato binario, por ejemplo, un campo `image` de SQL Server, puede pasar una matriz de tipo `byte` como parámetro binario.</span><span class="sxs-lookup"><span data-stu-id="9858b-107">If the BLOB is stored in binary format, such as a SQL Server `image` field, you can pass an array of type `byte` as a binary parameter.</span></span>  
+ <span data-ttu-id="cb507-105">Para escribir un valor BLOB en la base de datos, utilice la instrucción INSERT o UPDATE correspondiente y pase el valor BLOB como parámetro de entrada (vea [configurar parámetros y tipos de datos de parámetro](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)).</span><span class="sxs-lookup"><span data-stu-id="cb507-105">To write a BLOB value to your database, issue the appropriate INSERT or UPDATE statement and pass the BLOB value as an input parameter (see [Configuring Parameters and Parameter Data Types](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)).</span></span> <span data-ttu-id="cb507-106">Si el BLOB se almacena como texto, por ejemplo, un campo `text` de SQL Server, puede pasar dicho BLOB como parámetro de cadena.</span><span class="sxs-lookup"><span data-stu-id="cb507-106">If your BLOB is stored as text, such as a SQL Server `text` field, you can pass the BLOB as a string parameter.</span></span> <span data-ttu-id="cb507-107">Si el BLOB se almacena en formato binario, por ejemplo, un campo `image` de SQL Server, puede pasar una matriz de tipo `byte` como parámetro binario.</span><span class="sxs-lookup"><span data-stu-id="cb507-107">If the BLOB is stored in binary format, such as a SQL Server `image` field, you can pass an array of type `byte` as a binary parameter.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9858b-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9858b-108">Example</span></span>  
- <span data-ttu-id="9858b-109">En el siguiente ejemplo de código se agregan datos de los empleados a la tabla Employees de la base de datos Northwind.</span><span class="sxs-lookup"><span data-stu-id="9858b-109">The following code example adds employee information to the Employees table in the Northwind database.</span></span> <span data-ttu-id="9858b-110">Se lee una foto del empleado desde un archivo y se agrega al campo Photo de la tabla, que es un campo de imagen.</span><span class="sxs-lookup"><span data-stu-id="9858b-110">A photo of the employee is read from a file and added to the Photo field in the table, which is an image field.</span></span>  
+## <a name="example"></a><span data-ttu-id="cb507-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="cb507-108">Example</span></span>  
+ <span data-ttu-id="cb507-109">En el siguiente ejemplo de código se agregan datos de los empleados a la tabla Employees de la base de datos Northwind.</span><span class="sxs-lookup"><span data-stu-id="cb507-109">The following code example adds employee information to the Employees table in the Northwind database.</span></span> <span data-ttu-id="cb507-110">Se lee una foto del empleado desde un archivo y se agrega al campo Photo de la tabla, que es un campo de imagen.</span><span class="sxs-lookup"><span data-stu-id="cb507-110">A photo of the employee is read from a file and added to the Photo field in the table, which is an image field.</span></span>  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -141,9 +130,9 @@ public static byte[] GetPhoto(string filePath)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9858b-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="9858b-111">See Also</span></span>  
- [<span data-ttu-id="9858b-112">Uso de comandos para modificar datos</span><span class="sxs-lookup"><span data-stu-id="9858b-112">Using Commands to Modify Data</span></span>](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- [<span data-ttu-id="9858b-113">Recuperación de datos binarios</span><span class="sxs-lookup"><span data-stu-id="9858b-113">Retrieving Binary Data</span></span>](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- [<span data-ttu-id="9858b-114">Datos binarios y datos de valores grandes de SQL Server</span><span class="sxs-lookup"><span data-stu-id="9858b-114">SQL Server Binary and Large-Value Data</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [<span data-ttu-id="9858b-115">Asignaciones de tipos de datos de SQL Server</span><span class="sxs-lookup"><span data-stu-id="9858b-115">SQL Server Data Type Mappings</span></span>](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [<span data-ttu-id="9858b-116">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="9858b-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="cb507-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="cb507-111">See Also</span></span>  
+ [<span data-ttu-id="cb507-112">Uso de comandos para modificar datos</span><span class="sxs-lookup"><span data-stu-id="cb507-112">Using Commands to Modify Data</span></span>](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [<span data-ttu-id="cb507-113">Recuperación de datos binarios</span><span class="sxs-lookup"><span data-stu-id="cb507-113">Retrieving Binary Data</span></span>](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
+ [<span data-ttu-id="cb507-114">Datos binarios y datos de valores grandes de SQL Server</span><span class="sxs-lookup"><span data-stu-id="cb507-114">SQL Server Binary and Large-Value Data</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [<span data-ttu-id="cb507-115">Asignaciones de tipos de datos de SQL Server</span><span class="sxs-lookup"><span data-stu-id="cb507-115">SQL Server Data Type Mappings</span></span>](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [<span data-ttu-id="cb507-116">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="cb507-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
