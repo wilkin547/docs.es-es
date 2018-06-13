@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555056"
 ---
 # <a name="richtextbox-how-to-topics"></a>Temas "Cómo..." del control RichTextBox
 Esta sección proporciona ejemplos que muestran cómo realizar tareas comunes mediante el <xref:System.Windows.Controls.RichTextBox> control.  

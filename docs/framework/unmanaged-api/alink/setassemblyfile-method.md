@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e557cc0da7bc684843ae3969242ffb84d811c44
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405351"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile (Método)
 Asigna el nombre del ensamblado que se crea. No para usar al generar módulos no enlazados.  

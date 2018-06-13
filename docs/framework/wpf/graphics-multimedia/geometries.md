@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556060"
 ---
 # <a name="geometries"></a>Geometrías
 <xref:System.Windows.Media.Geometry> es una clase versátil, que se usa para representar [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] gráficos, objetos de prueba de posicionamiento y definir las regiones de recorte  

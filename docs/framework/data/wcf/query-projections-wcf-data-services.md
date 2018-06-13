@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365727"
 ---
 # <a name="query-projections-wcf-data-services"></a>Proyecciones de consultas (Data Services de WCF)
 Proyección proporciona un mecanismo en el [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para reducir la cantidad de datos en la fuente devuelto por una consulta especificando que solo determinadas propiedades de una entidad se devuelven en la respuesta. Para obtener más información, consulte [OData: opción de consulta de sistema Select ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  

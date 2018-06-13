@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541569"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUIDs de carpeta conocidos para lugares comunes de cuadros de diálogo de archivos
 Usa un <xref:System.Guid> para especificar un [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] carpeta conocida cuando agregue carpetas a un <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> colección. GUIDs de carpetas no distinguen mayúsculas de minúsculas y se definen en el archivo KnownFolders.h conocidos el [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  

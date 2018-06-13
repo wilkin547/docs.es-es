@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541968"
 ---
 # <a name="custom-dependency-properties"></a>Propiedades de dependencia personalizadas
 En este tema se describen las razones por las que los autores de componentes y los desarrolladores de aplicaciones de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] quieren crear la propiedad de dependencia personalizada, y se describen los pasos de implementación y algunas opciones de implementación que pueden mejorar el rendimiento, la facilidad de uso o la versatilidad de la propiedad.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552017"
 ---
 # <a name="how-to-retrieve-a-text-selection"></a>Cómo: Recuperar una selección de texto
 Este ejemplo muestra cómo usar la <xref:System.Windows.Controls.TextBox.SelectedText%2A> propiedad que se va a recuperar el texto que el usuario ha seleccionado en un <xref:System.Windows.Controls.TextBox> control.  

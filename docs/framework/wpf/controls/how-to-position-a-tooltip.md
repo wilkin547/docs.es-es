@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555943"
 ---
 # <a name="how-to-position-a-tooltip"></a>Cómo: Situar una información sobre herramientas
 En este ejemplo se muestra cómo especificar la posición de una información sobre herramientas en la pantalla.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557113"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Tutoriales: Crear un botón animado personalizado
 Como sugiere su nombre, Windows Presentation Foundation (WPF) es magnífico para crear experiencias de presentación enriquecidas para los clientes. Estos tutoriales muestra cómo personalizar la apariencia y el comportamiento de un botón (incluyendo animaciones). Esta personalización se realiza mediante un estilo y una plantilla para que pueda aplicar este botón personalizado fácilmente a los botones de la aplicación. En la siguiente ilustración muestra el botón personalizado que va a crear.  

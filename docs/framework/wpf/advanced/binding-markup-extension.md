@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541890"
 ---
 # <a name="binding-markup-extension"></a>Enlazar extensión de marcado
 Pasa un valor de propiedad para que sea un valor enlazado a datos, creación de un objeto de expresión intermedio e interpretar el contexto de datos que se aplica al elemento y su enlace en tiempo de ejecución.  

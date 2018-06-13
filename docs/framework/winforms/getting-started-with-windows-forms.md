@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538970"
 ---
 # <a name="getting-started-with-windows-forms"></a>Introducción a los formularios Windows Forms
 Con formularios Windows Forms, puede crear eficaces aplicaciones basadas en Windows. Los temas siguientes describen con detalle cómo aprovechar la eficacia de Windows Forms para mostrar datos, controlar proporcionados por el usuario e implementar sus aplicaciones fácilmente y con seguridad mejorada.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541838"
 ---
 # <a name="base-elements-overview"></a>Información general sobre elementos base
 Un porcentaje elevado de clases de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deriva de cuatro clases a las que se hace referencia normalmente en la documentación de [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] como clases de elementos base. Estas clases son <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, y <xref:System.Windows.FrameworkContentElement>. El <xref:System.Windows.DependencyObject> clase también está relacionada, porque es una clase base común de ambos <xref:System.Windows.UIElement> y <xref:System.Windows.ContentElement>  

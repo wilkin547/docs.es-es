@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 878318584d2875ff0d2c6d1648336b383093a75f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404819"
 ---
 # <a name="icordebugchainenum-interface1"></a>ICorDebugChainEnum Interfaz1
 Implementa los métodos ICorDebugEnum y enumera las matrices de ICorDebugChain.  
