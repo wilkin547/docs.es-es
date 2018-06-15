@@ -3044,25 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 44bc5647fe740a4900b99794fe7af907e6328665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231468"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Lo sentimos, no queremos&#39;t tiene detalles sobre este error de Visual Basic
 Lo sentimos, pero no tenemos información específica sobre este error. Puede buscar información en la web mediante el número y el texto del mensaje de error. Si lo prefiere, puede preguntar a otros desarrolladores a través de uno de estos foros:  
   
- [Visual Basic (lenguaje)](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ [Visual Basic (lenguaje)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
  Proporciona un foro para preguntas y debate de la sintaxis del lenguaje Visual Basic y el compilador.  
   
- [Interoperabilidad y actualización de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ [Interoperabilidad y actualización de Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
  Ofrece un foro de preguntas y problemas de actualización de Visual Basic y trabajar con las características de interoperabilidad.  
   
- [IDE de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ [IDE de Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
  Proporciona un foro para preguntas sobre cómo trabajar en el entorno de Visual Studio.  
   
- [Información general sobre Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ [Información general sobre Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
  Ofrece un foro de preguntas y problemas con Visual Basic que no se debaten en otros foros.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
