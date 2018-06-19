@@ -72,6 +72,8 @@
 ## [Requisitos previos de macOS](core/macos-prerequisites.md)
 ## [Requisitos previos de Linux](core/linux-prerequisites.md)
 ## [Novedades de .NET Core](core/whats-new/index.md)
+### [Novedades de .NET Core 2.1](core/whats-new/dotnet-core-2-1.md)
+### [Novedades de .NET Core 2.0](core/whats-new/dotnet-core-2-0.md)
 ## [Tutoriales](core/tutorials/index.md)
 ### [Creación de una solución completa de .NET Core en Windows con Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md)
 ### [Introducción a .NET Core en macOS](core/tutorials/using-on-macos.md)
@@ -96,7 +98,8 @@
 ### [Implementar aplicaciones con herramientas CLI](core/deploying/deploy-with-cli.md)
 ### [Implementar aplicaciones con Visual Studio](core/deploying/deploy-with-vs.md)
 ### [Creación de un paquete de NuGet con herramientas multiplataforma](core/deploying/creating-nuget-packages.md)
-### [Almacenamiento de paquetes en tiempo de ejecución](core/deploying/runtime-store.md)
+### [Self-contained deployment runtime roll forward](core/deploying/runtime-patch-selection.md) (Puesta al día del runtime de implementación autocontenida)
+### [Runtime package store](core/deploying/runtime-store.md) (Almacenamiento de paquetes en tiempo de ejecución)
 ## [Docker](core/docker/index.md)
 ### [Introducción a .NET y Docker](core/docker/intro-net-docker.md)
 ### [Información sobre los aspectos básicos de Docker con .NET Core](core/docker/docker-basics-dotnet-core.md)
@@ -122,20 +125,23 @@
 ## [Información general sobre el SDK de .NET Core](core/sdk.md)
 ## [Herramientas de la CLI de .NET Core](core/tools/index.md)
 ### [Telemetría](core/tools/telemetry.md)
+### [Herramientas globales](core/tools/global-tools.md)
 ### [Modelo de extensibilidad](core/tools/extensibility.md)
 ### [Integración continua](core/tools/using-ci-with-cli.md)
 ### [Plantillas personalizadas](core/tools/custom-templates.md)
 ### [dotnet](core/tools/dotnet.md)
 ### [dotnet build](core/tools/dotnet-build.md)
+### [dotnet build-server](core/tools/dotnet-build-server.md)
 ### [dotnet clean](core/tools/dotnet-clean.md)
 ### [dotnet help](core/tools/dotnet-help.md)
 ### [dotnet install-script](core/tools/dotnet-install-script.md)
 ### [dotnet migrate](core/tools/dotnet-migrate.md)
 ### [dotnet msbuild](core/tools/dotnet-msbuild.md)
 ### [dotnet new](core/tools/dotnet-new.md)
-### [dotnet nuget delete](core/tools/dotnet-nuget-delete.md)
-### [dotnet nuget locals](core/tools/dotnet-nuget-locals.md)
-### [dotnet nuget push](core/tools/dotnet-nuget-push.md)
+### dotnet nuget
+#### [dotnet nuget delete](core/tools/dotnet-nuget-delete.md)
+#### [dotnet nuget locals](core/tools/dotnet-nuget-locals.md)
+#### [dotnet nuget push](core/tools/dotnet-nuget-push.md)
 ### [dotnet pack](core/tools/dotnet-pack.md)
 ### [dotnet publish](core/tools/dotnet-publish.md)
 ### [dotnet restore](core/tools/dotnet-restore.md)
@@ -143,6 +149,11 @@
 ### [dotnet sln](core/tools/dotnet-sln.md)
 ### [dotnet store](core/tools/dotnet-store.md)
 ### [dotnet test](core/tools/dotnet-test.md)
+### dotnet tool
+#### [dotnet tool install](core/tools/dotnet-tool-install.md)
+#### [dotnet tool list](core/tools/dotnet-tool-list.md)
+#### [dotnet tool uninstall](core/tools/dotnet-tool-uninstall.md)
+#### [dotnet tool update](core/tools/dotnet-tool-update.md)
 ### [dotnet vstest](core/tools/dotnet-vstest.md)
 ### Comandos de modificación del proyecto
 #### Referencias
@@ -155,6 +166,7 @@
 ### [global.json](core/tools/global-json.md)
 ## [Herramientas adicionales de .NET Core](core/additional-tools/index.md)
 ### [Proveedor de WCF Web Service Reference](core/additional-tools/wcf-web-service-reference-guide.md)
+### [dotnet-svcutil](core/additional-tools/dotnet-svcutil-guide.md)
 ### [Generador de serializador XML](core/additional-tools/xml-serializer-generator.md)
 ## [Portabilidad de .NET Framework](core/porting/index.md)
 ### [Organización de proyectos para .NET Core](core/porting/project-structure.md)
@@ -215,10 +227,11 @@
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
 ## [Novedades de C#](csharp/whats-new/index.md)
-### [Novedades de C# 7.2](csharp/whats-new/csharp-7-2.md)
-### [Novedades de C# 7.1](csharp/whats-new/csharp-7-1.md)
-### [Novedades de C# 7.0](csharp/whats-new/csharp-7.md)
-### [Novedades de C# 6](csharp/whats-new/csharp-6.md)
+### [C# 7.3](csharp/whats-new/csharp-7-3.md)
+### [C# 7.2](csharp/whats-new/csharp-7-2.md)
+### [C# 7.1](csharp/whats-new/csharp-7-1.md)
+### [C# 7.0](csharp/whats-new/csharp-7.md)
+### [C# 6](csharp/whats-new/csharp-6.md)
 ### [Historial de versiones de C#](csharp/whats-new/csharp-version-history.md)
 ### [Relaciones entre el lenguaje y el marco](csharp/whats-new/relationships-between-language-and-library.md)
 <!-- End What's New -->
@@ -549,6 +562,7 @@
 ### [Tutorial: Implementación de la herencia mediante objetos COM](visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 
 ## [Referencia del lenguaje](visual-basic/language-reference/index.md)
+### [Configurar la versión del lenguaje](visual-basic/language-reference/configure-language-version.md)
 ### [Convenciones tipográficas y de código](visual-basic/language-reference/typographic-and-code-conventions.md)
 ### [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](visual-basic/language-reference/runtime-library-members.md)
 ### [Palabras clave](visual-basic/language-reference/keywords/index.md)
@@ -1117,11 +1131,12 @@
 <!-- ML.NET Content -->
 # [Guía de ML.NET](machine-learning/index.md)
 ## [Tutoriales](machine-learning/tutorials/index.md)
-### [Análisis de sentimiento (clasificación)](machine-learning/tutorials/sentiment-analysis.md)
+### [Análisis de sentimiento (clasificación binaria)](machine-learning/tutorials/sentiment-analysis.md)
 ### [Predictor de tarifa de taxi (regresión)](machine-learning/tutorials/taxi-fare.md)
 ## [Recursos](machine-learning/resources/index.md)
 ### [Glosario de Machine Learning](machine-learning/resources/glossary.md)
 ### [Conceptos básicos de Machine Learning](machine-learning/resources/basics.md)
+### [Tareas de Machine Learning](machine-learning/resources/tasks.md)
 
 <!-- End ML.NET Content -->
 
