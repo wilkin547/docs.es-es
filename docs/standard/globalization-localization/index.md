@@ -1,31 +1,32 @@
 ---
-title: Globalizar y localizar aplicaciones de .NET Framework
-ms.date: 03/30/2017
+title: Globalización y localización de aplicaciones .NET
+ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- international applications [.NET Framework]
-- globalization [.NET Framework], encoding
+- international applications [.NET]
+- globalization [.NET], encoding
 - global applications
 - internationalization
 - world-ready applications
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26c237d082a56d17b2d8493bff52dbac6faca8b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251004"
 ---
-# <a name="globalizing-and-localizing-net-framework-applications"></a>Globalizar y localizar aplicaciones de .NET Framework
+# <a name="globalizing-and-localizing-net-applications"></a>Globalización y localización de aplicaciones .NET
 El desarrollo de una [aplicación de uso internacional](http://msdn.microsoft.com/goglobal/bb978433.aspx), incluida una aplicación que se pueda localizar en uno o varios idiomas, implica tres pasos: globalización, revisión de localizabilidad y localización.  
   
  [Globalización](../../../docs/standard/globalization-localization/globalization.md)  
  Este paso conlleva diseñar y codificar una aplicación de referencias culturales e idiomáticas neutras que admita el uso de interfaces de usuario localizadas y datos regionales para todos los usuarios. Implica tomar decisiones de diseño y programación que no se basan en suposiciones específicas de la referencia cultural. Aunque una aplicación globalizada no está localizada, está diseñada y escrita para poder localizarla posteriormente en uno o varios idiomas con relativa facilidad.  
   
- [Revisión de localizabilidad](../../../docs/standard/globalization-localization/localizability-review.md)  
+ [Revisión de localización](../../../docs/standard/globalization-localization/localizability-review.md)  
  Este paso implica revisar el código y el diseño de una aplicación para asegurarse de que puede localizarse fácilmente e identificar posibles obstáculos para la localización, además de comprobar que el código ejecutable de la aplicación está separado de los recursos. Si la fase de globalización ha sido efectiva, la revisión de localizabilidad confirmará las decisiones de diseño y codificación tomadas durante dicha fase. En la etapa de localizabilidad también puede identificarse cualquier problema pendiente, de forma que el código fuente de una aplicación no tenga que modificarse durante la fase de localización.  
   
  [Localización](../../../docs/standard/globalization-localization/localization.md)  
@@ -37,7 +38,7 @@ El desarrollo de una [aplicación de uso internacional](http://msdn.microsoft.co
   
 -   Da como resultado aplicaciones localizadas que son más estables y tienen menos errores.  
   
- .NET Framework proporciona una extensa compatibilidad para desarrollar aplicaciones de uso internacional y localizadas. En concreto, muchos miembros de tipo de la biblioteca de clases de .NET Framework contribuyen a la globalización mediante la devolución de valores que reflejan las convenciones de la referencia cultural del usuario actual o de una referencia cultural especificada. Además, .NET Framework admite los ensamblados satélite, que facilitan el proceso de localizar una aplicación.  
+ En .NET se proporciona una extensa compatibilidad para desarrollar aplicaciones de uso internacional y localizadas. En concreto, muchos miembros de tipo de la biblioteca de clases de .NET contribuyen a la globalización mediante la devolución de valores que reflejan las convenciones de la referencia cultural del usuario actual o de una referencia cultural especificada. Además, .NET admite los ensamblados satélite, que facilitan el proceso de localización de una aplicación.  
   
  Para obtener más información, consulte [Globalization documentation](/globalization/) (Documentación de globalización).  
   
@@ -45,14 +46,14 @@ El desarrollo de una [aplicación de uso internacional](http://msdn.microsoft.co
  [Globalización](../../../docs/standard/globalization-localization/globalization.md)  
  Analiza la primera fase de creación de una aplicación de uso internacional, que implica el diseño y la codificación de una aplicación con referencias culturales e idiomáticas neutras.  
   
- [Revisión de localizabilidad](../../../docs/standard/globalization-localization/localizability-review.md)  
+ [Revisión de localización](../../../docs/standard/globalization-localization/localizability-review.md)  
  Analiza la segunda fase de creación de una aplicación localizada, que implica la identificación de obstáculos potenciales para la localización.  
   
  [Localización](../../../docs/standard/globalization-localization/localization.md)  
  Analiza la fase final de creación de una aplicación localizada, que implica la personalización de la interfaz de usuario de una aplicación para regiones o referencias culturales concretas.  
   
  [Operaciones de cadenas que no distinguen referencias culturales](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
- Describe cómo utilizar los métodos y clases de .NET Framework que tienen en cuenta las referencias culturales de manera predeterminada para obtener resultados que no las tienen en cuenta.  
+ Se describe cómo usar los métodos y clases de .NET que tienen en cuenta las referencias culturales de manera predeterminada para obtener resultados que no las tienen en cuenta.  
   
  [Prácticas recomendadas para desarrollar aplicaciones de uso internacional](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
  Describe los procedimientos recomendados que se deben seguir para la globalización, localización y desarrollo de aplicaciones de ASP.NET de uso internacional.  
