@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: 7b64bcc1625fb5d0c7ca4af29e1b883b39141a52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d07350dc8b999dfeb47dc1f61049d90a3faf874b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503202"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207295"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 El ejemplo muestra el enlace `netNamedPipeBinding`, que proporciona la comunicación entre procesos del mismo equipo. Las canalizaciones con nombre no funcionan entre equipos. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) servicio de calculadora.  
@@ -19,7 +19,7 @@ El ejemplo muestra el enlace `netNamedPipeBinding`, que proporciona la comunicac
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en el `binding` atributo de la[\<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento tal como se muestra en el siguiente ejemplo de configuración:  
+ El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en el `binding` atributo de la [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento tal como se muestra en el siguiente ejemplo de configuración:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  

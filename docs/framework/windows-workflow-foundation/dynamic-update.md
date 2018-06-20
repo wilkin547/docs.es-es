@@ -2,12 +2,12 @@
 title: actualización dinámica
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: cfd10e4b93351c607ef270487a12bec19ded4ca8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f50c8e8ed7ebaab71421ff1615051d9b828d9e4b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520362"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207526"
 ---
 # <a name="dynamic-update"></a>actualización dinámica
 La actualización dinámica proporciona un mecanismo para que los desarrolladores de aplicaciones de flujo de trabajo actualicen la definición de flujo de trabajo de una instancia de flujo de trabajo persistente. Puede ser para implementar una corrección de errores, nuevos requisitos o acomodar cambios inesperados. Este tema proporciona información general sobre la funcionalidad de actualización dinámica presentada en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -164,7 +164,7 @@ foreach (Guid id in ids)
  Una vez aplicada la actualización dinámica, la instancia de flujo de trabajo puede reanudarse. Observe que deben usarse la nueva definición actualizada y <xref:System.Activities.WorkflowIdentity>.  
   
 > [!NOTE]
->  Para obtener más información sobre cómo trabajar con <xref:System.Activities.WorkflowApplication> y <xref:System.Activities.WorkflowIdentity>, consulte[utilizando WorkflowIdentity y control de versiones](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+>  Para obtener más información sobre cómo trabajar con <xref:System.Activities.WorkflowApplication> y <xref:System.Activities.WorkflowIdentity>, consulte [utilizando WorkflowIdentity y control de versiones](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
  En el ejemplo siguiente, el flujo de trabajo de `MortgageWorkflow_v1.1.xaml` del ejemplo anterior se ha compilado, y se carga y se reanuda mediante la definición de flujo de trabajo actualizada.  
   

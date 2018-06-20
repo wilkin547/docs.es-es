@@ -4,16 +4,16 @@ description: Obtenga información acerca de cómo detectar y mitigar vulnerabili
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: a07acbb943c430f6e26bec44f55a5c84306da513
-ms.sourcegitcommit: 73a662360bbe2f43c19aca1fbcc2565025c60cd8
-ms.translationtype: HT
+ms.openlocfilehash: 26f4d19f591ac02d792bebbd648e90b07d84de56
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35327462"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208695"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de control de tiempo con descifrado simétrico modo CBC mediante el relleno
 
-Microsoft, en función de la investigación criptográfica detectada, cree que, salvo circunstancias muy específicas, ya no es seguro descifrar los datos cifrados con el modo de encadenamiento de bloques de cifrado (CBC) del cifrado simétrico cuando ha relleno comprobable se aplican sin primera asegura la integridad del texto cifrado.
+Microsoft cree que ya no es seguro descifrar los datos cifrados con el modo de cifrado simétrico encadenamiento de bloques de cifrado (CBC) cuando se ha aplicado el relleno comprobable sin primera asegura la integridad del texto cifrado, excepto para muy específicas circunstancias. Este criterio se basa en la investigación criptográfica detectado. 
 
 ## <a name="introduction"></a>Introducción
 

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 5014891b4edfa062f16d2c4b97c4d162d014fcd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed0f638975c232638de4a46db5db82bb1e85668c
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563563"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207474"
 ---
 # <a name="xaml-2009-language-features"></a>Características del lenguaje XAML 2009
-XAML 2009 es el término abreviado para las nuevas características de lenguaje XAML que extienden la especificación del lenguaje XAML existente. XAML 2009 presenta varias nuevas directivas y construcciones. Entre ellos se incluyen[x:Arguments Directive](../../../docs/framework/xaml-services/x-arguments-directive.md); [x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md); y tipos integrados para primitivas del lenguaje común (por ejemplo, `x:Char`).  
+XAML 2009 es el término abreviado para las nuevas características de lenguaje XAML que extienden la especificación del lenguaje XAML existente. XAML 2009 presenta varias nuevas directivas y construcciones. Puede tratarse de la [x: Arguments (directiva)](../../../docs/framework/xaml-services/x-arguments-directive.md); el [x: FactoryMethod (directiva)](../../../docs/framework/xaml-services/x-factorymethod-directive.md); el [extensión de marcado x: Reference](../../../docs/framework/xaml-services/x-reference-markup-extension.md); el [x: TypeArguments (directiva) ](../../../docs/framework/xaml-services/x-typearguments-directive.md); y tipos integrados para primitivas del lenguaje común (por ejemplo `x:Char`).  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>Soporte de XAML 2009 en WPF y Visual Studio  
