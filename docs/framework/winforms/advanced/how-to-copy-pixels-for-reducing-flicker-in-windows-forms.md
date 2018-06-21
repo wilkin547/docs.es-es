@@ -13,12 +13,12 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 65428132c885191b62c3b4a76c8937bf8f3f6732
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc5f05ff4ea9f3c2b828cbe37860e1bd241fc604
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522049"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270440"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Cómo: Copiar píxeles para reducir el parpadeo en formularios Windows Forms
 Al animar un gráfico sencillo, los usuarios a veces pueden notar parpadeos u otros efectos visuales no deseados. Una manera de limitar este problema es utilizar un proceso "bitblt" en el gráfico. BitBlt es la "bloque de bits transferencia" de los datos de color de un rectángulo de origen de píxeles a un rectángulo de destino de píxeles.  
@@ -28,7 +28,7 @@ Al animar un gráfico sencillo, los usuarios a veces pueden notar parpadeos u ot
  En el ejemplo siguiente, se dibuja una forma en el formulario en su <xref:System.Windows.Forms.Control.Paint> controlador de eventos. A continuación, la <xref:System.Drawing.Graphics.CopyFromScreen%2A> método se usa para duplicar la forma.  
   
 > [!NOTE]
->  Configuración del formulario <xref:System.Windows.Forms.Control.DoubleBuffered%2A> propiedad `true` hará que el código basado en gráficos en el <xref:System.Windows.Forms.Control.Paint> evento ser doble búfer. Aunque esto no tendrán las mejoras de rendimiento perceptible cuando se usa el código siguiente, es algo a tener en cuenta al trabajar con código más complejo de manipulación de gráficos.  
+>  Configuración del formulario <xref:System.Windows.Forms.Control.DoubleBuffered%2A> propiedad `true` hará que el código basado en gráficos en el <xref:System.Windows.Forms.Control.Paint> evento ser doble búfer. Aunque esto no tendrán las mejoras de rendimiento discernible cuando se usa el código siguiente, es algo a tener en cuenta al trabajar con código más complejo de manipulación de gráficos.  
   
 ## <a name="example"></a>Ejemplo  
   
