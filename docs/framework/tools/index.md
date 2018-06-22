@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8ec8a5b1f665196fee62a4556e59201f45a6bff
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 4034a23b076bc0f3041f09dc4756646a926d6915
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312045"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314690"
 ---
 # <a name="net-framework-tools"></a>Herramientas de .NET Framework
 Las herramientas de .NET Framework facilitan la creación, implementación y administración de aplicaciones y componentes dirigidos a .NET Framework.  
   
-La mayoría de las herramientas de .NET Framework que se describen en esta sección se instalan automáticamente con Visual Studio. Para descargar Visual Studio, visite la página [Descargas de Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
+La mayoría de las herramientas de .NET Framework que se describen en esta sección se instalan automáticamente con Visual Studio. Para descargar Visual Studio, visite la página [Descargas de Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
   
  Puede ejecutar todas las herramientas desde la línea de comandos excepto Visor de la memoria caché de ensamblados (Shfusion.dll). Debe obtener acceso a Shfusion.dll desde el Explorador de archivos.  
   

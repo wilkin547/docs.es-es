@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ecac9d30b390be886e9d81f11623070301f7d38
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 07b19c062d314fe3280d9ebed818b484ff9d1b13
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312032"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314755"
 ---
 # <a name="get-started-with-the-net-framework"></a>Introducción a .NET Framework
 
@@ -71,7 +71,7 @@ Para desarrollar aplicaciones o componentes de .NET Framework, haga lo siguiente
 
 2. Seleccione el lenguaje o los lenguajes compatibles con .NET Framework que quiera usar para desarrollar aplicaciones. Hay varios lenguajes disponibles, como [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) y C++/CLI en Microsoft. (Un lenguaje de programación que permita desarrollar aplicaciones de .NET Framework cumple las [especificaciones de Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkId=199862)).
 
-3. Seleccione e instale el entorno de desarrollo que usará para crear aplicaciones y que admita el lenguaje o los lenguajes de programación elegidos. El entorno de desarrollo integrado de Microsoft (IDE) para las aplicaciones de .NET Framework es [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Está disponible en una gran variedad de ediciones.
+3. Seleccione e instale el entorno de desarrollo que usará para crear aplicaciones y que admita el lenguaje o los lenguajes de programación elegidos. El entorno de desarrollo integrado de Microsoft (IDE) para las aplicaciones de .NET Framework es [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Está disponible en una gran variedad de ediciones.
 
 Para obtener más información sobre el desarrollo de aplicaciones destinadas a .NET Framework, consulte la [Guía de desarrollo](../../../docs/framework/development-guide.md).
 
