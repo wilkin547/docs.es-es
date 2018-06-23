@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0018b9f8644ec7d222a416bb5f71a7c61671009e
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529888"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314768"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Ajuste automático de escala en formularios Windows Forms
 El escalado automático permite que un formulario y sus respectivos controles, diseñados en una máquina con una determinada resolución de pantalla o fuente del sistema, se muestren correctamente en otra máquina con una resolución de pantalla o una fuente de sistema diferentes. El escalado automático garantiza que el formulario y sus controles cambien de tamaño para mantener la coherencia con las ventanas nativas y otras aplicaciones tanto en máquinas de los usuarios como en las de otros desarrolladores. La compatibilidad de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] con el escalado automático y los estilos visuales permite que las aplicaciones de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] mantengan una apariencia coherente en comparación con aplicaciones Windows nativas en cada equipo de usuario.
@@ -42,14 +42,6 @@ Aunque este mecanismo era suficiente para la mayoría de los propósitos, sufrí
 - El escalado automático se implementó solo en la clase <xref:System.Windows.Forms.Form>, no en la clase <xref:System.Windows.Forms.ContainerControl>. Como resultado, los controles de usuario solo se escalaban correctamente si el control de usuario estaba diseñado con la misma resolución que el formulario y se colocaba en el formulario en tiempo de diseño.
 
 - Los formularios y sus controles secundarios solo podían diseñarse de manera simultánea por varios desarrolladores si las resoluciones de sus máquinas eran iguales. Igualmente, hacía que la herencia de un formulario dependiese de la resolución asociada con el formulario principal.
-
-> [!NOTE]
-> Con las diferencias extremas en pantalla de PPP, especialmente en los dispositivos modernos 2-en-1, esto puede suceder aún con las versiones más recientes de .NET Framework y Visual Studio. Para solucionar este problema en un equipo con diferentes pantallas de PPP, asegúrese de que Visual Studio siempre se inicia en un modo no compatible con PPP, por lo que el Diseñador de formularios Windows Forms envergadura siempre el cálculo de diseño de 96 PPP. Para ello, basta con establecer la siguiente clave del registro para deshabilitar el reconocimiento de HighDPI de Visual Studio:
->
-> ```
-> [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\devenv.exe]
-> "dpiAwareness"=dword:00000000
-> ```
 
 - No es compatible con los administradores de diseño más recientes introducidos con [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versión 2.0, como <xref:System.Windows.Forms.FlowLayoutPanel> y <xref:System.Windows.Forms.TableLayoutPanel>.
 
