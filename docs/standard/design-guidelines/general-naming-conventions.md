@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc54b8bdc96a5038dc75111d9833e70e7ffd2e9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207227b3e5c52b7c6e0f704543379874f3708c03
+ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578045"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36338109"
 ---
 # <a name="general-naming-conventions"></a>Convenciones generales de nomenclatura
 Esta sección describe generales convenciones de nomenclatura que se relacionan con la elección de palabras, directrices sobre el uso de las abreviaturas y acrónimos y recomendaciones sobre cómo evitar el uso de nombres específicos del idioma.  
@@ -85,7 +85,7 @@ Esta sección describe generales convenciones de nomenclatura que se relacionan 
   
  **✓ HACER** prefiera agregar un sufijo, en lugar de un prefijo para indicar una nueva versión de una API existente.  
   
- Esto ayudará a detección al examinar la documentación, o usar Intellisense. La versión anterior de la API se organizarán cerca de las nuevas API, dado que la mayoría de los exploradores e Intellisense mostrar identificadores en orden alfabético.  
+ Esto ayudará a detección al examinar la documentación, o usar IntelliSense. La versión anterior de la API se organizarán cerca de las nuevas API, dado que la mayoría de los exploradores e IntelliSense mostrar identificadores en orden alfabético.  
   
  **✓ Considere la posibilidad de** con un identificador nuevo, pero significativo, en lugar de agregar un prefijo o un sufijo.  
   
