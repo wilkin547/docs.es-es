@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: b1925397fb7cad5e55f992feaa5be2e2d837aac8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592267"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314648"
 ---
 # <a name="tour-of-net"></a>Paseo por .NET
 
@@ -25,7 +25,7 @@ Para obtener más información sobre cómo configurar un entorno de desarrollo p
 
 ## <a name="programming-languages"></a>Lenguajes de programación
 
-.NET admite varios lenguajes de programación. Las implementaciones de .NET implementan [Common Language Infrastructure (CLI)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/), que, entre otras cosas, especifica un entorno de ejecución independiente del lenguaje y la interoperabilidad del lenguaje. Esto significa que elige cualquier lenguaje .NET para crear aplicaciones y servicios en .NET.
+.NET admite varios lenguajes de programación. Las implementaciones de .NET implementan [Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), que, entre otras cosas, especifica un entorno de ejecución independiente del lenguaje y la interoperabilidad del lenguaje. Esto significa que elige cualquier lenguaje .NET para crear aplicaciones y servicios en .NET.
 
 Microsoft desarrolla activamente y admite tres lenguajes .NET: C#, F# y Visual Basic (VB). 
 

@@ -12,16 +12,19 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7e58d14eb29939ea1b91b5bdb75f691f5233d8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5169a0d0c28be4337bb57f8bcc70e78b40e4fa9e
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401126"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270479"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Herramienta de nombre seguro)
 La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres seguros](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe proporciona opciones para la administración de claves, así como para la generación y comprobación de firmas.  
   
+> [!WARNING]
+> Para garantizar la seguridad, no confíe únicamente en el uso de nombres seguros. Estos solo proporcionan una identidad única.
+
  Para obtener más información sobre los nombres seguros y los ensamblados con nombre seguro, vea [Strong-Named Assemblies](../../../docs/framework/app-domains/strong-named-assemblies.md) (Ensamblados con nombre seguro) y [How to: Sign an Assembly with a Strong Name](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) (Cómo: Firmar un ensamblado con un nombre seguro).  
   
  La herramienta Nombre seguro se instala automáticamente con Visual Studio. Para iniciar la herramienta, utilice el símbolo del sistema para desarrolladores (o el símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  

@@ -7,15 +7,16 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - memory-mapped files
-- inter-process communiation
+- inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec4f3f8df0478c1fc881358ae8e220220fbedf17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1cf2d7f36dbfffe1c86e32eec5137840837612f4
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208197"
 ---
 # <a name="memory-mapped-files"></a>Archivos asignados a memoria
 Un archivo asignado a memoria incluye el contenido de un archivo en la memoria virtual. Esta asignación entre un archivo y el espacio de memoria permite a una aplicación, incluidos varios procesos, modificar el archivo leyendo y escribiendo directamente en la memoria. A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], se puede usar código administrado para tener acceso a los archivos asignados a memoria del mismo modo que las funciones nativas de Windows tienen acceso a los archivos asignados a memoria, tal como se describe en [Administración de archivos asignados a memoria](https://msdn.microsoft.com/library/ms810613.aspx).  

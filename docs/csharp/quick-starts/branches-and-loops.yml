@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: interpolated-strings.yml
   nextTutorialTitle: Interpolación de cadenas en C#
-  ms.openlocfilehash: 787ea7c8eb7724fba82bf40621bde429450b1850
-  ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+  ms.openlocfilehash: 83061e2dfac30ce9b6012404259a223f7504e918
+  ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/07/2018
-  ms.locfileid: "33805647"
+  ms.lasthandoff: 06/20/2018
+  ms.locfileid: "36270323"
 items:
 - durationInMinutes: 1
   content: >
@@ -54,4 +54,30 @@ items:
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - title: Desafío completo
   durationInMinutes: 1
+  content: >
+    ¿Ha obtenido algo parecido a lo siguiente?
+
+
+    ```csharp
+
+    int sum = 0;
+
+    for (int number = 1; number < 21; number++)
+
+    {
+      if (number % 3 == 0)
+      {
+        sum = sum + number;
+      }
+    }
+
+    Console.WriteLine($"The sum is {sum}");
+
+    ```
+
+
+    > [!NOTE]
+
+    > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
+- title: ¡Enhorabuena!
   content: "Ha completado la guía de inicio rápido sobre \"ramas y bucles\". \n\nPuede seguir estos inicios rápidos en su propio entorno de desarrollo. Eche un vistazo a los conceptos básicos sobre [desarrollo local](local-environment.md) y después seleccione un inicio rápido. Puede realizar este mismo ejercicio: vaya directamente al siguiente inicio rápido o vuelva a empezar con el inicio rápido sobre [números en C#](numbers-in-csharp-local.md).\n\nPuede obtener más información sobre estos conceptos en los temas siguientes:\n\n[Instrucciones If y else](../language-reference/keywords/if-else.md)   \n[Instrucción while](../language-reference/keywords/while.md)   \n[Instrucción do](../language-reference/keywords/do.md)   \n[Instrucción for](../language-reference/keywords/for.md)"
