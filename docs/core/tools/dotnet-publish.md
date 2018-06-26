@@ -3,172 +3,231 @@ title: 'Comando dotnet publish: CLI de .NET Core'
 description: El comando dotnet publish publica el proyecto de .NET Core en un directorio.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 5e7ce5ce1240f03f53f6e120dfce53d15917425f
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.date: 05/29/2018
+ms.openlocfilehash: 38224aa8472f99df107e523667e18892384a20b0
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472635"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696665"
 ---
-# <a name="dotnet-publish"></a><span data-ttu-id="8bb3e-103">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="8bb3e-103">dotnet publish</span></span>
+# <a name="dotnet-publish"></a><span data-ttu-id="83f29-103">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="83f29-103">dotnet publish</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="8bb3e-104">nombre</span><span class="sxs-lookup"><span data-stu-id="8bb3e-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="83f29-104">nombre</span><span class="sxs-lookup"><span data-stu-id="83f29-104">Name</span></span>
 
-<span data-ttu-id="8bb3e-105">`dotnet publish`: empaqueta la aplicación y sus dependencias en una carpeta para su implementación en un sistema de hospedaje.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-105">`dotnet publish` - Packs the application and its dependencies into a folder for deployment to a hosting system.</span></span>
+<span data-ttu-id="83f29-105">`dotnet publish`: empaqueta la aplicación y sus dependencias en una carpeta para su implementación en un sistema de hospedaje.</span><span class="sxs-lookup"><span data-stu-id="83f29-105">`dotnet publish` - Packs the application and its dependencies into a folder for deployment to a hosting system.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="8bb3e-106">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="8bb3e-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="83f29-106">Sinopsis</span><span class="sxs-lookup"><span data-stu-id="83f29-106">Synopsis</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="8bb3e-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="8bb3e-107">.NET Core 2.x</span></span>](#tab/netcore2x)
-
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="83f29-107">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="83f29-107">.NET Core 2.1</span></span>](#tab/netcore21)
 ```
-dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies] [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
+    [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
 dotnet publish [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="8bb3e-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="8bb3e-108">.NET Core 1.x</span></span>](#tab/netcore1x)
-
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="83f29-108">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="83f29-108">.NET Core 2.0</span></span>](#tab/netcore20)
 ```
-dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
+    [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
 dotnet publish [-h|--help]
 ```
-
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="83f29-109">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="83f29-109">.NET Core 1.x</span></span>](#tab/netcore1x)
+```
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+    [--version-suffix]
+dotnet publish [-h|--help]
+```
 ---
 
-## <a name="description"></a><span data-ttu-id="8bb3e-109">Description</span><span class="sxs-lookup"><span data-stu-id="8bb3e-109">Description</span></span>
+## <a name="description"></a><span data-ttu-id="83f29-110">Description</span><span class="sxs-lookup"><span data-stu-id="83f29-110">Description</span></span>
 
-<span data-ttu-id="8bb3e-110">`dotnet publish`: compila la aplicación, lee sus dependencias especificadas en el archivo de proyecto y publica el conjunto resultante de archivos en un directorio.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-110">`dotnet publish` compiles the application, reads through its dependencies specified in the project file, and publishes the resulting set of files to a directory.</span></span> <span data-ttu-id="8bb3e-111">La salida contendrá lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="8bb3e-111">The output will contain the following:</span></span>
+<span data-ttu-id="83f29-111">`dotnet publish`: compila la aplicación, lee sus dependencias especificadas en el archivo de proyecto y publica el conjunto resultante de archivos en un directorio.</span><span class="sxs-lookup"><span data-stu-id="83f29-111">`dotnet publish` compiles the application, reads through its dependencies specified in the project file, and publishes the resulting set of files to a directory.</span></span> <span data-ttu-id="83f29-112">La salida incluye los recursos siguientes:</span><span class="sxs-lookup"><span data-stu-id="83f29-112">The output includes the following assets:</span></span>
 
-* <span data-ttu-id="8bb3e-112">Código de lenguaje intermedio (IL) en un ensamblado con una extensión *dll*.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-112">Intermediate Language (IL) code in an assembly with a *dll* extension.</span></span>
-* <span data-ttu-id="8bb3e-113">Archivo *.deps.json* que contiene todas las dependencias del proyecto.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-113">*.deps.json* file that contains all of the dependencies of the project.</span></span>
-* <span data-ttu-id="8bb3e-114">Archivo *.runtime.config.json* en el que se especifica el entorno de tiempo de ejecución compartido que espera la aplicación, así como otras opciones de configuración para el tiempo de ejecución (por ejemplo, el tipo de recolección de elementos no utilizados).</span><span class="sxs-lookup"><span data-stu-id="8bb3e-114">*.runtime.config.json* file that specifies the shared runtime that the application expects, as well as other configuration options for the runtime (for example, garbage collection type).</span></span>
-* <span data-ttu-id="8bb3e-115">Todas las dependencias de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-115">The application's dependencies.</span></span> <span data-ttu-id="8bb3e-116">Estas se copian de la caché de NuGet a la carpeta de salida.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-116">These are copied from the NuGet cache into the output folder.</span></span>
+* <span data-ttu-id="83f29-113">Código de lenguaje intermedio (IL) en un ensamblado con una extensión *dll*.</span><span class="sxs-lookup"><span data-stu-id="83f29-113">Intermediate Language (IL) code in an assembly with a *dll* extension.</span></span>
+* <span data-ttu-id="83f29-114">Archivo *.deps.json* que incluye todas las dependencias del proyecto.</span><span class="sxs-lookup"><span data-stu-id="83f29-114">*.deps.json* file that includes all of the dependencies of the project.</span></span>
+* <span data-ttu-id="83f29-115">Archivo *.runtime.config.json* en el que se especifica el entorno de tiempo de ejecución compartido que espera la aplicación, así como otras opciones de configuración para el tiempo de ejecución (por ejemplo, el tipo de recolección de elementos no utilizados).</span><span class="sxs-lookup"><span data-stu-id="83f29-115">*.runtime.config.json* file that specifies the shared runtime that the application expects, as well as other configuration options for the runtime (for example, garbage collection type).</span></span>
+* <span data-ttu-id="83f29-116">Las dependencias de la aplicación, que se copian de la caché de NuGet a la carpeta de salida.</span><span class="sxs-lookup"><span data-stu-id="83f29-116">The application's dependencies, which are copied from the NuGet cache into the output folder.</span></span>
 
-<span data-ttu-id="8bb3e-117">La salida del comando `dotnet publish` está preparada para la implementación de un sistema de hospedaje (por ejemplo, un servidor, un equipo PC o Mac o un equipo portátil) para la ejecución y es la única manera admitida oficialmente de preparar la aplicación para la implementación.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-117">The `dotnet publish` command's output is ready for deployment to a hosting system (for example, a server, PC, Mac, laptop) for execution and is the only officially supported way to prepare the application for deployment.</span></span> <span data-ttu-id="8bb3e-118">Dependiendo del tipo de implementación que especifique el proyecto, el sistema de hospedaje puede o no tener instalado el entorno de tiempo de ejecución compartido de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-118">Depending on the type of deployment that the project specifies, the hosting system may or may not have the .NET Core shared runtime installed on it.</span></span> <span data-ttu-id="8bb3e-119">Para obtener más información, consulte el tema [Implementación de aplicaciones .NET Core](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="8bb3e-119">For more information, see [.NET Core Application Deployment](../deploying/index.md).</span></span> <span data-ttu-id="8bb3e-120">Para la estructura de directorios de una aplicación publicada, consulte [Directory structure](/aspnet/core/hosting/directory-structure) (Estructura de directorios).</span><span class="sxs-lookup"><span data-stu-id="8bb3e-120">For the directory structure of a published application, see [Directory structure](/aspnet/core/hosting/directory-structure).</span></span>
+<span data-ttu-id="83f29-117">La salida del comando `dotnet publish` está lista para la implementación en un sistema de hospedaje (por ejemplo, un servidor, un equipo PC o Mac, un portátil) para la ejecución.</span><span class="sxs-lookup"><span data-stu-id="83f29-117">The `dotnet publish` command's output is ready for deployment to a hosting system (for example, a server, PC, Mac, laptop) for execution.</span></span> <span data-ttu-id="83f29-118">Es la única manera admitida oficialmente para preparar la aplicación para la implementación.</span><span class="sxs-lookup"><span data-stu-id="83f29-118">It's the only officially supported way to prepare the application for deployment.</span></span> <span data-ttu-id="83f29-119">Dependiendo del tipo de implementación que especifique el proyecto, el sistema de hospedaje puede o no tener instalado el entorno de tiempo de ejecución compartido de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="83f29-119">Depending on the type of deployment that the project specifies, the hosting system may or may not have the .NET Core shared runtime installed on it.</span></span> <span data-ttu-id="83f29-120">Para obtener más información, consulte el tema [Implementación de aplicaciones .NET Core](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="83f29-120">For more information, see [.NET Core Application Deployment](../deploying/index.md).</span></span> <span data-ttu-id="83f29-121">Para la estructura de directorios de una aplicación publicada, consulte [Directory structure](/aspnet/core/hosting/directory-structure) (Estructura de directorios).</span><span class="sxs-lookup"><span data-stu-id="83f29-121">For the directory structure of a published application, see [Directory structure](/aspnet/core/hosting/directory-structure).</span></span>
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a><span data-ttu-id="8bb3e-121">Argumentos</span><span class="sxs-lookup"><span data-stu-id="8bb3e-121">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="83f29-122">Argumentos</span><span class="sxs-lookup"><span data-stu-id="83f29-122">Arguments</span></span>
 
 `PROJECT`
 
-<span data-ttu-id="8bb3e-122">El proyecto para publicar, cuyo valor predeterminado es el directorio actual si no se especifica.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-122">The project to publish, which defaults to the current directory if not specified.</span></span>
+<span data-ttu-id="83f29-123">El proyecto que se va a publicar.</span><span class="sxs-lookup"><span data-stu-id="83f29-123">The project to publish.</span></span> <span data-ttu-id="83f29-124">Si no se especifica, se toma como predeterminado el directorio actual.</span><span class="sxs-lookup"><span data-stu-id="83f29-124">If not specified, it defaults to the current directory.</span></span>
 
-## <a name="options"></a><span data-ttu-id="8bb3e-123">Opciones</span><span class="sxs-lookup"><span data-stu-id="8bb3e-123">Options</span></span>
+## <a name="options"></a><span data-ttu-id="83f29-125">Opciones</span><span class="sxs-lookup"><span data-stu-id="83f29-125">Options</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="8bb3e-124">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="8bb3e-124">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="83f29-126">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="83f29-126">.NET Core 2.1</span></span>](#tab/netcore21)
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="8bb3e-125">Define la configuración de compilación.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-125">Defines the build configuration.</span></span> <span data-ttu-id="8bb3e-126">El valor predeterminado es `Debug`.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-126">The default value is `Debug`.</span></span>
+<span data-ttu-id="83f29-127">Define la configuración de compilación.</span><span class="sxs-lookup"><span data-stu-id="83f29-127">Defines the build configuration.</span></span> <span data-ttu-id="83f29-128">El valor predeterminado es `Debug`.</span><span class="sxs-lookup"><span data-stu-id="83f29-128">The default value is `Debug`.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="8bb3e-127">Publica la aplicación para el [marco de trabajo de destino especificado](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="8bb3e-127">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="8bb3e-128">Debe especificar el marco de trabajo de destino en el archivo de proyecto.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-128">You must specify the target framework in the project file.</span></span>
+<span data-ttu-id="83f29-129">Publica la aplicación para el [marco de trabajo de destino especificado](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="83f29-129">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="83f29-130">Debe especificar el marco de trabajo de destino en el archivo de proyecto.</span><span class="sxs-lookup"><span data-stu-id="83f29-130">You must specify the target framework in the project file.</span></span>
 
 `--force`
 
-<span data-ttu-id="8bb3e-129">Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-129">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="8bb3e-130">Esto es equivalente a eliminar el archivo *project.assets.json*.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-130">This is equivalent to deleting the *project.assets.json* file.</span></span>
+<span data-ttu-id="83f29-131">Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente.</span><span class="sxs-lookup"><span data-stu-id="83f29-131">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="83f29-132">Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*.</span><span class="sxs-lookup"><span data-stu-id="83f29-132">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="8bb3e-131">Imprime una corta ayuda para el comando.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-131">Prints out a short help for the command.</span></span>
+<span data-ttu-id="83f29-133">Imprime una corta ayuda para el comando.</span><span class="sxs-lookup"><span data-stu-id="83f29-133">Prints out a short help for the command.</span></span>
 
 `--manifest <PATH_TO_MANIFEST_FILE>`
 
-<span data-ttu-id="8bb3e-132">Especifica uno o varios [manifiestos de destino](../deploying/runtime-store.md) que se usarán para recortar el conjunto de paquetes publicados con la aplicación.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-132">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="8bb3e-133">El archivo de manifiesto es parte de la salida del [comando `dotnet store`](dotnet-store.md).</span><span class="sxs-lookup"><span data-stu-id="8bb3e-133">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="8bb3e-134">Para especificar varios manifiestos, agregue la opción `--manifest` para cada manifiesto.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-134">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span> <span data-ttu-id="8bb3e-135">Esta opción está disponible a partir del SDK de .NET Core 2.0.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-135">This option is available starting with .NET Core 2.0 SDK.</span></span>
+<span data-ttu-id="83f29-134">Especifica uno o varios [manifiestos de destino](../deploying/runtime-store.md) que se usarán para recortar el conjunto de paquetes publicados con la aplicación.</span><span class="sxs-lookup"><span data-stu-id="83f29-134">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="83f29-135">El archivo de manifiesto es parte de la salida del [comando `dotnet store`](dotnet-store.md).</span><span class="sxs-lookup"><span data-stu-id="83f29-135">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="83f29-136">Para especificar varios manifiestos, agregue la opción `--manifest` para cada manifiesto.</span><span class="sxs-lookup"><span data-stu-id="83f29-136">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span> <span data-ttu-id="83f29-137">Esta opción está disponible a partir del SDK de .NET Core 2.0.</span><span class="sxs-lookup"><span data-stu-id="83f29-137">This option is available starting with .NET Core 2.0 SDK.</span></span>
+
+`--no-build`
+
+<span data-ttu-id="83f29-138">No compila el proyecto antes de publicarlo.</span><span class="sxs-lookup"><span data-stu-id="83f29-138">Doesn't build the project before publishing.</span></span> <span data-ttu-id="83f29-139">También establece la marca `--no-restore` de forma implícita.</span><span class="sxs-lookup"><span data-stu-id="83f29-139">It also implicit sets the `--no-restore` flag.</span></span>
 
 `--no-dependencies`
 
-<span data-ttu-id="8bb3e-136">Omite las referencias de proyecto a proyecto y solo restaura el proyecto raíz.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-136">Ignores project-to-project references and only restores the root project.</span></span>
+<span data-ttu-id="83f29-140">Omite las referencias de proyecto a proyecto y solo restaura el proyecto raíz.</span><span class="sxs-lookup"><span data-stu-id="83f29-140">Ignores project-to-project references and only restores the root project.</span></span>
 
 `--no-restore`
 
-<span data-ttu-id="8bb3e-137">No realiza una restauración implícita al ejecutar el comando.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-137">Doesn't perform an implicit restore when running the command.</span></span>
+<span data-ttu-id="83f29-141">No ejecuta una restauración implícita al ejecutar el comando.</span><span class="sxs-lookup"><span data-stu-id="83f29-141">Doesn't execute an implicit restore when running the command.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="8bb3e-138">Especifica la ruta de acceso del directorio de salida.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-138">Specifies the path for the output directory.</span></span> <span data-ttu-id="8bb3e-139">Si no se especifica, el valor predeterminado es *./bin/[configuration]/[framework]/publish/* para una implementación dependiente del marco de trabajo o *./bin/[configuration]/[framework]/[runtime]/publish/* para una implementación independiente.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-139">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a framework-dependent deployment or *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained deployment.</span></span>
-<span data-ttu-id="8bb3e-140">Si la ruta de acceso es relativa, el directorio de salida generado es relativo a la ubicación del archivo de proyecto, no al directorio de trabajo actual.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-140">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
+<span data-ttu-id="83f29-142">Especifica la ruta de acceso del directorio de salida.</span><span class="sxs-lookup"><span data-stu-id="83f29-142">Specifies the path for the output directory.</span></span> <span data-ttu-id="83f29-143">Si no se especifica, el valor predeterminado es *./bin/[configuration]/[framework]/publish/* para una implementación dependiente del marco de trabajo o *./bin/[configuration]/[framework]/[runtime]/publish/* para una implementación independiente.</span><span class="sxs-lookup"><span data-stu-id="83f29-143">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a framework-dependent deployment or *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained deployment.</span></span>
+<span data-ttu-id="83f29-144">Si la ruta de acceso es relativa, el directorio de salida generado es relativo a la ubicación del archivo de proyecto, no al directorio de trabajo actual.</span><span class="sxs-lookup"><span data-stu-id="83f29-144">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
 
 `--self-contained`
 
-<span data-ttu-id="8bb3e-141">Publica el tiempo de ejecución de .NET Core con la aplicación para que no sea necesario tener instalado el tiempo de ejecución en la máquina de destino.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-141">Publishes the .NET Core runtime with your application so the runtime doesn't need to be installed on the target machine.</span></span> <span data-ttu-id="8bb3e-142">Si se especifica un identificador de tiempo de ejecución, su valor predeterminado es `true`.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-142">If a runtime identifier is specified, its default value is `true`.</span></span> <span data-ttu-id="8bb3e-143">Para más información sobre los diferentes tipos de implementación, vea [Implementación de aplicaciones .NET Core](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="8bb3e-143">For more information about the different deployment types, see [.NET Core application deployment](../deploying/index.md).</span></span>
+<span data-ttu-id="83f29-145">Publica el tiempo de ejecución de .NET Core con la aplicación para que no sea necesario tener instalado el tiempo de ejecución en la máquina de destino.</span><span class="sxs-lookup"><span data-stu-id="83f29-145">Publishes the .NET Core runtime with your application so the runtime doesn't need to be installed on the target machine.</span></span> <span data-ttu-id="83f29-146">Si se especifica un identificador de tiempo de ejecución, su valor predeterminado es `true`.</span><span class="sxs-lookup"><span data-stu-id="83f29-146">If a runtime identifier is specified, its default value is `true`.</span></span> <span data-ttu-id="83f29-147">Para más información sobre los diferentes tipos de implementación, vea [Implementación de aplicaciones .NET Core](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="83f29-147">For more information about the different deployment types, see [.NET Core application deployment](../deploying/index.md).</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="8bb3e-144">Publica la aplicación para un determinado entorno de tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-144">Publishes the application for a given runtime.</span></span> <span data-ttu-id="8bb3e-145">Esto se usa al crear una [implementación autocontenida (SCD)](../deploying/index.md#self-contained-deployments-scd).</span><span class="sxs-lookup"><span data-stu-id="8bb3e-145">This is used when creating a [self-contained deployment (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span> <span data-ttu-id="8bb3e-146">Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="8bb3e-146">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="8bb3e-147">El valor predeterminado es publicar una [aplicación dependiente del marco de trabajo (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span><span class="sxs-lookup"><span data-stu-id="8bb3e-147">Default is to publish a [framework-dependent deployment (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span></span>
+<span data-ttu-id="83f29-148">Publica la aplicación para un determinado entorno de tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="83f29-148">Publishes the application for a given runtime.</span></span> <span data-ttu-id="83f29-149">Esto se usa al crear una [implementación autocontenida (SCD)](../deploying/index.md#self-contained-deployments-scd).</span><span class="sxs-lookup"><span data-stu-id="83f29-149">This is used when creating a [self-contained deployment (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span> <span data-ttu-id="83f29-150">Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="83f29-150">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="83f29-151">El valor predeterminado es publicar una [aplicación dependiente del marco de trabajo (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span><span class="sxs-lookup"><span data-stu-id="83f29-151">Default is to publish a [framework-dependent deployment (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="8bb3e-148">Establece el nivel de detalle del comando.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-148">Sets the verbosity level of the command.</span></span> <span data-ttu-id="8bb3e-149">Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-149">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="83f29-152">Establece el nivel de detalle del comando.</span><span class="sxs-lookup"><span data-stu-id="83f29-152">Sets the verbosity level of the command.</span></span> <span data-ttu-id="83f29-153">Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="83f29-153">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 `--version-suffix <VERSION_SUFFIX>`
 
-<span data-ttu-id="8bb3e-150">Define el sufijo de versión para reemplazar el asterisco (`*`) en el campo de versión del archivo de proyecto.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-150">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
+<span data-ttu-id="83f29-154">Define el sufijo de versión para reemplazar el asterisco (`*`) en el campo de versión del archivo de proyecto.</span><span class="sxs-lookup"><span data-stu-id="83f29-154">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="8bb3e-151">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="8bb3e-151">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="83f29-155">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="83f29-155">.NET Core 2.0</span></span>](#tab/netcore20)
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="8bb3e-152">Define la configuración de compilación.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-152">Defines the build configuration.</span></span> <span data-ttu-id="8bb3e-153">El valor predeterminado es `Debug`.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-153">The default value is `Debug`.</span></span>
+<span data-ttu-id="83f29-156">Define la configuración de compilación.</span><span class="sxs-lookup"><span data-stu-id="83f29-156">Defines the build configuration.</span></span> <span data-ttu-id="83f29-157">El valor predeterminado es `Debug`.</span><span class="sxs-lookup"><span data-stu-id="83f29-157">The default value is `Debug`.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="8bb3e-154">Publica la aplicación para el [marco de trabajo de destino especificado](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="8bb3e-154">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="8bb3e-155">Debe especificar el marco de trabajo de destino en el archivo de proyecto.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-155">You must specify the target framework in the project file.</span></span>
+<span data-ttu-id="83f29-158">Publica la aplicación para el [marco de trabajo de destino especificado](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="83f29-158">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="83f29-159">Debe especificar el marco de trabajo de destino en el archivo de proyecto.</span><span class="sxs-lookup"><span data-stu-id="83f29-159">You must specify the target framework in the project file.</span></span>
+
+`--force`
+
+<span data-ttu-id="83f29-160">Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente.</span><span class="sxs-lookup"><span data-stu-id="83f29-160">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="83f29-161">Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*.</span><span class="sxs-lookup"><span data-stu-id="83f29-161">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="8bb3e-156">Imprime una corta ayuda para el comando.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-156">Prints out a short help for the command.</span></span>
+<span data-ttu-id="83f29-162">Imprime una corta ayuda para el comando.</span><span class="sxs-lookup"><span data-stu-id="83f29-162">Prints out a short help for the command.</span></span>
 
 `--manifest <PATH_TO_MANIFEST_FILE>`
 
-<span data-ttu-id="8bb3e-157">Especifica uno o varios [manifiestos de destino](../deploying/runtime-store.md) que se usarán para recortar el conjunto de paquetes publicados con la aplicación.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-157">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="8bb3e-158">El archivo de manifiesto es parte de la salida del [comando `dotnet store`](dotnet-store.md).</span><span class="sxs-lookup"><span data-stu-id="8bb3e-158">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="8bb3e-159">Para especificar varios manifiestos, agregue la opción `--manifest` para cada manifiesto.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-159">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span> <span data-ttu-id="8bb3e-160">Esta opción está disponible a partir del SDK de .NET Core 2.0.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-160">This option is available starting with .NET Core 2.0 SDK.</span></span>
+<span data-ttu-id="83f29-163">Especifica uno o varios [manifiestos de destino](../deploying/runtime-store.md) que se usarán para recortar el conjunto de paquetes publicados con la aplicación.</span><span class="sxs-lookup"><span data-stu-id="83f29-163">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="83f29-164">El archivo de manifiesto es parte de la salida del [comando `dotnet store`](dotnet-store.md).</span><span class="sxs-lookup"><span data-stu-id="83f29-164">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="83f29-165">Para especificar varios manifiestos, agregue la opción `--manifest` para cada manifiesto.</span><span class="sxs-lookup"><span data-stu-id="83f29-165">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span> <span data-ttu-id="83f29-166">Esta opción está disponible a partir del SDK de .NET Core 2.0.</span><span class="sxs-lookup"><span data-stu-id="83f29-166">This option is available starting with .NET Core 2.0 SDK.</span></span>
+
+`--no-dependencies`
+
+<span data-ttu-id="83f29-167">Omite las referencias de proyecto a proyecto y solo restaura el proyecto raíz.</span><span class="sxs-lookup"><span data-stu-id="83f29-167">Ignores project-to-project references and only restores the root project.</span></span>
+
+`--no-restore`
+
+<span data-ttu-id="83f29-168">No ejecuta una restauración implícita al ejecutar el comando.</span><span class="sxs-lookup"><span data-stu-id="83f29-168">Doesn't execute an implicit restore when running the command.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="8bb3e-161">Especifica la ruta de acceso del directorio de salida.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-161">Specifies the path for the output directory.</span></span> <span data-ttu-id="8bb3e-162">Si no se especifica, el valor predeterminado es *./bin/[configuration]/[framework]/publish/* para una implementación dependiente del marco de trabajo o *./bin/[configuration]/[framework]/[runtime]/publish/* para una implementación independiente.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-162">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a framework-dependent deployment or *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained deployment.</span></span>
-<span data-ttu-id="8bb3e-163">Si la ruta de acceso es relativa, el directorio de salida generado es relativo a la ubicación del archivo de proyecto, no al directorio de trabajo actual.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-163">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
+<span data-ttu-id="83f29-169">Especifica la ruta de acceso del directorio de salida.</span><span class="sxs-lookup"><span data-stu-id="83f29-169">Specifies the path for the output directory.</span></span> <span data-ttu-id="83f29-170">Si no se especifica, el valor predeterminado es *./bin/[configuration]/[framework]/publish/* para una implementación dependiente del marco de trabajo o *./bin/[configuration]/[framework]/[runtime]/publish/* para una implementación independiente.</span><span class="sxs-lookup"><span data-stu-id="83f29-170">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a framework-dependent deployment or *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained deployment.</span></span>
+<span data-ttu-id="83f29-171">Si la ruta de acceso es relativa, el directorio de salida generado es relativo a la ubicación del archivo de proyecto, no al directorio de trabajo actual.</span><span class="sxs-lookup"><span data-stu-id="83f29-171">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
+
+`--self-contained`
+
+<span data-ttu-id="83f29-172">Publica el tiempo de ejecución de .NET Core con la aplicación para que no sea necesario tener instalado el tiempo de ejecución en la máquina de destino.</span><span class="sxs-lookup"><span data-stu-id="83f29-172">Publishes the .NET Core runtime with your application so the runtime doesn't need to be installed on the target machine.</span></span> <span data-ttu-id="83f29-173">Si se especifica un identificador de tiempo de ejecución, su valor predeterminado es `true`.</span><span class="sxs-lookup"><span data-stu-id="83f29-173">If a runtime identifier is specified, its default value is `true`.</span></span> <span data-ttu-id="83f29-174">Para más información sobre los diferentes tipos de implementación, vea [Implementación de aplicaciones .NET Core](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="83f29-174">For more information about the different deployment types, see [.NET Core application deployment](../deploying/index.md).</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="8bb3e-164">Publica la aplicación para un determinado entorno de tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-164">Publishes the application for a given runtime.</span></span> <span data-ttu-id="8bb3e-165">Esto se usa al crear una [implementación autocontenida (SCD)](../deploying/index.md#self-contained-deployments-scd).</span><span class="sxs-lookup"><span data-stu-id="8bb3e-165">This is used when creating a [self-contained deployment (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span> <span data-ttu-id="8bb3e-166">Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="8bb3e-166">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="8bb3e-167">El valor predeterminado es publicar una [aplicación dependiente del marco de trabajo (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span><span class="sxs-lookup"><span data-stu-id="8bb3e-167">Default is to publish a [framework-dependent deployment (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span></span>
+<span data-ttu-id="83f29-175">Publica la aplicación para un determinado entorno de tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="83f29-175">Publishes the application for a given runtime.</span></span> <span data-ttu-id="83f29-176">Esto se usa al crear una [implementación autocontenida (SCD)](../deploying/index.md#self-contained-deployments-scd).</span><span class="sxs-lookup"><span data-stu-id="83f29-176">This is used when creating a [self-contained deployment (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span> <span data-ttu-id="83f29-177">Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="83f29-177">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="83f29-178">El valor predeterminado es publicar una [aplicación dependiente del marco de trabajo (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span><span class="sxs-lookup"><span data-stu-id="83f29-178">Default is to publish a [framework-dependent deployment (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="8bb3e-168">Establece el nivel de detalle del comando.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-168">Sets the verbosity level of the command.</span></span> <span data-ttu-id="8bb3e-169">Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-169">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="83f29-179">Establece el nivel de detalle del comando.</span><span class="sxs-lookup"><span data-stu-id="83f29-179">Sets the verbosity level of the command.</span></span> <span data-ttu-id="83f29-180">Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="83f29-180">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 `--version-suffix <VERSION_SUFFIX>`
 
-<span data-ttu-id="8bb3e-170">Define el sufijo de versión para reemplazar el asterisco (`*`) en el campo de versión del archivo de proyecto.</span><span class="sxs-lookup"><span data-stu-id="8bb3e-170">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
+<span data-ttu-id="83f29-181">Define el sufijo de versión para reemplazar el asterisco (`*`) en el campo de versión del archivo de proyecto.</span><span class="sxs-lookup"><span data-stu-id="83f29-181">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
+
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="83f29-182">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="83f29-182">.NET Core 1.x</span></span>](#tab/netcore1x)
+
+`-c|--configuration {Debug|Release}`
+
+<span data-ttu-id="83f29-183">Define la configuración de compilación.</span><span class="sxs-lookup"><span data-stu-id="83f29-183">Defines the build configuration.</span></span> <span data-ttu-id="83f29-184">El valor predeterminado es `Debug`.</span><span class="sxs-lookup"><span data-stu-id="83f29-184">The default value is `Debug`.</span></span>
+
+`-f|--framework <FRAMEWORK>`
+
+<span data-ttu-id="83f29-185">Publica la aplicación para el [marco de trabajo de destino especificado](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="83f29-185">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="83f29-186">Debe especificar el marco de trabajo de destino en el archivo de proyecto.</span><span class="sxs-lookup"><span data-stu-id="83f29-186">You must specify the target framework in the project file.</span></span>
+
+`-h|--help`
+
+<span data-ttu-id="83f29-187">Imprime una corta ayuda para el comando.</span><span class="sxs-lookup"><span data-stu-id="83f29-187">Prints out a short help for the command.</span></span>
+
+`--manifest <PATH_TO_MANIFEST_FILE>`
+
+<span data-ttu-id="83f29-188">Especifica uno o varios [manifiestos de destino](../deploying/runtime-store.md) que se usarán para recortar el conjunto de paquetes publicados con la aplicación.</span><span class="sxs-lookup"><span data-stu-id="83f29-188">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="83f29-189">El archivo de manifiesto es parte de la salida del [comando `dotnet store`](dotnet-store.md).</span><span class="sxs-lookup"><span data-stu-id="83f29-189">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="83f29-190">Para especificar varios manifiestos, agregue la opción `--manifest` para cada manifiesto.</span><span class="sxs-lookup"><span data-stu-id="83f29-190">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span> <span data-ttu-id="83f29-191">Esta opción está disponible a partir del SDK de .NET Core 2.0.</span><span class="sxs-lookup"><span data-stu-id="83f29-191">This option is available starting with .NET Core 2.0 SDK.</span></span>
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+<span data-ttu-id="83f29-192">Especifica la ruta de acceso del directorio de salida.</span><span class="sxs-lookup"><span data-stu-id="83f29-192">Specifies the path for the output directory.</span></span> <span data-ttu-id="83f29-193">Si no se especifica, el valor predeterminado es *./bin/[configuration]/[framework]/publish/* para una implementación dependiente del marco de trabajo o *./bin/[configuration]/[framework]/[runtime]/publish/* para una implementación independiente.</span><span class="sxs-lookup"><span data-stu-id="83f29-193">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a framework-dependent deployment or *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained deployment.</span></span>
+<span data-ttu-id="83f29-194">Si la ruta de acceso es relativa, el directorio de salida generado es relativo a la ubicación del archivo de proyecto, no al directorio de trabajo actual.</span><span class="sxs-lookup"><span data-stu-id="83f29-194">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
+
+`-r|--runtime <RUNTIME_IDENTIFIER>`
+
+<span data-ttu-id="83f29-195">Publica la aplicación para un determinado entorno de tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="83f29-195">Publishes the application for a given runtime.</span></span> <span data-ttu-id="83f29-196">Esto se usa al crear una [implementación autocontenida (SCD)](../deploying/index.md#self-contained-deployments-scd).</span><span class="sxs-lookup"><span data-stu-id="83f29-196">This is used when creating a [self-contained deployment (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span> <span data-ttu-id="83f29-197">Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="83f29-197">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="83f29-198">El valor predeterminado es publicar una [aplicación dependiente del marco de trabajo (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span><span class="sxs-lookup"><span data-stu-id="83f29-198">Default is to publish a [framework-dependent deployment (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span></span>
+
+`-v|--verbosity <LEVEL>`
+
+<span data-ttu-id="83f29-199">Establece el nivel de detalle del comando.</span><span class="sxs-lookup"><span data-stu-id="83f29-199">Sets the verbosity level of the command.</span></span> <span data-ttu-id="83f29-200">Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="83f29-200">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+
+`--version-suffix <VERSION_SUFFIX>`
+
+<span data-ttu-id="83f29-201">Define el sufijo de versión para reemplazar el asterisco (`*`) en el campo de versión del archivo de proyecto.</span><span class="sxs-lookup"><span data-stu-id="83f29-201">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
 
 ---
 
-## <a name="examples"></a><span data-ttu-id="8bb3e-171">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="8bb3e-171">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="83f29-202">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="83f29-202">Examples</span></span>
 
-<span data-ttu-id="8bb3e-172">Publica el proyecto en el directorio actual:</span><span class="sxs-lookup"><span data-stu-id="8bb3e-172">Publish the project in the current directory:</span></span>
+<span data-ttu-id="83f29-203">Publica el proyecto en el directorio actual:</span><span class="sxs-lookup"><span data-stu-id="83f29-203">Publish the project in the current directory:</span></span>
 
 `dotnet publish`
 
-<span data-ttu-id="8bb3e-173">Publicar la aplicación con el archivo del proyecto especificado:</span><span class="sxs-lookup"><span data-stu-id="8bb3e-173">Publish the application using the specified project file:</span></span>
+<span data-ttu-id="83f29-204">Publicar la aplicación con el archivo del proyecto especificado:</span><span class="sxs-lookup"><span data-stu-id="83f29-204">Publish the application using the specified project file:</span></span>
 
 `dotnet publish ~/projects/app1/app1.csproj`
 
-<span data-ttu-id="8bb3e-174">Publica el proyecto en el directorio actual mediante el marco de trabajo `netcoreapp1.1`:</span><span class="sxs-lookup"><span data-stu-id="8bb3e-174">Publish the project in the current directory using the `netcoreapp1.1` framework:</span></span>
+<span data-ttu-id="83f29-205">Publica el proyecto en el directorio actual mediante el marco de trabajo `netcoreapp1.1`:</span><span class="sxs-lookup"><span data-stu-id="83f29-205">Publish the project in the current directory using the `netcoreapp1.1` framework:</span></span>
 
 `dotnet publish --framework netcoreapp1.1`
 
-<span data-ttu-id="8bb3e-175">Publica la aplicación actual mediante el marco de trabajo `netcoreapp1.1` y el entorno de tiempo de ejecución para `OS X 10.10` (este RID tiene que existir en el archivo de proyecto):</span><span class="sxs-lookup"><span data-stu-id="8bb3e-175">Publish the current application using the `netcoreapp1.1` framework and the runtime for `OS X 10.10` (you must list this RID in the project file).</span></span>
+<span data-ttu-id="83f29-206">Publica la aplicación actual mediante el marco de trabajo `netcoreapp1.1` y el entorno de tiempo de ejecución para `OS X 10.10` (este RID tiene que existir en el archivo de proyecto):</span><span class="sxs-lookup"><span data-stu-id="83f29-206">Publish the current application using the `netcoreapp1.1` framework and the runtime for `OS X 10.10` (you must list this RID in the project file).</span></span>
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
 
-<span data-ttu-id="8bb3e-176">Publica la aplicación actual pero no restaura las referencias de proyecto a proyecto (P2P), solo el proyecto raíz, durante la operación de restauración (SDK de .NET Core 2.0 y versiones superiores):</span><span class="sxs-lookup"><span data-stu-id="8bb3e-176">Publish the current application but don't restore project-to-project (P2P) references, just the root project during the restore operation (.NET Core SDK 2.0 and later versions):</span></span>
+<span data-ttu-id="83f29-207">Publica la aplicación actual pero no restaura las referencias de proyecto a proyecto (P2P), solo el proyecto raíz, durante la operación de restauración (SDK de .NET Core 2.0 y versiones superiores):</span><span class="sxs-lookup"><span data-stu-id="83f29-207">Publish the current application but don't restore project-to-project (P2P) references, just the root project during the restore operation (.NET Core SDK 2.0 and later versions):</span></span>
 
 `dotnet publish --no-dependencies`
 
-## <a name="see-also"></a><span data-ttu-id="8bb3e-177">Vea también</span><span class="sxs-lookup"><span data-stu-id="8bb3e-177">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83f29-208">Vea también</span><span class="sxs-lookup"><span data-stu-id="83f29-208">See also</span></span>
 
-* [<span data-ttu-id="8bb3e-178">Marcos de trabajo de destino</span><span class="sxs-lookup"><span data-stu-id="8bb3e-178">Target frameworks</span></span>](../../standard/frameworks.md)
-* [<span data-ttu-id="8bb3e-179">Catálogo de identificadores de tiempo de ejecución (RID)</span><span class="sxs-lookup"><span data-stu-id="8bb3e-179">Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)
+* [<span data-ttu-id="83f29-209">Marcos de trabajo de destino</span><span class="sxs-lookup"><span data-stu-id="83f29-209">Target frameworks</span></span>](../../standard/frameworks.md)
+* [<span data-ttu-id="83f29-210">Catálogo de identificadores de tiempo de ejecución (RID)</span><span class="sxs-lookup"><span data-stu-id="83f29-210">Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)
