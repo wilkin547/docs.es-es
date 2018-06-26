@@ -2,17 +2,18 @@
 title: Novedades de C# 7.1
 description: Información general sobre las nuevas características en C# 7.1.
 ms.date: 08/16/2017
-ms.openlocfilehash: 00baec45d7582d3ac12c7b0865241f5cd8159246
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728659"
 ---
 # <a name="whats-new-in-c-71"></a>Novedades de C# 7.1
 
 C# 7.1 es la primera versión secundaria del lenguaje C#. Marca una cadencia de versión mayor en el lenguaje. Podrá usar las nuevas características más pronto, lo ideal es que cuando vayan estando listas. C# 7.1 incluye la posibilidad de configurar el compilador para que coincida con una versión especificada del lenguaje. Ello permite aislar la decisión de actualizar las herramientas de la decisión de actualizar las versiones de lenguaje.
 
-C# 7.1 incorpora el elemento de configuración de [selección de versión de lenguaje](#language-version-selection), tres nuevas características de lenguaje y un nuevo comportamiento del compilador.
+C# 7.1 incorpora el elemento de configuración de [selección de versión de lenguaje](../language-reference/configure-language-version.md), tres nuevas características de lenguaje y un nuevo comportamiento del compilador.
 
 Las nuevas características de lenguaje de esta versión son las siguientes:
 
@@ -25,51 +26,7 @@ Las nuevas características de lenguaje de esta versión son las siguientes:
 
 Por último, el compilador tiene dos opciones, `/refout` y `/refonly`, que controlan la [generación de ensamblados de referencia](#reference-assembly-generation).
 
-## <a name="language-version-selection"></a>Selección de versión del lenguaje
-
-El compilador de C# admite C# 7.1 desde Visual Studio 2017 versión 15.3 o el SDK de .NET Core 2.0. Las siguientes características de 7.1, en cambio, están deshabilitadas de forma predeterminada. Para habilitarlas, debe cambiar la configuración de la versión de lenguaje del proyecto.
-
-En el Explorador de soluciones de Visual Studio, haga clic con el botón derecho en el nodo de proyecto y seleccione **Propiedades**. Seleccione la pestaña **Compilar** y, después, el botón **Opciones avanzadas**. En la lista desplegable, seleccione **C# latest minor version (latest)** (última versión secundaria de C# [más reciente]) o la versión específica **C# 7.1**, tal y como se muestra en la siguiente imagen. El valor `latest` indica que se va a usar la versión secundaria más reciente en el equipo actual. `C# 7.1` señala que se quiere usar C# 7.1, aun cuando posteriormente se lancen versiones secundarias más recientes.
-
-![Establecer la versión de lenguaje](./media/csharp-7-1/advanced-build-settings.png)
-
-También puede editar el archivo "csproj" y agregar o modificar las siguientes líneas:
-
-```xml
-<PropertyGroup>
-  <LangVersion>latest</LangVersion>
-</PropertyGroup>
-```
-
-> [!NOTE]
-> Si usa el IDE de Visual Studio para actualizar los archivos csproj, este creará nodos independientes por cada configuración de compilación existente. Normalmente, se establece el mismo valor en todas las configuraciones de compilación, pero deberá establecerse de forma explícita en cada configuración de compilación, o bien seleccionar "All Configurations" (Todas las configuraciones) cuando este valor se modifique. Verá lo siguiente en el archivo csproj:
-
-```xml
-<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-  <LangVersion>latest</LangVersion>
-</PropertyGroup>
-
-<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-  <LangVersion>latest</LangVersion>
-</PropertyGroup>
-```
-
-Estos son los valores válidos en el elemento `LangVersion`:
-
-* `ISO-1`
-* `ISO-2`
-* `3`
-* `4`
-* `5`
-* `6`
-* `7`
-* `7.1`
-* `default`
-* `latest`
-
-Las cadenas especiales `default` y `latest` se resuelven en las versiones de lenguaje principal y secundaria respectivamente más recientes que haya instaladas en el equipo de compilación.
-
-Esta configuración hace que no haya conexión entre la instalación de nuevas versiones del SDK y herramientas en el entorno de desarrollo y la decisión de incorporar nuevas características del lenguaje en un proyecto. Puede instalar el SDK y las herramientas más recientes en el equipo de compilación. Cada proyecto se puede configurar para que, durante su compilación, se use una versión de lenguaje específica.
+Para usar las características más recientes en una versión secundaria, tendrá que [configurar la versión del idioma de compilador](../language-reference/configure-language-version.md) y seleccionar la versión.
 
 ## <a name="async-main"></a>Async main
 

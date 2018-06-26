@@ -3,12 +3,13 @@ title: 'Comando dotnet list reference: CLI de .NET Core'
 description: El comando dotnet list reference constituye una opción práctica para enumerar referencias entre proyectos.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 24cb1124fc3f8707afe727e6a73d35d5dde39937
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 821e6d276af44bf984c8ac1b42b4e954dbe69556
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697188"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
@@ -16,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="name"></a>nombre
 
-`dotnet list reference`: enumera referencias entre proyectos.
+`dotnet list reference`: enumera las referencias entre proyectos.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -30,7 +31,7 @@ El comando `dotnet list reference` constituye una opción práctica para enumera
 
 `PROJECT`
 
-Especifica el archivo de proyecto que se usará para enumerar las referencias. Si no se especifica, el comando buscará uno en el directorio actual.
+Especifica el archivo de proyecto que se usará para enumerar las referencias. Si no se especifica, el comando busca un archivo del proyecto en el directorio actual.
 
 ## <a name="options"></a>Opciones
 

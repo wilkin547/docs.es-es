@@ -4,11 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 424408ca095eadeda33690277dcf38bac923e29f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6af18b1154759677c7749632eace30bad752591
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697201"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de dominio: diseño e implementación
 
@@ -339,8 +340,8 @@ Como se mencionó, los eventos de dominio se usan para implementar explícitamen
 -   **Jimmy Bogard. A better domain events pattern**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/) (Un mejor patrón de eventos de dominio)
 
--   **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) (Diseño de agregado efectivo, parte II: Conseguir que los agregados funcionen juntos)
+-   **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together (Diseño de agregados efectivo, parte II: Conseguir que los agregados funcionen juntos)**
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 -   **Jimmy Bogard. Strengthening your domain: Domain Events**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> * (Reforzar el dominio: eventos de dominio)

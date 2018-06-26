@@ -3,12 +3,13 @@ title: 'Comando dotnet migrate: CLI de .NET Core'
 description: El comando dotnet migrate migra un proyecto y todas sus dependencias.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: bdc1da5c1b70fdceac0170b2f002059a66ca5880
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 67a845f7604dededd00746fa6b74a320b3e134fa
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697110"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
@@ -20,15 +21,18 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Sinopsis
 
-`dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file] [-s|--skip-project-references] [-r|--report-file] [--format-report-file-json] [--skip-backup] [-h|--help]`
+```
+dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--report-file] [-s|--skip-project-references] [--skip-backup] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file]
+dotnet migrate [-h|--help]
+```
 
 ## <a name="description"></a>Description
 
-El comando `dotnet migrate` migra un proyecto válido basado en *project.json* de la versión preliminar 2 a un proyecto válido *csproj* del SDK 1.0 de .NET Core. 
+El comando `dotnet migrate` migra un proyecto válido basado en *project.json* de la versión preliminar 2 a un proyecto válido *csproj* del SDK 1.0 de .NET Core.
 
-De forma predeterminada, el comando migra el proyecto raíz y todas las referencias de proyecto que contiene. Este comportamiento se deshabilita mediante la opción `--skip-project-references` en tiempo de ejecución. 
+De forma predeterminada, el comando migra el proyecto raíz y todas las referencias de proyecto que contiene. Este comportamiento se deshabilita mediante la opción `--skip-project-references` en tiempo de ejecución.
 
-La migración se realiza en:
+La migración se puede realizar en los recursos siguientes:
 
 * Un único proyecto mediante la especificación del archivo *project.json* que quiere migrar.
 * Todos los directorios especificados en el archivo *global.json* pasando una ruta al archivo *global.json*.
@@ -37,7 +41,7 @@ La migración se realiza en:
 
 El comando `dotnet migrate` mantiene el archivo *project.json* migrado dentro de un directorio `backup`, que se crea en caso de que no exista. Este comportamiento se invalida con la opción `--skip-backup`.
 
-De forma predeterminada, la operación de migración genera el estado del proceso de migración a la salida estándar (STDOUT). Si usa la opción `--report-file <REPORT_FILE>`, la salida se guarda en el archivo especificado. 
+De forma predeterminada, la operación de migración genera el estado del proceso de migración a la salida estándar (STDOUT). Si usa la opción `--report-file <REPORT_FILE>`, la salida se guarda en el archivo especificado.
 
 El comando `dotnet migrate` solo admite proyectos válidos basados en *project.json* de la versión preliminar 2. Esto significa que no se puede usar para migrar DNX o los proyectos basados en *project.json* de la versión preliminar 1 directamente a proyectos de MSBuild/csproj. Primero debe migrar manualmente el proyecto a un proyecto basado en *project.json* de la versión preliminar 2 y luego usar el comando `dotnet migrate` para migrar el proyecto.
 
@@ -48,17 +52,33 @@ El comando `dotnet migrate` solo admite proyectos válidos basados en *project.j
 La ruta de acceso a uno de los siguientes elementos:
 
 * Un archivo *project.json* para migrar.
-* Un archivo *global.json*, que migrará las carpetas especificadas en *global.json*.
-* Un archivo *solution.sln*, que migrará los proyectos a los que se hace referencia en la solución.
-* Un directorio para migrar, que buscará de forma recursiva archivos *project.json* para migrar.
+* Un archivo *global.json*: se migran las carpetas especificadas en *global.json*.
+* Un archivo *solution.sln*: se migran los proyectos a los que se hace referencia en la solución.
+* Un directorio para migrar: se buscan de forma recursiva los archivos *project.json* que se van a migrar dentro del directorio especificado.
 
 Si no se especifica nada, se toma como valor predeterminado el directorio actual.
 
 ## <a name="options"></a>Opciones
 
+`--format-report-file-json <REPORT_FILE>`
+
+Salida del archivo de informe de migración como JSON en lugar de mensajes de usuario.
+
 `-h|--help`
 
 Imprime una corta ayuda para el comando.
+
+`-r|--report-file <REPORT_FILE>`
+
+Salida del informe de migración a un archivo además de a la consola.
+
+`-s|--skip-project-references [Debug|Release]`
+
+Omite la migración de referencias de proyecto. De forma predeterminada, las referencias de proyecto se migran de forma recursiva.
+
+`--skip-backup`
+
+Omite el traslado de *project.json*, *global.json* y *\*.xproj* a un directorio `backup` tras la realización correcta de la migración.
 
 `-t|--template-file <TEMPLATE_FILE>`
 
@@ -71,22 +91,6 @@ La versión del paquete sdk a la que se hace referencia en la aplicación migrad
 `-x|--xproj-file <FILE>`
 
 La ruta de acceso al archivo xproj que se usará. Necesario cuando hay más de un archivo xproj en un directorio de proyecto.
-
-`-s|--skip-project-references [Debug|Release]`
-
-Omite la migración de referencias de proyecto. De forma predeterminada, las referencias de proyecto se migran de forma recursiva.
-
-`-r|--report-file <REPORT_FILE>`
-
-Salida del informe de migración a un archivo además de a la consola.
-
-`--format-report-file-json <REPORT_FILE>`
-
-Salida del archivo de informe de migración como JSON en lugar de mensajes de usuario.
-
-`--skip-backup`
-
-Omite el traslado de *project.json*, *global.json* y *\*.xproj* a un directorio `backup` tras la realización correcta de la migración.
 
 ## <a name="examples"></a>Ejemplos
 

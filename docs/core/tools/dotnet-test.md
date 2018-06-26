@@ -3,12 +3,13 @@ title: 'Comando dotnet test: CLI de .NET Core'
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: d85ca0bf75baa94e63358bd66d11bc29e8b9284b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 8a10ac9175ee5fcf8649efbb07d8d382ac3afdc7
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696275"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,16 +21,19 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Sinopsis
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
-
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 ```
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
 dotnet test [-h|--help]
 ```
-
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+dotnet test [-h|--help]
+```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
 ```
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
 dotnet test [-h|--help]
@@ -48,11 +52,77 @@ Los proyectos de prueba especifican el ejecutor de pruebas usando un elemento `<
 
 `PROJECT`
 
-Especifica una ruta de acceso al proyecto de prueba. Si se omite, se toma como predeterminado el directorio actual.
+Ruta de acceso al proyecto de prueba. Si no se especifica, se toma como predeterminado el directorio actual.
 
 ## <a name="options"></a>Opciones
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+
+Use los adaptadores de prueba personalizados en la ruta especificada de esta ejecución de pruebas.
+
+`--blame`
+
+Ejecuta las pruebas en el modo de culpabilidad. Esta opción es útil para aislar las pruebas problemáticas que hacen que el host de prueba se bloquee. Crea un archivo de salida en el directorio actual como *Sequence.xml* que captura el orden de ejecución de pruebas antes del bloqueo.
+
+`-c|--configuration {Debug|Release}`
+
+Define la configuración de compilación. El valor predeterminado es `Debug`, pero la configuración del proyecto podría invalidar esta configuración predeterminada del SDK.
+
+`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
+
+Habilita el recopilador de datos para la ejecución de pruebas. Para obtener más información, consulte [Monitor and analyze test run](https://aka.ms/vstest-collect) (Supervisar y analizar ejecuciones de pruebas).
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+Habilita el modo de diagnóstico para la plataforma de prueba y escribe mensajes de diagnóstico en el archivo especificado.
+
+`-f|--framework <FRAMEWORK>`
+
+Busca archivos binarios de prueba para un [marco](../../standard/frameworks.md) específico.
+
+`--filter <EXPRESSION>`
+
+Filtra las pruebas del proyecto actual con la expresión dada. Para más información, consulte la sección [Detalles de la opción de filtro](#filter-option-details). Para obtener más información y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Ejecución de pruebas unitarias selectivas](../testing/selective-unit-tests.md).
+
+`-h|--help`
+
+Imprime una corta ayuda para el comando.
+
+`-l|--logger <LoggerUri/FriendlyName>`
+
+Especifica un registrador para los resultados de pruebas.
+
+`--no-build`
+
+No compila el proyecto de prueba antes de ejecutarlo. También establece la marca `--no-restore` de forma implícita.
+
+`--no-restore`
+
+No ejecuta una restauración implícita al ejecutar el comando.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Directorio donde se encuentran los archivos binarios que se ejecutarán.
+
+`-r|--results-directory <PATH>`
+
+El directorio donde se guardarán los resultados de pruebas. Si el directorio especificado no existe, se crea.
+
+`-s|--settings <SETTINGS_FILE>`
+
+Configuración que se usará al ejecutar las pruebas.
+
+`-t|--list-tests`
+
+Enumera todas las pruebas detectadas en el proyecto actual.
+
+`-v|--verbosity <LEVEL>`
+
+Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -76,7 +146,7 @@ Busca archivos binarios de prueba para un [marco](../../standard/frameworks.md) 
 
 `--filter <EXPRESSION>`
 
-Filtra las pruebas del proyecto actual con la expresión dada. Para más información, consulte la sección [Detalles de la opción de filtro](#filter-option-details). Para información adicional y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Running selective unit tests](../testing/selective-unit-tests.md) (Ejecución de pruebas unitarias selectivas).
+Filtra las pruebas del proyecto actual con la expresión dada. Para más información, consulte la sección [Detalles de la opción de filtro](#filter-option-details). Para obtener más información y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Ejecución de pruebas unitarias selectivas](../testing/selective-unit-tests.md).
 
 `-h|--help`
 
@@ -88,11 +158,11 @@ Especifica un registrador para los resultados de pruebas.
 
 `--no-build`
 
-No compila el proyecto de prueba antes de ejecutarlo.
+No compila el proyecto de prueba antes de ejecutarlo. También establece la marca `--no-restore` de forma implícita.
 
 `--no-restore`
 
-No realiza una restauración implícita al ejecutar el comando.
+No ejecuta una restauración implícita al ejecutar el comando.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -100,7 +170,7 @@ Directorio donde se encuentran los archivos binarios que se ejecutarán.
 
 `-r|--results-directory <PATH>`
 
-El directorio donde se guardarán los resultados de pruebas. Si no existe, se creará el directorio especificado.
+El directorio donde se guardarán los resultados de pruebas. Si el directorio especificado no existe, se crea.
 
 `-s|--settings <SETTINGS_FILE>`
 
@@ -134,7 +204,7 @@ Busca archivos binarios de prueba para un [marco](../../standard/frameworks.md) 
 
 `--filter <EXPRESSION>`
 
-Filtra las pruebas del proyecto actual con la expresión dada. Para más información, consulte la sección [Detalles de la opción de filtro](#filter-option-details). Para información adicional y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Running selective unit tests](../testing/selective-unit-tests.md) (Ejecución de pruebas unitarias selectivas).
+Filtra las pruebas del proyecto actual con la expresión dada. Para más información, consulte la sección [Detalles de la opción de filtro](#filter-option-details). Para obtener más información y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Ejecución de pruebas unitarias selectivas](../testing/selective-unit-tests.md).
 
 `-h|--help`
 
@@ -185,9 +255,9 @@ Ejecute las pruebas en el proyecto `test1`:
 `<property>` es un atributo del tipo `Test Case`. Las siguientes son las propiedades admitidas por los marcos de pruebas unitarias populares:
 
 | Marco de prueba | Propiedades admitidas                                                                                      |
-| :------------: | --------------------------------------------------------------------------------------------------------- |
+| -------------- | --------------------------------------------------------------------------------------------------------- |
 | MSTest         | <ul><li>FullyQualifiedName</li><li>nombre</li><li>ClassName</li><li>Prioridad</li><li>TestCategory</li></ul> |
-| Xunit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Rasgos</li></ul>                                   |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Rasgos</li></ul>                                   |
 
 `<operator>` describe la relación entre la propiedad y el valor:
 
@@ -203,16 +273,16 @@ Una expresión sin `<operator>` automáticamente se considera un `contains` en l
 
 Las expresiones se pueden combinar con operadores condicionales:
 
-| Operador | Función |
-| :------: | :------: |
-| <code>&#124;</code>      | O       |
-| `&`      | AND      |
+| Operador            | Función |
+| ------------------- | -------- |
+| <code>&#124;</code> | O       |
+| `&`                 | AND      |
 
 Si usa operadores condicionales (por ejemplo, `(Name~TestMethod1) | (Name~TestMethod2)`), puede incluir las expresiones entre paréntesis.
 
-Para información adicional y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Running selective unit tests](../testing/selective-unit-tests.md) (Ejecución de pruebas unitarias selectivas).
+Para obtener más información y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Ejecución de pruebas unitarias selectivas](../testing/selective-unit-tests.md).
 
 ## <a name="see-also"></a>Vea también
 
- [Marcos y destinos](../../standard/frameworks.md)  
- [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)
+[Marcos y destinos](../../standard/frameworks.md)  
+[Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)

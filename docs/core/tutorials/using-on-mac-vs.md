@@ -4,12 +4,12 @@ description: Este tema le guía en la creación de una aplicación de consola se
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: 82cd7c09dd595a8273eb88a4caaf34782fa10ac4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd8262a7d2fa03ab06f9f85e91c298f52e3c0849
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214548"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36315152"
 ---
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Introducción a .NET Core en macOS con Visual Studio para Mac
 
@@ -28,7 +28,7 @@ Vea el tema [Requisitos previos para .NET Core en Mac](../../core/macos-prerequi
 
 Si ya ha instalado los requisitos previos y Visual Studio para Mac, omita esta sección y proceda con [Creación de un proyecto](#creating-a-project). Siga estos pasos para instalar los requisitos previos y Visual Studio para Mac:
 
-Descargue el [instalador de Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/). Ejecute el instalador. Lea y acepte el contrato de licencia. Durante la instalación, se les proporciona la oportunidad de instalar Xamarin, una tecnología de desarrollo de aplicaciones móviles multiplataforma. La instalación de Xamarin y sus componentes relacionados es opcional para el desarrollo de .NET Core. Para ver un tutorial del proceso de instalación de Visual Studio para Mac, consulte [Introducing Visual Studio for Mac](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/) (Introducción a Visual Studio para Mac). Una vez completada la instalación, inicie el IDE de Visual Studio para Mac.
+Descargue el [instalador de Visual Studio para Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/). Ejecute el instalador. Lea y acepte el contrato de licencia. Durante la instalación, se les proporciona la oportunidad de instalar Xamarin, una tecnología de desarrollo de aplicaciones móviles multiplataforma. La instalación de Xamarin y sus componentes relacionados es opcional para el desarrollo de .NET Core. Para ver un tutorial del proceso de instalación de Visual Studio para Mac, consulte [Introducing Visual Studio for Mac](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/) (Introducción a Visual Studio para Mac). Una vez completada la instalación, inicie el IDE de Visual Studio para Mac.
 
 ## <a name="creating-a-project"></a>Creación de un proyecto
 

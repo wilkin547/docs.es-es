@@ -3,12 +3,12 @@ title: Novedades de C# 6 - Guía de C#
 description: Obtenga información sobre las nuevas características de la versión 6 de C#
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: c23d4f45441451fbf8a2ad2f939bdb1ed6144154
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483494"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34565883"
 ---
 # <a name="whats-new-in-c-6"></a>Novedades de C# 6
 
@@ -38,6 +38,8 @@ La versión 6.0 de C# incluye muchas características que mejoran la productivid
     - Los inicializadores de colección pueden basarse en métodos de extensión accesibles, además de métodos miembro.
 * [Mejoras en la resolución de sobrecarga](#improved-overload-resolution):
     - Algunas construcciones que previamente generaban llamadas de método ambiguas ahora se resuelven correctamente.
+* [Opción del compilador `deterministic`](#deterministic-compiler-output):
+    - La opción del compilador determinista garantiza que las compilaciones posteriores del mismo origen generan el mismo resultado binario.
 
 El efecto general de estas características es que se escribe código más conciso y legible. La sintaxis contiene menos complejidad para muchas de las prácticas habituales. Es más fácil ver la intención del diseño con menos complejidad. Aprender bien estas características le permitirá ser más productivo, escribir código más legible y concentrarse más en las características principales que en las construcciones del lenguaje.
 
@@ -388,3 +390,12 @@ El compilador anterior no podía distinguir correctamente entre `Task.Run(Action
 [!code-csharp[Lambda](../../../samples/snippets/csharp/new-in-6/overloads.cs#Lambda)]
 
 El compilador de C# 6 determina correctamente que `Task.Run(Func<Task>())` es una opción mejor.
+
+### <a name="deterministic-compiler-output"></a>Resultado del compilador determinista
+
+La opción `-deterministic` indica al compilador que cree un ensamblado de salida idéntico byte a byte para las compilaciones sucesivas de los mismos archivos de código fuente.
+
+De forma predeterminada, todas las compilaciones generan una salida única en cada compilación. El compilador agrega una marca de tiempo y genera un GUID a partir de números aleatorios. Use esta opción si quiere comparar la salida byte a byte para garantizar la coherencia entre las compilaciones.
+
+Para obtener más información, vea el artículo [-deterministic (opción del compilador)](../language-reference/compiler-options/deterministic-compiler-option.md).
+

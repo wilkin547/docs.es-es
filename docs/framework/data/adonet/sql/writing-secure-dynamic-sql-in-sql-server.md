@@ -2,11 +2,12 @@
 title: Escribir código SQL dinámico y seguro en SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 0dc372b4e5554623d51a4add9a43f33d4a320f18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbfbfd59d78cb5504679fd8ae78f79d0c180dc4d
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753479"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Escribir código SQL dinámico y seguro en SQL Server
 La inyección de SQL es el proceso por el cual un usuario malintencionado escribe instrucciones de Transact-SQL en lugar de entradas válidas. Si la entrada se pasa directamente al servidor sin haber sido validada y si la aplicación ejecuta el código inyectado por error, el ataque podría dañar o destruir datos.  
@@ -45,9 +46,9 @@ La inyección de SQL es el proceso por el cual un usuario malintencionado escrib
   
  SQL Server tiene métodos para conceder a los usuarios acceso a datos mediante procedimientos almacenados y funciones definidas por el usuario que ejecutan SQL dinámico.  
   
--   Usar la suplantación con Transact-SQL EXECUTE AS cláusula, como se describe en [personalizar permisos con suplantación en SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+-   Usar la suplantación con la cláusula EXECUTE AS de Transact-SQL, como se describe en [Personalizar permisos con suplantación en SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
--   Firmar procedimientos almacenados con certificados, tal como se describe en [firmar procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+-   Firmar procedimientos almacenados con certificados, como se describe en [Firmar procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  La cláusula EXECUTE AS reemplaza los permisos del llamador por los del usuario especificado en la cláusula EXECUTE AS. Los procedimientos almacenados anidados o los desencadenadores se ejecutan en el contexto de seguridad del usuario proxy. Esto puede interrumpir las aplicaciones que dependen de seguridad por filas o requieren auditoría. Algunas funciones que devuelven la identidad del usuario devuelven el usuario especificado en la cláusula EXECUTE AS, no el llamador original. El contexto de ejecución se revierte al llamador original sólo después de la ejecución o cuando se ha emitido una instrucción REVERT.  
@@ -56,15 +57,14 @@ La inyección de SQL es el proceso por el cual un usuario malintencionado escrib
  Cuando se ejecuta un procedimiento almacenado firmado con un certificado, los permisos concedidos al usuario del certificado se combinan con los del llamador. El contexto de ejecución sigue siendo el mismo; el usuario del certificado no suplanta al llamador. Los procedimientos almacenados de firma requieren de varios pasos para su implementación. Cada vez que se modifica el procedimiento, debe volver a firmarse.  
   
 ### <a name="cross-database-access"></a>Acceso entre bases de datos  
- El encadenamiento de propiedad entre bases de datos no funciona en los casos en que se ejecutan instrucciones creadas de forma dinámica. Se puede solucionar esto en SQL Server mediante la creación de un procedimiento almacenado que tiene acceso a datos en otra base de datos y firma del procedimiento con un certificado que exista en ambas bases de datos. Con ello el usuario obtiene acceso a los recursos de la base de datos que utiliza el procedimiento sin concederle permisos ni acceso a la base de datos.  
+ El encadenamiento de propiedad entre bases de datos no funciona en los casos en que se ejecutan instrucciones creadas de forma dinámica. Puede resolver esto en SQL Server mediante la creación de procedimientos almacenados con acceso a otra base de datos y firmando el procedimiento con un certificado que exista en ambas bases de datos. Con ello el usuario obtiene acceso a los recursos de la base de datos que utiliza el procedimiento sin concederle permisos ni acceso a la base de datos.  
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|Description|  
 |--------------|-----------------|  
-|[Procedimientos almacenados](http://go.microsoft.com/fwlink/?LinkId=98233) y [inyección de código SQL](http://go.microsoft.com/fwlink/?LinkId=98234) en libros en pantalla de SQL Server|Temas que describen cómo crear procedimientos almacenados y cómo funciona la inyección de SQL.|  
-|[Nuevos ataques de truncamiento SQL y cómo evitarlos](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/) en MSDN Magazine.|Describe cómo delimitar caracteres y cadenas, inyección de SQL y modificación por ataques de truncamiento.|  
+|[Procedimientos almacenados](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [Inyección de código SQL](/sql/relational-databases/security/sql-injection) en los libros en pantalla de SQL Server|Temas que describen cómo crear procedimientos almacenados y cómo funciona la inyección de SQL.|  
   
 ## <a name="see-also"></a>Vea también  
  [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

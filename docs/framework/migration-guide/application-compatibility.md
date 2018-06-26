@@ -8,11 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b75429d0de69c60e7c24551bf1d9218e74d0c5ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31d14a8ef6a4b17eea1b9160e811bb92946d775b
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728646"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilidad de aplicaciones en .NET Framework
 
@@ -25,7 +26,7 @@ Cada aplicación se refiere a una versión específica de .NET Framework, que pu
 * Al especificar la plataforma de destino en un archivo de proyecto.
 * Al aplicar <xref:System.Runtime.Versioning.TargetFrameworkAttribute> en el código fuente.
 
-Al ejecutarse en una versión más reciente que a la que se refería, .NET Framework usará un comportamiento anómalo para imitar la versión de destino anterior. En otras palabras, la aplicación se ejecutará en la versión más reciente de Framework pero actuará como si se estuviera ejecutando en la versión anterior. Muchos de los problemas de compatibilidad entre versiones de .NET Framework se mitigan a través de este peculiar modelo.
+Al ejecutarse en una versión más reciente que a la que se refería, .NET Framework usará un comportamiento anómalo para imitar la versión de destino anterior. En otras palabras, la aplicación se ejecutará en la versión más reciente de Framework pero actuará como si se estuviera ejecutando en la versión anterior. Muchos de los problemas de compatibilidad entre versiones de .NET Framework se mitigan a través de este peculiar modelo. La versión de .NET Framework a la que se destina una aplicación se determina por la versión de destino del ensamblado de entrada para el dominio de aplicación en el que se ejecuta el código. Todos los ensamblados adicionales que se cargan en ese dominio de aplicación tienen como destino esa versión de .NET Framework. Por ejemplo, en el caso de un archivo ejecutable, el marco de trabajo de destino del archivo ejecutable es el modo de compatibilidad en el que se ejecutarán todos los ensamblados de ese AppDomain.
 
 ## <a name="runtime-changes"></a>Cambios en tiempo de ejecución
 

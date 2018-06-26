@@ -3,12 +3,13 @@ title: 'Comando dotnet pack: CLI de .NET Core'
 description: El comando dotnet pack crea paquetes de NuGet para el proyecto de .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 6e6136e22c4bac201cfa0e4af321329432c04936
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 8c2569ec7598b21fe9b673176143d0e54b9eb065
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696824"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -21,16 +22,15 @@ ms.lasthandoff: 05/04/2018
 ## <a name="synopsis"></a>Sinopsis
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
+    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 ---
@@ -41,7 +41,7 @@ El comando `dotnet pack` compila el proyecto y crea paquetes de NuGet. El result
 
 Las dependencias de NuGet del proyecto empaquetado se agregan al archivo *.nuspec*, por lo que se pueden resolver adecuadamente cuando se instala el paquete. Las referencias de proyecto a proyecto no se empaquetan dentro del proyecto. Actualmente, debe disponer de un paquete por proyecto si tiene dependencias de proyecto a proyecto.
 
-De forma predeterminada, `dotnet pack` compila primero el proyecto. Si desea evitar este comportamiento, pase la opción `--no-build`. A menudo resulta útil en escenarios de compilación de integración continua (CI) donde se conoce el código que se compiló anteriormente.
+De forma predeterminada, `dotnet pack` compila primero el proyecto. Si desea evitar este comportamiento, pase la opción `--no-build`. Esta opción a menudo resulta útil en escenarios de compilación de integración continua (CI) donde se conoce el código que se compiló anteriormente.
 
 Puede proporcionar propiedades de MSBuild en el comando `dotnet pack` para el proceso de empaquetado. Para obtener más información, vea [Propiedades de metadatos de NuGet](csproj.md#nuget-metadata-properties) y la [Referencia de la línea de comandos de MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). La sección [Ejemplos](#examples) muestra cómo utilizar el modificador /p de MSBuild en un par de escenarios diferentes.
 
@@ -51,7 +51,7 @@ Puede proporcionar propiedades de MSBuild en el comando `dotnet pack` para el pr
 
 `PROJECT`
 
-El proyecto para empaquetar. O bien una ruta de acceso a un [archivo csproj](csproj.md) o a un directorio. Si se omite, se toma como predeterminado el directorio actual.
+El proyecto para empaquetar. O bien una ruta de acceso a un [archivo csproj](csproj.md) o a un directorio. Si no se especifica, se toma como predeterminado el directorio actual.
 
 ## <a name="options"></a>Opciones
 
@@ -61,7 +61,9 @@ El proyecto para empaquetar. O bien una ruta de acceso a un [archivo csproj](csp
 
 Define la configuración de compilación. El valor predeterminado es `Debug`.
 
-`--force`: fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Esto es equivalente a eliminar el archivo *project.assets.json*.
+`--force`
+
+Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*.
 
 `-h|--help`
 
@@ -77,7 +79,7 @@ Genera símbolos `nupkg`.
 
 `--no-build`
 
-No compila el proyecto antes de empaquetarlo.
+No compila el proyecto antes de empaquetarlo. También establece la marca `--no-restore` de forma implícita.
 
 `--no-dependencies`
 
@@ -85,13 +87,13 @@ Omite las referencias de proyecto a proyecto y solo restaura el proyecto raíz.
 
 `--no-restore`
 
-No realiza una restauración implícita al ejecutar el comando.
+No ejecuta una restauración implícita al ejecutar el comando.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Coloca los paquetes compilados en el directorio especificado.
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+`--runtime <RUNTIME_IDENTIFIER>`
 
 Especifica el tiempo de ejecución de destino para el que restaurar los paquetes. Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md).
 

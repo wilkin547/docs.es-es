@@ -3,12 +3,13 @@ title: 'Comando dotnet build: CLI de .NET Core'
 description: El comando dotnet build compila un proyecto y todas sus dependencias.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 4fc93e013c271fdf856f5c73affffd3880d0dbea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 6b0b7bc11b560d8632b38f1dfa4e7eb3ce6c54d2
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697136"
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -44,11 +45,11 @@ La compilación requiere el archivo *project.assets.json*, que muestra las depen
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-`dotnet build` usa MSBuild para compilar el proyecto; por lo tanto, admite las compilaciones en paralelo e incrementales. Para más información, consulte [Compilaciones incrementales](/visualstudio/msbuild/incremental-builds).
+`dotnet build` usa MSBuild para compilar el proyecto, por lo que admite las compilaciones en paralelo e incrementales. Para obtener más información, consulte [Compilaciones incrementales](/visualstudio/msbuild/incremental-builds).
 
-Además de sus opciones, el comando `dotnet build` acepta opciones de MSBuild, como `/p` para establecer propiedades o `/l` para definir un registrador. Aprenda más sobre de estas opciones en la [referencia de línea de comandos de MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). 
+Además de sus opciones, el comando `dotnet build` acepta opciones de MSBuild, como `/p` para establecer propiedades o `/l` para definir un registrador. Para obtener más información sobre estas opciones, vea la [Referencia de la línea de comandos de MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
 
-Si el proyecto es ejecutable o no viene determinado por la propiedad `<OutputType>` en el archivo del proyecto. En el siguiente ejemplo se muestra un proyecto que generará un código ejecutable:
+Si el proyecto es ejecutable o no viene determinado por la propiedad `<OutputType>` en el archivo del proyecto. En el ejemplo siguiente se muestra un proyecto en el que se genera código ejecutable:
 
 ```xml
 <PropertyGroup>
@@ -56,7 +57,7 @@ Si el proyecto es ejecutable o no viene determinado por la propiedad `<OutputTyp
 </PropertyGroup>
 ```
 
-Para generar una biblioteca, omita la propiedad `<OutputType>`. La principal diferencia en la salida compilada es que la DLL de IL para una biblioteca no contiene puntos de entrada y no se puede ejecutar. 
+Para generar una biblioteca, omita la propiedad `<OutputType>`. La principal diferencia en la salida compilada es que la DLL de IL para una biblioteca no contiene puntos de entrada y no se puede ejecutar.
 
 ## <a name="arguments"></a>Argumentos
 
@@ -78,7 +79,7 @@ Compila para un [marco de trabajo](../../standard/frameworks.md) específico. El
 
 `--force`
 
- Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Esto es equivalente a eliminar el archivo *project.assets.json*.
+Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*.
 
 `-h|--help`
 
@@ -86,15 +87,15 @@ Imprime una corta ayuda para el comando.
 
 `--no-dependencies`
 
-Omite las referencias de proyecto a proyecto (P2P) y solo compila el proyecto raíz especificado para compilar.
+Omite las referencias de proyecto a proyecto (P2P) y solo compila el proyecto raíz especificado.
 
 `--no-incremental`
 
-Marca la compilación como no segura para la compilación incremental. Esto desactiva la compilación incremental y fuerza una recompilación limpia del gráfico de dependencias del proyecto.
+Marca la compilación como no segura para la compilación incremental. Esta marca desactiva la compilación incremental y fuerza una recompilación limpia del gráfico de dependencias del proyecto.
 
 `--no-restore`
 
-No se realiza una restauración implícita durante la compilación.
+No ejecuta una restauración implícita durante la compilación.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -128,11 +129,11 @@ Imprime una corta ayuda para el comando.
 
 `--no-dependencies`
 
-Omite las referencias de proyecto a proyecto (P2P) y solo compila el proyecto raíz especificado para compilar.
+Omite las referencias de proyecto a proyecto (P2P) y solo compila el proyecto raíz especificado.
 
 `--no-incremental`
 
-Marca la compilación como no segura para la compilación incremental. Esto desactiva la compilación incremental y fuerza una recompilación limpia del gráfico de dependencias del proyecto.
+Marca la compilación como no segura para la compilación incremental. Esta marca desactiva la compilación incremental y fuerza una recompilación limpia del gráfico de dependencias del proyecto.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 

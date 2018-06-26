@@ -3,12 +3,13 @@ title: 'Comando dotnet nuget push: CLI de .NET Core'
 description: El comando dotnet nuget push inserta un paquete en el servidor y lo publica.
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 090b11646a81859eeadb5fe9d36b43721fc70a5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/01/2018
+ms.openlocfilehash: 8a64f9cdc11d03bed82a132265c3b4e1de290807
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728581"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -20,7 +21,25 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Sinopsis
 
-`dotnet nuget push [<ROOT>] [-s|--source] [-ss|--symbol-source] [-t|--timeout] [-k|--api-key] [-sk|--symbol-api-key] [-d|--disable-buffering] [-n|--no-symbols] [--force-english-output] [-h|--help]`
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
+dotnet nuget push [-h|--help]
+```
+---
 
 ## <a name="description"></a>Description
 
@@ -34,15 +53,41 @@ Especifica la ruta de acceso al archivo en la que se debe insertar el paquete.
 
 ## <a name="options"></a>Opciones
 
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+`-d|--disable-buffering`
+
+Deshabilita el almacenamiento en búfer al realizar inserciones en un servidor HTTP(S) para reducir el uso de memoria.
+
+`--force-english-output`
+
+Fuerza la ejecución de la aplicación mediante una referencia cultural en inglés invariable.
+
 `-h|--help`
 
 Imprime una corta ayuda para el comando.
+
+`-k|--api-key <API_KEY>`
+
+La clave de API para el servidor.
+
+`-n|--no-symbols`
+
+No inserta símbolos (incluso si está presente).
+
+`--no-service-endpoint`
+
+No agrega "api/v2/paquete" a la dirección URL de origen.
 
 `-s|--source <SOURCE>`
 
 Especifica la dirección URL del servidor. Esta opción es necesaria a menos que el valor de configuración `DefaultPushSource` esté establecido en el archivo de configuración de NuGet.
 
-`--symbol-source <SOURCE>`
+`-sk|--symbol-api-key <API_KEY>`
+
+La clave de API para el servidor de símbolos.
+
+`-ss|--symbol-source <SOURCE>`
 
 Especifica la dirección URL del servidor de símbolos.
 
@@ -50,33 +95,91 @@ Especifica la dirección URL del servidor de símbolos.
 
 Especifica el tiempo de espera para la inserción en un servidor en segundos. El valor predeterminado es 300 segundos (5 minutos). Si se especifica 0 (cero segundos), se aplica el valor predeterminado.
 
-`-k|--api-key <API_KEY>`
-
-La clave de API para el servidor.
-
-`--symbol-api-key <API_KEY>`
-
-La clave de API para el servidor de símbolos.
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-d|--disable-buffering`
 
-Deshabilita el almacenamiento en búfer al realizar inserciones en un servidor HTTP (S) para reducir el uso de memoria.
+Deshabilita el almacenamiento en búfer al realizar inserciones en un servidor HTTP(S) para reducir el uso de memoria.
+
+`--force-english-output`
+
+Fuerza la ejecución de la aplicación mediante una referencia cultural en inglés invariable.
+
+`-h|--help`
+
+Imprime una corta ayuda para el comando.
+
+`-k|--api-key <API_KEY>`
+
+La clave de API para el servidor.
 
 `-n|--no-symbols`
 
 No inserta símbolos (incluso si está presente).
 
+`-s|--source <SOURCE>`
+
+Especifica la dirección URL del servidor. Esta opción es necesaria a menos que el valor de configuración `DefaultPushSource` esté establecido en el archivo de configuración de NuGet.
+
+`-sk|--symbol-api-key <API_KEY>`
+
+La clave de API para el servidor de símbolos.
+
+`-ss|--symbol-source <SOURCE>`
+
+Especifica la dirección URL del servidor de símbolos.
+
+`-t|--timeout <TIMEOUT>`
+
+Especifica el tiempo de espera para la inserción en un servidor en segundos. El valor predeterminado es 300 segundos (5 minutos). Si se especifica 0 (cero segundos), se aplica el valor predeterminado.
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-d|--disable-buffering`
+
+Deshabilita el almacenamiento en búfer al realizar inserciones en un servidor HTTP(S) para reducir el uso de memoria.
+
 `--force-english-output`
 
-Fuerza que toda la salida registrada esté en inglés.
+Fuerza la ejecución de la aplicación mediante una referencia cultural en inglés invariable.
+
+`-h|--help`
+
+Imprime una corta ayuda para el comando.
+
+`-k|--api-key <API_KEY>`
+
+La clave de API para el servidor.
+
+`-n|--no-symbols`
+
+No inserta símbolos (incluso si está presente).
+
+`-s|--source <SOURCE>`
+
+Especifica la dirección URL del servidor. Esta opción es necesaria a menos que el valor de configuración `DefaultPushSource` esté establecido en el archivo de configuración de NuGet.
+
+`-sk|--symbol-api-key <API_KEY>`
+
+La clave de API para el servidor de símbolos.
+
+`-ss|--symbol-source <SOURCE>`
+
+Especifica la dirección URL del servidor de símbolos.
+
+`-t|--timeout <TIMEOUT>`
+
+Especifica el tiempo de espera para la inserción en un servidor en segundos. El valor predeterminado es 300 segundos (5 minutos). Si se especifica 0 (cero segundos), se aplica el valor predeterminado.
+
+---
 
 ## <a name="examples"></a>Ejemplos
 
-Inserta *foo.nupkg* para adoptar como predeterminado el origen de inserción, y proporciona la clave de API:
+Inserta *foo.nupkg* en el origen de inserción predeterminado, y especifica una clave de API:
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
 
-Inserta *foo.nupkg* en el origen de inserción personalizado `http://customsource`, y proporciona una clave de API:
+Inserta *foo.nupkg* en el origen de inserción personalizado `http://customsource`, y especifica una clave de API:
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
 

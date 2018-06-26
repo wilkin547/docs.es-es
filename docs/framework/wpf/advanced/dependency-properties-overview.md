@@ -1,7 +1,7 @@
 ---
-title: Información general sobre propiedades de dependencia
-description: Una propiedad que está respaldada por el sistema de propiedades WPF se conoce como una propiedad de dependencia. Esta información general describe el sistema de propiedades WPF y las capacidades de una propiedad de dependencia.
-ms.date: 03/30/2017
+title: Información general sobre las propiedades de dependencia
+description: Una propiedad respaldada por el sistema de propiedades de WPF se conoce como una propiedad de dependencia. En esta información general se describe el sistema de propiedades de WPF y las funcionalidades de una propiedad de dependencia.
+ms.date: 06/06/2018
 dev_langs:
 - csharp
 - vb
@@ -14,49 +14,50 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 196e858c52c06c96d652209e86039bfcc81a785a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 36370eb54e75df9bf2bf8eb9e073bbbee995e287
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827012"
 ---
-# <a name="dependency-properties-overview"></a>Información general sobre propiedades de dependencia
+# <a name="dependency-properties-overview"></a>Información general sobre las propiedades de dependencia
 
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un conjunto de servicios que puede usarse para ampliar la funcionalidad de una propiedad [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Colectivamente, se suele hacer referencia a estos servicios como el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Una propiedad respaldada por el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se conoce como una propiedad de dependencia. Esta información general describe el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y las funcionalidades de una propiedad de dependencia. Esto incluye cómo usar las propiedades de dependencia existentes en XAML y en el código. Esta información general también presenta aspectos especializados de las propiedades de dependencia, como los metadatos de las propiedades de dependencia y el proceso de creación de una propiedad de dependencia propia en una clase personalizada.
+Windows Presentation Foundation (WPF) proporciona un conjunto de servicios que se pueden usar para ampliar la funcionalidad de la [propiedad](../../../standard/base-types/common-type-system.md#Properties) de un tipo. Colectivamente, se suele hacer referencia a estos servicios como el sistema de propiedades de WPF. Una propiedad respaldada por el sistema de propiedades de WPF se conoce como una propiedad de dependencia. En esta información general se describe el sistema de propiedades de WPF y las funcionalidades de una propiedad de dependencia. Esto incluye cómo usar las propiedades de dependencia existentes en XAML y en el código. Esta información general también presenta aspectos especializados de las propiedades de dependencia, como los metadatos de las propiedades de dependencia y el proceso de creación de una propiedad de dependencia propia en una clase personalizada.
 
 ## <a name="prerequisites"></a>Requisitos previos
-En este tema se supone que tiene conocimientos básicos sobre programación de [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] y orientada a objetos. Para seguir los ejemplos de este tema, también debe comprender el lenguaje [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y saber cómo escribir aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para obtener más información, consulte [Tutorial: Mi primera aplicación de escritorio de WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+En este tema se supone que tiene conocimientos básicos sobre el sistema de tipos de .NET y la programación orientada a objetos. Para seguir los ejemplos de este tema, también debe comprender el lenguaje XAML y saber cómo escribir aplicaciones de WPF. Para obtener más información, vea [Tutorial: Mi primera aplicación de escritorio WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-## <a name="dependency-properties-and-clr-properties"></a>Propiedades de dependencia y las propiedades CLR
- En [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], las propiedades se suelen exponer como propiedades de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. En un nivel básico, podría interactuar directamente con estas propiedades y no llegar a saber que están implementadas como una propiedad de dependencia. Sin embargo, debería familiarizarse con todas o algunas de las características del sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], a fin de poder aprovechar estas características.
+## <a name="dependency-properties-and-clr-properties"></a>Propiedades de dependencia y propiedades CLR
+ En WPF, las propiedades se suelen exponer como [propiedades estándar](../../../standard/base-types/common-type-system.md#Properties) de .NET. En un nivel básico, podría interactuar directamente con estas propiedades y no llegar a saber que están implementadas como una propiedad de dependencia. Pero debería familiarizarse con todas o algunas de las características del sistema de propiedades de WPF, a fin de poder aprovechar estas características.
 
 El propósito de las propiedades de dependencia es proporcionar una manera de calcular el valor de una propiedad en función del valor de otras entradas. Estas otras entradas pueden incluir propiedades del sistema, tales como temas y preferencias del usuario, mecanismos de determinación de propiedades Just-In-Time como el enlace de datos y las animaciones o los guiones gráficos, plantillas de usos múltiples como recursos y estilos, o valores conocidos a través de relaciones primario-secundario con otros elementos del árbol de elementos. Además, una propiedad de dependencia se puede implementar para proporcionar una validación autocontenida, valores predeterminados, devoluciones de llamada que controlen los cambios en otras propiedades y un sistema que pueda forzar los valores de propiedad de acuerdo con la información de tiempo de ejecución en potencia. Las clases derivadas también pueden cambiar algunas características concretas de una propiedad existente mediante la invalidación de los metadatos de la propiedad de dependencia, en lugar de invalidar la implementación real de las propiedades existentes o de crear nuevas propiedades.
 
-En la referencia del SDK, puede identificar qué propiedad es una propiedad de dependencia por la presencia de la sección de información de la propiedad de dependencia en la página de referencia administrada de esa propiedad. La sección de información de la propiedad de dependencia incluye un vínculo a la <xref:System.Windows.DependencyProperty> identificador de campo para esa propiedad de dependencia y también incluye una lista de las opciones de metadatos que se establecen para esa propiedad, información de invalidación por clases y otros detalles.
+En la referencia del SDK, puede identificar qué propiedad es una propiedad de dependencia por la presencia de la sección de información de la propiedad de dependencia en la página de referencia administrada de esa propiedad. En la sección de información de las propiedades de dependencia se incluye un vínculo al campo de identificador <xref:System.Windows.DependencyProperty> de esa propiedad de dependencia, así como una lista de las opciones de metadatos establecidas para esa propiedad, información de invalidación por clases y otros detalles.
 
-## <a name="dependency-properties-back-clr-properties"></a>Propiedades CLR de respaldo de propiedades de dependencia
-Las propiedades de dependencia y el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] extienden la funcionalidad de las propiedades al proporcionar un tipo que respalda una propiedad, como implementación alternativa al patrón estándar de respaldar la propiedad con un campo privado. El nombre de este tipo es <xref:System.Windows.DependencyProperty>. El otro tipo important que define la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de propiedades es <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> define la clase base que se puede registrar y poseer una propiedad de dependencia.
+## <a name="dependency-properties-back-clr-properties"></a>Las propiedades de dependencia respaldan las propiedades CLR
+Las propiedades de dependencia y el sistema de propiedades de WPF extienden la funcionalidad de las propiedades al proporcionar un tipo que respalda una propiedad, como una implementación alternativa al patrón estándar de respaldar la propiedad con un campo privado. El nombre de este tipo es <xref:System.Windows.DependencyProperty>. El otro tipo importante que define el sistema de propiedades de WPF es <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> define la clase base que puede registrar y poseer una propiedad de dependencia.
 
-A continuación se muestra un resumen de la terminología que se usa en esta documentación de [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] para explicar las propiedades de dependencia:
+A continuación se enumera la terminología que se usa con las propiedades de dependencia:
 
-- **Propiedad de dependencia:** una propiedad que está respaldada por un <xref:System.Windows.DependencyProperty>.
+- **Propiedad de dependencia:** una propiedad que está respaldada por una <xref:System.Windows.DependencyProperty>.
 
-- **Identificador de la propiedad de dependencia:** A <xref:System.Windows.DependencyProperty> instancia, que se obtiene como un valor devuelto al registrar una propiedad de dependencia y, a continuación, se almacena como un miembro estático de una clase. Este identificador se usa como un parámetro para muchas de las [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] que interactúan con el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+- **Identificador de la propiedad de dependencia:** una instancia de <xref:System.Windows.DependencyProperty>, que se obtiene como un valor devuelto al registrar una propiedad de dependencia y, después, se almacena como un miembro estático de una clase. Este identificador se usa como un parámetro para muchas de las API que interactúan con el sistema de propiedades de WPF.
 
-- **"Contenedor" de CLR:** implementaciones de get y set reales de la propiedad. Estas implementaciones incorporan el identificador de la propiedad de dependencia mediante el uso en el <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A> llamadas, lo que proporciona el respaldo para la propiedad mediante el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de propiedades.
+- **"Contenedor" de CLR:** implementaciones de get y set reales de la propiedad. Estas implementaciones incorporan el identificador de la propiedad de dependencia usándolo en las llamadas a <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A>, proporcionando así el respaldo para la propiedad que usa el sistema de propiedades WPF.
 
-En el ejemplo siguiente se define la `IsSpinning` propiedad de dependencia y se muestra la relación de la <xref:System.Windows.DependencyProperty> identificador a la propiedad que realiza copia de seguridad.
+En el ejemplo siguiente se define la propiedad de dependencia `IsSpinning` y se muestra la relación del identificador <xref:System.Windows.DependencyProperty> con la propiedad que respalda.
 
 [!code-csharp[PropertiesOvwSupport#DPFormBasic](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#dpformbasic)]
 [!code-vb[PropertiesOvwSupport#DPFormBasic](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#dpformbasic)]  
   
-La convención de nomenclatura de la propiedad y su copia de seguridad <xref:System.Windows.DependencyProperty> campo es importante. El nombre del campo siempre es el nombre de la propiedad, con el sufijo `Property` anexado. Para obtener más información acerca de esta convención y las razones para usarla, consulte [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+La convención de nomenclatura de la propiedad y su campo de respaldo <xref:System.Windows.DependencyProperty> es importante. El nombre del campo siempre es el nombre de la propiedad, con el sufijo `Property` anexado. Para obtener más información acerca de esta convención y las razones para usarla, consulte [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
 
-## <a name="setting-property-values"></a>Establecer valores de propiedad
+## <a name="setting-property-values"></a>Establecimiento de valores de propiedad
 Puede establecer propiedades en el código o en XAML.
 
-### <a name="setting-property-values-in-xaml"></a>Establecer valores de propiedad en XAML 
-El siguiente ejemplo de XAML especifica el color de fondo de un botón como rojo. Este ejemplo muestra un caso donde el valor de cadena sencilla para un atributo XAML es convertir tipo por el analizador de XAML de WPF en un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tipo (un <xref:System.Windows.Media.Color>, por medio de un <xref:System.Windows.Media.SolidColorBrush>) en el código generado.
+### <a name="setting-property-values-in-xaml"></a>Establecimiento de valores de propiedad en XAML 
+El siguiente ejemplo de XAML especifica el color de fondo de un botón como rojo. En este ejemplo se muestra un caso donde el analizador de XAML de WPF convirtió el tipo del valor de cadena simple de un atributo XAML en un tipo WPF (<xref:System.Windows.Media.Color>, por medio de <xref:System.Windows.Media.SolidColorBrush>) en el código generado.
 
 [!code-xaml[PropertiesOvwSupport#MostBasicProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#mostbasicproperty)]
 
@@ -66,7 +67,7 @@ Como ejemplo de sintaxis sin atributos, en el ejemplo de XAML siguiente se muest
 
 [!code-xaml[PropertiesOvwSupport#PESyntaxProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]
 
-### <a name="setting-properties-in-code"></a>Establecer las propiedades en código
+### <a name="setting-properties-in-code"></a>Establecimiento de propiedades en el código
  Establecer valores de propiedad de dependencia en el código solo suele requerir una llamada a la implementación establecida que expone el "contenedor" de [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)].
 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
@@ -77,12 +78,12 @@ Para obtener un valor de propiedad también se requiere esencialmente una llamad
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-También puede llamar el sistema de propiedades [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A> directamente. Generalmente, no es necesario si usa las propiedades existentes (los contenedores son más prácticos y ofrecen una mejor exposición de la propiedad para las herramientas de desarrollo), pero llamar a [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] directamente es adecuado en determinados escenarios.
+También se puede llamar directamente a las [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] de sistema de propiedades <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A>. Generalmente, no es necesario si usa las propiedades existentes (los contenedores son más prácticos y ofrecen una mejor exposición de la propiedad para las herramientas de desarrollo), pero llamar a [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] directamente es adecuado en determinados escenarios.
 
 Las propiedades también se pueden establecer en XAML y se puede acceder a ellas más adelante en el código a través del código subyacente. Para obtener información detallada, vea [Código subyacente y XAML en WPF](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).
 
 ## <a name="property-functionality-provided-by-a-dependency-property"></a>Funcionalidad de propiedad proporcionada por una propiedad de dependencia
-Una propiedad de dependencia proporciona una funcionalidad que amplía la funcionalidad de una propiedad, al contrario que una propiedad respaldada por un campo. A menudo, estas funcionalidades representan o admiten una característica del conjunto de características general de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:
+Una propiedad de dependencia proporciona una funcionalidad que amplía la funcionalidad de una propiedad, al contrario que una propiedad respaldada por un campo. A menudo, esta funcionalidad representa o admite una de las características específicas siguientes:
 
 - [Recursos](#resources)
 
@@ -99,7 +100,7 @@ Una propiedad de dependencia proporciona una funcionalidad que amplía la funcio
 - [Integración de WPF Designer](#wpf-designer-integration)
 
 ### <a name="resources"></a>Recursos
-Un valor de propiedad de dependencia se puede establecer mediante una referencia a un recurso. Los recursos se especifican normalmente como el valor de propiedad `Resources` de un elemento de raíz de la página o de la aplicación (estas ubicaciones permiten un acceso más cómodo al recurso). En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Media.SolidColorBrush> recursos.
+Un valor de propiedad de dependencia se puede establecer mediante una referencia a un recurso. Los recursos se especifican normalmente como el valor de propiedad `Resources` de un elemento de raíz de la página o de la aplicación (estas ubicaciones permiten un acceso más cómodo al recurso). En el ejemplo siguiente se muestra cómo definir un recurso <xref:System.Windows.Media.SolidColorBrush>.
 
 [!code-xaml[PropertiesOvwSupport#ResourcesResource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesresource)]
 
@@ -107,27 +108,27 @@ Una vez que el recurso está definido, puede hacer referencia al recurso y usarl
 
 [!code-xaml[PropertiesOvwSupport#ResourcesReference](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesreference)]
 
-Se hace referencia a este recurso concreto como una [Extensión de marcado DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) (en XAML de WPF, puede usar una referencia a recursos estáticos o dinámicos). Para usar una referencia a recursos dinámicos, debe estar estableciendo una propiedad de dependencia, que es específicamente el uso de referencias a recursos dinámicos que permite el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para obtener más información, consulte [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).
+Se hace referencia a este recurso concreto como una [Extensión de marcado DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) (en XAML de WPF, puede usar una referencia a recursos estáticos o dinámicos). Para usar una referencia a recursos dinámicos, se debe establecer una propiedad de dependencia, que es específicamente el uso de referencias a recursos dinámicos que permite el sistema de propiedades de WPF. Para obtener más información, consulte [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).
 
 > [!NOTE]
 > Los recursos se tratan como un valor local, lo que significa que si establece otro valor local, eliminará la referencia a los recursos. Para obtener más información, consulte [Prioridad de los valores de propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).
 
 ### <a name="data-binding"></a>Enlace de datos
-Una propiedad de dependencia puede hacer referencia a un valor mediante el enlace de datos. Enlace de datos funciona a través de una sintaxis de extensión de marcado concreta en XAML, o la <xref:System.Windows.Data.Binding> objeto en el código. Con el enlace de datos, la determinación del valor de propiedad final se aplaza hasta el tiempo de ejecución, momento en el que se obtiene el valor de un origen de datos.
+Una propiedad de dependencia puede hacer referencia a un valor mediante el enlace de datos. El enlace de datos funciona mediante una sintaxis de extensión de marcado específica en XAML, o bien mediante el objeto <xref:System.Windows.Data.Binding> en el código. Con el enlace de datos, la determinación del valor de propiedad final se aplaza hasta el tiempo de ejecución, momento en el que se obtiene el valor de un origen de datos.
 
-El ejemplo siguiente se establece la <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad para un <xref:System.Windows.Controls.Button>, utilizando un enlace declarado en XAML. El enlace usa un contexto de datos heredado y un <xref:System.Windows.Data.XmlDataProvider> (no se muestra) el origen de datos. El propio enlace especifica la propiedad de origen deseado por <xref:System.Windows.Data.Binding.XPath%2A> del origen de datos.
+En el ejemplo siguiente se establece la propiedad <xref:System.Windows.Controls.ContentControl.Content%2A> para un <xref:System.Windows.Controls.Button>, mediante un enlace declarado en XAML. El enlace usa un contexto de datos heredado y un origen de datos <xref:System.Windows.Data.XmlDataProvider> (no se muestra). El propio enlace especifica la propiedad de origen deseada mediante <xref:System.Windows.Data.Binding.XPath%2A> en el origen de datos.
 
 [!code-xaml[PropertiesOvwSupport#BasicInlineBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#basicinlinebinding)]
 
 > [!NOTE]
 > Los enlaces se tratan como un valor local, lo que significa que si establece otro valor local, eliminará el enlace. Para obtener más información, consulte [Prioridad de los valores de propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).
 
-Propiedades de dependencia, o la <xref:System.Windows.DependencyObject> de clases, no de forma nativa no admiten <xref:System.ComponentModel.INotifyPropertyChanged> para fines de generar notificaciones de cambios en <xref:System.Windows.DependencyObject> valor de propiedad para las operaciones de enlace de datos de origen. Para obtener más información acerca de cómo crear propiedades para su uso en un enlace de datos capaz de notificar los cambios en un destino de enlace de datos, consulte [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md).
+Las propiedades de dependencia, o bien la clase <xref:System.Windows.DependencyObject>, no admiten de forma nativa <xref:System.ComponentModel.INotifyPropertyChanged> para fines de generación de notificaciones de cambios en el valor de propiedad de origen <xref:System.Windows.DependencyObject> para las operaciones de enlace de datos. Para obtener más información acerca de cómo crear propiedades para su uso en un enlace de datos capaz de notificar los cambios en un destino de enlace de datos, consulte [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md).
 
 ### <a name="styles"></a>Estilos
 Los estilos y las plantillas son dos de los principales escenarios que invitan a usar las propiedades de dependencia. Los estilos son particularmente útiles para establecer las propiedades que definen la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] de la aplicación. Los estilos se definen normalmente como recursos en XAML. Los estilos interactúan con el sistema de propiedades porque suelen contener "establecedores" para determinadas propiedades, así como "desencadenadores" que cambian un valor de propiedad según el valor en tiempo real de otra propiedad.
 
-En el ejemplo siguiente se crea un estilo muy simple (que se definiría dentro de un <xref:System.Windows.FrameworkElement.Resources%2A> diccionario, no se muestra), a continuación, aplica ese estilo directamente a la <xref:System.Windows.FrameworkElement.Style%2A> propiedad para un <xref:System.Windows.Controls.Button>. El establecedor dentro de los conjuntos de estilo el <xref:System.Windows.Controls.Control.Background%2A> propiedad para un estilo <xref:System.Windows.Controls.Button> a verde.
+En el ejemplo siguiente se crea un estilo muy simple (que se definiría dentro de un diccionario <xref:System.Windows.FrameworkElement.Resources%2A>, que no se muestra), y después se aplica ese estilo directamente a la propiedad <xref:System.Windows.FrameworkElement.Style%2A> de un <xref:System.Windows.Controls.Button>. El establecedor dentro del estilo establece la propiedad <xref:System.Windows.Controls.Control.Background%2A> de un <xref:System.Windows.Controls.Button> con estilo en el color verde.
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyleDef](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]
 
@@ -138,41 +139,41 @@ Para obtener más información, consulte [Aplicar estilos y plantillas](../../..
 ### <a name="animations"></a>Animaciones
 Las propiedades de dependencia se pueden animar. Cuando una animación está aplicada y en ejecución, el valor animado funciona con una precedencia más alta que cualquier otro valor (por ejemplo, un valor local) que tenga la propiedad.
 
-En el ejemplo siguiente se anima la <xref:System.Windows.Controls.Control.Background%2A> en un <xref:System.Windows.Controls.Button> propiedad (técnicamente, la <xref:System.Windows.Controls.Control.Background%2A> se anima utilizando la sintaxis de elemento de propiedad para especificar un valor en blanco <xref:System.Windows.Media.SolidColorBrush> como el <xref:System.Windows.Controls.Control.Background%2A>, la <xref:System.Windows.Media.SolidColorBrush.Color%2A> propiedad de ese <xref:System.Windows.Media.SolidColorBrush> es la propiedad que se anima directamente).
+En el ejemplo siguiente se anima el atributo <xref:System.Windows.Controls.Control.Background%2A> de una propiedad <xref:System.Windows.Controls.Button> (técnicamente, se anima <xref:System.Windows.Controls.Control.Background%2A> mediante la sintaxis de elemento de propiedad para especificar un <xref:System.Windows.Media.SolidColorBrush> en blanco para <xref:System.Windows.Controls.Control.Background%2A>, y después la propiedad <xref:System.Windows.Media.SolidColorBrush.Color%2A> de ese <xref:System.Windows.Media.SolidColorBrush> es la que se anima directamente).
 
 [!code-xaml[PropertiesOvwSupport#MiniAnimate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#minianimate)]
 
 Para obtener más información sobre la animación de propiedades, consulte [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) e [Información general sobre objetos Storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).
 
 ### <a name="metadata-overrides"></a>Invalidaciones de metadatos
-Puede cambiar ciertos comportamientos de una propiedad de dependencia mediante la invalidación de los metadatos de la propiedad cuando se deriva de la clase que originalmente registra la propiedad de dependencia. La invalidación de metadatos se basa en el <xref:System.Windows.DependencyProperty> identificador. Para invalidar los metadatos no es necesario volver a implementar la propiedad. El sistema de propiedades controla de forma nativa el cambio en los metadatos; cada clase puede contener metadatos individuales de todas las propiedades que se heredan de las clases base, por tipo.
+Puede cambiar ciertos comportamientos de una propiedad de dependencia mediante la invalidación de los metadatos de la propiedad cuando se deriva de la clase que originalmente registra la propiedad de dependencia. La invalidación de metadatos se basa en el identificador <xref:System.Windows.DependencyProperty>. Para invalidar los metadatos no es necesario volver a implementar la propiedad. El sistema de propiedades controla de forma nativa el cambio en los metadatos; cada clase puede contener metadatos individuales de todas las propiedades que se heredan de las clases base, por tipo.
 
-En el ejemplo siguiente se invalida metadatos para una propiedad de dependencia <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>. La invalidación de los metadatos de esta propiedad de dependencia concreta forma parte de un patrón de implementación que crea controles que pueden usar estilos predeterminados de temas.
+En el ejemplo siguiente se invalidan los metadatos para una propiedad de dependencia <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>. La invalidación de los metadatos de esta propiedad de dependencia concreta forma parte de un patrón de implementación que crea controles que pueden usar estilos predeterminados de temas.
 
 [!code-csharp[PropertiesOvwSupport#OverrideMetadata](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#overridemetadata)]
 [!code-vb[PropertiesOvwSupport#OverrideMetadata](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#overridemetadata)]
 
 Para obtener más información sobre cómo invalidar u obtener los metadatos de las propiedades, consulte [Metadatos de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).
 
-### <a name="property-value-inheritance"></a>Herencia del valor de propiedad
+### <a name="property-value-inheritance"></a>Herencia de valores de propiedad
 Un elemento puede heredar el valor de una propiedad de dependencia de su elemento primario en el árbol de objetos.
 
 > [!NOTE]
 > El comportamiento de la herencia de valores de propiedad no está habilitado globalmente para todas las propiedades de dependencia, porque el tiempo de cálculo de la herencia afecta de algún modo al rendimiento. La herencia de valores de propiedad suele habilitarse normalmente solo para las propiedades donde un escenario determinado sugiere que dicha herencia es adecuada. Para determinar si una propiedad de dependencia se hereda, puede consultar la sección de **información sobre las propiedades de dependencia** correspondiente a esa propiedad de dependencia en la referencia del SDK.
 
-En el ejemplo siguiente se muestra un enlace y establece el <xref:System.Windows.FrameworkElement.DataContext%2A> propiedad que especifica el origen del enlace, que no se muestra en el ejemplo de enlace anterior. No es necesario especificar el origen de los enlaces subsiguientes en objetos secundarios, pueden utilizar el valor heredado de <xref:System.Windows.FrameworkElement.DataContext%2A> en el elemento primario <xref:System.Windows.Controls.StackPanel> objeto. (O bien, un objeto secundario en su lugar, puede especificar directamente su propio <xref:System.Windows.FrameworkElement.DataContext%2A> o un <xref:System.Windows.Data.Binding.Source%2A> en el <xref:System.Windows.Data.Binding>y no use deliberadamente el valor heredado para el contexto de datos de sus enlaces.)
+En el ejemplo siguiente se muestra un enlace y se establece la propiedad <xref:System.Windows.FrameworkElement.DataContext%2A> que especifica el origen del enlace, que no se mostró en el ejemplo del enlace anterior. No es necesario que los enlaces siguientes en los objetos secundarios especifiquen el origen; pueden usar el valor heredado de <xref:System.Windows.FrameworkElement.DataContext%2A> en el objeto <xref:System.Windows.Controls.StackPanel> primario. (Como alternativa, un objeto secundario podría especificar directamente su propio <xref:System.Windows.FrameworkElement.DataContext%2A> o un <xref:System.Windows.Data.Binding.Source%2A> en <xref:System.Windows.Data.Binding>, y no usar deliberadamente el valor heredado para el contexto de datos de sus enlaces).
 
 [!code-xaml[PropertiesOvwSupport#InheritanceContext](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#inheritancecontext)]
 
 Para más información, vea [Herencia de valores de propiedad](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).
 
-### <a name="wpf-designer-integration"></a>Integración de WPF designer
+### <a name="wpf-designer-integration"></a>Integración de WPF Designer
 Un control personalizado con propiedades que se implementan como propiedades de dependencia recibirá soporte técnico adecuado de [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]. Un ejemplo es la capacidad de editar las propiedades de dependencia directas y adjuntas con la ventana **Propiedades**. Para obtener más información, consulte [Información general sobre la creación de controles](../../../../docs/framework/wpf/controls/control-authoring-overview.md).
 
-## <a name="dependency-property-value-precedence"></a>Prioridad de valores de propiedad de dependencia
-Cuando se obtiene el valor de una propiedad de dependencia, se está obteniendo potencialmente un valor establecido en esa propiedad mediante cualquiera de las otras entradas basadas en propiedades que se incluyen en el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. La precedencia de los valores de propiedad de dependencia existe para que distintos escenarios sobre cómo las propiedades obtienen sus valores puedan interactuar de forma predecible.
+## <a name="dependency-property-value-precedence"></a>Prioridad de los valores de propiedades de dependencia
+Cuando se obtiene el valor de una propiedad de dependencia, potencialmente se está obteniendo un valor establecido en esa propiedad mediante cualquiera de las otras entradas basadas en propiedades que se incluyen en el sistema de propiedades de WPF. La precedencia de los valores de propiedad de dependencia existe para que distintos escenarios sobre cómo las propiedades obtienen sus valores puedan interactuar de forma predecible.
 
-Considere el ejemplo siguiente. El ejemplo incluye un estilo que se aplica a todos los botones y sus <xref:System.Windows.Controls.Control.Background%2A> propiedades, sino que también especifique un botón con establecida localmente <xref:System.Windows.Controls.Control.Background%2A> valor.
+Considere el ejemplo siguiente. El ejemplo incluye un estilo que se aplica a todos los botones y sus propiedades <xref:System.Windows.Controls.Control.Background%2A>, pero después también especifica un botón con un valor <xref:System.Windows.Controls.Control.Background%2A> establecido localmente.
 
 > [!NOTE]
 > La documentación del SDK usa los términos "valor local" o "valor establecido localmente" ocasionalmente al hablar de las propiedades de dependencia. Un valor establecido localmente es un valor de propiedad que se establece directamente en una instancia de objeto en el código, o bien como un atributo en un elemento en XAML.  
@@ -181,15 +182,15 @@ En principio, para el primer botón, la propiedad se establece dos veces, pero s
 
 [!code-xaml[PropertiesOvwSupport#MiniPrecedence](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
 
-### <a name="why-does-dependency-property-precedence-exist"></a>¿Por qué existe la prioridad de la propiedad de dependencia?
+### <a name="why-does-dependency-property-precedence-exist"></a>¿Por qué existe la precedencia de las propiedades de dependencia?
 Por lo general, no querrá que los estilos siempre apliquen ni oculten siquiera un valor establecido localmente de un elemento individual (de lo contrario, sería muy difícil usar estilos o elementos en general). Por lo tanto, los valores que proceden de estilos funcionan con una precedencia más baja que un valor establecido localmente. Para obtener una lista más completa de las propiedades de dependencia y conocer la procedencia del valor efectivo de una propiedad de dependencia, consulte [Prioridad de los valores de propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).
 
 > [!NOTE]
-> Existen varias propiedades definidas en elementos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que no son propiedades de dependencia. En general, las propiedades se implementaban como propiedades de dependencia solo cuando era necesario admitir al menos uno de los escenarios que habilitaba el sistema de propiedades: enlace de datos, estilos, animación, compatibilidad con los valores predeterminados, herencia, propiedades adjuntas o invalidación.
+> Existen varias propiedades definidas en elementos de WPF que no son propiedades de dependencia. En general, las propiedades se implementaban como propiedades de dependencia solo cuando era necesario admitir al menos uno de los escenarios que habilitaba el sistema de propiedades: enlace de datos, estilos, animación, compatibilidad con los valores predeterminados, herencia, propiedades adjuntas o invalidación.
 
-## <a name="learning-more-about-dependency-properties"></a>Obtener más información acerca de las propiedades de dependencia  
+## <a name="learning-more-about-dependency-properties"></a>Más información sobre las propiedades de dependencia  
 
-- Una propiedad adjunta es un tipo de propiedad que admite una sintaxis especializada en XAML. Una propiedad adjunta no suele tener una correspondencia de 1:1 con una propiedad [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] y no es necesariamente una propiedad de dependencia. El propósito típico de una propiedad adjunta es permitir que los elementos secundarios comuniquen valores de propiedad a un elemento primario, aunque el elemento primario y el elemento secundario no posean a la vez esa propiedad como parte de las listas de miembros de clase. Un escenario principal es que los elementos secundarios que informen al elemento primario de cómo se debe mostrar en [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]; para obtener un ejemplo, vea <xref:System.Windows.Controls.DockPanel.Dock%2A> o <xref:System.Windows.Controls.Canvas.Left%2A>. Para obtener información detallada, vea [Información general sobre propiedades asociadas](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).
+- Una propiedad adjunta es un tipo de propiedad que admite una sintaxis especializada en XAML. Una propiedad adjunta no suele tener una correspondencia de 1:1 con una propiedad [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] y no es necesariamente una propiedad de dependencia. El propósito típico de una propiedad adjunta es permitir que los elementos secundarios comuniquen valores de propiedad a un elemento primario, aunque el elemento primario y el elemento secundario no posean a la vez esa propiedad como parte de las listas de miembros de clase. Un escenario principal es habilitar los elementos secundarios para que informen al elemento primario de cómo se deben mostrar en [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]; para obtener un ejemplo, vea <xref:System.Windows.Controls.DockPanel.Dock%2A> o <xref:System.Windows.Controls.Canvas.Left%2A>. Para obtener información detallada, vea [Información general sobre propiedades asociadas](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).
 
 - Los desarrolladores de componentes o de aplicaciones pueden querer crear su propia propiedad de dependencia para habilitar funcionalidades, tales como el enlace de datos o la compatibilidad con estilos, o para admitir la invalidación y la coerción de valores. Para obtener más información, consulte [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).
 

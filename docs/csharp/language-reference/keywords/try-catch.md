@@ -10,11 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: f917d662366dc8ff540cdee6222199fe8f5606c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6dfdf14b518582388e655ec5616904928dfd8b5
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696444"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Referencia de C#)
 La instrucción try-catch consta de un bloque `try` seguido de una o más cláusulas `catch` que especifican controladores para diferentes excepciones.  
@@ -42,7 +43,7 @@ catch (InvalidCastException e)
   
  Es posible utilizar más de una cláusula `catch` específica en la misma instrucción try-catch. En este caso, el orden de las cláusulas  `catch` es importante, puesto que las cláusulas `catch` se examinan por orden. Detectar las excepciones más específicas antes que las menos específicas. El compilador genera un error si ordena los bloques de detección para que un bloque posterior nunca pueda alcanzarse.  
   
- La utilización de los argumentos `catch` es una manera de filtrar las excepciones que desea controlar.  También puede utilizar una expresión de predicado que examine aún más la excepción para decidir si controlarla.  Si la expresión de predicado devuelve false, prosigue la búsqueda de un controlador.  
+ La utilización de los argumentos `catch` es una manera de filtrar las excepciones que desea controlar.  También se puede usar una expresión de filtro que examine aún más la excepción para decidir si controlarla.  Si la expresión de filtro devuelve false, prosigue la búsqueda de un controlador.  
   
 ```csharp  
 catch (ArgumentException e) when (e.ParamName == "…")  
@@ -50,7 +51,7 @@ catch (ArgumentException e) when (e.ParamName == "…")
 }  
 ```  
   
- Los filtros de excepción son preferibles para detectar y volver a producir (se explica a continuación) porque los filtros dejan la pila intacta.  Si un controlador posterior vuelca la pila, puede ver la procedencia original de la excepción, más que solo la ubicación en la que se volvió a producir.  Un uso común de las expresiones de filtro de excepciones es el registro.  Puede crear una función de predicado que siempre devuelva false y que también resulte en un registro o puede registrar excepciones a medida que se produzcan sin tener que controlarlas y volver a producirlas.  
+ Los filtros de excepción son preferibles para detectar y volver a producir (se explica a continuación) porque los filtros dejan la pila intacta.  Si un controlador posterior vuelca la pila, puede ver la procedencia original de la excepción, más que solo la ubicación en la que se volvió a producir.  Un uso común de las expresiones de filtro de excepciones es el registro.  Puede crear una función de filtro que siempre devuelva false y que también resulte en un registro, o bien puede registrar excepciones a medida que se produzcan sin tener que controlarlas y volver a generarlas.  
   
  Se puede usar una instrucción [throw](../../../csharp/language-reference/keywords/throw.md) en un bloque `catch` para volver a iniciar la excepción detectada por la instrucción `catch`. En el ejemplo siguiente se extrae información de origen de una excepción <xref:System.IO.IOException> y, a continuación, se produce la excepción al método principal.  
   
@@ -92,9 +93,19 @@ catch (InvalidCastException e)
     {  
         // Take some action.  
     }  
- }  
+}  
 ```  
-  
+
+> [!NOTE]
+> También es posible usar un filtro de excepción para obtener un resultado similar de una forma generalmente más limpia (además de no modificar la pila, tal y como se explicó anteriormente en este documento). El ejemplo siguiente tiene un comportamiento similar para los autores de llamada que el ejemplo anterior. La función inicia la excepción `InvalidCastException` de vuelta al autor de la llamada cuando `e.Data` es `null`.
+> 
+> ```csharp
+> catch (InvalidCastException e) when (e.Data != null)   
+> {  
+>     // Take some action.  
+> }
+> ```   
+
  Desde dentro de un bloque `try`, solo deben inicializarse las variables que se declaran en el mismo. De lo contrario, puede ocurrir una excepción antes de que se complete la ejecución del bloque. Por ejemplo, en el siguiente ejemplo de código, la variable `n` se inicializa dentro del bloque `try`. Un intento de utilizar esta variable fuera del bloque `try` en la instrucción `Write(n)` generará un error del compilador.  
   
 ```csharp  

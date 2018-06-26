@@ -3,12 +3,13 @@ title: 'Comando dotnet nuget locals: CLI de .NET Core'
 description: El comando dotnet nuget locals borra o muestra los recursos de NuGet locales, como la caché de solicitudes http, la caché temporal o la carpeta de paquetes global de toda la máquina.
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: d0c900a06b00fd5e6b7ad66527c6582483222c45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 799acb92d6ab7439e15c23c9f0b7b572c966adda
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696876"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -20,7 +21,10 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Sinopsis
 
-`dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output] [-h|--help]`
+```
+dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
+dotnet nuget locals [-h|--help]
+```
 
 ## <a name="description"></a>Description
 
@@ -30,14 +34,18 @@ El comando `dotnet nuget locals` borra o enumera los recursos locales de NuGet e
 
 `CACHE_LOCATION`
 
-Uno de los siguientes valores:
+La ubicación de caché que se va a mostrar o borrar. Acepta uno de los valores siguientes:
 
 * `all`: indica que la operación especificada se debe aplicar a todos los tipos de caché: caché de solicitudes http, caché de paquetes globales y caché temporal.
-* `http-cache`: indica que la operación especificada se aplica solo a la caché de solicitudes http. Las otra ubicaciones de caché no se ven afectadas.
-* `global-packages`: indica que la operación especificada se aplica solo a la caché de paquetes globales. Las otra ubicaciones de caché no se ven afectadas.
-* `temp`: indica que la operación especificada se aplica solo a la caché temporal. Las otra ubicaciones de caché no se ven afectadas.
+* `http-cache`: indica que la operación especificada se aplica solo a la caché de solicitudes http. Las otras ubicaciones de caché no se ven afectadas.
+* `global-packages`: indica que la operación especificada se aplica solo a la caché de paquetes globales. Las otras ubicaciones de caché no se ven afectadas.
+* `temp`: indica que la operación especificada se aplica solo a la caché temporal. Las otras ubicaciones de caché no se ven afectadas.
 
 ## <a name="options"></a>Opciones
+
+`--force-english-output`
+
+Fuerza la ejecución de la aplicación mediante una referencia cultural en inglés invariable.
 
 `-h|--help`
 
@@ -45,15 +53,11 @@ Imprime una corta ayuda para el comando.
 
 `-c|--clear`
 
-La opción de borrado realiza una operación de borrado sobre el tipo de caché especificado. El contenido de los directorios de caché se elimina de forma recursiva. El usuario o grupo de ejecución deben tener permiso para los archivos en los directorios de la caché. En caso contrario, se muestra un error para indicar que los archivos o carpetas no se han borrado.
+La opción de borrado ejecuta una operación de borrado sobre el tipo de caché especificado. El contenido de los directorios de caché se elimina de forma recursiva. El usuario o grupo de ejecución deben tener permiso para los archivos en los directorios de la caché. En caso contrario, se muestra un error para indicar los archivos o las carpetas que no se han borrado.
 
 `-l|--list`
 
-La opción de lista se usa para mostrar la ubicación del tipo de caché especificado. 
-
-`--force-english-output`
-
-Fuerza la salida de la línea de comandos en inglés.
+La opción de lista se usa para mostrar la ubicación del tipo de caché especificado.
 
 ## <a name="examples"></a>Ejemplos
 
