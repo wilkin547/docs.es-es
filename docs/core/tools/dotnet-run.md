@@ -3,12 +3,13 @@ title: 'Comando dotnet run: CLI de .NET Core'
 description: El comando dotnet run proporciona una opción conveniente para ejecutar la aplicación desde el código fuente.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: b45d6772cabd6be90ea8e8b5da57c16692b20322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 82c6e44e52aa6af7044edf72fd6e57b7614a70f3
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696317"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -20,20 +21,23 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Sinopsis
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 ```
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
 ```
 dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-
 ---
 
 ## <a name="description"></a>Description
@@ -46,7 +50,7 @@ Si el proyecto especifica varios marcos, al ejecutar `dotnet run` se produce un 
 
 El comando `dotnet run` debe usarse en el contexto de proyectos, no de ensamblados compilados. Si, por el contrario, está intentando ejecutar una DLL de aplicación dependiente del marco de trabajo, debe usar [dotnet](dotnet.md) sin un comando. Por ejemplo, para ejecutar `myapp.dll`, use:
 
-```
+```console
 dotnet myapp.dll
 ```
 
@@ -58,11 +62,11 @@ Para ejecutar la aplicación, el comando `dotnet run` resuelve las dependencias 
 
 ## <a name="options"></a>Opciones
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--`
 
-Delimita los argumentos a `dotnet run` a partir de argumentos de la aplicación que se va a ejecutar. Todos los argumentos después de este se pasan a la aplicación que se ejecuta.
+Delimita los argumentos a `dotnet run` a partir de argumentos de la aplicación que se va a ejecutar. Todos los argumentos después de este delimitador se pasan a la aplicación que se ejecuta.
 
 `-c|--configuration {Debug|Release}`
 
@@ -74,7 +78,7 @@ Compila y ejecuta la aplicación con el [marco](../../standard/frameworks.md) es
 
 `--force`
 
-Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Equivale a eliminar *project.assets.json*.
+Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*.
 
 `-h|--help`
 
@@ -82,11 +86,11 @@ Imprime una corta ayuda para el comando.
 
 `--launch-profile <NAME>`
 
-El nombre del perfil de inicio (si lo hay) que se usará al iniciar la aplicación. Los perfiles de inicio se definen en el archivo *launchSettings.json* y se suelen denominar simplemente `Development`, `Staging` y `Production`. Para obtener más información, consulte [Working with multiple environments](/aspnet/core/fundamentals/environments) (Trabajo con varios entornos).
+El nombre del perfil de inicio (si lo hay) que se usará al iniciar la aplicación. Los perfiles de inicio se definen en el archivo *launchSettings.json* y se suelen denominar `Development`, `Staging` y `Production`. Para obtener más información, consulte [Working with multiple environments](/aspnet/core/fundamentals/environments) (Trabajo con varios entornos).
 
 `--no-build`
 
-No compila el proyecto antes de ejecutarlo.
+No compila el proyecto antes de ejecutarlo. También establece la marca `--no-restore` de forma implícita.
 
 `--no-dependencies`
 
@@ -98,7 +102,61 @@ No intenta usar *launchSettings.json* para configurar la aplicación.
 
 `--no-restore`
 
-No realiza una restauración implícita al ejecutar el comando.
+No ejecuta una restauración implícita al ejecutar el comando.
+
+`-p|--project <PATH>`
+
+Especifica la ruta de acceso del archivo del proyecto que se va a ejecutar (nombre de la carpeta o ruta de acceso completa). Si no se especifica, se toma como predeterminado el directorio actual.
+
+`--runtime <RUNTIME_IDENTIFIER>`
+
+Especifica el tiempo de ejecución de destino para el que restaurar los paquetes. Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md).
+
+`-v|--verbosity <LEVEL>`
+
+Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+`--`
+
+Delimita los argumentos a `dotnet run` a partir de argumentos de la aplicación que se va a ejecutar. Todos los argumentos después de este delimitador se pasan a la aplicación que se ejecuta.
+
+`-c|--configuration {Debug|Release}`
+
+Define la configuración de compilación. El valor predeterminado es `Debug`.
+
+`-f|--framework <FRAMEWORK>`
+
+Compila y ejecuta la aplicación con el [marco](../../standard/frameworks.md) especificado. El marco debe especificarse en el archivo de proyecto.
+
+`--force`
+
+Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Especificar esta marca es lo mismo que eliminar el archivo *project.assets.json*.
+
+`-h|--help`
+
+Imprime una corta ayuda para el comando.
+
+`--launch-profile <NAME>`
+
+El nombre del perfil de inicio (si lo hay) que se usará al iniciar la aplicación. Los perfiles de inicio se definen en el archivo *launchSettings.json* y se suelen denominar `Development`, `Staging` y `Production`. Para obtener más información, consulte [Working with multiple environments](/aspnet/core/fundamentals/environments) (Trabajo con varios entornos).
+
+`--no-build`
+
+No compila el proyecto antes de ejecutarlo. También establece la marca `--no-restore` de forma implícita.
+
+`--no-dependencies`
+
+Al restaurar un proyecto con referencias de proyecto a proyecto (P2P), se restaura el proyecto raíz y no las referencias.
+
+`--no-launch-profile`
+
+No intenta usar *launchSettings.json* para configurar la aplicación.
+
+`--no-restore`
+
+No ejecuta una restauración implícita al ejecutar el comando.
 
 `-p|--project <PATH>`
 
@@ -112,7 +170,7 @@ Especifica el tiempo de ejecución de destino para el que restaurar los paquetes
 
 `--`
 
-Delimita los argumentos a `dotnet run` a partir de argumentos de la aplicación que se va a ejecutar. Todos los argumentos después de este se pasan a la aplicación que se ejecuta.
+Delimita los argumentos a `dotnet run` a partir de argumentos de la aplicación que se va a ejecutar. Todos los argumentos después de este delimitador se pasan a la aplicación que se ejecuta.
 
 `-c|--configuration {Debug|Release}`
 
