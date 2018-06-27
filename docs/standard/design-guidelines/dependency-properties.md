@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 039015f895a491d8709815d6aff52eb6139d779f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7398202cc265fbd55b9bf0b5a53367dedcab57b0
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576121"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948490"
 ---
 # <a name="dependency-properties"></a>Propiedades de dependencia
 Una propiedad de dependencia (DP) es una propiedad normal que almacena su valor en un almacén de propiedades en lugar de almacenar en una variable de tipo (campo), por ejemplo.  
@@ -43,7 +43,7 @@ Una propiedad de dependencia (DP) es una propiedad normal que almacena su valor 
   
  Un ejemplo clásico de una propiedad adjunta es la <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> propiedad. La propiedad representa la posición de la columna del botón (no la cuadrícula), pero solo es pertinente si el botón está contenido en una cuadrícula, por lo que se "une" a los botones mediante cuadrículas.  
   
-```  
+```xaml
 <Grid>  
     <Grid.ColumnDefinitions>  
         <ColumnDefinition />  
@@ -57,7 +57,7 @@ Una propiedad de dependencia (DP) es una propiedad normal que almacena su valor 
   
  La definición de una propiedad adjunta es principalmente similar de una propiedad de dependencia normal, excepto en que los descriptores de acceso se representan mediante los métodos Get y Set estáticos:  
   
-```  
+```csharp
 public class Grid {  
   
     public static int GetColumn(DependencyObject obj) {  
