@@ -2,12 +2,12 @@
 title: Compatibilidad de SqlClient para alta disponibilidad y recuperación ante desastres
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: e3599c11743a33ca7cd071573bc67699eed7f606
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 001b99d7a7ec7dd7e483887ceeb0b2563a46da0a
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365714"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948529"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SqlClient para alta disponibilidad y recuperación ante desastres
 Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) para grupos de disponibilidad AlwaysOn de alta disponibilidad y recuperación ante desastres.  Característica de grupos de disponibilidad AlwaysOn se agregó a SQL Server 2012. Para obtener más información acerca de los grupos de disponibilidad AlwaysOn, vea los libros en pantalla de SQL Server.  
@@ -32,7 +32,7 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
 2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
->  Establecer `MultiSubnetFailover` a `true` no es necesario con [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) o versiones posteriores.
+>  Establecer `MultiSubnetFailover` a `true` no es necesario con [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] o versiones posteriores.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Conectar con MultiSubnetFailover  
  Especifique siempre `MultiSubnetFailover=True` al conectarse a un agente de escucha del grupo de disponibilidad de SQL Server 2012 o una instancia de clúster de conmutación por error de SQL Server 2012. `MultiSubnetFailover` permite la rápida conmutación por error para todos los grupos de disponibilidad y o instancia de clúster de conmutación por error de SQL Server 2012 y se reducir significativamente el tiempo de conmutación por error para las topologías de AlwaysOn y de varias subredes. Durante una conmutación por error de múltiples subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, se reintentará agresivamente la conexión TCP.  
