@@ -2,12 +2,12 @@
 title: Generación de un cliente WCF a partir de los metadatos de servicio
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: bd349099213a7818555a910aac1949999a57a58f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55034868b465b63dca3ca28238d81b348d9d6893
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494022"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027933"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generación de un cliente WCF a partir de los metadatos de servicio
 En este tema se describe cómo utilizar los diversos modificadores de Svcutil.exe para generar los clientes a partir de documentos de metadatos.  
@@ -20,7 +20,7 @@ En este tema se describe cómo utilizar los diversos modificadores de Svcutil.ex
   
 -   Solicitud DISCO (mediante el [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) de servicios Web de ASP.NET) a la dirección proporcionada.  
   
- Svcutil.exe genera el cliente basado en el lenguaje de descripción de servicios Web (WSDL) o en el archivo de directivas recibido desde el servicio. El nombre principal del usuario (UPN) se genera concatenando el nombre de usuario con "@" y, a continuación, agregando un nombre de dominio completo (FQDN). Sin embargo, para los usuarios que se registraron en Active Directory, este formato no es válido y el UPN que genera la herramienta produce un error en la autenticación Kerberos con el siguiente mensaje de error: **error en el intento de inicio de sesión.** Para resolver este problema, debe corregir manualmente el archivo de cliente generado por la herramienta.  
+ Svcutil.exe genera el cliente basado en el lenguaje de descripción de servicios Web (WSDL) o en el archivo de directivas recibido desde el servicio. El nombre principal de usuario (UPN) se genera concatenando el nombre de usuario con "\@" y, a continuación, agregar un nombre de dominio completo (FQDN). Sin embargo, para los usuarios que se registraron en Active Directory, este formato no es válido y el UPN que genera la herramienta produce un error en la autenticación Kerberos con el siguiente mensaje de error: **error en el intento de inicio de sesión.** Para resolver este problema, debe corregir manualmente el archivo de cliente generado por la herramienta.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
