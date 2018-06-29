@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a826121a7f22d1db7287171c5add28e5fcd690cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88092c22e763e427203350065ff62b7c5e040b97
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398032"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073221"
 ---
 # <a name="lazy-initialization"></a>Inicialización diferida
 La *inicialización diferida* de un objeto implica que su creación se aplaza hasta que se usa por primera vez. (En este tema, los términos *inicialización diferida* y *creación diferida de instancias* son sinónimos). La inicialización diferida se usa principalmente para mejorar el rendimiento, evitar la pérdida de tiempo en los cálculos y reducir los requisitos de memoria de los programas. Estos son los escenarios más comunes:  
@@ -140,7 +140,7 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Variables locales de subproceso en Parallel.For y ForEach  
- Cuando se usa el método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para iterar en los orígenes de datos en paralelo, puede usar las sobrecargas que tienen compatibilidad integrada con datos locales de subproceso. En estos métodos, la localidad del subproceso se logra mediante el uso de delegados locales para crear los datos, obtener acceso a ellos y limpiarlos. Para más información, consulte [How to: Write a Parallel.For Loop with Thread-Local Variables](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) (Escritura de un bucle Parallel.For con variables locales para el subproceso) y [How to: Write a Parallel.ForEach Loop with Thread-Local Variables](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md) (Escritura de un bucle Parallel.ForEach con variables locales para el subproceso).  
+ Cuando se usa el método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para iterar en los orígenes de datos en paralelo, puede usar las sobrecargas que tienen compatibilidad integrada con datos locales de subproceso. En estos métodos, la localidad del subproceso se logra mediante el uso de delegados locales para crear los datos, obtener acceso a ellos y limpiarlos. Para obtener más información, consulte [Cómo: escribir un bucle Parallel.For con Variables locales de subproceso](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) y [Cómo: escribir un bucle Parallel.ForEach con Variables locales de la partición](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Usar la inicialización diferida para escenarios con poca sobrecarga  
  En los escenarios en los que tiene que inicializar de forma diferida un gran número de objetos, podría decidir que el proceso de encapsular cada objeto en un objeto <xref:System.Lazy%601> requiere demasiada memoria o demasiados recursos informáticos. O bien, es posible que tenga requisitos estrictos sobre cómo se expone la inicialización diferida. En tales casos, puede usar los métodos `static` (`Shared` en Visual Basic) de la clase <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> para inicializar de forma diferida cada objeto sin encapsularlo en una instancia de <xref:System.Lazy%601>.  

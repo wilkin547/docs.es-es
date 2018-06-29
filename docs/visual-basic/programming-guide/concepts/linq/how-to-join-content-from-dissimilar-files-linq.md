@@ -1,18 +1,19 @@
 ---
 title: 'Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)'
-ms.date: 07/20/2015
+ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 1be067db9c248ae7f51d79f1193e185f9c1fe564
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643541"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072051"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)
+
 En este ejemplo se muestra cómo combinar datos de dos archivos delimitados por comas que comparten un valor común que se usa como clave coincidente. Esta técnica puede ser útil si tiene que combinar datos de dos hojas de cálculo o si tiene que combinar en un archivo nuevo datos procedentes de una hoja de cálculo y de un archivo que tiene otro formato. Puede modificar el ejemplo para adaptarlo a cualquier tipo de texto estructurado.  
   
-### <a name="to-create-the-data-files"></a>Para crear los archivos de datos  
+## <a name="to-create-the-data-files"></a>Para crear los archivos de datos
   
 1.  Copie las líneas siguientes en un archivo llamado scores.csv y guárdelo en la carpeta del proyecto. El archivo representa datos de una hoja de cálculo. La columna 1 es el identificador del estudiante y las columnas comprendidas entre la 2 y la 5 son las notas de las pruebas.  
   
@@ -49,8 +50,11 @@ En este ejemplo se muestra cómo combinar datos de dos archivos delimitados por 
     ```  
   
 ## <a name="example"></a>Ejemplo  
-  
-```vb  
+
+```vb
+Imports System.Collections.Generic
+Imports System.Linq
+
 Class JoinStrings  
   
     Shared Sub Main()  
@@ -77,7 +81,7 @@ Class JoinStrings
                          Let n = name.Split(New Char() {","})   
                             From id In scores   
                             Let n2 = id.Split(New Char() {","})   
-                            Where n(2) = n2(0)   
+                            Where Convert.ToInt32(n(2)) = Convert.ToInt32(n2(0))
                             Select n(0) & "," & n(1) & "," & n2(0) & "," & n2(1) & "," &  
                               n2(2) & "," & n2(3)  
   
@@ -101,25 +105,31 @@ Class JoinStrings
     End Sub  
 End Class  
 ' Output:  
-'Merge two spreadsheets:  
-'Adams,Terry,120, 99, 82, 81  
-'Fakhouri,Fadi,116, 99, 86, 90  
-'Feng,Hanying,117, 93, 92, 80  
-'Garcia,Cesar,114, 97, 89, 85  
-'Garcia,Debra,115, 35, 72, 91  
-'Garcia,Hugo,118, 92, 90, 83  
-'Mortensen,Sven,113, 88, 94, 65  
-'O'Donnell,Claire,112, 75, 84, 91  
-'Omelchenko,Svetlana,111, 97, 92, 81  
-'Tucker,Lance,119, 68, 79, 88  
-'Tucker,Michael,122, 94, 92, 91  
-'Zabokritski,Eugene,121, 96, 85, 91  
-'12 total names in list  
+' Merge two spreadsheets:
+' Omelchenko, 97, 92, 81, 60
+' O'Donnell, 75, 84, 91, 39
+' Mortensen, 88, 94, 65, 91
+' Garcia, 97, 89, 85, 82
+' Garcia, 35, 72, 91, 70
+' Fakhouri, 99, 86, 90, 94
+' Feng, 93, 92, 80, 87
+' Garcia, 92, 90, 83, 78
+' Tucker, 68, 79, 88, 92
+' Adams, 99, 82, 81, 79
+' Zabokritski, 96, 85, 91, 60
+' Tucker, 94, 92, 91, 91
+' 12 total names in list 
 ```  
+
+## <a name="compiling-the-code"></a>Compilación del código
+
+Crear y compilar un proyecto destinado a una de las siguientes opciones:
+
+- .NET framework versión 3.5 con una referencia a System.Core.dll.
+- .NET framework versión 4.0 o posterior.
+- Versión de .NET core 1.0 o superior.
   
-## <a name="compiling-the-code"></a>Compilar el código  
- Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.  
-  
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
+
  [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

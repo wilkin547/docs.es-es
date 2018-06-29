@@ -2,12 +2,12 @@
 title: Protocolos de mensajería
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: c900c8fde8b13b4766fb245de2bab46b5601f135
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d188c79d3879ef383d24f56c81d66973266636bc
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496642"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072727"
 ---
 # <a name="messaging-protocols"></a>Protocolos de mensajería
 La pila del canal de Windows Communication Foundation (WCF) emplea codificación y canales de transporte para transformar la representación interna de mensajes en su formato de conexión y enviarla utilizando un transporte determinado. El transporte más común utilizado para la interoperabilidad de servicios Web es HTTP y las codificaciones más comunes utilizadas por los servicios Web son las basadas en XML, SOAP 1.1, SOAP 1.2 y el Mecanismo de optimización de transmisión de mensajes (MTOM).  
@@ -452,7 +452,7 @@ Content-Length: 0
   
 -   R4132: un encabezado HTTP Content-Type debe tener un parámetro de tipo con el valor `application/xop+xml` encerrado entre comillas tipográficas.  
   
- Aunque el requisito de utilizar las comillas tipográficas no está explícito en RFC 2387, el texto observa que todo el tipo de medio de multiparte/relacionado probablemente parámetros contienen los caracteres reservados entre como "@" or "/" y, por tanto, requieren las comillas dobles.  
+ Aunque el requisito de utilizar las comillas tipográficas no está explícito en RFC 2387, el texto observa que todos los parámetros de tipo de medio de multiparte/relacionado probablemente contienen caracteres reservados como "\@" o "/" y, por tanto, se necesitan comillas dobles marca.  
   
 -   R4133: un encabezado de tipo de contenido HTTP debe tener un parámetro de inicio con el valor del encabezado de identificador de contenido de la parte MIME que contiene el sobre de SOAP 1.x, que va entre comillas tipográficas. Si se omite el parámetro de inicio, la primera parte MIME debe contener la envoltura de SOAP 1.x.  
   

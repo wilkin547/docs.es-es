@@ -13,12 +13,12 @@ ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e20d414b3be41fc175037c6691518adf6a424b69
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 40eda14d4d578f10a77aa06843abd48f58c55f6a
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743032"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073026"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;quitar&gt; elemento para webRequestModules (configuración de red)
 Quita un módulo de solicitud Web personalizado de la aplicación.  
@@ -57,7 +57,7 @@ Quita un módulo de solicitud Web personalizado de la aplicación.
 ## <a name="remarks"></a>Comentarios  
  El `remove` elemento quita el módulo de solicitud Web registrado para el prefijo URI especificado.  
   
- El valor de la `prefix` atributo debe ser los primeros caracteres de un URI válido, por ejemplo, "http", o "http://www.contoso.com".  
+ El valor de la `prefix` atributo debe ser los primeros caracteres de un URI válido, por ejemplo, "http", o "`http://www.contoso.com` ".  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  

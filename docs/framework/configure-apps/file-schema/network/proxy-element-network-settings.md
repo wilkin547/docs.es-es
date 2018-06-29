@@ -11,12 +11,12 @@ ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b5ae716994f9b8222a633699367c94480179c97b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8d2e224f710a1f344623440f29c2c6e0e9bd661e
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744452"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072519"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt; Element (Network Settings)
 Define un servidor proxy.  
@@ -46,7 +46,7 @@ Define un servidor proxy.
 |**Attribute**|**Descripción**|  
 |-------------------|---------------------|  
 |`autoDetect`|Especifica si el proxy se detecta automáticamente. El valor predeterminado es `unspecified`.|  
-|`bypassonlocal`|Especifica si se omite el proxy para los recursos locales. Los recursos locales incluyen el servidor local (http://localhost, http://loopback, o http://127.0.0.1) y un URI sin un período (http://webserver). El valor predeterminado es `unspecified`.|  
+|`bypassonlocal`|Especifica si se omite el proxy para los recursos locales. Los recursos locales incluyen el servidor local (`http://localhost`, `http://loopback`, o `http://127.0.0.1`) y un URI sin un punto (`http://webserver`). El valor predeterminado es `unspecified`.|  
 |`proxyaddress`|Especifica al proxy de URI que se utiliza.|  
 |`scriptLocation`|Especifica la ubicación de la secuencia de comandos de configuración.|  
 |`usesystemdefault`|Especifica si se debe usar la configuración de proxy de Internet Explorer. Si establece en `true`, los atributos subsiguientes invalidarán la configuración de proxy de Internet Explorer. El valor predeterminado es `unspecified`.|  

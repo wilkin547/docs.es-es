@@ -2,12 +2,12 @@
 title: 'Cómo: rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 097a41614b4e7fb48c3ef3903faec8ed9ee3d5b6
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948454"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070868"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Cómo: rellenar colecciones de objetos de varios orígenes (LINQ) (Visual Basic)
 
@@ -25,7 +25,6 @@ En este ejemplo se muestra cómo combinar datos de orígenes diferentes en una s
 En el ejemplo siguiente se muestra cómo usar un tipo `Student` con nombre para almacenar los datos combinados de dos colecciones de cadenas en memoria que simulan datos de hoja de cálculo en formato .csv. La primera colección de cadenas representa los nombres y los identificadores de los estudiantes, mientras que la segunda colección representa el identificador de los estudiantes (en la primera columna) y cuatro notas de exámenes. El identificador se usa como clave externa.
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 
@@ -133,7 +132,8 @@ Next
 
 Crear y compilar un proyecto destinado a una de las siguientes opciones:
 
-- .NET framework versión 3.5 o superior con una referencia a System.Core.dll.
+- .NET framework versión 3.5 con una referencia a System.Core.dll.
+- .NET framework versión 4.0 o posterior.
 - Versión de .NET core 1.0 o superior.
 
 ## <a name="see-also"></a>Vea también

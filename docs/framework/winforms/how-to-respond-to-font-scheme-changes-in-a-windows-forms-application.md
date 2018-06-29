@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 455609ea602f450803718f5be34618b087560d21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2451885c673515eb6690b0784fd5bd22de629209
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539457"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071151"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Cómo: Responder a los cambios de las combinaciones de fuentes en una aplicación de Windows Forms
 En los sistemas operativos de Windows, un usuario puede cambiar la configuración de fuente de todo el sistema para que la fuente predeterminada aparezca mayor o menor. Cambiar esta configuración de fuente es fundamental para personas con discapacidades visuales y requieren un tipo mayor leer el texto en las pantallas. Puede ajustar la aplicación de formularios Windows Forms para reaccionar a estos cambios aumentando o reduciendo el tamaño del formulario y de todo el texto cada vez que cambia la combinación de fuentes. Si desea que el formulario para adaptarse dinámicamente a cambios en los tamaños de fuente, puede agregar código al formulario.  
@@ -40,13 +40,13 @@ En los sistemas operativos de Windows, un usuario puede cambiar la configuració
   
 5.  Por último, implemente un controlador para el <xref:System.Windows.Forms.Form.FormClosing> eventos que separa el <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> controlador de eventos.  
   
-> [!IMPORTANT]
->  Si no se incluye este código hará que la aplicación a la pérdida de memoria.  
+     > [!IMPORTANT]
+     > Si no se incluye este código hará que la aplicación a la pérdida de memoria.  
   
- [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
- [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
+     [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
+     [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-1.  Compile y ejecute el código.  
+6.  Compile y ejecute el código.  
   
 ### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>Para cambiar manualmente la combinación de fuentes en Windows XP  
   
@@ -56,7 +56,7 @@ En los sistemas operativos de Windows, un usuario puede cambiar la configuració
   
 3.  Desde el **el tamaño de fuente** lista desplegable, seleccione un nuevo tamaño de fuente.  
   
-     Observará que ahora el formulario responde para ejecutar los cambios de tiempo en el esquema de la fuente del escritorio. Cuando el usuario cambia entre **Normal**, **fuentes grandes**, y **fuentes muy grandes**, el formulario cambia la fuente y escala correctamente.  
+     Observará que ahora el formulario responde a los cambios de tiempo de ejecución en el esquema de la fuente del escritorio. Cuando el usuario cambia entre **Normal**, **fuentes grandes**, y **fuentes muy grandes**, el formulario cambia la fuente y escala correctamente.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[WinFormsAutoScaling#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
