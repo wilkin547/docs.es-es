@@ -1,20 +1,21 @@
 ---
 title: 'Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)'
-ms.date: 07/20/2015
+ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 1be067db9c248ae7f51d79f1193e185f9c1fe564
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643541"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072051"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="57cf6-102">Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="57cf6-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="57cf6-103">En este ejemplo se muestra cómo combinar datos de dos archivos delimitados por comas que comparten un valor común que se usa como clave coincidente.</span><span class="sxs-lookup"><span data-stu-id="57cf6-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="57cf6-104">Esta técnica puede ser útil si tiene que combinar datos de dos hojas de cálculo o si tiene que combinar en un archivo nuevo datos procedentes de una hoja de cálculo y de un archivo que tiene otro formato.</span><span class="sxs-lookup"><span data-stu-id="57cf6-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="57cf6-105">Puede modificar el ejemplo para adaptarlo a cualquier tipo de texto estructurado.</span><span class="sxs-lookup"><span data-stu-id="57cf6-105">You can modify the example to work with any kind of structured text.</span></span>  
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="6996f-102">Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6996f-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
+
+<span data-ttu-id="6996f-103">En este ejemplo se muestra cómo combinar datos de dos archivos delimitados por comas que comparten un valor común que se usa como clave coincidente.</span><span class="sxs-lookup"><span data-stu-id="6996f-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="6996f-104">Esta técnica puede ser útil si tiene que combinar datos de dos hojas de cálculo o si tiene que combinar en un archivo nuevo datos procedentes de una hoja de cálculo y de un archivo que tiene otro formato.</span><span class="sxs-lookup"><span data-stu-id="6996f-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="6996f-105">Puede modificar el ejemplo para adaptarlo a cualquier tipo de texto estructurado.</span><span class="sxs-lookup"><span data-stu-id="6996f-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="57cf6-106">Para crear los archivos de datos</span><span class="sxs-lookup"><span data-stu-id="57cf6-106">To create the data files</span></span>  
+## <a name="to-create-the-data-files"></a><span data-ttu-id="6996f-106">Para crear los archivos de datos</span><span class="sxs-lookup"><span data-stu-id="6996f-106">To create the data files</span></span>
   
-1.  <span data-ttu-id="57cf6-107">Copie las líneas siguientes en un archivo llamado scores.csv y guárdelo en la carpeta del proyecto.</span><span class="sxs-lookup"><span data-stu-id="57cf6-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="57cf6-108">El archivo representa datos de una hoja de cálculo.</span><span class="sxs-lookup"><span data-stu-id="57cf6-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="57cf6-109">La columna 1 es el identificador del estudiante y las columnas comprendidas entre la 2 y la 5 son las notas de las pruebas.</span><span class="sxs-lookup"><span data-stu-id="57cf6-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1.  <span data-ttu-id="6996f-107">Copie las líneas siguientes en un archivo llamado scores.csv y guárdelo en la carpeta del proyecto.</span><span class="sxs-lookup"><span data-stu-id="6996f-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="6996f-108">El archivo representa datos de una hoja de cálculo.</span><span class="sxs-lookup"><span data-stu-id="6996f-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="6996f-109">La columna 1 es el identificador del estudiante y las columnas comprendidas entre la 2 y la 5 son las notas de las pruebas.</span><span class="sxs-lookup"><span data-stu-id="6996f-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -31,7 +32,7 @@ ms.locfileid: "33643541"
     122, 94, 92, 91, 91  
     ```  
   
-2.  <span data-ttu-id="57cf6-110">Copie las líneas siguientes en un archivo llamado names.csv y guárdelo en la carpeta del proyecto.</span><span class="sxs-lookup"><span data-stu-id="57cf6-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="57cf6-111">El archivo representa una hoja de cálculo que contiene el nombre, los apellidos y el identificador de los estudiantes.</span><span class="sxs-lookup"><span data-stu-id="57cf6-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2.  <span data-ttu-id="6996f-110">Copie las líneas siguientes en un archivo llamado names.csv y guárdelo en la carpeta del proyecto.</span><span class="sxs-lookup"><span data-stu-id="6996f-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="6996f-111">El archivo representa una hoja de cálculo que contiene el nombre, los apellidos y el identificador de los estudiantes.</span><span class="sxs-lookup"><span data-stu-id="6996f-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -48,9 +49,12 @@ ms.locfileid: "33643541"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="57cf6-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="57cf6-112">Example</span></span>  
-  
-```vb  
+## <a name="example"></a><span data-ttu-id="6996f-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6996f-112">Example</span></span>  
+
+```vb
+Imports System.Collections.Generic
+Imports System.Linq
+
 Class JoinStrings  
   
     Shared Sub Main()  
@@ -77,7 +81,7 @@ Class JoinStrings
                          Let n = name.Split(New Char() {","})   
                             From id In scores   
                             Let n2 = id.Split(New Char() {","})   
-                            Where n(2) = n2(0)   
+                            Where Convert.ToInt32(n(2)) = Convert.ToInt32(n2(0))
                             Select n(0) & "," & n(1) & "," & n2(0) & "," & n2(1) & "," &  
                               n2(2) & "," & n2(3)  
   
@@ -101,25 +105,31 @@ Class JoinStrings
     End Sub  
 End Class  
 ' Output:  
-'Merge two spreadsheets:  
-'Adams,Terry,120, 99, 82, 81  
-'Fakhouri,Fadi,116, 99, 86, 90  
-'Feng,Hanying,117, 93, 92, 80  
-'Garcia,Cesar,114, 97, 89, 85  
-'Garcia,Debra,115, 35, 72, 91  
-'Garcia,Hugo,118, 92, 90, 83  
-'Mortensen,Sven,113, 88, 94, 65  
-'O'Donnell,Claire,112, 75, 84, 91  
-'Omelchenko,Svetlana,111, 97, 92, 81  
-'Tucker,Lance,119, 68, 79, 88  
-'Tucker,Michael,122, 94, 92, 91  
-'Zabokritski,Eugene,121, 96, 85, 91  
-'12 total names in list  
+' Merge two spreadsheets:
+' Omelchenko, 97, 92, 81, 60
+' O'Donnell, 75, 84, 91, 39
+' Mortensen, 88, 94, 65, 91
+' Garcia, 97, 89, 85, 82
+' Garcia, 35, 72, 91, 70
+' Fakhouri, 99, 86, 90, 94
+' Feng, 93, 92, 80, 87
+' Garcia, 92, 90, 83, 78
+' Tucker, 68, 79, 88, 92
+' Adams, 99, 82, 81, 79
+' Zabokritski, 96, 85, 91, 60
+' Tucker, 94, 92, 91, 91
+' 12 total names in list 
 ```  
+
+## <a name="compiling-the-code"></a><span data-ttu-id="6996f-113">Compilación del código</span><span class="sxs-lookup"><span data-stu-id="6996f-113">Compiling the code</span></span>
+
+<span data-ttu-id="6996f-114">Crear y compilar un proyecto destinado a una de las siguientes opciones:</span><span class="sxs-lookup"><span data-stu-id="6996f-114">Create and compile a project that targets one of the following options:</span></span>
+
+- <span data-ttu-id="6996f-115">.NET framework versión 3.5 con una referencia a System.Core.dll.</span><span class="sxs-lookup"><span data-stu-id="6996f-115">.NET Framework version 3.5 with a reference to System.Core.dll.</span></span>
+- <span data-ttu-id="6996f-116">.NET framework versión 4.0 o posterior.</span><span class="sxs-lookup"><span data-stu-id="6996f-116">.NET Framework version 4.0 or higher.</span></span>
+- <span data-ttu-id="6996f-117">Versión de .NET core 1.0 o superior.</span><span class="sxs-lookup"><span data-stu-id="6996f-117">.NET Core version 1.0 or higher.</span></span>
   
-## <a name="compiling-the-code"></a><span data-ttu-id="57cf6-113">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="57cf6-113">Compiling the Code</span></span>  
- <span data-ttu-id="57cf6-114">Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.</span><span class="sxs-lookup"><span data-stu-id="57cf6-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="57cf6-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="57cf6-115">See Also</span></span>  
- [<span data-ttu-id="57cf6-116">LINQ y cadenas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="57cf6-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [<span data-ttu-id="57cf6-117">LINQ y directorios de archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="57cf6-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="6996f-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="6996f-118">See also</span></span>
+
+ [<span data-ttu-id="6996f-119">LINQ y cadenas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6996f-119">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="6996f-120">LINQ y directorios de archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6996f-120">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
