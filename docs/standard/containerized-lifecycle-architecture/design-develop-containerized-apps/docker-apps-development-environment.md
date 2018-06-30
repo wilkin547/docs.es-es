@@ -4,12 +4,12 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4adbdd7099dfc1c5ef13d5bbb4370ae2f14aba1e
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 3da7816127982c3657129561975eed6d1f5aad5a
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696785"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104512"
 ---
 # <a name="development-environment-for-docker-apps"></a>Entorno de desarrollo para aplicaciones de Docker
 
@@ -48,4 +48,5 @@ Básicamente, puede usar cualquier lenguaje moderno admitido por Docker en Linux
 
 
 >[!div class="step-by-step"]
-[Anterior] (orquestar-alta-escalabilidad-availability.md) [siguiente] (docker-aplicaciones-interna-bucle-workflow.md)
+[Anterior](orchestrate-high-scalability-availability.md)
+[Siguiente](docker-apps-inner-loop-workflow.md)

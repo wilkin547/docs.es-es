@@ -4,12 +4,12 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3877767117d8292644782fc07df6667931688be2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 368d99e92f80cf37965139cb67fc5f22b44f40cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575549"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106141"
 ---
 # <a name="monitor-containerized-application-services"></a>Supervisar los servicios de aplicaciones en contenedores
 
@@ -97,4 +97,5 @@ Guardar las consultas también es una característica estándar en Operations Ma
 **Obtener más información** para buscar información sobre cómo instalar y configurar el Docker soluciones de contenedor en [Operations Management Suite](http://microsoft.com/oms), vaya a <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
-[Anterior] (administrar-producción-docker-environments.md) [siguiente] (.. /Key-takeaways/index.MD)
+[Anterior](manage-production-docker-environments.md)
+[Siguiente](../key-takeaways/index.md)

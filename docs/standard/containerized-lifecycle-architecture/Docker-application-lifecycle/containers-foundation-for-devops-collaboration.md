@@ -4,12 +4,12 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 0fa43263e789bba5b720792e7e8dc5321af795b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c7de61f421cf2c45cd3c5ee9afc5a388e985b52
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576225"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105568"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Contenedores como base para la colaboración de DevOps
 
@@ -68,4 +68,5 @@ Estas son algunas de las ventajas más importantes que proporciona un flujo de t
 -   Plug and play bien con muchos de sus inversiones existentes de DevOps, incluidas las inversiones en código abierto
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [siguiente] (.. /Microsoft-Platform-Tools-containerized-Apps/index.MD)
+[Anterior](index.md)
+[Siguiente](../Microsoft-platform-tools-containerized-apps/index.md)

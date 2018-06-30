@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f429bc0c6e76c2be2e4f491768a15ab36ecb0d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 662e1af8595c074ee1aeba5ad4d83660b667c1cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591099"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105532"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Implementar aplicaciones web de .NET Core basadas en un solo contenedor en hosts de Linux o Windows Nano Server
 
@@ -142,4 +142,5 @@ Es posible que necesite detener procesos en ejecución cuando cambie entre difer
 El asistente que agrega compatibilidad con Docker se comunica con el proceso de Docker que se está ejecutando. El asistente no se ejecutará correctamente si Docker no está funcionando cuando se inicie el asistente. Además, el asistente examinará el contenedor que ha elegido actualmente para agregar la compatibilidad correcta con Docker. Si quiere agregar compatibilidad con contenedores de Windows, debe ejecutar el asistente mientras Docker se ejecuta con contenedores de Windows configurados. Si quiere agregar compatibilidad con contenedores de Linux, ejecute el asistente mientras Docker se ejecuta con contenedores de Linux configurados.
 
 >[!div class="step-by-step"]
-[Anterior] (../docker-application-development-process/docker-app-development-workflow.md) [Siguiente] (../containerize-net-framework-applications/index.md)
+[Anterior](../docker-application-development-process/docker-app-development-workflow.md)
+[Siguiente](../containerize-net-framework-applications/index.md)

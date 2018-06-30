@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 881817f4f1007edad85eefb9002d56764cbf2a02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61bc9ca6fed8f5249dcb125619aa1b07f290ba7e
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574789"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106884"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Proceso de desarrollo de aplicaciones basadas en Docker
 
@@ -46,4 +46,5 @@ Como se ha mencionado en secciones anteriores de esta guía, puede usar .NET Fra
 
 
 >[!div class="step-by-step"]
-[Anterior] (../architect-microservice-container-applications/using-azure-service-fabric.md) [Siguiente] (docker-app-development-workflow.md)
+[Anterior](../architect-microservice-container-applications/using-azure-service-fabric.md)
+[Siguiente](docker-app-development-workflow.md)

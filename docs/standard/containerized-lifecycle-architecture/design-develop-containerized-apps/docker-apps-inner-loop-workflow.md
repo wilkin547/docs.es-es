@@ -4,12 +4,12 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: cda9aa77ca033dced8b6b30538f19f28a5fa63a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e578599c61053704202946772c43bdb5ef895c2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579215"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105594"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo de bucle interno para las aplicaciones de Docker
 
@@ -122,7 +122,7 @@ Hay otras líneas de configuración que se puede agregar en el DockerFile según
 
 **Obtener más información** para obtener información sobre la creación de imágenes de Docker para las aplicaciones de .NET Core, vaya a <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
-Para más información acerca de cómo crear sus propias imágenes, vaya a [ https://docs.docker.com/engine/\tutoriales/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
+Para más información acerca de cómo crear sus propias imágenes, vaya a [ https://docs.docker.com/engine/\ tutoriales/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
 **Repositorios de imágenes multiplataforma**
 
@@ -259,4 +259,5 @@ También puede depurar contenedores .NET Core en Docker cuando se utiliza Visual
 
 
 >[!div class="step-by-step"]
-[Anterior] (docker-aplicaciones-desarrollo-environment.md) [siguiente] (visual-studio-herramientas-de-docker.md)
+[Anterior](docker-apps-development-environment.md)
+[Siguiente](visual-studio-tools-for-docker.md)

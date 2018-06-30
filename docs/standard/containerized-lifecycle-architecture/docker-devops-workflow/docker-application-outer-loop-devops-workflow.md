@@ -4,12 +4,12 @@ description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 198313c260b36d3f3025606e73e220c361a7ebb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b88eb5637bf266ab2e0a6d255f2e83f6aadc8af2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579007"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106167"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
 
@@ -234,4 +234,5 @@ En este tema también se trata en el capítulo siguiente como parte de las tarea
 Solo cuando la supervisión y diagnóstico está al 100% en el dominio Kerberos de DevOps son los procesos de supervisión y análisis realizadas por el equipo de desarrollo en entornos de pruebas o beta. Esto se realiza mediante la realización de pruebas de carga o simplemente mediante la supervisión de la versión beta o entornos de preguntas y respuestas, donde los evaluadores de beta están tratando de las nuevas versiones.
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [siguiente] (.. /Run-Manage-Monitor-docker-Environments/index.MD)
+[Anterior](index.md)
+[Siguiente](../run-manage-monitor-docker-environments/index.md)
