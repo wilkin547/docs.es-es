@@ -9,12 +9,12 @@ ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c8eb7bfc56b4dddaf352477e3817864700460db7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aaafe77a71713b24752ed7db7ec016bfc14eb406
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409986"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140247"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Compatibilidad de UI Automation para el tipo de control Hyperlink
 > [!NOTE]
@@ -60,7 +60,7 @@ ms.locfileid: "33409986"
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|Sí|Todos los controles de hipervínculo deben admitir el patrón Invoke.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Depende|Los controles de hipervínculo deben admitir el patrón de control Value si el vínculo contiene información que es utilizable y significativa para el usuario.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Por ejemplo, "http://www...."|Una dirección URL para una dirección de Internet o Intranet es un ejemplo de un hipervínculo que contiene información significativa para el usuario. Sin embargo, un vínculo programático solo es significativo para una aplicación y no se recomienda para la propiedad Value.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Por ejemplo, `"http://www...."`.|Una dirección URL para una dirección de Internet o Intranet es un ejemplo de un hipervínculo que contiene información significativa para el usuario. Sin embargo, un vínculo programático solo es significativo para una aplicación y no se recomienda para la propiedad Value.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automatización de la interfaz de usuario necesarios  
