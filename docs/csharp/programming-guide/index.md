@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 62aacdafb5c257a8824bc8c8241ead7a274c2e2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f6500fa5f8f5022c4e910da894f182dcc5525be5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333276"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207385"
 ---
 # <a name="c-programming-guide"></a>Guía de programación de C#
 Esta sección proporciona información detallada sobre las funcionalidades y características claves del lenguaje C# a las que C# puede acceder a través de .NET Framework.  
   
- En la mayor parte de esta sección se supone que ya sabe algo sobre C# y que conoce los conceptos de programación generales. Si nunca ha programado ni ha trabajado con C#, puede visitar el tutorial interactivo [Getting Started with C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) (Introducción a C#), donde no se requiere ningún conocimiento previo de programación.  
+ En la mayor parte de esta sección se supone que ya sabe algo sobre C# y que conoce los conceptos de programación generales. Si nunca ha programado ni ha trabajado con C#, puede visitar el tutorial interactivo [C# Quickstarts](../quick-starts/index.md) (Inicio rápido a C#) o [Getting Started with C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) (Introducción a C#), donde no se requiere ningún conocimiento previo de programación.  
   
  Para obtener información sobre determinadas palabras clave, operadores y directivas de preprocesador, vea [Referencia de C#](../../csharp/language-reference/index.md). Para obtener información sobre la especificación del lenguaje C#, vea [Especificación del lenguaje C#](../../csharp/language-reference/language-specification/index.md).  
   

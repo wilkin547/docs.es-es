@@ -3,13 +3,13 @@ title: 'Comando dotnet new: CLI de .NET Core'
 description: El comando dotnet new crea proyectos de .NET Core basados en la plantilla especificada.
 author: mairaw
 ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: ae24c4145cc67ca863c07e4d22af8a1c2c2dd732
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.date: 06/12/2018
+ms.openlocfilehash: f0ef91361dfbc2c2ba5532fbd607786289e98c69
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34570468"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207814"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -151,8 +151,8 @@ Muestra las plantillas que contienen el nombre especificado. Si se invoca para e
 
 El lenguaje de la plantilla que se va a crear. El lenguaje aceptado cambia según la plantilla (vea los valores predeterminados en la sección [argumentos](#arguments)). No es válido para algunas plantillas.
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> Algunos shells interpretan `#` como un carácter especial. En esos casos, debe incluir el valor del parámetro de lenguaje, como `dotnet new console -lang "F#"`.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -202,8 +202,8 @@ Muestra las plantillas que contienen el nombre especificado. Si se invoca para e
 
 El lenguaje de la plantilla que se va a crear. El lenguaje aceptado cambia según la plantilla (vea los valores predeterminados en la sección [argumentos](#arguments)). No es válido para algunas plantillas.
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> Algunos shells interpretan `#` como un carácter especial. En esos casos, debe incluir el valor del parámetro de lenguaje, como `dotnet new console -lang "F#"`.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -243,8 +243,8 @@ Muestra las plantillas que contienen el nombre especificado. Si se invoca para e
 
 El lenguaje de la plantilla que se va a crear. El lenguaje aceptado cambia según la plantilla (vea los valores predeterminados en la sección [argumentos](#arguments)). No es válido para algunas plantillas.
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> Algunos shells interpretan `#` como un carácter especial. En esos casos, debe incluir el valor del parámetro de lenguaje, como `dotnet new console -lang "F#"`.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -502,13 +502,13 @@ Creación de un proyecto de biblioteca de clases de .NET Standard en el director
 
 `dotnet new classlib -lang VB -o MyLibrary`
 
-Creación de un proyecto de aplicación MVC de ASP.NET Core C# en el directorio actual sin autenticación destinado a .NET Core 2.0:
+Creación de un proyecto de aplicación MVC de ASP.NET Core C# en el directorio actual sin autenticación:
 
-`dotnet new mvc -au None -f netcoreapp2.0`
+`dotnet new mvc -au None`
 
-Creación de una aplicación de xUnit que tenga como destino .NET Core 2.0:
+Cree una aplicación de xUnit.
 
-`dotnet new xunit --framework netcoreapp2.0`
+`dotnet new xunit`
 
 Enumere todas las plantillas disponibles para MVC:
 

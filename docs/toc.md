@@ -91,6 +91,7 @@
 ### [Administración de dependencias](core/tools/dependencies.md)
 ### [Adiciones al formato csproj](core/tools/csproj.md)
 ## Migración
+### [.NET Core 2.0 a 2.1](core/migration/20-21.md)
 ### [Migración al formato csproj](core/migration/index.md)
 ### [Asignación entre project.json y csproj](core/tools/project-json-to-csproj.md)
 ### [Migración desde DNX](core/migration/from-dnx.md)
@@ -119,7 +120,6 @@
 ### [Salida publicada de prueba unitaria](core/testing/unit-testing-published-output.md)
 ### [Proyectos de .NET Core de Live Unit Testing con Visual Studio](/visualstudio/test/live-unit-testing-start)
 ## [Control de versiones](core/versions/index.md)
-### [Compatibilidad de .NET Core](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
 ## [Catálogo de identificadores de tiempo de ejecución](core/rid-catalog.md)
 ## [Información general sobre el SDK de .NET Core](core/sdk.md)
@@ -414,7 +414,7 @@
 ### [Espacios de nombres](fsharp/language-reference/namespaces.md)
 ### [Módulos](fsharp/language-reference/modules.md)
 ### [Declaraciones de importación: palabra clave open](fsharp/language-reference/import-declarations-the-open-keyword.md)
-### [Firmas](fsharp/language-reference/signatures.md)
+### [Archivo de signatura](fsharp/language-reference/signature-files.md)
 ### [Unidades de medida](fsharp/language-reference/units-of-measure.md)
 ### [Documentación de XML](fsharp/language-reference/xml-documentation.md)
 ### [Expresiones con procesamiento diferido](fsharp/language-reference/lazy-computations.md)
