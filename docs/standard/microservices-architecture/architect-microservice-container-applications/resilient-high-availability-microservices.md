@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 1cdd938fb53e194a80f0eb3e6bc82ebed271af49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19657c35e6640558526bf390b81eb08220821a4c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578219"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106322"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resistencia y alta disponibilidad en microservicios
 
@@ -78,4 +78,5 @@ Distintos orquestadores podrían parecer similares, pero las comprobaciones de d
 
 
 >[!div class="step-by-step"]
-[Previous] (microservice-based-composite-ui-shape-layout.md) [Next] (scalable-available-multi-container-microservice-applications.md)
+[Anterior](microservice-based-composite-ui-shape-layout.md)
+[Siguiente](scalable-available-multi-container-microservice-applications.md)

@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-ms.openlocfilehash: c7d9bb0ee3d59ef3e0cf56d26e73a925fcfb4206
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41ee5ecdae815eaddf8652a4873c060fb8f92bc3
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275296"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028271"
 ---
 # <a name="int-c-reference"></a>int (Referencia de C#)
 
 `int` denota un tipo entero que almacena valores según el tamaño y el intervalo que se indican en la tabla siguiente.  
   
-|Tipo|Intervalo|Tamaño|Tipo de .NET Framework|Valor predeterminado|  
-|----------|-----------|----------|-------------------------|-------------------|  
-|`int`|De -2.147.483.648 a 2.147.483.647|Entero de 32 bits con signo|<xref:System.Int32?displayProperty=nameWithType>|0|  
+|Tipo|Intervalo|Tamaño|Tipo de .NET|  
+|----------|-----------|----------|-------------------------|  
+|`int`|De -2.147.483.648 a 2.147.483.647|Entero de 32 bits con signo|<xref:System.Int32?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Literales  
  

@@ -4,12 +4,12 @@ description: Arquitectura de Microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: cce0b11ca8cb4fe4d97e2f575888254f92543fc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec3ccdd823e00d148bb8a97e906132f44e7fa727
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573677"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106676"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Direccionabilidad de microservicios y el Registro del servicio
 
@@ -34,4 +34,5 @@ Tenga en cuenta que se produce cierta superposición entre el Registro del servi
 
 
 >[!div class="step-by-step"]
-[Previous] (maintain-microservice-apis.md) [Next] (microservice-based-composite-ui-shape-layout.md)
+[Anterior](maintain-microservice-apis.md)
+[Siguiente](microservice-based-composite-ui-shape-layout.md)

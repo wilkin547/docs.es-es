@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce2c47b172afee8745cdf5f68323d64dd550ea59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6db9d2e1e075b9908e4c6db3d327f446980e98a5
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579150"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072961"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Utilizar la clase StringBuilder en .NET
 El objeto <xref:System.String> es inmutable. Cada vez que se usa uno de los métodos de la clase <xref:System.String?displayProperty=nameWithType>, se crea un objeto de cadena en la memoria, lo que requiere una nueva asignación de espacio para ese objeto. En las situaciones en las que es necesario realizar modificaciones repetidas en una cadena, la sobrecarga asociada a la creación de un objeto <xref:System.String> puede ser costosa. La clase <xref:System.Text.StringBuilder?displayProperty=nameWithType> se puede usar para modificar una cadena sin crear un objeto. Por ejemplo, el uso de la clase <xref:System.Text.StringBuilder> puede mejorar el rendimiento al concatenar muchas cadenas en un bucle.  
@@ -43,7 +43,7 @@ El objeto <xref:System.String> es inmutable. Cada vez que se usa uno de los mét
  [!code-vb[Conceptual.StringBuilder#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#1)]  
   
 ## <a name="setting-the-capacity-and-length"></a>Configurar la capacidad y la longitud  
- Aunque <xref:System.Text.StringBuilder> es un objeto dinámico que permite expandir el número de caracteres de la cadena que encapsula, se puede especificar un valor para el número máximo de caracteres que puede contener. Este valor se conoce como la capacidad del objeto y no debe confundirse con la longitud de la cadena que el objeto <xref:System.Text.StringBuilder> actual contiene. Por ejemplo, puede crear una instancia de la clase <xref:System.Text.StringBuilder> con la cadena "Hello", que tiene una longitud de 5, y especificar que el objeto tiene una capacidad máxima de 25. Al modificar <xref:System.Text.StringBuilder>, este no reasigna el tamaño para sí mismo hasta que se alcanza la capacidad. Cuando esto sucede, el nuevo espacio se asigna automáticamente y se duplica la capacidad. La capacidad de la clase <xref:System.Text.StringBuilder> se puede especificar con uno de los constructores sobrecargados. En el ejemplo siguiente se especifica que el objeto `MyStringBuilder` se puede expandir hasta un máximo de 25 espacios.  
+ Aunque <xref:System.Text.StringBuilder> es un objeto dinámico que permite expandir el número de caracteres de la cadena que encapsula, se puede especificar un valor para el número máximo de caracteres que puede contener. Este valor se conoce como la capacidad del objeto y no debe confundirse con la longitud de la cadena que el objeto <xref:System.Text.StringBuilder> actual contiene. Por ejemplo, puede crear una instancia de la clase <xref:System.Text.StringBuilder> con la cadena "Hello", que tiene una longitud de 5, y especificar que el objeto tiene una capacidad máxima de 25. Al modificar <xref:System.Text.StringBuilder>, este no reasigna el tamaño para sí mismo hasta que se alcanza la capacidad. Cuando esto sucede, el nuevo espacio se asigna automáticamente y se duplica la capacidad. La capacidad de la clase <xref:System.Text.StringBuilder> se puede especificar con uno de los constructores sobrecargados. En el ejemplo siguiente se especifica que el objeto `myStringBuilder` se puede expandir hasta un máximo de 25 espacios.  
   
  [!code-cpp[Conceptual.StringBuilder#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#2)]
  [!code-csharp[Conceptual.StringBuilder#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#2)]

@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/02/2017
-ms.openlocfilehash: 8eca01acc2308097d1684be8bdb0f07edd86832f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e126cced38073d97289cc5697b36938992e03b0
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579111"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105229"
 ---
 # <a name="implementing-readsqueries-in-a-cqrs-microservice"></a>Implementación de lecturas/consultas en un microservicio CQRS
 
@@ -199,4 +199,5 @@ En la ilustración anterior se pueden ver algunos valores de ejemplo basados en 
     *https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio*
 
 >[!div class="step-by-step"]
-[Anterior] (eshoponcontainers-cqrs-ddd-microservice.md) [Siguiente] (ddd-oriented-microservice.md)
+[Anterior](eshoponcontainers-cqrs-ddd-microservice.md)
+[Siguiente](ddd-oriented-microservice.md)

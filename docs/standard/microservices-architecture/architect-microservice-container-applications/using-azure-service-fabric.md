@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: d65968e3d37f53cceee55120110ad4bb3c13d304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5058023aa7cbb42bcf39d061a3273b30e0e9b74c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577683"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105825"
 ---
 # <a name="using-azure-service-fabric"></a>Uso de Azure Service Fabric
 
@@ -89,4 +89,5 @@ Otros marcos de microservicio que permiten los servicios con estado, que admiten
 Tenga en cuenta que los contenedores de Docker son sin estado. Si quiere implementar un servicio con estado, debe contar con uno de los marcos prescriptivos y de nivel superior adicionales que se han indicado anteriormente. 
 
 >[!div class="step-by-step"]
-[Previous] (scalable-available-multi-container-microservice-applications.md) [Next] (../docker-application-development-process/index.md)
+[Anterior](scalable-available-multi-container-microservice-applications.md)
+[Siguiente](../docker-application-development-process/index.md)

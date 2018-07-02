@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 26e3d6b4cd1df051c00cef4ee8370ca9c213363e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 957a0b1b8b4d217fac591db54e4ee053098bc7da
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577269"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105200"
 ---
 # <a name="handling-partial-failure"></a>Controlar errores parciales
 
@@ -41,4 +41,5 @@ Además, es fundamental que diseñe las aplicaciones cliente y los microservicio
 
 
 >[!div class="step-by-step"]
-[Previous] (index.md) [Next] (partial-failure-strategies.md)
+[Anterior](index.md)
+[Siguiente](partial-failure-strategies.md)

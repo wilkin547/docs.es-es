@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pru
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: e27cdb4b785253edd27e9854d6f977e3ede02266
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b22e0e109144b4abd04cd4199cfdec244d8fa7af
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208205"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106507"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Prueba de aplicaciones ASP.NET Core MVC
 
@@ -273,4 +273,5 @@ public class CatalogControllerGetImage : BaseWebTest
 Esta prueba funcional ejecuta la pila de la aplicación ASP.NET Core MVC completa, incluidos todo el software intermedio, filtros, enlazadores, etc., que pueden estar definidos. Comprueba que una ruta determinada ("/catalog/pic/1") devuelve la matriz de bytes esperada para un archivo en una ubicación conocida. Lo hace sin configurar un servidor web real y de ese modo evita gran parte de la fragilidad que supone el uso de un servidor web real para realizar pruebas (por ejemplo, problemas con la configuración de firewall). Las pruebas funcionales que se ejecutan en TestServer normalmente son más lentas que las pruebas unitarias y de integración, pero son mucho más rápidas que las que se ejecutarían a través de la red a un servidor web de prueba.
 
 >[!div class="step-by-step"]
-[Anterior] (work-with-data-in-asp-net-core-apps.md) [Siguiente] (development-process-for-azure.md)
+[Anterior](work-with-data-in-asp-net-core-apps.md)
+[Siguiente](development-process-for-azure.md)

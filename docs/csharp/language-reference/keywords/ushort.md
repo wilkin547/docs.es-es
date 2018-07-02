@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - ushort keyword [C#]
 ms.assetid: 1a7dbaae-b7a0-4111-872a-c88a6d3981ac
-ms.openlocfilehash: 03638893978779fcfd34544363d935fa5e609481
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 706fb36e687976a2cb8704658856023296131d63
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288829"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027881"
 ---
 # <a name="ushort-c-reference"></a>ushort (Referencia de C#)
 
 La palabra clave `ushort` indica un tipo de datos entero que almacena valores según el tamaño y el intervalo que se indican en la tabla siguiente.  
   
-|Tipo|Intervalo|Tamaño|Tipo de .NET Framework|  
+|Tipo|Intervalo|Tamaño|Tipo de .NET|  
 |----------|-----------|----------|-------------------------|  
 |`ushort`|De 0 a 65.535|Entero de 16 bits sin signo|<xref:System.UInt16?displayProperty=nameWithType>|  
   

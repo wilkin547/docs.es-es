@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Microsoft A
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208196"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104771"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Elección entre aplicaciones web tradicionales y aplicaciones de página única (SPA)
 
@@ -92,4 +92,5 @@ En la tabla de decisiones siguiente se resumen algunos de los factores básicos 
   | Requisitos de la interfaz de usuario enriquecidos y complejos | **Limitados** | **Adecuados** |
 
 >[!div class="step-by-step"]
-[Anterior] (modern-web-applications-characteristics.md) [Siguiente](architectural-principles.md)
+[Anterior](modern-web-applications-characteristics.md)
+[Siguiente](architectural-principles.md)

@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 12899f7ee0f95ccc38d7de152c316442e9bcc8e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0e0e63c6ce2e4699cc4f9c0bd0d120549b88cca
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578929"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106017"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Comunicación en una arquitectura de microservicio
 
@@ -109,4 +109,5 @@ Puesto que la comunicación es en tiempo real, las aplicaciones cliente muestran
 
 
 >[!div class="step-by-step"]
-[Previous] (direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md) [Next] (asynchronous-message-based-communication.md)
+[Anterior](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+[Siguiente](asynchronous-message-based-communication.md)

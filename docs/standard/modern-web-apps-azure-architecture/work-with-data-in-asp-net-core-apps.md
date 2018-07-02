@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Tra
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.openlocfilehash: 89df46c8e04e1826c84058e5d2a92d089eb96098
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9f1350f57ed649b9bf53968c19ab652b3c74384
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592527"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106180"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabajar con datos en aplicaciones ASP.NET Core
 
@@ -437,4 +437,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
 
 >[!div class="step-by-step"]
-[Anterior] (develop-asp-net-core-mvc-apps.md) [Siguiente] (test-asp-net-core-mvc-apps.md)
+[Anterior](develop-asp-net-core-mvc-apps.md)
+[Siguiente](test-asp-net-core-mvc-apps.md)

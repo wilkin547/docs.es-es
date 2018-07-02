@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo portar proyectos de .NET Framework
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: 88513eaee35a82d6424fc2218f8cbbe635a8e02c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f1d79623b4ece836732010e76a3c93fbbf8099f
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218363"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028050"
 ---
 # <a name="porting-to-net-core---libraries"></a>Traslado a .NET Core: bibliotecas
 
@@ -72,18 +72,6 @@ Use los límites de seguridad que proporciona el sistema operativo, como visuali
 De forma similar a lo que ocurre con la seguridad de acceso del código, la transparencia de seguridad permite separar el código de espacios aislados del código crítico de seguridad de manera declarativa, pero [ya no se admite como un límite de seguridad](~/docs/framework/misc/security-transparent-code.md). Silverlight usa mucho esta característica. 
 
 Use los límites de seguridad que proporciona el sistema operativo, como visualización, contenedores o cuentas de usuario para ejecutar procesos con el menor conjunto de privilegios.
-
-### <a name="globaljson"></a>global.json
-
-*global.json* es un archivo opcional que permite establecer la versión de las herramientas de .NET Core de un proyecto. Si usa compilaciones nocturnas de .NET Core y desea especificar una versión del SDK, determine la versión con un archivo *global.json*. Normalmente se encuentra en el directorio de trabajo actual o en alguno de sus directorios principales. 
-
-```json
-{
-  "sdk": {
-    "version": "2.1.0-preview1-006491"
-  }
-}
-```
 
 ## <a name="converting-a-pcl-project"></a>Conversión de un proyecto PCL
 

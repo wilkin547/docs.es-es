@@ -4,11 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: ccaae99f4c46fe739041f9b9e907a702303e62f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd654c23cf8a8d0986575642ef25d6864251a4e4
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104084"
 ---
 # <a name="general-guidance"></a>Orientación general
 
@@ -46,4 +47,5 @@ Utilizar .NET Framework en Docker puede mejorar sus experiencias de implementaci
 
 
 >[!div class="step-by-step"]
-[Anterior] (index.md) [Siguiente] (net-core-container-scenarios.md)
+[Anterior](index.md)
+[Siguiente](net-core-container-scenarios.md)

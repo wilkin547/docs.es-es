@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: b11d2838539b8ddbe21bcfcb77845a10e466c760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb02d2102659abd910f9a7e62652511c65574ab7
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578122"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106241"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Identificar los límites del modelo de dominio para cada microservicio
 
@@ -53,4 +53,5 @@ No compartir la misma entidad de usuario con el mismo número de atributos entre
 
 
 >[!div class="step-by-step"]
-[Previous] (distributed-data-management.md) [Next] (direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+[Anterior](distributed-data-management.md)
+[Siguiente](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

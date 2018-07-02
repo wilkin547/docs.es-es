@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: e0c931405b8b7e3b52bdcbd511737b449dc74273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e836eda7fdc7b55ca7d1fe2ef5bf48a2d4ecb5a3
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579568"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106270"
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementar un modelo de dominio de microservicio con .NET Core 
 
@@ -180,4 +180,5 @@ Por ejemplo, en el ejemplo de código OrderAggregate anterior, hay varios campos
 
 
 >[!div class="step-by-step"]
-[Previous] (microservice-domain-model.md) [Next] (seedwork-domain-model-base-classes-interfaces.md)
+[Anterior](microservice-domain-model.md)
+[Siguiente](seedwork-domain-model-base-classes-interfaces.md)

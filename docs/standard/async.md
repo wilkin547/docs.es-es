@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: b9d612186e1051644e8d4ae9476b8fafd811deb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9084da80ff400bf99fc8641c69bc38c805d039a
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567346"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071439"
 ---
 # <a name="async-overview"></a>Información general de Async
 
@@ -37,7 +37,7 @@ El código asincrónico tiene las siguientes características:
 
 Para obtener más información, vea el tema [Async en profundidad](async-in-depth.md).
 
-En el tema [Modelos para la programación asincrónica](/asynchronous-programming-patterns/index.md), se proporciona una introducción de los tres modelos de programación asincrónica que se admiten en .NET:  
+En el tema [Modelos para la programación asincrónica](asynchronous-programming-patterns/index.md), se proporciona una introducción de los tres modelos de programación asincrónica que se admiten en .NET:  
   
 -   [Asynchronous Programming Model (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) [Modelo de programación asincrónica (APM)] (heredado)  
   

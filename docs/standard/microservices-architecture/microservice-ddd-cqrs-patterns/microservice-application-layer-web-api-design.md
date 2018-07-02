@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 77e0556e4b6d9a22cf76a79ec86d744d9009a39f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5c7e0acb0496aebce4d9cbe8cb51ced0c7166a2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577439"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106611"
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>Diseñar el nivel de aplicación de microservicios y la API web
 
@@ -48,4 +48,5 @@ Necesitaríamos otra guía para tratar SOLID con detalle. Para esta guía solo n
 
 
 >[!div class="step-by-step"]
-[Anterior] (nosql-database-persistence-infrastructure.md) [Siguiente] (microservice-application-layer-implementation-web-api.md)
+[Anterior](nosql-database-persistence-infrastructure.md)
+[Siguiente](microservice-application-layer-implementation-web-api.md)

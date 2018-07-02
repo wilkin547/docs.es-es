@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 7098bc1d37ecdf4826c0db6e754ca8df2ed72fe4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21f502d74aab10b306e350ee831583f06b394dc7
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578058"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105108"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (interfaces y clases base reutilizables para su modelo de dominio)
 
@@ -144,4 +144,5 @@ public interface IRepository<T> where T : IAggregateRoot
 
 
 >[!div class="step-by-step"]
-[Anterior] (net-core-microservice-domain-model.md) [Siguiente] (implement-value-objects.md)
+[Anterior](net-core-microservice-domain-model.md)
+[Siguiente](implement-value-objects.md)

@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/08/2017
-ms.openlocfilehash: 2b15fcaeaa8934caceaeab963123650354abf291
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9da1020ac5b43971a8f976c518f4537bec866c26
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578922"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105851"
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Diseño de la capa de persistencia de infraestructura
 
@@ -164,4 +164,5 @@ En las próximas secciones, se explica cómo implementar el patrón de especific
     [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]
-[Anterior] (domain-events-design-implementation.md) [Siguiente] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+[Anterior](domain-events-design-implementation.md)
+[Siguiente](infrastructure-persistence-layer-implemenation-entity-framework-core.md)

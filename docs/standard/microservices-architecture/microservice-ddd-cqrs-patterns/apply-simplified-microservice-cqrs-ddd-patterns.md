@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4e30b4755af001f85649e611c9f1f976ed294cab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5557a3d83d1f5f3016ff411157db1652d3ac50e2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577051"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106089"
 ---
 # <a name="applying-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Aplicar los patrones CQRS y DDD simplificados en un microservicio
 
@@ -37,4 +37,5 @@ El nivel de aplicación puede ser la propia API web. Aquí, el aspecto de diseñ
 
 
 >[!div class="step-by-step"]
-[Previous] (index.md) [Next] (eshoponcontainers-cqrs-ddd-microservice.md)
+[Anterior](index.md)
+[Siguiente](eshoponcontainers-cqrs-ddd-microservice.md)
