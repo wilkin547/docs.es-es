@@ -31,3 +31,4 @@
 ### [Seguridad e introducción de datos por el usuario](security-and-user-input.md)
 ### [Seguridad y condiciones de carrera](security-and-race-conditions.md)
 ### [Seguridad y generación de código inmediata](security-and-on-the-fly-code-generation.md)
+### [Vulnerabilidades de temporalización con descifrado simétrico en modo CBC al usar el relleno](vulnerabilities-cbc-mode.md)
