@@ -1,6 +1,6 @@
 ---
 title: 'Cómo: Leer texto de un archivo'
-ms.date: 03/30/2017
+ms.date: 06/19/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bb37c5beaaa529ea09fa23f31b55a0d6bc6d510
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7c54e5e55770f3df44819cdf6d2d2c866f7e0fc
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574535"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298167"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Cómo: Leer texto de un archivo
 En los ejemplos siguientes se muestra cómo leer texto desde un archivo de texto de forma sincrónica y asincrónica mediante .NET para aplicaciones de escritorio. En ambos ejemplos, cuando se crea la instancia de la clase <xref:System.IO.StreamReader>, se proporciona la ruta de acceso relativa o absoluta del archivo. En los ejemplos siguientes se supone que el archivo denominado TestFile.txt está en la misma carpeta que la aplicación.  
   
- Estos ejemplos de código no se pueden aplicar al desarrollo de aplicaciones de la Tienda Windows porque Windows Runtime ofrece diferentes tipos de secuencias al leer archivos o escribir en ellos. Para obtener un ejemplo acerca de cómo leer el texto de un archivo en el contexto de una aplicación de la Tienda Windows, vea [Inicio rápido: lectura y escritura de un archivo](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx). Para obtener ejemplos que muestren cómo convertir entre secuencias de .NET Framework y secuencias de Windows Runtime, consulte [Cómo: Convertir entre secuencias .NET Framework y secuencias de Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
+ Estos ejemplos de código no se pueden aplicar al desarrollo de aplicaciones de la Tienda Windows porque Windows Runtime ofrece diferentes tipos de secuencias para leer archivos o escribir en ellos. Para obtener un ejemplo sobre cómo leer el texto de un archivo en una aplicación de la Tienda Windows, vea [Inicio rápido: lectura y escritura de un archivo](https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh758325(v=win.10)). Para obtener ejemplos que muestren cómo convertir entre secuencias de .NET Framework y secuencias de Windows Runtime, vea [Cómo: Convertir entre secuencias .NET Framework y secuencias de Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
 ## <a name="example"></a>Ejemplo  
- El primer ejemplo muestra una operación de lectura sincrónica dentro de una aplicación de consola. En este ejemplo, el archivo de texto se abre con un lector de secuencias, el contenido se copia en una cadena y la cadena se envía a la consola.  
+ En el siguiente ejemplo se muestra una operación de lectura sincrónica dentro de una aplicación de consola. En este ejemplo, el archivo de texto se abre con un lector de secuencias, el contenido se copia en una cadena y la cadena se envía a la consola.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source3.cs#3)]
  [!code-vb[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source3.vb#3)]  
   
 ## <a name="example"></a>Ejemplo  
- El segundo ejemplo muestra una operación de lectura asincrónica dentro de una aplicación de Windows Presentation Foundation (WPF).  
+ En el siguiente ejemplo se muestra una operación de lectura asincrónica en una aplicación de Windows Presentation Foundation (WPF).  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source6.cs#6)]
  [!code-vb[Conceptual.BasicIO.TextFiles#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source6.vb#6)]  

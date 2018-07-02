@@ -3,26 +3,28 @@ title: Ejecución de árboles de expresión
 description: Obtenga información sobre la ejecución de árboles de expresión convirtiéndolos en instrucciones de lenguaje intermedio (IL) ejecutables.
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 54706cd5d8ebe60bb893bc82f05aecddae370602
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb9ec5f023587b4e5c74ab71acbd6a886e085e4a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218168"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207396"
 ---
 # <a name="executing-expression-trees"></a>Ejecución de árboles de expresión
 
 [Anterior: Tipos de marco que admiten árboles de expresión](expression-classes.md)
 
 Un *árbol de expresión* es una estructura de datos que representa un código.
-No es código compilado y ejecutable. Si quiere ejecutar el código de .NET que se representa mediante un árbol de expresión, debe convertirlo en instrucciones de lenguaje intermedio ejecutables. 
+No es código compilado y ejecutable. Si quiere ejecutar el código de .NET que se representa mediante un árbol de expresión, debe convertirlo en instrucciones de lenguaje intermedio ejecutables.
+
 ## <a name="lambda-expressions-to-functions"></a>Expresiones lambda a funciones
-Puede convertir cualquier objeto LambdaExpression o cualquier tipo derivado de LambdaExpression en lenguaje intermedio ejecutable. Otros tipos de expresión no se pueden convertir directamente a código. Esta restricción tiene poco efecto en la práctica. Las expresiones lambda son los únicos tipos de expresiones que podría querer ejecutar mediante la conversión a lenguaje intermedio (IL) ejecutable. (Piense lo que significaría ejecutar directamente una `ConstantExpression`. ¿Tendría algún significado útil?). Cualquier árbol de expresión que es una `LamdbaExpression` o un tipo derivado de `LambdaExpression` se puede convertir a lenguaje intermedio.
+
+Puede convertir cualquier objeto LambdaExpression o cualquier tipo derivado de LambdaExpression en lenguaje intermedio ejecutable. Otros tipos de expresión no se pueden convertir directamente a código. Esta restricción tiene poco efecto en la práctica. Las expresiones lambda son los únicos tipos de expresiones que podría querer ejecutar mediante la conversión a lenguaje intermedio (IL) ejecutable. (Piense lo que significaría ejecutar directamente una `ConstantExpression`. ¿Tendría algún significado útil?). Cualquier árbol de expresión que es una `LambdaExpression` o un tipo derivado de `LambdaExpression` se puede convertir a lenguaje intermedio.
 El tipo de expresión `Expression<TDelegate>` es el único ejemplo concreto en las bibliotecas de .NET Core. Se usa para representar una expresión que se asigna a cualquier tipo de delegado. Dado que este tipo se asigna a un tipo de delegado, .NET puede examinar la expresión y generar el lenguaje intermedio de un delegado adecuado que coincida con la firma de la expresión lambda. 
 
 En la mayoría de los casos, esto crea una asignación simple entre una expresión y su delegado correspondiente. Por ejemplo, un árbol de expresión que se representa por `Expression<Func<int>>` se convertiría a un delegado del tipo `Func<int>`. Para una expresión lambda con cualquier tipo de valor devuelto y lista de argumentos, existe un tipo de delegado que es el tipo de destino para el código ejecutable representado por esa expresión lambda.
 
-El tipo `LamdbaExpression` contiene los miembros `Compile` y `CompileToMethod` que se usarían para convertir un árbol de expresión en código ejecutable. El método `Compile` crea un delegado. El método `CompileToMethod` actualiza un objeto `MethodBuilder` con el lenguaje intermedio que representa la salida compilada del árbol de expresión. Tenga en cuenta que `CompileToMethod` solo está disponible en el marco de trabajo de escritorio completo, no en el marco de trabajo de .NET Core.
+El tipo `LambdaExpression` contiene los miembros `Compile` y `CompileToMethod` que se usarían para convertir un árbol de expresión en código ejecutable. El método `Compile` crea un delegado. El método `CompileToMethod` actualiza un objeto `MethodBuilder` con el lenguaje intermedio que representa la salida compilada del árbol de expresión. Tenga en cuenta que `CompileToMethod` solo está disponible en el marco de trabajo de escritorio completo, no en .NET Core.
 
 Como opción, también puede proporcionar un `DebugInfoGenerator` para que reciba la información de depuración de símbolos para el objeto de delegado generado. Esto le permite convertir el árbol de expresión en un objeto de delegado y disponer de información de depuración completa sobre el delegado generado.
 
@@ -39,7 +41,7 @@ Observe que el tipo de delegado se basa en el tipo de expresión. Debe conocer e
 
 ## <a name="execution-and-lifetimes"></a>Ejecución y duraciones
 
-El código se ejecuta mediante la invocación del delegado que se crea al llamar a `LamdbaExpression.Compile()`. Puede verlo encima de donde `add.Compile()` devuelve un delegado. Invocar ese delegado, mediante una llamada a `func()` ejecuta el código.
+El código se ejecuta mediante la invocación del delegado que se crea al llamar a `LambdaExpression.Compile()`. Puede verlo encima de donde `add.Compile()` devuelve un delegado. Invocar ese delegado, mediante una llamada a `func()` ejecuta el código.
 
 Ese delegado representa el código en el árbol de expresión. Se puede conservar el identificador a ese delegado e invocarlo más adelante. No es necesario compilar el árbol de expresión cada vez que se quiera ejecutar el código que representa. (Recuerde que los árboles de expresión son inmutables y que compilar el mismo árbol de expresión más adelante creará un delegado que ejecuta el mismo código).
 

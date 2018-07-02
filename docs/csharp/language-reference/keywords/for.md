@@ -1,113 +1,107 @@
 ---
 title: for (Referencia de C#)
-ms.date: 07/20/2015
+ms.date: 06/13/2018
 f1_keywords:
 - for
 - for_CSharpKeyword
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 2c099411499c6ca8396c55955bdc634e48caf621
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: beac7727c8ce83d8ea20f0fc578f80ceef3053e7
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34306532"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208096"
 ---
 # <a name="for-c-reference"></a>for (Referencia de C#)
 
-Mediante el uso de un bucle `for`, se puede ejecutar una instrucción o un bloque de instrucciones repetidamente hasta que una expresión especificada se evalúa como `false`.loop, you can run a statement or a block of statements repeatedly until a specified expression evaluates to Este tipo de bucle es útil para recorrer en iteración matrices y para otras aplicaciones en las que se sabe de antemano cuántas veces se quiere recorrer en iteración el bucle.
-  
-## <a name="example"></a>Ejemplo
+La instrucción `for` ejecuta una instrucción o un bloque de instrucciones mientras una expresión booleana especificada se evalúa como `true`.
 
-En el ejemplo siguiente, el valor de `i` se escribe en la consola y se incrementa en 1 durante cada iteración del bucle:
+En cualquier punto del bloque de instrucciones `for`, se puede salir del bucle mediante la instrucción [break](break.md), o bien se puede ir a la siguiente iteración del bucle mediante la instrucción [continue](continue.md). También se puede salir de un bucle `for` mediante las instrucciones [goto](goto.md), [return](return.md) o [throw](throw.md).
   
-[!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]
-  
-La [instrucción for](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) del ejemplo anterior realiza las siguientes acciones:
-  
-1.  Primero, se establece el valor inicial de la variable `i`. Este paso solo se produce una vez, independientemente de cuántas veces se repita el bucle. Esta inicialización se puede considerar que tiene lugar fuera del proceso de bucle.
-  
-2.  Para evaluar la condición (`i <= 5`), el valor de `i` se compara con 5.
-  
-    -   Si `i` es menor o igual a 5, la condición se evalúa como `true` y se producen las siguientes acciones.  
-  
-        1.  La instrucción `Console.WriteLine` en el cuerpo del bucle muestra el valor de `i`.  
-  
-        2.  El valor de `i` se incrementa en 1.  
-  
-        3.  El bucle vuelve al principio del paso 2 para evaluar la condición de nuevo.  
-  
-    -   Si `i` es mayor que 5, la condición se evalúa como `false`, y se sale del bucle.  
-  
-Tenga en cuenta que, si el valor inicial de `i` es mayor que 5, el cuerpo del bucle no se ejecuta ni siquiera una vez.
+## <a name="structure-of-the-for-statement"></a>Estructura de la instrucción `for`
 
-## <a name="sections-of-a-for-statement"></a>Secciones de una instrucción for
+La instrucción `for` define secciones de *inicializador*, *condición* e *iterador*:
   
-Cada [instrucción for](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) define secciones de *inicializador*, *condición* e *iterador*. Normalmente estas secciones determinan cuántas veces se repite el bucle.  
-  
-```csharp  
+```csharp
 for (initializer; condition; iterator)  
     body  
-```  
-  
-Las secciones tienen los objetivos siguientes:
-  
--   La sección de inicializador establece las condiciones iniciales. Las instrucciones de esta sección se ejecutan solo una vez, antes de entrar en el bucle. La sección solo puede contener una de las dos opciones siguientes.  
-  
-    -   La declaración e inicialización de una variable de bucle local, como se muestra en el primer ejemplo (`int i = 1`). La variable es local para el bucle y no es accesible desde fuera del bucle.  
-  
-    -   Ninguna o más expresiones de instrucción de la siguiente lista, separadas por comas.  
-  
-        -   instrucción [assignment](../../../csharp/language-reference/operators/assignment-operator.md)  
-  
-        -   invocación de un método  
-  
-        -   expresión de [incremento](../../../csharp/language-reference/operators/increment-operator.md) de prefijo o sufijo, como `++i` o `i++`  
-  
-        -   expresión de [decremento](../../../csharp/language-reference/operators/decrement-operator.md) de prefijo o sufijo, como `--i` o `i--`  
-  
-        -   creación de un objeto mediante [new](../../../csharp/language-reference/keywords/new-operator.md)  
-  
-        -   expresión [await](../../../csharp/language-reference/keywords/await.md)  
-  
--   La sección de condición contiene una expresión booleana que se evalúa para determinar si el bucle debe salir o volverse a ejecutar.  
-  
--   La sección de iterador define lo que sucede después de cada iteración del cuerpo del bucle. La sección de iterador contiene ninguna o más de las siguientes expresiones de instrucción, separadas por comas:  
-  
-    -   instrucción [assignment](../../../csharp/language-reference/operators/assignment-operator.md)  
-  
-    -   invocación de un método  
-  
-    -   expresión de [incremento](../../../csharp/language-reference/operators/increment-operator.md) de prefijo o sufijo, como `++i` o `i++`  
-  
-    -   expresión de [decremento](../../../csharp/language-reference/operators/decrement-operator.md) de prefijo o sufijo, como `--i` o `i--`  
-  
-    -   creación de un objeto mediante [new](../../../csharp/language-reference/keywords/new-operator.md)  
-  
-    -   expresión [await](../../../csharp/language-reference/keywords/await.md)  
-  
--   El cuerpo del bucle consta de una instrucción, una instrucción vacía o un bloque de instrucciones, que se crean incluyendo cero o más instrucciones entre llaves.  
-  
-     Se puede salir de un bucle `for` mediante la palabra clave [break](../../../csharp/language-reference/keywords/break.md), o bien se puede ir a la siguiente iteración mediante la palabra clave [continue](../../../csharp/language-reference/keywords/continue.md). También se puede salir de un bucle mediante una instrucción [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) o [throw](../../../csharp/language-reference/keywords/throw.md).  
-  
-En el primer ejemplo de este tema se muestra el tipo de bucle `for` más común, que realiza las siguientes opciones para las secciones:
-  
--   El inicializador declara e inicializa una variable de bucle local, `i`, que mantiene un recuento de las iteraciones del bucle.  
-  
--   La condición comprueba el valor de la variable de bucle con un valor final conocido, 5.  
-  
--   La sección de iterador usa una instrucción de incremento postfijo, `i++`, para realizar un recuento de cada iteración del bucle.
+```
 
-## <a name="more-examples"></a>Más ejemplos
+Las tres secciones son opcionales. El cuerpo del bucle es una instrucción o un bloque de instrucciones.
+
+En el siguiente ejemplo se muestra la instrucción `for` con todas las secciones definidas:
+
+[!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
+
+### <a name="the-initializer-section"></a>La sección *inicializador*
+
+Las instrucciones de la sección *inicializador* se ejecutan solo una vez, antes de entrar en el bucle. La sección *inicializador* es cualquiera de las siguientes:
+
+- La declaración e inicialización de una variable de bucle local, a la que no se puede tener acceso desde fuera del bucle.
+
+- Ninguna o más expresiones de instrucción de la siguiente lista, separadas por comas:
+
+  - instrucción [assignment](../operators/assignment-operator.md)
+
+  - invocación de un método  
+
+  - expresión de [incremento](../operators/increment-operator.md) de prefijo o sufijo, como `++i` o `i++`  
+
+  - expresión de [decremento](../operators/decrement-operator.md) de prefijo o sufijo, como `--i` o `i--`  
+
+  - creación de un objeto mediante la palabra clave [new](new-operator.md)
+
+  - expresión [await](await.md)
+
+La sección *inicializador* del ejemplo anterior declara e inicializa la variable de bucle local `i`:
+
+```csharp
+int i = 0
+```
+
+### <a name="the-condition-section"></a>La sección *condición*
+
+La sección *condición*, si está presente, debe ser una expresión booleana. Dicha expresión se evalúa antes de cada iteración del bucle. Si la sección *condición* no está presente o la expresión booleana se evalúa como `true`, se ejecutará la siguiente iteración del bucle; en caso contrario, se sale del bucle.
+
+La sección *condición* del ejemplo anterior determina si el bucle finaliza en función del valor de la variable de bucle local:
+
+```csharp
+i < 5
+```
+
+### <a name="the-iterator-section"></a>La sección *iterador*
+
+La sección *iterador* define lo que sucede después de cada iteración del cuerpo del bucle. La sección *iterador* contiene ninguna o más de las siguientes expresiones de instrucción, separadas por comas:  
+
+- instrucción [assignment](../operators/assignment-operator.md)
+
+- invocación de un método  
+
+- expresión de [incremento](../operators/increment-operator.md) de prefijo o sufijo, como `++i` o `i++`  
+
+- expresión de [decremento](../operators/decrement-operator.md) de prefijo o sufijo, como `--i` o `i--`  
+
+- creación de un objeto mediante la palabra clave [new](new-operator.md)
+
+- expresión [await](await.md)
+
+La sección *iterador* del ejemplo anterior incrementa la variable de bucle local:
+
+```csharp
+i++
+```
+
+## <a name="examples"></a>Ejemplos
+
+En el ejemplo siguiente se muestran varios usos menos comunes de las secciones de instrucción `for`: asignar un valor a una variable de bucle externa en la sección *inicializador*, invocar un método en las secciones *inicializador* e *iterador*, y cambiar los valores de dos variables en la sección *iterador*. Haga clic en **Ejecutar** para ejecutar el código de ejemplo. Después, puede modificar el código y volver a ejecutarlo.
   
-En el ejemplo siguiente se muestran varias opciones menos comunes: asignar un valor a una variable de bucle externa en la sección de inicializador, invocar el método `Console.WriteLine` en las secciones de inicializador y de iterador, y cambiar los valores de dos variables en la sección de iterador.
+[!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
   
-[!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
+En el ejemplo siguiente se define el bucle `for` infinito:
   
-Todas las expresiones que definen una instrucción `for` son opcionales. Por ejemplo, la siguiente instrucción crea un bucle infinito:
-  
-[!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
+[!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
   
 ## <a name="c-language-specification"></a>especificación del lenguaje C#  
 
@@ -116,9 +110,9 @@ Todas las expresiones que definen una instrucción `for` son opcionales. Por eje
 ## <a name="see-also"></a>Vea también
 
 [La instrucción for (especificación del lenguaje C#)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
-[Referencia de C#](../../../csharp/language-reference/index.md)  
-[Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-[Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
-[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+[Referencia de C#](../index.md)  
+[Guía de programación de C#](../../programming-guide/index.md)  
+[Palabras clave de C#](index.md)  
+[foreach, in](foreach-in.md)  
 [for (Instrucción) (C++)](/cpp/cpp/for-statement-cpp)  
-[Instrucciones de iteración](../../../csharp/language-reference/keywords/iteration-statements.md)
+[Instrucciones de iteración](iteration-statements.md)

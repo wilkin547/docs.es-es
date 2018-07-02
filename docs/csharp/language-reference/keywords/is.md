@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: c01152d016a852c15ffa1d1c82c16d6795965f31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16d318c1c1a5d8e560b97d9e996f1165a4566c6a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289222"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208094"
 ---
 # <a name="is-c-reference"></a>is (Referencia de C#) #
 
@@ -75,7 +75,7 @@ Cuando se usa el patrón de tipo para realizar la coincidencia de patrones, `is`
 
 donde *expr* es una expresión que se evalúa como una instancia de un tipo, *type* es el nombre del tipo al que se va a convertir el resultado de *expr* y *varname* es el objeto al que se va a convertir el resultado de *expr* si la prueba `is` es `true`. 
 
-La expresión `is` es `true` si se cumple alguna de las siguientes condiciones:
+La expresión `is` es `true` si *expr* no es `null` y se cumple alguna de las siguientes condiciones:
 
 - *expr* es una instancia del mismo tipo que *type*.
 
@@ -85,7 +85,7 @@ La expresión `is` es `true` si se cumple alguna de las siguientes condiciones:
 
 - *type* es una instancia de un tipo que implementa la interfaz *type*.
 
-Si *exp* es `true` e `is` se usa con una instrucción `if`, *varname* se asigna y tiene ámbito local solo dentro de la instrucción `if`.
+Si *expr* es `true` e `is` se usa con una instrucción `if`, *varname* se asigna y tiene ámbito local solo dentro de la instrucción `if`.
 
 En el ejemplo siguiente se usa el patrón de tipo `is` para proporcionar la implementación de un método <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> de tipo.
 

@@ -4,17 +4,17 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pru
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: 7b4bcb1c39ddbbc104820558532b03bc9341804e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e27cdb4b785253edd27e9854d6f977e3ede02266
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592566"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208205"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Prueba de aplicaciones ASP.NET Core MVC
 
-> _"Si no le gusta realizar pruebas unitarias de su producto, lo más probable es que a los clientes tampoco les guste probarlo"._
-> - Anónimo
+> _"Si no le gusta realizar pruebas unitarias de su producto, lo más probable es que a los clientes tampoco les guste probarlo"_
+>  _- Anónimo-_
 
 ## <a name="summary"></a>Resumen
 
@@ -38,7 +38,7 @@ Las pruebas de integración a menudo tendrán procedimientos más complejos de i
 
 La clase de implementación LocalFileImageService implementa la lógica para recuperar y devolver los bytes de un archivo de imagen de una carpeta concreta con un identificador dado:
 
-```cs
+```csharp
 public class LocalFileImageService : IImageService
 {
     private readonly IHostingEnvironment _env;
@@ -53,6 +53,13 @@ public class LocalFileImageService : IImageService
             var contentRoot = _env.ContentRootPath + "//Pics";
             var path = Path.Combine(contentRoot, id + ".png");
             return File.ReadAllBytes(path);
+        }
+        catch (FileNotFoundException ex)
+        {
+            throw new CatalogImageMissingException(ex);
+        }
+    }
+}
 ```
 
 ### <a name="functional-tests"></a>Pruebas funcionales
@@ -101,19 +108,19 @@ Figura 9-3 Agregar un proyecto de prueba de xUnit en Visual Studio
 
 Debe asignar nombres a las pruebas de forma coherente, con un nombre que indique lo que hace cada prueba. Un enfoque con el que he tenido buenos resultados consiste en asignar nombres a las clases de prueba en función de la clase y el método que estén probando. Esto da como resultado muchas clases de prueba pequeñas, pero deja muy claro la responsabilidad de cada una. Con el nombre de la clase de prueba configurado para identificar la clase y el método que se van a probar, se puede usar el nombre del método de prueba para especificar el comportamiento que se está probando. Esto debe incluir el comportamiento esperado y las entradas o suposiciones que deban producir este comportamiento. Algunos nombres de prueba de ejemplo:
 
--   CatalogControllerGetImage.CallsImageServiceWithId
+- CatalogControllerGetImage.CallsImageServiceWithId
 
--   CatalogControllerGetImage.LogsWarningGivenImageMissingException
+- CatalogControllerGetImage.LogsWarningGivenImageMissingException
 
--   CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess
+- CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess
 
--   CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
+- CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
 
 Una variante de este enfoque finaliza cada nombre de clase de prueba con "Should" (Debería) y modifica ligeramente el tiempo:
 
--   CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
+- CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
 
--   CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
+- CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
 
 Para algunos equipos el segundo método de nomenclatura es más claro, aunque un poco más detallado. En cualquier caso, intente usar una convención de nomenclatura que proporcione información del comportamiento de la prueba, para que cuando se produzca un error en una o varias pruebas, sea obvio a partir de los nombres en qué casos se ha producido el error. Evite asignar nombres a las pruebas de forma vaga, como PruebasControlador.Prueba1, dado que no ofrecen ningún valor cuando se ven en los resultados de las pruebas.
 
@@ -131,7 +138,7 @@ En una aplicación ASP.NET Core bien diseñada, la mayor parte de la complejidad
 
 En ocasiones tendrá que refactorizar el código para poder realizar pruebas unitarias en él. Con frecuencia, esto implica la identificación de abstracciones y el uso de la inserción de dependencias para tener acceso a la abstracción en el código que se quiere probar, en lugar de codificar directamente en la infraestructura. Por ejemplo, considere este método de acción simple para mostrar imágenes:
 
-```cs
+```csharp
 [HttpGet("[controller]/pic/{id}")]
 public IActionResult GetImage(int id)
 {
@@ -146,7 +153,7 @@ La realización de pruebas unitarias en este método se complica debido a su dep
 
 Si no se pueden realizar directamente pruebas unitarias del comportamiento del sistema de archivos y no se puede probar la ruta, ¿qué se puede probar? Después de la refactorización para que las pruebas unitarias sean posibles, puede detectar varios casos de prueba y comportamiento que falta, como el control de errores. ¿Qué hace el método cuando no se encuentra un archivo? ¿Qué debería hacer? En este ejemplo, el método refactorizado tiene el aspecto siguiente:
 
-```cs
+```csharp
 [HttpGet("[controller]/pic/{id}")\]
 public IActionResult GetImage(int id)
 {
@@ -168,21 +175,11 @@ public IActionResult GetImage(int id)
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Pruebas de integración en aplicaciones ASP.NET Core
 
-```cs
-    }
-        catch (FileNotFoundException ex)
-        {
-            throw new CatalogImageMissingException(ex);
-        }
-    }
-}
-```
-
 En este servicio se usa IHostingEnvironment, como hacía el código de CatalogController antes de refactorizarlo en un servicio independiente. Como este era el único código del controlador que usaba IHostingEnvironment, esa dependencia se quitó del constructor de CatalogController.
 
 Para comprobar que este servicio funciona correctamente, tendrá que crear un archivo de imagen de prueba conocida y comprobar que el servicio devuelve si se proporciona una entrada específica. También debe evitar el uso de objetos ficticios en el comportamiento que se quiere probar (en este caso, leer del sistema de archivos). Pero los objetos ficticios pueden seguir siendo útiles para configurar pruebas de integración. En este caso, se puede simular IHostingEnvironment para que su ContentRootPath apunte a la carpeta que se va a usar para la imagen de prueba. La clase de prueba de integración funcional completa se muestra aquí:
 
-```cs
+```csharp
 public class LocalFileImageServiceGetImageBytesById
 {
     private byte[] _testBytes = new byte[] { 0x01, 0x02, 0x03 };
@@ -224,7 +221,7 @@ public class LocalFileImageServiceGetImageBytesById
 
 Para las aplicaciones ASP.NET Core, la clase TestServer facilita considerablemente la creación de pruebas funcionales. Se configura un TestServer mediante un WebHostBuilder, como se hace normalmente para la aplicación. Este WebHostBuilder se debe configurar como el host real de la aplicación, pero se puede modificar cualquiera de sus aspectos para simplificar las pruebas. En la mayoría de los casos, se podrá volver a usar el mismo TestServer para muchos casos de prueba, por lo que se puede encapsular en un método reutilizable (por ejemplo, en una clase base):
 
-```cs
+```csharp
 public abstract class BaseWebTest
 {
     protected readonly HttpClient _client;
@@ -234,14 +231,14 @@ public abstract class BaseWebTest
     {
         _client = GetClient();
     }
-    
+
     protected HttpClient GetClient()
     {
         var startupAssembly = typeof(Startup).GetTypeInfo().Assembly;
         _contentRoot = GetProjectPath("src", startupAssembly);
         var builder = new WebHostBuilder()
         .UseContentRoot(_contentRoot)
-        .UseStartup&lt;Startup&gt;();
+        .UseStartup<Startup>();
         var server = new TestServer(builder);
         var client = server.CreateClient();
         return client;
@@ -251,7 +248,7 @@ public abstract class BaseWebTest
 
 El método GetProjectPath simplemente devuelve la ruta de acceso física al proyecto web (solución de ejemplo de descarga). En este caso, WebHostBuilder simplemente especifica dónde está la raíz del contenido de la aplicación web y hace referencia a la misma clase de inicio que usa la aplicación web real. Para trabajar con TestServer, se usa el tipo System.Net.HttpClient estándar para realizar solicitudes. TestServer expone un método CreateClient útil que proporciona un cliente preconfigurado listo para realizar solicitudes a la aplicación que se ejecuta en TestServer. Este cliente (establecido en el miembro protegido \_client en la prueba base anterior) se usa al escribir las pruebas funcionales para la aplicación ASP.NET Core:
 
-```cs
+```csharp
 public class CatalogControllerGetImage : BaseWebTest
 {
     [Fact]

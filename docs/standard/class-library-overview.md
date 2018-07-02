@@ -39,14 +39,15 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6c61e4721e6daa548db2fffccc75606e98f71cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b6730e621a85dc8e656723647f949449241c407
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577311"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207461"
 ---
 # <a name="net-class-library-overview"></a>Información general de la biblioteca de clases de .NET
+
 Las implementaciones de .NET incluyen clases, interfaces, delegados y tipos de valor que agilizan y optimizan el proceso de desarrollo y proporcionan acceso a las funciones del sistema. Para facilitar la interoperabilidad entre lenguajes, la mayoría de los tipos de .NET son conformes a CLS y, por tanto, se pueden utilizar en todos los lenguajes de programación cuyo compilador satisfaga los requisitos de CLS.  
   
  Los tipos de .NET son la base sobre la que se compilan aplicaciones, componentes y controles de .NET. Las implementaciones de .NET incluyen tipos que efectúan las siguientes funciones:  
@@ -63,22 +64,24 @@ Las implementaciones de .NET incluyen clases, interfaces, delegados y tipos de v
   
 -   Proporcionar: acceso a datos, interfaz gráfica para el usuario (GUI) independiente de cliente e interfaz GUI de cliente controlada por el servidor.  
   
- .NET proporciona un conjunto completo de interfaces, así como clases abstractas y concretas (no abstractas). Se pueden utilizar las clases concretas tal como están o, en muchos casos, derivar las clases propias de ellas. Para utilizar la funcionalidad de una interfaz se puede crear una clase que implemente la interfaz o derivar una clase de una de las clases de .NET Framework que implementa la interfaz.  
+ .NET proporciona un conjunto completo de interfaces, así como clases abstractas y concretas (no abstractas). Se pueden utilizar las clases concretas tal como están o, en muchos casos, derivar las clases propias de ellas. Para usar la funcionalidad de una interfaz se puede crear una clase que implemente la interfaz o derivar una clase de una de las clases de .NET que implementa la interfaz.  
   
-## <a name="naming-conventions"></a>Convenciones de nomenclatura  
- Los tipos de .NET usan un esquema de nomenclatura con sintaxis de punto lo que indica la existencia de una jerarquía. Esta técnica agrupa tipos relacionados en espacios de nombres para que se pueda buscar y hacer referencia a ellos más fácilmente. La primera parte del nombre completo, hasta el punto situado más a la derecha, es el nombre del espacio de nombres. La última parte es el nombre de tipo. Por ejemplo, **System.Collections.ArrayList** representa el tipo **ArrayList** que pertenece al espacio de nombres **System.Collections**. Los tipos de **System.Collections** se pueden usar para manipular colecciones de objetos.  
+## <a name="naming-conventions"></a>Convenciones de nomenclatura
+
+ Los tipos de .NET usan un esquema de nomenclatura con sintaxis de punto lo que indica la existencia de una jerarquía. Esta técnica agrupa tipos relacionados en espacios de nombres para que se pueda buscar y hacer referencia a ellos más fácilmente. La primera parte del nombre completo, hasta el punto situado más a la derecha, es el nombre del espacio de nombres. La última parte es el nombre de tipo. Por ejemplo, `System.Collections.Generic.List<T>` representa el tipo `List<T>`, que pertenece al espacio de nombres `System.Collections.Generic`. Los tipos de <xref:System.Collections.Generic> se pueden usar para trabajar con colecciones genéricas.  
   
  Este esquema de nomenclatura facilita a los programadores de bibliotecas la tarea de extender [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para poder crear grupos jerárquicos de tipos y asignarles nombre de forma coherente e ilustrativa. También permite identificar de forma inequívoca los tipos mediante su nombre completo (es decir, por su espacio de nombres y nombre de tipo), lo que evita que se produzcan conflictos entre los nombres de tipo. Se espera que los programadores de bibliotecas usen la siguiente convención cuando creen nombres para sus propios espacios de nombres:  
   
  *NombreCompañía*.*NombreTecnología*  
   
- Por ejemplo, el espacio de nombres Microsoft.Word cumple esta directriz.  
+ Por ejemplo, el espacio de nombres `Microsoft.Word` cumple esta directriz.  
   
  El uso de modelos de nomenclatura para agrupar tipos relacionados en espacios de nombres es una forma muy útil de compilar y documentar bibliotecas de clases. Sin embargo, este esquema de nomenclatura no influye en la visibilidad, el acceso a miembros, la herencia, la seguridad o el enlace. Se puede hacer la partición de un espacio de nombres en varios ensamblados y un ensamblado individual puede contener tipos de varios espacios de nombres. El ensamblado proporciona la estructura formal para el control de versiones, la implementación, la seguridad, la carga y la visibilidad en Common Language Runtime.  
   
  Para obtener más información sobre espacios de nombres y nombres de tipos, vea [Common Type System](../../docs/standard/base-types/common-type-system.md).  
   
-## <a name="system-namespace"></a>System (Espacio de nombres)  
+## <a name="system-namespace"></a>System (espacio de nombres)
+
  El espacio de nombres <xref:System> es el espacio de nombres de la raíz de los tipos fundamentales de .NET. Este espacio de nombres contiene clases que representan los tipos de datos base que se utilizan en todas las aplicaciones: <xref:System.Object> (raíz de la jerarquía de herencia), <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String>, etc. Muchos de estos tipos se corresponden con los tipos de datos primitivos que utiliza el lenguaje de programación. Cuando se escribe código utilizando tipos de .NET Framework se puede utilizar la palabra clave correspondiente del lenguaje cuando se espera un tipo de datos base de .NET Framework.  
   
  En la tabla siguiente se muestra una lista de los tipos base que proporciona .NET, se describe brevemente cada tipo y se indica el tipo correspondiente de Visual Basic, C#, C++ y F#.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d94cfeecc9556fb01dd3d72649d960ce68f929d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f15374fd7fd131256cdeb89dcb16ba13827c232
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580902"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298388"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Cómo: Implementar un modelo de flujo de datos productor-consumidor
 Este documento describe cómo utilizar la biblioteca de flujos de datos TPL para implementar un modelo productor-consumidor. En este modelo, el *productor* envía mensajes a un bloque de mensajes y el *consumidor* lee los mensajes de este bloque.  
@@ -44,7 +44,7 @@ Este documento describe cómo utilizar la biblioteca de flujos de datos TPL para
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowProducerConsumer.vb**  
   
 ## <a name="robust-programming"></a>Programación sólida  
- Este ejemplo utiliza un solo consumidor para procesar los datos de origen. Si tiene varios consumidores en la aplicación, use el método <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> para leer datos desde el bloque de origen, como se muestra en el siguiente ejemplo.  
+ En el ejemplo anterior se usa un solo consumidor para procesar los datos de origen. Si tiene varios consumidores en la aplicación, use el método <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> para leer datos desde el bloque de origen, como se muestra en el siguiente ejemplo.  
   
  [!code-csharp[TPLDataflow_ProducerConsumer#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_producerconsumer/cs/dataflowproducerconsumer.cs#2)]
  [!code-vb[TPLDataflow_ProducerConsumer#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_producerconsumer/vb/dataflowproducerconsumer.vb#2)]  
