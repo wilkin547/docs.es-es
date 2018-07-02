@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63767a3ba2831ca9cadd9b99998eb871780143e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40eeeab159bdef9fc286374fde8c1c1d3a9f5c2b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579048"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105659"
 ---
 # <a name="file-and-stream-io"></a>E/S de archivos y secuencias
 La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferencia de datos con destino u origen en un medio de almacenamiento. En .NET Framework, los espacios de nombres `System.IO` contienen tipos que permiten la lectura y escritura, tanto sincrónica como asincrónica, en archivos y flujos de datos. Estos espacios de nombres también contienen tipos que realizan la compresión y la descompresión de archivos, así como tipos que permiten la comunicación a través de canalizaciones y puertos de serie.  
@@ -26,6 +26,8 @@ La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferen
   
 ## <a name="files-and-directories"></a>Archivos y directorios  
  Se pueden utilizar los tipos del espacio de nombres <xref:System.IO?displayProperty=nameWithType> para interactuar con archivos y directorios. Por ejemplo, se pueden obtener y establecer las propiedades de los archivos y directorios, y recuperar colecciones de archivos y de directorios basándose en criterios de búsqueda.  
+
+Para obtener las convenciones de nomenclatura de las rutas de acceso y las maneras de expresar una ruta de acceso de archivo para los sistemas Windows, incluidos con la sintaxis de dispositivo DOS compatible en .NET Core 1.1 y versiones posteriores, y .NET Framework 4.6.2 y versiones posteriores, vea [File path formats on Windows systems](file-path-formats.md) (Formatos de ruta de acceso de archivo en sistemas Windows). 
   
  Estas son algunas clases de archivo y directorio de uso general:  
   

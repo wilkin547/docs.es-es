@@ -1,4 +1,5 @@
 # [E/S de archivos y secuencias](index.md)
+## [Formatos de ruta de acceso de archivo en los sistemas Windows](file-path-formats.md)
 ## [Tareas de E/S comunes](common-i-o-tasks.md)
 ### [Copiar directorios](how-to-copy-directories.md)
 ### [Enumerar directorios y archivos](how-to-enumerate-directories-and-files.md)

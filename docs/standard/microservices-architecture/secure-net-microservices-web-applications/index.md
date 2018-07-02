@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c2c7d692517c6a46225542936e05656db915bf0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccdf6ecc30979e953d42a403c2c988780394df96
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591981"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106702"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>Proteger microservicios y aplicaciones web de .NET
 
@@ -250,4 +250,5 @@ El software intermedio de autenticación del portador de JWT también puede admi
 
 
 >[!div class="step-by-step"]
-[Anterior] (../implement-resilient-applications/monitor-app-health.md) [Siguiente] (authorization-net-microservices-web-applications.md)
+[Anterior](../implement-resilient-applications/monitor-app-health.md)
+[Siguiente](authorization-net-microservices-web-applications.md)
