@@ -1,11 +1,7 @@
 ---
-title: base (Referencia de C#)
+title: Palabra clave base (Referencia de C#)
 description: Obtenga información sobre la palabra clave base, que se usa para acceder a los miembros de la clase base desde una clase derivada en C#.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - base
 - BaseClass.BaseClass
@@ -13,46 +9,48 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-caps.latest.revision: 14
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1bbaa0cc05b35f822113bc3a8c3cde966b1484ef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 94bfcbacd8c222004c1a013cc855ac8d46aab05f
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314664"
 ---
-# <a name="base-c-reference"></a><span data-ttu-id="bac40-103">base (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="bac40-103">base (C# Reference)</span></span>
+# <a name="base-c-reference"></a><span data-ttu-id="666ab-103">base (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="666ab-103">base (C# Reference)</span></span>
 
-<span data-ttu-id="bac40-104">La palabra clave `base` se usa para acceder a los miembros de la clase base desde una clase derivada:</span><span class="sxs-lookup"><span data-stu-id="bac40-104">The `base` keyword is used to access members of the base class from within a derived class:</span></span>
+<span data-ttu-id="666ab-104">La palabra clave `base` se usa para acceder a los miembros de la clase base desde una clase derivada:</span><span class="sxs-lookup"><span data-stu-id="666ab-104">The `base` keyword is used to access members of the base class from within a derived class:</span></span>
 
-- <span data-ttu-id="bac40-105">Llamar a un método en la clase base que haya sido reemplazado por otro método.</span><span class="sxs-lookup"><span data-stu-id="bac40-105">Call a method on the base class that has been overridden by another method.</span></span>
+- <span data-ttu-id="666ab-105">Llamar a un método en la clase base que haya sido reemplazado por otro método.</span><span class="sxs-lookup"><span data-stu-id="666ab-105">Call a method on the base class that has been overridden by another method.</span></span>
 
-- <span data-ttu-id="bac40-106">Especificar a qué constructor de clase base se debe llamar cuando se crean instancias de la clase derivada.</span><span class="sxs-lookup"><span data-stu-id="bac40-106">Specify which base-class constructor should be called when creating instances of the derived class.</span></span>
+- <span data-ttu-id="666ab-106">Especificar a qué constructor de clase base se debe llamar cuando se crean instancias de la clase derivada.</span><span class="sxs-lookup"><span data-stu-id="666ab-106">Specify which base-class constructor should be called when creating instances of the derived class.</span></span>
 
-<span data-ttu-id="bac40-107">Solo se permite el acceso a una clase base en un constructor, un método de instancia o un descriptor de acceso de propiedad de instancia.</span><span class="sxs-lookup"><span data-stu-id="bac40-107">A base class access is permitted only in a constructor, an instance method, or an instance property accessor.</span></span>
+<span data-ttu-id="666ab-107">Solo se permite el acceso a una clase base en un constructor, un método de instancia o un descriptor de acceso de propiedad de instancia.</span><span class="sxs-lookup"><span data-stu-id="666ab-107">A base class access is permitted only in a constructor, an instance method, or an instance property accessor.</span></span>
 
-<span data-ttu-id="bac40-108">Usar la palabra clave `base` desde dentro de un método estático constituye un error.</span><span class="sxs-lookup"><span data-stu-id="bac40-108">It is an error to use the `base` keyword from within a static method.</span></span>
+<span data-ttu-id="666ab-108">Usar la palabra clave `base` desde dentro de un método estático constituye un error.</span><span class="sxs-lookup"><span data-stu-id="666ab-108">It is an error to use the `base` keyword from within a static method.</span></span>
 
-<span data-ttu-id="bac40-109">La clase base a la que se obtiene acceso es la especificada en la declaración de clase.</span><span class="sxs-lookup"><span data-stu-id="bac40-109">The base class that is accessed is the base class specified in the class declaration.</span></span> <span data-ttu-id="bac40-110">Por ejemplo, si especifica `class ClassB : ClassA`, se obtiene acceso a los miembros de ClassA desde ClassB, independientemente de la clase base de ClassA.</span><span class="sxs-lookup"><span data-stu-id="bac40-110">For example, if you specify `class ClassB : ClassA`, the members of ClassA are accessed from ClassB, regardless of the base class of ClassA.</span></span>
+<span data-ttu-id="666ab-109">La clase base a la que se obtiene acceso es la especificada en la declaración de clase.</span><span class="sxs-lookup"><span data-stu-id="666ab-109">The base class that is accessed is the base class specified in the class declaration.</span></span> <span data-ttu-id="666ab-110">Por ejemplo, si especifica `class ClassB : ClassA`, se obtiene acceso a los miembros de ClassA desde ClassB, independientemente de la clase base de ClassA.</span><span class="sxs-lookup"><span data-stu-id="666ab-110">For example, if you specify `class ClassB : ClassA`, the members of ClassA are accessed from ClassB, regardless of the base class of ClassA.</span></span>
 
-## <a name="example"></a><span data-ttu-id="bac40-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="bac40-111">Example</span></span>
-<span data-ttu-id="bac40-112">En este ejemplo, la clase base, `Person`, y la clase derivada, `Employee`, tienen un método denominado `Getinfo`.</span><span class="sxs-lookup"><span data-stu-id="bac40-112">In this example, both the base class, `Person`, and the derived class, `Employee`, have a method named `Getinfo`.</span></span> <span data-ttu-id="bac40-113">Mediante el uso de la palabra clave `base`, es posible llamar al método `Getinfo` en la clase base desde la clase derivada.</span><span class="sxs-lookup"><span data-stu-id="bac40-113">By using the `base` keyword, it is possible to call the `Getinfo` method on the base class, from within the derived class.</span></span>
+## <a name="example"></a><span data-ttu-id="666ab-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="666ab-111">Example</span></span>
 
-[!code-csharp[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_1.cs)]
+<span data-ttu-id="666ab-112">En este ejemplo, la clase base, `Person`, y la clase derivada, `Employee`, tienen un método denominado `Getinfo`.</span><span class="sxs-lookup"><span data-stu-id="666ab-112">In this example, both the base class, `Person`, and the derived class, `Employee`, have a method named `Getinfo`.</span></span> <span data-ttu-id="666ab-113">Mediante el uso de la palabra clave `base`, es posible llamar al método `Getinfo` en la clase base desde la clase derivada.</span><span class="sxs-lookup"><span data-stu-id="666ab-113">By using the `base` keyword, it is possible to call the `Getinfo` method on the base class, from within the derived class.</span></span>
 
-<span data-ttu-id="bac40-114">Para ver más ejemplos, consulte [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md) y [override](../../../csharp/language-reference/keywords/override.md).</span><span class="sxs-lookup"><span data-stu-id="bac40-114">For additional examples, see [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md), and [override](../../../csharp/language-reference/keywords/override.md).</span></span>
+[!code-csharp[csrefKeywordsAccess#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#1)]
 
-## <a name="example"></a><span data-ttu-id="bac40-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="bac40-115">Example</span></span>
-<span data-ttu-id="bac40-116">En este ejemplo se muestra cómo especificar el constructor de clase base al que se llama al crear instancias de una clase derivada.</span><span class="sxs-lookup"><span data-stu-id="bac40-116">This example shows how to specify the base-class constructor called when creating instances of a derived class.</span></span>
+<span data-ttu-id="666ab-114">Para ver más ejemplos, consulte [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md) y [override](../../../csharp/language-reference/keywords/override.md).</span><span class="sxs-lookup"><span data-stu-id="666ab-114">For additional examples, see [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md), and [override](../../../csharp/language-reference/keywords/override.md).</span></span>
 
-[!code-csharp[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_2.cs)]
+## <a name="example"></a><span data-ttu-id="666ab-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="666ab-115">Example</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="bac40-117">especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="bac40-117">C# language specification</span></span>
+<span data-ttu-id="666ab-116">En este ejemplo se muestra cómo especificar el constructor de clase base al que se llama al crear instancias de una clase derivada.</span><span class="sxs-lookup"><span data-stu-id="666ab-116">This example shows how to specify the base-class constructor called when creating instances of a derived class.</span></span>
+
+[!code-csharp[csrefKeywordsAccess#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#2)]
+
+## <a name="c-language-specification"></a><span data-ttu-id="666ab-117">especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="666ab-117">C# language specification</span></span>
+
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="bac40-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="bac40-118">See also</span></span>
- [<span data-ttu-id="bac40-119">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="bac40-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="bac40-120">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="bac40-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="bac40-121">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="bac40-121">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="bac40-122">this</span><span class="sxs-lookup"><span data-stu-id="bac40-122">this</span></span>](../../../csharp/language-reference/keywords/this.md)
+## <a name="see-also"></a><span data-ttu-id="666ab-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="666ab-118">See also</span></span>
+
+[<span data-ttu-id="666ab-119">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="666ab-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+[<span data-ttu-id="666ab-120">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="666ab-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+[<span data-ttu-id="666ab-121">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="666ab-121">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+[<span data-ttu-id="666ab-122">this</span><span class="sxs-lookup"><span data-stu-id="666ab-122">this</span></span>](../../../csharp/language-reference/keywords/this.md)
