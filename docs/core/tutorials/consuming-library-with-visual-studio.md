@@ -3,19 +3,20 @@ title: Consumo de una biblioteca de clases con .NET Core en Visual Studio 2017
 description: Obtenga información sobre cómo llamar a los miembros de una biblioteca de clases con Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 0a7002f2a5dba5a5aad32a83a43a933cd2cc5722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e71001ee8595741119293304190fd9ef4251148
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827318"
 ---
-# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Consumo de una biblioteca de clases con .NET Core en Visual Studio 2017
+# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Consumo de una biblioteca de clases con .NET Core en Visual Studio 2017
 
-Una vez que haya creado una biblioteca de clases siguiendo los pasos de [Building a C# class library with .NET Core in Visual Studio 2017](./library-with-visual-studio.md) (Creación de una biblioteca de clases de C# con .NET Core en Visual Studio 2017) o [Building a Visual Basic class library with .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) (Creación de una biblioteca de clases de Visual Basic con .NET Core en Visual Studio 2017), pruébela en [Testing a class library with .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md) (Prueba de una biblioteca de clases con .NET Core en Visual Studio 2017), y compile una versión de lanzamiento de la biblioteca; el paso siguiente consiste en hacer que esté disponible para los autores de llamadas. Existen dos maneras de hacerlo:
+Una vez que haya creado una biblioteca de clases de .NET Standard siguiendo los pasos de [Building a C# class library with .NET Core in Visual Studio 2017](./library-with-visual-studio.md) (Creación de una biblioteca de clases de C# con .NET Core en Visual Studio 2017) o [Building a Visual Basic class library with .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) (Creación de una biblioteca de clases de Visual Basic con .NET Core en Visual Studio 2017), pruébela en [Testing a class library with .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md) (Prueba de una biblioteca de clases con .NET Core en Visual Studio 2017), y compile una versión de lanzamiento de la biblioteca; el paso siguiente consiste en hacer que esté disponible para los autores de llamadas. Existen dos maneras de hacerlo:
 
 * Si una única solución va a usar la biblioteca (por ejemplo, si es un componente de una sola aplicación más grande), se puede incluir como proyecto en la solución.
 
@@ -48,7 +49,7 @@ Así como se incluyen pruebas unitarias en la misma solución que la biblioteca 
 
    [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
 
-   El código usa la propiedad [Console.WindowHeight](xref:System.Console.WindowHeight) para determinar el número de filas de la ventana de consola. Siempre que la propiedad [Console.CursorTop](xref:System.Console.CursorTop) sea mayor o igual que el número de filas de la ventana de consola, el código borra la ventana de consola y muestra un mensaje al usuario.
+   El código usa la variable `row` para mantener un recuento del número de filas de datos escritas en la ventana de consola. Siempre que sea mayor o igual a 25, el código borra la ventana de consola y muestra un mensaje al usuario.
 
    El programa le pide al usuario que escriba una cadena. Indica si la cadena comienza con un carácter en mayúsculas. Si el usuario presiona la tecla Entrar sin especificar una cadena, la aplicación finaliza y la ventana de consola se cierra.
 
@@ -78,7 +79,7 @@ Así como se incluyen pruebas unitarias en la misma solución que la biblioteca 
 
     [!CODE-vb[UsingClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
 
-   El código usa la propiedad [Console.WindowHeight](xref:System.Console.WindowHeight) para determinar el número de filas de la ventana de consola. Siempre que la propiedad [Console.CursorTop](xref:System.Console.CursorTop) sea mayor o igual que el número de filas de la ventana de consola, el código borra la ventana de consola y muestra un mensaje al usuario.
+   El código usa la variable `row` para mantener un recuento del número de filas de datos escritas en la ventana de consola. Siempre que sea mayor o igual a 25, el código borra la ventana de consola y muestra un mensaje al usuario.
 
    El programa le pide al usuario que escriba una cadena. Indica si la cadena comienza con un carácter en mayúsculas. Si el usuario presiona la tecla Entrar sin especificar una cadena, la aplicación finaliza y la ventana de consola se cierra.
 

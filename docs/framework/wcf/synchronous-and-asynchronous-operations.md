@@ -8,23 +8,24 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 6c464dc79e0f38b72f724fafcef59916d766e2d0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 8f2d962f40f2b56b1d1dda68129f477e4277ae1d
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728357"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operaciones sincrónicas y asincrónicas
 Este tema explica cómo implementar y llamar a operaciones de servicio asincrónicas.  
   
- Muchas aplicaciones llaman a métodos de forma asincrónica porque permite que la aplicación siga realizando un trabajo útil mientras la llamada al método se ejecuta. Servicios de Windows Communication Foundation (WCF) y los clientes pueden participar en las llamadas de operación asincrónica en dos niveles distintos de la aplicación, que proporcionan más flexibilidad para maximizar el rendimiento equilibrado con interactividad a las aplicaciones de WCF .  
+ Muchas aplicaciones llaman a métodos de forma asincrónica porque permite que la aplicación siga realizando un trabajo útil mientras la llamada al método se ejecuta. Los servicios y clientes de Windows Communication Foundation (WCF) pueden participar en llamadas de operación asincrónica en dos niveles distintos de la aplicación, que proporcionan a las aplicaciones de WCF aún más flexibilidad para maximizar el rendimiento equilibrado con interactividad.  
   
 ## <a name="types-of-asynchronous-operations"></a>Tipos de operaciones asincrónicas  
- Servicio todos los contratos de WCF, con independencia de los tipos de parámetros y valores devueltos, utilice atributos WCF para especificar un patrón de intercambio de mensajes determinado entre cliente y servicio. WCF enruta automáticamente los mensajes entrantes y salientes a la operación de servicio adecuado o ejecutar código de cliente.  
+ Todos los contratos de servicio en WCF, independientemente de los tipos y los valores devueltos de los parámetros, usan atributos de WCF para especificar un patrón de intercambio de mensajes determinado entre el cliente y el servicio. WCF enruta automáticamente los mensajes de entrada y de salida a la operación de servicio o al código de cliente adecuado.  
   
  El cliente posee solo el contrato de servicio, que especifica el patrón de intercambio de mensajes para una operación determinada. Los clientes pueden ofrecer cualquier modelo de programación que elijan al programador, siempre y cuando se observe el patrón de intercambio de mensajes subyacente. Así, también, los servicios pueden implementar operaciones de cualquier manera, siempre que se observe el patrón del mensaje especificado.  
   
- La independencia del contrato de servicios de implementación en el servicio o el cliente permite las siguientes formas de ejecución asincrónica en aplicaciones de WCF:  
+ La independencia del contrato de servicio del servicio o de la implementación del cliente habilita los formularios siguientes de ejecución asincrónica en aplicaciones de WCF:  
   
 -   Los clientes pueden invocar operaciones de solicitud/respuesta asincrónicamente mediante un intercambio de mensajes sincrónico.  
   
@@ -37,11 +38,11 @@ Este tema explica cómo implementar y llamar a operaciones de servicio asincrón
   
 -   Use un enfoque asincrónico en una aplicación de cliente o que realiza la llamada en los casos siguientes:  
   
--   Si invoca operaciones desde una aplicación de nivel intermedio. (Para obtener más información acerca de estos escenarios, vea [aplicaciones de cliente de nivel intermedio](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).)  
+-   Si invoca operaciones desde una aplicación de nivel intermedio. (Para obtener más información acerca de estos escenarios, vea [Aplicaciones cliente de nivel intermedio](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)).  
   
 -   Si invoca operaciones desde una página ASP.NET, use páginas asincrónicas.  
   
--   Si invoca operaciones desde cualquier aplicación que tiene un único subproceso, como Windows Forms o Windows Presentation Foundation (WPF). Si utiliza el modelo de llamada asincrónica basado en evento, el evento resultante se genera en el proceso de interfaz de usuario, agregando capacidad de respuesta a la aplicación sin que sea necesario controlar procesos múltiples.  
+-   Si invoca operaciones desde cualquier aplicación de proceso simple, como Windows Forms o Windows Presentation Foundation (WPF). Si utiliza el modelo de llamada asincrónica basado en evento, el evento resultante se genera en el proceso de interfaz de usuario, agregando capacidad de respuesta a la aplicación sin que sea necesario controlar procesos múltiples.  
   
 -   En general, si puede elegir entre una llamada sincrónica y una asincrónica, elija la asincrónica.  
   
@@ -55,7 +56,7 @@ Este tema explica cómo implementar y llamar a operaciones de servicio asincrón
 3.  El patrón asincrónico de IAsyncResult  
   
 #### <a name="task-based-asynchronous-pattern"></a>Modelo asincrónico basado en tareas  
- El patrón asincrónico basado en tareas es la forma recomendada de implementar operaciones asincrónicas porque es la más sencilla. Para utilizar este método simplemente implementar la operación de servicio y especifique un tipo de valor devuelto de tarea\<T >, donde T es el tipo devuelto por la operación lógica. Por ejemplo:  
+ El patrón asincrónico basado en tareas es la forma recomendada de implementar operaciones asincrónicas porque es la más sencilla. Para usar este método implemente simplemente la operación de servicio y especifique un tipo de valor devuelto de Task\<T>, donde T es el tipo devuelto por la operación lógica. Por ejemplo:  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -72,7 +73,7 @@ public class SampleService:ISampleService
 }  
 ```  
   
- La operación SampleMethodTaskAsync devuelve Task\<cadena > porque la operación lógica devuelve una cadena. Para obtener más información sobre el modelo asincrónico basado en tareas, consulte [patrón asincrónico basado en tareas](http://go.microsoft.com/fwlink/?LinkId=232504).  
+ La operación SampleMethodTaskAsync devuelve Task\<string> porque la operación lógica devuelve una cadena. Para obtener más información sobre el patrón asincrónico basado en tareas, [Información general sobre el patrón asincrónico basado en tareas](http://go.microsoft.com/fwlink/?LinkId=232504).  
   
 > [!WARNING]
 >  Cuando se usa el patrón asincrónico basado en tareas, se puede iniciar T:System.AggregateException si se produce una excepción mientras se espera la finalización de la operación. Esta excepción puede producirse en el cliente o servicios  
@@ -106,14 +107,14 @@ public class AsyncExample
 }  
 ```  
   
- Para obtener más información sobre el modelo asincrónico basado en eventos, vea [información general](http://go.microsoft.com/fwlink/?LinkId=232515).  
+ Para obtener más información sobre el modelo asincrónico basado en eventos, [Información general sobre el modelo asincrónico basado en eventos](http://go.microsoft.com/fwlink/?LinkId=232515).  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>Modelo asincrónico de IAsyncResult  
  Una operación de servicio se puede implementar asincrónicamente mediante el patrón de programación asincrónico [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] y marcando el método `<Begin>` con la propiedad <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> establecida en `true`. En este caso, la operación asincrónica se expone en metadatos de la misma manera que una operación sincrónica: se expone como una operación única con un mensaje de solicitud y un mensaje de respuesta correlativo. Los modelos de programación de cliente tienen entonces una opción. Pueden representar este patrón como una operación sincrónica o como una asincrónica, siempre que se origine un intercambio de mensajes solicitud-respuesta cuando se invoque el servicio.  
   
  En general, con la naturaleza asincrónica de los sistemas, no se debería adoptar la dependencia de los subprocesos.  La manera más fiable de pasar los datos a varias fases del procesamiento de envío de la operación es usar extensiones.  
   
- Para obtener un ejemplo, vea [Cómo: implementar una operación de servicio asincrónica](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md).  
+ Para ver un ejemplo, consulte [Cómo implementar una operación de servicios asincrónica](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md).  
   
  Para definir una operación de contrato `X` que se ejecuta asincrónicamente sin tener en cuenta cómo se llama en la aplicación cliente:  
   
@@ -136,18 +137,28 @@ Function DoWork(ByVal data As String, ByRef inout As String, _out outonly As out
  Para crear una operación asincrónica, los dos métodos serían:  
   
 ```csharp  
-[OperationContract(AsyncPattern=true)]IAsyncResult BeginDoWork(string data,                           ref string inout,                           AsyncCallback callback,                           object state);int EndDoWork(ref string inout, out string outonly, IAsyncResult result);  
+[OperationContract(AsyncPattern=true)]
+IAsyncResult BeginDoWork(string data,
+                         ref string inout,
+                         AsyncCallback callback,
+                         object state);
+int EndDoWork(ref string inout, out string outonly, IAsyncResult result);  
 ```  
   
 ```vb  
-<OperationContract(AsyncPattern := True)>  _Function BeginDoWork(ByVal data As String, _                 ByRef inout As String, _                 ByVal callback As AsyncCallback, _                 ByVal state As Object) _As IAsyncResult Function EndDoWork(ByRef inout As String, _        ByRef outonly As String, _        ByVal result As IAsyncResult) _As Integer  
+<OperationContract(AsyncPattern := True)>
+Function BeginDoWork(ByVal data As String, _
+                     ByRef inout As String, _
+                     ByVal callback As AsyncCallback, _
+                     ByVal state As Object) As IAsyncResult
+Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result As IAsyncResult) As Integer  
 ```  
   
 > [!NOTE]
 >  El atributo <xref:System.ServiceModel.OperationContractAttribute> se aplica solamente a los métodos de `BeginDoWork`. El contrato resultante tiene una operación WSDL denominada `DoWork`.  
   
 ### <a name="client-side-asynchronous-invocations"></a>Llamadas asincrónicas del cliente  
- Una aplicación de cliente WCF puede usar cualquiera de los tres modelos que realiza la llamada asincrónicos que se ha descrito anteriormente  
+ Una aplicación cliente de WCF puede usar cualquiera de los tres modelos de llamada asincrónica descritos previamente  
   
  Cuando se usa el modelo basado en tareas, basta con llamar a la operación mediante la palabra clave await como se muestra en el fragmento de código siguiente.  
   
@@ -155,21 +166,21 @@ Function DoWork(ByVal data As String, ByRef inout As String, _out outonly As out
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  
 ```  
   
- El uso del patrón asincrónico basado en eventos solo requiere agregar un controlador de eventos para recibir una notificación de la respuesta, y el evento resultante se genera automáticamente en el subproceso de la interfaz de usuario. Para utilizar este enfoque, puede especificar tanto el **/async** y **/tcv:Version35** comando Opciones con el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), como en el siguiente ejemplo.  
+ El uso del patrón asincrónico basado en eventos solo requiere agregar un controlador de eventos para recibir una notificación de la respuesta, y el evento resultante se genera automáticamente en el subproceso de la interfaz de usuario. Para aplicar este enfoque, especifique las opciones de comando **/async** y **/tcv:Version35** con la [Herramienta de utilidad de metadatos ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), como en el ejemplo siguiente.  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- Cuando esto sucede, Svcutil.exe genera una clase de cliente WCF con la infraestructura que permite a la aplicación que realiza la llamada implementar y asignar un controlador de eventos para recibir la respuesta y realice la acción apropiada. Para obtener un ejemplo completo, vea [Cómo: llamar a las operaciones de servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Una vez hecho esto, Svcutil.exe genera una clase de cliente de WCF con la infraestructura de cliente que permite a la aplicación de llamada implementar y asignar un controlador de eventos para recibir la respuesta y realizar la acción apropiada. Para ver un ejemplo completo, consulte [Llamada a operaciones de servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
- El modelo asincrónico basado en eventos, sin embargo, solo está disponible en [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]. Además, no se admite incluso en [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] cuando se crea un canal de cliente WCF mediante el uso de un <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Con objetos de canal de cliente WCF, debe usar <xref:System.IAsyncResult?displayProperty=nameWithType> objetos que se va a invocar las operaciones de forma asincrónica. Para utilizar este enfoque, especifique la **/async** comando opción con la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), como en el ejemplo siguiente.  
+ El modelo asincrónico basado en eventos, sin embargo, solo está disponible en [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]. Además, no está permitido ni en [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] cuando se crea un canal de cliente de WCF mediante <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Con objetos de canal de cliente de WCF, debe utilizar objetos <xref:System.IAsyncResult?displayProperty=nameWithType> para invocar sus operaciones asincrónicamente. Para aplicar este enfoque, especifique la opción de comando **/async** con la [Herramienta de utilidad de metadatos ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), como en el ejemplo siguiente.  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
 ```  
   
- Esto genera un contrato de servicio en el cual cada operación se modela como un método `<Begin>` con la propiedad <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> establecida en `true` y un método `<End>` correspondiente. Para obtener un ejemplo completo uso un <xref:System.ServiceModel.ChannelFactory%601>, consulte [Cómo: llamar a las operaciones de forma asincrónica utilizando un generador de canales](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
+ Esto genera un contrato de servicio en el cual cada operación se modela como un método `<Begin>` con la propiedad <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> establecida en `true` y un método `<End>` correspondiente. Para ver un ejemplo completo en el que se usa <xref:System.ServiceModel.ChannelFactory%601>, consulte [Llamada a operaciones de manera asincrónica mediante un generador de canales](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
   
  En cualquier caso, las aplicaciones pueden invocar una operación asincrónicamente aun cuando se implementa el servicio sincrónicamente, del mismo modo que una aplicación puede usar el mismo patrón para invocar de forma asincrónica un método sincrónico local. Cómo se implementa la operación no es significativo para el cliente; cuando llega el mensaje de respuesta, su contenido se envía al método <`End`> de extremo asincrónico del cliente y este recupera la información.  
   
@@ -179,7 +190,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
 ### <a name="event-based-asynchronous-clients-and-message-contracts"></a>Clientes asincrónicos y contratos de mensajes basados en eventos  
  Las directrices de diseño del modelo asincrónico basado en eventos afirman que si se devuelve más de un valor, uno de los valores se devuelve como propiedad `Result` y los demás se devuelven como propiedades del objeto <xref:System.EventArgs>. De esto resulta que si un cliente importa metadatos mediante opciones de comando asincrónicas basadas en eventos y la operación devuelve más de un valor, el objeto <xref:System.EventArgs> predeterminado devuelve un valor como propiedad `Result` y el resto son propiedades del objeto <xref:System.EventArgs>.  
   
- Si desea recibir el objeto de mensaje como el `Result` propiedad y que los valores devueltos como propiedades en ese objeto, use la **/messageContract** opción de comando. Esto genera una firma que devuelve el mensaje de respuesta como la propiedad `Result` del objeto <xref:System.EventArgs>. Todos los valores de devolución internos se convierten, pues, en propiedades del objeto de mensaje de respuesta.  
+ Si desea recibir el objeto del mensaje como propiedad `Result` y que los valores devueltos sean propiedades de ese objeto, use la opción de comando **/messageContract**. Esto genera una firma que devuelve el mensaje de respuesta como la propiedad `Result` del objeto <xref:System.EventArgs>. Todos los valores de devolución internos se convierten, pues, en propiedades del objeto de mensaje de respuesta.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>  
