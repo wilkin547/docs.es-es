@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 06b67f702b38202f598745826fa48f1ca97b7282
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 2fdf0c24999891e48e1867e8fa7b4ba0f5302850
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251040"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106715"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Cuándo elegir .NET Framework para contenedores de Docker
 
@@ -65,4 +65,5 @@ Mientras tanto, si cualquier plataforma o servicio en Azure todavía no es compa
 
 
 >[!div class="step-by-step"]
-[Previous] (net-core-container-scenarios.md) [Next] (container-framework-choice-factors.md)
+[Anterior](net-core-container-scenarios.md)
+[Siguiente](container-framework-choice-factors.md)

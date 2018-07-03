@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: fa26aa86e09f7a5d390336e460fa0272f76e17a4
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: fdca8d38157d5c5b62bd077e5d715ca22ac9780f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805479"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106754"
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Aplicar enfoques CQRS y CQS en un microservicio DDD en eShopOnContainers
 
@@ -64,4 +64,5 @@ Solo hay una arquitectura de aplicación: la arquitectura del sistema o la aplic
 
 
 >[!div class="step-by-step"]
-[Previous] (apply-simplified-microservice-cqrs-ddd-patterns.md) [Next] (cqrs-microservice-reads.md)
+[Anterior](apply-simplified-microservice-cqrs-ddd-patterns.md)
+[Siguiente](cqrs-microservice-reads.md)

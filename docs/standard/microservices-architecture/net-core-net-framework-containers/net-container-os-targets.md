@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 53b279a3325ae0fb662cd91a6f7f454b765196ff
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: fca5cf280d5abb85da78413a6eed463a2ffe6a88
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251017"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104884"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Selección del sistema operativo de destino con contenedores de .NET
 
@@ -50,4 +50,5 @@ Al agregar el nombre de imagen al archivo Dockerfile, puede seleccionar el siste
 
 
 >[!div class="step-by-step"]
-[Anterior] (container-framework-choice-factors.md) [Siguiente] (official-net-docker-images.md)
+[Anterior](container-framework-choice-factors.md)
+[Siguiente](official-net-docker-images.md)
