@@ -4,12 +4,12 @@ description: Descubra cómo usar ML.NET en un escenario de clasificación binari
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e6c9ae0eb91fcb570209ce25d4a18a4dcd104724
-ms.sourcegitcommit: 5b0802832fb9ad684d34e69b8644a16a5b7c4810
+ms.openlocfilehash: 727718c00b9270e2bbbe0840879b3a7e164a02d8
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34860709"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948623"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutorial: Uso de ML.NET en un escenario de clasificación binaria de análisis de sentimiento
 
@@ -35,7 +35,7 @@ El ejemplo es una aplicación de consola que utiliza ML.NET para entrenar un mod
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* [Visual Studio de 2017 15.6 o posterior](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
+* [Visual Studio 2017 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada.
 
 * El [archivo separado por tabulaciones de datos de la línea detox de Wikipedia (wikiPedia-detox-250-line-data.tsv)](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv).
 * El [archivo separado por tabulaciones de pruebas de la línea detox de Wikipedia (wikipedia-detox-250-line-test.tsv)](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv).
@@ -113,13 +113,13 @@ Agregue las siguientes instrucciones `using` adicionales a la parte superior del
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#1 "Add necessary usings")]
 
-Debe crear tres variables globales para contener la ruta de acceso a los archivos descargados recientemente:
+Debe crear tres campos globales para contener las rutas de acceso a los archivos descargados recientemente:
 
 * `_dataPath` tiene la ruta de acceso al conjunto de datos utilizado para entrenar el modelo.
 * `_testDataPath` tiene la ruta de acceso al conjunto de datos utilizado para evaluar el modelo.
 * `_modelPath` tiene la ruta de acceso donde se guarda el modelo entrenado.
 
-Agregue el código siguiente a la línea por encima del método `Main` para especificar los archivos descargados recientemente:
+Agregue el código siguiente a la línea justo encima del método `Main` para especificar las rutas de acceso:
 
 [!code-csharp[Declare file variables](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#2 "Declare variables to store data files")]
 
@@ -167,7 +167,7 @@ El método `Train` ejecuta las tareas siguientes:
 Cree el método `Train`, justo después del método `Main`, mediante el código siguiente:
 
 ```csharp
-public static PredictionModel<SentimentData, SentimentPrediction> Train()
+public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Train()
 {
 
 }
@@ -179,7 +179,7 @@ Inicialice una nueva instancia de <xref:Microsoft.ML.LearningPipeline> que inclu
 
 [!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
 
-El objeto <xref:Microsoft.ML.TextLoader%601> es la primera parte de la canalización y carga los datos del archivo de entrenamiento.
+El objeto <xref:Microsoft.ML.Data.TextLoader> es la primera parte de la canalización y carga los datos del archivo de entrenamiento.
 
 [!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
 
@@ -239,7 +239,7 @@ Agregue una llamada al método nuevo desde el método `Main`, justo debajo de la
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
 
-La clase <xref:Microsoft.ML.TextLoader%601> carga el nuevo conjunto de datos de prueba con el mismo esquema. Puede evaluar el modelo utilizando este conjunto de datos como una comprobación de calidad. Agregue el código siguiente al método `Evaluate`:
+La clase <xref:Microsoft.ML.Data.TextLoader> carga el nuevo conjunto de datos de prueba con el mismo esquema. Puede evaluar el modelo utilizando este conjunto de datos como una comprobación de calidad. Agregue el código siguiente al método `Evaluate`:
 
 [!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
 

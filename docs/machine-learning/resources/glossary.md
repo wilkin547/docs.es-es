@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: dotnet-ml
 ms.devlang: dotnet
 manager: wpickett
-ms.openlocfilehash: 332d9e14bea165992f9f00b048286e185269ea79
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: b7690eb6931f4a491b1a03812fe3f2d8a64cfcd4
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34860692"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207743"
 ---
 # <a name="machine-learning-glossary"></a>Glosario de aprendizaje automático
 
@@ -33,7 +33,7 @@ API de ML.NET relacionada:<xref:Microsoft.ML.Models.BinaryClassificationMetrics.
 
 ## <a name="binary-classification"></a>Clasificación binaria
 
-Un caso de [clasificación](#classification) donde la [etiqueta](#label) es solo una de dos clases. Para obtener más información, consulte el artículo de Wikipedia [Binary classification](https://en.wikipedia.org/wiki/Binary_classification) (Clasificación binaria).
+Un caso de [clasificación](#classification) donde la [etiqueta](#label) es solo una de dos clases. Para obtener más información, vea la sección [Clasificación binaria](tasks.md#binary-classification) del tema [Tareas de aprendizaje automático](tasks.md).
 
 ## <a name="classification"></a>Clasificación
 
@@ -85,7 +85,7 @@ Tradicionalmente, los parámetros de la función de predicción. Por ejemplo, la
 
 ## <a name="multiclass-classification"></a>Clasificación multiclase
 
-Un caso de [clasificación](#classification) donde la [etiqueta](#label) es una de tres o más clases. Para obtener más información, consulte el artículo de Wikipedia [Multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification) (Clasificación multiclase).
+Un caso de [clasificación](#classification) donde la [etiqueta](#label) es una de tres o más clases. Para obtener más información, vea la sección [Clasificación multiclase](tasks.md#multiclass-classification) del tema [Tareas de aprendizaje automático](tasks.md).
 
 ## <a name="n-gram"></a>N-grama
 
@@ -113,7 +113,7 @@ API de ML.NET relacionada:<xref:Microsoft.ML.Models.BinaryClassificationMetrics.
 
 ## <a name="regression"></a>Regresión
 
-Una tarea de [aprendizaje automático supervisada](#supervised-machine-learning) donde el resultado es un valor real, por ejemplo, doble. Por ejemplo, la predicción de los precios de las acciones.
+Una tarea de [aprendizaje automático supervisada](#supervised-machine-learning) donde el resultado es un valor real, por ejemplo, doble. Por ejemplo, la predicción de los precios de las acciones. Para obtener más información, vea la sección [Regresión](tasks.md#regression) del tema [Tareas de aprendizaje automático](tasks.md).
 
 ## <a name="relative-absolute-error"></a>Error absoluto relativo
 
