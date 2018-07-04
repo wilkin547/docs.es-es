@@ -1,5 +1,5 @@
 ---
-title: checked (Referencia de C#)
+title: Palabra clave checked (Referencia de C#)
 ms.date: 07/20/2015
 f1_keywords:
 - checked_CSharpKeyword
@@ -7,39 +7,43 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: b05af798217a4f312bcf134d531135713efa8c66
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6c28ee0c575bd6010a8aad76fc978062c5fc6a4
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216614"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948415"
 ---
-# <a name="checked-c-reference"></a><span data-ttu-id="4450f-102">checked (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="4450f-102">checked (C# Reference)</span></span>
-<span data-ttu-id="4450f-103">La palabra clave `checked` se usa con el fin de habilitar explícitamente la comprobación de desbordamiento para operaciones aritméticas y conversiones de tipo integral.</span><span class="sxs-lookup"><span data-stu-id="4450f-103">The `checked` keyword is used to explicitly enable overflow checking for integral-type arithmetic operations and conversions.</span></span>  
-  
- <span data-ttu-id="4450f-104">De manera predeterminada, una expresión que solo contiene valores constantes provoca un error del compilador si la expresión genera un valor fuera del intervalo del tipo de destino.</span><span class="sxs-lookup"><span data-stu-id="4450f-104">By default, an expression that contains only constant values causes a compiler error if the expression produces a value that is outside the range of the destination type.</span></span> <span data-ttu-id="4450f-105">Si la expresión contiene uno o varios valores no constantes, el compilador no detecta el desbordamiento.</span><span class="sxs-lookup"><span data-stu-id="4450f-105">If the expression contains one or more non-constant values, the compiler does not detect the overflow.</span></span> <span data-ttu-id="4450f-106">En el siguiente ejemplo, la evaluación de la expresión asignada a `i2` no genera un error del compilador.</span><span class="sxs-lookup"><span data-stu-id="4450f-106">Evaluating the expression assigned to `i2` in the following example does not cause a compiler error.</span></span>  
-  
- [!code-csharp[csrefKeywordsChecked#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_1.cs)]  
-  
- <span data-ttu-id="4450f-107">De manera predeterminada, estas expresiones no constantes no se someten a la comprobación de desbordamiento en tiempo de ejecución y no generan excepciones de desbordamiento.</span><span class="sxs-lookup"><span data-stu-id="4450f-107">By default, these non-constant expressions are not checked for overflow at run time either, and they do not raise overflow exceptions.</span></span> <span data-ttu-id="4450f-108">En el ejemplo anterior, se muestra -2 147 483 639 como la suma de dos enteros positivos.</span><span class="sxs-lookup"><span data-stu-id="4450f-108">The previous example displays -2,147,483,639 as the sum of two positive integers.</span></span>  
-  
- <span data-ttu-id="4450f-109">La comprobación de desbordamiento se puede habilitar mediante opciones del compilador, la configuración del entorno o la palabra clave `checked`.</span><span class="sxs-lookup"><span data-stu-id="4450f-109">Overflow checking can be enabled by compiler options, environment configuration, or use of the `checked` keyword.</span></span> <span data-ttu-id="4450f-110">En los ejemplos siguientes, se muestra cómo usar una expresión `checked` o un bloque `checked` para detectar el desbordamiento generado por la suma anterior en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="4450f-110">The following examples demonstrate how to use a `checked` expression or a `checked` block to detect the overflow that is produced by the previous sum at run time.</span></span> <span data-ttu-id="4450f-111">En ambos ejemplos se genera una excepción de desbordamiento.</span><span class="sxs-lookup"><span data-stu-id="4450f-111">Both examples raise an overflow exception.</span></span>  
-  
- [!code-csharp[csrefKeywordsChecked#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_2.cs)]  
-  
- <span data-ttu-id="4450f-112">Se puede usar la palabra clave [unchecked](../../../csharp/language-reference/keywords/unchecked.md) para evitar la comprobación de desbordamiento.</span><span class="sxs-lookup"><span data-stu-id="4450f-112">The [unchecked](../../../csharp/language-reference/keywords/unchecked.md) keyword can be used to prevent overflow checking.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="4450f-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="4450f-113">Example</span></span>  
- <span data-ttu-id="4450f-114">En este ejemplo, se muestra cómo usar `checked` para habilitar la comprobación de desbordamiento en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="4450f-114">This sample shows how to use `checked` to enable overflow checking at run time.</span></span>  
-  
- [!code-csharp[csrefKeywordsChecked#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_3.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="4450f-115">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="4450f-115">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="4450f-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="4450f-116">See Also</span></span>  
- [<span data-ttu-id="4450f-117">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="4450f-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="4450f-118">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="4450f-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="4450f-119">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="4450f-119">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="4450f-120">Checked y Unchecked</span><span class="sxs-lookup"><span data-stu-id="4450f-120">Checked and Unchecked</span></span>](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
- [<span data-ttu-id="4450f-121">unchecked</span><span class="sxs-lookup"><span data-stu-id="4450f-121">unchecked</span></span>](../../../csharp/language-reference/keywords/unchecked.md)
+# <a name="checked-c-reference"></a><span data-ttu-id="ff455-102">checked (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="ff455-102">checked (C# Reference)</span></span>
+
+<span data-ttu-id="ff455-103">La palabra clave `checked` se usa con el fin de habilitar explícitamente la comprobación de desbordamiento para operaciones aritméticas y conversiones de tipo integral.</span><span class="sxs-lookup"><span data-stu-id="ff455-103">The `checked` keyword is used to explicitly enable overflow checking for integral-type arithmetic operations and conversions.</span></span>
+
+<span data-ttu-id="ff455-104">De manera predeterminada, una expresión que solo contiene valores constantes provoca un error del compilador si la expresión genera un valor fuera del intervalo del tipo de destino.</span><span class="sxs-lookup"><span data-stu-id="ff455-104">By default, an expression that contains only constant values causes a compiler error if the expression produces a value that is outside the range of the destination type.</span></span> <span data-ttu-id="ff455-105">Si la expresión contiene uno o varios valores no constantes, el compilador no detecta el desbordamiento.</span><span class="sxs-lookup"><span data-stu-id="ff455-105">If the expression contains one or more non-constant values, the compiler does not detect the overflow.</span></span> <span data-ttu-id="ff455-106">En el siguiente ejemplo, la evaluación de la expresión asignada a `i2` no genera un error del compilador.</span><span class="sxs-lookup"><span data-stu-id="ff455-106">Evaluating the expression assigned to `i2` in the following example does not cause a compiler error.</span></span>
+
+[!code-csharp[csrefKeywordsChecked#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#3)]
+
+<span data-ttu-id="ff455-107">De manera predeterminada, estas expresiones no constantes no se someten a la comprobación de desbordamiento en tiempo de ejecución y no generan excepciones de desbordamiento.</span><span class="sxs-lookup"><span data-stu-id="ff455-107">By default, these non-constant expressions are not checked for overflow at run time either, and they do not raise overflow exceptions.</span></span> <span data-ttu-id="ff455-108">En el ejemplo anterior, se muestra -2 147 483 639 como la suma de dos enteros positivos.</span><span class="sxs-lookup"><span data-stu-id="ff455-108">The previous example displays -2,147,483,639 as the sum of two positive integers.</span></span>
+
+<span data-ttu-id="ff455-109">La comprobación de desbordamiento se puede habilitar mediante opciones del compilador, la configuración del entorno o la palabra clave `checked`.</span><span class="sxs-lookup"><span data-stu-id="ff455-109">Overflow checking can be enabled by compiler options, environment configuration, or use of the `checked` keyword.</span></span> <span data-ttu-id="ff455-110">En los ejemplos siguientes, se muestra cómo usar una expresión `checked` o un bloque `checked` para detectar el desbordamiento generado por la suma anterior en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="ff455-110">The following examples demonstrate how to use a `checked` expression or a `checked` block to detect the overflow that is produced by the previous sum at run time.</span></span> <span data-ttu-id="ff455-111">En ambos ejemplos se genera una excepción de desbordamiento.</span><span class="sxs-lookup"><span data-stu-id="ff455-111">Both examples raise an overflow exception.</span></span>
+
+[!code-csharp[csrefKeywordsChecked#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#4)]
+
+<span data-ttu-id="ff455-112">Se puede usar la palabra clave [unchecked](../../../csharp/language-reference/keywords/unchecked.md) para evitar la comprobación de desbordamiento.</span><span class="sxs-lookup"><span data-stu-id="ff455-112">The [unchecked](../../../csharp/language-reference/keywords/unchecked.md) keyword can be used to prevent overflow checking.</span></span>
+
+## <a name="example"></a><span data-ttu-id="ff455-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ff455-113">Example</span></span>
+
+<span data-ttu-id="ff455-114">En este ejemplo, se muestra cómo usar `checked` para habilitar la comprobación de desbordamiento en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="ff455-114">This sample shows how to use `checked` to enable overflow checking at run time.</span></span>
+
+[!code-csharp[csrefKeywordsChecked#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#1)]
+
+## <a name="c-language-specification"></a><span data-ttu-id="ff455-115">especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="ff455-115">C# language specification</span></span>
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a><span data-ttu-id="ff455-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="ff455-116">See also</span></span>
+
+[<span data-ttu-id="ff455-117">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="ff455-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+[<span data-ttu-id="ff455-118">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="ff455-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+[<span data-ttu-id="ff455-119">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="ff455-119">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+[<span data-ttu-id="ff455-120">Checked y Unchecked</span><span class="sxs-lookup"><span data-stu-id="ff455-120">Checked and Unchecked</span></span>](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
+[<span data-ttu-id="ff455-121">unchecked</span><span class="sxs-lookup"><span data-stu-id="ff455-121">unchecked</span></span>](../../../csharp/language-reference/keywords/unchecked.md)
