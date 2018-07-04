@@ -3,12 +3,12 @@ title: 'Clases y objetos en C#: un paseo por el lenguaje C#'
 description: ¿Nuevo en C#? Lea esta información general sobre clases, objetos y herencia.
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 1e89d8b89e5f4f74d637a1e3674fb3959a231a49
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 8e6b327c8391c3a3c97f7806f87dbb9656f0d00d
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298297"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140286"
 ---
 # <a name="classes-and-objects"></a>Clases y objetos
 
@@ -55,7 +55,7 @@ A continuación se proporciona una visión general de los tipos de miembros que 
 
 ## <a name="accessibility"></a>Accesibilidad
 
-Cada miembro de una clase tiene asociada una accesibilidad, que controla las regiones del texto del programa que pueden tener acceso al miembro. Existen cinco formas posibles de accesibilidad. Se resumen a continuación.
+Cada miembro de una clase tiene asociada una accesibilidad, que controla las regiones del texto del programa que pueden tener acceso al miembro. Existen seis formas de accesibilidad posibles. Se resumen a continuación.
 
 * `public`
     - Acceso no limitado
@@ -64,7 +64,7 @@ Cada miembro de una clase tiene asociada una accesibilidad, que controla las reg
 * `internal`
     - Acceso limitado al ensamblado actual (.exe, .dll, etc.)
 * `protected internal`
-    - Acceso limitado a la clase contenedora o a las clases derivadas de la clase contenedora
+    - Acceso limitado a la clase contenedora, las clases derivadas de la clase contenedora, o bien las clases dentro del mismo ensamblado
 * `private`
     - Acceso limitado a esta clase
 * `private protected`

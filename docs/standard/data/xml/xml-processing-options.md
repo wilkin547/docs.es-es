@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b1295185bf0fa06884b1332762d01f86f138a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 902c82f77240c957cc6070c9437b95d0c89fca53
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572228"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105354"
 ---
 # <a name="xml-processing-options"></a>Opciones de procesamiento XML
 Consulte las tablas siguientes para obtener una lista de tecnologías de Microsoft que puede usar para procesar los datos XML.  
@@ -19,7 +19,7 @@ Consulte las tablas siguientes para obtener una lista de tecnologías de Microso
   
 |**Opción**|**Tipo de procesamiento**|**Descripción**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(Espacio de nombres <xref:System.Xml.Linq>)|En memoria|- Basado en la tecnología Language Integrated Query (LINQ) de .NET Framework.<br />- Proporciona una experiencia de consulta similar a SQL para objetos, datos relacionales y datos XML.<br />- Proporciona intuitivas funcionalidades de creación y transformación de documentos.<br />- Use esta opción si va a escribir código nuevo.|  
+|[LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(Espacio de nombres <xref:System.Xml.Linq>)|En memoria|- Basado en la tecnología Language Integrated Query (LINQ) de .NET Framework.<br />- Proporciona una experiencia de consulta similar a SQL para objetos, datos relacionales y datos XML.<br />- Proporciona funcionalidades intuitivas de creación y transformación de documentos.<br />- Use esta opción si va a escribir código nuevo.|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|Basado en streaming|- Proporciona un modo rápido, solo hacia delante y sin almacenamiento en caché de acceso a los datos XML.<br />- Puede crear objetos mediante el método <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> y especificar el conjunto de características para habilitar en el objeto mediante la clase <xref:System.Xml.XmlReaderSettings>.|  
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|Basado en streaming|- Proporciona un modo rápido, solo hacia delante y sin almacenamiento en caché para generar los datos XML.<br />- Puede crear objetos mediante el método <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> y especificar el conjunto de características para habilitar en el objeto mediante la clase <xref:System.Xml.XmlWriterSettings>.|  
 |<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|En memoria|- Implementa el [nivel 1 principal del Modelo de objetos de documento (DOM) del W3C](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) y las recomendaciones [principales del nivel 2 del DOM](https://www.w3.org/TR/DOM-Level-2-Core/).<br />- Puede crear, insertar, quitar y modificar los nodos mediante métodos y propiedades basándose en modelos DOM familiares.<br />- Use esta opción si va a modificar el código existente que usa el DOM del W3C.|  

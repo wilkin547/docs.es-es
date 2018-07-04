@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: 2776412b96d4ed141f48814d19d2deaa1a71520d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e672685666c846ea63bcd9cdb713af58f5e6fb1b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579462"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106257"
 ---
 # <a name="designing-a-microservice-domain-model"></a>Diseño de un modelo de dominio de microservicio
 
@@ -87,8 +87,8 @@ Los objetos de valor son difíciles de administrar en bases de datos relacionale
 -   **Value Object (Objeto de valor)**
     [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
 
--   **Value Objects in Test-Driven Development (Objetos de valor en el desarrollo controlado por pruebas)**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+-   **Value Objects in Test-Driven Development**
+    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects) (Objetos de valor en el desarrollo controlado por pruebas)
 
 -   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software** (Diseño guiado por el dominio: abordar la complejidad en el corazón del software). (Libro; incluye una descripción de los objetos de valor) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
@@ -133,8 +133,8 @@ Para identificar y trabajar con agregados se requiere investigación y experienc
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
--   **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate (Diseño eficaz de agregados - Parte I: modelado de un único agregado)**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+-   **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf) (Diseño eficaz de agregados - Parte I: modelado de un único agregado)
 
 -   **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together (Diseño de agregado efectivo, parte II: Conseguir que los agregados funcionen juntos)**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
@@ -153,4 +153,5 @@ Para identificar y trabajar con agregados se requiere investigación y experienc
 
 
 >[!div class="step-by-step"]
-[Anterior] (ddd-oriented-microservice.md) [Siguiente] (net-core-microservice-domain-model.md)
+[Anterior](ddd-oriented-microservice.md)
+[Siguiente](net-core-microservice-domain-model.md)

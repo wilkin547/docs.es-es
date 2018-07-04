@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b41161d1511f7dce975ac5ad916750734972fa3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579878"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948610"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Lenguaje de expresiones regulares - Referencia rápida
 <a name="top"></a> Una expresión regular es un patrón con el que el motor de expresiones regulares intenta buscar una coincidencia en el texto de entrada. Un modelo consta de uno o más literales de carácter, operadores o estructuras.  Para obtener una breve introducción, consulte [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -93,8 +93,8 @@ ms.locfileid: "33579878"
   
 |Aserción|Description|Modelo|Coincidencias|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|La coincidencia debe comenzar al principio de la cadena o de la línea.|`^\d{3}`|"901" en<br /><br /> "901-333-"|  
-|`$`|La coincidencia se debe producir al final de la cadena o antes de `\n` al final de la línea o de la cadena.|`-\d{3}$`|"-333" en<br /><br /> "-901-333"|  
+|`^`|De forma predeterminada, la coincidencia debe comenzar al principio de la cadena; en el modo multilínea, debe comenzar al principio de la línea.|`^\d{3}`|"901" en<br /><br /> "901-333-"|  
+|`$`|De forma predeterminada, la coincidencia se debe producir al final de la cadena o antes de `\n` al final de la cadena; en el modo multilínea, se debe producir antes del final de la línea o antes de `\n` al final de la línea.|`-\d{3}$`|"-333" en<br /><br /> "-901-333"|  
 |`\A`|La coincidencia se debe producir al principio de la cadena.|`\A\d{3}`|"901" en<br /><br /> "901-333-"|  
 |`\Z`|La coincidencia se debe producir al final de la cadena o antes de `\n` al final de la cadena.|`-\d{3}\Z`|"-333" en<br /><br /> "-901-333"|  
 |`\z`|La coincidencia se debe producir al final de la cadena.|`-\d{3}\z`|"-333" en<br /><br /> "-901-333"|  

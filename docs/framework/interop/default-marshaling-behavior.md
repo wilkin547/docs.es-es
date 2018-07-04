@@ -1,6 +1,6 @@
 ---
 title: Comportamiento de serialización predeterminado
-ms.date: 03/30/2017
+ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 83bb8b0305e47ca7b354db03c7a9a3dd02f62d41
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457415"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028076"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamiento de serialización predeterminado
 La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada. Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  
@@ -113,7 +113,9 @@ interface DelegateTest : IDispatch {
 ```  
   
  Se puede desreferenciar un puntero de función, igual que con cualquier otro puntero de función no administrada.  
-  
+
+En este ejemplo, al serializar los dos delegados como <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>, el resultado es un elemento `int` y un puntero a un elemento `int`. Como los tipos de delegado se serializan, aquí `int` representa un puntero a un valor void (`void*`), que es la dirección del delegado en la memoria. En otras palabras, este resultado es específico para los sistemas Windows de 32 bits, ya que `int` aquí representa el tamaño del puntero de función.
+
 > [!NOTE]
 >  Una referencia al puntero de función para un delegado administrado mantenido por código no administrado no impide que Common Language Runtime realice la recolección de elementos no utilizados en el objeto administrado.  
   

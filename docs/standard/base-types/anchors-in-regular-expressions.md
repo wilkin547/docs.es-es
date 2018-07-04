@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cbf0ceb7d5f8e56955f8989e5eb4efba99540bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578032"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948594"
 ---
 # <a name="anchors-in-regular-expressions"></a>Delimitadores en expresiones regulares
 <a name="top"></a> Los delimitadores, o aserciones atómicas de ancho cero, especifican la posición de la cadena en que se debe producir una coincidencia. Cuando se usa un delimitador en una expresión de búsqueda, el motor de expresiones regulares no avanza por la cadena o ni consume caracteres, sino que solo busca una coincidencia en la posición especificada. Por ejemplo, `^` especifica que la coincidencia debe empezar al principio de una cadena o línea. Por consiguiente, la expresión regular `^http:` coincide con "http": solo cuando se encuentra al principio de una línea. En la tabla siguiente, se enumeran los delimitadores que admiten las expresiones regulares de .NET.  
   
 |Delimitador|Description|  
 |------------|-----------------|  
-|`^`|La coincidencia se debe producir al principio de la cadena o de la línea. Para obtener más información, vea [Principio de cadena o línea](#Start).|  
-|`$`|La coincidencia se debe producir al final de la cadena o de la línea, o antes de `\n` al final de la cadena o de la línea. Para obtener más información, vea [Final de cadena o línea](#End).|  
+|`^`|De forma predeterminada, la coincidencia se debe producir al principio de la cadena. Por su parte, en el modo multilínea, se debe producir al principio de la línea. Para obtener más información, vea [Principio de cadena o línea](#Start).|  
+|`$`|De forma predeterminada, la coincidencia se debe producir al final de la cadena o antes de `\n` al final de la cadena. Por su parte, en el modo multilínea, se debe producir al final de la línea o antes de `\n` al final de la línea. Para obtener más información, vea [Final de cadena o línea](#End).|  
 |`\A`|La coincidencia se debe producir solo al principio de la cadena (no se admiten varias líneas). Para obtener más información, vea [Principio de cadena solamente](#StartOnly).|  
 |`\Z`|La coincidencia se debe producir al final de la cadena o antes de `\n` al final de la cadena. Para obtener más información, vea [Final de cadena o antes de nueva línea al final](#EndOrNOnly).|  
 |`\z`|La coincidencia se debe producir solo al final de la cadena. Para obtener más información, vea [Final de cadena solamente](#EndOnly).|  
@@ -40,7 +40,7 @@ ms.locfileid: "33578032"
   
 <a name="Start"></a>   
 ## <a name="start-of-string-or-line-"></a>Principio de cadena o línea: ^  
- El delimitador `^` especifica que el siguiente patrón debe comenzar en la posición del primer carácter de la cadena. Si usa `^` con la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (vea [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md)), la coincidencia se debe producir al principio de cada línea.  
+ De forma predeterminada, el delimitador `^` especifica que el patrón siguiente debe comenzar en la posición del primer carácter de la cadena. Si usa `^` con la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (vea [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md)), la coincidencia se debe producir al principio de cada línea.  
   
  En el ejemplo siguiente se usa el delimitador `^` en una expresión regular que extrae información sobre los años durante los que existieron algunos equipos de béisbol profesionales. En el ejemplo se llama a dos sobrecargas del método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>:  
   

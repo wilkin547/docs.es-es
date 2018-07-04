@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 2adce39561dd2b97910155ebed595a2df7785c11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574678"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104574"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validación del lado cliente (validación de los niveles de presentación)
 
@@ -29,8 +29,8 @@ La implementación de la validación del lado cliente depende del tipo de aplica
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Validación en aplicaciones móviles de Xamarin
 
--   **Validate Text Input and Show Errors (Validar la entrada de texto y mostrar errores)**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **Validate Text Input and Show Errors**
+    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/) (Validar la entrada de texto y mostrar errores)
 
 -   **Validation Callback (Devolución de llamada de validación)**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
@@ -65,4 +65,5 @@ En resumen, estos son los conceptos más importantes en lo que respecta a la val
 
 
 >[!div class="step-by-step"]
-[Previous] (domain-model-layer-validations.md) [Next] (domain-events-design-implementation.md)
+[Anterior](domain-model-layer-validations.md)
+[Siguiente](domain-events-design-implementation.md)
