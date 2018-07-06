@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7caf42ee45f31e374bd2cbf7c700992130281ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579774"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071869"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retroceso en expresiones regulares
 <a name="top"></a> El retroceso se produce cuando un patrón de expresión regular contiene [cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) o [construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)opcionales y el motor de expresiones regulares vuelve a un estado guardado anterior para continuar la búsqueda de una coincidencia. El retroceso es fundamental para la eficacia de las expresiones regulares; permite que las expresiones sean eficaces y flexibles, y que coincidan con modelos muy complejos. Al mismo tiempo, esta eficacia tiene un costo. El retroceso suele ser el factor único más importante que afecta al rendimiento del motor de expresiones regulares. Afortunadamente, el desarrollador tiene control sobre el comportamiento del motor de expresiones regulares y cómo usa el retroceso. En este tema se explica cómo funciona el retroceso y cómo se puede controlar.  
@@ -169,7 +169,7 @@ ms.locfileid: "33579774"
 |`[-.\w]*`|Buscar coincidencias con cero, una o más apariciones de un guión, un punto o un carácter alfabético.|  
 |`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico.|  
 |`([-.\w]*[0-9A-Z])*`|Buscar coincidencias con cero o más apariciones de la combinación de cero o más guiones, puntos o caracteres alfabéticos, seguidos de un carácter alfanumérico. Este es el primer grupo de captura.|  
-|`@`|Buscar coincidencias con una arroba ("@").|  
+|`@`|Buscar coincidencias con un signo ("\@").|  
   
  El segundo patrón de expresión regular, `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`, emplea una aserción de búsqueda tardía positiva. Se define como se muestra en la tabla siguiente.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "33579774"
 |`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico. Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
 |`[-.\w]*`|Buscar coincidencias con cero o más apariciones de un guión, un punto o un carácter alfabético.|  
 |`(?<=[0-9A-Z])`|Volver a examinar el último carácter coincidente y continuar con la coincidencia si es alfanumérica. Tenga en cuenta que los caracteres alfanuméricos son un subconjunto del conjunto formado por puntos, guiones y todos los caracteres alfabéticos.|  
-|`@`|Buscar coincidencias con una arroba ("@").|  
+|`@`|Buscar coincidencias con un signo ("\@").|  
   
 <a name="Lookahead"></a>   
 ### <a name="lookahead-assertions"></a>aserciones de búsqueda anticipada  

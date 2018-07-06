@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 8ef9f39b0d99db32438e7dcf83318a1aa9054967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592449"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106582"
 ---
 # <a name="subscribing-to-events"></a>Suscripción a eventos
 
@@ -319,8 +319,8 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
 -   **Forked eShopOnContainers using NServiceBus (Particular Software) [Bifurcación de eShopOnContainers mediante NServiceBus (Particular Software)]**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **Event Driven Messaging (Mensajería controlada por eventos)**
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **Event Driven Messaging**
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging) (Mensajería controlada por eventos)
 
 -   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactorización hacia la resiliencia: evaluar el acoplamiento)**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
@@ -331,8 +331,8 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
 -   **Communicating Between Bounded Contexts (Comunicación entre contextos delimitados)**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual Consistency (Posible coherencia)**
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Eventual Consistency**
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency) (Coherencia eventual)
 
 -   **Philip Brown. Strategies for Integrating Bounded Contexts (Estrategias para integrar contextos delimitados)**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
@@ -367,15 +367,16 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
 -   **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed (CAP doce años después: cómo han cambiado las “reglas”)**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Participating in External (DTC) Transactions** (MSMQ) [Participar en transacciones externas (DTC) (MSMQ)][*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Participating in External (DTC) Transactions** (MSMQ)[*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c) (Participación en transacciones externas (DTC) (MSMQ))
 
 -   **Azure Service Bus. Brokered Messaging: Duplicate Detection (Mensajería asincrónica: detección de duplicados)**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Reliability Guide** (RabbitMQ documentation) [Guía de confiabilidad (documentación de RabbitMQ)][*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Reliability Guide** (RabbitMQ documentation)[*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer) (Guía de confiabilidad (documentación de RabbitMQ))
 
 
 
 
 >[!div class="step-by-step"]
-[Anterior] (rabbitmq-event-bus-development-test-environment.md) [Siguiente] (test-aspnet-core-services-web-apps.md)
+[Anterior](rabbitmq-event-bus-development-test-environment.md)
+[Siguiente](test-aspnet-core-services-web-apps.md)
