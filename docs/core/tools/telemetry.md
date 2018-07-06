@@ -79,7 +79,7 @@ Los datos publicados están disponibles cada trimestre y se muestran en [.NET Co
 
 &#8224;En la columna *Ocurrences* se muestra el número agregado de usos de ese comando para las métricas de esa fila durante ese día.
 
-& #8225;Normalmente, en la columna *Geography* se muestra el nombre de un país. En algunos casos, el continente de Antártida aparece en esta columna, ya sea debido a los investigadores que usan .NET Core en la Antártida o a datos de ubicación incorrectos.
+&#8225;Normalmente, en la columna *Geography* se muestra el nombre de un país. En algunos casos, el continente de Antártida aparece en esta columna, ya sea debido a los investigadores que usan .NET Core en la Antártida o a datos de ubicación incorrectos.
 
 ### <a name="example"></a>Ejemplo
 
