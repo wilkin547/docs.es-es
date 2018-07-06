@@ -97,7 +97,7 @@ Los tipos que aceptan valores NULL pueden representar todos los valores de un ti
   
  Los resultados de estos operadores se muestran en la siguiente tabla:  
   
-|X|y|x e y|x | y|  
+|X|y|x e y|x&#124;y|  
 |-------|-------|---------|--------------|  
 |true|true|true|true|  
 |true|False|false|true|  
