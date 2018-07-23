@@ -49,7 +49,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- El tercer filtro es un <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Esto coincide con cualquier mensaje que se presentara en un punto de conexión con una dirección que coincida con el prefijo de dirección (o la parte delantera) proporcionado. En este ejemplo se define el prefijo de dirección como "http://localhost/routingservice/router/rounding/". Esto significa que los mensajes entrantes que se dirigen al "http://localhost/routingservice/router/rounding/*" coincide con este filtro. En este caso, es un mensaje que se muestran en el extremo de calculadora de redondeo, que tiene la dirección "http://localhost/routingservice/router/rounding/calculator".  
+ El tercer filtro es un <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Esto coincide con cualquier mensaje que se presentara en un punto de conexión con una dirección que coincida con el prefijo de dirección (o la parte delantera) proporcionado. En este ejemplo se define el prefijo de dirección como "http://localhost/routingservice/router/rounding/". Esto significa que los mensajes entrantes que se dirigen al " http://localhost/routingservice/router/rounding/ *" coincide con este filtro. En este caso, es un mensaje que se muestran en el extremo de calculadora de redondeo, que tiene la dirección "http://localhost/routingservice/router/rounding/calculator".  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
