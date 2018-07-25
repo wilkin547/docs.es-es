@@ -18,7 +18,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: deea4e6128eace0ffa539d77bb63f7629eb72354
 ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/19/2018
 ms.locfileid: "36207409"
@@ -43,7 +43,7 @@ typedef struct _COR_SEGMENT {
 |------------|-----------------|  
 |`start`|La dirección de inicio de la región de memoria.|  
 |`end`|La dirección final de la región de memoria.|  
-|`gen`|Un miembro de enumeración [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) que indica la generación de la región de memoria.|  
+|`gen`|Un miembro de la enumeración [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) que indica la generación de la región de memoria.|  
 |`heap`|El número de montón en el que reside la región de memoria. Vea la sección Comentarios para obtener más información.|  
   
 ## <a name="remarks"></a>Comentarios  

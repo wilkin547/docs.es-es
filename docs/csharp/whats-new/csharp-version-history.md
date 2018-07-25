@@ -22,7 +22,7 @@ Pero si volvemos a echarle un vistazo a C# 1.0 ahora, no lo verá tan claro. Car
 
 C# 1.0 parecía estar privado de características, en comparación con la actualidad. Lo normal era tener que escribir código detallado. Pero aun así, hay que empezar por algo. C# 1.0 era una alternativa viable a Java en la plataforma Windows.
 
-Las principales características de C# 1.0 incluyan lo siguiente:
+Las principales características de C# 1.0 incluían lo siguiente:
 
 - [Clases](../programming-guide/classes-and-structs/classes.md)
 - [Structs](../programming-guide/classes-and-structs/structs.md)

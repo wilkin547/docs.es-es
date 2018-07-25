@@ -22,7 +22,7 @@ En cualquier punto del bloque de instrucciones `for`, se puede salir del bucle m
   
 ## <a name="structure-of-the-for-statement"></a>Estructura de la instrucción `for`
 
-La instrucción `for` define secciones de *inicializador*, *condición* e *iterador*:
+La instrucción `for` define las secciones *inicializador*, *condición* e *iterador*:
   
 ```csharp
 for (initializer; condition; iterator)  
@@ -41,7 +41,7 @@ Las instrucciones de la sección *inicializador* se ejecutan solo una vez, antes
 
 - La declaración e inicialización de una variable de bucle local, a la que no se puede tener acceso desde fuera del bucle.
 
-- Ninguna o más expresiones de instrucción de la siguiente lista, separadas por comas:
+- Ninguna, una o varias expresiones de instrucción de la siguiente lista, separadas por comas:
 
   - instrucción [assignment](../operators/assignment-operator.md)
 
@@ -95,7 +95,7 @@ i++
 
 ## <a name="examples"></a>Ejemplos
 
-En el ejemplo siguiente se muestran varios usos menos comunes de las secciones de instrucción `for`: asignar un valor a una variable de bucle externa en la sección *inicializador*, invocar un método en las secciones *inicializador* e *iterador*, y cambiar los valores de dos variables en la sección *iterador*. Haga clic en **Ejecutar** para ejecutar el código de ejemplo. Después, puede modificar el código y volver a ejecutarlo.
+En el ejemplo siguiente se muestran varios usos menos comunes de las secciones de la instrucción `for`: asignar un valor a una variable de bucle externa en la sección *inicializador*, invocar un método en las secciones *inicializador* e *iterador*, y cambiar los valores de dos variables en la sección *iterador*. Haga clic en **Ejecutar** para ejecutar el código de ejemplo. Después, puede modificar el código y volver a ejecutarlo.
   
 [!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
   

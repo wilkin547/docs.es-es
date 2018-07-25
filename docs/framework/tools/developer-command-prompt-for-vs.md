@@ -28,11 +28,11 @@ El símbolo del sistema para desarrolladores de Visual Studio establece automát
 
 ## <a name="searching-for-the-command-prompt-on-your-machine"></a>Buscar el símbolo del sistema en el equipo
 
-Es posible que vea muchos símbolos del sistema, en función de la versión de Visual Studio y de los SDK adicionales que haya instalado. Por ejemplo, las versiones de 64 bits de Visual Studio proporcionan los símbolos del sistema de 32 y de 64 bits. (Las versiones de 32 y 64 bits de la mayoría de las herramientas son iguales; pero algunas herramientas realizan cambios específicos para los entornos de 32 o 64 bits). Si los pasos siguientes no funcionan, puede probar los indicados en [Buscar manualmente los archivos en la máquina](#manually-locating-the-files-on-your-machine) o [Ejecutar el símbolo del sistema desde Visual Studio](#running-command-prompt-from-inside-visual-studio).
+Es posible que vea muchos símbolos del sistema, en función de la versión de Visual Studio y de los SDK adicionales que haya instalado. Por ejemplo, las versiones de 64 bits de Visual Studio proporcionan los símbolos del sistema de 32 y de 64 bits. (Las versiones de 32 y 64 bits de la mayoría de las herramientas son iguales; pero algunas herramientas realizan cambios específicos para los entornos de 32 o 64 bits). Si los pasos siguientes no funcionan, puede probar los indicados en [Buscar manualmente los archivos en el equipo](#manually-locating-the-files-on-your-machine) o [Ejecutar el símbolo del sistema desde Visual Studio](#running-command-prompt-from-inside-visual-studio).
 
 ### <a name="in-windows-10"></a>En Windows 10
 
-1. En el cuadro de búsqueda en la barra de tareas, comience a escribir el nombre de la herramienta, como `dev` o `developer command prompt`. Esto muestra una lista de las aplicaciones instaladas que coinciden con el patrón de búsqueda. Si busca un símbolo del sistema diferente, pruebe a escribir otro término de búsqueda, como `prompt`.
+1. En el cuadro de búsqueda de la barra de tareas, comience a escribir el nombre de la herramienta, como `dev` o `developer command prompt`. Esto muestra una lista de las aplicaciones instaladas que coinciden con el patrón de búsqueda. Si busca un símbolo del sistema diferente, pruebe a escribir otro término de búsqueda, como `prompt`.
 
 2. Elija el **Símbolo del sistema para desarrolladores** (o el símbolo del sistema que quiera usar).
 
@@ -80,7 +80,7 @@ Para un acceso más sencillo, puede agregar el símbolo del sistema para desarro
 
 5. Indique en el campo **Comando** el archivo que quiere iniciar como, por ejemplo, `%comspec%` o `C:\Windows\System32\cmd.exe`.
 
-6. En el campo **Argumentos** indique dónde se encuentra el símbolo del sistema específico que quiere usar como, por ejemplo, `/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"` (este comando inicia el símbolo del sistema para desarrolladores que está instalado con Visual Studio 2017 Enterprise). Cambie este valor según la ubicación de instalación, la edición y la versión de Visual Studio.
+6. En el campo **Argumentos** indique dónde se encuentra el símbolo del sistema específico que quiere usar como, por ejemplo, `/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"` (este comando inicia el símbolo del sistema para desarrolladores que se instala con Visual Studio 2017 Enterprise). Cambie este valor según la ubicación de instalación, la edición y la versión de Visual Studio.
 
 7. Elija un valor para el campo **Directorio inicial** como, por ejemplo, **Directorio del proyecto**.
 
