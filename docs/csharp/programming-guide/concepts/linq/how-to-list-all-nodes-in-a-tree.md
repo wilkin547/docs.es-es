@@ -3,11 +3,11 @@ title: 'Cómo: Mostrar todos los nodos de un árbol (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
 ms.openlocfilehash: 0ee4c51946ff6116fa37f4ca61bc42deed562532
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322135"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959486"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>Cómo: Mostrar todos los nodos de un árbol (C#)
 A veces resulta útil enumerar todos los nodos de un árbol. Puede resultar útil cuando se aprende exactamente cómo afecta al árbol un método o propiedad. Un enfoque para enumerar todos los nodos en formato de texto consiste en generar una expresión XPath que identifique de forma exacta y específica cualquier nodo del árbol.  

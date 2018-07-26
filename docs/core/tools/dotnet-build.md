@@ -5,11 +5,11 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
 ms.openlocfilehash: 6b0b7bc11b560d8632b38f1dfa4e7eb3ce6c54d2
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697136"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961465"
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -35,7 +35,7 @@ dotnet build [-h|--help]
 ```
 ---
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descripción
 
 El comando `dotnet build` crea el proyecto y sus dependencias en un conjunto de archivos binarios. Los archivos binarios incluyen el código del proyecto en archivos de lenguaje intermedio (IL) con una extensión *.dll* y los archivos de símbolos usados para la depuración con una extensión *.pdb*. Se genera un archivo JSON de dependencias (*\*. deps.json*) que incluye las dependencias de la aplicación. Se genera un archivo *\*.runtimeconfig.json*, que especifica el tiempo de ejecución compartido y su versión de la aplicación.
 

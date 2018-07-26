@@ -5,11 +5,11 @@ helpviewer_keywords:
 - collection initializers [C#], with Dictionary
 ms.assetid: 25283922-f8ee-40dc-a639-fac30804ec71
 ms.openlocfilehash: b8c44ebbdc89d72398c3380d708b45d0b7dfdad3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324179"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198463"
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>Cómo: Inicializar un diccionario con un inicializador de colección (Guía de programación de C#)
 <xref:System.Collections.Generic.Dictionary`2> contiene una colección de pares clave-valor. Su método <xref:System.Collections.Generic.Dictionary`2.Add*> toma dos parámetros: uno para la clave y otro para el valor. Para inicializar <xref:System.Collections.Generic.Dictionary`2>, o cualquier otra colección cuyo método `Add` tome varios parámetros, encierre entre llaves cada uno de los conjuntos de parámetros, como se muestra en el ejemplo siguiente.  

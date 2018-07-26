@@ -2,12 +2,12 @@
 title: Iteradores (C#)
 ms.date: 07/20/2015
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 08fe529f46ccaae7b2e17367a47346265aa0e8b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52450c4e80f5d9a149fd95c31f9c1189066659c5
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338876"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245275"
 ---
 # <a name="iterators-c"></a>Iteradores (C#)
 Un *iterador* puede usarse para recorrer colecciones como listas y matrices.  
@@ -218,7 +218,7 @@ public class Zoo : IEnumerable
 ```  
   
 ##  <a name="BKMK_GenericList"></a> Uso de iteradores con una lista genérica  
- En el ejemplo siguiente, la clase genérica `Stack(Of T)` implementa la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601>. El método `Push` asigna valores a una matriz de tipo `T`. El método <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> devuelve los valores de la matriz con la instrucción `yield return`.  
+ En el ejemplo siguiente, la clase genérica <xref:System.Collections.Generic.Stack%601> implementa la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601>. El método <xref:System.Collections.Generic.Stack%601.Push%2A> asigna valores a una matriz de tipo `T`. El método <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> devuelve los valores de la matriz con la instrucción `yield return`.  
   
  Además del método <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> genérico, el método <xref:System.Collections.IEnumerable.GetEnumerator%2A> no genérico también debe implementarse. Esto es porque <xref:System.Collections.Generic.IEnumerable%601> se hereda de <xref:System.Collections.IEnumerable>. La implementación no genérica aplaza la implementación genérica.  
   

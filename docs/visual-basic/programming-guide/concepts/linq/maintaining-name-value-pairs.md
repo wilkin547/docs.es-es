@@ -1,15 +1,15 @@
 ---
-title: Mantenimiento de pares de nombre / valor (Visual Basic)
+title: Mantener pares nombre / valor (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
 ms.openlocfilehash: 6d842adb1e21a7744f03f4a7e7fb0785ffb6a119
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646882"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243802"
 ---
-# <a name="maintaining-namevalue-pairs-visual-basic"></a>Mantenimiento de pares de nombre/valor (Visual Basic)
+# <a name="maintaining-namevalue-pairs-visual-basic"></a>Mantener pares nombre/valor (Visual Basic)
 Son muchas las aplicaciones que necesitan mantener información que se almacena mejor en forma de pares de nombre/valor. Esta información podría contener datos sobre configuración o valores globales. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] incluye métodos que facilitan la operación de mantener un conjunto de pares nombre/valor. Puede almacenar la información como atributos o como un conjunto de elementos secundarios.  
   
  Una diferencia existente entre almacenar la información como atributos o como elementos secundarios es que los atributos tienen, como restricción, que solo puede existir un atributo con un nombre en particular para un elemento. Esto no se aplica a los elementos secundarios.  

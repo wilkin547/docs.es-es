@@ -6,20 +6,20 @@ helpviewer_keywords:
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
 ms.openlocfilehash: 7fb56da8a28367a6dcd5e28f208b4519510d7d95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650886"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243884"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>Cómo: Crear documentación XML en Visual Basic
-Este ejemplo muestra cómo agregar comentarios de documentación XML en el código.  
+En este ejemplo se muestra cómo agregar comentarios de documentación XML en el código.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-xml-documentation-for-a-type-or-member"></a>Para crear documentación XML para un tipo o miembro  
   
-1.  En el **Editor de código**, sitúe el cursor en la línea anterior del tipo o miembro para el que desea crear documentación.  
+1.  En el **Editor de código**, sitúe el cursor a la línea sobre el tipo o miembro para el que desea crear documentación.  
   
 2.  Tipo `'''` (tres comillas simples).  
   
@@ -30,7 +30,7 @@ Este ejemplo muestra cómo agregar comentarios de documentación XML en el códi
     > [!NOTE]
     >  Si agrega líneas adicionales dentro del bloque de documentación XML, cada línea debe comenzar con `'''`.  
   
-4.  Agregue código adicional que utiliza el tipo o miembro con los comentarios de documentación XML nuevo.  
+4.  Agregar código adicional que utiliza el tipo o miembro con los nuevos comentarios de documentación XML.  
   
      IntelliSense muestra el texto de la \<resumen > etiqueta para el tipo o miembro.  
   

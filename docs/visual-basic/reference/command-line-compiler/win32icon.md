@@ -9,11 +9,11 @@ ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 045e621f0104c4c958d77d2443c1524b33410b7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650470"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39221028"
 ---
 # <a name="-win32icon"></a>-win32icon
 Inserta un archivo .ico en el archivo de salida. Este archivo .ico representa el archivo de salida en **Explorador de archivos**.  
@@ -33,7 +33,7 @@ Inserta un archivo .ico en el archivo de salida. Este archivo .ico representa el
 ## <a name="remarks"></a>Comentarios  
  Puede crear un archivo .ico con el compilador de recursos de Microsoft Windows (RC). El compilador de recursos se invoca cuando se compila un programa de Visual C++; se crea un archivo .ico en el archivo .rc. El `-win32icon` y `-win32resource` opciones son mutuamente excluyentes.  
   
- Vea [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) para hacer referencia a un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] archivo de recursos, o [-recurso (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) para adjuntar un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] archivo de recursos. Vea [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) para importar un archivo. res.  
+ Consulte [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) para hacer referencia a un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] archivo de recursos, o [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) para adjuntar un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] archivo de recursos. Consulte [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) para importar un archivo. res.  
   
 |Para establecer - win32icon en el IDE de Visual Studio|  
 |---|  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
 ms.openlocfilehash: f1c045ffe311dfad851c7cace37966d8d42a22cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325213"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220742"
 ---
 # <a name="c-features-that-support-linq"></a>Características de C# compatibles con LINQ
 La siguiente sección presenta las nuevas construcciones de lenguaje incluidas en C# 3.0. Aunque estas nuevas características se usan hasta cierto punto con consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], no se limitan a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] y se pueden usar en cualquier contexto en las que se consideren de utilidad.  
@@ -48,7 +48,7 @@ var query = from str in stringArray
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
 ```  
   
- Para obtener más información, vea [Inicializadores de objeto y colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ Para más información, vea [Inicializadores de objeto y de colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
 ## <a name="anonymous-types"></a>Tipos anónimos  
  Un tipo anónimo se construye por el compilador y el nombre del tipo solo está disponible para el compilador. Los tipos anónimos son una manera cómoda de agrupar un conjunto de propiedades temporalmente en un resultado de consulta sin tener que definir un tipo con nombre independiente. Los tipos anónimos se inicializan con una nueva expresión y un inicializador de objeto, como se muestra aquí:  
@@ -59,7 +59,7 @@ select new {name = cust.Name, phone = cust.Phone};
   
  Para obtener más información, vea [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
-## <a name="extension-methods"></a>métodos de extensión.  
+## <a name="extension-methods"></a>Métodos de extensión.  
  Un método de extensión es un método estático que se puede asociar con un tipo, por lo que puede llamarse como si fuera un método de instancia en el tipo. Esta característica permite, en efecto, "agregar" nuevos métodos a los tipos existentes sin tener que modificarlos realmente. Los operadores de consulta estándar son un conjunto de métodos de extensión que proporcionan funciones de consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.  
   
  Para más información, vea [Métodos de extensión](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  

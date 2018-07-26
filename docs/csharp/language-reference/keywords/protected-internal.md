@@ -3,11 +3,11 @@ title: protected internal (Referencia de C#)
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 5ba2c811a1a4f095bcee65ed6678a7dc50fe94db
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172246"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244863"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (Referencia de C#)
 La combinación de palabras claves `protected internal` es un modificador de acceso de miembro. Se puede obtener acceso a un miembro protected internal desde el ensamblado actual o desde tipos que se deriven de la clase contenedora. Para obtener una comparación de `protected internal` con los demás modificadores de acceso, vea [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md). 

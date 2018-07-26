@@ -10,11 +10,11 @@ helpviewer_keywords:
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
 ms.openlocfilehash: 65908bb3bcd8912ef81fc094e5958ae8dc4ae1f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286034"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961450"
 ---
 # <a name="-operator-c-reference"></a>Operador [] (Referencia de C#)
 Los corchetes (`[]`) se usan para matrices, indexadores y atributos. También se pueden usar con punteros.  

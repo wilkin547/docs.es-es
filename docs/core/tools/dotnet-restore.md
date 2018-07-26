@@ -5,11 +5,11 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
 ms.openlocfilehash: 0eaab1aa1bc52bd5b3c51a6ed2dd7a59c35a4aa5
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140260"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960600"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -35,7 +35,7 @@ dotnet restore [-h|--help]
 ```
 ---
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descripción
 
 El comando `dotnet restore` usa NuGet para restaurar las dependencias, así como las herramientas específicas del proyecto que se especifican en el archivo project.json. De forma predeterminada, la restauración de dependencias y herramientas se ejecuta en paralelo.
 

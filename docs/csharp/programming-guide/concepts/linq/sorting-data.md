@@ -2,12 +2,12 @@
 title: Ordenación de datos (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 6e223ecbfc68e904762bff998b3bd37f88607f7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90ff7d52e6832935fe16e081e904acae3a24669a
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332564"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245443"
 ---
 # <a name="sorting-data-c"></a>Ordenación de datos (C#)
 Una operación de ordenación ordena los elementos de una secuencia según uno o varios atributos. El primer criterio de ordenación realiza una ordenación primaria de los elementos. Al especificar un segundo criterio de ordenación, se pueden ordenar los elementos dentro de cada grupo de ordenación primaria.  
@@ -20,7 +20,7 @@ Una operación de ordenación ordena los elementos de una secuencia según uno o
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre del método|Description|Sintaxis de la expresión de consulta de C#|Más información|  
+|Nombre del método|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |OrderBy|Ordena valores en orden ascendente.|`orderby`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
 |OrderByDescending|Ordena valores en orden descendente.|`orderby … descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
@@ -56,7 +56,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="primary-descending-sort"></a>Orden descendente principal  
- En el siguiente ejemplo se muestra cómo usar la cláusula `orderby``descending` en una consulta LINQ para ordenar las cadenas por su letra inicial, en orden descendente.  
+ En el siguiente ejemplo se muestra cómo usar la cláusula `orderby descending` en una consulta LINQ para ordenar las cadenas por su letra inicial, en orden descendente.  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -104,7 +104,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="secondary-descending-sort"></a>Orden descendente secundario  
- En el siguiente ejemplo se muestra cómo usar la cláusula `orderby``descending` en una consulta LINQ para realizar una ordenación principal en orden ascendente y una ordenación secundaria en orden descendente. Las cadenas se ordenan primero por su longitud y, después, por la letra inicial de la cadena.  
+ En el siguiente ejemplo se muestra cómo usar la cláusula `orderby descending` en una consulta LINQ para realizar una ordenación principal en orden ascendente y una ordenación secundaria en orden descendente. Las cadenas se ordenan primero por su longitud y, después, por la letra inicial de la cadena.  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  

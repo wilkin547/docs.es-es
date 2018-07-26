@@ -1,6 +1,6 @@
 ---
 title: Recursos de aplicación para bibliotecas destinadas a varias plataformas
-ms.date: 03/30/2017
+ms.date: 07/18/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,19 +14,21 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f4682b9ffcb0edb4e54c427968c3d40c0de134d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11b9bde41e2209a88a042eb6c61de37def9da787
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578227"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245503"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Recursos de aplicación para bibliotecas destinadas a varias plataformas
-Puede utilizar .NET Framework [biblioteca de clases Portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) tipo para asegurarse de que se pueden tener acceso a recursos en las bibliotecas de clases desde varias plataformas de proyecto. Este tipo de proyecto está disponible en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] y tiene como destino el subconjunto portable de la biblioteca de clases de .NET Framework. Mediante la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] se garantiza que se pueda obtener acceso a la biblioteca desde las aplicaciones de escritorio, aplicaciones Silverlight, aplicaciones Windows Phone y aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+Puede usar .NET Framework [biblioteca de clases Portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) tipo para asegurarse de que se pueden tener acceso a recursos en las bibliotecas de clases desde varias plataformas de proyecto. Este tipo de proyecto está disponible en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] y tiene como destino el subconjunto portable de la biblioteca de clases de .NET Framework. Mediante la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] se garantiza que se pueda obtener acceso a la biblioteca desde las aplicaciones de escritorio, aplicaciones Silverlight, aplicaciones Windows Phone y aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+
+[!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
   
  El proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] es solo un subconjunto muy limitado de los tipos del espacio de nombres <xref:System.Resources> disponible para la aplicación, pero podrá usar la clase <xref:System.Resources.ResourceManager> para recuperar recursos. Sin embargo, si está creando una aplicación mediante el uso de Visual Studio, debe usar el contenedor fuertemente tipado creado con Visual Studio en lugar de utilizar la clase <xref:System.Resources.ResourceManager> directamente.  
   
- Para crear un contenedor fuertemente tipado en Visual Studio, establezca el archivo de recursos principal **modificador de acceso** en el Diseñador de recursos de Visual Studio para **público**. Esto crea un archivo [nombreArchivoRecursos].designer.cs o [nombreArchivoRecursos].designer.vb que incluye el contenedor ResourceManager fuertemente tipado. Para obtener más información sobre el uso de un contenedor de recursos fuertemente tipados, vea la sección "Generar una clase fuertemente tipados recursos" en la [Resgen.exe (generador de archivos de recursos)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) tema.  
+ Para crear un contenedor fuertemente tipado en Visual Studio, establezca el archivo de recursos principal **modificador de acceso** en el Diseñador de recursos de Visual Studio para **pública**. Esto crea un archivo [nombreArchivoRecursos].designer.cs o [nombreArchivoRecursos].designer.vb que incluye el contenedor ResourceManager fuertemente tipado. Para obtener más información sobre el uso de un contenedor de recursos fuertemente tipados, vea la sección "Generar una clase fuertemente tipados recursos" en el [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) tema.  
   
 ## <a name="resource-manager-in-the-includenetportableincludesnet-portable-mdmd"></a>Administrador de recursos en la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
  En un proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], todo el acceso a los recursos lo controla la clase <xref:System.Resources.ResourceManager>. Dado que no se puede tener acceso a los tipos del espacio de nombres <xref:System.Resources>, como <xref:System.Resources.ResourceReader> y <xref:System.Resources.ResourceSet>, desde un proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], estos no pueden utilizarse para obtener acceso a los recursos.  
@@ -65,7 +67,7 @@ Puede utilizar .NET Framework [biblioteca de clases Portable](../../../docs/stan
 |NameLength|25|  
 |Título|Base de datos de empleados|  
   
- El código siguiente define un `UILibrary` clase que usa el contenedor del Administrador de recursos denominado `resources` generado por Visual Studio cuando el **modificador de acceso** para el archivo se cambia a **público** . La clase UILibrary analiza los datos de cadena según sea necesario. . Tenga en cuenta que la clase está en el espacio de nombres `MyCompany.Employees`.  
+ El código siguiente define un `UILibrary` clase que usa el contenedor del Administrador de recursos denominado `resources` generado por Visual Studio cuando el **modificador de acceso** para el archivo se cambia a **pública** . La clase UILibrary analiza los datos de cadena según sea necesario. . Tenga en cuenta que la clase está en el espacio de nombres `MyCompany.Employees`.  
   
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]  
@@ -80,7 +82,7 @@ Puede utilizar .NET Framework [biblioteca de clases Portable](../../../docs/stan
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]  
   
 ## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Ejemplo: [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] localizada  
- El siguiente ejemplo de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] localizada incluye recursos para las referencias culturales de francés (Francia) e inglés (Estados Unidos). La referencia cultural inglés (Estados Unidos) es la referencia cultural predeterminada de la aplicación; los recursos se muestran en la tabla en la [sección anterior](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). El archivo de recursos de la referencia cultural Francés (Francia) se denomina LibResources.fr-FR.resx y consta de los recursos de cadena que se enumeran en la tabla siguiente. El código fuente para la clase `UILibrary` es el mismo que se muestra en la sección anterior.  
+ El siguiente ejemplo de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] localizada incluye recursos para las referencias culturales de francés (Francia) e inglés (Estados Unidos). La referencia cultural inglés (Estados Unidos) es la referencia cultural predeterminada de la aplicación; sus recursos se muestran en la tabla en la [sección anterior](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). El archivo de recursos de la referencia cultural Francés (Francia) se denomina LibResources.fr-FR.resx y consta de los recursos de cadena que se enumeran en la tabla siguiente. El código fuente para la clase `UILibrary` es el mismo que se muestra en la sección anterior.  
   
 |Nombre del recurso|Valor del recurso|  
 |-------------------|--------------------|  

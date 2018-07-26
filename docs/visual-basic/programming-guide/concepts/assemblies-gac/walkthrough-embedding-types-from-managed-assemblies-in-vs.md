@@ -3,11 +3,11 @@ title: 'Tutorial: Incrustar los tipos de los ensamblados administrados en Visual
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
 ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644191"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245483"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (Visual Basic)
 Si inserta información de tipos de un ensamblado administrado con nombre seguro, puede acoplar tipos holgadamente en una aplicación para lograr independencia de versiones. Es decir, el programa puede escribirse de modo que use tipos de varias versiones de una biblioteca administrada sin tener que volver a compilarse para cada versión.  
@@ -56,7 +56,7 @@ Si inserta información de tipos de un ensamblado administrado con nombre seguro
   
 2.  En el panel **Tipos de proyecto** del cuadro de diálogo **Nuevo proyecto**, asegúrese de que esté seleccionado **Windows**. Seleccione **Biblioteca de clases** en el panel **Plantillas**. En el cuadro **Nombre**, escriba `TypeEquivalenceInterface` y haga clic en **Aceptar**. Se crea el proyecto.  
   
-3.  En **el Explorador de soluciones**, haga clic en el archivo Class1.vb y haga clic en **cambiar el nombre de**. Cambie el nombre del archivo a `ISampleInterface.vb` y pulse ENTRAR. Al cambiar el nombre del archivo también se cambiará el nombre de la clase a `ISampleInterface`. Esta clase representará la interfaz pública de la clase.  
+3.  En **el Explorador de soluciones**, haga clic en el archivo Class1.vb y haga clic en **cambiar el nombre**. Cambie el nombre del archivo a `ISampleInterface.vb` y pulse ENTRAR. Al cambiar el nombre del archivo también se cambiará el nombre de la clase a `ISampleInterface`. Esta clase representará la interfaz pública de la clase.  
   
 4.  Haga clic con el botón derecho en el proyecto TypeEquivalenceInterface y haga clic en **Propiedades**. Haga clic en la pestaña **Compilar**. Establezca la ruta de acceso de salida en una ubicación válida en el equipo de desarrollo, como `C:\TypeEquivalenceSample`. Esta ubicación también se usará en un paso posterior en este tutorial.  
   
@@ -81,7 +81,7 @@ Si inserta información de tipos de un ensamblado administrado con nombre seguro
   
 9. En el menú **Proyecto**, haga clic en **Mostrar todos los archivos**.  
   
-10. En **el Explorador de soluciones**, expanda la **mi proyecto** carpeta. Haga doble clic en el AssemblyInfo.vb. Agregue el atributo siguiente al archivo.  
+10. En **el Explorador de soluciones**, expanda el **mi proyecto** carpeta. Haga doble clic en el AssemblyInfo.vb. Agregue el atributo siguiente al archivo.  
   
     ```vb  
     <Assembly: ImportedFromTypeLib("")>  
@@ -101,7 +101,7 @@ Si inserta información de tipos de un ensamblado administrado con nombre seguro
   
 2.  En el panel **Tipos de proyecto** del cuadro de diálogo **Nuevo proyecto**, asegúrese de que esté seleccionado **Windows**. Seleccione **Biblioteca de clases** en el panel **Plantillas**. En el cuadro **Nombre**, escriba `TypeEquivalenceRuntime` y haga clic en **Aceptar**. Se crea el proyecto.  
   
-3.  En **el Explorador de soluciones**, haga clic en el archivo Class1.vb y haga clic en **cambiar el nombre de**. Cambie el nombre del archivo a `SampleClass.vb` y pulse ENTRAR. Al cambiar el nombre del archivo también se cambiará el nombre de la clase a `SampleClass`. Esta clase implementará la interfaz `ISampleInterface`.  
+3.  En **el Explorador de soluciones**, haga clic en el archivo Class1.vb y haga clic en **cambiar el nombre**. Cambie el nombre del archivo a `SampleClass.vb` y pulse ENTRAR. Al cambiar el nombre del archivo también se cambiará el nombre de la clase a `SampleClass`. Esta clase implementará la interfaz `ISampleInterface`.  
   
 4.  Haga clic con el botón derecho en el proyecto TypeEquivalenceRuntime y haga clic en **Propiedades**. Haga clic en la pestaña **Compilar**. Establezca la ruta de acceso de salida en la misma ubicación que se usa en el proyecto TypeEquivalenceInterface, por ejemplo, `C:\TypeEquivalenceSample`.  
   

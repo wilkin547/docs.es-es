@@ -11,12 +11,12 @@ ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 56912e09d24fc83e93a91cc42b1d96dcc68210f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b6e01906c31316cfa8f148ed96944f309517f95
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741898"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874928"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; elemento (configuración de red)
 Configura el formato de entrega, el método de entrega y de dirección para el envío de mensajes de correo electrónico.  
@@ -45,9 +45,9 @@ Configura el formato de entrega, el método de entrega y de dirección para el e
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`deliveryFormat`|Especifica el formato de entrega de correos electrónicos de salida. Los valores aceptables son SevenBit e International.|  
-|`deliveryMethod`|Especifica el método de entrega de mensajes de correo electrónico. Los valores aceptables son network, pickupDirectoryFromIis y specifiedPickupDirectory.|  
-|`from`|Especifica el de la dirección de correo electrónico saliente.|  
+|`deliveryFormat`|Especifica el formato de entrega de mensajes de correo electrónico salientes. Los valores aceptables son SevenBit e International.|  
+|`deliveryMethod`|Especifica el método de entrega de mensajes de correo electrónico. Los valores aceptables son Network, PickupDirectoryFromIis y SpecifiedPickupDirectory.|  
+|`from`|Especifica la desde la dirección de correo saliente.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -63,13 +63,13 @@ Configura el formato de entrega, el método de entrega y de dirección para el e
 |[Elemento \<mailSettings> (configuración de red)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Configura opciones de envío de correo.|  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se especifica los parámetros SMTP adecuados para enviar correo electrónico mediante las credenciales de red predeterminadas.  
+ El ejemplo siguiente especifica los parámetros SMTP adecuados para enviar correo electrónico utilizando las credenciales de red predeterminadas.  
   
 ```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
+      <smtp deliveryMethod="Network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
         <network  
           host="localhost"  
           port="25"  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 ms.openlocfilehash: b48fb59f0927056c8dba75211b4fffa6f25c5c52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591552"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245238"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Crear y utilizar componentes en Visual Basic
 Un *componente* es una clase que implementa la interfaz <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> o que deriva directa o indirectamente de una clase que implementa <xref:System.ComponentModel.IComponent>. Un componente de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] es un objeto que se puede reutilizar, puede interactuar con otros objetos y proporciona control sobre recursos externos y sobre la compatibilidad en tiempo de diseño.  

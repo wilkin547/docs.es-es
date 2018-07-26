@@ -8,17 +8,18 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: f20ba6845a6a84a57fa7636355d08b2f4e5cea2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e043903647075587d1e7eec21c9a7b04f596dbf6
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340650"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937054"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expresiones lambda (Guía de programación de C#)
-Una expresión lambda es una [función anónima](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) que se puede usar para crear tipos [delegados](../../../csharp/programming-guide/delegates/using-delegates.md) o de [árbol de expresión](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) . Al utilizar expresiones lambda, puede escribir funciones locales que se pueden pasar como argumentos o devolverse como valor de llamadas de función. Las expresiones lambda son especialmente útiles para escribir expresiones de consulta LINQ.  
+
+Una expresión lambda es una [función anónima](anonymous-methods.md) que se puede usar para crear tipos [delegados](../delegates/using-delegates.md) o de [árbol de expresión](../concepts/expression-trees/index.md) . Al utilizar expresiones lambda, puede escribir funciones locales que se pueden pasar como argumentos o devolverse como valor de llamadas de función. Las expresiones lambda son especialmente útiles para escribir expresiones de consulta LINQ.
   
- Para crear una expresión lambda, especifique los parámetros de entrada (si existen) a la izquierda del operador lambda [=>](../../../csharp/language-reference/operators/lambda-operator.md)y coloque el bloque de expresiones o de instrucciones en el otro lado. Por ejemplo, la expresión lambda `x => x * x` especifica un parámetro denominado `x` y devuelve el valor de `x` cuadrado. Puede asignar esta expresión a un tipo delegado, como se muestra en el ejemplo siguiente:  
+Para crear una expresión lambda, especifique los parámetros de entrada (si existen) a la izquierda del operador lambda [=>](../../../csharp/language-reference/operators/lambda-operator.md)y coloque el bloque de expresiones o de instrucciones en el otro lado. Por ejemplo, la expresión lambda `x => x * x` especifica un parámetro denominado `x` y devuelve el valor de `x` cuadrado. Puede asignar esta expresión a un tipo delegado, como se muestra en el ejemplo siguiente:  
   
 ```csharp  
 delegate int del(int i);  
@@ -58,8 +59,9 @@ namespace ConsoleApplication1
   
  Todas las restricciones que se aplican a los métodos anónimos también se aplican a las expresiones lambda. Para obtener más información, vea [Métodos anónimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).  
   
-## <a name="expression-lambdas"></a>Lambdas de expresión  
- Una expresión lambda con una expresión en el lado derecho del operador => se denomina *lambda de expresión*. Las lambdas de expresión se usan ampliamente en la construcción de [árboles de expresión](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b). Una expresión lambda devuelve el resultado de evaluar la condición y tiene la siguiente forma:  
+## <a name="expression-lambdas"></a>Lambdas de expresión
+
+ Una expresión lambda con una expresión en el lado derecho del operador => se denomina *lambda de expresión*. Las lambdas de expresión se usan ampliamente en la construcción de [árboles de expresión](../concepts/expression-trees/index.md). Una expresión lambda devuelve el resultado de evaluar la condición y tiene la siguiente forma:
   
 ```csharp
 (input-parameters) => expression

@@ -9,11 +9,11 @@ ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 22eb8aa1cd86dba4a1a65edf31a3b18df7085a33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654455"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245487"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 Especifica la versión mínima del subsistema en la que se puede ejecutar el archivo ejecutable generado, lo que determina las versiones de Windows en las que se puede ejecutar el archivo ejecutable. Normalmente, esta opción garantiza que el archivo ejecutable pueda aprovechar las características de seguridad concretas que no están disponibles en versiones anteriores de Windows.  

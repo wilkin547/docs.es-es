@@ -12,11 +12,11 @@ helpviewer_keywords:
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
 ms.openlocfilehash: 15f3a774255923aba83f15700540369040c02dcd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338723"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961539"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guía de programación de C#)
 ## <a name="types-variables-and-values"></a>Tipos, variables y valores  
@@ -111,7 +111,7 @@ char c = 'Z';
  
  [!code-csharp[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]  
   
- La constante `System.IO.FileMode.Create` tiene un valor de 2. Sin embargo, el nombre es mucho más significativo para los humanos que leen el código fuente y, por esa razón, es mejor utilizar enumeraciones en lugar de números literales constantes. Para obtener más información, consulta <xref:System.IO.FileMode?displayProperty=nameWithType>.  
+ La constante `System.IO.FileMode.Create` tiene un valor de 2. Sin embargo, el nombre es mucho más significativo para los humanos que leen el código fuente y, por esa razón, es mejor utilizar enumeraciones en lugar de números literales constantes. Para obtener más información, vea <xref:System.IO.FileMode?displayProperty=nameWithType>.  
   
  Todas las enumeraciones se heredan de <xref:System.Enum?displayProperty=nameWithType>, el cual se hereda de <xref:System.ValueType?displayProperty=nameWithType>. Todas las reglas que se aplican a las estructuras también se aplican a las enumeraciones. Para más información sobre las enumeraciones, vea [Tipos de enumeración](../../../csharp/programming-guide/enumeration-types.md).  
   

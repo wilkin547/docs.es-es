@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ms.openlocfilehash: 9b108a1613e01016c541d088612303c6aaa13629
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337199"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961474"
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
@@ -115,7 +115,7 @@ string s = String.Empty;
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Cómo: Modificar el contenido de cadenas](../../how-to/modify-string-contents.md)|Muestra técnicas para transformar cadenas y modificar el contenido de estas.|  
 |[Cómo: Comparar cadenas](../../how-to/compare-strings.md)|Muestra cómo realizar comparaciones ordinales y culturales específicas de las cadenas.|  

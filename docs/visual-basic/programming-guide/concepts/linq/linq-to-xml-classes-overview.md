@@ -3,11 +3,11 @@ title: LINQ to XML de información general de clases (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
 ms.openlocfilehash: dd9e392c1fec86bfb1fe0e0f8bee0cd0c7919fe4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649183"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244093"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML de información general de clases (Visual Basic)
 En este tema se proporciona una lista de las clases de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] en el espacio de nombres <xref:System.Xml.Linq> y proporciona una breve descripción de cada una.  
@@ -34,16 +34,16 @@ En este tema se proporciona una lista de las clases de [!INCLUDE[sqltecxlinq](~/
  <xref:System.Xml.Linq.XDeclaration> representa una declaración XML. Una declaración XML se utiliza para declarar la versión de XML y la codificación de un documento. Asimismo, una declaración XML especifica si el documento XML es independiente. Si un documento es independiente, no hay declaraciones de marcado externas, ya sea en un DTD externo o en una entidad de parámetro externa a la que se hace referencia desde el subconjunto interno.  
   
 ### <a name="xdocument-class"></a>Clase XDocument  
- <xref:System.Xml.Linq.XDocument> representa un documento XML. Para obtener información detallada y ejemplos, vea [Introducción (Visual Basic) a la clase XDocument](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).  
+ <xref:System.Xml.Linq.XDocument> representa un documento XML. Para obtener información detallada y ejemplos, vea [resumen de la clase XDocument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).  
   
 ### <a name="xdocumenttype-class"></a>Clase XDocumentType  
  <xref:System.Xml.Linq.XDocumentType> representa una definición de tipo del documento (DTD) XML.  
   
 ### <a name="xelement-class"></a>Clase XElement  
- <xref:System.Xml.Linq.XElement> representa un elemento XML. Para obtener información detallada y ejemplos, vea [Introducción (Visual Basic) a la clase XElement](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md).  
+ <xref:System.Xml.Linq.XElement> representa un elemento XML. Para obtener información detallada y ejemplos, vea [resumen de la clase XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md).  
   
 ### <a name="xname-class"></a>Clase XName  
- <xref:System.Xml.Linq.XName> representa nombres de elementos (<xref:System.Xml.Linq.XElement>) y atributos (<xref:System.Xml.Linq.XAttribute>). Para obtener información detallada y ejemplos, vea [Introducción (Visual Basic) a la clase XDocument](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).  
+ <xref:System.Xml.Linq.XName> representa nombres de elementos (<xref:System.Xml.Linq.XElement>) y atributos (<xref:System.Xml.Linq.XAttribute>). Para obtener información detallada y ejemplos, vea [resumen de la clase XDocument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md).  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] se ha diseñado para hacer que los nombres XML sean tan sencillos como sea posible. Debido a su complejidad, los nombres XML a menudo se consideran un tema avanzado en XML. Puede argumentarse que la complejidad no proviene de los espacios de nombres, que los desarrolladores usan regularmente en la programación, sino de los prefijos de los espacios de nombres. Los prefijos de los espacios de nombres pueden ser útiles para reducir las pulsaciones de teclas necesarias cuando se especifica código XML o hacer que el código XML sea más fácil de leer. No obstante, a menudo los prefijos son un acceso directo al espacio de nombres XML completo y no son necesarios en la mayoría de los casos. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] simplifica los nombres XML resolviendo todos los prefijos a su espacio de nombres XML correspondiente. Los prefijos están disponibles, si son necesarios, a través del método <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A>.  
   

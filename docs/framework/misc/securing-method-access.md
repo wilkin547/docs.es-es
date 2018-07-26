@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0d9ddbd6c7b027a7c342f4c14192a7571beb592
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 314ceb86219ce143e84a00392727d610c0779e48
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397889"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243683"
 ---
 # <a name="securing-method-access"></a>Proteger acceso a métodos
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -30,17 +30,17 @@ ms.locfileid: "33397889"
   
 -   Limitar el ámbito de accesibilidad a la clase, el ensamblado o las clases derivadas, si son de confianza. Esta es la manera más sencilla de limitar el acceso a un método. Tenga en cuenta que, por lo general, las clases derivadas pueden ser de menos confianza que la clase de la que derivan, aunque en algunos casos compartan la identidad de la clase primaria. En concreto, no deduzca confianza de la palabra clave **protegido**, que no se usa necesariamente en el contexto de seguridad.  
   
--   Limitar el acceso a un método a llamadores de una identidad específica; básicamente, cualquier determinado [evidencia](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (nombre seguro, publicador, zona etc.) elija.  
+-   Limitar el acceso a un método a los llamadores de una identidad específica; básicamente, cualquier determinado [evidencia](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (nombre seguro, publicador, zona etc.) elija.  
   
 -   Limite el acceso a un método a los llamadores que tengan los permisos que seleccione.  
   
- De forma similar, la seguridad declarativa permite controlar la herencia de clases. Puede usar **InheritanceDemand** para hacer lo siguiente:  
+ De forma similar, la seguridad declarativa permite controlar la herencia de clases. Puede usar **InheritanceDemand** hacer lo siguiente:  
   
 -   Requerir que las clases derivadas tengan una identidad o un permiso específicos.  
   
 -   Requerir que las clases derivadas que invalidan métodos específicos tengan una identidad o un permiso específicos.  
   
- En el ejemplo siguiente se muestra cómo requerir que los llamadores estén firmados con un nombre seguro específico para ayudar a proteger una clase pública limitando el acceso a ella. Este ejemplo se utiliza la <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> con un **petición** para el nombre seguro. Para obtener información basada en tareas acerca de cómo firmar un ensamblado con un nombre seguro, vea [crear y utilizar ensamblados](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ En el ejemplo siguiente se muestra cómo requerir que los llamadores estén firmados con un nombre seguro específico para ayudar a proteger una clase pública limitando el acceso a ella. Este ejemplo se usa el <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> con un **demanda** para el nombre seguro. Para obtener información basada en tareas sobre cómo firmar un ensamblado con un nombre seguro, vea [crear y utilizar ensamblados](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -62,7 +62,7 @@ public class Class1
 > [!NOTE]
 >  Se ha incorporado un nuevo modelo de transparencia en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. El [código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md) modelo identifica el código seguro con el <xref:System.Security.SecurityCriticalAttribute> atributo. El código crítico para la seguridad requiere que los llamadores y los herederos sean de plena confianza. Los ensamblados que se ejecutan bajo las reglas de seguridad de acceso del código desde versiones anteriores de .NET Framework pueden llamar a los ensamblados de nivel 2. En este caso, los atributos críticos para la seguridad se tratarán como peticiones de vínculo de plena confianza.  
   
- En los ensamblados con nombre seguro, una [LinkDemand](../../../docs/framework/misc/link-demands.md) se aplica a todos los métodos accesibles públicamente, propiedades y eventos en él para restringir su uso a llamadores de plena confianza. Para deshabilitar esta característica, debe aplicar el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Por lo tanto, solo es necesario marcar explícitamente las clases para excluir los llamadores que no son de confianza en ensamblados no firmados o en ensamblados con este atributo; puede usar estas declaraciones para marcar en ellos un subconjunto de tipos que no están diseñados para llamadores que no son de confianza.  
+ En los ensamblados con nombre seguro, un [LinkDemand](../../../docs/framework/misc/link-demands.md) se aplica a todos los eventos en él para restringir su uso a llamadores de plena confianza, propiedades y métodos públicamente accesibles. Para deshabilitar esta característica, debe aplicar el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Por lo tanto, solo es necesario marcar explícitamente las clases para excluir los llamadores que no son de confianza en ensamblados no firmados o en ensamblados con este atributo; puede usar estas declaraciones para marcar en ellos un subconjunto de tipos que no están diseñados para llamadores que no son de confianza.  
   
  Los ejemplos siguientes muestran cómo impedir que código que no es de confianza use las clases y los miembros.  
   
@@ -110,7 +110,7 @@ End Class
 ```csharp  
 [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Name="FullTrust")]  
 [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name="FullTrust")]  
-public abstract class CannotCreateInstanceOfMe_CanCastToMe{}  
+public abstract class CannotCreateInstanceOfMe_CanCastToMe {}  
 ```  
   
  Para funciones públicas virtuales:  
@@ -145,7 +145,7 @@ End Class 'Base2
 ```  
   
 ```csharp  
-abstract class Base2{  
+abstract class Base2 {  
 [System.Security.Permissions.PermissionSetAttribute(  
 System.Security.Permissions.SecurityAction.InheritanceDemand, Name = "FullTrust")]  
 [System.Security.Permissions.PermissionSetAttribute(  
@@ -236,7 +236,7 @@ class Implemented : ICanCastToMe
 > [!NOTE]
 >  En esta sección se advierte sobre un problema de seguridad cuando se declara un método como `virtual` y `internal` (`Overloads``Overridable``Friend` en Visual Basic). Esta advertencia solo se aplica a las versiones 1.0 y 1.1 de .NET Framework, no se aplica a las versiones posteriores.  
   
- En las versiones 1.0 y 1.1 de .NET Framework, debe tener en cuenta un matiz de la accesibilidad del sistema de tipos cuando se confirma que el código no está disponible para otros ensamblados. Un método que se declara **virtuales** y **interno** (**Overloads Overridable Friend** en Visual Basic) puede reemplazar la entrada vtable de la clase primaria y puede utilizarse solo desde dentro del mismo ensamblado porque es interno. Sin embargo, la accesibilidad para invalidar se determina por la **virtuales** (palabra clave) y esto se puede invalidar desde otro ensamblado siempre que ese código tenga acceso a la propia clase. Si la posibilidad de una invalidación supone un problema, utilice la seguridad declarativa para solucionarlo o quite el **virtuales** palabra clave, si no es estrictamente necesaria.  
+ En las versiones 1.0 y 1.1 de .NET Framework, debe tener en cuenta un matiz de la accesibilidad del sistema de tipo cuando se confirma que el código está disponible para otros ensamblados. Un método que se declara **virtual** y **interno** (**Overloads Overridable Friend** en Visual Basic) puede reemplazar la entrada vtable de la clase primaria y se puede usar solo desde dentro del mismo ensamblado porque es interno. Sin embargo, la accesibilidad para invalidar viene determinada por la **virtual** palabra clave y esto se puede invalidar desde otro ensamblado siempre que ese código tenga acceso a la propia clase. Si la posibilidad de una invalidación supone un problema, utilice la seguridad declarativa para solucionarlo o quite el **virtual** palabra clave si no es estrictamente necesario.  
   
  Tenga en cuenta que aunque un compilador de lenguaje impida estas invalidaciones con un error de compilación, el código escrito con otros compiladores podría realizar la invalidación.  
   

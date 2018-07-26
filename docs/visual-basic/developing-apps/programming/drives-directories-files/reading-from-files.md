@@ -9,11 +9,11 @@ helpviewer_keywords:
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
 ms.openlocfilehash: cfb22fea6d2be4c1cf78efbc63b2e2342bcac49c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590804"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959500"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Leer archivos en Visual Basic
 En esta sección se explica cómo realizar tareas que se asocian a la lectura de archivos.  

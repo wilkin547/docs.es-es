@@ -3,11 +3,11 @@ title: LINQ to XML frente a DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
 ms.openlocfilehash: 819c507f02d6671592fd8c0239df50c1ea4325b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333237"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198450"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML frente a DOM (C#)
 En esta sección se describen algunas diferencias fundamentales entre [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] y la API de programación XML predominante actual, Document Object Model (DOM) W3C.  
@@ -114,7 +114,7 @@ doc.AppendChild(name);
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] no proporciona un equivalente para la clase `XmlDocumentFragment`. En cambio, es bastante común que el concepto `XmlDocumentFragment` se pueda controlar mediante el resultado de una consulta que se escribe como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XNode> o <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="support-for-xpathnavigator"></a>Compatibilidad con XPathNavigator  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona compatibilidad con <xref:System.Xml.XPath.XPathNavigator> mediante los métodos de extensión del espacio de nombres <xref:System.Xml.XPath?displayProperty=nameWithType>. Para obtener más información, consulta <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona compatibilidad con <xref:System.Xml.XPath.XPathNavigator> mediante los métodos de extensión del espacio de nombres <xref:System.Xml.XPath?displayProperty=nameWithType>. Para obtener más información, vea <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
   
 ## <a name="support-for-white-space-and-indentation"></a>Compatibilidad con espacios en blanco y sangría  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] trata los espacios en blanco de forma más sencilla que DOM.  

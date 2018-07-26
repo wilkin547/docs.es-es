@@ -3,11 +3,11 @@ title: 'Tutorial: Incrustar información de tipos de ensamblados de Microsoft Of
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
 ms.openlocfilehash: 6a28e95f9c3cfcc2481c8f4f9f83303648df43cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643827"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244060"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Tutorial: Incrustar información de tipos de ensamblados de Microsoft Office en Visual Studio (Visual Basic)
 Si inserta la de tipos en una aplicación que hace referencia a objetos COM, puede eliminar la necesidad de un ensamblado de interoperabilidad primario (PIA). Además, la información de tipo incrustada permite que la versión de la aplicación gane en independencia. Es decir, el programa puede escribirse de modo que use tipos de varias versiones de una biblioteca COM sin necesidad de requerir un PIA específico para cada versión. Se trata de un escenario común para las aplicaciones que usan objetos de las bibliotecas de Microsoft Office. La inserción de la información de tipos permite que la misma compilación de un programa funcione con distintas versiones de Microsoft Office en equipos diferentes sin necesidad de volver a implementar el programa o el PIA para cada versión de Microsoft Office.  
@@ -29,7 +29,7 @@ Si inserta la de tipos en una aplicación que hace referencia a objetos COM, pue
   
 3.  En el panel **Tipos de proyecto** del cuadro de diálogo **Nuevo proyecto**, asegúrese de que esté seleccionado **Windows**. Seleccione **Aplicación de consola** en el panel **Plantillas**. En el cuadro **Nombre**, escriba `CreateExcelWorkbook` y seleccione el botón **Aceptar**. Se crea el proyecto.  
   
-4.  Abra el menú contextual para el proyecto CreateExcelWorkbook y, a continuación, elija **propiedades**. Elija la **referencias** ficha. Elija el botón de **Agregar** .  
+4.  Abra el menú contextual del proyecto CreateExcelWorkbook y, a continuación, elija **propiedades**. Elija la **referencias** ficha. Elija el botón de **Agregar** .  
   
 5.  En la pestaña **.NET**, elija la versión más reciente de `Microsoft.Office.Interop.Excel`. Por ejemplo, **Microsoft.Office.Interop.Excel 14.0.0.0**. Elija el botón **Aceptar** .  
   

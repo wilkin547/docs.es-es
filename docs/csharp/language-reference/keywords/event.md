@@ -10,11 +10,11 @@ helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
 ms.openlocfilehash: b58e06c87ebf601daf231c83993ebe512f51ecd9
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33955971"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961500"
 ---
 # <a name="event-c-reference"></a>event (Referencia de C#)
 La palabra clave `event` se usa para declarar un evento en una clase de publicador.  
@@ -31,7 +31,7 @@ La palabra clave `event` se usa para declarar un evento en una clase de publicad
 ## <a name="keywords-and-events"></a>Palabras clave y eventos  
  Las palabras clave siguientes se aplican a eventos.  
   
-|Palabra clave|Description|Para obtener más información|  
+|Palabra clave|Descripción|Para obtener más información|  
 |-------------|-----------------|--------------------------|  
 |[static](../../../csharp/language-reference/keywords/static.md)|Hace que el evento esté disponible para los llamadores en cualquier momento, aunque no exista ninguna instancia de la clase.|[Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|Permite que las clases derivadas invaliden el comportamiento de eventos mediante la palabra clave [override](../../../csharp/language-reference/keywords/override.md).|[Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)|  

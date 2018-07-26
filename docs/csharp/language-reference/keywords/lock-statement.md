@@ -8,11 +8,11 @@ helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
 ms.openlocfilehash: 2ce870e8caa67d780ce603a6f1dbcc7cd303b842
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274224"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960964"
 ---
 # <a name="lock-statement-c-reference"></a>lock (Instrucción, Referencia de C#)
 La palabra clave `lock` marca un bloque de instrucciones como una sección crítica. Para ello, obtiene el bloqueo de exclusión mutua para un objeto determinado, ejecuta una instrucción y, después, libera el bloqueo. En el ejemplo siguiente se incluye una instrucción `lock`.  

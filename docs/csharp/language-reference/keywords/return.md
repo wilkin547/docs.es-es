@@ -9,11 +9,11 @@ helpviewer_keywords:
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
 ms.openlocfilehash: 29d2b8e28ae6240b9d06b82695efe1736404c5cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266115"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244782"
 ---
 # <a name="return-c-reference"></a>return (Referencia de C#)
 La instrucción `return` termina la ejecución del método en el que aparece y devuelve el control al método de llamada. También puede devolver un valor opcional. Si el método es del tipo `void`, la instrucción `return` se puede omitir.  

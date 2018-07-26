@@ -2,12 +2,12 @@
 title: Referencia de Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: 79cdf35128ac35920797060b09ff2fc5999708a7
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: d6b40d0c1662e18ed83c58bfdde7b6dac65220dd
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028024"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39221054"
 ---
 # <a name="entity-sql-reference"></a>Referencia de Entity SQL
 
@@ -50,12 +50,12 @@ La igualdad y desigualdad se definen para cualquier tipo de objeto que tenga ide
 |[= (Igual que)](equals-entity-sql.md)|Compara la igualdad de dos expresiones.|
 |[> (Mayor que)](greater-than-entity-sql.md)|Compara dos expresiones para determinar si la expresión de la izquierda tiene un valor mayor que el de la expresión de la derecha.|
 |[>= (Mayor o igual que)](greater-than-or-equal-to-entity-sql.md)|Compara dos expresiones para determinar si la expresión de la izquierda tiene un valor igual o mayor que el de la expresión de la derecha.|
-|[ES &AMP;#91;NO&AMP;#93; NULL](isnull-entity-sql.md)|Determina si una expresión de consulta es nula.|
+|[ES \[NO\] NULL](isnull-entity-sql.md)|Determina si una expresión de consulta es nula.|
 |[< (Menor que)](less-than-entity-sql.md)|Compara dos expresiones para determinar si la expresión de la izquierda tiene un valor menor que el de la expresión de la derecha.|
 |[<= (Menor o igual que)](less-than-or-equal-to-entity-sql.md)|Compara dos expresiones para determinar si la expresión izquierda tiene un valor igual o menor que el de la expresión derecha.|
-|[&AMP;#91;NO&AMP;#93; BETWEEN](between-entity-sql.md)|Determina si el resultado de una expresión es un valor incluido en un intervalo especificado.|
-|[!= (No igual a)](not-equal-to-entity-sql.md)|Compara dos expresiones para determinar si la expresión izquierda no es igual a la expresión derecha.|
-|[&AMP;#91;NO&AMP;#93; COMO](like-entity-sql.md)|Determina si una cadena de caracteres específica coincide con un patrón especificado.|
+|[\[NO\] BETWEEN](between-entity-sql.md)|Determina si el resultado de una expresión es un valor incluido en un intervalo especificado.|
+|[\!= (No igual a)](not-equal-to-entity-sql.md)|Compara dos expresiones para determinar si la expresión izquierda no es igual a la expresión derecha.|
+|[\[NO\] COMO](like-entity-sql.md)|Determina si una cadena de caracteres específica coincide con un patrón especificado.|
 
 ## <a name="logical-and-case-expression-operators"></a>Operadores lógicos y de expresión case
 
@@ -64,10 +64,10 @@ Los operadores lógicos prueban la veracidad de una condición. La expresión CA
 |Operador|Descripción|
 |--------------|-----------------|
 |[& & (AND lógico)](and-entity-sql.md)|AND lógico.|
-|[Operador (NOT lógico)](not-entity-sql.md)|NOT lógico.|
+|[\! (NOT lógico)](not-entity-sql.md)|NOT lógico.|
 |[&#124;&#124;(OR lógico)](or-entity-sql.md)|OR lógico.|
 |[CASE](case-entity-sql.md)|Evalúa un conjunto de expresiones booleanas para determinar el resultado.|
-|[THEN](then-entity-sql.md)|El resultado de un [cuando](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) cláusula cuando se evalúa como true.|
+|[THEN](then-entity-sql.md)|El resultado de una [cuando](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) cláusula cuando se evalúa como true.|
 
 ## <a name="query-operators"></a>Operadores de consulta
 
@@ -75,14 +75,14 @@ Los operadores de consulta se usan para definir expresiones de consulta que devu
 
 |Operador|Usar|
 |--------------|---------|
-|[FROM](from-entity-sql.md)|Especifica la colección que se utiliza en [seleccione](select-entity-sql.md) instrucciones.|
-|[GROUP BY](group-by-entity-sql.md)|Especifica los grupos en los objetos que son devueltos por una consulta ([seleccione](select-entity-sql.md)) expresión que se van a colocar.|
+|[FROM](from-entity-sql.md)|Especifica la colección que se usa en [seleccione](select-entity-sql.md) instrucciones.|
+|[GROUP BY](group-by-entity-sql.md)|Especifica los grupos en los objetos devueltos por una consulta ([seleccione](select-entity-sql.md)) expresión que se van a colocarse.|
 |[GroupPartition](grouppartition-entity-sql.md)|Devuelve una colección de valores de argumento que se proyecta a partir de la partición de grupo con la que está relacionado el agregado.|
 |[HAVING](having-entity-sql.md)|Especifica una condición de búsqueda para un grupo o agregado.|
-|[LIMIT](limit-entity-sql.md)|Usar con el [ORDER BY](order-by-entity-sql.md) cláusula para realizar la paginación física.|
+|[LIMIT](limit-entity-sql.md)|Puede usar con el [ORDER BY](order-by-entity-sql.md) cláusula para realizar la paginación física.|
 |[ORDER BY](order-by-entity-sql.md)|Especifica el criterio de ordenación que se usa en los objetos devueltos en una [seleccione](select-entity-sql.md) instrucción.|
 |[SELECT](select-entity-sql.md)|Especifica los elementos de la proyección devueltos por una consulta.|
-|[SKIP](skip-entity-sql.md)|Usar con el [ORDER BY](order-by-entity-sql.md) cláusula para realizar la paginación física.|
+|[SKIP](skip-entity-sql.md)|Puede usar con el [ORDER BY](order-by-entity-sql.md) cláusula para realizar la paginación física.|
 |[TOP](top-entity-sql.md)|Especifica que solo se devolverá el primer conjunto de filas del resultado de la consulta.|
 |[WHERE](where-entity-sql.md)|Filtra de forma condicional los datos devueltos por una consulta.|
 
@@ -100,15 +100,15 @@ Una referencia es un puntero lógico (clave externa) a una entidad concreta en u
 
 ## <a name="set-operators"></a>Operadores de conjuntos
 
-Entity SQL proporciona varias operaciones de conjunto eficaz. Esto incluye operadores de conjuntos similares a los operadores de Transact-SQL como UNION, INTERSECT, EXCEPT y EXISTS. Entity SQL también admite operadores para la eliminación de duplicados (SET), pertenencia a probar (en) y combinaciones (JOIN). En la tabla siguiente se enumera los operadores de conjuntos de Entity SQL:
+Entity SQL proporciona varias operaciones de conjunto eficaces. Esto incluye operadores de conjuntos similares a los operadores de Transact-SQL como UNION, INTERSECT, EXCEPT y EXISTS. Entity SQL también admite los operadores para la eliminación de duplicados (SET), la pertenencia de las pruebas (IN) y combinaciones (JOIN). En la tabla siguiente se enumera los operadores de conjuntos de Entity SQL:
 
 |Operador|Usar|
 |--------------|---------|
 |[ANYELEMENT](anyelement-entity-sql.md)|Extrae un elemento de una colección de varios valores.|
-|[EXCEPT](except-entity-sql.md)|Devuelve una colección de los valores distintos de la expresión de consulta a la izquierda del operando EXCEPT, que tampoco se no se devuelven en la expresión de consulta a la derecha del operando EXCEPT.|
-|[&AMP;#91;NO&AMP;#93; EXISTS](exists-entity-sql.md)|Determina si una colección está vacía.|
+|[EXCEPT](except-entity-sql.md)|Devuelve una colección de los valores distintos de la expresión de consulta a la izquierda del operando EXCEPT que no se devuelven desde la expresión de consulta a la derecha del operando EXCEPT.|
+|[\[NO\] EXISTS](exists-entity-sql.md)|Determina si una colección está vacía.|
 |[FLATTEN](flatten-entity-sql.md)|Convierte una colección de colecciones en una colección plana.|
-|[&AMP;#91;NO&AMP;#93; IN](in-entity-sql.md)|Determina si un valor determinado coincide con algún valor de una colección.|
+|[\[NO\] IN](in-entity-sql.md)|Determina si un valor determinado coincide con algún valor de una colección.|
 |[INTERSECT](intersect-entity-sql.md)|Devuelve una colección de los valores distintos que devuelven las expresiones de consulta situadas a los lados izquierdo y derecho del operando INTERSECT.|
 |[OVERLAPS](overlaps-entity-sql.md)|Determina si dos colecciones tienen elementos comunes.|
 |[SET](set-entity-sql.md)|Convierte una colección de objetos en un conjunto produciendo una colección nueva en la que se han quitado todos los elementos duplicados.|
@@ -121,8 +121,8 @@ Entity SQL proporciona operaciones que permiten al tipo de una expresión (valor
 |Operador|Usar|
 |--------------|---------|
 |[CAST](cast-entity-sql.md)|Convierte una expresión de un tipo de datos a otro.|
-|[COLLECTION](collection-entity-sql.md)|Usar en un [función](function-entity-sql.md) operación para declarar una colección de tipos de entidad o tipos complejos.|
-|[ES &AMP;#91;NO&AMP;#93; OF](isof-entity-sql.md)|Determina si el tipo de una expresión es del tipo especificado o uno de sus subtipos.|
+|[COLLECTION](collection-entity-sql.md)|Utilizado en un [función](function-entity-sql.md) operación para declarar una colección de tipos de entidad o tipos complejos.|
+|[ES \[NO\] OF](isof-entity-sql.md)|Determina si el tipo de una expresión es del tipo especificado o uno de sus subtipos.|
 |[OFTYPE](oftype-entity-sql.md)|Devuelve una colección de objetos de una expresión de consulta de un tipo específico.|
 |[Constructor de tipos con nombre](named-type-constructor-entity-sql.md)|Crea instancias de tipos de entidad o tipos complejos.|
 |[MULTISET](multiset-entity-sql.md)|Crea una instancia de un conjunto múltiple a partir de una lista de valores.|

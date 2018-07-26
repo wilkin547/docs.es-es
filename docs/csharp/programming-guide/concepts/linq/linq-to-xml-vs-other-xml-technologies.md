@@ -3,11 +3,11 @@ title: LINQ to XML frente a Otras tecnologías XML
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
 ms.openlocfilehash: 5c8b043055660ad272e46e72c877729086689158
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333897"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199204"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML frente a otras tecnologías XML
 Este tema compara [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con las siguientes tecnologías XML: <xref:System.Xml.XmlReader>, XSLT, MSXML y XmlLite. Esta información puede ayudarle a decidir la tecnología que utilizará.  

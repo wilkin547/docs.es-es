@@ -1,17 +1,17 @@
 ---
-title: TextFieldParser no admite tokens de comentarios que contengan espacios en blanco.
+title: TextFieldParser no admite tokens de comentarios que contengan espacios en blanco
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_WhitespaceInToken
 ms.assetid: 55107656-270e-4bbb-841a-478904df8e07
-ms.openlocfilehash: ed22ac435a5cd46288f9854ae711b7fad354f624
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92aa3539a09a2479e75d1127b63db0e57297ba26
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641242"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245510"
 ---
-# <a name="textfieldparser-does-not-support-comment-tokens-that-contain-whitespace"></a>TextFieldParser no admite tokens de comentarios que contengan espacios en blanco.
+# <a name="textfieldparser-does-not-support-comment-tokens-that-contain-white-space"></a>TextFieldParser no admite tokens de comentarios que contengan espacios en blanco
 Se ha proporcionado un token de comentario que contiene espacios en blanco. El `TextFieldParser` no admite tokens de comentarios que contengan espacios en blanco a menos que el espacio en blanco aparezca al principio del token. Se omite el espacio en blanco que aparece al principio de un token.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  

@@ -3,11 +3,11 @@ title: Anotaciones de LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 54e7b9d0-07f5-488f-9065-b6e6b870f810
 ms.openlocfilehash: 8b8e03b0174ad2bf044c21eb9a9d3391da37fb7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320123"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960704"
 ---
 # <a name="linq-to-xml-annotations"></a>Anotaciones de LINQ to XML
 Las anotaciones de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] le permiten asociar cualquier objeto de cualquier tipo con un componente XML de un árbol XML.  
@@ -19,7 +19,7 @@ Las anotaciones de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] le perm
 ## <a name="methods"></a>Métodos  
  Puede utilizar los siguientes métodos a la hora de trabajar con anotaciones:  
   
-|Método|Description|  
+|Método|Descripción|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XObject.AddAnnotation%2A>|Agrega un objeto a la lista de anotaciones de un <xref:System.Xml.Linq.XObject>.|  
 |<xref:System.Xml.Linq.XObject.Annotation%2A>|Obtiene el primer objeto de anotación del tipo especificado a partir de un <xref:System.Xml.Linq.XObject>.|  

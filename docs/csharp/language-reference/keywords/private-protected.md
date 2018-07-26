@@ -3,11 +3,11 @@ title: private protected (Referencia de C#)
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 0d511f55f44511590fbe92a98cef118e0cb482e2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457256"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961137"
 ---
 # <a name="private-protected-c-reference"></a>private protected (Referencia de C#)
 La combinación de palabras claves `private protected` es un modificador de acceso de miembro. Los miembros private protected están accesibles para los tipos que se deriven de la clase contenedora, pero solo desde dentro del ensamblado correspondiente que lo contenga. Para obtener una comparación de `private protected` con los demás modificadores de acceso, vea [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md). 

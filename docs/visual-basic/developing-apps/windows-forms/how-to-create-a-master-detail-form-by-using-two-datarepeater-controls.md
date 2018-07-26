@@ -5,16 +5,16 @@ helpviewer_keywords:
 - DataRepeater, master/detail tables
 ms.assetid: eec43ae3-05d8-45a1-8d41-3803c6359dbe
 ms.openlocfilehash: 84639a5d49a3fa4a8c6845793c39fc8a67c31e02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590912"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245547"
 ---
 # <a name="how-to-create-a-masterdetail-form-by-using-two-datarepeater-controls-visual-studio"></a>Cómo: Crear un formulario principal-detalle mediante dos controles DataRepeater (Visual Studio)
-Puede mostrar datos relacionados mediante dos o más <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controles para crear un formulario principal-detalle. Por ejemplo, desea mostrar una lista de clientes en una <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>y cuando el usuario selecciona un cliente, mostrar una lista de los pedidos del cliente en un segundo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+Puede mostrar datos relacionados mediante dos o más <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controles para crear un formulario principal-detalle. Por ejemplo, desea mostrar una lista de clientes en uno <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>y cuando el usuario selecciona un cliente, mostrar una lista de los pedidos del cliente en un segundo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
   
- Puede mostrar datos relacionados arrastrando elementos de detalle que comparten el mismo nodo de tabla principal desde la **orígenes de datos** ventana en un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control. Por ejemplo, si tiene un origen de datos que tiene una tabla Customers y una tabla de pedidos relacionada, vea ambas tablas como nodos de nivel superior en la vista de árbol en el **orígenes de datos** ventana. Expanda el nodo de los clientes para que pueda ver las columnas. Tenga en cuenta que la última columna de la lista es un nodo expansible que representa la tabla Orders. Este nodo representa los pedidos relacionados para un cliente.  
+ Puede mostrar datos relacionados arrastrando los elementos de detalle que comparten el mismo nodo de tabla maestra de la **orígenes de datos** ventana hasta un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control. Por ejemplo, si tiene un origen de datos que tiene una tabla denominada Customers y una tabla de pedidos relacionada, vea ambas tablas como nodos de nivel superior en la vista de árbol en el **orígenes de datos** ventana. Expanda el nodo de los clientes para que puedan ver las columnas. Tenga en cuenta que la última columna en la lista es un nodo expansible que representa la tabla Orders. Este nodo representa los pedidos relacionados para un cliente.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -22,7 +22,7 @@ Puede mostrar datos relacionados mediante dos o más <xref:Microsoft.VisualBasic
   
 1.  Arrastre dos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controla desde el **Visual Basic PowerPacks** pestaña en el **cuadro de herramientas** a un control de formulario o contenedor.  
   
-2.  Arrastre los controladores de tamaño y posición para cambiar el tamaño de los controles y colocarlos en paralelo.  
+2.  Arrastre los controladores de tamaño y posición para el tamaño de los controles y colocarlos en paralelo.  
   
 3.  En el menú **Datos** , haga clic en **Mostrar orígenes de datos**.  
   
@@ -31,13 +31,13 @@ Puede mostrar datos relacionados mediante dos o más <xref:Microsoft.VisualBasic
   
 4.  En el **orígenes de datos** ventana, seleccione el nodo de nivel superior de la tabla principal.  
   
-5.  Cambie el tipo drop de la tabla principal a detalles haciendo clic en **detalles** en la lista desplegable en el nodo de tabla.  
+5.  Cambie el tipo de colocación de la tabla maestra a detalles haciendo **detalles** en la lista desplegable en el nodo de tabla.  
   
-6.  Arrastre el nodo de tabla principal a la región de la plantilla de elemento de la primera <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  
+6.  Arrastre el nodo de la tabla maestra a la región de la plantilla de elemento de la primera <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  
   
-7.  Expanda el nodo de tabla principal y seleccione el nodo de detalle de la tabla relacionada.  
+7.  Expanda el nodo de la tabla principal y seleccione el nodo de detalle de la tabla relacionada.  
   
-8.  Cambie el tipo de colocación de la tabla de detalle a detalles haciendo clic en **detalles** en la lista desplegable en el nodo de tabla.  
+8.  Cambie el tipo de colocación de la tabla de detalles a detalles haciendo **detalles** en la lista desplegable en el nodo de tabla.  
   
 9. Seleccione este nodo de tabla y arrástrelo a la región de la plantilla de elemento del segundo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  
   

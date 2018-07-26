@@ -3,11 +3,11 @@ title: 'Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: dcbfb859-24fc-4758-b01c-51d1b6f644e6
 ms.openlocfilehash: 0a5ea4dad9d86182d4bc3def0e8a59d1dcd892af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339428"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959617"
 ---
 # <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo es un pedido de compra típico.  

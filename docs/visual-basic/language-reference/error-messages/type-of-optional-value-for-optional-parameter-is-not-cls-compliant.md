@@ -1,5 +1,5 @@
 ---
-title: Tipo de valor opcional para el parámetro opcional &lt;parametername&gt; no es compatible con CLS
+title: Tipo de valor opcional para el parámetro opcional &lt;parametername&gt; no es conforme a CLS
 ms.date: 07/20/2015
 f1_keywords:
 - BC40042
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
 ms.openlocfilehash: dd77cd8cbd36f7681e2597d908dd8e55bf249392
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594355"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960354"
 ---
-# <a name="type-of-optional-value-for-optional-parameter-ltparameternamegt-is-not-cls-compliant"></a>Tipo de valor opcional para el parámetro opcional &lt;parametername&gt; no es compatible con CLS
+# <a name="type-of-optional-value-for-optional-parameter-ltparameternamegt-is-not-cls-compliant"></a>Tipo de valor opcional para el parámetro opcional &lt;parametername&gt; no es conforme a CLS
 Un procedimiento se marca como `<CLSCompliant(True)>`, pero declara un parámetro [opcional](../../../visual-basic/language-reference/modifiers/optional.md) con valor predeterminado de un tipo no conforme.  
   
  Para que un procedimiento sea conforme a la [Independencia del lenguaje y componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md) (CLS), solo debe usar tipos conformes a CLS. Esto se aplica a los tipos de los parámetros, el tipo de valor devuelto y los tipos de todas sus variables locales. También se aplica a los valores predeterminados de parámetros opcionales.  
@@ -39,7 +39,7 @@ Un procedimiento se marca como `<CLSCompliant(True)>`, pero declara un parámetr
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Si el parámetro opcional debe tener un valor predeterminado de este tipo determinado, quite <xref:System.CLSCompliantAttribute>. El procedimiento no puede ser conforme a CLS.  
+-   Si el parámetro opcional debe tener un valor predeterminado de este tipo particular, quite <xref:System.CLSCompliantAttribute>. El procedimiento no puede ser conforme a CLS.  
   
 -   Si el procedimiento debe ser conforme a CLS, cambie el tipo de este valor predeterminado al tipo conforme a CLS más próximo. Por ejemplo, en lugar de `UInteger` , quizá pueda usar `Integer` si no necesita que el intervalo de valores esté por encima de 2.147.483.647. Si necesita el intervalo extendido, puede reemplazar `UInteger` por `Long`.  
   

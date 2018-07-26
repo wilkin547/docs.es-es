@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Implementar un componente que admita el modelo asincrónico basado en eventos'
+title: 'Cómo: Implementar un componente que admita el modelo asincrónico basado en eventos'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 9156a538e306fb8657855a840dd8185cef8794b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5282befe15dc65db5ba320f558c7f22949ae7c2
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579267"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220768"
 ---
-# <a name="walkthrough-implementing-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Tutorial: Implementar un componente que admita el modelo asincrónico basado en eventos
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Cómo: Implementar un componente que admita el modelo asincrónico basado en eventos
 Si está escribiendo una clase con algunas operaciones que pueden dar lugar a retrasos evidentes, considere la posibilidad de darle funcionalidad asincrónica implementando [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
  En este tutorial se explica cómo crear un componente que implementa el modelo asincrónico basado en eventos. Se implementa utilizando las clases auxiliares del espacio de nombres <xref:System.ComponentModel?displayProperty=nameWithType>, que garantiza que el componente funciona correctamente bajo cualquier modelo de aplicación, incluidos [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], las aplicaciones de consola y aplicaciones Windows Forms. Este componente también se puede diseñar con un control <xref:System.Windows.Forms.PropertyGrid> y sus propios diseñadores personalizados.  
@@ -99,7 +99,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
      Estas advertencias se borrarán en la sección siguiente.  
   
 ## <a name="defining-private-delegates"></a>Definir delegados privados  
- Los aspectos asincrónicos del componente `PrimeNumberCalculator` se implementan internamente con un delegado especial conocido como <xref:System.Threading.SendOrPostCallback>. <xref:System.Threading.SendOrPostCallback> representa un método de devolución de llamada que se ejecuta en un subproceso <xref:System.Threading.ThreadPool>. El método de devolución de llamada debe tener una firma que toma un único parámetro de tipo <xref:System.Object>, lo que significa que tendrá que pasar información de estado entre los delegados de una clase contenedora. Para obtener más información, consulta <xref:System.Threading.SendOrPostCallback>.  
+ Los aspectos asincrónicos del componente `PrimeNumberCalculator` se implementan internamente con un delegado especial conocido como <xref:System.Threading.SendOrPostCallback>. <xref:System.Threading.SendOrPostCallback> representa un método de devolución de llamada que se ejecuta en un subproceso <xref:System.Threading.ThreadPool>. El método de devolución de llamada debe tener una firma que toma un único parámetro de tipo <xref:System.Object>, lo que significa que tendrá que pasar información de estado entre los delegados de una clase contenedora. Para obtener más información, vea <xref:System.Threading.SendOrPostCallback>.  
   
 #### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>Para implementar un comportamiento asincrónico interno del componente:  
   
@@ -254,6 +254,4 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
 ## <a name="see-also"></a>Vea también  
  [Ejecutar una operación en segundo plano](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- [NO ESTÁ EN LA COMPILACIÓN: Multithreading en Visual Basic](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
- [Implementar un componente que admita el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
- [Programación multiproceso con el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)
+ [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  

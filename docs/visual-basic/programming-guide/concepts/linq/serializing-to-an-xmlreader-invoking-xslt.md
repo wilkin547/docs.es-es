@@ -1,15 +1,15 @@
 ---
-title: Serializar en XmlReader (invocando XSLT) (Visual Basic)
+title: Serializar en un objeto XmlReader (invocando XSLT) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8b64f95a-e8f6-40f7-99f9-a8002c63af96
 ms.openlocfilehash: 05754593f4f30683ffabecaa8e16c35bf836a3f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645595"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198850"
 ---
-# <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>Serializar en XmlReader (invocando XSLT) (Visual Basic)
+# <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>Serializar en un objeto XmlReader (invocando XSLT) (Visual Basic)
 Cuando use las funciones de interoperabilidad <xref:System.Xml?displayProperty=nameWithType> de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], puede usar <xref:System.Xml.Linq.XNode.CreateReader%2A> para crear un objeto <xref:System.Xml.XmlReader>. El módulo que lee desde el objeto <xref:System.Xml.XmlReader> lee los nodos desde el árbol XML y los procesa.  
   
 ## <a name="invoking-an-xslt-transformation"></a>Invocar una transformación XSLT  

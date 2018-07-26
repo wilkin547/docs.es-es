@@ -3,18 +3,18 @@ title: 'Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: ed319807-c432-4f8e-9694-dad4c7648310
 ms.openlocfilehash: 564347d2203390fbf5c609bd7d0a8b2ab885d87b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647750"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244064"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo contiene clientes y pedidos.  
   
  En el tema [Sample XSD File: Customers and Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) (Archivo XSD de ejemplo: Clientes y pedidos) se incluye un XSD que se puede usar para validar este documento. Usa las características `xs:key` y `xs:keyref` de XSD para establecer que el atributo `CustomerID` del elemento `Customer` es una clave, y para establecer una relación entre el elemento `CustomerID` de cada elemento `Order` y el atributo `CustomerID` de cada elemento `Customer`.  
   
- Para obtener un ejemplo de escribir consultas LINQ que aprovechan las ventajas de esta relación mediante la `Join` cláusula, vea [Cómo: combinar dos colecciones (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
+ Para obtener un ejemplo de escritura de consultas LINQ que aprovechan esta relación mediante la `Join` cláusula, vea [Cómo: combinar dos colecciones (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
   
 ## <a name="customersordersxml"></a>CustomersOrders.xml  
   
