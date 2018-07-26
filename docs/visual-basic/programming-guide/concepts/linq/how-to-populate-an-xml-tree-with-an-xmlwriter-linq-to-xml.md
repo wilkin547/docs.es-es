@@ -1,21 +1,21 @@
 ---
-title: 'Cómo: rellenar un árbol XML con un objeto XmlWriter (LINQ to XML) (Visual Basic)'
+title: 'Cómo: rellenar un árbol XML con XmlWriter (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5792a0eb-94ee-440d-b601-58cca8c0ee0b
 ms.openlocfilehash: bc17b84b945e93443ab6d9f337e852feba5b0662
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642108"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244564"
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a><span data-ttu-id="ad6ec-102">Cómo: rellenar un árbol XML con un objeto XmlWriter (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ad6ec-102">How to: Populate an XML Tree with an XmlWriter (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="ad6ec-103">Una forma de rellenar un árbol XML consiste en utilizar <xref:System.Xml.Linq.XContainer.CreateWriter%2A> para crear <xref:System.Xml.XmlWriter> y después escribir en <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="ad6ec-103">One way to populate an XML tree is to use <xref:System.Xml.Linq.XContainer.CreateWriter%2A> to create an <xref:System.Xml.XmlWriter>, and then write to the <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="ad6ec-104">El árbol XML se rellena con todos los nodos que se escriben en <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="ad6ec-104">The XML tree is populated with all nodes that are written to the <xref:System.Xml.XmlWriter>.</span></span>  
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a><span data-ttu-id="96136-102">Cómo: rellenar un árbol XML con XmlWriter (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96136-102">How to: Populate an XML Tree with an XmlWriter (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="96136-103">Una forma de rellenar un árbol XML consiste en utilizar <xref:System.Xml.Linq.XContainer.CreateWriter%2A> para crear <xref:System.Xml.XmlWriter> y después escribir en <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="96136-103">One way to populate an XML tree is to use <xref:System.Xml.Linq.XContainer.CreateWriter%2A> to create an <xref:System.Xml.XmlWriter>, and then write to the <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="96136-104">El árbol XML se rellena con todos los nodos que se escriben en <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="96136-104">The XML tree is populated with all nodes that are written to the <xref:System.Xml.XmlWriter>.</span></span>  
   
- <span data-ttu-id="ad6ec-105">Normalmente se usa este método cuando se usa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con otra clase que espera escribir en un <xref:System.Xml.XmlWriter>, como <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="ad6ec-105">You would typically use this method when you use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] with another class that expects to write to an <xref:System.Xml.XmlWriter>, such as <xref:System.Xml.Xsl.XslCompiledTransform>.</span></span>  
+ <span data-ttu-id="96136-105">Normalmente se usa este método cuando se usa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con otra clase que espera escribir en un <xref:System.Xml.XmlWriter>, como <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="96136-105">You would typically use this method when you use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] with another class that expects to write to an <xref:System.Xml.XmlWriter>, such as <xref:System.Xml.Xsl.XslCompiledTransform>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ad6ec-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ad6ec-106">Example</span></span>  
- <span data-ttu-id="ad6ec-107">Un uso posible para <xref:System.Xml.Linq.XContainer.CreateWriter%2A> es la invocación de una transformación XSLT.</span><span class="sxs-lookup"><span data-stu-id="ad6ec-107">One possible use for <xref:System.Xml.Linq.XContainer.CreateWriter%2A> is when invoking an XSLT transformation.</span></span> <span data-ttu-id="ad6ec-108">Este ejemplo crea un árbol XML, crea un <xref:System.Xml.XmlReader> del árbol XML, crea un nuevo documento y después crea un <xref:System.Xml.XmlWriter> para escribir en el nuevo documento.</span><span class="sxs-lookup"><span data-stu-id="ad6ec-108">This example creates an XML tree, creates an <xref:System.Xml.XmlReader> from the XML tree, creates a new document, and then creates an <xref:System.Xml.XmlWriter> to write into the new document.</span></span> <span data-ttu-id="ad6ec-109">A continuación invoca la transformación XSLT, pasando <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="ad6ec-109">It then invokes the XSLT transformation, passing in <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="ad6ec-110">Después de que se complete correctamente la transformación, se rellenará el nuevo árbol XML con los resultados de la transformación.</span><span class="sxs-lookup"><span data-stu-id="ad6ec-110">After the transformation successfully completes, the new XML tree is populated with the results of the transformation.</span></span>  
+## <a name="example"></a><span data-ttu-id="96136-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="96136-106">Example</span></span>  
+ <span data-ttu-id="96136-107">Un uso posible para <xref:System.Xml.Linq.XContainer.CreateWriter%2A> es la invocación de una transformación XSLT.</span><span class="sxs-lookup"><span data-stu-id="96136-107">One possible use for <xref:System.Xml.Linq.XContainer.CreateWriter%2A> is when invoking an XSLT transformation.</span></span> <span data-ttu-id="96136-108">Este ejemplo crea un árbol XML, crea un <xref:System.Xml.XmlReader> del árbol XML, crea un nuevo documento y después crea un <xref:System.Xml.XmlWriter> para escribir en el nuevo documento.</span><span class="sxs-lookup"><span data-stu-id="96136-108">This example creates an XML tree, creates an <xref:System.Xml.XmlReader> from the XML tree, creates a new document, and then creates an <xref:System.Xml.XmlWriter> to write into the new document.</span></span> <span data-ttu-id="96136-109">A continuación invoca la transformación XSLT, pasando <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="96136-109">It then invokes the XSLT transformation, passing in <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="96136-110">Después de que se complete correctamente la transformación, se rellenará el nuevo árbol XML con los resultados de la transformación.</span><span class="sxs-lookup"><span data-stu-id="96136-110">After the transformation successfully completes, the new XML tree is populated with the results of the transformation.</span></span>  
   
 ```vb  
 Dim xslMarkup As XDocument = _  
@@ -53,7 +53,7 @@ End Using
 Console.WriteLine(newTree)  
 ```  
   
- <span data-ttu-id="ad6ec-111">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="ad6ec-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="96136-111">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="96136-111">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -62,8 +62,8 @@ Console.WriteLine(newTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ad6ec-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="ad6ec-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="96136-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="96136-112">See Also</span></span>  
  <xref:System.Xml.Linq.XContainer.CreateWriter%2A>  
  <xref:System.Xml.XmlWriter>  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
- [<span data-ttu-id="ad6ec-113">Crear árboles XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ad6ec-113">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+ [<span data-ttu-id="96136-113">Crear árboles XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96136-113">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
