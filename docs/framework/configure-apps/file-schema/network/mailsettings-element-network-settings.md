@@ -1,5 +1,5 @@
 ---
-title: '&lt;mailSettings&gt; Element (Network Settings)'
+title: '&lt;mailSettings&gt; elemento (configuración de red)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mailSettings
@@ -11,14 +11,14 @@ ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 5bc7cc649b18a5330d056bbddfe96db4ecca2ec8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a9afd992a12392ae0ad1c27eea305cb7e367686d
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746428"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874421"
 ---
-# <a name="ltmailsettingsgt-element-network-settings"></a>&lt;mailSettings&gt; Element (Network Settings)
+# <a name="ltmailsettingsgt-element-network-settings"></a>&lt;mailSettings&gt; elemento (configuración de red)
 Configura opciones de envío de correo.  
 
 \<configuration>  
@@ -43,7 +43,7 @@ Configura opciones de envío de correo.
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|[\<SMTP > elemento (configuración de red)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Configurar las opciones de Protocolo Simple de transferencia de correo electrónico.|  
+|[\<SMTP > elemento (configuración de red)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Configura las opciones de Protocolo Simple de transferencia de correo electrónico.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -52,13 +52,13 @@ Configura opciones de envío de correo.
 |[Elemento \<system.Net> (configuración de red)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se especifica los parámetros SMTP adecuados para enviar correo electrónico mediante las credenciales de red predeterminadas.  
+ El ejemplo siguiente especifica los parámetros SMTP adecuados para enviar correo electrónico utilizando las credenciales de red predeterminadas.  
   
 ```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="network">  
+      <smtp deliveryMethod="Network">  
         <network  
           host="localhost"  
           port="25"  
