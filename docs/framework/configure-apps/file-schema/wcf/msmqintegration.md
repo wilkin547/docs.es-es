@@ -2,12 +2,12 @@
 title: '&lt;msmqIntegration&gt;'
 ms.date: 03/30/2017
 ms.assetid: ab677405-1ffe-457a-803f-00c1770e51e2
-ms.openlocfilehash: 36c71546dd481d634210901b20ddeaa86d5c81a4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d697793f39efd53919f37f81c2736e7b21ead070
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751719"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296213"
 ---
 # <a name="ltmsmqintegrationgt"></a>&lt;msmqIntegration&gt;
 Especifica un transporte de MSMQ para enlace personalizado.  
@@ -52,8 +52,8 @@ Especifica un transporte de MSMQ para enlace personalizado.
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|customDeadLetterQueue|URI que indica la ubicación de la cola de mensajes con problemas de entrega por aplicación, donde se transfieren los mensajes que han expirado o cuya entrega a la aplicación ha tenido errores.<br /><br /> Para los mensajes que requieren la convicción ExactlyOnce (es decir, `exactlyOnce` está establecido en `true`), este atributo tiene como valor predeterminado la cola de mensajes transaccionales no enviados para todo el sistema en MSMQ.<br /><br /> Para los mensajes que no requieren convicciones (está disponible decir, `exactlyOnce` está establecido en `false`), este atributo tiene como valor predeterminado `null`.<br /><br /> El valor debe usar el esquema de net.msmq. De manera predeterminada, es `null`.<br /><br /> Si `d``eadLetterQueue` se establece en `None` o `System`, este atributo debe establecerse en `null`. Si este atributo no es `null`, `deadLetterQueue` debe establecerse en `Custom`.|  
-|deadLetterQueue|Especifica el tipo de cola de mensajes con problemas de entrega que se va a usar.<br /><br /> Los valores válidos incluyen<br /><br /> -Custom: Cola de mensajes fallidos personalizado.<br />-Ninguno: Ninguna cola de mensajes fallidos es que se usará.<br />-System: Usar la cola con problemas de entrega del sistema.<br /><br /> Este atributo es del tipo DeadLetterQueue.|  
+|customDeadLetterQueue|URI que indica la ubicación de la cola de mensajes con problemas de entrega por aplicación, donde se transfieren los mensajes que han expirado o cuya entrega a la aplicación ha tenido errores.<br /><br /> Para los mensajes que requieren la convicción ExactlyOnce (es decir, `exactlyOnce` está establecido en `true`), este atributo tiene como valor predeterminado la cola de mensajes transaccionales no enviados para todo el sistema en MSMQ.<br /><br /> Para los mensajes que no requieren convicciones (está disponible decir, `exactlyOnce` está establecido en `false`), este atributo tiene como valor predeterminado `null`.<br /><br /> El valor debe usar el esquema de net.msmq. De manera predeterminada, es `null`.<br /><br /> Si `deadLetterQueue` se establece en `None` o `System`, este atributo debe establecerse en `null`. Si este atributo no es `null`, `deadLetterQueue` debe establecerse en `Custom`.|  
+|deadLetterQueue|Especifica el tipo de cola de mensajes con problemas de entrega que se va a usar.<br /><br /> Los valores válidos incluyen<br /><br /> -Custom: Cola de mensajes fallidos de Custom.<br />-None: Ninguna cola de mensajes fallidos es que se usará.<br />-Sistema: Usar la cola de mensajes fallidos del sistema.<br /><br /> Este atributo es del tipo DeadLetterQueue.|  
 |durable|Un valor booleano que especifica si los mensajes procesados por este enlace son duraderos o volátiles. De manera predeterminada, es `true`.<br /><br /> Un mensaje duradero sobrevive un bloqueo de administrador de cola, mientras que un mensaje volátil no. Los mensajes volátiles son útiles cuando las aplicaciones requieren la menor latencia y toleran la pérdida de mensajes ocasional.<br /><br /> Si `exactlyOnce` está establecido en `true`, los mensajes deben ser duraderos.|  
 |exactlyOnce|Un valor booleano que especifica si los mensajes procesados por este enlace se recibirán sólo una vez. De manera predeterminada, es `true`.<br /><br /> Un mensaje se puede enviar con o sin garantías. Una garantía permite a una aplicación asegurarse de que un mensaje enviado alcanza la cola de mensajes receptora, o si no lo hiciera, la aplicación puede determinarlo leyendo la cola de mensajes con problemas de entrega.<br /><br /> `exactlyOnce`, cuando se establece en `true`, indica que MSMQ garantizará que un mensaje enviado se entrega una única vez a la cola de mensajes receptora, y si se produce un error en la entrega, el mensaje se envía a la cola de mensajes con problemas de entrega.<br /><br /> Los mensajes enviados con `exactlyOnce` establecidos en `true` sólo se deben enviar a una cola transaccional.|  
 |manualAddressing|Un valor booleano que permite al usuario tomar el control del direccionamiento del mensaje. Esta propiedad normalmente se usa en escenarios del enrutador, donde la aplicación determina a cuál de los destinos va a enviar un mensaje.<br /><br /> Si se establece en `true`, el canal supone que el mensaje ya se ha direccionado y no le agrega ninguna información adicional. El usuario puede direccionar a continuación individualmente cada mensaje.<br /><br /> Cuando se establece en `false`, la Windows Communication Foundation predeterminada (WCF) que direcciona el mecanismo crea automáticamente las direcciones para todos los mensajes.<br /><br /> De manera predeterminada, es `false`.|  

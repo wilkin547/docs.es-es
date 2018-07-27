@@ -1,15 +1,15 @@
 ---
-title: My.Computer.Mouse (Objeto)
+title: My.Computer.Mouse (objeto) (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Mouse object
 ms.assetid: da473357-2120-47dd-bd42-c63d695157eb
-ms.openlocfilehash: 899caca985bfdb4deaf148b2d434f62428e2952a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b3914870db6d30eb21c997a39cab4db1511e4ee
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593621"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296252"
 ---
 # <a name="mycomputermouse-object"></a>My.Computer.Mouse (Objeto)
 Proporciona propiedades para obtener información sobre el formato y la configuración del mouse instalado en el equipo local.  
@@ -24,7 +24,7 @@ Proporciona propiedades para obtener información sobre el formato y la configur
   
  **Clase:** <xref:Microsoft.VisualBasic.Devices.Mouse>  
   
- **Ensamblado:** biblioteca de tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
+ **Ensamblado:** biblioteca en tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Vea también  
  [My.Computer (objeto)](../../../visual-basic/language-reference/objects/my-computer-object.md)
