@@ -25,6 +25,9 @@
             - name: Libro electrónico de DevOps de microservicios de .NET
               tocHref: /dotnet/standard/containerized-lifecycle-architecture/
               topicHref: /dotnet/standard/containerized-lifecycle-architecture/index
+            - name: Libro electrónico de aplicaciones sin servidor
+              tocHref: /dotnet/standard/serverless-architecture/
+              topicHref: /dotnet/standard/serverless-architecture/index
             - name: Modelos para la programación asincrónica
               tocHref: /dotnet/standard/asynchronous-programming-patterns/
               topicHref: /dotnet/standard/asynchronous-programming-patterns/index

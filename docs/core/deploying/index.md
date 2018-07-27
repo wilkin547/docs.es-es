@@ -4,12 +4,12 @@ description: Implementación de una aplicación .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 27f9260166f7e7899501e1798333b982fb728152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212680"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792431"
 ---
 # <a name="net-core-application-deployment"></a>Implementación de aplicaciones .NET Core
 
@@ -41,7 +41,7 @@ Hay también algunas desventajas:
 
 ## <a name="self-contained-deployments-scd"></a>Implementaciones autocontenidas (SCD)
 
-En una implementación autocontenida, implementa su aplicación y cualquier dependencia de terceros junto con la versión de .NET Core que ha usado para compilar la aplicación. La creación de una SCD no incluye las [dependencias nativas de .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) en diversas plataformas, así que es necesario que estén presentes antes de ejecutar la aplicación.
+En una implementación autocontenida, implementa su aplicación y cualquier dependencia de terceros junto con la versión de .NET Core que ha usado para compilar la aplicación. La creación de una SCD no incluye las [dependencias nativas de .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) en diversas plataformas, así que es necesario que estén presentes antes de ejecutar la aplicación. Para obtener más información sobre el enlace de versiones en un entorno de ejecución, vea el artículo sobre [enlace de versiones de .NET Core](../versions/selection.md).
 
 Las implementaciones de FDD y SCD usan ejecutables de host independientes, por lo que puede firmar un host ejecutable de un SCD con su firma de publicador.
 

@@ -15,19 +15,19 @@ ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25fe93b63c518f54ee72300f26dfcb3f3ad21d76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/26/2018
 ms.locfileid: "33575354"
 ---
 # <a name="names-of-type-members"></a>Nombres de miembros de tipos
-Se realizan los tipos de miembros: métodos, propiedades, eventos, constructores y campos. Las siguientes secciones describen las directrices para asignar nombres a los miembros de tipo.  
+Los tipos están conformados por miembros: métodos, propiedades, eventos, constructores y campos. En las siguientes secciones se detallan las instrucciones para asignar un nombre a los miembros de tipos.  
   
 ## <a name="names-of-methods"></a>Nombres de métodos  
- Porque los métodos son el medio de una acción, las instrucciones de diseño requieren que los nombres de método sea verbos o sintagmas verbales. Sigue esta directriz también sirve para distinguir los nombres de método de propiedad y nombres de tipos, que son frases sustantivo o adjetivo.  
+ Dado que los métodos son medios para emprender una acción, las instrucciones de diseño requieren que los nombres sean verbos o enunciados verbales. Esto también permite distinguir los nombres de métodos de los de propiedades y tipos, que emplean sintagmas nominales o adjetivales.  
   
- **✓ HACER** proporcione nombres de métodos que son verbos o sintagmas verbales.  
+ **✓ DO** Los nombres de métodos deben ser verbos o enunciados verbales.  
   
 ```  
 public class String {  
@@ -38,24 +38,24 @@ public class String {
 ```  
   
 ## <a name="names-of-properties"></a>Nombres de propiedades  
- A diferencia de otros miembros, propiedades deberían contar con nombres adjetivo o frase. Eso es porque una propiedad hace referencia a los datos y el nombre de la propiedad refleja. Pascal siempre se utiliza para los nombres de propiedad.  
+ A diferencia de otros miembros, las propiedades deben tener nombres en forma de sintagmas nominales o adjetivales. El motivo es que las propiedades hacen referencia a datos, y el nombre de estas deben reflejarlo adecuadamente. Los nombres de propiedades siempre se escriben con el formato PascalCase, es decir, las palabras se escriben unidas y se diferencian las unas de las otras por el uso de la mayúscula inicial. Este formato también es conocido como CamelCase.  
   
- **✓ HACER** nombres de las propiedades mediante un sustantivo, una frase o un adjetivo.  
+ **✓ DO** Los nombres de propiedades deben ser sustantivos, o sintagmas nominales o adjetivales.  
   
- **X DO NOT** tienen propiedades que coinciden con el nombre de "Get" métodos como en el ejemplo siguiente:  
+ **X DO NOT** Los nombres de propiedades no deben coincidir con los de otros métodos "Get", como se muestra en el ejemplo siguiente:  
   
  `public string TextWriter { get {...} set {...} }`  
  `public string GetTextWriter(int value) { ... }`  
   
- Este patrón normalmente indica que la propiedad debe ser realmente un método.  
+ Este patrón suele indicar que la propiedad en realidad debería ser un método.  
   
- **✓ HACER** nombres de las propiedades de colección con una frase plural que describen los elementos de la colección en lugar de usar una frase singular seguida de "Lista" o "Colección".  
+ **✓ DO** Los nombres de propiedades de colecciones deben escribirse con una frase en plural que describa los elementos de una colección, en lugar de con una frase en singular seguida de los términos "lista" o "colección".  
   
- **✓ HACER** nombre propiedades booleanas con una frase afirmativa (`CanSeek` en lugar de `CantSeek`). Si lo desea, también se pueden anteponer propiedades booleanas con "Es", "puede" o "Tiene", pero sólo donde se incrementa el valor.  
+ **✓ DO** Los nombres de propiedades booleanas deben ser un enunciado positivo, es decir, `CanSeek` en lugar de `CantSeek`. De forma opcional, también puede agregar un prefijo a las propiedades booleanas, por ejemplo, "es", "puede" o "tiene", pero solo en los casos en los que realmente convenga.  
   
- **Considere la posibilidad de ✓** dar a una propiedad con el mismo nombre que su tipo.  
+ **✓ CONSIDER** El nombre de una propiedad puede ser el mismo que el del tipo.  
   
- Por ejemplo, la siguiente propiedad correctamente obtiene y establece un valor de enumeración denominado `Color`, por lo que la propiedad se denomina `Color`:  
+ Por ejemplo, la propiedad siguiente permite obtener y establecer un valor de enumeración denominado `Color`, de modo que el nombre de la propiedad es `Color`:  
   
 ```  
 public enum Color {...}  
@@ -65,42 +65,42 @@ public class Control {
 ```  
   
 ## <a name="names-of-events"></a>Nombres de eventos  
- Eventos siempre hacen referencia a alguna acción, ya sea uno que sea ocurra, o uno que se ha producido. Por lo tanto, al igual que con los métodos, eventos se denominan con los verbos y tiempo de verbo se utiliza para indicar la hora cuando se produce el evento.  
+ Los eventos siempre hacen referencia a algún tipo de acción, ya sea una acción en curso o una ya finalizada. Así pues, como en el caso de los métodos, para los nombres de los eventos se utilizan verbos, y el tiempo verbal permite indicar el momento de la acción.  
   
- **✓ HACER** nombrar los eventos con un verbo o una frase.  
+ **✓ DO** Los nombres de eventos deben ser verbos o enunciados verbales.  
   
- Algunos ejemplos son `Clicked`, `Painting`, `DroppedDown`, y así sucesivamente.  
+ Por ejemplo, `Clicked`, `Painting`, `DroppedDown`,etc.  
   
- **✓ HACER** asigne nombres de eventos con un concepto de antes y después, con los presentes y tiempos de pasado.  
+ **✓ DO** Los nombres de eventos deben incluir el concepto del antes y el después mediante tiempos verbales que indiquen presente y futuro.  
   
- Por ejemplo, un evento de cierre que se produce antes de cerrar una ventana se denominaría `Closing`, y que se desencadena cuando se cierra la ventana se denominaría `Closed`.  
+ Por ejemplo, un evento de cierre que tuviera lugar antes de cerrar una ventana se llamaría `Closing`, mientras que uno que lo hiciera después se llamaría `Closed`.  
   
- **X DO NOT** usar "Before" o "After" prefijos o sufijos para indicar previo y eventos posteriores. Use presente y pasado tiempos según se ha descrito.  
+ **X DO NOT** Los nombres de eventos no deben incluir "antes" ni "después", ya sea en forma de prefijo o de sufijo, para indicar el momento del evento. Utilice tiempos verbales que indiquen presente y futuro, como se ha explicado.  
   
- **✓ HACER** nombre de controladores de eventos (delegados utilizados como tipos de eventos) con el sufijo "EventHandler", como se muestra en el ejemplo siguiente:  
+ **✓ DO** Los controladores de eventos, es decir, los delegados que se usan como tipos de eventos, pueden incluir el sufijo "ControladorDeEventos", como se muestra en el ejemplo siguiente:  
   
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
   
- **✓ HACER** utilizar dos parámetros con nombre `sender` y `e` en controladores de eventos.  
+ **✓ DO** En el caso de los controladores de eventos, use dos parámetros denominados `sender` y `e`.  
   
- El parámetro sender representa el objeto que provocó el evento. El parámetro sender suele ser de tipo `object`, aunque es posible utilizar un tipo más específico.  
+ El parámetro de envío corresponde al objeto que genera el evento. Este suele ser del tipo `object`, incluso aunque sea posible utilizar un tipo que sea más específico.  
   
- **✓ HACER** denominar clases con el sufijo "EventArgs" de los argumentos de evento.  
+ **✓ DO** Las clases de argumentos de eventos pueden incluir el sufijo "ArgDeEvento".  
   
 ## <a name="names-of-fields"></a>Nombres de campos  
- Se aplican las directrices de nomenclatura de campo a los campos estáticos públicos y protegidos. Campos privados e internos no están cubiertos por instrucciones y campos de instancia público o protegido no se admiten en el [directrices de diseño de miembro](../../../docs/standard/design-guidelines/member.md).  
+ Las instrucciones relativas a la nomenclatura de los campos son aplicables a los campos estáticos públicos y protegidos. En las instrucciones no se abordan los campos internos y privados. Asimismo, las [instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md) no permiten los campos de instancias públicas o protegidas.  
   
- **✓ HACER** Pascal se utiliza en nombres de campo.  
+ **✓ DO** Los nombres de campos se escriben con el formato PascalCase, es decir, las palabras se escriben unidas y se diferencian las unas de las otras por el uso de la mayúscula inicial. Este formato también es conocido como CamelCase.  
   
- **✓ HACER** nombres de los campos con un sustantivo, una frase o un adjetivo.  
+ **✓ DO** Los nombres de campos deben ser sustantivos, o sintagmas nominales o adjetivales.  
   
- **X DO NOT** utiliza un prefijo para los nombres de campo.  
+ **X DO NOT** Los nombres de campos no deben incluir prefijos.  
   
- Por ejemplo, no utilice "g_" o "s_" para indicar los campos estáticos.  
+ Por ejemplo, no utilice "g_" ni "s_" para indicar campos estáticos.  
   
- *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Vea también  
  [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
