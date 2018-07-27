@@ -1,76 +1,113 @@
 ---
 title: Diseño de aplicaciones web modernas con ASP.NET Core y Azure
-description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Introducción
+description: Es una guía en la que se proporcionan instrucciones de un extremo a otro sobre cómo compilar aplicaciones web monolíticas con ASP.NET Core y Azure.
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 085ec85002fc1661d6e20b3c3f11cf4b6ea2161b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: e2d2545108b55043c322baffbd609b2422d2743b
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37103925"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936989"
 ---
-# <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a><span data-ttu-id="58ca6-103">Diseño de aplicaciones web modernas con ASP.NET Core y Azure</span><span class="sxs-lookup"><span data-stu-id="58ca6-103">Architect Modern Web Applications with ASP.NET Core and Azure</span></span>
+# <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a><span data-ttu-id="63411-103">Diseño de aplicaciones web modernas con ASP.NET Core y Azure</span><span class="sxs-lookup"><span data-stu-id="63411-103">Architect Modern Web Applications with ASP.NET Core and Azure</span></span>
 
-![imagen de portada](./media/cover.jpg)
+![imagen de portada](./media/cover.png)
 
+<span data-ttu-id="63411-105">PUBLICADO POR</span><span class="sxs-lookup"><span data-stu-id="63411-105">PUBLISHED BY</span></span>
 
-<span data-ttu-id="58ca6-105">.NET Core y ASP.NET Core ofrecen varias ventajas con respecto al desarrollo tradicional con .NET.</span><span class="sxs-lookup"><span data-stu-id="58ca6-105">.NET Core and ASP.NET Core offer several advantages over traditional .NET development.</span></span> <span data-ttu-id="58ca6-106">Debe usar .NET Core para las aplicaciones de servidor si algunos o todos los elementos siguientes son importantes para el éxito de su aplicación:</span><span class="sxs-lookup"><span data-stu-id="58ca6-106">You should use .NET Core for your server applications if some or all of the following are important to your application's success:</span></span>
+<span data-ttu-id="63411-106">Equipos de producto de la División de desarrolladores de Microsoft, .NET y Visual Studio</span><span class="sxs-lookup"><span data-stu-id="63411-106">Microsoft Developer Division, .NET, and Visual Studio product teams</span></span>
 
--   <span data-ttu-id="58ca6-107">Compatibilidad entre plataformas</span><span class="sxs-lookup"><span data-stu-id="58ca6-107">Cross-platform support</span></span>
+<span data-ttu-id="63411-107">División de Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="63411-107">A division of Microsoft Corporation</span></span>
 
--   <span data-ttu-id="58ca6-108">Uso de microservicios</span><span class="sxs-lookup"><span data-stu-id="58ca6-108">Use of microservices</span></span>
+<span data-ttu-id="63411-108">One Microsoft Way</span><span class="sxs-lookup"><span data-stu-id="63411-108">One Microsoft Way</span></span>
 
--   <span data-ttu-id="58ca6-109">Uso de contenedores de Docker</span><span class="sxs-lookup"><span data-stu-id="58ca6-109">Use of Docker containers</span></span>
+<span data-ttu-id="63411-109">Redmond, Washington 98052-6399</span><span class="sxs-lookup"><span data-stu-id="63411-109">Redmond, Washington 98052-6399</span></span>
 
--   <span data-ttu-id="58ca6-110">Requisitos elevados de rendimiento y escalabilidad</span><span class="sxs-lookup"><span data-stu-id="58ca6-110">High performance and scalability requirements</span></span>
+<span data-ttu-id="63411-110">Copyright © 2018 de Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="63411-110">Copyright © 2018 by Microsoft Corporation</span></span>
 
--   <span data-ttu-id="58ca6-111">Control de versiones en paralelo de versiones de .NET por aplicación en el mismo servidor</span><span class="sxs-lookup"><span data-stu-id="58ca6-111">Side-by-side versioning of .NET versions by application on the same server</span></span>
+<span data-ttu-id="63411-111">Todos los derechos reservados.</span><span class="sxs-lookup"><span data-stu-id="63411-111">All rights reserved.</span></span> <span data-ttu-id="63411-112">No se puede reproducir ni transmitir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.</span><span class="sxs-lookup"><span data-stu-id="63411-112">No part of the contents of this book may be reproduced or transmitted in any form or by any means without the written permission of the publisher.</span></span>
 
-<span data-ttu-id="58ca6-112">Las aplicaciones tradicionales de .NET son compatibles con estos requisitos, pero ASP.NET Core y .NET Core se han optimizado para ofrecer una compatibilidad mejorada para los escenarios anteriores.</span><span class="sxs-lookup"><span data-stu-id="58ca6-112">Traditional .NET applications can and do support these requirements, but ASP.NET Core and .NET Core have been optimized to offer improved support for the above scenarios.</span></span>
+<span data-ttu-id="63411-113">Este libro se proporciona “tal cual” y expresa las opiniones del autor.</span><span class="sxs-lookup"><span data-stu-id="63411-113">This book is provided “as-is” and expresses the author’s views and opinions.</span></span> <span data-ttu-id="63411-114">Las opiniones y la información expresados en este libro, incluidas las direcciones URL y otras referencias a sitios web de Internet, pueden cambiar sin previo aviso.</span><span class="sxs-lookup"><span data-stu-id="63411-114">The views, opinions and information expressed in this book, including URL and other Internet website references, may change without notice.</span></span>
 
-<span data-ttu-id="58ca6-113">Cada vez más organizaciones deciden hospedar sus aplicaciones web en la nube con servicios como Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="58ca6-113">More and more organizations are choosing to host their web applications in the cloud using services like Microsoft Azure.</span></span> <span data-ttu-id="58ca6-114">Considere la posibilidad de hospedar su aplicación en la nube si los siguientes elementos son importantes para la aplicación o la organización:</span><span class="sxs-lookup"><span data-stu-id="58ca6-114">You should consider hosting your application in the cloud if the following are important to your application or organization:</span></span>
+<span data-ttu-id="63411-115">Algunos ejemplos descritos aquí se proporcionan únicamente con fines ilustrativos y son ficticios.</span><span class="sxs-lookup"><span data-stu-id="63411-115">Some examples depicted herein are provided for illustration only and are fictitious.</span></span> <span data-ttu-id="63411-116">No debe deducirse ninguna asociación ni conexión reales.</span><span class="sxs-lookup"><span data-stu-id="63411-116">No real association or connection is intended or should be inferred.</span></span>
 
--   <span data-ttu-id="58ca6-115">Inversión reducida en costos de centros de datos (hardware, software, espacio, utilidades, etc.)</span><span class="sxs-lookup"><span data-stu-id="58ca6-115">Reduced investment in data center costs (hardware, software, space, utilities, etc)</span></span>
+<span data-ttu-id="63411-117">Microsoft y las marcas comerciales indicadas en https://www.microsoft.com en la página web "Marcas comerciales" pertenecen al grupo de empresas de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="63411-117">Microsoft and the trademarks listed at https://www.microsoft.com on the “Trademarks” webpage are trademarks of the Microsoft group of companies.</span></span>
 
--   <span data-ttu-id="58ca6-116">Precios flexibles (pago en función del uso, y no por la capacidad inactiva)</span><span class="sxs-lookup"><span data-stu-id="58ca6-116">Flexible pricing (pay based on usage, not for idle capacity)</span></span>
+<span data-ttu-id="63411-118">Mac y macOS son marcas comerciales de Apple Inc.</span><span class="sxs-lookup"><span data-stu-id="63411-118">Mac and macOS are trademarks of Apple Inc.</span></span>
 
--   <span data-ttu-id="58ca6-117">Confiabilidad extrema</span><span class="sxs-lookup"><span data-stu-id="58ca6-117">Extreme reliability</span></span>
+<span data-ttu-id="63411-119">El logotipo de la ballena de Docker es una marca registrada de Docker, Inc. Se usa con permiso.</span><span class="sxs-lookup"><span data-stu-id="63411-119">The Docker whale logo is a registered trademark of Docker, Inc. Used by permission.</span></span>
 
--   <span data-ttu-id="58ca6-118">Movilidad mejorada de la aplicación; modificación sencilla de dónde y cómo implementar la aplicación</span><span class="sxs-lookup"><span data-stu-id="58ca6-118">Improved app mobility; easily change where and how your app is deployed</span></span>
+<span data-ttu-id="63411-120">El resto de marcas y logotipos pertenece a sus respectivos propietarios.</span><span class="sxs-lookup"><span data-stu-id="63411-120">All other marks and logos are property of their respective owners.</span></span>
 
--   <span data-ttu-id="58ca6-119">Capacidad flexible; escalado o reducción vertical en función de las necesidades reales</span><span class="sxs-lookup"><span data-stu-id="58ca6-119">Flexible capacity; scale up or down based on actual needs</span></span>
+<span data-ttu-id="63411-121">Autor:</span><span class="sxs-lookup"><span data-stu-id="63411-121">Author:</span></span>
 
-<span data-ttu-id="58ca6-120">La compilación de aplicaciones web con ASP.NET Core, hospedadas en Microsoft Azure, ofrece numerosas ventajas competitivas con respecto a las alternativas tradicionales.</span><span class="sxs-lookup"><span data-stu-id="58ca6-120">Building web applications with ASP.NET Core, hosted in Microsoft Azure, offers numerous competitive advantages over traditional alternatives.</span></span> <span data-ttu-id="58ca6-121">Se ha optimizado ASP.NET Core para escenarios de hospedaje en la nube y prácticas de desarrollo de aplicaciones web modernas.</span><span class="sxs-lookup"><span data-stu-id="58ca6-121">ASP.NET Core is optimized for modern web application development practices and cloud hosting scenarios.</span></span> <span data-ttu-id="58ca6-122">En esta guía se ofrece información sobre cómo diseñar aplicaciones con ASP.NET Core para sacar el máximo provecho de estas funcionalidades.</span><span class="sxs-lookup"><span data-stu-id="58ca6-122">In this guide, you will learn how to architect your ASP.NET Core applications to best take advantage of these capabilities.</span></span>
+> <span data-ttu-id="63411-122">**Steve Smith (@ardalis)**, asesor de arquitecturas de software, [Ardalis.com](https://ardalis.com)</span><span class="sxs-lookup"><span data-stu-id="63411-122">**Steve Smith (@ardalis)**, Software Architecture Advisor, [Ardalis.com](https://ardalis.com)</span></span>
 
-## <a name="purpose"></a><span data-ttu-id="58ca6-123">Propósito</span><span class="sxs-lookup"><span data-stu-id="58ca6-123">Purpose</span></span>
+<span data-ttu-id="63411-123">Editores:</span><span class="sxs-lookup"><span data-stu-id="63411-123">Editors:</span></span>
 
-<span data-ttu-id="58ca6-124">En esta guía se proporcionan instrucciones de un extremo a otro sobre cómo compilar aplicaciones web monolíticas con ASP.NET Core y Azure.</span><span class="sxs-lookup"><span data-stu-id="58ca6-124">This guide provides end-to-end guidance on building monolithic web applications using ASP.NET Core and Azure.</span></span>
+> <span data-ttu-id="63411-124">**Maira Wenzel**</span><span class="sxs-lookup"><span data-stu-id="63411-124">**Maira Wenzel**</span></span>
 
-<span data-ttu-id="58ca6-125">Esta guía es complementaria a "*Diseño y desarrollo de aplicaciones basadas en contenedores y microservicios con .NET*", que se centra más en Docker, los microservicios y el desarrollo de contenedores para hospedar aplicaciones empresariales.</span><span class="sxs-lookup"><span data-stu-id="58ca6-125">This guide is complementary to the "*Architecting and Developing Containerized and Microservice-based Applications with .NET*" which focuses more on Docker, Microservices, and Deployment of Containers to host enterprise applications.</span></span>
+## <a name="introduction"></a><span data-ttu-id="63411-125">Introducción</span><span class="sxs-lookup"><span data-stu-id="63411-125">Introduction</span></span>
 
-> ### <a name="architecting-and-developing-containerized-microservice-based-apps-in-net"></a><span data-ttu-id="58ca6-126">Diseño y desarrollo de aplicaciones basadas en contenedores y microservicios con .NET</span><span class="sxs-lookup"><span data-stu-id="58ca6-126">Architecting and Developing Containerized Microservice Based Apps in .NET</span></span>
-> - <span data-ttu-id="58ca6-127">**Libro electrónico**</span><span class="sxs-lookup"><span data-stu-id="58ca6-127">**e-book**</span></span>  
-> <http://aka.ms/MicroservicesEbook>
-> - <span data-ttu-id="58ca6-128">**Aplicación de ejemplo**</span><span class="sxs-lookup"><span data-stu-id="58ca6-128">**Sample Application**</span></span>  
-> <http://aka.ms/microservicesarchitecture>
+<span data-ttu-id="63411-126">.NET Core y ASP.NET Core ofrecen varias ventajas con respecto al desarrollo tradicional con .NET.</span><span class="sxs-lookup"><span data-stu-id="63411-126">.NET Core and ASP.NET Core offer several advantages over traditional .NET development.</span></span> <span data-ttu-id="63411-127">Debe usar .NET Core para las aplicaciones de servidor si algunos o todos los elementos siguientes son importantes para el éxito de su aplicación:</span><span class="sxs-lookup"><span data-stu-id="63411-127">You should use .NET Core for your server applications if some or all of the following are important to your application's success:</span></span>
 
-## <a name="who-should-use-this-guide"></a><span data-ttu-id="58ca6-129">Destinatarios de esta guía</span><span class="sxs-lookup"><span data-stu-id="58ca6-129">Who should use this guide</span></span>
+- <span data-ttu-id="63411-128">Compatibilidad entre plataformas.</span><span class="sxs-lookup"><span data-stu-id="63411-128">Cross-platform support.</span></span>
 
-<span data-ttu-id="58ca6-130">Los destinatarios de esta guía son principalmente desarrolladores, jefes de desarrollo y arquitectos interesados en crear aplicaciones web modernas con tecnologías y servicios de Microsoft en la nube.</span><span class="sxs-lookup"><span data-stu-id="58ca6-130">The audience for this guide is mainly developers, development leads, and architects who are interested in building modern web applications using Microsoft technologies and services in the cloud.</span></span>
+- <span data-ttu-id="63411-129">Uso de microservicios.</span><span class="sxs-lookup"><span data-stu-id="63411-129">Use of microservices.</span></span>
 
-<span data-ttu-id="58ca6-131">Otros destinatarios secundarios son los responsables de tomar decisiones técnicas que ya están familiarizados con ASP.NET o Azure y que buscan información sobre si tiene sentido actualizar a ASP.NET Core para los proyectos nuevos o existentes.</span><span class="sxs-lookup"><span data-stu-id="58ca6-131">A secondary audience is technical decision makers who are already familiar ASP.NET and/or Azure and are looking for information on whether it makes sense to upgrade to ASP.NET Core for new or existing projects.</span></span>
+- <span data-ttu-id="63411-130">Uso de contenedores de Docker.</span><span class="sxs-lookup"><span data-stu-id="63411-130">Use of Docker containers.</span></span>
 
-## <a name="how-you-can-use-this-guide"></a><span data-ttu-id="58ca6-132">Cómo leer esta guía</span><span class="sxs-lookup"><span data-stu-id="58ca6-132">How you can use this guide</span></span>
+- <span data-ttu-id="63411-131">Requisitos elevados de rendimiento y escalabilidad.</span><span class="sxs-lookup"><span data-stu-id="63411-131">High performance and scalability requirements.</span></span>
 
-<span data-ttu-id="58ca6-133">Esta guía se ha comprimido en un documento relativamente pequeño que se centra en la creación de aplicaciones web con modernas tecnologías de .NET y Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="58ca6-133">This guide has been condensed into a relatively small document that focuses on building web applications with modern .NET technologies and Windows Azure.</span></span> <span data-ttu-id="58ca6-134">Por lo tanto, se puede leer completa para proporcionar una base de conocimiento sobre estas aplicaciones y sus consideraciones técnicas.</span><span class="sxs-lookup"><span data-stu-id="58ca6-134">As such, it can be read in its entirety to provide a foundation of understanding such applications and their technical considerations.</span></span> <span data-ttu-id="58ca6-135">La guía, junto con su aplicación de ejemplo, también puede servir como punto inicial o referencia.</span><span class="sxs-lookup"><span data-stu-id="58ca6-135">The guide, along with its sample application, can also serve as a starting point or reference.</span></span> <span data-ttu-id="58ca6-136">Use la aplicación de ejemplo asociada como una plantilla para las aplicaciones propias o para consultar cómo se pueden organizar los componentes de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="58ca6-136">Use the associated sample application as a template for your own applications, or to see how you might organize your application's component parts.</span></span> <span data-ttu-id="58ca6-137">Consulte los principios y la cobertura de la arquitectura, las opciones tecnológicas y las consideraciones para la toma de decisiones de esta guía a la hora de sopesar estas opciones para su propia aplicación.</span><span class="sxs-lookup"><span data-stu-id="58ca6-137">Refer back to the guide's principles and coverage of architecture and technology options and decision considerations when weighing these choices for your own application.</span></span>
+- <span data-ttu-id="63411-132">Control de versiones en paralelo de versiones de .NET por aplicación en el mismo servidor.</span><span class="sxs-lookup"><span data-stu-id="63411-132">Side-by-side versioning of .NET versions by application on the same server.</span></span>
 
-<span data-ttu-id="58ca6-138">No dude en reenviar esta guía a su equipo para ayudarlo a garantizar una comprensión común de estas consideraciones y oportunidades.</span><span class="sxs-lookup"><span data-stu-id="58ca6-138">Feel free to forward this guide to your team to help ensure a common understanding of these considerations and opportunities.</span></span> <span data-ttu-id="58ca6-139">El hecho de que todos los usuarios trabajen a partir de un conjunto común de principios subyacentes y terminología ayudará a garantizar una aplicación coherente de las prácticas y los patrones de diseño.</span><span class="sxs-lookup"><span data-stu-id="58ca6-139">Having everybody working from a common set of terminology and underlying principles will help ensure consistent application of architectural patterns and practices.</span></span>
+<span data-ttu-id="63411-133">Las aplicaciones tradicionales de .NET son compatibles con estos requisitos, pero ASP.NET Core y .NET Core se han optimizado para ofrecer una compatibilidad mejorada para los escenarios anteriores.</span><span class="sxs-lookup"><span data-stu-id="63411-133">Traditional .NET applications can and do support these requirements, but ASP.NET Core and .NET Core have been optimized to offer improved support for the above scenarios.</span></span>
 
-## <a name="references"></a><span data-ttu-id="58ca6-140">Referencias</span><span class="sxs-lookup"><span data-stu-id="58ca6-140">References</span></span>
-- <span data-ttu-id="58ca6-141">**Selección entre .NET Core y .NET Framework para aplicaciones de servidor**</span><span class="sxs-lookup"><span data-stu-id="58ca6-141">**Choosing between .NET Core and .NET Framework for server apps**</span></span>  
-<https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
+<span data-ttu-id="63411-134">Cada vez más organizaciones deciden hospedar sus aplicaciones web en la nube con servicios como Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="63411-134">More and more organizations are choosing to host their web applications in the cloud using services like Microsoft Azure.</span></span> <span data-ttu-id="63411-135">Considere la posibilidad de hospedar su aplicación en la nube si los siguientes elementos son importantes para la aplicación o la organización:</span><span class="sxs-lookup"><span data-stu-id="63411-135">You should consider hosting your application in the cloud if the following are important to your application or organization:</span></span>
+
+- <span data-ttu-id="63411-136">Inversión reducida en costos de centros de datos (hardware, software, espacio, utilidades, etc.).</span><span class="sxs-lookup"><span data-stu-id="63411-136">Reduced investment in data center costs (hardware, software, space, utilities, etc.)</span></span>
+
+- <span data-ttu-id="63411-137">Precios flexibles (pago en función del uso, y no por la capacidad inactiva).</span><span class="sxs-lookup"><span data-stu-id="63411-137">Flexible pricing (pay based on usage, not for idle capacity).</span></span>
+
+- <span data-ttu-id="63411-138">Confiabilidad extrema.</span><span class="sxs-lookup"><span data-stu-id="63411-138">Extreme reliability.</span></span>
+
+- <span data-ttu-id="63411-139">Movilidad mejorada de la aplicación; modificación sencilla de dónde y cómo implementar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="63411-139">Improved app mobility; easily change where and how your app is deployed.</span></span>
+
+- <span data-ttu-id="63411-140">Capacidad flexible; escalado o reducción vertical en función de las necesidades reales.</span><span class="sxs-lookup"><span data-stu-id="63411-140">Flexible capacity; scale up or down based on actual needs.</span></span>
+
+<span data-ttu-id="63411-141">La compilación de aplicaciones web con ASP.NET Core, hospedadas en Azure, ofrece muchas ventajas competitivas con respecto a las alternativas tradicionales.</span><span class="sxs-lookup"><span data-stu-id="63411-141">Building web applications with ASP.NET Core, hosted in Azure, offers many competitive advantages over traditional alternatives.</span></span> <span data-ttu-id="63411-142">Se ha optimizado ASP.NET Core para escenarios de hospedaje en la nube y prácticas de desarrollo de aplicaciones web modernas.</span><span class="sxs-lookup"><span data-stu-id="63411-142">ASP.NET Core is optimized for modern web application development practices and cloud hosting scenarios.</span></span> <span data-ttu-id="63411-143">En esta guía se ofrece información sobre cómo diseñar aplicaciones con ASP.NET Core para sacar el máximo provecho de estas funcionalidades.</span><span class="sxs-lookup"><span data-stu-id="63411-143">In this guide, you'll learn how to architect your ASP.NET Core applications to best take advantage of these capabilities.</span></span>
+
+## <a name="purpose"></a><span data-ttu-id="63411-144">Propósito</span><span class="sxs-lookup"><span data-stu-id="63411-144">Purpose</span></span>
+
+<span data-ttu-id="63411-145">En esta guía se proporcionan instrucciones de un extremo a otro sobre cómo compilar aplicaciones web monolíticas con ASP.NET Core y Azure.</span><span class="sxs-lookup"><span data-stu-id="63411-145">This guide provides end-to-end guidance on building monolithic web applications using ASP.NET Core and Azure.</span></span>
+
+<span data-ttu-id="63411-146">Esta guía complementa los microservicios de .NET ["_. Arquitectura para aplicaciones .NET en contenedor_"](../microservices-architecture/index.md) más centrada en Docker, los microservicios y la implementación de contenedores para hospedar aplicaciones empresariales.</span><span class="sxs-lookup"><span data-stu-id="63411-146">This guide is complementary to the ["_.NET Microservices. Architecture for Containerized .NET Applications_"](../microservices-architecture/index.md) which focuses more on Docker, Microservices, and Deployment of Containers to host enterprise applications.</span></span>
+
+### <a name="net-microservices-architecture-for-containerized-net-applications"></a><span data-ttu-id="63411-147">Microservicios de .NET.</span><span class="sxs-lookup"><span data-stu-id="63411-147">.NET Microservices.</span></span> <span data-ttu-id="63411-148">Arquitectura para aplicaciones .NET en contenedor</span><span class="sxs-lookup"><span data-stu-id="63411-148">Architecture for Containerized .NET Applications</span></span>
+
+- <span data-ttu-id="63411-149">**Libro electrónico**</span><span class="sxs-lookup"><span data-stu-id="63411-149">**e-book**</span></span>  
+  <https://aka.ms/MicroservicesEbook>
+- <span data-ttu-id="63411-150">**Aplicación de ejemplo**</span><span class="sxs-lookup"><span data-stu-id="63411-150">**Sample Application**</span></span>  
+  <https://aka.ms/microservicesarchitecture>
+
+## <a name="who-should-use-this-guide"></a><span data-ttu-id="63411-151">Destinatarios de esta guía</span><span class="sxs-lookup"><span data-stu-id="63411-151">Who should use this guide</span></span>
+
+<span data-ttu-id="63411-152">Los destinatarios de esta guía son principalmente desarrolladores, jefes de desarrollo y arquitectos interesados en crear aplicaciones web modernas con tecnologías y servicios de Microsoft en la nube.</span><span class="sxs-lookup"><span data-stu-id="63411-152">The audience for this guide is mainly developers, development leads, and architects who are interested in building modern web applications using Microsoft technologies and services in the cloud.</span></span>
+
+<span data-ttu-id="63411-153">Otros destinatarios secundarios son los responsables de tomar decisiones técnicas que ya están familiarizados con ASP.NET o Azure y que buscan información sobre si tiene sentido actualizar a ASP.NET Core para los proyectos nuevos o existentes.</span><span class="sxs-lookup"><span data-stu-id="63411-153">A secondary audience is technical decision makers who are already familiar ASP.NET or Azure and are looking for information on whether it makes sense to upgrade to ASP.NET Core for new or existing projects.</span></span>
+
+## <a name="how-you-can-use-this-guide"></a><span data-ttu-id="63411-154">Cómo leer esta guía</span><span class="sxs-lookup"><span data-stu-id="63411-154">How you can use this guide</span></span>
+
+<span data-ttu-id="63411-155">Esta guía se ha comprimido en un documento relativamente pequeño que se centra en la creación de aplicaciones web con modernas tecnologías de .NET y Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="63411-155">This guide has been condensed into a relatively small document that focuses on building web applications with modern .NET technologies and Windows Azure.</span></span> <span data-ttu-id="63411-156">Por lo tanto, se puede leer completa para proporcionar una base de conocimiento sobre estas aplicaciones y sus consideraciones técnicas.</span><span class="sxs-lookup"><span data-stu-id="63411-156">As such, it can be read in its entirety to provide a foundation of understanding such applications and their technical considerations.</span></span> <span data-ttu-id="63411-157">La guía, junto con su aplicación de ejemplo, también puede servir como punto inicial o referencia.</span><span class="sxs-lookup"><span data-stu-id="63411-157">The guide, along with its sample application, can also serve as a starting point or reference.</span></span> <span data-ttu-id="63411-158">Use la aplicación de ejemplo asociada como una plantilla para las aplicaciones propias o para consultar cómo se pueden organizar los componentes de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="63411-158">Use the associated sample application as a template for your own applications, or to see how you might organize your application's component parts.</span></span> <span data-ttu-id="63411-159">Consulte los principios y la cobertura de la arquitectura, las opciones tecnológicas y las consideraciones para la toma de decisiones de esta guía a la hora de sopesar estas opciones para su propia aplicación.</span><span class="sxs-lookup"><span data-stu-id="63411-159">Refer back to the guide's principles and coverage of architecture and technology options and decision considerations when you're weighing these choices for your own application.</span></span>
+
+<span data-ttu-id="63411-160">No dude en reenviar esta guía a su equipo para ayudarlo a garantizar una comprensión común de estas consideraciones y oportunidades.</span><span class="sxs-lookup"><span data-stu-id="63411-160">Feel free to forward this guide to your team to help ensure a common understanding of these considerations and opportunities.</span></span> <span data-ttu-id="63411-161">El hecho de que todos los usuarios trabajen a partir de un conjunto común de principios subyacentes y terminología permite garantizar una aplicación coherente de las prácticas y los patrones de diseño.</span><span class="sxs-lookup"><span data-stu-id="63411-161">Having everybody working from a common set of terminology and underlying principles helps ensure consistent application of architectural patterns and practices.</span></span>
+
+## <a name="references"></a><span data-ttu-id="63411-162">Referencias</span><span class="sxs-lookup"><span data-stu-id="63411-162">References</span></span>
+
+- <span data-ttu-id="63411-163">**Selección entre .NET Core y .NET Framework para aplicaciones de servidor**</span><span class="sxs-lookup"><span data-stu-id="63411-163">**Choosing between .NET Core and .NET Framework for server apps**</span></span>  
+  <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
-[<span data-ttu-id="58ca6-142">Siguiente</span><span class="sxs-lookup"><span data-stu-id="58ca6-142">Next</span></span>](modern-web-applications-characteristics.md)
+[<span data-ttu-id="63411-164">Siguiente</span><span class="sxs-lookup"><span data-stu-id="63411-164">Next</span></span>](modern-web-applications-characteristics.md)
