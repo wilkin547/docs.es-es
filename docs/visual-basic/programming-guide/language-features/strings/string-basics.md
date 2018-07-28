@@ -7,14 +7,14 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
 ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654065"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332680"
 ---
 # <a name="string-basics-in-visual-basic"></a>Fundamentos de cadenas en Visual Basic
-El tipo de datos de `String` representa una serie de caracteres (y cada uno de ellos representa a su vez una instancia del tipo de datos `Char`). Este tema presenta los conceptos básicos de cadenas en Visual Basic.  
+El tipo de datos de `String` representa una serie de caracteres (y cada uno de ellos representa a su vez una instancia del tipo de datos `Char`). Este tema presenta los conceptos básicos de las cadenas en Visual Basic.  
   
 ## <a name="string-variables"></a>Variables de cadena  
  A una instancia de una cadena se le puede asignar un valor literal que represente una serie de caracteres. Por ejemplo:  
@@ -61,7 +61,7 @@ World]]></xml>.Value
  La variable `myArray` contiene ahora una matriz de valores `Char` y cada uno representa un carácter de `myString`.  
   
 ## <a name="the-immutability-of-strings"></a>Inmutabilidad de cadenas  
- Una cadena es *inmutable*, lo que significa que su valor no puede modificarse una vez que se ha creado. Sin embargo, esto no impide asignar más de un valor a una variable de cadena. Considere el ejemplo siguiente:  
+ Una cadena es *inmutable*, lo que significa que su valor no puede cambiarse una vez que se ha creado. Sin embargo, esto no impide asignar más de un valor a una variable de cadena. Considere el ejemplo siguiente:  
   
  [!code-vb[VbVbalrStrings#69](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_7.vb)]  
   

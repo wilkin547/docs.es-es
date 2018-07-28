@@ -1,5 +1,5 @@
 ---
-title: GoTo (Instrucción)
+title: GoTo (instrucción) (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.GoTo
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 27ebc677bab8b7f61a02408fddb30a6ec21c43cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adb7668b6a818b2042a38f9458685a6f93085dc8
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604749"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332992"
 ---
 # <a name="goto-statement"></a>GoTo (Instrucción)
-Realiza una bifurcación incondicional a una línea especificada en un procedimiento.  
+Ramas incondicionalmente a una línea especificada en un procedimiento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,28 +34,28 @@ GoTo line
  Requerido. Cualquier etiqueta de línea.  
   
 ## <a name="remarks"></a>Comentarios  
- El `GoTo` instrucción puede crear una bifurcación únicamente a las líneas en el procedimiento en el que aparece. La línea debe tener una línea en la etiqueta que `GoTo` pueden hacer referencia a. Para obtener más información, consulte [Cómo: instrucciones de la etiqueta](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ El `GoTo` instrucción solamente puede bifurcar a líneas en el procedimiento en el que aparece. La línea debe tener una línea en la etiqueta que `GoTo` puede hacer referencia a. Para obtener más información, consulte [Cómo: instrucciones de la etiqueta](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
->  `GoTo` las instrucciones pueden dificultar la lectura y el mantenimiento del código. Siempre que sea posible, utilice en su lugar una estructura de control. Para obtener más información, consulte [flujo de Control](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+>  `GoTo` las instrucciones pueden dificultar la lectura y el mantenimiento del código. Siempre que sea posible, use una estructura de control en su lugar. Para obtener más información, consulte [flujo de Control](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
- No se puede utilizar un `GoTo` instrucción para bifurcar desde fuera de un `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `With`... `End With`, o `Using`... `End Using` construcción en una etiqueta dentro.  
+ No puede usar un `GoTo` instrucción para bifurcar desde fuera de un `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `With`... `End With`, o `Using`... `End Using` construcción una etiqueta dentro.  
   
 ## <a name="branching-and-try-constructions"></a>Bifurcación y construcciones Try  
  Dentro de un `Try`... `Catch`... `Finally` construcción, las reglas siguientes se aplican a la bifurcación con la `GoTo` instrucción.  
   
-|Bloque o región|Bifurcación hacia dentro desde fuera|Bifurcación hacia fuera desde dentro de|  
+|Bloque o región|Bifurcación en desde fuera de|Bifurcación hacia fuera desde dentro de|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try` Bloque|Sólo desde un `Catch` bloque de la misma construcción <sup>1</sup>|Solo fuera de la construcción completa|  
-|`Catch` Bloque|Nunca se permite|Solo fuera de la construcción completa o a la `Try` bloque de la misma construcción <sup>1</sup>|  
-|`Finally` Bloque|Nunca se permite|Nunca se permite|  
+|`Try` Bloque|Solo desde un `Catch` bloque de la misma construcción <sup>1</sup>|Solo fuera de la construcción toda|  
+|`Catch` Bloque|No permite nunca|Solo fuera de la construcción toda, o la `Try` bloque de la misma construcción <sup>1</sup>|  
+|`Finally` Bloque|No permite nunca|No permite nunca|  
   
- <sup>1</sup> si `Try`... `Catch`... `Finally` construcción está anidada dentro de otra, un `Catch` bloque puede crear una bifurcación en el `Try` bloque en su propio nivel de anidamiento, pero no en cualquier otro `Try` bloque. Anidada `Try`... `Catch`... `Finally` construcción debe estar contenida completamente en un `Try` o `Catch` bloque de la construcción dentro del cual está anidado.  
+ <sup>1</sup> si uno `Try`... `Catch`... `Finally` está anidada dentro de otra, una `Catch` bloque puede bifurcar a la `Try` bloquear su propio nivel de anidamiento, pero no en cualquier otro `Try` bloque. Anidada `Try`... `Catch`... `Finally` debe estar contenida completamente en un `Try` o `Catch` bloque de la construcción en el que está anidada.  
   
- En la siguiente ilustración muestra una `Try` construcción anidada dentro de otra. Las distintas bifurcaciones entre los bloques de las dos construcciones se indican como válidos o no es válido.  
+ La siguiente ilustración muestra una `Try` construcción anidada dentro de otra. Las distintas bifurcaciones entre los bloques de las dos construcciones se indican como válidos o no es válido.  
   
  ![Diagrama gráfico de bifurcación en construcciones Try](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
-Bifurcaciones válidas como no válidas en construcciones Try  
+Bifurcaciones válidas y no válidas en construcciones Try  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `GoTo` instrucción para bifurcar a etiquetas de línea en un procedimiento.  

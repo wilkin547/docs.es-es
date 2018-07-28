@@ -1,5 +1,5 @@
 ---
-title: Get (Instrucción)
+title: Get (instrucción) (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Get
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: d6a6fdfd191de76871619dea3bd1794b487698aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32b89caf56c010f9e6ed7b78309ef30b56b682ea
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605113"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332901"
 ---
 # <a name="get-statement"></a>Get (Instrucción)
 Declara un `Get` procedimiento de propiedad que se usa para recuperar el valor de una propiedad.  
@@ -33,41 +33,41 @@ End Get
   
 |Término|Definición|  
 |---|---|  
-|`attributelist`|Opcional. Vea [lista de los atributos](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Opcional en al menos uno de los `Get` y `Set` las instrucciones de esta propiedad. Puede ser uno de los siguientes:<br /><br /> -   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privada](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vea [tener acceso a niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`statements`|Opcional. Una o más instrucciones que se ejecutan cuando el `Get` se llama al procedimiento de propiedad.|  
+|`attributelist`|Opcional. Consulte [lista de los atributos](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Opcional en al menos uno de los `Get` y `Set` instrucciones de esta propiedad. Puede ser uno de los siguientes:<br /><br /> -   [protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privado](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Consulte [tener acceso a los niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`statements`|Opcional. Una o varias instrucciones que se ejecutan cuando el `Get` se llama al procedimiento de propiedad.|  
 |`End Get`|Requerido. Termina la definición de la `Get` procedimiento de propiedad.|  
   
 ## <a name="remarks"></a>Comentarios  
- Cada propiedad debe tener un `Get` procedimiento de propiedad, a menos que la propiedad está marcada como `WriteOnly`. El `Get` procedimiento se utiliza para devolver el valor actual de la propiedad.  
+ Cada propiedad debe tener un `Get` procedimiento de propiedad, a menos que la propiedad se marca `WriteOnly`. El `Get` procedimiento se utiliza para devolver el valor actual de la propiedad.  
   
- Visual Basic llama automáticamente a una propiedad `Get` procedimiento cuando una expresión solicita el valor de la propiedad.  
+ Visual Basic llama automáticamente una propiedad `Get` procedimiento cuando una expresión solicita el valor de propiedad.  
   
- El cuerpo de la declaración de propiedad puede contener solo la propiedad `Get` y `Set` procedimientos entre el [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md) y `End Property` instrucción. No puede almacenar nada distinto de esos procedimientos. En concreto, no puede almacenar el valor la propiedad actual. Debe almacenar este valor fuera de la propiedad, porque si almacena dentro de cualquiera de los procedimientos de propiedad, el procedimiento de la propiedad no puede acceder a él. El enfoque habitual consiste en almacenar el valor en un [privada](../../../visual-basic/language-reference/modifiers/private.md) variable declarada en el mismo nivel que la propiedad. Debe definir un `Get` procedimiento dentro de la propiedad a la que se aplica.  
+ El cuerpo de la declaración de propiedad puede contener sólo la propiedad `Get` y `Set` procedimientos entre el [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) y `End Property` instrucción. No puede almacenar algo distinto de esos procedimientos. En concreto, no puede almacenar el valor actual de la propiedad. Debe almacenar este valor fuera de la propiedad, porque si lo guarda dentro de cualquiera de los procedimientos de propiedad, el procedimiento de la propiedad no puede acceder a él. El enfoque habitual consiste en almacenar el valor en un [privada](../../../visual-basic/language-reference/modifiers/private.md) variable declarada en el mismo nivel que la propiedad. Debe definir un `Get` procedimiento dentro de la propiedad a la que se aplica.  
   
- El `Get` procedimiento tiene como valor predeterminado para el nivel de acceso de su propiedad que contiene a menos que use `accessmodifier` en el `Get` instrucción.  
+ El `Get` procedimiento tiene como valor predeterminado para el nivel de acceso de su propiedad contenedora a menos que use `accessmodifier` en el `Get` instrucción.  
   
 ## <a name="rules"></a>Reglas  
   
--   **Niveles de acceso mixtos.** Si va a definir una propiedad de lectura y escritura, puede especificar opcionalmente un nivel de acceso diferente para el `Get` o `Set` procedimiento, pero no ambos. Si lo hace, el nivel de acceso del procedimiento debe ser más restrictivo que el nivel de acceso de la propiedad. Por ejemplo, si se declara la propiedad `Friend`, puede declarar el `Get` procedimiento `Private`, pero no `Public`.  
+-   **Niveles de acceso mixtos.** Si va a definir una propiedad de lectura y escritura, opcionalmente, puede especificar un nivel de acceso diferente para el `Get` o `Set` procedimiento, pero no ambos. Si lo hace, el nivel de acceso del procedimiento debe ser más restrictivo que el nivel de acceso de la propiedad. Por ejemplo, si se declara la propiedad `Friend`, puede declarar el `Get` procedimiento `Private`, pero no `Public`.  
   
-     Si va a definir un `ReadOnly` propiedad, el `Get` procedimiento representa toda la propiedad. No se puede declarar un acceso diferente nivel para `Get`, porque se establecerían dos niveles de acceso para la propiedad.  
+     Si está definiendo un `ReadOnly` propiedad, el `Get` procedimiento representa toda la propiedad. No se puede declarar un acceso diferente nivel `Get`, ya que establecería dos niveles de acceso para la propiedad.  
   
--   **Tipo de valor devuelto.** El [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md) puede declarar el tipo de datos del valor que devuelve. El `Get` procedimiento devuelve automáticamente ese tipo de datos. Puede especificar cualquier tipo de datos o el nombre de una estructura, clase, interfaz o enumeración.  
+-   **Tipo de valor devuelto.** El [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) puede declarar el tipo de datos del valor que devuelve. El `Get` procedimiento devuelve automáticamente ese tipo de datos. Puede especificar cualquier tipo de datos o el nombre de una enumeración, estructura, clase o interfaz.  
   
      Si el `Property` instrucción no especifica `returntype`, el procedimiento devuelve `Object`.  
   
 ## <a name="behavior"></a>Comportamiento  
   
--   **Devolver desde un procedimiento.** Cuando el `Get` procedimiento vuelve al código de llamada, la ejecución continúa en la instrucción que solicita el valor de propiedad.  
+-   **Devolución desde un procedimiento.** Cuando el `Get` procedimiento vuelve al código de llamada, la ejecución continúa en la instrucción que solicitó el valor de propiedad.  
   
-     `Get` procedimientos de propiedad pueden devolver un valor mediante la [instrucción Return](../../../visual-basic/language-reference/statements/return-statement.md) o asignando el valor devuelto al nombre de propiedad. Para obtener más información, vea "Valor devuelto" en [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get` procedimientos de propiedad pueden devolver un valor mediante la [instrucción Return](../../../visual-basic/language-reference/statements/return-statement.md) o asignando el valor devuelto al nombre de propiedad. Para obtener más información, vea "Valor devuelto" en [instrucción Function](../../../visual-basic/language-reference/statements/function-statement.md).  
   
-     El `Exit Property` y `Return` instrucciones provocan una salida inmediata de un procedimiento de propiedad. Cualquier número de `Exit Property` y `Return` instrucciones pueden aparecer en cualquier lugar en el procedimiento y se pueden mezclar `Exit Property` y `Return` las instrucciones.  
+     El `Exit Property` y `Return` instrucciones provocan una salida inmediata de un procedimiento de propiedad. Cualquier número de `Exit Property` y `Return` instrucciones pueden aparecer en cualquier lugar en el procedimiento, y puede mezclar `Exit Property` y `Return` instrucciones.  
   
--   **Valor devuelto.** Para devolver un valor de un `Get` procedimiento, puede asignar el valor al nombre de propiedad o incluirlo en una [instrucción Return](../../../visual-basic/language-reference/statements/return-statement.md). El `Return` instrucción asigna simultáneamente el `Get` procedimiento devolver valor y sale del procedimiento.  
+-   **Valor devuelto.** Para devolver un valor de un `Get` procedimiento, puede asignar el valor al nombre de propiedad o incluirlo en una [instrucción Return](../../../visual-basic/language-reference/statements/return-statement.md). El `Return` instrucción asigna al mismo tiempo la `Get` procedimiento devolver valor y sale del procedimiento.  
   
-     Si usa `Exit Property` sin asignar un valor al nombre de propiedad, el `Get` procedimiento devuelve el valor predeterminado para el tipo de datos de la propiedad. Para obtener más información, vea "Valor devuelto" en [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md).  
+     Si usas `Exit Property` sin asignarle un valor para el nombre de propiedad, el `Get` procedimiento devuelve el valor predeterminado para el tipo de datos. Para obtener más información, vea "Valor devuelto" en [instrucción Function](../../../visual-basic/language-reference/statements/function-statement.md).  
   
      El ejemplo siguiente muestra dos formas de la propiedad de solo lectura `quoteForTheDay` puede devolver el valor contenido en la variable privada `quoteValue`.  
   

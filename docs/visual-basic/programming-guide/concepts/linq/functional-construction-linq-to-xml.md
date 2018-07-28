@@ -3,11 +3,11 @@ title: Construcción funcional (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
 ms.openlocfilehash: 360c321f993c8adb17767987060a0edcccad082a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644295"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39333018"
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>Construcción funcional (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona una manera eficaz de crear elementos XML denominada *construcción funcional*. La construcción funcional es la capacidad de crear un árbol XML en una sola instrucción.  
@@ -22,7 +22,7 @@ ms.locfileid: "33644295"
   
  A continuación se muestra un ejemplo:  
   
- Estas características permiten escribir código mediante literales XML para crear un árbol XML y también para escribir código que utiliza los resultados de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] las consultas cuando se crea un árbol XML:  
+ Estas características le permiten escribir código mediante literales XML para crear un árbol XML y también para escribir código que usa los resultados de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consultas cuando se crea un árbol XML:  
   
 ```vb  
 Dim srcTree As XElement = _  
