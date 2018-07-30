@@ -884,12 +884,10 @@
 #### [Un carácter de comilla doble no es un símbolo (token) de comentario válido para campos delimitados donde EscapeQuote está establecido en True](visual-basic/language-reference/error-messages/a-double-quote-is-not-a-valid-comment-token-for-delimited-fields.md)
 #### [Una llamada a una propiedad o un método no puede incluir una referencia a un objeto privado como un argumento o un valor de retorno](visual-basic/language-reference/error-messages/a-property-or-method-call-cannot-include-a-reference-to-a-private-object.md)
 #### [Se creó una referencia al ensamblado de interoperabilidad '<assembly1>' incrustado debido a una referencia indirecta a dicho ensamblado desde el ensamblado '<assembly2>'](visual-basic/language-reference/error-messages/a-reference-was-created-to-embedded-interop-assembly-assembly1.md)
-#### 
-  [No se ha especificado un formulario de inicio](visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md)
+#### [No se ha especificado un formulario de inicio](visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md)
 #### [Acceso de miembro compartido mediante una instancia; la expresión calificadora no se evaluará](visual-basic/language-reference/error-messages/access-of-shared-member-through-an-instance-qualifying-expression.md)
 #### [El operando 'AddressOf' debe ser el nombre de un método (sin paréntesis)](visual-basic/language-reference/error-messages/addressof-operand-must-be-the-name-of-a-method-without-parentheses.md)
-#### 
-  [Error inesperado porque no se puede conseguir un recurso del sistema operativo necesario para el inicio de una instancia única](visual-basic/language-reference/error-messages/an-unexpected-error-has-occurred.md)
+#### [Error inesperado porque no se puede conseguir un recurso del sistema operativo necesario para el inicio de una instancia única](visual-basic/language-reference/error-messages/an-unexpected-error-has-occurred.md)
 #### [El nombre de miembro de tipo anónimo sólo se puede inferir a partir de un nombre simple o completo sin argumentos](visual-basic/language-reference/error-messages/anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name.md)
 #### [Argumento no opcional](visual-basic/language-reference/error-messages/argument-not-optional.md)
 #### [Los límites de matriz no pueden aparecer en los especificadores de tipo](visual-basic/language-reference/error-messages/array-bounds-cannot-appear-in-type-specifiers.md)
