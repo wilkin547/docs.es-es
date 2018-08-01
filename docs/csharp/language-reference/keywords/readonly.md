@@ -1,64 +1,103 @@
 ---
-title: readonly (Referencia de C#)
-ms.date: 07/20/2015
+title: Palabra clave readonly (Referencia de C#)
+ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: d2f8a2f192dc319ad806aeef4bfbaeecc44b07a3
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 96607f1dd7f019169446e29a08496fb54e1ed493
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172638"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961188"
 ---
-# <a name="readonly-c-reference"></a><span data-ttu-id="6d310-102">readonly (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="6d310-102">readonly (C# Reference)</span></span>
-<span data-ttu-id="6d310-103">La palabra clave `readonly` corresponde a un modificador que se puede usar en campos.</span><span class="sxs-lookup"><span data-stu-id="6d310-103">The `readonly` keyword is a modifier that you can use on fields.</span></span> <span data-ttu-id="6d310-104">Cuando una declaración de campo incluye un modificador `readonly`, las asignaciones a los campos que aparecen en la declaración solo pueden tener lugar en la propia declaración o en un constructor de la misma clase.</span><span class="sxs-lookup"><span data-stu-id="6d310-104">When a field declaration includes a `readonly` modifier, assignments to the fields introduced by the declaration can only occur as part of the declaration or in a constructor in the same class.</span></span>  
+# <a name="readonly-c-reference"></a><span data-ttu-id="64ae5-102">readonly (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="64ae5-102">readonly (C# Reference)</span></span>
+
+<span data-ttu-id="64ae5-103">La palabra clave `readonly` es un modificador que se puede usar en tres contextos:</span><span class="sxs-lookup"><span data-stu-id="64ae5-103">The `readonly` keyword is a modifier that can be used in three contexts:</span></span>
+
+- <span data-ttu-id="64ae5-104">En una [declaración de campo](#readonly-field-example), `readonly` indica que la asignación a un campo solo se puede producir como parte de la declaración o en un constructor de la misma clase.</span><span class="sxs-lookup"><span data-stu-id="64ae5-104">In a [field declaration](#readonly-field-example), `readonly` indicates that assignment to the field can only occur as part of the declaration or in a constructor in the same class.</span></span>
+- <span data-ttu-id="64ae5-105">En una [definición de `readonly struct`](#readonly-struct-example), `readonly` indica que `struct` es inmutable.</span><span class="sxs-lookup"><span data-stu-id="64ae5-105">In a [`readonly struct` definition](#readonly-struct-example), `readonly` indicates that the `struct` is immutable.</span></span>
+- <span data-ttu-id="64ae5-106">En una [devolución del método `ref readonly`](#ref-readonly-return-example), el modificador `readonly` indica que el método devuelve una referencia y las operaciones de escritura no se permiten en esa referencia.</span><span class="sxs-lookup"><span data-stu-id="64ae5-106">In a [`ref readonly` method return](#ref-readonly-return-example), the `readonly` modifier indicates that method returns a reference and writes are not allowed to that reference.</span></span>
+
+<span data-ttu-id="64ae5-107">Los dos contextos finales se agregaron en C# 7.2.</span><span class="sxs-lookup"><span data-stu-id="64ae5-107">The final two contexts were added in C# 7.2.</span></span>
+
+## <a name="readonly-field-example"></a><span data-ttu-id="64ae5-108">Ejemplo de campo readonly</span><span class="sxs-lookup"><span data-stu-id="64ae5-108">Readonly field example</span></span>  
+
+<span data-ttu-id="64ae5-109">En este ejemplo, el valor del campo `year` no se puede cambiar en el método `ChangeYear`, aunque se asigne un valor en el constructor de clase:</span><span class="sxs-lookup"><span data-stu-id="64ae5-109">In this example, the value of the field `year` cannot be changed in the method `ChangeYear`, even though it is assigned a value in the class constructor:</span></span>  
   
-## <a name="readonly-field-example"></a><span data-ttu-id="6d310-105">Ejemplo de campo readonly</span><span class="sxs-lookup"><span data-stu-id="6d310-105">Readonly field example</span></span>  
- <span data-ttu-id="6d310-106">En este ejemplo, el valor del campo `year` no se puede cambiar en el método `ChangeYear`, aunque se asigne un valor en el constructor de clase:</span><span class="sxs-lookup"><span data-stu-id="6d310-106">In this example, the value of the field `year` cannot be changed in the method `ChangeYear`, even though it is assigned a value in the class constructor:</span></span>  
+[!code-csharp[Readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyField)]  
   
- [!code-csharp[csrefKeywordsModifiers#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_1.cs)]  
+<span data-ttu-id="64ae5-110">Solo se puede asignar un valor a un campo `readonly` en los siguientes contextos:</span><span class="sxs-lookup"><span data-stu-id="64ae5-110">You can assign a value to a `readonly` field only in the following contexts:</span></span>  
   
- <span data-ttu-id="6d310-107">Solo se puede asignar un valor a un campo `readonly` en los siguientes contextos:</span><span class="sxs-lookup"><span data-stu-id="6d310-107">You can assign a value to a `readonly` field only in the following contexts:</span></span>  
-  
--   <span data-ttu-id="6d310-108">Cuando la variable se inicializa en la declaración, por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="6d310-108">When the variable is initialized in the declaration, for example:</span></span>  
-  
-    ```csharp  
-    public readonly int y = 5;  
-    ```  
-  
--   <span data-ttu-id="6d310-109">Para un campo de instancia, en los constructores de instancia de la clase que contiene la declaración de campo; para un campo estático, en el constructor estático de la clase que contiene la declaración de campo.</span><span class="sxs-lookup"><span data-stu-id="6d310-109">For an instance field, in the instance constructors of the class that contains the field declaration, or for a static field, in the static constructor of the class that contains the field declaration.</span></span> <span data-ttu-id="6d310-110">Estos son también los únicos contextos en los que es válido pasar un campo `readonly` como parámetro [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) o [ref](../../../csharp/language-reference/keywords/ref.md).</span><span class="sxs-lookup"><span data-stu-id="6d310-110">These are also the only contexts in which it is valid to pass a `readonly` field as an [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) or [ref](../../../csharp/language-reference/keywords/ref.md) parameter.</span></span>  
+- <span data-ttu-id="64ae5-111">Cuando la variable se inicializa en la declaración, por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="64ae5-111">When the variable is initialized in the declaration, for example:</span></span>  
+
+```csharp
+public readonly int y = 5;  
+```
+
+- <span data-ttu-id="64ae5-112">En un constructor de instancia de la clase que contiene la declaración de campo de instancia.</span><span class="sxs-lookup"><span data-stu-id="64ae5-112">In an instance constructor of the class that contains the instance field declaration.</span></span>
+- <span data-ttu-id="64ae5-113">En el constructor estático de la clase que contiene la declaración de campo estático.</span><span class="sxs-lookup"><span data-stu-id="64ae5-113">In the static constructor of the class that contains the static field declaration.</span></span>
+
+<span data-ttu-id="64ae5-114">Estos contextos de constructor son también los únicos en los que es válido pasar un campo `readonly` como parámetro [out](out-parameter-modifier.md) o [ref](ref.md).</span><span class="sxs-lookup"><span data-stu-id="64ae5-114">These constructor contexts are also the only contexts in which it is valid to pass a `readonly` field as an [out](out-parameter-modifier.md) or [ref](ref.md) parameter.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6d310-111">La palabra clave `readonly` es diferente de la palabra clave [const](../../../csharp/language-reference/keywords/const.md).</span><span class="sxs-lookup"><span data-stu-id="6d310-111">The `readonly` keyword is different from the [const](../../../csharp/language-reference/keywords/const.md) keyword.</span></span> <span data-ttu-id="6d310-112">Un campo `const` solo se puede inicializar en la declaración del campo.</span><span class="sxs-lookup"><span data-stu-id="6d310-112">A `const` field can only be initialized at the declaration of the field.</span></span> <span data-ttu-id="6d310-113">Un campo `readonly` se puede inicializar en la declaración o en un constructor.</span><span class="sxs-lookup"><span data-stu-id="6d310-113">A `readonly` field can be initialized either at the declaration or in a constructor.</span></span> <span data-ttu-id="6d310-114">Por lo tanto, los campos `readonly` pueden tener diferentes valores en función del constructor que se use.</span><span class="sxs-lookup"><span data-stu-id="6d310-114">Therefore, `readonly` fields can have different values depending on the constructor used.</span></span> <span data-ttu-id="6d310-115">Además, mientras que un campo `const` es una constante en tiempo de compilación, el campo `readonly` puede usarse para constantes en tiempo de ejecución, como muestra el siguiente ejemplo:</span><span class="sxs-lookup"><span data-stu-id="6d310-115">Also, while a `const` field is a compile-time constant, the `readonly` field can be used for runtime constants as in the following example:</span></span>  
-  
-```csharp  
+> <span data-ttu-id="64ae5-115">La palabra clave `readonly` es diferente de la palabra clave [const](const.md).</span><span class="sxs-lookup"><span data-stu-id="64ae5-115">The `readonly` keyword is different from the [const](const.md) keyword.</span></span> <span data-ttu-id="64ae5-116">Un campo `const` solo se puede inicializar en la declaración del campo.</span><span class="sxs-lookup"><span data-stu-id="64ae5-116">A `const` field can only be initialized at the declaration of the field.</span></span> <span data-ttu-id="64ae5-117">Un campo `readonly` se puede inicializar en la declaración o en un constructor.</span><span class="sxs-lookup"><span data-stu-id="64ae5-117">A `readonly` field can be initialized either at the declaration or in a constructor.</span></span> <span data-ttu-id="64ae5-118">Por lo tanto, los campos `readonly` pueden tener diferentes valores en función del constructor que se use.</span><span class="sxs-lookup"><span data-stu-id="64ae5-118">Therefore, `readonly` fields can have different values depending on the constructor used.</span></span> <span data-ttu-id="64ae5-119">Además, mientras que un campo `const` es una constante en tiempo de compilación, el campo `readonly` puede usarse para constantes en tiempo de ejecución, como muestra el siguiente ejemplo:</span><span class="sxs-lookup"><span data-stu-id="64ae5-119">Also, while a `const` field is a compile-time constant, the `readonly` field can be used for runtime constants as in the following example:</span></span>  
+
+```csharp
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;  
-```  
+```
+
+[!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]  
   
-## <a name="comparing-readonly-and-non-readonly-instance-fields"></a><span data-ttu-id="6d310-116">Comparación de campos de instancia readonly y non-readonly</span><span class="sxs-lookup"><span data-stu-id="6d310-116">Comparing readonly and non-readonly instance fields</span></span>  
- [!code-csharp[csrefKeywordsModifiers#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_2.cs)]  
+<span data-ttu-id="64ae5-120">En el ejemplo anterior, si se usa una instrucción como el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="64ae5-120">In the preceding example, if you use a statement like the following example:</span></span>  
   
- <span data-ttu-id="6d310-117">En el ejemplo anterior, si se usa una instrucción como:</span><span class="sxs-lookup"><span data-stu-id="6d310-117">In the preceding example, if you use a statement like this:</span></span>  
+`p2.y = 66;        // Error`  
   
- `p2.y = 66;        // Error`  
+<span data-ttu-id="64ae5-121">se obtendrá el siguiente mensaje de error del compilador:</span><span class="sxs-lookup"><span data-stu-id="64ae5-121">you will get the compiler error message:</span></span>  
   
- <span data-ttu-id="6d310-118">se obtendrá el siguiente mensaje de error del compilador:</span><span class="sxs-lookup"><span data-stu-id="6d310-118">you will get the compiler error message:</span></span>  
+`The left-hand side of an assignment must be an l-value`  
   
- `The left-hand side of an assignment must be an l-value`  
+<span data-ttu-id="64ae5-122">que es el mismo error que se obtiene al intentar asignar un valor a una constante.</span><span class="sxs-lookup"><span data-stu-id="64ae5-122">which is the same error you get when you attempt to assign a value to a constant.</span></span>  
+
+## <a name="readonly-struct-example"></a><span data-ttu-id="64ae5-123">Ejemplo de estructura de solo lectura</span><span class="sxs-lookup"><span data-stu-id="64ae5-123">Readonly struct example</span></span>
+
+<span data-ttu-id="64ae5-124">El modificador `readonly` en una definición `struct` declara que la estructura es **inmutable**.</span><span class="sxs-lookup"><span data-stu-id="64ae5-124">The `readonly` modifier on a `struct` definition declares that the struct is **immutable**.</span></span> <span data-ttu-id="64ae5-125">Todos los campos de instancia de `struct` se deben marcar como `readonly`, como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="64ae5-125">Every instance field of the `struct` must be marked `readonly`, as shown in the following example:</span></span>
+
+[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]  
+
+<span data-ttu-id="64ae5-126">En el ejemplo anterior se usan [propiedades automáticas de solo lectura](../../properties.md#read-only) para declarar su almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="64ae5-126">The preceding example uses [readonly auto properties](../../properties.md#read-only) to declare its storage.</span></span> <span data-ttu-id="64ae5-127">Eso indica al compilador que cree campos de respaldo `readonly` para esas propiedades.</span><span class="sxs-lookup"><span data-stu-id="64ae5-127">That instructs the compiler to create `readonly` backing fields for those properties.</span></span> <span data-ttu-id="64ae5-128">También se podrían declarar campos `readonly` directamente:</span><span class="sxs-lookup"><span data-stu-id="64ae5-128">You could also declare `readonly` fields directly:</span></span>
+
+```csharp
+public readonly struct Point
+{
+    public readonly double X;
+    public readonly double Y;
+
+    public Point(double x, double y) => (X, Y) = (x, y);
+
+    public override string ToString() => $"({X}, {Y})";
+}
+```
+
+<span data-ttu-id="64ae5-129">La adición de un campo `readonly` no marcado genera el error del compilador `CS8340`: "Los campos de instancia de las estructuras readonly deben ser readonly".</span><span class="sxs-lookup"><span data-stu-id="64ae5-129">Adding a field not marked `readonly` generates compiler error `CS8340`: "Instance fields of readonly structs must be readonly."</span></span>
+
+## <a name="ref-readonly-return-example"></a><span data-ttu-id="64ae5-130">Ejemplo de devolución de Ref readonly</span><span class="sxs-lookup"><span data-stu-id="64ae5-130">Ref readonly return example</span></span>
+
+<span data-ttu-id="64ae5-131">El modificador `readonly` en una `ref return` indica que la referencia devuelta no se puede modificar.</span><span class="sxs-lookup"><span data-stu-id="64ae5-131">The `readonly` modifier on a `ref return` indicates that the returned reference cannot be modified.</span></span> <span data-ttu-id="64ae5-132">En el ejemplo siguiente se devuelve una referencia al origen.</span><span class="sxs-lookup"><span data-stu-id="64ae5-132">The following example returns a reference to the origin.</span></span> <span data-ttu-id="64ae5-133">Usa el modificador `readonly` para indicar que los autores de la llamada no pueden modificar el origen:</span><span class="sxs-lookup"><span data-stu-id="64ae5-133">It uses the `readonly` modifier to indicate that callers cannot modify the origin:</span></span>
+
+[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]  
+<span data-ttu-id="64ae5-134">No es necesario que el tipo devuelto sea una `readonly struct`.</span><span class="sxs-lookup"><span data-stu-id="64ae5-134">The type returned doesn't need to be a `readonly struct`.</span></span> <span data-ttu-id="64ae5-135">Cualquier tipo que `ref` pueda devolver `ref readonly` también puede devolver.</span><span class="sxs-lookup"><span data-stu-id="64ae5-135">Any type that can be returned by `ref` can be returned by `ref readonly`</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="64ae5-136">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="64ae5-136">C# Language Specification</span></span>  
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
- <span data-ttu-id="6d310-119">que es el mismo error que se obtiene al intentar asignar un valor a una constante.</span><span class="sxs-lookup"><span data-stu-id="6d310-119">which is the same error you get when you attempt to assign a value to a constant.</span></span>  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="6d310-120">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="6d310-120">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="6d310-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="6d310-121">See Also</span></span>  
- [<span data-ttu-id="6d310-122">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="6d310-122">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="6d310-123">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="6d310-123">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="6d310-124">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="6d310-124">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="6d310-125">Modificadores</span><span class="sxs-lookup"><span data-stu-id="6d310-125">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
- [<span data-ttu-id="6d310-126">const</span><span class="sxs-lookup"><span data-stu-id="6d310-126">const</span></span>](../../../csharp/language-reference/keywords/const.md)  
- [<span data-ttu-id="6d310-127">Campos</span><span class="sxs-lookup"><span data-stu-id="6d310-127">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)
+## <a name="see-also"></a><span data-ttu-id="64ae5-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="64ae5-137">See Also</span></span>  
+[<span data-ttu-id="64ae5-138">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="64ae5-138">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+[<span data-ttu-id="64ae5-139">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="64ae5-139">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+[<span data-ttu-id="64ae5-140">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="64ae5-140">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+[<span data-ttu-id="64ae5-141">Modificadores</span><span class="sxs-lookup"><span data-stu-id="64ae5-141">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
+[<span data-ttu-id="64ae5-142">const</span><span class="sxs-lookup"><span data-stu-id="64ae5-142">const</span></span>](../../../csharp/language-reference/keywords/const.md)  
+[<span data-ttu-id="64ae5-143">Campos</span><span class="sxs-lookup"><span data-stu-id="64ae5-143">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)
