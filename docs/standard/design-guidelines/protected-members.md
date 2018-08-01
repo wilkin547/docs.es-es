@@ -24,9 +24,9 @@ Miembros protegidos por sí mismos no proporcionan ninguna extensibilidad, pero 
   
  Diseñadores de Framework hay que tener cuidado con los miembros protegidos porque el nombre "protegido" puede dar una falsa sensación de seguridad. Cualquier persona es capaz de subclase de una clase no sellada y protegidos de obtener acceso a miembros y, por lo que las mismas estable prácticas de codificación utilizadas para los miembros públicos se aplican a los miembros protegidos.  
   
- **✓ Considere la posibilidad de** con protegidos los miembros para la personalización avanzada.  
+ **✓ CONSIDER** con protegidos los miembros para la personalización avanzada.  
   
- **✓ HACER** trate los miembros protegidos de clases no selladas como públicos con el fin de análisis de seguridad, documentación y compatibilidad.  
+ **✓ DO** trate los miembros protegidos de clases no selladas como públicos con el fin de análisis de seguridad, documentación y compatibilidad.  
   
  Cualquiera puede heredar de una clase y tener acceso a los miembros protegidos.  
   

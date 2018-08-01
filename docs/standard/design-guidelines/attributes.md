@@ -26,25 +26,25 @@ ms.locfileid: "33574639"
   
  Las propiedades que no necesariamente deben especificarse cuando se aplica el atributo se denominan propiedades opcionales (o argumentos opcionales). Dichas reglas se representan mediante propiedades configurables. Los compiladores proporcionan una sintaxis especial para establecer estas propiedades cuando se aplica un atributo. Por ejemplo, el <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> propiedad representa un argumento opcional.  
   
- **✓ HACER** nombres de las clases de atributo personalizado con el sufijo "Atributos".  
+ **✓ DO** nombres de las clases de atributo personalizado con el sufijo "Atributos".  
   
- **✓ HACER** aplicar el <xref:System.AttributeUsageAttribute> a atributos personalizados.  
+ **✓ DO** aplicar el <xref:System.AttributeUsageAttribute> a atributos personalizados.  
   
- **✓ HACER** proporcionar propiedades configurables para los argumentos opcionales.  
+ **✓ DO** proporcionar propiedades configurables para los argumentos opcionales.  
   
- **✓ HACER** proporcionan propiedades get-only de argumentos necesarios.  
+ **✓ DO** proporcionan propiedades get-only de argumentos necesarios.  
   
- **✓ HACER** proporcionan parámetros de constructor para inicializar las propiedades que corresponden a los argumentos necesarios. Cada parámetro debe tener el mismo nombre (aunque con distintas mayúsculas y minúsculas) como la propiedad correspondiente.  
+ **✓ DO** proporcionan parámetros de constructor para inicializar las propiedades que corresponden a los argumentos necesarios. Cada parámetro debe tener el mismo nombre (aunque con distintas mayúsculas y minúsculas) como la propiedad correspondiente.  
   
- **X evitar** proporcionar parámetros del constructor para inicializar las propiedades que corresponden a los argumentos opcionales.  
+ **X AVOID** proporcionar parámetros del constructor para inicializar las propiedades que corresponden a los argumentos opcionales.  
   
  En otras palabras, no tiene propiedades que se pueden establecer con un constructor y un establecedor. Esta instrucción hace muy explícitas qué argumentos son opcionales y que son necesarios y evita la necesidad de dos maneras de hacer lo mismo.  
   
- **X evitar** sobrecarga de constructores de atributo personalizado.  
+ **X AVOID** sobrecarga de constructores de atributo personalizado.  
   
  Tener solo un constructor claramente comunica con el usuario que los argumentos son obligatorios y cuáles son opcionales.  
   
- **✓ HACER** sellar clases de atributos personalizados, si es posible. Esto acelera la búsqueda para el atributo.  
+ **✓ DO** sellar clases de atributos personalizados, si es posible. Esto acelera la búsqueda para el atributo.  
   
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   

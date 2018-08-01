@@ -27,11 +27,11 @@ ms.locfileid: "36338109"
 Esta sección describe generales convenciones de nomenclatura que se relacionan con la elección de palabras, directrices sobre el uso de las abreviaturas y acrónimos y recomendaciones sobre cómo evitar el uso de nombres específicos del idioma.  
   
 ## <a name="word-choice"></a>Elección de palabras  
- **✓ HACER** elegir nombres fácilmente legibles para los identificadores.  
+ **✓ DO** elegir nombres fácilmente legibles para los identificadores.  
   
  Por ejemplo, una propiedad denominada `HorizontalAlignment` es inglés-lee mejor que `AlignmentHorizontal`.  
   
- **✓ HACER** preferible la legibilidad a la mayor brevedad.  
+ **✓ DO** preferible la legibilidad a la mayor brevedad.  
   
  El nombre de propiedad `CanScrollHorizontally` es mejor que `ScrollableX` (una referencia oculta al eje x).  
   
@@ -39,7 +39,7 @@ Esta sección describe generales convenciones de nomenclatura que se relacionan 
   
  **X DO NOT** utilizar la notación húngara.  
   
- **X evitar** utilizando identificadores que están en conflicto con las palabras clave de ampliamente utilizar lenguajes de programación.  
+ **X AVOID** utilizando identificadores que están en conflicto con las palabras clave de ampliamente utilizar lenguajes de programación.  
   
  Según la regla 4 de Common Language Specification (CLS), todos los lenguajes compatibles con deben proporcionar un mecanismo que permite el acceso a elementos con nombre que utiliza una palabra clave de ese idioma como un identificador. C#, por ejemplo, utiliza el @ inicio de sesión como un mecanismo de escape en este caso. Sin embargo, todavía es una buena idea para evitar palabras clave comunes porque es mucho más difícil de usar un método con la secuencia de escape que uno sin él.  
   
@@ -51,11 +51,11 @@ Esta sección describe generales convenciones de nomenclatura que se relacionan 
  **X DO NOT** usar los acrónimos que no son ampliamente aceptada e incluso si son, solo cuando sea necesario.  
   
 ## <a name="avoiding-language-specific-names"></a>Evitar los nombres específicos del idioma  
- **✓ HACER** utilice nombres con interés semántico en lugar de palabras clave específicas del idioma para los nombres de tipo.  
+ **✓ DO** utilice nombres con interés semántico en lugar de palabras clave específicas del idioma para los nombres de tipo.  
   
  Por ejemplo, `GetLength` es un nombre más adecuado que `GetInt`.  
   
- **✓ HACER** utilizar un nombre de tipo genérico de CLR, en lugar de un nombre específico del lenguaje, en los casos poco frecuentes cuando un identificador no tiene ningún significado semántico más allá de su tipo.  
+ **✓ DO** utilizar un nombre de tipo genérico de CLR, en lugar de un nombre específico del lenguaje, en los casos poco frecuentes cuando un identificador no tiene ningún significado semántico más allá de su tipo.  
   
  Por ejemplo, un método de conversión a <xref:System.Int64> debe denominarse `ToInt64`, no `ToLong` (porque <xref:System.Int64> es un nombre CLR para C#-alias específico `long`). En la tabla siguiente presenta varios tipos de base de datos con los nombres de tipo CLR (así como los nombres de tipo correspondiente para C#, Visual Basic y C++).  
   
@@ -76,24 +76,24 @@ Esta sección describe generales convenciones de nomenclatura que se relacionan 
 |**string**|**String**|**String**|**String**|  
 |**object**|**Objeto**|**Objeto**|**Objeto**|  
   
- **✓ HACER** utilizar un nombre común, como `value` o `item`, en lugar de repetir el nombre de tipo, en los casos poco frecuentes cuando un identificador no tiene ningún significado semántico y el tipo del parámetro no es importante.  
+ **✓ DO** utilizar un nombre común, como `value` o `item`, en lugar de repetir el nombre de tipo, en los casos poco frecuentes cuando un identificador no tiene ningún significado semántico y el tipo del parámetro no es importante.  
   
 ## <a name="naming-new-versions-of-existing-apis"></a>Nomenclatura de las nuevas versiones de API existentes  
- **✓ HACER** usar un nombre similar a la API anterior al crear nuevas versiones de una API existente.  
+ **✓ DO** usar un nombre similar a la API anterior al crear nuevas versiones de una API existente.  
   
  Esto ayuda a resaltar la relación entre las API.  
   
- **✓ HACER** prefiera agregar un sufijo, en lugar de un prefijo para indicar una nueva versión de una API existente.  
+ **✓ DO** prefiera agregar un sufijo, en lugar de un prefijo para indicar una nueva versión de una API existente.  
   
  Esto ayudará a detección al examinar la documentación, o usar IntelliSense. La versión anterior de la API se organizarán cerca de las nuevas API, dado que la mayoría de los exploradores e IntelliSense mostrar identificadores en orden alfabético.  
   
- **✓ Considere la posibilidad de** con un identificador nuevo, pero significativo, en lugar de agregar un prefijo o un sufijo.  
+ **✓ CONSIDER** con un identificador nuevo, pero significativo, en lugar de agregar un prefijo o un sufijo.  
   
- **✓ HACER** use un sufijo numérico para indicar una nueva versión de una API existente, especialmente si el nombre de la API existente es el nombre único que tenga sentido (es decir, si es un estándar del sector) y si agregar cualquier significativo sufijo (o cambiar el nombre) no es una aplicación opción de ropriate.  
+ **✓ DO** use un sufijo numérico para indicar una nueva versión de una API existente, especialmente si el nombre de la API existente es el nombre único que tenga sentido (es decir, si es un estándar del sector) y si agregar cualquier significativo sufijo (o cambiar el nombre) no es una aplicación opción de ropriate.  
   
  **X DO NOT** usar "Ex" (u otro similar) sufijo para un identificador distinguir de una versión anterior de la misma API.  
   
- **✓ HACER** utilizar el sufijo "64" al introducir las versiones de API que operan en un entero de 64 bits (un entero largo) en lugar de un entero de 32 bits. Solo debe adoptar este enfoque cuando existe la API de 32 bits existente; no lo haga para la nuevas API con solo una versión de 64 bits.  
+ **✓ DO** utilizar el sufijo "64" al introducir las versiones de API que operan en un entero de 64 bits (un entero largo) en lugar de un entero de 32 bits. Solo debe adoptar este enfoque cuando existe la API de 32 bits existente; no lo haga para la nuevas API con solo una versión de 64 bits.  
   
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   

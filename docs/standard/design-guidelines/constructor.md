@@ -30,42 +30,42 @@ Hay dos tipos de constructores: escriba constructores y los constructores de ins
   
  Los constructores son la forma más natural para crear instancias de un tipo. Mayoría de los desarrolladores buscará y pruebe a utilizar un constructor antes de que consideren formas alternativas de creación de instancias (por ejemplo, los métodos de fábrica).  
   
- **✓ Considere la posibilidad de** proporcionar simple, lo ideal es que el valor predeterminado, constructores.  
+ **✓ CONSIDER** proporcionar simple, lo ideal es que el valor predeterminado, constructores.  
   
  Un constructor simple tiene un número muy pequeño de parámetros y todos los parámetros son tipos primitivos o enumeraciones. Estos constructores simples aumentan la usabilidad de framework.  
   
- **✓ Considere la posibilidad de** mediante un método de generador estático en lugar de un constructor si la semántica de la operación deseada no se asigna directamente a la construcción de una nueva instancia, o si no parece natural siguiendo las directrices de diseño del constructor.  
+ **✓ CONSIDER** mediante un método de generador estático en lugar de un constructor si la semántica de la operación deseada no se asigna directamente a la construcción de una nueva instancia, o si no parece natural siguiendo las directrices de diseño del constructor.  
   
- **✓ HACER** usar los parámetros de constructor como accesos directos para establecer las propiedades principales.  
+ **✓ DO** usar los parámetros de constructor como accesos directos para establecer las propiedades principales.  
   
  No debería haber ninguna diferencia semántica entre usando el constructor vacío seguido por algunos conjuntos de propiedades y utilizando un constructor con varios argumentos.  
   
- **✓ HACER** utilizar el mismo nombre para los parámetros de constructor y una propiedad si los parámetros del constructor se utilizan simplemente para establecer la propiedad.  
+ **✓ DO** utilizar el mismo nombre para los parámetros de constructor y una propiedad si los parámetros del constructor se utilizan simplemente para establecer la propiedad.  
   
  La única diferencia entre estos parámetros y las propiedades debe ser las mayúsculas y minúsculas.  
   
- **✓ HACER** un trabajo mínimo en el constructor.  
+ **✓ DO** un trabajo mínimo en el constructor.  
   
  Constructores no deberían hacer mucho trabajo que no sea de captura de los parámetros del constructor. El costo de cualquier otro procesamiento se debería retrasar hasta que requiere.  
   
- **✓ HACER** genere excepciones desde los constructores de instancia, si procede.  
+ **✓ DO** genere excepciones desde los constructores de instancia, si procede.  
   
- **✓ HACER** declarar explícitamente el constructor predeterminado público en clases, si se requiere un constructor de ese tipo.  
+ **✓ DO** declarar explícitamente el constructor predeterminado público en clases, si se requiere un constructor de ese tipo.  
   
  Si no se declara explícitamente ningún constructor en un tipo, muchos lenguajes (por ejemplo, C#) agregará automáticamente un constructor predeterminado público. (Las clases abstractas obtener un constructor protegido).  
   
  Agregar un constructor con parámetros a una clase, impide que el compilador agregue el constructor predeterminado. Esto hace que a menudo cambios accidentales.  
   
- **X evitar** la definición explícita de constructores predeterminados en estructuras.  
+ **X AVOID** la definición explícita de constructores predeterminados en estructuras.  
   
  Esto acelera la creación de una matriz, porque si no se define el constructor predeterminado, no tiene que ejecutarse en todas las ranuras de la matriz. Tenga en cuenta que muchos compiladores, incluyendo C#, no permiten las estructuras que tienen constructores sin parámetros por esta razón.  
   
- **X evitar** al llamar a los miembros virtuales en un objeto dentro de su constructor.  
+ **X AVOID** al llamar a los miembros virtuales en un objeto dentro de su constructor.  
   
  Llamar a un miembro virtual hará que la invalidación más derivada llamarlo, incluso si el constructor del tipo más derivado no ha sido totalmente ejecutado todavía.  
   
 ### <a name="type-constructor-guidelines"></a>Directrices de Constructor de tipo  
- **✓ HACER** hacer privado static (constructores).  
+ **✓ DO** hacer privado static (constructores).  
   
  Un constructor estático, que también se denomina un constructor de clase, se utiliza para inicializar un tipo. CLR llama al constructor estático antes de crear la primera instancia del tipo o se llama a cualquier miembro estático en ese tipo. El usuario no tiene ningún control sobre cuándo se llama al constructor estático. Si un constructor estático no es privado, se puede llamar mediante código que no sea de CLR. Dependiendo de las operaciones realizadas en el constructor, esto puede provocar un comportamiento inesperado. El compilador de C# fuerza constructores estáticos a ser privado.  
   
@@ -73,7 +73,7 @@ Hay dos tipos de constructores: escriba constructores y los constructores de ins
   
  Si se produce una excepción desde un constructor de tipo, el tipo no es utilizable en el dominio de aplicación actual.  
   
- **Considere la posibilidad de ✓** inicializar campos estáticos en línea, en lugar de utilizar explícitamente constructores estáticos, como el tiempo de ejecución se puede optimizar el rendimiento de tipos que no tienen un constructor estático definido explícitamente.  
+ **✓ CONSIDER** inicializar campos estáticos en línea, en lugar de utilizar explícitamente constructores estáticos, como el tiempo de ejecución se puede optimizar el rendimiento de tipos que no tienen un constructor estático definido explícitamente.  
   
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   

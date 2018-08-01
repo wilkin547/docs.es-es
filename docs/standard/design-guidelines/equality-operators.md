@@ -23,27 +23,27 @@ En esta sección se describe la sobrecarga de operadores de igualdad y hace refe
   
  **X DO NOT** uno de los operadores de igualdad y la otra sobrecarga.  
   
- **✓ HACER** Asegúrese de que <xref:System.Object.Equals%2A?displayProperty=nameWithType> y los operadores de igualdad tienen exactamente la misma semántica y las características de rendimiento similares.  
+ **✓ DO** Asegúrese de que <xref:System.Object.Equals%2A?displayProperty=nameWithType> y los operadores de igualdad tienen exactamente la misma semántica y las características de rendimiento similares.  
   
  Esto significa que a menudo `Object.Equals` debe reemplazarse cuando se sobrecargan los operadores de igualdad.  
   
- **X evitar** iniciar excepciones desde los operadores de igualdad.  
+ **X AVOID** iniciar excepciones desde los operadores de igualdad.  
   
  Por ejemplo, devolver false si uno de los argumentos es null en lugar de producir `NullReferenceException`.  
   
 ## <a name="equality-operators-on-value-types"></a>Operadores de igualdad en los tipos de valor  
- **✓ HACER** sobrecargar los operadores de igualdad en los tipos de valor, si son iguales es significativo.  
+ **✓ DO** sobrecargar los operadores de igualdad en los tipos de valor, si son iguales es significativo.  
   
  En la mayoría de los lenguajes de programación, no hay ninguna implementación predeterminada de `operator==` para tipos de valor.  
   
 ## <a name="equality-operators-on-reference-types"></a>Operadores de igualdad de tipos de referencia  
- **X evitar** sobrecargar operadores de igualdad de tipos de referencias mutables.  
+ **X AVOID** sobrecargar operadores de igualdad de tipos de referencias mutables.  
   
  Muchos lenguajes tienen operadores de igualdad integrados para tipos de referencia. Los operadores integrados implementan generalmente la igualdad de referencia, y muchos desarrolladores se sorprenda cuando se cambia el comportamiento predeterminado para la igualdad de valor.  
   
  Este problema se mitiga para tipos de referencia inmutable porque inmutabilidad resulta mucho más complejo debe tener en cuenta la diferencia entre la igualdad de referencia y la igualdad de valor.  
   
- **X evitar** sobrecargar operadores de igualdad de tipos de referencia si la implementación sería mucho más lenta que el de igualdad de referencia.  
+ **X AVOID** sobrecargar operadores de igualdad de tipos de referencia si la implementación sería mucho más lenta que el de igualdad de referencia.  
   
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   

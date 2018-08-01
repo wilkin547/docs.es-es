@@ -27,15 +27,15 @@ Como con otras directrices de nomenclaturas, el objetivo al asignar nombres a lo
  `Fabrikam.Math`  
  `Litware.Security`  
   
- **✓ HACER** prefijos de espacios de nombres con un nombre de compañía para evitar que los espacios de nombres de distintas compañías que tengan el mismo nombre.  
+ **✓ DO** prefijos de espacios de nombres con un nombre de compañía para evitar que los espacios de nombres de distintas compañías que tengan el mismo nombre.  
   
- **✓ HACER** utilizar un nombre de producto estable, independiente de la versión en el segundo nivel de un nombre de espacio de nombres.  
+ **✓ DO** utilizar un nombre de producto estable, independiente de la versión en el segundo nivel de un nombre de espacio de nombres.  
   
  **X DO NOT** usar jerarquías organizativas como base para los nombres en las jerarquías de espacio de nombres, porque los nombres de grupo dentro de las organizaciones tienden a ser de corta duración. Organizar la jerarquía de espacios de nombres alrededor de grupos de tecnologías relacionadas.  
   
- **✓ HACER** usar Pascal y componentes del espacio de nombres independiente con puntos (por ejemplo, `Microsoft.Office.PowerPoint`). Si su marca utiliza una grafía no tradicional, debe seguir las mayúsculas y minúsculas definida por su marca, incluso si se desvían de mayúsculas y minúsculas del espacio de nombres normal.  
+ **✓ DO** usar Pascal y componentes del espacio de nombres independiente con puntos (por ejemplo, `Microsoft.Office.PowerPoint`). Si su marca utiliza una grafía no tradicional, debe seguir las mayúsculas y minúsculas definida por su marca, incluso si se desvían de mayúsculas y minúsculas del espacio de nombres normal.  
   
- **Considere la posibilidad de ✓** recurriendo plural espacios de nombres en su caso.  
+ **✓ CONSIDER** recurriendo plural espacios de nombres en su caso.  
   
  Por ejemplo, utilice `System.Collections` en lugar de `System.Collection`. Nombres de marcas y acrónimos son excepciones a esta regla, sin embargo. Por ejemplo, utilice `System.IO` en lugar de `System.IOs`.  
   

@@ -26,11 +26,11 @@ Un tipo anidado es un tipo definido en el ámbito de otro tipo, que se denomina 
   
  Los tipos anidados son más adecuados para modelar los detalles de implementación de sus tipos envolventes. El usuario final rara vez deberían tener que declarar las variables de un tipo anidado y casi nunca debería tener que crear explícitamente instancias de tipos anidados. Por ejemplo, el enumerador de una colección puede ser un tipo anidado de dicha recopilación. Normalmente se crean instancias de los enumeradores por su tipo envolvente, y dado que muchos lenguajes admiten la instrucción foreach, variables de enumerador rara vez tienen que ser declarada por el usuario final.  
   
- **✓ HACER** utilice tipos anidados cuando la relación entre el tipo anidado y su tipo exterior es tal que es deseable la semántica de accesibilidad de miembros.  
+ **✓ DO** utilice tipos anidados cuando la relación entre el tipo anidado y su tipo exterior es tal que es deseable la semántica de accesibilidad de miembros.  
   
  **X DO NOT** use los tipos anidados públicos como una agrupación lógica construir; usar espacios de nombres para este.  
   
- **X evitar** exponer públicamente los tipos anidados. La única excepción a esto es si las variables del tipo anidado deben declararse sólo en escenarios poco habituales, como el uso de subclases u otros escenarios de personalización avanzada.  
+ **X AVOID** exponer públicamente los tipos anidados. La única excepción a esto es si las variables del tipo anidado deben declararse sólo en escenarios poco habituales, como el uso de subclases u otros escenarios de personalización avanzada.  
   
  **X DO NOT** utilice tipos anidados si el tipo es probable que se hace referencia fuera del tipo contenedor.  
   

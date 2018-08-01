@@ -25,9 +25,9 @@ Generación de excepciones directrices descritas en esta sección requieren una 
   
  Las excepciones son el medio principal de informar de errores en los marcos de trabajo.  
   
- **✓ HACER** notificar errores de ejecución iniciando excepciones.  
+ **✓ DO** notificar errores de ejecución iniciando excepciones.  
   
- **✓ Considere la posibilidad de** la terminación del proceso mediante una llamada a `System.Environment.FailFast` (característica de .NET Framework 2.0) en lugar de producir una excepción si el código encuentra una situación donde no es seguro para la ejecución aún más.  
+ **✓ CONSIDER** la terminación del proceso mediante una llamada a `System.Environment.FailFast` (característica de .NET Framework 2.0) en lugar de producir una excepción si el código encuentra una situación donde no es seguro para la ejecución aún más.  
   
  **X DO NOT** usar excepciones para el flujo normal de control, si es posible.  
   
@@ -37,9 +37,9 @@ Generación de excepciones directrices descritas en esta sección requieren una 
   
  Hay casos en el patrón de acción de evaluador puede tener una sobrecarga de rendimiento inaceptable. En tales casos, debe considerarse el patrón de Try-análisis denominadas (vea [excepciones y rendimiento](../../../docs/standard/design-guidelines/exceptions-and-performance.md) para obtener más información).  
   
- **✓ Considere la posibilidad de** las implicaciones de rendimiento de inicio de excepciones. Las tasas de throw por encima de 100 por segundo son propensos a afectar notablemente el rendimiento de la mayoría de las aplicaciones.  
+ **✓ CONSIDER** las implicaciones de rendimiento de inicio de excepciones. Las tasas de throw por encima de 100 por segundo son propensos a afectar notablemente el rendimiento de la mayoría de las aplicaciones.  
   
- **✓ HACER** documento todas las excepciones iniciadas por miembros invocables públicamente debido a una infracción del miembro del contrato (en lugar de un error del sistema) y tratan como parte de su contrato.  
+ **✓ DO** documento todas las excepciones iniciadas por miembros invocables públicamente debido a una infracción del miembro del contrato (en lugar de un error del sistema) y tratan como parte de su contrato.  
   
  Las excepciones que forman parte del contrato no deberían cambiar de una versión a la siguiente (es decir, no debería cambiar el tipo de excepción y no se deben agregar nuevas excepciones).  
   
@@ -49,7 +49,7 @@ Generación de excepciones directrices descritas en esta sección requieren una 
   
  Devolver las excepciones de las API públicas en lugar de producir ellos frustra muchas de las ventajas de informe de errores basado en excepciones.  
   
- **✓ Considere la posibilidad de** mediante métodos de generador de excepciones.  
+ **✓ CONSIDER** mediante métodos de generador de excepciones.  
   
  Es común para que se produzca la misma excepción desde distintos lugares. Para evitar la cantidad de código, use métodos auxiliares que crean excepciones e inicializan sus propiedades.  
   
@@ -59,7 +59,7 @@ Generación de excepciones directrices descritas en esta sección requieren una 
   
  Cuando un filtro de excepción produce una excepción, se detecta la excepción de CLR y el filtro devuelve false. Este comportamiento es indistinguible desde que el filtro se ejecuta y devuelve false explícitamente y por lo tanto, es muy difícil de depurar.  
   
- **X evitar** iniciar explícitamente excepciones desde bloques finally. Las excepciones iniciadas implícitamente resultante de la llamada a métodos que inician son aceptables.  
+ **X AVOID** iniciar explícitamente excepciones desde bloques finally. Las excepciones iniciadas implícitamente resultante de la llamada a métodos que inician son aceptables.  
   
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   

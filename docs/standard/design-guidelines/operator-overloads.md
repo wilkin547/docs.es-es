@@ -22,25 +22,25 @@ Sobrecargas de operador permite que los tipos de marco de trabajo aparecen como 
   
  Aunque permitidos y útil en algunas situaciones, las sobrecargas de operador deben utilizarse con precaución. Hay muchos casos en el operador sobrecarga se se haya manipulado, por ejemplo, cuando los diseñadores de framework empezado a usar operadores para las operaciones que deben ser métodos sencillos. Las directrices siguientes le ayudarán a decidir cuándo y cómo utilizar la sobrecarga de operadores.  
   
- **X evitar** definir sobrecargas de operador, excepto en tipos que se sentirá como los tipos primitivos (integrados).  
+ **X AVOID** definir sobrecargas de operador, excepto en tipos que se sentirá como los tipos primitivos (integrados).  
   
- **✓ Considere la posibilidad de** definir sobrecargas de operador en un tipo que se sentirá como un tipo primitivo.  
+ **✓ CONSIDER** definir sobrecargas de operador en un tipo que se sentirá como un tipo primitivo.  
   
  Por ejemplo, <xref:System.String?displayProperty=nameWithType> tiene `operator==` y `operator!=` definido.  
   
- **✓ HACER** definir sobrecargas de operador en las estructuras que representan números (como <xref:System.Decimal?displayProperty=nameWithType>).  
+ **✓ DO** definir sobrecargas de operador en las estructuras que representan números (como <xref:System.Decimal?displayProperty=nameWithType>).  
   
- **X no** ser hermosa al definir las sobrecargas de operador.  
+ **X DO NOT** ser hermosa al definir las sobrecargas de operador.  
   
  Sobrecarga de operadores es útil en casos en los que es obvio cuál será el resultado de la operación. Por ejemplo, tiene sentido que puedan reste una ubicación <xref:System.DateTime> desde otro `DateTime` y obtener un <xref:System.TimeSpan>. Sin embargo, no es adecuado utilizar el operador de unión lógico para las consultas de unión de dos bases de datos o usar el operador de desplazamiento para escribir en una secuencia.  
   
  **X DO NOT** proporcionan las sobrecargas de operador, a menos que al menos uno de los operandos es de tipo que define la sobrecarga.  
   
- **✓ HACER** sobrecargar los operadores de forma simétrica.  
+ **✓ DO** sobrecargar los operadores de forma simétrica.  
   
  Por ejemplo, si se sobrecarga el `operator==`, también debe sobrecargar el `operator!=`. De forma similar, si se sobrecarga el `operator<`, también debe sobrecargar el `operator>`, y así sucesivamente.  
   
- **✓ Considere la posibilidad de** proporcionar métodos con nombres descriptivos que corresponden a cada operador sobrecargado.  
+ **✓ CONSIDER** proporcionar métodos con nombres descriptivos que corresponden a cada operador sobrecargado.  
   
  Muchos lenguajes no admiten la sobrecarga de operadores. Por este motivo, se recomienda que los tipos que sobrecargan operadores incluyen un método secundario con un nombre específico de dominio adecuado que proporciona una funcionalidad equivalente.  
   
@@ -107,7 +107,7 @@ Sobrecargas de operador permite que los tipos de marco de trabajo aparecen como 
   
  Es muy difícil para los usuarios finales a comprender lo que está sucediendo, ya que podrían no ser consciente de que está produciendo una conversión.  
   
- **✓ HACER** throw <xref:System.InvalidCastException?displayProperty=nameWithType> si una llamada a un operador de conversión produce una conversión con pérdida de datos y el contrato del operador no permite conversiones con pérdida de datos.  
+ **✓ DO** throw <xref:System.InvalidCastException?displayProperty=nameWithType> si una llamada a un operador de conversión produce una conversión con pérdida de datos y el contrato del operador no permite conversiones con pérdida de datos.  
   
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   

@@ -25,9 +25,9 @@ Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumer
   
  Las enumeraciones de indicador están diseñadas para admitir las operaciones bit a bit de los valores de enumeración. Un ejemplo común de la enumeración de marcas es una lista de opciones.  
   
- **✓ HACER** utilizar una enumeración para establecimiento inflexible de tipos, parámetros, propiedades y valores que representan conjuntos de valores devueltos.  
+ **✓ DO** utilizar una enumeración para establecimiento inflexible de tipos, parámetros, propiedades y valores que representan conjuntos de valores devueltos.  
   
- **✓ HACER** favorecen el uso de una enumeración en lugar de constantes estáticas.  
+ **✓ DO** favorecen el uso de una enumeración en lugar de constantes estáticas.  
   
  **X DO NOT** utilizar una enumeración para conjuntos abiertos (por ejemplo, la versión del sistema operativo, los nombres de sus amigos, etcetera).  
   
@@ -35,7 +35,7 @@ Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumer
   
  Solo puede siempre tiene que agregar valores a la enumeración existente en una fase posterior. Vea [agregar valores a las enumeraciones](#add_value) para obtener más información sobre cómo agregar valores a las enumeraciones. Valores reservados simplemente contamina el conjunto de valores reales y suelen dar lugar a errores de usuario.  
   
- **X evitar** exponer públicamente las enumeraciones con un único valor.  
+ **X AVOID** exponer públicamente las enumeraciones con un único valor.  
   
  Es una práctica común para garantizar la extensibilidad futura de API de C agregar parámetros reservados para las firmas de método. Estos parámetros reservados se pueden expresar como enumeraciones con un valor único. No debe realizarse en las API administradas. Sobrecarga de métodos permite agregar parámetros en versiones futuras.  
   
@@ -43,11 +43,11 @@ Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumer
   
  Aunque a veces son útiles para los desarrolladores de framework, los valores de centinela son confusos para los usuarios de framework. Se utilizan para realizar un seguimiento del estado de la enumeración en lugar de ser uno de los valores del conjunto representado por la enumeración.  
   
- **✓ HACER** proporcionar un valor de cero en enumeraciones simples.  
+ **✓ DO** proporcionar un valor de cero en enumeraciones simples.  
   
  Tenga en cuenta el valor de llamada algo parecido a "Ninguno". Si este valor no es adecuado para esta enumeración determinada, el valor predeterminado más común para la enumeración debe tener asignado el valor subyacente de cero.  
   
- **✓ Considere la posibilidad de** con <xref:System.Int32> (el valor predeterminado en la mayoría de lenguajes de programación) como el tipo subyacente de una enumeración, a menos que cualquiera de las acciones siguientes es verdadera:  
+ **✓ CONSIDER** con <xref:System.Int32> (el valor predeterminado en la mayoría de lenguajes de programación) como el tipo subyacente de una enumeración, a menos que cualquiera de las acciones siguientes es verdadera:  
   
 -   La enumeración es una enumeración de marcas y dispone de más de 32 indicadores o espera tener más en el futuro.  
   
@@ -63,7 +63,7 @@ Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumer
   
  Para el uso de memoria, tenga en cuenta que los objetos administrados son siempre `DWORD`-alineados, por lo que necesita eficazmente varias enumeraciones u otras estructuras pequeños en una instancia para empaquetar una enumeración con menor para marcar la diferencia, porque el tamaño de la instancia total es siempre Si va a redondear hasta un `DWORD`.  
   
- **✓ HACER** nombre enumeraciones de indicador con nombres plurales o sintagmas nominales y enumeraciones simples con nombres simples o frases.  
+ **✓ DO** nombre enumeraciones de indicador con nombres plurales o sintagmas nominales y enumeraciones simples con nombres simples o frases.  
   
  **X DO NOT** extender <xref:System.Enum?displayProperty=nameWithType> directamente.  
   
@@ -71,25 +71,25 @@ Las enumeraciones son un tipo especial de tipo de valor. Hay dos tipos de enumer
   
 <a name="design"></a>   
 ### <a name="designing-flag-enums"></a>Diseñar enumeraciones de indicador  
- **✓ HACER** aplicar el <xref:System.FlagsAttribute?displayProperty=nameWithType> para las enumeraciones de indicador. No se aplican este atributo a las enumeraciones simples.  
+ **✓ DO** aplicar el <xref:System.FlagsAttribute?displayProperty=nameWithType> para las enumeraciones de indicador. No se aplican este atributo a las enumeraciones simples.  
   
- **✓ HACER** use potencias de dos para los valores de enumeración de marca para que puedan combinarse libremente utilizando la operación OR bit a bit.  
+ **✓ DO** use potencias de dos para los valores de enumeración de marca para que puedan combinarse libremente utilizando la operación OR bit a bit.  
   
- **✓ Considere la posibilidad de** proporcionar valores de enumeración especiales para normalmente usa combinaciones de marcas.  
+ **✓ CONSIDER** proporcionar valores de enumeración especiales para normalmente usa combinaciones de marcas.  
   
  Operaciones bit a bit son un concepto avanzado y no deberían ser necesarias para tareas sencillas. <xref:System.IO.FileAccess.ReadWrite> es un ejemplo de este tipo de valor especial.  
   
- **X evitar** crear enumeraciones de indicador que ciertas combinaciones de valores no son válidos.  
+ **X AVOID** crear enumeraciones de indicador que ciertas combinaciones de valores no son válidos.  
   
- **X evitar** utilizando marca los valores de enumeración de cero a menos que el valor representa "se borran todas las marcas" y se denomina de forma adecuada, según lo prescrito por la instrucción siguiente.  
+ **X AVOID** utilizando marca los valores de enumeración de cero a menos que el valor representa "se borran todas las marcas" y se denomina de forma adecuada, según lo prescrito por la instrucción siguiente.  
   
- **✓ HACER** nombre al valor cero de enumeraciones de marca `None`. Para una enumeración de marca, el valor siempre debe significar "se borran todos los indicadores".  
+ **✓ DO** nombre al valor cero de enumeraciones de marca `None`. Para una enumeración de marca, el valor siempre debe significar "se borran todos los indicadores".  
   
 <a name="add_value"></a>   
 ### <a name="adding-value-to-enums"></a>Agregar valor a las enumeraciones  
  Es muy común para detectar que deba agregar valores a una enumeración después de que ya ha enviado. Hay un posible problema de compatibilidad de aplicaciones cuando el valor recién agregado se devuelve desde una API existente, porque las aplicaciones mal escritas no pueden controlar el nuevo valor correctamente.  
   
- **✓ Considere la posibilidad de** agregar valores a las enumeraciones, a pesar de que un pequeño riesgo de compatibilidad.  
+ **✓ CONSIDER** agregar valores a las enumeraciones, a pesar de que un pequeño riesgo de compatibilidad.  
   
  Si tiene datos reales sobre incompatibilidades causadas por las adiciones a una enumeración, considere la posibilidad de agregar una nueva API que devuelve los valores antiguos y nuevos y dejar de utilizar la API antigua, que debería devolver solo los valores anteriores. Esto garantizará que las aplicaciones existentes siguen siendo compatibles.  
   

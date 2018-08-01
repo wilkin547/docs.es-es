@@ -21,15 +21,15 @@ ms.locfileid: "33571191"
 # <a name="naming-resources"></a>Asignar nombres a recursos
 Porque los recursos localizables se pueden hacer referencia a través de ciertos objetos como si fueran propiedades, las instrucciones de nomenclatura para los recursos son similares a las directrices de propiedad.  
   
- **✓ HACER** use Pascal de las claves de recursos.  
+ **✓ DO** use Pascal de las claves de recursos.  
   
- **✓ HACER** proporcionar descriptivo en lugar de identificadores cortos.  
+ **✓ DO** proporcionar descriptivo en lugar de identificadores cortos.  
   
  **X DO NOT** usar palabras clave específicas del idioma de los principales lenguajes CLR.  
   
- **✓ HACER** utilice sólo caracteres alfanuméricos y caracteres de subrayado en nombres de recursos.  
+ **✓ DO** utilice sólo caracteres alfanuméricos y caracteres de subrayado en nombres de recursos.  
   
- **✓ HACER** usar la siguiente convención de nomenclatura para los recursos de mensaje de excepción.  
+ **✓ DO** usar la siguiente convención de nomenclatura para los recursos de mensaje de excepción.  
   
  El identificador de recurso debe ser el nombre de tipo de excepción más un identificador corto de la excepción:  
   

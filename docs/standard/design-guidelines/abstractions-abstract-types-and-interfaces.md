@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573031"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstracciones (Tipos e interfaces abstractos)
 Una abstracción es un tipo que describe un contrato, pero no proporciona una implementación completa del contrato. Abstracciones normalmente se implementan como interfaces o clases abstractas y vienen con un conjunto de documentación de referencia que describe la semántica necesaria de los tipos que implementan el contrato bien definido. Algunas de las abstracciones más importantes en .NET Framework son <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, y <xref:System.Object>.  
@@ -29,9 +30,9 @@ Una abstracción es un tipo que describe un contrato, pero no proporciona una im
   
  **X DO NOT** proporcionan abstracciones a menos que se prueban mediante el desarrollo de varias implementaciones concretas y consumir las abstracciones de API.  
   
- **✓ HACER** Elija cuidadosamente entre una clase abstracta y una interfaz al diseñar una abstracción.  
+ **✓ DO** Elija cuidadosamente entre una clase abstracta y una interfaz al diseñar una abstracción.  
   
- **✓ Considere la posibilidad de** proporcionar pruebas de referencia para implementaciones concretas de abstracciones. Dichas pruebas deben permitir a los usuarios comprobar si sus implementaciones cumplen correctamente el contrato.  
+ **✓ CONSIDER** proporcionar pruebas de referencia para implementaciones concretas de abstracciones. Dichas pruebas deben permitir a los usuarios comprobar si sus implementaciones cumplen correctamente el contrato.  
   
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   

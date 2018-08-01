@@ -31,11 +31,11 @@ El tipo de valor de uso general más a menudo se conoce como un struct, la palab
   
  Tipos de valor mutable tienen varios problemas. Por ejemplo, cuando un captador de propiedad devuelve un tipo de valor, el llamador recibe una copia. Dado que la copia se crea implícitamente, los desarrolladores no sea consciente de que se Muta la copia y no el valor original. Además, algunos lenguajes (lenguajes dinámicos, en particular) tienen problemas al utilizar tipos de valor mutable porque incluso las variables locales, cuando se desreferencia, hacer una copia en realizarse.  
   
- **✓ HACER** asegurarse de que un estado donde todos los datos de la instancia se establece en cero, false o null (según corresponda) es válido.  
+ **✓ DO** asegurarse de que un estado donde todos los datos de la instancia se establece en cero, false o null (según corresponda) es válido.  
   
  Esto evita la creación accidental de instancias no válidas cuando se crea una matriz de las estructuras.  
   
- **✓ HACER** implementar <xref:System.IEquatable%601> en tipos de valor.  
+ **✓ DO** implementar <xref:System.IEquatable%601> en tipos de valor.  
   
  El <xref:System.Object.Equals%2A?displayProperty=nameWithType> método en tipos de valor provoca conversión boxing y la implementación predeterminada no es muy eficaz, ya que usa la reflexión. <xref:System.IEquatable%601.Equals%2A> puede tener un rendimiento mucho mejor y se puede implementar para que no producirá la conversión boxing.  
   

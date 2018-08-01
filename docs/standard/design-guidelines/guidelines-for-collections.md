@@ -34,9 +34,9 @@ Cualquier tipo que se ha diseñado específicamente para manipular un grupo de o
  **X DO NOT** implementar ambas `IEnumerator<T>` y `IEnumerable<T>` en el mismo tipo. Lo mismo se aplica a las interfaces no genéricas `IEnumerator` y `IEnumerable`.  
   
 ## <a name="collection-parameters"></a>Colección de parámetros  
- **✓ HACER** usar los posibles tipo especializado mínimos como un tipo de parámetro. Mayoría de los miembros que toma las colecciones como parámetros utilizan la `IEnumerable<T>` interfaz.  
+ **✓ DO** usar los posibles tipo especializado mínimos como un tipo de parámetro. Mayoría de los miembros que toma las colecciones como parámetros utilizan la `IEnumerable<T>` interfaz.  
   
- **X evitar** con <xref:System.Collections.Generic.ICollection%601> o <xref:System.Collections.ICollection> como un parámetro para tener acceso a la `Count` propiedad.  
+ **X AVOID** con <xref:System.Collections.Generic.ICollection%601> o <xref:System.Collections.ICollection> como un parámetro para tener acceso a la `Count` propiedad.  
   
  En su lugar, considere el uso de `IEnumerable<T>` o `IEnumerable` y dinámicamente comprobando si el objeto implementa `ICollection<T>` o `ICollection`.  
   
@@ -45,25 +45,25 @@ Cualquier tipo que se ha diseñado específicamente para manipular un grupo de o
   
  Los usuarios pueden reemplazar el contenido de la colección si elimina primero la colección y, a continuación, agregar el nuevo contenido. Si reemplaza toda la colección es un escenario común, considere la posibilidad de proporcionar el `AddRange` método en la colección.  
   
- **✓ HACER** usar `Collection<T>` o una subclase de `Collection<T>` para propiedades o devuelven valores que representan las colecciones de lectura/escritura.  
+ **✓ DO** usar `Collection<T>` o una subclase de `Collection<T>` para propiedades o devuelven valores que representan las colecciones de lectura/escritura.  
   
  Si `Collection<T>` no cumple algunos requisitos (por ejemplo, la colección no debe implementar <xref:System.Collections.IList>), utilizar una colección personalizada implementando `IEnumerable<T>`, `ICollection<T>`, o <xref:System.Collections.Generic.IList%601>.  
   
- **✓ HACER** usar <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, una subclase de `ReadOnlyCollection<T>`, o en casos poco frecuentes `IEnumerable<T>` para propiedades o devuelven valores que representan colecciones de solo lectura.  
+ **✓ DO** usar <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, una subclase de `ReadOnlyCollection<T>`, o en casos poco frecuentes `IEnumerable<T>` para propiedades o devuelven valores que representan colecciones de solo lectura.  
   
  Normalmente, es preferible `ReadOnlyCollection<T>`. Si no tiene algún requisito (p. ej., no debe implementar la colección `IList`), utilice una colección personalizada mediante la implementación `IEnumerable<T>`, `ICollection<T>`, o `IList<T>`. Si implementa una colección personalizada de solo lectura, implementar `ICollection<T>.IsReadOnly` para devolver `true`.  
   
  En caso de que esté seguro de que el único escenario alguna vez desea admitir iteración de solo avance, simplemente puede usar `IEnumerable<T>`.  
   
- **✓ Considere la posibilidad de** mediante subclases de las colecciones genéricas de base en lugar de usar directamente las colecciones.  
+ **✓ CONSIDER** mediante subclases de las colecciones genéricas de base en lugar de usar directamente las colecciones.  
   
  Esto permite para un nombre más adecuado y agregar los miembros de aplicación auxiliar que no están presentes en los tipos de colección base. Esto es especialmente aplicable a las API de alto nivel.  
   
- **✓ Considere la posibilidad de** devolver una subclase de `Collection<T>` o `ReadOnlyCollection<T>` de propiedades y métodos utilizados con mucha frecuencia.  
+ **✓ CONSIDER** devolver una subclase de `Collection<T>` o `ReadOnlyCollection<T>` de propiedades y métodos utilizados con mucha frecuencia.  
   
  Esto hará que sea posible para agregar métodos auxiliares o cambie la implementación de la colección en el futuro.  
   
- **✓ Considere la posibilidad de** con una colección con clave si los elementos almacenados en la colección tienen claves únicas (nombres, Id., etcetera). Colecciones con claves son colecciones que se pueden indizar por un entero y una clave y se implementan normalmente mediante la adquisición de `KeyedCollection<TKey,TItem>`.  
+ **✓ CONSIDER** con una colección con clave si los elementos almacenados en la colección tienen claves únicas (nombres, Id., etcetera). Colecciones con claves son colecciones que se pueden indizar por un entero y una clave y se implementan normalmente mediante la adquisición de `KeyedCollection<TKey,TItem>`.  
   
  Colecciones con claves normalmente tienen una superficie de memoria mayor y no deben usarse si la sobrecarga de memoria supera con creces las ventajas de tener las claves.  
   
@@ -78,50 +78,50 @@ Cualquier tipo que se ha diseñado específicamente para manipular un grupo de o
   
  Captadores de propiedades deberían ser operaciones muy ligeras. Devuelve una instantánea requiere la creación de una copia de una colección interna en una operación o (n).  
   
- **✓ HACER** utilizar una colección de instantáneas o activo `IEnumerable<T>` (o su subtipo) para representar las colecciones son volátiles (es decir, que puede cambiar sin modificar explícitamente la colección).  
+ **✓ DO** utilizar una colección de instantáneas o activo `IEnumerable<T>` (o su subtipo) para representar las colecciones son volátiles (es decir, que puede cambiar sin modificar explícitamente la colección).  
   
  En general, todas las colecciones que representa un recurso compartido (por ejemplo, los archivos en un directorio) son volátiles. Dichas colecciones son muy difícil o imposible implementar como colecciones en vivo, a menos que la implementación es simplemente un enumerador de solo avance.  
   
 ## <a name="choosing-between-arrays-and-collections"></a>Elegir entre las matrices y colecciones  
- **✓ HACER** preferir las colecciones de matrices.  
+ **✓ DO** preferir las colecciones de matrices.  
   
  Las colecciones proporcionan más control sobre el contenido, pueden evolucionar con el tiempo y resultan más útiles. Además, usar matrices para escenarios de solo lectura no se recomienda porque el costo de la clonación de la matriz es prohibitivo. Los estudios de facilidad de uso han demostrado que algunos desarrolladores sienten más cómodos con las API basadas en la colección.  
   
  Sin embargo, si va a desarrollar las API de bajo nivel, podría ser mejor usar matrices para escenarios de lectura y escritura. Las matrices tienen una superficie de memoria menor, lo que ayuda a reducir el espacio de trabajo, y acceso a elementos de una matriz es más rápido porque está optimizado en tiempo de ejecución.  
   
- **✓ Considere la posibilidad de** utilizar matrices en las API de bajo nivel para minimizar el consumo de memoria y maximizar el rendimiento.  
+ **✓ CONSIDER** utilizar matrices en las API de bajo nivel para minimizar el consumo de memoria y maximizar el rendimiento.  
   
- **✓ HACER** usar matrices de bytes en lugar de colecciones de bytes.  
+ **✓ DO** usar matrices de bytes en lugar de colecciones de bytes.  
   
  **X DO NOT** usar matrices de propiedades si la propiedad tendría que volver a una nueva matriz (p. ej., una copia de una matriz interna) cada vez que se llama al captador de propiedad.  
   
 ## <a name="implementing-custom-collections"></a>Implementar colecciones personalizadas  
- **✓ Considere la posibilidad de** heredar `Collection<T>`, `ReadOnlyCollection<T>`, o `KeyedCollection<TKey,TItem>` al diseñar nuevas recopilaciones.  
+ **✓ CONSIDER** heredar `Collection<T>`, `ReadOnlyCollection<T>`, o `KeyedCollection<TKey,TItem>` al diseñar nuevas recopilaciones.  
   
- **✓ HACER** implementar `IEnumerable<T>` al diseñar nuevas recopilaciones. Considere la posibilidad de implementar `ICollection<T>` o incluso `IList<T>` siempre que tenga sentido.  
+ **✓ DO** implementar `IEnumerable<T>` al diseñar nuevas recopilaciones. Considere la posibilidad de implementar `ICollection<T>` o incluso `IList<T>` siempre que tenga sentido.  
   
  Al implementar este tipo de colección personalizado, siguen el patrón de API establecido por `Collection<T>` y `ReadOnlyCollection<T>` lo más fielmente posible. Es decir, implementar los mismos miembros explícitamente, el nombre de los parámetros como el nombre de estas dos colecciones usarlas y así sucesivamente.  
   
- **✓ Considere la posibilidad de** implementar interfaces de colección no genérica (`IList` y `ICollection`) si la colección a menudo se pasará a las API teniendo estas interfaces como entrada.  
+ **✓ CONSIDER** implementar interfaces de colección no genérica (`IList` y `ICollection`) si la colección a menudo se pasará a las API teniendo estas interfaces como entrada.  
   
- **X evitar** implementar interfaces de colección de tipos con API complejas que no está relacionado con el concepto de una colección.  
+ **X AVOID** implementar interfaces de colección de tipos con API complejas que no está relacionado con el concepto de una colección.  
   
  **X DO NOT** heredar de colecciones no genéricas de base como `CollectionBase`. Use `Collection<T>`, `ReadOnlyCollection<T>`, y `KeyedCollection<TKey,TItem>` en su lugar.  
   
 ### <a name="naming-custom-collections"></a>Nomenclatura de recopilaciones personalizadas  
  Colecciones (los tipos que implementan `IEnumerable`) se crean principalmente por dos razones: (1) para crear una nueva estructura de datos con operaciones específicas de la estructura y, a menudo diferentes características de rendimiento de las estructuras de datos existentes (p. ej., <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) y (2) para crear una colección especializada que contiene un conjunto específico de elementos (p. ej., <xref:System.Collections.Specialized.StringCollection>). Estructuras de datos se usan con mayor frecuencia en la implementación interna de las aplicaciones y bibliotecas. Colecciones especializadas son principalmente que se expondrán en API (como tipos de propiedad y los parámetros).  
   
- **✓ HACER** utilizar el sufijo "Diccionario" en los nombres de abstracciones implementar `IDictionary` o `IDictionary<TKey,TValue>`.  
+ **✓ DO** utilizar el sufijo "Diccionario" en los nombres de abstracciones implementar `IDictionary` o `IDictionary<TKey,TValue>`.  
   
- **✓ HACER** utilizar el sufijo "Collection" en los nombres de tipos que implementan `IEnumerable` (o cualquiera de sus descendientes) y que representa una lista de elementos.  
+ **✓ DO** utilizar el sufijo "Collection" en los nombres de tipos que implementan `IEnumerable` (o cualquiera de sus descendientes) y que representa una lista de elementos.  
   
- **✓ HACER** usar el nombre de la estructura de datos adecuado para estructuras de datos personalizadas.  
+ **✓ DO** usar el nombre de la estructura de datos adecuado para estructuras de datos personalizadas.  
   
- **X evitar** utilizar los sufijos de lo que implica la implementación concreta, como "LinkedList" o "Tabla hash," en los nombres de abstracciones de la colección.  
+ **X AVOID** utilizar los sufijos de lo que implica la implementación concreta, como "LinkedList" o "Tabla hash," en los nombres de abstracciones de la colección.  
   
- **Considere la posibilidad de ✓** agregando el prefijo de nombres de la colección con el nombre del tipo de elemento. Por ejemplo, una colección que almacena elementos de tipo `Address` (implementar `IEnumerable<Address>`) deben tener un nombre `AddressCollection`. Si el tipo de elemento es una interfaz, la "I" prefijo del elemento se puede omitir el tipo. Por lo tanto, una colección de <xref:System.IDisposable> elementos pueden llamarse `DisposableCollection`.  
+ **✓ CONSIDER** agregando el prefijo de nombres de la colección con el nombre del tipo de elemento. Por ejemplo, una colección que almacena elementos de tipo `Address` (implementar `IEnumerable<Address>`) deben tener un nombre `AddressCollection`. Si el tipo de elemento es una interfaz, la "I" prefijo del elemento se puede omitir el tipo. Por lo tanto, una colección de <xref:System.IDisposable> elementos pueden llamarse `DisposableCollection`.  
   
- **✓ Considere la posibilidad de** utilizar el prefijo "ReadOnly" en los nombres de colecciones de solo lectura si una colección de escritura correspondiente podría agregarse o no existe en el marco de trabajo.  
+ **✓ CONSIDER** utilizar el prefijo "ReadOnly" en los nombres de colecciones de solo lectura si una colección de escritura correspondiente podría agregarse o no existe en el marco de trabajo.  
   
  Por ejemplo, debe llamarse una colección de solo lectura de cadenas `ReadOnlyStringCollection`.  
   

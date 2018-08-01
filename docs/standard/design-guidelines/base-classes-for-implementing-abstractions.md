@@ -24,11 +24,11 @@ En realidad, una clase se convierte en una clase base cuando otra clase se deriv
   
  Como se explicó anteriormente, las clases base pueden proporcionar ayuda inestimable para usuarios que necesitan para implementar abstracciones, pero al mismo tiempo pueden ser una responsabilidad importante. Agregan área expuesta y aumentar la profundidad de las jerarquías de herencia y por lo tanto conceptualmente complicar el marco de trabajo. Por lo tanto, las clases base deben usarse únicamente si proporcionan un valor significativo para los usuarios de la plataforma. Debería evitarse si proporcionan valor únicamente a los implementadores de framework, en el que la delegación caso a una implementación interna en lugar de la herencia de una clase base debe considerarse fuertemente.  
   
- **✓ Considere la posibilidad de** las clases base que hagan abstracta incluso si no contienen ningún miembro abstracto. Esto indica claramente a los usuarios que la clase está diseñada únicamente para que se puede heredar de.  
+ **✓ CONSIDER** las clases base que hagan abstracta incluso si no contienen ningún miembro abstracto. Esto indica claramente a los usuarios que la clase está diseñada únicamente para que se puede heredar de.  
   
- **Considere la posibilidad de ✓** colocar las clases base en un espacio de nombres independiente de los tipos de escenario admitirán. Por definición, las clases base están pensadas para escenarios de extensibilidad avanzadas y, por tanto, no son interesantes para la mayoría de los usuarios.  
+ **✓ CONSIDER** colocar las clases base en un espacio de nombres independiente de los tipos de escenario admitirán. Por definición, las clases base están pensadas para escenarios de extensibilidad avanzadas y, por tanto, no son interesantes para la mayoría de los usuarios.  
   
- **X evitar** nomenclatura de clases base con un sufijo "Base" si la clase está diseñada para su uso en las API públicas.  
+ **X AVOID** nomenclatura de clases base con un sufijo "Base" si la clase está diseñada para su uso en las API públicas.  
   
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   

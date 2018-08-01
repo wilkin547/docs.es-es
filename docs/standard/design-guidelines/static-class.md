@@ -24,7 +24,7 @@ Una clase estática se define como una clase que contiene sólo miembros estáti
   
  Las clases estáticas son una solución intermedia entre puro diseño orientado a objetos y la simplicidad. Se suelen usar para proporcionar accesos directos a otras operaciones (como <xref:System.IO.File?displayProperty=nameWithType>), los propietarios de los métodos de extensión, o la funcionalidad para el que se no justificado un contenedor completa orientada a objetos (como <xref:System.Environment?displayProperty=nameWithType>).  
   
- **✓ HACER** usan clases estáticas con moderación.  
+ **✓ DO** usan clases estáticas con moderación.  
   
  Las clases estáticas deben utilizarse únicamente como clases auxiliares para el núcleo orientada a objetos de framework.  
   
@@ -32,7 +32,7 @@ Una clase estática se define como una clase que contiene sólo miembros estáti
   
  **X DO NOT** declarar o invalidar los miembros de instancia en clases estáticas.  
   
- **✓ HACER** declarar las clases estáticas como sellada, abstract y agregue un constructor de instancia privada, si su lenguaje de programación no tiene compatibilidad integrada para las clases estáticas.  
+ **✓ DO** declarar las clases estáticas como sellada, abstract y agregue un constructor de instancia privada, si su lenguaje de programación no tiene compatibilidad integrada para las clases estáticas.  
   
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   

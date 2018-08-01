@@ -27,11 +27,11 @@ El principio de encapsulación es uno de los conceptos más importantes en el di
   
  Debe proporcionar propiedades para tener acceso a campos en lugar de hacerlos público o protegido.  
   
- **✓ HACER** usar los campos constantes para las constantes que no cambia nunca.  
+ **✓ DO** usar los campos constantes para las constantes que no cambia nunca.  
   
  El compilador lo grabe los valores de los campos const directamente en el código de llamada. Por lo tanto, los valores constantes nunca se pueden cambiar sin el riesgo de interrumpir la compatibilidad.  
   
- **✓ HACER** usar estáticos públicos `readonly` campos para instancias de objetos predefinidas.  
+ **✓ DO** usar estáticos públicos `readonly` campos para instancias de objetos predefinidas.  
   
  Si no hay instancias predefinidas del tipo, declárelos como public campos estáticos de sólo lectura del tipo en Sí.  
   

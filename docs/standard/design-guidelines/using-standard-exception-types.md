@@ -25,22 +25,22 @@ Esta sección describe las excepciones estándar que proporciona el marco de tra
   
  **X DO NOT** catch `System.Exception` o `System.SystemException` en el código de framework, a menos que vaya a producir.  
   
- **X evitar** detectar `System.Exception` o `System.SystemException`, excepto en los controladores de excepciones de nivel superior.  
+ **X AVOID** detectar `System.Exception` o `System.SystemException`, excepto en los controladores de excepciones de nivel superior.  
   
 ## <a name="applicationexception"></a>ApplicationException  
  **X DO NOT** throw o derivar de <xref:System.ApplicationException>.  
   
 ## <a name="invalidoperationexception"></a>InvalidOperationException  
- **✓ HACER** producir una <xref:System.InvalidOperationException> si el objeto está en un estado inadecuado.  
+ **✓ DO** producir una <xref:System.InvalidOperationException> si el objeto está en un estado inadecuado.  
   
 ## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException, ArgumentNullException y ArgumentOutOfRangeException  
- **✓ HACER** throw <xref:System.ArgumentException> o uno de sus subtipos si se pasan argumentos incorrectos a un miembro. Preferir el tipo de excepción más derivado, si procede.  
+ **✓ DO** throw <xref:System.ArgumentException> o uno de sus subtipos si se pasan argumentos incorrectos a un miembro. Preferir el tipo de excepción más derivado, si procede.  
   
- **✓ HACER** establecer el `ParamName` propiedad al producir una de las subclases de `ArgumentException`.  
+ **✓ DO** establecer el `ParamName` propiedad al producir una de las subclases de `ArgumentException`.  
   
  Esta propiedad representa el nombre del parámetro que provocó la excepción. Tenga en cuenta que la propiedad puede establecerse utilizando una de las sobrecargas del constructor.  
   
- **✓ HACER** usar `value` para el nombre del parámetro de valor implícito de establecedores de propiedades.  
+ **✓ DO** usar `value` para el nombre del parámetro de valor implícito de establecedores de propiedades.  
   
 ## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>Excepción NullReferenceException, IndexOutOfRangeException y AccessViolationException  
  **X DO NOT** permitir que las API invocables públicamente explícita o implícitamente produzca <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, o <xref:System.IndexOutOfRangeException>. Estas excepciones son reservadas y producida por el motor de ejecución y en que la mayoría de casos indican un error.  

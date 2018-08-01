@@ -34,13 +34,13 @@ public static class Console {
   
  La sobrecarga es una de las técnicas más importantes para mejorar la facilidad de uso, productividad y mejorar la legibilidad de bibliotecas reutilizables. Sobrecarga en el número de parámetros permite proporcionar versiones más sencillas de métodos y constructores. Sobrecarga en el tipo de parámetro permite usar el mismo nombre de miembro para realizar operaciones idénticas en un conjunto seleccionado de diferentes tipos de miembros.  
   
- **✓ HACER** intenta utilizar nombres de parámetros descriptivos para indicar el valor predeterminado utilizado por las sobrecargas más cortas.  
+ **✓ DO** intenta utilizar nombres de parámetros descriptivos para indicar el valor predeterminado utilizado por las sobrecargas más cortas.  
   
- **X evitar** variar arbitrariamente los nombres de parámetro en las sobrecargas. Si un parámetro de una sobrecarga representa la misma entrada como un parámetro de otra sobrecarga, los parámetros deben tener el mismo nombre.  
+ **X AVOID** variar arbitrariamente los nombres de parámetro en las sobrecargas. Si un parámetro de una sobrecarga representa la misma entrada como un parámetro de otra sobrecarga, los parámetros deben tener el mismo nombre.  
   
- **X evitar** incoherente en el orden de los parámetros en sobrecarga los miembros. Parámetros con el mismo nombre deberían aparecer en la misma posición en todas las sobrecargas.  
+ **X AVOID** incoherente en el orden de los parámetros en sobrecarga los miembros. Parámetros con el mismo nombre deberían aparecer en la misma posición en todas las sobrecargas.  
   
- **✓ HACER** realizar virtual sólo la sobrecarga más larga (si se requiere la extensibilidad). Las sobrecargas más cortas simplemente deben llamar a través de una sobrecarga mayor.  
+ **✓ DO** realizar virtual sólo la sobrecarga más larga (si se requiere la extensibilidad). Las sobrecargas más cortas simplemente deben llamar a través de una sobrecarga mayor.  
   
  **X DO NOT** usar `ref` o `out` modificadores para sobrecargar los miembros.  
   
@@ -48,9 +48,9 @@ public static class Console {
   
  **X DO NOT** tienen sobrecargas con parámetros en la misma posición que él y los tipos similares pero con una semántica diferente.  
   
- **✓ HACER** permitir `null` que se pasarán para los argumentos opcionales.  
+ **✓ DO** permitir `null` que se pasarán para los argumentos opcionales.  
   
- **✓ HACER** usar miembro sobrecarga en lugar de definir miembros con argumentos predeterminados.  
+ **✓ DO** usar miembro sobrecarga en lugar de definir miembros con argumentos predeterminados.  
   
  Argumentos predeterminados no son compatibles con CLS.  
   

@@ -43,9 +43,9 @@ Las directrices descritas en este capítulo disponer un método sencillo para el
  `ioStream`  
  `htmlTag`  
   
- **✓ HACER** usar Pascal para todos los nombres de miembro, el tipo y el espacio de nombres públicos que consta de varias palabras.  
+ **✓ DO** usar Pascal para todos los nombres de miembro, el tipo y el espacio de nombres públicos que consta de varias palabras.  
   
- **✓ HACER** utilice seguir el estilo Camel para los nombres de parámetro.  
+ **✓ DO** utilice seguir el estilo Camel para los nombres de parámetro.  
   
  En la tabla siguiente describe las reglas de mayúsculas y minúsculas para diferentes tipos de identificadores.  
   

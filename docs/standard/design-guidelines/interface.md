@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573044"
 ---
 # <a name="interface-design"></a>Diseño de interfaces
 Aunque la mayoría de las API se modela mejor mediante las clases y structs, hay casos en los que interfaces son más adecuadas o son la única opción.  
@@ -22,19 +23,19 @@ Aunque la mayoría de las API se modela mejor mediante las clases y structs, hay
   
  Es la situación en que definir una interfaz es adecuada en la creación de una interfaz común que puede ser compatible con varios tipos, incluidos algunos tipos de valor. Tipos de valor no pueden heredar de tipos distintos de <xref:System.ValueType>, pero pueden implementar interfaces, por lo que usar una interfaz es la única opción para proporcionar un tipo base común.  
   
- **✓ HACER** defina una interfaz si necesita algunas API comunes que deben admitir un conjunto de tipos que incluye los tipos de valor.  
+ **✓ DO** defina una interfaz si necesita algunas API comunes que deben admitir un conjunto de tipos que incluye los tipos de valor.  
   
- **✓ Considere la posibilidad de** define una interfaz si necesita admitir su funcionalidad en tipos que ya heredan de algún otro tipo.  
+ **✓ CONSIDER** define una interfaz si necesita admitir su funcionalidad en tipos que ya heredan de algún otro tipo.  
   
- **X evitar** mediante las interfaces de marcador (interfaces sin miembros).  
+ **X AVOID** mediante las interfaces de marcador (interfaces sin miembros).  
   
  Si necesita marcar una clase como si tuviera una característica específica (marcador), por lo general, utilice un atributo personalizado en lugar de una interfaz.  
   
- **✓ HACER** proporcionar al menos un tipo que es una implementación de una interfaz.  
+ **✓ DO** proporcionar al menos un tipo que es una implementación de una interfaz.  
   
  Haciendo esto ayuda a validar el diseño de la interfaz. Por ejemplo, <xref:System.Collections.Generic.List%601> es una implementación de la <xref:System.Collections.Generic.IList%601> interfaz.  
   
- **✓ HACER** proporcionan al menos una API que consuma cada interfaz definida (un método que toma la interfaz como un parámetro o una propiedad con tipo como la interfaz).  
+ **✓ DO** proporcionan al menos una API que consuma cada interfaz definida (un método que toma la interfaz como un parámetro o una propiedad con tipo como la interfaz).  
   
  Haciendo esto ayuda a validar el diseño de la interfaz. Por ejemplo, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> consume el <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> interfaz.  
   

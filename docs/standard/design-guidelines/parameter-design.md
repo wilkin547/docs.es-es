@@ -21,7 +21,7 @@ ms.locfileid: "33578279"
 # <a name="parameter-design"></a>Diseño de parámetros
 Esta sección proporciona instrucciones generales sobre el diseño de parámetro, incluidas las secciones con instrucciones para la comprobación de argumentos. Además, debe hacer referencia a las directrices descritas en [parámetros nomenclatura](../../../docs/standard/design-guidelines/naming-parameters.md).  
   
- **✓ HACER** usar el tipo de parámetro menos derivado que proporciona la funcionalidad requerida por el miembro.  
+ **✓ DO** usar el tipo de parámetro menos derivado que proporciona la funcionalidad requerida por el miembro.  
   
  Por ejemplo, imagine que desea diseñar un método que enumera una colección e imprime cada elemento en la consola. Este tipo de método debe tomar <xref:System.Collections.IEnumerable> como el parámetro, no <xref:System.Collections.ArrayList> o <xref:System.Collections.IList>, por ejemplo.  
   
@@ -33,37 +33,37 @@ Esta sección proporciona instrucciones generales sobre el diseño de parámetro
   
  Los punteros y matrices multidimensionales son relativamente difíciles de usar correctamente. En casi todos casos, se pueden volver a diseñar las API para evitar realizar estos tipos como parámetros.  
   
- **✓ HACER** colocar todos `out` seguir todos los valores de parámetros y `ref` parámetros (excluyendo matrices de parámetros), incluso si se produce una incoherencia en el orden entre las sobrecargas de los parámetros (consulte [miembro Sobrecarga](../../../docs/standard/design-guidelines/member-overloading.md)).  
+ **✓ DO** colocar todos `out` seguir todos los valores de parámetros y `ref` parámetros (excluyendo matrices de parámetros), incluso si se produce una incoherencia en el orden entre las sobrecargas de los parámetros (consulte [miembro Sobrecarga](../../../docs/standard/design-guidelines/member-overloading.md)).  
   
  El `out` parámetros pueden verse como valores devueltos adicionales y agruparlos juntos hace más fácil de entender que la firma del método.  
   
- **✓ HACER** sea coherente en los nombres de parámetros al reemplazar los miembros o implementar miembros de interfaz.  
+ **✓ DO** sea coherente en los nombres de parámetros al reemplazar los miembros o implementar miembros de interfaz.  
   
  Esto comunica mejor la relación entre los métodos.  
   
 ### <a name="choosing-between-enum-and-boolean-parameters"></a>Elegir entre Enum y parámetros booleanos  
- **✓ HACER** utilice enumeraciones si un miembro podría tener dos o más parámetros booleanos.  
+ **✓ DO** utilice enumeraciones si un miembro podría tener dos o más parámetros booleanos.  
   
  **X DO NOT** utilice valores booleanos a menos que esté completamente seguro de que nunca será una necesidad de más de dos valores.  
   
  Las enumeraciones proporcionan algo de espacio para futuras además de valores, pero tenga en cuenta todas las implicaciones de agregar valores a las enumeraciones, que se describen en [Enum diseño](../../../docs/standard/design-guidelines/enum.md).  
   
- **✓ Considere la posibilidad de** con valores booleanos para parámetros de constructor que son valores realmente de dos Estados y simplemente se utilizan para inicializar propiedades booleanas.  
+ **✓ CONSIDER** con valores booleanos para parámetros de constructor que son valores realmente de dos Estados y simplemente se utilizan para inicializar propiedades booleanas.  
   
 ### <a name="validating-arguments"></a>Validación de argumentos  
- **✓ HACER** validar los argumentos pasados a miembros públicos, protegidos o implementados explícitamente. Iniciar <xref:System.ArgumentException?displayProperty=nameWithType>, o una de sus subclases, si se produce un error en la validación.  
+ **✓ DO** validar los argumentos pasados a miembros públicos, protegidos o implementados explícitamente. Iniciar <xref:System.ArgumentException?displayProperty=nameWithType>, o una de sus subclases, si se produce un error en la validación.  
   
  Tenga en cuenta que la validación real no tiene que producirse necesariamente en el propio miembro público o protegido. Se puede producir en un nivel inferior de algunos rutina privado o interno. La cuestión principal es que toda la superficie que se expone a los usuarios finales las comprobaciones de los argumentos.  
   
- **✓ HACER** throw <xref:System.ArgumentNullException> si se pasa un argumento nulo y el miembro no es compatible con los argumentos null.  
+ **✓ DO** throw <xref:System.ArgumentNullException> si se pasa un argumento nulo y el miembro no es compatible con los argumentos null.  
   
- **✓ HACER** validar los parámetros enum.  
+ **✓ DO** validar los parámetros enum.  
   
  No se da por supuesto argumentos enum estará en el intervalo definido por la enumeración. CLR permite convertir un valor entero a un valor de enumeración, incluso si el valor no está definido en la enumeración.  
   
  **X DO NOT** usar <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> para intervalo de enumeración comprueba.  
   
- **✓ HACER** tenga en cuenta que los argumentos mutables pueden haber cambiado después de que se validaron.  
+ **✓ DO** tenga en cuenta que los argumentos mutables pueden haber cambiado después de que se validaron.  
   
  Si el miembro es importante para la seguridad, se recomienda realizar una copia y, a continuación, validar y procesar el argumento.  
   
@@ -76,7 +76,7 @@ Esta sección proporciona instrucciones generales sobre el diseño de parámetro
   
  `Out` parámetros son similares a `ref` parámetros, con algunas pequeñas diferencias. Inicialmente se considera que el parámetro sin asignar y no se puede leer en el cuerpo del miembro antes de que se asigne un valor. Además, el parámetro debe asignarse un valor antes de que el miembro devuelve.  
   
- **X evitar** con `out` o `ref` parámetros.  
+ **X AVOID** con `out` o `ref` parámetros.  
   
  Usar `out` o `ref` parámetros es necesario tener experiencia con punteros, saber la diferencia entre los tipos de valor y tipos de referencia y controlar métodos con varios valores devueltos. Además, la diferencia entre `out` y `ref` parámetros no se entiende ampliamente. Arquitectos de Framework diseñar para una audiencia general no deben esperar que los usuarios dominen el uso `out` o `ref` parámetros.  
   
@@ -111,9 +111,9 @@ public class String {
   
  Tenga en cuenta que se puede agregar la palabra clave params solo para el último parámetro en la lista de parámetros.  
   
- **✓ Considere la posibilidad de** agregar la palabra clave params a los parámetros de matriz si espera que los usuarios finales para pasar matrices con un número pequeño de elementos. Si se espera que una gran cantidad de elementos se pasará en común escenarios, los usuarios probablemente no pasará estos elementos insertados todos modos y, por lo que la palabra clave params no es necesaria.  
+ **✓ CONSIDER** agregar la palabra clave params a los parámetros de matriz si espera que los usuarios finales para pasar matrices con un número pequeño de elementos. Si se espera que una gran cantidad de elementos se pasará en común escenarios, los usuarios probablemente no pasará estos elementos insertados todos modos y, por lo que la palabra clave params no es necesaria.  
   
- **X evitar** usar matrices de parámetros si el llamador casi siempre tendrá la entrada ya en una matriz.  
+ **X AVOID** usar matrices de parámetros si el llamador casi siempre tendrá la entrada ya en una matriz.  
   
  Por ejemplo, los miembros con parámetros de matriz de bytes casi nunca se denominaría pasando bytes individuales. Por esta razón, los parámetros de matriz de bytes en .NET Framework no utilizan la palabra clave params.  
   
@@ -121,19 +121,19 @@ public class String {
   
  Por el hecho de que muchos compiladores convierten los argumentos para el miembro en una matriz temporal en el sitio de llamada, la matriz puede ser un objeto temporal y, por lo tanto, se perderán las modificaciones a la matriz.  
   
- **✓ Considere la posibilidad de** mediante la palabra clave params en una sobrecarga simple, aun cuando una sobrecarga más compleja no pudo usar.  
+ **✓ CONSIDER** mediante la palabra clave params en una sobrecarga simple, aun cuando una sobrecarga más compleja no pudo usar.  
   
  Pregúntese lo siguiente: si los usuarios valoraría disponer de la matriz de parámetros en una sobrecarga incluso si no estaba en todas las sobrecargas.  
   
- **✓ HACER** intenta reorganizar los parámetros para que sea posible utilizar la palabra clave params.  
+ **✓ DO** intenta reorganizar los parámetros para que sea posible utilizar la palabra clave params.  
   
- **✓ Considere la posibilidad de** proporcionar sobrecargas especiales y las rutas de código para las llamadas con un número pequeño de argumentos en las API de rendimiento es sumamente importante.  
+ **✓ CONSIDER** proporcionar sobrecargas especiales y las rutas de código para las llamadas con un número pequeño de argumentos en las API de rendimiento es sumamente importante.  
   
  Esto permite evitar la creación de objetos de matriz cuando se llama a la API con un número pequeño de argumentos. Forman los nombres de los parámetros mediante la obtención de una forma singular del parámetro de matriz y agregar un sufijo numérico.  
   
  Solo debe hacer esto si va a la ruta de acceso de código completo de casos especiales, no basta con crear una matriz y llamar al método más general.  
   
- **✓ HACER** tenga en cuenta que null podría pasarse como un argumento de matriz de parámetros.  
+ **✓ DO** tenga en cuenta que null podría pasarse como un argumento de matriz de parámetros.  
   
  Debe validar que la matriz no es null antes del procesamiento.  
   
@@ -144,11 +144,11 @@ public class String {
 ### <a name="pointer-parameters"></a>Parámetros de puntero  
  En general, los punteros no deben aparecer en el área expuesta público de un marco de código administrado bien diseñada. La mayoría de los casos, se deben encapsular punteros. Sin embargo, en algunos casos, punteros son necesarios por motivos de interoperabilidad, y el uso de punteros en estos casos es adecuado.  
   
- **✓ HACER** proporcionan una alternativa para cualquier miembro que tome un argumento de puntero, como punteros no son conformes a CLS.  
+ **✓ DO** proporcionan una alternativa para cualquier miembro que tome un argumento de puntero, como punteros no son conformes a CLS.  
   
- **X evitar** realizar comprobaciones de los argumentos de puntero de argumento costoso.  
+ **X AVOID** realizar comprobaciones de los argumentos de puntero de argumento costoso.  
   
- **✓ HACER** siga las convenciones comunes relacionadas con el puntero al diseñar los miembros con punteros.  
+ **✓ DO** siga las convenciones comunes relacionadas con el puntero al diseñar los miembros con punteros.  
   
  Por ejemplo, no hay ninguna necesidad de pasar el índice de inicio, porque aritmética de puntero simple puede usarse para lograr el mismo resultado.  
   

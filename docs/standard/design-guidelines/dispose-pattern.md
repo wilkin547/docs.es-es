@@ -41,15 +41,15 @@ Todos los programas adquieren uno o más recursos del sistema, como la memoria, 
   
  La motivación principal para el patrón es reducir la complejidad de la implementación de la <xref:System.Object.Finalize%2A> y <xref:System.IDisposable.Dispose%2A> métodos. La complejidad proviene del hecho de que los métodos comparten algunos, pero no todas las rutas de acceso de código (las diferencias se describen más adelante en el capítulo). Además, existen motivos históricos para algunos de los elementos del modelo relacionados con la evolución de la compatibilidad de idioma para la administración de recursos determinista.  
   
- **✓ HACER** implementar el patrón de Dispose básico en tipos que contiene instancias de los tipos descartables. Consulte la [patrón de Dispose básico](#basic_pattern) sección para obtener más información sobre el patrón básico.  
+ **✓ DO** implementar el patrón de Dispose básico en tipos que contiene instancias de los tipos descartables. Consulte la [patrón de Dispose básico](#basic_pattern) sección para obtener más información sobre el patrón básico.  
   
  Si un tipo es responsable de la duración de otros objetos descartables, los desarrolladores necesitan una manera para deshacerse de ellos, demasiado. Uso del contenedor `Dispose` método es una manera cómoda para que esto sea posible.  
   
- **✓ HACER** implementar el patrón Dispose básico y se proporciona un finalizador en tipos que contiene recursos que deben ser liberados explícitamente y que no tienen los finalizadores.  
+ **✓ DO** implementar el patrón Dispose básico y se proporciona un finalizador en tipos que contiene recursos que deben ser liberados explícitamente y que no tienen los finalizadores.  
   
  Por ejemplo, el modelo debe implementarse en tipos de almacenamiento de los búferes de memoria no administrada. El [tipos susceptibles de finalización](#finalizable_types) sección describe directrices relacionadas con la implementación de los finalizadores.  
   
- **✓ Considere la posibilidad de** implementar el patrón de Dispose básicas en las clases que ellos mismos no mantenga los recursos no administrados o los objetos descartables pero están probables que tienen subtipos que realizar.  
+ **✓ CONSIDER** implementar el patrón de Dispose básicas en las clases que ellos mismos no mantenga los recursos no administrados o los objetos descartables pero están probables que tienen subtipos que realizar.  
   
  Un buen ejemplo de esto es la <xref:System.IO.Stream?displayProperty=nameWithType> clase. Aunque es una clase base abstracta que no contiene todos los recursos, no de la mayoría de sus subclases y por este motivo, implementa este patrón.  
   
@@ -85,7 +85,7 @@ public class DisposableResourceHolder : IDisposable {
   
  Además, esta sección se aplica a las clases con una base de que ya no implementan el patrón Dispose. Si se hereda de una clase que ya implementa el patrón, invalide el `Dispose(bool)` método para proporcionar lógica de limpieza de recursos adicionales.  
   
- **✓ HACER** declarar un `protected virtual void Dispose(bool disposing)` relacionado de método para centralizar toda la lógica para liberar recursos no administrados.  
+ **✓ DO** declarar un `protected virtual void Dispose(bool disposing)` relacionado de método para centralizar toda la lógica para liberar recursos no administrados.  
   
  Todos los recursos deben limpiarse en este método. Se llama al método desde el finalizador de ambos y `IDisposable.Dispose` método. El parámetro será false si se va a invocar desde dentro de un finalizador. Se debe usar para asegurarse de que cualquier código que se ejecuta durante la finalización no se tiene acceso a otros objetos susceptibles de finalización. Detalles de la implementación de los finalizadores se describen en la sección siguiente.  
   
@@ -97,7 +97,7 @@ protected virtual void Dispose(bool disposing) {
 }  
 ```  
   
- **✓ HACER** implementar la `IDisposable` interfaz llamando simplemente `Dispose(true)` seguido de `GC.SuppressFinalize(this)`.  
+ **✓ DO** implementar la `IDisposable` interfaz llamando simplemente `Dispose(true)` seguido de `GC.SuppressFinalize(this)`.  
   
  La llamada a `SuppressFinalize` solo deberían producirse si `Dispose(true)` se ejecuta correctamente.  
   
@@ -130,7 +130,7 @@ public class DisposableResourceHolder : IDisposable {
   
  `Dispose` debe considerarse una palabra reservada para ayudar a codificar este patrón y evitar la confusión entre los implementadores y los usuarios, los compiladores. Algunos lenguajes pueden optar por implementar automáticamente este patrón de determinados tipos.  
   
- **✓ HACER** permitir la `Dispose(bool)` método al que llamar más de una vez. El método puede optar por no hacer nada después de la primera llamada.  
+ **✓ DO** permitir la `Dispose(bool)` método al que llamar más de una vez. El método puede optar por no hacer nada después de la primera llamada.  
   
 ```csharp
 public class DisposableResourceHolder : IDisposable {  
@@ -146,13 +146,13 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **X evitar** producir una excepción desde `Dispose(bool)` excepto en situaciones críticas que se ha dañado el proceso que lo contiene (pérdidas, un estado compartido incoherente, etcetera).  
+ **X AVOID** producir una excepción desde `Dispose(bool)` excepto en situaciones críticas que se ha dañado el proceso que lo contiene (pérdidas, un estado compartido incoherente, etcetera).  
   
  Los usuarios esperan que una llamada a `Dispose` no generará una excepción.  
   
  Si `Dispose` podría producir una excepción, no se ejecutará más lógica de limpieza del bloque finally. Para resolver este problema, el usuario necesitaría ajustar todas las llamadas a `Dispose` (en el bloque finally!) en un bloque try, lo que conduce a controladores de limpieza muy complejos. Si ejecuta un `Dispose(bool disposing)` método, nunca inician una excepción si la eliminación es false. Si lo hace, se terminará el proceso si la ejecución dentro de un contexto de finalizador.  
   
- **✓ HACER** producir una <xref:System.ObjectDisposedException> de cualquier miembro que no se puede utilizar una vez que se ha eliminado el objeto.  
+ **✓ DO** producir una <xref:System.ObjectDisposedException> de cualquier miembro que no se puede utilizar una vez que se ha eliminado el objeto.  
   
 ```csharp
 public class DisposableResourceHolder : IDisposable {  
@@ -173,7 +173,7 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **✓ Considere la posibilidad de** proporciona el método `Close()`, además el `Dispose()`, si es cerrar terminología estándar en el área.  
+ **✓ CONSIDER** proporciona el método `Close()`, además el `Dispose()`, si es cerrar terminología estándar en el área.  
   
  Al hacerlo, es importante que realice la `Close` idéntico de la implementación `Dispose` y considere implementar la `IDisposable.Dispose` método explícitamente.  
   
@@ -230,7 +230,7 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```  
   
- **X evitar** realicen tipos susceptibles de finalización.  
+ **X AVOID** realicen tipos susceptibles de finalización.  
   
  Tenga en cuenta todos los casos en que cree que es necesario un finalizador. Hay un número real los costos asociados con instancias con los finalizadores, desde la perspectiva de complejidad de un código y el rendimiento. Prefiere con contenedores de recursos como <xref:System.Runtime.InteropServices.SafeHandle> para encapsular los recursos no administrados que siempre que sea posible, en cuyo caso un finalizador se convierte en innecesario porque el contenedor es responsable de su propia limpieza de recursos.  
   
@@ -238,7 +238,7 @@ public class ComplexResourceHolder : IDisposable {
   
  Solo los tipos de referencia realmente obtengan finalizados CLR y, por tanto, se pasará por alto cualquier intento para colocar un finalizador en un tipo de valor. Los compiladores de C++ y C# aplican esta regla.  
   
- **✓ HACER** que un tipo susceptibles de finalización si el tipo es responsable de liberar un recurso no administrado que no tiene su propio finalizador.  
+ **✓ DO** que un tipo susceptibles de finalización si el tipo es responsable de liberar un recurso no administrado que no tiene su propio finalizador.  
   
  Al implementar el finalizador, basta con llamar a `Dispose(false)` y coloque toda la lógica de limpieza de recursos dentro de la `Dispose(bool disposing)` método.  
   
@@ -255,7 +255,7 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```  
   
- **✓ HACER** implementar el patrón de Dispose básico en todos los tipos susceptibles de finalización.  
+ **✓ DO** implementar el patrón de Dispose básico en todos los tipos susceptibles de finalización.  
   
  Esto proporciona a los usuarios del tipo de medio para realizar explícitamente una limpieza determinista de los mismos recursos que es responsable el finalizador.  
   
@@ -265,7 +265,7 @@ public class ComplexResourceHolder : IDisposable {
   
  Además, tenga en cuenta que estos objetos almacenados en variables estáticas se se recopilan en ciertos puntos durante una descarga del dominio de aplicación o al salir del proceso. Obtener acceso a una variable estática que hace referencia a un objeto susceptible de finalización (o llamar a un método estático que puedan usar los valores almacenados en variables estáticas) podría no ser seguro if <xref:System.Environment.HasShutdownStarted%2A?displayProperty=nameWithType> devuelve true.  
   
- **✓ HACER** realizar su `Finalize` método protegido.  
+ **✓ DO** realizar su `Finalize` método protegido.  
   
  Los desarrolladores de C#, C++ y VB.NET no tiene que preocuparse sobre esto, porque los compiladores de ayudan a aplicar esta directriz.  
   
@@ -273,7 +273,7 @@ public class ComplexResourceHolder : IDisposable {
   
  Si se produce una excepción de un finalizador, el CLR se apagará de todo el proceso (a partir de .NET Framework versión 2.0), impide que otros finalizadores ejecutar y recursos de que se liberan de una manera controlada.  
   
- **✓ Considere la posibilidad de** crear y usar un objeto susceptibles de finalización crítico (un tipo con una jerarquía de tipos que contiene <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) para situaciones en que un finalizador absolutamente debe ejecutar incluso frente a la fuerza del dominio de aplicación forzada y subprocesos se anula.  
+ **✓ CONSIDER** crear y usar un objeto susceptibles de finalización crítico (un tipo con una jerarquía de tipos que contiene <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) para situaciones en que un finalizador absolutamente debe ejecutar incluso frente a la fuerza del dominio de aplicación forzada y subprocesos se anula.  
   
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   

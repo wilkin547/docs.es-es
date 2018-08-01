@@ -40,7 +40,7 @@ Una de las características de marcos de trabajo orientado a objetos es que los 
   
  Por definición, no se puede heredar de tipos sealed de. Esto significa que no se puede llamar a miembros protegidos en tipos sealed, y no se puede invalidar métodos virtuales en tipos sealed.  
   
- **Considere la posibilidad de ✓** sellar los miembros reemplazados.  
+ **✓ CONSIDER** sellar los miembros reemplazados.  
   
  Problemas que pueden derivarse de introducción a los miembros virtuales (se describe en [miembros virtuales](../../../docs/standard/design-guidelines/virtual-members.md)) se aplican a invalidaciones, aunque a ligeramente menor grado. Sellar una invalidación intercepta estos problemas desde ese punto en la jerarquía de herencia.  
   

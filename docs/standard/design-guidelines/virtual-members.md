@@ -29,9 +29,9 @@ Pueden invalidar los miembros virtuales, lo que cambiar el comportamiento de la 
   
  Los miembros virtuales son menos tolerante a las modificaciones en cuanto a los cambios que pueden realizarse en ellos sin interrumpir la compatibilidad. Además, son más lentas que los miembros no virtuales, principalmente porque no se alinean las llamadas a los miembros virtuales.  
   
- **✓ Considere la posibilidad de** limitar la extensibilidad para solo lo que sea absolutamente necesario.  
+ **✓ CONSIDER** limitar la extensibilidad para solo lo que sea absolutamente necesario.  
   
- **✓ HACER** preferir accesibilidad protegida accesibilidad pública para los miembros virtuales. Los miembros públicos deberían proporcionar extensibilidad (si es necesario) mediante una llamada a un miembro virtual protegida.  
+ **✓ DO** preferir accesibilidad protegida accesibilidad pública para los miembros virtuales. Los miembros públicos deberían proporcionar extensibilidad (si es necesario) mediante una llamada a un miembro virtual protegida.  
   
  Los miembros públicos de una clase deben proporcionar el conjunto adecuado de funcionalidad para los consumidores directa de esa clase. Los miembros virtuales están diseñados para invalidarse en subclases y accesibilidad protegida es una excelente manera de definir el ámbito de todos los puntos de extensibilidad virtual a dónde pueden utilizarse.  
   

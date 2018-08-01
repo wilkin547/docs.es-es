@@ -24,13 +24,13 @@ ms.locfileid: "33570574"
   
  Los constructores deberían ser públicos sólo si los usuarios deberán crear instancias del tipo. Dado que no se puede crear instancias de un tipo abstracto, un tipo abstracto con un constructor público es incorrectamente se ha diseñado y puede inducir a error a los usuarios.  
   
- **✓ HACER** definir un constructor interno o protegidos en las clases abstractas.  
+ **✓ DO** definir un constructor interno o protegidos en las clases abstractas.  
   
  Un constructor protegido es más común y simplemente permite que la clase base para realizar su propia inicialización cuando se crean subtipos.  
   
  Un constructor interno puede utilizarse para limitar las implementaciones concretas de la clase abstracta para el ensamblado que define la clase.  
   
- **✓ HACER** proporcionar al menos un tipo concreto que herede de cada clase abstracta que realiza el envío.  
+ **✓ DO** proporcionar al menos un tipo concreto que herede de cada clase abstracta que realiza el envío.  
   
  Haciendo esto ayuda a validar el diseño de la clase abstracta. Por ejemplo, <xref:System.IO.FileStream?displayProperty=nameWithType> es una implementación de la <xref:System.IO.Stream?displayProperty=nameWithType> clase abstracta.  
   

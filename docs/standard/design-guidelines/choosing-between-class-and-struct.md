@@ -36,9 +36,9 @@ Una de las decisiones de diseño básico que se enfrenta a cada diseñador frame
   
  Como regla general, la mayoría de los tipos en un marco de trabajo debe ser clases. Sin embargo, existen algunas situaciones en que las características de un tipo de valor que sea más adecuado usar structs.  
   
- **✓ Considere la posibilidad de** definir una estructura en lugar de una clase si instancias del tipo son pequeñas y normalmente corta duración o suelen estar incrustadas en otros objetos.  
+ **✓ CONSIDER** definir una estructura en lugar de una clase si instancias del tipo son pequeñas y normalmente corta duración o suelen estar incrustadas en otros objetos.  
   
- **X evitar** definir un struct a menos que el tipo tenga todas las características siguientes:  
+ **X AVOID** definir un struct a menos que el tipo tenga todas las características siguientes:  
   
 -   Representa lógicamente un valor único, de forma similar a los tipos primitivos (`int`, `double`, etcetera.).  
   

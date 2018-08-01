@@ -45,7 +45,7 @@ if(!numbers.IsReadOnly){
   
  El miembro que se usa para probar una condición, que en nuestro ejemplo es la propiedad `IsReadOnly`, se conoce como la herramienta de comprobación. El miembro que se usa para realizar una operación potencialmente produce, la `Add` método en nuestro ejemplo, se conoce como la acción.  
   
- **✓ Considere la posibilidad de** el patrón de acción de la herramienta de comprobación para los miembros que pueden producir excepciones en común escenarios para evitar problemas de rendimiento relacionados con las excepciones.  
+ **✓ CONSIDER** el patrón de acción de la herramienta de comprobación para los miembros que pueden producir excepciones en común escenarios para evitar problemas de rendimiento relacionados con las excepciones.  
   
 ## <a name="try-parse-pattern"></a>Patrón de try-análisis  
  Para las API de rendimiento es sumamente importante, debe utilizarse un patrón aun más rápido que el patrón de acción de la herramienta de comprobación se describe en la sección anterior. El patrón de las llamadas para ajustar el nombre del miembro para realizar una prueba bien definida caso una parte de la semántica de miembro. Por ejemplo, <xref:System.DateTime> define un <xref:System.DateTime.Parse%2A> método que produce una excepción si el análisis de una cadena se produce un error. También define un correspondiente <xref:System.DateTime.TryParse%2A> método que intenta analizar, pero devuelve false si el análisis es incorrecto y devuelve el resultado de una correcta con análisis un `out` parámetro.  
@@ -63,11 +63,11 @@ public struct DateTime {
   
  Al utilizar este patrón, es importante definir la funcionalidad de try en términos estrictos. Si se produce un error en el miembro por cualquier razón distinta a la instrucción try bien definida, el miembro todavía debe producir una excepción correspondiente.  
   
- **✓ Considere la posibilidad de** el patrón de Try-análisis para los miembros que pueden producir excepciones en común escenarios para evitar problemas de rendimiento relacionados con las excepciones.  
+ **✓ CONSIDER** el patrón de Try-análisis para los miembros que pueden producir excepciones en común escenarios para evitar problemas de rendimiento relacionados con las excepciones.  
   
- **✓ HACER** usar el prefijo "Try" y un valor booleano de tipo de valor devuelto para métodos de implementar este patrón.  
+ **✓ DO** usar el prefijo "Try" y un valor booleano de tipo de valor devuelto para métodos de implementar este patrón.  
   
- **✓ HACER** proporcionan un miembro que inicie excepciones para cada miembro utilizando el modelo de análisis de Try.  
+ **✓ DO** proporcionan un miembro que inicie excepciones para cada miembro utilizando el modelo de análisis de Try.  
   
  *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
