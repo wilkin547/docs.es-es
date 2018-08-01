@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02f88faab6ddbaa026e73ad61bc63fbe8e5e00ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d689aeb91ad79b776c3b93c1809ec46947ea60b
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591333"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874792"
 ---
 # <a name="threading-objects-and-features"></a>Objetos y características de subprocesos
 .NET Framework proporciona varios objetos que le ayudarán a crear y administrar aplicaciones multiproceso. Los subprocesos administrados se representan mediante la clase <xref:System.Threading.Thread>. La clase <xref:System.Threading.ThreadPool> permite crear y administrar fácilmente tareas multiproceso en segundo plano. La clase <xref:System.ComponentModel.BackgroundWorker> hace lo mismo para las tareas que interactúan con la interfaz de usuario. La clase <xref:System.Threading.Timer> ejecuta tareas en segundo plano a intervalos de tiempo definidos.  
@@ -25,7 +25,7 @@ ms.locfileid: "33591333"
  Explica la clase **ThreadPool**, que permite solicitar a un subproceso que ejecute una tarea sin tener que realizar ninguna tarea de administración de subprocesos.  
   
  [Timers](../../../docs/standard/threading/timers.md) (Temporizadores)  
- Explica cómo usar la clase **Timer** para especificar que se llame a un delegado en un momento determinado.  
+ Describe los temporizadores que se pueden usar en un entorno multiproceso.  
   
  [Monitors](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db) (Clases Monitor)  
  Explica cómo usar la clase **Monitor** para sincronizar el acceso a un miembro o para crear sus propios tipos de administración de subprocesos.  

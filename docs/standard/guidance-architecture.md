@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.technology: dotnet
-ms.openlocfilehash: 7d636e842c7ec91949f2557f74ae724def858053
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e63f7043b2dfdbe367ed2cbfba13bc6985c1ead6
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570504"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404179"
 ---
 # <a name="net-architecture-guidance"></a>Guía de arquitectura de .NET
 
@@ -28,4 +28,8 @@ Esta guía es una introducción a la arquitectura recomendada, el diseño y los 
 
 ## <a name="architecting-container-and-microservice-based-applicationsmicroservices-architectureindexmd"></a>[Diseñar la arquitectura de aplicaciones basadas en contenedor y microservicio](microservices-architecture/index.md)
 
-Esta guía es una introducción al desarrollo de aplicaciones basadas en microservicios y a su administración mediante contenedores. En ella se trata el diseño de la arquitectura y los métodos de implementación con .NET Core y contenedores de Docker. 
+Esta guía es una introducción al desarrollo de aplicaciones basadas en microservicios y a su administración mediante contenedores. En ella se trata el diseño de la arquitectura y los métodos de implementación con .NET Core y contenedores de Docker.
+
+## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[Aplicaciones sin servidor: arquitectura, patrones e implementación de Azure](serverless-architecture/index.md)
+
+Esta es una guía para crear aplicaciones sin servidor con ejemplos en los que se usa Azure. Se describen distintos enfoques de arquitectura y diseño, las ventajas y los desafíos que conlleva la ausencia del servidor, y se proporcionan escenarios y casos de uso para aplicaciones sin servidor.

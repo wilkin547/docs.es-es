@@ -3,13 +3,13 @@ title: Proceso de desarrollo para Azure
 description: Aplicaciones web modernas con ASP.NET Core y Azure | Proceso de desarrollo para Azure
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/08/2017
-ms.openlocfilehash: ea7b173369cea3b785297a136546d65965c3d789
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106858"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404394"
 ---
 # <a name="development-process-for-azure"></a>Proceso de desarrollo para Azure
 
@@ -40,8 +40,6 @@ Con independencia de que prefiera un IDE eficaz y completo, o un editor ligero y
 
 [Descargar Visual Studio Code](https://code.visualstudio.com/download)
 
-
-
 ## <a name="development-workflow-for-azure-hosted-aspnet-core-apps"></a>Flujo de trabajo de desarrollo para aplicaciones ASP.NET Core hospedadas en Azure
 
 El ciclo de vida de desarrollo de una aplicación se inicia en el equipo de cada desarrollador, donde se codifica la aplicación con el lenguaje preferido y se prueba de forma local. Los desarrolladores pueden elegir su sistema de control de código fuente preferido y configurar la integración continua (CI) o entrega e implementación continua (CD) con un servidor de compilación o en función de las características integradas de Azure.
@@ -52,9 +50,9 @@ Para empezar a desarrollar una aplicación ASP.NET Core con CI/CD, puede usar Vi
 
 Para crear una canalización de versión de la aplicación, debe tener el código de la aplicación en el control de código fuente. Configure un repositorio local y conéctelo a un repositorio remoto de un proyecto de equipo. Siga estas instrucciones:
 
--   [Comparta el código con Git y Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs), o bien
+- [Comparta el código con Git y Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs), o bien
 
--   [Comparta el código con TFVC y Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs).
+- [Comparta el código con TFVC y Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs).
 
 Cree un Azure App Service donde se va a implementar la aplicación. Vaya a la hoja App Services de Azure Portal y cree una aplicación web. Haga clic en +Agregar, seleccione la plantilla Aplicación web, haga clic en Crear y proporcione un nombre y otros detalles. La aplicación web será accesible desde {nombre}.azurewebsites.net.
 
@@ -98,7 +96,7 @@ Siempre que se realiza una confirmación nueva en el repositorio de código de l
 
 Una vez realizada correctamente la compilación, el proceso de CD recogerá los artefactos de compilación generados. Esto incluirá un paquete de implementación web. El servidor de compilación implementará este paquete en Azure App Service, reemplazando cualquier servicio existente con el recién creado. Normalmente, este paso tiene como destino un entorno de ensayo, pero algunas aplicaciones se implementan directamente en producción a través de un proceso de CD.
 
-#### <a name="step-5-azure-app-service-web-app"></a>Paso 5. Azure App Service. Aplicación web.
+#### <a name="step-5-azure-app-service-web-app"></a>Paso 5. Aplicación web de Azure App Service
 
 Una vez implementada, la aplicación ASP.NET Core se ejecuta en el contexto de una aplicación de web de Azure App Service. Esta aplicación web se puede supervisar y configurar más mediante Azure Portal.
 
@@ -110,7 +108,6 @@ Mientras se ejecuta la aplicación web, se puede supervisar su estado y recopila
 
 **Build and Deploy Your ASP.NET Core App to Azure** (Compilación e implementación de la aplicación ASP.NET Core en Azure)  
 <https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
-
 
 >[!div class="step-by-step"]
 [Anterior](test-asp-net-core-mvc-apps.md)

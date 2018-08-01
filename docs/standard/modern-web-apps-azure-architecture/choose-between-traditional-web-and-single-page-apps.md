@@ -1,40 +1,38 @@
 ---
 title: Elección entre aplicaciones web tradicionales y aplicaciones de página única
-description: Diseño de aplicaciones web modernas con ASP.NET Core y Microsoft Azure
+description: Obtenga información sobre cómo elegir entre aplicaciones web tradicionales y aplicaciones de página única (SPA) al crear aplicaciones web.
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104771"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404155"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Elección entre aplicaciones web tradicionales y aplicaciones de página única (SPA)
 
 > "La ley de Atwood: cualquier aplicación que se pueda escribir en JavaScript, se acabará escribiendo en JavaScript".  
 > _\- Jeff Atwood_
 
-## <a name="summary"></a>Resumen
-
 En la actualidad hay dos enfoques generales para crear aplicaciones web: aplicaciones web tradicionales que ejecutan la mayor parte de la lógica de aplicación en el servidor y las aplicaciones de página única (SPA) que ejecutan la mayor parte de la lógica de la interfaz de usuario en un explorador web, y se comunican con el servidor web principalmente mediante las API web. También es posible un enfoque híbrido; el más sencillo es hospedar una o más subaplicaciones enriquecidas de tipo SPA dentro de una aplicación web tradicional más grande.
 
 Las aplicaciones web tradicionales se deberían usar cuando:
 
--   Los requisitos del lado cliente de la aplicación son sencillos o incluso de solo lectura.
+- Los requisitos del lado cliente de la aplicación son sencillos o incluso de solo lectura.
 
--   La aplicación necesita funcionar en exploradores que no admiten JavaScript.
+- La aplicación necesita funcionar en exploradores que no admiten JavaScript.
 
--   El equipo no está familiarizado con las técnicas de desarrollo de JavaScript o TypeScript.
+- El equipo no está familiarizado con las técnicas de desarrollo de JavaScript o TypeScript.
 
 Una SPA se debería usar cuando:
 
--   La aplicación tenga que exponer una interfaz de usuario enriquecida con muchas características.
+- La aplicación tenga que exponer una interfaz de usuario enriquecida con muchas características.
 
--   El equipo está familiarizado con el desarrollo de JavaScript o TypeScript.
+- El equipo está familiarizado con el desarrollo de JavaScript o TypeScript.
 
--   La aplicación ya tiene que exponer una API para otros clientes (internos o públicos).
+- La aplicación ya tiene que exponer una API para otros clientes (internos o públicos).
 
 Además, los marcos de SPA requieren mayores conocimientos de arquitectura y seguridad. Experimentan una renovación mayor que las aplicaciones web tradicionales debido a las actualizaciones frecuentes y los marcos de trabajo nuevos. La configuración de procesos de compilación e implementación automatizados y el uso de opciones de implementación como contenedores son más difíciles con las SPA que con las aplicaciones web tradicionales.
 
@@ -71,10 +69,11 @@ Tenga en cuenta que, habitualmente, las SPA tienen que implementar característi
 Para escribir SPA es necesario estar familiarizado con JavaScript o TypeScript y técnicas de programación y bibliotecas del lado cliente. El equipo debería ser competente en la escritura de JavaScript moderno con un marco de SPA como Angular.
 
 > ### <a name="references--spa-frameworks"></a>Referencias: marcos de SPA
+>
 > - **Angular**  
-> <https://angular.io>
+>   <https://angular.io>
 > - **Comparison of JavaScript Frameworks** (Comparación de marcos de JavaScript)  
-> <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
 
 **La aplicación ya tiene que exponer una API para otros clientes (internos o públicos)**
 
@@ -84,12 +83,12 @@ Si ya admite una API web para su uso por otros clientes, crear una implementaci�
 
 En la tabla de decisiones siguiente se resumen algunos de los factores básicos que tener en cuenta al elegir entre una aplicación web tradicional y una SPA.
 
-  | **Factor** | **Aplicación web tradicional** | **Aplicación de una sola página** |
-  |---|---|---|
-  | Familiaridad del equipo necesaria con JavaScript o TypeScript | **Mínima** | **Obligatoria** |
-  | Compatibilidad con exploradores sin scripting | **Compatible** | **No compatible** |
-  | Comportamiento mínimo del lado cliente de la aplicación | **Adecuado** | **Excesivo** |
-  | Requisitos de la interfaz de usuario enriquecidos y complejos | **Limitados** | **Adecuados** |
+| **Factor**                                           | **Aplicación web tradicional** | **Aplicación de una sola página** |
+| ---------------------------------------------------- | ----------------------- | --------------------------- |
+| Familiaridad del equipo necesaria con JavaScript o TypeScript | **Mínima**             | **Obligatoria**                |
+| Compatibilidad con exploradores sin scripting                   | **Compatible**           | **No compatible**           |
+| Comportamiento mínimo del lado cliente de la aplicación             | **Adecuado**         | **Excesivo**                |
+| Requisitos de la interfaz de usuario enriquecidos y complejos            | **Limitados**             | **Adecuados**             |
 
 >[!div class="step-by-step"]
 [Anterior](modern-web-applications-characteristics.md)

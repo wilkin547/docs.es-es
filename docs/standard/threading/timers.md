@@ -1,6 +1,7 @@
 ---
 title: Temporizadores
-ms.date: 03/30/2017
+description: Obtenga información sobre los temporizadores de .NET que se pueden usar en un entorno multiproceso.
+ms.date: 07/03/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,29 +11,53 @@ helpviewer_keywords:
 - threading [.NET Framework], timers
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
-author: rpetrusha
+author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 478484651bf839f842148f0b4164c9387db3b98a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae41c535d8bc1c0a05174b9051ba34f1a0a34638
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584962"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875071"
 ---
 # <a name="timers"></a>Temporizadores
-Los temporizadores son objetos pequeños que permiten especificar un delegado para llamarlo en un momento específico. Un subproceso del grupo realiza la operación de espera.  
-  
- El uso de la clase <xref:System.Threading.Timer?displayProperty=nameWithType> es sencillo. Para crear un **Timer**, debe pasar un delegado <xref:System.Threading.TimerCallback> al método de devolución de llamada, un objeto que representa el estado que se pasará a la devolución de llamada, la hora de compilación inicial y una cifra que representa el período entre invocaciones de devolución de llamada. Para cancelar un temporizador pendiente, se debe llamar a la función **Timer.Dispose**.  
-  
+
+.NET proporciona dos temporizadores que se pueden usar en un entorno multiproceso:
+
+- <xref:System.Threading.Timer?displayProperty=nameWithType>, que ejecuta un único método de devolución de llamada en un subproceso <xref:System.Threading.ThreadPool> a intervalos regulares.
+- <xref:System.Timers.Timer?displayProperty=nameWithType>, que de forma predeterminada genera un evento en un subproceso <xref:System.Threading.ThreadPool> a intervalos regulares.
+
 > [!NOTE]
->  Hay otras dos clases de temporizador. La clase <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> es un control que funciona con diseñadores visuales y está pensado para su uso en contextos de interfaz de usuario; provoca eventos en el subproceso de interfaz de usuario. La clase <xref:System.Timers.Timer?displayProperty=nameWithType> deriva de <xref:System.ComponentModel.Component>, por lo que puede usarse con diseñadores visuales; también provoca eventos, pero lo hace en un subproceso <xref:System.Threading.ThreadPool>. La clase <xref:System.Threading.Timer?displayProperty=nameWithType> realiza las devoluciones de llamada en un subproceso <xref:System.Threading.ThreadPool> y no utiliza el modelo de evento para nada. También proporciona un objeto de estado al método de devolución de llamada, lo que no hacen otros temporizadores. Es sumamente ligero.  
+> Algunas implementaciones de .NET pueden incluir temporizadores adicionales:
+>
+> - <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>: un componente de Windows Forms que produce un evento a intervalos regulares. El componente no tiene interfaz de usuario y está diseñado para su uso en un entorno de un único subproceso.  
+> - <xref:System.Web.UI.Timer?displayProperty=nameWithType>: un componente de ASP.NET que realiza postbacks de página web asincrónicos o sincrónicos en un intervalo definido.
+> - <xref:System.Windows.Threading.DispatcherTimer?displayProperty=nameWithType>: un temporizador que se integra en la cola de <xref:System.Windows.Threading.Dispatcher> que se procesa en un intervalo de tiempo especificado y con una prioridad especificada.
+
+## <a name="the-systemthreadingtimer-class"></a>La clase System.Threading.Timer
+
+La clase <xref:System.Threading.Timer?displayProperty=nameWithType> permite llamar de forma continua a un delegado en intervalos de tiempo especificados. Esta clase también se puede usar para programar una sola llamada a un delegado en un intervalo de tiempo especificado. El delegado se ejecuta en un subproceso <xref:System.Threading.ThreadPool>.
+
+Cuando se crea un objeto <xref:System.Threading.Timer?displayProperty=nameWithType>, se especifica un delegado <xref:System.Threading.TimerCallback> que define el método de devolución de llamada, un objeto de estado opcional que se pasa a la devolución de llamada, la cantidad de tiempo de retraso antes de la primera invocación de la devolución de llamada y el intervalo de tiempo entre las invocaciones de devolución de llamada. Para cancelar un temporizador pendiente, llame a la función <xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType>.
+
+En el ejemplo siguiente se crea un temporizador que llama al delegado proporcionado por primera vez después de un segundo (1000 milisegundos) y, después, lo llama cada dos segundos. El objeto de estado del ejemplo se usa para contar el número de veces que se llama al delegado. El temporizador se detiene cuando el delegado se ha llamado al menos 10 veces.
+
+[!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
+[!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
+[!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]
+
+Para obtener más información y ejemplos, vea <xref:System.Threading.Timer?displayProperty=nameWithType>.
+
+## <a name="the-systemtimerstimer-class"></a>La clase System.Timers.Timer
+
+Otro temporizador que se puede usar en un entorno multiproceso es <xref:System.Timers.Timer?displayProperty=nameWithType> que, de forma predeterminada, genera un evento en un subproceso <xref:System.Threading.ThreadPool>.
+
+Cuando se crea un objeto <xref:System.Timers.Timer?displayProperty=nameWithType>, se puede especificar el intervalo de tiempo en el que se va a generar un evento <xref:System.Timers.Timer.Elapsed>. Use la propiedad <xref:System.Timers.Timer.Enabled%2A> para indicar si un temporizador debe generar un evento <xref:System.Timers.Timer.Elapsed>. Si necesita que un evento <xref:System.Timers.Timer.Elapsed> se genere solo una vez cuando haya transcurrido el intervalo especificado, establezca <xref:System.Timers.Timer.AutoReset%2A> en `false`. El valor predeterminado de la propiedad <xref:System.Timers.Timer.AutoReset%2A> es `true`, lo que significa que un evento <xref:System.Timers.Timer.Elapsed> se genera periódicamente durante el intervalo definido por la propiedad <xref:System.Timers.Timer.Interval%2A>.
+
+Para obtener más información y ejemplos, vea <xref:System.Timers.Timer?displayProperty=nameWithType>.
   
- El ejemplo de código siguiente inicia un temporizador que se inicia después de un segundo (1000 milisegundos) y emite un chasquido por segundo hasta que presione la tecla **ENTRAR**. La variable que contiene la referencia al temporizador es un campo de nivel de clase para garantizar que el temporizador no está sujeto a la recolección de elementos no utilizados mientras que todavía está en ejecución. Para obtener más información acerca de la recolección de elementos no utilizados agresiva, vea <xref:System.GC.KeepAlive%2A>.  
-  
- [!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
- [!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
- [!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]  
-  
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Timer>  
- [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Vea también
+
+ <xref:System.Threading.Timer?displayProperty=nameWithType>  
+ <xref:System.Timers.Timer?displayProperty=nameWithType>  
+ [Objetos y características de subprocesos](threading-objects-and-features.md)

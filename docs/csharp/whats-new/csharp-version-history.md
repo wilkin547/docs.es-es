@@ -3,12 +3,12 @@ title: Historia de C# - Guía de C#
 description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo ha evolucionado desde entonces?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207539"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404598"
 ---
 # <a name="the-history-of-c"></a>Historia de C# #
 
@@ -73,7 +73,7 @@ La versión 3.0 de C# llegó a finales de 2007, junto con Visual Studio 2008, au
 - [Métodos de extensión](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 - [Variables locales con asignación implícita de tipos](../language-reference/keywords/var.md)
 - [Métodos parciales](../language-reference/keywords/partial-method.md)
-- Inicializadores de objeto y colección
+- [Inicializadores de objeto y colección](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 En retrospectiva, muchas de estas características parecen inevitables e indivisibles. Todas ellas encajan estratégicamente. Por lo general se considera que la mejor característica de la versión de C# fue la expresión de consulta, también conocida como Language-Integrated Query (LINQ).
 

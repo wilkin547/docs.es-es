@@ -5,12 +5,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 830c68e6857e72fe19099753ba57a7e22491af2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb70a7e3dfd8b274987bf68568004d785afd0ee1
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339662"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936960"
 ---
 # <a name="expressions-c-programming-guide"></a>Expresiones (Guía de programación de C#)
 Una *expresión* es una secuencia de uno o más operandos y cero o más operadores que se pueden evaluar como un valor, objeto, método o espacio de nombres único. Las expresiones pueden constar de un valor literal, una invocación de método, un operador y sus operandos o un *nombre simple*. Los nombres simples pueden ser el nombre de una variable, el miembro de un tipo, el parámetro de un método, un espacio de nombres o un tipo.  
@@ -61,8 +61,9 @@ DoWork();
 ## <a name="lambda-expressions"></a>Expresiones lambda  
  Las expresiones lambda representan "métodos insertados" que no tienen nombre pero pueden tener parámetros de entrada y varias instrucciones. Se usan mucho en LINQ para pasar argumentos a métodos. Las expresiones lambda se compilan en delegados o árboles de expresión, dependiendo del contexto en el que se usen. Para obtener más información, vea [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
-## <a name="expression-trees"></a>Árboles de expresión  
- Los árboles de expresión permiten representar las expresiones como estructuras de datos. Los proveedores LINQ los usan en gran medida para convertir expresiones de consulta en código significativo en otro contexto, como una base de datos SQL. Para obtener más información, vea [Árboles de expresión (C# y Visual Basic)](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
+## <a name="expression-trees"></a>Árboles de expresión
+
+Los árboles de expresión permiten representar las expresiones como estructuras de datos. Los proveedores LINQ los usan en gran medida para convertir expresiones de consulta en código significativo en otro contexto, como una base de datos SQL. Para obtener más información, vea [Árboles de expresión (C#)](../concepts/expression-trees/index.md).
   
 ## <a name="expression-body-definitions"></a>Definiciones de cuerpos de expresión
 

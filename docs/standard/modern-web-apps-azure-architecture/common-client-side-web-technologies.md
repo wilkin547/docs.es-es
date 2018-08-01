@@ -3,20 +3,18 @@ title: Tecnologías web comunes del lado cliente
 description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Tecnologías web comunes del lado cliente
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: 79dac220e40274889783d29c0e04679dd878fda5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106767"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404611"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologías web comunes del lado cliente
 
 > "Los sitios web deben tener una apariencia correcta, tanto interna como externa".  
 > _- Paul Cookson_
-
-## <a name="summary"></a>Resumen
 
 Las aplicaciones ASP.NET Core son aplicaciones web y normalmente se basan en tecnologías web del lado cliente como HTML, CSS y JavaScript. Al separar el contenido de la página (HTML) de su diseño y estilos (CSS), y su comportamiento (a través de JavaScript), las aplicaciones web complejas pueden aprovechar el principio de separación de intereses. Los cambios futuros en la estructura, el diseño o el comportamiento de la aplicación se pueden realizar más fácilmente cuando estos intereses no están entrelazados.
 
@@ -38,7 +36,7 @@ Se recomienda mantener los estilos en sus propios archivos de hoja de estilos in
 
 ### <a name="css-preprocessors"></a>Preprocesadores CSS
 
-Las hojas de estilo CSS carecen de compatibilidad con la lógica condicional, las variables y otras características de los lenguajes de programación. Por tanto, las hojas de estilo grandes suelen incluir una gran cantidad de repetición, ya que el mismo color, fuente u otra configuración se aplica a distintas variaciones de elementos HTML y clases CSS. Los preprocesadores CSS pueden ayudar a que las hojas de estilo sigan el [Principio DRY](http://deviq.com/don-t-repeat-yourself/) agregando compatibilidad para las variables y la lógica.
+Las hojas de estilo CSS carecen de compatibilidad con la lógica condicional, las variables y otras características de los lenguajes de programación. Por tanto, las hojas de estilo grandes suelen incluir una gran cantidad de repetición, ya que el mismo color, fuente u otra configuración se aplica a distintas variaciones de elementos HTML y clases CSS. Los preprocesadores CSS pueden ayudar a que las hojas de estilo sigan el [Principio DRY](https://deviq.com/don-t-repeat-yourself/) agregando compatibilidad para las variables y la lógica.
 
 Los preprocesadores CSS más populares son Sass y LESS. Ambos amplían CSS y son compatibles con las versiones anteriores, lo que significa que un archivo CSS sin formato es un archivo Sass o LESS válido. Sass está basado en Ruby y LESS en JavaScript, y normalmente ambos se ejecutan como parte del proceso de desarrollo local. Los dos tienen herramientas de línea de comandos y compatibilidad integrada en Visual Studio para ejecutarlos con tareas Gulp o Grunt.
 
@@ -48,13 +46,13 @@ JavaScript es un lenguaje de programación interpretado y dinámico que se ha es
 
 Cuando se trabaja con JavaScript en la aplicación web, hay algunas tareas que normalmente es necesario realizar:
 
--   Seleccionar un elemento HTML y recuperar o actualizar su valor
+- Seleccionar un elemento HTML y recuperar o actualizar su valor.
 
--   Consultar una API web de datos
+- Consultar datos en una API web.
 
--   Enviar un comando a una API web (y responder a una devolución de llamada con su resultado)
+- Enviar un comando a una API web (y responder a una devolución de llamada con su resultado).
 
--   Realizar la validación
+- Realizar la validación.
 
 Todas estas tareas se pueden realizar con JavaScript por sí solo, pero existen muchas bibliotecas para facilitarlas. Una de las primeras de estas bibliotecas y de mayor éxito es jQuery, que sigue siendo una opción popular para simplificar estas tareas en las páginas web. Para aplicaciones de página única (SPA), jQuery no proporciona muchas de las características deseadas que ofrecen Angular y React.
 
@@ -100,9 +98,9 @@ Los componentes se definen mediante la función decorador @Component, que acepta
 
 Al trabajar con componentes y plantillas, en lugar de elementos DOM, las aplicaciones de Angular pueden funcionar en un nivel de abstracción más alto y con menos código general que las aplicaciones escritas solo con JavaScript (también denominadas "vanilla JS") o con jQuery. Angular también impone un orden sobre cómo organizar los archivos de script del lado cliente. Por convención, las aplicaciones de Angular usan una estructura de carpetas común, con los archivos de script de módulos y componentes ubicados en una carpeta de la aplicación. Los scripts de Angular relacionados con la compilación, implementación y pruebas de la aplicación normalmente se encuentran en una carpeta de nivel superior.
 
-Angular también usa muchas herramientas de interfaz de la línea de comandos (CLI). La introducción al desarrollo local de Angular (suponiendo que ya se haya instalado npm y git) consiste en clonar simplemente un repositorio de GitHub y ejecutar \`npm install\` y \`npm start\`. Aparte de esto, Angular suministra su propia herramienta CLI que puede crear proyectos, agregar archivos y ayudar con las tareas de pruebas, agrupación e implementación. Esta facilidad de uso de las herramientas CLI hace que Angular sea especialmente compatible con ASP.NET Core, que también incluye una excelente compatibilidad con la CLI.
+Angular también usa muchas herramientas de interfaz de la línea de comandos (CLI). La introducción al desarrollo local de Angular (suponiendo que ya se haya instalado npm y git) consiste en clonar simplemente un repositorio de GitHub y ejecutar `npm install` y `npm start`. Aparte de esto, Angular suministra su propia herramienta CLI que puede crear proyectos, agregar archivos y ayudar con las tareas de pruebas, agrupación e implementación. Esta facilidad de uso de las herramientas CLI hace que Angular sea especialmente compatible con ASP.NET Core, que también incluye una excelente compatibilidad con la CLI.
 
-Microsoft ha desarrollado una aplicación de referencia, [eShopOnContainers](http://aka.ms/MicroservicesArchitecture), que incluye una implementación de SPA de Angular. Esta aplicación incluye módulos de Angular para administrar la cesta de la compra de la tienda en línea, cargar y presentar los artículos del catálogo y controlar la creación de pedidos. Puede ver y descargar la aplicación de ejemplo en [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
+Microsoft ha desarrollado una aplicación de referencia, [eShopOnContainers](https://aka.ms/MicroservicesArchitecture), que incluye una implementación de SPA de Angular. Esta aplicación incluye módulos de Angular para administrar la cesta de la compra de la tienda en línea, cargar y presentar los artículos del catálogo y controlar la creación de pedidos. Puede ver y descargar la aplicación de ejemplo en [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
 
 ### <a name="react"></a>React
 
@@ -128,17 +126,17 @@ Como React no es un marco de trabajo completo, normalmente le interesarán otras
 
 Al considerar qué marco JavaScript funcionará mejor para admitir la SPA, tenga en cuenta las consideraciones siguientes:
 
--   ¿El equipo está familiarizado con el marco de trabajo y sus dependencias (incluido TypeScript en algunos casos)?
+- ¿El equipo está familiarizado con el marco de trabajo y sus dependencias (incluido TypeScript en algunos casos)?
 
--   ¿Qué opiniones suscita el marco de trabajo; está de acuerdo con su modo predeterminado de hacer las cosas?
+- ¿Qué opiniones suscita el marco de trabajo; está de acuerdo con su modo predeterminado de hacer las cosas?
 
--   ¿Incluye (o bien una biblioteca complementaria) todas las características que requiere la aplicación?
+- ¿Incluye (o bien una biblioteca complementaria) todas las características que requiere la aplicación?
 
--   ¿Está bien documentado?
+- ¿Está bien documentado?
 
--   ¿Qué nivel de actividad tiene su comunidad? ¿Se compilan proyectos nuevos con él?
+- ¿Qué nivel de actividad tiene su comunidad? ¿Se compilan proyectos nuevos con él?
 
--   ¿Qué nivel de actividad tiene su equipo principal? ¿Se resuelven los problemas y se publican periódicamente versiones nuevas?
+- ¿Qué nivel de actividad tiene su equipo principal? ¿Se resuelven los problemas y se publican periódicamente versiones nuevas?
 
 Los marcos de JavaScript siguen evolucionando a una velocidad de vértigo. Use las consideraciones enumeradas anteriormente para ayudar a mitigar el riesgo de elegir un marco del que más adelante se arrepienta de depender. Si es especialmente reacio a los riesgos, considere la posibilidad de un marco de trabajo que ofrezca soporte técnico comercial o esté desarrollado por una gran empresa.
 
