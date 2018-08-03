@@ -16,10 +16,10 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: c080ff7ebef680712581d1f77fd4eb1ec99c6a86
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "32742619"
 ---
 # <a name="network-settings-schema"></a>Esquema de la configuración de red
@@ -31,8 +31,7 @@ La configuración de red especifica cómo se conecta .NET Framework a Internet. 
 |[Elemento \<connectionManagement> (configuración de red)](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Especifica el número máximo de conexiones a hosts de Internet.|  
 |[Elemento \<defaultProxy> (configuración de red)](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Especifica el servidor proxy usado para las solicitudes HTTP a Internet.|  
 |[Elemento \<mailSettings> (configuración de red)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Contiene la configuración de opciones de envío de correo.|  
-|[Elemento \<requestCaching> (configuración de red)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Especifica los módulos usados para solicitar información de hosts de Internet.|  
-|[Elemento \<requestCaching> (configuración de red)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net?displayProperty=nameWithType>.|  
+|[Elemento \<requestCaching> (configuración de red)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Controla el mecanismo de almacenamiento en caché para las solicitudes de red.|  
 |[Elemento \<webRequestModules> (configuración de red)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica los módulos usados para solicitar información de hosts de Internet.|  
   
  La configuración de URI especifica la manera en que .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI). En la tabla siguiente se describe la función de cada elemento de configuración secundario bajo el [elemento \<Uri> (configuración de URI)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md).  

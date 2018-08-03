@@ -15,10 +15,10 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33579657"
 ---
 # <a name="regular-expression-options"></a>Opciones de expresiones regulares
@@ -163,7 +163,7 @@ ms.locfileid: "33579657"
   
  El patrón de expresión regular `^(\w+)\s(\d+)\r*$` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Comienza al principio de la línea.|  
 |`(\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Este es el primer grupo de captura.|  
@@ -216,7 +216,7 @@ ms.locfileid: "33579657"
   
  El patrón de expresión regular `\b\(?((?>\w+),?\s?)+[\.!?]\)?` se define como se muestra en la siguiente tabla.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`\(?`|Busca una coincidencia con cero o con una aparición de los paréntesis de apertura ("(").|  
@@ -275,7 +275,7 @@ ms.locfileid: "33579657"
   
 -   Un espacio en blanco dentro de una clase de caracteres se interpreta siempre de forma literal. Por ejemplo, el patrón de expresión regular `[ .,;:]` coincide con cualquier carácter de espacio en blanco, punto, coma, punto y coma o dos puntos.  
   
--   Los cuantificadores entre corchetes, como `{`*n*`}`, `{`*n*`,}` y `{`*n*`,`*m*`}`, no admiten espacios en blanco. Por ejemplo, el patrón de expresión regular `\d{1. 3}` no encontrará ninguna secuencia de entre uno y tres guarismos porque contiene un carácter de espacio en blanco.  
+-   Los cuantificadores entre corchetes, como `{`*n*`}`, `{`*n*`,}` y `{`*n*`,`*m*`}`, no admiten espacios en blanco. Por ejemplo, el patrón de expresión regular `\d{1, 3}` no encontrará ninguna secuencia de entre uno y tres guarismos porque contiene un carácter de espacio en blanco.  
   
 -   No se admiten espacios en blanco en una secuencia de caracteres que presenta un elemento de lenguaje. Por ejemplo:  
   
@@ -320,7 +320,7 @@ ms.locfileid: "33579657"
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`(?<=\d{1,2}\s)`|El inicio de la coincidencia debe estar precedido por uno o dos dígitos decimales seguidos de un espacio.|  
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
@@ -355,7 +355,7 @@ ms.locfileid: "33579657"
   
      La expresión regular se define como se muestra en la tabla siguiente.  
   
-    |Modelo|Description|  
+    |Modelo|Descripción|  
     |-------------|-----------------|  
     |(a+)|Busca una coincidencia con la letra “a” una o más veces. Este es el segundo grupo de captura.|  
     |(\1)|Busca una coincidencia con la subcadena capturada por el primer grupo de captura. Éste es el tercer grupo de captura.|  

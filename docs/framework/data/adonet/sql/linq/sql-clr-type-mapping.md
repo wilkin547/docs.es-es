@@ -1,18 +1,18 @@
 ---
 title: Asignación de tipos entre CLR y SQL
-ms.date: 03/30/2017
+ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33365532"
 ---
 # <a name="sql-clr-type-mapping"></a>Asignación de tipos entre CLR y SQL
 En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a un modelo de objetos expresado en el lenguaje de programación que prefiera. Cuando la aplicación se ejecuta, LINQ to SQL convierte las consultas integradas del lenguaje del modelo de objetos a SQL y las envía a la base de datos para su ejecución. Cuando la base de datos devuelve los resultados, LINQ to SQL los vuelve a convertir en objetos con los que pueda trabajar en su propio lenguaje de programación.  
   
- Para convertir los datos entre el modelo de objetos y la base de datos, un *asignación de tipo* debe definirse. LINQ to SQL utiliza una asignación de tipos para que cada tipo de Common Language Runtime (CLR) se corresponda con un tipo de SQL Server concreto. Las asignaciones de tipos y otra información de asignación, como las relaciones de tablas y estructuras de bases de datos, se pueden definir en el modelo de objetos con una asignación basada en atributos. Opcionalmente, la información de asignación se puede especificar fuera del modelo de objetos con un archivo de asignación externo. Para obtener más información, consulte [asignación basada en atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) y [asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+ Para convertir los datos entre el modelo de objetos y la base de datos, un *asignación de tipo* debe definirse. LINQ to SQL utiliza una asignación de tipos para que cada tipo de Common Language Runtime (CLR) se corresponda con un tipo de SQL Server concreto. Las asignaciones de tipos y otra información de asignación, como las relaciones de tablas y estructuras de bases de datos, se pueden definir en el modelo de objetos con una asignación basada en atributos. Opcionalmente, la información de asignación se puede especificar fuera del modelo de objetos con un archivo de asignación externo. Para obtener más información, consulte [asignación basada en atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) y [asignaciones externas](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
  En este tema se tratan los puntos siguientes:  
   
@@ -36,14 +36,16 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>Asignación de tipos predeterminados  
- Puede crear automáticamente el modelo de objetos o el archivo de asignación con Object Relational Designer o la herramienta de línea de comandos SQLMetal. Las asignaciones de tipos predeterminadas de estas herramientas definen qué tipos de CLR se deben elegir para asignarlos a columnas en la base de datos SQL Server. Para obtener más información acerca del uso de estas herramientas, consulte [crear el modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md).  
+ Puede crear automáticamente el modelo de objetos o el archivo de asignación con Object Relational Designer o la herramienta de línea de comandos SQLMetal. Las asignaciones de tipos predeterminadas de estas herramientas definen qué tipos de CLR se deben elegir para asignarlos a columnas en la base de datos SQL Server. Para obtener más información sobre el uso de estas herramientas, consulte [crear el modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md).  
   
  También puede utilizar el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A> para crear una base de datos de SQL Server según la información de asignación del modelo de objetos o del archivo de asignación externo. Las asignaciones de tipos predeterminadas del método <xref:System.Data.Linq.DataContext.CreateDatabase%2A> definen qué tipo de columnas de SQL Server se deben crear para asignarlas a los tipos de CLR en el modelo de objetos. Para obtener más información, consulte [Cómo: crear dinámicamente una base de datos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
   
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Matriz de comportamiento de la asignación de tipos en tiempo de ejecución  
  En el diagrama siguiente se muestra el comportamiento de las asignaciones de tipos específicos que se espera en tiempo de ejecución, cuando los datos se recuperan de la base de datos o se guardan en ella. Con la excepción de la serialización, LINQ to SQL no admite la asignación entre los tipos de datos de CLR o SQL Server no especificados en esta matriz. Para obtener más información sobre la compatibilidad con la serialización, vea [serialización binaria](#BinarySerialization).  
-  
+ 
+![SQL Server para la tabla de asignación de tipos de datos de CLR de SQL](media/sql-clr-type-mapping.png)
+
 > [!NOTE]
 >  Algunas asignaciones de tipos pueden tener como resultado excepciones de desbordamiento o de pérdida de datos mientras se convierten a la base de datos o desde ella.  
   
@@ -77,9 +79,9 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
 > [!NOTE]
 >  Cuando los tipos de texto de SQL se asignan a <xref:System.Enum?displayProperty=nameWithType> de CLR, solo se incluyen los nombres de los miembros <xref:System.Enum> en la columna de SQL asignada. No se admiten otros valores en la columna de SQL asignada a <xref:System.Enum>.  
   
- Object Relational Designer y la herramienta de línea de comandos SQLMetal no pueden asignar automáticamente un tipo SQL a una clase <xref:System.Enum> de CLR. Debe configurar explícitamente esta asignación personalizando un archivo DBML para que lo usen Object Relational Designer y SQLMetal. Para obtener más información sobre la asignación de tipo personalizado, vea [asignaciones de tipos personalizados de SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md).  
+ Object Relational Designer y la herramienta de línea de comandos SQLMetal no pueden asignar automáticamente un tipo SQL a una clase <xref:System.Enum> de CLR. Debe configurar explícitamente esta asignación personalizando un archivo DBML para que lo usen Object Relational Designer y SQLMetal. Para obtener más información acerca de la asignación de tipos personalizados, vea [asignaciones de tipos de CLR de SQL personalizada](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md).  
   
- Dado que una columna SQL de enumeración será el mismo tipo que otras columnas numéricas y de texto; Estas herramientas no reconocerán el intento y el valor predeterminado para la asignación tal como se describe en la siguiente [asignación numérica](#NumericMapping) y [asignación de texto y XML](#TextMapping) secciones. Para obtener más información sobre la generación de código con el archivo DBML, consulte [generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+ Dado que una columna SQL de enumeración será el mismo tipo que otras columnas numéricas y de texto; Estas herramientas no reconocerán el intento y el valor predeterminado para la asignación tal como se describe en la siguiente [asignación numérica](#NumericMapping) y [asignación de texto y XML](#TextMapping) secciones. Para obtener más información sobre la generación de código con el archivo DBML, vea [generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
  El método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> crea una columna de SQL de tipo numérico para asignar un tipo <xref:System.Enum?displayProperty=nameWithType> de CLR.  
   
@@ -160,10 +162,10 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
   
 -   Comentarios  
   
- Aunque puede asignar <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XDocument> a SQL Server como se muestra en el [matriz de comportamiento del tiempo de ejecución de asignación de tipo](#BehaviorMatrix), el <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> método no tiene ninguna asignación de tipo de SQL Server predeterminada para estos tipos.  
+ Aunque puede asignar <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XDocument> a SQL Server como se muestra en el [matriz de comportamiento del tiempo de ejecución de asignación de tipo](#BehaviorMatrix), el <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> método no tiene ninguna asignación de tipo de SQL Server de forma predeterminada para estos tipos.  
   
 ### <a name="custom-types"></a>Tipos personalizados  
- Si una clase implementa `Parse()` y `ToString()`, puede asignar el objeto a cualquier tipo de texto SQL (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`, `TEXT`, `NTEXT`, `XML`). El objeto se almacena en la base de datos enviando el valor devuelto por `ToString()` a la columna de base de datos asignada. El objeto se reconstruye invocando a `Parse()` en la cadena devuelta por la base de datos.  
+ Si implementa una clase `Parse()` y `ToString()`, el objeto se puede asignar a cualquier tipo de texto SQL (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`, `TEXT`, `NTEXT`, `XML`). El objeto se almacena en la base de datos enviando el valor devuelto por `ToString()` a la columna de base de datos asignada. El objeto se reconstruye invocando a `Parse()` en la cadena devuelta por la base de datos.  
   
 > [!NOTE]
 >  LINQ to SQL no admite la serialización mediante <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>.  
@@ -197,7 +199,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
 ### <a name="systemdatetime"></a>System.Datetime  
  El intervalo y la precisión del tipo <xref:System.DateTime?displayProperty=nameWithType> de CLR son mayores que el intervalo y la precisión del tipo `DATETIME` de SQL Server, que es la asignación de tipos predeterminada para el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>. Para evitar las excepciones relacionadas con los datos que están fuera del intervalo de `DATETIME`, utilice `DATETIME2`, que está disponible a partir de Microsoft SQL Server 2008. `DATETIME2` puede coincidir con el intervalo y la precisión de CLR <xref:System.DateTime?displayProperty=nameWithType>.  
   
- Las fechas de SQL Server no disponen del concepto de <xref:System.TimeZone>, que es una característica totalmente admitida en CLR. Los valores de <xref:System.TimeZone> se guardan tal como están en la base de datos sin conversión de <xref:System.TimeZone>, independientemente de la información de  <xref:System.DateTimeKind> original. Cuando los valores <xref:System.DateTime> se recuperan de la base de datos, su valor se carga tal cual en <xref:System.DateTime>, con un valor <xref:System.DateTimeKind> de <xref:System.DateTimeKind.Unspecified>. Para obtener más información acerca de cómo admite <xref:System.DateTime?displayProperty=nameWithType> métodos, vea [System.DateTime (métodos)](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
+ Las fechas de SQL Server no disponen del concepto de <xref:System.TimeZone>, que es una característica totalmente admitida en CLR. Los valores de <xref:System.TimeZone> se guardan tal como están en la base de datos sin conversión de <xref:System.TimeZone>, independientemente de la información de  <xref:System.DateTimeKind> original. Cuando los valores <xref:System.DateTime> se recuperan de la base de datos, su valor se carga tal cual en <xref:System.DateTime>, con un valor <xref:System.DateTimeKind> de <xref:System.DateTimeKind.Unspecified>. Para obtener más información sobre cómo admite <xref:System.DateTime?displayProperty=nameWithType> métodos, vea [System.DateTime (métodos)](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
  Microsoft SQL Server 2008 y .NET Framework 3.5 SP1 permiten asignar el tipo <xref:System.TimeSpan?displayProperty=nameWithType> de CLR al tipo `TIME` de SQL Server. Sin embargo, existe una gran diferencia entre el intervalo que admite el tipo <xref:System.TimeSpan?displayProperty=nameWithType> de CLR y el que admite el tipo `TIME` de SQL Server. La asignación de valores menores que 0 horas o mayores que 23:59:59.9999999 horas al tipo `TIME` de SQL producirá excepciones de desbordamiento. Para obtener más información, consulte [System.TimeSpan (métodos)](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md).  
