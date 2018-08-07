@@ -7,10 +7,10 @@ ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "34827344"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Creación de imágenes de Docker para aplicaciones de .NET Core
@@ -83,6 +83,17 @@ Versiones más recientes de cada variante:
 * [En este ejemplo de Docker de ASP.NET Core](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp) se muestra un patrón de prácticas recomendadas para compilar imágenes de Docker para aplicaciones de ASP.NET Core para entornos de producción. El ejemplo funciona con contenedores de Linux y Windows.
 
 * En este ejemplo de Docker de .NET Core se muestra un patrón de prácticas recomendadas para [compilar imágenes de Docker para aplicaciones de .NET Core para entornos de producción.](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp)
+
+## <a name="forward-the-request-scheme-and-original-ip-address"></a>Reenvío de un esquema de solicitud y una dirección IP original
+
+Los servidores proxy, los equilibradores de carga y otros dispositivos de red con frecuencia ocultan información sobre una solicitud antes de que llegue a la aplicación en contenedor:
+
+* Cuando las solicitudes HTTPS se redirigen mediante proxy a través de HTTP, el esquema original (HTTPS) se pierde y se debe reenviar en un encabezado.
+* Como una aplicación recibe una solicitud del proxy y no desde su verdadero origen en Internet o la red corporativa, la dirección IP del cliente original también se debe reenviar en el encabezado.
+
+Esta información puede ser importante en el procesamiento de las solicitudes, por ejemplo, en los redireccionamientos, la autenticación, la generación de vínculos, la evaluación de directivas y la geolocalización del cliente.
+
+Para reenviar el esquema y la dirección IP original a una aplicación de ASP.NET Core en contenedores, use el middleware Forwarded Headers. Para más información, vea [Configurar ASP.NET Core para trabajar con servidores proxy y equilibradores de carga](/aspnet/core/host-and-deploy/proxy-load-balancer).
 
 ## <a name="your-first-aspnet-core-docker-app"></a>Primera aplicación de ASP.NET Core Docker
 
@@ -258,7 +269,6 @@ En el dockerfile de este ejemplo se usan las siguientes imágenes de Docker.
 > * Ejecutar la aplicación de ejemplo de ASP.NET en local
 > * Compilar y ejecutar el ejemplo con contenedores de Docker para Linux
 > * Compilar y ejecutar el ejemplo con contenedores de Docker para Windows
-
 
 **Pasos siguientes**
 

@@ -5,17 +5,17 @@ author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
 ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36314703"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Creación de una solución completa de .NET Core en macOS con Visual Studio para Mac
 
 Visual Studio para Mac proporciona un entorno de desarrollo integrado (IDE) completo para el desarrollo de aplicaciones .NET Core. Este tema le guía en la creación de una solución .NET Core que incluye una biblioteca reutilizable y pruebas unitarias.
 
-En este tutorial se muestra cómo crear una aplicación que acepte una palabra de búsqueda y una cadena de texto del usuario, cuente el número de veces que la palabra de búsqueda aparece en la cadena utilizando un método en una biblioteca de clases, y devuelva el resultado al usuario. La solución también incluye pruebas unitarias para la biblioteca de clases como una introducción a los conceptos de desarrollo controlado por pruebas (TDD). Si prefiere continuar usando el tutorial con un ejemplo completo, descargue la [solución de ejemplo](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter). Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+En este tutorial se muestra cómo crear una aplicación que acepte una palabra de búsqueda y una cadena de texto del usuario, cuente el número de veces que la palabra de búsqueda aparece en la cadena utilizando un método en una biblioteca de clases, y devuelva el resultado al usuario. La solución también incluye pruebas unitarias para la biblioteca de clases como una introducción a los conceptos de pruebas unitarias. Si prefiere continuar usando el tutorial con un ejemplo completo, descargue la [solución de ejemplo](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter). Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 > [!NOTE]
 > Sus comentarios son muy importantes. Hay dos maneras de proporcionar comentarios al equipo de desarrollo de Visual Studio para Mac:
@@ -106,15 +106,15 @@ Las pruebas unitarias proporcionan pruebas de software automatizadas durante el 
 
    ![Prueba unitaria inicial para comprobar GetWordCount en la ventana principal del IDE](./media/using-on-mac-vs-full-solution/vsmacfull08.png)
 
-   Mediante TDD, es importante hacer que una nueva prueba no se supere una vez para confirmar que su lógica de prueba es correcta. El método pasa el nombre "Jack" (en mayúsculas) y una cadena con "Jack" y "jack" (mayúsculas y minúsculas). Si el método `GetWordCount` funciona correctamente, devuelve un recuento de dos instancias de la palabra de búsqueda. Para que la prueba no se supere a propósito, primero implementará la prueba afirmando que el método `GetWordCount` no devuelve dos instancias de la palabra de búsqueda "Jack". Continúe con el paso siguiente para no superar la prueba a propósito.
+   Es importante que una prueba nueva no se supere por lo menos en una ocasión, ya que, de este modo, se puede confirmar que su lógica de prueba es correcta. El método pasa el nombre "Jack" (en mayúsculas) y una cadena con "Jack" y "jack" (mayúsculas y minúsculas). Si el método `GetWordCount` funciona correctamente, devuelve un recuento de dos instancias de la palabra de búsqueda. Para que la prueba no se supere a propósito, primero implementará la prueba afirmando que el método `GetWordCount` no devuelve dos instancias de la palabra de búsqueda "Jack". Continúe con el paso siguiente para no superar la prueba a propósito.
 
 1. Abra el panel **Pruebas unitarias** en el lado derecho de la pantalla.
 
-![Panel Pruebas unitarias](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
+   ![Panel Pruebas unitarias](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
 
 1. Haga clic en el icono **Acoplar** para mantener abierto el panel.
 
-![Icono de acoplamiento del panel Pruebas unitarias](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
+   ![Icono de acoplamiento del panel Pruebas unitarias](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. Haga clic en el botón **Ejecutar todas**.
    

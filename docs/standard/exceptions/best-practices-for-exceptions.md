@@ -12,10 +12,10 @@ ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd38b59e39f938d6347457100243f09935444d88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33578090"
 ---
 # <a name="best-practices-for-exceptions"></a>Procedimientos recomendados para excepciones
@@ -104,17 +104,19 @@ Por ejemplo, en las implementaciones de .NET que admiten los dominios de aplicac
 
 - Si los dominios no comparten una base de aplicación común, firme el ensamblado que contiene la información de la excepción con un nombre seguro e impleméntelo en la caché global de ensamblados.
 
-## <a name="include-a-localized-description-string-in-every-exception"></a>Incluir una cadena descriptiva localizada en todas las excepciones
-
-El mensaje de error que ve el usuario deriva de la cadena descriptiva de la excepción que se inició y no del nombre de la clase de excepción.
-
 ## <a name="use-grammatically-correct-error-messages"></a>Usar mensajes de error gramaticalmente correctos
 
-Escriba frases claras e incluya puntuación final. Cara oración de una cadena descriptiva de una excepción debe acabar con un punto. Por ejemplo, "la tabla del registro se ha desbordado". sería una cadena de descripción adecuada.
+Escriba frases claras e incluya puntuación final. Todas las oraciones de la cadena asignada a la propiedad <xref:System.Exception.Message?displayProperty=nameWithType> deben terminar en punto. Por ejemplo, "la tabla del registro se ha desbordado". podría ser una cadena de mensaje adecuada.
+
+## <a name="include-a-localized-string-message-in-every-exception"></a>Incluir un mensaje de cadena localizada en todas las excepciones
+
+El mensaje de error que ve el usuario deriva de la propiedad <xref:System.Exception.Message?displayProperty=nameWithType> de la excepción que se ha generado, y no del nombre de la clase de excepción. Normalmente, se asigna un valor a la propiedad <xref:System.Exception.Message?displayProperty=nameWithType> pasando la cadena de mensaje al argumento `message` de un [constructor de excepciones](xref:System.Exception.%23ctor%2A). 
+
+Para las aplicaciones localizadas, debe proporcionar una cadena de mensaje localizada para todas las excepciones que la aplicación pueda desencadenar. Use archivos de recursos para proporcionar mensajes de error localizados. Para obtener información sobre la localización de aplicaciones y la recuperación de cadenas localizadas, vea [Recursos de aplicaciones de escritorio](../../framework/resources/index.md) y <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>En excepciones personalizadas, proporcione propiedades adicionales según sea necesario
 
-Únicamente proporcione información adicional para una excepción (además de la cadena descriptiva) si hay un escenario de programación en que dicha información sea útil. Por ejemplo, <xref:System.IO.FileNotFoundException> proporciona la propiedad <xref:System.IO.FileNotFoundException.FileName>.
+Únicamente proporcione información adicional para una excepción, además de la cadena del mensaje personalizado, si hay un escenario de programación en el que dicha información sea útil. Por ejemplo, <xref:System.IO.FileNotFoundException> proporciona la propiedad <xref:System.IO.FileNotFoundException.FileName>.
 
 ## <a name="place-throw-statements-so-that-the-stack-trace-will-be-helpful"></a>Colocar instrucciones de iniciación para que el seguimiento de la pila sea útil
 
