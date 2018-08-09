@@ -6,14 +6,14 @@ helpviewer_keywords:
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
 ms.openlocfilehash: 65bc0439696612cd8331a9c0718efcfee83af574
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33602741"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;incluir&gt; (Visual Basic)
-Hace referencia a otro archivo que describe los tipos y miembros en el código fuente.  
+Hace referencia a otro archivo que se describe los tipos y miembros en el código fuente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -26,21 +26,21 @@ Hace referencia a otro archivo que describe los tipos y miembros en el código f
  Requerido. El nombre del archivo que contiene la documentación. El nombre de archivo se puede calificar con una ruta de acceso. Incluya `filename` comillas dobles ("").  
   
  `tagpath`  
- Requerido. La ruta de acceso de las etiquetas de `filename` que conduce a la etiqueta `name`. Escriba la ruta de acceso entre comillas dobles ("").  
+ Requerido. La ruta de acceso de las etiquetas de `filename` que conduce a la etiqueta `name`. Incluya la ruta de acceso entre comillas dobles ("").  
   
  `name`  
  Requerido. El especificador de nombre en la etiqueta que precede a los comentarios. `Name` tendrá un `id`.  
   
  `id`  
- Requerido. El identificador de la etiqueta que precede a los comentarios. Incluya el identificador entre comillas simples (' ').  
+ Requerido. El identificador de la etiqueta que precede a los comentarios. Ponga el identificador entre comillas simples (' ').  
   
 ## <a name="remarks"></a>Comentarios  
- Use la `<include>` etiqueta para hacer referencia a comentarios colocados en otro archivo que describen los tipos y miembros en el código fuente. Esto es una alternativa a colocar los comentarios de documentación directamente en el archivo de código fuente.  
+ Use la `<include>` etiqueta para hacer referencia a los comentarios de otro archivo que describen los tipos y miembros en el código fuente. Esto es una alternativa a colocar los comentarios de documentación directamente en el archivo de código fuente.  
   
- La `<include>` etiqueta utilizará la recomendación de la versión 1.0 de W3C XML Path Language (XPath). Para obtener más información para formas de personalizar su `<include>` utilizar está disponible en http://www.w3.org/TR/xpath.  
+ El `<include>` etiqueta usa la recomendación versión 1.0 de W3C XML Path Language (XPath). Para obtener más información sobre cómo personalizar su `<include>` uso está disponible en http://www.w3.org/TR/xpath.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se utiliza la `<include>` etiqueta que se va a importar los comentarios de documentación de miembro desde un archivo denominado `commentFile.xml`.  
+ Este ejemplo se usa el `<include>` etiqueta para importar los comentarios de documentación de miembro de un archivo denominado `commentFile.xml`.  
   
  [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
