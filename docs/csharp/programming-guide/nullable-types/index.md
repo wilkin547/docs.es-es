@@ -1,65 +1,65 @@
 ---
 title: Tipos que aceptan valores NULL (Guía de programación de C#)
-ms.date: 05/15/2017
+description: Más información sobre los tipos que aceptan valores NULL de C# y su uso
+ms.date: 07/30/2018
 helpviewer_keywords:
 - nullable types [C#]
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
 ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "39245600"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Tipos que aceptan valores NULL (Guía de programación de C#)
-Los tipos que aceptan valores NULL son instancias de la estructura <xref:System.Nullable%601?displayProperty=nameWithType>. Un tipo que acepta valores NULL puede representar el intervalo de valores correcto para su tipo de valor subyacente, además de un valor `null` adicional correcto. Por ejemplo, a un valor `Nullable<Int32>`, también conocido como "Nullable of Int32", se le puede asignar cualquier valor comprendido entre -2147483648 y 2147483647, o se le puede asignar el valor `null`. A `Nullable<bool>` se le pueden asignar los valores [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) o [null](../../../csharp/language-reference/keywords/null.md). La capacidad de asignar `null` a tipos numéricos y booleanos resulta especialmente útil cuando se trabaja con bases de datos y otros tipos de datos que contienen elementos a los que no se les puede asignar ningún valor. Por ejemplo, un campo booleano en una base de datos puede almacenar los valores `true` o `false`, o puede ser indefinido. 
+
+Los tipos que aceptan valores NULL son instancias de la estructura <xref:System.Nullable%601?displayProperty=nameWithType>. Los tipos que aceptan valores NULL pueden representar todos los valores de un tipo `T` subyacente y un valor [NULL](../../language-reference/keywords/null.md) adicional. EL tipo `T` subyacente puede ser cualquier [tipo de valor](../../language-reference/keywords/value-types.md) que no acepte valores NULL. `T` no puede ser un tipo de referencia.
+
+Por ejemplo, puede asignar `null` o cualquier valor entero de <xref:System.Int32.MinValue?displayProperty=nameWithType> a <xref:System.Int32.MaxValue?displayProperty=nameWithType> a un elemento `Nullable<int>` y [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) o `null` a un elemento `Nullable<bool>`.
+
+Los tipos que aceptan valores NULL se usan cuando es necesario representar el valor indefinido de un tipo subyacente. Una variable booleana solo puede tener dos valores: true y false. No hay ningún valor "sin definir". En muchas aplicaciones de programación, especialmente en las interacciones de las bases de datos, el valor de una variable puede ser indefinido o incluso no estar disponible. Por ejemplo, un campo de una base de datos puede contener los valores true o false, pero también puede no contener ningún valor. En tal caso, se usa un tipo `Nullable<bool>`.
+
+Los tipos que aceptan valores NULL tienen la siguientes características:
   
-[!code-csharp[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
+- Los tipos que aceptan valores NULL representan variables de tipo de valor a las que se puede asignar el valor `null`. No se puede crear un tipo que acepta valores NULL basado en un tipo de referencia. (Los tipos de referencia ya admiten el valor `null`).  
   
-Para obtener más ejemplos, vea [Utilizar tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).  
+- La sintaxis `T?` es una abreviatura de `Nullable<T>`. Las dos formas son intercambiables.  
   
-## <a name="nullable-types-overview"></a>Información general sobre tipos que aceptan valores NULL  
- Los tipos que aceptan valores NULL tienen la siguientes características:  
+- Asigne un valor a un tipo que acepta valores NULL del mismo modo que para un tipo de valor subyacente: `int? x = 10;` o `double? d = 4.108;`. También puede asignar el valor `null`: `int? x = null;`.  
   
--   Los tipos que aceptan valores NULL representan variables de tipo de valor a las que se puede asignar el valor `null`. No se puede crear un tipo que acepta valores NULL basado en un tipo de referencia. (Los tipos de referencia ya admiten el valor `null`).  
+- Use las propiedades de solo lectura <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> y <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> para probar si hay valores NULL y recuperar el valor, como se muestra en el ejemplo siguiente: `if (x.HasValue) y = x.Value;`  
   
--   La sintaxis `T?` es una abreviatura de <xref:System.Nullable%601>, donde `T` es un tipo de valor. Las dos formas son intercambiables.  
+  - La propiedad <xref:System.Nullable%601.HasValue%2A> devuelve `true` si la variable contiene un valor, o `false` si es `null`.
   
--   Asigne un valor a un tipo que acepta valores NULL tal como lo haría para un tipo de valor normal, por ejemplo `int? x = 10;` o `double? d = 4.108;`. A un tipo que acepta valores NULL también se le puede asignar el valor `null`: `int? x = null;`.  
+  - La propiedad <xref:System.Nullable%601.Value%2A> devuelve un valor si <xref:System.Nullable%601.HasValue%2A> devuelve `true`. De lo contrario, se produce una excepción <xref:System.InvalidOperationException>.  
   
--   Use el método <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> para devolver el valor asignado, o bien el valor predeterminado para el tipo subyacente si el valor es `null`, por ejemplo, `int j = x.GetValueOrDefault();`.  
+- También puede utilizar los operadores `==` y `!=` con un tipo que acepta valores NULL, como se muestra en el ejemplo siguiente: `if (x != null) y = x.Value;`. Si `a` y `b` son ambos NULL, `a == b` se evalúa como `true`.  
+
+- A partir de C# 7.0, puede usar la coincidencia de patrones tanto para examinar como para obtener un valor de un tipo que acepta valores NULL: `if (x is int xValue) y = xValue;`.
   
--   Use las propiedades de solo lectura <xref:System.Nullable%601.HasValue%2A> y <xref:System.Nullable%601.Value%2A> para probar si hay valores NULL y recuperar el valor, como se muestra en el ejemplo siguiente: `if(x.HasValue) j = x.Value;`  
+- El valor predeterminado de `T?` es una instancia cuya propiedad <xref:System.Nullable%601.HasValue%2A> devuelve `false`.  
+
+- Use el método <xref:System.Nullable%601.GetValueOrDefault> para devolver el valor asignado, o bien el [valor predeterminado](../../language-reference/keywords/default-values-table.md) del tipo subyacente si el valor es `null`.  
+
+- Use el método <xref:System.Nullable%601.GetValueOrDefault(%600)> para devolver el valor asignado, o bien el valor predeterminado proporcionado si el valor es `null`.
   
-    -   La propiedad `HasValue` devuelve `true` si la variable contiene un valor, o `false` si es `null`.  
+- Use el [operador de fusión NULL](../../language-reference/operators/null-coalescing-operator.md) (`??`) para asignar un valor a un tipo subyacente basado en un valor del tipo que acepta valores NULL: `int? x = null; int y = x ?? -1;`. En el ejemplo, dado que `x` es NULL, el valor resultante de `y` es `-1`.
+
+- Si se establece una conversión definida por el usuario entre dos tipos de datos, esa misma conversión también se puede usar con las versiones que aceptan valores NULL de dichos tipos de datos.
   
-    -   La propiedad `Value` devuelve un valor si se asigna uno. De lo contrario, se produce una excepción <xref:System.InvalidOperationException?displayProperty=nameWithType>.  
+- No se permiten los tipos anidados que aceptan valores NULL. La línea siguiente no se compilará: `Nullable<Nullable<int>> n;`  
+
+Para obtener más información, consulte los temas [Uso de tipos que aceptan valores NULL](using-nullable-types.md) y [Cómo: Identificar tipos que aceptan valores NULL ](how-to-identify-a-nullable-type.md).
   
-    -   El valor predeterminado de `HasValue` es `false`. La propiedad `Value` no tiene ningún valor predeterminado.  
-  
-    -   También puede utilizar los operadores `==` y `!=` con un tipo que acepta valores NULL, como se muestra en el ejemplo siguiente: `if (x != null) y = x;`  
-  
--   Utilice el operador `??` para asignar un valor predeterminado que se aplicará cuando un tipo que acepta valores NULL cuyo valor actual es `null` se asigna a un tipo que no acepta valores NULL, por ejemplo `int? x = null; int y = x ?? -1;`  
-  
--   No se permiten los tipos anidados que aceptan valores NULL. La línea siguiente no se compilará: `Nullable<Nullable<int>> n;`  
-  
-## <a name="related-sections"></a>Secciones relacionadas  
- Para obtener más información:  
-  
--   [Utilizar tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
-  
--   [Aplicar la conversión boxing a tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
-  
--   [Operador ??](../../../csharp/language-reference/operators/null-coalescing-operator.md)  
-  
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Vea también  
- <xref:System.Nullable>  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [C#](../../../csharp/index.md)  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [¿Qué significa exactamente "elevado"?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+## <a name="see-also"></a>Vea también
+
+ <xref:System.Nullable%601?displayProperty=nameWithType>  
+ <xref:System.Nullable?displayProperty=nameWithType>  
+ [Operador !](../../language-reference/operators/null-coalescing-operator.md)  
+ [Guía de programación de C#](../index.md)  
+ [Guía de C#](../../index.md)  
+ [Referencia de C#](../../language-reference/index.md)  
+ [Tipos de valores que aceptan valores NULL (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  

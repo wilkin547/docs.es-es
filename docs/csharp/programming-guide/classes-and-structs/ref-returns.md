@@ -5,10 +5,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
 ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33339623"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valores devueltos y variables locales de tipo ref
@@ -35,16 +35,19 @@ Además, los valores devueltos por referencia no se permiten en métodos asincr�
  
 ## <a name="defining-a-ref-return-value"></a>Definir un valor devuelto de tipo ref
 
-Para definir un valor devuelto de tipo ref, agregue la palabra clave [ref](../../language-reference/keywords/ref.md) al tipo de valor devuelto de la firma del método. Por ejemplo, la siguiente firma indica que la propiedad `GetContactInformation` devuelve una referencia a un objeto `Person` al autor de la llamada:
+Un método que devuelve un *valor devuelto de referencia* debe cumplir las dos condiciones siguientes:
+
+- La firma del método incluye la palabra clave [ref](../../language-reference/keywords/ref.md) delante del tipo de valor devuelto.
+- Cada instrucción [return](../../language-reference/keywords/return.md) del cuerpo del método incluye la palabra clave [ref](../../language-reference/keywords/ref.md) delante del nombre de la instancia devuelta.
+
+En el método siguiente se muestra un método que cumple estas condiciones y devuelve una referencia a un objeto `Person` denominado `p`:
 
 ```csharp
-public ref Person GetContactInformation(string fname, string lname);
-```
-
-Además, el nombre del objeto devuelto por cada instrucción [return](../../language-reference/keywords/return.md) en el cuerpo del método debe ir precedido de la palabra clave [ref](../../language-reference/keywords/ref.md). Por ejemplo, la siguiente instrucción `return` devuelve una referencia a un objeto `Person` denominado `p`:
-
-```csharp
-return ref p;
+public ref Person GetContactInformation(string fname, string lname)
+{
+    // ...method implementation...
+    return ref p;
+}
 ```
 
 ## <a name="consuming-a-ref-return-value"></a>Usar un valor devuelto de tipo ref
