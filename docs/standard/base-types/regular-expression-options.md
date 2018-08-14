@@ -289,7 +289,7 @@ ms.locfileid: "33579657"
   
  `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`  
   
- El modelo es similar al modelo definido en la sección [Solo capturas explícitas<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>, a excepción de que utiliza la opción ](#Explicit) para ignorar el espacio en blanco del modelo.  
+ El modelo es similar al modelo definido en la sección [Solo capturas explícitas, a excepción de que utiliza la opción ](#Explicit)<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> para ignorar el espacio en blanco del modelo.  
   
  [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
  [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]  
