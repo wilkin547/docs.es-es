@@ -2,31 +2,143 @@
 title: Funciones canónicas matemáticas
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: c61db6d977614b95ea507b38c3890f2da8228158
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 0fc9f4942c3f76f139ab7e4400005f0bfe80204e
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199311"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754461"
 ---
-# <a name="math-canonical-functions"></a><span data-ttu-id="d5df5-102">Funciones canónicas matemáticas</span><span class="sxs-lookup"><span data-stu-id="d5df5-102">Math Canonical Functions</span></span>
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="d5df5-103"> incluye funciones canónicas matemáticas.</span><span class="sxs-lookup"><span data-stu-id="d5df5-103"> includes math canonical functions.</span></span>  
+# <a name="math-canonical-functions"></a><span data-ttu-id="c90e9-102">Funciones canónicas matemáticas</span><span class="sxs-lookup"><span data-stu-id="c90e9-102">Math Canonical Functions</span></span>
+
+<span data-ttu-id="c90e9-103">Entity SQL incluye las siguientes funciones canónicas matemáticas:</span><span class="sxs-lookup"><span data-stu-id="c90e9-103">Entity SQL includes the following math canonical functions:</span></span>
   
- <span data-ttu-id="d5df5-104">En la tabla siguiente se muestran las funciones canónicas matemáticas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d5df5-104">The following table shows the math [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
+## <a name="absvalue"></a><span data-ttu-id="c90e9-104">Abs(valor)</span><span class="sxs-lookup"><span data-stu-id="c90e9-104">Abs(value)</span></span>
+
+<span data-ttu-id="c90e9-105">Devuelve el valor absoluto de `value`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-105">Returns the absolute value of `value`.</span></span>
+
+<span data-ttu-id="c90e9-106">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="c90e9-106">**Arguments**</span></span>
+
+<span data-ttu-id="c90e9-107">Un `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, y `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-107">An `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, and `Decimal`.</span></span>
+
+<span data-ttu-id="c90e9-108">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="c90e9-108">**Return Value**</span></span>
+
+<span data-ttu-id="c90e9-109">Tipo de `value`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-109">The type of `value`.</span></span>
+
+<span data-ttu-id="c90e9-110">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="c90e9-110">**Example**</span></span>
+
+`Abs(-2)`
+
+## <a name="ceilingvalue"></a><span data-ttu-id="c90e9-111">Ceiling(valor)</span><span class="sxs-lookup"><span data-stu-id="c90e9-111">Ceiling(value)</span></span>
+
+<span data-ttu-id="c90e9-112">Devuelve el menor entero que es mayor o igual que `value`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-112">Returns the smallest integer that is not less than `value`.</span></span>
+
+<span data-ttu-id="c90e9-113">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="c90e9-113">**Arguments**</span></span>
+
+<span data-ttu-id="c90e9-114">Un `Single`, `Double`, y `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-114">A `Single`, `Double`, and `Decimal`.</span></span>
+
+<span data-ttu-id="c90e9-115">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="c90e9-115">**Return Value**</span></span>
+
+<span data-ttu-id="c90e9-116">Tipo de `value`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-116">The type of `value`.</span></span>
+
+<span data-ttu-id="c90e9-117">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="c90e9-117">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#EDM_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]
+[!code-sql[DP EntityServices Concepts#EDM_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]
+
+## <a name="floorvalue"></a><span data-ttu-id="c90e9-118">Floor(valor)</span><span class="sxs-lookup"><span data-stu-id="c90e9-118">Floor(value)</span></span>
+
+<span data-ttu-id="c90e9-119">Devuelve el mayor entero que es menor o igual que `value`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-119">Returns the largest integer that is not greater than `value`.</span></span>
+
+<span data-ttu-id="c90e9-120">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="c90e9-120">**Arguments**</span></span>
+
+<span data-ttu-id="c90e9-121">Un `Single`, `Double`, y `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-121">A `Single`, `Double`, and `Decimal`.</span></span>
+
+<span data-ttu-id="c90e9-122">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="c90e9-122">**Return Value**</span></span>
+
+<span data-ttu-id="c90e9-123">Tipo de `value`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-123">The type of `value`.</span></span>
+
+<span data-ttu-id="c90e9-124">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="c90e9-124">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#EDM_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)]
+[!code-sql[DP EntityServices Concepts#EDM_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]
+
+## <a name="powervalue-exponent"></a><span data-ttu-id="c90e9-125">Power(valor, exponente)</span><span class="sxs-lookup"><span data-stu-id="c90e9-125">Power(value, exponent)</span></span>
+
+<span data-ttu-id="c90e9-126">Devuelve el resultado del `value` especificado al `exponent` especificado.</span><span class="sxs-lookup"><span data-stu-id="c90e9-126">Returns the result of the specified `value` to the specified `exponent`.</span></span>
+
+<span data-ttu-id="c90e9-127">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="c90e9-127">**Arguments**</span></span>
+
+|  |  |
+|--|--|
+|`value` | <span data-ttu-id="c90e9-128">Un `Int32, Int64, Double`, o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-128">An `Int32, Int64, Double`, or `Decimal`.</span></span> |
+|`exponent` | <span data-ttu-id="c90e9-129">Un `Int64`, `Double`, o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-129">An `Int64`, `Double`, or `Decimal`.</span></span> |
+
+<span data-ttu-id="c90e9-130">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="c90e9-130">**Return Value**</span></span>
+
+<span data-ttu-id="c90e9-131">Tipo de `value`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-131">The type of `value`.</span></span>
+
+<span data-ttu-id="c90e9-132">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="c90e9-132">**Example**</span></span>
+
+`Power(748.58,2)`
+
+## <a name="roundvalue"></a><span data-ttu-id="c90e9-133">Round(valor)</span><span class="sxs-lookup"><span data-stu-id="c90e9-133">Round(value)</span></span>
+
+<span data-ttu-id="c90e9-134">Devuelve la parte entera de `value`, redondeada al entero más próximo.</span><span class="sxs-lookup"><span data-stu-id="c90e9-134">Returns the integer portion of `value`, rounded to the nearest integer.</span></span>
+
+<span data-ttu-id="c90e9-135">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="c90e9-135">**Arguments**</span></span>
+
+<span data-ttu-id="c90e9-136">Un `Single`, `Double`, y `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-136">A `Single`, `Double`, and `Decimal`.</span></span>
+
+<span data-ttu-id="c90e9-137">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="c90e9-137">**Return Value**</span></span>
+
+<span data-ttu-id="c90e9-138">Tipo de `value`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-138">The type of `value`.</span></span>
+
+<span data-ttu-id="c90e9-139">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="c90e9-139">**Example**</span></span>
+
+`Round(748.58)`
+
+## <a name="roundvalue-digits"></a><span data-ttu-id="c90e9-140">Round(valor, dígitos)</span><span class="sxs-lookup"><span data-stu-id="c90e9-140">Round(value, digits)</span></span>
+
+<span data-ttu-id="c90e9-141">Devuelve `value`, redondeado a los `digits` especificados más próximos.</span><span class="sxs-lookup"><span data-stu-id="c90e9-141">Returns the `value`, rounded to the nearest specified `digits`.</span></span>
+
+<span data-ttu-id="c90e9-142">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="c90e9-142">**Arguments**</span></span>
+
+|  |  |
+|--|--|
+|`value`|<span data-ttu-id="c90e9-143">`Double` o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-143">`Double` or `Decimal`.</span></span>|
+|`digits`|<span data-ttu-id="c90e9-144">`Int16` o `Int32`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-144">`Int16` or `Int32`.</span></span>|
+
+<span data-ttu-id="c90e9-145">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="c90e9-145">**Return Value**</span></span>
+
+<span data-ttu-id="c90e9-146">Tipo de `value`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-146">The type of `value`.</span></span>
+
+<span data-ttu-id="c90e9-147">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="c90e9-147">**Example**</span></span>
+
+`Round(748.58,1)`
+
+## <a name="truncatevalue-digits"></a><span data-ttu-id="c90e9-148">Truncate(valor, dígitos)</span><span class="sxs-lookup"><span data-stu-id="c90e9-148">Truncate(value, digits)</span></span>
+
+<span data-ttu-id="c90e9-149">Devuelve `value`, truncado a los `digits` especificados más próximos.</span><span class="sxs-lookup"><span data-stu-id="c90e9-149">Returns the `value`, truncated to the nearest specified `digits`.</span></span>
+
+<span data-ttu-id="c90e9-150">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="c90e9-150">**Arguments**</span></span>
+
+|  |  |
+|--|--|
+|`value`|<span data-ttu-id="c90e9-151">`Double` o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-151">`Double` or `Decimal`.</span></span>|
+|`digits`|<span data-ttu-id="c90e9-152">`Int16` o `Int32`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-152">`Int16` or `Int32`.</span></span>|
+
+<span data-ttu-id="c90e9-153">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="c90e9-153">**Return Value**</span></span>
+
+<span data-ttu-id="c90e9-154">Tipo de `value`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-154">The type of `value`.</span></span>
+
+<span data-ttu-id="c90e9-155">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="c90e9-155">**Example**</span></span>
+
+`Truncate(748.58,1)`  
   
-|<span data-ttu-id="d5df5-105">Función</span><span class="sxs-lookup"><span data-stu-id="d5df5-105">Function</span></span>|<span data-ttu-id="d5df5-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="d5df5-106">Description</span></span>|  
-|--------------|-----------------|  
-|`Abs(value)`|<span data-ttu-id="d5df5-107">Devuelve el valor absoluto de `value`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-107">Returns the absolute value of `value`.</span></span><br /><br /> <span data-ttu-id="d5df5-108">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="d5df5-108">**Arguments**</span></span><br /><br /> <span data-ttu-id="d5df5-109">Un `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, y `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-109">An `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="d5df5-110">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="d5df5-110">**Return Value**</span></span><br /><br /> <span data-ttu-id="d5df5-111">Tipo de `value`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-111">The type of `value`.</span></span><br /><br /> <span data-ttu-id="d5df5-112">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="d5df5-112">**Example**</span></span><br /><br /> `Abs(-2)`|  
-|`Ceiling(value)`|<span data-ttu-id="d5df5-113">Devuelve el menor entero que es mayor o igual que `value`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-113">Returns the smallest integer that is not less than `value`.</span></span><br /><br /> <span data-ttu-id="d5df5-114">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="d5df5-114">**Arguments**</span></span><br /><br /> <span data-ttu-id="d5df5-115">Un `Single`, `Double`, y `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-115">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="d5df5-116">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="d5df5-116">**Return Value**</span></span><br /><br /> <span data-ttu-id="d5df5-117">Tipo de `value`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-117">The type of `value`.</span></span><br /><br /> <span data-ttu-id="d5df5-118">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="d5df5-118">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)] <br /><br /> [!code-sql[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]|  
-|`Floor(value)`|<span data-ttu-id="d5df5-119">Devuelve el mayor entero que es menor o igual que `value`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-119">Returns the largest integer that is not greater than `value`.</span></span><br /><br /> <span data-ttu-id="d5df5-120">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="d5df5-120">**Arguments**</span></span><br /><br /> <span data-ttu-id="d5df5-121">Un `Single`, `Double`, y `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-121">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="d5df5-122">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="d5df5-122">**Return Value**</span></span><br /><br /> <span data-ttu-id="d5df5-123">Tipo de `value`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-123">The type of `value`.</span></span><br /><br /> <span data-ttu-id="d5df5-124">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="d5df5-124">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)] <br /><br /> [!code-sql[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]|  
-|`Power(value, exponent)`|<span data-ttu-id="d5df5-125">Devuelve el resultado del `value` especificado al `exponent` especificado.</span><span class="sxs-lookup"><span data-stu-id="d5df5-125">Returns the result of the specified `value` to the specified `exponent`.</span></span><br /><br /> <span data-ttu-id="d5df5-126">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="d5df5-126">**Arguments**</span></span><br /><br /> <span data-ttu-id="d5df5-127">`value`: Valor de tipo `Int32, Int64, Double`, o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-127">`value`: An `Int32, Int64, Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="d5df5-128">`exponent`: Valor de tipo `Int64`, `Double`, o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-128">`exponent`: An `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="d5df5-129">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="d5df5-129">**Return Value**</span></span><br /><br /> <span data-ttu-id="d5df5-130">Tipo de `value`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-130">The type of `value`.</span></span><br /><br /> <span data-ttu-id="d5df5-131">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="d5df5-131">**Example**</span></span><br /><br /> `Power(748.58,2)`|  
-|`Round(value)`|<span data-ttu-id="d5df5-132">Devuelve la parte entera de `value`, redondeada al entero más próximo.</span><span class="sxs-lookup"><span data-stu-id="d5df5-132">Returns the integer portion of `value`, rounded to the nearest integer.</span></span><br /><br /> <span data-ttu-id="d5df5-133">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="d5df5-133">**Arguments**</span></span><br /><br /> <span data-ttu-id="d5df5-134">Un `Single`, `Double`, y `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-134">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="d5df5-135">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="d5df5-135">**Return Value**</span></span><br /><br /> <span data-ttu-id="d5df5-136">Tipo de `value`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-136">The type of `value`.</span></span><br /><br /> <span data-ttu-id="d5df5-137">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="d5df5-137">**Example**</span></span><br /><br /> `Round(748.58)`|  
-|`Round(value, digits)`|<span data-ttu-id="d5df5-138">Devuelve `value`, redondeado a los `digits` especificados más próximos.</span><span class="sxs-lookup"><span data-stu-id="d5df5-138">Returns the `value`, rounded to the nearest specified `digits`.</span></span><br /><br /> <span data-ttu-id="d5df5-139">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="d5df5-139">**Arguments**</span></span><br /><br /> <span data-ttu-id="d5df5-140">`value`: `Double` o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-140">`value`: `Double` or `Decimal`.</span></span><br /><br /> <span data-ttu-id="d5df5-141">`digits`: `Int16` o `Int32`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-141">`digits`: `Int16` or `Int32`.</span></span><br /><br /> <span data-ttu-id="d5df5-142">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="d5df5-142">**Return Value**</span></span><br /><br /> <span data-ttu-id="d5df5-143">Tipo de `value`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-143">The type of `value`.</span></span><br /><br /> <span data-ttu-id="d5df5-144">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="d5df5-144">**Example**</span></span><br /><br /> `Round(748.58,1)`|  
-|`Truncate(value, digits)`|<span data-ttu-id="d5df5-145">Devuelve `value`, truncado a los `digits` especificados más próximos.</span><span class="sxs-lookup"><span data-stu-id="d5df5-145">Returns the `value`, truncated to the nearest specified `digits`.</span></span><br /><br /> <span data-ttu-id="d5df5-146">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="d5df5-146">**Arguments**</span></span><br /><br /> <span data-ttu-id="d5df5-147">`value`: `Double` o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-147">`value`: `Double` or `Decimal`.</span></span><br /><br /> <span data-ttu-id="d5df5-148">`digits`: `Int16` o `Int32`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-148">`digits`: `Int16` or `Int32`.</span></span><br /><br /> <span data-ttu-id="d5df5-149">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="d5df5-149">**Return Value**</span></span><br /><br /> <span data-ttu-id="d5df5-150">Tipo de `value`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-150">The type of `value`.</span></span><br /><br /> <span data-ttu-id="d5df5-151">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="d5df5-151">**Example**</span></span><br /><br /> `Truncate(748.58,1)`|  
+ <span data-ttu-id="c90e9-156">Estas funciones devolverán `null` si se proporciona la entrada `null`.</span><span class="sxs-lookup"><span data-stu-id="c90e9-156">These functions will return `null` if given `null` input.</span></span>  
   
- <span data-ttu-id="d5df5-152">Estas funciones devolverán `null` si se proporciona la entrada `null`.</span><span class="sxs-lookup"><span data-stu-id="d5df5-152">These functions will return `null` if given `null` input.</span></span>  
+ <span data-ttu-id="c90e9-157">La funcionalidad equivalente está disponible en el proveedor administrado de Microsoft SQL Client.</span><span class="sxs-lookup"><span data-stu-id="c90e9-157">Equivalent functionality is available in the Microsoft SQL Client Managed Provider.</span></span> <span data-ttu-id="c90e9-158">Para obtener más información, consulte [SqlClient para las funciones de Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span><span class="sxs-lookup"><span data-stu-id="c90e9-158">For more information, see [SqlClient for Entity Framework Functions](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span></span>  
   
- <span data-ttu-id="d5df5-153">La funcionalidad equivalente está disponible en el proveedor administrado de Microsoft SQL Client.</span><span class="sxs-lookup"><span data-stu-id="d5df5-153">Equivalent functionality is available in the Microsoft SQL Client Managed Provider.</span></span> <span data-ttu-id="d5df5-154">Para obtener más información, consulte [SqlClient para las funciones de Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span><span class="sxs-lookup"><span data-stu-id="d5df5-154">For more information, see [SqlClient for Entity Framework Functions](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="d5df5-155">Vea también</span><span class="sxs-lookup"><span data-stu-id="d5df5-155">See Also</span></span>  
- [<span data-ttu-id="d5df5-156">Funciones canónicas</span><span class="sxs-lookup"><span data-stu-id="d5df5-156">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+## <a name="see-also"></a><span data-ttu-id="c90e9-159">Vea también</span><span class="sxs-lookup"><span data-stu-id="c90e9-159">See Also</span></span>  
+ [<span data-ttu-id="c90e9-160">Funciones canónicas</span><span class="sxs-lookup"><span data-stu-id="c90e9-160">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
