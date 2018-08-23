@@ -9,17 +9,17 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], merging
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
-ms.openlocfilehash: 9f7534720f9be185a176247ce00b0be5e2649bff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64e7e7875a635bcd4fbafb62d3ee7b7018214ee4
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538759"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754542"
 ---
 # <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Cómo: Insertar un elemento MenuStrip en un menú desplegable MDI (formularios Windows Forms)
 En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múltiples documentos (MDI) puede ser diferente de la ventana primaria MDI. Por ejemplo, el elemento primario MDI podría ser una hoja de cálculo y el elemento secundario MDI podría ser un gráfico. En ese caso, querrá actualizar el contenido del menú del elemento primario MDI con el contenido del menú del elemento secundario MDI cuando se activan ventanas secundarias MDI de diferentes tipos.  
   
- El siguiente procedimiento usa el <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, y <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> propiedades para insertar un grupo de elementos de menú del menú secundario MDI en la parte desplegable del menú primario MDI. Cerrar la ventana secundaria MDI quita los elementos de menú insertado del elemento primario MDI.  
+ El siguiente procedimiento usa la <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, y <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> propiedades para insertar un grupo de elementos de menú desde el menú secundario MDI en la parte desplegable del menú primario MDI. Cierre la ventana secundaria MDI quita los elementos de menú insertado del elemento primario MDI.  
   
 ### <a name="to-insert-a-menustrip-into-an-mdi-drop-down-menu"></a>Para insertar un elemento MenuStrip en un menú desplegable MDI  
   
@@ -29,17 +29,17 @@ En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múlti
   
 3.  Agregue un elemento de menú de nivel superior a la `Form1`<xref:System.Windows.Forms.MenuStrip> y establezca su propiedad <xref:System.Windows.Forms.Control.Text%2A> en `&File`.  
   
-4.  Agregue tres elementos de submenú en el `&File` elemento de menú y establezca sus <xref:System.Windows.Forms.ToolStripItem.Text%2A> propiedades para `&Open`, `&Import from`, y `E&xit`.  
+4.  Agregue tres elementos de submenú a la `&File` elemento de menú y establezca sus <xref:System.Windows.Forms.ToolStripItem.Text%2A> propiedades a `&Open`, `&Import from`, y `E&xit`.  
   
-5.  Agregar dos elementos de submenú a la `&Import from` elemento de submenú y establezca sus <xref:System.Windows.Forms.ToolStripItem.Text%2A> propiedades `&Word` y `&Excel`.  
+5.  Agregar dos elementos de submenú a la `&Import from` elemento de submenú y establezca sus <xref:System.Windows.Forms.ToolStripItem.Text%2A> propiedades a `&Word` y `&Excel`.  
   
 6.  Agregue un formulario al proyecto, agregue una <xref:System.Windows.Forms.MenuStrip> al formulario y establezca la propiedad <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> de la `Form2`<xref:System.Windows.Forms.MenuStrip> en `true`.  
   
 7.  Agregue un elemento de menú de nivel superior a la `Form2`<xref:System.Windows.Forms.MenuStrip> y establezca su propiedad <xref:System.Windows.Forms.ToolStripItem.Text%2A> en `&File`.  
   
-8.  Agregar elementos de submenú para los `&File` menú de `Form2` en el orden siguiente: una <xref:System.Windows.Forms.ToolStripSeparator>, `&Save`, `&Close``and Save`y otro <xref:System.Windows.Forms.ToolStripSeparator>.  
+8.  Agregar elementos de submenú para los `&File` menú de `Form2` en el orden siguiente: un <xref:System.Windows.Forms.ToolStripSeparator>, `&Save`, `Save and &Close`y otro <xref:System.Windows.Forms.ToolStripSeparator>.  
   
-9. Establecer el <xref:System.Windows.Forms.MergeAction> y <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> propiedades de la `Form2` elementos de menú, como se muestra en la tabla siguiente.  
+9. Establecer el <xref:System.Windows.Forms.MergeAction> y <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> propiedades de la `Form2` los elementos de menú, como se muestra en la tabla siguiente.  
   
     |Elemento de menú de Form2|Valor de MergeAction|Valor de MergeIndex|  
     |---------------------|-----------------------|----------------------|  

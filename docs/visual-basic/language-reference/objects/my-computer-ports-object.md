@@ -1,16 +1,16 @@
 ---
-title: My.Computer.Ports (Objeto)
+title: My.Computer.Ports (objeto) (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Ports object
 - Ports object
 ms.assetid: 244ede4e-25b7-445b-9fd6-163550cce193
-ms.openlocfilehash: a3d551c6591b16480bb8a8ae772a1cddbd59cbd9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ec498fd57fb7100a58edec93941ec7602e4b98f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595945"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754173"
 ---
 # <a name="mycomputerports-object"></a>My.Computer.Ports (Objeto)
 Proporciona una propiedad y un método para obtener acceso a los puertos serie del equipo.  
@@ -18,10 +18,10 @@ Proporciona una propiedad y un método para obtener acceso a los puertos serie d
 ## <a name="remarks"></a>Comentarios  
  Para obtener información acerca de los métodos y propiedades de la `My.Computer.Ports` de objetos, consulte <xref:Microsoft.VisualBasic.Devices.Ports>.  
   
- Para obtener más información, consulte [obtiene acceso a los puertos del equipo](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
+ Para obtener más información, consulte [acceso a los puertos del equipo](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
   
 > [!NOTE]
->  También puede usar propiedades y métodos de la <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> clase acceso a los puertos serie del equipo.  
+>  También puede usar propiedades y métodos de la <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> clase para tener acceso a puertos serie del equipo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  

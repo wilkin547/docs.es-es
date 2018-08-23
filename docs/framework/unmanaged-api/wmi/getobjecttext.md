@@ -1,6 +1,6 @@
 ---
-title: Función GetObjectText (referencia de API no administrada)
-description: La función GetObjectText devuelve una representación textual de un objeto en la sintaxis MOF.
+title: GetObjectText (función) (referencia de API no administrada)
+description: GetObjectText (función), devuelve una representación textual de un objeto en la sintaxis MOF.
 ms.date: 11/06/2017
 api_name:
 - GetObjectText
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 24ba4b37cc8221df4e018d172996c0910ec07f7d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459644"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754442"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText (función)
 Devuelve una representación textual del objeto en la sintaxis de Managed Object Format (MOF).
@@ -42,10 +42,10 @@ HRESULT GetObjectText (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[in] Este parámetro no se utiliza.
+[in] Este parámetro se usa.
 
 `ptr`  
-[in] Un puntero a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instancia.
+[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
 
 `lFlags`  
 [in] Normalmente 0. Si `WBEM_FLAG_NO_FLAVORS` (o 0 x 1) se especifica, se incluyen sin información de propagación o flavor calificadores.
@@ -55,34 +55,34 @@ HRESULT GetObjectText (
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, o bien puede definirlas como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0 x 80041001 | Ha habido un error general. |
 |`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un parámetro no es válido. |
 |`WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para completar la operación. |
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función tuvo éxito.  |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::GetObjectText](https://msdn.microsoft.com/library/aa391448(v=vs.85).aspx) método.
+Esta función contiene una llamada a la [IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) método.
 
-El texto MOF devuelto no contiene toda la información sobre el objeto, pero únicamente la información suficiente para que el compilador MOF poder volver a crear el objeto original. Por ejemplo, no propagados calificadores o propiedades de la clase primaria se incluyen.
+Devuelve el texto MOF contiene toda la información sobre el objeto, sino únicamente la información suficiente para que el compilador MOF poder volver a crear el objeto original. Por ejemplo, no propagados calificadores o propiedades de la clase primaria se incluyen.
 
 El siguiente algoritmo se utiliza para reconstruir el texto de los parámetros de un método:
 
 1. Se cambia la secuencia de parámetros en el orden de sus valores de identificador.
-1. Parámetros que se especifican como `[in]` y `[out]` se combinan en un solo parámetro.
+1. Los parámetros que se especifican como `[in]` y `[out]` se combinan en un único parámetro.
  
-`pstrObjectText` debe ser un puntero a un `null` cuando se llama a la función; no debe apuntar a una cadena que es válida antes de la llamada al método, porque el puntero no se cancela la asignación.
+`pstrObjectText` debe ser un puntero a un `null` cuando se llama a la función; no debe apuntar a una cadena que es válida antes de la llamada de método, porque no se cancelará el puntero.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

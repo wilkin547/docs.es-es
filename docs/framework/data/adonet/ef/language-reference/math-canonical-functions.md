@@ -2,27 +2,139 @@
 title: Funciones canónicas matemáticas
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: c61db6d977614b95ea507b38c3890f2da8228158
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 0fc9f4942c3f76f139ab7e4400005f0bfe80204e
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199311"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754461"
 ---
 # <a name="math-canonical-functions"></a>Funciones canónicas matemáticas
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] incluye funciones canónicas matemáticas.  
+
+Entity SQL incluye las siguientes funciones canónicas matemáticas:
   
- En la tabla siguiente se muestran las funciones canónicas matemáticas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
-  
-|Función|Descripción|  
-|--------------|-----------------|  
-|`Abs(value)`|Devuelve el valor absoluto de `value`.<br /><br /> **Argumentos**<br /><br /> Un `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, y `Decimal`.<br /><br /> **Valor devuelto**<br /><br /> Tipo de `value`.<br /><br /> **Ejemplo**<br /><br /> `Abs(-2)`|  
-|`Ceiling(value)`|Devuelve el menor entero que es mayor o igual que `value`.<br /><br /> **Argumentos**<br /><br /> Un `Single`, `Double`, y `Decimal`.<br /><br /> **Valor devuelto**<br /><br /> Tipo de `value`.<br /><br /> **Ejemplo**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)] <br /><br /> [!code-sql[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]|  
-|`Floor(value)`|Devuelve el mayor entero que es menor o igual que `value`.<br /><br /> **Argumentos**<br /><br /> Un `Single`, `Double`, y `Decimal`.<br /><br /> **Valor devuelto**<br /><br /> Tipo de `value`.<br /><br /> **Ejemplo**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)] <br /><br /> [!code-sql[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]|  
-|`Power(value, exponent)`|Devuelve el resultado del `value` especificado al `exponent` especificado.<br /><br /> **Argumentos**<br /><br /> `value`: Valor de tipo `Int32, Int64, Double`, o `Decimal`.<br /><br /> `exponent`: Valor de tipo `Int64`, `Double`, o `Decimal`.<br /><br /> **Valor devuelto**<br /><br /> Tipo de `value`.<br /><br /> **Ejemplo**<br /><br /> `Power(748.58,2)`|  
-|`Round(value)`|Devuelve la parte entera de `value`, redondeada al entero más próximo.<br /><br /> **Argumentos**<br /><br /> Un `Single`, `Double`, y `Decimal`.<br /><br /> **Valor devuelto**<br /><br /> Tipo de `value`.<br /><br /> **Ejemplo**<br /><br /> `Round(748.58)`|  
-|`Round(value, digits)`|Devuelve `value`, redondeado a los `digits` especificados más próximos.<br /><br /> **Argumentos**<br /><br /> `value`: `Double` o `Decimal`.<br /><br /> `digits`: `Int16` o `Int32`.<br /><br /> **Valor devuelto**<br /><br /> Tipo de `value`.<br /><br /> **Ejemplo**<br /><br /> `Round(748.58,1)`|  
-|`Truncate(value, digits)`|Devuelve `value`, truncado a los `digits` especificados más próximos.<br /><br /> **Argumentos**<br /><br /> `value`: `Double` o `Decimal`.<br /><br /> `digits`: `Int16` o `Int32`.<br /><br /> **Valor devuelto**<br /><br /> Tipo de `value`.<br /><br /> **Ejemplo**<br /><br /> `Truncate(748.58,1)`|  
+## <a name="absvalue"></a>Abs(valor)
+
+Devuelve el valor absoluto de `value`.
+
+**Argumentos**
+
+Un `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, y `Decimal`.
+
+**Valor devuelto**
+
+Tipo de `value`.
+
+**Ejemplo**
+
+`Abs(-2)`
+
+## <a name="ceilingvalue"></a>Ceiling(valor)
+
+Devuelve el menor entero que es mayor o igual que `value`.
+
+**Argumentos**
+
+Un `Single`, `Double`, y `Decimal`.
+
+**Valor devuelto**
+
+Tipo de `value`.
+
+**Ejemplo**
+
+[!code-csharp[DP EntityServices Concepts#EDM_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]
+[!code-sql[DP EntityServices Concepts#EDM_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]
+
+## <a name="floorvalue"></a>Floor(valor)
+
+Devuelve el mayor entero que es menor o igual que `value`.
+
+**Argumentos**
+
+Un `Single`, `Double`, y `Decimal`.
+
+**Valor devuelto**
+
+Tipo de `value`.
+
+**Ejemplo**
+
+[!code-csharp[DP EntityServices Concepts#EDM_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)]
+[!code-sql[DP EntityServices Concepts#EDM_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]
+
+## <a name="powervalue-exponent"></a>Power(valor, exponente)
+
+Devuelve el resultado del `value` especificado al `exponent` especificado.
+
+**Argumentos**
+
+|  |  |
+|--|--|
+|`value` | Un `Int32, Int64, Double`, o `Decimal`. |
+|`exponent` | Un `Int64`, `Double`, o `Decimal`. |
+
+**Valor devuelto**
+
+Tipo de `value`.
+
+**Ejemplo**
+
+`Power(748.58,2)`
+
+## <a name="roundvalue"></a>Round(valor)
+
+Devuelve la parte entera de `value`, redondeada al entero más próximo.
+
+**Argumentos**
+
+Un `Single`, `Double`, y `Decimal`.
+
+**Valor devuelto**
+
+Tipo de `value`.
+
+**Ejemplo**
+
+`Round(748.58)`
+
+## <a name="roundvalue-digits"></a>Round(valor, dígitos)
+
+Devuelve `value`, redondeado a los `digits` especificados más próximos.
+
+**Argumentos**
+
+|  |  |
+|--|--|
+|`value`|`Double` o `Decimal`.|
+|`digits`|`Int16` o `Int32`.|
+
+**Valor devuelto**
+
+Tipo de `value`.
+
+**Ejemplo**
+
+`Round(748.58,1)`
+
+## <a name="truncatevalue-digits"></a>Truncate(valor, dígitos)
+
+Devuelve `value`, truncado a los `digits` especificados más próximos.
+
+**Argumentos**
+
+|  |  |
+|--|--|
+|`value`|`Double` o `Decimal`.|
+|`digits`|`Int16` o `Int32`.|
+
+**Valor devuelto**
+
+Tipo de `value`.
+
+**Ejemplo**
+
+`Truncate(748.58,1)`  
   
  Estas funciones devolverán `null` si se proporciona la entrada `null`.  
   

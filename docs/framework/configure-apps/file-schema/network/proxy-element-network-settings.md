@@ -1,5 +1,5 @@
 ---
-title: '&lt;proxy&gt; Element (Network Settings)'
+title: '&lt;proxy&gt; elemento (configuración de red)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
@@ -11,14 +11,14 @@ ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8d2e224f710a1f344623440f29c2c6e0e9bd661e
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 5fba4bfa14642092dbb7c0153bcd92160a62b12b
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072519"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754540"
 ---
-# <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt; Element (Network Settings)
+# <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt; elemento (configuración de red)
 Define un servidor proxy.  
   
  \<configuration>  
@@ -48,8 +48,8 @@ Define un servidor proxy.
 |`autoDetect`|Especifica si el proxy se detecta automáticamente. El valor predeterminado es `unspecified`.|  
 |`bypassonlocal`|Especifica si se omite el proxy para los recursos locales. Los recursos locales incluyen el servidor local (`http://localhost`, `http://loopback`, o `http://127.0.0.1`) y un URI sin un punto (`http://webserver`). El valor predeterminado es `unspecified`.|  
 |`proxyaddress`|Especifica al proxy de URI que se utiliza.|  
-|`scriptLocation`|Especifica la ubicación de la secuencia de comandos de configuración.|  
-|`usesystemdefault`|Especifica si se debe usar la configuración de proxy de Internet Explorer. Si establece en `true`, los atributos subsiguientes invalidarán la configuración de proxy de Internet Explorer. El valor predeterminado es `unspecified`.|  
+|`scriptLocation`|Especifica la ubicación del script de configuración. No utilice el `bypassonlocal` atributo con este atributo. |  
+|`usesystemdefault`|Especifica si se debe usar la configuración de proxy de Internet Explorer. Si establece en `true`, atributos subsiguientes invalidarán la configuración de proxy de Internet Explorer. El valor predeterminado es `unspecified`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -63,13 +63,13 @@ Define un servidor proxy.
 ## <a name="text-value"></a>Valor de texto  
   
 ## <a name="remarks"></a>Comentarios  
- El `proxy` elemento define un servidor proxy para una aplicación. Si falta este elemento en el archivo de configuración, .NET Framework utilizará la configuración del proxy en Internet Explorer.  
+ El `proxy` elemento define un servidor proxy para una aplicación. Si este elemento no aparece en el archivo de configuración, .NET Framework usará la configuración de proxy en Internet Explorer.  
   
- El valor de la `proxyaddress` atributo debe ser un indicador de recursos uniforme (URI) correcto.  
+ El valor de la `proxyaddress` atributo debe ser un indicador de recursos uniforme (URI) tiene el formato correcto.  
   
- El `scriptLocation` atributo hace referencia a la detección automática de scripts de configuración de proxy. El <xref:System.Net.WebProxy> clase intentará encontrar un script de configuración (generalmente denominado Wpad.dat) cuando la **usar scripts de configuración automática** opción está seleccionada en el Explorador de Internet.  
+ El `scriptLocation` atributo hace referencia a la detección automática de scripts de configuración de proxy. El <xref:System.Net.WebProxy> clase intentará encontrar un script de configuración (normalmente con nombre Wpad.dat) cuando el **usar scripts de configuración automática** está seleccionada en el Explorador de Internet. Si `bypassonlocal` se establece en cualquier valor, `scriptLocation` se omite.
   
- Use la `usesystemdefault` atributo para las aplicaciones de la versión 1.1 de .NET Framework que va a migrar a la versión 2.0.  
+ Use el `usesystemdefault` atributo para las aplicaciones de la versión 1.1 de .NET Framework que se va a migrar a la versión 2.0.  
   
  Se produce una excepción si el `proxyaddress` atributo especifica un proxy predeterminado no válido. La propiedad <xref:System.Exception.InnerException%2A> en la excepción debería tener más información acerca de la causa del error.  
   
@@ -77,7 +77,7 @@ Define un servidor proxy.
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo utiliza los valores predeterminados del proxy de Internet Explorer, especifica la dirección del proxy y omite al proxy para el acceso local.  
+ El ejemplo siguiente utiliza los valores predeterminados desde el proxy de Internet Explorer, especifica la dirección del proxy y omite al proxy para el acceso local.  
   
 ```xml  
 <configuration>  

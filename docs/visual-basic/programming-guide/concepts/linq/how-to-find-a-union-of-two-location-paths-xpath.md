@@ -3,11 +3,11 @@ title: 'Cómo: buscar la unión de dos rutas de acceso de ubicación (XPath-LINQ
 ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
 ms.openlocfilehash: 3f67ac24d12e7d2fcbd74e2f27a75d982c1cf00b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642645"
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "42754053"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar la unión de dos rutas de acceso de ubicación (XPath-LINQ to XML) (Visual Basic)
 XPath permite buscar la unión de los resultados de dos rutas de ubicación XPath.  

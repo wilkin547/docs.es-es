@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: 95279f90fbf87d64d96a1ed036449b72416e4f44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 292fd92ebab9d1af2a2623ab55c3324fab2a69dc
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490394"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754470"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Cómo llamar a operaciones de manera asincrónica mediante un generador de canales
-En este tema se cubre cómo un cliente puede obtener acceso de forma asincrónica a una operación del servicio al utilizar una aplicación de cliente basada en <xref:System.ServiceModel.ChannelFactory%601>. (Al utilizar un objeto <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> para invocar un servicio, puede utilizar el modelo de llamada asincrónica orientado a eventos. Para obtener más información, consulte [Cómo: llamar a las operaciones de servicio de forma asincrónica](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Para obtener más información sobre el modelo de llamada asincrónico basado en eventos, vea [programación multiproceso con el modelo asincrónico basado en eventos](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md).)  
+En este tema se cubre cómo un cliente puede obtener acceso de forma asincrónica a una operación del servicio al utilizar una aplicación de cliente basada en <xref:System.ServiceModel.ChannelFactory%601>. (Al utilizar un objeto <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> para invocar un servicio, puede utilizar el modelo de llamada asincrónica orientado a eventos. Para obtener más información, consulte [Cómo: llamar a operaciones de servicio de forma asincrónica](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Para obtener más información sobre el modelo de llamada asincrónica basado en eventos, vea [patrón asincrónico basado en eventos (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
   
  El servicio en este tema implementa la interfaz `ICalculator`. El cliente puede llamar a las operaciones en esta interfaz de forma asincrónica, lo que significa que las operaciones como `Add` se dividen en dos métodos, `BeginAdd` y `EndAdd`, de los cuales el primero inicia la llamada y el segundo recupera el resultado cuando la operación termina. Para obtener un ejemplo que muestra cómo implementar una operación asincrónica en un servicio, consulte [Cómo: implementar una operación de servicio asincrónica](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Para obtener más información acerca de las operaciones sincrónicas y asincrónicas, vea [sincrónica y operaciones asincrónicas](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
   
@@ -21,7 +21,7 @@ En este tema se cubre cómo un cliente puede obtener acceso de forma asincrónic
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>Para llamar a operaciones de servicio WCF de forma asincrónica  
   
-1.  Ejecute el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta con el `/async` opción tal como se muestra en el siguiente comando.  
+1.  Ejecute el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta con el `/async` opción tal como se muestra en el siguiente comando.  
   
     ```  
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a  
@@ -42,7 +42,7 @@ En este tema se cubre cómo un cliente puede obtener acceso de forma asincrónic
      Cuando la función de devolución de llamada se ejecuta, el cliente llama a `End<operation>``EndAdd` (por ejemplo, ) para recuperar el resultado.  
   
 ## <a name="example"></a>Ejemplo  
- El servicio que se usa con el código de cliente que se utiliza en el procedimiento anterior implementa la interfaz `ICalculator` tal y como se muestra en el código siguiente. En el lado del servicio, el `Add` y `Subtract` operaciones del contrato se invocan sincrónicamente mediante la Windows Communication Foundation (WCF) tiempo de ejecución, aunque los pasos precedentes del cliente se invocan de forma asincrónica en el cliente. Las operaciones `Multiply` y `Divide` se utilizan para invocar de forma asincrónica el servicio en el lado del servicio, incluso aunque el cliente los invoque de forma sincrónica. Este ejemplo establece la propiedad <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> en `true`. Este valor de la propiedad, en combinación con la implementación del patrón asincrónico [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], indica al tiempo de ejecución para invocar la operación de forma asincrónica.  
+ El servicio que se usa con el código de cliente que se utiliza en el procedimiento anterior implementa la interfaz `ICalculator` tal y como se muestra en el código siguiente. En el lado de servicio, el `Add` y `Subtract` operaciones del contrato se invocan sincrónicamente mediante la Windows Communication Foundation (WCF) tiempo de ejecución, aunque los pasos anteriores del cliente se invocan de forma asincrónica en el cliente. Las operaciones `Multiply` y `Divide` se utilizan para invocar de forma asincrónica el servicio en el lado del servicio, incluso aunque el cliente los invoque de forma sincrónica. Este ejemplo establece la propiedad <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> en `true`. Este valor de la propiedad, en combinación con la implementación del patrón asincrónico [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], indica al tiempo de ejecución para invocar la operación de forma asincrónica.  
   
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  

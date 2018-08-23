@@ -1,6 +1,6 @@
 ---
-title: Función GetPropertyHandle (referencia de API no administrada)
-description: La función GetPropertyHandle devuelve un identificador único que una propiedad de identidades.
+title: GetPropertyHandle (función) (referencia de API no administrada)
+description: GetPropertyHandle (función) devuelve un identificador único que una propiedad de identidades.
 ms.date: 11/06/2017
 api_name:
 - GetPropertyHandle
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 103e81dfa0e455157cfce5914b711347b15b578d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460588"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754575"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle (función)
 Devuelve un identificador único que identifica una propiedad.
@@ -43,13 +43,13 @@ HRESULT GetPropertyHandle (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[in] Este parámetro no se utiliza.
+[in] Este parámetro se usa.
 
 `ptr`  
-[in] Un puntero a un [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) instancia.
+[in] Un puntero a un [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instancia.
 
 `wszPropertyName`  
-[in] Una cadena terminada en null de characaters codificados en UTF16 que contiene el nombre de propiedad.   
+[in] Una cadena terminada en null de characaters codificados UTF16 que contiene el nombre de propiedad.   
 
 `pType`  
 [out] Un puntero a un [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) miembro de enumeración que representa el tipo CIM de la propiedad.
@@ -59,29 +59,29 @@ HRESULT GetPropertyHandle (
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, o bien puede definirlas como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | No se encontró el nombre de propiedad especificado. |
 |`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un parámetro no es válido. |
 |`WBEM_E_NOT_SUPPORTED` | 0x8004100C | La propiedad solicitada es de tipo son `CIM_OBJECT` o `CIM_ARRAY`. |
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función tuvo éxito.  |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::GetPropertyHandle](https://msdn.microsoft.com/library/aa391771(v=vs.85).aspx) método.
+Esta función contiene una llamada a la [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) método.
 
-Puede utilizar este identificador para identificar las propiedades cuando se usa [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) métodos para leer o escribir valores de propiedad.
+Puede usar este identificador para identificar las propiedades cuando se usa [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) métodos para leer o escribir los valores de propiedad.
 
-Pueden obtenerse identificadores para las propiedades de todos los tipos de datos distinto de `CIM_OBJECT` y `CIM_ARRAY`. Devuelve el trabajo de identificadores en todas las instancias de una clase.
+Identificadores se pueden recuperar de las propiedades de todos los tipos de datos distinto `CIM_OBJECT` y `CIM_ARRAY`. Devuelve el trabajo de identificadores en todas las instancias de una clase.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

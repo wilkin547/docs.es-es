@@ -1,5 +1,5 @@
 ---
-title: Mid (Instrucción)
+title: Mid (instrucción) (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.MidB
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: 90b805df902dcdfebe85421583dd54e9af04bec9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602270"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754174"
 ---
 # <a name="mid-statement"></a>Mid (Instrucción)
-Reemplaza un número especificado de caracteres de un `String` variable con caracteres de otra cadena.  
+Reemplaza un número especificado de caracteres de un `String` variable por los caracteres de otra cadena.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,10 +35,10 @@ Mid( _
  Requerido. Nombre de la `String` variable va a modificar.  
   
  `Start`  
- Requerido. `Integer` Expresión. Posición de carácter de `Target` donde comienza el reemplazo de texto. `Start` utiliza un índice basado en uno.  
+ Requerido. `Integer` expresión. Posición de carácter de `Target` donde comienza la sustitución de texto. `Start` utiliza un índice basado en uno.  
   
  `Length`  
- Opcional. `Integer` Expresión. Número de caracteres que se va a reemplazar. Si omite todos `String` se utiliza.  
+ Opcional. `Integer` expresión. Número de caracteres que se va a reemplazar. Si omite todos `String` se utiliza.  
   
  `StringExpression`  
  Requerido. `String` Expresión que reemplaza parte de `Target`.  
@@ -52,13 +52,13 @@ Mid( _
 ## <a name="remarks"></a>Comentarios  
  El número de caracteres reemplazados siempre es menor o igual que el número de caracteres en `Target`.  
   
- Visual Basic ofrece un <xref:Microsoft.VisualBasic.Strings.Mid%2A> función y un `Mid` instrucción. Estos elementos funcionan en un número especificado de caracteres de una cadena, pero la `Mid` función devuelve los caracteres mientras el `Mid` instrucción reemplaza los caracteres. Para obtener más información, consulta <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic tiene un <xref:Microsoft.VisualBasic.Strings.Mid%2A> función y un `Mid` instrucción. Estos elementos funcionan en un número especificado de caracteres en una cadena, pero la `Mid` función devuelve los caracteres mientras el `Mid` instrucción reemplaza los caracteres. Para obtener más información, consulta <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
   
 > [!NOTE]
->  El `MidB` instrucción de versiones anteriores de Visual Basic reemplaza una subcadena en bytes, en lugar de caracteres. Se usa principalmente para convertir cadenas en aplicaciones de caracteres de doble byte (DBCS). Todas las cadenas de Visual Basic están en Unicode, y `MidB` ya no se admite.  
+>  El `MidB` instrucción de versiones anteriores de Visual Basic reemplaza una subcadena en bytes, en lugar de caracteres. Se utiliza principalmente para convertir cadenas en aplicaciones de caracteres de doble byte (DBCS). Todas las cadenas en Visual Basic están en Unicode, y `MidB` ya no se admite.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se utiliza la `Mid` instrucción para reemplazar un número especificado de caracteres de una variable de cadena con caracteres de otra cadena.  
+ Este ejemplo se usa el `Mid` instrucción para reemplazar un número especificado de caracteres de una variable de cadena de caracteres de otra cadena.  
   
  [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   

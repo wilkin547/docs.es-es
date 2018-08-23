@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8057406552525be19f8e6457de9faf841edc6e68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3a0b3242e8ae29b9d21dc50d3ea0476967e9746f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429506"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754565"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream (Método)
 Crea una secuencia con el nombre especificado y el formato.  
@@ -51,20 +51,20 @@ HRESULT CreateStream (
  [in] El formato del archivo que se transmite por secuencias.  
   
  `dwFormatFlags`  
- [in] Indicadores específicos del formato definidos en Fusion.idl.  
+ [in] Marcas de formato específicos definidas en Fusion.idl.  
   
  `ppIStream`  
- [out] Un puntero a la dirección de devuelto [IStream](https://msdn.microsoft.com/library/aa380034.aspx) instancia.  
+ [out] Un puntero a la dirección de devuelto [IStream](/windows/desktop/api/objidl/nn-objidl-istream) instancia.  
   
  `puliMaxSize`  
- [in, opcional] El tamaño máximo de la secuencia al que hace referencia `ppIStream`.  
+ [in, optional] El tamaño máximo de la secuencia al que hace referencia `ppIStream`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Fusion.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [IAssemblyCacheItem (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

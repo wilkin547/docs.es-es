@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 394059481b5081586904d2d5ea5d4a3d3e0df42b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 40ba9085905869ca5d3d8f39a3d7ce11639b1504
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758898"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754566"
 ---
 # <a name="local-transactions"></a>Transacciones locales
 Las transacciones de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] se utilizan cuando se desea enlazar varias tareas para que se ejecuten como una sola unidad de trabajo. Por ejemplo, imagine que una aplicación realiza dos tareas. Primero, actualiza una tabla con información de pedidos. Luego, actualiza una tabla que contiene la información de inventario, cargando en cuenta los elementos pedidos. Si se produce un error en alguna de las tareas, a continuación, ambas actualizaciones se revierten.  
   
 ## <a name="determining-the-transaction-type"></a>Determinación del tipo de transacción  
- Una transacción se considera una transacción local cuando se trata de una transacción única fase y es controlada directamente por la base de datos. Una transacción se considera una transacción distribuida cuando se coordinan mediante un monitor de transacciones y utiliza mecanismos a prueba de errores (como confirmación en dos fases) para la resolución de transacciones.  
+ Una transacción se considera una transacción local cuando una transacción de fase única y se administran directamente mediante la base de datos. Una transacción se considera una transacción distribuida cuando se coordinan mediante un monitor de transacciones y utiliza mecanismos a prueba de errores (como confirmación en dos fases) para la resolución de transacción.  
   
  Cada proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tiene su propio objeto `Transaction` para realizar transacciones locales. Si necesita que se realice una transacción en una base de datos de SQL Server, seleccione una transacción de <xref:System.Data.SqlClient>. En transacciones de Oracle, utilice el proveedor <xref:System.Data.OracleClient>. Además, hay un <xref:System.Data.Common.DbTransaction> clase que está disponible para escribir código independiente del proveedor que requiere transacciones.  
   
 > [!NOTE]
->  Las transacciones son más eficientes cuando se realizan en el servidor. Si trabaja con una base de datos de SQL Server que hace uso masivo de transacciones explícitas, debería estudiar la posibilidad de escribirlas como procedimientos almacenados mediante la instrucción BEGIN TRANSACTION de Transact-SQL. Para obtener más información acerca de la realización de transacciones de servidor, vea los Libros en pantalla de SQL Server.  
+> Las transacciones son más eficientes cuando se realizan en el servidor. Si trabaja con una base de datos de SQL Server que hace uso masivo de transacciones explícitas, debería estudiar la posibilidad de escribirlas como procedimientos almacenados mediante la instrucción BEGIN TRANSACTION de Transact-SQL.
   
 ## <a name="performing-a-transaction-using-a-single-connection"></a>Realización de una transacción mediante una única conexión  
  En [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], las transacciones se controlan con el objeto `Connection`. Puede iniciar una transacción local con el método `BeginTransaction`. Una vez iniciada una transacción, puede inscribir un comando en esa transacción con la propiedad `Transaction` de un objeto `Command`. Luego, puede confirmar o revertir las modificaciones realizadas en el origen de datos según el resultado correcto o incorrecto de los componentes de la transacción.  
@@ -29,7 +29,7 @@ Las transacciones de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] s
 > [!NOTE]
 >  El método `EnlistDistributedTransaction` no se debe emplear en transacciones locales.  
   
- El ámbito de la transacción está limitado a la conexión. En el siguiente ejemplo se realiza una transacción explícita que consta de por dos comandos independientes en el bloque `try`. Los comandos ejecutan instrucciones INSERT con respecto a la tabla Production.ScrapReason de la base de datos de ejemplo AdventureWorks de SQL Server, que se confirman si no se produce ninguna excepción. El código del bloque `catch` revierte la transacción si se produce una excepción. Si la transacción se anula o la conexión se cierra antes de que se haya completado la transacción, ésta se revierte automáticamente.  
+ El ámbito de la transacción está limitado a la conexión. En el siguiente ejemplo se realiza una transacción explícita que consta de por dos comandos independientes en el bloque `try`. Los comandos ejecutan instrucciones INSERT en la tabla Production.ScrapReason de la base de datos de ejemplo AdventureWorks de SQL Server, que se confirman si se produce ninguna excepción. El código del bloque `catch` revierte la transacción si se produce una excepción. Si la transacción se anula o la conexión se cierra antes de que se haya completado la transacción, ésta se revierte automáticamente.  
   
 ## <a name="example"></a>Ejemplo  
  Para llevar a cabo una transacción, siga estos pasos.  

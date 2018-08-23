@@ -23,11 +23,11 @@ helpviewer_keywords:
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 ms.openlocfilehash: 441fe91c8c884e59c6399d57e7e55bf6591cb1bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655907"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754193"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Duración de los objetos: cómo se crean y destruyen (Visual Basic)
 Mediante el uso de la palabra clave `New` se crea una instancia de una clase, un objeto. A menudo, las tareas de inicialización deben realizarse en los objetos nuevos antes de utilizarlos. Las tareas de inicialización comunes incluyen abrir archivos, conectarse a bases de datos y leer los valores de las claves del registro. Visual Basic controla la inicialización de objetos nuevos mediante procedimientos denominados *constructores* (métodos especiales que permiten controlar la inicialización).  
@@ -35,7 +35,7 @@ Mediante el uso de la palabra clave `New` se crea una instancia de una clase, un
  Después de que un objeto abandone el ámbito, se libera por Common Language Runtime (CLR). Visual Basic controla la liberación de recursos del sistema mediante procedimientos denominados *destructores*. Juntos, los constructores y los destructores permiten la creación de bibliotecas de clases completas y predecibles.  
   
 ## <a name="using-constructors-and-destructors"></a>Usar constructores y destructores  
- Los constructores y los destructores controlan la creación y la destrucción de objetos. El `Sub New` y `Sub Finalize` procedimientos en Visual Basic inicializan y destruyen objetos; sustituyen el `Class_Initialize` y `Class_Terminate` métodos que se utilizan en Visual Basic 6.0 y versiones anteriores.  
+ Los constructores y los destructores controlan la creación y la destrucción de objetos. El `Sub New` y `Sub Finalize` procedimientos en Visual Basic inicializan y destruyen objetos; sustituyen el `Class_Initialize` y `Class_Terminate` métodos utilizados en Visual Basic 6.0 y versiones anteriores.  
   
 ### <a name="sub-new"></a>Sub New  
  El constructor `Sub New` solo puede ejecutarse una vez cuando se crea una clase. No se puede llamar explícitamente en ningún lugar que no sea la primera línea de código de otro constructor de la misma clase o de una clase derivada. Además, el código del método `Sub New` siempre se ejecuta antes que cualquier otro código en una clase. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] y versiones posteriores crean implícitamente un `Sub New` constructor en tiempo de ejecución si no se define explícitamente un `Sub New` procedimiento para una clase.  
@@ -56,7 +56,7 @@ Mediante el uso de la palabra clave `New` se crea una instancia de una clase, un
  Antes de liberar objetos, CLR llama automáticamente al método `Finalize` para los objetos que definen un procedimiento `Sub Finalize`. El método `Finalize` puede contener código que es necesario ejecutar inmediatamente antes de destruir un objeto, como el código para cerrar archivos y guardar información de estado. Hay una ligera disminución del rendimiento para la ejecución de `Sub Finalize`, por lo que se debe definir un método `Sub Finalize` solo cuando sea necesario liberar objetos explícitamente.  
   
 > [!NOTE]
->  El recolector de elementos no utilizados de CLR no (y no puede ser) deseche *sin administrar objetos*, objetos que el sistema operativo ejecuta directamente, fuera del entorno de CLR. Esto se debe a que los diferentes objetos no administrados deben eliminarse de maneras diferentes. Esta información no está directamente asociada con el objeto no administrado; debe buscarse en la documentación del objeto. Las clases que utilizan objetos no administrados deben eliminarlos en su método `Finalize`.  
+>  El recolector de elementos no utilizados en el CLR no es así (y no puede) dispose de *no administrada de objetos*, los objetos que el sistema operativo ejecuta directamente, fuera del entorno de CLR. Esto se debe a que los diferentes objetos no administrados deben eliminarse de maneras diferentes. Esta información no está directamente asociada con el objeto no administrado; debe buscarse en la documentación del objeto. Las clases que utilizan objetos no administrados deben eliminarlos en su método `Finalize`.  
   
  El destructor `Finalize` es un método protegido al que se puede llamar desde la clase a la que pertenece o desde clases derivadas. El sistema llama automáticamente a `Finalize` cuando se destruye un objeto, por lo que no debería llamar explícitamente a `Finalize` desde fuera de una implementación `Finalize` de una clase derivada.  
   
@@ -70,7 +70,7 @@ Mediante el uso de la palabra clave `New` se crea una instancia de una clase, un
   
  Cuando se crea una instancia de una clase derivada, se ejecuta primero el constructor `Sub New` de la clase base, seguido de los constructores de las clases derivadas. Esto se debe a que la primera línea de código de un constructor `Sub New` utiliza la sintaxis `MyBase.New()` para llamar al constructor de la clase que se encuentra inmediatamente encima en la jerarquía de clases. A continuación, se llama al constructor `Sub New` para cada clase de la jerarquía de clases hasta que se alcanza el constructor de la clase base. En ese momento, se ejecuta el código en el constructor de la clase base, seguido del código en cada constructor de todas las clases derivadas y, en último lugar, se ejecuta el código de las clases más derivadas.  
   
- ![Constructores y herencia](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance.gif "vaConstructorsInheritance")  
+ ![Los constructores y herencia](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance.gif "vaConstructorsInheritance")  
   
  Cuando un objeto ya no es necesario, CLR llama al método <xref:System.Object.Finalize%2A> para ese objeto antes de liberar su memoria. El método <xref:System.Object.Finalize%2A> se denomina `destructor`, ya que realiza tareas de limpieza, como guardar información de estado, cerrar archivos y conexiones a bases de datos, y otras tareas que deben realizarse antes de liberar el objeto.  
   
@@ -140,7 +140,7 @@ End Sub
  Una clase derivada no debe reemplazar los métodos <xref:System.IDisposable.Dispose%2A> y `Finalize` de la clase base. Cuando se llama a dichos métodos desde una instancia de la clase derivada, la implementación de la clase base de los métodos llama al reemplazo de la clase derivada del método `Dispose(disposing)`.  
   
 ## <a name="garbage-collection-and-the-finalize-destructor"></a>Recolección de elementos no utilizados y el destructor Finalize  
- El [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] utiliza la *recolección de elementos no utilizados de seguimiento de referencias* sistema para liberar periódicamente los recursos. Visual Basic 6.0 y versiones anteriores utilizan un sistema diferente denominado *recuento de referencias* para administrar los recursos. Aunque ambos sistemas realizan la misma función automáticamente, existen algunas diferencias importantes.  
+ El [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usa el *recolección de seguimiento de referencias* sistema para liberar periódicamente los recursos no utilizados. Visual Basic 6.0 y versiones anteriores utilizan un sistema diferente denominado *recuento de referencias* para administrar los recursos. Aunque ambos sistemas realizan la misma función automáticamente, existen algunas diferencias importantes.  
   
  CLR destruye periódicamente objetos cuando el sistema determina que ya no son necesarios. Los objetos se liberan más rápidamente cuando los recursos del sistema son escasos, y menos frecuentemente en caso contrario. El retraso que se produce entre el momento en que un objeto pierde su ámbito y el momento en que CLR lo libera conlleva que, a diferencia de lo que sucede con los objetos en Visual Basic 6.0 y versiones anteriores, no se puede determinar exactamente cuándo se destruirá el objeto. En esta situación, se dice que tiene los objetos *duración no determinista*. En la mayoría de los casos, la duración no determinista no cambia la manera de escribir las aplicaciones, siempre y cuando tenga en cuenta que el destructor `Finalize` puede no ejecutarse inmediatamente cuando un objeto pierde su ámbito.  
   
