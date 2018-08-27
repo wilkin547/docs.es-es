@@ -3,11 +3,11 @@ title: 'Tutorial: Insertar tipos de ensamblados administrados en Visual Studio (
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 ms.openlocfilehash: 90bb523e3eb42cea2cd0a9d1e753e4d9b9873c0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339247"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932100"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Tutorial: Insertar tipos de ensamblados administrados en Visual Studio (C#)
 Si inserta información de tipos de un ensamblado administrado con nombre seguro, puede acoplar tipos holgadamente en una aplicación para lograr independencia de versiones. Es decir, el programa puede escribirse de modo que use tipos de varias versiones de una biblioteca administrada sin tener que volver a compilarse para cada versión.  

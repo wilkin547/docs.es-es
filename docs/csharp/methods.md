@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: a9d78ecfc3911cf959333c098a66614239609c4e
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: f5fd156ba25352fb1f816349c5e130267f7da8c2
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457961"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925849"
 ---
 # <a name="methods"></a>Métodos #
 
@@ -40,7 +40,7 @@ Este tema contiene las siguientes secciones:
 
 Los métodos se declaran en una `class` o `struct` al especificar:
 
-- Un nivel de acceso opcional, como, por ejemplo, `public` o `private`. El valor predeterminado es `private`.
+- Un nivel de acceso opcional, como, por ejemplo, `public` o `private`. De manera predeterminada, es `private`.
 - Modificadores opcionales, como, por ejemplo, `abstract` o `sealed`.
 - El valor devuelto o, si el método no tiene ninguno, `void`.
 - El nombre del método.
@@ -296,12 +296,12 @@ Para obtener más información, consulta [Iteradores](programming-guide/concepts
 
 ## <a name="see-also"></a>Vea también ##
 
-[Modificadores de acceso](language-reference/keywords/access-modifiers.md)   
-[Clases estáticas y sus miembros](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
-[Herencia](programming-guide/classes-and-structs/inheritance.md)   
-[Clases y miembros de clase abstractos y sellados](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
-[params](language-reference/keywords/params.md)   
-[out](language-reference/keywords/out-parameter-modifier.md)   
-[ref](language-reference/keywords/ref.md)   
-[in (Modificador genérico)](language-reference/keywords/in-parameter-modifier.md)   
-[Pasar parámetros](programming-guide/classes-and-structs/passing-parameters.md)
+- [Modificadores de acceso](language-reference/keywords/access-modifiers.md)   
+- [Clases estáticas y sus miembros](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
+- [Herencia](programming-guide/classes-and-structs/inheritance.md)   
+- [Clases y miembros de clase abstractos y sellados](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
+- [params](language-reference/keywords/params.md)   
+- [out](language-reference/keywords/out-parameter-modifier.md)   
+- [ref](language-reference/keywords/ref.md)   
+- [in](language-reference/keywords/in-parameter-modifier.md)   
+- [Pasar parámetros](programming-guide/classes-and-structs/passing-parameters.md)

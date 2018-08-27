@@ -2,12 +2,12 @@
 title: SQL Server y ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: 87e46ad9e83929e40daecc3e3af2eb1281c5ced9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb24be22ebec9a49c489ddcbff4824c4cd3cf34
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360718"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935089"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server y ADO.NET
 En esta sección se describen características y comportamientos específicos del proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlClient>).  
@@ -38,7 +38,7 @@ En esta sección se describen características y comportamientos específicos de
   
  Para obtener documentación completa del Motor de bases de datos de SQL Server, busque la versión de SQL Server que utiliza en los Libros en pantalla de SQL Server.  
   
- [Libros en pantalla de SQL Server](http://msdn.microsoft.com/library/ms130214.aspx)  
+ [Libros en pantalla de SQL Server](/sql/sql-server/sql-server-technical-documentation)  
   
 ## <a name="see-also"></a>Vea también  
  [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

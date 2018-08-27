@@ -4,12 +4,12 @@ description: Descubra cómo usar ML.NET en un escenario de clasificación binari
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 727718c00b9270e2bbbe0840879b3a7e164a02d8
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 57ade448f5773bee3474cb46bec8ad33e3afbee3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948623"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000393"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutorial: Uso de ML.NET en un escenario de clasificación binaria de análisis de sentimiento
 
@@ -91,7 +91,7 @@ Las tareas de clasificación son a menudo de uno de los siguientes tipos:
 
 ## <a name="create-a-console-application"></a>Creación de una aplicación de consola
 
-1. Abra Visual Studio 2017. Seleccione **Archivo** > **Nuevo** > **Proyecto** de la barra de menús. En el cuadro de diálogo *Nuevo proyecto**, seleccione el nodo **Visual C#** seguido del nodo **.NET Core**. Después, seleccione la plantilla del proyecto **Aplicación de consola (.NET Core)**. En el cuadro de texto **Nombre**, escriba "SentimentAnalysis" y después haga clic en el botón **Aceptar**.
+1. Abra Visual Studio 2017. Seleccione **Archivo** > **Nuevo** > **Proyecto** de la barra de menús. En el cuadro de diálogo *Nuevo proyecto*\*, seleccione el nodo **Visual C#** seguido del nodo **.NET Core**. Después, seleccione la plantilla del proyecto **Aplicación de consola (.NET Core)**. En el cuadro de texto **Nombre**, escriba "SentimentAnalysis" y después haga clic en el botón **Aceptar**.
 
 2. Cree un directorio denominado *Datos* en el proyecto para guardar los archivos del conjunto de datos:
 
@@ -105,7 +105,7 @@ Las tareas de clasificación son a menudo de uno de los siguientes tipos:
 
 1. Descargue los conjuntos de datos [WikiPedia detox-250-line-data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) y [wikipedia-detox-250-line-test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) y guárdelos en la carpeta *Datos* creada previamente. El primer conjunto de datos entrena el modelo de aprendizaje automático y el segundo puede usarse para evaluar su grado de precisión.
 
-2. En el Explorador de soluciones, haga clic con el botón secundario en cada uno de los archivos \*.tsv y seleccione **Propiedades**. En **Avanzadas**, cambie el valor de **Copiar en el directorio de salida** a **Siempre**.
+2. En el Explorador de soluciones, haga clic con el botón secundario en cada uno de los archivos \*.tsv y seleccione **Propiedades**. En **Avanzadas**, cambie el valor de **Copiar en el directorio de salida** por **Copiar si es posterior**.
 
 ### <a name="create-classes-and-define-paths"></a>Crear clases y definir rutas de acceso
 

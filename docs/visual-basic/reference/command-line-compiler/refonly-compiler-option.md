@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e8f6c15084ac9b1a07aef8a0311edfcc4a93337c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653051"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932668"
 ---
 # <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
@@ -30,11 +30,11 @@ El **- refonly** opción indica que la salida principal de la compilación debe 
 
 ## <a name="remarks"></a>Comentarios
 
-Visual Basic admite la `-refout` conmutador a partir de la versión 15.3.
+Visual Basic admite la `-refout` cambiar comenzando con la versión 15.3.
 
-Ensamblados de referencia son solo metadatos ensamblados que contienen metadatos pero ningún código de implementación. Incluyen información de los tipos y miembros para todo excepto los tipos anónimos. El motivo de usar cuerpos `throw null` (en lugar de no usar ningún cuerpo) es que PEVerify pueda ejecutar y pasar (por lo tanto, validar la integridad de los metadatos).
+Los ensamblados de referencia son solo metadatos de los ensamblados que contienen metadatos pero ningún código de implementación. Incluyen información de los tipos y miembros para todo excepto los tipos anónimos. El motivo de usar cuerpos `throw null` (en lugar de no usar ningún cuerpo) es que PEVerify pueda ejecutar y pasar (por lo tanto, validar la integridad de los metadatos).
 
-Ensamblados de referencia incluyen un nivel de ensamblado [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) atributo. Este atributo puede especificarse en el origen (por lo tanto, el compilador no necesitará sintetizarlo). Debido a este atributo, tiempos de ejecución rechazará cargar los ensamblados de referencia para la ejecución (pero todavía se pueden cargar en un contexto de solo reflexión). Herramientas que se reflejan en los ensamblados deben asegurarse de que se cargan los ensamblados de referencia como de solo reflexión; en caso contrario, el runtime produce una <xref:System.BadImageFormatException>.
+Los ensamblados de referencia incluyen un nivel de ensamblado [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) atributo. Este atributo puede especificarse en el origen (por lo tanto, el compilador no necesitará sintetizarlo). Debido a este atributo, los tiempos de ejecución rechazarán cargar ensamblados de referencia para la ejecución (pero todavía se pueden cargar en un contexto de solo reflexión). Las herramientas que se reflejan en los ensamblados deben asegurarse de que cargan los ensamblados de referencia como de solo reflexión; en caso contrario, el runtime produce una <xref:System.BadImageFormatException>.
 
 Las opciones `-refonly` y [`-refout`](refout-compiler-option.md) son mutuamente excluyentes.
 

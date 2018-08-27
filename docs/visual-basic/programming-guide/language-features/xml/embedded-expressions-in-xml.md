@@ -9,14 +9,14 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
 ms.openlocfilehash: f99735df2512fd4b1477bab9126e18f5afbbfa8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653525"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932934"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Expresiones incrustadas (Visual Basic)
-Expresiones incrustadas le permiten crear literales XML que contienen expresiones que se evalúan en tiempo de ejecución. La sintaxis para una expresión incrustada es `<%=` `expression` `%>`, que es la misma que la sintaxis utilizada en [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
+Expresiones incrustadas le permiten crear literales XML que contienen expresiones que se evalúan en tiempo de ejecución. La sintaxis de una expresión incrustada es `<%=` `expression` `%>`, que es la misma que la sintaxis utilizada en [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
   
  Por ejemplo, puede crear un elemento XML literal, combinando las expresiones incrustadas con contenido de texto literal.  
   
@@ -31,18 +31,18 @@ Expresiones incrustadas le permiten crear literales XML que contienen expresione
 ```  
   
 ## <a name="embedded-expression-location-and-validation"></a>Validación y la ubicación de la expresión insertada  
- Expresiones incrustadas sólo pueden aparecer en algunas ubicaciones dentro de expresiones literales XML. Los controles de la ubicación de expresión que se escribe la expresión pueden devolver y cómo `Nothing` se controla. En la tabla siguiente describe las ubicaciones permitidas y los tipos de expresiones incrustadas.  
+ Expresiones incrustadas sólo pueden aparecer en determinadas ubicaciones dentro de expresiones literales XML. Los controles de ubicación de la expresión que escribe la expresión pueden devolver y cómo `Nothing` se controla. La tabla siguiente describe las ubicaciones permitidas y tipos de expresiones incrustadas.  
   
 |Ubicación en literal|Tipo de expresión|Control de `Nothing`|  
 |---|---|---|  
 |Nombre del elemento XML|<xref:System.Xml.Linq.XName>|Error|  
 |Contenido del elemento XML|`Object` o una matriz de `Object`|Se ignora.|  
-|Nombre de atributo del elemento XML|<xref:System.Xml.Linq.XName>|Error, a menos que el valor del atributo sea también `Nothing`|  
-|Valor de atributo del elemento XML|`Object`|Se omite la declaración de atributo|  
-|Atributo del elemento XML|<xref:System.Xml.Linq.XAttribute> o una colección de <xref:System.Xml.Linq.XAttribute>|Se ignora.|  
+|Nombre de atributo del elemento XML|<xref:System.Xml.Linq.XName>|Error, a menos que el valor del atributo también `Nothing`|  
+|Valor de atributo del elemento XML|`Object`|Omite la declaración de atributo|  
+|Atributo de elemento XML|<xref:System.Xml.Linq.XAttribute> o una colección de <xref:System.Xml.Linq.XAttribute>|Se ignora.|  
 |Elemento raíz del documento XML|<xref:System.Xml.Linq.XElement> o una colección de uno <xref:System.Xml.Linq.XElement> objeto y un número arbitrario de <xref:System.Xml.Linq.XProcessingInstruction> y <xref:System.Xml.Linq.XComment> objetos|Se ignora.|  
   
--   Ejemplo de una expresión incrustada en un nombre de elemento XML:  
+-   Ejemplo de una expresión insertada en un nombre de elemento XML:  
   
      [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_2.vb)]  
   
@@ -50,11 +50,11 @@ Expresiones incrustadas le permiten crear literales XML que contienen expresione
   
      [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_3.vb)]  
   
--   Ejemplo de una expresión incrustada en un nombre de atributo del elemento XML:  
+-   Ejemplo de una expresión insertada en un nombre de atributo del elemento XML:  
   
      [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_4.vb)]  
   
--   Ejemplo de una expresión incrustada en un valor de atributo del elemento XML:  
+-   Ejemplo de una expresión insertada en un valor de atributo del elemento XML:  
   
      [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_5.vb)]  
   
@@ -66,19 +66,19 @@ Expresiones incrustadas le permiten crear literales XML que contienen expresione
   
      [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_7.vb)]  
   
- Si habilita `Option Strict`, el compilador comprueba que el tipo de cada expresión incrustada se amplía al tipo requerido. La única excepción es para el elemento raíz de un documento XML, que se comprueba cuando se ejecuta el código. Si se compila sin `Option Strict`, puede incrustar expresiones de tipo `Object` y se comprueba su tipo en tiempo de ejecución.  
+ Si habilita `Option Strict`, el compilador comprueba que el tipo de cada expresión insertada se amplía al tipo requerido. La única excepción es para el elemento raíz de un documento XML, que se comprueba cuando se ejecuta el código. Si se compila sin `Option Strict`, puede incrustar expresiones de tipo `Object` y se comprueba su tipo en tiempo de ejecución.  
   
- En ubicaciones donde es opcional, contenido incrustado expresiones que contienen `Nothing` se omiten. Esto significa que no es necesario comparar el contenido de ese elemento, valores de atributo, y elementos de matriz no son `Nothing` antes de utilizar un literal XML. Requiere valores, como los nombres de elemento y atributo, no pueden ser `Nothing`.  
+ En las ubicaciones donde el contenido es opcional, incrustar expresiones que contienen `Nothing` se omiten. Esto significa que no es necesario que comprobar ese contenido del elemento, los valores de atributo, y los elementos de matriz no son `Nothing` antes de utilizar un literal XML. Requiere valores, como los nombres de elemento y atributo, no pueden ser `Nothing`.  
   
- Para obtener más información sobre el uso de una expresión incrustada en un determinado tipo de literal, consulte [Literal de documento XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [Literal de elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+ Para obtener más información sobre cómo usar una expresión incrustada en un determinado tipo de literal, consulte [Literal de documento XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [Literal de elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="scoping-rules"></a>Reglas de ámbito  
- El compilador convierte cada literal XML en una llamada de constructor para el tipo literal adecuado. El contenido literal y las expresiones incrustadas en un literal XML se pasan como argumentos al constructor. Esto significa que todos los elementos de programación de Visual Basic disponibles para un literal XML también están disponibles para sus expresiones incrustadas.  
+ El compilador convierte cada literal XML en una llamada al constructor para el tipo literal adecuado. El contenido literal y expresiones incrustadas en un literal XML se pasan como argumentos al constructor. Esto significa que todos los elementos de programación de Visual Basic disponibles para un literal XML también están disponibles para sus expresiones incrustadas.  
   
- Dentro de un literal XML, puede tener acceso el espacio de nombres XML prefijos declarados con la `Imports` instrucción. Puede declarar un nuevo prefijo de espacio de nombres XML o sombrear un prefijo de espacio de nombres XML existente, en un elemento mediante el `xmlns` atributo. El nuevo espacio de nombres está disponible para los nodos secundarios de ese elemento, pero no para los literales XML de expresiones incrustadas.  
+ Dentro de un literal XML, puede tener acceso a espacio de nombres XML prefijos declarados con el `Imports` instrucción. Puede declarar un nuevo prefijo de espacio de nombres XML o sombrear un prefijo de espacio de nombres XML existente, en un elemento utilizando el `xmlns` atributo. El nuevo espacio de nombres está disponible para los nodos secundarios de ese elemento, pero no para los literales XML en expresiones incrustadas.  
   
 > [!NOTE]
->  Cuando se declara un prefijo de espacio de nombres XML mediante el uso de la `xmlns` el atributo de espacio de nombres, el valor del atributo debe ser una constante de cadena. En este sentido, usando la `xmlns` atributo es similar al uso de la `Imports` instrucción para declarar un espacio de nombres XML. No se puede usar una expresión incrustada para especificar el valor de espacio de nombres XML.  
+>  Cuando declara un prefijo de espacio de nombres XML mediante el uso de la `xmlns` namespace (atributo), el valor del atributo debe ser una constante de cadena. En este sentido, utilizando el `xmlns` atributo es similar a usar el `Imports` instrucción para declarar un espacio de nombres XML. No se puede usar una expresión incrustada para especificar el valor de espacio de nombres XML.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  

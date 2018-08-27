@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: d6b0cb91dd9b8159919b0d155bb2f9773e7ba534
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 2041182dffa0330ea601b30e047c0b09731618f2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315113"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929774"
 ---
 # <a name="bool-c-reference"></a>bool (Referencia de C#)
 
@@ -51,10 +51,10 @@ En este ejemplo, se escribe un carácter desde el teclado y el programa comprueb
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de C#](../../../csharp/language-reference/index.md)  
-[Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-[Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
-[Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)  
-[Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

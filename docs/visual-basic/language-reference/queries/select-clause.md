@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 55c1e79b9e8e26483c1b7374a755bf977129169b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d959c0717a3ef44dfc23c90d99ec7b83421efaa
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604411"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935956"
 ---
 # <a name="select-clause-visual-basic"></a>Select (Cláusula, Visual Basic)
 Define el resultado de una consulta.  
@@ -26,23 +26,23 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
 ## <a name="parts"></a>Elementos  
  `var1`  
- Opcional. Un alias que puede utilizarse para hacer referencia a los resultados de la expresión de columna.  
+ Opcional. Un alias que se puede usar para hacer referencia a los resultados de la expresión de columna.  
   
  `fieldName1`  
- Requerido. El nombre del campo que se va a devolver en el resultado de la consulta.  
+ Requerido. El nombre del campo para devolver resultados de la consulta.  
   
 ## <a name="remarks"></a>Comentarios  
- Puede usar el `Select` cláusula para definir los resultados para devolver desde una consulta. Esto le permite definir los miembros de un nuevo tipo anónimo creado por una consulta, o a los miembros de un tipo con nombre que es devuelto por una consulta de destino. El `Select` cláusula no es necesaria para una consulta. Si no hay ningún `Select` cláusula se especifica, la consulta devolverá un tipo basado en todos los miembros de las variables de rango identificados para el ámbito actual. Para más información, vea [Tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). Cuando una consulta crea un tipo con nombre, devolverá un resultado de tipo <xref:System.Collections.Generic.IEnumerable%601> donde `T` es el tipo creado.  
+ Puede usar el `Select` cláusula para definir los resultados se devuelven desde una consulta. Esto le permite definir los miembros de un nuevo tipo anónimo creado por una consulta, o a los miembros de un tipo con nombre devuelto por una consulta de destino. El `Select` cláusula no es necesaria para una consulta. Si no hay ningún `Select` cláusula se especifica, la consulta devolverá un tipo basado en todos los miembros de las variables de rango identificadas para el ámbito actual. Para más información, vea [Tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md). Cuando una consulta crea un tipo con nombre, devolverá un resultado de tipo <xref:System.Collections.Generic.IEnumerable%601> donde `T` es el tipo creado.  
   
- El `Select` cláusula puede hacer referencia a las variables en el ámbito actual. Esto incluye las variables de rango identificadas en el `From` cláusula (o `From` cláusulas). También incluye las variables nuevas creadas con un alias mediante la `Aggregate`, `Let`, `Group By`, o `Group Join` cláusulas o variables desde anterior `Select` cláusula en la expresión de consulta. El `Select` cláusula también puede incluir valores estáticos. Por ejemplo, en el ejemplo de código siguiente se muestra una expresión de consulta en el que el `Select` cláusula define el resultado de la consulta como un nuevo tipo anónimo con cuatro miembros: `ProductName`, `Price`, `Discount`, y `DiscountedPrice`. El `ProductName` y `Price` valores de miembro se toman de la variable de rango de producto que se define en el `From` cláusula. El `DiscountedPrice` se calcula el valor del miembro en el `Let` cláusula. El `Discount` miembro es un valor estático.  
+ El `Select` cláusula puede hacer referencia a las variables en el ámbito actual. Esto incluye las variables de rango identificadas en el `From` cláusula (o `From` cláusulas). También incluye las variables nuevas creadas con un alias mediante la `Aggregate`, `Let`, `Group By`, o `Group Join` cláusulas o variables en una anterior `Select` cláusula en la expresión de consulta. El `Select` cláusula también puede incluir valores estáticos. Por ejemplo, en el ejemplo de código siguiente se muestra una expresión de consulta en el que el `Select` cláusula define el resultado de la consulta como un nuevo tipo anónimo con cuatro miembros: `ProductName`, `Price`, `Discount`, y `DiscountedPrice`. El `ProductName` y `Price` se toman los valores de miembro de la variable de rango de producto que se define en el `From` cláusula. El `DiscountedPrice` se calcula el valor del miembro en el `Let` cláusula. El `Discount` miembro es un valor estático.  
   
  [!code-vb[VbSimpleQuerySamples#27](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_1.vb)]  
   
- El `Select` cláusula presenta un nuevo conjunto de variables de rango para las cláusulas de consulta subsiguientes y las variables de rango anteriores ya no están en ámbito. La última `Select` cláusula en una expresión de consulta determina el valor devuelto de la consulta. Por ejemplo, la consulta siguiente devuelve a la compañía nombre y el identificador de cada pedido del cliente para el que el total sea superior a 500. La primera `Select` cláusula identifica las variables de rango para el `Where` cláusula y el segundo `Select` cláusula. El segundo `Select` cláusula identifica los valores devueltos por la consulta como un nuevo tipo anónimo.  
+ El `Select` cláusula presenta un nuevo conjunto de variables de rango para las cláusulas de consulta subsiguientes, y las variables de rango anteriores ya no están en ámbito. La última `Select` cláusula en una expresión de consulta determina el valor devuelto de la consulta. Por ejemplo, la consulta siguiente devuelve a la compañía de nombre y el identificador de cada pedido del cliente para el que el total superior a 500. La primera `Select` cláusula identifica las variables de rango para el `Where` cláusula y el segundo `Select` cláusula. El segundo `Select` cláusula identifica los valores devueltos por la consulta como un nuevo tipo anónimo.  
   
  [!code-vb[VbSimpleQuerySamples#28](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_2.vb)]  
   
- Si el `Select` cláusula identifica un solo elemento para devolver, la expresión de consulta devuelve una colección del tipo de ese elemento único. Si el `Select` cláusula identifica varios elementos que se devolverán, la expresión de consulta devuelve una colección de un nuevo tipo anónimo, en función de los elementos seleccionados. Por ejemplo, las dos consultas siguientes devuelven colecciones de dos tipos diferentes en función de la `Select` cláusula. La primera consulta devuelve una colección de nombres de compañía como cadenas. La segunda consulta devuelve una colección de `Customer` objetos que se llena con los nombres de las compañías y la información de dirección.  
+ Si el `Select` cláusula identifica un único elemento va a devolver, la expresión de consulta devuelve una colección del tipo de ese elemento único. Si el `Select` cláusula identifica varios elementos que se devolverán, la expresión de consulta devuelve una colección de un nuevo tipo anónimo, en función de los elementos seleccionados. Por ejemplo, las dos consultas siguientes devuelven colecciones de dos tipos diferentes, según la `Select` cláusula. La primera consulta devuelve una colección de nombres de compañía como cadenas. La segunda consulta devuelve una colección de `Customer` objetos que se rellena con los nombres de la empresa y la información de dirección.  
   
  [!code-vb[VbSimpleQuerySamples#29](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_3.vb)]  
   
@@ -53,7 +53,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
 ## <a name="see-also"></a>Vea también  
  [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/queries.md)  
+ [Consultas](../../../visual-basic/language-reference/queries/index.md)  
  [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)  
  [Order By (cláusula)](../../../visual-basic/language-reference/queries/order-by-clause.md)  

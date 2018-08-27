@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f8189f0adb62aa32cd0b85ca5a653aa466c7032
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb187719ff502abe61ac5deb69c6427a4a64ab44
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460468"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930232"
 ---
 # <a name="spawninstance-function"></a>Función SpawnInstance
 Crea una nueva instancia de una clase.    
@@ -41,10 +41,10 @@ HRESULT SpawnInstance (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[in] Este parámetro no se utiliza.
+[in] Este parámetro se usa.
 
 `ptr`  
-[in] Un puntero a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instancia.
+[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
 
 `lFlags`  
 [in] Reservado. Este parámetro debe ser 0.
@@ -54,32 +54,32 @@ HRESULT SpawnInstance (
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, o bien puede definirlas como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` no es una definición de clase válido y no se puede generar nuevas instancias. Está incompleto o no se ha registrado con la administración de Windows mediante una llamada a [PutClassWmi](putclasswmi.md). |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` no es una definición de clase válido y no se puede generar nuevas instancias. Es incompleto o no se registró con la administración de Windows mediante una llamada a [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para completar la operación. |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | El valor de `ppNewClass` es `null`. |
-| `WBEM_S_NO_ERROR` | 0 | La llamada de función tuvo éxito.  |
+| `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject:: SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) método.
+Esta función contiene una llamada a la [IWbemClassObject:: SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) método.
 
-`ptr` debe ser una definición de clase obtenida de la administración de Windows. (Tenga en cuenta que se admite la creación de una instancia de una instancia, pero la instancia devuelta está vacía). A continuación, utilizar esta definición de clase para crear nuevas instancias. Una llamada a la [PutInstanceWmi](putinstancewmi.md) función es necesaria si se va a escribir la instancia a la administración de Windows.
-
-
+`ptr` debe ser una definición de clase obtenida de la administración de Windows. (Tenga en cuenta que al generar una instancia de una instancia es compatible, pero la instancia devuelta está vacía). Utilizamos esta definición de clase para crear nuevas instancias. Una llamada a la [PutInstanceWmi](putinstancewmi.md) función es necesaria si va a escribir la instancia a la administración de Windows.
 
 
-El nuevo objeto devuelto en `ppNewClass` se convierte automáticamente en una subclase del objeto actual. No se puede invalidar este comportamiento. No hay ningún otro método por el que se pueden crear subclases (clases derivadas).
+
+
+El nuevo objeto devuelto en `ppNewClass` se convierte automáticamente en una subclase del objeto actual. No se puede invalidar este comportamiento. No hay ningún otro método que se pueden crear subclases (clases derivadas).
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

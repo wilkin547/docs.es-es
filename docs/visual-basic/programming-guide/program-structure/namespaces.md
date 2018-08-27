@@ -17,11 +17,11 @@ helpviewer_keywords:
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
 ms.openlocfilehash: c1302bf4b424c7c03fb6c2d8132b086c4d30fd87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655563"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934458"
 ---
 # <a name="namespaces-in-visual-basic"></a>Espacios de nombres en Visual Basic
 Los espacios de nombres organizan los objetos definidos en un ensamblado. Los ensamblados pueden contener varios espacios de nombres, que a su vez pueden contener otros espacios de nombres. Los espacios de nombres evitan las ambigüedades y simplifican las referencias cuando se usan grupos de objetos grandes, como las bibliotecas de clases.  
@@ -33,7 +33,7 @@ Los espacios de nombres organizan los objetos definidos en un ensamblado. Los en
 ## <a name="avoiding-name-collisions"></a>Evitar conflictos de nombres  
  Los espacios de nombres de[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] tratan un problema que a veces se llama *contaminación de espacios de nombres*, en el que el desarrollador de una biblioteca de clases está obstaculizado por el uso de nombres similares en otra biblioteca. Estos conflictos con componentes existentes a veces se denominan *conflictos de nombres*.  
   
- Por ejemplo, si crea una clase denominada `ListBox`, puede usarla en su proyecto sin ninguna calificación, Sin embargo, si desea usar el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> clase en el mismo proyecto, debe usar una referencia completa para que sea la referencia único. Si la referencia no es única, Visual Basic genera un error que indica que el nombre es ambiguo. En el ejemplo de código siguiente se muestra cómo declarar estos objetos:  
+ Por ejemplo, si crea una clase denominada `ListBox`, puede usarla en su proyecto sin ninguna calificación, Sin embargo, si desea usar el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> clase en el mismo proyecto, debe usar una referencia completa para que sea único. Si la referencia no es única, Visual Basic genera un error que indica que el nombre es ambiguo. En el ejemplo de código siguiente se muestra cómo declarar estos objetos:  
   
  [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
   
@@ -41,9 +41,9 @@ Los espacios de nombres organizan los objetos definidos en un ensamblado. Los en
   
  ![Jerarquía de Namespace](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
   
- De forma predeterminada, todos los archivos ejecutables creados con Visual Basic contienen un espacio de nombres con el mismo nombre que el proyecto. Por ejemplo, si define un objeto en un proyecto denominado `ListBoxProject`, el archivo ejecutable ListBoxProject.exe contiene un espacio de nombres llamado `ListBoxProject`.  
+ De forma predeterminada, todos los archivos ejecutables que cree con Visual Basic contienen un espacio de nombres con el mismo nombre que el proyecto. Por ejemplo, si define un objeto en un proyecto denominado `ListBoxProject`, el archivo ejecutable ListBoxProject.exe contiene un espacio de nombres llamado `ListBoxProject`.  
   
- Se puede usar el mismo espacio de nombres en varios ensamblados. Visual Basic trata como un único conjunto de nombres. Por ejemplo, puede definir clases para un espacio de nombres ( `SomeNameSpace` ) en un ensamblado ( `Assemb1`) y definir clases adicionales para el mismo espacio de nombres desde un ensamblado denominado `Assemb2`.  
+ Se puede usar el mismo espacio de nombres en varios ensamblados. Visual Basic los trata como un único conjunto de nombres. Por ejemplo, puede definir clases para un espacio de nombres ( `SomeNameSpace` ) en un ensamblado ( `Assemb1`) y definir clases adicionales para el mismo espacio de nombres desde un ensamblado denominado `Assemb2`.  
   
 ## <a name="fully-qualified-names"></a>nombres completos  
  Los nombres completos son referencias de objetos que llevan como prefijo el nombre del espacio de nombres en el que se define el objeto. Puede usar los objetos definidos en otros proyectos si crea una referencia a la clase (eligiendo **Agregar referencia** desde el menú **Proyecto** ) y usa el nombre completo del objeto en el código. En el siguiente fragmento de código se muestra cómo usar el nombre completo de un objeto desde el espacio de nombres de otro proyecto:  
@@ -60,7 +60,7 @@ Los espacios de nombres organizan los objetos definidos en un ensamblado. Los en
   
  [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
   
- Si intenta usar `Class1` sin sea completo, Visual Basic genera un error que indica que el nombre `Class1` es ambiguo.  
+ Si intenta usar `Class1` sin calificarla por completo, Visual Basic genera un error que indica que el nombre `Class1` es ambiguo.  
   
 ## <a name="namespace-level-statements"></a>Instrucciones de nivel de espacio de nombres  
  Dentro de un espacio de nombres, puede definir elementos tales como módulos, interfaces, clases, delegados, enumeraciones, estructuras y otros espacios de nombres. Los elementos tales como propiedades, procedimientos, variables y eventos no se pueden definir en el nivel de espacio de nombres. Estos elementos deben declararse dentro de contenedores tales como módulos, estructuras o clases.  
@@ -109,7 +109,7 @@ End Namespace
   
  En una declaración de espacio de nombres, no se puede anidar `Global` en otro espacio de nombres.  
   
- Puede usar el [página de aplicación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) para ver y modificar el **raíz Namespace** del proyecto.  En cuanto a los proyectos nuevos, el **espacio de nombres raíz** tiene como nombre predeterminado el nombre del proyecto. Para que `Global` sea el espacio de nombres de nivel superior, puede borrar la entrada **Espacio de nombres raíz** para que el cuadro esté vacío. Si se borra **Espacio de nombres raíz** , ya no es necesario usar la palabra clave `Global` en las declaraciones de espacio de nombres.  
+ Puede usar el [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) para ver y modificar el **raíz Namespace** del proyecto.  En cuanto a los proyectos nuevos, el **espacio de nombres raíz** tiene como nombre predeterminado el nombre del proyecto. Para que `Global` sea el espacio de nombres de nivel superior, puede borrar la entrada **Espacio de nombres raíz** para que el cuadro esté vacío. Si se borra **Espacio de nombres raíz** , ya no es necesario usar la palabra clave `Global` en las declaraciones de espacio de nombres.  
   
  Si una instrucción `Namespace` declara un nombre que también es un espacio de nombres en .NET Framework, el espacio de nombres de .NET Framework dejará de estar disponible si la palabra clave `Global` no se usa en un nombre completo. Para habilitar el acceso al espacio de nombres de .NET Framework sin usar la palabra clave `Global` , puede incluir la palabra clave `Global` en la instrucción `Namespace` .  
   

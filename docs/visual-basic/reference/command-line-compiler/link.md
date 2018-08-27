@@ -12,11 +12,11 @@ helpviewer_keywords:
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 ms.openlocfilehash: 95c528c4d686c44d0d77d1f55833be75ab14f8bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656274"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931895"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 Hace que el compilador facilite al proyecto que se está compilando información de tipos COM en los ensamblados especificados.  
@@ -55,7 +55,7 @@ Hace que el compilador facilite al proyecto que se está compilando información
   
  Use [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado.  
   
- Al igual que el [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) opción del compilador, el `-link` opción del compilador usa el archivo de respuesta Vbc.rsp, que se utilizan con frecuencia las referencias [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ensamblados. Utilice la [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) opción del compilador si no desea que el compilador que use el archivo Vbc.rsp.  
+ Al igual que el [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) opción del compilador, el `-link` opción del compilador usa el archivo de respuesta Vbc.rsp, que las referencias de uso frecuente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ensamblados. Utilice la [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) opción del compilador si no desea que el compilador que use el archivo Vbc.rsp.  
   
  La forma abreviada de `-link` es `-l`.  
   
@@ -79,7 +79,7 @@ Hace que el compilador facilite al proyecto que se está compilando información
  [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
   
 ## <a name="example"></a>Ejemplo  
- La línea de comandos siguiente compila el archivo de código fuente `OfficeApp.vb` y hacer referencia a ensamblados de `COMData1.dll` y `COMData2.dll` para generar `OfficeApp.exe`.  
+ La siguiente línea de comandos compila el archivo de código fuente `OfficeApp.vb` y hacer referencia a ensamblados de `COMData1.dll` y `COMData2.dll` para producir `OfficeApp.exe`.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  

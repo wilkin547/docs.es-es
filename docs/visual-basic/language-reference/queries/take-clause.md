@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: 0dddb411af1b4ee269e091c07553a94589d90b2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfaccf470d93a6a72451e7ad8b41e8dbb1171c71
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604034"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932475"
 ---
 # <a name="take-clause-visual-basic"></a>Take (Cláusula, Visual Basic)
 Devuelve un número especificado de elementos contiguos desde el principio de una colección.  
@@ -26,25 +26,25 @@ Take count
   
 ## <a name="parts"></a>Elementos  
  `count`  
- Requerido. Un valor o una expresión que se evalúa como el número de elementos de la secuencia para devolver.  
+ Requerido. Un valor o una expresión que se evalúa como el número de elementos de la secuencia que se va a devolver.  
   
 ## <a name="remarks"></a>Comentarios  
- El `Take` cláusula hace una consulta incluir un número especificado de elementos contiguos desde el principio de una lista de resultados. Se especifica el número de elementos que desee incluir el `count` parámetro.  
+ El `Take` cláusula hace una consulta incluir un número especificado de elementos contiguos desde el principio de una lista de resultados. Especificado por el número de elementos que desee incluir el `count` parámetro.  
   
  Puede usar el `Take` cláusula con el `Skip` cláusula para devolver un intervalo de datos de cualquier segmento de una consulta. Para ello, pase el índice del primer elemento del intervalo para el `Skip` cláusula y el tamaño del intervalo para el `Take` cláusula. En este caso, el `Take` cláusula debe especificarse después el `Skip` cláusula.  
   
- Cuando se usa el `Take` cláusula en una consulta, también debe asegurarse de que los resultados se devuelven en un orden que permita la `Take` cláusula para incluir los resultados previstos. Para obtener más información sobre cómo ordenar los resultados de la consulta, vea [cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ Cuando se usa el `Take` cláusula en una consulta, es posible que también deberá asegurarse de que los resultados se devuelven en un orden que le permitirán la `Take` cláusula para incluir los resultados deseados. Para obtener más información sobre cómo ordenar los resultados de la consulta, vea [cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Puede usar el `TakeWhile` cláusula para especificar que se devuelvan sólo ciertos elementos, dependiendo de la condición proporcionada.  
+ Puede usar el `TakeWhile` cláusula para especificar que se devuelvan sólo ciertos elementos, según la condición proporcionada.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo de código utiliza el `Take` cláusula junto con el `Skip` cláusula se devuelven datos de una consulta en páginas. El GetCustomers función utiliza la `Skip` cláusula para omitir los clientes en la lista hasta que la proporcionada a partir de índice valor y se utiliza el `Take` cláusula para devolver una página de los clientes a partir de ese valor de índice.  
+ El siguiente ejemplo de código utiliza el `Take` cláusula junto con el `Skip` cláusula para devolver datos de una consulta en las páginas. El GetCustomers función usa el `Skip` cláusula para omitir los clientes en la lista hasta que la proporcionada a partir de índice valor y se usa el `Take` cláusula para devolver una página de clientes a partir de ese valor de índice.  
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-clause_1.vb)]  
   
 ## <a name="see-also"></a>Vea también  
  [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/queries.md)  
+ [Consultas](../../../visual-basic/language-reference/queries/index.md)  
  [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)  
  [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Order By (cláusula)](../../../visual-basic/language-reference/queries/order-by-clause.md)  

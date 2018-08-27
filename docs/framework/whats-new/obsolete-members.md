@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94401a97a1be9453caa36259dfc5901f438eee40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b39962d2d716d88d139ccaba5f4c445dad9ef6c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508779"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999486"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Miembros obsoletos en .NET Framework
 En las tablas de este artículo se enumeran los miembros de tipo que están obsoletos en .NET Framework 4.5 y versiones posteriores organizados por ensamblado. Use los vínculos siguientes para ver una lista de miembros obsoletos y las alternativas recomendadas en cada ensamblado. En este tema no se muestran los miembros de los tipos obsoletos. Para obtener una lista de tipos obsoletos, vea [Tipos obsoletos](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -593,7 +593,7 @@ En las tablas de este artículo se enumeran los miembros de tipo que están obso
   
 |Tipo|Miembro|Mensaje|  
 |----------|------------|-------------|  
-|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Esta propiedad ha quedado obsoleta. Para habilitar el objeto <xref:System.Net.CookieContainer> de HTTP, use la propiedad <!----zz <xref:System.ServiceModel.BasicHttpBinding.AllowCookies%2A?displayProperty=nameWithType> --> `System.ServiceModel.BasicHttpBinding.AllowCookies` en su lugar.|  
+|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Esta propiedad ha quedado obsoleta. Para habilitar el objeto <xref:System.Net.CookieContainer> de HTTP, use la propiedad <xref:System.ServiceModel.HttpBindingBase.AllowCookies%2A?displayProperty=nameWithType> en su lugar.|  
 |<xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>|<xref:System.ServiceModel.Configuration.BindingsSection.NetPeerTcpBinding%2A>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> La característica de canal del mismo nivel está obsoleta y se quitará en el futuro.|  
 |<xref:System.ServiceModel.Dispatcher.ClientOperationCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientOperationCompatBase.ParameterInspectors%2A>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> El uso de este tipo genera un error del compilador.<br /><br /> Esta API es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.|  
 |<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase.MessageInspectors%2A>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> El uso de este tipo genera un error del compilador.<br /><br /> Esta API es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.|  
@@ -778,7 +778,7 @@ En las tablas de este artículo se enumeran los miembros de tipo que están obso
   
 |Tipo|Miembro|Mensaje|  
 |----------|------------|-------------|  
-|<!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy?displayProperty=nameWithType> --> `Microsoft.Data.Entity.Build.Tasks.EntityDeploy`| <!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources%2A>  -->`Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources`|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Solo se utiliza para la compatibilidad con versiones anteriores a la versión 3.5.|  
+|`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Solo se utiliza para la compatibilidad con versiones anteriores a la versión 3.5.|  
   
 <a name="visualbasic"></a>   
 ### <a name="assembly-microsoftvisualbasicdll"></a>Ensamblado: Microsoft.VisualBasic.dll  

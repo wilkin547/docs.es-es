@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: 04496079114be45388926993b67e8f1d3f2e9f15
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: df1bf6a3e6d24b231bf5e3c7a960f49084c4e53a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172040"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930196"
 ---
 # <a name="this-c-reference"></a>this (Referencia de C#)
 La palabra clave `this` hace referencia a la instancia actual de la clase y también se usa como modificador del primer parámetro de un método de extensión.  
@@ -47,9 +47,10 @@ La palabra clave `this` hace referencia a la instancia actual de la clase y tamb
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
- [base](../../../csharp/language-reference/keywords/base.md)  
- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)
+## <a name="see-also"></a>Vea también
+
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+- [base](../../../csharp/language-reference/keywords/base.md)  
+- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)

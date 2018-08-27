@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f231c4f9782518e30cbaa89c6b085c72aafcc92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa9e7a4dacceb492dfe037b4b64f22f231323de5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445450"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933227"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags (Enumeración)
 Contiene valores de marca que controlan el comportamiento de los metadatos al abrir archivos de manifiesto.  
@@ -58,20 +58,20 @@ typedef enum CorOpenFlags
 |`ofCopyMemory`|Indica que el archivo se debe leer en la memoria. Los metadatos deben mantener su propia copia.|  
 |`ofCacheImage`|Obsoleto. Esta marca se omite.|  
 |`ofManifestMetadata`|Obsoleto. Esta marca se omite.|  
-|`ofReadOnly`|Indica que el archivo se debe abrir para lectura y que una llamada a `QueryInterface` para un [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) no se puede realizar.|  
-|`ofTakeOwnership`|Indica que se asignó la memoria mediante una llamada a [CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c) y se liberarán los metadatos.|  
+|`ofReadOnly`|Indica que se debe abrir el archivo para lectura y que una llamada a `QueryInterface` para un [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) no se puede realizar.|  
+|`ofTakeOwnership`|Indica que la memoria se asignó mediante una llamada a [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) y se liberarán los metadatos.|  
 |`ofNoTypeLib`|Obsoleto. Esta marca se omite.|  
-|`ofNoTransform`|Indica que se deben deshabilitar las transformaciones automáticas de archivos .winmd. En otras palabras, se debe deshabilitar la proyección de un tipo de Windows Runtime en un tipo de .NET Framework. Para obtener más información, consulte [debajo de la directiva the Hood con .NET y el tiempo de ejecución de Windows](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
+|`ofNoTransform`|Indica que se deben deshabilitar las transformaciones automáticas de archivos .winmd. En otras palabras, se debe deshabilitar la proyección de un tipo de Windows Runtime en un tipo de .NET Framework. Para obtener más información, consulte [debajo de la directiva el interior de .NET y el tiempo de ejecución de Windows](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|Reservado para uso interno.|  
 |`ofReserved2`|Reservado para uso interno.|  
 |`ofReserved`|Reservado para uso interno.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

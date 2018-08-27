@@ -1,6 +1,6 @@
 ---
-title: Función BlessIWbemServices (referencia de API no administrada)
-description: La función BlessIWbemServices indica si las credenciales de usuario permiten el acceso a una clase IWbemServices.
+title: BlessIWbemServices (función) (referencia de API no administrada)
+description: BlessIWbemServices (función) indica si las credenciales de usuario permiten el acceso a una clase IWbemServices.
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServices
@@ -16,14 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59cb20f7ccfbd0b8f9d6026c9805468613818130
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a65c3c14507b2520c69875a1bc101ce826ace7ba
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934309"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices (función)
-Indica si las credenciales de usuario permiten el acceso a la especificada [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) clase.   
+Indica si las credenciales de usuario permiten el acceso a la especificada [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) clase.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -43,13 +44,13 @@ HRESULT BlessIWbemServices (
 ## <a name="parameters"></a>Parámetros
 
 `pIWbemServices`  
-[in] Un puntero a la [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) para el que se requieren permisos de objeto.
+[in] Un puntero a la [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) para el que se requieren permisos de objeto.
 
 `strUser`  
 [in] El nombre de usuario.
 
 `strPassword`  
-[in] La contraseña asociada a `strUser`.
+[in] La contraseña asociada con `strUser`.
 
 `strAuthority` [in] El nombre de dominio del usuario. Consulte la [ConnectServerWmi](connectserverwmi.md) función para obtener más información.
 
@@ -59,22 +60,22 @@ HRESULT BlessIWbemServices (
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WinError.h* archivo de encabezado, o bien puede definirlas como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el *WinError.h* archivo de encabezado, también puede definir como constantes en el código:
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0 x 80070057 | Uno o más argumentos no son válidos. |
 | `E_POINTER` | 0 x 80004003 | El valor de `pIWbemServices` es `null`. | 
 | `E_FAIL` | 0x80000008 | Se ha producido un error no especificado. |
-| `E_OUTOFMEMORY` | 0x80000002 | Hay suficiente memoria disponible para realizar la operación. | 
-| `S_OK` | 0 | La llamada de función tuvo éxito. | 
+| `E_OUTOFMEMORY` | 0x80000002 | No hay memoria suficiente está disponible para realizar la operación. | 
+| `S_OK` | 0 | La llamada de función fue correcta. | 
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

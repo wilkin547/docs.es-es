@@ -2,12 +2,12 @@
 title: Habilitar el acceso entre bases de datos en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 22fa2b48d795fb81b4740ce882f9bff632deabbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e041a6c90940ad33e17d83e5f0400d05c645ada
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353467"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934568"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Habilitar el acceso entre bases de datos en SQL Server
 Si el procedimiento de una base de datos depende de objetos incluidos en otra base de datos, se produce el encadenamiento de propiedad entre bases de datos. Las cadenas de propiedad entre bases de datos actúan de la misma forma que el encadenamiento de propiedad en una sola base de datos, excepto en que las cadenas de propiedad continuas requieren que todos los propietarios de objeto se asignen a la misma cuenta de inicio de sesión. Si el objeto de origen en la base de datos de origen y los objetos de destino en las bases de datos de destino pertenecen a la misma cuenta de inicio de sesión, SQL Server no comprueba los permisos en los objetos de destino.  
@@ -41,14 +41,14 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
 ```  
   
 ### <a name="dynamic-sql"></a>SQL dinámico  
- El encadenamiento de propiedad entre bases de datos no funciona en los casos en que se ejecutan instrucciones SQL creadas de forma dinámica, a menos que exista el mismo usuario en ambas bases de datos. Se puede solucionar esto en SQL Server mediante la creación de un procedimiento almacenado que tiene acceso a datos en otra base de datos y firma del procedimiento con un certificado que exista en ambas bases de datos. Con ello el usuario obtiene acceso a los recursos de la base de datos que utiliza el procedimiento sin concederle permisos ni acceso a la base de datos.  
+ El encadenamiento de propiedad entre bases de datos no funciona en los casos en que se ejecutan instrucciones SQL creadas de forma dinámica, a menos que exista el mismo usuario en ambas bases de datos. Puede resolver esto en SQL Server mediante la creación de procedimientos almacenados con acceso a otra base de datos y firmando el procedimiento con un certificado que exista en ambas bases de datos. Con ello el usuario obtiene acceso a los recursos de la base de datos que utiliza el procedimiento sin concederle permisos ni acceso a la base de datos.  
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obtener más información, vea los siguientes recursos.  
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[Extender la suplantación de la base de datos mediante EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) y [Cross DB Ownership Chaining (opción)](http://msdn.microsoft.com/library/ms188694.aspx)libros en pantalla de SQL Server.|Temas describen cómo configurar el encadenamiento de una instancia de SQL Server de propiedad entre bases de datos.|  
+|[Extender la suplantación de la base de datos mediante EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) y [Cross DB Ownership Chaining (opción)](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)libros en pantalla de SQL Server.|Los temas describen cómo configurar el encadenamiento entre bases de datos de una instancia de SQL Server.|  
   
 ## <a name="see-also"></a>Vea también  
  [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

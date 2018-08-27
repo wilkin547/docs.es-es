@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
 ms.openlocfilehash: e01b9463eca88858633b847be256ae5b063459b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313506"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42936016"
 ---
 # <a name="arrays-c-programming-guide"></a>Matrices (Guía de programación de C#)
 Puede almacenar varias variables del mismo tipo en una estructura de datos de matriz. Puede declarar una matriz mediante la especificación del tipo de sus elementos.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.openlocfilehash: cbc75a2ec6fe826cb192b1e8bef61c7295f13916
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337173"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924513"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de puntero (Guía de programación de C#)
 
@@ -44,7 +44,7 @@ Un puntero no puede señalar a una referencia ni a un [struct](../../language-re
 
 El valor de la variable de puntero de tipo `myType*` es la dirección de una variable de tipo `myType`. A continuación se muestran ejemplos de declaraciones de tipos de puntero:
 
-|Ejemplo|Description|
+|Ejemplo|Descripción|
 |-------------|-----------------|
 |`int* p`|`p` es un puntero a un entero.|
 |`int** p`|`p` es un puntero a un puntero a un entero.|

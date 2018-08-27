@@ -8,12 +8,12 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: 696eb531fe3e340f7fe0ae12483648119cf5a7eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: beb54cf6c4e6dc87b9a08b81586b24d72f92b84b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288299"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001427"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (Referencia de C#)
 Mediante el uso de un bloque `finally`, puede limpiar todos los recursos asignados en un bloque [try](../../../csharp/language-reference/keywords/try-catch.md) y ejecutar código incluso si se produce una excepción en el bloque `try`. Normalmente, las instrucciones de un bloque `finally` se ejecutan cuando el control abandona una instrucción `try`. La transferencia de control se puede producir como resultado de la ejecución normal, de la ejecución de una instrucción `break`, `continue`, `goto` o `return`, o de la propagación de una excepción fuera de la instrucción `try`.  
@@ -38,12 +38,13 @@ Mediante el uso de un bloque `finally`, puede limpiar todos los recursos asignad
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
- [Instrucciones try, throw y catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  
- [Instrucciones para el control de excepciones](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
- [throw](../../../csharp/language-reference/keywords/throw.md)  
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [Cómo: Iniciar excepciones explícitamente](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+## <a name="see-also"></a>Vea también
+
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+- [Instrucciones try, throw y catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  
+- [Instrucciones para el control de excepciones](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+- [throw](../../../csharp/language-reference/keywords/throw.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [Cómo: Iniciar excepciones explícitamente](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

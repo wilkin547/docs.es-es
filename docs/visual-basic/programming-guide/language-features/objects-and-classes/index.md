@@ -6,16 +6,16 @@ helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
 ms.openlocfilehash: 2917a698f9aa7828c201a048f443f5941797c704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655868"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934295"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos y clases de Visual Basic
 Un *objeto* es una combinación de código y datos que se pueden tratar como una unidad. Un objeto puede ser una parte de una aplicación, como un control o un formulario. Toda la aplicación también puede ser un objeto.
 
-Cuando se crea una aplicación en Visual Basic, se trabaja constantemente con objetos. Puede usar los objetos proporcionados por Visual Basic, como los objetos de acceso a datos, formularios y controles. También puede utilizar objetos de otras aplicaciones dentro de la aplicación de Visual Basic. Incluso puede crear sus propios objetos y definir propiedades y métodos adicionales para ellos. Los objetos actúan como bloques de compilación prefabricados que permiten escribir un fragmento de código de una vez y utilizarlo una y otra vez.  
+Al crear una aplicación en Visual Basic, se trabaja constantemente con objetos. Puede utilizar objetos proporcionados por Visual Basic, como los objetos de acceso a datos, formularios y controles. También puede utilizar objetos de otras aplicaciones dentro de la aplicación de Visual Basic. Incluso puede crear sus propios objetos y definir propiedades y métodos adicionales para ellos. Los objetos actúan como bloques de compilación prefabricados que permiten escribir un fragmento de código de una vez y utilizarlo una y otra vez.  
   
 En este tema se proporciona información detallada sobre los objetos.  
 
@@ -232,7 +232,7 @@ Asegúrese de que el compilador puede tener acceso a la clase de la que pretende
 Otra forma de relacionar ese objeto es mediante una *relación de contención*. Los objetos contenedores lógicamente encapsulan otros objetos. Por ejemplo, el objeto <xref:System.OperatingSystem> contiene lógicamente un objeto <xref:System.Version>, el cual devuelve a través de su propiedad <xref:System.OperatingSystem.Version%2A>. Tenga en cuenta que el objeto contenedor no contiene ningún otro objeto físicamente.
 
 #### <a name="collections"></a>Colecciones
-Un tipo concreto de contención de objeto se representa mediante *colecciones*. Las colecciones son grupos de objetos similares que se pueden enumerar. Visual Basic admite una sintaxis específica en el [For Each... Next (instrucción)](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) que le permite recorrer en iteración los elementos de una colección. Además, las colecciones suelen permitir usar un <xref:Microsoft.VisualBasic.Collection.Item%2A> para recuperar elementos en función de su índice o asociándolos con una cadena única. Las colecciones pueden ser más fáciles de utilizar que las matrices puesto que permiten agregar o quitar elementos sin utilizar índices. Debido a su facilidad de uso, las colecciones se utilizan a menudo para almacenar formularios y controles.
+Un tipo concreto de contención de objeto se representa mediante *colecciones*. Las colecciones son grupos de objetos similares que se pueden enumerar. Visual Basic admite una sintaxis específica en el [For Each... Instrucción Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) que le permite recorrer en iteración los elementos de una colección. Además, las colecciones suelen permitir usar un <xref:Microsoft.VisualBasic.Collection.Item%2A> para recuperar elementos en función de su índice o asociándolos con una cadena única. Las colecciones pueden ser más fáciles de utilizar que las matrices puesto que permiten agregar o quitar elementos sin utilizar índices. Debido a su facilidad de uso, las colecciones se utilizan a menudo para almacenar formularios y controles.
 
 ## <a name="related-topics"></a>Temas relacionados  
  [Tutorial: Definir clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  

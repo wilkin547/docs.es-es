@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e422e6ff65439d105020a6305b66a8192586a8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8810508bc61f6fd625b1485f199249a96b2686e6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591494"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931513"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Novedades de .NET Standard
 
@@ -55,7 +55,7 @@ Alguna de las adiciones al espacio de nombres <xref:System> de .NET Standard 2.0
 
 ### <a name="support-for-net-framework-libraries"></a>Compatibilidad con las bibliotecas .NET Framework
 
-La gran mayoría de las bibliotecas tienen como destino .NET Framework en lugar de .NET Standard. Sin embargo, la mayoría de las llamadas de esas bibliotecas se realizan a las API incluidas en .NET Standard 2.0. A partir de .NET Standard 2.0, puede acceder a las bibliotecas de .NET Framework desde una biblioteca de .NET Standard con el uso de una [corrección de compatibilidad](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#assembly-unification). Este nivel de compatibilidad es transparente para los desarrolladores; no tiene que hacer nada para aprovechar las ventajas de las bibliotecas de .NET Framework.
+La gran mayoría de las bibliotecas tienen como destino .NET Framework en lugar de .NET Standard. Sin embargo, la mayoría de las llamadas de esas bibliotecas se realizan a las API incluidas en .NET Standard 2.0. A partir de .NET Standard 2.0, puede acceder a las bibliotecas de .NET Framework desde una biblioteca de .NET Standard con el uso de una [corrección de compatibilidad](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-20/README.md#assembly-unification). Este nivel de compatibilidad es transparente para los desarrolladores; no tiene que hacer nada para aprovechar las ventajas de las bibliotecas de .NET Framework.
 
 El único requisito es que las API a las que llaman las bibliotecas de clases de .NET Framework estén incluidas en .NET Standard 2.0.
 

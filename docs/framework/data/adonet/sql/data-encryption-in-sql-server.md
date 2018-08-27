@@ -2,12 +2,12 @@
 title: Cifrado de datos en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: 9e2924dc9f2f2954f6690ad5009c4143d1b9a44f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d662f04cb54e12abfc481487cb5172f63edf0316
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358373"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932749"
 ---
 # <a name="data-encryption-in-sql-server"></a>Cifrado de datos en SQL Server
 SQL Server proporciona funciones para cifrar y descifrar datos con un certificado, una clave asimétrica o una clave simétrica. El programa administra estas opciones en un almacén de certificados interno. El almacén usa una jerarquía de cifrado que protege los certificados y las claves en un nivel, con la capa por encima de él en la jerarquía. Esta área de características de SQL Server se denomina almacenamiento secreto.  
@@ -19,15 +19,15 @@ SQL Server proporciona funciones para cifrar y descifrar datos con un certificad
   
  En el ámbito de una conexión de base de datos, SQL Server puede mantener varias claves simétricas abiertas. Las claves abiertas se recuperan del almacén y están disponibles para descifrar datos. Cuando se descifra un elemento de datos, no es necesario especificar la clave simétrica que se debe usar. Cada valor cifrado contiene el identificador de clave (GUID de clave) de la clave usada para cifrarlo. Si se descifra la clave correcta y está abierta, el motor crea una correspondencia entre la secuencia de bytes cifrada y la clave simétrica abierta. Esta clave se utiliza para realizar el descifrado y devolver los datos. Si no está abierta la clave correcta, se devuelve NULL.  
   
- Para obtener un ejemplo que muestra cómo trabajar con los datos cifrados en una base de datos, vea [Cómo: cifrar una columna de datos](http://go.microsoft.com/fwlink/?LinkID=128559) en libros en pantalla de SQL Server.  
+ Para obtener un ejemplo que muestra cómo trabajar con datos cifrados en una base de datos, vea [cifrar una columna de datos](/sql/relational-databases/security/encryption/encrypt-a-column-of-data).
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obtener más información sobre el cifrado de datos, vea los siguientes recursos.  
   
-|||  
+|Recurso|Descripción|  
 |-|-|  
-|[Cifrado de SQL Server](http://msdn.microsoft.com/library/bb510663.aspx) en libros en pantalla de SQL Server|Proporciona información general del cifrado en SQL Server. En este tema se incluyen vínculos a temas y temas de procedimientos adicionales.|  
-|[Jerarquía de cifrado](http://msdn.microsoft.com/library/ms189586.aspx) y [temas de procedimientos de cifrado](http://msdn.microsoft.com/library/aa337557.aspx) en libros en pantalla de SQL Server|Ofrece información general del cifrado en SQL Server. En este tema se incluyen vínculos a temas y temas de procedimientos adicionales.|  
+|[Cifrado de SQL Server](/sql/relational-databases/security/encryption/sql-server-encryption)|Ofrece información general del cifrado en SQL Server. En este tema se incluye vínculos a otros artículos.|  
+|[Jerarquía de cifrado](/sql/relational-databases/security/encryption/encryption-hierarchy)|Ofrece información general del cifrado en SQL Server. En este tema proporciona vínculos a otros artículos.|  
   
 ## <a name="see-also"></a>Vea también  
  [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

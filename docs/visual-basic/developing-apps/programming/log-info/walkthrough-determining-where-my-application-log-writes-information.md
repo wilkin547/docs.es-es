@@ -10,11 +10,11 @@ helpviewer_keywords:
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
 ms.openlocfilehash: fa177fa1f07c52d900f57e5bf61c967f06203c4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590938"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42908230"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Tutorial: Determinar el lugar en el que My.Application.Log escribe la información (Visual Basic)
 El objeto `My.Application.Log` puede escribir información en varios agentes de escucha de registro. Los agentes de escucha de registro se configuran por archivo de configuración del equipo y puede reemplazarlos una archivo de configuración de la aplicación. En este tema se describe la configuración predeterminada y cómo determinar la configuración de la aplicación.  

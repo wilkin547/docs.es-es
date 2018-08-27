@@ -7,18 +7,18 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Settings
 - My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
-ms.openlocfilehash: 808e02510d4f0a237ad4354b2edac8fa024b5f83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7dbb15c43d044e21c9823c4a1652b0408006e5c3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582277"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932572"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>Desarrollo rápido de aplicaciones con My.Resources y My.Settings (Visual Basic)
-La `My.Resources` objeto proporciona acceso a los recursos de la aplicación y permite recuperar dinámicamente los recursos de la aplicación.  
+La `My.Resources` objeto proporciona acceso a recursos de la aplicación y le permite recuperar dinámicamente los recursos de su aplicación.  
   
 ## <a name="retrieving-resources"></a>Recuperar recursos  
- Un número de recursos, como archivos de audio, iconos, imágenes y cadenas se puede recuperar mediante el `My.Resources` objeto. Por ejemplo, puede tener acceso a archivos de recursos específicos de la referencia cultural de la aplicación. En el ejemplo siguiente se establece el icono del formulario en el icono denominado `Form1Icon` almacenados en el archivo de recursos de la aplicación.  
+ Un número de recursos, como cadenas, iconos, imágenes y archivos de audio se puede recuperar mediante el `My.Resources` objeto. Por ejemplo, puede tener acceso a archivos de recursos específicos de la referencia cultural de la aplicación. En el ejemplo siguiente se establece el icono del formulario en el icono denominado `Form1Icon` almacenados en el archivo de recursos de la aplicación.  
   
  [!code-vb[VbVbcnMy#7](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/rapid-application-development-with-my-resources-and-my-settings_1.vb)]  
   
@@ -29,4 +29,4 @@ La `My.Resources` objeto proporciona acceso a los recursos de la aplicación y p
 ## <a name="see-also"></a>Vea también  
  [My.Resources (objeto)](../../../visual-basic/language-reference/objects/my-resources-object.md)  
  [My.Settings (objeto)](../../../visual-basic/language-reference/objects/my-settings-object.md)  
- [Acceso a la configuración de la aplicación](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)
+ [Acceso a la configuración de la aplicación](../../../visual-basic/developing-apps/programming/app-settings/index.md)

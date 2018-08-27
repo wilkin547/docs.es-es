@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: ee91513ef94e2abbe01d3ac09796b7fdf8e129ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: abe9fe0f6216f81fa223fe83a122b580577e1c32
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597388"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930033"
 ---
 # <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>La excepción del comentario XML debe tener un &#39;cref&#39; atributo
-El \<excepción > etiqueta proporciona un medio para documentar las excepciones que se pueden iniciar mediante un método. Requerido `cref` atributo designa el nombre de un miembro, que comprueba el generador de documentación. Si el miembro existe, se traduce al nombre de elemento canónico en el archivo de documentación.  
+El \<excepción > etiqueta proporciona una manera de documentar las excepciones que se pueden iniciar mediante un método. Necesario `cref` atributo designa el nombre de un miembro, que está activado de forma que el generador de documentación. Si el miembro existe, se traduce en el nombre de elemento canónico en el archivo de documentación.  
   
- **Id. de error:** BC42319  
+ **Identificador de error:** BC42319  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Agregar el `cref` atributo a la excepción como sigue:  
+-   Agregar el `cref` atribuir a la excepción como sigue:  
   
     ```  
     '''<exception cref="member">description</exception>  
@@ -30,4 +30,4 @@ El \<excepción > etiqueta proporciona un medio para documentar las excepciones 
 ## <a name="see-also"></a>Vea también  
  [\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md)  
  [Crear documentación XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)

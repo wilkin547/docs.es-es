@@ -8,11 +8,11 @@ helpviewer_keywords:
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
 ms.openlocfilehash: 91676830d88ddee79c72211ab43b7be32fa8724e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336061"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42908138"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Crear y producir excepciones (Guía de programación de C#)
 Las excepciones se usan para indicar que se ha producido un error mientras se ejecutaba el programa. Se crean los objetos de excepción que describen un error y, luego, se *producen* con la palabra clave [throw](../../../csharp/language-reference/keywords/throw.md). Después, el tiempo de ejecución busca el controlador de excepciones más compatible.  

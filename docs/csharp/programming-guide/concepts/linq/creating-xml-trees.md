@@ -3,18 +3,18 @@ title: Crear árboles XML (C#)
 ms.date: 07/20/2015
 ms.assetid: bccc3e0a-c08c-468e-9d30-e075670fdace
 ms.openlocfilehash: f9367cd795104020c88c40e820c6af15054e38be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318593"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999414"
 ---
 # <a name="creating-xml-trees-c"></a>Crear árboles XML (C#)
 Una de las tareas XML más habituales es la construcción de un árbol XML. Esta sección describe varias formas de crearlos.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Construcción funcional (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)|Proporciona información general acerca de la construcción funcional en [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. La construcción funcional permite crear el árbol XML total o parcialmente en una sola instrucción. En este tema también se muestra cómo incrustar consultas al construir un árbol XML.|  
 |[Crear árboles XML en C# (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md)|Muestra cómo crear árboles en C#.|  

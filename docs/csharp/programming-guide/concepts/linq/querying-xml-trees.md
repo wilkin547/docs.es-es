@@ -3,11 +3,11 @@ title: Consultar árboles XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 0913d81b-541a-4fd4-9cbf-7ec89fd817ea
 ms.openlocfilehash: 5d2e40da26f30a0ece570acf2fd25684d1cba40f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331092"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925590"
 ---
 # <a name="querying-xml-trees-c"></a>Consultar árboles XML (C#)
 En esta sección se ofrecen ejemplos de consultas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -18,7 +18,7 @@ En esta sección se ofrecen ejemplos de consultas de [!INCLUDE[sqltecxlinq](~/in
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)|Proporciona ejemplos comunes acerca de la creación de consultas sobre árboles XML.|  
 |[Proyecciones y transformaciones (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)|Proporciona ejemplos comunes acerca de la proyección desde árboles XML y la transformación de éstos.|  

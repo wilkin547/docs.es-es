@@ -2,14 +2,14 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: 5498c300ab126bbc4e08cd228e3e7b48e905932e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 730b1188a95d0e35d7431d43884e867e5520585e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352549"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930181"
 ---
-# <a name="servicehost"></a>@ServiceHost
+# <a name="servicehost"></a>\@ServiceHost
 Asocia el generador usado para crear el host del servicio con el servicio que se va a hospedar y otros aspectos de programación necesarios para tener acceso o compilar el código de hospedaje proporcionado en el archivo .svc.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,7 +32,7 @@ CodeBehind = "CodeBehind"%>
  El nombre de tipo de CLR del generador de host de servicio usado para crear instancias del host del servicio. Este atributo es opcional. Si no se especifica, se usa el valor predeterminado <xref:System.ServiceModel.Activation.ServiceHostFactory> que devuelve una instancia de <xref:System.ServiceModel.ServiceHost>.  
   
 #### <a name="debug"></a>Depuración  
- Indica si el servicio de Windows Communication Foundation (WCF) debe compilarse con símbolos de depuración. `true` Si el servicio WCF debe compilarse con símbolos de depuración; en caso contrario, `false`.  
+ Indica si el servicio de Windows Communication Foundation (WCF) se debe compilar con símbolos de depuración. `true` Si el servicio de WCF se debe compilar con símbolos de depuración; en caso contrario, `false`.  
   
 #### <a name="language"></a>Lenguaje  
  Especifica el lenguaje usado al compilar todo el código en línea del archivo (.svc). Los valores pueden representar cualquier lenguaje compatible con .NET, incluyendo C#, VB y JS, que hacen referencia a C#, Visual Basic .NET y JScript .NET, respectivamente. Este atributo es opcional.  
@@ -43,9 +43,9 @@ CodeBehind = "CodeBehind"%>
 ## <a name="remarks"></a>Comentarios  
  El <xref:System.ServiceModel.ServiceHost> utilizada para hospedar el servicio es un punto de extensibilidad dentro del modelo de programación de Windows Communication Foundation (WCF). Se usa un patrón del generador para crear <xref:System.ServiceModel.ServiceHost> porque es, potencialmente, un tipo polimórfico del que el entorno de hospedaje no debería crear instancias directamente.  
   
- las implementaciones predeterminadas usan <xref:System.ServiceModel.Activation.ServiceHostFactory> para crear una instancia de <xref:System.ServiceModel.ServiceHost>. Aunque es posible proporcionar su propio generador (uno que devuelva su host derivado) especificando el nombre del tipo CLR de la implementación del generador en el [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directiva.  
+ las implementaciones predeterminadas usan <xref:System.ServiceModel.Activation.ServiceHostFactory> para crear una instancia de <xref:System.ServiceModel.ServiceHost>. Pero puede proporcionar su propio generador (uno que devuelva su host derivado) especificando el nombre del tipo CLR de la implementación de fábrica en el [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directiva.  
   
- Para utilizar el generador de host de servicio personalizado propio en lugar del generador de manera predeterminada, basta con que proporcione el nombre de tipo en la [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directiva como se indica a continuación:  
+ Para usar el generador de host de servicios personalizados propio en lugar del generador predeterminado, basta con que proporcione el nombre de tipo en el [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directiva como sigue:  
   
 ```xml  
 <% @ServiceHost Factory="DerivedFactory" Service="MyService" %>  
@@ -53,7 +53,7 @@ CodeBehind = "CodeBehind"%>
   
  Mantenga las implementaciones del generador tan ligeras como sea posible. Si tiene mucha lógica personalizada, su código es más reutilizable si coloca esa lógica dentro de su host en lugar de dentro del generador.  
   
- Por ejemplo, para habilitar un punto de conexión con AJAX habilitado para `MyService`, especifique el <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> para el valor de la `Factory` atributo, en lugar del predeterminado <xref:System.ServiceModel.Activation.ServiceHostFactory>, en la [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directiva como se muestra en el ejemplo siguiente.  
+ Por ejemplo, para habilitar un extremo con AJAX habilitado para `MyService`, especifique el <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> para el valor de la `Factory` atributo, en lugar del predeterminado <xref:System.ServiceModel.Activation.ServiceHostFactory>, en el [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) la directiva como se muestra en el ejemplo siguiente.  
   
 ## <a name="example"></a>Ejemplo  
   

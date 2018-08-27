@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ab12ac28728535c3bc984d6b37d82f5bf371ba2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88c70e6a35e0a731cd8937b188dc6ee8e9bce105
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579476"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998859"
 ---
 # <a name="isolated-storage"></a>Almacenamiento aislado
 <a name="top"></a> Para las aplicaciones de [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)], el almacenamiento aislado es un mecanismo de almacenamiento de datos que proporciona aislamiento y seguridad mediante la definición de modos estándar de asociar código a los datos guardados. La estandarización ofrece además otras ventajas. Los administradores pueden usar herramientas diseñadas para manipular el almacenamiento aislado para configurar el espacio de almacenamiento de archivos, establecer directivas de seguridad y eliminar los datos no utilizados. Con el almacenamiento aislado, el código ya no requiere rutas de acceso únicas para especificar ubicaciones seguras en el sistema de archivos y los datos están protegidos de otras aplicaciones que solo tienen acceso a un almacenamiento aislado. La información en código que indica la ubicación del área de almacenamiento de la aplicación no es necesaria.  
   
 > [!IMPORTANT]
->  El almacenamiento aislado no está disponible para las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . En su lugar, se pueden usar las clases de datos de la aplicación del espacio de nombres `Windows.Storage` incluidas en la API de [!INCLUDE[wrt](../../../includes/wrt-md.md)] para almacenar archivos y datos locales. Para más información, consulte [Almacenamiento de datos de aplicación](/previous-versions/windows/apps/hh464917(v=win.10)) en el Centro de desarrollo de Windows.  
+>  El almacenamiento aislado no está disponible para las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . En su lugar, se pueden usar las clases de datos de la aplicación del espacio de nombres `Windows.Storage` incluidas en la API de [!INCLUDE[wrt](../../../includes/wrt-md.md)] para almacenar archivos y datos locales. Para más información, consulte [Almacenamiento de datos de aplicación](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) en el Centro de desarrollo de Windows.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -156,7 +156,7 @@ ms.locfileid: "33579476"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Tipos de aislamiento](../../../docs/standard/io/types-of-isolation.md)|Describe los distintos tipos de aislamiento.|  
 |[Cómo: Obtener los almacenes de almacenamiento aislado](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Proporciona un ejemplo de uso de la clase <xref:System.IO.IsolatedStorage.IsolatedStorageFile> para obtener un almacén aislado por usuario y ensamblado.|  

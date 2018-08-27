@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-ms.openlocfilehash: de54b3ea663738f5b7af9e6100e0b69571d4caf9
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: bddcb8890ef7312047d05794ccef0b638de4ed78
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948402"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930256"
 ---
 # <a name="dynamic-c-reference"></a>dynamic (Referencia de C#)
 
@@ -65,12 +65,12 @@ Para obtener más información y ejemplos, vea [Uso de tipo dinámico (Guía de 
 
 ## <a name="see-also"></a>Vea también
 
-<xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>  
-<xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
-[Uso de tipo dinámico](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-[object](../../../csharp/language-reference/keywords/object.md)  
-[is](../../../csharp/language-reference/keywords/is.md)  
-[as](../../../csharp/language-reference/keywords/as.md)  
-[typeof](../../../csharp/language-reference/keywords/typeof.md)  
-[Cómo: Realizar conversiones seguras usando los operadores is y as](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)  
-[Walkthrough: Creating and Using Dynamic Objects](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md) (Tutorial: Crear y usar objetos dinámicos [C# y Visual Basic])
+- <xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>  
+- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
+- [Uso de tipo dinámico](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [object](../../../csharp/language-reference/keywords/object.md)  
+- [is](../../../csharp/language-reference/keywords/is.md)  
+- [as](../../../csharp/language-reference/keywords/as.md)  
+- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+- [Cómo: Realizar conversiones seguras usando los operadores is y as](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)  
+- [Walkthrough: Creating and Using Dynamic Objects](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md) (Tutorial: Crear y usar objetos dinámicos [C# y Visual Basic])

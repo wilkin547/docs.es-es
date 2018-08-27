@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75df07148ddb69ad6a062c80ec9b279e2f36e03e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 553bbd79241292e1fa3b4fe718bda391191a10ae
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435986"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935327"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx (Función)
 Permite a los hosts no administrados cargar Common Language Runtime (CLR) en un proceso. El [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) y `CorBindToRuntimeEx` funciones realizan la misma operación, pero la `CorBindToRuntimeEx` función le permite establecer marcas para especificar el comportamiento de CLR.  
@@ -38,11 +38,11 @@ Permite a los hosts no administrados cargar Common Language Runtime (CLR) en un 
 -   Controlar si se realiza una recolección de elementos no utilizados simultánea o no simultánea.  
   
 > [!NOTE]
->  No se admite la recolección de elementos no utilizados simultánea en aplicaciones en las que se ejecuta el emulador WOW64 x86 en sistemas de 64 bits y que implementan la arquitectura Intel Itanium (denominada anteriormente IA-64). Para obtener más información sobre el uso de WOW64 en sistemas de Windows de 64 bits, consulte [aplicaciones Running 32 bits](http://msdn.microsoft.com/library/windows/desktop/aa384249.aspx).  
+>  No se admite la recolección de elementos no utilizados simultánea en aplicaciones en las que se ejecuta el emulador WOW64 x86 en sistemas de 64 bits y que implementan la arquitectura Intel Itanium (denominada anteriormente IA-64). Para obtener más información sobre el uso de WOW64 en sistemas Windows de 64 bits, consulte [aplicaciones de la ejecución de 32 bits](/windows/desktop/WinProg64/running-32-bit-applications).  
   
 -   Determinar si se cargan los ensamblados como neutrales con respecto al dominio.  
   
--   Obtener un puntero de interfaz a una [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) que se puede utilizar para establecer opciones adicionales para configurar una instancia de CLR antes de que se inicie.  
+-   Obtener un puntero de interfaz a un [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) que puede utilizarse para establecer opciones adicionales para configurar una instancia de CLR antes de que se inicie.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -70,7 +70,7 @@ HRESULT CorBindToRuntimeEx (
  `pwszBuildFlavor`  
  [in] Cadena que especifica si se debe cargar la compilación de CLR para servidor o para estación de trabajo. Los valores válidos son `svr` y `wks`. La compilación para servidor está optimizada para aprovechar las ventajas que aportan varios procesadores al realizar recolecciones de elementos no utilizados, mientras que la compilación para estación de trabajo está optimizada para aplicaciones cliente que se ejecutan en equipos con un solo procesador.  
   
- Si `pwszBuildFlavor` se establece en null, se cargará la compilación para estación de trabajo. Cuando se ejecuta en un equipo con un solo procesador, siempre se carga con la compilación de la estación de trabajo, incluso si `pwszBuildFlavor` está establecido en `svr`. Sin embargo, si `pwszBuildFlavor` está establecido en `svr` y se especifica una colección de elementos no utilizados simultánea (vea la descripción de la `startupFlags` parámetro), se carga la versión del servidor.  
+ Si `pwszBuildFlavor` está establecido en null, se cargará la compilación para estación de trabajo. Cuando se ejecuta en un equipo con un solo procesador, siempre se cargará la compilación de la estación de trabajo, incluso si `pwszBuildFlavor` está establecido en `svr`. Sin embargo, si `pwszBuildFlavor` está establecido en `svr` y se especifica una colección de elementos no utilizados simultánea (vea la descripción de la `startupFlags` parámetro), se cargará la compilación de servidor.  
   
  `startupFlags`  
  [in] Una combinación de valores de la [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumeración. Estos marcadores controlan la recolección de elementos no utilizados simultánea, el código neutral respecto al dominio y el comportamiento del parámetro `pwszVersion`. Si no se establece ninguna marca, el valor predeterminado es un dominio único. Valores válidos son:  
@@ -104,7 +104,7 @@ HRESULT CorBindToRuntimeEx (
  Para obtener descripciones de estas marcas, vea el [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) enumeración.  
   
  `rclsid`  
- [in] El `CLSID` de la coclase que implementa la [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) o [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interfaz. Los valores admitidos son CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
+ [in] El `CLSID` de la coclase que implementa el [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) o [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interfaz. Los valores admitidos son CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
   
  `riid`  
  [in] `IID` de la interfaz solicitada de `rclsid`. Los valores admitidos son IID_ICorRuntimeHost o IID_ICLRRuntimeHost.  
@@ -131,13 +131,13 @@ HRESULT CorBindToRuntimeEx (
      El modo de compatibilidad de la versión 1 se aplica a todo el proceso y a todos los dominios de aplicación del proceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [CorBindToCurrentRuntime (función)](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  

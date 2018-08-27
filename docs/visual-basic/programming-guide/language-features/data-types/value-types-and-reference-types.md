@@ -11,17 +11,17 @@ helpviewer_keywords:
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
 ms.openlocfilehash: 9456316f71a213905bcb50336533c4e618f5174a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651588"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934190"
 ---
 # <a name="value-types-and-reference-types"></a>Tipos de valor y tipos de referencia
-En Visual Basic, tipos de datos se implementan según su clasificación. Los tipos de datos de Visual Basic se pueden clasificar según si una variable de un tipo determinado almacena sus propios datos o un puntero a los datos. Si almacena sus propios datos es un *tipo de valor*; si mantiene un puntero a los datos en otra ubicación en la memoria es un *tipo de referencia*.  
+En Visual Basic, los tipos de datos se implementan según su clasificación. Los tipos de datos de Visual Basic se pueden clasificar según si una variable de un tipo determinado almacena sus propios datos o un puntero a los datos. Si almacena sus propios datos es un *tipo de valor*; si contiene un puntero a datos en otra parte de la memoria es un *tipo de referencia*.  
   
 ## <a name="value-types"></a>Tipos de valor  
- Un tipo de datos es un *tipo de valor* si almacena los datos en su propia asignación de memoria. Tipos de valor son los siguientes:  
+ Un tipo de datos es un *tipo de valor* si almacena los datos en su propia asignación de memoria. Tipos de valor incluyen lo siguiente:  
   
 -   Todos los tipos de datos numéricos  
   
@@ -31,12 +31,12 @@ En Visual Basic, tipos de datos se implementan según su clasificación. Los tip
   
 -   Las enumeraciones, ya que su tipo subyacente es siempre `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, o `ULong`  
   
- Cada estructura es un tipo de valor, aunque contenga a los miembros de tipo de referencia. Por esta razón, tipos de valor como `Char` y `Integer` se implementan las estructuras de .NET Framework.  
+ Cada estructura es un tipo de valor, aunque contenga a los miembros de tipo de referencia. Por este motivo, tipos de valor como `Char` y `Integer` se implementan las estructuras de .NET Framework.  
   
- Puede declarar un tipo de valor mediante el uso de una palabra clave reservada, por ejemplo, `Decimal`. También puede usar el `New` palabra clave que se va a inicializar un tipo de valor. Esto es especialmente útil si el tipo tiene un constructor que toma parámetros. Un ejemplo de esto es el <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> constructor, que compila un nuevo `Decimal` valor de las partes proporcionadas.  
+ Puede declarar un tipo de valor mediante el uso de la palabra clave reservada de, por ejemplo, `Decimal`. También puede usar el `New` palabra clave para inicializar un tipo de valor. Esto es especialmente útil si el tipo tiene un constructor que toma parámetros. Un ejemplo de esto es el <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> constructor, que compila un nuevo `Decimal` valor de las partes proporcionadas.  
   
 ## <a name="reference-types"></a>Tipos de referencia  
- A *tipo de referencia* contiene un puntero a otra ubicación de memoria que contiene los datos. Tipos de referencia son los siguientes:  
+ Un *tipo de referencia* contiene un puntero a otra ubicación de memoria que contiene los datos. Tipos de referencia incluyen lo siguiente:  
   
 -   `String`  
   
@@ -46,16 +46,16 @@ En Visual Basic, tipos de datos se implementan según su clasificación. Los tip
   
 -   Delegados  
   
- Una clase es un *tipo de referencia*. Por esta razón, tipos de referencia como `Object` y `String` son compatibles con [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] clases. Tenga en cuenta que cada matriz es un tipo de referencia, incluso si sus miembros son tipos de valor.  
+ Una clase es un *tipo de referencia*. Por este motivo, tipos de referencia como `Object` y `String` son compatibles con [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] clases. Tenga en cuenta que cada matriz es un tipo de referencia, incluso si sus miembros son tipos de valor.  
   
- Puesto que cada tipo de referencia representa una clase subyacente de .NET Framework, debe utilizar el [New (operador)](../../../../visual-basic/language-reference/operators/new-operator.md) palabra clave al inicializarlo. La instrucción siguiente inicializa una matriz.  
+ Puesto que cada tipo de referencia representa una clase subyacente de .NET Framework, debe usar el [nuevo operador](../../../../visual-basic/language-reference/operators/new-operator.md) palabra clave durante su inicialización. La instrucción siguiente inicializa una matriz.  
   
 ```  
 Dim totals() As Single = New Single(8) {}  
 ```  
   
-## <a name="elements-that-are-not-types"></a>Elementos que no son tipos  
- Los siguientes elementos de programación no se consideran como tipos, ya que no puede especificar cualquiera de ellos como un tipo de datos para un elemento declarado:  
+## <a name="elements-that-are-not-types"></a>Elementos que no son de tipos  
+ Los siguientes elementos de programación no se consideran como tipos, porque no se puede especificar cualquiera de ellos como un tipo de datos para un elemento declarado:  
   
 -   Espacios de nombres  
   
@@ -68,9 +68,9 @@ Dim totals() As Single = New Single(8) {}
 -   Las variables, constantes y campos  
   
 ## <a name="working-with-the-object-data-type"></a>Trabajar con el tipo de datos de objeto  
- Puede asignar un tipo de referencia o un tipo de valor a una variable de la `Object` tipo de datos. Un `Object` variable siempre contiene un puntero a los datos, nunca los propios datos. Sin embargo, si asigna un tipo de valor a un `Object` variable, se comporta como si contuviera sus propios datos. Para obtener más información, consulte [tipo de datos de objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
+ Puede asignar un tipo de referencia o un tipo de valor a una variable de la `Object` tipo de datos. Un `Object` variable siempre contiene un puntero a los datos, nunca los propios datos. Sin embargo, si asigna un tipo de valor a un `Object` variable, se comporta como si contuviera sus propios datos. Para obtener más información, consulte [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
   
- Puede averiguar si un `Object` variable está actuando como un tipo de referencia o un tipo de valor y la transfiere a la <xref:Microsoft.VisualBasic.Information.IsReference%2A> método en el <xref:Microsoft.VisualBasic.Information> clase de la <xref:Microsoft.VisualBasic?displayProperty=nameWithType> espacio de nombres. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Devuelve `True` si el contenido de la `Object` variable representa un tipo de referencia.  
+ Puede averiguar si un `Object` variable está actuando como un tipo de referencia o un tipo de valor pasándolo a la <xref:Microsoft.VisualBasic.Information.IsReference%2A> método en el <xref:Microsoft.VisualBasic.Information> clase de la <xref:Microsoft.VisualBasic?displayProperty=nameWithType> espacio de nombres. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Devuelve `True` si el contenido de la `Object` variable representa un tipo de referencia.  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de valor que aceptan valores NULL](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  

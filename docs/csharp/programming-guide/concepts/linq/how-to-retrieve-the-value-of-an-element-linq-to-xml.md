@@ -3,11 +3,11 @@ title: 'Cómo: Recuperar el valor de un elemento (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
 ms.openlocfilehash: 5eb75ea3dddbc90141ec875f87a988157ddf0362
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324335"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931433"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Cómo: Recuperar el valor de un elemento (LINQ to XML) (C#)
 Este tema muestra cómo obtener el valor de los elementos. Existen dos formas principales de hacerlo. Una forma consiste en convertir un elemento <xref:System.Xml.Linq.XElement> o un atributo <xref:System.Xml.Linq.XAttribute> al tipo deseado. El operador de conversión explícita convierte el contenido del elemento o del atributo al tipo especificado y lo asigna a la variable. Como alternativa, se puede usar la propiedad <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> o la propiedad <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  

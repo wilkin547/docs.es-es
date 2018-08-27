@@ -3,12 +3,12 @@ title: Cadenas interpoladas (Visual Basic)
 ms.date: 10/31/2017
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 313e74d5ce252884f1df2479ef1db8b4b24b5cce
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653564"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930555"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Cadenas interpoladas (referencia de Visual Basic)
 
@@ -38,7 +38,7 @@ donde:
 - *format-string* es una cadena de formato adecuada para el tipo de objeto al que se da formato. Por ejemplo, para un <xref:System.DateTime> valor, podría ser un [cadena de formato de fecha y hora estándar](~/docs/standard/base-types/standard-date-and-time-format-strings.md) como "D" o "d".
 
 > [!IMPORTANT]
-> No puede haber ningún espacio en blanco entre el carácter `$` y el carácter `"` que inicia la cadena. Si lo hace, produce un error del compilador.
+> No puede haber ningún espacio en blanco entre el carácter `$` y el carácter `"` que inicia la cadena. Si lo hace, un error del compilador.
 
  Puede utilizar una cadena interpolada en cualquier lugar que pueda utilizar un literal de cadena.  La cadena interpolada se evalúa cada vez que se ejecuta el código con la cadena interpolada. Esto le permite separar la definición y la evaluación de una cadena interpolada.  
   
@@ -66,11 +66,11 @@ Hay tres conversiones de tipo implícito de una cadena interpolada:
 
    Tenga en cuenta que la cadena interpolada solo se puede inspeccionar mediante reflexión. Si se pasa a un método de formato de cadena, como <xref:System.Console.WriteLine(System.String)>, sus elementos de formato se resuelven y se devuelve la cadena de resultado. 
 
-3. Conversión de una cadena interpolada a un <xref:System.FormattableString> variable que representa una cadena de formato compuesto. El hecho de inspeccionar la cadena de formato compuesto y la manera en que se presenta como cadena de resultado podría ayudarle a protegerse frente a un ataque por inyección si estuviese compilando una consulta. Un <xref:System.FormattableString> también incluye:
+3. Conversión de una cadena interpolada a una <xref:System.FormattableString> variable que representa una cadena de formato compuesto. El hecho de inspeccionar la cadena de formato compuesto y la manera en que se presenta como cadena de resultado podría ayudarle a protegerse frente a un ataque por inyección si estuviese compilando una consulta. Un <xref:System.FormattableString> también incluye:
 
       - Una sobrecarga de <xref:System.FormattableString.ToString> que genera una cadena de resultado para <xref:System.Globalization.CultureInfo.CurrentCulture>.
       
-      - A <xref:System.FormattableString.Invariant%2A> método que genere una cadena para el <xref:System.Globalization.CultureInfo.InvariantCulture>.
+      - Un <xref:System.FormattableString.Invariant%2A> método que genera una cadena para el <xref:System.Globalization.CultureInfo.InvariantCulture>.
       
       - Un método <xref:System.FormattableString.ToString(System.IFormatProvider)> que genera una cadena de resultado para una referencia cultural especificada. 
   

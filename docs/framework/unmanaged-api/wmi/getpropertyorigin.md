@@ -1,6 +1,6 @@
 ---
-title: Función GetPropertyOrigin (referencia de la API de Unmnaged)
-description: La función GetPropertyOrigin determina la clase en la que se declara una propiedad.
+title: GetPropertyOrigin (función) (referencia de API Unmnaged)
+description: GetPropertyOrigin (función) determina la clase en el que se declara una propiedad.
 ms.date: 11/06/2017
 api_name:
 - GetPropertyOrigin
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f16bc5ce23e6bf110a140d10f0e787935070dbcc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 86c512f25c40f201d818b6789c6410bfb095b878
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461102"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933522"
 ---
 # <a name="getpropertyorigin-function"></a>GetPropertyOrigin (función)
-Determina la clase en la que se declara una propiedad.
+Determina la clase en el que se declara una propiedad.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -42,20 +42,20 @@ HRESULT GetPropertyOrigin (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[in] Este parámetro no se utiliza.
+[in] Este parámetro se usa.
 
 `ptr`  
-[in] Un puntero a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instancia.
+[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
 
 `wszMethodName`  
-[in] El nombre de la propiedad para el objeto cuya clase propietaria se solicita. 
+[in] El nombre de la propiedad del objeto cuya clase propietaria se solicita. 
 
 `pstrClassName`  
 [out] Recibe el nombre de la clase que posee la propiedad.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, o bien puede definirlas como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
@@ -63,22 +63,22 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 |`WBEM_E_NOT_FOUND` | 0x80041002 | No se encontró la propiedad especificada. |
 |`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un parámetro no es válido. |
 |`WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para completar la operación. |
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función tuvo éxito.  |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::GetPropertyOrigin](https://msdn.microsoft.com/library/aa391449(v=vs.85).aspx) método.
+Esta función contiene una llamada a la [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) método.
 
-Dado que una clase puede heredar propiedades de una o más clases base, los programadores a menudo desean determinar la propiedad en el que se define un método determinado.
+Porque una clase puede heredar propiedades de una o más clases bases, los desarrolladores a menudo desean determinar la propiedad en el que se define un método determinado.
 
-El `pstrClassName` parámetro no debe apuntar a válido `BSTR` antes de llama a la función porque se trata de un `out` parámetro; en este puntero no se cancela la asignación después de la función devuelve.
+El `pstrClassName` parámetro no debe apuntar a una `BSTR` antes de llama a la función porque se trata de un `out` parámetro; este puntero no se desasigna cuando la función vuelve.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

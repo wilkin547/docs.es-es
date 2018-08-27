@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: 7e0a6bd77ca2594e9d74e669fcd9cddf91ee1cad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 181cc641bb12329c898cc3bb226ea49f0836e979
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600915"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932032"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While (Cláusula, Visual Basic)
 Incluye los elementos de una colección siempre que el valor de una condición especificada sea `true` y, a continuación, omite los elementos restantes.  
@@ -28,21 +28,21 @@ Take While expression
   
 |Término|Definición|  
 |---|---|  
-|`expression`|Requerido. Una expresión que representa una condición para probar los elementos de. La expresión debe devolver un `Boolean` valor o un equivalente funcional, como un `Integer` que se debe evaluar como un `Boolean`.|  
+|`expression`|Requerido. Una expresión que representa una condición para probar los elementos. La expresión debe devolver un `Boolean` valor o un equivalente funcional, como un `Integer` que debe evaluarse como un `Boolean`.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `Take While` cláusula incluye elementos desde el principio del resultado de una consulta hasta que se ha suministrado `expression` devuelve `false`. Después de la `expression` devuelve `false`, la consulta omitirá todos los elementos restantes. El `expression` se omite para los resultados restantes.  
+ El `Take While` cláusula incluye elementos desde el principio de un resultado de consulta hasta que se ha suministrado `expression` devuelve `false`. Después de la `expression` devuelve `false`, la consulta omitirá todos los elementos restantes. El `expression` se omite para los resultados restantes.  
   
- El `Take While` cláusula difiere de la `Where` cláusula en la que el `Where` cláusula puede usarse para incluir todos los elementos de una consulta que cumplan una condición determinada. El `Take While` cláusula incluye elementos solo hasta que la primera vez que no se cumple la condición. El `Take While` cláusula es muy útil cuando se trabaja con un resultado de consulta ordenado.  
+ El `Take While` cláusula difiere el `Where` cláusula en la que el `Where` cláusula puede usarse para incluir todos los elementos de una consulta que cumplen una condición determinada. El `Take While` cláusula incluye elementos hasta que la primera vez que no se cumple la condición. El `Take While` cláusula es muy útil cuando se trabaja con un resultado de consulta ordenada.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo de código utiliza el `Take While` cláusula para recuperar los resultados hasta que se encuentre el primer cliente sin pedidos.  
+ El siguiente ejemplo de código utiliza el `Take While` cláusula para recuperar los resultados hasta que se encuentra el primer cliente sin pedidos.  
   
  [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-while-clause_1.vb)]  
   
 ## <a name="see-also"></a>Vea también  
  [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/queries.md)  
+ [Consultas](../../../visual-basic/language-reference/queries/index.md)  
  [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)  
  [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Take (cláusula)](../../../visual-basic/language-reference/queries/take-clause.md)  

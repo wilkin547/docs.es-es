@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c15c554e0ec135b33d671a83b5e27d0a2a89b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444261"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930942"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue (Método)
-Actualiza el ámbito de ensamblado actual con los cambios realizados en los metadatos especificados.  
+El ámbito de ensamblado actual se actualiza con los cambios realizados en los metadatos especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,18 +37,18 @@ HRESULT ApplyEditAndContinue (
   
 #### <a name="parameters"></a>Parámetros  
  `pImport`  
- [in] Puntero a un <<!--zzxref:IUnknown --> `IUnknown`> objeto que representa los metadatos delta del archivo ejecutable portable (PE).  
+ \[en\] puntero a un [IUnknown](/cpp/atl/iunknown) objeto que representa los metadatos delta del archivo portable ejecutable (PE).
   
  Los metadatos delta están el bloque de metadatos que incluyen los cambios realizados en la copia de los metadatos del módulo real.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Cor.h  
   
  **Biblioteca:** usada como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

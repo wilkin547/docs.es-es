@@ -3,18 +3,18 @@ title: Proyecciones y transformaciones (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: bb0457ab-1823-47e6-9d2d-c93c958cc913
 ms.openlocfilehash: dfd10011646fb758215c8d472dacf7e16296493f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333003"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929800"
 ---
 # <a name="projections-and-transformations-linq-to-xml-c"></a>Proyecciones y transformaciones (LINQ to XML) (C#)
 En esta sección se proporcionan ejemplos de proyecciones y transformaciones [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Cómo: Trabajar con diccionarios mediante LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md)|Muestra cómo transformar diccionarios en XML, y cómo transformar XML en diccionarios.|  
 |[Cómo: Transformar la forma de un árbol XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md)|Muestra cómo transformar la forma de un documento XML.|  

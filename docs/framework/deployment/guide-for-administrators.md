@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b4c2d4205e87d8be21f82eaf74b17e316d9057e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a909b7c940f22e6435fc72a370b8a4ed17d5f937
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394337"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925062"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guía de implementación de .NET Framework para administradores
 Este artículo paso a paso describe cómo un administrador del sistema puede implementar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y sus dependencias del sistema en una red mediante Microsoft System Center Configuration Manager. En este artículo se supone que todos los equipos cliente de destino cumplen los requisitos mínimos para .NET Framework. Para obtener una lista de los requisitos de software y hardware para instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md).  
@@ -124,7 +124,7 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
   
  En la tabla siguiente se describen las opciones de la línea de comandos especificadas en el paso 7.  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/q**|Establece el modo silencioso. No se requiere proporcionar ningún dato y no se muestra ningún resultado.|  
 |**/norestart**|Evita que el programa de instalación se reinicie automáticamente. Si usa esta opción, Configuration Manager debe controlar el reinicio del equipo.|  
@@ -236,7 +236,7 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
   
  Para obtener vínculos a información detallada, vea la sección siguiente, [Descargar códigos de error](#additional_error_codes).  
   
-|Código devuelto|Description|  
+|Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |0|La instalación se completó correctamente.|  
 |1602|El usuario canceló la instalación.|  
@@ -252,7 +252,7 @@ Este artículo paso a paso describe cómo un administrador del sistema puede imp
   
 -   [Códigos de error del moniker de dirección URL](http://msdn.microsoft.com/library/ms775145.aspx)  
   
--   [Códigos de error de WinHttp](http://msdn.microsoft.com/library/aa383770.aspx)  
+-   [Códigos de error de WinHttp](/windows/desktop/WinHttp/error-messages)  
   
  Otros códigos de error:  
   

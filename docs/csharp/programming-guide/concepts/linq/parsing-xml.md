@@ -3,18 +3,18 @@ title: Analizar un documento XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 7ea83f83-a779-423a-9875-4ea4e51f97fc
 ms.openlocfilehash: 876cfdf7bd5a82aba75d456d6d5cda57e080fdf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321709"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933987"
 ---
 # <a name="parsing-xml-c"></a>Analizar un documento XML (C#)
 Los temas de esta sección describen cómo analizar documentos XML.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[How to: Parse a String (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-parse-a-string.md) (Cómo: Analizar una cadena (C#))|Muestra cómo analizar una cadena para crear un árbol XML.|  
 |[How to: Load XML from a File (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md) (Cómo: Cargar un documento XML desde un archivo (C#))|Muestra cómo cargar XML desde un identificador URI mediante el método <xref:System.Xml.Linq.XElement.Load%2A>.|  

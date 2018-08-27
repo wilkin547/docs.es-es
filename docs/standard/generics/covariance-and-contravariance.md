@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c50d79f402d55a2fb5e859da4d61b04eeeb6931
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c3a772ae4dfba53982ed28c0bd54f500c50b08
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579748"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932953"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza y contravarianza en genéricos
 <a name="top"></a> Covarianza y contravarianza son términos que hacen referencia a la capacidad de usar un tipo más derivado (más específico) o menos derivado (menos específico) que el indicado originalmente. Los parámetros de tipo genérico admiten la covarianza y contravarianza para proporcionar mayor flexibilidad a la hora de asignar y usar tipos genéricos. Cuando se hace referencia a un sistema de tipos, la covarianza, contravarianza e invarianza tienen las siguientes definiciones. En el ejemplo se presupone una clase base denominada `Base` y una clase derivada denominada `Derived`.  
@@ -33,13 +33,13 @@ ms.locfileid: "33579748"
   
      Permite usar un tipo más genérico (menos derivado) que el especificado originalmente.  
   
-     Puede asignar una instancia de `IEnumerable<Base>` (`IEnumerable(Of Base)` en Visual Basic) a una variable de tipo `IEnumerable<Derived>`.  
+     Puede asignar una instancia de `Action<Base>` (`Action(Of Base)` en Visual Basic) a una variable de tipo `Action<Derived>`.  
   
 -   `Invariance`  
   
      Significa que solo se puede usar el tipo especificado originalmente. Así, un parámetro de tipo genérico invariable no es covariante ni contravariante.  
   
-     No se puede asignar una instancia de `IEnumerable<Base>` (`IEnumerable(Of Base)` en Visual Basic) a una variable de tipo `IEnumerable<Derived>` o viceversa.  
+     No se puede asignar una instancia de `List<Base>` (`List(Of Base)` en Visual Basic) a una variable de tipo `List<Derived>` o viceversa.  
   
  Los parámetros de tipo covariante permiten realizar asignaciones muy similares al [polimorfismo](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md), como se muestra en el código siguiente.  
   

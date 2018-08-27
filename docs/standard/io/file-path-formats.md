@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a5fccf5ea86469f14963fad8e7d2af0f7c68d2df
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107041"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933610"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
 
@@ -33,7 +33,7 @@ Una ruta de acceso DOS estándar puede constar de tres componentes:
 
 Si los tres componentes están presentes, la ruta de acceso es absoluta. Si no se especifica la letra de volumen o unidad y los nombres de directorio comienzan por el [carácter separador de directorio](<xref:System.IO.Path.DirectorySeparatorChar>), la ruta de acceso es relativa con respecto a la raíz de la unidad actual. En caso contrario, la ruta de acceso es relativa al directorio actual. En la tabla siguiente se muestran algunas rutas de acceso de directorio y archivo posibles.
 
-|Ruta de acceso  |Description  |
+|Ruta de acceso  |Descripción  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Ruta de acceso de archivo absoluta desde la raíz de la unidad C:. |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Ruta de acceso absoluta desde la raíz de la unidad actual. |
@@ -63,7 +63,7 @@ Las rutas de acceso de convención de nomenclatura universal (UNC), que se usan 
 
 A continuación se muestran algunos ejemplos de rutas de acceso UNC:
 
-|Ruta de acceso  |Description  |
+|Ruta de acceso  |Descripción  |
 | -- | -- |
 | `\\system07\C$\` | Directorio raíz de la unidad C: en `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | El archivo Foo.txt en el directorio Test del volumen \\\\Server2\\Share.|
@@ -181,7 +181,7 @@ Junto con las ejecuciones de los separadores y segmentos relativos que se han qu
 
 ## <a name="skipping-normalization"></a>Omisión de la normalización
 
-Normalmente, todas las rutas de acceso que se pasan a una API de Windows se pasan (de forma efectiva) a la [función GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) y se normalizan. Hay una excepción importante: una ruta de acceso de dispositivo que comienza con un signo de interrogación en lugar de un punto. A menos que la ruta de acceso comience exactamente con `\\?\` (observe el uso de la barra diagonal inversa canónica), se normaliza.
+Normalmente, todas las rutas de acceso que se pasan a una API de Windows se pasan (de forma efectiva) a la [función GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) y se normalizan. Hay una excepción importante: una ruta de acceso de dispositivo que comienza con un signo de interrogación en lugar de un punto. A menos que la ruta de acceso comience exactamente con `\\?\` (observe el uso de la barra diagonal inversa canónica), se normaliza.
 
 ¿Por qué querría omitir la normalización? Hay tres razones principales:
 
@@ -196,9 +196,9 @@ Normalmente, todas las rutas de acceso que se pasan a una API de Windows se pasa
 
 La omisión de la normalización y las comprobaciones de ruta de acceso máximas es la única diferencia entre las dos sintaxis de ruta de acceso de dispositivo. En los demás casos son idénticas. Tenga cuidado al omitir la normalización, dado que es muy fácil crear rutas de acceso difíciles de controlar para las aplicaciones "normales".
 
-Las rutas de acceso que empiezan por `\\?\` se siguen normalizando si se pasan de forma explícita a la [función GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx).
+Las rutas de acceso que empiezan por `\\?\` se siguen normalizando si se pasan de forma explícita a la [función GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-Tenga en cuenta que puede pasar rutas de acceso de más de `MAX_PATH` caracteres a [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) sin `\\?\`. Admite rutas de acceso de longitud arbitraria hasta el tamaño de cadena máximo admitido por Windows.
+Tenga en cuenta que puede pasar rutas de acceso de más de `MAX_PATH` caracteres a [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) sin `\\?\`. Admite rutas de acceso de longitud arbitraria hasta el tamaño de cadena máximo admitido por Windows.
 
 ## <a name="case-and-the-windows-file-system"></a>Las mayúsculas y minúsculas y el sistema de archivos de Windows
 

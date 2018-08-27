@@ -4,17 +4,17 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 8b15b0df5e3f65494a037eed7992c9a16d9b8578
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b5f79f41306d6e4a8d2f1aa432ba6c2e0879f74
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216196"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930047"
 ---
 # <a name="contextual-keywords-c-reference"></a>Palabras clave contextuales (Referencia de C#)
 Las palabras clave contextuales se usan para proporcionar un significado específico en el código, pero no son una palabra reservada en C#. En esta sección se presentan las siguientes palabras clave contextuales:  
   
-|Palabra clave|Description|  
+|Palabra clave|Descripción|  
 |-------------|-----------------|  
 |[add](../../../csharp/language-reference/keywords/add.md)|Define un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente se suscribe al evento.|  
 |[async](../../../csharp/language-reference/keywords/async.md)|Indica que el método modificado, una expresión lambda o un método anónimo es asincrónico.|  
@@ -33,7 +33,8 @@ Las palabras clave contextuales se usan para proporcionar un significado especí
   
  Todas las palabras clave de consulta introducidas en C# 3.0 también son contextuales. Para obtener más información, vea [Palabras clave para consultas (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md).  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)

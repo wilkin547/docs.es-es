@@ -3,18 +3,18 @@ title: Programación avanzada de LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
 ms.openlocfilehash: e455b2b579c56632d5e06b4da5c44a71ea150416
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321540"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931842"
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>Programación avanzada de LINQ to XML (C#)
 Esta sección proporciona información que solo será aplicable a desarrolladores avanzados en determinados escenarios de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Anotaciones de LINQ to XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-annotations.md)|Describe cómo agregar anotaciones a los nodos y los atributos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Eventos de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-events.md)|Describe cómo describir controladores de evento para eventos que se producen al alterar un árbol XML.|  

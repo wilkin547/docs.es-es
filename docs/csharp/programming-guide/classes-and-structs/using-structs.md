@@ -5,11 +5,11 @@ helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
 ms.openlocfilehash: 553a6d1d2e922d1683cb5dbe2fa0b525c9b1e37a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326425"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925335"
 ---
 # <a name="using-structs-c-programming-guide"></a>Utilizar estructuras (Guía de programación de C#)
 El tipo `struct` resulta adecuado para representar objetos pequeños como `Point`, `Rectangle`y `Color`. Aunque es igual de válido representar un punto como un elemento [class](../../../csharp/language-reference/keywords/class.md) con [Propiedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), seguramente un [struct](../../../csharp/language-reference/keywords/struct.md) sea más eficaz en algunos escenarios. Por ejemplo, si declara una matriz de 1000 objetos `Point` , se asignará más memoria para hacer referencia a cada objeto y, en este caso, un struct sería menos costoso. Como [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] contiene un objeto denominado <xref:System.Drawing.Point>, denominaremos el struct de este ejemplo "CoOrds".  
@@ -32,7 +32,7 @@ El tipo `struct` resulta adecuado para representar objetos pequeños como `Point
   
 ## <a name="example-1"></a>Ejemplo 1  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descripción  
  En este ejemplo se muestra la inicialización de `struct` mediante constructores predeterminados y constructores con parámetros.  
   
 ### <a name="code"></a>Código  
@@ -42,7 +42,7 @@ El tipo `struct` resulta adecuado para representar objetos pequeños como `Point
   
 ## <a name="example-2"></a>Ejemplo 2  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descripción  
  En este ejemplo se muestra una característica única de los structs. Se crea un objeto CoOrds sin usar el operador `new` . Si reemplaza la palabra `struct` por la palabra `class`, el programa no se compilará.  
   
 ### <a name="code"></a>Código  

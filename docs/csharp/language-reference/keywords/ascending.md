@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ascending keyword [C#]
 ms.assetid: 57fbb619-8187-481c-b68e-3a91996fde69
-ms.openlocfilehash: 121b7cef900c5736df3725c19b966c60acfa1e0b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 77801fcf443556515e6f1414490a1deeb4fa7bc4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208119"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935057"
 ---
 # <a name="ascending-c-reference"></a>ascending (Referencia de C#)
 La palabra clave contextual `ascending` se usa en la [cláusula orderby](../../../csharp/language-reference/keywords/orderby-clause.md) en expresiones de consulta para especificar que el criterio de ordenación es de menor a mayor. Como `ascending` es el criterio de ordenación predeterminado, no tiene que especificarlo.  
@@ -23,6 +23,6 @@ La palabra clave contextual `ascending` se usa en la [cláusula orderby](../../.
 [!code-csharp[csrefKeywordsContextual#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#14)]
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [descending](../../../csharp/language-reference/keywords/descending.md)
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [descending](../../../csharp/language-reference/keywords/descending.md)

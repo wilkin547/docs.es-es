@@ -12,12 +12,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 407ca9e4744ea9be45867a08e87c502821226472
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058841"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000981"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - Interpolación de cadenas (Referencia de C#)
 
@@ -39,7 +39,7 @@ La estructura de un elemento con una expresión interpolada es como se muestra a
 
 Los elementos entre corchetes son opcionales. En esta tabla se describe cada elemento:
 
-|Elemento|Description|
+|Elemento|Descripción|
 |-------------|-----------------|
 |`interpolatedExpression`|Expresión que genera un resultado al que se va a aplicar formato. La representación de cadena del resultado de `null` es <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|La expresión constante cuyo valor define el número mínimo de caracteres en la representación de cadena del resultado de la expresión interpolada. Si es positivo, la representación de cadena está alineada a la derecha; si es negativo, está alineada a la izquierda. Para más información, vea [Alignment (Componente)](../../../standard/base-types/composite-formatting.md#alignment-component).|
@@ -88,12 +88,13 @@ En el ejemplo siguiente, se usa la conversión implícita a <xref:System.Formatt
 
 Si no está familiarizado con la interpolación de cadenas, vea [Interpolación de cadenas en C#](../../quick-starts/interpolated-strings.yml). Para ver más ejemplos, eche un vistazo al tutorial [Interpolación de cadenas en C#](../../tutorials/string-interpolation.md).
 
-## <a name="see-also"></a>Vea también  
- <xref:System.String.Format%2A?displayProperty=nameWithType>  
- <xref:System.FormattableString?displayProperty=nameWithType>  
- <xref:System.IFormattable?displayProperty=nameWithType>  
- [Formatos compuestos](../../../standard/base-types/composite-formatting.md)  
- [Cadenas](../../programming-guide/strings/index.md)  
- [Guía de programación de C#](../../programming-guide/index.md)  
- [Caracteres especiales de C#](index.md)  
- [Referencia de C#](../index.md)  
+## <a name="see-also"></a>Vea también
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- [Formatos compuestos](../../../standard/base-types/composite-formatting.md)
+- [Cadenas](../../programming-guide/strings/index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Caracteres especiales de C#](index.md)
+- [Referencia de C#](../index.md)

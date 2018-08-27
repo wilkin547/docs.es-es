@@ -1,46 +1,46 @@
 ---
 title: 'Instrucciones de diseño del componente de F #'
-description: 'Obtenga información acerca de las instrucciones para escribir componentes de F # previstos para su uso por otros llamadores.'
+description: 'Obtenga información sobre las directrices para escribir componentes de F # pensados para su uso por otros llamadores.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 7e71710b1bc2fe3e8d7a5a091513a1432650dc04
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 446cba0f810af9517b655ef5741ddf7a919676d5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458091"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935602"
 ---
 # <a name="f-component-design-guidelines"></a>Instrucciones de diseño del componente de F #
 
-Este documento es un conjunto de instrucciones de diseño del componente de F # de programación, tomando como base la F # componente directrices de diseño, v14, Microsoft Research, y [otra versión](https://fsharp.org/specs/component-design-guidelines/) originalmente seleccionada y mantiene la base de Software de F #.
+Este documento es un conjunto de directrices de diseño del componente de F # de programación, en función de la F # componente instrucciones de diseño, v14, Microsoft Research, y [otra versión](https://fsharp.org/specs/component-design-guidelines/) originalmente seleccionada y mantenido por F # Software Foundation.
 
-Este documento se supone que está familiarizado con la programación en F #. Muchas gracias a la Comunidad de F # para obtener comentarios útiles en diferentes versiones de esta guía y sus contribuciones.
+Este documento se da por supuesto que está familiarizado con la programación en F #. Muchas gracias a la Comunidad de F # por sus aportaciones y comentarios útiles en varias versiones de esta guía.
 
 ## <a name="overview"></a>Información general
 
-Este documento se examina algunos de los problemas relacionados con el diseño del componente de F # y la codificación. Un componente puede dar lugar a cualquiera de las siguientes acciones:
+Este documento se examina algunos de los problemas relacionados con la codificación y diseño del componente de F #. Un componente puede significar cualquiera de las siguientes acciones:
 
 * Una capa en el proyecto de F # que tiene los consumidores externos dentro de ese proyecto.
-* Una biblioteca prevista para su uso en código de F # en los límites del ensamblado.
-* Una biblioteca prevista para su uso por cualquier lenguaje .NET Framework en los límites del ensamblado.
-* Una biblioteca destinada para su distribución a través de un repositorio de paquetes, como [NuGet](https://nuget.org).
+* Una biblioteca pensada para su uso por código de F # a través de límites de ensamblado.
+* Una biblioteca diseñada para su uso en cualquier lenguaje .NET entre límites de ensamblado.
+* Una biblioteca diseñada para su distribución a través de un repositorio de paquetes, tales como [NuGet](https://nuget.org).
 
-Siguen técnicas descritas en este artículo la [cinco principios de buen código F #](index.md#five-principles-of-good-f-code)y, por tanto, usar ambos funcional y objeto de programación según corresponda.
+Las técnicas descritas en este artículo siguen el [cinco principios del buen código de F #](index.md#five-principles-of-good-f-code)y, por tanto, usar ambos funcional y objeto de programación según corresponda.
 
-Independientemente de la metodología, el Diseñador de componentes y la biblioteca enfrenta una serie de problemas prácticas y explicaciones al intentar crear una API que sea más fácilmente utilizable por los desarrolladores. Una aplicación muy consciente de la [instrucciones de diseño de biblioteca de .NET](../../standard/design-guidelines/index.md) se dirigen hacia la creación de un conjunto coherente de API que forman agradables a consumir.
+Independientemente de la metodología, el Diseñador de componentes y la biblioteca enfrenta una serie de problemas prácticas y prosaicos al tratar de diseñar una API que se puede usar más fácilmente los desarrolladores. Una aplicación muy consciente de la [instrucciones de diseño de bibliotecas de .NET](../../standard/design-guidelines/index.md) encaminarse hacia la creación de un conjunto coherente de API que están agradables para consumir.
 
 ## <a name="general-guidelines"></a>Instrucciones generales
 
-Hay algunas directrices universales que se aplican a las bibliotecas de F #, sin tener en cuenta el público previsto para la biblioteca.
+Hay algunas instrucciones universales que se aplican a las bibliotecas F #, independientemente de la audiencia objetivo de la biblioteca.
 
-### <a name="learn-the-net-library-design-guidelines"></a>Obtenga información acerca de las instrucciones de diseño de la biblioteca de .NET
+### <a name="learn-the-net-library-design-guidelines"></a>Obtenga información sobre las instrucciones de diseño de la biblioteca de .NET
 
-Independientemente del tipo de F # codificación está realizando, es útil tener conocimientos prácticos de los [instrucciones de diseño de biblioteca de .NET](../../standard/design-guidelines/index.md). Mayoría otros F # y los programadores de .NET se estar familiarizado con estas instrucciones y esperar que el código de .NET para que se ajuste a ellos.
+Independientemente del tipo de F # de codificación está realizando, es útil tener conocimientos prácticos de la [instrucciones de diseño de bibliotecas de .NET](../../standard/design-guidelines/index.md). La mayoría otros F # y los programadores de .NET se está familiarizado con estas directrices y esperar que el código de .NET para ajustarse a ellos.
 
-Las instrucciones de diseño de la biblioteca de .NET proporcionan orientación general sobre nomenclatura, diseño de clases y interfaces, diseño de miembros (propiedades, métodos, eventos, etc.) y mucho más y son útil primer punto de referencia para una amplia variedad de instrucciones de diseño.
+Las instrucciones de diseño de la biblioteca de .NET proporcionan información general sobre la nomenclatura, diseño de clases y las interfaces, diseño de miembros (propiedades, métodos, eventos, etc.) y mucho más y son útil primer punto de referencia para una variedad de instrucciones de diseño.
 
 ### <a name="add-xml-documentation-comments-to-your-code"></a>Agregar comentarios de documentación XML en el código
 
-Documentación XML en las API públicas Asegúrese de que los usuarios pueden obtener gran Intellisense y Quickinfo al usar estos tipos y miembros así como documentación de creación de habilitar los archivos de la biblioteca. Consulte la [documentación XML](../language-reference/xml-documentation.md) sobre diversas etiquetas xml que pueden usarse para marcado adicional dentro de xmldoc comentarios.
+Documentación XML en las API públicas Asegúrese de que los usuarios pueden obtener gran Intellisense y Quickinfo al utilizar estos tipos y miembros y habilitar documentación para crear archivos de la biblioteca. Consulte la [documentación XML](../language-reference/xml-documentation.md) sobre diversas etiquetas xml que se pueden usar para el marcado adicional dentro de los comentarios de xmldoc.
 
 ```fsharp
 /// A class for representing (x,y) coordinates
@@ -50,65 +50,65 @@ type Point =
     member DistanceTo : otherPoint:Point -> float
 ```
 
-Puede usar los comentarios XML de forma abreviada (`/// comment`), o los comentarios XML estándares (`///<summary>comment</summary>`).
+Puede usar los comentarios XML de forma abreviada (`/// comment`), o los comentarios XML estándar (`///<summary>comment</summary>`).
 
-### <a name="consider-using-explicit-signature-files-fsi-for-stable-library-and-component-apis"></a>Considere el uso de archivos de firma explícitas (.fsi) de biblioteca estable y las API de componentes
+### <a name="consider-using-explicit-signature-files-fsi-for-stable-library-and-component-apis"></a>Considere el uso de archivos explícita signatura (.fsi) para la biblioteca estable y las API de componentes
 
-Uso de archivos de firmas explícita en la biblioteca de F # proporciona un resumen conciso de la API pública, que ayuda a garantizar que se conoce la superficie pública completa de la biblioteca, así como proporciona una separación clara entre documentación público e internos detalles de la implementación. Tenga en cuenta que los archivos de firma agregan fricción ante las cambiantes de la API pública, exigiendo cambios que se realizan en los archivos de la implementación y la firma. Como resultado, archivos de signatura deben normalmente se incorpora únicamente cuando una API se convierten en ha fortalecido y ya no se espera que cambie significativamente.
+Uso de archivos de firmas explícita en una biblioteca de F # proporciona un breve resumen de API pública, que ayuda a garantizar que se conoce la superficie pública completa de la biblioteca, así como proporciona una separación limpia entre documentación pública e internos detalles de implementación. Tenga en cuenta que los archivos de firma agregan fricción al cambio de la API pública, al requerir que los cambios que se realizan en los archivos de la implementación y la firma. Como resultado, los archivos de firma normalmente solo se deben agregar cuando una API ha consolidado a convertirse en y ya no se espera que cambie significativamente.
 
-### <a name="always-follow-best-practices-for-using-strings-in-net"></a>Siempre siga las prácticas recomendadas para el uso de cadenas en .NET
+### <a name="always-follow-best-practices-for-using-strings-in-net"></a>Siga siempre las prácticas recomendadas para el uso de cadenas en .NET
 
-Siga [prácticas recomendadas para el uso de cadenas en .NET](../../standard/base-types/best-practices-strings.md) instrucciones. En concreto, indicar siempre explícitamente *intención cultural* en la conversión y la comparación de cadenas (si procede).
+Siga [prácticas recomendadas para el uso de cadenas en .NET](../../standard/base-types/best-practices-strings.md) orientación. En concreto, siempre explícitamente *intención cultural* en la conversión y la comparación de cadenas (si procede).
 
-## <a name="guidelines-for-f-facing-libraries"></a>Directrices para F #-orientada hacia el bibliotecas
+## <a name="guidelines-for-f-facing-libraries"></a>Directrices para F #-orientado a las bibliotecas
 
-Esta sección contiene recomendaciones para el desarrollo de F # pública-orientada hacia el bibliotecas; es decir, las bibliotecas de exponer las API públicas que están destinadas a ser consumidos por los desarrolladores de F #. Hay una variedad de recomendaciones de diseño de la biblioteca aplicable específicamente para F #. En ausencia de las recomendaciones específicas que van a continuación, las instrucciones de diseño de la biblioteca de .NET son las instrucciones de reserva.
+En esta sección se presenta recomendaciones para el desarrollo de F # pública-orientado a las bibliotecas; es decir, las bibliotecas de exponer las API públicas que vayan a ser consumidos por los desarrolladores de F #. Hay una variedad de recomendaciones de diseño de la biblioteca aplicables específicamente a F #. En ausencia de las recomendaciones específicas que siguen, las instrucciones de diseño de la biblioteca de .NET son las instrucciones de reserva.
 
 ### <a name="naming-conventions"></a>Convenciones de nomenclatura
 
-#### <a name="use-net-naming-and-capitalization-conventions"></a>Utilice convenciones de nomenclatura y mayúsculas y minúsculas de .NET
+#### <a name="use-net-naming-and-capitalization-conventions"></a>Usar las convenciones de mayúsculas y minúsculas y nomenclatura de .NET
 
-En la tabla siguiente sigue las convenciones de nomenclatura y uso de mayúsculas. NET. Existen pequeñas adiciones al también incluye construcciones de F #.
+La siguiente tabla sigue las convenciones de mayúsculas y minúsculas y nomenclatura. NET. Existen adiciones pequeño para incluir también las construcciones de F #.
 
 | Construcción | Caso | Parte | Ejemplos | Notas |
 |-----------|------|------|----------|-------|
-| Tipos concretos | PascalCase | Sustantivo o adjetivo | Lista, doble, complejo | Tipos concretos son estructuras, clases, enumeraciones, delegados, registros y uniones. Aunque los nombres de tipo son tradicionalmente en minúsculas en OCaml, F # ha adoptado el esquema de nomenclatura de .NET para los tipos.
+| Tipos concretos | PascalCase | Sustantivo o adjetivo | Lista, Double, complejo | Tipos concretos son clases, structs, enumeraciones, delegados, registros y uniones. Aunque los nombres de tipo son tradicionalmente en minúsculas en OCaml, F # ha adoptado el esquema de nomenclatura .NET para los tipos.
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| Etiquetas de unión     | PascalCase | nombre | Algunos, agregar, correcto | No utilice un prefijo en las API públicas. Utilizar opcionalmente un prefijo cuando interno, como ''' Escriba los equipos = TAlpha | TBeta | TDelta.'' ' |
+| Etiquetas de unión     | PascalCase | Sustantivo | Algunos, agregar, correcto | No use un prefijo en las API públicas. Utilizar opcionalmente un prefijo cuando interno, como ''' Escriba equipos = TAlpha | TBeta | TDelta.'' ' |
 | evento          | PascalCase | Verbo | ValueChanged / ValueChanging |  |
 | Excepciones     | PascalCase |      | WebException | Nombre debe terminar con "Exception". |
-| Campo          | PascalCase | nombre | CurrentName  | |
-| Tipos de interfaz |  PascalCase | Sustantivo o adjetivo | IDisposable | Nombre debe comenzar con "I". |
+| Campo          | PascalCase | Sustantivo | CurrentName  | |
+| Tipos de interfaz |  PascalCase | Sustantivo o adjetivo | IDisposable | Nombre debe comenzar por "I". |
 | Método |  PascalCase |  Verbo | ToString | |
 | Espacio de nombres | PascalCase | | Microsoft.FSharp.Core | Generalmente se utiliza `<Organization>.<Technology>[.<Subnamespace>]`, drop aunque la organización si la tecnología es independiente de la organización. |
-| Parámetros | camelCase | nombre |  typeName, transformar, de intervalo | |
-| permitir que los valores (internos) | camelCase o PascalCase | Nombre / verbo |  getValue, myTable |
-| permitir que los valores (externo) | camelCase o PascalCase | Nombre/verbo  | List.Map, Dates.Today | valores de límite permiten a menudo son públicos al seguir los patrones de diseño funcional tradicional. Sin embargo, generalmente se utiliza PascalCase cuando el identificador se puede usar en otros lenguajes. NET. |
-| Property  | PascalCase  | Sustantivo o adjetivo  | IsEndOfFile, color de fondo  | Propiedades booleanas por lo general uso y puede y debe ser afirmativa, como en IsEndOfFile, no IsNotEndOfFile.
+| Parámetros | camelCase | Sustantivo |  typeName, transformación, intervalo | |
+| permitir que los valores (internos) | camelCase o PascalCase | Sustantivo o verbo |  getValue, myTable |
+| permitir que los valores (externo) | camelCase o PascalCase | Verbo y sustantivo  | List.Map, Dates.Today | a menudo son públicos enlazado a Let valores al seguir los patrones de diseño funcionales tradicional. Sin embargo, normalmente usar PascalCase cuando el identificador puede usarse desde otros lenguajes. NET. |
+| Property  | PascalCase  | Sustantivo o adjetivo  | IsEndOfFile, color de fondo  | Las propiedades booleanas generalmente uso es y puede y debe ser afirmativa, como en IsEndOfFile, no IsNotEndOfFile.
 
-#### <a name="avoid-abbreviations"></a>Evite las abreviaturas
+#### <a name="avoid-abbreviations"></a>Evitar las abreviaturas
 
-Las instrucciones de .NET desaconseja el uso de las abreviaturas (por ejemplo, "usar `OnButtonClick` en lugar de `OnBtnClick`"). Abreviaturas comunes, como `Async` para "Asincrónico", que se tolera. A veces se pasa por alto esta directriz para la programación funcional; Por ejemplo, `List.iter` usa una abreviatura de "repetir". Por este motivo, con abreviaturas tiende a tolerar un mayor grado de F #-a-programación en F #, pero se deben evitar en general todavía en el diseño de los componentes públicos.
+Las instrucciones de .NET desaconseja el uso de abreviaturas de (por ejemplo, "usar `OnButtonClick` lugar `OnBtnClick`"). Abreviaturas comunes, como `Async` para "Asynchronous", se tolera. A veces se pasa por alto esta directriz de programación funcional; Por ejemplo, `List.iter` usa una abreviatura para "recorrer en iteración". Por este motivo, con abreviaturas tiende a tolerar un mayor grado de F #-a-programación en F #, pero aún por lo general debe evitarse en el diseño del componente público.
 
-#### <a name="avoid-casing-name-collisions"></a>Evitar conflictos de nombres las mayúsculas y minúsculas
+#### <a name="avoid-casing-name-collisions"></a>Evitar las mayúsculas y minúsculas de las colisiones de nombres
 
-Las instrucciones de .NET decir que las mayúsculas y minúsculas por sí solo no se puede usar para eliminar la ambigüedad de conflictos de nombres, ya que algunos lenguajes de cliente (por ejemplo, Visual Basic) distinguen entre mayúsculas y minúsculas.
+Las instrucciones de .NET dicen que las mayúsculas y minúsculas por sí solo no pueden usarse para eliminar la ambigüedad de las colisiones de nombres, ya que algunos idiomas de cliente (por ejemplo, Visual Basic) distinguen mayúsculas de minúsculas.
 
-#### <a name="use-acronyms-where-appropriate"></a>Utilice acrónimos cuando resulte apropiado
+#### <a name="use-acronyms-where-appropriate"></a>Utilizar acrónimos cuando sea apropiado
 
-Acrónimos como XML no son las abreviaturas y se usan ampliamente en las bibliotecas de .NET en forma sin mayúsculas (Xml). Solo deben utilizarse acrónimos conocidos, ampliamente reconocidos.
+Acrónimos como XML no son abreviaturas y se usan ampliamente en las bibliotecas de .NET de forma sin mayúsculas (Xml). Solo deben usarse acrónimos conocidos y ampliamente reconocidos.
 
-#### <a name="use-pascalcase-for-generic-parameter-names"></a>Utilice PascalCase para los nombres de parámetro genérico
+#### <a name="use-pascalcase-for-generic-parameter-names"></a>Uso PascalCase para los nombres de parámetro genérico
 
-Utilice PascalCase para nombres de parámetro genérico en las API públicas, incluidos los de F #-orientada hacia las bibliotecas. En concreto, use nombres como `T`, `U`, `T1`, `T2` para los parámetros genéricos arbitrarios y nombres específicos tienen sentido, a continuación, en F #-orientados al público bibliotecas usen nombres como `Key`, `Value`, `Arg`(pero no por ejemplo, `TKey`).
+Usar PascalCase para nombres de parámetro genérico en las API públicas, incluido para F #-orientado a las bibliotecas. En concreto, use nombres como `T`, `U`, `T1`, `T2` para los parámetros genéricos arbitrarios y nombres específicos tienen sentido, a continuación, para F #-accesibles desde bibliotecas usen nombres como `Key`, `Value`, `Arg`(pero no por ejemplo, `TKey`).
 
-#### <a name="use-either-pascalcase-or-camelcase-for-public-functions-and-values-in-f-modules"></a>Utilizar PascalCase o camelCase para funciones públicas y valores en los módulos de F #
+#### <a name="use-either-pascalcase-or-camelcase-for-public-functions-and-values-in-f-modules"></a>Usar PascalCase o camelCase para funciones públicas y valores en los módulos de F #
 
-camelCase se utiliza para funciones públicas que están diseñadas para utilizarse sin calificar (por ejemplo, `invalidArg`) y para las funciones de colección estándar de"" (por ejemplo, List.map). En ambos de estos casos, los nombres de función actúan como palabras clave en el lenguaje.
+camelCase se utiliza para funciones públicas que están diseñadas para usarse incompletos (por ejemplo, `invalidArg`) y para las funciones de colección estándar de"" (por ejemplo, List.map). En ambos casos, los nombres de función actúan como palabras clave en el lenguaje.
 
-### <a name="object-type-and-module-design"></a>Diseño de objeto, el tipo y el módulo
+### <a name="object-type-and-module-design"></a>Diseño de objeto, tipo y módulo
 
-#### <a name="use-namespaces-or-modules-to-contain-your-types-and-modules"></a>Usar espacios de nombres o módulos para contener los tipos y módulos
+#### <a name="use-namespaces-or-modules-to-contain-your-types-and-modules"></a>Usar módulos o espacios de nombres para contener los tipos y módulos
 
 Cada archivo de F # en un componente debe comenzar con una declaración de espacio de nombres o una declaración de módulo.
 
@@ -142,16 +142,16 @@ module CommonOperations =
 
 Las diferencias entre el uso de módulos y espacios de nombres para organizar el código en el nivel superior son como sigue:
 
-* Espacios de nombres pueden abarcar varios archivos
-* Espacios de nombres no pueden contener funciones de F # a menos que estén dentro de un módulo interno
-* El código de cualquier módulo determinado debe estar dentro de un único archivo
+* Los espacios de nombres pueden abarcar varios archivos
+* Los espacios de nombres no pueden contener funciones de F # a menos que estén dentro de un módulo interno
+* El código de cualquier módulo determinado debe estar dentro de un solo archivo
 * Módulos de nivel superior pueden contener funciones de F # sin necesidad de un módulo interno
 
-La elección entre un módulo o espacio de nombres de nivel superior afecta a la forma compilada del código y, por tanto, afectará a la vista de otros lenguajes .NET su API finalmente se debe consumir fuera del código de F #.
+La elección entre un espacio de nombres de nivel superior o un módulo afecta a la forma compilada del código y, por tanto, afectará a la vista de otros lenguajes .NET su API, finalmente, se debe consumir fuera del código de F #.
 
 #### <a name="use-methods-and-properties-for-operations-intrinsic-to-object-types"></a>Usar métodos y propiedades para las operaciones intrínsecas a tipos de objeto
 
-Cuando se trabaja con objetos, es mejor para asegurarse de que se implementa funcionalidad consumible como métodos y propiedades de ese tipo.
+Cuando se trabaja con objetos, es mejor asegurarse de que pueda consumir funcionalidad se implementa como métodos y propiedades de dicho tipo.
 
 ```fsharp
 type HardwareDevice() =
@@ -169,11 +169,11 @@ type HashTable<'Key,'Value>(comparer: IEqualityComparer<'Key>) =
     member this.ContainsValue(value) = ...
 ```
 
-La mayor parte de la funcionalidad para un miembro determinado necesita no necesariamente se implementan en ese miembro, pero debe ser la pieza consumible de esa funcionalidad.
+La mayor parte de la funcionalidad para un miembro determinado necesita no necesariamente se implementarán en ese miembro, pero debe ser el fragmento consumible de esa funcionalidad.
 
 #### <a name="use-classes-to-encapsulate-mutable-state"></a>Usar las clases para encapsular el estado mutable
 
-En F #, esto solo debe hacerse donde que estado no está ya encapsulado por otra construcción del lenguaje, como un cierre, la expresión de secuencia o el cálculo asincrónico.
+En F #, esto solo debe hacerse donde que no está encapsulado ya estado por otra construcción del lenguaje, como una clausura, la expresión de secuencia o el cálculo asincrónico.
 
 ```fsharp
 type Counter() =
@@ -187,7 +187,7 @@ type Counter() =
 
 #### <a name="use-interfaces-to-group-related-operations"></a>Usar interfaces para agrupar las operaciones relacionadas con
 
-Usar tipos de interfaz para representar un conjunto de operaciones. Esto es preferible a otras opciones, como las tuplas de funciones o registros de funciones.
+Usar tipos de interfaz para representar un conjunto de operaciones. Esto es preferible a otras opciones, como las tuplas de funciones o los registros de funciones.
 
 ```fsharp
 type Serializer =
@@ -195,7 +195,7 @@ type Serializer =
     abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
 ```
 
-Prioridad para:
+En el lugar para:
 
 ```fsharp
 type Serializer<'T> = {
@@ -204,11 +204,11 @@ type Serializer<'T> = {
 }
 ```
 
-Las interfaces son conceptos de primera clase en. NET, que puede usar para lograr qué funciones normalmente le proporcionaría. Además, puede utilizarse para codificar tipos existenciales en el programa, que no puedan registros de funciones.
+Las interfaces son conceptos de primera clase en. NET, que puede usar para lograr lo Functors normalmente le aportara. Además, puede utilizarse para codificar tipos existenciales en el programa, que no puede ser de los registros de funciones.
 
-#### <a name="use-a-module-to-group-functions-which-act-on-collections"></a>Usar un módulo a las funciones de grupo que actúan en colecciones
+#### <a name="use-a-module-to-group-functions-which-act-on-collections"></a>Usar un módulo para las funciones del grupo que actúan en colecciones
 
-Cuando se define un tipo de colección, considere la posibilidad de proporcionar un conjunto estándar de operaciones, como `CollectionType.map` y `CollectionType.iter`) para los nuevos tipos de colección.
+Al definir un tipo de colección, considere la posibilidad de proporcionar un conjunto estándar de operaciones como `CollectionType.map` y `CollectionType.iter`) para los nuevos tipos de colección.
 
 ```fsharp
 module CollectionType =
@@ -220,27 +220,27 @@ module CollectionType =
 
 Si incluye un módulo de este tipo, siga las convenciones de nomenclatura estándares para las funciones que se encuentra en FSharp.Core.
 
-#### <a name="use-a-module-to-group-functions-for-common-canonical-functions-especially-in-math-and-dsl-libraries"></a>Usar un módulo a las funciones de grupo para funciones comunes canónicas, especialmente en matemáticas y bibliotecas DSL
+#### <a name="use-a-module-to-group-functions-for-common-canonical-functions-especially-in-math-and-dsl-libraries"></a>Usar un módulo para las funciones del grupo para funciones comunes canónicas, especialmente en matemáticas y las bibliotecas DSL
 
-Por ejemplo, `Microsoft.FSharp.Core.Operators` es una colección automáticamente abierta de funciones de nivel superior (como `abs` y `sin`) proporcionada por FSharp.Core.dll.
+Por ejemplo, `Microsoft.FSharp.Core.Operators` es una colección de funciones de nivel superior abierta automáticamente (como `abs` y `sin`) proporcionada por FSharp.Core.dll.
 
-Igualmente, una biblioteca de las estadísticas podría incluir un módulo con funciones `erf` y `erfc`, donde este módulo está diseñado para que se abran explícitamente o automáticamente.
+Del mismo modo, una biblioteca de estadísticas podría incluir un módulo con funciones `erf` y `erfc`, donde este módulo está diseñado para que se abran explícitamente o automáticamente.
 
-#### <a name="consider-using-requirequalifiedaccess-and-carefully-apply-autoopen-attributes"></a>Considere el uso de RequireQualifiedAccess y cuidadosamente aplicar atributos AutoOpen
+#### <a name="consider-using-requirequalifiedaccess-and-carefully-apply-autoopen-attributes"></a>Considere el uso de RequireQualifiedAccess y aplicar con cuidado AutoOpen atributos
 
 Agregar el `[<RequireQualifiedAccess>]` atributo a un módulo indica que no se puede abrir el módulo y que las referencias a los elementos del módulo requieren explícita calificar el acceso. Por ejemplo, el `Microsoft.FSharp.Collections.List` módulo tiene este atributo.
 
-Esto es útil cuando las funciones y los valores en el módulo tienen nombres que es probables que entran en conflicto con los nombres de otros módulos. Que necesiten acceso completo puede aumentar considerablemente el mantenimiento a largo plazo y evolvability de una biblioteca.
+Esto es útil cuando las funciones y los valores del módulo tienen nombres que es probables que entran en conflicto con los nombres de otros módulos. Necesidad de tener acceso completo puede aumentar considerablemente el mantenimiento a largo plazo y la capacidad de evolución de una biblioteca.
 
-Agregar el `[<AutoOpen>]` atributo a un módulo significa que el módulo se abrirá cuando se abre el espacio de nombres contenedor. El `[<AutoOpen>]` también se puede aplicar el atributo a un ensamblado para indicar un módulo que se abrirá automáticamente cuando se hace referencia al ensamblado.
+Agregar el `[<AutoOpen>]` atributo a un módulo, significa que el módulo se abrirá cuando se abre el espacio de nombres contenedor. El `[<AutoOpen>]` el atributo puede aplicarse a un ensamblado para indicar un módulo que se abre automáticamente cuando se hace referencia al ensamblado.
 
-Por ejemplo, una biblioteca de estadísticas **MathsHeaven.Statistics** podría contener una `module MathsHeaven.Statistics.Operators` que contienen funciones `erf` y `erfc`. Es razonable marcar este módulo como `[<AutoOpen>]`. Esto significa `open MathsHeaven.Statistics` también abrirá este módulo y poner los nombres `erf` y `erfc` en el ámbito. Otra buena el uso de `[<AutoOpen>]` es para módulos que contienen métodos de extensión.
+Por ejemplo, una biblioteca de estadísticas **MathsHeaven.Statistics** podría contener un `module MathsHeaven.Statistics.Operators` que contienen funciones `erf` y `erfc`. Es razonable marcar este módulo como `[<AutoOpen>]`. Esto significa `open MathsHeaven.Statistics` también abrirá este módulo y poner los nombres `erf` y `erfc` en el ámbito. Otro buen uso de `[<AutoOpen>]` es para los módulos que contienen métodos de extensión.
 
-Un uso excesivo de `[<AutoOpen>]` hace que las contaminado espacios de nombres y el atributo debe utilizarse con cuidado. Para determinadas bibliotecas en dominios específicos, un uso razonable de `[<AutoOpen>]` puede dar lugar a una mejor utilización.
+Uso excesivo de `[<AutoOpen>]` clientes potenciales a contaminado espacios de nombres y el atributo deberían usarse con cuidado. Para las bibliotecas específicas de dominios concretos, un uso razonable de `[<AutoOpen>]` puede dar lugar a una mejor utilización.
 
-#### <a name="consider-defining-operator-members-on-classes-where-using-well-known-operators-is-appropriate"></a>Considere la posibilidad de definir miembros de operador en las clases donde es adecuado usar operadores conocidos
+#### <a name="consider-defining-operator-members-on-classes-where-using-well-known-operators-is-appropriate"></a>Considere la posibilidad de definir los miembros de operador en las clases donde es adecuado utilizar operadores conocidos
 
-A veces las clases se usan para crear estructuras matemáticas como vectores. Cuando el dominio que se está modelando tiene operadores conocidos, definiéndolos como miembros intrínsecos de la clase es útil.
+A veces clases se utilizan para modelar matemáticas construcciones como vectores. Cuando el dominio que se está modelando tiene operadores conocidos, que definirlas como miembros intrínsecos a la clase es útil.
 
 ```fsharp
 type Vector(x:float) =
@@ -256,11 +256,11 @@ let v = Vector(5.0)
 let u = v * 10.0
 ```
 
-Esta guía se corresponde con las instrucciones generales de .NET para estos tipos. Sin embargo, puede ser importante además en F # codificaciones, ya que esto permite que estos tipos para usarse en métodos con restricciones de miembro, como List.sumBy y junto con funciones de F #.
+Esta guía se corresponde con las instrucciones generales de .NET para estos tipos. Sin embargo, puede ser importante además en F # codificaciones, ya que esto permite que estos tipos para usarse en métodos con restricciones de miembro, como List.sumBy y junto con las funciones de F #.
 
-#### <a name="consider-using-compiledname-to-provide-a-net-friendly-name-for-other-net-language-consumers"></a>Considere la posibilidad de usar CompiledName para proporcionar una. Nombre descriptivo de la red para otros consumidores de lenguaje de .NET
+#### <a name="consider-using-compiledname-to-provide-a-net-friendly-name-for-other-net-language-consumers"></a>Considere el uso de CompiledName para proporcionar una. Nombre descriptivo de la red para otros consumidores de idioma de .NET
 
-En ocasiones, puede que desee algo en un estilo de nombre para los consumidores de F # (por ejemplo, un miembro estático en minúscula para que aparezca como si fuera una función de módulo enlazada), pero tienen un estilo diferente para el nombre cuando se compila en un ensamblado. Puede usar el `[<CompiledName>]` atributo para proporcionar un estilo diferente para consumir el ensamblado de código no F #.
+En ocasiones, puede nombrar algo en un estilo para los consumidores de F # (por ejemplo, un miembro estático en minúsculas para que aparezca como si fuera una función de módulo enlazados), pero tienen un estilo diferente para el nombre cuando se compila en un ensamblado. Puede usar el `[<CompiledName>]` atributo para proporcionar un estilo diferente de F # que no es código que consume el ensamblado.
 
 ```fsharp
 type Vector(x:float, y:float) =
@@ -274,11 +274,11 @@ type Vector(x:float, y:float) =
 let v = Vector.create 5.0 3.0
 ```
 
-Mediante el uso de `[<CompiledName>]`, puede utilizar las convenciones de nomenclatura .NET para F # no los consumidores del ensamblado.
+Mediante el uso de `[<CompiledName>]`, puede usar las convenciones de nomenclatura .NET para F # que no son los consumidores del ensamblado.
 
-#### <a name="use-method-overloading-for-member-functions-if-doing-so-provides-a-simpler-api"></a>Utilizar una sobrecarga de método para las funciones de miembro, si al hacerlo consigue una API más sencilla
+#### <a name="use-method-overloading-for-member-functions-if-doing-so-provides-a-simpler-api"></a>Use la sobrecarga de métodos para funciones miembro, si al hacerlo proporciona una API más sencilla
 
-Sobrecarga de métodos es una herramienta eficaz para simplificar una API que quizás deba realizar una funcionalidad similar, pero con argumentos u opciones diferentes.
+La sobrecarga de método es una herramienta eficaz para simplificar una API que puede necesitar realizar una funcionalidad similar, pero con distintas opciones o argumentos.
 
 ```fsharp
 type Logger() =
@@ -291,17 +291,17 @@ type Logger() =
 
 En F #, es más habitual de sobrecarga en el número de argumentos en lugar de tipos de argumentos.
 
-#### <a name="hide-the-representations-of-record-and-union-types-if-the-design-of-these-types-is-likely-to-evolve"></a>Ocultar las representaciones de registro y tipos de unión si el diseño de estos tipos tiene susceptibles de evolucionar
+#### <a name="hide-the-representations-of-record-and-union-types-if-the-design-of-these-types-is-likely-to-evolve"></a>Ocultar las representaciones de registro y los tipos de unión si es probable que evolucione el diseño de estos tipos
 
-Evitar revelar representaciones concretas de objetos. Por ejemplo, la representación concreta de <xref:System.DateTime> por la API externa, pública del diseño de biblioteca de .NET no se revelen los valores. En tiempo de ejecución, Common Language Runtime sabe la implementación confirma que se utilizará a lo largo de la ejecución. Sin embargo, código compilado no propio recoge las dependencias de la representación en forma concreta.
+Evitar revelar representaciones concretas de objetos. Por ejemplo, la representación concreta de <xref:System.DateTime> la API pública externa del diseño de biblioteca de .NET no revelan los valores. En tiempo de ejecución, Common Language Runtime sabe la implementación confirma que se usará en toda la ejecución. Sin embargo, código compilado no propio recoge las dependencias de la representación concreta.
 
 #### <a name="avoid-the-use-of-implementation-inheritance-for-extensibility"></a>Evite el uso de la herencia de implementación para la extensibilidad
 
-En F #, apenas se usa la herencia de implementación. Además, las jerarquías de herencia son a menudo complejo y difícil de modificar cuando llegan los nuevos requisitos. Implementación de la herencia sigue existiendo en F # para la compatibilidad y raros casos donde es la mejor solución para un problema, pero técnicas alternativas deben obtenerse en los programas de F # cuando se diseña para polimorfismo, como la implementación de interfaz.
+En F #, rara vez se usa la herencia de la implementación. Además, las jerarquías de herencia son a menudo complejo y difícil de cambiar cuando lleguen nuevos requisitos. Implementación de la herencia sigue existiendo en F # de compatibilidad y raras ocasiones donde es la mejor solución a un problema, pero deben buscarse técnicas alternativas en los programas de F # cuando se diseña para polimorfismo, como la implementación de la interfaz.
 
 ### <a name="function-and-member-signatures"></a>Firmas de función y miembro
 
-#### <a name="use-tuples-for-return-values-when-returning-a-small-number-of-multiple-unrelated-values"></a>Tuplas de uso para los valores devueltos cuando se devuelve un número reducido de varios valores no relacionados
+#### <a name="use-tuples-for-return-values-when-returning-a-small-number-of-multiple-unrelated-values"></a>Uso de tuplas para los valores devueltos cuando se devuelve un número pequeño de varios valores no relacionados
 
 Este es un buen ejemplo del uso de una tupla en un tipo de valor devuelto:
 
@@ -309,11 +309,11 @@ Este es un buen ejemplo del uso de una tupla en un tipo de valor devuelto:
 val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
 ```
 
-Para devolver los tipos que contiene muchos componentes o, si los componentes están relacionadas con una sola entidad de identificación, considere la posibilidad de usar un tipo con nombre en lugar de una tupla.
+Para devolver tipos que contengan muchos componentes, o donde los componentes están relacionados con una sola entidad identificable, plantéese el uso de un tipo con nombre en lugar de una tupla.
 
 #### <a name="use-asynct-for-async-programming-at-f-api-boundaries"></a>Use `Async<T>` para programación asincrónica en los límites de API de F #
 
-Si hay una operación sincrónica correspondiente denominada `Operation` que devuelve un `T`, a continuación, la operación asincrónica debe denominarse `AsyncOperation` si devuelve `Async<T>` o `OperationAsync` si devuelve `Task<T>`. Los tipos utilizados frecuentemente de .NET que exponen métodos Begin/End, considere la posibilidad de usar `Async.FromBeginEnd` para escribir métodos de extensión como una fachada para proporcionar el F # async modelo de programación a las API de .NET.
+Si hay una operación sincrónica correspondiente denominada `Operation` que devuelve un `T`, a continuación, la operación asincrónica debe denominarse `AsyncOperation` si devuelve `Async<T>` o `OperationAsync` si devuelve `Task<T>`. Para los tipos de .NET utilizados frecuentemente que exponen métodos Begin/End, considere el uso de `Async.FromBeginEnd` escribir métodos de extensión como una fachada para proporcionar la F # async modelo de programación a las API de .NET.
 
 ```fsharp
 type SomeType =
@@ -329,45 +329,13 @@ type System.ServiceModel.Channels.IInputChannel with
 
 ### <a name="exceptions"></a>Excepciones
 
-Las excepciones son excepcionales en. NET; es decir, no deben ocurrir con frecuencia en tiempo de ejecución. Cuando lo hacen, es útil la información que contienen. Las excepciones son un núcleo de primera clase concepto de. NET; TI, por lo que se indica a continuación que corresponda de la aplicación de las excepciones que debe usarse como parte del diseño de la interfaz de un componente.
-
-#### <a name="follow-the-net-guidelines-for-exceptions"></a>Siga las instrucciones de .NET para las excepciones
-
-El [instrucciones de diseño de biblioteca de .NET](../../standard/design-guidelines/exceptions.md) ofrece excelente consejos sobre el uso de las excepciones producidas en el contexto de toda la programación. NET. Algunas de estas instrucciones son las siguientes:
-
-* No uses excepciones para el flujo de control normal. Aunque esta técnica suele utilizarse en lenguajes como OCaml, es propensa a errores y puede ser ineficaz en. NET. En su lugar, considere la posibilidad de devolver un `None` valor para indicar un error que es común o se espera algo de la opción.
-
-* Documente las excepciones producidas por los componentes cuando se utiliza una función de forma incorrecta.
-
-* Siempre que sea posible, emplear excepciones existentes de los espacios de nombres del sistema. Evitar <xref:System.ApplicationException>, aunque.
-
-* No genere <xref:System.Exception> cuando escaparán al código de usuario. Esto incluye evitar el uso de `failwith`, `failwithf`, que son funciones útiles para su uso en secuencias de comandos y código en desarrollo, pero se deben quitar del código de biblioteca de F # en favor de producir un tipo de excepción más específico.
-
-* Use `nullArg`, `invalidArg`, y `invalidOp` como mecanismo para producir <xref:System.ArgumentNullException>, <xref:System.ArgumentException>, y <xref:System.InvalidOperationException> cuando sea necesario.
-
-#### <a name="consider-using-option-values-for-return-types-when-failure-is-not-an-exceptional-scenario"></a>Considere el uso de valores de las opciones para los tipos de valor devueltos cuando no hay una situación excepcional
-
-El método de .NET a las excepciones es que debe ser "excepcionales;" es decir, que ocurran relativamente con poca frecuencia. Sin embargo, algunas operaciones (por ejemplo, la búsqueda de una tabla) pueden producir errores con frecuencia. Los valores de opción de F # son una excelente forma para representar los tipos devueltos de estas operaciones. Estas operaciones convencionalmente empiezan con el prefijo de nombre "try":
-
-```fsharp
-// bad: throws exception if no element meets criteria
-member this.FindFirstIndex(pred : 'T -> bool) : int =
-    ...
-
-// bad: returns -1 if no element meets criteria
-member this.FindFirstIndex(pred : 'T -> bool) : int =
-    ...
-
-// good: returns None if no element meets criteria
-member this.TryFindFirstIndex(pred : 'T -> bool) : int option =
-    ...
-```
+Consulte [administración de errores](conventions.md#error-management) para obtener información sobre el uso adecuado de las excepciones, los resultados y opciones.
 
 ### <a name="extension-members"></a>Miembros de extensión
 
-#### <a name="carefully-apply-f-extension-members-in-f-to-f-components"></a>Aplicar cuidadosamente los miembros de extensión de F # en F #-a-F # componentes
+#### <a name="carefully-apply-f-extension-members-in-f-to-f-components"></a>Aplicar con cuidado los miembros de extensión de F # en F #-a-F # componentes
 
-Miembros de extensión de F # normalmente deben usarse solo para las operaciones que se encuentran en el cierre de operaciones intrínsecos asociado a un tipo en la mayoría de los modos de uso. Un uso habitual consiste en proporcionan API que son más idiomáticas a F # para varios tipos. NET:
+Los miembros de extensión de F # por lo general deben usarse solo para las operaciones que se encuentran en el cierre de operaciones intrínsecos asociado con un tipo en la mayoría de los modos de uso. Un uso común es proporcionar las API que son más idiomáticas de F # para varios tipos. NET:
 
 ```fsharp
 type System.ServiceModel.Channels.IInputChannel with
@@ -382,9 +350,9 @@ type System.Collections.Generic.IDictionary<'Key,'Value> with
 
 ### <a name="union-types"></a>Tipos de unión
 
-#### <a name="use-discriminated-unions-instead-of-class-hierarchies-for-tree-structured-data"></a>Usar uniones discriminadas en lugar de jerarquías de clases para los datos de estructura de árbol
+#### <a name="use-discriminated-unions-instead-of-class-hierarchies-for-tree-structured-data"></a>Usar uniones discriminadas en lugar de jerarquías de clases para los datos de la estructura de árbol
 
-Las estructuras de árbol son definidos de forma recursiva. Esto es difícil con herencia, pero elegante con uniones discriminadas.
+Las estructuras de árbol están definidos de forma recursiva. Esto es difícil con herencia, pero elegante con uniones discriminadas.
 
 ```fsharp
 type BST<'T> =
@@ -392,17 +360,17 @@ type BST<'T> =
     | Node of 'T * BST<'T> * BST<'T>
 ```
 
-Que representa los datos en forma de árbol con uniones discriminadas también permite beneficiarse de exhaustiveness de coincidencia de patrones.
+Que representa los datos en forma de árbol con uniones discriminadas también permite beneficiarse de exhaustiveness en coincidencia de patrones.
 
 #### <a name="use-requirequalifiedaccess-on-union-types-whose-case-names-are-not-sufficiently-unique"></a>Use `[<RequireQualifiedAccess>]` en tipos de unión cuyos nombres casos no son lo suficientemente exclusivos
 
-Es probable que se encuentre en un dominio donde el mismo nombre es el nombre más adecuado para realizar diferentes tareas, como casos de unión discriminada. Puede usar `[<RequireQualifiedAccess>]` para eliminar la ambigüedad de los nombres de casos con el fin de evitar que se produzca errores confusos debido al sombreado depende de la ordenación de `open` instrucciones
+Puede buscar por sí mismo en un dominio donde el mismo nombre es el nombre más adecuado para diferentes operaciones, como casos de unión discriminada. Puede usar `[<RequireQualifiedAccess>]` para eliminar la ambigüedad con el fin de evitar que se produzca errores confusos debido al sombreado dependientes en el orden de los nombres de casos `open` instrucciones
 
-#### <a name="hide-the-representations-of-discriminated-unions-for-binary-compatible-apis-if-the-design-of-these-types-is-likely-to-evolve"></a>Ocultar las representaciones de las uniones discriminadas para las API compatibles binarias si el diseño de estos tipos tiene susceptibles de evolucionar
+#### <a name="hide-the-representations-of-discriminated-unions-for-binary-compatible-apis-if-the-design-of-these-types-is-likely-to-evolve"></a>Ocultar las representaciones de las uniones discriminadas de API compatibles binarias si es probable que evolucione el diseño de estos tipos
 
-Tipos de uniones se basan en F # coincidencia formularios para un modelo de programación conciso. Como se mencionó anteriormente, debe evitar revelar representaciones de datos concretos si es probable que evolucione el diseño de estos tipos.
+Tipos de uniones se basan en F # coincidencia formularios para un modelo de programación conciso. Como se mencionó anteriormente, debe evitar revelar las representaciones de datos concreta si es probable que evolucione el diseño de estos tipos.
 
-Por ejemplo, se puede ocultar la representación de una unión discriminada con una declaración privada o interna, o mediante un archivo de signatura.
+Por ejemplo, se puede ocultar la representación de una unión discriminada con una declaración interna o privada, o mediante un archivo de signatura.
 
 ```fsharp
 type Union =
@@ -411,15 +379,15 @@ type Union =
     | CaseB of string
 ```
 
-Si revelan uniones discriminadas forma indiscriminada, quizá le resulte difícil versión la biblioteca sin interrumpir el código de usuario. En su lugar, considere la posibilidad de que revelen uno o varios modelos activos para permitir la coincidencia sobre los valores de los tipos de patrones.
+Si revelan las uniones discriminadas forma indiscriminada, le resultará difícil de versión de la biblioteca sin interrumpir el código de usuario. En su lugar, considere la posibilidad de que revelen uno o varios modelos activos para permitir a través de los valores de su tipo de coincidencia de patrones.
 
-Modelos activos proporcionan un mecanismo alternativo para proporcionar a los consumidores de F # con el patrón de búsqueda de coincidencias al evitar exponer directamente los tipos de unión de F #.
+Modelos activos proporcionan una alternativa para proporcionar a los consumidores de F # al tiempo que evita exponer directamente los tipos de unión de F # de coincidencia de patrones.
 
-### <a name="inline-functions-and-member-constraints"></a>Las funciones insertadas y las restricciones de miembro
+### <a name="inline-functions-and-member-constraints"></a>Las funciones insertadas y restricciones de miembro
 
-#### <a name="define-generic-numeric-algorithms-using-inline-functions-with-implied-member-constraints-and-statically-resolved-generic-types"></a>Definir los algoritmos numéricos genéricos mediante funciones inline con restricciones de miembro implícito y tipos genéricos resueltos estáticamente
+#### <a name="define-generic-numeric-algorithms-using-inline-functions-with-implied-member-constraints-and-statically-resolved-generic-types"></a>Definir los algoritmos genéricos numéricos mediante las funciones insertadas con restricciones de miembro implícito y tipos genéricos resueltos estáticamente
 
-Las restricciones de miembro aritméticos y las restricciones de comparación de F # son un estándar para la programación de F #. Por ejemplo, considere el siguiente código:
+Restricciones de miembro aritméticos y las restricciones de comparación de F # son un estándar para la programación en F #. Por ejemplo, considere el siguiente código:
 
 ```fsharp
 let inline highestCommonFactor a b =
@@ -440,55 +408,55 @@ val inline highestCommonFactor : ^T -> ^T -> ^T
                 and ^T : comparison
 ```
 
-Se trata de una función adecuada para una API pública en una biblioteca de matemática.
+Se trata de una función adecuada para una API pública en una biblioteca matemática.
 
-#### <a name="avoid-using-member-constraints-to-simulate-type-classes-and-duck-typing"></a>Evite el uso de restricciones de miembro para simular las clases de tipos y duck escribiendo
+#### <a name="avoid-using-member-constraints-to-simulate-type-classes-and-duck-typing"></a>Evite el uso de restricciones de miembro para simular las clases de tipos y pato
 
-Es posible simular "agacha escribiendo" mediante las restricciones de miembro de F #. Sin embargo, los miembros que hacen que utilizar esta propiedad no está en general se utiliza en F #-a-diseños de biblioteca de F #. Esto es porque los diseños de biblioteca en función de las restricciones implícitas desconocidas o no estándares tienden a hacer que el código de usuario se conviertan en inflexibles y ligada al patrón de un marco de trabajo concreto.
+Es posible simular "agacha escribiendo" mediante restricciones de miembro de F #. Sin embargo, los miembros que hacen que utilizar esta propiedad no está en general se debe usar en F #-a-diseños de biblioteca de F #. Esto es porque los diseños de biblioteca en función de las restricciones implícitas no estándares o desconocidas tienden a producir código de usuario para ser inflexibles y están vinculados al patrón de un marco de trabajo concreto.
 
-Además, hay una gran probabilidad de que un uso intensivo de las restricciones de miembro de esta manera puede dar lugar a tiempos de compilación mucho.
+Además, hay muchas posibilidades de que un uso intensivo de restricciones de miembro de esta manera puede dar lugar a tiempos de compilación muy largos.
 
 ### <a name="operator-definitions"></a>Definiciones de operador
 
 #### <a name="avoid-defining-custom-symbolic-operators"></a>Evite la definición de operadores simbólicos personalizados
 
-Operadores personalizados son esenciales en algunas situaciones y dispositivos notacionales muy útiles dentro de un cuerpo grande del código de implementación. Para los nuevos usuarios de una biblioteca, funciones con nombre son a menudo más fáciles de usar. Además, operadores simbólicos personalizados pueden ser difíciles de documento y usuarios les resulta más difícil buscar ayuda sobre operadores, debido a las limitaciones existentes en los motores de IDE y búsqueda.
+Operadores personalizados son esenciales en algunas situaciones y son muy útiles notacionales dispositivos dentro de un gran bloque de código de implementación. Para los nuevos usuarios de una biblioteca, las funciones con nombre suelen ser más fáciles de usar. Además, operadores simbólicos personalizados pueden ser difíciles de documento y usuarios les resulta más difícil buscar ayuda sobre operadores, debido a las limitaciones existentes en los motores de IDE y búsqueda.
 
-Como resultado, es mejor publicar su funcionalidad como funciones con nombre y miembros y además exponer operadores para esta funcionalidad solo si el beneficio notacional superan el costo cognitivo indica que existen y documentación.
+Como resultado, es mejor para su funcionalidad como miembros y funciones con nombre de la publicación y además exponer operadores para esta funcionalidad solo si el beneficio notacional superan a la documentación y el costo de cognitive de disponer de ellos.
 
 ### <a name="units-of-measure"></a>Unidades de medida
 
-#### <a name="carefully-use-units-of-measure-for-added-type-safety-in-f-code"></a>Detenidamente utilizar unidades de medida de seguridad de tipos agregados en código de F #
+#### <a name="carefully-use-units-of-measure-for-added-type-safety-in-f-code"></a>Usar cuidadosamente las unidades de medida de seguridad de tipos se ha agregado código de F #
 
-Información de tipo adicional para unidades de medida se borra cuando se ve por otros lenguajes. NET. Tenga en cuenta que reflexión, herramientas y componentes .NET verán tipos de redes SAN unidades. Por ejemplo, verá los consumidores de C# `float` en lugar de `float<kg>`.
+Información adicional de escritura para las unidades de medida se borra cuando se ven por otros lenguajes. NET. Tenga en cuenta que reflexión, herramientas y componentes .NET verán tipos sans unidades. Por ejemplo, verá los consumidores de C# `float` lugar `float<kg>`.
 
 ### <a name="type-abbreviations"></a>Abreviaturas de tipo
 
 #### <a name="carefully-use-type-abbreviations-to-simplify-f-code"></a>Utilizar con cuidado las abreviaturas de tipo para simplificar el código de F #
 
-Reflexión, herramientas y componentes de .NET no podrán ver los nombres abreviados para los tipos. Un uso significativo de abreviaturas de tipo también puede hacer que un dominio aparezca más complejo de lo es realmente, lo que podría confundir a los consumidores.
+Reflexión, herramientas y componentes de .NET no verán los nombres abreviados para los tipos. Un uso significativo de abreviaturas de tipo también puede hacer que un dominio aparezca más complejo de lo es en realidad, lo que podría ser confuso para los consumidores.
 
-#### <a name="avoid-type-abbreviations-for-public-types-whose-members-and-properties-should-be-intrinsically-different-to-those-available-on-the-type-being-abbreviated"></a>Evite las abreviaturas de tipo para los tipos públicos deben intrínsecamente diferentes a los que están disponibles en el tipo que se va a abreviar cuyos miembros y propiedades
+#### <a name="avoid-type-abbreviations-for-public-types-whose-members-and-properties-should-be-intrinsically-different-to-those-available-on-the-type-being-abbreviated"></a>Evitar las abreviaturas de tipo para tipos públicos cuyos miembros y propiedades deben ser intrínsecamente diferentes a los que están disponibles en el tipo que se va a abreviar
 
-En este caso, el tipo que se va a abreviar revela demasiado sobre la representación del tipo real que se está definiendo. En su lugar, considere la posibilidad de ajustar la abreviatura en un tipo de clase o una unión discriminada de caso único (o bien, cuando el rendimiento es fundamental, considere el uso de un tipo de estructura que va a contener la abreviatura).
+En este caso, el tipo que se va a abreviar revela demasiado sobre la representación del tipo real que se está definiendo. En su lugar, considere la posibilidad de ajustar la abreviatura en un tipo de clase o una unión discriminada de caso único (o bien, cuando el rendimiento es esencial, considere el uso de un tipo de estructura para ajustar la abreviatura).
 
-Por ejemplo, es tentador para definir una asignación múltiple como un caso especial de un mapa de F #, por ejemplo:
+Por ejemplo, es tentador para definir un mapa múltiple como un caso especial de un mapa de F #, por ejemplo:
 
 ```fsharp
 type MultiMap<'Key,'Value> = Map<'Key,'Value list>
 ```
 
-Sin embargo, las operaciones lógicas de notación de puntos de este tipo no son los mismos que las operaciones en un mapa: por ejemplo, resulta razonable de que el operador de búsqueda están asignados. [clave] devuelve la lista vacía si la clave no está en el diccionario, en lugar de cuando se genera una excepción.
+Sin embargo, las operaciones lógicas de notación de puntos en este tipo no son los mismos que las operaciones en un mapa: por ejemplo, es razonable que se asignan el operador de búsqueda. la lista vacía si la clave no está en el diccionario, en lugar de producir una excepción de devolución [clave].
 
 ## <a name="guidelines-for-libraries-for-use-from-other-net-languages"></a>Directrices para las bibliotecas para su uso desde otros lenguajes de .NET
 
-Cuando diseñe bibliotecas para usarlas en otros lenguajes. NET, es importante cumplir con la [instrucciones de diseño de biblioteca de .NET](../../standard/design-guidelines/index.md). En este documento, estas bibliotecas se etiquetan como vainilla bibliotecas de. NET, en lugar de F #-orientada hacia las bibliotecas que usen F # construye sin restricciones. Diseñar vainilla bibliotecas de .NET significa proporciona las API conocidas e idiomáticas coherentes con el resto de .NET Framework, pues minimiza el uso de F #-construcciones específicas de la API pública. Las reglas se explican en las secciones siguientes.
+Cuando diseñe bibliotecas para su uso desde otros lenguajes. NET, es muy importante seguir el [instrucciones de diseño de bibliotecas de .NET](../../standard/design-guidelines/index.md). En este documento, estas bibliotecas se etiquetan como vainilla bibliotecas. NET, en lugar de F #-orientado a las bibliotecas que usar F # construye sin restricciones. Diseñar vainilla bibliotecas de .NET significa que proporciona las API familiares e idiomáticas coherentes con el resto de .NET Framework, ya que minimiza el uso de F #-construcciones específicas de la API pública. Las reglas se explican en las secciones siguientes.
 
 ### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>Namespace y el tipo de diseño (para las bibliotecas para su uso desde otros lenguajes. NET)
 
-#### <a name="apply-the-net-naming-conventions-to-the-public-api-of-your-components"></a>Las convenciones de nomenclatura de .NET se aplican a la API pública de los componentes
+#### <a name="apply-the-net-naming-conventions-to-the-public-api-of-your-components"></a>Se aplican las convenciones de nomenclatura de .NET a la API pública de los componentes
 
-Preste especial atención al uso de abreviaturas de nombres y las directrices de uso de mayúsculas. NET.
+Preste especial atención al uso de abreviaturas de nombres y las directrices de mayúsculas y minúsculas. NET.
 
 ```fsharp
 type pCoord = ...
@@ -500,11 +468,11 @@ type PolarCoordinate = ...
 
 #### <a name="use-namespaces-types-and-members-as-the-primary-organizational-structure-for-your-components"></a>Usar espacios de nombres, tipos y miembros como la estructura organizativa principal para los componentes de
 
-Todos los archivos que contiene la funcionalidad pública deben comenzar por un `namespace` declaración y las únicas entidades orientados al público en espacios de nombres deben ser tipos. No utilice los módulos de F #.
+Todos los archivos que contiene la funcionalidad pública deben comenzar con un `namespace` declaración y las únicas entidades orientados al público en espacios de nombres deben ser tipos. No utilice los módulos de F #.
 
-Utilizar módulos de no públicos para contener código de implementación, utilidad tipos y funciones de utilidad.
+Utilice los módulos que no sean públicos para contener código de implementación, utilidad tipos y funciones de utilidad.
 
-Los tipos estáticos debe preferirse sobre módulos, ya que permiten para la futura evolución de la API para usar la sobrecarga y otros conceptos de diseño de API de .NET que no se pueden usar dentro de los módulos de F #.
+Los tipos estáticos debe preferirse a través de módulos, ya que permiten para la futura evolución de la API para usar la sobrecarga y otros conceptos de diseño de API de .NET que no se pueden usar dentro de los módulos de F #.
 
 Por ejemplo, en lugar de la API pública de la siguiente:
 
@@ -529,9 +497,9 @@ type Utilities =
     static member Add(x,y,z) = x + y + z
 ```
 
-#### <a name="use-f-record-types-in-vanilla-net-apis-if-the-design-of-the-types-wont-evolve"></a>Usar tipos de registro de F # en las API de .NET de vainilla si el diseño de los tipos no evolucionar
+#### <a name="use-f-record-types-in-vanilla-net-apis-if-the-design-of-the-types-wont-evolve"></a>Usar tipos de registro de F # en las API de .NET de vainilla si el diseño de los tipos no evolucionan
 
-Tipos de registro de F # se compilan en una clase simple de. NET. Estos son idóneos para algunos tipos simples, estables en las API. Puede utilizar el `[<NoEquality>]` y `[<NoComparison>]` atributos para suprimir la generación automática de interfaces. Además, evite usar campos de registro mutable de vainilla las API de .NET como estos expone un campo público. Siempre tenga en cuenta si una clase proporcionaría una opción más flexible para la futura evolución de la API.
+Tipos de registro de F # se compilan en una clase .NET simple. Estos son adecuados para algunos tipos simples y estables en las API. Puede utilizar el `[<NoEquality>]` y `[<NoComparison>]` atributos para suprimir la generación automática de interfaces. También evite usar campos de registro mutable de vainilla las API de .NET como estos expone un campo público. Siempre tenga en cuenta si una clase proporcionaría una opción más flexible para la futura evolución de la API.
 
 Por ejemplo, el siguiente código de F # expone la API pública a un consumidor de C#:
 
@@ -555,9 +523,9 @@ public sealed class MyRecord
 }
 ```
 
-#### <a name="hide-the-representation-of-f-union-types-in-vanilla-net-apis"></a>Ocultar la representación de tipos de unión de F # en las API de .NET de vainilla
+#### <a name="hide-the-representation-of-f-union-types-in-vanilla-net-apis"></a>Ocultar la representación de tipos de unión de F # de vainilla las API de .NET
 
-Tipos de unión de F # no se usan habitualmente en los límites del componente, incluso para F #-a-F # de codificación. Son un dispositivo de implementación excelente cuando se utiliza internamente en componentes y bibliotecas.
+Tipos de unión de F # no se usan habitualmente en los límites del componente, incluso para F #-a-F # de codificación. Son un dispositivo de implementación excelente cuando se usa internamente en componentes y bibliotecas.
 
 Al diseñar una API de .NET de vainilla, considere la posibilidad de ocultar la representación de un tipo de unión mediante una declaración privada o un archivo de signatura.
 
@@ -569,7 +537,7 @@ type PropLogic =
     | True
 ```
 
-También puede aumentar los tipos que usan una representación en forma de unión internamente con miembros para proporcionar un deseado. API de NET orientado.
+También puede aumentar los tipos que usan una representación de unión internamente con miembros para proporcionar un deseado. API de NET orientadas.
 
 ```fsharp
 type PropLogic =
@@ -589,15 +557,15 @@ type PropLogic =
     static member CreateAnd(a,b) = And(a,b)
 ```
 
-#### <a name="design-gui-and-other-components-using-the-design-patterns-of-the-framework"></a>Diseño de interfaz gráfica de usuario y otros componentes por medio de los patrones de diseño de framework
+#### <a name="design-gui-and-other-components-using-the-design-patterns-of-the-framework"></a>Diseño de interfaz gráfica de usuario y otros componentes con los patrones de diseño de framework
 
-Hay muchos marcos de trabajo diferentes dentro de. NET, como formularios Windows Forms, WPF y ASP.NET. Convenciones de nomenclatura y diseño para cada uno de ellos deben utilizarse si va a diseñar componentes para su uso en estos marcos de trabajo. Por ejemplo, para la programación en WPF, adopte patrones de diseño WPF para las clases que se está diseñando. Para los modelos de programación de la interfaz de usuario, utilizar modelos de diseño como los eventos y colecciones basadas en notificaciones como los que se encuentran en <xref:System.Collections.ObjectModel>.
+Hay muchos marcos en. NET, como ASP.NET, WPF y WinForms. Si va a diseñar los componentes para su uso en estos marcos de trabajo, se deben usar las convenciones de nomenclatura y diseño para cada uno. Por ejemplo, para la programación en WPF, adopte los patrones de diseño WPF para las clases que se está diseñando. Para los modelos de programación de la interfaz de usuario, usar patrones de diseño, como los eventos y las colecciones basadas en la notificación como las que se encuentran en <xref:System.Collections.ObjectModel>.
 
-### <a name="object-and-member-design-for-libraries-for-use-from-other-net-languages"></a>Diseño de objeto y el miembro (para las bibliotecas para su uso desde otros lenguajes. NET)
+### <a name="object-and-member-design-for-libraries-for-use-from-other-net-languages"></a>Diseño de objeto y miembro (para las bibliotecas para su uso desde otros lenguajes. NET)
 
 #### <a name="use-the-clievent-attribute-to-expose-net-events"></a>Usar CLIEvent (atributo) para exponer los eventos de .NET
 
-Construir un `DelegateEvent` con .NET específicos de tipo que toma un objeto de delegado y `EventArgs` (en lugar de un `Event`, que simplemente utiliza el `FSharpHandler` tipo de forma predeterminada) para que los eventos se publican en la forma familiar de otros lenguajes. NET.
+Construir un `DelegateEvent` con específica de .NET de tipo que toma un objeto de delegado y `EventArgs` (en lugar de un `Event`, que simplemente utiliza el `FSharpHandler` tipo de forma predeterminada) para que se publican los eventos de la manera familiar para otros lenguajes. NET.
 
 ```fsharp
 type MyBadType() =
@@ -618,11 +586,11 @@ type MyGoodType() =
     member this.MyEvent = myEv.Publish
 ```
 
-#### <a name="expose-asynchronous-operations-as-methods-which-return-net-tasks"></a>Exponer operaciones asincrónicas como métodos que devuelven las tareas de .NET
+#### <a name="expose-asynchronous-operations-as-methods-which-return-net-tasks"></a>Exponer operaciones asincrónicas, como los métodos que devuelven tareas de .NET
 
-Las tareas se usan en .NET para representar los cálculos asincrónicos activos. Las tareas son en general menos composicional que F # `Async<T>` objetos, ya que representan tareas "ya está ejecutando" y no pueden estar compuestos juntos de forma que realizar la composición paralelo o que ocultar la propagación de señales de cancelación y otros parámetros contextuales.
+Las tareas se usan en .NET para representar los cálculos asincrónicos activos. Las tareas son en general menos composicional que F # `Async<T>` objetos, ya que representan tareas "ya está ejecutando" y no pueden componerse entre sí de maneras que realizar la composición paralela o que ocultar la propagación de las señales de cancelación y otros parámetros contextuales.
 
-Sin embargo, a pesar de ello, los métodos que devuelven las tareas son la representación estándar de la programación asincrónica en .NET.
+Sin embargo, a pesar de esto, los métodos que devuelven tareas son la representación estándar de la programación asincrónica en .NET Framework.
 
 ```fsharp
 /// A type in a component designed for use from other .NET languages
@@ -633,7 +601,7 @@ type MyType() =
     member this.ComputeAsync(x) = compute x |> Async.StartAsTask
 ```
 
-Que se van a menudo también va a aceptar un token de cancelación explícita:
+Con frecuencia tendrá también desea aceptar un token de cancelación explícito:
 
 ```fsharp
 /// A type in a component designed for use from other .NET languages
@@ -642,9 +610,9 @@ type MyType() =
     member this.ComputeAsTask(x, cancellationToken) = Async.StartAsTask(compute x, cancellationToken)
 ```
 
-#### <a name="use-net-delegate-types-instead-of-f-function-types"></a>Usar tipos de delegado de .NET en lugar de tipos de función de F #
+#### <a name="use-net-delegate-types-instead-of-f-function-types"></a>Usar tipos de delegados de .NET en lugar de tipos de función de F #
 
-Aquí "tipos de función de F #" significan que los tipos de "flecha" como `int -> int`.
+Aquí, "tipos de función de F #" significan "flecha" tipos como `int -> int`.
 
 En lugar de esto:
 
@@ -660,13 +628,13 @@ member this.Transform(f:Func<int,int>) =
     ...
 ```
 
-El tipo de función de F # aparece como `class FSharpFunc<T,U>` a otros lenguajes. NET y es menos adecuado para las características del lenguaje y herramientas que entender los tipos de delegado. Al crear un método de orden superior como destino .NET Framework 3.5 o superior, el `System.Func` y `System.Action` los delegados son las API derecho a publicar para permitir que los desarrolladores de .NET usar estas API en forma de baja fricción. (Cuando el destino es .NET Framework 2.0, los tipos de delegado definido por el sistema son más limitados; considere el uso de los tipos de delegado predefinido, como `System.Converter<T,U>` o definir un tipo delegado específico.)
+El tipo de función de F # aparece como `class FSharpFunc<T,U>` para otros lenguajes. NET y es menos adecuada para las características del lenguaje y las herramientas que comprender los tipos de delegado. Al crear un método de orden superior como destino .NET Framework 3.5 o posterior, el `System.Func` y `System.Action` los delegados son las API de derechos a publicar para permitir que los desarrolladores de .NET consumir estas API de una manera de baja fricción. (Cuando el destino es .NET Framework 2.0, los tipos de delegado definido por el sistema son más limitados; considere el uso de tipos de delegado predefinido, como `System.Converter<T,U>` o definir un tipo delegado específico.)
 
-En el otro lado, los delegados de .NET no son naturales para F #-orientada hacia el bibliotecas (vea la sección siguiente sobre F #-orientada hacia el bibliotecas). Como resultado, una estrategia de implementación habitual al desarrollar métodos de orden superior para las bibliotecas de .NET vainilla es cree todas la implementación mediante los tipos de función de F # y, a continuación, la API pública mediante delegados como una fachada fina sobre la real de F # implementación de.
+En el otro lado, los delegados de .NET no son naturales para F #-orientado a las bibliotecas (consulte la sección siguiente sobre F #-orientado a las bibliotecas). Como resultado, es una estrategia de implementación común al desarrollar métodos de orden superior para vainilla bibliotecas de .NET crear toda la implementación mediante los tipos de función de F # y, a continuación, crear la API pública de uso de delegados como una fachada delgada encima real F # implementación de.
 
-#### <a name="use-the-trygetvalue-pattern-instead-of-returning-f-option-values-and-prefer-method-overloading-to-taking-f-option-values-as-arguments"></a>Usar el patrón TryGetValue en lugar de devolver los valores de opción de F # y prefiere sobrecargar el método que toma los valores de opción de F # como argumentos
+#### <a name="use-the-trygetvalue-pattern-instead-of-returning-f-option-values-and-prefer-method-overloading-to-taking-f-option-values-as-arguments"></a>Usar el patrón de TryGetValue en lugar de devolver los valores de opción de F # y prefiere la sobrecarga de método para tomar los valores de opción de F # como argumentos
 
-Patrones comunes de uso para el tipo de opción de F # en las API son mejores implementado en vainilla técnicas de diseño de las API de .NET con .NET estándar. En lugar de devolver un valor de opción de F #, considere la posibilidad de usar el tipo de valor devuelto bool suma un parámetro de salida como se muestra en el patrón "TryGetValue". Y, en lugar de tomar valores de opción de F # como parámetros, considere el uso de la sobrecarga de métodos o argumentos opcionales.
+Patrones comunes de uso para el tipo de opción de F # en las API son mejores implementado en vainilla técnicas de diseño de las API de .NET con .NET standard. En lugar de devolver un valor de opción de F #, considere el uso del tipo de valor devuelto bool además de un parámetro de salida como se muestra en el patrón "TryGetValue". Y, en lugar de tomar valores de opción de F # como parámetros, considere el uso de la sobrecarga de métodos o argumentos opcionales.
 
 ```fsharp
 member this.ReturnOption() = Some 3
@@ -685,27 +653,27 @@ member this.ParamOverload(x : int) = x
 member this.ParamOverload(x : int, y : int) = x + y
 ```
 
-#### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>Utilice la interfaz de colección de .NET tipos IEnumerable\<T\> y IDictionary\<clave, valor\> para parámetros y valores devueltos
+#### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>Usar la interfaz de colección .NET tipos IEnumerable\<T\> e IDictionary\<clave, valor\> para los parámetros y valores devueltos
 
-Evite el uso de tipos de colección concretos, como matrices de .NET `T[]`, tipos de F # `list<T>`, `Map<Key,Value>` y `Set<T>`, y tipos de colección concretos. NET, como `Dictionary<Key,Value>`. Las instrucciones de diseño de la biblioteca de .NET tienen un buen consejo acerca de cuándo se utilizan varios tipos de colección como `IEnumerable<T>`. Algunos uso de matrices (`T[]`) es aceptable en algunos casos, por motivos de rendimiento. Tenga en cuenta especialmente que `seq<T>` es simplemente la F # alias de `IEnumerable<T>`, y, por tanto, a menudo es un tipo adecuado para una API de .NET de vainilla seq.
+Evite el uso de tipos de colección concretos, como matrices .NET `T[]`, tipos de F # `list<T>`, `Map<Key,Value>` y `Set<T>`, y tipos de colección concretos. NET, como `Dictionary<Key,Value>`. Las instrucciones de diseño de la biblioteca de .NET tienen buenos consejos sobre cuándo usar diversos tipos de colecciones como `IEnumerable<T>`. Algún uso de matrices (`T[]`) es aceptable en algunas circunstancias, por motivos de rendimiento. Tenga en cuenta especialmente que `seq<T>` es simplemente la F # alias de `IEnumerable<T>`, y, por tanto, a menudo es un tipo adecuado para una API de .NET de vainilla seq.
 
-En lugar de F # listas:
+En lugar de la lista de F #:
 
 ```fsharp
 member this.PrintNames(names : string list) =
     ...
 ```
 
-Usar secuencias de F #:
+Use las secuencias de F #:
 
 ```fsharp
 member this.PrintNames(names : seq<string>) =
     ...
 ```
 
-#### <a name="use-the-unit-type-as-the-only-input-type-of-a-method-to-define-a-zero-argument-method-or-as-the-only-return-type-to-define-a-void-returning-method"></a>Utilice el tipo de unidad como el único tipo de entrada de un método para definir un método de argumento de cero, o como el único tipo para definir un método que devuelve void de valor devuelto
+#### <a name="use-the-unit-type-as-the-only-input-type-of-a-method-to-define-a-zero-argument-method-or-as-the-only-return-type-to-define-a-void-returning-method"></a>Usar el tipo de unidad como el único tipo de entrada de un método para definir un método de argumento de cero, o como el único tipo para definir un método que devuelve void de valor devuelto
 
-Evite otros usos del tipo de unidad. Se trata de un buen:
+Evitar otros usos del tipo de unidad. Estas son buenas:
 
 ```fsharp
 ✔ member this.NoArguments() = 3
@@ -719,9 +687,9 @@ Esto es incorrecto:
 member this.WrongUnit( x:unit, z:int) = ((), ())
 ```
 
-#### <a name="check-for-null-values-on-vanilla-net-api-boundaries"></a>Comprobar si hay valores null en vainilla límites de API de .NET
+#### <a name="check-for-null-values-on-vanilla-net-api-boundaries"></a>Comprobar si hay valores null en los límites de API de .NET básica
 
-Código de implementación de F # suele tener menos valores null, debido a los patrones de diseño inmutable y las restricciones en el uso de los literales null para tipos de F #. Otros lenguajes de .NET a menudo utilizan null como un valor mucha más frecuencia. Por este motivo, código de F # que expone una API de .NET de vainilla debe comprobar los parámetros si hay valores null en el límite de API y evitar que estos valores fluyendo más profunda en el código de implementación de F #. El `isNull` función o coincidencia de patrones en el `null` puede utilizar el modelo.
+Código de implementación de F # suele tener menos valores null, debido a los patrones de diseño inmutable y restricciones de uso de literales null para los tipos de F #. Otros lenguajes de .NET a menudo usan null como valor mucha más frecuencia. Por este motivo, código F # que expone una API de .NET de vainilla debe comprobar los parámetros de null en el límite de API y evitar que estos valores fluye más profunda en el código de implementación de F #. El `isNull` función o coincidencia de patrones en el `null` se puede usar el patrón.
 
 ```fsharp
 let checkNonNull argName (arg: obj) =
@@ -736,17 +704,17 @@ let checkNonNull` argName (arg: obj) =
 
 #### <a name="avoid-using-tuples-as-return-values"></a>Evite el uso de tuplas como valores devueltos
 
-En su lugar, preferible devolver un tipo con nombre que contiene los datos agregados o usar los parámetros de salida para devolver varios valores. Si bien existen tuplas y struct tuplas en .NET (incluida la compatibilidad de lenguaje C# para struct tuplas), con mayor frecuencia no proporcionará la API ideal y esperada para los desarrolladores de .NET.
+En su lugar, preferible devolver un tipo con nombre que contiene los datos agregados, o mediante los parámetros de salida para devolver varios valores. Aunque existen tuplas y las tuplas de struct en .NET (incluida la compatibilidad de lenguaje C# para las tuplas de struct), suelen no proporcionará la API ideal y esperada para desarrolladores de .NET.
 
 #### <a name="avoid-the-use-of-currying-of-parameters"></a>Evite el uso de la currificación de parámetros
 
-En su lugar, use .NET convenciones de llamada ``Method(arg1,arg2,…,argN)``.
+En su lugar, utilice las convenciones de llamada de .NET ``Method(arg1,arg2,…,argN)``.
 
 ```fsharp
 member this.TupledArguments(str, num) = String.replicate num str
 ```
 
-Sugerencia: Si está diseñando bibliotecas para usarlas desde cualquier lenguaje. NET, a continuación, no hay ningún sustituto para hacer realidad algunos experimental C# y Visual Basic de programación para asegurarse de que las bibliotecas "apariencia derecha" de estos lenguajes. También puede usar herramientas como .NET Reflector y el Examinador de objetos de Visual Studio para asegurarse de que su documentación y las bibliotecas de aparecen como se esperaba a los desarrolladores.
+Sugerencia: Si va a diseñar bibliotecas para su uso en cualquier lenguaje. NET, a continuación, hay ningún sustituto para realmente hacer algunas experimental C# y Visual Basic de programación para asegurarse de que las bibliotecas de "la frase derecha" de estos lenguajes. También puede usar herramientas como .NET Reflector y del Examinador de objetos de Visual Studio para asegurarse de que las bibliotecas y su documentación aparecen según lo esperado para los desarrolladores.
 
 ## <a name="appendix"></a>Apéndice
 
@@ -780,7 +748,7 @@ type Point1 =
     member Radius : double
 ```
 
-¡Eche un vistazo a cómo aparece este tipo de F # para un programador que use otro lenguaje. NET. Por ejemplo, aproximado C# "firma" es como sigue:
+Echemos un vistazo a cómo aparece este tipo de F # para un programador que use otro lenguaje. NET. Por ejemplo, aproximado de C# "firma" es como sigue:
 
 ```csharp
 // C# signature for the unadjusted Point1 class
@@ -802,15 +770,15 @@ public class Point1
 }
 ```
 
-Hay algunas cuestiones importantes deben tener en cuenta cómo F # representa construcciones aquí. Por ejemplo:
+Hay algunos puntos importantes a tener en cuenta acerca de cómo F # representa construcciones aquí. Por ejemplo:
 
 * Se ha conservado los metadatos como nombres de argumento.
 
-* F # métodos que toman dos argumentos se convierten en métodos de C# que toman dos argumentos.
+* Métodos de F # que toman dos argumentos se convierten en métodos de C# que toman dos argumentos.
 
 * Las funciones y las listas se convierten en las referencias a los tipos correspondientes en la biblioteca de F #.
 
-El código siguiente muestra cómo ajustar este código para aprovechar todo esto en cuenta.
+El código siguiente muestra cómo ajustar este código para tener todo esto en cuenta.
 
 ```fsharp
 namespace SuperDuperFSharpLibrary.Types
@@ -841,7 +809,7 @@ type RadialPoint(angle:double, radius:double) =
                 RadialPoint(angle=2.0*Math.PI/float(count), radius=1.0) }
 ```
 
-El tipo F # deducido del código es como sigue:
+El tipo F # inferido del código es como sigue:
 
 ```fsharp
 type RadialPoint =
@@ -875,12 +843,12 @@ public class RadialPoint
 }
 ```
 
-Las correcciones realizan preparar este tipo para su uso como parte de una biblioteca .NET vainilla son los siguientes:
+Las correcciones realizan preparar este tipo para su uso como parte de una biblioteca básica de .NET son los siguientes:
 
-* Ajustar varios nombres: `Point1`, `n`, `l`, y `f` pasara a ser `RadialPoint`, `count`, `factor`, y `transform`, respectivamente.
+* Ajustar varios nombres: `Point1`, `n`, `l`, y `f` se convirtió en `RadialPoint`, `count`, `factor`, y `transform`, respectivamente.
 
-* Usa un tipo de valor devuelto de `seq<RadialPoint>` en lugar de `RadialPoint list` cambiando una construcción de lista mediante `[ ... ]` a una secuencia de la construcción utilizando `IEnumerable<RadialPoint>`.
+* Usa un tipo de valor devuelto de `seq<RadialPoint>` en lugar de `RadialPoint list` cambiando una construcción de la lista mediante `[ ... ]` a una construcción de secuencia mediante `IEnumerable<RadialPoint>`.
 
 * Usa el tipo de delegado .NET `System.Func` en lugar de un tipo de función de F #.
 
-Esto hace mucho más adecuada consumir en código C#.
+Esto facilita mucho más atractiva para consumir en código C#.

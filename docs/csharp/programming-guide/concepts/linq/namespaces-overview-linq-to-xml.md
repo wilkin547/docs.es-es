@@ -3,11 +3,11 @@ title: Información general sobre los espacios de nombres (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
 ms.openlocfilehash: 03451f50605adf6de0d43f19d220aaeed382f13c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323854"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999230"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>Información general sobre los espacios de nombres (LINQ to XML)
 Este tema presenta los espacios de nombres, la clase <xref:System.Xml.Linq.XName> y la clase <xref:System.Xml.Linq.XNamespace>.  

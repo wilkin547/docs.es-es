@@ -12,11 +12,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
 ms.openlocfilehash: bcfc59efda0627f83713fe9ada24cedc20d823e3
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198213"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934518"
 ---
 # <a name="-operator"></a>\\= Operador
 Divide el valor de una propiedad o variable por el valor de una expresión y asigna el resultado entero a la variable o propiedad.  

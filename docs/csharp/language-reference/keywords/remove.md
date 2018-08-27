@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
-ms.openlocfilehash: 16a169ce1a0ef5dbc29739b2d808acb19737669e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 245ef0a16fd2cec2f36c86dd0ac3b8838a76b02e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269124"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999776"
 ---
 # <a name="remove-c-reference"></a>remove (Referencia de C#)
 La palabra clave contextual `remove` se usa para definir un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente cancela la suscripción a su [evento](../../../csharp/language-reference/keywords/event.md). Si proporciona un descriptor de acceso `remove` personalizado, también debe proporcionar un descriptor de acceso [add](../../../csharp/language-reference/keywords/add.md).  
@@ -23,5 +23,6 @@ La palabra clave contextual `remove` se usa para definir un descriptor de acceso
   
  Normalmente, no necesita proporcionar sus propios descriptores de acceso de eventos personalizados. Los descriptores de acceso que se generan automáticamente mediante el compilador cuando declara un evento son suficientes para la mayoría de escenarios.  
   
-## <a name="see-also"></a>Vea también  
- [Eventos](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Eventos](../../../csharp/programming-guide/events/index.md)

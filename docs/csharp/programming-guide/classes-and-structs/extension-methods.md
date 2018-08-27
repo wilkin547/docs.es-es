@@ -7,10 +7,11 @@ helpviewer_keywords:
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 ms.openlocfilehash: e2e63953e130dc83ce83bcdd2f8e9a2ffc7fe5f3
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000133"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensión (Guía de programación de C#)
 Los métodos de extensión permiten "agregar" métodos a los tipos existentes sin crear un nuevo tipo derivado, recompilar o modificar de otra manera el tipo original. Los métodos de extensión son una clase especial de método estático, pero se les llama como si fueran métodos de instancia en el tipo extendido. En el caso del código de cliente escrito en C#, F# y Visual Basic, no existe ninguna diferencia aparente entre llamar a un método de extensión y llamar a los métodos realmente definidos en un tipo.  

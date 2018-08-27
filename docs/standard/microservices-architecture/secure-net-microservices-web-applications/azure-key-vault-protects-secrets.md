@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 171d9120e4817065ddafc9dfa9caa362694ddeb3
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 84e016e4620b73444f800b02076489012ea5e844
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105289"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001445"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Usar Azure Key Vault para proteger secretos en tiempo de producción
 
@@ -19,7 +19,7 @@ El paquete Microsoft.Extensions.Configuration.AzureKeyVault permite que una apli
 
 En primer lugar, registre la aplicación como una aplicación de Azure AD (el acceso a los almacenes de claves se administra mediante Azure AD). Puede hacerlo a través del portal de administración de Azure.
 
-Como alternativa, si quiere que la aplicación se autentique mediante un certificado en lugar de hacerlo con una contraseña o un secreto de cliente, puede usar el cmdlet de PowerShell [New-AzureRmADApplication](https://docs.microsoft.com/powershell/resourcemanager/azurerm.resources/v3.3.0/new-azurermadapplication). El certificado que registre en Azure Key Vault solo necesita su clave pública (la aplicación usará la clave privada).
+Como alternativa, si quiere que la aplicación se autentique mediante un certificado en lugar de hacerlo con una contraseña o un secreto de cliente, puede usar el cmdlet de PowerShell [New-AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication). El certificado que registre en Azure Key Vault solo necesita su clave pública (la aplicación usará la clave privada).
 
 En segundo lugar, conceda a la aplicación registrada acceso al almacén de claves creando una entidad de servicio. Puede hacerlo usando los siguientes comandos de PowerShell:
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: eff5f05aa8b5081069b9e0f2f5f152669afaea18
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b4bf63af1955582083e7ff54a5717f1ce56dfbb1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208093"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929291"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Conversión boxing y unboxing (Guía de programación de C#)
 La conversión boxing es el proceso de convertir un [tipo de valor](../../../csharp/language-reference/keywords/value-types.md) en el tipo `object` o en cualquier tipo de interfaz implementado por este tipo de valor. Cuando CLR aplica la conversión boxing a un tipo de valor, ajusta el valor dentro de una clase System.Object y lo almacena en el montón administrado. La conversión unboxing extrae el tipo de valor del objeto. La conversión boxing es implícita y la conversión unboxing es explícita. El concepto de conversión boxing y unboxing es la base de la vista unificada del sistema de tipos de C#, en el que un valor de cualquier tipo se puede tratar como objeto.  
@@ -32,7 +32,7 @@ La conversión boxing es el proceso de convertir un [tipo de valor](../../../csh
  [!code-csharp[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_3.cs)]  
   
 ## <a name="performance"></a>Rendimiento  
- Con relación a las asignaciones simples, las conversiones boxing y unboxing son procesos que consumen muchos recursos. Cuando se aplica la conversión boxing a un tipo de valor, se debe asignar y construir un objeto completamente nuevo. En menor grado, la conversión de tipos requerida para aplicar la conversión unboxing también es costosa. Para más información, vea [Rendimiento](https://msdn.microsoft.com/library/ms173196(VS.110).aspx).  
+ Con relación a las asignaciones simples, las conversiones boxing y unboxing son procesos que consumen muchos recursos. Cuando se aplica la conversión boxing a un tipo de valor, se debe asignar y construir un objeto completamente nuevo. En menor grado, la conversión de tipos requerida para aplicar la conversión unboxing también es costosa. Para más información, vea [Rendimiento](../../../../docs/framework/performance/performance-tips.md).  
   
 ## <a name="boxing"></a>Boxing  
  La conversión boxing se utiliza para almacenar tipos de valor en el montón de recolección de elementos no utilizados. La conversión boxing es una conversión implícita de un [tipo de valor](../../../csharp/language-reference/keywords/value-types.md) en el tipo `object` o en cualquier tipo de interfaz implementado por este tipo de valor. Al aplicar la conversión boxing a un tipo de valor se asigna una instancia de objeto en el montón y se copia el valor en el nuevo objeto.  
@@ -54,7 +54,7 @@ Conversión boxing
   
  [!code-csharp[csProgGuideTypes#19](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_6.cs)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descripción  
  Este ejemplo convierte una variable de entero `i` en un objeto `o` mediante la conversión boxing. A continuación, el valor almacenado en la variable `i` se cambia de `123` a `456`. El ejemplo muestra que el tipo de valor original y el objeto al que se ha aplicado la conversión boxing usan ubicaciones de memoria independientes y, por consiguiente, pueden almacenar valores diferentes.  
   
 ## <a name="example"></a>Ejemplo  
@@ -89,13 +89,13 @@ Conversión unboxing
   
  Si cambia la instrucción:  
   
-```  
+```csharp
 int j = (short) o;  
 ```  
   
  a:  
   
-```  
+```csharp
 int j = (int) o;  
 ```  
   

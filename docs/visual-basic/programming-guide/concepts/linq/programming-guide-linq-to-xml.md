@@ -3,11 +3,11 @@ title: Guía de programación (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
 ms.openlocfilehash: 70c169cecc8ca4ede30216bc832a8518766cd1a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647422"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929820"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>Guía de programación (LINQ to XML) (Visual Basic)
 En esta sección se ofrece información conceptual y paso a paso acerca de la programación con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -30,7 +30,7 @@ En esta sección se ofrece información conceptual y paso a paso acerca de la pr
 |[Ejes de LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)|Enumera y describe los métodos del eje [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], los cuales deberá entender antes de poder escribir consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Consultar árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)|Proporciona ejemplos comunes acerca de la creación de consultas sobre árboles XML.|  
 |[Modificar árboles XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|Al igual que el Modelo de objetos de documento (DOM), [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] le permite modificar un árbol XML directamente.|  
-|[Avanzada de LINQ to XML programación (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|Proporciona información acerca de las anotaciones, los eventos, las secuencias y otros escenarios avanzados.|  
+|[Avanzada de LINQ to XML (Visual Basic) de programación](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|Proporciona información acerca de las anotaciones, los eventos, las secuencias y otros escenarios avanzados.|  
 |[LINQ to XML seguridad (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-security.md)|Describe los problemas de seguridad asociados a LINQ to XML y ofrece una cierta orientación acerca de cómo minimizar el grado de exposición a esos problemas de seguridad.|  
 |[Documentos XML de ejemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Contiene los documentos XML de muestra que utilizan numerosos ejemplos de esta documentación.|  
   

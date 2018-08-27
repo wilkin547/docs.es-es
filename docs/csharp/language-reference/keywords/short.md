@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
-ms.openlocfilehash: 7991259aadd391288caa37b35addd6e16e234878
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: f402b9d2d62bcc3ba265755d59a657b88c197482
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960415"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934734"
 ---
 # <a name="short-c-reference"></a>short (Referencia de C#)
 
@@ -100,12 +100,13 @@ short y = (short)3.0;   // OK: explicit conversion
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Int16>  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
- [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Int16>  
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

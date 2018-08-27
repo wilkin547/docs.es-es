@@ -10,12 +10,12 @@ ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ab732ffedfbe05b1b246d8d8eef1c374e223eb39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401185"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931620"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Información general sobre TextPattern y objetos incrustados
 > [!NOTE]
@@ -29,10 +29,10 @@ ms.locfileid: "33401185"
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>Objetos incrustados y el árbol de automatización de la interfaz de usuario  
  Los objetos incrustados se tratan como elementos individuales en la vista de control del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Se exponen como elementos secundarios del contenedor de texto para que resulten accesibles con el mismo modelo que otros controles en [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
- ![Incrusta la tabla con la imagen en un contenedor de texto](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example1.png "UIA_TextPattern_Embedded_Objects_Overview_Example1")  
+ ![Incrustados de tabla con la imagen en un contenedor de texto](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example1.png "UIA_TextPattern_Embedded_Objects_Overview_Example1")  
 Ejemplo de un contenedor de texto con objetos incrustados de tabla, imagen e hipervínculo  
   
- ![Vista para el ejemplo anterior contenido](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example2.PNG "UIA_TextPattern_Embedded_Objects_Overview_Example2")  
+ ![El ejemplo anterior en la vista de contenido](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example2.PNG "UIA_TextPattern_Embedded_Objects_Overview_Example2")  
 Ejemplo de la vista de contenido de una parte del contenedor de texto anterior  
   
 <a name="Expose_Embedded_Objects_Using_TextPattern_and"></a>   
@@ -41,12 +41,12 @@ Ejemplo de la vista de contenido de una parte del contenedor de texto anterior
   
  El contenido textual (o texto interno) de un contenedor de texto y un objeto incrustado, como un hipervínculo o una celda de tabla, se expone como una secuencia de texto continua única en las vistas de control y contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Los límites del objeto se ignoran. Si un cliente de Automatización de la interfaz de usuario recupera el texto con el objetivo de realizar alguna declaración, interpretarlo o analizarlo de alguna manera, el intervalo de texto se debe comprobar en los casos especiales (por ejemplo, una tabla con contenido textual u otros objetos incrustados). Para ello, puede llamar a <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> para obtener un <xref:System.Windows.Automation.AutomationElement> para cada objeto incrustado y, a continuación, llamar a <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> para obtener un intervalo de texto para cada elemento. Esto se realiza recursivamente hasta que se recupera todo el contenido textual.  
   
- ![Intervalos de texto ocupados por objetos incrustados. ] (../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjecttextranges.png "UIA_TextPattern_EmbeddedObjectTextRanges")  
+ ![Intervalos de texto ocupados por objetos incrustados. ](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjecttextranges.png "UIA_TextPattern_EmbeddedObjectTextRanges")  
 Ejemplo de una secuencia de texto con objetos incrustados y sus intervalos  
   
  Cuando es necesario atravesar el contenido de un intervalo de texto, se realizan en segundo plano una serie de pasos para que el método <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> pueda ejecutarse correctamente.  
   
-1.  El intervalo de texto se normaliza, es decir, se contrae, en un intervalo degenerado en el extremo <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , y el extremo <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> queda superfluo. Este paso es necesario para evitar la ambigüedad en situaciones donde se extiende por un intervalo de texto <xref:System.Windows.Automation.Text.TextUnit> límites: por ejemplo, "{la U} RL [ http://www.microsoft.com ](http://www.microsoft.com) está incrustada en el texto" donde "{" y "}" es extremos del intervalo de texto.  
+1.  El intervalo de texto se normaliza, es decir, se contrae, en un intervalo degenerado en el extremo <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , y el extremo <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> queda superfluo. Este paso es necesario para evitar la ambigüedad en situaciones donde abarca un intervalo de texto <xref:System.Windows.Automation.Text.TextUnit> límites: por ejemplo, "{la U} RL [ http://www.microsoft.com ](http://www.microsoft.com) está incrustada en el texto" donde "{" y "}" es extremos del intervalo de texto.  
   
 2.  El intervalo resultante se mueve hacia atrás en <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> , al principio del límite <xref:System.Windows.Automation.Text.TextUnit> solicitado.  
   
@@ -82,7 +82,7 @@ Ejemplos de cómo se ajusta un intervalo de texto para Move() y ExpandToEnclosin
   
  **Ejemplo 2: intervalo de texto que se extiende parcialmente por un hipervínculo de texto incrustado**  
   
- La dirección URL http://{[www]} está incrustada en el texto.  
+ La dirección URL `http://{[www]}` está incrustada en el texto.  
   
 |Método al que se llama|Resultado|  
 |-------------------|------------|  
@@ -90,7 +90,7 @@ Ejemplos de cómo se ajusta un intervalo de texto para Move() y ExpandToEnclosin
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Devuelve el elemento <xref:System.Windows.Automation.AutomationElement> más interno que incluye el intervalo de texto (en este caso, el control de hipervínculo).|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Devuelve `null` , ya que el intervalo de texto no se extiende por toda la cadena de dirección URL.|  
   
- **Ejemplo 3: intervalo de texto que se extiende parcialmente por el contenido de un contenedor de texto. El contenedor de texto incluye un hipervínculo de texto incrustado que no forma parte del intervalo de texto.**  
+ **Ejemplo 3: intervalo de texto que se extiende parcialmente por el contenido de un contenedor de texto. El contenedor de texto tiene un hipervínculo de texto incrustado que no forma parte del intervalo de texto.**  
   
  {La dirección URL} [ http://www.microsoft.com ](http://www.microsoft.com) está incrustada en el texto.  
   
@@ -130,9 +130,9 @@ Ejemplos de cómo se ajusta un intervalo de texto para Move() y ExpandToEnclosin
   
 |Celda con imagen|Celda con texto|  
 |---------------------|--------------------|  
-|![Incrusta el ejemplo de imagen](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|X|  
-|![Incrusta el ejemplo de imagen 2](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|Y|  
-|![Incrusta el ejemplo de imagen 3](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Imagen para Z|Z|  
+|![Incrustados en el ejemplo de imagen](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|X|  
+|![Incrustar la imagen de ejemplo 2](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|Y|  
+|![Incrustar la imagen de ejemplo 3](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Imagen para Z|Z|  
   
  **Ejemplo 1: obtener el contenedor de texto del contenido de una celda.**  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: c992c96303eb1441eaf667693b7aefb5361b196c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4cb3de06d574f8b9abb3e3e11641a6ada750b56a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602926"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935763"
 ---
 # <a name="ltparamgt-visual-basic"></a>&lt;param&gt; (Visual Basic)
 Define un nombre de parámetro y una descripción.  
@@ -29,9 +29,9 @@ Define un nombre de parámetro y una descripción.
  Descripción del parámetro.  
   
 ## <a name="remarks"></a>Comentarios  
- La `<param>` etiqueta debe usarse en el comentario de una declaración de método para describir uno de los parámetros del método.  
+ El `<param>` etiqueta debe usarse en el comentario de una declaración de método para describir uno de los parámetros del método.  
   
- El texto de la `<param>` etiqueta aparecerá en las siguientes ubicaciones:  
+ El texto para el `<param>` etiqueta aparecerá en las siguientes ubicaciones:  
   
 -   Información de parámetros de IntelliSense. Para obtener más información, vea [Usar IntelliSense](/visualstudio/ide/using-intellisense).  
   
@@ -40,9 +40,9 @@ Define un nombre de parámetro y una descripción.
  Compile con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación a un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se utiliza la `<param>` etiquetas para describir el `id` parámetro.  
+ Este ejemplo se usa el `<param>` etiquetas para describir el `id` parámetro.  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/param_1.vb)]  
   
 ## <a name="see-also"></a>Vea también  
- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)

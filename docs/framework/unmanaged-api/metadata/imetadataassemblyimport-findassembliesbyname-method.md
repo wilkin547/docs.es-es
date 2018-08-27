@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c7bf332d829a440fe216756f7a23ec1277e6c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9babd5e50166be2c2d1b7bc32a5fc11d1ad8ba9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449291"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930569"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName (Método)
-Obtiene una matriz de ensamblados con el parámetro `szAssemblyName` parámetro, utilizando las reglas estándares empleadas por common language runtime (CLR) para resolver las referencias.  
+Obtiene una matriz de ensamblados con los valores especificados `szAssemblyName` parámetro, utilizando las reglas estándares empleadas por common language runtime (CLR) para resolver las referencias.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,19 +42,19 @@ HRESULT FindAssembliesByName (
   
 #### <a name="parameters"></a>Parámetros  
  `szAppBase`  
- [in] El directorio raíz en el que se va a buscar el ensamblado dado. Si este valor se establece en `null`, `FindAssembliesByName` buscará sólo en la caché de ensamblados global para el ensamblado.  
+ [in] El directorio raíz en el que se va a buscar el ensamblado especificado. Si este valor se establece en `null`, `FindAssembliesByName` buscará solo en la caché global de ensamblados para el ensamblado.  
   
  `szPrivateBin`  
- [in] Una lista de los subdirectorios delimitada por punto y coma (por ejemplo, "bin; bin2"), en el directorio raíz, en el que se va a buscar el ensamblado. Además de las especificadas en las reglas de búsqueda predeterminadas se busca en estos directorios.  
+ [in] Una lista de los subdirectorios delimitada por punto y coma (por ejemplo, "bin; bin2"), en el directorio raíz, en el que se va a buscar el ensamblado. Además de aquéllos especificados en las reglas de sondeo predeterminado se busca en estos directorios.  
   
  `szAssemblyName`  
  [in] El nombre del ensamblado que se va a buscar. El formato de esta cadena se define en la página de referencia de clase para <xref:System.Reflection.AssemblyName>.  
   
  `ppIUnk`  
- [in] Una matriz de tipo <<!--zzxref:IUnknown --> `IUnknown`> en el que se va a colocar el `IMetadataAssemblyImport` punteros de interfaz.  
+ [in] Una matriz de tipo [IUnknown](/cpp/atl/iunknown) en el que se va a colocar el `IMetadataAssemblyImport` punteros de interfaz.  
   
  `cMax`  
- [out] El número máximo de punteros de interfaz que puede colocarse en `ppIUnk`.  
+ [out] El número máximo de punteros de interfaz que se pueden colocar en `ppIUnk`.  
   
  `pcAssemblies`  
  [out] Devuelve el número de punteros de interfaz. Es decir, el número de punteros de interfaz realmente colocados en `ppIUnk`.  
@@ -67,22 +67,22 @@ HRESULT FindAssembliesByName (
 |`S_FALSE`|No hay ningún ensamblado.|  
   
 ## <a name="remarks"></a>Comentarios  
- Asigna un nombre de ensamblado, el `FindAssembliesByName` método encuentra el ensamblado siguiendo las reglas estándares para resolver las referencias de ensamblado. (Para obtener más información, consulte [cómo el tiempo de ejecución ubica ensamblados](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` permite al llamador configurar varios aspectos del contexto de resolución de ensamblado, como la ruta de acceso de búsqueda privada y base de aplicación.  
+ Asigna un nombre de ensamblado, el `FindAssembliesByName` método encuentra el ensamblado siguiendo las reglas estándar para resolver las referencias de ensamblado. (Para obtener más información, consulte [How the Runtime Locates Assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` permite al llamador configurar varios aspectos del contexto de resolución de ensamblado, como la ruta de acceso de búsqueda privada y base de aplicación.  
   
- El `FindAssembliesByName` método requiere que el CLR debe inicializarse en el proceso para invocar la lógica de resolución de ensamblado. Por lo tanto, debe llamar a [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (pasando COINITEE_DEFAULT) antes de llamar a `FindAssembliesByName`y, a continuación, siga con una llamada a [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
+ El `FindAssembliesByName` método requiere que se puede inicializar en el proceso para invocar la lógica de resolución de ensamblado CLR. Por lo tanto, debe llamar a [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (pasando COINITEE_DEFAULT) antes de llamar a `FindAssembliesByName`y, a continuación, siga con una llamada a [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
   
- `FindAssembliesByName` Devuelve un [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) puntero al archivo que contiene el manifiesto del ensamblado para el nombre del ensamblado que se pasa. Si el nombre de ensamblado dado no se especifica completamente (por ejemplo, si no incluye una versión), se podrían devolver varios ensamblados.  
+ `FindAssembliesByName` Devuelve un [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) puntero en el archivo que contiene el manifiesto del ensamblado para el nombre del ensamblado que se pasa. Si el nombre del ensamblado no se especifica completamente (por ejemplo, si no tiene una versión), se podrían devolver varios ensamblados.  
   
  `FindAssembliesByName` se utiliza normalmente mediante un compilador que intenta encontrar un ensamblado que se hace referencia en tiempo de compilación.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** Cor.h  
   
  **Biblioteca:** usada como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

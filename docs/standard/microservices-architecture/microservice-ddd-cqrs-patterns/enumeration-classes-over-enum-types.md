@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: eff87dbfad84ba5521f029064115a5fc54ee574b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: f1b88d160d6532c2a768684b55cd236417699322
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106115"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933393"
 ---
 # <a name="using-enumeration-classes-instead-of-enum-types"></a>Uso de las clases de enumeración en lugar de los tipos de enumeración
 
@@ -43,22 +43,12 @@ public abstract class Enumeration : IComparable
     {
         return Name;
     }
-
-    public static IEnumerable<T> GetAll<T>() where T : Enumeration, new()
+    
+    public static IEnumerable<T> GetAll<T>() where T : Enumeration
     {
-        var type = typeof(T);
-        var fields = type.GetTypeInfo().GetFields(BindingFlags.Public |
-            BindingFlags.Static |
-            BindingFlags.DeclaredOnly);
-        foreach (var info in fields)
-        {
-            var instance = new T();
-            var locatedValue = info.GetValue(instance) as T;
-            if (locatedValue != null)
-            {
-                yield return locatedValue;
-            }
-        }
+        var fields = typeof(T).GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.DeclaredOnly);
+
+        return fields.Select(f => f.GetValue(null)).Cast<T>();
     }
 
     public override bool Equals(object obj)
@@ -85,24 +75,34 @@ public abstract class Enumeration : IComparable
 Puede usar esta clase como un tipo en cualquier entidad u objeto de valor, como ocurre con la clase de enumeración CardType siguiente:
 
 ```csharp
-public class CardType : Enumeration
+public abstract class CardType : Enumeration
 {
-    public static CardType Amex = new CardType(1, "Amex");
-    public static CardType Visa = new CardType(2, "Visa");
-    public static CardType MasterCard = new CardType(3, "MasterCard");
+    public static CardType Amex = new AmexCardType();
+    public static CardType Visa = new VisaCardType();
+    public static CardType MasterCard = new MasterCardType();
 
-    protected CardType() { }
-
-    public CardType(int id, string name)
+    protected CardType(int id, string name)
         : base(id, name)
     {
     }
 
-    public static IEnumerable<CardType> List()
+    private class AmexCardType : CardType
     {
-        return new[] { Amex, Visa, MasterCard };
+        public AmexCardType(): base(1, "Amex")
+        { }
     }
-    // Other util methods
+    
+    private class VisaCardType : CardType
+    {
+        public VisaCardType(): base(2, "Visa")
+        { }
+    }
+    
+    private class MasterCardType : CardType
+    {
+        public MasterCardType(): base(3, "MasterCard")
+        { }
+    }
 }
 ```
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iteration statements [C#]
 - loop structures [C#]
 ms.assetid: 7d494566-bf75-4ee8-979f-0f964209437e
-ms.openlocfilehash: 12452f5e3fcc78835a7aed9f6e4044463fb0b755
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: c5b061b41591ecca0364c2ec940fbf09e223f5cb
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208092"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42936003"
 ---
 # <a name="iteration-statements-c-reference"></a>Instrucciones de iteración (Referencia de C#)
 
@@ -28,7 +28,7 @@ Las siguientes palabras clave se usan en instrucciones de iteración:
 
 ## <a name="see-also"></a>Vea también
 
- [Referencia de C#](../index.md)  
- [Guía de programación de C#](../../programming-guide/index.md)  
- [Palabras clave de C#](index.md)  
- [Palabras clave de instrucciones](statement-keywords.md)
+- [Referencia de C#](../index.md)  
+- [Guía de programación de C#](../../programming-guide/index.md)  
+- [Palabras clave de C#](index.md)  
+- [Palabras clave de instrucciones](statement-keywords.md)

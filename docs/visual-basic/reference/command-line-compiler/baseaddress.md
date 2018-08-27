@@ -10,11 +10,11 @@ helpviewer_keywords:
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
 ms.openlocfilehash: 6331a55bb1d20b5804605db103dcfd2997e348d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650155"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930447"
 ---
 # <a name="-baseaddress"></a>-baseaddress
 Especifica una dirección base predeterminada al crear un archivo DLL.  
@@ -34,15 +34,15 @@ Especifica una dirección base predeterminada al crear un archivo DLL.
 ## <a name="remarks"></a>Comentarios  
  La dirección base predeterminada para un archivo DLL se establece el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
- Tenga en cuenta que la palabra de orden inferior de esta dirección se redondea. Por ejemplo, si especifica 0 x 11110001, se redondea como 0 x 11110000.  
+ Tenga en cuenta que la palabra de orden inferior en esta dirección se redondea. Por ejemplo, si especifica 0 x 11110001, se redondea a 0 x 11110000.  
   
- Para completar el proceso de firma de un archivo DLL, utilice la `–R` opción de la herramienta de nombres seguros (Sn.exe).  
+ Para completar el proceso de firma de un archivo DLL, utilice el `–R` opción de la herramienta nombre seguro (Sn.exe).  
   
  Esta opción se omite si el destino no es un archivo DLL.  
   
 |Para establecer - baseaddress en el IDE de Visual Studio|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Haga clic en **Avanzado**.<br />4.  Modifique el valor en el **dirección base del archivo DLL:** cuadro. **Nota:** el **dirección base del archivo DLL:** cuadro es de solo lectura, a menos que el destino es un archivo DLL.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Haga clic en **Avanzado**.<br />4.  Modifique el valor en el **dirección base del archivo DLL:** cuadro. **Nota:** el **dirección base del archivo DLL:** cuadro es de solo lectura a menos que el destino es un archivo DLL.|  
   
 ## <a name="see-also"></a>Vea también  
  [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  

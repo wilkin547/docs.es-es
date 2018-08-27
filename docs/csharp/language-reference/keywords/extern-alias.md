@@ -8,12 +8,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: a2803d09ee64af854cad352f6a158fb84bb6d410
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 66210bc1a84e2c3239dcac72cdc194b14dcccf30
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960593"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999994"
 ---
 # <a name="extern-alias-c-reference"></a>alias externo (Referencia de C#)
 Es posible que deba hacer referencia a dos versiones de ensamblados que tienen los mismos nombres de tipo completos. Por ejemplo, es posible que tenga que usar dos o más versiones de un ensamblado en la misma aplicación. Mediante el uso de un alias de ensamblado externo, los espacios de nombres de cada ensamblado pueden ajustarse en espacios de nombres de nivel de raíz denominados por el alias, lo que permite que se usen en el mismo archivo.  
@@ -40,10 +40,11 @@ Es posible que deba hacer referencia a dos versiones de ensamblados que tienen l
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
- [Palabras clave del espacio de nombres](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
- [/reference (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
+## <a name="see-also"></a>Vea también
+
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+- [Palabras clave del espacio de nombres](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [/reference (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
