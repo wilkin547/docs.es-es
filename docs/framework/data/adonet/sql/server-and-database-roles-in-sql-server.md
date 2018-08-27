@@ -2,12 +2,12 @@
 title: Roles de servidor y base de datos en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 9a563c2b448b07dc6536ff42a21c256195ba52fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 196ca0791f42414b9da8dff32eb8285045fd7e63
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364803"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925470"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Roles de servidor y base de datos en SQL Server
 Todas las versiones de SQL Server usan la seguridad basada en roles, que permite asignar permisos a un rol, o grupo de usuarios, en lugar de asignarlos a usuarios individuales. Los roles fijos de servidor y base de datos cuentan con un conjunto fijo de permisos asignados.  
@@ -27,8 +27,8 @@ Todas las versiones de SQL Server usan la seguridad basada en roles, que permite
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[Roles de nivel de servidor](http://msdn.microsoft.com/library/ms188659.aspx) y [permisos de Roles fijos de servidor](http://msdn.microsoft.com/library/ms175892.aspx) en libros en pantalla de SQL Server|Describe funciones fijas de servidor y los permisos asociados con ellos en SQL Server.|  
-|[Roles de nivel de base de datos](http://msdn.microsoft.com/library/ms189121.aspx) y [permisos de los Roles de base de datos fija](http://msdn.microsoft.com/library/ms189612.aspx) en libros en pantalla de SQL Server|Describe los roles fijos de base de datos y los permisos asociados a ellas.|  
+|[Roles de nivel de servidor](/sql/relational-databases/security/authentication-access/server-level-roles) y [permisos de los Roles fijos de servidor](http://msdn.microsoft.com/library/ms175892.aspx) en los libros en pantalla de SQL Server|Describe funciones fijas de servidor y los permisos asociados con ellos en SQL Server.|  
+|[Roles de nivel de base de datos](/sql/relational-databases/security/authentication-access/database-level-roles) y [permisos de los Roles fijos de base de datos](http://msdn.microsoft.com/library/ms189612.aspx) en los libros en pantalla de SQL Server|Describe los roles fijos de base de datos y los permisos asociados a ellas.|  
   
 ## <a name="database-roles-and-users"></a>Roles y usuarios de base de datos  
  Para trabajar con objetos de base de datos, se deben asignar inicios de sesión a cuentas de usuario de base de datos. Estos usuarios de base de datos se podrán agregar entonces a roles de base de datos y heredarán los conjuntos de permisos asociados con estos roles. Se pueden conceder todos los permisos.  
@@ -58,8 +58,8 @@ Todas las versiones de SQL Server usan la seguridad basada en roles, que permite
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[Identidad y Control de acceso](http://msdn.microsoft.com/library/bb510418.aspx) en libros en pantalla de SQL Server|Contiene vínculos a temas que describen las entidades de seguridad, los roles, las credenciales, los elementos que pueden protegerse y los permisos.|  
-|[Las entidades de seguridad](http://msdn.microsoft.com/library/ms181127.aspx) en libros en pantalla de SQL Server|Describe las entidades de seguridad y contiene vínculos a temas que describen los roles de servidor y de base de datos.|  
+|[Identidad y Access Control](http://msdn.microsoft.com/library/bb510418.aspx) en los libros en pantalla de SQL Server|Contiene vínculos a temas que describen las entidades de seguridad, los roles, las credenciales, los elementos que pueden protegerse y los permisos.|  
+|[Las entidades de seguridad](/sql/relational-databases/security/authentication-access/principals-database-engine) en los libros en pantalla de SQL Server|Describe las entidades de seguridad y contiene vínculos a temas que describen los roles de servidor y de base de datos.|  
   
 ## <a name="see-also"></a>Vea también  
  [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

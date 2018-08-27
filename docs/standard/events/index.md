@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbb7793c1c510c9b1b303e6b568f105a958c27cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 623700161ae4587daeb2c7348055d413512f7c87
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578589"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42907762"
 ---
 # <a name="handling-and-raising-events"></a>Controlar y provocar eventos
 Los eventos de .NET Framework se basan en un modelo de delegado. El modelo de delegado sigue el patrón de diseño del observador, que permite que un suscriptor se registre con un proveedor y reciba notificaciones de dicho proveedor. El emisor de un evento inserta una notificación de que se ha producido un evento, y un receptor de eventos recibe la notificación y define una respuesta a la misma. En este artículo se describen los componentes principales del modelo de delegado, cómo consumir eventos en las aplicaciones y cómo implementar eventos en el código.  
   
- Para obtener información sobre el control de eventos en las aplicaciones de la Tienda de Windows 8.x, vea [Introducción a eventos y eventos enrutados](/previous-versions/windows/apps/hh758286(v=win.10)).  
+ Para obtener información sobre el control de eventos en las aplicaciones de la Tienda de Windows 8.x, vea [Introducción a eventos y eventos enrutados](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10)).  
   
 ## <a name="events"></a>Eventos  
  Un evento es un mensaje que envía un objeto cuando ocurre una acción. La acción podría ser debida a la interacción del usuario, como hacer clic en un botón, o podría proceder de cualquier otra lógica del programa, como el cambio del valor de una propiedad. El objeto que provoca el evento se conoce como *emisor del evento*. El emisor del evento no sabe qué objeto o método recibirá (controlará) los eventos que genera. El evento normalmente es un miembro del emisor del evento; por ejemplo, el evento <xref:System.Web.UI.WebControls.Button.Click> es un miembro de la clase <xref:System.Web.UI.WebControls.Button>, y el evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> es un miembro de la clase que implementa la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>.  
@@ -80,7 +80,7 @@ Los eventos de .NET Framework se basan en un modelo de delegado. El modelo de de
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Cómo: Provocar y utilizar eventos](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Contiene ejemplos de cómo generar y consumir eventos.|  
 |[Cómo: Controlar varios eventos mediante propiedades de eventos](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Muestra cómo utilizar propiedades de evento para controlar varios eventos.|  

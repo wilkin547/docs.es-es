@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: f2cebe8e02a2d8beec659fe4ac81fde2e85f3c1e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e12fccf7426ae130cd2aaf120eafb19ac3909659
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557724"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925760"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configuración del Registro en la representación de gráficos
 En este tema se ofrece información general sobre la configuración del Registro en la representación de gráficos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que afecta a las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -78,7 +78,7 @@ En este tema se ofrece información general sobre la configuración del Registro
   
  La configuración obligatoria de fecha del controlador de vídeo adopta una cadena con el formato siguiente:  
   
-||  
+| |  
 |-|  
 |*AAAA* `/` *MM* `/` *DD*|  
   

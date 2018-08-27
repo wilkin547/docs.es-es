@@ -7,31 +7,35 @@ helpviewer_keywords:
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02905c193387f78430ce1885449055060d07bf82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7bd54a2325c9721ad17943ba663e7ec0c300632e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571038"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925081"
 ---
 # <a name="usage-guidelines"></a>Instrucciones de uso
-Esta sección contiene directrices para utilizar tipos comunes en las API es accesibles públicamente. Ocupa de uso directo de integrados tipos de marco de trabajo (por ejemplo, los atributos de serialización) y la sobrecarga de operadores comunes.  
+
+Esta sección contiene directrices para utilizar tipos comunes en las API accesibles públicamente. Trata de uso directo de tipos de marco (por ejemplo, los atributos de serialización) y la sobrecarga de operadores comunes integrados.
   
- El <xref:System.IDisposable?displayProperty=nameWithType> interfaz no se trata en esta sección, pero se describe en el [patrón Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) sección.  
-  
+El <xref:System.IDisposable?displayProperty=nameWithType> interfaz no está cubierta en esta sección, pero se trata en el [patrón Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) sección.
+
 > [!NOTE]
->  Para instrucciones e información adicional sobre otros comunes, los tipos integrados de .NET Framework, vea los temas de referencia para lo siguiente: <xref:System.DateTime?displayProperty=nameWithType>, <xref:System.DateTimeOffset?displayProperty=nameWithType>, <xref:System.ICloneable?displayProperty=nameWithType>, <xref:System.IComparable%601?displayProperty=nameWithType>, <xref:System.IEquatable%601?displayProperty=nameWithType>, <xref:System.Nullable%601?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType> , <xref:System.Uri?displayProperty=nameWithType>.  
+> Para instrucciones detalladas e información adicional sobre otro común, tipos integrados de .NET Framework, vea los temas de referencia para los siguientes elementos: <xref:System.DateTime?displayProperty=nameWithType>, <xref:System.DateTimeOffset?displayProperty=nameWithType>, <xref:System.ICloneable?displayProperty=nameWithType>, <xref:System.IComparable%601?displayProperty=nameWithType>, <xref:System.IEquatable%601?displayProperty=nameWithType>, <xref:System.Nullable%601?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType> , <xref:System.Uri?displayProperty=nameWithType>.
+
+## <a name="in-this-section"></a>En esta sección
+
+[Matrices](arrays.md)  
+[Atributos](attributes.md)  
+[Colecciones](guidelines-for-collections.md)  
+[Serialización](serialization.md)  
+[Uso de System.Xml](system-xml-usage.md)  
+[Operadores de igualdad](equality-operators.md)  
+
+*Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*
+
+*Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
   
-## <a name="in-this-section"></a>En esta sección  
- [Matrices](../../../docs/standard/design-guidelines/arrays.md)  
- [Atributos](../../../docs/standard/design-guidelines/attributes.md)  
- [Colecciones](/cpp/mfc/collections)  
- [Serialización](../../../docs/standard/design-guidelines/serialization.md)  
- [Uso de System.Xml](../../../docs/standard/design-guidelines/system-xml-usage.md)  
- [Operadores de igualdad](../../../docs/standard/design-guidelines/equality-operators.md)  
- *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
-  
- *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
-  
-## <a name="see-also"></a>Vea también  
- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Vea también
+
+[Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)

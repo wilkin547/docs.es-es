@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5cd87cb619ef2dc1e0548c7553585b7e51e94c4f
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457321"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924780"
 ---
 # <a name="clone-function"></a>Clone (función)
 Devuelve un nuevo objeto que es un clon completo del objeto actual.   
@@ -41,37 +41,37 @@ HRESULT Clone (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[in] Este parámetro no se utiliza.
+[in] Este parámetro se usa.
 
 `ptr`  
-[in] Un puntero a un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instancia.
+[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
 
 `ppCopy`  
-[out] Un nuevo objeto que es una completa única de `ptr`. Este argumento no puede ser `null` si recibe la copia del objeto actual.
+[out] Un nuevo objeto que es una completa única de `ptr`. Este argumento no puede ser `null` si no recibe la copia del objeto actual.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, o bien puede definirlas como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0 x 80041001 | Ha habido un error general. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `null` se ha especificado como un parámetro, y no es válido en este uso. |
+| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `null` se especificó como un parámetro, y no es válido en este uso. |
 | `WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para clonar el objeto. |
-| `WBEM_S_NO_ERROR` | 0 | La llamada de función tuvo éxito.  |
+| `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::Clone](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) método.
+Esta función contiene una llamada a la [IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) método.
 
 El objeto clonado es un objeto COM que tiene un recuento de referencias de 1.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

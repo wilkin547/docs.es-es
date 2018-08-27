@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 08be38cdbec82914b567ab5b86eed71181efcf57
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 7baa4e25bc876ebfbe03c316b2020e01aedbc88d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234181"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924500"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub (Instrucción, Visual Basic)
 Declara el nombre, parámetros y código que definen un `Sub` procedimiento.  
@@ -54,11 +54,11 @@ End Sub
   
 -   `attributelist`  
   
-     Opcional. Vea [lista de los atributos](attribute-list.md).  
+     Opcional. Consulte [lista de los atributos](attribute-list.md).  
   
 -   `Partial`  
   
-     Opcional. Indica la definición de un método parcial. Vea [métodos parciales](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).  
+     Opcional. Indica la definición de un método parcial. Consulte [métodos parciales](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).  
   
 -   `accessmodifier`  
   
@@ -74,9 +74,9 @@ End Sub
   
     - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
 
-    - [Privado protegido](../../language-reference/modifiers/private-protected.md)
+    - [Private protegida](../../language-reference/modifiers/private-protected.md)
   
-     Vea [tener acceso a niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     Consulte [tener acceso a los niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 -   `proceduremodifiers`  
   
@@ -98,31 +98,31 @@ End Sub
   
 -   `Shared`  
   
-     Opcional. Vea [compartido](../modifiers/shared.md).  
+     Opcional. Consulte [compartido](../modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Opcional. Vea [sombras](../modifiers/shadows.md).  
+     Opcional. Consulte [sombras](../modifiers/shadows.md).  
   
 -   `Async`  
   
-     Opcional. Vea [Async](../modifiers/async.md).  
+     Opcional. Consulte [Async](../modifiers/async.md).  
   
 -   `name`  
   
-     Requerido. Nombre del procedimiento. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Para crear un procedimiento de constructor para una clase, establezca el nombre de un `Sub` procedimiento para la `New` palabra clave. Para obtener más información, consulte [duración de los objetos: cómo los objetos son crean y destruyen](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+     Requerido. Nombre del procedimiento. Consulte [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Para crear un procedimiento de constructor para una clase, establezca el nombre de un `Sub` procedimiento a la `New` palabra clave. Para obtener más información, consulte [duración de objetos: cómo los objetos son crean y destruyen](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
 -   `typeparamlist`  
   
-     Opcional. Lista de parámetros de tipo para un procedimiento genérico. Vea [escriba lista](type-list.md).  
+     Opcional. Lista de parámetros de tipo para un procedimiento genérico. Consulte [escriba lista](type-list.md).  
   
 -   `parameterlist`  
   
-     Opcional. Lista de nombres de variables locales que representan los parámetros de este procedimiento. Vea [lista de parámetros](parameter-list.md).  
+     Opcional. Lista de nombres de variables locales que representan los parámetros de este procedimiento. Consulte [Lista_de_parámetros](parameter-list.md).  
   
 -   `Implements`  
   
-     Opcional. Indica que este procedimiento implementa uno o varios `Sub` procedimientos, cada uno definido en una interfaz implementada por la clase o estructura contenedora de este procedimiento. Vea [implementa instrucción](implements-statement.md).  
+     Opcional. Indica que este procedimiento implementa uno o varios `Sub` procedimientos, cada uno definido en una interfaz implementada por la clase o estructura contenedora de este procedimiento. Consulte [implementa instrucción](implements-statement.md).  
   
 -   `implementslist`  
   
@@ -141,7 +141,7 @@ End Sub
   
 -   `Handles`  
   
-     Opcional. Indica que este procedimiento puede controlar uno o más eventos específicos. Vea [controla](handles-clause.md).  
+     Opcional. Indica que este procedimiento puede controlar uno o más eventos específicos. Consulte [controla](handles-clause.md).  
   
 -   `eventlist`  
   
@@ -155,7 +155,7 @@ End Sub
   
     |Parte|Descripción|  
     |---|---|  
-    |`eventvariable`|Requerido. Variable de objeto declarada con el tipo de datos de la clase o estructura que genera el evento.|  
+    |`eventvariable`|Requerido. Variable de objeto declarada con el tipo de datos de la clase o estructura que provoca el evento.|  
     |`event`|Requerido. Nombre del evento que controla este procedimiento.|  
   
 -   `statements`  
@@ -167,19 +167,19 @@ End Sub
      Termina la definición de este procedimiento.  
   
 ## <a name="remarks"></a>Comentarios  
- Todo el código ejecutable debe estar dentro de un procedimiento. Use un `Sub` procedimiento si no desea devolver un valor para el código de llamada. Use un `Function` procedimiento cuando desee devolver un valor.  
+ El código ejecutable debe estar dentro de un procedimiento. Use un `Sub` cuando no desee devolver un valor al código de llamada de procedimiento. Use un `Function` procedimiento cuando desee devolver un valor.  
   
 ## <a name="defining-a-sub-procedure"></a>Definir un procedimiento Sub  
- Puede definir un `Sub` procedimiento sólo en el nivel de módulo. El contexto de la declaración de un procedimiento sub por lo tanto, debe ser una clase, una estructura, un módulo o una interfaz y no puede ser un archivo de código fuente, un espacio de nombres, un procedimiento o un bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
+ Puede definir un `Sub` procedimiento sólo en el nivel de módulo. El contexto de declaración de un procedimiento sub por lo tanto, debe ser una clase, una estructura, un módulo o una interfaz y no puede ser un archivo de código fuente, un espacio de nombres, un procedimiento o un bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
   
- `Sub` procedimientos como valor predeterminado para el acceso público. Puede ajustar los niveles de acceso mediante los modificadores de acceso.  
+ `Sub` valor predeterminado de los procedimientos para acceso público. Puede ajustar sus niveles de acceso mediante los modificadores de acceso.  
   
- Si el procedimiento utiliza el `Implements` (palabra clave), la clase o estructura contenedora debe tener un `Implements` instrucción que sigue inmediatamente a su `Class` o `Structure` instrucción. El `Implements` instrucción debe incluir cada interfaz que se especifica en `implementslist`. Sin embargo, el nombre por el que una interfaz que define el `Sub` (en `definedname`) no tiene que coincidir con el nombre de este procedimiento (en `name`).  
+ Si el procedimiento utiliza el `Implements` debe tener la palabra clave, la clase o estructura que contiene un `Implements` instrucción que sigue inmediatamente a su `Class` o `Structure` instrucción. El `Implements` instrucción debe incluir cada interfaz que se especifica en `implementslist`. Sin embargo, el nombre por el que una interfaz define el `Sub` (en `definedname`) no tiene que coincidir con el nombre de este procedimiento (en `name`).  
   
-## <a name="returning-from-a-sub-procedure"></a>Devolver desde un procedimiento Sub  
+## <a name="returning-from-a-sub-procedure"></a>Devolución desde un procedimiento Sub  
  Cuando un `Sub` procedimiento vuelve al código de llamada, la ejecución continúa con la instrucción después de la instrucción que lo llamó.  
   
- En el ejemplo siguiente se muestra una devolución de un `Sub` procedimiento.  
+ El ejemplo siguiente muestra una devolución de un `Sub` procedimiento.  
   
 ```vb  
 Sub mySub(ByVal q As String)  
@@ -187,32 +187,32 @@ Sub mySub(ByVal q As String)
 End Sub   
 ```  
   
- El `Exit Sub` y `Return` instrucciones provocan una salida inmediata de un `Sub` procedimiento. Cualquier número de `Exit Sub` y `Return` instrucciones pueden aparecer en cualquier lugar en el procedimiento y se pueden mezclar `Exit Sub` y `Return` las instrucciones.  
+ El `Exit Sub` y `Return` instrucciones provocan una inmediata salida desde un `Sub` procedimiento. Cualquier número de `Exit Sub` y `Return` instrucciones pueden aparecer en cualquier lugar en el procedimiento, y puede mezclar `Exit Sub` y `Return` instrucciones.  
   
 ## <a name="calling-a-sub-procedure"></a>Llamar a un procedimiento Sub  
- Se llama a un `Sub` procedimiento mediante el nombre del procedimiento en una instrucción y, a continuación, siga ese nombre con su lista de argumentos entre paréntesis. Puede omitir los paréntesis solo si no facilita ningún argumento. Sin embargo, el código es más legible si siempre incluye los paréntesis.  
+ Se llama a un `Sub` procedimiento con el nombre del procedimiento en una instrucción y, a continuación, siguiendo ese nombre con su lista de argumentos entre paréntesis. Puede omitir los paréntesis solo si no se proporciona ningún argumento. Sin embargo, el código es más legible si siempre incluye los paréntesis.  
   
- A `Sub` procedimiento y un `Function` procedimiento puede tener parámetros y llevar a cabo una serie de instrucciones. Sin embargo, un `Function` procedimiento devuelve un valor y un `Sub` no de procedimiento. Por lo tanto, no puede usar un `Sub` procedimiento en una expresión.  
+ Un `Sub` procedimiento y un `Function` procedimiento puede tener parámetros y realizar una serie de instrucciones. Sin embargo, un `Function` procedimiento devuelve un valor y un `Sub` procedimiento no. Por lo tanto, no puede usar un `Sub` procedimiento en una expresión.  
   
  Puede usar el `Call` palabra clave cuando se llama a un `Sub` procedimiento, pero esa palabra clave no se recomienda para la mayoría de los casos. Para obtener más información, consulte [instrucción Call](call-statement.md).  
   
- Visual Basic reorganiza a veces las expresiones aritméticas para aumentar la eficacia interna. Por esta razón, si la lista de argumentos incluye expresiones que llaman a otros procedimientos, no debe asumir que las expresiones se llamará en un orden concreto.  
+ Visual Basic a veces se reorganiza las expresiones aritméticas para aumentar la eficacia interna. Por ese motivo, si la lista de argumentos incluye expresiones que llaman a otros procedimientos, no debe asumir que las expresiones se llamará en un orden concreto.  
   
-## <a name="async-sub-procedures"></a>Async Sub (procedimientos)  
- Mediante el uso de la característica Async, se pueden invocar funciones asincrónicas sin usar devoluciones de llamada explícitas ni dividir manualmente el código en varias funciones o expresiones lambda.  
+## <a name="async-sub-procedures"></a>Procedimientos Sub en asincrónico  
+ Mediante el uso de la característica Async, puede invocar las funciones asincrónicas sin usar devoluciones de llamada explícitas ni dividir manualmente el código en varias funciones o expresiones lambda.  
   
- Si marca un procedimiento con el [Async](../modifiers/async.md) modificador, puede usar el [Await](../../../visual-basic/language-reference/operators/await-operator.md) operador en el procedimiento. Cuando el control alcanza un `Await` expresión en el `Async` procedimiento, el control vuelve al llamador y el progreso en el procedimiento se suspende hasta que se complete la tarea esperada. Una vez completada la tarea, la ejecución puede reanudarse en el procedimiento.  
+ Si marca un procedimiento con el [Async](../modifiers/async.md) modificador, puede usar el [Await](../../../visual-basic/language-reference/operators/await-operator.md) operador en el procedimiento. Cuando el control alcanza un `Await` expresión en el `Async` procedimiento, el control vuelve al llamador y el progreso en el procedimiento se suspende hasta que se complete la tarea esperada. Cuando se completa la tarea, puede reanudar la ejecución del procedimiento.  
   
 > [!NOTE]
->  Un `Async` procedimiento vuelve al llamador cuando se encuentra ya sea el primer objeto esperado que aún no se ha completado o el final de la `Async` se alcanza el procedimiento, lo que ocurra primero.  
+>  Un `Async` procedimiento devuelve al llamador cuando se encuentra en el primer objeto esperado que aún no se ha completado o el final de la `Async` se alcanza el procedimiento, lo que ocurra primero.  
   
- También puede marcar un [Function (instrucción)](function-statement.md) con el `Async` modificador. Un `Async` función puede tener un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601> o <xref:System.Threading.Tasks.Task>. Un ejemplo más adelante en este tema se muestra un `Async` función que tiene un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>.  
+ También puede marcar un [instrucción Function](function-statement.md) con el `Async` modificador. Un `Async` función puede tener un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601> o <xref:System.Threading.Tasks.Task>. Un ejemplo más adelante en este tema se muestra un `Async` función que tiene un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>.  
   
- `Async` `Sub` los procedimientos se utilizan principalmente para controladores de eventos, donde no se puede devolver un valor. Un `Async``Sub` procedimiento no se puede esperar y el llamador de un `Async``Sub` procedimiento no puede detectar las excepciones que el `Sub` procedimiento produce.  
+ `Async` `Sub` los procedimientos se utilizan principalmente para controladores de eventos, donde no se puede devolver un valor. Un `Async` `Sub` procedimiento no se espera y el llamador de un `Async` `Sub` procedimiento no puede detectar las excepciones que el `Sub` procedimiento inicia.  
   
  Un `Async` procedimiento no puede declarar ningún [ByRef](../modifiers/byref.md) parámetros.  
   
- Para obtener más información acerca de `Async` procedimientos, consulte [programación asincrónica con Async y Await](../../../visual-basic/programming-guide/concepts/async/index.md), [flujo de Control en programas Async](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md), y [tipos de valor devueltos de Async](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+ Para obtener más información acerca de `Async` procedimientos, vea [programación asincrónica con Async y Await](../../../visual-basic/programming-guide/concepts/async/index.md), [flujo de Control en programas Async](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md), y [tipos de valor devueltos de Async](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `Sub` instrucción para definir el nombre, parámetros y código que forman el cuerpo de un `Sub` procedimiento.  
@@ -220,9 +220,9 @@ End Sub
  [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, `DelayAsync` es un `Async``Function` que tiene un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>. `DelayAsync` tiene una instrucción `Return` que devuelve un entero. Por lo tanto, la declaración de función de `DelayAsync` debe tener un tipo de valor devuelto de `Task(Of Integer)`. Dado que el tipo de valor devuelto es `Task(Of Integer)`, la evaluación de la `Await` expresión en `DoSomethingAsync` genera un entero, como se muestra en la siguiente instrucción: `Dim result As Integer = Await delayTask`.  
+ En el ejemplo siguiente, `DelayAsync` es un `Async` `Function` que tiene un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>. `DelayAsync` tiene una instrucción `Return` que devuelve un entero. Por lo tanto, la declaración de función de `DelayAsync` debe tener un tipo de valor devuelto de `Task(Of Integer)`. Dado que el tipo de valor devuelto es `Task(Of Integer)`, la evaluación de la `Await` expresión en `DoSomethingAsync` genera un entero, como se muestra en la siguiente instrucción: `Dim result As Integer = Await delayTask`.  
   
- El `startButton_Click` procedimiento es un ejemplo de un `Async Sub` procedimiento. Dado que `DoSomethingAsync` es un `Async` función, la tarea de la llamada a `DoSomethingAsync` debe esperar, como se muestra en la siguiente instrucción: `Await DoSomethingAsync()`. El `startButton_Click``Sub` procedimiento debe definirse con el `Async` modificador porque tiene un `Await` expresión.  
+ El `startButton_Click` procedimiento es un ejemplo de un `Async Sub` procedimiento. Dado que `DoSomethingAsync` es un `Async` (función), la tarea de la llamada a `DoSomethingAsync` debe esperar, como se muestra en la siguiente instrucción: `Await DoSomethingAsync()`. El `startButton_Click` `Sub` procedimiento debe definirse con la `Async` modificador porque tiene un `Await` expresión.  
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   

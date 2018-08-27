@@ -4,18 +4,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 367991e4bbca710df54edf73179f855ff79bb56e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f168b3021ee1dbe3c82edc22fc779767c30446b8
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647623"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912018"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Cómo: Convertir un objeto en otro tipo en Visual Basic
-Convertir un `Object` variable a otro tipo de datos con una palabra clave de conversión como [CType (función)](../../../../visual-basic/language-reference/functions/ctype-function.md).  
+Convierte un `Object` variable a otro tipo de datos con una palabra clave de conversión como [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente se convierte un `Object` variable a un `Integer` y `String`.  
+ El ejemplo siguiente se convierte un `Object` variable a un `Integer` y un `String`.  
   
 ```  
 Public Sub objectConversion(ByVal anObject As Object)  
@@ -26,7 +26,7 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- Si sabe que el contenido de un `Object` variable son de un tipo de datos determinado, es mejor convertir la variable en ese tipo de datos. Si se sigue usando la `Object` variable, se incurre en una *conversión boxing* y *unboxing* (para un tipo de valor) o *enlace más tarde* (para un tipo de referencia). Estas operaciones toman más tiempo de ejecución y ralentizan el rendimiento.  
+ Si sabe que el contenido de un `Object` son variable de un tipo de datos determinado, es mejor convertir la variable a ese tipo de datos. Si se sigue usando el `Object` variable, se incurre en cualquiera *boxing* y *unboxing* (para un tipo de valor) o *enlace más tarde* (para un tipo de referencia). Estas operaciones toman tiempo de ejecución adicional y ralentizan el rendimiento.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -41,5 +41,5 @@ End Sub
  [Conversiones entre cadenas y otros tipos](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  [Conversiones de matriz](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
  [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md)  
  [Funciones de conversión de tipos](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
