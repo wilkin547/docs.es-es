@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 987ee1ca5601b3dd105412bf0fa18361c57a95fd
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 9dc71cce3cc0ca4035df483d2b3a3ab9a3bab9c5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315243"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929226"
 ---
 # <a name="break-c-reference"></a>break (Referencia de C#)
 
@@ -49,9 +49,9 @@ Sorry, invalid selection.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de C#](../../../csharp/language-reference/index.md)  
-[Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-[Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
-[switch](../../../csharp/language-reference/keywords/switch.md)  
-[Instrucciones de salto](../../../csharp/language-reference/keywords/jump-statements.md)  
-[Instrucciones de iteración](../../../csharp/language-reference/keywords/iteration-statements.md)
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+- [switch](../../../csharp/language-reference/keywords/switch.md)  
+- [Instrucciones de salto](../../../csharp/language-reference/keywords/jump-statements.md)  
+- [Instrucciones de iteración](../../../csharp/language-reference/keywords/iteration-statements.md)

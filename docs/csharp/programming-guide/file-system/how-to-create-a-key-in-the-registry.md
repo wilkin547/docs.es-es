@@ -6,19 +6,19 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: a1643310740a472ad0a1df978fa41f674f3dbcb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2b2cfcb09dc0c8c4d65b64f5de55c0b72746457
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331472"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752009"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Cómo: Crear una clave en el Registro (Visual C#)
 En este ejemplo se agrega el par de valores "Name" e "Isabella" al Registro del usuario actual en la clave "Names".  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```csharp  
 Microsoft.Win32.RegistryKey key;  
 key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Names");  
 key.SetValue("Name", "Isabella");  

@@ -3,11 +3,11 @@ title: Guía de programación (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
 ms.openlocfilehash: 03742916c973f9ddac8163fe231cba45750ff080
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334167"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752109"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Guía de programación (LINQ to XML) (C#)
 En esta sección se ofrece información conceptual y paso a paso acerca de la programación con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -21,7 +21,7 @@ En esta sección se ofrece información conceptual y paso a paso acerca de la pr
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Información general sobre la programación de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Ofrece una descripción general de las clases de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], así como información detallada acerca de las tres clases más importantes: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> y <xref:System.Xml.Linq.XDocument>.|  
 |[Creating XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md) (Crear árboles XML (C#))|Proporciona información conceptual y paso a paso acerca de cómo crear árboles XML. Puede crear árboles XML utilizando una construcción funcional, o bien analizando el texto XML a partir de una cadena o de un archivo. También puede utilizar un <xref:System.Xml.XmlReader> para rellenar un árbol XML.|  
