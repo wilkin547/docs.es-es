@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d9eda0d90e4db7638e3733d0b7a7cc265f4deba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: baff7dac7f1ddc8546bcb52627eeee992921a395
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454852"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925888"
 ---
-# <a name="itypelibresolver-interface"></a><span data-ttu-id="c2c40-102">ITypeLibResolver (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="c2c40-102">ITypeLibResolver Interface</span></span>
-<span data-ttu-id="c2c40-103">Proporciona el [ResolveTypeLib (método)](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), que resuelve la ruta de acceso de archivo de una biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="c2c40-103">Provides the [ResolveTypeLib method](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), which resolves the file path of a type library.</span></span>  
+# <a name="itypelibresolver-interface"></a><span data-ttu-id="c838c-102">ITypeLibResolver (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="c838c-102">ITypeLibResolver Interface</span></span>
+<span data-ttu-id="c838c-103">Proporciona el [ResolveTypeLib (método)](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), que resuelve la ruta de acceso de una biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="c838c-103">Provides the [ResolveTypeLib method](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), which resolves the file path of a type library.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c2c40-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="c2c40-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="c838c-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="c838c-104">Methods</span></span>  
   
-|<span data-ttu-id="c2c40-105">Método</span><span class="sxs-lookup"><span data-stu-id="c2c40-105">Method</span></span>|<span data-ttu-id="c2c40-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="c2c40-106">Description</span></span>|  
+|<span data-ttu-id="c838c-105">Método</span><span class="sxs-lookup"><span data-stu-id="c838c-105">Method</span></span>|<span data-ttu-id="c838c-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="c838c-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c2c40-107">ResolveTypeLib (método)</span><span class="sxs-lookup"><span data-stu-id="c2c40-107">ResolveTypeLib Method</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|<span data-ttu-id="c2c40-108">Resuelve el nombre sencillo de una biblioteca de tipos mediante la devolución de su ruta de acceso completa.</span><span class="sxs-lookup"><span data-stu-id="c2c40-108">Resolves the simple name of a type library by returning its fully qualified path.</span></span>|  
+|[<span data-ttu-id="c838c-107">ResolveTypeLib (método)</span><span class="sxs-lookup"><span data-stu-id="c838c-107">ResolveTypeLib Method</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|<span data-ttu-id="c838c-108">Resuelve el nombre de una biblioteca de tipos simple devolviendo su ruta de acceso completa.</span><span class="sxs-lookup"><span data-stu-id="c838c-108">Resolves the simple name of a type library by returning its fully qualified path.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c2c40-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c2c40-109">Requirements</span></span>  
- <span data-ttu-id="c2c40-110">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c2c40-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c838c-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c838c-109">Requirements</span></span>  
+ <span data-ttu-id="c838c-110">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c838c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c2c40-111">**Encabezado:** TlbRef.idl, TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="c2c40-111">**Header:** TlbRef.idl, TlbRef.h</span></span>  
+ <span data-ttu-id="c838c-111">**Encabezado:** TlbRef.idl, TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="c838c-111">**Header:** TlbRef.idl, TlbRef.h</span></span>  
   
- <span data-ttu-id="c2c40-112">**Biblioteca:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="c2c40-112">**Library:** TlbRef.lib</span></span>  
+ <span data-ttu-id="c838c-112">**Biblioteca:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="c838c-112">**Library:** TlbRef.lib</span></span>  
   
- <span data-ttu-id="c2c40-113">**Versión de .NET framework:** 4, 3.5, 3.0, 2.0</span><span class="sxs-lookup"><span data-stu-id="c2c40-113">**.NET Framework Version:** 4, 3.5, 3.0, 2.0</span></span>  
+ <span data-ttu-id="c838c-113">**Versión de .NET framework:** 4, 3.5, 3.0 y 2.0</span><span class="sxs-lookup"><span data-stu-id="c838c-113">**.NET Framework Version:** 4, 3.5, 3.0, 2.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c2c40-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="c2c40-114">See Also</span></span>  
- [<span data-ttu-id="c2c40-115">Funciones auxiliares Tlbexp</span><span class="sxs-lookup"><span data-stu-id="c2c40-115">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- <span data-ttu-id="c2c40-116">[Función LoadTypeLibEx de la](https://msdn.microsoft.com/library/windows/desktop/ms221249\(v=vs.85\).aspx)</span><span class="sxs-lookup"><span data-stu-id="c2c40-116">[LoadTypeLibEx function](https://msdn.microsoft.com/library/windows/desktop/ms221249\(v=vs.85\).aspx)</span></span>
+## <a name="see-also"></a><span data-ttu-id="c838c-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="c838c-114">See Also</span></span>  
+ [<span data-ttu-id="c838c-115">Funciones auxiliares Tlbexp</span><span class="sxs-lookup"><span data-stu-id="c838c-115">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [<span data-ttu-id="c838c-116">LoadTypeLibEx de la función</span><span class="sxs-lookup"><span data-stu-id="c838c-116">LoadTypeLibEx function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

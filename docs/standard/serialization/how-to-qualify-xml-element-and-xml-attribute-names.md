@@ -9,172 +9,180 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 95b99bb093282352b6f8e2b9f04cba773e64259d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 6b4d58f6b5bf23cbce2ace8fb40730d7b73994de
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585719"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42908049"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a><span data-ttu-id="38e35-102">Cómo: Calificar el elemento XML y los nombres del atributo XML</span><span class="sxs-lookup"><span data-stu-id="38e35-102">How to: Qualify XML Element and XML Attribute Names</span></span>
-[<span data-ttu-id="38e35-103">Ejemplo de código</span><span class="sxs-lookup"><span data-stu-id="38e35-103">Code Example</span></span>](#cpconworkingwithxmlnamespacesanchor1)  
-  
- <span data-ttu-id="38e35-104">Los espacios de nombres XML contenidos por instancias de la clase <xref:System.Xml.Serialization.XmlSerializerNamespaces>deben cumplir con la especificación de World Wide Web Consortium (www.w3.org) llamada "Espacios de nombres en XML."</span><span class="sxs-lookup"><span data-stu-id="38e35-104">XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (www.w3.org) specification called "Namespaces in XML."</span></span>  
-  
- <span data-ttu-id="38e35-105">Los espacios de nombres XML proporcionan una método para calificar los nombres de elementos y atributos XML en documentos XML.</span><span class="sxs-lookup"><span data-stu-id="38e35-105">XML namespaces provide a method for qualifying the names of XML elements and XML attributes in XML documents.</span></span> <span data-ttu-id="38e35-106">Un nombre calificado se compone de un prefijo y un nombre local, separados por dos puntos.</span><span class="sxs-lookup"><span data-stu-id="38e35-106">A qualified name consists of a prefix and a local name, separated by a colon.</span></span> <span data-ttu-id="38e35-107">El prefijo funciona únicamente como marcador de posición y está asignado a un identificador URI que especifica un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="38e35-107">The prefix functions only as a placeholder; it is mapped to a URI that specifies a namespace.</span></span> <span data-ttu-id="38e35-108">La combinación del espacio de nombres del URI, universalmente administrado, y el nombre local genera un nombre del que se garantiza que es universalmente único.</span><span class="sxs-lookup"><span data-stu-id="38e35-108">The combination of the universally managed URI namespace and the local name produces a name that is guaranteed to be universally unique.</span></span>  
-  
- <span data-ttu-id="38e35-109">Creando una instancia de `XmlSerializerNamespaces` y agregando los pares de espacio de nombres al objeto, puede especificar los prefijos utilizados en un documento XML.</span><span class="sxs-lookup"><span data-stu-id="38e35-109">By creating an instance of `XmlSerializerNamespaces` and adding the namespace pairs to the object, you can specify the prefixes used in an XML document.</span></span>  
-  
-### <a name="to-create-qualified-names-in-an-xml-document"></a><span data-ttu-id="38e35-110">Para crear nombres calificados en un documento XML</span><span class="sxs-lookup"><span data-stu-id="38e35-110">To create qualified names in an XML document</span></span>  
-  
-1.  <span data-ttu-id="38e35-111">Cree una instancia de la clase `XmlSerializerNamespaces`.</span><span class="sxs-lookup"><span data-stu-id="38e35-111">Create an instance of the `XmlSerializerNamespaces` class.</span></span>  
-  
-2.  <span data-ttu-id="38e35-112">Agregue todos los prefijos y pares de espacio de nombres a `XmlSerializerNamespaces`.</span><span class="sxs-lookup"><span data-stu-id="38e35-112">Add all prefixes and namespace pairs to the `XmlSerializerNamespaces`.</span></span>  
-  
-3.  <span data-ttu-id="38e35-113">Aplique el atributo apropiado `System.Xml.Serialization` a cada método o clase que <xref:System.Xml.Serialization.XmlSerializer> vaya a serializar en un documento XML.</span><span class="sxs-lookup"><span data-stu-id="38e35-113">Apply the appropriate `System.Xml.Serialization` attribute to each member or class that the <xref:System.Xml.Serialization.XmlSerializer> is to serialize into an XML document.</span></span>  
-  
-     <span data-ttu-id="38e35-114">Los atributos disponibles son: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, y <xref:System.Xml.Serialization.XmlTypeAttribute>.</span><span class="sxs-lookup"><span data-stu-id="38e35-114">The available attributes are: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, and <xref:System.Xml.Serialization.XmlTypeAttribute>.</span></span>  
-  
-4.  <span data-ttu-id="38e35-115">Establezca la propiedad `Namespace` de cada atributo en uno de los valores de espacio de nombres del `XmlSerializerNamespaces`.</span><span class="sxs-lookup"><span data-stu-id="38e35-115">Set the `Namespace` property of each attribute to one of the namespace values from the `XmlSerializerNamespaces`.</span></span>  
-  
-5.  <span data-ttu-id="38e35-116">Pase `XmlSerializerNamespaces` al método `Serialize` de `XmlSerializer`.</span><span class="sxs-lookup"><span data-stu-id="38e35-116">Pass the `XmlSerializerNamespaces` to the `Serialize` method of the `XmlSerializer`.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="38e35-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="38e35-117">Example</span></span>  
- <span data-ttu-id="38e35-118">En el siguiente ejemplo, se crea un `XmlSerializerNamespaces` al que se agregan dos prefijos y pares de espacio de nombres al objeto.</span><span class="sxs-lookup"><span data-stu-id="38e35-118">The following example creates an `XmlSerializerNamespaces`, and adds two prefix and namespace pairs to the object.</span></span> <span data-ttu-id="38e35-119">El código crea `XmlSerializer` que se utiliza para serializar una instancia de la clase `Books`.</span><span class="sxs-lookup"><span data-stu-id="38e35-119">The code creates an `XmlSerializer` that is used to serialize an instance of the `Books` class.</span></span> <span data-ttu-id="38e35-120">El código llama al método `Serialize` con `XmlSerializerNamespaces`, permitiéndole al XML contener los espacios de nombres prefijados.</span><span class="sxs-lookup"><span data-stu-id="38e35-120">The code calls the `Serialize` method with the `XmlSerializerNamespaces`, allowing the XML to contain prefixed namespaces.</span></span>  
-  
-```vb  
-Option Explicit   
-public class Price  
-{  
-    [XmlAttribute(Namespace = "http://www.cpandl.com")]  
-    public string currency;  
-    [XmlElement(Namespace = "http://www.cohowinery.com")]  
-    public decimal price;  
-}  
-  
-Option Strict  
-  
-Imports System  
-Imports System.IO  
-Imports System.Xml  
-Imports System.Xml.Serialization  
-  
-Public Class Run  
-  
-    Public Shared Sub Main()  
-        Dim test As New Run()  
-        test.SerializeObject("XmlNamespaces.xml")  
-    End Sub 'Main  
-  
-    Public Sub SerializeObject(filename As String)  
-        Dim mySerializer As New XmlSerializer(GetType(Books))  
-        ' Writing a file requires a TextWriter.  
-        Dim myWriter As New StreamWriter(filename)  
-  
-        ' Creates an XmlSerializerNamespaces and adds two  
-        ' prefix-namespace pairs.   
-        Dim myNamespaces As New XmlSerializerNamespaces()  
-        myNamespaces.Add("books", "http://www.cpandl.com")  
-        myNamespaces.Add("money", "http://www.cohowinery.com")  
-  
-        ' Creates a Book.  
-        Dim myBook As New Book()  
-        myBook.TITLE = "A Book Title"  
-        Dim myPrice As New Price()  
-        myPrice.price = CDec(9.95)  
-        myPrice.currency = "US Dollar"  
-        myBook.PRICE = myPrice  
-        Dim myBooks As New Books()  
-        myBooks.Book = myBook  
-        mySerializer.Serialize(myWriter, myBooks, myNamespaces)  
-        myWriter.Close()  
-    End Sub  
-End Class  
-  
-Public Class Books  
-    <XmlElement([Namespace] := "http://www.cohowinery.com")> _  
-    Public Book As Book  
-End Class 'Books  
-  
-<XmlType([Namespace] := "http://www.cpandl.com")> _  
-Public Class Book  
-  
-    <XmlElement([Namespace] := "http://www.cpandl.com")> _  
-    Public TITLE As String  
-    <XmlElement([Namespace] := "http://www.cohowinery.com")> _  
-    Public PRICE As Price  
-End Class  
-  
-Public Class Price  
-    <XmlAttribute([Namespace] := "http://www.cpandl.com")> _  
-    Public currency As String  
-    Public <XmlElement([Namespace] := "http://www.cohowinery.com")> _  
-        price As Decimal  
-End Class  
-```  
-  
-```csharp  
-using System;  
-using System.IO;  
-using System.Xml;  
-using System.Xml.Serialization;  
-  
-public class Run  
-{  
-    public static void Main()  
-    {  
-        Run test = new Run();  
-        test.SerializeObject("XmlNamespaces.xml");  
-    }  
-    public void SerializeObject(string filename)  
-    {  
-        XmlSerializer mySerializer = new XmlSerializer(typeof(Books));  
-        // Writing a file requires a TextWriter.  
-        TextWriter myWriter = new StreamWriter(filename);  
-  
-        // Creates an XmlSerializerNamespaces and adds two  
-        // prefix-namespace pairs.  
-        XmlSerializerNamespaces myNamespaces =   
-        new XmlSerializerNamespaces();  
-        myNamespaces.Add("books", "http://www.cpandl.com");  
-        myNamespaces.Add("money", "http://www.cohowinery.com");  
-  
-        // Creates a Book.  
-        Book myBook = new Book();  
-        myBook.TITLE = "A Book Title";  
-        Price myPrice = new Price();  
-        myPrice.price = (decimal) 9.95;  
-        myPrice.currency = "US Dollar";  
-        myBook.PRICE = myPrice;  
-        Books myBooks = new Books();  
-        myBooks.Book = myBook;  
-        mySerializer.Serialize(myWriter,myBooks,myNamespaces);  
-        myWriter.Close();  
-    }  
-}  
-  
-public class Books  
-{  
-    [XmlElement(Namespace = "http://www.cohowinery.com")]  
-    public Book Book;  
-}  
-  
-[XmlType(Namespace ="http://www.cpandl.com")]  
-public class Book  
-{  
-    [XmlElement(Namespace = "http://www.cpandl.com")]  
-    public string TITLE;  
-    [XmlElement(Namespace ="http://www.cohowinery.com")]  
-    public Price PRICE;  
-}  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="38e35-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="38e35-121">See Also</span></span>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [<span data-ttu-id="38e35-122">Herramienta de definición de esquema XML y serialización XML</span><span class="sxs-lookup"><span data-stu-id="38e35-122">The XML Schema Definition Tool and XML Serialization</span></span>](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
- [<span data-ttu-id="38e35-123">Introducción a la serialización XML</span><span class="sxs-lookup"><span data-stu-id="38e35-123">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [<span data-ttu-id="38e35-124">Clase XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="38e35-124">XmlSerializer Class</span></span>](xref:System.Xml.Serialization.XmlSerializer)  
- [<span data-ttu-id="38e35-125">Atributos que controlan la serialización XML</span><span class="sxs-lookup"><span data-stu-id="38e35-125">Attributes That Control XML Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
- [<span data-ttu-id="38e35-126">Cómo: Especificar un nombre de elemento alternativo para una secuencia XML</span><span class="sxs-lookup"><span data-stu-id="38e35-126">How to: Specify an Alternate Element Name for an XML Stream</span></span>](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
- [<span data-ttu-id="38e35-127">Cómo: Serializar un objeto</span><span class="sxs-lookup"><span data-stu-id="38e35-127">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [<span data-ttu-id="38e35-128">Cómo: Deserializar un objeto</span><span class="sxs-lookup"><span data-stu-id="38e35-128">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a><span data-ttu-id="512bb-102">Cómo: Calificar el elemento XML y los nombres del atributo XML</span><span class="sxs-lookup"><span data-stu-id="512bb-102">How to: Qualify XML Element and XML Attribute Names</span></span>
+
+<span data-ttu-id="512bb-103">Espacios de nombres XML incluidos en instancias de la <xref:System.Xml.Serialization.XmlSerializerNamespaces> clase debe ajustarse a la especificación de World Wide Web Consortium (W3C) denominada [espacios de nombres XML](https://www.w3.org/TR/REC-xml-names/).</span><span class="sxs-lookup"><span data-stu-id="512bb-103">XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).</span></span>
+
+<span data-ttu-id="512bb-104">Los espacios de nombres XML proporcionan una método para calificar los nombres de elementos y atributos XML en documentos XML.</span><span class="sxs-lookup"><span data-stu-id="512bb-104">XML namespaces provide a method for qualifying the names of XML elements and XML attributes in XML documents.</span></span> <span data-ttu-id="512bb-105">Un nombre calificado se compone de un prefijo y un nombre local, separados por dos puntos.</span><span class="sxs-lookup"><span data-stu-id="512bb-105">A qualified name consists of a prefix and a local name, separated by a colon.</span></span> <span data-ttu-id="512bb-106">El prefijo funciona únicamente como marcador de posición y está asignado a un identificador URI que especifica un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="512bb-106">The prefix functions only as a placeholder; it is mapped to a URI that specifies a namespace.</span></span> <span data-ttu-id="512bb-107">La combinación del espacio de nombres del URI, universalmente administrado, y el nombre local genera un nombre del que se garantiza que es universalmente único.</span><span class="sxs-lookup"><span data-stu-id="512bb-107">The combination of the universally managed URI namespace and the local name produces a name that is guaranteed to be universally unique.</span></span>
+
+<span data-ttu-id="512bb-108">Creando una instancia de `XmlSerializerNamespaces` y agregando los pares de espacio de nombres al objeto, puede especificar los prefijos utilizados en un documento XML.</span><span class="sxs-lookup"><span data-stu-id="512bb-108">By creating an instance of `XmlSerializerNamespaces` and adding the namespace pairs to the object, you can specify the prefixes used in an XML document.</span></span>
+
+## <a name="to-create-qualified-names-in-an-xml-document"></a><span data-ttu-id="512bb-109">Para crear nombres calificados en un documento XML</span><span class="sxs-lookup"><span data-stu-id="512bb-109">To create qualified names in an XML document</span></span>
+
+1. <span data-ttu-id="512bb-110">Cree una instancia de la clase `XmlSerializerNamespaces`.</span><span class="sxs-lookup"><span data-stu-id="512bb-110">Create an instance of the `XmlSerializerNamespaces` class.</span></span>
+
+2. <span data-ttu-id="512bb-111">Agregue todos los prefijos y pares de espacio de nombres a `XmlSerializerNamespaces`.</span><span class="sxs-lookup"><span data-stu-id="512bb-111">Add all prefixes and namespace pairs to the `XmlSerializerNamespaces`.</span></span>
+
+3. <span data-ttu-id="512bb-112">Aplique el atributo apropiado `System.Xml.Serialization` a cada método o clase que <xref:System.Xml.Serialization.XmlSerializer> vaya a serializar en un documento XML.</span><span class="sxs-lookup"><span data-stu-id="512bb-112">Apply the appropriate `System.Xml.Serialization` attribute to each member or class that the <xref:System.Xml.Serialization.XmlSerializer> is to serialize into an XML document.</span></span>
+
+  <span data-ttu-id="512bb-113">Los atributos disponibles son: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, y <xref:System.Xml.Serialization.XmlTypeAttribute>.</span><span class="sxs-lookup"><span data-stu-id="512bb-113">The available attributes are: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, and <xref:System.Xml.Serialization.XmlTypeAttribute>.</span></span>
+
+4. <span data-ttu-id="512bb-114">Establezca la propiedad `Namespace` de cada atributo en uno de los valores de espacio de nombres del `XmlSerializerNamespaces`.</span><span class="sxs-lookup"><span data-stu-id="512bb-114">Set the `Namespace` property of each attribute to one of the namespace values from the `XmlSerializerNamespaces`.</span></span>
+
+5. <span data-ttu-id="512bb-115">Pase `XmlSerializerNamespaces` al método `Serialize` de `XmlSerializer`.</span><span class="sxs-lookup"><span data-stu-id="512bb-115">Pass the `XmlSerializerNamespaces` to the `Serialize` method of the `XmlSerializer`.</span></span>
+
+## <a name="example"></a><span data-ttu-id="512bb-116">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="512bb-116">Example</span></span>
+
+<span data-ttu-id="512bb-117">En el siguiente ejemplo, se crea un `XmlSerializerNamespaces` al que se agregan dos prefijos y pares de espacio de nombres al objeto.</span><span class="sxs-lookup"><span data-stu-id="512bb-117">The following example creates an `XmlSerializerNamespaces`, and adds two prefix and namespace pairs to the object.</span></span> <span data-ttu-id="512bb-118">El código crea `XmlSerializer` que se utiliza para serializar una instancia de la clase `Books`.</span><span class="sxs-lookup"><span data-stu-id="512bb-118">The code creates an `XmlSerializer` that is used to serialize an instance of the `Books` class.</span></span> <span data-ttu-id="512bb-119">El código llama al método `Serialize` con `XmlSerializerNamespaces`, permitiéndole al XML contener los espacios de nombres prefijados.</span><span class="sxs-lookup"><span data-stu-id="512bb-119">The code calls the `Serialize` method with the `XmlSerializerNamespaces`, allowing the XML to contain prefixed namespaces.</span></span>
+
+```vb
+Option Explicit
+public class Price
+{
+    [XmlAttribute(Namespace = "http://www.cpandl.com")]
+    public string currency;
+    [XmlElement(Namespace = "http://www.cohowinery.com")]
+    public decimal price;
+}
+
+Option Strict
+
+Imports System
+Imports System.IO
+Imports System.Xml
+Imports System.Xml.Serialization
+
+Public Class Run
+
+    Public Shared Sub Main()
+        Dim test As New Run()
+        test.SerializeObject("XmlNamespaces.xml")
+    End Sub 'Main
+
+    Public Sub SerializeObject(filename As String)
+        Dim mySerializer As New XmlSerializer(GetType(Books))
+        ' Writing a file requires a TextWriter.
+        Dim myWriter As New StreamWriter(filename)
+
+        ' Creates an XmlSerializerNamespaces and adds two
+        ' prefix-namespace pairs.
+        Dim myNamespaces As New XmlSerializerNamespaces()
+        myNamespaces.Add("books", "http://www.cpandl.com")
+        myNamespaces.Add("money", "http://www.cohowinery.com")
+
+        ' Creates a Book.
+        Dim myBook As New Book()
+        myBook.TITLE = "A Book Title"
+        Dim myPrice As New Price()
+        myPrice.price = CDec(9.95)
+        myPrice.currency = "US Dollar"
+        myBook.PRICE = myPrice
+        Dim myBooks As New Books()
+        myBooks.Book = myBook
+        mySerializer.Serialize(myWriter, myBooks, myNamespaces)
+        myWriter.Close()
+    End Sub
+End Class
+
+Public Class Books
+    <XmlElement([Namespace] := "http://www.cohowinery.com")> _
+    Public Book As Book
+End Class 'Books
+
+<XmlType([Namespace] := "http://www.cpandl.com")> _
+Public Class Book
+
+    <XmlElement([Namespace] := "http://www.cpandl.com")> _
+    Public TITLE As String
+    <XmlElement([Namespace] := "http://www.cohowinery.com")> _
+    Public PRICE As Price
+End Class
+
+Public Class Price
+    <XmlAttribute([Namespace] := "http://www.cpandl.com")> _
+    Public currency As String
+    Public <XmlElement([Namespace] := "http://www.cohowinery.com")> _
+        price As Decimal
+End Class
+```
+
+```csharp
+using System;
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
+
+public class Run
+{
+    public static void Main()
+    {
+        Run test = new Run();
+        test.SerializeObject("XmlNamespaces.xml");
+    }
+    public void SerializeObject(string filename)
+    {
+        XmlSerializer mySerializer = new XmlSerializer(typeof(Books));
+        // Writing a file requires a TextWriter.
+        TextWriter myWriter = new StreamWriter(filename);
+
+        // Creates an XmlSerializerNamespaces and adds two
+        // prefix-namespace pairs.
+        XmlSerializerNamespaces myNamespaces =
+        new XmlSerializerNamespaces();
+        myNamespaces.Add("books", "http://www.cpandl.com");
+        myNamespaces.Add("money", "http://www.cohowinery.com");
+
+        // Creates a Book.
+        Book myBook = new Book();
+        myBook.TITLE = "A Book Title";
+        Price myPrice = new Price();
+        myPrice.price = (decimal) 9.95;
+        myPrice.currency = "US Dollar";
+        myBook.PRICE = myPrice;
+        Books myBooks = new Books();
+        myBooks.Book = myBook;
+        mySerializer.Serialize(myWriter,myBooks,myNamespaces);
+        myWriter.Close();
+    }
+}
+
+public class Books
+{
+    [XmlElement(Namespace = "http://www.cohowinery.com")]
+    public Book Book;
+}
+
+[XmlType(Namespace ="http://www.cpandl.com")]
+public class Book
+{
+    [XmlElement(Namespace = "http://www.cpandl.com")]
+    public string TITLE;
+    [XmlElement(Namespace ="http://www.cohowinery.com")]
+    public Price PRICE;
+}
+```
+
+## <a name="see-also"></a><span data-ttu-id="512bb-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="512bb-120">See Also</span></span>
+
+<span data-ttu-id="512bb-121"><xref:System.Xml.Serialization.XmlSerializer>
+[La herramienta de definición de esquemas XML y serialización XML](the-xml-schema-definition-tool-and-xml-serialization.md)
+[introducir la serialización XML](introducing-xml-serialization.md)
+[clase XmlSerializer](xref:System.Xml.Serialization.XmlSerializer) 
+ [Atributos que controlan la serialización XML](attributes-that-control-xml-serialization.md)
+[Cómo: especificar un nombre de elemento alternativo para un Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+[Cómo: serializar un objeto](how-to-serialize-an-object.md) 
+ [Cómo: deserializar un objeto](how-to-deserialize-an-object.md)</span><span class="sxs-lookup"><span data-stu-id="512bb-121"><xref:System.Xml.Serialization.XmlSerializer>
+[The XML Schema Definition Tool and XML Serialization](the-xml-schema-definition-tool-and-xml-serialization.md)
+[Introducing XML Serialization](introducing-xml-serialization.md)
+[XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
+[Attributes That Control XML Serialization](attributes-that-control-xml-serialization.md)
+[How to: Specify an Alternate Element Name for an XML Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+[How to: Serialize an Object](how-to-serialize-an-object.md)
+[How to: Deserialize an Object](how-to-deserialize-an-object.md)</span></span>
