@@ -2,12 +2,12 @@
 title: Artículos de procedimientos (guía de C#)
 description: Colección de sugerencias rápidas y ejemplos de código breves y concisos.
 ms.date: 12/20/2017
-ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549397"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999568"
 ---
 # <a name="how-to-c"></a>Procedimientos (C#)
 
@@ -68,7 +68,7 @@ Puede que deba convertir un objeto a otro tipo.
 - [Use `as` y `is` para realizar una conversión a un tipo diferente con seguridad](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).
 - [Defina los operadores de conversión para tipos `struct`](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
 - [Determine si un tipo es un tipo de valor que acepta valores NULL](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
-- [Realice conversiones entre tipos de valores que aceptan valores NULL y tipos que no](../programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md).
+- [Realice conversiones entre tipos de valores que aceptan valores NULL y tipos que no](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
 
 ## <a name="equality-and-ordering-comparisons"></a>Comparaciones de igualdad y ordenación
 
@@ -126,7 +126,7 @@ Los programas modernos suelen usar operaciones asincrónicas. Estos artículos l
 
 - [Mejore el rendimiento asíncrono usando `System.Threading.Tasks.Task.WhenAll`](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 - [Realice varias solicitudes web en paralelo usando `async` y `await`](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md).
-- [Use un grupo de subprocesos](../programming-guide/concepts/threading/how-to-use-a-thread-pool.md).
+- [Use un grupo de subprocesos](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool).
 
 ## <a name="command-line-args-to-your-program"></a>Argumentos de línea de comandos para el programa
 
