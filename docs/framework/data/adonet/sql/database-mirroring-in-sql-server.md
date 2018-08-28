@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: cbb4b729475c8f77c204c3a9250d48d4b0cd3bc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 349cc10062cd73def0b8b3966a17ae9cbd0deab5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362275"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003091"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Creación de reflejo de la base de datos en SQL Server
 La creación de reflejo de base de datos de SQL Server permite mantener una copia, o reflejo, de una base de datos de SQL Server en un servidor en modo de espera. El reflejo garantiza que en todo momento existen dos copias distintas de los datos, lo que proporciona una alta disponibilidad y una completa redundancia de datos. El proveedor de datos .NET para SQL Server ofrece compatibilidad implícita con la creación de reflejo de base de datos; de modo que el desarrollador no tiene que realizar ninguna acción ni escribir ningún código una vez que se ha configurado para una base de datos de SQL Server. Además, el objeto <xref:System.Data.SqlClient.SqlConnection> admite un modo de conexión explícita que permita proporcionar el nombre de un servidor asociado de conmutación por error en la propiedad <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -40,7 +40,7 @@ La creación de reflejo de base de datos de SQL Server permite mantener una copi
 ## <a name="retrieving-the-current-server-name"></a>Recuperación del nombre del servidor actual  
  En caso de una conmutación por error, puede recuperar el nombre del servidor al que hay actualmente una conexión mediante la propiedad <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> de un objeto <xref:System.Data.SqlClient.SqlConnection>. El siguiente fragmento de código recupera el nombre del servidor activo, suponiendo que la variable de conexión hace referencia a una <xref:System.Data.SqlClient.SqlConnection> abierta.  
   
- Cuando se produce un evento de conmutación por error y se cambia la conexión al servidor reflejado, la **origen de datos** propiedad se actualiza para reflejar el nombre del servidor.  
+ Cuando se produce un evento de conmutación por error y se cambia la conexión al servidor reflejado, la **DataSource** propiedad se actualiza para reflejar el nombre del servidor.  
   
 ```vb  
 Dim activeServer As String = connection.DataSource  
@@ -57,11 +57,11 @@ string activeServer = connection.DataSource;
 >  En el servidor, la compatibilidad con el reflejo se configura por cada base de datos. Si se ejecutan operaciones de manipulación de datos en otras bases de datos no incluidas en el conjunto principal/reflejada, o bien con nombres de varias partes o mediante el cambio de la base de datos actual, los cambios en estas otras bases de datos no se propagarán si se produce un error. Cuando los datos se modifican en una base de datos sin reflejo, no se generan errores. El programador deberá valorar los posibles efectos de tales operaciones.  
   
 ## <a name="database-mirroring-resources"></a>Recursos de reflejos de base de datos  
- Para obtener documentación conceptual e información sobre la configuración, implementación y administración de reflejos, vea los siguientes recursos en los Libros en pantalla de SQL Server.  
+ Para obtener documentación conceptual e información sobre cómo configurar, implementar y administrar la creación de reflejo, vea los siguientes recursos en la documentación de SQL Server.  
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[Creación de reflejo de base de datos](http://msdn.microsoft.com/library/bb934127.aspx) en libros en pantalla de SQL Server|Describe cómo establecer y configurar la creación de reflejos en SQL Server.|  
+|[Creación de reflejo de base de datos](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Describe cómo establecer y configurar la creación de reflejos en SQL Server.|  
   
 ## <a name="see-also"></a>Vea también  
  [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -12,14 +12,14 @@ ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb5d3b4c50a9c22880bdcc8406835cf51481e3cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654374"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003130"
 ---
 # <a name="-reference-visual-basic"></a>-referencia (Visual Basic)
-Hace que el compilador para que estén disponibles para el proyecto que se está compilando la información de tipo en los ensamblados especificados.  
+Hace que el compilador para que estén disponibles para el proyecto que se está compilando información de tipo de los ensamblados especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,9 +36,9 @@ Hace que el compilador para que estén disponibles para el proyecto que se está
 |`fileList`|Requerido. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los archivos importados deben contener metadatos de ensamblado. Solo los tipos públicos son visibles fuera del ensamblado. El [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) opción importa los metadatos de un módulo.  
+ Los archivos importados deben contener metadatos de ensamblado. Solo los tipos públicos son visibles fuera del ensamblado. El [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) opción importa metadatos de un módulo.  
   
- Si hace referencia a un ensamblado (A) que hiciera referencia a otro ensamblado (ensamblado B), debe hacer referencia al ensamblado B si:  
+ Si hace referencia a un ensamblado (ensamblado A) que a su vez hace referencia a otro ensamblado (ensamblado B), debe hacer referencia al ensamblado B si:  
   
 -   Un tipo del ensamblado A hereda de un tipo o implementa una interfaz del ensamblado B.  
   
@@ -46,14 +46,14 @@ Hace que el compilador para que estén disponibles para el proyecto que se está
   
  Use [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado.  
   
- Para que el compilador reconozca un tipo en un ensamblado (no un módulo), debe forzarse para resolver el tipo. Un ejemplo de cómo se puede hacer esto es definir una instancia del tipo. Otras maneras de están disponibles para resolver los nombres de tipo en un ensamblado para el compilador. Por ejemplo, si se hereda de un tipo en un ensamblado, el nombre de tipo, a continuación, se convierte en el compilador conoce.  
+ Para que el compilador reconozca un tipo en un ensamblado (no un módulo), debe forzarse para resolver el tipo. Un ejemplo de cómo se puede hacer es definir una instancia del tipo. Hay otras formas resolver nombres de tipo en un ensamblado para el compilador. Por ejemplo, si se hereda de un tipo en un ensamblado, tipo conoce el nombre, a continuación, se convierte en el compilador.  
   
- El archivo de respuesta Vbc.rsp, que utiliza habitualmente referencias [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ensamblados, se utiliza de forma predeterminada. Usar `-noconfig` si no desea que el compilador utilice Vbc.rsp.  
+ El archivo de respuesta Vbc.rsp, que utiliza habitualmente referencias [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ensamblados, se usa de forma predeterminada. Usar `-noconfig` si no desea que el compilador utilice Vbc.rsp.  
   
  La forma abreviada de `-reference` es `/r`.  
   
 ## <a name="example"></a>Ejemplo  
- El comando siguiente compila el archivo de código fuente `Input.vb` y hacer referencia a ensamblados de `Metad1.dll` y `Metad2.dll` para generar `Out.exe`.  
+ El comando siguiente compila el archivo de código fuente `Input.vb` y hacer referencia a ensamblados de `Metad1.dll` y `Metad2.dll` para producir `Out.exe`.  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  

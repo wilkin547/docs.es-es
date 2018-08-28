@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4595049d4ea71de30cf13334e32cd4bb2699f2ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f12b94198b88111d559cfe372c28bdbf4b37e3fe
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392543"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999140"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>MDA de fatalExecutionError
-El Ayudante para la depuración administrada (MDA) de `fatalExecutionEngine``Error` se activa cuando se detecta un error grave en Common Language Runtime (CLR). Esto finaliza el proceso.  
+El Ayudante para la depuración administrada (MDA) de `fatalExecutionEngineError` se activa cuando se detecta un error grave en Common Language Runtime (CLR). Esto finaliza el proceso.  
   
 ## <a name="symptoms"></a>Síntomas  
  Finalización de proceso inesperada. No se pueden determinar otros síntomas porque los errores de CLR pueden ser debidos a distintos motivos.  

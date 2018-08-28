@@ -1,13 +1,13 @@
 ---
-title: Instrucciones Q-Z
+title: Instrucciones Q-Z (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 32a9e547-c1b7-40f2-8118-7eef1d19649e
-ms.openlocfilehash: ddaf49178d2eae4ccc6a67873cc131d43e2cd619
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e26f4d1c8ad4620fd739354ebac9c65b25776377
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603670"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999853"
 ---
 # <a name="q-z-statements"></a>Instrucciones Q-Z
 En la tabla siguiente contiene una lista de instrucciones del lenguaje Visual Basic.  

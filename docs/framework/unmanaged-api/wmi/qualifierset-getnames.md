@@ -1,6 +1,6 @@
 ---
 title: Función QualifierSet_GetNames (referencia de API no administrada)
-description: La función QualifierSet_GetNames recupera los nombres de calificadores de un objeto o una propiedad.
+description: La función QualifierSet_GetNames recupera los nombres de los calificadores de un objeto o propiedad.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_GetNames
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7c96439cf50c18e336baa70cf463b9463203290
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84059c5e5542e13b1d4fc4efcfc4c7f418db391e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461183"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999383"
 ---
-# <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames (función)
+# <a name="qualifiersetgetnames-function"></a>Función QualifierSet_GetNames
 Recupera los nombres de todos los calificadores o de ciertos calificadores que están disponibles en el objeto actual o la propiedad. 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -42,46 +42,46 @@ HRESULT QualifierSet_GetNames (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`   
-[in] Este parámetro no se utiliza.
+[in] Este parámetro se usa.
 
 `ptr`   
-[in] Un puntero a un [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instancia.
+[in] Un puntero a un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instancia.
 
 `lFlags`   
-[in] Uno de los siguientes indicadores o valores que especifica los nombres que desee incluir en la enumeración.
+[in] Uno de los siguientes indicadores o valores que especifica los nombres que se va a incluir en la enumeración.
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|  | 0 | Devolver los nombres de todos los calificadores. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Devolver solo los nombres de calificadores específicos que el objeto o la propiedad actual. <br/> Para una propiedad: devolver solo los calificadores específicos a la propiedad (incluidas las invalidaciones) y no los calificadores se propagan desde la definición de clase. <br/> Para una instancia: devolver solo los nombres de calificador de específicos de la instancia. <br/> Para una clase: devolver solo calificadores específicos a la beiong de la clase derivada.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0 x 20 | Devuelve solo los nombres de calificadores propagan de otro objeto. <br/> Para una propiedad: devuelven solo los calificadores se propagan a esta propiedad en la definición de clase y no los de la propiedad en Sí. <br/> Para una instancia: devolución propagan sólo los calificadores de la definición de clase. <br/> Para una clase: devolver sólo los nombres de calificador que se heredaron de las clases principales. |
+|  | 0 | Devuelve los nombres de todos los calificadores. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Devolver solo los nombres de los calificadores específicos que el objeto o propiedad actual. <br/> Para una propiedad: devolver solo los calificadores específicos a la propiedad (incluidas las invalidaciones) y no los calificadores se propagan desde la definición de clase. <br/> Para una instancia: devolver solo los nombres de calificador específicos de la instancia. <br/> Para una clase: devolver solo los calificadores específica el beiong de la clase derivada.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0 x 20 | Si la devolución propagan los nombres de los calificadores de otro objeto. <br/> Para una propiedad: devuelven solo los calificadores se propagan a esta propiedad desde la definición de clase y no los de la propiedad propiamente dicha. <br/> Para una instancia: devolución propagan solo esos calificadores de la definición de clase. <br/> Para una clase: sólo los nombres de calificador heredados de las clases principales de retorno. |
 
 `pstrNames` [out] Un nuevo `SAFEARRAY` que contiene los nombres solicitados. La matriz puede tener 0 elementos. Si se produce un error, un nuevo `SAFEARRAY` no se devuelve.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, o bien puede definirlas como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un parámetro no es válido. |
-|`WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para iniciar una nueva enumeración. |
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función tuvo éxito.  |
+|`WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para comenzar una nueva enumeración. |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemQualifierSet::GetNames](https://msdn.microsoft.com/library/aa391868(v=vs.85).aspx) método.
+Esta función contiene una llamada a la [IWbemQualifierSet::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames) método.
 
-Una vez que haya recuperado los nombres de calificador, se puede tener acceso a cada calificador por su nombre mediante una llamada a la [QualifierSet_Get](qualifierset-get.md) (función). 
+Una vez que haya recuperado los nombres de calificador, puede acceder a cada calificador por nombre mediante una llamada a la [QualifierSet_Get](qualifierset-get.md) función. 
 
-No es un error de un determinado objeto de tener cero calificadores, por lo que el número de cadenas en `pstrNames` en el valor devuelto puede ser 0, incluso si la función devuelve `WBEM_S_NO_ERROR`.
+No es un error para un objeto determinado tener calificadores de cero, por lo que el número de cadenas en `pstrNames` en el valor devuelto puede ser 0, aunque la función devuelve `WBEM_S_NO_ERROR`.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

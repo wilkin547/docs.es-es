@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 3fabd7e3cad76e17061751d0fe0bb4ae06bf6fb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410460"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998471"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory y WSTrustChannel
 Si ya está familiarizado con Windows Communication Foundation (WCF), sabe que un cliente WCF ya reconoce la federación. Al configurar un cliente WCF con <xref:System.ServiceModel.WSFederationHttpBinding> o un enlace personalizado similar, puede habilitar la autenticación federada en un servicio.  
@@ -36,8 +36,8 @@ Si ya está familiarizado con Windows Communication Foundation (WCF), sabe que u
 >   
 >  Desde el punto de vista del protocolo WS-Trust:  
 >   
->  1.  Un elemento RST ActAs indica que el solicitante desea un token que contiene notificaciones acerca de dos entidades distintas: el solicitante y una entidad externa representada por el token en el elemento ActAs.  
-> 2.  Un elemento RST OnBehalfOf indica que el solicitante desea un token que contenga notificaciones solo acerca de una entidad: la entidad externa representada por el token en el elemento OnBehalfOf.  
+> 1. Un elemento RST ActAs indica que el solicitante desea un token que contiene notificaciones acerca de dos entidades distintas: el solicitante y una entidad externa representada por el token en el elemento ActAs.  
+> 2. Un elemento RST OnBehalfOf indica que el solicitante desea un token que contenga notificaciones solo acerca de una entidad: la entidad externa representada por el token en el elemento OnBehalfOf.  
 >   
 >  La característica ActAs se usa normalmente en escenarios que requieren delegación compuesta, donde el destinatario final del token emitido puede inspeccionar la cadena de delegación completa y ver no solo al cliente sino también a todos los intermediarios. Esto permite realizar el control de acceso, la auditoría y otras actividades relacionadas basadas en la cadena de delegación de identidad completa. La característica ActAs se utiliza normalmente en sistemas de varios niveles para autenticar y pasar información acerca de identidades entre los niveles sin tener que pasar esta información en la capa de lógica de negocios o aplicación.  
 >   

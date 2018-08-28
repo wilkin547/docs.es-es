@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bb1d9bdbd0874875939010ea5503fe791a2cd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579839"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925729"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
 <a name="top"></a> El motor de expresiones regulares de .NET es una herramienta eficaz y completa que procesa texto basándose en coincidencias de patrones en lugar de comparar y buscar coincidencias con texto literal. En la mayoría de los casos, realiza la coincidencia de modelos de manera rápida y eficaz. Sin embargo, en algunos casos, puede parecer que el motor de expresiones regulares es muy lento. En casos extremos, incluso puede parecer que deja de responder mientras procesa una entrada relativamente pequeña a lo largo de las horas o incluso los días.  
@@ -115,7 +115,7 @@ ms.locfileid: "33579839"
   
  La expresión regular `\p{Sc}+\s*\d+` que se usa en este ejemplo comprueba que la cadena de entrada consta de un símbolo de moneda y al menos un dígito decimal. El patrón se define como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\p{Sc}+`|Buscar coincidencias con uno o más caracteres de la categoría Símbolo Unicode, Moneda.|  
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  
@@ -136,7 +136,7 @@ ms.locfileid: "33579839"
   
  El patrón de expresión regular usado en el ejemplo, `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]`, se define como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
@@ -181,7 +181,7 @@ ms.locfileid: "33579839"
   
  A menudo, las aplicaciones sufren una reducción del rendimiento por usar el retroceso a pesar de que el retroceso no es esencial para una coincidencia. Por ejemplo, la expresión regular `\b\p{Lu}\w*\b` busca una coincidencia con todas las palabras que comienzan por un carácter en mayúsculas, como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-|-|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`\p{Lu}`|Busca una coincidencia con un carácter en mayúsculas.|  
@@ -190,7 +190,7 @@ ms.locfileid: "33579839"
   
  Puesto que un límite de palabra no es igual, o un subconjunto de, que un carácter alfabético, no hay ninguna posibilidad de que el motor de expresiones regulares cruce un límite de palabra cuando busca coincidencias con caracteres alfabéticos. Esto significa que para esta expresión regular, el retroceso nunca puede contribuir al éxito global de cualquier coincidencia; solo puede degradar el rendimiento, ya que se fuerza que el motor de expresiones regulares guarde su estado para cada coincidencia preliminar correcta de un carácter alfabético.  
   
- Si determina que el retroceso no es necesario, puede deshabilitarlo mediante el elemento de lenguaje `(?>``subexpression``)`. En el ejemplo siguiente se analiza una cadena de entrada usando dos expresiones regulares. La primera, `\b\p{Lu}\w*\b`, se basa en el retroceso. La segunda, `\b\p{Lu}(?>\w*)\b`, deshabilita el retroceso. Como muestra el resultado del ejemplo, ambas producen el mismo resultado.  
+ Si determina que el retroceso no es necesario, puede deshabilitarlo mediante el elemento de lenguaje `(?>subexpression)`. En el ejemplo siguiente se analiza una cadena de entrada usando dos expresiones regulares. La primera, `\b\p{Lu}\w*\b`, se basa en el retroceso. La segunda, `\b\p{Lu}(?>\w*)\b`, deshabilita el retroceso. Como muestra el resultado del ejemplo, ambas producen el mismo resultado.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]  
@@ -204,7 +204,7 @@ ms.locfileid: "33579839"
   
  En estos casos, puede optimizar el rendimiento de la expresión regular quitando los cuantificadores anidados y reemplazando la subexpresión externa con una aserción de búsqueda anticipada o de búsqueda tardía de ancho cero. Las aserciones de búsqueda anticipada y de búsqueda tardía son delimitadores; no mueven el puntero en la cadena de entrada, sino que realizan una búsqueda hacia delante o hacia atrás para comprobar si se cumple una condición especificada. Por ejemplo, la expresión regular de número de pieza se puede volver a escribir como `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Este patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias con el principio de la cadena de entrada.|  
 |`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico. El número de pieza debe constar al menos de este carácter.|  
@@ -220,7 +220,7 @@ ms.locfileid: "33579839"
   
  El lenguaje de expresiones regulares de .NET incluye los elementos del lenguaje siguientes, que puede usar para eliminar cuantificadores anidados. Para más información, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
-|Elemento del lenguaje|Description|  
+|Elemento del lenguaje|Descripción|  
 |----------------------|-----------------|  
 |`(?=` `subexpression` `)`|Búsqueda anticipada positiva de ancho cero. Realizar una búsqueda anticipada de la posición actual para determinar si `subexpression` coincide con la cadena de entrada.|  
 |`(?!` `subexpression` `)`|Búsqueda anticipada negativa de ancho cero. Realizar una búsqueda anticipada de la posición actual para determinar si `subexpression` no coincide con la cadena de entrada.|  
@@ -258,7 +258,7 @@ ms.locfileid: "33579839"
   
  A menudo, las construcciones de agrupación se usan en una expresión regular solo para poder aplicarles cuantificadores y los grupos capturados por estas subexpresiones no se usan posteriormente. Por ejemplo, la expresión regular `\b(\w+[;,]?\s?)+[.?!]` está diseñada para capturar una frase completa. En la tabla siguiente se describen los elementos del lenguaje de este patrón de expresión regular y su efecto sobre las colecciones <xref:System.Text.RegularExpressions.Match> y <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> del objeto <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
@@ -272,27 +272,27 @@ ms.locfileid: "33579839"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group1.cs#8)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group1.vb#8)]  
   
- Cuando use subexpresiones solo para aplicarles cuantificadores y no le interese el texto capturado, debe deshabilitar las capturas de grupo. Por ejemplo, el elemento de lenguaje `(?:``subexpression``)` impide al grupo al que se aplica que capture subcadenas coincidentes. En el ejemplo siguiente, el patrón de expresión regular del ejemplo anterior se cambia a `\b(?:\w+[;,]?\s?)+[.?!]`. Como muestra el resultado, evita que el motor de expresiones regulares rellene las colecciones <xref:System.Text.RegularExpressions.GroupCollection> y <xref:System.Text.RegularExpressions.CaptureCollection>.  
+ Cuando use subexpresiones solo para aplicarles cuantificadores y no le interese el texto capturado, debe deshabilitar las capturas de grupo. Por ejemplo, el elemento de lenguaje `(?:subexpression)` impide al grupo al que se aplica que capture subcadenas coincidentes. En el ejemplo siguiente, el patrón de expresión regular del ejemplo anterior se cambia a `\b(?:\w+[;,]?\s?)+[.?!]`. Como muestra el resultado, evita que el motor de expresiones regulares rellene las colecciones <xref:System.Text.RegularExpressions.GroupCollection> y <xref:System.Text.RegularExpressions.CaptureCollection>.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group2.cs#9)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group2.vb#9)]  
   
  Puede deshabilitar las capturas de una de las maneras siguientes:  
   
--   Use el elemento de lenguaje `(?:``subexpression``)`. Este elemento impide la captura de subcadenas coincidentes en el grupo al que se aplica. No deshabilita las capturas de subcadenas en ningún grupo anidado.  
+-   Use el elemento de lenguaje `(?:subexpression)`. Este elemento impide la captura de subcadenas coincidentes en el grupo al que se aplica. No deshabilita las capturas de subcadenas en ningún grupo anidado.  
   
--   Use la opción <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Deshabilita todas las capturas sin nombre o implícitas en el patrón de expresión regular. Cuando se usa esta opción, solo se pueden capturar las subcadenas que coinciden con grupos con nombre definidos con el elemento de lenguaje `(?<``name``>``subexpression``)`. La marca <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> se puede pasar al parámetro `options` de un constructor de clase <xref:System.Text.RegularExpressions.Regex> o al parámetro `options` de un método coincidente estático <xref:System.Text.RegularExpressions.Regex>.  
+-   Use la opción <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Deshabilita todas las capturas sin nombre o implícitas en el patrón de expresión regular. Cuando se usa esta opción, solo se pueden capturar las subcadenas que coinciden con grupos con nombre definidos con el elemento de lenguaje `(?<name>subexpression)`. La marca <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> se puede pasar al parámetro `options` de un constructor de clase <xref:System.Text.RegularExpressions.Regex> o al parámetro `options` de un método coincidente estático <xref:System.Text.RegularExpressions.Regex>.  
   
 -   Use la opción `n` del elemento de lenguaje `(?imnsx)`. Esta opción deshabilita todas las capturas sin nombre o implícitas desde el punto del patrón de expresión regular en el que aparece el elemento. Las capturas se deshabilitan hasta el final del modelo o hasta que la opción `(-n)` habilita las capturas sin nombre o implícitas. Para más información, consulte [Construcciones misceláneas](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
   
--   Use la opción `n` del elemento de lenguaje `(?imnsx:``subexpression``)`. Esta opción deshabilita todas las capturas sin nombre o implícitas en `subexpression`. Las capturas por grupos de captura anidados sin nombre o implícitos también se deshabilitan.  
+-   Use la opción `n` del elemento de lenguaje `(?imnsx:subexpression)`. Esta opción deshabilita todas las capturas sin nombre o implícitas en `subexpression`. Las capturas por grupos de captura anidados sin nombre o implícitos también se deshabilitan.  
   
  [Volver al principio](#top)  
   
 <a name="RelatedTopics"></a>   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Detalles del comportamiento de expresiones regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Examina la implementación del motor de expresiones regulares de .NET. El tema se centra en la flexibilidad de las expresiones regulares y explica la responsabilidad del desarrollador para garantizar un funcionamiento eficaz y sólido del motor de expresiones regulares.|  
 |[Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Explica qué es el retroceso y cómo afecta al rendimiento de las expresiones regulares, y examine los elementos del lenguaje que proporcionan alternativas al retroceso.|  

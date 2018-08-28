@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebdcda655a186d54065e98f8b9c5c7ae2fda4955
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f19cbf305165c2553d5a493f7011a6aea19fb23
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569913"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931864"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapes de carácter en expresiones regulares
 La barra diagonal inversa (\\) en una expresión regular indica una de las siguientes situaciones:  
@@ -36,9 +36,9 @@ La barra diagonal inversa (\\) en una expresión regular indica una de las sigui
 ## <a name="character-escapes-in-net"></a>Escapes de carácter en .NET  
  En la tabla siguiente se enumeran los escapes de caracteres admitidos en las expresiones regulares de .NET.  
   
-|Carácter o secuencia|Description|  
+|Carácter o secuencia|Descripción|  
 |---------------------------|-----------------|  
-|Todos los caracteres excepto los siguientes:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \|Los caracteres que no aparecen en la columna **Carácter o secuencia** no tienen ningún significado especial en las expresiones regulares, sino que equivalen a sí mismos.<br /><br /> Los caracteres incluidos en la columna **Carácter o secuencia** son elementos del lenguaje especial de expresiones regulares. Para que coincidan en una expresión regular, deben escribirse entre secuencias de escape o incluirse en un [grupo de caracteres positivos](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Por ejemplo, las expresiones regulares `\$\d+` o `[$]\d+` coinciden con "$1200".|  
+|Todos los caracteres excepto los siguientes:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Los caracteres que no aparecen en la columna **Carácter o secuencia** no tienen ningún significado especial en las expresiones regulares, sino que equivalen a sí mismos.<br /><br /> Los caracteres incluidos en la columna **Carácter o secuencia** son elementos del lenguaje especial de expresiones regulares. Para que coincidan en una expresión regular, deben escribirse entre secuencias de escape o incluirse en un [grupo de caracteres positivos](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Por ejemplo, las expresiones regulares `\$\d+` o `[$]\d+` coinciden con "$1200".|  
 |`\a`|Coincide con un carácter de campana (alarma), `\u0007`.|  
 |`\b`|En una clase de caracteres `[`*grupo_caracteres*`]`, coincide con un retroceso, `\u0008`.  (Consulte [Clases de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)). Fuera de una clase de caracteres, `\b` es un delimitador que coincide con un límite de palabras. (Consulte [Delimitadores](../../../docs/standard/base-types/anchors-in-regular-expressions.md)).|  
 |`\t`|Coincide con un carácter de tabulación, `\u0009`.|  
@@ -61,7 +61,7 @@ La barra diagonal inversa (\\) en una expresión regular indica una de las sigui
   
  La expresión regular `\G(.+)[\t|\u007c](.+)\r?\n` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\G`|Comienza la búsqueda de coincidencias donde finalizó la última coincidencia.|  
 |`(.+)`|Buscar cualquier carácter coincidente una o más veces. Este es el primer grupo de captura.|  
