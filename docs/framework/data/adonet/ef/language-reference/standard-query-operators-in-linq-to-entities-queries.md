@@ -1,23 +1,23 @@
 ---
 title: Operadores de consulta estándar en consultas de LINQ to Entities
-ms.date: 03/30/2017
+ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: a65f759ef51d34cc3ac6d37fe3575b9e89aadf7c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1085e43ef1db8eb0017f9ff87acba2da4be46377
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766405"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238568"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Operadores de consulta estándar en consultas de LINQ to Entities
-En una consulta, se especifica la información que se desea recuperar del origen de datos. Una consulta también puede especificar cómo se debe ordenar, agrupar y conformar esa información antes de que se devuelva. LINQ proporciona un conjunto de métodos de consulta estándar que se puede utilizar en una consulta. La mayoría de estos métodos funciona en secuencias; en este contexto, una secuencia es un objeto cuyo tipo implementa la <xref:System.Collections.Generic.IEnumerable%601> interfaz o <xref:System.Linq.IQueryable%601> interfaz. La funcionalidad de consulta de los operadores de consulta estándar incluye las operaciones de filtrado, proyección, agregación, ordenación, agrupamiento y paginación, entre otras. Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis de palabras clave especial para que se puedan invocar utilizando la sintaxis de las expresiones de consulta. Una expresión de consulta constituye una forma diferente de expresar una consulta, más legible que su equivalente basada en métodos. Las cláusulas de las expresiones de consulta se convierten en llamadas a los métodos de consulta en tiempo de compilación. Para obtener una lista de operadores de consulta estándar que poseen cláusulas de expresiones de consulta equivalentes, vea [información general sobre operadores de consulta estándar](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+En una consulta, se especifica la información que se desea recuperar del origen de datos. Una consulta también puede especificar cómo se debe ordenar, agrupar y conformar esa información antes de que se devuelva. LINQ proporciona un conjunto de métodos de consulta estándar que se puede utilizar en una consulta. La mayoría de estos métodos funciona en secuencias; en este contexto, una secuencia es un objeto cuyo tipo implementa la <xref:System.Collections.Generic.IEnumerable%601> interfaz o <xref:System.Linq.IQueryable%601> interfaz. La funcionalidad de consulta de los operadores de consulta estándar incluye las operaciones de filtrado, proyección, agregación, ordenación, agrupamiento y paginación, entre otras. Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis de palabras clave especial para que se puedan invocar utilizando la sintaxis de las expresiones de consulta. Una expresión de consulta constituye una forma diferente de expresar una consulta, más legible que su equivalente basada en métodos. Las cláusulas de las expresiones de consulta se convierten en llamadas a los métodos de consulta en tiempo de compilación. Para obtener una lista de operadores de consulta estándar que poseen cláusulas de expresiones de consulta equivalentes, consulte [Standard Query Operators Overview](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
- No todos los operadores de consulta estándar se admiten en las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Para obtener más información, consulte [admitidas y métodos de LINQ no admitidos (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). En este tema se proporciona información sobre los operadores de consulta estándar que es específica de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Para obtener más información sobre problemas conocidos de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] de las consultas, vea [problemas conocidos y consideraciones en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
+ No todos los operadores de consulta estándar se admiten en las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Para obtener más información, consulte [admitidas y los métodos de LINQ no admitidos (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). En este tema se proporciona información sobre los operadores de consulta estándar que es específica de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Para obtener más información sobre problemas conocidos de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] consultas, vea [problemas conocidos y consideraciones en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
   
 ## <a name="projection-and-filtering-methods"></a>Métodos de proyección y filtrado  
  *Proyección* hace referencia a la transformación de los elementos de un conjunto de resultados en un formato deseado. Por ejemplo, se puede proyectar un subconjunto de las propiedades que se necesitan de cada objeto del conjunto de resultados, se puede proyectar una propiedad y realizar un cálculo matemático con ella, o se puede proyectar el objeto completo del conjunto de resultados. Los métodos de proyección son `Select` y `SelectMany`.  
   
- *Filtrado* hace referencia a la operación de restringir el conjunto de resultados para contener solo los elementos que cumplen una condición especificada. El método de filtrado es `Where`.  
+ *Filtrado* hace referencia a la operación de restringir el conjunto de resultados a sólo contenga los elementos que cumplen una condición especificada. El método de filtrado es `Where`.  
   
  La mayoría de las sobrecargas de los métodos de proyección y filtrado se admiten en [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], con la excepción de las que aceptan un argumento de posición.  
   
@@ -29,7 +29,7 @@ En una consulta, se especifica la información que se desea recuperar del origen
 ## <a name="set-methods"></a>Métodos Set  
  Las operaciones Set de LINQ son operaciones de consulta que basan sus conjuntos de resultados en la presencia o ausencia de elementos equivalentes dentro de la misma o de otra colección (o conjunto). Los métodos Set son `All`, `Any`, `Concat`, `Contains`, `DefaultIfEmpty`, `Distinct`, `EqualAll`, `Except`, `Intersect` y `Union`.  
   
- La mayor parte de las sobrecargas de los métodos Set se admiten en [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], aunque hay algunas diferencias en el comportamiento en comparación con LINQ to Objects. Sin embargo, establecer métodos que usan un <xref:System.Collections.Generic.IEqualityComparer%601> no se admiten porque el comparador no se puede convertir en el origen de datos.  
+ La mayor parte de las sobrecargas de los métodos Set se admiten en [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], aunque hay algunas diferencias en el comportamiento en comparación con LINQ to Objects. Sin embargo, los métodos set que utilicen un <xref:System.Collections.Generic.IEqualityComparer%601> no se admiten porque el comparador no se puede convertir al origen de datos.  
   
 ## <a name="ordering-methods"></a>Métodos de ordenación  
  La ordenación hace referencia a la forma de ordenar los elementos de un conjunto de resultados según uno o varios atributos. Si se especifica más de un criterio de ordenación, se pueden romper los enlaces dentro de un grupo.  
@@ -67,14 +67,14 @@ En una consulta, se especifica la información que se desea recuperar del origen
 |`Sum`|Devuelve NULL.|Devuelve NULL.|Devuelve la suma del valor NO NULL de una secuencia.|Calcula la suma de una secuencia de valores numéricos.|  
   
 ## <a name="type-methods"></a>Métodos de tipos  
- Los dos métodos de LINQ que se encargan de la conversión y prueba de tipos se admiten en el contexto de [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Esto significa que los únicos tipos admitidos son los que se asignan al tipo de [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] adecuado. Para obtener una lista de estos tipos, vea [tipos de modelo Conceptual (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Los métodos de tipos son `Convert` y `OfType`.  
+ Los dos métodos de LINQ que se encargan de la conversión y prueba de tipos se admiten en el contexto de [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Esto significa que los únicos tipos admitidos son los que se asignan al tipo de [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] adecuado. Para obtener una lista de estos tipos, vea [tipos de modelos conceptuales (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Los métodos de tipos son `Convert` y `OfType`.  
   
  `OfType` se admite para los tipos de entidad. `Convert` se admite para los tipos primitivos de modelo conceptual.  Los métodos de C# `is` y `as` también se admiten.  
   
 ## <a name="paging-methods"></a>Métodos de paginación  
- Las operaciones de paginación devuelven un único elemento específico de una secuencia. Los métodos de elementos son `ElementAt`, `First`, `FirstOrDefault`, `Last`, `LastOrDefault`, `Single`, `Skip`, `Take` y `TakeWhile`.  
+ Las operaciones de paginación devuelven un único elemento o varios elementos de una secuencia. Los métodos de paginación admitidos son `First`, `FirstOrDefault`, `Single`, `SingleOrDefault`, `Skip`, y `Take`.  
   
- Varios métodos de paginación no se admiten debido a la incapacidad de asignar funciones al origen de datos o a la falta de ordenación implícita de los conjuntos en el origen de datos. Los métodos que devuelven un valor predeterminado están restringidos a los tipos primitivos de modelo conceptual y los tipos de referencia con valores predeterminados NULL. Los métodos de paginación que se ejecuten en una secuencia vacía devolverán NULL.  
+ No se admiten varios métodos de paginación, debido a la incapacidad de asignar funciones al origen de datos o a la falta de ordenación implícita de los conjuntos en el origen de datos. Los métodos que devuelven un valor predeterminado están restringidos a los tipos primitivos de modelo conceptual y los tipos de referencia con valores predeterminados NULL. Los métodos de paginación que se ejecuten en una secuencia vacía devolverán NULL.  
   
 ## <a name="see-also"></a>Vea también  
  [Métodos de LINQ compatibles y no compatibles (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
