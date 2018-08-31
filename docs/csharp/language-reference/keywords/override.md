@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: 8f692dfdf8bd34ddb62623d86ec3dadd2b8dead3
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: c0fdb777c4f5a64dbc92f6afe78cdb714585efe0
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199269"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42751953"
 ---
 # <a name="override-c-reference"></a>override (Referencia de C#)
 El modificador `override` es necesario para ampliar o modificar la implementación abstracta o virtual de un método, propiedad, indexador o evento heredado.  
@@ -35,7 +35,7 @@ El modificador `override` es necesario para ampliar o modificar la implementaci�
  Para obtener más información sobre cómo usar la palabra clave `override`, vea [Control de versiones con las palabras clave Override y New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) y [Saber cuándo usar las palabras clave Override y New (Guía de programación de C#)](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se define una clase base denominada `Employee` y una clase derivada denominada `SalesEmployee`. La clase `SalesEmployee` incluye una propiedad adicional, `salesbonus`, e invalida el método `CalculatePay` para tenerlo en cuenta.  
+ En este ejemplo se define una clase base denominada `Employee` y una clase derivada denominada `SalesEmployee`. La clase `SalesEmployee` incluye un campo adicional, `salesbonus`, e invalida el método `CalculatePay` para tenerlo en cuenta.  
   
  [!code-csharp[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]  
   

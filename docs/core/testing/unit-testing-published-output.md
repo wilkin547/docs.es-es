@@ -4,12 +4,12 @@ description: Obtenga información acerca de cómo ejecutar pruebas en la salida 
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.openlocfilehash: dbce1b6e616916e60e56318b773e8fcecbc55580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e99000996f5dfa9f9d4f9b823e36ecbe325da835
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210258"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42936031"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Prueba de la salida publicada con vstest dotnet
 
@@ -34,5 +34,6 @@ dotnet vstest out/MyProject.Tests.dll
 > Nota: Si la aplicación tiene como destino un marco distinto de `netcoreapp` todavía puede ejecutar el comando `dotnet vstest` pasando el marco de destino con un indicador de marco. Por ejemplo: `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. En Visual Studio 2017 Update 5, se detecta automáticamente el marco deseado.
 
 ## <a name="see-also"></a>Vea también
- [Pruebas unitarias con pruebas de dotnet y xUnit](unit-testing-with-dotnet-test.md)  
- [Pruebas unitarias con pruebas de dotnet y MSTest](unit-testing-with-mstest.md)  
+- [Pruebas unitarias con pruebas de dotnet y xUnit](unit-testing-with-dotnet-test.md)
+- [Prueba unitaria de C# con NUnit y .NET Core](unit-testing-with-nunit.md)
+- [Pruebas unitarias con pruebas de dotnet y MSTest](unit-testing-with-mstest.md)

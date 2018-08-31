@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: d99480c1b703bc46228e25f6acd7e7fbbcae6228
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106452"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935398"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Creación de un microservicio CRUD sencillo controlado por datos
 
@@ -340,7 +340,7 @@ Esto significa que puede complementar su API con una bonita interfaz de usuario 
 
 Pero aquí lo más importante no es el explorador de API. Cuando tenga una API web que se pueda describir en metadatos de Swagger, la API podrá usarse sin problemas desde herramientas basadas en Swagger, incluidos los generadores de código de clase proxy de cliente que pueden tener varias plataformas como destino. Por ejemplo, tal y como se ha mencionado, [AutoRest](https://github.com/Azure/AutoRest) genera automáticamente clases de cliente .NET. Pero también están disponibles herramientas como [swagger-codegen](https://github.com/swagger-api/swagger-codegen), que permiten que se genere automáticamente código de bibliotecas de cliente de API, códigos auxiliares de servidor y documentación.
 
-Actualmente, Swashbuckle consta de dos paquetes de NuGet internos que se engloban en el metapaquete de alto nivel [Swashbuckle.Swashbuckle.AspNetCoreSwaggerGen](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) versión 1.0.0 o una versión posterior para las aplicaciones de ASP.NET Core.
+En la actualidad, Swashbuckle consta de varios paquetes NuGet internos que se engloban en el metapaquete general [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) versión 1.0.0 o una versión posterior para las aplicaciones ASP.NET Core.
 
 Después de instalar estos paquetes de NuGet en su proyecto de API web, debe configurar Swagger en la clase de inicio, como en el código siguiente:
 

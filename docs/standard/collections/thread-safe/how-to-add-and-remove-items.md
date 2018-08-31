@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6aa309f2c6c44934f491229ac43003a05301bacb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8bb84f2e26471e004678afde99a1dd725db6832
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569751"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755111"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Cómo: Agregar y quitar elementos de ConcurrentDictionary
 En este ejemplo se muestra cómo agregar, recuperar, actualizar y quitar elementos de <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Esta clase de colección es una implementación segura para subprocesos. Es recomendable que la use cada vez que varios subprocesos puedan intentar tener acceso a los elementos de forma simultánea.  
@@ -36,15 +36,15 @@ En este ejemplo se muestra cómo agregar, recuperar, actualizar y quitar element
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> está diseñado para escenarios multiproceso. No es necesario usar bloqueos en el código para agregar o quitar elementos de la colección. Pero siempre es posible que un subproceso recupere un valor y otro subproceso actualice inmediatamente la colección asignándole un nuevo valor a la misma clave.  
   
- Además, aunque todos los métodos de <xref:System.Collections.Concurrent.ConcurrentDictionary%602> son seguros para subprocesos, no todos los métodos son atómicos, específicamente <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. Se invoca el delegado del usuario que se pasa a estos métodos fuera del bloqueo interno del diccionario. (Esto se hace para evitar que el código desconocido bloquee todos los subprocesos). Por tanto, es posible que se produzca esta secuencia de eventos:  
+ Además, aunque todos los métodos de <xref:System.Collections.Concurrent.ConcurrentDictionary%602> son seguros para subprocesos, no todos los métodos son atómicos, específicamente <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>. El delegado del usuario que se pasa a estos métodos se invoca fuera del bloqueo interno del diccionario (para evitar todos los subprocesos se bloqueen debido a código desconocido). Por tanto, es posible que se produzca esta secuencia de eventos:  
   
  1\) El subproceso A llama a <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>, no encuentra ningún elemento y crea un nuevo elemento para agregar mediante la invocación del delegado valueFactory.  
   
  2\) Al mismo tiempo, el subproceso B llama a <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>, se invoca a su delegado valueFactory y llega al bloqueo interno antes que el subproceso A. Por tanto, su nuevo par clave-valor se agrega al diccionario.  
   
- 3\)El delegado de usuario del subproceso A se completa, y el subproceso llega al bloqueo, pero ahora se ve que el elemento ya existe.  
+ 3\) El delegado de usuario del subproceso A se completa, y el subproceso llega al bloqueo, pero ahora ve que el elemento ya existe.  
   
- 4\) El subproceso A realiza una operación "Get" y devuelve los datos que había agregado anteriormente el subproceso B.  
+ 4\) El subproceso A realiza una operación "Get" y devuelve los datos que el subproceso B había agregado anteriormente.  
   
  Por tanto, no está garantizado que los datos devueltos por <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> sean los mismos que los creados por valueFactory del subproceso. Puede producirse una secuencia similar de eventos cuando se llama a <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>.  
   

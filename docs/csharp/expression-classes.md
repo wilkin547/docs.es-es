@@ -3,21 +3,22 @@ title: Tipos de marco que admiten árboles de expresión
 description: Obtenga información sobre los tipos de marco que admiten árboles de expresión, la creación de árboles de expresión y las técnicas para trabajar con las API de árboles de expresión.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 3110f2a9534085aba95fcb5c8e76f66229e79f86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934797"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Tipos de marco que admiten árboles de expresión
 
 [Anterior: Árboles de expresiones en detalle](expression-trees-explained.md)
 
 Hay una amplia lista de clases en .NET Core Framework que funcionan con árboles de expresiones.
-Puede ver la lista completa [aquí](/dotnet/core/api/System.Linq.Expressions).
+En <xref:System.Linq.Expressions> puede ver la lista completa.
 En lugar de analizarla al completo, vamos a explicar cómo se han diseñado las clases del marco.
 
-En el diseño del lenguaje, una expresión es un cuerpo de código que se evalúa y devuelve un valor. Las expresiones pueden ser muy sencillas: la expresión constante `1` devuelve el valor constante de 1. También pueden ser más complicadas: la expresión `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` devuelve una raíz de una ecuación cuadrática (en el caso en el que la ecuación tenga una solución).  
+En el diseño del lenguaje, una expresión es un cuerpo de código que se evalúa y devuelve un valor. Las expresiones pueden ser muy sencillas: la expresión constante `1` devuelve el valor constante de 1. También pueden ser más complicadas: la expresión `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` devuelve una raíz de una ecuación cuadrática (en el caso en el que la ecuación tenga una solución).  
 
 ## <a name="it-all-starts-with-systemlinqexpression"></a>Todo empieza con System.Linq.Expression
 

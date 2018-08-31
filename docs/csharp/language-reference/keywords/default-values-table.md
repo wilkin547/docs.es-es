@@ -1,7 +1,7 @@
 ---
 title: Tabla de valores predeterminados (Referencia de C#)
-description: Sepa cuáles son los valores predeterminados de los tipos de valor devueltos por los constructores predeterminados.
-ms.date: 07/20/2015
+description: Obtenga información sobre los valores predeterminados de los tipos de valor de C#.
+ms.date: 08/23/2018
 helpviewer_keywords:
 - constructors [C#], return values
 - keywords [C#], new
@@ -11,28 +11,16 @@ helpviewer_keywords:
 - variables [C#], value types
 - constructors [C#], default constructor
 - types [C#], default constructor return values
-ms.openlocfilehash: 634a55304534b4269487f29be1fbb4930f51d8ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 184a9f42ddd3654a81aef0b7ce35e404de2d4bb9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218795"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935844"
 ---
 # <a name="default-values-table-c-reference"></a>Tabla de valores predeterminados (Referencia de C#)
 
-En la siguiente tabla se muestran los valores predeterminados de los tipos de valor devueltos por los constructores predeterminados. Los constructores predeterminados se invocan mediante el operador `new`, de la manera siguiente:
-
-```csharp
-int myInt = new int();
-```
-
-La instrucción anterior tiene el mismo efecto que la instrucción siguiente:
-
-```csharp
-int myInt = 0;
-```
-
-Recuerde que no se permite el uso de variables sin inicializar en C#.
+En la tabla siguiente se muestran los valores predeterminados de los [tipos de valor](value-types.md).
 
 |Tipo de valor|Valor predeterminado|
 |----------------|-------------------|
@@ -41,7 +29,7 @@ Recuerde que no se permite el uso de variables sin inicializar en C#.
 |[char](char.md)|'\0'|
 |[decimal](decimal.md)|0M|
 |[double](double.md)|0.0D|
-|[enum](enum.md)|El valor generado por la expresión (E)0, donde E es el identificador de enumeración.|
+|[enum](enum.md)|Valor generado por la expresión `(E)0`, donde `E` es el identificador de enumeración.|
 |[float](float.md)|0.0F|
 |[int](int.md)|0|
 |[long](long.md)|0L|
@@ -52,10 +40,36 @@ Recuerde que no se permite el uso de variables sin inicializar en C#.
 |[ulong](ulong.md)|0|
 |[ushort](ushort.md)|0|
 
+## <a name="remarks"></a>Comentarios
+
+En C# no se pueden usar variables sin inicializar. Una variable se puede inicializar con el valor predeterminado de su tipo. También se puede usar el valor predeterminado de un tipo para especificar el valor predeterminado del [argumento opcional](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments) de un método.
+
+Use la [expresión de valor predeterminado](../../programming-guide/statements-expressions-operators/default-value-expressions.md) para generar el valor predeterminado de un tipo, como se muestra en el ejemplo siguiente:
+
+```csharp
+int a = default(int);
+```
+
+A partir de C# 7.1, se puede usar el [literal `default`](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) para inicializar una variable con el valor predeterminado de su tipo:
+
+```csharp
+int a = default;
+```
+
+También se puede usar el constructor predeterminado o el constructor predeterminado implícito para generar el valor predeterminado de un tipo de valor, como se muestra en el ejemplo siguiente. Para obtener más información sobre los constructores, vea el artículo [Constructores](../../programming-guide/classes-and-structs/constructors.md).
+
+```csharp
+int a = new int();
+```
+
+El valor predeterminado de cualquier [tipo de referencia](reference-types.md) es `null`. El valor predeterminado de un [tipo que acepta valores NULL](../../programming-guide/nullable-types/index.md) es una instancia para la que la propiedad <xref:System.Nullable%601.HasValue%2A> es `false` y la propiedad <xref:System.Nullable%601.Value%2A> no está definida.
+
 ## <a name="see-also"></a>Vea también
- [Referencia de C#](../index.md)  
- [Guía de programación de C#](../../programming-guide/index.md)  
- [Tabla de tipos de valor](value-types-table.md)  
- [Tipos de valor](value-types.md)  
- [Tabla de tipos integrados](built-in-types-table.md)  
- [Tablas de referencia para tipos](reference-tables-for-types.md)
+
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Palabras clave de C#](index.md)
+- [Tablas de referencia para tipos](reference-tables-for-types.md)
+- [Tipos de valor](value-types.md)
+- [Tabla de tipos de valor](value-types-table.md)
+- [Tabla de tipos integrados](built-in-types-table.md)

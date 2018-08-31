@@ -6,24 +6,24 @@ helpviewer_keywords:
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9b7508c6e751f83fdc16a700ad68aa7de36e497
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04e7368a6b6a4453f2dd07c7afdc0bffa7473ed1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285140"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929683"
 ---
 # <a name="using-static-directive-c-reference"></a>using static (Directiva, Referencia de C#)
 
-La directiva `using static` designa un tipo a cuyos miembros estáticos se puede acceder sin especificar un nombre de tipo. Su sintaxis es:
+La directiva `using static` designa un tipo a cuyos miembros estáticos y tipos anidados se puede acceder sin especificar un nombre de tipo. Su sintaxis es:
 
 ```csharp
-using static <fully-qualified-type-name>
+using static <fully-qualified-type-name>;
 ```
 
-donde *fully-qualified-type-name* es el nombre del tipo a cuyos miembros estáticos se puede hacer referencia sin especificar un nombre de tipo. Si no proporciona un nombre de tipo completo (el nombre del espacio de nombres completo junto con el nombre del tipo), C# genera el error del compilador CS0246: "The type or namespace name '<type-name>' could not be found" (No se pudo encontrar el nombre de tipo o de espacio de nombres "<type-name>").
+donde *nombre-completo-del-tipo* es el nombre del tipo a cuyos miembros estáticos y tipos anidados se puede hacer referencia sin especificar un nombre de tipo. Si no proporciona un nombre de tipo completo (el nombre del espacio de nombres completo junto con el nombre del tipo), C# genera el error del compilador [CS0246](../compiler-messages/cs0246.md): "El nombre del tipo o del espacio de nombres "tipo/espacio de nombres" no se encontró (¿falta una directiva using o una referencia de ensamblado?)".
 
-La directiva `using static` se aplica a cualquier tipo que tenga miembros estáticos, aunque también tenga miembros de instancia. Pero los miembros de instancia solo pueden invocarse a través de la instancia del tipo.
+La directiva `using static` se aplica a cualquier tipo que tenga miembros estáticos (o tipos anidados), aunque también tenga miembros de instancia. Pero los miembros de instancia solo pueden invocarse a través de la instancia del tipo.
 
 La directiva `using static` se ha agregado en C# 6.
 
@@ -53,9 +53,9 @@ En el ejemplo, también podría haberse aplicado la directiva `using static` al 
 
 ## <a name="see-also"></a>Vea también
 
-[using Directive](using-directive.md)  (using [Directiva, Referencia de C#])  
-[Referencia de C#](../../../csharp/language-reference/index.md)   
-[Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
-[Using Namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)  (Usar espacios de nombres)  
-[Palabras clave del espacio de nombres](../../../csharp/language-reference/keywords/namespace-keywords.md)   
-[Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md)   
+- [using (directiva)](using-directive.md)
+- [Referencia de C#](../../../csharp/language-reference/index.md)
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
+- [Utilizar espacios de nombres](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+- [Palabras clave del espacio de nombres](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md)

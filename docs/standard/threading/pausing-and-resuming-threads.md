@@ -1,30 +1,32 @@
 ---
-title: Pausar y reanudar subprocesos
+title: Pausa e interrupción de subprocesos
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- resuming threads
+- interrupting threads
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9c2d58576098c83af110f2a713a0a8562e23aec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77dcdc95e0ca9d570c896fb036e0577f0475e164
+ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589128"
+ms.lasthandoff: 08/15/2018
+ms.locfileid: "42753829"
 ---
-# <a name="pausing-and-resuming-threads"></a>Pausar y reanudar subprocesos
+# <a name="pausing-and-interrupting-threads"></a>Pausa e interrupción de subprocesos
+
 Las maneras más habituales de sincronizar las actividades de los subprocesos son bloquear y liberar subprocesos, o bloquear objetos o regiones de código. Para más información sobre estos bloqueos y mecanismos de bloque, consulte [Información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
  También puede hacer que los subprocesos se pongan en modo de suspensión. Cuando los subprocesos se bloquean o se ponen en modo de suspensión, puede usar una <xref:System.Threading.ThreadInterruptedException> para interrumpir sus estados de espera.  
   
-## <a name="the-threadsleep-method"></a>Método Thread.Sleep  
+## <a name="the-threadsleep-method"></a>El método Thread.Sleep
+
  Al llamar al método <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>, el subproceso actual se bloquea inmediatamente durante el número de milisegundos o el intervalo de tiempo que pase al método, y el resto de su intervalo de tiempo se dedica a otro subproceso. Una vez que transcurre ese intervalo, el subproceso en suspensión vuelve a ejecutarse.  
   
  Un subproceso no puede llamar a <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> en otro subproceso.  <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> es un método estático que siempre hace que el subproceso actual entre en modo de suspensión.  
@@ -34,13 +36,14 @@ Las maneras más habituales de sincronizar las actividades de los subprocesos so
  [!code-csharp[Conceptual.Threading.Resuming#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Threading.Resuming/cs/Sleep1.cs#1)]
  [!code-vb[Conceptual.Threading.Resuming#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Threading.Resuming/vb/Sleep1.vb#1)]  
   
-## <a name="interrupting-threads"></a>Interrumpir subprocesos  
+## <a name="interrupting-threads"></a>Interrupción de subprocesos
+
  Puede interrumpir un subproceso en espera llamando al método <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> en el subproceso bloqueado para generar <xref:System.Threading.ThreadInterruptedException>, que saca al subproceso de la llamada de bloqueo. El subproceso debe detectar la <xref:System.Threading.ThreadInterruptedException> y hacer lo que sea necesario para seguir trabajando. Si el subproceso pasa por alto la excepción, el tiempo de ejecución detecta la excepción y detiene el subproceso.  
   
 > [!NOTE]
 >  Si el subproceso de destino no está bloqueado cuando se llama a <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>, el subproceso no se interrumpe hasta que se bloquea. Si el subproceso nunca se bloquea, puede finalizar sin ser interrumpido.  
   
- Si una espera es administrada, tanto <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> como <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> activan el subproceso inmediatamente. Si una espera es de tipo no administrado (por ejemplo, una llamada de invocación de plataforma a la función [WaitForSingleObject](https://msdn.microsoft.com/library/windows/desktop/ms687032\(v=vs.85\).aspx) de Win32), ni <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> ni <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> pueden tomar el control del subproceso hasta que este vuelva o llame a código administrado. En código administrado, el comportamiento es el siguiente:  
+ Si una espera es administrada, tanto <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> como <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> activan el subproceso inmediatamente. Si una espera es de tipo no administrado (por ejemplo, una llamada de invocación de plataforma a la función [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) de Win32), ni <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> ni <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> pueden tomar el control del subproceso hasta que este vuelva o llame a código administrado. En código administrado, el comportamiento es el siguiente:  
   
 -   <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> activa un subproceso de cualquier tipo de espera que pueda haber y hace que se genere una <xref:System.Threading.ThreadInterruptedException> en el subproceso de destino.  
   

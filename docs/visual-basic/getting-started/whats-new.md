@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09a113130d29336ecabb52095ca7f5809f5f0ade
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592553"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925616"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 
@@ -23,33 +23,33 @@ En este tema se enumeran los nombres de las características clave de cada versi
   
 ## <a name="current-version"></a>Versión actual
 
-Visual Basic 15.5   
+Visual Basic 15.5 / Visual Studio 2017 versión 15.5  
 Para ver las características nuevas, vea [Visual Basic 15.5](#visual-basic-155)
 
 ## <a name="previous-versions"></a>Versiones anteriores
 
-Visual Basic 15.3   
+Visual Basic 15.3 / Visual Studio 2017, versión 15.3  
 Para ver las características nuevas, vea [Visual Basic 15.3](#visual-basic-153)
 
-Visual Basic 2017   
+Visual Basic 2017 / Visual Studio 2017  
 Para obtener características nuevas, vea [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic / Visual Studio .NET 2015   
+Visual Basic / Visual Studio 2015   
 Para obtener características nuevas, vea [Visual Basic 14](#visual-basic-14).
 
-Visual Basic / Visual Studio .NET 2013  
+Visual Basic / Visual Studio 2013  
 Vistas previas de tecnología de .NET Compiler Platform ("Roslyn")
 
-Visual Basic / Visual Studio .NET 2012   
+Visual Basic / Visual Studio 2012   
 palabras clave `Async` y `await`, iteradores, atributos de información de autor de llamada
 
-Visual Basic / Visual Studio .NET 2010   
+Visual Basic, Visual Studio 2010   
 Propiedades autoimplementadas, inicializadores de colección, continuación de línea implícita, dinámica, covarianza/contravarianza genérica, acceso de espacio de nombres global
 
-Visual Basic / Visual Studio .NET 2008   
+Visual Basic / Visual Studio 2008   
 Language Integrated Query (LINQ), literales XML, inferencia de tipo de variable local, inicializadores de objeto, tipos anónimos, métodos de extensión, inferencia de tipo de variable local `var`, expresiones lambda, operador `if`, métodos parciales, tipos de valor que aceptan valores null  
 
-Visual Basic / Visual Studio .NET 2005   
+Visual Basic / Visual Studio 2005   
 El tipo `My` y tipos auxiliares (acceso a la aplicación, equipo, sistema de archivos, red)
 
 Visual Basic / Visual Studio .NET 2003   
@@ -123,7 +123,7 @@ Puede definir un literal binario con el prefijo `&B` o `&b`. Además, puede usar
 
 Para obtener más información, vea la sección "Asignaciones literales" de los tipos de datos [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) y [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
 
-**Compatibilidad con los valores devueltos de referencia de C#**
+[**Compatibilidad con los valores devueltos de referencia de C#**](../programming-guide/language-features/procedures/ref-return-values.md)
 
 A partir de C# 7.0, C# admite los valores devueltos de referencia. Es decir, cuando el método de llamada recibe un valor devuelto mediante referencia, puede cambiar el valor de esta. Visual Basic no le permite crear métodos con valores devueltos de referencia, pero le permite consumirlos y modificarlos.
 
@@ -153,31 +153,31 @@ Para obtener más información, vea [Valores devueltos de referencia](../program
 [Interpolación de cadenas](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  Puede usar expresiones de interpolación de cadenas para construir cadenas.  Una expresión de cadena interpolada es similar a una cadena de plantilla que contiene expresiones.  Una cadena interpolada es más fácil de entender con respecto a los argumentos que el [formato compuesto](../../standard/base-types/composite-format.md).  
   
-[Acceso a miembros e indización condicional null](../../csharp/language-reference/operators/null-conditional-operators.md)  
+[Acceso a miembros condicionales NULL e indexación](../../csharp/language-reference/operators/null-conditional-operators.md)  
 Puede probar si hay valores null de forma sintáctica ligera antes de realizar una operación de acceso a miembros (`?.`) o índice (`?[]`).  Estos operadores ayudan a escribir menos código para controlar las comprobaciones de null, especialmente para descender en estructuras de datos.  Si la referencia de objeto u operando izquierdo es null, la operación devuelve null.  
   
 [Literales de cadena multilínea](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
  Los literales de cadena pueden contener secuencias de nueva línea.  Ya no necesita la antigua solución alternativa que consistía en usar `<xml><![CDATA[...text with newlines...]]></xml>.Value`  
   
-Comentarios  
+**Comentarios**  
 Puede colocar comentarios después de las continuaciones de línea implícita, dentro de expresiones de inicializador y entre los términos de la expresión LINQ.  
   
- Resolución de nombres completos más inteligente  
+**Resolución de nombres completos más inteligente**  
  Dado código como `Threading.Thread.Sleep(1000)`, Visual Basic solía buscar el espacio de nombres "Threading", detectaba ambigüedad entre System.Threading y System.Windows.Threading y, a continuación, notificaba un error.  Ahora, Visual Basic considera juntos ambos espacios de nombres posibles.  Si aparece la lista de finalización, el editor de Visual Studio muestra los miembros de ambos tipos en la lista de finalización.  
   
- Literales de fecha con el año en primer lugar  
+ **Literales de fecha con el año en primer lugar**  
  Puede tener literales de fecha en el formato aaaa-mm-dd, `#2015-03-17 16:10 PM#`.  
   
- Propiedades de interfaz de solo lectura  
+ **Propiedades de interfaz de solo lectura**  
  Puede implementar propiedades de interfaz de solo lectura mediante una propiedad de lectura y escritura.  La interfaz garantiza una funcionalidad mínima y no impide que una clase de implementación pueda establecer la propiedad.  
   
  [TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)  
  Para mejorar la legibilidad del código, ahora puede usar `TypeOf` con `IsNot`.  
   
- [#Disable Warning \<ID> y #Enable Warning \<ID>](../../visual-basic/language-reference/directives/directives.md)  
+ [#Disable Warning \<ID> y #Enable Warning \<ID>](../../visual-basic/language-reference/directives/index.md)  
  Puede deshabilitar y habilitar advertencias específicas para las regiones dentro de un archivo de origen.  
   
- Mejoras de comentarios de documento XML  
+ **Mejoras de comentarios de documento XML**  
  Al escribir comentarios de documento, obtiene compatibilidad inteligente de editor y compilación para validar nombres de parámetro, controlar adecuadamente `crefs` (genéricos, operadores, etc.), colorear y refactorizar.  
   
  [Definiciones de módulo parcial e interfaz](../../visual-basic/language-reference/modifiers/partial.md)  
@@ -189,10 +189,10 @@ Puede colocar comentarios después de las continuaciones de línea implícita, d
  [Las definiciones de invalidaciones son implícitamente sobrecargas](../../visual-basic/language-reference/modifiers/overrides.md)  
  Si agrega el modificador `Overrides` a una definición, el compilador agrega implícitamente `Overloads`, de modo que pueda escribir menos código en los casos comunes.  
   
- CObj permitido en argumentos de atributos  
+ **CObj permitido en argumentos de atributos**  
  El compilador solía producir un error advirtiendo de que CObj(...) no era una constante cuando se usaba en construcciones de atributo.  
   
- Declarar y consumir métodos ambiguos de distintas interfaces  
+ **Declaración y consumo de métodos ambiguos desde otras interfaces**  
  Anteriormente, en el código siguiente producía errores que impedían declarar `IMock` o llamar a `GetDetails` (si estos se habían declarado en C#):  
   
 ```vb  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14bb5cd242a45b98a23a9d807b22aa4487d2591e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 869d64902c53e20667907b99276b9f8c6f3a2e20
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392195"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932854"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guía de implementación de .NET Framework para desarrolladores
 En este tema se proporciona información a los desarrolladores que quieren instalar cualquier versión de NET Framework a partir de .NET Framework 4.5 en [!INCLUDE[net_current](../../../includes/net-current-version.md)] con sus aplicaciones.
@@ -47,7 +47,7 @@ Para obtener vínculos de descarga, vea la sección [Paquetes redistribuibles](#
 
 - [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y sus versiones secundarias se compilan de forma incremental en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Al instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o sus versiones posteriores en un sistema que tenga instalado [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], los ensamblados de la versión 4 se reemplazan con nuevas versiones.
 
-- Si hace referencia a un [paquete fuera de banda](http://msdn.microsoft.com/library/dn151288\(v=vs.110\).aspx) de Microsoft en su aplicación, el ensamblado se incluirá en el paquete de la aplicación.
+- Si hace referencia a un [paquete fuera de banda](../get-started/the-net-framework-and-out-of-band-releases.md) de Microsoft en su aplicación, el ensamblado se incluirá en el paquete de la aplicación.
 
 - Debe tener privilegios de administrador para instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y las versiones secundarias.
 
@@ -80,7 +80,7 @@ Para obtener vínculos de descarga, vea la sección [Paquetes redistribuibles](#
 |Tamaño de la descarga|Menor (incluye solo el instalador para la plataforma de destino)*|Mayor*|
 |Paquetes de idioma|Se incluye**|Debe [instalarse por separado](#chain_langpack), a menos que utilice el paquete destinado a todos los sistemas operativos|
 |Método de implementación|Admite todos los métodos:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Instalación manual](#installing_manually)<br />- [Instalación personalizada (encadenamiento)](#chaining)|Admite todos los métodos:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Instalación manual](#installing_manually)<br />- [Instalación personalizada (encadenamiento)](#chaining)|
-|Ubicación de descarga para la implementación de ClickOnce|Centro de descarga de Microsoft:<br /><br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Su propio servidor o el Centro de descarga de Microsoft:<br /><br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
+|Ubicación de descarga para la implementación de ClickOnce|Centro de descarga de Microsoft:<br /><br /> - [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Su propio servidor o el Centro de descarga de Microsoft:<br /><br /> - [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
  \* El tamaño del instalador sin conexión es mayor porque contiene componentes para todas las plataformas de destino. Cuando termine de ejecutar la instalación, el sistema operativo Windows almacenará en caché solo el instalador que se utilizó. Si se elimina el instalador sin conexión después de la instalación, el espacio en disco utilizado es el mismo que el instalador web utiliza. Si la herramienta que utiliza (por ejemplo, [InstallAware](#installaware-deployment) or [InstallShield](#installshield-deployment)) para crear el programa de instalación de la aplicación proporciona una carpeta de archivos de configuración que se quita después de la instalación, el instalador sin conexión se puede eliminar automáticamente colocándolo en la carpeta de configuración.
 
@@ -247,14 +247,14 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Versión|Valor DWORD de la versión|
 |-------------|--------------------------------|
-|.NET Framework 4.7.2 instalado en la Actualización de abril de 2018 de Windows 10|461808|
-|.NET Framework 4.7.2 instalado en todas las versiones del sistema operativo diferentes de la Actualización de abril de 2018 de Windows 10|461814|
-|.NET Framework 4.7.1 instalado en Windows 10 Fall Creators Update|461308|
-|.NET Framework 4.7.1 instalado en todas las versiones del sistema operativo diferentes de Windows 10 Fall Creators Update|461310|
+|.NET Framework 4.7.2 instalado en la Actualización de abril de 2018 de Windows 10 y en Windows Server, versión 1803|461808|
+|.NET Framework 4.7.2 instalado en todas las versiones del sistema operativo diferentes de la Actualización de abril de 2018 de Windows 10 y Windows Server, versión 1803|461814|
+|.NET Framework 4.7.1 instalado en Windows 10 Fall Creators Update y en Windows Server, versión 1709|461308|
+|.NET Framework 4.7.1 instalado en todas las versiones del sistema operativo diferentes de Windows 10 Fall Creators Update y Windows Server, versión 1709|461310|
 |.NET Framework 4.7 instalado en Windows 10 Creators Update|460798|
 |.NET Framework 4.7 instalado en todas las versiones del sistema operativo diferentes de Windows 10 Creators Update|460805|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado en la actualización de aniversario de Windows 10|394802|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado en todas las versiones de sistema operativo diferentes de la actualización de aniversario de Windows 10|394806|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado en Windows 10 Anniversary Edition y en Windows Server 2016|394802|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado en todas las versiones de sistema operativo diferentes de Windows 10 Anniversary Edition y Windows Server 2016|394806|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] instalado en la actualización de noviembre de Windows 10|394254|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] instalado en todas las versiones del sistema operativo diferentes de la actualización de noviembre de Windows 10|394271|
 |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] instalado en Windows 10|393295|
@@ -319,7 +319,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 #### <a name="return-codes"></a>Códigos de retorno
  En la tabla siguiente se muestra una lista de los códigos de retorno más comunes del instalador redistribuible de .NET Framework. Los códigos devueltos son los mismos para todas las versiones del instalador. Para obtener vínculos a la información detallada, vea la sección siguiente.
 
-|Código devuelto|Description|
+|Código devuelto|Descripción|
 |-----------------|-----------------|
 |0|La instalación se completó correctamente.|
 |1602|El usuario canceló la instalación.|
@@ -355,7 +355,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 ### <a name="command-line-options"></a>Opciones de la línea de comandos
  En la tabla siguiente se muestran las opciones que se pueden incluir cuando se encadenan paquetes redistribuibles de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] al programa de instalación de una aplicación.
 
-|Opción|Description|
+|Opción|Descripción|
 |------------|-----------------|
 |**/CEIPConsent**|Sobrescribe el comportamiento predeterminado y envía comentarios anónimos a Microsoft para mejorar las experiencias de implementación futuras. Se puede utilizar esta opción solamente si el programa de instalación solicita el consentimiento y si el usuario concede el permiso para enviar comentarios anónimos a Microsoft.|
 |**/chainingpackage** `packageName`|Especifica el nombre del archivo ejecutable que realiza el encadenamiento. Esta información se envía a Microsoft como comentarios anónimos para ayudar a mejorar las experiencias de implementación futuras.<br /><br /> Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Lucerne Publishing"**. Para obtener un ejemplo de un paquete de encadenamiento, vea [Obtener información de progreso de un paquete de instalación](http://go.microsoft.com/fwlink/?LinkId=181926) en MSDN Library.|

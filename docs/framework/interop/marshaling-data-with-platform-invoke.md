@@ -1,6 +1,6 @@
 ---
 title: Serialización de datos con invocación de plataforma
-ms.date: 03/30/2017
+ms.date: 07/31/2018
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0501bb2b67c6bbe23c46dc350aedea7d7be09ba1
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391321"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911736"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Serialización de datos con invocación de plataforma
 Para llamar a las funciones exportadas desde una biblioteca no administrada, una aplicación de .NET Framework requiere un prototipo de función en código administrado que representa la función no administrada. Para crear un prototipo que permita a la invocación de plataforma serializar los datos correctamente, debe hacer lo siguiente:  
@@ -31,9 +31,10 @@ Para llamar a las funciones exportadas desde una biblioteca no administrada, una
 ## <a name="platform-invoke-data-types"></a>Tipos de datos de invocación de plataforma  
  En la tabla siguiente se enumeran los tipos de datos usados en las funciones de estilo C y en la API Win32 (incluida en el archivo Wtypes.h). Muchas bibliotecas no administradas contienen funciones que pasan estos tipos de datos como parámetros y valores devueltos. La tercera columna muestra la clase o el tipo de valor integrado de .NET Framework correspondiente que se usa en el código administrado. En algunos casos, puede sustituir un tipo del mismo tamaño por el tipo indicado en la tabla.  
   
-|Tipo no administrado en Wtypes.h|Tipo de lenguaje C no administrado|Nombre de clase administrada|Description|  
+|Tipo no administrado en Wtypes.h|Tipo de lenguaje C no administrado|Nombre de clase administrada|Descripción|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|32 bits en sistemas de operativos Windows de 32 bits, 64 bits en sistemas operativos Windows de 64 bits.|  
+|**VOID**|**void**|<xref:System.Void?displayProperty=nameWithType>|Se aplica a una función que no devuelve un valor.|
+|**HANDLE**|**void \***|<xref:System.IntPtr?displayProperty=nameWithType>|32 bits en sistemas de operativos Windows de 32 bits, 64 bits en sistemas operativos Windows de 64 bits.|  
 |**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 bits|  
 |**SHORT**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 bits|  
 |**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|16 bits|  
@@ -45,10 +46,10 @@ Para llamar a las funciones exportadas desde una biblioteca no administrada, una
 |**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 bits|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|Decorar con ANSI.|  
 |**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|Decorar con Unicode.|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=nameWithType> o <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decorar con ANSI.|  
+|**LPSTR**|**char \***|<xref:System.String?displayProperty=nameWithType> o <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decorar con ANSI.|  
 |**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> o <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decorar con ANSI.|  
-|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=nameWithType> o <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decorar con Unicode.|  
-|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=nameWithType> o <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decorar con Unicode.|  
+|**LPWSTR**|**wchar_t \***|<xref:System.String?displayProperty=nameWithType> o <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decorar con Unicode.|  
+|**LPCWSTR**|**Const wchar_t \***|<xref:System.String?displayProperty=nameWithType> o <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decorar con Unicode.|  
 |**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32 bits|  
 |**DOUBLE**|**Double**|<xref:System.Double?displayProperty=nameWithType>|64 bits|  
   

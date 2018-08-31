@@ -1,6 +1,6 @@
 ---
 title: Procedimientos recomendados para el uso de cadenas en .NET
-ms.date: 03/30/2017
+ms.date: 08/22/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bdc23c909be0f9df051d538ca93cbb0a8e31426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14945cc6812e4bcb14085656337c7df1abc0a5bf
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579735"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000156"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedimientos recomendados para el uso de cadenas en .NET
 <a name="top"></a> .NET proporciona una gran compatibilidad para desarrollar aplicaciones localizadas y globalizadas, y simplifica la aplicación de las convenciones de la referencia cultural actual o de una referencia cultural concreta al realizar operaciones comunes como ordenar y mostrar cadenas. Pero ordenar o comparar cadenas no es siempre una operación dependiente de la referencia cultural. Por ejemplo, las cadenas usadas internamente por una aplicación normalmente se deben administrar de forma idéntica en todas las referencias culturales. Cuando los datos de cadenas independientes de la referencia cultural (como etiquetas XML, etiquetas HTML, nombres de usuario, rutas de acceso de archivos y nombres de objetos del sistema) se interpretan como si fueran dependientes de la referencia cultural, el código de aplicación puede estar sujeto a errores imperceptibles, un rendimiento inadecuado y, en algunos casos, a problemas de seguridad.  
@@ -85,7 +85,7 @@ ms.locfileid: "33579735"
 ## <a name="specifying-string-comparisons-explicitly"></a>Especificar comparaciones de cadenas explícitamente  
  La mayoría de los métodos de manipulación de cadenas de .NET están sobrecargados. Normalmente, una o más sobrecargas aceptan la configuración predeterminada, mientras que otras no aceptan ningún valor predeterminado y en su lugar definen la manera precisa en la que se van a comparar o manipular las cadenas. La mayoría de los métodos que no confían en los valores predeterminados incluye un parámetro de tipo <xref:System.StringComparison>, que es una enumeración que especifica explícitamente reglas para la comparación de cadenas por referencia cultural y uso de mayúsculas y minúsculas. En la tabla siguiente se describen los miembros de la enumeración <xref:System.StringComparison> .  
   
-|Miembro de StringComparison|Description|  
+|Miembro de StringComparison|Descripción|  
 |-----------------------------|-----------------|  
 |<xref:System.StringComparison.CurrentCulture>|Realiza una comparación con distinción entre mayúsculas y minúsculas usando la referencia cultural actual.|  
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Realiza una comparación sin distinción entre mayúsculas y minúsculas usando la referencia cultural actual.|  
@@ -121,7 +121,10 @@ ms.locfileid: "33579735"
 <a name="the_details_of_string_comparison"></a>   
 ## <a name="the-details-of-string-comparison"></a>Detalles de la comparación de cadenas  
  La comparación de cadenas es el corazón de muchas operaciones relacionadas con cadenas, especialmente la ordenación y la comprobación de igualdad. Las cadenas se ordenan en un orden determinado: si "mi" aparece antes que "cadena" en una lista ordenada de cadenas, "mi" debe compararse como menor o igual que "cadena". Además, la comparación define la igualdad implícitamente. La operación de comparación devuelve cero para las cadenas que considera iguales. Una buena interpretación es que ninguna cadena es menor que otra. La mayoría de las operaciones significativas que implican cadenas incluyen uno o ambos de estos procedimientos: comparar con otra cadena y ejecutar una operación de ordenación bien definida.  
-  
+
+> [!NOTE]
+> Puede descargar las [tablas de pesos de ordenación](https://www.microsoft.com/en-us/download/details.aspx?id=10921), un conjunto de archivos de texto que contienen información sobre los pesos de caracteres que se usan en las operaciones de ordenación y comparación para los sistemas operativos Windows.
+
  Sin embargo, la evaluación de dos cadenas para comprobar su igualdad o su criterio de ordenación no produce ningún resultado correcto único; el resultado depende de los criterios empleados para comparar las cadenas. En especial, las comparaciones de cadenas que son ordinales o que se basan en las convenciones de ordenación y uso de mayúsculas y minúsculas de la referencia cultural actual o de la referencia cultural de todos los idiomas (una referencia cultural válida para la configuración regional basada en el idioma inglés) pueden producir resultados diferentes.  
   
 <a name="current_culture"></a>   

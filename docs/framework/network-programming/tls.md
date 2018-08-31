@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: 41814129d038f8cb1ab98db0c7a4e0cbd7e7cd54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397265"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925509"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework
 
@@ -119,7 +119,7 @@ Debe instalar las revisiones más recientes del sistema operativo. Consulte [Act
 
 La plataforma de WCF elige automáticamente el protocolo más alto disponible hasta TLS 1.2, a menos que configure explícitamente una versión de protocolo. Para obtener más información, consulte la sección anterior [Para transporte TCP de WCF que usa seguridad de transporte con credenciales de certificado](#wcf-tcp-cert).
 
-### <a name="for-net-framework-35---451-and-not-wcf"></a>Para .NET Framework 3.5 - 4.5.1 y no WFC
+### <a name="for-net-framework-35---452-and-not-wcf"></a>Para .NET Framework 3.5 - 4.5.2 y no WCF
 
 Se recomienda que actualice la aplicación a .NET Framework 4.7 o versiones posteriores. Si no puede actualizar, siga estos pasos. En algún momento en el futuro, la aplicación puede producir un error hasta que actualice a .NET Framework 4.7 o versiones posteriores.
 

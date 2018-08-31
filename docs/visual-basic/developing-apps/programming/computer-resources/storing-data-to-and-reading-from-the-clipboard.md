@@ -9,11 +9,12 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-ms.openlocfilehash: eb8ae25f260ed434c4aafcc064be8fb6bebaaac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7964a39bb84ac6af6b6c196c053f51c30301985c
+ms.sourcegitcommit: 8c6c62ba1eefa492701e264e41890ee20fae77a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42792339"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Almacenar y leer datos en el Portapapeles (Visual Basic)
 El Portapapeles se puede usar para almacenar datos, como texto e imágenes. Dado que todos los procesos activos comparten el Portapapeles, se puede usar para transferir datos entre ellos. El objeto `My.Computer.Clipboard` permite acceder fácilmente al Portapapeles y leer y escribir en él.  
@@ -56,7 +57,7 @@ El Portapapeles se puede usar para almacenar datos, como texto e imágenes. Dado
   
  [!code-vb[VbVbcnMyClipboard#2](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_6.vb)]  
   
- Use el método <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> para escribir datos en el Portapapeles. Este ejemplo escribe `DataObject``dataChunk` en el Portapapeles en el formato personalizado `specialFormat`.  
+ Use el método <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> para escribir datos en el Portapapeles. En este ejemplo se escribe el `DataObject` `dataChunk` en el Portapapeles con el formato personalizado `specialFormat`.  
   
  [!code-vb[VbVbcnMyClipboard#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_7.vb)]  
   

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314648"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931558"
 ---
 # <a name="tour-of-net"></a>Paseo por .NET
 
@@ -79,7 +79,7 @@ La seguridad de tipos también se usa para ayudar a aplicar la encapsulación a 
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#, VB y F# admiten la *inferencia de tipo* de variable local. La inferencia de tipos significa que el compilador deduce el tipo de la expresión en el lado izquierdo a partir de la expresión en el lado derecho. Esto no significa que la seguridad de tipos se divida o evite. El tipo resultante tiene un tipo seguro con todo lo que ello implica. En el ejemplo anterior, `dog` y `cat` se vuelven a escribir para introducir la inferencia de tipos, y el resto del ejemplo no se ha modificado:
+C#, VB y F# admiten la *inferencia de tipo* de variable local. La inferencia de tipos significa que el compilador deduce el tipo de la expresión en el lado izquierdo a partir de la expresión en el lado derecho. Esto no significa que la seguridad de tipos se divida o evite. El tipo resultante tiene un tipo seguro con todo lo que ello implica. En el ejemplo anterior, se vuelve a escribir `dog` para introducir la inferencia de tipos, y el resto del ejemplo no se modifica:
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 

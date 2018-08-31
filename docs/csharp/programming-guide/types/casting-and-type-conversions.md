@@ -9,19 +9,20 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 0c17fc89d93bdbb01bdef7935e72f8a7d96b0a55
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 971f85b2cabe79237ff62eb36de43873df1d2ae5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296148"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933592"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Conversiones de tipos (Guía de programación de C#)
-Dado que C# tiene tipos estáticos en tiempo de compilación, después de declarar una variable, no se puede volver a declarar ni usar para almacenar valores de otro tipo a menos que ese tipo sea convertible al tipo de la variable. Por ejemplo, no hay ninguna conversión de un entero a una cadena arbitraria. Por tanto, después de declarar `i` como un entero, no se le puede asignar la cadena "Hello", como se muestra en el código siguiente.  
+
+Dado que C# tiene tipos estáticos en tiempo de compilación, después de declarar una variable, no se puede volver a declarar ni se le puede asignar un valor de otro tipo a menos que ese tipo sea convertible de forma implícita al tipo de la variable. Por ejemplo, `string` no se puede convertir de forma implícita a `int`. Por tanto, después de declarar `i` como un valor `int`, no se le puede asignar la cadena "Hello", como se muestra en el código siguiente:
   
 ```csharp  
 int i;  
-i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"  
+i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
 ```  
   
  Pero es posible que en ocasiones sea necesario copiar un valor en una variable o parámetro de método de otro tipo. Por ejemplo, es posible que tenga una variable de entero que se necesita pasar a un método cuyo parámetro es de tipo `double`. O es posible que tenga que asignar una variable de clase a una variable de tipo de interfaz. Estos tipos de operaciones se denominan *conversiones de tipos*. En C#, se pueden realizar las siguientes conversiones de tipos:  
@@ -35,7 +36,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
 -   **Conversiones con clases auxiliares**: para realizar conversiones entre tipos no compatibles, como enteros y objetos <xref:System.DateTime?displayProperty=nameWithType>, o cadenas hexadecimales y matrices de bytes, puede usar la clase <xref:System.BitConverter?displayProperty=nameWithType>, la clase <xref:System.Convert?displayProperty=nameWithType> y los métodos `Parse` de los tipos numéricos integrados, como <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Para obtener más información, vea [Cómo: Convertir una matriz de bytes en un valor int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [Cómo: Convertir una cadena en un número](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) y [Cómo: Convertir cadenas hexadecimales en tipos numéricos](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
 ## <a name="implicit-conversions"></a>Conversiones implícitas  
- Para los tipos numéricos integrados, se puede realizar una conversión implícita cuando el valor que se va a almacenar se puede encajar en la variable sin truncarse ni redondearse. Por ejemplo, una variable de tipo [long](../../../csharp/language-reference/keywords/long.md) (entero de 8 bytes) puede almacenar cualquier valor que un [int](../../../csharp/language-reference/keywords/int.md) (4 bytes en un equipo de 32 bits) pueda almacenar. En el ejemplo siguiente, el compilador convierte implícitamente el valor de la derecha a un tipo `long` antes de asignarlo a `bigNum`.  
+ Para los tipos numéricos integrados, se puede realizar una conversión implícita cuando el valor que se va a almacenar se puede encajar en la variable sin truncarse ni redondearse. Por ejemplo, una variable de tipo [long](../../../csharp/language-reference/keywords/long.md) (entero de 64 bits) puede almacenar cualquier valor que un tipo [int](../../../csharp/language-reference/keywords/int.md) (entero de 32 bits) pueda almacenar. En el ejemplo siguiente, el compilador convierte de forma implícita el valor de `num` en la parte derecha a un tipo `long` antes de asignarlo a `bigNum`.  
   
  [!code-csharp[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
   

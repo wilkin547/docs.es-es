@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: fc15818883736015419f8599d482185bbab5120a
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 5d1860a5703c79bd77331cfd821c3bff69f317ff
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960522"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925823"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guía de programación de C#)
 Los finalizadores se usan para destruir instancias de clases.  
@@ -57,7 +57,9 @@ protected override void Finalize()
 > [!NOTE]
 >  Los finalizadores vacíos no deben usarse. Cuando una clase contiene un finalizador, se crea una entrada en la cola `Finalize`. Cuando se llama al finalizador, se invoca al recolector de elementos no utilizados para procesar la cola. Un finalizador vacío simplemente produce una pérdida de rendimiento innecesaria.  
   
- El programador no puede controlar cuándo se llama al finalizador, porque esto lo determina el recolector de elementos no utilizados. El recolector de elementos no utilizados comprueba si hay objetos que ya no están siendo usados por ninguna aplicación. Si considera un objeto elegible para su finalización, llama al finalizador (si existe) y reclama la memoria usada para almacenar el objeto. También se llama a los finalizadores cuando se cierra el programa.  
+ El programador no puede controlar cuándo se llama al finalizador, porque esto lo determina el recolector de elementos no utilizados. El recolector de elementos no utilizados comprueba si hay objetos que ya no están siendo usados por ninguna aplicación. Si considera un objeto elegible para su finalización, llama al finalizador (si existe) y reclama la memoria usada para almacenar el objeto. 
+ 
+ En las aplicaciones de .NET Framework (pero no en las de .NET Core), cuando se cierra el programa también se llama a los finalizadores. 
   
  Es posible forzar la recolección de elementos no utilizados llamando a <xref:System.GC.Collect%2A>, pero en general debe evitarse su uso por razones de rendimiento.  
   

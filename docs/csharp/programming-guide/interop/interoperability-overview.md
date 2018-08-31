@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 747b2d420beeb63b89b21dd16d2977d12bc5d580
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: d14c196babb03b7f13dde6ab5b46508a30ba26d6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244194"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930789"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Información general sobre interoperabilidad (Guía de programación de C#)
 En el tema se describen métodos para habilitar la interoperabilidad entre el código administrado y el código no administrado de C#.  
@@ -24,7 +24,7 @@ En el tema se describen métodos para habilitar la interoperabilidad entre el c�
  Para obtener más información, vea [Consumir funciones DLL no administradas](../../../framework/interop/consuming-unmanaged-dll-functions.md) y [Cómo: Utilizar la invocación de plataforma para reproducir un archivo de sonido](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).  
   
 > [!NOTE]
->  [Common Language Runtime](../../../standard/clr.md) (CLR) administra el acceso a los recursos del sistema. Si se llama al código no administrado que está fuera de CLR, se omite este mecanismo de seguridad y, por lo tanto, existe un riesgo de seguridad. Por ejemplo, el código no administrado podría llamar directamente a recursos en código no administrado, omitiendo los mecanismos de seguridad de CLR. Para obtener más información, vea [Seguridad de .NET Framework](https://technet.microsoft.com/en-us/security/).  
+>  [Common Language Runtime](../../../standard/clr.md) (CLR) administra el acceso a los recursos del sistema. Si se llama al código no administrado que está fuera de CLR, se omite este mecanismo de seguridad y, por lo tanto, existe un riesgo de seguridad. Por ejemplo, el código no administrado podría llamar directamente a recursos en código no administrado, omitiendo los mecanismos de seguridad de CLR. Para obtener más información, vea [Seguridad en .NET](../../../standard/security/index.md).  
   
 ## <a name="c-interop"></a>Interoperabilidad de C++  
  Puede usar la interoperabilidad de C++, también conocida como It Just Works (IJW), para encapsular una clase de C++ nativa de modo que el código creado en C# o en otro lenguaje de .NET Framework pueda consumirla. Para ello, escriba código de C++ para encapsular un componente DLL o COM nativo. A diferencia de otros lenguajes de .NET Framework, [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] cuenta con compatibilidad de interoperabilidad que permite que haya código administrado y no administrado en la misma aplicación, e incluso en el mismo archivo. Después, compile el código de C++ mediante el modificador del compilador **/clr** para generar un ensamblado administrado. Finalmente, agregue una referencia al ensamblado en el proyecto de C# y use los objetos encapsulados igual que usaría otras clases administradas.  
