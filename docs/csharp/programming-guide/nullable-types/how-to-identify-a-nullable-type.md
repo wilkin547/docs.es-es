@@ -1,51 +1,39 @@
 ---
 title: 'Cómo: Identificar tipos que aceptan valores NULL (Guía de programación de C#)'
-ms.date: 07/20/2015
+description: Obtenga información sobre cómo determinar si un tipo es un tipo que acepta valores NULL o una instancia es de un tipo que acepta valores NULL.
+ms.date: 08/06/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: f3ac4ebd77fc92a133eb326919d5ba55264ced97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb7ab2b8c13c2b8b4b6cd60e7959a391cd7e75c1
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333188"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754961"
 ---
-# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a><span data-ttu-id="dfb4f-102">Cómo: Identificar tipos que aceptan valores NULL (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="dfb4f-102">How to: Identify a Nullable Type (C# Programming Guide)</span></span>
-<span data-ttu-id="dfb4f-103">Puede usar el operador [typeof](../../../csharp/language-reference/keywords/typeof.md) de C# para crear un objeto <xref:System.Type> que represente un tipo que acepta valores NULL:</span><span class="sxs-lookup"><span data-stu-id="dfb4f-103">You can use the C# [typeof](../../../csharp/language-reference/keywords/typeof.md) operator to create a <xref:System.Type> object that represents a Nullable type:</span></span>  
+# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a><span data-ttu-id="54103-103">Cómo: Identificar tipos que aceptan valores NULL (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="54103-103">How to: Identify a nullable type (C# Programming Guide)</span></span>
+
+<span data-ttu-id="54103-104">En el ejemplo siguiente se muestra cómo determinar si una instancia de <xref:System.Type?displayProperty=nameWithType> representa un tipo que acepta valores NULL:</span><span class="sxs-lookup"><span data-stu-id="54103-104">The following example shows how to determine whether a <xref:System.Type?displayProperty=nameWithType> instance represents a nullable type:</span></span>
+
+[!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
+
+<span data-ttu-id="54103-105">Como se muestra en el ejemplo, se usa el operador [typeof](../../language-reference/keywords/typeof.md) para crear un objeto <xref:System.Type?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="54103-105">As the example shows, you use the [typeof](../../language-reference/keywords/typeof.md) operator to create a <xref:System.Type?displayProperty=nameWithType> object.</span></span>  
   
-```  
-System.Type type = typeof(int?);  
-```  
+<span data-ttu-id="54103-106">Si quiere determinar si una instancia es de un tipo que acepta valores NULL, no use el método <xref:System.Object.GetType%2A?displayProperty=nameWithType> para obtener una instancia de <xref:System.Type> para probarla con el código anterior.</span><span class="sxs-lookup"><span data-stu-id="54103-106">If you want to determine whether an instance is of a nullable type, don't use the <xref:System.Object.GetType%2A?displayProperty=nameWithType> method to get a <xref:System.Type> instance to be tested with the preceding code.</span></span> <span data-ttu-id="54103-107">Cuando se llama al método <xref:System.Object.GetType%2A?displayProperty=nameWithType> en una instancia de un tipo que acepta valores NULL, [se aplica la conversión boxing](using-nullable-types.md#boxing-and-unboxing) a la instancia para convertirla en <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="54103-107">When you call the <xref:System.Object.GetType%2A?displayProperty=nameWithType> method on an instance of a nullable type, the instance is [boxed](using-nullable-types.md#boxing-and-unboxing) to <xref:System.Object>.</span></span> <span data-ttu-id="54103-108">Como la conversión boxing de una instancia que no es NULL de un tipo que acepta valores NULL equivale la conversión boxing de un valor del tipo subyacente, <xref:System.Object.GetType%2A> devuelve un objeto <xref:System.Type> que representa el tipo subyacente de un tipo que acepta valores NULL:</span><span class="sxs-lookup"><span data-stu-id="54103-108">As boxing of a non-null instance of a nullable type is equivalent to boxing of a value of the underlying type, <xref:System.Object.GetType%2A> returns a <xref:System.Type> object that represents the underlying type of a nullable type:</span></span>
+
+[!code-csharp-interactive[GetType example](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#2)]
+
+<span data-ttu-id="54103-109">No use el operador [is](../../language-reference/keywords/is.md) para determinar si una instancia es de un tipo que acepta valores NULL.</span><span class="sxs-lookup"><span data-stu-id="54103-109">Don't use the [is](../../language-reference/keywords/is.md) operator to determine whether an instance is of a nullable type.</span></span> <span data-ttu-id="54103-110">Como se muestra en el ejemplo siguiente, no se pueden distinguir los tipos de instancias de un tipo que acepta valores NULL y su tipo subyacente mediante el operador `is`:</span><span class="sxs-lookup"><span data-stu-id="54103-110">As the following example shows, you cannot distinguish types of instances of a nullable type and its underlying type with using the `is` operator:</span></span>
+
+[!code-csharp-interactive[is operator example](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#3)]
+
+<span data-ttu-id="54103-111">Se puede usar el código que se presenta en el ejemplo siguiente para determinar si una instancia es de un tipo que acepta valores NULL:</span><span class="sxs-lookup"><span data-stu-id="54103-111">You can use the code presented in the following example to determine whether an instance is of a nullable type:</span></span>
+
+[!code-csharp-interactive[whether an instance is of a nullable type](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#4)]
   
- <span data-ttu-id="dfb4f-104">También puede usar las clases y métodos del espacio de nombres <xref:System.Reflection> para generar objetos <xref:System.Type> que representen tipos que aceptan valores NULL.</span><span class="sxs-lookup"><span data-stu-id="dfb4f-104">You can also use the classes and methods of the <xref:System.Reflection> namespace to generate <xref:System.Type> objects that represent Nullable types.</span></span> <span data-ttu-id="dfb4f-105">En cambio, si intenta obtener información de tipo de las variables que aceptan valores NULL en tiempo de ejecución mediante el método <xref:System.Object.GetType%2A> o el operador `is`, el resultado será un objeto <xref:System.Type> que representa el tipo subyacente y no el propio tipo que acepta valores NULL.</span><span class="sxs-lookup"><span data-stu-id="dfb4f-105">However, if you try to obtain type information from Nullable variables at runtime by using the <xref:System.Object.GetType%2A> method or the `is` operator, the result is a <xref:System.Type> object that represents the underlying type, not the Nullable type itself.</span></span>  
-  
- <span data-ttu-id="dfb4f-106">La llamada a `GetType` en un tipo que acepta valores NULL origina que se ejecute una operación de conversión boxing cuando el tipo se convierte implícitamente en <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="dfb4f-106">Calling `GetType` on a Nullable type causes a boxing operation to be performed when the type is implicitly converted to <xref:System.Object>.</span></span> <span data-ttu-id="dfb4f-107">Por consiguiente, <xref:System.Object.GetType%2A> siempre devuelve un objeto <xref:System.Type> que representa el tipo subyacente y no el tipo que acepta valores NULL.</span><span class="sxs-lookup"><span data-stu-id="dfb4f-107">Therefore <xref:System.Object.GetType%2A> always returns a <xref:System.Type> object that represents the underlying type, not the Nullable type.</span></span>  
-  
-```  
-int? i = 5;  
-Type t = i.GetType();  
-Console.WriteLine(t.FullName); //"System.Int32"  
-```  
-  
- <span data-ttu-id="dfb4f-108">El operador [is](../../../csharp/language-reference/keywords/is.md) de C# funciona también en el tipo subyacente de un tipo que acepta valores NULL.</span><span class="sxs-lookup"><span data-stu-id="dfb4f-108">The C# [is](../../../csharp/language-reference/keywords/is.md) operator also operates on a Nullable's underlying type.</span></span> <span data-ttu-id="dfb4f-109">Por tanto, no puede usar `is` para determinar si una variable es un tipo que acepta valores NULL.</span><span class="sxs-lookup"><span data-stu-id="dfb4f-109">Therefore you cannot use `is` to determine whether a variable is a Nullable type.</span></span> <span data-ttu-id="dfb4f-110">En el ejemplo siguiente se muestra que el operador `is` trata una variable \<int> que acepta valores NULL como un valor int.</span><span class="sxs-lookup"><span data-stu-id="dfb4f-110">The following example shows that the `is` operator treats a Nullable\<int> variable as an int.</span></span>  
-  
-```  
-static void Main(string[] args)  
-{  
-  int? i = 5;  
-  if (i is int) // true  
-    //…  
-}  
-```  
-  
-## <a name="example"></a><span data-ttu-id="dfb4f-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="dfb4f-111">Example</span></span>  
- <span data-ttu-id="dfb4f-112">Use el código siguiente para determinar si un objeto <xref:System.Type> representa un tipo que acepta valores NULL.</span><span class="sxs-lookup"><span data-stu-id="dfb4f-112">Use the following code to determine whether a <xref:System.Type> object represents a Nullable type.</span></span> <span data-ttu-id="dfb4f-113">Recuerde que este código siempre devuelve false si el objeto `Type` se devuelve de una llamada a <xref:System.Object.GetType%2A>, como se ha explicado anteriormente en este mismo tema.</span><span class="sxs-lookup"><span data-stu-id="dfb4f-113">Remember that this code always returns false if the `Type` object was returned from a call to <xref:System.Object.GetType%2A>, as explained earlier in this topic.</span></span>  
-  
-```  
-if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>)) {…}  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="dfb4f-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="dfb4f-114">See Also</span></span>  
- [<span data-ttu-id="dfb4f-115">Tipos que aceptan valores NULL</span><span class="sxs-lookup"><span data-stu-id="dfb4f-115">Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/index.md)  
- [<span data-ttu-id="dfb4f-116">Aplicar la conversión boxing a tipos que aceptan valores NULL</span><span class="sxs-lookup"><span data-stu-id="dfb4f-116">Boxing Nullable Types</span></span>](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)
+## <a name="see-also"></a><span data-ttu-id="54103-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="54103-112">See also</span></span>
+
+<span data-ttu-id="54103-113">[Nullable types](index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])</span><span class="sxs-lookup"><span data-stu-id="54103-113">[Nullable types](index.md)</span></span>  
+[<span data-ttu-id="54103-114">Uso de tipos que aceptan valores NULL</span><span class="sxs-lookup"><span data-stu-id="54103-114">Using nullable types</span></span>](using-nullable-types.md)  
+<xref:System.Nullable.GetUnderlyingType%2A>  

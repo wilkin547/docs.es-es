@@ -8,17 +8,17 @@ ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c10cff979a18d8e07a1e7089f96157e4c38f040e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 244315b5df4200524685bc5b9fb75a0d7fd9b39e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393911"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930833"
 ---
-# <a name="how-to-override-a-global-proxy-selection"></a><span data-ttu-id="a1c26-102">Cómo: Reemplazar una selección del Proxy Global</span><span class="sxs-lookup"><span data-stu-id="a1c26-102">How to: Override a Global Proxy Selection</span></span>
-<span data-ttu-id="a1c26-103">Este ejemplo envía **WebRequest** a www.contoso.com que reemplaza la selección global de proxy con un servidor proxy denominado `alternateproxy` en el puerto 80.</span><span class="sxs-lookup"><span data-stu-id="a1c26-103">This example sends a **WebRequest** to www.contoso.com that overrides the global proxy selection with a proxy server named `alternateproxy` on port 80.</span></span>  
+# <a name="how-to-override-a-global-proxy-selection"></a><span data-ttu-id="255bb-102">Cómo: Reemplazar una selección del Proxy Global</span><span class="sxs-lookup"><span data-stu-id="255bb-102">How to: Override a Global Proxy Selection</span></span>
+<span data-ttu-id="255bb-103">Este ejemplo envía una **WebRequest** a `www.contoso.com` que reemplaza la selección global de proxy con un servidor proxy denominado `alternateproxy` en el puerto 80.</span><span class="sxs-lookup"><span data-stu-id="255bb-103">This example sends a **WebRequest** to `www.contoso.com` that overrides the global proxy selection with a proxy server named `alternateproxy` on port 80.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a1c26-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a1c26-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="255bb-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="255bb-104">Example</span></span>  
   
 ```csharp  
 WebRequest req = WebRequest.Create("http://www.contoso.com/");  
@@ -30,11 +30,11 @@ Dim req As WebRequest = WebRequest.Create("http://www.contoso.com/")
 req.Proxy = New WebProxy("http://alternateproxy:80/")  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a1c26-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="a1c26-105">Compiling the Code</span></span>  
- <span data-ttu-id="a1c26-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="a1c26-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="255bb-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="255bb-105">Compiling the Code</span></span>  
+ <span data-ttu-id="255bb-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="255bb-106">This example requires:</span></span>  
   
--   <span data-ttu-id="a1c26-107">Referencias al espacio de nombres **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="a1c26-107">References to the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="255bb-107">Una [directiva `using`](~/docs/csharp/language-reference/keywords/using-directive.md) para el espacio de nombres **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="255bb-107">A [`using` directive](~/docs/csharp/language-reference/keywords/using-directive.md) for the **System.Net** namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a1c26-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="a1c26-108">See Also</span></span>  
- [<span data-ttu-id="a1c26-109">Usar protocolos de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="a1c26-109">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)  
- [<span data-ttu-id="a1c26-110">Acceso a Internet a través de un proxy</span><span class="sxs-lookup"><span data-stu-id="a1c26-110">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+## <a name="see-also"></a><span data-ttu-id="255bb-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="255bb-108">See Also</span></span>  
+ [<span data-ttu-id="255bb-109">Usar protocolos de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="255bb-109">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)  
+ [<span data-ttu-id="255bb-110">Acceso a Internet a través de un proxy</span><span class="sxs-lookup"><span data-stu-id="255bb-110">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
