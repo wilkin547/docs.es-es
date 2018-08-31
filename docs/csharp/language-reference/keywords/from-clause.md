@@ -8,12 +8,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: 6efcdb720e0d83e69df647c5176feaa9dcc9b023
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: c8c124f44df292b8323560cce541cca2765e2790
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754001"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003221"
 ---
 # <a name="from-clause-c-reference"></a>from (Cláusula, Referencia de C#)
 
@@ -55,5 +55,5 @@ Para obtener más información sobre las operaciones de combinación que usan va
 
 ## <a name="see-also"></a>Vea también
 
-[Palabras clave para consultas (LINQ)](query-keywords.md)  
-[Language-Integrated Query (LINQ)](../../linq/index.md)  
+- [Palabras clave para consultas (LINQ)](query-keywords.md)  
+- [Language-Integrated Query (LINQ)](../../linq/index.md)  
