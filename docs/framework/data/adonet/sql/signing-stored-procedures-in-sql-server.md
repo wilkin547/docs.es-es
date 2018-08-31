@@ -2,24 +2,24 @@
 title: Firmar procedimientos almacenados en SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 98dfaa6d5293cb1ad85f70be3388fb333daef373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ef43f403a300e58a27df2de1f980dc8bcc58c02
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361083"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253649"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Firmar procedimientos almacenados en SQL Server
- Una firma digital es un resumen de datos cifrados con una clave privada del firmante. La clave privada garantiza que la firma digital sea única para su portador o propietario. Puede firmar los ensamblados, funciones (excepto funciones con valores de tabla insertadas), desencadenadores y procedimientos almacenados.  
+ Una firma digital es un resumen de datos cifrados con una clave privada del firmante. La clave privada garantiza que la firma digital sea única para su portador o propietario. Puede firmar los ensamblados, las funciones (excepto funciones con valores de tabla alineados), procedimientos almacenados y desencadenadores.  
   
- Puede firmar un procedimiento almacenado con un certificado o una clave asimétrica. Esto está diseñado para los casos en los que no se pueden heredar permisos mediante encadenamiento de propiedad o cuando la cadena de propiedad está rota, como en SQL dinámico. A continuación, puede crear un usuario asignado al certificado, cual concede permisos de usuario en los objetos que el procedimiento almacenado necesita tener acceso a.  
+ Puede firmar un procedimiento almacenado con un certificado o una clave asimétrica. Esto está diseñado para los casos en los que no se pueden heredar permisos mediante encadenamiento de propiedad o cuando la cadena de propiedad está rota, como en SQL dinámico. A continuación, puede crear un usuario asignado al certificado, cual concede permisos de usuario en el procedimiento almacenado necesita tener acceso a los objetos de.  
 
- Puede también crear un inicio de sesión asignado para el mismo certificado y, a continuación, conceder los permisos de nivel de servidor necesarios para ese inicio de sesión o agregue el inicio de sesión a uno o varios de los roles fijos de servidor. Esto está diseñado para evitar tener que habilitar la `TRUSTWORTHY` configuración para escenarios en los que se necesitan permisos de nivel superior de la base de datos.  
+ Puede también crear un inicio de sesión asignado para el mismo certificado y, a continuación, conceder los permisos de nivel de servidor necesarios para ese inicio de sesión o agregar el inicio de sesión a uno o varios de los roles fijos de servidor. Esto está diseñado para evitar tener que habilitar el `TRUSTWORTHY` configuración para escenarios en los que se necesitan permisos de nivel superior de la base de datos.  
   
- Cuando se ejecuta el procedimiento almacenado, SQL Server combina los permisos del usuario del certificado o del inicio de sesión con los del llamador. A diferencia de la `EXECUTE AS` cláusula, no cambia el contexto de ejecución del procedimiento. La funciones integradas que devuelven nombres de usuario e inicio de sesión devuelven el nombre del llamador, no el nombre de usuario del certificado.  
+ Cuando se ejecuta el procedimiento almacenado, SQL Server combina los permisos del inicio de sesión o usuario del certificado con los del llamador. A diferencia de la `EXECUTE AS` cláusula, no cambia el contexto de ejecución del procedimiento. La funciones integradas que devuelven nombres de usuario e inicio de sesión devuelven el nombre del llamador, no el nombre de usuario del certificado.  
   
 ## <a name="creating-certificates"></a>Crear certificados  
- Al firmar un procedimiento almacenado con un certificado o clave asimétrica, un resumen de datos que consta de hash cifrado de código del procedimiento almacenado, junto con el de ejecución-como usuario, se crea mediante la clave privada. En tiempo de ejecución, el resumen de datos se descifra con la clave pública y se compara con el valor hash del procedimiento almacenado. Cambiar el execute-como usuario invalida el valor hash para que ya no coincide con la firma digital. Modificar el procedimiento almacenado quita la firma por completo, lo que impide que alguien que no tiene acceso a la clave privada pueda cambiar el código de procedimiento almacenado. En cualquier caso, debe volver a firmar el procedimiento cada vez que cambie el código o el de ejecución-como usuario.  
+ Al iniciar sesión un procedimiento almacenado con un certificado o clave asimétrica, un resumen de datos que consta de hash cifrado de código del procedimiento almacenado, junto con la que se ejecute-como usuario, se crea mediante la clave privada. En tiempo de ejecución, el resumen de datos se descifra con la clave pública y se compara con el valor hash del procedimiento almacenado. Cambio que se ejecute-como usuario invalida el valor hash para que ya no coincide con la firma digital. Modificar el procedimiento almacenado quita la firma completamente, lo que impide que alguien que no tiene acceso a la clave privada de cambiar el código de procedimiento almacenado. En cualquier caso, debe volver a firmar el procedimiento cada vez que cambie el código o que se ejecute-como usuario.  
   
  Hay dos pasos implicados en la firma de un módulo:  
   
@@ -27,11 +27,11 @@ ms.locfileid: "33361083"
   
 1.  Firmar el procedimiento con el certificado utilizando la instrucción Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`.  
 
-Una vez que se haya firmado el módulo, debe crearse con el fin de mantener los permisos adicionales que se deben asociados con el certificado de una o más entidades.  
+Una vez que se ha firmado el módulo, debe crearse con el fin de mantener los permisos adicionales que se deben asociados con el certificado de una o más entidades.  
 
 Si el módulo necesita permisos de nivel de base de datos adicionales:  
   
-1.  Crear una base de datos asociada a un certificado utilizando la instrucción Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]`. Este usuario existe en la base de datos únicamente y no está asociado a un inicio de sesión a menos que un inicio de sesión también creada a partir de ese mismo certificado.  
+1.  Crear una base de datos asociada a un certificado utilizando la instrucción Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]`. Este usuario existe en la base de datos solo y no está asociado con un inicio de sesión a menos que también se creó un inicio de sesión desde ese mismo certificado.  
   
 1.  Conceder los permisos necesarios de nivel de base de datos de usuario del certificado.  
   
@@ -51,8 +51,8 @@ Si el módulo necesita permisos de nivel de servidor adicionales:
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[La firma de módulos](http://go.microsoft.com/fwlink/?LinkId=98590) en libros en pantalla de SQL Server|Describe la firma de módulos, con un caso de ejemplo, y proporciona vínculos a los temas importantes de Transact-SQL.|  
-|[Procedimientos almacenados con un certificado de firma](http://msdn.microsoft.com/library/bb283630.aspx) en libros en pantalla de SQL Server|Proporciona un tutorial sobre la firma de procedimientos almacenados con un certificado.|  
+|[La firma de módulos](http://go.microsoft.com/fwlink/?LinkId=98590) en los libros en pantalla de SQL Server|Describe la firma de módulos, con un caso de ejemplo, y proporciona vínculos a los temas importantes de Transact-SQL.|  
+|[Procedimientos almacenados con un certificado de firma](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) en los libros en pantalla de SQL Server|Proporciona un tutorial sobre la firma de procedimientos almacenados con un certificado.|  
   
 ## <a name="see-also"></a>Vea también  
  [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

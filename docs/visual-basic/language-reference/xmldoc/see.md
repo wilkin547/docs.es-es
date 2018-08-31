@@ -5,12 +5,12 @@ helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: e790f8abd216e198ff5077beab6f857e39981d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78311651593d3d4a47c723f64a9a74d4660f7c90
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602085"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254067"
 ---
 # <a name="ltseegt-visual-basic"></a>&lt;consulte&gt; (Visual Basic)
 Especifica un vínculo a otro miembro.  
@@ -31,9 +31,9 @@ Especifica un vínculo a otro miembro.
  Compile con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación a un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se utiliza la `<see>` etiqueta en el `UpdateRecord` remarks sección para hacer referencia a la `DoesRecordExist` método.  
+ Este ejemplo se usa el `<see>` etiquetar en el `UpdateRecord` comentarios la sección para hacer referencia a la `DoesRecordExist` método.  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/see_1.vb)]  
   
 ## <a name="see-also"></a>Vea también  
- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)

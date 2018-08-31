@@ -18,23 +18,23 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 894638bbe50dad2cae1f74a2f7b7fe006f029d1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54f7dcd7de28e8aaa5376bb4ddd67fd53518511e
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592124"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257957"
 ---
 # <a name="string-data-type-visual-basic"></a>String (Tipo de datos, Visual Basic)
-Contiene secuencias de puntos de código de (2 bytes) de 16 bits sin signo en ese intervalo con un valor comprendido entre 0 y 65535. Cada *punto de código*, o el código de carácter, representa un único carácter Unicode. Una cadena puede contener de 0 a dos mil millones (2 ^ 31) caracteres Unicode.  
+Contiene secuencias de puntos de código (2 bytes) de 16 bits sin signo de ese intervalo de valor comprendido entre 0 y 65535. Cada *punto de código*, o código de carácter representa un único carácter Unicode. Puede contener una cadena de 0 a dos mil millones (2 ^ 31) caracteres Unicode.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la `String` tipo de datos para contener varios caracteres sin la sobrecarga de administración de la matriz de `Char()`, una matriz de `Char` elementos.  
+ Use la `String` tipo de datos que contenga varios caracteres sin la sobrecarga de administración de la matriz de `Char()`, una matriz de `Char` elementos.  
   
- El valor predeterminado de `String` es `Nothing` (una referencia nula). Tenga en cuenta que esto no es igual a la cadena vacía (valor `""`).  
+ El valor predeterminado de `String` es `Nothing` (una referencia nula). Tenga en cuenta que esto no es igual que la cadena vacía (valor `""`).  
   
 ## <a name="unicode-characters"></a>Caracteres Unicode  
- Los primeros puntos de 128 código (0 – 127) de Unicode corresponden a las letras y símbolos de un teclado estándar de Estados Unidos. Estos primeros puntos de 128 código son las mismas que las define el juego de caracteres ASCII. Los siguientes puntos de 128 código (128 – 255) representan caracteres especiales, como letras de alfabetos latinos, acentos, símbolos de moneda y fracciones. Unicode utiliza los puntos de código restantes (256-65535) para una amplia variedad de símbolos. Esto incluye los caracteres de texto en todo el mundo, signos diacríticos y símbolos matemáticos y técnicos.  
+ Los primeros puntos de 128 código (0 – 127) de Unicode corresponden a las letras y símbolos en un teclado US estándar. Estos primeros puntos de 128 código son los mismos que los define el juego de caracteres ASCII. El segundo 128 puntos de código (128-255) representan caracteres especiales, como letras del alfabeto latino, acentos, símbolos de moneda y fracciones. Unicode utiliza los puntos de código restantes (256-65535) para una amplia variedad de símbolos. Esto incluye caracteres de texto de todo el mundo, los signos diacríticos y símbolos técnicos y matemáticos.  
   
  Puede usar métodos como <xref:System.Char.IsDigit%2A> y <xref:System.Char.IsPunctuation%2A> en un carácter individual en un `String` variable para determinar su clasificación Unicode.  
   
@@ -53,10 +53,10 @@ MsgBox("Joe said """ & h & """ to me.")
   
  Tenga en cuenta que las comillas contiguas que representan una comilla en la cadena son independientes de las comillas que comienzan y terminan la `String` literal.  
   
-## <a name="string-manipulations"></a>Manipulación de cadenas  
- Una vez que se asigna una cadena a un `String` variable, esa cadena es *inmutable*, lo cual significa que no puede cambiar su longitud ni su contenido. Cuando se modifica una cadena de cualquier manera, Visual Basic crea una nueva cadena y abandona la anterior. El `String` variable, apunta a la nueva cadena.  
+## <a name="string-manipulations"></a>Manipulaciones de cadenas  
+ Una vez que asigne una cadena a un `String` variable, esa cadena es *inmutable*, lo que significa que no puede cambiar su longitud ni su contenido. Cuando se modifica una cadena de cualquier manera, Visual Basic crea una nueva cadena y abandona la anterior. El `String` variable apunta a la nueva cadena.  
   
- Puede manipular el contenido de un `String` variable mediante una variedad de funciones de cadena. En el ejemplo siguiente se muestra el <xref:Microsoft.VisualBasic.Strings.Left%2A> (función)  
+ Puede manipular el contenido de un `String` variable mediante una variedad de funciones de cadena. El siguiente ejemplo ilustra el <xref:Microsoft.VisualBasic.Strings.Left%2A> (función)  
   
 ```  
 Dim S As String = "Database"  
@@ -64,23 +64,23 @@ Dim S As String = "Database"
 S = Microsoft.VisualBasic.Left(S, 4)  
 ```  
   
- Una cadena creada por otro componente puede completarse con espacios iniciales o finales. Si recibe este tipo de cadena, puede usar el <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, y <xref:Microsoft.VisualBasic.Strings.RTrim%2A> funciones para quitar estos espacios.  
+ Una cadena creada por otro componente podría estar rellena con espacios iniciales o finales. Si recibe este tipo de cadena, puede usar el <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, y <xref:Microsoft.VisualBasic.Strings.RTrim%2A> funciones para quitar estos espacios.  
   
- Para obtener más información acerca de la manipulación de cadenas, vea [cadenas](../../../visual-basic/programming-guide/language-features/strings/index.md).  
+ Para obtener más información acerca de las manipulaciones de cadenas, vea [cadenas](../../../visual-basic/programming-guide/language-features/strings/index.md).  
   
 ## <a name="programming-tips"></a>Sugerencias de programación  
   
--   **Números negativos.** Recuerde que los caracteres mantienen por `String` están firmados y no pueden representar valores negativos. En cualquier caso, no debe usar `String` para contener valores numéricos.  
+-   **Números negativos.** Recuerde que los caracteres mantienen por `String` están firmados y no puede representar los valores negativos. En cualquier caso, no debe utilizar `String` para contener valores numéricos.  
   
--   **Consideraciones de interoperabilidad.** Si interactúa con componentes que no se han escrito para .NET Framework, por ejemplo objetos de automatización o COM, recuerde que los caracteres de una cadena tienen un ancho de datos distinto (8 bits) en otros entornos. Al pasar un argumento de cadena de caracteres de 8 bits a esos componentes, declárelo como `Byte()`, una matriz de `Byte` elementos, en lugar de `String` en el código de Visual Basic.  
+-   **Consideraciones de interoperabilidad.** Si interactúa con componentes no escritos para .NET Framework, por ejemplo objetos de automatización o COM, recuerde que los caracteres de cadena tienen un ancho de datos diferentes (8 bits) en otros entornos. Si se pasa un argumento de cadena de caracteres de 8 bits a esos componentes, declárelo como `Byte()`, una matriz de `Byte` elementos, en lugar de `String` en el nuevo código de Visual Basic.  
   
--   **Caracteres de tipo.** Anexar el carácter de tipo identificador `$` a cualquier identificador, se convierte a la `String` tipo de datos. `String` no tiene ningún carácter de tipo literal. Sin embargo, el compilador trata los literales incluidos entre comillas (`" "`) como `String`.  
+-   **Caracteres de tipo.** Anexar el carácter de tipo identificador `$` a cualquier identificador lo fuerza a la `String` tipo de datos. `String` no tiene ningún carácter de tipo literal. Sin embargo, el compilador trata los literales incluidos entre comillas (`" "`) como `String`.  
   
--   **Tipo de Framework.** El tipo correspondiente en .NET Framework es la <xref:System.String?displayProperty=nameWithType> clase.  
+-   **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la <xref:System.String?displayProperty=nameWithType> clase.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.String?displayProperty=nameWithType>  
- [Tipos de datos](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)  
  [Char (tipo de datos)](../../../visual-basic/language-reference/data-types/char-data-type.md)  
  [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)  

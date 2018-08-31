@@ -9,15 +9,15 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 1ba51c51f30293e05dee17f9cf78cc049e1c751f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e91bf597e344dd09e80bee5787e92383065b654
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496291"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254586"
 ---
 # <a name="data-contract-versioning"></a>Versiones de contratos de datos
-A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los contratos de datos que utilizan los servicios. En este tema se explica cómo controlar las versiones de los contratos de datos. En este tema se describen los mecanismos de control de versiones de los contratos de datos. Para una información general completa y la orientación preceptiva del control de versiones, vea [procedimientos recomendados: control de versiones de contrato de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los contratos de datos que utilizan los servicios. En este tema se explica cómo controlar las versiones de los contratos de datos. En este tema se describen los mecanismos de control de versiones de los contratos de datos. Para una información general completa y una guía preceptiva del control de versiones, vea [procedimientos recomendados: control de versiones de contrato de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
 ## <a name="breaking-vs-nonbreaking-changes"></a>Cambios con interrupción y Cambios sin interrupción  
  Los cambios en un contrato de datos pueden ser con o sin interrupción. Cuando un contrato de datos se cambia de una manera sin interrupción, una aplicación que use la versión anterior del contrato puede comunicarse con una aplicación utilizando la versión más reciente y una aplicación que utilice la versión más reciente del contrato puede comunicarse con una aplicación que utilice la versión anterior. Por otro lado, un cambio con interrupción evita la comunicación en una o ambas direcciones.  
@@ -88,16 +88,16 @@ A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los 
 >  Aunque la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> se establezca en `true`, el dato entrante puede ser nulo o cero, y se debe preparar un tipo para afrontar esta posibilidad. No utilice <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> como mecanismo de seguridad frente a datos entrante no válidos.  
   
 ## <a name="omitted-default-values"></a>Valores predeterminados ignorados  
- Es posible (aunque no se recomienda) para establecer el `EmitDefaultValue` propiedad en el atributo DataMemberAttribute para `false`, tal y como se describe en [valores predeterminados de miembro de datos](../../../../docs/framework/wcf/feature-details/data-member-default-values.md). Si este valor es `false`, no se emitirá el miembro de datos si está establecido en su valor predeterminado (normalmente null o cero). Esto no es compatible con miembros de datos necesarios en versiones diferentes de dos maneras:  
+ Es posible (aunque no se recomienda) para establecer el `EmitDefaultValue` propiedad del atributo DataMemberAttribute en `false`, tal y como se describe en [valores predeterminados de datos miembro](../../../../docs/framework/wcf/feature-details/data-member-default-values.md). Si este valor es `false`, no se emitirá el miembro de datos si está establecido en su valor predeterminado (normalmente null o cero). Esto no es compatible con miembros de datos necesarios en versiones diferentes de dos maneras:  
   
 -   Un contrato de datos con un miembro de datos necesario en una versión no puede recibir datos predeterminados (null o cero) de una versión diferente en la que el miembro de datos tenga `EmitDefaultValue` establecido en `false`.  
   
 -   Un miembro de datos necesario que tiene `EmitDefaultValue` establecido en `false` no se puede utilizar para serializar su valor predeterminado (null o cero), pero puede recibir este tipo de valor en la deserialización. Esto crea un problema de ida y vuelta (los datos se pueden leer pero los mismos datos no se pueden escribir a continuación). Por consiguiente, si `IsRequired` es `true` y `EmitDefaultValue` es `false` en una versión, la misma combinación se debería aplicar al resto de versiones, de tal manera que ninguna versión del contrato de datos pudiese generar un valor que no resulte en un recorrido de ida y vuelta.  
   
 ## <a name="schema-considerations"></a>Consideraciones del esquema  
- Para obtener una explicación de lo que el esquema se genera para tipos de contrato de datos, vea [referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+ Para obtener una explicación de lo que el esquema se genera para tipos de contrato de datos, vea [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
- El esquema WCF genere por tipos de contrato de datos no realiza ninguna previsión para el control de versiones. Es decir, el esquema exportado desde una cierta versión de un tipo contiene solo esos miembros de datos presentes en esa versión. La implementación de la interfaz <xref:System.Runtime.Serialization.IExtensibleDataObject>, no cambia el esquema de un tipo.  
+ El esquema WCF genera para tipos de contrato de datos no realiza ninguna previsión para el control de versiones. Es decir, el esquema exportado desde una cierta versión de un tipo contiene solo esos miembros de datos presentes en esa versión. La implementación de la interfaz <xref:System.Runtime.Serialization.IExtensibleDataObject>, no cambia el esquema de un tipo.  
   
  Los miembros de datos se exportan de forma predeterminada al esquema como elementos opcionales. Es decir, el valor de `minOccurs` (atributo XML) se establece en 0. Los miembros de datos necesarios se exportan con `minOccurs` establecido en 1.  
   
@@ -109,10 +109,10 @@ A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los 
  Implementar la interfaz <xref:System.Runtime.Serialization.IExtensibleDataObject> es un cambio sin interrupción. Sin embargo, la compatibilidad con el recorrido de ida y vuelta no existe para las versiones del tipo anterior a la versión en la que <xref:System.Runtime.Serialization.IExtensibleDataObject> se implementó. Para obtener más información, vea [Forward-Compatible Data Contracts](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) (Contratos de datos compatibles con el reenvío).  
   
 ## <a name="enumerations"></a>Enumeraciones  
- Agregar o eliminar un miembro de enumeración es un cambio con interrupción. Cambiar el nombre de un miembro de enumeración es un cambio con interrupción, a menos que su nombre de contrato se mantenga igual que en la versión anterior mediante el atributo `EnumMemberAtttribute`. Para obtener más información, consulte [tipos de enumeración en contratos de datos](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Agregar o eliminar un miembro de enumeración es un cambio con interrupción. Cambiar el nombre de un miembro de enumeración es un cambio con interrupción, a menos que su nombre de contrato se mantenga igual que en la versión anterior mediante el atributo `EnumMemberAttribute`. Para obtener más información, consulte [tipos de enumeración en contratos de datos](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Colecciones  
- La mayoría de los cambios de colección son cambios sin interrupción, puesto que la mayoría de los tipos de colección son intercambiables entre sí en el modelo del contrato de datos. Sin embargo, personalizar una colección no personalizada o viceversa es un cambio con interrupción. Asimismo, cambiar la configuración de personalización de la colección es un cambio brusco; es decir, implica cambiar su espacio de nombres y nombre de contrato de datos, repitiendo el nombre del elemento, el nombre del elemento de la clave y el nombre del elemento del valor. Para obtener más información sobre la personalización de colección, consulte [tipos de colección en contratos de datos](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ La mayoría de los cambios de colección son cambios sin interrupción, puesto que la mayoría de los tipos de colección son intercambiables entre sí en el modelo del contrato de datos. Sin embargo, personalizar una colección no personalizada o viceversa es un cambio con interrupción. Asimismo, cambiar la configuración de personalización de la colección es un cambio brusco; es decir, implica cambiar su espacio de nombres y nombre de contrato de datos, repitiendo el nombre del elemento, el nombre del elemento de la clave y el nombre del elemento del valor. Para obtener más información sobre la personalización de la colección, consulte [tipos de colección de contratos de datos](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Naturalmente, cambiar el contrato de datos del contenido de una colección (por ejemplo, cambiar de una lista de enteros a una lista de cadenas) es un cambio brusco.  
   
 ## <a name="see-also"></a>Vea también  

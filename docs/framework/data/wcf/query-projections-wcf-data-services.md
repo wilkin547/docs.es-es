@@ -10,20 +10,20 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 903acaa7493dc83fd6bf50f5a578a067c15e6294
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca989c1cd7baa1eaeb10c65bd9ebef8e400968c3
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365727"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255227"
 ---
 # <a name="query-projections-wcf-data-services"></a>Proyecciones de consultas (Data Services de WCF)
-Proyección proporciona un mecanismo en el [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para reducir la cantidad de datos en la fuente devuelto por una consulta especificando que solo determinadas propiedades de una entidad se devuelven en la respuesta. Para obtener más información, consulte [OData: opción de consulta de sistema Select ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  
+Proyección proporciona un mecanismo en el [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para reducir la cantidad de datos de la fuente devuelta por una consulta especificando que solo determinadas propiedades de una entidad se devuelven en la respuesta. Para obtener más información, consulte [OData: Seleccionar opción de consulta del sistema ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  
   
  En este tema se describen la definición de la proyección de una consulta, cuáles son los requisitos para los tipos con entidad y sin ella, la realización de actualizaciones en los resultados proyectados, la creación de tipos proyectados y la enumeración de algunas consideraciones de proyecciones.  
   
 ## <a name="defining-a-query-projection"></a>Definir una proyección de consultas  
- Puede agregar una cláusula de proyección para una consulta, ya sea mediante la `$select` opción en un URI o mediante el uso de consulta el [seleccione](~/docs/csharp/language-reference/keywords/select-clause.md) cláusula ([seleccione](~/docs/visual-basic/language-reference/queries/select-clause.md) en Visual Basic) en una consulta LINQ. Los datos de entidad devueltos se pueden proyectar en tipos de entidad o en tipos que no son de entidad en el cliente. Los ejemplos de este tema muestran cómo usar la cláusula `select` en una consulta LINQ.  
+ Puede agregar una cláusula de proyección a una consulta mediante el `$select` opción en un URI o mediante el uso de consulta el [seleccione](~/docs/csharp/language-reference/keywords/select-clause.md) cláusula ([seleccione](~/docs/visual-basic/language-reference/queries/select-clause.md) en Visual Basic) en una consulta LINQ. Los datos de entidad devueltos se pueden proyectar en tipos de entidad o en tipos que no son de entidad en el cliente. Los ejemplos de este tema muestran cómo usar la cláusula `select` en una consulta LINQ.  
   
 > [!IMPORTANT]
 >  Se puede producir una pérdida de datos en el servicio de datos cuando se guardan actualizaciones efectuadas en tipos proyectados. Para obtener más información, consulte [consideraciones sobre proyecciones](#considerations).  
@@ -42,13 +42,13 @@ Proyección proporciona un mecanismo en el [!INCLUDE[ssODataFull](../../../../in
 ### <a name="making-updates-to-projected-results"></a>Realizar actualizaciones en los resultados proyectados  
  Cuando proyecte los resultados de la consulta en tipos de entidad en el cliente, la clase <xref:System.Data.Services.Client.DataServiceContext> puede realizar el seguimiento de esos objetos con las actualizaciones que se van a devolver al servicio de datos cuando se llame al método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>. No obstante, las actualizaciones efectuadas en datos proyectados en entidades sin tipo en el cliente no se pueden devolver al servicio de datos. Esto se debe a que el servicio de datos no puede actualizar la entidad correcta en el origen de datos sin ninguna clave que identifique la instancia de la entidad. Los tipos sin identidad no se adjunta a la clase <xref:System.Data.Services.Client.DataServiceContext>.  
   
- Cuando una o varias propiedades de un tipo de entidad definido en el servicio de datos no se producen en el tipo de cliente en el que se proyecta la entidad, las inserciones de nuevas entidades no contendrán estas propiedades que faltan. En este caso, las actualizaciones que se realizan en las entidades existentes le **también** no incluyen estas propiedades que faltan. Cuando un valor existe para tal propiedad, la actualización la restablece en el valor predeterminado de la propiedad, de la forma definida en el origen de datos.  
+ Cuando una o varias propiedades de un tipo de entidad definido en el servicio de datos no se producen en el tipo de cliente en el que se proyecta la entidad, las inserciones de nuevas entidades no contendrán estas propiedades que faltan. En este caso, las actualizaciones que se realizan en entidades existentes le **también** no incluyen estas propiedades que faltan. Cuando un valor existe para tal propiedad, la actualización la restablece en el valor predeterminado de la propiedad, de la forma definida en el origen de datos.  
   
 ### <a name="creating-projected-types"></a>Crear tipos proyectados  
  En el siguiente ejemplo se usa una consulta LINQ anónima que proyecta propiedades de relacionadas con la dirección del tipo `Customers` en un nuevo tipo `CustomerAddress`, que se define en el cliente y al que se le puede dar el atributo de tipo de entidad:  
   
- [!code-csharp[Astoria Northwind Client#SelectCustomerAddressSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#selectcustomeraddressspecific)]
- [!code-vb[Astoria Northwind Client#SelectCustomerAddressSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#selectcustomeraddressspecific)]  
+ [!code-csharp[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#selectcustomeraddressspecific)]
+ [!code-vb[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#selectcustomeraddressspecific)]  
   
  En este ejemplo, se usa el patrón de inicializador de objeto para crear una nueva instancia del tipo `CustmerAddress` en vez de llamar a un constructor. No se admiten constructores cuando se realizan proyecciones en tipos de entidad, pero se pueden usar al realizar proyecciones en tipos sin entidad y anónimos. Puesto que `CustomerAddress` es un tipo de entidad, los cambios se pueden efectuar en el servicio de datos y devolvérselos a él.  
   
@@ -56,16 +56,40 @@ Proyección proporciona un mecanismo en el [!INCLUDE[ssODataFull](../../../../in
   
  La configuración de la enumeración <xref:System.Data.Services.Client.MergeOption> de la clase <xref:System.Data.Services.Client.DataServiceContext> se usa para identificar la resolución durante la proyección de la consulta. Es decir, si una instancia del tipo `Customer` ya existe en la clase <xref:System.Data.Services.Client.DataServiceContext>, una instancia de `CustomerAddress` con la misma identidad seguirá las reglas de resolución de entidades establecidas por la enumeración <xref:System.Data.Services.Client.MergeOption>.  
   
- En la siguiente tabla se describen los comportamientos cuando se proyectan resultados en tipos con entidad y sin ella:  
-  
-|Acción|Tipo de entidad|Tipo sin entidad|  
-|------------|-----------------|----------------------|  
-|Crear una nueva instancia proyectada mediante inicializadores, como en el ejemplo siguiente:<br /><br /> [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithinitializer)]
- [!code-vb[Astoria Northwind Client#ProjectWithInitializer](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithinitializer)]|Compatible|Compatible|  
-|Crear una nueva instancia proyectada con constructores, como en el ejemplo siguiente:<br /><br /> [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithconstructor)]
- [!code-vb[Astoria Northwind Client#ProjectWithConstructor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithconstructor)]|Se inicia una clase <xref:System.NotSupportedException>.|Compatible|  
-|Usar una proyección para transformar un valor de propiedad, como en el ejemplo siguiente:<br /><br /> [!code-csharp[Astoria Northwind Client#ProjectWithTransform](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithtransform)]
- [!code-vb[Astoria Northwind Client#ProjectWithTransform](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithtransform)]<br /><br /> Esta transformación no la admiten los tipos de entidad porque puede confundir y posiblemente sobrescribir los datos en el origen de datos que pertenece a otra entidad.|Se inicia una clase <xref:System.NotSupportedException>.|Compatible|  
+A continuación describen los comportamientos al proyectar resultados en tipos de entidad y que no sean de entidad:  
+
+**Crear una nueva instancia proyectada mediante inicializadores**
+
+- Ejemplo:
+
+   [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithinitializer)]
+   [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithinitializer)]
+
+- Tipo de entidad: compatible
+
+- Tipo de entidad que no son: compatible
+
+**Crear una nueva instancia proyectada con constructores**
+
+- Ejemplo: 
+
+   [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithconstructor)]
+   [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithconstructor)]
+
+- Tipo de entidad: una <xref:System.NotSupportedException> se genera.
+
+- Tipo de entidad que no son: compatible
+
+**Usar una proyección para transformar un valor de propiedad**
+
+- Ejemplo:
+
+   [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithtransform)]
+   [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithtransform)]
+   
+- Tipo de entidad: esta transformación no se admite para los tipos de entidad porque puede llevar a confusión y posiblemente sobrescribir los datos del origen de datos que pertenece a otra entidad. Se inicia una clase <xref:System.NotSupportedException>.
+
+- Tipo de entidad que no son: compatible  
   
 <a name="considerations"></a>   
 ## <a name="projection-considerations"></a>Consideraciones sobre proyecciones  
@@ -83,7 +107,7 @@ Proyección proporciona un mecanismo en el [!INCLUDE[ssODataFull](../../../../in
   
 -   Las consultas de proyecciones de consultas en el cliente se traducen para usar la opción de consulta `$select` en el URI de solicitud. Cuando se ejecute una consulta con proyección en una versión previa de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] que no admita la opción de consulta `$select`, se devuelve un error. Esto también puede ocurrir cuando se establece la propiedad <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> de la clase <xref:System.Data.Services.DataServiceBehavior> para el servicio de datos en el valor de la enumeración <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>. Para obtener más información, consulte [versiones del servicio de datos](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
- Para obtener más información, consulte [Cómo: resultados de la consulta de proyecto](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).  
+ Para obtener más información, consulte [Cómo: resultados de la consulta](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Consultar el servicio de datos](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

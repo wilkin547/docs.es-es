@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 6520aef7d04694b6fcd7f50da84a2a9cea6e7b64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44bbf2503087a0e8b7f178b1c7b7fe65b50496d8
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528595"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253229"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Cómo: Alinear varios controles en formularios Windows Forms
-Para normalizar el diseño de la interfaz de usuario (UI) de la aplicación basada en Windows, puede colocar grupos de controles con un solo comando.  
+Para estandarizar el diseño de la interfaz de usuario (UI) de la aplicación basada en Windows, puede colocar grupos de controles con un solo comando.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-align-multiple-controls-on-a-form"></a>Para alinear varios controles en un formulario  
   
-1.  Abra el formulario que contiene los controles que desea colocar en el **Diseñador de Windows Forms**.  
+1.  Abra el formulario que contiene los controles que desee colocar en el **Diseñador de Windows Forms**.  
   
-2.  Seleccione los controles que desea alinear de forma que el primer control seleccionado sea el control primario en el que deben alinearse los demás.  
+2.  Seleccione los controles que desee alinear para que el primer control seleccionado es el control principal a la que se deben alinear los demás.  
   
 3.  En el **formato** menú, elija **alinear**y, a continuación, haga clic en una de las siete opciones disponibles.  
   

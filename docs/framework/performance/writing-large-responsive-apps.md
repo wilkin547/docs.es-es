@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457574"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254358"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escribir aplicaciones grandes de .NET Framework que respondan
 En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de las aplicaciones .NET Framework de gran tamaño o de aquellas aplicaciones que procesan una gran cantidad de datos, como archivos o bases de datos. Estas sugerencias proceden de reescribir los compiladores de C# y Visual Basic en código administrado; además, el artículo incluye varios ejemplos reales del compilador de C#.  
@@ -23,7 +23,7 @@ En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de l
   
  Cuando los usuarios finales interactúan con la aplicación, esperan una capacidad de respuesta adecuada.  La escritura o la gestión de comandos nunca debe bloquearse.  La ayuda debe aparecer rápidamente o desaparecer si el usuario continúa escribiendo.  La aplicación debe evitar bloquear el subproceso de la interfaz de usuario con largos cálculos que ralenticen la aplicación.  
   
- Para obtener más información sobre Roslyn compiladores, visite la [dotnet/roslyn](https://github.com/dotnet/roslyn) repositorio en GitHub.
+ Para obtener más información acerca de los compiladores de Roslyn, visite la [dotnet/roslyn](https://github.com/dotnet/roslyn) en GitHub.
  <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
   
 ## <a name="just-the-facts"></a>Solo los hechos  
@@ -196,7 +196,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc...  
 ```  
   
- La primera versión de `WriteFormattedDocComment()` asignaba una matriz, varias subcadenas y una subcadena recortada junto con una matriz `params` vacía.  También buscaba `"///"`.  El código revisado solo usa la indización y no realiza ninguna asignación.  Busca el primer carácter que no es un espacio en blanco y luego comprueba cada uno de los caracteres para ver si la cadena empieza por `"///"`.  El código nuevo usa `IndexOfFirstNonWhiteSpaceChar` en vez de <xref:System.String.TrimStart%2A> para devolver el primer índice (tras un índice de inicio especificado) en el que haya un carácter distinto del espacio en blanco.  La corrección no está completa, pero sirve para comprobar cómo se aplican correcciones similares para obtener una solución completa.  Al aplicar este enfoque en todo el código, se pueden quitar todas las asignaciones en `WriteFormattedDocComment()`.  
+ La primera versión de `WriteFormattedDocComment()` asignaba una matriz, varias subcadenas y una subcadena recortada junto con una matriz `params` vacía.  También buscaba `"///"`.  El código revisado solo usa la indización y no realiza ninguna asignación.  Busca el primer carácter que no es un espacio en blanco y luego comprueba cada uno de los caracteres para ver si la cadena empieza por `"///"`.  El nuevo código usa `IndexOfFirstNonWhiteSpaceChar` en lugar de <xref:System.String.TrimStart%2A> para devolver el primer índice (después de un índice de inicio especificado) donde se produce un carácter que no sea un espacio en blanco.  La corrección no está completa, pero sirve para comprobar cómo se aplican correcciones similares para obtener una solución completa.  Al aplicar este enfoque en todo el código, se pueden quitar todas las asignaciones en `WriteFormattedDocComment()`.  
   
  **Ejemplo 4: StringBuilder**  
   
@@ -277,7 +277,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  Esta estrategia simple de almacenamiento en caché respeta el buen diseño de caché porque tiene un límite de tamaño.  No obstante, hay más código ahora que en el original, lo que significa un mayor coste de mantenimiento.  Únicamente debe adoptar la estrategia de almacenamiento en caché si se ha encontrado con un problema de rendimiento y PerfView muestra que las asignaciones de <xref:System.Text.StringBuilder> suponen una contribución significativa.  
   
 ### <a name="linq-and-lambdas"></a>LINQ y lambdas  
- El uso de Language-Integrated Query (LINQ) y de expresiones lambda supone un ejemplo estupendo de cómo utilizar características productivas que, posiblemente, necesiten ser reescritas más adelante si el código afecta de manera significativa al rendimiento.  
+Language-Integrated Query (LINQ), junto con las expresiones lambda, es un ejemplo de una característica de productividad. Sin embargo, su uso puede tener un impacto significativo en el rendimiento con el tiempo y es posible que necesite volver a escribir el código.
   
  **Ejemplo 5: lambdas, List\<T> e IEnumerable\<T>**  
   
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- En la primera línea, la [expresión lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)`s => s.Name == name`[cierra](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) la variable local `name`.  Esto significa que, además de asignar un objeto para el [delegado](~/docs/csharp/language-reference/keywords/delegate.md) que contiene `predicate`, el código asigna una clase estática para contener el entorno que captura el valor de `name`.  El compilador genera código como el siguiente:  
+ En la primera línea, el [expresión lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [cierra](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) la variable local `name`.  Esto significa que, además de asignar un objeto para el [delegado](~/docs/csharp/language-reference/keywords/delegate.md) que contiene `predicate`, el código asigna una clase estática para contener el entorno que captura el valor de `name`.  El compilador genera código como el siguiente:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -412,7 +412,7 @@ class Compilation { /*...*/
   
  **Corrección para el ejemplo 6**  
   
- Para quitar el completado <xref:System.Threading.Tasks.Task> asignación, puede almacenar en caché el objeto de tarea con el resultado completado:  
+ Para quitar el completado <xref:System.Threading.Tasks.Task> asignación, se puede almacenar en caché el objeto de tarea con el resultado completado:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -462,12 +462,12 @@ class Compilation { /*...*/
 -   La clave son las asignaciones: es donde el equipo de la plataforma de compiladores invirtió más tiempo en mejorar el rendimiento de los nuevos compiladores.  
   
 ## <a name="see-also"></a>Vea también  
- [Vídeo de presentación de este tema](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+ [Vídeo de presentación de este tema.](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [Guía básica para la generación de perfiles de rendimiento](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [Rendimiento](../../../docs/framework/performance/index.md)  
  [Sugerencias de rendimiento de .NET](http://msdn.microsoft.com/library/ms973839.aspx)  
  [Herramienta de análisis de rendimiento de Windows Phone](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Detectar cuellos de botella de aplicación con el generador de perfiles de Visual Studio](http://msdn.microsoft.com/magazine/cc337887.aspx)  
- [Canal 9 tutoriales de PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial)  
+ [Encontrar cuellos de botella de aplicación con Visual Studio Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [PerfView tutoriales de Channel 9](http://channel9.msdn.com/Series/PerfView-Tutorial)  
  [Sugerencias de rendimiento de alto nivel](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
- [dotnet/roslyn repositorio en GitHub](https://github.com/dotnet/roslyn)
+ [repositorio dotnet/roslyn en GitHub](https://github.com/dotnet/roslyn)

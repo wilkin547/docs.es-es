@@ -1,17 +1,17 @@
 ---
-title: Implementar aplicaciones que hacen referencia al componente PrintForm (Visual Basic)
+title: Implementación de aplicaciones que hacen referencia al componente PrintForm (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic], deploying
 ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
 ms.openlocfilehash: 3dd7c348c4dc36a7ff64e76a93c05ddb24837079
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584701"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254707"
 ---
-# <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>Implementar aplicaciones que hacen referencia al componente PrintForm (Visual Basic)
+# <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>Implementación de aplicaciones que hacen referencia al componente PrintForm (Visual Basic)
 Si quiere implementar una aplicación que haga referencia al componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> , el componente debe estar instalado en el equipo de destino.  
   
  Los controles PowerPack ya no están incluidos en Visual Studio, pero puede descargarlos desde el [Centro de descarga](http://www.microsoft.com/en-us/download/details.aspx?id=25169).  
@@ -19,7 +19,7 @@ Si quiere implementar una aplicación que haga referencia al componente <xref:Mi
 ## <a name="installing-the-printform-as-a-prerequisite"></a>Instalación de PrintForm como un requisito previo  
  Para implementar correctamente una aplicación, también debe implementar todos los componentes a los que hace referencia la aplicación. El proceso de instalación de componentes de requisito previo se conoce como *arranque*.  
   
- Cuando el <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente está instalado en el equipo de desarrollo, se agrega un paquete de programa previo de Microsoft Visual Basic PowerPacks al directorio de programa previo de Visual Studio. Este paquete está disponible al seguir los procedimientos para agregar requisitos previos para cualquier implementación de [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] o Windows Installer.  
+ Cuando el <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente está instalado en el equipo de desarrollo, se agrega un paquete de programa previo de Microsoft Visual Basic Power Packs en el directorio de programa previo de Visual Studio. Este paquete está disponible al seguir los procedimientos para agregar requisitos previos para cualquier implementación de [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] o Windows Installer.  
   
  De forma predeterminada, los componentes de arranque se implementan desde la misma ubicación que el paquete de instalación. Como alternativa, puede implementar los componentes desde una dirección URL o una ubicación de recurso compartido de archivo desde la que los usuarios pueden descargarlos según sea necesario.  
   

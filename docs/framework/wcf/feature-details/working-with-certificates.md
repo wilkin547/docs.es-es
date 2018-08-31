@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 62bf3ce4bc7a0ff8109ec34fba77dd854c7679b8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f56445e9bdd030d591f9fc6300f9a24d330dbc20
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697123"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257375"
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 Para programar la seguridad de Windows Communication Foundation (WCF), los certificados digitales de X.509 se usan normalmente para autenticar clientes y servidores, cifrar y firmar mensajes digitalmente. En este tema se explican brevemente las características de los certificados digitales X.509 y cómo usarlos en WCF, y se incluyen vínculos a los temas en los que se explican estos conceptos en mayor profundidad o en los que se muestra cómo llevar a cabo tareas comunes mediante WCF y los certificados.  
@@ -102,9 +102,9 @@ Para programar la seguridad de Windows Communication Foundation (WCF), los certi
  Las preguntas más comunes sobre certificados son qué certificados utilizar y por qué. La respuesta depende de si está programando un cliente o servicio. La siguiente información proporciona una directriz general y no es una respuesta exhaustiva a estas preguntas.  
   
 ### <a name="service-certificates"></a>Certificados de servicio  
- Los certificados de servicio tienen la tarea principal de autenticar el servidor a los clientes. Una de las comprobaciones iniciales cuando un cliente autentica un servidor es comparar el valor del campo **Asunto** con el Identificador uniforme de recursos (URI) que se usa para ponerse en contacto con el servicio: el DNS de ambos debe coincidir. Por ejemplo, si el URI del servicio es "http://www.contoso.com/endpoint/", el campo **Asunto** también debe contener el valor "www.contoso.com".  
+ Los certificados de servicio tienen la tarea principal de autenticar el servidor a los clientes. Una de las comprobaciones iniciales cuando un cliente autentica un servidor es comparar el valor del campo **Asunto** con el Identificador uniforme de recursos (URI) que se usa para ponerse en contacto con el servicio: el DNS de ambos debe coincidir. Por ejemplo, si el URI del servicio es `http://www.contoso.com/endpoint/` el **asunto** campo también debe contener el valor `www.contoso.com`.  
   
- Observe que el campo puede contener varios valores, cada uno prefijado con una inicialización que indique el valor. Muy comúnmente, la inicialización es "CN" para designar un nombre común, por ejemplo, "CN = www.contoso.com". También es posible que el campo **Asunto** esté en blanco, en cuyo caso el campo **Nombre alternativo del firmante** puede contener el valor **Nombre DNS**.  
+ Observe que el campo puede contener varios valores, cada uno prefijado con una inicialización que indique el valor. Normalmente, la inicialización es "CN" para el nombre común, por ejemplo, `CN = www.contoso.com`. También es posible que el campo **Asunto** esté en blanco, en cuyo caso el campo **Nombre alternativo del firmante** puede contener el valor **Nombre DNS**.  
   
  También tenga en cuenta que el valor del campo **Propósitos planteados** del certificado debería incluir un valor adecuado, como "Autenticación del Servidor" o "Autenticación del cliente".  
   

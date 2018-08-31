@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: b7827206d6e145b559d9716df5ec4a98ac4ea0b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32bd0912b0bae3340cffed010fc67431d0efb376
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591825"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43252952"
 ---
 # <a name="date-data-type-visual-basic"></a>Date (Tipo de datos, Visual Basic)
 Contiene los valores IEEE de 64 bits (8 bytes) que representan fechas comprendidas entre el 1 de enero del año 0001 hasta el 31 de diciembre del año 9999, y las horas comprendidas entre las 00:00:00 (medianoche) y las 23:59:59.9999999. Cada incremento representa 100 nanosegundos de tiempo transcurrido desde el comienzo del 1 de enero del año 1 del calendario gregoriano. El valor máximo representa 100 nanosegundos antes del comienzo del 1 de enero del año 10000.  
@@ -63,9 +63,9 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 -   **Consideraciones de interoperabilidad.** Si interactúa con componentes que no se han escrito para .NET Framework, por ejemplo, objetos de Automation o COM, tenga presente que los tipos de fecha y hora definidos en otros entornos no son compatibles con el tipo `Date` de Visual Basic. Al pasar un argumento de fecha y hora a esos componentes, declárelo en el código de Visual Basic como `Double` en lugar de como `Date`, y use los métodos de conversión <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> y <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
   
--   **Caracteres de tipo.** `Date` no tiene ningún carácter de tipo literal ni caracteres de tipo identificador. Sin embargo, el compilador trata los literales incluidos entre caracteres de signo de número (`# #`) como `Date`.  
+-   **Caracteres de tipo.** `Date` no tiene ningún carácter de tipo literal o un carácter de tipo identificador. Sin embargo, el compilador trata los literales incluidos entre caracteres de signo de número (`# #`) como `Date`.  
   
--   **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.DateTime?displayProperty=nameWithType>.  
+-   **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.DateTime?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Ejemplo  
  Una variable o constante del tipo de datos `Date` contiene la fecha y la hora. Esto se ilustra en el siguiente ejemplo:  
@@ -76,7 +76,7 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.DateTime?displayProperty=nameWithType>  
- [Tipos de datos](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)  
  [Cadenas con formato de fecha y hora estándar](../../../standard/base-types/standard-date-and-time-format-strings.md)  
  [Cadenas con formato de fecha y hora personalizado](../../../standard/base-types/custom-date-and-time-format-strings.md)  
  [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
