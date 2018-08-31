@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: 20bf9b263a349f327f12d1f3c7753fb9f34436e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e844a673f1a60d5a151a6ae612d4af7a6712eef4
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654221"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332557"
 ---
 # <a name="collection-initializers-visual-basic"></a>Inicializadores de colección (Visual Basic)
 Los *inicializadores de colección* proporcionan una sintaxis abreviada que permite crear una colección y rellenarla con un conjunto inicial de valores. Los inicializadores de colección son útiles cuando se crea una colección a partir de un conjunto de valores conocidos, como una lista de opciones de menú o categorías, un conjunto inicial de valores numéricos, una lista estática de cadenas como nombres de días o meses, o ubicaciones geográficas como una lista de estados usada para la validación.  
   
- Para más información sobre las colecciones, vea [Colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
+ Para más información sobre las colecciones, vea [Colecciones](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
   
  Para identificar un inicializador de colección, use la palabra clave `From` seguida de llaves (`{}`). Esto es similar a la sintaxis de los literales de matriz que se describe en [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md) (Matrices). En los ejemplos siguientes se muestran varias maneras de usar inicializadores de colección para crear colecciones.  
   
@@ -77,7 +77,7 @@ Los *inicializadores de colección* proporcionan una sintaxis abreviada que perm
 |[Crear una colección usada por un inicializador de colección](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Muestra cómo habilitar el uso de un inicializador de colección mediante la inclusión de un método `Add` en una clase de colección que implementa `IEnumerable`.|  
   
 ## <a name="see-also"></a>Vea también  
- [Colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [Colecciones](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
  [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  [Inicializadores de objeto: Tipos con nombre y anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [New (operador)](../../../../visual-basic/language-reference/operators/new-operator.md)  

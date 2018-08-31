@@ -13,12 +13,12 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 3c642a2a0eccc5a2b08cee71ca719515b115b2f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ef387437befe3df67e261b719140456a3fde9dd
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529930"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332512"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView (Control, formularios Windows Forms)
 El control `DataGridView` proporciona una forma eficaz y flexible de mostrar datos en formato de tabla. Puede usar el control `DataGridView` para mostrar vistas de solo lectura de una pequeña cantidad de datos, o puede ampliarlo para mostrar vistas editables de conjuntos de datos muy grandes.  
@@ -73,7 +73,7 @@ El control `DataGridView` proporciona una forma eficaz y flexible de mostrar dat
  [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
  Describe cómo el control `DataGridView` mejora y reemplaza el control <xref:System.Windows.Forms.DataGrid>.  
   
- Consulte también [mediante el diseñador con el DataGridView Control de formularios Windows Forms](http://msdn.microsoft.com/library/ms171593\(v=vs.110\)).  
+ Consulte también [mediante el diseñador con el DataGridView Control de Windows Forms](using-the-designer-with-the-windows-forms-datagridview-control.md).  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.DataGridView>  

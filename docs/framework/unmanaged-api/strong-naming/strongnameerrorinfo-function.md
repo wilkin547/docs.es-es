@@ -20,15 +20,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db818f638898da6379ce4dadfada8eccc3adeb12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455424"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332752"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo (Función)
-Obtiene el último código de error que se genera mediante una de las funciones de nombre seguro.  
+Obtiene el último código de error generado por una de las funciones de nombre seguro.  
   
  Esta función está desusada.  
   
@@ -42,16 +42,16 @@ HRESULT StrongNameErrorInfo ();
  El último código de error de COM establecido por una de las funciones de nombre seguro.  
   
 ## <a name="remarks"></a>Comentarios  
- La mayoría de los métodos de nombre seguro devuelven una simple `true` o `false` indicación de una realización correcta. Use la `StrongNameErrorInfo` función para recuperar un valor HRESULT que especifica el último error generado por las funciones de nombre seguro.  
+ La mayoría de los métodos de nombre seguro devuelven una sencilla `true` o `false` indicación de una realización correcta. Use el `StrongNameErrorInfo` función para recuperar un valor HRESULT que especifica el último error generado por las funciones de nombre seguro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** StrongName.h  
   
  **Biblioteca:** incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Las funciones estáticas globales de nombres seguros](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)
+ [Funciones estáticas globales de nombres seguros](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)

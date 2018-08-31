@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 1407593bf90b28a1890a8c18564b31d0aa67e0cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad5862064966ccae4c313e7fa3d982ec9abbbcd2
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494181"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332192"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Seguridad de mensajes con certificados mutuos
 El escenario siguiente muestra un servicio de Windows Communication Foundation (WCF) y el cliente protegido utilizando el modo de seguridad de mensajes. El cliente y el servicio se autentican con certificados.  
@@ -109,7 +109,7 @@ El escenario siguiente muestra un servicio de Windows Communication Foundation (
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>Configuración  
- Lo siguiente configura el cliente. Se debe especificar un certificado de cliente mediante la [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Además, el certificado del servicio se especifica utilizando el [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
+ Lo siguiente configura el cliente. Se debe especificar un certificado de cliente mediante el [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Además, el certificado del servicio se especifica utilizando el [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -162,5 +162,5 @@ El escenario siguiente muestra un servicio de Windows Communication Foundation (
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modelo de seguridad de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
- [Cómo: crear e instalar certificados temporales en WCF para la seguridad de transporte durante el desarrollo](http://go.microsoft.com/fwlink/?LinkId=244264)
+ [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ [Cómo: crear e instalar certificados temporales en WCF para la seguridad de transporte durante el desarrollo](https://go.microsoft.com/fwlink/?LinkId=244264)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
-ms.openlocfilehash: 3615ab1f9a9076b8db0e5fde1e5bd4a1a804f3bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 671553b496520f2c2ac3fea90b1514a6cdf1764a
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538533"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331766"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel (Control, formularios Windows Forms)
 El control <xref:System.Windows.Forms.TableLayoutPanel> organiza su contenido en una cuadrícula. Como el diseño se realiza en tiempo de diseño y en tiempo de ejecución, puede cambiar dinámicamente cuando cambie el entorno de la aplicación. Esto proporciona a los controles del panel la capacidad de ajustar el tamaño proporcionalmente para poder responder a cambios como el ajuste de tamaño del control primario o el cambio de longitud del texto debido a la localización.  
@@ -38,13 +38,13 @@ El control <xref:System.Windows.Forms.TableLayoutPanel> organiza su contenido en
  [Crear Windows Forms de entrada de datos de tamaño variable](../../../../docs/framework/winforms/controls/how-to-create-a-resizable-windows-form-for-data-entry.md)  
  Muestra cómo utilizar un control <xref:System.Windows.Forms.TableLayoutPanel> para crear un formulario que sea apropiado para el cambio de tamaño.  
   
-1.  [Cómo: Alinear y expandir un control en un control TableLayoutPanel](http://msdn.microsoft.com/library/ms171688\(v=vs.110\))  
+1.  [Cómo: Alinear y expandir un control en un control TableLayoutPanel](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2.  [Cómo: Abarcar filas y columnas en un control TableLayoutPanel](http://msdn.microsoft.com/library/ms171687\(v=vs.110\))  
+2.  [Cómo: Abarcar filas y columnas en un control TableLayoutPanel](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-3.  [Cómo: Editar columnas y filas en un control TableLayoutPanel](http://msdn.microsoft.com/library/ms171686\(v=vs.110\))  
+3.  [Cómo: Editar columnas y filas en un control TableLayoutPanel](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4.  [Tutorial: Organizar controles en Windows Forms mediante TableLayoutPanel](http://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
+4.  [Tutorial: Organizar controles en Windows Forms mediante TableLayoutPanel](https://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.TableLayoutPanel>  
@@ -60,4 +60,4 @@ El control <xref:System.Windows.Forms.TableLayoutPanel> organiza su contenido en
  [Localización](../../../../docs/standard/globalization-localization/localization.md)  
  Proporciona información general sobre temas relacionados con la localización.  
   
- Consulte también [localizar aplicaciones](http://msdn.microsoft.com/library/z68135h5\(v=vs.110\)) o [localizar aplicaciones](http://msdn.microsoft.com/library/z68135h5\(v=vs.120\))
+ Consulte también [Localizing Applications](https://msdn.microsoft.com/library/z68135h5\(v=vs.110\)) o [localizar aplicaciones](https://msdn.microsoft.com/library/z68135h5\(v=vs.120\))

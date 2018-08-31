@@ -2,12 +2,12 @@
 title: Esta operación solo se puede realizar cuando el archivo está cerrado.
 ms.date: 07/20/2015
 ms.assetid: 79fe95ae-4aff-469f-beda-d5a85c91d421
-ms.openlocfilehash: b737275b2f18adadc5e9d4b5888d26cc595720d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a7f6afc7f9ecb232e24d5536d2274db57d1d820
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640285"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331933"
 ---
 # <a name="this-operation-can-only-be-done-when-the-file-is-closed"></a>Esta operación solo se puede realizar cuando el archivo está cerrado.
 Mientras un archivo estaba abierto, se ha intentado realizar una operación que solo se puede realizar cuando el archivo está cerrado.  
@@ -19,4 +19,4 @@ Mientras un archivo estaba abierto, se ha intentado realizar una operación que 
 ## <a name="see-also"></a>Vea también  
  <xref:System.Security.Permissions.FileIOPermission>  
  <xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>  
- [Cómo: obtener información acerca de un archivo en Visual Basic](http://msdn.microsoft.com/library/ca0720ec-f40e-4c11-9748-0ce1685c78f0)
+ [Cómo: obtener información acerca de un archivo en Visual Basic](https://msdn.microsoft.com/library/ca0720ec-f40e-4c11-9748-0ce1685c78f0)

@@ -2,21 +2,21 @@
 title: Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 9476249a657d009deba190a3db4726f50b2d7747
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0afc9f0a6254b0df1e0c6e724ec5b3cfd1f86d0
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520151"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332778"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado
 Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] presentó muchas características nuevas, incluidas varias mejoras en la experiencia de diseñador de flujo de trabajo. En este tema se detallan las características admitidas en el diseñador rehospedado y las que no se admiten.  
   
 > [!NOTE]
->  Para obtener una lista de todas las nuevas características de Windows Workflow Foundation (WF) que se introdujo en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], incluidas aquellas que no están relacionadas con el rehospedaje del diseñador, vea [¿qué novedades presenta Windows Workflow Foundation en .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
+>  Para obtener una lista de todas las nuevas características de Windows Workflow Foundation (WF), introducidas en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], incluidas aquellas que no están relacionadas con el rehospedaje del diseñador, vea [Novedades de Windows Workflow Foundation en .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
   
 ## <a name="activities"></a>Actividades  
- La biblioteca integrada de actividades contiene nuevas actividades y características para las actividades existentes. Todas estas nuevas actividades se admiten en el diseñador rehospedado. Para obtener más información sobre estas nuevas actividades, consulte el [actividades](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) sección de [¿qué novedades presenta Windows Workflow Foundation en .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
+ La biblioteca integrada de actividades contiene nuevas actividades y características para las actividades existentes. Todas estas nuevas actividades se admiten en el diseñador rehospedado. Para obtener más información sobre estas nuevas actividades, consulte el [actividades](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) sección de [Novedades de Windows Workflow Foundation en .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
   
 ## <a name="c-expressions"></a>Expresiones de C#  
  Antes de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], todas las expresiones de flujos de trabajo solo se podían escribir en Visual Basic. En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], las expresiones de Visual Basic solo se usan para los proyectos creados con Visual Basic. Los proyectos de Visual C# ahora usan C# para expresiones. Al crear flujos de trabajo en [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], se proporciona un editor de expresiones de C# totalmente funcional con capacidades tales como resaltado de gramática e IntelliSense. Seguirán funcionando los proyectos de flujo de trabajo de C# creados en versiones anteriores que usan expresiones de Visual Basic.  
@@ -27,7 +27,7 @@ Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45
 ## <a name="new-designer-capabilities"></a>Nuevas capacidades de diseñador  
   
 ### <a name="designer-search"></a>Búsqueda de diseñador  
- El [búsqueda rápida](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) y [buscar en archivos](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) características introducidas con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] no se admiten en el diseñador rehospedado. La búsqueda de `Toolbox` se admite en el diseñador rehospedado. Para obtener más información acerca de estas características, consulte [búsqueda de diseñador](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).  
+ El [búsqueda rápida](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) y [buscar en archivos](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) las características introducidas con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] no se admiten en el diseñador rehospedado. La búsqueda de `Toolbox` se admite en el diseñador rehospedado. Para obtener más información acerca de estas características, consulte [búsqueda de diseñador](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).  
   
 > [!WARNING]
 >  [Búsqueda rápida](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) y [buscar en archivos](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) no se admiten en el diseñador rehospedado.  
@@ -44,7 +44,7 @@ Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45
   
  La captura de pantalla siguiente muestra una actividad `WriteLine` en `Body` de `NoPersistScope`.  
   
- ![Auto&#45;rodear ecurso](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
+ ![Auto&#45;rodear la ubicación de destino](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
   
  La captura de pantalla siguiente muestra la actividad `Sequence` creada automáticamente en `Body` cuando se coloca un segundo elemento `WriteLine` debajo del primero.  
   
@@ -65,9 +65,9 @@ Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45
  Asimismo, se pueden arrastrar y colocar en el diseñador selecciones múltiples de actividad, y también se puede interactuar con ellas mediante el menú contextual.  
   
 ### <a name="outline-view-of-workflow-items"></a>Vista de esquema de los elementos de flujo de trabajo  
- Para que sea más fácil navegar en los flujos de trabajo jerárquicos, los componentes de un flujo de trabajo se muestran en una vista de esquema de árbol. La vista esquema se muestra en el **esquema del documento** vista. Para abrir esta vista en Visual Studio, en el menú superior, seleccione **vista**, **otras ventanas**, **esquema del documento**, o presione Ctrl W, U. Al hacer clic en un nodo en la vista de esquema navegará a la actividad correspondiente en el diseñador de flujo de trabajo, y la vista de esquema se actualizará para mostrar las actividades seleccionadas en el diseñador. Esta característica se admite en el diseñador rehospedado.  
+ Para que sea más fácil navegar en los flujos de trabajo jerárquicos, los componentes de un flujo de trabajo se muestran en una vista de esquema de árbol. La vista de esquema se muestra en el **esquema del documento** vista. Para abrir esta vista en Visual Studio, en el menú superior, seleccione **vista**, **Other Windows**, **esquema del documento**, o bien presione Ctrl W, U. Al hacer clic en un nodo en la vista de esquema navegará a la actividad correspondiente en el diseñador de flujo de trabajo, y la vista de esquema se actualizará para mostrar las actividades seleccionadas en el diseñador. Esta característica se admite en el diseñador rehospedado.  
   
- La siguiente captura de pantalla de flujo de trabajo completado de la [Tutorial de introducción](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) muestra la vista de esquema con un flujo de trabajo secuencial.  
+ Captura de pantalla siguiente del flujo de trabajo completada desde la [Tutorial de introducción](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) muestra la vista de esquema con un flujo de trabajo secuencial.  
   
  ![Vista en el Diseñador de flujo de trabajo esquema](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")  
   
@@ -83,7 +83,7 @@ Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45
   
  Las actividades también se pueden arrastrar a las conexiones entre los nodos y estados de un diagrama de flujo para insertar automáticamente el nodo entre otros dos nodos. La captura de pantalla siguiente muestra la línea de conexión resaltada donde se pueden arrastrar y colocar actividades del cuadro de herramientas.  
   
- ![Auto&#45;insertar identificador para colocar actividades](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
+ ![Auto&#45;insertar el identificador para colocar actividades](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
   
  La conexión y la inserción automáticas se admiten en el diseñador rehospedado.  
   
@@ -95,7 +95,7 @@ Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45
  Las anotaciones de diseñador se admiten en el diseñador rehospedado.  
   
 ### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Definir y usar objetos ActivityDelegate en el diseñador  
- Las actividades de [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] usaban objetos <xref:System.Activities.ActivityDelegate> para exponer puntos de ejecución donde otras partes del flujo de trabajo podían interactuar con la ejecución de un flujo de trabajo, pero para usar estos puntos de ejecución a menudo era necesaria una cantidad de código considerable. En esta versión, los desarrolladores pueden definir y usar delegados de actividad mediante el diseñador de flujo de trabajo. Para obtener más información, consulte [Cómo: definir y utilizar delegados de actividad en el Diseñador de flujo de trabajo](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).  
+ Las actividades de [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] usaban objetos <xref:System.Activities.ActivityDelegate> para exponer puntos de ejecución donde otras partes del flujo de trabajo podían interactuar con la ejecución de un flujo de trabajo, pero para usar estos puntos de ejecución a menudo era necesaria una cantidad de código considerable. En esta versión, los desarrolladores pueden definir y usar delegados de actividad mediante el diseñador de flujo de trabajo. Para obtener más información, consulte [Cómo: definir y consumir delegados de actividad en el Diseñador de flujo de trabajo](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).  
   
  Los delegados de actividad se admiten en el diseñador rehospedado.  
   
@@ -111,7 +111,7 @@ Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45
  La validación en segundo plano en tiempo de diseño se admite en el diseñador rehospedado.  
   
 ### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>El estado de la vista se encuentra en una ubicación diferente en archivos XAML  
- En [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], la información de estado de la vista para un flujo de trabajo se almacena en el archivo XAML en muchas ubicaciones diferentes. Esto es un problema para los desarrolladores que desean leer directamente XAML o escribir código para quitar la información de estado de la vista. En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], la información de estado de vista en el archivo XAML se serializa como un elemento independiente en el archivo XAML.  Los desarrolladores fácilmente pueden localizar y editar la información de estado de vista de una actividad o quite por completo el estado de vista.  
+ En [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], la información de estado de la vista para un flujo de trabajo se almacena en el archivo XAML en muchas ubicaciones diferentes. Esto es un problema para los desarrolladores que desean leer directamente XAML o escribir código para quitar la información de estado de la vista. En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], la información de estado de vista en el archivo XAML se serializa como un elemento independiente en el archivo XAML.  Los desarrolladores fácilmente pueden localizar y editar la información de estado de vista de una actividad o quitar por completo el estado de vista.  
   
  Esta característica se admite en el diseñador de flujo de trabajo rehospedado.  
   
@@ -122,7 +122,7 @@ Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45
  Además de los modelos de desarrollo de flujo de trabajo de diagrama de flujo y secuenciales, esta versión incluye flujos de trabajo de máquina de estados y servicios de flujo de trabajo de contrato primero.  
   
 ### <a name="state-machine-workflows"></a>Flujos de trabajo de máquina de estados  
- Los flujos de trabajo de máquina de estados se incluyeron como parte de .NET Framework 4.0.1 en el [actualización de la plataforma Microsoft .NET Framework 4 1](http://go.microsoft.com/fwlink/?LinkID=215092). Esta actualización incluía varias clases y actividades nuevas que permitían a los desarrolladores crear flujos de trabajo de máquina de estados. Estas clases y actividades se han actualizado para [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Las actualizaciones incluyen:  
+ Los flujos de trabajo de máquina de estados se incluyeron como parte de .NET Framework 4.0.1 en la [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). Esta actualización incluía varias clases y actividades nuevas que permitían a los desarrolladores crear flujos de trabajo de máquina de estados. Estas clases y actividades se han actualizado para [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Las actualizaciones incluyen:  
   
 1.  Capacidad de establecer puntos de interrupción en estados  
   
@@ -139,7 +139,7 @@ Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45
  Para obtener más información sobre la creación de flujos de trabajo de máquina de Estados, vea [flujos de trabajo de máquina de estados](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md). Los flujos de trabajo de máquina de estados se admiten en el diseñador rehospedado.  
   
 ### <a name="contract-first-workflow-development"></a>Desarrollo de flujo de trabajo de contrato primero  
- La herramienta de desarrollo de flujo de trabajo de contrato primero permite al desarrollador diseñar un contrato en code first y, después, con unos pocos clics en Visual Studio, generar automáticamente una plantilla de actividad en el cuadro de herramientas que representa cada operación. Estas actividades se usan para crear un flujo de trabajo que implemente las operaciones definidas por el contrato. El diseñador de flujo de trabajo validará el servicio de flujo de trabajo para garantizar que estas operaciones se implementan y la signatura del flujo de trabajo coincide con la signatura del contrato. El desarrollador también puede asociar un servicio de flujo de trabajo a una colección de contratos implementados. Para obtener más información sobre el desarrollo de servicios de flujo de trabajo de contrato primero, consulte [Cómo: crear un servicio de flujo de trabajo que consume un contrato de servicio existente](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+ La herramienta de desarrollo de flujo de trabajo de contrato primero permite al desarrollador diseñar un contrato en code first y, después, con unos pocos clics en Visual Studio, generar automáticamente una plantilla de actividad en el cuadro de herramientas que representa cada operación. Estas actividades se usan para crear un flujo de trabajo que implemente las operaciones definidas por el contrato. El diseñador de flujo de trabajo validará el servicio de flujo de trabajo para garantizar que estas operaciones se implementan y la signatura del flujo de trabajo coincide con la signatura del contrato. El desarrollador también puede asociar un servicio de flujo de trabajo a una colección de contratos implementados. Para obtener más información sobre el desarrollo de servicios de flujo de trabajo de contrato primero, consulte [Cómo: crear un servicio de flujo de trabajo que consuma un contrato de servicio existente](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 > [!WARNING]
 >  El desarrollo de flujo de trabajo de contrato primero no se admite en el diseñador de flujo de trabajo.
