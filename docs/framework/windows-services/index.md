@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
 manager: douge
-ms.openlocfilehash: af6e4bf7697b3139f6809295737fdd0d90b7f013
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7fb148b96d5ff9804bcb0bb7c842c475c0f117
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512273"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385986"
 ---
 # <a name="developing-windows-service-applications"></a>Desarrollar aplicaciones de servicios de Windows
 Con Microsoft Visual Studio o el SDK de Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], puede crear fácilmente servicios mediante la creación de una aplicación que se instale como un servicio. Este tipo de aplicación se denomina servicio Windows. Con las características de la plataforma, puede crear servicios, instalarlos e iniciar, detener y controlar su comportamiento.  
@@ -48,5 +48,5 @@ Con Microsoft Visual Studio o el SDK de Microsoft [!INCLUDE[dnprdnshort](../../.
  <xref:System.ServiceProcess.ServiceInstaller>  
  Describe las características de la clase <xref:System.ServiceProcess.ServiceInstaller>, que se utiliza junto con la clase <xref:System.ServiceProcess.ServiceProcessInstaller> para instalar y desinstalar su servicio.  
   
- [NIB: Crear proyectos a partir de plantillas](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
+ [NIB: Crear proyectos a partir de plantillas](https://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
  Describe los tipos de proyectos utilizados en este capítulo y cómo elegir entre ellos.

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2686d0db966192606656167d6e505f34ded333f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f38ed31748560292753789e38595a5e30f6ea08a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396534"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404613"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implementar .NET Framework y aplicaciones
 Este artículo le ayuda a empezar a implementar .NET Framework con la aplicación. La mayoría de la información está destinada a desarrolladores, OEM y administradores de empresa. Los usuarios que deseen instalar .NET Framework en sus equipos deben leer [Instalar .NET Framework](~/docs/framework/install/index.md).  
@@ -58,13 +58,13 @@ Este artículo le ayuda a empezar a implementar .NET Framework con la aplicació
   
 -   Implementar .NET Framework (para OEM y administradores):  
   
-    -   [Windows Assessment and Deployment Kit (ADK)](http://go.microsoft.com/fwlink/p/?LinkId=254976)  
+    -   [Windows Assessment and Deployment Kit (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976)  
   
     -   [Guía del administrador](../../../docs/framework/deployment/guide-for-administrators.md)  
   
  **Mantenimiento**  
   
--   Para obtener información general, vea el [blog de .NET Framework](http://go.microsoft.com/fwlink/p/?LinkId=254977)  
+-   Para obtener información general, vea el [blog de .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=254977)  
   
 -   [Detectar versiones](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
   
@@ -153,7 +153,7 @@ Este artículo le ayuda a empezar a implementar .NET Framework con la aplicació
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Describe la forma en que Common Language Runtime determina el ensamblado que se va a utilizar para llevar a cabo una solicitud de enlace.|  
 |[Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Aborda formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros.|  

@@ -4,16 +4,16 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 56c41a51cddeca6c74b09710f9536195a6a88904
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 45be99a86a52ed450b795ca5f91c01ab82c7da47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404504"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388633"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Implementar aplicaciones web de .NET Core basadas en un solo contenedor en hosts de Linux o Windows Nano Server
 
-_Puede usar contenedores de Docker para la implementación monolítica de aplicaciones web más sencillas. Esto mejora la integración continua y las canalizaciones de implementación continua y ayuda a llevar a cabo correctamente el proceso desde la implementación hasta la producción. Ya no se volverá a preguntar: "Funciona en mi equipo, ¿por qué no funciona en producción?"._
+_Puede usar contenedores de Docker para la implementación monolítica de aplicaciones web más sencillas. Esto mejora la integración continua y las canalizaciones de implementación continua y ayuda a llevar a cabo correctamente el proceso desde la implementación hasta la producción. Ya no se volverá a preguntar: "Funciona en mi equipo, ¿por qué no funciona en producción?"_
 
 Una arquitectura basada en microservicios tiene muchas ventajas, pero a costa de una mayor complejidad. En algunos casos, los costos superan las ventajas, por lo que es una mejor opción una aplicación de implementación monolítica que se ejecute en un solo contenedor o en unos pocos contenedores.
 
@@ -41,7 +41,7 @@ La aplicación [eShopWeb](https://github.com/dotnet-architecture/eShopOnContaine
 
 La aplicación usa una base de datos de SQL Server para el almacenamiento del catálogo. En las implementaciones basadas en contenedor, esta aplicación monolítica puede tener acceso al mismo almacén de datos que la aplicación basada en microservicios. La aplicación está configurada para ejecutar SQL Server en un contenedor junto con la aplicación monolítica. En un entorno de producción, SQL Server se ejecutaría en una máquina con alta disponibilidad, fuera del host de Docker. Para mayor comodidad en un entorno de desarrollo o pruebas, se recomienda ejecutar SQL Server en su propio contenedor.
 
-El conjunto de características iniciales solo permite examinar el catálogo. Mediante las actualizaciones se habilitará el conjunto completo de características de la aplicación en contenedor. Encontrará la descripción de una arquitectura de aplicación web monolítica en el libro electrónico [ASP.NET Web Application architecture practices](https://aka.ms/webappebook) (Prácticas de la arquitectura de aplicaciones web ASP.NET) y en la [aplicación de ejemplo eShopOnWeb](http://aka.ms/WebAppArchitecture) relacionada.
+El conjunto de características iniciales solo permite examinar el catálogo. Mediante las actualizaciones se habilitará el conjunto completo de características de la aplicación en contenedor. Encontrará la descripción de una arquitectura de aplicación web monolítica en el libro electrónico [ASP.NET Web Application architecture practices](https://aka.ms/webappebook) (Prácticas de la arquitectura de aplicaciones web ASP.NET) y en la [aplicación de ejemplo eShopOnWeb](https://aka.ms/WebAppArchitecture) relacionada.
 
 ## <a name="docker-support"></a>Compatibilidad con Docker
 

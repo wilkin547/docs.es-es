@@ -2,12 +2,12 @@
 title: Programación asincrónica con Async y Await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: b1797a6d37728021820f5dfa5c01a7ee0c972f1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f38247969260fecd2fe527efb1ddb0c097fa2a47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339104"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390238"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programación asincrónica con Async y Await (C#)
 Puede evitar cuellos de botella de rendimiento y mejorar la capacidad de respuesta total de la aplicación mediante la programación asincrónica. Sin embargo, las técnicas tradicionales para escribir aplicaciones asincrónicas pueden resultar complicadas, haciéndolas difícil de escribir, depurar y mantener.  
@@ -140,7 +140,7 @@ Para obtener más información sobre el flujo de control, vea [Control Flow in A
 ##  <a name="BKMK_APIAsyncMethods"></a> Métodos asincrónicos de API  
  Tal vez se pregunte dónde encontrar métodos como `GetStringAsync` que sean compatibles con la programación asincrónica. .NET Framework 4.5 o versiones posteriores y .NET Core contienen muchos miembros que trabajan con `async` y `await`. Puede reconocerlos por el sufijo "Async" que se anexa al nombre del miembro y por su tipo de valor devuelto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Por ejemplo, la clase `System.IO.Stream` contiene métodos como <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> y <xref:System.IO.Stream.WriteAsync%2A> junto con los métodos sincrónicos <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> y <xref:System.IO.Stream.Write%2A>.  
   
- Windows Runtime también contiene muchos métodos que puede utilizar con `async` y `await` en Aplicaciones Windows. Para obtener más información, vea [Subprocesamiento y programación asincrónica](/windows/uwp/threading-async/) para el desarrollo en UWP, así como [Programación asincrónica (aplicaciones de la Tienda Windows)](/previous-versions/windows/apps/hh464924(v=win.10)) e [Inicio rápido: Llamar a API asincrónicas en C# o Visual Basic](/previous-versions/windows/apps/hh452713(v=win.10)) si usa versiones anteriores de Windows Runtime.  
+ Windows Runtime también contiene muchos métodos que puede utilizar con `async` y `await` en Aplicaciones Windows. Para obtener más información, vea [Subprocesamiento y programación asincrónica](/windows/uwp/threading-async/) para el desarrollo en UWP, así como [Programación asincrónica (aplicaciones de la Tienda Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)) e [Inicio rápido: Llamar a API asincrónicas en C# o Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10)) si usa versiones anteriores de Windows Runtime.  
   
 ##  <a name="BKMK_Threads"></a> Subprocesos  
 La intención de los métodos Async es ser aplicaciones que no pueden producir bloqueos. Una expresión `await` en un método asincrónico no bloquea el subproceso actual mientras la tarea esperada se encuentra en ejecución. En vez de ello, la expresión declara el resto del método como una continuación y devuelve el control al llamador del método asincrónico.  
@@ -235,7 +235,7 @@ Las API asincrónicas en la programación de Windows Runtime tienen uno de los s
   
 ##  <a name="BKMK_RelatedTopics"></a> Temas relacionados y ejemplos (Visual Studio)  
   
-|Title|Description|Ejemplo|  
+|Title|Descripción|Ejemplo|  
 |-----------|-----------------|------------|  
 |[Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [C#])|Muestra cómo convertir una solución WPF sincrónica en una solución WPF asincrónica. La aplicación descarga una serie de sitios web.|[Async Sample: Accessing the Web Walkthrough](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Ejemplo Async: obtener acceso al tutorial web)|  
 |[How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Cómo: Ampliar el tutorial de async usando Task.WhenAll (C#))|Agrega <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> al tutorial anterior. El uso de `WhenAll` inicia todas las descargas al mismo tiempo.||  

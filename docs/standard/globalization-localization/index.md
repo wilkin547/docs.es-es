@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 653a39d1e217d0478ff7c9b01c6ac146fe6b5fac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251004"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419152"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalización y localización de aplicaciones .NET
-El desarrollo de una [aplicación de uso internacional](http://msdn.microsoft.com/goglobal/bb978433.aspx), incluida una aplicación que se pueda localizar en uno o varios idiomas, implica tres pasos: globalización, revisión de localizabilidad y localización.  
+El desarrollo de una [aplicación de uso internacional](https://msdn.microsoft.com/goglobal/bb978433.aspx), incluida una aplicación que se pueda localizar en uno o varios idiomas, implica tres pasos: globalización, revisión de localizabilidad y localización.  
   
  [Globalización](../../../docs/standard/globalization-localization/globalization.md)  
  Este paso conlleva diseñar y codificar una aplicación de referencias culturales e idiomáticas neutras que admita el uso de interfaces de usuario localizadas y datos regionales para todos los usuarios. Implica tomar decisiones de diseño y programación que no se basan en suposiciones específicas de la referencia cultural. Aunque una aplicación globalizada no está localizada, está diseñada y escrita para poder localizarla posteriormente en uno o varios idiomas con relativa facilidad.  
