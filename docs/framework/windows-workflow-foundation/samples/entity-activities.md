@@ -2,24 +2,24 @@
 title: Actividades de entidad
 ms.date: 03/30/2017
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-ms.openlocfilehash: 96301c15b849749299e744a435068c3ec9be2e3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03bd0e42c70f1226558d492bcb3b2cfa5c7010f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519141"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385809"
 ---
 # <a name="entity-activities"></a>Actividades de entidad
-Este ejemplo muestra cómo utilizar ADO.NET Entity Framework con Windows Workflow Foundation para simplificar el acceso a datos.  
+En este ejemplo se muestra cómo utilizar ADO.NET Entity Framework con Windows Workflow Foundation para simplificar el acceso de datos.  
   
- ADO.NET Entity Framework permite a los desarrolladores de software trabajar con datos en forma de objetos específicos del dominio, propiedades y relaciones, como Customers, Orders, Order Details y las relaciones entre estas entidades. ADO.NET Entity Framework realiza esto proporcionando un nivel de abstracción que habilita la programación con un modelo de aplicación conceptual en lugar de programar directamente con un esquema de almacenamiento relacional. Para obtener más información acerca de ADO.NET Entity Framework, vea [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ ADO.NET Entity Framework permite a los desarrolladores de software trabajar con datos en forma de objetos específicos del dominio, propiedades y relaciones, como Customers, Orders, Order Details y las relaciones entre estas entidades. ADO.NET Entity Framework realiza esto proporcionando un nivel de abstracción que habilita la programación con un modelo de aplicación conceptual en lugar de programar directamente con un esquema de almacenamiento relacional. Para obtener más información acerca de ADO.NET Entity Framework, vea [ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkId=165549).  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
  Este ejemplo utiliza la base de datos `Northwind` e incluye scripts para crear y quitar la base de datos `Northwind` (Setup.cmd y Cleanup.cmd). Los proyectos de este ejemplo incluyen un Entity Data Model basado en la base de datos `Northwind`. Para encontrar el modelo, abra el archivo `Northwind.edmx` que está incluido en el proyecto. Este es el modelo que define la forma de los objetos a los que se pueden tener acceso mediante ADO.NET Entity Framework.  
   
  En este ejemplo se incluyen las siguientes actividades:  
   
--   `EntitySQLQuery`: la actividad `EntitySQLQuery` le permite recuperar los objetos de la base de datos en función de una cadena de consulta de Entity SQL. Entity SQL es un lenguaje independiente del almacenamiento que es similar a SQL y permite especificar consultas basadas en el modelo conceptual y las entidades que forman una parte del modelo o del dominio. Para obtener más información sobre el lenguaje Entity SQL, consulte [lenguaje Entity SQL](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   `EntitySQLQuery`: la actividad `EntitySQLQuery` le permite recuperar los objetos de la base de datos en función de una cadena de consulta de Entity SQL. Entity SQL es un lenguaje independiente del almacenamiento que es similar a SQL y permite especificar consultas basadas en el modelo conceptual y las entidades que forman una parte del modelo o del dominio. Para obtener más información sobre el lenguaje Entity SQL, consulte [lenguaje Entity SQL](https://go.microsoft.com/fwlink/?LinkId=165646).  
   
 -   `EntityLinqQuery`: esta actividad permite recuperar objetos de la base de datos en función de una consulta o un predicado LINQ.  
   
@@ -252,6 +252,6 @@ return new ObjectContextScope
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: e49404626f6de1bfe260f0abb692d68ad779a7ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69f65ca833dc9a0f719541733be9e6066db37f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508519"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391855"
 ---
 # <a name="service-transaction-behavior"></a>Comportamiento de transacción de servicio
-Este ejemplo muestra el uso de una transacción coordinada por el cliente y la configuración de ServiceBehaviorAttribute y OperationBehaviorAttribute para controlar el comportamiento de las transacciones de servicio. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora, pero se ha ampliado para mantener un registro de servidor de las operaciones realizadas en una tabla de base de datos y un con estado ejecutando total para las operaciones de cálculo. Las escrituras guardadas en la tabla de registro del servidor dependen del resultado de una transacción coordinada del cliente. Si la transacción del cliente no se completa, la transacción del servicio Web garantiza que las actualizaciones de la base de datos no se confirman.  
+Este ejemplo muestra el uso de una transacción coordinada por el cliente y la configuración de ServiceBehaviorAttribute y OperationBehaviorAttribute para controlar el comportamiento de las transacciones de servicio. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora, pero se extiende para mantener un registro del servidor de las operaciones realizadas en una tabla de base de datos y una con estado ejecutando total para las operaciones de cálculo. Las escrituras guardadas en la tabla de registro del servidor dependen del resultado de una transacción coordinada del cliente. Si la transacción del cliente no se completa, la transacción del servicio Web garantiza que las actualizaciones de la base de datos no se confirman.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
@@ -210,21 +210,21 @@ Creating new service instance...
   
 2.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
- Si ejecuta el ejemplo en los equipos, debe configurar el Microsoft Distributed Coordinador de transacciones (MSDTC) para habilitar el flujo de transacciones de red y usar la herramienta WsatConfig.exe para habilitar la red de las transacciones de Windows Communication Foundation (WCF) soporte técnico.  
+ Si ejecuta el ejemplo entre máquinas, debe configurar el Microsoft distribuidas (Coordinador de transacciones) para habilitar el flujo de transacciones de red y usar la herramienta WsatConfig.exe para habilitar las transacciones de red de Windows Communication Foundation (WCF) soporte técnico.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Para configurar MSDTC de forma que admita la ejecución del ejemplo en varios equipos  
   
 1.  En el equipo de servicio, configure MSDTC para permitir las transacciones de red entrantes.  
   
-    1.  Desde el **iniciar** menú, vaya a **el Panel de Control**, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.  
+    1.  Desde el **iniciar** menú, vaya a **Panel de Control**, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.  
   
     2.  Haga clic en **Mi PC** y seleccione **propiedades**.  
   
-    3.  En el **MSDTC** , haga clic en **configuración de seguridad**.  
+    3.  En el **MSDTC** , haga clic **configuración de seguridad**.  
   
-    4.  Comprobar **acceso a DTC desde la red** y **Permitir entrantes**.  
+    4.  Comprobar **acceso DTC de red** y **Permitir entrantes**.  
   
     5.  Haga clic en **Sí** para reiniciar el servicio MS DTC y, a continuación, haga clic en **Aceptar**.  
   
@@ -234,23 +234,23 @@ Creating new service instance...
   
     1.  Ejecute la aplicación Firewall de Windows desde el Panel de control.  
   
-    2.  Desde el **excepciones** , haga clic en **Agregar programa**.  
+    2.  Desde el **excepciones** , haga clic **Agregar programa**.  
   
     3.  Desplácese a la carpeta C:\WINDOWS\System32.  
   
-    4.  Seleccione Msdtc.exe y haga clic en **abiertos**.  
+    4.  Seleccione Msdtc.exe y haga clic en **abierto**.  
   
     5.  Haga clic en **Aceptar** para cerrar el **Agregar programa** cuadro de diálogo y haga clic en **Aceptar** otra vez para cerrar el applet del Firewall de Windows.  
   
 3.  En el equipo cliente, configure MSDTC para permitir las transacciones de red salientes:  
   
-    1.  Desde el **iniciar** menú, vaya a **el Panel de Control**, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.  
+    1.  Desde el **iniciar** menú, vaya a **Panel de Control**, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.  
   
     2.  Haga clic en **Mi PC** y seleccione **propiedades**.  
   
-    3.  En el **MSDTC** , haga clic en **configuración de seguridad**.  
+    3.  En el **MSDTC** , haga clic **configuración de seguridad**.  
   
-    4.  Comprobar **acceso a DTC desde la red** y **Permitir salientes**.  
+    4.  Comprobar **acceso DTC de red** y **Permitir salientes**.  
   
     5.  Haga clic en **Sí** para reiniciar el servicio MS DTC y, a continuación, haga clic en **Aceptar**.  
   
@@ -261,7 +261,7 @@ Creating new service instance...
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
   

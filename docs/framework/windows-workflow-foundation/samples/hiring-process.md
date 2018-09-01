@@ -2,17 +2,17 @@
 title: Proceso de contratación
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519768"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396325"
 ---
 # <a name="hiring-process"></a>Proceso de contratación
 Este ejemplo muestra cómo implementar un proceso de negocio mediante actividades de mensajería y dos flujos de trabajo hospedados como servicios de flujo de trabajo. Estos flujos de trabajo son parte de la infraestructura de TI de una compañía ficticia denominada Contoso, Inc.  
   
- El proceso de flujo de trabajo `HiringRequest` (implementado como <xref:System.Activities.Statements.Flowchart>) solicita autorización a varios administradores de la organización. Para lograr este objetivo, el flujo de trabajo utiliza otros servicios existentes en la organización (en nuestro caso, un servicio de bandeja de entrada y un servicio de datos de la organización implementados como servicios de Windows Communication Foundation (WCF) sin formato).  
+ El proceso de flujo de trabajo `HiringRequest` (implementado como <xref:System.Activities.Statements.Flowchart>) solicita autorización a varios administradores de la organización. Para lograr este objetivo, el flujo de trabajo utiliza otros servicios existentes en la organización (en nuestro caso, un servicio de la Bandeja de entrada y un servicio de datos de la organización que se implementan como servicios de Windows Communication Foundation (WCF) sin formato).  
   
  El flujo de trabajo `ResumeRequest` (implementado como <xref:System.Activities.Statements.Sequence>) publica un anuncio de vacante en el sitio web externo de ofertas de trabajo de Contoso y administra la adquisición de currículos. Un anuncio de vacante está disponible en el sitio web externo durante un período fijo de tiempo (hasta que expira un tiempo de espera) o hasta que un empleado en Contoso decide quitarlo.  
   
@@ -53,7 +53,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -119,7 +119,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
 |Seguimiento personalizado|En el ejemplo se incluye un participante de seguimiento personalizado que guarda el historial de `HiringRequestProcess` (registra qué acción se ha realizado, quién la ha realizado y cuándo se ha realizado). El código fuente está en la carpeta Tracking de HiringRequestService.|HiringRequestService|  
 |Seguimiento ETW|El seguimiento de ETW proporcionado por el sistema se configura en el archivo App.config en el servicio HiringRequestService.|HiringRequestService|  
 |Composición de actividades|La definición del proceso utiliza la composición libre de <xref:System.Activities.Activity>. El Diagrama de flujo contiene varias actividades Sequence y Parallel que al mismo tiempo contienen otras actividades (y así sucesivamente).|HiringRequestService|  
-|Actividades paralelas|-   <xref:System.Activities.Statements.ParallelForEach%601> se usa para registrar en la Bandeja de entrada del CEO y los responsables de recursos humanos en paralelo (espera de paso de aprobación de los administradores de recursos humanos dos).<br />-   <xref:System.Activities.Statements.Parallel> se utiliza para realizar algunas tareas de limpieza en los pasos Completed y Rejected.|HiringRequestService|  
+|Actividades paralelas|-   <xref:System.Activities.Statements.ParallelForEach%601> se usa para registrar en la Bandeja de entrada del CEO y responsables de recursos humanos en paralelo (en espera para el paso de aprobación de los directores de recursos humanos dos).<br />-   <xref:System.Activities.Statements.Parallel> se usa para realizar algunas tareas de limpieza en los pasos Completed y Rejected.|HiringRequestService|  
 |Cancelación de modelo|El Diagrama de flujo utiliza <xref:System.Activities.Statements.CancellationScope> para crear el comportamiento de cancelación (en este caso, se lleva a cabo alguna limpieza).|HiringRequestService|  
 |Participante de persistencia del cliente|`HiringRequestPersistenceParticipant` guarda los datos de una variable de flujo de trabajo en una tabla almacenada en la base de datos de Recursos Humanos de Contoso.|HiringRequestService|  
 |Servicios de flujo de trabajo|`ResumeRequestService` se implementa utilizando los servicios de flujo de trabajo. La definición del Flujo de trabajo y la información del servicio se encuentran en ResumeRequestService.xamlx. El servicio se configura para utilizar la persistencia y el seguimiento.|ResumeRequestService|  
@@ -151,7 +151,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 2.  Haga clic en la solución en **el Explorador de soluciones** y seleccione **propiedades**.  
   
-3.  Seleccione la opción **proyectos de inicio múltiples** y establezca el **CareersWebSite**, **InternalClient**, **HiringRequestService**, y **ResumeRequestService** a **iniciar**. Deje **ContosoHR**, **InboxService**, y **OrgService** como ninguno.  
+3.  Seleccione la opción **varios proyectos de inicio** y establezca el **CareersWebSite**, **InternalClient**, **HiringRequestService**, y **ResumeRequestService** a **iniciar**. Deje **ContosoHR**, **InboxService**, y **OrgService** como ninguno.  
   
 4.  Compile la solución presionando CTRL+MAYÚS+B. Compruebe que la compilación se ha realizado correctamente.  
   
@@ -169,7 +169,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 6.  Haga clic en **CareersWebSite** en la solución y seleccione **ver en el explorador**.  
   
-7.  Vuelva a la `InternalClient` haciendo clic en **InternalClient** en la solución y seleccione **ver en el explorador**.  
+7.  Vuelva a la `InternalClient` haciendo **InternalClient** en la solución y seleccionando **ver en el explorador**.  
   
 8.  Vaya a la **JobPostings** sección haciendo clic en el **Job Postings** vínculo en el menú superior de la Bandeja de entrada. Puede seguir el escenario que aquí se detalla.  
   
@@ -179,7 +179,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 1.  Michael Alejandro (Ingeniero de software) desea solicitar una nueva vacante para contratar a un ingeniero de software en Pruebas (SDET), en el departamento de Ingeniería, que tenga 3 años de experiencia en C# por lo menos.  
   
-2.  Después de su creación, la solicitud aparece en la Bandeja de entrada de Michael (haga clic en **actualizar** si no ve la solicitud) en espera de aprobación de Peter Brehm, que es el jefe de Michael.  
+2.  Después de crearla, la solicitud aparece en la Bandeja de entrada de Michael (haga clic en **actualizar** si no ve la solicitud) en espera de aprobación de Peter Brehm, que es el jefe de Michael.  
   
 3.  Peter desea actuar sobre la solicitud de Michael. Piensa que el puesto exige 5 años de experiencia en C# en lugar de 3, de modo que devuelve sus comentarios para su revisión.  
   
@@ -195,11 +195,11 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 ### <a name="start-resume-request"></a>Iniciar la solicitud de curriculum vitae  
   
-1.  Ahora, el puesto de trabajo está esperando a enviarse a un sitio Web externo donde las personas puedan solicitarlo (puede verlo al hacer clic en el **Job Postings** vínculo). Actualmente, el puesto de trabajo está en manos de un representante de Recursos Humanos, que es el responsable de terminarlo y publicarlo.  
+1.  Ahora, el puesto de trabajo está esperando que se publicará en un sitio Web externo donde las personas puedan solicitarlo (puede verlo haciendo clic en el **Job Postings** vínculo). Actualmente, el puesto de trabajo está en manos de un representante de Recursos Humanos, que es el responsable de terminarlo y publicarlo.  
   
 2.  Recursos humanos desea modificar este puesto de trabajo (haciendo clic en el **editar** vínculo) al establecer un tiempo de espera de 60 minutos (en la vida real, esto podría ser días o semanas). El tiempo de espera permite retirar el puesto de trabajo del sitio web externo según el tiempo especificado.  
   
-3.  Después de guardar el puesto de trabajo editado, aparece en la **Receiving Resumes** pestaña (actualizar la página Web para ver el nuevo puesto de trabajo).  
+3.  Después de guardar el puesto de trabajo editado, aparece en el **Receiving Resumes** ficha (actualice la página Web para ver el nuevo puesto de trabajo).  
   
 ### <a name="collecting-resumes"></a>Recopilar currículos  
   
@@ -211,11 +211,11 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
 ## <a name="troubleshooting"></a>Solución de problemas  
   
-1.  Asegúrese de que está ejecutando Visual Studio con privilegios de administrador.  
+1.  Asegúrese de que se está ejecutando Visual Studio con privilegios de administrador.  
   
 2.  Si la solución no se compila, compruebe lo siguiente:  
   
-    -   La referencia a `ContosoHR` se encuentra en la `InternalClient` o `CareersWebSite` proyectos.  
+    -   La referencia a `ContosoHR` no no se encuentra en la `InternalClient` o `CareersWebSite` proyectos.  
   
 3.  Si la solución no se ejecuta, compruebe lo siguiente:  
   
@@ -227,7 +227,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
   
         2.  Haga clic en **Contoso** y seleccione **actualizar referencias Web/servicio**.  
   
-        3.  Vuelva a generar la solución presionando CTRL + MAYÚS + B en Visual Studio.  
+        3.  Recompile la solución presionando CTRL + MAYÚS + B en Visual Studio.  
   
 ## <a name="uninstalling"></a>Desinstalación  
   

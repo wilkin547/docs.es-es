@@ -2,22 +2,22 @@
 title: Tratamiento de errores y puentes
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804396"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389073"
 ---
 # <a name="bridging-and-error-handling"></a>Tratamiento de errores y puentes
-Este ejemplo muestra cómo se utiliza el servicio de enrutamiento de Windows Communication Foundation (WCF) para puentear la comunicación entre un cliente y un servicio que utilizan enlaces diferentes. Este ejemplo también muestra cómo utilizar un servicio de seguridad de reserva para escenarios de conmutación por error. El servicio de enrutamiento es un componente WCF que facilita el proceso incluir un enrutador basado en contenido en la aplicación. Este ejemplo adapta el ejemplo de la calculadora de WCF estándar para comunicarse con el servicio de enrutamiento.  
+Este ejemplo muestra cómo se usa el servicio de Windows Communication Foundation (WCF) de enrutamiento para puentear la comunicación entre un cliente y un servicio que utilizan enlaces diferentes. Este ejemplo también muestra cómo utilizar un servicio de seguridad de reserva para escenarios de conmutación por error. El servicio de enrutamiento es un componente WCF que facilita la tarea debe incluir un enrutador basado en contenido en la aplicación. Este ejemplo adapta el ejemplo de calculadora de WCF estándar para comunicarse con el servicio de enrutamiento.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\ErrorHandlingAndBridging`  
   
@@ -39,7 +39,7 @@ Este ejemplo muestra cómo se utiliza el servicio de enrutamiento de Windows Com
   
 2.  Presione F5 o CTRL+MAYÚS+B en Visual Studio.  
   
-    1.  Si desea iniciar de forma automática los proyectos necesarios al presionar F5, haga clic en la solución, seleccione **propiedades**y en el **proyecto de inicio** nodo bajo **propiedades comunes**, seleccione **proyectos de inicio múltiples**y establezca todos los proyectos en **iniciar**.  
+    1.  Si desea iniciar automáticamente los proyectos necesarios al presionar F5, haga clic en la solución, seleccione **propiedades**y en el **proyecto de inicio** nodo bajo **propiedades comunes**, seleccione **varios proyectos de inicio**y establezca todos los proyectos en **iniciar**.  
   
     2.  Si compila el proyecto con CTRL+MAYÚS+B, debe iniciar las siguientes aplicaciones:  
   
@@ -70,4 +70,4 @@ Este ejemplo muestra cómo se utiliza el servicio de enrutamiento de Windows Com
  Contoso desea proporcionar un punto de conexión de servicio interoperable, al tiempo que optimiza el rendimiento internamente. Por tanto, expone sus servicios a los demás a través de un punto de conexión utilizando BasicHttpBinding, mientras que, internamente, usa el servicio de enrutamiento para puentear esa conexión al punto de conexión mediante NetTcpBinding, que su servicio usa. Además, Contoso desea que su oferta de servicios tolere las interrupciones temporales en cualquiera de sus servicios de producción y, por lo tanto, proporcionar varios puntos de conexión virtuales detrás del servicio de enrutador utilizando las funciones de tratamiento de errores para conmutar por error automáticamente a los puntos de conexión de reserva cuando sea necesario.  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de persistencia y el hospedaje de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

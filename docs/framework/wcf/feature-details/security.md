@@ -8,27 +8,27 @@ helpviewer_keywords:
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: fb48ae39d269f21a7120ecf143dc4c4680efe39d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a070800ea15c5a7f16b52ca69c7e454c92618e1a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499094"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384933"
 ---
 # <a name="windows-communication-foundation-security"></a>Seguridad en Windows Communication Foundation
 Los temas de esta sección describen las características de seguridad de Windows Communication Foundation (WCF) y cómo utilizarlas para ayudar a proteger los mensajes.  
   
- Para obtener más información acerca de Windows Server AppFabric y seguridad, vea [modelo de seguridad de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ Para obtener más información sobre la seguridad y Windows Server AppFabric, consulte [modelo de seguridad para Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  Describe las características de seguridad en WCF.  
   
  [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- Describe la terminología básica y los conceptos que se usan en la seguridad WCF.  
+ Describe la terminología básica y los conceptos usados en la seguridad de WCF.  
   
  [Escenarios de seguridad comunes](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- Se describen escenarios y topologías que puede configurar con WCF.  
+ Describe los escenarios y topologías que puede configurar con WCF.  
   
  [Comportamientos de seguridad](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  Proporciona información general sobre los comportamientos de WCF que afectan a la seguridad, como la configuración de las credenciales.  
@@ -49,7 +49,7 @@ Los temas de esta sección describen las características de seguridad de Window
  Describe los fundamentos de federación y cómo crear clientes que se comuniquen con servidores federados.  
   
  [Confianza parcial](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- Describe cómo ejecutar escenarios parcialmente confiables y limitaciones de WCF cuando se ejecuta en confianza parcial.  
+ Describe cómo ejecutar escenarios de confianza parcial y las limitaciones de WCF cuando se ejecuta en confianza parcial.  
   
  [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  Describe cómo auditar los eventos de seguridad.  

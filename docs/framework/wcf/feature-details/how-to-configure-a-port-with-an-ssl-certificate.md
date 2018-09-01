@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: c3cede1eb90b963f4c0b567a8df48925bca9b02d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0595bcbd3dcae7977c8734b7d3858df2412c962
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494834"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395311"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Cómo: Configurar un puerto con un certificado SSL
-Al crear un servicio de Windows Communication Foundation (WCF) hospedado por sí mismo con el <xref:System.ServiceModel.WSHttpBinding> que utiliza la seguridad de transporte de clase, también debe configurar un puerto con un certificado X.509. Si no está creando un servicio autohospedado, puede hospedar su servicio en Servicios de Internet Information Server (IIS). Para obtener más información, consulte [seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí mismos con el <xref:System.ServiceModel.WSHttpBinding> que utiliza seguridad de transporte de clase, también debe configurar un puerto con un certificado X.509. Si no está creando un servicio autohospedado, puede hospedar su servicio en Servicios de Internet Information Server (IIS). Para obtener más información, consulte [seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  La herramienta que se usa para configurar un puerto depende del sistema operativo que se esté ejecutando en el equipo.  
   
- Si está ejecutando [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe. Esta herramienta se instala con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Con [!INCLUDE[wxp](../../../../includes/wxp-md.md)], puede descargar la herramienta en [herramientas de soporte técnico de Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Para obtener más información, consulte [general de Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605). El [Httpcfg](http://go.microsoft.com/fwlink/?LinkId=94840) explica la sintaxis de la herramienta Httpcfg.exe.  
+ Si está ejecutando [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe. Esta herramienta se instala con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Con [!INCLUDE[wxp](../../../../includes/wxp-md.md)], puede descargar la herramienta en [Windows XP Service Pack 2 Support Tools](https://go.microsoft.com/fwlink/?LinkId=88606). Para obtener más información, consulte [introducción general a Httpcfg](https://go.microsoft.com/fwlink/?LinkId=88605). El [documentación de las herramientas de soporte técnico de Windows](https://go.microsoft.com/fwlink/?LinkId=94840) explica la sintaxis de la herramienta Httpcfg.exe.  
   
  Si está ejecutando [!INCLUDE[wv](../../../../includes/wv-md.md)], use la herramienta Netsh.exe, que ya está instalada.  
   
@@ -41,7 +41,7 @@ Al crear un servicio de Windows Communication Foundation (WCF) hospedado por sí
   
 ### <a name="to-determine-how-ports-are-configured"></a>Determinar cómo se configuran los puertos  
   
-1.  En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe para ver la configuración de puerto actual, usando la **consulta** y **ssl** se activa, tal como se muestra en el ejemplo siguiente.  
+1.  En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe para ver la configuración de puerto actual, utilizando el **consulta** y **ssl** se activa, tal como se muestra en el ejemplo siguiente.  
   
     ```  
     httpcfg query ssl  
@@ -55,7 +55,7 @@ Al crear un servicio de Windows Communication Foundation (WCF) hospedado por sí
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Para obtener una huella digital de un certificado  
   
-1.  Use el complemento de certificados de MMC para buscar un certificado X.509 que tenga como finalidad la autenticación del cliente. Para obtener más información, consulte [Cómo: ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Use el complemento de certificados de MMC para buscar un certificado X.509 que tenga como finalidad la autenticación del cliente. Para obtener más información, vea [Cómo: Ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 2.  Obtenga acceso a la huella digital del certificado. Para obtener más información, consulte [Cómo: recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
@@ -83,9 +83,9 @@ Al crear un servicio de Windows Communication Foundation (WCF) hospedado por sí
   
     -   El **certhash** parámetro especifica la huella digital del certificado.  
   
-    -   El **puerto IP** parámetro especifica la dirección IP y puerto y funciona igual que el **-i** switch de la herramienta Httpcfg.exe descrita.  
+    -   El **ipport** parámetro especifica la dirección IP y puerto, y funciona exactamente igual que el **-i** switch de la herramienta Httpcfg.exe descrita.  
   
-    -   El **appid** parámetro es un GUID que puede usarse para identificar la aplicación propietaria.  
+    -   El **appid** parámetro es un GUID que se puede usar para identificar la aplicación propietaria.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Para enlazar un Certificado SSL a un número de puerto y a certificados de cliente de compatibilidad  
   
@@ -111,7 +111,7 @@ Al crear un servicio de Windows Communication Foundation (WCF) hospedado por sí
     httpcfg query ssl>myMachinePorts.txt  
     ```  
   
-2.  En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe con el **eliminar** y **ssl** palabras clave. Use la **-i** conmutador para especificar el `IP`:`port` número y la **-h** conmutador para especificar la huella digital.  
+2.  En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use la herramienta HttpCfg.exe con las **eliminar** y **ssl** palabras clave. Use la **-i** modificador para especificar el `IP`:`port` número y el **-h** conmutador para especificar la huella digital.  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

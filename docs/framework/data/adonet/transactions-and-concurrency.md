@@ -2,12 +2,12 @@
 title: Transacciones y simultaneidad
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: 9ea136a34c478f3619c81ad3cbbae0765fb99374
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365272"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386690"
 ---
 # <a name="transactions-and-concurrency"></a>Transacciones y simultaneidad
 Una transacción consiste en un comando único o en un grupo de comandos que se ejecutan como un paquete. Las transacciones permiten combinar varias operaciones en una sola unidad de trabajo. Si en un punto de la transacción se produjera un error, todas las actualizaciones podrían revertirse y devolverse al estado que tenían antes de la transacción.  
@@ -19,7 +19,7 @@ Una transacción consiste en un comando único o en un grupo de comandos que se 
   
  Las transacciones explícitas en procedimientos almacenados suelen dar mejores resultados cuando una transacción implica el uso de varias tablas en la misma base de datos o servidor. Se pueden crear transacciones en procedimientos almacenados de SQL Server mediante las instrucciones `BEGIN TRANSACTION`, `COMMIT TRANSACTION` o `ROLLBACK TRANSACTION` de Transact-SQL. Para obtener más información, vea los Libros en pantalla de SQL Server.  
   
- Las transacciones que implican a varios administradores de recursos, como un a transacción entre SQL Server y Oracle, requieren una transacción distribuida.  
+ Las transacciones que implican a varios administradores de recursos, como una transacción entre SQL Server y Oracle, requieren una transacción distribuida.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Transacciones locales](../../../../docs/framework/data/adonet/local-transactions.md)  
@@ -40,4 +40,4 @@ Una transacción consiste en un comando único o en un grupo de comandos que se 
  [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Objetos DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

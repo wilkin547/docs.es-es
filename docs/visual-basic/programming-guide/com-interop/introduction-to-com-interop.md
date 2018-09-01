@@ -5,19 +5,19 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 639b621215f25bc1042274a92a21fca2985e5918
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: ecd514231c36cf3b65b1f0dd05f26d05f3c9c88d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244119"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389749"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Información general sobre la interoperabilidad COM (Visual Basic)
 El modelo de objetos componentes (COM) permite a un objeto exponer su funcionalidad a otros componentes y aplicaciones host. Aunque los objetos COM han sido fundamentales para Windows durante muchos años de programación, las aplicaciones diseñadas para common language runtime (CLR) proporcionan muchas ventajas.  
   
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicaciones reemplazará finalmente a aquellas que se desarrollaron con COM. Hasta entonces, es posible que deba usar o crear objetos COM con Visual Studio. Interoperabilidad con COM, o *interoperabilidad COM*, le permite utilizar objetos COM existentes mientras realiza la transición a la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] a su propio ritmo.  
   
- Mediante el uso de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para crear componentes COM, puede usar la interoperabilidad COM sin registro. Esto le permite controlar qué versión de DLL se habilita cuando se instala en un equipo más de una versión y permite a los usuarios finales utilizar XCOPY o FTP para copiar la aplicación en un directorio adecuado en su equipo donde se puede ejecutar. Para obtener más información, consulte [interoperabilidad COM sin registro](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
+ Mediante el uso de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para crear componentes COM, puede usar la interoperabilidad COM sin registro. Esto le permite controlar qué versión de DLL se habilita cuando se instala en un equipo más de una versión y permite a los usuarios finales utilizar XCOPY o FTP para copiar la aplicación en un directorio adecuado en su equipo donde se puede ejecutar. Para obtener más información, consulte [interoperabilidad COM sin registro](https://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
   
 ## <a name="managed-code-and-data"></a>Código administrado y datos  
  Código desarrollado para el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] se conoce como *código administrado*y contiene metadatos que se utilizan por CLR. Datos usados por [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicaciones se denomina *datos administrados* porque el tiempo de ejecución administra las tareas relacionadas con los datos, como la asignación y reclamar la memoria y realizar la comprobación de tipos. De forma predeterminada, Visual Basic .NET se usa código administrado y los datos, pero puede tener acceso a código no administrado y los datos de objetos COM mediante ensamblados de interoperabilidad (descritos más adelante en esta página).  
@@ -43,7 +43,7 @@ El modelo de objetos componentes (COM) permite a un objeto exponer su funcionali
 ### <a name="importing-and-exporting-type-libraries"></a>Importación y exportación de bibliotecas de tipos  
  Visual Studio contiene una utilidad, Tlbimp, que le permite importar información desde una biblioteca de tipos en un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicación. Puede generar las bibliotecas de tipos desde ensamblados mediante la utilidad Tlbexp.  
   
- Para obtener información sobre Tlbimp y Tlbexp, vea [Tlbimp.exe (importador de biblioteca)](../../../framework/tools/tlbimp-exe-type-library-importer.md) y [Tlbexp.exe (exportador de biblioteca)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
+ Para obtener información sobre Tlbimp y Tlbexp, vea [Tlbimp.exe (importador de biblioteca)](../../../framework/tools/tlbimp-exe-type-library-importer.md) y [Tlbexp.exe (exportador de biblioteca)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
   
 ## <a name="interop-assemblies"></a>Ensamblados de interoperabilidad  
  Ensamblados de interoperabilidad son [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ensamblados que puente entre administrado y código, los miembros de objeto de asignación COM equivalente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] miembros administrados. Ensamblados de interoperabilidad creados por Visual Basic .NET controlan muchos de los detalles del trabajo con objetos COM, como el cálculo de referencias de interoperabilidad.  
@@ -58,6 +58,6 @@ El modelo de objetos componentes (COM) permite a un objeto exponer su funcionali
  [Solución de problemas de interoperabilidad](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
  [Ensamblados y Caché global de ensamblados](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [TlbImp.exe (Importador de la biblioteca de tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (Exportador de la biblioteca de tipos)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
+ [Tlbexp.exe (Exportador de la biblioteca de tipos)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
  [Serialización de interoperabilidad](../../../framework/interop/interop-marshaling.md)  
- [Interoperabilidad COM sin registro](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)
+ [Interoperabilidad COM sin registro](https://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)

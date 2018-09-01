@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: 9e9cf91559fe164fc42d5f9532428310fa1b16ed
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fdda1bd4d3aca440558998231f411b614bd5542e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759470"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392096"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Obtener un objeto DbProviderFactory
 El proceso de obtención de <xref:System.Data.Common.DbProviderFactory> implica pasar información sobre un proveedor de datos a la clase <xref:System.Data.Common.DbProviderFactories>. En función de esta información, el método <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> crea un generador del proveedor fuertemente tipado. Por ejemplo, para crear <xref:System.Data.SqlClient.SqlClientFactory>, se puede pasar a `GetFactory` una cadena con el nombre de proveedor especificado como "System.Data.SqlClient". La otra sobrecarga de `GetFactory` toma <xref:System.Data.DataRow>. Una vez creado el generador del proveedor, se pueden utilizar sus métodos para crear objetos adicionales. Entre los métodos de `SqlClientFactory` se incluyen <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> y <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -55,7 +55,7 @@ El proceso de obtención de <xref:System.Data.Common.DbProviderFactory> implica 
  [!code-vb[DataWorks DbProviderFactories#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories/VB/source.vb#1)]  
   
 ## <a name="using-application-configuration-files-to-store-factory-information"></a>Utilizar archivos de configuración de la aplicación para almacenar información del generador  
- El patrón de diseño utilizado para trabajar con generadores implica almacenar información de la cadena de conexión y proveedor en un archivo de configuración de la aplicación, como **app.config** para una aplicación de Windows, y **web.config**  para una aplicación ASP.NET.  
+ El patrón de diseño que se usa para trabajar con generadores implica almacenar información de la cadena de conexión y proveedor en un archivo de configuración de aplicación, como **app.config** para una aplicación de Windows, y **web.config**  para una aplicación ASP.NET.  
   
  El siguiente fragmento de archivo de configuración muestra cómo guardar dos cadenas de conexión, una denominada "NorthwindSQL", para la conexión a la base de datos Northwind de SQL Server, y la otra denominada "NorthwindAccess", para una conexión a la base de datos Northwind de Access/Jet. El **invariable** nombre se usa para la **providerName** atributo.  
   
@@ -79,7 +79,7 @@ El proceso de obtención de <xref:System.Data.Common.DbProviderFactory> implica 
 ```  
   
 ### <a name="retrieving-a-connection-string-by-provider-name"></a>Recuperar una cadena de conexión por el nombre de proveedor  
- Para crear un generador del proveedor, debe proporcionar una cadena de conexión así como el nombre del proveedor. En este ejemplo se muestra cómo recuperar una cadena de conexión desde un archivo de configuración de la aplicación pasando el nombre del proveedor en el formato invariable "*System.Data.ProviderName*". El código recorre en iteración <xref:System.Configuration.ConnectionStringSettingsCollection>. Devuelve correctamente <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>; en caso contrario, `null` (`Nothing` en Visual Basic). Si existen varias entradas para un proveedor, se devuelve la primera que se encuentra. Para obtener más información y ejemplos de recuperar cadenas de conexión de archivos de configuración, consulte [las cadenas de conexión y archivos de configuración](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+ Para crear un generador del proveedor, debe proporcionar una cadena de conexión así como el nombre del proveedor. En este ejemplo se muestra cómo recuperar una cadena de conexión desde un archivo de configuración de la aplicación pasando el nombre del proveedor en el formato invariable "*System.Data.ProviderName*". El código recorre en iteración <xref:System.Configuration.ConnectionStringSettingsCollection>. Devuelve correctamente <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>; en caso contrario, `null` (`Nothing` en Visual Basic). Si existen varias entradas para un proveedor, se devuelve la primera que se encuentra. Para obtener más información y ejemplos de recuperar las cadenas de conexión de archivos de configuración, consulte [las cadenas de conexión y archivos de configuración](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
 > [!NOTE]
 >  Se necesita una referencia a `System.Configuration.dll` para que se ejecute el código.  
@@ -88,7 +88,7 @@ El proceso de obtención de <xref:System.Data.Common.DbProviderFactory> implica 
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="creating-the-dbproviderfactory-and-dbconnection"></a>Crear DbProviderFactory y DbConnection  
- En este ejemplo se muestra cómo crear un <xref:System.Data.Common.DbProviderFactory> y <xref:System.Data.Common.DbConnection> objeto, pasando el nombre del proveedor en el formato "*System.Data.ProviderName*" y una cadena de conexión. Se devuelve correctamente un objeto `DbConnection`; `null` (`Nothing` en Visual Basic), en caso de producirse un error.  
+ En este ejemplo se muestra cómo crear un <xref:System.Data.Common.DbProviderFactory> y <xref:System.Data.Common.DbConnection> objeto pasando el nombre del proveedor en el formato "*System.Data.ProviderName*" y una cadena de conexión. Se devuelve correctamente un objeto `DbConnection`; `null` (`Nothing` en Visual Basic), en caso de producirse un error.  
   
  El código obtiene `DbProviderFactory` llamando a <xref:System.Data.Common.DbProviderFactories.GetFactory%2A>. Entonces, el método <xref:System.Data.Common.DbProviderFactory.CreateConnection%2A> crea el objeto <xref:System.Data.Common.DbConnection> y la propiedad <xref:System.Data.Common.DbConnection.ConnectionString%2A> se establece en la cadena de conexión.  
   
@@ -98,5 +98,5 @@ El proceso de obtención de <xref:System.Data.Common.DbProviderFactory> implica 
 ## <a name="see-also"></a>Vea también  
  [Objetos DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [Cadenas de conexión](../../../../docs/framework/data/adonet/connection-strings.md)  
- [Utilizar las clases de configuración](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Utilizar las clases Configuration](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

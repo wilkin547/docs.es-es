@@ -1,5 +1,5 @@
 ---
-title: Option Compare (Instrucción)
+title: Option Compare (instrucción) (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Compare
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 675ad649650d9fbc6f2c0f1dc689aa682ca6103c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32664dc3be98a9d5a2e6a7d61790c18ae5d3795d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605308"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385112"
 ---
 # <a name="option-compare-statement"></a>Option Compare (Instrucción)
 Declara el método de comparación predeterminado que se utiliza al comparar datos de cadena.  
@@ -59,7 +59,7 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Cuando la instrucción Option Compare no está presente  
- Si el código fuente no contiene un `Option Compare` (instrucción), el **Option Compare** en el [página compilación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) se utiliza. Si usa el compilador de línea de comandos, la configuración especificada por el [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) se utiliza la opción del compilador.  
+ Si el código fuente no contiene un `Option Compare` instrucción, el **Option Compare** en el [página compilación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) se utiliza. Si usa el compilador de línea de comandos, la configuración especificada por el [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) se utiliza la opción del compilador.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -71,7 +71,7 @@ Option Compare { Binary | Text }
   
 3.  Establezca el valor el **Option Compare** cuadro.  
   
- Cuando se crea un proyecto, el **Option Compare** en el **compilar** pestaña está establecida en el **Option Compare** en el **opciones** cuadro de diálogo. Para cambiar esta configuración, en la **herramientas** menú, haga clic en **opciones**. En el cuadro de diálogo **Opciones**, expanda **Proyectos y soluciones** y, después, haga clic en **Valores predeterminados de VB**. El valor predeterminado inicial de **valores predeterminados de VB** es **binario**.  
+ Cuando se crea un proyecto, el **Option Compare** en el **compilar** ficha se establece en el **Option Compare** en el **opciones** cuadro de diálogo. Para cambiar esta configuración, en el **herramientas** menú, haga clic en **opciones**. En el cuadro de diálogo **Opciones**, expanda **Proyectos y soluciones** y, después, haga clic en **Valores predeterminados de VB**. El valor predeterminado inicial de **valores predeterminados de VB** es **binario**.  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>Cómo establecer Option Compare en la línea de comandos  
   

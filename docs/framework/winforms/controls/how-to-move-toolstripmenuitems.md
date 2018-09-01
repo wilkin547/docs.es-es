@@ -11,18 +11,18 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 5cfaf87a59d27678cfb786633ed4c9a9f66bac76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69ef2bbaa05155532887897a0aef79a778594169
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534913"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384905"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>Cómo: Mover elementos ToolStripMenuItems
-En tiempo de diseño, puede mover los menús de nivel superior completos y sus elementos de menú en un lugar diferente el <xref:System.Windows.Forms.MenuStrip>. También puede mover elementos de menú individuales entre los menús de nivel superior o cambiar la posición de los elementos de menú dentro de un menú.  
+En tiempo de diseño, puede mover los menús de nivel superior completos y sus elementos de menú a un lugar diferente el <xref:System.Windows.Forms.MenuStrip>. También puede mover elementos de menú individuales entre los menús de nivel superior o cambiar la posición de los elementos de menú dentro de un menú.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a>Para mover un menú de nivel superior y sus elementos de menú a otra ubicación de nivel superior  
   
@@ -32,15 +32,15 @@ En tiempo de diseño, puede mover los menús de nivel superior completos y sus e
   
      El menú seleccionado se mueve a la derecha del punto de inserción.  
   
-### <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a>Para mover un menú de nivel superior y sus elementos de menú a una ubicación desplegable  
+### <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a>Para mover un menú de nivel superior y sus elementos de menú a una ubicación de la lista desplegable  
   
-1.  Haga clic en el menú que desea mover y presione CTRL + X, o haga clic en el menú y seleccione **cortar** en el menú contextual.  
+1.  Haga clic en el menú que desea mover y presione CTRL + X, o el menú contextual y seleccione **cortar** en el menú contextual.  
   
-2.  En el menú de nivel superior de destino, haga clic en el elemento de menú por encima de la nueva ubicación deseada y presione CTRL+V, o haga clic en el elemento de menú por encima de la nueva ubicación deseada y seleccione **pegar** en el menú contextual.  
+2.  En el menú de nivel superior de destino, haga clic en el elemento de menú por encima de la nueva ubicación deseada y presione CTRL+V, o haga clic en el elemento de menú situado encima de la nueva ubicación deseada y seleccione **pegar** en el menú contextual.  
   
      El menú que ha cortado se inserta después del elemento de menú seleccionado.  
   
-### <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a>Para mover un elemento de menú dentro de un menú mediante el Editor de la colección de elementos  
+### <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a>Para mover un elemento de menú dentro de un menú con el Editor de colección de elementos  
   
 1.  Haga clic en el menú que contiene el elemento de menú que desea mover.  
   
@@ -56,7 +56,7 @@ En tiempo de diseño, puede mover los menús de nivel superior completos y sus e
   
 1.  Presione y mantenga presionada la tecla ALT.  
   
-2.  Mantenga presionado el botón primario del mouse en el elemento de menú que desea mover.  
+2.  Haga clic y mantenga el botón primario del mouse en el elemento de menú que desea mover.  
   
 3.  Arrastre el elemento de menú a la nueva ubicación y suelte el botón primario del mouse.  
   

@@ -2,22 +2,22 @@
 title: Actividad Policy en .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 8e375e0c-d7c1-4d69-88ab-36d52db0aa7e
-ms.openlocfilehash: 52f0cdd3714367598c83f72e2a8203c2ae27eb4e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d8983f2f1d3f75beffeacfff4b673f6c23c4204
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518905"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390133"
 ---
 # <a name="policy-activity-in-net-framework-45"></a>Actividad Policy en .NET Framework 4.5
-La actividad Policy4 permite a Windows Workflow Foundation en [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objetos para su uso en Windows Workflow Foundation en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) directamente mediante el motor de reglas que se distribuye con WF 3.5. Utilizando esta actividad, puede crear y ejecutar un objeto <xref:System.Workflow.Activities.Rules.RuleSet> de WF 3.5. Para obtener más información sobre el motor de reglas de WF 3.5 incluido como parte de Windows Workflow Foundation, lea el apartado introducción al motor de reglas de Windows Workflow Foundation. Para obtener más información sobre cómo migrar las reglas de WF en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], lea [Guía de migración](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+La actividad Policy4 permite Windows Workflow Foundation en [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objetos para su uso en Windows Workflow Foundation en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) utilizando el motor de reglas que se distribuye con WF 3.5. Utilizando esta actividad, puede crear y ejecutar un objeto <xref:System.Workflow.Activities.Rules.RuleSet> de WF 3.5. Para obtener más información sobre el motor de reglas de WF 3.5 incluye como parte de Windows Workflow Foundation, lea el apartado introducción al motor de reglas de Windows Workflow Foundation. Para obtener más información sobre cómo migrar reglas a WF [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], lea [Guía de migración](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Rules-Policy4`  
   
@@ -25,7 +25,7 @@ La actividad Policy4 permite a Windows Workflow Foundation en [!INCLUDE[netfx35_
   
 |Nombre del proyecto|Descripción|Archivos principales|  
 |------------------|-----------------|----------------|  
-|Policy4|Contiene la actividad Policy4 y su diseñador de [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Policy4.cs**: definición de la actividad Policy4.<br /><br /> **PolicyDesigner.xaml**: diseñador personalizado para la actividad Policy4. Utiliza el editor de reglas ([clase RuleSetDialog](http://go.microsoft.com/fwlink/?LinkId=150378)) de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] motor de reglas.|  
+|Policy4|Contiene la actividad Policy4 y su diseñador de [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Policy4.cs**: definición de la actividad Policy4.<br /><br /> **PolicyDesigner.xaml**: diseñador personalizado para la actividad Policy4. Utiliza el editor de reglas ([clase RuleSetDialog](https://go.microsoft.com/fwlink/?LinkId=150378)) desde [!INCLUDE[wf1](../../../../includes/wf1-md.md)] motor de reglas.|  
 |ImperativeCodeClientSample|Aplicación cliente de ejemplo que configura y ejecuta un flujo de trabajo mediante una aplicación Policy4 que utiliza el código C# imperativo (no se utiliza ningún diseñador de [!INCLUDE[wf1](../../../../includes/wf1-md.md)]).|**ApplyDiscount.rules**: archivo con [!INCLUDE[wf1](../../../../includes/wf1-md.md)] definiciones de reglas.<br /><br /> **Order.cs**: tipo que representa un pedido de cliente. Las reglas se aplican a los objetos de este tipo.<br /><br /> **Program.cs**: configura y ejecuta un flujo de trabajo que tiene una actividad Policy4 para aplicar las reglas definidas en ApplyDiscount.rules a las instancias de objetos Order.<br /><br /> **App.config**: archivo de configuración con la ruta de acceso del archivo de reglas.|  
 |DesignerClientSample|Aplicación cliente de ejemplo que configura y ejecuta un flujo de trabajo utilizando una aplicación Policy4 en el diseñador de [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Sequence1.XAML**: flujo de trabajo secuencial que utiliza una actividad Policy4 para realizar evaluaciones de reglas.<br /><br /> `Program.cs`: ejecuta una instancia de flujo de trabajo definida en Sequence1.xaml.|  
   
@@ -46,14 +46,14 @@ public class Policy4Activity<TResult>: NativeActivity<TResult>
   
 |Propiedad|Descripción|  
 |--------------|-----------------|  
-|RuleSet|WF [clase RuleSet](http://go.microsoft.com/fwlink/?LinkId=150379) para .NET Framework 3.5 que se evaluará cuando se ejecuta la actividad.|  
-|TargetObject|El objeto con el que las reglas de la [clase RuleSet](http://go.microsoft.com/fwlink/?LinkId=150379) se evalúan.|  
-|ValidationError|La lista de errores de validación devuelta por la [!INCLUDE[wf1](../../../../includes/wf1-md.md)] motor de reglas para .NET Framework 3.5 al validar el [clase RuleSet](http://go.microsoft.com/fwlink/?LinkId=150379) con el objeto de destino antes de la ejecución.|  
+|RuleSet|WF [RuleSet Class](https://go.microsoft.com/fwlink/?LinkId=150379) para .NET Framework 3.5 que se evaluará cuando se ejecuta la actividad.|  
+|TargetObject|El objeto con el que las reglas en el [RuleSet Class](https://go.microsoft.com/fwlink/?LinkId=150379) se evalúan.|  
+|ValidationError|La lista de errores de validación devuelta por la [!INCLUDE[wf1](../../../../includes/wf1-md.md)] motor de reglas para .NET Framework 3.5 al validar el [RuleSet Class](https://go.microsoft.com/fwlink/?LinkId=150379) con el objeto de destino antes de la ejecución.|  
   
 ## <a name="policy4-activity-designer"></a>Diseñador de la actividad Policy4  
  El diseñador de Policy4 agrega la capacidad de configurar una actividad Policy4 sin necesidad de escribir código. Después de compilar la solución, se puede encontrar en el cuadro de herramientas en la sección **Microsoft.Samples.Activities.Rules**.  
   
- El diseñador de WF le permite configurar un objeto de destino y un conjunto de reglas. Cuando el **editar RuleSet** se hace clic en botón, WF [clase RuleSetDialog](http://go.microsoft.com/fwlink/?LinkId=150378) para [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] se muestra. Este diálogo representa el editor de reglas de [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] re-hospedado. Utilice el editor para crear y modificar las reglas que la actividad Policy4 ejecuta.  
+ El diseñador de WF le permite configurar un objeto de destino y un conjunto de reglas. Cuando el **editar RuleSet** botón se hizo clic, WF [clase RuleSetDialog](https://go.microsoft.com/fwlink/?LinkId=150378) para [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] se muestra. Este diálogo representa el editor de reglas de [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] re-hospedado. Utilice el editor para crear y modificar las reglas que la actividad Policy4 ejecuta.  
   
 ## <a name="using-this-sample"></a>Utilizar este ejemplo  
  No se exige ninguna configuración especial para ejecutar este ejemplo. Simplemente abra la solución en Visual Studio y presione F5 para ejecutar la aplicación.  
@@ -64,7 +64,7 @@ public class Policy4Activity<TResult>: NativeActivity<TResult>
   
 1.  Abra el archivo de solución Policy4Sample.sln con [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-2.  En **el Explorador de soluciones**, haga clic en el **ImperativeCodeClientSample** de proyecto y, a continuación, seleccione **establecer como proyecto de inicio**.  
+2.  En **el Explorador de soluciones**, haga clic en el **ImperativeCodeClientSample** del proyecto y, a continuación, seleccione **establecer como proyecto de inicio**.  
   
 3.  Presione CTRL+F5 para ejecutar el proyecto.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-ms.openlocfilehash: 91a9930a3678e08fc0e46335f1eb95330bd171a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75f0fc416ad29137c119b571acd658a7e56fc009
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536766"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384959"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl (Control, formularios Windows Forms)
 El control `TabControl` de Windows Forms muestra múltiples fichas, similares a los divisores de un cuaderno o a las etiquetas de un conjunto de carpetas de un archivador. Las fichas pueden contener imágenes y otros controles. Use `TabControl` para crear páginas de propiedades.  
@@ -36,7 +36,7 @@ El control `TabControl` de Windows Forms muestra múltiples fichas, similares a 
  [Deshabilitar páginas de ficha](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
  Explica cómo restringir el acceso a una página de ficha, posiblemente con credenciales de usuario.  
   
- Consulte también [Cómo: agregar y quitar fichas con el control TabControl de Windows Forms mediante el diseñador](http://msdn.microsoft.com/library/ms233654\(v=vs.110\)), [Cómo: agregar un Control a una página de fichas mediante el diseñador](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
+ Consulte también [Cómo: agregar y quitar fichas con el control TabControl de Windows Forms mediante el diseñador](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [Cómo: agregar un Control a una página de fichas mediante el diseñador](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
 ## <a name="reference"></a>Referencia  
  Clase <xref:System.Windows.Forms.TabControl>  

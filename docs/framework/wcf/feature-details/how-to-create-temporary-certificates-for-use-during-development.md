@@ -5,22 +5,22 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 8310e7c465d0e3494482b6a38a7b2a67b67ae842
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3b051c7ea152606721388ea35b6f508eada1c5d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495372"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385182"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Cómo: Crear certificados temporales que puedan utilizarse durante las operaciones de desarrollo
-Al desarrollar un servicio seguro o cliente mediante Windows Communication Foundation (WCF), suele ser necesario proporcionar un certificado X.509 que se usará como una credencial. El certificado forma normalmente parte de una cadena de certificados con una entidad emisora raíz situada en el almacén de las Entidades emisoras de certificados raíz de confianza del equipo. Tener una cadena de certificados le permite establecer un conjunto de certificados donde normalmente la entidad emisora raíz pertenece a su organización o unidad del negocio. Para emularlo en el momento de desarrollo, puede crear dos certificados para satisfacer los requisitos de seguridad. El primero es un certificado con firma automática que se coloca en el almacén de las Entidades emisoras de certificados raíz de confianza y el segundo certificado se crea a partir del primero y se coloca en el almacén personal de la ubicación del equipo local o en el almacén personal de la ubicación del usuario actual. En este tema se describen los pasos para crear estos dos certificados con [Certificate Creation Tool (Herramienta de creación de certificados) (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), proporcionada por el SDK de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
+Al desarrollar un servicio seguro o cliente mediante Windows Communication Foundation (WCF), a menudo es necesario proporcionar un certificado X.509 que se usará como una credencial. El certificado forma normalmente parte de una cadena de certificados con una entidad emisora raíz situada en el almacén de las Entidades emisoras de certificados raíz de confianza del equipo. Tener una cadena de certificados le permite establecer un conjunto de certificados donde normalmente la entidad emisora raíz pertenece a su organización o unidad del negocio. Para emularlo en el momento de desarrollo, puede crear dos certificados para satisfacer los requisitos de seguridad. El primero es un certificado con firma automática que se coloca en el almacén de las Entidades emisoras de certificados raíz de confianza y el segundo certificado se crea a partir del primero y se coloca en el almacén personal de la ubicación del equipo local o en el almacén personal de la ubicación del usuario actual. En este tema se describe los pasos para crear estos dos certificados mediante el [herramienta de creación de certificados (MakeCert.exe)](https://go.microsoft.com/fwlink/?LinkId=248185), proporcionado por el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  
   
 > [!IMPORTANT]
 >  Los certificados generados por la herramienta de creación de certificados sólo se proporcionan para pruebas. Al implementar un servicio o cliente, asegúrese de usar un certificado adecuado proporcionado por una entidad de certificación. Esto podría ser de un servidor de certificado [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] en su organización o de un tercero.  
 >   
->  De forma predeterminada, el [Makecert.exe (herramienta de creación de certificados)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) crea certificados cuya entidad emisora raíz se denomina "Agencia raíz **."** Dado que la "Agencia raíz" no está en el almacén Entidades emisoras de certificados raíz de confianza, estos certificados no son seguros. Crear un certificado con firma automática que se coloca en el almacén Entidades emisoras de certificados raíz de confianza le permite crear un entorno de desarrollo que simula su entorno de distribución.  
+>  De forma predeterminada, el [Makecert.exe (Certificate Creation Tool)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) crea certificados cuya entidad de certificación raíz se denomina "Agencia raíz **."** Dado que la "Agencia raíz" no está en el almacén Entidades emisoras de certificados raíz de confianza, estos certificados no son seguros. Crear un certificado con firma automática que se coloca en el almacén Entidades emisoras de certificados raíz de confianza le permite crear un entorno de desarrollo que simula su entorno de distribución.  
   
- Para obtener más información sobre la creación y uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Para obtener más información sobre el uso de un certificado como credencial, vea [protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Para obtener un tutorial sobre el uso de la tecnología Microsoft Authenticode, consulte [Authenticode Overviews and Tutorials (Información general y tutoriales de Authenticode)](http://go.microsoft.com/fwlink/?LinkId=88919).  
+ Para obtener más información sobre la creación y uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Para obtener más información sobre el uso de un certificado como credencial, vea [proteger servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Para ver un tutorial sobre el uso de la tecnología Microsoft Authenticode, consulte [información general de Authenticode y tutoriales](https://go.microsoft.com/fwlink/?LinkId=88919).  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Para crear un certificado de la entidad de certificación raíz firmado automáticamente y exportar la clave privada  
   
@@ -63,7 +63,7 @@ Al desarrollar un servicio seguro o cliente mediante Windows Communication Found
   
 #### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Instalar un certificado firmado automáticamente en las entidades emisoras de certificados raíz de confianza  
   
-1.  Abra el complemento del certificado. Para obtener más información, consulte [Cómo: ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Abra el complemento del certificado. Para obtener más información, vea [Cómo: Ver certificados con el complemento de MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 2.  Abra la carpeta para almacenar el certificado, el **Equipo local** o el **Usuario actual**.  
   
@@ -92,7 +92,7 @@ Al desarrollar un servicio seguro o cliente mediante Windows Communication Found
     </bindings>  
     ```  
   
- En el archivo de configuración para un cliente, utilice el siguiente código XML para especificar que el certificado está en el almacén del usuario y puede encontrarse por campo SubjectName para el valor "CohoWinery".  
+ En el archivo de configuración para un cliente, use el siguiente código XML para especificar que el certificado es se encuentre en el almacén del usuario y puede encontrarlo buscando el campo SubjectName para el valor "CohoWinery".  
   
 ```xml  
 <behaviors>  

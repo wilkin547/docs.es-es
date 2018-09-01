@@ -2,12 +2,12 @@
 title: Administración de instancias suspendidas
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 8e8bb40b22633aa83b7a70ee94f37cefe48ba68e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f614770121185644c3395f923cf7835141653f55
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519228"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394605"
 ---
 # <a name="suspended-instance-management"></a>Administración de instancias suspendidas
 En este ejemplo se muestra cómo administrar instancias de flujo de trabajo que se han suspendido.  La acción predeterminada para <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> es `AbandonAndSuspend`. Esto significa que, de forma predeterminada, las excepciones no controladas producidas por una instancia de flujo de trabajo hospedada en <xref:System.ServiceModel.WorkflowServiceHost> causarán que la instancia se elimine de la memoria (se abandone) y la versión duradera/conservada de la instancia se marque como suspendida. Una instancia de flujo de trabajo suspendida no se podrá ejecutar hasta que no se anule la suspensión.  
@@ -32,7 +32,7 @@ En este ejemplo se muestra cómo administrar instancias de flujo de trabajo que 
   
 2.  Configure la base de datos de SQL Server.  
   
-    1.  Desde un [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] símbolo del sistema, ejecute "setup.cmd" desde la llamada de muestra suspendedinstancemanagement, que hace lo siguiente:  
+    1.  Desde un [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] símbolo del sistema, ejecute "setup.cmd" desde la función muestra suspendedinstancemanagement, que hace lo siguiente:  
   
         1.  Crea una base de datos de persistencia mediante SQL Server Express. Si la base de datos de persistencia ya existe, se quita y se vuelve a crear.  
   
@@ -52,9 +52,9 @@ En este ejemplo se muestra cómo administrar instancias de flujo de trabajo que 
   
     5.  Expanda **aplicaciones de servicio y**, **Message Queue Server**, **colas privadas**.  
   
-    6.  Haga clic con el **ReceiveTx** poner en cola y seleccione **propiedades**.  
+    6.  Haga clic en el **ReceiveTx** poner en cola y seleccione **propiedades**.  
   
-    7.  Seleccione el **seguridad** pestaña y permitir **todos** tenga permisos para **recibir mensaje**, **Inspeccionar mensaje**, y  **Enviar mensaje**.  
+    7.  Seleccione el **seguridad** pestaña y permitir **todo el mundo** tenga permisos para **recibir mensaje**, **Inspeccionar mensaje**, y  **Enviar mensaje**.  
   
 4.  Ejecute el ejemplo.  
   
@@ -81,6 +81,6 @@ En este ejemplo se muestra cómo administrar instancias de flujo de trabajo que 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

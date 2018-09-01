@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 044f94a567dc4bc2b169ba2a5f2a5d7b4f98e516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dfda61706af3e1043d271c0aa74264bd99a4076c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408582"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386596"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess (Método)
 Inicia un proceso y su subproceso principal bajo el control del depurador.  
@@ -54,28 +54,28 @@ HRESULT CreateProcess (
  [in] Puntero a una cadena terminada en null que especifica la línea de comandos que va a ejecutar el proceso iniciado. El nombre de la aplicación (por ejemplo, "SomeApp.exe") debe ser el primer argumento.  
   
  `lpProcessAttributes`  
- [in] Puntero a Win32 `SECURITY_ATTRIBUTES` estructura que especifica el descriptor de seguridad para el proceso. Si `lpProcessAttributes` es null, el proceso obtiene un descriptor de seguridad predeterminado.  
+ [in] Puntero a un Win32 `SECURITY_ATTRIBUTES` estructura que especifica el descriptor de seguridad para el proceso. Si `lpProcessAttributes` es null, el proceso obtiene un descriptor de seguridad predeterminado.  
   
  `lpThreadAttributes`  
- [in] Puntero a Win32 `SECURITY_ATTRIBUTES` estructura que especifica el descriptor de seguridad para el subproceso principal del proceso. Si `lpThreadAttributes` es null, el subproceso obtiene un descriptor de seguridad predeterminado.  
+ [in] Puntero a un Win32 `SECURITY_ATTRIBUTES` estructura que especifica el descriptor de seguridad para el subproceso principal del proceso. Si `lpThreadAttributes` es null, el subproceso obtiene un descriptor de seguridad predeterminado.  
   
  `bInheritHandles`  
- [in] Establecido en `true` para indicar que el proceso iniciado, heredan todos los identificadores heredables en el proceso de llamada o `false` para indicar que no se heredan los identificadores. Los identificadores heredados tienen el mismo valor y derechos de acceso que los identificadores originales.  
+ [in] Establecido en `true` para indicar que el proceso iniciado, heredan todos los identificadores heredables en el proceso de llamada o `false` para indicar que no se heredan los identificadores. Los identificadores heredados tienen los mismos derechos de acceso y el valor que los identificadores originales.  
   
  `dwCreationFlags`  
- [in] Una combinación bit a bit de los [marcas de creación de proceso Win32](http://go.microsoft.com/fwlink/?linkid=69981) que controlan la clase de prioridad y el comportamiento del proceso iniciado.  
+ [in] Una combinación bit a bit de los [marcas de creación de proceso Win32](https://go.microsoft.com/fwlink/?linkid=69981) que controlan la clase de prioridad y el comportamiento del proceso iniciado.  
   
  `lpEnvironment`  
  [in] Puntero a un bloque de entorno para el nuevo proceso.  
   
  `lpCurrentDirectory`  
- [in] Puntero a una cadena terminada en null que especifica la ruta de acceso completa al directorio actual para el proceso. Si este parámetro es null, el nuevo proceso tendrá la misma unidad y directorio actuales que el proceso que realiza la llamada.  
+ [in] Puntero a una cadena terminada en null que especifica la ruta de acceso completa al directorio actual para el proceso. Si este parámetro es null, el nuevo proceso tendrá la misma unidad actual y el directorio que el proceso que realiza la llamada.  
   
  `lpStartupInfo`  
- [in] Puntero a Win32 `STARTUPINFOW` estructura que especifica la estación de ventana, escritorio, los identificadores estándares y apariencia de la ventana principal para el proceso iniciado.  
+ [in] Puntero a un Win32 `STARTUPINFOW` estructura que especifica la estación de ventana, escritorio, los identificadores estándar y apariencia de la ventana principal para el proceso iniciado.  
   
  `lpProcessInformation`  
- [in] Puntero a Win32 `PROCESS_INFORMATION` estructura que especifica la información de identificación sobre el proceso que se iniciará.  
+ [in] Puntero a un Win32 `PROCESS_INFORMATION` estructura que especifica la información de identificación sobre el proceso que se inicie.  
   
  `debuggingFlags`  
  [in] Un valor de la enumeración CorDebugCreateProcessFlags que especifica las opciones de depuración.  
@@ -86,20 +86,20 @@ HRESULT CreateProcess (
 ## <a name="remarks"></a>Comentarios  
  Los parámetros de este método son los mismos que los de Win32 `CreateProcess` método.  
   
- Para habilitar la depuración en modo mixto no administrada, establezca `dwCreationFlags` en DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Si desea usar solo la depuración administrada, no establezca estos indicadores.  
+ Para habilitar la depuración en modo mixto no administrado, establezca `dwCreationFlags` a DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Si desea usar la depuración sólo administrada, no establezca estos indicadores.  
   
- Si el depurador y el proceso de depuran (el proceso asociado) comparten una única consola, y si se utiliza la depuración de interoperabilidad, es posible que el proceso asociado contener los bloqueos de la consola y dejar a un evento de depuración. El depurador, a continuación, bloqueará cualquier intento de usar la consola. Para evitar este problema, establezca el marcador CREATE_NEW_CONSOLE el `dwCreationFlags` parámetro.  
+ Si el depurador y el proceso de ser depurando (el proceso asociado) comparten una única consola y, si se usa la depuración de interoperabilidad, es posible que el proceso asociado contener los bloqueos de la consola y detenerse en un evento de depuración. El depurador, a continuación, bloqueará cualquier intento de utilizar la consola. Para evitar este problema, establezca el marcador CREATE_NEW_CONSOLE el `dwCreationFlags` parámetro.  
   
- No se admite la depuración de interoperabilidad en plataformas Win9x y no x86 como plataformas basadas en IA-64 y AMD64-based.  
+ No se admite la depuración de interoperabilidad en plataformas Win9x y no x86 como las plataformas basadas en IA-64 y basado en AMD64.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICorDebug (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

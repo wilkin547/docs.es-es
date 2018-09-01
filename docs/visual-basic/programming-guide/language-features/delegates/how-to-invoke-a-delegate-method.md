@@ -2,15 +2,15 @@
 title: 'Cómo: Invocar un método delegado (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: aca87dd9fa1990d44c99aab7753f2fd7d508adc1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fea3ddbc9fb553041671713a64e4b866ee38b50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646957"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392443"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Cómo: Invocar un método delegado (Visual Basic)
-Este ejemplo muestra cómo asociar un método con un delegado y, a continuación, se invoca ese método a través del delegado.  
+En este ejemplo se muestra cómo asociar un método con un delegado y, a continuación, se invoca ese método a través del delegado.  
   
 ### <a name="create-the-delegate-and-matching-procedures"></a>Crear el delegado y los procedimientos correspondientes  
   
@@ -20,7 +20,7 @@ Este ejemplo muestra cómo asociar un método con un delegado y, a continuación
     Delegate Sub MySubDelegate(ByVal x As Integer)  
     ```  
   
-2.  Declarar una clase que contiene un método con la misma firma que el delegado.  
+2.  Declare una clase que contiene un método con la misma firma que el delegado.  
   
     ```  
     Class class1  
@@ -46,4 +46,4 @@ Este ejemplo muestra cómo asociar un método con un delegado y, a continuación
  [Delegate (instrucción)](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
  [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
  [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)  
- [Aplicaciones multiproceso](http://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)
+ [Aplicaciones multiproceso](https://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)

@@ -8,43 +8,43 @@ helpviewer_keywords:
 - XML [Visual Basic], axis properties
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
-ms.openlocfilehash: b000b3f6846f800b2a96ce10cdd408a355f78a81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0540c52cf3e4cd7594f051c10832ea99cf58a34e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649599"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386465"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Obtener acceso a XML en Visual Basic
-Visual Basic proporciona propiedades de eje XML para obtener acceso y navegar por [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] estructuras. Estas propiedades utilizan una sintaxis especial que le permite tener acceso a elementos y atributos especificando los nombres XML.  
+Visual Basic proporciona propiedades de eje XML para obtener acceso y navegar por [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] estructuras. Estas propiedades usan una sintaxis especial para que pueda tener acceso a los elementos y atributos especificando los nombres XML.  
   
- En la tabla siguiente se enumera las características del lenguaje que permiten obtener acceso a elementos XML y atributos en Visual Basic.  
+ En la tabla siguiente se enumera las características del lenguaje que permiten tener acceso a los elementos XML y atributos en Visual Basic.  
   
 ### <a name="xml-axis-properties"></a>Propiedades de eje XML  
   
 |Descripción de la propiedad|Ejemplo|Descripción|  
 |--------------------------|-------------|-----------------|  
 |*eje child*|`contact.<phone>`|Obtiene todos los `phone` elementos que son elementos secundarios de la `contact` elemento.|  
-|*eje de atributo*|`phone.@type`|Obtiene todos los `type` atributos de la `phone` elemento.|  
-|*eje Descendant*|`contacts...<name>`|Obtiene todos los `name` elementos de la `contacts` elemento, independientemente de la profundidad de la jerarquía que se produzcan.|  
-|*indizador de extensión*|`contacts...<name>(0)`|Obtiene la primera `name` elemento de la secuencia.|  
+|*eje de atributo*|`phone.@type`|Obtiene todos los `type` los atributos de la `phone` elemento.|  
+|*eje descendiente*|`contacts...<name>`|Obtiene todos los `name` elementos de la `contacts` elemento, independientemente de la profundidad de la jerarquía que se producen.|  
+|*indizador de extensión*|`contacts...<name>(0)`|Obtiene el primer `name` elemento de la secuencia.|  
 |*valor*|`contacts...<name>.Value`|Obtiene la representación de cadena del primer objeto de la secuencia, o `Nothing` si la secuencia está vacía.|  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Acceso a elementos descendientes XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
- Muestra cómo usar una propiedad de eje descendiente para tener acceso a todos los elementos XML que tienen el nombre especificado y que están incluidos en un elemento XML especificado.  
+ Se muestra cómo usar una propiedad de eje descendiente para tener acceso a todos los elementos XML que tiene un nombre especificado y que se incluyen en un elemento XML especificado.  
   
  [Acceso a elementos secundarios XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-child-elements.md)  
- Muestra cómo utilizar a un elemento secundario de la propiedad de eje para tener acceso a todos los elementos secundarios XML que tienen el nombre especificado en un elemento XML.  
+ Muestra cómo utilizar a un elemento secundario de la propiedad de eje para tener acceso a todos los elementos secundarios XML que tienen un nombre especificado en un elemento XML.  
   
  [Acceso a atributos XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-attributes.md)  
- Muestra cómo utilizar una propiedad de eje de atributo para tener acceso a todos los atributos XML que tienen el nombre especificado en un elemento XML.  
+ Se muestra cómo usar una propiedad de eje de atributo para tener acceso a todos los atributos XML que tienen un nombre especificado en un elemento XML.  
   
  [Declarar y usar prefijos de espacio de nombres XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-declare-and-use-xml-namespace-prefixes.md)  
  Muestra cómo declarar un prefijo de espacio de nombres XML y usarlo para crear y tener acceso a elementos XML.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Propiedades del eje XML](../../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [Propiedades del eje XML](../../../../visual-basic/language-reference/xml-axis/index.md)  
  Proporciona vínculos a secciones que describen las diversas propiedades de acceso XML.  
   
  [Información general sobre LINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
