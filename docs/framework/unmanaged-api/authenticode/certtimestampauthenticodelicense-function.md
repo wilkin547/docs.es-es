@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b110adac8c1ae68a3918a9e0fdf3f3eb4d017f0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd77a8a81718837d55f3018564d0f4ba8fdc95ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406213"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390778"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense (Función)
 Aplica marcas de hora a una licencia Authenticode XrML.  
@@ -32,13 +32,13 @@ HRESULT CertTimestampAuthenticodeLicense (
   
 #### <a name="parameters"></a>Parámetros  
  `pSignedLicenseBlob`  
- [in] Licencia Authenticode XrML firmada a la que se va a aplicar la marca de hora. Consulte la [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) estructura.  
+ [in] Licencia Authenticode XrML firmada a la que se va a aplicar la marca de hora. Consulte la [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) estructura.  
   
  `pwszTimestampURI`  
  [in] URI del servidor de marca de hora.  
   
  `pTimestampSignatureBlob`  
- [out] Puntero a CRYPT_DATA_BLOB para recibir la firma de marca de hora con codificación base64. Es responsabilidad del llamante liberar `pTimestampSignatureBlob` -> `pbData` con `HepFree()` tras su uso. Consulte la [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) estructura.  
+ [out] Puntero a CRYPT_DATA_BLOB para recibir la firma de marca de hora con codificación base64. Es responsabilidad del llamante liberar `pTimestampSignatureBlob` -> `pbData` con `HepFree()` tras su uso. Consulte la [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) estructura.  
   
 ## <a name="remarks"></a>Comentarios  
  La firma de marca de hora es en realidad un mensaje PKCS #7 SignedData cuyo contenido es el formato binario del SignatureValue de la firma de la licencia. Básicamente, actúa como contrafirma de la licencia.  
