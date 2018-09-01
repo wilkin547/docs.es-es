@@ -14,19 +14,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af101e8d842c20394816a3408c74709da941bcd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c49a9543c7bfeb9882144fba74b9c48cfba64890
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416187"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393394"
 ---
-# <a name="icordebugfunction3getactiverejitrequestilcode-method"></a><span data-ttu-id="becfe-102">ICorDebugFunction3::GetActiveReJitRequestILCode (Método)</span><span class="sxs-lookup"><span data-stu-id="becfe-102">ICorDebugFunction3::GetActiveReJitRequestILCode Method</span></span>
-<span data-ttu-id="becfe-103">[Compatible con .NET Framework 4.5.2 y versiones posteriores]</span><span class="sxs-lookup"><span data-stu-id="becfe-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugfunction3getactiverejitrequestilcode-method"></a><span data-ttu-id="6bd1b-102">ICorDebugFunction3::GetActiveReJitRequestILCode (Método)</span><span class="sxs-lookup"><span data-stu-id="6bd1b-102">ICorDebugFunction3::GetActiveReJitRequestILCode Method</span></span>
+<span data-ttu-id="6bd1b-103">[Compatible con .NET Framework 4.5.2 y versiones posteriores]</span><span class="sxs-lookup"><span data-stu-id="6bd1b-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="becfe-104">Obtiene un puntero de interfaz a una [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) que contiene el IL de una solicitud ReJIT activa.</span><span class="sxs-lookup"><span data-stu-id="becfe-104">Gets an interface pointer to an [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) that contains the IL from an active ReJIT request.</span></span>  
+ <span data-ttu-id="6bd1b-104">Obtiene un puntero de interfaz a un [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) que contiene el IL de una solicitud ReJIT activa.</span><span class="sxs-lookup"><span data-stu-id="6bd1b-104">Gets an interface pointer to an [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) that contains the IL from an active ReJIT request.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="becfe-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="becfe-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6bd1b-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6bd1b-105">Syntax</span></span>  
   
 ```cpp
 HRESULT GetActiveReJitRequestILCode(  
@@ -34,25 +34,25 @@ HRESULT GetActiveReJitRequestILCode(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="becfe-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="becfe-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="6bd1b-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="6bd1b-106">Parameters</span></span>  
  `ppReJitedILCode`  
- <span data-ttu-id="becfe-107">Puntero al IL desde una solicitud ReJIT activa.</span><span class="sxs-lookup"><span data-stu-id="becfe-107">A pointer to the IL from an active ReJIT request.</span></span>  
+ <span data-ttu-id="6bd1b-107">Puntero al IL desde una solicitud ReJIT activa.</span><span class="sxs-lookup"><span data-stu-id="6bd1b-107">A pointer to the IL from an active ReJIT request.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="becfe-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="becfe-108">Remarks</span></span>  
- <span data-ttu-id="becfe-109">Si el método que representa este objeto `ICorDebugFunction3` tiene una solicitud ReJIT activa, `ppReJitedILCode` devuelve un puntero a su IL.</span><span class="sxs-lookup"><span data-stu-id="becfe-109">If the method represented by this `ICorDebugFunction3` object has an active ReJIT request, `ppReJitedILCode` returns a pointer to its IL.</span></span> <span data-ttu-id="becfe-110">Si no hay ninguna solicitud activa, que es un caso común, a continuación, `ppReJitedILCode` es **null**.</span><span class="sxs-lookup"><span data-stu-id="becfe-110">If there is no active request, which is a common case, then `ppReJitedILCode` is **null**.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6bd1b-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="6bd1b-108">Remarks</span></span>  
+ <span data-ttu-id="6bd1b-109">Si el método que representa este objeto `ICorDebugFunction3` tiene una solicitud ReJIT activa, `ppReJitedILCode` devuelve un puntero a su IL.</span><span class="sxs-lookup"><span data-stu-id="6bd1b-109">If the method represented by this `ICorDebugFunction3` object has an active ReJIT request, `ppReJitedILCode` returns a pointer to its IL.</span></span> <span data-ttu-id="6bd1b-110">Si no hay ninguna solicitud activa, que es un caso común, a continuación, `ppReJitedILCode` es **null**.</span><span class="sxs-lookup"><span data-stu-id="6bd1b-110">If there is no active request, which is a common case, then `ppReJitedILCode` is **null**.</span></span>  
   
- <span data-ttu-id="becfe-111">Una solicitud ReJIT se convierte en activa justo después de ejecución vuelva de la [icorprofilercallback4:: Getrejitparameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md) llamada al método.</span><span class="sxs-lookup"><span data-stu-id="becfe-111">A ReJIT request becomes active just after execution returns from the [ICorProfilerCallback4::GetReJITParameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md) method call.</span></span> <span data-ttu-id="becfe-112">Puede que JIT aún no la haya compilado y que los subprocesos se estén ejecutando en la versión original del código.</span><span class="sxs-lookup"><span data-stu-id="becfe-112">It may not yet be JIT-compiled, and threads may still be executing in the original version of the code.</span></span> <span data-ttu-id="becfe-113">Una solicitud ReJIT pasa a estar inactiva durante la llamada del generador de perfiles a la [icorprofilerinfo4:: Requestrevert](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrevert-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="becfe-113">A ReJIT request becomes inactive during the profiler's call to the [ICorProfilerInfo4::RequestRevert](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrevert-method.md) method.</span></span> <span data-ttu-id="becfe-114">Incluso después de revertir el IL, un subproceso puede seguir ejecutándose en el código JIT nuevamente compilado (ReJIT).</span><span class="sxs-lookup"><span data-stu-id="becfe-114">Even after the IL is reverted, a thread can still be executing in the JIT-recompiled (ReJIT) code.</span></span>  
+ <span data-ttu-id="6bd1b-111">Una solicitud ReJIT se convierte en activa justo después de la ejecución se devuelve desde el [Icorprofilercallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md) llamada al método.</span><span class="sxs-lookup"><span data-stu-id="6bd1b-111">A ReJIT request becomes active just after execution returns from the [ICorProfilerCallback4::GetReJITParameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md) method call.</span></span> <span data-ttu-id="6bd1b-112">Puede que JIT aún no la haya compilado y que los subprocesos se estén ejecutando en la versión original del código.</span><span class="sxs-lookup"><span data-stu-id="6bd1b-112">It may not yet be JIT-compiled, and threads may still be executing in the original version of the code.</span></span> <span data-ttu-id="6bd1b-113">Una solicitud ReJIT pasa a estar inactiva durante la llamada del generador de perfiles a la [Icorprofilerinfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrevert-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="6bd1b-113">A ReJIT request becomes inactive during the profiler's call to the [ICorProfilerInfo4::RequestRevert](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrevert-method.md) method.</span></span> <span data-ttu-id="6bd1b-114">Incluso después de revertir el IL, un subproceso puede seguir ejecutándose en el código JIT nuevamente compilado (ReJIT).</span><span class="sxs-lookup"><span data-stu-id="6bd1b-114">Even after the IL is reverted, a thread can still be executing in the JIT-recompiled (ReJIT) code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="becfe-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="becfe-115">Requirements</span></span>  
- <span data-ttu-id="becfe-116">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="becfe-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6bd1b-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6bd1b-115">Requirements</span></span>  
+ <span data-ttu-id="6bd1b-116">**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6bd1b-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="becfe-117">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="becfe-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6bd1b-117">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6bd1b-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="becfe-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="becfe-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6bd1b-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6bd1b-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="becfe-119">**Versiones de .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="becfe-119">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="6bd1b-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6bd1b-119">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="becfe-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="becfe-120">See Also</span></span>  
- [<span data-ttu-id="becfe-121">ICorDebugFunction3 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="becfe-121">ICorDebugFunction3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-interface.md)  
- [<span data-ttu-id="becfe-122">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="becfe-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="becfe-123">ReJIT: Una guía de procedimientos</span><span class="sxs-lookup"><span data-stu-id="becfe-123">ReJIT: A How-To Guide</span></span>](http://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+## <a name="see-also"></a><span data-ttu-id="6bd1b-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="6bd1b-120">See Also</span></span>  
+ [<span data-ttu-id="6bd1b-121">ICorDebugFunction3 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="6bd1b-121">ICorDebugFunction3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-interface.md)  
+ [<span data-ttu-id="6bd1b-122">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="6bd1b-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [<span data-ttu-id="6bd1b-123">ReJIT: Una guía de procedimientos</span><span class="sxs-lookup"><span data-stu-id="6bd1b-123">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
