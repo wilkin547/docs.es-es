@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 935358664f93b6428b9153a9bcbed862aeee07ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ab459f37e825d71163e375e10f30fbe3e23911a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528673"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397608"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Desarrollar controles personalizados de formularios Windows Forms con .NET Framework
 Los controles de Windows Forms son componentes reutilizables que encapsulan la funcionalidad de la interfaz de usuario y se usan en aplicaciones de cliente basadas en Windows. Windows Forms no solo ofrece muchos controles listos para usar, también proporciona la infraestructura para desarrollar sus propios controles. Puede combinar los controles existentes, ampliar los controles existentes o crear sus propios controles personalizados. En esta sección se ofrece información general y ejemplos que le ayudarán a desarrollar controles de Windows Forms.  
@@ -51,13 +51,13 @@ Los controles de Windows Forms son componentes reutilizables que encapsulan la f
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Atributos en tiempo de diseño para componentes](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ [Atributos en tiempo de diseño para componentes](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
  Enumera los atributos de metadatos que se deben aplicar a componentes y controles para que se muestren correctamente en tiempo de diseño en diseñadores visuales.  
   
- [Ampliar compatibilidad en tiempo de diseño](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [Ampliar compatibilidad en tiempo de diseño](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  Describe cómo implementar clases, como editores y diseñadores, que proporcionan compatibilidad en tiempo de diseño.  
   
- [Cómo: Obtener licencia para componentes y controles](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
+ [Cómo: Obtener licencia para componentes y controles](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
  Describe cómo se implementan las licencias en el control o componente.  
   
- Vea también [Desarrollar controles de Windows Forms en tiempo de diseño](http://msdn.microsoft.com/library/w29y3h59\(v=vs.110\)).
+ Vea también [Desarrollar controles de Windows Forms en tiempo de diseño](https://msdn.microsoft.com/library/w29y3h59\(v=vs.110\)).

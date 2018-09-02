@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: e585d8a3c21f4a256a2e706389fc9f8adc7900da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfc77ff3b030ffebf52feab0190f81fc4e581cf9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361990"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397503"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Realizar operaciones por lotes utilizando objetos DataAdapter
 La compatibilidad con lotes en ADO.NET permite que un <xref:System.Data.Common.DataAdapter> agrupe operaciones INSERT, UPDATE y DELETE desde un <xref:System.Data.DataSet> o una <xref:System.Data.DataTable> al servidor, en lugar de enviar las operaciones de una en una. La reducción del número de viajes de ida y vuelta (round trip) al servidor tiene como resultado una mejora considerable del rendimiento. Las actualizaciones por lotes son compatibles con los proveedores de datos de .NET para SQL Server (<xref:System.Data.SqlClient>) y Oracle (<xref:System.Data.OracleClient>).  
@@ -24,7 +24,7 @@ La compatibilidad con lotes en ADO.NET permite que un <xref:System.Data.Common.D
 ## <a name="using-the-updatebatchsize-property"></a>Utilizar la propiedad UpdateBatchSize  
  Al habilitar las actualizaciones por lotes, el valor de propiedad <xref:System.Data.IDbCommand.UpdatedRowSource%2A> de `UpdateCommand`, `InsertCommand` y `DeleteCommand` del DataAdapter debe establecerse en <xref:System.Data.UpdateRowSource.None> o <xref:System.Data.UpdateRowSource.OutputParameters>. Al realizar una actualización por lotes, el valor <xref:System.Data.IDbCommand.UpdatedRowSource%2A> o <xref:System.Data.UpdateRowSource.FirstReturnedRecord> de la propiedad <xref:System.Data.UpdateRowSource.Both> del comando no es válido.  
   
- En el siguiente procedimiento se muestra cómo se utiliza la propiedad `UpdateBatchSize`. El procedimiento acepta dos argumentos: un <xref:System.Data.DataSet> objeto con columnas que representan el **ProductCategoryID** y **nombre** campos en el **Production.ProductCategory**tabla y un entero que representa el tamaño del lote (el número de filas del lote). El código crea un objeto <xref:System.Data.SqlClient.SqlDataAdapter> nuevo y se establecen las propiedades <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> y <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A>. En el código se supone que el objeto <xref:System.Data.DataSet> tiene filas modificadas. Se establece la propiedad `UpdateBatchSize` y se ejecuta la actualización.  
+ En el siguiente procedimiento se muestra cómo se utiliza la propiedad `UpdateBatchSize`. El procedimiento toma dos argumentos, un <xref:System.Data.DataSet> objeto que tiene columnas que representan el **ProductCategoryID** y **nombre** campos en el **Production.ProductCategory**tabla y un entero que representa el tamaño del lote (el número de filas del lote). El código crea un objeto <xref:System.Data.SqlClient.SqlDataAdapter> nuevo y se establecen las propiedades <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> y <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A>. En el código se supone que el objeto <xref:System.Data.DataSet> tiene filas modificadas. Se establece la propiedad `UpdateBatchSize` y se ejecuta la actualización.  
   
 ```vb  
 Public Sub BatchUpdate( _  
@@ -145,4 +145,4 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
  [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Actualizar orígenes de datos con objetos DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [Control de eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

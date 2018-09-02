@@ -2,12 +2,12 @@
 title: Perfiles de seguimiento
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 4f70964ea7e2456f82aeac4bfb9aedfdb239d58a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6651b79a474125f57c1cad773ae858dc7654d58a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519989"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396995"
 ---
 # <a name="tracking-profiles"></a>Perfiles de seguimiento
 Los perfiles de seguimiento contienen consultas de seguimiento que permiten a un participante de seguimiento suscribirse a los eventos del flujo de trabajo que se emiten cuando el estado de una instancia de flujo de trabajo cambia en el tiempo de ejecución.  
@@ -61,7 +61,7 @@ TrackingProfile profile = new TrackingProfile()
   
  Los dos modos de visibilidad especificados por el atributo `implementationVisibility` en el perfil de seguimiento son `RootScope` y `All`. Al usar el modo `RootScope`, se suprimen los registros de seguimiento para las actividades que forman la implementación de una actividad en el caso de que una actividad compuesta no sea la raíz de un flujo de trabajo.  Esto implica que, cuando una actividad que se implementa usando otras actividades se agrega a un flujo de trabajo y `implementationVisibility` está definido en RootScope, sólo se realiza el seguimiento de la actividad de nivel superior incluida en esa actividad compuesta. Si una actividad es la raíz del flujo de trabajo, la implementación de la actividad es el propio flujo de trabajo y los registros de seguimiento se emiten para actividades que forman la implementación. Gracias al modo All, se permite que todos los registros de seguimiento se emitan para la actividad raíz y todas sus actividades compuestas.  
   
- Por ejemplo, suponga que *MyActivity* es una actividad compuesta cuya implementación contiene dos actividades, *Activity1* y *Activity2*.  Cuando esta actividad se agrega a un flujo de trabajo y el seguimiento está habilitado con un perfil de seguimiento con `implementationVisibility` establecido en `RootScope`, registros de seguimiento se emiten sólo para *MyActivity*.  Sin embargo, no se emiten registros para las actividades *Activity1* y *Activity2*.  
+ Por ejemplo, supongamos que *MyActivity* es una actividad compuesta cuya implementación contiene dos actividades *Activity1* y *Activity2*.  Cuando esta actividad se agrega a un flujo de trabajo y seguimiento está habilitado con un perfil de seguimiento con `implementationVisibility` establecido en `RootScope`, registros de seguimiento se emiten sólo para *MyActivity*.  Sin embargo, no se emiten registros para las actividades *Activity1* y *Activity2*.  
   
  Sin embargo, si la `implementationVisisbility` atributo para el perfil de seguimiento está establecido en `All`, a continuación, los registros de seguimiento se emiten no sólo para *MyActivity*, sino también para las actividades *Activity1* y  *Activity2*.  
   
@@ -147,7 +147,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.ActivityStateQuery>: úsela para realizar el seguimiento de los cambios del ciclo de vida de las actividades que constituyen una instancia de flujo de trabajo. Por ejemplo, puede que desee realizar un seguimiento de cada vez que se completa la actividad "Enviar correo electrónico" dentro de una instancia de flujo de trabajo. Esta consulta es necesaria para que <xref:System.Activities.Tracking.TrackingParticipant> se suscriba a los objetos <xref:System.Activities.Tracking.ActivityStateRecord>. Los estados de suscripción disponibles se especifican en <xref:System.Activities.Tracking.ActivityStates>.  
+-   <xref:System.Activities.Tracking.ActivityStateQuery>: úsela para realizar el seguimiento de los cambios del ciclo de vida de las actividades que constituyen una instancia de flujo de trabajo. Por ejemplo, desea realizar un seguimiento de cada vez que se complete la actividad "Enviar correo electrónico" dentro de una instancia de flujo de trabajo. Esta consulta es necesaria para que <xref:System.Activities.Tracking.TrackingParticipant> se suscriba a los objetos <xref:System.Activities.Tracking.ActivityStateRecord>. Los estados de suscripción disponibles se especifican en <xref:System.Activities.Tracking.ActivityStates>.  
   
      La configuración y el código usados para suscribirse a los registros de seguimiento del estado de la actividad que usan <xref:System.Activities.Tracking.ActivityStateQuery> para la actividad `SendEmailActivity` se muestran en el siguiente ejemplo.  
   
@@ -231,7 +231,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   
 -   <xref:System.Activities.Tracking.CancelRequestedQuery>: úsela para realizar un seguimiento de las solicitudes para cancelar una actividad secuncaria mediante la actividad primaria. La consulta es necesaria para que <xref:System.Activities.Tracking.TrackingParticipant> se suscriba a los objetos <xref:System.Activities.Tracking.CancelRequestedRecord>.  
   
-     La configuración y el código que se usen para suscribirse a registros relacionados con actividades cancelación mediante <xref:System.Activities.Tracking.CancelRequestedQuery> se muestra en el ejemplo siguiente.  
+     La configuración y el código utilizado para suscribirse a registros relacionados con cancelación de actividades mediante <xref:System.Activities.Tracking.CancelRequestedQuery> se muestra en el ejemplo siguiente.  
   
     ```xml  
     <cancelRequestedQueries>  
@@ -304,7 +304,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     ```  
   
 ### <a name="annotations"></a>Anotaciones  
- Las anotaciones le permiten etiquetar de forma arbitraria registros de seguimiento con un valor que se puede configurar después de la compilación. Por ejemplo, podría desear varios registros de seguimiento por varios flujos de trabajo se etiqueten con "Mail Server" == "Mail Server1". De esta forma, se facilita la búsqueda de todos los registros con esta etiqueta cuando se realizan consultas de registros de seguimiento posteriormente.  
+ Las anotaciones le permiten etiquetar de forma arbitraria registros de seguimiento con un valor que se puede configurar después de la compilación. Por ejemplo, es posible que desee varios registros de seguimiento a través de varios flujos de trabajo se etiqueten con "Mail Server" == "Mail Server1". De esta forma, se facilita la búsqueda de todos los registros con esta etiqueta cuando se realizan consultas de registros de seguimiento posteriormente.  
   
  Para lograr esto, se agrega una anotación a una consulta de seguimiento tal y como se muestra en el siguiente ejemplo.  
   
@@ -339,7 +339,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 > [!WARNING]
 >  Para que WF use el host de servicio de flujo de trabajo, el perfil de seguimiento se crea normalmente con un archivo de configuración. También es posible crear un perfil de seguimiento con código que use el perfil de seguimiento y la API de consulta de seguimiento.  
   
- Los perfiles configurados como un archivo de configuración XML se aplican a un participante de seguimiento mediante una extensión de comportamiento. Esto se agrega a un WorkflowServiceHost tal y como se describe en la sección posterior [configuración del seguimiento para un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
+ Los perfiles configurados como un archivo de configuración XML se aplican a un participante de seguimiento mediante una extensión de comportamiento. Esto se agrega a WorkflowServiceHost tal como se describe en la sección posterior [configuración del seguimiento para un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
  El nivel de detalle de los registros del seguimiento emitidos por el host está determinado por los valores de configuración en el perfil de seguimiento. Un participante de seguimiento se suscribe a los registros de seguimiento mediante la adición de consultas a un perfil de seguimiento. Para suscribirse a todos los registros de seguimiento, debe especificar todas las consultas de seguimiento mediante el perfil de seguimiento "*" en los campos de nombre en cada una de las consultas.  
   
@@ -382,5 +382,5 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   
 ## <a name="see-also"></a>Vea también  
  [Seguimiento de SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
- [Supervisión de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Supervisión de aplicaciones con App Fabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

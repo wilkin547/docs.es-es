@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: 9e43e5661d3e6b559a1f9c9acb52313ff0a37e31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2319ea8522a90705cf65006ffb368801921cda57
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555768"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397532"
 ---
 # <a name="textbox-how-to-topics"></a>Temas "Cómo..." del control TextBox
-Esta sección proporciona ejemplos que muestran cómo realizar tareas comunes mediante el <xref:System.Windows.Controls.TextBox> control.  
+En esta sección se proporciona ejemplos que muestran cómo realizar tareas comunes mediante el <xref:System.Windows.Controls.TextBox> control.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Crear un control TextBox multilínea](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
@@ -42,5 +42,5 @@ Esta sección proporciona ejemplos que muestran cómo realizar tareas comunes me
  <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="see-also"></a>Vea también  
- [WPF Controls Gallery Sample](http://go.microsoft.com/fwlink/?LinkID=160053) (Ejemplo de galería de controles de WPF)  
+ [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053) (Ejemplo de galería de controles de WPF)  
  [TextBox Styles and Templates](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md) (Estilos y plantillas de TextBox Styles)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Clipboard [Windows Forms], Windows Forms
 ms.assetid: 7cce79b6-5835-46fd-b690-73f12ad368b2
-ms.openlocfilehash: 05cc79abdeb41cd3bfb7db21ebb206eb309ad5d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2bb3c24298ffe5308af03c5af5bae697a22c33b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522577"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398637"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>Compatibilidad con las operaciones de arrastrar y colocar y con el Portapapeles
 Puede habilitar las operaciones de arrastrar y colocar del usuario en una aplicación basada en Windows controlando una serie de eventos, sobre todo los eventos <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave> y <xref:System.Windows.Forms.Control.DragDrop>.  
@@ -42,4 +42,4 @@ Puede habilitar las operaciones de arrastrar y colocar del usuario en una aplica
  Describe los detalles del método que resulta esencial para iniciar una operación de arrastre.  
   
  <xref:System.Windows.Forms.Clipboard>  
- Consulte también [Cómo: enviar datos en el formulario secundario MDI activo](http://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).
+ Consulte también [Cómo: enviar datos al formulario secundario MDI activo](https://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).

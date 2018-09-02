@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: c963b3e08eba7776a0ed579017f1e84828794379
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0003e6c5e9499c066f47202a6dd03fc86268d679
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355303"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399861"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Especificar valores XML como parámetros
 Si una consulta requiere un parámetro cuyo valor es una cadena XML, los programadores pueden suministrar ese valor mediante una instancia de la **SqlXml** tipo de datos. Realmente no hay ningún truco; Las columnas XML en SQL Server aceptan valores de parámetros exactamente igual que otros tipos de datos.  
   
 ## <a name="example"></a>Ejemplo  
- La siguiente aplicación de consola crea una nueva tabla en la **AdventureWorks** base de datos. La nueva tabla incluye una columna denominada **SalesID** y una columna XML llamada **SalesInfo**.  
+ La aplicación de consola siguiente crea una nueva tabla en la **AdventureWorks** base de datos. La nueva tabla incluye una columna denominada **SalesID** y una columna XML llamada **SalesInfo**.  
   
 > [!NOTE]
 >  El **AdventureWorks** base de datos de ejemplo no se instala de forma predeterminada al instalar SQL Server. Para instalarla, ejecute el programa de instalación de SQL Server.  
@@ -162,4 +162,4 @@ class Class1
 ## <a name="see-also"></a>Vea también  
  <xref:System.Data.SqlTypes.SqlXml>  
  [Datos XML en SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

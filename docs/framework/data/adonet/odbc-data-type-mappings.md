@@ -2,12 +2,12 @@
 title: Asignaciones de tipos de datos de ODBC
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-ms.openlocfilehash: bfabdb73b9435a98b4d0d625a8392723bdcdbc37
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ece9397e8c8e8b9d26f8aac2298aa25173ac2d93
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765430"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397327"
 ---
 # <a name="odbc-data-type-mappings"></a>Asignaciones de tipos de datos de ODBC
 La siguiente tabla muestra el tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] deducido de los tipos de datos del proveedor de datos .NET Framework para ODBC (<xref:System.Data.Odbc>). Los métodos de descriptor de acceso con tipo para el <xref:System.Data.Odbc.OdbcDataReader> también se muestran.  
@@ -37,4 +37,4 @@ La siguiente tabla muestra el tipo [!INCLUDE[dnprdnshort](../../../../includes/d
   
 ## <a name="see-also"></a>Vea también  
  [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

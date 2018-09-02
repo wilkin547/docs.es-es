@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1eeade5a-ea62-4757-b1f9-1b1b1746abd1
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: d1fa297536cbac174e77b2d19b53b642a577f949
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2c921991f059d7dfe5661dfe688ec9675d0d5fe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474794"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399418"
 ---
 # <a name="service-security-calls-not-authorized-per-second"></a>Servicio: Llamadas de seguridad no autorizadas por segundo
 Nombre de contador: Llamadas de seguridad no autorizadas por segundo  
@@ -19,6 +19,6 @@ Nombre de contador: Llamadas de seguridad no autorizadas por segundo
   
  Este contador se incrementa cuando el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> devuelve `false`.  
   
- Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkId=94649), cuyo valor se calcula con la siguiente fórmula.  
+ Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkId=94649), cuyo valor se calcula mediante la siguiente fórmula.  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)
