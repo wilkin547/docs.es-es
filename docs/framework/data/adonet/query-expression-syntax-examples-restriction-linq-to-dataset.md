@@ -5,53 +5,53 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1daf42c2-c9f4-4cda-b291-7641b9c6d3fe
-ms.openlocfilehash: babe923132d8322ec81caae2a94678afea2a8095
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 556b1cc31f42cecc19492412120b31da83eff609
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354228"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397453"
 ---
-# <a name="query-expression-syntax-examples-restriction-linq-to-dataset"></a><span data-ttu-id="e6794-102">Ejemplos de sintaxis de expresiones de consulta: Restricción (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="e6794-102">Query Expression Syntax Examples: Restriction (LINQ to DataSet)</span></span>
-<span data-ttu-id="e6794-103">Los ejemplos de este tema muestran cómo utilizar el método <xref:System.Linq.Enumerable.Where%2A> para consultar <xref:System.Data.DataSet> utilizando sintaxis de expresión de consultas.</span><span class="sxs-lookup"><span data-stu-id="e6794-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Where%2A> method to query a <xref:System.Data.DataSet> using the query expression syntax.</span></span>  
+# <a name="query-expression-syntax-examples-restriction-linq-to-dataset"></a><span data-ttu-id="93b61-102">Ejemplos de sintaxis de expresiones de consulta: Restricción (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="93b61-102">Query Expression Syntax Examples: Restriction (LINQ to DataSet)</span></span>
+<span data-ttu-id="93b61-103">Los ejemplos de este tema muestran cómo utilizar el método <xref:System.Linq.Enumerable.Where%2A> para consultar <xref:System.Data.DataSet> utilizando sintaxis de expresión de consultas.</span><span class="sxs-lookup"><span data-stu-id="93b61-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Where%2A> method to query a <xref:System.Data.DataSet> using the query expression syntax.</span></span>  
   
- <span data-ttu-id="e6794-104">El `FillDataSet` método que se usa en estos ejemplos se especifica en [cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="e6794-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
+ <span data-ttu-id="93b61-104">El `FillDataSet` método usado en estos ejemplos se especifica en [cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="93b61-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
   
- <span data-ttu-id="e6794-105">Los ejemplos de este tema utilizan las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="e6794-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="93b61-105">Los ejemplos de este tema utilizan las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="93b61-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="e6794-106">Los ejemplos de este tema usan los siguientes `using` / `Imports` instrucciones:</span><span class="sxs-lookup"><span data-stu-id="e6794-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="93b61-106">Los ejemplos de este tema usan los siguientes `using` / `Imports` instrucciones:</span><span class="sxs-lookup"><span data-stu-id="93b61-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
 [!code-csharp[DP LINQ to DataSetExamples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]        
   
- <span data-ttu-id="e6794-107">Para obtener más información, consulte [Cómo: crear un LINQ to DataSet proyecto en Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span><span class="sxs-lookup"><span data-stu-id="e6794-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
+ <span data-ttu-id="93b61-107">Para obtener más información, consulte [Cómo: crear un LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span><span class="sxs-lookup"><span data-stu-id="93b61-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
   
-## <a name="where"></a><span data-ttu-id="e6794-108">Where</span><span class="sxs-lookup"><span data-stu-id="e6794-108">Where</span></span>  
+## <a name="where"></a><span data-ttu-id="93b61-108">Where</span><span class="sxs-lookup"><span data-stu-id="93b61-108">Where</span></span>  
   
-### <a name="example"></a><span data-ttu-id="e6794-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e6794-109">Example</span></span>  
- <span data-ttu-id="e6794-110">Este ejemplo devuelve todos los pedidos en línea.</span><span class="sxs-lookup"><span data-stu-id="e6794-110">This example returns all online orders.</span></span>  
+### <a name="example"></a><span data-ttu-id="93b61-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="93b61-109">Example</span></span>  
+ <span data-ttu-id="93b61-110">Este ejemplo devuelve todos los pedidos en línea.</span><span class="sxs-lookup"><span data-stu-id="93b61-110">This example returns all online orders.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)]     
   
-### <a name="example"></a><span data-ttu-id="e6794-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e6794-111">Example</span></span>  
- <span data-ttu-id="e6794-112">Este ejemplo devuelve los pedidos en los que la cantidad de pedido es superior a 2 e inferior a 6.</span><span class="sxs-lookup"><span data-stu-id="e6794-112">This example returns the orders where the order quantity is greater than 2 and less than 6.</span></span>  
+### <a name="example"></a><span data-ttu-id="93b61-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="93b61-111">Example</span></span>  
+ <span data-ttu-id="93b61-112">Este ejemplo devuelve los pedidos en los que la cantidad de pedido es superior a 2 e inferior a 6.</span><span class="sxs-lookup"><span data-stu-id="93b61-112">This example returns the orders where the order quantity is greater than 2 and less than 6.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#Where2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where2)]  
  [!code-vb[DP LINQ to DataSet Examples#Where2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where2)]     
   
-### <a name="example"></a><span data-ttu-id="e6794-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e6794-113">Example</span></span>  
- <span data-ttu-id="e6794-114">Este ejemplo devuelve todos los productos de color rojo.</span><span class="sxs-lookup"><span data-stu-id="e6794-114">This example returns all red colored products.</span></span>  
+### <a name="example"></a><span data-ttu-id="93b61-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="93b61-113">Example</span></span>  
+ <span data-ttu-id="93b61-114">Este ejemplo devuelve todos los productos de color rojo.</span><span class="sxs-lookup"><span data-stu-id="93b61-114">This example returns all red colored products.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#Where3](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where3)]  
  [!code-vb[DP LINQ to DataSet Examples#Where3](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where3)]     
   
-### <a name="example"></a><span data-ttu-id="e6794-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e6794-115">Example</span></span>  
- <span data-ttu-id="e6794-116">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Where%2A> para buscar pedidos efectuados con posterioridad al 1 de diciembre de 2002 y, a continuación, se utiliza el método <xref:System.Data.DataRow.GetChildRows%2A> para obtener los detalles de cada pedido.</span><span class="sxs-lookup"><span data-stu-id="e6794-116">This example uses the <xref:System.Linq.Enumerable.Where%2A> method to find orders that were made after December 1, 2002 and then uses the <xref:System.Data.DataRow.GetChildRows%2A> method to get the details for each order.</span></span>  
+### <a name="example"></a><span data-ttu-id="93b61-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="93b61-115">Example</span></span>  
+ <span data-ttu-id="93b61-116">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Where%2A> para buscar pedidos efectuados con posterioridad al 1 de diciembre de 2002 y, a continuación, se utiliza el método <xref:System.Data.DataRow.GetChildRows%2A> para obtener los detalles de cada pedido.</span><span class="sxs-lookup"><span data-stu-id="93b61-116">This example uses the <xref:System.Linq.Enumerable.Where%2A> method to find orders that were made after December 1, 2002 and then uses the <xref:System.Data.DataRow.GetChildRows%2A> method to get the details for each order.</span></span>  
   
  [!code-csharp[DP LINQ to DataSetExamples#WhereDrillDown](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#wheredrilldown)]       
  [!code-vb[DP LINQ to DataSet Examples#WhereDrillDown](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#wheredrilldown)]  
   
-## <a name="see-also"></a><span data-ttu-id="e6794-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="e6794-117">See Also</span></span>  
- [<span data-ttu-id="e6794-118">Carga de datos en un conjunto de datos</span><span class="sxs-lookup"><span data-stu-id="e6794-118">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [<span data-ttu-id="e6794-119">Ejemplos de LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="e6794-119">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [<span data-ttu-id="e6794-120">Información general sobre operadores de consulta estándar</span><span class="sxs-lookup"><span data-stu-id="e6794-120">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+## <a name="see-also"></a><span data-ttu-id="93b61-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="93b61-117">See Also</span></span>  
+ [<span data-ttu-id="93b61-118">Carga de datos en un conjunto de datos</span><span class="sxs-lookup"><span data-stu-id="93b61-118">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ [<span data-ttu-id="93b61-119">Ejemplos de LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="93b61-119">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ [<span data-ttu-id="93b61-120">Información general sobre operadores de consulta estándar</span><span class="sxs-lookup"><span data-stu-id="93b61-120">Standard Query Operators Overview</span></span>](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
