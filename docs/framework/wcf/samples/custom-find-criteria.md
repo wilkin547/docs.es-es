@@ -2,12 +2,12 @@
 title: Criterios de búsqueda personalizados
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 6c9363add13e38ded75685e4115a5084629d6505
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 699260fcef7680710f721d213dbf1126ebf7a896
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503215"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421455"
 ---
 # <a name="custom-find-criteria"></a>Criterios de búsqueda personalizados
 Este ejemplo muestra cómo crear una concordancia de ámbito personalizada usando la lógica y cómo implementar un servicio de detección personalizado. Los clientes utilizan la funcionalidad de concordancia de ámbito personalizada para refinar y seguir usando la funcionalidad de búsqueda proporcionada por la detección WCF. El escenario que abarca este ejemplo es el siguiente:  
@@ -39,13 +39,13 @@ Este ejemplo muestra cómo crear una concordancia de ámbito personalizada usand
   
  Abra el proyecto de servicio. Se utilizan tres archivos para implementar el Servicio de descarga personalizado:  
   
-1.  **AsyncResult.cs**: ésta es la implementación de la `AsyncResult` que requieren los métodos de detección.  
+1.  **AsyncResult.cs**: esta es la implementación de la `AsyncResult` que se requieren los métodos de detección.  
   
-2.  **CustomDiscoveryService.cs**: este archivo implementa el servicio de detección personalizado. La implementación extiende la clase <xref:System.ServiceModel.Discovery.DiscoveryService> e invalida los métodos necesarios. Observe la implementación del método <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>. El método comprueba si el cliente especificó la coincidencia de ámbito personalizada por regla. Se trata del mismo URI personalizado que el cliente especificó previamente. Si se especifica la regla personalizada, se sigue la ruta de acceso de código que implementa la lógica de coincidencia "OR".  
+2.  **CustomDiscoveryService.cs**: este archivo implementa el servicio de detección personalizado. La implementación extiende la clase <xref:System.ServiceModel.Discovery.DiscoveryService> e invalida los métodos necesarios. Observe la implementación del método <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>. El método comprueba si el cliente especificó la coincidencia de ámbito personalizada por regla. Se trata del mismo URI personalizado que el cliente especificó previamente. Si se especifica la regla personalizada, se sigue la ruta de acceso del código que implementa la lógica de coincidencia "OR".  
   
      Esta lógica personalizada pasa por todos los ámbitos de cada uno de los puntos de conexión que el servicio tiene. Si alguno de los ámbitos del punto de conexión coincide con alguno de los ámbitos proporcionados por el cliente, el servicio de descarga agrega ese punto de conexión a la respuesta que se devuelve al cliente.  
   
-3.  **CustomDiscoveryExtension.cs**: el último paso para implementar el servicio de descarga es conectar esta implementación de la opción de instalación detectar el servicio al host de servicio. La clase de aplicación auxiliar que se utiliza aquí es la clase `CustomDiscoveryExtension`. Esta clase extiende la clase <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. El usuario debe invalidar el método <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. En este caso, el método devuelve una instancia del servicio de detección personalizado que se creó antes. `PublishedEndpoints` es <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> que contiene todos los extremos de aplicación que se agregan a <xref:System.ServiceModel.ServiceHost>. El servicio de detección personalizado lo utiliza para rellenar su lista interna. El usuario puede agregar también otros metadatos de extremo.  
+3.  **CustomDiscoveryExtension.cs**: el último paso para implementar el servicio de detección es conectar esta implementación de personalizado detectar el servicio al host de servicio. La clase de aplicación auxiliar que se utiliza aquí es la clase `CustomDiscoveryExtension`. Esta clase extiende la clase <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. El usuario debe invalidar el método <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. En este caso, el método devuelve una instancia del servicio de detección personalizado que se creó antes. `PublishedEndpoints` es <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> que contiene todos los extremos de aplicación que se agregan a <xref:System.ServiceModel.ServiceHost>. El servicio de detección personalizado lo utiliza para rellenar su lista interna. El usuario puede agregar también otros metadatos de extremo.  
   
  Por último, abra Program.cs. Observe que tanto <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> como `CustomDiscoveryExtension` se agregan al host. Una vez hecho esto, si el host tiene un punto de conexión sobre el que recibir los mensajes de detección, la aplicación puede utilizar el servicio de detección personalizado.  
   
@@ -66,6 +66,6 @@ Este ejemplo muestra cómo crear una concordancia de ámbito personalizada usand
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

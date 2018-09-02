@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 3f17d81ac41c90e7f1c48523a4ced91bc788a962
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9255615c7786773f1d4f453b910fdccdf191721f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761901"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420279"
 ---
 # <a name="nesting-datarelations"></a>Anidar objetos DataRelation
-En una representación relacional de datos, las tablas individuales contienen filas que están relacionadas entre sí por una columna o un conjunto de columnas. En el <xref:System.Data.DataSet> de ADO.NET, la relación entre tablas se implementa mediante una <xref:System.Data.DataRelation>. Cuando se crea un **DataRelation**, las relaciones de elementos primarios y secundarios de las columnas se administran sólo mediante la relación. Las tablas y las columnas son entidades independientes. En la representación jerárquica de los datos proporcionada por XML, las relaciones primaria-secundaria se representan mediante elementos primarios que contienen elementos secundarios anidados.  
+En una representación relacional de datos, las tablas individuales contienen filas que están relacionadas entre sí por una columna o un conjunto de columnas. En el <xref:System.Data.DataSet> de ADO.NET, la relación entre tablas se implementa mediante una <xref:System.Data.DataRelation>. Cuando creas un **DataRelation**, las relaciones de elementos primarios y secundarios de las columnas se administran sólo mediante la relación. Las tablas y las columnas son entidades independientes. En la representación jerárquica de los datos proporcionada por XML, las relaciones primaria-secundaria se representan mediante elementos primarios que contienen elementos secundarios anidados.  
   
- Para facilitar el anidamiento de objetos secundarios cuando un **conjunto de datos** está sincronizado con un <xref:System.Xml.XmlDataDocument> o se escribe como datos XML mediante **WriteXml**, **DataRelation** expone un **Nested** propiedad. Establecer el **Nested** propiedad de un **DataRelation** a **true** , las filas de la relación se anidan dentro de la columna primaria cuando se escriben como datos XML secundarias o sincronizar con un **XmlDataDocument**. El **Nested** propiedad de la **DataRelation** es **false**, de forma predeterminada.  
+ Para facilitar el anidamiento de objetos secundarios cuando un **DataSet** se sincroniza con un <xref:System.Xml.XmlDataDocument> o se escribe como datos XML mediante **WriteXml**, el **DataRelation** expone un **Nested** propiedad. Establecer el **Nested** propiedad de un **DataRelation** a **true** hace que el elemento secundario de filas de la relación se anidan dentro de la columna primaria cuando se escribe como datos XML o sincronizar con un **XmlDataDocument**. El **Nested** propiedad de la **DataRelation** es **false**, de forma predeterminada.  
   
- Por ejemplo, considere el siguiente **conjunto de datos**.  
+ Por ejemplo, considere la siguiente **DataSet**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -59,9 +59,9 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- Dado que la **Nested** propiedad de la **DataRelation** objeto no está establecido en **true** para este **conjunto de datos**, los objetos secundarios no están anidados dentro de los elementos primarios cuando este **conjunto de datos** se representa como datos XML. Transformar la representación XML de un **conjunto de datos** que contiene relacionados **conjunto de datos**con relaciones de datos no anidadas puede provocar un rendimiento lento. Se recomienda anidar las relaciones de datos. Para ello, establezca la **Nested** propiedad **true**. A continuación, debe escribir código en la hoja de estilos XSLT que utilice expresiones de consulta XPath con jerarquía de arriba a abajo para localizar y transformar los datos.  
+ Dado que el **Nested** propiedad de la **DataRelation** objeto no está establecido en **true** para este **conjunto de datos**, los objetos secundarios no están anidados dentro de los elementos primarios cuando este **DataSet** se representa como datos XML. Transformar la representación XML de un **DataSet** que contiene relacionados **DataSet**s con relaciones de datos no anidadas puede provocar un rendimiento lento. Se recomienda anidar las relaciones de datos. Para ello, establezca el **Nested** propiedad **true**. A continuación, debe escribir código en la hoja de estilos XSLT que utilice expresiones de consulta XPath con jerarquía de arriba a abajo para localizar y transformar los datos.  
   
- En el ejemplo de código siguiente se muestra el resultado de llamar al método **WriteXml** en el **conjunto de datos**.  
+ En el ejemplo de código siguiente se muestra el resultado de llamar a **WriteXml** en el **DataSet**.  
   
 ```xml  
 <CustomerOrders>  
@@ -91,7 +91,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- Tenga en cuenta que la **clientes** elemento y el **pedidos** elementos se muestran como elementos del mismo nivel. Si deseara la **pedidos** elementos se muestren como elementos secundarios de sus respectivos elementos primarios, la **Nested** propiedad de la **DataRelation** tendría que estar establecido en **true** y debe agregar lo siguiente:  
+ Tenga en cuenta que el **clientes** elemento y el **pedidos** los elementos se muestran como elementos relacionados. Si deseara el **pedidos** elementos que se muestran como elementos secundarios de sus respectivos elementos primarios, el **Nested** propiedad de la **DataRelation** deberá establecerse en **true** y debe agregar lo siguiente:  
   
 ```vb  
 customerOrders.Nested = True  
@@ -101,7 +101,7 @@ customerOrders.Nested = True
 customerOrders.Nested = true;  
 ```  
   
- El código siguiente muestra lo que el resultado sería, con el **pedidos** elementos anidados dentro de sus respectivos elementos primarios.  
+ El código siguiente muestra cómo la salida resultante sería, con el **pedidos** elementos anidados dentro de sus respectivos elementos primarios.  
   
 ```xml  
 <CustomerOrders>  
@@ -135,4 +135,4 @@ customerOrders.Nested = true;
  [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [Agregar objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
  [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09bfa08589bda68258883e6f080392f534e8c5df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365883"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425761"
 ---
 # <a name="code-contracts"></a>Contratos de código
 Los contratos de código proporcionan una manera de especificar condiciones previas, condiciones posteriores e invariantes de objeto en el código. Las condiciones previas son requisitos que deben cumplirse al escribir un método o propiedad. Las condiciones posteriores describen las expectativas en el momento en que se cierra el código del método o propiedad. Las invariantes de objeto describen el estado esperado de una clase que está en buen estado.  
@@ -35,7 +35,7 @@ Los contratos de código proporcionan una manera de especificar condiciones prev
   
  La mayoría de los métodos de la clase de contrato se compila condicionalmente; es decir, el compilador emite llamadas a estos métodos solo cuando se define un símbolo especial, CONTRACTS_FULL, mediante la directiva `#define`. CONTRACTS_FULL le permite escribir contratos en su código sin usar directivas `#ifdef`; puede generar diferentes compilaciones, algunas con contratos y otras sin ellos.  
   
- Para obtener herramientas e instrucciones detalladas de uso de los contratos de código, vea [Contratos de código](http://go.microsoft.com/fwlink/?LinkId=152461) en el sitio web de MSDN DevLabs.  
+ Para obtener herramientas e instrucciones detalladas de uso de los contratos de código, vea [Contratos de código](https://go.microsoft.com/fwlink/?LinkId=152461) en el sitio web de MSDN DevLabs.  
   
 ## <a name="preconditions"></a>Condiciones previas  
  El método <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType> permite expresar condiciones previas. Las condiciones previas especifican el estado cuando se invoca un método. Generalmente se usan para especificar valores de parámetro válidos. Todos los miembros que se mencionan en las condiciones previas deben ser al menos tan accesibles como el propio método; de lo contrario, es posible que la condición previa no sea entendida por todos los llamadores de un método. La condición no debe tener efectos secundarios. El analizador de runtime determina el comportamiento en tiempo de ejecución de las condiciones previas con errores.  

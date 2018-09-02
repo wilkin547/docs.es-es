@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: f29b8e01239f46b0d56319ba3da1a8fe179a17e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 047805ad91d87550da80448fd10883ae58647bd6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601158"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420059"
 ---
 # <a name="ltexceptiongt-visual-basic"></a>&lt;excepción&gt; (Visual Basic)
-Especifica qué excepciones se pueden iniciar.  
+Especifica qué excepciones se pueden producir.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -29,14 +29,14 @@ Especifica qué excepciones se pueden iniciar.
  Una descripción.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la `<exception>` etiqueta para especificar qué excepciones se pueden iniciar. Esta etiqueta se aplica a una definición de método.  
+ Use la `<exception>` etiqueta para especificar qué excepciones se pueden producir. Esta etiqueta se aplica a una definición de método.  
   
  Compile con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación a un archivo.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se utiliza la `<exception>` etiquetas para describir una excepción que el `IntDivide` función puede producir.  
+ Este ejemplo se usa el `<exception>` etiquetas para describir una excepción que el `IntDivide` función puede producir.  
   
  [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/exception_1.vb)]  
   
 ## <a name="see-also"></a>Vea también  
- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)

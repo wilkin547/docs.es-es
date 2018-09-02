@@ -2,22 +2,22 @@
 title: Control de errores avanzado
 ms.date: 03/30/2017
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
-ms.openlocfilehash: 723b1ca9c2fa771d8bc3f337d9c4fde8c9632c68
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 72fb9885408759f5781501b548f81625d258d13c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810088"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423437"
 ---
 # <a name="advanced-error-handling"></a>Control de errores avanzado
-Este ejemplo muestra el servicio de enrutamiento de Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente WCF que facilita el proceso incluir un enrutador basado en contenido en la aplicación. Este ejemplo muestra el modo en que el servicio de enrutamiento se recupera de los errores de forma inteligente, utilizando transacciones y otros conceptos de mensajería más complejos, como la multidifusión.  
+Este ejemplo muestra el servicio de enrutamiento de Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente WCF que facilita la tarea debe incluir un enrutador basado en contenido en la aplicación. Este ejemplo muestra el modo en que el servicio de enrutamiento se recupera de los errores de forma inteligente, utilizando transacciones y otros conceptos de mensajería más complejos, como la multidifusión.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\AdvancedErrorHandling`  
   
@@ -29,7 +29,7 @@ Este ejemplo muestra el servicio de enrutamiento de Windows Communication Founda
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
 1.  > [!IMPORTANT]
-    >  Instale MSMQ antes de ejecutar este ejemplo. Si MSMQ no está instalado, se devuelve un mensaje de excepción al ejecutar el ejemplo. Encontrará instrucciones para instalar MSMQ en [instalar Message Queuing (MSMQ)](http://go.microsoft.com/fwlink/?LinkId=166437).  
+    >  Instale MSMQ antes de ejecutar este ejemplo. Si MSMQ no está instalado, se devuelve un mensaje de excepción al ejecutar el ejemplo. Pueden encontrar instrucciones para instalar MSMQ en [instalar Message Queuing (MSMQ)](https://go.microsoft.com/fwlink/?LinkId=166437).  
   
      Con [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], abra AdvancedErrorHandling.sln.  
   
@@ -96,4 +96,4 @@ Este ejemplo muestra el servicio de enrutamiento de Windows Communication Founda
  Contoso desea utilizar las recepciones transaccionales a través del servicio de enrutamiento para asegurarse de que todos los servicios necesarios reciben información incluso durante condiciones de error. Además, desean administrar los errores de forma correcta y automática, y los errores que se van a notificar en el caso de que un mensaje no pueda entregarse ni siquiera cuando se utiliza la lógica de control de errores. Para este propósito, configuran el servicio de enrutamiento para conmutar por error a puntos de conexión concretos según se prevea y para que el servicio del enrutamiento administre las situaciones de error, lo que incluye crear, completar y recuperar o anular los contextos de recepción y transacciones según convenga.  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de persistencia y el hospedaje de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

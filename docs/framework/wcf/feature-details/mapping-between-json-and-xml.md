@@ -2,12 +2,12 @@
 title: Asignación entre JSON y XML
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: e8cc356a30d11a6f07cf4444efbeda2faf5b0471
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 079ca9cebefcc96bffdb0ec4601a675ed83adefe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931474"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421728"
 ---
 # <a name="mapping-between-json-and-xml"></a>Asignación entre JSON y XML
 Los sistemas de lectura y escritura generados por el <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> proporcionan una API de XML sobre contenido de notación de objetos JavaScript (JSON) JSON codifica datos mediante un subconjunto de literales de objeto de JavaScript. Los lectores y escritores producidos por este generador también se usan cuando se está contenido JSON enviados o recibidos por las aplicaciones de Windows Communication Foundation (WCF) mediante el <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> o <xref:System.ServiceModel.WebHttpBinding>.  
@@ -38,7 +38,7 @@ Los sistemas de lectura y escritura generados por el <xref:System.Runtime.Serial
  Además, si el mensaje JSON en el ejemplo es recibido por WCF y registra, vería el fragmento XML en el registro anterior.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Asignación entre JSON y el conjunto de información XML  
- Formalmente, la asignación es entre JSON como se describe en [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (excepto con algunas restricciones flexibles y otras restricciones adicionales) y el XML infoset (y no XML textual) como se describe en [información XML Establecer](http://go.microsoft.com/fwlink/?LinkId=98809) . Vea este tema para obtener las definiciones de *elementos de información* y campos entre [corchetes].  
+ Formalmente, la asignación es entre JSON como se describe en [RFC 4627](https://go.microsoft.com/fwlink/?LinkId=98808) (excepto con algunas restricciones flexibles y otras restricciones adicionales) y el XML infoset (y no XML textual) como se describe en [información XML Establecer](https://go.microsoft.com/fwlink/?LinkId=98809) . Vea este tema para obtener las definiciones de *elementos de información* y campos entre [corchetes].  
   
  Un documento JSON en blanco se asigna a un documento XML en blanco y un documento XML en blanco se asigna a un documento JSON en blanco. En la asignación de XML a JSON, no se permiten anterior espacios en blanco iniciales y finales de espacio en blanco después del documento.  
   

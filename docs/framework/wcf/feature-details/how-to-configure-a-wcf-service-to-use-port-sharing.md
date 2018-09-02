@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: 0a3aca2bac546c9142137afc025133bc1154ff90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2715e319772e4e0ae4cb38f3dbd1dd5133a2eef3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495247"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43451615"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Cómo: Configurar un servicio de Windows Communication Foundation para utilizar puertos compartidos
 La manera más fácil de usar puertos de net.tcp:// en su aplicación de Windows Communication Foundation (WCF) es exponer un servicio mediante el <xref:System.ServiceModel.NetTcpBinding>.  
@@ -61,5 +61,5 @@ La manera más fácil de usar puertos de net.tcp:// en su aplicación de Windows
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Uso compartido de puertos Net.TCP](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
+ [Uso compartido de puertos Net.TCP](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
  [Habilitar el servicio de uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

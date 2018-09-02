@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: a701a516a93cf94f76950b7b1b1c7f3a9b41214e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a8dcd0a835bb669b669d5a510e01142c85ea07a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505849"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421229"
 ---
 # <a name="discovery-security-sample"></a>Ejemplo de seguridad de la detección
-La especificación de la detección no requiere que los puntos de conexión que participan en el proceso de detección sean seguros. Al mejorar los mensajes de detección gracias a la seguridad, se mitigan varios tipos de ataques (alteración del mensaje, denegación de servicio, repetición y suplantación). Este ejemplo implementa canales personalizados que calculan y comprueban las firmas de mensaje utilizando el formato de firma compacto (descrito en la sección 8.2 de la especificación de detección WS). El ejemplo admite tanto la [especificación de detección de 2005](http://go.microsoft.com/fwlink/?LinkId=177912) y [versión 1.1](http://go.microsoft.com/fwlink/?LinkId=179677).  
+La especificación de la detección no requiere que los puntos de conexión que participan en el proceso de detección sean seguros. Al mejorar los mensajes de detección gracias a la seguridad, se mitigan varios tipos de ataques (alteración del mensaje, denegación de servicio, repetición y suplantación). Este ejemplo implementa canales personalizados que calculan y comprueban las firmas de mensaje utilizando el formato de firma compacto (descrito en la sección 8.2 de la especificación de detección WS). El ejemplo admiten tanto el [especificación de detección 2005](https://go.microsoft.com/fwlink/?LinkId=177912) y [versión 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
   
  El canal personalizado se aplica encima de la pila del canal existente para los puntos de conexión de anuncio y detección. De esta manera, se aplica un encabezado de firma para cada mensaje enviado. La firma se comprueba en los mensajes recibidos, y cuando no coincide o cuando los mensajes no tienen una firma, los mensajes se quitan. Para firmar y comprobar los mensajes, el ejemplo utiliza los certificados.  
   
@@ -39,7 +39,7 @@ La especificación de la detección no requiere que los puntos de conexión que 
 > [!NOTE]
 >  `PrefixList` se agregó en el protocolo de la versión de detección de 2008.  
   
- Para calcular la firma, el ejemplo determina los elementos de firma expandidos. Se crea una firma XML (`SignedInfo`), utilizando el prefijo del espacio de nombres `ds`, tal y como requiere la especificación de la detección WS. En la firma se hace referencia al cuerpo y a todos los encabezados en los espacios de nombres de direccionamiento y detección, de modo que no se puedan alterar. Cada elemento que se hace referencia se transforma utilizando la canonización exclusiva (http://www.w3.org/2001/10/xml-exc-c14n# ), y, a continuación, se calcula un valor de síntesis de SHA-1 (http://www.w3.org/2000/09/xmldsig#sha1 ). En función de los elementos de todos los que se hace referencia y sus valores de resumen, el valor de firma se calcula utilizando el algoritmo RSA (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ).  
+ Para calcular la firma, el ejemplo determina los elementos de firma expandidos. Se crea una firma XML (`SignedInfo`), utilizando el prefijo del espacio de nombres `ds`, tal y como requiere la especificación de la detección WS. En la firma se hace referencia al cuerpo y a todos los encabezados en los espacios de nombres de direccionamiento y detección, de modo que no se puedan alterar. Cada elemento que se hace referencia se transforma utilizando la canonización exclusiva (http://www.w3.org/2001/10/xml-exc-c14n# ), y, a continuación, se calcula un valor de síntesis de SHA-1 (http://www.w3.org/2000/09/xmldsig#sha1 ). En función de los elementos de todos los que se hace referencia y sus valores de resumen, el valor de la firma se calcula mediante el algoritmo RSA (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ).  
   
  Los mensajes se firman con un certificado especificado por el cliente. Cuando se crea el elemento de enlace, se debe especificar la ubicación del almacén, el nombre y el nombre de asunto del certificado. El `KeyId` de la firma compacta representa el identificador de clave del token de firma y es el identificador de clave de asunto (SKI) del token de firma o (si el SKI no existe) un valor hash SHA-1 de la clave pública del token de firma.  
   
@@ -51,11 +51,11 @@ La especificación de la detección no requiere que los puntos de conexión que 
   
 -   **DiscoverySecurityChannels**: una biblioteca que expone el enlace seguro. La biblioteca calcula y comprueba la firma compacta para los mensajes entrantes o salientes.  
   
--   **Servicio**: servicio que expone el contrato de ICalculatorService, autohospedado. El servicio se marca como detectable. El usuario especifica los detalles del certificado utilizados para firmar los mensajes especificando la ubicación del almacén y nombre, y el nombre de asunto u otro identificador único para el certificado, y el almacén donde se encuentran los certificados de cliente (que se usan para comprobar la firma de los mensajes entrantes). Según estos detalles, se compila y se usa un UdpDiscoveryEndpoint.  
+-   **Servicio**: un servicio que expone el contrato de ICalculatorService, autohospedado. El servicio se marca como detectable. El usuario especifica los detalles del certificado utilizados para firmar los mensajes especificando la ubicación del almacén y nombre, y el nombre de asunto u otro identificador único para el certificado, y el almacén donde se encuentran los certificados de cliente (que se usan para comprobar la firma de los mensajes entrantes). Según estos detalles, se compila y se usa un UdpDiscoveryEndpoint.  
   
 -   **Cliente**: esta clase intenta detectar un ICalculatorService y llamar a métodos en el servicio. De nuevo, se crea un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> con seguridad agregada y se usa para firmar y comprobar los mensajes.  
   
--   **AnnouncementListener**: un servicio hospedado por sí mismo que realiza escuchas en anuncios en línea y sin conexión y utiliza el extremo del anuncio seguro.  
+-   **AnnouncementListener**: un servicio autohospedado que realiza escuchas de anuncios en línea y sin conexión y usa el punto de conexión del anuncio seguro.  
   
 > [!NOTE]
 >  Si Setup.bat se ejecuta varias veces, el administrador de certificados le solicita que elija un certificado que agregar, ya que hay certificados duplicados. En ese caso, Setup.bat se debería anular y se debería llamar a Cleanup.bat, porque los duplicados ya se han creado. Cleanup.bat también le solicita que elija un certificado que eliminar. Seleccione un certificado en la lista y siga ejecutando Cleanup.bat hasta que no quede ningún certificado.  
@@ -73,7 +73,7 @@ La especificación de la detección no requiere que los puntos de conexión que 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
   

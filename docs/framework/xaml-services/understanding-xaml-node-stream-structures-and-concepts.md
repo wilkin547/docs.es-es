@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: fc27426e4d48ae519fc743c8a4f7eb3d1e6a4e81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566657"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423249"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Introducción a las estructuras y conceptos de secuencias de nodo XAML
 Los lectores y escritores de XAML, tal como se implementan en los servicios XAML de .NET Framework, se basan en el concepto de diseño de un flujo de nodo XAML. El flujo de nodo XAML es una conceptualización de un conjunto de nodos XAML. En esta conceptualización, un procesador XAML recorre la estructura de las relaciones de nodo en el XAML de cada vez. En todo momento, solo existe un registro o posición actuales en un flujo de nodo XAML abierto, y muchos aspectos de la API informan únicamente sobre la información disponible en esa posición. El nodo actual en un flujo de nodo XAML se puede describir como un objeto, un miembro o un valor. Al tratar XAML como un flujo de nodo XAML, los lectores XAML pueden comunicarse con escritores XAML y habilitar un programa para ver, interactuar o modificar el contenido de un flujo de nodo XAML durante una operación de ruta de acceso de carga o de ruta de acceso de guardado que implica XAML. El diseño de la API del lector y el escritor XAML y el concepto del flujo de nodo XAML son similares a los anteriores diseños y conceptos del lector y el escritor relacionados, como [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] y las clases <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter> . En este tema se describen los conceptos de flujo de nodo XAML y se describe cómo se puede escribir rutinas que interactúan con las representaciones XAML en el nivel de nodo XAML.  
@@ -80,7 +80,7 @@ while (xxr.Read()) {
  Existen otras maneras de trabajar con una representación de XAML, además del bucle de nodo XAML. Por ejemplo, podría existir un lector XAML que puede leer un nodo indexado o en concreto acceder a los nodos directamente a través de `x:Name`, `x:Uid`u otros identificadores. Los servicios XAML de .NET Framework no proporcionan una implementación completa, pero ofrecen un patrón sugerido a través de los tipos de servicios y de soporte. Para obtener más información, vea <xref:System.Xaml.IXamlIndexingReader> y <xref:System.Xaml.XamlNodeList>.  
   
 > [!TIP]
->  Microsoft también genera una versión fuera de banda, conocida como el Kit de herramientas de Microsoft XAML. Esta versión fuera de banda todavía se encuentra en las fases preliminares. Sin embargo, si está dispuesto a trabajar con componentes de la versión preliminar, el Kit de herramientas de Microsoft XAML proporciona algunos recursos interesantes para las herramientas de XAML y el análisis estático de XAML. El Kit de herramientas de Microsoft XAML incluye una API de DOM de XAML, soporte técnico para el análisis de FxCop y un contexto de esquema XAML para Silverlight. Para obtener más información, vea [Kit de herramientas de Microsoft XAML](http://code.msdn.microsoft.com/XAML).  
+>  Microsoft también genera una versión fuera de banda, conocida como el Kit de herramientas de Microsoft XAML. Esta versión fuera de banda todavía se encuentra en las fases preliminares. Sin embargo, si está dispuesto a trabajar con componentes de la versión preliminar, el Kit de herramientas de Microsoft XAML proporciona algunos recursos interesantes para las herramientas de XAML y el análisis estático de XAML. El Kit de herramientas de Microsoft XAML incluye una API de DOM de XAML, soporte técnico para el análisis de FxCop y un contexto de esquema XAML para Silverlight. Para obtener más información, consulte [Kit de herramientas de Microsoft XAML](https://code.msdn.microsoft.com/XAML).  
   
 <a name="working_with_the_current_node"></a>   
 ## <a name="working-with-the-current-node"></a>Trabajar con el nodo actual  

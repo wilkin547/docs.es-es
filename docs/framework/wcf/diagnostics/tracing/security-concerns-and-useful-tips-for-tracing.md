@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 664785bc97574eff73dc1c2be64f407641df6b00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccb16a0996386f3518bc52e95c1892c56e8bbad2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484574"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420837"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Riesgos de seguridad y sugerencias útiles para el seguimiento
 Este tema describe cómo puede proteger información confidencial de ser expuesta, así como sugerencias útiles al utilizar WebHost.  
@@ -86,9 +86,9 @@ Este tema describe cómo puede proteger información confidencial de ser expuest
   
  Los cambios solo son efectivos cuando la aplicación se inicia o reinicia. Un evento está registrado en el inicio cuando ambos atributos están establecidos en `true`. Un evento también está registrado si `logKnownPii` está establecido en `true` pero `enableLoggingKnownPii` es `false`.  
   
- Para obtener más información sobre el registro de PII, consulte [bloqueo de seguridad PII](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) ejemplo.  
+ Para obtener más información sobre el registro de PII, vea [bloqueo de seguridad PII](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) ejemplo.  
   
- El administrador del equipo e implementador de la aplicación debería ejercer una precaución extrema al utilizar estos dos modificadores. Si el registro de PII está habilitado, las claves de seguridad y PII están registradas. Si está deshabilitado, los datos sensibles y específicos de la aplicación todavía están registrados en encabezados del mensaje y cuerpos. Para obtener una explicación más exhaustiva sobre la privacidad y protección de PII que no se expongan, consulte [privacidad del usuario](http://go.microsoft.com/fwlink/?LinkID=94647).  
+ El administrador del equipo e implementador de la aplicación debería ejercer una precaución extrema al utilizar estos dos modificadores. Si el registro de PII está habilitado, las claves de seguridad y PII están registradas. Si está deshabilitado, los datos sensibles y específicos de la aplicación todavía están registrados en encabezados del mensaje y cuerpos. Para obtener una explicación más exhaustiva sobre la privacidad y cómo evitar la exposición de PII, vea [privacidad del usuario](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
  Además, la dirección IP del remitente del mensaje se registra una vez por conexión para transportes orientados a la conexión y una vez por mensaje enviado de otro modo. Esto se hace sin el consentimiento del remitente. Sin embargo, este registro solo se produce en los niveles de traza Información o Detallado, que no son los niveles de traza predeterminados o recomendados en la producción, salvo para la depuración activa.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 8696bf567d8f32fc3bc3f78e127631f488c551aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e66e4f34afcf8cba03c60c92b5b69d8ca01961b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365121"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419407"
 ---
 # <a name="performance-counters-in-adonet"></a>Contadores de rendimiento de ADO.NET
 ADO.NET 2.0 incorporó la compatibilidad expandida para los contadores de rendimiento que incluye la compatibilidad tanto con <xref:System.Data.SqlClient> como con <xref:System.Data.OracleClient>. Los contadores de rendimiento <xref:System.Data.SqlClient> que estaban disponibles en las versiones anteriores de ADO.NET se han descartado y se han sustituido por los nuevos contadores de rendimiento que se describen aquí. Puede utilizar los contadores de rendimiento de ADO.NET para supervisar el estado de su aplicación y los recursos de conexión que emplea. Los contadores de rendimiento se pueden controlar con el Monitor de rendimiento de Windows pero también se puede tener acceso a ellos mediante programación usando la clase <xref:System.Diagnostics.PerformanceCounter> del espacio de nombres <xref:System.Diagnostics>.  
@@ -24,19 +24,19 @@ ADO.NET 2.0 incorporó la compatibilidad expandida para los contadores de rendim
 |`HardDisconnectsPerSecond`|El número de desconexiones por segundo que se producen con un servidor de bases de datos.|  
 |`NumberOfActiveConnectionPoolGroups`|El número de conjuntos de grupos de conexiones únicas que están activos. Este contador depende del número de cadenas de conexión única que haya en el AppDomain.|  
 |`NumberOfActiveConnectionPools`|El número total de grupos de conexiones.|  
-|`NumberOfActiveConnections`|El número de conexiones activas que se están utilizando actualmente. **Nota:** este contador de rendimiento no está habilitado de forma predeterminada. Para habilitar este contador de rendimiento, consulte [contadores desactivados por predeterminada](#ActivatingOffByDefault).|  
-|`NumberOfFreeConnections`|El número de conexiones que se pueden utilizar en los grupos de conexiones. **Nota:** este contador de rendimiento no está habilitado de forma predeterminada. Para habilitar este contador de rendimiento, consulte [contadores desactivados por predeterminada](#ActivatingOffByDefault).|  
+|`NumberOfActiveConnections`|El número de conexiones activas que se están utilizando actualmente. **Nota:** este contador de rendimiento no está habilitado de forma predeterminada. Para habilitar este contador de rendimiento, consulte [activar contadores desactivados por predeterminada](#ActivatingOffByDefault).|  
+|`NumberOfFreeConnections`|El número de conexiones que se pueden utilizar en los grupos de conexiones. **Nota:** este contador de rendimiento no está habilitado de forma predeterminada. Para habilitar este contador de rendimiento, consulte [activar contadores desactivados por predeterminada](#ActivatingOffByDefault).|  
 |`NumberOfInactiveConnectionPoolGroups`|El número de conjuntos de grupos de conexiones únicas que están marcados para ser eliminados. Este contador depende del número de cadenas de conexión única que haya en el AppDomain.|  
 |`NumberOfInactiveConnectionPools`|El número de grupos de conexiones inactivas que no han tenido ninguna actividad recientemente y que están a la espera de ser eliminadas.|  
 |`NumberOfNonPooledConnections`|El número de conexiones activas que no están agrupadas.|  
 |`NumberOfPooledConnections`|El número de conexiones activas que administra la infraestructura de agrupación de conexiones.|  
 |`NumberOfReclaimedConnections`|El número de conexiones que se han reclamado a través de la recolección de elementos no utilizados si la aplicación no llamó a `Close` o `Dispose`. Si no se cierran o eliminan explícitamente las conexiones, el rendimiento se verá perjudicado.|  
 |`NumberOfStasisConnections`|El número de conexiones que están actualmente en espera de que se finalice una acción y que por lo tanto no pueden ser utilizadas por la aplicación.|  
-|`SoftConnectsPerSecond`|El número de conexiones activas que se están extrayendo del grupo de conexiones. **Nota:** este contador de rendimiento no está habilitado de forma predeterminada. Para habilitar este contador de rendimiento, consulte [contadores desactivados por predeterminada](#ActivatingOffByDefault).|  
-|`SoftDisconnectsPerSecond`|El número de conexiones activas que se devuelven al grupo de conexiones. **Nota:** este contador de rendimiento no está habilitado de forma predeterminada. Para habilitar este contador de rendimiento, consulte [contadores desactivados por predeterminada](#ActivatingOffByDefault).|  
+|`SoftConnectsPerSecond`|El número de conexiones activas que se están extrayendo del grupo de conexiones. **Nota:** este contador de rendimiento no está habilitado de forma predeterminada. Para habilitar este contador de rendimiento, consulte [activar contadores desactivados por predeterminada](#ActivatingOffByDefault).|  
+|`SoftDisconnectsPerSecond`|El número de conexiones activas que se devuelven al grupo de conexiones. **Nota:** este contador de rendimiento no está habilitado de forma predeterminada. Para habilitar este contador de rendimiento, consulte [activar contadores desactivados por predeterminada](#ActivatingOffByDefault).|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>Conjuntos de grupos de conexiones y grupos de conexiones  
- Si utiliza la autenticación de Windows (seguridad integrada) debe supervisar los contadores de rendimiento `NumberOfActiveConnectionPoolGroups` y `NumberOfActiveConnectionPools`. El motivo es que los conjuntos de grupos de conexiones se corresponden con cadenas de conexión única. Si se usa seguridad integrada, los grupos de conexiones se asignan a cadenas de conexión y además crean grupos diferentes para cada identidad de Windows. Por ejemplo, si Alfredo y Julia, los dos dentro del mismo AppDomain, utilizan la cadena de conexión `"Data Source=MySqlServer;Integrated Security=true"`, se crea un conjunto de grupos de conexiones para la cadena de conexión y dos grupos adicionales, uno para Alfredo y otro para Julia. Si Francisco y Marta utilizan una cadena de conexión con un inicio de sesión de SQL Server idéntica, `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`, a continuación, se crea solo un grupo único para la **lowPrivUser** identidad.  
+ Si utiliza la autenticación de Windows (seguridad integrada) debe supervisar los contadores de rendimiento `NumberOfActiveConnectionPoolGroups` y `NumberOfActiveConnectionPools`. El motivo es que los conjuntos de grupos de conexiones se corresponden con cadenas de conexión única. Si se usa seguridad integrada, los grupos de conexiones se asignan a cadenas de conexión y además crean grupos diferentes para cada identidad de Windows. Por ejemplo, si Alfredo y Julia, los dos dentro del mismo AppDomain, utilizan la cadena de conexión `"Data Source=MySqlServer;Integrated Security=true"`, se crea un conjunto de grupos de conexiones para la cadena de conexión y dos grupos adicionales, uno para Alfredo y otro para Julia. Si Francisco y Marta utilizan una cadena de conexión con un inicio de sesión de SQL Server idéntica, `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`, a continuación, se crea solo un único grupo para el **lowPrivUser** identidad.  
   
 <a name="ActivatingOffByDefault"></a>   
 ### <a name="activating-off-by-default-counters"></a>Activar contadores desactivados de forma predeterminada  
@@ -397,7 +397,7 @@ class Program
 ## <a name="see-also"></a>Vea también  
  [Conexión a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [Agrupación de conexiones de OLE DB, ODBC y Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- [Contadores de rendimiento para ASP.NET](http://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)  
+ [Contadores de rendimiento de ASP.NET](https://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)  
  [Generar perfiles en tiempo de ejecución](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)  
- [Introducción a la supervisión de umbrales de rendimiento](http://msdn.microsoft.com/library/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Introducción a la supervisión de umbrales de rendimiento](https://msdn.microsoft.com/library/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

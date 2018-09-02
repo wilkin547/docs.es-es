@@ -8,18 +8,18 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 3df8f6eaee72ebdd6cbd03d0bdfde5a7d2270129
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98ed6d4e10d0eb80b99a36172980fcb33186c8ca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526535"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419207"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Cómo: Proporcionar ayuda en una aplicación para Windows
-Puede usar de la <xref:System.Windows.Forms.HelpProvider> componente para asociar los temas de ayuda dentro de un archivo de ayuda a controles específicos en formularios Windows Forms. El archivo de ayuda puede ser HTML, HTMLHelp 1.x o superior.  
+Puede usar de la <xref:System.Windows.Forms.HelpProvider> componente para asociar los temas de ayuda dentro de un archivo de ayuda a controles específicos en los formularios de Windows. El archivo de ayuda puede ser HTML, HTMLHelp 1.x o superior.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-provide-help"></a>Para proporcionar ayuda  
   
@@ -29,11 +29,11 @@ Puede usar de la <xref:System.Windows.Forms.HelpProvider> componente para asocia
   
 2.  En el **propiedades** ventana, establezca el <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> propiedad al archivo de ayuda .chm, .col o. htm.  
   
-3.  Seleccione otro control tiene en el formulario y, en la **propiedades** ventana, establezca el <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> propiedad.  
+3.  Seleccione otro control que tiene en su formulario y, en el **propiedades** ventana, establezca el <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> propiedad.  
   
-     Se trata de la cadena que se pasa a través de la <xref:System.Windows.Forms.HelpProvider> componente al archivo de ayuda para abrir el tema de Ayuda apropiado.  
+     Se trata de la cadena pasada a través de la <xref:System.Windows.Forms.HelpProvider> componente al archivo de ayuda para abrir el tema de Ayuda adecuado.  
   
-4.  En el **propiedades** ventana, establezca el <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> en un valor de la <xref:System.Windows.Forms.HelpNavigator> enumeración.  
+4.  En el **propiedades** ventana, establezca el <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> propiedad con un valor de la <xref:System.Windows.Forms.HelpNavigator> enumeración.  
   
      Esto determina la forma en la que la propiedad **HelpKeyword** pasa al sistema de ayuda. La siguiente tabla muestra los valores posibles y sus descripciones.  
   
@@ -46,14 +46,14 @@ Puede usar de la <xref:System.Windows.Forms.HelpProvider> componente para asocia
     |TableOfContents|Especifica que se muestra la tabla de contenidos del archivo de ayuda HTML 1.0.|  
     |Tema|Especifica que se muestra el tema al que hace referencia la dirección URL especificada.|  
   
- En tiempo de ejecución, al presionar F1 cuando el control, para que ha establecido la **HelpKeyword** y **HelpNavigator** propiedades: tiene foco abrirá el archivo de ayuda asociados a ese <xref:System.Windows.Forms.HelpProvider> componente.  
+ En tiempo de ejecución, al presionar F1 cuando el control, para que haya establecido el **HelpKeyword** y **HelpNavigator** propiedades: tiene el foco abrirá el archivo de ayuda asociado que <xref:System.Windows.Forms.HelpProvider> componente.  
   
  Actualmente, la propiedad **HelpNamespace** admite archivos de ayuda en los tres formatos siguientes: HTMLHelp 1.x, HTMLHelp 2.0 y HTML. Por lo tanto, puede establecer la propiedad **HelpNamespace** en una dirección http://, como una página web. Si esto sucede, se abrirá el explorador predeterminado en la página web con la cadena especificada en la propiedad **HelpKeyword** utilizada como delimitador. El delimitador se utiliza para saltar a una parte específica de una página HTML.  
   
 > [!IMPORTANT]
 >  Tenga cuidado de comprobar cualquier información que se envíe desde un cliente antes de utilizarla en su aplicación. Los usuarios malintencionados podrían intentar enviar o inyectar scripts ejecutables, instrucciones SQL u otro código. Antes de mostrar la entrada del usuario, almacénela en una base de datos o trabaje con ella, y compruebe que no contiene información potencialmente insegura. Una forma habitual de comprobación es utilizar una expresión regular para buscar palabras clave como "SCRIPT" cuando se recibe la entrada de un usuario.  
   
- También puede usar el <xref:System.Windows.Forms.HelpProvider> componente para mostrar Ayuda emergente, aunque se haya configurado para mostrar archivos de ayuda para los controles en los formularios Windows Forms. Para más información, consulte [Cómo: Mostrar ayuda emergente](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
+ También puede usar el <xref:System.Windows.Forms.HelpProvider> componente para mostrar Ayuda emergente, aunque se haya configurado para mostrar archivos de ayuda para los controles de formularios de Windows. Para más información, consulte [Cómo: Mostrar ayuda emergente](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Mostrar ayuda emergente](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  

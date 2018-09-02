@@ -2,15 +2,15 @@
 title: Arquitectura y diseño
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: c2e8ff5f21a2941d75b21915552e6935a1423978
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766873"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419609"
 ---
 # <a name="architecture-and-design"></a>Arquitectura y diseño
-El módulo de generación de SQL en el [proveedor de ejemplo](http://go.microsoft.com/fwlink/?LinkId=180616) se implementa como un visitante en el árbol de expresión que representa el árbol de comandos. La generación se realiza en un paso único al árbol de expresión.  
+El módulo de generación de SQL en el [proveedor de ejemplo](https://go.microsoft.com/fwlink/?LinkId=180616) se implementa como un visitante en el árbol de expresión que representa el árbol de comandos. La generación se realiza en un paso único al árbol de expresión.  
   
  Los nodos del árbol se procesan de abajo arriba. Primero se genera una estructura intermedia, SqlSelectStatement o SqlBuilder, que implementan ISqlFragment. A continuación, la instrucción SQL de la cadena se genera a partir de esa estructura. Hay dos motivos para la estructura intermedia:  
   
@@ -18,14 +18,14 @@ El módulo de generación de SQL en el [proveedor de ejemplo](http://go.microsof
   
 -   Para cambiar el nombre de los alias, debe identificar todos los alias que se hayan utilizado para evitar colisiones durante el cambio de nombre. Para aplazar las opciones de cambio de nombre en SqlBuilder, utilice objetos Symbol para representar las columnas candidatas al cambio de nombre.  
   
- ![Diagrama de](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
+ ![Diagrama](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
  En la primera fase, cuando se visita el árbol de expresión, las expresiones se agrupan en instrucciones SqlSelectStatement y se elimina la información de estructura jerárquica de las combinaciones y de los alias de combinación. Durante esta fase, los objetos Symbol representan columnas o alias de entrada a los que se puede cambiar el nombre.  
   
  En la segunda fase, cuando se genera la cadena real, se cambia el nombre de los alias.  
   
 ## <a name="data-structures"></a>Estructuras de datos  
- Esta sección describen los tipos utilizados en la [proveedor de ejemplo](http://go.microsoft.com/fwlink/?LinkId=180616) que usa para generar una instrucción SQL.  
+ Esta sección describen los tipos utilizados en el [proveedor de ejemplo](https://go.microsoft.com/fwlink/?LinkId=180616) que usa para crear una instrucción SQL.  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  Esta sección abarca las clases que implementan la interfaz ISqlFragment, que sirve para dos fines:  
@@ -52,7 +52,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 ```  
   
 #### <a name="sqlselectstatement"></a>SqlSelectStatement  
- SqlSelectStatement representa una instrucción SQL SELECT canónica de la forma "seleccionar... DE.. WHERE... AGRUPAR POR... SE ORDENA POR".  
+ SqlSelectStatement representa una instrucción SQL SELECT canónica de la forma "SELECT... DE.. WHERE... AGRUPAR POR... SE ORDENA POR".  
   
  Cada una de las cláusulas de SQL está representada por un objeto StringBuilder. Además, realiza un seguimiento de si se ha especificado Distinct y si la instrucción se encuentra en el nivel más alto. Si la instrucción no se encuentra en el nivel más alto, la cláusula ORDER BY se omite, a menos que la instrucción también tenga una cláusula TOP.  
   
@@ -212,13 +212,13 @@ private bool IsParentAJoin{get}
 ### <a name="input-alias-redirecting"></a>Redirección de alias de entrada  
  La redirección de los alias de entrada se logra con la tabla de símbolos.  
   
- Para explicar la redirección de alias de entrada, consulte el primer ejemplo de [generar SQL de árboles de comandos - prácticas recomendadas](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).  En él, "a" necesita redirigirse a "b" en la proyección.  
+ Para explicar la redirección de alias de entrada, consulte el primer ejemplo de [generar SQL de árboles de comandos: procedimientos recomendados](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).  En él, "a" necesita redirigirse a "b" en la proyección.  
   
  Cuando se crea un objeto SqlSelectStatement, la extensión que representa la entrada al nodo se coloca en la propiedad From del objeto SqlSelectStatement. Se crea un objeto Symbol (<symbol_b>) basado en el nombre del enlace de entrada ("b") para representar esa extensión y se anexa "AS" + <symbol_b> a la cláusula From.  El símbolo también se agrega a la propiedad FromExtents.  
   
  El símbolo también se agrega a la tabla de símbolos para vincularle el nombre del enlace de entrada ("b", <symbol_b>).  
   
- Si un nodo posterior vuelve a utilizar esa instrucción SqlSelectStatement, agrega una entrada a la tabla de símbolos para vincular su nombre de enlace de entrada a ese símbolo. En nuestro ejemplo, podría utilizar la instrucción SqlSelectStatement y agregue la expresión DbProjectExpression con el nombre de enlace de entrada de "a" ("a", \< symbol_b >) a la tabla.  
+ Si un nodo posterior vuelve a utilizar esa instrucción SqlSelectStatement, agrega una entrada a la tabla de símbolos para vincular su nombre de enlace de entrada a ese símbolo. En nuestro ejemplo, podría volver a usar la instrucción SqlSelectStatement y agregue la expresión DbProjectExpression con el nombre de enlace de entrada de "a" ("a", \< symbol_b >) a la tabla.  
   
  Cuando las expresiones hacen referencia al nombre de enlace de entrada del nodo que está reutilizando la instrucción SqlSelectStatement, esa referencia se resuelve usando la tabla de símbolos como el símbolo redirigido correcto. Cuando "a" de "a.x" se resuelva al visitar la expresión DbVariableReferenceExpression que representa "a", lo hará como el objeto Symbol <symbol_b>.  
   
@@ -324,7 +324,7 @@ ORDER BY sk1, sk2, ...
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>  
 ```  
   
- Donde \<leftSqlSelectStatement > y \<rightSqlSelectStatement > son Sqlselectstatement obtenidas visitando cada una de las entradas, y \<setOp > es la operación correspondiente (UNION ALL, por ejemplo).  
+ Donde \<leftSqlSelectStatement > y \<rightSqlSelectStatement > son instrucciones Sqlselectstatement obtenidas visitando cada una de las entradas, y \<setOp > es la operación correspondiente (UNION ALL, por ejemplo).  
   
 ### <a name="dbscanexpression"></a>DbScanExpression  
  Si se visita en un contexto de combinación (como una entrada a una combinación que representa un elemento secundario izquierdo de otra combinación), la expresión DbScanExpression devuelve un objeto SqlBuilder con el SQL de destino del correspondiente destino, que puede ser una consulta de definición, una tabla o una vista. De lo contrario, se crea una instrucción SqlSelectStatement con el campo FROM establecido para corresponderse con el destino correspondiente.  

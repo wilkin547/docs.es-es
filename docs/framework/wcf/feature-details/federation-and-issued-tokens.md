@@ -6,15 +6,15 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: b6a5411b74b53cb5e3b18cced7fd8fc09e9a9676
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdbd5c49197b65816da9b0f2c87d97afb893d79f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491582"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420215"
 ---
 # <a name="federation-and-issued-tokens"></a>Federación y tokens emitidos
-Con Windows Communication Foundation (WCF), puede crear a clientes que se comuniquen de forma segura con servicios que implementan las especificaciones de WS-Federation y WS-Trust. Las especificaciones utilizan XML, SOAP y lenguaje de descripción de servicios Web (WSDL) para proporcionar mecanismos que habilitan la autenticación y autorización en los diferentes dominios de confianza.  
+Con Windows Communication Foundation (WCF), puede crear a clientes que se comunican de forma segura con servicios que implementan las especificaciones de WS-Federation y WS-Trust. Las especificaciones utilizan XML, SOAP y lenguaje de descripción de servicios Web (WSDL) para proporcionar mecanismos que habilitan la autenticación y autorización en los diferentes dominios de confianza.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Federación](../../../../docs/framework/wcf/feature-details/federation.md)  
@@ -64,4 +64,4 @@ Con Windows Communication Foundation (WCF), puede crear a clientes que se comuni
 ## <a name="see-also"></a>Vea también  
  [Autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [Tokens personalizados](../../../../docs/framework/wcf/extending/custom-tokens.md)  
- [Modelo de seguridad de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

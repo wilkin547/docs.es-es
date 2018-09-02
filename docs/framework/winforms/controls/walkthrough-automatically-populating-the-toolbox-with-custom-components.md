@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: d446ab84cfe135e56483b8b309b696f7f15044fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 488d51e748ea17b09e61b982db7abadc34f8e311
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540051"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442803"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados
-Si los componentes están definidos en un proyecto de la solución actualmente abierta, estas aparecerán automáticamente en el **cuadro de herramientas**, sin ninguna acción necesaria por parte del usuario. Puede rellenar manualmente el **cuadro de herramientas** con componentes personalizados mediante el uso de la [elegir Toolbox Items Dialog Box (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), pero la **cuadro de herramientas** tiene en cuenta de elementos de la solución generar resultados con todas las características siguientes:  
+Si los componentes están definidos por un proyecto en la solución actualmente abierta, estas aparecerán automáticamente en el **cuadro de herramientas**, con ninguna acción requerida por el usuario. Puede rellenar manualmente el **cuadro de herramientas** con componentes personalizados mediante el uso de la [elegir elementos de cuadro de diálogo) (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), pero la **cuadro de herramientas** tiene en cuenta de elementos de la solución de resultados de la compilación con las siguientes características:  
   
 -   Implementa <xref:System.ComponentModel.IComponent>;  
   
@@ -23,42 +23,40 @@ Si los componentes están definidos en un proyecto de la solución actualmente a
 -   No tiene <xref:System.ComponentModel.DesignTimeVisibleAttribute> establecido en `false`.  
   
 > [!NOTE]
->  El **cuadro de herramientas** no sigue las cadenas de referencia, por lo que no se mostrarán los elementos que no se compilan en un proyecto de la solución.  
+>  El **cuadro de herramientas** no sigue las cadenas de referencia, por lo que no mostrará los elementos que no se compilan en un proyecto de la solución.  
   
  Este tutorial muestra cómo un componente personalizado aparece automáticamente en el **cuadro de herramientas** una vez que se basa el componente. Las tareas ilustradas en este tutorial incluyen:  
   
--   Crear un proyecto de formularios Windows Forms.  
+-   Crear un proyecto de Windows Forms.  
   
--   Crear un componente personalizado.  
+-   Creación de un componente personalizado.  
   
--   Crear una instancia de un componente personalizado.  
+-   Creación de una instancia de un componente personalizado.  
   
--   Descargar y volver a cargar un componente personalizado.  
+-   Descarga y carga un componente personalizado.  
   
  Cuando haya terminado, verá que el **cuadro de herramientas** se rellena con un componente que ha creado.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-project"></a>Crear el proyecto  
  El primer paso es crear el proyecto y configurar el formulario.  
   
 #### <a name="to-create-the-project"></a>Para crear el proyecto  
   
-1.  Cree un proyecto de aplicación basada en Windows llamado `ToolboxExample`.  
-  
-     Para más información, consulte [Cómo: Crear un proyecto de aplicación para Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Cree un proyecto de aplicación basada en Windows llamado `ToolboxExample` (**archivo** > **New** > **proyecto**  >  **Visual C#** o **Visual Basic** > **escritorio clásico de** > **aplicación de Windows Forms**).  
   
 2.  Agregue un nuevo componente al proyecto. Llámelo `DemoComponent`.  
   
-     Para obtener más información, consulte [NIB: Cómo: agregar nuevos elementos de proyecto](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
+     Para obtener más información, consulte [NIB: Cómo: agregar nuevos elementos de proyecto](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
   
 3.  Compile el proyecto.  
   
-4.  Desde el **herramientas** menú, haga clic en el **opciones** elemento. Haga clic en **General** en el **Diseñador de Windows Forms** de elemento y asegúrese de que el **AutoToolboxPopulate** opción está establecida en **True**.  
+4.  Desde el **herramientas** menú, haga clic en el **opciones** elemento. Haga clic en **General** bajo el **Diseñador de Windows Forms** de elementos y asegúrese de que el **AutoToolboxPopulate** opción está establecida en **True**.  
   
-## <a name="creating-an-instance-of-a-custom-component"></a>Crear una instancia de un componente personalizado  
- El siguiente paso es crear una instancia del componente personalizado en el formulario. Dado que la **cuadro de herramientas** automáticamente las cuentas para el componente nuevo, esto es tan fácil como crear cualquier otro componente o control.  
+## <a name="creating-an-instance-of-a-custom-component"></a>Creación de una instancia de un componente personalizado  
+ El siguiente paso es crear una instancia del componente personalizado en el formulario. Dado que el **cuadro de herramientas** automáticamente cuentas para el componente nuevo, esto es tan fácil como crear cualquier otro componente o control.  
   
 #### <a name="to-create-an-instance-of-a-custom-component"></a>Para crear una instancia de un componente personalizado  
   
@@ -66,37 +64,37 @@ Si los componentes están definidos en un proyecto de la solución actualmente a
   
 2.  En el **cuadro de herramientas**, haga clic en la nueva ficha denominada **Componentes ToolboxExample**.  
   
-     Una vez que haga clic en la pestaña, verá **DemoComponent**.  
+     Al hacer clic en la pestaña, verá **DemoComponent**.  
   
     > [!NOTE]
-    >  Por motivos de rendimiento, los componentes en el área rellena automáticamente de la **cuadro de herramientas** no se muestran los mapas de bits personalizados y el <xref:System.Drawing.ToolboxBitmapAttribute> no se admite. Para mostrar un icono para un componente personalizado en el **cuadro de herramientas**, use la **elegir elementos del cuadro de herramientas** cuadro de diálogo para cargar el componente.  
+    >  Por motivos de rendimiento, los componentes en el área rellena automáticamente de la **cuadro de herramientas** no mostrar mapas de bits personalizados y el <xref:System.Drawing.ToolboxBitmapAttribute> no se admite. Para mostrar un icono para un componente personalizado en el **cuadro de herramientas**, utilice el **elegir elementos del cuadro de herramientas** cuadro de diálogo para cargar el componente.  
   
 3.  Arrastre el componente al formulario.  
   
      Se crea una instancia del componente y se agrega a la **Bandeja de componentes**.  
   
-## <a name="unloading-and-reloading-a-custom-component"></a>Descargar y volver a cargar un componente personalizado  
- El **cuadro de herramientas** tiene en cuenta los componentes en cada uno de ellos cargado el proyecto y, cuando se descarga un proyecto, quita las referencias a los componentes del proyecto.  
+## <a name="unloading-and-reloading-a-custom-component"></a>Descarga y carga un componente personalizado  
+ El **cuadro de herramientas** tiene en cuenta los componentes en cada carga de proyecto y, cuando se descarga un proyecto, se quita las referencias a componentes del proyecto.  
   
 #### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>Para experimentar con el efecto en el cuadro de herramientas de descarga y carga de componentes  
   
 1.  Descargue el proyecto de la solución.  
   
-     Para obtener más información acerca de cómo descargar los proyectos, vea [NIB: Cómo: descargar y volver a cargar proyectos](http://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Si se pide que guarde, elija **Sí**.  
+     Para obtener más información sobre cómo descargar los proyectos, vea [NIB: Cómo: descargar y recargar proyectos](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Si se le solicite guardar, elija **Sí**.  
   
-2.  Agregue un nuevo **aplicación de Windows** proyecto a la solución. Abra el formulario en el **diseñador**.  
+2.  Agregue un nuevo **aplicación Windows** proyecto a la solución. Abra el formulario en el **diseñador**.  
   
-     El **Componentes ToolboxExample** ficha desde el proyecto anterior es ahora desaparecido.  
+     El **Componentes ToolboxExample** ficha desde el proyecto anterior es ahora han desaparecido.  
   
 3.  Volver a cargar el `ToolboxExample` proyecto.  
   
      El **Componentes ToolboxExample** pestaña ahora vuelve a aparecer.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- En este tutorial se muestra que la **cuadro de herramientas** tiene en cuenta los componentes de un proyecto, pero la **cuadro de herramientas** es también tiene en cuenta los controles. Experimentar con sus propios controles personalizados agregando y quitando proyectos de control de la solución.  
+ En este tutorial se muestra que el **cuadro de herramientas** tiene en cuenta los componentes de un proyecto, pero la **cuadro de herramientas** es también tiene en cuenta los controles. Experimentar con sus propios controles personalizados mediante la adición y eliminación de proyectos de control de la solución.  
   
 ## <a name="see-also"></a>Vea también  
- [General, Diseñador de Windows Forms, cuadro de diálogo Opciones](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
- [Cómo: Manipular las fichas del cuadro de herramientas](http://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
- [Elegir elementos del cuadro de herramientas (Cuadro de diálogo): Visual Studio](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
+ [General, Diseñador de formularios de Windows, cuadro de diálogo Opciones](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Cómo: Manipular las fichas del cuadro de herramientas](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
+ [Elegir elementos del cuadro de herramientas (Cuadro de diálogo): Visual Studio](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
  [Insertar controles en Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

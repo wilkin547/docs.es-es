@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: dfea0b0eb4b133308f10b523a659cc00f87252b8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 596cab4494ef3ba200fd0a046d7935f648fb7c4f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755082"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422193"
 ---
 # <a name="ltremovegt"></a>&lt;remove&gt;
-Quita el controlador de token de seguridad especificado de la colección de controlador de token.  
+Quita el controlador de token de seguridad especificado de la colección de controladores de token.  
   
  \<system.identityModel >  
 \<identityConfiguration >  
@@ -39,7 +39,7 @@ Quita el controlador de token de seguridad especificado de la colección de cont
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|type|El nombre del tipo CLR del controlador de token va a quitar. Para obtener más información sobre cómo especificar el `type` de atributo, vea [las referencias de tipos personalizado](http://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Requerido.|  
+|type|El nombre del tipo CLR del controlador de token que se va a quitar. Para obtener más información sobre cómo especificar el `type` atributo, vea [referencias de tipos personalizado](https://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Requerido.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  
@@ -48,10 +48,10 @@ Quita el controlador de token de seguridad especificado de la colección de cont
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Especifica una colección de controladores de tokens de seguridad que están registrados con el punto de conexión.|  
+|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Especifica una colección de controladores de token de seguridad que están registrados con el punto de conexión.|  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente XML muestra el uso de la `<add>` y `<remove>` elementos para reemplazar el controlador de token de sesión de forma predeterminada con un controlador de token de sesión personalizadas. El XML procede de la `ClaimsAwareWebFarm` ejemplo.  
+ El siguiente XML muestra el uso de la `<add>` y `<remove>` elementos que se va a reemplazar el controlador de token de sesión de forma predeterminada con un controlador de token de sesión personalizada. El XML procede de la `ClaimsAwareWebFarm` ejemplo.  
   
 ```xml  
 <securityTokenHandlers>  

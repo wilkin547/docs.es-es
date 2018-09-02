@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - client area [Visual Basic], printing
 ms.assetid: c06c9c0e-bc07-48cd-9596-e29a2ff96236
-ms.openlocfilehash: 361db89f0880a03273aac7fc36b5c5faa825486f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2f13d1ec151a5fd1967b522a601e0e19de04cbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583996"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419289"
 ---
 # <a name="how-to-print-the-client-area-of-a-form-visual-basic"></a>Cómo: Imprimir el área de cliente de un formulario (Visual Basic)
 El componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> permite imprimir rápidamente una imagen de un formulario sin usar un componente <xref:System.Drawing.Printing.PrintDocument> . El siguiente procedimiento muestra cómo imprimir solo el área de cliente de un formulario, sin la barra de título, los bordes ni las barras de desplazamiento.  
   
- Los controles PowerPack ya no están incluidos en Visual Studio, pero puede descargarlos desde el [Centro de descarga](http://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Los controles PowerPack ya no están incluidos en Visual Studio, pero puede descargarlos desde el [centro de descarga de](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ### <a name="to-print-the-client-area-of-a-form"></a>Para imprimir el área de cliente de un formulario  
   

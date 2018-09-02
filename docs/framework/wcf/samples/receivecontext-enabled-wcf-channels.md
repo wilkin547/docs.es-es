@@ -2,12 +2,12 @@
 title: Canales de WCF habilitados para ReceiveContext
 ms.date: 03/30/2017
 ms.assetid: d990d119-7321-4b8c-852b-10256f59f9b0
-ms.openlocfilehash: 3e5ac914ae4d0c97ed617ea4a8d5a893ec740179
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7f80d0874606129876fbf7dfa30c0327680b922
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502939"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442751"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>Canales de WCF habilitados para ReceiveContext
 En este ejemplo se muestra la utilidad de los canales WCF habilitados para <xref:System.ServiceModel.Channels.ReceiveContext>. En el ejemplo se implementa un servicio para encontrar el producto de dos números utilizando un canal de NetMSMQ.  
@@ -19,7 +19,7 @@ En este ejemplo se muestra la utilidad de los canales WCF habilitados para <xref
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio:  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\ReceiveContextProductGenerator`  
   
@@ -29,15 +29,15 @@ En este ejemplo se muestra la utilidad de los canales WCF habilitados para <xref
   
     1.  Para instalar MSMQ en [!INCLUDE[lserver](../../../../includes/lserver-md.md)]:  
   
-        1.  En **el administrador del servidor**, haga clic en **características**.  
+        1.  En **administrador del servidor**, haga clic en **características**.  
   
         2.  En el panel derecho de **resumen de características**, haga clic en **agregar características**.  
   
         3.  En la ventana resultante, expanda **Message Queue Server**.  
   
-        4.  Expanda **servicios puesta en cola de mensajes**.  
+        4.  Expanda **servicios de cola de mensajes**.  
   
-        5.  Haga clic en **integración de servicios de directorio** (para los equipos unidos a un dominio) y, a continuación, haga clic en **compatibilidad con HTTP**.  
+        5.  Haga clic en **integración de servicios de directorio** (para equipos unidos a un dominio) y, a continuación, haga clic en **compatibilidad con HTTP**.  
   
         6.  Haga clic en **siguiente**y, a continuación, haga clic en **instalar**.  
   
@@ -45,9 +45,9 @@ En este ejemplo se muestra la utilidad de los canales WCF habilitados para <xref
   
         1.  Abra **Panel de Control**.  
   
-        2.  Haga clic en **programas** y, a continuación, en **programas y características**, haga clic en **activar o desactivar las características de Windows**.  
+        2.  Haga clic en **programas** y, a continuación, en **programas y características**, haga clic en **activar y desactivar las características de Windows**.  
   
-        3.  Expanda **Microsoft Message Queue (MSMQ) Server**, expanda **Microsoft Message Queue (MSMQ) Server Core**y, a continuación, active las casillas de verificación de las siguientes características de Message Queue Server instalar:  
+        3.  Expanda **Microsoft Message Queue (MSMQ) Server**, expanda **Microsoft Message Queue (MSMQ) Server Core**y, a continuación, seleccione las casillas de las siguientes características instalar Message Queue Server:  
   
             -   Message Queuing Server  
   

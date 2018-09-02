@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: b05cd427bc1b3b13b68fe7c38a798c8c2baa0af1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb4910e48af58463c5c851173f8e3caf4594cc3a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365818"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424235"
 ---
 # <a name="standard-query-operator-translation"></a>Traslación del operador de consulta estándar
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convierte los operadores de consulta estándar en comandos SQL. El procesador de consultas de la base de datos determina la semántica de ejecución de la conversión a SQL.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convierte los operadores de consulta estándar en comandos SQL. El procesador de consultas de la base de datos determina la semántica de ejecución de la traducción de SQL.  
   
- Operadores de consulta estándar se definen en *secuencias*. Una secuencia es *ordenados* y se basa en la identidad de referencia de cada elemento de la secuencia. Para obtener más información, consulte [información general sobre operadores de consulta estándar](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ Operadores de consulta estándar se definen en *secuencias*. Es una secuencia *ordenados* y se basa en la identidad de referencia para cada elemento de la secuencia. Para obtener más información, consulte [Standard Query Operators Overview](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
- SQL trata principalmente con *desordenados conjuntos de valores*. La ordenación es normalmente una operación de procesamiento posterior declarada de forma explícita que se aplica al resultado final de una consulta en lugar de a los resultados intermedios. La identidad se define con valores. Por este motivo, se entienden que las consultas SQL tratan con conjuntos múltiples (*bolsas*) en lugar de *establece*.  
+ SQL trata principalmente con *sin ordenar conjuntos de valores*. La ordenación es normalmente una operación de procesamiento posterior declarada de forma explícita que se aplica al resultado final de una consulta en lugar de a los resultados intermedios. La identidad se define con valores. Por este motivo, se entienden las consultas SQL tratan con conjuntos múltiples (*bolsas*) en lugar de *establece*.  
   
  En los párrafos siguientes se describen las diferencias entre los operadores de consulta estándar y su conversión a SQL para el proveedor de SQL Server de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
@@ -37,9 +37,9 @@ ms.locfileid: "33365818"
  <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> métodos están bien definidos solo en *conjuntos ordenados*. La semántica para los conjuntos no ordenados o conjuntos múltiples no está definida.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se utilizan en consultas en SQL Server 2000. Para obtener más información, consulte la entrada "Skip y Take excepciones en SQL Server 2000" en [solución de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se utilizan en consultas en SQL Server 2000. Para obtener más información, vea la entrada "Skip y Take excepciones en SQL Server 2000" en [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
- Debido a limitaciones de ordenación en SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] intenta trasladar la ordenación del argumento de estos métodos para el resultado del método. Por ejemplo, considere la siguiente consulta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
+ Debido a las limitaciones de ordenación en SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] intenta trasladar la ordenación del argumento de estos métodos para el resultado del método. Por ejemplo, considere la siguiente consulta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
   
  [!code-csharp[DLinqSQOTranslation#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#1)]
  [!code-vb[DLinqSQOTranslation#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#1)]  
@@ -170,7 +170,7 @@ ORDER BY [t0].[CustomerID]
   
 -   `Sum`  
   
- Para obtener más información sobre la asignación a estos tipos de fecha y hora de SQL Server, vea [asignación de tipos de CLR de SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ Para obtener más información acerca de la asignación a estos tipos de fecha y hora de SQL Server, vea [asignación de tipos SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
 ## <a name="sql-server-2005-support"></a>Compatibilidad con SQL Server 2005  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite las características de SQL Server 2005 siguientes:  
@@ -190,20 +190,20 @@ ORDER BY [t0].[CustomerID]
  `Cross Apply` y `Outer Apply` se generan para la navegación de relaciones. El conjunto de consultas para el que son posibles tales operaciones de reescritura no está bien definido. Por esta razón, el conjunto mínimo de consultas que se admite para [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] es el conjunto que no implica la navegación de relaciones.  
   
 ### <a name="text--ntext"></a>text / ntext  
- Tipos de datos `text`  /  `ntext` no se puede usar en determinadas operaciones de consulta en `varchar(max)`  /  `nvarchar(max)`, que son compatibles con [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)].  
+ Tipos de datos `text`  /  `ntext` no puede utilizarse en determinadas operaciones de consulta en `varchar(max)`  /  `nvarchar(max)`, que son compatibles con [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)].  
   
  Esta limitación no tiene ninguna resolución. Concretamente, no puede utilizar `Distinct()` en ningún resultado que contenga miembros que se asignen a columnas `text` o `ntext`.  
   
 ### <a name="behavior-triggered-by-nested-queries"></a>Comportamiento desencadenado por las consultas anidadas  
- [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (hasta SP4) enlazador tiene algunas peculiaridades que son desencadenadas por las consultas anidadas. El conjunto de consultas SQL que las desencadenan no está bien definido. Por esta razón, no se puede definir el conjunto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] las consultas que pueden producir excepciones de SQL Server.  
+ [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (hasta SP4) enlazador tiene algunas peculiaridades que son desencadenadas por las consultas anidadas. El conjunto de consultas SQL que las desencadenan no está bien definido. Por este motivo, no se puede definir el conjunto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] las consultas que pueden producir excepciones de SQL Server.  
   
 ### <a name="skip-and-take-operators"></a>Operadores Skip y Take  
- <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se utilizan en consultas en [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Para obtener más información, consulte la entrada "Skip y Take excepciones en SQL Server 2000" en [solución de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+ <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se utilizan en consultas en [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Para obtener más información, vea la entrada "Skip y Take excepciones en SQL Server 2000" en [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
 ## <a name="object-materialization"></a>Materialización de objetos  
  La materialización crea objetos CLR a partir de las filas devueltas por una o más consultas SQL.  
   
--   Las llamadas siguientes son *ejecuta localmente* como parte de la materialización:  
+-   Las llamadas siguientes son *ejecutan localmente* como parte de la materialización:  
   
     -   Constructores  
   
@@ -211,13 +211,13 @@ ORDER BY [t0].[CustomerID]
   
     -   Conversiones de tipos en las proyecciones  
   
--   Métodos que siguen la <xref:System.Linq.Enumerable.AsEnumerable%2A> método están *ejecuta localmente*. Este método no produce la ejecución inmediata.  
+-   Los métodos que siguen el <xref:System.Linq.Enumerable.AsEnumerable%2A> son el método *ejecutan localmente*. Este método no produce la ejecución inmediata.  
   
 -   Puede utilizar `struct` como tipo de valor devuelto en el resultado de una consulta o como un miembro del tipo de resultado. Las entidades deben ser clases. Los tipos anónimos se materializan como instancias de clase, pero los structs con nombre (no entidades) se pueden utilizar en la proyección.  
   
 -   Un miembro del tipo de valor devuelto en el resultado de una consulta puede ser de tipo <xref:System.Linq.IQueryable%601>. Se materializa como una colección local.  
   
--   Los métodos siguientes provocan la *materialización inmediata* de la secuencia que se aplican los métodos para:  
+-   Los métodos siguientes provocan la *materialización inmediata* de la secuencia que se aplican a los métodos para:  
   
     -   <xref:System.Linq.Enumerable.ToList%2A>  
   

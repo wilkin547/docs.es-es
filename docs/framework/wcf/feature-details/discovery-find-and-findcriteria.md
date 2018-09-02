@@ -2,15 +2,15 @@
 title: Búsqueda de detección y FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2f679879bd3a32e770aa934f715dd70b4a2b5f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495325"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423328"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Búsqueda de detección y FindCriteria
-La operación de búsqueda de detección la inicia un cliente para detectar uno o más servicios, y es una de las acciones principales en detección. Al realizar una búsqueda, se envía un mensaje de sondeo de WS-Discovery a través de la red. Los servicios que coinciden con los criterios especificados responden con mensajes ProbeMatch de WS-Discovery. Para obtener más información acerca de los mensajes de detección, consulte el [especificación de WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
+La operación de búsqueda de detección la inicia un cliente para detectar uno o más servicios, y es una de las acciones principales en detección. Al realizar una búsqueda, se envía un mensaje de sondeo de WS-Discovery a través de la red. Los servicios que coinciden con los criterios especificados responden con mensajes ProbeMatch de WS-Discovery. Para obtener más información acerca de los mensajes de detección, consulte el [especificación WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
  La clase <xref:System.ServiceModel.Discovery.DiscoveryClient> proporciona el mecanismo para realizar las operaciones de búsqueda y facilita la realización de operaciones del cliente de detección. Contiene un método <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, que realiza una búsqueda sincrónica (con bloqueo), y un método <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A>, que inicia una búsqueda asincrónica sin bloqueo. Ambos métodos toman un parámetro <xref:System.ServiceModel.Discovery.FindCriteria> y proporcionan resultados al usuario a través de un objeto <xref:System.ServiceModel.Discovery.FindResponse>.  

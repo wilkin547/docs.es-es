@@ -4,12 +4,12 @@ description: Este tema le guía en la creación de una solución .NET Core que i
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314703"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457048"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Creación de una solución completa de .NET Core en macOS con Visual Studio para Mac
 
@@ -95,7 +95,7 @@ Las pruebas unitarias proporcionan pruebas de software automatizadas durante el 
            public void IgnoreCasing()
            {
                var wordCount = WordCount.GetWordCount("Jack", "Jack jack");
-   
+
                Assert.NotEqual(2, wordCount);
            }
        }
@@ -117,7 +117,7 @@ Las pruebas unitarias proporcionan pruebas de software automatizadas durante el 
    ![Icono de acoplamiento del panel Pruebas unitarias](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. Haga clic en el botón **Ejecutar todas**.
-   
+
    La prueba no se supera, que es el resultado correcto. El método de prueba afirma que dos instancias de `inputString`, "Jack", no se devuelve de la cadena "Jack jack", proporciona al método `GetWordCount`. Puesto que la distinción de mayúsculas y minúsculas se ha factorizado en el método `GetWordCount`, se devuelven dos instancias. La aserción de que 2 *no es igual a* 2 produce un error. Este es el resultado correcto, y la lógica de nuestra prueba es buena.
 
    ![Errores de pruebas](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
@@ -135,8 +135,8 @@ Las pruebas unitarias proporcionan pruebas de software automatizadas durante el 
    [InlineData(0, "Ting", "Does not appear in the string.")]
    [InlineData(1, "Ting", "Ting appears once.")]
    [InlineData(2, "Ting", "Ting appears twice with Ting.")]
-   public void CountInstancesCorrectly(int count, 
-                                       string searchWord, 
+   public void CountInstancesCorrectly(int count,
+                                       string searchWord,
                                        string inputString)
    {
        Assert.NotEqual(count, WordCount.GetWordCount(searchWord,
@@ -145,7 +145,7 @@ Las pruebas unitarias proporcionan pruebas de software automatizadas durante el 
    ```
 
    El método `CountInstancesCorrectly` comprueba que el método `GetWordCount` cuenta correctamente. El método `InlineData` proporciona un recuento, una palabra de búsqueda y una cadena de entrada para comprobar. El método de prueba se ejecuta una vez por cada línea de datos. Una vez más, observe que está afirmando un error primero mediante `Assert.NotEqual`, aunque sabe que los recuentos de los datos son correctos y que los valores coincidirán con los recuentos devueltos por el método `GetWordCount`. Realizar el paso de no superar la prueba a propósito podría parecer una pérdida de tiempo al principio, pero comprobar la lógica de la prueba de esta manera es una comprobación importante en la lógica de las pruebas. Si se encuentra con un método de prueba que se supera cuando espera que no lo haga, habrá encontrado un error en la lógica de la prueba. Merece la pena el esfuerzo de realizar este paso cada vez que crea un método de prueba.
-   
+
 1. Guarde el archivo y vuelva a ejecutar las pruebas. La prueba de distinción de mayúsculas y minúsculas se supera pero las tres pruebas de recuento no. Esto es exactamente lo que espera que ocurra.
 
    ![Errores de pruebas](./media/using-on-mac-vs-full-solution/vsmacfull11.png)
@@ -192,4 +192,4 @@ Las pruebas unitarias proporcionan pruebas de software automatizadas durante el 
 
 ## <a name="see-also"></a>Vea también
 
-[Notas de la versión de Visual Studio 2017 para Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)
+* [Notas de la versión de Visual Studio 2017 para Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: c785cc69289440918f45974c711ae0b112130c5d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762415"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423708"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Realizar una consulta XPath en un objeto DataSet
-La relación entre un sincronizada <xref:System.Data.DataSet> y <xref:System.Xml.XmlDataDocument> le permite hacer uso de XML servicios, como las consultas XML Path Language (XPath), que tienen acceso a la **XmlDataDocument** y puede realizar ciertas funciones más cómodamente que si tuviera acceso la **conjunto de datos** directamente. Por ejemplo, en lugar de usar el **seleccione** método de un <xref:System.Data.DataTable> para navegar por relaciones con otras tablas de un **conjunto de datos**, puede realizar una consulta XPath en un **XmlDataDocument**  que está sincronizado con el **conjunto de datos**, para obtener una lista de elementos XML en forma de un <xref:System.Xml.XmlNodeList>. Los nodos de la **XmlNodeList**, convertidos en <xref:System.Xml.XmlElement> nodos, a continuación, puede pasarse a la **GetRowFromElement** método de la **XmlDataDocument**para devolver la búsqueda de coincidencias <xref:System.Data.DataRow> referencias a las filas de la tabla en sincronizada **conjunto de datos**.  
+La relación entre un sincronizada <xref:System.Data.DataSet> y <xref:System.Xml.XmlDataDocument> le permite hacer uso de XML servicios, como la consulta XML Path Language (XPath), que tienen acceso a la **XmlDataDocument** y puede realizar ciertas funciones una manera más conveniente que el acceso a la **DataSet** directamente. Por ejemplo, en lugar de usar el **seleccione** método de un <xref:System.Data.DataTable> para navegar por relaciones con otras tablas en un **DataSet**, puede realizar una consulta XPath en un **XmlDataDocument**  que está sincronizada con la **DataSet**, para obtener una lista de elementos XML en forma de un <xref:System.Xml.XmlNodeList>. Los nodos en el **XmlNodeList**, convierta como <xref:System.Xml.XmlElement> nodos, a continuación, se puede pasar a la **GetRowFromElement** método de la **XmlDataDocument**para devolver la coincidencia <xref:System.Data.DataRow> referencias a las filas de la tabla en sincronizado **DataSet**.  
   
- Por ejemplo, en el siguiente ejemplo de código se realiza una consulta "secundaria" de XPath. El **conjunto de datos** se rellena con tres tablas: **clientes**, **pedidos**, y **OrderDetails**. En el ejemplo, primero se crea una relación de elementos primarios y secundarios entre el **clientes** y **pedidos** tablas y entre el **pedidos** y **OrderDetails** tablas. A continuación, se realiza una consulta XPath para devolver una **XmlNodeList** de **clientes** nodos donde un secundario **OrderDetails** nodo tiene un **ProductID**nodo con el valor 43. En esencia, el ejemplo utiliza la consulta XPath para determinar qué clientes han pedido el producto que tiene el **ProductID** es 43.  
+ Por ejemplo, en el siguiente ejemplo de código se realiza una consulta "secundaria" de XPath. El **DataSet** se rellena con tres tablas: **clientes**, **pedidos**, y **OrderDetails**. En el ejemplo, primero se crea una relación de elementos primarios y secundarios entre los **clientes** y **pedidos** tablas y entre el **pedidos** y **OrderDetails** tablas. A continuación, se realiza una consulta XPath para devolver una **XmlNodeList** de **clientes** nodos donde un secundario **OrderDetails** nodo tiene un **ProductID**nodo con el valor 43. En esencia, el ejemplo utiliza la consulta XPath para determinar qué clientes han pedido el producto que tiene el **ProductID** 43.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -103,4 +103,4 @@ foreach (XmlNode xmlNode in nodeList)
   
 ## <a name="see-also"></a>Vea también  
  [Sincronización de DataSet y XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: c43d5ad9203afad67601d9e36447db7c49a5a98e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1189da9fa0b76ede3261cf6da5305a09147bba5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539405"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452991"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Funcionalidad de arrastrar y colocar en formularios Windows Forms
-Windows Forms incluye un conjunto de métodos, eventos y clases que implementan el comportamiento de arrastrar y colocar. En este tema se proporciona una introducción a la compatibilidad para arrastrar y colocar en Windows Forms.  Consulte también [operaciones de arrastrar y colocar](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
+Windows Forms incluye un conjunto de métodos, eventos y clases que implementan el comportamiento de arrastrar y colocar. En este tema se proporciona una introducción a la compatibilidad para arrastrar y colocar en Windows Forms.  Consulte también [operaciones de arrastrar y colocar y la compatibilidad con el Portapapeles](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
   
 ## <a name="performing-drag-and-drop-operations"></a>Realizar operaciones de arrastrar y colocar  
  Para realizar una operación de arrastrar y colocar, use el método <xref:System.Windows.Forms.Control.DoDragDrop%2A> de la clase <xref:System.Windows.Forms.Control>. Para obtener más información acerca de cómo se realiza una operación de arrastrar y colocar, consulte <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Para obtener el rectángulo sobre el cual debe arrastrarse el puntero del mouse antes de que comience una operación de arrastrar y colocar, use la propiedad <xref:System.Windows.Forms.SystemInformation.DragSize%2A> de la clase <xref:System.Windows.Forms.SystemInformation>.  
