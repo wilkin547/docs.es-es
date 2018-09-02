@@ -2,12 +2,12 @@
 title: 'Introducción a F # en Visual Studio'
 description: 'Obtenga información sobre cómo usar F # con Visual Studio.'
 ms.date: 07/03/2018
-ms.openlocfilehash: a4a12a322d7e5144f2d720541f6ef65ca12737dd
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3dac8466501338873aeb308ceac9274a7934a8a9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874720"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415739"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Introducción a F # en Visual Studio
 
@@ -47,7 +47,7 @@ Se encuentra en esta función que llamamos el `square` función con un argumento
 
 ## <a name="running-your-code"></a>Ejecución del código
 
-Puede ejecutar el código y ver resultados presionando **ctrl-f5**.  Esto ejecutará el programa sin depuración y le permite ver los resultados.  Como alternativa, puede elegir el **depurar** en Visual Studio de elemento de menú de nivel superior y elija **iniciar sin depurar**.
+Puede ejecutar el código y ver resultados presionando **Ctrl**+**F5**.  Esto ejecuta el programa sin depurarlo y le permite ver los resultados.  Como alternativa, puede elegir el **depurar** en Visual Studio de elemento de menú de nivel superior y elija **iniciar sin depurar**.
 
 Ahora debería ver lo siguiente que se imprimen en la ventana de consola que apareció Visual Studio:
 
@@ -62,4 +62,8 @@ Ahora debería ver lo siguiente que se imprimen en la ventana de consola que apa
 Si no lo ha hecho ya, consulte el [paseo por F #](../tour.md), donde abordan algunas de las características principales del lenguaje F #.  Se ofrecerle una visión general de algunas de las capacidades de F # y se proporcionan ejemplos de código suficiente que puede copiar en Visual Studio y ejecutar.  También hay algunos excelentes recursos externos, puede usar, exhibió en el [Guía de F #](../index.md).
 
 ## <a name="see-also"></a>Vea también
- [Paseo por F #](../tour.md) [referencia del lenguaje F #](../language-reference/index.md) [inferencia](../language-reference/type-inference.md) [símbolo y el operador de referencia](../language-reference/symbol-and-operator-reference/index.md)
+
+- [Paseo por F](../tour.md)
+- [Referencia del lenguaje F #](../language-reference/index.md)
+- [Inferencia de tipos](../language-reference/type-inference.md)
+- [Referencia de símbolos y el operador](../language-reference/symbol-and-operator-reference/index.md)

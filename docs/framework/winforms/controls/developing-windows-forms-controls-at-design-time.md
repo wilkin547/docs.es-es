@@ -9,20 +9,20 @@ helpviewer_keywords:
 - user controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-ms.openlocfilehash: 267a56cbfd9025e2e20f1468535e5544146535a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b58318a3e0e9881725d3c260251288c720fa4132
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529873"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406828"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>Desarrollar controles de formularios Windows Forms en tiempo de diseño
 Para los autores de controles, .NET Framework proporciona una gran cantidad de tecnologías de creación de controles. Los creadores ya no están limitados al diseño de controles compuestos que actúan como una colección de controles preexistentes. A través de la herencia, puede crear sus propios controles a partir de controles compuestos preexistentes o de controles de Windows Forms preexistentes. También puede diseñar sus propios controles que implementen el dibujo personalizado. Estas opciones permiten una gran flexibilidad en el diseño y la funcionalidad de la interfaz visual. Para aprovechar estas características, debe estar familiarizado con conceptos de programación basada en objetos.  
   
 > [!NOTE]
->  No es necesario tener un conocimiento exhaustivo de herencia, pero quizá le resulte útil para hacer referencia a [Fundamentos de la herencia (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+>  No es necesario tener un conocimiento exhaustivo de la herencia, pero le resultará útil para hacer referencia a [Fundamentos de la herencia (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- Si quiere crear controles personalizados para usarlos en formularios Web Forms, consulte [Desarrollar controles de servidor ASP.NET personalizados](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+ Si quiere crear controles personalizados para usarlos en formularios Web Forms, consulte [Desarrollar controles de servidor ASP.NET personalizados](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Tutorial: Crear un control compuesto con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
@@ -41,7 +41,7 @@ Para los autores de controles, .NET Framework proporciona una gran cantidad de t
  Muestra cómo usar la característica de etiquetas inteligentes en controles de Windows Forms.  
   
  [Tutorial: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute](../../../../docs/framework/winforms/controls/serializing-collections-designerserializationvisibilityattribute.md)  
- Muestra cómo utilizar el <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> atributo para serializar una colección.  
+ Se muestra cómo usar el <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> atributo para serializar una colección.  
   
  [Tutorial: Depurar controles personalizados de Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  Muestra cómo depurar el comportamiento en tiempo de diseño de un control de Windows Forms.  
@@ -59,19 +59,19 @@ Para los autores de controles, .NET Framework proporciona una gran cantidad de t
  Proporciona información general sobre el procedimiento para crear un control compuesto.  
   
  [Cómo: Heredar de controles de Windows Forms existentes](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
- Muestra cómo crear un control extendido heredando de la <xref:System.Windows.Forms.Button> clase del control.  
+ Se muestra cómo crear un control extendido al heredar de la <xref:System.Windows.Forms.Button> clase del control.  
   
  [Cómo: Heredar de la clase control](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
  Proporciona información general sobre la creación de un control extendido.  
   
  [Cómo: Alinear un control con los bordes de los formularios en tiempo de diseño](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- Muestra cómo utilizar el <xref:System.Windows.Forms.Control.Dock%2A> propiedad para alinear el control con el borde del formulario que ocupa.  
+ Se muestra cómo usar el <xref:System.Windows.Forms.Control.Dock%2A> propiedad para alinear el control con el borde del formulario que ocupa.  
   
  [Cómo: Mostrar un control en el cuadro de diálogo Seleccionar elementos del cuadro de herramientas](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  Muestra el procedimiento para instalar el control de modo que aparezca en el cuadro de diálogo **Customize Toolbox** (Personalizar cuadro de herramientas).  
   
  [Cómo: Proporcionar un mapa de bits del cuadro de herramientas para un control](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)  
- Muestra cómo utilizar el <xref:System.Drawing.ToolboxBitmapAttribute> para mostrar un icono junto al control personalizado en el **cuadro de herramientas**.  
+ Se muestra cómo usar el <xref:System.Drawing.ToolboxBitmapAttribute> para mostrar un icono junto al control personalizado en el **cuadro de herramientas**.  
   
  [Cómo: Comprobar el comportamiento de una clase UserControl en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
  Muestra cómo utilizar **UserControl Test Container** para probar el comportamiento de un control compuesto.  

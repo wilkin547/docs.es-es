@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1bc57ab45a0452d9e3a50f0ab2de786ad73204a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e8c10a680f1caffd583097b16c046729fe10b140
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458652"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415399"
 ---
-# <a name="qualifiersetget-function"></a>QualifierSet_Get (función)
+# <a name="qualifiersetget-function"></a>Función QualifierSet_Get
 Obtiene el calificador con nombre especificado.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -44,10 +44,10 @@ HRESULT QualifierSet_Get (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`   
-[in] Este parámetro no se utiliza.
+[in] Este parámetro se usa.
 
 `ptr`   
-[in] Un puntero a un [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instancia.
+[in] Un puntero a un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instancia.
 
 `wszName`   
 [in] El nombre del calificador cuyo valor se solicita.
@@ -56,31 +56,31 @@ HRESULT QualifierSet_Get (
 [in] Reservado. Este parámetro debe ser 0.
 
 `pVal`   
-[out] Cuando se realiza correctamente, el tipo correcto y el valor del calificador. Si se produce un error en la función, el `VARIANT` que señala `pVal` no se modifica. Si este parámetro es `null`, se omite el parámetro.
+[out] Cuando se realiza correctamente, el tipo correcto y el valor del calificador. Si se produce un error en la función, el `VARIANT` apunta `pVal` no se modifica. Si este parámetro es `null`, se omite el parámetro.
 
 `plFlavor`   
-[out] Un puntero a un valor largo que recibe los bits del tipo de calificador para el calificador solicitado. Si no se desea obtener información de tipo, este parámetro puede ser `null`. 
+[out] Un puntero a un valor largo que recibe los bits de tipo de calificador para el calificador solicitado. Si no se desea obtener información de tipo, este parámetro puede ser `null`. 
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, o bien puede definirlas como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un parámetro no es válido. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | El calificador especificado no existe. |
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función tuvo éxito.  |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemQualifierSet::Get](https://msdn.microsoft.com/library/aa391867(v=vs.85).aspx) método.
+Esta función contiene una llamada a la [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) método.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** WMINet_Utils.idl  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

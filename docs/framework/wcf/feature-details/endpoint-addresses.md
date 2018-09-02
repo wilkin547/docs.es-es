@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: a2815c7c63e9ba9615904028081956b138b1befa
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925483"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404572"
 ---
 # <a name="endpoint-addresses"></a>Direcciones de punto de conexión
 Cada punto de conexión tiene una dirección asociada a él, que se utiliza para ubicar e identificar el punto de conexión. Esta dirección está compuesta principalmente de un Identificador uniforme de recursos (URI), que especifica la ubicación del punto de conexión. La dirección de punto de conexión se representa en el modelo de programación de Windows Communication Foundation (WCF) mediante el <xref:System.ServiceModel.EndpointAddress> (clase), que contiene un elemento opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propiedad que habilita la autenticación del punto de conexión por otros extremos que intercambiar mensajes con él y un conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propiedades, que definen cualquier otro encabezado SOAP requerido para alcanzar el servicio. Los encabezados opcionales proporcionan información de direccionamiento adicional y más detallada para identificar o interactuar con el punto de conexión de servicio. La dirección de un punto de conexión se representa en la conexión como una referencia de punto de conexión (EPR) WS-Addressing.  
@@ -119,7 +119,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
 -   Mediante código, los encabezados de dirección personalizados se crean usando la clase <xref:System.ServiceModel.Channels.AddressHeader> y, a continuación, se utilizan en la construcción de una clase <xref:System.ServiceModel.EndpointAddress>.  
   
--   En configuración, personalizado [ \<encabezados >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) se especifican como elementos secundarios de la [ \<punto de conexión >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+-   En configuración, personalizado [ \<encabezados >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) se especifican como elementos secundarios de la [ \<punto de conexión >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
  Generalmente, la configuración es preferible al código, puesto que permite cambiar los encabezados después de la implementación.  
   
@@ -130,7 +130,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
 -   Mediante código, especifique una dirección de escuchas personalizada agregando una clase <xref:System.ServiceModel.Description.ClientViaBehavior> a la colección de comportamientos del extremo.  
   
--   En configuración, especifique una dirección de escuchas personalizada con el `ListenUri` atributo del servicio [ \<punto de conexión >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+-   En configuración, especifique una dirección de escuchas personalizada con el `ListenUri` atributo del servicio [ \<punto de conexión >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
 ### <a name="custom-soap-address-filter"></a>Filtro de direcciones SOAP personalizado  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> se utiliza junto con cualquier propiedad <xref:System.ServiceModel.EndpointAddress.Headers%2A> para definir el filtro de direcciones SOAP de un extremo (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). De forma predeterminada, este filtro comprueba que un mensaje entrante tenga un encabezado de mensaje `To` que coincida con el URI del extremo y que todos los encabezados de extremo necesarios se encuentren en el mensaje.  

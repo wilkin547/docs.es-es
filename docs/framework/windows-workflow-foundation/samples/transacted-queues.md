@@ -2,15 +2,15 @@
 title: Colas de transacción
 ms.date: 03/30/2017
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-ms.openlocfilehash: b125158a113079d87eb6926393d5a2b5fe326824
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db6a9686334eefb02b9360827a23ca8363127eb5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519686"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408820"
 ---
 # <a name="transacted-queues"></a>Colas de transacción
-Este ejemplo muestra cómo integrar colas y transacciones en Windows Workflow Foundation (WF) para crear servicios escalables y fiables. A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` se utiliza en el flujo de trabajo de cliente para enviar mensajes a una cola en una transacción mediante el <xref:System.ServiceModel.NetMsmqBinding>. <xref:System.ServiceModel.Activities.TransactedReceiveScope> se utiliza en el servidor para recibir mensajes de la cola y actualizar el estado del flujo de trabajo en la misma transacción.  
+Este ejemplo muestra cómo integrar colas y transacciones en Windows Workflow Foundation (WF) para crear servicios escalables y fiables. Un <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` se usa en el flujo de trabajo de cliente para enviar mensajes a una cola en una transacción mediante la <xref:System.ServiceModel.NetMsmqBinding>. <xref:System.ServiceModel.Activities.TransactedReceiveScope> se utiliza en el servidor para recibir mensajes de la cola y actualizar el estado del flujo de trabajo en la misma transacción.  
   
 ## <a name="demonstrates"></a>Demostraciones  
  <xref:System.Activities.Statements.TransactionScope>, <xref:System.ServiceModel.Activities.TransactedReceiveScope>, <xref:System.ServiceModel.NetMsmqBinding>, <xref:System.ServiceModel.Activities.Receive> y correlación basada en contenidos.  
@@ -24,7 +24,7 @@ Este ejemplo muestra cómo integrar colas y transacciones en Windows Workflow Fo
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Instale y configure MSMQ. Vea [instalar Message Queue Server](http://go.microsoft.com/fwlink/?LinkId=178526) para obtener más información.  
+1.  Instale y configure MSMQ. Consulte [instalar Message Queue Server](https://go.microsoft.com/fwlink/?LinkId=178526) para obtener más información.  
   
 2.  Ejecute el comando siguiente en una línea de comandos para asegurarse de que MSDTC se está ejecutando. `net start msdtc`  
   
@@ -35,6 +35,6 @@ Este ejemplo muestra cómo integrar colas y transacciones en Windows Workflow Fo
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedQueues`

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8
-ms.openlocfilehash: ce6ba9a73e65b5f418ff9cf5a1ef4ca4ff0c36ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d982b73332a2629ccd32c409e0de6fe1ce6eb98
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357781"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408835"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>Comparar valores GUID y uniqueidentifier
-El tipo de datos de identificador único global (GUID) de SQL Server viene representado por el tipo de datos `uniqueidentifier`, que almacena un valor binario de 16 bytes. Un GUID es un número binario que sirve principalmente como identificador, el cual que debe ser único en una red formada por varios equipos en muchos sitios. Los GUID se pueden generar con la llamada a la función NEWID de Transact-SQL, y se tiene la garantía de que son únicos en todo el mundo. Para obtener más información, vea "Utilizar datos uniqueidentifier" en los Libros en pantalla de SQL Server.  
+El tipo de datos de identificador único global (GUID) de SQL Server viene representado por el tipo de datos `uniqueidentifier`, que almacena un valor binario de 16 bytes. Un GUID es un número binario que sirve principalmente como identificador, el cual que debe ser único en una red formada por varios equipos en muchos sitios. Los GUID se pueden generar con la llamada a la función NEWID de Transact-SQL, y se tiene la garantía de que son únicos en todo el mundo. Para obtener más información, consulte [uniqueidentifier (Transact-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql).  
   
 ## <a name="working-with-sqlguid-values"></a>Trabajo con valores SqlGuid  
  Como los valores GUID son largos y poco claros, no resultan significativos para los usuarios. Si utiliza GUID generados de forma aleatoria en valores de claves e inserta muchas filas, obtendrá E/S aleatoria en los índices, lo que puede afectar al rendimiento negativamente. Los GUID son también relativamente grandes si se comparan con otros tipos de datos. En general, se recomienda el uso de GUID solo en situaciones muy limitadas en las que no resulta adecuado ningún otro tipo de datos.  
   
 ### <a name="comparing-guid-values"></a>Comparación de valores GUID  
- Los operadores de comparación se pueden utilizar con valores `uniqueidentifier`. Sin embargo, al comparar los patrones de bits de los dos valores no se implementa el orden. Las únicas operaciones que se permiten en un `uniqueidentifier` valor son comparaciones (=, <>, \<, >, \<=, > =) y la comprobación de NULL (IS NULL e IS NOT NULL). No se permite ninguna otra operación aritmética.  
+ Los operadores de comparación se pueden utilizar con valores `uniqueidentifier`. Sin embargo, al comparar los patrones de bits de los dos valores no se implementa el orden. Las únicas operaciones que se permiten en un `uniqueidentifier` valor son comparaciones (=, <>, \<, >, \<=, > =) y comprobaciones para NULL (IS NULL e IS NOT NULL). No se permite ninguna otra operación aritmética.  
   
  Tanto <xref:System.Guid> como <xref:System.Data.SqlTypes.SqlGuid> tienen un método `CompareTo` para comparar diferentes valores GUID. Sin embargo, `System.Guid.CompareTo` y `SqlTypes.SqlGuid.CompareTo` se implementan de forma distinta. <xref:System.Data.SqlTypes.SqlGuid> implementa `CompareTo` mediante el comportamiento de SQL Server, en el que los últimos seis bytes de un valor son los más significativos. <xref:System.Guid> evalúa los 16 bytes. En el siguiente ejemplo se muestra esta diferencia conductual. La primera sección del código muestra valores <xref:System.Guid> sin ordenar; la segunda sección muestra los valores <xref:System.Guid> ordenados y la tercera sección muestra los valores <xref:System.Data.SqlTypes.SqlGuid> ordenados. El resultado se muestra debajo del listado de código.  
   
@@ -46,5 +46,6 @@ Sorted SqlGuids:
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Tipos de datos de SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+
+[Tipos de datos de SQL Server y ADO.NET](sql-server-data-types.md)  
+[Información general sobre ADO.NET](../ado-net-overview.md)  

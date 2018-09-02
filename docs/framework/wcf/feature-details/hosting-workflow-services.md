@@ -2,15 +2,15 @@
 title: Hospedar servicios de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: b42dd42b9697d87d7721fc5edc2dfde01f1d37c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f75b8cc4cde0372b995c39a5da3ae4b71590743e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932838"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416370"
 ---
 # <a name="hosting-workflow-services"></a>Hospedar servicios de flujo de trabajo
-Debe hospedarse un servicio del flujo de trabajo para que responda a los mensajes entrantes. Los servicios del flujo de trabajo usan la infraestructura de mensajería de WCF y, por lo tanto, se hospedan de maneras similares. Como los servicios WCF, servicios de flujo de trabajo se pueden hospedar en cualquier aplicación administrada, en Internet Information Services (IIS) o en Windows Process Activation Services (WAS). Además, los servicios de flujo de trabajo pueden hospedarse en Windows Server App Fabric. Para obtener más información acerca de Windows Server App Fabric, consulte [documentación de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric Hosting Features](http://go.microsoft.com/fwlink/?LinkId=196494), y [conceptos de hospedaje de AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). Para obtener más información sobre las diversas maneras de hospedaje de WCF los servicios, consulte [servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md).
+Debe hospedarse un servicio del flujo de trabajo para que responda a los mensajes entrantes. Los servicios del flujo de trabajo usan la infraestructura de mensajería de WCF y, por lo tanto, se hospedan de maneras similares. Como los servicios WCF, servicios de flujo de trabajo se pueden hospedar en cualquier aplicación administrada, en Internet Information Services (IIS) o en Windows Process Activation Services (WAS). Además, los servicios de flujo de trabajo pueden hospedarse en Windows Server App Fabric. Para obtener más información acerca de Windows Server App Fabric, consulte [documentación de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric Hosting Features](https://go.microsoft.com/fwlink/?LinkId=196494), y [conceptos de hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495). Para obtener más información sobre las diversas maneras de hospedaje de WCF los servicios, consulte [servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md).
 
 ## <a name="hosting-in-a-managed-application"></a>Hospedar en una aplicación administrada
  Para hospedar un servicio de flujo de trabajo en una aplicación administrada, use la clase <xref:System.ServiceModel.Activities.WorkflowServiceHost>. El constructor <xref:System.ServiceModel.Activities.WorkflowServiceHost> le permite especificar una instancia de servicio del flujo de trabajo singleton, una definición del servicio de flujo de trabajo o una actividad que usa las actividades de mensajería de flujo de trabajo. Una llamada a <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> hace que el servicio empiece a escuchar los mensajes entrantes.
@@ -51,7 +51,7 @@ Debe hospedarse un servicio del flujo de trabajo para que responda a los mensaje
  Las referencias a las actividades personalizadas deben agregarse a la <`Assemblies`> en la sección <`System.Web.Compilation`> para que se carguen en el dominio de aplicación y el deserializador XAML puedo buscar los tipos. Esta configuración se puede realizar en el nivel de la aplicación o en el archivo Web.config de la raíz si la configuración se debe aplicar a todas las aplicaciones del equipo.
 
 ## <a name="deployment"></a>Implementación
- La herramienta de implementación web se ha creado para facilitar el trabajo de implementación. La herramienta le permite migrar las aplicaciones entre IIS 6.0 e IIS 7.0, sincronizar las granjas de servidores y empaquetar, archivar e implementar las aplicaciones web. Para obtener más información, consulte [herramienta de implementación de MS](http://go.microsoft.com/fwlink/?LinkId=178690).
+ La herramienta de implementación web se ha creado para facilitar el trabajo de implementación. La herramienta le permite migrar las aplicaciones entre IIS 6.0 e IIS 7.0, sincronizar las granjas de servidores y empaquetar, archivar e implementar las aplicaciones web. Para obtener más información, consulte [herramienta de implementación de MS](https://go.microsoft.com/fwlink/?LinkId=178690).
 
 ## <a name="see-also"></a>Vea también
 

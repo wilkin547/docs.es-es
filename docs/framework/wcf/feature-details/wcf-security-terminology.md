@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72a2ea1393daa7435ae233d1e420cf88b6f5b6af
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508311"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402421"
 ---
 # <a name="wcf-security-terminology"></a>Terminología de seguridad en WCF
 Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco familiar. Este tema proporciona breves explicaciones sobre algunos términos de seguridad, pero no está diseñado para proporcionar una documentación completa sobre cada elemento.  
   
- Para obtener más información sobre los términos usados en la documentación de Windows Communication Foundation (WCF), consulte [conceptos fundamentales de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Para obtener más información acerca de los términos usados en la documentación de Windows Communication Foundation (WCF), consulte [fundamentales Windows Communication Foundation conceptos](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  lista de control de acceso (ACL)  
  Lista de protecciones de seguridad que se aplica a un objeto. (Un objeto puede ser un archivo, un proceso, un evento, o cualquier elemento que tenga un descriptor de seguridad.) Una entrada en ACL es una entrada de control de acceso (ACE). Hay dos tipos de ACL: discrecional y de sistema.  
@@ -30,10 +30,10 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  El acto de controlar el acceso y los derechos a un recurso. Por ejemplo, permitir a los miembros de un grupo leer un archivo, pero permitir solo a los miembros de otro grupo modificar el archivo.  
   
  certificado de la entidad de certificación (CA)  
- Identifica la CA emisora de certificados de autenticación de cliente y servidor a los servidores y clientes que los solicitan. Dado que contiene una clave pública utilizada en firmas digitales, también se conoce como un *certificado de firma*. Si la CA es una entidad emisora raíz, el certificado de CA puede se conoce como un *certificado raíz*. También conocida como un *certificado de sitio*.  
+ Identifica la CA emisora de certificados de autenticación de cliente y servidor a los servidores y clientes que los solicitan. Dado que contiene una clave pública utilizada en firmas digitales, también se conoce como un *certificado de firma*. Si la CA es una entidad emisora raíz, el certificado de CA es posible que se denomina un *certificado raíz*. A veces también se conoce como un *certificado de sitio*.  
   
  Jerarquía de la CA  
- Una jerarquía de la CA contiene varias CA. Se organiza por lo que cada CA esté certificada por otra entidad de certificación en un nivel más alto de la jerarquía hasta la parte superior de la jerarquía, también conocido como el *entidad emisora raíz*, se alcanza.  
+ Una jerarquía de la CA contiene varias CA. Se organiza de forma que cada CA esté certificada por otra entidad de certificación en un nivel superior de la jerarquía hasta la parte superior de la jerarquía, también conocido como el *entidad emisora raíz*, se alcanza.  
   
  certificado  
  Una instrucción firmada digitalmente que contiene información sobre una entidad y la clave pública de la entidad, enlazando, por tanto, estas dos partes de información. Una organización de confianza (o entidad) emite un certificado, llamada “entidad emisora de certificados”, después de que la autoridad haya comprobado que la entidad es quién dice ser.  
@@ -65,7 +65,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  Un par de claves pública/privada usada para cifrar claves de sesión para que se puedan almacenar e intercambiar con otros usuarios de forma segura.  
   
  hash  
- Un valor numérico de tamaño fijo obtenido aplicando una función matemática (vea algoritmo hash) a una cantidad arbitraria de datos. Los datos incluyen normalmente datos aleatorios, conocidos como un *nonce*. El servicio y cliente aportan nonces de intercambio para aumentar la complejidad del resultado. El resultado es también conocido como un *síntesis del mensaje*. Enviar un valor hash es más seguro que enviar datos confidenciales, como una contraseña, aun cuando la contraseña esté cifrada. El remitente y receptor del hash deben usar el mismo algoritmo hash y nonces para que, una vez recibido, se pueda comprobar el hash.  
+ Un valor numérico de tamaño fijo obtenido aplicando una función matemática (vea algoritmo hash) a una cantidad arbitraria de datos. Los datos incluyen normalmente datos aleatorios, conocidos como un *nonce*. El servicio y cliente aportan nonces de intercambio para aumentar la complejidad del resultado. El resultado es también se denomina un *síntesis del mensaje*. Enviar un valor hash es más seguro que enviar datos confidenciales, como una contraseña, aun cuando la contraseña esté cifrada. El remitente y receptor del hash deben usar el mismo algoritmo hash y nonces para que, una vez recibido, se pueda comprobar el hash.  
   
  algoritmo de hash  
  Un algoritmo utilizado para generar un valor hash de una parte de datos, como un mensaje o clave de sesión. Entre los algoritmos más comunes de hash se incluyen: MD2, MD4, MD5 y SHA-1.  
@@ -92,7 +92,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  Estándar de sintaxis de mensajes criptográficos. Una sintaxis general para los datos a los que se puede aplicar la criptografía, como cifrado y firmas digitales. También proporciona la sintaxis para difundir certificados o listas de certificados revocados y otros atributos de mensaje, como marcas de tiempo, al mensaje.  
   
  texto simple  
- Un mensaje no cifrado. Mensajes de texto simple se conocen a veces como *texto no cifrado* mensajes.  
+ Un mensaje no cifrado. Mensajes de texto simple se conocen a veces como *cleartext* mensajes.  
   
  privilegio  
  El derecho de un usuario para realizar varias operaciones relacionadas con el sistema, como apagar el sistema, cargar los controles de dispositivos o cambiar la hora del sistema. Un token de acceso del usuario contiene una lista de los privilegios que el usuario o los grupos de usuarios tienen.  
@@ -175,7 +175,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  El software que decide si un archivo determinado es o no de confianza. Esta decisión se basa en el certificado asociado al archivo.  
   
  nombre principal del usuario (UPN)  
- Un nombre de cuenta de usuario (a veces se denomina la *nombre de inicio de sesión de usuario*) y un nombre de dominio identifica el dominio donde se encuentra la cuenta de usuario. Éste es el uso estándar para iniciar sesión en un dominio de Windows. El formato es: someone@example.com (para una dirección de correo electrónico).  
+ Un nombre de cuenta de usuario (a veces se denomina el *nombre de inicio de sesión de usuario*) y un nombre de dominio que identifica el dominio donde se encuentra la cuenta de usuario. Éste es el uso estándar para iniciar sesión en un dominio de Windows. El formato es: someone@example.com (como en una dirección de correo electrónico).  
   
 > [!NOTE]
 >  Además de formulario UPN estándar, WCF acepta UPN en forma de nivel inferior, por ejemplo, com\someone.  
@@ -186,4 +186,4 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
 ## <a name="see-also"></a>Vea también  
  [Conceptos básicos de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)  
  [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Modelo de seguridad de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

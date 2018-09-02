@@ -2,23 +2,23 @@
 title: Proveedor de tokens SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 509469404e2c3866c26b5e1817a819519203c175
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808785"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418044"
 ---
 # <a name="saml-token-provider"></a>Proveedor de tokens SAML
-Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente personalizado. Un proveedor de tokens de Windows Communication Foundation (WCF) se utiliza para proporcionar las credenciales para la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con el proveedor del Token de administrador de credenciales predeterminado. WCF también incluye una [!INCLUDE[infocard](../../../../includes/infocard-md.md)] proveedor de tokens. Los proveedores de tokens personalizados son útiles en los casos siguientes:  
+Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente personalizado. Un proveedor de tokens de Windows Communication Foundation (WCF) se usa para proporcionar las credenciales a la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con el Administrador de credenciales de Token de proveedor predeterminado. WCF también incluye un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] proveedor de tokens. Los proveedores de tokens personalizados son útiles en los casos siguientes:  
   
 -   Si tiene un almacén de credenciales con el que estos proveedores de tokens no pueden funcionar.  
   
--   Si desea proporcionar su propio mecanismo personalizado para transformar las credenciales desde el punto cuando el usuario proporciona detalles cuando el marco de trabajo de cliente WCF usa las credenciales.  
+-   Si desea proporcionar su propio mecanismo personalizado para transformar las credenciales desde el punto cuando el usuario proporciona detalles cuando el marco de cliente WCF usa las credenciales.  
   
 -   Si está creando un token personalizado.  
   
- Este ejemplo muestra cómo crear un proveedor de tokens personalizado que permite que un token SAML obtenido de fuera del marco de cliente WCF que se usará.  
+ En este ejemplo se muestra cómo crear un proveedor de tokens personalizado que permite que un token SAML obtenido de fuera del marco de cliente WCF que se usará.  
   
  En resumen, este ejemplo muestra lo siguiente:  
   
@@ -26,7 +26,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
   
 -   Cómo un token de SAML se puede pasar a las credenciales del cliente personalizadas.  
   
--   ¿Cómo se proporciona el token de SAML para el marco de trabajo de cliente WCF.  
+-   Cómo se proporciona el token SAML para el marco del cliente WCF.  
   
 -   Cómo el cliente autentica el servidor usando el certificado X.509 del servidor.  
   
@@ -353,9 +353,9 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
   
 #### <a name="to-set-up-and-build-the-sample"></a>Para configurar y compilar el ejemplo  
   
-1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 > [!NOTE]
 >  Si usa Svcutil.exe para regenerar la configuración de este ejemplo, asegúrese de que modifica el nombre del punto de conexión en la configuración del cliente para que coincida con el código de cliente.  
@@ -371,7 +371,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
   
 3.  Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4.  Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
@@ -393,7 +393,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
   
 9. En el equipo cliente, inicie `Client.exe` desde una ventana de símbolo del sistema.  
   
-10. Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   

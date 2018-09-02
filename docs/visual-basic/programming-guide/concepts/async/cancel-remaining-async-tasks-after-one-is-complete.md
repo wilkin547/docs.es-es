@@ -2,12 +2,12 @@
 title: Cancelar las tareas asincrónicas restantes cuando se una completa (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: baf18ed4c2a4693f0765358d9f9a56842991cf29
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 5dab0c4aa14710fe78d2473675aea8b8c8bb73b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728344"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402262"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancelar las tareas asincrónicas restantes cuando se una completa (Visual Basic)
 Mediante el método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> junto con <xref:System.Threading.CancellationToken>, puede cancelar todas las tareas restantes cuando se completa una tarea. El método `WhenAny` toma un argumento que es una colección de tareas. El método inicia todas las tareas y devuelve una sola tarea. La tarea se completa cuando se complete cualquier tarea de la colección.  
@@ -24,7 +24,7 @@ Mediante el método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty
   
 2.  En la barra de menús, elija **Archivo**, **Abrir**, **Proyecto o solución**.  
   
-3.  En el **Abrir proyecto** cuadro de diálogo, abra la carpeta que contiene el código de ejemplo que descomprime y, a continuación, abra el archivo de solución (.sln) para AsyncFineTuningVB.  
+3.  En el **Abrir proyecto** cuadro de diálogo, abra la carpeta que contiene el código de ejemplo que descomprimió y, a continuación, abra el archivo de solución (.sln) para AsyncFineTuningVB.  
   
 4.  En el **Explorador de soluciones**, abra el menú contextual del proyecto **CancelAfterOneTask** y, después, elija **Establecer como proyecto de inicio**.  
   
@@ -37,11 +37,11 @@ Mediante el método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty
  Si no desea descargar el proyecto, puede revisar el archivo MainWindow.xaml.vb al final de este tema.  
   
 ## <a name="building-the-example"></a>Compilación del ejemplo  
- El ejemplo de este tema se agrega al proyecto que se desarrolló en [cancelar una tarea asincrónica o una lista de tareas](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0) para cancelar una lista de tareas. En el ejemplo se usa la misma interfaz de usuario, aunque el botón **Cancelar** no se usa explícitamente.  
+ El ejemplo de este tema se agrega al proyecto que se desarrolla en [cancelar una tarea asincrónica o una lista de tareas](https://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0) para cancelar una lista de tareas. En el ejemplo se usa la misma interfaz de usuario, aunque el botón **Cancelar** no se usa explícitamente.  
   
  Para generar su propio ejemplo, paso a paso, siga las instrucciones de la sección "Descargar el ejemplo", pero elija **CancelAListOfTasks** como **Proyecto de inicio**. Agregue los cambios de este tema a ese proyecto.  
   
- En el archivo MainWindow.xaml.vb de la **CancelAListOfTasks** proyecto, inicie la transición moviendo los pasos de procesamiento para cada sitio Web del bucle en `AccessTheWebAsync` al siguiente método asincrónico.  
+ En el archivo MainWindow.xaml.vb de la **CancelAListOfTasks** de proyecto, inicie la transición moviendo los pasos de procesamiento para cada sitio Web desde el bucle en `AccessTheWebAsync` al siguiente método asincrónico.  
   
 ```vb  
 ' ***Bundle the processing steps for a website into one async method.  
@@ -103,7 +103,7 @@ resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:
  Ejecute el programa varias veces para comprobar que finalizan primero descargas diferentes.  
   
 ## <a name="complete-example"></a>Ejemplo completo  
- El código siguiente es el archivo MainWindow.xaml.vb o MainWindow.xaml.cs completo para el ejemplo. Los asteriscos marcan los elementos que se agregaron para este ejemplo.  
+ El código siguiente es el archivo completo de MainWindow.xaml.vb o MainWindow.xaml.cs para el ejemplo. Los asteriscos marcan los elementos que se agregaron para este ejemplo.  
   
  Observe que debe agregar una referencia para <xref:System.Net.Http>.  
   

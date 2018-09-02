@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: ab866356e979ec6c041d12620cfb6abfc8928668
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 073cd3a57f254f639fac44900ff6bf022e1fb165
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364884"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408404"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Habilitar conjuntos de resultados activos múltiples
 MARS (Multiple Active Result Sets, conjuntos de resultados activos múltiples) es una característica que funciona con SQL Server y que permite la ejecución de varios lotes en una sola conexión. Cuando MARS está habilitado para su uso con SQL Server, cada objeto de comando usado agrega una sesión a la conexión.  
@@ -21,7 +21,7 @@ MARS (Multiple Active Result Sets, conjuntos de resultados activos múltiples) e
 ## <a name="enabling-and-disabling-mars-in-the-connection-string"></a>Habilitación y deshabilitación de MARS en la cadena de conexión  
   
 > [!NOTE]
->  Las siguientes cadenas de conexión usan el ejemplo **AdventureWorks** incluido con SQL Server de la base de datos. En las cadenas de conexión proporcionadas se supone que la base de datos está instalada en un servidor llamado MSSQL1. Modifique la cadena de conexión según sea necesario para su entorno.  
+>  Las siguientes cadenas de conexión utiliza el ejemplo **AdventureWorks** incluido con SQL Server de la base de datos. En las cadenas de conexión proporcionadas se supone que la base de datos está instalada en un servidor llamado MSSQL1. Modifique la cadena de conexión según sea necesario para su entorno.  
   
  La característica MARS está deshabilitada de forma predeterminada. Para habilitarla, agregue el par de palabra clave "MultipleActiveResultSets=True" a la cadena de conexión. "True" es el único valor válido para habilitar MARS. En el siguiente ejemplo se muestra cómo conectarse a una instancia de SQL Server y cómo especificar que se debe habilitar MARS.  
   
@@ -113,4 +113,4 @@ string connectionString = "Data Source=MSSQL1;" +
   
 ## <a name="see-also"></a>Vea también  
  [Conjuntos de resultados activos múltiples (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

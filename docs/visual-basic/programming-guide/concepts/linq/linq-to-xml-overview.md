@@ -2,12 +2,12 @@
 title: LINQ to XML Overview (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
-ms.openlocfilehash: 3818177c2ed14b1159b8e63e324894d7e89b72b6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 49533050efda4254f186a8c06f5c42bdd9555a23
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932408"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415810"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML Overview (Visual Basic)
 XML se ha adoptado ampliamente como un modo de dar formato a datos en diversos contextos. Por ejemplo, puede encontrar XML en la web, en archivos de configuración, en archivos de Microsoft Office Word y en bases de datos.  
@@ -28,7 +28,7 @@ XML se ha adoptado ampliamente como un modo de dar formato a datos en diversos c
   
  Otra ventaja de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] es la capacidad de usar los resultados de la consulta como parámetros en constructores de objetos <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XAttribute>, que habilita un método eficaz para crear árboles XML. Este método, denominado *construcción funcional*, permite que los desarrolladores transformen fácilmente árboles XML de una forma a otra.  
   
- Por ejemplo, podría tener un pedido de compra XML común, como el que se describe en [Sample XML File: Typical Purchase Order (LINQ to XML)](http://msdn.microsoft.com/library/0606c09f-6e43-4f8d-95c8-e8e2e08d2348) (Archivo XML de ejemplo: pedido de compra común [LINQ to XML]). Mediante [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], podría ejecutar la siguiente consulta para obtener el valor del atributo de número de pieza relativo a cada elemento del pedido de compra:  
+ Por ejemplo, podría tener un pedido de compra XML común, como el que se describe en [Sample XML File: Typical Purchase Order (LINQ to XML)](https://msdn.microsoft.com/library/0606c09f-6e43-4f8d-95c8-e8e2e08d2348) (Archivo XML de ejemplo: pedido de compra común [LINQ to XML]). Mediante [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], podría ejecutar la siguiente consulta para obtener el valor del atributo de número de pieza relativo a cada elemento del pedido de compra:  
   
 ```vb  
 Dim partNos = _  

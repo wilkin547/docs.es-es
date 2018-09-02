@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: cd792c2c26898cd3dfd7b52d865fa83636c426eb
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 8b516bb4603f33828069b5356676d8b35dc961d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253978"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408675"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Cómo instalar y configurar los componentes de activación de WFC
 En este tema se describe los pasos necesarios para configurar Windows Process Activation Service (también conocido como WAS) en [!INCLUDE[wv](../../../../includes/wv-md.md)] para hospedar servicios de Windows Communication Foundation (WCF) protocolos de red de servicios que no se comunican a través de HTTP. Las siguientes secciones describen los pasos para realizar esta configuración:  
@@ -104,4 +104,4 @@ En este tema se describe los pasos necesarios para configurar Windows Process Ac
  [Activación TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
  [Activación MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)  
  [Activación NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- [Características de hospedaje de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Características de hospedaje de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

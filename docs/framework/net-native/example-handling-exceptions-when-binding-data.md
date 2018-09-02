@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c4b73ed36d3334e983b960ce972292a190bad85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89e7a0929bd5f07c5a1986d885984332d692d3a9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393593"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415884"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Ejemplo: control de excepciones al enlazar datos
 > [!NOTE]
->  En este tema se hace referencia a .NET Native Developer Preview, que es una versión preliminar del software. Puede descargar esta versión preliminar desde el [sitio web de Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=394611) (es necesario registrarse).  
+>  En este tema se hace referencia a .NET Native Developer Preview, que es una versión preliminar del software. Puede descargar esta versión preliminar desde el [sitio web de Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (es necesario registrarse).  
   
  En el siguiente ejemplo se explica cómo resolver una excepción [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) que se genera cuando una aplicación compilada con la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)] intenta enlazar datos. Esta es la información de la excepción:  
   
@@ -39,7 +39,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>¿Qué ha hecho la aplicación?  
- En la base de la pila, los marcos del espacio de nombres [Windows.UI.Xaml](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) indican que el motor de representación XAML se estaba ejecutando.   El uso del método <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> indica una búsqueda basada en la reflexión del valor de una propiedad en el tipo cuyos metadatos se han quitado.  
+ En la base de la pila, los marcos del espacio de nombres [Windows.UI.Xaml](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) indican que el motor de representación XAML se estaba ejecutando.   El uso del método <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> indica una búsqueda basada en la reflexión del valor de una propiedad en el tipo cuyos metadatos se han quitado.  
   
  El primer paso para proporcionar una directiva de metadatos sería agregar metadatos `serialize` para el tipo de forma que sus propiedades sean accesibles:  
   
@@ -57,7 +57,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>¿Se podría volver a escribir el código para que no use la reflexión?  
  Los enlaces de datos hacen un uso intensivo de la reflexión, de modo que cambiar el código para evitar la reflexión no es factible.  
   
- Sin embargo, hay formas de especificar el `ViewModel` en la página XAML para que la cadena de herramientas pueda asociar enlaces de propiedad con el tipo correcto en tiempo de compilación y mantener los metadatos sin usar una directiva en tiempo de ejecución.  Por ejemplo, puede aplicar el atributo [Windows.UI.Xaml.Data.BindableAttribute](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) en las propiedades. Esto hace que el compilador XAML genere la información de búsqueda necesaria y permite prescindir de una directiva en tiempo de ejecución en el archivo Default.rd.xml.  
+ Sin embargo, hay formas de especificar el `ViewModel` en la página XAML para que la cadena de herramientas pueda asociar enlaces de propiedad con el tipo correcto en tiempo de compilación y mantener los metadatos sin usar una directiva en tiempo de ejecución.  Por ejemplo, puede aplicar el atributo [Windows.UI.Xaml.Data.BindableAttribute](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) en las propiedades. Esto hace que el compilador XAML genere la información de búsqueda necesaria y permite prescindir de una directiva en tiempo de ejecución en el archivo Default.rd.xml.  
   
 ## <a name="see-also"></a>Vea también  
  [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)  

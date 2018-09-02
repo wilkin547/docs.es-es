@@ -2,12 +2,12 @@
 title: Tipos de restricción
 ms.date: 03/30/2017
 ms.assetid: b6b246e6-1130-4698-9625-c5c42abcbfed
-ms.openlocfilehash: 53e5975017c3a27ede8ad07cd93f78f71df2d3e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 202a2c7b3a3fc400552e42c8606457964af66af2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517513"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401537"
 ---
 # <a name="constraint-types"></a>Tipos de restricción
 Este ejemplo muestra dos formas diferentes de aplicar restricciones a un flujo de trabajo: desde dentro de la actividad (compilación) y desde fuera de ella (directiva). En este escenario, un autor de actividad (de una compañía de software de terceros) desea validar la relación entre dos argumentos. En este caso, el coste debe ser menor o igual que al precio. Esta es una restricción de compilación de validación general.  
@@ -45,6 +45,6 @@ Este ejemplo muestra dos formas diferentes de aplicar restricciones a un flujo d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Validation\ConstraintLibrary`

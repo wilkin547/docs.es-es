@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: 9e67aef2a39a04adfdcc036c008aa80c9151c14b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2f30a578c5233e8b86a165dd220efd45348c5042
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762564"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401269"
 ---
 # <a name="handling-dataview-events"></a>Controlar eventos de DataView
-Puede utilizar el evento <xref:System.Data.DataView.ListChanged> de la <xref:System.Data.DataView> para determinar si se ha actualizado una vista. Entre las actualizaciones que generan el evento se incluyen la agregación de una fila a la tabla subyacente, así como su eliminación o modificación; la agregación de una columna al esquema de la tabla subyacente o su eliminación y la modificación de una relación primaria o secundaria. El **ListChanged** evento también le notifica si la lista de filas que está viendo ha cambiado considerablemente por la aplicación de un nuevo criterio de ordenación o un filtro.  
+Puede utilizar el evento <xref:System.Data.DataView.ListChanged> de la <xref:System.Data.DataView> para determinar si se ha actualizado una vista. Entre las actualizaciones que generan el evento se incluyen la agregación de una fila a la tabla subyacente, así como su eliminación o modificación; la agregación de una columna al esquema de la tabla subyacente o su eliminación y la modificación de una relación primaria o secundaria. El **ListChanged** evento también le notifica si la lista de filas que está viendo ha cambiado considerablemente por la aplicación de un nuevo criterio de ordenación o filtro.  
   
- El **ListChanged** evento implementa la **ListChangedEventHandler** delegado de la <xref:System.ComponentModel> espacio de nombres y toma como entrada un <xref:System.ComponentModel.ListChangedEventArgs> objeto. Puede determinar qué tipo de cambio producido mediante el <xref:System.ComponentModel.ListChangedType> valor de enumeración en el **ListChangedType** propiedad de la **ListChangedEventArgs** objeto. Para los cambios que implican agregar, eliminar o mover filas, el nuevo índice de la fila agregada o movida y al índice anterior de la fila eliminada son accesibles mediante la **NewIndex** propiedad de la **ListChangedEventArgs** objeto. En el caso de una fila movida, al índice anterior de la fila movida son accesibles mediante la **OldIndex** propiedad de la **ListChangedEventArgs** objeto.  
+ El **ListChanged** evento implementa el **ListChangedEventHandler** delegado de la <xref:System.ComponentModel> espacio de nombres y toma como entrada un <xref:System.ComponentModel.ListChangedEventArgs> objeto. Puede determinar qué tipo de cambio producido mediante el <xref:System.ComponentModel.ListChangedType> valor de enumeración en el **ListChangedType** propiedad de la **ListChangedEventArgs** objeto. Para los cambios que implican agregar, eliminar o mover filas, el nuevo índice de la fila agregada o movida y al índice anterior de la fila eliminada pueden obtenerse mediante la **NewIndex** propiedad de la **ListChangedEventArgs** objeto. En el caso de una fila movida, se puede acceder al índice anterior de la fila movida mediante la **OldIndex** propiedad de la **ListChangedEventArgs** objeto.  
   
- El **DataViewManager** también expone un **ListChanged** evento para notificarle si se ha agregado o quitado una tabla, o si se ha realizado un cambio en el **relaciones** colección de la subyacente **conjunto de datos**.  
+ El **DataViewManager** también expone un **ListChanged** eventos para notificar si se ha agregado o quitado una tabla, o si se ha realizado un cambio a la **relaciones** colección de la subyacente **DataSet**.  
   
  En el ejemplo de código siguiente se muestra cómo agregar un **ListChanged** controlador de eventos.  
   
@@ -55,4 +55,4 @@ protected static void OnListChanged(object sender,
  <xref:System.Data.DataView>  
  <xref:System.ComponentModel.ListChangedEventHandler>  
  [Objetos DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

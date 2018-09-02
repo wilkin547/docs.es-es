@@ -13,17 +13,17 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 26c9ec247a0b848d46df063bc7b85ceec30d81c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27dad8b2fbfbc8d17090df201bf36eb080966f51
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650899"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407378"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Características de los elementos declarados (Visual Basic)
-A *característica* de un elemento declarado es un aspecto del elemento que afecta a cómo el código puede interactuar con él. Cada elemento declarado tiene una o varias de las siguientes características asociadas con ella:  
+Un *característica* de un elemento declarado es un aspecto del elemento que afecta a cómo el código puede interactuar con él. Cada elemento declarado tiene una o varias de las siguientes características asociadas con él:  
   
--   *Tipo de datos* : los valores que puede contener el elemento y cómo almacena esos valores. Para obtener más información, consulte [tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+-   *Tipo de datos* : los valores que puede contener el elemento y cómo almacena esos valores. Para más información, vea [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md).  
   
 -   *Duración* : el período de tiempo de ejecución durante el cual el elemento está disponible para su uso. Para obtener más información, consulte [duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
@@ -51,7 +51,7 @@ A *característica* de un elemento declarado es un aspecto del elemento que afec
 |evento|No|No|Sí|Sí|  
 |delegado|No|No|Sí|Sí|  
   
- <sup>1</sup> ámbito se conoce a veces como *visibilidad*.  
+ <sup>1</sup> ámbito a veces se conoce como *visibilidad*.  
   
 ## <a name="see-also"></a>Vea también  
  [Elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  

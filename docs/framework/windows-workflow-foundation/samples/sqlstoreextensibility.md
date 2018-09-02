@@ -2,12 +2,12 @@
 title: SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-ms.openlocfilehash: 37c83a9c1062fe074e41ec5db211fd513355c045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518491"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408770"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 En este ejemplo se muestran el uso y la configuración de propiedades promovidas en el almacén de instancias de flujo de trabajo de SQL. El almacén de instancias de flujo de trabajo de SQL es una implementación basada en SQL de un almacén de instancias. Permite a una instancia guardar y cargar su estado en y desde una base de datos SQL Server o SQL Server Express. La característica de extensibilidad del almacén permite al usuario definir propiedades que se guardan en el almacén de instancias. Estas propiedades se muestran en una vista de propiedades promovidas que permite al usuario consultarlas.  
@@ -48,17 +48,17 @@ En este ejemplo se muestran el uso y la configuración de propiedades promovidas
     > [!WARNING]
     >  Si instaló la base de datos en una instancia no predeterminada de SQL Server, actualice la cadena de conexión en el código antes de compilar la solución.  
   
-3.  Ejecutar el ejemplo con privilegios de administrador, desplácese hasta el directorio de bin del proyecto (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) en [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], con el botón secundario SqlStoreExtensibility.exe y seleccione **ejecutar como Administrador**.  
+3.  Ejecutar el ejemplo con privilegios de administrador, desplácese hasta el directorio de bin del proyecto (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) en [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], haciendo clic en SqlStoreExtensibility.exe y seleccione **ejecutar como Administrador**.  
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>Para comprobar que el ejemplo funciona correctamente  
   
-1.  Usar SQL Server Management Studio para ver el contenido de la tabla de instancias seleccionando **bases de datos**, **InstanceStore**y, a continuación,  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** en el Explorador de objetos, haga clic en **System.ServiceModel.Activities.DurableInstancing.InstanceTable** y seleccione  **Seleccionar las primeras 1000 filas**. Para obtener más información acerca de SQL Server Management Studio, consulte [Introducción a SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  Usar SQL Server Management Studio para ver el contenido de la tabla de instancias seleccionando **bases de datos**, **InstanceStore**y, a continuación,  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** en el Explorador de objetos, haga clic en **System.ServiceModel.Activities.DurableInstancing.InstanceTable** y seleccione  **Seleccionar las 1000 primeras filas**. Para obtener más información acerca de SQL Server Management Studio, consulte [Introducción a SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  Observe las instancias de flujo de trabajo enumeradas.  
   
 3.  En un símbolo del sistema de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], ejecute el script QueryInstanceStore.cmd situado en el directorio de ejemplo (\WF\Basic\Persistence\SqlStoreExtensibility).  
   
-4.  Observe el valor del contador que se muestra en **CountStatus**.  
+4.  Observe el valor del contador que se muestra bajo **CountStatus**.  
   
 5.  Ejecute el script varias veces para ver el **CountStats** cambio de valor.  
   
@@ -73,11 +73,11 @@ En este ejemplo se muestran el uso y la configuración de propiedades promovidas
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   
 ## <a name="see-also"></a>Vea también  
  [Persistencia del flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
  [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Ejemplos de persistencia y el hospedaje de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

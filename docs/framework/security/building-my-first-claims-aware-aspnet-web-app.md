@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 7e36ec5b824f60057ce7b1f18c695607cf9b88a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d889b0662d0b2df29b7e1e76e281c760c8965aac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399670"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406227"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Crear mi primera aplicación web de ASP.NET para notificaciones
 ## <a name="applies-to"></a>Se aplica a  
@@ -34,11 +34,11 @@ ms.locfileid: "33399670"
   
  El STS es un servicio que emite tokens tras haberse realizado la autenticación correctamente. Microsoft ofrece dos STS estándar del sector:  
   
--   [Servicios de federación de Active Directory (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) ()http://go.microsoft.com/fwlink/?LinkID=247516)  
+-   [Servicios de federación de Active Directory (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
--   [Windows Azure Access Control Service (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517).  
+-   [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
- AD FS 2.0 forma parte de Windows Server R2 y se puede usar como STS para escenarios locales. ACS es un servicio de nube que se ofrece como parte de la plataforma Microsoft Azure. Con fines de pruebas o educativos, también pueden usarse otros STS para compilar las aplicaciones compatibles con notificaciones. Por ejemplo, puede usar el STS de desarrollo Local que forma parte de la [Identity and Access Tool para Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849) que está disponible de forma gratuita en línea.  
+ AD FS 2.0 forma parte de Windows Server R2 y se puede usar como STS para escenarios locales. ACS es un servicio de nube que se ofrece como parte de la plataforma Microsoft Azure. Con fines de pruebas o educativos, también pueden usarse otros STS para compilar las aplicaciones compatibles con notificaciones. Por ejemplo, puede usar el STS de desarrollo Local que forma parte de la [Identity and Access Tool para Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) que está disponible de forma gratuita en línea.  
   
  Para compilar la primera aplicación ASP.NET compatible con notificaciones mediante WIF, siga las instrucciones de uno de los sitios siguientes:  
   

@@ -2,19 +2,19 @@
 title: Configuración de ejemplos de copia masiva
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: cb4e92529c8e68bd7e47e5943f7e79dcc97603e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71daf489fdf5e7e12594e798bc3ac01b1c76b027
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362444"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402381"
 ---
 # <a name="bulk-copy-example-setup"></a>Configuración de ejemplos de copia masiva
 La clase <xref:System.Data.SqlClient.SqlBulkCopy> sólo se puede utilizar para escribir datos en tablas SQL Server. Los ejemplos de código se muestra en este tema usan la base de datos de ejemplo de SQL Server, **AdventureWorks**. Con el fin de evitar modificar las tablas existentes, los ejemplos de código escriben datos en tablas que primero deberá crear.  
   
- El **BulkCopyDemoMatchingColumns** y **BulkCopyDemoDifferentColumns** tablas se basan en el **AdventureWorks** **Production.Products**  tabla. En los ejemplos de código que emplean estas tablas, los datos se agregan desde la **Production.Products** tabla a una de estas tablas de ejemplo. El **BulkCopyDemoDifferentColumns** tabla se utiliza cuando el ejemplo ilustra cómo asignar columnas del origen de datos a la tabla de destino. **BulkCopyDemoMatchingColumns** se utiliza en la mayoría de los demás ejemplos.  
+ El **BulkCopyDemoMatchingColumns** y **BulkCopyDemoDifferentColumns** tablas se basan en el **AdventureWorks** **Production.Products**  tabla. En los ejemplos de código que utilizan estas tablas, los datos se agregan desde la **Production.Products** tabla a una de estas tablas de ejemplo. El **BulkCopyDemoDifferentColumns** tabla se utiliza cuando el ejemplo muestra cómo asignar columnas del origen de datos en la tabla de destino; **BulkCopyDemoMatchingColumns** se usa para la mayoría de los otra ejemplos.  
   
- En algunos de los ejemplos de código se muestra cómo utilizar una clase <xref:System.Data.SqlClient.SqlBulkCopy> para escribir en varias tablas. En estos ejemplos, el **BulkCopyDemoOrderHeader** y **BulkCopyDemoOrderDetail** tablas se usan como las tablas de destino. Estas tablas se basan en el **Sales.SalesOrderHeader** y **Sales.SalesOrderDetail** tablas en **AdventureWorks**.  
+ En algunos de los ejemplos de código se muestra cómo utilizar una clase <xref:System.Data.SqlClient.SqlBulkCopy> para escribir en varias tablas. Estos ejemplos, el **BulkCopyDemoOrderHeader** y **BulkCopyDemoOrderDetail** se usan tablas como tablas de destino. Estas tablas se basan en el **Sales.SalesOrderHeader** y **Sales.SalesOrderDetail** en las tablas **AdventureWorks**.  
   
 > [!NOTE]
 >  El **SqlBulkCopy** se proporcionan ejemplos de código para mostrar la sintaxis para usar **SqlBulkCopy** solo. Si las tablas de origen y de destino están incluidas en la misma instancia de SQL Server, lo más rápido y sencillo es usar una instrucción `INSERT … SELECT` de Transact-SQL para copiar los datos.  
@@ -83,4 +83,4 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 ## <a name="see-also"></a>Vea también  
  [Operaciones de copia masiva en SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

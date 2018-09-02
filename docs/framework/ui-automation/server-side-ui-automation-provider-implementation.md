@@ -9,20 +9,20 @@ ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 7d8814f3797be33f22d4249df1d1b8d852e755e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad69367f616236d239587293022935bc3ef4e3ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409498"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401614"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementación del proveedor de UI Automation en el servidor
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  En esta sección se describe cómo implementar un proveedor de automatización de la interfaz de usuario del lado servidor para un control personalizado.  
   
- La implementación para los elementos de Windows Presentation Foundation (WPF) y no-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elementos (como los diseñados para [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) es diferente. Los elementos de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] son compatibles con la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gracias a una clase derivada de <xref:System.Windows.Automation.Peers.AutomationPeer>. Los elementos que no son de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] lo consiguen a través de implementaciones de interfaces de proveedor.  
+ La implementación para los elementos de Windows Presentation Foundation (WPF) y no-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elementos (como los diseñados para [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) es fundamentalmente diferente. Los elementos de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] son compatibles con la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gracias a una clase derivada de <xref:System.Windows.Automation.Peers.AutomationPeer>. Los elementos que no son de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] lo consiguen a través de implementaciones de interfaces de proveedor.  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>Consideraciones de seguridad  
@@ -179,5 +179,5 @@ ms.locfileid: "33409498"
  [Provocación de eventos desde un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
  [Habilitar la navegación en un proveedor de fragmentos de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
  [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Ejemplo de proveedor simple](http://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
- [Ejemplo de proveedor de fragmento](http://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+ [Ejemplo de proveedor simple](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
+ [Ejemplo de proveedor de fragmento](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

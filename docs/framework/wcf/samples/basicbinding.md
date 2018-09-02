@@ -2,12 +2,12 @@
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: 91ebef7ec985d3da6dc563ddbaa277d25f3172cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54c31bab1182bbd812992f3897e001cdae85f56
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500199"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405029"
 ---
 # <a name="basicbinding"></a>BasicBinding
 El ejemplo muestra el uso de `basicHttpBinding` que proporciona a la comunicación HTTP y a la interoperabilidad máxima los servicios Web de primera y segunda generación.  
@@ -20,14 +20,14 @@ El ejemplo muestra el uso de `basicHttpBinding` que proporciona a la comunicaci�
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\Http`  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
  En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
   
- Sólo se exige el nombre de la sección de enlace para utilizar el enlace básico con un comportamiento predeterminado. Si desea configurar el enlace básico  y cambiar algunos de sus valores, es necesario definir una configuración de enlace. El punto de conexión debe hacer referencia a la configuración de enlace por nombre mediante el uso de la `bindingConfiguration` atributo de la <`endpoint`> elemento, tal como se muestra en el siguiente código de ejemplo.  
+ Sólo se exige el nombre de la sección de enlace para utilizar el enlace básico con un comportamiento predeterminado. Si desea configurar el enlace básico  y cambiar algunos de sus valores, es necesario definir una configuración de enlace. El punto de conexión debe hacer referencia a la configuración de enlace por nombre mediante el uso de la `bindingConfiguration` atributo de la <`endpoint`> elemento, como se muestra en el siguiente código de ejemplo.  
   
 ```xml  
 <services>  
@@ -88,10 +88,10 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 3.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Vea también

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-ms.openlocfilehash: e755c99f83cc7fdc02f3d8ff74b5a34fc6d57869
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec9163eded7f77053b94b7cb0ff0995dca575612
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505282"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407812"
 ---
 # <a name="ws-reliable-session"></a>Sesión de confianza de WS
 Este ejemplo muestra el uso de la sesión de confianza.  Las sesiones de confianza proporcionan compatibilidad para la mensajería y las sesiones de confianza. La mensajería de confianza reintenta la comunicación en caso de error y permite especificar garantías de entrega, como la llegada en orden de los mensajes. Las sesiones mantienen el estado de los clientes entre llamadas. El ejemplo implementa las sesiones para mantener el estado del cliente y especifica las convicciones de la entrega en orden.  
@@ -19,7 +19,7 @@ Este ejemplo muestra el uso de la sesión de confianza.  Las sesiones de confian
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsReliableSession`  
   
@@ -39,7 +39,7 @@ Este ejemplo muestra el uso de la sesión de confianza.  Las sesiones de confian
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- El extremo contiene un atributo `bindingConfiguration` que hace referencia a una configuración de enlace denominada "Binding1". La configuración de enlace permite que las sesiones confiables estableciendo la `enabled` atributo de la [ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) a `true`. Las convicciones de la entrega para las sesiones ordenadas se controlan estableciendo el atributo ordenado como `true` o `false`. De manera predeterminada, es `true`.  
+ El extremo contiene un atributo `bindingConfiguration` que hace referencia a una configuración de enlace denominada "Binding1". La configuración de enlace permite las sesiones confiables estableciendo el `enabled` atributo de la [ \<reliableSession >](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) a `true`. Las convicciones de la entrega para las sesiones ordenadas se controlan estableciendo el atributo ordenado como `true` o `false`. De manera predeterminada, es `true`.  
   
 ```xml  
 <bindings>  
@@ -79,10 +79,10 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 3.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Vea también

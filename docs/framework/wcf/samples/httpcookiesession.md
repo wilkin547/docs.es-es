@@ -2,15 +2,15 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 64a7cba7b1bbc55a4504e3af4784fcb2a84f0fa1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: fdde238d4a4fd9291c520d4ef13694c3648c8298
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807233"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402638"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-Este ejemplo muestra cómo generar un canal de protocolo personalizado para usar cookies de HTTP para la administración de sesiones. Este canal habilita la comunicación entre los servicios de Windows Communication Foundation (WCF) y los clientes ASMX o entre los clientes de WCF y servicios ASMX.  
+Este ejemplo muestra cómo generar un canal de protocolo personalizado para usar cookies de HTTP para la administración de sesiones. Este canal habilita la comunicación entre servicios Windows Communication Foundation (WCF) y clientes ASMX o entre servicios ASMX y clientes WCF.  
   
  Cuando un cliente llama a un método web en un servicio Web de ASMX que se basa en la sesión, el motor [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hace lo siguiente:  
   
@@ -29,7 +29,7 @@ Este ejemplo muestra cómo generar un canal de protocolo personalizado para usar
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
@@ -83,7 +83,7 @@ InputQueue<RequestContext> requestQueue;
  El canal de cliente correspondiente está en la clase `HttpCookieSessionChannelFactory`. Durante la creación del canal, el generador de canales ajusta el canal de solicitud interno con `HttpCookieRequestSessionChannel`. La clase `HttpCookieRequestSessionChannel` reenvía las llamadas al canal de solicitud subyacente. Cuando el cliente cierra el proxy, `HttpCookieRequestSessionChannel` envía un mensaje al servicio que indica que se cierra el canal. Así, la pila del canal del servicio puede apagar correctamente el canal de la sesión que está en uso.  
   
 ## <a name="binding-and-binding-element"></a>Enlace y elemento de enlace  
- Después de crear los canales de cliente y del servicio, el paso siguiente es integrarlos en el tiempo de ejecución WCF. Los canales se exponen a WCF a través de enlaces y elementos de enlace. Un enlace consta de uno o varios elementos de enlace. WCF ofrece varios enlaces definidos por el sistema; Por ejemplo, BasicHttpBinding o WSHttpBinding. La clase `HttpCookieSessionBindingElement` contiene la implementación para el elemento de enlace. Invalida el agente de escucha del canal y los métodos de creación del generador de canales para crear las instancias del agente de escucha del canal y el generador de canales necesarios.  
+ Después de crear los canales de servicio y cliente, el paso siguiente es integrarlos en el tiempo de ejecución WCF. Los canales se exponen a WCF mediante enlaces y elementos de enlace. Un enlace consta de uno o varios elementos de enlace. WCF ofrece varios enlaces definidos por el sistema; Por ejemplo, BasicHttpBinding o WSHttpBinding. La clase `HttpCookieSessionBindingElement` contiene la implementación para el elemento de enlace. Invalida el agente de escucha del canal y los métodos de creación del generador de canales para crear las instancias del agente de escucha del canal y el generador de canales necesarios.  
   
  El ejemplo utiliza las aserciones de directiva para la descripción del servicio. Esto permite al ejemplo publicar sus requisitos de canal en otros clientes que pueden utilizar el servicio. Por ejemplo, este elemento de enlace publica las aserciones de directiva para que los clientes potenciales sepan que admite sesiones. Dado que el ejemplo habilita la propiedad `ExchangeTerminateMessage` en la configuración del elemento de enlace, agrega las aserciones necesarias para mostrar que el servicio admite una acción de intercambio de mensajes adicional para finalizar la conversación de la sesión. Los clientes pueden utilizar a continuación esta acción. El código WSDL siguiente muestra las aserciones de directiva creadas a partir de `HttpCookieSessionBindingElement`.  
   
@@ -164,10 +164,10 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Para compilar la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Vea también

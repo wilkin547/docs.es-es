@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
-ms.openlocfilehash: b2012b32b0751bc093b9b3267cbbfc2e1a408156
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2a59a9fc1c3b2f52543f4cc69de22a5703fa9b8b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761004"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407794"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>Escribir información del esquema de un conjunto de datos como XSD
-Puede escribir el esquema de un <xref:System.Data.DataSet> como un esquema de lenguaje de definición de esquemas XML (XSD), de forma que pueda transportarlo, con o sin datos relacionados, a un documento XML. Esquema XML se puede escribir en un archivo, una secuencia, un <xref:System.Xml.XmlWriter>, o una cadena; resulta útil para generar un fuertemente tipado **conjunto de datos**. Para obtener más información acerca de establecimiento inflexible de tipos **conjunto de datos** los objetos, vea [conjuntos de datos con tipo](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
+Puede escribir el esquema de un <xref:System.Data.DataSet> como un esquema de lenguaje de definición de esquemas XML (XSD), de forma que pueda transportarlo, con o sin datos relacionados, a un documento XML. Esquema XML se puede escribir en un archivo, una secuencia, un <xref:System.Xml.XmlWriter>, o una cadena; es útil para generar un fuertemente tipado **DataSet**. Para obtener más información acerca de establecimiento inflexible de tipos **DataSet** objetos, vea [DataSets con tipo](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
   
- Puede especificar cómo se representa una columna de una tabla en el esquema XML utilizando la **ColumnMapping** propiedad de la <xref:System.Data.DataColumn> objeto. Para obtener más información, vea "Asignar columnas a elementos, atributos y texto XML" en [escribir contenido de DataSet como datos XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
+ Puede especificar cómo se representa una columna de una tabla de esquema XML utilizando el **ColumnMapping** propiedad de la <xref:System.Data.DataColumn> objeto. Para obtener más información, vea "Asignar columnas a elementos, atributos y texto XML" en [escribir contenido de DataSet como datos XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
   
- Para escribir el esquema de un **conjunto de datos** como un esquema XML a un archivo, secuencia, o **XmlWriter**, use la **WriteXmlSchema** método de la **conjunto de datos**. **WriteXmlSchema** toma un parámetro que especifica el destino del esquema XML resultante. Los ejemplos de código siguientes muestran cómo escribir el esquema XML de un **conjunto de datos** a un archivo si se pasa una cadena que contiene un nombre de archivo y un <xref:System.IO.StreamWriter> objeto.  
+ Para escribir el esquema de un **conjunto de datos** como un esquema XML a un archivo, secuencia, o **XmlWriter**, utilice el **WriteXmlSchema** método de la **conjunto de datos**. **WriteXmlSchema** toma un parámetro que especifica el destino del esquema XML resultante. Los ejemplos de código siguientes muestran cómo escribir el esquema XML de un **DataSet** a un archivo pasando una cadena que contiene un nombre de archivo y un <xref:System.IO.StreamWriter> objeto.  
   
 ```vb  
 dataSet.WriteXmlSchema("Customers.xsd")  
@@ -39,7 +39,7 @@ dataSet.WriteXmlSchema(writer);
 writer.Close();  
 ```  
   
- Para obtener el esquema de un **conjunto de datos** y escribirlo como una cadena de esquema XML, utilice el **GetXmlSchema** método, tal como se muestra en el ejemplo siguiente.  
+ Para obtener el esquema de un **DataSet** y escribirlo como una cadena de esquema XML, utilice el **GetXmlSchema** método, como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Dim schemaString As String = dataSet.GetXmlSchema()  
@@ -54,4 +54,4 @@ string schemaString = dataSet.GetXmlSchema();
  [Escritura de contenido de un conjunto de datos como datos XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
  [Objetos DataSet con tipo](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
  [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

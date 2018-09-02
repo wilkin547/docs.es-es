@@ -2,12 +2,12 @@
 title: Seguimiento ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 4aa836650663a2918b51d5f9df95b55f410b8ded
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e4dd141bd5f6a9d137b2fe981b3b412ec0c81e2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506047"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407172"
 ---
 # <a name="etw-tracing"></a>Seguimiento ETW
 Este ejemplo muestra cómo implementar el seguimiento de un extremo a otro (E2E) mediante el Seguimiento de eventos para Windows (ETW) y `ETWTraceListener` que se proporciona este ejemplo. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) e incluye el seguimiento de ETW.  
@@ -50,11 +50,11 @@ Este ejemplo muestra cómo implementar el seguimiento de un extremo a otro (E2E)
  Antes de utilizar este agente de escucha, se debe iniciar una Sesión de seguimiento de ETW. Esta sesión se puede iniciar utilizando Logman.exe o Tracelog.exe. Un archivo SetupETW.bat está incluido con este ejemplo para que pueda preparar la Sesión de seguimiento ETW junto con un archivo CleanupETW.bat para cerrar la sesión y completar el archivo de registro.  
   
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema. Para obtener más información acerca de estas herramientas, vea [http://go.microsoft.com/fwlink/?LinkId=56580](http://go.microsoft.com/fwlink/?LinkId=56580)  
+>  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema. Para obtener más información acerca de estas herramientas, vea [https://go.microsoft.com/fwlink/?LinkId=56580](https://go.microsoft.com/fwlink/?LinkId=56580)  
   
  Al utilizar ETWTraceListener, los rastros están registrados en archivos .etl binarios. Con el seguimiento ServiceModel activado, todos los rastros generados aparecen en el mismo archivo. Use [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) para ver los archivos de registro .etl y .svclog. El visor crea una vista de un extremo a otro del sistema que permite hacer el seguimiento un mensaje de su origen a su destino y punto de consumo.  
   
- El Agente de escucha de seguimiento de ETW admite el registro circular. Para habilitar esta característica, vaya a **iniciar**, **ejecutar** y escriba `cmd` para iniciar una consola de comandos. En el comando siguiente, reemplace el parámetro `<logfilename>` con el nombre de su archivo de registro.  
+ El Agente de escucha de seguimiento de ETW admite el registro circular. Para habilitar esta característica, vaya a **iniciar**, **ejecutar** y tipo `cmd` para iniciar una consola de comandos. En el comando siguiente, reemplace el parámetro `<logfilename>` con el nombre de su archivo de registro.  
   
 ```  
 logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b41091702e}" -f bincirc -max 1000  
@@ -74,22 +74,22 @@ Logman start Wcf
 Logman stop Wcf  
 ```  
   
- Este proceso genera registros circulares binarios que se pueden procesar con la herramienta de prefiera, incluyendo [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) o Tracerpt.  
+ Este proceso genera los registros circulares binarios que se pueden procesar con su herramienta predilecta, incluidos [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) o Tracerpt.  
   
  También puede revisar el [seguimiento Circular](../../../../docs/framework/wcf/samples/circular-tracing.md) ejemplo para obtener más información sobre un agente de escucha alternativo para realizar el registro circular.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
     > [!NOTE]
-    >  Para utilizar los comandos RegisterProvider.bat, SetupETW.bat y CleanupETW.bat, debe ejecutarlos en una cuenta de administrador local. Si está utilizando [!INCLUDE[wv](../../../../includes/wv-md.md)] o posterior, también debe ejecutar el símbolo del sistema con privilegios elevados. Para ello, haga clic en el icono del símbolo del sistema y, a continuación, haga clic en **ejecutar como administrador**.  
+    >  Para utilizar los comandos RegisterProvider.bat, SetupETW.bat y CleanupETW.bat, debe ejecutarlos en una cuenta de administrador local. Si está utilizando [!INCLUDE[wv](../../../../includes/wv-md.md)] o posterior, también debe ejecutar el símbolo del sistema con privilegios elevados. Para ello, haga clic en el icono de símbolo del sistema y, a continuación, haga clic en **ejecutar como administrador**.  
   
 3.  Antes de ejecutar el ejemplo, ejecute RegisterProvider.bat en el cliente y servidor. Esto prepara el archivo ETWTracingSampleLog.etl resultante para generar rastros que puedan ser leídos por el visor de seguimiento de servicios. Este archivo se puede buscar en la carpeta C:\logs. Si esta carpeta no existe, se debe crear; de lo contrario, no se generará ningún seguimiento. A continuación, ejecute SetupETW.bat en los equipos servidor y cliente para comenzar la sesión de seguimiento de ETW. El archivo SetupETW.bat se encuentra en la carpeta CS\Client.  
   
-4.  Para ejecutar el ejemplo en una configuración de equipo único o varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 5.  Cuando complete el ejemplo, ejecute CleanupETW.bat para completar la creación del archivo ETWTracingSampleLog.etl.  
   
@@ -102,9 +102,9 @@ Logman stop Wcf
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de supervisión de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: f1c56ed83fa214cf781a833e05642635ac24b0c5
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: e2bf16bd07c7ac9d918a4ae95d7f4aa185d436ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753505"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404676"
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Procedimiento para hospedar y ejecutar un servicio básico de Windows Communication Foundation
 Esta es la tercera de las seis tareas necesarias para crear una aplicación de Windows Communication Foundation (WCF). Para obtener información general de las seis tareas, vea el tema [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md).  
@@ -151,7 +151,7 @@ Esta es la tercera de las seis tareas necesarias para crear una aplicación de W
   
     2.  Paso 2 - Crea una instancia de la clase <xref:System.ServiceModel.ServiceHost> para hospedar el servicio. El constructor toma dos parámetros: el tipo de la clase que implementa el contrato de servicio y la dirección base del servicio.  
   
-    3.  Paso 3 - Crea una nueva instancia de <xref:System.ServiceModel.Description.ServiceEndpoint>. Un punto de conexión de servicio consta de una dirección, un enlace y un contrato de servicio. Por tanto, el constructor <xref:System.ServiceModel.Description.ServiceEndpoint> toma el tipo de interfaz del contrato de servicio, un enlace y una dirección. El contrato de servicio es `ICalculator`, que se define e implemente en el tipo de servicio. El enlace usado en este ejemplo es <xref:System.ServiceModel.WSHttpBinding>, que es un enlace integrado que se emplea para conectarse a extremos que son conformes a las especificaciones de WS-*. Para obtener más información sobre los enlaces de WCF, vea [Información general de enlaces de Windows Communication Foundation](../../../docs/framework/wcf/bindings-overview.md). La dirección se anexa a la dirección base para identificar el punto de conexión. La dirección especificada en este código es "CalculatorService", por lo que la dirección completa para el punto de conexión es `"http://localhost:8000/GettingStarted/CalculatorService"` Agregar un punto de conexión de servicio es opcional cuando se usa .NET Framework 4.0 o una versión posterior. En estas versiones, si no se agrega ningún punto de conexión en el código o en la configuración, WCF agrega un punto de conexión predeterminado para cada combinación de dirección base y contrato implementada por el servicio. Para obtener más información sobre los puntos de conexión predeterminados, vea [Especificación de una dirección de punto de conexión](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Para obtener más información sobre los puntos de conexión, enlaces y comportamientos predeterminados, vea [Configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    3.  Paso 3 - Crea una nueva instancia de <xref:System.ServiceModel.Description.ServiceEndpoint>. Un punto de conexión de servicio consta de una dirección, un enlace y un contrato de servicio. Por tanto, el constructor <xref:System.ServiceModel.Description.ServiceEndpoint> toma el tipo de interfaz del contrato de servicio, un enlace y una dirección. El contrato de servicio es `ICalculator`, que se define e implemente en el tipo de servicio. El enlace usado en este ejemplo es <xref:System.ServiceModel.WSHttpBinding>, que es un enlace integrado que se emplea para conectarse a extremos que son conformes a las especificaciones de WS-*. Para obtener más información sobre los enlaces de WCF, vea [Información general de enlaces de Windows Communication Foundation](../../../docs/framework/wcf/bindings-overview.md). La dirección se anexa a la dirección base para identificar el punto de conexión. La dirección especificada en este código es "CalculatorService", por lo que es la dirección completa para el punto de conexión `"http://localhost:8000/GettingStarted/CalculatorService"`.  
   
         > [!IMPORTANT]
         >  Agregar un punto de conexión de servicio es opcional cuando se usa .NET Framework 4.0 o posterior. En estas versiones, si no se agrega ningún punto de conexión en el código o en la configuración, WCF agrega un punto de conexión predeterminado para cada combinación de dirección base y contrato implementada por el servicio. Para obtener más información sobre los puntos de conexión predeterminados, vea [Especificación de una dirección de punto de conexión](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Para obtener más información sobre los puntos de conexión, enlaces y comportamientos predeterminados, vea [Configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -160,6 +160,12 @@ Esta es la tercera de las seis tareas necesarias para crear una aplicación de W
   
     5.  Paso 5 - Abre <xref:System.ServiceModel.ServiceHost> para escuchar los mensajes entrantes. Observe que el código espera que el usuario presione ENTRAR. Si no lo hace, la aplicación se cerrará inmediatamente y el servicio se cerrará. Observe también que se usa un bloque try/catch. Una vez creada la instancia de <xref:System.ServiceModel.ServiceHost>, el resto del código se coloca en un bloque try/catch. Para obtener más información sobre cómo detectar de forma segura las excepciones producidas por <xref:System.ServiceModel.ServiceHost>, vea [Evitar problemas mediante una declaración de instrucción](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
+> [!IMPORTANT]
+> Edición de App.config en GettingStartedLib para reflejar los cambios realizados en el código: 
+> 1. Cambie la línea 14 a `<service name="GettingStartedLib.CalculatorService">`
+> 2. Cambie la línea 17 a `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+> 3. Cambie la línea 22 en `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+        
 ### <a name="to-verify-the-service-is-working"></a>Para comprobar si el servicio funciona  
   
 1.  Ejecute la aplicación de consola GettingStartedHost desde [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Al ejecutarse en [!INCLUDE[wv](../../../includes/wv-md.md)] y sistemas operativos posteriores, el servicio se debe ejecutar con privilegios de administrador. Dado que Visual se ejecutó con privilegios de administrador, GettingStartedHost también se ejecuta con esos privilegios. También puede iniciar un nuevo símbolo del sistema con privilegios de administrador y ejecutar service.exe desde allí.  

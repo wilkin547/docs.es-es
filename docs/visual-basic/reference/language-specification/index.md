@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: cfdf6945be3f440013716694e633e7ca9c064729
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6708ad107a2ee5b4ba2896d811c103ed49b476b8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648673"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403833"
 ---
 # <a name="visual-basic-language-specification"></a>Especificación del lenguaje de Visual Basic
-La especificación del lenguaje Visual Basic es el origen autorizado para obtener respuestas a todas las preguntas sobre la gramática de Visual Basic y la sintaxis. Contiene información detallada sobre el lenguaje, incluidos numerosos puntos que no se tratan en la documentación de referencia de Visual Basic.  
+La especificación del lenguaje Visual Basic es el origen de autoridad para obtener respuestas a todas las preguntas sobre la gramática de Visual Basic y sintaxis. Contiene información detallada sobre el lenguaje, incluidos muchos aspectos no cubiertos en la documentación de referencia de Visual Basic.  
   
- La especificación está disponible en el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/?LinkId=188623).  
+ La especificación está disponible en el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkId=188623).  
   
 Este sitio contiene la [especificación de VB 11](../../../../_vblang/spec/introduction.md). Se crea a partir de los archivos Markdown del [repositorio de GitHub dotnet/vblang](https://github.com/dotnet/vblang/blob/master/spec/README.md).
 

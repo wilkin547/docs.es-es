@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 459d74f3faf9fab4cba047a87ccff77d193e9026
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17650e06cb505dd778a9c0980c2a32fda8099cb4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399570"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407578"
 ---
 # <a name="how-to-enable-wif-tracing"></a>Cómo: habilitar el seguimiento de WIF
 ## <a name="applies-to"></a>Se aplica a  
@@ -19,7 +19,7 @@ ms.locfileid: "33399570"
 -   Formularios Web Forms ASP.NET®  
   
 ## <a name="summary"></a>Resumen  
- En este tema de procedimientos se proporcionan los procedimientos paso a paso detallados para habilitar el seguimiento de WIF en una aplicación ASP.NET. También se proporcionan instrucciones de prueba de la aplicación para comprobar que el registro y el agente de escucha de seguimiento funcionan correctamente. Esta sección de procedimientos no tiene instrucciones detalladas para crear un servicio de token de seguridad (STS) y en su lugar se utiliza el STS de desarrollo que se incluye con la extensión Identity and Access Tool. El STS de desarrollo no realiza la autenticación real y está pensado únicamente para pruebas. Para completar este procedimiento, tendrá que instalar la extensión Identity and Access Tool. Se puede descargar en la siguiente ubicación: [Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849).  
+ En este tema de procedimientos se proporcionan los procedimientos paso a paso detallados para habilitar el seguimiento de WIF en una aplicación ASP.NET. También se proporcionan instrucciones de prueba de la aplicación para comprobar que el registro y el agente de escucha de seguimiento funcionan correctamente. Esta sección de procedimientos no tiene instrucciones detalladas para crear un servicio de token de seguridad (STS) y en su lugar se utiliza el STS de desarrollo que se incluye con la extensión Identity and Access Tool. El STS de desarrollo no realiza la autenticación real y está pensado únicamente para pruebas. Para completar este procedimiento, tendrá que instalar la extensión Identity and Access Tool. Se puede descargar en la siguiente ubicación: [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849).  
   
 > [!IMPORTANT]
 >  Habilitar la traza de WIF para aplicaciones pasivas, es decir, aplicaciones que utilizan el protocolo de WS-Federation, podría exponer la aplicación a ataques de denegación de servicio (DoS) o a la divulgación de información a terceros malintencionados. Esto incluye tanto RP pasivos como STS pasivos. Por este motivo, es recomendable que no habilite el seguimiento de WIF para RP o STS pasivos en un entorno de producción.  

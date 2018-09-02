@@ -2,17 +2,17 @@
 title: Servicio AJAX mediante el uso de ejemplo de tipos complejos
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: c284fbef36ee7f6dda725ba9a3db9b98fb1549ed
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 4574e5d33ebed7184e229c71e03496db34a95575
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804084"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415658"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>Servicio AJAX mediante el uso de ejemplo de tipos complejos
-Este ejemplo muestra cómo usar Windows Communication Foundation (WCF) para crear un servicio ASP.NET JavaScript asincrónico y XML (AJAX) que crea instancias de tipos complejos y envíe entre el servicio y el cliente como JavaScript Object Notation (JSON). Puede tener acceso a un servicio de AJAX utilizando el código JavaScript de un cliente del explorador web. En este ejemplo se basa en el [servicio AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) ejemplo.  
+Este ejemplo muestra cómo usar Windows Communication Foundation (WCF) para crear un servicio ASP.NET JavaScript asincrónico y XML (AJAX) que crea instancias de tipos complejos y los envía entre el servicio y cliente como JavaScript Object Notation (JSON). Puede tener acceso a un servicio de AJAX utilizando el código JavaScript de un cliente del explorador web. En este ejemplo se basa en el [servicio AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) ejemplo.  
   
- Compatibilidad con AJAX de WCF está optimizado para su uso con ASP.NET AJAX a través del <xref:System.Web.UI.ScriptManager> control. Para obtener un ejemplo del uso de WCF con AJAX de ASP.NET, vea el [muestra AJAX](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
+ Compatibilidad con AJAX en WCF está optimizado para su uso con AJAX de ASP.NET a través de la <xref:System.Web.UI.ScriptManager> control. Para obtener un ejemplo del uso de WCF con AJAX de ASP.NET, vea el [muestras de AJAX](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
@@ -51,9 +51,9 @@ function onSuccess(mathResult){
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Compile la solución ComplexTypeAjaxService.sln tal y como se describe en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Compile la solución complextypeajaxservice.sln tal y como se describe en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Vaya a http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx (no abra ComplexTypeClientPage.aspx en el explorador desde el directorio del proyecto).  
   
@@ -62,7 +62,7 @@ function onSuccess(mathResult){
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ComplexTypeAjaxService`  
   

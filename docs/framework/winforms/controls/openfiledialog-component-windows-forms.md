@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Open File dialog box
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-ms.openlocfilehash: ba04b904930f2393022ea4ca6276cef95e51d833
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 108411269067dc4b19b585b991dffbd78f2bb23f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539957"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405104"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog (Componente, formularios Windows Forms)
-El componente <xref:System.Windows.Forms.OpenFileDialog> de Windows Forms es un cuadro de diálogo preconfigurado. Es el mismo **archivos abiertos** cuadro de diálogo expuesto por el sistema operativo Windows. Se hereda de la clase <xref:System.Windows.Forms.CommonDialog>.  
+El componente <xref:System.Windows.Forms.OpenFileDialog> de Windows Forms es un cuadro de diálogo preconfigurado. Es el mismo **abrir archivo** cuadro de diálogo expuesto por el sistema operativo Windows. Se hereda de la clase <xref:System.Windows.Forms.CommonDialog>.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general del componente OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
@@ -33,5 +33,5 @@ El componente <xref:System.Windows.Forms.OpenFileDialog> de Windows Forms es un 
  [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
- [Código esencial para los cuadros de diálogo de Windows Forms](http://go.microsoft.com/fwlink/?LinkID=102575)  
+ [Código esencial para los cuadros de diálogo de Windows Forms](https://go.microsoft.com/fwlink/?LinkID=102575)  
  Describe los componentes y controles de cuadros de diálogo de Windows Forms y el código necesario para ejecutar sus funciones básicas. (artículo técnico de MSDN Online Library)

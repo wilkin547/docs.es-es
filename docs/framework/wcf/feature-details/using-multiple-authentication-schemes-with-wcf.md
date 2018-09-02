@@ -2,18 +2,18 @@
 title: Usar múltiples esquemas de autenticación con WCF
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 140211f10f7cdc88a3df8eb8ea1c30df73b0c4c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498451"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408978"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Usar múltiples esquemas de autenticación con WCF
-WCF permite ahora especificar varios esquemas de autenticación en un único punto de conexión. Además los servicios hospedados en web pueden heredar sus valores de autenticación directamente de IIS. Los servicios autohospedados pueden especificar los esquemas de autenticación que se pueden usar. Para obtener más información acerca de cómo establecer la configuración de autenticación en IIS, consulte [autenticación de IIS](http://go.microsoft.com/fwlink/?LinkId=232458)  
+WCF permite ahora especificar varios esquemas de autenticación en un único punto de conexión. Además los servicios hospedados en web pueden heredar sus valores de autenticación directamente de IIS. Los servicios autohospedados pueden especificar los esquemas de autenticación que se pueden usar. Para obtener más información acerca de cómo establecer la configuración de autenticación en IIS, consulte [autenticación IIS](https://go.microsoft.com/fwlink/?LinkId=232458)  
   
 ## <a name="iis-hosted-services"></a>Servicios hospedados en IIS  
- Para los servicios hospedados en IIS, establezca los esquemas de autenticación que desea usa en IIS. A continuación, en el archivo web.config de su servicio, en la configuración de enlace especifique el tipo clientCredential como "InheritedFromHost" como se muestra en el fragmento XML siguiente:  
+ Para los servicios hospedados en IIS, establezca los esquemas de autenticación que desea usa en IIS. A continuación, en el archivo web.config de su servicio, en la configuración de enlace especifique tipo clientCredential como "InheritedFromHost" como se muestra en el siguiente fragmento XML:  
   
 ```xml  
 <bindings>  
@@ -27,7 +27,7 @@ WCF permite ahora especificar varios esquemas de autenticación en un único pun
     </bindings>  
 ```  
   
- Puede especificar que desea que solo un subconjunto de los esquemas de autenticación que se usará con el servicio mediante el ServiceAuthenticationBehavior o el \<serviceAuthenticationManager > elemento. Al configurar esto en el código, use ServiceAuthenticationBehavior como se muestra en el fragmento de código siguiente.  
+ Puede especificar que desea que solo un subconjunto de esquemas de autenticación que se usará con el servicio mediante el ServiceAuthenticationBehavior o el \<serviceAuthenticationManager > elemento. Al configurar esto en el código, use ServiceAuthenticationBehavior como se muestra en el fragmento de código siguiente.  
   
 ```csharp  
 // ...  
@@ -47,7 +47,7 @@ else
 // ...  
 ```  
   
- Al configurar esto en un archivo de configuración, use la \<serviceAuthenticationManager > elemento tal como se muestra en el siguiente fragmento XML.  
+ Al configurar esto en un archivo de configuración, use el \<serviceAuthenticationManager > elemento tal como se muestra en el siguiente fragmento XML.  
   
 ```xml  
 <behaviors>  

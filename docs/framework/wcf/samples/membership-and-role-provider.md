@@ -2,12 +2,12 @@
 title: Proveedor de pertenencia y roles
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 94808fbb3fae1714f63a4682dfe1096ca314985c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bff100189c904706f3c7c886945383252ce7bfcb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506702"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405778"
 ---
 # <a name="membership-and-role-provider"></a>Proveedor de pertenencia y roles
 El ejemplo de proveedor de pertenencia y función muestra el modo en que un servicio puede utilizar los proveedores de pertenencia y función de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] para autenticar y autorizar a los clientes.  
@@ -69,7 +69,7 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
 </system.web>  
 ```  
   
- El servicio expone un extremo único para comunicarse con el servicio, que se define utilizando el archivo de configuración Web.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding` estándar, que usa la autenticación de Windows de forma predeterminada. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario. El comportamiento especifica que se va a usar el certificado de servidor para la autenticación del servicio. El certificado de servidor debe contener el mismo valor para la `SubjectName` como el `findValue` de atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento de configuración. Además, el comportamiento especifica que el proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] realiza la autenticación de los pares nombre de usuario y contraseña, y que el proveedor de función de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] realiza la asignación de funciones mediante la especificación de los nombres definidos para los dos proveedores.  
+ El servicio expone un extremo único para comunicarse con el servicio, que se define utilizando el archivo de configuración Web.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding` estándar, que usa la autenticación de Windows de forma predeterminada. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario. El comportamiento especifica que se va a usar el certificado de servidor para la autenticación del servicio. El certificado de servidor debe contener el mismo valor para el `SubjectName` como el `findValue` atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento de configuración. Además, el comportamiento especifica que el proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] realiza la autenticación de los pares nombre de usuario y contraseña, y que el proveedor de función de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] realiza la asignación de funciones mediante la especificación de los nombres definidos para los dos proveedores.  
   
 ```xml  
 <system.serviceModel>  
@@ -118,9 +118,9 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Para compilar el C# o Visual Basic .NET edition de la solución, siga las instrucciones que aparecen en [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+1.  Para compilar la edición de la solución de C# o Visual Basic. NET, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-2.  Asegúrese de que ha configurado la [base de datos de servicios de aplicación de ASP.NET](http://go.microsoft.com/fwlink/?LinkId=94997).  
+2.  Asegúrese de que ha configurado el [ASP.NET Application Services Database](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
     >  Si está ejecutando SQL Server Express Edition, su nombre de servidor es .\SQLEXPRESS. Se debería utilizar este servidor al configurar la base de datos de los servicios de aplicación de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], así como en la cadena de conexión de Web.config.  
@@ -138,7 +138,7 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
   
 3.  Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4.  Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
@@ -150,9 +150,9 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
   
 4.  Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente. Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
   
-5.  En el servidor, abra un símbolo del sistema de Visual Studio con privilegios de administrador y ejecute `setup.bat service`. Ejecuta `setup.bat` con el `service` argumento se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service.cer.  
+5.  En el servidor, abra un símbolo del sistema de Visual Studio con privilegios de administrador y ejecute `setup.bat service`. Ejecutando `setup.bat` con el `service` argumento crea un certificado de servicio con el nombre de dominio completo del equipo y exporta el certificado de servicio a un archivo denominado Service.cer.  
   
-6.  Edite el archivo Web.config para reflejar el nuevo nombre de certificado (en el `findValue` de atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), que es el mismo que el nombre de dominio completo del equipo.  
+6.  Edite el archivo Web.config para reflejar el nuevo nombre del certificado (en el `findValue` atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), que es el mismo que el nombre de dominio completo del equipo.  
   
 7.  Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
   
@@ -160,14 +160,14 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
   
 9. En el cliente, abra un símbolo del sistema de Visual Studio con privilegios de administrador y ejecute ImportServiceCert.bat. Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.  
   
-10. En el equipo cliente, inicie Client.exe desde un símbolo del sistema. Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. En el equipo cliente, inicie Client.exe desde un símbolo del sistema. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
 -   Ejecute Cleanup.bat en la carpeta de ejemplos después de que haya terminado de ejecutar el ejemplo.  
   
 > [!NOTE]
->  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se hayan instalado en el almacén CurrentUser - TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado los ejemplos de Windows Communication Foundation (WCF) que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser - trustedpeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="the-setup-batch-file"></a>Archivo de instalación por lotes  
  El archivo por lotes Setup.bat incluido con este ejemplo permite configurar el servidor con los certificados pertinentes para ejecutar una aplicación autohospedada que requiera seguridad basada en el certificado del servidor. Este archivo por lotes debe modificarse para que funcione en varios equipos o en un escenario sin hospedaje.  

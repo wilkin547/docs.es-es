@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
-ms.openlocfilehash: 2f705df810e7f3653589ca776a69bbe592458833
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83450e6ace33e89ddd263a1514f74f4d4e231cf7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365558"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405808"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Ejecución de SqlCommand Execution con SqlNotificationRequest
 Los objetos <xref:System.Data.SqlClient.SqlCommand> se pueden configurar para generar una notificación si, después de capturar datos del servidor, éstos generasen un conjunto de resultados diferente en caso de que se ejecutase de nuevo la consulta. Esto resulta útil si desea usar colas de notificaciones personalizadas en el servidor o si no desea mantener objetos activos.  
@@ -72,4 +72,4 @@ command.ExecuteReader();
   
 ## <a name="see-also"></a>Vea también  
  [Notificaciones de consulta en SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

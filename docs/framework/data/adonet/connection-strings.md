@@ -2,12 +2,12 @@
 title: Cadenas de conexión de ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 03d768430139fa1078f39b470403abcf75dd83a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b4e057cab4c562fc51893631c35d66409e1c3731
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757221"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399874"
 ---
 # <a name="connection-strings-in-adonet"></a>Cadenas de conexión de ADO.NET
 .NET Framework 2.0 incorporó nuevas capacidades para trabajar con cadenas de conexión, incluida la introducción de nuevas palabras clave en las clases generadoras de cadenas de conexión, que facilitan la creación de cadenas de conexión válidas en tiempo de ejecución.  
@@ -39,4 +39,4 @@ ms.locfileid: "32757221"
   
 ## <a name="see-also"></a>Vea también  
  [Conexión a un origen de datos](/cpp/data/odbc/connecting-to-a-data-source)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

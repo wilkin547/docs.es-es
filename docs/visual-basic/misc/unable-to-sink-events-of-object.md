@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID96
 ms.assetid: e40b19a2-8100-43ff-a1a4-0ddee3cc7f9a
-ms.openlocfilehash: 441eb20a93fdd998dd08a4763cb9cff311f1287a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46e8b41567820df24c5206a2acd8ac661faeed28
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642800"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405614"
 ---
 # <a name="unable-to-sink-events-of-object-because-the-object-is-already-firing-events-to-the-maximum-number-of-event-receivers-it-supports"></a>No se pueden recibir eventos del objeto porque el objeto ya está desencadenando eventos hasta el número máximo de receptores de eventos que admite.
 Se ha superado el número máximo de receptores de eventos admitidos por el objeto.  
@@ -19,5 +19,5 @@ Se ha superado el número máximo de receptores de eventos admitidos por el obje
 -   Reduzca el número de receptores de eventos.  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo: generar eventos controlados por un receptor COM](http://msdn.microsoft.com/library/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd)  
+ [Cómo: generar eventos controlados por un receptor COM](https://msdn.microsoft.com/library/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd)  
  [Tutorial: Controlar eventos](../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)

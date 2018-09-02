@@ -2,18 +2,18 @@
 title: Usar el seguimiento para resolver problemas de las aplicaciones
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: ee9aaaae80f213f026a222ac1754ae8b4fdf2d37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f991533b61705c8d0a1a8e71b632dd53f24dd979
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517048"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401282"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Usar el seguimiento para resolver problemas de las aplicaciones
-Windows Workflow Foundation (WF) le permite realizar un seguimiento de información relacionada con el flujo de trabajo para proporcionar detalles en la ejecución de un servicio o aplicación de Windows Workflow Foundation. Los hosts de Windows Workflow Foundation son capaz de capturar eventos de flujo de trabajo durante la ejecución de una instancia de flujo de trabajo. Si el flujo de trabajo genera errores o excepciones, puede usar los detalles de seguimiento para solucionar problemas de procesamiento de Windows Workflow Foundation.  
+Windows Workflow Foundation (WF) le permite realizar un seguimiento de información relacionada con el flujo de trabajo para proporcionar detalles en la ejecución de un servicio o aplicación de Windows Workflow Foundation. Hosts de Windows Workflow Foundation pueden capturar eventos de flujo de trabajo durante la ejecución de una instancia de flujo de trabajo. Si el flujo de trabajo genera errores o excepciones, puede usar los detalles de seguimiento para solucionar problemas de procesamiento de Windows Workflow Foundation.  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>Solucionar problemas de un WF con el seguimiento de WF  
- Para detectar errores en el procesamiento de una actividad de Windows Workflow Foundation, puede habilitar el seguimiento con un perfil de seguimiento para consultar un <xref:System.Activities.Tracking.ActivityStateRecord> con el estado Faulted. La consulta correspondiente se especifica en el siguiente código.  
+ Para detectar errores en el procesamiento de una actividad de Windows Workflow Foundation, puede habilitar el seguimiento con un perfil de seguimiento que realiza consultas sobre un <xref:System.Activities.Tracking.ActivityStateRecord> con el estado Faulted. La consulta correspondiente se especifica en el siguiente código.  
   
 ```xml  
 <activityStateQueries>  
@@ -45,12 +45,12 @@ Windows Workflow Foundation (WF) le permite realizar un seguimiento de informaci
 </workflowInstanceQueries>  
 ```  
   
- Cuando una instancia de flujo de trabajo encuentra una excepción no controlada, una <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> objeto se genera si se ha habilitado el seguimiento de Windows Workflow Foundation.  
+ Cuando una instancia de flujo de trabajo encuentra una excepción no controlada, un <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> objeto se genera si se ha habilitado el seguimiento de Windows Workflow Foundation.  
   
- Este registro de seguimiento contiene los detalles del error en forma de pila de excepciones-. Tiene información sobre el origen del error (por ejemplo, la actividad) que provocó y que produjo la excepción no controlada. Para suscribirse a eventos de error desde un equipo con Windows Workflow Foundation, habilite el seguimiento agregando un participante de seguimiento. Configure este participante con un perfil de seguimiento que realice consultas de `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord>y `WorkflowInstanceQuery (state="UnhandledException")`.  
+ Este registro de seguimiento contiene los detalles del error en forma de pila de excepciones-. Tiene información sobre el origen del error (por ejemplo, la actividad) que y que produjo la excepción no controlada. Para suscribirse a eventos de error de un Windows Workflow Foundation, habilite el seguimiento agregando un participante de seguimiento. Configure este participante con un perfil de seguimiento que realice consultas de `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord>y `WorkflowInstanceQuery (state="UnhandledException")`.  
   
- Si el seguimiento se habilita mediante el participante de seguimiento de ETW, los eventos de error se emiten en una sesión ETW. Los eventos pueden verse con el Visor de eventos. Se puede encontrar bajo el nodo **aplicaciones -> el Visor de eventos y registros de servicios -> Microsoft -> Windows -> servidor de aplicaciones** en el canal analítico.  
+ Si el seguimiento se habilita mediante el participante de seguimiento de ETW, los eventos de error se emiten en una sesión ETW. Los eventos pueden verse con el Visor de eventos. Esto se puede encontrar bajo el nodo **aplicaciones -> el Visor de eventos y registros de servicios -> Microsoft -> Windows -> servidor de aplicaciones-aplicaciones** en el canal analítico.  
   
 ## <a name="see-also"></a>Vea también  
- [Supervisión de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Supervisión de aplicaciones con App Fabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

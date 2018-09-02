@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc25ff282772cc82b8ebe5d59e729a6a48afa8f8
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 9f24759d68f007caf5f79096c6d4cebb7c050851
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999592"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400231"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opciones del compilador de Visual Basic alfabético
 El compilador de línea de comandos de Visual Basic se proporciona como una alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de Visual Studio. La siguiente es una lista de las opciones del compilador de línea de comandos de Visual Basic ordenadas alfabéticamente.  
@@ -84,6 +84,6 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
   
 ## <a name="see-also"></a>Vea también  
  [Opciones del compilador de Visual Basic, por categoría](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
- [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [Introducción al Diseñador de proyectos](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
  [Opciones del compilador de C#, por orden alfabético](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [Opciones del compilador de C#, por categoría](../../../csharp/language-reference/compiler-options/listed-by-category.md)

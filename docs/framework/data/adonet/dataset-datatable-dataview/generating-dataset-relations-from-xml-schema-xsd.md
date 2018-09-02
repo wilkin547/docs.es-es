@@ -2,15 +2,15 @@
 title: Generar relaciones de objetos DataSet en un esquema XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: fdf22c311ef7b4267f4a4da8566e4ea59504b103
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7c73dcec3d23b094436791af6649de83b9eacad9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758443"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416357"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generar relaciones de objetos DataSet en un esquema XML (XSD)
-En un <xref:System.Data.DataSet>, para formar una asociación entre dos o más columnas se debe crear una relación primaria-secundaria. Hay tres formas de representar un **conjunto de datos** relación dentro de un esquema de lenguaje (XSD) de definición de esquema XML:  
+En un <xref:System.Data.DataSet>, para formar una asociación entre dos o más columnas se debe crear una relación primaria-secundaria. Hay tres formas para representar un **DataSet** relación dentro de un esquema (XSD) del lenguaje de definición de esquemas XML:  
   
 -   Especificar tipos complejos anidados.  
   
@@ -33,10 +33,10 @@ En un <xref:System.Data.DataSet>, para formar una asociación entre dos o más c
 </xs:element>  
 ```  
   
- El proceso de asignación de esquema XML crea tablas en la **conjunto de datos** que corresponden a los tipos complejos anidados en el esquema. También crea columnas adicionales que se usan como primario**-** columnas primaria-secundaria para las tablas generadas. Tenga en cuenta que estos primario**-** columnas primaria-secundaria especifican relaciones, que no es lo mismo que especificar restricciones de clave externa y clave principal.  
+ El proceso de asignación de esquema XML crea tablas en la **DataSet** que corresponden a los tipos complejos anidados en el esquema. También crea columnas adicionales que se usan como elemento primario**-** columnas secundarias para las tablas generadas. Tenga en cuenta que estos primario**-** columnas secundaria especifican relaciones, que no es lo mismo que especificar restricciones de clave principal/clave externa.  
   
 ## <a name="msdatarelationship-annotation"></a>Anotación msdata:Relationship  
- El **msdata: Relationship** anotación permite especificar explícitamente relaciones primaria-secundaria entre los elementos del esquema que no están anidados. En el ejemplo siguiente se muestra la estructura de la **relación** elemento.  
+ El **msdata: Relationship** anotación le permite especificar explícitamente relaciones de elementos primarios y secundarios entre los elementos en el esquema que no están anidados. El ejemplo siguiente muestra la estructura de la **relación** elemento.  
   
 ```xml  
 <msdata:Relationship name="CustOrderRelationship"    
@@ -46,9 +46,9 @@ msdata:parentkey=""
 msdata:childkey="" />  
 ```  
   
- Los atributos de la **msdata: Relationship** anotación identifican los elementos implicados en la relación de elementos primarios y secundarios, así como el **parentkey** y **childkey** elementos y atributos implicados en la relación. El proceso de asignación utiliza esta información para generar tablas en el **conjunto de datos** y para crear la relación de clave principal/clave externa entre estas tablas.  
+ Los atributos de la **msdata: Relationship** anotación identificar los elementos que participan en la relación de elementos primarios y secundarios, así como la **parentkey** y **childkey** los elementos y atributos implicados en la relación. El proceso de asignación utiliza esta información para generar tablas en el **DataSet** y crear la relación de clave principal/clave externa entre estas tablas.  
   
- Por ejemplo, el siguiente fragmento de esquema especifica **orden** y **OrderDetail** elementos del mismo nivel (no están anidados). El esquema especifica un **msdata: Relationship** anotación, que especifica la relación de elementos primarios y secundarios entre estos dos elementos. En este caso, se debe especificar una relación explícita mediante la **msdata: Relationship** anotación.  
+ Por ejemplo, el siguiente fragmento de esquema especifica **orden** y **OrderDetail** elementos del mismo nivel (no están anidados). El esquema especifica un **msdata: Relationship** anotación, que especifica la relación primario-secundario entre estos dos elementos. En este caso, se debe especificar una relación explícita mediante la **msdata: Relationship** anotación.  
   
 ```xml  
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
@@ -78,24 +78,24 @@ msdata:childkey="" />
   </xs:annotation>  
 ```  
   
- El proceso de asignación utiliza el **relación** elemento que se va a crear una relación de elementos primarios y secundarios entre el **OrderNumber** columna en el **orden** tabla y la **OrderNo** columna en el **OrderDetail** tabla el **conjunto de datos**. El proceso de asignación sólo especifica la relación; no especifica automáticamente ninguna restricción para los valores de estas columnas, como ocurre en las restricciones de clave principal y clave externa de las bases de datos relacionales.  
+ El proceso de asignación utiliza el **relación** elemento para crear una relación de elementos primarios y secundarios entre el **OrderNumber** columna en el **orden** tabla y el **OrderNo** columna en el **OrderDetail** de tabla en la **DataSet**. El proceso de asignación sólo especifica la relación; no especifica automáticamente ninguna restricción para los valores de estas columnas, como ocurre en las restricciones de clave principal y clave externa de las bases de datos relacionales.  
   
 ### <a name="in-this-section"></a>En esta sección  
  [Asignación de relaciones implícitas entre elementos de esquema anidados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
- Describe las restricciones y relaciones que se crean implícitamente en un **conjunto de datos** cuando se encuentran elementos anidados en el esquema XML.  
+ Describe las restricciones y relaciones que se crean implícitamente en un **DataSet** cuando se encuentran elementos anidados en el esquema XML.  
   
  [Asignación de relaciones especificadas para elementos anidados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
- Describe cómo establecer explícitamente relaciones en un **conjunto de datos** para los elementos anidados del esquema XML.  
+ Describe cómo establecer explícitamente relaciones en un **DataSet** para elementos anidados en el esquema XML.  
   
  [Definición de relaciones entre elementos sin anidamiento](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
- Describe cómo crear relaciones en un **conjunto de datos** entre elementos de esquema XML que no están anidados.  
+ Describe cómo crear relaciones en un **DataSet** entre los elementos de esquema XML que no están anidados.  
   
 ### <a name="related-sections"></a>Secciones relacionadas  
  [Derivación de una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- Describe la estructura relacional, o esquema, de un **conjunto de datos** creado a partir de esquema XML Schema definition language (XSD).  
+ Describe la estructura relacional, o esquema, de un **DataSet** creado a partir de esquema (XSD).  
   
  [Asignación de restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Describe los elementos de esquema XML utilizados para crear restricciones de clave únicas y externas en un **conjunto de datos**.  
+ Describe los elementos de esquema XML utilizados para crear restricciones de clave únicas y externas en un **DataSet**.  
   
 ## <a name="see-also"></a>Vea también  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

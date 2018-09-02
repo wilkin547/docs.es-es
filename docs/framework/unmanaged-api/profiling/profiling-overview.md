@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d7b12004efce76f9ac591f18fd0f4e06fdd7fd0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934956"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416965"
 ---
 # <a name="profiling-overview"></a>Información general sobre la generación de perfiles
 <a name="top"></a> Un generador de perfiles es una herramienta que supervisa la ejecución de otra aplicación. Un generador de perfiles de Common Language Runtime (CLR) es una biblioteca de vínculos dinámicos (DLL) compuesta de funciones que intercambian mensajes con el CLR utilizando la API de generación de perfiles. CLR carga en tiempo de ejecución la DLL del generador de perfiles.  
@@ -209,7 +209,7 @@ Arquitectura de generación de perfiles
 ### <a name="stack-snapshot"></a>Instantánea de pila  
  Una instantánea de pila es un registro de la pila de un subproceso en un momento determinado. La API de generación de perfiles permite la traza de funciones administradas en la pila, pero deja la traza de las funciones no administradas al rastreador de pila propio del generador de perfiles.  
   
- Para obtener más información acerca de cómo programar el generador de perfiles para rastrear pilas administradas, vea la [ICorProfilerInfo2:: DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) método en este conjunto de documentación y [recorrido de pila de Profiler en .NET Framework 2.0: DoStackSnapshot](http://go.microsoft.com/fwlink/?LinkId=73638).
+ Para obtener más información acerca de cómo programar el generador de perfiles para rastrear pilas administradas, vea la [ICorProfilerInfo2:: DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) método en este conjunto de documentación y [recorrido de pila de Profiler en .NET Framework 2.0: DoStackSnapshot](https://go.microsoft.com/fwlink/?LinkId=73638).
   
 ### <a name="shadow-stack"></a>Pila sombra  
  Utilizar el método de instantánea con demasiada frecuencia puede crear rápidamente un problema de rendimiento. Si desea realizar seguimientos de pila con frecuencia, el generador de perfiles en su lugar, debe compilar una pila sombra utilizando el [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md), y [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) devoluciones de llamada de excepción. La pila sombra es siempre actual y se copia rápidamente al almacenamiento cada vez que se necesita una instantánea de la pila.  

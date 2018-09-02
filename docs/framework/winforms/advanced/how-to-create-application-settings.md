@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: e6e268169949994e1b58b5b8a7dcd0429895fb38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524175"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400535"
 ---
 # <a name="how-to-create-application-settings"></a>Cómo: Crear la configuración de la aplicación
 Usando código administrado, puede crear una nueva opción de configuración de la aplicación y enlazarla a las propiedades o a los controles del formulario para que esta opción de configuración se cargue y se guarde automáticamente en tiempo de ejecución.  
   
  En el siguiente procedimiento, creará manualmente una clase contenedora que deriva de <xref:System.Configuration.ApplicationSettingsBase>. A esta clase se agrega una propiedad públicamente accesible para cada opción de configuración de la aplicación que desee exponer.  
   
- También puede realizar este procedimiento con un mínimo de código en el diseñador de Visual Studio.  Consulte también [Cómo: crear configuración de aplicación mediante el diseñador](http://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ También puede realizar este procedimiento con un mínimo de código en el diseñador de Visual Studio.  Consulte también [Cómo: crear configuración de aplicación mediante el diseñador](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Para crear una nueva opción de configuración de la aplicación mediante programación  
   

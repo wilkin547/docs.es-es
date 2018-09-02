@@ -2,15 +2,15 @@
 title: Seguimiento de SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 9c42690570fb3f90f576327dcc5cfe870288b99a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f8d7bbd57965b4d7399373416caea87d4d84187
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518311"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402678"
 ---
 # <a name="sql-tracking"></a>Seguimiento de SQL
-Este ejemplo muestra cómo escribir un participante de seguimiento SQL personalizado, que escribe registros de seguimiento en una base de datos SQL. Windows Workflow Foundation (WF) proporciona seguimiento para ganar visibilidad en la ejecución de una instancia de flujo de trabajo de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. Para obtener más información acerca del seguimiento de flujo de trabajo, consulte [seguimiento y traza del flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+Este ejemplo muestra cómo escribir un participante de seguimiento SQL personalizado, que escribe registros de seguimiento en una base de datos SQL. Windows Workflow Foundation (WF) proporciona el flujo de trabajo de seguimiento para ganar visibilidad en la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. Para obtener más información acerca del seguimiento de flujo de trabajo, consulte [seguimiento y traza del flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
@@ -39,9 +39,9 @@ Este ejemplo muestra cómo escribir un participante de seguimiento SQL personali
   
 9. En el cliente de prueba WCF, haga clic en el **archivo** menú y seleccione **Agregar servicio**. Pegue la dirección del servicio local en el cuadro de texto. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
-10. En el cliente de prueba WCF, haga doble clic en **GetStockPrice**. Se abrirá la `GetStockPrice` operación que toma un parámetro, escriba el valor `Contoso` y haga clic en **Invoke**.  
+10. Haga doble clic en el cliente de prueba WCF, **GetStockPrice**. Se abrirá el `GetStockPrice` operación que toma un parámetro, escriba el valor `Contoso` y haga clic en **Invoke**.  
   
-11. Los registros de seguimiento emitidos se escriben en una base de datos SQL. Para ver los registros de seguimiento, abra la base de datos TrackingSample en SQL Management Studio y navegue hasta las tablas. Para obtener más información acerca de SQL Server Management Studio, consulte [Introducción a SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). Puede descargar SQL Server 2008 Management Studio Express [aquí](http://go.microsoft.com/fwlink/?LinkId=180520). La ejecución de una consulta de selección en las tablas muestra los datos dentro de los registros de seguimiento almacenados en las tablas respectivas.  
+11. Los registros de seguimiento emitidos se escriben en una base de datos SQL. Para ver los registros de seguimiento, abra la base de datos TrackingSample en SQL Management Studio y navegue hasta las tablas. Para obtener más información acerca de SQL Server Management Studio, consulte [Introducción a SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express se puede descargar [aquí](https://go.microsoft.com/fwlink/?LinkId=180520). La ejecución de una consulta de selección en las tablas muestra los datos dentro de los registros de seguimiento almacenados en las tablas respectivas.  
   
 #### <a name="to-uninstall-the-sample"></a>Para desinstalar el ejemplo  
   
@@ -55,9 +55,9 @@ Este ejemplo muestra cómo escribir un participante de seguimiento SQL personali
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de supervisión de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

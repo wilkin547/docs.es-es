@@ -2,17 +2,17 @@
 title: Generar SQL de modificación
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071957"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417252"
 ---
 # <a name="modification-sql-generation"></a>Generar SQL de modificación
 En esta sección se describe cómo desarrollar un módulo de generación de SQL de modificación para el proveedor (de bases de datos conformes a SQL:1999). Este módulo es responsable de la conversión de un árbol de comandos de modificación en las instrucciones INSERT, UPDATE o DELETE de SQL adecuadas.  
   
- Para obtener información sobre la generación de SQL con las instrucciones select, vea [generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md).  
+ Para obtener información sobre la generación de SQL para las instrucciones select, vea [generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md).  
   
 ## <a name="overview-of-modification-command-trees"></a>Información general sobre los árboles de comandos de modificación  
  El módulo de generación de SQL de modificación genera instrucciones SQL de modificación específicas de la base de datos en función de un DbModificationCommandTree de entrada determinado.  
@@ -27,9 +27,9 @@ En esta sección se describe cómo desarrollar un módulo de generación de SQL 
   
  DbModificationCommandTree y sus implementaciones producidos por el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] siempre representan una operación única fila. En esta sección se describen estos tipos con sus restricciones en .NET Framework versión 3.5.  
   
- ![Diagrama de](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![Diagrama](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
- DbModificationCommandTree tiene una propiedad de destino que representa el conjunto de destinos para la operación de modificación. La propiedad Expression del destino, que define el conjunto de entrada, siempre es DbScanExpression.  Una expresión DbScanExpression puede representar una tabla o una vista o un conjunto de datos definida con una consulta si la propiedad de metadatos "Definición de consulta" de su objetivo es distinto de null.  
+ DbModificationCommandTree tiene una propiedad de destino que representa el conjunto de destinos para la operación de modificación. La propiedad Expression del destino, que define el conjunto de entrada, siempre es DbScanExpression.  Una expresión DbScanExpression puede representar una tabla o una vista o un conjunto de datos definidos con una consulta si la propiedad de metadatos "Definición de consulta" de su destino es distinto de null.  
   
  Una expresión DbScanExpression que representa una consulta solo puede alcanzar un proveedor como destino de la modificación si el conjunto se definió mediante una consulta de definición del modelo pero no se proporcionó ninguna función para la operación de modificación correspondiente. Es posible que los proveedores no puedan admitir este tipo de escenario (por ejemplo, SqlClient no puede).  
   
@@ -83,7 +83,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Generación de SQL de modificación en el proveedor de ejemplo  
- El [proveedor de ejemplo de Entity Framework](http://go.microsoft.com/fwlink/?LinkId=180616) muestra los componentes de proveedores de datos de ADO.NET que admiten la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Tiene como destino una base de datos de SQL Server 2005 y se implementa como un contenedor en el proveedor de datos ADO.NET 2.0 System.Data.SqlClient.  
+ El [proveedor de ejemplo de Entity Framework](https://go.microsoft.com/fwlink/?LinkId=180616) muestra los componentes de proveedores de datos de ADO.NET que admiten la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Tiene como destino una base de datos de SQL Server 2005 y se implementa como un contenedor en el proveedor de datos ADO.NET 2.0 System.Data.SqlClient.  
   
  El módulo de generación de SQL de modificación del proveedor de ejemplo (situado en el archivo SQL Generation\DmlSqlGenerator.cs) toma un árbol DbModificationCommandTree como entrada y genera una única instrucción SQL de modificación posiblemente seguida por una instrucción SELECT para devolver un lector si se especifica en DbModificationCommandTree. Observe que la base de datos de SQL Server de destino afecta a la forma de los comandos generados.  
   
@@ -104,7 +104,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Generar un comando SQL de inserción  
  Para una implementación DbInsertCommandTree determinada en el proveedor de ejemplo, el comando de inserción generado sigue una de las dos plantillas de inserción siguientes.  
   
- La primera plantilla incluye un comando para realizar la inserción dados los valores de la lista de SetClauses y una instrucción SELECT para devolver las propiedades especificadas en la propiedad Returning para la fila insertada si la propiedad Returning no es NULL. El elemento de predicado "\@ @ROWCOUNT > 0" es true si se ha insertado una fila. El elemento de predicado "keyMemberI = keyValueI &#124; SCOPE_IDENTITY ()" toma la forma "keyMemberI = SCOPE_IDENTITY ()" únicamente si keyMemeberI es una clave generada por el almacén, ya que SCOPE_IDENTITY () devuelve el último valor de identidad insertado en una identidad () columna generada por el almacén).  
+ La primera plantilla incluye un comando para realizar la inserción dados los valores de la lista de SetClauses y una instrucción SELECT para devolver las propiedades especificadas en la propiedad Returning para la fila insertada si la propiedad Returning no es NULL. El elemento de predicado "\@ @ROWCOUNT > 0" es true si se ha insertado una fila. El elemento de predicado "keyMemberI = keyValueI &#124; SCOPE_IDENTITY ()" toma la forma "keyMemberI = SCOPE_IDENTITY ()" únicamente si keyMemeberI es una clave generada por el almacén, ya que SCOPE_IDENTITY () devuelve el último valor identity insertado en una identidad () columna generada por el almacén).  
   
 ```  
 -- first insert Template  

@@ -2,15 +2,15 @@
 title: Inferir texto de elemento
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: b32d8f3f89a16166ffc0e903ef1f63c3b97a249c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b70f76d2702ebcb098c64ea84900b723fbc137ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762720"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405793"
 ---
 # <a name="inferring-element-text"></a>Inferir texto de elemento
-Si el elemento contiene texto y no tiene elementos secundarios que se deducen como tablas (como elementos con atributos) o elementos repetidos, una nueva columna con el nombre **TableName_Text** se agregará a la tabla que se deduzca para el elemento. El texto contenido en el elemento se agregará a una fila de la tabla y se almacenará en la nueva columna. El **ColumnMapping** propiedad de la nueva columna se establecerá en **MappingType.SimpleContent**.  
+Si un elemento contiene texto y no tiene elementos secundarios que se deducen como tablas (como elementos con atributos) o elementos repetidos, una nueva columna con el nombre **TableName_Text** se agregarán a la tabla que se deduzca para el elemento. El texto contenido en el elemento se agregará a una fila de la tabla y se almacenará en la nueva columna. El **ColumnMapping** propiedad de la nueva columna se establecerá en **MappingType.SimpleContent**.  
   
  Por ejemplo, tomemos el siguiente código XML.  
   
@@ -40,7 +40,7 @@ Si el elemento contiene texto y no tiene elementos secundarios que se deducen co
 </Element1>  
 ```  
   
- El proceso de inferencia producirá una tabla denominada **Element1** con una columna denominada **ChildElement1**. El texto de la **ChildElement1** elemento se incluirá en una fila de la tabla. El otro texto se pasará por alto. El **ColumnMapping** propiedad de la **ChildElement1** columna se establecerá en **MappingType.Element**.  
+ El proceso de inferencia producirá una tabla denominada **Element1** con una columna denominada **ChildElement1**. El texto para el **ChildElement1** elemento se incluirá en una fila en la tabla. El otro texto se pasará por alto. El **ColumnMapping** propiedad de la **ChildElement1** columna se establecerá en **MappingType.Element**.  
   
  **Conjunto de datos:** DocumentElement  
   
@@ -56,4 +56,4 @@ Si el elemento contiene texto y no tiene elementos secundarios que se deducen co
  [Carga de información del esquema de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

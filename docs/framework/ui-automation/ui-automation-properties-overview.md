@@ -8,16 +8,16 @@ ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: b3fe06a0cd07979a14f2029ac3ece590496ecf74
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07208b833607108ab78933cb1f65fa8a782ac88d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409321"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420327"
 ---
 # <a name="ui-automation-properties-overview"></a>Información general acerca de las propiedades de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Los proveedores de Automatización de la interfaz de usuario exponen propiedades en los elementos [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . Estas propiedades permiten que las aplicaciones de cliente de Automatización de la interfaz de usuario detecten información sobre partes de la [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], especialmente los controles, e incluidos los datos estáticos y dinámicos.  
   

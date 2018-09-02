@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 08e7c488d6a546f3efd6098c38ca601b5f443a26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643591"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405955"
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilidad COM (Visual Basic)
-El Modelo de objetos componentes (COM) permite que un objeto exponga su funcionalidad a otros componentes y aplicaciones host. La mayoría del software actual incluye objetos COM. Aunque los ensamblados .NET son la mejor opción para las aplicaciones nuevas, en ocasiones deberá usar objetos COM. En esta sección se trata algunos de los problemas asociados con la creación y uso de objetos COM con Visual Basic.  
+El Modelo de objetos componentes (COM) permite que un objeto exponga su funcionalidad a otros componentes y aplicaciones host. La mayoría del software actual incluye objetos COM. Aunque los ensamblados .NET son la mejor opción para las aplicaciones nuevas, en ocasiones deberá usar objetos COM. Esta sección tratan algunos de los problemas relacionados con la creación y uso de objetos COM con Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción a la interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
@@ -23,7 +23,7 @@ El Modelo de objetos componentes (COM) permite que un objeto exponga su funciona
  Describe cómo agregar referencias a objetos COM que tienen bibliotecas de tipos.  
   
  [Trabajar con controles ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Muestra cómo utilizar controles ActiveX existentes para agregar características en el cuadro de herramientas de Visual Studio.  
+ Muestra cómo utilizar controles ActiveX existentes para agregar características a Visual Studio Toolbox.  
   
  [Tutorial: Llamar a las API de Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Describe el proceso de llamar a las API que forman parte del sistema operativo Windows.  
@@ -50,10 +50,10 @@ El Modelo de objetos componentes (COM) permite que un objeto exponga su funciona
  [Interoperating with Unmanaged Code](../../../framework/interop/index.md) (Interoperar con código no administrado)  
  Describe los servicios de interoperabilidad proporcionados por Common Language Runtime.  
   
- [Exponer componentes COM en .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [Exponer componentes COM en .NET Framework](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
  Describe el proceso de llamar a tipos COM mediante la interoperabilidad COM.  
   
- [Exponer componentes de .NET Framework en COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [Exponer componentes de .NET Framework en COM](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
  Describe la preparación y el uso de tipos administrados desde COM.  
   
  [Aplicar atributos de interoperabilidad](../../../framework/interop/applying-interop-attributes.md)  

@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5de4388f4d3c4117ed71abd9741d2616638038d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21a373b946c3ce9f4606e870ae10e23a63398bc9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397512"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406374"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Ejemplo: solucionar problemas de programación dinámica
 > [!NOTE]
->  En este tema se hace referencia a .NET Native Developer Preview, que es una versión preliminar del software. Puede descargar esta versión preliminar desde el [sitio web de Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=394611) (es necesario registrarse).  
+>  En este tema se hace referencia a .NET Native Developer Preview, que es una versión preliminar del software. Puede descargar esta versión preliminar desde el [sitio web de Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (es necesario registrarse).  
   
  No todos los errores de búsqueda de metadatos en aplicaciones desarrolladas con la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)] tienen como resultado una excepción.  Algunos pueden manifestarse de manera impredecible en una aplicación.  En el ejemplo siguiente se muestra una infracción de acceso causada por hacer referencia a un objeto nulo:  
   

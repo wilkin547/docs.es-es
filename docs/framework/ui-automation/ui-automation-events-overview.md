@@ -12,16 +12,16 @@ ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 2190e404479a940e638d6ee8b9fd7135d8fc0109
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c479bc423ba17e527926bbf9c7dae6ffd8845d1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399583"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400318"
 ---
 # <a name="ui-automation-events-overview"></a>Información general sobre eventos de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  La notificación de eventos de[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] es una característica clave para las tecnologías de asistencia, entre las que se incluyen lectores de pantalla y lupas. Estos clientes de automatización de la interfaz de usuario, realizan un seguimiento de los eventos que los proveedores de automatización de la interfaz de usuario generan cuando sucede algo en la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , y usan esa información para notificar a los usuarios finales.  
   

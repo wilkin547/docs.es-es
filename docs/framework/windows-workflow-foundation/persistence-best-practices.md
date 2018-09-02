@@ -2,12 +2,12 @@
 title: Procedimientos recomendados de persistencia
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-ms.openlocfilehash: 68164cc937c1c718df39c96c3d6ac490ab025fae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdbf61e559efbd978df1c5a46fcbbbbc528ec98a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520193"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404695"
 ---
 # <a name="persistence-best-practices"></a>Procedimientos recomendados de persistencia
 Este documento trata de los procedimientos recomendados el diseño de flujo de trabajo y de la configuración relacionada con la persistencia del flujo de trabajo.  
@@ -21,7 +21,7 @@ Este documento trata de los procedimientos recomendados el diseño de flujo de t
   
  Si su flujo de trabajo está ocupado durante mucho tiempo, le recomendamos conservar la instancia de flujo de trabajo con regularidad a lo largo de su período ocupación. Puede hacer esto agregando las actividades <xref:System.Activities.Statements.Persist> a lo largo de la secuencia de actividades que mantienen ocupada la instancia de flujo de trabajo. De esta manera, reciclando el dominio de la aplicación, los errores del host o del equipo no hacen que el sistema revierta hasta el inicio del período de ocupación. Sea consciente de que agregar las actividades <xref:System.Activities.Statements.Persist> a su flujo de trabajo podría provocar una degradación del rendimiento.  
   
- Windows Server App Fabric simplifica mucho la configuración y el uso de la persistencia. Para obtener más información, vea [persistencia de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server App Fabric simplifica mucho la configuración y el uso de la persistencia. Para obtener más información, consulte [persistencia de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>Configuración de los parámetros de escalabilidad  
  Los requisitos de escalabilidad y rendimiento determinan la configuración de los siguientes parámetros:  

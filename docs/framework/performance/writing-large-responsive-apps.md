@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4c90e914273de9f9121a979accdb4798b31e05cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254358"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418970"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escribir aplicaciones grandes de .NET Framework que respondan
 En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de las aplicaciones .NET Framework de gran tamaño o de aquellas aplicaciones que procesan una gran cantidad de datos, como archivos o bases de datos. Estas sugerencias proceden de reescribir los compiladores de C# y Visual Basic en código administrado; además, el artículo incluye varios ejemplos reales del compilador de C#.  
@@ -38,7 +38,7 @@ En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de l
  Establezca objetivos de rendimiento para los escenarios o las experiencias de cliente claves de la aplicación y escriba pruebas para medir el rendimiento.   Investigue los errores de las pruebas mediante el método científico: use perfiles como guía, cree hipótesis sobre el origen del problema y pruebe esas hipótesis con un experimento o cambio de código.  Establezca una línea base de medidas de rendimiento a lo largo del tiempo con pruebas periódicas para así aislar los cambios que causan regresiones en el rendimiento.  Si enfoca de manera rigurosa el trabajo de rendimiento, evitará perder el tiempo con actualizaciones de código que no necesita.  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Hecho 3: Las herramientas de calidad marcan la diferencia  
- Unas herramientas de calidad permiten profundizar rápidamente en los problemas de rendimiento más importantes (CPU, memoria o disco) y sirven para localizar el código que provoca esos cuellos de botella.  Microsoft distribuye diversas herramientas de rendimiento, como el [generador de perfiles de Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), la [herramienta de análisis de Windows Phone](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) y [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
+ Unas herramientas de calidad permiten profundizar rápidamente en los problemas de rendimiento más importantes (CPU, memoria o disco) y sirven para localizar el código que provoca esos cuellos de botella.  Microsoft distribuye diversas herramientas de rendimiento, como el [generador de perfiles de Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), la [herramienta de análisis de Windows Phone](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) y [PerfView](https://www.microsoft.com/download/details.aspx?id=28567).  
   
  PerfView es una herramienta gratuita muy potente que sirve para centrarse en los problemas con raíces profundas como, por ejemplo, E/S de disco, eventos de GC y memoria.  Puede capturar eventos de [Seguimiento de eventos para Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) relacionados con el rendimiento y ver fácilmente información por aplicación, por proceso, por pila y por subproceso.  PerfView muestra la cantidad y el tipo de memoria que asigna la aplicación, así como las funciones o pilas de llamadas que contribuyen en determinada medida a las asignaciones de memoria. Para más información, vea los completos artículos de ayuda, las demostraciones y los vídeos que se incluyen con la herramienta (como los [tutoriales de PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial) de Channel 9).  
   
@@ -281,7 +281,7 @@ Language-Integrated Query (LINQ), junto con las expresiones lambda, es un ejempl
   
  **Ejemplo 5: lambdas, List\<T> e IEnumerable\<T>**  
   
- En este ejemplo se usa [LINQ y código de estilo funcional](http://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) para buscar un símbolo en el modelo del compilador, dada una cadena de nombre:  
+ En este ejemplo se usa [LINQ y código de estilo funcional](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) para buscar un símbolo en el modelo del compilador, dada una cadena de nombre:  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- En la primera línea, el [expresión lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [cierra](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) la variable local `name`.  Esto significa que, además de asignar un objeto para el [delegado](~/docs/csharp/language-reference/keywords/delegate.md) que contiene `predicate`, el código asigna una clase estática para contener el entorno que captura el valor de `name`.  El compilador genera código como el siguiente:  
+ En la primera línea, el [expresión lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [cierra](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) la variable local `name`.  Esto significa que, además de asignar un objeto para el [delegado](~/docs/csharp/language-reference/keywords/delegate.md) que contiene `predicate`, el código asigna una clase estática para contener el entorno que captura el valor de `name`.  El compilador genera código como el siguiente:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -362,7 +362,7 @@ public Symbol FindMatchingSymbol(string name)
  El código no utiliza métodos de extensión LINQ, lambdas ni enumeradores, y no crea asignaciones.  No hay asignaciones porque el compilador puede ver que la colección `symbols` es una <xref:System.Collections.Generic.List%601> y puede vincular el enumerador resultante (una estructura) a una variable local con el tipo correcto para evitar la conversión boxing.  La versión original de esta función es un gran ejemplo del poder expresivo de C# y de la productividad .NET Framework.  Esta nueva y más eficaz versión conserva esas cualidades sin agregar ningún código complejo que haya que mantener.  
   
 ### <a name="async-method-caching"></a>Almacenamiento en caché del método asincrónico  
- En el ejemplo siguiente se muestra un problema común al intentar usar resultados de la caché en un método [async](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).  
+ En el ejemplo siguiente se muestra un problema común al intentar usar resultados de la caché en un método [async](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).  
   
  **Ejemplo 6: almacenamiento en caché en métodos asincrónicos**  
   
@@ -465,9 +465,9 @@ class Compilation { /*...*/
  [Vídeo de presentación de este tema.](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [Guía básica para la generación de perfiles de rendimiento](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [Rendimiento](../../../docs/framework/performance/index.md)  
- [Sugerencias de rendimiento de .NET](http://msdn.microsoft.com/library/ms973839.aspx)  
- [Herramienta de análisis de rendimiento de Windows Phone](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Encontrar cuellos de botella de aplicación con Visual Studio Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Sugerencias de rendimiento de .NET](https://msdn.microsoft.com/library/ms973839.aspx)  
+ [Herramienta de análisis de rendimiento de Windows Phone](https://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Encontrar cuellos de botella de aplicación con Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)  
  [PerfView tutoriales de Channel 9](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [Sugerencias de rendimiento de alto nivel](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [Sugerencias de rendimiento de alto nivel](https://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
  [repositorio dotnet/roslyn en GitHub](https://github.com/dotnet/roslyn)

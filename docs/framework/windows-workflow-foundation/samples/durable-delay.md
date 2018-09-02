@@ -2,12 +2,12 @@
 title: Retraso duradero
 ms.date: 03/30/2017
 ms.assetid: 220ec240-b958-430c-81ff-b734a6aa97ae
-ms.openlocfilehash: 5307b8144e17f91cd3ba8c2e385492f86c167820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a7692e28d60232913ae5d11a90025e59664c0e5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516027"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406581"
 ---
 # <a name="durable-delay"></a>Retraso duradero
 En este ejemplo se muestra cómo utilizar un retraso duradero, que es un retraso que conserva el flujo de trabajo en un dispositivo duradero durante el tiempo que dura. El flujo de trabajo de muestra contiene dos mensajes a la consola, separados por un retraso. Cuando el retraso se activa, el flujo de trabajo se descarga y espera 5 segundos en el almacén de instancias de flujo de trabajo antes de recargarse en la memoria.  
@@ -45,7 +45,7 @@ En este ejemplo se muestra cómo utilizar un retraso duradero, que es un retraso
   
     5.  Ejecute Setup.cmd.  
   
-2.  Ejecutar [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con permisos elevados haciendo clic en el [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] icono y seleccione **ejecutar como administrador**.  
+2.  Ejecute [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con permisos elevados haciendo clic con el [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] icono y seleccione **ejecutar como administrador**.  
   
 3.  Abra el archivo de solución Delay.sln.  
   
@@ -66,6 +66,6 @@ En este ejemplo se muestra cómo utilizar un retraso duradero, que es un retraso
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDelay`

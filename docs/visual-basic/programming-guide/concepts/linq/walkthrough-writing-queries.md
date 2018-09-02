@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: beb192f6b136455cb1adcb6cf2616578b63fcebf
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 2f641d04b53d2e80985defcd6bd9a4882004fd97
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245744"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415480"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Tutorial: Escribir consultas en Visual Basic
 Este tutorial muestra cómo puede utilizar las características del lenguaje Visual Basic para escribir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] las expresiones de consulta. El tutorial muestra cómo crear consultas en una lista de objetos Student, cómo ejecutar las consultas y cómo modificarlos. Las consultas incorporan varias características que incluyen tipos anónimos, inferencia de tipos local y los inicializadores de objeto.  
@@ -134,11 +134,11 @@ Este tutorial muestra cómo puede utilizar las características del lenguaje Vis
 ## <a name="additional-information"></a>Información adicional  
  Cuando se haya familiarizado con los conceptos básicos del uso de consultas, está listo para leer la documentación y ejemplos para el tipo específico de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] proveedor que está interesado en:  
   
- [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)  
+ [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)  
   
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
- [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)  
+ [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)  
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
@@ -150,4 +150,4 @@ Este tutorial muestra cómo puede utilizar las características del lenguaje Vis
  [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
  [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Consultas](../../../../visual-basic/language-reference/queries/queries.md)
+ [Consultas](../../../../visual-basic/language-reference/queries/index.md)

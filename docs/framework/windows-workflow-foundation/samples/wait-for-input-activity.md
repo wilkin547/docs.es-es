@@ -2,12 +2,12 @@
 title: Actividad Wait For Input
 ms.date: 03/30/2017
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
-ms.openlocfilehash: 750a217699abe8b2eb2eaaa364002137d335a41a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e878e8c91c5da12a68da848694ce790896517c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519005"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401214"
 ---
 # <a name="wait-for-input-activity"></a>Actividad Wait For Input
 Este ejemplo muestra cómo crear marcadores con nombre en un flujo de trabajo. Windows Workflow Foundation (WF) no proporciona una actividad para la creación declarativa de marcadores. Por consiguiente, si desea crear un marcador en su flujo de trabajo, deberá escribir una actividad personalizada que lo cree. La actividad `WaitForInput` definida en este ejemplo proporciona esta funcionalidad, para que los usuarios puedan crear los marcadores mediante declaración dentro de un flujo de trabajo.  
@@ -38,7 +38,7 @@ Este ejemplo muestra cómo crear marcadores con nombre en un flujo de trabajo. W
 ## <a name="waitforinput-activity-designer"></a>Diseñador de la actividad de WaitForInput  
  El diseñador de la actividad `WaitForInput` se implementa en el archivo WaitForInputDesigner.xaml. La actividad `WaitForInput` y su diseñador están incluidos en el mismo ensamblado. El siguiente gráfico muestra la actividad `WaitForInput` en el cuadro de herramientas dentro de una categoría que tiene el mismo nombre que el ensamblado.  
   
- ![Captura de pantalla de cuadro de herramientas de WaitForInput](../../../../docs/framework/windows-workflow-foundation/samples/media/waitforinputtoolbox.jpg "WaitForInputToolbox")  
+ ![Captura de pantalla del cuadro de herramientas de WaitForInput](../../../../docs/framework/windows-workflow-foundation/samples/media/waitforinputtoolbox.jpg "WaitForInputToolbox")  
   
  El siguiente gráfico muestra el diseñador de `WaitForInput`. Dado que la actividad `WaitForInput` es muy básica, el diseñador permite establecer el valor de todos sus argumentos directamente en la superficie del diseñador.  
   
@@ -57,6 +57,6 @@ Este ejemplo muestra cómo crear marcadores con nombre en un flujo de trabajo. W
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\WaitForInput`

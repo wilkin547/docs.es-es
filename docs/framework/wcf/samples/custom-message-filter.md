@@ -2,15 +2,15 @@
 title: Filtro de mensaje personalizado
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: d01fd0d08a7f5d9b12007bc22a26e6f08e006b64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9a6e436548d4d1f009833f80899721c4c085513
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504151"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400144"
 ---
 # <a name="custom-message-filter"></a>Filtro de mensaje personalizado
-Este ejemplo muestra cómo reemplazar los filtros de mensajes que Windows Communication Foundation (WCF) se utiliza para enviar mensajes a puntos de conexión.  
+Este ejemplo muestra cómo reemplazar los filtros de mensajes que usa Windows Communication Foundation (WCF) para enviar mensajes a puntos de conexión.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
@@ -19,7 +19,7 @@ Este ejemplo muestra cómo reemplazar los filtros de mensajes que Windows Commun
   
  Cada extremo de un servicio tiene un <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>único. El <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> tiene ambos, un<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> y un <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>. La unión de estos dos filtros es el filtro de mensajes utilizado para ese punto de conexión.  
   
- De forma predeterminada, <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> para un extremo coincide con cualquier mensaje que se dirige a una dirección que coincide con el extremo del servicio<xref:System.ServiceModel.EndpointAddress>. De forma predeterminada, el <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> para un punto de conexión inspecciona la acción del mensaje entrante y coincide con cualquier mensaje con una acción que corresponde a una de las acciones de las operaciones del contrato del extremo de servicio (solo `IsInitiating` = `true`se consideran las acciones). Como resultado, de forma predeterminada, el filtro para un extremo coincide solo si el encabezado del mensaje Para es <xref:System.ServiceModel.EndpointAddress> del extremo y la acción del mensaje coincide con una de las acciones de la operación del extremo.  
+ De forma predeterminada, <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> para un extremo coincide con cualquier mensaje que se dirige a una dirección que coincide con el extremo del servicio<xref:System.ServiceModel.EndpointAddress>. De forma predeterminada, el <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> para un punto de conexión inspecciona la acción del mensaje entrante y coincide con cualquier mensaje con una acción que corresponde a una de las acciones de las operaciones del contrato del punto de conexión de servicio (solo `IsInitiating` = `true`se consideran las acciones). Como resultado, de forma predeterminada, el filtro para un extremo coincide solo si el encabezado del mensaje Para es <xref:System.ServiceModel.EndpointAddress> del extremo y la acción del mensaje coincide con una de las acciones de la operación del extremo.  
   
  Estos filtros se pueden cambiar utilizando un comportamiento. En el ejemplo, el servicio crea un<xref:System.ServiceModel.Description.IEndpointBehavior> que reemplaza <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> y <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> en <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>:  
   
@@ -113,17 +113,17 @@ Hello
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageFilter`  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Para compilar la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 2.  Para ejecutar el ejemplo en una configuración de equipo único, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-3.  Para ejecutar el ejemplo en una configuración de varios equipos, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md) y cambie la línea siguiente en el archivo Client.cs.  
+3.  Para ejecutar el ejemplo en una configuración de equipos cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md) y cambie la línea siguiente en Client.cs.  
   
     ```  
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  

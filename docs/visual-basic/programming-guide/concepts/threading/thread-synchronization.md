@@ -2,12 +2,12 @@
 title: Sincronización de subprocesos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-ms.openlocfilehash: 9922230e1c7f2bd30c575bd66387feb4850a298b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3278ed1e98f71e11d47f55a0d4cb50f44ae02027
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655096"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406629"
 ---
 # <a name="thread-synchronization-visual-basic"></a>Sincronización de subprocesos (Visual Basic)
 En las secciones siguientes se describen las características y clases que se pueden usar para sincronizar el acceso a recursos en aplicaciones multiproceso.  
@@ -26,8 +26,8 @@ En las secciones siguientes se describen las características y clases que se pu
   
 -   [Procedimientos recomendados para el subprocesamiento administrado](../../../../standard/threading/managed-threading-best-practices.md)  
   
-## <a name="the-lock-and-synclock-keywords"></a>El bloqueo y palabras clave SyncLock  
- Visual Basic `SyncLock` instrucción puede utilizarse para garantizar que un bloque de código se ejecuta hasta completarse sin interrupción por otros subprocesos. Esto se logra obteniendo un bloqueo de exclusión mutua para un objeto determinado durante la ejecución de un bloque de código.  
+## <a name="the-lock-and-synclock-keywords"></a>El bloqueo y SyncLock las palabras clave  
+ Visual Basic `SyncLock` instrucción puede utilizarse para asegurarse de que un bloque de código se ejecuta hasta completarse sin interrupciones de otros subprocesos. Esto se logra obteniendo un bloqueo de exclusión mutua para un objeto determinado durante la ejecución de un bloque de código.  
   
  Una instrucción `SyncLock` consiste en dar un objeto como argumento, seguido de un bloque de código que solo un subproceso puede ejecutar simultáneamente. Por ejemplo:  
   
@@ -147,7 +147,6 @@ End Module
  <xref:System.Threading>  
  <xref:System.Threading.EventWaitHandle.Set%2A>  
  <xref:System.Threading.Monitor>  
- [Aplicaciones multiproceso (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
  [SyncLock (instrucción)](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
  [Mutexes](../../../../standard/threading/mutexes.md) (Clases Mutex)  
  [Interlocked Operations](../../../../standard/threading/interlocked-operations.md) (Operaciones Interlocked)  

@@ -9,16 +9,16 @@ ms.assetid: 48dee94a-5119-4939-a4c7-ffeaf794c732
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: b3c15aa6896f1252cd08faf163da3fcd6c096183
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4fb586b9ef34781eafbbe2deb66efdefff0eee19
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408722"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416855"
 ---
 # <a name="ui-automation-support-for-the-statusbar-control-type"></a>Compatibilidad de UI Automation para el tipo de control StatusBar
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  En este tema se ofrece información sobre la compatibilidad de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] con el tipo de control StatusBar. En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], un tipo de control es un conjunto de condiciones que un control debe cumplir para poder usar la propiedad <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Entre las condiciones se incluyen instrucciones específicas para la estructura de árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , valores de propiedad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y patrones de control.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33408722"
   
 |Vista de control|Vista de contenido|  
 |------------------|------------------|  
-|StatusBar<br /><br /> -Edición (0 o más)<br />-ProgressBar (0 o muchos)<br />-Image (0 o muchos)<br />-Botón (0 o muchos)|StatusBar<br /><br /> -Edición (0 o más)<br />-ProgressBar (0 o muchos)<br />-Image (0 o muchos)<br />-Botón (0 o muchos)|  
+|StatusBar<br /><br /> -Edit (0 o más)<br />: Barra de progreso (0 o muchos)<br />-Image (0 o muchos)<br />-Button (0 o muchos)|StatusBar<br /><br /> -Edit (0 o más)<br />-ProgressBar (0 o muchos)<br />-Image (0 o muchos)<br />-Button (0 o muchos)|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Propiedades necesarias para la automatización de la interfaz de usuario  

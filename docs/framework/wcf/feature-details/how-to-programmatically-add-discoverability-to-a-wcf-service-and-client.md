@@ -2,21 +2,21 @@
 title: 'Cómo: Agregar detectabilidad mediante programación a un cliente y un servicio de WCF'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 0685694db8f67ed690cf2a8002bf70a05695a192
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e32128a20a765762249e6892232447c56036c2d8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495488"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408264"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Cómo: Agregar detectabilidad mediante programación a un cliente y un servicio de WCF
-Este tema explica cómo hacer que un servicio de Windows Communication Foundation (WCF) pueda detectar. Se basa en el [autohospedaje](http://go.microsoft.com/fwlink/?LinkId=145523) ejemplo.  
+En este tema se explica cómo hacer que un servicio de Windows Communication Foundation (WCF) que pueda detectar. Se basa en el [autohospedar](https://go.microsoft.com/fwlink/?LinkId=145523) ejemplo.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Para configurar el ejemplo de servicio de host automático existente repara para la detección  
   
 1.  Abra la solución de host automático en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. El ejemplo se encuentra en el directorio TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2.  Agregue una referencia a `System.ServiceModel.Discovery.dll` al proyecto de servicio. Verá un mensaje de error que dice "System. ServiceModel.Discovery.dll, o una de sus dependencias requiere una versión posterior de la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] a la especificada en el proyecto... " Si ve este mensaje, haga clic en el proyecto en el Explorador de soluciones y elija **propiedades**. En el **propiedades del proyecto** ventana, asegúrese de que el **.NET Framework de destino** es [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2.  Agregue una referencia a `System.ServiceModel.Discovery.dll` al proyecto de servicio. Es posible que vea un mensaje de error que dice "System. ServiceModel.Discovery.dll, o uno de sus dependencias requiere una versión posterior de la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] a la especificada en el proyecto... " Si ve este mensaje, haga clic en el proyecto en el Explorador de soluciones y elija **propiedades**. En el **las propiedades del proyecto** ventana, asegúrese de que el **.NET Framework de destino** es [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 3.  Abra el archivo Service.cs y agregue la siguiente instrucción `using`.  
   
@@ -60,7 +60,7 @@ Este tema explica cómo hacer que un servicio de Windows Communication Foundatio
   
 2.  Agregue una referencia a `System.ServiceModel.dll` y `System.ServiceModel.Discovery.dll`.  
   
-3.  Copie los archivos GeneratedClient.cs y App.config del proyecto de cliente existente en el nuevo proyecto DiscoveryClientApp. Para ello, haga clic en los archivos de la **el Explorador de soluciones**, seleccione **copia**y, a continuación, seleccione la **DiscoveryClientApp** del proyecto, haga clic en y seleccione **Pegar**.  
+3.  Copie los archivos GeneratedClient.cs y App.config del proyecto de cliente existente en el nuevo proyecto DiscoveryClientApp. Para ello, haga clic en los archivos en el **el Explorador de soluciones**, seleccione **copia**y, a continuación, seleccione el **DiscoveryClientApp** del proyecto, haga clic en y seleccione **Pegar**.  
   
 4.  Abra Program.cs.  
   
@@ -92,7 +92,7 @@ Este tema explica cómo hacer que un servicio de Windows Communication Foundatio
     }  
     ```  
   
-     Esto indica a WCF que el <xref:System.ServiceModel.Discovery.DiscoveryClient> clase debe usar el extremo de detección UDP estándar para enviar y recibir mensajes de detección.  
+     Esto indica a WCF que el <xref:System.ServiceModel.Discovery.DiscoveryClient> clase debería utilizar el extremo de detección UDP estándar para enviar y recibir mensajes de detección.  
   
 8.  En la línea siguiente, llame al método <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> y especifique una instancia <xref:System.ServiceModel.Discovery.FindCriteria> que contenga el contrato de servicios que desea buscar. En este caso, especifique `ICalculator`.  
   
@@ -124,7 +124,7 @@ Este tema explica cómo hacer que un servicio de Windows Communication Foundatio
   
      Este método utiliza la dirección del extremo devuelta de `FindCalculatorServiceAddress` para llamar al servicio de calculadora.  
   
-11. Dentro del método `InvokeCalculatorService`, cree una instancia de la clase `CalculatorServiceClient`. Esta clase se define mediante la [autohospedaje](http://go.microsoft.com/fwlink/?LinkId=145523) ejemplo. Se ha generado mediante Svcutil.exe.  
+11. Dentro del método `InvokeCalculatorService`, cree una instancia de la clase `CalculatorServiceClient`. Esta clase se define mediante el [autohospedar](https://go.microsoft.com/fwlink/?LinkId=145523) ejemplo. Se ha generado mediante Svcutil.exe.  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ Este tema explica cómo hacer que un servicio de Windows Communication Foundatio
     ```  
   
 ## <a name="example"></a>Ejemplo  
- A continuación, se muestra una lista completa del código de este ejemplo. Dado que este código se basa en el [autohospedaje](http://go.microsoft.com/fwlink/?LinkId=145523) ejemplo, se muestran solo los archivos que se cambian. Para obtener más información sobre el ejemplo de autohospedaje, consulte [instrucciones de instalación](http://go.microsoft.com/fwlink/?LinkId=145522).  
+ A continuación, se muestra una lista completa del código de este ejemplo. Dado que este código se basa en el [autohospedar](https://go.microsoft.com/fwlink/?LinkId=145523) ejemplo, se muestran sólo los archivos que se cambian. Para obtener más información sobre el ejemplo autohospedaje, vea [instrucciones de configuración](https://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  

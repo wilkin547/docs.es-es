@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1846153375b19b773fedaf056a009f28ab94a4d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc780cc845bfa6ef52fc9973ef3617d621167af1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591734"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415990"
 ---
 # <a name="integer-data-type-visual-basic"></a>Tipo de datos entero (Visual Basic)
 Contiene enteros de 32 bits con signo (4 bytes) comprendidos en el intervalo entre -2.147.483.648 y 2.147.483.647.  
@@ -40,7 +40,7 @@ Contiene enteros de 32 bits con signo (4 bytes) comprendidos en el intervalo ent
 
 ## <a name="literal-assignments"></a>Asignaciones de literales
 
-Puede declarar e inicializar un `Integer` variable asignarle un decimal literal, un literal hexadecimal, un literal octal, o (a partir de Visual Basic de 2017) un literal binario. Si el literal entero está fuera del intervalo de `Integer` (es decir, si es inferior a <xref:System.Int32.MinValue?displayProperty=nameWithType> o mayor que <xref:System.Int32.MaxValue?displayProperty=nameWithType>, se produce un error de compilación.
+Puede declarar e inicializar un `Integer` variable mediante la asignación de un literal decimal, un literal hexadecimal, un literal octal, o (a partir de 2017 Visual Basic) un literal binario. Si el literal entero está fuera del intervalo de `Integer` (es decir, si es inferior a <xref:System.Int32.MinValue?displayProperty=nameWithType> o mayor que <xref:System.Int32.MaxValue?displayProperty=nameWithType>, se produce un error de compilación.
 
 En el ejemplo siguiente, los enteros que equivalen a 16 342 que se representan como literales binarios, hexadecimales y decimales se asignan a valores `Integer`.
 
@@ -49,11 +49,11 @@ En el ejemplo siguiente, los enteros que equivalen a 16 342 que se representan c
 > [!NOTE]
 > Use el prefijo `&h` o `&H` para denotar un literal hexadecimal, el prefijo `&b` o `&B` para denotar un literal binario y el prefijo `&o` o `&O` para denotar un literal octal. Los literales decimales no tienen prefijo.
 
-A partir de Visual Basic de 2017, también puede utilizar el carácter de subrayado, `_`, como un separador de dígitos para mejorar la legibilidad, como en el ejemplo siguiente se muestra.
+A partir de Visual Basic 2017, también puede usar el carácter de subrayado, `_`, como un separador de dígitos para mejorar la legibilidad, como en el ejemplo siguiente se muestra.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
-A partir de Visual Basic 15,5, también puede utilizar el carácter de subrayado (`_`) como separador inicial entre el prefijo y los dígitos hexadecimales, octales o binarios. Por ejemplo:
+A partir de Visual Basic 15.5, también puede usar el carácter de subrayado (`_`) como separador inicial entre el prefijo y los dígitos hexadecimales, binarios u octales. Por ejemplo:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -61,7 +61,7 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-También pueden incluir literales numéricos el `I` [escriba carácter](../../programming-guide\language-features\data-types/type-characters.md) para denotar el `Integer` tipo de datos, como se muestra en el ejemplo siguiente.
+También pueden incluir literales numéricos el `I` [carácter de tipo](../../programming-guide\language-features\data-types/type-characters.md) para denotar el `Integer` tipo de datos, como se muestra en el ejemplo siguiente.
 
 ```vb
 Dim number = &H_035826I
@@ -69,13 +69,13 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>Sugerencias de programación
 
--   **Consideraciones de interoperabilidad.** Si interactúa con componentes no se han escrito para .NET Framework, como los objetos de automatización o COM, recuerde que `Integer` tiene un ancho de datos diferente (16 bits) en otros entornos. Al pasar un argumento de 16 bits a esos componentes, declárelo en el código de Visual Basic como `Short` en lugar de como `Integer`.  
+-   **Consideraciones de interoperabilidad.** Si interactúa con componentes no escritos para .NET Framework, como los objetos de automatización o COM, recuerde que `Integer` tiene un ancho de datos diferente (16 bits) en otros entornos. Al pasar un argumento de 16 bits a esos componentes, declárelo en el código de Visual Basic como `Short` en lugar de como `Integer`.  
   
--   **De ampliación.** El tipo de datos `Integer` se amplía a `Long`, `Decimal`, `Single` o `Double`. Esto significa que puede convertir un tipo de datos `Integer` en cualquiera de estos tipos sin que se produzca un error <xref:System.OverflowException?displayProperty=nameWithType>.  
+-   **Ampliación.** El tipo de datos `Integer` se amplía a `Long`, `Decimal`, `Single` o `Double`. Esto significa que puede convertir un tipo de datos `Integer` en cualquiera de estos tipos sin que se produzca un error <xref:System.OverflowException?displayProperty=nameWithType>.  
   
 -   **Caracteres de tipo.** Al agregar el carácter de tipo literal `I` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Integer`. Si se agrega el carácter de tipo identificador `%` a cualquier identificador, se convierte forzosamente al tipo `Integer`.  
   
--   **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Int32?displayProperty=nameWithType>.  
+-   **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Int32?displayProperty=nameWithType>.  
   
 ## <a name="range"></a>Intervalo
 
@@ -98,7 +98,7 @@ k = 5.5
 ## <a name="see-also"></a>Vea también
 
 <xref:System.Int32?displayProperty=nameWithType>   
- [Tipos de datos](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)  
  [Long (tipo de datos)](../../../visual-basic/language-reference/data-types/long-data-type.md)  
  [Short (tipo de datos)](../../../visual-basic/language-reference/data-types/short-data-type.md)  
  [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4461667bdb47d410c857b4ac2c9dd268438a02f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 21ab18cded2b9a16fe2520547287198d3cfe6b74
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744023"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416779"
 ---
 # <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt; elemento
 Especifica si la recolección de elementos no utilizados admite varios grupos de CPU.  
@@ -55,7 +55,7 @@ Especifica si la recolección de elementos no utilizados admite varios grupos de
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando un equipo tiene varios grupos de CPU y la recolección de elementos no utilizados de servidor está habilitado (consulte la [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento), habilitar este elemento extiende la recolección en todos los grupos de CPU y tiene todos los núcleos en cuenta al crear y equilibra montones.  
+ Cuando un equipo tiene varios grupos de CPU y está habilitada la recolección de elementos no utilizados de servidor (consulte la [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento), habilitar este elemento extiende la recolección en todos los grupos de CPU y toma todos los núcleos en cuenta al crear y equilibra montones.  
   
 > [!NOTE]
 >  Este elemento solo se aplica a los subprocesos de recolección de elementos no utilizados. Para habilitar el runtime pueda distribuir subprocesos de usuario en todos los grupos de CPU, también debe habilitar la [< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) elemento.  
@@ -75,5 +75,5 @@ Especifica si la recolección de elementos no utilizados admite varios grupos de
 ## <a name="see-also"></a>Vea también  
  [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Cómo: deshabilitar la recolección de elementos no utilizados simultánea](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [Cómo: deshabilitar la recolección de elementos no utilizados simultánea](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
  [Recolección de estación de trabajo y servidor](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

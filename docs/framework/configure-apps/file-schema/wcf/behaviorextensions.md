@@ -2,12 +2,12 @@
 title: '&lt;behaviorExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: bb59ceeb478d0324fddc98a206a00dbd170b5ac9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d025497956715913923e839cb6c482f44f96babb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749587"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415797"
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
 Las extensiones de comportamiento le permiten al usuario crear los elementos de comportamiento definidos por el usuario. Estos elementos se pueden utilizar junto a los elementos de comportamiento de Windows Communication Foundation (WCF) estándares. La sección `behaviorExtensions` define el elemento tal como se puede utilizar en configuración. Éste es un ejemplo de una extensión de comportamiento típica.  
@@ -44,7 +44,7 @@ Las extensiones de comportamiento le permiten al usuario crear los elementos de 
   
  Un atacante se puede aprovechar del orden de búsqueda de CLR y ejecutar un código desautorizado. Al utilizar los nombres completos (seguros) sólo se identifica un tipo y aumenta la seguridad de su sistema.  
   
- Para obtener más información, consulte [cómo el tiempo de ejecución ubica ensamblados](http://go.microsoft.com/fwlink/?LinkId=95336) y <xref:System.AppDomain.TypeResolve>.  
+ Para obtener más información, consulte [How the Runtime Locates Assemblies](https://go.microsoft.com/fwlink/?LinkId=95336) y <xref:System.AppDomain.TypeResolve>.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>  

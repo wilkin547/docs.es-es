@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dafa5846f779276ab81e8e30e7c7a50b9fbff853
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 865b7b16d5807bd9161855f453128a63c84eab96
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393860"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400827"
 ---
 # <a name="exception-thrownv1-etw-event"></a>Evento ETW de excepción Thrown_V1
 Este evento captura información sobre las excepciones que se generan.  
@@ -36,8 +36,8 @@ Este evento captura información sobre las excepciones que se generan.
 |Tipo de excepción|win:UnicodeString|Tipo de la excepción; por ejemplo, `System.NullReferenceException`.|  
 |Mensaje de la excepción|win:UnicodeString|Mensaje actual de la excepción.|  
 |EIPCodeThrow|win:Pointer|Puntero de instrucción donde se ha producido la excepción.|  
-|ExceptionHR|win:UInt32|Excepción [HRESULT](http://go.microsoft.com/fwlink/?LinkId=179679).|  
-|ExceptionFlags|win:UInt16|0x01: HasInnerException (vea [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md) en la documentación de Visual Basic).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (indica que el estado del proceso está dañado; vea [Control de excepciones de estado dañadas](http://go.microsoft.com/fwlink/?LinkId=179681) en MSDN).<br /><br /> 0x10: IsCLSCompliant (una excepción que deriva de <xref:System.Exception> es conforme a CLS; de lo contrario, no es conforme a CLS).|  
+|ExceptionHR|win:UInt32|Excepción [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679).|  
+|ExceptionFlags|win:UInt16|0x01: HasInnerException (vea [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md) en la documentación de Visual Basic).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (indica que el estado del proceso está dañado; vea [Control de excepciones de estado dañadas](https://go.microsoft.com/fwlink/?LinkId=179681) en MSDN).<br /><br /> 0x10: IsCLSCompliant (una excepción que deriva de <xref:System.Exception> es conforme a CLS; de lo contrario, no es conforme a CLS).|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 ## <a name="see-also"></a>Vea también  

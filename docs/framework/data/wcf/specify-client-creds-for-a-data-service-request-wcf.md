@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: cf3ba2a13d56aae56ed7a1444169056b9905a145
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0fbf01de05a02c03782af9e392a79b6dd3e8bee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363971"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402526"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Cómo: especificar las credenciales de cliente para una solicitud de servicio de datos (Data Services de WCF)
 De forma predeterminada, la biblioteca cliente no proporciona credenciales cuando se envía una solicitud a un servicio [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Sin embargo, puede especificar que las credenciales se envíen para autenticar solicitudes al servicio de datos proporcionando una clase <xref:System.Net.NetworkCredential> para la propiedad <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> de la clase <xref:System.Data.Services.Client.DataServiceContext>. Para obtener más información, consulta [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). En el ejemplo de este tema se muestra cómo proporcionar explícitamente credenciales que el cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usará cuando solicite datos del servicio de datos.  
   
- En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Se crean este servicio y las clases de datos de cliente al completar la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). También puede usar el [servicio de datos de ejemplo Northwind](http://go.microsoft.com/fwlink/?LinkId=187426) que se publica en el [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sitio Web; estos datos de ejemplo servicio es de solo lectura e intentando guardar cambios devuelve un error. Servicios de los datos de ejemplo en el [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sitio Web permiten la autenticación anónima.  
+ En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean cuando se completa la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). También puede usar el [servicio de datos de ejemplo Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) que se publica en el [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ; estos datos de ejemplo de sitio Web de servicio es de solo lectura y se intentan guardar los cambios devuelve un error. Los datos de ejemplo de servicios en la [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sitio Web de permitir la autenticación anónima.  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo proviene de la página de código subyacente para un archivo de lenguaje de marcado de aplicaciones Extensible (XAML) que es la página principal de la aplicación de Windows Presentation Framework. En este ejemplo se muestra una instancia de `LoginWindow` para recopilar las credenciales de autenticación del usuario y, a continuación, las usa cuando realiza una solicitud al servicio de datos.  
+ El ejemplo siguiente es desde la página de código subyacente de un archivo de lenguaje de marcado de aplicaciones Extensible (XAML) que es la página principal de la aplicación de Windows Presentation Framework. En este ejemplo se muestra una instancia de `LoginWindow` para recopilar las credenciales de autenticación del usuario y, a continuación, las usa cuando realiza una solicitud al servicio de datos.  
   
  [!code-csharp[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentials.xaml.cs#clientcredentials)]  
  [!code-vb[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/clientcredentials.xaml.vb#clientcredentials)]

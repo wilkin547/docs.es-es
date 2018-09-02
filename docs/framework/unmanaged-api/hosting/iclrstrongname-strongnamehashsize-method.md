@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ebf2e0225cf497a0b89a46ecdb3e203d5b9a4cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0c09832d296033b0790d3e6282763a1163abdfd2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432019"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406296"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a>ICLRStrongName::StrongNameHashSize (Método)
-Obtiene el tamaño de búfer requerido para un hash mediante el algoritmo hash especificado.  
+Obtiene el tamaño de búfer necesario para un hash mediante el algoritmo hash especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,22 +38,22 @@ HRESULT StrongNameHashSize (
   
 #### <a name="parameters"></a>Parámetros  
  `ulHashAlg`  
- [in] El algoritmo hash que se utiliza para calcular el tamaño del búfer.  
+ [in] El algoritmo hash utilizado para calcular el tamaño del búfer.  
   
  `pcbSize`  
- [out] El tamaño de búfer devuelto, en bytes.  
+ [out] El tamaño del búfer devuelto, en bytes.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (vea [valores HRESULT comunes](http://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
+ `S_OK` Si el método se completó correctamente; en caso contrario, un valor HRESULT que indica un error (consulte [valores HRESULT comunes](https://go.microsoft.com/fwlink/?LinkId=213878) para obtener una lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** MetaHost.h  
   
  **Biblioteca:** incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

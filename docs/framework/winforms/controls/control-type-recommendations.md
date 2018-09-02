@@ -7,18 +7,18 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: d6a2b663c566aae48c694ffc335fcef0ce24034f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ce801a96bc4ef48934b983838dcf8578a5bc6e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528949"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405352"
 ---
 # <a name="control-type-recommendations"></a>Recomendaciones sobre tipos de controles
 .NET Framework ofrece la posibilidad de desarrollar e implementar nuevos controles. Además de los controles de usuario conocidos, verá que ahora puede escribir controles personalizados que realizan su propia representación y que incluso pueden ampliar la funcionalidad de los controles existentes mediante herencia. Decidir qué tipo de control va a crear puede resultar confuso. En esta sección se indican las diferencias entre los distintos tipos de controles de los que puede heredar, y ofrece consideraciones sobre el tipo que deberá elegir para su proyecto.  
   
 > [!NOTE]
->  Si desea crear un control para usarlo en formularios Web Forms, consulte [Desarrollar controles de servidor de ASP.NET personalizados](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+>  Si desea crear un control para usarlo en formularios Web Forms, consulte [Desarrollar controles de servidor de ASP.NET personalizados](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
   
 ## <a name="inheriting-from-a-windows-forms-control"></a>Heredar de un control de Windows Forms  
  Puede derivar un control heredado de cualquier control de Windows Forms existente. Este enfoque permite conservar toda la funcionalidad inherente de un control de Windows Forms y, después, ampliarla agregando propiedades, métodos u otras funcionalidades personalizadas. Por ejemplo, podría crear un control derivado de <xref:System.Windows.Forms.TextBox> que solo admita números y que convierta automáticamente la entrada en un valor. Este tipo de control podría contener código de validación al que se llama cada vez que cambia el texto del cuadro de texto, y podría tener una propiedad adicional, Value. En algunos controles, también puede agregar una apariencia personalizada a la interfaz gráfica del control invalidando el método <xref:System.Windows.Forms.Control.OnPaint%2A> de la clase base.  
@@ -45,39 +45,39 @@ ms.locfileid: "33528949"
   
 -   Necesita implementar funcionalidad personalizada que no está disponible en los controles estándar.  
   
--   [Cómo: Mostrar un control en el cuadro de diálogo Seleccionar elementos del cuadro de herramientas](http://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
+-   [Cómo: Mostrar un control en el cuadro de diálogo Seleccionar elementos del cuadro de herramientas](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   
--   [Tutorial: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
+-   [Tutorial: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [Tutorial: Heredar de un control de Windows Forms con Visual C#](http://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
+-   [Tutorial: Heredar de un control de Windows Forms con Visual C#](https://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
   
--   [Cómo: Proporcionar un mapa de bits del cuadro de herramientas para un control](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
+-   [Cómo: Proporcionar un mapa de bits del cuadro de herramientas para un control](https://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
--   [Cómo: Heredar de controles de Windows Forms existentes](http://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
+-   [Cómo: Heredar de controles de Windows Forms existentes](https://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
   
--   [Tutorial: Depurar controles personalizados de Windows Forms en tiempo de diseño](http://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
+-   [Tutorial: Depurar controles personalizados de Windows Forms en tiempo de diseño](https://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
   
--   [Cómo: Heredar de la clase control](http://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
+-   [Cómo: Heredar de la clase control](https://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
   
--   [Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](http://msdn.microsoft.com/library/ms171738\(v=vs.110\))  
+-   [Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [Cómo: Alinear un control con los bordes de los formularios en tiempo de diseño](http://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
+-   [Cómo: Alinear un control con los bordes de los formularios en tiempo de diseño](https://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
   
--   [cómo: Heredar de la clase UserControl](http://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
+-   [cómo: Heredar de la clase UserControl](https://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
   
--   [Cómo: Crear controles para Windows Forms](http://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
+-   [Cómo: Crear controles para Windows Forms](https://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
   
--   [Cómo: Crear controles compuestos](http://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
+-   [Cómo: Crear controles compuestos](https://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
   
--   [Tutorial: Crear un control compuesto con Visual Basic](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
+-   [Tutorial: Crear un control compuesto con Visual Basic](https://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [Tutorial: Crear un control compuesto con Visual C#](http://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
+-   [Tutorial: Crear un control compuesto con Visual C#](https://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
   
--   [Tutorial: Heredar de un control de Windows Forms con Visual Basic](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
+-   [Tutorial: Heredar de un control de Windows Forms con Visual Basic](https://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   
--   [Cómo: Crear un control de Windows Forms que aproveche las características de tiempo de diseño](http://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
+-   [Cómo: Crear un control de Windows Forms que aproveche las características de tiempo de diseño](https://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
   
--   [Cómo: Crear un control de Windows Forms que aproveche las características en tiempo de diseño](http://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
+-   [Cómo: Crear un control de Windows Forms que aproveche las características en tiempo de diseño](https://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
   
 ## <a name="see-also"></a>Vea también  
  [Desarrollar un control de formularios Windows Forms sencillo](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  

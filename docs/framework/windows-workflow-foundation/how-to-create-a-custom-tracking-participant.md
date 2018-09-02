@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 6439a056ec1baccf6c059f779a577723761c489b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9a83f64b7ea0de275631d7d3b8d2755671223ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519537"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418083"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Cómo crear un participante de seguimiento personalizado
-El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejecución del flujo de trabajo. El runtime de flujo de trabajo emite registros de seguimiento que describen los eventos de ciclo de vida de flujo de trabajo, los eventos de ciclo de vida de actividad, los errores y la reanudación de marcadores. Los participantes de seguimiento usan estos registros de seguimiento. Windows Workflow Foundation (WF) incluye a un participante de seguimiento estándar que escribe los registros de seguimiento como eventos de seguimiento de eventos para Windows (ETW). Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado. Este paso del tutorial describe cómo crear un participante y un perfil de seguimiento personalizados que capturen la salida de las actividades `WriteLine` para poder mostrarla al usuario.  
+El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejecución del flujo de trabajo. El runtime de flujo de trabajo emite registros de seguimiento que describen los eventos de ciclo de vida de flujo de trabajo, los eventos de ciclo de vida de actividad, los errores y la reanudación de marcadores. Los participantes de seguimiento usan estos registros de seguimiento. Windows Workflow Foundation (WF) incluye a un participante de seguimiento estándar que escribe registros de seguimiento como eventos de seguimiento de eventos para Windows (ETW). Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado. Este paso del tutorial describe cómo crear un participante y un perfil de seguimiento personalizados que capturen la salida de las actividades `WriteLine` para poder mostrarla al usuario.  
   
 > [!NOTE]
->  Cada uno de los temas del tutorial de introducción depende de los temas anteriores. Para completar este tema, primero debe finalizar los temas anteriores. Para descargar una versión completada o ver un tutorial en vídeo del tutorial, vea [Windows Workflow Foundation (WF45) - Tutorial de introducción](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Cada uno de los temas del tutorial de introducción depende de los temas anteriores. Para completar este tema, primero debe finalizar los temas anteriores. Para descargar una versión completada o ver un tutorial en vídeo del tutorial, vea [Windows Workflow Foundation (WF45): Tutorial de introducción](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ## <a name="in-this-topic"></a>En este tema  
   
@@ -30,7 +30,7 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
   
 ###  <a name="BKMK_CustomTrackingParticipant"></a> Para crear al participante de seguimiento personalizado  
   
-1.  Haga clic en **NumberGuessWorkflowHost** en **el Explorador de soluciones** y elija **agregar**, **clase**. Tipo de `StatusTrackingParticipant` en el **nombre** cuadro y haga clic en **agregar**.  
+1.  Haga clic en **NumberGuessWorkflowHost** en **el Explorador de soluciones** y elija **agregar**, **clase**. Tipo `StatusTrackingParticipant` en el **nombre** cuadro y haga clic en **agregar**.  
   
 2.  Agregue las siguientes instrucciones `using` (o `Imports`) al principio del archivo con las demás instrucciones `using` (o `Imports`).  
   
@@ -102,7 +102,7 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
     }  
     ```  
   
-     Cuando no se especifica ningún perfil de seguimiento, se usa el perfil de seguimiento predeterminado. Cuando se usa el perfil de seguimiento predeterminado, los registros de seguimiento se emiten para todos `ActivityStates`. Dado que solo debemos capturar el texto una vez durante el ciclo de vida de la actividad `WriteLine` , solo extraemos el texto del estado `ActivityStates.Executing` . En [para crear el perfil de seguimiento y registrar el participante de seguimiento](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), se crea un perfil de seguimiento que especifica que solo `WriteLine` `ActivityStates.Executing` se emiten registros de seguimiento.  
+     Cuando no se especifica ningún perfil de seguimiento, se usa el perfil de seguimiento predeterminado. Cuando se usa el perfil de seguimiento predeterminado, los registros de seguimiento se emiten para todos `ActivityStates`. Dado que solo debemos capturar el texto una vez durante el ciclo de vida de la actividad `WriteLine` , solo extraemos el texto del estado `ActivityStates.Executing` . En [para crear el perfil de seguimiento y registrar el participante de seguimiento](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), se crea un perfil de seguimiento que especifica que solo `WriteLine` `ActivityStates.Executing` se emiten los registros de seguimiento.  
   
 ###  <a name="BKMK_TrackingProfile"></a> Para crear el perfil de seguimiento y registrar al participante de seguimiento  
   
@@ -326,7 +326,7 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
   
 2.  Presione Ctrl + F5 para iniciar la aplicación.  
   
-3.  Seleccione un intervalo para el juego de adivinanzas y el tipo de flujo de trabajo para iniciar y haga clic en **New Game**. Escriba un intento en el **estimación** y haga clic en **vaya** para enviarlo. Observe que el estado del flujo de trabajo se muestra en la ventana de estado. Este resultado se captura de las actividades de `WriteLine`. Cambie a un flujo de trabajo diferente mediante la selección de uno de los **Id. de instancia de flujo de trabajo** cuadro combinado y observe que se ha quitado el estado del flujo de trabajo actual. Cambie de nuevo al flujo de trabajo anterior y observe que se restablece el estado, similar al siguiente ejemplo.  
+3.  Seleccionar un intervalo para el juego de Adivinanzas de números y el tipo de flujo de trabajo para iniciar y haga clic en **New Game**. Escriba un intento en el **estimación** y haga clic en **vaya** para enviarlo. Observe que el estado del flujo de trabajo se muestra en la ventana de estado. Este resultado se captura de las actividades de `WriteLine`. Cambiar a un flujo de trabajo diferente seleccionando uno de los **Id. de instancia de flujo de trabajo** cuadro combinado y tenga en cuenta que se ha quitado el estado del flujo de trabajo actual. Cambie de nuevo al flujo de trabajo anterior y observe que se restablece el estado, similar al siguiente ejemplo.  
   
     > [!NOTE]
     >  Si cambia a un flujo de trabajo que se había iniciado antes de que se habilitara el seguimiento, no se mostrará ningún estado. Sin embargo, si hace intentos adicionales, el estado se guarda porque ahora se ha habilitado el seguimiento.  
@@ -335,7 +335,7 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
 **Su intento es demasiado alto.**   
 **Escriba un número entre 1 y 10**    
     > [!NOTE]
-    >  Esta información es útil para determinar el intervalo del número aleatorio, pero no contiene información sobre qué intentos se han hecho anteriormente. Esta información se encuentra en el paso siguiente, [Cómo: Host varias versiones de un flujo de trabajo paralelo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+    >  Esta información es útil para determinar el intervalo del número aleatorio, pero no contiene información sobre qué intentos se han hecho anteriormente. Esta información está en el paso siguiente, [How to: Host varias versiones de un flujo de trabajo Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
      Anote el identificador de instancias de flujo de trabajo, y juegue hasta completar el juego.  
   
@@ -345,4 +345,4 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
 **Su intento es demasiado alto.**   
 **Escriba un número entre 1 y 10**   
 **Su intento es demasiado alto.**   
-**Escriba un número entre 1 y 10** además de la ausencia de intentos del usuario, estos datos de seguimiento no contienen información sobre el último intento del flujo de trabajo. Esto se debe a que la información de seguimiento solo consta del resultado de `WriteLine` del flujo de trabajo, y el mensaje final que se muestra se hace así desde el controlador de `Completed` una vez el flujo de trabajo se ha completado. En el siguiente paso del tutorial, [Cómo: Host varias versiones de un flujo de trabajo paralelo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), existente `WriteLine` las actividades se han modificado para mostrar los intentos del usuario y más `WriteLine` actividad se agrega que Muestra los resultados finales. Después de que estos cambios se integran, [Cómo: Host varias versiones de un flujo de trabajo paralelo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) muestra cómo hospedar varias versiones de un flujo de trabajo al mismo tiempo.
+**Escriba un número entre 1 y 10** además de la ausencia de los intentos del usuario, estos datos de seguimiento no contienen información sobre el último intento del flujo de trabajo. Esto se debe a que la información de seguimiento solo consta del resultado de `WriteLine` del flujo de trabajo, y el mensaje final que se muestra se hace así desde el controlador de `Completed` una vez el flujo de trabajo se ha completado. En el siguiente paso del tutorial, [Cómo: Host varias versiones de un flujo de trabajo Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), existente `WriteLine` se modifican las actividades para mostrar los intentos del usuario y más `WriteLine` que agregar actividad Muestra el resultado final. Después de que estos cambios se han integrado, [How to: Host varias versiones de un flujo de trabajo Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) muestra cómo hospedar varias versiones de un flujo de trabajo al mismo tiempo.

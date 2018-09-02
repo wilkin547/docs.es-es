@@ -2,12 +2,12 @@
 title: Ejemplo de uso compartido de puertos Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: cfd87868a5ecc557ccca1003f54f3a896b2f9fcc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db4cd5be73e3c170f2feaa1e76f275eb7d9cd226
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506472"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407841"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Ejemplo de uso compartido de puertos Net.TCP
 El protocolo TCP/IP utiliza un número de 16 bits, llamado "puerto", para diferenciar las conexiones en varias aplicaciones de red que se ejecutan en el mismo equipo. Si una aplicación está realizando escuchas en un puerto, todo el tráfico TCP para ese puerto se dirige a esa aplicación. Otras aplicaciones no pueden realizar escuchas en ese puerto al mismo tiempo.  
@@ -17,13 +17,13 @@ El protocolo TCP/IP utiliza un número de 16 bits, llamado "puerto", para difere
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
  Muchos protocolos tienen un número de puerto estándar o predeterminado que utilizan. Por ejemplo, el protocolo HTTP utiliza suele usar el puerto TCP 80. Internet Information Services (IIS) tiene un agente de escucha para compartir un puerto entre varias aplicaciones HTTP. IIS realiza escuchas directamente en el puerto y reenvía los mensajes a la aplicación adecuada basada en la información dentro de la secuencia de mensajes. Esto permite a varias aplicaciones HTTP utilizar el mismo número de puerto sin tener que competir a la hora de reservar el puerto para recibir mensajes.  
   
- Uso compartido de puertos de NetTcp es una característica de Windows Communication Foundation (WCF) que permite que varias aplicaciones de red compartir un solo puerto de forma similar. El servicio de uso compartido de puerto de NetTcp acepta las conexiones usando el protocolo de net.tcp y reenvía mensajes basados en su dirección de destino.  
+ Uso compartido de puertos de NetTcp es una característica de Windows Communication Foundation (WCF) que permite que varias aplicaciones compartan un único puerto de red del mismo modo. El servicio de uso compartido de puerto de NetTcp acepta las conexiones usando el protocolo de net.tcp y reenvía mensajes basados en su dirección de destino.  
   
  El servicio de uso compartido de puerto de NetTcp no está habilitado de forma predeterminada. Antes de ejecutar este ejemplo, debe habilitar manualmente el servicio. Para obtener más información, consulte [Cómo: habilitar el servicio de uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Si el servicio está deshabilitado, se produce una excepción cuando se inicia la aplicación de servidor.  
   
@@ -132,12 +132,12 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 3.  Habilite el servicio de uso compartido del puerto de NetTcp tal y como se ha descrito previamente en la sección de introducción.  
   
 4.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Los detalles concretos para ejecutar este ejemplo se han incluido previamente en la sección Ejecución del ejemplo.  
+5.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Los detalles concretos para ejecutar este ejemplo se han incluido previamente en la sección Ejecución del ejemplo.  
   
 ## <a name="see-also"></a>Vea también

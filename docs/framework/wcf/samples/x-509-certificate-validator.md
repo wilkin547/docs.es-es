@@ -2,12 +2,12 @@
 title: Validador de certificado X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 911b6db28f89f7a4266ef1b23246020cd0381ada
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: e54f79046113e5f1a1a1cc065606fd5b706b49ac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231533"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402357"
 ---
 # <a name="x509-certificate-validator"></a>Validador de certificado X.509
 Este ejemplo muestra cómo implementar un validador de certificado X.509 personalizado. Esto es útil en casos donde ninguno de los modos de validación de certificado X.509 integrado es adecuado para los requisitos de la aplicación. Este ejemplo muestra un servicio que tiene un validador personalizado que acepta certificados emitidos por sí mismos. El cliente utiliza un certificado para autenticar al servicio.  
@@ -22,7 +22,7 @@ Este ejemplo muestra cómo implementar un validador de certificado X.509 persona
   
 -   El servidor se autentica utilizando el certificado X.509 del servidor.  
   
- El servicio expone un punto de conexión único para comunicarse con el servicio, definido mediante el archivo de configuración App.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un estándar `wsHttpBinding` que usa de forma predeterminada `WSSecurity` y la autenticación de certificado de cliente. El comportamiento del servicio especifica el modo Personalizado para validar los certificados X.509 junto con el tipo de la clase de validador. El comportamiento también especifica el certificado del servidor mediante el elemento serviceCertificate. El certificado de servidor debe contener el mismo valor para la `SubjectName` como el `findValue` en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).  
+ El servicio expone un punto de conexión único para comunicarse con el servicio, definido mediante el archivo de configuración App.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un estándar `wsHttpBinding` que usa de forma predeterminada `WSSecurity` y autenticación de certificados de cliente. El comportamiento del servicio especifica el modo Personalizado para validar los certificados X.509 junto con el tipo de la clase de validador. El comportamiento también especifica el certificado del servidor mediante el elemento serviceCertificate. El certificado de servidor debe contener el mismo valor para el `SubjectName` como el `findValue` en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).  
   
 ```xml  
   <system.serviceModel>  
@@ -302,7 +302,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 #### <a name="to-set-up-and-build-the-sample"></a>Para configurar y compilar el ejemplo  
   
-1.  Para compilar la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 2.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, utilice las instrucciones siguientes.  
   
@@ -317,7 +317,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 3.  Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4.  Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
@@ -329,9 +329,9 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 4.  Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente. Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
   
-5.  En el servidor, ejecute `setup.bat service` en un símbolo del sistema de Visual Studio abierto con privilegios de administrador. Ejecuta `setup.bat` con el `service` argumento crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado de servicio a un archivo denominado Service.cer.  
+5.  En el servidor, ejecute `setup.bat service` en un símbolo del sistema de Visual Studio abierto con privilegios de administrador. Ejecutando `setup.bat` con el `service` argumento crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado de servicio a un archivo denominado Service.cer.  
   
-6.  Editar Service.exe.config para reflejar el nuevo nombre de certificado (en el `findValue` de atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que es el mismo que el nombre de dominio completo del equipo. Cambiar el nombre del equipo en el \<servicio > /\<baseAddresses > elemento desde el host local para el nombre completo de su equipo de servicio.  
+6.  Edite Service.exe.config para reflejar el nuevo nombre del certificado (en el `findValue` atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que es el mismo que el nombre de dominio completo del equipo. Cambiar también el nombre del equipo en el \<servicio > /\<baseAddresses > elemento desde el host local al nombre completo de su equipo de servicio.  
   
 7.  Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
   
@@ -347,13 +347,13 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 13. En el equipo servidor, inicie Service.exe desde la ventana de símbolo del sistema.  
   
-14. En el equipo cliente, inicie Client.exe desde una ventana de símbolo del sistema. Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+14. En el equipo cliente, inicie Client.exe desde una ventana de símbolo del sistema. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
 1.  Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo. Esto quita los certificados de cliente y servidor del almacén de certificados.  
   
 > [!NOTE]
->  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se hayan instalado en el almacén CurrentUser - TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado los ejemplos de Windows Communication Foundation (WCF) que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser - trustedpeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Vea también

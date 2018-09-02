@@ -2,12 +2,12 @@
 title: Grupo de actividad condicionado
 ms.date: 03/30/2017
 ms.assetid: f76ef924-34ce-48ae-8c8d-48faf9697754
-ms.openlocfilehash: 3560542b912f9697ec2e77c8d5c82e148a41d485
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 144a6c76ea6314c553e201fe4e2364890d869f34
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514070"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418174"
 ---
 # <a name="conditioned-activity-group"></a>Grupo de actividad condicionado
 En el ejemplo se muestra una aplicación de reservas de viajes. La actividad <xref:System.Workflow.Activities.ConditionedActivityGroup> (CAG) tiene dos actividades de código: una actividad Car y una actividad Airline. En el constructor `SimpleCAGWorkflow`, el objeto de ArrayList "travelNeedType" se rellena con los tipos de reserva de viajes que se requieren. Si se escribe un comentario en una de las instrucciones `travelNeeds.Add`, o en las dos, se modifica el comportamiento de CAG en consecuencia. Las actividades Car y Airline tienen la condición <xref:System.Workflow.Activities.ConditionedActivityGroup.WhenConditionProperty> con detalles de <xref:System.Workflow.Activities.CodeCondition>. La actividad Car solo se ejecuta si la colección `travelNeeds` tiene una entrada `TravelNeeds.Car`, y la actividad Airline solo se ejecuta si la colección `travelNeeds` tiene una entrada `TravelNeeds.Airline`.  
@@ -31,7 +31,7 @@ En el ejemplo se muestra una aplicación de reservas de viajes. La actividad <xr
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio:  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\SimpleCAG`  
   
