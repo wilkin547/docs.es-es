@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-ms.openlocfilehash: 2a618dae8d5f2f5ea6a6581fff2758fe8419f511
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537738"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456670"
 ---
 # <a name="user-input-in-windows-forms"></a>Datos proporcionados por el usuario en formularios Windows Forms
 Windows Forms incluye un modelo de entrada de usuario basado en eventos que se producen al procesar mensajes de Windows relacionados. Los temas de esta sección proporcionan información sobre datos de mouse y teclado introducidos por el usuario, incluidos ejemplos de código que muestran cómo realizar tareas específicas.  
@@ -37,4 +37,4 @@ Windows Forms incluye un modelo de entrada de usuario basado en eventos que se p
  Describe los métodos para validar datos proporcionados por el usuario en aplicaciones de Windows Forms.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- Consulte también [crear controladores de eventos en formularios Windows Forms](http://msdn.microsoft.com/library/dacysss4\(v=vs.110\)).
+ Consulte también [crear controladores de eventos en Windows Forms](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\)).

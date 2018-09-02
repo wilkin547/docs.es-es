@@ -8,36 +8,36 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-ms.openlocfilehash: 5a6a8dae63f3c0b5e3038304c1c2242f9e8c9c9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b031c6e3dc04637128f95ca8e922d3298981287
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647393"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462428"
 ---
 # <a name="character-data-types-visual-basic"></a>Tipos de datos de caracteres (Visual Basic)
-Visual Basic proporciona *tipos de datos de caracteres* para tratar con caracteres que se pueden mostrar e imprimir. Aunque ambas tienen que ver con caracteres Unicode, `Char` contiene un único carácter, mientras que `String` contiene un número indefinido de caracteres.  
+Visual Basic ofrece *tipos de datos de caracteres* para tratar con caracteres que se puede mostrar e imprimir. Aunque ambas tienen que ver con los caracteres Unicode, `Char` contiene un único carácter, mientras que `String` contiene un número indefinido de caracteres.  
   
- Para una tabla que muestra una comparación en paralelo de los tipos de datos de Visual Basic, vea [tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Para una tabla que muestra una comparación en paralelo de los tipos de datos de Visual Basic, vea [tipos de datos](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="char-type"></a>Char (tipo)  
+## <a name="char-type"></a>Tipo char  
  El `Char` tipo de datos es un único carácter Unicode de dos bytes (16 bits). Si una variable siempre almacena exactamente un carácter, declárelo como `Char`. Por ejemplo:  
   
  [!code-vb[VbVbalrCharTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#1)]
   
- Cada valor posible de un `Char` o `String` variable es un *punto de código*, o el código de carácter, en el juego de caracteres Unicode. Caracteres Unicode incluyen el juego de caracteres ASCII básico, diversas otras letras del alfabeto, acentos, símbolos de moneda, fracciones, signos diacríticos y símbolos matemáticos y técnicos.  
+ Cada valor posible en un `Char` o `String` variable es un *punto de código*, o el código en el juego de caracteres Unicode. Los caracteres Unicode incluyen el juego de caracteres ASCII básico, diversas otras letras del alfabeto, acentos, símbolos de moneda, fracciones, los signos diacríticos y símbolos técnicos y matemáticos.  
   
 > [!NOTE]
->  Juego de caracteres Unicode reserva los puntos de código D800 a DFFF (55296 a 55551 decimales) para *pares suplentes*, que requieren dos valores de 16 bits para representar un punto de código único. A `Char` variable no puede contener un par suplente y un `String` utiliza dos posiciones que contiene un par de este tipo.  
+>  Juego de caracteres Unicode recursos en reserva en los puntos de código D800 a DFFF (55296 a 55551 decimales) para *pares suplentes*, que requiere dos valores de 16 bits para representar un único punto de código. Un `Char` variable no puede contener un par suplente y un `String` utiliza dos posiciones que contiene un par de este tipo.  
   
  Para obtener más información, consulte [tipo de datos Char](../../../../visual-basic/language-reference/data-types/char-data-type.md).  
   
 ## <a name="string-type"></a>Tipo de cadena  
- El `String` tipo de datos es una secuencia de cero o más caracteres Unicode de dos bytes (16 bits). Si una variable puede contener un número indefinido de caracteres, se declara como `String`. Por ejemplo:  
+ El `String` tipo de datos es una secuencia de cero o más caracteres Unicode de dos bytes (16 bits). Si una variable puede contener un número indefinido de caracteres, declárelo como `String`. Por ejemplo:  
   
  [!code-vb[VbVbalrCharTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#2)]
   
- Para obtener más información, consulte [tipo de datos de cadena](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
+ Para obtener más información, consulte [tipo de datos String](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de datos básicos](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  

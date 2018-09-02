@@ -5,12 +5,12 @@ helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: 42eccbf88db2a407c6dd40209ecd615f0c19eb7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63b1a4b9b2483d017a686819573f91744d8a565a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539206"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463699"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>SplitContainer (Control, formularios Windows Forms)
 El control `SplitContainer` de Windows Forms puede considerarse como una composición de dos paneles separados por una barra móvil. Cuando el puntero del mouse está sobre la barra, el puntero cambia de forma para mostrar que se puede mover.  
@@ -33,7 +33,7 @@ El control `SplitContainer` de Windows Forms puede considerarse como una composi
  [Crear una interfaz de usuario de varios paneles con Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Crea una interfaz de usuario de varios paneles similar a la que se usa en Microsoft Outlook.  
   
- Consulte también [Cómo: dividir una ventana horizontalmente con el diseñador](http://msdn.microsoft.com/library/ms233667\(v=vs.110\)), [Cómo: crear una interfaz de estilo Explorador de Windows en un formulario Windows Forms](http://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [Cómo: crear una interfaz de usuario de varios paneles con Formularios Windows Forms mediante el diseñador](http://msdn.microsoft.com/library/ms233661\(v=vs.110\)).  
+ Consulte también [Cómo: dividir una ventana horizontalmente con el diseñador](how-to-split-a-window-horizontally-using-the-designer.md), [Cómo: crear una interfaz de estilo del explorador de Windows en un formulario Windows Forms](https://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [Cómo: crear una interfaz de usuario de varios paneles con Mediante el Diseñador de formularios de Windows](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
   
 ## <a name="reference"></a>Referencia  
  Clase <xref:System.Windows.Forms.SplitContainer>  

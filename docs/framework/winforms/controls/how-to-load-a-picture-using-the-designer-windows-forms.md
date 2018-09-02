@@ -8,15 +8,15 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 5eb85c6f3ca232f8b53ac01d57ee71f73415cf83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e01e5d1dc0fad8171e705e85debc2b15d6a506eb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533548"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466539"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Cómo: Cargar una imagen mediante el Diseñador (formularios Windows Forms)
-Con los formularios Windows Forms <xref:System.Windows.Forms.PictureBox> (control), puede cargar y mostrar una imagen en un formulario en tiempo de diseño estableciendo la <xref:System.Windows.Forms.PictureBox.Image%2A> propiedad en una imagen válida. En la tabla siguiente muestra los tipos de archivo aceptables.  
+Con los formularios de Windows <xref:System.Windows.Forms.PictureBox> control, puede cargar y mostrar una imagen en un formulario en tiempo de diseño estableciendo el <xref:System.Windows.Forms.PictureBox.Image%2A> propiedad en una imagen válida. En la tabla siguiente se muestra los tipos de archivo aceptables.  
   
 |Tipo|Extensión de nombre de archivo|  
 |----------|-------------------------|  
@@ -27,21 +27,21 @@ Con los formularios Windows Forms <xref:System.Windows.Forms.PictureBox> (contro
 |JPEG|.jpg|  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-display-a-picture-at-design-time"></a>Para mostrar una imagen en tiempo de diseño  
   
 1.  Dibujar un <xref:System.Windows.Forms.PictureBox> control en un formulario.  
   
-2.  En la ventana Propiedades, seleccione la <xref:System.Windows.Forms.PictureBox.Image%2A> propiedad y, a continuación, haga clic en botón de los puntos suspensivos para mostrar el **abiertos** cuadro de diálogo.  
+2.  En la ventana Propiedades, seleccione la <xref:System.Windows.Forms.PictureBox.Image%2A> propiedad y, a continuación, haga clic en botón de puntos suspensivos para mostrar el **abierto** cuadro de diálogo.  
   
-3.  Si desea obtener un tipo de archivo específico (por ejemplo, archivos .gif), selecciónela en la **archivos de tipo** cuadro.  
+3.  Si busca un tipo de archivo específico (por ejemplo, archivos .gif), selecciónelo en la **archivos de tipo** cuadro.  
   
 4.  Seleccione el archivo que desea mostrar.  
   
 ### <a name="to-clear-the-picture-at-design-time"></a>Para borrar la imagen en tiempo de diseño  
   
-1.  En el **propiedades** ventana, seleccione el <xref:System.Windows.Forms.PictureBox.Image%2A> propiedad y menú contextual de la imagen en miniatura que aparece a la izquierda del nombre del objeto de imagen. Elija **restablecer**.  
+1.  En el **propiedades** ventana, seleccione el <xref:System.Windows.Forms.PictureBox.Image%2A> propiedad y con el botón secundario en la imagen en miniatura que aparece a la izquierda del nombre del objeto de imagen. Elija **restablecer**.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Forms.PictureBox>  

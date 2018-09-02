@@ -9,15 +9,15 @@ helpviewer_keywords:
 - animation [WPF], ArcSegment size
 - ArcSegment [WPF], animating size
 ms.assetid: f93a1065-b00a-4d7e-9d4b-37023f98186a
-ms.openlocfilehash: b7c7ebcfcb9dd23f6472472be3d693740c910f9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21d9e773dc03a42e2cfba0bbe47d9831d93d5c69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560843"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470754"
 ---
 # <a name="how-to-animate-the-size-of-an-arcsegment"></a>Cómo: Animar el tamaño de un objeto ArcSegment
-Este ejemplo muestra cómo animar la <xref:System.Windows.Media.ArcSegment.Size%2A> propiedad de un <xref:System.Windows.Media.ArcSegment>.  
+En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.ArcSegment.Size%2A> propiedad de un <xref:System.Windows.Media.ArcSegment>.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea un <xref:System.Windows.Media.ArcSegment> que anima su <xref:System.Windows.Media.ArcSegment.Size%2A> cuando se carga en la pantalla.  
@@ -25,7 +25,7 @@ Este ejemplo muestra cómo animar la <xref:System.Windows.Media.ArcSegment.Size%
  [!code-csharp[BasicAnimations_snip#SizeAnimationWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/SizeAnimationExample.cs#sizeanimationwholepage)]
  [!code-vb[BasicAnimations_snip#SizeAnimationWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/SizeAnimationExample.vb#sizeanimationwholepage)]  
   
- Para la geometría adicional y ejemplos de animación, consulte el [ejemplo geometrías](http://go.microsoft.com/fwlink/?LinkID=159989).  
+ Para la geometría adicional y ejemplos de animación, vea el [ejemplo de geometrías](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Media.ArcSegment.Size%2A>  
@@ -33,5 +33,5 @@ Este ejemplo muestra cómo animar la <xref:System.Windows.Media.ArcSegment.Size%
  [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
  [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
- [Animación y temporización](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [Animación y temporización](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
  [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

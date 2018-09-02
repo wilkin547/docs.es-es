@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e544db23abf89a20bd2f7763cfdb1256ea4a326c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 09bd32172bcad298eebc2921461fdc953e9c6d6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441369"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468298"
 ---
 # <a name="runtimeinfoflags-enumeration"></a>RUNTIME_INFO_FLAGS (Enumeración)
 Contiene valores que indican qué información acerca de common language runtime (CLR) se debe devolver.  
@@ -47,17 +47,17 @@ typedef enum {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Indica que no debe incluirse la información del directorio.|  
+|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Indica que no debe incluirse la información de directorio.|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|Indica que no debe incluirse la información de versión.|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Indica que no se debe mostrar un cuadro de diálogo de error en caso de error.|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Indica que los efectos de la llamada a la [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkId=255242) se debe invalidar la función con la marca SEM_FAILCRITICALERRORS. Es decir, se debería mostrar un cuadro de diálogo de instalación en caso de error, en lugar de que se va a suprimir.|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Indica que no se debe mostrar un cuadro de diálogo de error tras un error.|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Indica que los efectos de la llamada a la [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) se debe invalidar la función con la marca SEM_FAILCRITICALERRORS. Es decir, se debe mostrar un cuadro de diálogo de instalación en caso de error, en lugar de que se va a suprimir.|  
 |`RUNTIME_INFO_REQUEST_AMD64`|Indica una solicitud para obtener información acerca de una versión compatible con AMD-64 del tiempo de ejecución.|  
 |`RUNTIME_INFO_REQUEST_IA64`|Indica una solicitud para obtener información acerca de una versión compatible con IA-64 del tiempo de ejecución.|  
-|`RUNTIME_INFO_REQUEST_X86`|Indica una solicitud para obtener información acerca de una versión compatible de x86 del tiempo de ejecución.|  
+|`RUNTIME_INFO_REQUEST_X86`|Indica una solicitud para obtener información acerca de una versión compatible con x86 del tiempo de ejecución.|  
 |`RUNTIME_INFO_UPGRADE_VERSION`|Indica que se debe incluir información de actualización de versión.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los siguientes indicadores de arquitectura de plataforma se pueden especificar sólo de uno en uno y no se pueden combinar:  
+ Los siguientes indicadores de arquitectura de plataforma pueden ser solo uno especificado a la vez y no se pueden combinar:  
   
 -   RUNTIME_INFO_REQUEST_IA64  
   
@@ -66,13 +66,13 @@ typedef enum {
 -   RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

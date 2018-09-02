@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: f12049ba1230b052f61994bd0c2db496a0da4aae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02d151ee322cb2793df6f31e5e4b72dfb1027aec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506217"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462355"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 Este ejemplo muestra cómo se pueden personalizar los procesos de deserialización y serialización utilizando la clase <xref:System.Runtime.Serialization.DataContractResolver>. En este ejemplo se muestra cómo agregar dinámicamente los tipos conocidos durante la serialización y deserialización.  
@@ -348,7 +348,7 @@ Lists combined:
   
 1.  Haga clic en la solución **KnownAssemblyAttribute** y seleccione **propiedades**.  
   
-2.  En **propiedades comunes**, seleccione **proyecto de inicio**y, a continuación, haga clic en **proyectos de inicio múltiples**.  
+2.  En **propiedades comunes**, seleccione **proyecto de inicio**y, a continuación, haga clic en **varios proyectos de inicio**.  
   
 3.  Agregar el **iniciar** acción a la **servicio** y **cliente** proyectos.  
   
@@ -356,18 +356,18 @@ Lists combined:
   
 5.  Si la aplicación no se ejecuta correctamente, siga estos pasos para asegurarse de que el entorno se ha configurado correctamente:  
   
-6.  Asegúrese de que ha llevado a cabo la [procedimiento para los ejemplos de Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=150774).  
+6.  Asegúrese de que ha realizado la [procedimiento para los ejemplos de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150774).  
   
-7.  Para compilar la solución, siga las instrucciones que aparecen en [generar el ejemplo de Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=150775).  
+7.  Para compilar la solución, siga las instrucciones de [compilando el ejemplo de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150775).  
   
-8.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=150776).  
+8.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 47f89feb90efbafb6c43bbad78f05292213a0c58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 274a6e87b272002a567fd92605c4e690c03b6e26
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365870"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466922"
 ---
 # <a name="single-bulk-copy-operations"></a>Operaciones de copia masiva únicas
 La manera más sencilla de realizar una operación de copia masiva de SQL Server es ejecutar una sola operación con respecto a una base de datos. De forma predeterminada, las operaciones de copia masiva se realizan como una operación aislada: la operación de copia tiene lugar sin transacción, sin la oportunidad de revertirla.  
@@ -28,22 +28,22 @@ La manera más sencilla de realizar una operación de copia masiva de SQL Server
   
 3.  Cree un objeto <xref:System.Data.SqlClient.SqlBulkCopy> y configure las propiedades necesarias.  
   
-4.  Establecer el **DestinationTableName** propiedad para indicar la tabla de destino para la mayor parte de operación de inserción.  
+4.  Establecer el **DestinationTableName** propiedad para indicar la tabla de destino para la masiva de la operación de inserción.  
   
 5.  Llame a uno de los **WriteToServer** métodos.  
   
-6.  Opcionalmente, actualice las propiedades y llame al método **WriteToServer** nuevo según sea necesario.  
+6.  Opcionalmente, actualice las propiedades y llame **WriteToServer** nuevo según sea necesario.  
   
 7.  Llame a <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>, o incluya las operaciones de copia masiva en una instrucción `Using`.  
   
 > [!CAUTION]
->  Es recomendable que los tipos de datos de las columnas de origen y destino coincidan. Si no coinciden los tipos de datos, **SqlBulkCopy** intenta convertir los valores de origen para el tipo de datos de destino, utilizando las reglas empleadas por <xref:System.Data.SqlClient.SqlParameter.Value%2A>. Las conversiones pueden afectar al rendimiento y también dar lugar a errores inesperados. Por ejemplo, un tipo de datos `Double` se puede convertir a un tipo de datos `Decimal` la mayoría de las veces, pero no siempre.  
+>  Es recomendable que los tipos de datos de las columnas de origen y destino coincidan. Si no coinciden los tipos de datos, **SqlBulkCopy** intenta convertir cada valor de origen en el tipo de datos de destino, utilizando las reglas empleadas por <xref:System.Data.SqlClient.SqlParameter.Value%2A>. Las conversiones pueden afectar al rendimiento y también dar lugar a errores inesperados. Por ejemplo, un tipo de datos `Double` se puede convertir a un tipo de datos `Decimal` la mayoría de las veces, pero no siempre.  
   
 ## <a name="example"></a>Ejemplo  
- En la siguiente aplicación de consola se demuestra cómo cargar datos mediante la clase <xref:System.Data.SqlClient.SqlBulkCopy>. En este ejemplo, un <xref:System.Data.SqlClient.SqlDataReader> se utiliza para copiar los datos de la **Production.Product** tabla de SQL Server**AdventureWorks** base de datos a una tabla similar en la misma base de datos.  
+ En la siguiente aplicación de consola se demuestra cómo cargar datos mediante la clase <xref:System.Data.SqlClient.SqlBulkCopy>. En este ejemplo, un <xref:System.Data.SqlClient.SqlDataReader> se usa para copiar datos desde el **Production.Product** tabla en SQL Server**AdventureWorks** base de datos a una tabla similar en la misma base de datos.  
   
 > [!IMPORTANT]
->  Este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [configuración de ejemplo de copia masiva](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Este código se proporciona para mostrar la sintaxis para usar **SqlBulkCopy** solo. Si las tablas de origen y de destino están incluidas en la misma instancia de SQL Server, lo más rápido y sencillo es usar una instrucción `INSERT … SELECT` de Transact-SQL para copiar los datos.  
+>  En este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [configuración de ejemplo de copia masiva](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Este código se proporciona para mostrar la sintaxis para usar **SqlBulkCopy** solo. Si las tablas de origen y de destino están incluidas en la misma instancia de SQL Server, lo más rápido y sencillo es usar una instrucción `INSERT … SELECT` de Transact-SQL para copiar los datos.  
   
  [!code-csharp[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/CS/source.cs#1)]
  [!code-vb[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/VB/source.vb#1)]  
@@ -81,4 +81,4 @@ command.ExecuteNonQuery();
   
 ## <a name="see-also"></a>Vea también  
  [Operaciones de copia masiva en SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
 ms.openlocfilehash: 671553b496520f2c2ac3fea90b1514a6cdf1764a
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331766"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467286"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel (Control, formularios Windows Forms)
 El control <xref:System.Windows.Forms.TableLayoutPanel> organiza su contenido en una cuadrícula. Como el diseño se realiza en tiempo de diseño y en tiempo de ejecución, puede cambiar dinámicamente cuando cambie el entorno de la aplicación. Esto proporciona a los controles del panel la capacidad de ajustar el tamaño proporcionalmente para poder responder a cambios como el ajuste de tamaño del control primario o el cambio de longitud del texto debido a la localización.  

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
 ms.openlocfilehash: 7546676b85465577b357b7ad0757b4db8d40dbe3
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934444"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466045"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>Desbordamiento (Error en tiempo de ejecución de Visual Basic)
 Se produce un desbordamiento al intentar una asignación que supera los límites del destino de la asignación.  

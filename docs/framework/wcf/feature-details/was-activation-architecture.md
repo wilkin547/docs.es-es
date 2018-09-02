@@ -2,12 +2,12 @@
 title: Arquitectura de activación de WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 0c91ebd605fbe503dd11da7167512648afd86449
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64219649e7b743b7dd3a67673c3f2409aeeba486
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498002"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457165"
 ---
 # <a name="was-activation-architecture"></a>Arquitectura de activación de WAS
 Este tema detalla y discute los componentes de Windows Process Activation Service (también conocido como WAS).  
@@ -30,11 +30,11 @@ Este tema detalla y discute los componentes de Windows Process Activation Servic
  ![Arquitectura de WAS](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
   
 ### <a name="listener-adapters"></a>Adaptadores de escucha  
- Los adaptadores de escucha son servicios de Windows individuales que implementan la lógica de comunicación de red utilizada para recibir mensajes mediante el protocolo de red en el que realizan escuchas. La tabla siguiente enumera los adaptadores de escucha para protocolos de Windows Communication Foundation (WCF).  
+ Los adaptadores de escucha son servicios de Windows individuales que implementan la lógica de comunicación de red utilizada para recibir mensajes mediante el protocolo de red en el que realizan escuchas. En la tabla siguiente se enumera los adaptadores de escucha para los protocolos de Windows Communication Foundation (WCF).  
   
 |Nombre de servicio de adaptador de escucha|Protocolo|Notas|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|Componente común que proporciona activación de HTTP para IIS 7.0 y WCF.|  
+|W3SVC|http|Componente común que proporciona activación HTTP para IIS 7.0 y WCF.|  
 |NetTcpActivator|net.tcp|Depende del servicio NetTcpPortSharing.|  
 |NetPipeActivator|net.pipe||  
 |NetMsmqActivator|net.msmq|Para su uso con aplicaciones basadas en WCF Message Queue Server.|  
@@ -87,4 +87,4 @@ Este tema detalla y discute los componentes de Windows Process Activation Servic
   
 ## <a name="see-also"></a>Vea también  
  [Configuración de WAS para su uso con WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Características de hospedaje de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Características de hospedaje de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -1,13 +1,13 @@
 ---
 title: Referencia de símbolos y operadores (F#)
-description: 'Obtenga información acerca de los símbolos y operadores que se utilizan en el lenguaje de programación de F #.'
+description: 'Obtenga información sobre los símbolos y operadores que se utilizan en el lenguaje de programación F #.'
 ms.date: 04/04/2018
-ms.openlocfilehash: 79518b990f3a5c794f7658490bdadc2d5b985504
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a52fc7539027f0cf86a82223a5970d86d7ec60c5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566709"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457205"
 ---
 # <a name="symbol-and-operator-reference"></a>Referencia de símbolos y operadores
 
@@ -82,7 +82,7 @@ En la siguiente tabla se describen los símbolos utilizados en el lenguaje F#, s
 |`=?`|[Operadores que aceptan valores NULL](nullable-operators.md)|<ul><li>Calcula la operación “es igual a” cuando el lado derecho es un tipo que acepta valores NULL.<br /></li><ul/>|
 |`==`|No es aplicable.|<ul><li>No se utiliza en F#. Utilice `=` para operaciones de igualdad.<br /></li><ul/>|
 |`>`|[Operadores aritméticos](arithmetic-operators.md)|<ul><li>Devuelve `true` si el lado izquierdo es mayor que el lado derecho; de lo contrario, devuelve `false`.<br /></li><ul/>|
-|`>?`|[Operadores que aceptan valores NULL](nullable-operators.md)|<ul><li>Calcula la operación “mayor que” cuando el lado derecho es un tipo que acepta valores NULL.<br /></li><ul/>|
+|`>?`|[Operadores que aceptan valores NULL](nullable-operators.md)|<ul><li>Calcula la operación "mayor que" cuando el lado derecho es un tipo que acepta valores NULL.<br /></li><ul/>|
 |`>>`|[Funciones](../functions/index.md)|<ul><li>Compone dos funciones (operador de composición hacia delante).<br /></li><ul/>|
 |`>>>`|[Operadores bit a bit](bitwise-operators.md)|<ul><li>Desplaza hacia la derecha los bits de la cantidad del lado izquierdo, y lo hace en el número de posiciones especificado en el lado derecho.<br /></li><ul/>|
 |`>=`|[Operadores aritméticos](arithmetic-operators.md)|<ul><li>Devuelve `true` si el lado izquierdo es mayor o igual que el lado derecho; de lo contrario, devuelve `false`.<br /></li><ul/>|

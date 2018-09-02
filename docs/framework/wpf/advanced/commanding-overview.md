@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 0801b3d2a0e34c1ac28569a164e140010ba36ab7
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: d41613ce2488fa572fa11def06350ab1e564df6c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805677"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467969"
 ---
 # <a name="commanding-overview"></a>Información general sobre comandos
 <a name="introduction"></a> Los comandos constituyen un mecanismo de entrada de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], que permite el control de entrada en un nivel más semántico que la entrada del dispositivo. Algunos ejemplos de comandos son las operaciones **Copiar**, **Cortar** y **Pegar** presentes en numerosas aplicaciones.  
@@ -191,5 +191,5 @@ ms.locfileid: "34805677"
  [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)  
  [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [Implement ICommandSource (ejemplo)](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [Cómo: Agregar un comando a un elemento de menú](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)  
+ [Cómo: Agregar un comando a un elemento de menú](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)  
  [Crear un objeto RoutedCommand de muestra personalizado](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

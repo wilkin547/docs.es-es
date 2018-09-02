@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 1849fd0d81b00f1fa351d2a8cf1d2ed567e04401
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f939175a77ff080b37491a36c15edbb8af15933
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529498"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462469"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Información general del control DataGrid (Formularios Windows Forms)
 > [!NOTE]
@@ -52,9 +52,9 @@ Un control DataGrid enlazado a datos con múltiples tablas
 ## <a name="binding-data-to-the-control"></a>Enlazar datos al control  
  Para que el control <xref:System.Windows.Forms.DataGrid> funcione, debe enlazarse a un origen de datos mediante las propiedades <xref:System.Windows.Forms.DataGrid.DataSource%2A> y <xref:System.Windows.Forms.DataGrid.DataMember%2A> en tiempo de diseño o el método <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> en tiempo de ejecución. Este enlace apunta el control <xref:System.Windows.Forms.DataGrid> a un objeto de origen de datos con instancias, como un <xref:System.Data.DataSet> o <xref:System.Data.DataTable>). El control <xref:System.Windows.Forms.DataGrid> muestra los resultados de las acciones que se realizan en los datos. Las acciones más específicas de los datos no se realizan a través de <xref:System.Windows.Forms.DataGrid>, sino a través del origen de datos.  
   
- Si los datos del conjunto de datos enlazado se actualizan mediante cualquier mecanismo, el control <xref:System.Windows.Forms.DataGrid> refleja los cambios. Si la cuadrícula de datos y sus estilos de tabla y columna tienen la `ReadOnly` propiedad establecida en `false`, los datos del conjunto de datos se pueden actualizar a través de la <xref:System.Windows.Forms.DataGrid> control.  
+ Si los datos del conjunto de datos enlazado se actualizan mediante cualquier mecanismo, el control <xref:System.Windows.Forms.DataGrid> refleja los cambios. Si la cuadrícula de datos y sus estilos de tabla y estilos de columna tienen la `ReadOnly` propiedad establecida en `false`, se pueden actualizar los datos del conjunto de datos a través de la <xref:System.Windows.Forms.DataGrid> control.  
   
- Tan solo se puede mostrar una tabla en <xref:System.Windows.Forms.DataGrid> a la vez. Si se define una relación primaria-secundaria entre las tablas, el usuario puede desplazarse entre las tablas relacionadas para seleccionar la tabla que se mostrará en el control <xref:System.Windows.Forms.DataGrid>. Para obtener información sobre el enlace de un <xref:System.Windows.Forms.DataGrid> el control a un [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] origen de datos en tiempo de diseño o en tiempo de ejecución, vea [Cómo: enlazar el DataGrid Control de formularios Windows Forms a un origen de datos](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+ Tan solo se puede mostrar una tabla en <xref:System.Windows.Forms.DataGrid> a la vez. Si se define una relación primaria-secundaria entre las tablas, el usuario puede desplazarse entre las tablas relacionadas para seleccionar la tabla que se mostrará en el control <xref:System.Windows.Forms.DataGrid>. Para obtener información sobre el enlace de un <xref:System.Windows.Forms.DataGrid> el control a un [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] origen de datos en tiempo de diseño o en tiempo de ejecución, vea [Cómo: enlazar el DataGrid Control de Windows Forms a un origen de datos](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
  Los orígenes de datos válidos para <xref:System.Windows.Forms.DataGrid> son:  
   
@@ -90,14 +90,14 @@ Un control DataGrid enlazado a datos con múltiples tablas
 |Varias tablas relacionadas.|La cuadrícula puede mostrar una vista de árbol para seleccionar las tablas, o usted puede especificar que la cuadrícula muestre la tabla primaria. Los registros de la tabla primaria permiten a los usuarios desplazarse a las filas secundarias relacionadas.|  
   
 > [!NOTE]
->  Las tablas de un conjunto de datos se relacionan mediante <xref:System.Data.DataRelation>.  Consulte también [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" relaciones en conjuntos de datos](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) o [relaciones en conjuntos de datos](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+>  Las tablas de un conjunto de datos se relacionan mediante <xref:System.Data.DataRelation>.  Consulte también [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" relaciones en conjuntos de datos](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) o [relaciones en conjuntos de datos](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
   
  Cuando el control <xref:System.Windows.Forms.DataGrid> muestra una tabla y la propiedad <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> se establece en `true`, los datos se pueden volver a ordenar haciendo clic en los encabezados de columna. El usuario también puede agregar filas y modificar celdas.  
   
  Las relaciones entre un conjunto de tablas se muestran a los usuarios con una estructura de elementos primarios y secundarios de navegación. Las tablas primarias son el nivel más alto de los datos y las tablas secundarias son las tablas de datos que se derivan de los listados individuales de las tablas primarias. Los expansores se muestran en cada fila primaria que contiene una tabla secundaria. Al hacer clic en un expansor, se genera una lista de vínculos de tipo web a las tablas secundarias. Cuando el usuario selecciona un vínculo, se muestra la tabla secundaria. Al hacer clic en el icono de mostrar u ocultar las filas primarias (![icono ocultar&#47;mostrar filas primarias](../../../../docs/framework/winforms/controls/media/vbicon.gif "vbIcon")), se ocultará la información acerca de la tabla primaria o reaparecerá si el usuario la ha ocultado previamente. El usuario puede hacer clic en un botón Atrás para volver a la tabla mostrada previamente.  
   
 ## <a name="columns-and-rows"></a>Columnas y filas  
- <xref:System.Windows.Forms.DataGrid> consta de una colección de objetos <xref:System.Windows.Forms.DataGridTableStyle> que se encuentran en la propiedad <xref:System.Windows.Forms.DataGrid.TableStyles%2A> del control <xref:System.Windows.Forms.DataGrid>. Un estilo de tabla puede contener una colección de objetos <xref:System.Windows.Forms.DataGridColumnStyle> que se encuentran en la propiedad <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> de <xref:System.Windows.Forms.DataGridTableStyle>. Puede editar la <xref:System.Windows.Forms.DataGrid.TableStyles%2A> y <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propiedades mediante los editores de colección que tiene accesibles a través de la **propiedades** ventana.  
+ <xref:System.Windows.Forms.DataGrid> consta de una colección de objetos <xref:System.Windows.Forms.DataGridTableStyle> que se encuentran en la propiedad <xref:System.Windows.Forms.DataGrid.TableStyles%2A> del control <xref:System.Windows.Forms.DataGrid>. Un estilo de tabla puede contener una colección de objetos <xref:System.Windows.Forms.DataGridColumnStyle> que se encuentran en la propiedad <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> de <xref:System.Windows.Forms.DataGridTableStyle>. Puede editar el <xref:System.Windows.Forms.DataGrid.TableStyles%2A> y <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propiedades mediante el uso de editores de colección que tiene acceso a través del **propiedades** ventana.  
   
  Cualquier <xref:System.Windows.Forms.DataGridTableStyle> asociado con el control <xref:System.Windows.Forms.DataGrid> puede tener acceso mediante <xref:System.Windows.Forms.GridTableStylesCollection>. <xref:System.Windows.Forms.GridTableStylesCollection> se puede editar en el diseñador con el editor de colección <xref:System.Windows.Forms.DataGridTableStyle>, o mediante programación a través de la propiedad <xref:System.Windows.Forms.DataGrid.TableStyles%2A> del control <xref:System.Windows.Forms.DataGrid>.  
   
@@ -124,7 +124,7 @@ La ilustración siguiente muestra los objetos incluidos en el control DataGrid.
   
  Los estilos de columna están relacionados con las columnas de un conjunto de datos del mismo modo que los estilos de tabla están relacionados con las tablas de datos. Al igual que sucede con las tablas, que no pueden tener más de un estilo de tabla definido, una columna no puede tener definido más de un estilo de columna en un estilo de tabla concreto. Esta relación se define en la propiedad <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> de la columna.  
   
- Si ha creado un estilo de tabla sin agregarle estilos de columna, Visual Studio agregará estilos de columna predeterminados cuando se creen el formulario y la cuadrícula en tiempo de ejecución. Sin embargo, si ha creado un estilo de tabla y le agrega estilos de columna, Visual Studio no creará ningún estilo de columna. Además, necesitará definir estilos de columna y asignarlos con el nombre de la asignación para que las columnas que desee aparezcan en la cuadrícula.  
+ Si ha creado un estilo de tabla sin agregarle estilos de columna, Visual Studio agregará estilos de columna predeterminados cuando se crean el formulario y la cuadrícula en tiempo de ejecución. Sin embargo, si ha creado un estilo de tabla y le agrega estilos de columna, Visual Studio no creará ningún estilo de columna. Además, necesitará definir estilos de columna y asignarlos con el nombre de la asignación para que las columnas que desee aparezcan en la cuadrícula.  
   
  Dado que usted especifica las columnas que se incluyen en la cuadrícula de datos al asignarles un estilo de columna y no se les ha asignado ningún estilo de columna, puede incluir columnas de datos en el conjunto de datos que no se muestran en la cuadrícula. Sin embargo, dado que la columna de datos se incluye en el conjunto de datos, puede editar mediante programación los datos que no se muestran.  
   

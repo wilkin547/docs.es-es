@@ -2,15 +2,15 @@
 title: Canal de fragmentación
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 1acb635be23b9a838abee714156d818abee6bcd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9572ad6f88786af34252cea1f3c62d5067257b8b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508848"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470095"
 ---
 # <a name="chunking-channel"></a>Canal de fragmentación
-Al enviar mensajes de gran tamaño mediante Windows Communication Foundation (WCF), a menudo es conveniente limitar la cantidad de memoria utilizada para almacenar en búfer los mensajes. Una posible solución es transmitir en secuencias el cuerpo del mensaje (suponiendo que la mayor parte de los datos se encuentra en el cuerpo). Sin embargo, algunos protocolos requieren almacenado en búfer del mensaje completo. La mensajería de confianza y la seguridad son dos ejemplos de lo anterior. Otra posible solución es dividir el mensaje grande en mensajes menores llamados fragmentos, enviar uno por uno esos fragmentos y reconstituir el mensaje entero en el lado receptor. La propia aplicación podría hacer esta fragmentación y desfragmentación, o podría utilizar un canal personalizado para hacerlo. El canal de fragmentación muestra cómo un protocolo personalizado o un canal en capas se pueden utilizar para la fragmentación y desfragmentación de mensajes arbitrariamente grandes.  
+Al enviar mensajes de gran tamaño mediante Windows Communication Foundation (WCF), suele ser deseable para limitar la cantidad de memoria utilizada para almacenar en búfer esos mensajes. Una posible solución es transmitir en secuencias el cuerpo del mensaje (suponiendo que la mayor parte de los datos se encuentra en el cuerpo). Sin embargo, algunos protocolos requieren almacenado en búfer del mensaje completo. La mensajería de confianza y la seguridad son dos ejemplos de lo anterior. Otra posible solución es dividir el mensaje grande en mensajes menores llamados fragmentos, enviar uno por uno esos fragmentos y reconstituir el mensaje entero en el lado receptor. La propia aplicación podría hacer esta fragmentación y desfragmentación, o podría utilizar un canal personalizado para hacerlo. El canal de fragmentación muestra cómo un protocolo personalizado o un canal en capas se pueden utilizar para la fragmentación y desfragmentación de mensajes arbitrariamente grandes.  
   
  Siempre se debería emplear la fragmentación solo una vez construido el mensaje completo que se va a enviar. Un canal de fragmentación siempre se debería disponer en niveles debajo de un canal de seguridad y un canal de sesión confiable.  
   
@@ -22,7 +22,7 @@ Al enviar mensajes de gran tamaño mediante Windows Communication Foundation (WC
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`  
   
@@ -271,7 +271,7 @@ interface ITestService
  `OnOpen` llama `innerChannel.Open` para abrir el canal interno.  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` establece primero `stopReceive` a `true` para señalar el `ReceiveChunkLoop` pendiente para detenerse. A continuación, espera para la `receiveStopped``ManualResetEvent`, que se establece cuando `ReceiveChunkLoop` se detiene. Suponiendo las pausas `ReceiveChunkLoop` dentro del tiempo de espera especificado, `OnClose` llama `innerChannel.Close` con el tiempo de espera restante.  
+ `OnClose` establece primero `stopReceive` a `true` para señalar el `ReceiveChunkLoop` pendiente para detenerse. A continuación, espera el `receiveStopped``ManualResetEvent`, que se establece cuando `ReceiveChunkLoop` se detiene. Suponiendo las pausas `ReceiveChunkLoop` dentro del tiempo de espera especificado, `OnClose` llama `innerChannel.Close` con el tiempo de espera restante.  
   
 ### <a name="onabort"></a>OnAbort  
  `OnAbort` llama `innerChannel.Abort` para anular el canal interno. Si hay un `ReceiveChunkLoop` pendiente, recibe a una excepción de la llamada `innerChannel.Receive` pendiente.  
@@ -290,9 +290,9 @@ interface ITestService
  `ChunkingChannelListener` es un contenedor alrededor de una escucha de canal interno. Su función principal, además de delegar llamadas a esa escucha del canal interno, es ajustar nuevo `ChunkingDuplexSessionChannels` alrededor de los canales aceptados por la escucha del canal interno. Esto se hace en `OnAcceptChannel` y `OnEndAcceptChannel`. El `ChunkingDuplexSessionChannel` recientemente creado se pasa al canal interno junto con los otros parámetros descritos previamente.  
   
 ## <a name="implementing-binding-element-and-binding"></a>Implementar elemento de enlace y enlace  
- `ChunkingBindingElement` es el responsable de crear el `ChunkingChannelFactory` y `ChunkingChannelListener`. El `ChunkingBindingElement` comprueba si T en `CanBuildChannelFactory` \<T > y `CanBuildChannelListener` \<T > es de tipo `IDuplexSessionChannel` (el único canal que admite el canal de fragmentación) y que los demás elementos de enlace en el enlace admiten esto tipo de canal.  
+ `ChunkingBindingElement` es el responsable de crear el `ChunkingChannelFactory` y `ChunkingChannelListener`. El `ChunkingBindingElement` comprueba si T en `CanBuildChannelFactory` \<T > y `CanBuildChannelListener` \<T > es de tipo `IDuplexSessionChannel` (el único canal admitido por el canal de fragmentación) y que los demás elementos de enlace en el enlace admiten esto tipo de canal.  
   
- `BuildChannelFactory`\<T > comprueba primero que el tipo de canal solicitado se puede crear y, a continuación, obtiene una lista de acciones de mensaje para ser fragmentada. Para obtener más información, consulte la siguiente sección. Crea a continuación un nuevo `ChunkingChannelFactory` que le pasa el generador de canales interno (tal y como se devolvió desde `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), la lista de acciones de mensaje, y el número máximo de fragmentos para almacenar en búfer. El número máximo de fragmentos procede de una propiedad llamada `MaxBufferedChunks` expuesta por el `ChunkingBindingElement`.  
+ `BuildChannelFactory`\<T > en primer lugar comprueba que el tipo de canal solicitado se puede compilar y, a continuación, obtiene una lista de acciones de mensaje que deben fragmentarse. Para obtener más información, consulte la siguiente sección. Crea a continuación un nuevo `ChunkingChannelFactory` que le pasa el generador de canales interno (tal y como se devolvió desde `context.BuildInnerChannelFactory<IDuplexSessionChannel>`), la lista de acciones de mensaje, y el número máximo de fragmentos para almacenar en búfer. El número máximo de fragmentos procede de una propiedad llamada `MaxBufferedChunks` expuesta por el `ChunkingBindingElement`.  
   
  `BuildChannelListener<T>` tiene una implementación similar para crear `ChunkingChannelListener` y pasarle el agente de escucha de canal interno.  
   
@@ -303,7 +303,7 @@ interface ITestService
 ### <a name="determining-which-messages-to-chunk"></a>Determinar qué mensajes se fragmentan  
  El canal de fragmentación solo fragmenta los mensajes identificados a través del atributo `ChunkingBehavior`. La clase `ChunkingBehavior` implementa `IOperationBehavior` y se implementa llamando al método `AddBindingParameter`. En este método,el `ChunkingBehavior` examina el valor de su propiedad (`AppliesTo`, `InMessage` o ambos) `OutMessage` para determinar qué mensajes deberían fragmentarse. Obtiene a continuación la acción de cada uno de esos mensajes (de la colección Messages en `OperationDescription`) y lo agrega a una colección de cadenas contenida dentro de una instancia de `ChunkingBindingParameter`. Agrega a continuación `ChunkingBindingParameter` al `BindingParameterCollection`proporcionado.  
   
- Esta `BindingParameterCollection` se pasa dentro del `BindingContext` a cada elemento de enlace en el enlace cuando ese elemento de enlace compila el generador de canales o la escucha del canal. El `ChunkingBindingElement`de implementación de `BuildChannelFactory<T>` y `BuildChannelListener<T>` extracción esto `ChunkingBindingParameter` fuera de la `BindingContext’`s `BindingParameterCollection`. La colección de acciones contenida dentro de `ChunkingBindingParameter` se pasa a continuación al `ChunkingChannelFactory` o `ChunkingChannelListener`, que a su vez lo pasa al `ChunkingDuplexSessionChannel`.  
+ Esta `BindingParameterCollection` se pasa dentro del `BindingContext` a cada elemento de enlace en el enlace cuando ese elemento de enlace compila el generador de canales o la escucha del canal. El `ChunkingBindingElement`de implementación de `BuildChannelFactory<T>` y `BuildChannelListener<T>` extrae este `ChunkingBindingParameter` fuera de la `BindingContext’`s `BindingParameterCollection`. La colección de acciones contenida dentro de `ChunkingBindingParameter` se pasa a continuación al `ChunkingChannelFactory` o `ChunkingChannelListener`, que a su vez lo pasa al `ChunkingDuplexSessionChannel`.  
   
 ## <a name="running-the-sample"></a>Ejecutar el ejemplo  
   
@@ -315,11 +315,11 @@ interface ITestService
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Para compilar la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 5.  Ejecute primero Service.exe, a continuación, ejecute Client.exe e inspeccione ambas ventanas de la consola para ver el resultado.  
   

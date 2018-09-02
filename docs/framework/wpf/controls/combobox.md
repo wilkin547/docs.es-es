@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: 3c74bd33e726dc5a34f55989357218a3e2c46e3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551196"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466361"
 ---
 # <a name="combobox"></a>ComboBox
-El <xref:System.Windows.Controls.ComboBox> control presenta a los usuarios con una lista de opciones. La lista se muestran y oculta como el control se expande y se contrae. En su estado predeterminado, la lista está contraída, mostrar sólo una opción. El usuario hace clic en un botón para ver una lista completa de opciones.  
+El <xref:System.Windows.Controls.ComboBox> control presenta a los usuarios con una lista de opciones. La lista es que se muestra y oculta como el control se expande y contrae. En su estado predeterminado, se contrae la lista, mostrar sólo una opción. El usuario hace clic en un botón para ver una lista completa de opciones.  
   
- La siguiente ilustración muestra un <xref:System.Windows.Controls.ComboBox> en diferentes Estados.  
+ La siguiente ilustración muestra un <xref:System.Windows.Controls.ComboBox> en distintos Estados.  
   
  ![Cuadros combinados en predeterminado y presionado estados](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
-Contraído y expandido  
+Contraer y expandir  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo: obtener un elemento ComboBoxItem](http://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
+ [Cómo: obtener un elemento ComboBoxItem](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.ComboBox>

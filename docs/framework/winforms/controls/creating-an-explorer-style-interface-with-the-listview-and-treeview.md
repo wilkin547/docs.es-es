@@ -13,18 +13,18 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 0a0208194bd6cf24f61c58ece88e41b674e924fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73d3a0bef1ab075aee8e06f676ef17b853773552
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529213"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468069"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Tutorial: Crear una interfaz de tipo Explorador con los controles ListView y TreeView mediante el Diseñador
-Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de Windows Forms con aspecto profesional en muy poco tiempo. Un escenario común es crear una interfaz de usuario (UI) con <xref:System.Windows.Forms.ListView> y <xref:System.Windows.Forms.TreeView> controles que se parece a la característica Explorador de Windows de sistemas operativos Windows. El Explorador de Windows muestra una estructura jerárquica de los archivos y carpetas en el equipo del usuario.  
+Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de Windows Forms con aspecto profesional en muy poco tiempo. Un escenario común es crear una interfaz de usuario (UI) con <xref:System.Windows.Forms.ListView> y <xref:System.Windows.Forms.TreeView> los controles que se parece a la característica Explorador de Windows de los sistemas operativos de Windows. El Explorador de Windows muestra una estructura jerárquica de los archivos y carpetas en el equipo del usuario.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>Para crear el formulario que contiene un control ListView y TreeView  
   
@@ -36,19 +36,19 @@ Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de 
   
     2.  En la lista de plantillas, elija **aplicación de Windows Forms**.  
   
-3.  Haga clic en **Aceptar**. Se crea un nuevo proyecto de formularios Windows Forms.  
+3.  Haga clic en **Aceptar**. Se crea un nuevo proyecto de Windows Forms.  
   
 4.  Agregar un <xref:System.Windows.Forms.SplitContainer> control al formulario y establezca su <xref:System.Windows.Forms.SplitContainer.Dock%2A> propiedad <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-5.  Agregar un <xref:System.Windows.Forms.ImageList> denominado `imageList1` al formulario y utilice la ventana Propiedades para agregar dos imágenes: una imagen de una carpeta y una imagen de documento, en ese orden.  
+5.  Agregar un <xref:System.Windows.Forms.ImageList> denominado `imageList1` al formulario y usar la ventana de propiedades para agregar dos imágenes: una imagen de una carpeta y una imagen de documento, en ese orden.  
   
-6.  Agregar un <xref:System.Windows.Forms.TreeView> control denominado `treeview1` al formulario y colóquelo en el lado izquierdo de la <xref:System.Windows.Forms.SplitContainer> control. En la ventana de propiedades para `treeView1` haga lo siguiente:  
+6.  Agregar un <xref:System.Windows.Forms.TreeView> control denominado `treeview1` al formulario y colóquelo en el lado izquierdo de la <xref:System.Windows.Forms.SplitContainer> control. En la ventana Propiedades para `treeView1` haga lo siguiente:  
   
     1.  Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> en <xref:System.Windows.Forms.DockStyle.Fill>.  
   
     2.  Establezca la propiedad <xref:System.Windows.Forms.TreeView.ImageList%2A> en `imagelist1.`.  
   
-7.  Agregar un <xref:System.Windows.Forms.ListView> control denominado `listView1` al formulario y colóquelo en el lado derecho de la <xref:System.Windows.Forms.SplitContainer> control. En la ventana de propiedades para `listview1` haga lo siguiente:  
+7.  Agregar un <xref:System.Windows.Forms.ListView> control denominado `listView1` al formulario y colóquelo en el lado derecho de la <xref:System.Windows.Forms.SplitContainer> control. En la ventana Propiedades para `listview1` haga lo siguiente:  
   
     1.  Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> en <xref:System.Windows.Forms.DockStyle.Fill>.  
   
@@ -63,12 +63,12 @@ Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  
   
-9. Dado que el código anterior usa el espacio de nombres System.IO, agregue el uso adecuada o importar instrucción en la parte superior del formulario.  
+9. Puesto que el código anterior usa el espacio de nombres System.IO, el uso adecuada de agregar o importar instrucción en la parte superior del formulario.  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#4)]  
   
-10. Llame al método de instalación desde el paso anterior en el constructor del formulario o <xref:System.Windows.Forms.Form.Load> método de control de eventos. Agregue este código al constructor del formulario.  
+10. Llame al método de instalación desde el paso anterior en el constructor del formulario o <xref:System.Windows.Forms.Form.Load> el método de control de eventos. Agregue este código al constructor del formulario.  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]  
@@ -89,10 +89,10 @@ Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de 
   
 -   Presione F5 para ejecutar la aplicación.  
   
-     Verá un formulario dividido que contenga un <xref:System.Windows.Forms.TreeView> control que muestra el directorio del proyecto en el lado izquierdo, y un <xref:System.Windows.Forms.ListView> control a la derecha con tres columnas. Puede recorrer el <xref:System.Windows.Forms.TreeView> mediante la selección de nodos del directorio y el <xref:System.Windows.Forms.ListView> se rellena con el contenido del directorio seleccionado.  
+     Verá un formulario dividido que contenga un <xref:System.Windows.Forms.TreeView> control que muestra el directorio del proyecto en el lado izquierdo, y un <xref:System.Windows.Forms.ListView> control a la derecha con tres columnas. Puede recorrer el <xref:System.Windows.Forms.TreeView> seleccionando los nodos del directorio y el <xref:System.Windows.Forms.ListView> se rellena con el contenido del directorio seleccionado.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Esta aplicación proporciona un ejemplo de una manera que se puede usar <xref:System.Windows.Forms.TreeView> y <xref:System.Windows.Forms.ListView> controla juntos. Para obtener más información sobre estos controles, vea los temas siguientes:  
+ Esta aplicación le ofrece un ejemplo de cómo puede usar <xref:System.Windows.Forms.TreeView> y <xref:System.Windows.Forms.ListView> controles juntos. Para obtener más información sobre estos controles, vea los temas siguientes:  
   
 -   [Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   

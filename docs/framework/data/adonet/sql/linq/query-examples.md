@@ -2,18 +2,18 @@
 title: Ejemplos de consultas
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: b7fe03a951b6b8cfccc0c0bc4a1ccfc90e903dc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362632"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464359"
 ---
 # <a name="query-examples"></a>Ejemplos de consultas
-Esta sección proporciona ejemplos de Visual Basic y C# típicas de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] las consultas. Los desarrolladores que utilizan Visual Studio pueden encontrar muchos más ejemplos en una solución de ejemplo disponible en la sección ejemplos. Para obtener más información, consulte [ejemplos](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+En esta sección se proporciona ejemplos de Visual Basic y C# típicas [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consultas. Los desarrolladores que usan Visual Studio pueden encontrar muchos más ejemplos en una solución de ejemplo disponible en la sección de ejemplos. Para obtener más información, consulte [ejemplos](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
->  *base de datos* a menudo se utiliza en los ejemplos de código de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentación. *base de datos* se supone que es una instancia de un *Northwind* (clase), que se hereda de <xref:System.Data.Linq.DataContext>.  
+>  *DB* a menudo se usa en los ejemplos de código de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentación. *DB* se supone que es una instancia de un *Northwind* (clase), que hereda de <xref:System.Data.Linq.DataContext>.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Consultas de agregado](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
@@ -65,7 +65,7 @@ Esta sección proporciona ejemplos de Visual Basic y C# típicas de [!INCLUDE[vb
  Proporciona ejemplos de cómo combinar `select` con otras características (por ejemplo, *tipos anónimos*) para formar proyecciones de consulta.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Información general sobre operadores de consulta estándar](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [Información general sobre operadores de consulta estándar](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
  Explica el concepto de operador de consulta estándar.  
   
  [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  

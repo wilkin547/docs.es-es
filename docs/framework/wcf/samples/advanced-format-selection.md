@@ -2,15 +2,15 @@
 title: Selección avanzada de formato
 ms.date: 03/30/2017
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-ms.openlocfilehash: 4913d8dbf69f574aa4f329279bed0d92710512f9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e5c396ce22e9021d453a70f3826b0bd3cc6aaf42
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805595"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466628"
 ---
 # <a name="advanced-format-selection"></a>Selección avanzada de formato
-Este ejemplo muestra cómo extender el modelo de programación de REST de Windows Communication Foundation (WCF) para admitir los nuevos formatos de respuesta saliente. Además, el ejemplo utiliza una plantilla T4 para devolver la respuesta como una página XHTML y muestra cómo se puede implementar un modelo de programación del estilo de vista.  
+Este ejemplo muestra cómo extender el modelo de programación REST de Windows Communication Foundation (WCF) para admitir los nuevos formatos de respuesta saliente. Además, el ejemplo utiliza una plantilla T4 para devolver la respuesta como una página XHTML y muestra cómo se puede implementar un modelo de programación del estilo de vista.  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
  El ejemplo está compuesto de un sencillo servicio junto con el código de cliente que realiza las solicitudes al servicio.  El servicio admite una sola operación [WebGet], que tiene la siguiente firma de método: `Message EchoListWithGet(string list);`  
@@ -19,15 +19,15 @@ Este ejemplo muestra cómo extender el modelo de programación de REST de Window
   
  El formato de la respuesta que devuelve el servicio viene determinado en primer lugar por un parámetro de cadena de consulta `format` y en segundo lugar por un encabezado HTTP Accept que se proporciona con la solicitud. Si el valor del parámetro de cadena de consulta `format` es uno de los formatos anteriores, la respuesta se devuelve en ese formato. Si la cadena de consulta `format` no está presente, el servicio recorre en iteración los elementos de encabezado Accept de la solicitud y devuelve el formato del primer tipo de contenido que el servicio admita.  
   
- Hay que tener en cuenta el tipo de valor devuelto de la operación. El resto de WCF solo de forma nativa, el modelo de programación admite formatos de respuesta JSON y XML cuando una operación devuelve un tipo distinto de <xref:System.ServiceModel.Channels.Message>. Sin embargo, al utilizar <xref:System.ServiceModel.Channels.Message> como el tipo de valor devuelto, el desarrollador de software tiene un control completo sobre cómo se debería dar formato al contenido del mensaje.  
+ Hay que tener en cuenta el tipo de valor devuelto de la operación. El modelo de programación solo de forma nativa de REST de WCF es compatible con los formatos de respuesta XML y JSON cuando una operación devuelve un tipo distinto <xref:System.ServiceModel.Channels.Message>. Sin embargo, al utilizar <xref:System.ServiceModel.Channels.Message> como el tipo de valor devuelto, el desarrollador de software tiene un control completo sobre cómo se debería dar formato al contenido del mensaje.  
   
- En el ejemplo se utilizan los métodos <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> y <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> para serializar la lista de cadenas en los mensajes XML, JSON y ATOM, respectivamente. Para el formato de respuesta jpeg, se usa el método <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> y la imagen se guarda en el flujo. Para la respuesta XHTML, <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> se utiliza junto con una plantilla T4 preprocesada, que está compuesta de un archivo .tt y de un archivo .cs generado automáticamente. El archivo .tt permite que los desarrolladores de software escriban una respuesta en un formulario de plantilla que contenga variables y estructuras de control. Para obtener más información acerca de T4, vea [Generar artefactos de plantillas de texto](http://go.microsoft.com/fwlink/?LinkId=166023).  
+ En el ejemplo se utilizan los métodos <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> y <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> para serializar la lista de cadenas en los mensajes XML, JSON y ATOM, respectivamente. Para el formato de respuesta jpeg, se usa el método <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> y la imagen se guarda en el flujo. Para la respuesta XHTML, <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> se utiliza junto con una plantilla T4 preprocesada, que está compuesta de un archivo .tt y de un archivo .cs generado automáticamente. El archivo .tt permite que los desarrolladores de software escriban una respuesta en un formulario de plantilla que contenga variables y estructuras de control. Para obtener más información sobre T4, vea [Generar artefactos utilizando plantillas de texto](https://go.microsoft.com/fwlink/?LinkId=166023).  
   
  El ejemplo consta de un servicio autohospedado y un cliente que se ejecuta dentro de una aplicación de consola. A medida que se ejecuta la aplicación de consola, el cliente realiza solicitudes al servicio y escribe la información pertinente de las respuestas en la ventana de la consola.  
   
 #### <a name="to-run-this-sample"></a>Para ejecutar este ejemplo  
   
-1.  Abra la solución del ejemplo de selección avanzada de formato. Al iniciar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], debe ejecutarlo como administrador para que el ejemplo se ejecute correctamente. Esto se hace clic en el [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icono y elija **ejecutar como administrador** en el menú contextual.  
+1.  Abra la solución del ejemplo de selección avanzada de formato. Al iniciar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], debe ejecutarlo como administrador para que el ejemplo se ejecute correctamente. Hacer esto haciendo clic con el [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icono y elija **ejecutar como administrador** en el menú contextual.  
   
 2.  Presione CTRL+MAYÚS+B para compilar la solución y, a continuación, presione Ctrl-F5 para ejecutar el proyecto AdvancedFormatSelection de la aplicación de consola sin depurar. La ventana de la consola aparece y proporciona el URI del servicio en ejecución y el URI de la página de Ayuda HTML para este.  
   
@@ -42,7 +42,7 @@ Este ejemplo muestra cómo extender el modelo de programación de REST de Window
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AdvancedFormatSelection`  
   

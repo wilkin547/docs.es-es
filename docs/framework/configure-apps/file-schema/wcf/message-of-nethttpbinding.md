@@ -2,12 +2,12 @@
 title: '&lt;message&gt; de &lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: be96306b61b3eb6bfb8d3305ccbb05bb3ec4549d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30098d2b9a9087eb0543bdd7c8a899cd66c91ed8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354117"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466716"
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;message&gt; de &lt;netHttpBinding&gt;
 Define la configuración de seguridad de nivel de mensaje de la [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -41,8 +41,8 @@ Define la configuración de seguridad de nivel de mensaje de la [ \<basicHttpBin
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|UserName|-Requiere la autenticación del cliente en el servidor con una credencial de nombre de usuario. Esta credencial se tiene que especificar mediante el elemento <`clientCredentials`>.<br />-WCF no admite enviar un resumen de contraseña ni derivar claves mediante contraseñas y utilizar tales claves para seguridad de mensajes. Por lo tanto, WCF exige que el transporte sea seguro al usar credenciales UserName. Para `basicHttpBinding`, esto requiere configurar un canal de SSL.|  
-|Certificado|Exige la autenticación del cliente en el servidor mediante un certificado. En este caso la credencial de cliente se tiene que especificar con <`clientCredentials`> y <`clientCertificate`> Además, cuando se utiliza el modo de seguridad de mensajes, se debe proporcionar el cliente con el certificado del servicio. La credencial de servicio en este caso debe especificarse mediante <xref:System.ServiceModel.Description.ClientCredentials> clase o `ClientCredentials` elemento de comportamiento y especificar el servicio de certificados utilizando el \<serviceCertificate > elemento de serviceCredentials.|  
+|UserName|-Requiere la autenticación del cliente al servidor con una credencial UserName. Esta credencial se tiene que especificar mediante el elemento <`clientCredentials`>.<br />-WCF no admite enviar un resumen de contraseña ni derivar claves mediante contraseñas y utilizando tales claves para seguridad de mensajes. Por lo tanto, WCF impone que el transporte sea seguro al usar credenciales UserName. Para `basicHttpBinding`, esto requiere configurar un canal de SSL.|  
+|Certificado|Exige la autenticación del cliente en el servidor mediante un certificado. En este caso la credencial de cliente se tiene que especificar con <`clientCredentials`> y <`clientCertificate`> Además, cuando se utiliza el modo de seguridad de mensajes, se debe proporcionar el cliente con el certificado del servicio. La credencial del servicio en este caso necesita ser especificada utilizando <xref:System.ServiceModel.Description.ClientCredentials> clase o `ClientCredentials` elemento de comportamiento especificando el servicio de certificado mediante el \<serviceCertificate > elemento de serviceCredentials.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  
@@ -129,5 +129,5 @@ Define la configuración de seguridad de nivel de mensaje de la [ \<basicHttpBin
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)

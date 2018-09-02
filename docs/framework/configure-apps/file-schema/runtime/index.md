@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c517fe7736fd19fd93926d79ae5709b049adad1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a0df1f3bcf8941b5fe0a8fd19dfc7423e669a766
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747961"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465621"
 ---
 # <a name="runtime-settings-schema"></a>Esquema de la configuración de Common Language Runtime
 Common Language Runtime usa la configuración del motor en tiempo de ejecución para configurar las aplicaciones destinadas a .NET Framework.  
@@ -75,7 +75,7 @@ Common Language Runtime usa la configuración del motor en tiempo de ejecución 
 &nbsp;&nbsp;\<\runtime >  
 \<\Configuration >
 
-## <a name="alphabetical-list-of-runtime-elements"></a>Lista ordenada alfabéticamente de \<en tiempo de ejecución > elementos
+## <a name="alphabetical-list-of-runtime-elements"></a>Lista alfabética de \<en tiempo de ejecución > elementos
 
 |Elemento|Descripción|  
 |-------------|-----------------|  
@@ -133,5 +133,5 @@ Common Language Runtime usa la configuración del motor en tiempo de ejecución 
   
 ## <a name="see-also"></a>Vea también  
  [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Cómo: deshabilitar la recolección de elementos no utilizados simultánea](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [Cómo: deshabilitar la recolección de elementos no utilizados simultánea](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
  [Redirigir versiones de ensamblado](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

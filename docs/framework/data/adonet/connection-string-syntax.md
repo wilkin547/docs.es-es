@@ -2,12 +2,12 @@
 title: Sintaxis de cadenas de conexión
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 1df49a9ed5d45a1a1ee50145ff036c98ec72cca8
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 3d8b37315ab3ceea2ddedd139787627e86b6a131
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472755"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469926"
 ---
 # <a name="connection-string-syntax"></a>Sintaxis de cadenas de conexión
 Cada proveedor de datos .NET Framework tiene un objeto `Connection` que hereda de la clase <xref:System.Data.Common.DbConnection>, así como una propiedad <xref:System.Data.Common.DbConnection.ConnectionString%2A> específica del proveedor. La sintaxis de la cadena de conexión específica de cada proveedor se indica en su propiedad `ConnectionString`. En la tabla siguiente se muestran los cuatro proveedores de datos que se incluyen en .NET Framework.  
@@ -30,10 +30,10 @@ Cada proveedor de datos .NET Framework tiene un objeto `Connection` que hereda d
   
 -   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
- Los compiladores de cadenas de conexión permiten crear cadenas de conexión sintácticamente válidas en tiempo de ejecución. Por tanto, el usuario no tiene que concatenar manualmente los valores de las cadenas de conexión del código. Para obtener más información, consulte [generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+ Los compiladores de cadenas de conexión permiten crear cadenas de conexión sintácticamente válidas en tiempo de ejecución. Por tanto, el usuario no tiene que concatenar manualmente los valores de las cadenas de conexión del código. Para obtener más información, vea [Generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md).  
 
 ## <a name="windows-authentication"></a>Autenticación de Windows  
- Se recomienda usar la autenticación de Windows (a veces se denomina *la seguridad integrada de*) para conectarse a orígenes de datos que lo admiten. La sintaxis utilizada en la cadena de conexión varía dependiendo del proveedor. En la siguiente tabla se muestra la sintaxis de autenticación de Windows utilizada con los proveedores de datos .NET Framework.  
+ Se recomienda utilizar la autenticación de Windows (a veces se denomina *seguridad integrada*) para conectarse a orígenes de datos que lo admiten. La sintaxis utilizada en la cadena de conexión varía dependiendo del proveedor. En la siguiente tabla se muestra la sintaxis de autenticación de Windows utilizada con los proveedores de datos .NET Framework.  
   
 |Proveedor|Sintaxis|  
 |--------------|------------|  
@@ -49,10 +49,10 @@ Cada proveedor de datos .NET Framework tiene un objeto `Connection` que hereda d
 La sintaxis de una cadena de conexión de <xref:System.Data.SqlClient.SqlConnection> se documenta en la propiedad <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>. Puede usar la propiedad <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> para obtener o establecer una cadena de conexión para una base de datos de SQL Server. Si necesita conectarse a una versión anterior de SQL Server, debe usar el proveedor de datos .NET Framework para OleDb (<xref:System.Data.OleDb>). La mayoría de las palabras clave de cadenas de conexión se corresponden también con las propiedades de <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
 
 > [!IMPORTANT]
->  El valor predeterminado para la `Persist Security Info` palabra clave es `false`. Si se establece en `true` o `yes`, permite obtener información de seguridad confidencial de la conexión, incluidos el identificador de usuario y la contraseña, una vez abierta la conexión. Mantener `Persist Security Info` establecido en `false` para asegurarse de que un origen de confianza no tiene acceso a información confidencial de conexión de la cadena.  
+>  La configuración predeterminada para el `Persist Security Info` palabra clave es `false`. Si se establece en `true` o `yes`, permite obtener información de seguridad confidencial de la conexión, incluidos el identificador de usuario y la contraseña, una vez abierta la conexión. Mantener `Persist Security Info` establecido en `false` para asegurarse de que un origen de confianza no tiene acceso a información confidencial de conexión de la cadena.  
 
 ### <a name="windows-authentication-with-sqlclient"></a>Autenticación de Windows con SqlClient 
- Cada una de las siguientes formas de sintaxis utiliza autenticación de Windows para conectarse a la **AdventureWorks** base de datos en un servidor local.  
+ Cada una de las siguientes formas de sintaxis usa la autenticación de Windows para conectarse a la **AdventureWorks** base de datos en un servidor local.  
   
 ```  
 "Persist Security Info=False;Integrated Security=true;  
@@ -70,13 +70,13 @@ La sintaxis de una cadena de conexión de <xref:System.Data.SqlClient.SqlConnect
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-Al conectarse a la base de datos de SQL Azure o a almacenamiento de datos de SQL Azure y proporcionar un inicio de sesión en el formato `user@servername`, asegúrese de que el `servername` valor en el inicio de sesión coincide con el valor proporcionado para `Server=`.
+Cuando se conecta a Azure SQL Database o a Azure SQL Data Warehouse y proporcionar un inicio de sesión en el formato `user@servername`, asegúrese de que el `servername` valor en el inicio de sesión coincide con el valor proporcionado para `Server=`.
 
 > [!NOTE]
 >  La autenticación de Windows tiene prioridad sobre los inicios de sesión de SQL Server. Si especifica Integrated Security=true junto con un nombre de usuario y una contraseña, se ignorarán el nombre de usuario y la contraseña, y se usará la autenticación de Windows.  
 
 ### <a name="connect-to-a-named-instance-of-sql-server"></a>Conectarse a una instancia con nombre de SQL Server
-Para conectarse a una instancia con nombre de SQL Server, use la *servidor ombre* sintaxis.  
+Para conectarse a una instancia con nombre de SQL Server, use el *nombre de servidor\nombre de instancia de servidor* sintaxis.  
   
 ```  
 Data Source=MySqlServer\MSSQL1;"  
@@ -90,10 +90,10 @@ A la hora de crear una cadena de conexión, también puede establecer la propied
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Concatenar y adjuntar a instancias de usuario de SQL Server Express  
  Las instancias de usuario son una característica de SQL Server Express. Permiten que un usuario que ejecuta una cuenta de Windows local y con privilegios mínimos adjunte y ejecute una base de datos de SQL Server sin necesidad de tener privilegios administrativos. Una instancia de usuario se ejecuta con las credenciales de Windows del usuario, no como un servicio.  
   
- Para obtener más información sobre cómo trabajar con instancias de usuario, consulte [instancias de SQL Server Express usuario](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
+ Para obtener más información sobre cómo trabajar con instancias de usuario, consulte [las instancias de SQL Server Express usuario](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>Usar TrustServerCertificate  
- El `TrustServerCertificate` palabra clave es válida sólo cuando se conecta a una instancia de SQL Server con un certificado válido. Cuando `TrustServerCertificate` se establece en `true`, la capa de transporte utilizará SSL para cifrar el canal y evitar recorrer la cadena de certificados para validar la confianza.  
+ El `TrustServerCertificate` palabra clave es válida únicamente al conectarse a una instancia de SQL Server con un certificado válido. Cuando `TrustServerCertificate` se establece en `true`, la capa de transporte utilizará SSL para cifrar el canal y evitar recorrer la cadena de certificados para validar la confianza.  
   
 ```  
 "TrustServerCertificate=true;"   
@@ -103,9 +103,9 @@ A la hora de crear una cadena de conexión, también puede establecer la propied
 >  Si `TrustServerCertificate` se establece en `true` y se activa el cifrado, se utilizará el nivel de cifrado especificado en el servidor aunque `Encrypt` esté establecido en `false` en la cadena de conexión. De lo contrario, se producirá un error en la conexión.  
   
 ### <a name="enabling-encryption"></a>Habilitar el cifrado  
- Para habilitar el cifrado cuando no se ha proporcionado un certificado en el servidor, el **Forzar cifrado de protocolo** y **confiar en certificado de servidor** opciones deben establecerse en el Administrador de configuración de SQL Server. En este caso, el cifrado utilizará un certificado del servidor autofirmado sin validación si no se ha incluido en el servidor ningún certificado que se pueda comprobar.  
+ Para habilitar el cifrado cuando no se haya aprovisionado un certificado en el servidor, el **Forzar cifrado de protocolo** y **confiar en certificado de servidor** opciones deben establecerse en el Administrador de configuración de SQL Server. En este caso, el cifrado utilizará un certificado del servidor autofirmado sin validación si no se ha incluido en el servidor ningún certificado que se pueda comprobar.  
   
- La configuración de las aplicaciones no puede reducir el nivel de seguridad configurado en SQL Server, sino que en todo caso puede reforzarlo. Una aplicación puede solicitar cifrado estableciendo la `TrustServerCertificate` y `Encrypt` palabras clave para `true`, para garantizar que el cifrado se lleva a cabo incluso cuando no se ha proporcionado un certificado de servidor y **Forzar cifrado de protocolo**  no se ha configurado para el cliente. Sin embargo, si en la configuración del cliente no está habilitado `TrustServerCertificate`, seguirá siendo necesario un certificado de servidor.  
+ La configuración de las aplicaciones no puede reducir el nivel de seguridad configurado en SQL Server, sino que en todo caso puede reforzarlo. Una aplicación puede solicitar cifrado estableciendo el `TrustServerCertificate` y `Encrypt` palabras clave para `true`, lo que garantiza que el cifrado se lleva a cabo incluso cuando no se ha proporcionado un certificado de servidor y **Forzar cifrado de protocolo**  no se ha configurado para el cliente. Sin embargo, si en la configuración del cliente no está habilitado `TrustServerCertificate`, seguirá siendo necesario un certificado de servidor.  
   
  En la siguiente tabla se describen todos los casos.  
   
@@ -113,13 +113,13 @@ A la hora de crear una cadena de conexión, también puede establecer la propied
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |No|N/D|No (opción predeterminada)|Se ignora.|No se produce cifrado.|  
 |No|N/D|Sí|No (opción predeterminada)|Solo se produce cifrado si hay un certificado de servidor que se pueda comprobar; de lo contrario, el intento de conexión genera un error.|  
-|No|N/D|Sí|Sí|Cifrado siempre se produce, pero puede utilizar un certificado de servidor autofirmado.|  
-|Sí|No|Se ignora.|Se ignora.|El cifrado se realiza solo si hay un certificado de servidor comprobable; en caso contrario, se produce un error en el intento de conexión.|  
-|Sí|Sí|No (opción predeterminada)|Se ignora.|Cifrado siempre se produce, pero puede utilizar un certificado de servidor autofirmado.|  
-|Sí|Sí|Sí|No (opción predeterminada)|El cifrado se realiza solo si hay un certificado de servidor comprobable; en caso contrario, se produce un error en el intento de conexión.|  
-|Sí|Sí|Sí|Sí|Cifrado siempre se produce, pero puede utilizar un certificado de servidor autofirmado.|  
+|No|N/D|Sí|Sí|Siempre se produce cifrado, pero puede usar un certificado de servidor autofirmado.|  
+|Sí|No|Se ignora.|Se ignora.|El cifrado se realiza solo si hay un certificado de servidor que se pueda comprobar; en caso contrario, se produce un error en el intento de conexión.|  
+|Sí|Sí|No (opción predeterminada)|Se ignora.|Siempre se produce cifrado, pero puede usar un certificado de servidor autofirmado.|  
+|Sí|Sí|Sí|No (opción predeterminada)|El cifrado se realiza solo si hay un certificado de servidor que se pueda comprobar; en caso contrario, se produce un error en el intento de conexión.|  
+|Sí|Sí|Sí|Sí|Siempre se produce cifrado, pero puede usar un certificado de servidor autofirmado.|  
   
- Para obtener más información, consulte [utilizar el cifrado sin validación](http://go.microsoft.com/fwlink/?LinkId=120500) en libros en pantalla de SQL Server.  
+ Para obtener más información, consulte [Using Encryption Without Validation](/sql/relational-databases/native-client/features/using-encryption-without-validation).
   
 ## <a name="oledb-connection-strings"></a>Cadenas de conexión OleDb  
  La propiedad <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> de un objeto <xref:System.Data.OleDb.OleDbConnection> permite obtener o establecer una cadena de conexión para un origen de datos OLE DB, como Microsoft Access. Asimismo puede crear una cadena de conexión de `OleDb` en tiempo de ejecución mediante la clase <xref:System.Data.OleDb.OleDbConnectionStringBuilder>.  
@@ -138,7 +138,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 ```  
   
 > [!IMPORTANT]
->  Es posible proporcionar información de conexión para un **OleDbConnection** en un archivo de vínculo de datos Universal (UDL); sin embargo conviene evitarlo. Los archivos UDL no están cifrados y exponen la información de cadena de conexión en texto sin cifrar. Un archivo UDL no se puede proteger mediante .NET Framework, ya que se trata de un recurso basado en un archivo externo a la aplicación. Archivos UDL no se admiten para **SqlClient**.  
+>  Es posible proporcionar información de conexión para un **OleDbConnection** en un archivo de vínculo de datos Universal (UDL); sin embargo debe evitar hacerlo. Los archivos UDL no están cifrados y exponen la información de cadena de conexión en texto sin cifrar. Un archivo UDL no se puede proteger mediante .NET Framework, ya que se trata de un recurso basado en un archivo externo a la aplicación. No se admiten archivos UDL para **SqlClient**.  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>Utilizar DataDirectory para conectarse a Access/Jet  
  `DataDirectory` no es exclusivo de `SqlClient`. También se puede utilizar con los proveedores de datos de .NET <xref:System.Data.OleDb> y <xref:System.Data.Odbc>. La siguiente cadena <xref:System.Data.OleDb.OleDbConnection> de ejemplo muestra la sintaxis necesaria para conectarse a la base de datos Northwind.mdb situada en la carpeta app_data de la aplicación. La base de datos del sistema (System.mdw) también está almacenada en esa ubicación.  
@@ -197,4 +197,4 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
 ## <a name="see-also"></a>Vea también  
  [Cadenas de conexión](../../../../docs/framework/data/adonet/connection-strings.md)  
  [Conexión a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

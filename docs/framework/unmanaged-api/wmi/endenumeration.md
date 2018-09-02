@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 33c73e58be39a7f1ffa9300947c3ee552231adab
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257498"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462316"
 ---
 # <a name="endenumeration-function"></a>EndEnumeration (función)
 Finaliza una secuencia de enumeración que se inició con una llamada a la [BeginEnumeration (función)](beginenumeration.md).  

@@ -2,12 +2,12 @@
 title: Configurar seguimiento para un flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 23a20b014962b74b6408c8b3c9ac6764d4a42d56
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ae6b61bf572da1757920b737b03861c891637f51
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809708"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468585"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurar seguimiento para un flujo de trabajo
 Un flujo de trabajo se puede ejecutar de tres maneras:  
@@ -47,7 +47,7 @@ instance.Extensions.Add(trackingParticipant);
 ```  
   
 ### <a name="configuring-workflow-service-tracking"></a>Configurar el seguimiento de servicio de flujo de trabajo  
- Un flujo de trabajo puede exponerse como un servicio WCF cuando se hospeda en el <xref:System.ServiceModel.Activities.WorkflowServiceHost> host del servicio. <xref:System.ServiceModel.Activities.WorkflowServiceHost> es una implementación especializada de .NET ServiceHost para un servicio basado en flujo de trabajo. En esta sección se explica cómo configurar el seguimiento para un servicio de flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] que se ejecuta en <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Se configura mediante un archivo Web.config (para un servicio hospedado en web) o un archivo App.config (para un servicio hospedado en una aplicación independiente, como una aplicación de consola) especificando un comportamiento de servicio o mediante código agregando un comportamiento específico de seguimiento a la colección <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> del host de servicio.  
+ Un flujo de trabajo puede exponerse como un servicio WCF cuando se hospeda en el <xref:System.ServiceModel.Activities.WorkflowServiceHost> host de servicio. <xref:System.ServiceModel.Activities.WorkflowServiceHost> es una implementación especializada de .NET ServiceHost para un servicio basado en flujo de trabajo. En esta sección se explica cómo configurar el seguimiento para un servicio de flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] que se ejecuta en <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Se configura mediante un archivo Web.config (para un servicio hospedado en web) o un archivo App.config (para un servicio hospedado en una aplicación independiente, como una aplicación de consola) especificando un comportamiento de servicio o mediante código agregando un comportamiento específico de seguimiento a la colección <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> del host de servicio.  
   
  En el caso de un servicio de host hospedado en <xref:System.ServiceModel.WorkflowServiceHost>, puede agregar <xref:System.Activities.Tracking.EtwTrackingParticipant> mediante el elemento <`behavior`> en un archivo de configuración, tal y como se muestra en el siguiente ejemplo.  
   
@@ -64,7 +64,7 @@ instance.Extensions.Add(trackingParticipant);
  Por otra parte, en el caso de un servicio de flujo de trabajo hospedado en <xref:System.ServiceModel.WorkflowServiceHost>, puede agregar la extensión de comportamiento <xref:System.Activities.Tracking.EtwTrackingParticipant> a través del código. Para agregar un participante de seguimiento personalizado, cree una nueva extensión de comportamiento y agréguela a <xref:System.ServiceModel.ServiceHost> tal y como se muestra en el siguiente código de ejemplo.  
   
 > [!NOTE]
->  Si desea ver código de ejemplo que muestra cómo crear un elemento de comportamiento personalizado que agrega un participante de seguimiento personalizado, consulte el [seguimiento](../../../docs/framework/windows-workflow-foundation/samples/tracking.md) ejemplos.  
+>  Si desea ver el código de ejemplo que muestra cómo crear un elemento de comportamiento personalizado que agrega un participante de seguimiento personalizado, consulte el [seguimiento](../../../docs/framework/windows-workflow-foundation/samples/tracking.md) ejemplos.  
   
 ```  
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new   
@@ -134,10 +134,10 @@ if (null != workflowServiceHost)
 ```  
   
 > [!NOTE]
->  Para obtener más información sobre los perfiles de seguimiento, consulte [perfiles de seguimiento](http://go.microsoft.com/fwlink/?LinkId=201310).  
+>  Para obtener más información sobre los perfiles de seguimiento, consulte [perfiles de seguimiento](https://go.microsoft.com/fwlink/?LinkId=201310).  
   
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Configurar el seguimiento mediante WorkflowInvoker  
- Para configurar el seguimiento para un flujo de trabajo ejecutado utilizando <xref:System.Activities.WorkflowInvoker>, agregue el proveedor del seguimiento como una extensión de una instancia de <xref:System.Activities.WorkflowInvoker>. El siguiente ejemplo de código es de la [seguimiento personalizado](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) ejemplo.  
+ Para configurar el seguimiento para un flujo de trabajo ejecutado utilizando <xref:System.Activities.WorkflowInvoker>, agregue el proveedor del seguimiento como una extensión de una instancia de <xref:System.Activities.WorkflowInvoker>. El ejemplo de código siguiente procede del [seguimiento personalizado](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) ejemplo.  
   
 ```  
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());  
@@ -146,7 +146,7 @@ invoker.Invoke();
 ```  
   
 ### <a name="viewing-tracking-records-in-event-viewer"></a>Visualizar los registros de seguimiento en el Visor de eventos  
- Hay dos registros del Visor de eventos que resultan de especial interés para ver la ejecución del seguimiento de WF: el registro analítico y el registro de depuración. Residen en el Microsoft&#124;Windows&#124;nodo de servidor de aplicaciones.  Los registros de esta sección contienen eventos de una única aplicación en lugar de los eventos que afectan a todo el sistema.  
+ Hay dos registros del Visor de eventos que resultan de especial interés para ver la ejecución del seguimiento de WF: el registro analítico y el registro de depuración. Residen en el Microsoft&#124;Windows&#124;nodo de servidor de aplicaciones-aplicaciones.  Los registros de esta sección contienen eventos de una única aplicación en lugar de los eventos que afectan a todo el sistema.  
   
  Los eventos de seguimiento de depuración se escriben en el registro de depuración. Para recopilar eventos de seguimiento de depuración de WF en el Visor de eventos, habilite el registro de depuración.  
   
@@ -154,9 +154,9 @@ invoker.Invoke();
   
 2.  En el cuadro de diálogo Visor de eventos, expanda el **registros de aplicaciones y servicios** nodo.  
   
-3.  Expanda el **Microsoft**, **Windows**, y **Application Server-Applications** nodos.  
+3.  Expanda el **Microsoft**, **Windows**, y **aplicaciones de servidor-aplicaciones** nodos.  
   
-4.  Haga clic en el **depurar** nodo bajo el **servidor de aplicaciones** nodo y seleccione **Habilitar registro**.  
+4.  Haga clic en el **depurar** nodo bajo el **aplicaciones de servidor-aplicaciones** nodo y seleccione **Habilitar registro**.  
   
 5.  Ejecute la aplicación habilitada para realizar seguimientos con el fin de generar eventos de seguimiento.  
   
@@ -170,9 +170,9 @@ invoker.Invoke();
   
 2.  En el cuadro de diálogo Visor de eventos, expanda el **registros de aplicaciones y servicios** nodo.  
   
-3.  Expanda el **Microsoft**, **Windows**, y **Application Server-Applications** nodos.  
+3.  Expanda el **Microsoft**, **Windows**, y **aplicaciones de servidor-aplicaciones** nodos.  
   
-4.  Haga clic en el **analítico** nodo bajo el **servidor de aplicaciones** nodo y seleccione **Habilitar registro**.  
+4.  Haga clic en el **analítico** nodo bajo el **aplicaciones de servidor-aplicaciones** nodo y seleccione **Habilitar registro**.  
   
 5.  Ejecute la aplicación habilitada para realizar seguimientos a fin de generar los registros de seguimiento.  
   
@@ -180,7 +180,7 @@ invoker.Invoke();
   
  La siguiente imagen muestra eventos de seguimiento en el Visor de eventos.  
   
- ![Registros de seguimiento que muestra de Visor de eventos](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")  
+ ![Los registros de seguimiento que muestra de Visor de eventos](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")  
   
 ### <a name="registering-an-application-specific-provider-id"></a>Registrar un identificador de proveedor específico de la aplicación  
  Si es necesario escribir eventos en un determinado registro de aplicaciones, siga estos pasos para registrar el nuevo manifiesto del proveedor.  
@@ -193,7 +193,7 @@ invoker.Invoke();
     </system.serviceModel>  
     ```  
   
-2.  Copie el archivo de manifiesto de %windir%\Microsoft.NET\Framework\\< versión más reciente de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man en una ubicación temporal y cambie su nombre a Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
+2.  Copie el archivo de manifiesto de %windir%\Microsoft.NET\Framework\\< versión más reciente de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man en una ubicación temporal y cámbiele el nombre a Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
   
 3.  Cambie el GUID del archivo de manifiesto por el nuevo GUID.  
   
@@ -219,7 +219,7 @@ invoker.Invoke();
   
 6.  Genere el archivo DLL de recursos siguiendo estos pasos.  
   
-    1.  Instale el SDK de Windows. El SDK de Windows incluye el compilador de mensajes ([mc.exe](http://go.microsoft.com/fwlink/?LinkId=184606)) y el compilador de recursos ([rc.exe](http://go.microsoft.com/fwlink/?LinkId=184605)).  
+    1.  Instale el SDK de Windows. El SDK de Windows incluye el compilador de mensajes ([mc.exe](https://go.microsoft.com/fwlink/?LinkId=184606)) y el compilador de recursos ([rc.exe](https://go.microsoft.com/fwlink/?LinkId=184605)).  
   
     2.  En un símbolo del sistema de Windows SDK, ejecute mc.exe en el archivo de manifiesto nuevo.  
   
@@ -247,12 +247,12 @@ invoker.Invoke();
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">  
         ```  
   
-    7.  Use [wevtutil](http://go.microsoft.com/fwlink/?LinkId=184608) para registrar el manifiesto.  
+    7.  Use [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) para registrar el manifiesto.  
   
         ```  
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
         ```  
   
 ## <a name="see-also"></a>Vea también  
- [Supervisión de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Supervisión de aplicaciones con App Fabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

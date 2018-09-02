@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, unmanaged
 - Windows Forms, interop
 ms.assetid: 81bc100c-fa49-4614-85a6-0f7ab59eac8a
-ms.openlocfilehash: c51645fb64f512b5974000f89e8e98f884a7381d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc0c848d1c92871dacab93497c674645f3ac83fe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526206"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463944"
 ---
 # <a name="windows-forms-and-unmanaged-applications"></a>Aplicaciones de Windows Forms y aplicaciones no administradas
 Los controles y aplicaciones de Windows Forms pueden interoperar con aplicaciones no administradas, con algunas advertencias. En las secciones siguientes se describen los escenarios y las configuraciones que las aplicaciones y los controles de Windows Forms admiten y no admiten.  
@@ -28,7 +28,7 @@ Los controles y aplicaciones de Windows Forms pueden interoperar con aplicacione
  [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en sus propios subprocesos](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
  Proporciona un ejemplo de código que muestra cómo ejecutar Windows Forms en su propio subproceso.  
   
- Consulte también [Tutorial: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](http://msdn.microsoft.com/library/ms233639\(v=vs.110\)).  
+ Consulte también [Tutorial: compatibilidad con COM Interop by Displaying Each Windows Form on Its Own Thread](https://msdn.microsoft.com/library/ms233639\(v=vs.110\)).  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>  

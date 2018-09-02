@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51a0538670a834435aff8d2b6c81b78450fe47f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac5d80664bbca8cf950eb2e6f37badc485c398d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396765"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474082"
 ---
 # <a name="runtime-directive-policy-settings"></a>Configuración de directiva de la directiva en tiempo de ejecución
 > [!NOTE]
->  En este tema se hace referencia a .NET Native Developer Preview, que es una versión preliminar del software. Puede descargar esta versión preliminar desde el [sitio web de Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=394611) (es necesario registrarse).  
+>  En este tema se hace referencia a .NET Native Developer Preview, que es una versión preliminar del software. Puede descargar esta versión preliminar desde el [sitio web de Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (es necesario registrarse).  
   
  La configuración de directiva de la directiva en tiempo de ejecución de .NET Native determina la disponibilidad de los metadatos de los tipos y miembros de tipo en tiempo de ejecución. Sin los metadatos necesarios, las operaciones que se basan en la reflexión, la serialización y la deserialización o el cálculo de referencias de tipos de .NET Framework a COM o Windows Runtime pueden producir errores y generar una excepción. Las excepciones más comunes son [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) y, en el caso de la interoperabilidad, [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md).  
   

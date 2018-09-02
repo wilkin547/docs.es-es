@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: facc756061e7eb381abecc544ca4b15bfdde6343
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ecf6bff10e98ab7f008cfd176f59687f34d89553
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440052"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43471960"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost (Interfaz)
-Proporciona métodos que permiten al host iniciar y detener de forma explícita, common language runtime (CLR) para crear y configurar dominios de aplicación, tener acceso al dominio predeterminado y enumerar todos los dominios que se ejecuta en el proceso.  
+Proporciona métodos que permiten al host iniciar y detener de forma explícita, common language runtime (CLR) para crear y configurar dominios de aplicación, tener acceso al dominio de forma predeterminada y para enumerar todos los dominios que se ejecutan en el proceso.  
   
  En la versión 2.0 de .NET Framework, esta interfaz ha sido reemplazada por [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md).  
   
@@ -35,8 +35,8 @@ Proporciona métodos que permiten al host iniciar y detener de forma explícita,
 |[CloseEnum (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-closeenum-method.md)|Restablece un enumerador de dominio al principio de la lista de dominios.|  
 |[CreateDomain (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)|Crea un dominio de aplicación. El llamador recibe un puntero de interfaz de tipo <xref:System._AppDomain> a una instancia de tipo <xref:System.AppDomain?displayProperty=nameWithType>.|  
 |[CreateDomainEx (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)|Crea un dominio de aplicación. Este método permite al llamador pasar una instancia de IAppDomainSetup para configurar características adicionales de devuelto <xref:System._AppDomain> instancia.|  
-|[CreateDomainSetup (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|Obtiene un puntero de interfaz de tipo `IAppDomainSetup` a una <xref:System.AppDomainSetup> instancia. `IAppDomainSetup` Proporciona métodos para configurar aspectos de un dominio de aplicación antes de que se crea.|  
-|[CreateEvidence (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)|Obtiene un puntero de interfaz de tipo <xref:System.Security.Principal.IIdentity>, que permite al host crear la evidencia de seguridad que se pasarán a [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) o [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md).|  
+|[CreateDomainSetup (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|Obtiene un puntero de interfaz de tipo `IAppDomainSetup` a un <xref:System.AppDomainSetup> instancia. `IAppDomainSetup` Proporciona métodos para configurar aspectos de un dominio de aplicación antes de crearlo.|  
+|[CreateEvidence (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)|Obtiene un puntero de interfaz de tipo <xref:System.Security.Principal.IIdentity>, que permite al host crear la evidencia de seguridad para pasar a [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) o [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md).|  
 |[CreateLogicalThreadState (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createlogicalthreadstate-method.md)|No utilizar.|  
 |[CurrentDomain (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-currentdomain-method.md)|Obtiene un puntero de interfaz de tipo <xref:System._AppDomain> que representa el dominio cargado en el subproceso actual.|  
 |[DeleteLogicalThreadState (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-deletelogicalthreadstate-method.md)|No utilizar.|  
@@ -45,7 +45,7 @@ Proporciona métodos que permiten al host iniciar y detener de forma explícita,
 |[GetDefaultDomain (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-getdefaultdomain-method.md)|Obtiene un puntero de interfaz de tipo <xref:System._AppDomain> que representa el dominio predeterminado para el proceso actual.|  
 |[LocksHeldByLogicalThread (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-locksheldbylogicalthread-method.md)|No utilizar.|  
 |[MapFile (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-mapfile-method.md)|Asigna el archivo especificado en la memoria. Este método está obsoleto.|  
-|[NextDomain (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-nextdomain-method.md)|Obtiene un puntero de interfaz al dominio siguiente de la enumeración.|  
+|[NextDomain (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-nextdomain-method.md)|Obtiene un puntero de interfaz al siguiente dominio de la enumeración.|  
 |[Start (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-start-method.md)|Inicia el CLR.|  
 |[Stop (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-stop-method.md)|Detiene la ejecución de código en tiempo de ejecución para el proceso actual.|  
 |[SwitchInLogicalThreadState (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-switchinlogicalthreadstate-method.md)|No utilizar.|  
@@ -53,7 +53,7 @@ Proporciona métodos que permiten al host iniciar y detener de forma explícita,
 |[UnloadDomain (método)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-unloaddomain-method.md)|Descarga el dominio de aplicación especificado del proceso actual.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE.h  
   
@@ -65,6 +65,6 @@ Proporciona métodos que permiten al host iniciar y detener de forma explícita,
  <xref:System.AppDomain>  
  [Hospedar aplicaciones de WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)  
  [ICLRRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- [Hosts en tiempo de ejecución](http://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
+ [Hosts en tiempo de ejecución](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
  [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [CorRuntimeHost (coclase)](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

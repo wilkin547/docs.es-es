@@ -2,12 +2,12 @@
 title: Asignaciones de tipos de datos de SQL Server
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: 26ba7aa730eb9c30cfeaf50c59d6b9721fe5857d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bc2747dff7b6f2bffdca4186519f2a36083e5f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362470"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456401"
 ---
 # <a name="sql-server-data-type-mappings"></a>Asignaciones de tipos de datos de SQL Server
 SQL Server y .NET Framework se basan en sistemas de tipos distintos. Por ejemplo, la estructura <xref:System.Decimal> de .NET Framework tiene una escala máxima de 28, mientras que los tipos de datos decimal y numérico de SQL Server tienen una escala máxima de 38. Para mantener la integridad de los datos al leer y escribir datos, <xref:System.Data.SqlClient.SqlDataReader> expone métodos de descriptores de acceso con tipo específicos de SQL Server que devuelven objetos de <xref:System.Data.SqlTypes> así como métodos de descriptores de acceso que devuelven tipos de .NET Framework. Los tipos de SQL Server y los de .NET Framework se representan también mediante enumeraciones en las clases <xref:System.Data.DbType> y <xref:System.Data.SqlDbType>, que puede usar al especificar los tipos de datos <xref:System.Data.SqlClient.SqlParameter>.  
@@ -49,15 +49,16 @@ SQL Server y .NET Framework se basan en sistemas de tipos distintos. Por ejemplo
 |varchar|String<br /><br /> Char[]|<xref:System.Data.SqlDbType.VarChar>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiString>, <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
 |xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|ninguna|  
   
-<sup>1</sup> no se puede establecer la `DbType` propiedad de un `SqlParameter` a `SqlDbType.Date`.  
-<sup>2</sup> utilice un descriptor de acceso con tipo si conoce el tipo subyacente de la `sql_variant`.  
+<sup>1</sup> no puede establecer el `DbType` propiedad de un `SqlParameter` a `SqlDbType.Date`.  
+<sup>2</sup> utilizar un descriptor de acceso con tipo si conoce el tipo subyacente de la `sql_variant`.  
   
-## <a name="sql-server-books-online-reference"></a>Referencia de Libros en pantalla de SQL Server  
- Para obtener más información acerca de los tipos de datos de SQL Server, vea [tipos de datos (motor de base de datos)](http://go.microsoft.com/fwlink/?LinkID=107468).  
+## <a name="sql-server-documentation"></a>Documentación de SQL Server
+
+Para obtener más información acerca de los tipos de datos de SQL Server, vea [tipos de datos (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql).
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de datos de SQL Server y ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [Datos binarios y datos de valores grandes de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [Asignaciones de tipos de datos en ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [Configuración de parámetros y tipos de datos de parámetros](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

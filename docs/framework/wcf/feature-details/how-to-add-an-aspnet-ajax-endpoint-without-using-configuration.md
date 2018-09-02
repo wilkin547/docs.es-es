@@ -3,11 +3,11 @@ title: Cómo agregar un punto de conexión AJAX de ASP.NET sin usar la configura
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
 ms.openlocfilehash: 18c02644319dd9d11be39ac4956a4dcf50db3078
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930817"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470793"
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Cómo agregar un punto de conexión AJAX de ASP.NET sin usar la configuración
 Windows Communication Foundation (WCF) le permite crear un servicio que expone un punto de conexión compatible con AJAX de ASP.NET que se puede llamar desde JavaScript en un sitio Web del cliente. Para crear este tipo de punto de conexión, puede usar un archivo de configuración, como con todos los otros puntos de conexión de WCF, o utilizar un método que no requiera ningún elemento de configuración. En este tema se muestra el segundo enfoque.  

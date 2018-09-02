@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: bff2b51fbc8fec6e7cd2b24700d1c4dc38c007f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550025"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464952"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>API para el hospedaje nativo de WPF en explorador
-Hospedaje de [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] aplicaciones en exploradores Web se realiza mediante un servidor de documentos activos (también conocido como DocObject) registrado desde el Host de WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] directamente, se puede activar y se integran con un documento activo. Para hospedar XBAP y documentos XAML flexible en exploradores de Mozilla, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] proporciona un complemento NPAPI, que proporciona un entorno de hospedaje similar a la [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] servidor del documento activo como [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] does. Sin embargo, la manera más fácil resulta muy práctica para hospedar XBAP y XAML documenta en otros exploradores y aplicaciones independientes es mediante el control de explorador Web Internet Explorer. El control de explorador Web proporciona el entorno de hospedaje de servidor complejo de documento activo, aunque permite a su propio host personalizar y extender ese entorno y comunicarse directamente con el objeto de documento activo actual.  
+Hospedaje de [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] aplicaciones en exploradores Web se ve facilitado por un servidor de documentos activos (también denominado DocObject) registrado desde el Host de WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] puede activar y directamente integrar con un documento activo. Para el hospedaje de aplicaciones XBAP y documentos XAML flexibles en los exploradores Mozilla, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] ofrece un complemento NPAPI, que proporciona un entorno de hospedaje similar a la [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] servidor de documentos activos como [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] does. Sin embargo, la manera más fácil práctica para hospedar las aplicaciones XBAP y XAML se documenta en otros exploradores y aplicaciones independientes es mediante el control de explorador Web Internet Explorer. El control de explorador Web proporciona el entorno de hospedaje de servidor complejo de documento activo, pero permite su propio host personalizar y extender ese entorno y comunicarse directamente con el objeto de documento activo actual.  
   
- El [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] servidor de documentos activos implementa varias interfaces de hospedaje comunes, como [IOleObject](http://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](http://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](http://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](http://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](http://go.microsoft.com/fwlink/?LinkId=162047). Cuando se hospeda en el control de explorador Web, estas interfaces pueden ser consultas desde el objeto devuelto por la [IWebBrowser2:: Document](http://go.microsoft.com/fwlink/?LinkId=162048) propiedad.  
+ El [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] servidor de documentos activos implementa varias interfaces de hospedaje comunes, como [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Cuando se hospeda en el control del explorador Web, estas interfaces pueden ser consultas desde el objeto devuelto por la [IWebBrowser2:: Document](https://go.microsoft.com/fwlink/?LinkId=162048) propiedad.  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- Implementación del servidor de documentos activos de WPF de [IOleCommandTarget](http://go.microsoft.com/fwlink/?LinkId=162047) admite numerosos comandos relacionados con la navegación y específicos del explorador del grupo de comandos OLE estándar (con un grupo de comandos null GUID). Además, reconoce un grupo de comandos personalizado denominado CGID_PresentationHost. Actualmente, hay solo un comando definido dentro de este grupo.  
+ Implementación del servidor de documentos activos de WPF de [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) admite numerosos comandos relacionados con la navegación y específica del explorador del grupo de comandos OLE estándar (con un GUID de grupo de comando nulo). Además, reconoce un grupo de comandos personalizado denominado CGID_PresentationHost. Actualmente, hay solo un comando definido dentro de este grupo.  
   
 ```  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
@@ -29,7 +29,7 @@ enum PresentationHostCommands {
 };  
 ```  
   
- PHCMDID_TABINTO indica a PresentationHost para cambiar el foco al primer o último elemento puede recibir el foco de su contenido, dependiendo del estado de la tecla MAYÚS.  
+ PHCMDID_TABINTO indica a PresentationHost para cambiar el foco al primer o último elemento enfocable en su contenido, dependiendo del estado de la tecla MAYÚS.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)  

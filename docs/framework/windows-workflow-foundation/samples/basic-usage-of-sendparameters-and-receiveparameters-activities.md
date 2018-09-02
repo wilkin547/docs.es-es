@@ -2,12 +2,12 @@
 title: Uso básico de las actividades SendParameters y ReceiveParameters
 ms.date: 03/30/2017
 ms.assetid: 1b6b1681-3d41-403f-bfe2-3f600f24aa8c
-ms.openlocfilehash: 8732b10f3f96ccf9ed352f9b54c60a4ee0d1664c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c13999ad1571a6413e30e801b6c642000f8e4654
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515403"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467700"
 ---
 # <a name="basic-usage-of-sendparameters-and-receiveparameters-activities"></a>Uso básico de las actividades SendParameters y ReceiveParameters
 En este ejemplo se muestra el uso de las actividades <xref:System.ServiceModel.Activities.SendParametersContent> y <xref:System.ServiceModel.Activities.ReceiveParametersContent>. El servicio expone una operación que toma un argumento de cadena y devuelve la entrada al cliente. En el ejemplo se muestra cómo preparar los parámetros para estas actividades de mensajería.  
@@ -17,7 +17,7 @@ En este ejemplo se muestra el uso de las actividades <xref:System.ServiceModel.A
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\SendReceiveParameters`  
   

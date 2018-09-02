@@ -7,12 +7,12 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
-ms.openlocfilehash: bc14c0563be631662737b6d5f244d3c369d57901
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557646"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468672"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>Temas "Cómo..." de animación y control de tiempo
 Los temas siguientes muestran cómo usar el [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sistema de animación y temporización en sus aplicaciones.  
@@ -31,7 +31,6 @@ Los temas siguientes muestran cómo usar el [!INCLUDE[TLA#tla_winclient](../../.
  [Controlar una animación mediante From, To y By](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
  [Definir un ámbito de nombres](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
  [Recibir una notificación cuando cambia el estado de un reloj](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [Cómo: quitar un guión gráfico](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee)  
  [Repetir una animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
  [Buscar un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
  [Buscar guiones gráficos de forma sincrónica](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  

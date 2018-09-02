@@ -2,12 +2,12 @@
 title: Elemento &lt;transport&gt; de &lt;netTcpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 9369351e4e197f321feb4ae56939bec2a8280a64
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8c2a0de73db2ec4a1c2150fc7e62b7a3a9f086bc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752564"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474010"
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>Elemento &lt;transport&gt; de &lt;netTcpBinding&gt;
 Define el tipo de requisitos de seguridad de nivel de mensaje para un extremo configurado con el [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -65,7 +65,7 @@ Define el tipo de requisitos de seguridad de nivel de mensaje para un extremo co
 |-----------|-----------------|  
 |Ninguna|Ninguna protección|  
 |Signo|Se firman los mensajes.|  
-|EncryptAndSign|-Los mensajes se cifrarán y firmarán.|  
+|EncryptAndSign|-Los mensajes se cifran y firman.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  
@@ -87,5 +87,5 @@ Define el tipo de requisitos de seguridad de nivel de mensaje para un extremo co
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)

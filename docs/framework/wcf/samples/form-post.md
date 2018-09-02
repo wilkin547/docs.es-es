@@ -2,12 +2,12 @@
 title: Envío de formulario
 ms.date: 03/30/2017
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-ms.openlocfilehash: 005aba6ab8a8fcbe4f4e4f79055e04cff059f47d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9115b9abfa7039bf409bb9bbce54e5012d05a074
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503768"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464939"
 ---
 # <a name="form-post"></a>Envío de formulario
 Este ejemplo muestra cómo extender el modelo de programación REST de WCF para admitir los nuevos formatos de solicitudes entrantes. El ejemplo también incluye una implementación de un formateador que puede deserializar una solicitud de un envío de formulario HTML en un tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Además, el ejemplo utiliza una plantilla T4 para devolver una página HTML, que proporciona el formulario HTML que los usuarios pueden devolver al servicio REST de WCF.  
@@ -25,13 +25,13 @@ Este ejemplo muestra cómo extender el modelo de programación REST de WCF para 
   
  El proyecto de biblioteca HtmlFormProcessing también incluye una clase base abstracta, `RequestBodyDispatchFormatter`, que se puede utilizar para crear otros formateadores de solicitud personalizados. Derivar de `RequestBodyDispatchFormatter` permite a un desarrollador de software centrarse en la lógica de deserialización de cuerpo de solicitud, que permite a la clase base asignar los parámetros de plantilla de URI a los parámetros de método de la operación. En el proyecto de biblioteca HtmlFormProcessing también está la clase `HtmlFormProcessingBehavior`, que muestra cómo derivar de <xref:System.ServiceModel.Description.WebHttpBehavior> para reemplazar el formateador de solicitudes predeterminado con un formateador de solicitudes personalizado.  
   
- Este proyecto de aplicación de consola extiende la [servicio de recurso básico](../../../../docs/framework/wcf/samples/basic-resource-service.md) ejemplo. El ejemplo de servicio de recurso básico muestra cómo exponer un recurso de manera que use el modelo de programación REST de WCF. En el ejemplo de servicio de recurso básico, un recurso de colección de cliente se expone de forma que se puedan crear, recuperar, actualizar y eliminar los clientes de la colección. El ejemplo de servicio de recurso básico solo utiliza los dos los formatos de solicitud entrante admitidos: XML y JSON.  
+ Este proyecto de aplicación de consola extiende el [servicio de recurso básico](../../../../docs/framework/wcf/samples/basic-resource-service.md) ejemplo. El ejemplo de servicio de recurso básico muestra cómo exponer un recurso de manera que use el modelo de programación REST de WCF. En el ejemplo de servicio de recurso básico, un recurso de colección de cliente se expone de forma que se puedan crear, recuperar, actualizar y eliminar los clientes de la colección. El ejemplo de servicio de recurso básico solo utiliza los dos los formatos de solicitud entrante admitidos: XML y JSON.  
   
- La aplicación de consola de este ejemplo de envío de formulario utiliza el formateador personalizado de la biblioteca de HtmlFormProcessing, que les permite a los usuarios crear clientes enviando un envío de formulario HTML mediante un explorador. También agrega una operación que devuelve una página HTML, que incluye el formulario que se va a devolver al servicio. Esta página HTML se genera utilizando una plantilla T4 preprocesada, que está compuesta de un archivo .tt y de un archivo .cs generado automáticamente. El archivo .tt permite que los desarrolladores de software escriban una respuesta en un formulario de plantilla que contenga variables y estructuras de control. Para obtener más información acerca de T4, vea [Generar artefactos de plantillas de texto](http://go.microsoft.com/fwlink/?LinkId=178139).  
+ La aplicación de consola de este ejemplo de envío de formulario utiliza el formateador personalizado de la biblioteca de HtmlFormProcessing, que les permite a los usuarios crear clientes enviando un envío de formulario HTML mediante un explorador. También agrega una operación que devuelve una página HTML, que incluye el formulario que se va a devolver al servicio. Esta página HTML se genera utilizando una plantilla T4 preprocesada, que está compuesta de un archivo .tt y de un archivo .cs generado automáticamente. El archivo .tt permite que los desarrolladores de software escriban una respuesta en un formulario de plantilla que contenga variables y estructuras de control. Para obtener más información sobre T4, vea [Generar artefactos utilizando plantillas de texto](https://go.microsoft.com/fwlink/?LinkId=178139).  
   
 #### <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
   
-1.  Abra la solución para obtener el ejemplo de envío de formulario. Al iniciar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], debe ejecutarlo como administrador para ejecutar el ejemplo correctamente. Esto se hace clic en el [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icono y elija "Ejecutar como administrador" en el menú contextual.  
+1.  Abra la solución para obtener el ejemplo de envío de formulario. Al iniciar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], debe ejecutarlo como administrador para ejecutar el ejemplo correctamente. Hacer esto haciendo clic con el [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icono y elija "Ejecutar como administrador" en el menú contextual.  
   
 2.  Presione CTRL+MAYÚS+B para compilar la solución y, a continuación, presione CTRL+F5 para ejecutar el proyecto FormPost de la aplicación.  
   
@@ -52,6 +52,6 @@ Este ejemplo muestra cómo extender el modelo de programación REST de WCF para 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Web\FormPost`

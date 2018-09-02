@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6da641ec5da20c80f4c1034ded8a3be7d036b5a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804136"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466496"
 ---
 # <a name="security-concerns-for-message-logging"></a>Riesgos de seguridad relativos al registro de mensajes
 En este tema se describe cómo puede proteger los datos confidenciales para que no se expongan en registros de mensajes, así como los eventos generados por el registro de mensajes.  
@@ -17,7 +17,7 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
 ## <a name="security-concerns"></a>Cuestiones de seguridad  
   
 ### <a name="logging-sensitive-information"></a>Registrar información confidencial  
- Windows Communication Foundation (WCF) no modifica ningún dato en encabezados específicos de la aplicación y el cuerpo. WCF también no realizar un seguimiento de información personal en encabezados específicos de la aplicación o datos del cuerpo.  
+ Windows Communication Foundation (WCF) no modifica ningún dato en el cuerpo y los encabezados específicos de la aplicación. WCF también no realizar un seguimiento de información personal en encabezados específicos de la aplicación o datos del cuerpo.  
   
  Cuando el registro de mensajes está habilitado, la información personal en encabezados específicos de la aplicación, como una cadena de consulta; e información del cuerpo, como un número de tarjeta de crédito, se puede volver visible en los registros. El implementador de la aplicación es el responsable de exigir el control de acceso en los archivos de registro y configuración. Si no desea que este tipo de información sea visible, debería deshabilitar el registro o filtrar parte de los datos si desea compartir los registros.  
   
@@ -90,7 +90,7 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
   
  Los cambios solo son efectivos cuando la aplicación se inicia o reinicia. Un evento está registrado en el inicio cuando ambos atributos están establecidos en `true`. Un evento también está registrado si `logKnownPii` está establecido en `true` pero `enableLoggingKnownPii` es `false`.  
   
- El administrador del equipo e implementador de la aplicación debería ejercer una precaución extrema al utilizar estos dos modificadores. Si el registro de PII está habilitado, las claves de seguridad y PII están registradas. Si está deshabilitado, los datos sensibles y específicos de la aplicación todavía están registrados en encabezados del mensaje y cuerpos. Para obtener una explicación más exhaustiva sobre privacidad y protección de PII que no se expongan, consulte [privacidad del usuario](http://go.microsoft.com/fwlink/?LinkID=94647).  
+ El administrador del equipo e implementador de la aplicación debería ejercer una precaución extrema al utilizar estos dos modificadores. Si el registro de PII está habilitado, las claves de seguridad y PII están registradas. Si está deshabilitado, los datos sensibles y específicos de la aplicación todavía están registrados en encabezados del mensaje y cuerpos. Para obtener una explicación más exhaustiva sobre privacidad y cómo evitar la exposición de PII, vea [privacidad del usuario](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
 > [!CAUTION]
 >  PII no se oculta en mensajes incorrectos. Tales mensajes se registran tal cual sin ninguna modificación. Los atributos mencionados previamente no tienen ningún efecto sobre esto.  
@@ -105,11 +105,11 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
   
 -   Registro de mensajes desactivado: se emite este evento cuando el registro de mensajes se deshabilita a través de WMI. El contenido del evento es “Se ha desactivado el registro de mensajes”.  
   
--   Registro PII conocido activado: se emite este evento cuando el registro de PII conocido está habilitado. Esto sucede cuando el `enableLoggingKnownPii` de atributo en el `machineSettings` elemento del archivo Machine.config se establece en `true`y el `logKnownPii` atributo de la `source` elemento en el archivo App.config o Web.config se establece en `true`.  
+-   Registro PII conocido activado: se emite este evento cuando el registro de PII conocido está habilitado. Esto sucede cuando el `enableLoggingKnownPii` atributo en el `machineSettings` elemento del archivo Machine.config se establece en `true`y el `logKnownPii` atributo de la `source` elemento en el archivo App.config o Web.config se establece en `true`.  
   
--   Registro de PII conocido no permitido: se emite este evento cuando no se permite el registro de PII conocido. Esto sucede cuando el `logKnownPii` atributo de la `source` elemento en el archivo App.config o Web.config se establece en `true`, pero la `enableLoggingKnownPii` de atributo en el `machineSettings` elemento del archivo Machine.config se establece en `false`. No se inicia ninguna excepción.  
+-   Registro de PII conocido no permitido: se emite este evento cuando no se permite el registro de PII conocido. Esto sucede cuando el `logKnownPii` atributo de la `source` elemento en el archivo App.config o Web.config se establece en `true`, pero la `enableLoggingKnownPii` atributo el `machineSettings` elemento del archivo Machine.config se establece en `false`. No se inicia ninguna excepción.  
   
- Estos eventos se pueden ver en la herramienta Visor de eventos que viene con Windows. Para obtener más información sobre esto, consulte [un registro de eventos](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+ Estos eventos se pueden ver en la herramienta Visor de eventos que viene con Windows. Para obtener más información, consulte [Event Logging](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Registro de mensajes](../../../../docs/framework/wcf/diagnostics/message-logging.md)  

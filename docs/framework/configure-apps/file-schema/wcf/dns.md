@@ -2,12 +2,12 @@
 title: '&lt;DNS&gt;'
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: 6125bf157d04a1b0298a183465d11a18ac3786f0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2f5b9d5e1bc57230adbb32664e9ae15d3c71d46f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746740"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472038"
 ---
 # <a name="ltdnsgt"></a>&lt;DNS&gt;
 Especifica la identidad esperada del servidor. Esta identidad es válida para el modo de autenticación de certificado X509 si el certificado del servidor contiene un DNS con el mismo valor. También es válido para el modo de autenticación de Windows si el SPN tiene el mismo valor.  
@@ -30,7 +30,7 @@ Especifica la identidad esperada del servidor. Esta identidad es válida para el
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|value|DNS del certificado. DNS es un protocolo de estándar de la industria usado para buscar equipos en una red basada en IP. Los usuarios pueden recordar nombres para mostrar, como [ http://go.microsoft.com/fwlink/?prd=10929 ](http://go.microsoft.com/fwlink/?prd=10929) o [ http://go.microsoft.com/fwlink/?LinkID=96165 ](http://go.microsoft.com/fwlink/?LinkID=96165), resulta más sencillo que direcciones basadas en número, como 207.46.131.137.|  
+|value|DNS del certificado. DNS es un protocolo de estándar de la industria usado para buscar equipos en una red basada en IP. Los usuarios pueden recordar nombres para mostrar, como [ https://go.microsoft.com/fwlink/?prd=10929 ](https://go.microsoft.com/fwlink/?prd=10929) o [ https://go.microsoft.com/fwlink/?LinkID=96165 ](https://go.microsoft.com/fwlink/?LinkID=96165), más fácil que las direcciones basadas en números, como 207.46.131.137.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  

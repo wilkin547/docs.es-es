@@ -9,12 +9,12 @@ ms.assetid: 03de6972-442a-4648-9f3e-efa654e3b949
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 59f0441b79244eb529be338495c32af886a5f2b3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 68f37e3efca784b94be90d5779c9bc402f144448
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745102"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465478"
 ---
 # <a name="startup-settings-schema"></a>Esquema de la configuración de inicio
 La configuración de inicio especifica la versión de Common Language Runtime que debe ejecutar la aplicación.  
@@ -27,4 +27,4 @@ La configuración de inicio especifica la versión de Common Language Runtime qu
   
 ## <a name="see-also"></a>Vea también  
  [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> Especificar la versión en tiempo de ejecución que se va a usar](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+ [\<PaveOver> Especificar la versión en tiempo de ejecución que se va a usar](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

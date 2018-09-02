@@ -2,12 +2,12 @@
 title: Operaciones asincrónicas
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: 97564600f6f4fb9d4990398527dd2e45fcb9f015
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1c99437ada9dd9e71e0e999073e8d207569c2bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352984"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463083"
 ---
 # <a name="asynchronous-operations"></a>Operaciones asincrónicas
 Algunas operaciones de base de datos, como las ejecuciones de comandos, pueden tardar bastante tiempo en completarse. En estos casos, las aplicaciones de un único subproceso deben bloquear otras operaciones y esperar a que el comando termine antes de poder continuar sus propias operaciones. En contraposición, la posibilidad de asignar la operación cuya ejecución tiene una larga duración a un subproceso en segundo plano permite que el subproceso en primer plano permanezca activo durante toda la operación. En las aplicaciones Windows, por ejemplo, delegar aquellas operaciones cuya ejecución tiene una larga duración en subprocesos en segundo plano permite que el subproceso de interfaz de usuario permanezca alerta mientras se ejecuta la operación.  
@@ -15,7 +15,7 @@ Algunas operaciones de base de datos, como las ejecuciones de comandos, pueden t
  .NET Framework proporciona varios patrones de diseño asincrónicos estándar que pueden utilizar los programadores para aprovechar los subprocesos en segundo plano y liberar a los subprocesos de interfaz de usuario o de alta prioridad para que completen otras operaciones. ADO.NET admite estos mismos patrones de diseño en su clase <xref:System.Data.SqlClient.SqlCommand>. En concreto, los métodos <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> y <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>, acompañados de los métodos <xref:System.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> y <xref:System.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A>, proporcionan la compatibilidad asincrónica.  
   
 > [!NOTE]
->  La programación asincrónica es una característica fundamental de .NET Framework, y ADO.NET aprovecha los patrones de diseño estándar. Para obtener más información acerca de las diferentes técnicas asincrónicas disponibles para los desarrolladores, consulte [al llamar a métodos sincrónicos asincrónicamente](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
+>  La programación asincrónica es una característica fundamental de .NET Framework, y ADO.NET aprovecha los patrones de diseño estándar. Para obtener más información acerca de las diferentes técnicas asincrónicas disponibles para los desarrolladores, consulte [Calling Synchronous Methods Asynchronously](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
   
  Aunque el uso de técnicas asincrónicas con las características de ADO.NET no agrega ninguna consideración especial, es probable que más programadores utilicen las características asincrónicas en ADO.NET que en otras áreas de .NET Framework. Es importante tener en cuenta las ventajas e inconvenientes de crear aplicaciones multithreading. Los ejemplos que a continuación se muestran en esta sección señalan varios aspectos importantes que deben tener en cuenta los programadores al compilar aplicaciones que incorporan funcionalidad multithreading.  
   
@@ -32,4 +32,4 @@ Algunas operaciones de base de datos, como las ejecuciones de comandos, pueden t
 ## <a name="see-also"></a>Vea también  
  [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [Llamada a métodos sincrónicos de forma asincrónica](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

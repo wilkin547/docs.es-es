@@ -11,27 +11,27 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 783c75ed4577831b7ca444870c97063e8a057346
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 781f56c7e710f5130d821ca4796398379dfa4c6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646688"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456495"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Cómo: Contener más de un valor en una variable (Visual Basic)
-Una variable contiene más de un valor si se declara como de un *tipo de datos compuesto*.  
+Una variable contiene más de un valor si se declara de un *tipo de datos compuesto*.  
   
- [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) incluyen estructuras, matrices y clases. Una variable de un tipo de datos compuesto puede contener una combinación de tipos de datos básicos y otros tipos compuestos. Estructuras y clases pueden contener código, así como datos.  
+ [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) incluyen clases, matrices y estructuras. Una variable de un tipo de datos compuesto puede contener una combinación de tipos de datos básicos y otros tipos compuestos. Estructuras y clases pueden contener código, así como los datos.  
   
 ### <a name="to-hold-more-than-one-value-in-a-variable"></a>Para contener más de un valor en una variable  
   
 1.  Determinar el tipo de datos compuestos que desea usar para la variable.  
   
-2.  Si aún no se ha definido el tipo de datos compuesto, definirlo para que pueda utilizar la variable.  
+2.  Si ya no está definido el tipo de datos compuestos, definirlo para que la variable para usarlo.  
   
     -   Definir una estructura con un [Structure (instrucción)](../../../../visual-basic/language-reference/statements/structure-statement.md).  
   
-    -   Definir una matriz con un [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md).  
+    -   Definir una matriz con un [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).  
   
     -   Definir una clase con un [Class (instrucción)](../../../../visual-basic/language-reference/statements/class-statement.md).  
   
@@ -42,7 +42,7 @@ Una variable contiene más de un valor si se declara como de un *tipo de datos c
 5.  Siga el `As` palabra clave con el nombre del tipo de datos compuesto adecuado.  
   
 ## <a name="see-also"></a>Vea también  
- [Tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md)  
  [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
  [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
  [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

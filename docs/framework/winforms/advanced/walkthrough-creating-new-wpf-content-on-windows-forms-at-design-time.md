@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: dd68911abfa6bd6315091fb4630134532053efa1
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dc72b86a69d44ad282e30b000313b73211cad09c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999876"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461753"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Tutorial: Crear nuevo contenido de WPF en Windows Forms en tiempo de diseño
 
@@ -61,7 +61,7 @@ Crear un nuevo control WPF y agregarlo al proyecto es tan fácil como agregar cu
 
     - Se abre el archivo UserControl1.xaml en el [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].
 
-2. En la vista Diseño, asegúrese de que `UserControl1` está seleccionado. Para obtener más información, consulte [Cómo: seleccionar y mover elementos en la superficie de diseño](http://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
+2. En la vista Diseño, asegúrese de que `UserControl1` está seleccionado. Para obtener más información, consulte [Cómo: seleccionar y mover elementos en la superficie de diseño](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
 
 3. En el **propiedades** ventana, establezca el valor de la <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> propiedades a **200**.
 
@@ -114,4 +114,4 @@ Windows Forms y WPF son tecnologías diferentes, pero están diseñadas para int
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migración e interoperabilidad](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
 - [Utilizar controles WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
-- [WPF Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

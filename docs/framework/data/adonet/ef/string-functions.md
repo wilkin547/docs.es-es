@@ -2,12 +2,12 @@
 title: Funciones de cadena
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-ms.openlocfilehash: 0faac7eb37a1405c38137ce9887cf7de4c36df3a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b23261d013a1a7485fe36c7904e5b0b2e5eab21c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766483"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465634"
 ---
 # <a name="string-functions"></a>Funciones de cadena
 El proveedor de datos .NET Framework para SQL Server (SqlClient) proporciona funciones de `String` que realizan operaciones en una `String` de entrada y devuelven una `String` o un resultado con un valor numérico. Estas funciones están en el espacio de nombres SqlServer, que está disponible al utilizar SqlClient. La propiedad del espacio de nombres de un proveedor permite a Entity Framework detectar qué prefijo usa este proveedor para estructuras concretas, como tipos y funciones.  
@@ -27,7 +27,7 @@ El proveedor de datos .NET Framework para SQL Server (SqlClient) proporciona fun
 |`NCHAR(expression)`|Devuelve el valor de tipo `String` Unicode correspondiente al código entero dado, tal como se define en el estándar Unicode.<br /><br /> **Argumentos**<br /><br /> `expression`: valor de tipo `Int32`.<br /><br /> **Valor devuelto**<br /><br /> Valor de tipo `String` Unicode.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.NCHAR(65)`|  
 |`PATINDEX('%pattern%', expression)`|Devuelve la posición inicial de la primera aparición de un patrón en una expresión `String` especificada.<br /><br /> **Argumentos**<br /><br /> `'%pattern%'`: valor de tipo `String` ASCII o Unicode. Se pueden utilizar caracteres comodín; no obstante, el carácter % debe ir delante y detrás del patrón (excepto cuando se busque el primer o último carácter).<br /><br /> `expression`: cadena de tipo `String` ASCII o Unicode en la que buscar el patrón especificado.<br /><br /> **Valor devuelto**<br /><br /> Una clase `Int32`.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.PATINDEX('abc', 'ab')`|  
 |`QUOTENAME('char_string' [, 'quote_char'])`|Devuelve un valor de tipo `String` Unicode con los delimitadores agregados para convertirla en un identificador delimitado válido de SQL Server 2005.<br /><br /> **Argumentos**<br /><br /> `char_string`: valor `String` Unicode.<br /><br /> `quote_char`: cadena de un solo carácter que se utiliza como delimitador. Puede ser una comilla simple ('), un corchete izquierdo o derecho ([ ]) o una comilla doble ("). Si no se especifica `quote_char`, se usarán corchetes.<br /><br /> **Valor devuelto**<br /><br /> Valor de tipo `String` Unicode.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.QUOTENAME('abc[]def')`|  
-|`REPLACE(expression1, expression2, expression3)`|Repite una expresión de carácter un número especificado de veces.<br /><br /> **Argumentos**<br /><br /> `expression1`: expresión de cadena que se va a buscar. expression1 puede ser de un tipo String Unicode o ASCII.<br /><br /> `expression2`: La subcadena que se va a encontrar. expression2 puede ser de un tipo String Unicode o ASCII.<br /><br /> `expression3`: cadena de reemplazo. expression3 puede ser de un tipo String Unicode o ASCII.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.REPLACE('aabbcc', 'bc', 'zz')`|  
+|`REPLACE(expression1, expression2, expression3)`|Repite una expresión de carácter un número especificado de veces.<br /><br /> **Argumentos**<br /><br /> `expression1`: expresión de cadena que se va a buscar. expression1 puede ser de un tipo String Unicode o ASCII.<br /><br /> `expression2`: La subcadena que se encuentra. expression2 puede ser de un tipo String Unicode o ASCII.<br /><br /> `expression3`: cadena de reemplazo. expression3 puede ser de un tipo String Unicode o ASCII.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.REPLACE('aabbcc', 'bc', 'zz')`|  
 |`REPLICATE(char_expression, int_expression)`|Repite una expresión de carácter un número especificado de veces.<br /><br /> **Argumentos**<br /><br /> `char_expression`: tipo `String` Unicode o ASCII.<br /><br /> `int_expression`: `Int64` (no se admite en SQL Server 2000) o `Int32`.<br /><br /> **Valor devuelto**<br /><br /> Tipo `String` Unicode o ASCII.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.REPLICATE('aa',2)`|  
 |`REVERSE(expression)`|Devuelve un valor de tipo String Unicode o ASCII con las posiciones de los caracteres invertidas con respecto a la cadena de entrada.<br /><br /> **Argumentos**<br /><br /> `expression`: tipo `String` Unicode o ASCII.<br /><br /> **Valor devuelto**<br /><br /> Tipo `String` Unicode o ASCII.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.REVERSE('abcd')`|  
 |`RIGHT(char_expression, count)`|Devuelve la parte derecha de una cadena de caracteres con el número de caracteres especificado.<br /><br /> **Argumentos**<br /><br /> `char_expression`: Un tipo String Unicode o ASCII. Use la función CAST para convertir character_expression explícitamente.<br /><br /> `count`: valor de tipo `Int64` (no se devuelve en SQL Server 2000) o `Int32` que especifica cuántos caracteres de character_expression se devolverán.<br /><br /> **Valor devuelto**<br /><br /> Un tipo `String` ASCII.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.RIGHT('SQL Server', 6)`|  
@@ -44,7 +44,7 @@ El proveedor de datos .NET Framework para SQL Server (SqlClient) proporciona fun
   
 |SQL Server 2000|SQL Server 2005|SQL Server 2008|  
 |---------------------|---------------------|---------------------|  
-|[Funciones de cadena (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115915)|[Funciones de cadena (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115916)|[Funciones de cadena (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115914)|  
+|[Funciones de cadena (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115915)|[Funciones de cadena (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115916)|[Funciones de cadena (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115914)|  
   
 ## <a name="see-also"></a>Vea también  
  [SqlClient para las funciones de Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  

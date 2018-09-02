@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c7042f7eee1ccd03d04cc20c5a0db83d986b0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421923"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470832"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData (Método)
 Pide al depurador que devuelva la ruta de acceso completa a un módulo cuyos metadatos se necesitan para completar una operación solicitada por el depurador.  
@@ -46,7 +46,7 @@ HRESULT GetMetaData(
  [in] Cadena terminada en NULL que representa la ruta de acceso completa al archivo. Si la ruta de acceso completa no está disponible, el nombre y la extensión del archivo (*filename*. *extensión*).  
   
  `dwImageTimeStamp`  
- [in] Marca de tiempo de los encabezados del archivo PE de la imagen. Este parámetro puede utilizarse potencialmente para un servidor de símbolos ([SymSrv](http://msdn.microsoft.com/library/cc266470.aspx)) búsqueda.  
+ [in] Marca de tiempo de los encabezados del archivo PE de la imagen. Este parámetro puede emplearse para un servidor de símbolos ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) búsqueda.  
   
  `dwImageSize`  
  [in] Tamaño de la imagen en los encabezados de archivo PE. Este parámetro podría usarse para una búsqueda de SymSrv.  
@@ -62,7 +62,7 @@ HRESULT GetMetaData(
  `wszPathBuffer`  
  [out] Puntero a un búfer en el que el depurador copiará la ruta de acceso completa del archivo que contiene los metadatos solicitados.  
   
- El `ofReadOnly` marca desde el [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeración se usa para solicitar acceso de solo lectura a los metadatos en este archivo.  
+ El `ofReadOnly` marca desde el [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeración se usa para solicitar acceso de solo lectura a los metadatos de este archivo.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método. Cualquier otro HRESULT de error indica que el archivo no se puede recuperar.  
@@ -76,13 +76,13 @@ HRESULT GetMetaData(
  Si `wszImagePath` contiene una ruta de acceso completa para un módulo de un volcado de memoria, especifica la ruta de acceso del equipo desde el que se recopiló el volcado de memoria. Puede que el archivo no exista en esta ubicación o que en ella haya almacenado un archivo incorrecto con el mismo nombre.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [ICorDebugThread4 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  

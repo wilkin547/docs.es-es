@@ -10,23 +10,23 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-ms.openlocfilehash: c0e3a9471afd05ec0e07e8d8a71ffd76c91ec14d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0275d3af0c12eb8edacc1711c8eead45eeca75e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541491"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466948"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Tutorial: Proporcionar elementos de menú estándar a un formulario
 Puede proporcionar un menú estándar para los formularios con el control <xref:System.Windows.Forms.MenuStrip>.  
   
- Este tutorial muestra cómo utilizar un <xref:System.Windows.Forms.MenuStrip> control para crear un menú estándar. El formulario también responde cuando un usuario selecciona un elemento de menú. En este tutorial se muestran las tareas siguientes:  
+ Este tutorial muestra cómo usar un <xref:System.Windows.Forms.MenuStrip> control para crear un menú estándar. El formulario también responde cuando un usuario selecciona un elemento de menú. En este tutorial se muestran las tareas siguientes:  
   
--   Crear un proyecto de formularios Windows Forms.  
+-   Crear un proyecto de Windows Forms.  
   
 -   Crear un menú estándar.  
   
--   Crear un <xref:System.Windows.Forms.StatusStrip> control.  
+-   Creación de un <xref:System.Windows.Forms.StatusStrip> control.  
   
 -   Control de selección de elementos de menú.  
   
@@ -35,7 +35,7 @@ Puede proporcionar un menú estándar para los formularios con el control <xref:
  Para copiar el código de este tema como una sola lista, vea [Cómo: proporcionar elementos de menú estándar a un formulario](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md).  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Para poder completar este tutorial, necesitará:  
@@ -47,11 +47,9 @@ Puede proporcionar un menú estándar para los formularios con el control <xref:
   
 #### <a name="to-create-the-project"></a>Para crear el proyecto  
   
-1.  Crear un proyecto de aplicación de Windows denominado **StandardMenuForm**.  
+1.  Cree un proyecto de aplicación de Windows denominado **StandardMenuForm** (**archivo** > **New** > **proyecto**  >  **Visual C#** o **Visual Basic** > **escritorio clásico de** > **Windows Forms Aplicación**).  
   
-     Para más información, consulte [Cómo: Crear un proyecto de aplicación para Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
-  
-2.  En el Diseñador de Windows Forms, seleccione el formulario.  
+2.  En el Diseñador de formularios de Windows, seleccione el formulario.  
   
 ## <a name="creating-a-standard-menu"></a>Crear un menú estándar  
  El Diseñador de Windows Forms puede rellenar automáticamente un <xref:System.Windows.Forms.MenuStrip> control con elementos de menú estándar.  
@@ -62,7 +60,7 @@ Puede proporcionar un menú estándar para los formularios con el control <xref:
   
 2.  Haga clic en el <xref:System.Windows.Forms.MenuStrip> glifo de etiqueta inteligente del control (![glifo de etiqueta inteligente](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) y seleccione **insertar elementos estándar**.  
   
-     El <xref:System.Windows.Forms.MenuStrip> se rellena con los elementos de menú estándar.  
+     El <xref:System.Windows.Forms.MenuStrip> control se rellena con los elementos de menú estándar.  
   
 3.  Haga clic en el **archivo** elemento de menú para ver sus elementos de menú predeterminados y los iconos correspondientes.  
   
@@ -73,12 +71,12 @@ Puede proporcionar un menú estándar para los formularios con el control <xref:
   
 1.  Desde el **cuadro de herramientas**, arrastre un <xref:System.Windows.Forms.StatusStrip> control al formulario.  
   
-     El <xref:System.Windows.Forms.StatusStrip> control automáticamente se acopla a la parte inferior del formulario.  
+     El <xref:System.Windows.Forms.StatusStrip> control se acopla automáticamente a la parte inferior del formulario.  
   
-2.  Haga clic en el <xref:System.Windows.Forms.StatusStrip> del control de botón de lista desplegable y seleccione **StatusLabel como** para agregar una <xref:System.Windows.Forms.ToolStripStatusLabel> el control a la <xref:System.Windows.Forms.StatusStrip> control.  
+2.  Haga clic en el <xref:System.Windows.Forms.StatusStrip> del control de botón de lista desplegable y seleccione **StatusLabel como** para agregar un <xref:System.Windows.Forms.ToolStripStatusLabel> el control a la <xref:System.Windows.Forms.StatusStrip> control.  
   
 ## <a name="handling-item-selection"></a>Selección de elementos de control  
- Controlar la <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> evento para responder cuando el usuario selecciona un elemento de menú.  
+ Controlar la <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> eventos para responder cuando el usuario selecciona un elemento de menú.  
   
 #### <a name="to-handle-item-selection"></a>Para controlar la selección de elementos  
   
@@ -102,7 +100,7 @@ Puede proporcionar un menú estándar para los formularios con el control <xref:
   
 ## <a name="checkpoint"></a>Punto de control  
   
-#### <a name="to-test-your-form"></a>Para comprobar el formulario  
+#### <a name="to-test-your-form"></a>Para probar el formulario  
   
 1.  Presione F5 para compilar y ejecutar el formulario.  
   
@@ -119,7 +117,7 @@ Puede proporcionar un menú estándar para los formularios con el control <xref:
   
 -   Crear un formulario de múltiples documentos (MDI) de la interfaz con acoplamiento <xref:System.Windows.Forms.ToolStrip> controles. Para obtener más información, consulte [Tutorial: crear un formulario MDI con combinación de menús y controles ToolStrip](../../../../docs/framework/winforms/controls/walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
--   Asigne el <xref:System.Windows.Forms.ToolStrip> controla un aspecto profesional. Para obtener más información, consulte [Cómo: establecer la representación de ToolStrip para una aplicación](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).  
+-   Asigne a su <xref:System.Windows.Forms.ToolStrip> controla un aspecto profesional. Para obtener más información, consulte [Cómo: establecer la representación de ToolStrip para una aplicación](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Forms.MenuStrip>  

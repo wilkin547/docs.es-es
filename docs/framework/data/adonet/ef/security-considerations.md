@@ -2,12 +2,12 @@
 title: Consideraciones de seguridad (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 337424395186532969734e0977ea111d8995a154
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766626"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456849"
 ---
 # <a name="security-considerations-entity-framework"></a>Consideraciones de seguridad (Entity Framework)
 En este tema se describen consideraciones de seguridad que son específicas del desarrollo, implementación y ejecución de aplicaciones de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. También debe seguir las recomendaciones para crear aplicaciones de [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] seguras. Para obtener más información, consulte [información general sobre seguridad](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -27,7 +27,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
  Durante la operación de inicio de sesión, la información que se basa en la contraseña del usuario se pasa al servidor a través de las bibliotecas de red del origen de datos subyacente. Un proveedor malintencionado puede robar las credenciales del usuario, generar consultas malintencionadas o alterar el conjunto de resultados.  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Cifrar la conexión para proteger los datos confidenciales.  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] no administra el cifrado de datos directamente. Si los usuarios tienen acceso a los datos a través de una red pública, la aplicación debería establecer una conexión cifrada al origen de datos para aumentar la seguridad. Para obtener más información, consulte la documentación relacionada con la seguridad correspondiente al origen de datos. Para un origen de datos de SQL Server, vea [cifrar conexiones a SQL Server](http://go.microsoft.com/fwlink/?LinkId=119544).  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] no administra el cifrado de datos directamente. Si los usuarios tienen acceso a los datos a través de una red pública, la aplicación debería establecer una conexión cifrada al origen de datos para aumentar la seguridad. Para obtener más información, consulte la documentación relacionada con la seguridad correspondiente al origen de datos. Para un origen de datos de SQL Server, vea [cifrar conexiones a SQL Server](https://go.microsoft.com/fwlink/?LinkId=119544).  
   
 #### <a name="secure-the-connection-string"></a>Proteger la cadena de conexión.  
  La protección del acceso al origen de datos es uno de los objetivos más importantes a la hora de proteger una aplicación. Una cadena de conexión presenta una vulnerabilidad potencial si no se protege o si se construye incorrectamente. Al almacenar la información de conexión en texto sin formato o conservarla en la memoria, se pone en riesgo todo el sistema. A continuación se enumeran métodos recomendados para proteger las cadenas de conexión:  
@@ -38,7 +38,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
   
 -   Cifre las secciones del archivo de configuración mediante una configuración protegida.  
   
-     ASP.NET incluye una característica denominada configuración protegida, que permite cifrar la información confidencial en un archivo de configuración. Si bien se ha diseñado principalmente para ASP.NET, la configuración protegida también puede usarse para cifrar secciones de los archivos de configuración en aplicaciones Windows. Para obtener una descripción detallada de las nuevas capacidades de configuración protegida, vea [Encrypting Configuration Information Using Protected Configuration](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
+     ASP.NET incluye una característica denominada configuración protegida, que permite cifrar la información confidencial en un archivo de configuración. Si bien se ha diseñado principalmente para ASP.NET, la configuración protegida también puede usarse para cifrar secciones de los archivos de configuración en aplicaciones Windows. Para obtener una descripción detallada de las nuevas capacidades de configuración protegida, vea [cifrar configuración información utilizando configuración protegida](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
   
 -   Almacene las cadenas de conexión en archivos de configuración protegidos.  
   
@@ -46,7 +46,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
   
 -   Utilice generadores de cadenas de conexión al crear dinámicamente las conexiones.  
   
-     Si debe construir las cadenas de conexión en tiempo de ejecución, utilice la clase <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Esta clase de generador de cadenas ayuda a evitar los ataques de inyección en las cadenas de conexión validando y anulando la información de entrada no válida. Para obtener más información, consulte [Cómo: crear una cadena de conexión EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Usar la clase de generador de cadena adecuada para construir la cadena de conexión de origen de datos que forma parte de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] cadena de conexión. Para obtener información acerca de los generadores de cadenas de conexión para proveedores de ADO.NET, vea [generadores de cadenas de conexión](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+     Si debe construir las cadenas de conexión en tiempo de ejecución, utilice la clase <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Esta clase de generador de cadenas ayuda a evitar los ataques de inyección en las cadenas de conexión validando y anulando la información de entrada no válida. Para obtener más información, consulte [Cómo: compilar una cadena de conexión EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Use también la clase de generador de cadenas adecuada para construir la cadena de conexión de origen de datos que forma parte de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] cadena de conexión. Para obtener información acerca de los generadores de cadenas de conexión para proveedores de ADO.NET, vea [generadores de cadenas de conexión](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
  Para más información, consulte [Proteger la información de conexión](../../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
@@ -86,7 +86,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
  El nombre invariable del proveedor se puede modificar en app.config. La aplicación cliente debe asumir la responsabilidad del acceso al proveedor subyacente a través del modelo de fábrica de proveedor estándar utilizando un nombre seguro.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Restrinja los permisos a los archivos de asignación y de modelo.  
- Un administrador debe restringir el acceso de escritura a los archivos de asignación y de modelo (.edmx, .csdl, .ssdl y .msl) únicamente a los usuarios que modifican el modelo o las asignaciones. El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] solo requiere acceso de lectura a estos archivos en tiempo de ejecución. Un administrador debería restringir también el acceso al nivel de objetos y a los archivos para ver código fuente precompilados que generan las herramientas del [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)].  
+ Un administrador debe restringir el acceso de escritura a los archivos de asignación y de modelo (.edmx, .csdl, .ssdl y .msl) únicamente a los usuarios que modifican el modelo o las asignaciones. El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sólo requiere acceso de lectura a estos archivos en tiempo de ejecución. Un administrador debería restringir también el acceso al nivel de objetos y a los archivos para ver código fuente precompilados que generan las herramientas del [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)].  
   
 ## <a name="security-considerations-for-queries"></a>Consideraciones de seguridad para las consultas  
  Se deben tener en cuenta las consideraciones de seguridad siguientes cuando se consulta un modelo conceptual. Estas consideraciones se aplican a las consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)] que usan EntityClient y en las consultas de objetos que usan LINQ, los métodos del generador de consultas o [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
@@ -98,7 +98,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
   
      Los ataques de inyección de SQL se pueden realizar en [!INCLUDE[esql](../../../../../includes/esql-md.md)] proporcionando entradas malintencionadas a los valores que se utilizan en un predicado de consulta y en los nombres de los parámetros. Para evitar el riesgo de inyección de SQL, nunca debería combinar los datos proporcionados por el usuario con el texto de comandos de [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
-     Las consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)] aceptan parámetros siempre que se aceptan literales. Se deben usar consultas parametrizadas en lugar de insertar literales directamente en la consulta procedentes de un agente externo. También debería considerar el uso de métodos del generador de consultas para crear con seguridad [Entity SQL](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     Las consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)] aceptan parámetros siempre que se aceptan literales. Se deben usar consultas parametrizadas en lugar de insertar literales directamente en la consulta procedentes de un agente externo. También debe considerar el uso de métodos del generador de consultas para construir de forma segura [Entity SQL](https://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
   
 -   Ataques de inyección de [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
   
@@ -132,7 +132,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
  Al generar y trabajar con tipos de entidad se aplican las consideraciones de seguridad siguientes.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>No comparta un ObjectContext a través de dominios de aplicación.  
- Al compartir un <xref:System.Data.Objects.ObjectContext> con más de un dominio de aplicación, se puede exponer información en la cadena de conexión. En su lugar, debería transferir objetos serializados o gráficos de objetos al otro dominio de aplicación y, a continuación, asociar esos objetos a <xref:System.Data.Objects.ObjectContext> en ese dominio de aplicación. Para obtener más información, consulte [serializar objetos](http://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ Al compartir un <xref:System.Data.Objects.ObjectContext> con más de un dominio de aplicación, se puede exponer información en la cadena de conexión. En su lugar, debería transferir objetos serializados o gráficos de objetos al otro dominio de aplicación y, a continuación, asociar esos objetos a <xref:System.Data.Objects.ObjectContext> en ese dominio de aplicación. Para obtener más información, consulte [serializar objetos](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
   
 #### <a name="prevent-type-safety-violations"></a>Evite las infracciones de seguridad de los tipos.  
  Si se infringe la seguridad de los tipos, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] no puede garantizar la integridad de los datos de los objetos. Se podrían producir infracciones de seguridad de tipos si permite que las aplicaciones que no son de confianza se ejecuten con seguridad de acceso del código de plena confianza.  

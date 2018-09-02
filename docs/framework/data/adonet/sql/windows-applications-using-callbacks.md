@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 7f8a23c32d4c1e2a91cd83770935b071764943e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f1e3fe6d53266a4e1366c1a3d5396688a25df0f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365480"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457026"
 ---
 # <a name="windows-applications-using-callbacks"></a>Aplicaciones Windows que usan devoluciones de llamada
 En la mayoría de las situaciones de procesamiento asincrónico, desea iniciar una operación de base de datos y seguir ejecutando otros procesos sin tener que esperar a que se complete dicha operación. No obstante, en muchas situaciones es necesario hacer algo una vez que ha finalizado la operación de base de datos. En las aplicaciones para Windows, por ejemplo, quizás podría delegar aquellas operaciones cuya ejecución tiene una larga duración en subprocesos en segundo plano, al tiempo que permite que el subproceso de interfaz de usuario permanezca alerta. Sin embargo, cuando la operación de base de datos se complete, deseará utilizar los resultados para rellenar el formulario. Este tipo de situación se implementa mejor con una devolución de llamada.  
@@ -380,4 +380,4 @@ private void Form1_Load(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>Vea también  
  [Operaciones asincrónicas](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

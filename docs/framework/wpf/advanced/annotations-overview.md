@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: 80555ad714ffe5cab6722d2d6d45fb6a6bb45609
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540848"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463972"
 ---
 # <a name="annotations-overview"></a>Información general sobre anotaciones
 Escribir notas o comentarios en documentos impresos es una actividad tan habitual que prácticamente la subestimamos. Las notas o los comentarios son "anotaciones" que se agregan a un documento para marcar información o resaltar elementos de interés para su posterior referencia. Aunque escribir notas en documentos impresos es fácil y habitual, la capacidad de agregar comentarios personales a documentos electrónicos, si la hay, suele ser muy limitada.  
   
- En este tema se revisan varios tipos comunes de anotaciones, en particular las notas rápidas y el resaltado y se muestra cómo el [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] facilita estos tipos de anotaciones en las aplicaciones a través del documento de Windows Presentation Foundation (WPF) controles de vista.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] controles de visualización de documentos que admiten anotaciones incluyen <xref:System.Windows.Controls.FlowDocumentReader> y <xref:System.Windows.Controls.FlowDocumentScrollViewer>, así como controles derivados de <xref:System.Windows.Controls.Primitives.DocumentViewerBase> como <xref:System.Windows.Controls.DocumentViewer> y <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ En este tema se revisan varios tipos comunes de anotaciones, en particular las notas rápidas y el resaltado y se muestra cómo el [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] facilita estos tipos de anotaciones en las aplicaciones a través de los documentos de Windows Presentation Foundation (WPF) los controles de visualización.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] los controles de visualización del documento que admiten las anotaciones incluyen <xref:System.Windows.Controls.FlowDocumentReader> y <xref:System.Windows.Controls.FlowDocumentScrollViewer>, así como controles derivados de <xref:System.Windows.Controls.Primitives.DocumentViewerBase> como <xref:System.Windows.Controls.DocumentViewer> y <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
   
   
 <a name="caf1_type_stickynotes"></a>   
@@ -43,7 +43,7 @@ Escribir notas o comentarios en documentos impresos es una actividad tan habitua
   
  ![Anotación de resaltado](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")  
   
- Los usuarios suelen crear anotaciones, seleccione primero algún texto o un elemento de interés y, a continuación, con el botón secundario para mostrar un <xref:System.Windows.Controls.ContextMenu> de opciones de anotación.  El siguiente ejemplo se muestra la [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] puede utilizar para declarar un <xref:System.Windows.Controls.ContextMenu> con comandos enrutados a los que pueden tener acceso los usuarios para crear y administrar anotaciones.  
+ Los usuarios suelen crear anotaciones, seleccione primero algún texto o un elemento de interés y, a continuación, con el botón secundario para mostrar un <xref:System.Windows.Controls.ContextMenu> de opciones de anotación.  El ejemplo siguiente se muestra el [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] puede utilizar para declarar un <xref:System.Windows.Controls.ContextMenu> con comandos enrutados que pueden tener acceso los usuarios para crear y administrar anotaciones.  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
@@ -62,7 +62,7 @@ Escribir notas o comentarios en documentos impresos es una actividad tan habitua
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- Otro ejemplo de escenario implica que las aplicaciones que habilitan el intercambio de anotaciones y notas rápidas entre los lectores del documento a través de correo electrónico. Esta característica permite que estas aplicaciones naveguen en el lector hasta la página que contiene la anotación que se está intercambiando.  
+ Otro ejemplo de escenario implica las aplicaciones que permiten el intercambio de anotaciones y notas rápidas entre los lectores de documentos por correo electrónico. Esta característica permite que estas aplicaciones naveguen en el lector hasta la página que contiene la anotación que se está intercambiando.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
@@ -75,4 +75,4 @@ Escribir notas o comentarios en documentos impresos es una actividad tan habitua
  [Información general sobre ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
  [Información general sobre comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [Información general sobre documentos dinámicos](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Cómo: Agregar un comando a un elemento de menú](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+ [Cómo: Agregar un comando a un elemento de menú](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)

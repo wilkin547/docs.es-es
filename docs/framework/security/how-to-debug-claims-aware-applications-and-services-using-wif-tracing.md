@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0f2126a83e6a5638eb492bb2a529dbf4cdab1714
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69c7e30168686eeb7d530b167b1f87c567c63874
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408637"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463200"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Cómo: Depurar servicios y aplicaciones para notificaciones mediante el seguimiento de WIF
 ## <a name="applies-to"></a>Se aplica a  
@@ -77,14 +77,14 @@ ms.locfileid: "33408637"
     </system.diagnostics>  
     ```  
   
-3.  La configuración anterior le indica a WIF que genere eventos de seguimiento detallados y los registre en el archivo *WIFTrace.e2e*. Para obtener una lista completa de los valores del modificador **switchValue**, vea la tabla Nivel de seguimiento que se encuentra en el siguiente tema: [Configurar el seguimiento](http://msdn.microsoft.com/library/ms733025.aspx).  
+3.  La configuración anterior le indica a WIF que genere eventos de seguimiento detallados y los registre en el archivo *WIFTrace.e2e*. Para obtener una lista completa de los valores del modificador **switchValue**, vea la tabla Nivel de seguimiento que se encuentra en el siguiente tema: [Configurar el seguimiento](../wcf/diagnostics/tracing/configuring-tracing.md).  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>Paso 2: analizar los archivos de seguimiento de WIF mediante la herramienta Visor de seguimiento  
  En este paso, usará la herramienta Visor de seguimiento (SvcTraceViewer.exe) para analizar los registros de seguimiento de WIF.  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>Para analizar los registros de seguimiento de WIF con la herramienta Visor de seguimiento (SvcTraceViewer.exe)  
   
-1.  La herramienta Visor de seguimiento (SvcTraceViewer.exe) se incluye como parte de Windows SDK. Si todavía no ha instalado Windows SDK, puede descargarlo aquí: [Windows SDK](http://www.microsoft.com/download/en/details.aspx?id=8279).  
+1.  La herramienta Visor de seguimiento (SvcTraceViewer.exe) se incluye como parte de Windows SDK. Si todavía no ha instalado Windows SDK, puede descargarlo aquí: [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
   
 2.  Ejecute la herramienta Visor de seguimiento (SvcTraceViewer.exe) Normalmente está disponible en la carpeta **Bin** de la ruta de instalación.  
   
@@ -105,8 +105,8 @@ ms.locfileid: "33408637"
   
 |**Identificador del error**|**Mensaje de error**|**Acción necesaria para corregir el error**|  
 |-|-|-|  
-|ID4175|IssuerNameRegistry no reconoció el emisor del token de seguridad.  Para aceptar los tokens de seguridad de este emisor, configure IssuerNameRegistry para devolver un nombre válido para este emisor.|Este error se puede producir cuando se copia una huella digital desde el complemento MMC y se pega en el archivo *Web.config*. En concreto, puede obtener un carácter adicional no imprimible en la cadena de texto cuando se copia desde la ventana de propiedades del certificado. Este carácter adicional produce que producirá un error en la coincidencia de huella digital. El procedimiento para copiar correctamente la huella digital puede encontrarse aquí: [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|IssuerNameRegistry no reconoció el emisor del token de seguridad.  Para aceptar los tokens de seguridad de este emisor, configure IssuerNameRegistry para devolver un nombre válido para este emisor.|Este error se puede producir cuando se copia una huella digital desde el complemento MMC y se pega en el archivo *Web.config*. En concreto, puede obtener un carácter adicional no imprimible en la cadena de texto cuando se copia desde la ventana de propiedades del certificado. Este carácter adicional produce la coincidencia de huella digital para producir un error. El procedimiento para copiar correctamente la huella digital puede encontrarse aquí: [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
   
 ## <a name="related-items"></a>Elementos relacionados  
   
--   [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](http://msdn.microsoft.com/library/aa751795.aspx)
+-   [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

@@ -2,12 +2,12 @@
 title: Consultas de agregado
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: e4d5e0a9dc1ffb0bf1857fee788d46947f3901d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c8f6191cfb832a71bd32c60db492eafb8ca22ca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358848"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464158"
 ---
 # <a name="aggregate-queries"></a>Consultas de agregado
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite los operadores de agregado `Average`, `Count`, `Max`, `Min` y `Sum`. Tener en cuenta las características siguientes de los operadores de agregado en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
@@ -18,7 +18,7 @@ ms.locfileid: "33358848"
   
 -   Las consultas de funciones agregadas normalmente devuelven un número en lugar de una colección.  
   
-     Para obtener más información, consulte [operaciones de agregación](http://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4).  
+     Para obtener más información, consulte [operaciones de agregación](https://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4).  
   
 -   No se puede llamar a funciones de agregado en tipos anónimos.  
   

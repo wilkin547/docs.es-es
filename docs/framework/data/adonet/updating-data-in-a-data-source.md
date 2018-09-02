@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 11c3faa85d6d0b77c4e606815aa8252188b6f67d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7b57a9572a285dfdc13afb0a520de67e231a1c0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357798"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463915"
 ---
 # <a name="updating-data-in-a-data-source"></a>Actualizar datos de un origen de datos
-Las instrucciones SQL que modifican datos (por ejemplo INSERT, UPDATE o DELETE) no devuelven ninguna fila. De la misma forma, muchos procedimientos almacenados realizan alguna acción pero no devuelven filas. Para ejecutar comandos que no devuelven filas, debe crear un **comando** objeto con el comando SQL adecuado y un **conexión**, los necesarios incluidos **parámetros**. Ejecute el comando con el **ExecuteNonQuery** método de la **comando** objeto.  
+Las instrucciones SQL que modifican datos (por ejemplo INSERT, UPDATE o DELETE) no devuelven ninguna fila. De la misma forma, muchos procedimientos almacenados realizan alguna acción pero no devuelven filas. Para ejecutar comandos que no devuelven filas, crear un **comando** objeto con el comando SQL adecuado y un **conexión**, las que se requiere incluidas **parámetros**. Ejecute el comando con el **ExecuteNonQuery** método de la **comando** objeto.  
   
- El **ExecuteNonQuery** método devuelve un entero que representa el número de filas afectadas por la instrucción o procedimiento almacenado que se ejecutó. Si se ejecutan varias instrucciones, el valor devuelto es la suma de los registros afectados por todas las instrucciones ejecutadas.  
+ El **ExecuteNonQuery** método devuelve un entero que representa el número de filas afectadas por la instrucción o procedimiento almacenado que se ha ejecutado. Si se ejecutan varias instrucciones, el valor devuelto es la suma de los registros afectados por todas las instrucciones ejecutadas.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se ejecuta una instrucción INSERT para insertar un registro en una base de datos mediante **ExecuteNonQuery**.  
@@ -95,4 +95,4 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
  [Uso de comandos para modificar datos](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  [Actualizar orígenes de datos con objetos DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

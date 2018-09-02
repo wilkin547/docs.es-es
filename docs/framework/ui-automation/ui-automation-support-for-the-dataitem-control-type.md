@@ -9,16 +9,16 @@ ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: bef3393cda31e546afdb7b720cb08a2d45cb45bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e3008b710a6fcaba476fd8c425beaa8eb11f9e52
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409483"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470082"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Compatibilidad de UI Automation para el tipo de control DataItem
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  En este tema se ofrece información sobre la compatibilidad de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] con el tipo de control DataItem. En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , un tipo de control es un conjunto de condiciones que debe cumplir un control para poder usar la propiedad <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Entre las condiciones se incluyen instrucciones específicas para la estructura de árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , valores de propiedad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y patrones de control.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "33409483"
   
 |Árbol[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Vista de control|Árbol[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Vista de contenido|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|-Grupo "Contoso" (tabla, cuadrícula)<br />-DataItem "cuentas Receivable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts Receivable.doc"<br />-Editar "Name" (TableItem, GridItem, valor "Accounts Receivable.doc")<br />-Editar "Fecha de modificación" (TableItem, GridItem, valor "25/8/2006 3:29 PM")<br />-Editar "Tamaño" (GridItem, TableItem, valor "11.0 KB)<br />-DataItem "cuentas Payable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   ...|-Grupo "Contoso" (tabla, cuadrícula)<br />-DataItem "cuentas Receivable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts Receivable.doc"<br />-Editar "Name" (TableItem, GridItem, valor "Accounts Receivable.doc")<br />-Editar "Fecha de modificación" (TableItem, GridItem, valor "25/8/2006 3:29 PM")<br />-Editar "Tamaño" (GridItem, TableItem, valor "11.0 KB)<br />-DataItem "cuentas Payable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   …|  
+|-Grupo "Contoso" (tabla, cuadrícula)<br />-DataItem "cuentas Receivable.doc" (Invoke TableItem, GridItem, SelectionItem,)<br />-Image "Accounts Receivable.doc"<br />-Modificar "Name" (TableItem, GridItem, el valor "Accounts Receivable.doc")<br />-Modificar "Fecha de modificación" (valor TableItem, GridItem, "25/8/2006 3:29 PM")<br />-Modificar "Size" (valor GridItem, TableItem, "11.0 KB)<br />-DataItem "cuentas Payable.doc" (Invoke TableItem, GridItem, SelectionItem,)<br />-   ...|-Grupo "Contoso" (tabla, cuadrícula)<br />-DataItem "cuentas Receivable.doc" (Invoke TableItem, GridItem, SelectionItem,)<br />-Image "Accounts Receivable.doc"<br />-Modificar "Name" (TableItem, GridItem, el valor "Accounts Receivable.doc")<br />-Modificar "Fecha de modificación" (valor TableItem, GridItem, "25/8/2006 3:29 PM")<br />-Modificar "Size" (valor GridItem, TableItem, "11.0 KB)<br />-DataItem "cuentas Payable.doc" (Invoke TableItem, GridItem, SelectionItem,)<br />-   …|  
   
  Si una cuadrícula representa una lista de elementos seleccionables, los elementos de la interfaz de usuario correspondientes se pueden exponer con el tipo de control ListItem en lugar del tipo de control DataItem. En el ejemplo anterior, los elementos DataItem ("Accounts Receivable.doc" y "Accounts Payable.doc") de Group ("Contoso") se pueden mejorar si se exponen como tipos de control ListItem, porque ese tipo ya admite el patrón de control SelectionItem.  
   

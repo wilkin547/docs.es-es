@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
-ms.openlocfilehash: 6cb7cfe022b2b4d23f47a47ec70f08d5c0ccbc7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 879d31c5a572689d84af6b2e46f3d33e1a8841c8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591413"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472090"
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm (componente, Visual Basic)
-El <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente de Visual Basic permite imprimir una imagen de un formulario Windows Forms en tiempo de ejecución. Su comportamiento reemplaza el del método `PrintForm` en versiones anteriores de Visual Basic.  
+El <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente de Visual Basic permite imprimir una imagen de Windows Forms en tiempo de ejecución. Su comportamiento reemplaza el del método `PrintForm` en versiones anteriores de Visual Basic.  
   
- Los controles PowerPack ya no están incluidos en Visual Studio, pero puede descargarlos desde el [Centro de descarga](http://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Los controles PowerPack ya no están incluidos en Visual Studio, pero puede descargarlos desde el [centro de descarga de](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ## <a name="printform-component-overview"></a>Información general del componente PrintForm  
  Un escenario común de Windows Forms consiste en crear un formulario formateado para que se parezca a un formulario en papel o un informe y, después, imprimir una imagen de dicho formulario. Aunque puede usar un componente <xref:System.Drawing.Printing.PrintDocument> para hacerlo, se necesitaría una gran cantidad de código. El componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> permite imprimir una imagen de un formulario en una impresora, en una ventana de vista previa de impresión o en un archivo sin usar un componente <xref:System.Drawing.Printing.PrintDocument> .  

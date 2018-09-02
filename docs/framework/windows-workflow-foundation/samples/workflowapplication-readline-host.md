@@ -2,12 +2,12 @@
 title: Host RedLIne WorkflowApplication
 ms.date: 03/30/2017
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4388ff0285de58b0dc6f86af93aad84b2894373f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518543"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470858"
 ---
 # <a name="workflowapplication-readline-host"></a>Host RedLIne WorkflowApplication
 Este ejemplo es un host ReadLine genérico. Puede cargar y ejecutar cualquier flujo de trabajo mediante la actividad `ReadLine` incluida (u otras actividades similares que reciban datos de marcadores reanudados con cadenas). El resultado de la actividad `WriteLine` o cualquier escritura que se realice en la extensión <xref:System.Activities.Statements.WriteLine.TextWriter%2A> se dirige a la ventana del host. Cuando una instancia está inactiva, los marcadores disponibles para esa instancia aparecen en un cuadro combinado. Seleccione un marcador, escriba algún texto o presione el botón de reanudación del marcador para continuar con la ejecución del flujo de trabajo. También puede cancelar, anular o finalizar un flujo de trabajo seleccionado. La persistencia está activada de forma predeterminada; puede cerrar el host y volver a iniciarlo, y la lista de instancias se rellena con las instancias almacenadas en la base de datos. El seguimiento se utiliza para generar eventos de nivel de <xref:System.Activities.WorkflowApplication> en el host con la opción de agregar seguimiento detallado en el nivel de actividad.  
@@ -33,7 +33,7 @@ Este ejemplo es un host ReadLine genérico. Puede cargar y ejecutar cualquier fl
   
 6.  Cuando se esté ejecutando, puede optar por activar o desactivar la persistencia. Además, dispone de la opción de activar o desactivar el seguimiento de actividad detallado.  
   
-7.  Presione el botón de puntos suspensivos junto a la **ejecutar** botón para examinar un flujo de trabajo definido en un archivo XAML  
+7.  Presione el botón de puntos suspensivos junto a la **ejecutar** botón para buscar un flujo de trabajo definido en un archivo XAML  
   
      En la carpeta SampleWorkflows se pueden encontrar dos ejemplos. El ejemplo parallel1.xaml pasa a estado inactivo.  
   
@@ -43,7 +43,7 @@ Este ejemplo es un host ReadLine genérico. Puede cargar y ejecutar cualquier fl
   
 10. Las opciones en este punto son reanudar un marcador, cancelar, interrumpir o finalizar el flujo de trabajo. También puede cerrar el host y reiniciarlo. Si la persistencia permanece activada, las instancias se descargan cuando se apaga y se recargan cuando se inicia.  
   
-     Para reanudar un marcador, seleccione el marcador deseado, escriba un valor en el cuadro de texto situado junto al cuadro combinado y presione **reanudar marcador**.  
+     Para reanudar un marcador, seleccione el marcador deseado, escriba un valor en el cuadro de texto junto al cuadro combinado y presione **reanudar marcador**.  
   
 #### <a name="to-remove-the-instance-store-database"></a>Para quitar la base de datos del almacén de instancias  
   
@@ -56,6 +56,6 @@ Este ejemplo es un host ReadLine genérico. Puede cargar y ejecutar cualquier fl
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

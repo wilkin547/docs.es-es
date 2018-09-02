@@ -11,18 +11,18 @@ ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ae85b1184c6ed58d68a401870e509919ed2ad345
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85cd0e4910fdef28721cfb4be341b74fcf1f3c1e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407032"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466244"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>Temas de procedimientos acerca del modelo de texto de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Esta sección incluye temas que explican cómo usar el patrón de texto de automatización de la interfaz de usuario.  
+ Esta sección incluye temas que explican cómo usar el patrón de texto de UI Automation.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Adición de contenido a un cuadro de texto mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  

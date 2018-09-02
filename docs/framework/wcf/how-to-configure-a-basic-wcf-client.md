@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-ms.openlocfilehash: c03bf37c737a19b0a90f12e7ad5db78b75323f5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2866cbd5862bf55286fc771823488cf913863de2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499280"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466576"
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Configuración de un cliente básico de Windows Communication Foundation
-Esta es la quinta de las seis tareas necesarias para crear una aplicación básica de Windows Communication Foundation (WCF). Para obtener información general de las seis de las tareas, consulte la [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md) tema.  
+Esta es la quinta de las seis tareas necesarias para crear una aplicación básica de Windows Communication Foundation (WCF). Para obtener información general de las seis tareas, vea el tema [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md).  
   
- Este tema describe el archivo de configuración de cliente que se ha generado mediante la funcionalidad Agregar referencia de servicio de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] o [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). La configuración del cliente consiste en especificar el punto de conexión que utiliza el cliente para obtener acceso al servicio. Un extremo tiene una dirección, un enlace y un contrato y cada uno de estos elementos debe especificarse en el proceso de configuración del cliente.  
+ Este tema describe el archivo de configuración de cliente que se ha generado mediante la funcionalidad Agregar referencia de servicio de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] o [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). La configuración del cliente consiste en especificar el punto de conexión que utiliza el cliente para obtener acceso al servicio. Un extremo tiene una dirección, un enlace y un contrato y cada uno de estos elementos debe especificarse en el proceso de configuración del cliente.  
   
 ### <a name="to-configure-a-windows-communication-foundation-client"></a>Configuración de un cliente de Windows Communication Foundation  
   
-1.  Abra el archivo de configuración generado (App.config) del proyecto GettingStartedClient. El siguiente ejemplo es una vista del archivo de configuración generado. En el [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sección, busque la [ \<extremo >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+1.  Abra el archivo de configuración generado (App.config) del proyecto GettingStartedClient. El siguiente ejemplo es una vista del archivo de configuración generado. En el [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sección, busque la [ \<punto de conexión >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -48,9 +48,9 @@ Esta es la quinta de las seis tareas necesarias para crear una aplicación bási
     </configuration>   
     ```  
   
-     Este ejemplo configura el punto de conexión que el cliente utiliza para tener acceso al servicio que se encuentra en la siguiente dirección: http://localhost:8000/ServiceModelSamples/Service/CalculatorService  
+     En este ejemplo configura el punto de conexión que el cliente utiliza para tener acceso al servicio que se encuentra en la siguiente dirección: http://localhost:8000/ServiceModelSamples/Service/CalculatorService  
   
-     El elemento de extremo especifica que el contrato de servicio de `ServiceReference1.ICalculator` se usa para la comunicación entre el cliente y el servicio de WCF. Se configura el canal WCF con los proporcionados por el sistema <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>. Este contrato se generó mediante Agregar referencia de servicio en Visual Studio. Es básicamente una copia del contrato que se definió en el proyecto GettingStartedLib. El <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> enlace especifica HTTP como el transporte, seguridad interoperable y otros detalles de configuración.  
+     El elemento de extremo especifica que el contrato de servicio de `ServiceReference1.ICalculator` se usa para la comunicación entre el cliente y el servicio de WCF. El canal de WCF se configura con el <xref:System.ServiceModel.WSHttpBinding> proporcionado por el sistema. Este contrato se generó mediante Agregar referencia de servicio en Visual Studio. Es básicamente una copia del contrato que se definió en el proyecto GettingStartedLib. El enlace <xref:System.ServiceModel.WSHttpBinding> especifica HTTP como el transporte, la seguridad interoperable y otros detalles de configuración.  
   
 2.  Para obtener más información sobre cómo usar el cliente generado con esta configuración, consulte [Cómo: usar un cliente](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).  
   

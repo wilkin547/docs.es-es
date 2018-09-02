@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 373a7f977a9dad59cd40fd29fdd39c8fc6996ad0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1466591a06e9e7ca61f94683e037566f8d0cb31a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529307"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462342"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Tutorial: Organizar el contenido de WPF en Windows Forms en tiempo de diseño
 Este tutorial muestra cómo usar las características de diseño de Windows Forms, como la delimitación y las líneas de ajuste, para organizar los controles de Windows Presentation Foundation (WPF).  
@@ -32,7 +32,7 @@ Este tutorial muestra cómo usar las características de diseño de Windows Form
 -   Delimitar y acoplar controles WPF.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Necesita los componentes siguientes para completar este tutorial:  
@@ -47,18 +47,18 @@ Este tutorial muestra cómo usar las características de diseño de Windows Form
   
 #### <a name="to-create-the-project"></a>Para crear el proyecto  
   
--   Crear un nuevo proyecto de aplicación de Windows Forms en Visual Basic o Visual C# llamado `ArrangeElementHost`.  
+-   Cree un nuevo proyecto de aplicación de Windows Forms en Visual Basic o Visual C# llamado `ArrangeElementHost`.  
   
 ## <a name="creating-the-wpf-control"></a>Crear el control WPF  
  Después de agregar un control WPF al proyecto, puede organizarlo en el formulario.  
   
 #### <a name="to-create-wpf-controls"></a>Para crear controles WPF  
   
-1.  Agregue un nuevo <xref:System.Windows.Controls.UserControl> WPF al proyecto. Use el nombre predeterminado del tipo de control, `UserControl1.xaml`. Para obtener más información, consulte [Tutorial: crear nuevo WPF contenido en Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Agregue un nuevo <xref:System.Windows.Controls.UserControl> WPF al proyecto. Use el nombre predeterminado del tipo de control, `UserControl1.xaml`. Para obtener más información, consulte [Tutorial: crear nuevo contenido de WPF en Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
-2.  En la vista Diseño, asegúrese de que `UserControl1` está seleccionado. Para obtener más información, consulte [Cómo: seleccionar y mover elementos en la superficie de diseño](http://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
+2.  En la vista Diseño, asegúrese de que `UserControl1` está seleccionado. Para obtener más información, consulte [Cómo: seleccionar y mover elementos en la superficie de diseño](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
   
-3.  En el **propiedades** ventana, establezca el valor de la <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> propiedades para `200`.  
+3.  En el **propiedades** ventana, establezca el valor de la <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> propiedades a `200`.  
   
 4.  Establezca el valor de la propiedad <xref:System.Windows.Controls.Control.Background%2A> en `Blue`.  
   
@@ -81,20 +81,20 @@ Este tutorial muestra cómo usar las características de diseño de Windows Form
   
      La instancia de `UserControl1` se hospeda en un nuevo control <xref:System.Windows.Forms.Integration.ElementHost> llamado `elementHost1`.  
   
-6.  En el **cuadro de herramientas**, haga doble clic en `UserControl1` para crear otra instancia de la segunda celda de la <xref:System.Windows.Forms.TableLayoutPanel> control.  
+6.  En el **cuadro de herramientas**, haga doble clic en `UserControl1` para crear otra instancia en la segunda celda de la <xref:System.Windows.Forms.TableLayoutPanel> control.  
   
-7.  En el **esquema del documento** ventana, seleccione `tableLayoutPanel1`. Para obtener más información, consulte [ventana Esquema del documento](http://msdn.microsoft.com/library/9054f2bc-f6f8-4242-9fe0-be71089b12f8).  
+7.  En el **esquema del documento** ventana, seleccione `tableLayoutPanel1`. Para obtener más información, consulte [ventana Esquema del documento](https://msdn.microsoft.com/library/9054f2bc-f6f8-4242-9fe0-be71089b12f8).  
   
 8.  En el **propiedades** ventana, establezca el valor de la <xref:System.Windows.Forms.Control.Padding%2A> propiedad `10, 10, 10, 10`.  
   
      Ambos controles <xref:System.Windows.Forms.Integration.ElementHost> cambian de tamaño para ajustarse al nuevo diseño.  
   
 ## <a name="using-snaplines-to-align-wpf-controls"></a>Usar líneas de ajuste para alinear controles WPF  
- Las líneas de ajuste permiten alinear fácilmente los controles en un formulario. Puede usar líneas de ajuste para alinear también controles WPF. Para obtener más información, consulte [Tutorial: organizar controles en Windows Forms usando las guías de alineación](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+ Las líneas de ajuste permiten alinear fácilmente los controles en un formulario. Puede usar líneas de ajuste para alinear también controles WPF. Para obtener más información, consulte [Tutorial: organizar controles en Windows Forms utilizando las guías de alineación](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
 #### <a name="to-use-snaplines-to-align-wpf-controls"></a>Para usar líneas de ajuste para alinear controles WPF  
   
-1.  Desde el **cuadro de herramientas**, arrastre una instancia de `UserControl1` hasta el formulario y lo coloca en el espacio debajo el <xref:System.Windows.Forms.TableLayoutPanel> control.  
+1.  Desde el **cuadro de herramientas**, arrastre una instancia de `UserControl1` hasta el formulario y colóquelo en el espacio debajo el <xref:System.Windows.Forms.TableLayoutPanel> control.  
   
      La instancia de `UserControl1` se hospeda en un nuevo control <xref:System.Windows.Forms.Integration.ElementHost> llamado `elementHost3`.  
   
@@ -155,4 +155,4 @@ Este tutorial muestra cómo usar las características de diseño de Windows Form
  [Tutorial: Organizar controles en formularios Windows Forms mediante líneas de ajuste](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Migración e interoperabilidad](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [Utilizar controles WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [WPF Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+ [Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

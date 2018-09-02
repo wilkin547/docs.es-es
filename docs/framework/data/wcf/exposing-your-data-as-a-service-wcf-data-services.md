@@ -6,28 +6,30 @@ helpviewer_keywords:
 - getting started, WCF Data Services
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-ms.openlocfilehash: 1ab349125419a0589d68ccb821009f8227c942e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba316aeda0a0a7e80af8e37a6a62e88652b9635b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363569"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463057"
 ---
-# <a name="exposing-your-data-as-a-service-wcf-data-services"></a>Exponer los datos como servicio (Data Services de WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] se integra con Visual Studio que le permite definir con más facilidad servicios para exponer los datos como [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuentes de distribución. Crear un servicio de datos que expone un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente implica los siguientes pasos básicos:  
-  
-1.  **Definir** **el modelo de datos**. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] admite de forma nativa los modelos de datos que se basan en el [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Para obtener más información, consulte [Cómo: crear un servicio de datos mediante un origen de datos de ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).  
-  
-     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] también admite modelos de datos que están basados en los objetos de Common Language Runtime (CLR) que devuelven una instancia de la interfaz <xref:System.Linq.IQueryable%601>. Esto permite implementar servicios de datos que están basados en listas, matrices y colecciones en .NET Framework. Para habilitar las operaciones de creación, actualización y eliminación sobre estas estructuras de datos, también debe implementar la interfaz <xref:System.Data.Services.IUpdatable>. Para obtener más información, consulte [Cómo: crear un servicio de datos mediante el proveedor de reflexión](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
-  
-     Para escenarios más avanzados, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye un conjunto de proveedores que le permiten definir un modelo de datos basado en tipos de datos en tiempo de ejecución. Para obtener más información, consulte [proveedores de servicios de datos personalizados](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).  
-  
-2.  **Crear el servicio de datos.** El servicio de datos más básico expone una clase que hereda de la clase <xref:System.Data.Services.DataService%601> , con un tipo `T` que es el nombre completo del espacio de nombres del contenedor de la entidad. Para obtener más información, consulta [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md).  
-  
-3.  **Configurar el servicio de datos.** De forma predeterminada, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] deshabilita el acceso a los recursos que expone un contenedor de entidades. La interfaz <xref:System.Data.Services.DataServiceConfiguration> le permite configurar el acceso a los recursos y las operaciones del servicio, especificar la versión admitida de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], así como definir otros comportamientos de todo el servicio, como los comportamientos de las operaciones por lotes o el número máximo de entidades que pueden devolverse en una única respuesta. Para obtener más información, consulte [configurar el servicio de datos](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
-  
- Para obtener un ejemplo de cómo crear un servicio de datos simple que se basa en la base de datos de ejemplo Northwind, vea [inicio rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Introducción](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
- [Información general](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
+# <a name="expose-your-data-as-a-service-wcf-data-services"></a>Exponer los datos como un servicio (WCF Data Services)
+
+WCF Data Services se integra con Visual Studio para permitirle definir con más facilidad servicios para exponer los datos como [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuentes de distribución. Creación de un servicio de datos que expone una fuente de OData implica los siguientes pasos básicos:
+
+1.  **Definir el modelo de datos.** WCF Data Services admite de forma nativa modelos de datos que se basan en el [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Para obtener más información, consulte [Cómo: crear un servicio de datos mediante un origen de datos de ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).
+
+     WCF Data Services también admite modelos de datos que se basan en objetos de common language runtime (CLR) que devuelven una instancia de la <xref:System.Linq.IQueryable%601> interfaz. Esto permite implementar servicios de datos que están basados en listas, matrices y colecciones en .NET Framework. Para habilitar las operaciones de creación, actualización y eliminación sobre estas estructuras de datos, también debe implementar la interfaz <xref:System.Data.Services.IUpdatable>. Para obtener más información, consulte [Cómo: crear un servicio de datos mediante el proveedor de reflexión](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).
+
+     Para escenarios más avanzados, WCF Data Services incluye un conjunto de proveedores que le permiten definir un modelo de datos basado en tipos de datos en tiempo de ejecución. Para obtener más información, consulte [proveedores de servicios de datos personalizados](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).
+
+2.  **Crear el servicio de datos.** El servicio de datos más básico expone una clase que hereda de la clase <xref:System.Data.Services.DataService%601> , con un tipo `T` que es el nombre completo del espacio de nombres del contenedor de la entidad. Para obtener más información, consulta [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md).
+
+3.  **Configurar el servicio de datos.** De forma predeterminada, WCF Data Services deshabilita el acceso a los recursos expuestos por un contenedor de entidades. El <xref:System.Data.Services.DataServiceConfiguration> interfaz le permite configurar el acceso a los recursos y operaciones de servicio, especifique la versión compatible de OData así como definir otros comportamientos de todo el servicio, como el procesamiento por lotes comportamientos o el número máximo de entidades que se pueden devolver en una única respuesta. Para obtener más información, consulte [configurando el servicio de datos](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
+
+Para obtener un ejemplo de cómo crear un servicio de datos simples que se basa en la base de datos de ejemplo Northwind, vea [Quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
+
+## <a name="see-also"></a>Vea también
+
+- [Introducción](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [Información general](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: d9dcda6b93fbc036818ad2ad43da4bfac95f6833
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c975913ab5df9c2e7f792ed73f8c5d20bdca1c5a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758169"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474043"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>Modificar datos con procedimientos almacenados
 Los procedimientos almacenados pueden aceptar datos como parámetros de entrada y pueden devolver datos como parámetros de salida, conjuntos de resultados o valores de retorno. En el ejemplo siguiente se muestra cómo ADO.NET envía y recibe parámetros de entrada, parámetros de salida y valores de retorno. El ejemplo inserta un nuevo registro en una tabla cuya columna de clave principal es una columna de identidad en una base de datos de SQL Server.  
@@ -19,7 +19,7 @@ Los procedimientos almacenados pueden aceptar datos como parámetros de entrada 
 >  Si está utilizando procedimientos almacenados de SQL Server para editar o eliminar datos con <xref:System.Data.SqlClient.SqlDataAdapter>, asegúrese de que no utiliza SET NOCOUNT ON en la definición del procedimiento almacenado. Esto hace que el recuento de filas afectadas vuelva a cero, lo que `DataAdapter` interpreta como un conflicto de simultaneidad. En este caso, se iniciará una <xref:System.Data.DBConcurrencyException>.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo utiliza el siguiente procedimiento almacenado para insertar una nueva categoría en la **Northwind** **categorías** tabla. El procedimiento almacenado toma el valor el **CategoryName** función de columna como un parámetro de entrada y se utiliza el SCOPE_IDENTITY () para recuperar el nuevo valor del campo de identidad, **CategoryID**y devuélvalo en un parámetro de salida. La instrucción RETURN utiliza la @@ROWCOUNT función para devolver el número de filas insertadas.  
+ El ejemplo usa el siguiente procedimiento almacenado para insertar una nueva categoría en la **Northwind** **categorías** tabla. El procedimiento almacenado toma el valor el **CategoryName** columna como un parámetro de entrada y usa el SCOPE_IDENTITY () la función para recuperar el nuevo valor del campo de identidad, **CategoryID**y devolverlo en un parámetro de salida. La instrucción RETURN utiliza el @@ROWCOUNT función para devolver el número de filas insertadas.  
   
 ```  
 CREATE PROCEDURE dbo.InsertCategory  
@@ -43,4 +43,4 @@ RETURN @@ROWCOUNT
  [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Ejecución de un comando](../../../../docs/framework/data/adonet/executing-a-command.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

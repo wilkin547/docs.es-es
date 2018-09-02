@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 368401d91aa2a83110631d583660d6ccebf8d4fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 664eb62997123ea248b0b69700b86bf794646d4b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491512"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465867"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Cómo obtener un certificado (WCF)
-Para usar cualquiera de Windows Communication Foundation (WCF) características de los usan certificados X.509, obtener primero los certificados.  
+Para usar cualquiera de Windows Communication Foundation (WCF) características de los usan certificados X.509, ha de obtener primero los certificados.  
   
 ### <a name="to-obtain-an-x509-certificate"></a>Para obtener un certificado X.509.  
   
@@ -20,7 +20,7 @@ Para usar cualquiera de Windows Communication Foundation (WCF) características 
   
     -   Adquiera un certificado de una entidad emisora de certificados, como VeriSign, Inc.  
   
-    -   Configure su propio servicio de certificados y haga que una entidad de certificación los firme. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Windows 2000 Server, Windows 2000 Server Datacenter y Windows 2000 Datacenter Server incluyen servicios de servidor de certificados que admiten la infraestructura de clave pública (PKI). En Windows Server 2008, use la [servicios de certificados de Active Directory](http://go.microsoft.com/fwlink/?LinkID=153483) para administrar una entidad de certificación.  
+    -   Configure su propio servicio de certificados y haga que una entidad de certificación los firme. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Windows 2000 Server, Windows 2000 Server Datacenter y Windows 2000 Datacenter Server incluyen servicios de servidor de certificados que admiten la infraestructura de clave pública (PKI). En Windows Server 2008, use la [Active Directory Certificate Services](https://go.microsoft.com/fwlink/?LinkID=153483) rol para administrar una entidad de certificación.  
   
     -   Configure su propio servicio de certificados y asegúrese de que los certificados no estén firmados.  
   

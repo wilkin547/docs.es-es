@@ -2,15 +2,15 @@
 title: Elemento &lt;message&gt; de &lt;ws2007FederationHttpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: 565a0c6027e94954c81c11f96fbd5473dbcd4fdf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3f0dbc3128af812c7fd09eed5acd90ab43ec8351
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750822"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474244"
 ---
 # <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>Elemento &lt;message&gt; de &lt;ws2007FederationHttpBinding&gt;
-Define los valores para la seguridad de nivel de mensaje para la [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elemento.  
+Define la configuración de seguridad de nivel de mensaje para el [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elemento.  
   
  \<system.ServiceModel>  
 \<enlaces >  
@@ -135,5 +135,5 @@ Define los valores para la seguridad de nivel de mensaje para la [ \<ws2007Feder
  `System.ServiceModel.Configuration.FederatedMessageSecurityElement` [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 80d852dd08e935d4c06e9b6d2e52b0a075849ef5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807845"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469835"
 ---
 # <a name="configuring-message-logging"></a>Configuración del registro de mensajes
 En este tema se describe cómo puede configurar el registro de mensajes para distintos escenarios.  
@@ -22,14 +22,14 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
 ```xml  
 <system.diagnostics>  
   <sources>  
-      <source name="System.ServiceModel.MessageLogging">  
-        <listeners>  
-                 <add name="messages"  
-                 type="System.Diagnostics.XmlWriterTraceListener"  
-                 initializeData="c:\logs\messages.svclog" />  
-          </listeners>  
-      </source>  
-    </sources>  
+    <source name="System.ServiceModel.MessageLogging">  
+      <listeners>  
+         <add name="messages"  
+              type="System.Diagnostics.XmlWriterTraceListener"  
+              initializeData="c:\logs\messages.svclog" />  
+        </listeners>  
+    </source>  
+  </sources>  
 </system.diagnostics>  
   
 <system.serviceModel>  
@@ -60,7 +60,7 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- Si desea deshabilitar el origen de seguimiento, debería utilizar en su lugar los atributos `logMessagesAtServiceLevel`, `logMalformedMessages` y `logMessagesAtTransportLevel` del elemento `messageLogging`. Debería establecer todos estos atributos en `false`. Esta acción puede realizarse utilizando el archivo de configuración en el ejemplo de código anterior, mediante la interfaz del usuario del editor de configuración, o mediante WMI. Para obtener más información acerca de la herramienta Editor de configuración, consulte [herramienta Editor de configuración (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Para obtener más información acerca de WMI, consulte [utilizando Windows Management Instrumentation para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Si desea deshabilitar el origen de seguimiento, debería utilizar en su lugar los atributos `logMessagesAtServiceLevel`, `logMalformedMessages` y `logMessagesAtTransportLevel` del elemento `messageLogging`. Debería establecer todos estos atributos en `false`. Esta acción puede realizarse utilizando el archivo de configuración en el ejemplo de código anterior, mediante la interfaz del usuario del editor de configuración, o mediante WMI. Para obtener más información acerca de la herramienta Editor de configuración, consulte [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Para obtener más información acerca de WMI, consulte [utilizando Instrumental de administración de Windows para el diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
 ## <a name="logging-levels-and-options"></a>Registro de niveles y opciones  
  En el caso de los mensajes entrantes, el registro se produce inmediatamente después de que se haya formado el mensaje, inmediatamente antes de que el mensaje obtenga el código de usuario en el nivel de servicio y cuando se detecten los mensajes incorrectos.  
@@ -78,7 +78,7 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
  Los mensajes registrados en este nivel están listos para ser codificados o descodificados para el transporte o para después de éste en tránsito. Si se han definido los filtros, solo se registrarán los mensajes que coincidan con los filtros. De lo contrario, se registrarán todos los mensajes en el nivel de transporte. Todos los mensajes de la infraestructura se registran en este nivel, incluidos los mensajes de la mensajería de confianza. En los mensajes transmitidos, solo se registran los encabezados. Además, los mensajes seguros se registran como cifrados en este nivel, excepto si se utiliza un transporte seguro como HTTPS.  
   
 ### <a name="malformed-level"></a>Nivel incorrecto  
- Mensajes incorrectos son mensajes que son rechazados por la pila de WCF en ninguna fase de procesamiento. Los mensajes con formato incorrecto se registran tal cual: cifrados si lo están, con XML inadecuado, etc. `maxSizeOfMessageToLog` definió el tamaño del mensaje que se debía registrar como CDATA. De forma predeterminada, `maxSizeOfMessageToLog` es igual a 256 K. Para obtener más información acerca de este atributo, vea la sección otras opciones.  
+ Los mensajes incorrectos son mensajes que son rechazados por la pila de WCF en cualquier etapa de procesamiento. Los mensajes con formato incorrecto se registran tal cual: cifrados si lo están, con XML inadecuado, etc. `maxSizeOfMessageToLog` definió el tamaño del mensaje que se debía registrar como CDATA. De forma predeterminada, `maxSizeOfMessageToLog` es igual a 256 K. Para obtener más información acerca de este atributo, vea la sección otras opciones.  
   
 ### <a name="other-options"></a>Otras opciones  
  Además de los niveles del registro, el usuario puede especificar las opciones siguientes:  
@@ -94,7 +94,7 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
   
  Si ningún agente de escucha de seguimiento se define en el archivo de configuración, no se generará ninguna salida de registro sin tener en cuenta el nivel de registro especificado.  
   
- Las opciones de registro de mensajes, como los atributos descritos en esta sección, se pueden cambiar en el tiempo de ejecución mediante el Instrumental de administración de Windows (WMI). Esto puede hacerse mediante el acceso a la [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) instancia, que expone las siguientes propiedades booleanas: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, y `LogMalformedMessages`. Por consiguiente, si configura un agente de escucha de traza para el registro de mensajes, pero define estas opciones en `false`, en la configuración, puede cambiarlas después a `true`, una vez se esté ejecutando la aplicación. Esto habilita en efecto el registro de mensajes en el tiempo de ejecución. De igual forma, si habilita el registro de mensajes en su archivo de configuración, puede deshabilitarlo en el tiempo de ejecución mediante WMI. Para obtener más información, consulte [utilizando Windows Management Instrumentation para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Las opciones de registro de mensajes, como los atributos descritos en esta sección, se pueden cambiar en el tiempo de ejecución mediante el Instrumental de administración de Windows (WMI). Esto puede hacerse mediante el acceso a la [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) instancia, que expone estas propiedades booleanas: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, y `LogMalformedMessages`. Por consiguiente, si configura un agente de escucha de traza para el registro de mensajes, pero define estas opciones en `false`, en la configuración, puede cambiarlas después a `true`, una vez se esté ejecutando la aplicación. Esto habilita en efecto el registro de mensajes en el tiempo de ejecución. De igual forma, si habilita el registro de mensajes en su archivo de configuración, puede deshabilitarlo en el tiempo de ejecución mediante WMI. Para obtener más información, consulte [utilizando Instrumental de administración de Windows para el diagnóstico](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  El campo `source` de un registro de mensajes especifica en qué contexto se registra el mensaje: al enviar o recibir un mensaje de solicitud, para una solicitud-respuesta o una solicitud unidireccional, en el modelo de servicio o capa de transporte, o en el caso de un mensaje con formato incorrecto.  
   
@@ -164,6 +164,6 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
  Debería tener en cuenta que el atributo `type` debería estar establecido en un nombre de ensamblado certificado del tipo.  
   
 ## <a name="see-also"></a>Vea también  
- [\<registro de mensajes >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
+ [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
  [Registro de mensajes](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
  [Configuración recomendada para el seguimiento y el registro de mensajes](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
