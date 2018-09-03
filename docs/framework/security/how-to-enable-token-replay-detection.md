@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: b9c187998b4af41e1a56ed9a64625da7e4f95d5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd5adf39c37fce92d4caf1d85e2a6a12e9e6b59b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408065"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486521"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Cómo: habilitar la detección de reproducción de tokens
 ## <a name="applies-to"></a>Se aplica a  
@@ -19,7 +19,7 @@ ms.locfileid: "33408065"
 -   Formularios Web Forms ASP.NET®  
   
 ## <a name="summary"></a>Resumen  
- En este tema de procedimientos se detallan los procedimientos necesarios para habilitar la detección de reproducción de tokens en una aplicación ASP.NET que usa WIF. También se proporcionan instrucciones para probar la aplicación a fin de comprobar que esté habilitada la detección de reproducción de tokens. Esta sección de procedimientos no tiene instrucciones detalladas para crear un servicio de token de seguridad (STS) y en su lugar se utiliza el STS de desarrollo que se incluye con la extensión Identity and Access Tool. El STS de desarrollo no realiza la autenticación real y está pensado únicamente para pruebas. Para completar este procedimiento, tendrá que instalar la extensión Identity and Access Tool. Se puede descargar en la siguiente ubicación: [Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849).  
+ En este tema de procedimientos se detallan los procedimientos necesarios para habilitar la detección de reproducción de tokens en una aplicación ASP.NET que usa WIF. También se proporcionan instrucciones para probar la aplicación a fin de comprobar que esté habilitada la detección de reproducción de tokens. Esta sección de procedimientos no tiene instrucciones detalladas para crear un servicio de token de seguridad (STS) y en su lugar se utiliza el STS de desarrollo que se incluye con la extensión Identity and Access Tool. El STS de desarrollo no realiza la autenticación real y está pensado únicamente para pruebas. Para completar este procedimiento, tendrá que instalar la extensión Identity and Access Tool. Se puede descargar en la siguiente ubicación: [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849).  
   
 ## <a name="contents"></a>Contenido  
   

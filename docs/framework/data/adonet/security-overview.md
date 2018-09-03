@@ -1,13 +1,13 @@
 ---
-title: Overview2 de seguridad
+title: Seguridad Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 4e8d1502096dc452d21158e4fb3684298be9b982
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361944"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481736"
 ---
 # <a name="security-overview"></a>Información general sobre seguridad
 La protección de una aplicación es un proceso continuo. Es prácticamente imposible que se llegue a un momento en el que un programador pueda garantizar que una aplicación es invulnerable ante todo tipo de ataques, ya que no es posible predecir los tipos de ataques que surgirán en un futuro con las nuevas tecnologías. Al contrario, el hecho de que nadie haya detectado (o publicado) aún brechas de seguridad en un sistema, no quiere decir que éstas no existan o no puedan existir en un futuro. Por lo tanto, es necesario planificar la seguridad durante la fase de diseño del proyecto, así como la forma en que se mantendrá la seguridad durante el ciclo de vida de la aplicación.  
@@ -18,7 +18,7 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
  La implementación de la seguridad a última hora puede producir nuevos errores, ya que el software falla debido a las nuevas restricciones o hay que volver a escribirlo para albergar funcionalidad no planificada inicialmente. Cada línea de código revisado incluye la posibilidad de insertar un error nuevo. En ese sentido, debe tener en cuenta la seguridad al principio del proceso de programación de manera que se desarrolle junto con la programación de nuevas características.  
   
 ### <a name="threat-modeling"></a>Modelo de amenazas  
- No se puede proteger un sistema de ataques a menos que comprenda todos los posibles ataques a los que está expuesto. El proceso de evaluación de las amenazas de seguridad, denomina *el modelado de amenazas*, es necesario determinar la probabilidad y las ramificaciones de las infracciones de seguridad en la aplicación de ADO.NET.  
+ No se puede proteger un sistema de ataques a menos que comprenda todos los posibles ataques a los que está expuesto. El proceso de evaluación de amenazas de seguridad, llamado *modelado de amenazas*, es necesario determinar la probabilidad y las ramificaciones de las infracciones de seguridad en la aplicación de ADO.NET.  
   
  El modelo de amenazas está compuesto de tres pasos principales: comprender la visión del adversario, caracterizar la seguridad del sistema y determinar las amenazas.  
   
@@ -28,7 +28,7 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|El [modelo de amenazas](http://go.microsoft.com/fwlink/?LinkId=98353) sitio en el centro de desarrollo de seguridad de MSDN|Los recursos de esta página le ayudarán a entender el proceso de modelo de amenazas y a desarrollar modelos de amenazas que puede usar para proteger sus propias aplicaciones|  
+|El [Threat Modeling](https://go.microsoft.com/fwlink/?LinkId=98353) sitio en el Centro para desarrolladores de seguridad de MSDN|Los recursos de esta página le ayudarán a entender el proceso de modelo de amenazas y a desarrollar modelos de amenazas que puede usar para proteger sus propias aplicaciones|  
   
 ## <a name="the-principle-of-least-privilege"></a>Principio de los privilegios mínimos  
  Cuando diseñe, compile e implemente la aplicación, debe asumir que ésta será objeto de ataques. Estos ataques suelen proceder de código malintencionado que se activa con los permisos del usuario que ejecuta el código. Otros pueden provenir de código no dañino, cuyas vulnerabilidades aprovecha un atacante. Cuando se planifica la seguridad, siempre hay que asumir que se puede producir la peor situación posible.  
@@ -67,7 +67,7 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
 |Recurso|Descripción|  
 |--------------|-----------------|  
 |[Seguridad de acceso del código y ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Describe las interacciones entre la seguridad de acceso del código, la seguridad basada en funciones y los entornos de confianza parcial desde la perspectiva de una aplicación ADO.NET.|  
-|[Seguridad de acceso del código](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contiene vínculos a temas adicionales que describen CAS en .NET Framework.|  
+|[Seguridad de acceso del código](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contiene vínculos a temas adicionales que describen CAS en .NET Framework.|  
   
 ## <a name="database-security"></a>Seguridad de la base de datos  
  El principio de privilegios mínimos también se aplica al origen de los datos. A continuación se citan algunas instrucciones generales para la seguridad de base de datos:  
@@ -89,7 +89,7 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
 |Recurso|Descripción|  
 |--------------|-----------------|  
 |[Seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Proporciona una introducción general a la seguridad de SQL Server con escenarios de aplicación que orientan en la creación de aplicaciones ADO.NET seguras dirigidas a SQL Server.|  
-|[Recomendaciones para las estrategias de acceso a datos](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Proporciona recomendaciones para obtener acceso a datos y realizar operaciones de base de datos.|  
+|[Recomendaciones de estrategias de acceso a datos](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Proporciona recomendaciones para obtener acceso a datos y realizar operaciones de base de datos.|  
   
 ## <a name="security-policy-and-administration"></a>Directiva de seguridad y administración  
  La administración inadecuada de la directiva de seguridad de acceso del código (CAS) puede crear puntos débiles en la seguridad. Cuando se utiliza una aplicación, deben seguirse las técnicas de supervisión de seguridad y deben evaluarse los riesgos a medida que surgen nuevas amenazas.  
@@ -98,11 +98,11 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[NIB: Administración de directivas de seguridad](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Proporciona información sobre la creación y administración de la directiva de seguridad.|  
-|[NIB: Prácticas recomendadas de directiva de seguridad](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Proporciona vínculos a temas que describen cómo administrar la directiva de seguridad.|  
+|[NIB: Administración de directivas de seguridad](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Proporciona información sobre la creación y administración de la directiva de seguridad.|  
+|[NIB: Prácticas recomendadas de directiva de seguridad](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Proporciona vínculos a temas que describen cómo administrar la directiva de seguridad.|  
   
 ## <a name="see-also"></a>Vea también  
  [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [PAVE Seguridad del código nativo y del código de .NET Framework](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
+ [PAVE Seguridad del código nativo y del código de .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [Seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

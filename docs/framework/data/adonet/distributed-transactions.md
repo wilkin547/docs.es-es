@@ -2,23 +2,23 @@
 title: Transacciones distribuidas
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 7792a719a73ca5183d57bcecc5d346153d824570
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1f45f572b4336e52f7eee224ec80d9b7f423f991
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766093"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486332"
 ---
 # <a name="distributed-transactions"></a>Transacciones distribuidas
-Entre otras cosas, una transacción es un conjunto de tareas relacionadas que se ejecutan correctamente (confirman) o dan error (anulan) como una unidad. A *una transacción distribuida* es una transacción que afecta a varios recursos. Para que una transacción distribuida se confirme, todos los participantes deben garantizar que los cambios en los datos serán permanentes. Los cambios deben conservarse a pesar de bloqueos del sistema u otros eventos imprevistos. Si alguno de los participantes no cumple esta garantía, toda la transacción da error y se revertirán los cambios en los datos en el ámbito de la transacción.  
+Entre otras cosas, una transacción es un conjunto de tareas relacionadas que se ejecutan correctamente (confirman) o dan error (anulan) como una unidad. Un *transacción distribuida* es una transacción que afecta a varios recursos. Para que una transacción distribuida se confirme, todos los participantes deben garantizar que los cambios en los datos serán permanentes. Los cambios deben conservarse a pesar de bloqueos del sistema u otros eventos imprevistos. Si alguno de los participantes no cumple esta garantía, toda la transacción da error y se revertirán los cambios en los datos en el ámbito de la transacción.  
   
 > [!NOTE]
 >  Si intenta confirmar o revertir una transacción al iniciar un `DataReader` mientras la transacción está activa, se produce una excepción.  
   
 ## <a name="working-with-systemtransactions"></a>Trabajo con System.Transactions  
- En .NET Framework, las transacciones distribuidas se administran a través de la API del espacio de nombres <xref:System.Transactions>. Cuando hay implicados varios administradores de recursos persistentes, la API <xref:System.Transactions> delegará el control de las transacciones distribuidas en un monitor de transacciones como el Coordinador de transacciones distribuidas de Microsoft (MS DTC). Para obtener más información, consulte [aspectos básicos de la transacción](../../../../docs/framework/data/transactions/transaction-fundamentals.md).  
+ En .NET Framework, las transacciones distribuidas se administran a través de la API del espacio de nombres <xref:System.Transactions>. Cuando hay implicados varios administradores de recursos persistentes, la API <xref:System.Transactions> delegará el control de las transacciones distribuidas en un monitor de transacciones como el Coordinador de transacciones distribuidas de Microsoft (MS DTC). Para obtener más información, consulte [principios de la transacción](../../../../docs/framework/data/transactions/transaction-fundamentals.md).  
   
- ADO.NET 2.0 incorporó la compatibilidad con la inscripción en una transacción distribuida mediante el método `EnlistTransaction`, que inscribe una conexión en una instancia de <xref:System.Transactions.Transaction>. En las versiones anteriores de ADO.NET, la inscripción explícita en transacciones distribuidas se realizaba mediante el método `EnlistDistributedTransaction` de una conexión que inscribía ésta en una instancia <xref:System.EnterpriseServices.ITransaction>, en la que se permitía la compatibilidad con versiones anteriores. Para obtener más información sobre las transacciones de Enterprise Services, vea [interoperabilidad con servicios empresariales y las transacciones COM +](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
+ ADO.NET 2.0 incorporó la compatibilidad con la inscripción en una transacción distribuida mediante el método `EnlistTransaction`, que inscribe una conexión en una instancia de <xref:System.Transactions.Transaction>. En las versiones anteriores de ADO.NET, la inscripción explícita en transacciones distribuidas se realizaba mediante el método `EnlistDistributedTransaction` de una conexión que inscribía ésta en una instancia <xref:System.EnterpriseServices.ITransaction>, en la que se permitía la compatibilidad con versiones anteriores. Para obtener más información sobre las transacciones de Enterprise Services, consulte [interoperabilidad con Enterprise Services y transacciones de COM +](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
  Cuando se usa una transacción <xref:System.Transactions> con el proveedor .NET Framework para SQL Server en una base de datos de SQL Server, se usará automáticamente un objeto <xref:System.Transactions.Transaction> ligero. A continuación, la transacción se puede promover a una transacción distribuida completa si es necesario. Para obtener más información, consulte [integración de System.Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
   
@@ -33,7 +33,7 @@ Entre otras cosas, una transacción es un conjunto de tareas relacionadas que se
   
  La inscripción en transacciones distribuidas es especialmente conveniente al agrupar objetos empresariales. Si se agrupa un objeto empresarial con una conexión abierta, la inscripción automática en transacciones sólo se produce cuando se abre esa conexión. Si se realizan varias transacciones con el objeto empresarial agrupado, la conexión abierta para ese objeto no se inscribirá automáticamente en las transacciones recién iniciadas. En este caso, puede deshabilitar la inscripción automática de la conexión en la transacción e inscribir la conexión en las transacciones mediante `EnlistTransaction`.  
   
- `EnlistTransaction` toma un solo argumento de tipo <xref:System.Transactions.Transaction> que es una referencia a la transacción existente. Después de llamar al método `EnlistTransaction` de la conexión, todas las modificaciones realizadas en el origen de datos mediante la conexión se incluyen en la transacción. Si se pasa un valor nulo, se anula la inscripción de la conexión de su inscripción actual en transacciones distribuidas. Tenga en cuenta que la conexión se debe abrir antes de llamar a `EnlistTransaction`.  
+ `EnlistTransaction` toma un único argumento de tipo <xref:System.Transactions.Transaction> que es una referencia a la transacción existente. Después de llamar al método `EnlistTransaction` de la conexión, todas las modificaciones realizadas en el origen de datos mediante la conexión se incluyen en la transacción. Si se pasa un valor nulo, se anula la inscripción de la conexión de su inscripción actual en transacciones distribuidas. Tenga en cuenta que la conexión se debe abrir antes de llamar a `EnlistTransaction`.  
   
 > [!NOTE]
 >  Una vez que una conexión se inscribe explícitamente en una transacción, no se puede anular su inscripción ni inscribirse en otra transacción hasta que finaliza la primera transacción.  
@@ -50,4 +50,4 @@ Entre otras cosas, una transacción es un conjunto de tareas relacionadas que se
 ## <a name="see-also"></a>Vea también  
  [Transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [Integración de System.Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

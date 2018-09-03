@@ -2,12 +2,12 @@
 title: Retraso absoluto
 ms.date: 03/30/2017
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-ms.openlocfilehash: 3a104f6b879e9cdc899bad2201ad1ed320a38a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30719a4340b738a7462584c4dca00f6d5d90ac72
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518390"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486107"
 ---
 # <a name="absolute-delay"></a>Retraso absoluto
 El escenario principal de este ejemplo es el retraso hasta un valor de <xref:System.DateTime> especificado utilizando temporizadores duraderos en una aplicación de flujo de trabajo. Esto es diferente a utilizar la actividad <xref:System.Activities.Statements.Delay> integrada, ya que en este caso solo se permitirá el retraso para un valor de <xref:System.TimeSpan> (o número de minutos/segundos) determinado.  
@@ -39,7 +39,7 @@ El escenario principal de este ejemplo es el retraso hasta un valor de <xref:Sys
   
  En este ejemplo también se muestra cómo activar la persistencia para un elemento <xref:System.Activities.WorkflowApplication>. En este ejemplo concreto, utilizaremos temporizadores duraderos en los que los datos de flujo de trabajo se descargarán en la base de datos de persistencia durante el tiempo de inactividad mientras se espera que el temporizador expire. Esta implementación también se puede utilizar para otras acciones de persistencia. En este ejemplo, se muestra cómo configurar la cadena de conexión de persistencia con SQL Server y cómo crear el almacén de instancias para conservar los datos de las instancias de flujo de trabajo. Se proporciona lógica sobre cómo reanudar el flujo de trabajo una vez producido un evento que hace que la instancia de flujo de trabajo se pueda ejecutar.  
   
- Paso a paso a través de este ejemplo, verá el tiempo en el que el retraso integrado comienza y completa, que a su vez producirá que se envíe un mensaje de correo electrónico. A partir de ese momento, la actividad AbsoluteDelay se detendrá hasta un valor de <xref:System.DateTime> especificado (o 0 segundos si el valor de <xref:System.DateTime> ha expirado), produciéndose a su vez el envío de un mensaje de correo electrónico tras la expiración. De este modo, se mostrarán los dos casos de uso diferentes de la funcionalidad de la actividad <xref:System.Activities.Statements.Delay> integrada frente al uso de una actividad AbsoluteDelay.  
+ Paso a paso a través de este ejemplo, verá el tiempo en el que el retraso integrado comienza y finaliza, que a su vez producirá que se envíe un mensaje de correo electrónico. A partir de ese momento, la actividad AbsoluteDelay se detendrá hasta un valor de <xref:System.DateTime> especificado (o 0 segundos si el valor de <xref:System.DateTime> ha expirado), produciéndose a su vez el envío de un mensaje de correo electrónico tras la expiración. De este modo, se mostrarán los dos casos de uso diferentes de la funcionalidad de la actividad <xref:System.Activities.Statements.Delay> integrada frente al uso de una actividad AbsoluteDelay.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
@@ -58,7 +58,7 @@ El escenario principal de este ejemplo es el retraso hasta un valor de <xref:Sys
     > [!NOTE]
     >  Si no especifica un host de SMTP válido, la aplicación producirá una excepción SMTP.  
   
-7.  Compile la solución seleccionando **generar**, **generar solución**.  
+7.  Compile la solución seleccionando **compilar**, **compilar solución**.  
   
 8.  Ejecute la solución presionando **F5**.  
   
@@ -67,6 +67,6 @@ El escenario principal de este ejemplo es el retraso hasta un valor de <xref:Sys
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\AbsoluteDelay`

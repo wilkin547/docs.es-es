@@ -2,12 +2,12 @@
 title: Obtener acceso a los servicios WCF con una aplicación cliente de la Tienda Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: aca0c4e4daecc1b7a2474130eb36b9ead1c538bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfc5dd13c5660ff1604e9de02fdf6755d70a95e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491964"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485669"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Obtener acceso a los servicios WCF con una aplicación cliente de la Tienda Windows
 Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la Tienda Windows. Estas aplicaciones están diseñadas para una interfaz de pantalla táctil. .NET Framework 4.5 permite que las aplicaciones de la Tienda Windows llamen a servicios WCF.  
@@ -16,7 +16,7 @@ Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la 
  Un subconjunto de funcionalidad de WCF está disponible en una aplicación de la Tienda Windows; vea las secciones siguientes para obtener más detalles.  
   
 > [!IMPORTANT]
->  Use las API de distribución de WinRT en lugar de las expuestas por WCF. Para obtener más información, vea [API de distribución de WinRT](http://go.microsoft.com/fwlink/?LinkId=236265)  
+>  Use las API de distribución de WinRT en lugar de las expuestas por WCF. Para obtener más información, vea [API de distribución de WinRT](https://go.microsoft.com/fwlink/?LinkId=236265)  
   
 > [!WARNING]
 >  No se admite el uso de Agregar referencia de servicio para agregar una referencia de servicio web a un componente de Windows en tiempo de ejecución.  
@@ -55,7 +55,7 @@ Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la 
  Se admiten las codificaciones de texto y binarias. Se admiten todos los modos de transferencia de WCF. Para obtener más información, vea [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Agregar referencia de servicio  
- Para llamar a un servicio WCF desde una aplicación de la Tienda Windows, use la característica Agregar referencia de servicio de Visual Studio 2012. Observará algunos cambios en la funcionalidad de Agregar referencia de servicio cunado se lleva a cabo desde una aplicación de la Tienda Windows. Primero no se genera ningún archivo de configuración. Las aplicaciones de la Tienda Windows no usan archivos de configuración, por lo que deben configurarse en el código. Este código de configuración se puede encontrar en el archivo References.cs que genera Agregar referencia de servicio. Para ver este archivo, asegúrese de seleccionar "Mostrar todos los archivos" en el Explorador de soluciones. El archivo se encuentra en los nodos Referencias de servicio y Reference.svcmap en el proyecto. Todas las operaciones generadas para los servicios WCF en una aplicación de la Tienda Windows serán asincrónicas mediante el patrón asincrónico basado en tareas. Para obtener más información, vea [Patrón asincrónico basado en tareas](http://msdn.microsoft.com/magazine/ff959203.aspx).  
+ Para llamar a un servicio WCF desde una aplicación de la Tienda Windows, use la característica Agregar referencia de servicio de Visual Studio 2012. Observará algunos cambios en la funcionalidad de Agregar referencia de servicio cunado se lleva a cabo desde una aplicación de la Tienda Windows. Primero no se genera ningún archivo de configuración. Las aplicaciones de la Tienda Windows no usan archivos de configuración, por lo que deben configurarse en el código. Este código de configuración se puede encontrar en el archivo References.cs que genera Agregar referencia de servicio. Para ver este archivo, asegúrese de seleccionar "Mostrar todos los archivos" en el Explorador de soluciones. El archivo se encuentra en los nodos Referencias de servicio y Reference.svcmap en el proyecto. Todas las operaciones generadas para los servicios WCF en una aplicación de la Tienda Windows serán asincrónicas mediante el patrón asincrónico basado en tareas. Para obtener más información, consulte [modelo asincrónico basado en tareas](https://msdn.microsoft.com/magazine/ff959203.aspx).  
   
  Debido a que la configuración ahora se genera en el código, cualquier cambio realizado en el archivo Reference.cs se sobrescribirá cada vez que se actualice la referencia de servicio. Para solucionar esta situación, el código de configuración se genera en un método parcial, que puede implementar en la clase de proxy cliente. El método parcial se declara de la siguiente manera:  
   
@@ -138,7 +138,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
  Para que las aplicaciones de la Tienda Windows tengan acceso y envíen las credenciales de Windows predeterminadas, debe habilitar esta funcionalidad en el archivo Package.appmanifest. Abra este archivo y seleccione la pestaña capacidades y seleccione "Credenciales de Windows predeterminadas". Esto permite que la aplicación se conecte a recursos de la intranet que necesitan credenciales de dominio.  
   
 > [!IMPORTANT]
->  Para que las aplicaciones de la tienda Windows realicen llamadas entre equipos debe habilitar otra función denominada "Acceso a redes domésticas o de trabajo". Este valor se encuentra también en el archivo Package.appmanifest en la pestaña Capacidades. Seleccione la casilla Redes domésticas o de trabajo. Esto permite el acceso de entrada y de salida de la aplicación a redes de ubicaciones de confianza del usuario como domésticas y de trabajo. Los puertos críticos de entrada siempre se bloquean. Para tener acceso a servicios de Internet también debe habilitar la capacidad de Internet (cliente).  
+>  Para las aplicaciones de Windows Store realizar llamadas entre equipos debe habilitar otra función denominada "Redes domésticas o de trabajo". Este valor se encuentra también en el archivo Package.appmanifest en la pestaña Capacidades. Seleccione la casilla Redes domésticas o de trabajo. Esto permite el acceso de entrada y de salida de la aplicación a redes de ubicaciones de confianza del usuario como domésticas y de trabajo. Los puertos críticos de entrada siempre se bloquean. Para tener acceso a servicios de Internet también debe habilitar la capacidad de Internet (cliente).  
   
 ### <a name="misc"></a>Varios  
  El uso de las clases siguientes se admite para las aplicaciones de la Tienda Windows:  
@@ -174,9 +174,9 @@ void async SomeMethod()
  Observe el uso de la palabra clave async en el método que realiza la llamada asincrónica y la palabra clave await al llamar al método asincrónico.  
   
 ## <a name="see-also"></a>Vea también  
- [WCF en el Blog de aplicaciones de la tienda Windows](http://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)  
- [Seguridad y clientes de la tienda de Windows de WCF](http://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)  
- [Aplicaciones de la tienda de Windows y llamadas entre equipos](http://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
- [Llamar a un servicio WCF implementado en Azure desde una aplicación de la tienda de Windows](http://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
+ [WCF en el Blog de Windows Store Apps](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)  
+ [Seguridad y clientes WCF Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)  
+ [Las aplicaciones de Windows Store y llamadas entre equipos](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
+ [Una llamada a un servicio WCF implementado en Azure desde una aplicación de Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)  
  [Programación de la seguridad de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
  [Enlaces](../../../../docs/framework/wcf/bindings.md)

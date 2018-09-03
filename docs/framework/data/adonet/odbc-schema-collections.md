@@ -2,18 +2,18 @@
 title: Colecciones de esquemas de ODBC
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: 36d0859b897bfcea33803c219ade14722ed90421
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bdedbb11960f02b99dcca6388abf663635238f74
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766652"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479985"
 ---
 # <a name="odbc-schema-collections"></a>Colecciones de esquemas de ODBC
 En esta sección se describe la compatibilidad de las colecciones de esquemas con los controladores ODBC de Microsoft SQL Server, Oracle y Microsoft Jet.  
   
 ## <a name="microsoft-sql-server-odbc-driver"></a>Controlador ODBC para Microsoft SQL Server  
- El controlador ODBC de Microsoft SQL Server admite además las colecciones de esquemas comunes, las siguientes colecciones de esquemas específicas:  
+ El controlador ODBC de Microsoft SQL Server admite las siguientes colecciones de esquemas específicas además de las colecciones de esquemas comunes:  
   
 -   Tablas  
   
@@ -153,7 +153,7 @@ En esta sección se describe la compatibilidad de las colecciones de esquemas co
 |SS_DATA_TYPE|Byte|  
   
 ## <a name="microsoft-oracle-odbc-driver"></a>Controlador ODBC para Oracle de Microsoft  
- El controlador ODBC de Oracle de Microsoft SQL Server admite además las colecciones de esquemas comunes, las siguientes colecciones de esquemas específicas:  
+ El controlador ODBC de Oracle de Microsoft SQL Server admite las siguientes colecciones de esquemas específicas además de las colecciones de esquemas comunes:  
   
 -   Tablas  
   
@@ -333,4 +333,4 @@ En esta sección se describe la compatibilidad de las colecciones de esquemas co
 |IS_NULLABLE|String|  
   
 ## <a name="see-also"></a>Vea también  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

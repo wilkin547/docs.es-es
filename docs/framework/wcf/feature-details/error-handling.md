@@ -2,16 +2,16 @@
 title: Control de errores
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: ffcc817eb463a1787972bc9c4ae1434ff74f7bb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64b1af4b557d7792c7285866edc9aed08a0ef667
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495673"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486159"
 ---
 # <a name="error-handling"></a>Control de errores
 ## <a name="error-handling-in-windows-communication-foundation"></a>Error de control en Windows Communication Foundation  
- Cuando un servicio detecta una excepción o error inesperados, hay varias maneras de diseñar una solución desde el control de excepciones. Aunque no hay ningún único "correcto" o "recomendable" control de errores solución, hay varias rutas de acceso válidas a considerar. Normalmente, se recomienda implementar una solución híbrida que combine varios enfoques de la lista siguiente, según la complejidad de la implementación de WCF, el tipo y la frecuencia de las excepciones, el administrado frente a la naturaleza no controlada de la excepciones y cualquier traza, registro o requisitos de la directiva.  
+ Cuando un servicio detecta una excepción o error inesperados, hay varias maneras de diseñar una solución desde el control de excepciones. Aunque no es único "correcta" o "recomendable" control de errores solución, hay varias rutas de acceso válidas a considerar. Normalmente, se recomienda implementar una solución híbrida que combine varios enfoques de la lista siguiente, según la complejidad de la implementación de WCF, el tipo y la frecuencia de las excepciones, el controlado frente a la naturaleza no controlada de la las excepciones y cualquier traza, registro o los requisitos de directiva.  
   
  Estas soluciones se explican en más profundidad en el resto de esta sección.  
   
@@ -20,17 +20,17 @@ ms.locfileid: "33495673"
   
  Esta biblioteca incluye un controlador de excepciones de contrato de error predefinido. Este controlador de excepciones está diseñado para usarse en los límites de servicio de (Windows® Communication Foundation (WCF), y genera un nuevo Contrato de errores desde la excepción.  
   
- Los bloques de aplicación tienen por objeto escribir prácticas recomendadas y proporcionar un enfoque común para el control de excepciones en la aplicación. Además, los controladores de errores personalizados y los contratos de error desarrollados por uno mismo pueden resultar muy útiles. Por ejemplo, controladores de errores personalizados proporcionan una oportunidad excelente de promover automáticamente todas las excepciones a FaultExceptions y también para agregar capacidades de registro para la aplicación.  
+ Los bloques de aplicación tienen por objeto escribir prácticas recomendadas y proporcionar un enfoque común para el control de excepciones en la aplicación. Además, los controladores de errores personalizados y los contratos de error desarrollados por uno mismo pueden resultar muy útiles. Por ejemplo, controladores de errores personalizados proporcionan una oportunidad excelente para promover automáticamente todas las excepciones a FaultExceptions y también para agregar capacidades de registro a la aplicación.  
   
- Para obtener más información, vea [Microsoft Enterprise Library](http://msdn.microsoft.com/library/ff632023.aspx).  
+ Para obtener más información, consulte [Microsoft Enterprise Library](https://msdn.microsoft.com/library/ff632023.aspx).  
   
 ### <a name="dealing-with-expected-exceptions"></a>Tratar excepciones esperadas  
- La línea de conducta correspondiente es detectar excepciones esperadas en cada operación o punto de extensibilidad relevante, decidir si puede recuperarse y devolver el error personalizado apropiado en FaultException\<T >  
+ El curso de acción adecuado consiste en detectar excepciones esperadas en cada operación o punto de extensibilidad relevante, decidir si se puede recuperar y devolver el error personalizado apropiado en un Faultexceptiont\<T >  
   
 ### <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>Tratar excepciones no esperadas con un IErrorHandler  
- Para ocuparse de las excepciones inesperadas, la línea de conducta recomendada es "enlazar" un IErrorHandler. Controladores de errores solo capturan excepciones en el nivel de tiempo de ejecución WCF (la capa "modelo de servicio"), no en el nivel del canal. La única forma de enlazar un IErrorHandler en el nivel de canal es crear un canal personalizado, que no se recomienda en la mayoría de los escenarios.  
+ Para tratar las excepciones inesperadas, el curso de acción recomendado es "enlazar" un IErrorHandler. Los controladores de errores solo capturan excepciones en el nivel de tiempo de ejecución WCF (la capa "modelo de servicio"), no en el nivel del canal. La única forma de enlazar un IErrorHandler en el nivel de canal es crear un canal personalizado, que no se recomienda en la mayoría de los escenarios.  
   
- Una "excepción inesperada" generalmente no es una excepción irrecuperable ni una excepción de procesamiento; en su lugar, es una excepción inesperada de usuario. Una excepción no recuperable (por ejemplo, una excepción de memoria insuficiente): uno generalmente se controla mediante la [controlador de excepciones de modelo de servicio](http://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx) automáticamente: no se suele controlarse y la única razón para controlar esta excepción en todos los pueden hacer inicio de sesión adicional o para devolver una excepción estándar al cliente. Aparece una excepción de procesamiento en el procesamiento de mensajes, (por ejemplo, en la serialización, el codificador o el nivel formateador, normalmente no se pueden controlar en un IErrorHandler, pues suele ser demasiado antiguo o demasiado atrasado para que intervenga el controlador de errores en el momento en que estas excepciones aparecen. De forma similar, las excepciones de transporte no se pueden controlar en un IErrorHandler.  
+ Una "excepción inesperada" suele ser una excepción irrecuperable ni una excepción de procesamiento; en su lugar, es una excepción inesperada de usuario. Una excepción irrecuperable (como una excepción de memoria insuficiente): la suele controlar la [controlador de excepciones de modelo de servicio](https://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx) automáticamente: no se puede controlar correctamente y la única razón para controlar la excepción nada puede ser realice un registro adicional o para devolver una excepción estándar al cliente. Aparece una excepción de procesamiento en el procesamiento de mensajes, (por ejemplo, en la serialización, el codificador o el nivel formateador, normalmente no se pueden controlar en un IErrorHandler, pues suele ser demasiado antiguo o demasiado atrasado para que intervenga el controlador de errores en el momento en que estas excepciones aparecen. De forma similar, las excepciones de transporte no se pueden controlar en un IErrorHandler.  
   
  Con un IErrorHandler, puede controlar explícitamente el comportamiento de la aplicación cuando se produce una excepción. Puede:  
   
@@ -53,19 +53,19 @@ ms.locfileid: "33495673"
  El método IErrorHandler.HandleError normalmente se usa para implementar comportamientos relacionados con errores, como registro de errores, notificaciones del sistema, cierre de aplicaciones, etc. IErrorHandler.HandleError se puede llamar en lugares diferentes dentro del servicio y, en función de dónde se produzca el error, el mismo subproceso que la operación puede llamar o no al método HandleError; no hay ninguna garantía al respecto.  
   
 ### <a name="dealing-with-exceptions-outside-wcf"></a>Tratar excepciones esperadas fuera de WCF  
- A menudo, excepciones de configuración, excepciones de la cadena de conexión a bases de datos y otras excepciones similares pueden aparecer en el contexto de una aplicación de WCF, pero no son excepciones iniciadas por consultas del modelo de servicio o servicio web en sí. Estas excepciones son las excepciones "normales" externas al servicio web y deben ser controladas al igual que otras excepciones externas en el entorno de nivel se ocuparán.  
+ A menudo, excepciones de configuración, excepciones de la cadena de conexión a bases de datos y otras excepciones similares pueden aparecer en el contexto de una aplicación de WCF, pero no son excepciones iniciadas por consultas del modelo de servicio o servicio web en sí. Estas excepciones son excepciones "normales" externas al servicio web y deben controlarse como son otras excepciones externas en el entorno para que lo administre.  
   
 ### <a name="tracing-exceptions"></a>Traza de excepciones  
- El seguimiento es el lugar de solo "general" donde se podrían ver todas las excepciones. Para obtener más información acerca de excepciones de seguimiento e inicio de sesión, vea Seguimiento e Inicio de sesión.  
+ El seguimiento es el lugar de sólo "catch-all", donde se podrían ver todas las excepciones. Para obtener más información acerca de excepciones de seguimiento e inicio de sesión, vea Seguimiento e Inicio de sesión.  
   
 ### <a name="uri-template-errors-when-using-webgetattribute-and-webinvokeattribute"></a>Errores de la plantilla del URI al usar WebGetAttribute y WebInvokeAttribute  
  Los atributos WebGet y WebInvoke permiten especificar una plantilla URI que asigna los componentes de la solicitud a los parámetros de la operación. Por ejemplo, la plantilla de URI "weather/{state}/{city}" asigna la solicitud en tokens literales, un parámetro denominado estado y un parámetro denominado ciudad. Estos parámetros se pueden enlazar a continuación por nombre a algunos de los parámetros formales de la operación.  
   
- Los parámetros de plantilla aparecen en forma de cadena del URI mientras que los parámetros formales de un contrato tipo pueden ser de tipos de no cadena. Por consiguiente, una conversión debe realizarse antes que la operación que se invoca. A [tabla de conversión de formatos](http://msdn.microsoft.com/library/bb412172.aspx) está disponible.  
+ Los parámetros de plantilla aparecen en forma de cadena del URI mientras que los parámetros formales de un contrato tipo pueden ser de tipos de no cadena. Por consiguiente, una conversión debe realizarse antes que la operación que se invoca. Un [tabla de conversión de formatos](wcf-web-http-programming-model-overview.md) está disponible.  
   
  Sin embargo, si la conversión genera un error, no se puede hacer saber a la operación qué ha salido mal. La conversión de tipo, en cambio, emerge en forma de error de envío.  
   
  Un error de envío de conversión de tipo se puede inspeccionar igual que muchos otros tipos de errores de envío instalando un controlador de errores. El punto de extensibilidad de IErrorHandler se llama para controlar excepciones de nivel de servicio. Desde allí se puede elegir la respuesta que se va a devolver al que llama, así como realizar las tareas personalizadas y de envío de informes.  
   
 ## <a name="see-also"></a>Vea también  
- [Control de errores básicos de WCF](http://msdn.microsoft.com/library/gg281715.aspx)
+ [Programación básica de WCF](../basic-wcf-programming.md)

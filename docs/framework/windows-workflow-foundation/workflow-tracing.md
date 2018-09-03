@@ -2,12 +2,12 @@
 title: Traza del flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: f4ce25efae0e42fa7c95ce5dffe8da8e31db05a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27e56933043c9eb955500cdd1c5bbd06cb33bde8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518182"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480875"
 ---
 # <a name="workflow-tracing"></a>Traza del flujo de trabajo
 La traza del flujo de trabajo ofrece una forma de capturar la información de diagnóstico con los agentes de escucha de seguimiento de .NET Framework. Se puede habilitar la traza si se detecta un problema con la aplicación y se deshabilita de nuevo una vez resuelto el problema. Hay dos maneras de poder habilitar la traza de depuración para los flujos de trabajo. Puede configurarlo con el visor del seguimiento de eventos o puede usar <xref:System.Diagnostics> para enviar los eventos de seguimiento a un archivo.  
@@ -17,9 +17,9 @@ La traza del flujo de trabajo ofrece una forma de capturar la información de di
   
 1.  Desplácese hasta el nodo de registros analíticos y de depuración en el visor de eventos.  
   
-2.  En la vista de árbol en el Visor de eventos, navegue hasta **aplicaciones -> el Visor de eventos y registros de servicios -> Microsoft -> Windows -> servidor de aplicaciones**. Haga clic en **servidor de aplicaciones** y seleccione **Ver -> Mostrar registros analíticos y depuración**. Haga clic en **depurar** y seleccione **Habilitar registro**.  
+2.  En la vista de árbol en el Visor de eventos, vaya a **aplicaciones -> el Visor de eventos y registros de servicios -> Microsoft -> Windows -> servidor de aplicaciones-aplicaciones**. Haga clic en **aplicaciones de servidor-aplicaciones** y seleccione **Ver -> Mostrar registros analíticos y depuración**. Haga clic en **depurar** y seleccione **Habilitar registro**.  
   
-3.  Cuando un flujo de trabajo ejecuta la depuración y los seguimientos se emiten en el canal de depuración de ETW, se pueden ver en el Visor de eventos. Vaya a **aplicaciones -> el Visor de eventos y registros de servicios -> Microsoft -> Windows -> servidor de aplicaciones**. Haga clic en **depurar** y seleccione **actualizar**.  
+3.  Cuando un flujo de trabajo ejecuta la depuración y los seguimientos se emiten en el canal de depuración de ETW, se pueden ver en el Visor de eventos. Vaya a **aplicaciones -> el Visor de eventos y registros de servicios -> Microsoft -> Windows -> servidor de aplicaciones-aplicaciones**. Haga clic en **depurar** y seleccione **actualizar**.  
   
 4.  El tamaño predeterminado del búfer de traza analítica es solo de 4 kilobytes (KB); se recomienda aumentar el tamaño a 32 KB. Para ello, realice los pasos siguientes.  
   
@@ -41,7 +41,7 @@ La traza del flujo de trabajo ofrece una forma de capturar la información de di
 >  Si usa .NET Framework 4 Client Profile, primero debe registrar el manifiesto ETW ejecutando el siguiente comando desde el directorio de .NET Framework 4: `ServiceModelReg.exe –i –c:etw`  
   
 ## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>Habilitar el seguimiento de depuración con System.Diagnostics  
- Se pueden configurar estos agentes de escucha en el archivo App.config de la aplicación de flujo de trabajo o Web.config para un servicio del flujo de trabajo. En este ejemplo, un [TextWriterTraceListener](http://go.microsoft.com/fwlink/?LinkId=165424) está configurado para guardar información de seguimiento en el archivo MyTraceLog.txt del directorio actual.  
+ Se pueden configurar estos agentes de escucha en el archivo App.config de la aplicación de flujo de trabajo o Web.config para un servicio del flujo de trabajo. En este ejemplo, un [TextWriterTraceListener](https://go.microsoft.com/fwlink/?LinkId=165424) está configurado para guardar información de seguimiento en el archivo MyTraceLog.txt del directorio actual.  
   
 ```xml  
 <configuration>  
@@ -70,5 +70,5 @@ La traza del flujo de trabajo ofrece una forma de capturar la información de di
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Supervisión de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Supervisión de aplicaciones con App Fabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

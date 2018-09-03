@@ -2,23 +2,23 @@
 title: 'Transporte: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 64452e36f34f87aef491cf66f6dd94ddc3a59f34
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: e3e01634c496a3673b49ae7329e4221e0d568803
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106043"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485945"
 ---
 # <a name="transport-udp"></a>Transporte: UDP
-El ejemplo de transporte UDP muestra cómo implementar unidifusión UDP y multidifusión como un transporte personalizado de Windows Communication Foundation (WCF). El ejemplo describe el procedimiento recomendado para crear un transporte personalizado de WCF, mediante el marco del canal y seguir las prácticas recomendadas WCF. Los pasos para crear un transporte personalizado son los siguientes:  
+El ejemplo de transporte UDP muestra cómo implementar unidifusión UDP y multidifusión como un transporte personalizado de Windows Communication Foundation (WCF). El ejemplo describe el procedimiento recomendado para crear un transporte personalizado de WCF, mediante el marco del canal y procedimientos recomendados WCF. Los pasos para crear un transporte personalizado son los siguientes:  
   
-1.  Decida qué del canal [patrones de intercambio de mensajes](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel o IReplyChannel) admitirán ChannelFactory y ChannelListener. A continuación, decida si se admitirán las variaciones con sesión de estas interfaces.  
+1.  Decidir qué del canal [patrones de intercambio de mensajes](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel o IReplyChannel) admitirán ChannelFactory y ChannelListener. A continuación, decida si se admitirán las variaciones con sesión de estas interfaces.  
   
 2.  Cree un generador de canales y un agente de escucha que admitan el patrón de intercambio de mensajes.  
   
 3.  Asegúrese de que se normalizan las excepciones específicas de red en la clase derivada adecuada de <xref:System.ServiceModel.CommunicationException>.  
   
-4.  Agregar un [ \<enlace >](../../../../docs/framework/misc/binding.md) elemento que se agrega el transporte personalizado a una pila de canales. Para obtener más información, consulte [agregar un elemento de enlace](#AddingABindingElement).  
+4.  Agregar un [ \<enlace >](../../../../docs/framework/misc/binding.md) elemento que se agrega el transporte personalizado a una pila de canales. Para obtener más información, consulte [agregando un elemento de enlace](#AddingABindingElement).  
   
 5.  Agregue una sección de extensión de elemento de enlace para exponer el nuevo elemento de enlace al sistema de configuración.  
   
@@ -26,7 +26,7 @@ El ejemplo de transporte UDP muestra cómo implementar unidifusión UDP y multid
   
 7.  Agregue un enlace que configura previamente una pila de elementos de enlace según un perfil bien determinado. Para obtener más información, consulte [agregar un enlace estándar](#AddingAStandardBinding).  
   
-8.  Agregue una sección de enlace y un elemento de configuración de enlace para exponer el enlace al sistema de configuración. Para obtener más información, consulte [agregar compatibilidad de configuración](#AddingConfigurationSupport).  
+8.  Agregue una sección de enlace y un elemento de configuración de enlace para exponer el enlace al sistema de configuración. Para obtener más información, consulte [agregar compatibilidad con la configuración](#AddingConfigurationSupport).  
   
 <a name="MessageExchangePatterns"></a>   
 ## <a name="message-exchange-patterns"></a>Modelos de intercambio de mensajes  
@@ -50,7 +50,7 @@ El ejemplo de transporte UDP muestra cómo implementar unidifusión UDP y multid
 >  En el caso del transporte de UDP, el único MEP que se admite es el datagrama, ya que UDP es en sí mismo un protocolo de tipo "desencadenar y omitir".  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject y el ciclo de vida del objeto WCF  
- WCF tiene una máquina de estado comunes que se utiliza para administrar el ciclo de vida de objetos como <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, y <xref:System.ServiceModel.Channels.IChannelListener> que se usan para la comunicación. Hay cinco estados donde estos objetos de comunicación pueden existir. La enumeración <xref:System.ServiceModel.CommunicationState> representa estos estados y son los siguientes:  
+ WCF tiene una máquina de Estados común que se utiliza para administrar el ciclo de vida de objetos como <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, y <xref:System.ServiceModel.Channels.IChannelListener> que se usan para la comunicación. Hay cinco estados donde estos objetos de comunicación pueden existir. La enumeración <xref:System.ServiceModel.CommunicationState> representa estos estados y son los siguientes:  
   
 -   Creado: este es el estado de una interfaz <xref:System.ServiceModel.ICommunicationObject> la primera vez que se crean instancias de ella. No se produce ninguna entrada/salida (E/S) en este estado.  
   
@@ -62,7 +62,7 @@ El ejemplo de transporte UDP muestra cómo implementar unidifusión UDP y multid
   
 -   Cerrado: en este estado, no se pueden utilizar los objetos. En general, aún se puede acceder a la mayoría de la configuración para su inspección pero no se puede producir ninguna comunicación. Este estado es equivalente a eliminarse.  
   
--   Con error: en este estado, se puede tener acceso a los objetos para inspeccionarlos pero no se pueden usar. Cuando se produce un error no recuperable, el objeto pasa a este estado. La transición solo es válida en este estado es en el `Closed` estado.  
+-   Con error: en este estado, se puede tener acceso a los objetos para inspeccionarlos pero no se pueden usar. Cuando se produce un error no recuperable, el objeto pasa a este estado. La única transición válida desde este estado está en el `Closed` estado.  
   
  Hay eventos que se desencadenan para cada transición de estado. Se puede llamar al método <xref:System.ServiceModel.ICommunicationObject.Abort%2A> en cualquier momento, lo que provoca que el objeto pase inmediatamente de su estado actual al estado Cerrado. Al llamar <xref:System.ServiceModel.ICommunicationObject.Abort%2A>, se finaliza cualquier trabajo inacabado.  
   
@@ -74,7 +74,7 @@ El ejemplo de transporte UDP muestra cómo implementar unidifusión UDP y multid
 
 -   El <xref:System.ServiceModel.Channels.ChannelManagerBase> la clase implementa <xref:System.ServiceModel.Channels.CommunicationObject> y proporciona una clase base unificada para <xref:System.ServiceModel.Channels.ChannelFactoryBase> y <xref:System.ServiceModel.Channels.ChannelListenerBase>. La clase <xref:System.ServiceModel.Channels.ChannelManagerBase> trabaja junto con <xref:System.ServiceModel.Channels.ChannelBase>, que es una clase base que implementa <xref:System.ServiceModel.Channels.IChannel>.  
   
--   El <xref:System.ServiceModel.Channels.ChannelFactoryBase> la clase implementa <xref:System.ServiceModel.Channels.ChannelManagerBase> y <xref:System.ServiceModel.Channels.IChannelFactory> y consolida los `CreateChannel` sobrecargas en una `OnCreateChannel` método abstracto.  
+-   El <xref:System.ServiceModel.Channels.ChannelFactoryBase> la clase implementa <xref:System.ServiceModel.Channels.ChannelManagerBase> y <xref:System.ServiceModel.Channels.IChannelFactory> y consolida el `CreateChannel` sobrecargas en una `OnCreateChannel` método abstracto.  
   
 -   El <xref:System.ServiceModel.Channels.ChannelListenerBase> la clase implementa <xref:System.ServiceModel.Channels.IChannelListener>. Se encarga de la administración de estados básica.  
   
@@ -115,14 +115,14 @@ this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Coun
 message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffer, 0, count), bufferManager);  
 ```  
   
- Dado que el mismo canal del datagrama representa mensajes que llegan de varios orígenes, `UdpChannelListener` es un agente de escucha singleton. Hay, en la mayoría, una activa <xref:System.ServiceModel.Channels.IChannel> asociado a este agente de escucha a la vez. El ejemplo solo genera otro si se elimina subsiguientemente un canal que es devuelto por el método `AcceptChannel`. Cuando se recibe un mensaje, se pone en cola en este canal singleton.  
+ Dado que el mismo canal del datagrama representa mensajes que llegan de varios orígenes, `UdpChannelListener` es un agente de escucha singleton. Hay, en la mayoría, uno activo <xref:System.ServiceModel.Channels.IChannel> asociado a este agente de escucha a la vez. El ejemplo solo genera otro si se elimina subsiguientemente un canal que es devuelto por el método `AcceptChannel`. Cuando se recibe un mensaje, se pone en cola en este canal singleton.  
   
 #### <a name="udpinputchannel"></a>UdpInputChannel  
  El `UdpInputChannel` la clase implementa `IInputChannel`. Está compuesto de una cola de mensajes entrantes que es rellenada por el socket `UdpChannelListener`. Estos mensajes se quitan de la cola mediante el método `IInputChannel.Receive`.  
   
 <a name="AddingABindingElement"></a>   
 ## <a name="adding-a-binding-element"></a>Adición de un elemento de enlace  
- Ahora que se han creado los generadores y canales, se deben exponer en el tiempo de ejecución de ServiceModel mediante un enlace. Un enlace es una colección de elementos de enlace que representa la pila de comunicación asociada con una dirección de servicio. Cada elemento de la pila es representado por un [ \<enlace >](../../../../docs/framework/misc/binding.md) elemento.  
+ Ahora que se han creado los generadores y canales, se deben exponer en el tiempo de ejecución de ServiceModel mediante un enlace. Un enlace es una colección de elementos de enlace que representa la pila de comunicación asociada con una dirección de servicio. Cada elemento en la pila es representado por un [ \<enlace >](../../../../docs/framework/misc/binding.md) elemento.  
   
  En el ejemplo, el elemento de enlace es `UdpTransportBindingElement`, que deriva de <xref:System.ServiceModel.Channels.TransportBindingElement>. Invalida los métodos siguientes para crear los generadores asociados con el enlace.  
   
@@ -141,7 +141,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  También contiene los miembros para clonar `BindingElement` y devolver nuestro esquema (soap.udp).  
   
 ## <a name="adding-metadata-support-for-a-transport-binding-element"></a>Agregación de compatibilidad con metadatos para un elemento de enlace de transporte  
- Para integrar nuestro transporte en el sistema de metadatos, debe admitir la importación y exportación de la directiva. Esto nos permite generar clientes de nuestro enlace a través de la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Para integrar nuestro transporte en el sistema de metadatos, debe admitir la importación y exportación de la directiva. Esto nos permite generar clientes de nuestro enlace a través de la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ### <a name="adding-wsdl-support"></a>Agregación de la compatibilidad con WSDL  
  El elemento de enlace del transporte en un enlace es el responsable de la exportación e importación de la información de direccionamiento en metadatos. Al utilizar un enlace SOAP, el elemento de enlace del transporte también debería exportar un URI de transporte correcto en los metadatos.  
@@ -204,7 +204,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  El elemento de enlace personalizado puede exportar aserciones de directiva en el enlace de WSDL para que un punto de conexión de servicio exprese las funciones de ese elemento de enlace.  
   
 #### <a name="policy-export"></a>Exportación de directivas  
- El `UdpTransportBindingElement` escriba implementa `IPolicyExportExtension` para agregar compatibilidad para exportar una directiva. Como resultado, `System.ServiceModel.MetadataExporter` incluye `UdpTransportBindingElement` en la generación de directiva para cualquier enlace que la incluya.  
+ El `UdpTransportBindingElement` escriba implementa `IPolicyExportExtension` para agregar compatibilidad para exportar la directiva. Como resultado, `System.ServiceModel.MetadataExporter` incluye `UdpTransportBindingElement` en la generación de directiva para cualquier enlace que la incluya.  
   
  En `IPolicyExportExtension.ExportPolicy`, agregamos una aserción para UDP y otra si estamos en modo de multidifusión. Esto se debe a que el modo de multidifusión afecta a cómo se construye la pila de comunicaciones, y, por tanto, debe coordinarse entre ambos lados.  
   
@@ -337,7 +337,7 @@ if (context.Endpoint.Binding is CustomBinding)
 ```  
   
 ### <a name="binding-section"></a>Sección de enlace  
- La sección `SampleProfileUdpBindingCollectionElement` es un objeto `StandardBindingCollectionElement` que expone `SampleProfileUdpBinding` en el sistema de configuración. El volumen de la implementación se delega a `SampleProfileUdpBindingConfigurationElement`, que deriva de `StandardBindingElement`. El `SampleProfileUdpBindingConfigurationElement` tiene propiedades que corresponden a las propiedades en `SampleProfileUdpBinding`y funciones que asignar desde el `ConfigurationElement` enlace. Finalmente, se invalida el método `OnApplyConfiguration` en nuestro `SampleProfileUdpBinding`, tal y como se muestra en el siguiente código muestra.  
+ La sección `SampleProfileUdpBindingCollectionElement` es un objeto `StandardBindingCollectionElement` que expone `SampleProfileUdpBinding` en el sistema de configuración. El volumen de la implementación se delega a `SampleProfileUdpBindingConfigurationElement`, que deriva de `StandardBindingElement`. El `SampleProfileUdpBindingConfigurationElement` tiene propiedades que corresponden a las propiedades en `SampleProfileUdpBinding`y las funciones para asignar desde el `ConfigurationElement` enlace. Finalmente, se invalida el método `OnApplyConfiguration` en nuestro `SampleProfileUdpBinding`, tal y como se muestra en el siguiente código muestra.  
   
 ```csharp
 protected override void OnApplyConfiguration(string configurationName)  
@@ -394,7 +394,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>Servicio de pruebas y cliente UDP  
- El código de prueba para usar este transporte de ejemplo está disponible en los directorios UdpTestService y UdpTestClient. El código de servicio está compuesto de dos pruebas: una configura los enlaces y puntos de conexión desde el código y la otra lo hace a través de la configuración. Ambas pruebas utilizan dos puntos de conexión. Un punto de conexión utiliza la `SampleUdpProfileBinding` con [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) establecido en `true`. El otro extremo utiliza un enlace personalizado con `UdpTransportBindingElement`. Esto equivale a usar `SampleUdpProfileBinding` con [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) establecido en `false`. Ambas pruebas crean un servicio, agregan un punto de conexión para cada enlace, abren el servicio y, a continuación, esperan a que el usuario presione ENTRAR antes de cerrar el servicio.  
+ El código de prueba para usar este transporte de ejemplo está disponible en los directorios UdpTestService y UdpTestClient. El código de servicio está compuesto de dos pruebas: una configura los enlaces y puntos de conexión desde el código y la otra lo hace a través de la configuración. Ambas pruebas utilizan dos puntos de conexión. Un punto de conexión utiliza la `SampleUdpProfileBinding` con [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) establecido en `true`. El otro extremo utiliza un enlace personalizado con `UdpTransportBindingElement`. Esto equivale a usar `SampleUdpProfileBinding` con [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) establecido en `false`. Ambas pruebas crean un servicio, agregan un punto de conexión para cada enlace, abren el servicio y, a continuación, esperan a que el usuario presione ENTRAR antes de cerrar el servicio.  
   
  Al iniciar la aplicación de prueba del servicio, debería ver el resultado siguiente.  
   
@@ -466,9 +466,9 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Para compilar la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 3.  Consulte la sección anterior "Servicio de pruebas y cliente UDP".  
   
@@ -477,6 +477,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

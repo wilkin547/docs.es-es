@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: 00296b51563a5f973b8e5d64c55867568ff0324e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1801a1b695867a7edcd99394feebe1d0f6853a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527792"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480940"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Errores en tiempo de diseño en el Diseñador de Windows Forms
 En este tema se explica el significado y el uso de la lista de errores en tiempo de diseño que aparece en Microsoft Visual Studio cuando no se puede cargar el Diseñador de Windows Forms. Si esta lista de errores aparece, no debe interpretarse como un error del diseñador, sino como una ayuda para corregir errores en el código.  
@@ -45,15 +45,15 @@ En este tema se explica el significado y el uso de la lista de errores en tiempo
 ### <a name="forum-posts-about-this-error"></a>Entradas del foro sobre este error  
  La ayuda adicional incluirá un vínculo a los mensajes del foro de MSDN relacionados con el error. Los foros se buscan por la cadena del mensaje de error. También puede intentar buscar en los foros siguientes:  
   
--   [Foro Diseñador de Windows Forms](http://go.microsoft.com/fwlink/?LinkId=203524)  
+-   [Foro Diseñador de Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Foros de Windows Forms](http://go.microsoft.com/fwlink/?LinkId=203523)  
+-   [Foros de Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>Omitir y continuar  
  Puede omitir la condición de error y seguir cargando el diseñador. La elección de esta acción puede dar lugar a un comportamiento inesperado. Por ejemplo, puede que no aparezcan controles en la superficie de diseño.  
   
 ## <a name="see-also"></a>Vea también  
- [Solución de problemas de desarrollo en tiempo de diseño](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
+ [Solución de problemas de desarrollo en tiempo de diseño](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
  [Solución de problemas relacionados con la creación de controles y componentes](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  [Desarrollar controles de Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Windows Forms Designer Error Messages](http://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2) (Mensajes de error del Diseñador de Windows Forms)
+ [Windows Forms Designer Error Messages](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2) (Mensajes de error del Diseñador de Windows Forms)

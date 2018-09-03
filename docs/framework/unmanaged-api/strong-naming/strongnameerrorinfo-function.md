@@ -21,11 +21,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332752"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481974"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo (Función)
 Obtiene el último código de error generado por una de las funciones de nombre seguro.  

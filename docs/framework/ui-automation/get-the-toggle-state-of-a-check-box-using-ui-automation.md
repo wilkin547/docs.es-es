@@ -12,21 +12,21 @@ ms.assetid: 84fc31a3-175f-4e93-90a0-dd29d89b77ce
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 4f0af8eac1238c377682bd4880efb89c4d9442db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b20173e0ec814237b45eb8e53135c109c31ddcb6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403206"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486992"
 ---
 # <a name="get-the-toggle-state-of-a-check-box-using-ui-automation"></a>Obtener el estado de alternancia de una casilla mediante UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Este tema muestra cómo usar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para obtener el estado de alternancia de un control.  
+ En este tema se muestra cómo usar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para obtener el estado de alternancia de un control.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se utiliza la <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> método de la <xref:System.Windows.Automation.AutomationElement> clase para obtener un <xref:System.Windows.Automation.TogglePattern> de objetos de un control y devolver sus <xref:System.Windows.Automation.ToggleState> propiedad.  
+ Este ejemplo se usa el <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> método de la <xref:System.Windows.Automation.AutomationElement> clase para obtener un <xref:System.Windows.Automation.TogglePattern> de objetos de un control y devolver su <xref:System.Windows.Automation.ToggleState> propiedad.  
   
  [!code-csharp[NavigatingWithTreeWalker#1200](../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigatingWithTreeWalker/CSharp/ClientClass.cs#1200)]
  [!code-vb[NavigatingWithTreeWalker#1200](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigatingWithTreeWalker/visualbasic/clientclass.vb#1200)]

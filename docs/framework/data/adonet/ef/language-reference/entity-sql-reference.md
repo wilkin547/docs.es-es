@@ -2,12 +2,12 @@
 title: Referencia de Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: d6b40d0c1662e18ed83c58bfdde7b6dac65220dd
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: ae0aec999d30d099467be690b8920d1413b564f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39221054"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487424"
 ---
 # <a name="entity-sql-reference"></a>Referencia de Entity SQL
 
@@ -67,7 +67,7 @@ Los operadores lógicos prueban la veracidad de una condición. La expresión CA
 |[\! (NOT lógico)](not-entity-sql.md)|NOT lógico.|
 |[&#124;&#124;(OR lógico)](or-entity-sql.md)|OR lógico.|
 |[CASE](case-entity-sql.md)|Evalúa un conjunto de expresiones booleanas para determinar el resultado.|
-|[THEN](then-entity-sql.md)|El resultado de una [cuando](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) cláusula cuando se evalúa como true.|
+|[THEN](then-entity-sql.md)|El resultado de una [cuando](https://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) cláusula cuando se evalúa como true.|
 
 ## <a name="query-operators"></a>Operadores de consulta
 

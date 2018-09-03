@@ -2,12 +2,12 @@
 title: Configuración integrada
 ms.date: 03/30/2017
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-ms.openlocfilehash: 8488a753cb1c540d9c34d9bcf7b2a3112302a122
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e76c019d9fc1b416e6fa8175a70b5fd01d9ff53e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518625"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476123"
 ---
 # <a name="built-in-configuration"></a>Configuración integrada
 En este ejemplo se muestran el uso y la configuración del almacén de instancias de flujo de trabajo de SQL. El almacén de instancias de flujo de trabajo de SQL es una implementación basada en SQL de un almacén de instancias. Permite a una instancia guardar y cargar su estado en y desde una base de datos SQL Server o SQL Server Express.  
@@ -17,7 +17,7 @@ En este ejemplo se muestran el uso y la configuración del almacén de instancia
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a (página de descarga) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a (página de descarga) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
@@ -26,7 +26,7 @@ En este ejemplo se muestran el uso y la configuración del almacén de instancia
   
  Un host de servicio de flujo de trabajo autohospeda el flujo de trabajo de contador. El método `Main` del programa crea una instancia del host de servicio de flujo de trabajo que hospeda el flujo de trabajo de contador. Define los extremos bajo los que se puede alcanzar el flujo de trabajo de contador. Después, define el comportamiento del almacén de instancias de flujo de trabajo de SQL, que se utiliza para configurar el almacén de instancias de flujo de trabajo de SQL. A continuación, el programa crea un cliente que llama al método de inicio del flujo de trabajo de contador.  
   
- Una vez iniciado el programa, el contador inicia la cuenta automáticamente. Tenga en cuenta que la carga y configuración del almacén de instancias de flujo de trabajo de SQL puede tardar unos segundos. Para obtener más información sobre el almacén de instancias de flujo de trabajo, consulte [almacén de instancias de flujo de trabajo de SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
+ Una vez iniciado el programa, el contador inicia la cuenta automáticamente. Tenga en cuenta que la carga y configuración del almacén de instancias de flujo de trabajo de SQL puede tardar unos segundos. Para obtener más información sobre el almacén de instancias de flujo de trabajo, consulte [Store de instancia de flujo de trabajo de SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
   
  El ejemplo consta de dos partes:  
   
@@ -71,11 +71,11 @@ En este ejemplo se muestran el uso y la configuración del almacén de instancia
   
 3.  Si no dispone de privilegios de administrador, cree un inicio de sesión de SQL Server. Vaya a `Security`, **inicios de sesión**. Haga clic en **inicios de sesión** y crear un nuevo inicio de sesión.  
   
-4.  Agregue su usuario ACL al rol SQL. Abra **bases de datos**, **InstanceStore**, **seguridad**. Haga clic en **usuarios** y seleccione **nuevos usuarios**. Establecer el **nombre de inicio de sesión** al usuario creado en el paso anterior. Agregue el usuario a la pertenencia al rol de base de datos **System.Activities.DurableInstancing.InstanceStoreUsers** (y otros). Observe que el usuario ya podría existir (por ejemplo, el usuario dbo).  
+4.  Agregue su usuario ACL al rol SQL. Abra **bases de datos**, **InstanceStore**, **seguridad**. Haga clic en **usuarios** y seleccione **nuevos usuarios**. Establecer el **nombre de inicio de sesión** al usuario que creó en el paso anterior. Agregue el usuario a la pertenencia al rol de base de datos **System.Activities.DurableInstancing.InstanceStoreUsers** (y otros). Observe que el usuario ya podría existir (por ejemplo, el usuario dbo).  
   
 5.  Abra el archivo InstanceStore.sln en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] y compile la solución presionando CTRL+SHIFT+B.  
   
-6.  En [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], desplácese hasta el directorio del ejemplo \bin\Debug adecuado (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug), haga clic en InstanceStore.exe y seleccione **ejecutar como administrador**. Este ejemplo se debe ejecutar con privilegios de administrador porque abre una escucha del canal.  
+6.  En [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], desplácese hasta el directorio del ejemplo \bin\Debug adecuado (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug), haga clic con el botón secundario del mouse en InstanceStore.exe y seleccione **ejecutar como administrador**. Este ejemplo se debe ejecutar con privilegios de administrador porque abre una escucha del canal.  
   
 7.  Si creó el almacén de instancias en una base de datos distinta de una instalación local de SQL Server Express debe actualizar la cadena de conexión a la base de datos (`const string ConnectionString` en el archivo Program.cs del proyecto InstanceStore1 y el atributo `connectionString` en el archivo App.config del proyecto InstanceStore2) del ejemplo y recompilarlo.  
   
@@ -87,11 +87,11 @@ En este ejemplo se muestran el uso y la configuración del almacén de instancia
   
 3.  Haga clic en **Instances** y seleccione **seleccionar 1000 filas superiores**.  
   
-4.  Observe que hay una entrada nueva y que la **la expiración de bloqueo** cambia cada 5 segundos (haga clic en la barra de tareas **Execute** botón para actualizar la consulta). Esto es una consecuencia de establecer el **período de renovación del bloqueo de Host** a 5.  
+4.  Observe que hay una nueva entrada y que la **expiración de bloqueo** cambia cada 5 segundos, (haga clic en la barra de tareas **Execute** botón para actualizar la consulta). Esto es una consecuencia de establecer el **período de renovación del bloqueo de Host** a 5.  
   
-5.  Una vez que la cuenta se completa, observe que se quita la entrada de la tabla de instancias. Esta es una consecuencia de configuración **acción de finalización de la instancia** a **DeleteAll**.  
+5.  Una vez que la cuenta se completa, observe que se quita la entrada de la tabla de instancias. Esto es una consecuencia de establecer **acción de finalización de la instancia** a **DeleteAll**.  
   
-6.  Presione ENTRAR para finalizar la aplicación de host de flujo de trabajo y observe que la **LockOwnersTable** se elimina.  
+6.  Presione ENTRAR para finalizar la aplicación de host de flujo de trabajo y observe que el **LockOwnersTable** se elimina.  
   
 #### <a name="to-uninstall-the-sample"></a>Para desinstalar el ejemplo  
   
@@ -102,9 +102,9 @@ En este ejemplo se muestran el uso y la configuración del almacén de instancia
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de persistencia y el hospedaje de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

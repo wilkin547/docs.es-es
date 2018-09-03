@@ -19,11 +19,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 54f7dcd7de28e8aaa5376bb4ddd67fd53518511e
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257957"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481616"
 ---
 # <a name="string-data-type-visual-basic"></a>String (Tipo de datos, Visual Basic)
 Contiene secuencias de puntos de código (2 bytes) de 16 bits sin signo de ese intervalo de valor comprendido entre 0 y 65535. Cada *punto de código*, o código de carácter representa un único carácter Unicode. Puede contener una cadena de 0 a dos mil millones (2 ^ 31) caracteres Unicode.  

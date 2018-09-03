@@ -7,12 +7,12 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview (using designer)
 - print preview [Windows Forms], default interface (using designer)
 ms.assetid: bfb5a3d7-021e-44f4-90f3-d435467f51d6
-ms.openlocfilehash: a6fc2f5127debaa54fe195d935da9b61cdc0902b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f35343ca06666580d744b4d6e0fa954afedbd9c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538384"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480148"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog (Control, formularios Windows Forms)
 El control `PrintPreviewDialog` de Windows Forms es un cuadro de diálogo preconfigurado que se utiliza para mostrar cómo aparecerá un documento cuando se imprima. Utilícelo en la aplicación basada en Windows como una solución sencilla, en lugar de configurar su propio cuadro de diálogo. El control contiene botones para imprimir, acercar, mostrar una o varias páginas y cerrar el cuadro de diálogo.  
@@ -32,7 +32,7 @@ El control `PrintPreviewDialog` de Windows Forms es un cuadro de diálogo precon
  [Controles que se usan en Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
- [Código esencial para los cuadros de diálogo de Windows Forms](http://go.microsoft.com/fwlink/?LinkID=102575)  
+ [Código esencial para los cuadros de diálogo de Windows Forms](https://go.microsoft.com/fwlink/?LinkID=102575)  
  Describe los componentes y controles de cuadros de diálogo de Windows Forms y el código necesario para ejecutar sus funciones básicas. (artículo técnico de MSDN Online Library)  
   
  [Controles y componentes de cuadros de diálogo](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  

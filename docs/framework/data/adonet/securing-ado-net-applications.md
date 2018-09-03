@@ -2,12 +2,12 @@
 title: Proteger aplicaciones de ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: efe25082b4e4de9170179ebeff6a1dca8f67446c
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e5b99621989e9f14c6c734a497f210780f3c7e57
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728607"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481083"
 ---
 # <a name="securing-adonet-applications"></a>Proteger aplicaciones de ADO.NET
 Para escribir una aplicación de ADO.NET segura es necesario algo más que evitar los errores de codificación más comunes, como no validar los datos proporcionados por el usuario. Una aplicación que tiene acceso a datos tiene muchos puntos débiles potenciales que un agresor puede aprovechar para obtener, manipular o destruir datos confidenciales. Por eso es importante comprender todos los aspectos de la seguridad, desde el proceso de modelo de amenazas durante la fase de diseño de su aplicación hasta la implementación y el posterior mantenimiento.  
@@ -42,10 +42,10 @@ Para escribir una aplicación de ADO.NET segura es necesario algo más que evita
  [Seguridad](../../../../docs/standard/security/index.md)  
  Contiene vínculos a temas en los que describen todos los aspectos de la seguridad en .NET.  
   
- [Herramientas de seguridad](http://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
+ [Herramientas de seguridad](https://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
  Herramientas de .NET Framework para proteger y administrar las directivas de seguridad.  
   
- [Recursos para crear aplicaciones seguras](http://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [Recursos para crear aplicaciones seguras](https://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
  Proporciona vínculos a temas para crear aplicaciones seguras.  
   
  [Bibliografía sobre seguridad](/visualstudio/ide/security-bibliography)  
@@ -53,4 +53,4 @@ Para escribir una aplicación de ADO.NET segura es necesario algo más que evita
   
 ## <a name="see-also"></a>Vea también  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 1d2972ccef6829a2b7a052ba30258086443bd833
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 430959d50bf66801da2e1203496e77ad0f291a0e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398630"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485887"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorización basada en notificaciones con WIF
 En una aplicación de usuario de confianza, la autorización determina los recursos a los que una identidad autenticada puede tener acceso y las operaciones que puede realizar en estos. Una autorización incorrecta o débil da lugar a la revelación de información y a la alteración de los datos. En este tema se describen distintos enfoques para implementar la autorización para aplicaciones web y servicios Web ASP.NET compatibles con notificaciones mediante Windows Identity Foundation (WIF) y un servicio de token de seguridad (STS), por ejemplo, Microsoft Azure Access Control Service (ACS).  
@@ -43,7 +43,7 @@ En una aplicación de usuario de confianza, la autorización determina los recur
   
 -   **Durante la emisión de tokens**. Cuando se autentica un usuario, tanto el STS del proveedor de identidad como un proveedor de federación, por ejemplo, Microsoft Azure Access Control Service (ACS), pueden emitir la notificación de rol.  
   
--   **Al transformar notificaciones arbitrarias en notificaciones de tipo de rol mediante ClaimsAuthenticationManager**. ClaimsAuthenticationManager es un componente que se distribuye como parte de WIF. Permite interceptar las solicitudes al iniciar una aplicación, inspeccionar tokens y transformarlos mediante la adición, cambio o eliminación de notificaciones. Para obtener más información sobre cómo usar ClaimsAuthenticationManager para transformar notificaciones, consulte [How To: Implement basado en roles Access Control (RBAC) con notificaciones compatible con ASP.NET aplicación mediante WIF y ACS en](http://go.microsoft.com/fwlink/?LinkID=247445) (http://go.microsoft.com/fwlink/?LinkID=247444).  
+-   **Al transformar notificaciones arbitrarias en notificaciones de tipo de rol mediante ClaimsAuthenticationManager**. ClaimsAuthenticationManager es un componente que se distribuye como parte de WIF. Permite interceptar las solicitudes al iniciar una aplicación, inspeccionar tokens y transformarlos mediante la adición, cambio o eliminación de notificaciones. Para obtener más información acerca de cómo usar ClaimsAuthenticationManager para transformar notificaciones, consulte [How To: Implement basado en rol Access Control (RBAC) de notificaciones compatible con aplicaciones ASP.NET mediante WIF y ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
   
 -   **Al asignar notificaciones arbitrarias a un tipo de rol mediante la sección de configuración samlSecurityTokenRequirement**: enfoque declarativo donde la transformación de las notificaciones se lleva a cabo únicamente a través de la configuración sin necesidad de codificación.  
   
@@ -61,4 +61,4 @@ En una aplicación de usuario de confianza, la autorización determina los recur
   
 5.  El acceso se concede si el resultado es true y se deniega si es false. Por ejemplo, la regla podría ser que el usuario tenga 21 años o más y resida en el estado de Washington.  
   
- <xref:System.Security.Claims.ClaimsAuthorizationManager> es útil para exteriorizar la lógica de decisión de la autorización basada en notificaciones de las aplicaciones. ClaimsAuthorizationManager es un componente de WIF que se distribuye como parte de .NET 4.5. ClaimsAuthorizationManager permite interceptar solicitudes entrantes e implementar la lógica deseada para tomar decisiones de autorización en función de las notificaciones entrantes. Esto es importante cuando es necesario cambiar la lógica de autorización. En ese caso, el uso de ClaimsAuthorizationManager no afectará a la integridad de la aplicación y se reducirá la probabilidad de un error de aplicación como resultado del cambio. Para más información sobre cómo usar ClaimsAuthorizationManager para implementar el control de acceso basado en notificaciones, vea [Procedimiento: Implementación de autorización de notificaciones en aplicaciones ASP.Net compatible con notificaciones mediante WIF y ACS](http://go.microsoft.com/fwlink/?LinkID=247446).
+ <xref:System.Security.Claims.ClaimsAuthorizationManager> es útil para exteriorizar la lógica de decisión de la autorización basada en notificaciones de las aplicaciones. ClaimsAuthorizationManager es un componente de WIF que se distribuye como parte de .NET 4.5. ClaimsAuthorizationManager permite interceptar solicitudes entrantes e implementar la lógica deseada para tomar decisiones de autorización en función de las notificaciones entrantes. Esto es importante cuando es necesario cambiar la lógica de autorización. En ese caso, el uso de ClaimsAuthorizationManager no afectará a la integridad de la aplicación y se reducirá la probabilidad de un error de aplicación como resultado del cambio. Para más información sobre cómo usar ClaimsAuthorizationManager para implementar el control de acceso basado en notificaciones, vea [Procedimiento: Implementación de autorización de notificaciones en aplicaciones ASP.Net compatible con notificaciones mediante WIF y ACS](https://go.microsoft.com/fwlink/?LinkID=247446).

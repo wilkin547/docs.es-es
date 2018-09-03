@@ -2,19 +2,19 @@
 title: Asignar relaciones implícitas entre elementos de esquema anidados
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 1bce0c2815ac94787055794942807777232df295
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3c0b5356479d31a3caad8438618e7cf7dc4e10e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763633"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485578"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Asignar relaciones implícitas entre elementos de esquema anidados
 Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos complejos anidados dentro de otros. En este caso, el proceso de asignación aplica la asignación predeterminada y crea lo siguiente en el <xref:System.Data.DataSet>:  
   
 -   Una tabla para cada uno de los tipos complejos (primario y secundario).  
   
--   Si no existe ninguna restricción única en el elemento primario, una columna de clave principal adicional por cada definición de tabla denominada *TableName*_Id donde *TableName* es el nombre de la tabla primaria.  
+-   Si no existe ninguna restricción única en el elemento primario, una columna de clave principal adicional por cada definición de tabla denominado *TableName*_Id donde *TableName* es el nombre de la tabla primaria.  
   
 -   Una restricción primary key en la tabla primaria que identifica la columna adicional como clave principal (estableciendo la **IsPrimaryKey** propiedad **True**). La restricción recibe el nombre Constraint*#* donde *#* es 1, 2, 3 y así sucesivamente. Por ejemplo, el nombre predeterminado de la primera restricción es Constraint1.  
   
@@ -22,7 +22,7 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
   
 -   Una relación de datos entre las tablas primaria y secundaria.  
   
- En el ejemplo siguiente se muestra un esquema donde **OrderDetail** es un elemento secundario de **orden**.  
+ El ejemplo siguiente muestra un esquema donde **OrderDetail** es un elemento secundario de **orden**.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,16 +54,16 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
 </xs:schema>  
 ```  
   
- El proceso de asignación de esquema XML crea lo siguiente en el **conjunto de datos**:  
+ El proceso de asignación de esquema XML crea lo siguiente en el **DataSet**:  
   
--   Un **orden** y **OrderDetail** tabla.  
+-   Un **orden** y un **OrderDetail** tabla.  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   Una restricción unique en la **orden** tabla. Tenga en cuenta que la **IsPrimaryKey** propiedad está establecida en **True**.  
+-   Una restricción unique en la **orden** tabla. Tenga en cuenta que el **IsPrimaryKey** propiedad está establecida en **True**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
     IsPrimaryKey: True  
     ```  
   
--   Una restricción foreign key en la **OrderDetail** tabla.  
+-   Una restricción foreign key en el **OrderDetail** tabla.  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
     RelatedColumns: Order_Id   
     ```  
   
--   Una relación entre la **orden** y **OrderDetail** tablas. El **Nested** propiedad para esta relación se establece en **True** porque el **orden** y **OrderDetail** elementos están anidados en el esquema .  
+-   Una relación entre el **orden** y **OrderDetail** tablas. El **Nested** propiedad para esta relación se establece en **True** porque el **orden** y **OrderDetail** elementos están anidados en el esquema .  
   
     ```  
     ParentTable: Order  
@@ -100,4 +100,4 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
 ## <a name="see-also"></a>Vea también  
  [Generación de relaciones de objetos DataSet en un esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [Asignación de restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

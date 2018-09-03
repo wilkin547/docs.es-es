@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: a827eeeca3f9d2719b4467bd19e66b3a40eb2c1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e38be762fbfdaccc7d5ba01a1f24f5f3086ca8bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520466"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480423"
 ---
 # <a name="application-settings-overview"></a>Introducción a la configuración de la aplicación
 En este tema se describe cómo crear y almacenar los datos de configuración en nombre de la aplicación y sus usuarios.  
@@ -53,7 +53,7 @@ En este tema se describe cómo crear y almacenar los datos de configuración en 
  <xref:System.Configuration.LocalFileSettingsProvider>  
  <xref:System.Configuration.IPersistComponentSettings>  
  [Validar la configuración de la aplicación](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
- [Administrar la configuración de la aplicación (.NET)](http://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
+ [Administrar la configuración de la aplicación (.NET)](https://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
  [Leer valores de configuración en tiempo de ejecución con C#](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
  [Utilizar valores de configuración de aplicación y de usuario](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
  [Arquitectura de configuración de la aplicación](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  

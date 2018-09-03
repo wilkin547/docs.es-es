@@ -2,12 +2,12 @@
 title: Conjuntos de resultados activos múltiples (MARS)
 ms.date: 03/30/2017
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
-ms.openlocfilehash: e7c3f1e18980d6b34e9261cda000b6e77ae1c53b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67df210fa48c1b72323177b627b17e537f9fb180
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358434"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480758"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Conjuntos de resultados activos múltiples (MARS)
 Varios conjuntos de resultados activos (MARS) es una característica que permite la ejecución de varios lotes en una sola conexión. En las versiones anteriores, sólo se podía ejecutar un lote cada vez con respecto a una sola conexión. La ejecución de varios lotes con MARS no implica la ejecución simultánea de operaciones.  
@@ -25,4 +25,4 @@ Varios conjuntos de resultados activos (MARS) es una característica que permite
   
 ## <a name="see-also"></a>Vea también  
  [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Seguimiento de variable y argumento
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: f1938da55d2e1d88c88f83ff75f357e23f1eb81f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45ed3761cd7ead82650023b93a2f32a43e847339
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516989"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481497"
 ---
 # <a name="variable-and-argument-tracking"></a>Seguimiento de variable y argumento
 Al realizar el seguimiento de la ejecución de un flujo de trabajo, a menudo resulta útil extraer los datos. Esto proporciona contexto adicional al tener acceso a un registro de seguimiento posterior a la ejecución. En [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], puede extraer cualquier variable o argumento visibles dentro del ámbito de cualquier actividad en un flujo de trabajo que use el seguimiento. Los perfiles de seguimiento facilitan la extracción de datos.  
@@ -17,7 +17,7 @@ Al realizar el seguimiento de la ejecución de un flujo de trabajo, a menudo res
   
 -   Si el nombre de variable especifica una variable, el seguimiento busca la variable en la actividad actual a la que se está realizando el seguimiento y en las actividades primarias. Se busca la variable en el ámbito de actividad actual y en el ámbito primario.  
   
--   Si las variables que se va a extraer se especifican con nombre = "*", se extrae todas las variables dentro de la actividad actual que se está realizando un seguimiento. En este caso, las variables que estén dentro del ámbito pero que estén definidas en actividades primarias no se extraen.  
+-   Si las variables que se va a extraer se especifican con nombre = "*", se extraerán todas las variables dentro de la actividad actual se realiza el seguimiento. En este caso, las variables que estén dentro del ámbito pero que estén definidas en actividades primarias no se extraen.  
   
  Al extraer los argumentos, los argumentos extraídos dependen del estado de la actividad. Cuando el estado de una actividad es Executing, solo están disponibles para su extracción `InArguments`. Para cualquier otro estado de actividad (Closed, Faulted, Canceled), todos los argumentos, tanto InArguments como OutArguments, estarán disponibles para la extracción.  
   
@@ -47,5 +47,5 @@ Al realizar el seguimiento de la ejecución de un flujo de trabajo, a menudo res
 3.  En el caso de seguimiento personalizado, los participantes se aseguran de que el código WF no divulgue información confidencial que esté almacenada en variables o argumentos.  
   
 ## <a name="see-also"></a>Vea también  
- [Supervisión de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Supervisión de aplicaciones con App Fabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

@@ -12,30 +12,30 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 1a2a25f2e7eaa6618c0bf535a34f7dc6a28d51fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d67d9b204c316dce5f3818496d791ed4c1b352f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533691"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478050"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Cómo: Disponer objetos en capas en formularios Windows Forms
-Al crear una interfaz de usuario complejas o trabajar con un formulario de múltiples documentos (MDI) de la interfaz, que a menudo desea capas controles y formularios secundarios para crear interfaces de usuario (UI) más complejas. Para mover y realizar un seguimiento de los controles y ventanas en el contexto de un grupo, manipular su orden z. *Orden Z* constituye las capas visuales de controles en un formulario de eje z del formulario (profundidad). La ventana en la parte superior del orden z superpone a todas las demás ventanas. Todas las demás ventanas superponen a la ventana en la parte inferior del orden z.  
+Al crear una interfaz de usuario complejas o trabajar con un formulario de múltiples documentos (MDI) de la interfaz, que a menudo desea capas controles y formularios secundarios para crear interfaces de usuario (UI) más complejas. Para mover y realizar un seguimiento de los controles y ventanas dentro del contexto de un grupo, manipular su orden z. *Orden Z* es el diseño visual de los controles en un formulario de eje z del formulario (intensidad). La ventana en la parte superior del orden z se superpone a todas las demás ventanas. Todas las demás ventanas superponen a la ventana en la parte inferior del orden z.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-layer-controls-at-design-time"></a>Para superponer los controles en tiempo de diseño  
   
-1.  Seleccione un control que desee disponer en capas.  
+1.  Seleccione un control que desee en capas.  
   
-2.  En el **formato** menú, elija **orden**y, a continuación, haga clic en **Traer al frente** o **hacia atrás**.  
+2.  En el **formato** menú, elija **orden**y, a continuación, haga clic en **Traer al frente** o **enviar al fondo**.  
   
-### <a name="to-layer-controls-programmatically"></a>Disponer en capas los controles mediante programación  
+### <a name="to-layer-controls-programmatically"></a>En capas los controles mediante programación  
   
 -   Use la <xref:System.Windows.Forms.Control.BringToFront%2A> y <xref:System.Windows.Forms.Control.SendToBack%2A> métodos para manipular el orden z de los controles.  
   
-     Por ejemplo, si un <xref:System.Windows.Forms.TextBox> control `txtFirstName`, está debajo de la directiva otro control y desea tener en la parte superior, utilice el código siguiente:  
+     Por ejemplo, si un <xref:System.Windows.Forms.TextBox> control, `txtFirstName`, está debajo de la directiva otro control y desea que en la parte superior, use el siguiente código:  
   
     ```vb  
     txtFirstName.BringToFront()  
@@ -50,7 +50,7 @@ Al crear una interfaz de usuario complejas o trabajar con un formulario de múlt
     ```  
   
 > [!NOTE]
->  Formularios Windows Forms admiten *contención de controles*. Contención de controles permite colocar una serie de controles dentro de un control contenedor, como un número de <xref:System.Windows.Forms.RadioButton> controla dentro de un <xref:System.Windows.Forms.GroupBox> control. A continuación, puede crear niveles en los controles en el control contenedor. Mover el cuadro de grupo mueve a los controles, porque están contenidos dentro de él.  
+>  Los formularios Windows Forms admiten *contención de controles*. Contención de controles implica la colocación de una serie de controles dentro de un control contenedor, como un número de <xref:System.Windows.Forms.RadioButton> controla dentro de un <xref:System.Windows.Forms.GroupBox> control. A continuación, puede agregar los controles dentro del control contenedor. Mover el grupo mueve los controles, porque están contenidos dentro de él.  
   
 ## <a name="see-also"></a>Vea también  
  [Controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/index.md)  

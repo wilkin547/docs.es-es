@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: e55e28fd3acdb145e03f0916e3681e95cc7a041a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755388"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486547"
 ---
 # <a name="childviews-and-relations"></a>Objetos ChildView y Relation
-Si existe una relación entre tablas de un <xref:System.Data.DataSet>, puede crear una <xref:System.Data.DataView> que contenga filas de la tabla secundaria relacionada mediante el método <xref:System.Data.DataRowView.CreateChildView%2A> de la <xref:System.Data.DataRowView> para las filas de la tabla primaria. Por ejemplo, el código siguiente muestra **categorías** y sus relacionados **productos** en orden alfabético por **CategoryName** y **ProductName** .  
+Si existe una relación entre tablas de un <xref:System.Data.DataSet>, puede crear una <xref:System.Data.DataView> que contenga filas de la tabla secundaria relacionada mediante el método <xref:System.Data.DataRowView.CreateChildView%2A> de la <xref:System.Data.DataRowView> para las filas de la tabla primaria. Por ejemplo, el siguiente código muestra **categorías** y sus relacionados **productos** en orden alfabético por **CategoryName** y **ProductName** .  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -78,4 +78,4 @@ foreach (DataRowView catDRV in catView)
  <xref:System.Data.DataView>  
  <xref:System.Data.DataRowView>  
  [Objetos DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

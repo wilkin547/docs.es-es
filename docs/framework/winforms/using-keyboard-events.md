@@ -9,15 +9,15 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 706b4d87ddbb6afadfd90af866520e6feaa58ca7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c6059e5d0957de09dd2c4832573c784935eb510
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542267"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484914"
 ---
 # <a name="using-keyboard-events"></a>Utilizar eventos de teclado
-La mayoría de los programas de Windows Forms procesan la entrada de teclado controlando los eventos de teclado. Este ofrece una introducción a los eventos de teclado, incluidos detalles sobre cuándo usar cada evento y los datos que se proporcionan para cada evento.  Consulte también [información general sobre controladores de eventos (formularios Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [información general sobre eventos (formularios Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
+La mayoría de los programas de Windows Forms procesan la entrada de teclado controlando los eventos de teclado. Este ofrece una introducción a los eventos de teclado, incluidos detalles sobre cuándo usar cada evento y los datos que se proporcionan para cada evento.  Consulte también [información general sobre controladores de eventos (formularios Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [información general sobre eventos (formularios Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
   
 ## <a name="keyboard-events"></a>Eventos de teclado  
  Windows Forms proporciona dos eventos que se producen cuando el usuario presiona una tecla del teclado y un evento cuando el usuario suelta una tecla del teclado:  
@@ -28,7 +28,7 @@ La mayoría de los programas de Windows Forms procesan la entrada de teclado con
   
 -   El evento <xref:System.Windows.Forms.Control.KeyUp> se produce una vez cuando el usuario suelta una tecla.  
   
- Cuando un usuario presiona una tecla, Windows Forms determina qué evento se genera en función de si el mensaje del teclado especifica una tecla de carácter o una tecla física. Para obtener más información acerca de los caracteres y teclas físicas, consulte [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md).  
+ Cuando un usuario presiona una tecla, Windows Forms determina qué evento se genera en función de si el mensaje del teclado especifica una tecla de carácter o una tecla física. Para obtener más información acerca de los caracteres y teclas físicas, consulte [cómo funciona la entrada de teclado](../../../docs/framework/winforms/how-keyboard-input-works.md).  
   
  En la tabla siguiente se describen los tres eventos de teclado.  
   

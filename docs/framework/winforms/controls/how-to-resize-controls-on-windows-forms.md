@@ -9,26 +9,26 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 1f9db293cdfbba0be960513034cfe122d80d66bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbec87c0746962396a3088751803a6091ecfcb48
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533931"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480096"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Cómo: Cambiar el tamaño de los controles en formularios Windows Forms
-Puede cambiar el tamaño de los controles individuales, y puede cambiar el tamaño varios controles del mismo o diferente tipo, como <xref:System.Windows.Forms.Button> y <xref:System.Windows.Forms.GroupBox> controles.  
+Puede cambiar el tamaño de los controles individuales, y puede cambiar el tamaño de varios controles del tipo iguales o distintos, como <xref:System.Windows.Forms.Button> y <xref:System.Windows.Forms.GroupBox> controles.  
   
 ### <a name="to-resize-a-control"></a>Para cambiar el tamaño de un control  
   
-1.  Haga clic en el control para cambiar de tamaño y arrastre uno de los controladores de tamaño de ocho.  
+1.  Haga clic en el control para cambiar de tamaño y arrastrar uno de los controladores de tamaño de ocho.  
   
     > [!NOTE]
-    >  Seleccione el control y presione las teclas de dirección mientras mantiene presionada la tecla MAYÚS para cambiar el tamaño del control un píxel a la vez. Presione las teclas de flecha hacia abajo o hacia la derecha manteniendo presionadas las teclas MAYÚS y CTRL para cambiar el tamaño del control en incrementos grandes.  
+    >  Seleccione el control y presione las teclas de dirección mientras mantiene presionada la tecla MAYÚS para cambiar el tamaño del control un píxel a la vez. Presione las teclas de flecha abajo o hacia la derecha mientras mantiene presionadas las teclas MAYÚS y CTRL para cambiar el tamaño del control en incrementos grandes.  
   
 ### <a name="to-resize-multiple-controls-on-a-form"></a>Para cambiar el tamaño de varios controles en un formulario  
   
-1.  Mantenga presionada la tecla CTRL o MAYÚS y seleccione los controles que desea cambiar el tamaño. El tamaño del primer control que seleccione se utiliza para los demás controles.  
+1.  Mantenga presionada la tecla CTRL o MAYÚS y seleccione los controles que desee cambiar el tamaño. El tamaño del primer control que seleccione se usa para otros controles.  
   
 2.  En el **formato** menú, elija **Igualar tamaño**y seleccione una de las cuatro opciones. Los tres primeros comandos cambian las dimensiones de los controles para que coincida con el primer control seleccionado.  
   
@@ -38,4 +38,4 @@ Puede cambiar el tamaño de los controles individuales, y puede cambiar el tama�
  [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
  [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  [Controles de formularios Windows Forms por función](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [Cómo: cambiar el tamaño de formularios Windows Forms mediante el diseñador](http://msdn.microsoft.com/library/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)
+ [Cómo: cambiar el tamaño mediante el Diseñador de formularios de Windows](https://msdn.microsoft.com/library/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)

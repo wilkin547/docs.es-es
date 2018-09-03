@@ -10,17 +10,17 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 0fe20ffa19d14dcaecac30198c5c0e2d19fb9fa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556918"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482981"
 ---
 # <a name="control-styles-and-templates"></a>Estilos y plantillas de controles
-Los controles de Windows Presentation Foundation (WPF) tienen un <xref:System.Windows.Controls.ControlTemplate> que contiene el árbol visual de ese control. Puede cambiar la estructura y la apariencia de un control modificando el <xref:System.Windows.Controls.ControlTemplate> de ese control. No hay ninguna manera de reemplazar sólo una parte del árbol visual de un control; Para cambiar el árbol visual de un control debe establecer el <xref:System.Windows.Controls.Control.Template%2A> propiedad del control a su nueva y completa <xref:System.Windows.Controls.ControlTemplate>.  
+Los controles en Windows Presentation Foundation (WPF) tienen un <xref:System.Windows.Controls.ControlTemplate> que contiene el árbol visual de ese control. Puede cambiar la estructura y la apariencia de un control modificando el <xref:System.Windows.Controls.ControlTemplate> de ese control. No hay ninguna forma de reemplazar solo la parte del árbol visual de un control; Para cambiar el árbol visual de un control debe establecer el <xref:System.Windows.Controls.Control.Template%2A> propiedad del control a su nueva y completa <xref:System.Windows.Controls.ControlTemplate>.  
   
- Los temas de escritorio determinan qué diccionario de recursos se usa. Para obtener los diccionarios de recursos de los temas de escritorio, consulte [Default WPF Themes ](http://go.microsoft.com/fwlink/?LinkID=158252) (Temas de WPF predeterminados).  
+ Los temas de escritorio determinan qué diccionario de recursos se usa. Para obtener los diccionarios de recursos de los temas de escritorio, consulte [Default WPF Themes ](https://go.microsoft.com/fwlink/?LinkID=158252) (Temas de WPF predeterminados).  
   
  En la tabla siguiente se describen los nombres de archivo del diccionario de recursos y sus correspondientes temas de escritorio.  
   
@@ -50,18 +50,18 @@ Los controles de Windows Presentation Foundation (WPF) tienen un <xref:System.Wi
  [ListView Styles and Templates](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md) (Estilos y plantillas de ListView)  
  [Menu Styles and Templates](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md) (Estilos y plantillas de Menu)  
  [NavigationWindow Styles and Templates](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md) (Estilos y plantillas de NavigationWindow)  
- [Plantillas y estilos PasswordBox](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
+ [PasswordBox estilos y plantillas](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
  [ProgressBar Styles and Templates](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md) (Estilos y plantillas de ProgressBar)  
  [RadioButton Styles and Templates](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md) (Estilos y plantillas de RadioButton)  
- [Plantillas y estilos de RepeatButton](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
+ [RepeatButton estilos y plantillas](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
  [ScrollBar Styles and Templates](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md) (Estilos y plantillas de ScrollBar)  
  [ScrollViewer Styles and Templates](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md) (Estilos y plantillas de ScrollViewer)  
  [Slider Styles and Templates](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md) (Estilos y plantillas de Slider)  
  [StatusBar Styles and Templates](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md) (Estilos y plantillas de StatusBar)  
  [TabControl Styles and Templates](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md) (Estilos y plantillas de TabControl)  
  [TextBox Styles and Templates](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md) (Estilos y plantillas de TextBox Styles)  
- [Thumb estilos y plantillas](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [Plantillas y estilos de control ToggleButton](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
+ [Plantillas y estilos de control de posición](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
+ [ToggleButton estilos y plantillas](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [ToolBar Styles and Templates](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md) (Estilos y plantillas de ToolBar)  
  [ToolTip Styles and Templates](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md) (Estilos y plantillas de ToolTip)  
  [TreeView Styles and Templates](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md) (Estilos y plantillas de TreeView)  

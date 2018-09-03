@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497018"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480409"
 ---
 # <a name="queues-overview"></a>Información general de colas
-En esta sección se presentan los conceptos generales y básicos detrás de la comunicación puesta en la cola. Las secciones siguientes entran en detalles acerca de cómo los conceptos de puesta en cola descritos aquí se manifiestan en Windows Communication Foundation (WCF).  
+En esta sección se presentan los conceptos generales y básicos detrás de la comunicación puesta en la cola. Secciones subsiguientes no entran en detalles acerca de cómo los conceptos de puesta en cola descritos aquí se manifiestan en Windows Communication Foundation (WCF).  
   
 ## <a name="basic-queuing-concepts"></a>Conceptos de puesta en cola básicos  
  Cuando se diseña una aplicación distribuida, es importante elegir el transporte adecuado para la comunicación entre los servicios y clientes. Varios factores afectan el tipo de transporte que se va a usar. Un factor importante —aislamiento entre el servicio, el cliente y el transporte— determina el uso de un transporte en cola o un transporte directo, como TCP o HTTP. Debido a la naturaleza de los transportes directos como TCP y HTTP, la comunicación se detiene por completo si el servicio o el cliente para de funcionar o si se produce un error en la red. El servicio, el cliente y la red deben estar en ejecución al mismo tiempo para que funcione la aplicación. Los transportes puestos en cola proporcionan aislamiento, lo cual significa que si hay un error en el servicio o cliente o si los vínculos de comunicaciones fallan entre ellos, el cliente y servicio pueden continuar funcionando.  
@@ -27,7 +27,7 @@ En esta sección se presentan los conceptos generales y básicos detrás de la c
   
  Cuando un cliente envía un mensaje a una cola, envía el mensaje a la cola de destino, que es la cola administrada por el administrador de cola del servicio. El administrador de cola del cliente envía el mensaje a una cola de transmisión (o de salida). La cola de transmisión es una cola del administrador de cola del cliente que almacena los mensajes para transmitirlos a la cola de destino. A continuación, el administrador de cola busca una ruta de acceso para el administrador de cola que posee la cola de destino y transfiere el mensaje a dicha cola. Para garantizar la comunicación de confianza, los administradores de cola implementan un protocolo de transferencia de confianza para evitar la pérdida de datos. El administrador de la cola de destino acepta los mensajes enviados a las colas de destino que posee y almacena los mensajes. El servicio solicita leer de la cola de destino y, en este momento, el administrador de cola entrega el mensaje a la aplicación destino. La ilustración siguiente muestra la comunicación entre las cuatro partes.  
   
- ![Diagrama de aplicaciones en la cola](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "figura de cola distribuida")  
+ ![Diagrama de aplicaciones en la cola](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "figura cola distribuida")  
   
  Comunicación en cola en un escenario de implementación habitual  
   
@@ -81,6 +81,6 @@ En esta sección se presentan los conceptos generales y básicos detrás de la c
  [Comunicación en cola volátil](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
  [Windows Communication Foundation a Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [Instalación de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Ejemplos de enlace de integración de puesta en cola de mensajes](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [Integración de Message Queuing ejemplos de enlace](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [Message Queuing a Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [Seguridad de mensajes mediante Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

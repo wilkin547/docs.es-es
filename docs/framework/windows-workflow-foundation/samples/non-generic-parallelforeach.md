@@ -2,17 +2,17 @@
 title: ParallelForEach no genérico
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
-ms.openlocfilehash: 0bdaaac04162cf065d847f5071ba21953f042223
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70d5de587dda3cb61205a8d77f2173df9b93498b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519394"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480851"
 ---
 # <a name="non-generic-parallelforeach"></a>ParallelForEach no genérico
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] incluye en su cuadro de herramientas un conjunto de actividades de flujo de Control, incluidos <xref:System.Activities.Statements.ParallelForEach%601>, que permite recorrer en iteración <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` colecciones.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] se incluye en el cuadro de herramientas de un conjunto de actividades de flujo de Control, incluidos <xref:System.Activities.Statements.ParallelForEach%601>, que permite recorrer <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` colecciones.  
   
- <xref:System.Activities.Statements.ParallelForEach%601> requiere su <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> propiedad que se va a ser de tipo <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`. Esto impide a los usuarios recorrer en iteración estructuras de datos que implementan <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` interfaz (por ejemplo, <xref:System.Collections.ArrayList>). La versión no genérica de <xref:System.Activities.Statements.ParallelForEach%601> supera este requisito, a costa de una mayor complejidad del tiempo de ejecución para garantizar la compatibilidad de los tipos de los valores de la colección.  
+ <xref:System.Activities.Statements.ParallelForEach%601> requiere su <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> propiedad sea de tipo <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`. Esto impide que los usuarios recorrer en iteración las estructuras de datos que implementan <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` interfaz (por ejemplo, <xref:System.Collections.ArrayList>). La versión no genérica de <xref:System.Activities.Statements.ParallelForEach%601> supera este requisito, a costa de una mayor complejidad del tiempo de ejecución para garantizar la compatibilidad de los tipos de los valores de la colección.  
   
  En este ejemplo se muestra cómo implementar una actividad <xref:System.Activities.Statements.ParallelForEach%601> no genérica y su diseñador. Esta actividad se puede utilizar para recorrer en iteración <xref:System.Collections.ArrayList>.  
   
@@ -101,9 +101,9 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
   
 1.  Establezca el proyecto que desee como el proyecto de inicio de la solución.  
   
-    1.  **CodeTestClient** muestra cómo utilizar la actividad mediante código.  
+    1.  **CodeTestClient** se muestra cómo usar la actividad mediante código.  
   
-    2.  **DesignerTestClient** muestra cómo utilizar la actividad dentro del diseñador.  
+    2.  **DesignerTestClient** se muestra cómo usar la actividad dentro del diseñador.  
   
 2.  Compile y ejecute el proyecto.  
   
@@ -112,6 +112,6 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericParallelForEach`

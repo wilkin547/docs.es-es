@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: cbb23281d94bbd1edc66b0a3b9caafca62304487
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b5c57b7b7fa2fe72d0fbad6d7fcf5aa17f2abad8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809110"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487450"
 ---
 # <a name="set-up-instructions"></a>Instrucciones de instalación
-Este conjunto de temas describe cómo configurar los servicios necesarios para ejecutar un servicio de Windows Communication Foundation (WCF).  
+Este conjunto de temas describe cómo configurar los servicios que son necesarios para ejecutar un servicio de Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
@@ -32,16 +32,16 @@ Este conjunto de temas describe cómo configurar los servicios necesarios para e
  Describe los pasos necesarios para crear un directorio virtual.  
   
  [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- Se describen los pasos necesarios para compilar los ejemplos de WCF.  
+ Describe los pasos para compilar los ejemplos de WCF.  
   
  [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
- Describe los pasos para ejecutar los ejemplos de WCF en el mismo equipo y en los equipos.  
+ Describe los pasos para ejecutar los ejemplos de WCF en el mismo equipo y todas las máquinas.  
   
- [Habilitar los servicios de punto a punto](http://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
+ [Habilitar los servicios de punto a punto](https://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
  Describe los pasos para instalar el componente Windows Peer-to-Peer, la resolución integrada para los servicios de la mensajería de punto a punto.  
   
  [Instalación de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  Describe los pasos para instalar Message Queuing.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Sugerencias para la solución de problemas](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+ [Sugerencias para la solución de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

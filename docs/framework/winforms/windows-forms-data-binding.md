@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: f0267a774d284cac1672ff971d6af3ec3439c84d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb4c59c76142420f479b0b16a6d80317e98d159
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540649"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486015"
 ---
 # <a name="windows-forms-data-binding"></a>Enlace de datos en Windows Forms
 El enlace de datos en Windows Forms proporciona los medios para mostrar y realizar cambios en la información de un origen de datos en los controles del formulario. Puede enlazar a orígenes de datos tradicionales y a casi cualquier estructura que contenga datos.  
@@ -37,7 +37,7 @@ El enlace de datos en Windows Forms proporciona los medios para mostrar y realiz
  Muestra cómo implementar la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>. La interfaz comunica a un control enlazado los cambios de propiedad en un objeto comercial.  
   
  [Aplicar el modelo PropertyNameChanged](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
- Muestra cómo aplicar el *PropertyName*modelo Changed a las propiedades de un control de usuario de formularios Windows Forms.  
+ Se muestra cómo aplicar el *PropertyName*modelo Changed a las propiedades de un control de usuario de Windows Forms.  
   
  [Implementar la interfaz ITypedList](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
  Muestra cómo habilitar la detección del esquema de una lista enlazable mediante la implementación de la interfaz <xref:System.ComponentModel.ITypedList>.  
@@ -51,7 +51,7 @@ El enlace de datos en Windows Forms proporciona los medios para mostrar y realiz
  [Garantizar que la fila seleccionada de una tabla secundaria conserva la posición correcta](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
  Muestra cómo asegurarse de que no cambie la fila seleccionada de una tabla secundaria cuando se realice un cambio en un campo de la tabla primaria.  
   
- Consulte también [Interfaces relacionadas con enlace de datos](http://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [Cómo: navegar por datos en formularios Windows Forms](http://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [Cómo: crear un Control con enlace Simple en un formulario Windows Forms](http://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
+ Consulte también [Interfaces relacionadas con enlace de datos](https://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [Cómo: navegar por los datos en Windows Forms](https://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [Cómo: crear un Control con enlace Simple en un formulario Windows Forms](https://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
@@ -67,4 +67,4 @@ El enlace de datos en Windows Forms proporciona los medios para mostrar y realiz
  [DataGridView (control)](../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  Proporciona una lista de temas que muestran cómo usar un control datagrid enlazable.  
   
- Consulte también [acceso a datos en Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).
+ Consulte también [acceso a los datos en Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).

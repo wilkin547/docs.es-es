@@ -11,12 +11,12 @@ ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2d75b25734b92df062d3dc46824da44883ab46d5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5146ed8326b12e90d0fe6247b0c4aba3a69dd77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745947"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485786"
 ---
 # <a name="configuration-element"></a>\<Configuración > elemento
 
@@ -47,14 +47,14 @@ Ninguna
 | [**\<assemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Especifica la directiva de enlace del ensamblado en el nivel de configuración.|
 | [**\<Inicio >** esquema de configuración](~/docs/framework/configure-apps/file-schema/startup/index.md) | Todos los elementos en el esquema de configuración de inicio. |
 | [**\<en tiempo de ejecución >** esquema de configuración](~/docs/framework/configure-apps/file-schema/runtime/index.md) | Todos los elementos en el esquema de configuración en tiempo de ejecución. |
-| [**\<System.Runtime.Remoting >** esquema de configuración](http://msdn.microsoft.com/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) | Todos los elementos en el esquema de configuración de comunicación remota. |
+| [**\<System.Runtime.Remoting >** esquema de configuración](https://msdn.microsoft.com/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) | Todos los elementos en el esquema de configuración de comunicación remota. |
 | [**\<system.Net >** esquema de configuración](~/docs/framework/configure-apps/file-schema/network/index.md) | Todos los elementos en el esquema de configuración de red. |
 | [**\<cryptographySettings >** esquema de configuración](~/docs/framework/configure-apps/file-schema/cryptography/index.md) | Todos los elementos en el esquema de configuración de criptografía. |
 | [**\<Configuración >** esquema de secciones](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | Todos los elementos en el esquema de configuración de la sección de configuración. |
 | [Esquema de la configuración de seguimiento y depuración](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) | Todos los elementos en el esquema de configuración de seguimiento y depuración. |
-| [Esquema de configuración de configuración de ASP.NET](https://msdn.microsoft.com/library/b5ysx397(v=vs.100).aspx) | Todos los elementos en el esquema de configuración de ASP.NET, que incluye elementos para configurar aplicaciones y sitios Web de ASP.NET. Usar en *Web.config* archivos. |
-| [**\<webServices >** esquema de configuración](http://msdn.microsoft.com/f84d6d55-1add-4eb7-ae46-33df5833ea2e) | Todos los elementos en el esquema de configuración de servicios Web. |
-| [Esquema de configuración web](~/docs/framework/configure-apps/file-schema/web/index.md) | Describe todos los elementos del esquema de configuración web, que incluye elementos para configurar cómo funciona ASP.NET con una aplicación host como IIS. Usar en *aspnet.config* archivos. |
+| [Esquema de configuración de la configuración de ASP.NET](https://msdn.microsoft.com/library/b5ysx397(v=vs.100).aspx) | Todos los elementos en el esquema de configuración de ASP.NET, que incluye elementos de configuración de aplicaciones y sitios Web de ASP.NET. Utilizado en *Web.config* archivos. |
+| [**\<webServices >** esquema de configuración](https://msdn.microsoft.com/f84d6d55-1add-4eb7-ae46-33df5833ea2e) | Todos los elementos en el esquema de configuración de servicios Web. |
+| [Esquema de configuración web](~/docs/framework/configure-apps/file-schema/web/index.md) | Describe todos los elementos del esquema de configuración web, que incluye elementos para configurar cómo funciona ASP.NET con una aplicación host como IIS. Utilizado en *aspnet.config* archivos. |
 
 ## <a name="remarks"></a>Comentarios
 
@@ -62,4 +62,4 @@ Cada archivo de configuración debe contener exactamente un  **\<configuración 
 
 ## <a name="see-also"></a>Vea también
 
-[Esquema de archivos de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+[Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

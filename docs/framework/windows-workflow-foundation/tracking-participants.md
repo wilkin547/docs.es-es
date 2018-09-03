@@ -2,12 +2,12 @@
 title: Participantes de seguimiento
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 34f807cd8c6c227e5e60b40d1ecc01ef693f31f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e346e0df3417f6ac83854bd96d6e64dcf103ea93
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519826"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488279"
 ---
 # <a name="tracking-participants"></a>Participantes de seguimiento
 Los participantes de seguimiento son puntos de extensibilidad que permiten a un desarrollador de flujo de trabajo tener acceso a objetos <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> y procesarlos. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] incluye un participante de seguimiento estándar que escribe los registros de seguimiento como eventos de Seguimiento de eventos para Windows (ETW). Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado.  
@@ -15,7 +15,7 @@ Los participantes de seguimiento son puntos de extensibilidad que permiten a un 
 ## <a name="tracking-participants"></a>Participantes de seguimiento  
  La infraestructura de seguimiento permite la aplicación de un filtro en los registros de seguimiento salientes de forma que un participante pueda suscribirse a un subconjunto de registros. El mecanismo para aplicar un filtro es a través de un perfil de seguimiento.  
   
- Windows Workflow Foundation (WF) en [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] proporciona un participante de seguimiento que escribe los registros de seguimiento en una sesión ETW. El participante se configura en un servicio de flujo de trabajo agregando un comportamiento específico del seguimiento en un archivo de configuración. Habilitar un participante de seguimiento de ETW permite realizar un seguimiento de los registros que se van a ver en el visor de eventos. El ejemplo de SDK para el seguimiento basado en ETW es una buena manera de familiarizarse con el seguimiento de WF mediante el participante de seguimiento basado en ETW.  
+ Windows Workflow Foundation (WF) en [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] proporciona un participante de seguimiento que escribe los registros de seguimiento en una sesión de ETW. El participante se configura en un servicio de flujo de trabajo agregando un comportamiento específico del seguimiento en un archivo de configuración. Habilitar un participante de seguimiento de ETW permite realizar un seguimiento de los registros que se van a ver en el visor de eventos. El ejemplo de SDK para el seguimiento basado en ETW es una buena manera de familiarizarse con el seguimiento de WF mediante el participante de seguimiento basado en ETW.  
   
 ## <a name="etw-tracking-participant"></a>Participante de seguimiento de ETW  
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] incluye un participante de seguimiento de ETW que escribe los registros de seguimiento en una sesión de ETW. Esto se realiza de una manera muy eficaz con un impacto mínimo en el rendimiento de la aplicación o en la capacidad de proceso del servidor. La ventaja de usar el participante de seguimiento de ETW estándar es que los registros de seguimiento que recibe se pueden ver en la otra aplicación y en los registros del sistema en el Visor de eventos de Windows.  
@@ -63,11 +63,11 @@ Los participantes de seguimiento son puntos de extensibilidad que permiten a un 
  ![El flujo de seguimiento y el proveedor de seguimiento de ETW](../../../docs/framework/windows-workflow-foundation/media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
   
 ## <a name="tracking-participant-event-data"></a>Datos de eventos del participante de seguimiento  
- Un participante del seguimiento serializa los datos de eventos a los que se ha realizado el seguimiento en una sesión de ETW con el formato de un evento por registro de seguimiento.  Un evento se identifica mediante un id. en un intervalo entre 100 y 199. Para obtener definiciones de los eventos de seguimiento registros emitidos por un participante de seguimiento, consulte el [referencia de eventos de seguimiento](../../../docs/framework/windows-workflow-foundation/tracking-events-reference.md) tema.  
+ Un participante del seguimiento serializa los datos de eventos a los que se ha realizado el seguimiento en una sesión de ETW con el formato de un evento por registro de seguimiento.  Un evento se identifica mediante un id. en un intervalo entre 100 y 199. Para obtener definiciones de evento de seguimiento de los registros emitidos por un participante de seguimiento, vea el [referencia de eventos de seguimiento](../../../docs/framework/windows-workflow-foundation/tracking-events-reference.md) tema.  
   
  El tamaño de un evento ETW está limitado por el tamaño de búfer de ETW o por la carga máxima para un evento ETW, sea cual sea el valor más pequeño. Si el tamaño del evento supera cualquiera de estos límites de ETW, el evento se trunca y se quita contenido de forma arbitraria. No se quitan de forma selectiva variables, argumentos, anotaciones y datos personalizados. En caso de truncamiento, se truncan todos ellos independientemente del valor que provocó que el tamaño del evento superara el límite de ETW.  Los datos quitados se reemplazan con `<item>..<item>`.  
   
- Tipos complejos en variables, argumentos y elementos de datos personalizados se serializan en el registro de eventos ETW mediante la [clase NetDataContractSerializer](http://go.microsoft.com/fwlink/?LinkId=177537). Esta clase incluye información de tipo CLR en la secuencia XML serializada.  
+ Tipos complejos en variables, argumentos y elementos de datos personalizados se serializan en el registro de eventos ETW mediante el [clase NetDataContractSerializer](https://go.microsoft.com/fwlink/?LinkId=177537). Esta clase incluye información de tipo CLR en la secuencia XML serializada.  
   
  El truncamiento de los datos de carga debido a los límites de ETW puede dar como resultado registros de seguimiento duplicados que se envían a una sesión de ETW. Esto se puede producir si hay más de una sesión que está escuchando los eventos y las sesiones tienen distintos límites de carga para los eventos.  
   
@@ -83,9 +83,9 @@ Los participantes de seguimiento son puntos de extensibilidad que permiten a un 
   
 1.  Inicie el visor de eventos (EVENTVWR.EXE)  
   
-2.  Seleccione **Visor de eventos, aplicaciones y registros de servicios, Microsoft, Windows, servidor de aplicaciones**.  
+2.  Seleccione **Visor de eventos, aplicaciones y servicios, Microsoft, Windows, servidor de aplicaciones-aplicaciones**.  
   
-3.  Haga clic en y asegúrese de que **vista, mostrar registros analíticos y depuración** está seleccionada. Si no, seleccione la opción de manera que la marca de verificación aparezca junto a ella. Esto muestra la **analítico**, **rendimiento**, y **depurar** registros.  
+3.  Haga clic en y asegúrese de que **vista, mostrar registros analíticos y depuración** está seleccionada. Si no, seleccione la opción de manera que la marca de verificación aparezca junto a ella. Esto muestra la **analítico**, **Perf**, y **depurar** registros.  
   
 4.  Haga clic en el **analítico** inicie sesión y, a continuación, seleccione **Habilitar registro**. El registro existirá en el archivo %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl.  
   
@@ -141,5 +141,5 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Supervisión de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Supervisión de aplicaciones con App Fabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

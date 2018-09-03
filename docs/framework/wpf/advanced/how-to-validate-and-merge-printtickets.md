@@ -10,48 +10,48 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 11160d7ec59914afbe501ba731c0c04a85ffc4a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37a1c0600b8429158336968507ddc8cfb6d8f98b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548498"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485643"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Cómo: Validar y combinar elementos PrintTicket
-El [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Print Schema](http://go.microsoft.com/fwlink/?LinkId=186397) incluye flexible y extensible <xref:System.Printing.PrintCapabilities> y <xref:System.Printing.PrintTicket> elementos. El primero de ellos detalla las capacidades de un dispositivo de impresión y el segundo especifica cómo el dispositivo debe utilizar esas capacidades con respecto a una secuencia determinada de documentos, documentos individuales o una página individual.  
+El [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [esquema de impresión](https://go.microsoft.com/fwlink/?LinkId=186397) incluye flexible y extensible <xref:System.Printing.PrintCapabilities> y <xref:System.Printing.PrintTicket> elementos. El primero de ellos detalla las capacidades de un dispositivo de impresión y el segundo especifica cómo el dispositivo debe usar esas capacidades con respecto a una secuencia determinada de documentos, documentos individuales o una página individual.  
   
- Una secuencia de tareas para una aplicación que admite la impresión típica sería como sigue.  
+ Una secuencia de tareas para una aplicación que admite la impresión normal sería como sigue.  
   
 1.  Determinar las capacidades de la impresora.  
   
-2.  Configurar un <xref:System.Printing.PrintTicket> a usar esas funciones.  
+2.  Configurar un <xref:System.Printing.PrintTicket> usar esas capacidades.  
   
 3.  Validar el <xref:System.Printing.PrintTicket>.  
   
- Este artículo muestra cómo hacerlo.  
+ En este artículo se muestra cómo hacerlo.  
   
 ## <a name="example"></a>Ejemplo  
- En el sencillo ejemplo, nos interesa solo si una impresora puede admitir la impresión a doble cara: impresión a dos caras. Los pasos principales son los siguientes.  
+ En el ejemplo siguiente, nos interesa solo si una impresora puede admitir la impresión a doble cara: impresión a dos caras. Los pasos principales son los siguientes.  
   
 1.  Obtener un <xref:System.Printing.PrintCapabilities> objeto con el <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> método.  
   
-2.  Comprobar la presencia de la función que desea. En el ejemplo siguiente, se probará la <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> propiedad de la <xref:System.Printing.PrintCapabilities> objeto la presencia de la capacidad de impresión en ambas caras de una hoja de papel con "activar de página" en el lado largo de la hoja. Puesto que <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> es una colección, usamos el `Contains` método <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.  
+2.  Comprobar la presencia de la función que desea. En el ejemplo siguiente, se prueba el <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> propiedad de la <xref:System.Printing.PrintCapabilities> objeto la presencia de la funcionalidad de impresión en ambas caras de una hoja de papel con la activación"página" en el lado largo de la hoja. Puesto que <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> es una colección, utilizamos el `Contains` método <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.  
   
     > [!NOTE]
-    >  Este paso no es estrictamente necesaria. El <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método usa a continuación comprobará cada solicitud en el <xref:System.Printing.PrintTicket> con las capacidades de la impresora. Si la función solicitada no es compatible con la impresora, el controlador de impresora sustituirá una solicitud alternativa en la <xref:System.Printing.PrintTicket> devuelta por el método.  
+    >  Este paso no es estrictamente necesario. El <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método usa a continuación comprobará cada solicitud en el <xref:System.Printing.PrintTicket> frente a las capacidades de la impresora. Si la función solicitada no es compatible con la impresora, el controlador de impresora sustituirá por una solicitud alternativa en el <xref:System.Printing.PrintTicket> devuelto por el método.  
   
-3.  Si la impresora admite la impresión a doble cara, el código de ejemplo crea un <xref:System.Printing.PrintTicket> que pedirá una impresión a doble cara. Pero la aplicación no especifica cada posible configuración de impresora disponible en el <xref:System.Printing.PrintTicket> elemento. Eso sería innecesarios del programador y la hora de programa. En su lugar, el código establece la solicitud de impresión a doble cara y, a continuación, combina este <xref:System.Printing.PrintTicket> a otra, totalmente configurada y validada, <xref:System.Printing.PrintTicket>, en este caso, la predeterminada del usuario <xref:System.Printing.PrintTicket>.  
+3.  Si la impresora admite la impresión a doble cara, el código de ejemplo crea un <xref:System.Printing.PrintTicket> que solicita el dúplex. Pero la aplicación no especifica cada posible configuración de impresora disponible en el <xref:System.Printing.PrintTicket> elemento. Eso sería un desperdicio de programador y de tiempo del programa. En su lugar, el código establece solo en la solicitud de impresión a doble cara y, a continuación, combina este <xref:System.Printing.PrintTicket> con una existente, totalmente configurada y validada, <xref:System.Printing.PrintTicket>, en este caso, la predeterminada del usuario <xref:System.Printing.PrintTicket>.  
   
 4.  En consecuencia, el ejemplo llama a la <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> método para combinar el nuevo mínimo, <xref:System.Printing.PrintTicket> no tiene valor predeterminado del usuario <xref:System.Printing.PrintTicket>. Esto devuelve un <xref:System.Printing.ValidationResult> que incluye el nuevo <xref:System.Printing.PrintTicket> como uno de sus propiedades.  
   
-5.  El ejemplo, a continuación, comprueba que el nuevo <xref:System.Printing.PrintTicket> solicitudes de impresión a doble cara. Si es así, el ejemplo lo pone a la nueva solicitud de impresión de predeterminado para el usuario. Si tenía se han omitido paso 2 anterior y la impresora no admitía la impresión a doble cara en el lado largo, habría provocado que la prueba en `false`. (Vea la nota anterior).  
+5.  El ejemplo, a continuación, comprueba que el nuevo <xref:System.Printing.PrintTicket> solicitudes de impresión a doble cara. Si es así, a continuación, se convierte en la nueva solicitud de impresión predeterminada para el usuario. Si tenía ha omitido el paso 2 anterior y la impresora no admitía el dúplex en el lado largo, entonces tendría como resultado la prueba `false`. (Consulte la nota anterior).  
   
-6.  El último paso significativo es confirmar el cambio a la <xref:System.Printing.PrintQueue.UserPrintTicket%2A> propiedad de la <xref:System.Printing.PrintQueue> con el <xref:System.Printing.PrintQueue.Commit%2A> método.  
+6.  Es el último paso significativo confirmar el cambio a la <xref:System.Printing.PrintQueue.UserPrintTicket%2A> propiedad de la <xref:System.Printing.PrintQueue> con el <xref:System.Printing.PrintQueue.Commit%2A> método.  
   
  [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
  [!code-vb[PrintTicketManagment#UsingMergeAndValidate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
   
- Por lo que puede probar rápidamente en este ejemplo, el resto de los se muestra a continuación. Crear un proyecto y un espacio de nombres y, a continuación, pegue los fragmentos de código de este artículo en el bloque de espacio de nombres.  
+ Por lo que puede probar rápidamente en este ejemplo, a continuación se presenta el resto de la misma. Crear un proyecto y un espacio de nombres y, a continuación, pegue ambas los fragmentos de código en este artículo en el bloque de espacio de nombres.  
   
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
@@ -66,4 +66,4 @@ El [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Print Sc
  <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
  [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Información general sobre impresión](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Esquema de impresión](http://go.microsoft.com/fwlink/?LinkId=186397)
+ [Esquema de impresión](https://go.microsoft.com/fwlink/?LinkId=186397)
