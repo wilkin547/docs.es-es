@@ -7,58 +7,60 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: b0bde07dbeb70eaafbde4d90627d245554ad7ca6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 0678300fca4442cf90dd15c5a4e011d80656eac6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810114"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478161"
 ---
-# <a name="accessing-services-using-a-wcf-client"></a><span data-ttu-id="95405-102">Acceso a los servicios mediante un cliente WCF</span><span class="sxs-lookup"><span data-stu-id="95405-102">Accessing Services Using a WCF Client</span></span>
-<span data-ttu-id="95405-103">Después de crear un servicio, el siguiente paso es crear a un proxy de cliente WCF.</span><span class="sxs-lookup"><span data-stu-id="95405-103">After you create a service, the next step is to create a WCF client proxy.</span></span> <span data-ttu-id="95405-104">Una aplicación cliente usa al proxy de cliente WCF para comunicarse con el servicio.</span><span class="sxs-lookup"><span data-stu-id="95405-104">A client application uses the WCF client proxy to communicate with the service.</span></span> <span data-ttu-id="95405-105">Las aplicaciones de cliente suelen importación los metadatos del servicio para generar código de cliente WCF que puede usarse para invocar el servicio.</span><span class="sxs-lookup"><span data-stu-id="95405-105">Client applications usually import a service's metadata to generate WCF client code that can be used to invoke the service.</span></span>  
-  
- <span data-ttu-id="95405-106">Los pasos básicos para crear a un cliente de WCF son los siguientes:</span><span class="sxs-lookup"><span data-stu-id="95405-106">The basic steps for creating a WCF client include the following:</span></span>  
-  
-1.  <span data-ttu-id="95405-107">Compilar el código del servicio.</span><span class="sxs-lookup"><span data-stu-id="95405-107">Compile the service code.</span></span>  
-  
-2.  <span data-ttu-id="95405-108">Generar al proxy de cliente WCF.</span><span class="sxs-lookup"><span data-stu-id="95405-108">Generate the WCF client proxy.</span></span>  
-  
-3.  <span data-ttu-id="95405-109">Cree una instancia del proxy de cliente de WCF.</span><span class="sxs-lookup"><span data-stu-id="95405-109">Instantiate the WCF client proxy.</span></span>  
-  
- <span data-ttu-id="95405-110">El proxy de cliente WCF puede generarse manualmente mediante el uso de Service Model Metadata Utility Tool (SvcUtil.exe) para obtener más información, vea [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="95405-110">The WCF client proxy can be generated manually by using the Service Model Metadata Utility Tool (SvcUtil.exe) for more information see, [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="95405-111">El proxy de cliente de WCF también se puede generar en Visual Studio mediante la característica Agregar referencia de servicio.</span><span class="sxs-lookup"><span data-stu-id="95405-111">The WCF client proxy can also be generated within Visual Studio using the Add Service Reference  feature.</span></span> <span data-ttu-id="95405-112">Para generar el proxy de cliente de WCF usando cualquier método, el servicio debe estar en ejecución.</span><span class="sxs-lookup"><span data-stu-id="95405-112">To generate the WCF client proxy using either method the service must be running.</span></span> <span data-ttu-id="95405-113">Si el servicio se autohospeda, debe ejecutar el host.</span><span class="sxs-lookup"><span data-stu-id="95405-113">If the service is self-hosted you must run the host.</span></span> <span data-ttu-id="95405-114">Si el servicio se hospeda en IIS/WAS no necesita hacer nada más.</span><span class="sxs-lookup"><span data-stu-id="95405-114">If the service is hosted in IIS/WAS you do not need to do anything else.</span></span>  
-  
-## <a name="servicemodel-metadata-utility-tool"></a><span data-ttu-id="95405-115">Herramienta de utilidad de metadatos ServiceModel</span><span class="sxs-lookup"><span data-stu-id="95405-115">ServiceModel Metadata Utility Tool</span></span>  
- <span data-ttu-id="95405-116">El [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) es una herramienta de línea de comandos para generar código de metadatos.</span><span class="sxs-lookup"><span data-stu-id="95405-116">The [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) is a command-line tool for generating code from metadata.</span></span> <span data-ttu-id="95405-117">A continuación se muestra un ejemplo del uso de un comando básico Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="95405-117">The following use is an example of a basic Svcutil.exe command.</span></span>  
-  
-```  
-Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
-```  
-  
- <span data-ttu-id="95405-118">Como alternativa, puede usar Svcutil.exe con archivos de Lenguaje de descripción de servicios Web (WSDL) y de lenguaje de definición de esquemas XML (XSD) en el sistema de archivos.</span><span class="sxs-lookup"><span data-stu-id="95405-118">Alternatively, you can use Svcutil.exe with Web Services Description Language (WSDL) and XML Schema definition language (XSD) files on the file system.</span></span>  
-  
-```  
-Svcutil.exe <list of WSDL and XSD files on file system>  
-```  
-  
- <span data-ttu-id="95405-119">El resultado es un archivo de código que contiene el código de cliente WCF que la aplicación cliente puede utilizar para invocar el servicio.</span><span class="sxs-lookup"><span data-stu-id="95405-119">The result is a code file that contains WCF client code that the client application can use to invoke the service.</span></span>  
-  
- <span data-ttu-id="95405-120">También puede usar la herramienta para generar archivos de configuración.</span><span class="sxs-lookup"><span data-stu-id="95405-120">You can also use the tool to generate configuration files.</span></span>  
-  
-```  
-Svcutil.exe <file1 [,file2]>  
-```  
-  
- <span data-ttu-id="95405-121">Si se proporciona solo uno nombre de archivo, ése será el nombre del archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="95405-121">If only one file name is given, that is the name of the output file.</span></span> <span data-ttu-id="95405-122">Si se proporcionan dos nombres de archivo, entonces el primer archivo es un archivo de configuración de entrada cuyo contenido está combinado con la configuración generada y que se escribe en el segundo archivo.</span><span class="sxs-lookup"><span data-stu-id="95405-122">If two file names are given, then the first file is an input configuration file whose contents are merged with the generated configuration and written out into the second file.</span></span> <span data-ttu-id="95405-123">Para obtener más información acerca de la configuración, consulte [configurar enlaces para servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="95405-123">For more information about configuration, see [Configuring Bindings for Services](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).</span></span>  
-  
+# <a name="accessing-services-using-a-wcf-client"></a><span data-ttu-id="0cf61-102">Acceso a los servicios mediante un cliente WCF</span><span class="sxs-lookup"><span data-stu-id="0cf61-102">Accessing Services Using a WCF Client</span></span>
+
+<span data-ttu-id="0cf61-103">Después de crear un servicio, el siguiente paso es crear a un proxy de cliente WCF.</span><span class="sxs-lookup"><span data-stu-id="0cf61-103">After you create a service, the next step is to create a WCF client proxy.</span></span> <span data-ttu-id="0cf61-104">Una aplicación cliente usa al proxy de cliente WCF para comunicarse con el servicio.</span><span class="sxs-lookup"><span data-stu-id="0cf61-104">A client application uses the WCF client proxy to communicate with the service.</span></span> <span data-ttu-id="0cf61-105">Las aplicaciones cliente suelen importación los metadatos del servicio para generar código de cliente WCF que se puede usar para invocar el servicio.</span><span class="sxs-lookup"><span data-stu-id="0cf61-105">Client applications usually import a service's metadata to generate WCF client code that can be used to invoke the service.</span></span>
+
+ <span data-ttu-id="0cf61-106">Los pasos básicos para crear a un cliente de WCF incluyen lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="0cf61-106">The basic steps for creating a WCF client include the following:</span></span>
+
+1.  <span data-ttu-id="0cf61-107">Compilar el código del servicio.</span><span class="sxs-lookup"><span data-stu-id="0cf61-107">Compile the service code.</span></span>
+
+2.  <span data-ttu-id="0cf61-108">Generar al proxy de cliente WCF.</span><span class="sxs-lookup"><span data-stu-id="0cf61-108">Generate the WCF client proxy.</span></span>
+
+3.  <span data-ttu-id="0cf61-109">Cree una instancia del proxy de cliente de WCF.</span><span class="sxs-lookup"><span data-stu-id="0cf61-109">Instantiate the WCF client proxy.</span></span>
+
+<span data-ttu-id="0cf61-110">El proxy de cliente WCF puede generarse manualmente mediante el uso de Service Model Metadata Utility Tool (SvcUtil.exe) para obtener más información, vea [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="0cf61-110">The WCF client proxy can be generated manually by using the Service Model Metadata Utility Tool (SvcUtil.exe) for more information see, [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="0cf61-111">También se puede generar el proxy de cliente WCF dentro de Visual Studio mediante el **Add Service Reference** característica.</span><span class="sxs-lookup"><span data-stu-id="0cf61-111">The WCF client proxy can also be generated within Visual Studio using the **Add Service Reference**  feature.</span></span> <span data-ttu-id="0cf61-112">Para generar el proxy de cliente de WCF usando cualquier método, el servicio debe estar en ejecución.</span><span class="sxs-lookup"><span data-stu-id="0cf61-112">To generate the WCF client proxy using either method the service must be running.</span></span> <span data-ttu-id="0cf61-113">Si el servicio se autohospeda, debe ejecutar el host.</span><span class="sxs-lookup"><span data-stu-id="0cf61-113">If the service is self-hosted you must run the host.</span></span> <span data-ttu-id="0cf61-114">Si el servicio se hospeda en IIS/WAS no necesita hacer nada más.</span><span class="sxs-lookup"><span data-stu-id="0cf61-114">If the service is hosted in IIS/WAS you do not need to do anything else.</span></span>
+
+## <a name="servicemodel-metadata-utility-tool"></a><span data-ttu-id="0cf61-115">Herramienta de utilidad de metadatos ServiceModel</span><span class="sxs-lookup"><span data-stu-id="0cf61-115">ServiceModel Metadata Utility Tool</span></span>
+ <span data-ttu-id="0cf61-116">El [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) es una herramienta de línea de comandos para generar código a partir de los metadatos.</span><span class="sxs-lookup"><span data-stu-id="0cf61-116">The [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) is a command-line tool for generating code from metadata.</span></span> <span data-ttu-id="0cf61-117">A continuación se muestra un ejemplo del uso de un comando básico Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="0cf61-117">The following use is an example of a basic Svcutil.exe command.</span></span>
+
+```
+Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
+```
+
+ <span data-ttu-id="0cf61-118">Como alternativa, puede usar Svcutil.exe con archivos de Lenguaje de descripción de servicios Web (WSDL) y de lenguaje de definición de esquemas XML (XSD) en el sistema de archivos.</span><span class="sxs-lookup"><span data-stu-id="0cf61-118">Alternatively, you can use Svcutil.exe with Web Services Description Language (WSDL) and XML Schema definition language (XSD) files on the file system.</span></span>
+
+```
+Svcutil.exe <list of WSDL and XSD files on file system>
+```
+
+ <span data-ttu-id="0cf61-119">El resultado es un archivo de código que contiene el código de cliente WCF que la aplicación cliente puede utilizar para invocar el servicio.</span><span class="sxs-lookup"><span data-stu-id="0cf61-119">The result is a code file that contains WCF client code that the client application can use to invoke the service.</span></span>
+
+ <span data-ttu-id="0cf61-120">También puede usar la herramienta para generar archivos de configuración.</span><span class="sxs-lookup"><span data-stu-id="0cf61-120">You can also use the tool to generate configuration files.</span></span>
+
+```
+Svcutil.exe <file1 [,file2]>
+```
+
+ <span data-ttu-id="0cf61-121">Si se proporciona solo uno nombre de archivo, ése será el nombre del archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="0cf61-121">If only one file name is given, that is the name of the output file.</span></span> <span data-ttu-id="0cf61-122">Si se proporcionan dos nombres de archivo, entonces el primer archivo es un archivo de configuración de entrada cuyo contenido está combinado con la configuración generada y que se escribe en el segundo archivo.</span><span class="sxs-lookup"><span data-stu-id="0cf61-122">If two file names are given, then the first file is an input configuration file whose contents are merged with the generated configuration and written out into the second file.</span></span> <span data-ttu-id="0cf61-123">Para obtener más información acerca de la configuración, consulte [configurar enlaces para los servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="0cf61-123">For more information about configuration, see [Configuring Bindings for Services](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="95405-124">Las solicitudes de metadatos que no son seguras plantean ciertos riesgos, al igual que cualquier solicitud de una red no segura: si no está seguro de que el punto de conexión con el que se está comunicando es el que dice ser, es posible que la información que recupere sean metadatos de un servicio malintencionado.</span><span class="sxs-lookup"><span data-stu-id="95405-124">Unsecured metadata requests pose certain risks in the same way that any unsecured network request does: If you are not certain that the endpoint you are communicating with is who it says it is, the information you retrieve might be metadata from a malicious service.</span></span>  
-  
-## <a name="add-service-reference-in-visual-studio"></a><span data-ttu-id="95405-125">Agregar referencia de servicio en Visual Studio</span><span class="sxs-lookup"><span data-stu-id="95405-125">Add Service Reference in Visual Studio</span></span>  
- <span data-ttu-id="95405-126">Con el servicio en ejecución, haga clic en el proyecto que contendrá el proxy de cliente WCF y seleccione **Agregar referencia de servicio**.</span><span class="sxs-lookup"><span data-stu-id="95405-126">With the service running, right click the project that will contain the WCF client proxy and select **Add Service Reference**.</span></span> <span data-ttu-id="95405-127">En el **Agregar cuadro de diálogo de referencia de servicio** escriba la dirección URL para el servicio que desea llamar y haga clic en el **vaya** botón.</span><span class="sxs-lookup"><span data-stu-id="95405-127">In the **Add Service Reference Dialog** type in the URL to the service you want to call and click the **Go** button.</span></span> <span data-ttu-id="95405-128">El cuadro de diálogo mostrará una lista de servicios disponibles en la dirección especificada.</span><span class="sxs-lookup"><span data-stu-id="95405-128">The dialog will display a list of services available at the address you specify.</span></span> <span data-ttu-id="95405-129">Haga doble clic en el servicio para ver los contratos y operaciones disponibles, especifique un espacio de nombres para el código generado y haga clic en el **Aceptar** botón.</span><span class="sxs-lookup"><span data-stu-id="95405-129">Double click the service to see the contracts and operations available, specify a namespace for the generated code and click the **OK** button.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="95405-130">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="95405-130">Example</span></span>  
- <span data-ttu-id="95405-131">El ejemplo de código siguiente muestra un contrato de servicio creado para un servicio.</span><span class="sxs-lookup"><span data-stu-id="95405-131">The following code example shows a service contract created for a service.</span></span>  
-  
+> <span data-ttu-id="0cf61-124">Las solicitudes de metadatos que no son seguras plantean ciertos riesgos, al igual que cualquier solicitud de una red no segura: si no está seguro de que el punto de conexión con el que se está comunicando es el que dice ser, es posible que la información que recupere sean metadatos de un servicio malintencionado.</span><span class="sxs-lookup"><span data-stu-id="0cf61-124">Unsecured metadata requests pose certain risks in the same way that any unsecured network request does: If you are not certain that the endpoint you are communicating with is who it says it is, the information you retrieve might be metadata from a malicious service.</span></span>
+
+## <a name="add-service-reference-in-visual-studio"></a><span data-ttu-id="0cf61-125">Agregar referencia de servicio en Visual Studio</span><span class="sxs-lookup"><span data-stu-id="0cf61-125">Add Service Reference in Visual Studio</span></span>
+
+ <span data-ttu-id="0cf61-126">Con el servicio en ejecución, a la derecha, haga clic en el proyecto que contendrá el proxy de cliente WCF y seleccione **agregar** > **referencia de servicio**.</span><span class="sxs-lookup"><span data-stu-id="0cf61-126">With the service running, right click the project that will contain the WCF client proxy and select **Add** > **Service Reference**.</span></span> <span data-ttu-id="0cf61-127">En el **Agregar cuadro de diálogo de referencia de servicio**, escriba la dirección URL para el servicio que desea llamar y haga clic en el **vaya** botón.</span><span class="sxs-lookup"><span data-stu-id="0cf61-127">In the **Add Service Reference Dialog**, type in the URL to the service you want to call and click the **Go** button.</span></span> <span data-ttu-id="0cf61-128">El cuadro de diálogo mostrará una lista de servicios disponibles en la dirección especificada.</span><span class="sxs-lookup"><span data-stu-id="0cf61-128">The dialog will display a list of services available at the address you specify.</span></span> <span data-ttu-id="0cf61-129">Haga doble clic en el servicio para ver los contratos y operaciones disponibles, especifique un espacio de nombres para el código generado y haga clic en el **Aceptar** botón.</span><span class="sxs-lookup"><span data-stu-id="0cf61-129">Double click the service to see the contracts and operations available, specify a namespace for the generated code, and click the **OK** button.</span></span>
+
+## <a name="example"></a><span data-ttu-id="0cf61-130">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0cf61-130">Example</span></span>
+ <span data-ttu-id="0cf61-131">El ejemplo de código siguiente muestra un contrato de servicio creado para un servicio.</span><span class="sxs-lookup"><span data-stu-id="0cf61-131">The following code example shows a service contract created for a service.</span></span>
+
 ```csharp
 // Define a service contract.
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -69,7 +71,7 @@ public interface ICalculator
     // Other methods are not shown here.
 }
 ```
-  
+
 ```vb
 ' Define a service contract.
 <ServiceContract(Namespace:="http://Microsoft.ServiceModel.Samples")> _
@@ -79,9 +81,9 @@ Public Interface ICalculator
     ' Other methods are not shown here.
 End Interface
 ```
-  
- <span data-ttu-id="95405-132">La herramienta de utilidad de Metadata de ServiceModel y agregar referencia de servicio en Visual Studio genera la siguiente clase de cliente WCF.</span><span class="sxs-lookup"><span data-stu-id="95405-132">The ServiceModel Metadata utility tool and Add Service Reference in Visual Studio generates the following WCF client class.</span></span> <span data-ttu-id="95405-133">La clase adquiere de la clase <xref:System.ServiceModel.ClientBase%601> genérica e implementa la interfaz `ICalculator`.</span><span class="sxs-lookup"><span data-stu-id="95405-133">The class inherits from the generic <xref:System.ServiceModel.ClientBase%601> class and implements the `ICalculator` interface.</span></span> <span data-ttu-id="95405-134">La herramienta también genera la interfaz (no se muestra aquí) `ICalculator`.</span><span class="sxs-lookup"><span data-stu-id="95405-134">The tool also generates the `ICalculator` interface (not shown here).</span></span>  
-  
+
+ <span data-ttu-id="0cf61-132">La herramienta de utilidad Metadata de ServiceModel y **Add Service Reference** en Visual Studio genera la siguiente clase de cliente WCF.</span><span class="sxs-lookup"><span data-stu-id="0cf61-132">The ServiceModel Metadata utility tool and **Add Service Reference** in Visual Studio generates the following WCF client class.</span></span> <span data-ttu-id="0cf61-133">La clase adquiere de la clase <xref:System.ServiceModel.ClientBase%601> genérica e implementa la interfaz `ICalculator`.</span><span class="sxs-lookup"><span data-stu-id="0cf61-133">The class inherits from the generic <xref:System.ServiceModel.ClientBase%601> class and implements the `ICalculator` interface.</span></span> <span data-ttu-id="0cf61-134">La herramienta también genera la interfaz (no se muestra aquí) `ICalculator`.</span><span class="sxs-lookup"><span data-stu-id="0cf61-134">The tool also generates the `ICalculator` interface (not shown here).</span></span>
+
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
 {
@@ -111,9 +113,9 @@ public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculat
         return base.Channel.Add(n1, n2);
     }
 }
-```  
-  
-```vb  
+```
+
+```vb
 Partial Public Class CalculatorClient
     Inherits System.ServiceModel.ClientBase(Of ICalculator)
     Implements ICalculator
@@ -146,10 +148,10 @@ Partial Public Class CalculatorClient
     End Function
 End Class
 ```
-  
-## <a name="using-the-wcf-client"></a><span data-ttu-id="95405-135">Uso del cliente WCF</span><span class="sxs-lookup"><span data-stu-id="95405-135">Using the WCF Client</span></span>  
- <span data-ttu-id="95405-136">Para usar al cliente de WCF, cree una instancia del cliente WCF y, a continuación, llamar a sus métodos, como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="95405-136">To use the WCF client, create an instance of the WCF client, and then call its methods, as shown in the following code.</span></span>  
-  
+
+## <a name="using-the-wcf-client"></a><span data-ttu-id="0cf61-135">Uso del cliente WCF</span><span class="sxs-lookup"><span data-stu-id="0cf61-135">Using the WCF Client</span></span>
+ <span data-ttu-id="0cf61-136">Para usar al cliente de WCF, cree una instancia del cliente WCF y, a continuación, llamar a sus métodos, como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="0cf61-136">To use the WCF client, create an instance of the WCF client, and then call its methods, as shown in the following code.</span></span>
+
 ```csharp
 // Create a client object with the given client endpoint configuration.
 CalculatorClient calcClient = new CalculatorClient("CalculatorEndpoint"));
@@ -159,7 +161,7 @@ double value2 = 15.99D;
 double result = calcClient.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
 ```
-  
+
 ```vb
 ' Create a client object with the given client endpoint configuration.
 Dim calcClient As CalculatorClient = _
@@ -171,25 +173,27 @@ Dim value2 As Double = 15.99D
 Dim result As Double = calcClient.Add(value1, value2)
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 ```
-  
-## <a name="debugging-exceptions-thrown-by-a-client"></a><span data-ttu-id="95405-137">Depuración de las excepciones iniciadas por un cliente</span><span class="sxs-lookup"><span data-stu-id="95405-137">Debugging Exceptions Thrown by a Client</span></span>  
- <span data-ttu-id="95405-138">Muchas de las excepciones iniciadas por un cliente WCF se deben a una excepción en el servicio.</span><span class="sxs-lookup"><span data-stu-id="95405-138">Many exceptions thrown by a WCF client are caused by an exception on the service.</span></span> <span data-ttu-id="95405-139">Estos son algunos ejemplos:</span><span class="sxs-lookup"><span data-stu-id="95405-139">Some examples of this are:</span></span>  
-  
--   <span data-ttu-id="95405-140"><xref:System.Net.Sockets.SocketException>: el host remoto forzó el cierre de la conexión existente.</span><span class="sxs-lookup"><span data-stu-id="95405-140"><xref:System.Net.Sockets.SocketException>: An existing connection was forcibly closed by the remote host.</span></span>  
-  
--   <span data-ttu-id="95405-141"><xref:System.ServiceModel.CommunicationException>: la conexión ha terminado de forma inesperada.</span><span class="sxs-lookup"><span data-stu-id="95405-141"><xref:System.ServiceModel.CommunicationException>: The underlying connection was closed unexpectedly.</span></span>  
-  
--   <span data-ttu-id="95405-142"><xref:System.ServiceModel.CommunicationObjectAbortedException>: se anuló la conexión de socket.</span><span class="sxs-lookup"><span data-stu-id="95405-142"><xref:System.ServiceModel.CommunicationObjectAbortedException>: The socket connection was aborted.</span></span> <span data-ttu-id="95405-143">La causa puede ser un error en el procesamiento del mensaje, que se superó el tiempo de espera de recepción en el host remoto, o bien un problema de recursos de red subyacente.</span><span class="sxs-lookup"><span data-stu-id="95405-143">This could be caused by an error processing your message, a receive time-out being exceeded by the remote host, or an underlying network resource issue.</span></span>  
-  
- <span data-ttu-id="95405-144">Cuando se producen estos tipos de excepciones, la mejor manera de resolver el problema es activar el seguimiento en el lado del servicio y determinar qué excepción se produjo allí.</span><span class="sxs-lookup"><span data-stu-id="95405-144">When these types of exceptions occur, the best way to solve the problem is to turn on tracing on the service side and determine what exception occurred there.</span></span> <span data-ttu-id="95405-145">Para obtener más información acerca del seguimiento, vea [seguimiento](../../../docs/framework/wcf/diagnostics/tracing/index.md) y [utilizando el seguimiento para solucionar problemas de la aplicación](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).</span><span class="sxs-lookup"><span data-stu-id="95405-145">For more information about tracing, see [Tracing](../../../docs/framework/wcf/diagnostics/tracing/index.md) and [Using Tracing to Troubleshoot Your Application](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="95405-146">Vea también</span><span class="sxs-lookup"><span data-stu-id="95405-146">See Also</span></span>  
- [<span data-ttu-id="95405-147">Cómo crear un cliente</span><span class="sxs-lookup"><span data-stu-id="95405-147">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [<span data-ttu-id="95405-148">Acceso a los servicios con un contrato dúplex</span><span class="sxs-lookup"><span data-stu-id="95405-148">How to: Access Services with a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [<span data-ttu-id="95405-149">Llamada a operaciones de servicio de forma asincrónica</span><span class="sxs-lookup"><span data-stu-id="95405-149">How to: Call Service Operations Asynchronously</span></span>](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [<span data-ttu-id="95405-150">Acceso a los servicios con contratos unidireccionales y de solicitud-respuesta</span><span class="sxs-lookup"><span data-stu-id="95405-150">How to: Access Services with One-Way and Request-Reply Contracts</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [<span data-ttu-id="95405-151">Acceso a un servicio WSE 3.0</span><span class="sxs-lookup"><span data-stu-id="95405-151">How to: Access a WSE 3.0 Service</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [<span data-ttu-id="95405-152">Información sobre códigos de cliente generado</span><span class="sxs-lookup"><span data-stu-id="95405-152">Understanding Generated Client Code</span></span>](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
- [<span data-ttu-id="95405-153">Mejora del tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="95405-153">How to: Improve the Startup Time of WCF Client Applications using the XmlSerializer</span></span>](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
- [<span data-ttu-id="95405-154">Especificación del comportamiento de tiempo de ejecución del cliente</span><span class="sxs-lookup"><span data-stu-id="95405-154">Specifying Client Run-Time Behavior</span></span>](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
- [<span data-ttu-id="95405-155">Configuración de los comportamientos del cliente</span><span class="sxs-lookup"><span data-stu-id="95405-155">Configuring Client Behaviors</span></span>](../../../docs/framework/wcf/configuring-client-behaviors.md)
+
+## <a name="debugging-exceptions-thrown-by-a-client"></a><span data-ttu-id="0cf61-137">Depuración de las excepciones iniciadas por un cliente</span><span class="sxs-lookup"><span data-stu-id="0cf61-137">Debugging Exceptions Thrown by a Client</span></span>
+
+<span data-ttu-id="0cf61-138">Muchas de las excepciones iniciadas por un cliente WCF están provocados por una excepción en el servicio.</span><span class="sxs-lookup"><span data-stu-id="0cf61-138">Many exceptions thrown by a WCF client are caused by an exception on the service.</span></span> <span data-ttu-id="0cf61-139">Estos son algunos ejemplos:</span><span class="sxs-lookup"><span data-stu-id="0cf61-139">Some examples of this are:</span></span>
+
+-   <span data-ttu-id="0cf61-140"><xref:System.Net.Sockets.SocketException>: el host remoto forzó el cierre de la conexión existente.</span><span class="sxs-lookup"><span data-stu-id="0cf61-140"><xref:System.Net.Sockets.SocketException>: An existing connection was forcibly closed by the remote host.</span></span>
+
+-   <span data-ttu-id="0cf61-141"><xref:System.ServiceModel.CommunicationException>: la conexión ha terminado de forma inesperada.</span><span class="sxs-lookup"><span data-stu-id="0cf61-141"><xref:System.ServiceModel.CommunicationException>: The underlying connection was closed unexpectedly.</span></span>
+
+-   <span data-ttu-id="0cf61-142"><xref:System.ServiceModel.CommunicationObjectAbortedException>: se anuló la conexión de socket.</span><span class="sxs-lookup"><span data-stu-id="0cf61-142"><xref:System.ServiceModel.CommunicationObjectAbortedException>: The socket connection was aborted.</span></span> <span data-ttu-id="0cf61-143">La causa puede ser un error en el procesamiento del mensaje, que se superó el tiempo de espera de recepción en el host remoto, o bien un problema de recursos de red subyacente.</span><span class="sxs-lookup"><span data-stu-id="0cf61-143">This could be caused by an error processing your message, a receive time-out being exceeded by the remote host, or an underlying network resource issue.</span></span>
+
+<span data-ttu-id="0cf61-144">Cuando se producen estos tipos de excepciones, la mejor manera de resolver el problema es activar el seguimiento en el lado del servicio y determinar qué excepción se produjo allí.</span><span class="sxs-lookup"><span data-stu-id="0cf61-144">When these types of exceptions occur, the best way to solve the problem is to turn on tracing on the service side and determine what exception occurred there.</span></span> <span data-ttu-id="0cf61-145">Para obtener más información acerca del seguimiento, vea [seguimiento](../../../docs/framework/wcf/diagnostics/tracing/index.md) y [utilizando seguimiento de la solución de problemas de la aplicación](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).</span><span class="sxs-lookup"><span data-stu-id="0cf61-145">For more information about tracing, see [Tracing](../../../docs/framework/wcf/diagnostics/tracing/index.md) and [Using Tracing to Troubleshoot Your Application](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="0cf61-146">Vea también</span><span class="sxs-lookup"><span data-stu-id="0cf61-146">See Also</span></span>
+
+- [<span data-ttu-id="0cf61-147">Cómo crear un cliente</span><span class="sxs-lookup"><span data-stu-id="0cf61-147">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [<span data-ttu-id="0cf61-148">Acceso a los servicios con un contrato dúplex</span><span class="sxs-lookup"><span data-stu-id="0cf61-148">How to: Access Services with a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [<span data-ttu-id="0cf61-149">Llamada a operaciones de servicio de forma asincrónica</span><span class="sxs-lookup"><span data-stu-id="0cf61-149">How to: Call Service Operations Asynchronously</span></span>](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [<span data-ttu-id="0cf61-150">Acceso a los servicios con contratos unidireccionales y de solicitud-respuesta</span><span class="sxs-lookup"><span data-stu-id="0cf61-150">How to: Access Services with One-Way and Request-Reply Contracts</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [<span data-ttu-id="0cf61-151">Acceso a un servicio WSE 3.0</span><span class="sxs-lookup"><span data-stu-id="0cf61-151">How to: Access a WSE 3.0 Service</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [<span data-ttu-id="0cf61-152">Información sobre códigos de cliente generado</span><span class="sxs-lookup"><span data-stu-id="0cf61-152">Understanding Generated Client Code</span></span>](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
+- [<span data-ttu-id="0cf61-153">Mejora del tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="0cf61-153">How to: Improve the Startup Time of WCF Client Applications using the XmlSerializer</span></span>](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [<span data-ttu-id="0cf61-154">Especificación del comportamiento de tiempo de ejecución del cliente</span><span class="sxs-lookup"><span data-stu-id="0cf61-154">Specifying Client Run-Time Behavior</span></span>](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [<span data-ttu-id="0cf61-155">Configuración de los comportamientos del cliente</span><span class="sxs-lookup"><span data-stu-id="0cf61-155">Configuring Client Behaviors</span></span>](../../../docs/framework/wcf/configuring-client-behaviors.md)
