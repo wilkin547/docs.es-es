@@ -3,23 +3,24 @@ title: Documentar el código con comentarios XML
 description: Obtenga información sobre cómo documentar el código con comentarios de documentación XML y generar un archivo de documentación XML en tiempo de compilación.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 1284f179c7debb323ea3bbd302df1f02bf8b31b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c94e98478e71449a3f9cc4bf1f21462e17a371b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218510"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43392501"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentar el código con comentarios XML
 
-Los comentarios de documentación XML son un tipo especial de comentarios que se agregan encima de la definición de un tipo o un miembro definido por el usuario. Son especiales porque los puede procesar el compilador para generar un archivo de documentación XML en tiempo de compilación.
+Los comentarios de documentación XML son un tipo especial de comentarios que se agregan encima de la definición de un tipo o un miembro definido por el usuario.
+Son especiales porque los puede procesar el compilador para generar un archivo de documentación XML en tiempo de compilación.
 El archivo XML generado por el compilador se puede distribuir junto con el ensamblado .NET de modo que Visual Studio y otros IDE puedan usar IntelliSense para mostrar información rápida sobre los tipos o los miembros. Además, el archivo XML se puede ejecutar mediante herramientas como [DocFX](https://dotnet.github.io/docfx/) y [Sandcastle](https://github.com/EWSoftware/SHFB) para generar sitios web de referencia de API.
 
 El compilador omite los comentarios de documentación XML, igual que los demás comentarios.
 
 Para generar el archivo XML en tiempo de compilación, realice una de las siguientes acciones:
 
-- Si está desarrollando una aplicación con .NET Core desde la línea de comandos, puede agregar un [elemento DocumentationFile](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) a la sección `<PropertyGroup>` de su archivo de proyecto .csproj. En el siguiente ejemplo se genera un archivo XML en el directorio del proyecto con el mismo nombre de archivo raíz que el ensamblado:
+- Si está desarrollando una aplicación con .NET Core desde la línea de comandos, puede agregar un [elemento DocumentationFile](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) a la sección `<PropertyGroup>` de su archivo de proyecto .csproj. En el siguiente ejemplo se genera un archivo XML en el directorio del proyecto con el mismo nombre de archivo raíz que el ensamblado:
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -27,11 +28,11 @@ Para generar el archivo XML en tiempo de compilación, realice una de las siguie
 
    También puede especificar la ruta de acceso absoluta o relativa exacta y el nombre del archivo XML. En el ejemplo siguiente se genera el archivo XML en el mismo directorio que la versión de depuración de una aplicación:
 
-    ```xml
+   ```xml
    <DocumentationFile>bin\Debug\netcoreapp1.0\App.xml</DocumentationFile>
    ```
 
-- Si está desarrollando una aplicación mediante Visual Studio, haga clic con el botón derecho en el proyecto y seleccione **Propiedades**. En el cuadro de diálogo de propiedades, seleccione la pestaña **Compilar** y active **Archivo de documentación XML**. También puede cambiar la ubicación en la que el compilador escribe el archivo. 
+- Si está desarrollando una aplicación mediante Visual Studio, haga clic con el botón derecho en el proyecto y seleccione **Propiedades**. En el cuadro de diálogo de propiedades, seleccione la pestaña **Compilar** y active **Archivo de documentación XML**. También puede cambiar la ubicación en la que el compilador escribe el archivo.
 
 - Si está compilando una aplicación de .NET Framework desde la línea de comandos, agregue la [opción del compilador /doc](language-reference/compiler-options/doc-compiler-option.md) al compilar.  
 
@@ -121,7 +122,8 @@ La etiqueta `<see>` le permite crear un vínculo interactivo a una página de do
 
 [!code-csharp[See Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
-`cref` es un atributo **necesario** que representa una referencia a un tipo o a su miembro que está disponible desde el entorno de compilación actual. Puede ser cualquier tipo definido en el proyecto o un ensamblado de referencia.
+`cref` es un atributo **necesario** que representa una referencia a un tipo o a su miembro que está disponible desde el entorno de compilación actual.
+Puede ser cualquier tipo definido en el proyecto o un ensamblado de referencia.
 
 ### <a name="ltseealsogt"></a>&lt;seealso&gt;
 
@@ -174,7 +176,8 @@ Si ha seguido este tutorial y ha aplicado las etiquetas al código en los casos 
 [!code-csharp[Tagged Library](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
 Desde su código, puede generar un sitio web de documentación detallada completo con referencias cruzadas interactivas. Pero se enfrenta a otro problema: su código se ha vuelto difícil de leer.
-Es una pesadilla para los desarrolladores que quieran contribuir a este código, ya que hay mucha información que examinar. Afortunadamente, hay una etiqueta XML que le ayudará a resolverlo:
+Es una pesadilla para los desarrolladores que quieran contribuir a este código, ya que hay mucha información que examinar.
+Afortunadamente, hay una etiqueta XML que le ayudará a resolverlo:
 
 ### <a name="ltincludegt"></a>&lt;include&gt;
 
@@ -184,11 +187,12 @@ Ahora vamos a mover todas las etiquetas XML a un archivo XML independiente denom
 
 [!code-xml[Sample XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
 
-En el XML anterior, los comentarios de documentación de cada miembro aparecen directamente dentro de una etiqueta cuyo nombre indica lo que hacen, pero puede elegir su propia estrategia. Ahora que tiene los comentarios XML en un archivo independiente, veamos cómo se puede hacer más legible el código mediante la etiqueta `<include>`:
+En el XML anterior, los comentarios de documentación de cada miembro aparecen directamente dentro de una etiqueta cuyo nombre indica lo que hacen, pero puede elegir su propia estrategia.
+Ahora que tiene los comentarios XML en un archivo independiente, veamos cómo se puede hacer más legible el código mediante la etiqueta `<include>`:
 
 [!code-csharp[Include Tag](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
-Aquí lo tiene: el código vuelve a ser legible y no se ha perdido ninguna información de documentación. 
+Aquí lo tiene: el código vuelve a ser legible y no se ha perdido ninguna información de documentación.
 
 El atributo `filename` representa el nombre del archivo XML que contiene la documentación.
 
@@ -217,6 +221,6 @@ Se recomienda documentar código por diversos motivos. A continuación se muestr
 - El compilador valida los parámetros que contienen rutas de acceso de archivo y referencias a otras partes del código.
 
 ## <a name="see-also"></a>Vea también
-[Comentarios de documentación XML (Guía de programación de C#)](programming-guide/xmldoc/xml-documentation-comments.md)
 
-[Etiquetas recomendadas para comentarios de documentación (Guía de programación de C#)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+* [Comentarios de documentación XML (Guía de programación de C#)](programming-guide/xmldoc/xml-documentation-comments.md)
+* [Etiquetas recomendadas para comentarios de documentación (Guía de programación de C#)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

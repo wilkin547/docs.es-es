@@ -3,11 +3,11 @@ title: 'Archivo XML de ejemplo: Varios pedidos de compra en un espacio de nombre
 ms.date: 07/20/2015
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
 ms.openlocfilehash: 03ca5cfbf198f576a52e6ceb5eb085195d599d3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338440"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470017"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Archivo XML de ejemplo: Varios pedidos de compra en un espacio de nombres
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo contiene varios pedidos de compra. El XML se encuentra en un espacio de nombres.  

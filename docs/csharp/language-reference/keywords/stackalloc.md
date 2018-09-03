@@ -6,12 +6,12 @@ f1_keywords:
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 905873cf7f576ff35a9bc1c182ce7ebe17920288
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5926550eea1f5a2f8fb74645f22ca54c2bed3136
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269173"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484059"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Referencia de C#)
 La palabra clave `stackalloc` se usa en un contexto de código no seguro para asignar un bloque de memoria a la pila.
@@ -63,8 +63,9 @@ El código no seguro es menos seguro que las alternativas seguras. Pero el uso d
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Vea también
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
- [Palabras clave de operador](../../../csharp/language-reference/keywords/operator-keywords.md)  
- [Código no seguro y punteros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+- [Palabras clave de operador](../../../csharp/language-reference/keywords/operator-keywords.md)  
+- [Código no seguro y punteros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)

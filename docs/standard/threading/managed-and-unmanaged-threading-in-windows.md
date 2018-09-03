@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50e709c8b5de505b17efea8ddf333633b2bd7400
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1be82fd9f26e382f20913551f67e8303cf20e03b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591695"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390618"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Subprocesamiento administrado y no administrado en Windows
-La administración de todos los subprocesos se realiza mediante la clase <xref:System.Threading.Thread> , incluidos los subprocesos creados por Common Language Runtime y los creados fuera del runtime que entran en el entorno administrado para ejecutar código. El runtime supervisa todos los subprocesos del proceso que han ejecutado alguna vez código en el entorno de ejecución administrado. No realiza un seguimiento de ningún otro subproceso. Los subprocesos pueden acceder al entorno de ejecución administrado a través de la interoperabilidad COM (porque el runtime expone los objetos administrados como objetos COM a los entornos no administrados), la función COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) y la invocación de plataforma.  
+La administración de todos los subprocesos se realiza mediante la clase <xref:System.Threading.Thread> , incluidos los subprocesos creados por Common Language Runtime y los creados fuera del runtime que entran en el entorno administrado para ejecutar código. El runtime supervisa todos los subprocesos del proceso que han ejecutado alguna vez código en el entorno de ejecución administrado. No realiza un seguimiento de ningún otro subproceso. Los subprocesos pueden acceder al entorno de ejecución administrado a través de la interoperabilidad COM (porque el runtime expone los objetos administrados como objetos COM a los entornos no administrados), la función COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) y la invocación de plataforma.  
   
  Cuando un subproceso no administrado entra en el runtime a través de, por ejemplo, un contenedor CCW, el sistema comprueba el almacén local del subproceso para buscar un objeto <xref:System.Threading.Thread> administrado interno. Si se encuentra uno, el runtime ya tiene en cuenta este subproceso. Si no lo encuentra, el runtime compila un nuevo objeto <xref:System.Threading.Thread> y lo instala en el almacén local de ese subproceso.  
   
@@ -45,7 +45,7 @@ La administración de todos los subprocesos se realiza mediante la clase <xref:S
 |Cercano a **CoInitializeEx** (OLE32.DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
 ## <a name="managed-threads-and-com-apartments"></a>Subprocesos administrados y apartamentos COM  
- Un subproceso administrado se puede marcar para indicar que hospedará un contenedor [uniproceso](https://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) o [multiproceso](https://msdn.microsoft.com/library/windows/desktop/ms693421.aspx). (Para más información sobre la arquitectura de subprocesos COM, consulte [Procesos, subprocesos y contenedores](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)). Los métodos <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> y <xref:System.Threading.Thread.TrySetApartmentState%2A> de la clase <xref:System.Threading.Thread> devuelven y asignan el estado de contenedor de un subproceso. Si el estado no se ha establecido, <xref:System.Threading.Thread.GetApartmentState%2A> devuelve <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
+ Un subproceso administrado se puede marcar para indicar que hospedará un contenedor [uniproceso](/windows/desktop/com/single-threaded-apartments) o [multiproceso](/windows/desktop/com/multithreaded-apartments). (Para más información sobre la arquitectura de subprocesos COM, consulte [Procesos, subprocesos y contenedores](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)). Los métodos <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> y <xref:System.Threading.Thread.TrySetApartmentState%2A> de la clase <xref:System.Threading.Thread> devuelven y asignan el estado de contenedor de un subproceso. Si el estado no se ha establecido, <xref:System.Threading.Thread.GetApartmentState%2A> devuelve <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
  La propiedad solo se puede establecer cuando el estado del subproceso es <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> y únicamente una vez por subproceso.  
   

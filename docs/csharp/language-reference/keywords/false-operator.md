@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - false operator keyword [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: e1c6da604f35031dd9d712125356243e1735f452
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: e73113bd37dbb68590267141ad037f78919520bc
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027842"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253254"
 ---
 # <a name="false-operator-c-reference"></a>false (Operador, Referencia de C#)
 
@@ -33,8 +33,8 @@ Un tipo no puede sobrecargar directamente los operadores lógicos condicionales 
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de C#](../index.md)  
-[Guía de programación de C#](../../programming-guide/index.md)  
-[Palabras clave de C#](index.md)  
-[Operadores de C#](../operators/index.md)  
-[true](true.md)  
+- [Referencia de C#](../index.md)  
+- [Guía de programación de C#](../../programming-guide/index.md)  
+- [Palabras clave de C#](index.md)  
+- [Operadores de C#](../operators/index.md)  
+- [true](true.md)  

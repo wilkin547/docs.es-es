@@ -3,12 +3,12 @@ title: Devolver una consulta de un método
 description: Cómo devolver una consulta.
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: 13f0839f712cb76b34c98157a30315787d300109
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 1c5fa534f3f39f8201d93b986e687d85bb303736
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404163"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43473949"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Cómo: Devolver una consulta desde un método (Guía de programación de C#)
 En este ejemplo se muestra cómo devolver una consulta desde un método como un valor devuelto y como un parámetro `out`.  
@@ -20,5 +20,6 @@ En este ejemplo se muestra cómo devolver una consulta desde un método como un 
   
  [!code-csharp[csProgGuideLINQ#80](~/samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 
-## <a name="see-also"></a>Vea también  
- [Language-Integrated Query (LINQ)](index.md)
+## <a name="see-also"></a>Vea también
+
+- [Language-Integrated Query (LINQ)](index.md)

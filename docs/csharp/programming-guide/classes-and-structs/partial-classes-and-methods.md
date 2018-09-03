@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
 ms.openlocfilehash: aa0baf50b9e4aabf0bb5dfa229ecd245db391a8b
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314739"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484033"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Clases y métodos parciales (Guía de programación de C#)
 Es posible dividir la definición de una [clase](../../../csharp/language-reference/keywords/class.md), un [struct](../../../csharp/language-reference/keywords/struct.md), una [interfaz](../../../csharp/language-reference/keywords/interface.md) o un método en dos o más archivos de código fuente. Cada archivo de código fuente contiene una sección de la definición de tipo o método, y todos los elementos se combinan cuando se compila la aplicación.  
@@ -109,7 +109,7 @@ Es posible dividir la definición de una [clase](../../../csharp/language-refere
   
 ## <a name="example-1"></a>Ejemplo 1  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descripción  
  En el ejemplo siguiente, los campos y el constructor de la clase, `CoOrds`, se declaran en una definición de clase parcial y el miembro `PrintCoOrds` se declara en otra definición de clase parcial.  
   
 ### <a name="code"></a>Código  
@@ -117,7 +117,7 @@ Es posible dividir la definición de una [clase](../../../csharp/language-refere
   
 ## <a name="example-2"></a>Ejemplo 2  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descripción  
  En el ejemplo siguiente se muestra que también se pueden desarrollar structs e interfaces parciales.  
   
 ### <a name="code"></a>Código  

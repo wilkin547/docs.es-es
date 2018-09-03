@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 3f7f5f323006024c393cb066284712ed60836372
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96b0b089843495d35a54db43018688dbb4ffba2b
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216770"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330898"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (Opciones del compilador de C#)
 La opción **-win32res** inserta un recurso de Win32 en el archivo de salida.  
@@ -52,5 +52,6 @@ csc -win32res:rf.res in.cs
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 1d079dc7eef2f4abfbdec5a01b4233c8504d449d
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: aeafaa8e618e02cab127593a19dda1d72780e091
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106494"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998689"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafíos y soluciones de la administración de datos distribuidos
 
@@ -65,7 +65,7 @@ Comunicarse a través de los límites de los microservicios supone un verdadero 
 
 En un sistema distribuido como es una aplicación basada en microservicios, con tantos artefactos desplazándose y con servicios distribuidos en varios servidores o hosts, se acabará produciendo algún error en los componentes. Puesto que se van a producir errores e interrupciones incluso mayores, es necesario diseñar los microservicios y la comunicación entre ellos teniendo en cuenta los riesgos comunes en este tipo de sistemas distribuidos.
 
-Debido a su simplicidad, un enfoque popular consiste en implementar HTTP microservicios basados en HTTP (REST). Un enfoque basado en HTTP es absolutamente aceptable; aquí el problema está relacionado con el uso que se hace de él. No hay problema si utiliza solicitudes y respuestas HTTP para interactuar con sus microservicios desde las aplicaciones cliente o desde las puertas de enlace de API. Pero si crea cadenas largas de llamadas HTTP sincrónicas que afectan a varios microservicios, comunicándose a través de sus límites como si los microservicios fuesen objetos en una aplicación monolítica, la aplicación acabará teniendo problemas.
+Debido a su simplicidad, un enfoque popular consiste en implementar microservicios basados en HTTP (REST). Un enfoque basado en HTTP es absolutamente aceptable; aquí el problema está relacionado con el uso que se hace de él. No hay problema si utiliza solicitudes y respuestas HTTP para interactuar con sus microservicios desde las aplicaciones cliente o desde las puertas de enlace de API. Pero si crea cadenas largas de llamadas HTTP sincrónicas que afectan a varios microservicios, comunicándose a través de sus límites como si los microservicios fuesen objetos en una aplicación monolítica, la aplicación acabará teniendo problemas.
 
 Por ejemplo, imagine que la aplicación cliente realiza una llamada API HTTP a un microservicio individual como el de pedidos. Si el microservicio de pedidos llama a su vez a otros microservicios usando HTTP en el mismo ciclo de solicitud/respuesta, estará creando una cadena de llamadas HTTP. Aunque en un principio podría parecer razonable, hay aspectos importantes que se deben tener en cuenta:
 

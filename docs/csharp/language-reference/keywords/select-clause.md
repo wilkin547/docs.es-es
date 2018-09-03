@@ -8,12 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 6e7277b5d714e48059fe1ed7e8b85e46a14a840c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcab29cdbe98b5e49463d9a2781d43d4b9ee9544
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279989"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467346"
 ---
 # <a name="select-clause-c-reference"></a>select (Cláusula, Referencia de C#)
 En una expresión de consulta, la cláusula `select` especifica el tipo de valores que se producirán cuando se ejecute la consulta. El resultado se basa en la evaluación de todas las cláusulas anteriores y en cualquier expresión de la propia cláusula `select`. Una expresión de consulta debe finalizar con una cláusula `select` o con una cláusula [group](../../../csharp/language-reference/keywords/group-clause.md).  
@@ -34,11 +34,12 @@ En una expresión de consulta, la cláusula `select` especifica el tipo de valor
 ## <a name="remarks"></a>Comentarios  
  En tiempo de compilación, la cláusula `select` se convierte en una llamada de método al operador de consulta estándar <xref:System.Linq.Enumerable.Select%2A>.  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Palabras clave para consultas (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [from (cláusula)](../../../csharp/language-reference/keywords/from-clause.md)  
- [partial (Método) (Referencia de C#)](../../../csharp/language-reference/keywords/partial-method.md)  
- [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Introducción a LINQ en C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>Vea también
+
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Palabras clave para consultas (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+- [from (cláusula)](../../../csharp/language-reference/keywords/from-clause.md)  
+- [partial (Método) (Referencia de C#)](../../../csharp/language-reference/keywords/partial-method.md)  
+- [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [Introducción a LINQ en C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

@@ -4,11 +4,11 @@ description: Conozca las características del lenguaje que reducen al mínimo la
 ms.date: 11/10/2017
 ms.custom: mvc
 ms.openlocfilehash: f241219994d7a03192a4aea69b912bf1ac5ed29c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930654"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43422671"
 ---
 # <a name="reference-semantics-with-value-types"></a>Semántica de referencia con tipos de valor
 

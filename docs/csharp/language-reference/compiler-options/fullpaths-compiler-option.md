@@ -10,12 +10,12 @@ helpviewer_keywords:
 - full paths [C#]
 - -fullpaths compiler option [C#]
 ms.assetid: d2a5f857-cbb2-430b-879c-d648aaf0b8c4
-ms.openlocfilehash: 29320ae2dc4b13381ecce76fb04101f18d214bba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f23bb683067c55f5b5213065c3082b843dd7dce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215315"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388284"
 ---
 # <a name="-fullpaths-c-compiler-options"></a>-fullpaths (Opciones del compilador de C#)
 La opción **-fullpaths** hace que el compilador especifique una ruta de acceso completa al archivo cuando se muestran los errores de compilación y las advertencias.  
@@ -32,4 +32,5 @@ La opción **-fullpaths** hace que el compilador especifique una ruta de acceso 
  Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.  
   
 ## <a name="see-also"></a>Vea también  
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+
+- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)

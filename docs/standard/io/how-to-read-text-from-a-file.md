@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7c54e5e55770f3df44819cdf6d2d2c866f7e0fc
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 2ffc8c88f01ba10bceb4f768f38ae9b1dcc4148e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298167"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43422180"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Cómo: Leer texto de un archivo
 En los ejemplos siguientes se muestra cómo leer texto desde un archivo de texto de forma sincrónica y asincrónica mediante .NET para aplicaciones de escritorio. En ambos ejemplos, cuando se crea la instancia de la clase <xref:System.IO.StreamReader>, se proporciona la ruta de acceso relativa o absoluta del archivo. En los ejemplos siguientes se supone que el archivo denominado TestFile.txt está en la misma carpeta que la aplicación.  
   
- Estos ejemplos de código no se pueden aplicar al desarrollo de aplicaciones de la Tienda Windows porque Windows Runtime ofrece diferentes tipos de secuencias para leer archivos o escribir en ellos. Para obtener un ejemplo sobre cómo leer el texto de un archivo en una aplicación de la Tienda Windows, vea [Inicio rápido: lectura y escritura de un archivo](https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh758325(v=win.10)). Para obtener ejemplos que muestren cómo convertir entre secuencias de .NET Framework y secuencias de Windows Runtime, vea [Cómo: Convertir entre secuencias .NET Framework y secuencias de Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
+ Estos ejemplos de código no se pueden aplicar al desarrollo de aplicaciones de la Tienda Windows porque Windows Runtime ofrece diferentes tipos de secuencias para leer archivos o escribir en ellos. Para obtener un ejemplo sobre cómo leer el texto de un archivo en una aplicación de la Tienda Windows, vea [Inicio rápido: lectura y escritura de un archivo](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)). Para obtener ejemplos que muestren cómo convertir entre secuencias de .NET Framework y secuencias de Windows Runtime, vea [Cómo: Convertir entre secuencias .NET Framework y secuencias de Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se muestra una operación de lectura sincrónica dentro de una aplicación de consola. En este ejemplo, el archivo de texto se abre con un lector de secuencias, el contenido se copia en una cadena y la cadena se envía a la consola.  
@@ -44,7 +44,7 @@ En los ejemplos siguientes se muestra cómo leer texto desde un archivo de texto
  <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
  [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md) (E/S de archivos asincrónica)  
  [Cómo: Crear una lista de directorios](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
- [Inicio rápido: lectura y escritura de un archivo](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx)  
+ [Inicio rápido: lectura y escritura de un archivo](https://msdn.microsoft.com/library/windows/apps/hh758325.aspx)  
  [Convertir flujos de .NET Framework en flujos de Windows Runtime y viceversa](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
  [Cómo: Leer y escribir en un archivo de datos recién creado](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
  [Cómo: Abrir y anexar a un archivo de registro](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  

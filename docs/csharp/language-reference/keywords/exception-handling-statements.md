@@ -5,11 +5,11 @@ helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
 ms.openlocfilehash: 1d48981e0d36053fce1249b27cd15551ed59dc91
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931090"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43422244"
 ---
 # <a name="exception-handling-statements-c-reference"></a>Instrucciones para el control de excepciones (Referencia de C#)
 C# proporciona compatibilidad integrada para controlar las situaciones anómalas, denominadas "excepciones", que pueden producirse durante la ejecución del programa. Estas excepciones se controlan mediante código situado fuera del flujo normal de control.  

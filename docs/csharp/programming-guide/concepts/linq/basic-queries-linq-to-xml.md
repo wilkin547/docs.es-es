@@ -3,18 +3,18 @@ title: Consultas básicas (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
 ms.openlocfilehash: b96fc6f2af7754d2403c2ccdf862e976463838a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320777"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43392590"
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Consultas básicas (LINQ to XML) (C#)
 En esta sección se ofrecen ejemplos de consultas básicas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[How to: Find an Element with a Specific Attribute (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md) (Cómo: Buscar un elemento con un atributo específico (C#))|Muestra cómo encontrar un elemento en particular que tenga un atributo con un valor específico.|  
 |[How to: Find an Element with a Specific Child Element (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md) (Cómo: Buscar un elemento con un elemento secundario específico (C#))|Muestra cómo encontrar un elemento en particular que tenga un elemento secundario con un valor específico.|  

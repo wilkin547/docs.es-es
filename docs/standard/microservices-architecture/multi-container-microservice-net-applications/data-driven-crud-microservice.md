@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935398"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396121"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Creación de un microservicio CRUD sencillo controlado por datos
 
@@ -326,7 +326,7 @@ Microsoft Flow, PowerApps y Azure Logic Apps utilizan los metadatos de Swagger p
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Cómo se automatiza la generación de metadatos de la API de Swagger con el paquete NuGet de Swashbuckle
 
-Generar metadatos de Swagger manualmente (en un archivo JSON o YAML) puede resultar muy pesado. Pero puede automatizar la detección de API de servicios ASP.NET Web API mediante el uso del [paquete NuGet de Swashbuckle](http://aka.ms/swashbuckledotnetcore) para generar dinámicamente metadatos de la API de Swagger.
+Generar metadatos de Swagger manualmente (en un archivo JSON o YAML) puede resultar muy pesado. Pero puede automatizar la detección de API de servicios ASP.NET Web API mediante el uso del [paquete NuGet de Swashbuckle](https://aka.ms/swashbuckledotnetcore) para generar dinámicamente metadatos de la API de Swagger.
 
 Swashbuckle genera automáticamente metadatos de Swagger para sus proyectos de ASP.NET Web API. Admite proyectos de ASP.NET Core Web API, proyectos tradicionales de ASP.NET Web API y cualquier otro tipo, como la aplicación API de Azure, la aplicación móvil de Azure o los microservicios Azure Service Fabric basados en ASP.NET. También admite API web sencillas implementadas en contenedores, como es el caso de la aplicación de referencia.
 

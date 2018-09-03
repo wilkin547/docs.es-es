@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: 595533b9f7c0dcc766914a1812001772d0ffa247
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54679292fb8bce16ec572e5a2fee12c1b47292a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397850"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393931"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Instalación de .NET Framework en Windows Vista y Windows Server 2008
 
@@ -18,7 +18,7 @@ ms.locfileid: "33397850"
 
 ![No se pudo iniciar esta aplicación.](./media/this-application-could-not-be-started.png)
 
-Estas instrucciones ayudan a instalar las versiones necesarias de .NET Framework. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) es la última versión. No es compatible con Windows Vista ni Windows Server 2008. Se incluye con la [Actualización de abril de 2018 de Windows 10](https://www.microsoft.com/software-download/windows10).
+Estas instrucciones ayudan a instalar las versiones necesarias de .NET Framework. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) es la última versión. No es compatible con Windows Vista ni Windows Server 2008. Se incluye con la [Actualización de abril de 2018 de Windows 10](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
@@ -28,7 +28,7 @@ Estas instrucciones ayudan a instalar las versiones necesarias de .NET Framework
 
 ## <a name="net-framework-35"></a>.NET Framework 3,5
 
-Puede instalar [.NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) en Windows Vista.
+Puede instalar [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) en Windows Vista.
 
 .NET Framework 3.5 es compatible con aplicaciones desarrolladas para .NET Framework de 1.0 a 3.5.
 

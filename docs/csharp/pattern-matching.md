@@ -3,12 +3,12 @@ title: 'Coincidencia de patrones: Guía de C#'
 description: Información sobre las expresiones de coincidencia de patrones en C#
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 635ab45c89a38f3dedac2d60ea1e31ebf394c9b2
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231481"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255346"
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos #
 
@@ -21,7 +21,7 @@ Para mostrar estas nuevas expresiones, vamos a trabajar con estructuras que repr
 Esas técnicas no son posibles en el caso de los datos que no están estructurados en una jerarquía de clases. Cuando los datos y los métodos están separados, se necesitan otras herramientas. Las nuevas construcciones de *coincidencia de patrones* permiten una sintaxis más limpia para examinar los datos y manipular el flujo de control basándose en cualquier condición de esos datos. Ya escribe instrucciones `if` y `switch` que comprueban el valor de una variable. Escribe instrucciones `is` que comprueban el tipo de una variable. La *coincidencia de patrones* agrega nuevas capacidades a esas instrucciones.
 
 En este tema se creará un método que calcula el área de distintas formas geométricas. Pero se hará sin recurrir a técnicas orientadas a objetos y sin crear una jerarquía de clases para las diferentes formas.
-En lugar de esto se usará la *coincidencia de patrones*. Para hacer más hincapié en que no se va a usar la herencia, cada forma será un elemento `struct` en lugar de una clase. Observe que los distintos tipos `struct` no pueden especificar un tipo base común definido por el usuario, por lo que la herencia no es un diseño posible.
+En lugar de esto se usará la *coincidencia de patrones*.
 Conforme avance en este ejemplo, compare este código con cómo se estructuraría como una jerarquía de objetos. Cuando los datos que se deben consultar y manipular no son una jerarquía de clases, la coincidencia de patrones permite diseños muy elegantes.
 
 En lugar de empezar con una definición de forma abstracta y agregar diferentes clases de formas concretas, se comenzará con simples definiciones solo de datos para cada una de las formas geométricas:

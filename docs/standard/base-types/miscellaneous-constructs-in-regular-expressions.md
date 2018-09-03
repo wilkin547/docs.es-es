@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fabf1a133ca3c3b3ba39a4898ce0aceb378f76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbea588604ebd5ad39e134a4ecfe771c89fb1121
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571987"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390573"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Construcciones misceláneas en expresiones regulares
 Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misceláneas. Una permite habilitar o deshabilitar opciones de coincidencia determinadas en medio de un patrón de expresión regular. Las otras dos permiten incluir comentarios en una expresión regular.  
@@ -31,7 +31,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
   
  Indique las opciones que quiere habilitar después del signo de interrogación y las opciones que quiere deshabilitar después del signo menos. En la siguiente tabla se describe cada una de las opciones. Para obtener más información sobre cada opción, consulte [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |`i`|Coincidencia sin distinción entre mayúsculas y minúsculas.|  
 |`m`|Modo multilínea.|  
@@ -51,7 +51,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
   
  En el ejemplo se definen dos expresiones regulares. La primera, `\b(D\w+)\s(d\w+)\b`, coincide con dos palabras consecutivas que empiezan con una "D" mayúscula y una "d" minúscula. La segunda expresión regular, `\b(D\w+)(?ixn) \s (d\w+) \b`, usa opciones insertadas para modificar este patrón, como se describe en la tabla siguiente. Una comparación de los resultados confirma los efectos de la construcción `(?ixn)`.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`(D\w+)`|Coincide con una "D" mayúscula seguida de uno o más caracteres de palabra. Este es el primer grupo de capturas.|  
@@ -63,9 +63,9 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
 ## <a name="inline-comment"></a>Comentario alineado  
  La construcción `(?#` *comment*`)` permite incluir un comentario alineado en una expresión regular. El motor de expresiones regulares no usa ninguna parte del comentario en la coincidencia de patrones, aunque el comentario se incluye en la cadena devuelta por el método <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType>. El comentario termina en el primer paréntesis de cierre.  
   
- En el ejemplo siguiente se repite el primer patrón de expresión regular del ejemplo de la sección anterior. Se agregan dos comentarios alineados en la expresión regular para indicar si la comparación distingue entre mayúsculas y minúsculas. El patrón de expresión regular, `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b`, se define como se indica a continuación.  
+ En el ejemplo siguiente se repite el primer patrón de expresión regular del ejemplo de la sección anterior. Se agregan dos comentarios alineados en la expresión regular para indicar si la comparación distingue entre mayúsculas y minúsculas. El patrón de expresión regular, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, se define como se indica a continuación.  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`(?# case-sensitive comparison)`|Comentario. No afecta al comportamiento de la coincidencia de patrones.|  
@@ -86,13 +86,12 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Modelo|Description|  
+|Modelo|Descripción|  
 |-------------|-----------------|  
 |`\{`|Coincide con una llave de apertura.|  
 |`\d+`|Buscar coincidencias con uno o más dígitos decimales.|  
 |`(,-*\d+)*`|Coincide con cero o una aparición de una coma seguida de un signo menos opcional, seguido de uno o más dígitos decimales.|  
 |`(\:\w{1,4}?)*`|Coincide con cero o una aparición de un signo de dos puntos seguido de uno a cuatro caracteres de espacio en blanco, pero el menor número posible.|  
-|`(?#case insensitive comparison)`|Comentario alineado. No tiene ningún efecto en el comportamiento de la coincidencia de patrones.|  
 |`\}`|Coincide con una llave de cierre.|  
 |`(?x)`|Habilita la opción de ignorar el espacio en blanco del patrón para que se reconozca el comentario de final de línea.|  
 |`# Looks for a composite format item.`|Comentario de final de línea.|  
