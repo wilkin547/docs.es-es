@@ -8,65 +8,66 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: 7db975909f498a0b84e7405a12a8f8ec1e2dd34b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c140a49de0503da1e59396f14ac1aee4c1d7d1a6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216861"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43390411"
 ---
-# <a name="-lib-c-compiler-options"></a><span data-ttu-id="a6e32-102">-lib (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="a6e32-102">-lib (C# Compiler Options)</span></span>
-<span data-ttu-id="a6e32-103">La opción **-lib** especifica la ubicación de los ensamblados a los que se hace referencia mediante la opción [-reference (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="a6e32-103">The **-lib** option specifies the location of assemblies referenced by means of the [-reference (C# Compiler Options)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) option.</span></span>  
+# <a name="-lib-c-compiler-options"></a><span data-ttu-id="b7386-102">-lib (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="b7386-102">-lib (C# Compiler Options)</span></span>
+<span data-ttu-id="b7386-103">La opción **-lib** especifica la ubicación de los ensamblados a los que se hace referencia mediante la opción [-reference (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="b7386-103">The **-lib** option specifies the location of assemblies referenced by means of the [-reference (C# Compiler Options)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) option.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a6e32-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a6e32-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b7386-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b7386-104">Syntax</span></span>  
   
 ```console  
 -lib:dir1[,dir2]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="a6e32-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="a6e32-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="b7386-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="b7386-105">Arguments</span></span>  
  `dir1`  
- <span data-ttu-id="a6e32-106">Un directorio para el compilador para buscar un ensamblado al que se hace referencia si no lo encuentra en el directorio de trabajo actual (el directorio desde el que se invoca al compilador) o en el directorio del sistema de Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="a6e32-106">A directory for the compiler to look in if a referenced assembly is not found in the current working directory (the directory from which you are invoking the compiler) or in the common language runtime's system directory.</span></span>  
+ <span data-ttu-id="b7386-106">Un directorio para el compilador para buscar un ensamblado al que se hace referencia si no lo encuentra en el directorio de trabajo actual (el directorio desde el que se invoca al compilador) o en el directorio del sistema de Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="b7386-106">A directory for the compiler to look in if a referenced assembly is not found in the current working directory (the directory from which you are invoking the compiler) or in the common language runtime's system directory.</span></span>  
   
  `dir2`  
- <span data-ttu-id="a6e32-107">Uno o varios directorios adicionales para buscar las referencias a ensamblados.</span><span class="sxs-lookup"><span data-stu-id="a6e32-107">One or more additional directories to search in for assembly references.</span></span> <span data-ttu-id="a6e32-108">Separe los nombres de directorio adicionales con una coma y sin espacio en blanco entre ellos.</span><span class="sxs-lookup"><span data-stu-id="a6e32-108">Separate additional directory names with a comma, and without white space between them.</span></span>  
+ <span data-ttu-id="b7386-107">Uno o varios directorios adicionales para buscar las referencias a ensamblados.</span><span class="sxs-lookup"><span data-stu-id="b7386-107">One or more additional directories to search in for assembly references.</span></span> <span data-ttu-id="b7386-108">Separe los nombres de directorio adicionales con una coma y sin espacio en blanco entre ellos.</span><span class="sxs-lookup"><span data-stu-id="b7386-108">Separate additional directory names with a comma, and without white space between them.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a6e32-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a6e32-109">Remarks</span></span>  
- <span data-ttu-id="a6e32-110">El compilador busca referencias a ensamblados que no presentan la ruta completa en el siguiente orden:</span><span class="sxs-lookup"><span data-stu-id="a6e32-110">The compiler searches for assembly references that are not fully qualified in the following order:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b7386-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="b7386-109">Remarks</span></span>  
+ <span data-ttu-id="b7386-110">El compilador busca referencias a ensamblados que no presentan la ruta completa en el siguiente orden:</span><span class="sxs-lookup"><span data-stu-id="b7386-110">The compiler searches for assembly references that are not fully qualified in the following order:</span></span>  
   
-1.  <span data-ttu-id="a6e32-111">Directorio de trabajo actual.</span><span class="sxs-lookup"><span data-stu-id="a6e32-111">Current working directory.</span></span> <span data-ttu-id="a6e32-112">Es el directorio desde donde se invoca al compilador.</span><span class="sxs-lookup"><span data-stu-id="a6e32-112">This is the directory from which the compiler is invoked.</span></span>  
+1.  <span data-ttu-id="b7386-111">Directorio de trabajo actual.</span><span class="sxs-lookup"><span data-stu-id="b7386-111">Current working directory.</span></span> <span data-ttu-id="b7386-112">Es el directorio desde donde se invoca al compilador.</span><span class="sxs-lookup"><span data-stu-id="b7386-112">This is the directory from which the compiler is invoked.</span></span>  
   
-2.  <span data-ttu-id="a6e32-113">El directorio del sistema de Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="a6e32-113">The common language runtime system directory.</span></span>  
+2.  <span data-ttu-id="b7386-113">El directorio del sistema de Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="b7386-113">The common language runtime system directory.</span></span>  
   
-3.  <span data-ttu-id="a6e32-114">Directorios especificados por **-lib**.</span><span class="sxs-lookup"><span data-stu-id="a6e32-114">Directories specified by **-lib**.</span></span>  
+3.  <span data-ttu-id="b7386-114">Directorios especificados por **-lib**.</span><span class="sxs-lookup"><span data-stu-id="b7386-114">Directories specified by **-lib**.</span></span>  
   
-4.  <span data-ttu-id="a6e32-115">Directorios especificados por la variable de entorno LIB.</span><span class="sxs-lookup"><span data-stu-id="a6e32-115">Directories specified by the LIB environment variable.</span></span>  
+4.  <span data-ttu-id="b7386-115">Directorios especificados por la variable de entorno LIB.</span><span class="sxs-lookup"><span data-stu-id="b7386-115">Directories specified by the LIB environment variable.</span></span>  
   
- <span data-ttu-id="a6e32-116">Use **-reference** para especificar una referencia a un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="a6e32-116">Use **-reference** to specify an assembly reference.</span></span>  
+ <span data-ttu-id="b7386-116">Use **-reference** para especificar una referencia a un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="b7386-116">Use **-reference** to specify an assembly reference.</span></span>  
   
- <span data-ttu-id="a6e32-117">La opción **-lib** es sumatoria; si se especifica más de una vez, se anexa a valores ya existentes.</span><span class="sxs-lookup"><span data-stu-id="a6e32-117">**-lib** is additive; specifying it more than once appends to any prior values.</span></span>  
+ <span data-ttu-id="b7386-117">La opción **-lib** es sumatoria; si se especifica más de una vez, se anexa a valores ya existentes.</span><span class="sxs-lookup"><span data-stu-id="b7386-117">**-lib** is additive; specifying it more than once appends to any prior values.</span></span>  
   
- <span data-ttu-id="a6e32-118">Una alternativa al uso de **-lib** consiste en copiar los ensamblados necesarios en el directorio de trabajo; esto permitirá pasar el nombre del ensamblado a **-reference**.</span><span class="sxs-lookup"><span data-stu-id="a6e32-118">An alternative to using **-lib** is to copy into the working directory any required assemblies; this will allow you to simply pass the assembly name to **-reference**.</span></span> <span data-ttu-id="a6e32-119">Después, se pueden eliminar los ensamblados del directorio de trabajo.</span><span class="sxs-lookup"><span data-stu-id="a6e32-119">You can then delete the assemblies from the working directory.</span></span> <span data-ttu-id="a6e32-120">Dado que en el manifiesto del ensamblado no se especifica la ruta al ensamblado dependiente, la aplicación puede iniciarse en el equipo de destino y desde allí buscará y usará el ensamblado en la caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="a6e32-120">Since the path to the dependent assembly is not specified in the assembly manifest, the application can be started on the target computer and will find and use the assembly in the global assembly cache.</span></span>  
+ <span data-ttu-id="b7386-118">Una alternativa al uso de **-lib** consiste en copiar los ensamblados necesarios en el directorio de trabajo; esto permitirá pasar el nombre del ensamblado a **-reference**.</span><span class="sxs-lookup"><span data-stu-id="b7386-118">An alternative to using **-lib** is to copy into the working directory any required assemblies; this will allow you to simply pass the assembly name to **-reference**.</span></span> <span data-ttu-id="b7386-119">Después, se pueden eliminar los ensamblados del directorio de trabajo.</span><span class="sxs-lookup"><span data-stu-id="b7386-119">You can then delete the assemblies from the working directory.</span></span> <span data-ttu-id="b7386-120">Dado que en el manifiesto del ensamblado no se especifica la ruta al ensamblado dependiente, la aplicación puede iniciarse en el equipo de destino y desde allí buscará y usará el ensamblado en la caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="b7386-120">Since the path to the dependent assembly is not specified in the assembly manifest, the application can be started on the target computer and will find and use the assembly in the global assembly cache.</span></span>  
   
- <span data-ttu-id="a6e32-121">El hecho de que el compilador puede hacer referencia al ensamblado no implica que Common Language Runtime pueda buscar y cargar el ensamblado en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="a6e32-121">Because the compiler can reference the assembly does not imply the common language runtime will be able to find and load the assembly at runtime.</span></span> <span data-ttu-id="a6e32-122">Vea [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../framework/deployment/how-the-runtime-locates-assemblies.md) para obtener los detalles sobre cómo busca el motor en tiempo de ejecución los ensamblados a los que se hace referencia.</span><span class="sxs-lookup"><span data-stu-id="a6e32-122">See [How the Runtime Locates Assemblies](../../../framework/deployment/how-the-runtime-locates-assemblies.md) for details on how the runtime searches for referenced assemblies.</span></span>  
+ <span data-ttu-id="b7386-121">El hecho de que el compilador puede hacer referencia al ensamblado no implica que Common Language Runtime pueda buscar y cargar el ensamblado en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="b7386-121">Because the compiler can reference the assembly does not imply the common language runtime will be able to find and load the assembly at runtime.</span></span> <span data-ttu-id="b7386-122">Vea [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../framework/deployment/how-the-runtime-locates-assemblies.md) para obtener los detalles sobre cómo busca el motor en tiempo de ejecución los ensamblados a los que se hace referencia.</span><span class="sxs-lookup"><span data-stu-id="b7386-122">See [How the Runtime Locates Assemblies](../../../framework/deployment/how-the-runtime-locates-assemblies.md) for details on how the runtime searches for referenced assemblies.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="a6e32-123">Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="a6e32-123">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="b7386-123">Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="b7386-123">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="a6e32-124">Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="a6e32-124">Open the project's **Property Pages** dialog box.</span></span>  
+1.  <span data-ttu-id="b7386-124">Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="b7386-124">Open the project's **Property Pages** dialog box.</span></span>  
   
-2.  <span data-ttu-id="a6e32-125">Haga clic en la página de propiedades **Ruta de acceso de referencias**.</span><span class="sxs-lookup"><span data-stu-id="a6e32-125">Click the **References Path** property page.</span></span>  
+2.  <span data-ttu-id="b7386-125">Haga clic en la página de propiedades **Ruta de acceso de referencias**.</span><span class="sxs-lookup"><span data-stu-id="b7386-125">Click the **References Path** property page.</span></span>  
   
-3.  <span data-ttu-id="a6e32-126">Modifique el contenido del cuadro de lista.</span><span class="sxs-lookup"><span data-stu-id="a6e32-126">Modify the contents of the list box.</span></span>  
+3.  <span data-ttu-id="b7386-126">Modifique el contenido del cuadro de lista.</span><span class="sxs-lookup"><span data-stu-id="b7386-126">Modify the contents of the list box.</span></span>  
   
- <span data-ttu-id="a6e32-127">Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.</span><span class="sxs-lookup"><span data-stu-id="a6e32-127">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.</span></span>  
+ <span data-ttu-id="b7386-127">Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.</span><span class="sxs-lookup"><span data-stu-id="b7386-127">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a6e32-128">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a6e32-128">Example</span></span>  
- <span data-ttu-id="a6e32-129">Compile t2.cs para crear un archivo .exe.</span><span class="sxs-lookup"><span data-stu-id="a6e32-129">Compile t2.cs to create an .exe file.</span></span> <span data-ttu-id="a6e32-130">El compilador buscará referencias a ensamblados en el directorio de trabajo y en el directorio raíz de la unidad C.</span><span class="sxs-lookup"><span data-stu-id="a6e32-130">The compiler will look in the working directory and in the root directory of the C drive for assembly references.</span></span>  
+## <a name="example"></a><span data-ttu-id="b7386-128">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b7386-128">Example</span></span>  
+ <span data-ttu-id="b7386-129">Compile t2.cs para crear un archivo .exe.</span><span class="sxs-lookup"><span data-stu-id="b7386-129">Compile t2.cs to create an .exe file.</span></span> <span data-ttu-id="b7386-130">El compilador buscará referencias a ensamblados en el directorio de trabajo y en el directorio raíz de la unidad C.</span><span class="sxs-lookup"><span data-stu-id="b7386-130">The compiler will look in the working directory and in the root directory of the C drive for assembly references.</span></span>  
   
 ```console  
 csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a6e32-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="a6e32-131">See Also</span></span>  
- [<span data-ttu-id="a6e32-132">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="a6e32-132">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
- [<span data-ttu-id="a6e32-133">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="a6e32-133">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a><span data-ttu-id="b7386-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="b7386-131">See Also</span></span>
+
+- [<span data-ttu-id="b7386-132">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="b7386-132">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+- [<span data-ttu-id="b7386-133">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="b7386-133">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
