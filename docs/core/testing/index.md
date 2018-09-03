@@ -4,20 +4,20 @@ description: Las pruebas unitarias nunca han sido tan fáciles. Vea cómo usar l
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: b3d8393cf285eae3493328b16c3dc038af208da6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a1d880da796aac40da93ca2513b6163200ca3c1
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212373"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254795"
 ---
-# <a name="unit-testing-in-net-core-and-net-standard"></a>Prueba unitaria en .NET Core y .NET Standard
+# <a name="unit-testing-in-net-core-and-net-standard"></a>Pruebas unitaria en .NET Core y .NET Standard
 
 .NET Core se ha diseñado teniendo en cuenta la capacidad de prueba, así que crear pruebas unitarias para sus aplicaciones es más fácil que nunca. Este artículo presenta brevemente pruebas unitarias (y cómo se diferencian de otros tipos de pruebas). En los recursos vinculados se muestra cómo agregar un proyecto de prueba a la solución y luego ejecutar pruebas unitarias mediante la línea de comandos o Visual Studio.
 
 .NET Core 2.0 admite [.NET Standard 2.0](../../standard/net-standard.md). Las bibliotecas que se usan para mostrar la prueba unitaria en esta sección se basan en .NET Standard y también funcionarán en otros tipos de proyecto.
 
-A partir de .NET Core 2.0, existen plantillas de proyecto de prueba unitaria para Visual Basic y F#, así como para C#.
+A partir de .NET Core 2.0, existen plantillas de proyecto de prueba unitaria para C#, F# y Visual Basic.
 
 ## <a name="getting-started-with-testing"></a>Introducción a las pruebas
 
@@ -34,18 +34,18 @@ Los proyectos de prueba unitaria para .NET Core son compatibles con [C#](../../c
 
 Puede leer sobre esas combinaciones en estos tutoriales:
 
-* Cree pruebas unitarias mediante [*XUnit* y *C#* con la CLI de .NET Core](unit-testing-with-dotnet-test.md).
+* Cree pruebas unitarias mediante [*xUnit* y *C#* con la CLI de .NET Core](unit-testing-with-dotnet-test.md).
 * Cree pruebas unitarias mediante [*NUnit* y *C#* con la CLI de .NET Core](unit-testing-with-nunit.md).
 * Cree pruebas unitarias mediante [*MSTest* y *C#* con la CLI de .NET Core](unit-testing-with-mstest.md).
-* Cree pruebas unitarias mediante [*XUnit* y *F#* con la CLI de .NET Core](unit-testing-fsharp-with-dotnet-test.md).
+* Cree pruebas unitarias mediante [*xUnit* y *F#* con la CLI de .NET Core](unit-testing-fsharp-with-dotnet-test.md).
 * Cree pruebas unitarias mediante [*NUnit* y *F#* con la CLI de .NET Core](unit-testing-fsharp-with-nunit.md).
 * Cree pruebas unitarias mediante [*MSTest* y *F#* con la CLI de .NET Core](unit-testing-fsharp-with-mstest.md).
-* Cree pruebas unitarias mediante [*XUnit* y *Visual Basic* con la CLI de .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
+* Cree pruebas unitarias mediante [*xUnit* y *Visual Basic* con la CLI de .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
 * Cree pruebas unitarias mediante [*NUnit* y *Visual Basic* con la CLI de .NET Core](unit-testing-visual-basic-with-nunit.md).
 * Cree pruebas unitarias mediante [*MSTest* y *Visual Basic* con la CLI de .NET Core](unit-testing-visual-basic-with-mstest.md).
 
 Puede elegir varios lenguajes para las bibliotecas de clases y las bibliotecas de pruebas unitarias. Puede obtener información sobre cómo combinar y hacer coincidir los tutoriales mencionados anteriormente.
 
 * Visual Studio Enterprise proporciona herramientas de pruebas fantásticas para .NET Core. Consulte [Live Unit Testing](/visualstudio/test/live-unit-testing) o [Cobertura de código](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage) para obtener más información.
-* Para información adicional y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, consulte [Ejecución de pruebas unitarias selectivas](selective-unit-tests.md) o cómo [incluir y excluir pruebas con Visual Studio](/visualstudio/test/live-unit-testing#including-and-excluding-test-projects-and-test-methods).
-* El equipo de XUnit ha escrito un tutorial que muestra [cómo usar xUnit con .NET Core y Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
+* Para información adicional y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, consulte [Ejecución de pruebas unitarias selectivas](selective-unit-tests.md) o cómo [incluir y excluir pruebas con Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
+* El equipo de xUnit ha escrito un tutorial que muestra [cómo usar xUnit con .NET Core y Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).

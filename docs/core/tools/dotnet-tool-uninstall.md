@@ -4,12 +4,12 @@ description: El comando dotnet tool uninstall desinstala del equipo la herramien
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 5cf80d1756dbf4e88bb52a8028d186d44978f440
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 93a43e19df4c7f220ac1e2d2db397cba4d791e83
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696947"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389843"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -21,13 +21,13 @@ ms.locfileid: "34696947"
 
 ## <a name="synopsis"></a>Sinopsis
 
-```
+```console
 dotnet tool uninstall <PACKAGE_NAME> <-g|--global>
 dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
 dotnet tool uninstall <-h|--help>
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descripción
 
 El comando `dotnet tool uninstall` permite desinstalar del equipo herramientas globales de .NET Core. Para utilizar el comando, especifique que quiere quitar una herramienta de los usuarios con la opción `--global` o especifique una ruta de acceso en la que está instalada la herramienta usando para ello la opción `--tool-path`.
 
@@ -67,4 +67,4 @@ Desinstala la herramienta global [dotnetsay](https://www.nuget.org/packages/dotn
 
 ## <a name="see-also"></a>Vea también
 
-[Herramientas globales de .NET Core](global-tools.md)
+* [Herramientas globales de .NET Core](global-tools.md)

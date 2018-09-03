@@ -4,12 +4,12 @@ description: El comando dotnet tool list muestra la herramienta global especific
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 5f4793cd37c3a8df06eb6930ad9f381ac70d4e67
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e2bea974207d3098ed67b69ed16a72a03c44cd8b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696730"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467061"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -21,13 +21,13 @@ ms.locfileid: "34696730"
 
 ## <a name="synopsis"></a>Sinopsis
 
-```
+```console
 dotnet tool list <-g|--global>
 dotnet tool list <--tool-path>
 dotnet tool list <-h|--help>
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descripción
 
 El comando `dotnet tool list` muestra todas las herramientas globales de .NET Core instaladas para los usuarios en el equipo (perfil de usuario actual) o en la ruta de acceso especificada. El comando enumera el nombre del paquete, la versión instalada y el comando de la herramienta global. Para utilizar el comando list, especifique que quiere ver las herramientas de los usuarios con la opción `--global`, o bien especifique una ruta de acceso personalizada con la opción `--tool-path`.
 
@@ -61,4 +61,4 @@ Enumera las herramientas globales de una carpeta específica de Linux/macOS:
 
 ## <a name="see-also"></a>Vea también
 
-[Herramientas globales de .NET Core](global-tools.md)
+* [Herramientas globales de .NET Core](global-tools.md)

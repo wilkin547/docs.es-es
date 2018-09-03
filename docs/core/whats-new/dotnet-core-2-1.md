@@ -4,12 +4,12 @@ description: Obtenga información sobre las características nuevas de .NET Core
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2599908c81cbe046889778bbdf7aeb9f8272b215
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935584"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43392854"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novedades de .NET Core 2.1
 
@@ -49,7 +49,7 @@ Una serie de herramientas que estaban disponibles solo en función del proyecto 
    ```console
    dotnet watch -- --verbose build
    ```
-  
+
    Tenga en cuenta que la opción `--` precede a la opción `--verbose`. Delimita las opciones pasadas directamente al comando `dotnet watch` de los argumentos que se pasan al proceso `dotnet` secundario. Sin él, la opción `--verbose` se aplica al comando `dotnet watch`, no al comando `dotnet build`.
   
    Para obtener más información, consulte [Desarrollar aplicaciones ASP.NET Core con dotnet watch](/aspnet/core/tutorials/dotnet-watch).
@@ -88,7 +88,7 @@ En el SDK de .NET Core 2.1 (v. 2.1.300), todas las operaciones de herramientas u
 
 ## <a name="roll-forward"></a>Puesta al día
 
-Todas las aplicaciones de .NET Core a partir de .NET Core 2.0 se ponen al día automáticamente a la *versión secundaria* más reciente instalada en un sistema. 
+Todas las aplicaciones de .NET Core a partir de .NET Core 2.0 se ponen al día automáticamente a la *versión secundaria* más reciente instalada en un sistema.
 
 A partir de .NET Core 2.0, si la versión de .NET Core que se creó una aplicación no está presente en tiempo de ejecución, la aplicación se ejecuta automáticamente en la *versión secundaria* instalada más reciente de .NET Core. En otras palabras, si una aplicación se compila con .NET Core 2.0, y .NET Core 2.0 no está presente en el sistema host pero sí lo está .NET Core 2.1, la aplicación se ejecuta con .NET Core 2.1.
 
@@ -233,6 +233,6 @@ En Linux y macOS, solo se puede configurar <xref:System.Net.Http.HttpClient> par
 
 ## <a name="see-also"></a>Vea también
 
-[Novedades de .NET Core](index.md)  
-[Novedades de EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
-[Novedades de ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)
+* [Novedades de .NET Core](index.md)  
+* [Novedades de EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
+* [Novedades de ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)

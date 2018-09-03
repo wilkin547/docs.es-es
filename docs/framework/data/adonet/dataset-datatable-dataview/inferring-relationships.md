@@ -2,15 +2,15 @@
 title: Inferir relaciones
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: 9833966fa5a16bef70a6ae2b9ca618fde0e05fbb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7dc3fb0c6098d636e640aaf52b72a404c1486492
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759041"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470819"
 ---
 # <a name="inferring-relationships"></a>Inferir relaciones
-Si un elemento que se deduce como una tabla tiene un elemento secundario que también se deduce como una tabla, se creará una <xref:System.Data.DataRelation> entre las dos tablas. Una nueva columna con el nombre de **ParentTableName_Id** se agregará a la tabla creada para el elemento primario y de la tabla creada para el elemento secundario. El **ColumnMapping** propiedad de esta columna de identidad se establecerá en **MappingType.Hidden**. La columna será una clave principal de incremento automático para la tabla primaria y se utilizará para la **DataRelation** entre las dos tablas. El tipo de datos de la columna de identidad agregada será **System.Int32**, a diferencia del tipo de datos de todas las demás columnas deducidas, que es **System.String**. A <xref:System.Data.ForeignKeyConstraint> con **DeleteRule** = **Cascade** también se creará con la nueva columna de tablas el elemento primario y el secundario.  
+Si un elemento que se deduce como una tabla tiene un elemento secundario que también se deduce como una tabla, se creará una <xref:System.Data.DataRelation> entre las dos tablas. Una nueva columna con el nombre de **ParentTableName_Id** se agregará a la tabla creada para el elemento primario y la tabla creada para el elemento secundario. El **ColumnMapping** propiedad de esta columna de identidad se establecerá en **MappingType.Hidden**. La columna será una clave principal de incremento automático para la tabla primaria y se usará para la **DataRelation** entre las dos tablas. El tipo de datos de la columna de identidad agregada será **System.Int32**, a diferencia del tipo de datos de todas las demás columnas deducidas, que es **System.String**. Un <xref:System.Data.ForeignKeyConstraint> con **DeleteRule** = **Cascade** también se creará con la nueva columna en el elemento primario y secundario de las tablas.  
   
  Por ejemplo, tomemos el siguiente código XML:  
   
@@ -25,11 +25,11 @@ Si un elemento que se deduce como una tabla tiene un elemento secundario que tam
   
  El proceso de inferencia producirá dos tablas: **Element1** y **ChildElement1**.  
   
- El **Element1** tabla tiene dos columnas: **Element1_Id** y **ChildElement2**. El **ColumnMapping** propiedad de la **Element1_Id** columna se establecerá en **MappingType.Hidden**. El **ColumnMapping** propiedad de la **ChildElement2** columna se establecerá en **MappingType.Element**. El **Element1_Id** columna se establecerá como la clave principal de la **Element1** tabla.  
+ El **Element1** tabla tendrá dos columnas: **Element1_Id** y **ChildElement2**. El **ColumnMapping** propiedad de la **Element1_Id** columna se establecerá en **MappingType.Hidden**. El **ColumnMapping** propiedad de la **ChildElement2** columna se establecerá en **MappingType.Element**. El **Element1_Id** columna se establecerá como la clave principal de la **Element1** tabla.  
   
- El **ChildElement1** tabla tendrá tres columnas: **attr1**, **attr2** y **Element1_Id**. El **ColumnMapping** propiedad para la **attr1** y **attr2** columnas se establecerá en **MappingType.Attribute**. El **ColumnMapping** propiedad de la **Element1_Id** columna se establecerá en **MappingType.Hidden**.  
+ El **ChildElement1** tabla tendrá tres columnas: **attr1**, **attr2** y **Element1_Id**. El **ColumnMapping** propiedad para el **attr1** y **attr2** columnas se establecerá en **MappingType.Attribute**. El **ColumnMapping** propiedad de la **Element1_Id** columna se establecerá en **MappingType.Hidden**.  
   
- A **DataRelation** y **ForeignKeyConstraint** se creará usando la **Element1_Id** columnas de ambas tablas.  
+ Un **DataRelation** y **ForeignKeyConstraint** , se creará con el **Element1_Id** columnas de ambas tablas.  
   
  **Conjunto de datos:** DocumentElement  
   
@@ -55,7 +55,7 @@ Si un elemento que se deduce como una tabla tiene un elemento secundario que tam
   
  **ChildColumn:** Element1_Id  
   
- **Anidadas:** True  
+ **Anidado:** True  
   
  **ForeignKeyConstraint:** Element1_ChildElement1  
   
@@ -76,4 +76,4 @@ Si un elemento que se deduce como una tabla tiene un elemento secundario que tam
  [Anidado de objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

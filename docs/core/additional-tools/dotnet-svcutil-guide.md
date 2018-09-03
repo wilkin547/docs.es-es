@@ -3,13 +3,13 @@ title: Herramienta dotnet-svcutil de WCF de Microsoft
 description: Información general sobre la herramienta dotnet-svcutil de WCF de Microsoft que agrega funciones para proyectos de .NET Core y ASP.NET Core, similares a la herramienta svcutil de WCF para proyectos de .NET Framework.
 author: mlacouture
 ms.author: jralexander
-ms.date: 06/04/2018
-ms.openlocfilehash: c40dd9b437afe7381244b944228b6b2efe046eb2
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.date: 08/20/2018
+ms.openlocfilehash: bb4d8e5f3997318b720535b0f1e07fc33d13338a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753427"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484126"
 ---
 # <a name="microsoft-wcf-dotnet-svcutil-tool"></a>Herramienta dotnet-svcutil de WCF de Microsoft
 
@@ -61,7 +61,7 @@ dotnet new console
 
 ```xml
 <ItemGroup>
-  <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.0" />
+  <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.*" />
 </ItemGroup>
 ```
 

@@ -4,12 +4,12 @@ description: El comando “dotnet test” se usa para ejecutar pruebas unitarias
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 8a10ac9175ee5fcf8649efbb07d8d382ac3afdc7
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 2bee78ca44026f28c51fac3bcf87d976b53e48a7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696275"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390695"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -22,25 +22,31 @@ ms.locfileid: "34696275"
 ## <a name="synopsis"></a>Sinopsis
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-```
+
+```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
     [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
 dotnet test [-h|--help]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
+
+```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
     [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
 dotnet test [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
+
+```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
 dotnet test [-h|--help]
 ```
+
 ---
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descripción
 
 El comando `dotnet test` se usa para ejecutar pruebas unitarias en un proyecto determinado. El comando `dotnet test` inicia la aplicación de la consola de ejecutor de pruebas especificada para un proyecto. El ejecutor de pruebas ejecuta las pruebas que se definen para un marco de pruebas unitarias (por ejemplo, MSTest, NUnit o xUnit) y notifica el éxito o fracaso de cada prueba. El ejecutor de pruebas y la biblioteca de pruebas unitarias se empaquetan como paquetes de NuGet y se restauran como dependencias ordinarias para el proyecto.
 
@@ -284,5 +290,5 @@ Para obtener más información y ejemplos sobre cómo usar el filtrado de prueba
 
 ## <a name="see-also"></a>Vea también
 
-[Marcos y destinos](../../standard/frameworks.md)  
-[Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)
+* [Marcos y destinos](../../standard/frameworks.md)  
+* [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)

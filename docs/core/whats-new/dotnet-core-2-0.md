@@ -4,12 +4,12 @@ description: Obtenga información sobre las características nuevas de .NET Core
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 59a1f61de365218d649e3392fbce84cd6d530ed5
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566372"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456892"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novedades de .NET Core 2.0
 
@@ -30,7 +30,7 @@ En las versiones anteriores de .NET Core, era necesario ejecutar el comando [dot
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-También puede deshabilitar la invocación automática de `dotnet restore` si pasa el modificador `--no-restore` a los comandos `new`, `run`, `build`, `publish`, `pack` y `test`. 
+También puede deshabilitar la invocación automática de `dotnet restore` si pasa el modificador `--no-restore` a los comandos `new`, `run`, `build`, `publish`, `pack` y `test`.
 
 ### <a name="retargeting-to-net-core-20"></a>Redestinación a .NET Core 2.0
 
@@ -76,7 +76,7 @@ Por ejemplo, para crear una aplicación "Hola mundo" de Visual Basic, haga estos
 
    El comando crea un archivo del proyecto con una extensión de archivo `.vbproj`, además de un archivo de código fuente de Visual Basic llamado *Program.vb*. Este archivo contiene el código fuente para escribir la cadena "Hola mundo" en la ventana de consola.
 
-1.  Escriba el comando `dotnet run`. La [CLI de .NET Core](../tools/index.md) compila y ejecuta automáticamente la aplicación, con lo que se muestra el mensaje "Hola mundo" en la ventana de la consola.
+1. Escriba el comando `dotnet run`. La [CLI de .NET Core](../tools/index.md) compila y ejecuta automáticamente la aplicación, con lo que se muestra el mensaje "Hola mundo" en la ventana de la consola.
 
 ### <a name="support-for-c-71"></a>Compatibilidad con C# 7.1
 
@@ -162,4 +162,5 @@ Ahora es posible instalar el SDK de .NET Core de manera independiente de Visual 
 - [Aplicaciones que se implementan en la nube con Azure](/azure/architecture/reference-architectures/index.md)
 
 ## <a name="see-also"></a>Vea también
-[Novedades de ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)
+
+* [Novedades de ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)
