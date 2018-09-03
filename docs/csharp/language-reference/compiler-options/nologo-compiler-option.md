@@ -9,27 +9,28 @@ helpviewer_keywords:
 - banners, suppressing startup
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
-ms.openlocfilehash: cede0d730e0c0bdaaa1b9b39c729b49677b81ed5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8f4582e9c8d5a54d924ff5b456ef8ffd8cc56f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213645"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480600"
 ---
-# <a name="-nologo-c-compiler-options"></a><span data-ttu-id="f1d20-102">-nologo (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="f1d20-102">-nologo (C# Compiler Options)</span></span>
-<span data-ttu-id="f1d20-103">La opción **-nologo** suprime la presentación del banner de inicio de sesión cuando se inicia el compilador y muestra mensajes informativos durante la compilación.</span><span class="sxs-lookup"><span data-stu-id="f1d20-103">The **-nologo** option suppresses display of the sign-on banner when the compiler starts up and display of informational messages during compiling.</span></span>  
+# <a name="-nologo-c-compiler-options"></a><span data-ttu-id="4c63e-102">-nologo (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="4c63e-102">-nologo (C# Compiler Options)</span></span>
+<span data-ttu-id="4c63e-103">La opción **-nologo** suprime la presentación del banner de inicio de sesión cuando se inicia el compilador y muestra mensajes informativos durante la compilación.</span><span class="sxs-lookup"><span data-stu-id="4c63e-103">The **-nologo** option suppresses display of the sign-on banner when the compiler starts up and display of informational messages during compiling.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f1d20-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f1d20-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4c63e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4c63e-104">Syntax</span></span>  
   
 ```console  
 -nologo  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="f1d20-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f1d20-105">Remarks</span></span>  
- <span data-ttu-id="f1d20-106">Esta opción no está disponible en el entorno de desarrollo; solo está disponible cuando se compila desde la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="f1d20-106">This option is not available from within the development environment; it is only available when compiling from the command line.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4c63e-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="4c63e-105">Remarks</span></span>  
+ <span data-ttu-id="4c63e-106">Esta opción no está disponible en el entorno de desarrollo; solo está disponible cuando se compila desde la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="4c63e-106">This option is not available from within the development environment; it is only available when compiling from the command line.</span></span>  
   
- <span data-ttu-id="f1d20-107">Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.</span><span class="sxs-lookup"><span data-stu-id="f1d20-107">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
+ <span data-ttu-id="4c63e-107">Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.</span><span class="sxs-lookup"><span data-stu-id="4c63e-107">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1d20-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="f1d20-108">See Also</span></span>  
- [<span data-ttu-id="f1d20-109">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="f1d20-109">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
- [<span data-ttu-id="f1d20-110">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="f1d20-110">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a><span data-ttu-id="4c63e-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="4c63e-108">See Also</span></span>  
+
+- [<span data-ttu-id="4c63e-109">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="4c63e-109">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+- [<span data-ttu-id="4c63e-110">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="4c63e-110">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
