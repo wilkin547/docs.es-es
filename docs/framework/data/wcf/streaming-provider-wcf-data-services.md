@@ -10,21 +10,21 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: d65ea58bc2e98ab2607ce105b496ac0a870362b0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805478"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474344"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Proveedores de transmisión por secuencias (WCF Data Services)
-Un servicio de datos puede exponer datos binarios de objetos grandes. Estos datos binarios pueden representar secuencias de vídeo y audio, imágenes, archivos de documento u otros tipos de medios binarios. Cuando una entidad del modelo de datos incluye una o más propiedades binarias, el servicio de datos devuelve estos datos binarios codificados en base 64 en la entrada de la fuente de respuesta. Dado que carga y serialización de datos binarios grandes de esta manera pueden afectar al rendimiento, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define un mecanismo para recuperar datos binarios independientemente de la entidad a la que pertenece. Para ello, se separan los datos binarios de la entidad en uno o varios flujos de datos.  
+Un servicio de datos puede exponer datos binarios de objetos grandes. Estos datos binarios pueden representar secuencias de vídeo y audio, imágenes, archivos de documento u otros tipos de medios binarios. Cuando una entidad del modelo de datos incluye una o más propiedades binarias, el servicio de datos devuelve estos datos binarios codificados en base 64 en la entrada de la fuente de respuesta. Dado que carga y la serialización de datos binarios grandes de esta manera pueden afectar al rendimiento, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define un mecanismo para recuperar datos binarios independientemente de la entidad a la que pertenece. Para ello, se separan los datos binarios de la entidad en uno o varios flujos de datos.  
   
 -   Recurso multimedia: los datos binarios que pertenecen a una entidad, como vídeo, audio, imagen u otro tipo de flujo de recursos multimedia.  
   
 -   Entrada de vínculo multimedia: entidad con una referencia a un flujo de recursos multimedia relacionado.  
   
- Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], defina un flujo de recursos binarios implementando un proveedor de transmisión de datos por secuencias. La implementación del proveedor de transmisión por secuencias proporciona el servicio de datos con la secuencia de recurso multimedia asociada a una entidad específica como un <xref:System.IO.Stream> objeto. Esta implementación permite que el servicio de datos acepte y devuelva los recursos multimedia a través del protocolo HTTP como flujos de datos binarios de un tipo MIME especificado.  
+ Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], defina un flujo de recursos binarios implementando un proveedor de transmisión de datos por secuencias. La implementación del proveedor de transmisión por secuencias proporciona el servicio de datos con la secuencia de recurso multimedia asociada con una entidad concreta como un <xref:System.IO.Stream> objeto. Esta implementación permite que el servicio de datos acepte y devuelva los recursos multimedia a través del protocolo HTTP como flujos de datos binarios de un tipo MIME especificado.  
   
  La configuración de un servicio de datos para que admita la transmisión por secuencias de datos binarios requiere los siguientes pasos:  
   
@@ -38,7 +38,7 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
   
 5.  Habilite el acceso a los recursos binarios en el servidor o en un origen de datos.  
   
- Los ejemplos de este tema se basan en un ejemplo de servicio de fotografías, que se explica con más detalle en la entrada de transmisión por secuencias [serie de proveedores de transmisión por secuencias de servicios de datos: implementación de un proveedor de transmisión por secuencias (parte 1)](http://go.microsoft.com/fwlink/?LinkID=198989). El código fuente para este servicio de ejemplo está disponible en la [página de ejemplo de servicio de datos de fotografía de transmisión por secuencias](http://go.microsoft.com/fwlink/?LinkID=198988) en la Galería de código de MSDN.  
+ Los ejemplos de este tema se basan en un ejemplo de servicio de fotografías, que se explica con más detalle en la entrada de transmisión por secuencias [serie de proveedor de transmisión por secuencias de servicios de datos: implementar un proveedor de transmisión por secuencias (parte 1)](https://go.microsoft.com/fwlink/?LinkID=198989). El código fuente para este servicio de ejemplo está disponible en el [página de ejemplo de servicio de datos de fotografía de transmisión por secuencias](https://go.microsoft.com/fwlink/?LinkID=198988) en la Galería de código de MSDN.  
   
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definir una entrada de vínculo multimedia en el modelo de datos  
  El proveedor del origen de datos determina cómo se define una entidad como entrada de vínculo multimedia en el modelo de datos.  
@@ -50,7 +50,7 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
   
  También debe agregar el espacio de nombres `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` a la entidad o a la raíz del archivo .edmx o del archivo .csdl que definen el modelo de datos.  
   
- Para obtener un ejemplo de un servicio de datos que utiliza el [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] proveedor y expone un recurso multimedia, vea la entrada [serie de proveedores de transmisión por secuencias de servicios de datos: implementación de un proveedor de transmisión por secuencias (parte 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
+ Para obtener un ejemplo de un servicio de datos que usa el [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] proveedor y expone un recurso multimedia, consulte la publicación [serie de proveedor de transmisión por secuencias de servicios de datos: implementar un proveedor de transmisión por secuencias (parte 1)](https://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Proveedor de reflexión**  
  Para indicar que una entidad es una entrada de vínculo multimedia, agregue el atributo <xref:System.Data.Services.Common.HasStreamAttribute> a la clase que define el tipo de entidad en el proveedor de reflexión.  
@@ -77,7 +77,7 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
  [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming service/cs/photodata.svc.cs#photoservicestreamingprovider)]
  [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
   
- Para obtener información general sobre cómo crear un servicio de datos, vea [configurar el servicio de datos](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
+ Para obtener información general sobre cómo crear un servicio de datos, vea [configurando el servicio de datos](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Habilitar flujos binarios grandes en el entorno de hospedaje  
  Al crear un servicio de datos en una aplicación web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], Windows Communication Foundation (WCF) se utiliza para proporcionar la implementación del protocolo HTTP. De forma predeterminada, WCF limita el tamaño de los mensajes HTTP a solo 65 kilobytes. Para poder transmitir datos binarios grandes por secuencias al servicio de datos y desde él, debe configurar también la aplicación web para habilitar archivos binarios grandes y utilizar secuencias para la transferencia. Para ello, en el elemento `<configuration />` del archivo Web.config de la aplicación agregue lo siguiente:  
@@ -85,11 +85,11 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
   
   
 > [!NOTE]
->  Debe usar un <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> modo de transferencia para asegurarse de que los datos binarios en mensajes de solicitud y respuesta se transmite por secuencias y no almacenado en búfer por WCF.  
+>  Debe usar un <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> modo de transferencia para asegurarse de que los datos binarios en mensajes de solicitud y respuesta se transmite por secuencias y no almacena en búfer por WCF.  
   
- Para obtener más información, consulte [de transmisión por secuencias de transferencia de mensajes](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) y [las cuotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
+ Para obtener más información, consulte [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) y [las cuotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
- De forma predeterminada, Internet Information Services (IIS) también limita el tamaño de las respuestas a 4 MB. Para habilitar el servicio de datos recibir transmisiones por secuencias mayores que 4MB cuando se ejecuta en IIS, también debe establecer el `maxRequestLength` atributo de la [httpRuntime Element (ASP.NET Settings Schema)](http://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) en la `<system.web />` sección de configuración, como se muestra en el ejemplo siguiente:  
+ De forma predeterminada, Internet Information Services (IIS) también limita el tamaño de las respuestas a 4 MB. Para habilitar el servicio de datos recibir flujos mayores que 4MB cuando se ejecuta en IIS, también debe establecer el `maxRequestLength` atributo de la [httpRuntime Element (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) en la `<system.web />` sección de configuración, como se muestra en el ejemplo siguiente:  
   
   
   
@@ -119,7 +119,7 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
   
 -   Cuando implemente los métodos <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>, debe utilizar el objeto eTag y los valores Content-Type y que se proporcionan como parámetros de método. No establezca el objeto eTag ni los encabezados Content-Type en la implementación del proveedor <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  
   
--   De forma predeterminada, el cliente envía secuencias binarias grandes mediante codificación de transferencia HTTP fragmentada. Dado que el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] servidor de desarrollo no admite este tipo de codificación, no puede usar este servidor Web para hospedar un servicio de datos de transmisión por secuencias que deba Aceptar secuencias binarias grandes. Para obtener más información sobre [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] servidor de desarrollo, consulte [servidores Web en Visual Studio para proyectos Web ASP.NET](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+-   De forma predeterminada, el cliente envía secuencias binarias grandes mediante codificación de transferencia HTTP fragmentada. Dado que el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server no admite este tipo de codificación, no se puede usar este servidor Web para hospedar un servicio de datos de transmisión por secuencias que debe aceptar secuencias binarias grandes. Para obtener más información sobre [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] servidor de desarrollo, consulte [servidores Web en Visual Studio para proyectos Web de ASP.NET](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>Requisitos de control de versiones  
