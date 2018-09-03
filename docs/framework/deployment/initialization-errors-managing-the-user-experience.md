@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fe59075f04443ba40c209b6cda5a5071d16c79e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a30fe0aac4bfacc71137474837b95371e7d85b09
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392153"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43394746"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Errores de inicialización de .NET Framework: Administrar la experiencia del usuario
 El sistema de activación de Common Language Runtime (CLR) determina qué versión del CLR se utilizará para ejecutar código de aplicaciones administradas. El sistema de activación no siempre encuentra una versión de CLR para cargar. Esta situación normalmente se produce cuando una aplicación requiere una versión de CLR que está desusada o no está instalada en un equipo determinado. Si no se encuentra la versión solicitada, el sistema de activación de CLR devuelve un código de error HRESULT desde la función o interfaz a la que se llamó, y muestra al usuario que ejecuta la aplicación un mensaje de error. Este artículo facilita una lista de códigos HRESULT y explica cómo se puede impedir que aparezca el mensaje de error.  
@@ -55,7 +55,7 @@ Típico mensaje de error para errores de inicialización
   
  El método [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) acepta un miembro de enumeración de [METAHOST_POLICY_FLAGS](../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) como entrada. Puede incluir el indicador METAHOST_POLICY_SHOW_ERROR_DIALOG para solicitar un mensaje de error si no se encuentra la versión solicitada de CLR. De forma predeterminada, el mensaje de error no se muestra. (El método [ICLRMetaHost::GetRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) no acepta esta marca, y no facilita ninguna otra forma de mostrar el mensaje de error).  
   
- Windows proporciona una función [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkID=255242) que puede usar para manifestar si quiere que se muestren los mensajes de error como resultado del código que se ejecuta dentro del proceso. Puede especificar la marca SEM_FAILCRITICALERRORS para impedir que se muestre el mensaje de error.  
+ Windows proporciona una función [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242) que puede usar para manifestar si quiere que se muestren los mensajes de error como resultado del código que se ejecuta dentro del proceso. Puede especificar la marca SEM_FAILCRITICALERRORS para impedir que se muestre el mensaje de error.  
   
  Sin embargo, en algunos escenarios, es importante reemplazar el valor de SEM_FAILCRITICALERRORS establecido por un proceso de aplicación. Por ejemplo, si tiene un componente COM nativo que hospeda al CLR y que a su vez se hospeda en un proceso en el que se establece SEM_FAILCRITICALERRORS, quizás desee reemplazar la marca, teniendo en cuenta el impacto que tendrá en ese proceso de aplicación determinado el mostrar mensajes de error. En este caso, puede utilizar una de las marcas siguientes para reemplazar SEM_FAILCRITICALERRORS:  
   
@@ -66,7 +66,7 @@ Típico mensaje de error para errores de inicialización
 ## <a name="ui-policy-for-clr-provided-hosts"></a>Directiva de la interfaz de usuario para hosts proporcionados por CLR  
  CLR incluye un conjunto de hosts para diversos escenarios, y todos ellos muestran un mensaje de error cuando tienen problemas al cargar la versión necesaria del runtime. En la tabla siguiente se proporciona una lista de hosts y de sus directivas de mensajes de error.  
   
-|Host de CLR|Description|Directiva de mensajes de error|¿Puede deshabilitarse el mensaje de error?|  
+|Host de CLR|Descripción|Directiva de mensajes de error|¿Puede deshabilitarse el mensaje de error?|  
 |--------------|-----------------|--------------------------|------------------------------------|  
 |Host EXE administrado|Inicia archivos EXE administrados.|Se muestra en caso de que falte una versión de .NET Framework|No|  
 |Host COM administrado|Carga los componentes COM administrados en un proceso.|Se muestra en caso de que falte una versión de .NET Framework|Sí, estableciendo la marca SEM_FAILCRITICALERRORS|  

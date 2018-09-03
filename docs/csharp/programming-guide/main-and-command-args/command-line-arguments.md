@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 92b3f916b58f72ab2f2f542d3a611d35861afebe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccfac6bd2688a2e02a1b3fcc14748d357acb1aa2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335330"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464342"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de la línea de comandos (Guía de programación de C#)
 Puede enviar argumentos al método `Main` definiéndolo de una de las siguientes maneras:  
@@ -71,7 +71,7 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 >  Al ejecutar una aplicación en Visual Studio, puede especificar argumentos de la línea de comandos en la [Página Depuración, Diseñador de proyectos](/visualstudio/ide/reference/debug-page-project-designer).  
   
- Para ver más ejemplos sobre cómo usar los argumentos de la línea de comandos, vea [How to: Create and Use Assemblies Using the Command Line](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4) (Cómo: Crear y usar ensamblados mediante la línea de comandos).  
+ Para ver más ejemplos sobre cómo usar los argumentos de la línea de comandos, vea [How to: Create and Use Assemblies Using the Command Line](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4) (Cómo: Crear y usar ensamblados mediante la línea de comandos).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Environment?displayProperty=nameWithType>  

@@ -5,12 +5,12 @@ ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f5affc15607ddae76ec90a90928cb42fa0ad49e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 619aa1f34b91c1a883f9c76351302880ff453c13
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397915"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400173"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Cambios en la autenticación NTLM para HttpWebRequest en la versión 3.5 SP1
 Se han realizado cambios de seguridad en .NET Framework versión 3.5 SP1 que afectan al modo en que las clases <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> y relacionadas del espacio de nombres System.Net controlan la autenticación integrada de Windows. Estos cambios pueden afectar a las aplicaciones que usan estas clases para realizar solicitudes web y recibir respuestas donde se emplea la autenticación integrada de Windows basada en NTLM. Este cambio puede afectar a los servidores web y a las aplicaciones cliente configurados para usar autenticación integrada de Windows.  
@@ -51,7 +51,7 @@ Se han realizado cambios de seguridad en .NET Framework versión 3.5 SP1 que afe
   
  7. Salga del editor del Registro y luego reinicie el servicio IISAdmin y ejecute IISReset.  
   
- Una solución menos segura es deshabilitar la comprobación de bucle inverso, como se explica en [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657). Esto deshabilita la protección contra ataques de reflejo. Por eso es mejor restringir el conjunto de nombres alternativos a solo aquellos que espera que use el equipo en realidad.  
+ Una solución menos segura es deshabilitar la comprobación de bucle inverso, como se explica en [http://support.microsoft.com/kb/896861](https://go.microsoft.com/fwlink/?LinkID=179657). Esto deshabilita la protección contra ataques de reflejo. Por eso es mejor restringir el conjunto de nombres alternativos a solo aquellos que espera que use el equipo en realidad.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  

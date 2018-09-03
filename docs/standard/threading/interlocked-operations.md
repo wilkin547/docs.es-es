@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38532228f7a5d07bb1b9fcf7e90d2be53a28b04c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 361e618578e836e10cf8655f027bed42eac7affd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589976"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393144"
 ---
 # <a name="interlocked-operations"></a>Operaciones de bloqueo
 La clase <xref:System.Threading.Interlocked> proporciona métodos que sincronizan el acceso a una variable que comparten varios subprocesos. Los subprocesos de distintos procesos pueden usar este mecanismo si la variable está en una memoria compartida. Las operaciones de bloqueo son atómicas, es decir, toda la operación es una unidad que no se puede interrumpir por otra operación de bloqueo en la misma variable. Esto es importante en los sistemas operativos con multithreading preferente, donde se puede suspender un subproceso después de cargar un valor desde una dirección de memoria, pero antes de tener la oportunidad de alterarlo y almacenarlo.  
@@ -36,7 +36,7 @@ La clase <xref:System.Threading.Interlocked> proporciona métodos que sincroniza
   
  En los procesadores modernos, los métodos de la clase <xref:System.Threading.Interlocked> habitualmente se pueden implementar con una sola instrucción. De este modo, proporcionan una sincronización de rendimiento muy elevado y se pueden usar para crear mecanismos de sincronización de nivel superior, como bloqueos de giro.  
   
- Para consultar un ejemplo que usa las clases <xref:System.Threading.Monitor> y <xref:System.Threading.Interlocked> de forma combinada, vea [Monitors](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Para consultar un ejemplo que usa las clases <xref:System.Threading.Monitor> y <xref:System.Threading.Interlocked> de forma combinada, vea [Monitors](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
   
 ## <a name="compareexchange-example"></a>Ejemplo de CompareExchange  
  El método <xref:System.Threading.Interlocked.CompareExchange%2A> se puede usar para proteger cálculos más complicados que un simple incremento y decremento. El ejemplo siguiente muestra un método seguro para subprocesos que se agrega a un total acumulado almacenado como número de punto flotante. (Para números enteros, el método <xref:System.Threading.Interlocked.Add%2A> es una solución más sencilla). Para obtener ejemplos de código completos, vea las sobrecargas de <xref:System.Threading.Interlocked.CompareExchange%2A> que adoptan argumentos de punto flotante de precisión simple y doble precisión (<xref:System.Threading.Interlocked.CompareExchange%28System.Single%40%2CSystem.Single%2CSystem.Single%29> y <xref:System.Threading.Interlocked.CompareExchange%28System.Double%40%2CSystem.Double%2CSystem.Double%29>).  

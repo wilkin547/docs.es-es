@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32ee3babe054d55a45cc8826843252dba6aa2be7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 939630726f399184c264f73ee01270f50981e83a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390255"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484810"
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilidad COM sin registro
 La interoperabilidad COM sin registrar activa un componente sin usar el Registro de Windows para almacenar la información de los ensamblados. En vez de registrar un componente en un equipo durante la implementación, se crean archivos de manifiesto del estilo de Win32 en tiempo de diseño, con información sobre enlace y activación. En lugar de las claves del Registro, estos archivos de manifiesto dirigen la activación de un objeto.  
@@ -45,11 +45,11 @@ La interoperabilidad COM sin registrar activa un componente sin usar el Registro
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>Configurar componentes COM para la activación sin registro  
   
-1.  Para que un componente COM participe en la activación sin registro, debe implementarse como un ensamblado en paralelo. Los ensamblados en paralelo son ensamblados no administrados.  Para más información, consulte el tema sobre [cómo usar ensamblados en paralelo](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
+1.  Para que un componente COM participe en la activación sin registro, debe implementarse como un ensamblado en paralelo. Los ensamblados en paralelo son ensamblados no administrados.  Para más información, consulte el tema sobre [cómo usar ensamblados en paralelo](/windows/desktop/SbsCs/using-side-by-side-assemblies).  
   
      Para usar ensamblados COM en paralelo, un desarrollador de aplicaciones basadas en .NET debe proporcionar un manifiesto de aplicación con información sobre enlace y activación. La compatibilidad con los ensamblados en paralelo no administrados está integrada en el sistema operativo Windows XP. El tiempo de ejecución COM, admitido por el sistema operativo, busca un manifiesto de aplicación para obtener información de activación cuando el componente que se va a activar no está en el Registro.  
   
-     La activación sin registro es opcional para los componentes COM instalados en Windows XP. Para obtener instrucciones detalladas acerca de cómo agregar un ensamblado en paralelo a una aplicación, consulte el tema sobre [cómo usar ensamblados en paralelo](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
+     La activación sin registro es opcional para los componentes COM instalados en Windows XP. Para obtener instrucciones detalladas acerca de cómo agregar un ensamblado en paralelo a una aplicación, consulte el tema sobre [cómo usar ensamblados en paralelo](/windows/desktop/SbsCs/using-side-by-side-assemblies).  
   
     > [!NOTE]
     >  La ejecución en paralelo es una característica de .NET Framework que permite ejecutar varias versiones del tiempo de ejecución y varias versiones de las aplicaciones y los componentes que usan una versión del tiempo de ejecución, en el mismo equipo y al mismo tiempo. La ejecución en paralelo y los ensamblados en paralelo son mecanismos diferentes para proporcionar una funcionalidad en paralelo.  

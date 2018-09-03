@@ -3,12 +3,12 @@ title: Realizar operaciones de combinación personalizadas (LINQ en C#)
 description: Obtenga información sobre cómo realizar operaciones de combinación de LINQ personalizadas en C#.
 ms.date: 12/1/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
-ms.openlocfilehash: 09ed0a202627a07ac8958de6ac46d7dc6c2837d0
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a0e08396c006f68949357c50a28b3b0982f0dd83
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403975"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468115"
 ---
 # <a name="perform-custom-join-operations"></a>Realizar operaciones de combinación personalizadas
 
@@ -43,6 +43,6 @@ En el ejemplo siguiente, la consulta debe combinar dos secuencias basándose en 
 
 ## <a name="see-also"></a>Vea también
 
-[Language-Integrated Query (LINQ)](index.md)  
-[join (cláusula)](../language-reference/keywords/join-clause.md)  
-[Ordenar los resultados de una cláusula join](order-the-results-of-a-join-clause.md)  
+- [Language-Integrated Query (LINQ)](index.md)  
+- [join (cláusula)](../language-reference/keywords/join-clause.md)  
+- [Ordenar los resultados de una cláusula join](order-the-results-of-a-join-clause.md)  

@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a6e6219d6449fedabe6e7cb0b349efb6fc74ee6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aca04c191234686de5a15cb3dc1336080a3a344
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399696"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485708"
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Empaquetar e implementar recursos en aplicaciones de escritorio
 Las aplicaciones se basan en el Administrador de recursos de .NET Framework, representado por la clase <xref:System.Resources.ResourceManager>, para recuperar recursos localizados. El Administrador de recursos da por supuesto que se usa un modelo de concentrador y radio para empaquetar e implementar los recursos. El concentrador es el ensamblado principal que contiene el código ejecutable no localizable y los recursos de una referencia cultural única, denominada referencia cultural neutra o predeterminada. La referencia cultural predeterminada es la referencia cultural de reserva de la aplicación. Se trata de la referencia cultural cuyos recursos se usarán si no se encuentran recursos localizados. Cada radio se conecta a un ensamblado satélite que contiene los recursos de una única referencia cultural, pero no contiene código.  
@@ -53,7 +53,7 @@ Las aplicaciones se basan en el Administrador de recursos de .NET Framework, rep
 -   El costo inicial de probar una aplicación es mayor, ya que se deben someter a prueba varias configuraciones. Tenga en cuenta que, a largo plazo, será más fácil y menos costoso probar una aplicación principal con varios ensamblados satélite que probar y mantener varias versiones internacionales paralelas.  
   
 ## <a name="resource-naming-conventions"></a>Convenciones de nomenclatura de recursos  
- Al empaquetar los recursos de la aplicación, debe asignarles un nombre según las convenciones de nomenclatura de recursos que espera Common Language Runtime. El tiempo de ejecución identifica un recurso por su nombre de referencia cultural. Cada referencia cultural tiene un nombre único, que suele ser una combinación de un nombre de referencia cultural de dos letras en minúsculas asociado a un idioma y, si es necesario, un nombre de referencia cultural secundaria de dos letras en mayúsculas asociado a un país o región. El nombre de la referencia cultural secundaria va después del nombre de la referencia cultural, separado por un guion (-). Algunos ejemplos son los siguientes: ja-JP para japonés de Japón, en-US para inglés de Estados Unidos, de-DE para alemán de Alemania o de-AT para alemán de Austria. Vea la lista completa de nombres de referencia cultural en [National Language Support (NLS) API Reference](http://go.microsoft.com/fwlink/?LinkId=200048) (Referencia de la API de compatibilidad con el idioma nacional [NLS]) en el Centro de desarrolladores Go Global.  
+ Al empaquetar los recursos de la aplicación, debe asignarles un nombre según las convenciones de nomenclatura de recursos que espera Common Language Runtime. El tiempo de ejecución identifica un recurso por su nombre de referencia cultural. Cada referencia cultural tiene un nombre único, que suele ser una combinación de un nombre de referencia cultural de dos letras en minúsculas asociado a un idioma y, si es necesario, un nombre de referencia cultural secundaria de dos letras en mayúsculas asociado a un país o región. El nombre de la referencia cultural secundaria va después del nombre de la referencia cultural, separado por un guion (-). Algunos ejemplos son los siguientes: ja-JP para japonés de Japón, en-US para inglés de Estados Unidos, de-DE para alemán de Alemania o de-AT para alemán de Austria. Vea la lista completa de nombres de referencia cultural en [National Language Support (NLS) API Reference](https://go.microsoft.com/fwlink/?LinkId=200048) (Referencia de la API de compatibilidad con el idioma nacional [NLS]) en el Centro de desarrolladores Go Global.  
   
 > [!NOTE]
 >  Para más información sobre cómo crear archivos de recursos, vea [Crear archivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) y [Crear ensamblados satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  

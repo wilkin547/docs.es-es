@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34ed0d4752eb42f0bd3df8167d498b99d7af1080
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32e06790ffebe49c7917ba4fc7344f86f7a49762
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396924"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483832"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Cómo: Definir un tipo genérico con emisión de reflexión
 En este tema se muestra cómo crear un tipo genérico simple con dos parámetros de tipo, cómo aplicar restricciones de clase, restricciones de interfaz y restricciones especiales a los parámetros de tipo, y cómo crear miembros que usen los parámetros de tipo de la clase como tipos de parámetro y tipos de valor devuelto.  
@@ -137,5 +137,5 @@ En este tema se muestra cómo crear un tipo genérico simple con dos parámetros
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Reflection.Emit.GenericTypeParameterBuilder>  
- [Using Reflection Emit (Uso de la emisión de la reflexión)](http://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [Reflection Emit Dynamic Assembly Scenarios (Escenarios de ensamblado dinámico de emisión de la reflexión)](http://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+ [Using Reflection Emit (Uso de la emisión de la reflexión)](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
+ [Reflection Emit Dynamic Assembly Scenarios (Escenarios de ensamblado dinámico de emisión de la reflexión)](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)

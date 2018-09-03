@@ -7,11 +7,11 @@ helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
 ms.openlocfilehash: 1e120d68fc4a42f24feb225f652c14525fde3d71
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931947"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43403167"
 ---
 # <a name="value-c-reference"></a>value (Referencia de C#)
 La palabra clave contextual `value` se usa en el descriptor de acceso set de las declaraciones de propiedad normales. Es similar a un parámetro de entrada de un método. El término `value` hace referencia al valor que el código de cliente intenta asignar a la propiedad. En el ejemplo siguiente, `MyDerivedClass` tiene una propiedad denominada `Name` que usa el parámetro `value` para asignar una nueva cadena al campo de respaldo `name`. Desde el punto de vista del código de cliente, la operación se escribe como una simple asignación.  

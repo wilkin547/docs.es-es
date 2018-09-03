@@ -3,18 +3,18 @@ title: Trabajar con espacios de nombres XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
 ms.openlocfilehash: e00886281fbccd0e10706575483dd174d7d53052
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330478"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416246"
 ---
 # <a name="working-with-xml-namespaces-c"></a>Trabajar con espacios de nombres XML (C#)
 En los temas de esta sección se describe cómo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] admite espacios de nombres.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Información general sobre los espacios de nombres (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|Este tema presenta los espacios de nombres, la clase <xref:System.Xml.Linq.XName> y la clase <xref:System.Xml.Linq.XNamespace>.|  
 |[Cómo crear un documento con espacios de nombres (C#) (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md)|Muestra cómo crear documentos con espacios de nombres.|  

@@ -3,12 +3,12 @@ title: Traducción de árboles de expresión
 description: Obtenga información sobre cómo visitar cada nodo en un árbol de expresión, mientras se crea una copia modificada de ese árbol de expresión.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 9483cbe75b4bf5a38dd791633c852eb0b8473944
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd4aec2ef34e4dc972ae867c6b5070f92dcbc498
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217121"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463728"
 ---
 # <a name="translating-expression-trees"></a>Traducción de árboles de expresión
 
@@ -191,7 +191,7 @@ Aunque la respuesta final es la misma, el recorrido del árbol es completamente 
 
 ## <a name="learning-more"></a>Obtener más información
 
-En este ejemplo se muestra un pequeño subconjunto del código que se compilaría para recorrer e interpretar los algoritmos representados por un árbol de expresión. Para obtener una descripción completa de todo el trabajo necesario para compilar una biblioteca de propósito general que traduce árboles de expresión a otro lenguaje, lea [esta serie](http://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx) de Matt Warren. Describe en detalle cómo traducir cualquier código que es posible encontrar en un árbol de expresión.
+En este ejemplo se muestra un pequeño subconjunto del código que se compilaría para recorrer e interpretar los algoritmos representados por un árbol de expresión. Para obtener una descripción completa de todo el trabajo necesario para compilar una biblioteca de propósito general que traduce árboles de expresión a otro lenguaje, lea [esta serie](https://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx) de Matt Warren. Describe en detalle cómo traducir cualquier código que es posible encontrar en un árbol de expresión.
 
 Espero que haya visto la verdadera eficacia de los árboles de expresión.
 Puede examinar un conjunto de código, realizar los cambios que quiera en ese código y ejecutar la versión modificada. Como los árboles de expresión son inmutables, se pueden crear árboles nuevos mediante el uso de los componentes de árboles existentes. Esto minimiza la cantidad de memoria necesaria para crear árboles de expresión modificados.

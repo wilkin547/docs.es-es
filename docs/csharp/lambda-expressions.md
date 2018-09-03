@@ -5,12 +5,12 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: e37f0e72ee02915d16509fb2ff48bd114e8ad466
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2469e8a0fbf8181a720201637ab5ac5ef02055d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217979"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400870"
 ---
 # <a name="lambda-expressions"></a>Expresiones lambda #
 
@@ -78,7 +78,7 @@ Para obtener más información sobre cómo crear y usar métodos asincrónicos, 
 
 ## <a name="lambda-expressions-and-tuples"></a>Expresiones lambda y tuplas ##
 
-A partir de C# 7.0, el lenguaje C# proporciona compatibilidad integrada para las tuplas. Puede proporcionar una tupla como argumento a una expresión lambda, mientras que la expresión lambda también puede devolver una tupla. En algunos casos, el compilador de C# usa la inferencia de tipos para determinar los tipos de componentes de la tupla. 
+A partir de C# 7.0, el lenguaje C# proporciona compatibilidad integrada para las tuplas. Puede proporcionar una tupla como argumento a una expresión lambda, mientras que la expresión lambda también puede devolver una tupla. En algunos casos, el compilador de C# usa la inferencia de tipos para determinar los tipos de componentes de la tupla.
 
 Para definir una tupla, incluya entre paréntesis una lista delimitada por comas de los componentes. En el ejemplo siguiente se usa la tupla con 5 componentes para pasar una secuencia de números a una expresión lambda, que duplica cada valor y devuelve una tupla con 5 componentes que contiene el resultado de las multiplicaciones.
 
@@ -154,6 +154,6 @@ Las lambdas pueden hacer referencia a las *variables externas* (vea [Métodos an
 
 ## <a name="see-also"></a>Vea también ##
 
-[LINQ (Language-Integrated Query)](../standard/using-linq.md)  (Language Integrated Query [LINQ])  
-[Métodos anónimos](programming-guide/statements-expressions-operators/anonymous-methods.md)   
-[Árboles de expresión](expression-trees.md)
+- [LINQ (Language Integrated Query)](../standard/using-linq.md)
+- [Métodos anónimos](programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Árboles de expresión](expression-trees.md)

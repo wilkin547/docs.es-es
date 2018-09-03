@@ -3,11 +3,11 @@ title: 'Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
 ms.openlocfilehash: 0adee32a3ee4d2347bd2e0a84024fe478346987a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337566"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43404235"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo es un pedido de compra típico. El XML se encuentra en un espacio de nombres.  

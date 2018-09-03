@@ -3,12 +3,12 @@ title: 'Tipos de tupla: Guía de C#'
 description: Más información sobre tipos de tupla con nombre y sin nombre en C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 6c3b6edb0481b8c2e4d92989b605f657aac607fa
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b0c838791e640c9813005b8a32d009153a794c14
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208307"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404319"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla de C# #
 
@@ -71,7 +71,7 @@ Si no se proporciona un nombre explícito, tiene prioridad sobre cualquier nombr
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Para cualquier campo en el que no se proporcione un nombre explícito, se proyecta un nombre implícito aplicable. No hay ningún requisito para proporcionar nombres semánticos, ya sea explícita o implícitamente. El inicializador siguiente tiene nombres de campo `Item1`, cuyo valor es `42` y `StringContent`, cuyo valor es "The answer to everything":
+Para cualquier campo en el que no se proporcione un nombre explícito, se proyecta un nombre implícito aplicable. No hay ningún requisito para proporcionar nombres semánticos, ya sea explícita o implícitamente. El inicializador siguiente tiene nombres de campo `Item1`, cuyo valor es `42` y `stringContent`, cuyo valor es "The answer to everything":
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
@@ -92,7 +92,7 @@ Comenzando con C# 7.3, los tipos de tupla admiten los operadores `==` y `!=`. Es
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-Hay varias reglas que hacen que las pruebas de igualdad de tupla sean más prácticas. La igualdad de tupla realiza [conversiones elevadas](/dotnet/csharp/language-reference/language-specification/conversions#lifted-conversion-operators) si una de las tuplas es una tupla que admite valores NULL, como se muestra en el siguiente código:
+Hay varias reglas que hacen que las pruebas de igualdad de tupla sean más prácticas. La igualdad de tupla realiza [conversiones elevadas](language-reference/language-specification/index.md) si una de las tuplas es una tupla que admite valores NULL, como se muestra en el siguiente código:
 
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]

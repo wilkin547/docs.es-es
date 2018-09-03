@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bf162a3ef9f66e7c7d74c96f13c055857818a2b
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: f414e5b0463e28427c8c60e2f8b8774ad6973da2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070959"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464142"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Paralelismo de datos (biblioteca TPL)
 El *paralelismo de datos* hace referencia a los escenarios en los que la misma operación se realiza simultáneamente (es decir, en paralelo) en elementos de una colección o matriz de origen. En las operaciones paralelas de datos, se crean particiones de la colección de origen para que varios subprocesos puedan funcionar simultáneamente en segmentos diferentes.  
   
- La biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) admite el paralelismo de datos a través de la clase <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>. Esta clase proporciona las implementaciones paralelas basadas en método de los bucles [for](~/docs/csharp/language-reference/keywords/for.md) y [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) (`For` y `For Each` en Visual Basic). Se escribe la lógica del bucle para un bucle <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> de forma muy similar a como se escribiría un bucle secuencial. No tiene que crear los subprocesos ni poner en la cola los elementos de trabajo. En bucles básicos, no es preciso tomar bloqueos. TPL administra todo el trabajo de bajo nivel. Para obtener información más detallada sobre el uso de <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, descargue el documento sobre [patrones de programación en paralelo: información y aplicación de patrones en paralelo en .NET Framework 4](http://www.microsoft.com/download/details.aspx?id=19222). En el siguiente ejemplo de código se muestra un bucle `foreach` simple y su equivalente paralelo.  
+ La biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) admite el paralelismo de datos a través de la clase <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>. Esta clase proporciona las implementaciones paralelas basadas en método de los bucles [for](~/docs/csharp/language-reference/keywords/for.md) y [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) (`For` y `For Each` en Visual Basic). Se escribe la lógica del bucle para un bucle <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> de forma muy similar a como se escribiría un bucle secuencial. No tiene que crear los subprocesos ni poner en la cola los elementos de trabajo. En bucles básicos, no es preciso tomar bloqueos. TPL administra todo el trabajo de bajo nivel. Para obtener información más detallada sobre el uso de <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, descargue el documento sobre [patrones de programación en paralelo: información y aplicación de patrones en paralelo en .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222). En el siguiente ejemplo de código se muestra un bucle `foreach` simple y su equivalente paralelo.  
   
 > [!NOTE]
 >  En esta documentación, se utilizan expresiones lambda para definir delegados en la TPL. Si no está familiarizado con las expresiones lambda de C# o Visual Basic, consulte [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md) (Expresiones lambda en PLINQ y TPL).  
@@ -31,7 +31,7 @@ El *paralelismo de datos* hace referencia a los escenarios en los que la misma o
  Cuando un bucle paralelo se ejecuta, la TPL crea particiones del origen de datos para que el bucle pueda funcionar simultáneamente en varias partes. En segundo plano, el programador de tareas crea particiones de la tarea según los recursos del sistema y la carga de trabajo. Cuando es posible, el programador redistribuye el trabajo entre varios subprocesos y procesadores si se desequilibra la carga de trabajo.  
   
 > [!NOTE]
->  También puede proporcionar un programador o creador de particiones personalizado. Para más información, consulte [Custom Partitioners for PLINQ and TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) (Particionadores personalizados para PLINQ y TPL) y [Programadores de tareas](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+>  También puede proporcionar un programador o creador de particiones personalizado. Para más información, consulte [Custom Partitioners for PLINQ and TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) (Particionadores personalizados para PLINQ y TPL) y [Programadores de tareas](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
   
  Los métodos <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> tienen varias sobrecargas que permiten detener o ejecutar la ejecución de bucles, supervisar el estado del bucle en otros subprocesos, mantener el estado de subprocesos locales, finalizar los objetos de subprocesos locales, controlar el grado de simultaneidad, etc. Los tipos de aplicación auxiliar que habilitan esta funcionalidad son <xref:System.Threading.Tasks.ParallelLoopState>, <xref:System.Threading.Tasks.ParallelOptions>, <xref:System.Threading.Tasks.ParallelLoopResult>, <xref:System.Threading.CancellationToken> y <xref:System.Threading.CancellationTokenSource>.  
   
@@ -41,7 +41,7 @@ El *paralelismo de datos* hace referencia a los escenarios en los que la misma o
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[How to: Write a Simple Parallel.For Loop](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md) (Cómo: Escribir un bucle Parallel.For simple)|Describe cómo escribir un bucle <xref:System.Threading.Tasks.Parallel.For%2A> en cualquier matriz o colección de origen <xref:System.Collections.Generic.IEnumerable%601> indexable.|  
 |[How to: Write a Simple Parallel.ForEach Loop](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md) (Cómo: Escribir un bucle Parallel.ForEach simple)|Describe cómo escribir un bucle <xref:System.Threading.Tasks.Parallel.ForEach%2A> en cualquier colección de origen <xref:System.Collections.Generic.IEnumerable%601>.|  

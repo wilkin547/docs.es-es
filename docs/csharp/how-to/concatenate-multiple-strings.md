@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: d4e57347a11b804f3ea7f4bb9736c134c4b71929
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 355e56acf36b6212ee4563f34722b10b56a0fb47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961318"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468659"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Concatenación de varias cadenas (Guía de C#)
 
@@ -23,7 +23,6 @@ ms.locfileid: "37961318"
 En el ejemplo siguiente se usa la concatenación para dividir un literal de cadena larga en cadenas más pequeñas para mejorar la legibilidad del código fuente. Estas partes se concatenan en una sola cadena en tiempo de compilación. No existe ningún costo de rendimiento en tiempo de ejecución independientemente del número de cadenas de que se trate.  
   
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
-  
 
 Para concatenar variables de cadena, puede usar los operadores `+` o `+=`, la [interpolación de cadena](../language-reference/tokens/interpolated.md) o los métodos <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> o <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>. El operador `+` es sencillo de usar y genera un código intuitivo. Aunque use varios operadores `+` en una instrucción, el contenido de la cadena se copiará solo una vez. En el código siguiente se muestran ejemplos del uso de los operadores `+` y `+=` para concatenar cadenas:
 
@@ -34,7 +33,7 @@ En algunas expresiones, es más fácil concatenar cadenas mediante la interpolac
 [!code-csharp-interactive[building strings using string interpolation](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#3)]  
   
 > [!NOTE]
->  En operaciones de concatenación de cadenas, el compilador de C# trata una cadena NULL igual que una cadena vacía.
+> En operaciones de concatenación de cadenas, el compilador de C# trata una cadena NULL igual que una cadena vacía.
 
 Otro método para concatenar cadenas es <xref:System.String.Format%2A?displayProperty=nameWithType>. Este método funciona bien para compilar una cadena a partir de un número reducido de cadenas de componente.
 
@@ -54,8 +53,9 @@ Por último, puede usar [LINQ](../programming-guide/concepts/linq/index.md) y el
 
 Eche un vistazo al código de nuestro [repositorio de GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings) y pruebe estos ejemplos. O bien, puede descargar los ejemplos [como un archivo ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Vea también  
- <xref:System.String>  
- <xref:System.Text.StringBuilder>  
- [Guía de programación de C#](../programming-guide/index.md)  
- [Cadenas](../programming-guide/strings/index.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.String>  
+- <xref:System.Text.StringBuilder>  
+- [Guía de programación de C#](../programming-guide/index.md)  
+- [Cadenas](../programming-guide/strings/index.md)

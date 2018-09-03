@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed6519cb6bb7006f62ef83cd6baf8f2e32a44d19
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8c3bd568cf504125bc99801815d08764417b42cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744387"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43469003"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Cómo: Instalar un ensamblado en la memoria caché global de ensamblados
 Hay dos formas de instalar un ensamblado con nombre seguro en la memoria caché global de ensamblados (GAC):  
@@ -23,7 +23,7 @@ Hay dos formas de instalar un ensamblado con nombre seguro en la memoria caché 
 > [!IMPORTANT]
 >  En la memoria caché global de ensamblados solamente se pueden instalar ensamblados con nombre seguro. Para obtener información sobre cómo crear un ensamblado con nombre seguro, vea [How to: Sign an Assembly with a Strong Name](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md) (Cómo: Firmar un ensamblado con un nombre seguro).  
   
--   Con [Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx).  
+-   Con [Windows Installer](/windows/desktop/Msi/windows-installer-portal).  
   
      Esto se hace en Visual Studio 2012 y Visual Studio 2013 mediante la creación de un proyecto de InstallShield Limited Edition.  
   
@@ -82,4 +82,4 @@ gacutil -i hello.dll
  [Quitar un ensamblado de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  [Gacutil.exe (Herramienta Caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  [Cómo: Firmar un ensamblado con un nombre seguro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Implementación de Windows Installer](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)
+ [Implementación de Windows Installer](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)

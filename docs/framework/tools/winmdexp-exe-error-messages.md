@@ -159,20 +159,20 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0172f3895a0a1f444548bfbca877164815adc94a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f051af9284ddbf583e5454f7bdc106a061489d3c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407045"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43465504"
 ---
 # <a name="winmdexpexe-error-messages"></a>Mensajes de error de Winmdexp.exe
 El proceso de compilación llama a [Winmdexp.exe (herramienta de exportación de metadatos de Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) cuando se usa la plantilla **Componente de [!INCLUDE[wrt](../../../includes/wrt-md.md)]** en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], por lo que aparecen mensajes de error de Winmdexp.exe en la **lista de errores**. Winmdexp.exe opera en un módulo compilado con la opción `/target:winmdobj`. Dado que requiere un módulo compilado como entrada, sus mensajes de error no aparecen a menos que la compilación se realice correctamente.  
   
- Los mensajes de error están diseñados para contener toda la información que necesita para abordar las condiciones de error sobre las que informan, pero algunos problemas requieren más información de la que cabe en el mensaje. Encontrará información adicional en [Diagnosticar condiciones de error en componentes de Windows Runtime](http://go.microsoft.com/fwlink/p/?LinkId=251127) en el Centro de desarrollo de Windows.  
+ Los mensajes de error están diseñados para contener toda la información que necesita para abordar las condiciones de error sobre las que informan, pero algunos problemas requieren más información de la que cabe en el mensaje. Encontrará información adicional en [Diagnosticar condiciones de error en componentes de Windows Runtime](https://go.microsoft.com/fwlink/p/?LinkId=251127) en el Centro de desarrollo de Windows.  
   
- Si el error no se trata en este artículo y considera que el mensaje no contiene información suficiente para solucionar el problema, use el vínculo de comentarios del artículo e incluya el mensaje de error. O bien, puede registrar el error en el [sitio web Microsoft Connect](http://go.microsoft.com/fwlink/p/?LinkId=251130). También puede buscar más información en los [foros de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=251129).  
+ Si el error no se trata en este artículo y considera que el mensaje no contiene información suficiente para solucionar el problema, use el vínculo de comentarios del artículo e incluya el mensaje de error. O bien, puede registrar el error en el [sitio web Microsoft Connect](https://go.microsoft.com/fwlink/p/?LinkId=251130). También puede buscar más información en los [foros de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=251129).  
   
 ## <a name="see-also"></a>Vea también  
  [Winmdexp.exe (Herramienta de exportación de metadatos de Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
- [Diagnosticar condiciones de error en componentes de Windows Runtime](http://go.microsoft.com/fwlink/p/?LinkId=251127)
+ [Diagnosticar condiciones de error en componentes de Windows Runtime](https://go.microsoft.com/fwlink/p/?LinkId=251127)

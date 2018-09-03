@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f4712970b2d3ebecf12cbb7b8f9b7fcdb317986
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d00fb16ac5b71c8fb8f8560f68d20f1f33987d7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410356"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43396891"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (Herramienta Anotador de seguridad de .NET)
 La herramienta Anotador de seguridad de .NET (SecAnnotate.exe) es una aplicación de línea de comandos que identifica los elementos `SecurityCritical` y `SecuritySafeCritical` de uno o más ensamblados.  
   
- El [Anotador de seguridad](http://go.microsoft.com/fwlink/?LinkId=198007), que es una extensión de Visual Studio, proporciona una interfaz gráfica de usuario a SecAnnotate.exe y permite ejecutar la herramienta desde Visual Studio.  
+ El [Anotador de seguridad](https://go.microsoft.com/fwlink/?LinkId=198007), que es una extensión de Visual Studio, proporciona una interfaz gráfica de usuario a SecAnnotate.exe y permite ejecutar la herramienta desde Visual Studio.  
   
  Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -31,7 +31,7 @@ SecAnnotate.exe [parameters] [assemblies]
   
 #### <a name="parameters"></a>Parámetros  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |`/a`<br /><br /> o<br /><br /> `/showstatistics`|Muestra estadísticas sobre el uso de transparencia en los ensamblados que se van a analizar.|  
 |`/d:` *directory*<br /><br /> o<br /><br /> `/referencedir:` *directory*|Especifica el directorio en el que buscar los ensamblados dependientes durante la anotación.|  
@@ -52,6 +52,6 @@ SecAnnotate.exe [parameters] [assemblies]
 ## <a name="remarks"></a>Comentarios  
  Los parámetros y ensamblados también se pueden proporcionar en un archivo de respuesta que se especifica en la línea de comandos y lleva el prefijo de una arroba (@). Cada línea del archivo de respuesta debe contener un nombre de ensamblado o parámetro único.  
   
- Para obtener más información sobre el Anotador de seguridad de .NET, vea la entrada sobre [cómo usar SecAnnotate para analizar los ensamblados y detectar infracciones de transparencia](http://go.microsoft.com/fwlink/?LinkId=187648) en el blog de seguridad de .NET.  
+ Para obtener más información sobre el Anotador de seguridad de .NET, vea la entrada sobre [cómo usar SecAnnotate para analizar los ensamblados y detectar infracciones de transparencia](https://go.microsoft.com/fwlink/?LinkId=187648) en el blog de seguridad de .NET.  
   
 ## <a name="examples"></a>Ejemplos

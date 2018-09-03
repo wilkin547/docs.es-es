@@ -2,12 +2,12 @@
 title: Crear la clase GamePieceCollection
 ms.date: 03/30/2017
 ms.assetid: e4b037ee-1201-4a55-b198-0d6532ed6f35
-ms.openlocfilehash: 6473f7afce1422ee31d4f1872f8310bdeeb9a3b6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6323122735273f77bfe9d61bf2df84cabe3e5d6c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742145"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43395846"
 ---
 # <a name="creating-the-gamepiececollection-class"></a>Crear la clase GamePieceCollection
 La clase **GamePieceCollection** deriva de la clase List genérica e incorpora métodos para administrar más fácilmente varios objetos **GamePiece**.  
@@ -17,7 +17,7 @@ La clase **GamePieceCollection** deriva de la clase List genérica e incorpora m
   
  [!code-csharp[ManipulationXNA#_GamePieceCollection_PrivateMembersAndConstructor](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_privatemembersandconstructor)]  
   
- Los métodos **ProcessInertia** y **Draw** simplifican el código necesario en los métodos [Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) y [Game.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) del juego. Para ello, enumeran todas las piezas de juego en la colección y llaman al método respectivo en cada objeto **GamePiece**.  
+ Los métodos **ProcessInertia** y **Draw** simplifican el código necesario en los métodos [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) y [Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) del juego. Para ello, enumeran todas las piezas de juego en la colección y llaman al método respectivo en cada objeto **GamePiece**.  
   
  [!code-csharp[ManipulationXNA#_GamePieceCollection_ProcessInertiaAndDraw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollection_processinertiaanddraw)]  
   

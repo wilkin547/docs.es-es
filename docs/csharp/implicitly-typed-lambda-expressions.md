@@ -3,12 +3,12 @@ title: Expresiones lambda con tipo implícito
 description: Obtenga información sobre por qué no puede usar una declaración de variable con tipo implícito para declarar una expresión lambda.
 ms.date: 06/20/2016
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
-ms.openlocfilehash: f06c55f51c30c941d6d507ac8e2edd95c5152742
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a6b52ba49ea39c0cb37e72b0ad40e18986c9be0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211828"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43401505"
 ---
 # <a name="implicitly-typed-lambda-expressions"></a>Expresiones lambda con tipo implícito
 
@@ -17,6 +17,6 @@ Crea un problema de lógica circular para el compilador. La declaración `var` i
 
 Ambos lados de la asignación no pueden indicar al compilador que se dirija al objeto del otro lado del operador de asignación y vea si coincide con el tipo.
 
-Puede obtener más información sobre por qué el lenguaje de C# especifica ese comportamiento con la lectura de [este artículo](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (descarga de PDF).
+Puede obtener más información sobre por qué el lenguaje de C# especifica ese comportamiento con la lectura de [este artículo](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (descarga de PDF).
 
 

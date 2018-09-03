@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fa942af6558c16431cd716e3dd1ea1271fabab6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 843b791177b57134483a7076dbc6ec979956ef60
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408823"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43421860"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Exportador de la biblioteca de tipos)
 El Exportador de la biblioteca de tipos genera una biblioteca que describe los tipos definidos en un ensamblado de Common Language Runtime.  
@@ -32,11 +32,11 @@ tlbexp assemblyName [options]
   
 #### <a name="parameters"></a>Parámetros  
   
-|Argumento|Description|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |*assemblyName*|Ensamblado para el que se exporta una biblioteca de tipos.|  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/asmpath:** *directorio*|Especifica la ubicación en la que buscar los ensamblados. Si utiliza esta opción, debe especificar de forma explícita las ubicaciones en las que desea buscar los ensamblados a los que se hace referencia, incluido el directorio actual.<br /><br /> Cuando se usa la opción **asmpath**, el Exportador de la biblioteca de tipos no busca ensamblados en la caché global de ensamblados (GAC).|  
 |**/help**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
@@ -90,7 +90,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  Tenga en cuenta que Tlbexp.exe omite el campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType>.  
   
- Como las bibliotecas de tipos no pueden dar cabida a toda la información que se encuentra en los ensamblados, Tlbexp.exe descarta algunos datos durante el proceso de exportación. Para obtener una explicación del proceso de transformación y de la identificación del origen de cada sección de información que se emite a una biblioteca de tipos, vea el [Resumen de la conversión de ensamblados en bibliotecas de tipos](http://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
+ Como las bibliotecas de tipos no pueden dar cabida a toda la información que se encuentra en los ensamblados, Tlbexp.exe descarta algunos datos durante el proceso de exportación. Para obtener una explicación del proceso de transformación y de la identificación del origen de cada sección de información que se emite a una biblioteca de tipos, vea el [Resumen de la conversión de ensamblados en bibliotecas de tipos](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
   
  Tenga en cuenta que el Exportador de la biblioteca de tipos exporta métodos que tienen parámetros <xref:System.TypedReference> como `VARIANT`, incluso si el objeto <xref:System.TypedReference> no tiene ningún significado en el código no administrado. Cuando se exportan métodos que tengan parámetros <xref:System.TypedReference>, el Exportador de la biblioteca de tipos no genera ninguna advertencia ni error, y el código no administrado que utiliza la biblioteca de tipos resultante no se ejecuta correctamente.  
   
@@ -133,6 +133,6 @@ tlbexp Sample.dll
  <xref:System.Runtime.InteropServices.TypeLibExporterFlags>  
  [Herramientas](../../../docs/framework/tools/index.md)  
  [Regasm.exe (Herramienta de registro de ensamblados)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
- [Resumen de la conversión de ensamblados en bibliotecas de tipos](http://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
+ [Resumen de la conversión de ensamblados en bibliotecas de tipos](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
  [TlbImp.exe (Importador de la biblioteca de tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: c9dab959628343cd99f75ffeda30e3f423f2aaf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409807"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396927"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Herramienta de generación de código)
 La herramienta de la línea de comandos SqlMetal genera el código y las asignaciones del componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Si aplica las opciones que se incluyen posteriormente en este tema, puede indicarle a SqlMetal que realice algunas acciones diferentes, entre las que se incluyen las siguientes:  
@@ -25,7 +25,7 @@ La herramienta de la línea de comandos SqlMetal genera el código y las asignac
   
 -   A partir de un archivo .dbml, generar código y atributos de asignación o un archivo de asignación.  
   
- Esta herramienta se instala automáticamente con Visual Studio. De manera predeterminada, el archivo se encuentra en `drive`:\Archivos de programa\Microsoft SDKs\Windows\\v`n.nn`\bin. Si no instala Visual Studio, también puede obtener el archivo de SQLMetal descargando [Windows SDK](http://go.microsoft.com/fwlink/?LinkId=142225).  
+ Esta herramienta se instala automáticamente con Visual Studio. De manera predeterminada, el archivo se encuentra en `drive`:\Archivos de programa\Microsoft SDKs\Windows\\v`n.nn`\bin. Si no instala Visual Studio, también puede obtener el archivo de SQLMetal descargando [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225).  
   
 > [!NOTE]
 >  Los programadores que utilizan Visual Studio también pueden usar [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] para generar clases de entidad. El enfoque de la línea de comandos se ajusta bien a las bases de datos grandes. Dado que SqlMetal es una herramienta de línea de comandos, puede utilizarse en un proceso de compilación.  
@@ -43,7 +43,7 @@ sqlmetal [options] [<input file>]
   
  **Opciones de conexión**  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/server:** *\<nombre>*|Especifica el nombre del servidor de bases de datos.|  
 |**/database:** *\<nombre>*|Especifica el catálogo de base de datos del servidor.|  
@@ -54,7 +54,7 @@ sqlmetal [options] [<input file>]
   
  **Opciones de extracción**  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/views**|Extrae las vistas de base de datos.|  
 |**/functions**|Extrae las funciones de base de datos.|  
@@ -62,7 +62,7 @@ sqlmetal [options] [<input file>]
   
  **Opciones de salida**  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/dbml** *[:file]*|Envía el resultado como .dbml. No se puede usar con la opción **/map** .|  
 |**/code** *[:file]*|Envía el resultado como código fuente. No se puede usar con la opción **/dbml** .|  
@@ -70,7 +70,7 @@ sqlmetal [options] [<input file>]
   
  **Varios**  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**/language:** *\<lenguaje>*|Especifica el lenguaje del código fuente.<br /><br /> *\<Lenguaje>* válido: vb, csharp.<br /><br /> Valor predeterminado: se deriva de la extensión del nombre del archivo de código.|  
 |**/namespace:** *\<nombre>*|Especifica el espacio de nombres del código generado. Valor predeterminado: sin espacio de nombres.|  
@@ -81,7 +81,7 @@ sqlmetal [options] [<input file>]
   
  **Archivo de entrada**  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**\<archivo de entrada>**|Especifica un archivo .mdf de SQL Server Express, un archivo .sdf de [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o un archivo intermedio .dbml.|  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - roles [.NET Framework], client application services
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
-ms.openlocfilehash: d67b7467bdacdfca054d0ecd11a81c7d25b158f7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d58510240593f73ff761aa669035f28598006c10
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743230"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401588"
 ---
 # <a name="client-application-services"></a>Servicios de aplicación cliente
 Los servicios de aplicaciones cliente facilitan la creación de aplicaciones basadas en Windows que usan el inicio de sesión, los roles y los servicios de aplicación de perfiles de [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] incluidos en las extensiones de Microsoft ASP.NET 2.0 AJAX. Estos servicios permiten que varias aplicaciones web y basadas en Windows compartan la información del usuario y la funcionalidad de administración de usuarios desde un solo servidor. Por ejemplo, puede usar estos servicios para realizar las tareas siguientes:  
@@ -35,7 +35,7 @@ Los servicios de aplicaciones cliente facilitan la creación de aplicaciones bas
   
  Los servicios de aplicaciones cliente aprovechan el modelo de extensibilidad de los servicios web a través de proveedores de servicios cliente que se pueden especificar en los archivos de configuración de la aplicación. Estos proveedores de servicios incluyen la funcionalidad sin conexión que usa una caché local para la autenticación, los roles y los datos de configuración cuando no hay disponible una conexión de red.  
   
- Para más información sobre los servicios de la aplicación de [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Información general sobre los servicios de aplicación ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+ Para más información sobre los servicios de la aplicación de [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Información general sobre los servicios de aplicación ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre los servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
@@ -64,10 +64,10 @@ Los servicios de aplicaciones cliente facilitan la creación de aplicaciones bas
  <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>  
   
 ## <a name="see-also"></a>Vea también  
- [Información general sobre los servicios de aplicación ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
- [Utilizar la autenticación de formularios con AJAX en ASP.NET](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
- [Usar información de funciones con AJAX en ASP.NET](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
- [Usar información de perfiles con AJAX en ASP.NET](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
- [Autenticación de ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
- [Administrar autorizaciones con funciones](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)    
+ [Información general sobre los servicios de aplicación ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [Utilizar la autenticación de formularios con AJAX en ASP.NET](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
+ [Usar información de funciones con AJAX en ASP.NET](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [Usar información de perfiles con AJAX en ASP.NET](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [Autenticación de ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
+ [Administrar autorizaciones con funciones](https://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)    
  [Introducción a la configuración de la aplicación](../../../docs/framework/winforms/advanced/application-settings-overview.md)

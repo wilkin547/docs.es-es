@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0811e32a9483238d1cd15084c19951075c8a36a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3875b4f44a2c2aad5cc5021d55e22e99bb00a91e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399563"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405911"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generador de imágenes nativas)
 El Generador de imágenes nativas (Ngen.exe) es una herramienta que mejora el rendimiento de las aplicaciones administradas. Ngen.exe crea imágenes nativas, que son archivos que contienen código máquina compilado específicamente para un procesador, e instala estas imágenes en la memoria caché de imágenes nativas del equipo local. El runtime puede usar imágenes nativas de la memoria caché en lugar de usar el compilador Just-In-Time (JIT) para compilar el ensamblado original.  
@@ -48,12 +48,12 @@ El Generador de imágenes nativas (Ngen.exe) es una herramienta que mejora el re
   
 -   Se han eliminado algunas de las causas que provocan la invalidación de imágenes.  
   
- En Windows 8, consulte [Tarea de imagen nativa](http://msdn.microsoft.com/library/9b1f7590-4e0d-4737-90ef-eaf696932afb).  
+ En Windows 8, consulte [Tarea de imagen nativa](#native-image-task).  
   
  Para más información sobre el uso de Ngen.exe y el servicio de imágenes nativas, vea [Servicio de imágenes nativas][Native Image Service].  
   
 > [!NOTE]
->  Puede encontrar información sobre la sintaxis de Ngen.exe para las versiones 1.0 y 1.1 de .NET Framework en [Sintaxis heredada del generador de imágenes nativas (Ngen.exe)](http://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
+>  Puede encontrar información sobre la sintaxis de Ngen.exe para las versiones 1.0 y 1.1 de .NET Framework en [Sintaxis heredada del generador de imágenes nativas (Ngen.exe)](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
   
  Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -72,7 +72,7 @@ ngen /? | /help
 ## <a name="actions"></a>Acciones  
  En la tabla siguiente se muestra la sintaxis de cada acción (`action`). Para ver descripciones de los distintos elementos de una `action`, consulte las tablas [Argumentos](#ArgumentTable), [Niveles de prioridad](#PriorityTable), [Escenarios](#ScenarioTable) y [Configuración](#ConfigTable). En la tabla [Opciones](#OptionTable) se describe el parámetro `options` y los modificadores de ayuda.  
   
-|Acción|Description|  
+|Acción|Descripción|  
 |------------|-----------------|  
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Genera imágenes nativas para un ensamblado y sus dependencias e instala las imágenes en la memoria caché de imágenes nativas.<br /><br /> Si se especifica `/queue`, la acción se pone en la cola del servicio de imágenes nativas. La prioridad predeterminada es 3. Consulte la tabla [Niveles de prioridad](#PriorityTable).|  
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Elimina las imágenes nativas de un ensamblado y sus dependencias de la memoria caché de imágenes nativas.<br /><br /> Para desinstalar una imagen y sus dependencias, use los mismos argumentos de la línea de comandos que usó para instalar la imagen. **Nota:** A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], ya no se admite la acción `uninstall` *.|  
@@ -84,7 +84,7 @@ ngen /? | /help
 <a name="ArgumentTable"></a>   
 ## <a name="arguments"></a>Argumentos  
   
-|Argumento|Description|  
+|Argumento|Descripción|  
 |--------------|-----------------|  
 |`assemblyName`|El nombre para mostrar completo del ensamblado. Por ejemplo: `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Nota:** Puede proporcionar un nombre de ensamblado parcial, como `myAssembly`, para las acciones `display` y `uninstall`. <br /><br /> Solo se puede especificar un ensamblado por cada línea de comandos de Ngen.exe.|  
 |`assemblyPath`|La ruta de acceso explícita del ensamblado. Se puede especificar una ruta de acceso completa o relativa.<br /><br /> Si se especifica un nombre de archivo sin una ruta de acceso, el ensamblado deberá estar ubicado en el directorio actual.<br /><br /> Solo se puede especificar un ensamblado por cada línea de comandos de Ngen.exe.|  
@@ -92,7 +92,7 @@ ngen /? | /help
 <a name="PriorityTable"></a>   
 ## <a name="priority-levels"></a>Niveles de prioridad  
   
-|Prioridad|Description|  
+|Prioridad|Descripción|  
 |--------------|-----------------|  
 |`1`|Las imágenes nativas se generan e instalan de forma inmediata, sin esperar al tiempo de inactividad.|  
 |`2`|Las imágenes nativas se generan e instalan sin esperar al tiempo de inactividad, pero después de que se hayan completado todas las acciones de prioridad 1 (y sus dependencias).|  
@@ -101,7 +101,7 @@ ngen /? | /help
 <a name="ScenarioTable"></a>   
 ## <a name="scenarios"></a>Escenarios  
   
-|Escenario|Description|  
+|Escenario|Descripción|  
 |--------------|-----------------|  
 |`/Debug`|Genera imágenes nativas que pueden usarse con un depurador.|  
 |`/Profile`|Genera imágenes nativas que pueden usarse con un generador de perfiles.|  
@@ -110,7 +110,7 @@ ngen /? | /help
 <a name="ConfigTable"></a>   
 ## <a name="config"></a>Configuración  
   
-|Configuración|Description|  
+|Configuración|Descripción|  
 |-------------------|-----------------|  
 |`/ExeConfig:` `exePath`|Usa la configuración del ensamblado ejecutable especificado.<br /><br /> Ngen.exe tiene que tomar las mismas decisiones que el cargador al enlazarse a las dependencias. Cuando se carga un componente compartido en tiempo de ejecución usando el método <xref:System.Reflection.Assembly.Load%2A>, el archivo de configuración de la aplicación determina las dependencias que se cargan para el componente compartido como, por ejemplo, la versión que se carga de una dependencia. El modificador `/ExeConfig` proporciona a Ngen.exe orientación sobre las dependencias que se cargarán en tiempo de ejecución.|  
 |`/AppBase:` `directoryPath`|Al buscar dependencias, usa el directorio especificado como base de la aplicación.|  
@@ -118,7 +118,7 @@ ngen /? | /help
 <a name="OptionTable"></a>   
 ## <a name="options"></a>Opciones  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |`/nologo`|Suprime la presentación de la pancarta de inicio de Microsoft.|  
 |`/silent`|Suprime la presentación de mensajes de operaciones correctas.|  
@@ -514,7 +514,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
  Para obtener ejemplos relacionados con el servicio de imágenes nativas, vea [Servicio de imágenes nativas][Native Image Service].  
   
 ## <a name="native-image-task"></a>Tarea de imagen nativa  
- La tarea de imagen nativa es una tarea de Windows que genera y mantiene imágenes nativas. La tarea de imagen nativa genera y recupera automáticamente imágenes nativas para los escenarios admitidos. (Consulte [Crear imágenes nativas](http://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418)). También permite que los instaladores usen [Ngen.exe (Generador de imágenes nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) para aplazar la creación y la actualización de las imágenes nativas.  
+ La tarea de imagen nativa es una tarea de Windows que genera y mantiene imágenes nativas. La tarea de imagen nativa genera y recupera automáticamente imágenes nativas para los escenarios admitidos. (Consulte [Crear imágenes nativas](https://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418)). También permite que los instaladores usen [Ngen.exe (Generador de imágenes nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) para aplazar la creación y la actualización de las imágenes nativas.  
   
  La tarea de imagen nativa se registra una vez por cada arquitectura de CPU admitida en un equipo, para permitir la compilación de las aplicaciones que tienen como destino cada arquitectura:  
   
