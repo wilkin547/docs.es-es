@@ -1,5 +1,5 @@
 ---
-title: GetErrorInfo (función) (referencia de API no administrada)
+title: Función GetErrorInfo (referencia de API no administrada)
 description: La función GetErrorInfo recupera información de error de la llamada de función anterior.
 ms.date: 11/06/2017
 api_name:
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef52a4e503597e08eae407571f02bf63adafc4e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5f25777402fa31e72cbbf36f58a6c4cc65542979
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455964"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482241"
 ---
 # <a name="geterrorinfo-function"></a>GetErrorInfo (función)
 Recupera información de error de la llamada de función anterior.  
@@ -36,18 +36,18 @@ IErrorInfo* GetErrorInfo();
 
 ## <a name="return-value"></a>Valor devuelto
 
-Un puntero a un [IErrorInfo](https://msdn.microsoft.com/library/windows/desktop/ms221233(v=vs.85).aspx) objeto si la llamada de función se realiza correctamente, o `null` si se produce un error.
+Un puntero a un [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) objeto si la llamada de función se realiza correctamente, o `null` si se produce un error.
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IComThreadingInfo::GetErrorInfo](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx) método.
+Esta función contiene una llamada a la [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) método.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** WMINet_Utils.def  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también  
 [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

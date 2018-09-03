@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: 44afa79d715ef62bcbd1c242a533876d911345c8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ff63c63be9bbfab7c3a9600f259abdea81be4260
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761914"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482266"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Escribir el contenido de un conjunto de datos como datos XML
 En ADO.NET es posible escribir una representación XML de un <xref:System.Data.DataSet>, con o sin su esquema. Si la información de esquema está incluida alineada con el código XML, se escribirá con el lenguaje de definición de esquemas XML (XSD). El esquema contiene las definiciones de tabla del <xref:System.Data.DataSet>, así como las definiciones de relaciones y restricciones.  
   
  Cuando un <xref:System.Data.DataSet> se escribe como datos XML, las filas del <xref:System.Data.DataSet> se escriben en sus versiones actuales. Sin embargo, el <xref:System.Data.DataSet> también se puede escribir como un DiffGram, de forma que se incluyan los valores actuales y originales de las filas.  
   
- La representación XML de la <xref:System.Data.DataSet> pueden escribirse en un archivo, una secuencia, un **XmlWriter**, o una cadena. Estas opciones ofrecen una gran flexibilidad en cuanto a la forma de transportar la representación XML del <xref:System.Data.DataSet>. Para obtener la representación XML de la <xref:System.Data.DataSet> como una cadena, utilice la **GetXml** método tal como se muestra en el ejemplo siguiente.  
+ La representación XML de la <xref:System.Data.DataSet> pueden escribirse en un archivo, una secuencia, un **XmlWriter**, o una cadena. Estas opciones ofrecen una gran flexibilidad en cuanto a la forma de transportar la representación XML del <xref:System.Data.DataSet>. Para obtener la representación XML de la <xref:System.Data.DataSet> como una cadena, utilice el **GetXml** método tal como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Dim xmlDS As String = custDS.GetXml()  
@@ -27,9 +27,9 @@ Dim xmlDS As String = custDS.GetXml()
 string xmlDS = custDS.GetXml();  
 ```  
   
- **GetXml** devuelve la representación XML de la <xref:System.Data.DataSet> sin información del esquema. Para escribir la información de esquema de la <xref:System.Data.DataSet> (como esquema XML) en una cadena, utilice **GetXmlSchema**.  
+ **GetXml** devuelve la representación XML de la <xref:System.Data.DataSet> sin información del esquema. Para escribir la información de esquema desde el <xref:System.Data.DataSet> (como esquema XML) en una cadena, utilice **GetXmlSchema**.  
   
- Para escribir una <xref:System.Data.DataSet> en un archivo, secuencia, o **XmlWriter**, use la **WriteXml** método. El primer parámetro se pasa a **WriteXml** constituye el destino de la salida XML. Por ejemplo, pasar una cadena que contiene un nombre de archivo, un **System.IO.TextWriter** objeto y así sucesivamente. Puede pasar un segundo parámetro opcional de un **XmlWriteMode** para especificar cómo se escribirá la salida XML.  
+ Para escribir un <xref:System.Data.DataSet> en un archivo, secuencia, o **XmlWriter**, utilice el **WriteXml** método. El primer parámetro se pasa a **WriteXml** constituye el destino de la salida XML. Por ejemplo, pasar una cadena que contiene un nombre de archivo, un **System.IO.TextWriter** objeto y así sucesivamente. Puede pasar un segundo parámetro opcional de un **XmlWriteMode** para especificar cómo se escribirá la salida XML.  
   
  En la tabla siguiente se muestra las opciones para **XmlWriteMode**.  
   
@@ -39,7 +39,7 @@ string xmlDS = custDS.GetXml();
 |**WriteSchema**|Escribe el contenido actual del <xref:System.Data.DataSet> como datos XML con la estructura relacional como un esquema XML alineado.|  
 |**DiffGram**|Escribe el <xref:System.Data.DataSet> completo como un DiffGram, incluidos los valores originales y actuales. Para obtener más información, consulte [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
   
- Al escribir una representación XML de un <xref:System.Data.DataSet> que contiene **DataRelation** objetos, probablemente le interesará el código XML resultante tenga las filas secundarias de cada relación anidadas dentro de sus elementos primarios relacionados. Para lograr esto, establezca el **Nested** propiedad de la **DataRelation** a **true** cuando se agrega el **DataRelation** a la <xref:System.Data.DataSet>. Para obtener más información, consulte [anidar objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+ Al escribir una representación XML de un <xref:System.Data.DataSet> que contiene **DataRelation** objetos, probablemente le interesará el código XML resultante tenga las filas secundarias de cada relación anidadas dentro de sus elementos primarios relacionados. Para ello, establezca el **Nested** propiedad de la **DataRelation** a **true** al agregar el **DataRelation** a la <xref:System.Data.DataSet>. Para obtener más información, consulte [anidar objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
  A continuación se muestran dos ejemplos de cómo escribir la representación XML de un <xref:System.Data.DataSet> en un archivo. El primer ejemplo pasa el nombre de archivo para el XML resultante como una cadena a **WriteXml**. El segundo ejemplo se pasa un **System.IO.StreamWriter** objeto.  
   
@@ -64,7 +64,7 @@ xmlSW.Close();
 ```  
   
 ## <a name="mapping-columns-to-xml-elements-attributes-and-text"></a>Asignar columnas a elementos, atributos y texto XML  
- Puede especificar cómo se representa una columna de una tabla en XML mediante el **ColumnMapping** propiedad de la **DataColumn** objeto. En la tabla siguiente se muestra los distintos **MappingType** los valores para la **ColumnMapping** propiedad de una columna de tabla y el XML resultante.  
+ Puede especificar cómo se representa una columna de una tabla en XML mediante el **ColumnMapping** propiedad de la **DataColumn** objeto. En la tabla siguiente se muestra los distintos **MappingType** valores para el **ColumnMapping** propiedad de una columna de tabla y el XML resultante.  
   
 |Valor MappingType|Descripción|  
 |-----------------------|-----------------|  
@@ -79,4 +79,4 @@ xmlSW.Close();
  [Anidado de objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  [Escritura de información del esquema de un conjunto de datos como XSD](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)  
  [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: ac247a9caa54c40a31e3c78ba8537d60a333feb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e590732419396660221aa781e3c333311b6e88b4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566342"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480911"
 ---
 # <a name="tilebrush-overview"></a>Información general sobre objetos TileBrush
-<xref:System.Windows.Media.TileBrush> los objetos proporcionan un gran control sobre cómo se pinta un área con una imagen, <xref:System.Windows.Media.Drawing>, o <xref:System.Windows.Media.Visual>. Este tema describe cómo usar <xref:System.Windows.Media.TileBrush> características para tener más control sobre cómo un <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, o <xref:System.Windows.Media.VisualBrush> pinta un área.  
+<xref:System.Windows.Media.TileBrush> los objetos que proporcionan un gran control sobre cómo se pinta un área con una imagen, <xref:System.Windows.Media.Drawing>, o <xref:System.Windows.Media.Visual>. Este tema describe cómo usar <xref:System.Windows.Media.TileBrush> características para obtener más control sobre cómo un <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, o <xref:System.Windows.Media.VisualBrush> pinta un área.  
   
   
 <a name="prerequisite"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
- Para entender este tema, es útil entender cómo utilizar las características básicas de la <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, o <xref:System.Windows.Media.VisualBrush> clase. Para obtener una introducción a estos tipos, vea la [pintar con imágenes, gráficos y objetos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Para entender este tema, es útil entender cómo usar las características básicas de la <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, o <xref:System.Windows.Media.VisualBrush> clase. Para obtener una introducción a estos tipos, vea la [pintar con imágenes, dibujos y elementos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
 <a name="tilebrush"></a>   
 ## <a name="painting-an-area-with-tiles"></a>Dibujo de un área con mosaicos  
@@ -35,29 +35,29 @@ Componentes de TileBrush con un solo mosaico
  ![Componentes de TileBrush en mosaico](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
 Componentes de TileBrush con un valor de TileMode de Tile  
   
- El área de salida es el área que se está pintando, como el <xref:System.Windows.Shapes.Shape.Fill%2A> de un <xref:System.Windows.Shapes.Ellipse> o <xref:System.Windows.Controls.Control.Background%2A> de un <xref:System.Windows.Controls.Button>. Las secciones siguientes describen los dos componentes de un <xref:System.Windows.Media.TileBrush>.  
+ El área de salida es el área que se va a pintar, como el <xref:System.Windows.Shapes.Shape.Fill%2A> de un <xref:System.Windows.Shapes.Ellipse> o <xref:System.Windows.Controls.Control.Background%2A> de un <xref:System.Windows.Controls.Button>. Las secciones siguientes describen los dos componentes de un <xref:System.Windows.Media.TileBrush>.  
   
 <a name="brushcontent"></a>   
 ## <a name="brush-content"></a>Contenido del objeto Brush  
- Hay tres tipos diferentes de <xref:System.Windows.Media.TileBrush> y cada uno de ellos pinta con un tipo diferente de contenido.  
+ Hay tres tipos diferentes de <xref:System.Windows.Media.TileBrush> y cada uno de ellos pinta con un tipo diferente del contenido.  
   
--   Si el pincel es un <xref:System.Windows.Media.ImageBrush>, este contenido es una imagen de la <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propiedad especifica el contenido de la <xref:System.Windows.Media.ImageBrush>.  
+-   Si el pincel es un <xref:System.Windows.Media.ImageBrush>, este contenido es una imagen del <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propiedad especifica el contenido de la <xref:System.Windows.Media.ImageBrush>.  
   
 -   Si el pincel es un <xref:System.Windows.Media.DrawingBrush>, este contenido es un dibujo. El <xref:System.Windows.Media.DrawingBrush.Drawing%2A> propiedad especifica el contenido de la <xref:System.Windows.Media.DrawingBrush>.  
   
 -   Si el pincel es un <xref:System.Windows.Media.VisualBrush>, este contenido es un objeto visual. El <xref:System.Windows.Media.VisualBrush.Visual%2A> propiedad especifica el contenido de la <xref:System.Windows.Media.VisualBrush>.  
   
- Puede especificar la posición y las dimensiones de <xref:System.Windows.Media.TileBrush> contenido mediante el uso de la <xref:System.Windows.Media.TileBrush.Viewbox%2A> propiedad, aunque es frecuente dejar la <xref:System.Windows.Media.TileBrush.Viewbox%2A> establecida en su valor predeterminado. De forma predeterminada, el <xref:System.Windows.Media.TileBrush.Viewbox%2A> se configura para contener completamente el contenido del pincel. Para obtener más información acerca de cómo configurar el <xref:System.Windows.Controls.Viewbox>, consulte la <xref:System.Windows.Controls.Viewbox> página de propiedades.  
+ Puede especificar la posición y las dimensiones de <xref:System.Windows.Media.TileBrush> contenido mediante el uso de la <xref:System.Windows.Media.TileBrush.Viewbox%2A> propiedad, aunque es frecuente dejar el <xref:System.Windows.Media.TileBrush.Viewbox%2A> establecido en su valor predeterminado. De forma predeterminada, el <xref:System.Windows.Media.TileBrush.Viewbox%2A> se configura para contener completamente el contenido del pincel. Para obtener más información acerca de cómo configurar el <xref:System.Windows.Controls.Viewbox>, consulte la <xref:System.Windows.Controls.Viewbox> página de propiedades.  
   
 <a name="thebasetile"></a>   
 ## <a name="the-base-tile"></a>Mosaico base  
- Un <xref:System.Windows.Media.TileBrush> proyecta su contenido en un mosaico base. El <xref:System.Windows.Media.TileBrush.Stretch%2A> propiedad controla cómo <xref:System.Windows.Media.TileBrush> contenido se expande para rellenar el mosaico base. El <xref:System.Windows.Media.TileBrush.Stretch%2A> propiedad acepta los valores siguientes, definidos por el <xref:System.Windows.Media.Stretch> enumeración:  
+ Un <xref:System.Windows.Media.TileBrush> proyecta su contenido en un mosaico base. El <xref:System.Windows.Media.TileBrush.Stretch%2A> propiedad controla cómo <xref:System.Windows.Media.TileBrush> contenido se ajusta para rellenar el mosaico base. El <xref:System.Windows.Media.TileBrush.Stretch%2A> propiedad acepta los valores siguientes, definidos por el <xref:System.Windows.Media.Stretch> enumeración:  
   
--   <xref:System.Windows.Media.Stretch.None>: El contenido del pincel no se expande para rellenar el mosaico.  
+-   <xref:System.Windows.Media.Stretch.None>: El contenido del pincel no se ajusta para rellenar el mosaico.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: El contenido del pincel se escala para ajustarla al mosaico. Como el alto y el ancho del contenido se ajustan de forma independiente, podría no conservarse la relación de aspecto original del contenido. En otras palabras, el contenido del pincel podría distorsionarse para rellenar por completo el mosaico de salida.  
+-   <xref:System.Windows.Media.Stretch.Fill>: El contenido del pincel se ajusta para rellenar el mosaico. Como el alto y el ancho del contenido se ajustan de forma independiente, podría no conservarse la relación de aspecto original del contenido. En otras palabras, el contenido del pincel podría distorsionarse para rellenar por completo el mosaico de salida.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: El contenido del pincel se escala para que se ajuste completamente dentro del mosaico. Se conserva la relación de aspecto del contenido.  
+-   <xref:System.Windows.Media.Stretch.Uniform>: El contenido del pincel se escala para que quepa completamente dentro del mosaico. Se conserva la relación de aspecto del contenido.  
   
 -   <xref:System.Windows.Media.Stretch.UniformToFill>: El contenido del pincel se escala para que rellene completamente el área de salida conservando la relación de aspecto original del contenido.  
   
@@ -72,13 +72,13 @@ Componentes de TileBrush con un valor de TileMode de Tile
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/StretchExample.cs#graphicsmmnostretchexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/stretchexample.vb#graphicsmmnostretchexample)]  
   
- De forma predeterminada, un <xref:System.Windows.Media.TileBrush> genera un mosaico único (el mosaico base) y ajusta ese mosaico hasta rellenar completamente el área de salida. Puede cambiar el tamaño y la posición del mosaico base estableciendo la <xref:System.Windows.Media.TileBrush.Viewport%2A> y <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propiedades.  
+ De forma predeterminada, un <xref:System.Windows.Media.TileBrush> genera un único mosaico (el mosaico base) y ajusta ese mosaico hasta rellenar completamente el área de salida. Puede cambiar el tamaño y la posición del mosaico base estableciendo la <xref:System.Windows.Media.TileBrush.Viewport%2A> y <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propiedades.  
   
 <a name="basetilesize"></a>   
 ### <a name="base-tile-size"></a>Tamaño del mosaico base  
- El <xref:System.Windows.Media.TileBrush.Viewport%2A> propiedad determina el tamaño y la posición del mosaico base y el <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propiedad determina si el <xref:System.Windows.Media.TileBrush.Viewport%2A> se especifica mediante las coordenadas absolutas o relativas. Si las coordenadas son relativas, lo son con respecto al tamaño del área de salida. El punto (0,0) representa la parte superior izquierda esquina del área de salida y (1,1) representa la parte inferior derecha del área de salida. Para especificar que la <xref:System.Windows.Media.TileBrush.Viewport%2A> propiedad usa coordenadas absolutas, establezca la <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propiedad <xref:System.Windows.Media.BrushMappingMode.Absolute>.  
+ El <xref:System.Windows.Media.TileBrush.Viewport%2A> propiedad determina el tamaño y la posición del mosaico base y el <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propiedad determina si el <xref:System.Windows.Media.TileBrush.Viewport%2A> se especifica mediante coordenadas absolutas o relativas. Si las coordenadas son relativas, lo son con respecto al tamaño del área de salida. El punto (0,0) representa la parte superior izquierda esquina del área de salida y (1,1) representa la parte inferior derecha del área de salida. Para especificar que el <xref:System.Windows.Media.TileBrush.Viewport%2A> propiedad usa coordenadas absolutas, establezca el <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propiedad <xref:System.Windows.Media.BrushMappingMode.Absolute>.  
   
- La ilustración siguiente muestra la diferencia en la salida entre un <xref:System.Windows.Media.TileBrush> con relative y absolute <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>. Observe que las ilustraciones muestran un patrón de mosaicos; en la siguiente sección se describe cómo especificar el patrón de mosaicos.  
+ La siguiente ilustración muestra la diferencia entre un <xref:System.Windows.Media.TileBrush> con el valor relativo frente a absoluto <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>. Observe que las ilustraciones muestran un patrón de mosaicos; en la siguiente sección se describe cómo especificar el patrón de mosaicos.  
   
  ![Unidades de viewPort absolutas y relativas](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")  
   
@@ -89,7 +89,7 @@ Componentes de TileBrush con un valor de TileMode de Tile
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmrelativeviewportunitsexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmrelativeviewportunitsexample1)]  
   
- En el ejemplo siguiente establece los iconos de un <xref:System.Windows.Media.ImageBrush> al 25 por 25 píxeles independientes del dispositivo. Dado que la <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> son absolutos, el <xref:System.Windows.Media.ImageBrush> iconos son siempre 25 por 25 píxeles, independientemente del tamaño del área que se está pintando.  
+ El ejemplo siguiente establece los iconos de un <xref:System.Windows.Media.ImageBrush> a 25 por 25 píxeles independientes del dispositivo. Dado que el <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> son absolutos, el <xref:System.Windows.Media.ImageBrush> los iconos son siempre de 25 por 25 píxeles, independientemente del tamaño del área que se está pintando.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmabsoluteviewportunitsexample1)]  
   
@@ -98,11 +98,11 @@ Componentes de TileBrush con un valor de TileMode de Tile
   
 <a name="tilingbehavior"></a>   
 ### <a name="tiling-behavior"></a>Comportamiento de la colocación en mosaico  
- A <xref:System.Windows.Media.TileBrush> genera un modelo en mosaico cuando su mosaico base no llene completamente el área de resultados y un modo de disposición en mosaico distinto <xref:System.Windows.Media.TileMode.None> se especifica. Cuando de mosaico un icono de pincel no rellena completamente el área de salida, su <xref:System.Windows.Media.TileBrush.TileMode%2A> propiedad especifica si el mosaico base se debe duplicar para rellenar el área de salida y, si es así, ¿cómo el mosaico base debe duplicarse. El <xref:System.Windows.Media.TileBrush.TileMode%2A> propiedad acepta los valores siguientes, definidos por el <xref:System.Windows.Media.TileMode> enumeración:  
+ Un <xref:System.Windows.Media.TileBrush> genera un patrón de mosaicos cuando su mosaico base no rellena completamente el área de salida y un modo de disposición en mosaico distinto <xref:System.Windows.Media.TileMode.None> se especifica. Cuando mosaico un icono de pincel de no rellena completamente el área de salida, su <xref:System.Windows.Media.TileBrush.TileMode%2A> propiedad especifica si el mosaico base se debe duplicar para rellenar el área de salida y, si es así, ¿cómo la base se debe duplicar. El <xref:System.Windows.Media.TileBrush.TileMode%2A> propiedad acepta los valores siguientes, definidos por el <xref:System.Windows.Media.TileMode> enumeración:  
   
 -   <xref:System.Windows.Media.TileMode.None>: Solo el mosaico base se dibuja.  
   
--   <xref:System.Windows.Media.TileMode.Tile>: El mosaico base se dibuja y se rellena el área restante repitiendo el mosaico base, que es adyacente al borde izquierdo de la siguiente y el borde derecho de un mosaico de forma similar para superior e inferior.  
+-   <xref:System.Windows.Media.TileMode.Tile>: Se dibuja el mosaico base y el área restante se rellena repitiendo el mosaico base, que es adyacente al borde izquierdo del siguiente y el borde derecho de un mosaico de forma similar para los bordes superior e inferior.  
   
 -   <xref:System.Windows.Media.TileMode.FlipX>: Igual que <xref:System.Windows.Media.TileMode.Tile>, pero las columnas alternativas de los mosaicos se voltean horizontalmente.  
   
@@ -114,7 +114,7 @@ Componentes de TileBrush con un valor de TileMode de Tile
   
  ![Diferentes valores de TileMode para TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")  
   
- En el ejemplo siguiente, se utiliza una imagen para dibujar un rectángulo de 100 píxeles de ancho por 100 píxeles de alto. Estableciendo el pincel <xref:System.Windows.Media.TileBrush.Viewport%2A> se ha establecido en 0,0,0.25,0.25, mosaico base del pincel se realiza como 1/4 del área de salida. El pincel <xref:System.Windows.Media.TileBrush.TileMode%2A> está establecido en <xref:System.Windows.Media.TileMode.FlipXY>. para que rellene el rectángulo con filas de mosaicos.  
+ En el ejemplo siguiente, se utiliza una imagen para dibujar un rectángulo de 100 píxeles de ancho por 100 píxeles de alto. Al establecer el pincel <xref:System.Windows.Media.TileBrush.Viewport%2A> se ha establecido en 0,0,0.25,0.25, mosaico base el pincel de se realiza para ser de 1/4 del área de salida. El pincel <xref:System.Windows.Media.TileBrush.TileMode%2A> está establecido en <xref:System.Windows.Media.TileMode.FlipXY>. para que rellene el rectángulo con filas de mosaicos.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TilingExample.xaml#graphicsmmflipxyexample)]  
   
@@ -129,5 +129,5 @@ Componentes de TileBrush con un valor de TileMode de Tile
  [Pintar con imágenes, dibujos y elementos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
  [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
  [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Ejemplo de ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005)  
- [Ejemplo de VisualBrush](http://go.microsoft.com/fwlink/?LinkID=160049)
+ [Ejemplo de ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)  
+ [Ejemplo de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)

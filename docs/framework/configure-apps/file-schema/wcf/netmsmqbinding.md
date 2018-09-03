@@ -1,15 +1,15 @@
 ---
-title: '&lt;NetMsmqBinding&gt;'
+title: '&lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: d4d28a799acecd335d8155a7ae67b6365b3f0023
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 05ab1b064f6dd7bb28d1d118ec8c4249da5a75e1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751680"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487096"
 ---
-# <a name="ltnetmsmqbindinggt"></a>&lt;NetMsmqBinding&gt;
+# <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
 Define un enlace en cola adecuado para la comunicación del equipo de cruce.  
   
  \<system.ServiceModel>  
@@ -70,16 +70,16 @@ Define un enlace en cola adecuado para la comunicación del equipo de cruce.
 |`maxBufferPoolSize`|Entero que especifica el tamaño máximo del grupo de búferes para este enlace. El valor predeterminado es 8.|  
 |`maxReceivedMessageSize`|Un entero positivo que define el tamaño del mensaje máximo, en bytes, incluyendo encabezados, que está procesado por este enlace. El remitente de un mensaje que supere este límite recibirá un error SOAP. El destinatario quita el mensaje y crea una entrada del evento en el registro de seguimiento. El valor predeterminado es 65536. Este límite en el tamaño del mensaje tiene como objetivo limitar la exposición a ataques de denegación de servicio (DoS).|  
 |`maxRetryCycles`|Un entero que indica el número de ciclos de reintento utilizado por la característica de detección de mensaje dudoso. Un mensaje se vuelve un mensaje dudoso cuando produce un error en todos los intentos de entrega de todos los ciclos. El valor predeterminado es 3. Para obtener más información, consulta <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|`name`|Atributo necesario. Cadena que contiene el nombre de configuración del enlace. Este valor debe ser único porque se usa como identificación del enlace. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información acerca de la configuración predeterminada y enlaces anónimos y los comportamientos, consulte [configuración simplificada](../../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`name`|Atributo necesario. Cadena que contiene el nombre de configuración del enlace. Este valor debe ser único porque se usa como identificación del enlace. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información acerca de la configuración predeterminada y sin especificar enlaces y comportamientos, consulte [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
-|`QueueTransferProtocol`|Un valor <xref:System.ServiceModel.QueueTransferProtocol> válido que especifica el transporte del canal de comunicación en cola que este enlace utiliza. MSMQ no admite el direccionamiento de Active Directory al utilizar el protocolo de mensajería de confianza SOAP. Por lo tanto, no debe establecer este atributo en `Srmp` o `Srmps` cuando el `u``seActiveDirectory` atributo está establecido en `true`.|  
+|`QueueTransferProtocol`|Un valor <xref:System.ServiceModel.QueueTransferProtocol> válido que especifica el transporte del canal de comunicación en cola que este enlace utiliza. MSMQ no admite el direccionamiento de Active Directory al utilizar el protocolo de mensajería de confianza SOAP. Por lo tanto, no debe establecer este atributo en `Srmp` o `Srmps` cuando el `useActiveDirectory` atributo está establecido en `true`.|  
 |`receiveErrorHandling`|Un valor <xref:System.ServiceModel.ReceiveErrorHandling> que especifica cómo se administran mensajes dudosos y que no se pueden enviar.|  
 |`receiveRetryCount`|Un entero que especifica el número máximo de veces que el administrador de cola debería intentar enviar un mensaje antes de transferirlo a la cola de reintento.|  
 |`receiveTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:10:00.|  
 |`retryCycleDelay`|Un valor TimeSpan que especifica el tiempo de retardo entre los ciclos de reintento al intentar entregar un mensaje que no se pudo entregar inmediatamente. El valor define sólo el tiempo de espera mínimo porque el tiempo de espera real puede ser más largo. El valor predeterminado es 00:10:00. Para obtener más información, consulta <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
 |`sendTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |`timeToLive`|Un valor TimeSpan que especifica cuánto tiempo son válidos los mensajes antes de expirar y ser colocados en la cola de mensajes no enviados. El valor predeterminado es 1.00:00:00.<br /><br /> Este atributo se establece para asegurarse de que los mensajes que dependen del tiempo no se vuelvan obsoletos antes de ser procesados por las aplicaciones receptoras. Un mensaje en una cola expira si no es consumido por la aplicación receptora dentro del intervalo de tiempo especificado. Los mensajes caducados se envían a la cola especial llamada cola de mensajes no enviados. La ubicación de la cola de mensajes no enviados se establece con el atributo `DeadLetterQueue` o con el valor predeterminado adecuado, basado en garantías.|  
-|`usingActiveDirectory`|Valor de tipo booleano que especifica si las direcciones de la cola se deben convertir utilizando Active Directory.<br /><br /> Las direcciones de la cola de MSMQ pueden estar compuestas de nombres de ruta o nombres de formato directos. Con un nombre de formato directo, MSMQ resuelve el nombre del equipo mediante DNS, NetBIOS o IP. Con un nombre de ruta, MSMQ resuelve el nombre del equipo mediante Active Directory.<br /><br /> De forma predeterminada, Windows Communication Foundation (WCF) en cola transporte convierte el URI de una cola de mensajes para un nombre de formato directo. Al establecer la propiedad `UseActiveDirectory` como true, una aplicación puede especificar que el transporte en cola debe resolver el nombre del equipo mediante Active Directory en lugar de DNS, NetBIOS o IP.|  
+|`usingActiveDirectory`|Valor de tipo booleano que especifica si las direcciones de la cola se deben convertir utilizando Active Directory.<br /><br /> Las direcciones de la cola de MSMQ pueden estar compuestas de nombres de ruta o nombres de formato directos. Con un nombre de formato directo, MSMQ resuelve el nombre del equipo mediante DNS, NetBIOS o IP. Con un nombre de ruta, MSMQ resuelve el nombre del equipo mediante Active Directory.<br /><br /> De forma predeterminada, Windows Communication Foundation (WCF) en cola de transporte convierte el URI de una cola de mensajes a un nombre de formato directo. Al establecer la propiedad `UseActiveDirectory` como true, una aplicación puede especificar que el transporte en cola debe resolver el nombre del equipo mediante Active Directory en lugar de DNS, NetBIOS o IP.|  
 |`useMsmqTracing`|Valor de tipo booleano que especifica si los mensajes procesados por este enlace se deberían seguir paso a paso. De manera predeterminada, es `false`. Si se habilita la traza, los mensajes de informe se crean y envían a la cola de informes cada vez que el mensaje sale o llega a un equipo Message Queuing.|  
 |`useSourceJournal`|Valor de tipo booleano que especifica las copias de mensajes procesadas por este enlace debería estar almacenado en el diario de origen. De manera predeterminada, es `false`.<br /><br /> Las aplicaciones en cola que quieran mantener un registro de mensajes que han dejado la cola de salida del equipo pueden copiar los mensajes a una cola del diario. Cuando un mensaje deja la cola de salida y se recibe una confirmación de que se ha recibido el mensaje en el equipo de destino, se mantiene una copia del mensaje en la cola del diario de sistema del equipo remitente.|  
   
@@ -87,7 +87,7 @@ Define un enlace en cola adecuado para la comunicación del equipo de cruce.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -97,7 +97,7 @@ Define un enlace en cola adecuado para la comunicación del equipo de cruce.
 |[\<enlaces >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- El enlace `netMsmqBinding` proporciona compatibilidad para poner en cola aprovechando Microsoft Message Queuing (MSMQ) como transporte y proporcionando compatibilidad para aplicaciones acopladas flexiblemente, aislamiento de errores, equilibrio de carga y operaciones desconectadas. Para obtener una descripción de estas características, consulte [colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+ El enlace `netMsmqBinding` proporciona compatibilidad para poner en cola aprovechando Microsoft Message Queuing (MSMQ) como transporte y proporcionando compatibilidad para aplicaciones acopladas flexiblemente, aislamiento de errores, equilibrio de carga y operaciones desconectadas. Para obtener una explicación de estas características, consulte [colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -139,5 +139,5 @@ Define un enlace en cola adecuado para la comunicación del equipo de cruce.
  [\<enlace >](../../../../../docs/framework/misc/binding.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [Colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

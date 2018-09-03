@@ -5,11 +5,11 @@ helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
 ms.openlocfilehash: 9e0b133147fa01b15104b9050cd9067079300e3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604255"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486849"
 ---
 # <a name="objects-visual-basic"></a>Objetos (Visual Basic)
 En este tema se proporcionan vínculos a otros temas en los que se describen los objetos en tiempo de ejecución de Visual Basic y contienen tablas con sus procedimientos de miembro, propiedades y eventos.  

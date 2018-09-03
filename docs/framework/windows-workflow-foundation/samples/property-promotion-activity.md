@@ -2,12 +2,12 @@
 title: Actividad de promoción de propiedad
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-ms.openlocfilehash: 46e74c8c479e545778db92e15de3cb8798dafa11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519930"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481142"
 ---
 # <a name="property-promotion-activity"></a>Actividad de promoción de propiedad
 Este ejemplo proporciona una solución integral que incluye la característica Promoción de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> directamente en el flujo de trabajo que crea la experiencia. Se proporciona una colección de elementos de configuración, actividades de flujo de trabajo y extensiones de flujo de trabajo que simplifican el uso de la característica Promoción. Además, el ejemplo contiene un flujo de trabajo sencillo que muestra cómo utilizar esta colección.  
@@ -23,7 +23,7 @@ Este ejemplo proporciona una solución integral que incluye la característica P
   
 ## <a name="sample-projects"></a>Proyectos de ejemplo  
   
--   El **PropertyPromotionActivity** proyecto contiene archivos que pertenecen a los elementos de configuración específicos de la promoción, las actividades de flujo de trabajo y extensiones de flujo de trabajo.  
+-   El **PropertyPromotionActivity** proyecto contiene archivos que pertenecen a los elementos de configuración específicos de la promoción, las actividades de flujo de trabajo y las extensiones de flujo de trabajo.  
   
 -   El **CounterServiceApplication** proyecto contiene un flujo de trabajo de ejemplo que usa el **SqlWorkflowInstanceStorePromotion** proyecto.  
   
@@ -37,11 +37,11 @@ Este ejemplo proporciona una solución integral que incluye la característica P
   
     1.  Navegue hasta el directorio de ejemplo (\WF\Basic\Persistence\PropertyPromotionActivity) y ejecute CreateInstanceStore.cmd.  
   
-    2.  Si no dispone de privilegios de administrador, cree un inicio de sesión de SQL Server. En SQL Server Management Studio, vaya a **seguridad**, **inicios de sesión**. Haga clic en **inicios de sesión** y crear un nuevo inicio de sesión. Agregue el usuario ACL al rol SQL abriendo **bases de datos**, **InstanceStore**, **seguridad**. Haga clic en **usuarios** y seleccione **nuevo usuario**. Establecer el **nombre de inicio de sesión** para el usuario creado anteriormente. Agregue el usuario a la pertenencia al rol de la base de datos System.Activities.DurableInstancing.InstanceStoreUsers (y otros). Observe que el usuario ya podría existir (por ejemplo, el usuario dbo).  
+    2.  Si no dispone de privilegios de administrador, cree un inicio de sesión de SQL Server. En SQL Server Management Studio, vaya a **seguridad**, **inicios de sesión**. Haga clic en **inicios de sesión** y crear un nuevo inicio de sesión. Agregue el usuario ACL al rol SQL abriendo **bases de datos**, **InstanceStore**, **seguridad**. Haga clic en **usuarios** y seleccione **nuevo usuario**. Establecer el **nombre de inicio de sesión** al usuario que creó anteriormente. Agregue el usuario a la pertenencia al rol de la base de datos System.Activities.DurableInstancing.InstanceStoreUsers (y otros). Observe que el usuario ya podría existir (por ejemplo, el usuario dbo).  
   
 2.  Abra el archivo de solución PropertyPromotionActivity.sln en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-3.  Si creó el almacén de instancia en una base de datos distinta de una instalación local de SQL Server Express, a continuación debe actualizar la cadena de conexión a la base de datos. Modifique el archivo App.config en el **CounterServiceApplication** estableciendo el valor de la `connectionString` del atributo en el `sqlWorkflowInstanceStorePromotion` nodo para que apunte a la base de datos de persistencia que se inicializó en el paso 1.  
+3.  Si creó el almacén de instancia en una base de datos distinta de una instalación local de SQL Server Express, a continuación debe actualizar la cadena de conexión a la base de datos. Modifique el archivo App.config en el **CounterServiceApplication** estableciendo el valor de la `connectionString` atributo el `sqlWorkflowInstanceStorePromotion` nodo para que apunte a la base de datos de persistencia que se inicializó en el paso 1.  
   
 4.  Compile y ejecute la solución. Esto iniciará el servicio Counter WF e iniciará automáticamente una instancia de flujo de trabajo.  
   
@@ -62,7 +62,7 @@ Este ejemplo proporciona una solución integral que incluye la característica P
   
 -   **CounterServiceApplication** es una aplicación de consola que hospeda un servicio Counter WF simple. Al recibir un mensaje unidireccional a través del extremo `Start`, el flujo de trabajo cuenta de 0 a 29, incrementando una variable de contador cada dos segundos. Después de cada incremento del contador, el flujo de trabajo persiste y las propiedades promovidas están actualizadas en la vista [dbo].[CounterService]. Cuando se ejecuta la aplicación de consola, hospeda el servicio WF y envía un mensaje al extremo `Start`, creando una instancia de Counter WF.  
   
--   **PropertyPromotionActivity** es una biblioteca de clases que contiene los elementos de configuración, actividades de flujo de trabajo y extensiones de flujo de trabajo que el **CounterServiceApplication** usa.  
+-   **PropertyPromotionActivity** es una biblioteca de clases que contiene los elementos de configuración, las actividades de flujo de trabajo y las extensiones de flujo de trabajo que el **CounterServiceApplication** usa.  
   
 -   **PropertyPromotionActivitySQLSample.sql** crea y agrega la vista [dbo]. [ CounterService] a la base de datos.  
   
@@ -142,7 +142,7 @@ public class PromoteValue<T> : CodeActivity
  Borra todos los valores que se promovieron antes de esta actividad.  
   
  Name (string)  
- El nombre que representa a esta propiedad. Esto debe coincidir con el atributo de nombre de un \<promotedValue > elemento en la configuración.  
+ El nombre que representa a esta propiedad. Debe coincidir con el atributo de nombre de un \<promotedValue > elemento en la configuración.  
   
  Valor (InArgument\<T >)  
  La variable / valor que desea almacenar en la columna.  
@@ -186,9 +186,9 @@ public class SqlWorkflowInstanceStorePromotionBehavior :
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio:  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\PropertyPromotionActivity`  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de persistencia y el hospedaje de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

@@ -3,11 +3,11 @@ title: 'Instrucciones de diseño del componente de F #'
 description: 'Obtenga información sobre las directrices para escribir componentes de F # pensados para su uso por otros llamadores.'
 ms.date: 05/14/2018
 ms.openlocfilehash: 446cba0f810af9517b655ef5741ddf7a919676d5
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935602"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488292"
 ---
 # <a name="f-component-design-guidelines"></a>Instrucciones de diseño del componente de F #
 
