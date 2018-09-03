@@ -6,36 +6,36 @@ helpviewer_keywords:
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
 ms.openlocfilehash: 06c6899895f278fdf652725a05ecc7229805f4d4
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935363"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455710"
 ---
-# <a name="ltcgt-visual-basic"></a><span data-ttu-id="ff824-102">&lt;c&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ff824-102">&lt;c&gt; (Visual Basic)</span></span>
-<span data-ttu-id="ff824-103">Indica que el texto dentro de una descripción es código.</span><span class="sxs-lookup"><span data-stu-id="ff824-103">Indicates that text within a description is code.</span></span>  
+# <a name="ltcgt-visual-basic"></a><span data-ttu-id="01887-102">&lt;c&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01887-102">&lt;c&gt; (Visual Basic)</span></span>
+<span data-ttu-id="01887-103">Indica que el texto dentro de una descripción es código.</span><span class="sxs-lookup"><span data-stu-id="01887-103">Indicates that text within a description is code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff824-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ff824-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01887-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="01887-104">Syntax</span></span>  
   
 ```xml  
 <c>text</c>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ff824-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ff824-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="01887-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="01887-105">Parameters</span></span>  
   
-|<span data-ttu-id="ff824-106">Parámetro</span><span class="sxs-lookup"><span data-stu-id="ff824-106">Parameter</span></span>|<span data-ttu-id="ff824-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="ff824-107">Description</span></span>|  
+|<span data-ttu-id="01887-106">Parámetro</span><span class="sxs-lookup"><span data-stu-id="01887-106">Parameter</span></span>|<span data-ttu-id="01887-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="01887-107">Description</span></span>|  
 |---|---|  
-|`text`|<span data-ttu-id="ff824-108">El texto que le gustaría indicar como código.</span><span class="sxs-lookup"><span data-stu-id="ff824-108">The text you would like to indicate as code.</span></span>|  
+|`text`|<span data-ttu-id="01887-108">El texto que le gustaría indicar como código.</span><span class="sxs-lookup"><span data-stu-id="01887-108">The text you would like to indicate as code.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ff824-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ff824-109">Remarks</span></span>  
- <span data-ttu-id="ff824-110">El `<c>` etiqueta ofrece una manera de indicar que el texto dentro de una descripción debe marcarse como código.</span><span class="sxs-lookup"><span data-stu-id="ff824-110">The `<c>` tag gives you a way to indicate that text within a description should be marked as code.</span></span> <span data-ttu-id="ff824-111">Use [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) para indicar varias líneas como código.</span><span class="sxs-lookup"><span data-stu-id="ff824-111">Use [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) to indicate multiple lines as code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="01887-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="01887-109">Remarks</span></span>  
+ <span data-ttu-id="01887-110">El `<c>` etiqueta ofrece una manera de indicar que el texto dentro de una descripción debe marcarse como código.</span><span class="sxs-lookup"><span data-stu-id="01887-110">The `<c>` tag gives you a way to indicate that text within a description should be marked as code.</span></span> <span data-ttu-id="01887-111">Use [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) para indicar varias líneas como código.</span><span class="sxs-lookup"><span data-stu-id="01887-111">Use [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) to indicate multiple lines as code.</span></span>  
   
- <span data-ttu-id="ff824-112">Compile con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación a un archivo.</span><span class="sxs-lookup"><span data-stu-id="ff824-112">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="01887-112">Compile con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación a un archivo.</span><span class="sxs-lookup"><span data-stu-id="01887-112">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ff824-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ff824-113">Example</span></span>  
- <span data-ttu-id="ff824-114">Este ejemplo se usa el `<c>` etiqueta en la sección de resumen para indicar que `Counter` es el código.</span><span class="sxs-lookup"><span data-stu-id="ff824-114">This example uses the `<c>` tag in the summary section to indicate that `Counter` is code.</span></span>  
+## <a name="example"></a><span data-ttu-id="01887-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="01887-113">Example</span></span>  
+ <span data-ttu-id="01887-114">Este ejemplo se usa el `<c>` etiqueta en la sección de resumen para indicar que `Counter` es el código.</span><span class="sxs-lookup"><span data-stu-id="01887-114">This example uses the `<c>` tag in the summary section to indicate that `Counter` is code.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/c_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="ff824-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="ff824-115">See Also</span></span>  
- [<span data-ttu-id="ff824-116">Etiquetas XML para comentarios</span><span class="sxs-lookup"><span data-stu-id="ff824-116">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="01887-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="01887-115">See Also</span></span>  
+ [<span data-ttu-id="01887-116">Etiquetas XML para comentarios</span><span class="sxs-lookup"><span data-stu-id="01887-116">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

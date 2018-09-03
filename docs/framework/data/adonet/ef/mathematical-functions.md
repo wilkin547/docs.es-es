@@ -2,49 +2,390 @@
 title: Funciones matemáticas
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 9dfd1faf9bdab995b19c38e32f64a88ed67cb280
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766977"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456456"
 ---
-# <a name="mathematical-functions"></a><span data-ttu-id="34976-102">Funciones matemáticas</span><span class="sxs-lookup"><span data-stu-id="34976-102">Mathematical Functions</span></span>
-<span data-ttu-id="34976-103">El Proveedor de datos .NET Framework para SQL Server (SqlClient) proporciona funciones matemáticas que realizan cálculos con los valores de entrada que se proporcionan como argumentos y devuelven un resultado numérico.</span><span class="sxs-lookup"><span data-stu-id="34976-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides math functions that perform calculations on input values that are provided as arguments, and return a numeric value result.</span></span> <span data-ttu-id="34976-104">Estas funciones están en el espacio de nombres SqlServer, que está disponible al utilizar SqlClient.</span><span class="sxs-lookup"><span data-stu-id="34976-104">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="34976-105">La propiedad del espacio de nombres de un proveedor permite a Entity Framework detectar qué prefijo usa este proveedor para estructuras concretas, como los tipos y las funciones. La tabla siguiente describe las funciones matemáticas de SqlClient.</span><span class="sxs-lookup"><span data-stu-id="34976-105">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.The following table describes the SqlClient math functions.</span></span>  
+# <a name="mathematical-functions"></a><span data-ttu-id="43682-102">Funciones matemáticas</span><span class="sxs-lookup"><span data-stu-id="43682-102">Mathematical Functions</span></span>
+
+<span data-ttu-id="43682-103">El Proveedor de datos .NET Framework para SQL Server (SqlClient) proporciona funciones matemáticas que realizan cálculos con los valores de entrada que se proporcionan como argumentos y devuelven un resultado numérico.</span><span class="sxs-lookup"><span data-stu-id="43682-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides math functions that perform calculations on input values that are provided as arguments, and return a numeric value result.</span></span> <span data-ttu-id="43682-104">Estas funciones están en el espacio de nombres SqlServer, que está disponible al utilizar SqlClient.</span><span class="sxs-lookup"><span data-stu-id="43682-104">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="43682-105">La propiedad del espacio de nombres de un proveedor permite a Entity Framework detectar qué prefijo usa este proveedor para estructuras concretas, como los tipos y las funciones. La tabla siguiente describe las funciones matemáticas de SqlClient.</span><span class="sxs-lookup"><span data-stu-id="43682-105">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.The following table describes the SqlClient math functions.</span></span>  
   
-|<span data-ttu-id="34976-106">Función</span><span class="sxs-lookup"><span data-stu-id="34976-106">Function</span></span>|<span data-ttu-id="34976-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="34976-107">Description</span></span>|  
-|--------------|-----------------|  
-|<span data-ttu-id="34976-108">`ABS(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-108">`ABS(` `expression` `)`</span></span>|<span data-ttu-id="34976-109">Lleva a cabo la función que devuelve el valor absoluto.</span><span class="sxs-lookup"><span data-stu-id="34976-109">Performs the absolute value function.</span></span><br /><br /> <span data-ttu-id="34976-110">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-110">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-111">`expression`: valor de tipo`Int32`,`Int64`, `Double` o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="34976-111">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="34976-112">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-112">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-113">Valor absoluto de la expresión especificada.</span><span class="sxs-lookup"><span data-stu-id="34976-113">The absolute value of the specified expression.</span></span><br /><br /> <span data-ttu-id="34976-114">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-114">**Example**</span></span><br /><br /> `SqlServer.ABS(-2)`|  
-|<span data-ttu-id="34976-115">`ACOS(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-115">`ACOS(` `expression` `)`</span></span>|<span data-ttu-id="34976-116">Devuelve el valor del arcocoseno de la expresión especificada.</span><span class="sxs-lookup"><span data-stu-id="34976-116">Returns the arccosine value of the specified expression.</span></span><br /><br /> <span data-ttu-id="34976-117">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-117">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-118">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-118">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-119">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-119">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-120">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-120">A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-121">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-121">**Example**</span></span><br /><br /> `SqlServer.ACOS(.9)`|  
-|<span data-ttu-id="34976-122">`ASIN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-122">`ASIN(` `expression` `)`</span></span>|<span data-ttu-id="34976-123">Devuelve el valor del arcoseno de la expresión especificada.</span><span class="sxs-lookup"><span data-stu-id="34976-123">Returns the arcsine value of the specified expression.</span></span><br /><br /> <span data-ttu-id="34976-124">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-124">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-125">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-125">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-126">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-126">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-127">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-127">A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-128">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-128">**Example**</span></span><br /><br /> `SqlServer.ASIN(.9)`|  
-|<span data-ttu-id="34976-129">`ATAN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-129">`ATAN(` `expression` `)`</span></span>|<span data-ttu-id="34976-130">Devuelve el valor del arcotangente de la expresión numérica especificada.</span><span class="sxs-lookup"><span data-stu-id="34976-130">Returns the arctangent value of the specified numeric expression.</span></span><br /><br /> <span data-ttu-id="34976-131">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-131">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-132">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-132">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-133">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-133">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-134">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-134">A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-135">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-135">**Example**</span></span><br /><br /> `SqlServer.ATAN(9)`|  
-|<span data-ttu-id="34976-136">`ATN2(` `expression`, `expression``)`</span><span class="sxs-lookup"><span data-stu-id="34976-136">`ATN2(` `expression`, `expression``)`</span></span>|<span data-ttu-id="34976-137">Devuelve el ángulo, en radianes, cuya tangente se encuentra entre las dos expresiones numéricas especificadas.</span><span class="sxs-lookup"><span data-stu-id="34976-137">Returns the angle, in radians, whose tangent is between the two specified numeric expressions.</span></span><br /><br /> <span data-ttu-id="34976-138">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-138">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-139">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-139">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-140">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-140">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-141">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-141">A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-142">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-142">**Example**</span></span><br /><br /> `SqlServer.ATN2(9, 8)`|  
-|<span data-ttu-id="34976-143">`CEILING(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-143">`CEILING(` `expression` `)`</span></span>|<span data-ttu-id="34976-144">Convierte la expresión especificada al número entero más pequeño mayor o igual que él.</span><span class="sxs-lookup"><span data-stu-id="34976-144">Converts the specified expression to the smallest integer that is greater than or equal to it.</span></span><br /><br /> <span data-ttu-id="34976-145">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-145">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-146">`expression`: valor de tipo`Int32`,`Int64`, `Double` o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="34976-146">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="34976-147">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-147">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-148">Un `Int32`, `Int64`, `Double`, o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="34976-148">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="34976-149">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-149">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]|  
-|<span data-ttu-id="34976-150">`COS(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-150">`COS(` `expression` `)`</span></span>|<span data-ttu-id="34976-151">Calcula el coseno trigonométrico del ángulo especificado, en radianes.</span><span class="sxs-lookup"><span data-stu-id="34976-151">Calculates the trigonometric cosine of the specified angle in radians.</span></span><br /><br /> <span data-ttu-id="34976-152">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-152">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-153">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-153">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-154">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-154">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-155">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-155">A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-156">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-156">**Example**</span></span><br /><br /> `SqlServer.COS(45)`|  
-|<span data-ttu-id="34976-157">`COT(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-157">`COT(` `expression` `)`</span></span>|<span data-ttu-id="34976-158">Calcula la cotangente trigonométrica del ángulo especificado, en radianes.</span><span class="sxs-lookup"><span data-stu-id="34976-158">Calculates the trigonometric cotangent of the specified angle in radians.</span></span><br /><br /> <span data-ttu-id="34976-159">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-159">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-160">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-160">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-161">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-161">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-162">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-162">A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-163">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-163">**Example**</span></span><br /><br /> `SqlServer.COT(60)`|  
-|<span data-ttu-id="34976-164">`DEGREES(` `radians` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-164">`DEGREES(` `radians` `)`</span></span>|<span data-ttu-id="34976-165">Devuelve el ángulo correspondiente en grados.</span><span class="sxs-lookup"><span data-stu-id="34976-165">Returns the corresponding angle in degrees.</span></span><br /><br /> <span data-ttu-id="34976-166">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-166">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-167">`expression`: valor de tipo`Int32`,`Int64`, `Double` o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="34976-167">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="34976-168">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-168">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-169">Un `Int32`, `Int64`, `Double`, o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="34976-169">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="34976-170">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-170">**Example**</span></span><br /><br /> `SqlServer.DEGREES(3.1)`|  
-|<span data-ttu-id="34976-171">`EXP(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-171">`EXP(` `expression` `)`</span></span>|<span data-ttu-id="34976-172">Calcula el valor exponencial de la expresión numérica especificada.</span><span class="sxs-lookup"><span data-stu-id="34976-172">Calculates the exponential value of a specified numeric expression.</span></span><br /><br /> <span data-ttu-id="34976-173">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-173">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-174">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-174">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-175">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-175">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-176">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-176">A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-177">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-177">**Example**</span></span><br /><br /> `SqlServer.EXP(1)`|  
-|<span data-ttu-id="34976-178">`FLOOR(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-178">`FLOOR(` `expression` `)`</span></span>|<span data-ttu-id="34976-179">Convierte la expresión especificada al número entero más grande que sea menor o igual que ella.</span><span class="sxs-lookup"><span data-stu-id="34976-179">Converts the specified expression to the largest integer less than or equal to it.</span></span><br /><br /> <span data-ttu-id="34976-180">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-180">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-181">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-181">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-182">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-182">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-183">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-183">A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-184">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-184">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]|  
-|<span data-ttu-id="34976-185">`LOG(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-185">`LOG(` `expression` `)`</span></span>|<span data-ttu-id="34976-186">Calcula el logaritmo natural de la expresión `float` especificada.</span><span class="sxs-lookup"><span data-stu-id="34976-186">Calculates the natural logarithm of the specified `float` expression.</span></span><br /><br /> <span data-ttu-id="34976-187">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-187">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-188">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-188">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-189">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-189">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-190">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-190">A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-191">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-191">**Example**</span></span><br /><br /> `SqlServer.LOG(100)`|  
-|<span data-ttu-id="34976-192">`LOG10(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-192">`LOG10(` `expression` `)`</span></span>|<span data-ttu-id="34976-193">Devuelve el logaritmo en base 10 de la expresión `Double` especificada.</span><span class="sxs-lookup"><span data-stu-id="34976-193">Returns the base-10 logarithm of the specified `Double` expression.</span></span><br /><br /> <span data-ttu-id="34976-194">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-194">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-195">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-195">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-196">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-196">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-197">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-197">A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-198">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-198">**Example**</span></span><br /><br /> `SqlServer.LOG10(100)`|  
-|`PI()`|<span data-ttu-id="34976-199">Devuelve el valor constante de Pi como un `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-199">Returns the constant value of pi as a `Double`.</span></span><br /><br /> <span data-ttu-id="34976-200">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-200">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-201">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-201">A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-202">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-202">**Example**</span></span><br /><br /> `SqlServer.PI()`|  
-|<span data-ttu-id="34976-203">`POWER(` `numeric_expression, power_expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-203">`POWER(` `numeric_expression, power_expression` `)`</span></span>|<span data-ttu-id="34976-204">Calcula el valor de la expresión especificada elevada a la potencia indicada.</span><span class="sxs-lookup"><span data-stu-id="34976-204">Calculates the value of a specified expression to a specified power.</span></span><br /><br /> <span data-ttu-id="34976-205">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-205">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-206">`numeric_expression`: valor de tipo`Int32`,`Int64`, `Double` o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="34976-206">`numeric_expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="34976-207">`power_expression`: valor de tipo `Double` que representa la potencia a la que se va a elevar `numeric_expression`.</span><span class="sxs-lookup"><span data-stu-id="34976-207">`power_expression`: A `Double` that represents the power to which to raise the `numeric_expression`.</span></span><br /><br /> <span data-ttu-id="34976-208">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-208">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-209">Valor de la `numeric_expression` especificada a la `power_expression` especificada.</span><span class="sxs-lookup"><span data-stu-id="34976-209">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span><br /><br /> <span data-ttu-id="34976-210">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-210">**Example**</span></span><br /><br /> `SqlServer.POWER(2,7)`|  
-|<span data-ttu-id="34976-211">`RADIANS(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-211">`RADIANS(` `expression` `)`</span></span>|<span data-ttu-id="34976-212">Convierte grados en radianes.</span><span class="sxs-lookup"><span data-stu-id="34976-212">Converts degrees to radians.</span></span><br /><br /> <span data-ttu-id="34976-213">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-213">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-214">`expression`: valor de tipo`Int32`,`Int64`, `Double` o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="34976-214">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="34976-215">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-215">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-216">Un `Int32`, `Int64`,</span><span class="sxs-lookup"><span data-stu-id="34976-216">An `Int32`, `Int64`,</span></span><br /><br /> <span data-ttu-id="34976-217">`Double` o</span><span class="sxs-lookup"><span data-stu-id="34976-217">`Double`, or</span></span><br /><br /> <span data-ttu-id="34976-218">`Decimal`.</span><span class="sxs-lookup"><span data-stu-id="34976-218">`Decimal`.</span></span><br /><br /> <span data-ttu-id="34976-219">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-219">**Example**</span></span><br /><br /> `SqlServer.RADIANS(360.0)`|  
-|<span data-ttu-id="34976-220">`RAND(`[inicialización]`)`</span><span class="sxs-lookup"><span data-stu-id="34976-220">`RAND(`[seed]`)`</span></span>|<span data-ttu-id="34976-221">Devuelve un valor aleatorio de 0 a 1.</span><span class="sxs-lookup"><span data-stu-id="34976-221">Returns a random value from 0 through 1.</span></span><br /><br /> <span data-ttu-id="34976-222">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-222">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-223">Retruns el valor de inicialización como `Int32`.</span><span class="sxs-lookup"><span data-stu-id="34976-223">Retruns the seed value as an `Int32`.</span></span> <span data-ttu-id="34976-224">Si la inicialización no se especifica, el motor de base de datos de SQL Server asigna uno de forma aleatoria.</span><span class="sxs-lookup"><span data-stu-id="34976-224">If the seed is not specified, the SQL Server Database Engine assigns a seed value at random.</span></span> <span data-ttu-id="34976-225">Para un valor de inicialización especificado, el resultado devuelto es siempre el mismo.</span><span class="sxs-lookup"><span data-stu-id="34976-225">For a specified seed value, the result returned is always the same.</span></span><br /><br /> <span data-ttu-id="34976-226">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-226">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-227">Valor `Double` aleatorio de 0 a 1.</span><span class="sxs-lookup"><span data-stu-id="34976-227">A random `Double` value from 0 through 1.</span></span><br /><br /> <span data-ttu-id="34976-228">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-228">**Example**</span></span><br /><br /> `SqlServer.RAND()`|  
-|<span data-ttu-id="34976-229">`ROUND(` `numeric_expression, length` [ ,`function` ]`)`</span><span class="sxs-lookup"><span data-stu-id="34976-229">`ROUND(` `numeric_expression, length` [ ,`function` ]`)`</span></span>|<span data-ttu-id="34976-230">Devuelve una expresión numérica, redondeada a la longitud o precisión especificadas.</span><span class="sxs-lookup"><span data-stu-id="34976-230">Returns a numeric expression, rounded to the specified length or precision.</span></span><br /><br /> <span data-ttu-id="34976-231">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-231">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-232">`numeric_expression`: valor de tipo`Int32`,`Int64`, `Double` o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="34976-232">`numeric_expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="34976-233">`length`: Valor de tipo `Int32` que representa la precisión a la que se va a redondear `numeric_expression`.</span><span class="sxs-lookup"><span data-stu-id="34976-233">`length`: An `Int32` that represents the precision to which `numeric_expression` is to be rounded.</span></span> <span data-ttu-id="34976-234">Si `length` es un número positivo, `numeric_expression` se redondea al número de posiciones decimales que especifica `length`.</span><span class="sxs-lookup"><span data-stu-id="34976-234">When `length` is a positive number, `numeric_expression` is rounded to the number of decimal positions specified by `length`.</span></span> <span data-ttu-id="34976-235">Si `length` es un número negativo, `numeric_expression` se redondea a la izquierda del separador decimal, según se especifica en `length`.</span><span class="sxs-lookup"><span data-stu-id="34976-235">When `length` is a negative number, `numeric_expression` is rounded on the left side of the decimal point, as specified by `length`.</span></span><br /><br /> <span data-ttu-id="34976-236">`function`: (opcional) un `Int32` que representa el tipo de operación que se realiza.</span><span class="sxs-lookup"><span data-stu-id="34976-236">`function`:(optional) An `Int32` that represents the type of operation to perform.</span></span> <span data-ttu-id="34976-237">Cuando la función se omite o tiene un valor de 0 (valor predeterminado), `numeric_expression` se redondea.</span><span class="sxs-lookup"><span data-stu-id="34976-237">When function is omitted or has a value of 0 (default), `numeric_expression` is rounded.</span></span> <span data-ttu-id="34976-238">Si especifica un valor distinto de 0 es, `numeric_expression` se trunca.</span><span class="sxs-lookup"><span data-stu-id="34976-238">When a value other than 0 is specified, `numeric_expression` is truncated.</span></span><br /><br /> <span data-ttu-id="34976-239">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-239">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-240">Valor de la `numeric_expression` especificada a la `power_expression` especificada.</span><span class="sxs-lookup"><span data-stu-id="34976-240">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span><br /><br /> <span data-ttu-id="34976-241">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-241">**Example**</span></span><br /><br /> `SqlServer.ROUND(748.58, -3)`|  
-|<span data-ttu-id="34976-242">`SIGN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-242">`SIGN(` `expression` `)`</span></span>|<span data-ttu-id="34976-243">Devuelve el signo positivo (+1), cero (0) o negativo (-1) de la expresión especificada.</span><span class="sxs-lookup"><span data-stu-id="34976-243">Returns the positive (+1), zero (0), or negative (-1) sign of the specified expression.</span></span><br /><br /> <span data-ttu-id="34976-244">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-244">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-245">`expression`: `Int32`, `Int64`, `Double` o `Decimal`</span><span class="sxs-lookup"><span data-stu-id="34976-245">`expression`: `Int32`, `Int64`, `Double`, or `Decimal`</span></span><br /><br /> <span data-ttu-id="34976-246">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-246">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-247">Un `Int32`, `Int64`, `Double`, o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="34976-247">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="34976-248">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-248">**Example**</span></span><br /><br /> `SqlServer.SIGN(-10)`|  
-|<span data-ttu-id="34976-249">`SIN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-249">`SIN(` `expression` `)`</span></span>|<span data-ttu-id="34976-250">Calcula el seno trigonométrico de un ángulo especificado, en radianes, y devuelve una expresión de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-250">Calculates the trigonometric sine of the specified angle in radians, and returns a `Double` expression.</span></span><br /><br /> <span data-ttu-id="34976-251">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-251">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-252">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-252">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-253">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-253">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-254">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-254">A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-255">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-255">**Example**</span></span><br /><br /> `SqlServer.SIN(20)`|  
-|<span data-ttu-id="34976-256">`SQRT(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-256">`SQRT(` `expression` `)`</span></span>|<span data-ttu-id="34976-257">Devuelve la raíz cuadrada de la expresión especificada.</span><span class="sxs-lookup"><span data-stu-id="34976-257">Returns the square root of the specified expression.</span></span><br /><br /> <span data-ttu-id="34976-258">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-258">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-259">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-259">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-260">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-260">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-261">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-261">A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-262">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-262">**Example**</span></span><br /><br /> `SqlServer.SQRT(3600)`|  
-|<span data-ttu-id="34976-263">`SQUARE(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-263">`SQUARE(` `expression` `)`</span></span>|<span data-ttu-id="34976-264">Devuelve la raíz cuadrada de la expresión especificada.</span><span class="sxs-lookup"><span data-stu-id="34976-264">Returns the square of the specified expression.</span></span><br /><br /> <span data-ttu-id="34976-265">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-265">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-266">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-266">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-267">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-267">**Return Value**</span></span><br /><br /> <span data-ttu-id="34976-268">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="34976-268">A `Double`.</span></span><br /><br /> <span data-ttu-id="34976-269">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-269">**Example**</span></span><br /><br /> `SqlServer.SQUARE(25)`|  
-|<span data-ttu-id="34976-270">`TAN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="34976-270">`TAN(` `expression` `)`</span></span>|<span data-ttu-id="34976-271">Calcula la tangente de una expresión especificada.</span><span class="sxs-lookup"><span data-stu-id="34976-271">Calculates the tangent of a specified expression.</span></span><br /><br /> <span data-ttu-id="34976-272">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="34976-272">**Arguments**</span></span><br /><br /> <span data-ttu-id="34976-273">`expression`: `Double`</span><span class="sxs-lookup"><span data-stu-id="34976-273">`expression`: `Double`</span></span><br /><br /> <span data-ttu-id="34976-274">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="34976-274">**Return Value**</span></span><br /><br /> `Double`<br /><br /> <span data-ttu-id="34976-275">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="34976-275">**Example**</span></span><br /><br /> `SqlServer.TAN(45.0)`|  
+## <a name="absexpression"></a><span data-ttu-id="43682-106">ABS(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-106">ABS(expression)</span></span>
+
+<span data-ttu-id="43682-107">Lleva a cabo la función que devuelve el valor absoluto.</span><span class="sxs-lookup"><span data-stu-id="43682-107">Performs the absolute value function.</span></span>
+
+<span data-ttu-id="43682-108">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-108">**Arguments**</span></span>
+
+<span data-ttu-id="43682-109">`expression`: valor de tipo`Int32`,`Int64`, `Double` o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="43682-109">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+
+<span data-ttu-id="43682-110">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-110">**Return Value**</span></span>
+
+<span data-ttu-id="43682-111">Valor absoluto de la expresión especificada.</span><span class="sxs-lookup"><span data-stu-id="43682-111">The absolute value of the specified expression.</span></span>
+
+<span data-ttu-id="43682-112">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-112">**Example**</span></span>
+
+`SqlServer.ABS(-2)`
+
+## <a name="acosexpression"></a><span data-ttu-id="43682-113">ACOS(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-113">ACOS(expression)</span></span>
+
+<span data-ttu-id="43682-114">Devuelve el valor del arcocoseno de la expresión especificada.</span><span class="sxs-lookup"><span data-stu-id="43682-114">Returns the arccosine value of the specified expression.</span></span>
+
+<span data-ttu-id="43682-115">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-115">**Arguments**</span></span>
+
+<span data-ttu-id="43682-116">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-116">`expression`: A `Double`.</span></span>
+
+<span data-ttu-id="43682-117">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-117">**Return Value**</span></span>
+
+<span data-ttu-id="43682-118">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-118">A `Double`.</span></span>
+
+<span data-ttu-id="43682-119">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-119">**Example**</span></span>
+
+`SqlServer.ACOS(.9)`
+
+## <a name="asinexpression"></a><span data-ttu-id="43682-120">ASIN(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-120">ASIN(expression)</span></span>
+
+<span data-ttu-id="43682-121">Devuelve el valor del arcoseno de la expresión especificada.</span><span class="sxs-lookup"><span data-stu-id="43682-121">Returns the arcsine value of the specified expression.</span></span>
+
+<span data-ttu-id="43682-122">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-122">**Arguments**</span></span>
+
+<span data-ttu-id="43682-123">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-123">`expression`: A `Double`.</span></span>
+
+<span data-ttu-id="43682-124">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-124">**Return Value**</span></span>
+
+<span data-ttu-id="43682-125">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-125">A `Double`.</span></span>
+
+<span data-ttu-id="43682-126">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-126">**Example**</span></span>
+
+`SqlServer.ASIN(.9)`
+
+## <a name="atanexpression"></a><span data-ttu-id="43682-127">ATAN(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-127">ATAN(expression)</span></span>
+
+<span data-ttu-id="43682-128">Devuelve el valor del arcotangente de la expresión numérica especificada.</span><span class="sxs-lookup"><span data-stu-id="43682-128">Returns the arctangent value of the specified numeric expression.</span></span>
+
+<span data-ttu-id="43682-129">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-129">**Arguments**</span></span>
+
+<span data-ttu-id="43682-130">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-130">`expression`: A `Double`.</span></span>
+
+<span data-ttu-id="43682-131">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-131">**Return Value**</span></span>
+
+<span data-ttu-id="43682-132">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-132">A `Double`.</span></span>
+
+<span data-ttu-id="43682-133">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-133">**Example**</span></span>
+
+`SqlServer.ATAN(9)`
+
+## <a name="atn2expression-expression"></a><span data-ttu-id="43682-134">ATN2(Expression, Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-134">ATN2(expression, expression)</span></span>
+
+<span data-ttu-id="43682-135">Devuelve el ángulo, en radianes, cuya tangente se encuentra entre las dos expresiones numéricas especificadas.</span><span class="sxs-lookup"><span data-stu-id="43682-135">Returns the angle, in radians, whose tangent is between the two specified numeric expressions.</span></span>
+
+<span data-ttu-id="43682-136">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-136">**Arguments**</span></span>
+
+<span data-ttu-id="43682-137">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-137">`expression`: A `Double`.</span></span>
+
+<span data-ttu-id="43682-138">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-138">**Return Value**</span></span>
+
+<span data-ttu-id="43682-139">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-139">A `Double`.</span></span>
+
+<span data-ttu-id="43682-140">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-140">**Example**</span></span>
+
+`SqlServer.ATN2(9, 8)`
+ 
+## <a name="ceilingexpression"></a><span data-ttu-id="43682-141">CEILING(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-141">CEILING(expression)</span></span>
+
+<span data-ttu-id="43682-142">Convierte la expresión especificada al número entero más pequeño mayor o igual que él.</span><span class="sxs-lookup"><span data-stu-id="43682-142">Converts the specified expression to the smallest integer that is greater than or equal to it.</span></span>
+
+<span data-ttu-id="43682-143">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-143">**Arguments**</span></span>
+
+<span data-ttu-id="43682-144">`expression`: valor de tipo`Int32`,`Int64`, `Double` o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="43682-144">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+
+<span data-ttu-id="43682-145">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-145">**Return Value**</span></span>
+
+<span data-ttu-id="43682-146">Un `Int32`, `Int64`, `Double`, o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="43682-146">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+
+<span data-ttu-id="43682-147">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-147">**Example**</span></span> 
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]
+
+## <a name="cosexpression"></a><span data-ttu-id="43682-148">COS(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-148">COS(expression)</span></span>
+
+<span data-ttu-id="43682-149">Calcula el coseno trigonométrico del ángulo especificado, en radianes.</span><span class="sxs-lookup"><span data-stu-id="43682-149">Calculates the trigonometric cosine of the specified angle in radians.</span></span> 
+
+<span data-ttu-id="43682-150">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-150">**Arguments**</span></span> 
+
+<span data-ttu-id="43682-151">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-151">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="43682-152">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-152">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-153">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-153">A `Double`.</span></span> 
+
+<span data-ttu-id="43682-154">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-154">**Example**</span></span> 
+
+`SqlServer.COS(45)`
+
+## <a name="cotexpression"></a><span data-ttu-id="43682-155">COT(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-155">COT(expression)</span></span>
+
+<span data-ttu-id="43682-156">Calcula la cotangente trigonométrica del ángulo especificado, en radianes.</span><span class="sxs-lookup"><span data-stu-id="43682-156">Calculates the trigonometric cotangent of the specified angle in radians.</span></span> 
+
+<span data-ttu-id="43682-157">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-157">**Arguments**</span></span> 
+
+<span data-ttu-id="43682-158">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-158">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="43682-159">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-159">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-160">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-160">A `Double`.</span></span> 
+
+<span data-ttu-id="43682-161">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-161">**Example**</span></span> 
+
+`SqlServer.COT(60)`
   
- <span data-ttu-id="34976-276">Para obtener más información sobre las funciones matemáticas que SqlClient admite, consulte la documentación de la versión de SQL Server que especificó en el manifiesto del proveedor SqlClient:</span><span class="sxs-lookup"><span data-stu-id="34976-276">For more information about the mathematical functions that SqlClient supports, see the documentation for the SQL Server version that you specified in the SqlClient provider manifest:</span></span>  
+## <a name="degreesradians"></a><span data-ttu-id="43682-162">Degrees(RADIANS)</span><span class="sxs-lookup"><span data-stu-id="43682-162">DEGREES(radians)</span></span>
+
+<span data-ttu-id="43682-163">Devuelve el ángulo correspondiente en grados.</span><span class="sxs-lookup"><span data-stu-id="43682-163">Returns the corresponding angle in degrees.</span></span> 
+
+<span data-ttu-id="43682-164">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-164">**Arguments**</span></span> 
+
+<span data-ttu-id="43682-165">`expression`: valor de tipo`Int32`,`Int64`, `Double` o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="43682-165">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="43682-166">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-166">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-167">Un `Int32`, `Int64`, `Double`, o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="43682-167">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="43682-168">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-168">**Example**</span></span> 
+
+`SqlServer.DEGREES(3.1)`
+
+## <a name="expexpression"></a><span data-ttu-id="43682-169">EXP(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-169">EXP(expression)</span></span>
+
+<span data-ttu-id="43682-170">Calcula el valor exponencial de la expresión numérica especificada.</span><span class="sxs-lookup"><span data-stu-id="43682-170">Calculates the exponential value of a specified numeric expression.</span></span> 
+
+<span data-ttu-id="43682-171">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-171">**Arguments**</span></span> 
+
+<span data-ttu-id="43682-172">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-172">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="43682-173">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-173">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-174">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-174">A `Double`.</span></span> 
+
+<span data-ttu-id="43682-175">**Ejemplo** `SqlServer.EXP(1)`</span><span class="sxs-lookup"><span data-stu-id="43682-175">**Example** `SqlServer.EXP(1)`</span></span>
+
+## <a name="floorexpression"></a><span data-ttu-id="43682-176">Floor(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-176">FLOOR(expression)</span></span>
+
+<span data-ttu-id="43682-177">Convierte la expresión especificada al número entero más grande que sea menor o igual que ella.</span><span class="sxs-lookup"><span data-stu-id="43682-177">Converts the specified expression to the largest integer less than or equal to it.</span></span> 
+
+<span data-ttu-id="43682-178">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-178">**Arguments**</span></span> 
+
+<span data-ttu-id="43682-179">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-179">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="43682-180">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-180">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-181">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-181">A `Double`.</span></span> 
+
+<span data-ttu-id="43682-182">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-182">**Example**</span></span> 
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)] 
+[!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]
+
+## <a name="logexpression"></a><span data-ttu-id="43682-183">LOG(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-183">LOG(expression)</span></span>
+
+<span data-ttu-id="43682-184">Calcula el logaritmo natural de la expresión `float` especificada.</span><span class="sxs-lookup"><span data-stu-id="43682-184">Calculates the natural logarithm of the specified `float` expression.</span></span> 
+
+<span data-ttu-id="43682-185">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-185">**Arguments**</span></span> 
+
+<span data-ttu-id="43682-186">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-186">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="43682-187">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-187">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-188">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-188">A `Double`.</span></span> 
+
+<span data-ttu-id="43682-189">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-189">**Example**</span></span> 
+
+`SqlServer.LOG(100)`
+
+## <a name="log10expression"></a><span data-ttu-id="43682-190">LOG10(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-190">LOG10(expression)</span></span>
+
+<span data-ttu-id="43682-191">Devuelve el logaritmo en base 10 de la expresión `Double` especificada.</span><span class="sxs-lookup"><span data-stu-id="43682-191">Returns the base-10 logarithm of the specified `Double` expression.</span></span> 
+
+<span data-ttu-id="43682-192">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-192">**Arguments**</span></span> 
+
+<span data-ttu-id="43682-193">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-193">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="43682-194">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-194">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-195">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-195">A `Double`.</span></span> 
+
+<span data-ttu-id="43682-196">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-196">**Example**</span></span> 
+
+`SqlServer.LOG10(100)`
+
+## <a name="pi"></a><span data-ttu-id="43682-197">PI()</span><span class="sxs-lookup"><span data-stu-id="43682-197">PI()</span></span>
+
+<span data-ttu-id="43682-198">Devuelve el valor constante de Pi como un `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-198">Returns the constant value of pi as a `Double`.</span></span> 
+
+<span data-ttu-id="43682-199">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-199">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-200">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-200">A `Double`.</span></span> 
+
+<span data-ttu-id="43682-201">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-201">**Example**</span></span> 
+
+`SqlServer.PI()`
+
+## <a name="powernumericexpression-powerexpression"></a><span data-ttu-id="43682-202">POWER (numeric_expression, power_expression)</span><span class="sxs-lookup"><span data-stu-id="43682-202">POWER(numeric_expression, power_expression)</span></span>
+
+<span data-ttu-id="43682-203">Calcula el valor de la expresión especificada elevada a la potencia indicada.</span><span class="sxs-lookup"><span data-stu-id="43682-203">Calculates the value of a specified expression to a specified power.</span></span>
+
+<span data-ttu-id="43682-204">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-204">**Arguments**</span></span> 
+
+|  |  |
+|--|--|
+|`numeric_expression`| <span data-ttu-id="43682-205">Un `Int32`, `Int64`, `Double`, o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="43682-205">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>|
+|`power_expression`| <span data-ttu-id="43682-206">Un `Double` que representa la potencia a la que se va a generar el `numeric_expression`.</span><span class="sxs-lookup"><span data-stu-id="43682-206">A `Double` that represents the power to which to raise the `numeric_expression`.</span></span>| 
+
+<span data-ttu-id="43682-207">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-207">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-208">Valor de la `numeric_expression` especificada a la `power_expression` especificada.</span><span class="sxs-lookup"><span data-stu-id="43682-208">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span> 
+
+<span data-ttu-id="43682-209">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-209">**Example**</span></span> 
+
+`SqlServer.POWER(2,7)`
+
+## <a name="radiansexpression"></a><span data-ttu-id="43682-210">RADIANS(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-210">RADIANS(expression)</span></span>
+
+<span data-ttu-id="43682-211">Convierte grados en radianes.</span><span class="sxs-lookup"><span data-stu-id="43682-211">Converts degrees to radians.</span></span> 
+
+<span data-ttu-id="43682-212">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-212">**Arguments**</span></span> 
+
+<span data-ttu-id="43682-213">`expression`: valor de tipo`Int32`,`Int64`, `Double` o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="43682-213">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="43682-214">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-214">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-215">Un `Int32`, `Int64`, `Double`, o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="43682-215">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="43682-216">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-216">**Example**</span></span> 
+
+`SqlServer.RADIANS(360.0)`
+
+## <a name="randseed"></a><span data-ttu-id="43682-217">RAND([SEED])</span><span class="sxs-lookup"><span data-stu-id="43682-217">RAND([seed])</span></span>
+
+<span data-ttu-id="43682-218">Devuelve un valor aleatorio de 0 a 1.</span><span class="sxs-lookup"><span data-stu-id="43682-218">Returns a random value from 0 through 1.</span></span> 
+
+<span data-ttu-id="43682-219">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-219">**Arguments**</span></span> 
+
+<span data-ttu-id="43682-220">El valor de inicialización como una `Int32`.</span><span class="sxs-lookup"><span data-stu-id="43682-220">The seed value as an `Int32`.</span></span> <span data-ttu-id="43682-221">Si la inicialización no se especifica, el motor de base de datos de SQL Server asigna uno de forma aleatoria.</span><span class="sxs-lookup"><span data-stu-id="43682-221">If the seed is not specified, the SQL Server Database Engine assigns a seed value at random.</span></span> <span data-ttu-id="43682-222">Para un valor de inicialización especificado, el resultado devuelto es siempre el mismo.</span><span class="sxs-lookup"><span data-stu-id="43682-222">For a specified seed value, the result returned is always the same.</span></span>
+
+<span data-ttu-id="43682-223">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-223">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-224">Valor `Double` aleatorio de 0 a 1.</span><span class="sxs-lookup"><span data-stu-id="43682-224">A random `Double` value from 0 through 1.</span></span> 
+
+<span data-ttu-id="43682-225">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-225">**Example**</span></span> 
+
+`SqlServer.RAND()`
   
-|<span data-ttu-id="34976-277">SQL Server 2000</span><span class="sxs-lookup"><span data-stu-id="34976-277">SQL Server 2000</span></span>|<span data-ttu-id="34976-278">SQL Server 2005</span><span class="sxs-lookup"><span data-stu-id="34976-278">SQL Server 2005</span></span>|<span data-ttu-id="34976-279">SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="34976-279">SQL Server 2008</span></span>|  
-|---------------------|---------------------|---------------------|  
-|[<span data-ttu-id="34976-280">Funciones matemáticas (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="34976-280">Mathematical Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=115913)|[<span data-ttu-id="34976-281">Funciones matemáticas (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="34976-281">Mathematical Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=115911)|[<span data-ttu-id="34976-282">Funciones matemáticas (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="34976-282">Mathematical Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=115912)|  
+## <a name="roundnumericexpression-lengthfunction"></a><span data-ttu-id="43682-226">Round(numeric_expression, Length[,Function])</span><span class="sxs-lookup"><span data-stu-id="43682-226">ROUND(numeric_expression, length[,function])</span></span>
+
+<span data-ttu-id="43682-227">Devuelve una expresión numérica, redondeada a la longitud o precisión especificadas.</span><span class="sxs-lookup"><span data-stu-id="43682-227">Returns a numeric expression, rounded to the specified length or precision.</span></span> 
+
+<span data-ttu-id="43682-228">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-228">**Arguments**</span></span> 
+
+|  |  |
+|--|--|
+|`numeric_expression`| <span data-ttu-id="43682-229">Un `Int32`, `Int64`, `Double`, o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="43682-229">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+|`length`| <span data-ttu-id="43682-230">Valor `Int32` que representa la precisión a la que se va a redondear `numeric_expression`.</span><span class="sxs-lookup"><span data-stu-id="43682-230">An `Int32` that represents the precision to which `numeric_expression` is to be rounded.</span></span> <span data-ttu-id="43682-231">Si `length` es un número positivo, `numeric_expression` se redondea al número de posiciones decimales que especifica `length`.</span><span class="sxs-lookup"><span data-stu-id="43682-231">When `length` is a positive number, `numeric_expression` is rounded to the number of decimal positions specified by `length`.</span></span> <span data-ttu-id="43682-232">Si `length` es un número negativo, `numeric_expression` se redondea a la izquierda del separador decimal, según se especifica en `length`.</span><span class="sxs-lookup"><span data-stu-id="43682-232">When `length` is a negative number, `numeric_expression` is rounded on the left side of the decimal point, as specified by `length`.</span></span>|
+|`function` | <span data-ttu-id="43682-233">Opcional.</span><span class="sxs-lookup"><span data-stu-id="43682-233">Optional.</span></span> <span data-ttu-id="43682-234">Un `Int32` que representa el tipo de operación que se realiza.</span><span class="sxs-lookup"><span data-stu-id="43682-234">An `Int32` that represents the type of operation to perform.</span></span> <span data-ttu-id="43682-235">Cuando la función se omite o tiene un valor de 0 (valor predeterminado), `numeric_expression` se redondea.</span><span class="sxs-lookup"><span data-stu-id="43682-235">When function is omitted or has a value of 0 (default), `numeric_expression` is rounded.</span></span> <span data-ttu-id="43682-236">Si un valor distinto de 0 se especifica, `numeric_expression` se trunca.</span><span class="sxs-lookup"><span data-stu-id="43682-236">When a value other than 0 is specified, `numeric_expression` is truncated.</span></span> |
+
+<span data-ttu-id="43682-237">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-237">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-238">Valor de la `numeric_expression` especificada a la `power_expression` especificada.</span><span class="sxs-lookup"><span data-stu-id="43682-238">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span>
+
+<span data-ttu-id="43682-239">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-239">**Example**</span></span> 
+
+`SqlServer.ROUND(748.58, -3)`
+
+## <a name="signexpression"></a><span data-ttu-id="43682-240">Sign(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-240">SIGN(expression)</span></span> 
+
+<span data-ttu-id="43682-241">Devuelve el signo positivo (+1), cero (0) o negativo (-1) de la expresión especificada.</span><span class="sxs-lookup"><span data-stu-id="43682-241">Returns the positive (+1), zero (0), or negative (-1) sign of the specified expression.</span></span> 
+
+<span data-ttu-id="43682-242">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-242">**Arguments**</span></span> 
+
+<span data-ttu-id="43682-243">`expression`: `Int32`, `Int64`, `Double` o `Decimal`</span><span class="sxs-lookup"><span data-stu-id="43682-243">`expression`: `Int32`, `Int64`, `Double`, or `Decimal`</span></span> 
+
+<span data-ttu-id="43682-244">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-244">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-245">Un `Int32`, `Int64`, `Double`, o `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="43682-245">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="43682-246">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-246">**Example**</span></span> 
+
+`SqlServer.SIGN(-10)`
+
+## <a name="sinexpression"></a><span data-ttu-id="43682-247">SIN(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-247">SIN(expression)</span></span>
+
+<span data-ttu-id="43682-248">Calcula el seno trigonométrico de un ángulo especificado, en radianes, y devuelve una expresión de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-248">Calculates the trigonometric sine of the specified angle in radians, and returns a `Double` expression.</span></span> 
+
+<span data-ttu-id="43682-249">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-249">**Arguments**</span></span> 
+
+<span data-ttu-id="43682-250">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-250">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="43682-251">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-251">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-252">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-252">A `Double`.</span></span> 
+
+<span data-ttu-id="43682-253">**Ejemplo** `SqlServer.SIN(20)`</span><span class="sxs-lookup"><span data-stu-id="43682-253">**Example** `SqlServer.SIN(20)`</span></span>
+
+## <a name="sqrtexpression"></a><span data-ttu-id="43682-254">SQRT(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-254">SQRT(expression)</span></span>
+
+<span data-ttu-id="43682-255">Devuelve la raíz cuadrada de la expresión especificada.</span><span class="sxs-lookup"><span data-stu-id="43682-255">Returns the square root of the specified expression.</span></span> 
+
+<span data-ttu-id="43682-256">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-256">**Arguments**</span></span> 
+
+<span data-ttu-id="43682-257">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-257">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="43682-258">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-258">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-259">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-259">A `Double`.</span></span> 
+
+<span data-ttu-id="43682-260">**Ejemplo** `SqlServer.SQRT(3600)`</span><span class="sxs-lookup"><span data-stu-id="43682-260">**Example** `SqlServer.SQRT(3600)`</span></span>
+
+## <a name="squareexpression"></a><span data-ttu-id="43682-261">Square(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-261">SQUARE(expression)</span></span>
+
+<span data-ttu-id="43682-262">Devuelve la raíz cuadrada de la expresión especificada.</span><span class="sxs-lookup"><span data-stu-id="43682-262">Returns the square of the specified expression.</span></span> 
+
+<span data-ttu-id="43682-263">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-263">**Arguments**</span></span> 
+
+<span data-ttu-id="43682-264">`expression`: valor de tipo `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-264">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="43682-265">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-265">**Return Value**</span></span> 
+
+<span data-ttu-id="43682-266">Objeto `Double`.</span><span class="sxs-lookup"><span data-stu-id="43682-266">A `Double`.</span></span> 
+
+<span data-ttu-id="43682-267">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-267">**Example**</span></span> 
+
+`SqlServer.SQUARE(25)`
+
+## <a name="tanexpression"></a><span data-ttu-id="43682-268">TAN(Expression)</span><span class="sxs-lookup"><span data-stu-id="43682-268">TAN(expression)</span></span>
+
+<span data-ttu-id="43682-269">Calcula la tangente de una expresión especificada.</span><span class="sxs-lookup"><span data-stu-id="43682-269">Calculates the tangent of a specified expression.</span></span>
+
+<span data-ttu-id="43682-270">**Argumentos**</span><span class="sxs-lookup"><span data-stu-id="43682-270">**Arguments**</span></span> 
+
+<span data-ttu-id="43682-271">`expression`: `Double`</span><span class="sxs-lookup"><span data-stu-id="43682-271">`expression`: `Double`</span></span> 
+
+<span data-ttu-id="43682-272">**Valor devuelto**</span><span class="sxs-lookup"><span data-stu-id="43682-272">**Return Value**</span></span> 
+
+`Double` 
+
+<span data-ttu-id="43682-273">**Ejemplo**</span><span class="sxs-lookup"><span data-stu-id="43682-273">**Example**</span></span> 
+
+`SqlServer.TAN(45.0)`
   
-## <a name="see-also"></a><span data-ttu-id="34976-283">Vea también</span><span class="sxs-lookup"><span data-stu-id="34976-283">See Also</span></span>  
- [<span data-ttu-id="34976-284">SqlClient para las funciones de Entity Framework</span><span class="sxs-lookup"><span data-stu-id="34976-284">SqlClient for Entity Framework Functions</span></span>](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+## <a name="see-also"></a><span data-ttu-id="43682-274">Vea también</span><span class="sxs-lookup"><span data-stu-id="43682-274">See also</span></span>
+
+<span data-ttu-id="43682-275">Para obtener más información sobre las funciones matemáticas que SqlClient admite, consulte la documentación de la versión de SQL Server que especificó en el manifiesto del proveedor SqlClient:</span><span class="sxs-lookup"><span data-stu-id="43682-275">For more information about the mathematical functions that SqlClient supports, see the documentation for the SQL Server version that you specified in the SqlClient provider manifest:</span></span>  
+  
+<span data-ttu-id="43682-276">**SQL Server 2005:** [funciones matemáticas (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))</span><span class="sxs-lookup"><span data-stu-id="43682-276">**SQL Server 2005:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))</span></span>  
+<span data-ttu-id="43682-277">**SQL Server 2008:** [funciones matemáticas (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))</span><span class="sxs-lookup"><span data-stu-id="43682-277">**SQL Server 2008:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))</span></span>  
+<span data-ttu-id="43682-278">**SQL Server 2012 y versiones posterior:** [funciones matemáticas (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)</span><span class="sxs-lookup"><span data-stu-id="43682-278">**SQL Server 2012 and later:** [Mathematical Functions (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)</span></span>   
+
+ [<span data-ttu-id="43682-279">SqlClient para las funciones de Entity Framework</span><span class="sxs-lookup"><span data-stu-id="43682-279">SqlClient for Entity Framework Functions</span></span>](sqlclient-for-ef-functions.md)
