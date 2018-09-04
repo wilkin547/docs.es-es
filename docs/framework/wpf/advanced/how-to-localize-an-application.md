@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: ae73ab92ebf3089eebf51f40b0c144f3dbea44da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7dcdaa0d101ce45ba24226e0aba81b812d5b88da
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549336"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518311"
 ---
 # <a name="how-to-localize-an-application"></a>Cómo: Localizar una aplicación
 En este tutorial se explica cómo crear una aplicación localizada mediante la herramienta LocBaml.  
@@ -36,7 +36,7 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>Crear una aplicación de ejemplo  
- En este paso, preparará la aplicación para la localización. En los ejemplos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] se proporciona una HelloApp que se usará para los ejemplos de código de este artículo. Si desea utilizar este ejemplo, descargue el [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivos desde el [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).  
+ En este paso, preparará la aplicación para la localización. En los ejemplos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] se proporciona una HelloApp que se usará para los ejemplos de código de este artículo. Si desea usar este ejemplo, descargue el [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivos desde el [LocBaml Tool Sample](https://go.microsoft.com/fwlink/?LinkID=160016).  
   
 1.  Desarrolle su aplicación hasta el punto donde desea iniciar la localización.  
   
@@ -44,15 +44,15 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
   
      `<UICulture>en-US</UICulture>`  
   
-3.  Agregue UID a sus archivos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Los UID se usan para realizar un seguimiento de los cambios en los archivos y para identificar los elementos que se deben traducir. Para agregar UID a los archivos, ejecute **updateuid** en el archivo de proyecto:  
+3.  Agregue UID a sus archivos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Los UID se usan para realizar un seguimiento de los cambios en los archivos y para identificar los elementos que se deben traducir. Para agregar los UID a los archivos, ejecute **updateuid** en el archivo de proyecto:  
   
      **msbuild /t:updateuid helloapp.csproj**  
   
-     Para comprobar que no dispone de ninguna falta o UID duplicado, ejecute **checkuid**:  
+     Para comprobar que se no faltan UID ni están duplicados, ejecute **checkuid**:  
   
      **msbuild /t:checkuid helloapp.csproj**  
   
-     Después de ejecutar **updateuid**, los archivos deberían contener UID. Por ejemplo, en el archivo Pane1.xaml de HelloApp, busque lo siguiente:  
+     Después de ejecutar **updateuid**, los archivos deberían contener los UID. Por ejemplo, en el archivo Pane1.xaml de HelloApp, busque lo siguiente:  
   
      `<StackPanel x:Uid="StackPanel_1">`  
   
@@ -81,7 +81,7 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Compilar la herramienta LocBaml  
   
-1.  Todos los archivos necesarios para compilar LocBaml se encuentran en los ejemplos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Descargar los archivos de C# desde la [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).  
+1.  Todos los archivos necesarios para compilar LocBaml se encuentran en los ejemplos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Descargue los archivos de C# desde la [LocBaml Tool Sample](https://go.microsoft.com/fwlink/?LinkID=160016).  
   
 2.  Desde la línea de comandos, ejecute el archivo de proyecto (locbaml.csproj) para compilar la herramienta:  
   
@@ -91,17 +91,17 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
   
 4.  Las opciones que puede especificar al ejecutar LocBaml son las siguientes:  
   
-    -   **analizar** o **-p:** analiza Baml, recursos, o [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] archivos para generar un archivo .csv o .txt.  
+    -   **analizar** o **-p:** analiza Baml, recursos, o [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] archivos para generar un archivo .csv o. txt.  
   
     -   **generar** o **-g:** genera un archivo binario localizado utilizando un archivo traducido.  
   
     -   **out** o **-o** {*filedirectory*] **:** nombre de archivo de salida.  
   
-    -   **referencia cultural** o **- cul** {*referencia cultural*] **:** configuración regional de los ensamblados de salida.  
+    -   **referencia cultural** o **- cul** {*referencia cultural*] **:** configuración regional de ensamblados de salida.  
   
-    -   **traducción** o **trans -** {*translation.csv*] **:** archivo traducido o localizado.  
+    -   **traducción** o **- trans** {*translation.csv*] **:** archivo traducido o localizado.  
   
-    -   **asmpath** o **- asmpath:** {*filedirectory*] **:** si su [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] código contiene controles personalizados, debe proporcionar el  **asmpath** para el ensamblado del control personalizado.  
+    -   **asmpath** o **- asmpath:** {*filedirectory*] **:** si su [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] código contiene controles personalizados, debe proporcionar el  **asmpath** al ensamblado del control personalizado.  
   
     -   **nologo:** no se muestra ningún logotipo ni la información de copyright.  
   
@@ -137,13 +137,13 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
   
    2.  **Clave de recurso**. Es el identificador de recursos localizado.  
   
-   3.  **Categoría**. Tipo de valor. Vea [atributos de localización y los comentarios](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   3.  **Categoría**. Tipo de valor. Consulte [atributos y comentarios](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
   
-   4.  **Legibilidad**. Indica si un localizador puede leer el valor. Vea [atributos de localización y los comentarios](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   4.  **Legibilidad**. Indica si un localizador puede leer el valor. Consulte [atributos y comentarios](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
   
-   5.  **Modificabilidad**. Indica si un localizador puede modificar el valor. Vea [atributos de localización y los comentarios](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   5.  **Modificabilidad**. Indica si un localizador puede modificar el valor. Consulte [atributos y comentarios](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
   
-   6.  **Comentarios**. Descripción adicional del valor para ayudar a determinar cómo se localiza. Vea [atributos de localización y los comentarios](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   6.  **Comentarios**. Descripción adicional del valor para ayudar a determinar cómo se localiza. Consulte [atributos y comentarios](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
   
    7.  **Valor**. Es el valor de texto que se va a traducir a la referencia cultural deseada.  
   
@@ -155,7 +155,7 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
    |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Ninguno|TRUE|TRUE||Hello World|
    |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Ninguno|TRUE|TRUE||Goodbye World|
   
-   Tenga en cuenta que todos los valores de la **comentarios** campo contengan valores; si un campo no tiene un valor, está vacío. Observe también que el elemento en la primera fila no es legible ni modificable y tiene "Ignore" como su **categoría** valor, que indica que el valor no es localizable.  
+   Tenga en cuenta que todos los valores de la **comentarios** campos no contienen valores vacíos; si un campo no tiene un valor, está vacío. Observe también que el elemento en la primera fila no es legible ni modificable y tiene "Ignore" como su **categoría** valor, lo que indica que el valor no es localizable.  
   
 4.  Para facilitar la detección de los elementos localizables en los archivos analizados, especialmente en los archivos de gran tamaño, puede ordenar o filtrar los elementos por **categoría**, **legibilidad**, y **modificabilidad**. Por ejemplo, puede filtrar los valores ilegibles y no modificables.  
   
@@ -165,7 +165,7 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
   
 <a name="merge_translations"></a>   
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>Usar LocBaml para generar un nuevo archivo .resources.dll  
- El contenido que se identificó al analizar HelloApp.resources.dll con LocBaml se ha traducido y debe combinarse en la aplicación original. Use la **generar** o **-g** opción para generar una nueva. resources.dll archivo.  
+ El contenido que se identificó al analizar HelloApp.resources.dll con LocBaml se ha traducido y debe combinarse en la aplicación original. Use la **generar** o **-g** opción para generar una nueva. archivo resources.dll.  
   
 1.  Use la sintaxis siguiente para generar un nuevo archivo HelloApp.resources.dll. Marque la referencia cultural como en-US (/cul:en-US).  
   
@@ -180,7 +180,7 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
   
 4.  Para traducir a una referencia cultural diferente, use la referencia cultural del idioma al que va a traducir. En el ejemplo siguiente se muestra cómo traducir al francés canadiense:  
   
-     **LocBaml.exe / generar HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c: \ /cul:fr-Canadá**  
+     **LocBaml.exe / generar HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c: \ /cul:fr-CA**  
   
 5.  En el mismo ensamblado que el ensamblado de aplicación principal, cree una nueva carpeta específica de la referencia cultural para alojar el nuevo ensamblado satélite. Para el francés canadiense, la carpeta sería fr-CA.  
   
@@ -188,7 +188,7 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
   
 7.  Para probar el nuevo ensamblado satélite, deberá cambiar la referencia cultural en la que se ejecutará la aplicación. Hay dos maneras de hacerlo:  
   
-    -   Cambiar la configuración regional del sistema operativo (**iniciar** &#124; **el Panel de Control** &#124; **Configuración Regional e idioma**).  
+    -   Cambiar la configuración regional del sistema operativo (**iniciar** &#124; **Panel de Control** &#124; **regional e idioma**).  
   
     -   En la aplicación, agregue el código siguiente a App.xaml.cs:  
   

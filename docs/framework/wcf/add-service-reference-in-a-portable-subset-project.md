@@ -2,15 +2,15 @@
 title: Agregar referencia de servicio en un proyecto de subconjuntos portátiles
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 5d094bb1d2d1155565e48850a2f41829a93cff84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efe95a326e7c13237c7d2d74888c85bf919ed287
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460494"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542315"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Agregar referencia de servicio en un proyecto de subconjuntos portátiles
-Proyectos de subconjuntos portátiles permiten a los programadores de ensamblados .NET mantener un único árbol de origen y el sistema de compilación al que se admiten varias implementaciones de .NET (escritorio, Silverlight, Windows Phone y XBOX). Proyectos de subconjuntos portátiles solo hacen referencia a bibliotecas portátiles de .NET que son un ensamblado de .NET framework que se puede usar en cualquier implementación. NET.  
+Proyectos de subconjuntos portátiles permiten a los programadores de ensamblado de .NET mantener un único árbol de origen y el sistema de compilación mientras se mantiene la compatibilidad con varias implementaciones de .NET (escritorio, Silverlight, Windows Phone y XBOX). Proyectos de subconjuntos portátiles solo hacen referencia a bibliotecas portátiles de .NET que son un ensamblado de .NET framework que se puede usar en cualquier implementación. NET.  
   
 ## <a name="add-service-reference-details"></a>Detalles de Agregar referencia de servicio  
  Al agregar una referencia de servicio a un proyecto de subconjunto portátil se aplican las restricciones siguientes:  
@@ -45,4 +45,4 @@ Proyectos de subconjuntos portátiles permiten a los programadores de ensamblado
   
 ## <a name="see-also"></a>Vea también  
  [Acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Biblioteca de clases portable](http://msdn.microsoft.com/library/gg597391\(v=vs.110\))
+ [Biblioteca de clases portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

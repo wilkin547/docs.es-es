@@ -8,37 +8,37 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 9df9dadc3d4e4e62b216134bbc2fd69c4e1122e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f7ee114a5a480d470c2c32b5b83e287b07e9537
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365376"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515560"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Trabajar con datos binarios (Data Services de WCF)
-El [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente le permite recuperar y actualizar los datos binarios de un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] la fuente en una de las maneras siguientes:  
+El [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente le permite recuperar y actualizar los datos binarios desde un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] la fuente en una de las maneras siguientes:  
   
 -   Como una propiedad del tipo primitivo de una entidad. Este es el método recomendado para trabajar con objetos de datos binarios pequeños que se pueden cargar con facilidad en la memoria. En este caso, la propiedad binaria es una propiedad de entidad expuesta por el modelo de datos y el servicio de datos serializa los datos binarios como XML codificado binario de base 64 en el mensaje de respuesta.  
   
 -   Como flujo de recursos binarios independiente. Este es el método recomendado para obtener acceso y cambiar datos de objetos binarios grandes (BLOB) que pueden representar una foto, un vídeo o cualquier otro tipo de datos codificados binarios.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implementa la transmisión por secuencias de datos binarios mediante HTTP, como se define en el [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. En este mecanismo, datos binarios se tratan como un recurso multimedia que es independiente de pero relacionadas con una entidad, que se denomina una entrada de vínculo multimedia. Para obtener más información, consulte [proveedor de transmisión por secuencias](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implementa la transmisión por secuencias de datos binarios mediante HTTP, como se define en el [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. En este mecanismo, datos binarios se tratan como un recurso multimedia independiente pero relacionados con una entidad, que se denomina una entrada de vínculo multimedia. Para obtener más información, consulte [proveedor de transmisión](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   
 > [!TIP]
->  Para obtener un ejemplo paso a paso de cómo crear una aplicación de cliente de Windows Presentation Foundation (WPF) que descarga archivos de imagen binarios de un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] servicio que almacene fotos, vea la entrada [datos servicios de transmisión por secuencias proveedor serie partes 2: obtener acceso a un flujo de recursos multimedia desde el cliente](http://go.microsoft.com/fwlink/?LinkId=201637). Para descargar el código de ejemplo para el servicio de datos de fotografía de secuencia incluido en la entrada de blog, vea la [ejemplo de servicio de datos de fotografía de transmisión por secuencias](http://go.microsoft.com/fwlink/?LinkId=198988) en MSDN Code Gallery.  
+>  Para obtener un ejemplo paso a paso de cómo crear una aplicación de cliente de Windows Presentation Foundation (WPF) que descarga los archivos de imagen binarios un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service que almacene fotos, vea la entrada [datos de servicios de Streaming proveedor serie partes 2: obtener acceso a un Stream de recursos multimedia desde el cliente](https://go.microsoft.com/fwlink/?LinkId=201637). Para descargar el código de ejemplo para el servicio de datos de photo stream destacado en la entrada de blog, vea la [ejemplo de servicio de datos de fotografía de transmisión por secuencias](https://go.microsoft.com/fwlink/?LinkId=198988) en MSDN Code Gallery.  
   
 ## <a name="entity-metadata"></a>Metadatos de entidad  
- Una entidad que tenga un flujo de recursos multimedia relacionado se indica en los metadatos del servicio de datos mediante el atributo `HasStream` aplicado a un tipo de entidad que sea la entrada de vínculo multimedia. En el ejemplo siguiente, la `PhotoInfo` entidad es una entrada de vínculo multimedia que tiene un recurso multimedia relacionado, indicado por la `HasStream` atributo.  
+ Una entidad que tenga un flujo de recursos multimedia relacionado se indica en los metadatos del servicio de datos mediante el atributo `HasStream` aplicado a un tipo de entidad que sea la entrada de vínculo multimedia. En el ejemplo siguiente, la `PhotoInfo` entidad es una entrada de vínculo multimedia que tiene un recurso multimedia relacionado, indicado por el `HasStream` atributo.  
   
  [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
   
- En el resto de los ejemplos de este tema se muestra cómo acceder y cambiar el flujo de recursos multimedia. Para obtener un ejemplo completo de cómo consumir un flujo de recursos multimedia en una aplicación de cliente de .NET Framework mediante el [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente, vea la entrada [obtiene acceso a un flujo de recursos multimedia desde el cliente](http://go.microsoft.com/fwlink/?LinkID=201637).  
+ En el resto de los ejemplos de este tema se muestra cómo acceder y cambiar el flujo de recursos multimedia. Para obtener un ejemplo completo de cómo consumir un flujo de recursos multimedia en una aplicación de cliente de .NET Framework mediante la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente, consulte la publicación [acceso a un Stream de recursos multimedia desde el cliente](https://go.microsoft.com/fwlink/?LinkID=201637).  
   
 ## <a name="accessing-the-binary-resource-stream"></a>Acceder al flujo de recursos binarios  
  La biblioteca cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] proporciona métodos para acceder a flujos de recursos binarios desde un servicio de datos basado en [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Cuando se descarga un recurso multimedia, puede usar el URI de dicho recurso u obtener un flujo binario que contenga los datos del propio recurso multimedia. También puede cargar los datos del recurso multimedia como flujo binario.  
   
 > [!TIP]
->  Para obtener un ejemplo paso a paso de cómo crear una aplicación de cliente de Windows Presentation Foundation (WPF) que descarga archivos de imagen binarios de un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] servicio que almacene fotos, vea la entrada [datos servicios de transmisión por secuencias proveedor serie partes 2: obtener acceso a un flujo de recursos multimedia desde el cliente](http://go.microsoft.com/fwlink/?LinkId=201637). Para descargar el código de ejemplo para el servicio de datos de fotografía de secuencia incluido en la entrada de blog, vea la [ejemplo de servicio de datos de fotografía de transmisión por secuencias](http://go.microsoft.com/fwlink/?LinkId=198988) en MSDN Code Gallery.  
+>  Para obtener un ejemplo paso a paso de cómo crear una aplicación de cliente de Windows Presentation Foundation (WPF) que descarga los archivos de imagen binarios un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service que almacene fotos, vea la entrada [datos de servicios de Streaming proveedor serie partes 2: obtener acceso a un Stream de recursos multimedia desde el cliente](https://go.microsoft.com/fwlink/?LinkId=201637). Para descargar el código de ejemplo para el servicio de datos de photo stream destacado en la entrada de blog, vea la [ejemplo de servicio de datos de fotografía de transmisión por secuencias](https://go.microsoft.com/fwlink/?LinkId=198988) en MSDN Code Gallery.  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Obtener el URI del flujo binario  
  Cuando se recuperan ciertos tipos de recursos multimedia, como imágenes y otros archivos multimedia, suele ser más fácil usar el URI del recurso multimedia de la aplicación que administrar el propio flujo de datos binarios. Para obtener el URI de un flujo de recursos asociado con una entrada de vínculo multimedia determinada, debe llamar al método <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> de la instancia de la clase <xref:System.Data.Services.Client.DataServiceContext> que esté realizando el seguimiento de la entidad. En el ejemplo siguiente se muestra cómo llamar al método <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> para obtener el URI de un flujo de recursos multimedia que se use con el fin de crear una nueva imagen en el cliente:  

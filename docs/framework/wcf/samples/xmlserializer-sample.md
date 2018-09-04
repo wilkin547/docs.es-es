@@ -2,15 +2,15 @@
 title: Ejemplo de XMLSerializer
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 155719f546491f53ad2587e12d030dd7821b1fd3
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7b43af08758de1d33bcc6ab8f477885c7ecc0825
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805023"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503095"
 ---
 # <a name="xmlserializer-sample"></a>Ejemplo de XMLSerializer
-Este ejemplo muestra cómo serializar y deserializar tipos que sean compatibles con <xref:System.Xml.Serialization.XmlSerializer>. El formateador de Windows Communication Foundation (WCF) de forma predeterminada es la <xref:System.Runtime.Serialization.DataContractSerializer> clase. Se puede usar la clase <xref:System.Xml.Serialization.XmlSerializer> para serializar y deserializar los tipos cuando no se puede utilizar la clase <xref:System.Runtime.Serialization.DataContractSerializer>. Éste es a menudo el caso cuando se requiere el control preciso sobre XML; por ejemplo, si un dato debe ser un atributo XML y no un elemento XML. Además, el <xref:System.Xml.Serialization.XmlSerializer> se selecciona automáticamente cuando se crean clientes para servicios no WCF.  
+Este ejemplo muestra cómo serializar y deserializar tipos que sean compatibles con <xref:System.Xml.Serialization.XmlSerializer>. El formateador de Windows Communication Foundation (WCF) de forma predeterminada es la <xref:System.Runtime.Serialization.DataContractSerializer> clase. Se puede usar la clase <xref:System.Xml.Serialization.XmlSerializer> para serializar y deserializar los tipos cuando no se puede utilizar la clase <xref:System.Runtime.Serialization.DataContractSerializer>. Éste es a menudo el caso cuando se requiere el control preciso sobre XML; por ejemplo, si un dato debe ser un atributo XML y no un elemento XML. Además, el <xref:System.Xml.Serialization.XmlSerializer> se selecciona automáticamente al crear clientes para servicios no WCF.  
   
  En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
   
@@ -84,7 +84,7 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
 }  
 ```  
   
- La implementación del cliente también utiliza números complejos. El contrato de servicio y los tipos de datos se definen en el archivo de origen generatedClient.cs, que fue generado por la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) de metadatos del servicio. Svcutil.exe puede detectar cuándo no es serializable un contrato por <xref:System.Runtime.Serialization.DataContractSerializer> y vuelve a tipos de `XmlSerializable` emisores en este caso. Si desea forzar el uso de <xref:System.Xml.Serialization.XmlSerializer>, puede pasar la opción de comando /serializer:XmlSerializer (utilice XmlSerializer) a la herramienta Svcutil.exe.  
+ La implementación del cliente también utiliza números complejos. El contrato de servicio y los tipos de datos se definen en el archivo de código fuente generatedClient.cs, que fue generado por el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) desde los metadatos del servicio. Svcutil.exe puede detectar cuándo no es serializable un contrato por <xref:System.Runtime.Serialization.DataContractSerializer> y vuelve a tipos de `XmlSerializable` emisores en este caso. Si desea forzar el uso de <xref:System.Xml.Serialization.XmlSerializer>, puede pasar la opción de comando /serializer:XmlSerializer (utilice XmlSerializer) a la herramienta Svcutil.exe.  
   
 ```csharp  
 // Create a client.  
@@ -119,18 +119,18 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
   

@@ -2,15 +2,15 @@
 title: Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 5bdc952bb4b920f0b5a7d272423ec2d922a94798
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7519ea560bab1e0c6651ad0b37c8477297b0d64d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517123"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526835"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
-El <xref:System.Activities.Presentation.WorkflowItemPresenter> es un tipo de clave en el modelo de programación Diseñador de WF que permite la creación de una "zona de colocación" donde se puede colocar una actividad arbitraria. Este ejemplo muestra cómo compilar un diseñador de actividades que muestre este tipo "zona de colocación."  
+El <xref:System.Activities.Presentation.WorkflowItemPresenter> es un tipo de clave en el modelo de programación Diseñador de WF que permite la creación de una "zona de colocación" donde se puede colocar una actividad arbitraria. Este ejemplo muestra cómo crear a un diseñador de actividad que se muestra este tipo una "zona de colocación."  
   
  En este ejemplo se explica cómo:  
   
@@ -63,7 +63,7 @@ El <xref:System.Activities.Presentation.WorkflowItemPresenter> es un tipo de cla
 </sap:ActivityDesigner>  
 ```  
   
- Observe el uso de enlace de datos de WPF para enlazarse a `ModelItem.Body`. `ModelItem` es la propiedad de <xref:System.Activities.Presentation.ActivityDesigner> que hace referencia al objeto subyacente para el diseñador está usándola para, en este caso, **SimpleNativeActivity**.  
+ Observe el uso de enlace de datos de WPF para enlazarse a `ModelItem.Body`. `ModelItem` es la propiedad de <xref:System.Activities.Presentation.ActivityDesigner> que hace referencia al objeto subyacente es usando el diseñador, en este caso, **SimpleNativeActivity**.  
   
 #### <a name="to-setup-build-and-run-the-sample"></a>Para configurar, compilar y ejecutar el ejemplo  
   
@@ -76,7 +76,7 @@ El <xref:System.Activities.Presentation.WorkflowItemPresenter> es un tipo de cla
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   

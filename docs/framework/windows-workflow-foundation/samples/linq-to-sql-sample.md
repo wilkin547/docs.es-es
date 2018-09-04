@@ -2,18 +2,18 @@
 title: LINQ to SQL ejemplo
 ms.date: 03/30/2017
 ms.assetid: 5f39db9e-0e62-42c9-8c98-bb8b54cec98c
-ms.openlocfilehash: 3cfcaf3de1a22b8bb5505083f127a9888b99dbd8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 83dc8433459f64860baaca2e8309fbc85e2bb3a2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806723"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515373"
 ---
 # <a name="linq-to-sql-sample"></a>LINQ to SQL ejemplo
 En este ejemplo se muestra cómo crear una actividad para utilizar las entidades de consulta de LINQ to SQL de las tablas en bases de datos de SQL Server.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos WCF ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+>  Los ejemplos de WCF ya pueden instalarse en el equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardspace`  
 >   
@@ -84,10 +84,10 @@ new FindInSqlTable<Employee>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Liiinq\LinqToSql`  
   
 ## <a name="see-also"></a>Vea también  
- [LINQ to SQL](http://go.microsoft.com/fwlink/?LinkId=150376)  
- [Introducción (LINQ to SQL)](http://go.microsoft.com/fwlink/?LinkId=150377)
+ [LINQ to SQL](https://go.microsoft.com/fwlink/?LinkId=150376)  
+ [Introducción (LINQ to SQL)](https://go.microsoft.com/fwlink/?LinkId=150377)

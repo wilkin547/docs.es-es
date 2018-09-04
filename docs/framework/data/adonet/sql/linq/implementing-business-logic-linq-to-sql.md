@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 6216a3d6dd21f1dcb3348565a9f1870be7c7905a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d739e4bba96873740c53c07eccf687b060d82003
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362056"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552236"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementar la lógica de negocios (LINQ to SQL)
 El término "lógica empresarial" de este tema se refiere a cualquier regla personalizada o prueba de validación que se aplica a los datos antes de insertarlos, actualizarlos o eliminarlos de la base de datos. La lógica empresarial también se conoce a veces como "reglas de empresa" o "lógica del dominio". En aplicaciones de n niveles, se diseña generalmente como una capa lógica para que se pueda modificar independientemente de la capa de presentación o de la capa de acceso a datos. La capa de acceso a datos puede invocar la lógica empresarial antes o después de cualquier actualización, inserción o eliminación de datos en la base de datos.  
   
- La lógica empresarial puede ser tan simple como una validación del esquema para asegurarse de que el tipo del campo es compatible con el tipo de la columna de la tabla. Por el contrario, también puede estar compuesta por un conjunto de objetos que interactúan con diversos grados de complejidad. Las reglas se pueden implementar como procedimientos almacenados en la base de datos o como objetos en memoria. Sin embargo se implementa la lógica de negocios, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] permite utilizar clases parciales y métodos parciales para separar la lógica de negocios desde el código de acceso de datos.  
+ La lógica empresarial puede ser tan simple como una validación del esquema para asegurarse de que el tipo del campo es compatible con el tipo de la columna de la tabla. Por el contrario, también puede estar compuesta por un conjunto de objetos que interactúan con diversos grados de complejidad. Las reglas se pueden implementar como procedimientos almacenados en la base de datos o como objetos en memoria. Sin embargo se implementa la lógica de negocios, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] permite utilizar clases parciales y métodos parciales para separar la lógica de negocios desde el código de acceso a datos.  
   
 ## <a name="how-linq-to-sql-invokes-your-business-logic"></a>Invocación de la lógica empresarial desde LINQ to SQL  
  Cuando se genera una clase de entidad en tiempo de diseño, ya sea manualmente o mediante el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o SQLMetal, se define como una clase parcial. Esto significa que puede definir, en un archivo de código independiente, otra parte de la clase de entidad que contiene su lógica empresarial personalizada. En tiempo de compilación, las dos partes se combinan en una única clase. Pero si tiene que volver a generar sus clases de entidad con el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o SQLMetal, puede hacerlo; su parte de la clase no se modificará.  
@@ -25,7 +25,7 @@ El término "lógica empresarial" de este tema se refiere a cualquier regla pers
  En la definición de la implementación que escriba en su archivo de código independiente, puede ejecutar cualquier lógica personalizada que requiera. Puede utilizar su clase parcial por sí misma como la capa de dominio, o puede llamar desde la definición de implementación del método parcial a un objeto o varios objetos independientes. De cualquier modo, su lógica empresarial se separa limpiamente de su código de acceso a datos y de su código de la capa de presentación.  
   
 ## <a name="a-closer-look-at-the-extensibility-points"></a>Examen más detallado de los puntos de extensibilidad  
- En el ejemplo siguiente se muestra parte del código generado por el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para el `DataContext` clase que tiene dos tablas: `Customers` y `Orders`. Observe que se definen métodos Insert, Update y Delete para cada tabla de la clase.  
+ El ejemplo siguiente muestra parte del código generado por el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para el `DataContext` clase que tiene dos tablas: `Customers` y `Orders`. Observe que se definen métodos Insert, Update y Delete para cada tabla de la clase.  
   
 ```vb  
 Partial Public Class Northwnd  
@@ -69,7 +69,7 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- Si implementa los métodos Insert, Update y Delete en su clase parcial, el motor de ejecución de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] los llamará en lugar de sus propios métodos predeterminados al llamar a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Esto permite invalidar el comportamiento predeterminado para las operaciones de crear, leer, actualizar y eliminar datos. Para obtener más información, consulte [Tutorial: personalizar la instrucción insert, update y delete de comportamiento de las clases de entidad](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).  
+ Si implementa los métodos Insert, Update y Delete en su clase parcial, el motor de ejecución de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] los llamará en lugar de sus propios métodos predeterminados al llamar a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Esto permite invalidar el comportamiento predeterminado para las operaciones de crear, leer, actualizar y eliminar datos. Para obtener más información, consulte [Tutorial: personalizar la inserción, actualización y eliminación de comportamiento de las clases de entidad](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).  
   
  Al método `OnCreated` se le llama en el constructor de la clase.  
   
@@ -155,7 +155,7 @@ public string CustomerID
 }  
 ```  
   
- En su parte de la clase, escriba una definición de implementación del método. En Visual Studio, después de escribir `partial` verá IntelliSense para las definiciones de método de la otra parte de la clase.  
+ En su parte de la clase, escriba una definición de implementación del método. En Visual Studio, después de escribir `partial` verá IntelliSense para las definiciones de método en la otra parte de la clase.  
   
 ```vb  
 Partial Public Class Customer  
@@ -181,7 +181,7 @@ partial class Customer
   
  [Tutorial: Personalizar el comportamiento de inserción, actualización y eliminación de las clases de entidad](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [Tutorial: Agregar validación a clases de entidad](http://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
+ [Tutorial: Agregar validación a clases de entidad](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
   
 ## <a name="see-also"></a>Vea también  
  [Clases y métodos parciales](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  

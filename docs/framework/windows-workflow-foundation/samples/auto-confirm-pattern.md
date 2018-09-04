@@ -2,12 +2,12 @@
 title: Patrón de autoconfirmación
 ms.date: 03/30/2017
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
-ms.openlocfilehash: b30703ffba3b721ac544ea6471ec47ce7f746d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a032c05743b64fe58b0b187328b5216080ba6e19
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515998"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552275"
 ---
 # <a name="auto-confirm-pattern"></a>Patrón de autoconfirmación
 Este ejemplo consta de tres escenarios que se ejecutan para mostrar una actividad `AutoConfirmScope` personalizada. En el primer ejemplo se muestra la ejecución correcta de una secuencia de cuatro actividades de compensación, donde las actividades segunda y tercera están anidadas en una actividad `AutoConfirmScope`. En el segundo ejemplo se muestra la misma secuencia, con una excepción que se produce después de la ejecución de la cuarta actividad <xref:System.Activities.Statements.CompensableActivity>. En el tercer escenario se muestra la misma secuencia, con una excepción que se produce en la actividad `AutoConfirmScope` después de que se complete la segunda actividad <xref:System.Activities.Statements.CompensableActivity>.  
@@ -35,6 +35,6 @@ Este ejemplo consta de tres escenarios que se ejecutan para mostrar una activida
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`

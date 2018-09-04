@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: ab6ca46fad8ee1ededef5cc14a9654b79b2e6a8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 185bcb64522115d0c60ae90ee22a73610139c8c3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494662"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536639"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Cómo: Intercambiar mensajes en cola con puntos de conexión de WCF
-Las colas garantizan que puede producirse una mensajería de confianza entre un cliente y un servicio de Windows Communication Foundation (WCF), incluso si el servicio no está disponible en el momento de la comunicación. Los procedimientos siguientes muestran cómo garantizar una comunicación duradera entre un cliente y un servicio mediante el estándar de enlace en cola al implementar el servicio WCF.  
+Las colas garantizan que puede producirse una mensajería confiable entre un cliente y un servicio de Windows Communication Foundation (WCF), incluso si el servicio no está disponible en el momento de la comunicación. Los procedimientos siguientes muestran cómo garantizar una comunicación duradera entre un cliente y un servicio mediante el estándar de enlace en cola cuando se implementa el servicio WCF.  
   
- Esta sección explica cómo usar <xref:System.ServiceModel.NetMsmqBinding> para la comunicación en cola entre un cliente WCF y un servicio WCF.  
+ En esta sección se explica cómo usar <xref:System.ServiceModel.NetMsmqBinding> para la comunicación en cola entre un cliente WCF y un servicio WCF.  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>Para utilizar la puesta en cola en un servicio WCF  
   
@@ -41,7 +41,7 @@ Las colas garantizan que puede producirse una mensajería de confianza entre un 
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Defina <xref:System.ServiceModel.Description.ServiceEndpoint> en configuración que especifique la dirección de servicio y use el enlace <xref:System.ServiceModel.NetMsmqBinding> estándar. Para obtener más información acerca del uso de configuración de WCF, vea [configuración de Windows Communication Foundation Applications](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+5.  Defina <xref:System.ServiceModel.Description.ServiceEndpoint> en configuración que especifique la dirección de servicio y use el enlace <xref:System.ServiceModel.NetMsmqBinding> estándar. Para obtener más información sobre el uso de la configuración de WCF, vea [configurar aplicaciones de Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
   
   
@@ -52,7 +52,7 @@ Las colas garantizan que puede producirse una mensajería de confianza entre un 
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>Para crear un cliente para el servicio en cola  
   
-1.  En el ejemplo siguiente se muestra cómo ejecutar la aplicación de hospedaje y usar la herramienta Svcutil.exe para crear al cliente WCF.  
+1.  El ejemplo siguiente muestra cómo ejecutar la aplicación de hospedaje y usar la herramienta Svcutil.exe para crear al cliente de WCF.  
   
     ```  
     svcutil http://localhost:8000/ServiceModelSamples/service  
@@ -62,7 +62,7 @@ Las colas garantizan que puede producirse una mensajería de confianza entre un 
   
   
   
-3.  Cree un ámbito de transacción para escribir en la cola transaccional, llame a la `SubmitPurchaseOrder` operación y cierre el cliente WCF, tal como se muestra en el ejemplo siguiente.  
+3.  Crear un ámbito de transacción para escribir en la cola transaccional, llamada la `SubmitPurchaseOrder` operación y cierre el cliente WCF, tal como se muestra en el ejemplo siguiente.  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  
@@ -90,6 +90,6 @@ Las colas garantizan que puede producirse una mensajería de confianza entre un 
  [Intercambio de mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  [Windows Communication Foundation a Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [Instalación de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Ejemplos de enlace de integración de puesta en cola de mensajes](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [Integración de Message Queuing ejemplos de enlace](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [Message Queuing a Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [Seguridad de mensajes mediante Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

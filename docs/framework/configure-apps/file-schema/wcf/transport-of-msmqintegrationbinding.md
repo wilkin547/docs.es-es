@@ -2,12 +2,12 @@
 title: Elemento &lt;transport&gt; de &lt;msmqIntegrationBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: e9b065621f57ab902362a9fb1424bde252eba449
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eb992a79a4a5a65404aec99cc84e9f1d78cb3f4b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750653"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535128"
 ---
 # <a name="lttransportgt-of-ltmsmqintegrationbindinggt"></a>Elemento &lt;transport&gt; de &lt;msmqIntegrationBinding&gt;
 Define la configuración de seguridad para el transporte de integración de Message Queuing.  
@@ -37,10 +37,10 @@ msmqIntegrationBinding
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`msmqAuthenticationMode`|Especifica cómo el transporte de MSMQ debe autenticar el mensaje. Si esto está establecido en `None`, el valor del atributo `msmqProtectionLevel` también debe estar establecido en `None`.<br /><br /> Los valores válidos son los siguientes:<br /><br /> -None: Sin autenticación.<br />-WindowsDomain: El mecanismo de autenticación utiliza Active Directory para obtener el certificado X.509 para el SID asociado al mensaje. Esto se utiliza a continuación para comprobar el ACL de la cola para asegurarse que el usuario tiene el permiso de escritura para la cola.<br />-Certificate: El canal recupera el certificado del almacén de certificados.<br /><br /> El valor predeterminado es WindowsDomain. Este atributo es del tipo <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
+|`msmqAuthenticationMode`|Especifica cómo el transporte de MSMQ debe autenticar el mensaje. Si esto está establecido en `None`, el valor del atributo `msmqProtectionLevel` también debe estar establecido en `None`.<br /><br /> Los valores válidos son los siguientes:<br /><br /> -None: Sin autenticación.<br />-WindowsDomain: El mecanismo de autenticación utiliza Active Directory para obtener el certificado X.509 para el SID asociado con el mensaje. Esto se utiliza a continuación para comprobar el ACL de la cola para asegurarse que el usuario tiene el permiso de escritura para la cola.<br />-Certificate: El canal recupera el certificado del almacén de certificados.<br /><br /> El valor predeterminado es WindowsDomain. Este atributo es del tipo <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
 |`msmqEncryptionAlgorithm`|Especifica el algoritmo que se va a utilizar para el cifrado de mensajes en la conexión al transferir los mensajes entre los administradores de la cola de mensajes. Los valores válidos son los siguientes:<br /><br /> -RC4Stream<br />-AES<br /><br /> El valor predeterminado RC4Stream. Este atributo es del tipo <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
-|`msmqProtectionLevel`|Especifica cómo el mensaje se protege en el nivel del transporte de MSMQ. El cifrado asegura la integridad del mensaje mientras EncryptAndSign asegura la integridad del mensaje y el no repudio; es decir, el mensaje procede de hecho del remitente y el remitente es quien dice que es.<br /><br /> -Valores válidos son los siguientes:<br />-None: Sin protección.<br />-Sign: Se firman los mensajes.<br />-EncryptAndSign: Los mensajes se cifrarán y firmarán.<br /><br /> El valor predeterminado es Sign. Este atributo es del tipo ProtectionLevel.|  
-|`msmqSecureHashAlgorithm`|: Especifica el algoritmo que se usará para calcular el resumen como parte de las firmas. Los valores válidos son los siguientes:<br />-MD5<br />-SHA1<br />-SHA256<br />-SHA512<br /><br /> El valor predeterminado es SHA1. Este atributo es del tipo <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
+|`msmqProtectionLevel`|Especifica cómo el mensaje se protege en el nivel del transporte de MSMQ. El cifrado asegura la integridad del mensaje mientras EncryptAndSign asegura la integridad del mensaje y el no repudio; es decir, el mensaje procede de hecho del remitente y el remitente es quien dice que es.<br /><br /> -Los valores válidos incluyen lo siguiente:<br />-None: Sin protección.<br />-Inicio de sesión: Se firman los mensajes.<br />-EncryptAndSign: Los mensajes se cifran y firman.<br /><br /> El valor predeterminado es Sign. Este atributo es del tipo ProtectionLevel.|  
+|`msmqSecureHashAlgorithm`|: Especifica el algoritmo que se usará en calcular el resumen como parte de las firmas. Los valores válidos son los siguientes:<br />-MD5<br />-SHA1<br />-SHA256<br />-SHA512<br /><br /> El valor predeterminado es SHA1. Este atributo es del tipo <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  
@@ -63,5 +63,5 @@ msmqIntegrationBinding
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)

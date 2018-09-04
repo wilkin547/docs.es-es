@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fc2c8f0-1967-4f30-8b20-39b8dccfb82f
-ms.openlocfilehash: 5887ae58c142cb4c1835599e6a7b34bf200d7071
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8d18ed04ad33fe88fb14fd7436ddfd7a164c4303
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757754"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554282"
 ---
 # <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a>Ejemplos de sintaxis de consultas basadas en métodos: Proyección (LINQ to DataSet)
 Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enumerable.Select%2A> y <xref:System.Linq.Enumerable.SelectMany%2A> para consultar <xref:System.Data.DataSet> usando la sintaxis de consulta basada en métodos.  
   
- El `FillDataSet` método que se usa en estos ejemplos se especifica en [cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
+ El `FillDataSet` método usado en estos ejemplos se especifica en [cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
   
  Los ejemplos de este tema utilizan las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.  
   
@@ -24,7 +24,7 @@ Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enu
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- Para obtener más información, consulte [Cómo: crear un LINQ to DataSet proyecto en Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).  
+ Para obtener más información, consulte [Cómo: crear un LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).  
   
 ## <a name="select"></a>Seleccionar  
   
@@ -51,4 +51,4 @@ Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enu
 ## <a name="see-also"></a>Vea también  
  [Carga de datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
  [Ejemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [Información general sobre operadores de consulta estándar](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+ [Información general sobre operadores de consulta estándar](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

@@ -2,12 +2,12 @@
 title: Registros de seguimiento
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: b07175943f85b61024030c1e0251e24d1eb35c86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2be8dbcdd740dee1c5cddd1121716058bfa5c175
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520284"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527044"
 ---
 # <a name="tracking-records"></a>Registros de seguimiento
 El tiempo de ejecución del flujo de trabajo sirve para emitir los registros de seguimiento con el fin de seguir la ejecución de una instancia de flujo de trabajo.  
@@ -26,13 +26,13 @@ El tiempo de ejecución del flujo de trabajo sirve para emitir los registros de 
   
  El tiempo de ejecución del flujo de trabajo emite los siguientes tipos de objetos <xref:System.Activities.Tracking.TrackingRecord>:  
   
--   **WorkflowInstanceRecord** : <xref:System.Activities.Tracking.TrackingRecord> describe el ciclo de vida de la instancia de flujo de trabajo. Por ejemplo, se emite un registro cuando el flujo de trabajo se inicia o se completa, y contiene el estado de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceRecord>.  
+-   **WorkflowInstanceRecord** : este <xref:System.Activities.Tracking.TrackingRecord> describe el ciclo de vida de la instancia de flujo de trabajo. Por ejemplo, se emite un registro cuando el flujo de trabajo se inicia o se completa, y contiene el estado de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceRecord>.  
   
 -   **WorkflowInstanceAbortedRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cuando se anula una instancia de flujo de trabajo. El registro contiene el motivo de la anulación de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>.  
   
--   **WorkflowInstanceUnhandledExceptionRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera si una excepción se produce en la instancia de flujo de trabajo y no se controla mediante cualquier actividad. El registro contiene los detalles de la excepción. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.  
+-   **WorkflowInstanceUnhandledExceptionRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera si una excepción se produce en la instancia de flujo de trabajo y no está controlada por ninguna actividad. El registro contiene los detalles de la excepción. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.  
   
--   **WorkflowInstanceSuspendedRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cuando se suspende una instancia de flujo de trabajo. El registro contiene el motivo de la suspensión de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>.  
+-   **WorkflowInstanceSuspendedRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cada vez que se suspende una instancia de flujo de trabajo. El registro contiene el motivo de la suspensión de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>.  
   
 -   **WorkflowInstanceTerminatedRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cada vez que finaliza una instancia de flujo de trabajo. El registro contiene el motivo de la finalización de la instancia de flujo de trabajo. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>.  
   
@@ -44,9 +44,9 @@ El tiempo de ejecución del flujo de trabajo sirve para emitir los registros de 
   
 -   **CancelRequestedRecord** : <xref:System.Activities.Tracking.TrackingRecord> se genera cada vez que una actividad intenta cancelar una actividad secundaria. Este registro contiene los detalles para la actividad primaria (la actividad que se programa) y la actividad secundaria que se vaya a cancelar. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.CancelRequestedRecord>.  
   
--   **BookmarkResumptionRecord** : <xref:System.Activities.Tracking.TrackingRecord> realiza un seguimiento de cualquier marcador que se haya reanudado correctamente. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.BookmarkResumptionRecord>.  
+-   **BookmarkResumptionRecord** : este <xref:System.Activities.Tracking.TrackingRecord> realiza un seguimiento de cualquier marcador que se haya reanudado correctamente. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.BookmarkResumptionRecord>.  
   
--   **CustomTrackingRecord** : <xref:System.Activities.Tracking.TrackingRecord> se crea y se genera un autor del flujo de trabajo dentro de una actividad de flujo de trabajo personalizado. Los registros de seguimiento personalizados se pueden rellenar con datos que se van a emitir junto con los registros. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.CustomTrackingRecord>.  
+-   **CustomTrackingRecord** : este <xref:System.Activities.Tracking.TrackingRecord> se crea y emitidos por el autor de un flujo de trabajo dentro de una actividad de flujo de trabajo personalizado. Los registros de seguimiento personalizados se pueden rellenar con datos que se van a emitir junto con los registros. Los detalles de este registro se pueden encontrar en <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
  Por ejemplo, podría haber una actividad <xref:System.Activities.Statements.Sequence> simple que contenga una operación <xref:System.Activities.Statements.WriteLine> con registros de seguimiento emitidos en el siguiente orden:  
   
@@ -61,5 +61,5 @@ El tiempo de ejecución del flujo de trabajo sirve para emitir los registros de 
 5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que el flujo de trabajo se está completando.  
   
 ## <a name="see-also"></a>Vea también  
- [Supervisión de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Supervisión de aplicaciones con App Fabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

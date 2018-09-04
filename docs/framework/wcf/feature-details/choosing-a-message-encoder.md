@@ -2,15 +2,15 @@
 title: Elección de un codificador de mensajes
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: bf40d31e3ee04136a094b5045f2502e29caceec8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d2b55f04954cdd855ff9e224d2bc0405919f7a3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494867"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535193"
 ---
 # <a name="choosing-a-message-encoder"></a>Elección de un codificador de mensajes
-En este tema se analiza los criterios para elegir entre los codificadores de mensaje que se incluyen en Windows Communication Foundation (WCF): binario, texto y Message Transmission Optimization Mechanism (MTOM).  
+En este tema se analiza los criterios para elegir entre los codificadores de mensajes que se incluyen en Windows Communication Foundation (WCF): binario, texto y Message Transmission Optimization Mechanism (MTOM).  
   
  En WCF, especifica cómo transferir datos a través de una red entre los puntos de conexión por medio de un *enlace*, que se compone de una secuencia de *elementos de enlace*. Un codificador de mensajes se representa mediante un elemento de enlace de codificación de mensajes en la pila de enlaces. Un enlace incluye elementos de enlace protocolares opcionales, como un elemento de enlace de seguridad o un elemento de enlace de mensajería de confianza, un elemento de enlace de la codificación de mensajes necesario y un elemento de enlace de transporte necesario.  
   
@@ -19,22 +19,22 @@ En este tema se analiza los criterios para elegir entre los codificadores de men
  Al conectar a un cliente o servidor preexistente, puede que no tenga una opción sobre el uso de una codificación de mensajes determinada, puesto que necesita codificar sus mensajes de la manera que el otro lado espera. Sin embargo, si está escribiendo un servicio WCF, puede exponer su servicio a través de varios extremos, cada uno con una codificación de mensajes diferentes. Esto permite a los clientes elegir la mejor codificación para hablar con su servicio sobre el punto de conexión que es mejor para ellos, así como dar la flexibilidad a sus clientes para que elijan la codificación que más les convenga. La utilización de múltiples extremos también le permite combinar las ventajas de diferentes codificaciones de mensaje con otros elementos de enlace.  
   
 ## <a name="system-provided-encoders"></a>Codificadores proporcionados por el sistema  
- WCF incluye tres codificadores de mensajes, que están representados por las tres clases siguientes:  
+ WCF incluye tres codificadores de mensajes, que se representan mediante las tres clases siguientes:  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, el codificador del mensaje de texto, admite codificación simple XML y codificación SOAP. El modo de codificación XML simple del codificador de mensajes de texto se denomina “XML sin formato” (POX) para distinguirlo de la codificación SOAP basada en texto. Para habilitar POX, establezca la propiedad <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> en <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Utilice el codificador de mensajes de texto para interoperar con extremos de WCF no.  
+-   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, el codificador del mensaje de texto, admite codificación simple XML y codificación SOAP. El modo de codificación XML simple del codificador de mensajes de texto se denomina “XML sin formato” (POX) para distinguirlo de la codificación SOAP basada en texto. Para habilitar POX, establezca la propiedad <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> en <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Utilice el codificador de mensajes de texto para interoperar con los puntos de conexión no WCF.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, el codificador de mensajes binarios, utiliza un formato binario compacto y está optimizado para WCF para la comunicación de WCF y, por tanto, no es interoperable. También es el codificador de rendimiento de la mayoría de todos los codificadores que proporciona WCF.  
+-   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, el codificador de mensajes binarios, utiliza un formato binario compacto y está optimizado para WCF para la comunicación de WCF y, por lo tanto, no es interoperable. También es el codificador de alto rendimiento la mayoría de todos los codificadores que proporciona WCF.  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>, el elemento de enlace, especifica la codificación de caracteres y control de versiones de mensaje para mensajes con codificación de MTOM. MTOM es una tecnología eficaz para la transmisión de datos binarios en mensajes de WCF. El codificador MTOM intenta crear una balanza entre la eficacia y la interoperabilidad. El codificador MTOM transmite la mayoría del XML en formato de texto, pero optimiza bloques grandes de datos binarios transmitiéndolos como son, sin convertirlos en texto. En términos de eficacia, entre los codificadores que proporciona WCF, MTOM es texto intermedio (el más lento) y binario (el más rápido).  
+-   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>, el elemento de enlace, especifica la codificación de caracteres y control de versiones de mensaje para mensajes con codificación MTOM. MTOM es una tecnología eficaz para la transmisión de datos binarios en mensajes de WCF. El codificador MTOM intenta crear una balanza entre la eficacia y la interoperabilidad. El codificador MTOM transmite la mayoría del XML en formato de texto, pero optimiza bloques grandes de datos binarios transmitiéndolos como son, sin convertirlos en texto. En términos de eficiencia, entre los codificadores que proporciona WCF, MTOM es texto intermedio (el más lento) y binario (el más rápido).  
   
 ## <a name="how-to-choose-a-message-encoder"></a>Cómo elegir un codificador de mensajes  
  La siguiente tabla describe los factores comunes utilizados para elegir un codificador de mensajes. Clasifique por orden de prioridad los factores que son importantes para su aplicación y, a continuación, elija los codificadores de mensajes que funcionan mejor con estos factores. Asegúrese de considerar factores adicionales no enumerados en esta tabla y cualquier codificador de mensajes personalizado que se puedan requerir en su aplicación.  
   
 |Factor|Descripción|Codificadores que admiten este factor|  
 |------------|-----------------|---------------------------------------|  
-|Juegos de caracteres compatibles|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> y <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> admite solo la Unicode UTF8 y UTF16 (*big-endian* y *little-endian*) codificaciones. Si se requieren otras codificaciones, como UTF7 o ASCII, se debe usar un codificador personalizado. Para un codificador personalizado de ejemplo, vea [codificador de mensaje personalizado](http://go.microsoft.com/fwlink/?LinkId=119857).|Texto|  
+|Juegos de caracteres compatibles|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> y <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> admite solo la Unicode UTF8 y UTF16 (*big-endian* y *little-endian*) codificaciones. Si se requieren otras codificaciones, como UTF7 o ASCII, se debe usar un codificador personalizado. Para un codificador personalizado de ejemplo, vea [codificador de mensaje personalizado](https://go.microsoft.com/fwlink/?LinkId=119857).|Texto|  
 |Inspección|La inspección es la capacidad para examinar mensajes durante la transmisión. Las codificaciones de texto, con o sin el uso de SOAP, permiten a muchas aplicaciones inspeccionar y analizar mensajes sin el uso de herramientas especializadas. Tenga en cuenta que el uso de seguridad de transferencia en el nivel de mensaje o transporte, afecta a su capacidad para inspeccionar los mensajes. La confidencialidad evita que se examine un mensaje y la integridad evita que se modifique un mensaje.|Texto|  
-|Confiabilidad|La fiabilidad es la capacidad de recuperación de que dispone un codificador ante los errores de transmisión. La fiabilidad también se proporciona en el nivel de mensaje, transporte o aplicación. Todos los codificadores WCF estándares da por hecho que otra capa proporciona la fiabilidad. El codificador tiene poca capacidad de recuperación ante los errores de transmisión.|Ninguna|  
+|Confiabilidad|La fiabilidad es la capacidad de recuperación de que dispone un codificador ante los errores de transmisión. La fiabilidad también se proporciona en el nivel de mensaje, transporte o aplicación. Todos los codificadores WCF estándares se asume que otra capa proporciona la confiabilidad. El codificador tiene poca capacidad de recuperación ante los errores de transmisión.|Ninguna|  
 |Simplicidad|La simplicidad representa la facilidad con la que puede crear codificadores y decodificadores para una especificación de codificación. Las codificaciones de texto son particularmente ventajosas para proporcionar simplicidad y la codificación de texto de POX tiene la ventaja adicional de que no requiere compatibilidad para procesar SOAP.|Texto (POX)|  
 |Tamaño|La codificación determina la cantidad de sobrecarga impuesta sobre el contenido. El tamaño de los mensajes codificados está directamente relacionado con el rendimiento máximo de las operaciones del servicio. Las codificaciones binarias generalmente son más compactas que las codificaciones de texto. Cuando el tamaño del mensaje es muy importante, considere también la posibilidad de comprimir el contenido del mensaje durante la codificación. Sin embargo, la compresión agrega costes de procesamiento para el remitente y receptor del mensaje.|Binary|  
 |Streaming|La transmisión por secuencias permite a las aplicaciones comenzar a procesar un mensaje antes de que haya llegado el mensaje completo. El uso eficaz de la transmisión por secuencias requiere que los datos importantes de un mensaje estén disponibles al principio del mensaje para que la aplicación receptora no tenga que esperar a que llegue. Es más, las aplicaciones que utilizan la transferencia por secuencias deben organizar incrementalmente los datos en el mensaje para que el contenido no tenga dependencias hacia delante. En muchos casos, debe establecer un compromiso entre el contenido de transmisión por secuencias y tener el tamaño de transferencia más pequeño posible para ese contenido.|Ninguna|  
@@ -69,7 +69,7 @@ A partir de WCF 4.5, el codificador binario de WCF agrega compatibilidad con la 
 * `CompressionFormat.GZip`
 * `CompressionFormat.None`
   
-Puesto que esta propiedad solo se expone en el binaryMessageEncodingBindingElement, necesitará crear un enlace personalizado similar al siguiente para utilizar esta característica:
+Puesto que esta propiedad solo se expone en el binaryMessageEncodingBindingElement, necesitará crear un enlace personalizado similar al siguiente para usar esta característica:
 
  ```xml
  <customBinding>
@@ -80,7 +80,7 @@ Puesto que esta propiedad solo se expone en el binaryMessageEncodingBindingEleme
 </customBinding>
  ```
 
-El cliente y el servicio consiste en Aceptar enviar y recibir mensajes comprimidos y por lo tanto, la propiedad compressionFormat debe configurarse en el elemento binaryMessageEncoding en el cliente y el servicio. Se produce una ProtocolException si el servicio o el cliente no está configurado para la compresión pero el otro extremo sí lo está. Debe considerarse detenidamente habilitar la compresión. La compresión es más útil si el ancho de banda de red es un cuello de botella. En el caso en que el cuello de botella sea la CPU, la compresión reducirá el rendimiento. Se debe realizar una prueba adecuada en un entorno simulado para averiguar si esto beneficia a la aplicación  
+El cliente y el servicio consiste en Aceptar enviar y recibir mensajes comprimidos y, por tanto, la propiedad compressionFormat se debe configurar en el elemento binaryMessageEncoding del cliente y servicio. Se produce una ProtocolException si el servicio o el cliente no está configurado para la compresión pero el otro extremo sí lo está. Debe considerarse detenidamente habilitar la compresión. La compresión es más útil si el ancho de banda de red es un cuello de botella. En el caso en que el cuello de botella sea la CPU, la compresión reducirá el rendimiento. Se debe realizar una prueba adecuada en un entorno simulado para averiguar si esto beneficia a la aplicación  
   
 ## <a name="see-also"></a>Vea también
 

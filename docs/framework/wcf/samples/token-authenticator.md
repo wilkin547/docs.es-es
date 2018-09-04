@@ -2,15 +2,15 @@
 title: Autenticador de tokens
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 5c103f5a5a4f95761a5c19e6a8d6159a7439d05a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808338"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523225"
 ---
 # <a name="token-authenticator"></a>Autenticador de tokens
-Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. Un autenticador de tokens de Windows Communication Foundation (WCF) se utiliza para validar el token que se utiliza con el mensaje, comprobar que es coherente consigo mismo y autenticar la identidad asociada con el token.  
+Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. Un autenticador de tokens de Windows Communication Foundation (WCF) se utiliza para validar el token utilizado con el mensaje, comprobando que es coherente y autenticar la identidad asociada al token.  
   
  Los autenticadores de tokens personalizados son útiles en diversos casos, como:  
   
@@ -24,11 +24,11 @@ Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. 
   
 -   Cómo el servidor puede validar las credenciales del cliente mediante un autenticador de tokens personalizado.  
   
--   Cómo el código del servicio WCF se asocia con el autenticador de token personalizado.  
+-   Cómo el código del servicio WCF se asocia con el autenticador de tokens personalizado.  
   
 -   Cómo el servidor se puede autenticar utilizando el certificado X.509 del servidor.  
   
- Este ejemplo también muestra cómo la identidad del llamador es accesible desde WCF después del proceso de autenticación de tokens personalizado.  
+ Este ejemplo también muestra cómo la identidad del llamador es accesible desde WCF después del proceso de autenticación de token personalizado.  
   
  El servicio expone un punto de conexión único para comunicarse con el servicio, definido mediante el archivo de configuración App.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding`estándar, con el conjunto de modo de seguridad en mensaje - el modo predeterminado de `wsHttpBinding`. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario del cliente. El servicio también configura el certificado del servicio utilizando comportamiento`serviceCredentials`. El comportamiento `securityCredentials` le permite especificar un certificado del servicio. Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje. La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las siguientes instrucciones de configuración.  
   
@@ -324,9 +324,9 @@ static void DisplayIdentityInformation()
   
 #### <a name="to-set-up-and-build-the-sample"></a>Para configurar y compilar el ejemplo  
   
-1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo  
   
@@ -339,7 +339,7 @@ static void DisplayIdentityInformation()
   
 3.  Inicie client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4.  Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
@@ -361,7 +361,7 @@ static void DisplayIdentityInformation()
   
 9. En el equipo cliente, inicie Client.exe desde un símbolo del sistema.  
   
-10. Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   

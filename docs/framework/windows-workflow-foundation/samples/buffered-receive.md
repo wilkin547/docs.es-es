@@ -2,12 +2,12 @@
 title: Recepción almacenada en búfer
 ms.date: 03/30/2017
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-ms.openlocfilehash: ee53edafc94fd5efd4e412b1b9198a8763b79462
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b95577c71493275f30703b4366fab32a51097bd2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518716"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526809"
 ---
 # <a name="buffered-receive"></a>Recepción almacenada en búfer
 Este ejemplo muestra cómo instalar y configurar la característica de recepción almacenada en búfer en Windows Workflow Foundation (WF). La recepción almacenada en búfer permite al autor del flujo de trabajo crear un flujo de trabajo sin tener que preocuparse por el orden en el que se reciben los mensajes. Este tipo de recepción almacena en búfer los mensajes localmente y los entrega cuando el flujo de trabajo está listo para recibirlos.  
@@ -20,7 +20,7 @@ Este ejemplo muestra cómo instalar y configurar la característica de recepció
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`  
   
@@ -37,7 +37,7 @@ Este ejemplo muestra cómo instalar y configurar la característica de recepció
   
  El servicio también expone metadatos para el servicio utilizando <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
   
- De igual forma, el extremo del cliente se configura utilizando <xref:System.ServiceModel.NetMsmqBinding>. El código de cliente y la configuración se genera mediante el **Agregar referencia de servicio** característica de Visual Studio. El siguiente ejemplo muestra el extremo de cliente generado en el archivo App.config.  
+ De igual forma, el extremo del cliente se configura utilizando <xref:System.ServiceModel.NetMsmqBinding>. Se genera el código de cliente y la configuración mediante el **Add Service Reference** característica de Visual Studio. El siguiente ejemplo muestra el extremo de cliente generado en el archivo App.config.  
   
 ```xml  
 <endpoint address="net.msmq://localhost/private/LoanService/Service1.xamlx"  
@@ -69,19 +69,19 @@ Este ejemplo muestra cómo instalar y configurar la característica de recepció
   
 1.  Presione F5 para ejecutar la aplicación LoanClient que crea las colas y activa el servicio definido en Service1.xamlx.  
   
-2.  Abra la **administración de equipos** consola ejecutando Compmgmt.msc desde un símbolo del sistema.  
+2.  Abra el **administración de equipos** consola ejecutando Compmgmt.msc desde un símbolo del sistema.  
   
-3.  En el **administración de equipos** de la consola, expanda **servicio**, **aplicaciones**, **Message Queue Server**, **colas privadas** .  
+3.  En el **administración de equipos** de consola, expanda **servicio**, **aplicaciones**, **Message Queue Server**, **colas privadas** .  
   
 4.  Haga clic en la cola loanservice/Service1.xamlx y seleccione **propiedades**.  
   
-5.  Seleccione el **seguridad** pestaña y agregar **todos reciben mensaje**, **Inspeccionar mensaje** y **enviar mensaje** permisos.  
+5.  Seleccione el **seguridad** y agregar **todos reciben mensaje**, **Inspeccionar mensaje** y **enviar mensaje** permisos.  
   
 6.  Abra el Administrador de [!INCLUDE[iis60](../../../../includes/iis60-md.md)].  
   
 7.  Vaya a **Server**, **sitios**, **sitio Web predeterminado**, **privada**, **LoanService** y seleccione  **Opciones avanzadas**  
   
-8.  Cambiar el **protocolos habilitados** como **http**, **net.msmq**.  
+8.  Cambiar el **protocolos habilitados** sea **http**, **net.msmq**.  
   
 #### <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
   
@@ -91,7 +91,7 @@ Este ejemplo muestra cómo instalar y configurar la característica de recepció
   
 #### <a name="to-clean-up"></a>Para realizar una limpieza  
   
-1.  Abra la **administración de equipos** consola ejecutando Compmgmt.msc desde un símbolo del sistema.  
+1.  Abra el **administración de equipos** consola ejecutando Compmgmt.msc desde un símbolo del sistema.  
   
 2.  Expanda **servicio** y **aplicaciones**, **Message Queue Server**, **colas privadas**.  
   
@@ -104,6 +104,6 @@ Este ejemplo muestra cómo instalar y configurar la característica de recepció
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`

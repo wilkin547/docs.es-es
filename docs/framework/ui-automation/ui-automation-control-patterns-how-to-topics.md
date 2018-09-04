@@ -11,11 +11,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: a5b67340ca63637bd5ba2e59e4e5b774abbae58d
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331881"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526708"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>Temas "Cómo..." sobre los patrones de control de UI Automation
 > [!NOTE]

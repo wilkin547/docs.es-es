@@ -9,11 +9,11 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec3a7e01e62b60688080fee95cf70e0ed38917f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656183"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552197"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Especifica qué versión de la plataforma de Common Language Runtime (CLR) puede ejecutar el archivo de salida.  
@@ -50,7 +50,7 @@ Especifica qué versión de la plataforma de Common Language Runtime (CLR) puede
   
 -   Uso de invocación de plataforma o interoperabilidad COM con componentes que no existen en todas las plataformas.  
   
- El **-plataforma** opción mitigará algunos problemas si sabe que ha realizado suposiciones acerca de la arquitectura que se ejecutará el código. De manera específica:  
+ El **-plataforma** opción mitigará algunos problemas si sabe que ha realizado suposiciones acerca de la arquitectura de su código se ejecutará en. De manera específica:  
   
 -   Si decide que el destino sea una plataforma de 64 bits pero la aplicación se ejecuta en un equipo de 32 bits, el mensaje de error aparece mucho antes y se centra más bien en el problema que en el error que aparece sin utilizar este modificador.  
   
@@ -66,13 +66,13 @@ Especifica qué versión de la plataforma de Common Language Runtime (CLR) puede
   
 -   Los archivos ejecutables que se compilan con `-platform:anycpu32bitpreferred` se ejecutarán en el CLR de 32 bits.  
   
- Para obtener más información sobre cómo desarrollar una aplicación se ejecute en una versión de 64 bits de Windows, vea [aplicaciones de 64 bits](../../../framework/64-bit-apps.md).  
+ Para obtener más información sobre cómo desarrollar una aplicación se ejecute en una versión de 64 bits de Windows, consulte [aplicaciones de 64 bits](../../../framework/64-bit-apps.md).  
   
-### <a name="to-set--platform-in-the-visual-studio-ide"></a>Para establecer - plataforma en el IDE de Visual Studio  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>Establecer - plataforma en el IDE de Visual Studio  
   
 1.  En **el Explorador de soluciones**, elija el proyecto, abra el **proyecto** menú y, a continuación, haga clic en **propiedades**.  
   
-2.  En el **compilar** ficha, active o desactive el **preferencia de 32 bits** casilla de verificación, o bien, en la **CPU de destino** lista, elija un valor.  
+2.  En el **compilar** ficha, active o desactive el **preferencia de 32 bits** casilla de verificación, o bien, en el **CPU de destino** lista, elija un valor.  
   
      Para obtener más información, consulte [página compilación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   

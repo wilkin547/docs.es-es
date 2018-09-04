@@ -2,12 +2,12 @@
 title: '&lt;add&gt; de &lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: 7973a1d759eaec06a6bd69822bbbf53ff77721ba
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 93e82aa3bd44a747d1e85986c51c21522d709bd0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746870"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552301"
 ---
 # <a name="ltaddgt-of-ltcommonparametersgt"></a>&lt;add&gt; de &lt;commonParameters&gt;
 Especifica un par de nombre y valor de parámetros que se utilizan globalmente en varios servicios. Normalmente este parámetro incluye la cadena de conexión a la base de datos que podría ser compartida por servicios duraderos.  
@@ -17,7 +17,7 @@ Especifica un par de nombre y valor de parámetros que se utilizan globalmente e
 \<serviceBehaviors >  
 \<comportamiento >  
 \<workflowRuntime >  
-\<CommonParameters >  
+\<commonParameters >  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -47,7 +47,7 @@ Especifica un par de nombre y valor de parámetros que se utilizan globalmente e
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<CommonParameters >](http://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|Una colección de parámetros comunes usada por los servicios. Esta colección incluirá, normalmente, la cadena de conexión de la base de datos que podrían compartir los servicios duraderos.|  
+|[\<commonParameters >](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|Una colección de parámetros comunes usada por los servicios. Esta colección incluirá, normalmente, la cadena de conexión de la base de datos que podrían compartir los servicios duraderos.|  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento `<commonParameters>` define cualquier parámetro que se usa globalmente en varios servicios, por ejemplo `ConnectionString` al usar <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
@@ -66,9 +66,9 @@ Especifica un par de nombre y valor de parámetros que se utilizan globalmente e
 </WorkflowRuntime>  
 ```  
   
- Tenga en cuenta que la `EnableRetries` parámetro se puede establecer en ninguna globalmente (como se muestra en el *CommonParameters* sección) o para servicios individuales que admiten `EnableRetries` (como se muestra en el *servicios*sección).  
+ Tenga en cuenta que el `EnableRetries` parámetro puede establecerse en uno nivel global (como se muestra en el *CommonParameters* sección) o para servicios individuales que admiten `EnableRetries` (como se muestra en el *servicios*sección).  
   
- Para obtener más información sobre el uso de un archivo de configuración para controlar el comportamiento de un <xref:System.Workflow.Runtime.WorkflowRuntime> objeto de una aplicación de host de Windows Workflow Foundation, consulte [archivos de configuración de flujo de trabajo](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
+ Para obtener más información sobre el uso de un archivo de configuración para controlar el comportamiento de un <xref:System.Workflow.Runtime.WorkflowRuntime> objeto de una aplicación de host de Windows Workflow Foundation, vea [archivos de configuración de flujo de trabajo](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -85,5 +85,5 @@ Especifica un par de nombre y valor de parámetros que se utilizan globalmente e
  <xref:System.Workflow.Runtime.WorkflowRuntime>  
  <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
  <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
- [Archivos de configuración de flujo de trabajo](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
- [\<CommonParameters >](http://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)
+ [Archivos de configuración de flujo de trabajo](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))  
+ [\<commonParameters >](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)

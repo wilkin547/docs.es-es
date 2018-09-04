@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d08cfbde82f74dcf88ddadd844854bdfeb403935
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 59e3f54f4d3ce0c191193ff63a3c2bce5b93a1bd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754267"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538036"
 ---
 # <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt; elemento
 Especifica el nombre completo del ensamblado que debe cargarse dinámicamente cuando se utiliza un nombre parcial.  
@@ -41,8 +41,8 @@ Especifica el nombre completo del ensamblado que debe cargarse dinámicamente cu
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`partialName`|Atributo necesario.<br /><br /> Especifica el nombre parcial del ensamblado tal y como aparece en el código.|  
-|`fullName`|Atributo necesario.<br /><br /> Especifica el nombre completo del ensamblado tal y como aparece en la caché global de ensamblados.|  
+|`partialName`|Atributo necesario.<br /><br /> Especifica el nombre parcial del ensamblado tal como aparece en el código.|  
+|`fullName`|Atributo necesario.<br /><br /> Especifica el nombre completo del ensamblado tal como aparece en la caché global de ensamblados.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -56,12 +56,12 @@ Especifica el nombre completo del ensamblado que debe cargarse dinámicamente cu
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- Llamar a la <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> método utilizando nombres de ensamblado parciales hace common language runtime buscar el ensamblado sólo en el directorio de base de la aplicación. Use la  **\<qualifyAssembly >** elemento en el archivo de configuración de aplicación para proporcionar la información de ensamblado completo (nombre, versión, referencia cultural y token de clave pública) y hacer que common language runtime buscar el ensamblado en la caché global de ensamblados.  
+ Una llamada a la <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> método utilizando nombres de ensamblado parciales hace que common language runtime que se busca el ensamblado sólo en el directorio de base de la aplicación. Use la  **\<qualifyAssembly >** elemento en el archivo de configuración de aplicación para proporcionar la información de ensamblado completo (nombre, versión, referencia cultural y token de clave pública) y hacer que common language runtime buscar para el ensamblado en la caché global de ensamblados.  
   
- El **fullName** atributo debe incluir los cuatro campos de identidad del ensamblado: nombre, versión, token de clave pública y referencia cultural. El **partialName** atributo parcialmente debe hacer referencia a un ensamblado. Debe especificar al menos el nombre del ensamblado texto (el caso más común), pero también puede incluir versión, token de clave pública, o referencia cultural (o cualquier combinación de las cuatro, pero no los cuatro). El **partialName** debe coincidir con el nombre especificado en la llamada. Por ejemplo, no se puede especificar `"math"` como el **partialName** atributo del archivo de configuración y llame `Assembly.Load("math, Version=3.3.3.3")` en el código.  
+ El **fullName** atributo debe incluir los cuatro campos de identidad del ensamblado: nombre, versión, referencia cultural y token de clave pública. El **partialName** atributo parcialmente debe hacer referencia a un ensamblado. Debe especificar al menos el nombre del ensamblado texto (el caso más común), pero también puede incluir versión, token de clave pública, o referencia cultural (o cualquier combinación de los cuatro, pero no los cuatro). El **partialName** debe coincidir con el nombre especificado en la llamada. Por ejemplo, no se puede especificar `"math"` como el **partialName** atributo en el archivo de configuración y la llamada `Assembly.Load("math, Version=3.3.3.3")` en el código.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se convierte de manera lógica la llamada `Assembly.Load("math")` en `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.  
+ El ejemplo siguiente convierte de manera lógica la llamada `Assembly.Load("math")` en `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.  
   
 ```xml  
 <configuration>  
@@ -78,4 +78,4 @@ Especifica el nombre completo del ensamblado que debe cargarse dinámicamente cu
 ## <a name="see-also"></a>Vea también  
  [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [NIB: Referencias a ensamblados parciales](http://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+ [NIB: Referencias a ensamblados parciales](https://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
