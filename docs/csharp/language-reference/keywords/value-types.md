@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 17bbb0280c4db7d91e5d3cc3d3b6233b8db89cdc
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754974"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487070"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
 Los tipos de valor constan de dos categorías principales:  
@@ -97,11 +97,12 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  Para obtener información sobre cómo aplicar formato al resultado de los tipos numéricos, vea [Tabla de formatos de presentación para valores numéricos](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
- [Tipos](../../../csharp/language-reference/keywords/types.md)  
- [Tablas de referencia para tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [Tipos de referencia](../../../csharp/language-reference/keywords/reference-types.md)  
- [Nullable types](../../programming-guide/nullable-types/index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])  
+## <a name="see-also"></a>Vea también
+
+- [Referencia de C#](../../../csharp/language-reference/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tipos](../../../csharp/language-reference/keywords/types.md)  
+- [Tablas de referencia para tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [Tipos de referencia](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Nullable types](../../programming-guide/nullable-types/index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])  

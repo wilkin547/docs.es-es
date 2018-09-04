@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53142ffa38bda036dd558dd6d23912ebd2e393ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 865d9aa6806e00bb9cf7b3991b4f323d361cbb63
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397031"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487463"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Cómo: Definir y ejecutar métodos dinámicos
-En los procedimientos siguientes se muestra cómo definir y ejecutar un método dinámico simple y un método dinámico enlazado a una instancia de una clase. Para obtener más información sobre los métodos dinámicos, vea la clase <xref:System.Reflection.Emit.DynamicMethod> y [Reflection Emit Dynamic Method Scenarios](http://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e) (Escenarios de métodos dinámicos de emisión de reflexión).  
+En los procedimientos siguientes se muestra cómo definir y ejecutar un método dinámico simple y un método dinámico enlazado a una instancia de una clase. Para obtener más información sobre los métodos dinámicos, vea la clase <xref:System.Reflection.Emit.DynamicMethod> y [Reflection Emit Dynamic Method Scenarios](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e) (Escenarios de métodos dinámicos de emisión de reflexión).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>Para definir y ejecutar un método dinámico  
   
@@ -124,5 +124,5 @@ En los procedimientos siguientes se muestra cómo definir y ejecutar un método 
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Reflection.Emit.DynamicMethod>  
- [Using Reflection Emit (Uso de la emisión de la reflexión)](http://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [Escenarios de métodos dinámicos de emisión de reflexión](http://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)
+ [Using Reflection Emit (Uso de la emisión de la reflexión)](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
+ [Escenarios de métodos dinámicos de emisión de reflexión](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)

@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo definir y usar valores locales y d
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33339623"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510570"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valores devueltos y variables locales de tipo ref
 
@@ -124,5 +124,5 @@ Esta segunda versión es más eficaz con secuencias mayores en escenarios donde 
 
 ## <a name="see-also"></a>Vea también
 
-[ref (palabra clave)](../../language-reference/keywords/ref.md)  
-[Semántica de referencia con tipos de valor](../../../csharp/reference-semantics-with-value-types.md)
+- [ref (palabra clave)](../../language-reference/keywords/ref.md)  
+- [Semántica de referencia con tipos de valor](../../../csharp/reference-semantics-with-value-types.md)
