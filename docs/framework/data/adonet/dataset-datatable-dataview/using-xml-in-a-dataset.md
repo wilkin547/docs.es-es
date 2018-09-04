@@ -2,12 +2,12 @@
 title: Usar XML en un conjunto de datos
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-ms.openlocfilehash: c5a4df5f2c77853864f51ee9b226f412f382dd09
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cbdc6135a819e2141426f432d163cd49a7b78ac4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760338"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489882"
 ---
 # <a name="using-xml-in-a-dataset"></a>Usar XML en un conjunto de datos
 Con ADO.NET es posible llenar un <xref:System.Data.DataSet> a partir de una secuencia o un documento XML. Se puede utilizar la secuencia o el documento XML para suministrar datos al <xref:System.Data.DataSet>, información de esquema o ambas cosas. La información suministrada desde la secuencia o el documento XML puede combinarse con datos o información de esquema existente ya presente en el <xref:System.Data.DataSet>.  
@@ -48,4 +48,4 @@ Con ADO.NET es posible llenar un <xref:System.Data.DataSet> a partir de una secu
   
 ## <a name="see-also"></a>Vea también  
  [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

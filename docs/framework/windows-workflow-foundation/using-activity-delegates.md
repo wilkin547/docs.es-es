@@ -2,12 +2,12 @@
 title: Usar delegados de actividad
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 96a412a066342fb9c459e1388c5b58847ebac390
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb23f6a79b6f2390952f9aadc1cf08099acb289b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518957"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489934"
 ---
 # <a name="using-activity-delegates"></a>Usar delegados de actividad
 Los delegados de actividad permiten a los autores de actividad exponer devoluciones de llamada con firmas específicas, para las que los usuarios de la actividad pueden proporcionar controladores basados en actividades. Hay dos tipos de delegados de actividad disponibles: <xref:System.Activities.ActivityAction%601> se usa para definir delegados de actividad que no tienen un valor devuelto y <xref:System.Activities.ActivityFunc%601> se utiliza para definir delegados de actividad que tienen un valor devuelto.  
@@ -27,9 +27,9 @@ Los ejemplos de este tema usan la sintaxis de inicialización del objeto. Esta s
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- Para obtener más información sobre los inicializadores de objeto, vea [Cómo: inicializar objetos sin llamar a un Constructor (Guía de programación de C#)](http://go.microsoft.com/fwlink/?LinkId=161015) y [Cómo: declarar un objeto usando un inicializador de objeto](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ Para obtener más información sobre los inicializadores de objeto, vea [Cómo: inicializar objetos sin llamar a un Constructor (Guía de programación de C#)](https://go.microsoft.com/fwlink/?LinkId=161015) y [Cómo: declarar un objeto usando un inicializador de objeto](https://go.microsoft.com/fwlink/?LinkId=161016).  
   
- En el siguiente ejemplo, se utiliza una actividad <xref:System.Activities.Statements.TryCatch> en un flujo de trabajo. El flujo de trabajo produce una excepción <xref:System.ApplicationException>, que es controlada por una actividad <xref:System.Activities.Statements.Catch%601>. El controlador para el <xref:System.Activities.Statements.Catch%601> acción de actividad de la actividad es un <xref:System.Activities.Statements.WriteLine> actividad y los detalles de la excepción que se pasa a él utilizando la `ex` <xref:System.Activities.DelegateInArgument%601>.  
+ En el siguiente ejemplo, se utiliza una actividad <xref:System.Activities.Statements.TryCatch> en un flujo de trabajo. El flujo de trabajo produce una excepción <xref:System.ApplicationException>, que es controlada por una actividad <xref:System.Activities.Statements.Catch%601>. El controlador para el <xref:System.Activities.Statements.Catch%601> acción de la actividad de la actividad está un <xref:System.Activities.Statements.WriteLine> actividad y el detalle de excepción se pasa a él mediante el `ex` <xref:System.Activities.DelegateInArgument%601>.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#33](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]  
   

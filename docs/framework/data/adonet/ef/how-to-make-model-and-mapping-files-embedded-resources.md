@@ -2,12 +2,12 @@
 title: 'Cómo: Hacer que los archivos de asignación y de modelo sean recursos incrustados'
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: 3fd3c3628e94b4727dfc711e02a9f4b754aa8a2c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 35507f92d0ba9f434156773c8dc5621ed3c423c0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756350"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489856"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Cómo: Hacer que los archivos de asignación y de modelo sean recursos incrustados
 El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] le permite implementar los archivos de asignación y modelo como recursos incrustados de una aplicación. El ensamblado con los archivos de asignación y de modelo incrustados se debe cargar en el mismo dominio de aplicación que la conexión de entidad. Para más información, consulte [Cadenas de conexión](../../../../../docs/framework/data/adonet/ef/connection-strings.md). De forma predeterminada, las herramientas de [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] incrustan los archivos de asignación y de modelo. Cuando defina los archivos de asignación y de modelo manualmente, use este procedimiento para asegurarse de que dichos archivos se implementan como recursos incrustados junto con una aplicación de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
@@ -34,7 +34,7 @@ El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] le permite imp
      Para más información, consulte [Cadenas de conexión](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  
   
 ## <a name="example"></a>Ejemplo  
- Hace referencia a la siguiente cadena de conexión para los archivos de asignación y de modelo incrustados el [modelo AdventureWorks Sales](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). Esta cadena de conexión está almacenada en el archivo App.config del proyecto.  
+ La cadena de conexión siguiente hace referencia a un modelo incrustado y archivos de asignación para el [modelo AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). Esta cadena de conexión está almacenada en el archivo App.config del proyecto.  
   
   
   
@@ -42,4 +42,4 @@ El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] le permite imp
  [Modelado y asignación](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)  
  [Definición de la cadena de conexión](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)  
  [Compilación de una cadena de conexión EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
- [Herramientas de Entity Data Model de ADO.NET](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+ [Herramientas de Entity Data Model de ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
