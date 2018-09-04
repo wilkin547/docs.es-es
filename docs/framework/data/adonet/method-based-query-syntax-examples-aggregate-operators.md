@@ -6,148 +6,148 @@ dev_langs:
 - vb
 ms.assetid: 5ed5f01d-acb2-4dd4-be60-f04c2d570fa8
 ms.openlocfilehash: 8d8f3cebb599eb543d569e36b294e6433a45f432
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401479"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520317"
 ---
-# <a name="method-based-query-syntax-examples-aggregate-operators-linq-to-dataset"></a><span data-ttu-id="d5cd5-102">Ejemplos de sintaxis de consulta basada en métodos: operadores de agregado (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="d5cd5-102">Method-Based Query Syntax Examples: Aggregate Operators (LINQ to DataSet)</span></span>
-<span data-ttu-id="d5cd5-103">Los ejemplos de este tema muestran cómo utilizar los operadores <xref:System.Linq.Enumerable.Aggregate%2A>, <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.LongCount%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A> y <xref:System.Linq.Enumerable.Sum%2A> para consultar <xref:System.Data.DataSet> y agregar datos utilizando sintaxis de consulta basada en métodos.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Aggregate%2A>, <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.LongCount%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, and <xref:System.Linq.Enumerable.Sum%2A> operators to query a <xref:System.Data.DataSet> and aggregate data using method query syntax.</span></span>  
+# <a name="method-based-query-syntax-examples-aggregate-operators-linq-to-dataset"></a><span data-ttu-id="21507-102">Ejemplos de sintaxis de consulta basada en métodos: operadores de agregado (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="21507-102">Method-Based Query Syntax Examples: Aggregate Operators (LINQ to DataSet)</span></span>
+<span data-ttu-id="21507-103">Los ejemplos de este tema muestran cómo utilizar los operadores <xref:System.Linq.Enumerable.Aggregate%2A>, <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.LongCount%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A> y <xref:System.Linq.Enumerable.Sum%2A> para consultar <xref:System.Data.DataSet> y agregar datos utilizando sintaxis de consulta basada en métodos.</span><span class="sxs-lookup"><span data-stu-id="21507-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Aggregate%2A>, <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.LongCount%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, and <xref:System.Linq.Enumerable.Sum%2A> operators to query a <xref:System.Data.DataSet> and aggregate data using method query syntax.</span></span>  
   
- <span data-ttu-id="d5cd5-104">El `FillDataSet` método usado en estos ejemplos se especifica en [cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="d5cd5-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
+ <span data-ttu-id="21507-104">El `FillDataSet` método usado en estos ejemplos se especifica en [cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="21507-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
   
- <span data-ttu-id="d5cd5-105">Los ejemplos de este tema utilizan las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="21507-105">Los ejemplos de este tema utilizan las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="21507-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="d5cd5-106">Los ejemplos de este tema usan los siguientes `using` / `Imports` instrucciones:</span><span class="sxs-lookup"><span data-stu-id="d5cd5-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="21507-106">Los ejemplos de este tema usan los siguientes `using` / `Imports` instrucciones:</span><span class="sxs-lookup"><span data-stu-id="21507-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- <span data-ttu-id="d5cd5-107">Para obtener más información, consulte [Cómo: crear un LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span><span class="sxs-lookup"><span data-stu-id="d5cd5-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
+ <span data-ttu-id="21507-107">Para obtener más información, consulte [Cómo: crear un LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span><span class="sxs-lookup"><span data-stu-id="21507-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
   
-## <a name="aggregate"></a><span data-ttu-id="d5cd5-108">Agregar</span><span class="sxs-lookup"><span data-stu-id="d5cd5-108">Aggregate</span></span>  
+## <a name="aggregate"></a><span data-ttu-id="21507-108">Agregar</span><span class="sxs-lookup"><span data-stu-id="21507-108">Aggregate</span></span>  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-109">Example</span></span>  
- <span data-ttu-id="d5cd5-110">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Aggregate%2A> para obtener los cinco primeros contactos de la tabla `Contact` y compilar una lista de apellidos delimitada por comas.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-110">This example uses the <xref:System.Linq.Enumerable.Aggregate%2A> method to get the first 5 contacts from the `Contact` table and build a comma-delimited list of the last names.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-109">Example</span></span>  
+ <span data-ttu-id="21507-110">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Aggregate%2A> para obtener los cinco primeros contactos de la tabla `Contact` y compilar una lista de apellidos delimitada por comas.</span><span class="sxs-lookup"><span data-stu-id="21507-110">This example uses the <xref:System.Linq.Enumerable.Aggregate%2A> method to get the first 5 contacts from the `Contact` table and build a comma-delimited list of the last names.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#Aggregate_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#aggregate_mq)]
  [!code-vb[DP LINQ to DataSet Examples#Aggregate_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#aggregate_mq)]  
   
-## <a name="average"></a><span data-ttu-id="d5cd5-111">Average</span><span class="sxs-lookup"><span data-stu-id="d5cd5-111">Average</span></span>  
+## <a name="average"></a><span data-ttu-id="21507-111">Average</span><span class="sxs-lookup"><span data-stu-id="21507-111">Average</span></span>  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-112">Example</span></span>  
- <span data-ttu-id="d5cd5-113">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Average%2A> para encontrar el precio de venta promedio de los productos.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-113">This example uses the <xref:System.Linq.Enumerable.Average%2A> method to find the average list price of the products.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-112">Example</span></span>  
+ <span data-ttu-id="21507-113">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Average%2A> para encontrar el precio de venta promedio de los productos.</span><span class="sxs-lookup"><span data-stu-id="21507-113">This example uses the <xref:System.Linq.Enumerable.Average%2A> method to find the average list price of the products.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#Average_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#average_mq)]
  [!code-vb[DP LINQ to DataSet Examples#Average_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#average_mq)]  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-114">Example</span></span>  
- <span data-ttu-id="d5cd5-115">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Average%2A> para encontrar el precio de venta promedio de cada estilo de productos.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-115">This example uses the <xref:System.Linq.Enumerable.Average%2A> method to find the average list price of the products of each style.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-114">Example</span></span>  
+ <span data-ttu-id="21507-115">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Average%2A> para encontrar el precio de venta promedio de cada estilo de productos.</span><span class="sxs-lookup"><span data-stu-id="21507-115">This example uses the <xref:System.Linq.Enumerable.Average%2A> method to find the average list price of the products of each style.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#Average2_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#average2_mq)]
  [!code-vb[DP LINQ to DataSet Examples#Average2_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#average2_mq)]  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-116">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-116">Example</span></span>  
- <span data-ttu-id="d5cd5-117">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Average%2A> para encontrar el importe total a pagar promedio.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-117">This example uses the <xref:System.Linq.Enumerable.Average%2A> method to find the average total due.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-116">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-116">Example</span></span>  
+ <span data-ttu-id="21507-117">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Average%2A> para encontrar el importe total a pagar promedio.</span><span class="sxs-lookup"><span data-stu-id="21507-117">This example uses the <xref:System.Linq.Enumerable.Average%2A> method to find the average total due.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#AverageProjection_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#averageprojection_mq)]
  [!code-vb[DP LINQ to DataSet Examples#AverageProjection_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#averageprojection_mq)]  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-118">Example</span></span>  
- <span data-ttu-id="d5cd5-119">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Average%2A> para obtener el importe total a pagar promedio de cada id. de contacto.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-119">This example uses the <xref:System.Linq.Enumerable.Average%2A> method to get the average total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-118">Example</span></span>  
+ <span data-ttu-id="21507-119">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Average%2A> para obtener el importe total a pagar promedio de cada id. de contacto.</span><span class="sxs-lookup"><span data-stu-id="21507-119">This example uses the <xref:System.Linq.Enumerable.Average%2A> method to get the average total due for each contact ID.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#AverageGrouped_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#averagegrouped_mq)]
  [!code-vb[DP LINQ to DataSet Examples#AverageGrouped_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#averagegrouped_mq)]  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-120">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-120">Example</span></span>  
- <span data-ttu-id="d5cd5-121">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Average%2A> para obtener los pedidos con el `TotalDue` promedio de cada contacto.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-121">This example uses the <xref:System.Linq.Enumerable.Average%2A> method to get the orders with the average `TotalDue` for each contact.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-120">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-120">Example</span></span>  
+ <span data-ttu-id="21507-121">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Average%2A> para obtener los pedidos con el `TotalDue` promedio de cada contacto.</span><span class="sxs-lookup"><span data-stu-id="21507-121">This example uses the <xref:System.Linq.Enumerable.Average%2A> method to get the orders with the average `TotalDue` for each contact.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#AverageElements_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#averageelements_mq)]
  [!code-vb[DP LINQ to DataSet Examples#AverageElements_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#averageelements_mq)]  
   
-## <a name="count"></a><span data-ttu-id="d5cd5-122">Count</span><span class="sxs-lookup"><span data-stu-id="d5cd5-122">Count</span></span>  
+## <a name="count"></a><span data-ttu-id="21507-122">Count</span><span class="sxs-lookup"><span data-stu-id="21507-122">Count</span></span>  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-123">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-123">Example</span></span>  
- <span data-ttu-id="d5cd5-124">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Count%2A> para devolver el número de productos de la tabla `Product`.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-124">This example uses the <xref:System.Linq.Enumerable.Count%2A> method to return the number of products in the `Product` table.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-123">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-123">Example</span></span>  
+ <span data-ttu-id="21507-124">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Count%2A> para devolver el número de productos de la tabla `Product`.</span><span class="sxs-lookup"><span data-stu-id="21507-124">This example uses the <xref:System.Linq.Enumerable.Count%2A> method to return the number of products in the `Product` table.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#Count](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#count)]
  [!code-vb[DP LINQ to DataSet Examples#Count](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#count)]  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-125">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-125">Example</span></span>  
- <span data-ttu-id="d5cd5-126">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Count%2A> para devolver una lista de id. de contactos y el número de pedidos que tiene cada uno de ellos.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-126">This example uses the <xref:System.Linq.Enumerable.Count%2A> method to return a list of contact IDs and how many orders each has.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-125">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-125">Example</span></span>  
+ <span data-ttu-id="21507-126">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Count%2A> para devolver una lista de id. de contactos y el número de pedidos que tiene cada uno de ellos.</span><span class="sxs-lookup"><span data-stu-id="21507-126">This example uses the <xref:System.Linq.Enumerable.Count%2A> method to return a list of contact IDs and how many orders each has.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#CountNested](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#countnested)]
  [!code-vb[DP LINQ to DataSet Examples#CountNested](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#countnested)]  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-127">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-127">Example</span></span>  
- <span data-ttu-id="d5cd5-128">En este ejemplo se agrupan los productos por colores y se utiliza el método <xref:System.Linq.Enumerable.Count%2A> para devolver el número de productos de cada grupo de color.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-128">This example groups products by color and uses the <xref:System.Linq.Enumerable.Count%2A> method to return the number of products in each color group.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-127">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-127">Example</span></span>  
+ <span data-ttu-id="21507-128">En este ejemplo se agrupan los productos por colores y se utiliza el método <xref:System.Linq.Enumerable.Count%2A> para devolver el número de productos de cada grupo de color.</span><span class="sxs-lookup"><span data-stu-id="21507-128">This example groups products by color and uses the <xref:System.Linq.Enumerable.Count%2A> method to return the number of products in each color group.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#CountGrouped](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#countgrouped)]
  [!code-vb[DP LINQ to DataSet Examples#CountGrouped](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#countgrouped)]  
   
-## <a name="longcount"></a><span data-ttu-id="d5cd5-129">LongCount</span><span class="sxs-lookup"><span data-stu-id="d5cd5-129">LongCount</span></span>  
+## <a name="longcount"></a><span data-ttu-id="21507-129">LongCount</span><span class="sxs-lookup"><span data-stu-id="21507-129">LongCount</span></span>  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-130">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-130">Example</span></span>  
- <span data-ttu-id="d5cd5-131">En este ejemplo se obtiene el recuento de contactos como un entero largo.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-131">This example gets the contact count as a long integer.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-130">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-130">Example</span></span>  
+ <span data-ttu-id="21507-131">En este ejemplo se obtiene el recuento de contactos como un entero largo.</span><span class="sxs-lookup"><span data-stu-id="21507-131">This example gets the contact count as a long integer.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#LongCountSimple](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#longcountsimple)]
  [!code-vb[DP LINQ to DataSet Examples#LongCountSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#longcountsimple)]  
   
-## <a name="max"></a><span data-ttu-id="d5cd5-132">Max</span><span class="sxs-lookup"><span data-stu-id="d5cd5-132">Max</span></span>  
+## <a name="max"></a><span data-ttu-id="21507-132">Max</span><span class="sxs-lookup"><span data-stu-id="21507-132">Max</span></span>  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-133">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-133">Example</span></span>  
- <span data-ttu-id="d5cd5-134">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Max%2A> para obtener el mayor importe total a pagar.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-134">This example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the largest total due.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-133">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-133">Example</span></span>  
+ <span data-ttu-id="21507-134">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Max%2A> para obtener el mayor importe total a pagar.</span><span class="sxs-lookup"><span data-stu-id="21507-134">This example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the largest total due.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#MaxProjection_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#maxprojection_mq)]
  [!code-vb[DP LINQ to DataSet Examples#MaxProjection_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#maxprojection_mq)]  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-135">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-135">Example</span></span>  
- <span data-ttu-id="d5cd5-136">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Max%2A> para obtener el mayor importe total a pagar de cada id. de contacto.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-136">This example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the largest total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-135">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-135">Example</span></span>  
+ <span data-ttu-id="21507-136">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Max%2A> para obtener el mayor importe total a pagar de cada id. de contacto.</span><span class="sxs-lookup"><span data-stu-id="21507-136">This example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the largest total due for each contact ID.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#MaxGrouped_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#maxgrouped_mq)]
  [!code-vb[DP LINQ to DataSet Examples#MaxGrouped_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#maxgrouped_mq)]  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-137">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-137">Example</span></span>  
- <span data-ttu-id="d5cd5-138">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Max%2A> para obtener los pedidos con el `TotalDue` mayor de cada id. contacto.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-138">This example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the orders with the largest `TotalDue` for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-137">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-137">Example</span></span>  
+ <span data-ttu-id="21507-138">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Max%2A> para obtener los pedidos con el `TotalDue` mayor de cada id. contacto.</span><span class="sxs-lookup"><span data-stu-id="21507-138">This example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the orders with the largest `TotalDue` for each contact ID.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#MaxElements_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#maxelements_mq)]
  [!code-vb[DP LINQ to DataSet Examples#MaxElements_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#maxelements_mq)]  
   
-## <a name="min"></a><span data-ttu-id="d5cd5-139">Min</span><span class="sxs-lookup"><span data-stu-id="d5cd5-139">Min</span></span>  
+## <a name="min"></a><span data-ttu-id="21507-139">Min</span><span class="sxs-lookup"><span data-stu-id="21507-139">Min</span></span>  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-140">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-140">Example</span></span>  
- <span data-ttu-id="d5cd5-141">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Min%2A> para obtener el menor importe total a pagar.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-141">This example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the smallest total due.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-140">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-140">Example</span></span>  
+ <span data-ttu-id="21507-141">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Min%2A> para obtener el menor importe total a pagar.</span><span class="sxs-lookup"><span data-stu-id="21507-141">This example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the smallest total due.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#MinProjection_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#minprojection_mq)]
  [!code-vb[DP LINQ to DataSet Examples#MinProjection_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#minprojection_mq)]  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-142">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-142">Example</span></span>  
- <span data-ttu-id="d5cd5-143">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Min%2A> para obtener el menor importe total a pagar de cada id. de contacto.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-143">This example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the smallest total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-142">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-142">Example</span></span>  
+ <span data-ttu-id="21507-143">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Min%2A> para obtener el menor importe total a pagar de cada id. de contacto.</span><span class="sxs-lookup"><span data-stu-id="21507-143">This example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the smallest total due for each contact ID.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#MinGrouped_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#mingrouped_mq)]
  [!code-vb[DP LINQ to DataSet Examples#MinGrouped_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#mingrouped_mq)]  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-144">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-144">Example</span></span>  
- <span data-ttu-id="d5cd5-145">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Min%2A> para obtener el pedido con el menor importe total a pagar de cada contacto.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-145">This example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the orders with the smallest total due for each contact.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-144">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-144">Example</span></span>  
+ <span data-ttu-id="21507-145">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Min%2A> para obtener el pedido con el menor importe total a pagar de cada contacto.</span><span class="sxs-lookup"><span data-stu-id="21507-145">This example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the orders with the smallest total due for each contact.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#MinElements_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#minelements_mq)]
  [!code-vb[DP LINQ to DataSet Examples#MinElements_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#minelements_mq)]  
   
-## <a name="sum"></a><span data-ttu-id="d5cd5-146">Sum</span><span class="sxs-lookup"><span data-stu-id="d5cd5-146">Sum</span></span>  
+## <a name="sum"></a><span data-ttu-id="21507-146">Sum</span><span class="sxs-lookup"><span data-stu-id="21507-146">Sum</span></span>  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-147">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-147">Example</span></span>  
- <span data-ttu-id="d5cd5-148">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Sum%2A> para obtener el número total de cantidades de pedido de la tabla `SalesOrderDetail`.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-148">This example uses the <xref:System.Linq.Enumerable.Sum%2A> method to get the total number of order quantities in the `SalesOrderDetail` table.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-147">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-147">Example</span></span>  
+ <span data-ttu-id="21507-148">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Sum%2A> para obtener el número total de cantidades de pedido de la tabla `SalesOrderDetail`.</span><span class="sxs-lookup"><span data-stu-id="21507-148">This example uses the <xref:System.Linq.Enumerable.Sum%2A> method to get the total number of order quantities in the `SalesOrderDetail` table.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#SumProjection_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#sumprojection_mq)]  
   
-### <a name="example"></a><span data-ttu-id="d5cd5-149">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d5cd5-149">Example</span></span>  
- <span data-ttu-id="d5cd5-150">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Sum%2A> para obtener el importe total a pagar de cada id. de contacto.</span><span class="sxs-lookup"><span data-stu-id="d5cd5-150">This example uses the <xref:System.Linq.Enumerable.Sum%2A> method to get the total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="21507-149">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="21507-149">Example</span></span>  
+ <span data-ttu-id="21507-150">En este ejemplo se utiliza el método <xref:System.Linq.Enumerable.Sum%2A> para obtener el importe total a pagar de cada id. de contacto.</span><span class="sxs-lookup"><span data-stu-id="21507-150">This example uses the <xref:System.Linq.Enumerable.Sum%2A> method to get the total due for each contact ID.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#SumGrouped_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#sumgrouped_mq)]
  [!code-vb[DP LINQ to DataSet Examples#SumGrouped_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#sumgrouped_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="d5cd5-151">Vea también</span><span class="sxs-lookup"><span data-stu-id="d5cd5-151">See Also</span></span>  
- [<span data-ttu-id="d5cd5-152">Carga de datos en un conjunto de datos</span><span class="sxs-lookup"><span data-stu-id="d5cd5-152">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [<span data-ttu-id="d5cd5-153">Ejemplos de LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="d5cd5-153">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [<span data-ttu-id="d5cd5-154">Información general sobre operadores de consulta estándar</span><span class="sxs-lookup"><span data-stu-id="d5cd5-154">Standard Query Operators Overview</span></span>](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+## <a name="see-also"></a><span data-ttu-id="21507-151">Vea también</span><span class="sxs-lookup"><span data-stu-id="21507-151">See Also</span></span>  
+ [<span data-ttu-id="21507-152">Carga de datos en un conjunto de datos</span><span class="sxs-lookup"><span data-stu-id="21507-152">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ [<span data-ttu-id="21507-153">Ejemplos de LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="21507-153">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ [<span data-ttu-id="21507-154">Información general sobre operadores de consulta estándar</span><span class="sxs-lookup"><span data-stu-id="21507-154">Standard Query Operators Overview</span></span>](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
