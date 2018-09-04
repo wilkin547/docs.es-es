@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: 212cc229d8a496be11c84e30dbf3a0eedb952006
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b719f2112aac1292b668fe199d48de4b0b60ed21
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529384"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659143"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Cómo: Crear una tabla de búsqueda para un control ComboBox, ListBox o CheckedListBox de Windows Forms
 A veces resulta útil mostrar datos en un formato fácil de usar en un formulario de Windows Forms y, no obstante, almacenar los datos en un formato más coherente para su programa. Por ejemplo, un formulario de pedido de comida puede mostrar los elementos del menú por nombre en un cuadro de lista. Sin embargo, la tabla de datos que registra el pedido contendría los números de identificador únicos que representan la comida. En las siguientes tablas se proporciona un ejemplo en el que se indica cómo almacenar y mostrar datos de formulario de pedido de comida.  
@@ -38,11 +38,11 @@ A veces resulta útil mostrar datos en un formato fácil de usar en un formulari
 |12|Patata|  
 |13|Pollo|  
   
- En este escenario, una tabla, **OrderDetailsTable**, almacena la información real que interesa mostrar y guardar. Pero para ahorrar espacio, lo hace en un modo bastante críptico. La otra tabla, **ItemTable**, contiene sólo información relativa al aspecto sobre qué identificador número equivale a qué nombre de comida y nada acerca de los pedidos de comida en Sí.  
+ En este escenario, una tabla, **OrderDetailsTable**, almacena la información real que interesa mostrar y guardar. Pero para ahorrar espacio, lo hace en un modo bastante críptico. La otra tabla, **ItemTable**, contiene sólo información relativa al aspecto sobre qué Id. de número equivale a qué nombre de comida y nada sobre los pedidos de comida en Sí.  
   
- El **ItemTable** está conectado a la <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>, o <xref:System.Windows.Forms.CheckedListBox> control mediante tres propiedades. El `DataSource` propiedad contiene el nombre de esta tabla. El `DisplayMember` propiedad contiene la columna de datos de esa tabla que desea mostrar en el control (el nombre de la comida). El `ValueMember` propiedad contiene la columna de datos de esa tabla que incluye la información almacenada (el número de Id.).  
+ El **ItemTable** está conectado a la <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>, o <xref:System.Windows.Forms.CheckedListBox> control mediante tres propiedades. El `DataSource` propiedad contiene el nombre de esta tabla. El `DisplayMember` propiedad contiene la columna de datos de la tabla que desea mostrar en el control (el nombre de la comida). El `ValueMember` propiedad contiene la columna de datos de la tabla con la información almacenada (número de identificación).  
   
- El **OrderDetailsTable** está conectada al control mediante su colección de enlaces, tiene acceso a través del <xref:System.Windows.Forms.Control.DataBindings%2A> propiedad. Cuando se agrega un objeto de enlace a la colección, se conecta una propiedad de control a un miembro de datos específico (la columna de números de Id.) de un origen de datos (el **OrderDetailsTable**). Cuando se realiza una selección en el control, la entrada de formulario se guarda en esta tabla.  
+ El **OrderDetailsTable** está conectado al control mediante su colección de enlaces, tiene acceso a través del <xref:System.Windows.Forms.Control.DataBindings%2A> propiedad. Cuando se agrega un objeto de enlace a la colección, se conecta una propiedad de control a un miembro de datos específica (la columna de números de Id.) en un origen de datos (el **OrderDetailsTable**). Cuando se realiza una selección en el control, la entrada de formulario se guarda en esta tabla.  
   
 ### <a name="to-create-a-lookup-table"></a>Para crear una tabla de búsqueda  
   
@@ -50,7 +50,7 @@ A veces resulta útil mostrar datos en un formato fácil de usar en un formulari
   
 2.  Conéctese a su origen de datos.  
   
-3.  Establezca a una relación de datos entre las dos tablas. Vea [Introducción a los objetos DataRelation](http://msdn.microsoft.com/library/89d8a881-8265-41f2-a88b-61311ab06192).  
+3.  Establezca a una relación de datos entre las dos tablas. Consulte [Introducción a los objetos DataRelation](https://msdn.microsoft.com/library/89d8a881-8265-41f2-a88b-61311ab06192).  
   
 4.  Establezca las siguientes propiedades. Puede establecerse en código o en el diseñador.  
   
@@ -60,7 +60,7 @@ A veces resulta útil mostrar datos en un formato fácil de usar en un formulari
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|La columna de la tabla de origen de datos que desea mostrar en el control. En el escenario anterior, se trata de `"Name"` (para establecer en el código, utilice las comillas).|  
     |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|La columna de la tabla de origen de datos que contiene la información almacenada. En el escenario anterior, se trata de `"ID"` (para establecer en el código, utilice las comillas).|  
   
-5.  En un procedimiento llame al método <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> de la clase <xref:System.Windows.Forms.ControlBindingsCollection> para enlazar la propiedad <xref:System.Windows.Forms.ListControl.SelectedValue%2A> del control a la tabla que registra la entrada de formulario. También puede hacer esto en el diseñador en lugar de en el código, accediendo del control <xref:System.Windows.Forms.Control.DataBindings%2A> propiedad en el **propiedades** ventana. En el escenario anterior, se trata de `OrderDetailsTable`, y la columna es `"ItemID"`.  
+5.  En un procedimiento llame al método <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> de la clase <xref:System.Windows.Forms.ControlBindingsCollection> para enlazar la propiedad <xref:System.Windows.Forms.ListControl.SelectedValue%2A> del control a la tabla que registra la entrada de formulario. También puede hacerlo en el diseñador en lugar de en el código, accediendo el control <xref:System.Windows.Forms.Control.DataBindings%2A> propiedad en el **propiedades** ventana. En el escenario anterior, se trata de `OrderDetailsTable`, y la columna es `"ItemID"`.  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  

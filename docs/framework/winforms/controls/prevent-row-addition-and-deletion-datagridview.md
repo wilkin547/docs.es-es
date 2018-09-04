@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data entry [Windows Forms], disabling in grids
 - data grids [Windows Forms], disabling data entry
 ms.assetid: ef9539ce-539b-404e-84b6-ac282b64b88c
-ms.openlocfilehash: abf09652d4cbbf9f112192931c72afa0caaf9f97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6263c92e6a981983c19e9d7f2357c581bee5ec07
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534999"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660277"
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control"></a>Cómo: Impedir la adición y eliminación de filas en el control DataGridView de formularios Windows Forms
 En algunos casos, querrá impedir que los usuarios incluyan nuevas filas de datos o eliminen las filas existentes en el control <xref:System.Windows.Forms.DataGridView>. La propiedad <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> indica si la fila para nuevos registros está presente en la parte inferior del control, mientras que la propiedad <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> indica si las filas se pueden quitar. El ejemplo de código siguiente utiliza estas propiedades y también establece la propiedad <xref:System.Windows.Forms.DataGridView.ReadOnly%2A> para que el control sea únicamente de solo lectura.  
   
- Visual Studio es compatible con esta tarea.  Consulte también [Cómo: impedir la adición de fila y eliminación en el Control Windows Forms DataGridView mediante el diseñador](http://msdn.microsoft.com/library/k5c88sw3\(v=vs.110\)).  
+ Visual Studio es compatible con esta tarea.  Consulte también [Cómo: impedir la adición de fila y la eliminación de la Windows Forms DataGridView Control mediante el diseñador](https://msdn.microsoft.com/library/k5c88sw3\(v=vs.110\)).  
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#090](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#090)]

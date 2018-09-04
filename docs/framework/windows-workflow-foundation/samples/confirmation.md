@@ -3,11 +3,11 @@ title: Confirmación
 ms.date: 03/30/2017
 ms.assetid: 8637aeaf-ac9e-49b8-93f4-da15dee45277
 ms.openlocfilehash: caa712aa52da01ce44335a361fd6c9f5215316bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419495"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661001"
 ---
 # <a name="confirmation"></a>Confirmación
 En este ejemplo se muestran cuatro escenarios comunes en torno al uso de <xref:System.Activities.Statements.CompensableActivity> y la confirmación. En el ejemplo se ejecutan cuatro flujos de trabajo para mostrar la confirmación. Este ejemplo está disponible en versiones declarativa e imperativa.  
