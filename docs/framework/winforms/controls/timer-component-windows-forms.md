@@ -6,36 +6,36 @@ helpviewer_keywords:
 - timers
 - timers [Windows Forms], creating
 ms.assetid: 6700e534-6382-43d5-98ed-14205435fff7
-ms.openlocfilehash: 77ff87bcb8c325e87564dfbadf87729ed8a28209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a00bfa0772273f9374d292e27f5fba174172ca6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537855"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499879"
 ---
-# <a name="timer-component-windows-forms"></a><span data-ttu-id="2ac94-102">Timer (Componente, formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="2ac94-102">Timer Component (Windows Forms)</span></span>
-<span data-ttu-id="2ac94-103">El componente <xref:System.Windows.Forms.Timer> de Windows Forms produce un evento a intervalos regulares.</span><span class="sxs-lookup"><span data-stu-id="2ac94-103">The Windows Forms <xref:System.Windows.Forms.Timer> is a component that raises an event at regular intervals.</span></span> <span data-ttu-id="2ac94-104">Este componente está diseñado para un entorno de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="2ac94-104">This component is designed for a Windows Forms environment.</span></span>  
+# <a name="timer-component-windows-forms"></a><span data-ttu-id="eab22-102">Timer (Componente, formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="eab22-102">Timer Component (Windows Forms)</span></span>
+<span data-ttu-id="eab22-103">El componente <xref:System.Windows.Forms.Timer> de Windows Forms produce un evento a intervalos regulares.</span><span class="sxs-lookup"><span data-stu-id="eab22-103">The Windows Forms <xref:System.Windows.Forms.Timer> is a component that raises an event at regular intervals.</span></span> <span data-ttu-id="eab22-104">Este componente está diseñado para un entorno de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="eab22-104">This component is designed for a Windows Forms environment.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2ac94-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="2ac94-105">In This Section</span></span>  
- [<span data-ttu-id="2ac94-106">Información general sobre el componente Timer</span><span class="sxs-lookup"><span data-stu-id="2ac94-106">Timer Component Overview</span></span>](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)  
- <span data-ttu-id="2ac94-107">Presenta los conceptos generales del componente <xref:System.Windows.Forms.Timer>, que le permite configurar la aplicación para responder a eventos periódicos.</span><span class="sxs-lookup"><span data-stu-id="2ac94-107">Introduces the general concepts of the <xref:System.Windows.Forms.Timer> component, which allows you to set up your application to respond to periodic events.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="eab22-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="eab22-105">In This Section</span></span>  
+ [<span data-ttu-id="eab22-106">Información general sobre el componente Timer</span><span class="sxs-lookup"><span data-stu-id="eab22-106">Timer Component Overview</span></span>](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)  
+ <span data-ttu-id="eab22-107">Presenta los conceptos generales del componente <xref:System.Windows.Forms.Timer>, que le permite configurar la aplicación para responder a eventos periódicos.</span><span class="sxs-lookup"><span data-stu-id="eab22-107">Introduces the general concepts of the <xref:System.Windows.Forms.Timer> component, which allows you to set up your application to respond to periodic events.</span></span>  
   
- [<span data-ttu-id="2ac94-108">Limitaciones de la propiedad Interval del componente Timer de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2ac94-108">Limitations of the Windows Forms Timer Component's Interval Property</span></span>](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)  
- <span data-ttu-id="2ac94-109">Describe las limitaciones conocidas del intervalo del temporizador que pueden afectar al modo de utilización.</span><span class="sxs-lookup"><span data-stu-id="2ac94-109">Describes known limitations of the timer's interval that may affect how you can use it.</span></span>  
+ [<span data-ttu-id="eab22-108">Limitaciones de la propiedad Interval del componente Timer de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="eab22-108">Limitations of the Windows Forms Timer Component's Interval Property</span></span>](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)  
+ <span data-ttu-id="eab22-109">Describe las limitaciones conocidas del intervalo del temporizador que pueden afectar al modo de utilización.</span><span class="sxs-lookup"><span data-stu-id="eab22-109">Describes known limitations of the timer's interval that may affect how you can use it.</span></span>  
   
- [<span data-ttu-id="2ac94-110">Ejecutar procedimientos a intervalos establecidos con el componente Timer de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2ac94-110">How to: Run Procedures at Set Intervals with the Windows Forms Timer Component</span></span>](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
- <span data-ttu-id="2ac94-111">Describe cómo reaccionar a los intervalos cronometrados en las aplicaciones para Windows.</span><span class="sxs-lookup"><span data-stu-id="2ac94-111">Describes how to react to timed intervals in your Windows-based applications.</span></span>  
+ [<span data-ttu-id="eab22-110">Ejecutar procedimientos a intervalos establecidos con el componente Timer de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="eab22-110">How to: Run Procedures at Set Intervals with the Windows Forms Timer Component</span></span>](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
+ <span data-ttu-id="eab22-111">Describe cómo reaccionar a los intervalos cronometrados en las aplicaciones para Windows.</span><span class="sxs-lookup"><span data-stu-id="eab22-111">Describes how to react to timed intervals in your Windows-based applications.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="2ac94-112">Referencia</span><span class="sxs-lookup"><span data-stu-id="2ac94-112">Reference</span></span>  
- <span data-ttu-id="2ac94-113">Clase <xref:System.Windows.Forms.Timer?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="2ac94-113"><xref:System.Windows.Forms.Timer?displayProperty=nameWithType> class</span></span>  
- <span data-ttu-id="2ac94-114">Proporciona información de referencia acerca de la clase, utilizada por los temporizadores de Windows Forms y sus miembros.</span><span class="sxs-lookup"><span data-stu-id="2ac94-114">Provides reference information on the class, used for Windows Forms timers, and its members.</span></span>  
+## <a name="reference"></a><span data-ttu-id="eab22-112">Referencia</span><span class="sxs-lookup"><span data-stu-id="eab22-112">Reference</span></span>  
+ <span data-ttu-id="eab22-113">Clase <xref:System.Windows.Forms.Timer?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="eab22-113"><xref:System.Windows.Forms.Timer?displayProperty=nameWithType> class</span></span>  
+ <span data-ttu-id="eab22-114">Proporciona información de referencia acerca de la clase, utilizada por los temporizadores de Windows Forms y sus miembros.</span><span class="sxs-lookup"><span data-stu-id="eab22-114">Provides reference information on the class, used for Windows Forms timers, and its members.</span></span>  
   
- <span data-ttu-id="2ac94-115">Clase <xref:System.Timers.Timer?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="2ac94-115"><xref:System.Timers.Timer?displayProperty=nameWithType> class</span></span>  
- <span data-ttu-id="2ac94-116">Proporciona información de referencia acerca de la clase <xref:System.Timers.Timer?displayProperty=nameWithType> utilizada por los temporizadores basados en servidor.</span><span class="sxs-lookup"><span data-stu-id="2ac94-116">Provides reference information on the <xref:System.Timers.Timer?displayProperty=nameWithType> class that is used by server-based timers.</span></span>  
+ <span data-ttu-id="eab22-115">Clase <xref:System.Timers.Timer?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="eab22-115"><xref:System.Timers.Timer?displayProperty=nameWithType> class</span></span>  
+ <span data-ttu-id="eab22-116">Proporciona información de referencia acerca de la clase <xref:System.Timers.Timer?displayProperty=nameWithType> utilizada por los temporizadores basados en servidor.</span><span class="sxs-lookup"><span data-stu-id="eab22-116">Provides reference information on the <xref:System.Timers.Timer?displayProperty=nameWithType> class that is used by server-based timers.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="2ac94-117">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="2ac94-117">Related Sections</span></span>  
- [<span data-ttu-id="2ac94-118">Controles que se usan en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2ac94-118">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="2ac94-119">Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.</span><span class="sxs-lookup"><span data-stu-id="2ac94-119">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="eab22-117">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="eab22-117">Related Sections</span></span>  
+ [<span data-ttu-id="eab22-118">Controles que se usan en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="eab22-118">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="eab22-119">Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.</span><span class="sxs-lookup"><span data-stu-id="eab22-119">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- [<span data-ttu-id="2ac94-120">Control Timer para usuarios de Visual Basic 6.0</span><span class="sxs-lookup"><span data-stu-id="2ac94-120">Timer Control for Visual Basic 6.0 Users</span></span>](http://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
- <span data-ttu-id="2ac94-121">Describe cómo ha cambiado la funcionalidad del temporizador en Visual Basic en comparación con versiones anteriores.</span><span class="sxs-lookup"><span data-stu-id="2ac94-121">Describes how timer functionality has changed in Visual Basic as compared to previous versions.</span></span>
+ [<span data-ttu-id="eab22-120">Control Timer para usuarios de Visual Basic 6.0</span><span class="sxs-lookup"><span data-stu-id="eab22-120">Timer Control for Visual Basic 6.0 Users</span></span>](https://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
+ <span data-ttu-id="eab22-121">Describe cómo ha cambiado la funcionalidad del temporizador en Visual Basic en comparación con versiones anteriores.</span><span class="sxs-lookup"><span data-stu-id="eab22-121">Describes how timer functionality has changed in Visual Basic as compared to previous versions.</span></span>
