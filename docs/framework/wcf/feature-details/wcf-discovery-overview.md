@@ -3,11 +3,11 @@ title: Información general de Detección de WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
 ms.openlocfilehash: 24d758502e360a8368be25c506b8648b12a3eb20
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468344"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565072"
 ---
 # <a name="wcf-discovery-overview"></a>Información general de Detección de WCF
 Las API de detección proporcionan un modelo de programación unificado para la detección y la publicación dinámica de servicios Web mediante el protocolo WS-Discovery. Estas API permiten a los servicios publicarse y a los clientes encontrar los servicios publicados. Una vez que un servicio es reconocible, tiene la capacidad de enviar mensajes de anuncio, así como realizar escuchas y responder a solicitudes de detección. Los servicios reconocibles pueden enviar mensajes de Hola para anunciar su llegada a la red, así como mensajes de Adiós para anunciar su salida de la red. Para encontrar un servicio, los clientes envían a una solicitud `Probe` que contiene criterios específicos, como tipos de contratos de servicios, palabras clave y ámbito de red. Los servicios reciben la solicitud `Probe` y determinan si coinciden con los criterios. Si un servicio coincide, responde devolviendo un mensaje `ProbeMatch` al cliente con la información necesaria para ponerse en contacto con el servicio. Los clientes también pueden enviar solicitudes `Resolve` para buscar servicios que pueden haber cambiado la dirección de extremo. Los servicios coincidentes responden a las solicitudes `Resolve` devolviendo un mensaje `ResolveMatch` al cliente.  
