@@ -6,134 +6,134 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
 ms.openlocfilehash: 9ece2fe051855d0fd39556f56a4343ead2c437bc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400495"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565803"
 ---
-# <a name="wcf-data-services-45"></a><span data-ttu-id="f36ca-102">WCF Data Services 4.5</span><span class="sxs-lookup"><span data-stu-id="f36ca-102">WCF Data Services 4.5</span></span>
+# <a name="wcf-data-services-45"></a><span data-ttu-id="11589-102">WCF Data Services 4.5</span><span class="sxs-lookup"><span data-stu-id="11589-102">WCF Data Services 4.5</span></span>
 
-<span data-ttu-id="f36ca-103">WCF Data Services (anteriormente conocido como "ADO.NET Data Services") es un componente de .NET Framework que permite crear servicios que utilizan el [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para exponer y consumir datos a través de Internet o una intranet mediante la semántica de [ transferencia de estado representacional (REST)](https://go.microsoft.com/fwlink/?LinkId=113919).</span><span class="sxs-lookup"><span data-stu-id="f36ca-103">WCF Data Services (formerly known as "ADO.NET Data Services") is a component of the .NET Framework that enables you to create services that use the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] to expose and consume data over the Web or intranet by using the semantics of [representational state transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919).</span></span> <span data-ttu-id="f36ca-104">OData expone los datos como recursos direccionables a través de identificadores uniformes de recursos (URI).</span><span class="sxs-lookup"><span data-stu-id="f36ca-104">OData exposes data as resources that are addressable by URIs.</span></span> <span data-ttu-id="f36ca-105">Para tener acceso a los datos y cambiarlos se utilizan los verbos HTTP estándar GET, PUT, POST y DELETE.</span><span class="sxs-lookup"><span data-stu-id="f36ca-105">Data is accessed and changed by using standard HTTP verbs of GET, PUT, POST, and DELETE.</span></span> <span data-ttu-id="f36ca-106">OData utiliza las convenciones de entidad-relación de la [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) para exponer los recursos como conjuntos de entidades que se relacionan mediante asociaciones.</span><span class="sxs-lookup"><span data-stu-id="f36ca-106">OData uses the entity-relationship conventions of the [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) to expose resources as sets of entities that are related by associations.</span></span>
+<span data-ttu-id="11589-103">WCF Data Services (anteriormente conocido como "ADO.NET Data Services") es un componente de .NET Framework que permite crear servicios que utilizan el [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para exponer y consumir datos a través de Internet o una intranet mediante la semántica de [ transferencia de estado representacional (REST)](https://go.microsoft.com/fwlink/?LinkId=113919).</span><span class="sxs-lookup"><span data-stu-id="11589-103">WCF Data Services (formerly known as "ADO.NET Data Services") is a component of the .NET Framework that enables you to create services that use the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] to expose and consume data over the Web or intranet by using the semantics of [representational state transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919).</span></span> <span data-ttu-id="11589-104">OData expone los datos como recursos direccionables a través de identificadores uniformes de recursos (URI).</span><span class="sxs-lookup"><span data-stu-id="11589-104">OData exposes data as resources that are addressable by URIs.</span></span> <span data-ttu-id="11589-105">Para tener acceso a los datos y cambiarlos se utilizan los verbos HTTP estándar GET, PUT, POST y DELETE.</span><span class="sxs-lookup"><span data-stu-id="11589-105">Data is accessed and changed by using standard HTTP verbs of GET, PUT, POST, and DELETE.</span></span> <span data-ttu-id="11589-106">OData utiliza las convenciones de entidad-relación de la [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) para exponer los recursos como conjuntos de entidades que se relacionan mediante asociaciones.</span><span class="sxs-lookup"><span data-stu-id="11589-106">OData uses the entity-relationship conventions of the [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) to expose resources as sets of entities that are related by associations.</span></span>
 
-<span data-ttu-id="f36ca-107">WCF Data Services usa el Protocolo OData para direccionar y actualizar los recursos.</span><span class="sxs-lookup"><span data-stu-id="f36ca-107">WCF Data Services uses the OData protocol for addressing and updating resources.</span></span> <span data-ttu-id="f36ca-108">De este modo, puede tener acceso a estos servicios desde cualquier cliente que es compatible con OData.</span><span class="sxs-lookup"><span data-stu-id="f36ca-108">In this way, you can access these services from any client that supports OData.</span></span> <span data-ttu-id="f36ca-109">OData le permite solicitar y escribir datos a los recursos mediante el uso de formatos de transferencia conocidos: Atom, un conjunto de estándares para intercambiar y actualizar datos como XML y JavaScript Object Notation (JSON), un formato de intercambio de datos basado en texto muy usado en AJAX aplicación.</span><span class="sxs-lookup"><span data-stu-id="f36ca-109">OData enables you to request and write data to resources by using well-known transfer formats: Atom, a set of standards for exchanging and updating data as XML, and JavaScript Object Notation (JSON), a text-based data exchange format used extensively in AJAX application.</span></span>
+<span data-ttu-id="11589-107">WCF Data Services usa el Protocolo OData para direccionar y actualizar los recursos.</span><span class="sxs-lookup"><span data-stu-id="11589-107">WCF Data Services uses the OData protocol for addressing and updating resources.</span></span> <span data-ttu-id="11589-108">De este modo, puede tener acceso a estos servicios desde cualquier cliente que es compatible con OData.</span><span class="sxs-lookup"><span data-stu-id="11589-108">In this way, you can access these services from any client that supports OData.</span></span> <span data-ttu-id="11589-109">OData le permite solicitar y escribir datos a los recursos mediante el uso de formatos de transferencia conocidos: Atom, un conjunto de estándares para intercambiar y actualizar datos como XML y JavaScript Object Notation (JSON), un formato de intercambio de datos basado en texto muy usado en AJAX aplicación.</span><span class="sxs-lookup"><span data-stu-id="11589-109">OData enables you to request and write data to resources by using well-known transfer formats: Atom, a set of standards for exchanging and updating data as XML, and JavaScript Object Notation (JSON), a text-based data exchange format used extensively in AJAX application.</span></span>
 
-<span data-ttu-id="f36ca-110">WCF Data Services puede exponer datos procedentes de diversos orígenes como fuentes de OData.</span><span class="sxs-lookup"><span data-stu-id="f36ca-110">WCF Data Services can expose data that originates from various sources as OData feeds.</span></span> <span data-ttu-id="f36ca-111">Herramientas de Visual Studio facilitan la creación de un servicio basado en OData mediante el uso de un modelo de datos de ADO.NET Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="f36ca-111">Visual Studio tools make it easier for you to create an OData-based service by using an ADO.NET Entity Framework data model.</span></span> <span data-ttu-id="f36ca-112">También puede crear fuentes de OData basadas en clases de common language runtime (CLR) y los datos incluso en tiempo de ejecución o sin tipo.</span><span class="sxs-lookup"><span data-stu-id="f36ca-112">You can also create OData feeds based on common language runtime (CLR) classes and even late-bound or un-typed data.</span></span>
+<span data-ttu-id="11589-110">WCF Data Services puede exponer datos procedentes de diversos orígenes como fuentes de OData.</span><span class="sxs-lookup"><span data-stu-id="11589-110">WCF Data Services can expose data that originates from various sources as OData feeds.</span></span> <span data-ttu-id="11589-111">Herramientas de Visual Studio facilitan la creación de un servicio basado en OData mediante el uso de un modelo de datos de ADO.NET Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="11589-111">Visual Studio tools make it easier for you to create an OData-based service by using an ADO.NET Entity Framework data model.</span></span> <span data-ttu-id="11589-112">También puede crear fuentes de OData basadas en clases de common language runtime (CLR) y los datos incluso en tiempo de ejecución o sin tipo.</span><span class="sxs-lookup"><span data-stu-id="11589-112">You can also create OData feeds based on common language runtime (CLR) classes and even late-bound or un-typed data.</span></span>
 
-<span data-ttu-id="f36ca-113">WCF Data Services también incluye un conjunto de bibliotecas de cliente, uno para las aplicaciones cliente de .NET Framework generales y otro específicamente para las aplicaciones basadas en Silverlight.</span><span class="sxs-lookup"><span data-stu-id="f36ca-113">WCF Data Services also includes a set of client libraries, one for general .NET Framework client applications and another specifically for Silverlight-based applications.</span></span> <span data-ttu-id="f36ca-114">Estas bibliotecas cliente proporcionan un modelo de programación basado en objetos cuando tiene acceso a fuentes de OData desde entornos como .NET Framework y Silverlight.</span><span class="sxs-lookup"><span data-stu-id="f36ca-114">These client libraries provide an object-based programming model when you access an OData feed from environments such as the .NET Framework and Silverlight.</span></span>
+<span data-ttu-id="11589-113">WCF Data Services también incluye un conjunto de bibliotecas de cliente, uno para las aplicaciones cliente de .NET Framework generales y otro específicamente para las aplicaciones basadas en Silverlight.</span><span class="sxs-lookup"><span data-stu-id="11589-113">WCF Data Services also includes a set of client libraries, one for general .NET Framework client applications and another specifically for Silverlight-based applications.</span></span> <span data-ttu-id="11589-114">Estas bibliotecas cliente proporcionan un modelo de programación basado en objetos cuando tiene acceso a fuentes de OData desde entornos como .NET Framework y Silverlight.</span><span class="sxs-lookup"><span data-stu-id="11589-114">These client libraries provide an object-based programming model when you access an OData feed from environments such as the .NET Framework and Silverlight.</span></span>
 
-## <a name="where-should-i-start"></a><span data-ttu-id="f36ca-115">¿Por dónde empiezo?</span><span class="sxs-lookup"><span data-stu-id="f36ca-115">Where Should I Start?</span></span>
+## <a name="where-should-i-start"></a><span data-ttu-id="11589-115">¿Por dónde empiezo?</span><span class="sxs-lookup"><span data-stu-id="11589-115">Where Should I Start?</span></span>
 
-<span data-ttu-id="f36ca-116">Dependiendo de sus intereses, considere la posibilidad de introducción a WCF Data Services en uno de los temas siguientes.</span><span class="sxs-lookup"><span data-stu-id="f36ca-116">Depending on your interests, consider getting started with WCF Data Services in one of the following topics.</span></span>
+<span data-ttu-id="11589-116">Dependiendo de sus intereses, considere la posibilidad de introducción a WCF Data Services en uno de los temas siguientes.</span><span class="sxs-lookup"><span data-stu-id="11589-116">Depending on your interests, consider getting started with WCF Data Services in one of the following topics.</span></span>
 
-<span data-ttu-id="f36ca-117">Quiero comenzar de inmediato…</span><span class="sxs-lookup"><span data-stu-id="f36ca-117">I want to jump right in...</span></span>
+<span data-ttu-id="11589-117">Quiero comenzar de inmediato…</span><span class="sxs-lookup"><span data-stu-id="11589-117">I want to jump right in...</span></span>
 
--   [<span data-ttu-id="f36ca-118">Inicio rápido</span><span class="sxs-lookup"><span data-stu-id="f36ca-118">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+-   [<span data-ttu-id="11589-118">Inicio rápido</span><span class="sxs-lookup"><span data-stu-id="11589-118">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
 
--   [<span data-ttu-id="f36ca-119">Introducción</span><span class="sxs-lookup"><span data-stu-id="f36ca-119">Getting Started</span></span>](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+-   [<span data-ttu-id="11589-119">Introducción</span><span class="sxs-lookup"><span data-stu-id="11589-119">Getting Started</span></span>](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 
--   [<span data-ttu-id="f36ca-120">Inicio rápido de Silverlight</span><span class="sxs-lookup"><span data-stu-id="f36ca-120">Silverlight Quickstart</span></span>](https://go.microsoft.com/fwlink/?LinkID=192782)
+-   [<span data-ttu-id="11589-120">Inicio rápido de Silverlight</span><span class="sxs-lookup"><span data-stu-id="11589-120">Silverlight Quickstart</span></span>](https://go.microsoft.com/fwlink/?LinkID=192782)
 
--   [<span data-ttu-id="f36ca-121">Inicio rápido de Silverlight para desarrollo de Windows Phone</span><span class="sxs-lookup"><span data-stu-id="f36ca-121">Silverlight Quickstart for Windows Phone Development</span></span>](https://go.microsoft.com/fwlink/?LinkID=214535)
+-   [<span data-ttu-id="11589-121">Inicio rápido de Silverlight para desarrollo de Windows Phone</span><span class="sxs-lookup"><span data-stu-id="11589-121">Silverlight Quickstart for Windows Phone Development</span></span>](https://go.microsoft.com/fwlink/?LinkID=214535)
 
-<span data-ttu-id="f36ca-122">Deseo ver algo de código...</span><span class="sxs-lookup"><span data-stu-id="f36ca-122">Just show me some code...</span></span>
+<span data-ttu-id="11589-122">Deseo ver algo de código...</span><span class="sxs-lookup"><span data-stu-id="11589-122">Just show me some code...</span></span>
 
--   [<span data-ttu-id="f36ca-123">Inicio rápido</span><span class="sxs-lookup"><span data-stu-id="f36ca-123">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+-   [<span data-ttu-id="11589-123">Inicio rápido</span><span class="sxs-lookup"><span data-stu-id="11589-123">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
 
--   [<span data-ttu-id="f36ca-124">Cómo: ejecutar consultas de servicios de datos</span><span class="sxs-lookup"><span data-stu-id="f36ca-124">How to: Execute Data Service Queries</span></span>](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
+-   [<span data-ttu-id="11589-124">Cómo: ejecutar consultas de servicios de datos</span><span class="sxs-lookup"><span data-stu-id="11589-124">How to: Execute Data Service Queries</span></span>](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
 
--   [<span data-ttu-id="f36ca-125">Cómo: enlazar datos a elementos de Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="f36ca-125">How to: Bind Data to Windows Presentation Foundation Elements</span></span>](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+-   [<span data-ttu-id="11589-125">Cómo: enlazar datos a elementos de Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="11589-125">How to: Bind Data to Windows Presentation Foundation Elements</span></span>](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
 
-<span data-ttu-id="f36ca-126">Quiero saber más sobre OData...</span><span class="sxs-lookup"><span data-stu-id="f36ca-126">I want to know more about OData...</span></span>
+<span data-ttu-id="11589-126">Quiero saber más sobre OData...</span><span class="sxs-lookup"><span data-stu-id="11589-126">I want to know more about OData...</span></span>
 
- -   [<span data-ttu-id="f36ca-127">Notas del producto: introducción a OData</span><span class="sxs-lookup"><span data-stu-id="f36ca-127">Whitepaper: Introducing OData</span></span>](https://go.microsoft.com/fwlink/?LinkId=220867)
+ -   [<span data-ttu-id="11589-127">Notas del producto: introducción a OData</span><span class="sxs-lookup"><span data-stu-id="11589-127">Whitepaper: Introducing OData</span></span>](https://go.microsoft.com/fwlink/?LinkId=220867)
 
--   [<span data-ttu-id="f36ca-128">Sitio web de Open Data Protocol</span><span class="sxs-lookup"><span data-stu-id="f36ca-128">Open Data Protocol Web site</span></span>](https://go.microsoft.com/fwlink/?LinkID=184554)
+-   [<span data-ttu-id="11589-128">Sitio web de Open Data Protocol</span><span class="sxs-lookup"><span data-stu-id="11589-128">Open Data Protocol Web site</span></span>](https://go.microsoft.com/fwlink/?LinkID=184554)
 
--   [<span data-ttu-id="f36ca-129">OData: SDK</span><span class="sxs-lookup"><span data-stu-id="f36ca-129">OData: SDK</span></span>](https://go.microsoft.com/fwlink/?LinkID=185248)
+-   [<span data-ttu-id="11589-129">OData: SDK</span><span class="sxs-lookup"><span data-stu-id="11589-129">OData: SDK</span></span>](https://go.microsoft.com/fwlink/?LinkID=185248)
 
--   [<span data-ttu-id="f36ca-130">OData: preguntas más frecuentes</span><span class="sxs-lookup"><span data-stu-id="f36ca-130">OData: Frequently Asked Questions</span></span>](https://go.microsoft.com/fwlink/?LinkId=185867)
+-   [<span data-ttu-id="11589-130">OData: preguntas más frecuentes</span><span class="sxs-lookup"><span data-stu-id="11589-130">OData: Frequently Asked Questions</span></span>](https://go.microsoft.com/fwlink/?LinkId=185867)
 
-<span data-ttu-id="f36ca-131">Deseo ver algunos vídeos …</span><span class="sxs-lookup"><span data-stu-id="f36ca-131">I want to watch some videos...</span></span>
+<span data-ttu-id="11589-131">Deseo ver algunos vídeos …</span><span class="sxs-lookup"><span data-stu-id="11589-131">I want to watch some videos...</span></span>
 
--   [<span data-ttu-id="f36ca-132">Guía para principiantes de Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="f36ca-132">Beginner's Guide to WCF Data Services</span></span>](https://go.microsoft.com/fwlink/?LinkId=220864)
+-   [<span data-ttu-id="11589-132">Guía para principiantes de Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="11589-132">Beginner's Guide to WCF Data Services</span></span>](https://go.microsoft.com/fwlink/?LinkId=220864)
 
--   [<span data-ttu-id="f36ca-133">Vídeos para desarrolladores de Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="f36ca-133">WCF Data Services Developer Videos</span></span>](https://go.microsoft.com/fwlink/?LinkId=220861)
+-   [<span data-ttu-id="11589-133">Vídeos para desarrolladores de Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="11589-133">WCF Data Services Developer Videos</span></span>](https://go.microsoft.com/fwlink/?LinkId=220861)
 
--   [<span data-ttu-id="f36ca-134">OData: sitio web para desarrolladores</span><span class="sxs-lookup"><span data-stu-id="f36ca-134">OData: Developers Web site</span></span>](https://go.microsoft.com/fwlink/?LinkId=185866)
+-   [<span data-ttu-id="11589-134">OData: sitio web para desarrolladores</span><span class="sxs-lookup"><span data-stu-id="11589-134">OData: Developers Web site</span></span>](https://go.microsoft.com/fwlink/?LinkId=185866)
 
-<span data-ttu-id="f36ca-135">Deseo ver ejemplos completos...</span><span class="sxs-lookup"><span data-stu-id="f36ca-135">I want to see end-to-end samples...</span></span>
+<span data-ttu-id="11589-135">Deseo ver ejemplos completos...</span><span class="sxs-lookup"><span data-stu-id="11589-135">I want to see end-to-end samples...</span></span>
 
--   [<span data-ttu-id="f36ca-136">Ejemplos de documentación de Servicios de datos de WCF en la galería de ejemplos de MSDN</span><span class="sxs-lookup"><span data-stu-id="f36ca-136">WCF Data Services Documentation Samples on MSDN Samples Gallery</span></span>](https://go.microsoft.com/fwlink/?LinkID=220865)
+-   [<span data-ttu-id="11589-136">Ejemplos de documentación de Servicios de datos de WCF en la galería de ejemplos de MSDN</span><span class="sxs-lookup"><span data-stu-id="11589-136">WCF Data Services Documentation Samples on MSDN Samples Gallery</span></span>](https://go.microsoft.com/fwlink/?LinkID=220865)
 
--   [<span data-ttu-id="f36ca-137">Otros ejemplos de Servicios de datos de WCF en la galería de ejemplos de MSDN</span><span class="sxs-lookup"><span data-stu-id="f36ca-137">Other WCF Data Services Samples on MSDN Samples Gallery</span></span>](https://go.microsoft.com/fwlink/?LinkId=220866)
+-   [<span data-ttu-id="11589-137">Otros ejemplos de Servicios de datos de WCF en la galería de ejemplos de MSDN</span><span class="sxs-lookup"><span data-stu-id="11589-137">Other WCF Data Services Samples on MSDN Samples Gallery</span></span>](https://go.microsoft.com/fwlink/?LinkId=220866)
 
--   [<span data-ttu-id="f36ca-138">OData: SDK</span><span class="sxs-lookup"><span data-stu-id="f36ca-138">OData: SDK</span></span>](https://go.microsoft.com/fwlink/?LinkID=185248)
+-   [<span data-ttu-id="11589-138">OData: SDK</span><span class="sxs-lookup"><span data-stu-id="11589-138">OData: SDK</span></span>](https://go.microsoft.com/fwlink/?LinkID=185248)
 
-<span data-ttu-id="f36ca-139">¿Cómo se integra con Visual Studio?</span><span class="sxs-lookup"><span data-stu-id="f36ca-139">How does it integrate with Visual Studio?</span></span>
+<span data-ttu-id="11589-139">¿Cómo se integra con Visual Studio?</span><span class="sxs-lookup"><span data-stu-id="11589-139">How does it integrate with Visual Studio?</span></span>
 
--   [<span data-ttu-id="f36ca-140">Generar la biblioteca cliente del servicio de datos</span><span class="sxs-lookup"><span data-stu-id="f36ca-140">Generating the Data Service Client Library</span></span>](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
+-   [<span data-ttu-id="11589-140">Generar la biblioteca cliente del servicio de datos</span><span class="sxs-lookup"><span data-stu-id="11589-140">Generating the Data Service Client Library</span></span>](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
 
--   [<span data-ttu-id="f36ca-141">Creación del servicio de datos</span><span class="sxs-lookup"><span data-stu-id="f36ca-141">Creating the Data Service</span></span>](../../../../docs/framework/data/wcf/creating-the-data-service.md)
+-   [<span data-ttu-id="11589-141">Creación del servicio de datos</span><span class="sxs-lookup"><span data-stu-id="11589-141">Creating the Data Service</span></span>](../../../../docs/framework/data/wcf/creating-the-data-service.md)
 
--   [<span data-ttu-id="f36ca-142">Proveedor de Entity Framework</span><span class="sxs-lookup"><span data-stu-id="f36ca-142">Entity Framework Provider</span></span>](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+-   [<span data-ttu-id="11589-142">Proveedor de Entity Framework</span><span class="sxs-lookup"><span data-stu-id="11589-142">Entity Framework Provider</span></span>](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
 
-<span data-ttu-id="f36ca-143">¿Qué me permite hacer?</span><span class="sxs-lookup"><span data-stu-id="f36ca-143">What can I do with it?</span></span>
+<span data-ttu-id="11589-143">¿Qué me permite hacer?</span><span class="sxs-lookup"><span data-stu-id="11589-143">What can I do with it?</span></span>
 
--   [<span data-ttu-id="f36ca-144">Información general</span><span class="sxs-lookup"><span data-stu-id="f36ca-144">Overview</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
+-   [<span data-ttu-id="11589-144">Información general</span><span class="sxs-lookup"><span data-stu-id="11589-144">Overview</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
 
--   [<span data-ttu-id="f36ca-145">Notas del producto: introducción a OData</span><span class="sxs-lookup"><span data-stu-id="f36ca-145">Whitepaper: Introducing OData</span></span>](https://go.microsoft.com/fwlink/?LinkId=220867)
+-   [<span data-ttu-id="11589-145">Notas del producto: introducción a OData</span><span class="sxs-lookup"><span data-stu-id="11589-145">Whitepaper: Introducing OData</span></span>](https://go.microsoft.com/fwlink/?LinkId=220867)
 
--   [<span data-ttu-id="f36ca-146">Escenarios de aplicación</span><span class="sxs-lookup"><span data-stu-id="f36ca-146">Application Scenarios</span></span>](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)
+-   [<span data-ttu-id="11589-146">Escenarios de aplicación</span><span class="sxs-lookup"><span data-stu-id="11589-146">Application Scenarios</span></span>](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)
 
-<span data-ttu-id="f36ca-147">Deseo usar Silverlight …</span><span class="sxs-lookup"><span data-stu-id="f36ca-147">I want to use Silverlight...</span></span>
+<span data-ttu-id="11589-147">Deseo usar Silverlight …</span><span class="sxs-lookup"><span data-stu-id="11589-147">I want to use Silverlight...</span></span>
 
--   [<span data-ttu-id="f36ca-148">Inicio rápido de Silverlight</span><span class="sxs-lookup"><span data-stu-id="f36ca-148">Silverlight Quickstart</span></span>](https://go.microsoft.com/fwlink/?LinkID=192782)
+-   [<span data-ttu-id="11589-148">Inicio rápido de Silverlight</span><span class="sxs-lookup"><span data-stu-id="11589-148">Silverlight Quickstart</span></span>](https://go.microsoft.com/fwlink/?LinkID=192782)
 
--   [<span data-ttu-id="f36ca-149">Servicios de datos de WCF (Silverlight)</span><span class="sxs-lookup"><span data-stu-id="f36ca-149">WCF Data Services (Silverlight)</span></span>](https://go.microsoft.com/fwlink/?LinkID=143149)
+-   [<span data-ttu-id="11589-149">Servicios de datos de WCF (Silverlight)</span><span class="sxs-lookup"><span data-stu-id="11589-149">WCF Data Services (Silverlight)</span></span>](https://go.microsoft.com/fwlink/?LinkID=143149)
 
--   [<span data-ttu-id="f36ca-150">Introducción a Silverlight</span><span class="sxs-lookup"><span data-stu-id="f36ca-150">Getting Started with Silverlight</span></span>](https://go.microsoft.com/fwlink/?LinkId=148366)
+-   [<span data-ttu-id="11589-150">Introducción a Silverlight</span><span class="sxs-lookup"><span data-stu-id="11589-150">Getting Started with Silverlight</span></span>](https://go.microsoft.com/fwlink/?LinkId=148366)
 
-<span data-ttu-id="f36ca-151">Deseo usar LINQ …</span><span class="sxs-lookup"><span data-stu-id="f36ca-151">I want to use LINQ...</span></span>
+<span data-ttu-id="11589-151">Deseo usar LINQ …</span><span class="sxs-lookup"><span data-stu-id="11589-151">I want to use LINQ...</span></span>
 
--   [<span data-ttu-id="f36ca-152">Consultar el servicio de datos</span><span class="sxs-lookup"><span data-stu-id="f36ca-152">Querying the Data Service</span></span>](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+-   [<span data-ttu-id="11589-152">Consultar el servicio de datos</span><span class="sxs-lookup"><span data-stu-id="11589-152">Querying the Data Service</span></span>](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 
--   [<span data-ttu-id="f36ca-153">Consideraciones sobre LINQ</span><span class="sxs-lookup"><span data-stu-id="f36ca-153">LINQ Considerations</span></span>](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)
+-   [<span data-ttu-id="11589-153">Consideraciones sobre LINQ</span><span class="sxs-lookup"><span data-stu-id="11589-153">LINQ Considerations</span></span>](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)
 
--   [<span data-ttu-id="f36ca-154">Cómo: ejecutar consultas de servicios de datos</span><span class="sxs-lookup"><span data-stu-id="f36ca-154">How to: Execute Data Service Queries</span></span>](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
+-   [<span data-ttu-id="11589-154">Cómo: ejecutar consultas de servicios de datos</span><span class="sxs-lookup"><span data-stu-id="11589-154">How to: Execute Data Service Queries</span></span>](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
 
-<span data-ttu-id="f36ca-155">Sigo necesitando más información...</span><span class="sxs-lookup"><span data-stu-id="f36ca-155">I still need some more information...</span></span>
+<span data-ttu-id="11589-155">Sigo necesitando más información...</span><span class="sxs-lookup"><span data-stu-id="11589-155">I still need some more information...</span></span>
 
--   [<span data-ttu-id="f36ca-156">Blog del equipo de Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="f36ca-156">WCF Data Services Team Blog</span></span>](https://go.microsoft.com/fwlink/?LinkID=150511)
+-   [<span data-ttu-id="11589-156">Blog del equipo de Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="11589-156">WCF Data Services Team Blog</span></span>](https://go.microsoft.com/fwlink/?LinkID=150511)
 
--   [<span data-ttu-id="f36ca-157">Recursos</span><span class="sxs-lookup"><span data-stu-id="f36ca-157">Resources</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+-   [<span data-ttu-id="11589-157">Recursos</span><span class="sxs-lookup"><span data-stu-id="11589-157">Resources</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
 
--   [<span data-ttu-id="f36ca-158">Centro para desarrolladores de Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="f36ca-158">WCF Data Services Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=220868)
+-   [<span data-ttu-id="11589-158">Centro para desarrolladores de Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="11589-158">WCF Data Services Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=220868)
 
--   [<span data-ttu-id="f36ca-159">Sitio web de Open Data Protocol</span><span class="sxs-lookup"><span data-stu-id="f36ca-159">Open Data Protocol Web site</span></span>](https://go.microsoft.com/fwlink/?LinkID=184554)
+-   [<span data-ttu-id="11589-159">Sitio web de Open Data Protocol</span><span class="sxs-lookup"><span data-stu-id="11589-159">Open Data Protocol Web site</span></span>](https://go.microsoft.com/fwlink/?LinkID=184554)
 
-## <a name="in-this-section"></a><span data-ttu-id="f36ca-160">En esta sección</span><span class="sxs-lookup"><span data-stu-id="f36ca-160">In This Section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="11589-160">En esta sección</span><span class="sxs-lookup"><span data-stu-id="11589-160">In This Section</span></span>
 
- [<span data-ttu-id="f36ca-161">Información general</span><span class="sxs-lookup"><span data-stu-id="f36ca-161">Overview</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
+ [<span data-ttu-id="11589-161">Información general</span><span class="sxs-lookup"><span data-stu-id="11589-161">Overview</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
 
- <span data-ttu-id="f36ca-162">Proporciona información general de las características y funciones disponibles en WCF Data Services.</span><span class="sxs-lookup"><span data-stu-id="f36ca-162">Provides an overview of the features and functionality available in WCF Data Services.</span></span>
+ <span data-ttu-id="11589-162">Proporciona información general de las características y funciones disponibles en WCF Data Services.</span><span class="sxs-lookup"><span data-stu-id="11589-162">Provides an overview of the features and functionality available in WCF Data Services.</span></span>
 
- [<span data-ttu-id="f36ca-163">Novedades de Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="f36ca-163">What's New in WCF Data Services</span></span>](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)
+ [<span data-ttu-id="11589-163">Novedades de Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="11589-163">What's New in WCF Data Services</span></span>](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)
 
- <span data-ttu-id="f36ca-164">Describe la nueva funcionalidad en WCF Data Services y compatibilidad con nuevas características de OData.</span><span class="sxs-lookup"><span data-stu-id="f36ca-164">Describes new functionality in WCF Data Services and support for new OData features.</span></span>
+ <span data-ttu-id="11589-164">Describe la nueva funcionalidad en WCF Data Services y compatibilidad con nuevas características de OData.</span><span class="sxs-lookup"><span data-stu-id="11589-164">Describes new functionality in WCF Data Services and support for new OData features.</span></span>
 
- [<span data-ttu-id="f36ca-165">Introducción</span><span class="sxs-lookup"><span data-stu-id="f36ca-165">Getting Started</span></span>](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+ [<span data-ttu-id="11589-165">Introducción</span><span class="sxs-lookup"><span data-stu-id="11589-165">Getting Started</span></span>](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 
- <span data-ttu-id="f36ca-166">Describe cómo exponer y consumir fuentes de OData mediante WCF Data Services.</span><span class="sxs-lookup"><span data-stu-id="f36ca-166">Describes how to expose and consume OData feeds by using WCF Data Services.</span></span>
+ <span data-ttu-id="11589-166">Describe cómo exponer y consumir fuentes de OData mediante WCF Data Services.</span><span class="sxs-lookup"><span data-stu-id="11589-166">Describes how to expose and consume OData feeds by using WCF Data Services.</span></span>
 
- [<span data-ttu-id="f36ca-167">Definir Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="f36ca-167">Defining WCF Data Services</span></span>](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+ [<span data-ttu-id="11589-167">Definir Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="11589-167">Defining WCF Data Services</span></span>](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 
- <span data-ttu-id="f36ca-168">Describe cómo crear y configurar un servicio de datos que expone fuentes de OData.</span><span class="sxs-lookup"><span data-stu-id="f36ca-168">Describes how to create and configure a data service that exposes OData feeds.</span></span>
+ <span data-ttu-id="11589-168">Describe cómo crear y configurar un servicio de datos que expone fuentes de OData.</span><span class="sxs-lookup"><span data-stu-id="11589-168">Describes how to create and configure a data service that exposes OData feeds.</span></span>
 
- [<span data-ttu-id="f36ca-169">Biblioteca cliente de Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="f36ca-169">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+ [<span data-ttu-id="11589-169">Biblioteca cliente de Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="11589-169">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 
- <span data-ttu-id="f36ca-170">Describe cómo usar las bibliotecas de cliente para consumir fuentes de OData desde una aplicación de cliente de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f36ca-170">Describes how to use client libraries to consume OData feeds from a .NET Framework client application.</span></span>
+ <span data-ttu-id="11589-170">Describe cómo usar las bibliotecas de cliente para consumir fuentes de OData desde una aplicación de cliente de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="11589-170">Describes how to use client libraries to consume OData feeds from a .NET Framework client application.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f36ca-171">Vea también</span><span class="sxs-lookup"><span data-stu-id="f36ca-171">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="11589-171">Vea también</span><span class="sxs-lookup"><span data-stu-id="11589-171">See Also</span></span>
 
-- [<span data-ttu-id="f36ca-172">Transferencia de estado representacional (REST)</span><span class="sxs-lookup"><span data-stu-id="f36ca-172">Representational State Transfer (REST)</span></span>](https://go.microsoft.com/fwlink/?LinkId=113919)
+- [<span data-ttu-id="11589-172">Transferencia de estado representacional (REST)</span><span class="sxs-lookup"><span data-stu-id="11589-172">Representational State Transfer (REST)</span></span>](https://go.microsoft.com/fwlink/?LinkId=113919)
