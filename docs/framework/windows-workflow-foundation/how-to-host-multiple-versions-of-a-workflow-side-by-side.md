@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: d8fef8523f827ab91729054ee87544879b1f1aa3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 525aeab7ff08da95735e9c9df7f6f040e8b9e215
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520492"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558431"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Cómo hospedar varias versiones de un flujo de trabajo en paralelo
 `WorkflowIdentity` proporciona una manera para que los desarrolladores de aplicaciones de flujo de trabajo asocien un nombre y una versión con una definición de flujo de trabajo, y para que esta información se asocie a una instancia de flujo de trabajo persistente. Los desarrolladores de aplicaciones de flujo de trabajo pueden usar esta información de identidad para habilitar escenarios como la ejecución en paralelo de varias versiones de una definición de flujo de trabajo; además esta información proporciona la piedra angular para otras funcionalidades como la actualización dinámica. Este paso del tutorial demuestra cómo usar `WorkflowIdentity` para hospedar varias versiones de un flujo de trabajo simultáneamente.  
   
 > [!NOTE]
->  Para descargar una versión completada o ver un tutorial en vídeo del tutorial, vea [Windows Workflow Foundation (WF45) - Tutorial de introducción](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Para descargar una versión completada o ver un tutorial en vídeo del tutorial, vea [Windows Workflow Foundation (WF45): Tutorial de introducción](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ## <a name="in-this-topic"></a>En este tema  
  En este paso del tutorial, las actividades de `WriteLine` en el flujo de trabajo se modifican para proporcionar información adicional y se agrega una nueva actividad `WriteLine`. Una copia del ensamblado original de flujo de trabajo queda almacenada y la aplicación de host se actualiza de tal modo que puede ejecutar tanto el flujo de trabajo original como el actualizado al mismo tiempo.  
@@ -27,23 +27,23 @@ ms.locfileid: "33520492"
   
     -   [Para actualizar el flujo de trabajo StateMachine](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [Para actualizar el flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [Para actualizar el flujo de trabajo de diagrama de flujo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
     -   [Para actualizar el flujo de trabajo secuencial](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [Para actualizar WorkflowVersionMap para incluir las versiones anteriores de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [Para actualizar WorkflowVersionMap para incluir las versiones anteriores del flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
 -   [Para compilar y ejecutar la aplicación](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  Antes de seguir los pasos de este tema, ejecute la aplicación, inicie varios flujos de trabajo de cada tipo y realice uno o dos intentos con cada uno. Estos flujos de trabajo persistentes se utilizan en este paso y el paso siguiente, [Cómo: actualizar la definición de una instancia de flujo de trabajo ejecuta](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).  
+>  Antes de seguir los pasos de este tema, ejecute la aplicación, inicie varios flujos de trabajo de cada tipo y realice uno o dos intentos con cada uno. Estos flujos de trabajo persistentes se usan en este paso y el paso siguiente, [Cómo: actualizar la definición de una instancia de flujo de trabajo ejecuta](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).  
   
 > [!NOTE]
->  Cada paso del tutorial de introducción depende de los pasos anteriores. Si no completó los pasos anteriores, puede descargar una versión completada del tutorial del [Windows Workflow Foundation (WF45) - Tutorial de introducción](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Cada paso del tutorial de introducción depende de los pasos anteriores. Si no completó los pasos anteriores, puede descargar una versión completada del tutorial de [Windows Workflow Foundation (WF45): Tutorial de introducción](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ###  <a name="BKMK_BackupCopy"></a> Para realizar una copia del proyecto NumberGuessWorkflowActivities  
   
-1.  Abra la **WF45GettingStartedTutorial** solución en [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] si no está abierto.  
+1.  Abra el **WF45GettingStartedTutorial** solución en [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] si no está abierto.  
   
 2.  Presione Ctrl+MAYÚS+B para compilar la solución.  
   
@@ -60,16 +60,16 @@ ms.locfileid: "33520492"
     > [!NOTE]
     >  En los pasos de este tema se muestra una manera de administrar los ensamblados usados para contener varias versiones de los flujos de trabajo. También se pueden usar otros métodos, como el nombre seguro de los ensamblados y su registro en la memoria caché global de ensamblados.  
   
-8.  Cree una carpeta nueva denominada **NumberGuessWorkflowActivities_du** en la misma carpeta que **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**y el recién agregar **PreviousVersions** carpeta copie todos los archivos y subcarpetas de la **NumberGuessWorkflowActivities** carpeta en el nuevo  **NumberGuessWorkflowActivities_du** carpeta. Esta copia de seguridad del proyecto de la versión inicial de las actividades se usa en [Cómo: actualizar la definición de una instancia de flujo de trabajo ejecuta](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).  
+8.  Cree una carpeta nueva denominada **NumberGuessWorkflowActivities_du** en la misma carpeta que **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**y la recién agregar **PreviousVersions** carpeta y copie todos los archivos y subcarpetas de la **NumberGuessWorkflowActivities** carpeta en el nuevo  **NumberGuessWorkflowActivities_du** carpeta. Esta copia de seguridad del proyecto para la versión inicial de las actividades se usa en [Cómo: actualizar la definición de una instancia de flujo de trabajo ejecuta](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).  
   
-9. Vuelva a abrir la **WF45GettingStartedTutorial** solución en [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
+9. Vuelva a abrir el **WF45GettingStartedTutorial** solución en [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
 ###  <a name="BKMK_UpdateWorkflows"></a> Para actualizar los flujos de trabajo  
  En esta sección, se actualizan las definiciones de flujo de trabajo. Se actualizan las dos actividades de `WriteLine` que proporcionan informes sobre los intentos del usuario, y se agrega una nueva actividad `WriteLine` que proporciona información adicional sobre el juego una vez se ha adivinado el número.  
   
 ####  <a name="BKMK_UpdateStateMachine"></a> Para actualizar el flujo de trabajo StateMachine  
   
-1.  En **el Explorador de soluciones**, en la **NumberGuessWorkflowActivities** proyecto de equipo y haga doble clic en **StateMachineNumberGuessWorkflow.xaml**.  
+1.  En **el Explorador de soluciones**, en el **NumberGuessWorkflowActivities** del proyecto, haga doble clic en **StateMachineNumberGuessWorkflow.xaml**.  
   
 2.  Haga doble clic en el **Guess Incorrect** transición en la máquina de Estados.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "33520492"
     Guess + " is too high."  
     ```  
   
-5.  Volver a la global vista de máquina en el Diseñador de flujo de trabajo de estado haciendo clic en **StateMachine** en la ruta de navegación para mostrar en la parte superior del Diseñador de flujo de trabajo.  
+5.  Volver a general el estado de vista de la máquina en el Diseñador de flujo de trabajo haciendo clic en **StateMachine** en la ruta de navegación que se muestran en la parte superior del Diseñador de flujo de trabajo.  
   
 6.  Haga doble clic en el **Guess Correct** transición en la máquina de Estados.  
   
@@ -109,9 +109,9 @@ ms.locfileid: "33520492"
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <a name="BKMK_UpdateFlowchart"></a> Para actualizar el flujo de trabajo  
+####  <a name="BKMK_UpdateFlowchart"></a> Para actualizar el flujo de trabajo de diagrama de flujo  
   
-1.  En **el Explorador de soluciones**, en la **NumberGuessWorkflowActivities** proyecto de equipo y haga doble clic en **FlowchartNumberGuessWorkflow.xaml**.  
+1.  En **el Explorador de soluciones**, en el **NumberGuessWorkflowActivities** del proyecto, haga doble clic en **FlowchartNumberGuessWorkflow.xaml**.  
   
 2.  Actualice `Text` de la actividad `WriteLine` del extremo izquierdo.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "33520492"
     Guess + " is too high."  
     ```  
   
-4.  Arrastre un **WriteLine** actividad desde el **primitivas** sección de la **cuadro de herramientas** y colóquela en el punto de colocación de la `True` acción de superior `FlowDecision` . La actividad `WriteLine` se agrega al diagrama de flujo y se vincula a la acción `True` de `FlowDecision`.  
+4.  Arrastrar un **WriteLine** actividad desde el **primitivas** sección de la **cuadro de herramientas** y colóquela en el punto de colocación de la `True` acción de la propiedad topmost `FlowDecision` . La actividad `WriteLine` se agrega al diagrama de flujo y se vincula a la acción `True` de `FlowDecision`.  
   
 5.  Escriba la siguiente expresión en el cuadro de propiedad `Text`.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "33520492"
   
 ####  <a name="BKMK_UpdateSequential"></a> Para actualizar el flujo de trabajo secuencial  
   
-1.  En **el Explorador de soluciones**, en la **NumberGuessWorkflowActivities** proyecto de equipo y haga doble clic en **SequentialNumberGuessWorkflow.xaml**.  
+1.  En **el Explorador de soluciones**, en el **NumberGuessWorkflowActivities** del proyecto, haga doble clic en **SequentialNumberGuessWorkflow.xaml**.  
   
 2.  Actualice `Text` de `WriteLine` del extremo izquierdo en la actividad `If`.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "33520492"
     Guess + " is too high."  
     ```  
   
-4.  Arrastre un **WriteLine** actividad desde la **primitivas** sección de la **cuadro de herramientas** y colóquela después la **DoWhile** actividad para que el  **WriteLine** sea la actividad final en la raíz `Sequence` actividad.  
+4.  Arrastre un **WriteLine** actividad desde la **primitivas** sección de la **cuadro de herramientas** y colóquela después de la **DoWhile** actividad para que el  **WriteLine** es la actividad final en la raíz `Sequence` actividad.  
   
 5.  Escriba la siguiente expresión en el cuadro de propiedad `Text`.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "33520492"
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a> Para actualizar WorkflowVersionMap para incluir las versiones anteriores de flujo de trabajo  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a> Para actualizar WorkflowVersionMap para incluir las versiones anteriores del flujo de trabajo  
   
 1.  Haga doble clic en **WorkflowVersionMap.cs** (o **WorkflowVersionMap.vb**) en el **NumberGuessWorkflowHost** proyecto para abrirlo.  
   
@@ -553,7 +553,7 @@ ms.locfileid: "33520492"
   
 1.  Presione CTRL+MAYÚS+B para compilar la aplicación y, a continuación, CTRL+F5 para iniciarla.  
   
-2.  Iniciar un nuevo flujo de trabajo haciendo clic en **New Game**. La versión del flujo de trabajo se muestra debajo de la ventana de estado y refleja la versión actualizada del `WorkflowIdentity` asociado. Anote el valor de `InstanceId` para poder ver el archivo de seguimiento del flujo de trabajo cuando se complete y, a continuación, escriba números hasta que se termine el juego. Observe cómo el intento del usuario aparece en la información que se muestra en la ventana de estado en función de las actualizaciones de las actividades `WriteLine`.  
+2.  Haga clic en iniciar un nuevo flujo de trabajo **nuevo juego**. La versión del flujo de trabajo se muestra debajo de la ventana de estado y refleja la versión actualizada del `WorkflowIdentity` asociado. Anote el valor de `InstanceId` para poder ver el archivo de seguimiento del flujo de trabajo cuando se complete y, a continuación, escriba números hasta que se termine el juego. Observe cómo el intento del usuario aparece en la información que se muestra en la ventana de estado en función de las actualizaciones de las actividades `WriteLine`.  
   
  **Escriba un número entre 1 y 10**  
 **5 es demasiado alto.**   
@@ -566,7 +566,7 @@ ms.locfileid: "33520492"
     > [!NOTE]
     >  Se muestra el texto actualizado de las actividades `WriteLine`, pero no se muestra el resultado de la actividad final `WriteLine` que se agregó en este tema. Esto se debe a que el controlador `PersistableIdle` actualiza la ventana de estado. Debido a que el flujo de trabajo se completa y no queda inactivo después de la actividad final, no se llama al controlador `PersistableIdle`. Sin embargo, el controlador `Completed` muestra un mensaje similar en la ventana de estado. Si se desea, se puede agregar un código al controlador `Completed` para extraer el texto de `StringWriter` y mostrarlo en la ventana de estado.  
   
-3.  Abra el Explorador de Windows y navegue hasta la **NumberGuessWorkflowHost\bin\debug** carpeta (o **bin\release** según la configuración del proyecto) y abra el archivo de seguimiento mediante el Bloc de notas que corresponde en el flujo de trabajo completado. Si no hizo una nota de la `InstanceId`, puede identificar el archivo correcto de seguimiento mediante la **fecha de modificación** información en el Explorador de Windows.  
+3.  Abra el Explorador de Windows y navegue hasta la **NumberGuessWorkflowHost\bin\debug** carpeta (o **bin\release** según la configuración del proyecto) y abra el archivo de seguimiento con el Bloc de notas que corresponde en el flujo de trabajo completado. Si no ha realizado una nota de la `InstanceId`, puede identificar el archivo correcto de seguimiento utilizando el **fecha de modificación** información en el Explorador de Windows.  
   
  **Escriba un número entre 1 y 10**  
 **5 es demasiado alto.**   
@@ -575,8 +575,8 @@ ms.locfileid: "33520492"
 **Escriba un número entre 1 y 10**   
 **1 es demasiado bajo.**   
 **Escriba un número entre 1 y 10**   
-**2 es correcta. Lo acertó en 4 intentos.**      La salida de `WriteLine` actualizada se encuentra en el archivo de seguimiento, incluida la salida de `WriteLine` que se agregó en este tema.  
+**2 es correcto. Lo acertó en 4 intentos.**      La salida de `WriteLine` actualizada se encuentra en el archivo de seguimiento, incluida la salida de `WriteLine` que se agregó en este tema.  
   
 4.  Vuelva a la aplicación para adivinar números y seleccione uno de los flujos de trabajo iniciado antes de que se realizaran las actualizaciones. Puede identificar la versión del flujo de trabajo seleccionado actualmente si examina la información de versión que aparece debajo de la ventana de estado. Escriba los números y observe que las actualizaciones de estado coinciden con el resultado de la actividad `WriteLine` de la versión anterior y no incluyen el intento del usuario. Esto se debe a que estos flujos de trabajo usan la definición de flujo de trabajo anterior que no tiene las actualizaciones `WriteLine`.  
   
-     En el paso siguiente, [Cómo: actualizar la definición de una instancia de flujo de trabajo ejecuta](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), el que se ejecuta `v1` instancias de flujo de trabajo se actualizan para que contengan la nueva funcionalidad como la `v2` instancias.
+     En el paso siguiente, [Cómo: actualizar la definición de una instancia de flujo de trabajo ejecuta](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), la ejecución `v1` las instancias de flujo de trabajo se actualizan para que contengan la nueva funcionalidad como la `v2` instancias.

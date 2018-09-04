@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404062"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565120"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Conversiones de tipos en Visual Basic
 El proceso de cambiar un valor de un tipo de datos a otro tipo se denomina *conversión*. Las conversiones son *ampliación* o *restricción*, según las capacidades de datos de los tipos implicados. También son *implícita* o *explícita*, en función de la sintaxis en el código fuente.  

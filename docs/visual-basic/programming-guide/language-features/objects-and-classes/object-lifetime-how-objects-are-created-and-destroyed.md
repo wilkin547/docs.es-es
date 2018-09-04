@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 441fe91c8c884e59c6399d57e7e55bf6591cb1bb
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754193"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556060"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Duración de los objetos: cómo se crean y destruyen (Visual Basic)
 Mediante el uso de la palabra clave `New` se crea una instancia de una clase, un objeto. A menudo, las tareas de inicialización deben realizarse en los objetos nuevos antes de utilizarlos. Las tareas de inicialización comunes incluyen abrir archivos, conectarse a bases de datos y leer los valores de las claves del registro. Visual Basic controla la inicialización de objetos nuevos mediante procedimientos denominados *constructores* (métodos especiales que permiten controlar la inicialización).  
@@ -148,7 +148,7 @@ End Sub
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.IDisposable.Dispose%2A>  
- [Inicialización y finalización de componentes](http://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
+ [Inicialización y finalización de componentes](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
  [New (operador)](../../../../visual-basic/language-reference/operators/new-operator.md)  
  [Limpieza de recursos no administrados](../../../../standard/garbage-collection/unmanaged.md)  
  [Nothing](../../../../visual-basic/language-reference/nothing.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 0af929de17a29d497ce6cf6c8cb055d416ab8761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31c0efbe953b56304c264444082185b9a9227d60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365415"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658982"
 ---
 # <a name="sql-server-express-user-instances"></a>Instancias de usuario de SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) incorpora una nueva característica de instancia de usuario, que solo está disponible cuando se usa el proveedor de datos .NET Framework para SQL Server (`SqlClient`). Una instancia de usuario es una instancia independiente del motor de base de datos de SQL Server Express que se genera mediante una instancia primaria. Las instancias de usuario permiten a los usuarios que no son administradores en sus equipos locales adjuntar y conectarse a bases de datos de SQL Server Express. Cada instancia se ejecuta en el contexto de seguridad del usuario individual, ya que solo se puede ejecutar una instancia por usuario.  
@@ -24,7 +24,7 @@ Microsoft SQL Server Express Edition (SQL Server Express) incorpora una nueva ca
 >  Las instancias de usuario no son necesarias para los usuarios que ya son administradores en sus propios equipos o en casos en los que están implicados varios usuarios de bases de datos.  
   
 ## <a name="enabling-user-instances"></a>Habilitar instancias de usuario  
- Para generar instancias de usuario, debe estar ejecutándose una instancia primaria de SQL Server Express. Instancias de usuario están habilitadas de forma predeterminada cuando se instala SQL Server Express, y puede ser habilitados o deshabilitados por un administrador del sistema ejecutar explícitamente la **sp_configure** procedimiento almacenado del sistema en la instancia primaria.  
+ Para generar instancias de usuario, debe estar ejecutándose una instancia primaria de SQL Server Express. Las instancias de usuario están habilitadas de forma predeterminada cuando se instala SQL Server Express, y puede ser habilitados o deshabilitados por un administrador del sistema ejecutando explícitamente la **sp_configure** procedimiento almacenado del sistema en la instancia primaria.  
   
 ```  
 -- Enable user instances.  
@@ -125,7 +125,7 @@ private static void OpenSqlConnection()
 >  Si en la cadena de conexión se utiliza `Min Pool Size` con un valor mayor de cero, el concentrador de conexión siempre mantendrá unas cuantas conexiones abiertas y la instancia de usuario no se cerrará automáticamente.  
   
 ## <a name="how-user-instances-work"></a>Cómo funcionan las instancias de usuario  
- La primera vez que se genera una instancia de usuario para cada usuario, el **maestro** y **msdb** bases de datos del sistema se copian desde la carpeta de datos de la plantilla en una ruta de acceso en el repositorio de datos de aplicación local del usuario directorio para su uso exclusivo por la instancia de usuario. La ruta de acceso suele ser `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Cuando se inicia una instancia de usuario, el **tempdb**, registro y seguimiento de archivos también se escriben en este directorio. Se genera un nombre para la instancia cuya exclusividad está garantizada para cada usuario.  
+ La primera vez que se genera una instancia de usuario para cada usuario, el **maestro** y **msdb** las bases de datos del sistema se copian desde la carpeta de datos de la plantilla en una ruta de acceso en el repositorio de datos de aplicación local del usuario directorio para uso exclusivo por la instancia de usuario. La ruta de acceso suele ser `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Cuando se inicia una instancia de usuario, el **tempdb**, registro y seguimiento de archivos también se escriben en este directorio. Se genera un nombre para la instancia cuya exclusividad está garantizada para cada usuario.  
   
  De forma predeterminada, se concede permisos a todos los miembros del grupo Builtin\Users de Windows para conectarse a la instancia local, así como permisos de lectura y ejecución para los binarios de SQL Server. Una vez comprobadas las credenciales del usuario que llama y que hospeda la instancia de usuario, éste se convierte en el `sysadmin` de esa instancia. Solo hay habilitada memoria compartida para las instancias de usuario, lo que significa que solo es posible realizar operaciones en el equipo local.  
   
@@ -146,7 +146,7 @@ private static void OpenSqlConnection()
   
 -   Cualquier aplicación de un único usuario en la que no sea necesario compartir datos  
   
--   Implementación ClickOnce Si .NET Framework 2.0, o posterior, y SQL Server Express ya están instalados en el equipo de destino, los usuarios que no sean administradores pueden instalar y utilizar el paquete de instalación que se descargó como resultado de una acción ClickOnce. Un administrador debe instalar SQL Server Express si forma parte de la instalación. Para obtener más información, consulte [implementación de ClickOnce para aplicaciones de formularios Windows Forms](http://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df).  
+-   Implementación ClickOnce Si .NET Framework 2.0, o posterior, y SQL Server Express ya están instalados en el equipo de destino, los usuarios que no sean administradores pueden instalar y utilizar el paquete de instalación que se descargó como resultado de una acción ClickOnce. Un administrador debe instalar SQL Server Express si forma parte de la instalación. Para obtener más información, consulte [implementación de ClickOnce para aplicaciones de formularios Windows Forms](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df).  
   
 -   Hospedaje de ASP.NET dedicado con autenticación de Windows. Una sola instancia de SQL Express Server se puede hospedar en una intranet. La aplicación se conecta usando la cuenta de Windows ASPNET, sin que haya suplantación. No se debería utilizar instancias de usuario en escenarios de hospedaje compartido o de terceros en los que todas las aplicaciones compartirían la misma instancia de usuario y dejarían de permanecer aisladas las unas de las otras.  
   
@@ -154,4 +154,4 @@ private static void OpenSqlConnection()
  [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [Cadenas de conexión](../../../../../docs/framework/data/adonet/connection-strings.md)  
  [Conexión a un origen de datos](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,16 +8,16 @@ ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: e48e2eb0df8fbc4daf4db68b0c27493b122adfa3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40ad2eb09b4e3a8f78f493311cdb5c0da410943b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407498"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560533"
 ---
 # <a name="ui-automation-providers-overview"></a>Información general sobre proveedores de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Los proveedores de automatización de la interfaz de usuario permiten a los controles comunicarse con aplicaciones de cliente de automatización de la interfaz de usuario. En general, cada control u otro elemento distinto de un [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] está representado por un proveedor. El proveedor expone información sobre el elemento y, opcionalmente, implementa patrones de control que permiten a la aplicación cliente interactuar con el control.  
   
@@ -30,12 +30,12 @@ ms.locfileid: "33407498"
  Los proveedores de automatización de la interfaz de usuario se dividen en dos categorías: proveedores del lado cliente y proveedores del lado servidor.  
   
 ### <a name="client-side-providers"></a>Proveedores del lado cliente  
- Los proveedores de cliente se implementan por los clientes de automatización de la interfaz de usuario para comunicarse con una aplicación que no admite, o no admite por completo, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Proveedores del lado cliente suelen comunican con el servidor a través de los límites del proceso enviando y recibiendo mensajes de Windows.  
+ Los proveedores de cliente se implementan por los clientes de automatización de la interfaz de usuario para comunicarse con una aplicación que no admite, o no admite por completo, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Los proveedores de cliente suelen comunican con el servidor a través del límite de proceso enviando y recibiendo mensajes de Windows.  
   
- Dado que los proveedores de automatización de la interfaz de usuario para los controles en [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], formularios Windows Forms, o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones se proporcionan como parte del sistema operativo, las aplicaciones cliente rara vez tendrían que implementar sus propios proveedores y esta información general no tratan más adelante.  
+ Dado que los proveedores de UI Automation para los controles de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones se proporcionan como parte del sistema operativo, aplicaciones cliente rara vez tienen que implementar sus propios proveedores y esta información general no tratan más adelante.  
   
 ### <a name="server-side-providers"></a>Proveedores del lado servidor  
- Proveedores del lado servidor se implementan mediante controles personalizados o aplicaciones que se basan en un marco de interfaz de usuario distinto de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], formularios Windows Forms, o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Los proveedores del lado servidor se implementan mediante controles personalizados y las aplicaciones que se basan en un marco de interfaz de usuario distinto [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
  Los proveedores del lado servidor se comunican con aplicaciones cliente a través del límite de proceso al exponer interfaces al sistema principal [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , que a su vez atiende solicitudes de los clientes.  
   

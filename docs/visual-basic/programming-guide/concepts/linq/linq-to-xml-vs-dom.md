@@ -3,11 +3,11 @@ title: LINQ to XML frente a DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
 ms.openlocfilehash: a0a23a773e927155ca22456ea403549b255718ad
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389950"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554313"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML frente a DOM (Visual Basic)
 En esta sección se describen algunas diferencias fundamentales entre [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] y la API de programación XML predominante actual, Document Object Model (DOM) W3C.  

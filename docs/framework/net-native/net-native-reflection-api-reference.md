@@ -5,11 +5,11 @@ ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a2a27f788fa84c41ccb818266fffc816237bb48
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486953"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554969"
 ---
 # <a name="net-native-reflection-api-reference"></a>Referencia de la API de reflexión de .NET nativo
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] incluye tres nuevos tipos de excepción: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)y [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). Tenga en cuenta lo siguiente acerca de los tres tipos de excepción:  

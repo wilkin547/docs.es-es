@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 320a45af1c2f3b460c23d8320c456120643902f7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7bb68a7d08d983e93119804db6c1f5a01cd047c9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759548"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659394"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurar parámetros y tipos de datos de parámetros
 Los objetos de comando usan parámetros para pasar valores a instrucciones SQL o procedimientos almacenados que permiten realizar operaciones de comprobación de tipos y validación. A diferencia del texto de comando, la entrada de parámetros se trata como un valor literal, y no como código ejecutable. De esta forma, se protege contra ataques por "inyección de código SQL", en los que un atacante inserta un comando que pone en peligro la seguridad del servidor en una instrucción SQL.  
   
- Los comandos parametrizados también pueden mejorar el rendimiento de ejecución de la consulta, ya que ayudan al servidor de bases de datos a que haga coincidir precisamente el comando entrante con un plan de consulta almacenado en caché adecuado. Para obtener más información, consulte [Almacenar en caché y volver a utilizar un plan de ejecución](http://go.microsoft.com/fwlink/?LinkId=120424) y [Parámetros y reutilización de un plan de ejecución](http://go.microsoft.com/fwlink/?LinkId=120423) en los Libros en pantalla de SQL Server. Además de las ventajas en la seguridad y el rendimiento, los comandos con parámetros proporcionan un método práctico para organizar los valores que se pasan a un origen de datos.  
+ Los comandos parametrizados también pueden mejorar el rendimiento de ejecución de la consulta, ya que ayudan al servidor de bases de datos a que haga coincidir precisamente el comando entrante con un plan de consulta almacenado en caché adecuado. Para obtener más información, consulte [Plan de almacenamiento en caché en ejecución y volver a utilizar](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) y [parámetros y reutilización de Plan de ejecución](/sql/relational-databases/query-processing-architecture-guide#PlanReuse). Además de las ventajas en la seguridad y el rendimiento, los comandos con parámetros proporcionan un método práctico para organizar los valores que se pasan a un origen de datos.  
   
  Para crear un objeto <xref:System.Data.Common.DbParameter> , se puede usar su constructor o bien se puede agregar a <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> mediante una llamada al método `Add` de la colección <xref:System.Data.Common.DbParameterCollection> . El método `Add` acepta como entrada argumentos del constructor o cualquier objeto de parámetro ya existente, en función del proveedor de datos.  
   
@@ -48,7 +48,7 @@ Los objetos de comando usan parámetros para pasar valores a instrucciones SQL o
 |-------------------------|------------|---------------|---------------|--------------|----------------|  
 |<xref:System.Boolean>|Boolean|Bit|Booleano|Bit|Byte|  
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|  
-|byte[]|Binary|VarBinary`.` esta conversión implícita se producirá un error si la matriz de bytes es mayor que el tamaño máximo de un tipo VarBinary, que es de 8000 bytes. Matrices de bytes mayores de 8.000 bytes, debe establecer explícitamente el <xref:System.Data.SqlDbType>.|VarBinary|Binary|Raw|  
+|byte[]|Binary|VarBinary`.` esta conversión implícita se producirá un error si la matriz de bytes es mayor que el tamaño máximo de un tipo VarBinary, que es de 8000 bytes. Para las matrices de bytes más de 8.000 bytes, establezca explícitamente la <xref:System.Data.SqlDbType>.|VarBinary|Binary|Raw|  
 |<xref:System.Char>|``|No se admite la deducción de un tipo <xref:System.Data.SqlDbType> a partir de char.|Char|Char|Byte|  
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|  
 |<xref:System.DateTimeOffset>|DateTimeOffset|DateTimeOffset en SQL Server 2008. La deducción de un elemento <xref:System.Data.SqlDbType> a partir de DateTimeOffset no se admite en versiones de SQL Server anteriores a SQL Server 2008.|||DateTime|  
@@ -56,7 +56,7 @@ Los objetos de comando usan parámetros para pasar valores a instrucciones SQL o
 |<xref:System.Double>|Double|Float|Double|Doble|Double|  
 |<xref:System.Single>|Single|Real|Single|Real|Float|  
 |<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|  
-|<xref:System.Int16 >|Int16|SmallInt|SmallInt|SmallInt|Int16|  
+|<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|  
 |<xref:System.Int32>|Int32|Valor int.|Valor int.|Valor int.|Int32|  
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Número|  
 |<xref:System.Object>|Objeto|Variante|Variante|No se admite la deducción de un tipo OdbcType a partir de Object.|Blob|  
@@ -90,10 +90,10 @@ Los objetos de comando usan parámetros para pasar valores a instrucciones SQL o
  Para obtener más información, consulte [generar comandos con objetos CommandBuilder](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
   
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Usar parámetros con SqlCommand y con un procedimiento almacenado  
- Los procedimientos almacenados ofrecen numerosas ventajas en el caso de aplicaciones que procesan datos. Mediante el uso de procedimientos almacenados, las operaciones de bases de datos se pueden encapsular en un solo comando, optimizar para lograr el mejor rendimiento, y mejorar con seguridad adicional. Aunque se puede llamar a un procedimiento almacenado pasando el nombre del procedimiento almacenado seguido de argumentos de parámetro como una instrucción SQL, usando la <xref:System.Data.Common.DbCommand.Parameters%2A> colección de la [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> objeto le permite definir más explícitamente almacenado parámetros del procedimiento así como para tener acceso a los parámetros de salida y valores devueltos.  
+ Los procedimientos almacenados ofrecen numerosas ventajas en el caso de aplicaciones que procesan datos. Mediante el uso de procedimientos almacenados, las operaciones de bases de datos se pueden encapsular en un solo comando, optimizar para lograr el mejor rendimiento, y mejorar con seguridad adicional. Aunque se puede llamar a un procedimiento almacenado pasando el nombre de procedimiento almacenado, seguido de argumentos de parámetro como una instrucción SQL, utilizando el <xref:System.Data.Common.DbCommand.Parameters%2A> colección de la [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> objeto le permite definir más explícitamente almacenado parámetros de procedimiento así como para tener acceso a los parámetros de salida y valores devueltos.  
   
 > [!NOTE]
->  Las instrucciones con parámetros se ejecutan en el servidor utilizando `sp_executesql,` ; esto permite volver a utilizar el plan de consultas. Los cursores o las variables locales del lote de `sp_executesql` no son visibles para el lote que llama a `sp_executesql`. Los cambios en el contexto de base de datos solo se mantienen hasta el final de la instrucción `sp_executesql` . Para obtener más información, vea los Libros en pantalla de SQL Server.  
+> Las instrucciones con parámetros se ejecutan en el servidor utilizando `sp_executesql,` ; esto permite volver a utilizar el plan de consultas. Los cursores o las variables locales del lote de `sp_executesql` no son visibles para el lote que llama a `sp_executesql`. Los cambios en el contexto de base de datos solo se mantienen hasta el final de la instrucción `sp_executesql` . Para obtener más información, consulte [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
   
  Cuando se usan parámetros con <xref:System.Data.SqlClient.SqlCommand> para ejecutar un procedimiento almacenado de SQL Server, los nombres de los parámetros agregados a la colección <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> deben coincidir con los nombres de los marcadores de parámetro del procedimiento almacenado. El proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para SQL Server no admite el uso del marcador de posición de signo de interrogación de cierre (?) para pasar parámetros a una instrucción SQL o a un procedimiento almacenado. Este proveedor trata los parámetros del procedimiento almacenado como parámetros con nombre y busca marcadores de parámetros coincidentes. Por ejemplo, el procedimiento almacenado `CustOrderHist` se define usando un parámetro denominado `@CustomerID`. Cuando el código ejecuta el procedimiento almacenado, también debe usar un parámetro denominado `@CustomerID`.  
   
@@ -199,4 +199,4 @@ parameter.Direction = ParameterDirection.Output;
  [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Parámetros de DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Asignaciones de tipos de datos en ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

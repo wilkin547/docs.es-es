@@ -12,16 +12,16 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 74375c468170d58cfa79031ab0030477c29bd445
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c7cae5be1d7e52186752d67354927084d118beb9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566640"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559016"
 ---
 # <a name="graphics-and-multimedia"></a>Gráficos y multimedia
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona compatibilidad para la creación de contenido, lo que facilita a los desarrolladores crear contenido e interfaces de usuario interesantes, gráficos vectoriales, animación y multimedia. Con [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], se pueden crear gráficos vectoriales o animaciones complejas e integrar elementos multimedia en las aplicaciones.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona compatibilidad para la creación de contenido, lo que facilita a los desarrolladores compilar contenido e interfaces de usuario interesantes, gráficos vectoriales, animación y multimedia. Con [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], se pueden crear gráficos vectoriales o animaciones complejas e integrar elementos multimedia en las aplicaciones.  
   
  En este tema se presentan las características de gráficos, animaciones y elementos multimedia de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], que le permiten agregar gráficos, efectos de transición, sonido y vídeo a las aplicaciones.  
   
@@ -38,26 +38,26 @@ ms.locfileid: "33566640"
   
 -   Composición almacenada en caché  
   
-     Con el nuevo <xref:System.Windows.Media.BitmapCache> y <xref:System.Windows.Media.BitmapCacheBrush> clases, puede almacenar en caché una parte compleja del árbol visual como un mapa de bits y mejorar considerablemente el tiempo de procesamiento. El mapa de bits sigue respondiendo a la entrada del usuario, como clics del mouse, y se puede pintar en otros elementos, exactamente igual que cualquier pincel.  
+     Con el nuevo <xref:System.Windows.Media.BitmapCache> y <xref:System.Windows.Media.BitmapCacheBrush> clases, puede almacenar en caché una parte compleja del árbol visual como mapa de bits y mejorar considerablemente el tiempo de representación. El mapa de bits sigue respondiendo a la entrada del usuario, como clics del mouse, y se puede pintar en otros elementos, exactamente igual que cualquier pincel.  
   
 -   Compatibilidad con el sombreador de píxeles 3  
   
-     4 de WPF se basa en la parte superior de la <xref:System.Windows.Media.Effects.ShaderEffect> compatibilidad introducida en WPF 3.5 SP1 al permitir que aplicaciones escribir efectos mediante Pixel Shader (PS) versión 3.0. El modelo de sombreador PS 3.0 es más sofisticado que el PS 2.0, lo que permite incluso crear más efectos en hardware compatible.  
+     WPF 4 se basa en la parte superior de la <xref:System.Windows.Media.Effects.ShaderEffect> compatibilidad con introducida en WPF 3.5 SP1, permitiendo que las aplicaciones escriban efectos mediante el uso de sombreador de píxeles (PS) versión 3.0. El modelo de sombreador PS 3.0 es más sofisticado que el PS 2.0, lo que permite incluso crear más efectos en hardware compatible.  
   
 -   Funciones de aceleración  
   
-     Puede mejorar las animaciones con funciones de aceleración que proporcionan mayor control sobre el comportamiento de las animaciones. Por ejemplo, puede aplicar un <xref:System.Windows.Media.Animation.ElasticEase> a una animación para darle un comportamiento elástico de la animación. Para obtener más información, vea los tipos de entradas y salidos de la <xref:System.Windows.Media.Animation> espacio de nombres.  
+     Puede mejorar las animaciones con funciones de aceleración que proporcionan mayor control sobre el comportamiento de las animaciones. Por ejemplo, puede aplicar un <xref:System.Windows.Media.Animation.ElasticEase> a una animación para darle un comportamiento elástico. Para obtener más información, vea los tipos de entradas y salidas lentas en el <xref:System.Windows.Media.Animation> espacio de nombres.  
   
 <a name="graphics_and_rendering"></a>   
 ## <a name="graphics-and-rendering"></a>Gráficos y representación  
- WPF incluye compatibilidad con gráficos 2D de alta calidad. La funcionalidad incluye pinceles, geometrías, imágenes, formas y transformaciones. Para más información, consulte [Graphics](../../../../docs/framework/wpf/graphics-multimedia/graphics.md) (Gráficos). La representación de elementos gráficos se basa en la <xref:System.Windows.Media.Visual> clase. La estructura de objetos visuales en la pantalla se describe en el árbol visual. Para más información, consulte [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
+ WPF incluye compatibilidad con gráficos 2D de alta calidad. La funcionalidad incluye pinceles, geometrías, imágenes, formas y transformaciones. Para más información, consulte [Graphics](../../../../docs/framework/wpf/graphics-multimedia/graphics.md) (Gráficos). La representación de los elementos gráficos se basa en el <xref:System.Windows.Media.Visual> clase. La estructura de objetos visuales en la pantalla se describe en el árbol visual. Para más información, consulte [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
   
 ### <a name="2-d-shapes"></a>Formas 2D  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ofrece una biblioteca de formas [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] comunes dibujadas mediante vectores, como los rectángulos y las elipses que se muestran en la ilustración siguiente.  
   
  ![Elipses y rectángulos](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure4.PNG "WPFIntroFigure4")  
   
- Estas formas intrínsecas de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] no son solo formas: son elementos programables que implementan muchas de las características que se esperan de los controles más comunes, entre los que se incluyen la entrada por mouse y teclado. En el ejemplo siguiente se muestra cómo controlar la <xref:System.Windows.UIElement.MouseUp> evento generado, haga clic en un <xref:System.Windows.Shapes.Ellipse> elemento.  
+ Estas formas intrínsecas de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] no son solo formas: son elementos programables que implementan muchas de las características que se esperan de los controles más comunes, entre los que se incluyen la entrada por mouse y teclado. El ejemplo siguiente muestra cómo controlar el <xref:System.Windows.UIElement.MouseUp> eventos accionados al hacer clic una <xref:System.Windows.Shapes.Ellipse> elemento.  
   
 ```xaml  
 <Window  
@@ -91,21 +91,21 @@ End Class
   
  ![Ventana con el texto "ha hecho clic en la elipse"](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure12.png "WPFIntroFigure12")  
   
- Para obtener más información, consulte [Información general sobre formas y dibujo básico en WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md). Para obtener un ejemplo introductorio, vea [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037) (Ejemplo de elementos de forma).  
+ Para obtener más información, consulte [Información general sobre formas y dibujo básico en WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md). Para obtener un ejemplo introductorio, vea [Shape Elements Sample](https://go.microsoft.com/fwlink/?LinkID=160037) (Ejemplo de elementos de forma).  
   
 ### <a name="2-d-geometries"></a>Geometrías 2D  
  Cuando las formas [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ofrece no sean suficientes, puede usar la compatibilidad con geometrías y trazados de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para crear sus propias formas. En la ilustración siguiente se muestra cómo se pueden usar geometrías para crear formas, por ejemplo, un pincel de dibujo, y para recortar otros elementos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
  ![Diversos usos de un trayecto](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure5.PNG "WPFIntroFigure5")  
   
- Para más información, consulte [Información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md). Para obtener un ejemplo introductorio, vea [Ejemplo de geometrías](http://go.microsoft.com/fwlink/?LinkID=159989).  
+ Para más información, consulte [Información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md). Para obtener un ejemplo introductorio, vea [Ejemplo de geometrías](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ### <a name="2-d-effects"></a>Efectos 2D  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ofrece una biblioteca de clases [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] que puede usar para crear diversos efe efectos. La funcionalidad de representación [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ofrece la posibilidad de pintar elementos de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que tengan degradados, mapas de bits, dibujos y vídeos; así como para manipularlos mediante rotación, escalado y sesgado. En la ilustración siguiente se ofrece un ejemplo de los muchos efectos que puede lograr mediante pinceles de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
  ![Ilustración de diferentes pinceles](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
- Para obtener más información, consulte [Información general sobre pinceles de WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md). Para obtener un ejemplo introductorio, vea [Ejemplo de pinceles](http://go.microsoft.com/fwlink/?LinkID=159973).  
+ Para obtener más información, consulte [Información general sobre pinceles de WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md). Para obtener un ejemplo introductorio, vea [Ejemplo de pinceles](https://go.microsoft.com/fwlink/?LinkID=159973).  
   
 <a name="rendering"></a>   
 ## <a name="3-d-rendering"></a>Representación 3D  
@@ -113,7 +113,7 @@ End Class
   
  ![Captura de pantalla de ejemplo de Visual3D](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure13.png "WPFIntroFigure13")  
   
- Para obtener más información, consulte [Información general sobre gráficos 3D](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md). Para obtener un ejemplo introductorio, vea [3-D Solids Sample](http://go.microsoft.com/fwlink/?LinkID=159964) (Ejemplo de sólidos 3D).  
+ Para obtener más información, consulte [Información general sobre gráficos 3D](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md). Para obtener un ejemplo introductorio, vea [3-D Solids Sample](https://go.microsoft.com/fwlink/?LinkID=159964) (Ejemplo de sólidos 3D).  
   
 <a name="animation"></a>   
 ## <a name="animation"></a>Animación  
@@ -121,7 +121,7 @@ End Class
   
  ![Imágenes de un cubo animado](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure7.png "WPFIntroFigure7")  
   
- Para obtener más información, consulte [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Para obtener un ejemplo introductorio, vea [Animation Example Gallery](http://go.microsoft.com/fwlink/?LinkID=159969) (Galería de ejemplos de animación).  
+ Para obtener más información, consulte [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Para obtener un ejemplo introductorio, vea [Animation Example Gallery](https://go.microsoft.com/fwlink/?LinkID=159969) (Galería de ejemplos de animación).  
   
 <a name="media"></a>   
 ## <a name="media"></a>Multimedia  
@@ -141,7 +141,7 @@ End Class
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />  
 ```  
   
- <xref:System.Windows.Controls.MediaElement> es capaz de reproducir vídeo y audio y es lo suficientemente extensible para permitir la creación sencilla de personalizado [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)].  
+ <xref:System.Windows.Controls.MediaElement> es capaz de reproducir vídeo y audio y es lo suficientemente extensible como para permitir la creación sencilla de personalizado [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)].  
   
  Para más información, consulte [Información general sobre multimedia](../../../../docs/framework/wpf/graphics-multimedia/multimedia-overview.md).  
   
@@ -153,6 +153,6 @@ End Class
  [Información general sobre formas y dibujo básico en WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Información general sobre el dibujo con colores sólidos y degradados](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
  [Pintar con imágenes, dibujos y elementos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Animación y temporización](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [Gráficos 3D](http://msdn.microsoft.com/library/565c1f3c-235b-47de-b05b-3b53ed63f1b8)  
- [Multimedia](http://msdn.microsoft.com/library/44a8dcd0-80cb-4db0-a222-87cde68c2fac)
+ [Animación y temporización](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [Gráficos 3D](https://msdn.microsoft.com/library/565c1f3c-235b-47de-b05b-3b53ed63f1b8)  
+ [Multimedia](https://msdn.microsoft.com/library/44a8dcd0-80cb-4db0-a222-87cde68c2fac)

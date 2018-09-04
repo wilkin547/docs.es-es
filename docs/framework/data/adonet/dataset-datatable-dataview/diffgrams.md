@@ -3,11 +3,11 @@ title: Objetos DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 ms.openlocfilehash: fd452efff2a26b66c06a7762b215df140047286d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402052"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558332"
 ---
 # <a name="diffgrams"></a>Objetos DiffGram
 Un DiffGram es un formato XML que identifica las versiones actual y original de los elementos de datos. El <xref:System.Data.DataSet> utiliza el formato DiffGram para cargar y hacer persistente su contenido, así como para serializar su contenido con el fin de transportarlo a través de una conexión de red. Cuando un <xref:System.Data.DataSet> se escribe como un DiffGram, llena el DiffGram con toda la información necesaria para con precisión volver a crear el contenido, aunque no el esquema de la <xref:System.Data.DataSet>, incluyendo los valores de columna de ambos el **Original** y **actual** versiones de fila, información de error de fila y el orden de fila.  

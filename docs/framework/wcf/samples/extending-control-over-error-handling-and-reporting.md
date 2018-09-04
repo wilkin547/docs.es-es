@@ -3,11 +3,11 @@ title: Extensión de control a control de errores y creación de informes
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 6492807b55b50662790cf25807a35ddd65fbe01d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399909"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557791"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Extensión de control a control de errores y creación de informes
 Este ejemplo muestra cómo extender el control sobre el control de errores y los informes de errores en un servicio de Windows Communication Foundation (WCF) mediante el <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfaz. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) con algún código adicional agregado al servicio para controlar los errores. El cliente fuerza varias condiciones de error. El servicio intercepta los errores y los registra en un archivo.  

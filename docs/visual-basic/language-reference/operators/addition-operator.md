@@ -11,11 +11,11 @@ helpviewer_keywords:
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
 ms.openlocfilehash: 91806c204c313956b292eb9c9be078991f733b4e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420907"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555038"
 ---
 # <a name="-operator-visual-basic"></a>+ (Operador, Visual Basic)
 Suma dos números o devuelve el valor positivo de una expresión numérica. También puede utilizarse para concatenar dos expresiones de cadena.  

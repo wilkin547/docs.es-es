@@ -1,5 +1,5 @@
 ---
-title: '#ExternalSource (directiva)'
+title: '#ExternalSource (directiva) (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - '#Externalsource'
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: 146ab41d74b45acc4063e2463baca26c7caa4652
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcde8507eb033d0a47d5c5d3fa36176cd63b0856
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586596"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556323"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource (Directiva)
 Indica una asignación entre líneas específicas de código fuente y texto externo al código fuente.  
@@ -32,7 +32,7 @@ Indica una asignación entre líneas específicas de código fuente y texto exte
   
 ## <a name="parts"></a>Elementos  
  `StringLiteral`  
- La ruta de acceso del origen externo.  
+ La ruta de acceso para el origen externo.  
   
  `IntLiteral`  
  El número de línea de la primera línea del origen externo.  
@@ -46,9 +46,9 @@ Indica una asignación entre líneas específicas de código fuente y texto exte
 ## <a name="remarks"></a>Comentarios  
  Esta directiva se usa únicamente por el compilador y el depurador.  
   
- Un archivo de código fuente puede incluir directivas de origen externo, lo que indica una asignación entre líneas específicas de código en el archivo de código fuente y texto externo al código fuente, como un archivo .aspx. Si se producen errores en el código fuente designado durante la compilación, se identifican como procedentes del origen externo.  
+ Un archivo de código fuente puede incluir directivas de origen externo, que indican una asignación entre líneas específicas de código en el archivo de código fuente y texto externo al código fuente, como un archivo .aspx. Si se producen errores en el código fuente designado durante la compilación, se identifican como procedentes del origen externo.  
   
- Directivas de origen externo no tienen ningún efecto en la compilación y no se pueden anidar. Están diseñados para uso interno por la aplicación únicamente.  
+ Directivas de origen externo no tienen ningún efecto en la compilación y no se pueden anidar. La aplicación solo están diseñados para uso interno.  
   
 ## <a name="see-also"></a>Vea también  
  [Compilación condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

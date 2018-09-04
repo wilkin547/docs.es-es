@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: bd0ad5392010772c3205d8f148c985de2706de01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71897299d68c2f0e43def8e70730ea456d6e9e24
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398998"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564722"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Cómo habilitar WIF para una aplicación de servicio web WCF
 ## <a name="applies-to"></a>Se aplica a  
@@ -19,7 +19,7 @@ ms.locfileid: "33398998"
 -   Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>Resumen  
- En este tema de procedimientos se proporcionan los procedimientos paso a paso detallados para habilitar WIF en un servicio Web de WCF. También se proporcionan instrucciones sobre cómo probar la aplicación para comprobar que el servicio Web está presentando notificaciones correctamente cuando se ejecuta la aplicación. Esta sección de procedimientos no tiene instrucciones detalladas para crear un servicio de token de seguridad (STS) y en su lugar se utiliza el STS de desarrollo que se incluye con la extensión Identity and Access Tool. El STS de desarrollo no realiza la autenticación real y está pensado únicamente para pruebas. Para completar este procedimiento, tendrá que instalar la extensión Identity and Access Tool. Se puede descargar en la siguiente ubicación: [Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849).  
+ En este tema de procedimientos se proporcionan los procedimientos paso a paso detallados para habilitar WIF en un servicio Web de WCF. También se proporcionan instrucciones sobre cómo probar la aplicación para comprobar que el servicio Web está presentando notificaciones correctamente cuando se ejecuta la aplicación. Esta sección de procedimientos no tiene instrucciones detalladas para crear un servicio de token de seguridad (STS) y en su lugar se utiliza el STS de desarrollo que se incluye con la extensión Identity and Access Tool. El STS de desarrollo no realiza la autenticación real y está pensado únicamente para pruebas. Para completar este procedimiento, tendrá que instalar la extensión Identity and Access Tool. Se puede descargar en la siguiente ubicación: [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849).  
   
 ## <a name="contents"></a>Contenido  
   

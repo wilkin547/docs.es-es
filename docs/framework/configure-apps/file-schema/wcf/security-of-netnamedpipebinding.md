@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 74bf0d14b0acfd8a5382575d2ee1e51174b6b6b8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0e5a22d6e517bc7a05f74089b7c8ece8c8a4bd39
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752798"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558677"
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a>Elemento &lt;security&gt; de &lt;netNamedPipeBinding&gt;
 Define la configuración de seguridad de un enlace.  
@@ -39,7 +39,7 @@ Define la configuración de seguridad de un enlace.
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|modo|Especifica el tipo de seguridad que se aplica a este enlace. Los valores válidos son los siguientes:<br /><br /> -Ninguno: Esto deshabilita la seguridad.<br />-Transport: Seguridad se proporciona utilizando seguridad basada en transporte subyacente. Es posible controlar el nivel de protección con este modo.<br />-El valor predeterminado es transporte. Este atributo es del tipo <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
+|modo|Especifica el tipo de seguridad que se aplica a este enlace. Los valores válidos son los siguientes:<br /><br /> -None: Esto deshabilita la seguridad.<br />-Transporte: Se proporciona seguridad mediante seguridad basada en transporte subyacente. Es posible controlar el nivel de protección con este modo.<br />-El valor predeterminado es transporte. Este atributo es del tipo <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -62,5 +62,5 @@ Define la configuración de seguridad de un enlace.
  [Selección de tipos de credenciales](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)

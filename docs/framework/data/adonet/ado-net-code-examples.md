@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 5b34f93348c43a26f603140f2393389e1bce107a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 93cc0cf34d2bba23ff0938c8c13d7343d665192d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759145"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552972"
 ---
 # <a name="adonet-code-examples"></a>Ejemplos de código ADO.NET
 Los listados de código de este tema muestran cómo recuperar datos de una base de datos utilizando las tecnologías ADO.NET siguientes:
@@ -39,7 +39,7 @@ Los listados de código de este tema muestran cómo recuperar datos de una base 
 En los listados de código siguientes se muestra cómo recuperar datos de una base de datos usando proveedores de datos ADO.NET. Los datos se devuelven en `DataReader`. Para obtener más información, consulte [recuperar datos mediante DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).
 
 ### <a name="sqlclient"></a>SqlClient
-El código de este ejemplo se da por supuesto que puede conectarse a la `Northwind` base de datos de ejemplo en Microsoft SQL Server. El código crea <xref:System.Data.SqlClient.SqlCommand> para seleccionar filas de la tabla Products, que añade <xref:System.Data.SqlClient.SqlParameter> para limitar los resultados a las filas con un UnitPrice mayor que el valor de parámetro especificado, en este caso 5. El <xref:System.Data.SqlClient.SqlConnection> se abre dentro de un `using` bloque, lo que garantiza que los recursos se cierran y se eliminan cuando el código sale. El código ejecuta el comando utilizando <xref:System.Data.SqlClient.SqlDataReader> y muestra los resultados en la ventana de la consola.
+El código en este ejemplo se da por supuesto que puede conectarse a la `Northwind` base de datos de ejemplo en Microsoft SQL Server. El código crea <xref:System.Data.SqlClient.SqlCommand> para seleccionar filas de la tabla Products, que añade <xref:System.Data.SqlClient.SqlParameter> para limitar los resultados a las filas con un UnitPrice mayor que el valor de parámetro especificado, en este caso 5. El <xref:System.Data.SqlClient.SqlConnection> se abre dentro de un `using` bloque, lo que garantiza que los recursos se cierran y se eliminan cuando se cierra el código. El código ejecuta el comando utilizando <xref:System.Data.SqlClient.SqlDataReader> y muestra los resultados en la ventana de la consola.
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]
@@ -51,7 +51,7 @@ En el código de este ejemplo se asume que puede conectarse a la base de datos d
  [!code-vb[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/VB/source.vb#1)]
 
 ### <a name="odbc"></a>Odbc
-En el código de este ejemplo se asume que puede conectarse a la base de datos de ejemplo Northwind de Microsoft Access. El código crea <xref:System.Data.Odbc.OdbcCommand> para seleccionar filas de la tabla Products, que añade <xref:System.Data.Odbc.OdbcParameter> para limitar los resultados a las filas con un UnitPrice mayor que el valor de parámetro especificado, en este caso 5. El <xref:System.Data.Odbc.OdbcConnection> se abre dentro de un `using` bloque, lo que garantiza que los recursos se cierran y se eliminan cuando el código sale. El código ejecuta el comando utilizando <xref:System.Data.Odbc.OdbcDataReader> y muestra los resultados en la ventana de la consola.
+En el código de este ejemplo se asume que puede conectarse a la base de datos de ejemplo Northwind de Microsoft Access. El código crea <xref:System.Data.Odbc.OdbcCommand> para seleccionar filas de la tabla Products, que añade <xref:System.Data.Odbc.OdbcParameter> para limitar los resultados a las filas con un UnitPrice mayor que el valor de parámetro especificado, en este caso 5. El <xref:System.Data.Odbc.OdbcConnection> se abre dentro de un `using` bloque, lo que garantiza que los recursos se cierran y se eliminan cuando se cierra el código. El código ejecuta el comando utilizando <xref:System.Data.Odbc.OdbcDataReader> y muestra los resultados en la ventana de la consola.
 
 [!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)] 
 [!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)] 
@@ -63,10 +63,10 @@ En el código de este ejemplo se presupone una conexión a DEMO.CUSTOMER en un s
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
 ## <a name="entity-framework-examples"></a>Ejemplos de Entity Framework
-En los listados de código siguientes se muestra cómo recuperar los datos de un origen de datos consultando las entidades de un Entity Data Model (EDM). Estos ejemplos utilizan la [modelo de Northwind](http://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638). Para obtener más información, consulte [Introducción a Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).
+En los listados de código siguientes se muestra cómo recuperar los datos de un origen de datos consultando las entidades de un Entity Data Model (EDM). Estos ejemplos se usa el [modelo de Northwind](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638). Para obtener más información, consulte [Introducción a Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
-El código de este ejemplo usa una consulta LINQ para devolver los datos como objetos Categories, que se proyectan como un tipo anónimo que contiene solo las propiedades CategoryID y CategoryName. Para obtener más información, consulte [información general de las entidades LINQ to](http://msdn.microsoft.com/86d87a27-c17a-45ac-b28d-72c8500333c6).
+El código de este ejemplo usa una consulta LINQ para devolver los datos como objetos Categories, que se proyectan como un tipo anónimo que contiene solo las propiedades CategoryID y CategoryName. Para obtener más información, consulte [LINQ: Introducción entidades](https://msdn.microsoft.com/86d87a27-c17a-45ac-b28d-72c8500333c6).
 
 ```csharp
 using System;
@@ -137,7 +137,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>ObjectQuery con establecimiento de tipos
-En el código de este ejemplo se utiliza <xref:System.Data.Objects.ObjectQuery%601> para devolver los datos como objetos Categories. Para obtener más información, consulte [las consultas de objeto](http://msdn.microsoft.com/0768033c-876f-471d-85d5-264884349276).
+En el código de este ejemplo se utiliza <xref:System.Data.Objects.ObjectQuery%601> para devolver los datos como objetos Categories. Para obtener más información, consulte [las consultas de objeto](https://msdn.microsoft.com/0768033c-876f-471d-85d5-264884349276).
 
 ```csharp
 using System;
@@ -346,7 +346,7 @@ End Class
 ## <a name="see-also"></a>Vea también
  [Información general sobre ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Crear aplicaciones de datos](http://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
- [Consultar un Entity Data Model (tareas de Entity Framework)](http://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [Cómo: ejecutar una consulta que devuelve objetos de tipo anónimo](http://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)  
+ [Crear aplicaciones de datos](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
+ [Consultar un Entity Data Model (tareas de Entity Framework)](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
+ [Cómo: ejecutar una consulta que devuelve objetos de tipo anónimo](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)  

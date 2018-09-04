@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 06bc79e059300d448ababa87974b590f54f7984c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496804"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554698"
 ---
 # <a name="data-contract-schema-reference"></a>Referencia de esquema de contrato de datos
 En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.Runtime.Serialization.DataContractSerializer> usa para describir los tipos de Common Language Runtime (CLR) para la serialización XML.  
   
 ## <a name="datacontractserializer-mappings"></a>Asignaciones de DataContractSerializer  
- El `DataContractSerializer` asigna tipos CLR a XSD cuando los metadatos se exportan desde un servicio de Windows Communication Foundation (WCF) mediante un extremo de metadatos o el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obtener más información, consulte [serializador de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ El `DataContractSerializer` asigna tipos CLR a XSD cuando los metadatos se exportan desde un servicio de Windows Communication Foundation (WCF) mediante un extremo de metadatos o el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obtener más información, consulte [Data Contract Serializer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  El `DataContractSerializer` también asigna XSD a tipos de CLR cuando Svcutil.exe se utiliza para tener acceso al lenguaje de descripción de servicios Web (WSDL) o documentos XSD y para generar contratos de datos para servicios o clientes.  
   
@@ -32,7 +32,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
   
 ## <a name="general-information"></a>Información general  
   
--   El espacio de nombres del esquema se describe en [Esquema XML](http://go.microsoft.com/fwlink/?LinkId=95475). El prefijo "xs" se utiliza en este documento.  
+-   El espacio de nombres de esquema se describe en [esquema XML](https://go.microsoft.com/fwlink/?LinkId=95475). El prefijo "xs" se utiliza en este documento.  
   
 -   Cualquier atributo con un espacio de nombres que no sea del esquema Se ignora.  
   
@@ -44,7 +44,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 |---------------|------------------|  
 |`attributeFormDefault`|ignorado.|  
 |`blockDefault`|ignorado.|  
-|`elementFormDefault`|Se debe calificar. Todos los elementos se deben calificar para un esquema para que `DataContractSerializer`los admita. Esto puede realizarse, ya sea estableciendo xs:schema/@elementFormDefault en "qualified" o estableciendo xs:element/@form en "qualified" en cada declaración de elemento individual.|  
+|`elementFormDefault`|Se debe calificar. Todos los elementos se deben calificar para un esquema para que `DataContractSerializer`los admita. Esto puede realizarse, ya sea estableciendo xs:schema/@elementFormDefault en "qualified" o estableciendo xs:element/@form en "qualified" en la declaración de cada elemento individual.|  
 |`finalDefault`|ignorado.|  
 |`Id`|ignorado.|  
 |`targetNamespace`|Admitido y asignado al espacio de nombres del contrato de datos. Si no se especifica este atributo, se utiliza el espacio de nombres en blanco. No puede ser el espacio de nombres reservado http://schemas.microsoft.com/2003/10/Serialization/.|  
@@ -92,7 +92,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 |`choice`|Se prohíbe|  
 |`sequence`|Admitido, asigna a los miembros de datos de un contrato de datos.|  
 |`attribute`|Prohibido, aun cuando uso = "prohibido" (con una excepción). Solo se admiten los atributos opcionales del espacio de nombres del esquema de serialización estándar. No asignan a miembros de datos en el modelo de programación del contrato de datos. Actualmente, solo un atributo de este tipo tiene significado y se trata en la sección ISerializable. El resto se pasa por alto.|  
-|`attributeGroup`|no autorizado. En la versión v1 WCF, `DataContractSerializer` omite la presencia de `attributeGroup` en `xs:complexType`.|  
+|`attributeGroup`|no autorizado. En la versión v1 WCF, `DataContractSerializer` omite la presencia de `attributeGroup` dentro de `xs:complexType`.|  
 |`anyAttribute`|no autorizado.|  
 |(vacío)|Se asigna a un contrato de datos sin miembros de datos.|  
   
@@ -115,7 +115,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 |`any`|no autorizado.|  
 |(vacío)|Se asigna a un contrato de datos sin miembros de datos.|  
   
-## <a name="elements--xselement"></a>Elementos: \<xs: element >  
+## <a name="elements--xselement"></a>Elementos – \<xs: element >  
   
 ### <a name="general-information"></a>Información general  
  `<xs:element>` puede aparecer en los contextos siguientes:  
@@ -200,7 +200,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 |`keyref`|ignorado.|  
 |(en blanco)|Se admite.|  
   
- \* Cuando se usa el `simpleType` y `complexType,` asignación para tipos anónimos es el mismo que para tipos no anónimos, salvo que no hay ningún contrato de datos anónimo, por lo que se crea un contrato de datos con nombre, con un nombre generado derivado del nombre de elemento. Las reglas para los tipos anónimos están en la lista siguiente:  
+ \* Cuando se usa el `simpleType` y `complexType,` asignación para tipos anónimos es el mismo que los tipos no anónimos, salvo que no hay ningún contrato de datos anónimos, por lo que se crea un contrato de datos con nombre, con un nombre generado derivado del nombre de elemento. Las reglas para los tipos anónimos están en la lista siguiente:  
   
 -   Detalle de implementación de WCF: si el `xs:element` nombre no contiene puntos, el tipo anónimo asigna a un tipo interno del tipo de contrato de datos externo. Si el nombre contiene puntos, el tipo de contrato de datos resultante es independiente (no un tipo interno).  
   
@@ -208,9 +208,9 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
   
 -   Si un contrato de datos con este tipo de nombre ya existe, el nombre se hace único anexando "1", "2", "3", y así sucesivamente, hasta que se cree un nombre único.  
   
-## <a name="simple-types---xssimpletype"></a>Tipos simples - \<xs >  
+## <a name="simple-types---xssimpletype"></a>Tipos simples: \<xs: simpleType >  
   
-### <a name="xssimpletype-attributes"></a>\<xs >: atributos  
+### <a name="xssimpletype-attributes"></a>\<xs: simpleType >: atributos  
   
 |Atributo|Schema|  
 |---------------|------------|  
@@ -218,7 +218,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 |`id`|ignorado.|  
 |`name`|Admitido, asigna al nombre de contrato de datos.|  
   
-### <a name="xssimpletype-contents"></a>\<xs >: contenido  
+### <a name="xssimpletype-contents"></a>\<xs: simpleType >: contenido  
   
 |Contenido|Schema|  
 |--------------|------------|  
@@ -437,28 +437,28 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
-### <a name="xscomplexcontent-attributes"></a>\<complexContent >: atributos  
+### <a name="xscomplexcontent-attributes"></a>\<xs: complexContent >: atributos  
   
 |Atributo|Schema|  
 |---------------|------------|  
 |`id`|ignorado.|  
 |`mixed`|Debe ser false.|  
   
-### <a name="xscomplexcontent-contents"></a>\<complexContent >: contenido  
+### <a name="xscomplexcontent-contents"></a>\<xs: complexContent >: contenido  
   
 |Contenido|Schema|  
 |--------------|------------|  
 |`restriction`|Prohibido, excepto cuando base = "`xs:anyType`". Lo último es equivalente a colocar directamente el contenido de `xs:restriction` bajo el contenedor de `xs:complexContent`.|  
 |`extension`|Se admite. Asigna a la herencia del contrato de datos.|  
   
-### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs: extension > en \<complexContent >: atributos  
+### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs: extension > en \<xs: complexContent >: atributos  
   
 |Atributo|Schema|  
 |---------------|------------|  
 |`id`|ignorado.|  
 |`base`|Se admite. Asigna al tipo de contrato de datos base desde el que este tipo hereda.|  
   
-### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs: extension > en \<complexContent >: contenido  
+### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs: extension > en \<xs: complexContent >: contenido  
  Las reglas son la mismas que para el contenido `<xs:complexType>` .  
   
  Si se proporciona un `<xs:sequence>` , sus elementos de miembro asignan a los miembros de datos adicionales que se encuentran en el contrato de datos derivado.  
@@ -536,7 +536,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- El atributo opcional `ser:FactoryType` opcional declarado en el esquema de serialización de contrato de datos hace referencia a una clase de generador que puede deserializar el tipo. La clase de generador debe formar parte de la colección de tipos conocidos de la instancia de `DataContractSerializer` que se está usando. Para obtener más información sobre los tipos conocidos, consulte [tipos conocidos de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ El atributo opcional `ser:FactoryType` opcional declarado en el esquema de serialización de contrato de datos hace referencia a una clase de generador que puede deserializar el tipo. La clase de generador debe formar parte de la colección de tipos conocidos de la instancia de `DataContractSerializer` que se está usando. Para obtener más información sobre los tipos conocidos, consulte [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="datacontract-serialization-schema"></a>Esquema de serialización de DataContract  
  Varios esquemas exportados por los tipos de uso, elementos y atributos del `DataContractSerializer` , desde un espacio de nombres de serialización de contrato de datos especial:  

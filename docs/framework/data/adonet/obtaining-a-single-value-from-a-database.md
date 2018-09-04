@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
 ms.openlocfilehash: 1a0d92c7acad58d3618c3f50b7463022352cf542
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396236"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560862"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>Obtener un valor único de una base de datos
 En ocasiones se debe devolver información de bases de datos consistente en un único valor, en lugar de una tabla o un flujo de datos. Por ejemplo, es posible que desea devolver el resultado de una función de agregado como COUNT (\*), SUM o AVG (Quantity). El **comando** objeto proporciona la capacidad de devolver valores únicos mediante el **ExecuteScalar** método. El **ExecuteScalar** método devuelve, como un valor escalar, el valor de la primera columna de la primera fila del conjunto de resultados.  

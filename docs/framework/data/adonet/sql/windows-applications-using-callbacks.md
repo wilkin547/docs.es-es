@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
 ms.openlocfilehash: 9f1e3fe6d53266a4e1366c1a3d5396688a25df0f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43457026"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565137"
 ---
 # <a name="windows-applications-using-callbacks"></a>Aplicaciones Windows que usan devoluciones de llamada
 En la mayoría de las situaciones de procesamiento asincrónico, desea iniciar una operación de base de datos y seguir ejecutando otros procesos sin tener que esperar a que se complete dicha operación. No obstante, en muchas situaciones es necesario hacer algo una vez que ha finalizado la operación de base de datos. En las aplicaciones para Windows, por ejemplo, quizás podría delegar aquellas operaciones cuya ejecución tiene una larga duración en subprocesos en segundo plano, al tiempo que permite que el subproceso de interfaz de usuario permanezca alerta. Sin embargo, cuando la operación de base de datos se complete, deseará utilizar los resultados para rellenar el formulario. Este tipo de situación se implementa mejor con una devolución de llamada.  

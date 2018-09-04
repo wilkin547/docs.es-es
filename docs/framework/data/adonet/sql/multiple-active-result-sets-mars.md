@@ -3,11 +3,11 @@ title: Conjuntos de resultados activos múltiples (MARS)
 ms.date: 03/30/2017
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
 ms.openlocfilehash: 67df210fa48c1b72323177b627b17e537f9fb180
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480758"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564414"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Conjuntos de resultados activos múltiples (MARS)
 Varios conjuntos de resultados activos (MARS) es una característica que permite la ejecución de varios lotes en una sola conexión. En las versiones anteriores, sólo se podía ejecutar un lote cada vez con respecto a una sola conexión. La ejecución de varios lotes con MARS no implica la ejecución simultánea de operaciones.  

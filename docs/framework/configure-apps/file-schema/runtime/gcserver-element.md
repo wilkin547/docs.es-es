@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 027176bdff644a6ff3314df7484ed88ace93001b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8bfe0db3d6fcbdbbcfb90ff488ab19cdbfaab75e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745024"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658813"
 ---
 # <a name="ltgcservergt-element"></a>&lt;gcServer&gt; elemento
 Especifica si Common Language Runtime ejecuta la recopilación de elementos no utilizados de servidor.  
@@ -65,7 +65,7 @@ Especifica si Common Language Runtime ejecuta la recopilación de elementos no u
  Este elemento se puede usar solo en el archivo de configuración de la aplicación; se omite si se encuentra en el archivo de configuración del equipo.  
   
 > [!NOTE]
->  En .NET Framework 4 y versiones anteriores, la recolección de elementos no utilizados simultánea no está disponible si la recolección de elementos no utilizados de servidor está habilitada. A partir de [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], la recolección de elementos no utilizados de servidor es simultánea. Para usar la recolección de elementos no utilizados de servidor no simultánea, establezca el `<gcServer>` elemento `true` y [ \<gcConcurrent > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) a `false`.  
+>  En .NET Framework 4 y versiones anteriores, la recolección de elementos no utilizados simultánea no está disponible si la recolección de elementos no utilizados de servidor está habilitada. A partir de [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], la recolección de elementos no utilizados de servidor es simultánea. Para usar la recolección no simultánea server, establezca el `<gcServer>` elemento `true` y [ \<gcConcurrent > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) a `false`.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se habilita la recolección de elementos no utilizados de servidor.  
@@ -82,4 +82,4 @@ Especifica si Common Language Runtime ejecuta la recopilación de elementos no u
  <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
  [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Cómo: deshabilitar la recolección de elementos no utilizados simultánea](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+ [Cómo: deshabilitar la recolección de elementos no utilizados simultánea](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)

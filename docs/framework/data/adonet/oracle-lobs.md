@@ -2,28 +2,28 @@
 title: Objetos LOB de Oracle
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 04789b385d7a956b65b7cd99594fc92001183af3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 39ff8f1c21fc1161f4f3726548713d384c7d7400
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758781"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560222"
 ---
 # <a name="oracle-lobs"></a>Objetos LOB de Oracle
-El proveedor de datos de .NET Framework para Oracle incluye la <xref:System.Data.OracleClient.OracleLob> (clase), que se utiliza para trabajar con Oracle **LOB** tipos de datos.  
+El proveedor de datos de .NET Framework para Oracle incluye la <xref:System.Data.OracleClient.OracleLob> (clase), que se usa para trabajar con Oracle **LOB** tipos de datos.  
   
  Un **OracleLob** puede ser uno de estos <xref:System.Data.OracleClient.OracleType> tipos de datos:  
   
 |Tipo de datos|Descripción|  
 |---------------|-----------------|  
-|**BLOB**|Oracle **BLOB** tipo de datos que contiene datos binarios con un tamaño máximo de 4 gigabytes. Se asigna a un **matriz** de tipo **bytes**.|  
-|**CLOB**|Oracle **CLOB** tipo de datos que contiene datos de caracteres, según el carácter predeterminado establecido en el servidor, con un tamaño máximo de 4 gigabytes. Se asigna a **cadena**.|  
-|**NClob**|Oracle **NCLOB** tipo de datos que contiene datos de caracteres, según el carácter nacional establecido en el servidor con un tamaño máximo de 4 gigabytes. Se asigna a **cadena**.|  
+|**BLOB**|Oracle **BLOB** tipo de datos que contiene datos binarios con un tamaño máximo de 4 gigabytes. Esto se asigna a un **matriz** typu **bytes**.|  
+|**CLOB**|Oracle **CLOB** tipo de datos que contiene datos de caracteres, según el carácter predeterminado se establece en el servidor, con un tamaño máximo de 4 gigabytes. Esto se asigna a **cadena**.|  
+|**NClob**|Oracle **NCLOB** tipo de datos que contiene datos de caracteres, según el juego en el servidor con un tamaño máximo de 4 gigabytes de caracteres nacional. Esto se asigna a **cadena**.|  
   
- Un **OracleLob** difiere de un <xref:System.Data.OracleClient.OracleBFile> en que los datos se almacenan en el servidor en lugar de en un archivo físico en el sistema operativo. También puede ser un objeto de lectura y escritura, a diferencia de un **OracleBFile**, que siempre es de solo lectura.  
+ Un **OracleLob** difiere un <xref:System.Data.OracleClient.OracleBFile> en que los datos se almacenan en el servidor en lugar de en un archivo físico en el sistema operativo. También puede ser un objeto de lectura y escritura, a diferencia de un **OracleBFile**, que siempre es de solo lectura.  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>Creación y recuperación de LOB y forma de escribir en él  
- En el ejemplo de C# siguiente se muestra cómo puede crear LOB en una tabla de Oracle y, a continuación, recuperar y escribir en ellos en forma de **OracleLob** objetos. En el ejemplo se muestra cómo utilizar el <xref:System.Data.OracleClient.OracleDataReader> objeto y el **OracleLob** **lectura** y **escribir** métodos. En el ejemplo se usa Oracle **BLOB**, **CLOB**, y **NCLOB** tipos de datos.  
+ En el ejemplo de C# siguiente se muestra cómo puede crear LOB en una tabla de Oracle y, a continuación, recuperar y escribir en ellos en forma de **OracleLob** objetos. En el ejemplo se muestra cómo utilizar el <xref:System.Data.OracleClient.OracleDataReader> objeto y el **OracleLob** **lectura** y **escribir** métodos. El ejemplo usa Oracle **BLOB**, **CLOB**, y **NCLOB** tipos de datos.  
   
 ```csharp  
 using System;  
@@ -249,4 +249,4 @@ tx.Commit();
   
 ## <a name="see-also"></a>Vea también  
  [Oracle y ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

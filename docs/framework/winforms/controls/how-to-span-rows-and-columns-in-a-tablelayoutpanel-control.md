@@ -11,11 +11,11 @@ helpviewer_keywords:
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
 ms.openlocfilehash: 5363e7a7def8d2593d3ac474deb9d3d7b77d3912
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401295"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556893"
 ---
 # <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>Cómo: Abarcar filas y columnas en un control TableLayoutPanel
 Los controles en un <xref:System.Windows.Forms.TableLayoutPanel> control puede abarcar filas y columnas adyacentes.  

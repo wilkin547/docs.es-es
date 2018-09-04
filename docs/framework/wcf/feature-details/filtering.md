@@ -3,11 +3,11 @@ title: Filtrado
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 ms.openlocfilehash: 74915a45ed5ca1d13790f64c7921d1f750fa04d3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409135"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660175"
 ---
 # <a name="filtering"></a>Filtrado
 Windows Communication Foundation (WCF) del sistema de filtrado puede usar los filtros declarativos para igualar mensajes y tomar decisiones operativas. Puede utilizar filtros para determinar qué hacer con un mensaje examinando parte del mensaje. Un proceso de cola, por ejemplo, puede utilizar una consulta de XPath 1.0 para comprobar el elemento de prioridad de un encabezado conocido para determinar si poner un mensaje al principio de la cola.  

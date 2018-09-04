@@ -2,22 +2,22 @@
 title: Filtros avanzados
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-ms.openlocfilehash: de8577be2d56ec3c942fd8736e350234daf6a35a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7022384e8abe93f4276eec48785b3243ed926438
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805621"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564205"
 ---
 # <a name="advanced-filters"></a>Filtros avanzados
-Este ejemplo muestra un servicio de enrutamiento de Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente WCF que facilita el proceso incluir un enrutador basado en contenido en la aplicación. Este ejemplo adapta el ejemplo de la calculadora de WCF estándar para comunicarse con el servicio de enrutamiento. En este ejemplo se muestra cómo definir la lógica de enrutamiento basado en contenido a través del uso de filtros de mensajes y tablas de filtro de mensajes.  
+Este ejemplo muestra un servicio de enrutamiento de Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente WCF que facilita la tarea debe incluir un enrutador basado en contenido en la aplicación. Este ejemplo adapta el ejemplo de calculadora de WCF estándar para comunicarse con el servicio de enrutamiento. En este ejemplo se muestra cómo definir la lógica de enrutamiento basado en contenido a través del uso de filtros de mensajes y tablas de filtro de mensajes.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\AdvancedFilters`  
   
@@ -49,7 +49,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- El tercer filtro es un <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Esto coincide con cualquier mensaje que se presentara en un punto de conexión con una dirección que coincida con el prefijo de dirección (o la parte delantera) proporcionado. En este ejemplo se define el prefijo de dirección como "http://localhost/routingservice/router/rounding/". Esto significa que los mensajes entrantes que se dirigen al " http://localhost/routingservice/router/rounding/ *" coincide con este filtro. En este caso, es un mensaje que se muestran en el extremo de calculadora de redondeo, que tiene la dirección "http://localhost/routingservice/router/rounding/calculator".  
+ El tercer filtro es un <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Esto coincide con cualquier mensaje que se presentara en un punto de conexión con una dirección que coincida con el prefijo de dirección (o la parte delantera) proporcionado. En este ejemplo se define el prefijo de dirección como "http://localhost/routingservice/router/rounding/". Esto significa que los mensajes entrantes que se dirigen al " http://localhost/routingservice/router/rounding/ *" coincide con este filtro. En este caso, es un mensaje que se muestran en el punto de conexión de calculadora de redondeo, que tiene la dirección de "http://localhost/routingservice/router/rounding/calculator".  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -82,7 +82,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 3.  Presione F5 o CTRL + MAYÚS + B en Visual Studio.  
   
-    1.  Si desea iniciar de forma automática los proyectos necesarios al presionar F5, haga clic en la solución y seleccione **propiedades**. Seleccione el **proyecto de inicio** nodo bajo **propiedades comunes** en el panel izquierdo. Seleccione el **proyectos de inicio múltiples** botón de radio y establecer todos los proyectos que tienen el **iniciar** acción.  
+    1.  Si desea iniciar automáticamente los proyectos necesarios al presionar F5, haga clic en la solución y seleccione **propiedades**. Seleccione el **proyecto de inicio** nodo bajo **propiedades comunes** en el panel izquierdo. Seleccione el **varios proyectos de inicio** botón de radio y establezca todos los proyectos que tienen el **iniciar** acción.  
   
     2.  Si compila el proyecto con CTRL+MAYÚS+B, debe iniciar las siguientes aplicaciones:  
   
@@ -140,7 +140,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 8.  El servicio de calculadora y el servicio de calculadora de redondeo también imprime un registro de las operaciones invocadas en sus respectivas ventanas de consola.  
   
-9. En la ventana de la consola de cliente, escriba `quit` y presione ENTRAR para salir.  
+9. En la ventana de consola de cliente, escriba `quit` y presione ENTRAR para salir.  
   
 10. Presione ENTRAR en las ventanas de la consola de servicios para terminar los servicios.  
   
@@ -154,4 +154,4 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
  Contoso desea virtualizar todos sus servicios para exponer solo un extremo a través del que ofrecer acceso a varios tipos diferentes de servicios públicamente. En este caso, utilizan las capacidades de enrutamiento basado en contenido del servicio de enrutamiento para determinar dónde se deberían enviar las solicitudes entrantes.  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de persistencia y el hospedaje de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

@@ -2,12 +2,12 @@
 title: Actividad de LINQ to Objects
 ms.date: 03/30/2017
 ms.assetid: 403c82e8-7f2b-42f6-93cd-95c35bc76ead
-ms.openlocfilehash: e2c2be52a88d8f9a886f0e59c027e1d6c737497c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fca4a94a951c9713a61914de6ef33e0cbb74f75e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516674"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552773"
 ---
 # <a name="linq-to-objects-activity"></a>Actividad de LINQ to Objects
 En este ejemplo se muestra cómo crear una actividad para utilizar LINQ to Objects para consultar elementos de una colección.  
@@ -109,10 +109,10 @@ Activity sampleWorkflow = new Sequence
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Linq\LinqToObjects`  
   
 ## <a name="see-also"></a>Vea también  
- [Expresiones lambda (Guía de programación de C#)](http://go.microsoft.com/fwlink/?LinkId=150381)  
- [LINQ to Objects](http://go.microsoft.com/fwlink/?LinkID=150380)
+ [Expresiones lambda (Guía de programación de C#)](https://go.microsoft.com/fwlink/?LinkId=150381)  
+ [LINQ to Objects](https://go.microsoft.com/fwlink/?LinkID=150380)

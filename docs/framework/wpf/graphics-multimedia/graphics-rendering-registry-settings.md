@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: e12fccf7426ae130cd2aaf120eafb19ac3909659
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: acaa8f2ff6611f2f0beb07b74193341edfa2a428
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925760"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561238"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configuración del Registro en la representación de gráficos
 En este tema se ofrece información general sobre la configuración del Registro en la representación de gráficos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que afecta a las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -26,7 +26,7 @@ En este tema se ofrece información general sobre la configuración del Registro
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>¿Qué son XPDM y WDDM?  
- Parte de la configuración del Registro en la representación de gráficos incluye distintos valores predeterminados, que varían en función de que la tarjeta de vídeo use un controlador XPDM o WDDM. XPDM se refiere a [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Display Driver Model y WDDM, a Windows Display Driver Model. WDDM está disponible en equipos que ejecuten [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] y [!INCLUDE[win7](../../../../includes/win7-md.md)]. XPDM está disponible en equipos que ejecuten [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] y [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Para más información sobre WDDM, vea [Windows Vista Display Driver Model Design Guide](http://go.microsoft.com/fwlink/?LinkId=178394) (Guía de diseño de Windows Vista Display Driver Model).  
+ Parte de la configuración del Registro en la representación de gráficos incluye distintos valores predeterminados, que varían en función de que la tarjeta de vídeo use un controlador XPDM o WDDM. XPDM se refiere a [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Display Driver Model y WDDM, a Windows Display Driver Model. WDDM está disponible en equipos que ejecuten [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] y [!INCLUDE[win7](../../../../includes/win7-md.md)]. XPDM está disponible en equipos que ejecuten [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] y [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Para más información sobre WDDM, vea [Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394) (Guía de diseño de Windows Vista Display Driver Model).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Configuración de registro  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
 ms.openlocfilehash: 765bdb7ee75d7e0c6461311263afe9481830673f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43474212"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554007"
 ---
 # <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Cómo: Compartir datos enlazados entre formularios mediante el componente BindingSource
 Puede compartir datos fácilmente entre formularios con el componente <xref:System.Windows.Forms.BindingSource>. Por ejemplo, quizás quiera mostrar un formulario de solo lectura que resume los datos del origen de datos y otro formulario editable que contiene información detallada sobre el elemento seleccionado actualmente en el origen de datos. Este ejemplo muestra este escenario.  

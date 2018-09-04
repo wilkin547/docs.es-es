@@ -3,11 +3,11 @@ title: Actividad de promoción de propiedad
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
 ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481142"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559110"
 ---
 # <a name="property-promotion-activity"></a>Actividad de promoción de propiedad
 Este ejemplo proporciona una solución integral que incluye la característica Promoción de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> directamente en el flujo de trabajo que crea la experiencia. Se proporciona una colección de elementos de configuración, actividades de flujo de trabajo y extensiones de flujo de trabajo que simplifican el uso de la característica Promoción. Además, el ejemplo contiene un flujo de trabajo sencillo que muestra cómo utilizar esta colección.  

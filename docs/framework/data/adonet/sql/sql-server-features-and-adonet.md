@@ -2,12 +2,12 @@
 title: Características de SQL Server y ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: e19cec01cb749968b051541e78ee8c9af5cbb333
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2747af4ee2937f5b5d26217df5eb45c806606ac5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356574"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658878"
 ---
 # <a name="sql-server-features-and-adonet"></a>Características de SQL Server y ADO.NET
 En los temas de esta sección se describen las características de SQL Server orientadas al desarrollo de aplicaciones de base de datos con ADO.NET.  
@@ -16,7 +16,7 @@ En los temas de esta sección se describen las características de SQL Server or
   
  **Libros en pantalla de SQL Server**  
   
-1.  [Desarrollo (motor de base de datos)](http://go.microsoft.com/fwlink/?LinkId=115245)  
+1.  [Desarrollo (motor de base de datos)](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Enumeración de instancias de SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
@@ -51,4 +51,4 @@ En los temas de esta sección se describen las características de SQL Server or
  [Recuperar y modificar datos en ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

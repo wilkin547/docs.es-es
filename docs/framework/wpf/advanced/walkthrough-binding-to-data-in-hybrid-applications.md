@@ -8,15 +8,15 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: fe8826a390abd370361b84f99540b8dacbdedc5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 773708eab617e7f4cfdffad2e5019e66c60ebf37
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549284"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562664"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Tutorial: Enlazar a datos en aplicaciones híbridas
-Enlazar un origen de datos a un control es esencial para proporcionar a los usuarios con acceso a datos subyacentes, si usas [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Este tutorial muestra cómo puede utilizar el enlace de datos en aplicaciones híbridas que incluyen ambos [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controles.  
+Enlazar un origen de datos a un control es esencial para proporcionar a los usuarios con acceso a datos subyacentes, si usas [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. En este tutorial se muestra cómo puede usar el enlace de datos en aplicaciones híbridas que incluyen ambos [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controles.  
   
  Las tareas ilustradas en este tutorial incluyen:  
   
@@ -34,7 +34,7 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
   
 -   Enlazar al origen de datos.  
   
- Para obtener una lista de código completa de las tareas ilustradas en este tutorial, vea [Data Binding in Hybrid Applications Sample](http://go.microsoft.com/fwlink/?LinkID=159983).  
+ Para obtener una lista de código completo de las tareas ilustradas en este tutorial, vea [Data Binding in Hybrid Applications Sample](https://go.microsoft.com/fwlink/?LinkID=159983).  
   
  Cuando acabe, entenderá mejor las características de enlace de datos en aplicaciones híbridas.  
   
@@ -43,7 +43,7 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
--   Acceso a la base de datos de ejemplo Northwind con Microsoft SQL Server.  
+-   Acceso a la base de datos de ejemplo Northwind que se ejecutan en Microsoft SQL Server.  
   
 ## <a name="creating-the-project"></a>Crear el proyecto  
   
@@ -74,22 +74,22 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
   
 #### <a name="to-define-the-data-template"></a>Para definir la plantilla de datos  
   
--   Copie el código XAML siguiente en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
+-   Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
 ## <a name="specifying-the-form-layout"></a>Especificar el diseño del formulario  
- El diseño del formulario se define mediante una cuadrícula con tres filas y tres columnas. <xref:System.Windows.Controls.Label> dispone de controles para identificar cada columna de la tabla Customers.  
+ El diseño del formulario se define mediante una cuadrícula con tres filas y tres columnas. <xref:System.Windows.Controls.Label> se proporcionan controles para identificar cada columna en la tabla Customers.  
   
 #### <a name="to-set-up-the-grid-layout"></a>Para configurar el diseño de cuadrícula  
   
--   Copie el código XAML siguiente en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
+-   Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>Para configurar los controles de etiqueta  
   
--   Copie el código XAML siguiente en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
+-   Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
@@ -100,18 +100,18 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
   
 #### <a name="to-specify-data-bindings"></a>Para especificar los enlaces de datos  
   
--   Copie el código XAML siguiente en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
+-   Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
   
-     El <xref:System.Windows.Data.Binding> clase enlaza la <xref:System.Windows.Controls.TextBox> controles a los campos correspondientes de la base de datos.  
+     El <xref:System.Windows.Data.Binding> clase enlaza el <xref:System.Windows.Controls.TextBox> controles a los campos adecuados en la base de datos.  
   
      [!code-xaml[WPFWithWFAndDatabinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#6)]  
   
 ## <a name="displaying-data-by-using-interoperation"></a>Mostrar los datos mediante la interoperación  
- Se muestran los pedidos correspondientes al cliente seleccionado en un <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> control denominado `dataGridView1`. El `dataGridView1` control se enlaza al origen de datos en el archivo de código subyacente. A <xref:System.Windows.Forms.Integration.WindowsFormsHost> control es el elemento primario de este [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.  
+ Los pedidos correspondientes al cliente seleccionado se muestran en un <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> control denominado `dataGridView1`. El `dataGridView1` está enlazado al origen de datos en el archivo de código subyacente. Un <xref:System.Windows.Forms.Integration.WindowsFormsHost> control es el elemento primario de este [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control.  
   
 #### <a name="to-display-data-in-the-datagridview-control"></a>Para mostrar los datos en el control DataGridView  
   
--   Copie el código XAML siguiente en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
+-   Copie el siguiente XAML en el <xref:System.Windows.Controls.Grid> declaración del elemento.  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
@@ -122,11 +122,11 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
   
 1.  Desde el **datos** menú, seleccione **Agregar nuevo origen de datos**.  
   
-2.  En el **Asistente para configuración de orígenes de datos**, crear una conexión a la base de datos Northwind mediante el uso de un conjunto de datos. Para obtener más información, consulte [Cómo: conectarse a los datos en una base de datos](http://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
+2.  En el **Asistente para configuración de origen de datos**, crear una conexión a la base de datos Northwind mediante el uso de un conjunto de datos. Para obtener más información, consulte [Cómo: conectarse a datos en una base de datos](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
   
-3.  Cuando se le solicite en el **Asistente para configuración de orígenes de datos**, guardar la cadena de conexión como `NorthwindConnectionString`.  
+3.  Cuando se le solicite en el **Asistente para configuración de origen de datos**, guardar la cadena de conexión como `NorthwindConnectionString`.  
   
-4.  Cuando se le pida que elija los objetos de base de datos, seleccione la `Customers` y `Orders` tablas y el nombre del conjunto de datos generado `NorthwindDataSet`.  
+4.  Cuando se le pida que elija los objetos de base de datos, seleccione el `Customers` y `Orders` tablas y el nombre del conjunto de datos generado `NorthwindDataSet`.  
   
 ## <a name="binding-to-the-data-source"></a>Enlazar al origen de datos  
  El <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> componente proporciona una interfaz uniforme para el origen de datos de la aplicación. El enlace al origen de datos se implementa en el archivo de código subyacente.  
@@ -151,7 +151,7 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
   
 4.  Abra MainWindow.xaml.  
   
-5.  En la vista Diseño o la vista XAML, seleccione la <xref:System.Windows.Window> elemento.  
+5.  En la vista Diseño o la vista XAML, seleccione el <xref:System.Windows.Window> elemento.  
   
 6.  En la ventana Propiedades, haga clic en el **eventos** ficha.  
   
@@ -159,14 +159,14 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
   
 8.  Copie el código siguiente en el <xref:System.Windows.FrameworkElement.Loaded> controlador de eventos.  
   
-     Este código asigna la <xref:System.Windows.Forms.BindingSource> componente como el contexto de datos y rellena el `Customers` y `Orders` objetos de adaptador.  
+     Este código asigna el <xref:System.Windows.Forms.BindingSource> componente como el contexto de datos y rellena el `Customers` y `Orders` objetos de adaptador.  
   
      [!code-csharp[WPFWithWFAndDatabinding#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
      [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]  
   
 9. Copie el código siguiente en el `MainWindow` definición de clase.  
   
-     Este método controla la <xref:System.Windows.Data.CollectionView.CurrentChanged> eventos y actualiza el elemento actual del enlace de datos.  
+     Este método controla el <xref:System.Windows.Data.CollectionView.CurrentChanged> eventos y actualiza el elemento actual del enlace de datos.  
   
      [!code-csharp[WPFWithWFAndDatabinding#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
@@ -176,7 +176,7 @@ Enlazar un origen de datos a un control es esencial para proporcionar a los usua
 ## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [WPF Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
- [Enlace de datos de ejemplo de aplicaciones híbridas](http://go.microsoft.com/fwlink/?LinkID=159983)  
+ [Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [Data Binding in Hybrid Applications Sample](https://go.microsoft.com/fwlink/?LinkID=159983)  
  [Tutorial: Hospedar un control compuesto de formularios Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
  [Tutorial: Hospedar un control compuesto de WPF en formularios Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

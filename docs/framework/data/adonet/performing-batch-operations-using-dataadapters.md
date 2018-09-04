@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
 ms.openlocfilehash: cfc77ff3b030ffebf52feab0190f81fc4e581cf9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397503"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560025"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Realizar operaciones por lotes utilizando objetos DataAdapter
 La compatibilidad con lotes en ADO.NET permite que un <xref:System.Data.Common.DataAdapter> agrupe operaciones INSERT, UPDATE y DELETE desde un <xref:System.Data.DataSet> o una <xref:System.Data.DataTable> al servidor, en lugar de enviar las operaciones de una en una. La reducción del número de viajes de ida y vuelta (round trip) al servidor tiene como resultado una mejora considerable del rendimiento. Las actualizaciones por lotes son compatibles con los proveedores de datos de .NET para SQL Server (<xref:System.Data.SqlClient>) y Oracle (<xref:System.Data.OracleClient>).  

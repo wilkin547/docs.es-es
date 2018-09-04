@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2a0d716c3689b506ad29d99f006f1a4bb7c53a3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61e8be6f7f621340a684bff69ec5c9d64ab36c61
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507034"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565195"
 ---
 # <a name="custom-binding-security"></a>Seguridad de enlace personalizado
 Este ejemplo muestra cómo configurar la seguridad mediante un enlace personalizado. Muestra cómo utilizar un enlace personalizado para habilitar la seguridad de nivel de mensaje junto con un transporte seguro. Esto es útil cuando se exige un transporte seguro que transmita los mensajes entre el cliente y servicio y simultáneamente los mensajes deben ser seguros en el nivel de mensaje. Los enlaces proporcionados por el sistema no admiten esta configuración.  
@@ -25,7 +25,7 @@ Este ejemplo muestra cómo configurar la seguridad mediante un enlace personaliz
   
 -   Seguridad de mensaje de Windows.  
   
- La configuración de enlace personalizado permite el transporte seguro, habilitando simultáneamente la seguridad de nivel de mensaje. El orden de los elementos de enlace es importante en la definición de un enlace personalizado, porque cada uno representa una capa en la pila de canales (consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)). El enlace personalizado se define en los archivos de configuración de cliente y servicio, como se muestra en la configuración del ejemplo siguiente.  
+ La configuración de enlace personalizado permite el transporte seguro, habilitando simultáneamente la seguridad de nivel de mensaje. El orden de los elementos de enlace es importante para definir un enlace personalizado, porque cada uno representa una capa en la pila de canales (consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)). El enlace personalizado se define en los archivos de configuración de cliente y servicio, como se muestra en la configuración del ejemplo siguiente.  
   
 ```xml  
 <bindings>  
@@ -59,7 +59,7 @@ Este ejemplo muestra cómo configurar la seguridad mediante un enlace personaliz
 </behaviors>  
 ```  
   
- Además, el enlace personalizado utiliza seguridad de mensajes con tipo de credencial de Windows; éste es el tipo de credencial predeterminado. Esto lo lleva a cabo el elemento de enlace `security`. Cliente y servicio se autentican utilizando la seguridad de nivel de mensaje si el mecanismo de autenticación Kerberos está disponible. Esto sucede si el ejemplo se ejecuta en el entorno de Active Directory. Si el mecanismo de autenticación Kerberos no está disponible, se utiliza la autenticación NTLM. NTLM autentica el cliente para el servicio pero no autentica el servicio para el cliente. El `security` elemento de enlace está configurado para usar `SecureConversation``authenticationType`, que da como resultado la creación de una sesión de seguridad en el cliente y el servicio. Esto se exige para que funcione el contrato del dúplex del servicio.  
+ Además, el enlace personalizado utiliza seguridad de mensajes con tipo de credencial de Windows; éste es el tipo de credencial predeterminado. Esto lo lleva a cabo el elemento de enlace `security`. Cliente y servicio se autentican utilizando la seguridad de nivel de mensaje si el mecanismo de autenticación Kerberos está disponible. Esto sucede si el ejemplo se ejecuta en el entorno de Active Directory. Si el mecanismo de autenticación Kerberos no está disponible, se utiliza la autenticación NTLM. NTLM autentica el cliente para el servicio pero no autentica el servicio para el cliente. El `security` elemento de enlace está configurado para usar `SecureConversation``authenticationType`, lo que da como resultado la creación de una sesión de seguridad en el cliente y el servicio. Esto se exige para que funcione el contrato del dúplex del servicio.  
   
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
@@ -107,11 +107,11 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para ejecutar el ejemplo en una configuración de equipo único o varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo  
   
@@ -124,7 +124,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 3.  Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4.  Si el cliente y el servicio no se pueden comunicar, consulte [sugerencias de solución de problemas de](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
@@ -141,7 +141,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         > [!NOTE]
         >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Visual Studio 2010. Requiere que la variable de entorno path señale al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Visual Studio 2010.  
   
-    5.  Cambiar el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) incluida en el archivo Service.exe.config para reflejar el nombre de sujeto del certificado generado en el paso anterior.  
+    5.  Cambiar el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) dentro del archivo Service.exe.config para reflejar el nombre de sujeto del certificado generado en el paso anterior.  
   
     6.  Ejecute Service.exe desde un símbolo del sistema.  
   
@@ -180,7 +180,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>  
         ```  
   
-    7.  Si el servicio se está ejecutando con una cuenta que no es NetworkService o LocalSystem en un entorno de dominio, puede que sea necesario modificar la identidad del punto de conexión de servicio en el archivo App.config del cliente para establecer el UPN o SPN adecuado en función de la cuenta que se utilice para ejecutar el servicio. Para obtener más información acerca de la identidad del punto de conexión, consulte el [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) tema.  
+    7.  Si el servicio se está ejecutando con una cuenta que no es NetworkService o LocalSystem en un entorno de dominio, puede que sea necesario modificar la identidad del punto de conexión de servicio en el archivo App.config del cliente para establecer el UPN o SPN adecuado en función de la cuenta que se utilice para ejecutar el servicio. Para obtener más información acerca de la identidad del punto de conexión, vea el [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) tema.  
   
     8.  Ejecute Client.exe desde un símbolo del sistema.  
   

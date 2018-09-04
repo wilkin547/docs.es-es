@@ -2,15 +2,15 @@
 title: Operadores de consulta estándar en consultas de LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 1085e43ef1db8eb0017f9ff87acba2da4be46377
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.openlocfilehash: 302fa281767fc95e9a9a2192382034b3a519cd92
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43238568"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560493"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Operadores de consulta estándar en consultas de LINQ to Entities
-En una consulta, se especifica la información que se desea recuperar del origen de datos. Una consulta también puede especificar cómo se debe ordenar, agrupar y conformar esa información antes de que se devuelva. LINQ proporciona un conjunto de métodos de consulta estándar que se puede utilizar en una consulta. La mayoría de estos métodos funciona en secuencias; en este contexto, una secuencia es un objeto cuyo tipo implementa la <xref:System.Collections.Generic.IEnumerable%601> interfaz o <xref:System.Linq.IQueryable%601> interfaz. La funcionalidad de consulta de los operadores de consulta estándar incluye las operaciones de filtrado, proyección, agregación, ordenación, agrupamiento y paginación, entre otras. Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis de palabras clave especial para que se puedan invocar utilizando la sintaxis de las expresiones de consulta. Una expresión de consulta constituye una forma diferente de expresar una consulta, más legible que su equivalente basada en métodos. Las cláusulas de las expresiones de consulta se convierten en llamadas a los métodos de consulta en tiempo de compilación. Para obtener una lista de operadores de consulta estándar que poseen cláusulas de expresiones de consulta equivalentes, consulte [Standard Query Operators Overview](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+En una consulta, se especifica la información que se desea recuperar del origen de datos. Una consulta también puede especificar cómo se debe ordenar, agrupar y conformar esa información antes de que se devuelva. LINQ proporciona un conjunto de métodos de consulta estándar que se puede utilizar en una consulta. La mayoría de estos métodos funciona en secuencias; en este contexto, una secuencia es un objeto cuyo tipo implementa la <xref:System.Collections.Generic.IEnumerable%601> interfaz o <xref:System.Linq.IQueryable%601> interfaz. La funcionalidad de consulta de los operadores de consulta estándar incluye las operaciones de filtrado, proyección, agregación, ordenación, agrupamiento y paginación, entre otras. Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis de palabras clave especial para que se puedan invocar utilizando la sintaxis de las expresiones de consulta. Una expresión de consulta constituye una forma diferente de expresar una consulta, más legible que su equivalente basada en métodos. Las cláusulas de las expresiones de consulta se convierten en llamadas a los métodos de consulta en tiempo de compilación. Para obtener una lista de operadores de consulta estándar que poseen cláusulas de expresiones de consulta equivalentes, consulte [Standard Query Operators Overview](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
  No todos los operadores de consulta estándar se admiten en las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Para obtener más información, consulte [admitidas y los métodos de LINQ no admitidos (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). En este tema se proporciona información sobre los operadores de consulta estándar que es específica de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Para obtener más información sobre problemas conocidos de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] consultas, vea [problemas conocidos y consideraciones en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
   
@@ -67,7 +67,7 @@ En una consulta, se especifica la información que se desea recuperar del origen
 |`Sum`|Devuelve NULL.|Devuelve NULL.|Devuelve la suma del valor NO NULL de una secuencia.|Calcula la suma de una secuencia de valores numéricos.|  
   
 ## <a name="type-methods"></a>Métodos de tipos  
- Los dos métodos de LINQ que se encargan de la conversión y prueba de tipos se admiten en el contexto de [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Esto significa que los únicos tipos admitidos son los que se asignan al tipo de [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] adecuado. Para obtener una lista de estos tipos, vea [tipos de modelos conceptuales (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Los métodos de tipos son `Convert` y `OfType`.  
+ Los dos métodos de LINQ que se encargan de la conversión y prueba de tipos se admiten en el contexto de [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Esto significa que los únicos tipos admitidos son los que se asignan al tipo de [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] adecuado. Para obtener una lista de estos tipos, vea [tipos de modelos conceptuales (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Los métodos de tipos son `Convert` y `OfType`.  
   
  `OfType` se admite para los tipos de entidad. `Convert` se admite para los tipos primitivos de modelo conceptual.  Los métodos de C# `is` y `as` también se admiten.  
   
@@ -78,4 +78,4 @@ En una consulta, se especifica la información que se desea recuperar del origen
   
 ## <a name="see-also"></a>Vea también  
  [Métodos de LINQ compatibles y no compatibles (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
- [Información general sobre operadores de consulta estándar](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+ [Información general sobre operadores de consulta estándar](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

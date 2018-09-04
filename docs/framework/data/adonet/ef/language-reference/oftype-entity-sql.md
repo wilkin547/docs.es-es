@@ -3,11 +3,11 @@ title: OFTYPE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
 ms.openlocfilehash: c90950e11cbfca7a49b505c1654d08be504990e1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389886"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564658"
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE (Entity SQL)
 Devuelve una colección de objetos de una expresión de consulta de un tipo específico.  

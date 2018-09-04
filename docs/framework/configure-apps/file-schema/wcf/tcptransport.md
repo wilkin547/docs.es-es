@@ -2,12 +2,12 @@
 title: '&lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 4141b0f6493c51048ad60accdc1d5ee9bac01231
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 92590f556d93859e8681eea8f8f05da4f560e150
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751082"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563944"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 Define un transporte del TCP que puede ser utilizado por un canal para la transferencia de mensajes de un enlace personalizado.  
@@ -63,7 +63,7 @@ Define un transporte del TCP que puede ser utilizado por un canal para la transf
 |maxPendingConnections|Obtiene o establece el número máximo de conexiones pendientes de distribución en el servicio.|  
 |maxReceivedMessageSize|Obtiene y establece el tamaño máximo permitido del mensaje que se puede recibir.|  
 |portSharingEnabled|Un valor booleano que especifica si el uso compartido de puerto TCP está habilitado para esta conexión. Si éste es `false`, cada enlace utilizará su propio puerto exclusivo. De manera predeterminada, es `false`.<br /><br /> Este valor sólo es pertinente a los servicios. Los clientes no se ven afectados.<br /><br /> Para usar esta configuración se necesita que se habilite el servicio de puerto TCP compartido Windows Communication Foundation (WCF), cambiando su tipo de inicio a manual o automático.|  
-|teredoEnabled|Un valor booleano que especifica si Teredo (una tecnología para direccionar clientes que están detrás de firewalls) está habilitada. De manera predeterminada, es `false`.<br /><br /> Esta propiedad habilita Teredo para el socket TCP subyacente. Para obtener más información, consulte [información general sobre Teredo](http://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Esta propiedad solo se aplica en [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] y [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. [!INCLUDE[wv](../../../../../includes/wv-md.md)] tiene una opción de configuración del equipo para Teredo, por lo que al ejecutar Vista, se omite esta propiedad. Teredo requiere que los equipos de servicio y del cliente tengan la pila de Microsoft IPv6 instalada y correctamente configurada para el uso de Teredo. Para obtener más información acerca de cómo configurar Teredo, vea [información general sobre Teredo](http://go.microsoft.com/fwlink/?LinkId=95339). Para obtener más información, consulte [centros de tecnología de Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=49888).|  
+|teredoEnabled|Un valor booleano que especifica si Teredo (una tecnología para direccionar clientes que están detrás de firewalls) está habilitada. De manera predeterminada, es `false`.<br /><br /> Esta propiedad habilita Teredo para el socket TCP subyacente. Para obtener más información, consulte [información general sobre Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Esta propiedad solo se aplica en [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] y [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. [!INCLUDE[wv](../../../../../includes/wv-md.md)] tiene una opción de configuración del equipo para Teredo, por lo que al ejecutar Vista, se omite esta propiedad. Teredo requiere que los equipos de servicio y del cliente tengan la pila de Microsoft IPv6 instalada y correctamente configurada para el uso de Teredo. Para obtener más información sobre cómo configurar Teredo, vea [información general sobre Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Para obtener más información, consulte [centros de tecnología de Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=49888).|  
 |transferMode|Obtiene o establece un valor que indica si los mensajes están almacenados en búfer o se transmiten por secuencias mediante el transporte orientado a la conexión.|  
 |connectionPoolSettings|Especifica valores adicionales del grupo de conexiones para un enlace de canalización con nombre.|  
   

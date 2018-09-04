@@ -10,11 +10,11 @@ helpviewer_keywords:
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
 ms.openlocfilehash: bdfbe59ef779de242e32be11ca28c84f68437240
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486797"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658930"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Cómo: Crear formularios MDI secundarios
 Formularios secundarios MDI son un elemento esencial de [aplicaciones de interfaz de múltiples documentos (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), ya que estos formularios son el centro de la interacción del usuario.  

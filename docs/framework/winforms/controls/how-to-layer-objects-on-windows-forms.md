@@ -13,11 +13,11 @@ helpviewer_keywords:
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 ms.openlocfilehash: d67d9b204c316dce5f3818496d791ed4c1b352f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478050"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561187"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Cómo: Disponer objetos en capas en formularios Windows Forms
 Al crear una interfaz de usuario complejas o trabajar con un formulario de múltiples documentos (MDI) de la interfaz, que a menudo desea capas controles y formularios secundarios para crear interfaces de usuario (UI) más complejas. Para mover y realizar un seguimiento de los controles y ventanas dentro del contexto de un grupo, manipular su orden z. *Orden Z* es el diseño visual de los controles en un formulario de eje z del formulario (intensidad). La ventana en la parte superior del orden z se superpone a todas las demás ventanas. Todas las demás ventanas superponen a la ventana en la parte inferior del orden z.  
