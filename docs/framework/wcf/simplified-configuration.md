@@ -2,15 +2,15 @@
 title: Configuración simplificada
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 9f35a5f4fa4ae6be63bd75a24f58b56dd236ee9c
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 4893cb0d01d2a4a11bffd94768155512dce263a9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808515"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509527"
 ---
 # <a name="simplified-configuration"></a>Configuración simplificada
-Configuración de servicios de Windows Communication Foundation (WCF) puede ser una tarea compleja. Existen muchas opciones diferentes y no siempre es fácil determinar qué configuración es necesaria. Aunque los archivos de configuración aumentan la flexibilidad de los servicios de WCF, también son el origen para muchas dificultades para encontrar problemas. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] aborda estos problemas y proporciona una forma de reducir el tamaño y la complejidad de la configuración del servicio.  
+Configuración de servicios de Windows Communication Foundation (WCF) puede ser una tarea compleja. Existen muchas opciones diferentes y no siempre es fácil determinar qué configuración es necesaria. Aunque los archivos de configuración aumentan la flexibilidad de los servicios de WCF, también son el origen de muchos difícil encontrar problemas. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] aborda estos problemas y proporciona una forma de reducir el tamaño y la complejidad de la configuración del servicio.  
   
 ## <a name="simplified-configuration"></a>Configuración simplificada  
  En los archivos de configuración de servicio WCF, el <`system.serviceModel`> sección contiene un <`service`> (elemento) para cada servicio hospedado. El elemento `service` contiene una recopilación de elementos <`endpoint`> que especifican los extremos expuestos para cada servicio y, opcionalmente, un conjunto de comportamientos del servicio. Los elementos <`endpoint`> especifican la dirección, el enlace y el contrato expuestos por el extremo y, opcionalmente, la configuración de enlace y los comportamientos de los extremos. La sección <`system.serviceModel`> también contiene un elemento <`behaviors`> que le permite especificar los comportamientos de los servicios o los extremos. En el ejemplo siguiente, se muestra la sección <`system.serviceModel`> de un archivo de configuración.  
@@ -46,7 +46,7 @@ Configuración de servicios de Windows Communication Foundation (WCF) puede ser 
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] facilita la configuración de un servicio WCF mediante la eliminación de los requisitos para el <`service`> elemento. Si no agrega ninguna sección <`service`> ni ningún extremo en una sección <`service`> y el servicio no define ningún extremo mediante programación, entonces se agrega automáticamente al servicio un conjunto de extremos predeterminados, uno para cada dirección base del servicio y para cada contrato implementado por el servicio. En cada uno de estos extremos, la dirección del extremo corresponde a la dirección base, el esquema de la dirección base determina el enlace y el contrato es el implementado por el servicio. Si no necesita especificar ningún extremo o comportamientos del servicio, ni realizar ningún cambio de configuración de enlaces, no necesita especificar ningún archivo de configuración de servicio. Si un servicio implementa dos contratos y el host habilita transportes HTTP y TCP, el host de servicio crea cuatro extremos predeterminados, uno para cada contrato al usar cada transporte. Para crear extremos predeterminados, el host de servicio debe conocer qué enlaces hay que utilizar. Esta configuración se especifica en una sección <`protocolMappings`> dentro de la sección <`system.serviceModel`>. La sección <`protocolMappings`> contiene una lista de esquemas de protocolos de transporte asignada a los tipos de enlaces. El host de servicio usa las direcciones base que se le han transmitido para determinar qué enlace debe usar. El ejemplo siguiente usa el elemento <`protocolMappings`>.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] facilita la configuración de un servicio WCF que sea más fácil al eliminar el requisito para el <`service`> elemento. Si no agrega ninguna sección <`service`> ni ningún extremo en una sección <`service`> y el servicio no define ningún extremo mediante programación, entonces se agrega automáticamente al servicio un conjunto de extremos predeterminados, uno para cada dirección base del servicio y para cada contrato implementado por el servicio. En cada uno de estos extremos, la dirección del extremo corresponde a la dirección base, el esquema de la dirección base determina el enlace y el contrato es el implementado por el servicio. Si no necesita especificar ningún extremo o comportamientos del servicio, ni realizar ningún cambio de configuración de enlaces, no necesita especificar ningún archivo de configuración de servicio. Si un servicio implementa dos contratos y el host habilita transportes HTTP y TCP, el host de servicio crea cuatro extremos predeterminados, uno para cada contrato al usar cada transporte. Para crear extremos predeterminados, el host de servicio debe conocer qué enlaces hay que utilizar. Esta configuración se especifica en una sección <`protocolMappings`> dentro de la sección <`system.serviceModel`>. La sección <`protocolMappings`> contiene una lista de esquemas de protocolos de transporte asignada a los tipos de enlaces. El host de servicio usa las direcciones base que se le han transmitido para determinar qué enlace debe usar. El ejemplo siguiente usa el elemento <`protocolMappings`>.  
   
 > [!WARNING]
 >  Al cambiar los elementos de la configuración predeterminada, como los enlaces o los comportamientos, puede afectar a los servicios definidos en los niveles inferiores de la jerarquía de configuración, dado que podrían usar dichos enlaces y comportamientos predeterminados. Por lo tanto, siempre que cambien los enlaces y comportamientos predeterminados, es necesario tener en cuenta de que estos cambios podrían afectar a otros servicios de la jerarquía.  
@@ -108,12 +108,12 @@ Configuración de servicios de Windows Communication Foundation (WCF) puede ser 
 ```  
   
 > [!IMPORTANT]
->  Esta característica se relaciona únicamente con la configuración de servicio de WCF, no con la configuración de cliente. La mayoría de las veces, la configuración de cliente de WCF se generará mediante una herramienta como svcutil.exe o la adición de una referencia de servicio desde Visual Studio. Si está configurando manualmente un cliente WCF debe agregar una \<cliente > elemento a la configuración y especificar los extremos que se va a llamar.  
+>  Esta característica se relaciona únicamente con la configuración de servicio de WCF, no con la configuración de cliente. La mayoría de las veces, la configuración de cliente de WCF se generará mediante una herramienta como svcutil.exe o la adición de una referencia de servicio desde Visual Studio. Si está configurando manualmente un cliente WCF deberá agregar un \<cliente > elemento a la configuración y especificar los extremos que desea llamar.  
   
 ## <a name="see-also"></a>Vea también  
  [Configuración de servicios mediante archivos de configuración](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [Configuración de enlaces para los servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Configuración de servicios](../../../docs/framework/wcf/configuring-services.md)  
- [Configurar aplicaciones de Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [Configurar aplicaciones de Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [Configuración de servicios WCF en el código](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

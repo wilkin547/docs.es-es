@@ -11,11 +11,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 3fdc3786be3307e8c882a33b5139ee34344733b8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404415"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504823"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Cómo: Crear una directiva de publicador
 Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar una versión más reciente de un ensamblado mediante la inclusión de un archivo de directiva de publicador con el ensamblado actualizado. El archivo de directiva de publicador especifica redirección de ensamblado y la configuración de base de código y usa el mismo formato que un archivo de configuración de la aplicación. El archivo de directiva de publicador se compila en un ensamblado y colocar en la caché global de ensamblados.  
@@ -92,7 +92,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
 1.  En el símbolo del sistema, escriba el siguiente comando:  
   
-     **gacutil /i***publisherPolicyAssemblyFile*   
+     **gacutil /i***publisherPolicyAssemblyFile*  
   
      El comando siguiente agrega `policy.1.0.myAssembly.dll` a la caché global de ensamblados.  
   

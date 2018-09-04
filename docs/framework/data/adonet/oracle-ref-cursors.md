@@ -2,12 +2,12 @@
 title: Parámetros REF CURSOR de Oracle
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
-ms.openlocfilehash: 7aae9b2e4b39cf164a93ba82212b5705f583d761
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5443c409bd3c73e91969db6424a4f86f1a16ed72
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758729"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516319"
 ---
 # <a name="oracle-ref-cursors"></a>Parámetros REF CURSOR de Oracle
 El proveedor de datos de .NET Framework para Oracle admite Oracle **REF CURSOR** tipo de datos. Cuando utilice el proveedor de datos para trabajar con cursores REF CURSOR de Oracle, debe tener en cuenta los siguientes comportamientos.  
@@ -19,15 +19,15 @@ El proveedor de datos de .NET Framework para Oracle admite Oracle **REF CURSOR**
   
 -   El proveedor de datos no admite ninguna secuencia de escape ODBC, lo que incluye el escape {resultset} usado para especificar parámetros REF CURSOR.  
   
--   Para ejecutar un procedimiento almacenado que devuelve los cursores REF CURSOR, debe definir los parámetros en la <xref:System.Data.OracleClient.OracleParameterCollection> con una <xref:System.Data.OracleClient.OracleType> de **Cursor** y un <xref:System.Data.OracleClient.OracleParameter.Direction%2A> de **salida**. El proveedor de datos admite el enlace de cursores REF CURSOR sólo como parámetros de salida; no los admite como parámetros de entrada.  
+-   Para ejecutar un procedimiento almacenado que devuelva cursores REF CURSOR, debe definir los parámetros en el <xref:System.Data.OracleClient.OracleParameterCollection> con un <xref:System.Data.OracleClient.OracleType> de **Cursor** y un <xref:System.Data.OracleClient.OracleParameter.Direction%2A> de **salida**. El proveedor de datos admite el enlace de cursores REF CURSOR sólo como parámetros de salida; no los admite como parámetros de entrada.  
   
 -   No se permite la obtención de un <xref:System.Data.OracleClient.OracleDataReader> del valor del parámetro. Los valores son del tipo <xref:System.DBNull> después de la ejecución del comando.  
   
--   El único **CommandBehavior** valor de enumeración que funciona con los cursores REF cursor (por ejemplo, al llamar a <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) es **CloseConnection**; todos los demás se omiten.  
+-   La única **CommandBehavior** valor de enumeración que funciona con cursores REF cursor (por ejemplo, al llamar a <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) es **CloseConnection**; se omiten todos los demás.  
   
--   El orden de los cursores REF cursor en el **OracleDataReader** depende del orden de los parámetros en la **OracleParameterCollection**. Se omite la propiedad <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A>.  
+-   El orden de los cursores REF cursor en el **OracleDataReader** depende del orden de los parámetros en el **OracleParameterCollection**. Se omite la propiedad <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A>.  
   
--   PL/SQL **tabla** no se admite el tipo de datos. No obstante, los cursores REF CURSOR resultan más eficientes. Si tiene que utilizar un **tabla** tipo de datos, utilice el proveedor de datos OLE DB .NET con MSDAORA.  
+-   PL/SQL **tabla** no se admite el tipo de datos. No obstante, los cursores REF CURSOR resultan más eficientes. Si debe utilizar un **tabla** tipo de datos, utilice el proveedor de datos OLE DB .NET con MSDAORA.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Ejemplos de REF CURSOR](../../../../docs/framework/data/adonet/ref-cursor-examples.md)  
@@ -37,11 +37,11 @@ El proveedor de datos de .NET Framework para Oracle admite Oracle **REF CURSOR**
  Muestra cómo ejecutar un procedimiento almacenado PL/SQL que devuelve un parámetro REF CURSOR y lee el valor como un **OracleDataReader**.  
   
  [Recuperación de datos desde varios parámetros REF CURSOR utilizando un objeto OracleDataReader](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)  
- Muestra cómo ejecutar un procedimiento almacenado PL/SQL que devuelve dos parámetros REF CURSOR y lee los valores mediante un **OracleDataReader**.  
+ Muestra cómo ejecutar un procedimiento almacenado PL/SQL que devuelve dos parámetros REF CURSOR y lee los valores mediante una **OracleDataReader**.  
   
  [Relleno de un conjunto de datos utilizando uno o varios parámetros REF CURSOR](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  
  Muestra cómo ejecutar un procedimiento almacenado PL/SQL que devuelve dos parámetros REF CURSOR y llena un <xref:System.Data.DataSet> con las filas que se devuelven.  
   
 ## <a name="see-also"></a>Vea también  
  [Oracle y ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

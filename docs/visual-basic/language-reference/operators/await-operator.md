@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: 8e1462c7e0097bb2f04c6833a1bb279611b24133
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 2094ba308ba384feb8542e896cb1eafcf645947c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805515"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524471"
 ---
 # <a name="await-operator-visual-basic"></a>Await (Operador) (Visual Basic)
 El operador `Await` se aplica a un operando de un método asincrónico o a una expresión lambda para suspender la ejecución del método hasta que la tarea en espera se complete. La tarea representa el trabajo en curso.  
   
- El método en el que `Await` se utiliza debe tener un [Async](../../../visual-basic/language-reference/modifiers/async.md) modificador. Este tipo de método, que se define mediante el modificador `Async` y que generalmente contiene una o más expresiones `Await`, se denomina *método asincrónico*.  
+ El método en el que `Await` sirve debe tener un [Async](../../../visual-basic/language-reference/modifiers/async.md) modificador. Este tipo de método, que se define mediante el modificador `Async` y que generalmente contiene una o más expresiones `Await`, se denomina *método asincrónico*.  
   
 > [!NOTE]
 >  Las palabras clave `Async` y `Await` se incluyeron en Visual Studio 2012. Para obtener una introducción a la programación asincrónica, vea [programación asincrónica con Async y Await](../../../visual-basic/programming-guide/concepts/async/index.md).  
   
- Por lo general, la tarea a los que aplicará la `Await` operador es el valor devuelto de una llamada a un método que implementa el [modelo asincrónico basado en tareas](http://go.microsoft.com/fwlink/?LinkId=204847), es decir, un <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>.  
+ Normalmente, la tarea a la que se aplican los `Await` operador es el valor devuelto de una llamada a un método que implementa el [Task-Based Asynchronous Pattern](https://go.microsoft.com/fwlink/?LinkId=204847), es decir, un <xref:System.Threading.Tasks.Task> o un <xref:System.Threading.Tasks.Task%601>.  
   
  En el código siguiente, el método <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> devuelve `getContentsTask`, un tipo `Task(Of Byte())`. La tarea garantiza que la matriz de bytes real se generará cuando finalice la operación. El operador `Await` se aplica a `getContentsTask` para suspender la ejecución en `SumPageSizesAsync` hasta que se complete `getContentsTask`. Mientras tanto, el control vuelve al llamador de `SumPageSizesAsync`. Cuando `getContentsTask` haya finalizado, la expresión `Await` se evalúa como una matriz de bytes.  
   
@@ -57,7 +57,7 @@ Await AsyncMethodThatReturnsTask()
   
  Una expresión o instrucción `Await` no bloquea el subproceso en el que se ejecuta. En su lugar, hace que el compilador suscriba el resto del método asincrónico, después de la expresión `Await`, como una continuación de la tarea esperada. A continuación, el control vuelve al llamador del método asincrónico. Cuando la tarea se completa, invoca su continuación y la ejecución del método asincrónico se reanuda donde se quedó.  
   
- Una expresión `Await` solo puede aparecer en el cuerpo de un método envolvente inmediato o una expresión lambda marcados con el modificador `Async`. El término *Await* actúa como una palabra clave solo en ese contexto. En cualquier otra parte, se interpretará como identificador. Dentro de la expresión lambda o de método asincrónico, un `Await` expresión no puede aparecer en una expresión de consulta, en la `catch` o `finally` bloquear de un [intente... Catch... Por último,](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) instrucción, en la expresión de variable de control de bucle de un `For` o `For Each` bucles, o en el cuerpo de un [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) instrucción.  
+ Una expresión `Await` solo puede aparecer en el cuerpo de un método envolvente inmediato o una expresión lambda marcados con el modificador `Async`. El término *Await* actúa como una palabra clave solo en ese contexto. En cualquier otra parte, se interpretará como identificador. Dentro de la expresión lambda o de método asincrónico, un `Await` expresión no puede aparecer en una expresión de consulta, en el `catch` o `finally` block de un [intente... Catch... Por último](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) instrucción, en la expresión de variable de control de bucle de un `For` o `For Each` bucle, o en el cuerpo de un [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) instrucción.  
   
 ## <a name="exceptions"></a>Excepciones  
  La mayoría de los métodos asincrónicos devuelven un objeto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Las propiedades de la tarea devuelta llevan información acerca de su estado e historial, por ejemplo, si la tarea se ha completado, si el método asincrónico produjo una excepción o si se ha cancelado y cuál es el resultado final. El operador `Await` tiene acceso a esas propiedades.  

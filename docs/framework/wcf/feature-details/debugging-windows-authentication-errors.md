@@ -8,26 +8,26 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: d9226324b69e5c27738abb35bb155a43964b9127
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92efda893d0d96b5d0f6de90364faec0b85c79aa
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495878"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513252"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Depuración de errores de autenticación de Windows
-Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, la interfaz del proveedor de compatibilidad para seguridad (SSPI) controla los procesos de seguridad. Cuando se producen errores de seguridad en el nivel de SSPI, emerge por Windows Communication Foundation (WCF). En este tema se proporciona un marco y conjunto de cuestiones que le ayudarán a diagnosticar los errores.  
+Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, la interfaz del proveedor de compatibilidad para seguridad (SSPI) controla los procesos de seguridad. Cuando se producen errores de seguridad en el nivel de SSPI, se exponen mediante Windows Communication Foundation (WCF). En este tema se proporciona un marco y conjunto de cuestiones que le ayudarán a diagnosticar los errores.  
   
- Para obtener información general del protocolo Kerberos, consulte [Kerberos explica](http://go.microsoft.com/fwlink/?LinkID=86946); para obtener información general sobre SSPI, consulte [SSPI](http://go.microsoft.com/fwlink/?LinkId=88941).  
+ Para obtener información general del protocolo Kerberos, consulte [Kerberos explicado](https://go.microsoft.com/fwlink/?LinkID=86946); para ver una introducción a SSPI, [SSPI](https://go.microsoft.com/fwlink/?LinkId=88941).  
   
- Para la autenticación de Windows, WCF usa normalmente el *Negotiate* proveedor de compatibilidad de seguridad (SSP), que lleva a cabo la autenticación mutua de Kerberos entre el cliente y el servicio. Si el protocolo Kerberos no está disponible, de forma predeterminada, que WCF vuelve a NT LAN Manager (NTLM). Sin embargo, puede configurar WCF para utilizar sólo el protocolo de Kerberos (y se producirá una excepción si Kerberos no está disponible). También puede configurar WCF para utilizar formularios restringidos del protocolo Kerberos.  
+ Para la autenticación de Windows, WCF usa normalmente el *Negotiate* proveedor de soporte técnico de seguridad (SSP), que realiza la autenticación mutua de Kerberos entre el cliente y el servicio. Si el protocolo Kerberos no está disponible, de forma predeterminada, que WCF recurre a NT LAN Manager (NTLM). Sin embargo, puede configurar WCF para usar solo el protocolo Kerberos (y para producir una excepción si Kerberos no está disponible). También puede configurar WCF para utilizar formularios restringidos del protocolo Kerberos.  
   
 ## <a name="debugging-methodology"></a>Depuración de la metodología  
  El método básico es el siguiente:  
   
 1.  Determine si está utilizando la autenticación de Windows. Si está utilizando cualquier otro esquema, no se aplicará este tema.  
   
-2.  Si está seguro de que usa la autenticación de Windows, determine si la configuración de WCF usa Kerberos direct o Negotiate.  
+2.  Si está seguro de que usa autenticación de Windows, determine si la configuración de WCF utiliza Kerberos direct o Negotiate.  
   
 3.  Cuando haya determinado si su configuración está utilizando el protocolo Kerberos o NTLM, podrá entender los mensajes de error en el contexto correcto.  
   
@@ -62,11 +62,11 @@ Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, l
 ### <a name="kerberos-protocol"></a>Protocolo Kerberos  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Problemas de SPN/UPN con el protocolo Kerberos  
- Cuando se utiliza la autenticación de Windows y se usa o se negocia el protocolo Kerberos mediante SSPI, la dirección URL que el punto de conexión de cliente usa debe incluir el nombre de dominio completo del host de servicio dentro de la dirección URL del servicio. Se supone que la cuenta bajo la que se ejecuta el servicio tiene acceso a la clave de nombre de entidad de seguridad (SPN) del servicio de máquina (valor predeterminado) que se crea cuando se agrega el equipo al dominio de Active Directory, que normalmente se hace ejecutando el servicio en la Cuenta de servicio de red. Si el servicio no tiene acceso a la clave SPN del equipo, debe proporcionar el SPN correcto o el nombre principal del usuario (UPN) de la cuenta con la que se está ejecutando el servicio en la identidad del punto de conexión del cliente. Para obtener más información acerca del funcionamiento de WCF con SPN y UPN, consulte [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Cuando se utiliza la autenticación de Windows y se usa o se negocia el protocolo Kerberos mediante SSPI, la dirección URL que el punto de conexión de cliente usa debe incluir el nombre de dominio completo del host de servicio dentro de la dirección URL del servicio. Esto se da por supuesto que la cuenta bajo la que se está ejecutando el servicio tiene acceso a la clave de nombre de entidad de seguridad (SPN) del servicio de equipo (valor predeterminado) que se crea cuando se agrega el equipo al dominio de Active Directory, que normalmente se hace ejecutando el servicio en la Cuenta de servicio de red. Si el servicio no tiene acceso a la clave SPN del equipo, debe proporcionar el SPN correcto o el nombre principal del usuario (UPN) de la cuenta con la que se está ejecutando el servicio en la identidad del punto de conexión del cliente. Para obtener más información acerca del funcionamiento de WCF con SPN y UPN, consulte [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  En los escenarios de equilibrio de carga, como las granjas de servidores web o los conjuntos de procesos de aplicación web, una práctica común es definir una cuenta única para cada aplicación, asignar un SPN a esa cuenta y asegurarse de que todos los servicios de la aplicación se ejecutan con esa cuenta.  
   
- Para obtener un SPN para la cuenta de servicio, necesita ser un administrador de dominios de Active Directory. Para obtener más información, consulte [complemento técnico de Kerberos para Windows](http://go.microsoft.com/fwlink/?LinkID=88330).  
+ Para obtener un SPN para la cuenta de servicio, necesita ser un administrador de dominios de Active Directory. Para obtener más información, consulte [suplemento técnico de Kerberos para Windows](https://go.microsoft.com/fwlink/?LinkID=88330).  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>El protocolo Kerberos Direct requiere que el servicio se ejecute en una cuenta de equipo de dominio  
  Esto se produce cuando la propiedad `ClientCredentialType` está establecida como `Windows` y la propiedad <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> está establecida como `false`, tal y como se muestra en el código siguiente.  
@@ -98,7 +98,7 @@ Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, l
 ### <a name="ntlm-protocol"></a>Protocolo NTLM  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>Negociar SSP retrocede hasta NTLM, pero NTLM está deshabilitado  
- El <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> propiedad está establecida en `false`, lo que hace que Windows Communication Foundation (WCF) para realizar un mayor esfuerzo por producir una excepción si se utiliza NTLM. Tenga en cuenta que, aunque se establezca esta propiedad en `false`, es posible que se envíen igualmente las credenciales NTLM a través de la conexión.  
+ El <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> propiedad está establecida en `false`, lo que hace que Windows Communication Foundation (WCF) para realizar un mayor esfuerzo para producir una excepción si se utiliza NTLM. Tenga en cuenta que, aunque se establezca esta propiedad en `false`, es posible que se envíen igualmente las credenciales NTLM a través de la conexión.  
   
  A continuación, se muestra cómo deshabilitar el retroceso a NTLM.  
   
@@ -121,7 +121,7 @@ Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, l
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- Para obtener más información acerca de la suplantación, consulte [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Para obtener más información sobre la suplantación, vea [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
  Por otra parte, el cliente se está ejecutando como un servicio de Windows, utilizando el SISTEMA de cuentas integrado.  
   
@@ -139,7 +139,7 @@ Cuando se utiliza la autenticación de Windows como un mecanismo de seguridad, l
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>SSPI no está disponible  
- Los siguientes sistemas operativos son compatibles con la autenticación de Windows cuando se usa como un servidor: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition, y [!INCLUDE[wv](../../../../includes/wv-md.md)]Home editions.  
+ Los siguientes sistemas operativos no admiten la autenticación de Windows cuando se usa como un servidor: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition, y [!INCLUDE[wv](../../../../includes/wv-md.md)]Home editions.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>Desarrollo e implementación con distintas identidades  
  Si desarrolla una aplicación en un equipo y la implementa en otro, y utiliza tipos de cuentas diferentes para autenticarse en cada equipo, el comportamiento puede ser diferente. Supongamos, por ejemplo, que desarrolla una aplicación en un equipo Windows XP Pro con el modo de autenticación `SSPI Negotiated`. Si utiliza una cuenta de usuario local para autenticarse, se utilizará el protocolo NTLM. Una vez desarrollada la aplicación, implementa el servicio en un equipo Windows Server 2003, donde se ejecuta bajo una cuenta de dominio. En este punto, el cliente no podrá autenticar el servicio, porque estará utilizando Kerberos y un controlador de dominio.  

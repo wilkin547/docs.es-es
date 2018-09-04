@@ -6,11 +6,11 @@ helpviewer_keywords:
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
 ms.openlocfilehash: 157db8b9fbbbb6e1c6af41b4cf3903f4a762d763
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385731"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528102"
 ---
 # <a name="statusstrip-control"></a>StatusStrip (Control)
 El control `StatusStrip` de Windows Forms se utiliza en los formularios como un área, que habitualmente se muestra en la parte inferior de una ventana, en la que una aplicación puede mostrar información de estado de diferentes tipos. Los controles `StatusStrip` suelen tener controles `ToolStripStatusLabel` incluidos que muestran texto o iconos para indicar el estado o un control <xref:System.Windows.Forms.ToolStripProgressBar> que muestra gráficamente el estado de finalización de un proceso.  

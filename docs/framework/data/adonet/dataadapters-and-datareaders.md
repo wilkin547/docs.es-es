@@ -3,11 +3,11 @@ title: Objetos DataAdapter y DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
 ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43476227"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516782"
 ---
 # <a name="dataadapters-and-datareaders"></a>Objetos DataAdapter y DataReader
 Puede usar ADO.NET **DataReader** para recuperar una secuencia de sólo lectura, solo hacia delante de los datos de una base de datos. Los resultados se devuelven cuando la consulta se ejecuta y se almacenan en el búfer de red en el cliente hasta que se solicitan mediante el **lectura** método de la **DataReader**. Mediante el **DataReader** puede aumentar el rendimiento de la aplicación mediante la recuperación de datos tan pronto como está disponible y (de forma predeterminada) almacenar solo una fila a la vez en la memoria, lo que reduce la sobrecarga del sistema.  

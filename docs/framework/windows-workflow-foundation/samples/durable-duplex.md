@@ -2,18 +2,18 @@
 title: Dúplex duradero
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 107c617fa4a8ee0279dcaa07e495587c617b866e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809432"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513358"
 ---
 # <a name="durable-duplex"></a>Dúplex duradero
-Este ejemplo muestra cómo instalar y configurar el intercambio de mensajes dúplex duradero utilizando las actividades de mensajería en Windows Workflow Foundation (WF). Un intercambio de mensajes dúplex duradero es un intercambio de mensajes bidireccional que tiene lugar a lo largo de un período largo de tiempo. La duración del intercambio de mensajes puede ser mayor que la duración del canal de comunicación y la duración en memoria de las instancias de servicio.  
+Este ejemplo muestra cómo instalar y configurar el intercambio de mensajes dúplex duradero utilizando las actividades de mensajería de Windows Workflow Foundation (WF). Un intercambio de mensajes dúplex duradero es un intercambio de mensajes bidireccional que tiene lugar a lo largo de un período largo de tiempo. La duración del intercambio de mensajes puede ser mayor que la duración del canal de comunicación y la duración en memoria de las instancias de servicio.  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
- En este ejemplo, dos servicios de Windows Communication Foundation (WCF) que se implementa mediante Windows Workflow Foundation están configurados para tener un intercambio de mensajes dúplex duradero. El intercambio de mensajes dúplex duradero está compuesto por dos mensajes unidireccionales enviados a través de MSMQ y se correlacionan con [intercambio de contexto de .NET](http://go.microsoft.com/fwlink/?LinkID=166059). Los mensajes se envían mediante las actividades de mensajería <xref:System.ServiceModel.Activities.Send> y <xref:System.ServiceModel.Activities.Receive>. El intercambio de contexto de .NET se utiliza para especificar la dirección de devolución de llamada en los mensajes enviados. Ambos servicios se hospedan mediante Windows Process Activation Services (WAS) y se configuran para habilitar la persistencia de las instancias de los servicios.  
+ En este ejemplo, dos servicios de Windows Communication Foundation (WCF) que se implementa mediante Windows Workflow Foundation están configurados para tener un intercambio de mensajes dúplex duradero. El intercambio de mensajes dúplex duradero está compuesto por dos mensajes unidireccionales que envía a través de MSMQ y se correlacionan con [intercambio de contexto de .NET](https://go.microsoft.com/fwlink/?LinkID=166059). Los mensajes se envían mediante las actividades de mensajería <xref:System.ServiceModel.Activities.Send> y <xref:System.ServiceModel.Activities.Receive>. El intercambio de contexto de .NET se utiliza para especificar la dirección de devolución de llamada en los mensajes enviados. Ambos servicios se hospedan mediante Windows Process Activation Services (WAS) y se configuran para habilitar la persistencia de las instancias de los servicios.  
   
  El primer servicio (Service1.xamlx) envía una solicitud al servicio de envío (Service2.xamlx) para que realice algún trabajo. Una vez completado el trabajo, Service2.xamlx devuelve una notificación a Service1.xamlx para indicar que se ha completado el trabajo. Una aplicación de consola de flujo de trabajo prepara las colas donde están realizando escuchas los servicios y envía al mensaje Start inicial para activar Service1.xamlx. Cuando Service1.xamlx recibe la notificación de Service2.xamlx que indica que se ha completado el trabajo solicitado, Service1.xamlx guarda el resultado en un archivo XML. Mientras espera el mensaje de devolución de llamada, Service1.xamlx conserva su estado de la instancia mediante la clase <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> predeterminada. Service2.xamlx conserva su estado de instancia como parte de la finalización del trabajo solicitado por Service1.xamlx.  
   
@@ -42,7 +42,7 @@ Este ejemplo muestra cómo instalar y configurar el intercambio de mensajes dúp
 >  El enlace utilizado por este ejemplo no es seguro. Al implementar su aplicación, debería configurar el enlace en función de los requisitos de seguridad de la aplicación.  
   
 > [!NOTE]
->  Las colas utilizadas en este ejemplo no son transaccionales. Para obtener un ejemplo que muestra cómo configurar los intercambios de mensajes WCF con colas de transacciones, vea el [activación de MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md) ejemplo.  
+>  Las colas utilizadas en este ejemplo no son transaccionales. Para obtener un ejemplo que muestra cómo configurar los intercambios de mensajes WCF con colas de la transacción, vea el [activación MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md) ejemplo.  
   
  El mensaje enviado por Service1.xamlx a Service2.xamlx se envía mediante un punto de conexión de cliente configurado con la dirección de Service2.xamlx y el enlace personalizado definido previamente. La devolución de llamada de Service2.xamlx a Service1.xamlx se envía mediante un extremo de cliente sin ninguna dirección configurada explícitamente, ya que la dirección se toma del contexto de devolución de llamada enviado por Service1.xamlx. El siguiente ejemplo de código define los extremos de cliente.  
   
@@ -120,7 +120,7 @@ Este ejemplo muestra cómo instalar y configurar el intercambio de mensajes dúp
         aspnet_regiis -i  
         ```  
   
-    2.  Ejecutar [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con permisos de administrador haciendo clic en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] y seleccionando **ejecutar como administrador**.  
+    2.  Ejecute [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con permisos de administrador haciendo clic [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] y seleccionando **ejecutar como administrador**.  
   
     3.  Mediante [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra el archivo DurableDuplex.sln.  
   
@@ -128,7 +128,7 @@ Este ejemplo muestra cómo instalar y configurar el intercambio de mensajes dúp
   
     1.  Para ejecutar el cliente de DurableDuplex, presione F5.  
   
-    2.  Abra la **administración de equipos** consola ejecutando `Compmgmt.msc` desde un símbolo del sistema.  
+    2.  Abra el **administración de equipos** consola ejecutando `Compmgmt.msc` desde un símbolo del sistema.  
   
     3.  Expanda **aplicaciones de servicio y**, **Message Queue Server**. **Colas privadas**.  
   
@@ -162,7 +162,7 @@ Este ejemplo muestra cómo instalar y configurar el intercambio de mensajes dúp
   
     1.  Abra el Administrador de Internet Information Services (IIS) ejecutando `Inetmgr.exe` desde un símbolo del sistema.  
   
-    2.  Busque el sitio Web predeterminado y quitar el **privada** directorio virtual.  
+    2.  Vaya al sitio Web predeterminado y quite el **privada** directorio virtual.  
   
 3.  Quite las colas preparadas para este ejemplo.  
   
@@ -179,6 +179,6 @@ Este ejemplo muestra cómo instalar y configurar el intercambio de mensajes dúp
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`

@@ -12,37 +12,37 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: 1be8a31957bc439c140c1b6c5fc24e3221860c80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 409d94e46cae3e4daf7df930097f0a3d46360633
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529514"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500591"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Cómo: Enlazar el control DataGrid de formularios Windows Forms a un origen de datos mediante el Diseñador
 > [!NOTE]
 >  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
- Los formularios Windows Forms <xref:System.Windows.Forms.DataGrid> control está diseñado específicamente para mostrar información de un origen de datos. Enlazar el control en tiempo de diseño estableciendo la <xref:System.Windows.Forms.DataGrid.DataSource%2A> y <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedades, o en tiempo de ejecución mediante una llamada a la <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método. Aunque se pueden mostrar datos desde una variedad de orígenes de datos, los orígenes más habituales son vistas de datos y conjuntos de datos.  
+ Los formularios de Windows <xref:System.Windows.Forms.DataGrid> control está diseñado específicamente para mostrar información de un origen de datos. Enlazar el control en tiempo de diseño estableciendo el <xref:System.Windows.Forms.DataGrid.DataSource%2A> y <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedades, o en tiempo de ejecución mediante una llamada a la <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método. Aunque se pueden mostrar datos desde una variedad de orígenes de datos, los orígenes más habituales son las vistas de datos y conjuntos de datos.  
   
- Si el origen de datos está disponible en tiempo de diseño, por ejemplo, si el formulario contiene una instancia de un conjunto de datos o una vista de datos, puede enlazar la cuadrícula al origen de datos en tiempo de diseño. A continuación, puede ver el aspecto de los datos en la cuadrícula.  
+ Si el origen de datos está disponible en tiempo de diseño, por ejemplo, si el formulario contiene una instancia de un conjunto de datos o una vista de datos, puede enlazar la cuadrícula al origen de datos en tiempo de diseño. A continuación, puede ver qué aspecto tendrá los datos en la cuadrícula.  
   
- También puede enlazar mediante programación, la cuadrícula en tiempo de ejecución. Esto es útil cuando desea establecer un origen de datos basado en la información que se obtienen en tiempo de ejecución. Por ejemplo, la aplicación podría permiten al usuario especificar el nombre de tabla que desea ver. También es necesario en situaciones donde el origen de datos no existe en tiempo de diseño. Esto incluye orígenes de datos como matrices, colecciones, conjuntos de datos sin tipo y lectores de datos.  
+ También puede enlazar mediante programación, la cuadrícula en tiempo de ejecución. Esto es útil cuando desea establecer un origen de datos basado en información que se obtiene en tiempo de ejecución. Por ejemplo, la aplicación puede que el usuario especifique el nombre de tabla que desea ver. También es necesario en situaciones donde el origen de datos no existe en tiempo de diseño. Esto incluye los orígenes de datos, como lectores de datos, conjuntos de datos sin tipo, colecciones y matrices.  
   
- El procedimiento siguiente requiere un **aplicación de Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.DataGrid> control. Para obtener información acerca de cómo configurar un proyecto de este tipo, consulte [Cómo: crear un proyecto de aplicación de Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) y [Cómo: agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). En [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> control no está en el **cuadro de herramientas** de forma predeterminada. Para obtener información sobre cómo agregarlo, vea [Cómo: agregar elementos al cuadro de herramientas](http://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0). Además de [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], puede usar el **orígenes de datos** ventana para el enlace de datos en tiempo de diseño. Para obtener más información, consulte [enlazar controles a datos en Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).  
+ El procedimiento siguiente requiere una **aplicación Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.DataGrid> control. Para obtener información acerca de cómo configurar un proyecto de este tipo, consulte [Cómo: crear un proyecto de aplicación Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) y [Cómo: agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). En [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> control no está en el **cuadro de herramientas** de forma predeterminada. Para obtener información sobre cómo agregarlo, vea [Cómo: agregar elementos al cuadro de herramientas](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0). Además de [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], puede usar el **orígenes de datos** ventana para el enlace de datos en tiempo de diseño. Para obtener más información, consulte [enlazar controles a datos en Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>Para enlazar el control DataGrid a una sola tabla en el diseñador  
+### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>Para enlazar el control DataGrid a una única tabla en el diseñador  
   
 1.  Establecer el control <xref:System.Windows.Forms.DataGrid.DataSource%2A> propiedad para el objeto que contiene los elementos de datos que desea enlazar.  
   
-2.  Si el origen de datos es un conjunto de datos, establezca la <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedad en el nombre de la tabla que se va a enlazar a.  
+2.  Si el origen de datos es un conjunto de datos, establezca el <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedad en el nombre de la tabla para enlazar a.  
   
-3.  Si el origen de datos es un conjunto de datos o una vista de datos basada en una tabla de conjunto de datos, agregue código al formulario para rellenar el conjunto de datos.  
+3.  Si el origen de datos es un conjunto de datos o una vista de datos basado en una tabla de conjunto de datos, agregue código al formulario para rellenar el conjunto de datos.  
   
-     El código exacto que utilice depende de que el conjunto de datos está obteniendo datos. Si se está llenando el conjunto de datos directamente desde una base de datos, normalmente se invoca el `Fill` método de un adaptador de datos, como en el ejemplo de código siguiente, que rellena un conjunto de datos denominado `DsCategories1`:  
+     El código exacto que utilice depende de donde obtiene datos del conjunto de datos. Si el conjunto de datos se rellena directamente desde una base de datos, normalmente se invoca el `Fill` método de un adaptador de datos, como se muestra en el ejemplo de código siguiente, que rellena un conjunto de datos denominado `DsCategories1`:  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
@@ -56,7 +56,7 @@ ms.locfileid: "33529514"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  (Opcional) Agregar los estilos de tabla adecuado y estilos de columna a la cuadrícula.  
+4.  (Opcional) Agregar los estilos de tabla adecuada y estilos de columna a la cuadrícula.  
   
      Si no hay ningún estilo de tabla, verá la tabla, pero con un formato mínimo y con todas las columnas visibles.  
   

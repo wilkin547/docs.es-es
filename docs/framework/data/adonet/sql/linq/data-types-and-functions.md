@@ -3,11 +3,11 @@ title: Tipos de datos y funciones
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
 ms.openlocfilehash: 34f8f0a59f1a962eaa6a747e124f47d1570ca455
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418070"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520744"
 ---
 # <a name="data-types-and-functions"></a>Tipos de datos y funciones
 En los temas de la tabla siguiente se describe la compatibilidad de LINQ to SQL con miembros, construcciones y conversiones de Common Language Runtime (CLR). Los miembros y construcciones compatibles están disponibles para usarlos en las consultas de LINQ to SQL.  

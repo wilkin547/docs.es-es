@@ -2,15 +2,15 @@
 title: Contexto de instancia duradera
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: fb331fc0e5f384f0ffb268c1c6f7a5ffc99478ec
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f5c066ae06e44f6cac4b9a7b98487aa6226b969f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808613"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524431"
 ---
 # <a name="durable-instance-context"></a>Contexto de instancia duradera
-Este ejemplo muestra cómo personalizar el tiempo de ejecución de Windows Communication Foundation (WCF) para permitir que los contextos de instancia duraderos. Utiliza SQL Server 2005 como su memoria auxiliar (SQL Server 2005 Express en este caso). Sin embargo, también proporciona una manera de tener acceso a los mecanismos de almacenamiento personalizados.  
+Este ejemplo muestra cómo personalizar el tiempo de ejecución de Windows Communication Foundation (WCF) para habilitar los contextos de instancia duraderos. Utiliza SQL Server 2005 como su memoria auxiliar (SQL Server 2005 Express en este caso). Sin embargo, también proporciona una manera de tener acceso a los mecanismos de almacenamiento personalizados.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
@@ -120,7 +120,7 @@ if (isFirstMessage)
 }  
 ```  
   
- Estas implementaciones de canal, a continuación, se agregan al tiempo de ejecución del canal WCF mediante el `DurableInstanceContextBindingElement` clase y `DurableInstanceContextBindingElementSection` clase adecuadamente. Consulte la [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) documentación de ejemplo para obtener más información acerca de los elementos de enlace y secciones de los elementos de enlace de canal.  
+ Estas implementaciones de canal, a continuación, se agregan al tiempo de ejecución de canal WCF mediante el `DurableInstanceContextBindingElement` clase y `DurableInstanceContextBindingElementSection` clase adecuadamente. Consulte la [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) documentación de ejemplo para obtener más información acerca de los elementos de enlace y secciones de elemento de enlace de canal.  
   
 ## <a name="service-model-layer-extensions"></a>Extensiones de la capa de modelo de servicio  
  Ahora que el id. de contexto ha viajado a través de la capa del canal, el comportamiento del servicio se puede implementar para personalizar la creación de instancias. En este ejemplo, se utiliza un administrador de almacenamiento para cargar y guardar el estado desde o al almacén persistente. Tal y como se explicó con anterioridad, este ejemplo proporciona un administrador de almacenamiento que utiliza SQL Server 2005 como su memoria auxiliar. Sin embargo, también es posible agregar mecanismos de almacenamiento personalizados a esta extensión. Para hacer eso se declara una interfaz pública, la cual debe ser implementada por todos los administradores de almacenamiento.  
@@ -229,13 +229,13 @@ else
   
  Se implementa la infraestructura necesaria para leer y escribir instancias del almacenamiento persistente. Ahora tienen que tomarse los pasos necesarios para cambiar el comportamiento del servicio.  
   
- Como primer paso de este proceso tenemos que guardar el id. de contexto, que pasó por la capa del canal al InstanceContext actual. InstanceContext es un componente de tiempo de ejecución que actúa como vínculo entre el distribuidor WCF y la instancia del servicio. Se puede utilizar para proporcionar estado y comportamiento adicionales a la instancia del servicio. Esto es esencial porque en comunicación con sesión el id. de contexto solo se envía con el primer mensaje.  
+ Como primer paso de este proceso tenemos que guardar el id. de contexto, que pasó por la capa del canal al InstanceContext actual. InstanceContext es un componente de tiempo de ejecución que actúa como un vínculo entre el distribuidor WCF y la instancia de servicio. Se puede utilizar para proporcionar estado y comportamiento adicionales a la instancia del servicio. Esto es esencial porque en comunicación con sesión el id. de contexto solo se envía con el primer mensaje.  
   
- WCF permite que se extienda su componente de tiempo de ejecución InstanceContext agregando un nuevo estado y comportamiento utilizando su patrón de objeto extensible. El patrón de objeto extensible se utiliza en WCF para extender las clases en tiempo de ejecución existentes con nueva funcionalidad o agregar nuevas características del estado a un objeto. Hay tres interfaces en el patrón de objeto extensible - IExtensibleObject\<T >, IExtension\<T > e IExtensionCollection\<T >:  
+ WCF permite extender su componente de tiempo de ejecución InstanceContext agregando un nuevo estado y comportamiento utilizando su patrón de objeto extensible. El patrón de objeto extensible se utiliza en WCF para extender las clases en tiempo de ejecución existentes con nueva funcionalidad o agregar nuevas características del estado a un objeto. Hay tres interfaces en el modelo de objeto extensible - IExtensibleObject\<T >, IExtension\<T > e IExtensionCollection\<T >:  
   
 -   El IExtensibleObject\<T > se implementa mediante objetos que permiten extensiones que personalicen su funcionalidad.  
   
--   IExtension\<T > interfaz se implementa mediante objetos que son extensiones de clases de tipo T.  
+-   IExtension\<T > se implementa mediante objetos que son extensiones de clases de tipo T.  
   
 -   El IExtensionCollection\<T > interfaz es una colección de IExtensions que permite la recuperación de IExtensions por su tipo.  
   
@@ -279,7 +279,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  Tal y como se describió con anterioridad, el id. de contexto se lee de la colección `Properties` de la clase `Message` y pasa al constructor de la clase de extensión. Esto muestra cómo la información se puede intercambiar entre las capas de una manera coherente.  
   
- El paso importante siguiente es invalidar el proceso de creación de la instancia de servicio. WCF permite implementar comportamientos de creación de instancias personalizado y su enlace al tiempo de ejecución mediante la interfaz IInstanceProvider. La nueva clase `InstanceProvider` se implementa para hacer ese trabajo. En el constructor se acepta el tipo de servicio esperado del proveedor de instancias. Después se utiliza para crear nuevas instancias. En la implementación `GetInstance` una instancia de un administrador de almacenamiento se crea buscando una instancia conservada. Si devuelve a continuación `null` entonces una nueva instancia del tipo de servicio se crea y se devuelve al llamador.  
+ El paso importante siguiente es invalidar el proceso de creación de la instancia de servicio. WCF permite implementar comportamientos de creación de instancias personalizados y enlazarlos hasta el tiempo de ejecución mediante la interfaz IInstanceProvider. La nueva clase `InstanceProvider` se implementa para hacer ese trabajo. En el constructor se acepta el tipo de servicio esperado del proveedor de instancias. Después se utiliza para crear nuevas instancias. En la implementación `GetInstance` una instancia de un administrador de almacenamiento se crea buscando una instancia conservada. Si devuelve a continuación `null` entonces una nueva instancia del tipo de servicio se crea y se devuelve al llamador.  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -352,7 +352,7 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
   
  Lo que queda es un modo de guardar la instancia del servicio en el almacenamiento persistente. Como se dijo con anterioridad, ya existe la funcionalidad necesaria para guardar el estado en una implementación `IStorageManager`. Debemos integrar ahora esto con el tiempo de ejecución WCF. Se requiere otro atributo, que es aplicable a los métodos en la clase de implementación de servicio. Se supone que este atributo se aplica a los métodos que cambian el estado de la instancia del servicio.  
   
- La clase `SaveStateAttribute` implementa esta funcionalidad. También implementa `IOperationBehavior` clase para modificar el tiempo de ejecución WCF para cada operación. Cuando un método está marcado con este atributo, el tiempo de ejecución WCF, se invoca el `ApplyBehavior` método mientras la correspondiente `DispatchOperation` se está construyendo. En esta implementación de método hay línea única de código:  
+ La clase `SaveStateAttribute` implementa esta funcionalidad. También implementa `IOperationBehavior` clase para modificar el tiempo de ejecución WCF para cada operación. Cuando un método está marcado con este atributo, el tiempo de ejecución WCF invoca el `ApplyBehavior` método mientras adecuado `DispatchOperation` se está construyendo. En esta implementación de método hay línea única de código:  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
@@ -374,7 +374,7 @@ return result;
 ```  
   
 ## <a name="using-the-extension"></a>Utilizar la extensión  
- Tanto la capa del canal y extensiones de capa de modelo de servicio se realizan y ahora puede usar en aplicaciones de WCF. Los servicios tienen que agregar el canal en la pila del canal utilizando un enlace personalizado y a continuación marcar las clases de implementación de servicio con los atributos adecuados.  
+ Tanto la capa del canal y extensiones de capa de modelo de servicio se realizan y ahora se puede usar en aplicaciones WCF. Los servicios tienen que agregar el canal en la pila del canal utilizando un enlace personalizado y a continuación marcar las clases de implementación de servicio con los atributos adecuados.  
   
 ```  
 [DurableInstanceContext]  
@@ -442,11 +442,11 @@ Press ENTER to shut down client
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
 >  Debe estar ejecutando SQL Server 2005 o SQL Express 2005 para ejecutar este ejemplo. Si está ejecutando SQL Server 2005, debe modificar la configuración de la cadena de conexión del servicio. Al ejecutar un equipo cruzado, SQL Server sólo se requiere en el equipo del servidor.  
@@ -456,7 +456,7 @@ Press ENTER to shut down client
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   

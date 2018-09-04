@@ -3,11 +3,11 @@ title: Servicio de enrutador de detección
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
 ms.openlocfilehash: 9c0c409eb6cf3146a198b9f4bcd6d76660f5da36
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409119"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509086"
 ---
 # <a name="discovery-router-service"></a>Servicio de enrutador de detección
 En este ejemplo se muestra cómo reenviar los mensajes de detección a otro punto de conexión.  

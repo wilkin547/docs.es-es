@@ -5,37 +5,37 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 3df1f2490f8636d52ac75fad2469adadec2a57da
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c6810009e4cda0b493a5f215d966cb37fc6fb090
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806947"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511999"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Invalidación de la identidad de un servicio para la autenticación
-Normalmente, no tiene que establecer la identidad en un servicio porque la selección de un tipo de credencial de cliente dicta el tipo de identidad expuesto en los metadatos del servicio. Por ejemplo, el siguiente código de configuración usa la [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento y establece el `clientCredentialType` atribuir a Windows.  
+Normalmente, no tiene que establecer la identidad en un servicio porque la selección de un tipo de credencial de cliente dicta el tipo de identidad expuesto en los metadatos del servicio. Por ejemplo, el código de configuración siguiente utiliza el [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento y establece el `clientCredentialType` atribuir a Windows.  
   
   
   
- El fragmento siguiente de Lenguaje de descripción de servicios Web (WSDL) muestra la identidad para el punto de conexión previamente definido. En este ejemplo, el servicio se ejecuta como un servicio hospedado por sí mismo bajo una cuenta de usuario determinada (username@contoso.com) y, por tanto, la identidad de nombre principal (UPN) del usuario contiene el nombre de cuenta. El UPN también se conoce como el nombre de inicio de sesión de usuario en un dominio de Windows.  
+ El fragmento siguiente de Lenguaje de descripción de servicios Web (WSDL) muestra la identidad para el punto de conexión previamente definido. En este ejemplo, el servicio se ejecuta como un servicio autohospedado en una cuenta de usuario en particular (username@contoso.com) y, por tanto, la identidad del usuario (UPN) del nombre principal contiene el nombre de cuenta. El UPN también se conoce como el nombre de inicio de sesión de usuario en un dominio de Windows.  
   
   
   
- Para una aplicación de ejemplo que muestra el valor de identidad, vea [ejemplo de identidad de servicio](../../../../docs/framework/wcf/samples/service-identity-sample.md). Para obtener más información acerca de la identidad de servicio, consulte [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Para una aplicación de ejemplo que muestre la configuración de identidad, vea [ejemplo de identidad de servicio](../../../../docs/framework/wcf/samples/service-identity-sample.md). Para obtener más información acerca de la identidad de servicio, consulte [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Autenticación e identidad de Kerberos  
- De forma predeterminada, cuando un servicio está configurado para usar una credencial de Windows, un [ \<identidad >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elemento que contiene un [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) o [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) se genera el elemento en el archivo WSDL. Si el servicio se ejecuta bajo la `LocalSystem`, `LocalService`, o `NetworkService` cuenta, un servicio de nombre de entidad de seguridad (SPN) se genera de forma predeterminada en el formulario de `host/` \< *hostname*> porque esas cuentas tienen acceso a los datos SPN del equipo. Si el servicio se ejecuta bajo una cuenta diferente, Windows Communication Foundation (WCF) genera un UPN con el formato de \< *nombre de usuario*>@<*domainName* `>` . Esto ocurre porque la autenticación Kerberos requiere que se proporcione un UPN o SPN al cliente para autenticar el servicio.  
+ De forma predeterminada, cuando un servicio está configurado para usar una credencial de Windows, un [ \<identidad >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) elemento que contiene un [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) o [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) elemento se genera en el WSDL. Si el servicio se ejecuta bajo la `LocalSystem`, `LocalService`, o `NetworkService` cuenta, un servicio (SPN) de nombre principal se genera de forma predeterminada en el formulario de `host/` \< *hostname*> porque esas cuentas tienen acceso a los datos SPN del equipo. Si el servicio se está ejecutando bajo una cuenta diferente, Windows Communication Foundation (WCF) genera un UPN en forma de \< *username*>@<*domainName* `>` . Esto ocurre porque la autenticación Kerberos requiere que se proporcione un UPN o SPN al cliente para autenticar el servicio.  
   
- También puede utilizar la herramienta Setspn.exe para registrar un SPN adicional con la cuenta de un servicio en un dominio. Puede utilizar a continuación el SPN como la identidad del servicio. Para descargar la herramienta, consulte [herramienta del Kit de recursos de Windows 2000: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752). Para obtener más información acerca de la herramienta, consulte [información general sobre Setspn](http://go.microsoft.com/fwlink/?LinkId=61374).  
+ También puede utilizar la herramienta Setspn.exe para registrar un SPN adicional con la cuenta de un servicio en un dominio. Puede utilizar a continuación el SPN como la identidad del servicio. Para descargar la herramienta, consulte [Windows 2000 Resource Kit Tool: Setspn.exe](https://go.microsoft.com/fwlink/?LinkId=91752). Para obtener más información acerca de la herramienta, consulte [información general sobre Setspn](https://go.microsoft.com/fwlink/?LinkId=61374).  
   
 > [!NOTE]
 >  Para usar el tipo de credencial de Windows sin negociación, la cuenta de usuario del servicio debe tener acceso al nombre de entidad de seguridad de servicio (SPN) registrado en el dominio de Active Directory. Puede hacer esto de las siguientes maneras:  
   
--   Use la cuenta NetworkService o LocalSystem para ejecutar el servicio. Dado que esas cuentas tienen acceso al SPN del equipo que se establece cuando el equipo une al dominio de Active Directory, WCF genera automáticamente el elemento SPN apropiado en el extremo del servicio en los metadatos del servicio (WSDL).  
+-   Use la cuenta NetworkService o LocalSystem para ejecutar el servicio. Porque esas cuentas tienen acceso al SPN del equipo que se establece cuando el equipo une al dominio de Active Directory, WCF genera automáticamente el elemento SPN apropiado dentro del extremo del servicio en los metadatos del servicio (WSDL).  
   
--   Utilice una cuenta de dominio arbitraria de Active Directory para ejecutar el servicio. En este caso, establezca un SPN para esa cuenta de dominio, lo cual puede llevar a cabo utilizando la herramienta de utilidad Setspn.exe. Una vez creado el SPN para la cuenta del servicio, configurar WCF para publicar ese SPN a los clientes del servicio a través de sus metadatos (WSDL). Para ello, hay que establecer la identidad del punto de conexión para el punto de conexión expuesto, ya sea mediante un archivo de configuración de la aplicación o el código.  
+-   Utilice una cuenta de dominio arbitraria de Active Directory para ejecutar el servicio. En este caso, establezca un SPN para esa cuenta de dominio, lo cual puede llevar a cabo utilizando la herramienta de utilidad Setspn.exe. Una vez creado el SPN para la cuenta del servicio, configure WCF para publicar ese SPN a los clientes del servicio a través de sus metadatos (WSDL). Para ello, hay que establecer la identidad del punto de conexión para el punto de conexión expuesto, ya sea mediante un archivo de configuración de la aplicación o el código.  
   
- Para obtener más información acerca de los SPN, el protocolo Kerberos y Active Directory, vea [complemento técnico de Kerberos para Windows](http://go.microsoft.com/fwlink/?LinkId=88330).  
+ Para obtener más información acerca de los SPN, el protocolo Kerberos y Active Directory, consulte [suplemento técnico de Kerberos para Windows](https://go.microsoft.com/fwlink/?LinkId=88330).  
   
 ### <a name="when-spn-or-upn-equals-the-empty-string"></a>Cuando SPN o UPN es igual a la cadena vacía  
  Si establece el SPN o el UPN igual a una cadena vacía, pueden ocurrir varias cosas diferentes, según el nivel de seguridad y modo de autenticación que se use:  

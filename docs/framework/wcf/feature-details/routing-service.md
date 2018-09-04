@@ -2,12 +2,12 @@
 title: Servicio de enrutamiento
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: e3170108ae190c08a42cc7d80d66576a7b4f8a8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 139607614934aedbad9f76172b8e31fb02394d80
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496232"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522175"
 ---
 # <a name="routing-service"></a>Servicio de enrutamiento
 El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como un enrutador de mensajes. La funcionalidad principal del servicio de enrutamiento es la capacidad de enrutar mensajes según su contenido, lo que permite reenviar un mensaje a un punto de conexión de cliente en función de un valor dentro del propio mensaje, en el encabezado o el cuerpo del mensaje.  
@@ -34,10 +34,10 @@ El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como u
   
  Aunque es posible crear un servicio intermedio que logre uno o más de estos objetivos, a menudo este tipo de implementación está vinculado a una solución o un escenario concretos y no se puede aplicar directamente a las nuevas aplicaciones.  
   
- El servicio de enrutamiento proporciona a un intermediario SOAP genérico, dinámicamente configurable y conectable que es compatible con los modelos de servicio WCF y el canal y le permite realizar el enrutamiento por contenidos de mensajes basados en SOAP.  
+ El servicio de enrutamiento proporciona a un intermediario de SOAP genérico, dinámicamente configurable y conectable que es compatible con los modelos del canal y servicio WCF y le permite realizar enrutamiento basado en contenido de los mensajes basados en SOAP.  
   
 > [!NOTE]
->  Actualmente, el servicio de enrutamiento no permite enrutar servicios de WCF REST.  Para enrutar las llamadas REST, considere el uso de <xref:System.Web.Routing> o [enrutamiento de solicitud de aplicación](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
+>  Actualmente, el servicio de enrutamiento no permite enrutar servicios de WCF REST.  Para enrutar las llamadas REST, considere el uso de <xref:System.Web.Routing> o [enrutamiento de solicitud de aplicación](https://go.microsoft.com/fwlink/?LinkId=164589).  
   
 ## <a name="content-based-routing"></a>Enrutamiento basado en contenido  
  El enrutamiento basado en contenido es la capacidad de enrutar un mensaje en función de uno o más valores contenidos dentro del mensaje. El servicio de enrutamiento inspecciona cada mensaje y lo enruta al extremo de destino en función del contenido del mensaje y de la lógica de enrutamiento creada. El enrutamiento basado en contenido proporciona una base para la agregación de servicios, el control de versiones del servicio y el enrutamiento de prioridad.  
@@ -56,7 +56,7 @@ El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como u
   
 -   Configuración dinámica  
   
- Para obtener más información acerca de filtros de mensajes y tablas de filtros, consulte [enrutamiento Introducción](../../../../docs/framework/wcf/feature-details/routing-introduction.md) y [filtros de mensajes](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Para obtener más información sobre los filtros de mensajes y las tablas de filtros, consulte [enrutamiento Introducción](../../../../docs/framework/wcf/feature-details/routing-introduction.md) y [filtros de mensajes](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
 ### <a name="service-aggregation"></a>Agregación de servicios  
  Mediante el enrutamiento basado en contenido, puede exponer un extremo que recibe los mensajes de las aplicaciones cliente externas y, a continuación, enruta cada mensaje al extremo interno adecuado en función de un valor del mensaje. Esto es útil para proporcionar un extremo concreto para diversas aplicaciones back-end y también presentar un extremo de la aplicación a los clientes mientras factoriza su aplicación en diversos servicios.  
@@ -70,7 +70,7 @@ El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como u
 ## <a name="dynamic-configuration"></a>Configuración dinámica  
  Para admitir sistemas vitales para una misión, donde los mensajes se deben procesar sin ninguna interrupción del servicio, es vital que pueda modificar la configuración de componentes dentro del sistema durante el tiempo de ejecución. Para permitir esta necesidad, el servicio de enrutamiento proporciona una implementación <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.Routing.RoutingExtension>, que permite realizar una actualización dinámica de la configuración del servicio de enrutamiento durante el tiempo de ejecución.  
   
- Para obtener más información acerca de la configuración dinámica del servicio de enrutamiento, consulte [Introducción enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
+ Para obtener más información sobre la configuración dinámica del servicio de enrutamiento, consulte [Introducción enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="protocol-bridging"></a>Puente protocolar  
  Uno de los desafíos en escenarios intermedios es que los extremos internos pueden tener distintos requisitos de versión de SOAP o transporte que el extremo en el que se reciben los mensajes. Para admitir este escenario, el servicio de enrutamiento puede acortar los protocolos, incluido el procesamiento del mensaje de SOAP a <xref:System.ServiceModel.Channels.MessageVersion> requerido por los extremos de destino. De esta manera, se puede usar un protocolo para la comunicación interna, mientras que el otro se usa para la comunicación externa.  
@@ -78,14 +78,14 @@ El Servicio de enrutamiento es un intermediario SOAP genérico que actúa como u
  Para admitir el enrutamiento de mensajes entre extremos con transportes diferentes, el servicio de enrutamiento usa enlaces proporcionados por el sistema que permiten al servicio acortar los protocolos que no sean iguales. Esto se produce automáticamente cuando el extremo de servicio expuesto por el servicio de enrutamiento usa un protocolo diferente que el de los extremos de cliente a los que se enrutan los mensajes.  
   
 ## <a name="soap-processing"></a>Procesamiento de SOAP  
- Un requisito de enrutamiento común es la capacidad de enrutar mensajes entre puntos de conexión con diferentes requisitos de SOAP. Para admitir este requisito, el servicio de enrutamiento proporciona un <xref:System.ServiceModel.Routing.SoapProcessingBehavior> que crea automáticamente un nuevo **MessageVersion** que cumple los requisitos del punto de conexión de destino antes de que el mensaje se enrute hacia él. Este comportamiento también crea un nuevo **MessageVersion** para cualquier mensaje de respuesta antes de devolverlo a la aplicación cliente solicitante, para asegurarse de que el **MessageVersion** de la respuesta coincide con el de la solicitud original.  
+ Un requisito de enrutamiento común es la capacidad de enrutar mensajes entre puntos de conexión con diferentes requisitos de SOAP. Para admitir este requisito, el servicio de enrutamiento proporciona un <xref:System.ServiceModel.Routing.SoapProcessingBehavior> que crea automáticamente un nuevo **MessageVersion** que cumpla los requisitos del punto de conexión de destino antes de que el mensaje se enrute hacia él. Este comportamiento también crea un nuevo **MessageVersion** para cualquier mensaje de respuesta antes de devolverlo a la aplicación cliente solicitante, para asegurarse de que el **MessageVersion** de la respuesta coincide con el de la solicitud original.  
   
  Para obtener más información sobre el procesamiento de SOAP, vea [Introducción enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="error-handling"></a>Control de errores  
  En un sistema compuesto de servicios distribuidos que confían en las comunicaciones por red, es importante asegurarse de que las comunicaciones dentro del sistema son resistentes a los errores de red transitorios.  El servicio de enrutamiento implementa un control de errores que le permite administrar muchos casos de fallos de comunicación que, de otro modo, podrían producir una interrupción del suministro del servicio.  
   
- Si el servicio de enrutamiento encuentra una clase <xref:System.ServiceModel.CommunicationException> mientras intenta enviar un mensaje, se activará el control de errores.  Estas excepciones indican normalmente que se encontró un problema al intentar establecer comunicación con el extremo de cliente definido, como <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> o <xref:System.ServiceModel.CommunicationObjectFaultedException>.  El código de control de errores también detectará e intentará volver a realizar el envío cuando un **TimeoutException** se produce, que es otro tipo habitual de excepción que no se deriva de **CommunicationException**.  
+ Si el servicio de enrutamiento encuentra una clase <xref:System.ServiceModel.CommunicationException> mientras intenta enviar un mensaje, se activará el control de errores.  Estas excepciones indican normalmente que se encontró un problema al intentar establecer comunicación con el extremo de cliente definido, como <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> o <xref:System.ServiceModel.CommunicationObjectFaultedException>.  El código de control de errores también detectará e intentará volver a realizar el envío cuando un **TimeoutException** se produce, que es otro tipo habitual de excepción que no se deriva **CommunicationException**.  
   
  Para obtener más información sobre el control de errores, vea [Introducción enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   

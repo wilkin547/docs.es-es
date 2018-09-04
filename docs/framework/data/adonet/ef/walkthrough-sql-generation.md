@@ -3,11 +3,11 @@ title: 'Tutorial: Generar SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 ms.openlocfilehash: 5551eb4088e7529c61d5c517fed6877c23ae12f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43472077"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510505"
 ---
 # <a name="walkthrough-sql-generation"></a>Tutorial: Generar SQL
 En este tema se muestra cómo se produce la generación de SQL en el [proveedor de ejemplo](https://go.microsoft.com/fwlink/?LinkId=180616). La siguiente consulta de Entity SQL utiliza el modelo incluido con el proveedor de ejemplo:  

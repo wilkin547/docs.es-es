@@ -3,11 +3,11 @@ title: 'Cómo: Usar EdmGen.exe para validar los archivos de asignación y de mod
 ms.date: 03/30/2017
 ms.assetid: 2641906a-971a-4d0b-8aee-13fabc02a1cc
 ms.openlocfilehash: fda8698381e98c64318f1a26f77f0263e9085074
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43471931"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512450"
 ---
 # <a name="how-to-use-edmgenexe-to-validate-model-and-mapping-files"></a>Cómo: Usar EdmGen.exe para validar los archivos de asignación y de modelo
 En este tema se muestra cómo usar el [EDM Generator (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md) herramienta para validar los archivos de asignación y modelo. Para obtener más información, consulte [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  

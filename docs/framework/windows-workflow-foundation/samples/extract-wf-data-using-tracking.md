@@ -2,18 +2,18 @@
 title: Extraer datos de WF mediante seguimiento
 ms.date: 03/30/2017
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-ms.openlocfilehash: 22b147521d4ce0c72fadfb7adc81e05f10ce52b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef8118df2c5834e32c40760ef31f75660893d89b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519878"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501588"
 ---
 # <a name="extract-wf-data-using-tracking"></a>Extraer datos de WF mediante seguimiento
 En este ejemplo se muestra cómo utilizar el seguimiento del flujo de trabajo para extraer variables de flujo de trabajo y argumentos de las actividades. También muestra cómo agregar anotaciones a los registros de seguimiento y cómo extraer una carga de datos en los registros de seguimiento personalizados. En el ejemplo se utiliza el participante de seguimiento de Seguimiento de eventos para Windows (ETW) para extraer datos del flujo de trabajo.  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
- Windows Workflow Foundation (WF) proporciona un seguimiento para ganar visibilidad en la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. Los datos de la instancia de flujo de trabajo, junto con los registros de seguimiento del flujo de trabajo, se pueden extraer del flujo de trabajo. La siguiente lista detalla los tipos de datos que se pueden extraer de los registros de seguimiento:  
+ Windows Workflow Foundation (WF) proporciona seguimiento para ganar visibilidad en la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. Los datos de la instancia de flujo de trabajo, junto con los registros de seguimiento del flujo de trabajo, se pueden extraer del flujo de trabajo. La siguiente lista detalla los tipos de datos que se pueden extraer de los registros de seguimiento:  
   
 1.  Las variables de flujo de trabajo de una actividad y registros de seguimiento durante la ejecución de la actividad.  
   
@@ -98,11 +98,11 @@ En este ejemplo se muestra cómo utilizar el seguimiento del flujo de trabajo pa
   
 7.  Desde el **iniciar** menú, seleccione **herramientas administrativas** y, a continuación, **Visor de eventos**.  
   
-8.  En la vista de árbol en el Visor de eventos, navegue hasta **Visor de eventos**, **registros de aplicaciones y servicios**, y **Microsoft**. Haga clic en **Microsoft** y seleccione **vista** y, a continuación, **mostrar registros analíticos y depuración**.  
+8.  En la vista de árbol en el Visor de eventos, vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, y **Microsoft**. Haga clic en **Microsoft** y seleccione **vista** y, a continuación, **mostrar registros analíticos y depuración**.  
   
      Asegúrese de que el **mostrar registros analíticos y depuración** opción está activada.  
   
-9. En la vista de árbol en el Visor de eventos, navegue hasta **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**,  **Servidor de aplicaciones**. Haga clic en **analítico** y seleccione **Habilitar registro**.  
+9. En la vista de árbol en el Visor de eventos, vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**,  **Servidor de aplicaciones-aplicaciones**. Haga clic en **analítico** y seleccione **Habilitar registro**.  
   
 10. Mediante [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], abra el cliente de prueba de WCF.  
   
@@ -116,11 +116,11 @@ En este ejemplo se muestra cómo utilizar el seguimiento del flujo de trabajo pa
   
 12. En el cliente de pruebas de WCF, haga doble clic en `GetStockPrice`.  
   
-     De este modo, se abrirá el método `GetStockPrice`. La solicitud acepta un parámetro. Utilice el valor **Contoso**.  
+     De este modo, se abrirá el método `GetStockPrice`. La solicitud acepta un parámetro. Use el valor **Contoso**.  
   
 13. Haga clic en **invocar**.  
   
-14. Cambie al Visor de eventos y navegue hasta **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**,  **Servidor de aplicaciones**. Haga clic en **analítico** y seleccione **actualizar**. Los eventos de flujo de trabajo se encuentran en el intervalo de identificadores de evento que va del 100 al 199.  
+14. Cambie al Visor de eventos y navegue hasta **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**,  **Servidor de aplicaciones-aplicaciones**. Haga clic en **analítico** y seleccione **actualizar**. Los eventos de flujo de trabajo se encuentran en el intervalo de identificadores de evento que va del 100 al 199.  
   
      Los eventos contienen las anotaciones, las variables, los argumentos y los registros de seguimiento personalizados que se pueden ver en el Visor de eventos.  
   
@@ -151,9 +151,9 @@ En este ejemplo se muestra cómo utilizar el seguimiento del flujo de trabajo pa
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\ExtractWfData`  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de supervisión de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

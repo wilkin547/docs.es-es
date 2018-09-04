@@ -3,11 +3,11 @@ title: Ejemplo de compensación personalizada
 ms.date: 03/30/2017
 ms.assetid: 385920da-9284-44bf-9fe9-0d87c7478ec5
 ms.openlocfilehash: ac141a48f87f5b14f6b528f7b3ceb7fdddeaf2d2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43475873"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503724"
 ---
 # <a name="custom-compensation-sample"></a>Ejemplo de compensación personalizada
 En este ejemplo se muestra cómo utilizar <xref:System.Activities.Statements.CompensableActivity> y su controlador de compensación para definir lógica de compensación personalizada. El escenario modelado en este ejemplo es una agencia de alquiler de camiones.  

@@ -2,12 +2,12 @@
 title: Colecciones de esquemas de SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 248e5f4caf47f09742358240fa43f46169f0b1e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7020c74d41ce1feef38c4dfc66117a7b8c8eff4e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361060"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508495"
 ---
 # <a name="sql-server-schema-collections"></a>Colecciones de esquemas de SQL Server
 El proveedor de datos .NET Framework para SQL Server de Microsoft admite colecciones de esquemas adicionales, además de las colecciones de esquemas comunes. Las colecciones de esquemas varían ligeramente respecto de la versión de SQL Server que está utilizando. Para determinar la lista de colecciones de esquemas admitidas, llame a la **GetSchema** método sin argumentos o con el nombre de la colección de esquemas "MetaDataCollections". Esto devolverá una <xref:System.Data.DataTable> con una lista de colecciones de esquemas admitidas, el número de restricciones que admite cada una y el número de partes de identificador que emplean.  
@@ -51,7 +51,7 @@ El proveedor de datos .NET Framework para SQL Server de Microsoft admite colecci
   
 |ColumName|DataType|Descripción|  
 |----------------|--------------|-----------------|  
-|type_desc|String|El tipo de índice debe ser uno de los valores siguientes:<br /><br /> -HEAP<br />-EN CLÚSTER<br />-NO AGRUPADO<br />: XML<br />-ESPACIALES|  
+|type_desc|String|El tipo de índice debe ser uno de los valores siguientes:<br /><br /> -HEAP<br />-EN CLÚSTER<br />-NO AGRUPADOS<br />: XML<br />-ESPACIAL|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -257,4 +257,4 @@ El proveedor de datos .NET Framework para SQL Server de Microsoft admite colecci
   
 ## <a name="see-also"></a>Vea también  
  [Recuperación de información del esquema de la base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
