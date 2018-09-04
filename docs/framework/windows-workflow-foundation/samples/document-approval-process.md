@@ -2,35 +2,35 @@
 title: Proceso de aprobación de un documento
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 874ee560407c3054b4f270a35e5100eaf9e174b8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809497"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508935"
 ---
 # <a name="document-approval-process"></a>Proceso de aprobación de un documento
-Este ejemplo muestra el uso de muchas características de Windows Workflow Foundation (WF) y Windows Communication Foundation (WCF) conjuntamente. Juntas implementan un escenario de proceso de aprobación de un documento. Una aplicación cliente puede enviar documentos para su aprobación y aprobar documentos. Existe una aplicación de administrador de aprobaciones para facilitar las comunicaciones entre los clientes y aplicar las reglas del proceso de aprobación. El proceso de aprobación es un flujo de trabajo que puede ejecutar varios tipos de aprobación. Existen actividades para obtener una aprobación única, una aprobación de quórum (un porcentaje de un conjunto de aprobadores) y un proceso de aprobación compleja que consta de una aprobación de quórum y una aprobación única en una secuencia.  
+Este ejemplo muestra el uso de muchas características de Windows Workflow Foundation (WF) y Windows Communication Foundation (WCF) juntos. Juntas implementan un escenario de proceso de aprobación de un documento. Una aplicación cliente puede enviar documentos para su aprobación y aprobar documentos. Existe una aplicación de administrador de aprobaciones para facilitar las comunicaciones entre los clientes y aplicar las reglas del proceso de aprobación. El proceso de aprobación es un flujo de trabajo que puede ejecutar varios tipos de aprobación. Existen actividades para obtener una aprobación única, una aprobación de quórum (un porcentaje de un conjunto de aprobadores) y un proceso de aprobación compleja que consta de una aprobación de quórum y una aprobación única en una secuencia.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
  El siguiente gráfico muestra el flujo de trabajo del proceso de aprobación de un documento.  
   
- ![Un flujo de trabajo del proceso de aprobación de documentos](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
+ ![Un flujo de trabajo de proceso de aprobación de documentos](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
   
  Desde la perspectiva del cliente, el proceso de aprobación funciona del siguiente modo:  
   
 1.  Un cliente realiza una suscripción para convertirse en usuario en el sistema del proceso de aprobación.  
   
-2.  Un cliente WCF se envía a un servicio WCF hospedado por la aplicación de administrador de aprobaciones.  
+2.  Un cliente WCF envía a un servicio WCF hospedado por la aplicación de administrador de aprobaciones.  
   
 3.  Se devuelve un Id. de usuario único al cliente. El cliente puede participar ahora en los procesos de aprobación.  
   
@@ -48,13 +48,13 @@ Este ejemplo muestra el uso de muchas características de Windows Workflow Found
   
 10. Un cliente puede recibir una solicitud de aprobación y responder a la solicitud en cualquier momento.  
   
-11. Un servicio WCF hospedado en el cliente puede recibir una solicitud de aprobación de la aplicación de administrador de autorización.  
+11. Un servicio WCF hospedado en el cliente puede recibir una solicitud de aprobación de la aplicación de administrador de aprobaciones.  
   
 12. La información del documento se presenta en el cliente para revisión.  
   
 13. El usuario puede aprobar o rechazar el documento.  
   
-14. Un cliente de WCF se usa para enviar una respuesta de aprobación a la aplicación de administrador de autorización.  
+14. Se utiliza un cliente WCF para enviar una respuesta de aprobación a la aplicación de administrador de autorización.  
   
  Desde el punto de vista de la aplicación de administrador de aprobaciones, el proceso de aprobación funciona del siguiente modo:  
   
@@ -88,7 +88,7 @@ Este ejemplo muestra el uso de muchas características de Windows Workflow Found
   
 2.  Para compilar la solución, presione Ctrl+MAYÚS+B.  
   
-3.  Para ejecutar la solución, inicie la aplicación Administrador de aprobaciones haciendo clic en el proyecto ApprovalManager en el **el Explorador de soluciones** y haga clic en **depurar**->**iniciar**  nueva instancia en el menú contextual.  
+3.  Para ejecutar la solución, inicie la aplicación Administrador de aprobaciones haciendo clic con el proyecto ApprovalManager en el **el Explorador de soluciones** y haga clic en **depurar**->**iniciar**  nueva instancia en el menú contextual.  
   
      Espere a que el resultado del administrador le indique que está listo.  
   
@@ -102,9 +102,9 @@ Este ejemplo muestra el uso de muchas características de Windows Workflow Found
   
 4.  Haga clic en **detectar**, espere hasta que el **suscribirse** botón está habilitado.  
   
-5.  Escriba un nombre de usuario y haga clic en **suscribirse**. Para un cliente, use `UserType1` y para el otro, escriba `UserType2`.  
+5.  Escriba cualquier nombre de usuario y haga clic en **suscribirse**. Para un cliente, use `UserType1` y para el otro, escriba `UserType2`.  
   
-6.  En el cliente `UserType1`, seleccione el tipo de aprobación única en el menú desplegable y escriba un nombre de documento y su contenido. Haga clic en **solicitar la aprobación**.  
+6.  En el cliente `UserType1`, seleccione el tipo de aprobación única en el menú desplegable y escriba un nombre de documento y su contenido. Haga clic en **solicitar aprobación**.  
   
 7.  En el cliente `UserType2`, aparecerá un documento a la espera de aprobación. Selecciónelo y presione **aprobar** o **rechazar**. Los resultados deberían mostrarse en el cliente `UserType1`.  
   
@@ -118,9 +118,9 @@ Este ejemplo muestra el uso de muchas características de Windows Workflow Found
   
 4.  Haga clic en **detectar**, espere hasta que el **suscribirse** botón está habilitado.  
   
-5.  Escriba un nombre de usuario y haga clic en **suscribirse**. Para un cliente, use `UserType1` y para los otros dos, escriba `UserType2`.  
+5.  Escriba cualquier nombre de usuario y haga clic en **suscribirse**. Para un cliente, use `UserType1` y para los otros dos, escriba `UserType2`.  
   
-6.  En el cliente `UserType1`, seleccione el tipo de aprobación de quórum en el menú desplegable y escriba un nombre de documento y su contenido. Haga clic en **solicitar la aprobación**. Este tipo de aprobación requieres que los dos clientes `UserType2` aprueben o rechacen el documento. Aunque los dos clientes `UserType2` deben responder, solo uno de ellos necesita aprobar el documento para que se considere aprobado.  
+6.  En el cliente `UserType1`, seleccione el tipo de aprobación de quórum en el menú desplegable y escriba un nombre de documento y su contenido. Haga clic en **solicitar aprobación**. Este tipo de aprobación requieres que los dos clientes `UserType2` aprueben o rechacen el documento. Aunque los dos clientes `UserType2` deben responder, solo uno de ellos necesita aprobar el documento para que se considere aprobado.  
   
 7.  En los clientes `UserType2`, aparecerá un documento a la espera de aprobación. Selecciónelo y presione **aprobar** o **rechazar**. Los resultados deberían mostrarse en el cliente `UserType1`.  
   
@@ -134,9 +134,9 @@ Este ejemplo muestra el uso de muchas características de Windows Workflow Found
   
 4.  Haga clic en **detectar**, espere hasta que el **suscribirse** botón está habilitado.  
   
-5.  Escriba un nombre de usuario y haga clic en **suscribirse**. Para un cliente, use `UserType1`, para los otros dos, escriba `UserType2` y en el último, use `UserType3`.  
+5.  Escriba cualquier nombre de usuario y haga clic en **suscribirse**. Para un cliente, use `UserType1`, para los otros dos, escriba `UserType2` y en el último, use `UserType3`.  
   
-6.  En el cliente `UserType1`, seleccione el tipo de aprobación única en el menú desplegable y escriba un nombre de documento y su contenido. Haga clic en **solicitar la aprobación**.  
+6.  En el cliente `UserType1`, seleccione el tipo de aprobación única en el menú desplegable y escriba un nombre de documento y su contenido. Haga clic en **solicitar aprobación**.  
   
 7.  En los clientes `UserType2`, aparecerá un documento a la espera de aprobación. Selecciónelo y presione **aprobar**, el documento se pasa a la `UserType3` cliente.  
   

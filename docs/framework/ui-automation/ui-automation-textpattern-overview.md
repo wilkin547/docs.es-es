@@ -9,23 +9,23 @@ ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: e8358a4a4e0b4933670a2f01dfdf4dd9a7aa43cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 522caed7e8006157f99e65e99bf52743871444ad
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409885"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43498979"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Información general sobre el modelo de texto de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Esta información general describe cómo usar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para exponer el contenido textual, incluidos los atributos de estilo y formato, de los controles de texto en plataformas compatibles con [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Estos controles incluyen, pero no se limitan a Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> y <xref:System.Windows.Controls.RichTextBox> , así como sus [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] equivalentes.  
   
  Exponer el contenido textual de un control se logra mediante el uso del patrón de control <xref:System.Windows.Automation.TextPattern> , que representa el contenido de un contenedor de texto como una secuencia de texto. A su vez, <xref:System.Windows.Automation.TextPattern> requiere el soporte de la clase <xref:System.Windows.Automation.Text.TextPatternRange> para exponer atributos de formato y estilo. <xref:System.Windows.Automation.Text.TextPatternRange> da soporte a <xref:System.Windows.Automation.TextPattern> mediante la representación de intervalos de texto contiguos, múltiples o no contiguos en un contenedor de texto con una colección de extremos <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> y <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> . <xref:System.Windows.Automation.Text.TextPatternRange> admite la funcionalidad como selección, comparación, recuperación y exploración transversal.  
   
 > [!NOTE]
->  Las clase <xref:System.Windows.Automation.TextPattern> no proporcionan un medio para insertar o modificar texto. Sin embargo, en función del control, esto se puede lograr mediante la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> o a través del teclado directas. Consulte la [TextPattern Insert Text Sample](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) para obtener un ejemplo.  
+>  Las clase <xref:System.Windows.Automation.TextPattern> no proporcionan un medio para insertar o modificar texto. Sin embargo, dependiendo del control, esto se puede lograr mediante el [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> o a través de acciones del teclado directas. Consulte la [TextPattern Insert Text Sample](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) para obtener un ejemplo.  
   
  La funcionalidad descrita en este artículo es vital para los proveedores de tecnología de asistencia y sus usuarios finales. Las tecnologías de asistencia pueden usar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para recopilar información de formato de texto para el usuario y proporcionar navegación y selección de texto mediante programación por <xref:System.Windows.Automation.Text.TextUnit> (carácter, palabra, línea o párrafo).  
   
@@ -121,7 +121,7 @@ ms.locfileid: "33409885"
  **Extremo**  
  Es el punto <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> o <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> absoluto de un intervalo de texto dentro de un contenedor de texto.  
   
- ![TextPatternRangeEndpoints &#40;empezar y terminar&#41;. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
+ ![TextPatternRangeEndpoints &#40;empezar y terminar&#41;. ](../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
 En el siguiente ejemplo se muestra un conjunto de puntos de inicio y final.  
   
  **TextRange**  
@@ -137,4 +137,4 @@ En el siguiente ejemplo se muestra un conjunto de puntos de inicio y final.
  [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
  [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [Asignación de patrones de control para clientes de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [Text Services Framework](http://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)
+ [Text Services Framework](https://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)

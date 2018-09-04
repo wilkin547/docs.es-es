@@ -13,16 +13,16 @@ ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c34c10ee1701adba2dfb64be8ef39d6bf9f203e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b5f3f42158a8b86a247a0e8a1ada3a37edc0df1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399683"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499970"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI Automation y ajuste de escala de la pantalla
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] permite a los usuarios cambiar la configuración [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] para que la mayoría de los elementos [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] de la pantalla parezcan de mayor tamaño. Aunque esta característica ha estado disponible desde hace mucho tiempo en [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], en las versiones anteriores, el escalado se tenía que implementar por las aplicaciones. En [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], el Administrador de ventanas de escritorio realiza el ajuste de escala predeterminado para todas las aplicaciones que no controlan su propia escala. Las aplicaciones cliente de automatización de la interfaz de usuario deben tener en cuenta esta característica.  
   
@@ -61,12 +61,12 @@ ms.locfileid: "33399683"
   
  La solución consta de dos partes.  
   
-1.  En primer lugar, haga que la aplicación cliente sea para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]. Para ello, llame a la función [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `SetProcessDPIAware` al inicio. En código administrado, la siguiente declaración hace que esta función esté disponible.  
+1.  En primer lugar, haga que la aplicación cliente sea para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]. Para ello, llame a la función [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]`SetProcessDPIAware` al inicio. En código administrado, la siguiente declaración hace que esta función esté disponible.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Esta función hace que todo el proceso sea para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], lo que significa que todas las ventanas que pertenecen al proceso sean sin escala. En el [ejemplo de marcador de resaltado](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), por ejemplo, las cuatro ventanas que componen el rectángulo resaltado se encuentran en las coordenadas físicas obtenidas de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], no las coordenadas lógicas. Si el ejemplo no era para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], el resaltado se dibujaría en las coordenadas lógicas del escritorio, lo que daría lugar a una ubicación incorrecta en un entorno que no sea de 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
+     Esta función hace que todo el proceso sea para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], lo que significa que todas las ventanas que pertenecen al proceso sean sin escala. En el [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), por ejemplo, las cuatro ventanas que componen el rectángulo resaltado se encuentran en las coordenadas físicas obtenidas de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], no las coordenadas lógicas. Si el ejemplo no era para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], el resaltado se dibujaría en las coordenadas lógicas del escritorio, lo que daría lugar a una ubicación incorrecta en un entorno que no sea de 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
   
 2.  Para obtener coordenadas de cursor, llame a la función [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. En el ejemplo siguiente se muestra cómo declarar y usar esta función.  
   
@@ -74,9 +74,9 @@ ms.locfileid: "33399683"
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
   
 > [!CAUTION]
->  No utilice <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. El comportamiento de esta propiedad fuera de las ventanas de cliente en un entorno de escala es indefinido.  
+>  No use <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. El comportamiento de esta propiedad fuera de las ventanas de cliente en un entorno de escala es indefinido.  
   
  Si la aplicación realiza una comunicación directa entre procesos con aplicaciones que no son para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], puede que tenga que convertir entre las coordenadas lógicas y físicas mediante las funciones [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` y `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplo de marcador de resaltado](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+ [Ejemplo de marcador de resaltado](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

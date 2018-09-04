@@ -1,27 +1,27 @@
 ---
 title: 'Tutorial: Crear un proveedor de tipos (F #)'
-description: 'Obtenga información acerca de cómo crear sus propios proveedores de tipo de F # en F # 3.0 mediante el examen de varios proveedores de tipo simples para ilustrar los conceptos básicos.'
+description: 'Obtenga información sobre cómo crear sus propios proveedores de tipo de F # en F # 3.0 mediante el examen de varios proveedores de tipo simple para ilustrar los conceptos básicos.'
 ms.date: 05/16/2016
-ms.openlocfilehash: fe2bae8c7836ac46824264f2d5f5fb1e41900407
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25b11a0c6328fc74832e13b6380c983fb14a74a0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566462"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499333"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Crear un proveedor de tipos
 
-El mecanismo de proveedores de tipo de F # es una parte considerable de su compatibilidad con la programación de información enriquecida. Este tutorial le explica cómo crear proveedores de tipos, a la vez que le guía en el desarrollo de varios proveedores de tipo simples para ilustrar los conceptos básicos. Para obtener más información sobre el mecanismo de proveedores de tipo de F #, vea [proveedores de tipo](index.md).
+El mecanismo de proveedores de tipo de F # es una parte importante de su compatibilidad con programación enriquecida de información. Este tutorial le explica cómo crear proveedores de tipos, a la vez que le guía en el desarrollo de varios proveedores de tipo simples para ilustrar los conceptos básicos. Para obtener más información sobre el mecanismo de proveedores de tipo de F #, vea [proveedores de tipos](index.md).
 
-El ecosistema de F # contiene un intervalo de proveedores de tipo para los servicios de datos empresariales y de Internet utilizados. Por ejemplo:
+El ecosistema de F # contiene una variedad de proveedores de tipos de servicios de datos empresariales y de Internet usados con frecuencia. Por ejemplo:
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) incluye proveedores de tipo para formatos de documento de JSON, XML, CSV y HTML.
+- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) incluye proveedores de tipos de formatos de documento JSON, XML, CSV y HTML.
 
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/) proporciona acceso fuertemente tipado para bases de datos SQL a través de una asignación de objetos y LINQ de F # las consultas realizadas en estos orígenes de datos.
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/) proporciona acceso fuertemente tipado para las bases de datos SQL a través de una asignación de objetos y LINQ de F # en las consultas con estos orígenes de datos.
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) un conjunto de proveedores de tipo de tiempo de compilación buscó incrustación de T-SQL en F #.
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) ha comprobado un conjunto de proveedores de tipo de tiempo de compilación de inserción de T-SQL en F #.
 
-- [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) es un conjunto anterior de proveedores de tipo para su uso únicamente con la programación de .NET Framework para tener acceso a servicios de datos SQL, Entity Framework, OData y WSDL.
+- [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) es un conjunto anterior de proveedores de tipos para su uso únicamente con la programación de .NET Framework para tener acceso a servicios de datos SQL, Entity Framework, OData y WSDL.
 
 En caso necesario, se pueden crear proveedores de tipo personalizados o se puede hacer referencia a proveedores de tipo creados por otros. Por ejemplo, una organización podría tener un servicio de datos que proporcionara un número elevado y creciente de conjuntos de datos con nombre, cada uno con su propio esquema de datos estable. Se puede crear un proveedor de tipos que lea los esquemas y presente los conjuntos de datos actuales al programador de una manera fuertemente tipada.
 
@@ -55,7 +55,7 @@ Los proveedores de tipo son más adecuados en situaciones en las que el esquema 
 
 ## <a name="a-simple-type-provider"></a>Un proveedor de tipos simple
 
-Este ejemplo es Samples.HelloWorldTypeProvider, similar a los ejemplos de la `examples` directorio de la [SDK de proveedor de tipo de F #](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). El proveedor hace que esté disponible un "espacio de tipos" que contiene 100 tipos borrados, como muestra el código siguiente, en el que se usa la sintaxis de signatura de F# y se omiten los detalles de todos los tipos excepto `Type1`. Para obtener más información sobre los tipos borrados, consulte [obtener más información acerca de los tipos borrados proporcionados](#details-about-erased-provided-types) más adelante en este tema.
+Este ejemplo es encuentra en Samples.HelloWorldTypeProvider, similar a los ejemplos en los `examples` directorio de la [SDK de proveedor de tipo de F #](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). El proveedor hace que esté disponible un "espacio de tipos" que contiene 100 tipos borrados, como muestra el código siguiente, en el que se usa la sintaxis de signatura de F# y se omiten los detalles de todos los tipos excepto `Type1`. Para obtener más información sobre los tipos borrados, consulte [detalles acerca de los tipos borrados proporcionados](#details-about-erased-provided-types) más adelante en este tema.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -76,7 +76,6 @@ type Type1 =
     /// This is an instance method.
     member InstanceMethod : x:int -> char
 
-    /// This is an instance property.
     nested type NestedType = 
         /// This is StaticProperty1 on NestedType.
         static member StaticProperty1 : string
@@ -166,9 +165,9 @@ Para depurar este proveedor mediante Visual Studio, abra el símbolo del sistema
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-Como alternativa, abra Visual Studio, abra el menú Depurar, elija `Debug/Attach to process…`y asociarlo a otro `devenv` proceso donde puede editar la secuencia de comandos. Con este método, le resultará más fácil centrarse en la lógica particular del proveedor de tipos escribiendo interactivamente expresiones en la segunda instancia (con IntelliSense completo y otras características).
+Como alternativa, abra Visual Studio, abra el menú Depurar, elija `Debug/Attach to process…`y asociarlo a otro `devenv` proceso donde esté editando el script. Con este método, le resultará más fácil centrarse en la lógica particular del proveedor de tipos escribiendo interactivamente expresiones en la segunda instancia (con IntelliSense completo y otras características).
 
-Puede deshabilitar la depuración "Solo mi código" para identificar mejor los errores en el código generado. Para obtener información acerca de cómo habilitar o deshabilitar esta característica, consulte [desplazarse por el código con el depurador](/visualstudio/debugger/navigating-through-code-with-the-debugger). Además, también puede establecer excepciones de primera oportunidad detectar abriendo el `Debug` menú y, a continuación, eligiendo `Exceptions` o eligiendo las teclas Ctrl + Alt + E para abrir el `Exceptions` cuadro de diálogo. Este cuadro de diálogo, en `Common Language Runtime Exceptions`, seleccione la `Thrown` casilla de verificación.
+Puede deshabilitar la depuración "Solo mi código" para identificar mejor los errores en el código generado. Para obtener información acerca de cómo habilitar o deshabilitar esta característica, consulte [desplazarse por el código con el depurador](/visualstudio/debugger/navigating-through-code-with-the-debugger). Además, también puede establecer excepciones de primera oportunidad detectar abriendo el `Debug` menú y, a continuación, elija `Exceptions` o eligiendo las teclas Ctrl + Alt + E para abrir el `Exceptions` cuadro de diálogo. Este cuadro de diálogo, bajo `Common Language Runtime Exceptions`, seleccione el `Thrown` casilla de verificación.
 
 
 ### <a name="implementation-of-the-type-provider"></a>Implementación del proveedor de tipos
@@ -180,9 +179,9 @@ En esta sección se muestran las etapas principales de la implementación del pr
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-Este tipo debe ser pública y debe marcarse con el [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) para que el compilador reconozca el proveedor de tipos cuando un proyecto independiente de F # hace referencia al ensamblado que contiene el tipo de atributo. El *config* parámetro es opcional y, si lo hay, contiene información de configuración contextual para la instancia del proveedor de tipo creados por el compilador de F #.
+Este tipo debe ser pública y debe marcarse con el [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) para que el compilador reconozca el proveedor de tipos cuando un proyecto independiente de F # hace referencia al ensamblado que contiene el tipo de atributo. El *config* parámetro es opcional y, si está presente, contiene información de configuración contextual para la instancia de tipo de proveedor que crea el compilador de F #.
 
-A continuación, implementará la [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) interfaz. En este caso, puede utilizar el tipo `TypeProviderForNamespaces` de la API `ProvidedTypes` como tipo base. Este tipo auxiliar puede proporcionar una colección finita de espacios de nombres proporcionados anticipadamente, cada uno de los cuales contiene directamente un número finito de tipos fijos proporcionados anticipadamente. En este contexto, el proveedor *anticipadamente* genera tipos aunque no son necesarios ni se utilicen.
+A continuación, implemente el [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) interfaz. En este caso, puede utilizar el tipo `TypeProviderForNamespaces` de la API `ProvidedTypes` como tipo base. Este tipo auxiliar puede proporcionar una colección finita de espacios de nombres proporcionados anticipadamente, cada uno de los cuales contiene directamente un número finito de tipos fijos proporcionados anticipadamente. En este contexto, el proveedor *concienzudamente* genera tipos aunque no son necesarios ni se utilicen.
 
 ```fsharp
 inherit TypeProviderForNamespaces(config)
@@ -241,7 +240,7 @@ let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
 
 Debe tener en cuenta los puntos siguientes:
 
-- Este tipo proporcionado es un tipo borrado.  Dado que ha indicado que el tipo base es `obj`, instancias aparecerán como valores de tipo [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) en el código compilado.
+- Este tipo proporcionado es un tipo borrado.  Dado que ha indicado que el tipo base es `obj`, las instancias aparecerán como valores de tipo [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) en el código compilado.
 
 - Cuando especifique un tipo no anidado, deberá especificar también el ensamblado y el espacio de nombres. Para los tipos borrados, el ensamblado deberá ser el propio ensamblado del proveedor de tipo.
 
@@ -260,7 +259,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-Al obtener esta propiedad, siempre se evaluará como la cadena "Hello!". La función `GetterCode` de la propiedad utiliza una expresión de código delimitada de F# que representa el código que genera el compilador host para obtener la propiedad. Para obtener más información acerca de expresiones de código delimitadas, consulte [expresiones de código delimitadas (F #)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
+Al obtener esta propiedad, siempre se evaluará como la cadena "Hello!". La función `GetterCode` de la propiedad utiliza una expresión de código delimitada de F# que representa el código que genera el compilador host para obtener la propiedad. Para obtener más información acerca de los presupuestos, consulte [expresiones de código delimitadas (F #)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
 
 Agregue la documentación XML a la propiedad.
 
@@ -367,7 +366,7 @@ t.AddMembersDelayed(fun () ->
 
 ### <a name="details-about-erased-provided-types"></a>Detalles sobre los tipos proporcionados borrados
 
-En el ejemplo de esta sección se proporciona solo *tipos proporcionados borrados*, que son especialmente útiles en las situaciones siguientes:
+El ejemplo de esta sección se proporciona sólo *tipos proporcionados borrados*, que son especialmente útiles en las situaciones siguientes:
 
 - Cuando se escribe un proveedor para un espacio de información que solo contiene datos y métodos.
 
@@ -477,7 +476,7 @@ Tenga en cuenta los puntos siguientes:
 
 - Cada grupo con nombre produce una propiedad proporcionada, y el acceso a la propiedad produce el uso de un indizador en la colección `Groups` de una coincidencia.
 
-El código siguiente es la base de la lógica para implementar un proveedor como este y este ejemplo omite la adición de todos los miembros al tipo proporcionado. Para obtener información sobre cada miembro agregado, consulte la sección correspondiente más adelante en este tema. Para obtener el código completo, descargue el ejemplo de la [módulo con el ejemplo de F # 3.0](https://fsharp3sample.codeplex.com) en el sitio Web de Codeplex.
+El código siguiente es la base de la lógica para implementar un proveedor como este y este ejemplo omite la adición de todos los miembros al tipo proporcionado. Para obtener información sobre cada miembro agregado, consulte la sección correspondiente más adelante en este tema. Para el código completo, descargue el ejemplo desde el [paquete del ejemplo de F # 3.0](https://fsharp3sample.codeplex.com) en el sitio Web de Codeplex.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -757,9 +756,9 @@ Como ejemplo sencillo, considere un proveedor de tipo para tener acceso a datos 
 
 En esta sección se muestra cómo proporcionar un tipo que se puede usar para obtener filas con una propiedad `Distance` de tipo `float<meter>` y una propiedad `Time` de tipo `float<second>`. Para simplificar, se realizan las suposiciones siguientes:
 
-- Los nombres de encabezado son unidades de medida o tener el formato "Nombre (unidad)" y no contienen comas.
+- Los nombres de encabezado carecen de unidades o tienen el formato "Nombre (unidad)" y no contienen comas.
 
-- Las unidades son todas las unidades al sistema internacional (SI) como el [Microsoft.FSharp.Data.UnitSystems.SI.UnitNames (módulo de F #)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) módulo define.
+- Las unidades son todas las unidades pertenecen al sistema internacional (SI) como el [módulo Microsoft.FSharp.Data.UnitSystems.SI.UnitNames (F #)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) módulo define.
 
 - Las unidades son todas simples (por ejemplo, metro) en lugar de compuestas (por ejemplo, metros por segundo).
 
@@ -884,9 +883,9 @@ Tenga en cuenta las siguientes observaciones sobre la implementación:
 
 - Los constructores sobrecargados permiten leer el archivo original o uno que tenga un esquema idéntico. Este patrón es habitual al escribir un proveedor de tipos para orígenes de datos locales o remotos, y además permite el uso de un archivo local como plantilla para los datos remotos.
 
-- Puede usar el [TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44) valor que se pasa al constructor del proveedor de tipo para resolver los nombres de archivo relativos.
+- Puede usar el [TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44) valor que se pasa al constructor del proveedor de tipo para resolver los nombres de archivo relativas.
 
-- Se puede utilizar el método `AddDefinitionLocation` para definir la ubicación de las propiedades proporcionadas. Por lo tanto, si utiliza `Go To Definition` en una propiedad proporcionada, el archivo CSV se abrirá en Visual Studio.
+- Se puede utilizar el método `AddDefinitionLocation` para definir la ubicación de las propiedades proporcionadas. Por lo tanto, si usa `Go To Definition` en una propiedad proporcionada, se abrirá el archivo CSV en Visual Studio.
 
 - Se puede utilizar el tipo `ProvidedMeasureBuilder` para buscar las unidades del SI y generar los tipos `float<_>` pertinentes.
 
@@ -944,7 +943,7 @@ Como muestra el ejemplo, se han borrado todas las menciones del tipo `Type1` y l
 ### <a name="design-and-naming-conventions-for-type-providers"></a>Diseño y convenciones de nomenclatura para los proveedores de tipos
 Respete las convenciones siguientes al crear proveedores de tipos.
 
-**Proveedores para protocolos de conectividad** en general, los nombres de la mayoría de archivos DLL de proveedores para protocolos de conectividad de datos y servicios, como OData o conexiones SQL, deben terminar en `TypeProvider` o `TypeProviders`. Por ejemplo, utilice un nombre de DLL similar a la siguiente cadena:
+**Los proveedores para protocolos de conectividad** en general, los nombres de la mayoría de archivos DLL de proveedores para protocolos de conectividad de datos y servicios, como OData o conexiones SQL, deben terminar en `TypeProvider` o `TypeProviders`. Por ejemplo, utilice un nombre de DLL similar a la siguiente cadena:
 
 ```
   Fabrikam.Management.BasicTypeProviders.dll
@@ -971,7 +970,7 @@ En este caso, el tipo proporcionado aparecería en un punto adecuado según las 
   let regex = new RegexTyped<"a+b+a+b+">()
 ```
 
-**Orígenes de datos de singleton**. Algunos proveedores de tipos se conectan a un único origen de datos dedicado y solo proporcionan datos. En este caso, se debería quitar el sufijo `TypeProvider` y utilizar las convenciones normales de nomenclatura de .NET:
+**Los orígenes de datos singleton**. Algunos proveedores de tipos se conectan a un único origen de datos dedicado y solo proporcionan datos. En este caso, se debería quitar el sufijo `TypeProvider` y utilizar las convenciones normales de nomenclatura de .NET:
 
 ```fsharp
 #r "Fabrikam.Data.Freebase.dll"
@@ -1034,12 +1033,12 @@ La API de ProvidedType tiene versiones demoradas de AddMember.
 
 Estas versiones se utilizan para crear espacios de tipos a petición.
 
-### <a name="providing-array-types-and-generic-type-instantiations"></a>Proporciona los tipos de matriz y creaciones de instancias de tipo genérico
+### <a name="providing-array-types-and-generic-type-instantiations"></a>Proporcionar tipos de matriz y creaciones de instancias de tipo genérico
 
-Realizar los miembros proporcionados (cuyas signaturas incluyen tipos de matriz, tipos byref y creaciones de instancias de tipos genéricos) mediante la normal `MakeArrayType`, `MakePointerType`, y `MakeGenericType` en cualquier instancia de <xref:System.Type>, incluido `ProvidedTypeDefinitions`.
+Realizar los miembros proporcionados (cuyas signaturas incluyen tipos de matriz, tipos byref y creaciones de instancias de tipos genéricos) mediante el uso de la normal `MakeArrayType`, `MakePointerType`, y `MakeGenericType` en cualquier instancia de <xref:System.Type>, incluyendo `ProvidedTypeDefinitions`.
 
 > [!NOTE]
-> En algunos casos tendrá que utilizar la aplicación auxiliar en `ProvidedTypeBuilder.MakeGenericType`.  Consulte la [documentación del SDK de proveedor de tipo](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations) para obtener más detalles.
+> En algunos casos es posible que deba usar la aplicación auxiliar en `ProvidedTypeBuilder.MakeGenericType`.  Consulte la [documentación del SDK de proveedor de tipo](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations) para obtener más detalles.
 
 ### <a name="providing-unit-of-measure-annotations"></a>Proporcionar anotaciones de unidades de medida
 
@@ -1074,7 +1073,7 @@ A menudo los proveedores deben almacenar en memoria caché el acceso a la inform
 
 ### <a name="backing-assembly"></a>Ensamblado de respaldo
 
-Cuando se compila un `.dll` o `.exe` archivo, el archivo .dll de respaldo de tipos generados se vincula estáticamente el ensamblado resultante. Este vínculo se crea copiando las definiciones de tipos del lenguaje intermedio (IL) y cualquier recurso administrado del ensamblado de respaldo al ensamblado final. Cuando se usa F# Interactive, el archivo .dll de respaldo no se copia, sino que se carga directamente en el proceso de F# Interactive.
+Cuando se compila un `.dll` o `.exe` archivo, el archivo .dll de respaldo para tipos generados se vincula estáticamente el ensamblado resultante. Este vínculo se crea copiando las definiciones de tipos del lenguaje intermedio (IL) y cualquier recurso administrado del ensamblado de respaldo al ensamblado final. Cuando se usa F# Interactive, el archivo .dll de respaldo no se copia, sino que se carga directamente en el proceso de F# Interactive.
 
 ### <a name="exceptions-and-diagnostics-from-type-providers"></a>Excepciones y diagnósticos de proveedores de tipo
 
@@ -1084,7 +1083,7 @@ Todos los usos de todos los miembros de los tipos proporcionados pueden producir
 
 - Los proveedores de tipos no pueden notificar advertencias.
 
-- Cuando un proveedor de tipos se hospeda en el compilador de F#, un entorno de desarrollo de F# o F# Interactive, se detectan todas las excepciones de ese proveedor. La propiedad Message es siempre el texto del error y no aparece ningún seguimiento de pila. Si se va a producir una excepción, puede producir los siguientes ejemplos: `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.
+- Cuando un proveedor de tipos se hospeda en el compilador de F#, un entorno de desarrollo de F# o F# Interactive, se detectan todas las excepciones de ese proveedor. La propiedad Message es siempre el texto del error y no aparece ningún seguimiento de pila. Si va a producir una excepción, se pueden producir los siguientes ejemplos: `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.
 
 #### <a name="providing-generated-types"></a>Proporcionar tipos generados
 
@@ -1100,21 +1099,19 @@ El código auxiliar ProvidedTypes-0.2 que forma parte de la versión 3.0 de F# s
 
 - `isErased` debe establecerse en `false`.
 
-- Se debe agregar el tipo generado para un recién construido `ProvidedAssembly()`, que representa un contenedor para los fragmentos de código generado.
+- El tipo generado debe agregarse a una recién construido `ProvidedAssembly()`, que representa un contenedor para los fragmentos de código generado.
 
 - El proveedor debe tener un ensamblado que tenga un archivo .dll de respaldo real de .NET con un archivo .dll coincidente en el disco.
-
 
 ## <a name="rules-and-limitations"></a>Reglas y limitaciones
 
 Al escribir proveedores de tipos, tenga en cuenta las siguientes reglas y limitaciones.
 
-
-### <a name="provided-types-must-be-reachable"></a>Los tipos proporcionados deben ser accesibles
+### <a name="provided-types-must-be-reachable"></a>Tipos proporcionados deben ser accesibles
 
 Debe tenerse acceso a todos los tipos proporcionados desde los tipos no anidados. Los tipos no anidados se proporcionan en la llamada al constructor `TypeProviderForNamespaces` o en una llamada a `AddNamespace`. Por ejemplo, si el proveedor proporciona un tipo `StaticClass.P : T`, debe asegurarse de que T es un tipo no anidado o está anidado debajo de uno.
 
-Por ejemplo, algunos proveedores tienen una clase estática como `DataTypes` que contiene estos tipos `T1, T2, T3, ...`. De lo contrario, el error indica que se ha encontrado una referencia al tipo T en el ensamblado A, pero el tipo no se encuentra en ese ensamblado. Si aparece este error, compruebe que se puede obtener acceso a todos los subtipos desde los tipos del proveedor. Nota: Estos `T1, T2, T3...` tipos se conocen como el *sobre la marcha* tipos. Recuerde colocarlos en un espacio de nombres accesible o en un tipo primario.
+Por ejemplo, algunos proveedores tienen una clase estática como `DataTypes` que contiene estos tipos `T1, T2, T3, ...`. De lo contrario, el error indica que se ha encontrado una referencia al tipo T en el ensamblado A, pero el tipo no se encuentra en ese ensamblado. Si aparece este error, compruebe que se puede obtener acceso a todos los subtipos desde los tipos del proveedor. Nota: Estos `T1, T2, T3...` tipos se conocen como el *en marcha* tipos. Recuerde colocarlos en un espacio de nombres accesible o en un tipo primario.
 
 ### <a name="limitations-of-the-type-provider-mechanism"></a>Limitaciones del mecanismo de proveedores de tipos
 
@@ -1128,11 +1125,11 @@ El mecanismo de proveedores de tipos de F# tiene las siguientes limitaciones:
 
 Puede que le resulten útiles las sugerencias siguientes durante el proceso de desarrollo.
 
-### <a name="run-two-instances-of-visual-studio"></a>Ejecute dos instancias de Visual Studio
+### <a name="run-two-instances-of-visual-studio"></a>Ejecutar dos instancias de Visual Studio
 
 Puede desarrollar el proveedor de tipos en una instancia y probarlo en la otra porque el IDE de prueba tomará un bloqueo en el archivo .dll que evita que se recompile el proveedor de tipos. Por lo tanto, debe cerrar la segunda instancia de Visual Studio mientras se compila el proveedor en la primera y, a continuación, debe volver a abrir la segunda instancia después de compilar el proveedor.
 
-### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a>Depure proveedores de tipos mediante llamadas de fsc.exe
+### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a>Depurar proveedores de tipos mediante el uso de las distintas invocaciones de fsc.exe
 
 Puede invocar proveedores de tipos mediante las herramientas siguientes:
 

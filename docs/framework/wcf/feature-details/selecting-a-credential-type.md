@@ -3,11 +3,11 @@ title: Selección de tipos de credenciales
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: c2ee1b9062d14eaa44de0651985c2a385fe02f8e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396617"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503396"
 ---
 # <a name="selecting-a-credential-type"></a>Selección de tipos de credenciales
 *Credenciales* son los datos de Windows Communication Foundation (WCF) se usa para establecer una identidad reivindicada o funciones. Por ejemplo, una contraseña es una credencial que un gobierno emite para demostrar la ciudadanía en un país o región. En WCF, las credenciales pueden adoptar muchas formas, como los tokens de nombre de usuario y certificados X.509. En este tema se describe las credenciales, cómo se usan en WCF y cómo seleccionar la credencial correcta para su aplicación.  
