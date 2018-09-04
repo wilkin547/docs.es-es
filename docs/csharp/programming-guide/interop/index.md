@@ -7,12 +7,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: e854c51bd80809b92bb538475a407422b2eba7c0
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f1befaf6fe5b553f8049385b95a9f541cf0d57a7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925641"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506129"
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilidad (Guía de programación de C#)
 La interoperabilidad permite conservar y aprovechar las inversiones existentes en código no administrado. El código que se ejecuta bajo el control de Common Language Runtime (CLR) se denomina *código administrado*, y el código que se ejecuta fuera de CLR se denomina *código no administrado*. COM, COM+, los componentes de C++, los componentes de ActiveX y la API Win32 de Microsoft son ejemplos de código no administrado.  
@@ -41,8 +41,9 @@ La interoperabilidad permite conservar y aprovechar las inversiones existentes e
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
- [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado)  
- [Tutorial: Programación de Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
+## <a name="see-also"></a>Vea también
+
+- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado)  
+- [Tutorial: Programación de Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)

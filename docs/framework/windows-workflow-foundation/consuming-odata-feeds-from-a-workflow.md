@@ -2,12 +2,12 @@
 title: Usar fuentes de OData en un flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: 7b9b55d92d81772ed1601ec246cfc2e8aa96c016
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: a7e2a0658294681b154b11f48563ebc562c47210
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754594"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562485"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Usar fuentes de OData en un flujo de trabajo
 
@@ -15,7 +15,7 @@ Servicios de datos de WCF es un componente de [!INCLUDE[dnprdnshort](../../../in
 
 ## <a name="using-the-sample-northwind-odata-service"></a>Utilizar el servicio OData de Northwind de ejemplo
 
-Los ejemplos de este tema usan el servicio de datos ubicado en Northwind de ejemplo [ http://services.odata.org/Northwind/Northwind.svc/ ](http://go.microsoft.com/fwlink/?LinkID=187426). Este servicio se proporciona como parte del [SDK de OData](http://go.microsoft.com/fwlink/?LinkID=185248) y proporciona acceso de solo lectura a la base de datos Northwind de ejemplo. Si se quiere acceso de escritura, o un Servicio de datos de WCF local, puede seguir los pasos del [Tutorial rápido (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkID=131076) para crear un servicio OData local que proporcione acceso a la base de datos Northwind. Si sigue el tutorial rápido, sustituya el URI local por el que se proporciona en el código de ejemplo de este tema.
+Los ejemplos de este tema usan el servicio de datos ubicado en Northwind de ejemplo [ http://services.odata.org/Northwind/Northwind.svc/ ](https://go.microsoft.com/fwlink/?LinkID=187426). Este servicio se proporciona como parte de la [SDK de OData](https://go.microsoft.com/fwlink/?LinkID=185248) y proporciona acceso de solo lectura a la base de datos de ejemplo Northwind. Si se desea acceso de escritura, o si se desea un servicio de datos de WCF local, puede seguir los pasos necesarios para la [tutorial rápido de WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131076) para crear un servicio OData local que proporciona acceso a la base de datos Northwind. Si sigue el tutorial rápido, sustituya el URI local por el que se proporciona en el código de ejemplo de este tema.
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>Usar una fuente de OData mediante las bibliotecas de cliente
 
@@ -30,14 +30,14 @@ Para generar las bibliotecas de cliente de Northwind, puede utilizar el cuadro d
 Observe que no hay ninguna operación del servicio expuesta por el servicio y que en la lista **Servicios** hay elementos que representan las entidades expuestas por el servicio de datos Northwind. Cuando se agregue la referencia de servicio, se generarán las clases para estas entidades y se podrán utilizar en el código del cliente. Los ejemplos de este tema usan estas clases y la clase `NorthwindEntities` para realizar las consultas.
 
 > [!NOTE]
-> Para obtener más información, consulte [generar la biblioteca de cliente de servicio de datos (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkID=191611).
+> Para obtener más información, consulte [generar la biblioteca de cliente de servicio de datos (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkID=191611).
 
 ### <a name="using-asynchronous-methods"></a>Usar métodos asincrónicos
 
 Para resolver los posibles problemas de latencia que se pueden producir al tener acceso a los recursos en Web, recomendamos el acceso asincrónico a Servicios de datos de WCF. Las bibliotecas de cliente de WCF Data Services incluyen métodos asincrónicos para invocar las consultas y Windows Workflow Foundation (WF) proporciona la <xref:System.Activities.AsyncCodeActivity> clase para crear actividades asincrónicas. Se pueden escribir actividades derivadas de<xref:System.Activities.AsyncCodeActivity> para aprovechar las clases de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] que tienen métodos asincrónicos, o el código que se ejecuta de forma asincrónica se puede incluir en un método e invocar mediante un delegado. Esta sección proporciona dos ejemplos de una actividad derivada de <xref:System.Activities.AsyncCodeActivity> ; uno que utiliza los métodos asincrónicos de las bibliotecas cliente de los Servicios de datos de WCF y otro que usa un delegado.
 
 > [!NOTE]
-> Para obtener más información, consulte [operaciones asincrónicas (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193396) y [crear actividades asincrónicas](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).
+> Para obtener más información, consulte [operaciones asincrónicas (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkId=193396) y [crear actividades asincrónicas](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).
 
 ### <a name="using-client-library-asynchronous-methods"></a>Utilizar métodos asincrónicos de biblioteca de cliente
 
@@ -77,7 +77,7 @@ Además de invocar el método asincrónico de una clase [!INCLUDE[dnprdnshort](.
 En el ejemplo siguiente, se define una actividad `ListCustomers` . Esta actividad consulta el servicio de datos de Northwind de ejemplo y devuelve una `List<Customer>` que contiene todos los clientes de la base de datos Northwind. El método `GetCustomers` realiza el trabajo asincrónico. Este método consulta todos los clientes del servicio y, a continuación, los copia en una `List<Customer>`. Después, comprueba si los resultados están paginados. En ese caso, consulta en el servicio la siguiente página de resultados, los agrega a la lista y continúa hasta que se hayan recuperado todos los datos del cliente.
 
 > [!NOTE]
-> Para obtener más información acerca de la paginación en WCF Data Services, vea. [Cómo: Cargar resultados paginados (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193452).
+> Para obtener más información acerca de la paginación en WCF Data Services, vea. [Cómo: cargar resultados paginados (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkId=193452).
 
 Una vez agregados todos los clientes, se devuelve la lista. El método `GetCustomers` se especifica en el reemplazo de <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> de la actividad. Puesto que el método tiene un valor devuelto, se crea `Func<string, List<Customer>>` para especificar el método.
 
@@ -154,4 +154,4 @@ xmlns="http://www.w3.org/2005/Atom">
 ...
 ```
 
-Este ejemplo proporciona un método que los autores de aplicación de flujo de trabajo pueden usar para consumir los datos sin formato devueltos de un servicio de OData. Para obtener más información sobre el acceso a WCF Data Services mediante URI, consulte [acceso a recursos de servicio de datos (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193397) y [OData: convenciones URI](http://go.microsoft.com/fwlink/?LinkId=185564).
+Este ejemplo proporciona un método que los autores de aplicación de flujo de trabajo pueden usar para consumir los datos sin formato devueltos de un servicio de OData. Para obtener más información sobre el acceso a WCF Data Services mediante URI, consulte [acceso a recursos de servicio de datos (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkId=193397) y [OData: convenciones URI](https://go.microsoft.com/fwlink/?LinkId=185564).

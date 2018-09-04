@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: 65ed1fedebc784d8ac257735f0e7c705623350d7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a39a7dd3ebdbb7483f0b69169c8e00382f581788
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43424050"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562596"
 ---
 # <a name="inside-a-c-program"></a>Dentro de un programa de C#
 En esta sección, se describe la estructura general de un programa de C# y se incluye el ejemplo estándar "Hola mundo".  
@@ -34,5 +34,6 @@ En esta sección, se describe la estructura general de un programa de C# y se in
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
