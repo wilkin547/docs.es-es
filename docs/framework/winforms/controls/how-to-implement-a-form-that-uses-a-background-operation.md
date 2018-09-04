@@ -17,11 +17,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
 ms.openlocfilehash: 8f348097223d2db4c54d9ecbba89eb8d179b6680
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404541"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523126"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Cómo: Implementar un formulario que utiliza una operación en segundo plano
 El programa de ejemplo siguiente crea un formulario que calcula los números de Fibonacci. El cálculo se ejecuta en un subproceso independiente del subproceso de interfaz de usuario, por lo que la interfaz de usuario sigue ejecutándose sin retrasos mientras se realiza el cálculo.  

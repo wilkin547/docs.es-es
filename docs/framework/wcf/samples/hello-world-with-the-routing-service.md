@@ -3,11 +3,11 @@ title: "\"Hola mundo\" con el Servicio de enrutamiento"
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
 ms.openlocfilehash: 490d91da22b11c269c4d3c11d376087919a608e0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401664"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519204"
 ---
 # <a name="hello-world-with-the-routing-service"></a>"Hola mundo" con el Servicio de enrutamiento
 Este ejemplo muestra el servicio de enrutamiento de Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente WCF que facilita la tarea debe incluir un enrutador basado en contenido en la aplicación. Este ejemplo adapta el ejemplo de calculadora de WCF estándar para comunicarse con el servicio de enrutamiento. En este ejemplo, el cliente de la calculadora se configura para enviar los mensajes a un punto de conexión que expone el enrutador. El servicio de enrutamiento se configura para aceptar todos los mensajes que se le envíen y reenviarlos a un extremo que corresponde al servicio de calculadora. Por tanto, los mensajes enviados desde el cliente son recibidos por el enrutador y se vuelven a enrutar al servicio de calculadora real. Los mensajes del servicio de calculadora se devuelven al enrutador, que a su vez los devuelve al cliente de la calculadora.  

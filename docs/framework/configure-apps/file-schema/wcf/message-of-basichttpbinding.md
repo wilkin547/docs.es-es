@@ -2,12 +2,12 @@
 title: Elemento &lt;message&gt; de &lt;basicHttpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: 7f543a91f1d11575df239267a6a8a0b244d99cb3
-ms.sourcegitcommit: 378f0e075030239d8259a92a6a0193dd6faf54b4
+ms.openlocfilehash: 9b46f69e88f441823b32b5f25330ca9a1cb62dcb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "33366052"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522901"
 ---
 # <a name="ltmessagegt-of-ltbasichttpbindinggt"></a>Elemento &lt;message&gt; de &lt;basicHttpBinding&gt;
 Define la configuración de seguridad de nivel de mensaje de la [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -133,5 +133,5 @@ Define la configuración de seguridad de nivel de mensaje de la [ \<basicHttpBin
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)

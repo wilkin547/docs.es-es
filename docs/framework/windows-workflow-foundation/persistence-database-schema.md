@@ -2,12 +2,12 @@
 title: Esquema de base de datos de persistencia
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 4dd49d08e522c842d0f21f176b4d77ac0adb4b47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c8d74413be64cdf88f7f1821c3678b2bcd2e2b1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519454"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515263"
 ---
 # <a name="persistence-database-schema"></a>Esquema de base de datos de persistencia
 En este tema se describen las vistas públicas admitidas por el almacén de instancias de flujo de trabajo de SQL.  
@@ -27,10 +27,10 @@ En este tema se describen las vistas públicas admitidas por el almacén de inst
 |ActiveBookmarks|Nvarchar(max)|Si la instancia de flujo de trabajo está inactiva, esta propiedad indica en qué marcadores está bloqueada la instancia. Si la instancia no está inactiva, esta columna es NULL.|  
 |CurrentMachine|Nvarchar(128)|Indica el nombre del equipo que tiene la instancia de flujo de trabajo actualmente cargada en memoria.|  
 |LastMachine|Nvarchar(450)|Indica el último equipo que cargó la instancia de flujo de trabajo.|  
-|ExecutionStatus|Nvarchar(450)|Indica el estado de ejecución actual del flujo de trabajo. Los Estados posibles incluyen **Executing**, **inactivo**, **cerrado**.|  
+|ExecutionStatus|Nvarchar(450)|Indica el estado de ejecución actual del flujo de trabajo. Los Estados posibles son **Executing**, **Idle**, **cerrado**.|  
 |IsInitialized|Bit|Indica si se ha inicializado la instancia de flujo de trabajo. Una instancia de flujo de trabajo inicializada es una instancia de flujo de trabajo que se ha guardado al menos una vez.|  
 |IsSuspended|Bit|Indica si se ha suspendido la instancia de flujo de trabajo.|  
-|IsCompleted|Bit|Indica si la instancia de flujo de trabajo ha completado la ejecución. **Nota:** Iif el **InstanceCompletionAction** propiedad está establecida en **DeleteAll**, se quitan las instancias de la vista al finalizar.|  
+|IsCompleted|Bit|Indica si la instancia de flujo de trabajo ha completado la ejecución. **Nota:** Iif el **InstanceCompletionAction** propiedad está establecida en **DeleteAll**, se quitan las instancias de la vista de la finalización.|  
 |EncodingOption|TinyInt|Describe la codificación utilizada para serializar las propiedades de datos.<br /><br /> -0: sin codificación<br />-1 – GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary(max)|Contiene propiedades de datos de instancia serializada que se proporcionarán al motor en tiempo de ejecución de flujo de trabajo cuando se cargue la instancia.<br /><br /> Cada propiedad primitiva es un tipo CLR nativo, lo que significa que no se necesita ningún ensamblado especial para deserializar el objeto binario.|  
 |WriteOnlyPrimitiveDataProperties|Varbinary(max)|Contiene propiedades de datos de instancia serializada que no se proporcionarán al motor en tiempo de ejecución de flujo de trabajo cuando se cargue la instancia.<br /><br /> Cada propiedad primitiva es un tipo CLR nativo, lo que significa que no se necesita ningún ensamblado especial para deserializar el objeto binario.|  
@@ -47,14 +47,14 @@ En este tema se describen las vistas públicas admitidas por el almacén de inst
 >  El **instancias** vista también contiene un desencadenador Delete. Los usuarios con los permisos adecuados pueden ejecutar instrucciones de eliminación en esta vista que eliminarán de forma obligatoria las instancias de flujo de trabajo de la base de datos. Recomendamos eliminar directamente en la vista únicamente como último recurso, ya que la eliminación de una instancia bajo el motor el tiempo de ejecución de flujo de trabajo puede producir consecuencias imprevistas. En su lugar, utilice el extremo de administración de instancias de flujo de trabajo para hacer que el motor en tiempo de ejecución de flujo de trabajo complete la instancia. Si desea eliminar un gran número de Instancias de la vista, asegúrese de que no existe ningún motor en tiempo de ejecución activo que pueda estar trabajando en estas instancias.  
   
 ## <a name="servicedeployments-view"></a>Vista ServiceDeployments  
- El **ServiceDeployments** vista contiene información de implementación para todas las aplicaciones Web (IIS / WAS) los servicios de flujo de trabajo hospedados. Cada instancia de flujo de trabajo que está hospedado en Web contendrá un **ServiceDeploymentId** que hace referencia a una fila en esta vista.  
+ El **ServiceDeployments** vista contiene información de implementación para todas las aplicaciones Web (IIS / WAS) servicios de flujo de trabajo hospedados. Cada instancia de flujo de trabajo que está hospedado en Web contendrá un **ServiceDeploymentId** que hace referencia a una fila en esta vista.  
   
 |Nombre de columna|Tipo de columna|Descripción|  
 |-----------------|-----------------|-----------------|  
 |ServiceDeploymentId|BigInt|La clave principal para esta vista.|  
 |SiteName|Nvarchar(max)|Representa el nombre del sitio que contiene el servicio de flujo de trabajo (por ejemplo, **sitio Web predeterminado**).|  
 |RelativeServicePath|Nvarchar(max)|Representa la ruta de acceso virtual relativa al sitio que señala al servicio de flujo de trabajo. (p. ej.  **/app1/PurchaseOrderService.svc**).|  
-|RelativeApplicationPath|Nvarchar(max)|Representa la ruta de acceso virtual relativa al sitio que señala a una aplicación que contiene el servicio de flujo de trabajo. (por ejemplo, **/App1**).|  
+|RelativeApplicationPath|Nvarchar(max)|Representa la ruta de acceso virtual relativa al sitio que señala a una aplicación que contiene el servicio de flujo de trabajo. (por ejemplo, **/app1**).|  
 |ServiceName|Nvarchar(max)|Representa el nombre del servicio de flujo de trabajo. (por ejemplo, **PurchaseOrderService**).|  
 |ServiceNamespace|Nvarchar(max)|Representa el espacio de nombres del servicio de flujo de trabajo. (por ejemplo, **MyCompany**).|  
   
@@ -65,7 +65,7 @@ En este tema se describen las vistas públicas admitidas por el almacén de inst
 2.  Cualquier intento de eliminar una fila de ServiceDeployment que hace referencia a las entradas de la **instancias** vista dará como resultado una operación inefectiva. Solo puede eliminar las filas de ServiceDeployment con cero referencias.  
   
 ## <a name="instancepromotedproperties-view"></a>Vista InstancePromotedProperties  
- El **InstancePromotedProperties** vista contiene información para todas las propiedades promocionadas especificados por el usuario. Una propiedad promovida funciona como una propiedad de primera clase, que un usuario puede utilizar en consultas para recuperar instancias.  Por ejemplo, un usuario podría agregar una promoción de PurchaseOrder que siempre almacena el costo de un pedido en el **Value1** columna. Esto permitiría a un usuario consultar todos los pedidos cuyo costo supera un determinado valor.  
+ El **InstancePromotedProperties** vista contiene información para todas las propiedades promocionadas especificadas por el usuario. Una propiedad promovida funciona como una propiedad de primera clase, que un usuario puede utilizar en consultas para recuperar instancias.  Por ejemplo, un usuario podría agregar una promoción de PurchaseOrder que siempre almacena el costo de un pedido en el **Value1** columna. Esto permitiría a un usuario consultar todos los pedidos cuyo costo supera un determinado valor.  
   
 |Tipo de columna|Tipo de columna|Descripción|  
 |-|-|-|  
@@ -78,4 +78,4 @@ En este tema se describen las vistas públicas admitidas por el almacén de inst
  La vista InstancePromotedProperties está enlazada a un esquema, lo que significa que los usuarios pueden agregar índices en una o más columnas para optimizar las consultas con respecto a esta vista.  
   
 > [!NOTE]
->  Una vista indizada requiere más almacenamiento y agrega sobrecarga de procesamiento adicional. Consulte [mejora del rendimiento con vistas indizadas de SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=179529) para obtener más información.
+>  Una vista indizada requiere más almacenamiento y agrega sobrecarga de procesamiento adicional. Consulte [mejora del rendimiento con vistas indizadas de SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=179529) para obtener más información.

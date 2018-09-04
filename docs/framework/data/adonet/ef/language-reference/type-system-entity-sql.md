@@ -2,15 +2,15 @@
 title: Sistema de tipos (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: 3470ad17ae16e57edbbef13f30186b7e58fd0d2b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 270b0981214e674d220025ad52c7c94ee3a66224
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763857"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534768"
 ---
 # <a name="type-system-entity-sql"></a>Sistema de tipos (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite un número de tipos:  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite varios tipos:  
   
 -   Tipos primitivos (simples), como `Int32` y `String.`.  
   
@@ -18,13 +18,13 @@ ms.locfileid: "32763857"
   
 -   Tipos anónimos que no se definen explícitamente en el esquema: <xref:System.Data.Metadata.Edm.CollectionType>, <xref:System.Data.Metadata.Edm.RowType> y <xref:System.Data.Metadata.Edm.RefType>.  
   
- En esta sección se explican los tipos anónimos que no se definen explícitamente en el esquema pero que se admiten a través de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Para obtener información sobre los tipos nominales y primitivos, vea [tipos de modelo Conceptual (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4).  
+ En esta sección se explican los tipos anónimos que no se definen explícitamente en el esquema pero que se admiten a través de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Para obtener información sobre los tipos nominales y primitivos, vea [tipos de modelos conceptuales (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4).  
   
 ## <a name="rows"></a>Filas  
  La estructura de una fila depende de la secuencia de miembros con nombre y con tipo de que consta la misma. Un tipo de fila no tiene ninguna identidad y no se puede heredar. Las instancias del mismo tipo de fila son equivalentes si los miembros son respectivamente equivalentes. Las filas no tienen ningún otro comportamiento más allá de su equivalencia estructural y no tienen ningún equivalente en Common Language Runtime. Las consultas pueden producir estructuras que contienen filas o colecciones de filas. El enlace de API entre las consultas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] y el lenguaje del host define el modo en que las filas se materializan en la consulta que generó el resultado. Para obtener información sobre cómo construir una instancia de fila, vea [construir tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
   
 ## <a name="collections"></a>Colecciones  
- Los tipos de colección representan cero o más instancias de otros objetos. Para obtener información sobre cómo construir la colección, consulte [construir tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+ Los tipos de colección representan cero o más instancias de otros objetos. Para obtener información sobre cómo construir una colección, vea [construir tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
   
 ## <a name="references"></a>Referencias  
  Una referencia es un puntero lógico a una entidad concreta en un conjunto de entidades específico.  

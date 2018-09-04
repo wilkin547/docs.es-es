@@ -3,11 +3,11 @@ title: Colas con problemas de entrega
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 4f30e9486c8798e3610e13e6abe1c2612c70b69f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417138"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536058"
 ---
 # <a name="dead-letter-queues"></a>Colas con problemas de entrega
 Este ejemplo muestra cómo administrar y procesar mensajes que han producido errores en la entrega. Se basa en el [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo. El ejemplo usa el enlace `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
 ms.openlocfilehash: 0f795ad00823e7b1c37221f7417b09d3982c4c18
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465608"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538153"
 ---
 # <a name="path-animations-overview"></a>Información general sobre animaciones en trazados
 <a name="introduction"></a> En este tema se presentan las animaciones de trazado, que permiten usar un trazado geométrico para generar valores de salida. Las animaciones de trazado son útiles para mover y girar objetos a lo largo de trazados complejos.  

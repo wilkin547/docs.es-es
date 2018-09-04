@@ -3,11 +3,11 @@ title: Traza de datos en ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
 ms.openlocfilehash: 037db6f4e5695e00401c81e1490953efe2fc9b99
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421104"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522425"
 ---
 # <a name="data-tracing-in-adonet"></a>Traza de datos en ADO.NET
 ADO.NET ofrece funcionalidad de seguimiento de datos integrado que es compatible con los proveedores de datos .NET para SQL Server, Oracle, OLE DB y ODBC, así como ADO.NET <xref:System.Data.DataSet>y los protocolos de red de SQL Server.  

@@ -2,12 +2,12 @@
 title: Documentos XML de ejemplo (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: 1110a4b89158e0230401c449aa95d74be72eccc7
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f1860eed059de4b6922976da8d3b9190cf96bbed
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244538"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533273"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Documentos XML de ejemplo (LINQ to XML)
 Los archivos del siguiente ejemplo se usan en los ejemplos de código y en los fragmentos de código de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -26,7 +26,7 @@ Los archivos del siguiente ejemplo se usan en los ejemplos de código y en los f
 |[Archivo XML de ejemplo: Configuración de prueba (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|Un documento XML que contiene algunos datos de configuración de seudoprueba.|  
 |[Archivo XML de ejemplo: Configuración de prueba en un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)|Un documento XML de un espacio de nombres que contiene algunos datos de configuración de seudoprueba.|  
 |[Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)|Un documento XML que contiene clientes y pedidos.|  
-|[Archivo XSD de ejemplo: Clientes y pedidos](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|Definición de esquema XML que invalida el [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).|  
+|[Archivo XSD de ejemplo: Clientes y pedidos](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|Definición de esquema XML que invalida el [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](https://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).|  
 |[Archivo XML de ejemplo: Clientes y pedidos en un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|Un documento XML de un espacio de nombres que contiene clientes y pedidos.|  
 |[Archivo XML de ejemplo: Datos numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|Un documento XML que contiene datos adecuados para realizar sumas y agrupaciones.|  
 |[Archivo XML de ejemplo: Datos numéricos de un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|Un documento XML de un espacio de nombres que contiene datos adecuados para realizar sumas y agrupaciones.|  

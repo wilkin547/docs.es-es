@@ -3,11 +3,11 @@ title: Procedimientos almacenados de CLR
 ms.date: 03/30/2017
 ms.assetid: fd7eea9b-218a-4988-8c9a-8abcc6031c66
 ms.openlocfilehash: 1f8aa6fb9243706d07caa4527af0c4c880aa70a6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43424339"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503116"
 ---
 # <a name="clr-stored-procedures"></a>Procedimientos almacenados de CLR
 Los procedimientos almacenados son rutinas que no se pueden utilizar en expresiones escalares. Pueden devolver resultados en tabla y mensajes al cliente, invocar instrucciones de lenguaje de definición de datos (DDL) y lenguaje de manipulación de datos (DML) y devolver parámetros de salida.  

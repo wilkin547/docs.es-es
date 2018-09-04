@@ -3,11 +3,11 @@ title: Tratamiento de errores y puentes
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
 ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389073"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514547"
 ---
 # <a name="bridging-and-error-handling"></a>Tratamiento de errores y puentes
 Este ejemplo muestra cómo se usa el servicio de Windows Communication Foundation (WCF) de enrutamiento para puentear la comunicación entre un cliente y un servicio que utilizan enlaces diferentes. Este ejemplo también muestra cómo utilizar un servicio de seguridad de reserva para escenarios de conmutación por error. El servicio de enrutamiento es un componente WCF que facilita la tarea debe incluir un enrutador basado en contenido en la aplicación. Este ejemplo adapta el ejemplo de calculadora de WCF estándar para comunicarse con el servicio de enrutamiento.  

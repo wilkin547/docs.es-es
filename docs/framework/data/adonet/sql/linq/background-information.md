@@ -2,23 +2,23 @@
 title: Información general
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: 66d2047a064663cfe93823d92d30f682d557c493
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd2531dd141cfc6f0b67d1f58766327c218610f5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363222"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515637"
 ---
 # <a name="background-information"></a>Información general
 En los temas de esta sección se analizan conceptos y procedimientos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que van más allá del simple uso.  
   
  Siga estos pasos para obtener ejemplos adicionales de aplicaciones y código [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
   
--   Busque Microsoft Docs problemas específicos.  
+-   Busque problemas específicos de Microsoft Docs.  
   
--   Participar en la [foro de LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), dónde debatirá detalladamente temas más complejos con expertos.  
+-   Participar en el [foro de LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), dónde debatirá detalladamente temas más complejos con expertos.  
   
--   Estudiar las notas del producto que detallan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnología, junto con ejemplos de código de Visual Basic y C#. Para obtener más información, consulte [LINQ to SQL: consultas de .NET para datos relacionales](http://go.microsoft.com/fwlink/?LinkId=93205).  
+-   Estudiar las notas del producto que detallan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnología, junto con ejemplos de código de Visual Basic y C#. Para obtener más información, consulte [LINQ to SQL: Language-Integrated Query para datos relacionales](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [ADO.NET y LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
@@ -31,7 +31,7 @@ En los temas de esta sección se analizan conceptos y procedimientos de [!INCLUD
  Describe cómo agregar código de validación y otras personalizaciones.  
   
  [Enlace de datos](../../../../../../docs/framework/data/adonet/sql/linq/data-binding.md)  
- Describe cómo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utiliza <xref:System.ComponentModel.IListSource> para admitir el enlace de datos.  
+ Describe cómo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa <xref:System.ComponentModel.IListSource> para admitir el enlace de datos.  
   
  [Compatibilidad de herencia](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)  
  Describe el papel que juega la herencia en el modelo de objetos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y cómo utilizar los operadores relacionados en las consultas.  

@@ -3,11 +3,11 @@ title: Bookmarks2
 ms.date: 03/30/2017
 ms.assetid: 035fadb2-49fa-4ac7-b398-daf138f66e87
 ms.openlocfilehash: 6bcc4e27566b9c8553e0792558c281a6b1f1caf4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387394"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528995"
 ---
 # <a name="bookmarks"></a>Marcadores
 En este ejemplo se muestra cómo escribir una actividad personalizada que crea un marcador para recibir entrada externa. El ejemplo también incluye una aplicación de consola básica que usa la actividad personalizada en un flujo de trabajo y muestra cómo detectar y reanudar los marcadores asociados a una instancia de flujo de trabajo en ejecución. Para obtener más información acerca de los marcadores, vea [marcadores](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).  

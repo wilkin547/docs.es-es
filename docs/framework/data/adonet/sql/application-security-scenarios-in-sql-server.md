@@ -2,12 +2,12 @@
 title: Escenarios de seguridad de aplicaciones en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: 1239715678bda648bc962f9b23667b954b540e3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf4f4adfd5f49bd210026e40bd5fa4e67da10d75
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363330"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535994"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Escenarios de seguridad de aplicaciones en SQL Server
 No hay una única forma correcta de crear una aplicación cliente segura de SQL Server. Cada aplicación tiene unas necesidades, un entorno de implementación y un grupo de usuarios específicos. Una aplicación que es razonablemente segura en el momento en que se implementa puede volverse menos segura con el tiempo. Es imposible predecir con ninguna seguridad qué amenazas pueden surgir en el futuro.  
@@ -60,4 +60,4 @@ No hay una única forma correcta de crear una aplicación cliente segura de SQL 
  [Seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [Información general sobre la seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

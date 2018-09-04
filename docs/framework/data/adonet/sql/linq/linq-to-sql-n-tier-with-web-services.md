@@ -3,11 +3,11 @@ title: N niveles de LINQ to SQL con servicios Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
 ms.openlocfilehash: bf13c34a058d33d240e780cb1ce0e665bd1322d2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466020"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532805"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N niveles de LINQ to SQL con servicios Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] está diseñado especialmente para su uso en el nivel intermedio en una capa de acceso de acoplamiento flexible de datos (DAL) como un servicio Web. Si el nivel de presentación es una página web ASP.NET, el control de servidor web <xref:System.Web.UI.WebControls.LinqDataSource> se utiliza para controlar la transferencia de datos entre la interfaz de usuario y [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en el de nivel intermedio. Si el nivel de presentación no es una página ASP.NET, entonces el nivel intermedio y el nivel de presentación deben realizar un trabajo adicional para administrar la serialización y deserialización de datos.  

@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: c75b0b1e3a901b9c83f14a783d05c2022335a5f5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43479898"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515738"
 ---
 # <a name="ui-automation-support-for-the-document-control-type"></a>Compatibilidad de UI Automation para el tipo de control Document
 > [!NOTE]

@@ -3,11 +3,11 @@ title: 'Opciones de valores (F #)'
 description: 'Obtenga información sobre el tipo de opción de valor de F #, que es una versión de la estructura del tipo de opción.'
 ms.date: 06/16/2018
 ms.openlocfilehash: 4c255cbbcfd9cb480230de09cd370a401c87343a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398033"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527588"
 ---
 # <a name="value-options"></a>Opciones de valor
 

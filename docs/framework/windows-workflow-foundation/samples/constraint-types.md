@@ -3,11 +3,11 @@ title: Tipos de restricción
 ms.date: 03/30/2017
 ms.assetid: b6b246e6-1130-4698-9625-c5c42abcbfed
 ms.openlocfilehash: 202a2c7b3a3fc400552e42c8606457964af66af2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401537"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506617"
 ---
 # <a name="constraint-types"></a>Tipos de restricción
 Este ejemplo muestra dos formas diferentes de aplicar restricciones a un flujo de trabajo: desde dentro de la actividad (compilación) y desde fuera de ella (directiva). En este escenario, un autor de actividad (de una compañía de software de terceros) desea validar la relación entre dos argumentos. En este caso, el coste debe ser menor o igual que al precio. Esta es una restricción de compilación de validación general.  

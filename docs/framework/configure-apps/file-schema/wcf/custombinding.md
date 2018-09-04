@@ -1,15 +1,15 @@
 ---
-title: '&lt;CustomBinding&gt;'
+title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 5d423a29430284c904bcfe8eb11ec470a62ecf57
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 514d0770bd94e55ef3eb7ce2421d1d031c90c3e9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751795"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527140"
 ---
-# <a name="ltcustombindinggt"></a>&lt;CustomBinding&gt;
+# <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Proporciona el control completo sobre la pila de la mensajería para el usuario.  
   
  \<system.serviceModel>  
@@ -182,7 +182,7 @@ Proporciona el control completo sobre la pila de la mensajería para el usuario.
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |closeTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de cierre para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
-|name|Cadena que contiene el nombre de configuración del enlace. Este valor es una cadena definida por el usuario que actúa como cadena de identificación para el enlace personalizado. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información acerca de la configuración predeterminada y enlaces anónimos y los comportamientos, consulte [configuración simplificada](../../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|name|Cadena que contiene el nombre de configuración del enlace. Este valor es una cadena definida por el usuario que actúa como cadena de identificación para el enlace personalizado. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información acerca de la configuración predeterminada y sin especificar enlaces y comportamientos, consulte [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |receiveTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |sendTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
@@ -260,7 +260,7 @@ Proporciona el control completo sobre la pila de la mensajería para el usuario.
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
--   En la parte inferior hay un elemento de transporte necesario. Puede utilizar su propio transporte o utilizar uno de los elementos proporcionados por Windows Communication Foundation (WCF) de enlace de transporte:  
+-   En la parte inferior hay un elemento de transporte necesario. Puede usar su propio transporte o utilice uno de los elementos proporcionados por Windows Communication Foundation (WCF) de enlace de transporte:  
   
     -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
@@ -290,7 +290,7 @@ Proporciona el control completo sobre la pila de la mensajería para el usuario.
   
  Además, puede definir sus propios elementos de enlace e insertarlos entre cualquiera de las capas definidas anteriores.  
   
- Para obtener información sobre cómo utilizar un enlace personalizado para modificar un enlace proporcionado por el sistema, consulte [Cómo: personalizar un enlace proporcionados](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+ Para obtener información sobre cómo usar un enlace personalizado para modificar un enlace proporcionado por el sistema, consulte [Cómo: personalizar un enlace proporcionados por el sistema](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   
 1.  
   
@@ -306,4 +306,4 @@ Proporciona el control completo sobre la pila de la mensajería para el usuario.
  [Elemento customBinding](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)

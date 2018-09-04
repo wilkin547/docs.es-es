@@ -3,11 +3,11 @@ title: Kit de herramientas de RuleSet externo
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
 ms.openlocfilehash: f418c71b39611e64afea168ed40418dbe981521a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43457218"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538675"
 ---
 # <a name="external-ruleset-toolkit"></a>Kit de herramientas de RuleSet externo
 Normalmente cuando las reglas se utilizan dentro de una aplicación de flujo de trabajo, las reglas forman parte del ensamblado. En algunos escenarios, puede desear mantener separadamente RuleSets del ensamblado para que se puedan actualizar sin recompilar e implementar el ensamblado de flujo de trabajo. Este ejemplo le permite administrar y editar RuleSets en una base de datos y acceder a ellos desde un flujo de trabajo en tiempo de ejecución. Esto habilita las instancias de flujo de trabajo en ejecución para que incorporen automáticamente los cambios de RuleSet.  

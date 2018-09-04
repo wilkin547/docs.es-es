@@ -10,11 +10,11 @@ helpviewer_keywords:
 - matrix animation with offset accumulation [WPF]
 ms.assetid: 1bca90ef-9832-4128-8ed6-62908e7ec146
 ms.openlocfilehash: 1d3b74ede9cde1928138d4d8625e8625354f5748
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43456482"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522761"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>Cómo: Animar un objeto a lo largo de un trazado (animación en matriz con acumulación de desplazamiento)
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> clase para animar un objeto a lo largo de una ruta de acceso y hacer que dicha animación su desplazamiento se acumulan los valores de medida que se repite.  

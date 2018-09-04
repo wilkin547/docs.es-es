@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
 ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416713"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537224"
 ---
 # <a name="polling-in-console-applications"></a>Sondear aplicaciones de consola
 Las operaciones asincrónicas de ADO.NET permiten iniciar en un subproceso operaciones de base de datos que requieren mucho tiempo mientras en otro subproceso se realizan otras tareas. En la mayoría de los casos, al final llegará a un punto en el que la aplicación no debe continuar hasta que se complete la operación de base de datos. En tales casos, resulta útil sondear la operación asincrónica para determinar si se ha completado.  

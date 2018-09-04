@@ -3,11 +3,11 @@ title: Utilización del instrumental de administración de Windows (WMI) para di
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: b7c898f1af91f639939e5480687b5967bf57d246
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406925"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534653"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Utilización del instrumental de administración de Windows (WMI) para diagnósticos
 Windows Communication Foundation (WCF) expone los datos de inspección de un servicio en tiempo de ejecución a través de un proveedor de Instrumental de administración de Windows (WMI) de WCF.  

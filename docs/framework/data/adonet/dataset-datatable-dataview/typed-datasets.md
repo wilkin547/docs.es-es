@@ -3,11 +3,11 @@ title: Objetos DataSet con tipo
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 ms.openlocfilehash: 68721bcdbce6bf6d3279d6018ce6bc48d65c55a3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489752"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536806"
 ---
 # <a name="typed-datasets"></a>Objetos DataSet con tipo
 Además del acceso en tiempo de ejecución a valores mediante variables débilmente tipadas, el <xref:System.Data.DataSet> proporciona acceso a los datos mediante una metáfora fuertemente tipada. Tablas y columnas que forman parte de la **DataSet** se puede acceder mediante nombres descriptivos y variables fuertemente tipadas.  

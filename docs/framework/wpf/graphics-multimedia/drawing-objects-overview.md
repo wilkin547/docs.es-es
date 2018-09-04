@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: 92cf4e7099c7880eb9bde9af765970abac698310
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397949"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525581"
 ---
 # <a name="drawing-objects-overview"></a>Información general sobre objetos Drawing
 Este tema se presentan <xref:System.Windows.Media.Drawing> objetos y se describe cómo se usan para dibujar con eficacia formas, mapas de bits, texto y multimedia. Usar <xref:System.Windows.Media.Drawing> objetos al crear imágenes prediseñadas, pintar con un <xref:System.Windows.Media.DrawingBrush>, o use <xref:System.Windows.Media.Visual> objetos.  

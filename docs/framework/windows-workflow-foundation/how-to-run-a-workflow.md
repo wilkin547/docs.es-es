@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 704527bde2ac6bf555d40db836baf938c0c5cd96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47227bdd23efc9648da25bc879c7946dadee4594
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519524"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527948"
 ---
 # <a name="how-to-run-a-workflow"></a>Cómo: Ejecutar un flujo de trabajo
 Este tema es una continuación del tutorial introductorio de Windows Workflow Foundation y explica cómo crear un host de flujo de trabajo y ejecutar el flujo de trabajo definido en el tema [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) anterior.  
@@ -19,7 +19,7 @@ Este tema es una continuación del tutorial introductorio de Windows Workflow Fo
 >  Cada uno de los temas del tutorial de introducción depende de los temas anteriores. Para completar este tema, primero debe finalizar [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) y [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).  
   
 > [!NOTE]
->  Para descargar una versión completa del tutorial, consulte [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45): tutorial introductorio)](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Para descargar una versión completada del tutorial, consulte [Windows Workflow Foundation (WF45): Tutorial de introducción](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ### <a name="to-create-the-workflow-host-project"></a>Para crear el proyecto de host de flujo de trabajo  
   
@@ -120,7 +120,7 @@ Este tema es una continuación del tutorial introductorio de Windows Workflow Fo
      [!code-csharp[CFX_WF_GettingStarted#9](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#9)]
      [!code-vb[CFX_WF_GettingStarted#9](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#9)]  
   
-     Cada vez el flujo de trabajo se vuelve inactivo a la espera de la siguiente suposición, se llama a este controlador y el `idleAction` <xref:System.Threading.AutoResetEvent> se establece. El código en el siguiente paso usa `idleEvent` y `syncEvent` para determinar si el flujo de trabajo está esperando la siguiente suposición o si se ha completado.  
+     Cada vez que el flujo de trabajo se vuelve inactiva, esperando la siguiente suposición, se llama a este controlador y el `idleAction` <xref:System.Threading.AutoResetEvent> está establecido. El código en el siguiente paso usa `idleEvent` y `syncEvent` para determinar si el flujo de trabajo está esperando la siguiente suposición o si se ha completado.  
   
     > [!NOTE]
     >  En este ejemplo, la aplicación host usa eventos de restablecimiento automático en los controladores <xref:System.Activities.WorkflowApplication.Completed%2A> y <xref:System.Activities.WorkflowApplication.Idle%2A> para sincronizar la aplicación host con el progreso del flujo de trabajo. No es necesario bloquear y esperar a que el flujo de trabajo se vuelva inactivo para reanudar un marcador, aunque en este ejemplo los eventos de sincronización resultan necesarios para que el host sepa si se ha completado el flujo de trabajo o si está esperando más entradas de usuario mediante <xref:System.Activities.Bookmark>. Para obtener más información, consulte [marcadores](../../../docs/framework/windows-workflow-foundation/bookmarks.md).  

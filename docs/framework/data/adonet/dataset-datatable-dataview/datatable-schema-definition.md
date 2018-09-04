@@ -2,29 +2,29 @@
 title: Definición del esquema de DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 81da3937b709d4ef046eb1c470546f168bde4132
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 60e7f6a13bd7fd10398d300690bd73c3abc0d700
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757767"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552158"
 ---
 # <a name="datatable-schema-definition"></a>Definición del esquema de DataTable
 El esquema, o estructura, de una tabla se representa con columnas y restricciones. El esquema de una <xref:System.Data.DataTable> se define mediante objetos <xref:System.Data.DataColumn>, <xref:System.Data.ForeignKeyConstraint> y <xref:System.Data.UniqueConstraint>. Las columnas de una tabla se pueden asignar a columnas de un origen de datos, pueden contener valores calculados de expresiones, aumentar sus valores automáticamente o contener valores de clave principal.  
   
- Las referencias a los nombres de columnas, relaciones y restricciones de una tabla hacen distinción entre mayúsculas y minúsculas. En una tabla puede haber dos o más columnas, relaciones y restricciones con el mismo nombre, pero con distinción entre mayúsculas y minúsculas. Por ejemplo, puede tener **Col1** y **col1**. En este caso, una referencia al nombre de una de las columnas tiene que coincidir exactamente con las mayúsculas y minúsculas del nombre de la columna, de lo contrario se inicia una excepción. Por ejemplo, si la tabla **myTable** contiene las columnas **Col1** y **col1**, debe hacer referencia a **Col1** por su nombre como  **myTable.Columns["Col1"]**, y **col1** como **myTable.Columns["col1"]**. Intentar hacer referencia a cualquiera de las columnas como **myTable.Columns["COL1"]** generaría una excepción.  
+ Las referencias a los nombres de columnas, relaciones y restricciones de una tabla hacen distinción entre mayúsculas y minúsculas. En una tabla puede haber dos o más columnas, relaciones y restricciones con el mismo nombre, pero con distinción entre mayúsculas y minúsculas. Por ejemplo, puede tener **Col1** y **col1**. En este caso, una referencia al nombre de una de las columnas tiene que coincidir exactamente con las mayúsculas y minúsculas del nombre de la columna, de lo contrario se inicia una excepción. Por ejemplo, si la tabla **myTable** contiene las columnas **Col1** y **col1**, podría hacer referencia **Col1** por su nombre como  **myTable.Columns["Col1"]**, y **col1** como **myTable.Columns["col1"]**. Al intentar hacer referencia a cualquiera de las columnas como **myTable.Columns["COL1"]** generaría una excepción.  
   
- La regla de distinción entre mayúsculas y minúsculas no se aplica si sólo hay una columna, relación o restricción con un nombre concreto. Es decir, si no hay ningún otro objeto de columna, relación o restricción en la tabla que coincida con el nombre de ese objeto de columna, relación o restricción concreto, se puede hacer referencia al nombre del objeto utilizando cualquier mayúscula o minúscula y no se generará una excepción. Por ejemplo, si la tabla sólo tiene **Col1**, se puede hacer referencia a él mediante **mi. Columnas ["COL1"]**.  
+ La regla de distinción entre mayúsculas y minúsculas no se aplica si sólo hay una columna, relación o restricción con un nombre concreto. Es decir, si no hay ningún otro objeto de columna, relación o restricción en la tabla que coincida con el nombre de ese objeto de columna, relación o restricción concreto, se puede hacer referencia al nombre del objeto utilizando cualquier mayúscula o minúscula y no se generará una excepción. Por ejemplo, si la tabla tiene solo **Col1**, puede hacer referencia a ella mediante **mi. Columnas ["COL1"]**.  
   
 > [!NOTE]
->  El <xref:System.Data.DataTable.CaseSensitive%2A> propiedad de la **DataTable** no afecta a este comportamiento. El **CaseSensitive** propiedad se aplica a los datos en una tabla y afecta a la ordenación, búsqueda, el filtrado, exigir restricciones, etcétera, pero no a las referencias a las columnas, relaciones y restricciones.  
+>  El <xref:System.Data.DataTable.CaseSensitive%2A> propiedad de la **DataTable** no afecta a este comportamiento. El **CaseSensitive** propiedad se aplica a los datos en una tabla y afecta a ordenar, buscar, filtrar, aplicar las restricciones etc., pero no a las referencias a las columnas, relaciones y restricciones.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Adición de columnas a un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
  Describe cómo definir las columnas de una tabla con **DataColumn** objetos.  
   
  [Creación de columnas de expresión](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
- Explica cómo el **expresión** propiedad de una columna puede utilizarse para calcular valores basándose en los valores de otras columnas de la fila.  
+ Explica cómo el **expresión** propiedad de una columna puede usarse para calcular valores basados en los valores de otras columnas de la fila.  
   
  [Creación de columnas de incremento automático](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
  Describe cómo se puede establecer una columna para que incremente automáticamente los valores numéricos y, así, se garantice un valor de columna exclusivo por fila.  
@@ -37,4 +37,4 @@ El esquema, o estructura, de una tabla se representa con columnas y restriccione
   
 ## <a name="see-also"></a>Vea también  
  [Objetos DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

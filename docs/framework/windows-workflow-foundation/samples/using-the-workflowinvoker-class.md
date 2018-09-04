@@ -2,12 +2,12 @@
 title: Usar la clase WorkflowInvoker
 ms.date: 03/30/2017
 ms.assetid: 0a966164-3990-4e78-8aa2-c6797ebbee94
-ms.openlocfilehash: 70fc94b1f190236cb2cb40c407e0172f0213fb7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6525dbbd30aae95be4c4ee1de267736e557a541
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515819"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552210"
 ---
 # <a name="using-the-workflowinvoker-class"></a>Usar la clase WorkflowInvoker
 En este ejemplo se muestra cómo utilizar la clase <xref:System.Activities.WorkflowInvoker> para invocar una actividad como si fuera un método.  
@@ -15,7 +15,7 @@ En este ejemplo se muestra cómo utilizar la clase <xref:System.Activities.Workf
 ## <a name="sample-details"></a>Detalles del ejemplo  
  Utilizar la clase <xref:System.Activities.WorkflowInvoker> es la manera más simple de ejecutar una actividad. Está diseñada para ejecutar una actividad directamente como si fuese una llamada a un método. Es una API ligera, con alto rendimiento y sencilla de usar para utilizar en escenarios donde la ejecución de una actividad no requiere la infraestructura de control que proporcionan otras variaciones de hospedaje.  
   
- El ejemplo usa una actividad personalizada que deriva de <xref:System.Activities.CodeActivity%601>< Int32\> denominado `Add` que suma dos <xref:System.Activities.InArgument%601>, `X` y `Y`y devuelve un `Result` <xref:System.Activities.OutArgument%601>. (<xref:System.Activities.CodeActivity%601>\<T > deriva <xref:System.Activities.Activity%601>< T\>, que tiene un <xref:System.Activities.OutArgument%601> \<T > denominado `Result`.) A `Dictionary` \<cadena, objeto > se usa para pasar argumentos a una actividad que se invoca mediante <xref:System.Activities.WorkflowInvoker>. La clave del diccionario corresponde al nombre de un argumento de la actividad invocada. El valor asociado a una clave determinada se enlaza al argumento identificado por la clave.  
+ El ejemplo usa una actividad personalizada que deriva de <xref:System.Activities.CodeActivity%601>< Int32\> denominado `Add` que suma dos <xref:System.Activities.InArgument%601>, `X` y `Y`y devuelve un `Result` <xref:System.Activities.OutArgument%601>. (<xref:System.Activities.CodeActivity%601>\<T > deriva <xref:System.Activities.Activity%601>< T\>, que tiene un <xref:System.Activities.OutArgument%601> \<T > denominado `Result`.) Un `Dictionary` \<cadena, objeto > se usa para pasar argumentos a una actividad que se invoca mediante <xref:System.Activities.WorkflowInvoker>. La clave del diccionario corresponde al nombre de un argumento de la actividad invocada. El valor asociado a una clave determinada se enlaza al argumento identificado por la clave.  
   
  En el ejemplo se llama a <xref:System.Activities.WorkflowInvoker.Invoke%2A> y se pasa un diccionario que contiene valores para `X` e `Y`. La clase <xref:System.Activities.WorkflowInvoker> enlaza estos valores a los argumentos de la actividad `Add`, ejecuta la actividad y devuelve el resultado.  
   
@@ -32,6 +32,6 @@ En este ejemplo se muestra cómo utilizar la clase <xref:System.Activities.Workf
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\WorkflowInvoker`

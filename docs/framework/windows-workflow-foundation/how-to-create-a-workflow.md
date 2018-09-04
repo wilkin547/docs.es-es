@@ -3,11 +3,11 @@ title: 'Cómo: Crear flujos de trabajo'
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
 ms.openlocfilehash: adaa322d4129f56abcad4fd848204ee373e907bd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462303"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502489"
 ---
 # <a name="how-to-create-a-workflow"></a>Cómo: Crear flujos de trabajo
 Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En los temas de esta sección recorren la creación de un flujo de trabajo que usa tanto las actividades integradas, como el <xref:System.Activities.Statements.Flowchart> actividad y las actividades personalizadas del anterior [Cómo: crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tema. El flujo de trabajo modela un juego de adivinanzas de números. Solo se necesita uno de los temas de esta sección para completar el tutorial; debe elegir el estilo que le interese y seguir ese paso. Sin embargo, puede completar todos los temas si lo desea.  

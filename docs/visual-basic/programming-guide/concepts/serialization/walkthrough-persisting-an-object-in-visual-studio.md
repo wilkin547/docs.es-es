@@ -3,11 +3,11 @@ title: Conservar un objeto en Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: 25951327028b9b8ced8506b3ba6395e8c9e6abed
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483689"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506988"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Tutorial: Conservar un objeto en Visual Studio (Visual Basic)
 Aunque puede establecer las propiedades de un objeto en los valores predeterminados en el tiempo de diseño, cualquier valor que se establezca en tiempo de ejecución se pierde cuando se destruye el objeto. Puede usar la serialización para conservar los datos de un objeto entre instancias, lo que le permite almacenar valores y recuperarlos la próxima vez que se cree una instancia del objeto.  

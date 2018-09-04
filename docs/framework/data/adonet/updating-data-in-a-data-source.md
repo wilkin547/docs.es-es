@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
 ms.openlocfilehash: d7b57a9572a285dfdc13afb0a520de67e231a1c0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463915"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540521"
 ---
 # <a name="updating-data-in-a-data-source"></a>Actualizar datos de un origen de datos
 Las instrucciones SQL que modifican datos (por ejemplo INSERT, UPDATE o DELETE) no devuelven ninguna fila. De la misma forma, muchos procedimientos almacenados realizan alguna acción pero no devuelven filas. Para ejecutar comandos que no devuelven filas, crear un **comando** objeto con el comando SQL adecuado y un **conexión**, las que se requiere incluidas **parámetros**. Ejecute el comando con el **ExecuteNonQuery** método de la **comando** objeto.  

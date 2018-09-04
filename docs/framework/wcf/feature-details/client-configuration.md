@@ -3,11 +3,11 @@ title: Configuración del cliente
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
 ms.openlocfilehash: eef3d4743c26a06bd114618522aff9f68e46628c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423760"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527721"
 ---
 # <a name="client-configuration"></a>Configuración del cliente
 Puede usar la configuración de cliente de Windows Communication Foundation (WCF) para especificar la dirección, enlace, comportamiento y contrato, las propiedades "ABC" del punto de conexión de cliente, los clientes que se usan para conectarse a los puntos de conexión de servicio. El [ \<cliente >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento tiene un [ \<punto de conexión >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento cuyos atributos se usan para configurar los ABC del extremo. Estos atributos se discuten en la sección “Configuración de puntos de conexión” de este tema.  

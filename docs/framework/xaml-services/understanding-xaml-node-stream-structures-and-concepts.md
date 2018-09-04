@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423249"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519452"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Introducción a las estructuras y conceptos de secuencias de nodo XAML
 Los lectores y escritores de XAML, tal como se implementan en los servicios XAML de .NET Framework, se basan en el concepto de diseño de un flujo de nodo XAML. El flujo de nodo XAML es una conceptualización de un conjunto de nodos XAML. En esta conceptualización, un procesador XAML recorre la estructura de las relaciones de nodo en el XAML de cada vez. En todo momento, solo existe un registro o posición actuales en un flujo de nodo XAML abierto, y muchos aspectos de la API informan únicamente sobre la información disponible en esa posición. El nodo actual en un flujo de nodo XAML se puede describir como un objeto, un miembro o un valor. Al tratar XAML como un flujo de nodo XAML, los lectores XAML pueden comunicarse con escritores XAML y habilitar un programa para ver, interactuar o modificar el contenido de un flujo de nodo XAML durante una operación de ruta de acceso de carga o de ruta de acceso de guardado que implica XAML. El diseño de la API del lector y el escritor XAML y el concepto del flujo de nodo XAML son similares a los anteriores diseños y conceptos del lector y el escritor relacionados, como [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] y las clases <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter> . En este tema se describen los conceptos de flujo de nodo XAML y se describe cómo se puede escribir rutinas que interactúan con las representaciones XAML en el nivel de nodo XAML.  

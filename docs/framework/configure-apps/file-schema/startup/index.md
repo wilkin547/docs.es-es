@@ -10,11 +10,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 68f37e3efca784b94be90d5779c9bc402f144448
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465478"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530339"
 ---
 # <a name="startup-settings-schema"></a>Esquema de la configuración de inicio
 La configuración de inicio especifica la versión de Common Language Runtime que debe ejecutar la aplicación.  

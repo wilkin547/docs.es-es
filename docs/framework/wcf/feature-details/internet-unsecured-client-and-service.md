@@ -8,11 +8,11 @@ ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: b2c71af169018f272a6ca538bba9191f9ddbc0dd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418134"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538293"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Cliente y servicio de Internet no protegidos
 La siguiente ilustración muestra un ejemplo de un cliente de Windows Communication Foundation (WCF) público, no seguro y servicio.  

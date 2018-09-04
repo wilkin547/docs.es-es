@@ -3,11 +3,11 @@ title: Reanudar marcador WorkflowHostingEndpoint
 ms.date: 03/30/2017
 ms.assetid: a708064f-50b0-4751-b44e-d5410d08d451
 ms.openlocfilehash: 8b435a50801e03ec6ed00bcfef3c7e9198a7e7e5
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332166"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518995"
 ---
 # <a name="workflowhostingendpoint-resume-bookmark"></a>Reanudar marcador WorkflowHostingEndpoint
 En este ejemplo se muestra cómo se puede utilizar <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> con <xref:System.ServiceModel.Activities.WorkflowServiceHost> para crear instancias de flujo de trabajo.  

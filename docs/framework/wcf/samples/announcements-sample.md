@@ -3,11 +3,11 @@ title: Ejemplo de anuncios
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
 ms.openlocfilehash: a82056844c9ec8f77bce4b0adec481a025894d1f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425407"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534264"
 ---
 # <a name="announcements-sample"></a>Ejemplo de anuncios
 En este ejemplo se muestra cómo utilizar la funcionalidad de anuncio de la característica de detección. Los anuncios permiten a los servicios enviar mensajes de anuncio que contienen metadatos del servicio. De forma predeterminada, se envía un anuncio de saludo cuando el servicio se inicia y otro de despedida al cerrarse. Estos anuncios pueden ser de multidifusión o se pueden enviar de punto a punto. Este ejemplo está compuesto de dos proyectos: servicio y cliente.  

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
 ms.openlocfilehash: eb218a9b72208b13700ebd18dbf588066839203d
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930157"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537999"
 ---
 # <a name="short-data-type-visual-basic"></a>Tipo de datos cortos (Visual Basic)
 Contiene enteros de 16 bits (2 bytes) que el intervalo entre -32.768 y 32.767.  

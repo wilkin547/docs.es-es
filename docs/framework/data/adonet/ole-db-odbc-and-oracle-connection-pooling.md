@@ -2,12 +2,12 @@
 title: Agrupación de conexiones de OLE DB, ODBC y Oracle
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3ce65036605b7693955c3a6064fca80263d3538f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803129"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527381"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Agrupación de conexiones de OLE DB, ODBC y Oracle
 La agrupación de conexiones puede mejorar de forma considerable el rendimiento y la escalabilidad de la aplicación. En esta sección se describe la agrupación de conexiones en los proveedores de datos .NET Framework para OLE DB, ODBC y Oracle.  
@@ -21,12 +21,12 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  Se recomienda cerrar siempre o eliminar una conexión cuando termine de utilizarla, para que la conexión pueda regresar al grupo. Es posible que las conexiones que no se cierran explícitamente no puedan regresar al grupo. Por ejemplo, una conexión que se ha salido del ámbito pero que no se ha cerrado explícitamente solo se devolverá al grupo de conexión si se ha alcanzado el tamaño máximo del grupo y la conexión aún es válida.  
   
- Para obtener más información acerca de la sesión de OLE DB o agrupación de recursos, así como cómo deshabilitar la agrupación invalidando los valores predeterminados del servicio de proveedor de OLE DB, vea el [Guía del programador de OLE DB](http://go.microsoft.com/fwlink/?linkid=45232).  
+ Para obtener más información acerca de la sesión de OLE DB o agrupación de recursos, así como cómo deshabilitar la agrupación invalidando los valores predeterminados de servicio de proveedor OLE DB, consulte el [Guía del programador de OLE DB](https://go.microsoft.com/fwlink/?linkid=45232).  
   
 ## <a name="connection-pooling-for-odbc"></a>Agrupación de conexiones para ODBC  
  La agrupación de conexiones para el proveedor de datos .NET Framework para ODBC se administra a través del Administrador de controladores ODBC que se utiliza en la conexión, y que no está influido por dicho proveedor.  
   
- Para habilitar o deshabilitar la agrupación de conexiones, abra **Administrador de orígenes de datos ODBC** en la carpeta Herramientas administrativas del Panel de Control. El **agrupación de conexiones** ficha permite especificar parámetros para cada controlador ODBC instalado de agrupación de conexiones. Tenga en cuenta que los cambios en la agrupación de conexiones de un controlador ODBC específico afectarán a todas las aplicaciones que utilicen dicho controlador.  
+ Para habilitar o deshabilitar la agrupación de conexiones, abra **Administrador de orígenes de datos ODBC** en la carpeta Herramientas administrativas del Panel de Control. El **agrupación de conexiones** pestaña le permite especificar los parámetros para cada controlador ODBC instalado de agrupación de conexiones. Tenga en cuenta que los cambios en la agrupación de conexiones de un controlador ODBC específico afectarán a todas las aplicaciones que utilicen dicho controlador.  
   
 ## <a name="connection-pooling-for-oracleclient"></a>Agrupación de conexiones para OracleClient  
  El proveedor de datos .NET Framework para Oracle ofrece agrupación automática de conexiones para la aplicación cliente de ADO.NET. También puede suministrar varios modificadores de cadena de conexión para controlar el comportamiento de agrupación de conexiones (vea "Control de la agrupación de conexiones con palabras clave de cadena de conexión", más adelante en este tema).  
@@ -51,7 +51,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  No llame a `Close` o a `Dispose` en un objeto `Connection`, un objeto `DataReader` o cualquier otro objeto administrado en el método `Finalize` de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no dispone de recursos no administrados, no incluya un método `Finalize` en la definición de clase. Para obtener más información, consulte [recolección](../../../../docs/standard/garbage-collection/index.md).  
   
 ### <a name="transaction-support"></a>Compatibilidad con transacciones  
- Las conexiones se extraen del grupo y se asignan en función del contexto de transacción. Es necesario que el subproceso solicitante y la conexión asignada coincidan. Por lo tanto, cada grupo de conexión se divide de realmente en conexiones con ningún contexto de transacción asociada a ellos y en *N* subdivisiones que contienen conexiones con un contexto de transacción particular.  
+ Las conexiones se extraen del grupo y se asignan en función del contexto de transacción. Es necesario que el subproceso solicitante y la conexión asignada coincidan. Por lo tanto, cada grupo de conexiones se divide realmente en conexiones ningún contexto de transacción asociada a ellos y en *N* subdivisiones que contienen conexiones con un contexto de transacción particular.  
   
  Cuando se cierra una conexión, se libera de nuevo en el grupo y en la subdivisión adecuada en función de su contexto de transacción. Por lo tanto, puede cerrar la conexión sin generar un error, incluso aunque aún haya pendiente una transacción distribuida. Esto le permite confirmar o anular la transacción distribuida más adelante.  
   
@@ -71,4 +71,4 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ## <a name="see-also"></a>Vea también  
  [Agrupación de conexiones](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [Contadores de rendimiento](../../../../docs/framework/data/adonet/performance-counters.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

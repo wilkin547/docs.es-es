@@ -3,11 +3,11 @@ title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
 ms.openlocfilehash: fdde238d4a4fd9291c520d4ef13694c3648c8298
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402638"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522825"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 Este ejemplo muestra cómo generar un canal de protocolo personalizado para usar cookies de HTTP para la administración de sesiones. Este canal habilita la comunicación entre servicios Windows Communication Foundation (WCF) y clientes ASMX o entre servicios ASMX y clientes WCF.  

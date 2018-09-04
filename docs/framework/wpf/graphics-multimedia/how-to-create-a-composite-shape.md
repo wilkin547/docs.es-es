@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [WPF], composite shapes
 ms.assetid: 8e5c7ef4-d7ed-4c43-afc9-ca01325c300b
 ms.openlocfilehash: 9892120d13a067586dbf6472a6873b6a52c2d8b4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43457088"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515169"
 ---
 # <a name="how-to-create-a-composite-shape"></a>Cómo: Crear una forma compuesta
 En este ejemplo se muestra cómo crear formas compuestas mediante <xref:System.Windows.Media.Geometry> objetos y mostrarlas con un <xref:System.Windows.Shapes.Path> elemento. En el ejemplo siguiente, un <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>y un <xref:System.Windows.Media.RectangleGeometry> se usan con un <xref:System.Windows.Media.GeometryGroup> para crear una forma compuesta. A continuación, se dibujan las geometrías utilizando un <xref:System.Windows.Shapes.Path> elemento.  

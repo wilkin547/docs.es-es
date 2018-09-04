@@ -8,11 +8,11 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 25dfe63a65c3044837beb26ec6c4eaa772c1df1b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404895"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535795"
 ---
 # <a name="dependency-property-value-precedence"></a>Prioridad de los valores de propiedades de dependencia
 <a name="introduction"></a> En este tema se explica cómo puede afectar el trabajo del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] al valor de una propiedad de dependencia y se describe la precedencia de aplicación de los aspectos del sistema de propiedades al valor efectivo de una propiedad.  

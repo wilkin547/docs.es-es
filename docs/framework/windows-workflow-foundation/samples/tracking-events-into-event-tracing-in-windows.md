@@ -2,20 +2,20 @@
 title: Seguimiento de eventos en Seguimiento de eventos para Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 82de8ee74c12019f815adc63f2ca4441ad95d325
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b2e43e169faade06d8816d9ae517b6957fbf1ee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519511"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527101"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Seguimiento de eventos en Seguimiento de eventos para Windows
-Este ejemplo muestra cómo habilitar el seguimiento en un servicio de flujo de trabajo de Windows Workflow Foundation (WF) y emitir los eventos de seguimiento de eventos de seguimiento para Windows (ETW). Para emitir registros de seguimiento de flujo de trabajo en ETW, el ejemplo utiliza el participante de seguimiento de ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
+Este ejemplo muestra cómo habilitar el seguimiento en un servicio de flujo de trabajo de Windows Workflow Foundation (WF) y emitir los eventos de seguimiento en seguimiento de eventos para Windows (ETW). Para emitir registros de seguimiento de flujo de trabajo en ETW, el ejemplo utiliza el participante de seguimiento de ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
   
  El flujo de trabajo del ejemplo recibe una solicitud, asigna el recíproco de los datos de entrada a la variable de entrada y devuelve el recíproco al cliente. Cuando los datos de entrada son 0, se produce una excepción no controlada de división por cero que causa la anulación del flujo de trabajo. Con el seguimiento habilitado, el registro de seguimiento de error se emite a ETW, lo que puede ayudar a solucionar el error posteriormente. El participante de seguimiento de ETW se configura con un perfil de seguimiento para suscribirse a registros de seguimiento. El perfil de seguimiento se define en el archivo Web.config y se proporciona al participante de seguimiento de ETW como un parámetro de configuración. El participante de seguimiento de ETW se configura en el archivo Web.config del servicio de flujo de trabajo y se aplica al servicio como un comportamiento del servicio. En este ejemplo, los eventos de seguimiento del registro de eventos se ven utilizando Visor de eventos.  
   
 ## <a name="workflow-tracking-details"></a>Detalles del seguimiento del flujo de trabajo  
- Windows Workflow Foundation proporciona una infraestructura de seguimiento para realizar el seguimiento de la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento crea una instancia de flujo de trabajo para emitir eventos relacionados con el ciclo de vida de flujo de trabajo, eventos procedentes de actividades de flujo de trabajo y eventos personalizados. En la siguiente tabla se detallan los componentes primarios de la infraestructura de seguimiento.  
+ Windows Workflow Foundation ofrece una infraestructura de seguimiento para realizar un seguimiento de la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento crea una instancia de flujo de trabajo para emitir eventos relacionados con el ciclo de vida de flujo de trabajo, eventos procedentes de actividades de flujo de trabajo y eventos personalizados. En la siguiente tabla se detallan los componentes primarios de la infraestructura de seguimiento.  
   
 |Componente|Descripción|  
 |---------------|-----------------|  
@@ -61,11 +61,11 @@ Este ejemplo muestra cómo habilitar el seguimiento en un servicio de flujo de t
   
      Antes de invocar el servicio, inicie el Visor de eventos desde el **iniciar** menú, seleccione **ejecutar** y escriba en `eventvwr.exe`. Asegúrese de que el registro de eventos escucha eventos de seguimiento emitidos desde el servicio de flujo de trabajo.  
   
-7.  En la vista de árbol del Visor de eventos, navegue hasta **Visor de eventos**, **registros de aplicaciones y servicios**, y **Microsoft**. Haga clic en **Microsoft** y seleccione **vista** y, a continuación, **mostrar registros analíticos y depuración** para habilitar los registros analíticos y registros de depuración  
+7.  En la vista de árbol del Visor de eventos, vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, y **Microsoft**. Haga clic en **Microsoft** y seleccione **vista** y, a continuación, **mostrar registros analíticos y depuración** para habilitar el análisis y registros de depuración  
   
      Asegúrese de que el **mostrar registros analíticos y depuración** opción está activada.  
   
-8.  En la vista de árbol en el Visor de eventos, navegue hasta **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**,  **Servidor de aplicaciones**. Haga clic en **analítico** y seleccione **Habilitar registro** para habilitar la **analítico** registro.  
+8.  En la vista de árbol en el Visor de eventos, vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**,  **Servidor de aplicaciones-aplicaciones**. Haga clic en **analítico** y seleccione **Habilitar registro** para habilitar la **analítico** registro.  
   
 9. Pruebe el servicio utilizando el cliente de pruebas de WCF haciendo doble clic en `GetData`.  
   
@@ -75,7 +75,7 @@ Este ejemplo muestra cómo habilitar el seguimiento en un servicio de flujo de t
   
 10. Observe los eventos emitidos desde el flujo de trabajo.  
   
-     Cambie al Visor de eventos y navegue hasta **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**,  **Servidor de aplicaciones**. Haga clic en **analítico** y seleccione **actualizar**.  
+     Cambie al Visor de eventos y navegue hasta **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**,  **Servidor de aplicaciones-aplicaciones**. Haga clic en **analítico** y seleccione **actualizar**.  
   
      Los eventos de flujo de trabajo se muestran en el Visor de eventos. Observe que se muestran eventos de ejecución de flujo de trabajo y que uno de ellos es una excepción no controlada que se corresponde con el error en el flujo de trabajo. También, se emite un evento de advertencia desde la actividad de flujo de trabajo, que indica que la actividad está produciendo un error.  
   
@@ -136,7 +136,7 @@ Este ejemplo muestra cómo habilitar el seguimiento en un servicio de flujo de t
 > [!NOTE]
 >  Existe un problema conocido en el Visor de eventos en virtud del cual el visor no puede descodificar eventos de ETW. Es posible que vea un mensaje de error similar el siguiente.  
 >   
->  La descripción del Id. de evento \<id > de origen no se puede encontrar aplicaciones de servidor de aplicación de Microsoft Windows. El componente que genera este evento no está instalado en el equipo local, o bien la instalación está dañada. Puede instalar o reparar el componente en el equipo local.  
+>  La descripción del Id. de evento \<id > de origen no se puede encontrar aplicaciones de servidor de aplicaciones de Microsoft Windows. El componente que genera este evento no está instalado en el equipo local, o bien la instalación está dañada. Puede instalar o reparar el componente en el equipo local.  
 >   
 >  Si encuentra este error, haga clic en actualizar en el panel de acciones. El evento debería descodificarse ahora correctamente.  
   
@@ -145,9 +145,9 @@ Este ejemplo muestra cómo habilitar el seguimiento en un servicio de flujo de t
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplos de supervisión de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

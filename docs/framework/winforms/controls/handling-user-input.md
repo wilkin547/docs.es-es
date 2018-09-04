@@ -9,18 +9,18 @@ helpviewer_keywords:
 - custom controls [Windows Forms], keyboard events using code
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
-ms.openlocfilehash: a230611bfbb0a7f21a96de22674377887cc93c2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19bb494d6f478c8cb7adda770f441470c4b2d19f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527805"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540371"
 ---
 # <a name="handling-user-input"></a>Controlar la introducción de datos por el usuario
-En este tema se describe los principales eventos de teclado y mouse (ratón) proporcionados por <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Al controlar un evento, los creadores de controles deben reemplazar el método `On`*EventName* protegido en lugar de asociar un delegado al evento. Para hacer un repaso de los eventos, vea [Provocar eventos de un componente](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).  
+En este tema se describe los principales eventos de teclado y mouse proporcionados por <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Al controlar un evento, los creadores de controles deben reemplazar el método `On`*EventName* protegido en lugar de asociar un delegado al evento. Para hacer un repaso de los eventos, vea [Provocar eventos de un componente](https://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).  
   
 > [!NOTE]
->  Si no hay ningún dato asociado a un evento, una instancia de la clase base <xref:System.EventArgs> se pasa como argumento a la `On` *EventName* método.  
+>  Si no hay ningún dato asociado con un evento, una instancia de la clase base <xref:System.EventArgs> se pasa como argumento a la `On` *EventName* método.  
   
 ## <a name="keyboard-events"></a>Eventos de teclado  
  Los eventos de teclado habituales que pueden controlar son <xref:System.Windows.Forms.Control.KeyDown>, <xref:System.Windows.Forms.Control.KeyPress>, y <xref:System.Windows.Forms.Control.KeyUp>.  
@@ -28,14 +28,14 @@ En este tema se describe los principales eventos de teclado y mouse (ratón) pro
 |Nombre de evento|Método que se va a invalidar|Descripción del evento|  
 |----------------|------------------------|--------------------------|  
 |`KeyDown`|`void OnKeyDown(KeyEventArgs)`|Se produce únicamente cuando se presiona una tecla por primera vez.|  
-|`KeyPress`|`void OnKeyPress`<br /><br /> `(KeyPressEventArgs)`|Se produce cada vez que se presiona una tecla. Si está presionada una tecla, un <xref:System.Windows.Forms.Control.KeyPress> evento se desencadena en la velocidad de repetición definida por el sistema operativo.|  
+|`KeyPress`|`void OnKeyPress`<br /><br /> `(KeyPressEventArgs)`|Se produce cada vez que se presiona una tecla. Si está presionada una tecla, un <xref:System.Windows.Forms.Control.KeyPress> se provoca el evento a la velocidad de repetición definida por el sistema operativo.|  
 |`KeyUp`|`void OnKeyUp(KeyEventArgs)`|Se produce cuando se suelta una tecla.|  
   
 > [!NOTE]
 >  Controlar la entrada mediante teclado es mucho más complejo que invalidar los eventos de la tabla anterior y escapa al ámbito de este tema. Para más información, consulte [Datos proporcionados por el usuario en Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md).  
   
 ## <a name="mouse-events"></a>Eventos del mouse  
- Los eventos de mouse (ratón) que se pueden controlar son <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseHover>, <xref:System.Windows.Forms.Control.MouseLeave>, <xref:System.Windows.Forms.Control.MouseMove>, y <xref:System.Windows.Forms.Control.MouseUp>.  
+ Los eventos del mouse que pueden controlar son <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseHover>, <xref:System.Windows.Forms.Control.MouseLeave>, <xref:System.Windows.Forms.Control.MouseMove>, y <xref:System.Windows.Forms.Control.MouseUp>.  
   
 |Nombre de evento|Método que se va a invalidar|Descripción del evento|  
 |----------------|------------------------|--------------------------|  

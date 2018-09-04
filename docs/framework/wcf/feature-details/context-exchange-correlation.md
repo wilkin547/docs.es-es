@@ -3,11 +3,11 @@ title: Correlación de intercambio de contexto
 ms.date: 03/30/2017
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
 ms.openlocfilehash: d9de111fa08b4a398bba52bc903ea1fec8c7f298
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483702"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519737"
 ---
 # <a name="context-exchange-correlation"></a>Correlación de intercambio de contexto
 Correlación de contexto se basa en el mecanismo de intercambio de contexto descrito en la [especificación de protocolo de intercambio de contexto de .NET](https://go.microsoft.com/fwlink/?LinkId=166059). La correlación del contexto utiliza una cookie o un encabezado de contexto conocidos para relacionar los mensajes con la instancia correcta. Para utilizar la correlación del contexto, debe usarse un enlace basado en contexto como <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> o <xref:System.ServiceModel.NetTcpContextBinding> en el extremo de <xref:System.ServiceModel.Activities.WorkflowServiceHost>. En este tema, se explica cómo utilizar la correlación del contexto con actividades de mensajería en un servicio del flujo de trabajo.  

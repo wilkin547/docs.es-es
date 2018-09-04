@@ -2,12 +2,12 @@
 title: Ámbito de convoy de transacción
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
-ms.openlocfilehash: 4b053c15768a20ade4a469c9a40af797f49c268b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516570"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536096"
 ---
 # <a name="transaction-convoy-scope"></a>Ámbito de convoy de transacción
 En este ejemplo se muestra cómo crear un patrón de actividad de mensajería de convoy paralelo junto con un objeto <xref:System.ServiceModel.Activities.TransactedReceiveScope> para modelar un protocolo donde varias operaciones pueden suceder en cualquier orden y todas en la misma transacción. Este ejemplo también muestra cómo <xref:System.ServiceModel.Activities.TransactedReceiveScope> crea automáticamente una nueva transacción cuando una no fluye al servidor, de modo que el cliente no utiliza ninguna transacción.  
@@ -26,7 +26,7 @@ En este ejemplo se muestra cómo crear un patrón de actividad de mensajería de
   
     1.  En **el Explorador de soluciones**, haga clic en la solución y seleccione **Establecer proyectos de inicio**.  
   
-    2.  Seleccione **proyectos de inicio múltiples** y asegúrese de que la acción para ambos proyectos se establece en **iniciar**.  
+    2.  Seleccione **varios proyectos de inicio** y asegúrese de que la acción para ambos proyectos se establece en **iniciar**.  
   
 4.  Para ejecutar la solución, presione CTRL+F5.  
   
@@ -39,6 +39,6 @@ En este ejemplo se muestra cómo crear un patrón de actividad de mensajería de
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], configuring check and image margins
 ms.assetid: 45a9075d-4bea-4ce2-9b2c-7619aa39f8ce
 ms.openlocfilehash: 872139fd234bafb303168d906c6ec96ce7b1611c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388502"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529614"
 ---
 # <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>Cómo: Configurar los márgenes de comprobación y de imagen de MenuStrip
 Puede personalizar un <xref:System.Windows.Forms.MenuStrip> estableciendo las propiedades <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> y <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> en diversas combinaciones.  

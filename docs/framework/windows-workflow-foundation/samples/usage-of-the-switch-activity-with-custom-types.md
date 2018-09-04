@@ -3,11 +3,11 @@ title: Usar la actividad Switch con tipos personalizados
 ms.date: 03/30/2017
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
 ms.openlocfilehash: b24a03573b31f3fb1c34d4aa6e03bc11f5b25455
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423570"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535444"
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>Usar la actividad Switch con tipos personalizados
 En este ejemplo se describe cómo habilitar una actividad <xref:System.Activities.Statements.Switch%601> para evaluar un tipo complejo definido por el usuario en tiempo de ejecución. En los lenguajes de programación de procedimientos más tradicionales, un [cambiar](https://go.microsoft.com/fwlink/?LinkId=180521) instrucción selecciona una lógica de ejecución según la evaluación condicional de una variable. Tradicionalmente, una instrucción `switch` funciona en una expresión que se puede evaluar estáticamente. Por ejemplo, en C# esto significa que solo se admiten los tipos primitivos, como <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, y los tipos de enumeración.  

@@ -2,12 +2,12 @@
 title: Elemento &lt;message&gt; de &lt;netTcpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 4a487d695cab259fc6b82fdf44b4c1bfdf5d04e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f88de91fa14ce06a69939441ad47e5ae5fb6b126
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364131"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524107"
 ---
 # <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>Elemento &lt;message&gt; de &lt;netTcpBinding&gt;
 Define el tipo de requisitos de seguridad de nivel de mensaje para un extremo configurado con el [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -64,7 +64,7 @@ Define el tipo de requisitos de seguridad de nivel de mensaje para un extremo co
 |-----------|-----------------|  
 |Ninguna|Esto permite al servicio interactuar con clientes anónimos. En el servicio, esto indica que el servicio no requiere ninguna credencial del cliente. En el cliente, esto indica que el cliente no proporciona ninguna credencial del cliente.|  
 |Windows|Permite a los intercambios de SOAP estar bajo el contexto autenticado de una credencial de Windows.|  
-|UserName|Permite que el servicio requiera que el cliente se autentique con una credencial UserName. WCF no admite enviar un resumen de contraseña ni derivar claves mediante una contraseña y utilizar tales claves para seguridad de mensajes. Por lo tanto, WCF garantiza que el transporte sea seguro al usar credenciales UserName. Este modo de credencial produce o bien un intercambio interoperable o bien una negociación no interoperable basada en el atributo `negotiateServiceCredential`.|  
+|UserName|Permite que el servicio requiera que el cliente se autentique con una credencial UserName. WCF no admite enviar un resumen de contraseña ni derivar claves mediante contraseña y utilizando tales claves para seguridad de mensajes. Por lo tanto, WCF impone que el transporte sea seguro al usar credenciales UserName. Este modo de credencial produce o bien un intercambio interoperable o bien una negociación no interoperable basada en el atributo `negotiateServiceCredential`.|  
 |Certificado|Permite al servicio exigir la autenticación del cliente mediante un certificado. Si se utiliza el modo de seguridad del mensaje y el atributo `negotiateServiceCredential` está establecido en `false`, se debe proporcionar al cliente el certificado de servicio.|  
 |IssuedToken|Especifica un token personalizado, normalmente emitido por un servicio de token de seguridad (STS).|  
   
@@ -88,5 +88,5 @@ Define el tipo de requisitos de seguridad de nivel de mensaje para un extremo co
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
  [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)

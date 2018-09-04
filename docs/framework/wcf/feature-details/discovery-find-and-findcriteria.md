@@ -3,11 +3,11 @@ title: Búsqueda de detección y FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
 ms.openlocfilehash: b2f679879bd3a32e770aa934f715dd70b4a2b5f8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423328"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534040"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Búsqueda de detección y FindCriteria
 La operación de búsqueda de detección la inicia un cliente para detectar uno o más servicios, y es una de las acciones principales en detección. Al realizar una búsqueda, se envía un mensaje de sondeo de WS-Discovery a través de la red. Los servicios que coinciden con los criterios especificados responden con mensajes ProbeMatch de WS-Discovery. Para obtener más información acerca de los mensajes de detección, consulte el [especificación WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  

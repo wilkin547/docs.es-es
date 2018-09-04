@@ -16,11 +16,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 435bc1c04bfd2f9b8a94ff8151369b5ef2fae6f8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385877"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534315"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Tutorial: Implementar un formulario que utiliza una operación en segundo plano
 Si tiene una operación que tarda mucho tiempo en completarse, y no desea la interfaz de usuario (UI) deje de responder o "bloquee", puede usar el <xref:System.ComponentModel.BackgroundWorker> clase para ejecutar la operación en otro subproceso.  

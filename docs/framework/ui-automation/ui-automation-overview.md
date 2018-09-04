@@ -9,16 +9,16 @@ ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: b4752bf8f5fb75115618f95c4dab8b1359a1eb5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40656fb2617b4863994c1dafd8f0f4b3c46ef427
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409497"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502276"
 ---
 # <a name="ui-automation-overview"></a>Información general sobre UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] es el nuevo marco de trabajo de accesibilidad para [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], disponible en todos los sistemas operativos que admiten [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)].  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33409497"
 |Proveedor [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] (UIAutomationProvider.dll y UIAutomationTypes.dll)|Conjunto de definiciones de interfaz que se implementan por proveedores de la automatización de la interfaz de usuario, que ofrecen información sobre los objetos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] y que responden a la entrada mediante programación.|  
 |API de cliente (UIAutomationClient.dll y UIAutomationTypes.dll)|Conjunto de tipos de código administrado que permite a las aplicaciones cliente de la automatización de la interfaz de usuario obtener información sobre la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] y enviar la entrada a controles.|  
 |UiAutomationCore.dll|El código subyacente (a veces denominado el núcleo de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ) que controla la comunicación entre los proveedores y los clientes.|  
-|UIAutomationClientsideProviders.dll|Un conjunto de proveedores de automatización de la interfaz de usuario para controles heredados estándar. ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] controles tienen compatibilidad nativa con [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].) Esta compatibilidad está disponible automáticamente para las aplicaciones cliente.|  
+|UIAutomationClientsideProviders.dll|Un conjunto de proveedores de automatización de la interfaz de usuario para controles heredados estándar. ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] controles tienen compatibilidad nativa para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].) Esta compatibilidad está disponible automáticamente para las aplicaciones cliente.|  
   
  Desde la perspectiva del desarrollador de software, hay dos formas de usar [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]: crear compatibilidad con controles personalizados (mediante la API de proveedor) y creando aplicaciones que usan el núcleo de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para comunicarse con elementos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] (mediante la API del cliente). En función de su enfoque, debe hacer referencia a diferentes partes de la documentación. Puede obtener más información sobre los conceptos y adquirir conocimientos prácticos en las secciones siguientes.  
   

@@ -2,26 +2,26 @@
 title: Cómo bloquear puntos de conexión en la empresa
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 4ec14193bdcc24722ad8e2259781c4c185f3ca3f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 032b69c1fae38576b0374b329f1ab6fe90e2b1a0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806544"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539741"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Cómo bloquear puntos de conexión en la empresa
-Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conforme a las directivas de seguridad de la empresa. El tema siguiente trata sobre cómo desarrollar e instalar un validador de punto de conexión de cliente que puede usarse para validar todas las aplicaciones de cliente de Windows Communication Foundation (WCF) instaladas en los equipos.  
+Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conforme a las directivas de seguridad de la empresa. El siguiente tema describe cómo desarrollar e instalar un validador de punto de conexión de cliente que puede usarse para validar todas las aplicaciones cliente de Windows Communication Foundation (WCF) instaladas en los equipos.  
   
- En este caso, el validador es un validador de cliente porque este comportamiento de extremo se agrega al cliente [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección en el archivo machine.config. WCF carga los comportamientos de extremo comunes solo para las aplicaciones cliente y carga los comportamientos de servicio comunes solo para las aplicaciones de servicio. Para instalar el mismo validador para las aplicaciones servicio, el validador debe ser un comportamiento de servicio. Para obtener más información, consulte el [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección.  
+ En este caso, el validador es un validador de cliente porque este comportamiento de punto de conexión se agrega al cliente [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección en el archivo machine.config. WCF carga los comportamientos de extremo comunes solo para las aplicaciones cliente y carga los comportamientos de servicio comunes solo para aplicaciones de servicio. Para instalar el mismo validador para las aplicaciones servicio, el validador debe ser un comportamiento de servicio. Para obtener más información, consulte el [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección.  
   
 > [!IMPORTANT]
->  Comportamientos de servicio o punto de conexión no se marcan con la <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo (APTCA) que se agregan a la [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección de un archivo de configuración no se ejecutan cuando la aplicación se ejecuta en una relación de confianza parcial entorno y ninguna excepción se produce cuando ocurre esto. Para forzar la ejecución de los comportamientos habituales, como los validadores, es necesario:  
+>  Comportamientos de servicio o punto de conexión no están marcados con el <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo (APTCA) que se agregan a la [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sección de un archivo de configuración no se ejecutan cuando la aplicación se ejecuta en una relación de confianza parcial entorno y ninguna excepción se produce cuando ocurre esto. Para forzar la ejecución de los comportamientos habituales, como los validadores, es necesario:  
 >   
 >  -- Marcar el comportamiento habitual con el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> de modo que pueda ejecutarse cuando se implementa como una aplicación de confianza parcial. Tenga en cuenta que puede establecerse una entrada de registro en el equipo para evitar que se ejecuten los ensamblados marcados con APTCA.  
 >   
->  -- Asegurarse de implementar la aplicación como una aplicación de confianza total en la que los usuarios no pueden modificar los valores de la seguridad de acceso del código para ejecutar la aplicación en un entorno de confianza parcial. De poder hacerlo, el validador personalizado no se ejecutaría y no se iniciaría ninguna excepción. Para que ver una forma para asegurarse de esto, consulte la `levelfinal` mediante la opción [Code Access Security Policy Tool (Caspol.exe)](http://go.microsoft.com/fwlink/?LinkId=248222).  
+>  -- Asegurarse de implementar la aplicación como una aplicación de confianza total en la que los usuarios no pueden modificar los valores de la seguridad de acceso del código para ejecutar la aplicación en un entorno de confianza parcial. De poder hacerlo, el validador personalizado no se ejecutaría y no se iniciaría ninguna excepción. Para que una forma de asegurarse de esto, consulte el `levelfinal` mediante la opción [Code Access Security Policy Tool (Caspol.exe)](https://go.microsoft.com/fwlink/?LinkId=248222).  
 >   
->  Para obtener más información, consulte [procedimientos recomendados de confianza parcial](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) y [admite escenarios de implementación](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md).  
+>  Para obtener más información, consulte [Partial Trust Best Practices](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) y [admite escenarios de implementación](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md).  
   
 ### <a name="to-create-the-endpoint-validator"></a>Para crear el validador de punto de conexión  
   
@@ -29,21 +29,21 @@ Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conf
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2.  Cree un nuevo <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> que registre el validador de extremo creado en el paso 1. El ejemplo de código siguiente muestra cómo hacerlo. (El código original de este ejemplo está en el [validación de seguridad](../../../../docs/framework/wcf/samples/security-validation.md) ejemplo.)  
+2.  Cree un nuevo <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> que registre el validador de extremo creado en el paso 1. El ejemplo de código siguiente muestra cómo hacerlo. (El código original para este ejemplo está en el [validación de seguridad](../../../../docs/framework/wcf/samples/security-validation.md) ejemplo.)  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  Asegúrese de que el ensamblado compilado se firma con un nombre seguro. Para obtener más información, consulte el [herramienta de nombre seguro (SN. (EXE)](http://go.microsoft.com/fwlink/?LinkId=248217) y los comandos del compilador en su idioma.  
+3.  Asegúrese de que el ensamblado compilado se firma con un nombre seguro. Para obtener más información, consulte el [Strong Name Tool (SN. (EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) y los comandos del compilador para su idioma.  
   
 ### <a name="to-install-the-validator-into-the-target-computer"></a>Para instalar el validador en el equipo de destino  
   
 1.  Instale el validador del extremo mediante el mecanismo adecuado. En una empresa, esto puede hacerse utilizando la directiva de grupo y Systems Management Server (SMS).  
   
-2.  Instalar el ensamblado con nombre seguro en la caché global de ensamblados mediante la [Gacutil.exe (herramienta de caché Global de ensamblados)](http://msdn.microsoft.com/library/ex0ss12c\(v=vs.110\).aspx).  
+2.  Instalar el ensamblado con nombre seguro en la caché global de ensamblados mediante la [Gacutil.exe (Global Assembly Cache Tool)](https://msdn.microsoft.com/library/ex0ss12c\(v=vs.110\).aspx).  
   
 3.  Utilice los tipos de espacio de nombres de <xref:System.Configuration?displayProperty=nameWithType> para:  
   
-    1.  Agregue la extensión a la [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) sección utilizando un nombre de tipo completo y bloquee el elemento.  
+    1.  Agregue la extensión a la [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) sección con un nombre de tipo completo y bloquee el elemento.  
   
          [!code-csharp[LockdownValidation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#5)]  
   
@@ -64,5 +64,5 @@ Las grandes empresas requieren a menudo que las aplicaciones se desarrollen conf
  También puede querer cifrar los elementos del archivo de configuración. Para obtener más información, vea la sección Vea también.  
   
 ## <a name="see-also"></a>Vea también  
- [Elementos del archivo de configuración de cifrado mediante DPAPI](http://go.microsoft.com/fwlink/?LinkId=94954)  
- [Cifrar los elementos del archivo de configuración con RSA](http://go.microsoft.com/fwlink/?LinkId=94955)
+ [Cifrar los elementos del archivo de configuración mediante DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)  
+ [Cifrar los elementos de archivo de configuración con RSA](https://go.microsoft.com/fwlink/?LinkId=94955)

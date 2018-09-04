@@ -3,11 +3,11 @@ title: Información general sobre la seguridad de SQL Server
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
 ms.openlocfilehash: 25f9f96a550438d242ee409da0d09b7df06de33c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395807"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528662"
 ---
 # <a name="overview-of-sql-server-security"></a>Información general sobre la seguridad de SQL Server
 Una estrategia de defensa exhaustiva, con niveles superpuestos de seguridad, es la mejor manera de enfrentarse a las amenazas a la seguridad. SQL Server proporciona una arquitectura de seguridad diseñada para permitir a los administradores de bases de datos y desarrolladores crear aplicaciones de base de datos seguras y contrarrestar las amenazas. En cada versión de SQL Server se han introducido mejoras a las versiones anteriores con nuevas características y funcionalidades. No obstante, la seguridad no es una característica integrada más. Cada aplicación tiene requisitos de seguridad propios. Los desarrolladores tienen que saber cuál es la combinación de características y funcionalidades más apropiada para contrarrestar las amenazas conocidas, así como anticiparse a las que puedan ir apareciendo en el futuro.  

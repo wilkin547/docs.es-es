@@ -3,11 +3,11 @@ title: Validar actividades externas
 ms.date: 03/30/2017
 ms.assetid: 49619f59-9819-484a-bcd8-5596308e8551
 ms.openlocfilehash: 4805bec3deed0779b02687b11dd487e673802925
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423899"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527812"
 ---
 # <a name="external-activity-validation"></a>Validar actividades externas
 Este ejemplo muestra cómo agregar la lógica de validación a una actividad integrada cuyo autor no es usted. La lógica de validación consiste en exigir que todas las actividades <xref:System.Activities.Statements.If> presentes en el flujo de trabajo tengan su propiedad <xref:System.Activities.Statements.If.Then%2A> establecida o su propiedad <xref:System.Activities.Statements.If.Else%2A> establecida. Además, la lógica de validación incluye la comprobación de que todas las actividades <xref:System.Activities.Statements.Pick> presentes en el flujo de trabajo tienen más de una bifurcación; si no es así, se genera una advertencia.  

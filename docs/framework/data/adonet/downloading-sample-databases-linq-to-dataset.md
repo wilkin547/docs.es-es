@@ -3,11 +3,11 @@ title: Descargar bases de datos de ejemplo (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
 ms.openlocfilehash: 7830095b7c98c0926783324ee7dc2bc1eb345aca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469861"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502820"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Descargar bases de datos de ejemplo (LINQ to DataSet)
 Los ejemplos y tutoriales en la [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentación usa la base de datos de ejemplo AdventureWorks. Puede descargar este producto de forma gratuita del sitio de descarga de Microsoft. Los ejemplos y los tutoriales de la documentación de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] usan SQL Server como almacén de datos. SQL Server Express Edition, que está disponible de forma gratuita, también se puede usar como almacén de datos en lugar de SQL Server.  

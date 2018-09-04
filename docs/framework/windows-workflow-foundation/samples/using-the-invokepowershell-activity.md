@@ -2,12 +2,12 @@
 title: Uso de la actividad InvokePowerShell
 ms.date: 03/30/2017
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-ms.openlocfilehash: c5609556af94ed3e372538047ff6309a105975ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa42cddd930b755e9938a02a137ee77ee273fad0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520245"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538872"
 ---
 # <a name="using-the-invokepowershell-activity"></a>Uso de la actividad InvokePowerShell
 En el ejemplo InvokePowerShell se muestra cómo invocar comandos de Windows PowerShell mediante la actividad `InvokePowerShell`.  
@@ -25,7 +25,7 @@ En el ejemplo InvokePowerShell se muestra cómo invocar comandos de Windows Powe
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
@@ -34,9 +34,9 @@ En el ejemplo InvokePowerShell se muestra cómo invocar comandos de Windows Powe
   
 |Nombre del proyecto|Descripción|Archivos principales|  
 |------------------|-----------------|----------------|  
-|CodedClient|Una aplicación cliente de ejemplo que utiliza la actividad de PowerShell.|-   **Program.cs**: crea mediante programación un flujo de trabajo basado en la secuencia que llama a la actividad InvokePowerShell.|  
-|DesignerClient|Un conjunto de actividades personalizadas que contiene la actividad personalizada `InvokePowerShell` y otras actividades personalizadas y un flujo de trabajo que los utiliza.|<ul><li>Actividades:<br /><br /> <ul><li>**PrintCollection.cs**: una actividad de aplicación auxiliar que imprime todos los elementos de una colección en la consola.</li><li>**ReadLine.cs**: una actividad de aplicación auxiliar para leer la entrada desde la consola.</li></ul></li><li>Sistema de archivos:<br /><br /> <ul><li>**Copy.XAML**: una actividad que copia un archivo.</li><li>**CreateFile.xaml**: una actividad que crea un archivo.</li><li>**DeleteFile.xaml**: una actividad que elimina un archivo.</li><li>**MakeDir.xaml**: una actividad que crea un directorio.</li><li>**Move.XAML**: una actividad que mueve un archivo.</li><li>**ReadFile.xaml**: una actividad que lee un archivo y devuelve su contenido.</li><li>**TestPath.xaml**: una actividad que comprueba la existencia de una ruta de acceso.</li></ul></li><li>Proceso:<br /><br /> <ul><li>**GetProcess.xaml**: una actividad que obtiene una lista de procesos en ejecución.</li><li>**StopProcess.xaml**: una actividad que detiene un proceso concreto.</li></ul></li><li>**Program.cs**: llama el flujo de trabajo Sequence1.</li><li>**Sequence1.XAML**: un flujo de trabajo basado en secuencia.</li></ul>|  
-|PowerShell|La actividad `InvokePowerShell` y sus diseñadores asociados.|Archivos de actividad<br /><br /> -   **ExecutePowerShell.cs**: la lógica de ejecución principal de la actividad.<br />-   **InvokePowerShell.cs**: el contenedor alrededor de la lógica de ejecución principal, que contiene una versión genérica (valor devuelto) y una versión no genérica (valor no devuelto). Esta es la interfaz pública de la actividad.<br />-   **NoPersistZone.cs**: esta actividad evita que las actividades secundarias se conserven. Esta clase se utiliza dentro de la implementación de la actividad `InvokePowerShell` para evitar que la actividad se conserve en la mitad de la ejecución.<br /><br /> Archivos de diseñador:<br /><br /> 1.  **ArgumentDictionaryEditor.cs**: un diálogo de Windows que permite al usuario modificar los argumentos de la `InvokePowerShell` actividad.<br />2.  **GenericInvokePowerShellDesigner.xaml** y **GenericInvokePowerShellDesigner.xaml.cs**: define el aspecto de la interfaz genérica `InvokePowerShell` actividad en [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].<br />3.  **InvokePowerShellDesigner.xaml** y **InvokePowerShellDesigner.cs**: define el aspecto de la interfaz no genérica `InvokePowerShell` actividad en [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].|  
+|CodedClient|Una aplicación cliente de ejemplo que utiliza la actividad de PowerShell.|-   **Program.cs**: crea mediante programación un flujo de trabajo basado en secuencia que llama a la actividad InvokePowerShell.|  
+|DesignerClient|Un conjunto de actividades personalizadas que contiene la actividad personalizada `InvokePowerShell` y otras actividades personalizadas y un flujo de trabajo que los utiliza.|<ul><li>Actividades:<br /><br /> <ul><li>**PrintCollection.cs**: una actividad de la aplicación auxiliar que imprime todos los elementos de una colección en la consola.</li><li>**ReadLine.cs**: una actividad de la aplicación auxiliar para leer la entrada desde la consola.</li></ul></li><li>Sistema de archivos:<br /><br /> <ul><li>**Copy.XAML**: una actividad que copia un archivo.</li><li>**CreateFile.xaml**: una actividad que crea un archivo.</li><li>**DeleteFile.xaml**: una actividad que se elimina un archivo.</li><li>**MakeDir.xaml**: una actividad que crea un directorio.</li><li>**Move.XAML**: una actividad que mueve un archivo.</li><li>**ReadFile.xaml**: una actividad que lee un archivo y devuelve su contenido.</li><li>**TestPath.xaml**: una actividad que comprueba la existencia de una ruta de acceso.</li></ul></li><li>Proceso:<br /><br /> <ul><li>**GetProcess.xaml**: una actividad que se obtiene una lista de procesos en ejecución.</li><li>**StopProcess.xaml**: una actividad que detiene un proceso específico.</li></ul></li><li>**Program.cs**: llama el flujo de trabajo Sequence1.</li><li>**Sequence1.XAML**: un flujo de trabajo basado en secuencia.</li></ul>|  
+|PowerShell|La actividad `InvokePowerShell` y sus diseñadores asociados.|Archivos de actividad<br /><br /> -   **ExecutePowerShell.cs**: la lógica de ejecución principal de la actividad.<br />-   **InvokePowerShell.cs**: el contenedor en torno a la lógica de ejecución principal, que contiene una versión genérica (valor devuelto) y una versión no genérica (valor no devuelto). Esta es la interfaz pública de la actividad.<br />-   **NoPersistZone.cs**: esta actividad evita que conservar las actividades secundarias. Esta clase se utiliza dentro de la implementación de la actividad `InvokePowerShell` para evitar que la actividad se conserve en la mitad de la ejecución.<br /><br /> Archivos de diseñador:<br /><br /> 1.  **ArgumentDictionaryEditor.cs**: cuadro de diálogo A Windows que permite al usuario modificar los argumentos de la `InvokePowerShell` actividad.<br />2.  **GenericInvokePowerShellDesigner.xaml** y **GenericInvokePowerShellDesigner.xaml.cs**: define la apariencia de la interfaz genérica `InvokePowerShell` actividad en [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].<br />3.  **InvokePowerShellDesigner.xaml** y **InvokePowerShellDesigner.cs**: define la apariencia de la interfaz no genérica `InvokePowerShell` actividad en [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].|  
   
  Primero se describen los proyectos de cliente, porque es más fácil entender la funcionalidad interna de la actividad de PowerShell una vez comprendido su uso.  
   
@@ -169,7 +169,7 @@ new ForEach<PSObject>
  La personalización del diseñador no se detiene con los archivos .xaml que definen el aspecto de la actividad en el lienzo del diseño. Los cuadros de diálogo utilizados para mostrar los parámetros de la actividad también se pueden personalizar. Estos parámetros y las variables de PowerShell afectan al comportamiento de los comandos de PowerShell. La actividad los expone como <!--zz <xref:System.Collections.Generic.Dictionary%601>--> `System.Collections.Generic.Dictionary` tipos. ArgumentDictionaryEditor.cs, PropertyEditorResources.xaml y PropertyEditorResources.cs definen el cuadro de diálogo que permite modificar estos tipos.  
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
- Debe instalar Windows PowerShell para ejecutar este ejemplo. Windows PowerShell se puede instalar desde esta ubicación: [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=150383).  
+ Debe instalar Windows PowerShell para ejecutar este ejemplo. Windows PowerShell puede instalarse desde esta ubicación: [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=150383).  
   
 #### <a name="to-run-the-coded-client"></a>Para ejecutar el cliente codificado  
   
@@ -177,7 +177,7 @@ new ForEach<PSObject>
   
 2.  Haga clic con el botón secundario en la solución y compílela.  
   
-3.  Haga clic en el **CodedClient** de proyecto y seleccione **establecer como proyecto de inicio**.  
+3.  Haga clic en el **CodedClient** del proyecto y seleccione **establecer como proyecto de inicio**.  
   
 4.  Presione CTRL+F5 para ejecutar la aplicación.  
   
@@ -187,7 +187,7 @@ new ForEach<PSObject>
   
 2.  Haga clic con el botón secundario en la solución y compílela.  
   
-3.  Haga clic en el **DesignerClient** de proyecto y seleccione **establecer como proyecto de inicio**.  
+3.  Haga clic en el **DesignerClient** del proyecto y seleccione **establecer como proyecto de inicio**.  
   
 4.  Presione CTRL+F5 para ejecutar la aplicación.  
   
@@ -204,6 +204,6 @@ new ForEach<PSObject>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`

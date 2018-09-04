@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
 ms.openlocfilehash: c975913ab5df9c2e7f792ed73f8c5d20bdca1c5a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43474043"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526890"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>Modificar datos con procedimientos almacenados
 Los procedimientos almacenados pueden aceptar datos como parámetros de entrada y pueden devolver datos como parámetros de salida, conjuntos de resultados o valores de retorno. En el ejemplo siguiente se muestra cómo ADO.NET envía y recibe parámetros de entrada, parámetros de salida y valores de retorno. El ejemplo inserta un nuevo registro en una tabla cuya columna de clave principal es una columna de identidad en una base de datos de SQL Server.  

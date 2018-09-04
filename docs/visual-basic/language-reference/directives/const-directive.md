@@ -1,5 +1,5 @@
 ---
-title: '##Const (directiva)'
+title: '##Const (directiva) (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: a3b3318f6b44f7d1798e08195be5aeb920b61c0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d786c5e16b1e667f7c7c78b0f7857cd9711239
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588072"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541619"
 ---
 # <a name="const-directive"></a>#Const (Directiva)
-Permite definir constantes condicionales para el compilador de Visual Basic.  
+Define las constantes de compilador condicionales para Visual Basic.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,9 +39,9 @@ Permite definir constantes condicionales para el compilador de Visual Basic.
  Requerido. Literal, otra constante de compilación condicional o cualquier combinación que incluya operadores aritméticos o lógicos, excepto `Is`.  
   
 ## <a name="remarks"></a>Comentarios  
- Constantes de compilación condicional siempre son privados para el archivo en que aparecen. No se puede crear constantes de compilación públicas con el `#Const` directiva; puede crear solo en la interfaz de usuario o con el `/define` opción del compilador.  
+ Constantes de compilador condicionales son siempre privadas en el archivo en el que aparecen. No se puede crear constantes de compilación público con el `#Const` directiva; puede crear solo en la interfaz de usuario o con el `/define` opción del compilador.  
   
- Puede usar únicamente constantes de compilación condicional y literales en `expression`. Uso de una constante estándar definida con `Const` produce un error. Por el contrario, puede usar constantes definidas con el `#Const` palabra clave solo para la compilación condicional. Constantes también se definido, en cuyo caso tienen un valor de `Nothing`.  
+ Puede usar solo constantes de compilador condicionales y literales en `expression`. Uso de una constante estándar definida con `Const` produce un error. Por el contrario, puede usar constantes definidas con el `#Const` palabra clave para la compilación condicional. Las constantes pueden también no estén definidas, en cuyo caso su valor `Nothing`.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se usa la directiva `#Const`.  

@@ -3,11 +3,11 @@ title: Usar el ámbito de edición
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
 ms.openlocfilehash: 268849c584c235a21a0818baa60f119cf8e49305
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419989"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538087"
 ---
 # <a name="using-editing-scope"></a>Usar el ámbito de edición
 Este ejemplo muestra cómo procesar un conjunto de cambios por lotes para que se puedan deshacer en una unidad atómica única. De forma predeterminada, las acciones realizadas por un autor del diseñador de actividades se integran automáticamente en el sistema Deshacer/rehacer.  

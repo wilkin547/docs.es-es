@@ -2,12 +2,12 @@
 title: Escribir código SQL dinámico y seguro en SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: cbfbfd59d78cb5504679fd8ae78f79d0c180dc4d
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 5357bb4ad82f5fe9a70f15a540aba355e847ad71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753479"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538192"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Escribir código SQL dinámico y seguro en SQL Server
 La inyección de SQL es el proceso por el cual un usuario malintencionado escribe instrucciones de Transact-SQL en lugar de entradas válidas. Si la entrada se pasa directamente al servidor sin haber sido validada y si la aplicación ejecuta el código inyectado por error, el ataque podría dañar o destruir datos.  
@@ -62,7 +62,7 @@ La inyección de SQL es el proceso por el cual un usuario malintencionado escrib
 ## <a name="external-resources"></a>Recursos externos  
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|Description|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
 |[Procedimientos almacenados](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [Inyección de código SQL](/sql/relational-databases/security/sql-injection) en los libros en pantalla de SQL Server|Temas que describen cómo crear procedimientos almacenados y cómo funciona la inyección de SQL.|  
   
@@ -73,4 +73,4 @@ La inyección de SQL es el proceso por el cual un usuario malintencionado escrib
  [Administración de permisos con procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [Firma de procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [Personalización de permisos con suplantación en SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

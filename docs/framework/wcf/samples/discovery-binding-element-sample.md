@@ -2,12 +2,12 @@
 title: Ejemplo de elemento de enlace de detección
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d906d9a389c50095f2af5d52e3874c3e43199e68
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805673"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535782"
 ---
 # <a name="discovery-binding-element-sample"></a>Ejemplo de elemento de enlace de detección
 En este ejemplo se muestra cómo utilizar el elemento de enlace de cliente de detección para detectar un servicio. Esta característica permite a los desarrolladores de software agregar un canal de cliente de detección a su pila del canal de clientes existente, con lo que el modelo de programación resulta muy intuitivo. Cuando se abre el canal asociado, la dirección del servicio se resuelve utilizando la detección. Este ejemplo consta de los siguientes proyectos:  
@@ -23,7 +23,7 @@ En este ejemplo se muestra cómo utilizar el elemento de enlace de cliente de de
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [Windows Communication Foundation (WCF) y ejemplos de Windows Workflow Foundation (WF) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryBindingElement`  
   
