@@ -5,32 +5,32 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 62c6f318-3ee1-433a-b7a3-efa234c3034c
 ms.openlocfilehash: fc1786e1c6102c702374989253cd3ce23e3f7b54
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404428"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537947"
 ---
-# <a name="how-to-add-a-data-service-reference-wcf-data-services"></a><span data-ttu-id="2dfb2-102">Cómo: agregar una referencia de servicio de datos (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="2dfb2-102">How to: Add a data service reference (WCF Data Services)</span></span>
+# <a name="how-to-add-a-data-service-reference-wcf-data-services"></a><span data-ttu-id="e91af-102">Cómo: agregar una referencia de servicio de datos (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="e91af-102">How to: Add a data service reference (WCF Data Services)</span></span>
 
-<span data-ttu-id="2dfb2-103">Puede usar el **Add Service Reference** cuadro de diálogo de Visual Studio para agregar una referencia a WCF Data Services.</span><span class="sxs-lookup"><span data-stu-id="2dfb2-103">You can use the **Add Service Reference** dialog in Visual Studio to add a reference to WCF Data Services.</span></span> <span data-ttu-id="2dfb2-104">Esto le permite tener acceso más fácilmente a un servicio de datos en una aplicación cliente desarrollada en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="2dfb2-104">This enables you to more easily access a data service in a client application that you develop in Visual Studio.</span></span> <span data-ttu-id="2dfb2-105">Cuando complete este procedimiento, se generarán clases de datos basadas en los metadatos que se obtienen del servicio de datos.</span><span class="sxs-lookup"><span data-stu-id="2dfb2-105">When you complete this procedure, data classes are generated based on metadata that is obtained from the data service.</span></span> <span data-ttu-id="2dfb2-106">Para obtener más información, consulte [generar la biblioteca de cliente de servicio de datos](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="2dfb2-106">For more information, see [Generating the Data Service Client Library](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).</span></span>
+<span data-ttu-id="e91af-103">Puede usar el **Add Service Reference** cuadro de diálogo de Visual Studio para agregar una referencia a WCF Data Services.</span><span class="sxs-lookup"><span data-stu-id="e91af-103">You can use the **Add Service Reference** dialog in Visual Studio to add a reference to WCF Data Services.</span></span> <span data-ttu-id="e91af-104">Esto le permite tener acceso más fácilmente a un servicio de datos en una aplicación cliente desarrollada en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="e91af-104">This enables you to more easily access a data service in a client application that you develop in Visual Studio.</span></span> <span data-ttu-id="e91af-105">Cuando complete este procedimiento, se generarán clases de datos basadas en los metadatos que se obtienen del servicio de datos.</span><span class="sxs-lookup"><span data-stu-id="e91af-105">When you complete this procedure, data classes are generated based on metadata that is obtained from the data service.</span></span> <span data-ttu-id="e91af-106">Para obtener más información, consulte [generar la biblioteca de cliente de servicio de datos](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="e91af-106">For more information, see [Generating the Data Service Client Library](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).</span></span>
 
-## <a name="add-a-data-service-reference"></a><span data-ttu-id="2dfb2-107">Agregar una referencia de servicio de datos</span><span class="sxs-lookup"><span data-stu-id="2dfb2-107">Add a data service reference</span></span>
+## <a name="add-a-data-service-reference"></a><span data-ttu-id="e91af-107">Agregar una referencia de servicio de datos</span><span class="sxs-lookup"><span data-stu-id="e91af-107">Add a data service reference</span></span>
 
-1. <span data-ttu-id="2dfb2-108">(Opcional) Si el servicio de datos no forma parte de la solución y no se está ejecutando, inícielo y anote el URI del mismo.</span><span class="sxs-lookup"><span data-stu-id="2dfb2-108">(Optional) If the data service is not part of the solution and is not already running, start the data service and note the URI of the data service.</span></span>
+1. <span data-ttu-id="e91af-108">(Opcional) Si el servicio de datos no forma parte de la solución y no se está ejecutando, inícielo y anote el URI del mismo.</span><span class="sxs-lookup"><span data-stu-id="e91af-108">(Optional) If the data service is not part of the solution and is not already running, start the data service and note the URI of the data service.</span></span>
 
-2. <span data-ttu-id="2dfb2-109">En Visual Studio, en **el Explorador de soluciones**, haga clic en el proyecto de cliente y, a continuación, seleccione **agregar** > **referencia de servicio**.</span><span class="sxs-lookup"><span data-stu-id="2dfb2-109">In Visual Studio, in **Solution Explorer**, right-click the client project and then select **Add** > **Service Reference**.</span></span>
+2. <span data-ttu-id="e91af-109">En Visual Studio, en **el Explorador de soluciones**, haga clic en el proyecto de cliente y, a continuación, seleccione **agregar** > **referencia de servicio**.</span><span class="sxs-lookup"><span data-stu-id="e91af-109">In Visual Studio, in **Solution Explorer**, right-click the client project and then select **Add** > **Service Reference**.</span></span>
 
-3. <span data-ttu-id="2dfb2-110">Si el servicio de datos forma parte de la solución actual, haga clic en **Discover**.</span><span class="sxs-lookup"><span data-stu-id="2dfb2-110">If the data service is part of the current solution, click **Discover**.</span></span>
+3. <span data-ttu-id="e91af-110">Si el servicio de datos forma parte de la solución actual, haga clic en **Discover**.</span><span class="sxs-lookup"><span data-stu-id="e91af-110">If the data service is part of the current solution, click **Discover**.</span></span>
 
-     <span data-ttu-id="2dfb2-111">O bien</span><span class="sxs-lookup"><span data-stu-id="2dfb2-111">-or-</span></span>
+     <span data-ttu-id="e91af-111">O bien</span><span class="sxs-lookup"><span data-stu-id="e91af-111">-or-</span></span>
 
-     <span data-ttu-id="2dfb2-112">En el **dirección** cuadro de texto, escriba la dirección URL base del servicio de datos, como `http://localhost:1234/Northwind.svc`y, a continuación, haga clic en **vaya**.</span><span class="sxs-lookup"><span data-stu-id="2dfb2-112">In the **Address** text box, type the base URL of the data service, such as `http://localhost:1234/Northwind.svc`, and then click **Go**.</span></span>
+     <span data-ttu-id="e91af-112">En el **dirección** cuadro de texto, escriba la dirección URL base del servicio de datos, como `http://localhost:1234/Northwind.svc`y, a continuación, haga clic en **vaya**.</span><span class="sxs-lookup"><span data-stu-id="e91af-112">In the **Address** text box, type the base URL of the data service, such as `http://localhost:1234/Northwind.svc`, and then click **Go**.</span></span>
 
-4. <span data-ttu-id="2dfb2-113">Seleccione **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="2dfb2-113">Select **OK**.</span></span>
+4. <span data-ttu-id="e91af-113">Seleccione **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="e91af-113">Select **OK**.</span></span>
 
-     <span data-ttu-id="2dfb2-114">Un nuevo archivo de código que contiene las clases de datos que pueden obtener acceso e interactuar con los recursos de servicio de datos se agrega al proyecto.</span><span class="sxs-lookup"><span data-stu-id="2dfb2-114">A new code file that contains the data classes that can access and interact with data service resources is added to the project.</span></span>
+     <span data-ttu-id="e91af-114">Un nuevo archivo de código que contiene las clases de datos que pueden obtener acceso e interactuar con los recursos de servicio de datos se agrega al proyecto.</span><span class="sxs-lookup"><span data-stu-id="e91af-114">A new code file that contains the data classes that can access and interact with data service resources is added to the project.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2dfb2-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="2dfb2-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e91af-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="e91af-115">See also</span></span>
 
-- [<span data-ttu-id="2dfb2-116">Inicio rápido</span><span class="sxs-lookup"><span data-stu-id="2dfb2-116">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [<span data-ttu-id="e91af-116">Inicio rápido</span><span class="sxs-lookup"><span data-stu-id="e91af-116">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
