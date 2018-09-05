@@ -2,12 +2,12 @@
 title: Asignación de tipos entre CLR y SQL
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33365532"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735441"
 ---
 # <a name="sql-clr-type-mapping"></a>Asignación de tipos entre CLR y SQL
 En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a un modelo de objetos expresado en el lenguaje de programación que prefiera. Cuando la aplicación se ejecuta, LINQ to SQL convierte las consultas integradas del lenguaje del modelo de objetos a SQL y las envía a la base de datos para su ejecución. Cuando la base de datos devuelve los resultados, LINQ to SQL los vuelve a convertir en objetos con los que pueda trabajar en su propio lenguaje de programación.  
@@ -60,7 +60,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
   
 -   SQL Server ordena ciertos tipos de datos de forma diferente a los datos del tipo equivalente en CLR. Por ejemplo, los datos de SQL Server del tipo `UNIQUEIDENTIFIER` se ordenan de forma diferente a los datos de CLR del tipo <xref:System.Guid?displayProperty=nameWithType>.  
   
--   SQL Server trata ciertas operaciones de comparación de cadenas de forma diferente a CLR. En SQL Server, el comportamiento de comparación de cadenas depende de la configuración de intercalación del servidor. Para obtener más información, consulte [trabajar con intercalaciones](http://go.microsoft.com/fwlink/?LinkId=115330) en los libros en pantalla de Microsoft SQL Server.  
+-   SQL Server trata ciertas operaciones de comparación de cadenas de forma diferente a CLR. En SQL Server, el comportamiento de comparación de cadenas depende de la configuración de intercalación del servidor. Para obtener más información, consulte [trabajar con intercalaciones](https://go.microsoft.com/fwlink/?LinkId=115330) en los libros en pantalla de Microsoft SQL Server.  
   
 -   SQL Server puede devolver valores diferentes a los que devuelve CLR para algunas funciones asignadas. Por ejemplo, las funciones de igualdad tendrán resultados distintos porque SQL Server considera que dos cadenas son iguales si solo se diferencian en el espacio en blanco final, mientras que CLR considera que no son iguales.  
   
@@ -232,11 +232,11 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
 ### <a name="sql-server-filestream"></a>SQL Server FILESTREAM  
  El atributo `FILESTREAM` para las columnas `VARBINARY(MAX)` está disponible a partir de Microsoft SQL Server 2008; se le pueden asignar elementos con LINQ to SQL a partir del Service Pack 1 de .NET Framework 3.5.  
   
- Aunque puede asignar columnas `VARBINARY(MAX)` con el atributo `FILESTREAM` a objetos <xref:System.Data.Linq.Binary>, el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> no puede crear columnas automáticamente con el atributo `FILESTREAM`. Para obtener más información acerca de `FILESTREAM`, consulte [información general de FILESTREAM](http://go.microsoft.com/fwlink/?LinkId=115291) en libros en pantalla de Microsoft SQL Server.  
+ Aunque puede asignar columnas `VARBINARY(MAX)` con el atributo `FILESTREAM` a objetos <xref:System.Data.Linq.Binary>, el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> no puede crear columnas automáticamente con el atributo `FILESTREAM`. Para obtener más información acerca de `FILESTREAM`, consulte [información general de FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=115291) en libros en pantalla de Microsoft SQL Server.  
   
 <a name="BinarySerialization"></a>   
 ### <a name="binary-serialization"></a>Serialización binaria  
- Si una clase implementa la interfaz <xref:System.Runtime.Serialization.ISerializable>, se puede serializar un objeto en cualquier campo binario de SQL (`BINARY`, `VARBINARY`, `IMAGE`). El objeto se serializa o deserializa de acuerdo con la forma en que se haya implementado la interfaz <xref:System.Runtime.Serialization.ISerializable>. Para obtener más información, consulte [serialización binaria](http://go.microsoft.com/fwlink/?LinkId=115581).  
+ Si una clase implementa la interfaz <xref:System.Runtime.Serialization.ISerializable>, se puede serializar un objeto en cualquier campo binario de SQL (`BINARY`, `VARBINARY`, `IMAGE`). El objeto se serializa o deserializa de acuerdo con la forma en que se haya implementado la interfaz <xref:System.Runtime.Serialization.ISerializable>. Para obtener más información, consulte [serialización binaria](https://go.microsoft.com/fwlink/?LinkId=115581).  
   
 <a name="MiscMapping"></a>   
 ## <a name="miscellaneous-mapping"></a>Asignaciones varias  
